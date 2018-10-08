@@ -34,14 +34,14 @@ theme:
   feature:
     tabs: true
   palette:
-    primary: indigo
-    accent: indigo
+    primary: "grey"
+    accent: "amber"
   font:
     text: Roboto
     code: Roboto Mono
   favicon: img/favicon.ico
   logo:
-    icon: "\uE80C"
+    icon: camera
 
 # Customization
 extra:

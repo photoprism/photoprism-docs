@@ -6,7 +6,9 @@ Before you start, make sure you got [Docker](https://store.docker.com/search?typ
 Developers can skip this and move on to the [Developer Guide](https://github.com/photoprism/photoprism/wiki/Developer-Guide) in our [Wiki](https://github.com/photoprism/photoprism/wiki).
 
 **Step 1:** Download [docker-compose.yml](https://raw.githubusercontent.com/photoprism/photoprism/master/configs/docker-compose.yml) (right click and *Save Link As...*) to a directory of your choice.
+
 By default, a folder named `Photos` in your home directory will be used to store all images. You don't need to create it.
+
 PhotoPrism will also create the following sub-directories in your photo path: `Import`, `Export` and `Originals`. Copy existing photos to `Import`, not directly to `Originals` as they need to be renamed and indexed in order to remove duplicates.
 Files that can not be imported - like videos - will stay in the `Import` directory, nothing gets lost.
 

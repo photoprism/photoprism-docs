@@ -1,3 +1,85 @@
+# Project information
 site_name: PhotoPrism
+site_description: Browse your life in pictures
+site_author: Theresa Gresch, Michael Mayer and contributors
+site_url: https://photoprism.org/
+
+# Repository
+repo_name: photoprism/photoprism
+repo_url: https://github.com/photoprism/photoprism
+edit_uri: ""
+
+# Copyright
+copyright: 'Copyright &copy; 2018 Theresa Gresch, Michael Mayer and contributors'
+
+# Configuration
 theme:
-  name: 'material'
+  name: null
+  custom_dir: material
+
+  # 404 page
+  static_templates:
+  - 404.html
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+  feature:
+    tabs: true
+  palette:
+    primary: indigo
+    accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: img/favicon.ico
+  logo:
+    icon: "\uE80C"
+
+# Customization
+extra:
+  social:
+  - type: globe
+    link: https://photoprism.org/
+  - type: github-alt
+    link: https://github.com/photoprism
+  - type: twitter
+    link: https://twitter.com/browseyourlife
+  - type: linkedin
+    link: https://www.linkedin.com/company/photoprism/
+
+# Extensions
+markdown_extensions:
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite:
+      guess_lang: false
+  - markdown.extensions.def_list
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+# Page tree
+nav:
+- Getting started: index.md
+- License: license.md

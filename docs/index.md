@@ -1,6 +1,4 @@
-# Getting started
-
-Visit our GitHub repository at [github.com/photoprism/photoprism](https://github.com/photoprism/photoprism).
+# Welcome
 
 We love taking photos and they belong to our most valuable (and storage consuming) assets. Privacy concerns - and the wish to properly
 archive them for the next generation - brought us to the conclusion that existing cloud solutions are not the right tool to keep them organized.

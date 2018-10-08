@@ -1,3 +1,6 @@
+mkdocs>=1
+Pygments>=2.2
+pymdown-extensions>=4.11
 click>=3.3
 Jinja2>=2.7.1
 livereload>=2.5.1

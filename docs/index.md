@@ -7,7 +7,7 @@ Developers can skip this and move on to the [Developer Guide](https://github.com
 
 ## Step 1: Configure ##
 
-Download [docker-compose.yml](https://raw.githubusercontent.com/photoprism/photoprism/master/configs/docker-compose.yml) (right click and *Save Link As...*) to a directory of your choice.
+Download the config file [docker-compose.yml](https://raw.githubusercontent.com/photoprism/photoprism/master/configs/docker-compose.yml) (right click and *Save Link As...*) to a directory of your choice.
 
 By default, a folder named `Photos` in your home directory will be used to store all images. You don't need to create it.
 
@@ -17,7 +17,8 @@ Files that can not be imported - like videos - will stay in the `Import` directo
 If you prefer to use different directory names, you can change them in `docker-compose.yml`. See inline comments for instructions.
 
 ## Step 2: Run ##
-Open a terminal, go to the directory in which you saved the `docker-compose.yml` file and run this command to start the application:
+
+Open a terminal, go to the directory in which you saved the config file and run this command to start the application:
 
 ```
 docker-compose up -d
@@ -26,6 +27,7 @@ docker-compose up -d
 The Web frontend is now available at http://localhost:2342/. The port can be changed in `docker-compose.yml`. Remember to run `docker-compose restart` every time you touch the config.
 
 ## Step 3: Import ##
+
 Connect to the application container and run `photoprism import` after putting files in the `Import` folder:
 
 ```
@@ -34,4 +36,5 @@ photoprism import
 ```
 
 You should now be able to see your photos. You can continue using your favorite tools like Photoshop or Lightroom
-to edit images in the `Originals` folder. Run `photoprism index` to reindex them as needed. Easy, isn't it?
+to edit images in the `Originals` folder. Run `photoprism index` to reindex them as needed.
+Even deleting and adding is possible, if you stick to the naming scheme. Easy, isn't it?

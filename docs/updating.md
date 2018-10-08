@@ -1,6 +1,6 @@
 # Updating
 
-Open a terminal, go to the directory in which you saved the `docker-compose.yml` file and run the following commands to update your version to the latest development snapshot:
+Open a terminal, go to the directory in which you saved `docker-compose.yml` and run the following commands to update your version to the latest development snapshot:
 
 ```bash
 docker-compose down

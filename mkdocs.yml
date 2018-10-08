@@ -23,7 +23,7 @@ theme:
 
   # 404 page
   static_templates:
-  - 404.html
+    - 404.html
 
   # Don't include MkDocs' JavaScript
   include_search_page: false
@@ -46,14 +46,14 @@ theme:
 # Customization
 extra:
   social:
-  - type: globe
-    link: https://photoprism.org/
-  - type: github-alt
-    link: https://github.com/photoprism
-  - type: twitter
-    link: https://twitter.com/browseyourlife
-  - type: linkedin
-    link: https://www.linkedin.com/company/photoprism/
+    - type: globe
+      link: https://photoprism.org/
+    - type: github-alt
+      link: https://github.com/photoprism
+    - type: twitter
+      link: https://twitter.com/browseyourlife
+    - type: linkedin
+      link: https://www.linkedin.com/company/photoprism/
 
 # Extensions
 markdown_extensions:

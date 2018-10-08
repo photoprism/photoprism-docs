@@ -1,3 +1,7 @@
+# Paths
+docs_dir: docs
+site_dir: site
+
 # Project information
 site_name: PhotoPrism
 site_description: Browse your life in pictures

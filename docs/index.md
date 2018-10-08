@@ -14,7 +14,7 @@ Files that can not be imported - like videos - will stay in the `Import` directo
 
 If you prefer to use different directory names, you can change them in `docker-compose.yml`. See inline comments for instructions.
 
-**Step 2:** Open a terminal, go to the directory in which you saved the config file and run this command to start the application:
+**Step 2:** Open a terminal, go to the directory in which you saved the `docker-compose.yml` file and run this command to start the application:
 
 ```bash
 docker-compose up -d
@@ -31,24 +31,3 @@ photoprism import
 
 You should now be able to see your photos. You can continue using your favorite tools like Photoshop or Lightroom
 to edit images in the `Originals` folder. Run `photoprism index` to reindex them if needed. No upload or download needed. Easy, isn't it?
-
-Updating
---------
-
-Open a terminal, go to the directory in which you saved the config file and run the following commands to update your version to the latest development snapshot:
-
-```bash
-docker-compose down
-docker-compose pull photoprism
-docker-compose up -d
-```
-
-Pulling a new version can take several minutes, depending on your internet connection. The final release will be smaller.
-
-Contribute
-----------
-
-If you have a bug or an idea, read the [contributing guidelines](https://github.com/photoprism/photoprism/blob/master/CONTRIBUTING.md) before opening an issue.
-Issues labeled `help wanted` or `good first issue` can be good first contributions.
-
-The best way to get in touch is to write an email to hello@photoprism.org or join our [Telegram](https://t.me/joinchat/B8AmeBAUEugGszzuklsj5w) group. We'd love to hear from you!

@@ -81,5 +81,5 @@ markdown_extensions:
 
 # Page tree
 nav:
-- Getting started: index.md
-- License: license.md
+  - Getting started: index.md
+  - License: license.md

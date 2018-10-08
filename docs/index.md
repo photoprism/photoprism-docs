@@ -20,7 +20,7 @@ If you prefer to use different directory names, you can change them in `docker-c
 docker-compose up -d
 ```
 
-The Web frontend is now available at http://localhost/. The port can be changed in `docker-compose.yml` if needed. Remember to run `docker-compose restart` every time you change the config.
+The Web frontend is now available at http://localhost:2342/. The port can be changed in `docker-compose.yml` if needed. Remember to run `docker-compose restart` every time you change the config.
 
 **Step 3:** Open a terminal to import photos:
 

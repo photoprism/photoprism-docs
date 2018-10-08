@@ -34,8 +34,8 @@ theme:
   feature:
     tabs: true
   palette:
-    primary: "grey"
-    accent: "amber"
+    primary: white
+    accent: amber
   font:
     text: Roboto
     code: Roboto Mono

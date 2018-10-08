@@ -5,7 +5,7 @@ This is the official way to test our development snapshot. We just started worki
 Before you start, make sure you got [Docker](https://store.docker.com/search?type=edition&offering=community) installed on your system. It is available for Mac, Linux and Windows.
 Developers can skip this and move on to the [Developer Guide](https://github.com/photoprism/photoprism/wiki/Developer-Guide) in our [Wiki](https://github.com/photoprism/photoprism/wiki).
 
-**Step 1:** Download [docker-compose.prod.yml](https://github.com/photoprism/photoprism/blob/master/docker-compose.prod.yml), rename it to `docker-compose.yml` and set the default photo path `~/Photos` to whatever directory you want to use on your local computer:
+**Step 1:** Download [docker-compose.yml](https://raw.githubusercontent.com/photoprism/photoprism/master/configs/docker-compose.yml) to a directory of your choice and set the default photo path `~/Photos` to where you want to store your photos:
 
 ```yaml
     volumes:
@@ -29,3 +29,11 @@ The Web frontend is now available at http://localhost/. The port can be changed 
 docker-compose exec photoprism bash
 photoprism import
 ```
+
+Contribute
+----------
+
+If you have a bug or an idea, read the [contributing guidelines](CONTRIBUTING.md) before opening an issue.
+Issues labeled `help wanted` or `good first issue` can be good first contributions.
+
+The best way to get in touch is to write an email to hello@photoprism.org or join our [Telegram](https://t.me/joinchat/B8AmeBAUEugGszzuklsj5w) group. We'd love to hear from you!

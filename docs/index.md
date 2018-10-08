@@ -29,7 +29,8 @@ docker-compose exec photoprism bash
 photoprism import
 ```
 
-You should now be able to see your photos.
+You should now be able to see your photos. You can continue using your favorite tools like Photoshop or Lightroom
+to edit images in the `Originals` folder. Run `photoprism index` to reindex them if needed.
 
 Contribute
 ----------

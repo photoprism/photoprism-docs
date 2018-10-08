@@ -12,7 +12,7 @@ By default, a folder named `Photos` in your home directory will be used to store
 PhotoPrism will also create the following sub-directories in your photo path: `Import`, `Export` and `Originals`. Copy existing photos to `Import`, not directly to `Originals` as they need to be renamed and indexed in order to remove duplicates.
 Files that can not be imported - like videos - will stay in the `Import` directory, nothing gets lost.
 
-If you prefer to use different directory names, you can change them in `docker-compose.yml` (see comments).
+If you prefer to use different directory names, you can change them in `docker-compose.yml`. See inline comments for instructions.
 
 **Step 2:** Start PhotoPrism using `docker-compose` in the same directory:
 

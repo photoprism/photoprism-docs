@@ -23,7 +23,7 @@ Open a terminal, go to the directory in which you saved the `docker-compose.yml`
 docker-compose up -d
 ```
 
-The Web frontend is now available at http://localhost:2342/. The port can be changed in `docker-compose.yml` if needed. Remember to run `docker-compose restart` every time you change the config.
+The Web frontend is now available at http://localhost:2342/. The port can be changed in `docker-compose.yml`. Remember to run `docker-compose restart` every time you touch the config.
 
 ## Step 3: Import ##
 Connect to the application container and run `photoprism import` after putting files in the `Import` folder:
@@ -34,4 +34,4 @@ photoprism import
 ```
 
 You should now be able to see your photos. You can continue using your favorite tools like Photoshop or Lightroom
-to edit images in the `Originals` folder. Run `photoprism index` to reindex them if needed. No upload or download needed. Easy, isn't it?
+to edit images in the `Originals` folder. Run `photoprism index` to reindex them as needed. Easy, isn't it?

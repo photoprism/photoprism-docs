@@ -3,7 +3,7 @@ docs_dir: docs
 site_dir: site
 
 # Project information
-site_name: PhotoPrism
+site_name: User's Guide
 site_description: Browse your life in pictures
 site_author: Theresa Gresch, Michael Mayer and contributors
 site_url: https://photoprism.org/
@@ -85,7 +85,9 @@ markdown_extensions:
 
 # Page tree
 nav:
-  - Getting started: index.md
-  - Updating: updating.md
+  - PhotoPrism: index.md
+  - Installation: installation.md
+  - Team: team.md
   - Contribute: contribute.md
+  - Credits: credits.md
   - License: license.md

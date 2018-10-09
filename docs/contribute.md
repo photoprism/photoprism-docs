@@ -1,23 +1,15 @@
 # Contribute
 
-If you have a bug or an idea, read the contributing guidelines below before opening an issue.
-Issues labeled `help wanted` or `good first issue` can be good first contributions.
-
-The best way to get in touch is to write an email to hello@photoprism.org or join our [Telegram](https://t.me/joinchat/B8AmeBAUEugGszzuklsj5w) group. We'd love to hear from you!
-
-## Contributing Guidelines
-
-We welcome contributions to PhotoPrism of any kind including documentation,
+We welcome contributions of any kind including documentation,
 organization, tutorials, blog posts, bug reports, issues, feature requests,
-feature implementations, pull requests, answering questions on the forum,
-helping to manage issues, etc.
+feature implementations, pull requests, answering questions, helping to manage issues, etc.
 
-## Asking Support Questions
+Issues labeled `help wanted` or `good first issue` can be good first contributions. Let us know if
+you need additional permissions to perform a task.
+
+## Asking Questions
 
 The best way to get in touch is to write an email to hello@photoprism.org or join our [Telegram](https://t.me/joinchat/B8AmeBAUEugGszzuklsj5w) group.
-
-You can also find us on GitHub, Twitter, Instagram, and LinkedIn.
-
 Please don't use the GitHub issue tracker to ask questions.
 
 ## Reporting Issues
@@ -26,7 +18,7 @@ If you believe you have found a defect in PhotoPrism or its documentation, use
 the GitHub [issue tracker](https://github.com/photoprism/photoprism/issues) to report
 the problem to the maintainers. If you're not sure if it's a bug or not,
 start by asking via email.
-When reporting the issue, please provide the version of PhotoPrism in use (`photoprism -v`) and information about your environment.
+When reporting the issue, please provide the version in use (`photoprism -v`) and information about your environment.
 
 ## Submitting Patches
 
@@ -34,7 +26,8 @@ The PhotoPrism project welcomes all contributors and contributions regardless of
 
 ### Code Contribution Guidelines
 
-Because we want to create the best possible product for our users and the best contribution experience for our developers, we have a set of guidelines which ensure that all contributions are acceptable. The guidelines are not intended as a filter or barrier to participation. If you are unfamiliar with the contribution process, the PhotoPrism team will help you and teach you how to bring your contribution in accordance with the guidelines.
+Because we want to create the best possible product for our users and the best contribution experience for our developers, we have a set of guidelines which ensure that all contributions are acceptable. The guidelines are not intended as a filter or barrier to participation. If you are unfamiliar with the contribution process,
+we will help you and teach you how to bring your contribution in accordance with the guidelines.
 
 To make the contribution process as seamless as possible, we ask for the following:
 
@@ -43,19 +36,19 @@ To make the contribution process as seamless as possible, we ask for the followi
     * Sign the [CLA](https://cla-assistant.io/photoprism/photoprism).
     * Have test cases for the new code. If you have questions about how to do this, please ask in your pull request.
     * Run `go fmt`.
-    * Add documentation if you are adding new features or changing functionality.  The docs site lives at `docs.photoprism.org`.
-    * Follow the **Git Commit Message Guidelines** below.
+    * Add [documentation](https://github.com/photoprism/photoprism-docs) if you are adding new features or changing functionality. It is hosted on [docs.photoprism.org](https://docs.photoprism.org/en/latest/) and automatically updates whenever changes are pushed to the repository.
+    * Follow the Commit Message Guidelines below.
 
-### Git Commit Message Guidelines
+### Commit Message Guidelines
 
 If your commit references one or more GitHub issues, always end your commit message body with *See #1234* or *Fixes #1234*.
 Replace *1234* with the GitHub issue ID. The last example will close the issue when the commit is merged into *master*.
 
 Please use a short and descriptive branch name, e.g. **NOT** "patch-1". It's very common but creates a naming conflict each time when a submission is pulled for a review.
 
-###  Fetching the Sources From GitHub
+###  Development Environment
 
-Is is easiest to build PhotoPrism inside the Docker container. See [Developer Guide](https://github.com/photoprism/photoprism/wiki).
+Is is easiest to build the application inside the Docker container. See [Developer Guide](https://github.com/photoprism/photoprism/wiki).
 
 ## Donations
 

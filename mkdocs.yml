@@ -85,8 +85,8 @@ markdown_extensions:
 
 # Page tree
 nav:
-  - Getting started: index.md
-  - Installation: installation.md
+  - Introduction: index.md
+  - Setup: setup.md
   - Team: team.md
   - Contribute: contribute.md
   - Credits: credits.md

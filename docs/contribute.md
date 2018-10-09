@@ -1,6 +1,6 @@
 # Contribute
 
-If you have a bug or an idea, read the [contributing guidelines](https://github.com/photoprism/photoprism/blob/master/CONTRIBUTING.md) before opening an issue.
+If you have a bug or an idea, read the contributing guidelines below before opening an issue.
 Issues labeled `help wanted` or `good first issue` can be good first contributions.
 
 The best way to get in touch is to write an email to hello@photoprism.org or join our [Telegram](https://t.me/joinchat/B8AmeBAUEugGszzuklsj5w) group. We'd love to hear from you!
@@ -55,7 +55,7 @@ Please use a short and descriptive branch name, e.g. **NOT** "patch-1". It's ver
 
 ###  Fetching the Sources From GitHub
 
-Is is easiest to build PhotoPrism inside the Docker container. See [Developer Guide](https://github.com/photoprism/photoprism/wiki/Developer-Guide).
+Is is easiest to build PhotoPrism inside the Docker container. See [Developer's Guide](https://github.com/photoprism/photoprism/wiki).
 
 ## Donations
 

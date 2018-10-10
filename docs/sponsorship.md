@@ -1,4 +1,4 @@
-# Make a difference
+# Let's join forces
 
 Our ongoing progress encourages us to continue working towards a stable release that can be used by everyone.
 

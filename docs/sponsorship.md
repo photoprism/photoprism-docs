@@ -1,6 +1,6 @@
 # Make a difference
 
-Our ongoing progress encourages us to continue working towards a public release that can be used by everyone.
+Our ongoing progress encourages us to continue working towards a stable release that can be used by everyone.
 
 Sponsoring can provide a sustainable way to cover our cost of living during that time. Ideally it also enables us to offer perks for contributions and explore
 new ways of organizing product development.

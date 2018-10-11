@@ -1,4 +1,4 @@
-# Make a difference
+# How to contribute
 
 We welcome contributions of any kind including documentation,
 organization, tutorials, blog posts, bug reports, donations, feature requests,

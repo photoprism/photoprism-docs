@@ -1,8 +1,8 @@
-# Setup and configuration
-
-## Installation ##
+# For the early birds
 
 This is the official way to test our development snapshot. We just started working on the UI and features are neither complete or stable. Feedback early in development helps saving a lot of time. We're a small team and need to move fast.
+
+## Installation ##
 
 Before you start, make sure you got [Docker](https://store.docker.com/search?type=edition&offering=community) installed on your system. It is available for Mac, Linux and Windows.
 Developers can skip this and move on to the [Developer Guide](https://github.com/photoprism/photoprism/wiki).

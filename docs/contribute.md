@@ -47,5 +47,4 @@ To make the contribution process as seamless as possible, we ask for the followi
 ## Donations
 
 Please leave a star on [GitHub](https://github.com/photoprism/photoprism) if you like this project, it provides enough motivation to keep going.
-If you still want to donate, you can do so via [PayPal](https://paypal.me/photoprism/10).
 Thank you very much! <3

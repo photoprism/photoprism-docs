@@ -20,7 +20,7 @@ the GitHub [issue tracker](https://github.com/photoprism/photoprism/issues) to r
 the problem to us. If you're not sure if it's a bug or not, start by asking via email or chat.
 When reporting the issue, please provide the version in use (`photoprism -v`) and information about your environment.
 
-## Submitting patches
+## Submitting pull requests
 
 We welcome all contributors and contributions regardless of skill or experience level. If you are interested in helping with the project, we will help you with your contribution.
 

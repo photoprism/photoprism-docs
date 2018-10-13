@@ -1,6 +1,6 @@
 # MIT License
 
-Copyright (c) 2018 [The PhotoPrism contributors](team.md)
+Copyright (c) 2018 [The PhotoPrism contributors](https://github.com/photoprism/photoprism/graphs/contributors)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

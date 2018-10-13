@@ -1,8 +1,7 @@
 # How to contribute
 
-We welcome contributions of any kind including documentation,
-organization, tutorials, blog posts, bug reports, donations, feature requests,
-feature implementations, pull requests, answering questions, helping to manage issues, etc.
+We welcome contributions of any kind including bug reports, pull requests, ideas,
+testing, writing documentation, tutorials and blog posts.
 
 Issues labeled [help wanted](https://github.com/photoprism/photoprism/labels/help%20wanted) or
 [good first issue](https://github.com/photoprism/photoprism/labels/good%20first%20issue) can be

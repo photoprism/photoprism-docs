@@ -9,7 +9,7 @@ A big **thank you** to everyone who made this possible. Developing free software
 ## Technologies ##
 * The [Golang](https://golang.org/) project for the best programming language out there - coding is fun again!
 * The [Vuetify](https://vuetifyjs.com/en/) project for providing the best frontend component framework
-* [Google](https://developers.google.com/) for [TensorFlow](https://www.tensorflow.org/), [Material Design](https://material.io/) and [Google Maps](https://cloud.google.com/maps-platform/)
+* [Google](https://developers.google.com/) for [TensorFlow](https://www.tensorflow.org/) and [Material Design](https://material.io/)
 
 ## Infrastructure ##
 

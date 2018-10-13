@@ -7,7 +7,7 @@ A big **thank you** to everyone who made this possible. Developing free software
 * [Follow that light](https://www.flickr.com/photos/32658783@N03/24226085838/in/faves-12602671@N04/) by [Margeois](https://www.flickr.com/photos/32658783@N03/)
 
 ## Technologies ##
-* The [Golang](https://golang.org/) project for the best programming language out there - coding is fun again!
+* The [Go](https://golang.org/) project for the best programming language out there - coding is fun again!
 * The [Vuetify](https://vuetifyjs.com/en/) project for providing the best frontend component framework
 * [Google](https://developers.google.com/) for [TensorFlow](https://www.tensorflow.org/) and [Material Design](https://material.io/)
 

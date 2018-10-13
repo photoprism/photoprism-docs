@@ -1,6 +1,8 @@
 # For the early birds
 
-This is the official way to test our development snapshot. We just started working on the UI and features are neither complete or stable. Feedback early in development helps saving a lot of time. We're a small team and need to move fast.
+You are welcome to get an impression and provide early feedback.
+Note that we just started working on the UI and features are neither complete nor stable.
+We're a small team and move fast.
 
 ## Installation ##
 
@@ -20,7 +22,7 @@ If you prefer to use different directory names, you can change them in `docker-c
 
 ### Step 2: Run ###
 
-Open a terminal, go to the directory in which you saved the config file and run this command to start the application:
+Open a terminal, go to the directory in which you saved the config file and run this command to start the server:
 
 ```
 docker-compose up -d

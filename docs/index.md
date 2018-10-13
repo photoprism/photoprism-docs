@@ -15,7 +15,7 @@ Say goodbye to solutions that force you to upload your content to cloud provider
 
 ## Why this has to be free software
 
-The development of every commercial product will be focused on monetization.
+The development of every commercial product is focused on monetization.
 We've built similar apps more than once and every single time the constraints of working
 in a profit-oriented corporate environment were an impediment.
 We are sure we can do better with only a fraction of the budget. Simplicity can be very powerful.

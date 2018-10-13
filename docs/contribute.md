@@ -9,10 +9,10 @@ Issues labeled [help wanted](https://github.com/photoprism/photoprism/labels/hel
 good first contributions. Let us know if you need additional information or permissions on GitHub
 to perform a task.
 
-## Asking questions
+## Questions?
 
-The best way to get in touch is to write an email to hello@photoprism.org or join our [Telegram](https://t.me/joinchat/B8AmeBAUEugGszzuklsj5w) group.
-Please don't use the GitHub issue tracker to ask questions.
+The most efficient way to get in contact is to write an email to hello@photoprism.org or join our `#photoprism` channel on [gophers.slack.com](https://gophers.slack.com).
+If you don't have an account yet, you can create one on [invite.slack.golangbridge.org](https://invite.slack.golangbridge.org/). Please don't use the GitHub issue tracker to ask questions.
 
 ## Reporting issues
 

@@ -11,7 +11,7 @@ to perform a task.
 
 ## Questions?
 
-The most efficient way to get in contact is to write an email to hello@photoprism.org or join our `#photoprism` channel on [gophers.slack.com](https://gophers.slack.com).
+The most efficient way for asking questions is to write an email to hello@photoprism.org or join our `#photoprism` channel on [gophers.slack.com](https://gophers.slack.com).
 If you don't have an account yet, you can create one on [invite.slack.golangbridge.org](https://invite.slack.golangbridge.org/). Please don't use the GitHub issue tracker to ask questions.
 
 ## Reporting issues

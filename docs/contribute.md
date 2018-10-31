@@ -41,7 +41,7 @@ To make the contribution process as seamless as possible, we ask for the followi
 #### When you’re ready to create a pull request
   * Sign the [Contributor License Agreement (CLA)](https://cla-assistant.io/photoprism/photoprism).
   * Have test cases for any new code. If you have questions about how to do this, please ask in your pull request.
-  * Run `make fmt`.
+  * Install [goimports](https://godoc.org/golang.org/x/tools/cmd/goimports) and run `make fmt`.
   * Add [documentation](https://github.com/photoprism/photoprism-docs) if you are adding new features or changing functionality. It is hosted on [docs.photoprism.org](https://docs.photoprism.org/en/latest/) and automatically updates whenever changes are pushed to the repository.
 
 ## Donations

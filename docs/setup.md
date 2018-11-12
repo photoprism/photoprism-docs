@@ -11,7 +11,7 @@ Developers can skip this and move on to the [Developer Guide](https://github.com
 
 ### Step 1: Configure ###
 
-Download the config file [docker-compose.yml](https://raw.githubusercontent.com/photoprism/photoprism/master/configs/docker-compose.yml) (right click and *Save Link As...*) to a directory of your choice.
+Download the config file [docker-compose.yml](https://raw.githubusercontent.com/photoprism/photoprism/master/docker/photoprism/docker-compose.yml) (right click and *Save Link As...*) to a directory of your choice.
 
 By default, a folder named `Photos` in your home directory will be used to store all images. You don't need to create it.
 

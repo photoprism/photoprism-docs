@@ -3,19 +3,31 @@
 We welcome contributions of any kind including bug reports, pull requests, ideas,
 testing, writing documentation, tutorials and blog posts.
 
-Issues labeled [help wanted](https://github.com/photoprism/photoprism/labels/help%20wanted) or
-[good first issue](https://github.com/photoprism/photoprism/labels/good%20first%20issue) can be
-good first contributions. Let us know if you need additional information or permissions on GitHub
-to perform a task.
+Issues labeled [help wanted](https://github.com/photoprism/photoprism/labels/help%20wanted) can be
+good (first) contributions. Let us know if you need additional information or permissions on GitHub
+to perform a task. There are no stupid questions.
 
 ## Questions?
 
-The most efficient way for asking questions is to write an email to hello@photoprism.org or join our `#photoprism` channel on [gophers.slack.com](https://gophers.slack.com).
-If you don't have an account yet, you can create one on [invite.slack.golangbridge.org](https://invite.slack.golangbridge.org/). Please don't use the GitHub issue tracker to ask questions.
+If you have a question or an idea, you can simply send an email to hello@photoprism.org or start by
+discussing it in our `#photoprism` channel on [gophers.slack.com](https://gophers.slack.com).
+If you don't have an account yet, you can create one on [invite.slack.golangbridge.org](https://invite.slack.golangbridge.org/).
+If it is something specific and no similar [idea](https://github.com/photoprism/photoprism/labels/idea) or
+[todo](https://github.com/photoprism/photoprism/labels/todo) already exists,
+you are welcome to add it directly to our [GitHub issue tracker](https://github.com/photoprism/photoprism/issues).
+Please don't use the issue tracker to ask general questions. We also maintain a couple of
+wiki pages for collecting interesting ideas and feedback:
+[Ideas](https://github.com/photoprism/photoprism/wiki/Ideas),
+[Inbox](https://github.com/photoprism/photoprism/wiki/Inbox),
+[Related](https://github.com/photoprism/photoprism/wiki/Related),
+[Love](https://github.com/photoprism/photoprism/wiki/Love),
+[Concerns](https://github.com/photoprism/photoprism/wiki/Concerns) and
+[Research](https://github.com/photoprism/photoprism/wiki/Research).
 
 ## Reporting issues
 
-Please use the GitHub [issue tracker](https://github.com/photoprism/photoprism/issues) to report clearly identified bugs and impediments to us. If you're not sure, start by asking via email or chat.
+Please use the [GitHub issue tracker](https://github.com/photoprism/photoprism/issues) to report clearly identified bugs and impediments to us.
+If you're not sure, start by asking via email or chat.
 When reporting an issue, please provide the version in use and information about your environment like browser, operating system, installed memory, and processor type.
 
 ## Submitting pull requests

@@ -6,8 +6,8 @@ We're a small team and move fast.
 
 ## Installation ##
 
-Before you start, make sure you got [Docker](https://store.docker.com/search?type=edition&offering=community) installed on your system. It is available for Mac, Linux and Windows.
-Developers can skip this and move on to the [Developer Guide](https://github.com/photoprism/photoprism/wiki).
+Before you start, make sure you have [Docker](https://store.docker.com/search?type=edition&offering=community) installed on your system. It is available for Mac, Linux and Windows.
+Developers can skip this and move on to the [Developer Guide](https://github.com/photoprism/photoprism/wiki). We are working hard to make Docker optional.
 
 ### Step 1: Configure ###
 

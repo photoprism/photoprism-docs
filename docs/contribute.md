@@ -13,6 +13,8 @@ If you have a question or an idea, you can simply send an email to hello@photopr
 discussing it in our `#photoprism` channel on [gophers.slack.com](https://gophers.slack.com).
 If you don't have an account yet, you can create one on [invite.slack.golangbridge.org](https://invite.slack.golangbridge.org/).
 
+## Feature requests
+
 You are welcome to add specific feature requests directly to our [GitHub issue tracker](https://github.com/photoprism/photoprism/issues)
 if no similar [idea](https://github.com/photoprism/photoprism/labels/idea)
 or [todo](https://github.com/photoprism/photoprism/labels/todo) already exists.
@@ -23,7 +25,7 @@ pages in our [Developer Guide](https://github.com/photoprism/photoprism/wiki) fo
 [Concerns](https://github.com/photoprism/photoprism/wiki/Concerns) and
 [Research](https://github.com/photoprism/photoprism/wiki/Research).
 
-## Reporting issues
+## Reporting bugs
 
 Please use the [GitHub issue tracker](https://github.com/photoprism/photoprism/issues) to report clearly identified bugs and impediments to us.
 If you're not sure, start by asking via email or chat.

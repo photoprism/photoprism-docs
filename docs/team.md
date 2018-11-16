@@ -1,5 +1,13 @@
 # Who we are
 
+## Andrea Ceroni ##
+
+Andrea is a data scientist specialized in temporal information retrieval and machine learning.
+He holds a PhD in Computer Science from the Leibniz University of Hannover (L3S Research Center) and wrote numerous papers on topics such as
+[Personal Photo Management and Preservation](https://www.researchgate.net/profile/Andrea_Ceroni/publication/323222448_Personal_Photo_Management_and_Preservation/links/5a995f8da6fdcc3cbac8fa59/Personal-Photo-Management-and-Preservation.pdf).
+
+You can find him on [Google Scholar](https://scholar.google.de/citations?user=JHsQY5YAAAAJ&hl=en) and [LinkedIn](https://www.linkedin.com/in/andrea-ceroni/)
+
 ## Theresa Gresch ##
 
 Theresa works as a freelance product manager and developer in Berlin. She has a Masters in Neurobiology

@@ -2,7 +2,7 @@
 
 You are welcome to get an impression and provide early feedback.
 Note that we just started working on the UI and features are neither complete nor stable.
-We're a small team and move fast.
+We're a small team and move fast. Leave your email to get a [release notification](https://goo.gl/forms/KBPVGl9PCsOKrAv33).
 
 ## Installation ##
 

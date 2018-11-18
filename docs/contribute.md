@@ -9,7 +9,7 @@ to perform a task. There are no stupid questions.
 
 ## Questions?
 
-If you have a question or an idea, you can simply send an email to hello@photoprism.org or start by
+If you have a question or an idea, you are welcome to [contact us via email](mailto:hello@photoprism.org) or start by
 discussing it in our `#photoprism` channel on [gophers.slack.com](https://gophers.slack.com).
 If you don't have an account yet, you can create one on [invite.slack.golangbridge.org](https://invite.slack.golangbridge.org/).
 

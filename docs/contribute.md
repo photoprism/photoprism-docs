@@ -56,6 +56,10 @@ To make the contribution process as seamless as possible, we ask for the followi
   * Install [goimports](https://godoc.org/golang.org/x/tools/cmd/goimports) and run `make fmt`.
   * Add [documentation](https://github.com/photoprism/photoprism-docs) if you are adding new features or changing functionality. It is hosted on [docs.photoprism.org](https://docs.photoprism.org/en/latest/) and automatically updates whenever changes are pushed to the repository.
 
+## Feedback
+
+Part of this project is to find better ways of organizing product development, in particular by embracing simplicity and consistently leveraging community feedback. Please [share your experience](https://goo.gl/forms/mwDqrqhN9TY50c2Z2) with us, especially if you haven't actively contributed yet. Name and email are optional.
+
 ## Donations
 
 Please leave a star on [GitHub](https://github.com/photoprism/photoprism) if you like this project, it provides enough motivation to keep going.

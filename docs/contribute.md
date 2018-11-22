@@ -3,14 +3,14 @@
 We welcome contributions of any kind including bug reports, pull requests, ideas,
 testing, writing documentation, tutorials and blog posts.
 
-Issues labeled [help wanted](https://github.com/photoprism/photoprism/labels/help%20wanted) can be
-good (first) contributions. Let us know if you need additional information or permissions on GitHub
-to perform a task. There are no stupid questions.
+Issues labeled [help wanted](https://github.com/photoprism/photoprism/labels/help%20wanted) /
+[easy](https://github.com/photoprism/photoprism/labels/easy) can be good (first) contributions.
+Our [Developer Guide](https://github.com/photoprism/photoprism/wiki) contains all information necessary to get you started as contributor.
 
 ## Questions?
 
-If you have a question or an idea, please [contact us via email](mailto:hello@photoprism.org) or join our `#photoprism` channel on [gophers.slack.com](https://gophers.slack.com).
-If you don't have an account yet, you can create one on [invite.slack.golangbridge.org](https://invite.slack.golangbridge.org/).
+Join our [developers mailing list](https://groups.google.com/a/photoprism.org/forum/#!forum/developers)
+to get regular project updates, ask other contributors and discuss your ideas. There are no stupid questions.
 
 ## Feature requests
 
@@ -27,7 +27,7 @@ pages in our [Developer Guide](https://github.com/photoprism/photoprism/wiki) fo
 ## Reporting bugs
 
 Please use the [GitHub issue tracker](https://github.com/photoprism/photoprism/issues) to report clearly identified bugs and impediments to us.
-If you're not sure, start by asking via email or chat.
+If you're not sure, start by asking in our [help forum](https://groups.google.com/a/photoprism.org/forum/#!forum/help) or [contact us via email](mailto:hello@photoprism.org).
 When reporting an issue, please provide the version in use and information about your environment like browser, operating system, installed memory, and processor type.
 
 ## Submitting pull requests

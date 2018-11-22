@@ -4,6 +4,9 @@ You are welcome to get an impression and provide early feedback.
 Note that we just started working on the UI and features are neither complete nor stable.
 We're a small team and move fast. Leave your email to get a [release notification](https://goo.gl/forms/KBPVGl9PCsOKrAv33).
 
+If you have a question, don't hesitate to ask in our [help forum](https://groups.google.com/a/photoprism.org/forum/#!forum/help)
+or [contact us via email](mailto:hello@photoprism.org).
+
 ## Installation ##
 
 Before you start, make sure you have [Docker](https://store.docker.com/search?type=edition&offering=community) installed on your system. It is available for Mac, Linux and Windows.

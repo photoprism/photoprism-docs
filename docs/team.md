@@ -22,3 +22,9 @@ Michael learned coding on an Atari 1040 ST and started his first open-source pro
 His motivation is to explore the latest technologies and build an amazing product outside the constraints of a corporate environment.
 
 You can find him on [GitHub](https://github.com/lastzero), [LinkedIn](https://www.linkedin.com/in/michaelmayer11/) and [Twitter](https://twitter.com/lastzero)
+
+## ...and many more ##
+
+We do our best to mention everyone who contributes frequently or in a special way on this page.
+Please [let us know](mailto:hello@photoprism.org) if you would like to be listed.
+GitHub has a full list of source code [contributors](https://github.com/photoprism/photoprism/graphs/contributors).

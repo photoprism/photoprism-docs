@@ -5,7 +5,7 @@ testing, writing documentation, tutorials and blog posts.
 
 Issues labeled [help wanted](https://github.com/photoprism/photoprism/labels/help%20wanted) /
 [easy](https://github.com/photoprism/photoprism/labels/easy) can be good (first) contributions.
-Our [Developer Guide](https://github.com/photoprism/photoprism/wiki) contains all information necessary to get you started as contributor.
+Our [Developer Guide](https://github.com/photoprism/photoprism/wiki) contains all information necessary to get you started.
 
 ## Questions?
 

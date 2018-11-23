@@ -30,12 +30,12 @@ Please use the [GitHub issue tracker](https://github.com/photoprism/photoprism/i
 If you're not sure, start by asking in our [help forum](https://groups.google.com/a/photoprism.org/forum/#!forum/help) or [contact us via email](mailto:hello@photoprism.org).
 When reporting an issue, please provide the version in use and information about your environment like browser, operating system, installed memory, and processor type.
 
-## Submitting a pull request
+## Pull requests
 
 We welcome all contributors and contributions regardless of skill or experience level.
 If you are interested in helping with the project, we will help you with your contribution.
 
-Our [step-by-step guide](https://github.com/photoprism/photoprism/wiki/Pull-Requests) explains how to submit new code or documentation.
+Our [step-by-step guide](https://github.com/photoprism/photoprism/wiki/Pull-Requests) explains how to submit new features, bugfixes and documentation.
 
 ## Donations
 

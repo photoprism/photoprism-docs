@@ -10,7 +10,7 @@ Our [Developer Guide](https://github.com/photoprism/photoprism/wiki) contains al
 ## Questions?
 
 Join our [developers mailing list](https://groups.google.com/a/photoprism.org/forum/#!forum/developers)
-to get regular project updates, stay in contact with other contributors and discuss your ideas. Don't be afraid to ask stupid questions.
+to receive regular project updates, get in contact with other contributors and discuss your ideas. Don't be afraid to ask stupid questions.
 
 ## Feature requests
 

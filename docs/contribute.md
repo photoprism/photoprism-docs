@@ -37,10 +37,6 @@ If you are interested in helping with the project, we will help you with your co
 
 Our [step-by-step guide](https://github.com/photoprism/photoprism/wiki/Pull-Requests) explains how to submit new code or documentation.
 
-## Feedback
-
-Part of this project is to find better ways of organizing product development, in particular by embracing simplicity and consistently leveraging community feedback. Please [share your experience](https://goo.gl/forms/mwDqrqhN9TY50c2Z2) with us, especially if you haven't actively contributed yet. Name and email are optional.
-
 ## Donations
 
 Please leave a star on [GitHub](https://github.com/photoprism/photoprism) if you like this project, it provides enough motivation to keep going.

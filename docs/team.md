@@ -27,4 +27,4 @@ You can find him on [GitHub](https://github.com/lastzero), [LinkedIn](https://ww
 
 We do our best to mention everyone who contributes frequently or in a special way on this page.
 Please [let us know](mailto:hello@photoprism.org) if you would like to be listed.
-GitHub has a full list of source code [contributors](https://github.com/photoprism/photoprism/graphs/contributors).
+GitHub has a [full list of source code contributors](https://github.com/photoprism/photoprism/graphs/contributors).

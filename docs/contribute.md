@@ -1,16 +1,23 @@
 # How to contribute
 
-We welcome contributions of any kind including bug reports, pull requests, ideas,
+We welcome contributions of any kind including pull requests, ideas, bug reports,
 testing, writing documentation, tutorials and blog posts.
-
-Issues labeled [help wanted](https://github.com/photoprism/photoprism/labels/help%20wanted) /
-[easy](https://github.com/photoprism/photoprism/labels/easy) can be good (first) contributions.
-Our [Developer Guide](https://github.com/photoprism/photoprism/wiki) contains all information necessary to get you started.
 
 ## Questions?
 
 Join our [developers mailing list](https://groups.google.com/a/photoprism.org/forum/#!forum/developers)
 to receive regular project updates, get in contact with other contributors and discuss your ideas. Don't be afraid to ask stupid questions.
+
+## Pull requests
+
+Issues labeled [help wanted](https://github.com/photoprism/photoprism/labels/help%20wanted) /
+[easy](https://github.com/photoprism/photoprism/labels/easy) can be good (first) contributions.
+Our [Developer Guide](https://github.com/photoprism/photoprism/wiki) contains all information necessary to get you started.
+
+We welcome all contributors and contributions regardless of skill or experience level.
+If you are interested in helping with the project, we will help you with your contribution.
+
+Our [step-by-step guide](https://github.com/photoprism/photoprism/wiki/Pull-Requests) explains how to submit new features, bugfixes and documentation.
 
 ## Feature requests
 
@@ -29,13 +36,6 @@ pages in our [Developer Guide](https://github.com/photoprism/photoprism/wiki) fo
 Please use the [GitHub issue tracker](https://github.com/photoprism/photoprism/issues) to report clearly identified bugs and impediments to us.
 If you're not sure, start by asking in our [help forum](https://groups.google.com/a/photoprism.org/forum/#!forum/help) or [contact us via email](mailto:hello@photoprism.org).
 When reporting an issue, please provide the version in use and information about your environment like browser, operating system, installed memory, and processor type.
-
-## Pull requests
-
-We welcome all contributors and contributions regardless of skill or experience level.
-If you are interested in helping with the project, we will help you with your contribution.
-
-Our [step-by-step guide](https://github.com/photoprism/photoprism/wiki/Pull-Requests) explains how to submit new features, bugfixes and documentation.
 
 ## Donations
 

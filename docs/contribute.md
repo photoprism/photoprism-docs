@@ -39,7 +39,7 @@ pages in our [Developer Guide](https://github.com/photoprism/photoprism/wiki) fo
 ## Reporting bugs
 
 Please use the [GitHub issue tracker](https://github.com/photoprism/photoprism/issues) to report clearly identified bugs and impediments to us.
-If you're not sure, start by asking in our [help forum](https://groups.google.com/a/photoprism.org/forum/#!forum/help) or [contact us via email](mailto:hello@photoprism.org).
+If you're not sure, start by asking in our [help forum](https://groups.google.com/a/photoprism.org/forum/#!forum/help) or [contact us via email](mailto:help@photoprism.org).
 When reporting an issue, please provide the version in use and information about your environment like browser, operating system, installed memory, and processor type.
 
 ## Donations

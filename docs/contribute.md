@@ -19,9 +19,6 @@ Issues labeled [help wanted](https://github.com/photoprism/photoprism/labels/hel
 [easy](https://github.com/photoprism/photoprism/labels/easy) can be good (first) contributions.
 Our [Developer Guide](https://github.com/photoprism/photoprism/wiki) contains all information necessary to get you started.
 
-We welcome all contributors and contributions regardless of skill or experience level.
-If you are interested in helping with the project, we will help you with your contribution.
-
 Our [step-by-step guide](https://github.com/photoprism/photoprism/wiki/Pull-Requests) explains how to submit new features, bugfixes and documentation.
 
 ## Feature requests

@@ -20,9 +20,9 @@ Though arguably less convenient to edit than a wiki, this git repository is mean
 
 ## Building with Mkdocs
 
-To build the HTML, you need to install [Mkdocs](https://www.mkdocs.org/) as well as the [mkdocs-material](https://squidfunk.github.io/mkdocs-material/).
+To build the HTML, you need to install [Mkdocs](https://www.mkdocs.org/).
 
-Those tools are best installed using [pip](https://pip.pypa.io), Python's module installer. On a Mac you can run:
+Is is best installed using [pip](https://pip.pypa.io), Python's module installer. On a Mac you can run:
 
 ```sh
 brew install python

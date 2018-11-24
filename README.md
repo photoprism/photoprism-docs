@@ -46,6 +46,10 @@ mkdocs server
 
 To edit an existing page, locate its .md source file and open it in your favourite text editor. You can then commit the changes, push them to your fork and make a pull request.
 
+## Other repositories on GitHub
+  * [photoprism](https://github.com/photoprism/photoprism) - main repository
+  * [photoprism.github.io](https://github.com/photoprism/photoprism.github.io) - public homepage hosted by GitHub Pages on [photoprism.org](https://photoprism.org)
+
 ## License
 
 All the content of this repository is licensed under the Attribution-ShareAlike 4.0 International license ([CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)).

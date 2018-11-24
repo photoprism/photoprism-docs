@@ -26,8 +26,10 @@ Our [step-by-step guide](https://github.com/photoprism/photoprism/wiki/Pull-Requ
 You are welcome to add specific feature requests directly to our [GitHub issue tracker](https://github.com/photoprism/photoprism/issues)
 if no similar [idea](https://github.com/photoprism/photoprism/labels/idea)
 or [todo](https://github.com/photoprism/photoprism/labels/todo) already exists.
-Please don't use the issue tracker to ask general questions. We also maintain a couple of
-pages in our [Developer Guide](https://github.com/photoprism/photoprism/wiki) for collecting interesting ideas and feedback, e.g.
+Please don't use the issue tracker to ask general questions.
+
+We also maintain a couple of pages in our [Developer Guide](https://github.com/photoprism/photoprism/wiki)
+for collecting interesting ideas and feedback, e.g.
 [Related](https://github.com/photoprism/photoprism/wiki/Related),
 [Love](https://github.com/photoprism/photoprism/wiki/Love),
 [Concerns](https://github.com/photoprism/photoprism/wiki/Concerns) and

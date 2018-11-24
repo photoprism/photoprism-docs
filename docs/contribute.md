@@ -1,7 +1,12 @@
-# How to contribute
+# Every contribution makes a difference
+
+Think of open source development as free training with a visible end result.
+It is much easier to learn new technologies this way than at work, where most
+companies try to reduce risk and development effort is focused on monetization.
 
 We welcome contributions of any kind including pull requests, ideas, bug reports,
-testing, writing documentation, tutorials and blog posts.
+testing, writing documentation, tutorials and blog posts. If you help with development,
+you have the opportunity to learn Docker, Go, TensorFlow and much more.
 
 ## Questions?
 

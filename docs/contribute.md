@@ -1,8 +1,8 @@
 # Every contribution makes a difference
 
-Think of open source development as free training with a visible end result.
-It is much easier to learn new technologies this way than at work, where most
-companies try to reduce risk and development effort is focused on monetization.
+Think of open source development as free training with a visible outcome.
+Acquiring a deep understanding of new technologies is easier than in commercial environments,
+where development effort is more focused on immediate results.
 
 We welcome contributions of any kind including pull requests, ideas, bug reports,
 testing, writing documentation, tutorials and blog posts. If you help with development,

@@ -1,7 +1,7 @@
 # Every contribution makes a difference
 
 Think of open source development as free training with a visible outcome.
-Acquiring a deep understanding of new technologies is easier than in commercial environments,
+Acquiring a profound understanding of technologies is easier than in commercial environments,
 where development effort is more focused on immediate results.
 
 We welcome contributions of any kind including pull requests, ideas, bug reports,

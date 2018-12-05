@@ -11,7 +11,7 @@ You can find him on [Google Scholar](https://scholar.google.de/citations?user=JH
 
 ## Theresa Gresch ##
 
-Theresa works as a freelance product manager and developer in Berlin. She has a Masters in Neurobiology
+Theresa works as a freelance product manager and developer in Berlin. She has a Master's in Neurobiology
 and aims to dive deeper into machine learning while working on this project.
 
 You can find her on [GitHub](https://github.com/graciousgrey) and [LinkedIn](https://www.linkedin.com/in/theresa-gresch-886924103/)

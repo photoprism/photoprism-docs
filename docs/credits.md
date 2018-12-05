@@ -1,6 +1,6 @@
 # Credits
 
-A big **thank you** to everyone who made this possible. Developing free software in 2018 is nothing like it was in the 90s.
+A big **thank you** to everyone who made this possible. Developing free software today is nothing like it was in the 90s.
 
 ## Artwork ##
 

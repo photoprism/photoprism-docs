@@ -1,6 +1,6 @@
 # Every contribution makes a difference
 
-Think of open source development as free training with a visible outcome.
+Think of open-source development as free training with a visible outcome.
 Exploring new technologies is easier than in commercial environments,
 where development effort is more focused on immediate results.
 

@@ -1,6 +1,6 @@
 # Let's join forces
 
-Please [reach out](mailto:hello@photoprism.org) to us if you work for an organization that would like to support our project.
+Please [reach out](mailto:hello@photoprism.org) to us if you work for an organization that would like to sponsor our project.
 Grants will be used for organizing meetups, visiting conferences, buying test devices, offering perks for contributions
 and covering the cost of living for full-time developers.
 

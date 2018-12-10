@@ -1,7 +1,7 @@
 # Let's join forces
 
 Developing open-source software is a community effort. Please [reach out](mailto:hello@photoprism.org) to us if you
-work for an organization that would like to sponsor our project.
+work for an organization that would like to [sponsor our project](https://photoprism.org/downloads/PhotoPrism.pdf).
 Grants will be used for organizing meetups, visiting conferences, buying test devices, offering perks for contributions
 and covering the cost of living for full-time developers.
 

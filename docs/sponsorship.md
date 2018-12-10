@@ -3,10 +3,9 @@
 Developing open-source software is a [community effort](https://photoprism.org/downloads/PhotoPrism.pdf).
 Solid funding enables us to quickly implement features and integrate with services you care about.
 
-Please [reach out](mailto:hello@photoprism.org) to us if you work for an organization that would like to
-sponsor our project. Grants will be used for organizing meetups, visiting conferences, buying test devices,
-offering perks for contributions and covering the cost of living for full-time developers.
+Please visit our new [Patreon](https://www.patreon.com/photoprism) page or [reach out](mailto:hello@photoprism.org)
+to us if you work for an organization that would like to sponsor our project.
+Grants will be used for organizing meetups, visiting conferences, buying test devices,
+offering perks for contributions, and covering our cost of living.
 
-In exchange, we are happy to mention your support and would love to share our experience with you or your team,
-either on-site or remote. We can also help you getting existing photo collections tagged or build an API that
-integrates with your infrastructure.
+Your support is highly appreciated and will have significant impact on our work.

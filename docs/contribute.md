@@ -43,5 +43,6 @@ When reporting an issue, please provide the version in use and information about
 
 ## Donations
 
+We don't want to ask individuals for a donation at the moment.
 Please leave a star on [GitHub](https://github.com/photoprism/photoprism) if you like this project, it provides enough motivation to keep going.
 Thank you very much! <3

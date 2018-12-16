@@ -18,11 +18,5 @@ Say goodbye to solutions that force you to upload your visual memories to the cl
 The development of every commercial product is focused on monetization.
 We've [built similar apps more than once](https://github.com/photoprism/photoprism/wiki/Mediencenter) and every single time the constraints of working
 in a profit-oriented corporate environment were an impediment.
-We are sure we can do better with only a fraction of the budget. Simplicity can be very powerful.
-Go, the programming language we're using, is a great example. It is heavily influenced by the ideas of Niklaus Wirth.
-
-!!! quote
-    Simple, elegant solutions are more effective, but they are harder to find than complex ones, and they require more time, which we too often believe to be unaffordable.
-
-    *NIKLAUS WIRTH, COMMUNICATIONS OF THE ACM, FEB. 1985*
-
+We are sure we can do better with only a fraction of the budget. Simplicity - the art of maximizing the amount of work not done - can be very powerful.
+Go, the programming language we're using, is a [great example](https://dave.cheney.net/2015/03/08/simplicity-and-collaboration).

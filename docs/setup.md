@@ -1,6 +1,8 @@
 # For the early birds
 
 You are welcome to get an impression and provide early feedback.
+We've set up a public demo at [demo.photoprism.org](https://demo.photoprism.org) for you to play with.
+
 Note that we just started working on the UI and features are neither complete nor stable.
 We're a small team and move fast. Leave your email to get a [release notification](https://goo.gl/forms/KBPVGl9PCsOKrAv33).
 
@@ -10,7 +12,7 @@ or [contact us via email](mailto:hello@photoprism.org).
 ## Installation ##
 
 Before you start, make sure you have [Docker](https://store.docker.com/search?type=edition&offering=community) installed on your system. It is available for Mac, Linux and Windows.
-Developers can skip this and move on to the [Developer Guide](https://github.com/photoprism/photoprism/wiki). We are working hard to make Docker optional.
+Developers can skip this and move on to the [Developer Guide](https://github.com/photoprism/photoprism/wiki). We plan to ship the final app as a single binary including all dependencies.
 
 ### Step 1: Configure ###
 

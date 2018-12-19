@@ -9,7 +9,7 @@ A big **thank you** to everyone who made this possible!
 * [Gopher overlapping the TensorFlow logo](img/tensorgologo.png) was created by [Takuya Ueda](https://github.com/tenntenn)
 
 ## Technologies ##
-* [Go](https://golang.org/), [Gin](https://gin-gonic.github.io/gin/) and [Vuetify](https://vuetifyjs.com/en/)
+* [Go](https://golang.org/), [Gin](https://gin-gonic.github.io/gin/), [TiDB](https://github.com/pingcap/tidb) and [Vuetify](https://vuetifyjs.com/en/)
 * [Google](https://developers.google.com/) [TensorFlow](https://www.tensorflow.org/) and [Material Design](https://material.io/)
 
 ## Infrastructure ##
@@ -18,3 +18,4 @@ A big **thank you** to everyone who made this possible!
 * [Read the Docs](https://readthedocs.org/) hosts this user guide
 * [Travis-CI](https://travis-ci.org/photoprism/photoprism) builds and tests our code multiple times a day
 * [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/) hosts our container images
+* [IssueHunt](https://issuehunt.io/repos/119160553) is a new service for sponsoring Open Source development

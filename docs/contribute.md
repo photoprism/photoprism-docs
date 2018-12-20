@@ -21,6 +21,10 @@ Our [Developer Guide](https://github.com/photoprism/photoprism/wiki) contains al
 
 Our [step-by-step guide](https://github.com/photoprism/photoprism/wiki/Pull-Requests) explains how to submit new features, bugfixes and documentation.
 
+## Sponsored issues ##
+
+You'll get a small reward for working on sponsored issues labeled [IssueHunt](https://github.com/photoprism/photoprism/labels/IssueHunt), see [issuehunt.io](https://issuehunt.io/repos/119160553).
+
 ## Feature requests
 
 You are welcome to add specific feature requests directly to our [GitHub issue tracker](https://github.com/photoprism/photoprism/issues)

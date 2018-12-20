@@ -18,4 +18,4 @@ A big **thank you** to everyone who made this possible!
 * [Read the Docs](https://readthedocs.org/) hosts this user guide
 * [Travis-CI](https://travis-ci.org/photoprism/photoprism) builds and tests our code multiple times a day
 * [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/) hosts our container images
-* [IssueHunt](https://issuehunt.io/repos/119160553) is a new service for sponsoring Open Source development
+* [IssueHunt](https://issuehunt.io/repos/119160553) is a new service for funding Open Source development

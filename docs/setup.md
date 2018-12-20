@@ -26,8 +26,12 @@ docker run -p 2342:80 -d -v ~/Pictures:/srv/photoprism/photos/originals \
   --name photoprism photoprism/photoprism:latest
 ```
 
-Your files won't be deleted or moved. The default port *2342* can be changed
-as needed.
+The default port 2342 can be changed as needed.
+
+!!! info
+    Your files won't be deleted or moved. You should still be careful
+    as this software is not stable yet. A JPEG representation might be created
+    for RAW images in order to render thumbnails.
 
 Now open http://localhost:2342/ in a Web browser to see the user interface.
 

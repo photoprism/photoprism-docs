@@ -16,7 +16,7 @@ Developers can skip this and move on to the [Developer Guide](https://github.com
 It also contains instructions for running our container image via [Docker Compose](https://github.com/photoprism/photoprism/wiki/Docker-Compose).
 We plan to ship the final app as a single binary including all dependencies.
 
-### Step 1: Start a container ###
+### Step 1: Start the server ###
 
 Open a terminal and run this command after replacing *~/Pictures* with
 the folder containing your photos:

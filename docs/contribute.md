@@ -23,7 +23,7 @@ Our [step-by-step guide](https://github.com/photoprism/photoprism/wiki/Pull-Requ
 
 ## Funded issues ##
 
-You'll get a small reward for working on [funded issues](https://github.com/photoprism/photoprism/labels/IssueHunt), see [issuehunt.io](https://issuehunt.io/repos/119160553) for details. Note that issue descriptions don't automatically update on IssueHunt. Rewards are getting paid when all [acceptance criteria](https://github.com/photoprism/photoprism/wiki/Issues#user-stories) prioritized as MUST are met.
+You'll get a small reward for working on [funded issues](https://github.com/photoprism/photoprism/labels/IssueHunt), see [issuehunt.io](https://issuehunt.io/repos/119160553) for details. Note that issue descriptions may be outdated on IssueHunt. Rewards are paid out when all [acceptance criteria](https://github.com/photoprism/photoprism/wiki/Issues#user-stories) prioritized as MUST are met and your pull request was successfully merged.
 
 ## Feature requests
 

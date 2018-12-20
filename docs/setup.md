@@ -44,11 +44,11 @@ docker exec -ti photoprism photoprism index
 ```
 
 Photos will become visible one after another.
-You can see the indexer working in the terminal.
+You can watch the indexer working in the terminal.
 
 ### Step 3: When you're done... ###
 
-You can stop PhotoPrism and start it again using the following commands:
+You can stop the server and start it again using the following commands:
 
 ```
 docker stop photoprism

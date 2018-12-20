@@ -9,66 +9,83 @@ We're a small team and move fast. Leave your email to get a [release notificatio
 If you have a question, don't hesitate to ask in our [help forum](https://groups.google.com/a/photoprism.org/forum/#!forum/help)
 or [contact us via email](mailto:hello@photoprism.org).
 
-## Installation ##
+## Browse your photos ##
 
 Before you start, make sure you have [Docker](https://store.docker.com/search?type=edition&offering=community) installed on your system. It is available for Mac, Linux and Windows.
-Developers can skip this and move on to the [Developer Guide](https://github.com/photoprism/photoprism/wiki). We plan to ship the final app as a single binary including all dependencies.
+Developers can skip this and move on to the [Developer Guide](https://github.com/photoprism/photoprism/wiki).
+It also contains instructions for running our container image via [Docker Compose](https://github.com/photoprism/photoprism/wiki/Docker-Compose).
+We plan to ship the final app as a single binary including all dependencies.
 
-### Step 1: Configure ###
+### Step 1: Start a container ###
 
-Download the config file [docker-compose.yml](https://raw.githubusercontent.com/photoprism/photoprism/master/docker/photoprism/docker-compose.yml) (right click and *Save Link As...*) to a directory of your choice.
-
-By default, a folder named `Photos` in your home directory will be used to store all images. You don't need to create it.
-
-PhotoPrism will also create the following sub-directories in your `Photos` folder: `Import`, `Export` and `Originals`. Copy existing photos to `Import`, not directly to `Originals` as they need to be renamed and indexed in order to remove duplicates.
-Files that can not be imported - like videos - will stay in the `Import` directory, nothing gets lost.
-
-If you prefer to use different directory names, you can change them in `docker-compose.yml`. See inline comments for instructions.
-
-### Step 2: Run ###
-
-Open a terminal, go to the directory in which you saved the config file and run this command to start the server:
+Open a terminal and run this command after replacing *~/Pictures*
+with a directory containing photos you want to browse:
 
 ```
-docker-compose up -d
+docker run -p 2342:80 -d -v ~/Pictures:/srv/photoprism/photos/originals \
+  --name photoprism photoprism/photoprism:latest
 ```
 
-The Web frontend is now available at http://localhost:2342/. The port can be changed in `docker-compose.yml`. Remember to run `docker-compose restart` every time you touch the config.
+Your files won't be deleted or moved. The default port *2342* can be changed
+as needed.
 
-### Step 3: Import ###
+Now open http://localhost:2342/ in a Web browser to see the user interface.
 
-Connect to the application container and run `photoprism import` after putting files in the `Import` folder:
+### Step 2: Index photos ###
+
+There won't be any search results until you start indexing your photos:
 
 ```
-docker-compose exec photoprism bash
-photoprism import
+docker exec -ti photoprism photoprism index
 ```
 
-You should now be able to see your photos. You can continue using your favorite tools like Photoshop or Lightroom
-to edit images in the `Originals` folder. Run `photoprism index` to reindex them as needed.
-Even deleting and adding is possible, if you stick to the naming scheme. Easy, isn't it?
+Photos will become visible one after another.
+You can see the indexer working in the terminal.
+
+### Step 3: When you're done... ###
+
+You can stop PhotoPrism and start it again using the following commands:
+
+```
+docker stop photoprism
+docker start photoprism
+```
+
+To remove the container completely:
+```
+docker rm -f photoprism
+```
+
+## Run our demo ##
+
+For a quick test, you can start a demo that comes with pre-indexed photos:
+
+```
+docker run -p 2342:80 -d --name demo photoprism/demo:latest
+```
+
+After running the command, open http://localhost:2342/ in a Web browser.
+It may take a few seconds to become available.
+
+To stop and remove the container:
+
+```
+docker rm -f demo
+```
 
 ## Updating ##
 
-Open a terminal, go to the directory in which you saved `docker-compose.yml` and run the following commands to update your version to the latest development snapshot:
+Open a terminal and run the following command to pull the latest container image:
 
-```bash
-docker-compose down
-docker-compose pull photoprism
-docker-compose up -d
+```
+docker pull photoprism/photoprism:latest
 ```
 
-Pulling a new version can take several minutes, depending on your internet connection. The final release will be smaller.
+Pulling a new version can take several minutes, depending on your internet connection.
 
 ## Troubleshooting ##
 
 If the application can not be opened in the browser or the container doesn't start at all, you might have found a bug,
-you might be using an outdated container image or some of your directories are not readable or writable (check permissions).
+you might be using an outdated container image or some of your directories are not readable (check permissions).
 
-Try **not** to start the app in detached mode (`-d`) to see errors:
-
-```
-docker-compose up
-```
-
-You're welcome to send a full report to hello@photoprism.org so that we can help you.
+You're welcome to send a full report to help@photoprism.org so that we can assist you.

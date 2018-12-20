@@ -39,7 +39,7 @@ mkdocs build
 or start a server that listens on http://127.0.0.1:8000
 
 ```sh
-mkdocs server
+mkdocs serve
 ```
 
 ### Editing existing pages

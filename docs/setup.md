@@ -18,8 +18,8 @@ We plan to ship the final app as a single binary including all dependencies.
 
 ### Step 1: Start a container ###
 
-Open a terminal and run this command after replacing *~/Pictures*
-with a directory containing photos you want to browse:
+Open a terminal and run this command after replacing *~/Pictures* with
+the folder containing your photos:
 
 ```
 docker run -p 2342:80 -d -v ~/Pictures:/srv/photoprism/photos/originals \
@@ -86,6 +86,6 @@ Pulling a new version can take several minutes, depending on your internet conne
 ## Troubleshooting ##
 
 If the application can not be opened in the browser or the container doesn't start at all, you might have found a bug,
-you might be using an outdated container image or some of your directories are not readable (check permissions).
+you might be using an outdated container image or your folder is not readable (check permissions).
 
 You're welcome to send a full report to help@photoprism.org so that we can assist you.

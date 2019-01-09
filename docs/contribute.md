@@ -50,3 +50,6 @@ When reporting an issue, please provide the version in use and information about
 We don't want to ask individuals for a donation at the moment.
 Please leave a star on [GitHub](https://github.com/photoprism/photoprism) if you like this project, it provides enough motivation to keep going.
 Thank you very much! <3
+
+If you still want to donate, you can do so via [Liberapay](https://en.liberapay.com/photoprism) and [PayPal](https://www.paypal.me/photoprism). It really means a lot to us as we haven't received any major financial support so far and are funding this project from our personal savings.
+

@@ -46,14 +46,18 @@ theme:
 # Customization
 extra:
   social:
-    - type: globe
-      link: https://photoprism.org/
+    - type: commenting
+      link: https://gitter.im/browseyourlife/community
+    - type: paypal
+      link: https://www.paypal.me/photoprism
     - type: github-alt
       link: https://github.com/photoprism
     - type: twitter
       link: https://twitter.com/browseyourlife
     - type: linkedin
       link: https://www.linkedin.com/company/photoprism/
+    - type: globe
+      link: https://photoprism.org/
 
 # Extensions
 markdown_extensions:
@@ -92,3 +96,4 @@ nav:
   - Sponsorship: sponsorship.md
   - Credits: credits.md
   - License: license.md
+  - Contact: contact.md

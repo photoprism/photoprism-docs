@@ -22,7 +22,7 @@ Open a terminal and run this command after replacing *~/Pictures* with
 the folder containing your photos:
 
 ```
-docker run -p 2342:80 -d --name photoprism \
+docker run -p 2342:2342 -d --name photoprism \
   -v ~/Pictures:/srv/photoprism/photos/originals photoprism/photoprism
 ```
 
@@ -65,7 +65,7 @@ docker rm -f photoprism
 For a quick test, you can start a demo that comes with pre-indexed photos:
 
 ```
-docker run -p 2342:80 -d --name demo photoprism/demo
+docker run -p 2342:2342 -d --name demo photoprism/demo
 ```
 
 After running the command, open http://localhost:2342/ in a Web browser.

@@ -44,12 +44,3 @@ for collecting interesting ideas and feedback, e.g.
 Please use the [GitHub issue tracker](https://github.com/photoprism/photoprism/issues) to report clearly identified bugs and impediments to us.
 If you're not sure, start by asking in our [help forum](https://groups.google.com/a/photoprism.org/forum/#!forum/help) or [contact us via email](mailto:help@photoprism.org).
 When reporting an issue, please provide the version in use and information about your environment like browser, operating system, installed memory, and processor type.
-
-## Donations
-
-We don't want to ask individuals for a donation at the moment.
-Please leave a star on [GitHub](https://github.com/photoprism/photoprism) if you like this project, it provides enough motivation to keep going.
-Thank you very much! <3
-
-If you still want to donate, you can do so via [Liberapay](https://en.liberapay.com/photoprism) and [PayPal](https://www.paypal.me/photoprism). It really means a lot to us as we haven't received any major financial support so far and are funding this project from our personal savings.
-

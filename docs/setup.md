@@ -36,7 +36,7 @@ The default port 2342 can be changed as needed.
     for RAW images in order to render thumbnails. You can enable read-only mode 
     to prevent this completely.
 
-Now open http://localhost:2342/ in a Web browser to see the user interface.
+Now open http://localhost:2342/ in a Web browser to see the user interface. The default password is "photoprism".
 
 ### Step 2: Index photos ###
 

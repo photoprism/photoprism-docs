@@ -40,14 +40,15 @@ Now open http://localhost:2342/ in a Web browser to see the user interface. The 
 
 ### Step 2: Index photos ###
 
-There won't be any search results until you start indexing your photos:
+There won't be any search results before you have indexed your photos. You can either do this using
+our comfortable Web UI or in a terminal:
 
 ```
 docker exec -ti photoprism photoprism index
 ```
 
-Photos will become visible one after another.
-You can watch the indexer working in the terminal.
+Photos will become visible one after another. You can watch the indexer working in the terminal 
+or the logs tab (Library).
 
 !!! attention
     PhotoPrism and Web browsers in general can only display JPEG images. RAW photos need to be converted, 

@@ -49,6 +49,12 @@ docker exec -ti photoprism photoprism index
 Photos will become visible one after another.
 You can watch the indexer working in the terminal.
 
+!!! attention
+    PhotoPrism and Web browsers in general can only display JPEG images. RAW photos need to be converted, 
+    which is what our import and convert commands do. You'll find a checkbox for this step in our Web UI.
+    PNGs are currently not supported as this file format doesn't contain useful metadata and is typically used 
+    for screenshots or diagrams only.
+
 ### Step 3: When you're done... ###
 
 You can stop the server and start it again using the following commands:

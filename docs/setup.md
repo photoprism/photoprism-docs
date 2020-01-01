@@ -111,8 +111,13 @@ Pulling a new version can take several minutes, depending on your internet conne
 
 ## Various questions ##
 
+### Other container versions ###
+
 Currently, we have no experience with using [Podman](https://podman.io/) instead
 of Docker. Please let us know if you do!
+
+There is currently no LXC container build for Photoprism, see [this
+issue](https://github.com/photoprism/photoprism/issues/147) for more detail.
 
 ## Troubleshooting ##
 

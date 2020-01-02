@@ -105,7 +105,7 @@ Pulling a new version can take several minutes, depending on your internet conne
 You can use [Watchtower](https://github.com/containrrr/watchtower) to automatically update the image which is how our
 [public demo](https://demo.photoprism.org/) stays up-to-date.
 
-!!! note
+!!! info
     Our database schema still changes a lot as we do performance optimizations and add features.
     Therefore we cannot provide a smooth upgrade path and you should be prepared
     to delete your current database and re-index.

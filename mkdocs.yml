@@ -91,6 +91,7 @@ markdown_extensions:
 nav:
   - Introduction: index.md
   - Setup: setup.md
+  - FAQ: faq.md
   - Team: team.md
   - Contribute: contribute.md
   - Sponsorship: sponsorship.md

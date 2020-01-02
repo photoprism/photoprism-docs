@@ -57,7 +57,8 @@ or the logs tab (Library).
 
 !!! attention
     PhotoPrism and Web browsers in general can only display JPEG images. RAW photos need to be converted, 
-    which is what our import and convert commands do. You'll find a checkbox for this step in our Web UI.
+    which is what our import and convert commands do. You'll find a checkbox for this step in our Web UI
+    (disabled in read-only mode).
     PNGs are currently not supported as this file format doesn't contain useful metadata and is typically used 
     for screenshots, charts, graphs and icons only.
 
@@ -101,7 +102,7 @@ docker pull photoprism/photoprism:latest
 ```
 
 Pulling a new version can take several minutes, depending on your internet connection.
-You can also use Watchtower to automatically update the image which is how our
+You can use [Watchtower](https://github.com/containrrr/watchtower) to automatically update the image which is how our
 [public demo](https://demo.photoprism.org/) stays up-to-date.
 
 !!! note

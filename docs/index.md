@@ -11,7 +11,6 @@ Say goodbye to solutions that force you to upload your visual memories to the cl
 * Clearly structured Web interface for browsing, organizing and sharing your personal photo collection.
 * Import everything without worrying about duplicates or RAW to JPEG conversion.
 * Reverse geocoding and automated tagging based on Google TensorFlow.
-* No monthly costs. No proprietary formats. No privacy concerns.
 
 ## Why this has to be free software
 

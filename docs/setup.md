@@ -16,8 +16,9 @@ or [contact us via email](mailto:hello@photoprism.org).
 Before you start, make sure you have [Docker](https://store.docker.com/search?type=edition&offering=community) installed on your system. It is available for Mac, Linux and Windows.
 Developers can skip this and move on to the [Developer Guide](https://github.com/photoprism/photoprism/wiki).
 It also contains instructions for running our container image via [Docker Compose](https://github.com/photoprism/photoprism/wiki/Docker-Compose).
-We plan to also ship the final app as a single binary including all dependencies.
-An [ARM image](https://github.com/photoprism/photoprism/issues/109) for Raspberry Pi users is in the works too.
+
+In addition, we plan to ship the final app as a single binary for users that don't know or like Docker.
+An [ARM image](https://github.com/photoprism/photoprism/issues/109) for Raspberry Pi users is in the works.
 
 ### Step 1: Start the server ###
 

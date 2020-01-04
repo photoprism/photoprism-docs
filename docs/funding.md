@@ -15,7 +15,7 @@ We still love each and everyone of you, even those that send multiple pages of w
 every week when it is done.
 
 Specific solutions could be to offer...
-  - a paid, tested & supported version in the app store while our contributors (and other developers) can 
+  - a paid, tested & supported version in the app store while our contributors and other developers can 
     continue to use Docker or build from source
   - a geodata, public events and maps subscription since OpenStreetMap doesn't want us to use their development 
     API for production

@@ -27,8 +27,7 @@ Specific solutions could be to...
 You're most welcome to support us via [GitHub Sponsors](https://github.com/sponsors/lastzero), 
 especially if you need help with using our software. They will match every donation in the first year.
 In addition, you can find us on [Patreon](https://www.patreon.com/photoprism) and [PayPal](https://www.paypal.me/photoprism). 
-Our sponsors and contributors will get for free whatever we might have to charge for a geodata,
-public events and maps subscription later.
+Our sponsors and contributors will get for free whatever we might have to charge for a geodata subscription later.
 
 Also please leave a [star](https://github.com/photoprism/photoprism/stargazers) on GitHub if you like this project, 
 it provides enough motivation to keep going. Thank you very much! <3

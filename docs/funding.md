@@ -1,11 +1,12 @@
 # Funding
 
 It's clear many users are waiting for a stable release while only very few donate or help with development. 
-This project is about freedom but not necessarily about free beer. We are not Google and don't have billions of 
-dollars on our bank accounts to give away to our fans in exchange for their data.
+This project is about freedom but not necessarily about free beer.
 
+We are not Google and don't have billions of dollars on our bank accounts to give away to our fans in exchange for their data.
 It's also somewhat disappointing how little support we get by companies and especially public organizations. 
 Not a single dollar. 
+
 Every politician wants to support Open Source and warns social media is bad for your privacy, but only very 
 few are willing to help those that actually do something.
 

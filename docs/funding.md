@@ -14,8 +14,11 @@ and didn't ask for anything the first year. Thank you very much to our few spons
 We still love each and everyone of you, even those that send multiple pages of written requirements and then ask 
 every week when it is done.
 
-One specific solution could be to offer paid, tested & supported versions in the app store while our contributors 
-(and other developers) can use Docker or build from source.
+Specific solutions could be to offer...
+  - a paid, tested & supported version in the app store while our contributors (and other developers) can 
+    continue to use Docker or build from source
+  - a geodata, public events and maps subscription since OpenStreetMap doesn't want us to use their development 
+    API for production
 
 ## Donations
 

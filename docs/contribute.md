@@ -10,7 +10,7 @@ you have the opportunity to learn Docker, Go, TensorFlow and much more.
 
 ## Questions?
 
-Join our [developers mailing list](https://groups.google.com/a/photoprism.org/forum/#!forum/developers)
+Follow us on [Twitter](https://twitter.com/browseyourlife) and join our [developers mailing list](https://groups.google.com/a/photoprism.org/forum/#!forum/developers)
 to receive regular project updates, get in contact with other contributors and discuss your ideas. Don't be afraid to ask stupid questions.
 
 ## Pull requests

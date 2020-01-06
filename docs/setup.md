@@ -63,7 +63,7 @@ or the logs tab (Library).
     (disabled in read-only mode).
     
 !!! info    
-    Due to popular request, our latest release supports TIFF, PNG, BMP and GIF files. 
+    Due to popular request, our latest demo now also supports TIFF, PNG, BMP and GIF files. 
     Be aware that files in those formats often don't contain useful metadata and are typically 
     used for screenshots, charts, graphs and icons only.
 

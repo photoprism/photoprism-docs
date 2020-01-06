@@ -39,7 +39,7 @@ only) parameters to the `-v` volume line if you want to.
 !!! info
     Your image files won't be deleted, modified or moved. We might later update metadata in XMP sidecar files to
     sync with Adobe Lightroom. You should still be careful as this software is not stable yet. 
-    A JPEG representation might be created for RAW, PNG, BMP, GIF and TIFF images in order to render 
+    A JPEG representation might be created for RAW, HEIF, TIFF, PNG, BMP and GIF images in order to render 
     thumbnails. You can enable read-only mode to prevent this completely.
 
 Now open http://localhost:2342/ in a Web browser to see the user interface. The default password is "photoprism".
@@ -62,7 +62,7 @@ or the logs tab (Library).
     (disabled in read-only mode).
     
 !!! info    
-    Due to popular request, our latest release supports PNG, BMP, GIF and TIFF files. 
+    Due to popular request, our latest release supports TIFF, PNG, BMP and GIF files. 
     Be aware that files those formats often don't contain useful metadata and are typically 
     used for screenshots, charts, graphs and icons only.
 

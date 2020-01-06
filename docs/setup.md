@@ -33,14 +33,15 @@ docker run -d \
   photoprism/photoprism
 ```
 
-The default port 2342 can be changed as needed. Also, you can add the `:ro` (read
-only) parameters to the `-v` volume line if you want to. 
+The default port 2342 can be changed as needed. Adding a `:ro` flag to the `-v` volume 
+mounts it read only. 
 
 !!! info
-    Your image files won't be deleted, modified or moved. We might later update metadata in XMP sidecar files to
-    sync with Adobe Lightroom. You should still be careful as this software is not stable yet. 
+    Your image files won't be deleted, modified or moved. We might later update metadata in 
+    [XMP sidecar files](https://www.adobe.com/products/xmp.html) to
+    sync with Adobe Lightroom.
     A JPEG representation might be created for RAW, HEIF, TIFF, PNG, BMP and GIF images in order to render 
-    thumbnails. You can enable read-only mode to prevent this completely.
+    thumbnails. You can enable read-only mode to prevent this completely, but you will also lose the functionality.
 
 Now open http://localhost:2342/ in a Web browser to see the user interface. The default password is "photoprism".
 

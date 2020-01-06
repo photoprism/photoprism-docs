@@ -57,11 +57,14 @@ Photos will become visible one after another. You can watch the indexer working 
 or the logs tab (Library).
 
 !!! attention
-    PhotoPrism and Web browsers in general can only display JPEG images. RAW photos need to be converted, 
+    PhotoPrism and Web browsers in general can not display RAW image files. They need to be converted, 
     which is what our import and convert commands do. You'll find a checkbox for this step in our Web UI
     (disabled in read-only mode).
-    PNGs are currently not supported as this file format doesn't contain useful metadata and is typically used 
-    for screenshots, charts, graphs and icons only.
+    
+!!! info    
+    Due to popular request, our latest release supports PNG, BMP, GIF and TIFF files. 
+    Be aware that files those formats often don't contain useful metadata and are typically 
+    used for screenshots, charts, graphs and icons only.
 
 ### Step 3: When you're done... ###
 

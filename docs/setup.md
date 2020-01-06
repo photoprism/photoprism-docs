@@ -64,7 +64,7 @@ or the logs tab (Library).
     
 !!! info    
     Due to popular request, our latest release supports TIFF, PNG, BMP and GIF files. 
-    Be aware that files those formats often don't contain useful metadata and are typically 
+    Be aware that files in those formats often don't contain useful metadata and are typically 
     used for screenshots, charts, graphs and icons only.
 
 ### Step 3: When you're done... ###

@@ -45,3 +45,7 @@ for help and also tried to cooperate with companies like Mapbox and Cewe. We hav
 the advice that what we do "already exists in America".
 
 If any of those organizations changes their mind, they are welcome to [reach out to us](mailto:hello@photoprism.org).
+
+The funding situation of popular Open Source projects is especially bitter in the face of massive money printing 
+by central banks all over the world. Much of this goes to large corporations that buy back shares
+to the personal benefit of their managers and to investors that drive up housing costs.

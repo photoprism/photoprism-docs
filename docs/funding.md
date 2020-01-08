@@ -53,10 +53,10 @@ development expenses if you look at [Indiegogo](https://www.indiegogo.com/) or [
 In no way do we spurn other OSS projects like [OpenStreetMap](https://www.openstreetmap.org/), 
 as a Twitter user suggested. We just state the fact that even a non-commercial app can't use their API 
 for production, which is perfectly OK.
-
 On the other hand, it also doesn't mean we have to provide this service for free to our users. 
-We've learned that money is a very sensitive topic most of our users don't engage with and even try to avoid. 
-No wonder many founders go the easy way, take venture capital and sell licenses for their software.
+
+We've learned that money is a very sensitive topic most of our users don't engage with and even try to avoid.
+For this reason, we'll exclude this topic from our social media communication from now on.
 
 ## Public and corporate sponsorship ##
 

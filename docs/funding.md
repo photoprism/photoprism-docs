@@ -46,11 +46,12 @@ mean independent developers should not do this full-time or pay everything thems
 support. In fact, crowdfunding is a pretty common way to cover development expenses if you look at 
 [Indiegogo](https://www.indiegogo.com/) or [Kickstarter](https://www.kickstarter.com/).
 
-In no way do we spurn other OSS projects like OpenStreetMap, as a Twitter user suggested. We just state the fact
-that even a non-commercial app can't use their API for production, which is perfectly OK. On the other hand,
-it also doesn't mean we have to provide this service for free to our users. We've learned that money is a
-very sensitive topic most of our users don't engage with and even try to avoid. No wonder most founders go the
-easy way, take venture capital and sell licenses for their software.
+In no way do we spurn other OSS projects like [OpenStreetMap](https://www.openstreetmap.org/), 
+as a Twitter user suggested. We just state the fact that even a non-commercial app can't use their API 
+for production, which is perfectly OK. 
+On the other hand, it also doesn't mean we have to provide this service for free to our users. 
+We've learned that money is a very sensitive topic most of our users don't engage with and even try to avoid. 
+No wonder most founders go the easy way, take venture capital and sell licenses for their software.
 
 ## Public and corporate sponsorship ##
 

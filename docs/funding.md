@@ -44,7 +44,7 @@ Thank you very much! <3
 ## Lessons learned ##
 
 Having done mostly commercial projects in the last 10+ years, it is important for us to explore various forms of funding
-and communication for independent Open Source projects. Note that many of today's popular projects are funded by 
+and communication for independent Open Source projects. Note that many of today's popular projects are backed by 
 corporations like Google, Facebook, Microsoft or Intel.
 
 That's a good thing and we profit from it, but doesn't mean independent developers should not do this full-time or pay 

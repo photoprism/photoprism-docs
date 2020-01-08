@@ -11,7 +11,8 @@ Every politician wants to support Open Source and warns social media is bad for 
 few are willing to help those that actually do something.
 
 The consequence is that we are forced to think about monetization. We honestly didn't expect this will be an issue 
-and didn't ask for anything the first year. Thank you very much to our few sponsors! 
+and didn't ask for anything the first year. Thank you very much to our few
+[sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md)! 
 We still love each and everyone of you, even those that send multiple pages of written requirements and then ask 
 every week when it is done.
 
@@ -60,7 +61,7 @@ For this reason, we'll exclude this topic from our social media communication fr
 
 ## Public and corporate sponsorship ##
 
-Our software is now almost done after two years of hard work, some days 16 to 20 hours on top of other projects we
+Our app is now almost done after two years of hard work, some days 16 to 20 hours on top of other projects we
 did to finance this. We spent weeks asking organizations like [The Prototype Fund](https://prototypefund.de/en/) 
 for help and also tried to cooperate with companies like Mapbox and Cewe. We have been ignored and even given
 the advice that what we do "already exists in America".

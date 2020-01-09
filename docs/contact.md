@@ -44,3 +44,9 @@ The information they collect about all visitors includes:
 They also collect potentially personally-identifying information like Internet Protocol (IP) addresses.
 
 See their [Privacy Policy](https://docs.readthedocs.io/en/latest/privacy-policy.html) and [DMCA Takedown Policy](https://docs.readthedocs.io/en/latest/dmca/).
+
+## Disclaimer ##
+
+We'd like to remind everyone that we are no full-time marketing specialists but developers that work a lot and 
+enjoy a bit of sarcasm from time to time. Please let us know when there is an issue with our "nuance and tone" 
+and we'll find a solution.

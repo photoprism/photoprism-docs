@@ -1,20 +1,19 @@
 # Funding
 
 It's clear many users are waiting for a stable release while only very few donate or help with development. 
-This project is about freedom but not necessarily about free beer.
+This project is about freedom but not necessarily about free beer. We feel like it was a mistake on 
+our side to state there will be no costs, because clearly we have huge expenses, your server hardware
+is not for free and then maybe you'd like to have some extra features that need to be developed.
 
-We are not Google and don't have billions of dollars on our bank accounts to give away to our fans in exchange for their data.
-It's also somewhat disappointing how little support we get by companies and especially public organizations. 
-Not a single dollar. 
+We do this because we think it's important.
+It's somewhat disappointing how little support we get by companies and especially public organizations who should
+share similar goals. Not a single dollar. 
 
 Every politician wants to support Open Source and warns social media is bad for your privacy, but only very 
 few are willing to help those that actually do something.
 
 The consequence is that we are forced to think about monetization. We honestly didn't expect this will be an issue 
-and didn't ask for anything the first year. Thank you very much to our few
-[sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md)! 
-We still love each and everyone of you, even those that send multiple pages of written requirements and then ask 
-every week when it is done.
+and didn't ask for anything the first year.
 
 Specific solutions could be to...
 
@@ -48,8 +47,8 @@ and communication for independent Open Source projects. Note that many of today'
 corporations like Google, Facebook, Microsoft or Intel.
 
 That's a good thing and we profit from it, but doesn't mean independent developers should not do this full-time or pay 
-everything themselves without asking the community for support. In fact, crowdfunding is a pretty common way to cover 
-development expenses if you look at [Indiegogo](https://www.indiegogo.com/) or [Kickstarter](https://www.kickstarter.com/).
+everything themselves without asking the community for support. In fact, crowdfunding is a common way to cover 
+development expenses and it's strange to criticize us for not delivering a complete product before we ask.
 
 In no way do we spurn other OSS projects like [OpenStreetMap](https://www.openstreetmap.org/), 
 as a Twitter user suggested. We just state the fact that even a non-commercial app can't use their API 
@@ -74,7 +73,7 @@ If any of those organizations changes their mind, they are welcome to [reach out
 
 The funding situation of independent Open Source projects is especially bitter in the face of massive money printing 
 by central banks all over the world. Much of this goes to large corporations that buy back shares
-to the personal benefit of their managers and to investors that drive up housing costs.
+to the personal benefit of their managers and to investors that drive up asset prices across the board.
 
 Did you know the [Swiss National Bank](https://www.bloomberg.com/news/articles/2019-08-02/snb-s-pile-of-u-s-shares-hits-93-billion-on-buoyant-markets)
 owns more A-class Facebook shares than Mark Zuckerberg?

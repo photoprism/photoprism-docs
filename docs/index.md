@@ -22,3 +22,4 @@ We are sure we can do better with only a fraction of the budget. Simplicity - th
 Go itself is a [great example](https://talks.golang.org/2015/simplicity-is-complicated.slide).
 
 Our long-term goal is to become an open platform for machine learning [research](https://github.com/photoprism/photoprism/wiki/Research) based on real-world photo collections.
+We're already in contact with data scientists who like our idea.

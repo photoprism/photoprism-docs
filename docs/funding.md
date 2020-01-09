@@ -56,7 +56,7 @@ as a Twitter user suggested. We just state the fact that even a non-commercial a
 for production, which is perfectly fine.
 On the other hand, it also doesn't mean we have to provide this service for free to our users. 
 
-We understand money is a very sensitive topic most of our users don't engage with and even try to avoid.
+We understand money is a very sensitive topic most of our users don't engage with.
 For this reason, we'll exclude this topic from our social media communication from now on.
 
 ## Public and corporate sponsorship ##

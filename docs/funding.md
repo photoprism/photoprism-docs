@@ -51,7 +51,7 @@ If any of those organizations changes their mind, they are welcome to [reach out
 ## The bigger picture ##
 
 The funding situation of independent Open Source projects is especially bitter in the face of massive money printing 
-by central banks all over the world.
+by central banks worldwide.
 
 Did you know the [Swiss National Bank](https://www.bloomberg.com/news/articles/2019-08-02/snb-s-pile-of-u-s-shares-hits-93-billion-on-buoyant-markets)
 owns more A-class Facebook shares than Mark Zuckerberg?

@@ -1,6 +1,6 @@
 # Funding
 
-It's clear many users are waiting for a stable release while only very few donate or help with development. 
+Many users are waiting for a stable release while only very few donate or help with development. 
 This project is about freedom but not necessarily about free beer. We feel like it was a mistake on 
 our side to state there will be no costs, because clearly we have huge expenses, your server hardware
 is not for free and then maybe you'd like to have some extra features that need to be developed.

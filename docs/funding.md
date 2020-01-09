@@ -52,7 +52,7 @@ development expenses and it's strange to criticize us for not delivering a compl
 In no way do we spurn other OSS projects like [OpenStreetMap](https://www.openstreetmap.org/), 
 as a Twitter user suggested. We just state the fact that even a non-commercial app can't use their API 
 for production, which is perfectly fine.
-On the other hand, it also doesn't mean we have to provide this service for free to our users. 
+On the other hand, that doesn't mean we have to provide this service for free to our users. 
 
 We understand money is a very sensitive topic most of our users don't engage with.
 For this reason, we'll exclude this topic from our social media communication from now on.

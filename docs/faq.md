@@ -9,8 +9,9 @@ You're welcome to send a full report to help@photoprism.org so that we can assis
 
 ### Do you support Podman? ###
 
-Currently, we have no experience with using [Podman](https://podman.io/) instead
-of Docker. Please let us know if you do.
+Here's a great blog post on how to run PhotoPrism with [Podman](https://podman.io/) on CentOS:
+
+https://lukas.zapletalovi.com/2020/01/deploy-photoprism-in-centos-80.html
 
 ### Do you provide LXC images? ###
 

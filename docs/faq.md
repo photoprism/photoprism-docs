@@ -74,7 +74,7 @@ files.
 Everytime a container with PhotoPrism is removed, the database is lost. To prevent unwanted reindex process, map the database directory to directory on the host similarly like folder with original photos:
 
 ```
-docker run -b --name photoprism -p 2342:2342 ... -v /srv/photoprism/db:/home/photoprism/.local/share/photoprism/resources/database photoprism/photoprism
+docker run -d --name photoprism -p 2342:2342 ... -v /srv/photoprism/db:/home/photoprism/.local/share/photoprism/resources/database photoprism/photoprism
 ```
 
 Warning: Database file structure is not guaranteed across upgrades, if you encounter issues with initializing database simply delete the database and reindex.

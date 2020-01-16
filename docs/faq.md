@@ -9,7 +9,7 @@ You're welcome to send a full report to help@photoprism.org so that we can assis
 
 ### Do you support Podman? ###
 
-Here's a great blog post on how to run PhotoPrism with [Podman](https://podman.io/) on CentOS:
+In short, it works just fine both in rootless and under root. Mind the SELinux which is enabled on Red Hat compatible systems, you may hit permission error problems. More details on on how to run PhotoPrism with [Podman](https://podman.io/) on CentOS in the following blogpost, it includes all the details including root and rootless modes, user mapping and SELinux:
 
 https://lukas.zapletalovi.com/2020/01/deploy-photoprism-in-centos-80.html
 
@@ -68,3 +68,13 @@ In a case like this, you will probably also want to optimize the datasets ("file
 systems") `tank/photos` and `dozer/cache` further. For instance, the
 original photo files will call for a larger recordsize than the smaller cache
 files.
+
+### Mapping database directory ###
+
+Everytime a container with PhotoPrism is removed, the database is lost. To prevent unwanted reindex process, map the database directory to directory on the host similarly like folder with original photos:
+
+```
+docker run -b --name photoprism -p 2342:2342 ... -v /srv/photoprism/db:/home/photoprism/.local/share/photoprism/resources/database photoprism/photoprism
+```
+
+Warning: Database file structure is not guaranteed across upgrades, if you encounter issues with initializing database simply delete the database and reindex.

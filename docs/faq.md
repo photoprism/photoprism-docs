@@ -61,7 +61,7 @@ docker run -d \
   -p 2342:2342 \
   -v /tank/photos/:/home/photoprism/Pictures/Originals \
   -v /dozer/cache/:/home/photoprism/.cache/photoprism \
-  photoprism/photoprism
+  photoprism/photoprism:latest
 ```
 
 In a case like this, you will probably also want to optimize the datasets ("file
@@ -74,7 +74,14 @@ files.
 Everytime a container with PhotoPrism is removed, the database is lost. To prevent unwanted reindex process, map the database directory to directory on the host similarly like folder with original photos:
 
 ```
-docker run -d --name photoprism -p 2342:2342 ... -v /srv/photoprism/db:/home/photoprism/.local/share/photoprism/resources/database photoprism/photoprism
+docker run -d --name photoprism -p 2342:2342 ... \
+  -v /srv/photoprism/db:/home/photoprism/.local/share/photoprism/resources/database \
+  photoprism/photoprism:latest
 ```
 
-Warning: Database file structure is not guaranteed across upgrades, if you encounter issues with initializing database simply delete the database and reindex.
+!!! info
+    Our database schema still changes a lot as we do performance optimizations and add features.
+    Therefore we cannot provide a smooth upgrade path and you should be prepared
+    to delete your current database and re-index.
+    To spare you a disappointment, we kindly advise you not to index large photo 
+    collections at the moment.

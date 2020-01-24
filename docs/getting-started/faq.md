@@ -1,15 +1,12 @@
 # Frequently Asked Questions
 
-### PhotoPrism does not work, what can I do? ###
-
-If the application can not be opened in the browser or the container doesn't start at all, you might have found a bug,
-you might be using an outdated container image or your folder is not readable (check permissions).
-
-You're welcome to send a full report to help@photoprism.org so that we can assist you.
-
 ### Do you support Podman? ###
 
-In short, it works just fine both in rootless and under root. Mind the SELinux which is enabled on Red Hat compatible systems, you may hit permission error problems. More details on on how to run PhotoPrism with [Podman](https://podman.io/) on CentOS in the following blogpost, it includes all the details including root and rootless modes, user mapping and SELinux:
+Podman works just fine both in rootless and under root. Mind the SELinux which is enabled on 
+Red Hat compatible systems, you may hit permission error problems. 
+
+More details on on how to run PhotoPrism with [Podman](https://podman.io/) on CentOS in the 
+following blogpost, it includes all the details including root and rootless modes, user mapping and SELinux:
 
 https://lukas.zapletalovi.com/2020/01/deploy-photoprism-in-centos-80.html
 

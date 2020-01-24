@@ -103,7 +103,9 @@ nav:
       - Demo Image: getting-started/demo.md
       - Kubernetes: getting-started/kubernetes.md
       - Updates: getting-started/updates.md
+      - Scalability: getting-started/scalability.md
       - Caching: getting-started/caching.md
+      - Support: getting-started/support.md
       - FAQ: getting-started/faq.md
   - Developer Guide:
       - Introduction: developer-guide.md

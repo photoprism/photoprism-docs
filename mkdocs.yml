@@ -98,7 +98,7 @@ nav:
   - Getting Started:
       - Introduction: getting-started.md
       - Docker Compose: getting-started/docker-compose.md
-      - Pure Docker: getting-started/docker.md
+      - Docker: getting-started/docker.md
       - Raspberry Pi: getting-started/raspberry-pi.md
       - Demo Image: getting-started/demo.md
       - Kubernetes: getting-started/kubernetes.md

@@ -90,11 +90,28 @@ markdown_extensions:
 # Page tree
 nav:
   - Introduction: index.md
-  - Setup: setup.md
-  - FAQ: faq.md
   - Team: team.md
-  - Contribute: contribute.md
   - Funding: funding.md
   - Credits: credits.md
   - License: license.md
   - Contact: contact.md
+  - Getting Started:
+      - Introduction: getting-started.md
+      - Docker Compose: getting-started/docker-compose.md
+      - Pure Docker: getting-started/docker.md
+      - Raspberry Pi: getting-started/raspberry-pi.md
+      - Demo Image: getting-started/demo.md
+      - Kubernetes: getting-started/kubernetes.md
+      - Updates: getting-started/updates.md
+      - Caching: getting-started/caching.md
+      - FAQ: getting-started/faq.md
+  - Developer Guide:
+      - Introduction: developer-guide.md
+      - Setup: developer-guide/setup.md
+      - Directories: developer-guide/directories.md
+      - Configuration: developer-guide/configuration.md
+      - Test Automation: developer-guide/tests.md
+      - GitHub Issues: developer-guide/issues.md
+      - Pull Requests: developer-guide/pull-requests.md
+      - Code Quality: developer-guide/code-quality.md
+      - Documentation: developer-guide/documentation.md

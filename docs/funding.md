@@ -41,8 +41,6 @@ Thank you very much! <3
 
 We spent weeks asking organizations like [The Prototype Fund](https://prototypefund.de/en/) for help 
 and also tried to cooperate with companies like Mapbox and Cewe.
-
-Some conversations were good without leading to a sponsorship yet, others were a waste of time.
 You would think it's easier to get a few dollars with [our background](http://docs.photoprism.org/en/latest/team/) 
 and [working code](https://demo.photoprism.org/).
 
@@ -52,6 +50,5 @@ If any of those organizations changes their mind, they are welcome to [reach out
 
 The funding situation of independent Open Source projects is especially bitter in the face of massive money printing 
 by central banks worldwide.
-
 Did you know the [Swiss National Bank](https://www.bloomberg.com/news/articles/2019-08-02/snb-s-pile-of-u-s-shares-hits-93-billion-on-buoyant-markets)
 owns more A-class Facebook shares than Mark Zuckerberg?

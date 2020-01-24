@@ -1,10 +1,9 @@
-# GitHub Issues
+# Issues
 
-We use GitHub issues for managing [bugs](https://github.com/photoprism/photoprism/labels/bug), [ideas](https://github.com/photoprism/photoprism/labels/idea), [todos](https://github.com/photoprism/photoprism/labels/todo) and [epics](https://github.com/photoprism/photoprism/labels/epic) (collection of todos). There is no Kanban or Scrum board, simply pick a todo you would like to work on and tell us about it. Issues labeled [help wanted](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) / [easy](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3Aeasy) can be good (first) contributions. We also maintain a couple of pages for collecting more general ideas and feedback: [[Ideas]], [[Inbox]], [[Related]], [[Love]], [[Concerns]], [[Research]] and [[Privacy]].
-
-You'll get a small reward for working on sponsored issues labeled [IssueHunt](https://github.com/photoprism/photoprism/labels/IssueHunt), see [issuehunt.io](https://issuehunt.io/repos/119160553).
+We use GitHub issues for managing [bugs](https://github.com/photoprism/photoprism/labels/bug), [ideas](https://github.com/photoprism/photoprism/labels/idea), [todos](https://github.com/photoprism/photoprism/labels/todo) and [epics](https://github.com/photoprism/photoprism/labels/epic) (collection of todos). There is no Kanban or Scrum board, simply pick a todo you would like to work on and tell us about it. Issues labeled [help wanted](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) / [easy](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3Aeasy) can be good (first) contributions.
 
 ### User Stories ###
+
 Start the description of new ideas and todos with a [user story](https://en.wikipedia.org/wiki/User_story) similar to this: 
 
 <tt>As a [type of person] I'd like to be able to [do something] so that I can [get some result].</tt>
@@ -24,6 +23,7 @@ Acceptance Criteria:
 > It is fundamentally the confusion between effectiveness and efficiency that stands between doing the right things and doing things right. There is surely nothing quite so useless as doing with great efficiency what should not be done at all.<br>— <cite>Peter Drucker</cite>
 
 ### Mailing List ###
+
 Please join our [developers mailing list](https://groups.google.com/a/photoprism.org/forum/#!forum/developers) to receive regular project updates, get in contact with other contributors and discuss your ideas. Don't be afraid to ask stupid questions.
 
 ### Developer Chat ###
@@ -36,4 +36,17 @@ You are welcome to join our `#photoprism` channel on [gophers.slack.com](https:/
 Please add important information from chat sessions to our Wiki or related GitHub issues.
 
 ### Feedback ###
+
 Part of this project is to find better ways of organizing product development, in particular by embracing simplicity and consistently leveraging community feedback. Please [share your experience](https://goo.gl/forms/mwDqrqhN9TY50c2Z2) with us, especially if you haven't actively contributed yet.
+
+### Wiki ###
+
+We also maintain a couple of pages for collecting more general ideas and feedback: 
+
+[Ideas](https://github.com/photoprism/photoprism/wiki/Ideas),
+[Inbox](https://github.com/photoprism/photoprism/wiki/Inbox), 
+[Related](https://github.com/photoprism/photoprism/wiki/Related), 
+[Love](https://github.com/photoprism/photoprism/wiki/Love), 
+[Concerns](https://github.com/photoprism/photoprism/wiki/Concerns), 
+[Research](https://github.com/photoprism/photoprism/wiki/Research) and 
+[Privacy](https://github.com/photoprism/photoprism/wiki/Privacy)

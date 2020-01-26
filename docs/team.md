@@ -23,6 +23,13 @@ His motivation is to explore the latest technologies and build an amazing produc
 
 You can find him on [GitHub](https://github.com/lastzero), [LinkedIn](https://www.linkedin.com/in/lastzero/) and [Twitter](https://twitter.com/lastzero)
 
+## Guy Sheffer ##
+
+Known as [GuySoft](https://github.com/guysoft) on the web. Active developer in the Free Software and Maker community.
+Creator of [OctoPi](https://github.com/guysoft/OctoPi) and [FullPageOS](https://github.com/guysoft/FullPageOS), 
+which have hundreds of thousands of downloads. Raspberry Pi distro expert. 
+Currently VP R&D and Co-Founder at [ShapeDo](https://shapedo.com/).
+
 ## ...and many more ##
 
 Thank you to everyone who contributed to this project!

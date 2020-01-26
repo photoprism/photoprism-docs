@@ -4,7 +4,7 @@ Before you start, make sure you have [Git](https://git-scm.com/downloads) and [D
 Instead of using Docker, you can create your own development environment
 based on our [Dockerfile](https://github.com/photoprism/photoprism/blob/develop/docker/development/Dockerfile) (not recommended). You'll need [Go](https://golang.org/dl/) >= 1.11, [TensorFlow for C](https://www.tensorflow.org/install/lang_c), [Make](http://www.gnu.org/software/make//make.html), [NPM](https://nodejs.org/en/download/) and [MySQL](https://dev.mysql.com/downloads/mysql/). Without Docker, test results will be less reliable and you also won't be able to use our other Dockerfiles (e.g. for TensorFlow).
 
-**Step 1:** Run [Git](https://getcomposer.org/) to clone this project:
+**Step 1:** Run [Git](https://git-scm.com/downloads) to clone this project:
 
 ```
 git clone git@github.com:photoprism/photoprism.git

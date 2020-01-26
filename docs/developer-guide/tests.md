@@ -106,7 +106,6 @@ We agreed on using TestCafe as tests were the most stable and pretty fast (becau
 
 Other test libraries and frameworks we currently don't use:
  
-- https://devexpress.github.io/testcafe/
 - https://codecept.io/
 - https://funcunit.com/
 - https://www.browserstack.com/

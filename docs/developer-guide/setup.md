@@ -43,3 +43,9 @@ Questions?
 * We are using [Go Modules](https://github.com/golang/go/wiki/Modules) for managing our dependencies (new in 1.11).
 * If you never used Go before and would like to learn it, you are welcome to [reach out](mailto:hello@photoprism.org). We might start organizing regular learning sessions for beginners in Berlin.
 * This guide was not tested on Windows, you might need to change docker-compose.yml to make it work with Windows specific paths.
+
+# Alternate Development Environment's
+
+The following are setup instructions for development and testing and should be avoided unless docker is either not supported or not allowed in your environment:
+
+* [Fedora 32](setup-fedora.md)

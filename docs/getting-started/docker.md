@@ -12,7 +12,7 @@ the folder containing your photos:
 docker run -d \
   --name photoprism \
   -p 2342:2342 \
-  -v ~/Pictures:/home/photoprism/Pictures/Originals \
+  -v ~/Pictures:/photoprism/originals \
   photoprism/photoprism
 ```
 

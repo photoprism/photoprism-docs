@@ -16,10 +16,10 @@ Download [docker-compose.yml](https://dl.photoprism.org/docker/docker-compose.ym
 wget https://dl.photoprism.org/docker/docker-compose.yml
 ```
 
-By default, a folder named `Photos` in your home directory will be used to store all images. You don't need to create it.
+By default, a folder named `Pictures` in your home directory will be used to store all images and sidecar files. You don't need to create it.
 
-PhotoPrism will also create the following sub-directories in your `Photos` folder: `Import`, `Export` and `Originals`. Copy photos to `Import` and import them from there, if you want to avoid duplicates.
-Files that can not be imported - like videos - will stay in the `Import` directory, nothing gets lost.
+PhotoPrism will create `Import` and `Originals` in this folder: You may copy photos to `Import` and import them from there to avoid duplicates.
+Files that cannot be imported will stay in the `Import` directory, nothing gets lost. Using import is strictly optional and can be disabled in Settings.
 
 To enable read-only mode, set `PHOTOPRISM_READONLY` to `true`. You may additionally want to 
 mount your originals directory with a `:ro` flag so that Docker prevents any write operations.
@@ -41,26 +41,50 @@ docker-compose up -d
 
 Now open http://localhost:2342/ in a Web browser to see the user interface. The default password is "photoprism".
 
-The port can be changed in `docker-compose.yml`. Remember to run `docker-compose restart` after changing the configuration. 
+The port and other basic settings can be changed in `docker-compose.yml`.
+Remember to stop and re-create the container whenever configuration values changed:
 
-### Step 3: Import ###
+```
+docker-compose stop photoprism
+docker-compose up -d --no-deps photoprism
+```
 
-Import photos from the Web UI or connect to the application container and run `photoprism import` after putting files in the `Import` folder:
+To also update the Docker image:
+
+```
+docker-compose pull photoprism
+docker-compose stop photoprism
+docker-compose up -d --no-deps photoprism
+```
+
+Be aware later builds may expect more or different configuration values.
+We always keep our [example configuration](https://dl.photoprism.org/docker/) up to date for reference.
+In addition, you can run `photoprism help` inside the container to see all options incl. short description and
+environment variable name.
+
+### Step 3: Index  ###
+
+Go to Library in our Web UI to start indexing or importing. Alternatively, you can run this command in a terminal to index all files in the `Originals` folder:
+
+```
+docker-compose exec photoprism bash
+photoprism -c index
+```
+
+The `-c` flag tells the command to automatically create JPEGs from other file types when needed to display them in a browser.
+They will be stored in the same folder next to the original using the best possible quality.
+
+To import files, run `photoprism import` after putting them in the `Import` folder:
 
 ```
 docker-compose exec photoprism bash
 photoprism import
 ```
 
-!!! attention
-    PhotoPrism and Web browsers in general can not display RAW image files. They need to be converted, 
-    which is what our import and convert commands do. You'll find a checkbox for this step in our Web UI
-    (disabled in read-only mode).
-
-To index photos in the `Originals` folder:
+For a list of commands and config options run
 
 ```
-photoprism index
+photoprism help
 ```
 
 !!! tip

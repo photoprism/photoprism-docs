@@ -19,7 +19,7 @@ docker run -d \
 This is a simplified configuration compared to our [Docker Compose](docker-compose.md) example:
 
 * The *import* folder is not mounted so that importing is not possible
-* The thumbnail *cache* and *database* will get lost when restarting as their folders are not mounted to a permanent volume
+* User settings in *config*, the thumbnail *cache* and *database* files will get lost when restarting as their folders are not mounted to a permanent volume
 
 The default port 2342 and other configuration values can be changed as needed. Adding the `:ro` flag to a volume 
 mounts it read only. 

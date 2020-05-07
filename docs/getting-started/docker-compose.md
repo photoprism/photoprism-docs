@@ -18,7 +18,7 @@ wget https://dl.photoprism.org/docker/docker-compose.yml
 
 By default, a folder named `Pictures` in your home directory will be used to store all images and sidecar files. You don't need to create it.
 
-PhotoPrism will create `Import` and `Originals` in this folder: You may copy photos to *import* and import them from there to avoid duplicates.
+PhotoPrism will also create `Import` and `Originals` in this folder: You may copy photos to *import* and import them from there to avoid duplicates.
 Files that cannot be imported will stay in the *import* directory, nothing gets lost. Using import is strictly optional and can be disabled in Settings.
 
 To enable read-only mode, set `PHOTOPRISM_READONLY` to `true`. You may additionally want to 

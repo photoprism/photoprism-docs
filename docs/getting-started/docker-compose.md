@@ -18,11 +18,11 @@ wget https://dl.photoprism.org/docker/docker-compose.yml
 
 By default, a folder named `Pictures` in your home directory will be used to store all images and sidecar files. You don't need to create it.
 
-PhotoPrism will create `Import` and `Originals` in this folder: You may copy photos to `Import` and import them from there to avoid duplicates.
-Files that cannot be imported will stay in the `Import` directory, nothing gets lost. Using import is strictly optional and can be disabled in Settings.
+PhotoPrism will create `Import` and `Originals` in this folder: You may copy photos to *import* and import them from there to avoid duplicates.
+Files that cannot be imported will stay in the *import* directory, nothing gets lost. Using import is strictly optional and can be disabled in Settings.
 
 To enable read-only mode, set `PHOTOPRISM_READONLY` to `true`. You may additionally want to 
-mount your originals directory with a `:ro` flag so that Docker prevents any write operations.
+mount your *originals* directory with a `:ro` flag so that Docker prevents any write operations.
     
 !!! info
     Your image files won't be deleted, modified or moved. We might later update metadata in 
@@ -64,21 +64,21 @@ environment variable name.
 
 ### Step 3: Index your library ###
 
-Go to Library in our Web UI to start indexing or importing. Alternatively, you can run this command in a terminal to index all files in the `Originals` folder:
+Go to Library in our Web UI to start indexing or importing. Alternatively, you can run this command in a terminal to index all files in the *originals* folder:
 
 ```
 docker-compose exec photoprism photoprism index -c
 ```
 
-The `-c` flag tells the command to automatically create JPEGs from other file types when needed to display them in a browser.
-They will be stored in the same folder next to the original using the best possible quality.
+The `-c` flag will automatically create JPEGs from other file types when needed to display them in a browser.
+They will be stored in the same folder next to the original using the best possible quality. Converting is not possible in read-only mode.
 
 Photos will become visible one after another. You can watch the indexer working in the terminal, or the logs tab in Library.
 
 !!! tip
     `index --all` will re-index existing files, for example after updates.
 
-To import files, run `photoprism import` after putting them in the `Import` folder:
+To import files, run `photoprism import` after putting them in the *import* folder:
 
 ```
 docker-compose exec photoprism photoprism import
@@ -91,5 +91,5 @@ docker-compose exec photoprism photoprism help
 ```
 
 You should now be able to see your photos. You can continue using your favorite tools like Photoshop or Lightroom
-to edit images in the `Originals` folder. Run `photoprism index` to reindex them as needed.
+to edit images in the *originals* folder. Run `photoprism index` to reindex them as needed.
 Even deleting and adding is possible. Easy, isn't it?

@@ -9,6 +9,7 @@ A big **thank you** to everyone who made this possible!
 * [Gopher overlapping the TensorFlow logo](img/tensorgologo.png) was created by [Takuya Ueda](https://github.com/tenntenn)
 
 ## Technologies ##
+
 * [Go](https://golang.org/), [Gin](https://gin-gonic.github.io/gin/), [TiDB](https://github.com/pingcap/tidb) and [Vuetify](https://vuetifyjs.com/en/)
 * [Google](https://developers.google.com/) [TensorFlow](https://www.tensorflow.org/) and [Material Design](https://material.io/)
 

@@ -16,6 +16,8 @@ docker run -d \
   photoprism/photoprism
 ```
 
+Now open http://localhost:2342/ in a Web browser to see the user interface. The default password is "photoprism".
+
 This is a simplified configuration compared to our [Docker Compose](docker-compose.md) example:
 
 * The *import* folder is not mounted so that importing is not possible
@@ -30,8 +32,6 @@ mounts it read only.
     sync with Adobe Lightroom.
     A JPEG representation might be created for RAW, HEIF, TIFF, PNG, BMP and GIF images in order to render 
     thumbnails and display them in a browser. You can enable read-only mode to prevent this completely, but you will also lose the functionality.
-
-Now open http://localhost:2342/ in a Web browser to see the user interface. The default password is "photoprism".
 
 ### Step 2: Index your library ###
 

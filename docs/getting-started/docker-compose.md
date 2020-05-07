@@ -31,7 +31,7 @@ mount your originals directory with a `:ro` flag so that Docker prevents any wri
     A JPEG representation might be created for RAW, HEIF, TIFF, PNG, BMP and GIF images in order to render 
     thumbnails. You can enable read-only mode to prevent this completely, but you will also lose the functionality.
 
-### Step 2: Run ###
+### Step 2: Start the server ###
 
 Open a terminal, go to the directory in which you saved the config file and run this command to start the server:
 
@@ -62,33 +62,33 @@ We always keep our [example configuration](https://dl.photoprism.org/docker/) up
 In addition, you can run `photoprism help` inside the container to see all options incl. short description and
 environment variable name.
 
-### Step 3: Index  ###
+### Step 3: Index your library ###
 
 Go to Library in our Web UI to start indexing or importing. Alternatively, you can run this command in a terminal to index all files in the `Originals` folder:
 
 ```
-docker-compose exec photoprism bash
-photoprism -c index
+docker-compose exec photoprism photoprism index -c
 ```
 
 The `-c` flag tells the command to automatically create JPEGs from other file types when needed to display them in a browser.
 They will be stored in the same folder next to the original using the best possible quality.
 
+Photos will become visible one after another. You can watch the indexer working in the terminal, or the logs tab in Library.
+
+!!! tip
+    `index --all` will re-index existing files, for example after updates.
+
 To import files, run `photoprism import` after putting them in the `Import` folder:
 
 ```
-docker-compose exec photoprism bash
-photoprism import
+docker-compose exec photoprism photoprism import
 ```
 
 For a list of commands and config options run
 
 ```
-photoprism help
+docker-compose exec photoprism photoprism help
 ```
-
-!!! tip
-    `photoprism index --all` will re-index existing files, for example after updates.
 
 You should now be able to see your photos. You can continue using your favorite tools like Photoshop or Lightroom
 to edit images in the `Originals` folder. Run `photoprism index` to reindex them as needed.

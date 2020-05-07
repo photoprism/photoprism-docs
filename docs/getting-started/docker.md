@@ -28,22 +28,22 @@ mounts it read only.
 
 Now open http://localhost:2342/ in a Web browser to see the user interface. The default password is "photoprism".
 
-### Step 2: Index photos ###
+### Step 2: Index your library ###
 
-There won't be any search results before you have indexed your photos. You can either do this using
-our comfortable Web UI or in a terminal:
+Go to Library in our Web UI to start indexing or importing.
+Alternatively, you can run this command in a terminal to index all files in the `Originals` folder:
 
 ```
-docker exec -ti photoprism photoprism index
+docker exec -ti photoprism photoprism index -c
 ```
 
-Photos will become visible one after another. You can watch the indexer working in the terminal 
-or the logs tab (Library).
+The `-c` flag tells the command to automatically create JPEGs from other file types when needed to display them in a browser.
+They will be stored in the same folder next to the original using the best possible quality (not available in read-only mode).
 
-!!! attention
-    PhotoPrism and Web browsers in general can not display RAW image files. They need to be converted, 
-    which is what our import and convert commands do. You'll find a checkbox for this step in our Web UI
-    (disabled in read-only mode).
+!!! tip
+    `index --all` will re-index existing files, for example after updates.
+
+Photos will become visible one after another. You can watch the indexer working in the terminal, or the logs tab in Library.
 
 ### Step 3: When you're done... ###
 
@@ -55,6 +55,7 @@ docker start photoprism
 ```
 
 To remove the container completely:
+
 ```
 docker rm -f photoprism
 ```

@@ -34,14 +34,15 @@ Now open http://localhost:2342/ in a Web browser to see the user interface. The 
 ### Step 2: Index your library ###
 
 Go to Library in our Web UI to start indexing or importing.
-Alternatively, you can run this command in a terminal to index all files in the *originals* folder:
+Alternatively, you can run this command in a terminal to index all files in your *originals* folder:
 
 ```
 docker exec -ti photoprism photoprism index -c
 ```
 
 The `-c` flag will automatically create JPEGs from other file types when needed to display them in a browser.
-They will be stored in the same folder next to the original using the best possible quality. Converting is not possible in read-only mode.
+They will be stored in the same folder next to the original using the best possible quality. 
+Converting is currently not possible in read-only mode.
 
 !!! tip
     `index --all` will re-index existing files, for example after updates.

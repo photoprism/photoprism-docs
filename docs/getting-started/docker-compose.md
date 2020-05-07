@@ -57,21 +57,23 @@ docker-compose stop photoprism
 docker-compose up -d --no-deps photoprism
 ```
 
-Be aware later builds may expect more or different configuration values.
+Be aware that later builds may expect more or different configuration values.
 We always keep our [example configuration](https://dl.photoprism.org/docker/) up to date for reference.
-In addition, you can run `photoprism help` inside the container to see all options incl. short description and
-environment variable name.
+In addition, you can run `photoprism help` inside the container to see all options incl. 
+environment variable names and a short description.
 
 ### Step 3: Index your library ###
 
-Go to Library in our Web UI to start indexing or importing. Alternatively, you can run this command in a terminal to index all files in the *originals* folder:
+Go to Library in our Web UI to start indexing or importing. Alternatively, you can run this command 
+in a terminal to index all files in your *originals* folder:
 
 ```
 docker-compose exec photoprism photoprism index -c
 ```
 
 The `-c` flag will automatically create JPEGs from other file types when needed to display them in a browser.
-They will be stored in the same folder next to the original using the best possible quality. Converting is not possible in read-only mode.
+They will be stored in the same folder next to the original using the best possible quality.
+Converting is currently not possible in read-only mode.
 
 Photos will become visible one after another. You can watch the indexer working in the terminal, or the logs tab in Library.
 

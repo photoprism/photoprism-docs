@@ -39,17 +39,18 @@ Go to Library in our Web UI to start indexing or importing.
 Alternatively, you can run this command in a terminal to index all files in your *originals* folder:
 
 ```
-docker exec -ti photoprism photoprism index -c
+docker exec -ti photoprism photoprism index
 ```
 
-The `-c` flag will automatically create JPEGs from other file types when needed to display them in a browser.
-They will be stored in the same folder next to the original using the best possible quality. 
-Converting is currently not possible in read-only mode.
-
-!!! tip
-    `index --all` will re-index existing files, for example after updates.
+The index command will automatically create JPEGs from other file types when needed to display them in a browser.
+They will be stored in the same folder next to the original using the best possible quality.
+You can disable this in Settings. Converting is currently not possible in read-only mode.
 
 Photos will become visible one after another. You can watch the indexer working in the terminal, or the logs tab in Library.
+
+!!! tip
+    `photoprism index --all` will re-index all originals, including already indexed and unchanged files. This can be
+    useful after updates that add new features.
 
 ### Step 3: When you're done... ###
 

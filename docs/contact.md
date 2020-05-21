@@ -14,6 +14,10 @@ Responsible for editorial content according to § 5 TMG / § 55 RStV:
 
 USt-ID: DE189758973
 
+PhotoPrism™ is a trademark of Michael Mayer.
+You may use it as required to describe our software but not for offering commercial goods or services
+without prior written permission.
+
 ## Chat ##
 
 [![Community Chat](https://img.shields.io/badge/community%20chat-on%20gitter-4aa087.svg)](https://gitter.im/browseyourlife/community)

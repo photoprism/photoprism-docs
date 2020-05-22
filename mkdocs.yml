@@ -76,6 +76,8 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
+      #emoji_index: !!python/name:materialx.emoji.twemoji
+      #emoji_generator: !!python/name:materialx.emoji.to_svg
       emoji_generator: pymdownx.emoji.emojione
   - pymdownx.inlinehilite
   - pymdownx.keys
@@ -148,6 +150,7 @@ nav:
         - Albums: user-guide/albums.md
         - Labels: user-guide/labels.md
         - Places: user-guide/places.md
+        - Watch videos: user-guide/video.md
         - Download photos: user-guide/download.md
         - Edit photos: user-guide/edit.md
       - Share photos: user-guide/share.md

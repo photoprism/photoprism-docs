@@ -5,7 +5,7 @@ They enable you to re-discover forgotten photos, find specific photos you are lo
 Using the main navigation you can visit the different sections of your photo library:
 
 #### Photos
-Photos shows all photos and videos that are not in review or archived or private.
+Photos shows all photos that are not in review or archived or private.
 
 !!! hint
     In case the review, private or archive functions are turned off - Photos displays those photo as well.
@@ -82,6 +82,7 @@ In case you set multiple filters only photos are shown in the search result that
     `color:green`
     `before:`
     `after:`
+    `type:`
     @micha what else?
     
    ![Screenshot](../img/colorGreen.png)

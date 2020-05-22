@@ -28,14 +28,14 @@ Once photos are selected the context menu appears in the lower right corner.
 The number displayed is the count of currently selected photos.
 The context menu provides you the following functions:
 
-* ICON Archive photos
-* ICON Add photos to album
+*  Archive photos
+* :material-folder: Add photos to album
 * ICON Download photos
 * ICON Mark photos as private
 * ICON Open edit dialogue
 * ICON Share photos
 
-To unselect all selected photos click ICON :material-account-circle: .
+To unselect all selected photos click .
 
 ![Screenshot](../img/nav3edited.png)
 

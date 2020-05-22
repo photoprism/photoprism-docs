@@ -21,12 +21,16 @@ Photos that are in Review can either be approved (photos appear in Photos) or ar
 1. Switch to the card view.
 2. Click approve button or archive button button on the photo.
 
-NEEDS TO BE IMPLEMENTED
+Or select photos --> open context menu --> click approve or archive
+
+One of those NEEDS TO BE IMPLEMENTED
 
 **Or:**
 
 1. Open the photo's  [edit dialogue](edit.md).
-2. Click approve or archive.
+2. Click approve or archive (Button needs to be implemented).
+
+    ![Screenshot](../img/review.png)
 
 !!! attention
     The quality score is constantly updated. 

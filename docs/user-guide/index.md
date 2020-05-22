@@ -1,4 +1,4 @@
-**To index files in `originals` directory:**
+### Index files in `originals` directory
 
 1. Add files to your `originals` folder.
 
@@ -16,19 +16,19 @@
 
 ![Screenshot](../img/Index.png)
 
-####What the index process does:
+###What happens during indexing
 
 * Read the metadata from your files to create labels, titles and locations for your photos.
 * Render thumbnails for JPEGs.
 
-####What the index process will NOT do:
+###What the index process will NOT do
 
 * Move or rename your files.
 * Delete duplicates.
 * Change metadata you added manually.
 
-####Index options:
-#####Complete rescan
+###Index options
+####Complete rescan
 All files are indexed again.
 In case this option is not selected only new or changed files will be indexed.
 

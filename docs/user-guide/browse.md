@@ -60,7 +60,7 @@ Just try it!
     
     A search for `cat blue berlin` will find all photos that either display a cat, have blue as main color or have been taken in Berlin.
 
-## Filters
+### Filters
 Additionally to the search you can set filters for:
 
 * Country
@@ -87,7 +87,7 @@ In case you set multiple filters only photos are shown in the search result that
     
    ![Screenshot](../img/colorGreen.png)
     
-## Views
+### Views
 PhotoPrism provides you three beautiful views to enjoy your photos and videos.
 
 * The card view displays important metadata like title, time and location next to the photos.

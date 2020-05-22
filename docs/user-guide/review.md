@@ -1,3 +1,4 @@
+### What does review mean?
 When adding new photos a quality score is created automatically.
 The score ranges from 0 - 5.
 Photos with a quality score lower than 3 do not appear in Photos until you approve them.
@@ -13,10 +14,9 @@ The quality score depends on the following:
 !!! info
     In case you do not need the review mechanism you can turn it off in the [settings](settings.md)
 
-## Review photos
-Photos that are in Review can either be approved (photos appear in Photos) or archived (photos appear in Archive).
+### Review photos
 
-**To approve or archive photos either:**
+Photos that are in Review can either be approved (photos appear in Photos) or archived (photos appear in Archive).
 
 1. Switch to the card view.
 2. Click approve button or archive button button on the photo.

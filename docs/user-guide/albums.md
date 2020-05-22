@@ -1,4 +1,4 @@
-**Create a new album:**
+### Create a new album
 
 1. Go to Albums.
 2. In the upper right corner click add.
@@ -12,7 +12,7 @@
     ![Screenshot](../img/albumName2.png)
 5. Press enter to save the new name.
 
-**Add description to album:**
+### Add description to album
 
 1. Go to Albums.
 2. Click on the album you want to edit.
@@ -26,7 +26,7 @@
     
 5. Press enter to save new description.
 
-**To add photos to an existing album:**
+### Add photos to album
 
 1. Select photos and videos.
 2. Click context menu.
@@ -45,7 +45,7 @@
 !!! tip
     You can select many photos at once using shift.
 
-**Remove photos from album:**
+### Remove photos from album
 
 1. Go to your album.
 3. Select photos/videos you want to remove.
@@ -54,6 +54,6 @@
 
     ![Screenshot](../img/removeFromAlbum1.png)
 
-**Share album:**
+### Share album
 
 XXX

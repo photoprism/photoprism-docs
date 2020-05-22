@@ -1,4 +1,4 @@
-**To import files from your `import` directory:**
+###Import files from your `import` directory
 
 1. Add files to your `import` folder. 
 
@@ -15,14 +15,14 @@
 
 ![Screenshot](../img/Import.png)
 
-####What the import process does:
+###What happens during import
 * Copy files from `import` folder to `originals` folder. Original files stay in `import` folder.
 * To avoid duplicates only unique files are copied. Duplicates and unsupported file types are ignored.
 * New files are [indexed](index.md) after creating JPEGs (if needed) and thumbnails.
 
-####Import options:
+###Import options
 
-#####Move files
+####Move files
 In case this option is selected, no copies are created but your original files will be renamed and moved to the `originals` folder.
 
 !!! attention

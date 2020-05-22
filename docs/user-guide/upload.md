@@ -1,4 +1,4 @@
-**To upload files to the `import` folder:**
+###Upload files to the `import` folder
 
 1. Click ICON in the upper right corner.
 

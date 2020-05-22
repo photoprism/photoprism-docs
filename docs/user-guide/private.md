@@ -1,3 +1,4 @@
+### What does private mean?
 Some of your photos might be private for personal reasons. 
 Our private functionality provides you with a solution to hide private photos or videos from some sections.
 This way you can let family and friends browse through your photos without risking that they see photos you do not want them to see.
@@ -14,13 +15,13 @@ By default, photos marked as private will not appear in the following sections:
 !!! info
     In case you want private content to appear everywhere you can configure that in the [settings](settings.md).
  
-## Mark photos as private
+### Mark photos as private
 When adding/indexing new photos potentially private photos are marked as private automatically.
 Be aware this algorithm is still in beta mode.
 
 @Micha Können wir das optional machen? Also dem Nutzer die möglichkeit geben die private Funktion zu nutzen, aber ausschließlich manuell das private flag setzen?
 
-**To mark single photos/videos as private:**
+#### Mark single photos/videos as private
 
 1. Go to Photos.
 2. Make sure you are in list view.
@@ -28,7 +29,7 @@ Be aware this algorithm is still in beta mode.
 
 ![Screenshot](../img/privateOnList.png)
 
-**To mark multiple photos as private:**
+#### Mark multiple photos as private
 
 1. Go to Photos.
 2. Select photos/videos.
@@ -37,7 +38,7 @@ Be aware this algorithm is still in beta mode.
 
 ![Screenshot](../img/privateOnContextMenu.png)
 
-**To remove the private flag from single photo:**
+#### Remove the private flag from single photo
 
 1. Go to Private.
 2. Make sure you are in list view.
@@ -45,7 +46,7 @@ Be aware this algorithm is still in beta mode.
 
 ![Screenshot](../img/removePrivateList.png)
 
-**To remove the private flag from multiple photos/videos:**
+#### Remove the private flag from multiple photos/videos
 
 1. Go to Private.
 2. Select photos/videos.

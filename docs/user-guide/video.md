@@ -1,4 +1,4 @@
-##Videos
+###Videos
 PhotoPrism currently supports mp4 videos + @Micha.
 
 Of course there are a lot more formats to come!
@@ -11,7 +11,7 @@ To play videos in fullscreen mode click play on the video or next to the videos 
 
 ![Screenshot](../img/video.png)
 
-## Live photos
+### Live photos
 Live photos are treated as photos.
 They are marked with ICON in the upper left corner.
 

@@ -1,6 +1,6 @@
 PhotoPrisms download functionality lets you download your photos in 5 different sizes.
 
-**To download a single photo:**
+###Download single photo
 
 1. Click on the photo.
 
@@ -12,7 +12,7 @@ PhotoPrisms download functionality lets you download your photos in 5 different 
     ![Screenshot](../img/download2.png)
 
 
-**To download multiple photos:**
+###Download multiple photos
 
 1. Select photos.
 2. Click on the context menu.

@@ -2,19 +2,21 @@ PhotoPrisms edit dialogue enables you to add/edit various types of metadata rela
 
 During [indexing](index.md) PhotoPrism collects as much data as possible from sidecar files and the photo itself.
 
-**To open the edit dialogue from card view:**
+###Open the edit dialogue
+
+####From card view
 
 1. Click on the photos title, time or camera information.
 
     ![Screenshot](../img/editopen1.png)
 
-**To open the edit dialogue from full screen mode:**
+####From full screen mode
 
 1. In the upper right corner click edit.
 
     ![Screenshot](../img/editopen2.png)
 
-**To open the edit dialogue from any view:**
+####From any view
 
 1. Select one or multiple photos.
 2. Click on context menu.
@@ -22,7 +24,7 @@ During [indexing](index.md) PhotoPrism collects as much data as possible from si
 
 ![Screenshot](../img/editopen3.png)
 
-### Details
+### Edit Details
 In the edit dialogue's Detail tab you can view and edit the following data:
 
 * Title
@@ -59,10 +61,10 @@ In the edit dialogue's Detail tab you can view and edit the following data:
 !!! tip
     Every keyword can be used in PhotoPrisms search to find photos or videos.
     
-### Labels
+### Edit Labels
 In the edit dialogue's Label tab you can view and edit [labels](labels.md).
 
-### Files
+### Edit Files
 In the edit dialogue's Files tab you see all files that belong to a photo.
 
 In PhotoPrism a photo can consist of multiple files like a raw file + a jpeg version of this raw file + a related xmp or json file.

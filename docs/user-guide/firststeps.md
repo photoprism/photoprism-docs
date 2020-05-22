@@ -1,4 +1,5 @@
-## How to get started with PhotoPrism
+### How to get started with PhotoPrism
+
 1. Install PhotoPrism on your computer or server. XXXXXXXX
 TODO How to install for dummies!!!
 

@@ -143,14 +143,14 @@ nav:
       - Sync and Back Up:
         - Nextcloud: user-guide/nextcloud.md
       - Organize photos:
-        - Browse photos: user-guide/browse.md
-        - Review photos: user-guide/review.md
-        - Private photos: user-guide/private.md
-        - Archive photos: user-guide/archive.md
+        - Browse: user-guide/browse.md
+        - Review: user-guide/review.md
+        - Private: user-guide/private.md
+        - Archive: user-guide/archive.md
         - Albums: user-guide/albums.md
         - Labels: user-guide/labels.md
         - Places: user-guide/places.md
-        - Watch videos: user-guide/video.md
+        - Videos: user-guide/video.md
         - Download photos: user-guide/download.md
         - Edit photos: user-guide/edit.md
       - Share photos: user-guide/share.md

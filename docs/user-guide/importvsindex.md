@@ -27,7 +27,7 @@ After indexing your originals folder might look like this:
 * You keep your existing folder structure.
 * You can display your existing folder structure in PhotoPrism.
 
-### Import and Index
+### Import
 * You need to add your files to the import folder. 
 
 It could look like this:

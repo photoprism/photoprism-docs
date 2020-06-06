@@ -1,22 +1,110 @@
-# Paths
+# Main navigation.
+nav:
+  - Introduction: index.md
+  - Team: team.md
+  - Funding: funding.md
+  - Credits: credits.md
+  - License: license.md
+  - Contact: contact.md
+  - Getting Started:
+      - Introduction: getting-started/index.md
+      - Docker Compose: getting-started/docker-compose.md
+      - Docker: getting-started/docker.md
+      - Raspberry Pi: getting-started/raspberry-pi.md
+      - Demo Image: getting-started/demo.md
+      - Kubernetes: getting-started/kubernetes.md
+      - Scalability: getting-started/scalability.md
+      - Updates: getting-started/updates.md
+      - Caching: getting-started/caching.md
+      - Support: getting-started/support.md
+      - FAQ: getting-started/faq.md
+  - User Guide:
+      - Introduction: user-guide/index.md
+      # - First steps: user-guide/firststeps.md
+      # - Setting up: user-guide/setup.md
+      - Navigate: user-guide/navigate.md
+      # - Basics: user-guide/basics.md
+       #- Importing:
+       #   - Import or index?: user-guide/importvsindex.md
+       #   - Import: user-guide/import.md
+       #   - Index: user-guide/indexing.md
+       #   - Upload: user-guide/upload.md
+       #   - Webdav: user-guide/webdav.md
+        #- Import from camera: user-guide.md
+        #- Import from Flickr: user-guide.md
+        #- Import from Facebook: user-guide.md
+        #- Import from NAS: user-guide.md
+        #- Import from Google Photos: user-guide.md
+        #- Import from Apple Photos: user-guide.md
+        #- Import from One Drive: user-guide.md
+      # - Sync and Back Up:
+      #    - Nextcloud: user-guide/nextcloud.md
+      - Organize:
+          - Browse: user-guide/browse.md
+          - Review: user-guide/review.md
+          - Private: user-guide/private.md
+          - Archive: user-guide/archive.md
+          - Albums: user-guide/albums.md
+          - Labels: user-guide/labels.md
+          - Places: user-guide/places.md
+          - Videos: user-guide/video.md
+          - Download photos: user-guide/download.md
+          - Edit photos: user-guide/edit.md
+      # - Sharing: user-guide/share.md
+      - Thumbnails: user-guide/thumbnails.md
+      - Conversion: user-guide/raw-to-jpeg.md
+      - Geocoding: user-guide/geocoding.md
+      # - Metadata: user-guide/metadata.md
+      - Settings: user-guide/settings.md
+  - Developer Guide:
+      - Introduction: developer-guide/index.md
+      - Setup: developer-guide/setup.md
+      - Directories: developer-guide/directories.md
+      - Configuration: developer-guide/configuration.md
+      - Tests: developer-guide/tests.md
+      - Issues: developer-guide/issues.md
+      - Pull Requests: developer-guide/pull-requests.md
+      - Code Quality: developer-guide/code-quality.md
+      - Documentation: developer-guide/documentation.md
+  #- FAQ:
+  #    - General Questions: faq/index.md
+      #- Developer: faq/developer-faq.md
+      #- User: faq/user-faq.md
+      #- Enterprise: faq/enterprise-faq.md
+
+# External links.
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/photoprism
+    - icon: fontawesome/brands/paypal
+      link: https://www.paypal.me/photoprism
+    - icon: material/chat
+      link: https://gitter.im/browseyourlife/community
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/browseyourlife
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/photoprism/
+    - icon: material/home
+      link: https://photoprism.org/
+
+# Project paths.
 docs_dir: docs
 site_dir: site
 
-# Project information
+# Project information.
 site_name: PhotoPrism
 site_description: User Guide
 site_author: PhotoPrism.org
 site_url: https://docs.photoprism.org/en/latest
 
-# Repository
+# Repository information.
 repo_name: photoprism/photoprism
 repo_url: https://github.com/photoprism/photoprism
 edit_uri: ""
-
-# Copyright
 copyright: 'Made with ❤ in Berlin'
 
-# Configuration
+# Theme configuration.
 theme:
   name: null
   custom_dir: material
@@ -47,23 +135,7 @@ theme:
 plugins:
   - search
 
-# Customization
-extra:
-  social:
-    - icon: fontawesome/brands/github
-      link: https://github.com/photoprism
-    - icon: fontawesome/brands/paypal
-      link: https://www.paypal.me/photoprism
-    - icon: material/chat
-      link: https://gitter.im/browseyourlife/community
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/browseyourlife
-    - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/company/photoprism/
-    - icon: material/home
-      link: https://photoprism.org/
-
-# Extensions
+# MkDocs extensions.
 markdown_extensions:
   - markdown.extensions.admonition
   - markdown.extensions.attr_list
@@ -95,77 +167,3 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
-
-# Page tree
-nav:
-  - Introduction: index.md
-  - Team: team.md
-  - Funding: funding.md
-  - Credits: credits.md
-  - License: license.md
-  - Contact: contact.md
-  - Getting Started:
-      - Introduction: getting-started.md
-      - Docker Compose: getting-started/docker-compose.md
-      - Docker: getting-started/docker.md
-      - Raspberry Pi: getting-started/raspberry-pi.md
-      - Demo Image: getting-started/demo.md
-      - Kubernetes: getting-started/kubernetes.md
-      - Scalability: getting-started/scalability.md
-      - Updates: getting-started/updates.md
-      - Caching: getting-started/caching.md
-      - Support: getting-started/support.md
-      - FAQ: getting-started/faq.md
-  - Developer Guide:
-      - Introduction: developer-guide.md
-      - Setup: developer-guide/setup.md
-      - Directories: developer-guide/directories.md
-      - Configuration: developer-guide/configuration.md
-      - Tests: developer-guide/tests.md
-      - Issues: developer-guide/issues.md
-      - Pull Requests: developer-guide/pull-requests.md
-      - Code Quality: developer-guide/code-quality.md
-      - Documentation: developer-guide/documentation.md
-  - User Guide:
-      - What's new?: user-guide.md
-      - Getting started:
-        - First steps: user-guide/firststeps.md
-        - Setting up: user-guide/setup.md
-        - What do I need to get started?: user-guide.md
-        - Navigation: user-guide/navigation.md
-        - PhotoPrism Basics: user-guide/basics.md
-      - Importing:
-        - Import or index?: user-guide/importvsindex.md
-        - Import: user-guide/import.md
-        - Index: user-guide/index.md
-        - Upload: user-guide/upload.md
-        - Webdav: user-guide/webdav.md
-        #- Import from camera: user-guide.md
-        #- Import from Flickr: user-guide.md
-        #- Import from Facebook: user-guide.md
-        #- Import from NAS: user-guide.md
-        #- Import from Google Photos: user-guide.md
-        #- Import from Apple Photos: user-guide.md
-        #- Import from One Drive: user-guide.md
-      - Sync and Back Up:
-        - Nextcloud: user-guide/nextcloud.md
-      - Organize photos:
-        - Browse: user-guide/browse.md
-        - Review: user-guide/review.md
-        - Private: user-guide/private.md
-        - Archive: user-guide/archive.md
-        - Albums: user-guide/albums.md
-        - Labels: user-guide/labels.md
-        - Places: user-guide/places.md
-        - Videos: user-guide/video.md
-        - Download photos: user-guide/download.md
-        - Edit photos: user-guide/edit.md
-      - Share photos: user-guide/share.md
-      - Metadata: user-guide/metadata.md
-      - Settings: user-guide/settings.md
-  - FAQ:
-      - Developer: faq/developer-faq.md
-      - User: faq/user-faq.md
-      - Enterprise: faq/enterprise-faq.md
-
-

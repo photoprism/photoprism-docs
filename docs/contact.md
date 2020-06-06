@@ -14,6 +14,22 @@ Responsible for editorial content according to § 5 TMG / § 55 RStV:
 
 USt-ID: DE189758973
 
+## Disclaimer ##
+
+We'd like to remind everyone that we are not full-time marketing specialists but developers who work a lot and 
+enjoy a bit of sarcasm from time to time. Please let us know when there is an issue with our "nuance and tone", 
+and we'll find a solution.
+
+PhotoPrism™ is a trademark of Michael Mayer.
+You may use it as required to describe our software, run your own server, for educational purposes,
+but not for offering goods, products, or services to others without prior written permission.
+In other words, please ask.
+
+In exchange, PhotoPrism is [GPL](https://en.wikipedia.org/wiki/GNU_General_Public_License) 
+licensed instead of [AGPL](https://en.wikipedia.org/wiki/Affero_General_Public_License).
+This means, you're not legally obliged to publish the source code when modifying a private copy.
+Hopefully we can keep it like that :)
+
 ## Chat ##
 
 [![Community Chat](https://img.shields.io/badge/community%20chat-on%20gitter-4aa087.svg)](https://gitter.im/browseyourlife/community)
@@ -44,9 +60,3 @@ The information they collect about all visitors includes:
 They also collect potentially personally-identifying information like Internet Protocol (IP) addresses.
 
 See their [Privacy Policy](https://docs.readthedocs.io/en/latest/privacy-policy.html) and [DMCA Takedown Policy](https://docs.readthedocs.io/en/latest/dmca/).
-
-## Disclaimer ##
-
-We'd like to remind everyone that we are no full-time marketing specialists but developers who work a lot and 
-enjoy a bit of sarcasm from time to time. Please let us know when there is an issue with our "nuance and tone" 
-and we'll find a solution.

@@ -23,6 +23,7 @@ nav:
       # - First steps: user-guide/firststeps.md
       # - Setting up: user-guide/setup.md
       - Navigate: user-guide/navigate.md
+      - Import vs Index: user-guide/import-vs-index.md
       # - Basics: user-guide/basics.md
        #- Importing:
        #   - Import or index?: user-guide/importvsindex.md

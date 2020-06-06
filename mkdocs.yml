@@ -7,71 +7,72 @@ nav:
   - License: license.md
   - Contact: contact.md
   - Getting Started:
-      - Introduction: getting-started/index.md
-      - Docker Compose: getting-started/docker-compose.md
-      - Docker: getting-started/docker.md
-      - Raspberry Pi: getting-started/raspberry-pi.md
-      - Demo Image: getting-started/demo.md
-      - Kubernetes: getting-started/kubernetes.md
-      - Scalability: getting-started/scalability.md
-      - Updates: getting-started/updates.md
-      - Caching: getting-started/caching.md
-      - Support: getting-started/support.md
-      - FAQ: getting-started/faq.md
+    - Introduction: getting-started/index.md
+    - Docker Compose: getting-started/docker-compose.md
+    - Docker: getting-started/docker.md
+    - Raspberry Pi: getting-started/raspberry-pi.md
+    - Demo Image: getting-started/demo.md
+    - Kubernetes: getting-started/kubernetes.md
+    - Scalability: getting-started/scalability.md
+    - Updates: getting-started/updates.md
+    - Caching: getting-started/caching.md
+    - Support: getting-started/support.md
+    - FAQ: getting-started/faq.md
   - User Guide:
-      - Introduction: user-guide/index.md
-      # - First steps: user-guide/firststeps.md
-      # - Setting up: user-guide/setup.md
-      - Navigate: user-guide/navigate.md
-      - Import vs Index: user-guide/import-vs-index.md
+    - Introduction: user-guide/index.md
+    # - First steps: user-guide/firststeps.md
+    # - Setting up: user-guide/setup.md
+    - Navigate: user-guide/navigate.md
+    - Import vs Index: user-guide/import-vs-index.md
       # - Basics: user-guide/basics.md
-       #- Importing:
-       #   - Import or index?: user-guide/importvsindex.md
-       #   - Import: user-guide/import.md
-       #   - Index: user-guide/indexing.md
-       #   - Upload: user-guide/upload.md
-       #   - Webdav: user-guide/webdav.md
-        #- Import from camera: user-guide.md
-        #- Import from Flickr: user-guide.md
-        #- Import from Facebook: user-guide.md
-        #- Import from NAS: user-guide.md
-        #- Import from Google Photos: user-guide.md
-        #- Import from Apple Photos: user-guide.md
-        #- Import from One Drive: user-guide.md
-      # - Sync and Back Up:
-      #    - Nextcloud: user-guide/nextcloud.md
-      - Organize:
-          - Browse: user-guide/browse.md
-          - Review: user-guide/review.md
-          - Private: user-guide/private.md
-          - Archive: user-guide/archive.md
-          - Albums: user-guide/albums.md
-          - Labels: user-guide/labels.md
-          - Places: user-guide/places.md
-          - Videos: user-guide/video.md
-          - Download photos: user-guide/download.md
-          - Edit photos: user-guide/edit.md
-      # - Sharing: user-guide/share.md
-      - Thumbnails: user-guide/thumbnails.md
-      - Conversion: user-guide/raw-to-jpeg.md
-      - Geocoding: user-guide/geocoding.md
-      # - Metadata: user-guide/metadata.md
-      - Settings: user-guide/settings.md
+      #- Importing:
+      #   - Import or index?: user-guide/importvsindex.md
+      #   - Import: user-guide/import.md
+      #   - Index: user-guide/indexing.md
+      #   - Upload: user-guide/upload.md
+      #   - Webdav: user-guide/webdav.md
+      #- Import from camera: user-guide.md
+      #- Import from Flickr: user-guide.md
+      #- Import from Facebook: user-guide.md
+      #- Import from NAS: user-guide.md
+      #- Import from Google Photos: user-guide.md
+      #- Import from Apple Photos: user-guide.md
+      #- Import from One Drive: user-guide.md
+    # - Sync and Back Up:
+    #    - Nextcloud: user-guide/nextcloud.md
+    - Organize:
+      - Browse: user-guide/browse.md
+      - Review: user-guide/review.md
+      - Private: user-guide/private.md
+      - Archive: user-guide/archive.md
+      - Albums: user-guide/albums.md
+      - Labels: user-guide/labels.md
+      - Places: user-guide/places.md
+      - Videos: user-guide/video.md
+      - Download photos: user-guide/download.md
+      - Edit photos: user-guide/edit.md
+    # - Sharing: user-guide/share.md
+    - Settings:
+      - Library: user-guide/settings/library.md
+      - User Interface: user-guide/settings/ui.md
+      - Places: user-guide/settings/places.md
+      - Thumbnails: user-guide/settings/thumbnails.md
+    # - Metadata: user-guide/metadata.md
   - Developer Guide:
-      - Introduction: developer-guide/index.md
-      - Setup: developer-guide/setup.md
-      - Directories: developer-guide/directories.md
-      - Configuration: developer-guide/configuration.md
-      - Tests: developer-guide/tests.md
-      - Issues: developer-guide/issues.md
-      - Pull Requests: developer-guide/pull-requests.md
-      - Code Quality: developer-guide/code-quality.md
-      - Documentation: developer-guide/documentation.md
-  #- FAQ:
-  #    - General Questions: faq/index.md
-      #- Developer: faq/developer-faq.md
-      #- User: faq/user-faq.md
-      #- Enterprise: faq/enterprise-faq.md
+    - Introduction: developer-guide/index.md
+    - Setup: developer-guide/setup.md
+    - Directories: developer-guide/directories.md
+    - Configuration: developer-guide/configuration.md
+    - Tests: developer-guide/tests.md
+    - Issues: developer-guide/issues.md
+    - Pull Requests: developer-guide/pull-requests.md
+    - Code Quality: developer-guide/code-quality.md
+    - Documentation: developer-guide/documentation.md
+    #- FAQ:
+    #    - General Questions: faq/index.md
+    #- Developer: faq/developer-faq.md
+    #- User: faq/user-faq.md
+    #- Enterprise: faq/enterprise-faq.md
 
 # External links.
 extra:

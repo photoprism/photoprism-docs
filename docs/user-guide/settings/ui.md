@@ -1,16 +1,18 @@
+# User Interface Settings #
+
 In Settings you can configure properties of your photo library, user interface and places.
 
-![Screenshot](../img/settings.png)
+![Screenshot](img/settings.png)
 
 ### Library Settings
 #### Hide Private
 Photos/videos marked as private do NOT appear in Photos, Videos, Favorites, Labels, Places and shared albums in case this option is selected.
 
 #### Quality Filter
-When selected, non-photographic photos/videos like screenshots and low-quality photos need to be [reviewed](review.md) before they appear in Photos or Videos.
+When selected, non-photographic photos/videos like screenshots and low-quality photos need to be [reviewed](../review.md) before they appear in Photos or Videos.
 
 #### Convert to JPEG
-JPEGs are created for RAW files during [indexing](index.md) in case they do not yet exist. JPEGs will be stored in the same folder next to the original.
+JPEGs are created for RAW files during [indexing](../indexing.md) in case they do not yet exist. JPEGs will be stored in the same folder next to the original.
 
 !!! attention
     In case this is disabled and there is a RAW file without a JPEG there will be no preview.
@@ -23,11 +25,11 @@ Grouped files will have one primary file that is shown in our views.
 
 1. Click on sequence.
 
-    ![Screenshot](../img/sequential1.png)
+    ![Screenshot](img/sequential1.png)
     
 2. Use arrows to see all photos of the sequence.
 
-    ![Screenshot](../img/sequential3.png) ![Screenshot](../img/sequential4.png)
+    ![Screenshot](img/sequential3.png) ![Screenshot](img/sequential4.png)
 
 !!! info
     Files are grouped in two cases:
@@ -42,7 +44,7 @@ To make PhotoPrism suite your individual needs the following sections and functi
 Disables sections do not appear in the main navigation.
 
 #### Upload
-When disabled, uploading files via [upload](upload.md) is not possible. 
+When disabled, uploading files via [upload](../upload.md) is not possible. 
 This might be useful when you grant others access to your PhotoPrism but do not want them to upload photos.
 
 #### Download
@@ -52,7 +54,7 @@ When disabled, no files can be downloaded.
 When disabled, album sharing and upload to remote services like Nextcloud is not possible.
 
 #### Import
-When disabled, there is no possibility to [import](import.md) photos. You need to use [index](index.md) instead to add new photos.
+When disabled, there is no possibility to [import](../import.md) photos. You need to use [index](../indexing.md) instead to add new photos.
 
 #### Archive
 When disabled, there is no Archive. Photos that have been archived beforehand will appear in Photos/Videos.

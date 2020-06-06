@@ -1,3 +1,5 @@
+# PhotoPrism Places #
+
 We've recently launched [PhotoPrism Places](https://github.com/photoprism/photoprism-places), a Geocoding API that replaces OpenStreetMap development infrastructure. Our users now enjoy much better performance, higher availability and more privacy. In addition, we're going to add information about public events that have taken place at a location. This can be used to automatically create albums of popular music festivals or sports events.
 
 ## Privacy ##

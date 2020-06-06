@@ -50,7 +50,7 @@ In the edit dialogue's Detail tab you can view and edit the following data:
 * Keywords
 * Notes
 
-![Screenshot](../img/editDetails.png)
+![Screenshot](img/editDetails.png)
 
 "Apply" saves changes. "Ok" saves changes and closes edit dialogue.
 
@@ -69,12 +69,12 @@ In the edit dialogue's Files tab you see all files that belong to a photo.
 
 In PhotoPrism a photo can consist of multiple files like a raw file + a jpeg version of this raw file + a related xmp or json file.
 
-![Screenshot](../img/files.png)
+![Screenshot](img/files.png)
 
-![Screenshot](../img/filesVideo.png)
+![Screenshot](img/filesVideo.png)
 
-In case you have "Grouped Sequentials" enabled in [settings](settings.md) you might have photos that consist of more than one JPEG file.
+In case you have "Grouped Sequentials" enabled in [settings](settings/ui.md) you might have photos that consist of more than one JPEG file.
 In this case you can decide which one to use as primary by clicking the radio button in the files table.
 The primary JPEG file is used in our views.
 
-![Screenshot](../img/sequential2.png)
+![Screenshot](img/sequential2.png)

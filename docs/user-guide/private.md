@@ -13,7 +13,7 @@ By default, photos marked as private will not appear in the following sections:
  * Shared albums
  
 !!! info
-    In case you want private content to appear everywhere you can configure that in the [settings](settings.md).
+    In case you want private content to appear everywhere you can configure that in the [settings](settings/ui.md).
  
 ### Mark photos as private
 When adding/indexing new photos potentially private photos are marked as private automatically.

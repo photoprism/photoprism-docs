@@ -1,3 +1,4 @@
+# Thumbnail Settings #
 
 For best results, you should (at least) set jpeg quality to 95 and use the "lanczos" filter. Obviously this will require significantly more storage and CPU time. From our experience, "cubic" might be 30% faster than "lanczos" on modern desktop and server CPUs. Keep in mind that you only need to create thumbnails once and then can enjoy them for the rest of your life.
 
@@ -122,14 +123,14 @@ Blackman is a modification of Lanczos that has better control of ringing artifac
 
 Original image:
 
-![](thumbnails/branches.png)
+![](img/branches.png)
 
 The same image resized from 600x400px to 150x100px using different resampling filters.
 From faster (lower quality) to slower (higher quality):
 
 Filter                    | Resize result
 --------------------------|---------------------------------------------
-Nearest Neighbor          | ![](thumbnails/out_resize_nearest.png) 
-Bilinear                  | ![](thumbnails/out_resize_linear.png)
-Sharp Bicubic             | ![](thumbnails/out_resize_catrom.png)
-Lanczos                   | ![](thumbnails/out_resize_lanczos.png)
+Nearest Neighbor          | ![](img/out_resize_nearest.png) 
+Bilinear                  | ![](img/out_resize_linear.png)
+Sharp Bicubic             | ![](img/out_resize_catrom.png)
+Lanczos                   | ![](img/out_resize_lanczos.png)

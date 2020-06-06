@@ -1,20 +1,19 @@
-### What does review mean?
-When adding new photos a quality score is created automatically.
-The score ranges from 0 - 5.
-Photos with a quality score lower than 3 do not appear in Photos until you approve them.
+# Review non-photographic and low-quality images #
+When adding new photos a quality score from 1 to 5 is created automatically.
+Photos with a quality score lower than 3 do not appear in Photos until you approve them (unless review was disabled
+in [Settings](settings/ui.md))
 
 The quality score depends on the following:
 
-* Taken at date is known
-* Location is known
-* Photo has at least 2 MP resolution (if taken after 2012)
-* Photo is not classified as info or screenshot
-* User likes the photo
+* Known date and/or GPS coordinates
+* At least 2 MP resolution if taken after 2012
+* Photo not classified as info or screenshot
+* Photo is favorite, was edited or approved
 
 !!! info
-    In case you do not need the review mechanism you can turn it off in the [settings](settings.md)
+    In case you do not need the review mechanism you can turn it off in the [settings](settings/ui.md)
 
-### Review photos
+### How to approve photos ###
 
 Photos that are in Review can either be approved (photos appear in Photos) or archived (photos appear in Archive).
 

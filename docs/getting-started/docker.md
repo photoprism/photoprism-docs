@@ -21,7 +21,8 @@ Now open http://localhost:2342/ in a Web browser to see the user interface. The 
 This is a simplified configuration compared to our [Docker Compose](docker-compose.md) example:
 
 * The *import* folder is not mounted so that importing is not possible
-* User settings in *config*, the thumbnail *cache* and *database* files will get lost when restarting as their folders are not mounted to a permanent volume
+* User settings, the thumbnail *cache* and *database* files will get stored in `originals/.photoprism`
+  unless you configure a separate storage path
 
 The default port 2342 and other configuration values can be changed as needed. Adding the `:ro` flag to a volume 
 mounts it read only. 

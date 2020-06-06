@@ -26,8 +26,8 @@ Is is best installed using [pip](https://pip.pypa.io), Python's module installer
 
 ```sh
 brew install python
-pip3 install mkdocs
-pip3 install mkdocs-material
+pip3 install --upgrade mkdocs
+pip3 install --upgrade mkdocs-material
 ```
 
 You can then build the HTML documentation from the root folder of this repository with:

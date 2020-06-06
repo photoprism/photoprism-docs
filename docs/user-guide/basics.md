@@ -1,7 +1,7 @@
 ## Photo entity
 
 ## Folders
-
+:material-folder:
 
 ## Albums
 

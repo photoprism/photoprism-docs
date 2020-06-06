@@ -12,7 +12,7 @@ Located on the left, might be hidden on mobile devices. Enables you to switch be
 Located on the top of most sections. You can enter multiple search terms to find photos or videos.
 
 #### (3) Reload
-ICON reloads the page.
+:material-refresh: reloads the page.
 
 #### (4) Switch view
 Click ICON to switch between our different views.
@@ -28,12 +28,12 @@ Once photos are selected the context menu appears in the lower right corner.
 The number displayed is the count of currently selected photos.
 The context menu provides you the following functions:
 
-*  Archive photos
+* :material-archive-arrow-down: Archive photos
 * :material-folder: Add photos to album
-* ICON Download photos
-* ICON Mark photos as private
-* ICON Open edit dialogue
-* ICON Share photos
+* :material-download: Download photos
+* :material-lock: Mark photos as private
+* :material-pencil: Open edit dialogue
+* :material-share: Share photos
 
 To unselect all selected photos click .
 

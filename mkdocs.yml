@@ -20,7 +20,6 @@ copyright: 'Made with ❤ in Berlin'
 theme:
   name: null
   custom_dir: material
-
   # 404 page
   static_templates:
     - 404.html
@@ -31,37 +30,43 @@ theme:
 
   # Default values, taken from mkdocs_theme.yml
   language: en
-  feature:
-    tabs: true
+  features:
+    - tabs
+    #- instant
   palette:
+    scheme: default
     primary: white
     accent: amber
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: img/favicon.ico
-  logo:
-    icon: camera
+  icon:
+    logo: material/camera-iris
+  favicon: img/favicon.png
+
+plugins:
+  - search
 
 # Customization
 extra:
   social:
-    - type: commenting
-      link: https://gitter.im/browseyourlife/community
-    - type: paypal
-      link: https://www.paypal.me/photoprism
-    - type: github-alt
+    - icon: fontawesome/brands/github
       link: https://github.com/photoprism
-    - type: twitter
+    - icon: fontawesome/brands/paypal
+      link: https://www.paypal.me/photoprism
+    - icon: material/chat
+      link: https://gitter.im/browseyourlife/community
+    - icon: fontawesome/brands/twitter
       link: https://twitter.com/browseyourlife
-    - type: linkedin
+    - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/photoprism/
-    - type: globe
+    - icon: material/home
       link: https://photoprism.org/
 
 # Extensions
 markdown_extensions:
   - markdown.extensions.admonition
+  - markdown.extensions.attr_list
   - markdown.extensions.codehilite:
       guess_lang: false
   - markdown.extensions.def_list
@@ -76,15 +81,17 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-      #emoji_index: !!python/name:materialx.emoji.twemoji
-      #emoji_generator: !!python/name:materialx.emoji.to_svg
-      emoji_generator: pymdownx.emoji.emojione
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.smartsymbols
+  - pymdownx.snippets:
+      check_paths: true
   - pymdownx.superfences
+  - pymdownx.tabbed
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde

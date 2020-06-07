@@ -1,0 +1,8 @@
+.dockerignore
+.DS_Store
+.idea
+material
+site
+Dockerfile
+docker-compose*
+Makefile

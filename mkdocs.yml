@@ -108,8 +108,7 @@ copyright: 'Made with ❤ in Berlin'
 
 # Theme configuration.
 theme:
-  name: null
-  custom_dir: material
+  name: 'material'
   # 404 page
   static_templates:
     - 404.html
@@ -157,7 +156,6 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-      # emoji_generator: pymdownx.emoji.emojione
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.magiclink

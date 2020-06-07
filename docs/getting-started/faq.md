@@ -29,7 +29,7 @@ Instead of using Docker, you can manually type the commands listed in our develo
 [Dockerfile](https://github.com/photoprism/photoprism/blob/develop/docker/development/Dockerfile) and replace packages with 
 what is available in your environment. You often don't need to use the exact same versions for dependencies.
 
-If your operating system has Docker support, we recommend learning Docker as it vastly simplifies installation
+If your operating system has Docker support, we recommend learning Docker as it vastly simplifies installing
 and upgrading.
 
 ### Do you support Podman? ###

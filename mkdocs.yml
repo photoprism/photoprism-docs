@@ -155,9 +155,9 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_generator: pymdownx.emoji.emojione
-      #emoji_index: !!python/name:materialx.emoji.twemoji
-      #emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python3/name:materialx.emoji.twemoji
+      emoji_generator: !!python3/name:materialx.emoji.to_svg
+      # emoji_generator: pymdownx.emoji.emojione
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.magiclink

@@ -1,46 +1,47 @@
+# Browse through your photo collection #
 PhotoPrisms photo/video views are a nice way for you to browse through your photo collection.
 They enable you to re-discover forgotten photos, find specific photos you are looking for or organize your photos.
 
-### Sections
+### Sections ###
 Using the main navigation you can visit the different sections of your photo library:
 
-#### Photos
+#### Photos ####
 Photos shows all photos that are not in review or archived or private.
 
 !!! hint
-    In case the review, private or archive functions are turned off - Photos displays those photo as well.
+    In case the review, private or archive functions are turned off - Photos displays those photos as well.
     
-![Screenshot](../img/photosSection.png)
+![Screenshot](img/photos-section.png)
 
-#### Favorites
+#### Favorites ####
 Favorites shows all photos and videos you liked.
 
-![Screenshot](../img/favoritesSection.png)
+![Screenshot](img/favorites-section.png)
 
-#### Private
+#### Private ####
 Private shows photos and videos marked as private.
 
-#### Videos
+#### Videos ####
 Videos shows videos that are not in review or archived or private.
 
-![Screenshot](../img/videoSection.png)
+![Screenshot](img/video-section.png)
 
-#### Albums
+#### Albums ####
 Albums shows albums you created.
 
-![Screenshot](../img/albumSection.png)
+![Screenshot](img/album-section.png)
 
-#### Labels
+#### Labels ####
 Labels shows your photos and videos grouped by labels like cat, dog or beach.
 
-![Screenshot](../img/labelSection.png)
+![Screenshot](img/label-section.png)
 
-#### Places
+#### Places ####
 Places displays all photos and videos with location information on a worldmap.
 
-![Screenshot](../img/placesSection.png)
+![Screenshot](img/places-section.png)
 
-### Search
+### Search ###
 In all sections you can use the search bar to find certain photos, videos, albums or labels.
 
 You can search for all kind of things:
@@ -53,14 +54,14 @@ You can search for all kind of things:
 
 Just try it!
 
-   ![Screenshot](../img/searchBeach.png)
+   ![Screenshot](img/search-beach.png)
 
 !!! tip
     In case you want to search for multiple things at once, enter the terms separated by a space.
     
     A search for `cat blue berlin` will find all photos that either display a cat, have blue as main color or have been taken in Berlin.
 
-### Filters
+### Filters ###
 Additionally to the search you can set filters for:
 
 * Country
@@ -73,33 +74,30 @@ Additionally to the search you can set filters for:
 
 In case you set multiple filters only photos are shown in the search result that fulfill all filter criteria.
 
- ![Screenshot](../img/colorRed.png)
+ ![Screenshot](img/color-red.png)
 
 !!! tip
     You can use filters as well in the search bar like this:
     
     `label:cat`
     `color:green`
-    `before:`
-    `after:`
-    `type:`
-    @micha what else?
+    `type: live`
     
-   ![Screenshot](../img/colorGreen.png)
+   ![Screenshot](img/color-green.png)
     
-### Views
+### Views ###
 PhotoPrism provides you three beautiful views to enjoy your photos and videos.
 
 * The card view displays important metadata like title, time and location next to the photos.
-    ![Screenshot](../img/card.png)
+    ![Screenshot](img/card.png)
 * The mosaic view lets you enjoy your photos without distraction.
-    ![Screenshot](../img/mosaic.png)
+    ![Screenshot](img/mosaic.png)
 * The list view provides you photos and metadata in a  well-arranged list.
-    ![Screenshot](../img/list.png)
+    ![Screenshot](img/list.png)
 
-To switch between views you can either use the filter in the filter bar or the view button in the upper right corner.
+To switch between views you can either use the filter in the filter bar or the view button (:material-view-column:, :material-view-comfy:, :material-view-list:) in the upper right corner.
 
 
-Additionally you can open your photos/videos in fullscreen mode and start a slideshow.
+Additionally you can open your photos/videos in fullscreen mode and start a slideshow (:material-play:).
 
-![Screenshot](../img/slideshow.png)
+![Screenshot](img/slideshow.png)

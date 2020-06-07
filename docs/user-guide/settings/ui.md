@@ -9,7 +9,7 @@ In Settings you can configure properties of your photo library, user interface a
 Photos/videos marked as private do NOT appear in Photos, Videos, Favorites, Labels, Places and shared albums in case this option is selected.
 
 #### Quality Filter
-When selected, non-photographic photos/videos like screenshots and low-quality photos need to be [reviewed](../review.md) before they appear in Photos or Videos.
+When selected, non-photographic photos/videos like screenshots and low-quality photos need to be [reviewed](../organize/review.md) before they appear in Photos or Videos.
 
 #### Convert to JPEG
 JPEGs are created for RAW files during [indexing](../indexing.md) in case they do not yet exist. JPEGs will be stored in the same folder next to the original.

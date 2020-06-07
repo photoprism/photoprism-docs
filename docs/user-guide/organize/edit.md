@@ -1,6 +1,6 @@
 PhotoPrisms edit dialogue enables you to add/edit various types of metadata related to your photos/videos.
 
-During [indexing](index.md) PhotoPrism collects as much data as possible from sidecar files and the photo itself.
+During [indexing](../index.md) PhotoPrism collects as much data as possible from sidecar files and the photo itself.
 
 ###Open the edit dialogue
 
@@ -8,13 +8,13 @@ During [indexing](index.md) PhotoPrism collects as much data as possible from si
 
 1. Click on the photos title, time or camera information.
 
-    ![Screenshot](../img/editopen1.png)
+    ![Screenshot](../../img/editopen1.png)
 
 ####From full screen mode
 
 1. In the upper right corner click edit.
 
-    ![Screenshot](../img/editopen2.png)
+    ![Screenshot](../../img/editopen2.png)
 
 ####From any view
 
@@ -22,7 +22,7 @@ During [indexing](index.md) PhotoPrism collects as much data as possible from si
 2. Click on context menu.
 3. Click on edit.
 
-![Screenshot](../img/editopen3.png)
+![Screenshot](../../img/editopen3.png)
 
 ### Edit Details
 In the edit dialogue's Detail tab you can view and edit the following data:
@@ -50,7 +50,7 @@ In the edit dialogue's Detail tab you can view and edit the following data:
 * Keywords
 * Notes
 
-![Screenshot](img/editDetails.png)
+![Screenshot](../img/editDetails.png)
 
 "Apply" saves changes. "Ok" saves changes and closes edit dialogue.
 
@@ -69,12 +69,12 @@ In the edit dialogue's Files tab you see all files that belong to a photo.
 
 In PhotoPrism a photo can consist of multiple files like a raw file + a jpeg version of this raw file + a related xmp or json file.
 
-![Screenshot](img/files.png)
+![Screenshot](../img/files.png)
 
-![Screenshot](img/filesVideo.png)
+![Screenshot](../img/filesVideo.png)
 
-In case you have "Grouped Sequentials" enabled in [settings](settings/ui.md) you might have photos that consist of more than one JPEG file.
+In case you have "Grouped Sequentials" enabled in [settings](../settings/ui.md) you might have photos that consist of more than one JPEG file.
 In this case you can decide which one to use as primary by clicking the radio button in the files table.
 The primary JPEG file is used in our views.
 
-![Screenshot](img/sequential2.png)
+![Screenshot](../img/sequential2.png)

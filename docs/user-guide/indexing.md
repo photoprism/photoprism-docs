@@ -6,7 +6,7 @@ All you need is a Web browser and Docker to run the server. It is available for 
 Developers can skip this and move on to the [Developer Guide](../developer-guide/index.md).
 
 
-### Index files in `originals` directory
+### Index files in `originals` directory ###
 
 1. Add files to your `originals` folder.
 
@@ -22,21 +22,21 @@ Developers can skip this and move on to the [Developer Guide](../developer-guide
     You can add photos via your filesystem or using [webdav](webdav.md).
 
 
-![Screenshot](../img/Index.png)
+![Screenshot](img/index.png)
 
-###What happens during indexing
+### What happens during indexing ###
 
 * Read the metadata from your files to create labels, titles and locations for your photos.
 * Render thumbnails for JPEGs.
 
-###What the index process will NOT do
+### What the index process will NOT do ###
 
 * Move or rename your files.
 * Delete duplicates.
 * Change metadata you added manually.
 
-###Index options
-####Complete rescan
+### Index options ###
+#### Complete rescan ####
 All files are indexed again.
 In case this option is not selected only new or changed files will be indexed.
 

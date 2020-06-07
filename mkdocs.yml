@@ -41,16 +41,16 @@ nav:
     # - Sync and Back Up:
     #    - Nextcloud: user-guide/nextcloud.md
     - Organize:
-      - Browse: user-guide/browse.md
-      - Review: user-guide/review.md
-      - Private: user-guide/private.md
-      - Archive: user-guide/archive.md
-      - Albums: user-guide/albums.md
-      - Labels: user-guide/labels.md
-      - Places: user-guide/places.md
-      - Videos: user-guide/video.md
-      - Download photos: user-guide/download.md
-      - Edit photos: user-guide/edit.md
+      - Browse: user-guide/organize/browse.md
+      - Review: user-guide/organize/review.md
+      - Private: user-guide/organize/private.md
+      - Archive: user-guide/organize/archive.md
+      - Albums: user-guide/organize/albums.md
+      - Labels: user-guide/organize/labels.md
+      - Places: user-guide/organize/places.md
+      - Videos: user-guide/organize/video.md
+      - Download photos: user-guide/organize/download.md
+      - Edit photos: user-guide/organize/edit.md
     # - Sharing: user-guide/share.md
     - Settings:
       - Library: user-guide/settings/library.md

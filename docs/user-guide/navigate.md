@@ -1,9 +1,9 @@
 Photo and video search is based on the following components. Note that all pages are fully responsive, 
 our screenshots show the user-interface in a desktop browser with medium resolution.
 
-![Screenshot](../img/nav1edited.png)
+![Screenshot](img/nav1edited.png)
 
-![Screenshot](../img/nav2edited.png)
+![Screenshot](img/nav2edited.png)
 
 #### 1. Main Navigation ####
 
@@ -20,11 +20,11 @@ Located on the top. Find photos or videos by entering search terms like `cats` a
 
 #### 4. View Button ####
 
-Click to switch to a different search result view (cards, mosaic, or list).
+Click to switch to a different search result view (cards: :material-view-column:, mosaic: :material-view-comfy:, or list: :material-view-list:).
 
 #### 5. Upload Button ####
 
-Opens the upload dialog. Available on most pages, unless read-only mode is enabled or upload is disabled in [Settings](settings/ui.md).
+:material-cloud-upload: opens the upload dialog. Available on most pages, unless read-only mode is enabled or upload is disabled in [Settings](settings/ui.md).
 
 #### 6. Expanded Toolbar ####
 
@@ -45,5 +45,5 @@ It also contains the following buttons:
 
 To unselect all items, click the cross at the top:
 
-![Screenshot](../img/nav3edited.png)
+![Screenshot](img/nav3edited.png)
 

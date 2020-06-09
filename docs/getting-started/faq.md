@@ -10,8 +10,8 @@ adding files as you don't need to re-index all originals to find new photos and 
 ### What exactly does read-only mode? ###
 
 There are users who don't want us to modify their original files and folders in any way, so we've added
-a configuration option for this use case. It will disable uploads, import and all other features
-that might rename or delete files in the originals folder.
+a configuration option for this use case. It will disable uploads, import and future features
+that might rename, update or delete files in the originals folder.
 
 ### I could not find a good documentation of the config parameters in the docker-compose.yml file? ###
 

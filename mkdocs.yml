@@ -98,7 +98,7 @@ site_dir: site
 site_name: PhotoPrism
 site_description: User Guide
 site_author: PhotoPrism.org
-site_url: http://docs.photoprism.org/
+site_url: https://docs.photoprism.org/
 
 # Repository information.
 repo_name: photoprism/photoprism
@@ -109,6 +109,8 @@ copyright: 'Made with ❤ in Berlin'
 # Theme configuration.
 theme:
   name: 'material'
+  custom_dir: overrides
+
   # 404 page
   static_templates:
     - 404.html
@@ -130,7 +132,7 @@ theme:
     text: Roboto
     code: Roboto Mono
   icon:
-    logo: material/camera-iris
+    logo: logo
   favicon: img/favicon.png
 
 plugins:

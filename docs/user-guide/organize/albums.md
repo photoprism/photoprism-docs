@@ -3,13 +3,13 @@
 1. Go to Albums.
 2. In the upper right corner click add.
 
-    ![Screenshot](../../img/createAlbum.png)
+    ![Screenshot](img/create-album.png)
     
 3. A new album with name "Month Year" is created.
 4. Click on the name to edit it.
 
-    ![Screenshot](../../img/albumName1.png)
-    ![Screenshot](../../img/albumName2.png)
+    ![Screenshot](img/album-name-1.png)
+    ![Screenshot](img/album-name-2.png)
 5. Press enter to save the new name.
 
 ### Add description to album ###
@@ -17,12 +17,12 @@
 1. Go to Albums.
 2. Click on the album you want to edit.
 
-    ![Screenshot](../../img/albumDescription1.png)
+    ![Screenshot](img/album-description-1.png)
     
 3. Click on downward arrow to expand album details.
 4. Enter description.
 
-    ![Screenshot](../../img/albumDescription2.png)
+    ![Screenshot](img/album-description-2.png)
     
 5. Press enter to save new description.
 
@@ -32,15 +32,15 @@
 2. Click context menu.
 3. Click add to album.
 
-    ![Screenshot](../../img/addPhotoAlbum1.png)
+    ![Screenshot](img/add-photo-album-1.png)
     
 4. Select album.
 
-    ![Screenshot](../../img/addPhotoAlbum2.png)
+    ![Screenshot](img/add-photo-album-2.png)
     
 5. Click add to album.
 
-    ![Screenshot](../../img/addPhotoAlbum3.png)
+    ![Screenshot](img/add-photo-album-3.png)
 
 !!! tip
     You can select many photos at once using shift.
@@ -52,5 +52,5 @@
 4. Click context menu.
 5. Click remove.
 
-    ![Screenshot](../../img/removeFromAlbum1.png)
+    ![Screenshot](img/remove-from-album-1.png)
 

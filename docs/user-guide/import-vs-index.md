@@ -12,7 +12,7 @@ moving or renaming them in any way.
 
 Your folder structure might look like this:
 
-   ![Screenshot](../img/beforeIndex.png)
+   ![Screenshot](img/before-index.png)
      
 **During indexing:**
 
@@ -24,7 +24,7 @@ Your folder structure might look like this:
 
 After indexing your originals folder might look like this:
 
-  ![Screenshot](../img/afterIndex.png)
+  ![Screenshot](img/after-index.png)
 
     
 
@@ -40,7 +40,7 @@ Uploads will also be treated as import, you can't directly upload to originals (
 
 Your initial folder structure in `import` might look like this:
 
-   ![Screenshot](../img/beforeImport.png)
+   ![Screenshot](img/before-import.png)
    
 **During import:**
  
@@ -50,11 +50,11 @@ Your initial folder structure in `import` might look like this:
 
 After import using "copy" (this is the default) your folders could look like this:
 
-   ![Screenshot](../img/copyImport.png)
+   ![Screenshot](img/copy-import.png)
 
 After import using "move" your folders might look like this:
 
-   ![Screenshot](../img/moveImport.png)
+   ![Screenshot](img/move-import.png)
 
 #### Advantages ####
 * You will not have duplicates or files with an unsupported type in you Originals folder. Duplicates or unsupported files stay untouched in the import directory. 

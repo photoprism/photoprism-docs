@@ -1,30 +1,31 @@
+# Edit photo details #
 PhotoPrisms edit dialogue enables you to add/edit various types of metadata related to your photos/videos.
 
 During [indexing](../index.md) PhotoPrism collects as much data as possible from sidecar files and the photo itself.
 
-###Open the edit dialogue
+### Open the edit dialogue ###
 
-####From card view
+#### From card view ####
 
 1. Click on the photos title, time or camera information.
 
-    ![Screenshot](../../img/editopen1.png)
+    ![Screenshot](img/edit-open-1.png)
 
-####From full screen mode
+#### From full screen mode ####
 
 1. In the upper right corner click edit.
 
-    ![Screenshot](../../img/editopen2.png)
+    ![Screenshot](img/edit-open-2.png)
 
-####From any view
+#### From any view ####
 
 1. Select one or multiple photos.
 2. Click on context menu.
 3. Click on edit.
 
-![Screenshot](../../img/editopen3.png)
+![Screenshot](img/edit-open-3.png)
 
-### Edit Details
+### Edit Details ###
 In the edit dialogue's Detail tab you can view and edit the following data:
 
 * Title
@@ -50,7 +51,7 @@ In the edit dialogue's Detail tab you can view and edit the following data:
 * Keywords
 * Notes
 
-![Screenshot](../img/editDetails.png)
+![Screenshot](img/edit-details.png)
 
 "Apply" saves changes. "Ok" saves changes and closes edit dialogue.
 
@@ -61,20 +62,20 @@ In the edit dialogue's Detail tab you can view and edit the following data:
 !!! tip
     Every keyword can be used in PhotoPrisms search to find photos or videos.
     
-### Edit Labels
+### Edit Labels ###
 In the edit dialogue's Label tab you can view and edit [labels](labels.md).
 
-### Edit Files
+### Edit Files ###
 In the edit dialogue's Files tab you see all files that belong to a photo.
 
 In PhotoPrism a photo can consist of multiple files like a raw file + a jpeg version of this raw file + a related xmp or json file.
 
-![Screenshot](../img/files.png)
+![Screenshot](img/files.png)
 
-![Screenshot](../img/filesVideo.png)
+![Screenshot](img/files-video.png)
 
 In case you have "Grouped Sequentials" enabled in [settings](../settings/ui.md) you might have photos that consist of more than one JPEG file.
 In this case you can decide which one to use as primary by clicking the radio button in the files table.
 The primary JPEG file is used in our views.
 
-![Screenshot](../img/sequential2.png)
+![Screenshot](img/sequential-2.png)

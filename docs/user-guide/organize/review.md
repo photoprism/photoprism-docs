@@ -19,6 +19,13 @@ The quality score depends on the following:
 2. Click approve.
 
     ![Screenshot](img/review.png)
+    
+**Or:**
+
+1. In the review section make sure you are in card view.
+2. Click approve.
+
+    ![Screenshot](img/review-2.png)
 
 !!! attention
     The quality score is constantly updated. 

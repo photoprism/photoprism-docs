@@ -1,3 +1,4 @@
+# Navigate #
 Photo and video search is based on the following components. Note that all pages are fully responsive, 
 our screenshots show the user-interface in a desktop browser with medium resolution.
 
@@ -38,10 +39,10 @@ It also contains the following buttons:
 
 * :material-archive-arrow-down: Archive photos
 * :material-folder: Add photos to album
-* :material-download: Download photos
+* :material-cloud-download: Download photos
 * :material-lock: Mark photos as private
 * :material-pencil: Open edit dialogue
-* :material-share: Share photos
+* :material-share-variant: Share photos
 
 To unselect all items, click the cross at the top:
 

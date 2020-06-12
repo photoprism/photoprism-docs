@@ -1,4 +1,4 @@
-# Shall I import or index my orginals?
+# Shall I import or index my originals?
 
 Import is a temporary folder from which you can move or copy files to originals in a structured way that avoids duplicates. 
 Most users with existing collections will want to index their originals directly without importing them, 

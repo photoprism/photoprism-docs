@@ -1,7 +1,8 @@
+# Albums #
 ### Create a new album ###
 
 1. Go to Albums.
-2. In the upper right corner click add.
+2. In the upper right corner click :material-plus:.
 
     ![Screenshot](img/create-album.png)
     
@@ -12,15 +13,15 @@
     ![Screenshot](img/album-name-2.png)
 5. Press enter to save the new name.
 
-### Add description to album ###
+### Edit album ###
 
 1. Go to Albums.
 2. Click on the album you want to edit.
 
     ![Screenshot](img/album-description-1.png)
     
-3. Click on downward arrow to expand album details.
-4. Enter description.
+3. Click on :material-chevron-down: to expand album details.
+4. Enter description or category.
 
     ![Screenshot](img/album-description-2.png)
     
@@ -30,7 +31,7 @@
 
 1. Select photos and videos.
 2. Click context menu.
-3. Click add to album.
+3. Click :material-folder:.
 
     ![Screenshot](img/add-photo-album-1.png)
     
@@ -50,7 +51,7 @@
 1. Go to your album.
 3. Select photos/videos you want to remove.
 4. Click context menu.
-5. Click remove.
+5. Click :material-minus:.
 
     ![Screenshot](img/remove-from-album-1.png)
 

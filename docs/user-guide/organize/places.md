@@ -1,7 +1,7 @@
 # Places #
 Places displays all photos with GPS information on a world map.
 
-You can zoom either by using the + or - buttons or by clicking on a photo or photo collector (the blue circles with a photo count inside).
+You can zoom either by using :material-plus: or :material-minus: or by clicking on a photo or photo collector (the blue circles with a photo count inside).
 
 ![Screenshot](img/places-1.png)
 ![Screenshot](img/places-2.png)

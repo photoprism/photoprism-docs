@@ -5,9 +5,9 @@ Labels are set automatically when adding new photos.
 You can manually add new labels or edit/remove the ones that have been created by us.
 
 In Labels you find all labels of your photos and videos. 
-You can star labels by clicking on the star. Stared labels will be listed first.
+You can star labels by clicking :material-star:. Stared labels will be listed first.
 
-To see only labels with a high priority click on the eye button in the upper right corner.
+To see only labels with high priority click :material-eye: in the upper right corner.
 
 ![Screenshot](img/labels-1.png)
 
@@ -28,7 +28,7 @@ To see only labels with a high priority click on the eye button in the upper rig
 2. Go to Labels tab.
 3. Click on the label field in the last row of the label table.
 4. Enter a label name.
-5. Click add on the right side of this row.
+5. Click :material-plus: on the right side of this row.
 
     ![Screenshot](img/add-label.png)
     
@@ -39,7 +39,7 @@ Manually added labels can be deleted.
 
 1. Go to the photo [edit dialogue](edit.md).
 2. Go to Labels tab.
-3. Click the remove/delete button of the label you want to remove/delete.
+3. Click the :material-minus:/:material-delete: button of the label you want to remove/delete.
 
     ![Screenshot](img/remove-label-1.png)
     

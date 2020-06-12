@@ -7,7 +7,7 @@ PhotoPrisms download functionality lets you download your photos in 5 different 
 
     ![Screenshot](img/download-1.png)
     
-2. In fullscreen mode click download.
+2. In fullscreen mode click :material-download:.
 3. Select a size.
     
     ![Screenshot](img/download-2.png)
@@ -17,7 +17,7 @@ PhotoPrisms download functionality lets you download your photos in 5 different 
 
 1. Select photos.
 2. Click on the context menu.
-3. Click download. Photos will be downloaded in original size.
+3. Click :material-cloud-download:. Photos will be downloaded in original size.
 
     ![Screenshot](img/multi-download.png)
 

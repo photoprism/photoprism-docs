@@ -13,7 +13,7 @@ During [indexing](../index.md) PhotoPrism collects as much data as possible from
 
 #### From full screen mode ####
 
-1. In the upper right corner click edit.
+1. In the upper right corner click :material-pencil:.
 
     ![Screenshot](img/edit-open-2.png)
 
@@ -21,7 +21,7 @@ During [indexing](../index.md) PhotoPrism collects as much data as possible from
 
 1. Select one or multiple photos.
 2. Click on context menu.
-3. Click on edit.
+3. Click :material-pencil:.
 
 ![Screenshot](img/edit-open-3.png)
 

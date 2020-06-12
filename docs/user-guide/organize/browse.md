@@ -6,40 +6,46 @@ They enable you to re-discover forgotten photos, find specific photos you are lo
 Using the main navigation you can visit the different sections of your photo library:
 
 #### Photos ####
-Photos shows all photos that are not in review or archived or private.
+:material-image: shows all photos that are not in review or archived or private.
 
 !!! hint
     In case the review, private or archive functions are turned off - Photos displays those photos as well.
     
 ![Screenshot](img/photos-section.png)
 
-#### Favorites ####
-Favorites shows all photos and videos you liked.
+#### Favorites :material-heart: ####
+Shows all photos and videos you liked.
 
 ![Screenshot](img/favorites-section.png)
 
-#### Private ####
-Private shows photos and videos marked as private.
+#### Private :material-lock: ####
+Shows photos and videos marked as private.
 
-#### Videos ####
-Videos shows videos that are not in review or archived or private.
+#### Videos :material-movie: ####
+Shows videos that are not in review or archived or private.
 
 ![Screenshot](img/video-section.png)
 
-#### Albums ####
-Albums shows albums you created.
+#### Albums :material-folder: ####
+Shows albums you created.
 
 ![Screenshot](img/album-section.png)
 
-#### Labels ####
-Labels shows your photos and videos grouped by labels like cat, dog or beach.
+#### Labels :material-label:####
+Shows your photos and videos grouped by labels like cat, dog or beach.
 
 ![Screenshot](img/label-section.png)
 
-#### Places ####
-Places displays all photos and videos with location information on a worldmap.
+#### Places :material-map-marker: ####
+Displays all photos and videos with location information on a worldmap.
 
 ![Screenshot](img/places-section.png)
+
+#### Moments :material-star: ####
+Discover albums we automatically create for you.
+
+#### Calendar :material-calendar-range: ####
+Organizes your photos due to time taken.
 
 ### Search ###
 In all sections you can use the search bar to find certain photos, videos, albums or labels.

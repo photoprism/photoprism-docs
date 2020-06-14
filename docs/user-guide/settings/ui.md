@@ -12,7 +12,7 @@ Photos/videos marked as private do NOT appear in Photos, Videos, Favorites, Labe
 When selected, non-photographic photos/videos like screenshots and low-quality photos need to be [reviewed](../organize/review.md) before they appear in Photos or Videos.
 
 #### Convert to JPEG :material-camera: ####
-JPEGs are created for RAW files during [indexing](../indexing.md) in case they do not yet exist. JPEGs will be stored in the same folder next to the original.
+JPEGs are created for RAW files during [indexing](../library/indexing.md) in case they do not yet exist. JPEGs will be stored in the same folder next to the original.
 
 !!! attention
     In case this is disabled and there is a RAW file without a JPEG there will be no preview.
@@ -44,7 +44,7 @@ To make PhotoPrism suite your individual needs the following sections and functi
 Disables sections do not appear in the main navigation.
 
 #### Upload :material-cloud-upload: ####
-When disabled, uploading files via [upload](../upload.md) is not possible. 
+When disabled, uploading files via [upload](../library/upload.md) is not possible. 
 This might be useful when you grant others access to your PhotoPrism but do not want them to upload photos.
 
 #### Download :material-cloud-download: ####
@@ -72,7 +72,7 @@ When disabled, there is no Labels section and you cannot add or edit labels.
 When disabled, there is no Library section.
 
 #### Import :material-folder-plus: ####
-When disabled, there is no possibility to [import](../import.md) photos. You need to use [index](../indexing.md) instead to add new photos.
+When disabled, there is no possibility to [import](../library/import.md) photos. You need to use [index](../library/indexing.md) instead to add new photos.
 
 #### Logs :material-text: ####
 When disabled, server logs are not shown.

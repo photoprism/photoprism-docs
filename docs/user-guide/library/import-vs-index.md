@@ -36,7 +36,7 @@ After indexing your originals folder might look like this:
 ### Import ###
 
 Importing is more efficient when adding files as you don't need to re-index all originals to find new photos and videos.
-Uploads will also be treated as import, you can't directly upload to originals (yet).
+[Uploads](upload.md) will also be treated as import, you can't directly upload to originals (yet).
 
 Your initial folder structure in `import` might look like this:
 

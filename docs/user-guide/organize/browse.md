@@ -44,8 +44,12 @@ Displays all photos and videos with location information on a worldmap.
 #### Moments :material-star: ####
 Discover albums we automatically create for you.
 
+![Screenshot](img/moments.png)
+
 #### Calendar :material-calendar-range: ####
 Organizes your photos due to time taken.
+
+![Screenshot](img/calendar.png)
 
 ### Search ###
 In all sections you can use the search bar to find certain photos, videos, albums or labels.

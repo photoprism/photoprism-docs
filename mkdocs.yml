@@ -28,7 +28,7 @@ nav:
       - File Import: user-guide/library/import.md
       - Upload via Web UI: user-guide/library/upload.md
       - WebDAV Upload: user-guide/library/webdav.md
-      - Files: user-guide/library/files.md
+      - Original Files: user-guide/library/files.md
       #- Import from camera: user-guide.md
       #- Import from Flickr: user-guide.md
       #- Import from Facebook: user-guide.md

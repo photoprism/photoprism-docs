@@ -1,6 +1,6 @@
-# Files #
+# Original files #
 
-The Files section displays the structure of your `originals` directory.
+The Originals section displays all files of your `originals` directory.
 
 Clicking on a JPEG file opens it in fullscreen mode. 
 Clicking on files other than JPEG downloads the file. 

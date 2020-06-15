@@ -32,9 +32,6 @@ Keywords come from various sources: labels, file names, folder names, locations 
 If a label is removed the keyword is not automatically removed because it might originated from another source.
 You can delete the keyword manually on the edit dialogue.
 
-## I do not find the map view
-To view photos on a map you need to upgrade t XXX
-
 ## Where do I find sidecar files?
 
 ## Where are my files saved?

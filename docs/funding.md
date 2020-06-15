@@ -30,26 +30,10 @@ Our [sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md
 [contributors](https://github.com/photoprism/photoprism/graphs/contributors/) will get for free whatever we might 
 have to charge for a geodata subscription later.
 
-Also please [leave a star](https://github.com/photoprism/photoprism/stargazers) on GitHub if you like this project, 
-it provides additional motivation to keep going.
+Also, please [leave a star](https://github.com/photoprism/photoprism/stargazers) on GitHub if you like this project. 
+It provides additional motivation to keep going.
 
 Ideas backed by a sponsor are marked with a golden [sponsor](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3Asponsor) label.
 Let us know if we mistakenly label an idea as [unfunded](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3Aunfunded).
 
 Thank you very much! <3
-
-## Public and corporate sponsorship ##
-
-We spent weeks asking organizations like [The Prototype Fund](https://prototypefund.de/en/) for help 
-and also tried to cooperate with companies like Mapbox and Cewe.
-You would think it's easier to get a few dollars with [our background](http://docs.photoprism.org/en/latest/team/) 
-and [working code](https://demo.photoprism.org/).
-
-If any of those organizations changes their mind, they are welcome to [reach out to us](mailto:hello@photoprism.org).
-
-## The bigger picture ##
-
-The funding situation of independent Open Source projects is especially bitter in the face of massive money printing 
-by central banks worldwide.
-Did you know the [Swiss National Bank](https://www.bloomberg.com/news/articles/2019-08-02/snb-s-pile-of-u-s-shares-hits-93-billion-on-buoyant-markets)
-owns more A-class Facebook shares than Mark Zuckerberg?

@@ -22,7 +22,7 @@ and we'll find a solution.
 
 PhotoPrism™ is a trademark of Michael Mayer.
 You may use it as required to describe our software, run your own server, for educational purposes,
-but not for offering goods, products, or services to others without prior written permission.
+but not for offering commercial goods, products, or services without prior written permission.
 In other words, please ask.
 
 ## Chat ##

@@ -72,4 +72,14 @@ Manually added labels can be deleted.
 !!! attention
     Be aware this change applies to all photos that have this label.
 
+### Delete a label ###
+You can permanently delete a label. No file will get a deleted label set during indexing.
 
+1. Go to Labels.
+2. Select the label you want to delete.
+3. Open the context menu.
+4. Click :material-delete:.
+5. Confirm.
+
+!!! attention
+    In case you want a deleted label to appear again, you need to add it to one photo and then index all files again.

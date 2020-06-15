@@ -22,10 +22,10 @@ nav:
     - Introduction: user-guide/index.md
     # - Setting up: user-guide/setup.md
     - Navigate: user-guide/navigate.md
-    - Files & Folders:
-      - Import vs Index: user-guide/library/import-vs-index.md
-      - Import: user-guide/library/import.md
-      - Index: user-guide/library/indexing.md
+    - Index:
+      - Introduction: user-guide/library/import-vs-index.md
+      - Originals: user-guide/library/indexing.md
+      - File Import: user-guide/library/import.md
       - Upload via Web UI: user-guide/library/upload.md
       - WebDAV Upload: user-guide/library/webdav.md
       - Files: user-guide/library/files.md

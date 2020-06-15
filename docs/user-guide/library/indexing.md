@@ -1,19 +1,16 @@
-# Index #
+# How to index your originals #
 
-### Index files in `originals` directory ###
+1. Configure the `originals` path to point to your photo and video collection.
+   If you start with an empty folder, you need to copy files to it first.
 
-1. Add files to your `originals` folder.
+2. On the main navigation click Library.
 
-2. On the main navigation click Library and then Originals.
+3. Optionally select a sub folder you want to index.
 
-3. Select the folder you want to index.
-
-4. Select your preferred options.
-
-5. Click index.
+4. Press button to start indexing.
 
 !!! info
-    You can add photos to your `originals` folder via your filesystem or using [WebDav](webdav.md).
+    You can add photos to your `originals` folder in the file system or using [WebDav Sync](webdav.md).
 
 
 ![Screenshot](img/index.png)
@@ -23,9 +20,6 @@
 All files are indexed again.
 In case this option is not selected only new or changed files will be indexed.
 
-!!! info
-    In case you have set read-only mode to true, no JPEGs can be created for your RAW files.
-    
 !!! tip 
     NSFW detection can be enabled (`detect-nsfw`) to flag images that may have offensive content (`nsfw` search filter).
    

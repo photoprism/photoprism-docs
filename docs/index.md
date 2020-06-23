@@ -1,4 +1,4 @@
-# PhotoPrism: Browse your life in pictures
+# PhotoPrism: Browse Your Life in Pictures
 
 PhotoPrism™ is a server-based application for browsing, organizing and sharing your personal photo collection.
 It makes use of the latest technologies to automatically tag and find pictures without getting in your way.

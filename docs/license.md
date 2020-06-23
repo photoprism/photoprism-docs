@@ -8,13 +8,6 @@ GNU Affero General Public License
 Everyone is permitted to copy and distribute verbatim copies
 of this license document, but changing it is not allowed.
 
-## Trademarks
-
-PhotoPrism™ is a registered trademark of Michael Mayer.
-You may use it as required to describe our software, run your own server, for educational purposes,
-but not for offering commercial goods, products, or services without prior written permission.
-In other words, please ask.
-
 ## Preamble
 
 The GNU Affero General Public License is a free, copyleft license for
@@ -615,3 +608,9 @@ Program, unless a warranty or assumption of liability accompanies a
 copy of the Program in return for a fee.
 
 _END OF TERMS AND CONDITIONS_
+
+## Trademarks
+
+PhotoPrism™ is a registered trademark of Michael Mayer. You may use it as required to describe 
+our software, run your own server, for educational purposes, but not for offering commercial 
+goods, products, or services without prior written permission. In other words, please ask.

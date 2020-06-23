@@ -14,12 +14,6 @@ Responsible for editorial content according to § 5 TMG / § 55 RStV:
 
 USt-ID: DE189758973
 
-## Trademarks ##
-
-PhotoPrism™ is a registered trademark of Michael Mayer. You may use it as required to describe 
-our software, run your own server, for educational purposes, but not for offering commercial 
-goods, products, or services without prior written permission. In other words, please ask.
-
 ## Don't Panic ##
 
 We'd like to remind everyone that we are not full-time marketing specialists but developers 
@@ -40,9 +34,15 @@ Please add important information from chat sessions to our [Wiki](https://github
 Join our [developers mailing list](https://groups.google.com/a/photoprism.org/forum/#!forum/developers) to receive 
 regular project updates, get in contact with other contributors and discuss your ideas.
 
+## Trademarks ##
+
+PhotoPrism™ is a registered trademark of Michael Mayer. You may use it as required to describe 
+our software, run your own server, for educational purposes, but not for offering commercial 
+goods, products, or services without prior written permission. In other words, please ask.
+
 ## Privacy Policy ##
 
-If you’re just browsing the website, *Read the Docs* collects the same basic information that most websites collect. 
+If you’re just browsing the website, GitHub collects the same basic information that most websites collect. 
 They use common internet technologies, such as cookies and web server logs. 
 They collect this basic information from everybody, whether they have an account or not.
 
@@ -55,4 +55,4 @@ The information they collect about all visitors includes:
 
 They also collect potentially personally-identifying information like Internet Protocol (IP) addresses.
 
-See their [Privacy Policy](https://docs.readthedocs.io/en/latest/privacy-policy.html) and [DMCA Takedown Policy](https://docs.readthedocs.io/en/latest/dmca/).
+See [Privacy Statement](https://help.github.com/en/github/site-policy/github-privacy-statement) and [DMCA Takedown Policy](https://help.github.com/en/github/site-policy/dmca-takedown-policy).

@@ -16,16 +16,15 @@ USt-ID: DE189758973
 
 ## Trademarks ##
 
-PhotoPrism™ is a registered trademark of Michael Mayer.
-You may use it as required to describe our software, run your own server, for educational purposes,
-but not for offering commercial goods, products, or services without prior written permission.
-In other words, please ask.
+PhotoPrism™ is a registered trademark of Michael Mayer. You may use it as required to describe 
+our software, run your own server, for educational purposes, but not for offering commercial 
+goods, products, or services without prior written permission. In other words, please ask.
 
 ## Don't Panic ##
 
-We'd like to remind everyone that we are not full-time marketing specialists but developers who work a lot and 
-enjoy a bit of sarcasm from time to time. Please let us know when there is an issue with our "nuance and tone", 
-and we'll find a solution.
+We'd like to remind everyone that we are not full-time marketing specialists but developers 
+who work a lot and enjoy a bit of sarcasm from time to time. Please let us know when there is 
+an issue with our "nuance and tone", and we'll find a solution.
 
 ## Chat ##
 

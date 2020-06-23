@@ -1,4 +1,4 @@
-# Every contribution makes a difference
+# Every Contribution Makes a Difference
 
 Think of open-source development as free training with a visible outcome.
 Exploring new technologies is easier than in commercial environments,

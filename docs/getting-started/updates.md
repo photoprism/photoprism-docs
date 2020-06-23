@@ -1,4 +1,4 @@
-# Getting updates
+# Getting Updates
 
 Open a terminal and run the following command to pull the latest container image:
 

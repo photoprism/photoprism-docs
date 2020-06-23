@@ -6,13 +6,13 @@ Say goodbye to solutions that force you to upload your visual memories to the pu
 
 ![Screenshot](img/preview.jpg)
 
-## What to expect ##
+### What to expect: ###
 
 * Clearly structured Web interface for browsing, organizing and sharing your personal photo collection
 * Import everything without worrying about duplicates or RAW to JPEG conversion
 * Reverse geocoding, XMP support and automated tagging based on Google TensorFlow
 
-## Why this has to be free software
+## Why This Has to Be Free Software ##
 
 The development of every commercial product is focused on monetization.
 We've [built similar apps more than once](https://github.com/photoprism/photoprism/wiki/Mediencenter) and every single time the constraints of working

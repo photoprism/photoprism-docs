@@ -1,4 +1,4 @@
-# Setup using Docker Compose
+# Setup Using Docker Compose
 
 To simplify running PhotoPrism on a server, we strongly recommend using [Docker Compose](https://docs.docker.com/compose/).
 

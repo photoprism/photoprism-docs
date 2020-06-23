@@ -1,4 +1,4 @@
-# How to work with Pull Requests
+# How to Work With Pull Requests
 
 Because we want to create the best possible product for our users, we have a set of guidelines which ensure that all source code contributions are acceptable. They are not intended as a filter or barrier to participation. If you are unfamiliar with open source development on GitHub, [we will help you](https://groups.google.com/a/photoprism.org/forum/#!forum/developers). Our [[documentation]] is mostly kept outside of the main repository so that the commit log doesn't get cluttered with lots of small text changes.
 

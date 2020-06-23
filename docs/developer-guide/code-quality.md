@@ -1,4 +1,4 @@
-# A few words about code quality
+# A Few Words About Code Quality
 
 > Code quality has a practical impact on both your agility and the cost of development. You can’t change buggy code fast enough to be truly agile. Existing bugs can easily increase dev costs (and time) by 10x. You can't afford not to fix them.<br>— <cite>[Allen Holub](https://twitter.com/allenholub/status/1073738216140791808)</cite>
 

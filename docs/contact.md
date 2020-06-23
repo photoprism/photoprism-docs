@@ -1,4 +1,4 @@
-# Whatever it is, we'd love to hear from you!
+# Whatever It Is, We'd Love to Hear From You!
 
 Feel free to send an e-mail to [hello@photoprism.org](mailto:hello@photoprism.org) if you have questions, 
 want to support our work, or just want to say hello.

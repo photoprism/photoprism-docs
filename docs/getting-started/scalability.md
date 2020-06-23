@@ -1,4 +1,4 @@
-# Scalability, distributed computing and cluster filesystems 
+# Scalability, Distributed Computing and Cluster Filesystems 
 
 Obviously this is a home solution. PhotoPrism benefits from fast, local SSD storage
 and is explicitly not designed to run on clusters: 

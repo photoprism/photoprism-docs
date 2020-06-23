@@ -1,4 +1,4 @@
-# How to optimize caching for performance
+# How to Optimize Caching for Performance
 
 *Note: This is contributed content.*
 

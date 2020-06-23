@@ -1,4 +1,4 @@
-# Who we are
+# Who We Are
 
 ## Andrea Ceroni ##
 

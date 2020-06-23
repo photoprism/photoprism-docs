@@ -1,4 +1,4 @@
-# PhotoPrism does not work, what can I do?
+# PhotoPrism Does Not Work, What Can I Do?
 
 If the application can not be opened in the browser or the container doesn't start at all, you might have found a bug,
 you might be using an outdated container image or your folder is not readable (check permissions).

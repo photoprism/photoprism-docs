@@ -1,4 +1,4 @@
-# How we test our code
+# How We Test Our Code
 
 > In any process, obsessing about the wait times will yield greater improvements than practically anything else, for longer than you might think. Automation, simplification, etc. are implementation details of that obsession.<br>— <cite>Dan North</cite>
 

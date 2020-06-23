@@ -1,4 +1,4 @@
-# Testing PhotoPrism with our demo image
+# Testing PhotoPrism With Our Demo Image
 
 For a quick test, you can start a demo that comes with pre-indexed photos:
 

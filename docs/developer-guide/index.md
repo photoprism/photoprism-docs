@@ -10,10 +10,11 @@ you have the opportunity to learn Docker, Go, TensorFlow and much more.
 
 ## Questions?
 
-Follow us on [Twitter](https://twitter.com/browseyourlife) and join our [developers mailing list](https://groups.google.com/a/photoprism.org/forum/#!forum/developers)
-to receive regular project updates, get in contact with other contributors and discuss your ideas. Don't be afraid to ask stupid questions.
+Follow us on [Twitter](https://twitter.com/browseyourlife) to receive regular project updates, 
+get in contact with other contributors and discuss your ideas. Don't be afraid to ask stupid questions.
 
-Of all the tools we tested, Twitter works best to get and give continuous feedback. Especially polls are amazing for product development.
+Of all the tools we tested, it works best to get and give continuous feedback. 
+Especially polls are amazing for product development.
 
 ## Pull requests
 

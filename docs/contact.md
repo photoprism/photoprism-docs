@@ -1,9 +1,9 @@
 # Whatever It Is, We'd Love to Hear From You!
 
-[![Community Chat](https://img.shields.io/badge/community%20chat-on%20gitter-4aa087.svg)](https://gitter.im/browseyourlife/community)
-
 Feel free to use the chat or send an e-mail to [hello@photoprism.org](mailto:hello@photoprism.org) 
 if you have questions, want to support our work, or just want to say hello.
+
+[![Community Chat](https://img.shields.io/badge/community%20chat-on%20gitter-4aa087.svg)](https://gitter.im/browseyourlife/community)
 
 Responsible for editorial content according to § 5 TMG / § 55 RStV:
 

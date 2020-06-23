@@ -2,24 +2,31 @@
 
 PhotoPrism™ is a server-based application for browsing, organizing and sharing your personal photo collection.
 It makes use of the latest technologies to automatically tag and find pictures without getting in your way.
-Say goodbye to solutions that force you to upload your visual memories to the public cloud.
+Say goodbye to solutions that force you to upload your visual memories to the cloud.
 
 ![Screenshot](img/preview.jpg)
 
-### What to expect... ###
+## What to expect... ##
 
 * Clearly structured Web interface for browsing, organizing and sharing your personal photo collection
 * Import everything without worrying about duplicates or RAW to JPEG conversion
 * Reverse geocoding, XMP support and automated tagging based on Google TensorFlow
 
-## Why This Has to Be Free Software ##
+## Getting Started ##
 
-The development of every commercial product is focused on monetization.
-We've [built similar apps more than once](https://github.com/photoprism/photoprism/wiki/Mediencenter) and every single time the constraints of working
-in a profit-oriented corporate environment were an impediment.
+You're welcome to play with our demo at [demo.photoprism.org](https://demo.photoprism.org).
+Leave your email to get a [release notification](https://goo.gl/forms/KBPVGl9PCsOKrAv33).
 
-We are sure we can do better with only a fraction of the budget. Simplicity - the art of maximizing the amount of work not done - can be very powerful.
-Go itself is a [great example](https://talks.golang.org/2015/simplicity-is-complicated.slide).
+Step-by-step installation instructions can be found on [docs.photoprism.org](getting-started/index.md) - 
+all you need is a Web browser and Docker to run the server. It is available for Mac, Linux and Windows.
 
-Our long-term goal is to become an open platform for machine learning [research](https://github.com/photoprism/photoprism/wiki/Research) based on real-world photo collections.
-We're already in contact with data scientists who like our idea.
+Next, you'll have to [index or import](user-guide/library/import-vs-index.md) 
+existing files. Please be patient, this will take a while depending on the size of your library.
+
+Already indexed photos can be browsed in [Photos](user-guide/organize/browse.md) 
+while videos show up in [Videos](user-guide/organize/video.md).
+Counts are continuously updated in the navigation.
+
+If photos are missing, they might be in [review](user-guide/organize/review.md) due to low quality or missing metadata.
+You can turn this and other features off in [Settings](user-guide/settings/ui.md), depending on
+your specific use case.

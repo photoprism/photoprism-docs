@@ -2,22 +2,21 @@
 
 A big **thank you** to everyone who made this possible!
 
-## Artwork ##
-
-* [Prism Light Separation](https://www.flickr.com/photos/digitalvosem/44622462042/in/dateposted/) by [digitalvosem](https://www.flickr.com/photos/digitalvosem/)
-* [Follow that light](https://www.flickr.com/photos/32658783@N03/24226085838/in/faves-12602671@N04/) by [Margeois](https://www.flickr.com/photos/32658783@N03/)
-* [Gopher overlapping the TensorFlow logo](img/tensorgologo.png) was created by [Takuya Ueda](https://github.com/tenntenn)
-
 ## Technologies ##
 
-* [Go](https://golang.org/), [Gin](https://gin-gonic.github.io/gin/), [TiDB](https://github.com/pingcap/tidb) and [Vuetify](https://vuetifyjs.com/en/)
+* [Go](https://golang.org/), [Gin](https://gin-gonic.github.io/gin/) and [Vuetify](https://vuetifyjs.com/en/)
 * [Google](https://developers.google.com/) [TensorFlow](https://www.tensorflow.org/) and [Material Design](https://material.io/)
 * [Complete list of 3rd-party software packages](https://raw.githubusercontent.com/photoprism/photoprism/develop/NOTICE)
 
 ## Infrastructure ##
 
 * [GitHub](https://pages.github.com/) hosts our project homepage and all repositories
-* [Read the Docs](https://readthedocs.org/) hosts this user guide
 * [Travis-CI](https://travis-ci.org/photoprism/photoprism) builds and tests our code multiple times a day
 * [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/) hosts our container images
 * [IssueHunt](https://issuehunt.io/repos/119160553) is a new service for funding Open Source development
+
+## Artwork ##
+
+* [Prism Light Separation](https://www.flickr.com/photos/digitalvosem/44622462042/in/dateposted/) by [digitalvosem](https://www.flickr.com/photos/digitalvosem/)
+* [Follow that light](https://www.flickr.com/photos/32658783@N03/24226085838/in/faves-12602671@N04/) by [Margeois](https://www.flickr.com/photos/32658783@N03/)
+* [Gopher overlapping the TensorFlow logo](img/tensorgologo.png) was created by [Takuya Ueda](https://github.com/tenntenn)

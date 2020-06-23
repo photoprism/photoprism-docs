@@ -1,7 +1,7 @@
 # User Guide #
 
-Step-by-step installation instructions can be found in [Getting Started](../getting-started/index.md).
-All you need is a Web browser and Docker to run the server. It is available for Mac, Linux and Windows.
+Step-by-step installation instructions can be found in [Getting Started](../getting-started/index.md) - 
+all you need is a Web browser and Docker to run the server. It is available for Mac, Linux and Windows.
 
 Next, you'll have to [index or import](library/import-vs-index.md) 
 existing files. Please be patient, this will take a while depending on the size of your library.

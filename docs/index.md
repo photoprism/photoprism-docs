@@ -12,10 +12,12 @@ Say goodbye to solutions that force you to upload your visual memories to the cl
 * import everything without worrying about duplicates or RAW to JPEG conversion
 * reverse geocoding, XMP support and automated tagging based on Google TensorFlow
 
-## Getting Started ##
+## Try our demo ##
 
 You're welcome to play with our demo at [demo.photoprism.org](https://demo.photoprism.org).
 Leave your email to get a [release notification](https://goo.gl/forms/KBPVGl9PCsOKrAv33).
+
+## For the early birds ##
 
 Step-by-step installation instructions can be found in [Getting Started](getting-started/index.md) - 
 all you need is a Web browser and Docker to run the server. It is available for Mac, Linux and Windows.

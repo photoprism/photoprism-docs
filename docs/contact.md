@@ -26,7 +26,7 @@ goods, products, or services without prior written permission. In other words, p
 ## Don't Panic ##
 
 We are not marketing specialists but developers who work a lot and enjoy a bit of sarcasm from 
-time to time. Please let us know when there is an issue with our "nuance and tone", and we'll find a solution!
+time to time. Please let us know when there is an issue with our "nuance and tone", and we'll find a solution.
 
 ## Privacy Policy ##
 

@@ -1,4 +1,4 @@
-# Whatever It Is, We'd Love to Hear From You!
+# Whatever it is, we'd love to hear from you!
 
 Feel free to use the chat or send an e-mail to [hello@photoprism.org](mailto:hello@photoprism.org) 
 if you have questions, want to support our work, or just want to say hello.
@@ -25,9 +25,8 @@ goods, products, or services without prior written permission. In other words, p
 
 ## Don't Panic ##
 
-We'd like to remind everyone that we are not marketing specialists but developers 
-who work a lot and enjoy a bit of sarcasm from time to time. Please let us know when there is 
-an issue with our "nuance and tone", and we'll find a solution! :)
+We are not marketing specialists but developers who work a lot and enjoy a bit of sarcasm from 
+time to time. Please let us know when there is an issue with our "nuance and tone", and we'll find a solution!
 
 ## Privacy Policy ##
 

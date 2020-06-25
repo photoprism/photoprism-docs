@@ -23,7 +23,7 @@ PhotoPrism™ is a registered trademark of Michael Mayer. You may use it as requ
 our software, run your own server, for educational purposes, but not for offering commercial 
 goods, products, or services without prior written permission. In other words, please ask.
 
-## Don't Panic ##
+## Disclaimer ##
 
 We are not marketing specialists but developers who work a lot and enjoy a bit of sarcasm from 
 time to time. Please let us know when there is an issue with our "nuance and tone", and we'll find a solution.

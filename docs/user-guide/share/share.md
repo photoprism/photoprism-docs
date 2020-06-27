@@ -2,7 +2,7 @@
 
 ## Create sharing link ##
 1. Go to Albums.
-2. Select the albums you want to share.
+2. Select the album you want to share.
 3. Open the context menu.
 4. Click :material-share-variant:.
     

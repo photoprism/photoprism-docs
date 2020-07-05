@@ -19,7 +19,7 @@ In case you have PhotoPrism running on a server you can use WebDAV to add files 
 
 4. Click "Connect".
 
-5. Enter your username and password. The username is photoprism. You can set your password in the docker-compose.yml using the PHOTOPRISM_WEBDAV_PASSWORD variable.
+5. Enter your username and password. The username is photoprism. You can change your password in the [account settings](../settings/account.md).
 
 6. Now you can move photos to the `import` or `originals` folder.
 
@@ -42,7 +42,7 @@ Once all files are added you can start [importing or indexing](import-vs-index.m
    
        * http://servername/import/
        
-6. Enter your username and password. The username is photoprism. You can set your password in the docker-compose.yml using the PHOTOPRISM_WEBDAV_PASSWORD variable.
+6. Enter your username and password. The username is photoprism. You can change your password in the [account settings](../settings/account.md).
 7. Now the network appears in your explorer and you can start adding files.
 
 

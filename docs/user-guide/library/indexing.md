@@ -10,7 +10,7 @@
 4. Press button to start indexing.
 
 !!! info
-    You can add photos to your `originals` folder in the file system or using [WebDav Sync](webdav.md).
+    You can add photos to your `originals` folder in the file system or using [WebDav](webdav.md).
 
 
 ![Screenshot](img/index.png)

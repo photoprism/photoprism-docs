@@ -13,7 +13,7 @@
 5. Click import.
 
 !!! info
-    You can add photos to you import folder via your filesystem, [WebDAV](webdav.md)  or using PhotoPrisms [upload](upload.md) functionality.
+    You can add photos to your import folder via your filesystem, [WebDAV](webdav.md)  or using PhotoPrisms [upload](upload.md) functionality.
 
 ![Screenshot](img/import.png)
 

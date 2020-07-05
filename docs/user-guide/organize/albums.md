@@ -7,25 +7,32 @@
     ![Screenshot](img/create-album.png)
     
 3. A new album with name "Month Year" is created.
-4. Click on the name to edit it.
 
     ![Screenshot](img/album-name-1.png)
-    ![Screenshot](img/album-name-2.png)
-5. Press enter to save the new name.
 
 ### Edit album ###
 
 1. Go to Albums.
-2. Click on the album you want to edit.
+2. To open the edit dialogue click on the album title.
 
-    ![Screenshot](img/album-description-1.png)
+    ![Screenshot](img/edit-album-1.png)
     
-3. Click on :material-chevron-down: to expand album details.
-4. Enter description or category.
+    OR
+    
+    Select album, open context menu and click :material-pencil:.
+    
+    ![Screenshot](img/album-edit-2.png)
+    
+    OR
+    
+    Open album and click :material-pencil: in the upper right corner.
+    
+    ![Screenshot](img/album-edit-3.png)
+    
+3. Edit album details and click save.
 
-    ![Screenshot](img/album-description-2.png)
+    ![Screenshot](img/album-edit-4.png)
     
-5. Press enter to save new description.
 
 ### Add photos to album ###
 

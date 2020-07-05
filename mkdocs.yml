@@ -58,6 +58,7 @@ nav:
       - Settings:
           - Library: user-guide/settings/library.md
           - User Interface: user-guide/settings/ui.md
+          - Account: user-guide/settings/account.md
           - Places: user-guide/settings/places.md
           - Thumbnails: user-guide/settings/thumbnails.md
     # - Metadata: user-guide/metadata.md

@@ -70,12 +70,37 @@ In the edit dialogue's Files tab you see all files that belong to a photo.
 
 In PhotoPrism a photo can consist of multiple files like a raw file + a jpeg version of this raw file + a related xmp or json file.
 
-![Screenshot](img/files.png)
+![Screenshot](img/files-1.png)
 
-![Screenshot](img/files-video.png)
+To open file details click :material-chevron-down:.
+
+![Screenshot](img/group-2.png)
+
+#### Grouped Files ####
 
 In case you have "Grouped Sequentials" enabled in [settings](../settings/ui.md) you might have photos that consist of more than one JPEG file.
-In this case you can decide which one to use as primary by clicking the radio button in the files table.
-The primary JPEG file is used in our views.
 
-![Screenshot](img/sequential-2.png)
+![Screenshot](img/group-1.png)
+
+##### Change primary file #####
+The JPEG file marked as primary is used in our views. It is listed first in the files section.
+To change the primary file:
+
+1. Click :material-chevron-down: of the file you want to set as primary.
+        
+2. Click Primary.
+
+      ![Screenshot](img/group-3.png) 
+
+##### Ungroup files #####
+To ungroup files:
+
+1. Click :material-chevron-down: of the JPEG file that is not marked as primary.
+        
+2. Click Ungroup.
+
+      ![Screenshot](img/group-3.png)
+
+Now, both files appear in our views.
+
+![Screenshot](img/group-4.png)

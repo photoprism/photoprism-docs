@@ -19,23 +19,7 @@ JPEGs are created for RAW files during [indexing](../library/indexing.md) in cas
     
 #### Group Sequential :material-image-multiple: ####
 Related files will be grouped when selected.
-Grouped files will have one primary file that is shown in our views.
-
-##### Browse through related files #####
-
-1. Click on sequence.
-
-    ![Screenshot](img/sequential1.png)
-    
-2. Use arrows to see all photos of the sequence.
-
-    ![Screenshot](img/sequential3.png) ![Screenshot](img/sequential4.png)
-
-!!! info
-    Files are grouped in two cases:
-    
-    1. Filenames are related: 'IMG_1234 (2)' or 'IMG_1234 copy 2' are assumed to belong to the same photo.
-    2. Photos that have been taken at the same location AND in the same second.
+Grouped files will have one primary file that is shown in our views. You find your grouped files in [Stacks](../organize/stacks.md).
     
 ### User Interface Settings ###
 You can change the theme and language of the User interface.

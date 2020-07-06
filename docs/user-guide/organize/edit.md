@@ -29,7 +29,9 @@ During [indexing](../index.md) PhotoPrism collects as much data as possible from
 In the edit dialogue's Detail tab you can view and edit the following data:
 
 * Title
-* Local time
+* Day
+* Month
+* Year
 * UTC time
 * UTC date
 * Time zone
@@ -76,31 +78,6 @@ To open file details click :material-chevron-down:.
 
 ![Screenshot](img/group-2.png)
 
-#### Grouped Files ####
+In case you have [grouped files](stacks.md) you can change the primary file or ungroup files using the respective buttons.
 
-In case you have "Grouped Sequentials" enabled in [settings](../settings/ui.md) you might have photos that consist of more than one JPEG file.
 
-![Screenshot](img/group-1.png)
-
-##### Change primary file #####
-The JPEG file marked as primary is used in our views. It is listed first in the files section.
-To change the primary file:
-
-1. Click :material-chevron-down: of the file you want to set as primary.
-        
-2. Click Primary.
-
-      ![Screenshot](img/group-3.png) 
-
-##### Ungroup files #####
-To ungroup files:
-
-1. Click :material-chevron-down: of the JPEG file that is not marked as primary.
-        
-2. Click Ungroup.
-
-      ![Screenshot](img/group-3.png)
-
-Now, both files appear in our views.
-
-![Screenshot](img/group-4.png)

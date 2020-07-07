@@ -41,7 +41,7 @@ docker-compose up -d
 
 Now open http://localhost:2342/ in a Web browser to see the user interface.
 
-The initial password is "photoprism". You can change it in Settings or using the 
+The initial password is "photoprism". You can change it in Settings or using 
 the `photoprism passwd` command in a terminal.
 
 The port and other basic settings can be changed in `docker-compose.yml`.

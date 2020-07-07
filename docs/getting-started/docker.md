@@ -12,11 +12,15 @@ the folder containing your photos:
 docker run -d \
   --name photoprism \
   -p 2342:2342 \
+  -e PHOTOPRISM_ADMIN_PASSWORD=photoprism \
   -v ~/originals:/photoprism/originals \
   photoprism/photoprism
 ```
 
-Now open http://localhost:2342/ in a Web browser to see the user interface. The default password is "photoprism".
+Now open http://localhost:2342/ in a Web browser to see the user interface.
+
+The initial password is "photoprism". You can change it in Settings or using the 
+the `photoprism passwd` command in a terminal.
 
 This is a simplified configuration compared to our [Docker Compose](docker-compose.md) example:
 

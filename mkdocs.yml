@@ -138,7 +138,7 @@ theme:
     code: Roboto Mono
   icon:
     logo: logo
-  favicon: img/favicon.png
+  favicon: img/favicon-16.png
 
 plugins:
   - search

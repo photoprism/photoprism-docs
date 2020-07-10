@@ -54,6 +54,8 @@ nav:
           - Calendar: user-guide/organize/calendar.md
           - Download photos: user-guide/organize/download.md
           - Edit photos: user-guide/organize/edit.md
+      - Backup:
+          - Connect via WebDAV:  user-guide/backup/webdav.md
       - Share:
           - Share album via link: user-guide/share/share.md
       - Settings:

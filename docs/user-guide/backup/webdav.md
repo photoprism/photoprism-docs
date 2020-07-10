@@ -2,7 +2,8 @@
 
 WebDAV clients, like Microsoft’s Windows Explorer or Apple's Finder, can connect directly 
 to PhotoPrism. 
-This mounts the originals folder as a mapped drive and allows you to view, edit, and delete files from your computer or smartphone.
+This mounts the originals folder as a network drive and allows you to open, edit, and delete 
+files from your computer or smartphone as if they were local.
 
 The originals folder URL for public servers is:
 
@@ -48,9 +49,9 @@ http://admin@localhost:2342/originals/
 9. In the **Internet or network address** field, enter the URL as shown above
 10. Click the **Next** button and then **Finish**
 
-The WebDAV folder appears as a mapped drive in Windows Explorer, and you can immediately add, 
+The originals folder appears as a mapped drive in Windows Explorer, and you can immediately add, 
 edit, or delete files and directories using the Windows File Explorer.
 
-If you still have trouble connecting to your WebDAV directory, you may have to 
+If you still have trouble connecting via WebDAV, you may have to 
 [update](https://help.dreamhost.com/hc/en-us/articles/216473357-Accessing-WebDAV-with-Windows) the 
 Basic Authentication Level in the registry.

@@ -1,9 +1,9 @@
 # Scalability, Distributed Computing and Cluster Filesystems 
 
-A major challenge with this project is, that it needs to scale from a Raspberry Pi up to 
-single servers with 64 cores or more. So far, development and testing has been 
-focused on smaller servers and typical home users with less than 200,000 files. We aim to
-get the most of what is there, both in terms of hardware and development resources.
+We aim to get the most of what is there, both in terms of hardware and development resources.
+So far, development and testing has been focused on smaller servers and typical home users with 
+less than 200,000 files. Given enough time and demand, it's within the scope of this project
+to scale from a Raspberry Pi up to AMD Ryzen servers with 64 cores or more. 
 
 If the primary focus was on larger servers or clusters, the current architecture might
 be different in some aspects and had other tradeoffs.

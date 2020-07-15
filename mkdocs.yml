@@ -75,6 +75,7 @@ nav:
       - Pull Requests: developer-guide/pull-requests.md
       - Code Quality: developer-guide/code-quality.md
       - Documentation: developer-guide/documentation.md
+      - Translations: developer-guide/translations.md
     #- FAQ:
     #    - General Questions: faq/index.md
     #- Developer: faq/developer-faq.md

@@ -1,4 +1,4 @@
-# Scalability, Distributed Computing and Cluster Filesystems 
+# Scalability, Distributed Computing and Cloud Storage 
 
 We aim to get the most of what is there, both in terms of hardware and development resources.
 So far, development and testing has been focused on smaller servers and typical home users with 

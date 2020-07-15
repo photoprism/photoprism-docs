@@ -1,14 +1,12 @@
 # Translations
 
 PhotoPrism uses [gettext](https://en.wikipedia.org/wiki/Gettext) for localizing frontend and backend.
-It's around since the 90s and probably the most widely adopted standard for translating user interfaces.
+It's one most widely adopted standards for translating user interfaces.
  
-A human readable, English string like `File not found` is used as message id for 
-finding a matching translation string, and used as default whenever there is no translation for 
-the current locale.
+Human readable messages like `File not found` are used as ids for finding matching translations, 
+and used as defaults whenever there is no translation for the current locale.
 
-Messages may optionally contain placeholders for dynamically inserted numbers or names,
-e.g. `Found %{n} files`.
+They may optionally contain placeholders for numbers or names: `Found %{n} files`
 
 We strongly recommend [Poedit](https://poedit.net/download) for creating and updating translations.
 Download is free for Mac, Windows and Linux.
@@ -16,10 +14,10 @@ It's source code can be obtained on [GitHub](https://github.com/vslavik/poedit).
 
 ## Frontend ##
 
-Localization files can be found in `/frontend/src/locales`. The POT file containing message ids 
+Localizations can be found in `/frontend/src/locales`. The POT file, only containing message ids, 
 is `translations.pot`.
 
-`*.po` files contain localized message strings for each language, e.g. `/frontend/src/locales/de.po` for German.
+`*.po` files contain localized messages for each language, e.g. `de.po` for German.
 You can open, edit and save them with Poedit to update existing translations. 
 
 To add a new translation, open `translations.pot`, click on "Create New Translation" at the bottom, select
@@ -58,14 +56,14 @@ in the Poedit app menu.
     
 ## Backend ##
 
-Technical log messages should be in English to avoid ambiguities and (even slightly) wrong translations. 
-Only asynchronous confirmation messages and certain API responses need translation to provide a 
+Only asynchronous notifications and certain API responses need translation to provide a 
 consistent user experience.
+Technical log messages should be in English to avoid ambiguities and (even slightly) wrong translations. 
 
-Backend translations can be found in `/assets/locales`. The POT file containing message ids is `messages.pot`.
+Localizations are kept in `/assets/locales`. The POT file, only containing message ids, is `messages.pot`.
 
-`default.po` files in sub directories contain localized message strings for each language, e.g. 
-`/assets/locales/de/default.po` for German. You can open, edit and save them with Poedit. Please
+`default.po` files in sub directories contain localized messages for each language, e.g. 
+`de/default.po` for German. You can open, edit and save them with Poedit. Please
 also commit and push binary `*.mo` files, which will be automatically created by Poedit.
 
 To add a new translation, open `messages.pot`, click on "Create New Translation" at the bottom, select

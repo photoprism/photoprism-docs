@@ -16,10 +16,10 @@ It's source code can be obtained on [GitHub](https://github.com/vslavik/poedit).
 
 ## Frontend ##
 
-Files required for localization can be found in `frontend/src/locales`. The POT file, containing only 
-English message ids, is `translations.pot`.
+Localization files can be found in `/frontend/src/locales`. The POT file containing message ids 
+is `translations.pot`.
 
-`*.po` files contain localized message strings for each language, e.g. `de.po` for German.
+`*.po` files contain localized message strings for each language, e.g. `/frontend/src/locales/de.po` for German.
 You can open, edit and save them with Poedit to update existing translations. 
 
 To add a new translation, open `translations.pot`, click on "Create New Translation" at the bottom, select
@@ -45,8 +45,10 @@ To extract new or changed text needing translation from `*.js` and `*.vue` sourc
 ```
 npm run gettext-extract
 ```
-in the `frontend/` directory. This updates the POT file `translations.pot`. Apply changes to existing translations 
-by clicking on "Catalogue" > "Update from POT File..." in the Poedit app menu.
+in `/frontend`. This updates the POT file `translations.pot`.
+
+Apply changes to existing translations by clicking on "Catalogue" > "Update from POT File..." 
+in the Poedit app menu.
 
 !!! note
     A binary `*.mo` (machine object) file will be automatically saved along with every `*.po` file. 
@@ -60,11 +62,10 @@ Technical log messages should be in English to avoid ambiguities and (even sligh
 Only asynchronous confirmation messages and certain API responses need translation to provide a 
 consistent user experience.
 
-Backend translations are located in `assets/locales`. The POT file, containing only 
-English message ids, is `messages.pot`.
+Backend translations can be found in `/assets/locales`. The POT file containing message ids is `messages.pot`.
 
 `default.po` files in sub directories contain localized message strings for each language, e.g. 
-`de/default.po` for German. You can open, edit and save them with Poedit. Please
+`/assets/locales/de/default.po` for German. You can open, edit and save them with Poedit. Please
 also commit and push binary `*.mo` files, which will be automatically created by Poedit.
 
 To add a new translation, open `messages.pot`, click on "Create New Translation" at the bottom, select
@@ -72,8 +73,8 @@ the language, and start translating.
 When done, add a new directory for the language and save your translation as `default.po`,
 just like existing examples.
 
-The POT file `assets/locales/messages.pot` will be automatically updated when 
-running `go generate` in `internal/i18n/` or `make generate` in the main project directory.
+The POT file `/assets/locales/messages.pot` will be automatically updated when 
+running `go generate` in `/internal/i18n` or `make generate` in the main project directory.
 Note that this will only work when you have gettext installed on your system.
 We recommand using our latest development image as described in the developer guide.
 

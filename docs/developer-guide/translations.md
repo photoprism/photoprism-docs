@@ -47,7 +47,7 @@ npm run watch
 
 running in the background to automatically recompile JS and CSS whenever there
 are changes. Lastly, make sure `photoprism` is running and open the Web UI in a supported browser. Changing 
-language in Settings automatically triggers a reload.
+the language in Settings automatically triggers a reload.
 
 To extract new or changed text needing translation from `*.js` and `*.vue` source, run 
 ```

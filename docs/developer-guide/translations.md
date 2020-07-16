@@ -87,7 +87,7 @@ When done, create a new directory (using the locale as name) and save your trans
 The POT file `/assets/locales/messages.pot` will be automatically updated when 
 running `go generate` in `/internal/i18n` or `make generate` in the main project directory.
 Note that this will only work when you have gettext installed on your system.
-We recommand using our latest development image as described in the Developer Guide.
+We recommend using our latest development image as described in the Developer Guide.
 
 Apply changes to existing translations by clicking on "Catalogue" > "Update from POT File..." 
 in the Poedit app menu.

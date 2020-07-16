@@ -82,8 +82,7 @@ also add and commit binary `*.mo` files, which will be automatically created by 
 
 To add a new translation, open `messages.pot`, click on "Create New Translation" at the bottom, select
 the language, and start translating. 
-When done, create a new directory (using the locale as name) and save your translation as `default.po`,
-just like existing examples.
+When done, create a new directory (using the locale as name) and save your translation there as `default.po`.
 
 The POT file `/assets/locales/messages.pot` will be automatically updated when 
 running `go generate` in `/internal/i18n` or `make generate` in the main project directory.

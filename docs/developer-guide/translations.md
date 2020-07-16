@@ -78,7 +78,7 @@ Localizations are kept in `/assets/locales`. The POT file, only containing messa
 [language](https://www.gnu.org/software/gettext/manual/html_node/Usual-Language-Codes.html#Usual-Language-Codes),
 identified by their [two-letter locale](https://www.gnu.org/software/gettext/manual/html_node/Locale-Names.html), 
 like `de/default.po` for German. You can open, edit and save them with Poedit. Please
-also commit and push binary `*.mo` files, which will be automatically created by Poedit.
+also add and commit binary `*.mo` files, which will be automatically created by Poedit.
 
 To add a new translation, open `messages.pot`, click on "Create New Translation" at the bottom, select
 the language, and start translating. 

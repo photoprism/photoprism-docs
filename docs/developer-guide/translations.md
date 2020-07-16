@@ -24,8 +24,9 @@ identified by their [two-letter locale](https://www.gnu.org/software/gettext/man
 like `de.po` for German.
 You can open, edit and save them with Poedit to update existing translations. 
 
-As it doesn't seem necessary for our use case, and to reduce the amount of work, 
-we don't maintain translations for dialects like `de_AT` or `pt_BR`.
+!!! info
+    As it doesn't seem necessary for now, and to reduce the amount of work, 
+    we don't maintain translations for dialects like `de_AT` or `pt_BR`.
 
 To add a new translation, open `translations.pot`, click on "Create New Translation" at the bottom, select
 the language, and start translating. 

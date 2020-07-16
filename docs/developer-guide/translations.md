@@ -49,11 +49,13 @@ running in the background to automatically recompile JS and CSS whenever there
 are changes. Lastly, make sure `photoprism` is running and open the Web UI in a supported browser. Changing 
 the language in Settings automatically triggers a reload.
 
-To extract new or changed text needing translation from `*.js` and `*.vue` source, run 
+To extract new or changed text needing translation from `*.js` and `*.vue` source code, run 
+
 ```
 npm run gettext-extract
 ```
-in `/frontend`. This updates the POT file `translations.pot`.
+
+in the `frontend` directory. This updates the POT file `translations.pot`.
 
 Apply changes to existing translations by clicking on "Catalogue" > "Update from POT File..." 
 in the Poedit app menu.

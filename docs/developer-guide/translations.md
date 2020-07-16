@@ -4,9 +4,10 @@ PhotoPrism uses [gettext](https://en.wikipedia.org/wiki/Gettext) for localizing 
 It's one most widely adopted standards for translating user interfaces.
  
 Human readable messages like `File not found` are used as ids for finding matching translations, 
-and used as defaults whenever there is no translation for the current locale.
+and used as defaults whenever there is no translation available.
 
-They may optionally contain placeholders for numbers or names: `Found %{n} files`
+Messages may optionally contain placeholders, like `Found %{n} files`, for numbers and 
+other variables.
 
 We strongly recommend [Poedit](https://poedit.net/download) for creating and updating translations.
 Download is free for Mac, Windows and Linux.
@@ -17,8 +18,14 @@ It's source code can be obtained on [GitHub](https://github.com/vslavik/poedit).
 Localizations can be found in `/frontend/src/locales`. The POT file, only containing message ids, 
 is `translations.pot`.
 
-`*.po` files contain localized messages for each language, e.g. `de.po` for German.
+`*.po` files contain localized messages for each 
+[language](https://www.gnu.org/software/gettext/manual/html_node/Usual-Language-Codes.html#Usual-Language-Codes),
+identified by their [two-letter locale](https://www.gnu.org/software/gettext/manual/html_node/Locale-Names.html), 
+like `de.po` for German.
 You can open, edit and save them with Poedit to update existing translations. 
+
+As it doesn't seem necessary for our use case, and to reduce the amount of work, 
+we don't maintain translations for dialects like `de_AT` or `pt_BR`.
 
 To add a new translation, open `translations.pot`, click on "Create New Translation" at the bottom, select
 the language, and start translating. 
@@ -62,8 +69,10 @@ Technical log messages should be in English to avoid ambiguities and (even sligh
 
 Localizations are kept in `/assets/locales`. The POT file, only containing message ids, is `messages.pot`.
 
-`default.po` files in sub directories contain localized messages for each language, e.g. 
-`de/default.po` for German. You can open, edit and save them with Poedit. Please
+`default.po` files in sub directories contain localized messages for each 
+[language](https://www.gnu.org/software/gettext/manual/html_node/Usual-Language-Codes.html#Usual-Language-Codes),
+identified by their [two-letter locale](https://www.gnu.org/software/gettext/manual/html_node/Locale-Names.html), 
+like `de/default.po` for German. You can open, edit and save them with Poedit. Please
 also commit and push binary `*.mo` files, which will be automatically created by Poedit.
 
 To add a new translation, open `messages.pot`, click on "Create New Translation" at the bottom, select

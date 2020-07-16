@@ -64,6 +64,7 @@ nav:
           - Account: user-guide/settings/account.md
           - Places: user-guide/settings/places.md
           - Thumbnails: user-guide/settings/thumbnails.md
+      - FAQ: user-guide/user-faq.md
     # - Metadata: user-guide/metadata.md
   - Developer Guide:
       - Introduction: developer-guide/index.md

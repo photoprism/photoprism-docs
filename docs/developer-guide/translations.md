@@ -29,7 +29,9 @@ we don't maintain translations for dialects like `de_AT` or `pt_BR`.
 
 To add a new translation, open `translations.pot`, click on "Create New Translation" at the bottom, select
 the language, and start translating. 
-When done, save the result as `*.po` file using the language locale as name.
+When done, save your translation as `*.po` file using the two-letter language locale as name.
+In addition, the new language needs to be added to the `Languages` function
+in `/frontend/src/options/options.js`.
 
 If you have a working development environment in place:
 
@@ -77,7 +79,7 @@ also commit and push binary `*.mo` files, which will be automatically created by
 
 To add a new translation, open `messages.pot`, click on "Create New Translation" at the bottom, select
 the language, and start translating. 
-When done, add a new directory for the language and save your translation as `default.po`,
+When done, create a new directory (using the locale as name) and save your translation as `default.po`,
 just like existing examples.
 
 The POT file `/assets/locales/messages.pot` will be automatically updated when 

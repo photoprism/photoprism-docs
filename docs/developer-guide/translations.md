@@ -11,7 +11,7 @@ other variables.
 
 We strongly recommend [Poedit](https://poedit.net/download) for creating and updating translations.
 Download is free for Mac, Windows and Linux.
-It's source code can be obtained on [GitHub](https://github.com/vslavik/poedit).
+Its source code can be obtained on [GitHub](https://github.com/vslavik/poedit).
 
 ## Frontend ##
 

@@ -39,7 +39,7 @@ nav:
       #    - Nextcloud: user-guide/nextcloud.md
       - Organize:
           - Browse: user-guide/organize/browse.md
-          - Search Filter: user-guide/organize/search.md
+          #- Search Filter: user-guide/organize/search.md
           - Review: user-guide/organize/review.md
           - Stacks: user-guide/organize/stacks.md
           - Private: user-guide/organize/private.md
@@ -67,7 +67,7 @@ nav:
           - Export files from Google Photos: user-guide/use-cases/google.md
           - Export files from Flickr: user-guide/use-cases/flickr.md
           #- Link directories from remote:
-      - FAQ: user-guide/user-faq.md
+      #- FAQ: user-guide/user-faq.md
     # - Metadata: user-guide/metadata.md
   - Developer Guide:
       - Introduction: developer-guide/index.md

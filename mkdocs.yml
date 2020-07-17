@@ -22,18 +22,16 @@ nav:
       - Introduction: user-guide/index.md
       # - Setting up: user-guide/setup.md
       - Navigate: user-guide/navigate.md
-      - Index:
+      - Add files:
           - Introduction: user-guide/library/import-vs-index.md
-          - Originals: user-guide/library/indexing.md
-          - File Import: user-guide/library/import.md
+          - Index Originals: user-guide/library/indexing.md
+          - Import Files: user-guide/library/import.md
           - Upload via Web UI: user-guide/library/upload.md
           - WebDAV Upload: user-guide/library/webdav.md
           - Original Files: user-guide/library/files.md
         #- Import from camera: user-guide.md
-        #- Import from Flickr: user-guide.md
         #- Import from Facebook: user-guide.md
         #- Import from NAS: user-guide.md
-        #- Import from Google Photos: user-guide.md
         #- Import from Apple Photos: user-guide.md
         #- Import from One Drive: user-guide.md
       # - Sync and Back Up:
@@ -41,6 +39,7 @@ nav:
       #    - Nextcloud: user-guide/nextcloud.md
       - Organize:
           - Browse: user-guide/organize/browse.md
+          - Search Filter: user-guide/organize/search.md
           - Review: user-guide/organize/review.md
           - Stacks: user-guide/organize/stacks.md
           - Private: user-guide/organize/private.md
@@ -64,6 +63,10 @@ nav:
           - Account: user-guide/settings/account.md
           - Places: user-guide/settings/places.md
           - Thumbnails: user-guide/settings/thumbnails.md
+      - Use Cases:
+          - Export files from Google Photos: user-guide/use-cases/google.md
+          - Export files from Flickr: user-guide/use-cases/flickr.md
+          #- Link directories from remote:
       - FAQ: user-guide/user-faq.md
     # - Metadata: user-guide/metadata.md
   - Developer Guide:
@@ -77,11 +80,6 @@ nav:
       - Code Quality: developer-guide/code-quality.md
       - Documentation: developer-guide/documentation.md
       - Translations: developer-guide/translations.md
-    #- FAQ:
-    #    - General Questions: faq/index.md
-    #- Developer: faq/developer-faq.md
-    #- User: faq/user-faq.md
-    #- Enterprise: faq/enterprise-faq.md
 
 # External links.
 extra:

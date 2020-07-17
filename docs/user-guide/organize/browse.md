@@ -93,6 +93,8 @@ In case you set multiple filters only photos are shown in the search result that
     `color:green`
     `type: live`
     
+    You find the full list of filters [here](search.md).
+    
    ![Screenshot](img/color-green.png)
     
 ### Views ###

@@ -38,10 +38,15 @@ nav:
       # - WebDAV Sync
       #    - Nextcloud: user-guide/nextcloud.md
       - Organize:
-          - Browse: user-guide/organize/browse.md
+          - Browse:
+            - Sections: user-guide/organize/browse.md
+            - Views: user-guide/organize/views.md
+            - Search & Filters: user-guide/organize/search.md
           #- Search Filter: user-guide/organize/search.md
           - Review: user-guide/organize/review.md
           - Stacks: user-guide/organize/stacks.md
+          - Panoramas: user-guide/organize/panoramas.md
+          - Scans: user-guide/organize/scans.md
           - Private: user-guide/organize/private.md
           - Archive: user-guide/organize/archive.md
           - Albums: user-guide/organize/albums.md
@@ -80,6 +85,13 @@ nav:
       - Code Quality: developer-guide/code-quality.md
       - Documentation: developer-guide/documentation.md
       - Translations: developer-guide/translations.md
+      - Frontend:
+          - Introduction: developer-guide/frontend/introduction.md
+          - Screenshots: developer-guide/frontend/screenshots.md
+          - UI Components: developer-guide/frontend/components.md
+          - Design: developer-guide/frontend/design.md
+          - REST API: developer-guide/frontend/rest-api.md
+          - Browsers: developer-guide/frontend/browsers.md
 
 # External links.
 extra:

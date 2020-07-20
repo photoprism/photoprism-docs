@@ -92,6 +92,27 @@ nav:
           - Design: developer-guide/frontend/design.md
           - REST API: developer-guide/frontend/rest-api.md
           - Browsers: developer-guide/frontend/browsers.md
+      - Photo Library:
+          - Importing: developer-guide/library/importing.md
+          - Storage: developer-guide/library/storage.md
+          - Converting RAW to JPEG: developer-guide/library/converting.md
+          - High Efficiency Image File Format: developer-guide/library/heif.md
+          - Thumbnails: developer-guide/library/thumbnails.md
+          - Samples: developer-guide/library/samples.md
+      - Metadata:
+          - Geocoding: developer-guide/metadata/geocoding.md
+          - Color Extraction: developer-guide/metadata/colors.md
+          - Image Classification: developer-guide/metadata/classification.md
+          - Face Recognition: developer-guide/metadata/face-recognition.md
+          - XMP: developer-guide/metadata/xmp.md
+          - EXIF: developer-guide/metadata/exif.md
+          - Edit EXIF: developer-guide/metadata/edit-exif.md
+      - Technologies:
+          - Golang: developer-guide/technologies/golang.md
+          - TensorFlow: developer-guide/technologies/tensorflow.md
+          - Docker: developer-guide/technologies/docker.md
+          - Broadway: developer-guide/technologies/broadway.md
+          - External APIs: developer-guide/technologies/external-apis.md
 
 # External links.
 extra:

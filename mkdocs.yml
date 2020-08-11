@@ -8,9 +8,9 @@ nav:
   - Contact: contact.md
   - Getting Started:
       - Introduction: getting-started/index.md
-      - Config Options: getting-started/config-options.md
       - Docker Compose: getting-started/docker-compose.md
       - Docker: getting-started/docker.md
+      - Config Options: getting-started/config-options.md
       - Raspberry Pi: getting-started/raspberry-pi.md
       - Demo Image: getting-started/demo.md
       - Kubernetes: getting-started/kubernetes.md

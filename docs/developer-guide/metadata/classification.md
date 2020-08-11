@@ -79,13 +79,13 @@ Model | TF-Slim File | Checkpoint | Top-1 Accuracy| Top-5 Accuracy |
 `eval_image_classifier.py`). Performance numbers for ResNet V2 models are
 reported on the ImageNet validation set.
 
-(#) More information and details about the NASNet architectures are available at this [README](nets/nasnet/README.md)
+(#) More information and details about the NASNet architectures are available at this [README](https://github.com/tensorflow/models/blob/master/research/slim/nets/nasnet/README.md)
 
 All 16 float MobileNet V1 models reported in the [MobileNet Paper](https://arxiv.org/abs/1704.04861) and all
 16 quantized [TensorFlow Lite](https://www.tensorflow.org/mobile/tflite/) compatible MobileNet V1 models can be found
 [here](https://github.com/tensorflow/models/tree/master/research/slim/nets/mobilenet_v1.md).
 
-(^#) More details on MobileNetV2 models can be found [here](nets/mobilenet/README.md).
+(^#) More details on MobileNetV2 models can be found [here](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet/README.md).
 
 (\*): Results quoted from the [paper](https://arxiv.org/abs/1603.05027).
 

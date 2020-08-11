@@ -12,7 +12,8 @@ the folder containing your photos:
 docker run -d \
   --name photoprism \
   -p 2342:2342 \
-  -e PHOTOPRISM_ADMIN_PASSWORD=photoprism \
+  -e PHOTOPRISM_UPLOAD_NSFW="true" \
+  -e PHOTOPRISM_ADMIN_PASSWORD="photoprism" \
   -v ~/originals:/photoprism/originals \
   photoprism/photoprism
 ```

@@ -1,4 +1,4 @@
-Environment Variable       | Parameter            | Description                                  
+Variable                   | Parameter            | Description                                  
 :------------------------- |:-------------------- |:-------------------------------------------
 `PHOTOPRISM_DEBUG`         | --debug              | run in debug mode (shows additional log messages)
 `PHOTOPRISM_PUBLIC`        | --public, -p         | no authentication required (disables password protection)

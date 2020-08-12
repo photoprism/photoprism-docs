@@ -34,6 +34,7 @@ Variable                   | Parameter            | Description
 `PHOTOPRISM_CONFIG_FILE`   | --config-file FILENAME, -c FILENAME    | load configuration from FILENAME
 `PHOTOPRISM_SETTINGS_PATH` | --settings-path PATH                   | settings PATH
 `PHOTOPRISM_SETTINGS_HIDDEN` | --settings-hidden                    | users can not view or change settings
+`PHOTOPRISM_RAWTHERAPEE_BIN` | --rawtherapee-bin FILENAME           | rawtherapee-cli executable FILENAME (default: "rawtherapee-cli")
 `PHOTOPRISM_DARKTABLE_BIN` | --darktable-bin FILENAME               | darktable-cli executable FILENAME (default: "darktable-cli")
 `PHOTOPRISM_DARKTABLE_PRESETS` | --darktable-presets                | use darktable presets (disables concurrent raw to jpeg conversion)
 `PHOTOPRISM_SIPS_BIN`      | --sips-bin FILENAME                    | sips executable FILENAME (default: "sips")
@@ -54,4 +55,4 @@ Variable                   | Parameter            | Description
 `PHOTOPRISM_THUMB_SIZE`    | --thumb-size PIXELS, -s PIXELS         | pre-rendered thumbnail size limit in PIXELS (720-7680) (default: 2048)
 `PHOTOPRISM_THUMB_SIZE_UNCACHED` |  --thumb-size-uncached PIXELS, -x PIXELS | on-demand rendering size limit in PIXELS (720-7680) (default: 7680)
 `PHOTOPRISM_JPEG_SIZE`     | --jpeg-size PIXELS                     | size limit for converted image files in PIXELS (720-30000) (default: 7680)
-`PHOTOPRISM_JPEG_QUALITY`  | --jpeg-quality value, -q value         | choose 95 for high-quality thumbnails (25-100) (default: 90)
+`PHOTOPRISM_JPEG_QUALITY`  | --jpeg-quality value, -q value         | choose 95 for high-quality thumbnails (25-100) (default: 92)

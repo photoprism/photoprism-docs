@@ -104,7 +104,7 @@ Even deleting and adding is possible. Easy, isn't it?
 ### Configure storage on external NAS / server
 If you wish to store the data on an external server, there are multiple approaches, but the simplest might be to directly mount a NFS share with docker.
 
-You can mount any number of NFS shares as directories. For example, if you want to store the originals in a share, just specify the following to you `docker-compose.yml`:
+You can mount any number of NFS shares as directories. For example, if you want to store the originals in a share, just specify the following in your `docker-compose.yml`:
 
 ```yaml
 volumes:

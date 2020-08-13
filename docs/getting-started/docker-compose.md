@@ -99,3 +99,28 @@ docker-compose exec photoprism photoprism help
 You should now be able to see your photos. You can continue using your favorite tools like Photoshop or Lightroom
 to edit images in the *originals* folder. Run `photoprism index` to reindex them as needed.
 Even deleting and adding is possible. Easy, isn't it?
+
+
+### Configure storage on external NAS / server
+If you wish to store the data on an external server, there are multiple approaches, but the simplest might be to directly mount a NFS share with docker.
+
+You can mount any number of NFS shares as directories. For example, if you want to store the originals in a share, just specify the following to you `docker-compose.yml`:
+
+```yaml
+volumes:
+      # ... (other mounts) ...
+      - "photoprism-originals:/photoprism/originals"     # Map originals folder to its own volume.
+
+photoprism-originals:
+    driver: local
+    driver_opts:
+      type: nfs
+      o: "addr=10.0.20.2,soft,rw" # The IP of your NAS
+      device: ":/mnt/red/photoprism/originals" # Path of the created share on your NAS
+```
+
+!!! info 
+    This specific example was tested with TrueNAS, but any NFS (and even other types) can be mounted by docker. So as long as you have some sort of share that can be mounted by docker, you can configure it here.
+
+!!! tip 
+    Mounting the import directory to a share which is also accessible via other ways (e.g. Samba/CIFS) is especially handy, because you can dump all the data from you SD card / camera directly into that folder and trigger the index in the GUI afterwards. So you can skip the upload dialog in the GUI and it's a little faster.

@@ -48,16 +48,20 @@ In case you set multiple filters only photos are shown in the search result that
 # Search filter #
 PhotoPrism allows you to use multiple filters in its search.
     
-| Filter      | Options |
+| Filter      | Examples |
 | ----------- | ----------- |
-| label      |    All label names e.g. cat    |
+| label      |    cat    |
 | color  | purple, magenta, pink, red, orange, gold, yellow, lime, green, teal, cyan, blue, brown, white, grey, black       |
 | before      |   2009-01-02     |
 | after      |    2006-01-02    |
 | type     |   image, video, raw, live     |
+| name     | "IMG_9831-112*", "IMG_9831-112" |
+| original     | "IMG_9831-112*", "IMG_9831-112" |
+| country     | "de" |
+| state     | "Baden-Württemberg", "Baden*" |
+| title     | "Holiday*", "Holiday / 2012" |
 | lat     |    38.300457    |
 | lng     |   8.931358   |
-| dist     |        |
 | fmin     |    1.8    |
 | fmax     |    4.5  |
 | chroma     |   5     |
@@ -78,13 +82,3 @@ PhotoPrism allows you to use multiple filters in its search.
 | error     |    true, false    |
 | hidden     |    true, false    |
 
-
-<!-- folder
-name 
-original 
- title 
--->
-<!-- | album 
-| category 
-| country 
-| state -->

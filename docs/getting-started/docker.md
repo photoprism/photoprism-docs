@@ -6,7 +6,8 @@ sure, try using [Docker Compose](docker-compose.md) first.
 ### Step 1: Start the server ###
 
 Open a terminal and run this command after replacing `~/originals` with
-the folder containing your photos:
+the folder containing your photos, and `~/storage` with where you
+want to store generated sidecar files and thumbnails:
 
 ```
 docker run -d \
@@ -14,6 +15,7 @@ docker run -d \
   -p 2342:2342 \
   -e PHOTOPRISM_UPLOAD_NSFW="true" \
   -e PHOTOPRISM_ADMIN_PASSWORD="photoprism" \
+  -v ~/storage:/photoprism/storage \
   -v ~/originals:/photoprism/originals \
   photoprism/photoprism
 ```

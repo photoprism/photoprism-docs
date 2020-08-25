@@ -5,19 +5,19 @@ sure, try using [Docker Compose](docker-compose.md) first.
 
 ### Step 1: Start the server ###
 
-Open a terminal and run this command after replacing `~/originals` with
-the folder containing your photos, and `~/storage` with where you
-want to store generated sidecar files and thumbnails:
+Open a terminal and run this command after replacing `~/Pictures` with
+the folder containing your original photo and video files:
 
 ```
 docker run -d \
   --name photoprism \
   --security-opt seccomp=unconfined \
+  --security-opt apparmor=unconfined \
   -p 2342:2342 \
   -e PHOTOPRISM_UPLOAD_NSFW="true" \
   -e PHOTOPRISM_ADMIN_PASSWORD="photoprism" \
-  -v ~/storage:/photoprism/storage \
-  -v ~/originals:/photoprism/originals \
+  -v /photoprism/storage \
+  -v ~/Pictures:/photoprism/originals \
   photoprism/photoprism
 ```
 
@@ -32,8 +32,15 @@ This is a simplified configuration compared to our [Docker Compose](docker-compo
 * User settings, the thumbnail *cache* and *database* files will get stored in `originals/.photoprism`
   unless you configure a separate storage path
 
-The default port 2342 and other configuration values can be changed as needed. Adding the `:ro` flag to a volume 
-mounts it read only. 
+The default port 2342 and other configuration values can be changed as needed,
+see [Config Options](config-options.md). 
+Generated thumbnails, sidecar files, and the index will be stored 
+in `/photoprism/storage`. You may also [mount](https://docs.docker.com/storage/bind-mounts/) 
+this path to a specific folder.
+
+Adding the `:ro` flag to a volume mounts it read only. Multiple folders can be
+indexed by mounting them as subfolders e.g. 
+`-v ~/Example:/photoprism/originals/Example`.
 
 !!! info
     Your image files won't be deleted, modified or moved. We might later update metadata in 

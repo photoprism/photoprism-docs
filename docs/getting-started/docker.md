@@ -6,7 +6,7 @@ sure, try using [Docker Compose](docker-compose.md) first.
 ### Step 1: Start the server ###
 
 Open a terminal and run this command after replacing `~/Pictures` with
-the folder containing your original photo and video files:
+the folder containing your personal photo and video collection:
 
 ```
 docker run -d \

@@ -18,8 +18,8 @@ example to a folder of your choice and change the [configuration](config-options
 wget https://dl.photoprism.org/docker/docker-compose.yml
 ```
 
-By default, the *originals* folder, containing all photo and video files that should be indexed, 
-will be mounted to `~/Pictures` where `~` is a placeholder for your [home directory](https://en.wikipedia.org/wiki/Home_directory).
+The *originals* folder, containing your personal photo and video collection, 
+will be mounted to `~/Pictures` by default, where `~` is a placeholder for your [home directory](https://en.wikipedia.org/wiki/Home_directory).
 Docker will automatically create it if it doesn't exist. 
 
 You may change this to any folder accessible from your computer, including network drives. 
@@ -37,7 +37,7 @@ If you don't need this feature, for example because you manage files manually or
 you can safely remove the volume. Using import is strictly optional and can be disabled as well.
 
 Settings, index, sidecar files, and generated thumbnails will be stored in `~/PhotoPrism/Storage` by default. 
-You may also use an [anonymous volume](https://docs.docker.com/storage/bind-mounts/) instead, just don't remove
+You may use an [anonymous volume](https://docs.docker.com/storage/bind-mounts/) instead, just don't remove
 it completely so that you don't lose your data after restarting or upgrading the container.
 
 To enable the read-only mode, set `PHOTOPRISM_READONLY` to `"true"`. You may additionally want to 

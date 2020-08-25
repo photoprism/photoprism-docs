@@ -12,6 +12,7 @@ want to store generated sidecar files and thumbnails:
 ```
 docker run -d \
   --name photoprism \
+  --security-opt seccomp=unconfined \
   -p 2342:2342 \
   -e PHOTOPRISM_UPLOAD_NSFW="true" \
   -e PHOTOPRISM_ADMIN_PASSWORD="photoprism" \

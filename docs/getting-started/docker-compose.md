@@ -2,7 +2,8 @@
 
 To simplify running PhotoPrism on a server, we strongly recommend using [Docker Compose](https://docs.docker.com/compose/).
 
-Before you start, make sure you have [Docker](https://store.docker.com/search?type=edition&offering=community) installed on your system. It is available for Mac, Linux and Windows.
+Before you start, make sure you have [Docker](https://store.docker.com/search?type=edition&offering=community) installed on your system. 
+It is available for Mac, Linux and Windows.
 Developers can skip this and move on to the [Developer Guide](https://github.com/photoprism/photoprism/wiki).
 
 In addition, we plan to ship the final app as a single binary for users that don't know or like Docker.
@@ -10,22 +11,41 @@ An image for the [Raspberry Pi](raspberry-pi.md) is now available too.
 
 ### Step 1: Configure ###
 
-Download [docker-compose.yml](https://dl.photoprism.org/docker/docker-compose.yml) (right click and *Save Link As...* or use `wget`) to a directory of your choice and edit directory names as needed:
+Download our [docker-compose.yml](https://dl.photoprism.org/docker/docker-compose.yml) (right click and *Save Link As...* or use `wget`) 
+example to a folder of your choice and change the [configuration](config-options.md) as needed:
 
 ```
 wget https://dl.photoprism.org/docker/docker-compose.yml
 ```
 
-By default, a folder named `Pictures` in your home directory will be used to store all images and sidecar files. You don't need to create it.
+By default, the *originals* folder, containing all photo and video files that should be indexed, 
+will be mounted to `~/Pictures` where `~` is a placeholder for your [home directory](https://en.wikipedia.org/wiki/Home_directory).
+Docker will automatically create it if it doesn't exist. 
 
-PhotoPrism will also create `Import` and `Originals` in this folder: You may copy photos to *import* and copy or move them from there to avoid duplicates.
-Files that cannot be imported will stay in the *import* directory, nothing gets lost. Using import is strictly optional and can be disabled in Settings.
+You may change this to any folder accessible from your computer, including network drives. 
+Note that PhotoPrism won't be able to see folders that have not been mounted.
+Multiple folders can be indexed by mounting them as subfolders:
 
-To enable read-only mode, set `PHOTOPRISM_READONLY` to `true`. You may additionally want to 
-mount your *originals* directory with a `:ro` flag so that Docker prevents any write operations.
+```
+volumes:
+  - "~/Family:/photoprism/originals/Family"
+  - "~/Friends:/photoprism/originals/Friends"
+``` 
+
+The *import* folder will be mounted to `~/PhotoPrism/Import` by default, so that you can easily access it.
+If you don't need this feature, for example because you manage files manually or use a different tool, 
+you can safely remove the volume. Using import is strictly optional and can be disabled as well.
+
+Settings, index, sidecar files, and generated thumbnails will be stored in `~/PhotoPrism/Storage` by default. 
+You may also use an [anonymous volume](https://docs.docker.com/storage/bind-mounts/) instead, just don't remove
+it completely so that you don't lose your data after restarting or upgrading the container.
+
+To enable the read-only mode, set `PHOTOPRISM_READONLY` to `"true"`. You may additionally want to 
+mount *originals* with a `:ro` flag so that Docker prevents any write operations. Note that this
+automatically disables any features that require write permissions, like adding files via Web upload.
     
 !!! info
-    Your image files won't be deleted, modified or moved. We might later update metadata in 
+    Your original media files won't be deleted, modified or moved. We might later update metadata in 
     [XMP sidecar files](https://www.adobe.com/products/xmp.html) to
     sync with Adobe Lightroom.
     A JPEG representation might be created for RAW, HEIF, TIFF, PNG, BMP and GIF images in order to render 
@@ -33,7 +53,7 @@ mount your *originals* directory with a `:ro` flag so that Docker prevents any w
 
 ### Step 2: Start the server ###
 
-Open a terminal, go to the directory in which you saved the config file and run this command to start the server:
+Open a terminal, go to the folder in which you saved the config file and run this command to start the server:
 
 ```
 docker-compose up -d
@@ -41,7 +61,7 @@ docker-compose up -d
 
 Now open http://localhost:2342/ in a Web browser to see the user interface.
 
-The initial password is "photoprism". You can change it in Settings or using 
+The initial **password** is "photoprism". You can change it in Settings or using 
 the `photoprism passwd` command in a terminal.
 
 The port and other basic settings can be changed in `docker-compose.yml`.
@@ -104,7 +124,7 @@ Even deleting and adding is possible. Easy, isn't it?
 ### Configure storage on external NAS / server
 If you wish to store the data on an external server, there are multiple approaches, but the simplest might be to directly mount a NFS share with docker.
 
-You can mount any number of NFS shares as directories. For example, if you want to store the originals in a share, just specify the following in your `docker-compose.yml`:
+You can mount any number of NFS shares as folders. For example, if you want to store the originals in a share, just specify the following in your `docker-compose.yml`:
 
 ```yaml
 volumes:
@@ -123,4 +143,4 @@ photoprism-originals:
     This specific example was tested with TrueNAS, but any NFS (and even other types) can be mounted by docker. So as long as you have some sort of share that can be mounted by docker, you can configure it here.
 
 !!! tip 
-    Mounting the import directory to a share which is also accessible via other ways (e.g. Samba/CIFS) is especially handy, because you can dump all the data from you SD card / camera directly into that folder and trigger the index in the GUI afterwards. So you can skip the upload dialog in the GUI and it's a little faster.
+    Mounting the import folder to a share which is also accessible via other ways (e.g. Samba/CIFS) is especially handy, because you can dump all the data from you SD card / camera directly into that folder and trigger the index in the GUI afterwards. So you can skip the upload dialog in the GUI and it's a little faster.

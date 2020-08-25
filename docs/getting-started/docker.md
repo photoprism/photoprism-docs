@@ -23,7 +23,7 @@ docker run -d \
 
 Now open http://localhost:2342/ in a Web browser to see the user interface.
 
-The **initial password** is `photoprism`. You can change it in Settings or using 
+The initial **password** is `photoprism`. You can change it in Settings or using 
 the `photoprism passwd` command in a terminal.
 
 This is a simplified configuration compared to our [Docker Compose](docker-compose.md) example:
@@ -32,7 +32,7 @@ This is a simplified configuration compared to our [Docker Compose](docker-compo
   so that you can't easily access it from your host machine. 
   Uploading files or mounting it via [WebDAV](../user-guide/backup/webdav.md) 
   is still possible.
-* Settings, sidecar files, and generated thumbnails will be stored 
+* Settings, index, sidecar files, and generated thumbnails will be stored 
   in `/photoprism/storage`. 
   You may also [mount](https://docs.docker.com/storage/bind-mounts/)
   this path to a local folder instead of an anonymous volume.
@@ -40,12 +40,15 @@ This is a simplified configuration compared to our [Docker Compose](docker-compo
 The default port 2342 and other configuration values can be changed as needed,
 see [Config Options](config-options.md). 
 
-Adding the `:ro` flag to a volume mounts it read only. Multiple folders can be
-indexed by mounting them as subfolders e.g. 
+To enable the read-only mode, add `-e PHOTOPRISM_READONLY="true"`. You may additionally want to 
+mount *originals* with a `:ro` flag so that Docker prevents any write operations. Note that this
+automatically disables any features that require write permissions, like adding files via Web upload.
+
+Multiple folders can be indexed by mounting them as subfolders e.g. 
 `-v ~/Example:/photoprism/originals/Example`.
 
 !!! info
-    Your image files won't be deleted, modified or moved. We might later update metadata in 
+    Your original media files won't be deleted, modified or moved. We might later update metadata in 
     [XMP sidecar files](https://www.adobe.com/products/xmp.html) to
     sync with Adobe Lightroom.
     A JPEG representation might be created for RAW, HEIF, TIFF, PNG, BMP and GIF images in order to render 

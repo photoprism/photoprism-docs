@@ -41,8 +41,8 @@ The default port 2342 and other configuration values can be changed as needed,
 see [Config Options](config-options.md). 
 
 To enable the read-only mode, add `-e PHOTOPRISM_READONLY="true"`. You may additionally want to 
-mount *originals* with a `:ro` flag so that Docker prevents any write operations. Note that this
-automatically disables any features that require write permissions, like adding files via Web upload.
+mount *originals* with a `:ro` flag so that Docker prevents write operations. Note that this
+automatically disables any features that require write permissions, like importing files via Web upload.
 
 Multiple folders can be indexed by mounting them as subfolders e.g. 
 `-v ~/Example:/photoprism/originals/Example`.

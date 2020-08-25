@@ -43,8 +43,8 @@ You may use an [anonymous volume](https://docs.docker.com/storage/bind-mounts/) 
 it completely so that you don't lose your data after restarting or upgrading the container.
 
 To enable the read-only mode, set `PHOTOPRISM_READONLY` to `"true"`. You may additionally want to 
-mount *originals* with a `:ro` flag so that Docker prevents any write operations. Note that this
-automatically disables any features that require write permissions, like adding files via Web upload.
+mount *originals* with a `:ro` flag so that Docker prevents write operations. Note that this
+automatically disables any features that require write permissions, like importing files via Web upload.
     
 !!! info
     Your original media files won't be deleted, modified or moved. We might later update metadata in 

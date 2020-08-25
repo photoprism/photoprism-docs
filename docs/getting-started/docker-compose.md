@@ -6,13 +6,15 @@ Before you start, make sure you have [Docker](https://store.docker.com/search?ty
 It is available for Mac, Linux and Windows.
 Developers can skip this and move on to the [Developer Guide](https://github.com/photoprism/photoprism/wiki).
 
+An image for the [Raspberry Pi](raspberry-pi.md) is available as well.
+
 In addition, we plan to ship the final app as a single binary for users that don't know or like Docker.
-An image for the [Raspberry Pi](raspberry-pi.md) is now available too.
 
 ### Step 1: Configure ###
 
-Download our [docker-compose.yml](https://dl.photoprism.org/docker/docker-compose.yml) (right click and *Save Link As...* or use `wget`) 
-example to a folder of your choice and change the [configuration](config-options.md) as needed:
+Download our [docker-compose.yml](https://dl.photoprism.org/docker/docker-compose.yml) file
+(right click and *Save Link As...* or use `wget`) to a folder of your choice,
+and change the [configuration](config-options.md) as needed:
 
 ```
 wget https://dl.photoprism.org/docker/docker-compose.yml

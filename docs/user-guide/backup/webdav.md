@@ -20,7 +20,7 @@ It will also change when you update it in Settings. The user name is `admin`.
 !!! info
     You can also connect to the import folder by replacing `originals/` with `import/` in the URL.
 
-For users, who are running PhotoPrism locally on the default port *2342*, the originals folder URL is:
+For users, who are running PhotoPrism locally on the default port *2342*, the *originals* folder URL is:
 
 ```
 http://admin@localhost:2342/originals/

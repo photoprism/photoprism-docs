@@ -11,8 +11,15 @@ Leave your email to get a [release notification](https://goo.gl/forms/KBPVGl9PCs
 
 ## System Requirements ##
 
-We recommend at least 2 cores and 4 GB of memory for running PhotoPrism. Indexing large photo and 
-video collections significantly benefits from fast, local SSD storage and enough memory for caching. 
+We recommend a modern computer with **at least 2 cores** and **4 GB of memory** for running PhotoPrism. Indexing large photo and 
+video collections significantly benefits from **fast, local SSD storage** and enough memory for caching. 
 
 If you're running out of memory, you can reduce the number of workers in the configuration. 
 As a measure of last resort, you can additionally disable image classification using TensorFlow.
+
+!!! attention
+    When installing PhotoPrism on a public server outside your home network, please **always run it
+    behind a secure HTTPS reverse proxy** like [Caddy](https://caddyserver.com/), 
+    [Traefik](https://containo.us/traefik/), or [Nginx](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/).
+    Your files and passwords will be transmitted in clear text otherwise, and can be intercepted 
+    by anyone in between including your provider, hackers, and governments.

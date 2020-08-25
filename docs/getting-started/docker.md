@@ -23,20 +23,24 @@ docker run -d \
 
 Now open http://localhost:2342/ in a Web browser to see the user interface.
 
-The initial password is "photoprism". You can change it in Settings or using 
+The **initial password** is `photoprism`. You can change it in Settings or using 
 the `photoprism passwd` command in a terminal.
 
 This is a simplified configuration compared to our [Docker Compose](docker-compose.md) example:
 
-* The *import* folder is not mounted so that importing is not possible
-* User settings, the thumbnail *cache* and *database* files will get stored in `originals/.photoprism`
-  unless you configure a separate storage path
+* The `/photoprism/import` folder is not [mounted](https://docs.docker.com/storage/bind-mounts/) 
+  so that you can't easily access it from your host machine. 
+  Uploading files or mounting it via [WebDAV](../user-guide/backup/webdav.md) 
+  is still possible.
+* Settings, sidecar files, and generated thumbnails will be stored 
+  in `/photoprism/storage`. 
+  You may also [mount](https://docs.docker.com/storage/bind-mounts/)
+  this path to a local folder instead of an anonymous volume.
 
 The default port 2342 and other configuration values can be changed as needed,
 see [Config Options](config-options.md). 
 Generated thumbnails, sidecar files, and the index will be stored 
-in `/photoprism/storage`. You may also [mount](https://docs.docker.com/storage/bind-mounts/) 
-this path to a specific folder.
+in `/photoprism/storage`.
 
 Adding the `:ro` flag to a volume mounts it read only. Multiple folders can be
 indexed by mounting them as subfolders e.g. 

@@ -39,8 +39,6 @@ This is a simplified configuration compared to our [Docker Compose](docker-compo
 
 The default port 2342 and other configuration values can be changed as needed,
 see [Config Options](config-options.md). 
-Generated thumbnails, sidecar files, and the index will be stored 
-in `/photoprism/storage`.
 
 Adding the `:ro` flag to a volume mounts it read only. Multiple folders can be
 indexed by mounting them as subfolders e.g. 

@@ -20,11 +20,10 @@ and change the [configuration](config-options.md) as needed:
 wget https://dl.photoprism.org/docker/docker-compose.yml
 ```
 
-The *originals* folder, containing your personal photo and video collection, 
-will be mounted to `~/Pictures` by default, where `~` is a placeholder for your [home directory](https://en.wikipedia.org/wiki/Home_directory).
-Docker will automatically create it if it doesn't exist. 
+Your personal photo and video collection will be mounted from `~/Pictures` by default,
+where `~` is a placeholder for your [home directory](https://en.wikipedia.org/wiki/Home_directory).
 
-You may change this to any folder accessible from your computer, including network drives. 
+You may change this to any folder accessible from your computer, including network drives.
 Note that PhotoPrism won't be able to see folders that have not been mounted.
 Multiple folders can be indexed by mounting them as subfolders:
 
@@ -34,7 +33,7 @@ volumes:
   - "~/Friends:/photoprism/originals/Friends"
 ``` 
 
-The *import* folder will be mounted to `~/PhotoPrism/Import` by default, so that you can easily access it.
+The *import* folder points to `~/PhotoPrism/Import` by default, so that you can easily access it.
 If you don't need this feature, for example because you manage files manually or use a different tool, 
 you can safely remove the volume. Using import is strictly optional and can be disabled as well.
 

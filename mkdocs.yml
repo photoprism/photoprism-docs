@@ -73,7 +73,7 @@ nav:
           - Export files from Google Photos: user-guide/use-cases/google.md
           - Export files from Flickr: user-guide/use-cases/flickr.md
           #- Link directories from remote:
-      #- FAQ: user-guide/user-faq.md
+      - FAQ: user-guide/faq.md
     # - Metadata: user-guide/metadata.md
   - Developer Guide:
       - Introduction: developer-guide/index.md

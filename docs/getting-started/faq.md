@@ -45,3 +45,14 @@ it includes all the details including root and rootless modes, user mapping and 
 
 There is currently no [LXC](https://linuxcontainers.org/) build for
 PhotoPrism, see [issue #147](https://github.com/photoprism/photoprism/issues/147) for details.
+
+### Any plans to add support for Active Directory, LDAP or other centralized account management options? ###
+
+There is no Active Directory, LDAP, or Single Sign-On support yet as we didn't consider it essential for a first release. 
+It might be added later, maybe as a premium feature for our sponsors and contributors.
+
+!!! note
+    Development and testing efforts are focused on smaller servers and typical home users. Developing any functionality,
+    that seems primarily useful for deployment in Enterprise environments, 
+    or that only benefits few private users with special needs, diverts resources away from features that benefit everyone.
+    If you're using PhotoPrism for your business, you're welcome to [contact us](../contact.md) to get a custom solution.

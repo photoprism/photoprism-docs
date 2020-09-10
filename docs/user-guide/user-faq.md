@@ -68,7 +68,7 @@ A sidecar is a file which sits along**side** your photos with the same name but 
 
 There are 2 types of sidecar files used by Photoprism. 
 
- * **json** - (Variable: `PHOTOPRISM_SIDECAR_JSON` Parameter:`--sidecar-json, -j`) - This is automatically created from the EXIF data of your photos by `exiftool`. This makes the data easily available for other scripts/apps.
- * **yaml** - (Variable: `PHOTOPRISM_SIDECAR_YAML` Parameter:`--sidecar-yaml, -y`) - This is used to back up any changes made in Photoprism to the metadata of your photos. This preserves the promise that we will not make any changes to originals while also providing any changes you have made in a plaintext format. Useful for and backup/restore and database rebuilds.
+ * **json** - (Variable: `PHOTOPRISM_SIDECAR_JSON` Parameter: `--sidecar-json, -j`) - This is automatically created from the EXIF data of your photos by `exiftool`. This makes the data easily available for other scripts/apps.
+ * **yaml** - (Variable: `PHOTOPRISM_SIDECAR_YAML` Parameter: `--sidecar-yaml, -y`) - This is used to back up any changes made in Photoprism to the metadata of your photos. This preserves the promise that we will not make any changes to originals while also providing any changes you have made in a plaintext format. Useful for and backup/restore and database rebuilds.
 
 ## What is the advantage of PhotoPrism being OpenSource for me as a user? ##

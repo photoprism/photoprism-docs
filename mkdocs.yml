@@ -16,7 +16,7 @@ nav:
       - Kubernetes: getting-started/kubernetes.md
       - Scalability: getting-started/scalability.md
       - Proxies:
-          - getting-started/proxies/advanced-nginx-proxy-setup.md
+          - Nginx: getting-started/proxies/advanced-nginx-proxy-setup.md
       - Updates: getting-started/updates.md
       - Caching: getting-started/caching.md
       - Support: getting-started/support.md

@@ -1,10 +1,13 @@
-# Advanced nginx proxy setup
-Using a proxy has multiple benefits, just to name a few here:
+# Advanced Nginx Proxy Setup
+
+*Contributed by [@RAYs3T](https://github.com/RAYs3T)*
+
+Using a reverse proxy in front of PhotoPrism has various benefits:
 
  * Make use of HTTP/2
  * Add encryption
  * Perform traffic optimization
- * Enhance security (nginx might block something the `go webserver` doesn't know about)
+ * Enhance security (nginx may block dangerous request patterns the embedded Go-based HTTP server does not know about)
 
 **If you consider exposing your PhotoPrism instance to the evil internet, you should at least secure it with a proper HTTPS encryption.**
 

@@ -1,6 +1,6 @@
 As PhotoPrism is a complete photo management solution, it is not only possible to index existing images, but also to add / upload new files to a photo collection or delete existing photos to save storage.
 
-There has been a debate on whether PhotoPrism should be responsible for file naming, see [Support Photos In Place on Hard Drive #41](https://github.com/photoprism/photoprism/issues/41) and [[Concerns]]. As soon as you want the software to create new files or merge photo libraries from different devices, there is no other way. Therefore we're going to implement a read-only mode for those who want to use it as a gallery with reduced functionality, see [Read-only mode #56](https://github.com/photoprism/photoprism/issues/56).
+There has been a debate on whether PhotoPrism should be responsible for file naming, see [Support Photos In Place on Hard Drive #41](https://github.com/photoprism/photoprism/issues/41). As soon as you want the software to create new files or merge photo libraries from different devices, there is no other way. Therefore we're going to implement a read-only mode for those who want to use it as a gallery with reduced functionality, see [Read-only mode #56](https://github.com/photoprism/photoprism/issues/56).
 
 ## Post Processing / Keyboard Shortcuts ##
 

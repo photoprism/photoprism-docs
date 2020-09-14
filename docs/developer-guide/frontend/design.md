@@ -31,6 +31,5 @@ It's easiest to use the context menu for this:
 
 ## Links ##
 - [Screenshots](screenshots.md) - development of our user interface in time lapse ⏱
-- [[Open Source]] - why this has to be free software
 - [The 7 pillars of design](http://thesign.it/Codemotion/Berlin2018.pdf) - slides by Raffaella Isidori (Codemotion Berlin 2018)
 - [A fork + fixes for Google's Material Design icons](https://www.npmjs.com/package/material-design-icons-iconfont)

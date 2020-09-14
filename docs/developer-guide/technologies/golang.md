@@ -1,4 +1,4 @@
-We have chosen Go because of its simplicity and performance. On top, it enables us to build a single binary for [[distribution]].
+We have chosen Go because of its simplicity and performance. On top, it enables us to build a single binary for distribution.
 
 ## Learning ##
 - https://golang.org/doc/code.html - how to write Go code

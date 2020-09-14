@@ -2,7 +2,7 @@
 
 ### Can I use trees for organizing my pictures and albums? ###
 
-Except in *Library > Originals* and for object classification, PhotoPrism does not
+Except in *Library > Originals* and for object classification in *Labels*, PhotoPrism does not
 support hierarchically organized content for a number of reasons:
 
 First, there are many tools (including Windows Explorer and Mac OS Finder) that already browse folders in such a way.
@@ -93,10 +93,10 @@ like geodata. Pictures with matching keywords automatically show up in related *
 
 Although related, keywords and labels serve different purposes:
 
-* Labels may be nested and are primarily used for classification, like "cat", "dog", or "boat". 
+* **Labels** may be nested and are primarily used for classification, like "animal", "cat", or "boat". 
   Duplicates and ambiguities should be avoided.
-* Keywords are primarily used for searching. They may include similar terms and translations,
-  like "kitten", "cat", and "cats".
+* **Keywords** are primarily used for searching. They may include similar terms and translations,
+  like "kitten", "kitty", and "cat".
 
 ### What are sidecar files and where do I find them? ###
 
@@ -108,9 +108,11 @@ typically using the same name and a different extension like
  * `IMG_0101.yaml`
 
 New sidecar files will be created in the *storage* folder by default so that the *originals* folder 
-does not need to be modified, and can be mounted read-only.
-PhotoPrism will also search the *originals* folder for existing sidecars, and use them for indexing 
-even if `PHOTOPRISM_SIDECAR_JSON` and `PHOTOPRISM_SIDECAR_YAML` are set to `"false"`.
+can be mounted read-only.
+
+!!! info
+    PhotoPrism will always look out for existing sidecar files and use them for indexing, 
+    even if `PHOTOPRISM_SIDECAR_JSON` and `PHOTOPRISM_SIDECAR_YAML` are set to `"false"`.
 
 Three types of metadata sidecar files are supported currently:
 
@@ -118,12 +120,16 @@ Three types of metadata sidecar files are supported currently:
 
 If enabled via `PHOTOPRISM_SIDECAR_JSON` or `--sidecar-json`, [Exiftool](https://exiftool.org/) is used to 
 automatically create a JSON sidecar for each media file. 
-This way, embedded XMP and video metadata can be indexed as well. 
+**This way, embedded XMP and video metadata can be indexed as well.**
 Native metadata extraction is limited to common Exif headers.
 Note that this causes moderate overhead when indexing for the first time.
 
-JSON files may also be useful for debugging as they contain the complete metadata and 
-can be opened using a regular text editor, and many other applications.
+JSON files may also be useful for debugging as they contain the complete metadata, 
+and can be processed using common development tools and text editors.
+
+!!! tip
+    PhotoPrism can also read JSON files exported by Google Photos. Support for additional
+    schemas may be added over time.
 
 #### YAML ####
 
@@ -140,7 +146,7 @@ Manual changes won't be synced back to the original index though as this might o
 XMP (Extensible Metadata Platform) is an XML-based metadata container format 
 [invented by Adobe](https://www.adobe.com/products/xmp.html). 
 It offers much more fields (as part of embedded models like Dublin Core) than Exif. 
-That also makes it difficult, if not impossible, to provide complete support.
+That also makes it difficult - if not impossible - to provide complete support.
 Reading Title, Copyright, Artist, and Description from XMP sidecar files is implemented as a proof-of-concept, 
 [contributions welcome](https://docs.photoprism.orig/developer-guide/metadata/xmp/).
-Indexing embedded XMP is only possible using JSON sidecar files and Exiftool.
+Indexing embedded XMP is only possible via Exiftool, see above.

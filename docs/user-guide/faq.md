@@ -39,6 +39,13 @@ extract and index metadata like location and duration from video files.
 
 You're welcome to open an issue if you experience issues with a specific file format.
 
+### Some files seem hidden, where are they? ###
+
+If the [quality filter](organize/review.md) is enabled, you might find them in *Photos > Review*. Otherwise, their
+format may not be supported, they may be corrupted, or they may be stacked with other files if their name, 
+exact date & location, or unique image ID indicate they belong to the same photo. You may then unstack 
+them if this happened by mistake e.g. because of bad metadata.
+
 ### Why do some pictures have an odd date like 01/01/1980? ###
 
 This may happen in case there was an issue with your camera's settings when the photo was taken.
@@ -47,13 +54,6 @@ without modifying your originals.
 
 To fix the date directly in your image or video files, please use other applications
 like Photoshop, or Exiftool, and re-index your library.
-
-### Some files seem hidden, where are they? ###
-
-If the [quality filter](organize/review.md) is enabled, you might find them in *Photos > Review*. Otherwise, their
-format may not be supported, they may be corrupted, or they may be stacked with other files if their name, 
-exact date & location, or unique image ID indicate they belong to the same photo. You may then unstack 
-them if this happened by mistake e.g. because of bad metadata.
 
 ### How can I permanently delete files? ###
 
@@ -65,27 +65,6 @@ see [Use trashcan to physically delete files after confirmation #167](https://gi
 
 When deleting files manually, or using other applications, make sure to re-index your library 
 (or run `photoprism purge` in a terminal).
-
-### Which folder will be indexed? ###
-
-This depends on your [configuration](../getting-started/config-options.md). While sub-folders can be selected for
-indexing in the UI, changing the base folder requires a restart.
-
-Your photo and video collection will be mounted from `~/Pictures` by default when 
-using our example [docker-compose.yml](../getting-started/docker-compose.md) file, 
-where `~` is a placeholder for your home directory.
-
-You may change this to any folder accessible from your computer, including network drives.
-Note that PhotoPrism won't be able to see folders that have not been mounted unless you compile & install it locally
-without Docker (developers only).
-
-Multiple folders can be indexed by mounting them as sub-folders of `/photoprism/originals`:
-
-```
-volumes:
-  - "~/Family:/photoprism/originals/Family"
-  - "~/Friends:/photoprism/originals/Friends"
-``` 
 
 ### What's the difference between keywords and labels? ###
 

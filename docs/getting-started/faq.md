@@ -1,5 +1,26 @@
 # Frequently Asked Questions
 
+### Which folder will be indexed? ###
+
+This depends on your [configuration](config-options.md). While sub-folders can be selected for
+indexing in the UI, changing the base folder requires a restart.
+
+Your photo and video collection will be mounted from `~/Pictures` by default when 
+using our example [docker-compose.yml](docker-compose.md) file, 
+where `~` is a placeholder for your home directory.
+
+You may change this to any folder accessible from your computer, including network drives.
+Note that PhotoPrism won't be able to see folders that have not been mounted unless you compile & install it locally
+without Docker (developers only).
+
+Multiple folders can be indexed by mounting them as sub-folders of `/photoprism/originals`:
+
+```
+volumes:
+  - "~/Family:/photoprism/originals/Family"
+  - "~/Friends:/photoprism/originals/Friends"
+``` 
+
 ### I'm having issues understanding the difference between the import and originals folders? ###
 
 Import is a temporary folder from which you can move or copy files to originals in a structured way that avoids duplicates.

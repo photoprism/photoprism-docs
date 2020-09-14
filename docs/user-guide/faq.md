@@ -18,7 +18,7 @@ This is different in Enterprise asset management, where trees are required to ma
 responsibilities & [permissions](https://github.com/photoprism/photoprism/issues/455#issuecomment-675859270). 
 We might do a special release for professional users later. 
 
-While even deeply nested folders can be indexed without issues,
+While you have complete freedom with organizing your files and folders,
 we don't think trees should be an integral part of our user interface.
 Most users won't be able to sort their memories in a strictly hierarchical way 
 and prefer to explore them in multiple dimensions instead.

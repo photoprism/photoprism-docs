@@ -1,13 +1,5 @@
 # Frequently Asked Questions
 
-### I could not find a documentation of config parameters? ###
-
-You may run `photoprism help` in a terminal to see all options and commands. 
-We also maintain a complete list of [config options](config-options.md) in these docs.
-
-Our Docker Compose [examples](https://dl.photoprism.org/docker/docker-compose.yml) are continuously maintained and inline documentation 
-has been added to simplify installation.
-
 ### What are sidecar files and where do I find them? ###
 
 A sidecar is a file which sits **alongside** your main photo or video files, 
@@ -63,15 +55,21 @@ Indexing embedded XMP is only possible via Exiftool, see above.
 
 ### Which folder will be indexed? ###
 
-This depends on your [configuration](config-options.md). While sub-folders can be selected for
-indexing in the UI, changing the base folder requires a restart.
+This depends on your [runtime environment](docker-compose.md) and [configuration](config-options.md).
+While sub-folders can be selected for indexing in the UI, changing the *originals* base folder 
+requires a restart for security reasons.
 
-Your photo and video collection will be mounted from `~/Pictures` by default when 
-using our example [docker-compose.yml](docker-compose.md) file, 
-where `~` is a placeholder for your home directory.
+If you skip configuration and don't use one of our Docker images, PhotoPrism will try to find 
+a photo library by going through a list of common 
+[folder names](https://github.com/photoprism/photoprism/blob/develop/pkg/fs/dirs.go) 
+like `/photoprism/originals`, `Pictures`, and `~/Photos`. It will also search for other resources
+like external applications, classification models, and frontend assets.
+
+Your library will be mounted from `~/Pictures` by default when using our 
+example [docker-compose.yml](docker-compose.md) file, where `~` is a placeholder for your home directory. 
 
 You may change this to any folder accessible from your computer, including network drives.
-Note that PhotoPrism won't be able to see folders that have not been mounted unless you compile & install it locally
+Note that PhotoPrism won't be able to see folders that have not been mounted unless you install it locally
 without Docker (developers only).
 
 Multiple folders can be indexed by mounting them as sub-folders of `/photoprism/originals`:
@@ -89,7 +87,7 @@ While indexing, a JPEG sidecar file may automatically be created for RAW, HEIF, 
 and GIF files. It is required for classification and resampling.
 
 Support for specific RAW formats depends on the runtime environment and configuration. PhotoPrism may use 
-Darktable and RawTherapee for RAW to JPEG conversion. 
+[Darktable](https://www.darktable.org/) and [RawTherapee](https://rawtherapee.com/) for RAW to JPEG conversion. 
 On Mac OS, [Sips](https://ss64.com/osx/sips.html) can be used as well.
 
 Only MPEG-4 AVC video files are fully supported for now. Transcoding of other codecs is planned for a later release.
@@ -110,6 +108,14 @@ adding files as you don't need to re-index *originals*.
 There are users who don't want us to modify their original files and folders in any way, so we've added
 a configuration option for this use case. It will disable uploads, import and future features
 that might rename, update or delete files in the *originals* folder.
+
+### I could not find a documentation of config parameters? ###
+
+You may run `photoprism help` in a terminal to see all options and commands. 
+We also maintain a complete list of [config options](config-options.md) in these docs.
+
+Our Docker Compose [examples](https://dl.photoprism.org/docker/docker-compose.yml) are continuously maintained and inline documentation 
+has been added to simplify installation.
 
 ### I'm using an operating system without Docker support. How to install and use PhotoPrism without Docker? ###
 

@@ -42,7 +42,7 @@ While indexing, a JPEG sidecar file may automatically be created for RAW, HEIF, 
 and GIF files. It is required for classification and resampling.
 
 Support for specific RAW formats depends on the runtime environment and configuration. PhotoPrism may use 
-Darktable and RawTherapee for RAW to JPEG conversion. 
+[Darktable](https://www.darktable.org/) and [RawTherapee](https://rawtherapee.com/) for RAW to JPEG conversion. 
 On Mac OS, [Sips](https://ss64.com/osx/sips.html) can be used as well.
 
 Only MPEG-4 AVC video files are fully supported for now. Transcoding of other codecs is planned for a later release.

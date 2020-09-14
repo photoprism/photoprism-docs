@@ -12,18 +12,13 @@
 + [internal/form](https://godoc.org/github.com/photoprism/photoprism/internal/form) - input validation (based on [gin](https://github.com/gin-gonic/gin#model-binding-and-validation))
 + [internal/entity](https://godoc.org/github.com/photoprism/photoprism/internal/entity) - models (based on [GORM](http://gorm.io/))
 
-## Wiki ##
+## [docs.photoprism.org](../index.md) ##
 
-In addition to this Developer Guide, we also use a [Wiki](https://github.com/photoprism/photoprism/wiki).
-Pages are currently migrated and updated.
+[github.com/photoprism/photoprism-docs](https://github.com/photoprism/photoprism-docs) contains the source 
+our public docs in [Markdown](https://www.mkdocs.org/user-guide/writing-your-docs/#writing-with-markdown).
 
-Our Wiki is open to editing by anyone, feel free to improve it without asking for permission as long as you don't rename or remove existing pages.
-
-## User Guide on [docs.photoprism.org](https://docs.photoprism.org/en/latest/) ##
-
-[github.com/photoprism/photoprism-docs](https://github.com/photoprism/photoprism-docs) contains the source files of our User Guide in [Markdown](https://www.mkdocs.org/user-guide/writing-your-docs/#writing-with-markdown).
-
-They are meant to be parsed with the [Mkdocs](https://www.mkdocs.org/) documentation builder to build the HTML documentation on [docs.photoprism.org](https://docs.photoprism.org/).
+They are meant to be parsed with the [Mkdocs](https://www.mkdocs.org/) documentation builder to build the 
+HTML documentation on [docs.photoprism.org](https://docs.photoprism.org/).
 
 ### Contributing changes ###
 

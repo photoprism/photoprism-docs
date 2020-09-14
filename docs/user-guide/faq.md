@@ -148,5 +148,5 @@ XMP (Extensible Metadata Platform) is an XML-based metadata container format
 It offers much more fields (as part of embedded models like Dublin Core) than Exif. 
 That also makes it difficult - if not impossible - to provide complete support.
 Reading Title, Copyright, Artist, and Description from XMP sidecar files is implemented as a proof-of-concept, 
-[contributions welcome](https://docs.photoprism.orig/developer-guide/metadata/xmp/).
+[contributions welcome](https://docs.photoprism.org/developer-guide/metadata/xmp/).
 Indexing embedded XMP is only possible via Exiftool, see above.

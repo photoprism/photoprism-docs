@@ -9,8 +9,8 @@ First, there are many tools (including Windows Explorer and Mac OS Finder) that 
 
 A common UX challenge is dealing with namespaces.
 For example, the album "Berlin" may exist 5 times in different parts of a tree.
-Simple input fields or dropdowns become useless in this case and must be replaced 
-with a complex tree browser that shows the complete context to avoid ambiguities.
+To avoid ambiguities, simple input fields need to be replaced with a tree browser that 
+shows the complete context.
 This is especially difficult on mobile screens.
 
 Personal albums can typically be browsed by time, with optional filters for more specific results.
@@ -18,7 +18,7 @@ This is different in Enterprise asset management, where trees are required to ma
 responsibilities & [permissions](https://github.com/photoprism/photoprism/issues/455#issuecomment-675859270). 
 We might do a special release for professional users later. 
 
-While you have complete freedom with organizing your files and folders,
+While you have complete freedom with organizing your original files and folders,
 we don't think trees should be an integral part of our user interface.
 Most users won't be able to sort their memories in a strictly hierarchical way 
 and prefer to explore them in multiple dimensions instead.

@@ -76,7 +76,7 @@ where `~` is a placeholder for your home directory.
 
 You may change this to any folder accessible from your computer, including network drives.
 Note that PhotoPrism won't be able to see folders that have not been mounted unless you compile & install it locally
-without Docker (not recommended).
+without Docker (developers only).
 
 Multiple folders can be indexed by mounting them as sub-folders of `/photoprism/originals`:
 
@@ -89,7 +89,7 @@ volumes:
 ### What's the difference between keywords and labels? ###
 
 Keywords contain a list of search terms extracted from metadata, file names, and other sources 
-like geo data. Pictures with matching keywords automatically show up in related *Labels*. 
+like geodata. Pictures with matching keywords automatically show up in related *Labels*. 
 
 Although related, keywords and labels serve different purposes:
 

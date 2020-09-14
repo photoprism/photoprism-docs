@@ -144,6 +144,6 @@ It might be added later, maybe as a premium feature for our sponsors and contrib
 
 !!! info
     Our development and testing efforts are focused on small servers and home users. Adding functionality
-    that is primarily useful for deployment in business environments, or that only benefits few private 
+    that is primarily useful for business environments, or that only benefits few private 
     users with special needs, diverts resources away from features that benefit everyone.
     Professional users are welcome to [reach out](../contact.md) to us for a custom solution.

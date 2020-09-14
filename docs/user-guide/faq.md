@@ -1,24 +1,25 @@
 # Frequently Asked Questions
 
-### Can I use trees to organize my pictures and albums? ###
+### Can I use trees for organizing my pictures and albums? ###
 
-Except in *Library > Originals*, we don't support nested content in our user interface (UI) for a number of reasons:
+Except in *Library > Originals* and for object classification, PhotoPrism does not
+support hierarchically organized content for a number of reasons:
 
 First, there are many tools (including Windows Explorer and Mac OS Finder) that already browse folders in such a way.
 
-A common UX challenge is to deal with namespaces.
+A common UX challenge is dealing with namespaces.
 For example, the album "Berlin" may exist 5 times in different parts of a tree.
 Simple input fields or dropdowns become useless in this case and must be replaced 
 with a complex tree browser that shows the complete context to avoid ambiguities.
 This is especially difficult on mobile screens.
 
 Personal albums can typically be browsed by time, with optional filters for more specific results.
-This is typically different in Enterprise asset management, where trees are needed to manage 
+This is different in Enterprise asset management, where trees are required to manage 
 responsibilities & [permissions](https://github.com/photoprism/photoprism/issues/455#issuecomment-675859270). 
-We might do a special release for professional users and Enterprise customers later. 
+We might do a special release for professional users later. 
 
 While even deeply nested folders can be indexed without issues,
-we don't think trees should be at the heart of our UI.
+we don't think trees should be an integral part of our user interface.
 Most users won't be able to sort their memories in a strictly hierarchical way 
 and prefer to explore them in multiple dimensions instead.
 

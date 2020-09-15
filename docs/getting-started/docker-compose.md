@@ -23,7 +23,7 @@ Your personal photo and video collection will be mounted from `~/Pictures` by de
 where `~` is a placeholder for your [home directory](https://en.wikipedia.org/wiki/Home_directory).
 We'll refer to this as the *originals* folder.
 
-You may change this to any folder accessible from your computer, including network drives.
+You may mount any folder accessible from your computer, including network drives.
 Note that PhotoPrism won't be able to see folders that have not been mounted.
 Multiple folders can be indexed by mounting them as sub-folders of `/photoprism/originals`:
 

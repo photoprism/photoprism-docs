@@ -68,7 +68,7 @@ like external applications, classification models, and frontend assets.
 Your library will be mounted from `~/Pictures` by default when using our 
 example [docker-compose.yml](docker-compose.md) file, where `~` is a placeholder for your home directory. 
 
-You may change this to any folder accessible from your computer, including network drives.
+You may mount any folder accessible from your computer, including network drives.
 Note that PhotoPrism won't be able to see folders that have not been mounted unless you install it locally
 without Docker (developers only).
 

@@ -1,9 +1,11 @@
 # Indexing your originals #
 
-If you're using PhotoPrism for the first time, make sure your photo and video 
-collection is properly configured as *originals* folder.
-See installation instructions in [Getting Started](../../getting-started/index.md) for details.
-When starting with an empty folder, you need to add or upload files first.
+!!! info
+    If you're using PhotoPrism for the first time, make sure your photo and video 
+    collection is properly configured as *originals* folder.
+    See installation instructions in [Getting Started](../../getting-started/index.md) for details.
+    When starting with an empty folder, you need to add or upload files first.
+
 
 1. Go to *Library* using the main navigation
 
@@ -13,7 +15,9 @@ When starting with an empty folder, you need to add or upload files first.
 
 4. Press *Start* to start indexing
 
+
 ![Screenshot](img/index.png)
+
 
 !!! tip
     You may use [WebDAV](webdav.md) for adding files to the *originals* folder.

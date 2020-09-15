@@ -85,7 +85,7 @@ environment variable names and a short description.
 
 ### Step 3: Index your library ###
 
-Go to Library in our Web UI to start indexing or importing. Alternatively, you can run this command 
+Go to *Library* in our Web UI to start indexing or importing. Alternatively, you can run this command 
 in a terminal to index all files in your *originals* folder:
 
 ```
@@ -97,7 +97,8 @@ and GIF files. It is required for classification and resampling. By default, it 
 in the *storage* folder, so that your originals can be mounted read-only.
 You may configure PhotoPrism to store it in the same folder, next to the original, instead.
 
-Photos will become visible one after another. You can watch the indexer working in the terminal, or the logs tab in Library.
+Pictures will become visible one after another. You can watch the indexer working in the terminal, 
+or the *Logs* tab in *Library*.
 
 !!! tip
     If you're running out of memory while indexing, it often helps to limit the 

@@ -1,29 +1,26 @@
-# Upload files #
+# Uploading files to your library #
 
-### Upload files to the `import` folder ###
-
-1. Click :material-cloud-upload: in the upper right corner.
+1. Click :material-cloud-upload: in the upper right corner
 
     ![Screenshot](img/upload-3.png)
 
-**Or**
+**or**
 
-1. On the main navigation click Library and then Import.
+1. Go to *Library* using the main navigation, and open the *Import* tab
 
-2. Click Upload.
+2. Click *Upload*
 
     ![Screenshot](img/upload-1.png)
     
 3. In case you want to upload add the files directly to an album select one.
 
-4. Click Upload.
+4. Click *Upload*
 
     ![Screenshot](img/upload-to-album.png)
 
-5. Select files.
+5. Select files
 
-6. Confirm.
-
+6. Click *Upload* to start uploading and importing the selected files
 
 Once your files finished uploading you can start [importing](import-vs-index.md).
 

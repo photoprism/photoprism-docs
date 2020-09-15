@@ -23,7 +23,7 @@ docker run -d \
 
 Now open http://localhost:2342/ in a Web browser to see the user interface.
 
-The initial **password** is `photoprism`. You can change it in Settings or using 
+The **initial password** is `photoprism`. You can change it in Settings or using 
 the `photoprism passwd` command in a terminal.
 
 This is a simplified configuration compared to our [Docker Compose](docker-compose.md) example:
@@ -40,20 +40,19 @@ This is a simplified configuration compared to our [Docker Compose](docker-compo
 The default port 2342 and other configuration values can be changed as needed,
 see [Config Options](config-options.md). 
 
-To enable the read-only mode, add `-e PHOTOPRISM_READONLY="true"`. You may additionally want to 
-mount *originals* with a `:ro` flag so that Docker prevents write operations. Note that this
-automatically disables any features that require write permissions, like importing files via Web upload.
+Multiple folders can be indexed by mounting them as sub-folders of `/photoprism/originals`:
 
-Multiple folders can be indexed by mounting them as subfolders e.g. 
-`-v ~/Example:/photoprism/originals/Example`.
+```
+-v ~/Example:/photoprism/originals/Example
+``` 
 
-!!! info
-    Your original media files won't be deleted, modified or moved. We might later update metadata in 
-    [XMP sidecar files](https://www.adobe.com/products/xmp.html) to
-    sync with Adobe Lightroom.
-    A JPEG representation might be created for RAW, HEIF, TIFF, PNG, BMP and GIF images in order to render 
-    thumbnails and display them in a browser. You can enable read-only mode to prevent this completely, but you will also lose the functionality.
-
+!!! tip
+    Your original media files won't be deleted, modified, or moved. 
+    If you still want to enable the read-only mode, you can do so by adding `-e PHOTOPRISM_READONLY="true"`.
+    It will disable all features that require write permissions, like importing files via Web upload.
+    You may additionally want to mount the *originals* folder with `:ro` flag so that Docker 
+    blocks write operations.
+        
 ### Step 2: Index your library ###
 
 Go to Library in our Web UI to start indexing or importing.
@@ -63,15 +62,24 @@ Alternatively, you can run this command in a terminal to index all files in your
 docker exec -ti photoprism photoprism index
 ```
 
-The index command will automatically create JPEGs from other file types when needed to display them in a browser.
-They will be stored in the same folder next to the original using the best possible quality.
-You can disable this in Settings. Converting is currently not possible in read-only mode.
+While indexing, a JPEG sidecar file may automatically be created for RAW, HEIF, TIFF, PNG, BMP, 
+and GIF files. It is required for classification and resampling. By default, it will be created
+in the *storage* folder, so that your library can be mounted read-only.
+You may configure PhotoPrism to store it in the same folder, next to the original, instead.
 
 Photos will become visible one after another. You can watch the indexer working in the terminal, or the logs tab in Library.
 
 !!! tip
-    `photoprism index --all` will re-index all originals, including already indexed and unchanged files. This can be
-    useful after updates that add new features.
+    If you're running out of memory while indexing, it often helps to limit the 
+    [number of workers](https://docs.photoprism.org/getting-started/config-options/) by setting
+    an explicit value for `PHOTOPRISM_WORKERS`.
+    Make sure the server has [swap](https://opensource.com/article/18/9/swap-space-linux-systems) 
+    configured so that indexing doesn't stop when there are memory usage spikes.
+    As a measure of last resort, you can additionally disable image classification using TensorFlow.
+
+!!! tip
+    `photoprism index --all` will re-index all originals, including already indexed and unchanged files. This may be
+    necessary after upgrading, especially to new major versions.
 
 ### Step 3: When you're done... ###
 

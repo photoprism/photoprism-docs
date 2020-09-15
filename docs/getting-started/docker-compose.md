@@ -25,7 +25,7 @@ where `~` is a placeholder for your [home directory](https://en.wikipedia.org/wi
 
 You may change this to any folder accessible from your computer, including network drives.
 Note that PhotoPrism won't be able to see folders that have not been mounted.
-Multiple folders can be indexed by mounting them as subfolders:
+Multiple folders can be indexed by mounting them as sub-folders of `/photoprism/originals`:
 
 ```
 volumes:
@@ -37,20 +37,16 @@ The *import* folder points to `~/PhotoPrism/Import` by default, so that you can 
 If you don't need this feature, for example because you manage files manually or use a different tool, 
 you can safely remove the volume. Using import is strictly optional and can be disabled as well.
 
-Settings, index, sidecar files, and generated thumbnails will be stored in `~/PhotoPrism/Storage` by default. 
+Settings, index, sidecar files, and thumbnails will be stored in `~/PhotoPrism/Storage` by default. 
 You may use an [anonymous volume](https://docs.docker.com/storage/bind-mounts/) instead, just don't remove
-it completely so that you don't lose your data after restarting or upgrading the container.
+it completely so that you don't lose your index and albums after restarting or upgrading the container.
 
-To enable the read-only mode, set `PHOTOPRISM_READONLY` to `"true"`. You may additionally want to 
-mount *originals* with a `:ro` flag so that Docker prevents write operations. Note that this
-automatically disables any features that require write permissions, like importing files via Web upload.
-    
-!!! info
-    Your original media files won't be deleted, modified or moved. We might later update metadata in 
-    [XMP sidecar files](https://www.adobe.com/products/xmp.html) to
-    sync with Adobe Lightroom.
-    A JPEG representation might be created for RAW, HEIF, TIFF, PNG, BMP and GIF images in order to render 
-    thumbnails. You can enable read-only mode to prevent this completely, but you will also lose the functionality.
+!!! tip
+    Your original media files won't be deleted, modified, or moved. 
+    If you still want to enable the read-only mode, you can do so by setting `PHOTOPRISM_READONLY` to `"true"`.
+    It will disable all features that require write permissions, like importing files via Web upload.
+    You may additionally want to mount the *originals* folder with `:ro` flag so that Docker 
+    blocks write operations.
 
 ### Step 2: Start the server ###
 
@@ -62,7 +58,7 @@ docker-compose up -d
 
 Now open http://localhost:2342/ in a Web browser to see the user interface.
 
-The initial **password** is "photoprism". You can change it in Settings or using 
+The **initial password** is "photoprism". You can change it in Settings or using 
 the `photoprism passwd` command in a terminal.
 
 The port and other basic settings can be changed in `docker-compose.yml`.
@@ -95,16 +91,25 @@ in a terminal to index all files in your *originals* folder:
 docker-compose exec photoprism photoprism index
 ```
 
-The index command will automatically create JPEGs from other file types when needed to display them in a browser.
-They will be stored in the same folder next to the original using the best possible quality.
-You can disable this in Settings. Converting is currently not possible in read-only mode.
+While indexing, a JPEG sidecar file may automatically be created for RAW, HEIF, TIFF, PNG, BMP, 
+and GIF files. It is required for classification and resampling. By default, it will be created
+in the *storage* folder, so that your library can be mounted read-only.
+You may configure PhotoPrism to store it in the same folder, next to the original, instead.
 
 Photos will become visible one after another. You can watch the indexer working in the terminal, or the logs tab in Library.
 
 !!! tip
-    `photoprism index --all` will re-index all originals, including already indexed and unchanged files. This can be
-    useful after updates that add new features.
+    If you're running out of memory while indexing, it often helps to limit the 
+    [number of workers](https://docs.photoprism.org/getting-started/config-options/) by setting
+    an explicit value for `PHOTOPRISM_WORKERS` in `docker-compose.yml`.
+    Make sure the server has [swap](https://opensource.com/article/18/9/swap-space-linux-systems) 
+    configured so that indexing doesn't stop when there are memory usage spikes.
+    As a measure of last resort, you can additionally disable image classification using TensorFlow.
 
+!!! tip
+    `photoprism index --all` will re-index all originals, including already indexed and unchanged files. This may be
+    necessary after upgrading, especially to new major versions.
+    
 To import files, run `photoprism import` after putting them in the *import* folder:
 
 ```
@@ -120,28 +125,3 @@ docker-compose exec photoprism photoprism help
 You should now be able to see your photos. You can continue using your favorite tools like Photoshop or Lightroom
 to edit images in the *originals* folder. Run `photoprism index` to reindex them as needed.
 Even deleting and adding is possible. Easy, isn't it?
-
-
-### Configure storage on external NAS / server
-If you wish to store the data on an external server, there are multiple approaches, but the simplest might be to directly mount a NFS share with docker.
-
-You can mount any number of NFS shares as folders. For example, if you want to store the originals in a share, just specify the following in your `docker-compose.yml`:
-
-```yaml
-volumes:
-      # ... (other mounts) ...
-      - "photoprism-originals:/photoprism/originals"     # Map originals folder to its own volume.
-
-photoprism-originals:
-    driver: local
-    driver_opts:
-      type: nfs
-      o: "addr=10.0.20.2,soft,rw" # The IP of your NAS
-      device: ":/mnt/red/photoprism/originals" # Path of the created share on your NAS
-```
-
-!!! info 
-    This specific example was tested with TrueNAS, but any NFS (and even other types) can be mounted by docker. So as long as you have some sort of share that can be mounted by docker, you can configure it here.
-
-!!! tip 
-    Mounting the import folder to a share which is also accessible via other ways (e.g. Samba/CIFS) is especially handy, because you can dump all the data from you SD card / camera directly into that folder and trigger the index in the GUI afterwards. So you can skip the upload dialog in the GUI and it's a little faster.

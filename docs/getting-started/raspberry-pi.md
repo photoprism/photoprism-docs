@@ -22,6 +22,14 @@ You need to boot your Raspberry Pi 3 / 4 with the parameter `arm_64bit=1` in `co
 to be able to use this image.
 A fast SD card and 4 GB of RAM are recommended, in addition you might want to add swap for large photo collections.
 
+!!! tip
+    If you're running out of memory while indexing, it often helps to limit the 
+    [number of workers](https://docs.photoprism.org/getting-started/config-options/) by setting
+    an explicit value for `PHOTOPRISM_WORKERS` in `docker-compose.yml`.
+    Make sure the server has [swap](https://opensource.com/article/18/9/swap-space-linux-systems) 
+    configured so that indexing doesn't stop when there are memory usage spikes.
+    As a measure of last resort, you can additionally disable image classification using TensorFlow.
+
 Make sure your docker compose configuration contains the following setting:
 
 ```

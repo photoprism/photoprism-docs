@@ -64,7 +64,7 @@ docker exec -ti photoprism photoprism index
 
 While indexing, a JPEG sidecar file may automatically be created for RAW, HEIF, TIFF, PNG, BMP, 
 and GIF files. It is required for classification and resampling. By default, it will be created
-in the *storage* folder, so that your library can be mounted read-only.
+in the *storage* folder, so that your originals can be mounted read-only.
 You may configure PhotoPrism to store it in the same folder, next to the original, instead.
 
 Photos will become visible one after another. You can watch the indexer working in the terminal, or the logs tab in Library.

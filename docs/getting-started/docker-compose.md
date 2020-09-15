@@ -7,8 +7,7 @@ It is available for Mac, Linux and Windows.
 Developers can skip this and move on to the [Developer Guide](../developer-guide/index.md).
 
 An image for the [Raspberry Pi](raspberry-pi.md) is available as well.
-
-In addition, we plan to ship the final app as a single binary for users that don't know or like Docker.
+In addition, we plan to provide a single binary.
 
 ### Step 1: Configure ###
 

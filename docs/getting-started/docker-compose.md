@@ -106,7 +106,7 @@ or the *Logs* tab in *Library*.
     an explicit value for `PHOTOPRISM_WORKERS` in `docker-compose.yml`.
     Make sure the server has [swap](https://opensource.com/article/18/9/swap-space-linux-systems) 
     configured so that indexing doesn't stop when there are memory usage spikes.
-    As a measure of last resort, you can additionally disable image classification using TensorFlow.
+    As a measure of last resort, you may additionally disable image classification using TensorFlow.
 
 !!! tip
     `photoprism index --all` will re-index all originals, including already indexed and unchanged files. This may be

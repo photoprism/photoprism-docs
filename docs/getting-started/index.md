@@ -14,10 +14,10 @@ Leave your email to get a [release notification](https://goo.gl/forms/KBPVGl9PCs
 We recommend a modern computer with **at least 2 cores** and **4 GB of memory** for running PhotoPrism. Indexing large photo and 
 video collections significantly benefits from **fast, local SSD storage** and enough memory for caching. 
 
-If you're running out of memory, it often helps to limit the [number of workers](https://docs.photoprism.org/getting-started/config-options/).
-Make sure the server has [swap](https://opensource.com/article/18/9/swap-space-linux-systems) 
-configured so that indexing doesn't stop when there are memory usage spikes.
-As a measure of last resort, you can additionally disable image classification using TensorFlow.
+If you're running out of memory, limit the [number of workers](https://docs.photoprism.org/getting-started/config-options/)
+and make sure the server has [swap](https://opensource.com/article/18/9/swap-space-linux-systems) 
+configured, so that indexing doesn't stop when there are memory usage spikes.
+As a measure of last resort, you may additionally disable image classification using TensorFlow.
 
 !!! attention
     When installing PhotoPrism on a public server outside your home network, please **always run it

@@ -25,7 +25,7 @@ nav:
       - Introduction: user-guide/index.md
       # - Setting up: user-guide/setup.md
       - Navigate: user-guide/navigate.md
-      - Add files:
+      - Index:
           - Introduction: user-guide/library/import-vs-index.md
           - Index Originals: user-guide/library/indexing.md
           - Import Files: user-guide/library/import.md

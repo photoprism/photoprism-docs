@@ -34,8 +34,9 @@ volumes:
 ``` 
 
 The *import* folder points to `~/PhotoPrism/Import` by default, so that you can easily access it.
-If you don't need this feature, for example because you manage files manually or use a different tool, 
-you can safely remove the volume. Using import is strictly optional and can be disabled as well.
+If you don't need this feature, e.g. because you manage all files manually or 
+use a different tool for importing, you can safely remove the volume. Using import is strictly 
+optional.
 
 Settings, index, sidecar files, and thumbnails will be stored in `~/PhotoPrism/Storage` by default. 
 You may use an [anonymous volume](https://docs.docker.com/storage/bind-mounts/) instead, just don't remove

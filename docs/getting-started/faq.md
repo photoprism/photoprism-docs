@@ -117,30 +117,34 @@ We also maintain a complete list of [config options](config-options.md) in these
 Our Docker Compose [examples](https://dl.photoprism.org/docker/docker-compose.yml) are continuously maintained and inline documentation 
 has been added to simplify installation.
 
-### How can I configure PhotoPrism to use network storage? ###
+### How can I mount NFS shares with Docker? ###
 
-If you wish to store the data on an external server, there are multiple approaches, but the simplest might be to directly mount a NFS share with docker.
+There are multiple ways of using network storage. 
+One of the easiest might be to directly mount NFS shares with Docker.
 
-You can mount any number of NFS shares as folders. For example, if you want to store the originals in a share, just specify the following in your `docker-compose.yml`:
+You can mount any number of NFS shares as folders. Follow this `docker-compose.yml` example 
+if you want to mount the *originals* folder as a share:
 
 ```yaml
 volumes:
-      # ... (other mounts) ...
-      - "photoprism-originals:/photoprism/originals"     # Map originals folder to its own volume.
+  # Map originals folder to its own volume.
+  - "photoprism-originals:/photoprism/originals"     
 
 photoprism-originals:
-    driver: local
-    driver_opts:
-      type: nfs
-      o: "addr=10.0.20.2,soft,rw" # The IP of your NAS
-      device: ":/mnt/red/photoprism/originals" # Path of the created share on your NAS
+  driver: local
+  driver_opts:
+    type: nfs
+    # The IP of your NAS
+    o: "addr=10.0.20.2,soft,rw" 
+    # Path of the created share on your NAS
+    device: ":/mnt/red/photoprism/originals" 
 ```
 
 !!! info 
     This was tested with TrueNAS and NFS, but other (network) file system may be mounted with Docker as well.
 
 !!! tip 
-    Mounting the import folder to a share which is also accessible via other ways (e.g. Samba/CIFS) 
+    Mounting the *import* folder to a share which is also accessible via other ways (e.g. Samba/CIFS) 
     is especially handy, as you can dump all data from a SD card / camera directly into that folder 
     and trigger the index in the GUI afterwards. So you can skip the upload dialog in the 
     GUI and it's a little faster.

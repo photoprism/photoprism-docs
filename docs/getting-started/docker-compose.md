@@ -123,6 +123,8 @@ For a list of commands and config options run
 docker-compose exec photoprism photoprism help
 ```
 
-You should now be able to see your photos. You can continue using your favorite tools like Photoshop or Lightroom
-to edit images in the *originals* folder. Run `photoprism index` to reindex them as needed.
-Even deleting and adding is possible. Easy, isn't it?
+Your photos and videos can now be browsed, organized in albums, and shared with others.
+You may continue using your favorite tools, like Photoshop or Lightroom,
+to edit, add and delete files in the *originals* folder. 
+Run `photoprism index`, or go to *Library* and click *Start*, to update the index as needed.
+Easy, isn't it?

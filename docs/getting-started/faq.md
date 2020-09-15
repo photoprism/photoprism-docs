@@ -126,22 +126,26 @@ You can mount any number of NFS shares as folders. Follow this `docker-compose.y
 if you want to mount the *originals* folder as a share:
 
 ```yaml
-volumes:
-  # Map originals folder to its own volume.
-  - "photoprism-originals:/photoprism/originals"     
+services:
+  photoprism:
+    # ...
+    volumes:
+      # Map originals folder to NFS:
+      - "photoprism-originals:/photoprism/originals"     
 
-photoprism-originals:
-  driver: local
-  driver_opts:
-    type: nfs
-    # The IP of your NAS
-    o: "addr=10.0.20.2,soft,rw" 
-    # Path of the created share on your NAS
-    device: ":/mnt/red/photoprism/originals" 
+volumes:
+  photoprism-originals:
+    driver: local
+    driver_opts:
+      type: nfs
+      # The IP of your NAS:
+      o: "addr=1.2.3.4,soft,rw" 
+      # Share path on your NAS:
+      device: ":/mnt/photos" 
 ```
 
 !!! info 
-    This was tested with TrueNAS and NFS, but other (network) file system may be mounted with Docker as well.
+    This was tested with TrueNAS and NFS, but other (network) file systems may be mounted with Docker as well.
 
 !!! tip 
     Mounting the *import* folder to a share which is also accessible via other ways (e.g. Samba/CIFS) 

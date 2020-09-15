@@ -30,7 +30,7 @@ like geodata. Pictures with matching keywords automatically show up in related *
 
 Although related, keywords and labels serve different purposes:
 
-* **Labels** may be nested and are primarily used for classification, like "animal", "cat", or "boat". 
+* **Labels** may have parent categories and are primarily used for classification, like "animal", "cat", or "boat". 
   Duplicates and ambiguities should be avoided.
 * **Keywords** are primarily used for searching. They may include similar terms and translations,
   like "kitten", "kitty", and "cat".

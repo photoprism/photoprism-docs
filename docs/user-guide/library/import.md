@@ -20,7 +20,7 @@
     Importing is not possible in [read-only mode](../settings/library.md) as it requires
     write permissions for the *originals* folder.
     
-#### When should I select "Move Files"? ####
+#### When should "Move Files" be selected? ####
 
 If selected, files that have been moved to the *originals* folder, or that already exist,
 will automatically be deleted from the *import* folder.

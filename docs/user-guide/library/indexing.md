@@ -9,7 +9,9 @@ When starting with an empty folder, you need to add or upload files first.
 
 2. Select a sub-folder or keep the default to index all files
 
-3. Press button to start indexing
+3. Select *Complete Rescan* to re-index all originals, including already indexed and unchanged files
+
+4. Press *Start* to start indexing
 
 ![Screenshot](img/index.png)
 
@@ -21,7 +23,7 @@ When starting with an empty folder, you need to add or upload files first.
     A NSFW detector can be enabled to automatically flag pictures as private which 
     may have offensive content. Note that this is only somewhat reliable. 
 
-#### When should I select "Complete Rescan"? ####
+#### When should "Complete Rescan" be selected? ####
 
 If selected, all files in the *originals* folder will be re-indexed, including already indexed and unchanged files. 
 This may be necessary after upgrading, especially to new major versions.

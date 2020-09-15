@@ -118,7 +118,7 @@ To import files, run `photoprism import` after putting them in the *import* fold
 docker-compose exec photoprism photoprism import
 ```
 
-For a list of commands and config options run
+For a list of commands and config options run:
 
 ```
 docker-compose exec photoprism photoprism help

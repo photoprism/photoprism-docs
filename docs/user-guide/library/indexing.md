@@ -16,7 +16,7 @@ When starting with an empty folder, you need to add or upload files first.
 ![Screenshot](img/index.png)
 
 !!! tip
-    You may also use [WebDAV](webdav.md) for adding files to the *originals* folder.
+    You may use [WebDAV](webdav.md) for adding files to the *originals* folder.
     This is especially helpful if PhotoPrism is running on a remote server.
 
 !!! tip 

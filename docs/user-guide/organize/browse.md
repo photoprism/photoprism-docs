@@ -5,8 +5,8 @@ They enable you to re-discover forgotten photos, find specific photos you are lo
 ### Sections ###
 Using the main navigation you can visit the different sections of your photo library:
 
-#### Photos ####
-:material-image: shows all photos that are not in review or archived or private.
+#### Photos :material-image: ####
+Shows all photos that are not in review or archived or private.
 
 !!! hint
     In case the review, private or archive functions are turned off - Photos displays those photos as well.

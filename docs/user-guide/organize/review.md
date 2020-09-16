@@ -1,7 +1,7 @@
 # Review non-photographic and low-quality images #
 When adding new photos a quality score from 1 to 5 is created automatically.
-Photos with a quality score lower than 3 do not appear in Photos until you approve them (unless review was disabled
-in [Settings](../settings/ui.md))
+Photos with a quality score lower than 3 do not appear in *Photos* until you approve them (unless the quality filter was disabled
+in [*Settings*](../settings/ui.md))
 
 The quality score depends on the following:
 
@@ -11,19 +11,19 @@ The quality score depends on the following:
 * Photo is favorite, was edited or approved
 
 !!! info
-    In case you do not need the review mechanism you can turn it off in the [settings](../settings/ui.md)
+    In case you do not need the review mechanism you can turn it off in [Settings](../settings/ui.md)
 
 ### How to approve photos ###
 
-1. Open the photo's  [edit dialogue](edit.md).
-2. Click approve.
+1. Open the photo's  [*edit dialogue*](edit.md)
+2. Click *approve*
 
     ![Screenshot](img/review.png)
     
 **Or:**
 
-1. In the review section make sure you are in card view.
-2. Click approve.
+1. In the *review section* make sure you are in *card view*
+2. Click *approve*
 
     ![Screenshot](img/review-2.png)
 

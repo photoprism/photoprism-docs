@@ -1,5 +1,5 @@
 # Places #
-Places displays all photos with GPS information on a world map.
+*Places* displays all photos with GPS information on a world map.
 
 You can zoom either by using :material-plus: or :material-minus: or by clicking on a photo or photo collector (the blue circles with a photo count inside).
 

@@ -12,7 +12,7 @@
 
     ![Screenshot](img/upload-1.png)
     
-3. In case you want to upload add the files directly to an album select one.
+3. In case you want to upload the files directly to an album select one
 
 4. Click *Upload*
 
@@ -21,6 +21,4 @@
 5. Select files
 
 6. Click *Upload* to start uploading and importing the selected files
-
-Once your files finished uploading you can start [importing](import-vs-index.md).
 

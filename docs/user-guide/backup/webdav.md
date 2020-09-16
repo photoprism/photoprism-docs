@@ -2,7 +2,7 @@
 
 WebDAV clients, like Microsoft’s Windows Explorer or Apple's Finder, can connect directly 
 to PhotoPrism. 
-This mounts the originals folder as a network drive and allows you to open, edit, and delete 
+This mounts the *originals folder* as a network drive and allows you to open, edit, and delete 
 files from your computer or smartphone as if they were local.
 
 The originals folder URL for public servers is:
@@ -15,7 +15,7 @@ Please replace *example.com* with your actual domain.
 The slash at the end is important and cannot be omitted. 
 
 When connecting, you'll have to authenticate using your regular password.
-It will also change when you update it in Settings. The user name is `admin`.
+It will also change when you update it in *Settings*. The user name is `admin`.
 
 !!! info
     You can also connect to the import folder by replacing `originals/` with `import/` in the URL.

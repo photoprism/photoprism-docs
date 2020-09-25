@@ -63,6 +63,7 @@ nav:
           - Edit photos: user-guide/organize/edit.md
       - Backup:
           - Connect via WebDAV:  user-guide/backup/webdav.md
+          - Nextcloud Sync:  user-guide/backup/nextcloud.md
       - Share:
           - Share album via link: user-guide/share/share.md
       - Settings:

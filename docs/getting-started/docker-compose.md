@@ -16,6 +16,10 @@ Download [docker-compose.yml](https://dl.photoprism.org/docker/docker-compose.ym
 wget https://dl.photoprism.org/docker/docker-compose.yml
 ```
 
+!!! warning
+	Choose a good password for `PHOTOPRISM_ADMIN_PASSWORD` if your instance should be accessible from the internet.
+	
+
 By default, a folder named `Pictures` in your home directory will be used to store all images and sidecar files. You don't need to create it.
 
 PhotoPrism will also create `Import` and `Originals` in this folder: You may copy photos to *import* and copy or move them from there to avoid duplicates.
@@ -41,7 +45,8 @@ docker-compose up -d
 
 Now open http://localhost:2342/ in a Web browser to see the user interface.
 
-The initial password is "photoprism". You can change it in Settings or using 
+The initial password is what you have set in `PHOTOPRISM_ADMIN_PASSWORD` in the `docker-compose.yml`. 
+You can change it in Settings or using 
 the `photoprism passwd` command in a terminal.
 
 The port and other basic settings can be changed in `docker-compose.yml`.

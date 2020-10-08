@@ -78,6 +78,6 @@ To open file details click :material-chevron-down:.
 
 ![Screenshot](img/group-2.png)
 
-In case you have [*grouped files*](stacks.md) you can change the primary file or ungroup files using the respective buttons.
+In case you have [*grouped files*](stacks.md) you can change the primary file, delete not primary files or ungroup files using the respective buttons.
 
 

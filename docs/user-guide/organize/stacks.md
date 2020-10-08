@@ -53,3 +53,16 @@ To change the primary file:
 Now, both files appear in our views.
 
 ![Screenshot](img/group-4.png)
+
+### Permanently delete not primary files ###
+1. Open the photos [*edit dialogue*](edit.md)
+
+2. Open *Files* tab
+
+3. Click :material-chevron-down: of the JPEG file that is not marked as primary
+        
+4. Click *delete*
+
+5. Confirm
+
+      ![Screenshot](img/group-5.png)

@@ -19,8 +19,9 @@ and change the [configuration](config-options.md) as needed:
 wget https://dl.photoprism.org/docker/docker-compose.yml
 ```
 
-!!! warning
-	Choose a good password for `PHOTOPRISM_ADMIN_PASSWORD` if your instance should be accessible from the internet.
+!!! attention
+    Please change `PHOTOPRISM_ADMIN_PASSWORD` so that PhotoPrism starts with a secure **initial password**.
+    Never use `photoprism` as password if you're running it on a public server.
 	
 Your personal photo and video collection will be mounted from `~/Pictures` by default,
 where `~` is a placeholder for your [home directory](https://en.wikipedia.org/wiki/Home_directory).
@@ -60,10 +61,9 @@ Open a terminal, go to the folder in which you saved the config file and run thi
 docker-compose up -d
 ```
 
-Now open http://localhost:2342/ in a Web browser to see the user interface.
-
-The initial password is what you have set in `PHOTOPRISM_ADMIN_PASSWORD` in the `docker-compose.yml`. 
-You can change it in Settings or using the `photoprism passwd` command in a terminal.
+Now open http://localhost:2342/ in a Web browser to see the user interface
+and sign in using the password set in `PHOTOPRISM_ADMIN_PASSWORD`.
+You may change it in Settings, or using the `photoprism passwd` command in a terminal.
 
 The port and other basic settings can be changed in `docker-compose.yml`.
 Remember to stop and re-create the container whenever configuration values changed:

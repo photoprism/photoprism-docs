@@ -15,16 +15,19 @@ docker run -d \
   --security-opt apparmor=unconfined \
   -p 2342:2342 \
   -e PHOTOPRISM_UPLOAD_NSFW="true" \
-  -e PHOTOPRISM_ADMIN_PASSWORD="photoprism" \
+  -e PHOTOPRISM_ADMIN_PASSWORD="please-change" \
   -v /photoprism/storage \
   -v ~/Pictures:/photoprism/originals \
   photoprism/photoprism
 ```
 
-Now open http://localhost:2342/ in a Web browser to see the user interface.
+!!! attention
+    Please change `PHOTOPRISM_ADMIN_PASSWORD` so that PhotoPrism starts with a secure **initial password**.
+    Never use `photoprism` as password if you're running it on a public server.
 
-The **initial password** is `photoprism`. You can change it in Settings or using 
-the `photoprism passwd` command in a terminal.
+Now open http://localhost:2342/ in a Web browser to see the user interface
+and sign in using the password set in `PHOTOPRISM_ADMIN_PASSWORD`.
+You may change it in Settings, or using the `photoprism passwd` command in a terminal.
 
 This is a simplified configuration compared to our [Docker Compose](docker-compose.md) example:
 

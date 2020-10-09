@@ -20,9 +20,9 @@ Especially polls are amazing for product development.
 
 Issues labeled [help wanted](https://github.com/photoprism/photoprism/labels/help%20wanted) /
 [easy](https://github.com/photoprism/photoprism/labels/easy) can be good (first) contributions.
-Our [Developer Guide](https://github.com/photoprism/photoprism/wiki) contains all information necessary to get you started.
+The Developer Guide contains all information necessary to get you started.
 
-Our [step-by-step guide](https://github.com/photoprism/photoprism/wiki/Pull-Requests) explains how to submit new features, bugfixes and documentation.
+Our [step-by-step guide](pull-requests.md) explains how to submit new features, bugfixes and documentation.
 
 ## Feature requests
 
@@ -32,12 +32,6 @@ if no similar [idea](https://github.com/photoprism/photoprism/labels/idea)
 or [todo](https://github.com/photoprism/photoprism/labels/todo) already exists.
 Please don't use the issue tracker to ask general questions.
 
-We also maintain a couple of pages in our [Developer Guide](https://github.com/photoprism/photoprism/wiki)
-for collecting interesting ideas and feedback, e.g.
-[Related](https://github.com/photoprism/photoprism/wiki/Related),
-[Love](https://github.com/photoprism/photoprism/wiki/Love),
-[Concerns](https://github.com/photoprism/photoprism/wiki/Concerns) and
-[Research](https://github.com/photoprism/photoprism/wiki/Research).
 
 ## Reporting bugs
 

@@ -41,9 +41,8 @@ Variable                   | Parameter            | Description
 `PHOTOPRISM_HEIFCONVERT_BIN` | --heifconvert-bin FILENAME           | heif-convert executable FILENAME (default: "heif-convert")
 `PHOTOPRISM_FFMPEG_BIN`    | --ffmpeg-bin FILENAME                  | ffmpeg executable FILENAME (default: "ffmpeg")
 `PHOTOPRISM_EXIFTOOL_BIN`  | --exiftool-bin FILENAME                | exiftool executable FILENAME (default: "exiftool")
-`PHOTOPRISM_SIDECAR_JSON`  | --sidecar-json, -j                     | read metadata from JSON sidecar files created by exiftool
-`PHOTOPRISM_SIDECAR_YAML`  | --sidecar-yaml, -y                     | backup photo metadata to YAML sidecar files 
-`PHOTOPRISM_SIDECAR_HIDDEN` | --sidecar-hidden                      | create JSON and YAML sidecar files in .photoprism if enabled
+`PHOTOPRISM_SIDECAR_JSON`  | --sidecar-json, -j                     | automatically create JSON sidecar files using Exiftool
+`PHOTOPRISM_SIDECAR_YAML`  | --sidecar-yaml, -y                     | automatically backup metadata to YAML sidecar files 
 `PHOTOPRISM_SIDECAR_PATH`  | --sidecar-path PATH                    | storage PATH for automatically created sidecar files (relative or absolute)
 `PHOTOPRISM_DETECT_NSFW`   | --detect-nsfw                          | flag photos as private that may be offensive
 `PHOTOPRISM_UPLOAD_NSFW`   | --upload-nsfw                          | allow uploads that may be offensive

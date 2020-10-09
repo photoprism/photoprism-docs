@@ -1,5 +1,5 @@
 # Add files using WebDAV #
-In case you have PhotoPrism running on a server you can use WebDAV to add files to your `import` or `originals` folder.
+In case you have PhotoPrism running on a server you can use WebDAV to add files to your *import* or *originals* folder.
 
 
 Just follow those [instructions](../backup/webdav.md).

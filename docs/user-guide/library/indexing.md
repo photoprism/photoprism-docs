@@ -1,26 +1,34 @@
-# How to index your originals #
-
-1. Configure the `originals` path to point to your photo and video collection.
-   If you start with an empty folder, you need to copy files to it first.
-
-2. On the main navigation click Library.
-
-3. Optionally select a sub folder you want to index.
-
-4. Press button to start indexing.
+# Indexing your originals #
 
 !!! info
-    You can add photos to your `originals` folder in the file system or using [WebDav](webdav.md).
+    If you're using PhotoPrism for the first time, make sure your photo and video 
+    collection is properly configured as *originals* folder.
+    See installation instructions in [Getting Started](../../getting-started/index.md) for details.
+    When starting with an empty folder, you need to add or upload files first.
+
+
+1. Go to *Library* using the main navigation
+
+2. Select a sub-folder or keep the default to index all files
+
+3. Select *Complete Rescan* to re-index all originals, including already indexed and unchanged files
+
+4. Press *Start* to start indexing
 
 
 ![Screenshot](img/index.png)
 
-### Index options ###
-#### Complete rescan ####
-All files are indexed again.
-In case this option is not selected only new or changed files will be indexed.
+
+!!! tip
+    You may use [WebDAV](webdav.md) for adding files to the *originals* folder.
+    This is especially helpful if PhotoPrism is running on a remote server.
 
 !!! tip 
-    NSFW detection can be enabled (`detect-nsfw`) to flag images that may have offensive content (`nsfw` search filter).
-   
+    A NSFW detector can be enabled to automatically flag pictures as private which 
+    may have offensive content. Note that this is only somewhat reliable. 
+
+#### When should "Complete Rescan" be selected? ####
+
+If selected, all files in the *originals* folder will be re-indexed, including already indexed and unchanged files. 
+This may be necessary after upgrading, especially to new major versions.
 

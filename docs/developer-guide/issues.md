@@ -38,15 +38,3 @@ Please add important information from chat sessions to our Wiki or related GitHu
 ### Feedback ###
 
 Part of this project is to find better ways of organizing product development, in particular by embracing simplicity and consistently leveraging community feedback. Please [share your experience](https://goo.gl/forms/mwDqrqhN9TY50c2Z2) with us, especially if you haven't actively contributed yet.
-
-### Wiki ###
-
-We also maintain a couple of pages for collecting more general ideas and feedback: 
-
-[Ideas](https://github.com/photoprism/photoprism/wiki/Ideas),
-[Inbox](https://github.com/photoprism/photoprism/wiki/Inbox), 
-[Related](https://github.com/photoprism/photoprism/wiki/Related), 
-[Love](https://github.com/photoprism/photoprism/wiki/Love), 
-[Concerns](https://github.com/photoprism/photoprism/wiki/Concerns), 
-[Research](https://github.com/photoprism/photoprism/wiki/Research) and 
-[Privacy](https://github.com/photoprism/photoprism/wiki/Privacy)

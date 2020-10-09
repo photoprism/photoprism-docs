@@ -1,5 +1,5 @@
 # Search #
-In all sections you can use the search bar to find certain photos, videos, albums or labels.
+In all sections you can use the *search bar* to find certain photos, videos, albums or labels.
 
 You can search for all kind of things:
 

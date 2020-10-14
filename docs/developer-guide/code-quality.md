@@ -6,24 +6,32 @@
 
 > Premature optimization is the root of all evil.<br>— <cite>Donald Knuth</cite>
 
-Don't abstract when you don't have to. Often causes pain, results in bloated code and fewer developers understand what is going on. Write tests instead so that you can safely [refactor](https://martinfowler.com/bliki/DefinitionOfRefactoring.html) when really needed.
+Don't abstract when you don't have to. Premature optimization often causes pain, 
+results in bloated code, and fewer developers understand what is going on. 
+Write tests instead so that you can safely 
+[refactor](https://martinfowler.com/bliki/DefinitionOfRefactoring.html) when really needed.
 
-Remember: Duplication is far cheaper than the wrong abstraction.
+!!! tip
+    Maintaining small amounts of duplicate code is cheaper and less work
+    than choosing the wrong abstraction.
 
 ## Refactoring ##
-While we expect this to be difficult when working with a distributed team and pull requests, we encourage all contributors to refactor whenever they see a specific issue and they are working on related code anyways (so that you can validate if your changes are helpful). This way, there is no need for extra refactoring tickets or epics. Let's experiment and see how far we get with this.
+While we expect this to be difficult when working with a distributed team and pull requests, we encourage all contributors to refactor whenever they see a specific issue and they are working on related code anyways (so that you can validate if your changes are helpful). This way, there is no need for extra refactoring tasks or epics. Let's experiment and see how far we get with this.
 
-Remember: Ugly code is not a problem as long as there are tests, there are no security issues and you can easily refactor later. Nobody needs beautiful code that doesn't work.
+!!! tip
+    Ugly code is not a problem as long as there are tests, 
+    there are no security issues, and it can be easily refactored later. 
+    Nobody needs beautiful code that doesn't work.
 
 ## Going Fast ##
 > Feel free to think ahead, just don't code ahead. But also, don't feel the need to decide so many details ahead. Learn enough to get started and build only what you need.<br>— <cite>[J. B. Rainsberger](https://twitter.com/jbrains/status/1064212803542818816)</cite>
 
-Remember: You have to go slow before you can go fast. Keep it simple. Done is better than perfect. Be pragmatic. Stay focused.
+You have to go slow before you can go fast. Keep it simple. Done is better than perfect. Be pragmatic. Stay focused.
 
 ## Test Coverage [![Test Coverage](https://codecov.io/gh/photoprism/photoprism/branch/develop/graph/badge.svg)][codecov] ##
 [Test coverage](https://martinfowler.com/bliki/TestCoverage.html) is a useful tool for finding untested parts of our codebase. Test coverage is of little use as a numeric statement of how good our tests are.
 
-Remember: We strive for complete test coverage. Code that cannot be tested is flawed.
+We strive for complete test coverage. Code that cannot be tested is flawed.
 
 ### Codecov ###
 
@@ -33,7 +41,8 @@ A coverage log file created by the Go test runner is automatically sent to [Code
 
 [Go Report Card][goreport] finds typical issues in Go code while [Codacy][codacy] is a more general service that also reports issues found in Dockerfiles and other programming languages.
 
-Remember: Not every issue reported by a tool really is important and needs to be fixed instantly. Use reports for inspiration when you need some.
+!!! tip
+    Not every issue reported by tools is really important and needs to be fixed instantly. Use reports for inspiration when you need some.
 
 [goreport]: https://goreportcard.com/report/github.com/photoprism/photoprism
 [codacy]: https://www.codacy.com/project/lastzero/photoprism/dashboard

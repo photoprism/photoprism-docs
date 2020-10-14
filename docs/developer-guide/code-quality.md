@@ -12,7 +12,7 @@ Write tests instead so that you can safely
 [refactor](https://martinfowler.com/bliki/DefinitionOfRefactoring.html) when really needed.
 
 !!! tip
-    Maintaining small amounts of duplicate code is cheaper and less work
+    Maintaining small amounts of duplicate code is much easier and less work
     than choosing the wrong abstraction.
 
 ## Refactoring ##

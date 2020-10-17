@@ -25,27 +25,16 @@ Though arguably less convenient to edit than a wiki, this git repository is mean
 
 ## Building with Mkdocs
 
-To build the HTML, you need to install [Mkdocs](https://www.mkdocs.org/).
+First make sure you have Docker and common development tools like `make` installed on your computer.
 
-Is is best installed using [pip](https://pip.pypa.io), Python's module installer. On a Mac you can run:
-
-```sh
-brew install python
-pip3 install --upgrade mkdocs
-pip3 install --upgrade mkdocs-material
-```
-
-You can then build the HTML documentation from the root folder of this repository with:
+Then use this command in the main project directory to download and run the latest version of 
+[mkdocs-material](https://github.com/squidfunk/mkdocs-material):
 
 ```sh
-mkdocs build
+make pull watch
 ```
 
-or start a server that listens on http://127.0.0.1:8000
-
-```sh
-mkdocs serve
-```
+Now open http://localhost:8000/ in a Web browser to browse the docs.
 
 ### Editing existing pages
 

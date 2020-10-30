@@ -13,6 +13,7 @@ For those familiar with [Helm](https://helm.sh), a PhotoPrism Helm chart [is ava
 Once you've got PhotoPrism deployed, you can `exec` into the running container and `photoprism import` your photos.
 
 Here's an example YAML file that creates a Kubernetes:
+
 - `Namespace`
 - `Service` exposing PhotoPrism on port 80
 - `StatefulSet` with persistent NFS volumes

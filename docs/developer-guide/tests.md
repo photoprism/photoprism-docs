@@ -6,6 +6,7 @@
 To run all unit tests, type `make test` or `go test ./internal/...` in a terminal.
 
 These `make` targets are currently defined for tests:
+
 - `test`: Executes all tests found in a) */internal* with a timeout of 20 min and verbose output and b) *frontend/tests/unit*
 - `test-short`: Executes only fast tests found in */internal* with a timeout of 5 min and verbose output
 - `test-race`: Same as `test` but with race condition detector (much slower) and higher timeout of 60 min

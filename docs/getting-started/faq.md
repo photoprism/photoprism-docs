@@ -96,6 +96,25 @@ extract and index metadata like location and duration from video files.
 
 You're welcome to open an issue if you experience issues with a specific file format.
 
+### Why is my storage folder so large? What is in it? ###
+
+The storage folder contains sidecar, thumbnail, and configuration files.
+It may also contain index database files if you're using SQLite.
+Most space is consumed by thumbnails: These are high-quality resampled, smaller 
+versions of your originals.
+
+Thumbnails are required because Web browsers do a pretty bad job at resampling large images 
+so that they fit your screen. Using originals for slideshows and search result previews 
+would consume much more browser memory, and reduce overall performance, as well.
+
+If you're happy with lower quality thumbnails, you can reduce their JPEG quality 
+and/or set a size limit. Note that existing thumbnail files won't be replaced automatically 
+after changing [config values](config-options.md).
+
+You may also choose to render thumbnails on-demand if you have a fast CPU and enough memory. 
+However, storage is typically affordable enough for most users to go for better quality and 
+performance instead.
+
 ### I'm having issues understanding the difference between the import and originals folders? ###
 
 Import is a temporary folder from which you can move or copy files to *originals* in a structured way that avoids duplicates.

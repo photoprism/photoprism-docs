@@ -46,7 +46,7 @@ Questions?
 
 * Radomir Sohlich wrote a [pragmatic introduction to Makefiles](https://sohlich.github.io/post/go_makefile/) for Go developers.
 * We are using [Go Modules](https://github.com/golang/go/wiki/Modules) for managing our dependencies (new in 1.11).
-* If you never used Go before and would like to learn it, you are welcome to [reach out](mailto:hello@photoprism.org). We might start organizing regular learning sessions for beginners in Berlin.
+* If you never used Go before and would like to learn it, you are welcome to [reach out](mailto:hello@photoprism.pro). We might start organizing regular learning sessions for beginners in Berlin.
 * This guide was not tested on Windows, you might need to change docker-compose.yml to make it work with Windows specific paths.
 
 # Alternate Development Environment's

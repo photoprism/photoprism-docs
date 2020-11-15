@@ -1,7 +1,5 @@
 ## Using TensorFlow with Go ##
 
-<img align="right" width="100" height="100" src="https://photoprism.org/images/tensorgologo.png" alt="created by Takuya Ueda (@tenntenn)">
-
 For an introduction please read [Understanding Tensorflow using Go](https://pgaleone.eu/tensorflow/go/2017/05/29/understanding-tensorflow-using-go/).
 
 The TensorFlow API for Go is well suited to loading existing models and executing them within a Go application. It requires the [TensorFlow C library](https://www.tensorflow.org/install/lang_c) to be installed. A full TensorFlow installation is not needed.

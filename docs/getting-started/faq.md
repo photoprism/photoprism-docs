@@ -136,6 +136,18 @@ We also maintain a complete list of [config options](config-options.md) in these
 Our Docker Compose [examples](https://dl.photoprism.org/docker/docker-compose.yml) are continuously maintained and inline documentation 
 has been added to simplify installation.
 
+### How can I uninstall PhotoPrism? ###
+
+This depends on how you installed it. If you're running PhotoPrism with Docker Compose, 
+this command will stop and remove the Docker container:
+
+```
+docker-compose rm -s -v
+```
+
+Please refer to the official Docker [documentation](https://docs.docker.com/compose/reference/rm/) 
+for further details.
+
 ### How can I mount NFS shares with Docker? ###
 
 There are multiple ways of using network storage. 

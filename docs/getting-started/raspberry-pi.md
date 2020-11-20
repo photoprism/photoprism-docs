@@ -14,7 +14,7 @@ sudo docker-compose up
 
 See [Setup Using Docker Compose](docker-compose.md) for details.
 
-Image name on Docker Hub: [`photoprism/photoprism-arm64`](https://hub.docker.com/repository/docker/photoprism/photoprism-arm64)
+Image name on Docker Hub: [`photoprism/photoprism-arm64`](https://hub.docker.com/r/photoprism/photoprism-arm64)
 
 ## Operating System and Hardware Requirements ##
 

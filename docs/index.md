@@ -17,7 +17,7 @@ Say goodbye to solutions that force you to upload your visual memories to the cl
 You're welcome to play with the demo at [demo.photoprism.org](https://demo.photoprism.org).
 Leave your email to get a [release notification](https://goo.gl/forms/KBPVGl9PCsOKrAv33).
 
-## Getting Started ##
+## Setup ##
 
 Step-by-step installation instructions can be found in [Getting Started](getting-started/index.md) - 
 all you need is a Web browser and Docker to run the server. It is available for Mac, Linux and Windows.

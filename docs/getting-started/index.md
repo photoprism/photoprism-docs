@@ -1,13 +1,12 @@
 # Getting Started
 
-You are welcome to get an impression and provide early feedback.
-We've set up a public demo at [demo.photoprism.org](https://demo.photoprism.org) for you to play with.
+To simplify running PhotoPrism on a server, we strongly recommend using [Docker Compose](docker-compose.md).
+It is available for Mac, Linux and Windows.
 
 Note that this is work in progress. We do our best to provide a complete, stable version. 
+Leave your email to get a [release notification](https://goo.gl/forms/KBPVGl9PCsOKrAv33).
 
 [Financial support](../funding.md) makes a huge difference and enables us to spend more time with this project.
-
-Leave your email to get a [release notification](https://goo.gl/forms/KBPVGl9PCsOKrAv33).
 
 ## System Requirements ##
 

@@ -62,7 +62,7 @@ them if this happened by mistake e.g. because of bad metadata.
 
 Files with the same *XMP Instance ID* or *Unique Image ID* as well 
 as images with the exact same time and location will always be stacked. These are considered identical, not sequences 
-of related files based on the file name. Sidecar files will also always be stacked as that's their purpose.
+of related files based on their file names. Sidecar files will also always be stacked as that's their purpose.
 
 ### Why do some pictures have an odd date like 01/01/1980? ###
 

@@ -29,7 +29,7 @@ Already indexed photos can be browsed in [Photos](user-guide/organize/browse.md)
 while videos show up in [Videos](user-guide/organize/video.md).
 Counts are continuously updated in the navigation.
 
-If photos are missing, they might be in [review](user-guide/organize/review.md) due to low quality or missing metadata.
+If files are missing, they might be in [Review](user-guide/organize/review.md) due to low quality or missing metadata.
 You can turn this and other features off in [Settings](user-guide/settings/ui.md), depending on
 your specific use case.
 

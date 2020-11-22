@@ -1,4 +1,4 @@
-# For the early birds
+# Getting Started
 
 You are welcome to get an impression and provide early feedback.
 We've set up a public demo at [demo.photoprism.org](https://demo.photoprism.org) for you to play with.

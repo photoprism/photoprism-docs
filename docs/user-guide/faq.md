@@ -58,6 +58,12 @@ format may not be supported, they may be corrupted, or they may be stacked with 
 exact date & location, or unique image ID indicate they belong to the same photo. You may then unstack 
 them if this happened by mistake e.g. because of bad metadata.
 
+### Why are some files stacked although I disabled "Stack Sequences" in Settings? ###
+
+Files with the same *XMP Instance ID* or *Unique Image ID* as well 
+as images with the exact same time and location will always be stacked. These are considered identical, not sequences 
+of related files based on the file name. Sidecar files will also always be stacked as that's their purpose.
+
 ### Why do some pictures have an odd date like 01/01/1980? ###
 
 This may happen in case there was an issue with your camera's settings when the photo was taken.

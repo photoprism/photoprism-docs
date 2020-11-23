@@ -12,7 +12,7 @@ Say goodbye to solutions that force you to upload your visual memories to the cl
 * clearly structured Web interface for browsing, organizing and sharing your personal photo collection
 * import everything without worrying about duplicates or RAW to JPEG conversion
 * reverse geocoding, XMP support and automated tagging based on Google TensorFlow
-* you're welcome to play with the demo at [demo.photoprism.org](https://demo.photoprism.org)
+* you're welcome to play with our demo at [demo.photoprism.org](https://demo.photoprism.org)
 
 ## Getting Started ##
 

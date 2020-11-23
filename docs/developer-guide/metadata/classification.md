@@ -13,8 +13,7 @@ cat:
 tabby cat:
   see: cat
 ```
-
-<img src="https://pbs.twimg.com/media/EPdSzWNX0AELgCJ?format=jpg&name=medium" width="330" align="right" /> 
+<img src="../img/editPhotoLabels.jpeg" width="330" align="right" /> 
 
 This was necessary because we didn't find a [taxonomy](https://wordnet.princeton.edu/) suitable for consumers (mainly just scientific ones) and needed a lot of control to fine tune terms and their probability thresholds. The raw results were [not useful](https://github.com/photoprism/photoprism/issues/160) to a typical user. Indexing too many words, categories and alternatives also negatively affects performance and [leads to noise](https://github.com/photoprism/photoprism/issues/160). 
 
@@ -104,12 +103,13 @@ $ rm inception_v3_2016_08_28.tar.gz
 DELF: DEep Local Features
  - https://github.com/tensorflow/models/tree/master/research/delf - Tensorflow implementation
 
-![](https://gitcdn.xyz/cdn/Tony607/blog_statics/ce9c3391932e24655b78e27a54543f28f11f3af0/images/landmark/query.jpg)
+![https://gitcdn.xyz/cdn/Tony607/blog_statics/ce9c3391932e24655b78e27a54543f28f11f3af0/images/landmark/query.jpg](img/landmark-query.jpg)
 
+Source: https://gitcdn.xyz/cdn/Tony607/blog_statics/ce9c3391932e24655b78e27a54543f28f11f3af0/images/landmark/query.jpg
 
 ## Types of neural networks ##
 
-![](http://www.asimovinstitute.org/wp-content/uploads/2016/09/neuralnetworks.png)
+![http://www.asimovinstitute.org/wp-content/uploads/2016/09/neuralnetworks.png](img/neuralnetworks.png)
 Source: http://www.asimovinstitute.org/neural-network-zoo/
 
 ## Links ##

@@ -65,7 +65,7 @@ Improved UI with flat look, photo upload and powerful filters as well as new pag
 
 ## January 26, 2020 ##
 
-![](https://pbs.twimg.com/media/EPN3nNhW4AMggk8?format=jpg&name=large)
+![](img/editPhotoFiles.jpeg)
 
 ## June 24, 2020 ##
 

@@ -4,7 +4,7 @@ Web browsers in general can not display RAW image files. They need to be convert
 
 In addition, PhotoPrism now also supports TIFF, PNG, BMP and GIF files. Be aware that files in those formats often don't contain useful metadata and are typically used for screenshots, charts, graphs and icons only.
 
-![](https://pbs.twimg.com/media/EPd-Lp1WAAYYBzs?format=png&name=large)
+![](img/editPhoto.png)
 
 ## Sips ##
 

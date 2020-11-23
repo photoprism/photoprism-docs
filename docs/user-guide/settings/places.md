@@ -10,7 +10,7 @@ Because of HTTPS, your internet provider can't see the exact request, just that 
 
 The API approximates coordinates, encodes them with [S2](https://s2geometry.io/resources/s2cell_statistics.html) and doesn't care about street or house number:
 
-![](https://pbs.twimg.com/media/EN9AoYdWkAIqVDD?format=jpg&name=medium)
+![](img/placesPrivacy.jpeg)
 
 ## Performance ##
 

@@ -2,7 +2,8 @@
 
 PhotoPrism® is a server-based application for browsing, organizing and sharing your personal photo collection.
 It makes use of the latest technologies to automatically tag and find pictures without getting in your way.
-Say goodbye to solutions that force you to upload your visual memories to the cloud.
+
+Say goodbye to solutions that force you to upload your visual memories to the cloud!
 
 ![Screenshot](img/preview.jpg)
 
@@ -11,13 +12,9 @@ Say goodbye to solutions that force you to upload your visual memories to the cl
 * clearly structured Web interface for browsing, organizing and sharing your personal photo collection
 * import everything without worrying about duplicates or RAW to JPEG conversion
 * reverse geocoding, XMP support and automated tagging based on Google TensorFlow
+* you're welcome to play with the demo at [demo.photoprism.org](https://demo.photoprism.org)
 
-## Try our demo ##
-
-You're welcome to play with the demo at [demo.photoprism.org](https://demo.photoprism.org).
-Leave your email to get a [release notification](https://goo.gl/forms/KBPVGl9PCsOKrAv33).
-
-## Getting started ##
+## Getting Started ##
 
 To simplify running PhotoPrism on a server, we strongly recommend using [Docker Compose](getting-started/docker-compose.md).
 It is available for Mac, Linux and Windows.
@@ -35,3 +32,4 @@ your specific use case.
 
 Note that this is work in progress. We do our best to provide a complete, stable version. 
 [Financial support](funding.md) makes a huge difference and enables us to spend more time with this project.
+Leave your email to get a [release notification](https://goo.gl/forms/KBPVGl9PCsOKrAv33).

@@ -10,6 +10,10 @@ importing is more efficient when adding files as you don't need to re-index all 
 Use *index* when you want to index your photos and videos directly in the *originals* folder without copying,
 moving or renaming them in any way.
 
+!!! tip
+    You may [configure ignore list](indexing.md#ignoring-directories-and-files)
+    before starting the index.
+
 Your folder structure in *originals* might look like this:
 
    ![Screenshot](img/before-index.png)

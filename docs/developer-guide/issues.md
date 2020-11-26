@@ -1,7 +1,19 @@
 # Issues
 
-We use GitHub issues for managing [bugs](https://github.com/photoprism/photoprism/labels/bug), [ideas](https://github.com/photoprism/photoprism/labels/idea), [todos](https://github.com/photoprism/photoprism/labels/todo) and [epics](https://github.com/photoprism/photoprism/labels/epic) (collection of todos). There is no Kanban or Scrum board, simply pick a todo you would like to work on and tell us about it. Issues labeled [help wanted](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) / [easy](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3Aeasy) can be good (first) contributions.
+We use GitHub issues for managing [bugs](https://github.com/photoprism/photoprism/labels/bug), 
+[ideas](https://github.com/photoprism/photoprism/labels/idea), 
+[todos](https://github.com/photoprism/photoprism/labels/todo), and 
+[epics](https://github.com/photoprism/photoprism/labels/epic) (collection of todos).
+ 
+Issues labeled [help wanted](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) / [easy](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3Aeasy) can be good (first) contributions.
+Reach out if you're unsure, or would like to work on something else.
+ 
+### Roadmap ### 
 
+Our roadmap shows what feature requests are going to be implemented next:
+
+https://github.com/photoprism/photoprism/projects/5
+ 
 ### User Stories ###
 
 Start the description of new ideas and todos with a [user story](https://en.wikipedia.org/wiki/User_story) similar to this: 
@@ -29,11 +41,9 @@ Please join our [developers mailing list](https://groups.google.com/a/photoprism
 ### Developer Chat ###
 
 [![Community Chat](https://img.shields.io/badge/community%20chat-on%20gitter-4aa087.svg)](https://gitter.im/browseyourlife/community)
-[![Gophers Chat](https://img.shields.io/badge/gophers.slack.com-%23photoprism-a5679c.svg)](https://gophers.slack.com/messages/CDCJ7AA2E/details/)
 
-You are welcome to join our `#photoprism` channel on [gophers.slack.com](https://gophers.slack.com). If you don't have an account yet, you can create one on [invite.slack.golangbridge.org](https://invite.slack.golangbridge.org/). 
-
-Please add important information from chat sessions to our Wiki or related GitHub issues.
+Please add the outcomes of important discussions from chat sessions to our docs or related GitHub issues, 
+so that the information doesn't get lost.
 
 ### Feedback ###
 

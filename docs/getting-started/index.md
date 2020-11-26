@@ -14,6 +14,9 @@ If files are missing, they might be in [Review](../user-guide/organize/review.md
 You can turn this and other features off in [Settings](../user-guide/settings/ui.md), depending on
 your specific use case.
 
+Our [roadmap](https://github.com/photoprism/photoprism/projects/5) shows what feature requests 
+are going to be implemented next.
+
 ## System Requirements ##
 
 We recommend a modern computer with **at least 2 cores** and **4 GB of memory** for running PhotoPrism. Indexing large photo and 

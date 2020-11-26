@@ -13,7 +13,7 @@ Reach out if you're unsure, or would like to work on something else.
 Our [roadmap](https://github.com/photoprism/photoprism/projects/5) shows what tasks are in progress, 
 what needs testing, and which feature requests are going to be implemented next.
 
-Please give ideas you like a thumbs-up 👍  so that we know what is most popular.
+Please give ideas you like a thumbs-up 👍  , so that we know what is most popular.
 Ideas supported by one or more [sponsors](https://docs.photoprism.org/funding/) will be prioritized as well.
  
 ### User Stories ###

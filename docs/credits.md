@@ -10,10 +10,10 @@ A big **thank you** to everyone who made this possible!
 
 ## Infrastructure ##
 
-* [Docker](https://www.docker.com/) approved us for their Open Source Program so that rate limits don't apply
-* [GitHub](https://pages.github.com/) hosts our project homepage and all repositories
+* [Docker](https://www.docker.com/) approved us for their Open Source Program so that rate limits don't apply to our
+  container image [repository](https://hub.docker.com/r/photoprism/photoprism/) 
+* [GitHub](https://pages.github.com/) hosts our project homepage and all code repositories
 * [Travis-CI](https://travis-ci.org/photoprism/photoprism) builds and tests our code multiple times a day
-* [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/) hosts our container images
 * [IssueHunt](https://issuehunt.io/repos/119160553) is a new service for funding Open Source development
 
 ## Artwork ##

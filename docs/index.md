@@ -16,8 +16,9 @@ Say goodbye to solutions that force you to upload your visual memories to the cl
 
 ## Getting Started ##
 
-To simplify running PhotoPrism on a server, we strongly recommend using [Docker Compose](getting-started/docker-compose.md).
-It is available for Mac, Linux and Windows.
+Step-by-step installation instructions for our self-hosted community edition can be found 
+in our [Setup Guide](getting-started/index.md).
+All you need is a Web browser and Docker to run the server. It is available for Mac, Linux and Windows.
 
 Note that this is work in progress. We do our best to provide a complete, stable version. 
 [Financial support](funding.md) makes a huge difference and enables us to spend more time with this project.

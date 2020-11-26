@@ -8,7 +8,7 @@ We use GitHub issues for managing [bugs](https://github.com/photoprism/photopris
 Issues labeled [help wanted](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) / [easy](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3Aeasy) can be good (first) contributions.
 Reach out if you're unsure, or would like to work on something else.
  
-### Roadmap ### 
+### Roadmap ###
 
 Our roadmap shows what feature requests are going to be implemented next:
 

@@ -14,8 +14,8 @@ Our [roadmap](https://github.com/photoprism/photoprism/projects/5) shows what ta
 what needs testing, and which feature requests are going to be implemented next.
 
 Please give ideas you like a thumbs-up 👍  , so that we know what is most popular.
-Ideas supported by one or more [sponsors](https://docs.photoprism.org/funding/) will be prioritized as well.
- 
+Ideas backed by one or more [sponsors](https://docs.photoprism.org/funding/) will be prioritized as well.
+
 ### User Stories ###
 
 Start the description of new ideas and todos with a [user story](https://en.wikipedia.org/wiki/User_story) similar to this: 

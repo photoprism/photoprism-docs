@@ -14,13 +14,13 @@ If files are missing, they might be in [Review](../user-guide/organize/review.md
 You can turn this and other features off in [Settings](../user-guide/settings/ui.md), depending on
 your specific use case.
 
-### Roadmap ###
+## Feature Requests ##
 
 Our [roadmap](https://github.com/photoprism/photoprism/projects/5) shows what tasks are in progress, 
 what needs testing, and which feature requests are going to be implemented next.
 
 Please give ideas you like a thumbs-up 👍  , so that we know what is most popular.
-Ideas supported by one or more [sponsors](https://docs.photoprism.org/funding/) will be prioritized as well.
+Ideas backed by one or more [sponsors](https://docs.photoprism.org/funding/) will be prioritized as well.
 
 ## System Requirements ##
 

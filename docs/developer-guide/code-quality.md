@@ -1,10 +1,14 @@
 # A Few Words About Code Quality
 
-> Code quality has a practical impact on both your agility and the cost of development. You can’t change buggy code fast enough to be truly agile. Existing bugs can easily increase dev costs (and time) by 10x. You can't afford not to fix them.<br>— <cite>[Allen Holub](https://twitter.com/allenholub/status/1073738216140791808)</cite>
+!!! quote "[Allen Holub](https://twitter.com/allenholub/status/1073738216140791808)"
+    Code quality has a practical impact on both your agility and the cost of development. 
+    You can’t change buggy code fast enough to be truly agile. Existing bugs can easily 
+    increase dev costs (and time) by 10x. You can't afford not to fix them.
 
 ## Abstraction ##
 
-> Premature optimization is the root of all evil.<br>— <cite>Donald Knuth</cite>
+!!! quote "Donald Knuth"
+    Premature optimization is the root of all evil.
 
 Don't abstract when you don't have to. Premature optimization often causes pain, 
 results in bloated code, and fewer developers understand what is going on. 
@@ -24,7 +28,10 @@ While we expect this to be difficult when working with a distributed team and pu
     Nobody needs beautiful code that doesn't work.
 
 ## Going Fast ##
-> Feel free to think ahead, just don't code ahead. But also, don't feel the need to decide so many details ahead. Learn enough to get started and build only what you need.<br>— <cite>[J. B. Rainsberger](https://twitter.com/jbrains/status/1064212803542818816)</cite>
+
+!!! quote "[J. B. Rainsberger](https://twitter.com/jbrains/status/1064212803542818816)"
+    Feel free to think ahead, just don't code ahead. But also, don't feel the need to decide so many 
+    details ahead. Learn enough to get started and build only what you need.
 
 You have to go slow before you can go fast. Keep it simple. Done is better than perfect. Be pragmatic. Stay focused.
 

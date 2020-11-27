@@ -8,6 +8,9 @@ We welcome contributions of any kind including pull requests, ideas, bug reports
 testing, writing documentation, tutorials and blog posts. If you help with development,
 you have the opportunity to learn Docker, Go, TensorFlow and much more.
 
+!!! quote "Niklaus Wirth, Feb 1985"
+    Simple, elegant solutions are more effective, but they are harder to find than complex ones, and they require more time, which we too often believe to be unaffordable.
+
 ## Questions?
 
 Follow us on [Twitter](https://twitter.com/browseyourlife) to receive regular project updates, 

@@ -8,11 +8,16 @@ your library. Please be patient, this will take a while depending on the size of
 
 Already indexed photos can be browsed in [Photos](../user-guide/organize/browse.md) 
 while videos show up in [Videos](../user-guide/organize/video.md).
-Counts are continuously updated in the navigation.
+Counts are getting continuously updated in the navigation.
 
 If files are missing, they might be in [Review](../user-guide/organize/review.md) due to low quality or missing metadata.
 You can turn this and other features off in [Settings](../user-guide/settings/ui.md), depending on
 your specific use case.
+
+!!! info
+    We do our best to provide a complete, stable version very soon. Check the 
+    [roadmap](https://github.com/photoprism/photoprism/projects/5) for open issues.
+    Leave your email to get a [release notification](https://goo.gl/forms/KBPVGl9PCsOKrAv33).
 
 ## Feature Requests ##
 
@@ -27,10 +32,14 @@ Ideas backed by one or more [sponsors](https://docs.photoprism.org/funding/) wil
 We recommend a modern computer with **at least 2 cores** and **4 GB of memory** for running PhotoPrism. Indexing large photo and 
 video collections significantly benefits from **fast, local SSD storage** and enough memory for caching. 
 
-If you're running out of memory, limit the [number of workers](https://docs.photoprism.org/getting-started/config-options/)
+If you're running out of memory or system load is too high, limit the 
+[number of workers](https://docs.photoprism.org/getting-started/config-options/),
 and make sure the server has [swap](https://opensource.com/article/18/9/swap-space-linux-systems) 
 configured, so that indexing doesn't stop when there are memory usage spikes.
 As a measure of last resort, you may additionally disable image classification using TensorFlow.
+
+PhotoPrism is compatible with SQLite, MariaDB, and MySQL. We recommend [MariaDB](https://mariadb.org/) 
+for best performance & scalability.
 
 !!! attention
     When installing PhotoPrism on a public server outside your home network, please **always run it

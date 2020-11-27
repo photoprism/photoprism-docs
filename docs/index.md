@@ -15,8 +15,8 @@ Say goodbye to solutions that force you to upload your visual memories to the cl
 * Automatic [image classification](developer-guide/metadata/classification.md) 
   based on Google TensorFlow. In addition, our indexer detects _colors_, _chroma_, _luminance_, _projection_, 
   _location type_, _quality_, and many other properties.
-* Includes four high-resolution [world maps](https://demo.photoprism.org/places) to see where you've been and for rediscovering 
-  long-forgotten shots.
+* Includes four high-resolution [world maps](https://demo.photoprism.org/places) to see where you've been,
+  and for rediscovering long-forgotten shots.
 * WebDAV clients, like Microsoft’s Windows Explorer or Apple's Finder, may 
   [connect](user-guide/backup/webdav.md) directly to PhotoPrism so that you to can open, 
   edit, and delete files from your computer or phone as if they were local. 

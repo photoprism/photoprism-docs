@@ -38,8 +38,8 @@ and make sure the server has [swap](https://opensource.com/article/18/9/swap-spa
 configured, so that indexing doesn't stop when there are memory usage spikes.
 As a measure of last resort, you may additionally disable image classification using TensorFlow.
 
-PhotoPrism is compatible with SQLite, MariaDB, and MySQL. We recommend [MariaDB](https://mariadb.org/) 
-for best performance & scalability.
+PhotoPrism is compatible with [SQLite 3](https://www.sqlite.org/), [MariaDB 10](https://mariadb.org/), 
+and [MySQL 8](https://www.mysql.com/).
 
 !!! attention
     When installing PhotoPrism on a public server outside your home network, please **always run it

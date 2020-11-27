@@ -30,7 +30,7 @@ In addition, you can find us on [Patreon](https://www.patreon.com/photoprism) an
 Our [sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md) and 
 [contributors](https://github.com/photoprism/photoprism/graphs/contributors/) will get for free whatever we might 
 have to charge for a geodata subscription and/or additional features later.
-If we manage to find enough sponsors backing our project, we can keep all features free for everyone!
+We hope to find enough sponsors to cover our own expenses, and keep all features free for everyone!
 
 Also, please [leave a star](https://github.com/photoprism/photoprism/stargazers) on GitHub if you like this project. 
 It provides additional motivation to keep going.

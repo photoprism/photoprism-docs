@@ -9,17 +9,20 @@ Say goodbye to solutions that force you to upload your visual memories to the cl
 
 ## Key Features ##
 
-* Our clearly structured user interface makes organizing and sharing your personal photo collection as easy as 
+* Our clearly structured [user interface](https://photoprism.pro/features) makes organizing and sharing your personal photo collection as easy as 
   it should be — whether it’s on a phone, tablet, or desktop computer.
-* Import everything without worrying about duplicates or RAW to JPEG conversion.
-* Automatic image classification based on Google TensorFlow. In addition, our indexer detects colors, 
-  chroma, luminance, projection, location type, quality, and many other properties.
-* Includes four high-resolution world maps to see where you've been and for rediscovering 
+* Import everything without worrying about duplicates or [RAW to JPEG conversion](developer-guide/library/converting.md).
+* Automatic [image classification](developer-guide/metadata/classification.md) 
+  based on Google TensorFlow. In addition, our indexer detects _colors_, _chroma_, _luminance_, _projection_, 
+  _location type_, _quality_, and many other properties.
+* Includes four high-resolution [world maps](https://demo.photoprism.org/places) to see where you've been and for rediscovering 
   long-forgotten shots.
-* WebDAV clients, like Microsoft’s Windows Explorer or Apple's Finder, can connect directly to 
-  PhotoPrism so that you to can open, edit, and delete files from your computer or phone as if they were local. 
+* [WebDAV clients](user-guide/backup/webdav.md), like Microsoft’s Windows Explorer 
+  or Apple's Finder, can connect directly to PhotoPrism so that you to can open, edit, and delete files from 
+  your computer or phone as if they were local. 
   You may easily sync your pictures with [Nextcloud](https://nextcloud.com/) as well.  
-* PhotoPrism feels like a native app and, of course, you can also add it to your home screen.
+* PhotoPrism feels [like a native app](https://en.wikipedia.org/wiki/Progressive_web_application) and, 
+  of course, you can also add it to your home screen.
 
 ## Getting Started ##
 
@@ -29,4 +32,4 @@ All you need is a Web browser and Docker to run the server. It is available for 
 
 ## Try PhotoPrism ##
 
-You're welcome to play with our demo at [demo.photoprism.org](https://demo.photoprism.org).
+You're welcome to play with our public demo at [demo.photoprism.org](https://demo.photoprism.org).

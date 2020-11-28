@@ -9,7 +9,7 @@ Say goodbye to solutions that force you to upload your visual memories to the cl
 
 ## Key Features ##
 
-* Our clearly structured [user interface](https://photoprism.pro/features) makes organizing and sharing your personal photo collection as easy as 
+* Our clearly structured [user interface](https://photoprism.app/features) makes organizing and sharing your personal photo collection as easy as 
   it should be — whether it’s on a phone, tablet, or desktop computer.
 * Index everything without worrying about duplicates or [RAW to JPEG conversion](developer-guide/library/converting.md).
 * Automatic [image classification](developer-guide/metadata/classification.md) 

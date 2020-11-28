@@ -1,6 +1,6 @@
 # Whatever it is, we'd love to hear from you!
 
-Feel free to use the chat or send an e-mail to [hello@photoprism.pro](mailto:hello@photoprism.pro) 
+Feel free to use the chat or send an e-mail to [hello@photoprism.app](mailto:hello@photoprism.app) 
 if you have questions, want to support our work, or just want to say hello.
 
 [![Community Chat](https://img.shields.io/badge/chat-on%20gitter-4aa087.svg)][chat]

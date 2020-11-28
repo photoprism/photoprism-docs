@@ -34,5 +34,5 @@ Currently VP R&D and Co-Founder at [ShapeDo](https://shapedo.com/).
 
 Thank you to everyone who contributed to this project!
 We do our best to mention those who contribute frequently or in a special way on this page.
-Please [let us know](mailto:hello@photoprism.pro) if you would like to be listed.
+Please [let us know](mailto:hello@photoprism.app) if you would like to be listed.
 GitHub has a [full list of source code contributors](https://github.com/photoprism/photoprism/graphs/contributors).

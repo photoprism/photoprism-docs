@@ -132,7 +132,7 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/photoprism/
     - icon: material/home
-      link: https://photoprism.pro/
+      link: https://photoprism.app/
 
 # Project paths.
 docs_dir: docs

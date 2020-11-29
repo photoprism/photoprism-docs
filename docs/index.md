@@ -9,7 +9,7 @@ Say goodbye to solutions that force you to upload your visual memories to the cl
 
 ## Key Features ##
 
-* Our clearly structured [user interface](https://photoprism.app/features) makes organizing and sharing your personal photo collection as easy as 
+* Our clearly structured [user interface](https://demo.photoprism.org/) makes organizing and sharing your personal photo collection as easy as 
   it should be — whether it’s on a phone, tablet, or desktop computer.
 * Index everything without worrying about duplicates or [RAW to JPEG conversion](developer-guide/library/converting.md).
 * Automatic [image classification](developer-guide/metadata/classification.md) 
@@ -32,4 +32,4 @@ All you need is a Web browser and Docker to run the server. It is available for 
 
 ## Try PhotoPrism ##
 
-You're welcome to play with our public demo at [demo.photoprism.org](https://demo.photoprism.org).
+You're welcome to play with our public demo at [demo.photoprism.org](https://demo.photoprism.org/).

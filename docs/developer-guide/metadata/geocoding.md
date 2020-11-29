@@ -8,7 +8,7 @@ albums of popular music festivals, or sports gatherings, can be created automati
 
 We are happy to assist other OSS projects that don't have the time or expertise to run their own infrastructure.
 
-## Example Request ## 
+## Example Request ##
 
 https://places.photoprism.org/v1/location/149ce78563
 

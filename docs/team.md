@@ -1,5 +1,7 @@
 # Who we are
 
+We strive to provide the most user-friendly solution for browsing, organizing and sharing your personal photo collection.
+
 ## Andrea Ceroni ##
 
 Andrea is a data scientist specialized in temporal information retrieval and machine learning.

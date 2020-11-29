@@ -1,4 +1,4 @@
-# Who we are
+# The People Behind The Project
 
 We strive to provide the most user-friendly solution for browsing, organizing and sharing your personal photo collection.
 
@@ -30,11 +30,11 @@ You can find him on [GitHub](https://github.com/lastzero), [LinkedIn](https://ww
 Known as [GuySoft](https://github.com/guysoft) on the web. Active developer in the Free Software and Maker community.
 Creator of [OctoPi](https://github.com/guysoft/OctoPi) and [FullPageOS](https://github.com/guysoft/FullPageOS), 
 which have hundreds of thousands of downloads. Raspberry Pi distro expert. 
-Currently VP R&D and Co-Founder at [ShapeDo](https://shapedo.com/).
+Currently, VP R&D and Co-Founder at [ShapeDo](https://shapedo.com/).
 
 ## ...and many more ##
 
-Thank you to everyone who contributed to this project!
+Thank you to everyone who contributed to PhotoPrism!
 We do our best to mention those who contribute frequently or in a special way on this page.
 Please [let us know](mailto:hello@photoprism.app) if you would like to be listed.
 GitHub has a [full list of source code contributors](https://github.com/photoprism/photoprism/graphs/contributors).

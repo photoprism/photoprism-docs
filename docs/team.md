@@ -1,4 +1,4 @@
-# The People Behind The Project
+# Our Team
 
 We strive to provide the most user-friendly solution for browsing, organizing and sharing your personal photo collection.
 

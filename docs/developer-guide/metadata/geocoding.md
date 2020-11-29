@@ -1,4 +1,10 @@
-We've recently launched **PhotoPrism Places**, a Geocoding API that replaces OpenStreetMap development infrastructure. Our users now enjoy much better performance, higher availability and more privacy. In addition, we're going to add information about public events that have taken place at a location. This can be used to automatically create albums of popular music festivals or sports events.
+PhotoPrism includes four high-resolution [world maps](https://demo.photoprism.org/places) to see where you've been,
+and for rediscovering long-forgotten shots.
+To enhance your photos with location data such as state, city and category, 
+we've recently launched our own geo-information service based on OpenStreetMap.
+It features enhanced privacy, outstanding performance, and high availability.
+A future release will additionally provide public events' data, so that 
+albums of popular music festivals, or sports gatherings, can be created automatically.
 
 We are happy to assist other OSS projects that don't have the time or expertise to run their own infrastructure.
 

@@ -19,13 +19,15 @@ your specific use case.
     [roadmap](https://github.com/photoprism/photoprism/projects/5) for open issues.
     Leave your email to get a [release notification](https://goo.gl/forms/KBPVGl9PCsOKrAv33).
 
-## Feature Requests ##
+## Roadmap ##
 
-Our [roadmap](https://github.com/photoprism/photoprism/projects/5) shows what tasks are in progress, 
+Our vision is to provide the most user-friendly solution for browsing, organizing and sharing your personal photo collection.
+The [roadmap](https://github.com/photoprism/photoprism/projects/5) shows what tasks are in progress, 
 what needs testing, and which feature requests are going to be implemented next.
 
 Please give ideas you like a thumbs-up, so that we know what is most popular.
-Ideas backed by one or more [sponsors](https://docs.photoprism.org/funding/) will be prioritized as well.
+Ideas backed by one or more [sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md) 
+will be prioritized as well.
 
 ## System Requirements ##
 

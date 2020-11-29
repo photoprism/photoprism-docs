@@ -33,6 +33,9 @@ if no similar [idea](https://github.com/photoprism/photoprism/labels/idea)
 or [todo](https://github.com/photoprism/photoprism/labels/todo) already exists.
 Please don't use the issue tracker to ask general questions.
 
+Our long-term vision is to provide the most user-friendly solution for browsing, 
+organizing and sharing your personal photo collection.
+
 ## Reporting Bugs ##
 
 Please use the [GitHub issue tracker](https://github.com/photoprism/photoprism/issues) to report clearly identified bugs and impediments to us.

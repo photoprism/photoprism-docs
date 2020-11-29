@@ -27,10 +27,10 @@ You're most welcome to support us via [GitHub Sponsors](https://github.com/spons
 especially if you have feature requests or need help with using our software.
 In addition, you can find us on [Patreon](https://www.patreon.com/photoprism) and [PayPal](https://www.paypal.me/browseyourlife). 
 
-This helps us...
+Your continuous support helps...
 
-* pay for hosting, hardware and external services like satellite maps
-* develop new features, and keep them free for everyone 🌈
+* to pay for hosting, hardware and external services like satellite maps
+* developing new features, and keeping them free for everyone 🌈
 
 Also, please [leave a star](https://github.com/photoprism/photoprism/stargazers) on GitHub if you like this project. 
 It provides additional motivation to keep going.

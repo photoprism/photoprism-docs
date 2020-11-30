@@ -23,12 +23,12 @@ Say goodbye to solutions that force you to upload your visual memories to the cl
 * PhotoPrism feels [like a native app](https://en.wikipedia.org/wiki/Progressive_web_application) and, 
   of course, you can also add it to your home screen.
 
-## Getting Started ##
+
+<p style="text-align: center; padding: 20px 4px;">
+<a class="md-button" style="background-color: #546e7a; font-size: 0.7rem; font-weight: normal; color: white" href="https://demo.photoprism.org/" target="_blank">TRY OUR DEMO</a>
+<a class="md-button" style="background-color: #546e7a; font-size: 0.7rem; font-weight: normal; color: white" href="/getting-started/">GET STARTED</a>
+</p>
 
 Step-by-step installation instructions for our self-hosted community edition can be found 
 in the [Setup Guide](getting-started/index.md).
 All you need is a Web browser and Docker to run the server. It is available for Mac, Linux and Windows.
-
-## Try PhotoPrism ##
-
-You're welcome to play with our public demo at [demo.photoprism.org](https://demo.photoprism.org/).

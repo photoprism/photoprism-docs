@@ -1,7 +1,8 @@
 # PhotoPrism Places #
 
-We've recently launched **PhotoPrism Places**, a Geocoding API that replaces OpenStreetMap development infrastructure. Our users now enjoy much better performance, higher availability and more privacy. In addition, we're going to add information about public events that have taken place at a location. This can be used to automatically create albums of popular music festivals or sports events.
-
+The app includes four high-resolution world maps to see where you've been, and for rediscovering long-forgotten shots. 
+To enhance your photos with location data such as state, city and category, we've recently launched our own geo-information service based on OpenStreetMap.
+ A future release will additionally provide public events' data, so that albums of popular music festivals, or sports gatherings, can be created automatically.
 ## Privacy ##
 
 Geocoding requests are NOT logged, but developers can of course see cached items in MariaDB without personal information. That's the point of a cache. Those will be randomly distributed with hot spots around tourist attractions and big cities.

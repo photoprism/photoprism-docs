@@ -8,14 +8,7 @@ Most established OSS companies make the bulk of their revenue with enterprise cu
 and single developers typically get everything for free. Obviously that doesn't work if you have only private users
 that refuse to share their data on top of it.
 
-Looking forward, specific solutions for funding development and maintenance could be to...
-
-  - provide additional benefits to our sponsors
-  - sell a tested & supported version in the app store while our contributors and other developers can 
-    continue to use Docker or build from source
-  - develop a one-click solution for private cloud hosting together with selected providers we trust
-
-You're most welcome to support us via [GitHub Sponsors](https://github.com/sponsors/lastzero), 
+You're welcome to support us via [GitHub Sponsors](https://github.com/sponsors/lastzero), 
 especially if you have feature requests or need help with using our software.
 In addition, you can find us on [Patreon](https://www.patreon.com/photoprism) and [PayPal](https://www.paypal.me/browseyourlife). 
 
@@ -27,7 +20,14 @@ Your continuous support helps...
 Also, please [leave a star](https://github.com/photoprism/photoprism/stargazers) on GitHub if you like this project. 
 It provides additional motivation to keep going.
 
+Thank you very much! <3
+
 Ideas backed by one or more eligible sponsors are marked with a golden [sponsor](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3Asponsor) label.
 Let us know if we mistakenly label an idea as [unfunded](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3Aunfunded).
 
-Thank you very much! <3
+Looking forward, specific solutions for funding development and maintenance could be to...
+
+  - provide additional benefits to our sponsors
+  - sell a tested & supported version in the app store while our contributors and other developers can 
+    continue to use Docker or build from source
+  - develop a one-click solution for private cloud hosting together with selected providers we trust

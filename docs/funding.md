@@ -15,8 +15,6 @@ Looking forward, specific solutions for funding development and maintenance coul
     continue to use Docker or build from source
   - develop a one-click solution for private cloud hosting together with selected providers we trust
 
-## Donations ##
-
 You're most welcome to support us via [GitHub Sponsors](https://github.com/sponsors/lastzero), 
 especially if you have feature requests or need help with using our software.
 In addition, you can find us on [Patreon](https://www.patreon.com/photoprism) and [PayPal](https://www.paypal.me/browseyourlife). 

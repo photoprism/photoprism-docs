@@ -25,8 +25,8 @@ Say goodbye to solutions that force you to upload your visual memories to the cl
 
 
 <p style="text-align: center; padding: 20px 4px;">
-<a class="md-button" style="background-color: #546e7a; font-size: 0.7rem; font-weight: normal; color: white" href="https://demo.photoprism.org/" target="_blank">TRY OUR DEMO</a>
-<a class="md-button" style="background-color: #546e7a; font-size: 0.7rem; font-weight: normal; color: white" href="/getting-started/">GET STARTED</a>
+<a class="md-button" style="background-color: #546e7a; font-size: 0.6rem; font-weight: normal; color: white" href="https://demo.photoprism.org/" target="_blank">TRY OUR DEMO</a>
+<a class="md-button" style="background-color: #546e7a; font-size: 0.6rem; font-weight: normal; color: white" href="/getting-started/">GET STARTED</a>
 </p>
 
 Step-by-step installation instructions for our self-hosted community edition can be found 

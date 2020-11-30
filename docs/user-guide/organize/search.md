@@ -50,35 +50,44 @@ PhotoPrism allows you to use multiple filters in its search.
     
 | Filter      | Examples |
 | ----------- | ----------- |
-| label      |    cat    |
-| color  | purple, magenta, pink, red, orange, gold, yellow, lime, green, teal, cyan, blue, brown, white, grey, black       |
-| before      |   2009-01-02     |
 | after      |    2006-01-02    |
-| type     |   image, video, raw, live     |
-| name     | "IMG_9831-112*", "IMG_9831-112" |
-| original     | "IMG_9831-112*", "IMG_9831-112" |
+| archived     |    true, false    |
+| before      |   2009-01-02     |
+| chroma     |   5     |
+| color  | purple, magenta, pink, red, orange, gold, yellow, lime, green, teal, cyan, blue, brown, white, grey, black       |
 | country     | "de" |
-| state     | "Baden-Württemberg", "Baden*" |
-| title     | "Holiday*", "Holiday / 2012" |
+| day     |  23    |
+| error     |    true, false    |
+| favorite     |    true, false    |
+| fmax     |    4.5  |
+| fmin     |    1.8    |
+| folder | "2020/Holiday" |
+| geo | true, false |
+| hidden     |    true, false    |
+| label      |    cat    |
 | lat     |    38.300457    |
 | lng     |   8.931358   |
-| fmin     |    1.8    |
-| fmax     |    4.5  |
-| chroma     |   5     |
-| year     |  2012    |
 | month     |  5    |
-| day     |  23    |
-| quality     |   1, 2, 3, 4, 5   |
-| panorama     |    true, false    |
-| scan     |    true, false    |
-| favorite     |    true, false    |
-| archived     |    true, false    |
-| private     |    true, false    |
-| review     |   true, false   |
-| unsorted     |    true, false    |
-| stack     |    true, false    |
 | mono     |    true, false  |
+| name     | "IMG_9831-112*", "IMG_9831-112" |
+| original     | "IMG_9831-112*", "IMG_9831-112" |
+| panorama     |    true, false    |
+| path | "2020/Holiday" |
+| photo | true, false |
 | portrait     |    true, false  |
-| error     |    true, false    |
-| hidden     |    true, false    |
+| primary | true, false |
+| private     |    true, false    |
+| quality     |   1, 2, 3, 4, 5   |
+| review     |   true, false   |
+| scan     |    true, false    |
+| stack     |    true, false    |
+| state     | "Baden-Württemberg", "Baden*" |
+| title     | "Holiday*", "Holiday / 2012" |
+| type     |   image, video, raw, live     |
+| unsorted     |    true, false    |
+| video | true, false |
+| year     |  2012    |
+
+
+
 

@@ -83,3 +83,6 @@ see [Use trashcan to physically delete files after confirmation #167](https://gi
 
 When deleting files manually, or using other applications, make sure to re-index your library 
 (or run `photoprism purge` in a terminal).
+
+### I already indexed some files. Why are Folders, Calendar and Moments still empty? ###
+Folders, Calendar and Moments are populated at the end of the indexing process.

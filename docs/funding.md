@@ -21,6 +21,10 @@ Thank you very much! <3
 Ideas backed by one or more eligible sponsors are marked with a golden [sponsor](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3Asponsor) label.
 Let us know if we mistakenly label an idea as [unfunded](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3Aunfunded).
 
+*Note that we've recently moved GitHub Sponsors from [sponsors/lastzero](https://github.com/sponsors/lastzero) to an 
+[organization account](https://github.com/sponsors/photoprism) so that donations can be shared more easily.
+Tiers are more affordable now while benefits stay mostly the same.*
+
 Looking forward, specific solutions for funding development and maintenance could be to...
 
   - provide additional benefits to our sponsors

@@ -43,7 +43,9 @@ volumes:
   - "/var/lib/photoprism:/photoprism/originals/library"
 ```
 
-Please verify file system permissions before starting to index.
+!!! note
+    Please verify file system permissions before starting to index: 
+    Originals must be readable while the storage folder must be readable and writeable.
 
 The *import* folder points to `~/Import` by default, so that you can easily access it.
 If you don't need this feature, e.g. because you manage all files manually or 

@@ -43,10 +43,6 @@ volumes:
   - "/var/lib/photoprism:/photoprism/originals/library"
 ```
 
-!!! note
-    Please verify file system permissions before starting to index: 
-    Originals must be readable while the storage folder must be readable and writeable.
-
 The *import* folder points to `~/Import` by default, so that you can easily access it.
 If you don't need this feature, e.g. because you manage all files manually or 
 use a different tool for importing, you can safely remove the volume. Using import is strictly 
@@ -62,6 +58,10 @@ it completely so that you don't lose your index and albums after restarting or u
     It will disable all features that require write permissions, like importing files via Web upload.
     You may additionally want to mount the *originals* folder with `:ro` flag so that Docker 
     blocks write operations.
+
+!!! important
+    Please verify file system permissions before starting to index: 
+    Originals must be readable while the storage folder must be readable and writeable.
 
 ### Step 2: Start the server ###
 

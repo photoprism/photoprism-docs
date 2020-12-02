@@ -33,7 +33,14 @@ Multiple folders can be indexed by mounting them as sub-folders of `/photoprism/
 volumes:
   - "~/Family:/photoprism/originals/Family"
   - "~/Friends:/photoprism/originals/Friends"
-``` 
+```
+
+Folders outside of the home directory work too:
+
+```
+volumes:
+  - "/media/photos:/photoprism/originals/photos"
+```
 
 The *import* folder points to `~/Import` by default, so that you can easily access it.
 If you don't need this feature, e.g. because you manage all files manually or 

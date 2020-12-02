@@ -35,11 +35,12 @@ volumes:
   - "~/Friends:/photoprism/originals/Friends"
 ```
 
-Of course, folders outside your home directory may be mounted as well:
+Folders outside your home directory may be mounted like this:
 
 ```
 volumes:
-  - "/media/photos:/photoprism/originals/photos"
+  - "/media/photos:/photoprism/originals/media"
+  - "/var/lib/photoprism:/photoprism/originals/library"
 ```
 
 Please verify file system permissions before starting to index.

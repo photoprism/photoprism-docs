@@ -27,6 +27,26 @@
     A NSFW detector can be enabled to automatically flag pictures as private which 
     may have offensive content. Note that this is only somewhat reliable. 
 
+#### Ignoring directories and files ####
+
+Create a `.ppignore` file in the same directory that the directories or files you want to ignore.
+Then put configuration in this file, see the following examples:
+
+```
+# ignore a directory by its name
+foo
+# ignore all files
+*.*
+# ignore all files with gif extension
+*.gif
+# ignore videos which name start with MVI
+MVI_*.MOV
+# or
+MVI_*.*
+```
+
+Names will be ignored in the directory and all subdirectories. An `*` character will act as a wildcard.
+
 #### When should "Complete Rescan" be selected? ####
 
 If selected, all files in the *originals* folder will be re-indexed, including already indexed and unchanged files. 

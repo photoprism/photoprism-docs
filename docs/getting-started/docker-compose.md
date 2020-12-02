@@ -35,12 +35,14 @@ volumes:
   - "~/Friends:/photoprism/originals/Friends"
 ```
 
-Folders outside of the home directory work too:
+Of course, folders outside your home directory may be mounted as well:
 
 ```
 volumes:
   - "/media/photos:/photoprism/originals/photos"
 ```
+
+Please verify file system permissions before starting to index.
 
 The *import* folder points to `~/Import` by default, so that you can easily access it.
 If you don't need this feature, e.g. because you manage all files manually or 

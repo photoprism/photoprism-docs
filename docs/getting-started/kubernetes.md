@@ -2,10 +2,10 @@
 
 *Note: This is contributed content and may be outdated.*
 
-Running PhotoPrism on a Kubernetes cluster is straightforward. 
+Running PhotoPrism on a Kubernetes cluster is straightforward.
 
 At a minimum, you can just define a Kubernetes `Service` and a `StatefulSet` and be up and running.
-For more real-world usage, you'll probably want to at least include persistent storage, 
+For more real-world usage, you'll probably want to at least include persistent storage,
 and possibly some `Ingress` rules for exposing PhotoPrism outside your cluster.
 
 For those familiar with [Helm](https://helm.sh), a PhotoPrism Helm chart [is available](https://github.com/p80n/photoprism-helm).

@@ -48,8 +48,6 @@ spec:
         env:
         - name: PHOTOPRISM_DEBUG
           value: "true"
-        - name: PHOTOPRISM_SERVER_MODE
-          value: debug
         - name: PHOTOPRISM_CACHE_PATH
           value: /assets/cache
         - name: PHOTOPRISM_IMPORT_PATH

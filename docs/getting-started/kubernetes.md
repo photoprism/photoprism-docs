@@ -17,6 +17,7 @@ Here's an example YAML file that creates a Kubernetes:
 - `Namespace`
 - `Service` exposing PhotoPrism on port 80
 - `StatefulSet` with persistent NFS volumes
+- `Secret` which stores the database DSN and admin password
 - `Ingress` rule for a Kubernetes [ingress controller](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/)
 - Annotations for a Kubernetes [`Certificate Manager`](https://github.com/jetstack/cert-manager)
 
@@ -25,6 +26,15 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: photoprism
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: photoprism-secrets
+  namespace: photoprism
+stringData:
+  PHOTOPRISM_ADMIN_PASSWORD: <your admin password here>
+  PHOTOPRISM_DATABASE_DSN: username:password@tcp(db-server-address:3306)/dbname?charset=utf8mb4,utf8&parseTime=true
 ---
 apiVersion: apps/v1
 kind: StatefulSet
@@ -58,8 +68,6 @@ spec:
           vale: /assets/photos/originals
         - name: PHOTOPRISM_DATABASE_DRIVER
           value: mysql
-        - name: PHOTOPRISM_DATABASE_DSN
-          value: photoprism:photoprism@tcp(mariadb.db:3306)/photoprism?parseTime=true
         - name: PHOTOPRISM_HTTP_HOST
           value: 0.0.0.0
         - name: PHOTOPRISM_HTTP_PORT
@@ -67,6 +75,11 @@ spec:
         resources:
           requests:
             memory: 2Gi
+        # Load database DSN & admin password from secret
+        envFrom:
+        - secretRef:
+            name: photoprism-secrets
+            optional: false
         ports:
         - containerPort: 2342
           name: http

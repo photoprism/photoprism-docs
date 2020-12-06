@@ -93,6 +93,10 @@ spec:
         - mountPath: /assets/photos/export
           name: photoprism
           subPath: export
+        readinessProbe:
+          httpGet:
+            path: /api/v1/status
+            port: http
       volumes:
       - name: originals
         nfs:

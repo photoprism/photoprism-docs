@@ -2,10 +2,10 @@
 
 *Note: This is contributed content and may be outdated.*
 
-Running PhotoPrism on a Kubernetes cluster is straightforward. 
+Running PhotoPrism on a Kubernetes cluster is straightforward.
 
 At a minimum, you can just define a Kubernetes `Service` and a `StatefulSet` and be up and running.
-For more real-world usage, you'll probably want to at least include persistent storage, 
+For more real-world usage, you'll probably want to at least include persistent storage,
 and possibly some `Ingress` rules for exposing PhotoPrism outside your cluster.
 
 For those familiar with [Helm](https://helm.sh), a PhotoPrism Helm chart [is available](https://github.com/p80n/photoprism-helm).
@@ -17,6 +17,7 @@ Here's an example YAML file that creates a Kubernetes:
 - `Namespace`
 - `Service` exposing PhotoPrism on port 80
 - `StatefulSet` with persistent NFS volumes
+- `Secret` which stores the database DSN and admin password
 - `Ingress` rule for a Kubernetes [ingress controller](https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/)
 - Annotations for a Kubernetes [`Certificate Manager`](https://github.com/jetstack/cert-manager)
 
@@ -25,6 +26,15 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: photoprism
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: photoprism-secrets
+  namespace: photoprism
+stringData:
+  PHOTOPRISM_ADMIN_PASSWORD: <your admin password here>
+  PHOTOPRISM_DATABASE_DSN: username:password@tcp(db-server-address:3306)/dbname?charset=utf8mb4,utf8&parseTime=true
 ---
 apiVersion: apps/v1
 kind: StatefulSet
@@ -48,8 +58,6 @@ spec:
         env:
         - name: PHOTOPRISM_DEBUG
           value: "true"
-        - name: PHOTOPRISM_SERVER_MODE
-          value: debug
         - name: PHOTOPRISM_CACHE_PATH
           value: /assets/cache
         - name: PHOTOPRISM_IMPORT_PATH
@@ -60,15 +68,15 @@ spec:
           vale: /assets/photos/originals
         - name: PHOTOPRISM_DATABASE_DRIVER
           value: mysql
-        - name: PHOTOPRISM_DATABASE_DSN
-          value: photoprism:photoprism@tcp(mariadb.db:3306)/photoprism?parseTime=true
         - name: PHOTOPRISM_HTTP_HOST
           value: 0.0.0.0
         - name: PHOTOPRISM_HTTP_PORT
           value: 2342
-        resources:
-          requests:
-            memory: 2Gi
+        # Load database DSN & admin password from secret
+        envFrom:
+        - secretRef:
+            name: photoprism-secrets
+            optional: false
         ports:
         - containerPort: 2342
           name: http
@@ -85,6 +93,10 @@ spec:
         - mountPath: /assets/photos/export
           name: photoprism
           subPath: export
+        readinessProbe:
+          httpGet:
+            path: /api/v1/status
+            port: http
       volumes:
       - name: originals
         nfs:
@@ -115,8 +127,12 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   annotations:
-    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+    # For nginx ingress controller:
     kubernetes.io/ingress.class: nginx
+    # Default is very low so most photo uploads will fail
+    nginx.ingress.kubernetes.io/proxy-body-size: "512M"
+    # If using cert-manager:
+    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
     kubernetes.io/tls-acme: "true"
   name: photoprism
   namespace: photoprism

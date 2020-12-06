@@ -127,8 +127,12 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   annotations:
-    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
+    # For nginx ingress controller:
     kubernetes.io/ingress.class: nginx
+    # Default is very low so most photo uploads will fail
+    nginx.ingress.kubernetes.io/proxy-body-size: "512M"
+    # If using cert-manager:
+    certmanager.k8s.io/cluster-issuer: letsencrypt-prod
     kubernetes.io/tls-acme: "true"
   name: photoprism
   namespace: photoprism

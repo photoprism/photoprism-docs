@@ -50,7 +50,7 @@ Variable                   | Parameter            | Description
 `PHOTOPRISM_DOWNLOAD_TOKEN` | --download-token SECRET               | SECRET url token for file downloads
 `PHOTOPRISM_PREVIEW_TOKEN` | --preview-token SECRET                 | SECRET url token for preview images and video streaming (default: "public")
 `PHOTOPRISM_THUMB_FILTER`  | --thumb-filter NAME, -f NAME           | resample filter NAME (best to worst: blackman, lanczos, cubic, linear) (default: "lanczos")
-`PHOTOPRISM_THUMB_UNCACHED` | --thumb-uncached, -u                  | enable on-demand thumbnail rendering (high memory and cpu usage)
+`PHOTOPRISM_THUMB_UNCACHED` | --thumb-uncached, -u                  | enable on-demand thumbnail rendering (high memory and cpu usage if thumbnails haven't been generated yet)
 `PHOTOPRISM_THUMB_SIZE`    | --thumb-size PIXELS, -s PIXELS         | pre-rendered thumbnail size limit in PIXELS (720-7680) (default: 2048)
 `PHOTOPRISM_THUMB_SIZE_UNCACHED` |  --thumb-size-uncached PIXELS, -x PIXELS | on-demand rendering size limit in PIXELS (720-7680) (default: 7680)
 `PHOTOPRISM_JPEG_SIZE`     | --jpeg-size PIXELS                     | size limit for converted image files in PIXELS (720-30000) (default: 7680)

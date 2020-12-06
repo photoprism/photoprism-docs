@@ -72,9 +72,6 @@ spec:
           value: 0.0.0.0
         - name: PHOTOPRISM_HTTP_PORT
           value: 2342
-        resources:
-          requests:
-            memory: 2Gi
         # Load database DSN & admin password from secret
         envFrom:
         - secretRef:

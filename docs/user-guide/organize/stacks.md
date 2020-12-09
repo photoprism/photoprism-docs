@@ -2,16 +2,21 @@
 
 ## Grouped Files ##
 
-In case you have "Grouped Sequentials" enabled in [*Settings*](../settings/ui.md) you might have photos that consist of more than one JPEG file.
+In case you have "Stacks" configured in [*Settings*](../settings/ui.md) you might have photos that consist of more than one JPEG file.
 Grouped files are displayed in *Stacks*.
 
 ![Screenshot](img/stacks-1.png)
 
 !!! info
-    Files are grouped in two cases:
+    Files can be grouped for the following reasons:
     
     1. Filenames are related: 'IMG_1234 (2)' or 'IMG_1234 copy 2' are assumed to belong to the same photo.
-    2. Photos that have been taken at the same location AND in the same second.
+    2. Photos have been taken at the same location AND in the same second.
+    3. Files have the same unique image or instance identifier.
+    
+    You can configure this in [*Settings*](../settings/ui.md).
+    
+
 
 ### Browse through related files ###
 

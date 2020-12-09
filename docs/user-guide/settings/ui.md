@@ -17,10 +17,16 @@ When selected, non-photographic photos/videos like screenshots and low-quality p
 !!! attention
     In case this is disabled and there is a RAW file without a JPEG there will be no preview.
     
-#### Group Sequential :material-image-multiple: ####
+#### Stacks :material-image-multiple: ####
 Related files will be grouped when selected.
 Grouped files will have one primary file that is shown in our views. You find your grouped files in [*Stacks*](../organize/stacks.md).
-    
+
+PhotoPrism provides three options to group files: 
+
+* Place & Time 
+* Sequential Name
+* Unique ID
+
 ### User Interface Settings ###
 You can change the *theme* and *language* of the User interface.
 

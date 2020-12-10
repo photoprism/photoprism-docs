@@ -48,46 +48,50 @@ In case you set multiple filters only photos are shown in the search result that
 # Search filter #
 PhotoPrism allows you to use multiple filters in its search.
     
-| Filter      | Examples |
-| ----------- | ----------- |
-| after      |    2006-01-02    |
-| archived     |    true, false    |
-| before      |   2009-01-02     |
-| chroma     |   5     |
-| color  | purple, magenta, pink, red, orange, gold, yellow, lime, green, teal, cyan, blue, brown, white, grey, black       |
-| country     | "de" |
-| day     |  23    |
-| error     |    true, false    |
-| favorite     |    true, false    |
-| fmax     |    4.5  |
-| fmin     |    1.8    |
-| folder | "2020/Holiday" |
-| geo | true, false |
-| hidden     |    true, false    |
-| label      |    cat    |
-| lat     |    38.300457    |
-| lng     |   8.931358   |
-| month     |  5    |
-| mono     |    true, false  |
-| name     | "IMG_9831-112*", "IMG_9831-112" |
-| original     | "IMG_9831-112*", "IMG_9831-112" |
-| panorama     |    true, false    |
-| path | "2020/Holiday" |
-| photo | true, false |
-| portrait     |    true, false  |
-| primary | true, false |
-| private     |    true, false    |
-| quality     |   1, 2, 3, 4, 5   |
-| review     |   true, false   |
-| scan     |    true, false    |
-| stack     |    true, false    |
-| state     | "Baden-Württemberg", "Baden*" |
-| title     | "Holiday*", "Holiday / 2012" |
-| type     |   image, video, raw, live     |
-| unsorted     |    true, false    |
-| video | true, false |
-| year     |  2012    |
+| Filter      | Examples | Notes |
+| ----------- | ----------- | - |
+| after      |    2006-01-02    | |
+| archived     |    true, false    | |
+| before      |   2009-01-02     | |
+| chroma     |   5     | |
+| color  | purple, magenta, pink, red, orange, gold, yellow, lime, green, teal, cyan, blue, brown, white, grey, black       | |
+| country     | "de" | |
+| day     |  23    | |
+| error     |    true, false    | |
+| favorite     |    true, false    | |
+| fmax     |    4.5  | |
+| fmin     |    1.8    | |
+| folder | "2020/Holiday", "2020/*" | |
+| geo | true, false | |
+| hidden     |    true, false    | |
+| label      |    cat    | |
+| lat     |    38.300457    | Latitude |
+| lng     |   8.931358   | Longitude |
+| month     |  5    | |
+| mono     |    true, false  | Monochrome images |
+| name     | "IMG_9831-112*", "IMG_9831-112" | |
+| original     | "IMG_9831-112*", "IMG_9831-112" | Only applicable when file have been imported |
+| panorama     |    true, false    | |
+| path | "2020/Holiday" | |
+| photo | true, false | |
+| portrait     |    true, false  | |
+| primary | true, false | |
+| private     |    true, false    | |
+| quality     |   1, 2, 3, 4, 5   | |
+| review     |   true, false   | |
+| scan     |    true, false    | |
+| stack     |    true, false    | |
+| state     | "Baden-Württemberg", "Baden*" | |
+| title     | "Holiday*", "Holiday / 2012" | |
+| type     |   image, video, raw, live     | |
+| unsorted     |    true, false    | |
+| video | true, false | |
+| year     |  2012    | |
 
+Filters can be combined, use a space between filters:
 
+```
+mono:true review:false
+```
 
-
+It will show photos that are monochrome **and** unreviewed.

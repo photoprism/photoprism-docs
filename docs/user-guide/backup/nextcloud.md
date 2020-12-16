@@ -56,14 +56,11 @@ create backups or fetch your latest pictures.
 
 ![Screenshot](img/sync-2.png)
 
-!!! attention
-    Videos won't be synced yet. We are working on it.
-
 ### Remote Sync Options ###
 * *Download remote files* will download all files from your nextcloud that do not yet exist in PhotoPrism
 * *Upload local files* will upload all files from PhotoPrism to your nextcloud folder that do not yet exist there
 * *Preserve filenames* will keep filenames from Nextcloud without renaming them
-* *Sync raw images* will upload/download raw files alongside with jpegs
+* *Sync raw and video files* will upload/download raw and video files alongside with jpegs
 
 
 

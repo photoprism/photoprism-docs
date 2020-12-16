@@ -45,14 +45,14 @@ In case you set multiple filters only photos are shown in the search result that
    ![Screenshot](img/color-green.png)
 
 
-# Search filter #
+### Search Filter List ###
 PhotoPrism allows you to use multiple filters in its search.
     
 | Filter      | Examples | Notes |
 | ----------- | ----------- | - |
-| after      |    2006-01-02    | |
+| after      |    2015-06-30    | |
 | archived     |    true, false    | |
-| before      |   2009-01-02     | |
+| before      |   2016-12-22     | |
 | chroma     |   5     | |
 | color  | purple, magenta, pink, red, orange, gold, yellow, lime, green, teal, cyan, blue, brown, white, grey, black       | |
 | country     | "de" | |
@@ -88,6 +88,7 @@ PhotoPrism allows you to use multiple filters in its search.
 | video | true, false | |
 | year     |  2012    | |
 
+## AND Search ##
 Filters can be combined, use a space between filters:
 
 ```
@@ -95,3 +96,12 @@ mono:true review:false
 ```
 
 It will show photos that are monochrome **and** unreviewed.
+
+## OR Search ##
+An OR search is possible using |:
+
+```
+label:cat|dog
+```
+
+This will show all photos that have either the label cat **or** dog.

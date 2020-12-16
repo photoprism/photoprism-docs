@@ -1,7 +1,8 @@
 ### Videos ###
-PhotoPrism currently supports avc1 videos.
+PhotoPrism currently supports all common video formats.
 
-Of course there are a lot more formats to come!
+!!! info
+    In case you have problems with a specific format, let us know!
 
 In *Videos* you find all your videos. To play a video click :material-play:.
 

@@ -21,44 +21,29 @@ is `translations.pot`.
 `*.po` files contain localized messages for each 
 [language](https://www.gnu.org/software/gettext/manual/html_node/Usual-Language-Codes.html#Usual-Language-Codes),
 identified by their [two-letter locale](https://www.gnu.org/software/gettext/manual/html_node/Locale-Names.html), 
-like `de.po` for German.
-You can open, edit and save them with Poedit to update existing translations. 
+like `de.po` for German or `pt_BR` for Brazilian Portuguese.
+You can open, edit and save them with Poedit to update existing translations.
 
-!!! info
-    As it doesn't seem necessary for now, and to reduce the amount of work, 
-    we don't maintain translations for dialects like `de_AT` or `pt_BR`.
+### Add new translation ###
+- In /frontend run `npm run gettext-extract`
+- Install a translation tool e.g. Poedit
+- Open the `/frontend/src/locales/translations.pot` file with Poedit
+- In Poedit click on "Create New Translation" at the bottom, select the language, and start translating
+- When done, save your translation as `*.po` file using the two-letter language locale (e.g. `de.po`) as name
+- Add the new language to the `Languages` function in  `/frontend/src/options/options.js`
+- Run `npm run gettext-compile` to compile existing translations into a single `translations.json` file
+- To test your translations you need to build the frontend again using `npm run build` or `npm run watch`
 
-To add a new translation, open `translations.pot`, click on "Create New Translation" at the bottom, select
-the language, and start translating. 
-When done, save your translation as `*.po` file using the two-letter language locale as name.
-In addition, the new language needs to be added to the `Languages` function
-in `/frontend/src/options/options.js`.
 
-If you have a working development environment in place:
-
-Running `npm run gettext-compile` in the `frontend` directory compiles existing translations into 
-a single `translations.json` file.
-
-Now start a frontend build using `npm run build` or keep 
-
-```
-npm run watch
-```
-
-running in the background to automatically recompile JS and CSS whenever there
-are changes. Lastly, make sure `photoprism` is running and open the Web UI in a supported browser. Changing 
-the language in Settings automatically triggers a reload.
-
-To extract new or changed text needing translation from `*.js` and `*.vue` source code, run 
-
-```
-npm run gettext-extract
-```
-
-in the `frontend` directory. This updates the POT file `translations.pot`.
-
-Apply changes to existing translations by clicking on "Catalogue" > "Update from POT File..." 
-in the Poedit app menu.
+### Update existing translation ###
+- In /frontend run `npm run gettext-extract`
+- Install a translation tool e.g. Poedit
+- Open the `*.po` file of your language e.g. `/frontend/src/locales/fr.po` file with Poedit
+- In the Poedit menu click "Catalogue" --> "Update from POT File" --> select the `translations.pot` file from `/frontend/src/locales`
+- Now you can start proofreading and adding the missing translations
+- Once your done save the changes in the `*.po` file
+- Run `npm run gettext-compile` to compile existing translations into a single `translations.json` file
+- To test your translations you need to build the frontend again using `npm run build` or `npm run watch`
 
 !!! note
     A binary `*.mo` (machine object) file will be automatically saved along with every `*.po` file. 
@@ -80,15 +65,22 @@ identified by their [two-letter locale](https://www.gnu.org/software/gettext/man
 like `de/default.po` for German. You can open, edit and save them with Poedit. Please
 also add and commit binary `*.mo` files, which will be automatically created by Poedit.
 
-To add a new translation, open `messages.pot`, click on "Create New Translation" at the bottom, select
-the language, and start translating. 
-When done, create a new directory (using the locale as name) and save your translation there as `default.po`.
 
-The POT file `/assets/locales/messages.pot` will be automatically updated when 
-running `go generate` in `/internal/i18n` or `make generate` in the main project directory.
-Note that this will only work when you have gettext installed on your system.
-We recommend using our latest development image as described in the Developer Guide.
+### Add new translation ###
+- Run `make generate` to update `/assets/locales/messages.pot`
+- Open the `/assets/locales/messages.pot` file with Poedit
+- In Poedit click on "Create New Translation" at the bottom, select the language, and start translating
+- When done, create a new directory (using the locale as name) and save your translation there as `default.po`
 
-Apply changes to existing translations by clicking on "Catalogue" > "Update from POT File..." 
-in the Poedit app menu.
+### Update existing translation ###
+- Run `make generate` to update `/assets/locales/messages.pot`
+- Open the `/assets/locales/fr/default.po` file with Poedit
+- In the Poedit menu click "Catalogue" --> "Update from POT File" --> select the messages.pot file from /assets/locales/
+- Now you can start proofreading and adding the missing translations
+- Once your done, save the changes in the default.po file
+
+!!! info
+    Note that this will only work when you have gettext installed on your system.
+    We recommend using our latest development image as described in the Developer Guide.
+
 

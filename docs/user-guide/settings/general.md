@@ -47,9 +47,9 @@ When disabled, server logs are not shown.
 #### Places :material-map-marker: ####
 When disabled, there is no *Places* section.
 
-## Maps & Places ##
+## Places ##
 
-At the bottom of the *General* settings tab, you may choose your preferred map style and animation length.
+At the bottom of the *General* settings tab, you may choose your preferred map style and animation length for *Places*.
 PhotoPrism includes four high-resolution world maps to see where you've been, and for rediscovering long-forgotten shots.
 
 To enhance your photos with location data such as state, city and category, we've also launched our own geo-information service based on OpenStreetMap.

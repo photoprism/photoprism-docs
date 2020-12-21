@@ -21,19 +21,19 @@ so it's likely you'll get less accurate labels with higher compression.
 
 Name      | Source    | Width  | Height  | Use               |
 :---------|:----------|:------:|:-------:|:------------------|
-colors    | fit_720   | 3      | 3       | colors            |
-tile_50   | tile_500  | 50     | 50      | maps              |
-tile_100  | tile_500  | 100    | 100     | maps              |
-tile_224  | tile_500  | 224    | 224     | tensorflow        |
+colors    | fit_720   | 3      | 3       | color detection   |
+tile_50   | tile_500  | 50     | 50      | maps preview      |
+tile_100  | tile_500  | 100    | 100     | maps preview      |
+tile_224  | tile_500  | 224    | 224     | mosaic preview    |
 left_224  | fit_720   | 224    | 224     | tensorflow        |
 right_224 | fit_720   | 224    | 224     | tensorflow        |
-tile_500  |           | 500    | 500     | preview           |
-fit_720   |           | 720    | 720     | lightbox          |
-fit_1280  | fit_2048  | 1280   | 1024    | lightbox          |
-fit_1920  | fit_2048  | 1920   | 1200    | lightbox          |
-fit_2048  |           | 2048   | 2048    | lightbox          |
-fit_2560  |           | 2560   | 1600    | lightbox / retina |
-fit_3840  |           | 3840   | 2400    | lightbox / retina |
+tile_500  |           | 500    | 500     | cards preview     |
+fit_720   |           | 720    | 720     | photo viewer      |
+fit_1280  | fit_2048  | 1280   | 1024    | photo viewer      |
+fit_1920  | fit_2048  | 1920   | 1200    | photo viewer      |
+fit_2048  |           | 2048   | 2048    | photo viewer      |
+fit_2560  |           | 2560   | 1600    | photo viewer      |
+fit_3840  |           | 3840   | 2400    | photo viewer      |
 
 !!! note
     When the configured size limit is exceeded, for example if users have a larger screen,

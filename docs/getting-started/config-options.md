@@ -1,8 +1,8 @@
 Variable                        | Parameter            | Description                                  
 :------------------------------ |:-------------------- |:-------------------------------------------
-`PHOTOPRISM_DEBUG`              | --debug              | run in debug mode (shows additional log messages)
-`PHOTOPRISM_PUBLIC`             | --public, -p         | no authentication required (disables password protection)
-`PHOTOPRISM_READONLY`           | --read-only, -r      | don't modify originals directory (import and upload disabled)
+`PHOTOPRISM_DEBUG`              | --debug              | run in debug mode, shows additional log messages
+`PHOTOPRISM_PUBLIC`             | --public, -p         | no authentication required, disables password protection
+`PHOTOPRISM_READONLY`           | --read-only, -r      | don't modify originals folder; disables import, upload, and delete
 `PHOTOPRISM_EXPERIMENTAL`       | --experimental, -e   | enable experimental features
 `PHOTOPRISM_ADMIN_PASSWORD`     | --admin-password PASSWORD    | initial admin PASSWORD, please use a secure default
 `PHOTOPRISM_CONFIG_FILE`        | --config-file FILENAME, -c FILENAME  | load initial config options from FILENAME

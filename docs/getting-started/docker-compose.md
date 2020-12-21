@@ -7,6 +7,11 @@ Developers can skip this and move on to the [Developer Guide](../developer-guide
 An image for the [Raspberry Pi](raspberry-pi.md) is available as well.
 In addition, we plan to provide a single binary.
 
+!!! info
+    Windows users may need to [disable](img/docker-disable-wsl2.jpg) the WSL 2 based engine in *Docker Settings > General*
+    to mount drives other than `C:`. They are advised to use this [docker-compose.yml](https://dl.photoprism.org/docker/windows/docker-compose.yml)
+    example config to get started.
+
 ### Step 1: Configure ###
 
 Download our [docker-compose.yml](https://dl.photoprism.org/docker/docker-compose.yml) file

@@ -10,7 +10,7 @@ For best results, you should choose a high JPEG quality > 90, and the *lanczos* 
 This will require additional storage and slows down indexing, but only once when indexing for the first time.
 
 In comparison, the *cubic* filter may be 30% faster than *lanczos*.
-A JPEG quality setting of 95 results in a preview files size of about 500kb.
+A [JPEG quality](http://fotoforensics.com/tutorial-estq.php) setting of 95 results in a preview files size of about 500kb.
 Reducing the JPEG quality to 80 gets storage size down to ~100kb, and results in visible compression artifacts
 as in heavily compressed social media content.
 
@@ -43,8 +43,6 @@ the photo viewer may be forced to use original image files instead.
 This may result in images displayed with the wrong orientation.
 
 ## Downscaling Filters ##
-
-Source: https://ijarcce.com/wp-content/uploads/2016/02/IJARCCE-7.pdf
 
 ### Linear ###
 
@@ -107,6 +105,8 @@ Nearest Neighbor          | ![](img/out_resize_nearest.png)
 Bilinear                  | ![](img/out_resize_linear.png)
 Sharp Bicubic             | ![](img/out_resize_catrom.png)
 Lanczos                   | ![](img/out_resize_lanczos.png)
+
+Source: [A Comparative Analysis of Image Interpolation Algorithms](https://ijarcce.com/wp-content/uploads/2016/02/IJARCCE-7.pdf)
 
 ## What files will be created by PhotoPrism? ##
 

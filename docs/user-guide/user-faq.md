@@ -71,7 +71,7 @@ schemas may be added over time.
 
 #### YAML ####
 
-If disabled via `PHOTOPRISM_DISABLE_BACKUPS` or `--disable-backups`, PhotoPrism will automatically create / update
+If not disabled via `PHOTOPRISM_DISABLE_BACKUPS` or `--disable-backups`, PhotoPrism will automatically create / update
 YAML sidecar files while indexing and after manually editing fields like title, date, or location.
 They **serve as a backup** in case the database (index) gets lost, or when folders are synced with a remote
 PhotoPrism instance.

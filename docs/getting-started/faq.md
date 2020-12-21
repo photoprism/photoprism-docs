@@ -3,7 +3,7 @@
 ### What are sidecar files and where do I find them? ###
 
 A sidecar is a file which sits **alongside** your main photo or video files, 
-typically using the same name and a different extension like 
+typically using the same name, and a different extension like 
 
  * `IMG_0101.jpg`
  * `IMG_0101.json`
@@ -14,13 +14,13 @@ can be mounted read-only.
 
 !!! info
     PhotoPrism will always look out for existing sidecar files and use them for indexing, 
-    even if `PHOTOPRISM_SIDECAR_JSON` and `PHOTOPRISM_SIDECAR_YAML` are set to `"false"`.
+    even if `PHOTOPRISM_DISABLE_EXIFTOOL` and `PHOTOPRISM_DISABLE_BACKUPS` are set to `"true"`.
 
 Three types of metadata sidecar files are supported currently:
 
 #### JSON ####
 
-If enabled via `PHOTOPRISM_SIDECAR_JSON` or `--sidecar-json`, [Exiftool](https://exiftool.org/) is used to 
+If not disabled via `PHOTOPRISM_DISABLE_EXIFTOOL` or `--disable-exiftool`, [Exiftool](https://exiftool.org/) is used to 
 automatically create a JSON sidecar for each media file. 
 **This way, embedded XMP and video metadata can be indexed as well.**
 Native metadata extraction is limited to common Exif headers.
@@ -35,7 +35,7 @@ and can be processed using common development tools and text editors.
 
 #### YAML ####
 
-If enabled via `PHOTOPRISM_SIDECAR_YAML` or `--sidecar-yaml`, PhotoPrism will automatically create / update 
+If disabled via `PHOTOPRISM_DISABLE_BACKUPS` or `--disable-backups`, PhotoPrism will automatically create / update 
 YAML sidecar files while indexing and after manually editing fields like title, date, or location. 
 They **serve as a backup** in case the database (index) gets lost, or when folders are synced with a remote 
 PhotoPrism instance.
@@ -91,7 +91,7 @@ Support for specific RAW formats depends on the runtime environment and configur
 On Mac OS, [Sips](https://ss64.com/osx/sips.html) can be used as well.
 
 Only MPEG-4 AVC video files are fully supported for now. Transcoding of other codecs is planned for a later release.
-In addition, `PHOTOPRISM_SIDECAR_JSON` must be `"true"` in order to
+In addition, `PHOTOPRISM_DISABLE_EXIFTOOL` must be `"false"` or unset in order to
 extract and index metadata like location and duration from video files.
 
 You're welcome to open an issue if you experience issues with a specific file format.

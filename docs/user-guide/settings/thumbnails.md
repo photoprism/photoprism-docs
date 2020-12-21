@@ -4,25 +4,25 @@ For best results, you should (at least) set jpeg quality to 95 and use the "lanc
 
 ## Config Options ##
 
-`--jpeg-quality value, -q value`
+`--thumb-filter NAME, -f NAME`
 
-set to 95 for high-quality thumbnails (25-100) (default: 90) [$PHOTOPRISM_JPEG_QUALITY]
+downscaling filter NAME (best to worst: blackman, lanczos, cubic, linear) (default: "lanczos") [$PHOTOPRISM_THUMB_FILTER]
 
-`--thumb-size value, -s value`
+`--thumb-size PIXELS, -s PIXELS`
 
-default thumbnail size limit in pixels (720-3840) (default: 2048) [$PHOTOPRISM_THUMB_SIZE]
-
-`--thumb-limit value, -x value`
-
-on-demand thumbnail size limit in pixels (720-3840) (default: 3840) [$PHOTOPRISM_THUMB_LIMIT]
+static thumbnail size limit in PIXELS (720-7680) (default: 2048) [$PHOTOPRISM_THUMB_SIZE]
 
 `--thumb-uncached, -u`
 
-on-demand rendering of default thumbnails (high memory and cpu usage) [$PHOTOPRISM_THUMB_UNCACHED]
+enable dynamic thumbnail rendering (high memory and cpu usage) [$PHOTOPRISM_THUMB_UNCACHED]
 
-`--thumb-filter value, -f value`
+`--thumb-size-uncached PIXELS, -x PIXELS`
 
-resample filter (best to worst: blackman, lanczos, cubic, linear) (default: "lanczos") [$PHOTOPRISM_THUMB_FILTER]
+dynamic rendering size limit in PIXELS (720-7680) (default: 7680) [PHOTOPRISM_THUMB_SIZE_UNCACHED]
+
+`--jpeg-quality value, -q value`
+
+set to 95 for high-quality thumbnails (25-100) (default: 90) [$PHOTOPRISM_JPEG_QUALITY]
 
 ## Example ##
 

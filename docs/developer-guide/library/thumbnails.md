@@ -1,75 +1,48 @@
+# Thumbnail Rendering Settings
+
 We use the [disintegration/imaging](https://github.com/disintegration/imaging) package to create thumbnails.
 
-For best results, you should (at least) set jpeg quality to 95 and use the "lanczos" filter. Obviously this will require significantly more storage and CPU time. From our experience, "cubic" might be 30% faster than "lanczos" on modern desktop and server CPUs. Keep in mind that you only need to create thumbnails once and then can enjoy them for the rest of your life.
+You may change the settings for preview images in the *Advanced* settings tab (not available in public mode):
 
-## Config Options ##
+![](img/advanced-settings.jpg)
 
-`--thumb-filter NAME, -f NAME`
+For best results, you should choose a high JPEG quality > 90, and the *lanczos* downscaling filter.
+This will require additional storage and slows down indexing, but only once when indexing for the first time.
 
-downscaling filter NAME (best to worst: blackman, lanczos, cubic, linear) (default: "lanczos") [$PHOTOPRISM_THUMB_FILTER]
-
-`--thumb-size PIXELS, -s PIXELS`
-
-static thumbnail size limit in PIXELS (720-7680) (default: 2048) [$PHOTOPRISM_THUMB_SIZE]
-
-`--thumb-uncached, -u`
-
-enable dynamic thumbnail rendering (high memory and cpu usage) [$PHOTOPRISM_THUMB_UNCACHED]
-
-`--thumb-size-uncached PIXELS, -x PIXELS`
-
-dynamic rendering size limit in PIXELS (720-7680) (default: 7680) [PHOTOPRISM_THUMB_SIZE_UNCACHED]
-
-`--jpeg-quality value, -q value`
-
-set to 95 for high-quality thumbnails (25-100) (default: 90) [$PHOTOPRISM_JPEG_QUALITY]
-
-## Example ##
-
-You can limit the size of JPEG thumbnails using the `-s` parameter when you run commands:
-
-```
-photoprism -s 720 start
-```
-
-The minimum size is 720px. This will render the following images:
-
-![Screenshot 2020-01-08 at 22 10 30](https://user-images.githubusercontent.com/301686/72016344-e5fdfb80-3263-11ea-95b3-00564156140f.png)
-
-500px is used for tiles in search results, the others are mostly needed for classification.
-
-Size is still ~550kb with high quality (95). With lower JPEG quality (80), you'll get it down to ~100kb:
-
-```
-photoprism -s 720 -q 80 start
-```
+In comparison, the *cubic* filter may be 30% faster than *lanczos*.
+A JPEG quality setting of 95 results in a preview files size of about 500kb.
+Reducing the JPEG quality to 80 gets storage size down to ~100kb, and results in visible compression artifacts
+as in heavily compressed social media content.
 
 This page demonstrates and discusses the effects of JPEG compression: http://fotoforensics.com/tutorial-estq.php
 
-Image classification obviously works better with sharp images, so it's possible you'll get less accurate labels with higher compression. Please share your experience.
+Image classification also works better with sharp images,
+so it's likely you'll get less accurate labels with higher compression.
 
-If size limit is exceeded, for example because you use a large screen, originals will be used for displaying images in the frontend. This might result in the image displayed with wrong rotation if the browser doesn't rotate it automatically.
-
-## Sizes ##
-
+## Preview Sizes ##
 
 Name      | Source    | Width  | Height  | Use               |
 :---------|:----------|:------:|:-------:|:------------------|
-colors    | fit_720   | 3      | 3       | colors            |
-tile_50   | tile_500  | 50     | 50      | maps              |
-tile_100  | tile_500  | 100    | 100     | maps              |
-tile_224  | tile_500  | 224    | 224     | tensorflow        |
+colors    | fit_720   | 3      | 3       | color detection   |
+tile_50   | tile_500  | 50     | 50      | maps preview      |
+tile_100  | tile_500  | 100    | 100     | maps preview      |
+tile_224  | tile_500  | 224    | 224     | mosaic preview    |
 left_224  | fit_720   | 224    | 224     | tensorflow        |
 right_224 | fit_720   | 224    | 224     | tensorflow        |
-tile_500  |           | 500    | 500     | preview           |
-fit_720   |           | 720    | 720     | lightbox          |
-fit_1280  | fit_2048  | 1280   | 1024    | lightbox          |
-fit_1920  | fit_2048  | 1920   | 1200    | lightbox          |
-fit_2048  |           | 2048   | 2048    | lightbox          |
-fit_2560  |           | 2560   | 1600    | lightbox / retina |
-fit_3840  |           | 3840   | 2400    | lightbox / retina |
+tile_500  |           | 500    | 500     | cards preview     |
+fit_720   |           | 720    | 720     | photo viewer      |
+fit_1280  | fit_2048  | 1280   | 1024    | photo viewer      |
+fit_1920  | fit_2048  | 1920   | 1200    | photo viewer      |
+fit_2048  |           | 2048   | 2048    | photo viewer      |
+fit_2560  |           | 2560   | 1600    | photo viewer      |
+fit_3840  |           | 3840   | 2400    | photo viewer      |
 
-## Filters ##
+!!! note
+When the configured size limit is exceeded, for example if users have a larger screen,
+the photo viewer may be forced to use original image files instead.
+This may result in images displayed with the wrong orientation.
+
+## Downscaling Filters ##
 
 Source: https://ijarcce.com/wp-content/uploads/2016/02/IJARCCE-7.pdf
 
@@ -110,7 +83,7 @@ translated and scaled kernels is then evaluated at the
 desired pixel. Lanczos interpolation has the **best
 properties in terms of detail preservation and minimal
 generation of aliasing artifacts** for geometric
-transformations not involving strong down sampling. 
+transformations not involving strong down sampling.
 However higher order Lanczos interpolation requires high
 computational time, which makes it unsuitable for
 most commercial software.
@@ -123,17 +96,65 @@ Blackman is a modification of Lanczos that has better control of ringing artifac
 
 Original image:
 
-![srcImage](img/branches.png)
+![](img/branches.png)
 
 The same image resized from 600x400px to 150x100px using different resampling filters.
 From faster (lower quality) to slower (higher quality):
 
 Filter                    | Resize result
 --------------------------|---------------------------------------------
-Nearest Neighbor          | ![Screenshot](img/out_resize_nearest.png)
-Bilinear                  | ![dstImage](img/out_resize_linear.png)
-Sharp Bicubic             | ![dstImage](img/out_resize_catrom.png)
-Lanczos                   | ![dstImage](img/out_resize_lanczos.png)
+Nearest Neighbor          | ![](img/out_resize_nearest.png)
+Bilinear                  | ![](img/out_resize_linear.png)
+Sharp Bicubic             | ![](img/out_resize_catrom.png)
+Lanczos                   | ![](img/out_resize_lanczos.png)
+
+## What files will be created by PhotoPrism? ##
+
+The minimum size for static previews is 720px. This will render the following images in the cache folder:
+
+```
+cache/thumbnails/1/a/3/1a30c1f...9_100x100_center.jpg
+cache/thumbnails/1/a/3/1a30c1f...9_224x224_center.jpg
+cache/thumbnails/1/a/3/1a30c1f...9_224x224_left.jpg
+cache/thumbnails/1/a/3/1a30c1f...9_224x224_right.jpg
+cache/thumbnails/1/a/3/1a30c1f...9_3x3_resize.png
+cache/thumbnails/1/a/3/1a30c1f...9_500x500_center.jpg
+cache/thumbnails/1/a/3/1a30c1f...9_50x50_center.jpg
+cache/thumbnails/1/a/3/1a30c1f...9_720x720_fit.jpg
+```
+
+A static limit of 2048px renders the additional previews up to this size:
+
+```
+cache/thumbnails/1/a/3/1a30c1f...9_1280x1024_fit.jpg
+cache/thumbnails/1/a/3/1a30c1f...9_1920x1200_fit.jpg
+cache/thumbnails/1/a/3/1a30c1f...9_2048x2048_fit.jpg
+```
+
+## Config Options ##
+
+When using PhotoPrism in public mode, image quality preferences may be set in the application config file,
+or via command line parameter (requires a restart):
+
+`--thumb-filter NAME, -f NAME`
+
+downscaling filter NAME (best to worst: blackman, lanczos, cubic, linear) (default: "lanczos") [$PHOTOPRISM_THUMB_FILTER]
+
+`--thumb-size PIXELS, -s PIXELS`
+
+static thumbnail size limit in PIXELS (720-7680) (default: 2048) [$PHOTOPRISM_THUMB_SIZE]
+
+`--thumb-uncached, -u`
+
+enable dynamic thumbnail rendering (high memory and cpu usage) [$PHOTOPRISM_THUMB_UNCACHED]
+
+`--thumb-size-uncached PIXELS, -x PIXELS`
+
+dynamic rendering size limit in PIXELS (720-7680) (default: 7680) [PHOTOPRISM_THUMB_SIZE_UNCACHED]
+
+`--jpeg-quality value, -q value`
+
+set to 95 for high-quality thumbnails (25-100) (default: 90) [$PHOTOPRISM_JPEG_QUALITY]
 
 ## Links ##
 - https://en.wikipedia.org/wiki/Comparison_gallery_of_image_scaling_algorithms

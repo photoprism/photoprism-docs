@@ -152,4 +152,4 @@ dynamic rendering size limit in PIXELS (720-7680) (default: 7680) [PHOTOPRISM_TH
 
 `--jpeg-quality value, -q value`
 
-set to 95 for high-quality thumbnails (25-100) (default: 90) [$PHOTOPRISM_JPEG_QUALITY]
+choose 95 for high-quality thumbnails (25-100) (default: 92) [$PHOTOPRISM_JPEG_QUALITY]

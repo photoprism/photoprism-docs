@@ -67,11 +67,11 @@ nav:
       - Share:
           - Share album via link: user-guide/share/share.md
       - Settings:
+          - General: user-guide/settings/general.md
           - Library: user-guide/settings/library.md
-          - User Interface: user-guide/settings/ui.md
+          - Advanced: user-guide/settings/advanced.md
           - Account: user-guide/settings/account.md
-          - Places: user-guide/settings/places.md
-          - Thumbnails: user-guide/settings/thumbnails.md
+          # - Places: user-guide/settings/places.md
       - Use Cases:
           - Export files from Google Photos: user-guide/use-cases/google.md
           - Export files from Flickr: user-guide/use-cases/flickr.md

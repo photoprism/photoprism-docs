@@ -1,4 +1,4 @@
-# Maps & Places
+# Maps & Places Settings
 
 PhotoPrism includes four high-resolution world maps to see where you've been, and for rediscovering long-forgotten shots.
 You may choose your preferred map style and animation length in the *General* settings tab:

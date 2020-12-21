@@ -1,4 +1,6 @@
-# Image Quality Settings
+# Advanced Settings
+
+## Image Quality ##
 
 You may change the settings for preview images in the *Advanced* settings tab (not available in public mode):
 

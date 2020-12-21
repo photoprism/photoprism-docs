@@ -10,41 +10,41 @@ You can change the *theme* and *language* of the User interface.
 To make PhotoPrism suite your individual needs the following sections and functionalities can be en- or disabled.
 Disabled sections do not appear in the main navigation.
 
-#### Upload :material-cloud-upload: ####
+#### :material-cloud-upload: Upload ####
 When disabled, uploading files via [*upload*](../library/upload.md) is not possible. 
 This might be useful when you grant others access to your PhotoPrism but do not want them to upload photos.
 
-#### Download :material-cloud-download: ####
+#### :material-cloud-download: Download ####
 When disabled, no files can be downloaded.
 
-#### Share :material-share-variant: ####
+#### :material-share-variant: Share ####
 When disabled, album sharing and upload to remote services like Nextcloud is not possible.
 
-#### Archive :material-archive-arrow-down: ####
+#### :material-archive-arrow-down: Archive ####
 When disabled, there is no *Archive*. Photos that have been archived beforehand will appear in *Photos/Videos*.
 
-#### Edit :material-pencil: ####
+#### :material-pencil: Edit ####
 When disabled, it is not possible to edit photo information.
 
-#### Originals :material-file: ####
+#### :material-file: Originals ####
 When disabled, there is no *Originals* section.
 
-#### Moments :material-star: ####
+#### :material-star: Moments ####
 When disabled, there is no *Moments* section.
 
-#### Labels :material-label: ####
+#### :material-label: Labels ####
 When disabled, there is no *Labels* section and you cannot add or edit labels.
 
-#### Library :material-film: ####
+#### :material-film: Library ####
 When disabled, there is no *Library* section.
 
-#### Import :material-folder-plus: ####
+#### :material-folder-plus: Import ####
 When disabled, there is no possibility to [*import*](../library/import.md) photos. You need to use [*index*](../library/indexing.md) instead to add new photos.
 
-#### Logs :material-text: ####
+#### :material-text: Logs ####
 When disabled, server logs are not shown.
 
-#### Places :material-map-marker: ####
+#### :material-map-marker: Places ####
 When disabled, there is no *Places* section.
 
 ## Places ##

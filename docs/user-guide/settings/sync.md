@@ -21,7 +21,7 @@ so that you can automatically sync your latest pictures.
 **To configure manual upload:**
 
 1. Go to *Settings*
-2. Open *Backup tab*
+2. Open *Sync* tab
 3. Click into the upload cell of your Nextcloud server
 
 ![Screenshot](img/upload-1.png)
@@ -49,7 +49,7 @@ so that you can automatically sync your latest pictures.
 ## Backup/Sync files with Nextcloud ##
 
 1. Go to *Settings*
-2. Open *Backup tab*
+2. Open *Sync* tab
 3. Click into the sync cell of your nextcloud server
 ![Screenshot](img/sync-1.png)
 4. Enable synchronization in the upper right corner

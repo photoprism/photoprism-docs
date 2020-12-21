@@ -131,27 +131,16 @@ cache/thumbnails/1/a/3/1a30c1f...9_1920x1200_fit.jpg
 cache/thumbnails/1/a/3/1a30c1f...9_2048x2048_fit.jpg
 ```
 
-## Config Options ##
+## RAW Conversion ##
 
-When using PhotoPrism in public mode, image quality preferences may be set in the application config file, 
-or via command line parameter (requires a restart):
+Many photographers keep their originals in some sort of lossless RAW format instead of compressed JPEG, especially when shooting with a Digital SLR. Some [mobile phones](https://www.fredericpaulussen.be/how-to-raw-photos-huawei-p30-pro/) also support RAW or use HEIC/HEIF for a similar purpose. PhotoPrism aims at providing excellent support for all [RAW](https://en.wikipedia.org/wiki/Raw_image_format) formats, independent of camera brand and model. Please let us know when there is an issue with your specific device.
 
-`--thumb-filter NAME, -f NAME`
+Web browsers in general cannot display RAW image files. They need to be converted, which is what our *import* and *convert* commands do. You'll also find a checkbox for this step in our [Web UI](ui.md).
 
-downscaling filter NAME (best to worst: blackman, lanczos, cubic, linear) (default: "lanczos") [$PHOTOPRISM_THUMB_FILTER]
+In addition, PhotoPrism also supports TIFF, PNG, BMP and GIF files. Be aware that files in those formats often don't contain useful metadata and are typically used for screenshots, charts, graphs and icons only.
 
-`--thumb-size PIXELS, -s PIXELS`
+![](img/editPhoto.png)
 
-static thumbnail size limit in PIXELS (720-7680) (default: 2048) [$PHOTOPRISM_THUMB_SIZE]
-
-`--thumb-uncached, -u`
-
-enable dynamic thumbnail rendering (high memory and cpu usage) [$PHOTOPRISM_THUMB_UNCACHED]
-
-`--thumb-size-uncached PIXELS, -x PIXELS`
-
-dynamic rendering size limit in PIXELS (720-7680) (default: 7680) [PHOTOPRISM_THUMB_SIZE_UNCACHED]
-
-`--jpeg-quality value, -q value`
-
-choose 95 for high-quality thumbnails (25-100) (default: 92) [$PHOTOPRISM_JPEG_QUALITY]
+!!! info
+    Generated sidecar files will be stored outside your originals folder by default, so that
+    RAW to JPEG conversion also works in read-only mode.

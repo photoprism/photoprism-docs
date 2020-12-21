@@ -13,13 +13,15 @@ docker pull photoprism/photoprism-arm64:latest
 ```
 
 Pulling a new version can take several minutes, depending on your internet connection.
-You can use [Watchtower](https://github.com/containrrr/watchtower) to automatically keep images up-to-date:
+
+Adding [Watchtower](https://github.com/containrrr/watchtower) as a service in your `docker-compose.yml` will 
+automatically keep images up-to-date:
 
 ```docker
 services:
   watchtower:
-  image: containrrr/watchtower
-  restart: unless-stopped
-  volumes:
-    - "/var/run/docker.sock:/var/run/docker.sock"
+    image: containrrr/watchtower
+    restart: unless-stopped
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
 ```

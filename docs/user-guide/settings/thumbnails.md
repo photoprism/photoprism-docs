@@ -9,7 +9,7 @@ This will require additional storage and slows down indexing, but only once when
 
 In comparison, the *cubic* filter may be 30% faster than *lanczos*.
 A [JPEG quality](http://fotoforensics.com/tutorial-estq.php) setting of 95 results in a preview files size of about 500kb.
-Reducing the JPEG quality to 80 gets storage size down to ~100kb, and results in visible compression artifacts
+Reducing the JPEG quality to 80 gets storage size down to 100kb, and results in visible artifacts
 as in heavily compressed social media content.
 
 Image classification also works better with sharp images, 

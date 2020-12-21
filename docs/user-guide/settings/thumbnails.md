@@ -1,6 +1,6 @@
 # Image Quality Settings
 
-You may change quality settings for preview images in the Advanced Settings tab (not available in public mode):
+You may change the settings for preview images in the *Advanced* settings tab (not available in public mode):
 
 ![](img/advanced-settings.jpg)
 

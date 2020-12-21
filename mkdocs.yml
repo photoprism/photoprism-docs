@@ -61,15 +61,15 @@ nav:
           - Calendar: user-guide/organize/calendar.md
           - Download photos: user-guide/organize/download.md
           - Edit photos: user-guide/organize/edit.md
-      - Backup:
-          - Connect via WebDAV:  user-guide/backup/webdav.md
-          - Nextcloud Sync:  user-guide/backup/nextcloud.md
+      - Sync:
+          - Connect via WebDAV: user-guide/sync/webdav.md
       - Share:
           - Share album via link: user-guide/share/share.md
       - Settings:
           - General: user-guide/settings/general.md
           - Library: user-guide/settings/library.md
           - Advanced: user-guide/settings/advanced.md
+          - Sync:  user-guide/settings/sync.md
           - Account: user-guide/settings/account.md
           # - Places: user-guide/settings/places.md
       - Use Cases:

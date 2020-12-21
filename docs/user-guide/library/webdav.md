@@ -2,7 +2,7 @@
 In case you have PhotoPrism running on a server you can use WebDAV to add files to your *import* or *originals* folder.
 
 
-Just follow those [instructions](../backup/webdav.md).
+Just follow those [instructions](../sync/webdav.md).
 
 Once all files are added you can start [importing or indexing](import-vs-index.md) your files.
 

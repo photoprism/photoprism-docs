@@ -17,7 +17,7 @@ Say goodbye to solutions that force you to upload your visual memories to the cl
 * Includes four high-resolution [world maps](https://demo.photoprism.org/places) to see where you've been,
   and for rediscovering long-forgotten shots.
 * WebDAV clients, like Microsoft’s Windows Explorer or Apple's Finder, may 
-  [connect](user-guide/backup/webdav.md) directly to PhotoPrism so that you to can open, 
+  [connect](user-guide/sync/webdav.md) directly to PhotoPrism so that you to can open, 
   edit, and delete files from your computer or phone as if they were local. 
   You may easily sync your pictures with [Nextcloud](https://nextcloud.com/) as well.  
 * PhotoPrism feels [like a native app](https://en.wikipedia.org/wiki/Progressive_web_application) and, 

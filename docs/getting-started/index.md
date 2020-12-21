@@ -11,7 +11,7 @@ while videos show up in [Videos](../user-guide/organize/video.md).
 Counts are getting continuously updated in the navigation.
 
 If files are missing, they might be in [Review](../user-guide/organize/review.md) due to low quality
-or incomplete metadata. You can turn this and other features off in [Settings](../user-guide/settings/ui.md), 
+or incomplete metadata. You can turn this and other features off in [Settings](../user-guide/settings/general.md), 
 depending on your specific use case.
 
 !!! info

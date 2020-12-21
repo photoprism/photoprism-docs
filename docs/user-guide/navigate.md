@@ -25,7 +25,7 @@ Click to switch to a different search result view (cards: :material-view-column:
 
 #### 5. Upload Button ####
 
-:material-cloud-upload: opens the upload dialog. Available on most pages, unless read-only mode is enabled or upload is disabled in [Settings](settings/ui.md).
+:material-cloud-upload: opens the upload dialog. Available on most pages, unless read-only mode is enabled or upload is disabled in [Settings](settings/general.md).
 
 #### 6. Expanded Toolbar ####
 

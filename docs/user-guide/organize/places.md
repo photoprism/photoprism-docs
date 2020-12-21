@@ -10,7 +10,7 @@ When using the search only photos matching the search term are shown on the map.
 
 ![Screenshot](img/places-3.png)
 
-You can choose between different map styles like streets or topographic in the [settings](../settings/ui.md).
+You can choose between different map styles like streets or topographic in the [settings](../settings/general.md).
 
 !!! tip
     To switch from a photos card view directly to the location of a photo on the world map click on the location.

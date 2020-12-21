@@ -2,7 +2,7 @@
 
 ## Grouped Files ##
 
-In case you have "Stacks" configured in [*Settings*](../settings/ui.md) you might have photos that consist of more than one JPEG file.
+In case you have "Stacks" configured in [*Settings*](../settings/general.md) you might have photos that consist of more than one JPEG file.
 Grouped files are displayed in *Stacks*.
 
 ![Screenshot](img/stacks-1.png)
@@ -14,7 +14,7 @@ Grouped files are displayed in *Stacks*.
     2. Photos have been taken at the same location AND in the same second.
     3. Files have the same unique image or instance identifier.
     
-    You can configure this in [*Settings*](../settings/ui.md).
+    You can configure this in [*Settings*](../settings/general.md).
     
 
 

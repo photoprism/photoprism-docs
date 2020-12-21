@@ -49,7 +49,7 @@ Manually added labels can be deleted.
    ![Screenshot](img/remove-label-2.png)
 
 !!! info
-    You can hide Labels in [Settings](../settings/ui.md)
+    You can hide Labels in [Settings](../settings/general.md)
 
 ### Rename a label ###
 

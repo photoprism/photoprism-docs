@@ -33,7 +33,7 @@ This is a simplified configuration compared to our [Docker Compose](docker-compo
 
 * The `/photoprism/import` folder is not [mounted](https://docs.docker.com/storage/bind-mounts/) 
   so that you can't easily access it from your host machine. 
-  Uploading files or mounting it via [WebDAV](../user-guide/backup/webdav.md) 
+  Uploading files or mounting it via [WebDAV](../user-guide/sync/webdav.md) 
   is still possible.
 * Settings, index, sidecar files, and generated thumbnails will be stored 
   in `/photoprism/storage`. 

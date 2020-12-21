@@ -2,15 +2,15 @@
 
 ## Index ##
 
-#### Hide Private :material-lock: ####
+#### :material-lock: Hide Private ####
 
 Excludes content marked as private from search results, shared albums, labels and places.
 
-#### Quality Filter :material-eye: ####
+#### :material-eye: Quality Filter ####
 
 Non-photographic and low-quality images require a [review](../organize/review.md) before they appear in search results.
 
-#### Convert to JPEG :material-camera: ####
+#### :material-camera: Convert to JPEG ####
 
 Automatically creates JPEGs for other file types so that they can be displayed in a browser.
 
@@ -18,7 +18,7 @@ Automatically creates JPEGs for other file types so that they can be displayed i
     *Convert to JPEG* should not be disabled as this will effectively prevent PhotoPrism from indexing
     file types other than JPEG - unless files were already converted to JPEG, and stored using the same file name prefix.
 
-## Stacks :material-image-multiple: ##
+## Stacks ##
 
 Stacks group files with a similar frame of reference, but differences of quality, format, size or color.
 Go to *Photos > [Stacks](../organize/stacks.md)* to see all photo stacks in your library.

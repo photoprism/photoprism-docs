@@ -123,7 +123,7 @@ cache/thumbnails/1/a/3/1a30c1f...9_50x50_center.jpg
 cache/thumbnails/1/a/3/1a30c1f...9_720x720_fit.jpg
 ```
 
-A static limit of 2048px renders the additional previews up to this size:
+A static limit of 2048px renders additional previews up to this size:
 
 ```
 cache/thumbnails/1/a/3/1a30c1f...9_1280x1024_fit.jpg

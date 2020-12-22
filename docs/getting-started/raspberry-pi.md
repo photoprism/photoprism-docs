@@ -5,11 +5,11 @@ Big thank you to [Guy Sheffer](https://github.com/guysoft) for
 
 Download our [docker-compose.yml](https://dl.photoprism.org/docker/arm64/docker-compose.yml) file
 (right click and *Save Link As...* or use `wget`) to a folder of your choice, 
-change the [configuration](config-options.md) as needed, and run `sudo docker-compose up` to start PhotoPrism:
+change the [configuration](config-options.md) as needed, replace the image under mariadb: with linuxserver/mariadb and run `sudo docker-compose up` to start PhotoPrism:
 
 ```
 wget https://dl.photoprism.org/docker/arm64/docker-compose.yml
-sudo docker-compose up
+sudo docker-compose 
 ```
 
 See [Setup Using Docker Compose](docker-compose.md) for details.

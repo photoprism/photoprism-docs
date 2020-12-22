@@ -8,7 +8,7 @@ so that you can automatically sync your latest pictures.
 **To connect:**
 
 1. Go to *Settings*
-2. Open *Sync* tab*
+2. Open *Sync tab*
 3. Click *Add Server*
     ![Screenshot](img/nextcloud-connect.png)
 4. Fill in your WebDAV server url, username and password

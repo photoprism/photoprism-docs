@@ -1,14 +1,8 @@
 # Main navigation.
 nav:
-  - About:
+  - Getting Started:
     - Introduction: index.md
-    - Team: team.md
-    - Funding: funding.md
-    - Credits: credits.md
-    - License: license.md
-    - Contact: contact.md
-  - Setup:
-    - Introduction: getting-started/index.md
+    - Setup: getting-started/index.md
     - Docker Compose: getting-started/docker-compose.md
     - Config Options: getting-started/config-options.md
     - Docker: getting-started/docker.md
@@ -118,6 +112,12 @@ nav:
       - Docker: developer-guide/technologies/docker.md
       - Broadway: developer-guide/technologies/broadway.md
       - External APIs: developer-guide/technologies/external-apis.md
+  - About:
+      - Team: team.md
+      - Funding: funding.md
+      - Credits: credits.md
+      - License: license.md
+      - Contact: contact.md
 
 # External links.
 extra:

@@ -1,4 +1,4 @@
-# Getting Started
+# Setup
 
 To simplify running PhotoPrism on a server, we strongly recommend using [Docker Compose](docker-compose.md).
 It is available for Mac, Linux and Windows.

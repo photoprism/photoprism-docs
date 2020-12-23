@@ -1,122 +1,123 @@
 # Main navigation.
 nav:
-  - Introduction: index.md
-  - Team: team.md
-  - Funding: funding.md
-  - Credits: credits.md
-  - License: license.md
-  - Contact: contact.md
+  - About:
+    - Introduction: index.md
+    - Team: team.md
+    - Funding: funding.md
+    - Credits: credits.md
+    - License: license.md
+    - Contact: contact.md
   - Setup:
-      - Introduction: getting-started/index.md
-      - Docker Compose: getting-started/docker-compose.md
-      - Config Options: getting-started/config-options.md
-      - Docker: getting-started/docker.md
-      - Raspberry Pi: getting-started/raspberry-pi.md
-      - Demo Image: getting-started/demo.md
-      - Kubernetes: getting-started/kubernetes.md
-      - Scalability: getting-started/scalability.md
-      - Proxies:
-          - Nginx: getting-started/proxies/advanced-nginx-proxy-setup.md
-      - Updates: getting-started/updates.md
-      - Caching: getting-started/caching.md
-      - Support: getting-started/support.md
-      - FAQ: getting-started/faq.md
+    - Introduction: getting-started/index.md
+    - Docker Compose: getting-started/docker-compose.md
+    - Config Options: getting-started/config-options.md
+    - Docker: getting-started/docker.md
+    - Raspberry Pi: getting-started/raspberry-pi.md
+    - Demo Image: getting-started/demo.md
+    - Kubernetes: getting-started/kubernetes.md
+    - Scalability: getting-started/scalability.md
+    - Proxies:
+      - Nginx: getting-started/proxies/advanced-nginx-proxy-setup.md
+    - Updates: getting-started/updates.md
+    - Caching: getting-started/caching.md
+    - Support: getting-started/support.md
+    - FAQ: getting-started/faq.md
   - User Guide:
-      - Introduction: user-guide/index.md
-      # - Setting up: user-guide/setup.md
-      - Navigate: user-guide/navigate.md
-      - Index:
-          - Introduction: user-guide/library/import-vs-index.md
-          - Index Originals: user-guide/library/indexing.md
-          - Import Files: user-guide/library/import.md
-          - Upload via Web UI: user-guide/library/upload.md
-          - WebDAV Upload: user-guide/library/webdav.md
-          - Original Files: user-guide/library/files.md
-        #- Import from camera: user-guide.md
-        #- Import from Facebook: user-guide.md
-        #- Import from NAS: user-guide.md
-        #- Import from Apple Photos: user-guide.md
-        #- Import from One Drive: user-guide.md
-      # - Sync and Back Up:
-      # - WebDAV Sync
-      #    - Nextcloud: user-guide/nextcloud.md
-      - Organize:
-          - Browse:
-            - Sections: user-guide/organize/browse.md
-            - Views: user-guide/organize/views.md
-            - Search & Filters: user-guide/organize/search.md
-          #- Search Filter: user-guide/organize/search.md
-          - Review: user-guide/organize/review.md
-          - Stacks: user-guide/organize/stacks.md
-          - Panoramas: user-guide/organize/panoramas.md
-          - Scans: user-guide/organize/scans.md
-          - Private: user-guide/organize/private.md
-          - Archive: user-guide/organize/archive.md
-          - Albums: user-guide/organize/albums.md
-          - Folders: user-guide/organize/folders.md
-          - Labels: user-guide/organize/labels.md
-          - Places: user-guide/organize/places.md
-          - Videos: user-guide/organize/video.md
-          - Moments: user-guide/organize/moments.md
-          - Calendar: user-guide/organize/calendar.md
-          - Download photos: user-guide/organize/download.md
-          - Edit photos: user-guide/organize/edit.md
-      - Sync:
-          - Connect via WebDAV: user-guide/sync/webdav.md
-      - Share:
-          - Share album via link: user-guide/share/share.md
-      - Settings:
-          - General: user-guide/settings/general.md
-          - Library: user-guide/settings/library.md
-          - Advanced: user-guide/settings/advanced.md
-          - Sync:  user-guide/settings/sync.md
-          - Account: user-guide/settings/account.md
-          # - Places: user-guide/settings/places.md
-      - Use Cases:
-          - Export files from Google Photos: user-guide/use-cases/google.md
-          - Export files from Flickr: user-guide/use-cases/flickr.md
-          #- Link directories from remote:
-      - FAQ: user-guide/faq.md
-    # - Metadata: user-guide/metadata.md
+    - Introduction: user-guide/index.md
+    # - Setting up: user-guide/setup.md
+    - Navigate: user-guide/navigate.md
+    - Index:
+      - Introduction: user-guide/library/import-vs-index.md
+      - Index Originals: user-guide/library/indexing.md
+      - Import Files: user-guide/library/import.md
+      - Upload via Web UI: user-guide/library/upload.md
+      - WebDAV Upload: user-guide/library/webdav.md
+      - Original Files: user-guide/library/files.md
+      #- Import from camera: user-guide.md
+      #- Import from Facebook: user-guide.md
+      #- Import from NAS: user-guide.md
+      #- Import from Apple Photos: user-guide.md
+      #- Import from One Drive: user-guide.md
+    # - Sync and Back Up:
+    # - WebDAV Sync
+    #    - Nextcloud: user-guide/nextcloud.md
+    - Organize:
+      - Browse:
+        - Sections: user-guide/organize/browse.md
+        - Views: user-guide/organize/views.md
+        - Search & Filters: user-guide/organize/search.md
+      #- Search Filter: user-guide/organize/search.md
+      - Review: user-guide/organize/review.md
+      - Stacks: user-guide/organize/stacks.md
+      - Panoramas: user-guide/organize/panoramas.md
+      - Scans: user-guide/organize/scans.md
+      - Private: user-guide/organize/private.md
+      - Archive: user-guide/organize/archive.md
+      - Albums: user-guide/organize/albums.md
+      - Folders: user-guide/organize/folders.md
+      - Labels: user-guide/organize/labels.md
+      - Places: user-guide/organize/places.md
+      - Videos: user-guide/organize/video.md
+      - Moments: user-guide/organize/moments.md
+      - Calendar: user-guide/organize/calendar.md
+      - Download photos: user-guide/organize/download.md
+      - Edit photos: user-guide/organize/edit.md
+    - Sync:
+      - Connect via WebDAV: user-guide/sync/webdav.md
+    - Share:
+      - Share album via link: user-guide/share/share.md
+    - Settings:
+      - General: user-guide/settings/general.md
+      - Library: user-guide/settings/library.md
+      - Advanced: user-guide/settings/advanced.md
+      - Sync: user-guide/settings/sync.md
+      - Account: user-guide/settings/account.md
+      # - Places: user-guide/settings/places.md
+    - Use Cases:
+      - Export files from Google Photos: user-guide/use-cases/google.md
+      - Export files from Flickr: user-guide/use-cases/flickr.md
+      #- Link directories from remote:
+    - FAQ: user-guide/faq.md
+  # - Metadata: user-guide/metadata.md
   - Developer Guide:
-      - Introduction: developer-guide/index.md
-      - Setup: developer-guide/setup.md
-      - Directories: developer-guide/directories.md
-      - Configuration: developer-guide/configuration.md
-      - Tests: developer-guide/tests.md
-      - Issues: developer-guide/issues.md
-      - Pull Requests: developer-guide/pull-requests.md
-      - Code Quality: developer-guide/code-quality.md
-      - Documentation: developer-guide/documentation.md
-      - Translations: developer-guide/translations.md
-      - Frontend:
-          - Introduction: developer-guide/frontend/introduction.md
-          - Screenshots: developer-guide/frontend/screenshots.md
-          - UI Components: developer-guide/frontend/components.md
-          - Design: developer-guide/frontend/design.md
-          - REST API: developer-guide/frontend/rest-api.md
-          - Browsers: developer-guide/frontend/browsers.md
-      - Photo Library:
-          - Importing: developer-guide/library/importing.md
-          - Storage: developer-guide/library/storage.md
-          - Converting RAW to JPEG: developer-guide/library/converting.md
-          - High Efficiency Image File Format: developer-guide/library/heif.md
-          - Thumbnails: developer-guide/library/thumbnails.md
-          - Samples: developer-guide/library/samples.md
-      - Metadata:
-          - Geocoding: developer-guide/metadata/geocoding.md
-          - Color Extraction: developer-guide/metadata/colors.md
-          - Image Classification: developer-guide/metadata/classification.md
-          - Face Recognition: developer-guide/metadata/face-recognition.md
-          - XMP: developer-guide/metadata/xmp.md
-          - EXIF: developer-guide/metadata/exif.md
-          - Edit EXIF: developer-guide/metadata/edit-exif.md
-      - Technologies:
-          - Golang: developer-guide/technologies/golang.md
-          - TensorFlow: developer-guide/technologies/tensorflow.md
-          - Docker: developer-guide/technologies/docker.md
-          - Broadway: developer-guide/technologies/broadway.md
-          - External APIs: developer-guide/technologies/external-apis.md
+    - Introduction: developer-guide/index.md
+    - Setup: developer-guide/setup.md
+    - Directories: developer-guide/directories.md
+    - Configuration: developer-guide/configuration.md
+    - Tests: developer-guide/tests.md
+    - Issues: developer-guide/issues.md
+    - Pull Requests: developer-guide/pull-requests.md
+    - Code Quality: developer-guide/code-quality.md
+    - Documentation: developer-guide/documentation.md
+    - Translations: developer-guide/translations.md
+    - Frontend:
+      - Introduction: developer-guide/frontend/introduction.md
+      - Screenshots: developer-guide/frontend/screenshots.md
+      - UI Components: developer-guide/frontend/components.md
+      - Design: developer-guide/frontend/design.md
+      - REST API: developer-guide/frontend/rest-api.md
+      - Browsers: developer-guide/frontend/browsers.md
+    - Photo Library:
+      - Importing: developer-guide/library/importing.md
+      - Storage: developer-guide/library/storage.md
+      - Converting RAW to JPEG: developer-guide/library/converting.md
+      - High Efficiency Image File Format: developer-guide/library/heif.md
+      - Thumbnails: developer-guide/library/thumbnails.md
+      - Samples: developer-guide/library/samples.md
+    - Metadata:
+      - Geocoding: developer-guide/metadata/geocoding.md
+      - Color Extraction: developer-guide/metadata/colors.md
+      - Image Classification: developer-guide/metadata/classification.md
+      - Face Recognition: developer-guide/metadata/face-recognition.md
+      - XMP: developer-guide/metadata/xmp.md
+      - EXIF: developer-guide/metadata/exif.md
+      - Edit EXIF: developer-guide/metadata/edit-exif.md
+    - Technologies:
+      - Golang: developer-guide/technologies/golang.md
+      - TensorFlow: developer-guide/technologies/tensorflow.md
+      - Docker: developer-guide/technologies/docker.md
+      - Broadway: developer-guide/technologies/broadway.md
+      - External APIs: developer-guide/technologies/external-apis.md
 
 # External links.
 extra:

@@ -10,10 +10,10 @@ so that you can automatically sync your latest pictures.
 1. Go to *Settings*
 2. Open *Sync tab*
 3. Click *Add Server*
-    ![Screenshot](img/nextcloud-connect.png)
+    ![Screenshot](img/sync-1.png)
 4. Fill in your WebDAV server url, username and password
 5. Click *connect*
-    ![Screenshot](img/nextcloud-connect-2.png)
+    ![Screenshot](img/sync-2.png)
 6. Now your Nextcloud is connected with PhotoPrism
 
 ## Manually upload files to Nextcloud ##
@@ -24,10 +24,10 @@ so that you can automatically sync your latest pictures.
 2. Open *Sync* tab
 3. Click into the upload cell of your Nextcloud server
 
-![Screenshot](img/upload-1.png)
+![Screenshot](img/sync-upload-1.png)
 4. Select the folder to which photos should be uploaded and click *save*
 
-![Screenshot](img/upload-2.png)
+![Screenshot](img/sync-upload-2.png)
 
 **To upload files from PhotoPrism to Nextcloud:**
 
@@ -51,13 +51,13 @@ so that you can automatically sync your latest pictures.
 1. Go to *Settings*
 2. Open *Sync* tab
 3. Click into the sync cell of your nextcloud server
-![Screenshot](img/sync-1.png)
+![Screenshot](img/sync-sync-1.png)
 4. Enable synchronization in the upper right corner
 5. Choose the folder in which all your photos are located on Nextcloud
 6. Select how often you want your files to be synced
 7. Select the options that are suitable for you and click *save*
 
-![Screenshot](img/sync-2.png)
+![Screenshot](img/sync-sync-2.png)
 
 ### Remote Sync Options ###
 

@@ -15,11 +15,8 @@ When enabled, your instance will be updated with experimental features.
 #### Disable Backups ####
 This option prevents PhotoPrism from creating the following yml backups:
 
-- For photos in the `storage/sidecar`
-- For albums in `storage/albums/albums`
-- For months in `storage/albums/month`
-- For moments in `storage/albums/moments`
-- For states in `storage/albums/states`
+- For photos in `storage/sidecar`
+- For albums, months, states and folders in `storage/albums`
 
 #### Disable WebDAV ####
 This option prevents building WebDav connections. A restart is required for changes to be applied.
@@ -29,7 +26,6 @@ When selected, no geo-information is read from your files metadata. The Places s
 
 #### Disbale ExifTool ####
 This option prevents the creation of json files with exif data in `storage/sidecar`. 
-No exif data (like date or location) is read from your files exif information.
 
 #### Disable TensorFlow ####
 When selected, no labels are created for your files.

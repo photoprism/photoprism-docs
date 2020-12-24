@@ -7,11 +7,17 @@ Developers can skip this and move on to the [Developer Guide](../developer-guide
 An image for the [Raspberry Pi](raspberry-pi.md) is available as well.
 In addition, we plan to provide a single binary.
 
-!!! info
+!!! note "Windows"
     Windows users may need to [disable](img/docker-disable-wsl2.jpg) the WSL 2 based engine in *Docker Settings > General*
     to mount drives other than `C:`. They are advised to use this [docker-compose.yml](https://dl.photoprism.org/docker/windows/docker-compose.yml)
-    example config to get started. Please also [increase](img/docker-resources-advanced.jpg) the Docker memory limit to 4 GB as the default of 2 GB 
-    may reduce indexing performance.
+    example config to get started. Please also [increase](img/docker-resources-advanced.jpg) the Docker memory limit to 4 GB as the default of 2 GB
+    may reduce indexing performance or cause restarts.
+
+!!! note "MacOS"
+    MacOS users should [increase](img/docker-resources-advanced.jpg) the Docker memory limit to 4 GB 
+    as the default of 2 GB may reduce indexing performance or cause restarts.
+    They are advised to use this [docker-compose.yml](https://dl.photoprism.org/docker/macos/docker-compose.yml)
+    example config to get started.
 
 ### Step 1: Configure ###
 
@@ -54,9 +60,10 @@ If you don't need this feature, e.g. because you manage all files manually or
 use a different tool for importing, you can safely remove the volume. Using import is strictly 
 optional.
 
-Settings, index, sidecar files, and thumbnails will be stored in `~/.photoprism` by default. 
-You may use an [anonymous volume](https://docs.docker.com/storage/bind-mounts/) instead, just don't remove
-it completely so that you don't lose your index and albums after restarting or upgrading the container.
+Settings, index, sidecar files, and thumbnails will be stored in a `storage` sub-folder by default. 
+You may use an [anonymous volume](https://docs.docker.com/storage/bind-mounts/) or absolute path instead, 
+just don't remove it completely so that you don't lose your index and albums after restarting or 
+upgrading the container.
 
 !!! tip
     Your original media files won't be deleted, modified, or moved. 

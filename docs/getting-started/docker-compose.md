@@ -10,14 +10,14 @@ In addition, we plan to provide a single binary.
 !!! note "Windows"
     Windows users may need to [disable](img/docker-disable-wsl2.jpg) the WSL 2 based engine in *Docker Settings > General*
     to mount drives other than `C:`. They are advised to use this [docker-compose.yml](https://dl.photoprism.org/docker/windows/docker-compose.yml)
-    example config to get started. Please also [increase](img/docker-resources-advanced.jpg) the Docker memory limit 
+    example to get started. Please also [increase](img/docker-resources-advanced.jpg) the Docker memory limit 
     to 4 GB or more, as the default of 2 GB may reduce indexing performance or cause restarts.
 
 !!! note "MacOS"
     MacOS users should [increase](img/docker-resources-advanced.jpg) the Docker memory limit to 4 GB or more,
     as the default of 2 GB may reduce indexing performance or cause restarts.
     They are advised to use this [docker-compose.yml](https://dl.photoprism.org/docker/macos/docker-compose.yml)
-    example config to get started.
+    example to get started.
 
 ### Step 1: Configure ###
 

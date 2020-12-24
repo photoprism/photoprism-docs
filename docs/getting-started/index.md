@@ -14,11 +14,6 @@ If files are missing, they might be in [Review](../user-guide/organize/review.md
 or incomplete metadata. You can turn this and other features off in [Settings](../user-guide/settings/general.md), 
 depending on your specific use case.
 
-!!! info
-    We do our best to provide a complete, stable version very soon. Check the 
-    [roadmap](https://github.com/photoprism/photoprism/projects/5) for open issues.
-    Leave your email to get a [release notification](https://goo.gl/forms/KBPVGl9PCsOKrAv33).
-
 ## Roadmap ##
 
 Our vision is to provide the most user-friendly solution for browsing, organizing and sharing your personal photo collection.

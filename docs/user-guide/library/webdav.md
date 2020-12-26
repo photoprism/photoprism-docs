@@ -6,7 +6,7 @@ Just follow those [instructions](../sync/webdav.md).
 
 Once all files are added you can start [importing or indexing](import-vs-index.md) your files.
 
-<!--### Add photos via WebDAV on MacOS ###
+<!--### Add photos via WebDAV on macOS ###
 1. On your computer, open the Finder.
 2. In the Finder menu click "Go" and then "Connect to Server". 
 

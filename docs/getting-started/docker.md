@@ -23,7 +23,7 @@ docker run -d \
 
 !!! attention
     Please change `PHOTOPRISM_ADMIN_PASSWORD` so that PhotoPrism starts with a secure **initial password**.
-    Never use `photoprism` as password if you're running it on a public server.
+    Never use `photoprism` or `insecure` as password if you're running it on a public server.
 
 Now open http://localhost:2342/ in a Web browser to see the user interface
 and sign in using the password set in `PHOTOPRISM_ADMIN_PASSWORD`.
@@ -49,13 +49,17 @@ Multiple folders can be indexed by mounting them as sub-folders of `/photoprism/
 -v ~/Example:/photoprism/originals/Example
 ``` 
 
-!!! tip
+!!! info "Read-Only Mode"
     Running PhotoPrism in read-only mode disables all features that require write permissions,
     like importing, uploading, renaming, and deleting files.
     You may enable it by adding `-e PHOTOPRISM_READONLY="true"`.
     In addition, you may mount the *originals* folder with `:ro` flag so that Docker
     blocks write operations.
-        
+
+!!! attention
+    Please verify file system permissions before starting to index:
+    The *originals* folder must be readable, while *storage* must be readable and writeable.
+
 ### Step 2: Index your library ###
 
 Go to *Library* in our Web UI to start indexing or importing.

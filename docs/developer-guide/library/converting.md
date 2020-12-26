@@ -33,13 +33,13 @@ We had the idea to use [cgo](https://golang.org/cmd/cgo/) and link directly agai
 
 Tool | Command line options| Compatible OS | JPG Diff* | XMP support | Possible settings | EXIF Diff* | Compatible with Raspberry (ARM64)
 ------------ | ------------- | ------------ | ------------- | ------------ | ------------ | ------------| ------------
-[Darktable](https://www.darktable.org/usermanual/en/overview_chapter.html) | 1) `darktable-cli IMG_0310.CR2  IMG_0310_darktable1.jpg` 2) `darktable-cli IMG_0310_EDITED.CR2 IMG_0310_EDITED.xmp IMG_0310_EDITED_darktable2.jpg` | MacOSx, Linux, Windows | **** | yes (but seems to be not compatible with adobe xmps) | ? | **** | [yes](https://launchpad.net/ubuntu/artful/arm64/darktable)
-[Sips](https://ss64.com/osx/sips.html) |`sips -s format jpeg IMG_0310.CR2 --out IMG_0310_sips.jpg` | MacOSx | ***** | no | ? | **** | not available for ubuntu
-[Rawtherapee](https://rawpedia.rawtherapee.com/Command-Line_Options) | `rawtherapee-cli -o IMG_0310_rawtherapee.jpg -c IMG_0310.CR2` | MacOSx, Linux, Windows | *** | no | ? | **** | [yes](https://launchpad.net/ubuntu/eoan/arm64/rawtherapee)
-[UFraw](https://www.systutorials.com/docs/linux/man/1-ufraw/) | `ufraw-batch --out-type=jpg --output=IMG_0310_ufraw.jpg IMG_0310.CR2` | MacOSx, Linux, Windows| * | no | ? | ** | [yes](https://packages.ubuntu.com/search?keywords=ufraw)
-[ImageMagick](https://www.imagemagick.org/script/command-line-processing.php) | `magick IMG_0310.CR2 IMG_0310_magick.jpg` | MacOSx, Linux, Windows | * | no | ? | ** | [yes](https://packages.ubuntu.com/search?keywords=imagemagick)
-Digikam | ? | MacOSx, Linux, Windows | - | - | - | - | - | ? |
-Photiva | ? | MacOSx, Linux, Windows | - | - | - | - | - | ? |
+[Darktable](https://www.darktable.org/usermanual/en/overview_chapter.html) | 1) `darktable-cli IMG_0310.CR2  IMG_0310_darktable1.jpg` 2) `darktable-cli IMG_0310_EDITED.CR2 IMG_0310_EDITED.xmp IMG_0310_EDITED_darktable2.jpg` | macOS, Linux, Windows | **** | yes (but seems to be not compatible with adobe xmps) | ? | **** | [yes](https://launchpad.net/ubuntu/artful/arm64/darktable)
+[Sips](https://ss64.com/osx/sips.html) |`sips -s format jpeg IMG_0310.CR2 --out IMG_0310_sips.jpg` | macOS | ***** | no | ? | **** | not available for ubuntu
+[Rawtherapee](https://rawpedia.rawtherapee.com/Command-Line_Options) | `rawtherapee-cli -o IMG_0310_rawtherapee.jpg -c IMG_0310.CR2` | macOS, Linux, Windows | *** | no | ? | **** | [yes](https://launchpad.net/ubuntu/eoan/arm64/rawtherapee)
+[UFraw](https://www.systutorials.com/docs/linux/man/1-ufraw/) | `ufraw-batch --out-type=jpg --output=IMG_0310_ufraw.jpg IMG_0310.CR2` | macOS, Linux, Windows| * | no | ? | ** | [yes](https://packages.ubuntu.com/search?keywords=ufraw)
+[ImageMagick](https://www.imagemagick.org/script/command-line-processing.php) | `magick IMG_0310.CR2 IMG_0310_magick.jpg` | macOS, Linux, Windows | * | no | ? | ** | [yes](https://packages.ubuntu.com/search?keywords=imagemagick)
+Digikam | ? | macOS, Linux, Windows | - | - | - | - | - | ? |
+Photiva | ? | macOS, Linux, Windows | - | - | - | - | - | ? |
 `*` Compared to JPG/EXIF converted from photoshop
 
 ### Image Diff ###

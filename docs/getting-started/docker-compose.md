@@ -7,14 +7,14 @@ Developers can skip this and move on to the [Developer Guide](../developer-guide
 An image for the [Raspberry Pi](raspberry-pi.md) is available as well.
 In addition, we plan to provide a single binary.
 
-!!! note "Windows"
+!!! info "Windows"
     Windows users may need to [disable](img/docker-disable-wsl2.jpg) the WSL 2 based engine in *Docker Settings > General*
     to mount drives other than `C:`. Please use this [docker-compose.yml](https://dl.photoprism.org/docker/windows/docker-compose.yml)
     example to get started and [increase](img/docker-resources-advanced.jpg) the Docker memory limit 
     to 4 GB or more, as the default of 2 GB may reduce indexing performance or cause restarts.
 
-!!! note "MacOS"
-    MacOS users should [increase](img/docker-resources-advanced.jpg) the Docker memory limit to 4 GB or more,
+!!! info "macOS"
+    macOS users should [increase](img/docker-resources-advanced.jpg) the Docker memory limit to 4 GB or more,
     as the default of 2 GB may reduce indexing performance or cause restarts.
     Please use this [docker-compose.yml](https://dl.photoprism.org/docker/macos/docker-compose.yml)
     example to get started.
@@ -31,7 +31,7 @@ wget https://dl.photoprism.org/docker/docker-compose.yml
 
 !!! attention
     Please change `PHOTOPRISM_ADMIN_PASSWORD` so that PhotoPrism starts with a secure **initial password**.
-    Never use `photoprism` as password if you're running it on a public server.
+    Never use `photoprism` or `insecure` as password if you're running it on a public server.
 	
 Your personal photo and video collection will be mounted from `~/Pictures` by default,
 where `~` is a placeholder for your [home directory](https://en.wikipedia.org/wiki/Home_directory).
@@ -57,16 +57,16 @@ You may use an [anonymous volume](https://docs.docker.com/storage/bind-mounts/) 
 just don't remove it completely so that you don't lose your index and albums after restarting or 
 upgrading the container.
 
-!!! tip
+!!! info "Read-Only Mode"
     Running PhotoPrism in read-only mode disables all features that require write permissions,
     like importing, uploading, renaming, and deleting files.
     You may enable it by setting `PHOTOPRISM_READONLY` to `"true"`.
     In addition, you may mount the *originals* folder with `:ro` flag so that Docker 
     blocks write operations.
 
-!!! important
+!!! attention
     Please verify file system permissions before starting to index: 
-    Originals must be readable while the storage folder must be readable and writeable.
+    The *originals* folder must be readable, while *storage* must be readable and writeable.
 
 ### Step 2: Start the server ###
 

@@ -1,6 +1,6 @@
 # Funding
 
-This project is about freedom and privacy but not necessarily about free beer. We feel like it
+This software is about freedom and privacy but not necessarily about free beer. We feel like it
 would be a mistake to state there will be no costs, because clearly we have huge expenses, your server hardware
 will have a price tag and then maybe you'd like to have some extra features that need to be developed.
 

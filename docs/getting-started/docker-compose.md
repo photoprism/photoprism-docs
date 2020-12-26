@@ -118,7 +118,7 @@ You may configure PhotoPrism to store it in the same folder, next to the origina
 Pictures will become visible one after another. You can watch the indexer working in the terminal, 
 or the *Logs* tab in *Library*.
 
-!!! tip
+!!! tip "Reducing Server Load"
     If you're running out of memory while indexing, it often helps to limit the 
     [number of workers](https://docs.photoprism.org/getting-started/config-options/) by setting
     an explicit value for `PHOTOPRISM_WORKERS` in `docker-compose.yml`.
@@ -126,7 +126,7 @@ or the *Logs* tab in *Library*.
     configured so that indexing doesn't stop when there are memory usage spikes.
     As a measure of last resort, you may additionally disable image classification using TensorFlow.
 
-!!! tip
+!!! info "Complete Rescan"
     `photoprism index --all` will re-index all originals, including already indexed and unchanged files. This may be
     necessary after upgrading, especially to new major versions.
     

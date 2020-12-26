@@ -26,8 +26,9 @@ will be prioritized as well.
 
 ## System Requirements ##
 
-We recommend a modern computer with **at least 2 cores** and **4 GB of memory** for running PhotoPrism. Indexing large photo and 
-video collections significantly benefits from **fast, local SSD storage** and enough memory for caching. 
+We recommend hosting PhotoPrism on a server with **at least 2 cores** and **4 GB of memory**.
+Indexing large photo and video collections significantly benefits from fast,
+local SSD storage and enough memory for caching.
 
 If you're running out of memory - or other system resources - while indexing, please reduce the
 [number of workers](https://docs.photoprism.org/getting-started/config-options/)

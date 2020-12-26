@@ -58,10 +58,10 @@ just don't remove it completely so that you don't lose your index and albums aft
 upgrading the container.
 
 !!! tip
-    Your original media files won't be deleted, modified, or moved. 
-    If you still want to enable the read-only mode, you can do so by setting `PHOTOPRISM_READONLY` to `"true"`.
-    It will disable all features that require write permissions, like importing files via Web upload.
-    You may additionally want to mount the *originals* folder with `:ro` flag so that Docker 
+    Running PhotoPrism in read-only mode disables all features that require write permissions,
+    like importing, uploading, renaming, and deleting files.
+    You may enable it by setting `PHOTOPRISM_READONLY` to `"true"`.
+    In addition, you may mount the *originals* folder with `:ro` flag so that Docker 
     blocks write operations.
 
 !!! important

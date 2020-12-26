@@ -50,10 +50,10 @@ Multiple folders can be indexed by mounting them as sub-folders of `/photoprism/
 ``` 
 
 !!! tip
-    Your original media files won't be deleted, modified, or moved. 
-    If you still want to enable the read-only mode, you can do so by adding `-e PHOTOPRISM_READONLY="true"`.
-    It will disable all features that require write permissions, like importing files via Web upload.
-    You may additionally want to mount the *originals* folder with `:ro` flag so that Docker 
+    Running PhotoPrism in read-only mode disables all features that require write permissions,
+    like importing, uploading, renaming, and deleting files.
+    You may enable it by adding `-e PHOTOPRISM_READONLY="true"`.
+    In addition, you may mount the *originals* folder with `:ro` flag so that Docker
     blocks write operations.
         
 ### Step 2: Index your library ###

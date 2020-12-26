@@ -121,7 +121,7 @@ or the *Logs* tab in *Library*.
 !!! tip "Reducing Server Load"
     If you're running out of memory - or other system resources - while indexing, please limit the 
     [number of workers](https://docs.photoprism.org/getting-started/config-options/) by setting
-    a value less than the number of logical CPU cores for `PHOTOPRISM_WORKERS` in `docker-compose.yml`.
+    `PHOTOPRISM_WORKERS` to a value less than the number of logical CPU cores in `docker-compose.yml`.
     Also make sure your server has [swap](https://opensource.com/article/18/9/swap-space-linux-systems) 
     configured so that indexing doesn't cause restarts when there are memory usage spikes.
     As a measure of last resort, you may additionally disable image classification using TensorFlow.

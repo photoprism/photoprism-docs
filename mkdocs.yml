@@ -125,7 +125,7 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/photoprism
     - icon: fontawesome/brands/paypal
-      link: https://www.paypal.me/browseyourlife
+      link: https://www.paypal.me/photoprism
     - icon: material/chat
       link: https://gitter.im/browseyourlife/community
     - icon: fontawesome/brands/twitter

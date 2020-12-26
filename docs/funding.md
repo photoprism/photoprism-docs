@@ -6,7 +6,7 @@ will have a price tag and then maybe you'd like to have some extra features that
 
 You're welcome to support us via [GitHub Sponsors](https://github.com/sponsors/photoprism), 
 especially if you have feature requests or need help with using our software.
-In addition, you can find us on [Patreon](https://www.patreon.com/photoprism) and [PayPal](https://www.paypal.me/browseyourlife). 
+In addition, you can find us on [Patreon](https://www.patreon.com/photoprism), and [PayPal](https://www.paypal.me/photoprism). 
 
 Your continuous support helps...
 

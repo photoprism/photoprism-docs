@@ -136,6 +136,24 @@ We also maintain a complete list of [config options](config-options.md) in these
 Our Docker Compose [examples](https://dl.photoprism.org/docker/docker-compose.yml) are continuously maintained and inline documentation 
 has been added to simplify installation.
 
+### PhotoPrism seems getting stuck in a restart loop on my server!? ###
+
+These restarts are triggered by Docker (based on your configuration)
+when PhotoPrism is unable to start.
+They are typically caused by one or more of the following reasons:
+
+1. Your (virtual) server disk may be full.
+2. The storage folder may not be writable.
+3. Your database server may be unavailable.
+4. There are connection issues caused by a proxy or firewall.
+
+Please check the server logs for a detailed error message like "disk full" or "wrong permissions".
+If you're using Docker Compose, you may enter this command to see the last 20 log entries:
+
+```
+docker-compose logs --tail=20
+```
+
 ### How can I uninstall PhotoPrism? ###
 
 This depends on how you installed it. If you're running PhotoPrism with Docker Compose, 

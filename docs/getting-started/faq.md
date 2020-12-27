@@ -188,9 +188,21 @@ volumes:
     driver_opts:
       type: nfs
       # The IP of your NAS:
-      o: "addr=1.2.3.4,soft,rw" 
+      o: "username=user,password=secret,addr=1.2.3.4,soft,rw"
       # Share path on your NAS:
       device: ":/mnt/photos" 
+```
+
+For Windows / CIFS shares:
+
+```yaml
+volumes:
+  photoprism-originals:
+    driver: local
+    driver_opts:
+      type: cifs
+      o: "username=user,password=secret,rw"
+      device: "//host/folder"
 ```
 
 !!! info 

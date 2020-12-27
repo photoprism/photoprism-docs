@@ -136,7 +136,7 @@ We also maintain a complete list of [config options](config-options.md) in these
 Our Docker Compose [examples](https://dl.photoprism.org/docker/docker-compose.yml) are continuously maintained and inline documentation 
 has been added to simplify installation.
 
-### PhotoPrism seems getting stuck in a restart loop on my server!? ###
+### Why is PhotoPrism getting stuck in a restart loop? ###
 
 These restarts are triggered by Docker (based on your configuration)
 when PhotoPrism is unable to start.

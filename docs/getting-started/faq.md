@@ -166,7 +166,7 @@ docker-compose rm -s -v
 Please refer to the official Docker [documentation](https://docs.docker.com/compose/reference/rm/) 
 for further details.
 
-### How can I mount NFS shares with Docker? ###
+### How can I mount network shares with Docker? ###
 
 There are multiple ways of using network storage. 
 One of the easiest might be to directly mount NFS shares with Docker.
@@ -209,7 +209,7 @@ volumes:
     This was tested with TrueNAS and NFS, but other (network) file systems may be mounted with Docker as well.
 
 !!! tip 
-    Mounting the *import* folder to a share which is also accessible via other ways (e.g. Samba/CIFS) 
+    Mounting the *import* folder to a share which is also accessible via other ways (e.g. CIFS)
     is especially handy, as you can dump all data from a SD card / camera directly into that folder 
     and trigger the index in the GUI afterwards. So you can skip the upload dialog in the 
     GUI and it's a little faster.

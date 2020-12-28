@@ -40,8 +40,8 @@ This is a simplified configuration compared to our [Docker Compose](docker-compo
   You may also [mount](https://docs.docker.com/storage/bind-mounts/)
   this path to a local folder instead of an anonymous volume.
 
-The default port 2342 and other configuration values can be changed as needed,
-see [Config Options](config-options.md). 
+The default port 2342 and other configuration values may be changed as needed,
+see [Config Options](config-options.md) for details.
 
 Multiple folders can be indexed by mounting them as sub-folders of `/photoprism/originals`:
 

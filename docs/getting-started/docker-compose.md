@@ -81,7 +81,7 @@ and sign in using the password set in `PHOTOPRISM_ADMIN_PASSWORD`.
 You may change it in Settings, or using the `photoprism passwd` command in a terminal.
 
 The port and other basic settings can be changed in `docker-compose.yml`.
-Remember to stop and re-create the container whenever configuration values changed:
+Remember to stop and re-create the container whenever configuration values have been changed:
 
 ```
 docker-compose stop photoprism

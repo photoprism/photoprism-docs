@@ -54,7 +54,7 @@ spec:
     spec:
       containers:
       - name: photoprism
-        image: photoprism/photoprism:20190522
+        image: photoprism/photoprism:latest
         env:
         - name: PHOTOPRISM_DEBUG
           value: "true"
@@ -71,7 +71,7 @@ spec:
         - name: PHOTOPRISM_HTTP_HOST
           value: 0.0.0.0
         - name: PHOTOPRISM_HTTP_PORT
-          value: 2342
+          value: "2342"
         # Load database DSN & admin password from secret
         envFrom:
         - secretRef:
@@ -84,7 +84,7 @@ spec:
         - mountPath: /assets/photos/originals
           name: originals
           subPath: media/photos
-        - mountPath: /asssets/cache
+        - mountPath: /assets/cache
           name: photoprism
           subPath: cache
         - mountPath: /assets/photos/import

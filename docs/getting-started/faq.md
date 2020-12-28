@@ -146,6 +146,10 @@ They are typically caused by one or more of the following reasons:
 2. The storage folder may not be writable.
 3. Your database server may be unavailable.
 4. There are connection issues caused by a proxy or firewall.
+5. Kernel security modules such as
+   [AppArmor](https://wiki.ubuntu.com/AppArmor) or
+   [SELinux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux)
+   may be blocking permissions.
 
 Please check the server logs for a detailed error message like "disk full" or "wrong permissions".
 If you're using Docker Compose, you may enter this command to see the last 20 log entries:
@@ -153,6 +157,12 @@ If you're using Docker Compose, you may enter this command to see the last 20 lo
 ```
 docker-compose logs --tail=20
 ```
+
+Linux kernel security may be disabled on private servers, especially if you have no experience
+with configuring it properly. Use the commands `chmod` and `chown` to fix file system permissions
+on Linux and macOS.
+Available disk space can be displayed with `df -h`. The size of virtual disks and memory can be
+increased in Docker settings.
 
 ### How can I uninstall PhotoPrism? ###
 

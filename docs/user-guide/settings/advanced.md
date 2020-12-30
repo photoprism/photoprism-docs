@@ -5,9 +5,9 @@ and configuring image and thumbnail handling.
 
 ![](img/advanced-settings.jpg)
 
-The same options can all be controlled instead using their corresponding
-[config options](/getting-started/config-options/).
-Settings updated here will override values already configured.
+The same options can all be set using their corresponding
+[config options](/getting-started/config-options/) instead.
+Settings are saved in the `storage/config` directory.
 
 !!! note
     The Advanced Settings page is not available if public mode is [enabled](/getting-started/config-options/).

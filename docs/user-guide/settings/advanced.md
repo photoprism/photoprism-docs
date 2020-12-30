@@ -140,9 +140,35 @@ but set a high Dynamic Size Limit.
 This will allow the server to generate downsampled preview images on-demand,
 causing a delay when previewing a photo in full screen mode.
 
-See [below](/user-guide/settings/advanced/#what-files-will-be-created-by-photoprism)
-for the list of thumbnail images generated,
-or [this page](/developer-guide/library/thumbnails/#preview-sizes) for the uses of each size.
+#### What files will be created by PhotoPrism?
+
+The minimum size for static previews is 720px, so all images up to `720x720` will be rendered.
+Higher static limits will additionally generate previews only up to the defined limit.
+
+The files are generated in the `storage/cache/thumbnails` folder,
+with file paths dependent on the size and original file's hash, such as;
+
+`storage/cache/thumbnails/1/a/3/1a30c1f...9_100x100_center.jpg`
+
+The table below shows each generated size, with the PhotoPrism features using each.
+
+Name      | Width  | Height  | Use                      |
+:---------|:------:|:-------:|:-------------------------|
+colors    | 3      | 3       | Color Detection          |
+tile_50   | 50     | 50      | List Preview             |
+tile_100  | 100    | 100     | Maps Preview             |
+tile_224  | 224    | 224     | Mosaic Preview           |
+left_224  | 224    | 224     | TensorFlow               |
+right_224 | 224    | 224     | TensorFlow               |
+tile_500  | 500    | 500     | Cards Preview            |
+fit_720   | 720    | 720     | Mobile, TV               |
+fit_1280  | 1280   | 1024    | Mobile, HD Ready TV      |
+fit_1920  | 1920   | 1200    | Mobile, Full HD TV       |
+fit_2048  | 2048   | 2048    | Tablets, Cinema 2K       |
+fit_2560  | 2560   | 1600    | Quad HD, Retina Display  |
+fit_3840  | 3840   | 2400    | Ultra HD                 |
+fit_4096  | 4096   | 4096    | Ultra HD, Retina 4K      |
+fit_7680  | 7680   | 4320    | 8K Ultra HD 2, Retina 6K |
 
 ## Downscaling Filters
 
@@ -209,29 +235,6 @@ Sharp Bicubic             | ![](img/out_resize_catrom.png)
 Lanczos                   | ![](img/out_resize_lanczos.png)
 
 Source: [A Comparative Analysis of Image Interpolation Algorithms](https://ijarcce.com/wp-content/uploads/2016/02/IJARCCE-7.pdf)
-
-## What files will be created by PhotoPrism?
-
-The minimum size for static previews is 720px. This will render the following images in the cache folder:
-
-```
-cache/thumbnails/1/a/3/1a30c1f...9_100x100_center.jpg
-cache/thumbnails/1/a/3/1a30c1f...9_224x224_center.jpg
-cache/thumbnails/1/a/3/1a30c1f...9_224x224_left.jpg
-cache/thumbnails/1/a/3/1a30c1f...9_224x224_right.jpg
-cache/thumbnails/1/a/3/1a30c1f...9_3x3_resize.png
-cache/thumbnails/1/a/3/1a30c1f...9_500x500_center.jpg
-cache/thumbnails/1/a/3/1a30c1f...9_50x50_center.jpg
-cache/thumbnails/1/a/3/1a30c1f...9_720x720_fit.jpg
-```
-
-A static limit of 2048px renders additional previews up to this size:
-
-```
-cache/thumbnails/1/a/3/1a30c1f...9_1280x1024_fit.jpg
-cache/thumbnails/1/a/3/1a30c1f...9_1920x1200_fit.jpg
-cache/thumbnails/1/a/3/1a30c1f...9_2048x2048_fit.jpg
-```
 
 ## RAW Conversion
 

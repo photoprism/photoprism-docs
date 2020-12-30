@@ -45,7 +45,10 @@ Requires restart for changes to be applied.
 The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_DISABLE_WEBDAV`.
 
 ### Disable Places
-When selected, no geo-information is read from your files metadata.
+When selected, geo-information (latitude, longitude) will still be read (and indexed)
+from your files metadata, however PhotoPrism will not use reverse lookup to
+determine place names using those coordinates as it normally would.
+
 The Places section will not be visible.
 
 The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_DISABLE_PLACES`.

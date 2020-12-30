@@ -146,7 +146,7 @@ The minimum size for static previews is 720px, so all images up to `720x720` wil
 Higher static limits will additionally generate previews only up to the defined limit.
 
 The files are generated in the `storage/cache/thumbnails` folder,
-with file paths dependent on the size and original file's hash, such as;
+with file paths dependent on the size and original file's hash, such as:
 
 `storage/cache/thumbnails/1/a/3/1a30c1f...9_100x100_center.jpg`
 

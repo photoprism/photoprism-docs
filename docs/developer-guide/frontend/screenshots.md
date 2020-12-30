@@ -6,7 +6,7 @@ The first prototype was based on Bootstrap 4.
 ![](https://github.com/photoprism/photoprism/raw/144927b953a947fa6ae9ad6476281f647f0eca3f/docs/img/search.png)
 
 ## September 6, 2018 ##
-We switched to the [Vuetify](vuetifyjs.com/en/) component framework, which comes complete with everything modern Web applications need.
+We switched to the [Vuetify](https://vuetifyjs.com/en/) component framework, which comes complete with everything modern Web applications need.
 
 ![](https://github.com/photoprism/photoprism/raw/d5f46df060bfd53520280bfa67f011eefb7bf16d/docs/img/search.png)
 

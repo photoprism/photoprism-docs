@@ -4,7 +4,7 @@ For an introduction please read [Understanding Tensorflow using Go](https://pgal
 
 The TensorFlow API for Go is well suited to loading existing models and executing them within a Go application. It requires the [TensorFlow C library](https://www.tensorflow.org/install/lang_c) to be installed. A full TensorFlow installation is not needed.
 
-It is not possible to statically link against the C library, but the [issue is known](https://github.com/tensorflow/tensorflow/issues/15563) and there might be a [fix later this year](https://github.com/bazelbuild/bazel/issues/1920). 
+It is not possible to statically link against the C library, but the [issue is known](https://github.com/tensorflow/tensorflow/issues/15563) and there might be a [fix later this year](https://github.com/bazelbuild/bazel/issues/1920).
 
 ## Vision ##
 
@@ -26,4 +26,3 @@ Our long-term goal is to become an open platform for machine learning research b
 - https://ai.googleblog.com/2018/07/accelerated-training-and-inference-with.html - Accelerated Training and Inference with the Tensorflow Object Detection API
 - https://github.com/NanoNets/object-detection-sample-golang - NanoNets Object Detection API Example for Golang
 - https://hub.packtpub.com/object-detection-go-tensorflow/ - Implementing Object detection with Go using TensorFlow
-- https://github.com/tensorflow/tensorflow/tree/master/tensorflow/contrib/makefile - Build TensorFlow C lib statically

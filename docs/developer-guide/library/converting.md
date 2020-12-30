@@ -33,7 +33,7 @@ We had the idea to use [cgo](https://golang.org/cmd/cgo/) and link directly agai
 
 Tool | Command line options| Compatible OS | JPG Diff* | XMP support | Possible settings | EXIF Diff* | Compatible with Raspberry (ARM64)
 ------------ | ------------- | ------------ | ------------- | ------------ | ------------ | ------------| ------------
-[Darktable](https://www.darktable.org/usermanual/en/overview_chapter.html) | 1) `darktable-cli IMG_0310.CR2  IMG_0310_darktable1.jpg` 2) `darktable-cli IMG_0310_EDITED.CR2 IMG_0310_EDITED.xmp IMG_0310_EDITED_darktable2.jpg` | macOS, Linux, Windows | **** | yes (but seems to be not compatible with adobe xmps) | ? | **** | [yes](https://launchpad.net/ubuntu/artful/arm64/darktable)
+[Darktable](https://www.darktable.org/usermanual/en/overview/) | 1) `darktable-cli IMG_0310.CR2  IMG_0310_darktable1.jpg` 2) `darktable-cli IMG_0310_EDITED.CR2 IMG_0310_EDITED.xmp IMG_0310_EDITED_darktable2.jpg` | macOS, Linux, Windows | **** | yes (but seems to be not compatible with adobe xmps) | ? | **** | [yes](https://launchpad.net/ubuntu/artful/arm64/darktable)
 [Sips](https://ss64.com/osx/sips.html) |`sips -s format jpeg IMG_0310.CR2 --out IMG_0310_sips.jpg` | macOS | ***** | no | ? | **** | not available for ubuntu
 [Rawtherapee](https://rawpedia.rawtherapee.com/Command-Line_Options) | `rawtherapee-cli -o IMG_0310_rawtherapee.jpg -c IMG_0310.CR2` | macOS, Linux, Windows | *** | no | ? | **** | [yes](https://launchpad.net/ubuntu/eoan/arm64/rawtherapee)
 [UFraw](https://www.systutorials.com/docs/linux/man/1-ufraw/) | `ufraw-batch --out-type=jpg --output=IMG_0310_ufraw.jpg IMG_0310.CR2` | macOS, Linux, Windows| * | no | ? | ** | [yes](https://packages.ubuntu.com/search?keywords=ufraw)
@@ -47,7 +47,7 @@ The following table shows the difference between the JPEG files converted by Dar
 
 Tool         | Diff (left is Photoshop)                        |
 ------------ | ----------------------------------------------- |
-Darktable    |  <img src="https://dl.photoprism.org/assets/img/raw-converter/ps_vs_darktable.jpg" width="512"><br><img src="https://dl.photoprism.org/assets/img/raw-converter/ps_vs_darktable_2.jpg" width="512"> | 
+Darktable    |  <img src="https://dl.photoprism.org/assets/img/raw-converter/ps_vs_darktable.jpg" width="512"><br><img src="https://dl.photoprism.org/assets/img/raw-converter/ps_vs_darktable_2.jpg" width="512"> |
 [Sips](https://ss64.com/osx/sips.html) | <img src="https://dl.photoprism.org/assets/img/raw-converter/ps_vs_sips.jpg" width="512"><br><img src="https://dl.photoprism.org/assets/img/raw-converter/ps_vs_sips_2.jpg" width="512"> |
 [Rawtherapee](https://rawpedia.rawtherapee.com/Command-Line_Options) | <img src="https://dl.photoprism.org/assets/img/raw-converter/ps_vs_rawtherapee.jpg" width="512"><br><img src="https://dl.photoprism.org/assets/img/raw-converter/ps_vs_rawtherapee_2.jpg" width="512"> |
 [UFraw](https://www.systutorials.com/docs/linux/man/1-ufraw/) | <img src="https://dl.photoprism.org/assets/img/raw-converter/ps_vs_ufraw.jpg" width="512"> |
@@ -56,8 +56,8 @@ Darktable    |  <img src="https://dl.photoprism.org/assets/img/raw-converter/ps_
 ### EXIF Diff ###
 The following table shows the difference between the JPG files converted by the tools compared to JPG files converted by photoshop. 5 Images have been compared.
 
-Info | Photoshop | Sips | Darktable | Raw-therapee | Image Magick | UFraw 
------------- | ------------- | ------------ | ------------- | ------------ | ------------ | ------------ 
+Info | Photoshop | Sips | Darktable | Raw-therapee | Image Magick | UFraw
+------------ | ------------- | ------------ | ------------- | ------------ | ------------ | ------------
 Kind | identical |identical |identical | identical|identical | identical
 Size | 2.881.969 bytes (EXIF)/ 2.7M (ls -alh)| 2.673.777 bytes / 2.5M |  5.446.710 bytes / 5.2M always bigger | 3.467.998 bytes / 3.3M |  3.467.998 bytes / 3.3M | 1.558.587 bytes / 1.5M always smaller
 Where |reference |different |different |different |different| different

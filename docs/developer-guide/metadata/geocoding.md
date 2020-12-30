@@ -33,8 +33,8 @@ https://places.photoprism.app/v1/location/149ce78563
 
 ## Privacy ##
 
-Reverse geocoding requests won't be logged. Location data is cached though so 
-that it can be used to serve subsequent requests. 
+Reverse geocoding requests won't be logged. Location data is cached though so
+that it can be used to serve subsequent requests.
 Because of HTTPS, your internet provider can't see the exact request - only the fact that you exchanged data with our backend.
 
 Our API approximates coordinates, encodes them with [S2](https://s2geometry.io/resources/s2cell_statistics.html),
@@ -49,7 +49,7 @@ and doesn't care about street or house number:
 ## Open Source Libraries ##
 - https://tegola.io/ - An open source vector tile server written in Go
 - https://tegola.io/tutorials/tegola-with-open-layers/ - Using Tegola with OpenLayers
-- https://github.com/go-spatial/tegola-osm - scripts for importing and running a mirror of OSM with tegola 
+- https://github.com/go-spatial/tegola-osm - scripts for importing and running a mirror of OSM with tegola
 - https://pelias.io/ - Pelias Geocoder ([GitHub](https://github.com/pelias/pelias))
 - https://github.com/Leaflet/Leaflet - JavaScript library for mobile-friendly interactive maps
 - https://github.com/tidwall/tile38 - a geospatial database and realtime geofencing server
@@ -66,7 +66,7 @@ and doesn't care about street or house number:
 ## OpenStreetMap ##
 At the moment, we use the [reverse lookup API](https://wiki.openstreetmap.org/wiki/Nominatim#Reverse_Geocoding) of OpenStreetMap as well as the their tiles for our Leaflet-based Places page.
 
-Code: https://github.com/photoprism/photoprism/blob/develop/internal/photoprism/openstreetmap.go
+Code: [internal/maps/osm/location.go](https://github.com/photoprism/photoprism/blob/develop/internal/maps/osm/location.go)
 
 ## Commercial Maps ##
 - https://developers.google.com/maps/documentation/

@@ -18,11 +18,17 @@ Settings updated here will override values already configured.
 When enabled, debug logs are shown in *Library>Logs*.
 Requires restart.
 
+The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_DEBUG`.
+
 ### Read-only Mode
 When enabled, importing, uploading and deleting files is not possible.
 
+The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_READONLY`.
+
 ### Experimental Features
 When enabled, your instance will be updated with experimental features.
+
+The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_EXPERIMENTAL`.
 
 ### Disable Backups
 This option prevents creating the following `yml` backups:
@@ -30,21 +36,31 @@ This option prevents creating the following `yml` backups:
 - For photos in `storage/sidecar`
 - For albums, months, states and folders in `storage/albums`
 
+The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_DISABLE_BACKUPS`.
+
 ### Disable WebDAV
 This option prevents building WebDav connections.
 Requires restart for changes to be applied.
+
+The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_DISABLE_WEBDAV`.
 
 ### Disable Places
 When selected, no geo-information is read from your files metadata.
 The Places section will not be visible.
 
+The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_DISABLE_PLACES`.
+
 ### Disable ExifTool
 This option prevents the creation of `json` files with Exif data in `storage/sidecar`.
+
+The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_DISABLE_EXIFTOOL`.
 
 ### Disable TensorFlow
 When selected, image classification / object detection
 (using [TensorFlow](https://www.tensorflow.org/)) is disabled,
 so no labels are created for your files.
+
+The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_DISABLE_TENSORFLOW`.
 
 ## Images
 
@@ -62,12 +78,16 @@ but generates higher quality thumbnails.
 By comparison, the *cubic* filter may be 30% faster.
 See [section below](/user-guide/settings/advanced/#downscaling-filters) for detailed description of available filters.
 
+The equivalent [config option](/getting-started/config-options/) is `PHOTOPRISM_THUMB_FILTER`.
+
 ### Dynamic Previews
 
 Enable generating thumbnails on-the-fly as they're required
 (either for viewing or analysing with TensorFlow).
 This saves disk space, but is more processor-intensive and so not recommended
 when hosting on less powerful devices (such as Raspberry Pi).
+
+The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_THUMB_UNCACHED`.
 
 ### JPEG Quality
 
@@ -88,13 +108,17 @@ Image classification (which passes the thumbnails through TensorFlow)
 also works better with sharp images,
 so it's likely a lower quality will result in less accurate labels.
 
+The equivalent [config option](/getting-started/config-options/) is `PHOTOPRISM_JPEG_QUALITY`.
+
 ### Dynamic and Static Size Limits
 
 **Dynamic Size Limit**: During dynamic (on-demand) thumbnail generation,
 no thumbnails will be created above this size.
+The equivalent [config option](/getting-started/config-options/) is `PHOTOPRISM_THUMB_SIZE_UNCACHED`.
 
 **Static Size Limit**: During initial indexing or import (as thumbnails are generated),
 no thumbnails will be created above this size.
+The equivalent [config option](/getting-started/config-options/) is `PHOTOPRISM_THUMB_SIZE`.
 
 !!! warning
     When the configured size limits are exceeded (for example if users have a larger screen),
@@ -225,6 +249,10 @@ In addition, PhotoPrism also supports TIFF, PNG, BMP and GIF files. Be aware tha
 This controls the maximum size of downsampled JPEG preview files to create
 when converting original RAW images.
 
+The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_JPEG_SIZE`.
+
 ### Use Presets
 
 Disables simultaneous conversion of RAW files to apply Darktable presets.
+
+The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_DARKTABLE_PRESETS`.

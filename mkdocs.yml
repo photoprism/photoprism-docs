@@ -70,6 +70,7 @@ nav:
     - Use Cases:
       - Export files from Google Photos: user-guide/use-cases/google.md
       - Export files from Flickr: user-guide/use-cases/flickr.md
+      - Sync files from Dropbox: user-guide/use-cases/dropbox.md
       #- Link directories from remote:
     - FAQ: user-guide/faq.md
   # - Metadata: user-guide/metadata.md

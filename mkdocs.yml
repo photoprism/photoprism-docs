@@ -68,9 +68,9 @@ nav:
       - Account: user-guide/settings/account.md
       # - Places: user-guide/settings/places.md
     - Use Cases:
-      - Export files from Google Photos: user-guide/use-cases/google.md
-      - Export files from Flickr: user-guide/use-cases/flickr.md
-      - Sync files from Dropbox: user-guide/use-cases/dropbox.md
+      - Export from Google Photos: user-guide/use-cases/google.md
+      - Export from Flickr: user-guide/use-cases/flickr.md
+      - Sync with Dropbox: user-guide/use-cases/dropbox.md
       #- Link directories from remote:
     - FAQ: user-guide/faq.md
   # - Metadata: user-guide/metadata.md

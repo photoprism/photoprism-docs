@@ -133,30 +133,28 @@ Easy, isn't it?
     configured so that indexing doesn't cause restarts when there are memory usage spikes.
     As a measure of last resort, you may additionally disable image classification using TensorFlow.
 
-!!! info "Complete Rescan"
-    `photoprism index --all` will re-index all originals, including already indexed and unchanged files. This may be
-    necessary after upgrading, especially to new major versions.
-
 ### Command Reference ###
 
 !!! info "sudo"
     Please prefix with `sudo` if the current user doesn't have permission
     to run Docker commands.
 
-| Action        | Command                                                   |
-|---------------|-----------------------------------------------------------|
-| Update        | `docker-compose pull photoprism`                          |
-| Stop          | `docker-compose stop photoprism`                          |
-| Start         | `docker-compose up -d photoprism`                         |
-| View Logs     | `docker-compose logs --tail=25 -f`                        |
-| Open Terminal | `docker-compose exec photoprism bash`                     |
-| Show Help     | `docker-compose exec photoprism photoprism help`          |
-| Show Config   | `docker-compose exec photoprism photoprism config`        |
-| Reset         | `docker-compose exec photoprism photoprism reset`         |
-| Backup        | `docker-compose exec photoprism photoprism backup -a -i`  |
-| Restore       | `docker-compose exec photoprism photoprism restore -a -i` |
-| Index         | `docker-compose exec photoprism photoprism index`         |
-| Reindex       | `docker-compose exec photoprism photoprism index --all`   |
-| Import        | `docker-compose exec photoprism photoprism import`        |
+| Action          | Command                                                   |
+|-----------------|-----------------------------------------------------------|
+| Update          | `docker-compose pull photoprism`                          |
+| Stop            | `docker-compose stop photoprism`                          |
+| Start           | `docker-compose up -d photoprism`                         |
+| View Logs       | `docker-compose logs --tail=25 -f`                        |
+| Open Terminal   | `docker-compose exec photoprism bash`                     |
+| Show Help       | `docker-compose exec photoprism photoprism help`          |
+| Show Config     | `docker-compose exec photoprism photoprism config`        |
+| Reset           | `docker-compose exec photoprism photoprism reset`         |
+| Backup          | `docker-compose exec photoprism photoprism backup -a -i`  |
+| Restore         | `docker-compose exec photoprism photoprism restore -a -i` |
+| Index           | `docker-compose exec photoprism photoprism index`         |
+| Complete Rescan | `docker-compose exec photoprism photoprism index --all`   |
+| Import          | `docker-compose exec photoprism photoprism import`        |
 
-
+!!! tip "Complete Rescan"
+    `photoprism index --all` will re-index all originals, including already indexed and unchanged files. This may be
+    necessary after upgrading, especially to new major versions.

@@ -118,6 +118,13 @@ You may configure PhotoPrism to store it in the same folder, next to the origina
 Pictures will become visible one after another. You can watch the indexer working in the terminal, 
 or the *Logs* tab in *Library*.
 
+Your photos and videos can now be browsed, organized in albums, and shared with others.
+You may continue using your favorite tools, like Photoshop or Lightroom,
+to edit, add and delete files in the *originals* folder.
+Run `photoprism index`, or go to *Library* and click *Start*, to update the index as needed.
+
+Easy, isn't it?
+
 !!! tip "Reducing Server Load"
     If you're running out of memory - or other system resources - while indexing, please limit the 
     [number of workers](https://docs.photoprism.org/getting-started/config-options/) by setting
@@ -129,21 +136,25 @@ or the *Logs* tab in *Library*.
 !!! info "Complete Rescan"
     `photoprism index --all` will re-index all originals, including already indexed and unchanged files. This may be
     necessary after upgrading, especially to new major versions.
-    
-To import files, run `photoprism import` after putting them in the *import* folder:
 
-```
-docker-compose exec photoprism photoprism import
-```
+#### Command Reference ####
 
-For a list of commands and config options run:
+| Action   | Command                                                   |
+|----------|-----------------------------------------------------------|
+| Update   | `docker-compose pull photoprism`                          |
+| Stop     | `docker-compose stop photoprism`                          |
+| Start    | `docker-compose up -d photoprism`                         |
+| Logs     | `docker-compose logs --tail=25 -f`                        |
+| Terminal | `docker-compose exec photoprism bash`                     |
+| Help     | `docker-compose exec photoprism photoprism help`          |
+| Config   | `docker-compose exec photoprism photoprism config`        |
+| Reset    | `docker-compose exec photoprism photoprism reset`         |
+| Backup   | `docker-compose exec photoprism photoprism backup -a -i`  |
+| Restore  | `docker-compose exec photoprism photoprism restore -a -i` |
+| Index    | `docker-compose exec photoprism photoprism index`         |
+| Reindex  | `docker-compose exec photoprism photoprism index -a`      |
+| Import   | `docker-compose exec photoprism photoprism import`        |
 
-```
-docker-compose exec photoprism photoprism help
-```
-
-Your photos and videos can now be browsed, organized in albums, and shared with others.
-You may continue using your favorite tools, like Photoshop or Lightroom,
-to edit, add and delete files in the *originals* folder. 
-Run `photoprism index`, or go to *Library* and click *Start*, to update the index as needed.
-Easy, isn't it?
+!!! note
+    Please prefix with `sudo` if the current user doesn't have permission
+    to run Docker commands.

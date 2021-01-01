@@ -143,19 +143,20 @@ Easy, isn't it?
     Please prefix with `sudo` if the current user doesn't have permission
     to run Docker commands.
 
-| Action   | Command                                                   |
-|----------|-----------------------------------------------------------|
-| Update   | `docker-compose pull photoprism`                          |
-| Stop     | `docker-compose stop photoprism`                          |
-| Start    | `docker-compose up -d photoprism`                         |
-| Logs     | `docker-compose logs --tail=25 -f`                        |
-| Terminal | `docker-compose exec photoprism bash`                     |
-| Help     | `docker-compose exec photoprism photoprism help`          |
-| Config   | `docker-compose exec photoprism photoprism config`        |
-| Reset    | `docker-compose exec photoprism photoprism reset`         |
-| Backup   | `docker-compose exec photoprism photoprism backup -a -i`  |
-| Restore  | `docker-compose exec photoprism photoprism restore -a -i` |
-| Index    | `docker-compose exec photoprism photoprism index`         |
-| Reindex  | `docker-compose exec photoprism photoprism index -a`      |
-| Import   | `docker-compose exec photoprism photoprism import`        |
+| Action        | Command                                                   |
+|---------------|-----------------------------------------------------------|
+| Update        | `docker-compose pull photoprism`                          |
+| Stop          | `docker-compose stop photoprism`                          |
+| Start         | `docker-compose up -d photoprism`                         |
+| View Logs     | `docker-compose logs --tail=25 -f`                        |
+| Open Terminal | `docker-compose exec photoprism bash`                     |
+| Show Help     | `docker-compose exec photoprism photoprism help`          |
+| Show Config   | `docker-compose exec photoprism photoprism config`        |
+| Reset         | `docker-compose exec photoprism photoprism reset`         |
+| Backup        | `docker-compose exec photoprism photoprism backup -a -i`  |
+| Restore       | `docker-compose exec photoprism photoprism restore -a -i` |
+| Index         | `docker-compose exec photoprism photoprism index`         |
+| Reindex       | `docker-compose exec photoprism photoprism index --all`   |
+| Import        | `docker-compose exec photoprism photoprism import`        |
+
 

@@ -21,7 +21,7 @@ Our repository on Docker Hub: [`photoprism/photoprism-arm64`](https://hub.docker
     Please change `PHOTOPRISM_ADMIN_PASSWORD` so that PhotoPrism starts with a secure **initial password**.
     Never use `photoprism` or `insecure` as password if you're running it on a public server.
 
-## System Requirements ##
+### System Requirements ###
 
 You need to [boot](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)
 your Raspberry Pi 3/4 with the parameter `arm_64bit=1` in `config.txt` in order to use this image.
@@ -45,7 +45,11 @@ To avoid permission issues, docker-compose.yml should include the following secu
       - apparmor:unconfined
 ```
 
-## Command Reference ##
+### Command Reference ###
+
+!!! info "sudo"
+    Please prefix with `sudo` if the current user doesn't have permission
+    to run Docker commands.
 
 | Action   | Command                                                   |
 |----------|-----------------------------------------------------------|
@@ -62,7 +66,3 @@ To avoid permission issues, docker-compose.yml should include the following secu
 | Index    | `docker-compose exec photoprism photoprism index`         |
 | Reindex  | `docker-compose exec photoprism photoprism index -a`      |
 | Import   | `docker-compose exec photoprism photoprism import`        |
-
-!!! note
-    Please prefix with `sudo` if the current user doesn't have permission
-    to run Docker commands.

@@ -137,7 +137,11 @@ Easy, isn't it?
     `photoprism index --all` will re-index all originals, including already indexed and unchanged files. This may be
     necessary after upgrading, especially to new major versions.
 
-#### Command Reference ####
+### Command Reference ###
+
+!!! info "sudo"
+    Please prefix with `sudo` if the current user doesn't have permission
+    to run Docker commands.
 
 | Action   | Command                                                   |
 |----------|-----------------------------------------------------------|
@@ -155,6 +159,3 @@ Easy, isn't it?
 | Reindex  | `docker-compose exec photoprism photoprism index -a`      |
 | Import   | `docker-compose exec photoprism photoprism import`        |
 
-!!! note
-    Please prefix with `sudo` if the current user doesn't have permission
-    to run Docker commands.

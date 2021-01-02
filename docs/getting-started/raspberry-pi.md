@@ -1,8 +1,5 @@
 # Running PhotoPrism on a Raspberry Pi
 
-Big thank you to [Guy Sheffer](https://github.com/guysoft) for
-[building](https://github.com/photoprism/photoprism/issues/109) this!
-
 Download our [docker-compose.yml](https://dl.photoprism.org/docker/arm64/docker-compose.yml) file
 (right click and *Save Link As...* or use `wget`) to a folder of your choice, 
 change the [configuration](config-options.md) as needed, and run `docker-compose up` to start PhotoPrism:
@@ -41,6 +38,9 @@ To avoid permission issues, docker-compose.yml should include the following secu
       - seccomp:unconfined
       - apparmor:unconfined
 ```
+
+Big thank you to [Guy Sheffer](https://github.com/guysoft) for
+[building](https://github.com/photoprism/photoprism/issues/109) this!
 
 !!! tip "Reducing Server Load"
     If you're running out of memory - or other system resources - while indexing, please limit the

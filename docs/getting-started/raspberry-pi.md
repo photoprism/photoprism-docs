@@ -24,7 +24,7 @@ Our repository on Docker Hub: [`photoprism/photoprism-arm64`](https://hub.docker
 ### System Requirements ###
 
 You need to [boot](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)
-your Raspberry Pi 3/4 with the parameter `arm_64bit=1` in `config.txt` in order to use this image.
+your Raspberry Pi 3 / 4 with the parameter `arm_64bit=1` in `config.txt` in order to use this image.
 Alternatively, you may run the image on [UbuntuDockerPi](https://github.com/guysoft/UbuntuDockerPi).
 It's a 64bit Ubuntu Server with Docker pre-installed.
 

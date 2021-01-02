@@ -17,9 +17,9 @@ see [Setup Using Docker Compose](docker-compose.md) and [Config Options](config-
 
 Our repository on Docker Hub: [`photoprism/photoprism-arm64`](https://hub.docker.com/r/photoprism/photoprism-arm64)
 
-!!! attention
+!!! danger "Change Password"
     Please change `PHOTOPRISM_ADMIN_PASSWORD` so that PhotoPrism starts with a secure **initial password**.
-    Never use `photoprism` or `insecure` as password if you're running it on a public server.
+    Never use `photoprism`, or other easy-to-guess passwords, on a public server.
 
 ### System Requirements ###
 

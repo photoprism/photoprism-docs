@@ -29,9 +29,9 @@ and change the [configuration](config-options.md) as needed:
 wget https://dl.photoprism.org/docker/docker-compose.yml
 ```
 
-!!! attention
+!!! danger "Change Password"
     Please change `PHOTOPRISM_ADMIN_PASSWORD` so that PhotoPrism starts with a secure **initial password**.
-    Never use `photoprism` or `insecure` as password if you're running it on a public server.
+    Never use `photoprism`, or other easy-to-guess passwords, on a public server.
 	
 Your personal photo and video collection will be mounted from `~/Pictures` by default,
 where `~` is a placeholder for your [home directory](https://en.wikipedia.org/wiki/Home_directory).

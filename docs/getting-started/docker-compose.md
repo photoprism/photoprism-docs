@@ -29,7 +29,7 @@ and change the [configuration](config-options.md) as needed:
 wget https://dl.photoprism.org/docker/docker-compose.yml
 ```
 
-!!! danger "Change Password"
+!!! attention "Change Password"
     Please change `PHOTOPRISM_ADMIN_PASSWORD` so that PhotoPrism starts with a secure **initial password**.
     Never use `photoprism`, or other easy-to-guess passwords, on a public server.
 	

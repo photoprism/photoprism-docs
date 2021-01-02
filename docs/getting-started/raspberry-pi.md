@@ -33,14 +33,6 @@ It's a 64bit Ubuntu Server with Docker pre-installed.
 Indexing large photo and video collections significantly benefits from fast, local SSD storage 
 and enough memory for caching.
 
-!!! tip "Reducing Server Load"
-    If you're running out of memory - or other system resources - while indexing, please limit the
-    [number of workers](https://docs.photoprism.org/getting-started/config-options/) by setting
-    `PHOTOPRISM_WORKERS` to a value less than the number of logical CPU cores in `docker-compose.yml`.
-    Also make sure your server has [swap](https://opensource.com/article/18/9/swap-space-linux-systems)
-    configured so that indexing doesn't cause restarts when there are memory usage spikes.
-    As a measure of last resort, you may additionally disable image classification using TensorFlow.
-
 To avoid permission issues, docker-compose.yml should include the following security options:
 
 ```yaml
@@ -50,27 +42,10 @@ To avoid permission issues, docker-compose.yml should include the following secu
       - apparmor:unconfined
 ```
 
-### Command Reference ###
-
-The help command shows a complete list of commands and config options.
-Use the `--help` flag to see a detailed command info
-like `docker-compose exec photoprism photoprism backup --help`.
-
-| Action           | Command                                                   |
-|------------------|-----------------------------------------------------------|
-| Start            | `docker-compose up -d`                                    |
-| Stop             | `docker-compose stop`                                     |
-| Update           | `docker-compose pull`                                     |
-| View Logs        | `docker-compose logs --tail=25 -f`                        |
-| Open Terminal    | `docker-compose exec photoprism bash`                     |
-| Show Help        | `docker-compose exec photoprism photoprism help`          |
-| Show Config      | `docker-compose exec photoprism photoprism config`        |
-| Reset Database   | `docker-compose exec photoprism photoprism reset`         |
-| Backup Database  | `docker-compose exec photoprism photoprism backup -a -i`  |
-| Restore Database | `docker-compose exec photoprism photoprism restore -a -i` |
-| Index Originals  | `docker-compose exec photoprism photoprism index`         |
-| Import Files     | `docker-compose exec photoprism photoprism import`        |
-
-!!! info "Complete Rescan"
-    `photoprism index --all` will re-index all originals, including already indexed and unchanged files. This may be
-    necessary after upgrading, especially to new major versions.
+!!! tip "Reducing Server Load"
+    If you're running out of memory - or other system resources - while indexing, please limit the
+    [number of workers](https://docs.photoprism.org/getting-started/config-options/) by setting
+    `PHOTOPRISM_WORKERS` to a value less than the number of logical CPU cores in `docker-compose.yml`.
+    Also make sure your server has [swap](https://opensource.com/article/18/9/swap-space-linux-systems)
+    configured so that indexing doesn't cause restarts when there are memory usage spikes.
+    As a measure of last resort, you may additionally disable image classification using TensorFlow.

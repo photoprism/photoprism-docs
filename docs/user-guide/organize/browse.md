@@ -26,7 +26,7 @@ Shows videos that are not in review or archived or private.
 
 ![Screenshot](img/video-section.png)
 
-#### Albums :material-folder: ####
+#### Albums :material-image-album: ####
 Shows albums you created.
 
 ![Screenshot](img/album-section.png)
@@ -41,7 +41,7 @@ Displays all photos and videos with location information on a worldmap.
 
 ![Screenshot](img/places-section.png)
 
-#### Moments :material-star: ####
+#### Moments :material-compass: ####
 Discover albums we automatically create for you.
 
 ![Screenshot](img/moments.png)

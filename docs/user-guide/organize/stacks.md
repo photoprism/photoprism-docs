@@ -20,7 +20,7 @@ Grouped files are displayed in *Stacks*.
 
 ### Browse through related files ###
 
-1. Click on *sequence*
+1. Click on :material-camera-burst:
 
     ![Screenshot](img/sequential1.png)
     

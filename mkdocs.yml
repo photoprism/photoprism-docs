@@ -18,6 +18,7 @@ nav:
       - Apache 2.4: getting-started/proxies/apache-2.md
     - Advanced:
       - Scalability: getting-started/scalability.md
+      - Databases: getting-started/databases.md
       - Caching: getting-started/caching.md
       - NGINX: getting-started/proxies/advanced-nginx-proxy-setup.md
     - FAQ: getting-started/faq.md

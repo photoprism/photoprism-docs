@@ -1,7 +1,7 @@
 # Running PhotoPrism with Docker
 
-These instructions are for users who don't like Docker Compose for any reason and prefer pure Docker instead. If you are not
-sure, try using [Docker Compose](docker-compose.md) first.
+If you're not sure, try using [Docker Compose](docker-compose.md) first as it requires remembering
+less command line parameters, and is generally easier to start with for beginners.
 
 !!! info "Linux"
     All commands may have to be prefixed with `sudo` when not running as root.

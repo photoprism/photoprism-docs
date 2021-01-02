@@ -3,6 +3,12 @@
 These instructions are for users who don't like Docker Compose for any reason and prefer pure Docker instead. If you are not
 sure, try using [Docker Compose](docker-compose.md) first.
 
+!!! info "Linux"
+    All commands may have to be prefixed with `sudo` when not running as root.
+    Note that this will change the home directory `~` to `/root` in your configuration.
+    Kernel security modules such as SELinux have been reported to cause
+    [issues](https://docs.photoprism.org/getting-started/faq/#why-is-photoprism-getting-stuck-in-a-restart-loop).
+
 ### Step 1: Start the server ###
 
 Open a terminal and run this command after replacing `~/Pictures` with

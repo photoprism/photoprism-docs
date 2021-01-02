@@ -19,6 +19,12 @@ In addition, we plan to provide a single binary.
     Please use this [docker-compose.yml](https://dl.photoprism.org/docker/macos/docker-compose.yml)
     example to get started.
 
+!!! info "Linux"
+    All commands may have to be prefixed with `sudo` when not running as root.
+    Note that this will change the home directory `~` to `/root` in your configuration.
+    Kernel security modules such as SELinux have been reported to cause 
+    [issues](https://docs.photoprism.org/getting-started/faq/#why-is-photoprism-getting-stuck-in-a-restart-loop).
+
 ### Step 1: Configure ###
 
 Download our [docker-compose.yml](https://dl.photoprism.org/docker/docker-compose.yml) file
@@ -121,9 +127,6 @@ Easy, isn't it?
     As a measure of last resort, you may additionally disable image classification using TensorFlow.
 
 ### Command Reference ###
-
-All commands may have to be prefixed with `sudo` when not running as root.
-Note that this will change the home directory `~` to `/root` in your configuration.
 
 The help command shows a complete list of commands and config options.
 Use the `--help` flag to see a detailed command info 

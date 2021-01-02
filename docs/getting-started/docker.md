@@ -69,13 +69,20 @@ Alternatively, you can run this command in a terminal to index all files in your
 docker exec -ti photoprism photoprism index
 ```
 
-While indexing, a JPEG sidecar file may automatically be created for RAW, HEIF, TIFF, PNG, BMP, 
+While indexing, a JPEG sidecar file may automatically be created for RAW, HEIF, TIFF, PNG, BMP,
 and GIF files. It is required for classification and resampling. By default, it will be created
 in the *storage* folder, so that your originals can be mounted read-only.
 You may configure PhotoPrism to store it in the same folder, next to the original, instead.
 
-Pictures will become visible one after another. You can watch the indexer working in the terminal, 
+Pictures will become visible one after another. You can watch the indexer working in the terminal,
 or the *Logs* tab in *Library*.
+
+Your photos and videos can now be browsed, organized in albums, and shared with others.
+You may continue using your favorite tools, like Photoshop or Lightroom,
+to edit, add and delete files in the *originals* folder.
+Run `photoprism index`, or go to *Library* and click *Start*, to update the index as needed.
+
+Easy, isn't it?
 
 !!! tip "Reducing Server Load"
     If you're running out of memory - or other system resources - while indexing, please limit the
@@ -84,10 +91,6 @@ or the *Logs* tab in *Library*.
     Also make sure your server has [swap](https://opensource.com/article/18/9/swap-space-linux-systems) 
     configured so that indexing doesn't cause restarts when there are memory usage spikes.
     As a measure of last resort, you may additionally disable image classification using TensorFlow.
-
-!!! info "Complete Rescan"
-    `photoprism index --all` will re-index all originals, including already indexed and unchanged files. This may be
-    necessary after upgrading, especially to new major versions.
 
 ### Step 3: When you're done... ###
 
@@ -103,3 +106,27 @@ To remove the container completely:
 ```
 docker rm -f photoprism
 ```
+
+### Command Reference ###
+
+The help command shows a complete list of commands and config options.
+Use the `--help` flag to see a detailed command info
+like `docker exec -ti photoprism photoprism backup --help`.
+
+| Action           | Command                                               |
+|------------------|-------------------------------------------------------|
+| Update           | `docker pull photoprism/photoprism:latest`            |
+| Remove Container | `docker rm -f photoprism`                             |
+| View Logs        | `docker logs --tail=25 -f photoprism`                 |
+| Open Terminal    | `docker exec -ti photoprism bash`                     |
+| Show Help        | `docker exec -ti photoprism photoprism help`          |
+| Show Config      | `docker exec -ti photoprism photoprism config`        |
+| Reset Database   | `docker exec -ti photoprism photoprism reset`         |
+| Backup Database  | `docker exec -ti photoprism photoprism backup -a -i`  |
+| Restore Database | `docker exec -ti photoprism photoprism restore -a -i` |
+| Index Originals  | `docker exec -ti photoprism photoprism index`         |
+| Import Files     | `docker exec -ti photoprism photoprism import`        |
+
+!!! info "Complete Rescan"
+    `photoprism index --all` will re-index all originals, including already indexed and unchanged files. This may be
+    necessary after upgrading, especially to new major versions.

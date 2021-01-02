@@ -53,9 +53,9 @@ To avoid permission issues, docker-compose.yml should include the following secu
 
 | Action           | Command                                                   |
 |------------------|-----------------------------------------------------------|
-| Update           | `docker-compose pull photoprism`                          |
-| Stop             | `docker-compose stop photoprism`                          |
 | Start            | `docker-compose up -d photoprism`                         |
+| Stop             | `docker-compose stop photoprism`                          |
+| Update           | `docker-compose pull photoprism`                          |
 | View Logs        | `docker-compose logs --tail=25 -f`                        |
 | Open Terminal    | `docker-compose exec photoprism bash`                     |
 | Show Help        | `docker-compose exec photoprism photoprism help`          |

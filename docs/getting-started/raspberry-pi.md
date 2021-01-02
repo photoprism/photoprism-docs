@@ -52,6 +52,10 @@ To avoid permission issues, docker-compose.yml should include the following secu
 
 ### Command Reference ###
 
+The help command shows a complete list of commands and config options.
+Use the `--help` flag to see a detailed command info
+like `docker-compose exec photoprism photoprism backup --help`.
+
 | Action           | Command                                                   |
 |------------------|-----------------------------------------------------------|
 | Start            | `docker-compose up -d`                                    |
@@ -64,8 +68,7 @@ To avoid permission issues, docker-compose.yml should include the following secu
 | Reset Database   | `docker-compose exec photoprism photoprism reset`         |
 | Backup Database  | `docker-compose exec photoprism photoprism backup -a -i`  |
 | Restore Database | `docker-compose exec photoprism photoprism restore -a -i` |
-| Index Library    | `docker-compose exec photoprism photoprism index`         |
-| Complete Rescan  | `docker-compose exec photoprism photoprism index --all`   |
+| Index Originals  | `docker-compose exec photoprism photoprism index`         |
 | Import Files     | `docker-compose exec photoprism photoprism import`        |
 
 !!! info "Complete Rescan"

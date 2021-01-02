@@ -38,6 +38,7 @@ wget https://dl.photoprism.org/docker/docker-compose.yml
 !!! attention "Change Password"
     Please change `PHOTOPRISM_ADMIN_PASSWORD` so that PhotoPrism starts with a secure **initial password**.
     Never use `photoprism`, or other easy-to-guess passwords, on a public server.
+    A minimum length of 4 characters is required.
 	
 Your personal photo and video collection will be mounted from `~/Pictures` by default,
 where `~` is a placeholder for your [home directory](https://en.wikipedia.org/wiki/Home_directory).
@@ -85,6 +86,7 @@ docker-compose up -d
 Now open http://localhost:2342/ in a Web browser to see the user interface
 and sign in using the password set in `PHOTOPRISM_ADMIN_PASSWORD`.
 You may change it in Settings, or using the `photoprism passwd` command in a terminal.
+A minimum length of 4 characters is required.
 
 The port and other basic settings may be changed in `docker-compose.yml`.
 Remember to stop and re-create the container whenever configuration values have been changed:

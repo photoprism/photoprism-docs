@@ -21,7 +21,7 @@ docker run -d \
   --security-opt apparmor=unconfined \
   -p 2342:2342 \
   -e PHOTOPRISM_UPLOAD_NSFW="true" \
-  -e PHOTOPRISM_ADMIN_PASSWORD="please-change" \
+  -e PHOTOPRISM_ADMIN_PASSWORD="please_change" \
   -v /photoprism/storage \
   -v ~/Pictures:/photoprism/originals \
   photoprism/photoprism
@@ -30,6 +30,7 @@ docker run -d \
 !!! attention "Change Password"
     Please change `PHOTOPRISM_ADMIN_PASSWORD` so that PhotoPrism starts with a secure **initial password**.
     Never use `photoprism`, or other easy-to-guess passwords, on a public server.
+    A minimum length of 4 characters is required.
 
 Now open http://localhost:2342/ in a Web browser to see the user interface
 and sign in using the password set in `PHOTOPRISM_ADMIN_PASSWORD`.

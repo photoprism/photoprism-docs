@@ -12,6 +12,7 @@ sudo docker-compose up -d
 !!! attention "Change Password"
     Please change `PHOTOPRISM_ADMIN_PASSWORD` so that PhotoPrism starts with a secure **initial password**.
     Never use `photoprism`, or other easy-to-guess passwords, on a public server.
+    A minimum length of 4 characters is required.
 
 See [Setup Using Docker Compose](docker-compose.md) and [Config Options](config-options.md) for details.
 

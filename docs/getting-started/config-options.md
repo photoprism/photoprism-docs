@@ -4,7 +4,7 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_PUBLIC`             | --public, -p               | no authentication required, disables password protection
 `PHOTOPRISM_READONLY`           | --read-only, -r            | don't modify originals folder; disables import, upload, and delete
 `PHOTOPRISM_EXPERIMENTAL`       | --experimental, -e         | enable experimental features
-`PHOTOPRISM_ADMIN_PASSWORD`     | --admin-password PASSWORD  | initial admin PASSWORD, please use a secure default
+`PHOTOPRISM_ADMIN_PASSWORD`     | --admin-password PASSWORD  | initial admin PASSWORD, min 4 characters
 `PHOTOPRISM_CONFIG_FILE`        | --config-file FILENAME, -c FILENAME  | load initial config options from FILENAME
 `PHOTOPRISM_CONFIG_PATH`        | --config-path PATH         | folder containing application settings
 `PHOTOPRISM_ORIGINALS_PATH`     | --originals-path PATH      | originals PATH containing your photo and video collection

@@ -2,7 +2,7 @@
 
 Before you start, make sure you have [Docker](https://store.docker.com/search?type=edition&offering=community) installed on your system. 
 It is available for Mac, Linux and Windows.
-Developers can skip this and move on to the [Developer Guide](../developer-guide/index.md).
+Developers may skip this and move on to the [Developer Guide](../developer-guide/index.md).
 
 An image for the [Raspberry Pi](raspberry-pi.md) is available as well.
 In addition, we plan to provide a single binary.
@@ -80,30 +80,17 @@ Now open http://localhost:2342/ in a Web browser to see the user interface
 and sign in using the password set in `PHOTOPRISM_ADMIN_PASSWORD`.
 You may change it in Settings, or using the `photoprism passwd` command in a terminal.
 
-The port and other basic settings can be changed in `docker-compose.yml`.
+The port and other basic settings may be changed in `docker-compose.yml`.
 Remember to stop and re-create the container whenever configuration values have been changed:
 
 ```
 docker-compose stop photoprism
-docker-compose up -d --no-deps photoprism
+docker-compose up -d photoprism
 ```
-
-To also update the Docker image:
-
-```
-docker-compose pull photoprism
-docker-compose stop photoprism
-docker-compose up -d --no-deps photoprism
-```
-
-Be aware that later builds may expect more or different configuration values.
-We always keep our [example configuration](https://dl.photoprism.org/docker/) up to date for reference.
-In addition, you can run `photoprism help` inside the container to see all options incl. 
-environment variable names and a short description.
 
 ### Step 3: Index your library ###
 
-Go to *Library* in our Web UI to start indexing or importing. Alternatively, you can run this command 
+Go to *Library* in our Web UI to start indexing or importing. Alternatively, you may run this command 
 in a terminal to index all files in your *originals* folder:
 
 ```

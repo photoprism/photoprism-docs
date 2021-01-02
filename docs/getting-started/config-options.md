@@ -53,8 +53,8 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_HEIFCONVERT_BIN`    | --heifconvert-bin COMMAND  | HEIC/HEIF image convert COMMAND (default: "heif-convert")
 `PHOTOPRISM_FFMPEG_BIN`         | --ffmpeg-bin COMMAND       | FFmpeg COMMAND for video transcoding and cover images (default: "ffmpeg")
 `PHOTOPRISM_EXIFTOOL_BIN`       | --exiftool-bin COMMAND     | ExifTool COMMAND for enhanced metadata extraction (default: "exiftool")
-`PHOTOPRISM_DOWNLOAD_TOKEN`     | --download-token SECRET    | SECRET url token for file downloads
-`PHOTOPRISM_PREVIEW_TOKEN`      | --preview-token SECRET     | SECRET url token for preview images and video streaming (default: "public")
+`PHOTOPRISM_DOWNLOAD_TOKEN`     | --download-token SECRET    | optional static SECRET url token for file downloads
+`PHOTOPRISM_PREVIEW_TOKEN`      | --preview-token SECRET     | optional static SECRET url token for preview images and video streaming
 `PHOTOPRISM_THUMB_FILTER`       | --thumb-filter NAME, -f NAME | downscaling filter NAME (best to worst: blackman, lanczos, cubic, linear) (default: "lanczos")
 `PHOTOPRISM_THUMB_SIZE`         | --thumb-size PIXELS, -s PIXELS | static thumbnail size limit in PIXELS (720-7680) (default: 2048)
 `PHOTOPRISM_THUMB_UNCACHED`     | --thumb-uncached, -u       | enable dynamic thumbnail rendering (high memory and cpu usage if thumbnails haven't been generated yet)

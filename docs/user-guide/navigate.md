@@ -38,7 +38,7 @@ The number displayed is the count of currently selected items.
 It also contains the following buttons:
 
 * :material-archive-arrow-down: Archive photos
-* :material-folder: Add photos to album
+* :material-bookmark: Add photos to album
 * :material-cloud-download: Download photos
 * :material-lock: Mark photos as private
 * :material-pencil: Open edit dialogue

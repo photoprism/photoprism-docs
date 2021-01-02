@@ -6,7 +6,6 @@ nav:
     - Docker Compose: getting-started/docker-compose.md
     - Raspberry Pi: getting-started/raspberry-pi.md
     - Pure Docker: getting-started/docker.md
-    - Kubernetes: getting-started/kubernetes.md
     - Config Options: getting-started/config-options.md
     # - Support: getting-started/support.md
     - Getting Updates: getting-started/updates.md
@@ -18,6 +17,7 @@ nav:
       - Apache 2.4: getting-started/proxies/apache-2.md
     - Advanced:
       - Scalability: getting-started/scalability.md
+      - Kubernetes: getting-started/kubernetes.md
       - Databases: getting-started/databases.md
       - Caching: getting-started/caching.md
       - NGINX: getting-started/proxies/advanced-nginx-proxy-setup.md

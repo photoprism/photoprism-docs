@@ -52,9 +52,9 @@ Note that this will change the home directory `~` to `/root` in your configurati
 
 | Action           | Command                                                   |
 |------------------|-----------------------------------------------------------|
-| Start            | `docker-compose up -d photoprism`                         |
-| Stop             | `docker-compose stop photoprism`                          |
-| Update           | `docker-compose pull photoprism`                          |
+| Start            | `docker-compose up -d`                                    |
+| Stop             | `docker-compose stop`                                     |
+| Update           | `docker-compose pull`                                     |
 | View Logs        | `docker-compose logs --tail=25 -f`                        |
 | Open Terminal    | `docker-compose exec photoprism bash`                     |
 | Show Help        | `docker-compose exec photoprism photoprism help`          |

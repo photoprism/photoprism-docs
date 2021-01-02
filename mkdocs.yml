@@ -8,12 +8,18 @@ nav:
     - Pure Docker: getting-started/docker.md
     - Kubernetes: getting-started/kubernetes.md
     - Config Options: getting-started/config-options.md
-    - Proxies:
-      - Nginx: getting-started/proxies/advanced-nginx-proxy-setup.md
-    - Updates: getting-started/updates.md
-    - Caching: getting-started/caching.md
     # - Support: getting-started/support.md
-    - Scalability: getting-started/scalability.md
+    - Getting Updates: getting-started/updates.md
+    - Reverse Proxies:
+      - Traefik: getting-started/proxies/traefik.md
+      - Caddy 1: getting-started/proxies/caddy-1.md
+      - Caddy 2: getting-started/proxies/caddy-2.md
+      - NGINX: getting-started/proxies/nginx.md
+      - Apache 2.4: getting-started/proxies/apache-2.md
+    - Advanced:
+      - Scalability: getting-started/scalability.md
+      - Caching: getting-started/caching.md
+      - NGINX: getting-started/proxies/advanced-nginx-proxy-setup.md
     - FAQ: getting-started/faq.md
   - User Guide:
     - Introduction: user-guide/index.md

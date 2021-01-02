@@ -115,6 +115,12 @@ You may also choose to render thumbnails on-demand if you have a fast CPU and en
 However, storage is typically affordable enough for most users to go for better quality and 
 performance instead.
 
+### Can I skip creating thumbnails completely? ###
+
+The smallest [configurable](../user-guide/settings/advanced.md) limit is 720px for consumption 
+by the indexer and TensorFlow during image classification. Recreating and keeping them in memory
+is too demanding, even for the most powerful servers.
+
 ### I'm having issues understanding the difference between the import and originals folders? ###
 
 Import is a temporary folder from which you can move or copy files to *originals* in a structured way that avoids duplicates.

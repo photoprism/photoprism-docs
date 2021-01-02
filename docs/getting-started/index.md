@@ -42,7 +42,7 @@ and [MySQL 8](https://www.mysql.com/).
 
 !!! attention
     When installing PhotoPrism on a public server outside your home network, please **always run it
-    behind a secure HTTPS reverse proxy** like [Caddy](https://caddyserver.com/), 
-    [Traefik](https://containo.us/traefik/), or [Nginx](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/).
+    behind a secure HTTPS reverse proxy** like [Traefik](proxies/traefik.md), 
+    [Caddy](proxies/caddy-2.md), or [NGINX](proxies/nginx.md).
     Your files and passwords will be transmitted in clear text otherwise, and can be intercepted 
     by anyone in between including your provider, hackers, and governments.

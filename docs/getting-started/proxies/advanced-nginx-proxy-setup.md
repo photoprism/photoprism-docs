@@ -1,4 +1,4 @@
-# Advanced Nginx Proxy Setup
+# Advanced NGINX Proxy Setup
 
 *Note: This is contributed content and may be outdated. Click the edit link
 to perform changes and send a pull request.*
@@ -8,7 +8,7 @@ Using a reverse proxy in front of PhotoPrism has various benefits:
  * Make use of HTTP/2
  * Add encryption
  * Perform traffic optimization
- * Enhance security (nginx may block dangerous request patterns the embedded Go-based HTTP server does not know about)
+ * Enhance security (NGINX may block dangerous request patterns the embedded Go-based HTTP server does not know about)
 
 **If you consider exposing your PhotoPrism instance to the evil internet, you should at least secure it with a proper HTTPS encryption.**
 
@@ -33,7 +33,7 @@ If you want to expose your instance hosted at home, just use a **DynDNS**  provi
     Therefore only minimal setup is required.
     Just search for `your router name + DynDNS` ;)
     
-### Install nginx on your machine
+### Install NGINX on your machine
 If not already done, install the webserver on your machine which you wish to use as proxy. 
 This also can be the same host that is running the docker container.
 ```bash
@@ -66,8 +66,8 @@ After that you should have a new certificate in: `/etc/letsencrypt/live/photopri
 !!! tip 
     Please refer to Let's Encrypts [documentation](https://certbot.eff.org/docs/using.html#renewing-certificates) for automated certificate renewal. The certificates are valid for around 90 days.
 
-### Setup nginx
-Now that we have our certificate its time to setup the nginx itself.
+### Setup NGINX
+Now that we have our certificate its time to setup the NGINX itself.
 Since it is best practice to create a configuration file per application / domain, this is exactly what we gonna do.
 
 Create a new file `/etc/nginx/sites-enabled/photoprism.example.com` and put the following content in it.
@@ -150,7 +150,8 @@ Have a look at the individual comments in the configuration for a further descri
     Don't forget to change the PhotoPrism IP / DNS on the bottom of the config... ;)
    
    
-Once you've changed everything you need, let's restart the nginx.
+Once you've changed everything you need, let's restart `nginx`:
+
 ```bash
 service nginx restart
 ```

@@ -35,7 +35,7 @@ This is a simplified configuration compared to our [Docker Compose](docker-compo
   so that you can't easily access it from your host machine. 
   Uploading files or mounting it via [WebDAV](../user-guide/sync/webdav.md) 
   is still possible.
-* Settings, index, sidecar files, and generated thumbnails will be stored 
+* Settings, index, sidecar files, and thumbnails will be put 
   in `/photoprism/storage`. 
   You may also [mount](https://docs.docker.com/storage/bind-mounts/)
   this path to a local folder instead of an anonymous volume.

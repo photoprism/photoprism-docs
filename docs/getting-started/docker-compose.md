@@ -52,7 +52,7 @@ If you don't need this feature, e.g. because you manage all files manually or
 use a different tool for importing, you can safely remove the volume. Using import is strictly 
 optional.
 
-Settings, index, sidecar files, and thumbnails will be stored in a `storage` sub-folder by default. 
+Settings, index, sidecar files, and thumbnails will be put in `storage` by default. 
 You may use an [anonymous volume](https://docs.docker.com/storage/bind-mounts/) or absolute path instead, 
 just don't remove it completely so that you don't lose your index and albums after restarting or 
 upgrading the container.

@@ -8,12 +8,12 @@ nav:
     - Pure Docker: getting-started/docker.md
     - Kubernetes: getting-started/kubernetes.md
     - Config Options: getting-started/config-options.md
-    - Scalability: getting-started/scalability.md
     - Proxies:
       - Nginx: getting-started/proxies/advanced-nginx-proxy-setup.md
     - Updates: getting-started/updates.md
     - Caching: getting-started/caching.md
-    - Support: getting-started/support.md
+    # - Support: getting-started/support.md
+    - Scalability: getting-started/scalability.md
     - FAQ: getting-started/faq.md
   - User Guide:
     - Introduction: user-guide/index.md

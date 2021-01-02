@@ -1,6 +1,7 @@
 # Advanced Nginx Proxy Setup
 
-*Contributed by [@RAYs3T](https://github.com/RAYs3T)*
+*Note: This is contributed content and may be outdated. Click the edit link
+to perform changes and send a pull request.*
 
 Using a reverse proxy in front of PhotoPrism has various benefits:
 

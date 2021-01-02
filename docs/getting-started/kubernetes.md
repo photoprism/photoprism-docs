@@ -1,6 +1,7 @@
 # Running PhotoPrism with Kubernetes
 
-*Note: This is contributed content and may be outdated.*
+*Note: This is contributed content and may be outdated. Click the edit link
+to perform changes and send a pull request.*
 
 Running PhotoPrism on a Kubernetes cluster is straightforward.
 

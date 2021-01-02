@@ -125,6 +125,8 @@ nav:
       - Credits: credits.md
       - License: license.md
       - Contact: contact.md
+  - Release Notes:
+      - 2021: release-notes.md
 
 # External links.
 extra:

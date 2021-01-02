@@ -47,9 +47,8 @@ To avoid permission issues, docker-compose.yml should include the following secu
 
 ### Command Reference ###
 
-!!! info "sudo"
-    Please prefix with `sudo` if the current user doesn't have permission
-    to run Docker commands.
+All commands may have to be prefixed with `sudo` when not running as root.
+Note that this will change the home directory `~` to `/root` in your configuration.
 
 | Action           | Command                                                   |
 |------------------|-----------------------------------------------------------|
@@ -67,6 +66,6 @@ To avoid permission issues, docker-compose.yml should include the following secu
 | Complete Rescan  | `docker-compose exec photoprism photoprism index --all`   |
 | Import Files     | `docker-compose exec photoprism photoprism import`        |
 
-!!! note "Complete Rescan"
+!!! info "Complete Rescan"
     `photoprism index --all` will re-index all originals, including already indexed and unchanged files. This may be
     necessary after upgrading, especially to new major versions.

@@ -25,6 +25,6 @@ Go to *Photos > [Stacks](../organize/stacks.md)* to see all photo stacks in your
 
 PhotoPrism offers three methods for stacking files:
 
-* Place & Time
-* Unique ID
-* Sequential Name
+* :material-clock-outline: Place & Time 
+* :material-fingerprint: Unique ID
+* :material-format-list-numbered-rtl: Sequential Name

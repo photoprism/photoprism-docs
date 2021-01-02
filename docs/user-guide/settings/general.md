@@ -14,7 +14,7 @@ Disabled sections do not appear in the main navigation.
 When disabled, uploading files via [*upload*](../library/upload.md) is not possible. 
 This might be useful when you grant others access to your PhotoPrism but do not want them to upload photos.
 
-#### :material-cloud-download: Download ####
+#### :material-download: Download ####
 When disabled, no files can be downloaded.
 
 #### :material-share-variant: Share ####
@@ -29,7 +29,7 @@ When disabled, it is not possible to edit photo information.
 #### :material-file: Originals ####
 When disabled, there is no *Originals* section.
 
-#### :material-star: Moments ####
+#### :material-compass: Moments ####
 When disabled, there is no *Moments* section.
 
 #### :material-label: Labels ####

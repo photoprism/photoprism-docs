@@ -65,7 +65,7 @@ upgrading the container.
     blocks write operations.
 
 !!! attention
-    Please verify file system permissions before starting to index: 
+    Make sure there is enough disk space available and verify file system permissions before starting to index:
     The *originals* folder must be readable, while *storage* must be readable and writeable.
 
 ### Step 2: Start the server ###

@@ -18,6 +18,8 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_ASSETS_PATH`        | --assets-path PATH         | assets PATH for static resources like models and templates
 `PHOTOPRISM_WORKERS`            | --workers LIMIT, -w LIMIT  | LIMIT the number of indexing workers to reduce system load
 `PHOTOPRISM_WAKEUP_INTERVAL`    | --wakeup-interval SECONDS  | background worker wakeup interval in SECONDS
+`PHOTOPRISM_AUTO_INDEX`         | --auto-index SECONDS       | auto indexing safety delay in SECONDS (WebDAV)
+`PHOTOPRISM_AUTO_IMPORT`        | --auto-import SECONDS      | auto importing safety delay in SECONDS (WebDAV)
 `PHOTOPRISM_DISABLE_BACKUPS`    | --disable-backups          | don't backup photo and album metadata to YAML files
 `PHOTOPRISM_DISABLE_WEBDAV`     | --disable-webdav           | disable built-in WebDAV server
 `PHOTOPRISM_DISABLE_SETTINGS`   | --disable-settings         | users can not view or change settings

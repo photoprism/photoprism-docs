@@ -16,12 +16,14 @@ This guide aims for a little more advanced setup, with good security in mind.
 
 **Trough the entire guide we use `photoprism.example.com` as domain. You have to change all these occurrences with your own domain / DynDNS.**
 
-Also this was all tested on `ubuntu/20.04` - But the commands should work on a lot of other versions as well.
+Also, this was all tested on `ubuntu/20.04` - But the commands should work on a lot of other versions as well.
 If you use CentOS, SuSE, or any other distro, look up the commands for your package manager.
 
 ## Setup
+
 ### Domain setup
-First of all we need to decide what we want to use as domain / address. We will use a proper domain in this guide, but it will technically also work with just a static IP address. 
+
+First, we need to decide what we want to use as domain / address. We will use a proper domain in this guide, but it will technically also work with just a static IP address. 
 
 If you're lucky enough to have your own domain, just create a subdomain and use this for PhotoPrism.
 

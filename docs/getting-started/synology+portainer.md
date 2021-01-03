@@ -4,20 +4,25 @@ This guide will help you install Photoprism in your Synology NAS using [Portaine
 
 - install Portainer in your Synology NAS using Task Manager;
 - install Photoprism in your Synology NAS using Portainer, accessible over http / direct IP;
-- configure a reverse proxy in your Synology NAS to access Photoprism over https / custom domain name.
-
-!!! requirements
-    Make sure you have installed Synology's Docker app from the official package center.
+- (TO-DO) configure a reverse proxy in your Synology NAS to access Photoprism over https / custom domain name.
 
 ### Step 1: install Portainer in your Synology NAS using Task Manager ###
 
-Synology's official docker app is quite limited in terms of functionality and that is the reason why we will install Portainer first. It will make managing docker containers inside Synology much more easier and functional while sharing the same local docker endpoint (i.e. the same docker images / containers / volumes / etc. will be manageable in both Synology's app and Portainer). With Portainer we will use a docker-compose file to deploy a stack composed by Photoprism and MariaDB to quickly get Photoprism running in our NAS.
+Synology's official docker app is quite limited in terms of functionality and that is the reason why we will install Portainer first. It will make managing docker containers inside Synology much more easier and functional while sharing the same local docker endpoint (i.e. the same docker images / containers / volumes / etc. will be manageable in both Synology's app and Portainer). We could install it using the terminal / SSH connection to the NAS but in this way everything can be done using Synology's Diskstation Manager UI.
 
+To install Portainer:
 
+- install Synology's Docker app from the official package center;
+- open Synology0s file station app and browse to the newly created _docker_ shared folder;
+- create a folder named _portainer_ inside _docker_, which will persist relevant Portainer's data in our local filesystem.
+- open Synology's Control Panel > Task Scheduler and create a new Scheduled Task > User-defined script; you'll then need to fill in some details in the _General_, _Schedule_ and _Task Settings_ sections:
+..- in _general_ fill in:
+....- Task: use a meaningfull name, for eg. Install Portainer;
+....- User: keep this as _root_.
 
 ### Step 2: install Photoprism in your Synology NAS using Portainer, accessible over http / direct IP ###
 
 
-
+With Portainer we will use a docker-compose file to deploy a stack composed by Photoprism and MariaDB to quickly get Photoprism running in our NAS.
 
 ### Step 3 (TO-DO): configure a reverse proxy in your Synology NAS to access Photoprism over https / custom domain name ###

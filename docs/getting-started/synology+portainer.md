@@ -121,3 +121,4 @@ Synology allows you to configure a nginx reverse proxy to serve your application
 > To fix this issue, please make sure you didn't block WebSocket connections in your browser or firewall and check the configuration of any Web server that is in front of PhotoPrism.
 
 All help into sorting this out is greatly appreciated!
+

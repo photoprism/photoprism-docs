@@ -9,6 +9,8 @@ nav:
     - Config Options: getting-started/config-options.md
     # - Support: getting-started/support.md
     - Getting Updates: getting-started/updates.md
+    - Portainer:
+      - Synology: getting-started/portainer/synology.md
     - Reverse Proxies:
       - Traefik: getting-started/proxies/traefik.md
       - Caddy 1: getting-started/proxies/caddy-1.md
@@ -16,11 +18,11 @@ nav:
       - NGINX: getting-started/proxies/nginx.md
       - Apache 2.4: getting-started/proxies/apache-2.md
     - Advanced:
-      - Scalability: getting-started/scalability.md
-      - Kubernetes: getting-started/kubernetes.md
-      - Databases: getting-started/databases.md
-      - Caching: getting-started/caching.md
-      - NGINX: getting-started/proxies/advanced-nginx-proxy-setup.md
+      - Scalability: getting-started/advanced/scalability.md
+      - Kubernetes: getting-started/advanced/kubernetes.md
+      - Databases: getting-started/advanced/databases.md
+      - Caching: getting-started/advanced/caching.md
+      - NGINX: getting-started/advanced/nginx-proxy-setup.md
     - FAQ: getting-started/faq.md
   - User Guide:
     - Introduction: user-guide/index.md

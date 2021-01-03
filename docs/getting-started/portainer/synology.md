@@ -1,10 +1,12 @@
 # Setup Using Synology NAS and Portainer
 
-This guide will help you install Photoprism in your Synology NAS using [Portainer](https://www.portainer.io/), an open-source container manager system. The guide will cover the following steps:
+*Note: This is contributed content and work in progress. Click the edit link to perform changes and send a pull request.*
+
+This guide will help you install PhotoPrism in your Synology NAS using [Portainer](https://www.portainer.io/), an open-source container manager system. The guide will cover the following steps:
 
 - install Portainer in your Synology NAS using Task Manager;
 - configure Portainer to use your Synology's docker endpoint;
-- install Photoprism in your Synology NAS using Portainer, accessible over http / direct IP;
+- install PhotoPrism in your Synology NAS using Portainer, accessible over http / direct IP;
 - (TO-DO) configure a reverse proxy in your Synology NAS to access Photoprism over https / custom domain name.
 
 ### Step 1: install Portainer in your Synology NAS using Task Manager ###
@@ -20,7 +22,7 @@ To install Portainer:
 
     4.1. in _General_ fill in:
     
-      4.1.1. Task: use a meaningfull name, for eg. _Install Portainer_;
+      4.1.1. Task: use a meaningful name, for e.g. _Install Portainer_;
       
       4.1.2. User: keep this as _root_.
 
@@ -55,7 +57,7 @@ With Portainer installed we can use a docker-compose file to deploy a stack comp
 12. create a folder named _photoprism_ inside _docker_, which will persist relevant Photoprism's data in our local filesystem;
 13. inside _photoprism_ folder, create three more folders: _storage_, _originals_ and _database_.
 14. Open Portainer by visiting http://[YOUR-LOCAL-IP]:9000/;
-15. Click _Stacks_ in the left menu, then _Add stack_, give it a meaningfull name (for eg. Photoprism) and in the Web Editor place the below code, which was based on [Photoprism's default docker-compose yml file](https://dl.photoprism.org/docker/docker-compose.yml) but downgraded to compose version 2. **BE SURE TO USE YOUR OWN [LOCAL-PORT], [YOUR-ADMIN-PASS], [YOUR-DB-PASS] and [YOUR-LOCAL-IP] BY CHANGING THE VALUES ACCORDINGLY, AND CHECK THE LOCAL VOLUMES PATHS TO MATCH THOSE DEFINED IN STEP 13**.
+15. Click _Stacks_ in the left menu, then _Add stack_, give it a meaningful name (for eg. Photoprism) and in the Web Editor place the below code, which was based on [Photoprism's default docker-compose yml file](https://dl.photoprism.org/docker/docker-compose.yml) but downgraded to compose version 2. **BE SURE TO USE YOUR OWN [LOCAL-PORT], [YOUR-ADMIN-PASS], [YOUR-DB-PASS] and [YOUR-LOCAL-IP] BY CHANGING THE VALUES ACCORDINGLY, AND CHECK THE LOCAL VOLUMES PATHS TO MATCH THOSE DEFINED IN STEP 13**.
 
 ```
 version: '2'
@@ -108,16 +110,16 @@ services:
       - MYSQL_PASSWORD=[YOUR-DB-PASS]
 ```
 
-16. Click _Deploy the stack_. Give it a few minutes and Photoprism should be acessible in http://[YOUR-LOCAL-IP]:[LOCAL-PORT]/.
+16. Click _Deploy the stack_. Give it a few minutes and PhotoPrism should be accessible in http://[YOUR-LOCAL-IP]:[LOCAL-PORT]/.
 
-**IMPORTANT: Synology automaticaly creates thumbnail files inside a special @eaDir directory when you upload media files such as images. To prevent Photoprism to index these files place a .ppignore file with the following content inside docker/photoprism/originals folder:**
+**IMPORTANT: Synology automatically creates thumbnail files inside a special @eaDir directory when you upload media files such as images. To prevent Photoprism to index these files place a .ppignore file with the following content inside docker/photoprism/originals folder:**
 ```
 @eaDir
 ```
 
-### Step 4 (TO-DO): configure a reverse proxy in your Synology NAS to access Photoprism over https / custom domain name ###
+### Step 4 (TO-DO): configure a reverse proxy in your Synology NAS to access PhotoPrism over https / custom domain name ###
 
-Synology allows you to configure a nginx reverse proxy to serve your applications over HTTPS. Configurations can be made in Diskstation manager _Control Panel_, _Application Portal_, _Reverse proxy_. I was able to make Photoprism work over HTTPS but I am still getting the error:
+Synology allows you to configure a nginx reverse proxy to serve your applications over HTTPS. Configurations can be made in Diskstation manager _Control Panel_, _Application Portal_, _Reverse proxy_. I was able to make PhotoPrism work over HTTPS but I am still getting the error:
 
 > PhotoPrism uses WebSockets for two-way interactive communication between your browser and the server
 > If the connection fails and can't be reestablished, your browser won't receive photo counts, log messages, or metadata updates.

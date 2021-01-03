@@ -1,4 +1,4 @@
-# How to Optimize Caching for Performance
+# Optimizing Cache Performance
 
 *Note: This is contributed content and may be outdated. Click the edit link
 to perform changes and send a pull request.*

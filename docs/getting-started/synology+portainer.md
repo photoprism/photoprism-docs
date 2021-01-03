@@ -13,12 +13,12 @@ Synology's official docker app is quite limited in terms of functionality and th
 To install Portainer:
 
 1. install Synology's Docker app from the official package center;
-2. open Synology's file station app and browse to the newly created _docker_ shared folder;
+2. open Synology's File Station app and browse to the newly created _docker_ shared folder;
 3. create a folder named _portainer_ inside _docker_, which will persist relevant Portainer's data in our local filesystem.
 4. open Synology's Control Panel > Task Scheduler and create a new Scheduled Task > User-defined script; you'll then need to fill in some details in the _General_, _Schedule_ and _Task Settings_ sections:
-..1. in _general_ fill in:
-..2. Task: use a meaningfull name, for eg. Install Portainer;
-..3. User: keep this as _root_.
+  4.1. in _general_ fill in:
+    4.1.1. Task: use a meaningfull name, for eg. _Install Portainer_;
+    4.1.2. User: keep this as _root_.
 
 ### Step 2: install Photoprism in your Synology NAS using Portainer, accessible over http / direct IP ###
 

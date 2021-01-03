@@ -57,7 +57,7 @@ With Portainer installed we can use a docker-compose file to deploy a stack comp
 12. create a folder named _photoprism_ inside _docker_, which will persist relevant Photoprism's data in our local filesystem;
 13. inside _photoprism_ folder, create three more folders: _storage_, _originals_ and _database_.
 14. Open Portainer by visiting http://[YOUR-LOCAL-IP]:9000/;
-15. Click _Stacks_ in the left menu, then _Add stack_, give it a meaningfull name (for eg. Photoprism) and in the Web Editor place the below code, which was based on [Photoprism's default docker-compose yml file](https://dl.photoprism.org/docker/docker-compose.yml) but downgraded to compose version 2. **BE SURE TO USE YOUR OWN [LOCAL-PORT], [YOUR-ADMIN-PASS], [YOUR-DB-PASS] and [YOUR-LOCAL-IP] BY CHANGING THE VALUES ACCORDINGLY**.
+15. Click _Stacks_ in the left menu, then _Add stack_, give it a meaningfull name (for eg. Photoprism) and in the Web Editor place the below code, which was based on [Photoprism's default docker-compose yml file](https://dl.photoprism.org/docker/docker-compose.yml) but downgraded to compose version 2. **BE SURE TO USE YOUR OWN [LOCAL-PORT], [YOUR-ADMIN-PASS], [YOUR-DB-PASS] and [YOUR-LOCAL-IP] BY CHANGING THE VALUES ACCORDINGLY, AND CHECK THE LOCAL VOLUMES PATHS TO MATCH THOSE DEFINED IN STEP 13**.
 
 ```
 version: '2'

@@ -21,11 +21,13 @@ To install Portainer:
     4.1. in _General_ fill in:
     
       4.1.1. Task: use a meaningfull name, for eg. _Install Portainer_;
+      
       4.1.2. User: keep this as _root_.
 
     4.2. in _Schedule_ fill in:
     
       4.2.1. Date: set the task to run on a specific date (for eg. today) and choose _Do not repeat_. This task will be used just once to install Portainer, we don't want to run it afterwards;
+      
       4.2.2. Time: leave the default settings, they have no relevance;
 
     4.3. in _Task Settings_ fill in:
@@ -38,16 +40,12 @@ To install Portainer:
 
 6. Portainer should now be acessible in your local network in http://[YOUR-LOCAL-IP]:9000/.
 
-STEP DONE!
-
 ### Step 2: configure Portainer to use your Synology's docker endpoint ###
 
 7. Open Portainer by visiting http://[YOUR-LOCAL-IP]:9000/;
 8. Choose and confirm a strong password; you will manage Portainer using this password and the _admin_ username;
 9. Select _Docker - Manage the local Docker environment_ to link Portainer to your Synology's local docker endpoint and hit _Connect_; Portainer's admin page should open;
 10. Click _Endpoint_ in the left menu, then _local_ and under _Public IP_ place your local NAS IP (it should be the same [YOUR-LOCAL-IP] of step 6.
-
-STEP DONE!
 
 ### Step 3: install Photoprism in your Synology NAS using Portainer, accessible over http / direct IP ###
 
@@ -111,6 +109,11 @@ services:
 ```
 
 16. Click _Deploy the stack_. Give it a few minutes and Photoprism should be acessible in http://[YOUR-LOCAL-IP]:[LOCAL-PORT]/.
+
+**IMPORTANT: Synology automaticaly creates thumbnail files inside a special @eaDir directory when you upload media files such as images. To prevent Photoprism to index these files place a .ppignore file with the following content inside docker/photoprism/originals folder:**
+```
+@eaDir
+```
 
 ### Step 4 (TO-DO): configure a reverse proxy in your Synology NAS to access Photoprism over https / custom domain name ###
 

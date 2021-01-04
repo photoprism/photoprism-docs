@@ -13,7 +13,7 @@
 - Help: Updated WebSocket page
 - UX: Added `UI.Zoom` setting to [re-enable page zoom](https://github.com/photoprism/photoprism/issues/799)
 - UI: Updated default theme
-- Translations: Added Hebrew & Japanese
+- Translations: Added Hebrew & Japanese, updated Brazilian Portuguese
 - Albums & Cards View: Reduced tile size on large screens
 - WebDAV: Less verbose logging
 

@@ -8,8 +8,8 @@
 ### Development Preview ###
 
 - Import: [Extract metadata with ExifTool before moving](https://github.com/photoprism/photoprism/issues/810)
-- Import: Automatically create folder album when importing
-- Help: Update WebSocket page
+- Import: Automatically create folder albums
+- Help: Updated WebSocket page
 - UX: Added `UI.Zoom` setting to re-enable page zoom #799
 - UI: Added "Sunrise" theme
 - Translations: Added Hebrew & Japanese

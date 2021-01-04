@@ -12,7 +12,7 @@
 - Import: Automatically create folder albums
 - Help: Updated WebSocket page
 - UX: Added `UI.Zoom` setting to [re-enable page zoom](https://github.com/photoprism/photoprism/issues/799)
-- UI: Added "Sunrise" theme
+- UI: Updated default theme
 - Translations: Added Hebrew & Japanese
 - Albums & Cards View: Reduced tile size on large screens
 - WebDAV: Less verbose logging

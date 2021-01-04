@@ -7,7 +7,7 @@
 
 ### Development Preview ###
 
-- Config: Added [PHOTOPRISM_AUTO_INDEX & IMPORT](https://github.com/photoprism/photoprism/issues/281) to [Dockerfiles](https://github.com/photoprism/photoprism/commit/1d9ade4c22bba01e03182b04d5b819e0ee6211a5)
+- Config: Added [auto index & import](https://github.com/photoprism/photoprism/issues/281) defaults to [Dockerfiles](https://github.com/photoprism/photoprism/commit/1d9ade4c22bba01e03182b04d5b819e0ee6211a5)
 - Import: [Extract metadata with ExifTool before moving](https://github.com/photoprism/photoprism/issues/810)
 - Import: Automatically create folder albums
 - Help: Updated WebSocket page

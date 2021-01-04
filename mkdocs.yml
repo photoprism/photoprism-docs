@@ -20,6 +20,7 @@ nav:
     - Advanced:
       - Scalability: getting-started/advanced/scalability.md
       - Kubernetes: getting-started/advanced/kubernetes.md
+      - FreeBSD: getting-started/advanced/freebsd.md
       - Databases: getting-started/advanced/databases.md
       - Caching: getting-started/advanced/caching.md
       - NGINX: getting-started/advanced/nginx-proxy-setup.md

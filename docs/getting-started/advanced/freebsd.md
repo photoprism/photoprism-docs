@@ -1,18 +1,19 @@
 # Running PhotoPrism On FreeBSD
 
-*Note: This is contributed content and may be outdated. 
+*Note: This is contributed content. Click the edit link to perform changes and send a pull request.*
 
-For FreeBSD/FreeNAS users, a unofficial [PhotoPrism port](https://github.com/huo-ju/photoprism-freebsd-port) is available.
+For FreeBSD / FreeNAS users, an unofficial [PhotoPrism port](https://github.com/huo-ju/photoprism-freebsd-port) 
+is available.
 
-The port will compile and install libtensorflow 1.15.2 and build photoprism from source on FreeBSD.
+The port will compile and install libtensorflow 1.15.2 and build `photoprism` from source on FreeBSD.
 
-1. clone or download the port 
+**1. Clone or download the port:**
 
 ```
 git clone https://github.com/huo-ju/photoprism-freebsd-port
 ```
 
-2. Build TensorFlow and PhotoPrism from source, then Install
+**2. Build TensorFlow and PhotoPrism from source, then install:**
 
 ```
 cd photoprism-freebsd-port
@@ -22,7 +23,7 @@ make && make install
 
 When running the make config command, a CPU feature options dialog will be presented, and the default option is NONE.
 
-3. Add entries to rc.conf
+**3. Add entries to rc.conf:**
 
 ```
 photoprism_enable="YES"
@@ -34,8 +35,10 @@ You can add more command line parameters into photoprism_flags="" in the rc.conf
 
 `photoprism config` shows all config parameters. 
 
-4. Run the service
+**4. Start the service:**
 
 ```
 service photoprism start
 ```
+
+Done!

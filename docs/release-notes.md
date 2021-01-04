@@ -2,8 +2,13 @@
 
 !!! tip "Preview Builds"
     Update your `docker-compose.yml` to use `photoprism/photoprism:preview` instead of
-    `photoprism/photoprism:latest` for testing our latest development preview.
-    The image name for ARM64 is `photoprism/photoprism-arm64:preview`.
+    `photoprism/photoprism:latest` for testing our development preview.
+    The preview image for ARM64 is `photoprism/photoprism-arm64:preview`.
+
+### Development Preview ###
+
+- Albums & Cards View: Reduced tile size on large screens
+- WebDAV: Less verbose logging
 
 ### January 2, 2021 ###
 

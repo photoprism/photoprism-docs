@@ -5,7 +5,10 @@
     `photoprism/photoprism:latest` for testing our development preview.
     The preview image for ARM64 is `photoprism/photoprism-arm64:preview`.
 
-### Development Preview ###
+### January 4, 2021 ###
+
+[210104-7f9e806a-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/645/1/0),
+[210104-7f9e806a-Linux-aarch64](https://drone.photoprism.app/photoprism/photoprism/645/2/0)
 
 - Config: Added [auto index & import](https://github.com/photoprism/photoprism/issues/281) defaults to [Dockerfiles](https://github.com/photoprism/photoprism/commit/1d9ade4c22bba01e03182b04d5b819e0ee6211a5)
 - Import: [Extract metadata with ExifTool before moving](https://github.com/photoprism/photoprism/issues/810)

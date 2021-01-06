@@ -38,6 +38,7 @@ To install Portainer:
       ```
       docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /volume1/docker/portainer:/data portainer/portainer-ce
       ```
+      
 5. click _OK_; then, on the list of scheduled tasks, select the newly created task and hit _Run_; follow the prompts to install Portainer; in the end you can delete the task or keep it – just uncheck the _enabled_ checkbox to disable the task.
 
 6. Portainer should now be acessible in your local network in http://[YOUR-LOCAL-IP]:9000/.

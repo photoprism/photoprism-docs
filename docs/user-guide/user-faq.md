@@ -2,24 +2,24 @@
 
 ### What is the easiest way to install PhotoPrism on Mac/Windows? ###
 
+Please see [the setup instructions](../../getting-started/)
+
 ### Should I install PhotoPrism on my laptop or on a server? ###
+If you would like to access PhotoPrism from another device at any time you should install it on a desktop, NAS, or server. You may install PhotoPrism on a laptop, but it will not be available for use from another device if you close the lid or leave your wifi connection.
 
 ### Is there a mobile app available? ###
-We do not offer a native app via the app stores. 
-But our app is fully responsive and you can add it to the homescreen of your phone or tablet. 
-This way you can use it like any other app.
+We do not currently offer a native app via the app stores, but [there is one in development](https://github.com/photoprism/photoprism-mobile). Please feel free to [try it out](https://github.com/photoprism/photoprism-mobile#installation) and report any bugs.
 
-**iOS:**
+In the meantime, our app is fully responsive and iOS users can add it to the homescreen of your phone or tablet, so that you can use it like any other app.
+
+#### iOS: ####
 
 1. Open photoprism in the Safari browser on your phone or tablet
 2. Click :material-export-variant:
 3. Click add to home screen :material-plus-box-outline:
 
-**Android:**
-
-
 ### How can I find/change my import/originals directories? ###
-
+You may change see or change the volumes mounted as original directories using [the Docker Compose configuration](../../getting-started/docker-compose/#step-1-configure).
 
 ### Why do some of my photos get the import date as date instead of the date of the image creation? ###
 ?????
@@ -27,9 +27,11 @@ This way you can use it like any other app.
 ### Where are my files saved? ###
 Your original files stay in the directory you defined as Originals during the set up.
 
-### Can PhotoPrism do backups of my files? ###
-
 ### Can I backup images from my phone directly to PhotoPrism? ###
+This is currently an [experimental feature of the in-development mobile app](https://github.com/photoprism/photoprism-mobile#features). Some users may use another solution such as NextCloud in the meantime.
+
+### Can PhotoPrism do backups of my files? ###
+We recommend you backup your PhotoPrism library using a traditional backup tool.
 
 ### I removed a label but the related keyword is still existing, why? ##
 Keywords come from various sources: labels, file names, folder names, locations etc. 
@@ -90,3 +92,5 @@ Reading Title, Copyright, Artist, and Description from XMP sidecar files is impl
 Indexing embedded XMP is only possible via Exiftool, see above.
 
 ### What is the advantage of PhotoPrism being OpenSource for me as a user? ###
+
+You may view the issue tracker to vote on issues and give feedback directly to the developers. Also, because the source code is available, the community of open source developers may view it to check that no security issues exist.

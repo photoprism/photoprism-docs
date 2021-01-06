@@ -105,6 +105,7 @@ nav:
     - Photo Library:
       - Importing: developer-guide/library/importing.md
       - Storage: developer-guide/library/storage.md
+      - Encryption: developer-guide/library/encryption.md
       - Converting RAW to JPEG: developer-guide/library/converting.md
       - High Efficiency Image File Format: developer-guide/library/heif.md
       - Thumbnails: developer-guide/library/thumbnails.md

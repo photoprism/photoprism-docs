@@ -38,7 +38,7 @@ make build-go
 ./photoprism start
 ```
 
-You can see a list of all `make` targets in our [Makefile](https://github.com/photoprism/photoprism/blob/develop/Makefile). For example, `make test` will run teht tests and `make install` will build a `photoprism` production binary without debug information and install it in the user's directory including all assets.
+You can see a list of all `make` targets in our [Makefile](https://github.com/photoprism/photoprism/blob/develop/Makefile). For example, `make test` will run the tests and `make install` will build a `photoprism` production binary without debug information and install it in the user's directory including all assets.
 
 **Step 4:** Build the frontend in watch mode:
 

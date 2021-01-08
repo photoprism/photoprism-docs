@@ -30,17 +30,26 @@ docker-compose up
 docker-compose exec photoprism bash
 ```
 
-Now - inside this terminal - you can run tests and commands:
+Now you can run commands inside this terminal. To run the Go webserver, run:
 
 ```
-make all
-make test
+make dep-tensorflow dep-go generate
+make build-go
 ./photoprism start
 ```
 
-You can see a list of all `make` targets in our [Makefile](https://github.com/photoprism/photoprism/blob/develop/Makefile). For example, `make install` will build a `photoprism` production binary without debug information and install it in the user's directory including all assets.
+You can see a list of all `make` targets in our [Makefile](https://github.com/photoprism/photoprism/blob/develop/Makefile). For example, `make test` will run the tests and `make install` will build a `photoprism` production binary without debug information and install it in the user's directory including all assets.
 
-`./photoprism start` starts the built-in Web server. It will listen on [localhost:2342](http://localhost:2342/) by default, see [docker-compose.yml](https://github.com/photoprism/photoprism/blob/develop/docker-compose.yml).
+**Step 4:** Build the frontend in watch mode:
+
+The Go webserver will serve static assets in addition to providing the backend API. The static assets can automatically built whenever you change a file. In a new terminal window, outside the Docker container, run:
+
+```
+make dep-js
+make watch-js
+```
+
+PhotoPrism will now be available at [localhost:2342](http://localhost:2342/). This is set in the [docker-compose.yml](https://github.com/photoprism/photoprism/blob/develop/docker-compose.yml).
 
 Questions?
 

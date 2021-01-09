@@ -21,7 +21,8 @@
 - Translations: Updated [Russian](https://github.com/photoprism/photoprism/pull/837), 
   [French](https://github.com/photoprism/photoprism/pull/849), and
   [German](https://github.com/photoprism/photoprism/commit/e015e17f3f2b7d29d2d7d71518b9d8657daff99c)
-- Indexer: Automatically create [JPEGs for related media files](https://github.com/photoprism/photoprism/issues/813) as well
+- Indexing: Automatically create [JPEGs for related media files](https://github.com/photoprism/photoprism/issues/813) as well
+- Import: Improved [error handling](https://github.com/photoprism/photoprism/issues/261) when the file system becomes unavailable
 - Config: Limit number of indexing workers to half the number of physical cores by default to 
   avoid [high load](https://twitter.com/miguelarios_/status/1347775696492503040) on hyper-threading capable CPUs
 

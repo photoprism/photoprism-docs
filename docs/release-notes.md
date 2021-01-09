@@ -10,6 +10,7 @@
 - UX: Tweaked tile size breakpoints in *Albums*, *Labels*, and *Photos*
 - UX: [Added tooltips to navigation expand and minimize buttons](https://github.com/photoprism/photoprism/issues/823)
 - UX: [Improved clipboard performance](https://github.com/photoprism/photoprism/issues/477)
+- UX: [Preload additional search results](https://github.com/photoprism/photoprism/issues/500)
 - UX: [Removed image loading spinners for faster rendering](https://github.com/photoprism/photoprism/issues/862)
 - Thumbnails: [Added cache control headers for improved performance](https://github.com/photoprism/photoprism/issues/822)
 - Album Covers: [Cache will be flushed after updating private flags](https://github.com/photoprism/photoprism/issues/807)

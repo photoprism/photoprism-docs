@@ -7,15 +7,15 @@
 
 ### Development Preview ###
 
-- [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps): Added service worker so that app can be installed [more easily](https://github.com/photoprism/photoprism/issues/852)
-- [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps): [Enabled auto-rotate](https://github.com/photoprism/photoprism/issues/744) 
-  on mobile devices so that photos may be viewed in landscape mode
 - UX: Tweaked tile size breakpoints in *Albums*, *Labels*, and *Photos*
 - UX: [Added tooltips to navigation expand and minimize buttons](https://github.com/photoprism/photoprism/issues/823)
 - UX: [Improved clipboard performance](https://github.com/photoprism/photoprism/issues/477)
 - UX: [Removed image loading spinners for faster rendering](https://github.com/photoprism/photoprism/issues/862)
 - Thumbnails: [Added cache control headers for improved performance](https://github.com/photoprism/photoprism/issues/822)
 - Album Covers: [Cache will be flushed after updating private flags](https://github.com/photoprism/photoprism/issues/807)
+- [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps): Added service worker so that app can be installed [more easily](https://github.com/photoprism/photoprism/issues/852)
+- [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps): [Enabled auto-rotate](https://github.com/photoprism/photoprism/issues/744)
+  so that photos may be viewed in landscape mode
 - Frontend: Removed [unused dependencies](https://github.com/photoprism/photoprism/pull/824) and 
   [reduced build size](https://github.com/photoprism/photoprism/pull/836)
 - Translations: Updated [Russian](https://github.com/photoprism/photoprism/pull/837), 

@@ -8,7 +8,8 @@
 ### Development Preview ###
 
 - [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps): Added service worker so that app can be installed [more easily](https://github.com/photoprism/photoprism/issues/852)
-- [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps): Changed orientation from `portrait` to `any` in `manifest.json`
+- [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps): [Enabled auto-rotate](https://github.com/photoprism/photoprism/issues/744) 
+  on mobile devices so that photos may be viewed in landscape mode
 - UX: Tweaked tile size breakpoints in *Albums*, *Labels*, and *Photos*
 - UX: [Added tooltips to navigation expand and minimize buttons](https://github.com/photoprism/photoprism/issues/823)
 - UX: [Improved clipboard performance](https://github.com/photoprism/photoprism/issues/477)

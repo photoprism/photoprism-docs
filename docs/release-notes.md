@@ -17,8 +17,9 @@
 - Album Covers: [Cache will be flushed after updating private flags](https://github.com/photoprism/photoprism/issues/807)
 - Frontend: Removed [unused dependencies](https://github.com/photoprism/photoprism/pull/824) and 
   [reduced build size](https://github.com/photoprism/photoprism/pull/836)
-- Translations: Updated [Russian](https://github.com/photoprism/photoprism/pull/837) and 
-  [French](https://github.com/photoprism/photoprism/pull/849)
+- Translations: Updated [Russian](https://github.com/photoprism/photoprism/pull/837), 
+  [French](https://github.com/photoprism/photoprism/pull/849), and
+  [German](https://github.com/photoprism/photoprism/commit/e015e17f3f2b7d29d2d7d71518b9d8657daff99c)
 - Indexer: Automatically create [JPEGs for related media files](https://github.com/photoprism/photoprism/issues/813) as well
 - Config: Limit number of indexing workers to half the number of physical cores by default to 
   avoid [high load](https://twitter.com/miguelarios_/status/1347775696492503040) on hyper-threading capable CPUs

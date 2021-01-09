@@ -15,7 +15,7 @@ we have to use [Google Takeout](https://takeout.google.com/).
     - the folder should include the photos themselves, alongside json files for each of the photos
 1. Start [*indexing*](../library/indexing.md)
 
-## What is imported?
+## What's included?
 
 Google Takeout exports the following;
 
@@ -30,7 +30,7 @@ The format exported from Google Photos depends on the [quality chosen](https://p
 when uploaded to Google Photos; 'High' or 'Original'.
 
 Metadata is read by PhotoPrism from the exported JSON files for each photo.
-The following fields are saved;
+The following fields are saved:
 
 - Title
 - Description
@@ -40,4 +40,6 @@ The following fields are saved;
 - Date/Time Created
 - Date/Time Updated
 
-Albums from Google Photos are replicated in PhotoPrism.
+!!! note
+    Google Photos albums won't be imported yet as we're trying to find a way to deal with 
+    auto-generated albums user may not want to import.

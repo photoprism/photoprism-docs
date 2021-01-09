@@ -20,8 +20,8 @@
 - Translations: Updated [Russian](https://github.com/photoprism/photoprism/pull/837) and 
   [French](https://github.com/photoprism/photoprism/pull/849)
 - Indexer: [JPEGs for sidecar files will be created when needed](https://github.com/photoprism/photoprism/issues/813)
-- Config: [Reduced default number of workers](https://github.com/photoprism/photoprism/commit/8627153288373b9560adaf5998e715d58fd9bd80)
-  to half the logical CPU cores e.g. 2 workers when there are 4 cores
+- Config: Limit number of indexing workers to half the number of physical cores by default to 
+  [avoid high load on hyper-threading capable CPUs](https://twitter.com/miguelarios_/status/1347775696492503040)
 
 ### January 4, 2021 ###
 

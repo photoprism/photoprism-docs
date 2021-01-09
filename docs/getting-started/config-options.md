@@ -16,7 +16,7 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_TEMP_PATH`          | --temp-path PATH           | temporary PATH for storing uploads and downloads
 `PHOTOPRISM_BACKUP_PATH`        | --backup-path PATH         | backup storage PATH
 `PHOTOPRISM_ASSETS_PATH`        | --assets-path PATH         | assets PATH for static resources like models and templates
-`PHOTOPRISM_WORKERS`            | --workers LIMIT, -w LIMIT  | LIMIT the number of indexing workers to reduce system load
+`PHOTOPRISM_WORKERS`            | --workers MAX, -w MAX      | adjusts MAX number of indexing workers
 `PHOTOPRISM_WAKEUP_INTERVAL`    | --wakeup-interval SECONDS  | background worker wakeup interval in SECONDS
 `PHOTOPRISM_AUTO_INDEX`         | --auto-index SECONDS       | auto indexing safety delay in SECONDS (WebDAV)
 `PHOTOPRISM_AUTO_IMPORT`        | --auto-import SECONDS      | auto importing safety delay in SECONDS (WebDAV)

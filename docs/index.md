@@ -20,7 +20,10 @@ Say goodbye to solutions that force you to upload your visual memories to the cl
   [connect](user-guide/sync/webdav.md) directly to PhotoPrism so that you to can open, 
   edit, and delete files from your computer or phone as if they were local. 
   You may easily sync your pictures with [Nextcloud](https://nextcloud.com/) as well.  
-* PhotoPrism feels [like a native app](https://en.wikipedia.org/wiki/Progressive_web_application) and, 
+* PhotoPrism is built as a [progressive web app](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
+  so that it feels like native, and of course you may also add it to your home screen. 
+
+PhotoPrism feels [like a native app](https://en.wikipedia.org/wiki/Progressive_web_application) and, 
   of course, you can also add it to your home screen.
 
 

@@ -7,12 +7,11 @@
 
 ### Development Preview ###
 
+- [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps): Added service worker so that app can be installed [more easily](https://github.com/photoprism/photoprism/issues/852)
+- [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps): Changed orientation from `portrait` to `any` in `manifest.json`
 - UX: Tweaked tile size breakpoints in *Albums*, *Labels*, and *Photos*
-- UX: [Added titles to navigation expand and minimize buttons](https://github.com/photoprism/photoprism/issues/823)
+- UX: [Added tooltips to navigation expand and minimize buttons](https://github.com/photoprism/photoprism/issues/823)
 - UX: [Improved clipboard performance](https://github.com/photoprism/photoprism/issues/477)
-- UX: Added [PWA](https://github.com/photoprism/photoprism/issues/374) service worker so that web 
-  app can be installed [more easily](https://github.com/photoprism/photoprism/issues/852) #374 #852
-- UX: Changed orientation from `portrait` to `any` in `manifest.json`
 - UX: [Removed image loading spinners for faster rendering](https://github.com/photoprism/photoprism/issues/862)
 - Thumbnails: [Added cache control headers for improved performance](https://github.com/photoprism/photoprism/issues/822)
 - Album Covers: [Cache will be flushed after updating private flags](https://github.com/photoprism/photoprism/issues/807)

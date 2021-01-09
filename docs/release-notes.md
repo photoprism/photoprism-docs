@@ -19,9 +19,9 @@
   [reduced build size](https://github.com/photoprism/photoprism/pull/836)
 - Translations: Updated [Russian](https://github.com/photoprism/photoprism/pull/837) and 
   [French](https://github.com/photoprism/photoprism/pull/849)
-- Indexer: [JPEGs for sidecar files will be created when needed](https://github.com/photoprism/photoprism/issues/813)
+- Indexer: Automatically create [JPEGs for related media files](https://github.com/photoprism/photoprism/issues/813) as well
 - Config: Limit number of indexing workers to half the number of physical cores by default to 
-  [avoid high load on hyper-threading capable CPUs](https://twitter.com/miguelarios_/status/1347775696492503040)
+  avoid [high load](https://twitter.com/miguelarios_/status/1347775696492503040) on hyper-threading capable CPUs
 
 ### January 4, 2021 ###
 

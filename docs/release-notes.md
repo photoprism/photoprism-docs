@@ -5,14 +5,16 @@
     `photoprism/photoprism:latest` for testing our development preview.
     The preview image for ARM64 is `photoprism/photoprism-arm64:preview`.
 
-### Development Preview ###
+### January 11, 2021 ###
+
+[210111-cc05c430-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/744/1/0),
+[210111-cc05c430-Linux-aarch64](https://drone.photoprism.app/photoprism/photoprism/744/2/0)
 
 - UX: Disabled preloading in live photo player to reduce memory footprint
 - UX: [Updated main navigation, find all media types via /browse](https://github.com/photoprism/photoprism/issues/859)
 - UX: [Removed lag when selecting pictures](https://github.com/photoprism/photoprism/issues/477)
 - UX: Tweaked tile size breakpoints in *Albums*, *Labels*, and *Search*
 - UX: [Added tooltips to navigation expand and minimize buttons](https://github.com/photoprism/photoprism/issues/823)
-- UX: [Improved clipboard performance](https://github.com/photoprism/photoprism/issues/477)
 - UX: [Preload additional search results](https://github.com/photoprism/photoprism/issues/500)
 - UX: [Removed image loading spinners for faster rendering](https://github.com/photoprism/photoprism/issues/862)
 - Thumbnails: [Added cache control headers for improved performance](https://github.com/photoprism/photoprism/issues/822)

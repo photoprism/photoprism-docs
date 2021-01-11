@@ -7,8 +7,10 @@
 
 ### Development Preview ###
 
+- UX: Disabled preloading in live photo player to reduce memory footprint
+- UX: [Updated main navigation, find all media types via /browse](https://github.com/photoprism/photoprism/issues/859)
 - UX: [Removed lag when selecting pictures](https://github.com/photoprism/photoprism/issues/477)
-- UX: Tweaked tile size breakpoints in *Albums*, *Labels*, and *Photos*
+- UX: Tweaked tile size breakpoints in *Albums*, *Labels*, and *Search*
 - UX: [Added tooltips to navigation expand and minimize buttons](https://github.com/photoprism/photoprism/issues/823)
 - UX: [Improved clipboard performance](https://github.com/photoprism/photoprism/issues/477)
 - UX: [Preload additional search results](https://github.com/photoprism/photoprism/issues/500)
@@ -27,7 +29,8 @@
   [German](https://github.com/photoprism/photoprism/commit/e015e17f3f2b7d29d2d7d71518b9d8657daff99c)
 - Indexing: Automatically create [JPEGs for related media files](https://github.com/photoprism/photoprism/issues/813) as well
 - Import: Improved [error handling](https://github.com/photoprism/photoprism/issues/261) when the file system becomes unavailable
-- Config: Added optional gzip compression for built-in web server
+- Config: [Updated docker-compose.yml examples](https://dl.photoprism.org/docker/)
+- Config: [Added optional gzip compression for built-in web server](getting-started/config-options.md)
 - Config: Limit number of indexing workers to half the number of physical cores by default to 
   avoid [high load](https://twitter.com/miguelarios_/status/1347775696492503040) on hyper-threading capable CPUs
 

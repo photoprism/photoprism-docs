@@ -40,6 +40,7 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_HTTP_PORT`          | --http-port NUMBER         | http server port NUMBER (default: 2342)
 `PHOTOPRISM_HTTP_HOST`          | --http-host IP             | http server IP address
 `PHOTOPRISM_HTTP_MODE`          | --http-mode value, -m value| debug, release or test
+`PHOTOPRISM_HTTP_COMPRESSION`   | --http-compression value, -z value | improves transfer speed and bandwidth utilization (none or gzip)
 `PHOTOPRISM_DATABASE_DRIVER`    | --database-driver NAME     | database driver NAME (sqlite or mysql) (default: "sqlite")
 `PHOTOPRISM_DATABASE_DSN`       | --database-dsn DSN         | sqlite file name, specifying a DSN is optional for mariadb and mysql
 `PHOTOPRISM_DATABASE_SERVER`    | --database-server HOST     | database server HOST, specifying a :port is optional

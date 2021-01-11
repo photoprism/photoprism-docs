@@ -7,6 +7,7 @@
 
 ### Development Preview ###
 
+- UX: [Removed lag when selecting pictures](https://github.com/photoprism/photoprism/issues/477)
 - UX: Tweaked tile size breakpoints in *Albums*, *Labels*, and *Photos*
 - UX: [Added tooltips to navigation expand and minimize buttons](https://github.com/photoprism/photoprism/issues/823)
 - UX: [Improved clipboard performance](https://github.com/photoprism/photoprism/issues/477)
@@ -14,16 +15,19 @@
 - UX: [Removed image loading spinners for faster rendering](https://github.com/photoprism/photoprism/issues/862)
 - Thumbnails: [Added cache control headers for improved performance](https://github.com/photoprism/photoprism/issues/822)
 - Album Covers: [Cache will be flushed after updating private flags](https://github.com/photoprism/photoprism/issues/807)
+- Search: [Improved performance of photos query](https://github.com/photoprism/photoprism/commit/dcf94e26a53e2c3e78c9998f6e7b442fbbf3d544)
 - [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps): Added service worker so that app can be installed [more easily](https://github.com/photoprism/photoprism/issues/852)
 - [PWA](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps): [Enabled auto-rotate](https://github.com/photoprism/photoprism/issues/744)
   so that photos may be viewed in landscape mode
 - Frontend: Removed [unused dependencies](https://github.com/photoprism/photoprism/pull/824) and 
   [reduced build size](https://github.com/photoprism/photoprism/pull/836)
 - Translations: Updated [Russian](https://github.com/photoprism/photoprism/pull/837), 
-  [French](https://github.com/photoprism/photoprism/pull/849), and
+  [French](https://github.com/photoprism/photoprism/pull/849),
+  [Simplified Chinese](https://github.com/photoprism/photoprism/commit/614f93f696c7a180ff8196a01d3a10881847d459), and
   [German](https://github.com/photoprism/photoprism/commit/e015e17f3f2b7d29d2d7d71518b9d8657daff99c)
 - Indexing: Automatically create [JPEGs for related media files](https://github.com/photoprism/photoprism/issues/813) as well
 - Import: Improved [error handling](https://github.com/photoprism/photoprism/issues/261) when the file system becomes unavailable
+- Config: Added optional gzip compression for built-in web server
 - Config: Limit number of indexing workers to half the number of physical cores by default to 
   avoid [high load](https://twitter.com/miguelarios_/status/1347775696492503040) on hyper-threading capable CPUs
 

@@ -1,9 +1,13 @@
 # Connect via WebDAV #
 
-WebDAV clients, like Microsoft’s Windows Explorer or Apple's Finder, can connect directly 
-to PhotoPrism. 
-This mounts the *originals folder* as a network drive and allows you to open, edit, and delete 
+WebDAV clients, like Microsoft’s Windows Explorer or Apple's Finder,
+can connect directly to PhotoPrism.
+This mounts the *originals folder* as a network drive and allows you to open, edit, and delete
 files from your computer or smartphone as if they were local.
+
+!!! note
+    PhotoPrism can also sync files *from* an external storage system (like Nextcloud) via WebDAV.
+    See [instructions](/user-guide/settings/sync/).
 
 The originals folder URL for public servers is:
 
@@ -11,8 +15,8 @@ The originals folder URL for public servers is:
 https://admin@example.com/originals/
 ```
 
-Please replace *example.com* with your actual domain. 
-The slash at the end is important and cannot be omitted. 
+Please replace *example.com* with your actual domain.
+The slash at the end is important and cannot be omitted.
 
 When connecting, you'll have to authenticate using your regular password.
 It will also change when you update it in *Settings*. The user name is `admin`.
@@ -49,9 +53,9 @@ http://admin@localhost:2342/originals/
 9. In the **Internet or network address** field, enter the URL as shown above
 10. Click the **Next** button and then **Finish**
 
-The originals folder appears as a mapped drive in Windows Explorer, and you can immediately add, 
+The originals folder appears as a mapped drive in Windows Explorer, and you can immediately add,
 edit, or delete files and directories using the Windows File Explorer.
 
-If you still have trouble connecting via WebDAV, you may have to 
-[update](https://help.dreamhost.com/hc/en-us/articles/216473357-Accessing-WebDAV-with-Windows) the 
+If you still have trouble connecting via WebDAV, you may have to
+[update](https://help.dreamhost.com/hc/en-us/articles/216473357-Accessing-WebDAV-with-Windows) the
 Basic Authentication Level in the registry.

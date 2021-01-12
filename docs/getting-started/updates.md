@@ -26,7 +26,7 @@ See [Setup Using Docker Compose](docker-compose.md) for a full command reference
 Adding [Watchtower](https://github.com/containrrr/watchtower) as a service to your `docker-compose.yml` will
 automatically keep images up-to-date:
 
-```docker
+```yml
 services:
   watchtower:
     image: containrrr/watchtower

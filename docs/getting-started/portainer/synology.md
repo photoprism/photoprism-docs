@@ -60,7 +60,7 @@ With Portainer installed we can use a docker-compose file to deploy a stack comp
 14. Open Portainer by visiting http://[YOUR-LOCAL-IP]:9000/;
 15. Click _Stacks_ in the left menu, then _Add stack_, give it a meaningful name (for eg. Photoprism) and in the Web Editor place the below code, which was based on [Photoprism's default docker-compose yml file](https://dl.photoprism.org/docker/docker-compose.yml) but downgraded to compose version 2. **BE SURE TO USE YOUR OWN [LOCAL-PORT], [YOUR-ADMIN-PASS], [YOUR-DB-PASS] and [YOUR-LOCAL-IP] BY CHANGING THE VALUES ACCORDINGLY, AND CHECK THE LOCAL VOLUMES PATHS TO MATCH THOSE DEFINED IN STEP 13**.
 
-```
+```yml
 version: '2'
 services:
   photoprism:

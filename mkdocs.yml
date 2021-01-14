@@ -24,6 +24,7 @@ nav:
       - Databases: getting-started/advanced/databases.md
       - Caching: getting-started/advanced/caching.md
       - NGINX: getting-started/advanced/nginx-proxy-setup.md
+      - Backup: getting-started/advanced/backup.md
     - FAQ: getting-started/faq.md
   - User Guide:
     - Introduction: user-guide/index.md

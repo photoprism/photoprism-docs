@@ -1,8 +1,14 @@
 # Sync Settings
 
+This page describes how PhotoPrism can sync files *from* an external storage system (like Nextcloud) via WebDAV.
+
+!!! note
+    PhotoPrism can also serve/share files via WebDAV to be browsed on macOS or Windows.
+    See [instructions](/user-guide/sync/webdav/).
+
 ## Connect to a WebDAV Server ##
 
-PhotoPrism may connect with WebDAV servers like Nextcloud, 
+PhotoPrism may connect with WebDAV servers like Nextcloud,
 so that you can automatically sync your latest pictures.
 
 **To connect:**
@@ -39,8 +45,8 @@ so that you can automatically sync your latest pictures.
 
 ![Screenshot](img/upload-3.png)
 
-!!! info 
-    Only JPEGs are copied when uploading manually. 
+!!! info
+    Only JPEGs are copied when uploading manually.
     Support for RAW and video files will be added in a future release.
 
 !!! attention

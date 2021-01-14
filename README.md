@@ -27,7 +27,7 @@ Though arguably less convenient to edit than a wiki, this git repository is mean
 
 First make sure you have Docker and common development tools like `make` installed on your computer.
 
-Then use this command in the main project directory to download and run the latest version of 
+Then use this command in the main project directory to download and run the latest version of
 [mkdocs-material](https://github.com/squidfunk/mkdocs-material):
 
 ```sh
@@ -38,10 +38,15 @@ Now open http://localhost:8000/ in a Web browser to browse the docs.
 
 ### Editing existing pages
 
-To edit an existing page, locate its .md source file and open it in your favourite text editor. You can then commit the changes, push them to your fork and make a pull request.
+The top of every documentation page includes an 'Edit this page' link to the equivalent page on GitHub,
+where you can make edits (and submit Pull Requests in a few clicks) without needing
+any git knowledge or to run anything on your system.
+
+To make more extensive changes, modify corresponding `.md` source files (or create new ones),
+commit the changes, push them to your fork and submit a pull request.
 
 ## Other repositories on GitHub
-  * [photoprism](https://github.com/photoprism/photoprism) - main repository
+  * [photoprism](https://github.com/photoprism/photoprism) - main source code repository
   * [photoprism.github.io](https://github.com/photoprism/photoprism.github.io) - public homepage hosted by GitHub Pages on [photoprism.org](https://photoprism.org)
 
 ## License

@@ -2,7 +2,8 @@
 
 > In any process, obsessing about the wait times will yield greater improvements than practically anything else, for longer than you might think. Automation, simplification, etc. are implementation details of that obsession.<br>— <cite>Dan North</cite>
 
-## Go ##
+## Unit Tests ##
+### Go ###
 To run all unit tests, type `make test` or `go test ./internal/...` in a terminal.
 
 These `make` targets are currently defined for tests:
@@ -21,13 +22,13 @@ $ go test -run NameOfTest
 
 See [docs](https://golang.org/pkg/testing/#hdr-Subtests_and_Sub_benchmarks) for more info.
 
-### Test Frameworks ###
+#### Test Frameworks ####
 
 Go comes with a cool testing framework, it allows you to write test code using the same language, without needing to learn any library or test engine. [Go advanced testing tips & tricks](https://medium.com/@povilasve/go-advanced-tips-tricks-a872503ac859) contains a lot of useful information. We only import [testify/assert](https://github.com/stretchr/testify/tree/master/assert) to save a few lines for common assertions.
 
 Todo: Use a SQL mock driver to test database interactions, for example https://github.com/DATA-DOG/go-sqlmock.
 
-### Slow Tests ##
+#### Slow Tests ###
 
 Slow tests and benchmarks can be skipped using the `-short` flag:
 
@@ -45,7 +46,7 @@ To execute:
 ```
 go test -short
 ```
-## Javascript ##
+### Javascript ###
 To run all javascript unit tests, type `make test-js` in a terminal.
 
 
@@ -66,18 +67,24 @@ In case you want to run a single test add .only to the test you want to run e.g.
 
 Test coverage output is saved to *frontend/coverage/html*
 
-### Test Frameworks
+#### Test Frameworks ####
 To test javascript code we use [mocha](https://mochajs.org/) in combination with [karma](https://karma-runner.github.io/4.0/intro/installation.html), [chai](https://www.chaijs.com/), [sinon](https://sinonjs.org/) and the [karma-istanbul-coverage-reporter](https://github.com/mattlewis92/karma-coverage-istanbul-reporter).
 
-# Acceptance Tests #
+## Acceptance Tests ##
+First download the folder [acceptance](https://dl.photoprism.org/qa/) and add it to your storage directory.
+It contains the files and configs needed for the tests to pass.
+
 ### Run tests within the docker container
-You can run the tests from within the photoprism container in firefox or chromium.<br>
-* ```make acceptance```: executes all tests in headless chromium and firefox<br>
-* ```make test-chromium```: This executes all tests in headless chromium <br>
-* ```make test-firefox ```: This executes all tests in headless firefox
+You can run the tests from within the photoprism container in firefox or chromium.
+  
+* ```make acceptance-run-chromium```: This executes all tests in headless chromium
+  
+* ```make acceptance-run-firefox ```: This executes all tests in headless firefox
+
 ### Run tests locally
-Locally you can run the tests in all supported browsers (see table below). <br>
-To run tests locally you need to install testcafe on your machine <br> <br> 
+Locally you can run the tests in all supported browsers you have installed.
+
+To run tests locally you need to install testcafe on your machine.
 ```
 npm install -g testcafe
 ``` 
@@ -86,6 +93,15 @@ Then you can execute tests with
 testcafe  firefox,chrome,safari,opera -S \
   -s frontend/tests/acceptance/screenshots frontend/tests/acceptance/
 ```
+
+To run tests on remote or mobile devices use
+```
+testcafe  remote -S \
+  -s frontend/tests/acceptance/screenshots frontend/tests/acceptance/
+```
+
+
+
 ### Test Frameworks
 
 Our goal was to implement UI acceptance tests using JavaScript, so that frontend developers are able to run and write them without learning Go.<br>

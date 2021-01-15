@@ -88,10 +88,21 @@ To run tests locally you need to install testcafe on your machine.
 ```
 npm install -g testcafe
 ``` 
+
+Start the test-instance (from within the docker container)
+```
+make acceptance-restart
+```
+
 Then you can execute tests with
 ```
 testcafe  firefox,chrome,safari,opera -S \
   -s frontend/tests/acceptance/screenshots frontend/tests/acceptance/
+```
+
+You can stop the test-instance using
+```
+make stop
 ```
 
 To run tests on remote or mobile devices use

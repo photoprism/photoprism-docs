@@ -46,3 +46,9 @@ PhotoPrism is compatible with [MariaDB 10](https://mariadb.org/),
     [Caddy](proxies/caddy-2.md), or [NGINX](proxies/nginx.md).
     Your files and passwords will be transmitted in clear text otherwise, and can be intercepted 
     by anyone in between including your provider, hackers, and governments.
+
+## Supported Browsers ##
+PhotoPrism runs on the latest versions of Chrome, Firefox, Opera, Edge and Samsung Internet.
+
+!!! attention
+    Some video formats can only be played within Chrome!

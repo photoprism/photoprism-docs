@@ -5,14 +5,18 @@
     `photoprism/photoprism:latest` for testing our development preview.
     The preview image for ARM64 is `photoprism/photoprism-arm64:preview`.
 
-### Preview, January 19, 2021 ###
-- UX: Added [dark themes](https://github.com/photoprism/photoprism/issues/700) as early-access feature for sponsors
-- Translations: Added [Czech translations](https://github.com/photoprism/photoprism/issues/902)
-- UX: [Restore scroll position in albums & labels](https://github.com/photoprism/photoprism/issues/896)
-- UX: Improve UX on iOs touch devices
-- Metadata: Allow overwriting estimated locations
-- Metadata: Estimate timezone
-- Fixed bugs: [Disable Logs  setting did not work](https://github.com/photoprism/photoprism/issues/891) and [rescan issue when settings are disabled](https://github.com/photoprism/photoprism/issues/916)
+### Development Preview ###
+
+- UX: Optimized user interface for [iOS and tablets](https://github.com/photoprism/photoprism/issues/832)
+- UX: Improved theme colors
+- UX: [Scroll position is restored when navigating back](https://github.com/photoprism/photoprism/issues/896)
+- UX: Added two [dark themes](https://github.com/photoprism/photoprism/issues/700) as early-access
+  feature for our [sponsors](https://www.patreon.com/photoprism) 
+  and [contributors](https://docs.photoprism.org/developer-guide/)
+- Translations: Added [Czech](https://github.com/photoprism/photoprism/issues/902)
+- Metadata: [Estimate timezone](https://github.com/photoprism/photoprism/issues/914) 
+  and [allow overwriting estimated locations](https://github.com/photoprism/photoprism/pull/918) 
+- Settings: [Fixed disabling logs](https://github.com/photoprism/photoprism/issues/891)
 
 ### January 11, 2021 ###
 

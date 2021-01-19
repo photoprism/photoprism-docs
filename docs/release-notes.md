@@ -5,7 +5,10 @@
     `photoprism/photoprism:latest` for testing our development preview.
     The preview image for ARM64 is `photoprism/photoprism-arm64:preview`.
 
-### Development Preview ###
+### January 20, 2021 ###
+
+[210119-a5399f06-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/835/1/0),
+[210119-a5399f06-Linux-aarch64](https://drone.photoprism.app/photoprism/photoprism/835/2/0)
 
 - UX: Optimized user interface for [iOS and tablets](https://github.com/photoprism/photoprism/issues/832)
 - UX: Improved theme colors

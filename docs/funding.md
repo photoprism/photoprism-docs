@@ -1,4 +1,4 @@
-# Funding
+# Let's Join Forces
 
 This software is about freedom and privacy but not necessarily about free beer. We feel like it
 would be a mistake to state there will be no costs, because clearly we have huge expenses, your server hardware
@@ -10,7 +10,7 @@ In addition, you can find us on [Patreon](https://www.patreon.com/photoprism) an
 
 Your continuous support helps...
 
-* to pay for hosting, hardware and external services like satellite maps
+* to pay for operating expenses and external services like satellite maps
 * developing new features, and keeping them free for everyone 🌈
 
 Also, please [leave a star](https://github.com/photoprism/photoprism/stargazers) on GitHub if you like this project. 

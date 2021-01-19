@@ -52,3 +52,6 @@ Names will be ignored in the directory and all subdirectories. An `*` character 
 If selected, all files in the *originals* folder will be re-indexed, including already indexed and unchanged files. 
 This may be necessary after upgrading, especially to new major versions.
 
+#### Automatic Indexing ####
+The Indexer is triggered automatically 15 Minutes after the originals folder has been edited via WebDAV.
+15 Minutes is the default value, it can be changed using the respective [config option](../../getting-started/config-options.md).

@@ -26,5 +26,7 @@ If selected, files that have been moved to the *originals* folder, or that alrea
 will automatically be deleted from the *import* folder.
 This will save storage if you don't want to keep them as backup, or for any other reason.
 
-
+#### Automatic Import ####
+The Importer is triggered automatically 15 Minutes after the import folder has been edited via WebDAV.
+15 Minutes is the default value, it can be changed using the respective [config option](../../getting-started/config-options.md).
 

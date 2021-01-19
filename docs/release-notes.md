@@ -5,6 +5,15 @@
     `photoprism/photoprism:latest` for testing our development preview.
     The preview image for ARM64 is `photoprism/photoprism-arm64:preview`.
 
+### Preview, January 19, 2021 ###
+- UX: Added [dark themes](https://github.com/photoprism/photoprism/issues/700) as early-access feature for sponsors
+- Translations: Added [Czech translations](https://github.com/photoprism/photoprism/issues/902)
+- UX: [Restore scroll position in albums & labels](https://github.com/photoprism/photoprism/issues/896)
+- UX: Improve UX on iOs touch devices
+- Metadata: Allow overwriting estimated locations
+- Metadata: Estimate timezone
+- Fixed bugs: [Disable Logs  setting did not work](https://github.com/photoprism/photoprism/issues/891) and [rescan issue when settings are disabled](https://github.com/photoprism/photoprism/issues/916)
+
 ### January 11, 2021 ###
 
 [210111-cc05c430-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/744/1/0),

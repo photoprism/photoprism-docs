@@ -40,15 +40,12 @@ As a measure of last resort, you may additionally disable image classification u
 PhotoPrism is compatible with [MariaDB 10](https://mariadb.org/),
 [MySQL 8](https://www.mysql.com/), and [SQLite 3](https://www.sqlite.org/).
 
+The following browsers are supported by PhotoPrism: Chrome, Firefox, Opera, Edge, and Samsung Internet. 
+In case you have many videos we strongly recommend using Chrome, as some video formats can not be played in other browsers.
+
 !!! attention
     When installing PhotoPrism on a public server outside your home network, please **always run it
     behind a secure HTTPS reverse proxy** like [Traefik](proxies/traefik.md), 
     [Caddy](proxies/caddy-2.md), or [NGINX](proxies/nginx.md).
     Your files and passwords will be transmitted in clear text otherwise, and can be intercepted 
     by anyone in between including your provider, hackers, and governments.
-
-## Supported Browsers ##
-PhotoPrism runs on the latest versions of Chrome, Firefox, Opera, Edge and Samsung Internet.
-
-!!! attention
-    Some video formats can only be played within Chrome!

@@ -5,12 +5,12 @@
     `photoprism/photoprism:latest` for testing our development preview.
     The preview image for ARM64 is `photoprism/photoprism-arm64:preview`.
 
-### Development Preview ###
+### January 20, 2021 ###
 
 - API: [Apply limit, offset and sort order when searching for IDs](https://github.com/photoprism/photoprism/issues/890)
 - Raspberry Pi: [Reverted docker-compose.yml example back to arm64v8/mariadb:10.5](https://github.com/photoprism/photoprism/issues/535#issuecomment-763210250)
 
-### January 20, 2021 ###
+### January 19, 2021 ###
 
 [210119-a5399f06-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/835/1/0),
 [210119-a5399f06-Linux-aarch64](https://drone.photoprism.app/photoprism/photoprism/835/2/0)

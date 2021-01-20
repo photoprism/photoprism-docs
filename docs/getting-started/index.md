@@ -37,11 +37,12 @@ Also make sure your server has [swap](https://opensource.com/article/18/9/swap-s
 configured, so that indexing doesn't cause restarts when there are memory usage spikes.
 As a measure of last resort, you may additionally disable image classification using TensorFlow.
 
-PhotoPrism is compatible with [MariaDB 10](https://mariadb.org/),
-[MySQL 8](https://www.mysql.com/), and [SQLite 3](https://www.sqlite.org/).
+Our Web UI works with most modern browsers, and runs best on Chrome, Chromium, Firefox, and Edge.
+Opera and Samsung Internet have been reported to be compatible as well.
+Note that not all [video formats](https://github.com/photoprism/photoprism/issues/707) may be played with every browser.
 
-The following browsers are supported by PhotoPrism: Chrome, Firefox, Opera, Edge, and Samsung Internet. 
-In case you have many videos we strongly recommend using Chrome, as some video formats can not be played in other browsers.
+The backend is compatible with [MariaDB 10](https://mariadb.org/),
+[MySQL 8](https://www.mysql.com/), and [SQLite 3](https://www.sqlite.org/).
 
 !!! attention
     When installing PhotoPrism on a public server outside your home network, please **always run it

@@ -1,6 +1,6 @@
 # PhotoPrism: Browse Your Life in Pictures
 
-PhotoPrism® is a self-hosted app for browsing, organizing and sharing your personal photo collection.
+PhotoPrism® is a privately hosted app for browsing, organizing and sharing your personal photo collection.
 It makes use of the latest technologies to automatically tag and find pictures without getting in your way.
 Say goodbye to solutions that force you to upload your visual memories to the cloud!
 

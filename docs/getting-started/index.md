@@ -37,7 +37,7 @@ Also make sure your server has [swap](https://opensource.com/article/18/9/swap-s
 configured, so that indexing doesn't cause restarts when there are memory usage spikes.
 As a measure of last resort, you may additionally disable image classification using TensorFlow.
 
-Our Web UI works with most modern browsers, and runs best on Chrome, Chromium, Firefox, and Edge.
+Our Web UI works with most modern browsers, and runs best on Chrome, Chromium, Safari, Firefox, and Edge.
 Opera and Samsung Internet have been reported to be compatible as well.
 Note that not all [video formats](https://github.com/photoprism/photoprism/issues/707) may be played with every browser.
 

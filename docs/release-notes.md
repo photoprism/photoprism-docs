@@ -7,8 +7,11 @@
 
 ### January 20, 2021 ###
 
+[210120-e7cd5e9a-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/856/1/0),
+[210120-e7cd5e9a-Linux-aarch64](https://drone.photoprism.app/photoprism/photoprism/856/2/0)
+
 - API: [Apply limit, offset and sort order when searching for IDs](https://github.com/photoprism/photoprism/issues/890)
-- Raspberry Pi: [Reverted docker-compose.yml example back to arm64v8/mariadb:10.5](https://github.com/photoprism/photoprism/issues/535#issuecomment-763210250)
+- ARM64: [Reverted database image back to arm64v8/mariadb in config example](https://github.com/photoprism/photoprism/issues/535#issuecomment-763210250)
 
 ### January 19, 2021 ###
 

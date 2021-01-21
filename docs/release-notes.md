@@ -8,8 +8,8 @@
 
 ### January 21, 2021 ###
 
-[210121-d40548be-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/878/1/0),
-[210121-d40548be-Linux-aarch64](https://drone.photoprism.app/photoprism/photoprism/878/2/0)
+[210121-07e559df-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/882/1/0),
+[210121-07e559df-Linux-aarch64](https://drone.photoprism.app/photoprism/photoprism/882/2/0)
 
 - UX: [Improve video playback and icons](https://github.com/photoprism/photoprism/issues/935)
 - UX: [Restructure main navigation](https://github.com/photoprism/photoprism/issues/859)

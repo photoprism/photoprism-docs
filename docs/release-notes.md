@@ -5,6 +5,16 @@
     `photoprism/photoprism:latest` for testing our development preview.
     The preview image for ARM64 is `photoprism/photoprism-arm64:preview`.
 
+
+### January 21, 2021 ###
+
+[210121-d40548be-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/878/1/0),
+[210121-d40548be-Linux-aarch64](https://drone.photoprism.app/photoprism/photoprism/878/2/0)
+
+- UX: Improve video playing behaviour
+- UX: [Restructure main navigation](https://github.com/photoprism/photoprism/issues/859)
+- UX: [On mobile show search bar in albums](https://github.com/photoprism/photoprism/issues/937)
+
 ### January 20, 2021 ###
 
 [210120-e7cd5e9a-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/856/1/0),

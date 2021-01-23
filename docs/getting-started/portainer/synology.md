@@ -118,13 +118,16 @@ services:
 @eaDir
 ```
 
-### Step 4 (TO-DO): configure a reverse proxy in your Synology NAS to access PhotoPrism over https / custom domain name ###
+### Step 4: configure a reverse proxy in your Synology NAS to access PhotoPrism over https / custom domain name ###
 
-Synology allows you to configure a nginx reverse proxy to serve your applications over HTTPS. Configurations can be made in Diskstation manager _Control Panel_, _Application Portal_, _Reverse proxy_. I was able to make PhotoPrism work over HTTPS but I am still getting the error:
+Synology allows you to configure a nginx reverse proxy to serve your applications over HTTPS. Configurations can be made in Diskstation manager _Control Panel_, _Application Portal_, _Reverse proxy_.:
+Click create. [Description] give it a meaningful name (for eg. Photoprism) [Protocol]=HTTPS [Hostname]=[YOUR-HOSTNAME] [Port]=[YOUR-PORT] (for eg. 2343) check Enable HSTS and HTTP/2 . under Destination [Protocol]=HTTP [Hostname]=[YOUR-LOCAL-IP][PORT]=[YOUR-PORT] (default is 2342)
+Last step under _Custom Header_.:
+Click create [Websocket] and hit OK (this step makes that your browser receive photo counts, log messages, or metadata updates).
 
-> PhotoPrism uses WebSockets for two-way interactive communication between your browser and the server
-> If the connection fails and can't be reestablished, your browser won't receive photo counts, log messages, or metadata updates.
-> To fix this issue, please make sure you didn't block WebSocket connections in your browser or firewall and check the configuration of any Web server that is in front of PhotoPrism.
+**IMPORTANT: make sure that you have forwarded the selected port (for eg. 2343) in your router:**
 
-All help into sorting this out is greatly appreciated!
+
+
+
 

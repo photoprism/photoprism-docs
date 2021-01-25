@@ -31,25 +31,21 @@ You can open, edit and save them with Poedit to update existing translations.
 - In Poedit click on "Create New Translation" at the bottom, select the language, and start translating
 - When done, save your translation as `*.po` file using the two-letter language locale (e.g. `de.po`) as name
 - Add the new language to the `Languages` function in  `/frontend/src/options/options.js`
-- Run `npm run gettext-compile` to compile existing translations into a single `translations.json` file
 - To test your translations you need to build the frontend again using `npm run build` or `npm run watch`
 
 
 ### Update existing translation ###
-- In /frontend run `npm run gettext-extract`
 - Install a translation tool e.g. Poedit
 - Open the `*.po` file of your language e.g. `/frontend/src/locales/fr.po` file with Poedit
 - In the Poedit menu click "Catalogue" --> "Update from POT File" --> select the `translations.pot` file from `/frontend/src/locales`
 - Now you can start proofreading and adding the missing translations
 - Once your done save the changes in the `*.po` file
-- Run `npm run gettext-compile` to compile existing translations into a single `translations.json` file
 - To test your translations you need to build the frontend again using `npm run build` or `npm run watch`
 
 !!! note
     A binary `*.mo` (machine object) file will be automatically saved along with every `*.po` file. 
     You won't be able to open those in a text editor, but please include them in git commits or when sending
-    translations via email. The compiled `translations.json` file is not required for pull requests 
-    and often causes merge conflicts.
+    translations via email.
     
 ## Backend ##
 

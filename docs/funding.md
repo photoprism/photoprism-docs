@@ -1,19 +1,20 @@
 # Let's Join Forces
 
-This software is about freedom and privacy but not necessarily about free beer. We feel like it
-would be a mistake to state there will be no costs, because clearly we have huge expenses, your server hardware
-will have a price tag and then maybe you'd like to have some extra features that need to be developed.
+This software is about freedom and privacy but not about free beer. We feel like it
+would be a mistake to state there will be no costs because clearly, we have huge expenses, your server hardware
+will have a price tag, and then maybe you'd like to have some extra features that need to be developed.
 
-You're welcome to support us via [GitHub Sponsors](https://github.com/sponsors/photoprism), 
+You're welcome to support us via [GitHub Sponsors](https://github.com/sponsors/photoprism),
 especially if you have feature requests or need help with using our software.
-In addition, you can find us on [Patreon](https://www.patreon.com/photoprism) and [PayPal](https://www.paypal.me/photoprism). 
+In addition, you can find us on [Patreon](https://www.patreon.com/photoprism) 
+and [PayPal](https://www.paypal.me/photoprism).
 
 Your continuous support helps...
 
-* to pay for operating expenses and external services like satellite maps
-* developing new features, and keeping them free for everyone 🌈
+* pay for operating expenses and external services like satellite maps
+* developing new features and keeping them free for everyone 🌈
 
-Also, please [leave a star](https://github.com/photoprism/photoprism/stargazers) on GitHub if you like this project. 
+Also, please [leave a star](https://github.com/photoprism/photoprism/stargazers) on GitHub if you like this project.
 It provides additional motivation to keep going.
 
 Thank you very much! <3

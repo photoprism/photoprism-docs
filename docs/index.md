@@ -20,8 +20,8 @@ Say goodbye to solutions that force you to upload your visual memories to the cl
   [connect](user-guide/sync/webdav.md) directly to PhotoPrism so that you to can open,
   edit, and delete files from your computer or phone as if they were local.
   You may easily sync your pictures with [PhotoSync](https://www.photosync-app.com/) as well.
-* Because PhotoPrism is built as a [progressive web app](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps),
-  you may install it on your mobile phone and desktop computer.
+* Because PhotoPrism is built as a [progressive web app](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps), 
+  it provides a native app-like experience, and you may install it on your home screen.
 
 <p style="text-align: center; padding: 20px 4px;">
 <a class="md-button" style="background-color: #546e7a; font-size: 0.66rem; font-weight: normal; color: white" href="https://demo.photoprism.org/" target="_blank">TRY OUR DEMO</a>

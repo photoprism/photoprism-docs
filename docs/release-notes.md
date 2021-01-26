@@ -14,7 +14,7 @@
 - WebDAV: [Improved service discovery](https://github.com/photoprism/photoprism/issues/496)
 - Purge: [Hide missing files in UI and set new primary if needed](https://github.com/photoprism/photoprism/issues/917)
 - Archive: [Physically delete files after confirmation](https://github.com/photoprism/photoprism/issues/167) (early-access
-  feature for our [sponsors](https://www.patreon.com/photoprism))
+  feature for our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.org/developer-guide/))
 - Moments: [Added delete button to context menu](https://github.com/photoprism/photoprism/issues/942)
 - Settings: [Added "Estimates" feature flag to UI](https://github.com/photoprism/photoprism/issues/954)
 

@@ -10,6 +10,7 @@
 - UX: Improved theme colors and icons
 - Translations: Updated German and French
 - CLI: Added cleanup command to remove orphaned index entries and thumbnails
+- Config: Reduced auto index & import safety delay defaults
 - Metadata: [Fallback to earliest file mod time in case there is no other date](https://github.com/photoprism/photoprism/issues/930)
 - Import: [Index keywords from non-primary filenames as well](https://github.com/photoprism/photoprism/issues/920)
 - Mobile: [Prevent like on touch swipe](https://github.com/photoprism/photoprism/issues/953)

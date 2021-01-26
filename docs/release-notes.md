@@ -5,6 +5,18 @@
     `photoprism/photoprism:latest` for testing our development preview.
     The preview image for ARM64 is `photoprism/photoprism-arm64:preview`.
 
+### Development Preview ###
+
+- UX: Improved theme colors and icons
+- Metadata: [Fallback to earliest file mod time in case there is no other date](https://github.com/photoprism/photoprism/issues/930)
+- Metadata: [Index keywords from non-primary filenames as well](https://github.com/photoprism/photoprism/issues/920)
+- Mobile: [Prevent like on touch swipe](https://github.com/photoprism/photoprism/issues/953)
+- WebDAV: [Improved service discovery](https://github.com/photoprism/photoprism/issues/496)
+- Purge: [Hide missing files in UI and set new primary if needed](https://github.com/photoprism/photoprism/issues/917)
+- Archive: [Physically delete files after confirmation](https://github.com/photoprism/photoprism/issues/167) (early-access
+  feature for our [sponsors](https://www.patreon.com/photoprism))
+- Moments: [Added delete button to context menu](https://github.com/photoprism/photoprism/issues/942)
+- Settings: [Added "Estimates" feature flag to UI](https://github.com/photoprism/photoprism/issues/954)
 
 ### January 21, 2021 ###
 

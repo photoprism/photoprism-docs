@@ -11,15 +11,18 @@
 - Translations: Updated German and French
 - CLI: Added cleanup command to remove orphaned index entries and thumbnails
 - Config: Reduced auto index & import safety delay defaults
+- Download: Include all related media files using their current name by default
+- Indexer: [Improved photo titles, removed small words from title endings](https://github.com/photoprism/photoprism/commit/57dc591b124b071cb943cca8c11e98824b65cefc)
+- Metadata: Improved date extraction from current and original file names
 - Metadata: [Fallback to earliest file mod time in case there is no other date](https://github.com/photoprism/photoprism/issues/930)
 - Import: [Index keywords from non-primary filenames as well](https://github.com/photoprism/photoprism/issues/920)
 - Mobile: [Prevent like on touch swipe](https://github.com/photoprism/photoprism/issues/953)
 - WebDAV: [Improved service discovery](https://github.com/photoprism/photoprism/issues/496)
-- Purge: [Hide missing files in UI and set new primary if needed](https://github.com/photoprism/photoprism/issues/917)
+- Purge: [Hide missing files in edit dialog and set new primary if needed](https://github.com/photoprism/photoprism/issues/917)
 - Archive: [Physically delete files after confirmation](https://github.com/photoprism/photoprism/issues/167) (early-access
   feature for our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.org/developer-guide/))
 - Moments: [Added delete button to context menu](https://github.com/photoprism/photoprism/issues/942)
-- Settings: [Added "Estimates" feature flag to UI](https://github.com/photoprism/photoprism/issues/954)
+- Settings: [Added Estimates and Delete feature flags](https://github.com/photoprism/photoprism/issues/954)
 
 ### January 21, 2021 ###
 

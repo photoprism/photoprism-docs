@@ -9,7 +9,6 @@
 
 - UX: Improved theme colors and icons
 - Translations: Updated German and French
-- CLI: Added cleanup command to remove orphaned index entries and thumbnails
 - Config: Reduced auto index & import safety delay defaults
 - Download: Include all related media files using their current name by default
 - Indexer: [Improved photo titles, removed small words from title endings](https://github.com/photoprism/photoprism/commit/57dc591b124b071cb943cca8c11e98824b65cefc)
@@ -23,6 +22,7 @@
   feature for our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.org/developer-guide/))
 - Moments: [Added delete button to context menu](https://github.com/photoprism/photoprism/issues/942)
 - Settings: [Added Estimates and Delete feature flags](https://github.com/photoprism/photoprism/issues/954)
+- CLI: Added cleanup command to remove orphaned index entries and thumbnails
 
 ### January 21, 2021 ###
 

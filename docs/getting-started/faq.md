@@ -142,6 +142,24 @@ We also maintain a complete list of [config options](config-options.md) in these
 Our Docker Compose [examples](https://dl.photoprism.org/docker/docker-compose.yml) are continuously maintained and inline documentation 
 has been added to simplify installation.
 
+### Can I deploy PhotoPrism on a shared domain like `https://example.com/photoprism`?
+
+No. This is not recommended, and currently not supported for the following reasons:
+
+1. It's less effort, less complexity, and requires less testing on our side. We prefer
+   to invest our time in feature requests that provide more value to our users.
+2. Browser connections, routing, and related resources don't need to be shared
+   with other apps, so it's faster and easier to configure for you.
+3. Cloud photo apps typically use multiple sub domains for faster loading -
+   reducing the number of hosts and putting everything on a shared host
+   is the exact opposite of what you should do.
+4. It's easier for you to clear the browser cache, or change
+   PhotoPrism specific settings for ad blockers.
+5. The same origin policy generally works on the (sub-)domain level,
+   so it may be insecure to host multiple apps on the same domain - at least
+   without significant effort in additional security measures.
+6. Share URLs are shorter and easier to remember.
+
 ### Why is PhotoPrism getting stuck in a restart loop? ###
 
 These restarts are triggered by Docker (based on your configuration)

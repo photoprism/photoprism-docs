@@ -7,7 +7,8 @@
 
 ### Development Preview ###
 
-- UX: Improved theme colors and icons
+- UX: Improved theme colors and icons 
+- UX: Redirect already authenticated users from /login to /browse
 - Translations: Updated German and French
 - Config: Reduced auto index & import safety delay defaults
 - Download: Include all related media files using their current name by default

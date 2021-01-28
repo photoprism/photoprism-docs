@@ -16,7 +16,7 @@
 - Mobile: [Prevent like on touch swipe](https://github.com/photoprism/photoprism/issues/953)
 - Translations: Updated German and French
 - Config: Reduced auto index & import safety delay defaults
-- Indexer: [Improved photo titles, removed small words from title endings](https://github.com/photoprism/photoprism/commit/57dc591b124b071cb943cca8c11e98824b65cefc)
+- Metadata: [Improved photo titles, removed small words from title endings](https://github.com/photoprism/photoprism/commit/57dc591b124b071cb943cca8c11e98824b65cefc)
 - Metadata: Improved date extraction from current and original file names
 - Metadata: [Fallback to earliest file mod time in case there is no other date](https://github.com/photoprism/photoprism/issues/930)
 - Import: [Index keywords from non-primary filenames as well](https://github.com/photoprism/photoprism/issues/920)

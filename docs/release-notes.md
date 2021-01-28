@@ -8,7 +8,7 @@
 ### January 28, 2021 ###
 
 [210128-a82061e0-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/967/1/0),
-[210128-a82061e0-Linux-xaarch64](https://drone.photoprism.app/photoprism/photoprism/967/2/0)
+[210128-a82061e0-Linux-aarch64](https://drone.photoprism.app/photoprism/photoprism/967/2/0)
 
 - UX: Improved theme colors and icons 
 - UX: Redirect already authenticated users from /login to /browse

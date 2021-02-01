@@ -20,11 +20,17 @@ When disabled, no files can be downloaded.
 #### :material-share-variant: Share ####
 When disabled, album sharing and upload to remote services like Nextcloud is not possible.
 
+#### :material-lock: Hide Private ####
+Excludes content marked as private from search results, shared albums, labels and places.
+
 #### :material-archive-arrow-down: Archive ####
 When disabled, there is no *Archive*. Photos that have been archived beforehand will appear in *Photos/Videos*.
 
 #### :material-pencil: Edit ####
 When disabled, it is not possible to edit photo information.
+
+#### :material-delete: Delete ####
+When disabled, permanent deletion of files from the archive is not possible.
 
 #### :material-file: Originals ####
 When disabled, there is no *Originals* section.

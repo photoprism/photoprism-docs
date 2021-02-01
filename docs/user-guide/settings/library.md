@@ -2,9 +2,9 @@
 
 ## Index ##
 
-#### :material-lock: Hide Private ####
+#### :material-chart-timeline-variant: Estimates ####
 
-Excludes content marked as private from search results, shared albums, labels and places.
+Estimate the approximate location of pictures without coordinates.
 
 #### :material-eye: Quality Filter ####
 

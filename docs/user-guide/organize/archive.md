@@ -23,8 +23,3 @@ Content that is archived is not deleted but it will not appear in any section ap
 
     ![Screenshot](img/restore.png)
 
-Currently there is no permanent deletion possible in PhotoPrism. 
-
-In case you want to permanently delete a photo or video you must delete it in your *originals folder* directly.
-
-We might add this functionality later.

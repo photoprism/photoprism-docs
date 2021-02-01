@@ -66,6 +66,7 @@ nav:
       - Calendar: user-guide/organize/calendar.md
       - Download photos: user-guide/organize/download.md
       - Edit photos: user-guide/organize/edit.md
+      - Delete photos: user-guide/organize/delete.md
     - Sync:
       - Connect via WebDAV: user-guide/sync/webdav.md
     - Share:

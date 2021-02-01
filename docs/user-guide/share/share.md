@@ -8,6 +8,15 @@
     
     ![Screenshot](img/share-1.png)
     
+Or
+
+2. Open the album by clicking on it
+3. Click :material-share-variant:
+
+   ![Screenshot](img/share-5.png)
+
+Then
+
 5. Click :material-chevron-down: to open the *link details*
 6. Set a *secret* and *expiry date*
 7. Click *save*

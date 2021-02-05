@@ -5,6 +5,13 @@
     `photoprism/photoprism:latest` for testing our development preview.
     The preview image for ARM64 is `photoprism/photoprism-arm64:preview`.
 
+### Development Preview ###
+
+- Metadata: [Improved Exif parser](https://github.com/photoprism/photoprism/issues/990)
+- UX: [Hide Videos in navigation when there are none](https://github.com/photoprism/photoprism/pull/996)
+- Backup: [Restore archive flag from YAML files](https://github.com/photoprism/photoprism/issues/912)
+- Docker: [Improved entrypoint script](https://github.com/photoprism/photoprism/issues/1000)
+
 ### January 28, 2021 ###
 
 [210128-a82061e0-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/967/1/0),

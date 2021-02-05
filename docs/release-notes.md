@@ -8,7 +8,7 @@
 ### Development Preview ###
 
 - Upload: [Adds duplicates to selected albums as well](https://github.com/photoprism/photoprism/issues/991)
-- Search: [Removed unused countries from dropdown](https://github.com/photoprism/photoprism/issues/982)
+- Metadata: [Automatically remove orphan countries](https://github.com/photoprism/photoprism/issues/982)
 - Metadata: [Improved Exif parser](https://github.com/photoprism/photoprism/issues/990)
 - UX: [Hide Videos in navigation when there are none](https://github.com/photoprism/photoprism/pull/996)
 - Backup: [Restore archive flag from YAML files](https://github.com/photoprism/photoprism/issues/912)
@@ -93,7 +93,7 @@
   [French](https://github.com/photoprism/photoprism/pull/849),
   [Simplified Chinese](https://github.com/photoprism/photoprism/commit/614f93f696c7a180ff8196a01d3a10881847d459), and
   [German](https://github.com/photoprism/photoprism/commit/e015e17f3f2b7d29d2d7d71518b9d8657daff99c)
-- Indexing: Automatically create [JPEGs for related media files](https://github.com/photoprism/photoprism/issues/813) as well
+- Index: Automatically create [JPEGs for related media files](https://github.com/photoprism/photoprism/issues/813) as well
 - Import: Improved [error handling](https://github.com/photoprism/photoprism/issues/261) when the file system becomes unavailable
 - Config: [Updated docker-compose.yml examples](https://dl.photoprism.org/docker/)
 - Config: [Added optional gzip compression for built-in web server](getting-started/config-options.md)

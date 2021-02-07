@@ -7,10 +7,11 @@
 
 ### Development Preview ###
 
+- UX: [Hide Videos in navigation when there are none](https://github.com/photoprism/photoprism/pull/996)
 - Upload: [Adds duplicates to selected albums as well](https://github.com/photoprism/photoprism/issues/991)
+- Library: [Show folder covers in Originals](https://github.com/photoprism/photoprism/issues/1011)
 - Metadata: [Automatically remove orphan countries, cameras, and lenses](https://github.com/photoprism/photoprism/issues/982)
 - Metadata: [Improved Exif parser](https://github.com/photoprism/photoprism/issues/990)
-- UX: [Hide Videos in navigation when there are none](https://github.com/photoprism/photoprism/pull/996)
 - Backup: [Restore archive flag from YAML files](https://github.com/photoprism/photoprism/issues/912)
 - Docker: [Improved entrypoint script](https://github.com/photoprism/photoprism/issues/1000)
 

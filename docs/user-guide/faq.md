@@ -73,21 +73,14 @@ without modifying your originals.
 To fix the date directly in your image or video files, please use other applications
 like Photoshop, or Exiftool, and re-index your library.
 
-### How can I permanently delete files? ###
+### Can I use the web interface to permanently delete files? ###
 
-As we currently don't modify originals to avoid accidental data loss and conflicts with other applications, 
-you may only "soft delete" pictures by moving them to *Photos > Archive* using the context menu (if enabled in Settings).
-
-Permanently deleting files for freeing up storage will be implemented in a later release,
-see [Use trashcan to physically delete files after confirmation #167](https://github.com/photoprism/photoprism/issues/167).
-
-When deleting files manually, or using other applications, make sure to re-index your library 
-(or run `photoprism purge` in a terminal).
+Yes, [permanent deletion](./organize/delete.md) is available as early access feature for our sponsors.
 
 ### I already indexed some files. Why are Folders, Calendar and Moments still empty? ###
 Folders, Calendar and Moments are populated at the end of the indexing process.
 
-### Why does the count in *Search* not match the count of files in *Originals* ###
+### Why does the count in *Search* not match the count of files in *Originals* ?###
 The *Originals* section shows files, whereas the *Search* shows photos and videos. 
 
 Photos and video can consist of multiple files:

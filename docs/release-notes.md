@@ -5,6 +5,10 @@
     `photoprism/photoprism:latest` for testing our development preview.
     The preview image for ARM64 is `photoprism/photoprism-arm64:preview`.
 
+### Development Preview ###
+
+- Index: [Improved detection of missing files and photos](https://github.com/photoprism/photoprism/issues/1010)
+
 ### February 8, 2021 ###
 
 [210208-9e10ba69-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/1034/1/0),

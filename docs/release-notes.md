@@ -5,7 +5,10 @@
     `photoprism/photoprism:latest` for testing our development preview.
     The preview image for ARM64 is `photoprism/photoprism-arm64:preview`.
 
-### Development Preview ###
+### February 8, 2021 ###
+
+[210208-9e10ba69-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/1034/1/0),
+[210208-9e10ba69-Linux-aarch64](https://drone.photoprism.app/photoprism/photoprism/1034/2/0)
 
 - Upload: [Adds duplicates to selected albums as well](https://github.com/photoprism/photoprism/issues/991)
 - Library: [Show folder covers in Originals](https://github.com/photoprism/photoprism/issues/1011)

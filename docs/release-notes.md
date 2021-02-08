@@ -7,7 +7,7 @@
 
 ### Development Preview ###
 
-- Videos: [Native player](https://github.com/photoprism/photoprism/commit/669762db56d99f41224d70eadad12b0fd726a4bd) featuring many UX improvements
+- Videos: [Native player](https://github.com/photoprism/photoprism/commit/669762db56d99f41224d70eadad12b0fd726a4bd) featuring significant UX improvements
 - Index: [Improved detection of missing photos, files, and folders](https://github.com/photoprism/photoprism/issues/1010)
 
 ### February 8, 2021 ###

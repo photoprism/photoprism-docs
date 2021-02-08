@@ -7,7 +7,7 @@
 
 ### Development Preview ###
 
-- Index: [Improved detection of missing files and photos](https://github.com/photoprism/photoprism/issues/1010)
+- Index: [Improved detection of missing photos, files, and folders](https://github.com/photoprism/photoprism/issues/1010)
 
 ### February 8, 2021 ###
 

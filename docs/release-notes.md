@@ -7,7 +7,10 @@
 
 ### February 11, 2021 ###
 
-- Videos: [Native player](https://github.com/photoprism/photoprism/commit/669762db56d99f41224d70eadad12b0fd726a4bd) featuring performance and UX improvements
+[210211-b9595dd4-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/1047/1/0), 
+[210211-b9595dd4-Linux-aarch64](https://drone.photoprism.app/photoprism/photoprism/1047/2/0)
+
+- Videos: Native player featuring performance and UX improvements
 - Index: [Improved detection of missing photos, files, and folders](https://github.com/photoprism/photoprism/issues/1010)
 
 ### February 8, 2021 ###

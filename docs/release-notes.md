@@ -5,6 +5,14 @@
     `photoprism/photoprism:latest` for testing our development preview.
     The preview image for ARM64 is `photoprism/photoprism-arm64:preview`.
 
+### Development Preview ###
+
+- UX: Automatically hide scrollbar in photo viewer and *Places* 
+- Videos: [Added transcoding support to convert command](https://github.com/photoprism/photoprism/issues/703)
+- Videos: [Added ffmpeg-codec config parameters #703](https://github.com/photoprism/photoprism/issues/703)
+- Metadata: Workaround for Exif strings containing `\n` or `\r`
+- Metadata: [Remove estimate when setting a new country](https://github.com/photoprism/photoprism/issues/1018)
+
 ### February 11, 2021 ###
 
 [210211-b9595dd4-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/1047/1/0), 

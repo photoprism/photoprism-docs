@@ -9,7 +9,7 @@
 
 - UX: Automatically hide scrollbar in photo viewer and *Places* 
 - Videos: [Added transcoding support to convert command](https://github.com/photoprism/photoprism/issues/703)
-- Videos: [Added ffmpeg-codec config parameters #703](https://github.com/photoprism/photoprism/issues/703)
+- Videos: [Added ffmpeg-codec config parameters](https://github.com/photoprism/photoprism/issues/703)
 - Metadata: Workaround for Exif strings containing `\n` or `\r`
 - Metadata: [Remove estimate when setting a new country](https://github.com/photoprism/photoprism/issues/1018)
 

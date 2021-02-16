@@ -5,7 +5,7 @@
     `photoprism/photoprism:latest` for testing our development preview.
     The preview image for ARM64 is `photoprism/photoprism-arm64:preview`.
 
-### Development Preview ###
+### February 16, 2021 ###
 
 - UX: Automatically hide scrollbar in photo viewer and Places
 - Delete: [Permanently remove all related sidecar files](https://github.com/photoprism/photoprism/issues/167#issuecomment-779179817)

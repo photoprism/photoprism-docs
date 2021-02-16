@@ -7,6 +7,9 @@
 
 ### February 16, 2021 ###
 
+[210216-4939e36a-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/1100/1/0),
+[210216-4939e36a-Linux-aarch64](https://drone.photoprism.app/photoprism/photoprism/1100/2/0)
+
 - UX: Automatically hide scrollbar in photo viewer and Places
 - Delete: [Permanently remove all related sidecar files](https://github.com/photoprism/photoprism/issues/167#issuecomment-779179817)
 - Videos: [Added transcoding config options](https://github.com/photoprism/photoprism/issues/703)

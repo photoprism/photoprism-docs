@@ -13,7 +13,7 @@
 - UX: Automatically hide scrollbar in photo viewer and Places
 - Delete: [Permanently remove all related sidecar files](https://github.com/photoprism/photoprism/issues/167#issuecomment-779179817)
 - Videos: [Added transcoding config options](https://github.com/photoprism/photoprism/issues/703)
-- Videos: [Added transcoding to convert command](https://github.com/photoprism/photoprism/issues/703)
+- Videos: [Added transcoding via convert command](https://github.com/photoprism/photoprism/issues/703)
 - Metadata: [Remove estimate when setting a new country](https://github.com/photoprism/photoprism/issues/1018)
 - Metadata: [Workaround for Exif strings containing newlines](https://github.com/dsoprea/go-exif/issues/55)
 

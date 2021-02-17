@@ -5,6 +5,13 @@
     `photoprism/photoprism:latest` for testing our development preview.
     The preview image for ARM64 is `photoprism/photoprism-arm64:preview`.
 
+### February 17, 2021 ###
+
+- Videos: [Optimized transcoding parameters](https://github.com/photoprism/photoprism/issues/703)
+- Videos: [Use AAC audio for MP4 transcoding](https://github.com/photoprism/photoprism/issues/1061)  
+- Metadata: [Default to landscape orientation if data is invalid](https://github.com/photoprism/photoprism/issues/1052)
+- Translations: [Updated Brazilian Portuguese](https://github.com/photoprism/photoprism/pull/1053)
+
 ### February 16, 2021 ###
 
 [210216-4939e36a-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/1100/1/0),

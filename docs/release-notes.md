@@ -7,6 +7,9 @@
 
 ### February 17, 2021 ###
 
+[210217-49039368-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/1113/1/0),
+[210217-49039368-Linux-aarch64](https://drone.photoprism.app/photoprism/photoprism/1113/2/0)
+
 - Videos: [Optimized transcoding parameters](https://github.com/photoprism/photoprism/issues/703)
 - Videos: [Use AAC audio for MP4 transcoding](https://github.com/photoprism/photoprism/issues/1061)  
 - Metadata: [Default to landscape orientation if data is invalid](https://github.com/photoprism/photoprism/issues/1052)

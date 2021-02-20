@@ -32,3 +32,19 @@ Looking forward, specific solutions for funding development and maintenance coul
 *Note that we've recently [switched](https://github.com/sponsors/lastzero) to a GitHub Sponsors 
 [organization account](https://github.com/sponsors/photoprism) so that donations can be shared more easily.
 Tiers are more affordable now while benefits stay mostly the same.*
+
+## Crypto Donations ##
+
+We are excited to now accept donations via the following cryptocurrencies as well:
+
+##### Bitcoin #####
+
+[`bc1qnj5c8wpsc34qe92uql75y6w6y702sfrxva0k4z`](bitcoin:bc1qnj5c8wpsc34qe92uql75y6w6y702sfrxva0k4z)
+
+##### Monero #####
+
+[`474qhuQzC59g4i7cn8mN9VeRGRJHvChmUhL5Fh53hntah63QzB7ERxEb5woVvJkc1KZuGZ3GsGh7d5w9d6SUBHmrUzGeEWT`](monero:474qhuQzC59g4i7cn8mN9VeRGRJHvChmUhL5Fh53hntah63QzB7ERxEb5woVvJkc1KZuGZ3GsGh7d5w9d6SUBHmrUzGeEWT)
+
+##### Dogecoin #####
+
+[`DRCBHso4xaE2DRGpWuaif7jma1UwTKcAGq`](dogecoin:DRCBHso4xaE2DRGpWuaif7jma1UwTKcAGq)

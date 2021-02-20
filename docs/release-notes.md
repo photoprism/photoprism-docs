@@ -7,7 +7,7 @@
 
 ### Development Preview ###
 
-- UX: [Added autofocus for input fields and confirm on enter](https://github.com/photoprism/photoprism/issues/1078)
+- UX: [Autofocus for input fields and confirm on enter](https://github.com/photoprism/photoprism/issues/1078)
 - Translations: [Added Norwegian](https://github.com/photoprism/photoprism/pull/1079)
 
 ### February 17, 2021 ###

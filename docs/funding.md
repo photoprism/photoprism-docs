@@ -33,9 +33,10 @@ Looking forward, specific solutions for funding development and maintenance coul
 [organization account](https://github.com/sponsors/photoprism) so that donations can be shared more easily.
 Tiers are more affordable now while benefits stay mostly the same.*
 
-## Crypto Donations ##
+### Cryptocurrencies ###
 
-We are excited to now accept donations via the following cryptocurrencies as well:
+We've listened to the crypto lovers in our community and are excited to now accept
+donations via the following addresses:
 
 ##### Bitcoin #####
 

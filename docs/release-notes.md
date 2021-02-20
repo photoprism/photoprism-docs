@@ -5,6 +5,11 @@
     `photoprism/photoprism:latest` for testing our development preview.
     The preview image for ARM64 is `photoprism/photoprism-arm64:preview`.
 
+### Development Preview ###
+
+- UX: [Added autofocus for input fields and confirm on enter](https://github.com/photoprism/photoprism/issues/1078)
+- Translations: [Added Norwegian](https://github.com/photoprism/photoprism/pull/1079)
+
 ### February 17, 2021 ###
 
 [210217-49039368-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/1113/1/0),

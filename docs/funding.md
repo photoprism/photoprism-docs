@@ -7,7 +7,9 @@ will have a price tag, and then maybe you'd like to have some extra features tha
 You're welcome to support us via [GitHub Sponsors](https://github.com/sponsors/photoprism),
 especially if you have feature requests or need help with using our software.
 In addition, you can find us on [Patreon](https://www.patreon.com/photoprism) 
-and [PayPal](https://www.paypal.me/photoprism).
+and [PayPal](https://www.paypal.me/photoprism). We've also set up 
+[crypto wallets](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md) 
+for Bitcoin, Monero, and Dogecoin.
 
 Your continuous support helps...
 
@@ -32,19 +34,3 @@ Looking forward, specific solutions for funding development and maintenance coul
 *Note that we've recently [switched](https://github.com/sponsors/lastzero) to a GitHub Sponsors 
 [organization account](https://github.com/sponsors/photoprism) so that donations can be shared more easily.
 Tiers are more affordable now while benefits stay mostly the same.*
-
-### Cryptocurrencies ###
-
-We've listened to the crypto lovers and are excited to now accept donations to the following addresses:
-
-##### Bitcoin #####
-
-[`bc1qnj5c8wpsc34qe92uql75y6w6y702sfrxva0k4z`](bitcoin:bc1qnj5c8wpsc34qe92uql75y6w6y702sfrxva0k4z)
-
-##### Monero #####
-
-[`474qhuQzC59g4i7cn8mN9VeRGRJHvChmUhL5Fh53hntah63QzB7ERxEb5woVvJkc1KZuGZ3GsGh7d5w9d6SUBHmrUzGeEWT`](monero:474qhuQzC59g4i7cn8mN9VeRGRJHvChmUhL5Fh53hntah63QzB7ERxEb5woVvJkc1KZuGZ3GsGh7d5w9d6SUBHmrUzGeEWT)
-
-##### Dogecoin #####
-
-[`DRCBHso4xaE2DRGpWuaif7jma1UwTKcAGq`](dogecoin:DRCBHso4xaE2DRGpWuaif7jma1UwTKcAGq)

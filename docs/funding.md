@@ -35,8 +35,7 @@ Tiers are more affordable now while benefits stay mostly the same.*
 
 ### Cryptocurrencies ###
 
-We've listened to the crypto lovers in our community and are excited to now accept
-donations via the following addresses:
+We've listened to the crypto lovers and are excited to now accept donations to the following addresses:
 
 ##### Bitcoin #####
 

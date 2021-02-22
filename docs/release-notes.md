@@ -10,6 +10,7 @@
 - UX: [Autofocus for input fields and confirm on enter](https://github.com/photoprism/photoprism/issues/1078)
 - Restore: [Find YAML album backups in originals folder](https://github.com/photoprism/photoprism/commit/32ef03083d9414e0ab1f52bbb3837251e0438689)
 - Metadata: [Improved location labels and moments](https://github.com/photoprism/photoprism/commit/d42eb4e01b8844d46f7332e1b8d8dc7a18e41a14)
+- Thumbnails: [Fixed auto-rotation for HEIF, TIFF, and PNG images](https://github.com/photoprism/photoprism/issues/1064)
 - Translations: [Added Norwegian (Bokmål)](https://github.com/photoprism/photoprism/pull/1079)
 
 ### February 17, 2021 ###

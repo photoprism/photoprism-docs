@@ -11,9 +11,8 @@ and update [Let's Encrypt](https://letsencrypt.org/) HTTPS certificates.
     }
     ```
 
-Please refer to their [official documentation](https://caddyserver.com/docs/v2-upgrade#proxy)
+Please refer to the [official documentation](https://caddyserver.com/docs/v2-upgrade#proxy)
 for further details.
-
 
 !!! attention
     When installing PhotoPrism on a public server outside your home network, please **always run it

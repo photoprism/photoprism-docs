@@ -61,7 +61,7 @@ documented in [Setup Using Docker Compose](../docker-compose.md):
             entryPoint: web
     ```
 
-Please refer to their [official documentation](https://doc.traefik.io/traefik/user-guides/docker-compose/basic-example/)
+Please refer to the [official documentation](https://doc.traefik.io/traefik/user-guides/docker-compose/basic-example/)
 for further details.
 
 !!! attention

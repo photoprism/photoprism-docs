@@ -22,6 +22,7 @@ nav:
       - Kubernetes: getting-started/advanced/kubernetes.md
       - FreeBSD: getting-started/advanced/freebsd.md
       - Databases: getting-started/advanced/databases.md
+      - Transcoding: getting-started/advanced/transcoding.md
       - Caching: getting-started/advanced/caching.md
       - NGINX: getting-started/advanced/nginx-proxy-setup.md
       - Backup: getting-started/advanced/backup.md

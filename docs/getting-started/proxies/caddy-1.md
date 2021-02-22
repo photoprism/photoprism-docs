@@ -12,7 +12,7 @@ For PhotoPrism to work properly, you need to enable websockets and transparent p
     }
     ```
 
-Please refer to their [official documentation](https://caddyserver.com/v1/docs/websocket)
+Please refer to the [official documentation](https://caddyserver.com/v1/docs/websocket)
 for further details.
 
 !!! attention

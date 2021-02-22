@@ -1,9 +1,21 @@
-## Edit EXIF metadata for testing
 Exiftool --> https://exiftool.org/
 
 Installation possible via brew or from homepage.
 
-## Command line examples
+Exif-Read-Tool: https://github.com/dsoprea/go-exif
+
+## Show exif data for debugging
+
+### Show exif data read from exiftool
+
+`exiftool -j photo.jpg`
+
+### Show exif data read from exif-read-tool
+
+`exif-read-tool -f photo.jpg`
+
+
+## Edit EXIF data for testing
 
 ### Set CreateDate
 

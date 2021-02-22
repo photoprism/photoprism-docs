@@ -69,6 +69,7 @@ nav:
       - Delete photos: user-guide/organize/delete.md
     - Sync:
       - Connect via WebDAV: user-guide/sync/webdav.md
+      - Sync from phone: user-guide/sync/sync-phone.md
     - Share:
       - Share album via link: user-guide/share/share.md
     - Settings:

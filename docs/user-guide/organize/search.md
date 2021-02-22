@@ -98,10 +98,26 @@ mono:true review:false
 It will show photos that are monochrome **and** unreviewed.
 
 ## OR Search ##
-An OR search is possible using |:
+An OR search is possible using `|`:
 
 ```
 label:cat|dog
 ```
 
 This will show all photos that have either the label cat **or** dog.
+
+## Wildcard ##
+The `*` character will act as a wildcard:
+
+```
+name:"IMG_23*"
+```
+
+This will show all photos which name start with `IMG_23`.
+
+
+```
+name:"*_23*"
+```
+
+This will show all photos which name contain `_23`, like `IMG_2356.MOV` , `2021_02_23.jpg`, etc.

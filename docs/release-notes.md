@@ -5,7 +5,10 @@
     `photoprism/photoprism:latest` for testing our development preview.
     The preview image for ARM64 is `photoprism/photoprism-arm64:preview`.
 
-### Development Preview ###
+### February 22, 2021 ###
+
+[210222-ac5a9d5e-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/1147/1/0),
+[210222-ac5a9d5e-Linux-aarch64](https://drone.photoprism.app/photoprism/photoprism/1147/2/0)
 
 - UX: [Autofocus for input fields and confirm on enter](https://github.com/photoprism/photoprism/issues/1078)
 - Restore: [Find YAML album backups in originals folder](https://github.com/photoprism/photoprism/commit/32ef03083d9414e0ab1f52bbb3837251e0438689)

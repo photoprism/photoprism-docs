@@ -2,8 +2,7 @@
 
 *Note: This is contributed content. Click the edit link to perform changes and send a pull request.*
 
-The encoder to be used by FFmpeg when transcoding videos can be configured within 
-your `docker-compose.yml` config file.  
+The encoder used by FFmpeg can be configured within your `docker-compose.yml` config file.  
 
 Experimental hardware accelerated transcoding on a Raspberry Pi (and compatible devices)
 may be enabled using the `h264_v4l2m2m` encoder:
@@ -22,7 +21,13 @@ for a full list of encoders and their implementation status.
     allocation issues when using hardware acceleration. 
     Monitor your server logs carefully and increase available GPU and/or CMA memory 
     allocations if necessary. 
-    
+
+The Docker container will also need access to one or more video devices.
+For the `h264_v4l2m2m` encoder on a Raspberry Pi, also add:
+```yaml
+devices:
+ - "/dev/video11:/dev/video11"
+```
 
 Additional advanced configuration options:
 
@@ -34,4 +39,4 @@ PHOTOPRISM_FFMPEG_BUFFERS: "64" # FFmpeg capture buffers (default: 32)
     Hardware accelerated transcoding within Photoprism is currently experimental.
     It may not work on all server configurations.
     Some users report unexpected hangs in the FFmpeg process when attempting to 
-    transcoding large video files. 
+    transcode large video files. 

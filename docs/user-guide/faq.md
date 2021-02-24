@@ -96,5 +96,5 @@ These files are stored in /storage/sidecar (unless configured otherwise).
 In the UI they are shown in the *Originals* section and added to its count.
 
 ### Why do some of my photos without geolocation information show a random location ? ###
-PhotoPrism estimates the location of photos witout geolocation from photos that have been taken on the same day.
+PhotoPrism estimates the location of photos without geolocation from photos that have been taken on the same day.
 You can disable estimations in [Settings](./settings/general.md).

@@ -50,8 +50,7 @@ nav:
       - Browse:
         - Sections: user-guide/organize/browse.md
         - Views: user-guide/organize/views.md
-        - Search & Filters: user-guide/organize/search.md
-      #- Search Filter: user-guide/organize/search.md
+      - Search: user-guide/organize/search.md
       - Review: user-guide/organize/review.md
       - Stacks: user-guide/organize/stacks.md
       - Panoramas: user-guide/organize/panoramas.md
@@ -85,11 +84,11 @@ nav:
       - Export from Flickr: user-guide/use-cases/flickr.md
       - Sync with Dropbox: user-guide/use-cases/dropbox.md
       #- Link directories from remote:
-    - Advanced:
-        - Metadata: user-guide/advanced/metadata.md
-        - Metadata Backups: user-guide/advanced/backups.md
-        - Paths: user-guide/advanced/paths.md
-        - Commands: user-guide/advanced/commands.md
+    #- Advanced:
+       # - Metadata: user-guide/advanced/metadata.md
+       # - Metadata Backups: user-guide/advanced/backups.md
+       # - Paths: user-guide/advanced/paths.md
+       # - Commands: user-guide/advanced/commands.md
 
     - Release Notes: release-notes.md
     - FAQ: user-guide/faq.md

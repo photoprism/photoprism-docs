@@ -13,8 +13,6 @@ you add your photos to the `import` directory, so that they can be imported into
 The storage path can be configured using `PHOTOPRISM_STORAGE_PATH`.
 Using the default settings the storage path contains cache, sidecar and backup paths as well as database files.
 
-//Always? Welche sind immer in storage?
-
 ### Cache Path
 The `cache` directory contains `json` and `thumbnails` directories. 
 The path can be set using `PHOTOPRISM_CACHE_PATH`.
@@ -22,9 +20,6 @@ The path can be set using `PHOTOPRISM_CACHE_PATH`.
 #### JSON
 PhotoPrism creates json files containing a file's exifdata in this directory.
 You can prevent PhotoPrism from creating those json files by disabling exiftool in [Settings](../settings/advanced.md).
-
-//Is this json updated when I update the exif data of my file in originals?
-// Do we create those for all file types?
 
 #### Thumbnails
 PhotoPrism creates thumbnails in different sizes for each photo. Those are stored in the `thumbnails` directory.
@@ -36,8 +31,7 @@ Both backup and converting functionalities can be disabled in [Settings](../sett
 The sidecar path can be configured using `PHOTOPRISM_SIDECAR_PATH`.
 
 ### Backup Path
-Ist das /albums???
-Switch off with what?
+
 
 ## Temp Path
 In the `temp` directory, uploads and downloads are temporarily stored. You can configure the path using `PHOTOPRISM_TEMP_PATH`.

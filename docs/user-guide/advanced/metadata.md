@@ -2,8 +2,6 @@ PhotoPrism aims to extract as much metadata from your original files as possible
 
 This is an ongoing task. If you are using certain standard exif or xmp fields that are not supported yet, feel free to open an issue or pull request.
 
-//Do we detect updates in exif or xmp files? And during complete rescan or normal index?
-
 PhotoPrism does not yet write back changes to EXIF or XMP (see [discussion](https://github.com/photoprism/photoprism/discussions/1092)). 
 
 We want you to have access to your metadata independent from PhotoPrism or its database,
@@ -34,11 +32,6 @@ Flash                                                           | Flash         
 ImageDescription                                                | Description   | Description|
 ProjectionType                                                  | Projection    ||
 
-
-
-//Are those all? GPS? etc where is it documented????
-//Or does exiftool read others as well?
-
 ## Supported XMP fields
 
 XMP Tag                       | PhotoPrism DB | PhotoPrism UI | PhotoPrism YML
@@ -50,5 +43,3 @@ RDF.Description.Rights.Alt.Li.Text      | Copyright     | Copyright |
 RDF.Description.Make                    | CameraMake    | Camera|
 RDF.Description.Model                   | CameraModel   | Camera |
 RDF.Description.LensModel               | LensModel     | Lens |
-
-//Are those all? What about subject? Keywords?

@@ -85,10 +85,10 @@ nav:
       - Sync with Dropbox: user-guide/use-cases/dropbox.md
       #- Link directories from remote:
     #- Advanced:
-       # - Metadata: user-guide/advanced/metadata.md
-       # - Metadata Backups: user-guide/advanced/backups.md
-       # - Paths: user-guide/advanced/paths.md
-       # - Commands: user-guide/advanced/commands.md
+      #- Metadata: user-guide/advanced/metadata.md
+      #- Metadata Backups: user-guide/advanced/backups.md
+      #- Paths: user-guide/advanced/paths.md
+      #- Commands: user-guide/advanced/commands.md
 
     - Release Notes: release-notes.md
     - FAQ: user-guide/faq.md

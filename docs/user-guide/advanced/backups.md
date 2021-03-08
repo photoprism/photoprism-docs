@@ -12,7 +12,7 @@ We chose yml files for the following reasons:
 
 ## Album Backups
 Album backups are created for the following album types: album, folder, state, moment and month.
-You find those backups inside of your storage path in `/albums`.
+You find those backups inside of your `storage path` in `/albums`.
 
 ### Album backups
 For each album the following metadata is stored in the yml file:
@@ -40,7 +40,7 @@ For each moment the following metadata is stored in the yml file:
 * UID, Slug, Type, Title, Location, Category, Description, Filter, Sort Order, Country, Year, CreatedAt, UpdatedAt
 
 ## Photo Backups
-PhotoPrism creates yml backup files for each photo in your sidecar path.
+PhotoPrism creates yml backup files for each photo in your `sidecar path`.
 
 The following metadata is stored:
 
@@ -63,6 +63,8 @@ The following metadata is stored:
 * FNumber
 * FocalLength
 * Quality
+* Favorite
+* Private
 * Keywords + Source
 * Notes + Source
 * Subject + Source
@@ -72,5 +74,4 @@ The following metadata is stored:
 * CreatedAt
 * UpdatedAt
 * EditedAt
-
-* Private, Archive, Favorite?
+* DeletedAt (Archived)

@@ -140,6 +140,12 @@ but set a high Dynamic Size Limit.
 This will allow the server to generate downsampled preview images on-demand,
 causing a delay when previewing a photo in full screen mode.
 
+!!! tip
+    To view original images, enable *Dynamic Previews*,
+    and configure *Dynamic Size Limit* and *Static Size Limit*
+    to a small value like `720`. When viewing images exceeded that limit,
+    the original files will be displayed.
+
 #### What files will be created by PhotoPrism?
 
 The minimum size for static previews is 720px, so all images up to `720x720` will be rendered.

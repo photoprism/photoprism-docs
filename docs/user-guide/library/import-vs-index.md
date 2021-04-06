@@ -46,14 +46,6 @@ Your initial folder structure in *import* might look like this:
 * In the originals directory files are renamed and get a new folder structure. The original name is saved as property of the file
 * All imported files are indexed
 
-**After import using "copy" (this is the default) your folders could look like this:**
-
-   ![Screenshot](img/copy-import.png)
-
-**After import using "move" your folders might look like this:**
-
-   ![Screenshot](img/move-import.png)
-
 #### Advantages ####
 * Duplicates or unsupported files stay untouched in the import directory
 

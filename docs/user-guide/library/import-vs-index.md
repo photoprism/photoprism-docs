@@ -26,12 +26,6 @@ Your folder structure in *originals* might look like this:
 * Thumbnails are rendered for JPEGs
 * Optionally json and or yml files containing metadata are created
 
-**After indexing your originals folder might look like this:**
-
-  ![Screenshot](img/after-index.png)
-
-    
-
 #### Advantages ####
 
 * You keep your existing folder structure

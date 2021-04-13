@@ -16,7 +16,7 @@ moving or renaming them in any way.
 
 Your folder structure in *originals* might look like this:
 
-   ![Screenshot](img/before-index.png)
+   ![Screenshot](img/originals-before-after.png)
      
 **During indexing:**
 
@@ -26,9 +26,9 @@ Your folder structure in *originals* might look like this:
 * Thumbnails are rendered for JPEGs
 * Optionally json and or yml files containing metadata are created
 
-**After indexing your originals folder might look like this:**
+After indexing your originals folder has not been touched:
 
-  ![Screenshot](img/after-index.png)
+![Screenshot](img/originals-before-after.png)
 
     
 
@@ -52,11 +52,11 @@ Your initial folder structure in *import* might look like this:
 * In the originals directory files are renamed and get a new folder structure. The original name is saved as property of the file
 * All imported files are indexed
 
-**After import using "copy" (this is the default) your folders could look like this:**
+After import using "copy" (this is the default) your folders could look like this:
 
    ![Screenshot](img/copy-import.png)
 
-**After import using "move" your folders might look like this:**
+After import using "move" your folders might look like this:
 
    ![Screenshot](img/move-import.png)
 

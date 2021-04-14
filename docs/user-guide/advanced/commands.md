@@ -6,13 +6,6 @@ Some of the commands are executed in the background. Others can only be triggere
 
 ### When is it executed?
 
-
-## Backup
-### What does it?
-
-### When is it executed?
-
-
 ## Optimize
 ### What does it?
 The optimize command checks all files with checked = false for metadata optimizations. 
@@ -33,5 +26,12 @@ After 7 days the files with checked = true will be reset to checked = false.
 ### What does it?
 
 ### When is it executed?
+
+
+## Reset db
+
+## Restore
+
+## How to migrate between different dbs
 
 

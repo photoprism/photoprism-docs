@@ -1,15 +1,18 @@
 PhotoPrism aims to extract as much metadata from your original files as possible.
 
-This is an ongoing task. If you are using certain standard exif or xmp fields that are not supported yet, feel free to open an issue or pull request.
+This is an ongoing task. If you are using certain standard exif or xmp fields that are not supported yet, feel free to open an [issue](https://github.com/photoprism/photoprism/issues) or pull request.
 
 PhotoPrism does not yet write back changes to EXIF or XMP (see [discussion](https://github.com/photoprism/photoprism/discussions/1092)). 
 
 We want you to have access to your metadata independent from PhotoPrism or its database,
-that's why we create human-readable [yml backups](./backups.md) with all the metadata you add to your files using PhotoPrism.
+that's why we create human-readable [YAML backups](./backups.md) with metadata you add to your files using PhotoPrism.
 
 ##Supported Metadata Tags
 
-This table gives an overview on which fields in PhotoPrism are populated with what metadata tags.
+PhotoPrism uses [exiftool](https://exiftool.org/) to extract metadata from different file formats like EXIF, XMP, IPTC and more.
+We additionally parse XMP.
+
+This table gives an overview what tags from exiftool or XMP are mapped to which fields in PhotoPrism.
 
 PhotoPrism | [Exiftool](https://exiftool.org/) Tag | XMP Tag
 :--------------|----------- |:--------

@@ -11,8 +11,8 @@
 [210419-d00864ac-Linux-aarch64](https://drone.photoprism.app/photoprism/photoprism/1221/2/0)
 
 - UX: [Improved touch event accuracy in cards and mosaic view](https://github.com/photoprism/photoprism/issues/1048)
-- Backup: [Added command flags and usage docs](https://github.com/photoprism/photoprism/issues/1190)
 - HEIF: [Prevent redundant sidecar JPEG files](https://github.com/photoprism/photoprism/issues/1200)
+- Backup: [Added command flags and usage docs](https://github.com/photoprism/photoprism/issues/1190)
 - Translations: Added Danish and Kurdish
 
 ### February 22, 2021 ###

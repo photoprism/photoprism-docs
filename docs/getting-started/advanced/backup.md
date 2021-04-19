@@ -1,14 +1,17 @@
-# Backup
+# Creating Backups
 
-There are two primary things you need to backup:
+A full backup of your PhotoPrism instance includes:
 
-1. Your pictures
-2. Photoprism's database
+1. All photo, video, and sidecar files in your `originals` folder
+2. An index database SQL dump
 
-All your pictures reside in your "Originals" directory.
-Including that one in your backup is essential to avoid data loss.
+The best way to create an index backup is to run this command in a terminal:
 
-In regards to photoprism's database, the easiest way is to use the built-in `backup` command.
-See `photoprism backup --help` for detailed information on how to use it.
+```
+photoprism backup -a -i [filename]
+ ```
 
-Please also see this [discussion](https://github.com/photoprism/photoprism/discussions/772) for more information.
+Use `-` as filename to write the backup to stdout. If you leave it empty, the backup
+will be written to the default backup folder configured via `PHOTOPRISM_BACKUP_PATH`.
+
+Helpful information can be found on [GitHub](https://github.com/photoprism/photoprism/discussions/772) as well.

@@ -5,6 +5,16 @@
     `photoprism/photoprism:latest` for testing our development preview.
     The preview image for ARM64 is `photoprism/photoprism-arm64:preview`.
 
+### Development Preview ###
+
+[210419-d00864ac-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/1221/1/0),
+[210419-d00864ac-Linux-aarch64](https://drone.photoprism.app/photoprism/photoprism/1221/2/0)
+
+- UX: [Improved touch event accuracy in cards and mosaic view](https://github.com/photoprism/photoprism/issues/1048)
+- Backup: [Added command flags and usage docs](https://github.com/photoprism/photoprism/issues/1190)
+- HEIF: [Prevent redundant sidecar JPEG files](https://github.com/photoprism/photoprism/issues/1200)
+- Translations: Added Danish and Kurdish
+
 ### February 22, 2021 ###
 
 [210222-ac5a9d5e-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/1149/1/0),

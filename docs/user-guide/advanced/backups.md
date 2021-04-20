@@ -44,12 +44,14 @@ The following metadata is stored:
 PhotoPrism automatically creates the album and photo backup YAML files.
 If you want to update album backups or create a database backup you can use the backup command:
 
-`docker-compose exec photoprism photoprism backup -a -i exampleName`
+`docker-compose exec photoprism photoprism backup -a --albums-path PATH -i --index-path PATH`
 
 * -a = create album backups
 
+* --albums-path = optional, path where album backup will be stored
+
 * -i = create database backup
 
-* -f = overwrite extisting backup files
+* --index-path = optional, path for the database backup
 
-* exampleFilename = optional, name of the file for the database backup
+* -f = overwrite existing backup files

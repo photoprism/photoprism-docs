@@ -12,6 +12,7 @@ nav:
     - Portainer:
       - Synology: getting-started/portainer/synology.md
     - Reverse Proxies:
+      - SWAG: getting-started/proxies/SWAG.md
       - Traefik: getting-started/proxies/traefik.md
       - Caddy 1: getting-started/proxies/caddy-1.md
       - Caddy 2: getting-started/proxies/caddy-2.md

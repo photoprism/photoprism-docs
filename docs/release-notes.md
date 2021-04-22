@@ -7,13 +7,16 @@
 
 ### Development Preview ###
 
-[210420-de5a71f1-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/1225/1/0),
-[210420-de5a71f1-Linux-aarch64](https://drone.photoprism.app/photoprism/photoprism/1225/2/0)
+[210421-88c0b334-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/1235/1/0),
+[210421-88c0b334-Linux-aarch64](https://drone.photoprism.app/photoprism/photoprism/1235/2/0)
 
-- UX: [Improved touch event accuracy in cards and mosaic view](https://github.com/photoprism/photoprism/issues/1048)
+- UX: [Improved touch event accuracy](https://github.com/photoprism/photoprism/issues/1048)
+- UX: [Optimized rendering on small screens](https://github.com/photoprism/photoprism/commit/b07ba63108dace2a8d5b2df18a06647252a36272)
+- UX: [Fixed autocomplete in "add to album" dialog](https://github.com/photoprism/photoprism/issues/1130)
 - HEIF: [Prevent redundant sidecar JPEG files](https://github.com/photoprism/photoprism/issues/1200)
 - Backup: [Added command flags and usage docs](https://github.com/photoprism/photoprism/issues/1190)
-- Translations: Added Danish and Kurdish
+- Translations: Added [Danish](https://github.com/photoprism/photoprism/commits?author=tcarlsen) 
+  and [Kurdish](https://github.com/photoprism/photoprism/commits?author=Hrazhan)
 
 ### February 22, 2021 ###
 

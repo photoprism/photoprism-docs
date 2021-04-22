@@ -5,10 +5,10 @@
     `photoprism/photoprism:latest` for testing our development preview.
     The preview image for ARM64 is `photoprism/photoprism-arm64:preview`.
 
-### Development Preview ###
+### April 22, 2021 ###
 
-[210421-88c0b334-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/1235/1/0),
-[210421-88c0b334-Linux-aarch64](https://drone.photoprism.app/photoprism/photoprism/1235/2/0)
+[210422-97e75b04-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/1239/1/0),
+[210422-97e75b04-Linux-aarch64](https://drone.photoprism.app/photoprism/photoprism/1239/2/0)
 
 - UX: [Improved touch event accuracy](https://github.com/photoprism/photoprism/issues/1048)
 - UX: [Optimized rendering on small screens](https://github.com/photoprism/photoprism/commit/b07ba63108dace2a8d5b2df18a06647252a36272)

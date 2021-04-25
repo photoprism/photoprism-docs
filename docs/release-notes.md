@@ -5,6 +5,12 @@
     `photoprism/photoprism:latest` for testing our development preview.
     The preview image for ARM64 is `photoprism/photoprism-arm64:preview`.
 
+### Development Preview ###
+
+- UI: [Fixed glitches when scrolling down too far in Firefox](https://github.com/photoprism/photoprism/issues/1104)
+- Metadata: [Merge existing keywords](https://github.com/photoprism/photoprism/issues/1153)
+- Translations: Updated [Hebrew](https://github.com/photoprism/photoprism/pull/1221)
+  
 ### April 22, 2021 ###
 
 [210422-97e75b04-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/1239/1/0),

@@ -7,8 +7,8 @@
 
 ### Development Preview ###
 
-- UI: [Fixed glitches when scrolling down too far in Firefox](https://github.com/photoprism/photoprism/issues/1104)
 - Metadata: [Merge existing keywords](https://github.com/photoprism/photoprism/issues/1153)
+- UI: [Fixed glitches when scrolling down too far in Firefox](https://github.com/photoprism/photoprism/issues/1104)
 - Translations: Updated [Hebrew](https://github.com/photoprism/photoprism/pull/1221)
   
 ### April 22, 2021 ###

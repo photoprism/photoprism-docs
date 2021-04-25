@@ -1,5 +1,7 @@
 # Using SWAG as Reverse Proxy
 
+*Note: This is contributed content.*
+
 To make the setup of a Reverse Proxy much easier, Linuxserver.io developed [SWAG](https://github.com/linuxserver/docker-swag)  
 SWAG - Secure Web Application Gateway (formerly known as letsencrypt, no relation to Let's Encrypt™) sets up an Nginx web server and reverse proxy with PHP support and a built-in certbot client that automates free SSL server certificate generation and renewal processes (Let's Encrypt and ZeroSSL). It also contains fail2ban for intrusion prevention.
 

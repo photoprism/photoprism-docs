@@ -5,7 +5,10 @@
     `photoprism/photoprism:latest` for testing our development preview.
     The preview image for ARM64 is `photoprism/photoprism-arm64:preview`.
 
-### Development Preview ###
+### April 26, 2021 ###
+
+[210426-da6e948f-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/1263/1/0),
+[210426-da6e948f-Linux-aarch64](https://drone.photoprism.app/photoprism/photoprism/1263/2/0)
 
 - UI: [Added Yellowstone theme for sponsors, unlocked Grayscale theme for everyone](https://github.com/photoprism/photoprism/commit/180e46b95f52a5ef2d67ea8ac5e1d8a9b08ef970)
 - Metadata: [Support for XMP sidecar CreateDate and Keywords](https://github.com/photoprism/photoprism/issues/1151)

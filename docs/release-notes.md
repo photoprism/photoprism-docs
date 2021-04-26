@@ -7,6 +7,7 @@
 
 ### Development Preview ###
 
+- Metadata: [Support for XMP sidecar CreateDate and Keywords](https://github.com/photoprism/photoprism/issues/1151)
 - Metadata: [Merge keywords from different sources](https://github.com/photoprism/photoprism/issues/1153)
 - Translations: Updated [Hebrew](https://github.com/photoprism/photoprism/pull/1221)
   

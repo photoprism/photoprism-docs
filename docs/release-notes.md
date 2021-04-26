@@ -7,6 +7,7 @@
 
 ### Development Preview ###
 
+- UI: [Added Yellowstone theme for sponsors, unlocked Grayscale theme for everyone](https://github.com/photoprism/photoprism/commit/180e46b95f52a5ef2d67ea8ac5e1d8a9b08ef970)
 - Metadata: [Support for XMP sidecar CreateDate and Keywords](https://github.com/photoprism/photoprism/issues/1151)
 - Metadata: [Merge keywords from different sources](https://github.com/photoprism/photoprism/issues/1153)
 - Translations: Updated [Hebrew](https://github.com/photoprism/photoprism/pull/1221)

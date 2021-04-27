@@ -12,12 +12,12 @@ nav:
     - Portainer:
       - Synology: getting-started/portainer/synology.md
     - Reverse Proxies:
-      - SWAG: getting-started/proxies/SWAG.md
       - Traefik: getting-started/proxies/traefik.md
       - Caddy 1: getting-started/proxies/caddy-1.md
       - Caddy 2: getting-started/proxies/caddy-2.md
       - NGINX: getting-started/proxies/nginx.md
       - Apache 2.4: getting-started/proxies/apache-2.md
+      - SWAG: getting-started/proxies/SWAG.md
     - Advanced:
       - Scalability: getting-started/advanced/scalability.md
       - Kubernetes: getting-started/advanced/kubernetes.md

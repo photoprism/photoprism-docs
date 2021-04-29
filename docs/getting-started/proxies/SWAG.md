@@ -28,7 +28,7 @@ This is an example of how to set it up using duckdns and docker-compose.
       		- PGID=1000
       		- TZ=Europe/Brussels
       		- URL=<mydomain.duckdns>
-      		- SUBDOMAINS=www,
+      		- SUBDOMAINS=wildcard
       		- VALIDATION=duckdns
       		- CERTPROVIDER= #optional
       		- DNSPLUGIN= #optional

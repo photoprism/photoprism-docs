@@ -22,6 +22,7 @@ Now create a user and grant privileges for this new database:
 ```sql
 CREATE USER 'photoprism'@'%' IDENTIFIED BY 'insecure';
 GRANT ALL PRIVILEGES ON photoprism.* to 'photoprism'@'%';
+FLUSH PRIVILEGES;
 ```
 
 Set the database environment variables for PhotoPrism as follows:

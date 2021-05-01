@@ -12,6 +12,7 @@
 - Metadata: [Preserve stopwords in existing keywords](https://github.com/photoprism/photoprism/issues/1153)
 - WebDAV: [Keep favorite flag when uploading via PhotoSync](https://github.com/photoprism/photoprism/issues/1210)
 - Translations: Updated [Dutch](https://github.com/photoprism/photoprism/pull/1247)
+  and [German](https://github.com/photoprism/photoprism/commit/c9795495ee5b2a57be8ddcdb16ca29cfab018bb4)
 
 ### April 26, 2021 ###
 

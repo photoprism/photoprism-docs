@@ -8,10 +8,9 @@
 ### Development Preview ###
 
 - UI: [Improved RTL (right-to-left language) alignment](https://github.com/photoprism/photoprism/pull/1220)
-- Metadata: [Don't remove stopwords from keywords](https://github.com/photoprism/photoprism/issues/1153)
-- Config: [Added options to disable specific converters](https://github.com/photoprism/photoprism/issues/1245)
-- Sharing: [Copy link to clipboard without HTTPS](https://github.com/photoprism/photoprism/pull/1222)
-- PhotoSync: [Mark files as favorite](https://github.com/photoprism/photoprism/issues/1210)
+- RAW: [Added config options to disable specific converters](https://github.com/photoprism/photoprism/issues/1245)
+- Metadata: [Preserve stopwords in existing keywords](https://github.com/photoprism/photoprism/issues/1153)
+- WebDAV: [Keep favorite flag when uploading via PhotoSync](https://github.com/photoprism/photoprism/issues/1210)
 - Translations: Updated [Dutch](https://github.com/photoprism/photoprism/pull/1247)
 
 ### April 26, 2021 ###

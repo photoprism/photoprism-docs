@@ -26,6 +26,11 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_DISABLE_PLACES`     | --disable-places           | disables reverse geocoding and map
 `PHOTOPRISM_DISABLE_EXIFTOOL`   | --disable-exiftool         | don't create ExifTool JSON files for enhanced metadata extraction
 `PHOTOPRISM_DISABLE_TENSORFLOW` | --disable-tensorflow       | don't use TensorFlow for image classification
+`PHOTOPRISM_DISABLE_DARKTABLE`  | --disable-darktable        | don't use Darktable to convert RAW files
+`PHOTOPRISM_DISABLE_RAWTHERAPEE`| --disable-rawtherapee      | don't use RawTherapee to convert RAW files
+`PHOTOPRISM_DISABLE_SIPS`       | --disable-sip              | don't use Sips to convert RAW files on macOS
+`PHOTOPRISM_DISABLE_HEIFCONVERT`| --disable-heifconvert      | don't convert HEIC/HEIF files
+`PHOTOPRISM_DISABLE_FFMPEG`     | --disable-ffmpeg           | don't transcode videos with FFmpeg
 `PHOTOPRISM_DETECT_NSFW`        | --detect-nsfw              | flag photos as private that may be offensive
 `PHOTOPRISM_UPLOAD_NSFW`        | --upload-nsfw              | allow uploads that may be offensive
 `PHOTOPRISM_LOG_LEVEL`          | --log-level value, -l value| trace, debug, info, warning, error, fatal or panic (default: "info")
@@ -51,10 +56,13 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_DATABASE_CONNS_IDLE`| --database-conns-idle NUMBER | max NUMBER of idle connections (equal or less than open) (default: 0)
 `PHOTOPRISM_RAWTHERAPEE_BIN`    | --rawtherapee-bin COMMAND  | RawTherapee CLI COMMAND for raw image conversion (default: "rawtherapee-cli")
 `PHOTOPRISM_DARKTABLE_BIN`      | --darktable-bin COMMAND    | Darktable CLI COMMAND for raw image conversion (default: "darktable-cli")
-`PHOTOPRISM_DARKTABLE_PRESETS`  | --darktable-presets        | disables simultaneous conversion of raw files to apply Darktable presets
+`PHOTOPRISM_RAW_PRESETS`        | --raw-presets              | enables RAW converter presets (may reduce performance)
 `PHOTOPRISM_SIPS_BIN`           | --sips-bin FILENAME        | Scriptable Image Processing System COMMAND (default: "sips")
 `PHOTOPRISM_HEIFCONVERT_BIN`    | --heifconvert-bin COMMAND  | HEIC/HEIF image convert COMMAND (default: "heif-convert")
 `PHOTOPRISM_FFMPEG_BIN`         | --ffmpeg-bin COMMAND       | FFmpeg COMMAND for video transcoding and cover images (default: "ffmpeg")
+`PHOTOPRISM_FFMPEG_ENCODER`     | --ffmpeg-encoder NAME      | FFmpeg AVC encoder NAME (default: "libx264")
+`PHOTOPRISM_FFMPEG_BITRATE`     | --ffmpeg-bitrate LIMIT     | FFmpeg encoding bitrate LIMIT in Mbit/s (default: "50")
+`PHOTOPRISM_FFMPEG_BUFFERS`     | --ffmpeg-buffers           | FFmpeg capture buffers (default: "532")
 `PHOTOPRISM_EXIFTOOL_BIN`       | --exiftool-bin COMMAND     | ExifTool COMMAND for enhanced metadata extraction (default: "exiftool")
 `PHOTOPRISM_DOWNLOAD_TOKEN`     | --download-token SECRET    | optional static SECRET url token for file downloads
 `PHOTOPRISM_PREVIEW_TOKEN`      | --preview-token SECRET     | optional static SECRET url token for preview images and video streaming

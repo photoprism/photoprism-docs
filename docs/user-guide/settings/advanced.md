@@ -267,4 +267,22 @@ The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_
 
 Disables simultaneous conversion of RAW files to apply Darktable presets.
 
-The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_DARKTABLE_PRESETS`.
+The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_RAW_PRESETS`.
+
+### Disable Darktable
+
+When disabled Darktable won't be used for RAW conversion.
+
+The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_DISABLE_DARKTABLE`.
+
+### Disable RawTherapee
+
+When disabled RawTherapee won't be used for RAW conversion.
+
+The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_DISABLE_RAWTHERAPEE`.
+
+### Disable FFmpeg
+
+When disabled FFmpeg won't be used for video transcoding.
+
+The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_DISABLE_FFMPEG`.

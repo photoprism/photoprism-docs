@@ -5,7 +5,10 @@
     `photoprism/photoprism:latest` for testing our development preview.
     The preview image for ARM64 is `photoprism/photoprism-arm64:preview`.
 
-### Development Preview ###
+### May 5, 2021 ###
+
+[210505-d3e53a89-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/1311/1/0),
+[210505-d3e53a89-Linux-aarch64](https://drone.photoprism.app/photoprism/photoprism/1311/2/0)
 
 - UI: [Improved RTL (right-to-left language) alignment](https://github.com/photoprism/photoprism/pull/1220)
 - RAW: [Added config options to disable specific converters](https://github.com/photoprism/photoprism/issues/1245)

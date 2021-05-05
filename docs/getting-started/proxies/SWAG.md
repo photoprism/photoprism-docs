@@ -86,8 +86,10 @@ When you change anything in the config of Nginx, you will need to restart the co
 If everything went well, you can now access photoprism on the subdomain you configured: photoprism.mydomain.duckdns.org
 
 !!! attention
-    In some cases, the docker-container of photoprism won't be named "photoprism".
+    The docker-container of photoprism won't be named "photoprism", it will be "name_photoprism".
     To check this, execute <code>docker ps</code> and check wether it is named "photoprism".
-    If it's not, execute <code>docker rename <currentcontainername> photoprism</code>. Restart swag afterwards.
+    If it's not, go to your docker-compose file and add the following line to photoprism below 'image' <code>container_name=photoprism</code>. Restart swag afterwards.
+    <b>Keep in mind to not have two photoprism containers with the same name!</b> 
+    You could also change the config file of Swag with the right name in the proxy-confs directory.
 
 

@@ -7,7 +7,9 @@
 
 ### Development Preview ###
 
+- RAW: [Updated versions of Darktable, RawTherapee, and FFmpeg](https://github.com/photoprism/photoprism/commit/77ddcecf29c95e1b33ba11046fd002ed3d408382)
 - TensorFlow: [Improved error handling](https://github.com/photoprism/photoprism/issues/1270)
+- Translations: Updated [French](https://github.com/photoprism/photoprism/pull/1286)
 
 ### May 5, 2021 ###
 

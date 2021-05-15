@@ -4,7 +4,7 @@ Feel free to use the chat or send an e-mail to [hello@photoprism.app](mailto:hel
 if you have questions, want to support our work, or just want to say hello.
 
 [![Community Chat](https://img.shields.io/badge/chat-on%20gitter-4aa087.svg)][chat]
-[![Twitter](https://img.shields.io/badge/follow-@browseyourlife-00acee.svg)][twitter]
+[![Twitter](https://img.shields.io/badge/follow-@photoprism_app-00acee.svg)][twitter]
 
 Responsible for editorial content according to § 5 TMG / § 55 RStV:
 
@@ -46,4 +46,4 @@ They also collect potentially personally-identifying information like Internet P
 See [Privacy Statement](https://help.github.com/en/github/site-policy/github-privacy-statement) and [DMCA Takedown Policy](https://help.github.com/en/github/site-policy/dmca-takedown-policy).
 
 [chat]: https://gitter.im/browseyourlife/community
-[twitter]: https://twitter.com/browseyourlife
+[twitter]: https://twitter.com/photoprism_app

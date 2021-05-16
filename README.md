@@ -4,7 +4,7 @@ PhotoPrism Documentation
 [![GitHub contributors](https://img.shields.io/github/contributors/photoprism/photoprism-docs.svg)](https://github.com/photoprism/photoprism-docs/graphs/contributors/)
 [![Documentation](https://img.shields.io/badge/read-the%20docs-4aa087.svg)][docs]
 [![Community Chat](https://img.shields.io/badge/chat-on%20gitter-4aa087.svg)][chat]
-[![Twitter](https://img.shields.io/badge/follow-@browseyourlife-00acee.svg)][twitter]
+[![Twitter](https://img.shields.io/badge/follow-@photoprism_app-00acee.svg)][twitter]
 
 This repository contains the source files of [PhotoPrism](https://photoprism.org)'s documentation in markdown.
 
@@ -56,4 +56,4 @@ All the content of this repository is licensed under the Attribution-ShareAlike 
 [paypal]: https://www.paypal.me/photoprism
 [docs]: https://docs.photoprism.org/
 [chat]: https://gitter.im/browseyourlife/community
-[twitter]: https://twitter.com/browseyourlife
+[twitter]: https://twitter.com/photoprism_app

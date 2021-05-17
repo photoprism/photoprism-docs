@@ -7,7 +7,8 @@
 
 ### Development Preview ###
 
-- Safari: [Fixed file download in PWA on iOS](https://github.com/photoprism/photoprism/issues/895)
+- Safari: [Fixed PWA file download on iOS](https://github.com/photoprism/photoprism/issues/895)
+- Docker: [Added config example for scheduled background tasks](https://dl.photoprism.org/docker/scheduler/)
 - Docker: [Updated base image includes Darktable 3.4.1, RawTherapee 5.8, and FFmpeg 4.3.2](https://github.com/photoprism/photoprism/commit/77ddcecf29c95e1b33ba11046fd002ed3d408382)
 - TensorFlow: [Improved error handling](https://github.com/photoprism/photoprism/issues/1270)
 - Translations: Updated [French](https://github.com/photoprism/photoprism/pull/1286)

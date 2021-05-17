@@ -135,6 +135,8 @@ nav:
       - Docker: developer-guide/technologies/docker.md
       - Broadway: developer-guide/technologies/broadway.md
       - External APIs: developer-guide/technologies/external-apis.md
+    - Clients:
+      - Go: developer-guide/clients/go.md
   - About:
       - Team: team.md
       - Funding: funding.md

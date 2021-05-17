@@ -4,8 +4,7 @@ Before you start, make sure you have [Docker](https://store.docker.com/search?ty
 It is available for Mac, Linux and Windows.
 Developers may skip this and move on to the [Developer Guide](../developer-guide/index.md).
 
-An image for the [Raspberry Pi](raspberry-pi.md) is available as well.
-In addition, we plan to provide a single binary.
+We plan to provide a single binary.
 
 !!! info "Windows"
     Windows users may need to [disable](img/docker-disable-wsl2.jpg) the WSL 2 based engine in *Docker Settings > General*
@@ -24,6 +23,9 @@ In addition, we plan to provide a single binary.
     Note that this will change the home directory `~` to `/root` in your configuration.
     Kernel security modules such as SELinux have been reported to cause 
     [issues](https://docs.photoprism.org/getting-started/faq/#why-is-photoprism-getting-stuck-in-a-restart-loop).
+
+!!! info "Raspberry Pi"
+   An image for the [Raspberry Pi](raspberry-pi.md) is available as well.
 
 ### Step 1: Configure ###
 

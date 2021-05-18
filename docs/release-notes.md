@@ -5,7 +5,10 @@
     `photoprism/photoprism:latest` for testing our development preview.
     The preview image for ARM64 is `photoprism/photoprism-arm64:preview`.
 
-### Development Preview ###
+### May 18, 2021 ###
+
+[210518-80981c25-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/1351/1/0),
+[210518-80981c25-Linux-aarch64](https://drone.photoprism.app/photoprism/photoprism/1351/2/0)
 
 - Safari: [Fixed PWA file download on iOS](https://github.com/photoprism/photoprism/issues/895)
 - Docker: [Added config example for scheduled background tasks](https://dl.photoprism.org/docker/scheduler/)

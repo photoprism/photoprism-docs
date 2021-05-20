@@ -5,6 +5,11 @@
     `photoprism/photoprism:latest` for testing our development preview.
     The preview image for ARM64 is `photoprism/photoprism-arm64:preview`.
 
+### Development Preview ###
+
+- Docker: [Fixed home directory permissions in new base image](https://github.com/photoprism/photoprism/issues/1301)
+- HEIF: [Convert now tests if image was rotated based on video metadata](https://github.com/photoprism/photoprism/blob/develop/docker/scripts/heif-convert.sh)
+
 ### May 19, 2021 ###
 
 [210519-24b5c7e6-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/1355/1/0),

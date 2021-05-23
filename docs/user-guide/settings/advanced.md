@@ -143,7 +143,7 @@ causing a delay when previewing a photo in full screen mode.
 !!! tip
     To view original images, enable *Dynamic Previews*,
     and configure *Dynamic Size Limit* and *Static Size Limit*
-    to a small value like `720`. When viewing images exceeded that limit,
+    to a small value like `720`. When viewing images exceeding that limit,
     the original files will be displayed.
 
 #### What files will be created by PhotoPrism?

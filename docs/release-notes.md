@@ -7,7 +7,7 @@
 
 ### Development Preview ###
 
-- RAW: [Added command flag so that RawTherapee uses existing sidecar files](https://github.com/photoprism/photoprism/issues/1267)
+- RAW: [Added RawTherapee flag so that existing sidecar files are used](https://github.com/photoprism/photoprism/issues/1267)
 - Import: [Never remove ignored folders such as for Syncthing](https://github.com/photoprism/photoprism/issues/1319)
 
 ### May 20, 2021 ###

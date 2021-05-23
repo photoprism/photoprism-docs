@@ -2,8 +2,12 @@
 
 !!! tip "Preview Builds"
     Update your `docker-compose.yml` to use `photoprism/photoprism:preview` instead of
-    `photoprism/photoprism:latest` for testing our development preview.
+    `photoprism/photoprism:latest` for testing our *Development Preview*.
     The preview image for ARM64 is `photoprism/photoprism-arm64:preview`.
+
+### Development Preview ###
+
+- Import: [Never remove ignored folders such as for Syncthing](https://github.com/photoprism/photoprism/issues/1319)
 
 ### May 20, 2021 ###
 

@@ -2,7 +2,7 @@
 
 !!! tip "Preview Builds"
     Update your `docker-compose.yml` to use `photoprism/photoprism:preview` instead of
-    `photoprism/photoprism:latest` for testing our *Development Preview*.
+    `photoprism/photoprism:latest` for testing our development preview.
     The preview image for ARM64 is `photoprism/photoprism-arm64:preview`.
 
 ### Development Preview ###

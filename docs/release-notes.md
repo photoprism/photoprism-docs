@@ -5,7 +5,10 @@
     `photoprism/photoprism:latest` for testing our development preview.
     The preview image for ARM64 is `photoprism/photoprism-arm64:preview`.
 
-### Development Preview ###
+### May 23, 2021 ###
+
+[210523-b1856b9d-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/1375/1/0),
+[210523-b1856b9d-Linux-aarch64](https://drone.photoprism.app/photoprism/photoprism/1375/2/0)
 
 - RAW: [Added RawTherapee flag to use existing sidecar files](https://github.com/photoprism/photoprism/issues/1267)
 - Import: [Never remove ignored folders such as for Syncthing](https://github.com/photoprism/photoprism/issues/1319)

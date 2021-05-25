@@ -13,7 +13,7 @@ Click on the links to switch between different pages like Photos, Albums, Places
 
 #### 2. Toolbar ####
 
-Located on the top. Find photos or videos by entering search terms like `cats` and filters like `label:cat`.
+Located on the top. Find photos or videos by entering search terms like `cats` and filters like `label:cat`. A list with possible search filters can be found [here](organize/search.md).
 
 #### 3. Reload Button ####
 

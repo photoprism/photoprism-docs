@@ -1,11 +1,11 @@
-# Export files from Google Photos #
+# Migrate from Google Photos #
 
 It's possible to seamlessly migrate your photos from Google Photos to PhotoPrism.
 
 In order to get your original resolution images and all associated metadata (such as geolocation information),
 we have to use [Google Takeout](https://takeout.google.com/).
 
-## Importing Photos from Google Photos
+## Transfer files
 
 1. Go to https://takeout.google.com/
 1. Click `Deselect all` then check only `Google Photos`.
@@ -15,9 +15,9 @@ we have to use [Google Takeout](https://takeout.google.com/).
     - the folder should include the photos themselves, alongside json files for each of the photos
 1. Start [*indexing*](../library/indexing.md)
 
-## What's included?
+## Metadata
 
-Google Takeout exports the following;
+**Google Takeout exports the following:**
 
 | Data Type | Description | Format |
 |:--|:--|:--|
@@ -29,8 +29,8 @@ Google Takeout exports the following;
 The format exported from Google Photos depends on the [quality chosen](https://photos.google.com/settings)
 when uploaded to Google Photos; 'High' or 'Original'.
 
-Metadata is read by PhotoPrism from the exported JSON files for each photo.
-The following fields are saved:
+**Metadata is read by PhotoPrism from the exported JSON files for each photo.
+The following fields are saved:**
 
 - Title
 - Description

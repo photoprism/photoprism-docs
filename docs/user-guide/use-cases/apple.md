@@ -1,4 +1,6 @@
-# Export files from Apple Photos #
+# Migrate from Apple Photos #
+
+## Transfer files
 
 1. Select the files or albums you want to export
 2. Click *File > Export > Export Unmodified Original For Photos*
@@ -6,9 +8,9 @@
 4. Click *Export*
 5. Move the exported files/folders to your *originals* or *import* diectory and start indexing or importing
 
-## Metadata read from PhotoPrism
+## Metadata
 
-Apple saves the following information in it's XMP files:
+**Apple saves the following information in it's XMP files:**
 
 - Title
 - Description
@@ -16,7 +18,7 @@ Apple saves the following information in it's XMP files:
 - Keywords (include people)
 - GPS information
 
-The following metadata is read by PhotoPrism from the exported XMP files for each photo during indexing:
+**The following metadata is read by PhotoPrism from the exported XMP files for each photo during indexing:**
 
 - Title
 - Description

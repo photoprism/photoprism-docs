@@ -14,7 +14,7 @@ We recommend [PhotoSync](https://www.photosync-app.com/home.html) which is avail
 
       ![Screenshot](img/photosync-1.png){: style="width:35%"}
       ![Screenshot](img/photosync-2.png){: style="width:35%"}
-   
+
 4. Enter your settings
 
       ![Screenshot](img/photosync-3.png){: style="width:35%"}
@@ -24,7 +24,11 @@ We recommend [PhotoSync](https://www.photosync-app.com/home.html) which is avail
    
       ![Screenshot](img/photosync-4.png){: style="width:35%"}
       ![Screenshot](img/photosync-5.png){: style="width:35%"}
-   
+
+
+!!! attention
+      If you are using PhotoSync on Android you need to choose WebDAV as target.
+
 ### Set Up Automatic Sync ###
 1. Open PhotoSync and click :material-cog-outline:
 2. Click *Autotransfer*

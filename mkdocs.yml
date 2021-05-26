@@ -71,6 +71,7 @@ nav:
     - Sync:
       - Connect via WebDAV: user-guide/sync/webdav.md
       - Sync from phone: user-guide/sync/sync-phone.md
+      - Sync with Dropbox: user-guide/use-cases/dropbox.md
     - Share:
       - Share album via link: user-guide/share/share.md
     - Settings:
@@ -80,11 +81,10 @@ nav:
       - Sync: user-guide/settings/sync.md
       - Account: user-guide/settings/account.md
       # - Places: user-guide/settings/places.md
-    - Use Cases:
-      - Export from Google Photos: user-guide/use-cases/google.md
-      - Export from Apple Photos: user-guide/use-cases/apple.md
-      - Export from Flickr: user-guide/use-cases/flickr.md
-      - Sync with Dropbox: user-guide/use-cases/dropbox.md
+    - Migrate:
+      - Migrate from Google Photos: user-guide/use-cases/google.md
+      - Migrate from Apple Photos: user-guide/use-cases/apple.md
+      - Migrate from Flickr: user-guide/use-cases/flickr.md
       #- Link directories from remote:
     - Advanced:
       - Metadata: user-guide/advanced/metadata.md

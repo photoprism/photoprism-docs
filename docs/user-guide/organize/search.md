@@ -60,7 +60,7 @@ PhotoPrism allows you to use multiple filters in its search.
 | month     |  5    | |
 | year     |  2012    | |
 | error     |    yes, no    | |
-| faces     |  yes, no, 1, 3    | |
+| faces     |  yes, no, 1, 3    | 1 means minimum 1 face |
 | favorite     |    yes, no    | |
 | fmax     |    4.5  | |
 | fmin     |    1.8    | |

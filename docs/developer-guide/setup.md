@@ -59,7 +59,7 @@ Questions?
 * This guide was not tested on Windows, you might need to change docker-compose.yml to make it work with Windows specific paths.
 
 ## ARM64 & Apple M1
-We now offer multi-arch docker images, which enables you to run photoprism iamges on arm64 architectures. Just follow the instructions above. 
+We now offer multi-arch docker images, which enables you to run photoprism images on ARM64 architectures. Just follow the instructions above. 
 
 ## Building multi-arch images
 This works out of the box with Docker Desktop. Just run `make docker-development-multiarch`. If you want to build those images for different architectures on Linux, 

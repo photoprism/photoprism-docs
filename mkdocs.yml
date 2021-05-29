@@ -106,7 +106,7 @@ nav:
     - Code Quality: developer-guide/code-quality.md
     - Documentation: developer-guide/documentation.md
     - Translations: developer-guide/translations.md
-    - User Interace:
+    - User Interface:
       - Introduction: developer-guide/ui/introduction.md
       - Screenshots: developer-guide/ui/screenshots.md
       - Components: developer-guide/ui/components.md

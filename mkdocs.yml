@@ -106,21 +106,26 @@ nav:
     - Code Quality: developer-guide/code-quality.md
     - Documentation: developer-guide/documentation.md
     - Translations: developer-guide/translations.md
-    - Frontend:
-      - Introduction: developer-guide/frontend/introduction.md
-      - Screenshots: developer-guide/frontend/screenshots.md
-      - UI Components: developer-guide/frontend/components.md
-      - Design: developer-guide/frontend/design.md
-      - REST API: developer-guide/frontend/rest-api.md
-      - Browsers: developer-guide/frontend/browsers.md
-    - Photo Library:
-      - Importing: developer-guide/library/importing.md
-      - Storage: developer-guide/library/storage.md
-      - Encryption: developer-guide/library/encryption.md
-      - Converting RAW to JPEG: developer-guide/library/converting.md
-      - High Efficiency Image File Format: developer-guide/library/heif.md
-      - Thumbnails: developer-guide/library/thumbnails.md
-      - Samples: developer-guide/library/samples.md
+    - User Interace:
+      - Introduction: developer-guide/ui/introduction.md
+      - Screenshots: developer-guide/ui/screenshots.md
+      - Components: developer-guide/ui/components.md
+      - Design: developer-guide/ui/design.md
+      - REST API: developer-guide/ui/rest-api.md
+      - Browsers: developer-guide/ui/browsers.md
+    - Storage:
+      - Import: developer-guide/storage/import.md
+      - Abstraction: developer-guide/storage/abstraction.md
+      - Encryption: developer-guide/storage/encryption.md
+      - Converting RAW to JPEG: developer-guide/storage/converting.md
+      - High Efficiency Image File Format: developer-guide/storage/heif.md
+      - Thumbnails: developer-guide/storage/thumbnails.md
+      - Samples: developer-guide/storage/samples.md
+    - Security:
+      - Policy: developer-guide/security/policy.md
+      - Checklist: developer-guide/security/checklist.md
+    - Clients:
+      - Go: developer-guide/clients/go.md
     - Metadata:
       - Geocoding: developer-guide/metadata/geocoding.md
       - Color Extraction: developer-guide/metadata/colors.md
@@ -135,8 +140,6 @@ nav:
       - Docker: developer-guide/technologies/docker.md
       - Broadway: developer-guide/technologies/broadway.md
       - External APIs: developer-guide/technologies/external-apis.md
-    - Clients:
-      - Go: developer-guide/clients/go.md
   - About:
       - Team: team.md
       - Funding: funding.md

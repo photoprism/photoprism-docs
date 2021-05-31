@@ -6,7 +6,7 @@ This mounts the *originals folder* as a network drive and allows you to open, ed
 files from your computer or smartphone as if they were local.
 
 !!! note
-    PhotoPrism can also sync files *from* an external storage system (like Nextcloud) via WebDAV.
+    PhotoPrism can also sync files *from* an external storage system (like ownCloud) via WebDAV.
     See [instructions](/user-guide/settings/sync/).
 
 The originals folder URL for public servers is:

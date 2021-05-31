@@ -18,7 +18,7 @@ This might be useful when you grant others access to your PhotoPrism but do not 
 When disabled, no files can be downloaded.
 
 #### :material-share-variant: Share ####
-When disabled, album sharing and upload to remote services like Nextcloud is not possible.
+When disabled, album sharing and upload to remote services like ownCloud is not possible.
 
 #### :material-lock: Hide Private ####
 Excludes content marked as private from search results, shared albums, labels and places.

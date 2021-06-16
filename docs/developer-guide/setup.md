@@ -24,7 +24,7 @@ docker-compose up
 
 *Note: This docker-compose configuration is for testing and development purposes only.*
 
-**Step 3:** Open a terminal to the photoprism container:
+**Step 3:** Open a terminal to the PhotoPrism container:
 
 ```
 docker-compose exec photoprism bash
@@ -58,8 +58,8 @@ Questions?
 * If you never used Go before and would like to learn it, you are welcome to [reach out](mailto:hello@photoprism.app). We might start organizing regular learning sessions for beginners in Berlin.
 * This guide was not tested on Windows, you might need to change docker-compose.yml to make it work with Windows specific paths.
 
-# Alternate Development Environment's
+# Alternate Development Environments
 
-The following are setup instructions for development and testing and should be avoided unless docker is either not supported or not allowed in your environment:
+The following are setup instructions for development and testing and should be avoided unless Docker is either not supported or not allowed in your environment:
 
 * [Fedora 32](setup-fedora.md)

@@ -4,7 +4,7 @@ A big **thank you** to everyone who made this possible!
 
 ## Technologies ##
 
-* [Go](https://golang.org/), [Gin](https://github.com/gin-gonic/gin) and [Vuetify](https://vuetifyjs.com/en/)
+* [Go](https://golang.org/), [Gin](https://github.com/gin-gonic/gin), and [Vuetify](https://vuetifyjs.com/en/)
 * [Google](https://developers.google.com/), [TensorFlow](https://www.tensorflow.org/), and [Material Design](https://material.io/)
 * [Complete list of 3rd-party software packages](https://raw.githubusercontent.com/photoprism/photoprism/develop/NOTICE)
 

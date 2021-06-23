@@ -58,6 +58,20 @@ Questions?
 * If you never used Go before and would like to learn it, you are welcome to [reach out](mailto:hello@photoprism.app). We might start organizing regular learning sessions for beginners in Berlin.
 * This guide was not tested on Windows, you might need to change docker-compose.yml to make it work with Windows specific paths.
 
+## ARM64 & Apple M1
+We now offer multi-arch docker images, which enables you to run photoprism images on ARM64 architectures. Just follow the instructions above. 
+
+## Building multi-arch images
+This works out of the box with Docker Desktop. Just run `make docker-development-multiarch`. If you want to build those images for different architectures on Linux, 
+you need to setup `docker buildx` builder instances or setup QEMU on your machine which shall run your builds. 
+More info can be found in the docker docs: [Docker Buildx](https://docs.docker.com/buildx/working-with-buildx/), [Leverage multi-CPU architecture support](https://docs.docker.com/desktop/multi-arch/)
+
+### QEMU Quick Start
+1. install qemu-user-static from docker hub: `docker run --rm --privileged multiarch/qemu-user-static --reset -p yes` [https://github.com/multiarch/qemu-user-static](https://github.com/multiarch/qemu-user-static)
+2. verify that dockers buildx command is installed `docker buildx version`. if missing, follow install instructions [here](https://github.com/docker/buildx)
+3. create buildx builder: `docker buildx create --name multiarch-builder && docker buildx inspect --builder multiarch-builder --bootstrap`
+4. start building: `make docker-development-multiarch` or `make docker-photoprism-multiarch`
+
 # Alternate Development Environments
 
 The following are setup instructions for development and testing and should be avoided unless Docker is either not supported or not allowed in your environment:

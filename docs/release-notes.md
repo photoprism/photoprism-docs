@@ -5,6 +5,10 @@
     `photoprism/photoprism:latest` for testing our development preview.
     The preview image for ARM64 is `photoprism/photoprism-arm64:preview`.
 
+### Development Preview ###
+
+- [Experimental Face Detection](https://github.com/photoprism/photoprism/issues/22)
+
 ### May 23, 2021 ###
 
 [210523-b1856b9d-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/1375/1/0),

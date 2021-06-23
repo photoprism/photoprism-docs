@@ -5,51 +5,63 @@ They enable you to re-discover forgotten photos, find specific photos you are lo
 ### Sections ###
 Using the main navigation you can visit the different sections of your photo library:
 
-#### Photos :material-image: ####
-Shows all photos that are not in review or archived or private.
+#### :material-magnify: Search ####
+Shows all photos and videos that are not in review or archived or private.
 
 !!! hint
-    In case the review, private or archive functions are turned off - Photos displays those photos as well.
-    
-![Screenshot](img/photos-section.png)
+    In case the review, private or archive functions are turned off - Search displays those photos and videos as well.
 
-#### Favorites :material-heart: ####
-Shows all photos and videos you liked.
+![Screenshot](img/search-section.jpg)
 
-![Screenshot](img/favorites-section.png)
-
-#### Private :material-lock: ####
-Shows photos and videos marked as private.
-
-#### Videos :material-movie: ####
-Shows videos that are not in review or archived or private.
-
-![Screenshot](img/video-section.png)
-
-#### Albums :material-image-album: ####
+#### :material-image-album: [Albums](albums.md) ####
 Shows albums you created.
 
-![Screenshot](img/album-section.png)
+![Screenshot](img/albums.jpg)
 
-#### Labels :material-label:####
-Shows your photos and videos grouped by labels like cat, dog or beach.
+#### :material-movie: [Videos](video.md) ####
+Shows videos that are not in review or archived or private.
 
-![Screenshot](img/label-section.png)
+![Screenshot](img/videos.jpg)
 
-#### Places :material-map-marker: ####
-Displays all photos and videos with location information on a worldmap.
+#### :material-heart: Favorites ####
+Shows all photos and videos you liked.
 
-![Screenshot](img/places-section.png)
+![Screenshot](img/favorites.jpg)
 
-#### Moments :material-compass: ####
+#### :material-compass: [Moments](moments.md) ####
 Discover albums we automatically create for you.
 
-![Screenshot](img/moments.png)
+![Screenshot](img/moments.jpg)
 
-#### Calendar :material-calendar-range: ####
+#### :material-calendar-range: [Calendar](calendar.md)  ####
 Organizes your photos due to time taken.
 
-![Screenshot](img/calendar.png)
+![Screenshot](img/calendar.jpg)
+
+#### :material-map-marker: [Places](places.md) ####
+Displays all photos and videos with location information on a worldmap.
+
+![Screenshot](img/places.jpg)
+
+#### :material-label: [Labels](labels.md) ####
+Shows your photos and videos grouped by labels like cat, dog or beach.
+
+![Screenshot](img/labels.jpg)
+
+#### :material-folder: [Folders](folders.md) ####
+Displays all folders of your originals directory.
+
+#### :material-lock: [Private](private.md) ####
+Shows photos and videos marked as private.
+
+#### :material-film: [Originals](../library/files.md) ####
+Hierarchical view of your originals directory.
+
+![Screenshot](img/originals.jpg)
+
+![Screenshot](img/originals2.jpg)
+
+
 
 
     

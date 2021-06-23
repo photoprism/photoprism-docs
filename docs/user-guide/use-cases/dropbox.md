@@ -1,5 +1,7 @@
 # Sync files with Dropbox
 
+*Note: This is contributed content.*
+
 It's possible to use [Dropbox](https://www.dropbox.com/) to store your photos, while viewing and managing them through PhotoPrism.
 
 1. Set up a Dropbox account.

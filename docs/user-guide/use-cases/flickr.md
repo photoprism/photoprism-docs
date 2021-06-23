@@ -1,6 +1,6 @@
-# Export files from Flickr #
-<!--@Micha what do we currently import from Googles json? 
-@Micha what might we import later? -->
+# Migrate from Flickr #
+
+## Transfer files
 
 1. Go to https://www.flickr.com/account
 2. *Request* your Flickr data

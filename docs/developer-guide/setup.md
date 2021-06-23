@@ -24,7 +24,7 @@ docker-compose up
 
 *Note: This docker-compose configuration is for testing and development purposes only.*
 
-**Step 3:** Open a terminal to the photoprism container:
+**Step 3:** Open a terminal to the PhotoPrism container:
 
 ```
 docker-compose exec photoprism bash
@@ -72,8 +72,8 @@ More info can be found in the docker docs: [Docker Buildx](https://docs.docker.c
 3. create buildx builder: `docker buildx create --name multiarch-builder && docker buildx inspect --builder multiarch-builder --bootstrap`
 4. start building: `make docker-development-multiarch` or `make docker-photoprism-multiarch`
 
-# Alternate Development Environment's
+# Alternate Development Environments
 
-The following are setup instructions for development and testing and should be avoided unless docker is either not supported or not allowed in your environment:
+The following are setup instructions for development and testing and should be avoided unless Docker is either not supported or not allowed in your environment:
 
 * [Fedora 32](setup-fedora.md)

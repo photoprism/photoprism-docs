@@ -71,8 +71,11 @@ Test coverage output is saved to *frontend/coverage/html*
 To test javascript code we use [mocha](https://mochajs.org/) in combination with [karma](https://karma-runner.github.io/4.0/intro/installation.html), [chai](https://www.chaijs.com/), [sinon](https://sinonjs.org/) and the [karma-istanbul-coverage-reporter](https://github.com/mattlewis92/karma-coverage-istanbul-reporter).
 
 ## Acceptance Tests ##
-First download the folder [acceptance](https://dl.photoprism.org/qa/) and add it to your storage directory.
-It contains the files and configs needed for the tests to pass.
+
+### Download test and config files
+Download the following directory and unzip it within your storage directory
+
+``wget https://dl.photoprism.org/qa/acceptance.tar.gz``
 
 ### Run tests within the docker container
 You can run the tests from within the photoprism container in firefox or chromium.

@@ -61,7 +61,8 @@ After import using "move" your folders might look like this:
    ![Screenshot](img/move-import.png)
 
 #### Advantages ####
-* Duplicates or unsupported files stay untouched in the import directory
+* Unsupported files stay untouched in the import directory
+* No duplicates in your originals directory
 
 
 !!! info

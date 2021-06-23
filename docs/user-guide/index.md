@@ -6,8 +6,7 @@ all you need is a Web browser and Docker to run the server. It is available for 
 Next, you'll have to [index or import](library/import-vs-index.md) 
 existing files. Please be patient, this will take a while depending on the size of your library.
 
-Already indexed photos can be browsed in [Photos](organize/browse.md) 
-while videos show up in [Videos](organize/video.md).
+Already indexed photos and videos can be browsed in [Search](organize/browse.md).
 Counts are continuously updated in the navigation.
 
 If photos are missing, they might be in [review](organize/review.md) due to low quality or missing metadata.

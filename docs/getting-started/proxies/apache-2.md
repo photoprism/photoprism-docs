@@ -2,10 +2,8 @@
 
 !!! example
     ```
-    RewriteEngine on
-    RewriteCond %{HTTP:Upgrade} websocket [NC]
-    RewriteCond %{HTTP:Connection} upgrade [NC]
-    RewriteRule ^/?(.*) "ws://photoprism:2342/$1" [P,L]
+    ProxyPass /api/v1/ws ws://photoprism.lxd:2342/api/v1/ws
+    ProxyPassReverse /api/v1/ws ws://photoprism.lxd:2342/api/v1/ws
     ProxyPass / http://photoprism:2342/
     ProxyPassReverse / http://photoprism:2342/
     ProxyRequests off

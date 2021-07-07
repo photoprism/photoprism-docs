@@ -42,7 +42,7 @@ You can see a list of all `make` targets in our [Makefile](https://github.com/ph
 
 **Step 4:** Build the frontend in watch mode:
 
-The Go webserver will serve static assets in addition to providing the backend API. The static assets can automatically built whenever you change a file. In a new terminal window, outside the Docker container, run:
+The Go webserver will serve static assets in addition to providing the backend API. The static assets can be automatically built whenever you change a file. In a new terminal window, outside the Docker container, run:
 
 ```
 make dep-js

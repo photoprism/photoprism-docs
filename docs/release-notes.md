@@ -11,7 +11,7 @@
 - [Docker: Single multi-arch image for ARM64, ARM64, and ARMv7](https://github.com/photoprism/photoprism/issues/1158)
 - [Places: Fixed RTL rendering on maps](https://github.com/photoprism/photoprism/issues/1391)
 - [Metadata: Default time zone of videos is UTC](https://github.com/photoprism/photoprism/issues/1388)
-- [Config: Now supports non-root site URL for shared domains](https://github.com/photoprism/photoprism/issues/425)
+- [Config: Supports non-root site URL for shared domains](https://github.com/photoprism/photoprism/issues/425)
 - [Config: Added content delivery network URL option](https://github.com/photoprism/photoprism/issues/1351)
 
 ### May 23, 2021 ###

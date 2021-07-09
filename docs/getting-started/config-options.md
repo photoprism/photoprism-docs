@@ -36,6 +36,7 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_LOG_LEVEL`          | --log-level value, -l value| trace, debug, info, warning, error, fatal or panic (default: "info")
 `PHOTOPRISM_LOG_FILENAME`       | --log-filename value       | server log FILENAME
 `PHOTOPRISM_PID_FILENAME`       | --pid-filename value       | server process id FILENAME
+`PHOTOPRISM_CDN_URL`            | --cdn-url URL              | content delivery network URL (optional)
 `PHOTOPRISM_SITE_URL`           | --site-url URL             | public site URL (default: "http://localhost:2342/")
 `PHOTOPRISM_SITE_PREVIEW`       | --site-preview URL         | public preview image URL
 `PHOTOPRISM_SITE_TITLE`         | --site-title value         | site title (default: "PhotoPrism")

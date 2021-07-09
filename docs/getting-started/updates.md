@@ -19,7 +19,6 @@ See [Setup Using Docker Compose](docker-compose.md) for a full command reference
 !!! tip "Preview Builds"
     Update your `docker-compose.yml` to use `photoprism/photoprism:preview` instead of 
     `photoprism/photoprism:latest` for testing our latest development preview.
-    The image name for ARM64 is `photoprism/photoprism-arm64:preview`.
 
 ### Watchtower ###
 
@@ -57,4 +56,4 @@ See [Running PhotoPrism with Docker](docker.md) for a full command reference.
 
 !!! tip "Preview Builds"
     Use `photoprism/photoprism:preview` instead of `photoprism/photoprism:latest` for testing 
-    our latest development preview. The image name for ARM64 is `photoprism/photoprism-arm64:preview`.
+    our latest development preview.

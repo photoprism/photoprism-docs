@@ -3,14 +3,13 @@
 !!! tip "Preview Builds"
     Update your `docker-compose.yml` to use `photoprism/photoprism:preview` instead of
     `photoprism/photoprism:latest` for testing our development preview.
-    The preview image for ARM64 is `photoprism/photoprism-arm64:preview`.
 
 ### Development Preview ###
 
 - [Experimental Face Detection](https://github.com/photoprism/photoprism/issues/22)
 - [Docker: Single multi-arch image for ARM64, ARM64, and ARMv7](https://github.com/photoprism/photoprism/issues/1158)
 - [Places: Fixed RTL rendering on maps](https://github.com/photoprism/photoprism/issues/1391)
-- [Metadata: Default time zone of videos is UTC](https://github.com/photoprism/photoprism/issues/1388)
+- [Metadata: Default time zone of videos now is UTC](https://github.com/photoprism/photoprism/issues/1388)
 - [Config: Supports non-root site URL for shared domains](https://github.com/photoprism/photoprism/issues/425)
 - [Config: Added content delivery network URL option](https://github.com/photoprism/photoprism/issues/1351)
 

@@ -7,7 +7,7 @@
 ### Development Preview ###
 
 - [Experimental Face Detection](https://github.com/photoprism/photoprism/issues/22)
-- [Docker: Single multi-arch image for ARM64, ARM64, and ARMv7](https://github.com/photoprism/photoprism/issues/1158)
+- [Docker: Single multi-arch image for AMD64, ARM64, and ARMv7](https://github.com/photoprism/photoprism/issues/1158)
 - [Places: Fixed RTL rendering on maps](https://github.com/photoprism/photoprism/issues/1391)
 - [Metadata: Default time zone of videos now is UTC](https://github.com/photoprism/photoprism/issues/1388)
 - [Config: Supports non-root site URL for shared domains](https://github.com/photoprism/photoprism/issues/425)

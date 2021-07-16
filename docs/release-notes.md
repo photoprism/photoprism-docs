@@ -7,12 +7,17 @@
 ### Development Preview ###
 
 - [Experimental Face Detection](https://github.com/photoprism/photoprism/issues/22)
-- [Docker: Single multi-arch image for AMD64, ARM64, and ARMv7](https://github.com/photoprism/photoprism/issues/1158)
-- [Places: Fixed RTL rendering on maps](https://github.com/photoprism/photoprism/issues/1391)
-- [Metadata: Default time zone of videos now is UTC](https://github.com/photoprism/photoprism/issues/1388)
-- [Config: Supports non-root site URL for shared domains](https://github.com/photoprism/photoprism/issues/425)
-- [Config: Added content delivery network URL option](https://github.com/photoprism/photoprism/issues/1351)
-
+- Docker: [Single multi-arch image for AMD64, ARM64, and ARMv7](https://github.com/photoprism/photoprism/issues/1158)
+- Places: [Fixed RTL rendering on maps](https://github.com/photoprism/photoprism/issues/1391)
+- Metadata: [Default time zone of videos now is UTC](https://github.com/photoprism/photoprism/issues/1388)
+- Config: [Supports non-root site URL for shared domains](https://github.com/photoprism/photoprism/issues/425)
+- Config: [Added content delivery network URL option](https://github.com/photoprism/photoprism/issues/1351)
+- Search: [Reset photo viewer results after changing query](https://github.com/photoprism/photoprism/issues/1343)
+- Import: [Ignore dot files listed in .ppignore](https://github.com/photoprism/photoprism/issues/1348)
+- RAW: [Skip Darktable when converting Canon CR3 and Fuji RAF files](https://github.com/photoprism/photoprism/issues/1362)
+- Config: [Set default MariaDB table engine, charset and collation](https://github.com/photoprism/photoprism/issues/1371)
+- Videos: [Skip related images when downloading](https://github.com/photoprism/photoprism/issues/1436)
+  
 ### May 23, 2021 ###
 
 [210523-b1856b9d-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/1375/1/0),

@@ -14,9 +14,9 @@
 - Import: [Ignore dot files listed in .ppignore](https://github.com/photoprism/photoprism/issues/1348)
 - RAW: [Skip Darktable when converting Canon CR3 and Fuji RAF files](https://github.com/photoprism/photoprism/issues/1362)
 - Videos: [Skip related images when downloading](https://github.com/photoprism/photoprism/issues/1436)
-- Config: [Supports non-root site URL for shared domains](https://github.com/photoprism/photoprism/issues/425)
+- Config: [Support non-root site URL for shared domains](https://github.com/photoprism/photoprism/issues/425)
 - Config: [Added content delivery network URL option](https://github.com/photoprism/photoprism/issues/1351)
-- Config: [Set default MariaDB table engine, charset and collation](https://github.com/photoprism/photoprism/issues/1371)
+- Config: [Set explicit MariaDB table engine, charset and collation](https://github.com/photoprism/photoprism/issues/1371)
   
 ### May 23, 2021 ###
 

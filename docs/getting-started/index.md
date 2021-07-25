@@ -49,4 +49,6 @@ The backend is compatible with [MariaDB 10](https://mariadb.org/),
     behind a secure HTTPS reverse proxy** like [Traefik](proxies/traefik.md), 
     [Caddy](proxies/caddy-2.md), or [NGINX](proxies/nginx.md).
     Your files and passwords will be transmitted in clear text otherwise, and can be intercepted 
-    by anyone in between including your provider, hackers, and governments.
+    by anyone in between including your provider, hackers, and governments. Backup tools and file sync apps
+    like [FolderSync](https://www.tacit.dk/foldersync/faq/#i-can-not-connect-to-a-non-https-webdav-server-why) 
+    may refuse to connect as well.

@@ -78,9 +78,11 @@ like Photoshop, or Exiftool, and re-index your library.
 Yes, [permanent deletion](./organize/delete.md) is available as early access feature for our sponsors.
 
 ### I already indexed some files. Why are Folders, Calendar and Moments still empty? ###
+
 Folders, Calendar and Moments are populated at the end of the indexing process.
 
-### Why does the count in *Search* not match the count of files in *Originals* ?###
+### Why does the count in *Search* not match the count of files in *Originals*? ###
+
 The *Originals* section shows files, whereas the *Search* shows photos and videos. 
 
 Photos and video can consist of multiple files:
@@ -91,10 +93,23 @@ Photos and video can consist of multiple files:
 It is also possible that multiple .jpg files are stacked because they are related to each other.
   
 ### Why is the count for *Originals* higher than the number of files physically existing in my originals directory? ###
+
 During indexing your files, PhotoPrism creates a .jpg Version for all other file types than .jpg (e.g. RAWS, Videos, PNGs etc). 
 These files are stored in /storage/sidecar (unless configured otherwise). 
 In the UI they are shown in the *Originals* section and added to its count.
 
-### Why do some of my photos without geolocation information show a random location ? ###
+### Why do some of my photos without geolocation information show a random location? ###
+
 PhotoPrism estimates the location of photos without geolocation from photos that have been taken on the same day.
 You can disable estimations in [Settings](./settings/general.md).
+
+### My file sync app fails with "unable to parse TLS packet headers" when trying to connect via WebDAV? ###
+
+Because of security considerations, some backup tools and file sync apps like
+[FolderSync removed support for non-SSL HTTP communication](https://www.tacit.dk/foldersync/faq/#i-can-not-connect-to-a-non-https-webdav-server-why).
+
+When installing PhotoPrism on a public server outside your home network, please **always run it
+behind a secure HTTPS reverse proxy** like [Traefik](../getting-started/proxies/traefik.md),
+[Caddy](../getting-started/proxies/caddy-2.md), or [NGINX](../getting-started/proxies/nginx.md).
+Your files and passwords will be transmitted in clear text otherwise, and can be intercepted
+by anyone in between including your provider, hackers, and governments.

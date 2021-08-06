@@ -6,7 +6,7 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_EXPERIMENTAL`       | --experimental, -e         | enable experimental features
 `PHOTOPRISM_ADMIN_PASSWORD`     | --admin-password PASSWORD  | initial admin PASSWORD, min 4 characters
 `PHOTOPRISM_CONFIG_FILE`        | --config-file FILENAME, -c FILENAME  | load initial config options from FILENAME
-`PHOTOPRISM_CONFIG_PATH`        | --config-path PATH         | folder containing application settings
+`PHOTOPRISM_CONFIG_PATH`        | --config-path PATH         | config PATH containing application settings
 `PHOTOPRISM_ORIGINALS_PATH`     | --originals-path PATH      | originals PATH containing your photo and video collection
 `PHOTOPRISM_ORIGINALS_LIMIT`    | --originals-limit MB       | file size limit for originals in MB (default: 1000)
 `PHOTOPRISM_IMPORT_PATH`        | --import-path PATH         | optional PATH for importing files to originals
@@ -16,21 +16,21 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_TEMP_PATH`          | --temp-path PATH           | temporary PATH for storing uploads and downloads
 `PHOTOPRISM_BACKUP_PATH`        | --backup-path PATH         | backup storage PATH
 `PHOTOPRISM_ASSETS_PATH`        | --assets-path PATH         | assets PATH for static resources like models and templates
-`PHOTOPRISM_WORKERS`            | --workers MAX, -w MAX      | adjusts MAX number of indexing workers
+`PHOTOPRISM_WORKERS`            | --workers NUMBER, -w NUMBER| limits NUMBER of indexing workers (default: 3)
 `PHOTOPRISM_WAKEUP_INTERVAL`    | --wakeup-interval SECONDS  | background worker wakeup interval in SECONDS
 `PHOTOPRISM_AUTO_INDEX`         | --auto-index SECONDS       | auto indexing safety delay in SECONDS (WebDAV)
 `PHOTOPRISM_AUTO_IMPORT`        | --auto-import SECONDS      | auto importing safety delay in SECONDS (WebDAV)
-`PHOTOPRISM_DISABLE_BACKUPS`    | --disable-backups          | don't backup photo and album metadata to YAML files
+`PHOTOPRISM_DISABLE_BACKUPS`    | --disable-backups          | disables creating YAML metadata backup sidecar files
 `PHOTOPRISM_DISABLE_WEBDAV`     | --disable-webdav           | disable built-in WebDAV server
-`PHOTOPRISM_DISABLE_SETTINGS`   | --disable-settings         | users can not view or change settings
+`PHOTOPRISM_DISABLE_SETTINGS`   | --disable-settings         | disables settings UI and API
 `PHOTOPRISM_DISABLE_PLACES`     | --disable-places           | disables reverse geocoding and map
-`PHOTOPRISM_DISABLE_EXIFTOOL`   | --disable-exiftool         | don't create ExifTool JSON files for enhanced metadata extraction
-`PHOTOPRISM_DISABLE_TENSORFLOW` | --disable-tensorflow       | don't use TensorFlow for image classification
-`PHOTOPRISM_DISABLE_DARKTABLE`  | --disable-darktable        | don't use Darktable to convert RAW files
-`PHOTOPRISM_DISABLE_RAWTHERAPEE`| --disable-rawtherapee      | don't use RawTherapee to convert RAW files
-`PHOTOPRISM_DISABLE_SIPS`       | --disable-sip              | don't use Sips to convert RAW files on macOS
-`PHOTOPRISM_DISABLE_HEIFCONVERT`| --disable-heifconvert      | don't convert HEIC/HEIF files
-`PHOTOPRISM_DISABLE_FFMPEG`     | --disable-ffmpeg           | don't transcode videos with FFmpeg
+`PHOTOPRISM_DISABLE_EXIFTOOL`   | --disable-exiftool         | disables metadata extraction with ExifTool
+`PHOTOPRISM_DISABLE_TENSORFLOW` | --disable-tensorflow       | disables image classification with TensorFlow
+`PHOTOPRISM_DISABLE_DARKTABLE`  | --disable-darktable        | disables RAW file conversion with Darktable
+`PHOTOPRISM_DISABLE_RAWTHERAPEE`| --disable-rawtherapee      | disables RAW file conversion with RawTherapee
+`PHOTOPRISM_DISABLE_SIPS`       | --disable-sips             | disables RAW file conversion with Sips on macOS
+`PHOTOPRISM_DISABLE_HEIFCONVERT`| --disable-heifconvert      | disables HEIC/HEIF file conversion
+`PHOTOPRISM_DISABLE_FFMPEG`     | --disable-ffmpeg           | disables video transcoding with FFmpeg
 `PHOTOPRISM_DETECT_NSFW`        | --detect-nsfw              | flag photos as private that may be offensive
 `PHOTOPRISM_UPLOAD_NSFW`        | --upload-nsfw              | allow uploads that may be offensive
 `PHOTOPRISM_LOG_LEVEL`          | --log-level value, -l value| trace, debug, info, warning, error, fatal or panic (default: "info")

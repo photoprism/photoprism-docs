@@ -30,6 +30,10 @@ We recommend hosting PhotoPrism on a server with **at least 2 cores** and **4 GB
 Beyond these minimum requirements, the amount of RAM should match the number of cores.
 Indexing large photo and video collections significantly benefits from fast, local SSD storage.
 
+!!! info
+    RAW file conversion and automatic image classification using TensorFlow
+    will be disabled on servers with less than 2 GB of physical memory.
+
 If you're running out of memory - or other system resources - while indexing, please reduce the
 [number of workers](https://docs.photoprism.org/getting-started/config-options/)
 to a value less than the number of logical CPU cores.

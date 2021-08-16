@@ -45,7 +45,7 @@ Support for specific RAW formats depends on the runtime environment and configur
 [Darktable](https://www.darktable.org/) and [RawTherapee](https://rawtherapee.com/) for RAW to JPEG conversion. 
 On Mac OS, [Sips](https://ss64.com/osx/sips.html) can be used as well.
 
-We support all common video types.
+We support [all common video types](../developer-guide/media/videos.md).
 You should configure PhotoPrism to automatically create JSON sidecar files so that
 video metadata like location and duration can be indexed.
 

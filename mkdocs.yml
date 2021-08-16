@@ -113,19 +113,15 @@ nav:
       - Design: developer-guide/ui/design.md
       - REST API: developer-guide/ui/rest-api.md
       - Browsers: developer-guide/ui/browsers.md
-    - Storage:
-      - Import: developer-guide/storage/import.md
-      - Abstraction: developer-guide/storage/abstraction.md
-      - Encryption: developer-guide/storage/encryption.md
-      - Converting RAW to JPEG: developer-guide/storage/converting.md
-      - High Efficiency Image File Format: developer-guide/storage/heif.md
-      - Thumbnails: developer-guide/storage/thumbnails.md
-      - Samples: developer-guide/storage/samples.md
-    - Security:
-      - Policy: developer-guide/security/policy.md
-      - Checklist: developer-guide/security/checklist.md
-    - Clients:
-      - Go: developer-guide/clients/go.md
+    - Media Files:
+      - Import: developer-guide/media/import.md
+      - Abstraction: developer-guide/media/abstraction.md
+      - Encryption: developer-guide/media/encryption.md
+      - RAW Images: developer-guide/media/raw.md
+      - HEIF / HEIC: developer-guide/media/heif.md
+      - Videos: developer-guide/media/videos.md
+      - Thumbnails: developer-guide/media/thumbnails.md
+      - Samples: developer-guide/media/samples.md
     - Metadata:
       - Geocoding: developer-guide/metadata/geocoding.md
       - Color Extraction: developer-guide/metadata/colors.md
@@ -134,6 +130,11 @@ nav:
       - XMP: developer-guide/metadata/xmp.md
       - EXIF: developer-guide/metadata/exif.md
       - Edit EXIF: developer-guide/metadata/edit-exif.md
+    - Security:
+      - Policy: developer-guide/security/policy.md
+      - Checklist: developer-guide/security/checklist.md
+    - Clients:
+      - Go: developer-guide/clients/go.md
     - Technologies:
       - Golang: developer-guide/technologies/golang.md
       - TensorFlow: developer-guide/technologies/tensorflow.md

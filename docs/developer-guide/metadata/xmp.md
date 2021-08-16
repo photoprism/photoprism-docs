@@ -10,7 +10,7 @@ https://github.com/photoprism/photoprism/tree/develop/internal/meta/testdata
 
 ## Todo ##
 - Experiment with Adobe Lightroom to see how it uses sidecar files. The new version doesn't seem to use XMP to automatically sync metadata anymore, probably because Adobe focuses on cloud storage. Needs further investigation.
-- Create a matrix showing what fields are used/supported by which application/tool (Photoshop, Lightroom, Darktable and others, [see](../storage/converting.md)
+- Create a matrix showing what fields are used/supported by which application/tool (Photoshop, Lightroom, Darktable and others, [see](../media/raw.md)
 - Read http://www.exiv2.org/tags-xmp-crs.html (Camera Raw Schema)
 
 ## Issues ## 

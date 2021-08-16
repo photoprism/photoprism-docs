@@ -3,7 +3,7 @@
 PhotoPrism may use [*ffmpeg*](https://www.ffmpeg.org/documentation.html) to transcode 
 common video formats to [MPEG-4 AVC](https://en.wikipedia.org/wiki/MPEG-4).
 This container / codec combination doesn't require transcoding as it can be played 
-natively with most modern browsers, see https://caniuse.com/mpeg4.
+natively by most modern browsers, see https://caniuse.com/mpeg4.
 
 For a list of codecs *ffmpeg* supports, run this command in a terminal:
 

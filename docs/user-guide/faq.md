@@ -117,11 +117,14 @@ Only when that fails, you'll see an error. There may be different reasons for th
 - It's the wrong host or port.
 - Username or password are wrong.
 
-Advanced users are advised to use `curl` for low level debugging, ideally in a terminal 
-from the same Docker container, virtual machine, or server environment PhotoPrism runs in:
+[Curl](https://curl.se/) is an excellent tool for testing HTTP connections if you don't mind using a 
+terminal:
 
 - https://www.qed42.com/blog/using-curl-commands-webdav
 - https://code.blogs.iiidefix.net/posts/webdav-with-curl/
+
+To avoid overlooking issues, it's best to run it from the same Docker container, virtual machine, 
+or server environment where PhotoPrism is installed.
 
 ### My file sync app fails with "unable to parse TLS packet headers" when trying to connect via WebDAV? ###
 

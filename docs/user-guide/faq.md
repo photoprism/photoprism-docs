@@ -117,7 +117,7 @@ Only when that fails, you'll see an error. There may be different reasons for th
 - It's the wrong host or port.
 - Username or password are wrong.
 
-Advanced users should give `curl` a try for low level debugging, ideally in a terminal 
+Advanced users are advised to use `curl` for low level debugging, ideally in a terminal 
 from the same Docker container, virtual machine, or server environment PhotoPrism runs in:
 
 - https://www.qed42.com/blog/using-curl-commands-webdav

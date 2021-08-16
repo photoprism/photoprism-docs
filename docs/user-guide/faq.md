@@ -103,6 +103,26 @@ In the UI they are shown in the *Originals* section and added to its count.
 PhotoPrism estimates the location of photos without geolocation from photos that have been taken on the same day.
 You can disable estimations in [Settings](./settings/general.md).
 
+### Why do I get an error when trying to add a remote server for syncing? ###
+
+When adding a new remote server, PhotoPrism tests a number of 
+[common endpoints](https://raw.githubusercontent.com/photoprism/photoprism/develop/internal/remote/heuristic.go).
+Only when that fails, you'll see an error. There may be different reasons for this:
+
+- You're using HTTPS with an invalid certificate (not signed, outdated, domain doesn't match,...).
+- Your server has permission issues, or an otherwise bad configuration. For example, Nextcloud blocks requests
+  if the host doesn't match `trusted_domains` in its `config.php`.
+- The IP is not reachable from your PhotoPrism instance due to network settings, or a firewall.
+- The internal hostname can not be resolved to an IP address.
+- It's the wrong host or port.
+- Username or password are wrong.
+
+Advanced users should give `curl` a try for low level debugging, ideally in a terminal 
+from the same Docker container, virtual machine, or server environment PhotoPrism runs in:
+
+- https://www.qed42.com/blog/using-curl-commands-webdav
+- https://code.blogs.iiidefix.net/posts/webdav-with-curl/
+
 ### My file sync app fails with "unable to parse TLS packet headers" when trying to connect via WebDAV? ###
 
 Because of security considerations, some backup tools and file sync apps like

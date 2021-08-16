@@ -96,6 +96,14 @@ extract and index metadata like location and duration from video files.
 
 You're welcome to open an issue if you experience issues with a specific file format.
 
+### Why don't you display animated GIFs natively? ###
+
+PhotoPrism focuses on photographic images and short videos. You may
+[convert your GIF files to  H.264 / MPEG-4 AVC](https://unix.stackexchange.com/questions/40638/how-to-do-i-convert-an-animated-gif-to-an-mp4-or-mv4-on-the-command-line) 
+using `ffmpeg`. That's also what Twitter does when you post a GIF. They will then be shown as 
+"live photos" and start playing on mouse over while also consuming less storage and bandwidth 
+compared to your original GIF files.
+
 ### Why is my storage folder so large? What is in it? ###
 
 The storage folder contains sidecar, thumbnail, and configuration files.

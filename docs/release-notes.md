@@ -6,7 +6,7 @@
 
 ### Development Preview ###
 
-- [Experimental Face Detection](https://github.com/photoprism/photoprism/issues/22)
+- [Experimental Facial Recognition](https://github.com/photoprism/photoprism/issues/22)
 - Exif: [Improved parser with cycle detection](https://github.com/photoprism/photoprism/issues/1326)
 - Docker: [Single multi-arch image for AMD64, ARM64, and ARMv7](https://github.com/photoprism/photoprism/issues/1158)
 - Places: [Fixed RTL rendering on maps](https://github.com/photoprism/photoprism/issues/1391)

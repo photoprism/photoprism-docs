@@ -7,9 +7,9 @@
 ### Development Preview ###
 
 - [Experimental Face Detection](https://github.com/photoprism/photoprism/issues/22)
+- Exif: [Improved parser with cycle detection](https://github.com/photoprism/photoprism/issues/1326)
 - Docker: [Single multi-arch image for AMD64, ARM64, and ARMv7](https://github.com/photoprism/photoprism/issues/1158)
 - Places: [Fixed RTL rendering on maps](https://github.com/photoprism/photoprism/issues/1391)
-- Metadata: [Improved Exif parser with handling for cycles](https://github.com/photoprism/photoprism/issues/1326)
 - Search: [Reset photo viewer results after changing query](https://github.com/photoprism/photoprism/issues/1343)
 - Import: [Ignore dot files listed in .ppignore](https://github.com/photoprism/photoprism/issues/1348)
 - Upload: [More detailed errors logs](https://github.com/photoprism/photoprism/issues/1486)

@@ -2,7 +2,7 @@
 
 PhotoPrism® is a privately hosted app for browsing, organizing, and sharing your photo collection. 
 It makes use of the latest technologies to tag and find pictures automatically without getting in your way. 
-Say goodbye to uploading your memories to the cloud!
+Say goodbye to uploading your visual memories to the cloud!
 
 ![Screenshot](https://dl.photoprism.org/assets/img/preview.jpg)
 

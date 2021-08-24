@@ -4,6 +4,7 @@ nav:
     - Introduction: index.md
     - Setup: getting-started/index.md
     - Docker Compose: getting-started/docker-compose.md
+    - DigitalOcean: getting-started/digitalocean-app.md
     - Raspberry Pi: getting-started/raspberry-pi.md
     - Pure Docker: getting-started/docker.md
     - Config Options: getting-started/config-options.md

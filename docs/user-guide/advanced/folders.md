@@ -2,7 +2,7 @@ This page gives you an overview about the directories used by PhotoPrism.
 
 ## Originals
 This path can be configured by `PHOTOPRISM_ORIGINALS_PATH`.
-The `originals` directory contains your photo library. PhotoPrism does not write to this folder.
+The `originals` directory contains your photo library. PhotoPrism will never move or rename files to this folder. It may add files from uploads or imports, unless read-only mode is enabled.
 
 ## Import
 This path can be configured by `PHOTOPRISM_IMPORT_PATH`.

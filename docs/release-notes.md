@@ -11,7 +11,7 @@
 - Places: [Fixed RTL rendering on maps](https://github.com/photoprism/photoprism/issues/1391)
 - Calendar: [Automatically hide months without (visible) pictures](https://github.com/photoprism/photoprism/issues/1456)
 - Photo Viewer: [Refresh results when search filters change](https://github.com/photoprism/photoprism/issues/1343)
-- Search: [Added `keywords:…`, `subjects:…` and `albums:…` filters](https://github.com/photoprism/photoprism/issues/882)
+- Search: [Added `keywords:…`, `subjects:…`, and `albums:…` filters](https://github.com/photoprism/photoprism/issues/882)
 - Import: [Ignore dot files listed in .ppignore](https://github.com/photoprism/photoprism/issues/1348)
 - Upload: [Added more detailed error logs](https://github.com/photoprism/photoprism/issues/1486)
 - Metadata: [Improved Exif parser with cycle detection](https://github.com/photoprism/photoprism/issues/1326)
@@ -21,7 +21,7 @@
 - Videos: [Added .mp to known MP4 file extensions](https://github.com/photoprism/photoprism/issues/1501)
 - Config: [Support non-root site URL for shared domains](https://github.com/photoprism/photoprism/issues/425)
 - Config: [Added content delivery network URL option](https://github.com/photoprism/photoprism/issues/1351)
-- Config: [Set explicit MariaDB table engine, charset and collation](https://github.com/photoprism/photoprism/issues/1371)
+- Config: [Set explicit MariaDB table engine, charset, and collation](https://github.com/photoprism/photoprism/issues/1371)
   
 ### May 23, 2021 ###
 

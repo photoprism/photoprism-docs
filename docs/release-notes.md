@@ -13,7 +13,7 @@
 - Photo Viewer: [Refresh results when search filters change](https://github.com/photoprism/photoprism/issues/1343)
 - Search: [Added `keywords:…`, `subjects:…` and `albums:…` filters](https://github.com/photoprism/photoprism/issues/882)
 - Import: [Ignore dot files listed in .ppignore](https://github.com/photoprism/photoprism/issues/1348)
-- Upload: [More detailed errors logs](https://github.com/photoprism/photoprism/issues/1486)
+- Upload: [Added more detailed error logs](https://github.com/photoprism/photoprism/issues/1486)
 - Metadata: [Improved Exif parser with cycle detection](https://github.com/photoprism/photoprism/issues/1326)
 - RAW: [Skip Darktable when converting Canon CR3 and Fuji RAF files](https://github.com/photoprism/photoprism/issues/1362)
 - Videos: [Default to UTC as metadata time zone](https://github.com/photoprism/photoprism/issues/1388)

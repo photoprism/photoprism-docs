@@ -18,16 +18,16 @@ nav:
       - Caddy 2: getting-started/proxies/caddy-2.md
       - NGINX: getting-started/proxies/nginx.md
       - Apache 2.4: getting-started/proxies/apache-2.md
-      - SWAG: getting-started/proxies/SWAG.md
+      - SWAG: getting-started/proxies/swag.md
     - Advanced:
-      - Scalability: getting-started/advanced/scalability.md
+      - Backups: getting-started/advanced/backups.md
+      - Transcoding: getting-started/advanced/transcoding.md
       - Kubernetes: getting-started/advanced/kubernetes.md
+      - Scalability: getting-started/advanced/scalability.md
       - FreeBSD: getting-started/advanced/freebsd.md
       - Databases: getting-started/advanced/databases.md
-      - Transcoding: getting-started/advanced/transcoding.md
       - Caching: getting-started/advanced/caching.md
       - NGINX: getting-started/advanced/nginx-proxy-setup.md
-      - Backup: getting-started/advanced/backup.md
     - FAQ: getting-started/faq.md
   - User Guide:
     - Introduction: user-guide/index.md

@@ -30,7 +30,7 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_DISABLE_RAWTHERAPEE`| --disable-rawtherapee      | disables RAW file conversion with RawTherapee
 `PHOTOPRISM_DISABLE_SIPS`       | --disable-sips             | disables RAW file conversion with Sips on macOS
 `PHOTOPRISM_DISABLE_HEIFCONVERT`| --disable-heifconvert      | disables HEIC/HEIF file conversion
-`PHOTOPRISM_DISABLE_FFMPEG`     | --disable-ffmpeg           | disables video transcoding with FFmpeg
+`PHOTOPRISM_DISABLE_FFMPEG`     | --disable-ffmpeg           | disables video transcoding and thumbnail generation with FFmpeg
 `PHOTOPRISM_DETECT_NSFW`        | --detect-nsfw              | flag photos as private that may be offensive
 `PHOTOPRISM_UPLOAD_NSFW`        | --upload-nsfw              | allow uploads that may be offensive
 `PHOTOPRISM_LOG_LEVEL`          | --log-level value, -l value| trace, debug, info, warning, error, fatal or panic (default: "info")

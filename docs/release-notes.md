@@ -6,10 +6,10 @@
 
 ### Development Preview ###
 
-- [Experimental Facial Recognition](https://github.com/photoprism/photoprism/issues/22)
+- [Recognizes faces so that specific people can be found](https://github.com/photoprism/photoprism/issues/22)
 - Docker: [Single multi-arch image for AMD64, ARM64, and ARMv7](https://github.com/photoprism/photoprism/issues/1158)
 - Docker: [Set explicit `HOME` env for Darktable & RawTherapee](https://github.com/photoprism/photoprism/issues/1525)
-- Places: [Fixed RTL rendering on maps](https://github.com/photoprism/photoprism/issues/1391)
+- Places: [Internationalized maps incl RTL support](https://github.com/photoprism/photoprism/issues/1391)
 - Calendar: [Automatically hide months without pictures](https://github.com/photoprism/photoprism/issues/1456)
 - Labels: [Added photo counts to overview page](https://github.com/photoprism/photoprism/issues/584) 
 - Viewer: [Replace pictures when search filters change](https://github.com/photoprism/photoprism/issues/1343)

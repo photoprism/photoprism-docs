@@ -3,6 +3,7 @@ In all sections you can use the *search bar* to find certain photos, videos, alb
 
 You can search for all kind of things:
 
+* People on the photo
 * Objects that are displayed on the photo
 * The main color of the photo
 * The filename or foldername of a photo
@@ -11,62 +12,110 @@ You can search for all kind of things:
 
 Just try it!
 
-   ![Screenshot](img/search-beach.png)
+ ![Screenshot](img/search-beach.png)
 
-!!! tip
-    In case you want to search for multiple things at once, enter the terms separated by a space.
-    
-    A search for `cat blue berlin` will find all photos that either display a cat, have blue as main color or have been taken in Berlin.
+## Search Filter ##
+Additionally to the search you can set the following filters using the filter bar:
 
-## Filters ##
-Additionally to the search you can set filters for:
+* Country, Year, Order, Camera, Lens, Color, Category
 
-* Country
-* Year
-* Order
-* Camera
-* Lens
-* Color
-* Category
-
-In case you set multiple filters only photos are shown in the search result that fulfill all filter criteria.
+In case you set multiple filters only photos, that fulfill all filter criteria, are shown in the search result.
 
  ![Screenshot](img/color-red.png)
 
 !!! tip
-    You can use filters as well in the search bar like this:
+    You can use filters in the search bar like this:
     
     `label:cat`
     `color:green`
-    `type: live`
+    `type:live`
     
     You find the full list of filters below.
     
    ![Screenshot](img/color-green.png)
 
+## AND Search ##
+To combine different filters use a space as separator:
 
-### Search Filter List ###
+```
+mono:true review:false
+```
+
+The search result shows photos that are monochrome **and** not in review.
+
+Additionally some filters can be used with &:
+
+```bigquery
+keywords:buffalo&water
+```
+
+This query will show all photos that have the keywords water **and** buffalo.
+
+& is supported by the following filters:
+
+* albums, keywords, subject/person, subjects/people.
+
+!!!info
+    The label filter does not support &. You can use the keywords filter instead, as all labels are keywords as well.
+
+## OR Search ##
+An OR search is possible using `|`:
+
+```
+label:cat|dog
+```
+
+This will show all photos that have either the label cat **or** dog.
+
+The following filters work with |:
+
+* albums, color, country, day, month, year, keywords, label, path, state, subject/person, subjects/people, title, type, name, filename, original, hash
+
+## Wildcard ##
+The `*` character will act as a wildcard:
+
+```
+name:"IMG_23*"
+```
+
+This will show all photos which name start with `IMG_23`.
+
+
+```
+name:"*_23*"
+```
+
+This will show all photos which name contain `_23`, like `IMG_2356.MOV` , `2021_02_23.jpg`, etc.
+
+!!!info
+    Wildcards cannot be combined with & or |.
+
+## Search Filter Overview ##
 PhotoPrism allows you to use multiple filters in its search.
     
 | Filter      | Examples | Notes |
 | ----------- | ----------- | - |
 | after      |    2015-06-30    | |
+| albums | "Holiday 2020" | Album Name |
 | archived     |    yes, no    | |
 | before      |   2016-12-22     | |
 | chroma     |   5     | |
 | color  | purple, magenta, pink, red, orange, gold, yellow, lime, green, teal, cyan, blue, brown, white, grey, black       | |
-| country     | "de" | |
+| country     | de | |
 | day     |  23    | |
+| dist     | 5 | Distance to coordinates (radius in kilometre). Only applicable in combination with the lat/lng filters.|
 | month     |  5    | |
 | year     |  2012    | |
 | error     |    yes, no    | |
 | faces     |  yes, no, 1, 3    | 1 means minimum 1 face |
 | favorite     |    yes, no    | |
+| filename | 2021/07/12345.jpg | |
 | fmax     |    4.5  | |
 | fmin     |    1.8    | |
 | folder | "2020/Holiday", "2020/*" | |
 | geo | yes, no | |
 | hidden     |    yes, no    | |
+| keywords    | love | |
 | label      |    cat    | |
 | lat     |    38.300457    | Latitude |
 | lng     |   8.931358   | Longitude |
@@ -84,41 +133,10 @@ PhotoPrism allows you to use multiple filters in its search.
 | scan     |    yes, no    | |
 | stack     |    yes, no    | |
 | state     | "Baden-Württemberg", "Baden*" | |
+| subject/person  |"Jane Doe" | Subject Name --> only exact matches are found|
+| subjects/people  |"Jane Doe" | Subject Name|
 | title     | "Holiday*", "Holiday / 2012" | |
 | type     |   image, video, raw, live     | |
 | unsorted     |    yes, no    | |
 | video | yes, no | |
 
-## AND Search ##
-Filters can be combined, use a space between filters:
-
-```
-mono:true review:false
-```
-
-It will show photos that are monochrome **and** unreviewed.
-
-## OR Search ##
-An OR search is possible using `|`:
-
-```
-label:cat|dog
-```
-
-This will show all photos that have either the label cat **or** dog.
-
-## Wildcard ##
-The `*` character will act as a wildcard:
-
-```
-name:"IMG_23*"
-```
-
-This will show all photos which name start with `IMG_23`.
-
-
-```
-name:"*_23*"
-```
-
-This will show all photos which name contain `_23`, like `IMG_2356.MOV` , `2021_02_23.jpg`, etc.

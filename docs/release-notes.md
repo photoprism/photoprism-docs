@@ -18,7 +18,7 @@
 - Import: [Ignore dot files listed in .ppignore](https://github.com/photoprism/photoprism/issues/1348)
 - Upload: [Added more detailed error logs](https://github.com/photoprism/photoprism/issues/1486)
 - Metadata: [Improved Exif parser with cycle detection](https://github.com/photoprism/photoprism/issues/1326)
-- RAW: [Skip Darktable when converting Canon CR3 and Fuji RAF files](https://github.com/photoprism/photoprism/issues/1362)
+- RAW: [Added file extension blacklists for Darktable and RawTherapee](https://github.com/photoprism/photoprism/issues/1362)
 - Videos: [Default to UTC as metadata time zone](https://github.com/photoprism/photoprism/issues/1388)
 - Videos: [Skip related images when downloading](https://github.com/photoprism/photoprism/issues/1436)
 - Videos: [Added .mp as known MP4 file extension](https://github.com/photoprism/photoprism/issues/1501)

@@ -3,6 +3,7 @@
 In the *General* settings tab, you can configure basic user interface settings as well as the maps in *Places*:
 
 ![](img/general-settings.jpg)
+<!--![](img/settings-general.png)-->
 
 ## User Interface ##
 You can change the *theme* and *language* of the User interface.
@@ -19,6 +20,9 @@ When disabled, no files can be downloaded.
 
 #### :material-share-variant: Share ####
 When disabled, album sharing and upload to remote services like ownCloud is not possible.
+
+#### :material-account: People ####
+When disabled, no faces are detected by PhotoPrism.
 
 #### :material-lock: Hide Private ####
 Excludes content marked as private from search results, shared albums, labels and places.

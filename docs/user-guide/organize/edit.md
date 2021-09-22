@@ -71,7 +71,10 @@ Geolocation Plugin is an [open source extension](https://github.com/andyvalerio/
 ![Screenshot](https://valerio.nu/maps/geolocation.jpg)
     
 ### Edit Labels ###
-In the edit dialogue's *Label tab* you can view and edit [*labels*](labels.md).
+In the edit dialogue's *Labels tab* you can view and edit [*labels*](labels.md).
+
+### Edit People ###
+In the edit dialogue's *People tab* you can view and edit [*people*](people.md).
 
 ### Edit Files ###
 In the edit dialogue's *Files tab* you see all files that belong to a photo.

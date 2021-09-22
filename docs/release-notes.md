@@ -8,7 +8,8 @@
 
 - [Recognizes faces so that specific people can be found](https://github.com/photoprism/photoprism/issues/22)
 - Docker: [Single multi-arch image for AMD64, ARM64, and ARMv7](https://github.com/photoprism/photoprism/issues/1158)
-- Docker: [Set explicit `HOME` env for Darktable & RawTherapee](https://github.com/photoprism/photoprism/issues/1525)
+- Docker: [Added `HOME` env for Darktable & RawTherapee](https://github.com/photoprism/photoprism/issues/1525)
+- UX: [Improved UI design and wording](https://github.com/photoprism/photoprism/search?o=desc&q=UX&s=committer-date&type=commits)
 - Places: [Internationalized maps incl RTL support](https://github.com/photoprism/photoprism/issues/1391)
 - Labels: [Added photo counts to overview page](https://github.com/photoprism/photoprism/issues/584) 
 - Calendar: [Empty month albums are hidden](https://github.com/photoprism/photoprism/issues/1456)

@@ -36,6 +36,7 @@ After indexing your originals folder has not been touched:
 
 * You keep your existing folder structure
 * You can display your existing folder structure in PhotoPrism
+* You can move photos between the various folders within your Originals folder.  PhotoPrism will recognize this move and update appropriately during the next index.
 
 ### Import ###
 

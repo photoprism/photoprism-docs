@@ -1,4 +1,4 @@
-Variable                        | Parameter                  | Description                                  
+Variable                        | Parameter                  | Description
 :------------------------------ |:-------------------------- |:-------------------------------------------
 `PHOTOPRISM_DEBUG`              | --debug                    | run in debug mode, shows additional log messages
 `PHOTOPRISM_PUBLIC`             | --public, -p               | no authentication required, disables password protection
@@ -73,3 +73,9 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_THUMB_SIZE_UNCACHED`| --thumb-size-uncached PIXELS, -x PIXELS | dynamic rendering size limit in PIXELS (720-7680) (default: 7680)
 `PHOTOPRISM_JPEG_SIZE`          | --jpeg-size PIXELS         | size limit for converted image files in PIXELS (720-30000) (default: 7680
 `PHOTOPRISM_JPEG_QUALITY`       | --jpeg-quality value, -q value | choose 95 for high-quality thumbnails (25-100) (default: 92)
+`PHOTOPRISM_FACE_SIZE`          | --face-size PIXELS         | min face size in PIXELS (default: 40)
+`PHOTOPRISM_FACE_SCORE`         | --face-score QUALITY       | face QUALITY threshold (default: 9)
+`PHOTOPRISM_FACE_OVERLAP`       |--face-overlap PERCENT      | face area overlap threshold in PERCENT (default: 42)
+`PHOTOPRISM_FACE_CLUSTER_CORE`  | --face-cluster-core NUMBER | NUMBER of faces forming a cluster core (default: 4)
+`PHOTOPRISM_FACE_CLUSTER_DIST`  | --face-cluster-dist RADIUS | RADIUS of faces forming a cluster core (default: 0.64)
+`PHOTOPRISM_FACE_MATCH_DIST`    | --face-match-dist OFFSET   | OFFSET distance when matching faces with clusters (default: 0.46)

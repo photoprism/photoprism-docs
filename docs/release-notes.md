@@ -12,6 +12,7 @@
 - Search: [Added `keywords:…`, `subjects:…`, and `albums:…` filters](https://github.com/photoprism/photoprism/issues/882)
 - Places: [Internationalized maps incl RTL support](https://github.com/photoprism/photoprism/issues/1391)
 - Labels: [Added photo counts to overview page](https://github.com/photoprism/photoprism/issues/584) 
+- Albums: [Fixed share expiration date in form label](https://github.com/photoprism/photoprism/issues/621)
 - Calendar: [Empty month albums are hidden](https://github.com/photoprism/photoprism/issues/1456)
 - Viewer: [Photos will be updated when search filters change](https://github.com/photoprism/photoprism/issues/1343)
 - Videos: [Skip related images when downloading](https://github.com/photoprism/photoprism/issues/1436)

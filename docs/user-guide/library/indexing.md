@@ -47,6 +47,8 @@ MVI_*.*
 
 Names will be ignored in the directory and all subdirectories. An `*` character will act as a wildcard.
 
+Directories or files will only be ignored if they have not been previously indexed.  If PhotoPrism has already indexed a directory or file, adding it to the `.ppignore` file will not result in the directory or file being removed from PhotoPrism.  If directories or files have already been indexed and you wish for those directories or files to be ignored, you must reset the database by running the command `photoprism reset`.  For more information about resetting the database, refer to [Commands - Reset Database](https://docs.photoprism.org/user-guide/advanced/commands/#reset-db).
+
 #### When should "Complete Rescan" be selected? ####
 
 If selected, all files in the *originals* folder will be re-indexed, including already indexed and unchanged files. 

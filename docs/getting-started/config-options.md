@@ -30,7 +30,7 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_DISABLE_SIPS`       | --disable-sips             | disables RAW file conversion with Sips on macOS
 `PHOTOPRISM_DISABLE_HEIFCONVERT`| --disable-heifconvert      | disables HEIC/HEIF file conversion
 `PHOTOPRISM_DISABLE_FFMPEG`     | --disable-ffmpeg           | disables video transcoding and thumbnail generation with FFmpeg
-`PHOTOPRISM_DISABLE_TENSORFLOW` | --disable-tensorflow       | disables all features that require TensorFlow
+`PHOTOPRISM_DISABLE_TENSORFLOW` | --disable-tensorflow       | disables all features depending on TensorFlow
 `PHOTOPRISM_DISABLE_FACES`      | --disable-faces            | disables facial recognition
 `PHOTOPRISM_DISABLE_CLASSIFICATION`| --disable-classification| disables image classification
 `PHOTOPRISM_DETECT_NSFW`        | --detect-nsfw              | flag photos as private that may be offensive

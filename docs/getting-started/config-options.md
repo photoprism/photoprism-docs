@@ -25,12 +25,14 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_DISABLE_SETTINGS`   | --disable-settings         | disables settings UI and API
 `PHOTOPRISM_DISABLE_PLACES`     | --disable-places           | disables reverse geocoding and map
 `PHOTOPRISM_DISABLE_EXIFTOOL`   | --disable-exiftool         | disables metadata extraction with ExifTool
-`PHOTOPRISM_DISABLE_TENSORFLOW` | --disable-tensorflow       | disables image classification with TensorFlow
 `PHOTOPRISM_DISABLE_DARKTABLE`  | --disable-darktable        | disables RAW file conversion with Darktable
 `PHOTOPRISM_DISABLE_RAWTHERAPEE`| --disable-rawtherapee      | disables RAW file conversion with RawTherapee
 `PHOTOPRISM_DISABLE_SIPS`       | --disable-sips             | disables RAW file conversion with Sips on macOS
 `PHOTOPRISM_DISABLE_HEIFCONVERT`| --disable-heifconvert      | disables HEIC/HEIF file conversion
 `PHOTOPRISM_DISABLE_FFMPEG`     | --disable-ffmpeg           | disables video transcoding and thumbnail generation with FFmpeg
+`PHOTOPRISM_DISABLE_TENSORFLOW` | --disable-tensorflow       | disables all features that require TensorFlow
+`PHOTOPRISM_DISABLE_FACES`      | --disable-faces            | disables facial recognition
+`PHOTOPRISM_DISABLE_CLASSIFICATION`| --disable-classification| disables image classification
 `PHOTOPRISM_DETECT_NSFW`        | --detect-nsfw              | flag photos as private that may be offensive
 `PHOTOPRISM_UPLOAD_NSFW`        | --upload-nsfw              | allow uploads that may be offensive
 `PHOTOPRISM_LOG_LEVEL`          | --log-level value, -l value| trace, debug, info, warning, error, fatal or panic (default: "info")
@@ -73,7 +75,7 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_THUMB_SIZE_UNCACHED`| --thumb-size-uncached PIXELS, -x PIXELS | dynamic rendering size limit in PIXELS (720-7680) (default: 7680)
 `PHOTOPRISM_JPEG_SIZE`          | --jpeg-size PIXELS         | size limit for converted image files in PIXELS (720-30000) (default: 7680
 `PHOTOPRISM_JPEG_QUALITY`       | --jpeg-quality value, -q value | choose 95 for high-quality thumbnails (25-100) (default: 92)
-`PHOTOPRISM_FACE_SIZE`          | --face-size PIXELS         | min face size in PIXELS (default: 40)
+`PHOTOPRISM_FACE_SIZE`          | --face-size PIXELS         | min face size in PIXELS (default: 50)
 `PHOTOPRISM_FACE_SCORE`         | --face-score QUALITY       | face QUALITY threshold (default: 9)
 `PHOTOPRISM_FACE_OVERLAP`       |--face-overlap PERCENT      | face area overlap threshold in PERCENT (default: 42)
 `PHOTOPRISM_FACE_CLUSTER_CORE`  | --face-cluster-core NUMBER | NUMBER of faces forming a cluster core (default: 4)

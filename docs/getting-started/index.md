@@ -45,7 +45,7 @@ Our Web UI works with most modern browsers, and runs best on Chrome, Chromium, S
 Opera and Samsung Internet have been reported to be compatible as well.
 Note that not all [video formats](https://github.com/photoprism/photoprism/issues/707) may be played with every browser.
 
-The backend is compatible with [MariaDB 10](https://mariadb.org/),
+The backend is compatible with [MariaDB 10.2+](https://mariadb.org/),
 [MySQL 8](https://www.mysql.com/), and [SQLite 3](https://www.sqlite.org/).
 
 !!! attention

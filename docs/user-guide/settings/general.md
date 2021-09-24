@@ -22,7 +22,7 @@ When disabled, no files can be downloaded.
 When disabled, album sharing and upload to remote services like ownCloud is not possible.
 
 #### :material-account: People ####
-When disabled, no faces are detected by PhotoPrism.
+When disabled, the people section is hidden. To prevent face detection in general you need to use the PHOTOPRISM_DISABLE_FACES or PHOTOPRISM_DISABLE_TENSORFLOW [config option](../../getting-started/config-options.md).
 
 #### :material-lock: Hide Private ####
 Excludes content marked as private from search results, shared albums, labels and places.

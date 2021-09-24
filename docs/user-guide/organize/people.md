@@ -1,4 +1,4 @@
-PhotoPrism automatically detects faces and clusters them, in case you have the people option enabled in [Settings](../settings/general.md).
+PhotoPrism automatically detects faces and clusters them.
 
 Each time you assign a name to a face or change an existing assignment, PhotoPrism improves face clusters intelligently.
 
@@ -12,6 +12,7 @@ To star a person click :material-star:. Stared persons appear first.
 
 !!!info
     As not all faces belong to a cluster, there might be more faces than visible in the New section.
+    You find all photos with those faces using the search filter `face:new`.
     The photo [*edit dialogue*](edit.md) shows all faces of a photo independent from whether they are clustered or not.
 
 ## Assign name to face ##
@@ -52,7 +53,7 @@ To hide face clusters from the *New* section just click :material-close: in the 
 OR
 
 1. Go to *Search*
-2. Search for people:"Jane Doe"
+2. Search for person:"jane-doe"
 
 ![Screenshot](img/view-person-2.png)
 

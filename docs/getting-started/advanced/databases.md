@@ -1,7 +1,8 @@
 # Advanced Database Setup
 
-PhotoPrism is compatible with [MariaDB 10](https://mariadb.org/),
-[MySQL 8](https://www.mysql.com/), and [SQLite 3](https://www.sqlite.org/).
+PhotoPrism is compatible with [MariaDB 10.5.10+](https://mariadb.org/) (earlier versions 
+see [MDEV-25362](https://jira.mariadb.org/browse/MDEV-25362)), [MySQL 8](https://www.mysql.com/), 
+and [SQLite 3](https://www.sqlite.org/).
 
 !!! info
     Our [docker-compose.yml](https://dl.photoprism.org/docker/) examples include

@@ -58,7 +58,9 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_DATABASE_CONNS`     | --database-conns NUMBER    | max NUMBER of open connections to the database (default: 0)
 `PHOTOPRISM_DATABASE_CONNS_IDLE`| --database-conns-idle NUMBER | max NUMBER of idle connections (equal or less than open) (default: 0)
 `PHOTOPRISM_RAWTHERAPEE_BIN`    | --rawtherapee-bin COMMAND  | RawTherapee CLI COMMAND for raw image conversion (default: "rawtherapee-cli")
+`PHOTOPRISM_RAWTHERAPEE_BLACKLIST` | --rawtherapee-blacklist BLACKLIST | Comma-separated file extension BLACKLIST |
 `PHOTOPRISM_DARKTABLE_BIN`      | --darktable-bin COMMAND    | Darktable CLI COMMAND for raw image conversion (default: "darktable-cli")
+`PHOTOPRISM_DARKTABLE_BLACKLIST` | --darktable-blacklist BLACKLIST | Comma-separated file extension BLACKLIST |
 `PHOTOPRISM_RAW_PRESETS`        | --raw-presets              | enables RAW converter presets (may reduce performance)
 `PHOTOPRISM_SIPS_BIN`           | --sips-bin FILENAME        | Scriptable Image Processing System COMMAND (default: "sips")
 `PHOTOPRISM_HEIFCONVERT_BIN`    | --heifconvert-bin COMMAND  | HEIC/HEIF image convert COMMAND (default: "heif-convert")

@@ -1,4 +1,4 @@
-# Connect via WebDAV #
+# Connecting via WebDAV #
 
 WebDAV clients, like Microsoft’s Windows Explorer or Apple's Finder,
 can connect directly to PhotoPrism.

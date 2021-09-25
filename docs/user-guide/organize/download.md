@@ -1,5 +1,6 @@
-# Download #
-### Download single photo ###
+# Downloading Files #
+
+### Download Single Photo ###
 
 1. Click on the photo
 
@@ -9,7 +10,7 @@
 
     ![Screenshot](img/download-2.png)
 
-### Download multiple photos ###
+### Download Multiple Photos ###
 
 1. Select photos
 2. Click on the context menu

@@ -60,22 +60,22 @@ nav:
       - Private: user-guide/organize/private.md
       - Archive: user-guide/organize/archive.md
       - Albums: user-guide/organize/albums.md
-      - Folders: user-guide/organize/folders.md
       - People: user-guide/organize/people.md
       - Labels: user-guide/organize/labels.md
       - Places: user-guide/organize/places.md
       - Videos: user-guide/organize/video.md
       - Moments: user-guide/organize/moments.md
+      - Folders: user-guide/organize/folders.md
       - Calendar: user-guide/organize/calendar.md
-      - Download photos: user-guide/organize/download.md
-      - Edit photos: user-guide/organize/edit.md
-      - Delete photos: user-guide/organize/delete.md
+      - Edit Details: user-guide/organize/edit.md
+      - Download Files: user-guide/organize/download.md
+      - Permanent Delete: user-guide/organize/delete.md
     - Sync:
-      - Connect via WebDAV: user-guide/sync/webdav.md
-      - Sync from phone: user-guide/sync/sync-phone.md
-      - Sync with Dropbox: user-guide/use-cases/dropbox.md
+      - WebDAV: user-guide/sync/webdav.md
+      - Mobile Devices: user-guide/sync/sync-phone.md
+      - Dropbox: user-guide/sync/dropbox.md
     - Share:
-      - Share album via link: user-guide/share/share.md
+      - Album Link: user-guide/share/share.md
     - Settings:
       - General: user-guide/settings/general.md
       - Library: user-guide/settings/library.md
@@ -84,9 +84,9 @@ nav:
       - Account: user-guide/settings/account.md
       # - Places: user-guide/settings/places.md
     - Migrate:
-      - Migrate from Google Photos: user-guide/use-cases/google.md
-      - Migrate from Apple Photos: user-guide/use-cases/apple.md
-      - Migrate from Flickr: user-guide/use-cases/flickr.md
+      - Google Photos: user-guide/use-cases/google.md
+      - Apple Photos: user-guide/use-cases/apple.md
+      - Flickr: user-guide/use-cases/flickr.md
       #- Link directories from remote:
     - Advanced:
       - Metadata: user-guide/advanced/metadata.md

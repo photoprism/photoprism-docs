@@ -1,4 +1,5 @@
-# Edit photo details #
+# Editing Photos and Videos Details #
+
 PhotoPrisms *edit dialogue* enables you to add/edit various types of metadata related to your photos/videos.
 
 During [*indexing*](../index.md) PhotoPrism collects as much data as possible from sidecar files and the photo itself.

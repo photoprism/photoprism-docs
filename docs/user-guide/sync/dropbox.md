@@ -1,4 +1,4 @@
-# Sync files with Dropbox
+# Syncing with Dropbox #
 
 *Note: This is contributed content.*
 

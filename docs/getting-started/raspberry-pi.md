@@ -11,11 +11,13 @@ your Raspberry Pi 3 / 4 with the parameter `arm_64bit=1` in `config.txt` in orde
 Alternatively, you may run the image on [UbuntuDockerPi](https://github.com/guysoft/UbuntuDockerPi).
 It's a 64bit Ubuntu Server with Docker pre-installed.
 
-Note that indexing large photo and video collections significantly benefits from fast, local SSD storage, 
-and enough memory for caching. Your device should have at least 4 GB of memory.
-Also make sure it has at least 4 GB of [swap](https://opensource.com/article/18/9/swap-space-linux-systems)
+Your device should have at least 4 GB of memory. Also make sure it has at least
+4 GB of [swap](https://opensource.com/article/18/9/swap-space-linux-systems)
 configured, so that indexing doesn't cause restarts when there are memory usage spikes.
-Especially the conversion of RAW images and the transcoding of videos are quite demanding.
+
+Indexing large photo and video collections significantly benefits from fast, local SSD storage,
+and lots of memory for caching. Especially the conversion of RAW images and the transcoding of
+videos are very demanding.
 
 To avoid permission issues, docker-compose.yml should include the following security options:
 

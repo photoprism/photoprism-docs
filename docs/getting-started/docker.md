@@ -97,7 +97,7 @@ Easy, isn't it?
     `PHOTOPRISM_WORKERS` to a value less than the number of logical CPU cores.
     Also make sure your server has at least 4 GB of [swap](https://opensource.com/article/18/9/swap-space-linux-systems)
     configured so that indexing doesn't cause restarts when there are memory usage spikes.
-    Especially the conversion of RAW images and the transcoding of videos are quite demanding.
+    Especially the conversion of RAW images and the transcoding of videos are very demanding.
     As a measure of last resort, you may disable using TensorFlow for image classification and facial recognition.
 
 ### Step 3: When you're done... ###

@@ -27,18 +27,21 @@ will be prioritized as well.
 ## System Requirements ##
 
 We recommend hosting PhotoPrism on a server with **at least 2 cores** and **4 GB of memory**.
+Also make sure it has at least 4 GB of swap configured, so that indexing doesn't cause 
+restarts when there are memory usage spikes.
 Beyond these minimum requirements, the amount of RAM should match the number of cores.
-Indexing large photo and video collections significantly benefits from fast, local SSD storage.
+
+Indexing large photo and video collections significantly benefits from fast, local SSD storage,
+and lots of memory for caching. Especially the conversion of RAW images and the transcoding of
+videos are very demanding.
 
 !!! info
-    RAW file conversion and automatic image classification using TensorFlow
-    will be disabled on servers with less than 2 GB of physical memory.
+    RAW file conversion and TensorFlow will be disabled on servers 
+    with less than 2 GB of physical memory.
 
 If you're running out of memory - or other system resources - while indexing, please reduce the
 [number of workers](https://docs.photoprism.org/getting-started/config-options/)
 to a value less than the number of logical CPU cores.
-Also make sure your server has at least 4 GB of [swap](https://opensource.com/article/18/9/swap-space-linux-systems) 
-configured, so that indexing doesn't cause restarts when there are memory usage spikes.
 As a measure of last resort, you may disable using TensorFlow for image classification and facial recognition.
 
 Our Web UI works with most modern browsers, and runs best on Chrome, Chromium, Safari, Firefox, and Edge.

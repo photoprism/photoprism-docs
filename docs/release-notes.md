@@ -28,8 +28,9 @@
 - Config: [Added disable options for image classification and facial recognition](https://github.com/photoprism/photoprism/commit/a1822f9b19753140c14f4ff0242f5d931b0cae9b)
 - Config: [Added support for non-root site URLs](https://github.com/photoprism/photoprism/issues/425)
 - Config: [Added content delivery network URL option](https://github.com/photoprism/photoprism/issues/1351)
-- Config: [Set explicit MariaDB table engine, charset, and collation](https://github.com/photoprism/photoprism/issues/1371)
-- MariaDB: [Name resolution in subqueries is broken in versions prior to 10.3.29, 10.4.19, 10.5.10, and 10.6.0](https://github.com/photoprism/photoprism/issues/1544)
+- Config: [Added facial recognition and image classification feature flags](https://github.com/photoprism/photoprism/commit/d797e1a5410729a85e232a89f99231703ee0de21)
+- MariaDB: [Set explicit table engine, charset, and collation](https://github.com/photoprism/photoprism/issues/1371)
+- MariaDB: [Added error log message for old versions with broken table name resolution in subqueries](https://github.com/photoprism/photoprism/issues/1544)
 - Docker: [Added `HOME` env for Darktable & RawTherapee](https://github.com/photoprism/photoprism/issues/1525)
 - Docker: [Single multi-arch image for AMD64, ARM64, and ARMv7](https://github.com/photoprism/photoprism/issues/1158)
 

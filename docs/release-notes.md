@@ -7,7 +7,7 @@
 ### Development Preview ###
 
 - [Recognizes faces so that specific people can be found](https://github.com/photoprism/photoprism/issues/22)
-- UX: [Improved UI design and wording](https://github.com/photoprism/photoprism/search?o=desc&q=UX&s=committer-date&type=commits)
+- UX: [Improved UI design, navigation, and wording](https://github.com/photoprism/photoprism/search?o=desc&q=UX&s=committer-date&type=commits)
 - Search: [Omit full text index if query is too short](https://github.com/photoprism/photoprism/issues/1517)
 - Search: [Added `keywords:…`, `subjects:…`, and `albums:…` filters](https://github.com/photoprism/photoprism/issues/882)
 - Places: [Internationalized maps incl RTL support](https://github.com/photoprism/photoprism/issues/1391)
@@ -15,19 +15,24 @@
 - Albums: [Fixed share expiration date in form label](https://github.com/photoprism/photoprism/issues/621)
 - Calendar: [Empty month albums are hidden](https://github.com/photoprism/photoprism/issues/1456)
 - Viewer: [Photos will be updated when search filters change](https://github.com/photoprism/photoprism/issues/1343)
+- Index: [Ignore Synology @eaDir folders](https://github.com/photoprism/photoprism/issues/1543)
+- Import: [Ignore dot files listed in .ppignore](https://github.com/photoprism/photoprism/issues/1348)
+- Upload: [Added more detailed error logs](https://github.com/photoprism/photoprism/issues/1486)
 - Videos: [Skip related images when downloading](https://github.com/photoprism/photoprism/issues/1436)
 - Videos: [Added .mp as known MP4 file extension](https://github.com/photoprism/photoprism/issues/1501)
 - Videos: [Default to UTC as metadata time zone](https://github.com/photoprism/photoprism/issues/1388)
-- Import: [Ignore dot files listed in .ppignore](https://github.com/photoprism/photoprism/issues/1348)
-- Upload: [Added more detailed error logs](https://github.com/photoprism/photoprism/issues/1486)
+- Exiftool: [Enabled large file support](https://github.com/photoprism/photoprism/issues/1401)
 - Metadata: [Improved Exif parser with cycle detection](https://github.com/photoprism/photoprism/issues/1326)
-- RAW: [Added file extension blacklists for Darktable and RawTherapee](https://github.com/photoprism/photoprism/issues/1362)
-- Docker: [Added `HOME` env for Darktable & RawTherapee](https://github.com/photoprism/photoprism/issues/1525)
-- Docker: [Single multi-arch image for AMD64, ARM64, and ARMv7](https://github.com/photoprism/photoprism/issues/1158)
+- Metadata: [Support for long projection type names like transverse-cylindrical](https://github.com/photoprism/photoprism/issues/1508)
+- Config: [Added RAW file extension blacklists for Darktable and RawTherapee](https://github.com/photoprism/photoprism/issues/1362)
+- Config: [Added disable options for image classification and facial recognition](https://github.com/photoprism/photoprism/commit/a1822f9b19753140c14f4ff0242f5d931b0cae9b)
 - Config: [Added support for non-root site URLs](https://github.com/photoprism/photoprism/issues/425)
 - Config: [Added content delivery network URL option](https://github.com/photoprism/photoprism/issues/1351)
 - Config: [Set explicit MariaDB table engine, charset, and collation](https://github.com/photoprism/photoprism/issues/1371)
-  
+- MariaDB: [Name resolution in subqueries is broken in versions prior to 10.3.29, 10.4.19, 10.5.10, and 10.6.0 and must be upgraded to work with PhotoPrism](https://github.com/photoprism/photoprism/issues/1544)
+- Docker: [Added `HOME` env for Darktable & RawTherapee](https://github.com/photoprism/photoprism/issues/1525)
+- Docker: [Single multi-arch image for AMD64, ARM64, and ARMv7](https://github.com/photoprism/photoprism/issues/1158)
+
 ### May 23, 2021 ###
 
 [210523-b1856b9d-Linux-x86_64](https://drone.photoprism.app/photoprism/photoprism/1375/1/0),

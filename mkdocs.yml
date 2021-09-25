@@ -206,9 +206,9 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
+  favicon: img/favicon-16.png
   icon:
     logo: logo
-  favicon: img/favicon-16.png
 
 plugins:
   - search

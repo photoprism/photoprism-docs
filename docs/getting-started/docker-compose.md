@@ -4,28 +4,28 @@ Before you start, make sure you have [Docker](https://store.docker.com/search?ty
 It is available for Mac, Linux and Windows.
 Developers may skip this and move on to the [Developer Guide](../developer-guide/index.md).
 
-We plan to provide a single binary.
+We plan to provide downloadable installation packages for future releases.
 
-!!! info "Windows"
+!!! note "Windows"
     Windows users may need to [disable](img/docker-disable-wsl2.jpg) the WSL 2 based engine in *Docker Settings > General*
     to mount drives other than `C:`. Please use this [docker-compose.yml](https://dl.photoprism.org/docker/windows/docker-compose.yml)
     example to get started and [increase](img/docker-resources-advanced.jpg) the Docker memory limit 
     to 4 GB or more, as the default of 2 GB may reduce indexing performance or cause restarts.
 
-!!! info "macOS"
+!!! note "macOS"
     macOS users should [increase](img/docker-resources-advanced.jpg) the Docker memory limit to 4 GB or more,
     as the default of 2 GB may reduce indexing performance or cause restarts.
     Please use this [docker-compose.yml](https://dl.photoprism.org/docker/macos/docker-compose.yml)
     example to get started.
 
-!!! info "Linux"
+!!! note "Linux & Raspberry Pi"
+    Our latest release comes as a single [multi-arch image](https://hub.docker.com/r/photoprism/photoprism)
+    for AMD64, ARM64, and ARMv7. If your device meets the [system requirements](raspberry-pi.md),
+    the same installation instructions as for regular Linux servers apply.
     All commands may have to be prefixed with `sudo` when not running as root.
-    Note that this will change the home directory `~` to `/root` in your configuration.
+    Note that this will point the home directory placeholder `~` to `/root` in your configuration.
     Kernel security modules such as SELinux have been reported to cause 
     [issues](https://docs.photoprism.org/getting-started/faq/#why-is-photoprism-getting-stuck-in-a-restart-loop).
-
-!!! info "Raspberry Pi"
-   An image for the [Raspberry Pi](raspberry-pi.md) is available as well.
 
 ### Step 1: Configure ###
 
@@ -122,13 +122,29 @@ Run `photoprism index`, or go to *Library* and click *Start*, to update the inde
 
 Easy, isn't it?
 
-!!! tip "Reducing Server Load"
+!!! info "Reducing Server Load"
     If you're running out of memory - or other system resources - while indexing, please limit the 
     [number of workers](https://docs.photoprism.org/getting-started/config-options/) by setting
     `PHOTOPRISM_WORKERS` to a value less than the number of logical CPU cores in `docker-compose.yml`.
-    Also make sure your server has [swap](https://opensource.com/article/18/9/swap-space-linux-systems) 
+    Also make sure your server has at least 4 GB of [swap](https://opensource.com/article/18/9/swap-space-linux-systems) 
     configured so that indexing doesn't cause restarts when there are memory usage spikes.
-    As a measure of last resort, you may additionally disable image classification using TensorFlow.
+    Especially the conversion of RAW images and the transcoding of videos are quite demanding.
+    As a measure of last resort, you may disable using TensorFlow for image classification and facial recognition.
+
+### Facial Recognition ###
+
+Existing users may index faces in originals without performing a complete rescan:
+
+```
+docker-compose exec photoprism photoprism faces index
+```
+
+For a fresh start e.g. after upgrading from a development preview, remove
+known people and faces before re-indexing:
+
+```
+docker-compose exec photoprism photoprism faces reset -f
+```
 
 ### Command Reference ###
 
@@ -136,21 +152,22 @@ The help command shows a complete list of commands and config options.
 Use the `--help` flag to see a detailed command info 
 like `docker-compose exec photoprism photoprism backup --help`.
 
-| Action           | Command                                                   |
-|------------------|-----------------------------------------------------------|
-| Start            | `docker-compose up -d`                                    |
-| Stop             | `docker-compose stop`                                     |
-| Update           | `docker-compose pull`                                     |
-| View Logs        | `docker-compose logs --tail=25 -f`                        |
-| Open Terminal    | `docker-compose exec photoprism bash`                     |
-| Show Help        | `docker-compose exec photoprism photoprism help`          |
-| Show Config      | `docker-compose exec photoprism photoprism config`        |
-| Reset Database   | `docker-compose exec photoprism photoprism reset`         |
-| Backup Database  | `docker-compose exec photoprism photoprism backup -a -i`  |
-| Restore Database | `docker-compose exec photoprism photoprism restore -a -i` |
-| Index Originals  | `docker-compose exec photoprism photoprism index`         |
-| Import Files     | `docker-compose exec photoprism photoprism import`        |
+| Action   | Command                                                   |
+|----------|-----------------------------------------------------------|
+| Start    | `docker-compose up -d`                                    |
+| Stop     | `docker-compose stop`                                     |
+| Update   | `docker-compose pull`                                     |
+| Logs     | `docker-compose logs --tail=25 -f`                        |
+| Terminal | `docker-compose exec photoprism bash`                     |
+| Help     | `docker-compose exec photoprism photoprism help`          |                
+| Config   | `docker-compose exec photoprism photoprism config`        |                   
+| Reset    | `docker-compose exec photoprism photoprism reset`         |                   
+| Backup   | `docker-compose exec photoprism photoprism backup -a -i`  |                      
+| Restore  | `docker-compose exec photoprism photoprism restore -a -i` |                   
+| Index    | `docker-compose exec photoprism photoprism index`         |                  
+| Re-index | `docker-compose exec photoprism photoprism index -f`      |                   
+| Import   | `docker-compose exec photoprism photoprism import`        |                  
 
 !!! info "Complete Rescan"
-    `photoprism index --all` will re-index all originals, including already indexed and unchanged files. This may be
+    `photoprism index -f` will re-index all originals, including already indexed and unchanged files. This may be
     necessary after upgrading, especially to new major versions.

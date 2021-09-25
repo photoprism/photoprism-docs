@@ -60,7 +60,7 @@ With Portainer installed we can use a docker-compose file to deploy a stack comp
 14. Open Portainer by visiting http://[YOUR-LOCAL-IP]:9000/;
 15. Click _Stacks_ in the left menu, then _Add stack_, give it a meaningful name (for eg. Photoprism) and in the Web Editor place the below code, which was based on [Photoprism's default docker-compose yml file](https://dl.photoprism.org/docker/docker-compose.yml) but downgraded to compose version 2. **BE SURE TO USE YOUR OWN [LOCAL-PORT], [YOUR-ADMIN-PASS], [YOUR-DB-PASS] and [YOUR-LOCAL-IP] BY CHANGING THE VALUES ACCORDINGLY, AND CHECK THE LOCAL VOLUMES PATHS TO MATCH THOSE DEFINED IN STEP 13**.
 
-```yml
+```yaml
 version: '2'
 services:
   photoprism:
@@ -69,7 +69,7 @@ services:
       - seccomp:unconfined
       - apparmor:unconfined
     ports:
-      - [LOCAL-PORT]:2342
+      - 2342:2342 # [server]:[container]
     environment:
       - PHOTOPRISM_HTTP_PORT=2342
       - PHOTOPRISM_ADMIN_PASSWORD=[YOUR-ADMIN-PASS]
@@ -101,7 +101,7 @@ services:
     security_opt:
       - seccomp:unconfined
       - apparmor:unconfined
-    command: mysqld --transaction-isolation=READ-COMMITTED --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --max-connections=512 --innodb-rollback-on-timeout=OFF --innodb-lock-wait-timeout=50
+    command: mysqld --transaction-isolation=READ-COMMITTED --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --max-connections=512 --innodb-rollback-on-timeout=OFF --innodb-lock-wait-timeout=120
     volumes:
       - /volume1/docker/photoprism/database:/var/lib/mysql
     environment:
@@ -113,10 +113,11 @@ services:
 
 16. Click _Deploy the stack_. Give it a few minutes and PhotoPrism should be accessible in http://[YOUR-LOCAL-IP]:[LOCAL-PORT]/.
 
-**IMPORTANT: Synology automatically creates thumbnail files inside a special @eaDir directory when you upload media files such as images. To prevent Photoprism to index these files place a .ppignore file with the following content inside docker/photoprism/originals folder:**
-```
-@eaDir
-```
+!!! info
+    Synology automatically creates thumbnail files inside a special `@eaDir` folder when uploading 
+    media files such as images.
+    PhotoPrism now ignores folders starting with `@` so that you don't need to manually exclude
+    them in a `.ppignore` file anymore.
 
 ### Step 4: configure a reverse proxy in your Synology NAS to access PhotoPrism over https / custom domain name ###
 

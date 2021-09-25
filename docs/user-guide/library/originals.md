@@ -1,4 +1,4 @@
-# Indexing your originals #
+# Indexing Originals #
 
 !!! info
     If you're using PhotoPrism for the first time, make sure your photo and video 
@@ -27,10 +27,12 @@
     A NSFW detector can be enabled to automatically flag pictures as private which 
     may have offensive content. Note that this is only somewhat reliable. 
 
-#### Ignoring directories and files ####
+#### Ignoring Files and Folders ####
 
-Create a `.ppignore` file in the same directory that the directories or files you want to ignore.
-Then put configuration in this file, see the following examples:
+Hidden files and folders starting with a `.` or `@` will be ignored automatically. 
+Other names to be ignored can be added to a `.ppignore` file in the originals or import folder it should apply.
+
+Example:
 
 ```
 # ignore a directory by its name
@@ -45,9 +47,14 @@ MVI_*.MOV
 MVI_*.*
 ```
 
-Names will be ignored in the directory and all subdirectories. An `*` character will act as a wildcard.
+Names will be ignored in the same directory and all subdirectories. You may use `*` as a wildcard.
 
-Directories or files will only be ignored if they have not been previously indexed.  If PhotoPrism has already indexed a directory or file, adding it to the `.ppignore` file will not result in the directory or file being removed from PhotoPrism.  If directories or files have already been indexed and you wish for those directories or files to be ignored, you must reset the database by running the command `photoprism reset`.  For more information about resetting the database, refer to [Commands - Reset Database](https://docs.photoprism.org/user-guide/advanced/commands/#reset-db).
+Note that already indexed files and folders won't be removed from index retroactively. In this case, adding them to a `.ppignore` file will not result in a file or folder to be removed from PhotoPrism.
+
+If you are a new user and files or folders have already been indexed, you generally easiest 
+to reset the database and start with a fresh index by running `photoprism reset` in a terminal.
+
+For more information see [Commands > Reset Database](https://docs.photoprism.org/user-guide/advanced/commands/#reset-db).
 
 #### When should "Complete Rescan" be selected? ####
 

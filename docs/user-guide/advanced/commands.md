@@ -1,5 +1,5 @@
 Photoprism provides commands to keep your instance clean or to update backups.
-Some of the commands are executed in the background. Others can only be triggered manually.
+Some commands are executed in the background. Others can only be triggered manually.
 
 ## Cleanup
 ### What does it?

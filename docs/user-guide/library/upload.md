@@ -1,4 +1,4 @@
-# Uploading files to your library #
+# Uploading Files to Originals #
 
 1. Click :material-cloud-upload: in the upper right corner
 

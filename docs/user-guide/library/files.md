@@ -1,4 +1,4 @@
-# Original files #
+# Browsing Files and Folders #
 
 The *Originals* section displays all files of your *originals* directory.
 
@@ -8,12 +8,14 @@ Clicking on a file opens its edit dialog.
 
 The context menu allows you to perform the following actions:
 
-## Download files ##
+## Download Files ##
+
 1. Select files
 2. Open context menu
 3. Click :material-download:
 
-## Create album from files ##
+## Create an Album from Files ##
+ 
 1. Select files
 2. Open context menu
 3. Click :material-bookmark:

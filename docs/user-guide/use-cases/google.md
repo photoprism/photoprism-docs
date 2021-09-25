@@ -13,7 +13,7 @@ we have to use [Google Takeout](https://takeout.google.com/).
 1. Depending on the number of photos, it can take a few days for your data to be exported
 1. *Download* your data and extract all archives into to your *originals directory*
     - the folder should include the photos themselves, alongside json files for each of the photos
-1. Start [*indexing*](../library/indexing.md)
+1. Start [*indexing*](../library/originals.md)
 
 ## Metadata
 

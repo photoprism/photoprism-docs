@@ -77,7 +77,7 @@ Your droplet is now being created.
 - You may [change your password](../user-guide/settings/account.md) using the Web UI
 
 ## Add files ##
-- Decide whether you want to [index or import your files](../user-guide/library/import-vs-index.md)
+- Decide whether you want to [index or import your files](../user-guide/library/index.md)
 - [Add files to your import or originals directory using Webdav](../user-guide/library/webdav.md) or use the [Web UI](../user-guide/library/upload.md) to upload files to your import directory
 - You might also setup [automatic sync](../user-guide/sync/sync-phone.md) from your phone
 

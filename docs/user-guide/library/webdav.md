@@ -1,10 +1,11 @@
-# Add files using WebDAV #
-In case you have PhotoPrism running on a server you can use WebDAV to add files to your *import* or *originals* folder.
+# WebDAV Upload and Import #
 
+If you have PhotoPrism running on a remote server, 
+you can use WebDAV to add files to your *originals* or *import* folder.
 
-Just follow those [instructions](../sync/webdav.md).
+Please follow these [instructions](../sync/webdav.md).
 
-Once all files are added you can start [importing or indexing](import-vs-index.md) your files.
+Once all files are added, you can start [importing or indexing](index.md) them.
 
 <!--### Add photos via WebDAV on macOS ###
 1. On your computer, open the Finder.
@@ -32,7 +33,8 @@ Once all files are added you can start [importing or indexing](import-vs-index.m
 
 !!! tip 
     You can use WebDAV to download photos from the server as well. 
-    Just connect to http://servername/originals/ and copy the files to your preferred destination.
+    Just connect to `http://server-ip:2342/originals/` or `https://yourdomain/originals/` for public servers,
+    and copy the files to your preferred destination.
 
 <!--### Add photos via WebDAV on Windows ###
 1. Open the windows explorer (e.g. by clicking [Windows] and [E]).

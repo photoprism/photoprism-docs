@@ -11,7 +11,7 @@ Use *index* when you want to index your photos and videos directly in the *origi
 moving or renaming them in any way.
 
 !!! tip
-    You may [configure ignore list](indexing.md#ignoring-directories-and-files)
+    You may [configure ignore list](originals.md#ignoring-directories-and-files)
     before starting the index.
 
 Your folder structure in *originals* might look like this:

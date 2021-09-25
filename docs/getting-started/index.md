@@ -3,7 +3,7 @@
 To simplify running PhotoPrism on a server, we strongly recommend using [Docker Compose](docker-compose.md).
 It is available for Mac, Linux and Windows.
 
-Next, you'll have to [index](../user-guide/library/import-vs-index.md) 
+Next, you'll have to [index](../user-guide/library/index.md) 
 your library. Please be patient, this will take a while depending on the size of your photo collection.
 
 Already indexed photos can be browsed in [Photos](../user-guide/organize/browse.md) 

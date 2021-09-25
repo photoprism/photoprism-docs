@@ -1,4 +1,4 @@
-# Importing files to your library #
+# Importing Files to Originals #
 
 1. Add files to the *import* folder if not done already
 

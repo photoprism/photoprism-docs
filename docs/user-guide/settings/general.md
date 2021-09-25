@@ -49,7 +49,7 @@ When disabled, there is no *Labels* section and you cannot add or edit labels.
 When disabled, there is no *Library* section.
 
 #### :material-folder-plus: Import ####
-When disabled, there is no possibility to [*import*](../library/import.md) photos. You need to use [*index*](../library/indexing.md) instead to add new photos.
+When disabled, there is no possibility to [*import*](../library/import.md) photos. You need to use [*index*](../library/originals.md) instead to add new photos.
 
 #### :material-text: Logs ####
 When disabled, server logs are not shown.

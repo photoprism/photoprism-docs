@@ -34,12 +34,12 @@ nav:
     # - Setting up: user-guide/setup.md
     - Navigate: user-guide/navigate.md
     - Index:
-      - Introduction: user-guide/library/import-vs-index.md
-      - Index Originals: user-guide/library/indexing.md
-      - Import Files: user-guide/library/import.md
-      - Upload via Web UI: user-guide/library/upload.md
-      - WebDAV Upload: user-guide/library/webdav.md
-      - Original Files: user-guide/library/files.md
+      - Introduction: user-guide/library/index.md
+      - Originals: user-guide/library/originals.md
+      - Importing Files: user-guide/library/import.md
+      - Web Upload: user-guide/library/upload.md
+      - WebDAV Sync: user-guide/library/webdav.md
+      - File Browser: user-guide/library/files.md
       #- Import from camera: user-guide.md
       #- Import from Facebook: user-guide.md
       #- Import from NAS: user-guide.md

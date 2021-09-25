@@ -6,7 +6,7 @@ The `originals` directory contains your photo library. PhotoPrism will never mov
 
 ## Import
 This path can be configured by `PHOTOPRISM_IMPORT_PATH`.
-If you decide to use our [import](../library/import-vs-index.md) functionality,
+If you decide to use our [import](../library/index.md) functionality,
 you add your photos to the `import` directory, so that they can be imported into `originals`.
 
 ## Storage

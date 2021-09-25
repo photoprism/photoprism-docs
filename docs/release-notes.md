@@ -4,7 +4,9 @@
     Update your `docker-compose.yml` to use `photoprism/photoprism:preview` instead of
     `photoprism/photoprism:latest` for testing our development preview.
 
-### Development Preview ###
+### September 25, 2021 ###
+
+Build [210925-96168e4b](https://drone.photoprism.app/photoprism/photoprism/1895)
 
 - [Recognizes faces so that specific people can be found](https://github.com/photoprism/photoprism/issues/22)
 - UX: [Improved UI design, navigation, and wording](https://github.com/photoprism/photoprism/search?o=desc&q=UX&s=committer-date&type=commits)

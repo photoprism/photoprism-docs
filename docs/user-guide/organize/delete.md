@@ -1,4 +1,4 @@
-# Permanently Removing Photos and Videos #
+# Removing Files Permanently #
 
 You can permanently delete photo and video files you do not want to keep from your filesystem.
 Photos and videos must be [archived](./archive.md) before they can be deleted permanently.

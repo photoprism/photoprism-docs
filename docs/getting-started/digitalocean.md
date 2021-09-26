@@ -10,7 +10,7 @@ If you have no DigitalOcean account yet, you may use this sign-up link to receiv
 ## Install PhotoPrism ##
 
 - [Sign Up](https://m.do.co/c/ca260247b5c2) or [Log In](https://cloud.digitalocean.com/login) at DigitalOcean
-- Open the [PhotoPrism listing](https://marketplace.digitalocean.com/apps/photoprism) in their marketplace
+- Open the [PhotoPrism listing](https://marketplace.digitalocean.com/apps/photoprism) in the marketplace
 - Click *Create PhotoPrism Droplet*
 
 ![Screenshot](img/create-photoprism-droplet.png)
@@ -77,8 +77,9 @@ Your droplet is now being created.
 - Use username "admin" and your initial password to sign in
 - You may [change your password](../user-guide/settings/account.md) using the Web UI
 
-## Add files ##
+## Adding Files ##
+
 - Decide whether you want to [index or import your files](../user-guide/library/index.md)
-- [Add files to your import or originals directory using Webdav](../user-guide/library/webdav.md) or use the [Web UI](../user-guide/library/upload.md) to upload files to your import directory
-- You might also setup [automatic sync](../user-guide/sync/sync-phone.md) from your phone
+- [Add files to your import or originals folder via WebDAV](../user-guide/library/webdav.md), or upload via [Web UI](../user-guide/library/upload.md)
+- Set up [syncing automatically](../user-guide/sync/sync-phone.md) from your mobile phone
 

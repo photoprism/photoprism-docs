@@ -15,29 +15,32 @@ If you have no DigitalOcean account yet, you may use this sign-up link to receiv
 
 ![Screenshot](img/create-photoprism-droplet.png)
 
-### Configure your droplet ###
-#### Choose an image ####
+### Configure Your Droplet ###
+#### Choose an Image ####
+
 The PhotoPrism image will be pre-selected
 
 ![Screenshot](img/1-do-setup.png)
 
-#### Choose a plan ####
+#### Choose a Plan ####
+
 We recommend hosting PhotoPrism on a server with at least 2 cores and 4 GB of memory. 
 Indexing and searching may be slow on smaller Droplets, depending on how many and what types of files you upload.
 
 ![Screenshot](img/2-do-setup.png)
 
-#### Choose a datacenter region ####
+#### Choose a Datacenter Region ####
 
 ![Screenshot](img/3-do-setup.png)
 
 ![Screenshot](img/4-do-setup.png)
 
-#### Choose your authentication mode ####
+#### Choose Authentication Mode ####
 
 ![Screenshot](img/5-do-setup.png)
 
-#### Finalize your droplet ####
+#### Finalize Your Droplet ####
+
 Finalize your droplet and click *Create Droplet*
 ![Screenshot](img/6-do-setup-edited.png)
 
@@ -45,7 +48,8 @@ Finalize your droplet and click *Create Droplet*
 
 Your droplet is now being created.
 
-## Find your initial password ##
+## Initial Admin Password ##
+
 - Click *More*
 
 ![Screenshot](img/do-more-options-edited.png)
@@ -81,5 +85,5 @@ Your droplet is now being created.
 
 - Decide whether you want to [index or import your files](../user-guide/library/index.md)
 - [Add files to your import or originals folder via WebDAV](../user-guide/library/webdav.md), or upload via [Web UI](../user-guide/library/upload.md)
-- Set up [syncing automatically](../user-guide/sync/sync-phone.md) from your mobile phone
+- Set up [syncing automatically](../user-guide/sync/mobile-devices.md) from mobile devices
 

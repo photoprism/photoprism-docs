@@ -72,7 +72,7 @@ nav:
       - Delete Permanently: user-guide/organize/delete.md
     - Sync:
       - WebDAV: user-guide/sync/webdav.md
-      - Mobile Devices: user-guide/sync/sync-phone.md
+      - Mobile Devices: user-guide/sync/mobile-devices.md
       - Dropbox: user-guide/sync/dropbox.md
     - Share:
       - Album Link: user-guide/share/share.md

@@ -16,30 +16,30 @@ If you have no DigitalOcean account yet, you may use this sign-up link to receiv
 ![Screenshot](img/create-photoprism-droplet.png)
 
 ### Configure Your Droplet ###
-#### Choose an Image ####
+#### Choose an image ####
 
 The PhotoPrism image will be pre-selected
 
 ![Screenshot](img/1-do-setup.png)
 
-#### Choose a Plan ####
+#### Choose a plan ####
 
 We recommend hosting PhotoPrism on a server with at least 2 cores and 4 GB of memory. 
 Indexing and searching may be slow on smaller Droplets, depending on how many and what types of files you upload.
 
 ![Screenshot](img/2-do-setup.png)
 
-#### Choose a Datacenter Region ####
+#### Choose a datacenter region ####
 
 ![Screenshot](img/3-do-setup.png)
 
 ![Screenshot](img/4-do-setup.png)
 
-#### Choose Authentication Mode ####
+#### Choose an authentication mode ####
 
 ![Screenshot](img/5-do-setup.png)
 
-#### Finalize Your Droplet ####
+#### Finalize your droplet ####
 
 Finalize your droplet and click *Create Droplet*
 ![Screenshot](img/6-do-setup-edited.png)
@@ -48,7 +48,7 @@ Finalize your droplet and click *Create Droplet*
 
 Your droplet is now being created.
 
-## Initial Admin Password ##
+## Admin Password ##
 
 - Click *More*
 
@@ -66,6 +66,7 @@ Your droplet is now being created.
 - Copy your initial password
 
 ## Open PhotoPrism ##
+
 - Click *Get started*
 
 ![Screenshot](img/do-get-started-edited.png)

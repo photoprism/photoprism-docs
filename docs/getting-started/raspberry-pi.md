@@ -19,7 +19,8 @@ Indexing large photo and video collections significantly benefits from fast, loc
 and lots of memory for caching. Especially the conversion of RAW images and the transcoding of
 videos are very demanding.
 
-To avoid permission issues, docker-compose.yml should include the following security options:
+To avoid permission issues, your [docker-compose.yml](https://dl.photoprism.org/docker/arm64/docker-compose.yml) 
+should include the following security options:
 
 ```yaml
   photoprism:

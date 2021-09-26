@@ -91,7 +91,7 @@ Run `photoprism index`, or go to *Library* and click *Start*, to update the inde
 
 Easy, isn't it?
 
-!!! tip "Reducing Server Load"
+!!! info "Reducing Server Load"
     If you're running out of memory - or other system resources - while indexing, please limit the
     [number of workers](https://docs.photoprism.org/getting-started/config-options/) by setting
     `PHOTOPRISM_WORKERS` to a value less than the number of logical CPU cores.

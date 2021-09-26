@@ -1,15 +1,16 @@
-# DigitalOcean 1-Click App #
-You can deploy PhotoPrism with a few clicks on DigitalOcean.
+# Using our DigitalOcean 1-Click App #
 
-## Register an account at DigitalOcean ##
-- [Register at DigitalOcean](https://m.do.co/c/ca260247b5c2)
+PhotoPrism can be deployed at DigitalOcean with just a few clicks.
+If you have no DigitalOcean account yet, you may use this sign-up link to receive a $100, 60-day account credit:
 
-!!! info
-    When using the referral link above, new users MAY get $100 in credit over 60 days.
+<p style="text-align: center; padding: 10px 4px;">
+<a class="md-button" style="background-color: #0052ff; font-size: 0.66rem; font-weight: normal; color: white" href="https://m.do.co/c/ca260247b5c2">Sign up at DigitalOcean</a>
+</p>
 
 ## Install PhotoPrism ##
-- Sign in to DigitalOcean
-- Open the [PhotoPrism listing](https://marketplace.digitalocean.com/apps/photoprism) in the marketplace
+
+- [Sign Up](https://m.do.co/c/ca260247b5c2) or [Log In](https://cloud.digitalocean.com/login) at DigitalOcean
+- Open the [PhotoPrism listing](https://marketplace.digitalocean.com/apps/photoprism) in their marketplace
 - Click *Create PhotoPrism Droplet*
 
 ![Screenshot](img/create-photoprism-droplet.png)

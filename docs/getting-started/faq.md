@@ -275,8 +275,9 @@ PhotoPrism, see [issue #147](https://github.com/photoprism/photoprism/issues/147
 
 ### Any plans to add support for Active Directory, LDAP or other centralized account management options? ###
 
-There is no Active Directory, LDAP, or Single Sign-On support yet as we didn't consider it essential for a first release. 
-It might be added later, maybe as a premium feature for our sponsors and contributors.
+There is no single sign-on support yet as we didn't consider it essential for our initial release.
+Our team is currently working on [OpenID Connect](https://github.com/photoprism/photoprism/issues/782),
+which will be available in a future release.
 
 !!! info
     Our development and testing efforts are focused on small servers and home users. Adding functionality

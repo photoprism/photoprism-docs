@@ -47,6 +47,6 @@ We recommend [PhotoSync](https://www.photosync-app.com/home.html) which is avail
 
 As PhotoSync uses WebDAV to send files, PhotoPrism will automatically start importing/indexing each time it receives new files.
 
-## Other apps ##
+## Other Apps ##
 As long as you run PhotoPrism on a device where it is possible to enable Samba (Windows File Sharing), you can use this free opensource Android app:
 [SMBSync2 - Github](https://github.com/Sentaroh/SMBSync2/releases) | [SMBSync2 - Google Play](https://play.google.com/store/apps/details?id=com.sentaroh.android.SMBSync2)

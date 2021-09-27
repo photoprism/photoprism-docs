@@ -1,6 +1,6 @@
-# Share albums via link #
+# Sharing Albums via Link #
 
-## Create sharing link ##
+## Create Sharing Link ##
 1. Go to *Albums*
 2. Select the album you want to share
 3. Open the context menu
@@ -34,7 +34,7 @@ Then
 !!!tip
     You can create additional links with different secrets and expiry dates by clicking :material-link-plus:.
 
-## Delete sharing link ##
+## Delete Sharing Link ##
 
 1. Go to *Albums*
 2. Click :material-share-variant: on the album cover

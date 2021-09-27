@@ -6,27 +6,27 @@ We do this to give you full control over your data.
 Album backups are created for the following album types: album, folder, state, moment and month.
 You find those backups inside of your `storage path` in `/albums`.
 
-### Album backups
+### Album Backups
 For each album the following metadata is stored in the YAML file:
 
 * UID, Slug, Type, Title, Location, Category, Description, Sort Order, Country, CreatedAt, UpdatedAt, Photos (UID + date the photo was added to the album)
 
-### Folder backups
+### Folder Backups
 For each folder the following metadata is stored in the YAML file:
 
 * UID, Slug, Type, Title, Location, Category, Description, Filter, Sort order, Country, Year, Month, Day, CreatedAt, UpdatedAt
 
-### Month backups
+### Month Backups
 For each month the following metadata is stored in the YAML file:
 
 * UID, Slug, Type, Title, Location, Category, Description, Filter, Sort Order, Country, Year, Month, CreatedAt, UpdatedAt
 
-### State backups
+### State Backups
 For each state the following metadata is stored in the YAML file:
 
 * UID, Slug, Type, Title, Location, Category, Description, Filter, Sort Order, Country, CreatedAt, UpdatedAt
 
-### Moment backups
+### Moment Backups
 For each moment the following metadata is stored in the YAML file:
 
 * UID, Slug, Type, Title, Location, Category, Description, Filter, Sort Order, Country, Year, CreatedAt, UpdatedAt

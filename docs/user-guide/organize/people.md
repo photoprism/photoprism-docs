@@ -15,7 +15,7 @@ To star a person click :material-star:. Stared persons appear first.
     You find all photos with those faces using the search filter `face:new`.
     The photo [*edit dialogue*](edit.md) shows all faces of a photo independent from whether they are clustered or not.
 
-## Assign name to face ##
+## Assign Names to Faces ##
 1. Go to *People*
 2. Go to *New*
 3. Click on the input field
@@ -38,12 +38,12 @@ OR
 
 The person you just added will appear under *Recognized*
 
-## Hide faces from New ##
+## Hiding Faces from New ##
 To hide face clusters from the *New* section just click :material-close: in the upper right corner.
 
 ![Screenshot](img/hide-face.png)
 
-## View all photos of a person ##
+## View all Photos of a Person ##
 1. Go to *People*
 2. Go to *Recognized*
 3. Click on the person you want to view
@@ -57,7 +57,7 @@ OR
 
 ![Screenshot](img/view-person-2.png)
 
-## Rename Person ##
+## Rename People ##
 If you rename the face of a person on one photo, all photos of this person are updated.
 
 1. Go to *People*
@@ -80,7 +80,7 @@ OR
 
 ![Screenshot](img/rename-edit.png)
 
-## Change person assignment ##
+## Change People Assignments ##
 In case the wrong person is assigned to a photo you can easily reject this. 
 
 !!!attention
@@ -93,7 +93,7 @@ In case the wrong person is assigned to a photo you can easily reject this.
 
 ![Screenshot](img/reject.png)
 
-## Remove wrong faces ##
+## Remove Wrong Faces ##
 In case PhotoPrism detected something wrong as face (false positives), you can remove it.
 
 1. Open the photo [*edit dialogue*](edit.md)
@@ -106,13 +106,13 @@ You might undo this action before a reload.
 
 ![Screenshot](img/undo-remove-face.png)
 
-## Download all photos of a person ##
+## Download all Photos of a Person ##
 1. Go to *People*
 2. Select a person
 3. Open context menu
 4. Click :material-download:
 
-## Create album from person ##
+## Create Albums from People ##
 1. Go to *People*
 2. Select a person
 3. Open context menu

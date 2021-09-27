@@ -1,4 +1,4 @@
-# Review non-photographic and low-quality images #
+# Reviewing Non-Photographic and Low-Quality Images #
 When adding new photos a quality score from 1 to 5 is created automatically.
 Photos with a quality score lower than 3 do not appear in *Photos* until you approve them (unless the quality filter was disabled
 in [*Settings*](../settings/general.md))
@@ -13,7 +13,7 @@ The quality score depends on the following:
 !!! info
     In case you do not need the review mechanism you can turn it off in [Settings](../settings/general.md)
 
-### How to approve photos ###
+### Approve Photos ###
 
 1. Open the photo's  [*edit dialogue*](edit.md)
 2. Click *approve*

@@ -1,6 +1,6 @@
 # Migrate from Flickr #
 
-## Transfer files
+## Transfer Files ##
 
 1. Go to https://www.flickr.com/account
 2. *Request* your Flickr data

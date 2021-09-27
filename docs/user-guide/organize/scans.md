@@ -3,7 +3,7 @@ You can mark scanned photos as *scans* within the photo edit dialogue.
 
 We aim to automatically mark scans in the future.
 
-## Set scan flag ##
+## Set Scan Flags ##
 
  1. Open the [*photo edit dialogue*](edit.md)
  2. Click :material-cog:

@@ -1,4 +1,4 @@
-# Hide your private photos #
+# Hiding Private Photos #
 ### What does private mean? ###
 Some of your photos might be private for personal reasons. 
 Our private functionality provides you with a solution to hide private photos or videos from some sections.
@@ -16,7 +16,7 @@ By default, photos marked as private will not appear in the following sections:
 !!! info
     In case you want private content to appear everywhere you can configure that in [Settings](../settings/general.md).
  
-#### Mark single photos/videos as private ####
+#### Mark Single Photos as Private ####
 
 1. Go to *Photos*
 2. Make sure you are in *list view*
@@ -24,7 +24,7 @@ By default, photos marked as private will not appear in the following sections:
 
 ![Screenshot](img/private-list.png)
 
-#### Mark multiple photos as private ####
+#### Mark Multiple Photos as Private ####
 
 1. Go to *Photos*
 2. Select photos/videos
@@ -33,7 +33,7 @@ By default, photos marked as private will not appear in the following sections:
 
 ![Screenshot](img/private-context-menu.png)
 
-#### Remove the private flag from single photo ####
+#### Remove Private Flags from Single Photos ####
 
 1. Go to *Private*
 2. Make sure you are in *list view*
@@ -41,7 +41,7 @@ By default, photos marked as private will not appear in the following sections:
 
 ![Screenshot](img/remove-private-list.png)
 
-#### Remove the private flag from multiple photos/videos ####
+#### Remove Private Flags from Multiple Photos ####
 
 1. Go to *Private*
 2. Select photos/videos

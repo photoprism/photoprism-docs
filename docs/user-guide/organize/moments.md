@@ -10,7 +10,7 @@ PhotoPrism creates moments out of your memories.
 
 The context menu allows you to perform the following actions:
 
-## Delete moment ##
+## Remove Moments ##
 1. Select moment
 2. Open context menu
 3. Click :material-delete:
@@ -19,12 +19,12 @@ The context menu allows you to perform the following actions:
 !!! hint
     Only the moment will be deleted. Your files stay untouched.
 
-## Download moment as zip ##
+## Download Moments ##
 1. Select moment
 2. Open context menu
 3. Click :material-download:
 
-## Create album from moment ##
+## Create Albums from Moments ##
 1. Select moment
 2. Open context menu
 3. Click :material-bookmark:

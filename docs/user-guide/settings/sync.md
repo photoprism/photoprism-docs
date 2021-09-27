@@ -22,7 +22,7 @@ so that you can automatically sync your latest pictures.
     ![Screenshot](img/sync-2.png)
 6. Now the other WebDAV server is connected with PhotoPrism
 
-## Manually upload files to a WebDAV Server ##
+## Manually Upload Files to a WebDAV Server ##
 
 **To configure manual upload:**
 
@@ -52,7 +52,7 @@ so that you can automatically sync your latest pictures.
 !!! attention
     Due to problems with some Nextcloud settings it might be that uploading to Nextcloud results in 0 byte files. You find information on how to solve it [here](https://github.com/photoprism/photoprism/issues/443).
 
-## Backup/Sync files with your server ##
+## Backup/Sync Files with your Server ##
 
 1. Go to *Settings*
 2. Open *Sync* tab

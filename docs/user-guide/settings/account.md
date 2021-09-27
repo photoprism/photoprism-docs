@@ -1,6 +1,6 @@
-# Account Settings
+# Account Settings #
 
-**To change your password:**
+## Change Password ##
 
 1. Click *Settings*
 2. Click *Account*

@@ -4,7 +4,7 @@ You can view all your panorama images in the *Panorama section*.
 
 ![Screenshot](img/panorama-1.png)
 
-## Edit panorama flag ##
+## Edit Panorama Flags ##
 
  1. Open the [*photo edit dialogue*](edit.md)
  2. Click :material-cog:

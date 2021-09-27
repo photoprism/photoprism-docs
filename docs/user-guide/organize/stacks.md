@@ -18,7 +18,7 @@ Grouped files are displayed in *Stacks*.
     
 
 
-### Browse through related files ###
+### Browse through Related Files ###
 
 1. Click on :material-camera-burst:
 
@@ -29,7 +29,7 @@ Grouped files are displayed in *Stacks*.
     ![Screenshot](img/sequential3.png) ![Screenshot](img/sequential4.png)
    
 
-### Change primary file ###
+### Change Primary Files ###
 The JPEG file marked as *primary* is used in our views. It is listed first in the files tab.
 
 To change the primary file:
@@ -44,7 +44,7 @@ To change the primary file:
 
       ![Screenshot](img/group-3.png) 
 
-### Ungroup files ###
+### Ungroup Files ###
 1. Open the photos [*edit dialogue*](edit.md)
 
 2. Open *Files* tab
@@ -59,7 +59,7 @@ Now, both files appear in our views.
 
 ![Screenshot](img/group-4.png)
 
-### Permanently delete not primary files ###
+### Remove not Primary Files Permanently ###
 1. Open the photos [*edit dialogue*](edit.md)
 
 2. Open *Files* tab

@@ -11,8 +11,7 @@ To see only labels with high priority click :material-eye: in the upper right co
 
 ![Screenshot](img/labels-1.png)
 
-### View all photos with a certain label ###
-
+### View all Photos with a Label ###
 1. Go to *Labels*
 2. Click on the label you are interested in
 
@@ -22,7 +21,7 @@ To see only labels with high priority click :material-eye: in the upper right co
 !!! info
     Alternatively you can use the search field in Photos/Videos. You search for photos with a special label like this: `label:dog`.
 
-### Add label to a photo/video ###
+### Add Labels to Photos ###
 
 1. Go to the photo [*edit dialogue*](edit.md)
 2. Go to *Labels* tab
@@ -32,7 +31,7 @@ To see only labels with high priority click :material-eye: in the upper right co
 
     ![Screenshot](img/add-label.png)
     
-### Remove/delete label from a photo/video ###
+### Remove/Delete Labels from Photos ###
 
 Labels that have been set automatically can be removed.
 Manually added labels can be deleted.
@@ -51,7 +50,7 @@ Manually added labels can be deleted.
 !!! info
     You can hide Labels in [Settings](../settings/general.md)
 
-### Rename a label ###
+### Rename Labels ###
 
 1. Go to the photo [*edit dialogue*](edit.md) of any photo that has the label you want to rename
 
@@ -72,7 +71,7 @@ Manually added labels can be deleted.
 !!! attention
     Be aware this change applies to all photos that have this label.
 
-### Delete a label ###
+### Delete Labels ###
 You can permanently delete a label. No file will get a deleted label set during indexing.
 
 1. Go to *Labels*

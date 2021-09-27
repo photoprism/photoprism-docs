@@ -4,21 +4,21 @@ PhotoPrisms *edit dialogue* enables you to add/edit various types of metadata re
 
 During [*indexing*](../index.md) PhotoPrism collects as much data as possible from sidecar files and the photo itself.
 
-### Open the edit dialogue ###
+### Open Edit Dialogue ###
 
-#### From card view ####
+#### Card View ####
 
 1. Click on the photos title, time or camera information
 
     ![Screenshot](img/edit-open-1.png)
 
-#### From full screen mode ####
+#### Full Screen Mode ####
 
 1. In the upper right corner click :material-pencil:
 
     ![Screenshot](img/edit-open-2.png)
 
-#### From any view ####
+#### Any View ####
 
 1. Select one or multiple photos
 2. Click on context menu

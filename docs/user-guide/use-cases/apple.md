@@ -1,6 +1,6 @@
 # Migrate from Apple Photos #
 
-## Transfer files
+## Transfer Files ##
 
 1. Select the files or albums you want to export
 2. Click *File > Export > Export Unmodified Original For Photos*
@@ -8,7 +8,7 @@
 4. Click *Export*
 5. Move the exported files/folders to your *originals* or *import* diectory and start indexing or importing
 
-## Metadata
+## Metadata ##
 
 **Apple saves the following information in it's XMP files:**
 

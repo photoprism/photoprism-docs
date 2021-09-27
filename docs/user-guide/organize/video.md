@@ -19,7 +19,7 @@ To play videos in fullscreen mode click :material-play: on the video or :materia
 
 ![Screenshot](img/video.png)
 
-### Live photos ###
+### Live Photos ###
 Live photos are treated as photos.
 They are marked with :material-adjust: in the upper left corner.
 

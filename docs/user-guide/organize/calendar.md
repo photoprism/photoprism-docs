@@ -6,7 +6,7 @@ Our *Calendar* enables you to browse through your photos by year and month.
 
 The context menu allows you to perform the following actions:
 
-## Delete month ##
+## Remove Months ##
 1. Select month
 2. Open context menu
 3. Click :material-delete:
@@ -15,12 +15,12 @@ The context menu allows you to perform the following actions:
 !!! hint
     Only the representation of the month will be deleted. Your files stay untouched.
 
-## Download month as zip ##
+## Download Months ##
 1. Select month
 2. Open context menu
 3. Click :material-download:
 
-## Create album from month ##
+## Create Albums from Months ##
 1. Select month
 2. Open context menu
 3. Click :material-bookmark:

@@ -36,13 +36,13 @@ http://admin@localhost:2342/originals/
     like [FolderSync](https://www.tacit.dk/foldersync/faq/#i-can-not-connect-to-a-non-https-webdav-server-why)
     may refuse to connect as well.
 
-## Connecting to a WebDAV server on macOS ##
+## Connect to a WebDAV Server on macOS ##
 
 1. In the **Finder** on your Mac, choose Go > Connect to Server
 2. Enter the URL as shown above in the **Server Address** field
 3. Click **Connect**
 
-## Connecting to a WebDAV server on Windows 10 ##
+## Connect to a WebDAV Server on Windows 10 ##
 
 1. Open Windows **File Explorer**
 2. Right click **This PC**

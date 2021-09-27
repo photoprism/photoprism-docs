@@ -1,5 +1,5 @@
 # Albums #
-### Create a new album ###
+### Create New Albums ###
 
 1. Go to *Albums*
 2. In the upper right corner click :material-plus:
@@ -10,7 +10,7 @@
 
     ![Screenshot](img/album-name-1.png)
 
-### Edit album ###
+### Edit Albums ###
 
 1. Go to *Albums*
 2. To open the *album edit dialogue* click on the *album title*
@@ -34,7 +34,7 @@
     ![Screenshot](img/album-edit-4.png)
     
 
-### Add photos to album ###
+### Add Photos to Albums ###
 
 1. Select photos and videos
 2. Click context menu
@@ -53,7 +53,7 @@
 !!! tip
     You can select many photos at once using shift.
 
-### Remove photos from album ###
+### Remove Photos from Albums ###
 
 1. Go to your album
 3. Select photos/videos you want to remove

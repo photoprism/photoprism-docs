@@ -49,6 +49,12 @@ Additionally some filters can be used with &:
 keywords:buffalo&water
 ```
 
+Or:
+
+```bigquery
+keywords:"buffalo & water"
+```
+
 This query will show all photos that have the keywords water **and** buffalo.
 
 & is supported by the following filters:

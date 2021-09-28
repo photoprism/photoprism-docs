@@ -54,8 +54,6 @@ Note that already indexed files and folders won't be removed from index retroact
 If you are a new user and files or folders have already been indexed, you generally easiest 
 to reset the database and start with a fresh index by running `photoprism reset` in a terminal.
 
-For more information see [Commands > Reset Database](https://docs.photoprism.org/user-guide/advanced/commands/#reset-db).
-
 #### When should "Complete Rescan" be selected? ####
 
 If selected, all files in the *originals* folder will be re-indexed, including already indexed and unchanged files. 

@@ -75,7 +75,7 @@ like Photoshop, or Exiftool, and re-index your library.
 
 ### Can I use the web interface to permanently delete files? ###
 
-Yes, [permanent deletion](./organize/delete.md) is available as early access feature for our sponsors.
+Yes, you can [permanently delete](./organize/delete.md) files.
 
 ### I already indexed some files. Why are Folders, Calendar and Moments still empty? ###
 

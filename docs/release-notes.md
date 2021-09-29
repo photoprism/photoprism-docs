@@ -6,10 +6,10 @@
 
 ### Development Preview ###
 
-- People: [Improve naming, renaming, and merging](https://github.com/photoprism/photoprism/issues/1557)
-- Search: [Always use full-text index with photo name as fallback](https://github.com/photoprism/photoprism/issues/1560)
+- People: [Improved naming, renaming, and merging](https://github.com/photoprism/photoprism/issues/1557)
+- Search: [Always uses full-text index with photo name as fallback](https://github.com/photoprism/photoprism/issues/1560)
 - Docker: [Improved entrypoint script](https://github.com/photoprism/photoprism/issues/1545)
-- Docker: [Install optional dependencies via `PHOTOPRISM_INIT`](https://github.com/photoprism/photoprism/issues/1337)
+- Docker: [Added support for Intel GPUs and AVX2](https://github.com/photoprism/photoprism/issues/1337)
 
 ### September 25, 2021 ###
 

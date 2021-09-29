@@ -7,7 +7,7 @@
 ### Development Preview ###
 
 - People: [Improved naming, renaming, and merging](https://github.com/photoprism/photoprism/issues/1557)
-- Search: [Always uses full-text index with photo name as fallback](https://github.com/photoprism/photoprism/issues/1560)
+- Search: [Prefers full-text index with title as fallback](https://github.com/photoprism/photoprism/issues/1560)
 - Docker: [Improved entrypoint script](https://github.com/photoprism/photoprism/issues/1545)
 - Docker: [Added support for Intel GPUs and AVX2](https://github.com/photoprism/photoprism/issues/1337)
 

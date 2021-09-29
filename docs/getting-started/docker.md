@@ -4,7 +4,7 @@ If you're not sure, try using [Docker Compose](docker-compose.md) first as it re
 less command line parameters, and is generally easier to start with for beginners.
 
 !!! info "Linux"
-    All commands may have to be prefixed with `sudo` when not running as root.
+    Commands may have to be prefixed with `sudo` when not running as root.
     Note that this will point the home directory placeholder `~` to `/root` in your configuration.
     Kernel security modules such as SELinux have been reported to cause
     [issues](https://docs.photoprism.org/getting-started/faq/#why-is-photoprism-getting-stuck-in-a-restart-loop).

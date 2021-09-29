@@ -2,7 +2,12 @@
 
 Our latest release comes as a single [multi-arch image](https://hub.docker.com/r/photoprism/photoprism) 
 for AMD64, ARM64, and ARMv7. If your device meets the system requirements, 
-the same [installation instructions](docker-compose.md) as for regular Linux servers apply.
+mostly the same [installation instructions](docker-compose.md) as for regular Linux servers apply.
+
+### MariaDB ###
+
+ARMv7 users need an [alternative MariaDB image](https://hub.docker.com/r/linuxserver/mariadb)
+as the [official image](https://hub.docker.com/_/mariadb) is available for AMD64 and ARM64 only.
 
 ### System Requirements ###
 

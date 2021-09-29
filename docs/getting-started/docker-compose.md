@@ -21,8 +21,10 @@ We plan to provide downloadable installation packages for future releases.
 !!! note "Linux & Raspberry Pi"
     Our latest release comes as a single [multi-arch image](https://hub.docker.com/r/photoprism/photoprism)
     for AMD64, ARM64, and ARMv7. If your device meets the [system requirements](raspberry-pi.md),
-    the same installation instructions as for regular Linux servers apply.
-    All commands may have to be prefixed with `sudo` when not running as root.
+    mostly the same installation instructions as for regular Linux servers apply. 
+    ARMv7 users need an [alternative MariaDB image](https://hub.docker.com/r/linuxserver/mariadb) 
+    as the [official image](https://hub.docker.com/_/mariadb) is available for AMD64 and ARM64 only.
+    Commands may have to be prefixed with `sudo` when not running as root.
     Note that this will point the home directory placeholder `~` to `/root` in your configuration.
     Kernel security modules such as SELinux have been reported to cause 
     [issues](https://docs.photoprism.org/getting-started/faq/#why-is-photoprism-getting-stuck-in-a-restart-loop).

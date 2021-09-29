@@ -28,7 +28,7 @@ When disabled, the people section is hidden. To disable face detection while ind
 Excludes content marked as private from search results, shared albums, labels and places.
 
 #### :material-archive-arrow-down: Archive ####
-When disabled, there is no *Archive*. Photos that have been archived beforehand will appear in *Photos/Videos*.
+When disabled, there is no *Archive*. Photos that have been archived beforehand will appear again in search results.
 
 #### :material-pencil: Edit ####
 When disabled, it is not possible to edit photo information.

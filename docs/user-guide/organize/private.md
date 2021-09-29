@@ -6,7 +6,7 @@ This way you can let family and friends browse through your photos without riski
 
 By default, photos marked as private will not appear in the following sections:
 
- * Photos
+ * Search
  * Videos
  * Labels
  * Places
@@ -18,7 +18,7 @@ By default, photos marked as private will not appear in the following sections:
  
 #### Mark Single Photos as Private ####
 
-1. Go to *Photos*
+1. Go to *Search*
 2. Make sure you are in *list view*
 3. Click :material-lock-open: on the right
 
@@ -26,7 +26,7 @@ By default, photos marked as private will not appear in the following sections:
 
 #### Mark Multiple Photos as Private ####
 
-1. Go to *Photos*
+1. Go to *Search*
 2. Select photos/videos
 3. Click context menu
 4. Click :material-lock:

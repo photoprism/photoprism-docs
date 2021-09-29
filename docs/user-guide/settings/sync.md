@@ -37,7 +37,7 @@ so that you can automatically sync your latest pictures.
 
 **To upload files from PhotoPrism to the WebDAV server:**
 
-1. Go to *Photos*
+1. Go to *Search*
 2. Select photos you want to upload
 3. Open the context menu
 4. Click :material-cloud:

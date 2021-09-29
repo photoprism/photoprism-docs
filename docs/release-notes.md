@@ -6,6 +6,8 @@
 
 ### Development Preview ###
 
+- People: [Improve naming, renaming, and merging](https://github.com/photoprism/photoprism/issues/1557)
+- Search: [Always use full-text index with photo name as fallback](https://github.com/photoprism/photoprism/issues/1560)
 - Docker: [Improved entrypoint script](https://github.com/photoprism/photoprism/issues/1545)
 - Docker: [Install optional dependencies via `PHOTOPRISM_INIT`](https://github.com/photoprism/photoprism/issues/1337)
 

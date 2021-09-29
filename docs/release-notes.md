@@ -4,6 +4,11 @@
     Update your `docker-compose.yml` to use `photoprism/photoprism:preview` instead of
     `photoprism/photoprism:latest` for testing our development preview.
 
+### Development Preview ###
+
+- Docker: [Improved entrypoint script](https://github.com/photoprism/photoprism/issues/1545)
+- Docker: [Install optional dependencies via `PHOTOPRISM_INIT`](https://github.com/photoprism/photoprism/issues/1337)
+
 ### September 25, 2021 ###
 
 Build [210925-96168e4b](https://drone.photoprism.app/photoprism/photoprism/1896)

@@ -6,12 +6,14 @@
 
 ### Development Preview ###
 
+- People: [Improved face detection with less false positives](https://github.com/photoprism/photoprism/commit/582a3308375b8a2aaf5ca578d3c2e7d9081b580d)
 - People: [Improved naming, renaming, and merging](https://github.com/photoprism/photoprism/issues/1557)
-- People: [Added blacklist to reduce false positives](https://github.com/photoprism/photoprism/commit/582a3308375b8a2aaf5ca578d3c2e7d9081b580d)
-- Search: [Query full-text index with title as fallback](https://github.com/photoprism/photoprism/issues/1560)
-- Index: [Automatically removes orphan file entries](https://github.com/photoprism/photoprism/issues/1559)
-- Docker: [Improved entrypoint script](https://github.com/photoprism/photoprism/issues/1545)
-- Docker: [Added support for Intel GPUs and AVX2](https://github.com/photoprism/photoprism/issues/1337)
+- Covers: [Improved background update performance](https://github.com/photoprism/photoprism/issues/383)
+- Search: [Defaults to titles when query is too short for full-text index](https://github.com/photoprism/photoprism/issues/1560)
+- Index: [Automatic cleanup of orphaned file entries](https://github.com/photoprism/photoprism/issues/1559)
+- Videos: [Optional Intel GPU hardware transcoding support](https://github.com/photoprism/photoprism/issues/1337)
+- Docker: [Simplified installation of TensorFlow with AVX / AVX2 support](https://github.com/photoprism/photoprism/issues/1337)
+- Docker: [Entrypoint script uses prefixed environment variables, `UID` and `GID` are deprecated](https://github.com/photoprism/photoprism/issues/1545)
 
 ### September 25, 2021 ###
 
@@ -19,7 +21,7 @@ Build [210925-96168e4b](https://drone.photoprism.app/photoprism/photoprism/1896)
 
 - [Recognizes faces so that specific people can be found](https://github.com/photoprism/photoprism/issues/22)
 - UX: [Improved UI design, navigation, and wording](https://github.com/photoprism/photoprism/search?o=desc&q=UX&s=committer-date&type=commits)
-- Search: [Omit full text index if query is too short](https://github.com/photoprism/photoprism/issues/1517)
+- Search: [Omit full-text index if query is too short](https://github.com/photoprism/photoprism/issues/1517)
 - Search: [Added `keywords:…`, `subjects:…`, and `albums:…` filters](https://github.com/photoprism/photoprism/issues/882)
 - Places: [Internationalized maps incl RTL support](https://github.com/photoprism/photoprism/issues/1391)
 - Labels: [Added photo counts to overview page](https://github.com/photoprism/photoprism/issues/584) 

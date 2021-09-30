@@ -12,7 +12,7 @@ To star a person click :material-star:. Stared persons appear first.
 
 !!!info
     As not all faces belong to a cluster, there might be more faces than visible in the New section.
-    You find all photos with those faces using the search filter `face:new`.
+    You find all photos with faces that are not assigned to a person using the search filter `face:new`.
     The photo [*edit dialogue*](edit.md) shows all faces of a photo independent from whether they are clustered or not.
 
 ## Assign Names to Faces ##
@@ -58,7 +58,7 @@ OR
 ![Screenshot](img/view-person-2.png)
 
 ## Rename People ##
-If you rename the face of a person on one photo, all photos of this person are updated.
+To rename all photos of a person:
 
 1. Go to *People*
 2. Go to *Recognized*
@@ -69,16 +69,6 @@ If you rename the face of a person on one photo, all photos of this person are u
 ![Screenshot](img/rename-recognized-0.png)
 
 ![Screenshot](img/rename-recognized.png)
-
-OR
-
-1. Open the photo [*edit dialogue*](edit.md)
-2. Go to the *People* tab
-3. Click on the persons name
-4. Enter a new one
-5. Press *enter*
-
-![Screenshot](img/rename-edit.png)
 
 ## Change People Assignments ##
 In case the wrong person is assigned to a photo you can easily reject this. 

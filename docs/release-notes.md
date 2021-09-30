@@ -7,6 +7,7 @@
 ### Development Preview ###
 
 - People: [Improved naming, renaming, and merging](https://github.com/photoprism/photoprism/issues/1557)
+- People: [Added blacklist to reduce false positives](https://github.com/photoprism/photoprism/commit/582a3308375b8a2aaf5ca578d3c2e7d9081b580d)
 - Search: [Query full-text index with title as fallback](https://github.com/photoprism/photoprism/issues/1560)
 - Docker: [Improved entrypoint script](https://github.com/photoprism/photoprism/issues/1545)
 - Docker: [Added support for Intel GPUs and AVX2](https://github.com/photoprism/photoprism/issues/1337)

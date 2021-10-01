@@ -54,6 +54,6 @@ docker pull photoprism/photoprism:latest
 
 See [Running PhotoPrism with Docker](docker.md) for a full command reference.
 
-!!! tip "Preview Builds"
+!!! info "Preview Builds"
     Use `photoprism/photoprism:preview` instead of `photoprism/photoprism:latest` for testing 
     our latest development preview.

@@ -17,7 +17,7 @@
 - People: [Improved face detection accuracy](https://github.com/photoprism/photoprism/commit/582a3308375b8a2aaf5ca578d3c2e7d9081b580d)
 - Labels: [Improved photo count accuracy](https://github.com/photoprism/photoprism/issues/584)
 - Covers: [Thumbnails load and update faster](https://github.com/photoprism/photoprism/issues/383)
-- Search: [Defaults to titles when query is too short for full-text index](https://github.com/photoprism/photoprism/issues/1560)
+- Search: [Finds titles when query is too short for full-text index](https://github.com/photoprism/photoprism/issues/1560)
 - Search: [`name:…` filter ignores path and extension](https://github.com/photoprism/photoprism/commit/39dc5cb777fbcb5b433430836373d136c6c5ec08)
 - Translations: [Updated German and French](https://github.com/photoprism/photoprism/tree/develop/frontend/src/locales)
 - Videos: [Optional Intel GPU hardware transcoding support](https://github.com/photoprism/photoprism/issues/1337)

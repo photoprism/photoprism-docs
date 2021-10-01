@@ -11,7 +11,7 @@
 - Search: [Defaults to titles when query is too short for full-text index](https://github.com/photoprism/photoprism/issues/1560)
 - Index: [Automatic cleanup of orphaned file entries](https://github.com/photoprism/photoprism/issues/1559)
 - Videos: [Optional Intel GPU hardware transcoding support](https://github.com/photoprism/photoprism/issues/1337)
-- Covers: [Improved background update performance](https://github.com/photoprism/photoprism/issues/383)
+- Covers: [Preview images load and update faster](https://github.com/photoprism/photoprism/issues/383)
 - Docker: [Simplified installation of TensorFlow with AVX / AVX2 support](https://github.com/photoprism/photoprism/issues/1337)
 - Docker: [Entrypoint script uses prefixed environment variables, `UID` and `GID` are deprecated](https://github.com/photoprism/photoprism/issues/1545)
 

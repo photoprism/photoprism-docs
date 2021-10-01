@@ -40,8 +40,8 @@ services:
       - "/var/run/docker.sock:/var/run/docker.sock"
 ```
 
-!!! info
-    Automatic updates may interrupt indexing and import operations. 
+!!! caution
+    Automatic updates may interrupt indexing and import operations.
     Only enable Watchtower if you are comfortable with this.
 
 ### Pure Docker ###

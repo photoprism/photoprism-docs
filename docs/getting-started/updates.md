@@ -26,6 +26,21 @@ See [Setup Using Docker Compose](docker-compose.md) for a full command reference
     Update your `docker-compose.yml` to use `photoprism/photoprism:preview` instead of 
     `photoprism/photoprism:latest` for testing our latest development preview.
 
+### Facial Recognition ###
+
+Existing users may index faces in originals without performing a complete rescan:
+
+```
+docker-compose exec photoprism photoprism faces index
+```
+
+For a fresh start e.g. after upgrading from a development preview, remove
+known people and faces before re-indexing:
+
+```
+docker-compose exec photoprism photoprism faces reset -f
+```
+
 ### Watchtower ###
 
 Adding [Watchtower](https://github.com/containrrr/watchtower) as a service to your `docker-compose.yml` will

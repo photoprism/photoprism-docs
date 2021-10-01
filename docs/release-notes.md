@@ -8,10 +8,10 @@
 
 - People: [Improved face detection accuracy](https://github.com/photoprism/photoprism/commit/582a3308375b8a2aaf5ca578d3c2e7d9081b580d)
 - People: [Improved naming, renaming, and merging](https://github.com/photoprism/photoprism/issues/1557)
-- Search: [Defaults to titles when query is too short for full-text index](https://github.com/photoprism/photoprism/issues/1560)
-- Index: [Automatic cleanup of orphaned file entries](https://github.com/photoprism/photoprism/issues/1559)
-- Videos: [Optional Intel GPU hardware transcoding support](https://github.com/photoprism/photoprism/issues/1337)
 - Covers: [Preview images load and update faster](https://github.com/photoprism/photoprism/issues/383)
+- Search: [Defaults to titles when query is too short for full-text index](https://github.com/photoprism/photoprism/issues/1560)
+- Videos: [Optional Intel GPU hardware transcoding support](https://github.com/photoprism/photoprism/issues/1337)
+- Index: [Automatic cleanup of orphaned file entries](https://github.com/photoprism/photoprism/issues/1559)
 - Docker: [Simplified installation of TensorFlow with AVX / AVX2 support](https://github.com/photoprism/photoprism/issues/1337)
 - Docker: [Entrypoint script uses prefixed environment variables, `UID` and `GID` are deprecated](https://github.com/photoprism/photoprism/issues/1545)
 

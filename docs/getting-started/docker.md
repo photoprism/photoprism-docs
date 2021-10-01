@@ -138,7 +138,7 @@ like `docker exec -ti photoprism photoprism backup --help`.
 
 | Action   | Command                                               |
 |----------|-------------------------------------------------------|
-| Update   | `docker rm -f photoprism`                             |
+| Update   | `docker pull photoprism`                              |
 | Remove   | `docker rm -f photoprism`                             |
 | Logs     | `docker logs --tail=25 -f photoprism`                 |
 | Terminal | `docker exec -ti photoprism bash`                     |

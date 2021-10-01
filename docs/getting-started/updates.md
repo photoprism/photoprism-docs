@@ -41,7 +41,7 @@ services:
 ```
 
 !!! info
-    Automatic updates may interrupt indexing and importing operations. 
+    Automatic updates may interrupt indexing and import operations. 
     Only enable Watchtower if you are comfortable with this.
 
 ### Pure Docker ###

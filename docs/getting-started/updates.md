@@ -16,7 +16,13 @@ Advanced users may put this into a `Makefile` so that they only need to type a s
 
 See [Setup Using Docker Compose](docker-compose.md) for a full command reference.
 
-!!! tip "Preview Builds"
+
+!!! important "New Release"
+    Our [latest release](../release-notes.md) comes as a single [multi-arch image](https://hub.docker.com/r/photoprism/photoprism)
+    for AMD64, ARM64, and ARMv7. That means you don't need to pull from different Docker repositories anymore.
+    We recommend updating your existing `docker-compose.yml` config based on [our examples](https://dl.photoprism.org/docker/).
+
+!!! info "Preview Builds"
     Update your `docker-compose.yml` to use `photoprism/photoprism:preview` instead of 
     `photoprism/photoprism:latest` for testing our latest development preview.
 
@@ -44,12 +50,6 @@ Open a terminal on your server, and run the following command to pull the latest
 
 ```
 docker pull photoprism/photoprism:latest
-```
-
-For our Raspberry Pi / ARM64 version:
-
-```
-docker pull photoprism/photoprism-arm64:latest
 ```
 
 See [Running PhotoPrism with Docker](docker.md) for a full command reference.

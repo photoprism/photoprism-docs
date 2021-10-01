@@ -1,8 +1,15 @@
 # Release Notes
 
-!!! tip "Preview Builds"
-    Update your `docker-compose.yml` to use `photoprism/photoprism:preview` instead of
-    `photoprism/photoprism:latest` for testing our development preview.
+!!! important "New Release"
+    Our latest release comes as a single [multi-arch image](https://hub.docker.com/r/photoprism/photoprism)
+    for AMD64, ARM64, and ARMv7. That means you don't need to pull from different Docker repositories anymore.
+    We recommend updating your existing `docker-compose.yml` config based on [our examples](https://dl.photoprism.org/docker/).
+
+!!! info "Preview Builds"
+    [Update](getting-started/updates.md) your [`docker-compose.yml`](https://dl.photoprism.org/docker/) 
+    to use [`photoprism/photoprism:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&ordering=last_updated)
+    instead of `photoprism/photoprism:latest` for testing
+    our [development preview](https://github.com/photoprism/photoprism/tree/preview).
 
 ### Development Preview ###
 

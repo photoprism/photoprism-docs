@@ -13,8 +13,6 @@
 
 ### October 2, 2021 ###
 
-Build [211002-9a88d7fc](https://drone.photoprism.app/photoprism/photoprism/1953)
-
 - People: [Enhanced UI / UX for renaming and merging faces](https://github.com/photoprism/photoprism/issues/1557)
 - People: [Improved face detection accuracy](https://github.com/photoprism/photoprism/commit/582a3308375b8a2aaf5ca578d3c2e7d9081b580d)
 - Labels: [Improved photo count accuracy](https://github.com/photoprism/photoprism/issues/584)

@@ -13,16 +13,18 @@
 
 ### October 2, 2021 ###
 
+Build [211002-bf015326](https://drone.photoprism.app/photoprism/photoprism/1958)
+
 - People: [Enhanced UI / UX for renaming and merging faces](https://github.com/photoprism/photoprism/issues/1557)
 - People: [Improved face detection accuracy](https://github.com/photoprism/photoprism/commit/582a3308375b8a2aaf5ca578d3c2e7d9081b580d)
 - Labels: [Improved photo count accuracy](https://github.com/photoprism/photoprism/issues/584)
 - Covers: [Thumbnails load and update faster](https://github.com/photoprism/photoprism/issues/383)
 - Search: [Finds titles when query is too short for full-text index](https://github.com/photoprism/photoprism/issues/1560)
 - Search: [`name:…` filter ignores path and extension](https://github.com/photoprism/photoprism/commit/39dc5cb777fbcb5b433430836373d136c6c5ec08)
-- Translations: [Updated German and French](https://github.com/photoprism/photoprism/tree/develop/frontend/src/locales)
 - Videos: [Optional Intel GPU hardware transcoding support](https://github.com/photoprism/photoprism/issues/1337)
 - Index: [Automatic cleanup of orphaned file entries](https://github.com/photoprism/photoprism/issues/1559)
 - Logs: [Updated log messages for improved readability](https://github.com/photoprism/photoprism/commit/9a88d7fc6acf2ad5e7cfa215c78ccae39ccbb7ed)
+- Translations: [Updated German and French](https://github.com/photoprism/photoprism/tree/develop/frontend/src/locales)
 - Docker: [Simplified installation of TensorFlow with AVX / AVX2 support](https://github.com/photoprism/photoprism/issues/1337)
 - Docker: [Entrypoint script uses prefixed environment variables, `UID` and `GID` are deprecated](https://github.com/photoprism/photoprism/issues/1545#issuecomment-929511730)
 

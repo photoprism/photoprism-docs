@@ -22,6 +22,7 @@
 - Translations: [Updated German and French](https://github.com/photoprism/photoprism/tree/develop/frontend/src/locales)
 - Videos: [Optional Intel GPU hardware transcoding support](https://github.com/photoprism/photoprism/issues/1337)
 - Index: [Automatic cleanup of orphaned file entries](https://github.com/photoprism/photoprism/issues/1559)
+- Logs: [Updated log messages for improved readability](https://github.com/photoprism/photoprism/commit/9a88d7fc6acf2ad5e7cfa215c78ccae39ccbb7ed)
 - Docker: [Simplified installation of TensorFlow with AVX / AVX2 support](https://github.com/photoprism/photoprism/issues/1337)
 - Docker: [Entrypoint script uses prefixed environment variables, `UID` and `GID` are deprecated](https://github.com/photoprism/photoprism/issues/1545#issuecomment-929511730)
 

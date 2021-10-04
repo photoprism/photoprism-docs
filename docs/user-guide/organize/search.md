@@ -94,7 +94,7 @@ name:"*_23*"
 This will show all photos which name contain `_23`, like `IMG_2356.MOV` , `2021_02_23.jpg`, etc.
 
 !!!info
-    Wildcards cannot be combined with & or |.
+    Wildcards can be combined with & or |: `filename:"*IMG123*|*_22F6FC19.jpg"`
 
 ## Search Filter Overview ##
 PhotoPrism allows you to use multiple filters in its search.

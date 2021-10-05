@@ -14,7 +14,7 @@
 ### Development Preview ###
 
 - CLI: [Improved command help and flag descriptions](https://github.com/photoprism/photoprism/search?q=cli+help&type=commits)
-- People: [Fixed broken covers on new faces page](https://github.com/photoprism/photoprism/issues/1576)
+- People: [Fixed covers on new faces page](https://github.com/photoprism/photoprism/issues/1576)
 
 ### October 2, 2021 ###
 

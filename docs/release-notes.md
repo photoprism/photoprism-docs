@@ -11,6 +11,11 @@
     instead of `photoprism/photoprism:latest` for testing
     our [development preview](https://github.com/photoprism/photoprism/tree/preview).
 
+### Development Preview ###
+
+- CLI: [Improved command help and flag descriptions](https://github.com/photoprism/photoprism/search?q=cli+help&type=commits)
+- People: [Fixed broken covers on new faces page](https://github.com/photoprism/photoprism/issues/1576)
+
 ### October 2, 2021 ###
 
 Build [211002-bf015326](https://drone.photoprism.app/photoprism/photoprism/1958)

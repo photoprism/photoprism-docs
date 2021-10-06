@@ -38,10 +38,28 @@ OR
 
 The person you just added will appear under *Recognized*
 
-## Hiding Faces from New ##
-To hide face clusters from the *New* section just click :material-close: in the upper right corner.
+## Hiding People ##
+You can hide a person in the *Recognized* section by clicking :material-close: in the upper right corner.
 
-![Screenshot](img/hide-face.png)
+!!! attention
+    Photos of this person continue to show up in your search results.
+
+!!! info
+    This is an early-access feature to say thanks to our sponsors and contributors.
+    We'll let you know how to enable it when you sign up on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism).
+
+![Screenshot](img/person-hide.png)
+
+To see all people including hidden ones click :material-eye:.
+
+![Screenshot](img/person-show-all.png)
+
+Hidden people can be recovered by clicking :material-eye-off:
+
+![Screenshot](img/person-recover.png)
+
+## Hiding Faces ##
+You can hide face clusters from the *New* section, in the same way you [hide people](#hiding-people) from the *Recognized* section.
 
 ## View all Photos of a Person ##
 1. Go to *People*

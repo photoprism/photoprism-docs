@@ -13,8 +13,13 @@
 
 ### Development Preview ###
 
-- CLI: [Improved command and flag descriptions](https://github.com/photoprism/photoprism/search?q=cli+help&type=commits)
-- People: [Fixed covers on new faces page](https://github.com/photoprism/photoprism/issues/1576)
+- CLI: [Improved command and config flag descriptions](https://github.com/photoprism/photoprism/search?q=cli+help&type=commits)
+- Index: [Removed duplicate error logs as caused by broken JPEG files](https://github.com/photoprism/photoprism/commit/f7153cdd219d487733a7a3a8809b333bdace6294) 
+- People: [Improved stability and performance of new faces overview page](https://github.com/photoprism/photoprism/issues/1576)
+
+*Early-access feature for our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.org/developer-guide/):*
+
+- People: [Recognized people can be hidden on the overview page](https://github.com/photoprism/photoprism/issues/1554) 
 
 ### October 2, 2021 ###
 

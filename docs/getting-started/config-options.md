@@ -17,9 +17,9 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_SIDECAR_PATH`       | --sidecar-path PATH        | optional custom relative or absolute sidecar PATH
 `PHOTOPRISM_CACHE_PATH`         | --cache-path PATH          | optional custom cache PATH for sessions and thumbnail files
 `PHOTOPRISM_TEMP_PATH`          | --temp-path PATH           | optional custom temporary file PATH
-`PHOTOPRISM_BACKUP_PATH`        | --backup-path PATH         | optional custom backup file PATH
+`PHOTOPRISM_BACKUP_PATH`        | --backup-path PATH         | optional custom backup PATH for index backup files
 `PHOTOPRISM_ASSETS_PATH`        | --assets-path PATH         | assets PATH containing static resources like icons, models, and translations
-`PHOTOPRISM_WORKERS`            | --workers NUMBER, -w NUMBER | maximum NUMBER of indexing workers (default: depends on the number of physical cores)
+`PHOTOPRISM_WORKERS`            | --workers NUMBER, -w NUMBER | maximum NUMBER of indexing workers, default and limit depend on the number of CPU cores
 `PHOTOPRISM_WAKEUP_INTERVAL`    | --wakeup-interval SECONDS  | background worker wakeup interval in SECONDS (default: 900)
 `PHOTOPRISM_AUTO_INDEX`         | --auto-index SECONDS       | WebDAV auto indexing safety delay in SECONDS, disable with -1 (default: 300)
 `PHOTOPRISM_AUTO_IMPORT`        | --auto-import SECONDS      | WebDAV auto import safety delay in SECONDS, disable with -1 (default: 180)
@@ -28,8 +28,8 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_DISABLE_PLACES`     | --disable-places           | disable reverse geocoding and map
 `PHOTOPRISM_DISABLE_BACKUPS`    | --disable-backups          | disable creating YAML metadata backup files
 `PHOTOPRISM_DISABLE_EXIFTOOL`   | --disable-exiftool         | disable creating JSON metadata sidecar files with ExifTool
-`PHOTOPRISM_DISABLE_DARKTABLE`  | --disable-darktable        | disable converting RAW files with Darktable
 `PHOTOPRISM_DISABLE_FFMPEG`     | --disable-ffmpeg           | disable video transcoding and still image extraction with FFmpeg
+`PHOTOPRISM_DISABLE_DARKTABLE`  | --disable-darktable        | disable converting RAW files with Darktable
 `PHOTOPRISM_DISABLE_RAWTHERAPEE`| --disable-rawtherapee      | disable converting RAW files with RawTherapee
 `PHOTOPRISM_DISABLE_SIPS`       | --disable-sips             | disable converting RAW files with Sips (macOS only)
 `PHOTOPRISM_DISABLE_HEIFCONVERT`| --disable-heifconvert      | disable converting HEIC/HEIF files

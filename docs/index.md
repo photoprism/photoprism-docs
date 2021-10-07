@@ -15,14 +15,14 @@ Say goodbye to uploading your visual memories to the cloud!
 * Automatic [image classification](https://docs.photoprism.org/developer-guide/metadata/classification/)
   based on Google TensorFlow – in addition, PhotoPrism detects many other properties such as _colors_, _chroma_, _luminance_, _quality_, _panoramic projection_,
   and _location type_
-* Four high-resolution [world maps](https://demo.photoprism.org/places) to see where you've been,
+* Includes four high-resolution [world maps](https://demo.photoprism.org/places) to see where you've been,
   and for rediscovering long-forgotten shots
-* Because PhotoPrism is built as a [Progressive Web App](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps),
-  it provides a native app-like experience and you can install it on the home screen of any mobile device or desktop computer
 * Use [PhotoSync](https://www.photosync-app.com/) to securely backup iOS and Android mobile devices in the background
 * WebDAV clients, like Microsoft’s Windows Explorer or Apple's Finder, may
   [connect](https://docs.photoprism.org/user-guide/sync/webdav/) directly to PhotoPrism so that you to can open,
   edit, and delete files from your computer or phone as if they were local
+* Because PhotoPrism is built as a [Progressive Web App](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps),
+  it provides a native app-like experience, and you can install it on your home screen without struggling with compatibility issues
 
 <p style="text-align: center; padding: 20px 4px;">
 <a class="md-button" style="background-color: #546e7a; font-size: 0.66rem; font-weight: normal; color: white" href="https://demo.photoprism.org/" target="_blank">TRY OUR DEMO</a>

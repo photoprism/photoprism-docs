@@ -3,6 +3,7 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_DEBUG`              | --debug                    | enable debug mode, show additional log messages
 `PHOTOPRISM_LOG_LEVEL`          | --log-level value, -l value| trace, debug, info, warning, error, fatal, or panic (default: "info")
 `PHOTOPRISM_LOG_FILENAME`       | --log-filename FILENAME    | server log FILENAME
+`PHOTOPRISM_PID_FILENAME`       | --pid-filename FILENAME       | process id FILENAME when running in daemon mode
 `PHOTOPRISM_PUBLIC`             | --public, -p               | disable password authentication
 `PHOTOPRISM_ADMIN_PASSWORD`     | --admin-password PASSWORD  | initial admin user PASSWORD, minimum 4 characters
 `PHOTOPRISM_READONLY`           | --read-only, -r            | disable import, upload, and delete
@@ -18,28 +19,28 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_TEMP_PATH`          | --temp-path PATH           | optional custom temporary file PATH
 `PHOTOPRISM_BACKUP_PATH`        | --backup-path PATH         | optional custom backup file PATH
 `PHOTOPRISM_ASSETS_PATH`        | --assets-path PATH         | assets PATH containing static resources like icons, models, and translations
-`PHOTOPRISM_WORKERS`            | --workers NUMBER, -w NUMBER | maximum NUMBER of indexing workers (default: half the number of CPU cores)
+`PHOTOPRISM_WORKERS`            | --workers NUMBER, -w NUMBER | maximum NUMBER of indexing workers (default: depends on the number of physical cores)
 `PHOTOPRISM_WAKEUP_INTERVAL`    | --wakeup-interval SECONDS  | background worker wakeup interval in SECONDS (default: 900)
 `PHOTOPRISM_AUTO_INDEX`         | --auto-index SECONDS       | WebDAV auto indexing safety delay in SECONDS, disable with -1 (default: 300)
 `PHOTOPRISM_AUTO_IMPORT`        | --auto-import SECONDS      | WebDAV auto import safety delay in SECONDS, disable with -1 (default: 180)
 `PHOTOPRISM_DISABLE_WEBDAV`     | --disable-webdav           | disable built-in WebDAV server
-`PHOTOPRISM_DISABLE_BACKUPS`    | --disable-backups          | disable creating YAML metadata backup sidecar files
 `PHOTOPRISM_DISABLE_SETTINGS`   | --disable-settings         | disable settings UI and API
 `PHOTOPRISM_DISABLE_PLACES`     | --disable-places           | disable reverse geocoding and map
-`PHOTOPRISM_DISABLE_EXIFTOOL`   | --disable-exiftool         | disable metadata extraction with ExifTool
-`PHOTOPRISM_DISABLE_DARKTABLE`  | --disable-darktable        | disable RAW file conversion with Darktable
-`PHOTOPRISM_DISABLE_RAWTHERAPEE`| --disable-rawtherapee      | disable RAW file conversion with RawTherapee
-`PHOTOPRISM_DISABLE_SIPS`       | --disable-sips             | disable RAW file conversion with Sips on macOS
-`PHOTOPRISM_DISABLE_HEIFCONVERT`| --disable-heifconvert      | disable HEIC/HEIF file conversion
+`PHOTOPRISM_DISABLE_BACKUPS`    | --disable-backups          | disable creating YAML metadata backup files
+`PHOTOPRISM_DISABLE_EXIFTOOL`   | --disable-exiftool         | disable creating JSON metadata sidecar files with ExifTool
+`PHOTOPRISM_DISABLE_DARKTABLE`  | --disable-darktable        | disable converting RAW files with Darktable
 `PHOTOPRISM_DISABLE_FFMPEG`     | --disable-ffmpeg           | disable video transcoding and still image extraction with FFmpeg
+`PHOTOPRISM_DISABLE_RAWTHERAPEE`| --disable-rawtherapee      | disable converting RAW files with RawTherapee
+`PHOTOPRISM_DISABLE_SIPS`       | --disable-sips             | disable converting RAW files with Sips (macOS only)
+`PHOTOPRISM_DISABLE_HEIFCONVERT`| --disable-heifconvert      | disable converting HEIC/HEIF files
 `PHOTOPRISM_DISABLE_TENSORFLOW` | --disable-tensorflow       | disable all features depending on TensorFlow
 `PHOTOPRISM_DISABLE_FACES`      | --disable-faces            | disable facial recognition
-`PHOTOPRISM_DISABLE_CLASSIFICATION`| --disable-classification| disables image classification
+`PHOTOPRISM_DISABLE_CLASSIFICATION`| --disable-classification| disable image classification
 `PHOTOPRISM_DETECT_NSFW`        | --detect-nsfw              | flag photos as private that may be offensive
 `PHOTOPRISM_UPLOAD_NSFW`        | --upload-nsfw              | allow uploads that may be offensive
 `PHOTOPRISM_CDN_URL`            | --cdn-url URL              | optional content delivery network URL
 `PHOTOPRISM_SITE_URL`           | --site-url URL             | public site URL (default: "http://localhost:2342/")
-`PHOTOPRISM_SITE_AUTHOR`        | --site-author COPYRIGHT        | site COPYRIGHT or owner 
+`PHOTOPRISM_SITE_AUTHOR`        | --site-author COPYRIGHT        | site COPYRIGHT, artist, or owner name
 `PHOTOPRISM_SITE_TITLE`         | --site-title TITLE             | site page TITLE (default: "PhotoPrism")
 `PHOTOPRISM_SITE_CAPTION`       | --site-caption CAPTION         | site page CAPTION (default: "Browse Your Life")
 `PHOTOPRISM_SITE_DESCRIPTION`   | --site-description DESCRIPTION | optional site DESCRIPTION
@@ -61,15 +62,15 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_DARKTABLE_BLACKLIST` | --darktable-blacklist BLACKLIST | file EXTENSIONS not to be converted with Darktable (default: "raf,cr3,dng")
 `PHOTOPRISM_RAWTHERAPEE_BIN`    | --rawtherapee-bin COMMAND  | RawTherapee CLI COMMAND for RAW file conversion (default: "rawtherapee-cli")
 `PHOTOPRISM_RAWTHERAPEE_BLACKLIST` | --rawtherapee-blacklist BLACKLIST | file EXTENSIONS not to be converted with RawTherapee
-`PHOTOPRISM_SIPS_BIN`           | --sips-bin FILENAME        | Sips COMMAND for RAW file conversion on macOS (default: "sips")
+`PHOTOPRISM_SIPS_BIN`           | --sips-bin FILENAME        | Sips COMMAND for RAW file conversion (macOS only) (default: "sips")
 `PHOTOPRISM_HEIFCONVERT_BIN`    | --heifconvert-bin COMMAND  | HEIC/HEIF image convert COMMAND (default: "heif-convert")
 `PHOTOPRISM_FFMPEG_BIN`         | --ffmpeg-bin COMMAND       | FFmpeg COMMAND for video transcoding and still image extraction (default: "ffmpeg")
 `PHOTOPRISM_FFMPEG_ENCODER`     | --ffmpeg-encoder NAME      | maximum FFmpeg encoding BITRATE (Mbit/s) (default: 50)
 `PHOTOPRISM_FFMPEG_BITRATE`     | --ffmpeg-bitrate LIMIT     | FFmpeg encoding bitrate LIMIT in Mbit/s (default: "50")
 `PHOTOPRISM_FFMPEG_BUFFERS`     | --ffmpeg-buffers           | NUMBER of FFmpeg capture buffers (default: 32)
 `PHOTOPRISM_EXIFTOOL_BIN`       | --exiftool-bin COMMAND     | ExifTool COMMAND for extracting metadata (default: "exiftool")
-`PHOTOPRISM_DOWNLOAD_TOKEN`     | --download-token SECRET    | custom download URL TOKEN (default: randomly generated)
-`PHOTOPRISM_PREVIEW_TOKEN`      | --preview-token SECRET     | custom thumbnail and streaming URL TOKEN (default: randomly generated)
+`PHOTOPRISM_DOWNLOAD_TOKEN`     | --download-token SECRET    | custom download URL TOKEN (default: random)
+`PHOTOPRISM_PREVIEW_TOKEN`      | --preview-token SECRET     | custom thumbnail and streaming URL TOKEN (default: random)
 `PHOTOPRISM_THUMB_FILTER`       | --thumb-filter NAME, -f NAME | thumbnail downscaling FILTER (best to worst: blackman, lanczos, cubic, linear) (default: "lanczos")
 `PHOTOPRISM_THUMB_SIZE`         | --thumb-size PIXELS, -s PIXELS | maximum pre-cached thumbnail image size in PIXELS (720-7680) (default: 2048)
 `PHOTOPRISM_THUMB_UNCACHED`     | --thumb-uncached, -u       | enable on-demand thumbnail generation (high memory and cpu usage)
@@ -84,4 +85,3 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_FACE_CLUSTER_CORE`  | --face-cluster-core NUMBER | NUMBER of faces forming a cluster core (default: 4)
 `PHOTOPRISM_FACE_CLUSTER_DIST`  | --face-cluster-dist RADIUS | similarity DISTANCE of faces forming a cluster core (default: 0.64)
 `PHOTOPRISM_FACE_MATCH_DIST`    | --face-match-dist OFFSET   | similarity OFFSET for matching faces with existing clusters (default: 0.46)
-`PHOTOPRISM_PID_FILENAME`       | --pid-filename FILENAME       | process id FILENAME when running in daemon mode

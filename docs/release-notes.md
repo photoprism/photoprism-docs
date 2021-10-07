@@ -11,7 +11,9 @@
     instead of `photoprism/photoprism:latest` for testing
     our [development preview](https://github.com/photoprism/photoprism/tree/preview).
 
-### Development Preview ###
+### October 7, 2021 ###
+
+Build [211007-8f55d6f8](https://drone.photoprism.app/photoprism/photoprism/2031)
 
 - CLI: [Revised descriptions of commands and configuration flags](https://github.com/photoprism/photoprism/search?q=cli+help&type=commits)
 - UX: [Enhanced visibility of file errors in the edit dialog files tab](https://github.com/photoprism/photoprism/commit/6cd5ee6d9b53aed74d92c46ccb29f78adf11811a) 

@@ -1,5 +1,12 @@
 # Getting Updates
 
+!!! info "This open-source project is made possible thanks to our generous sponsors 🌈"
+    If you enjoy using PhotoPrism, please consider supporting us via [Patreon](https://www.patreon.com/photoprism)
+    or [GitHub Sponsors](https://github.com/sponsors/photoprism) — especially if you have
+    feature requests or need help with using our software.
+    Your continued support helps us fund operating costs, external services like satellite maps,
+    and develop new features. Thank you very much!
+
 ### Docker Compose ###
 
 Open a terminal on your server, and run the following commands to pull the latest container image and restart PhotoPrism:

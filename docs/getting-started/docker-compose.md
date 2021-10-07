@@ -124,7 +124,14 @@ Run `photoprism index`, or go to *Library* and click *Start*, to update the inde
 
 Easy, isn't it?
 
-!!! info "Reducing Server Load"
+!!! info "This open-source project is made possible thanks to our generous sponsors 🌈"
+    If you enjoy using PhotoPrism, please consider supporting us via [Patreon](https://www.patreon.com/photoprism)
+    or [GitHub Sponsors](https://github.com/sponsors/photoprism) — especially if you have
+    feature requests or need help with using our software.
+    Your continued support helps us fund operating costs, external services like satellite maps,
+    and develop new features. Thank you very much!
+
+!!! tip "Reducing Server Load"
     If you're running out of memory - or other system resources - while indexing, please limit the 
     [number of workers](https://docs.photoprism.org/getting-started/config-options/) by setting
     `PHOTOPRISM_WORKERS` to a value less than the number of logical CPU cores in `docker-compose.yml`.

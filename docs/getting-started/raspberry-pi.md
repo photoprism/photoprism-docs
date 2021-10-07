@@ -38,7 +38,7 @@ should include the following security options:
 Big thank you to [Guy Sheffer](https://github.com/guysoft) for
 [building](https://github.com/photoprism/photoprism/issues/109) this!
 
-!!! info "Reducing Server Load"
+!!! tip "Reducing Server Load"
     If you're running out of memory - or other system resources - while indexing, please limit the
     [number of workers](https://docs.photoprism.org/getting-started/config-options/) by setting
     `PHOTOPRISM_WORKERS` to a value less than the number of logical CPU cores in `docker-compose.yml`.

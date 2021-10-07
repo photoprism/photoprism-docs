@@ -83,5 +83,5 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_FACE_CLUSTER_SIZE`  | --face-cluster-size PIXELS      | minimum size of automatically clustered faces in PIXELS (default: 80)
 `PHOTOPRISM_FACE_CLUSTER_SCORE` | --face-cluster-score QUALITY  | minimum QUALITY score of automatically clustered faces (default: 15)
 `PHOTOPRISM_FACE_CLUSTER_CORE`  | --face-cluster-core NUMBER | NUMBER of faces forming a cluster core (default: 4)
-`PHOTOPRISM_FACE_CLUSTER_DIST`  | --face-cluster-dist RADIUS | similarity DISTANCE of faces forming a cluster core (default: 0.64)
+`PHOTOPRISM_FACE_CLUSTER_DIST`  | --face-cluster-dist DISTANCE | similarity DISTANCE of faces forming a cluster core (default: 0.64)
 `PHOTOPRISM_FACE_MATCH_DIST`    | --face-match-dist OFFSET   | similarity OFFSET for matching faces with existing clusters (default: 0.46)

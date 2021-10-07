@@ -41,8 +41,8 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_CDN_URL`            | --cdn-url URL              | optional content delivery network URL
 `PHOTOPRISM_SITE_URL`           | --site-url URL             | public site URL (default: "http://localhost:2342/")
 `PHOTOPRISM_SITE_AUTHOR`        | --site-author COPYRIGHT        | site COPYRIGHT, artist, or owner name
-`PHOTOPRISM_SITE_TITLE`         | --site-title TITLE             | site page TITLE (default: "PhotoPrism")
-`PHOTOPRISM_SITE_CAPTION`       | --site-caption CAPTION         | site page CAPTION (default: "Browse Your Life")
+`PHOTOPRISM_SITE_TITLE`         | --site-title TITLE             | site TITLE (default: "PhotoPrism")
+`PHOTOPRISM_SITE_CAPTION`       | --site-caption CAPTION         | site CAPTION (default: "Browse Your Life")
 `PHOTOPRISM_SITE_DESCRIPTION`   | --site-description DESCRIPTION | optional site DESCRIPTION
 `PHOTOPRISM_SITE_PREVIEW`       | --site-preview URL         | optional preview image URL
 `PHOTOPRISM_HTTP_PORT`          | --http-port NUMBER         | http server port NUMBER (default: 2342)

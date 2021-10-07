@@ -2,8 +2,8 @@ Variable                        | Parameter                  | Description
 :------------------------------ |:-------------------------- |:-------------------------------------------
 `PHOTOPRISM_DEBUG`              | --debug                    | enable debug mode, show additional log messages
 `PHOTOPRISM_LOG_LEVEL`          | --log-level value, -l value| trace, debug, info, warning, error, fatal, or panic (default: "info")
-`PHOTOPRISM_LOG_FILENAME`       | --log-filename FILENAME    | server log FILENAME
-`PHOTOPRISM_PID_FILENAME`       | --pid-filename FILENAME       | process id FILENAME when running in daemon mode
+`PHOTOPRISM_LOG_FILENAME`       | --log-filename FILENAME    | optional server log FILENAME
+`PHOTOPRISM_PID_FILENAME`       | --pid-filename FILENAME    | process id FILENAME when running in daemon mode
 `PHOTOPRISM_PUBLIC`             | --public, -p               | disable password authentication
 `PHOTOPRISM_ADMIN_PASSWORD`     | --admin-password PASSWORD  | initial admin user PASSWORD, minimum 4 characters
 `PHOTOPRISM_READONLY`           | --read-only, -r            | disable import, upload, and delete

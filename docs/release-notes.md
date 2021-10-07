@@ -15,10 +15,10 @@
 
 Build [211007-8f55d6f8](https://drone.photoprism.app/photoprism/photoprism/2031)
 
-- CLI: [Revised descriptions of commands and configuration flags](https://github.com/photoprism/photoprism/search?q=cli+help&type=commits)
-- UX: [Enhanced visibility of file errors in the edit dialog files tab](https://github.com/photoprism/photoprism/commit/6cd5ee6d9b53aed74d92c46ccb29f78adf11811a) 
-- Index: [Duplicate error logs caused by broken JPEG files have been removed](https://github.com/photoprism/photoprism/commit/f7153cdd219d487733a7a3a8809b333bdace6294) 
 - People: [Improved stability and performance of new faces overview page](https://github.com/photoprism/photoprism/issues/1576)
+- Index: [Duplicate error logs caused by broken JPEG files have been removed](https://github.com/photoprism/photoprism/commit/f7153cdd219d487733a7a3a8809b333bdace6294)
+- UX: [Enhanced visibility of file errors in the edit dialog files tab](https://github.com/photoprism/photoprism/commit/6cd5ee6d9b53aed74d92c46ccb29f78adf11811a)
+- CLI: [Revised descriptions of commands and configuration flags](https://github.com/photoprism/photoprism/search?q=cli+help&type=commits)
 
 *Early-access feature for our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.org/developer-guide/):*
 

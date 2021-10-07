@@ -36,7 +36,7 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_DISABLE_TENSORFLOW` | --disable-tensorflow       | disable all features depending on TensorFlow
 `PHOTOPRISM_DISABLE_FACES`      | --disable-faces            | disable facial recognition
 `PHOTOPRISM_DISABLE_CLASSIFICATION`| --disable-classification| disable image classification
-`PHOTOPRISM_DETECT_NSFW`        | --detect-nsfw              | flag photos as private that may be offensive
+`PHOTOPRISM_DETECT_NSFW`        | --detect-nsfw              | flag photos as private that may be offensive (requires TensorFlow)
 `PHOTOPRISM_UPLOAD_NSFW`        | --upload-nsfw              | allow uploads that may be offensive
 `PHOTOPRISM_CDN_URL`            | --cdn-url URL              | optional content delivery network URL
 `PHOTOPRISM_SITE_URL`           | --site-url URL             | public site URL (default: "http://localhost:2342/")

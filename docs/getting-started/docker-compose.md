@@ -96,7 +96,7 @@ A minimum length of 4 characters is required.
 !!! note ""
     It's not possible to **change the initial password** via `PHOTOPRISM_ADMIN_PASSWORD` after PhotoPrism 
     has been started for the first time. You may run `docker-compose exec photoprism photoprism reset` in a terminal to
-    reset your index database for a clean start.
+    reset your database for a clean start.
 
 The port and other basic settings may be changed in `docker-compose.yml`.
 Remember to stop and re-create the container whenever configuration values have been changed:

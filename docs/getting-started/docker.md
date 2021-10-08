@@ -27,14 +27,25 @@ docker run -d \
   photoprism/photoprism
 ```
 
-!!! attention "Change Password"
-    Please change `PHOTOPRISM_ADMIN_PASSWORD` so that PhotoPrism starts with a secure **initial password**.
+!!! danger ""
+    Please change `PHOTOPRISM_ADMIN_PASSWORD` so that PhotoPrism starts with a **secure initial password**.
     Never use `photoprism`, or other easy-to-guess passwords, on a public server.
     A minimum length of 4 characters is required.
 
-Now open http://localhost:2342/ in a Web browser to see the user interface
-and sign in using the password set in `PHOTOPRISM_ADMIN_PASSWORD`.
-You may change it in Settings, or using the `photoprism passwd` command in a terminal.
+!!! attention ""
+    Make sure there is enough disk space available and verify file system permissions before starting to index:
+    The *originals* folder must be readable, while *storage* must be readable and writeable.
+
+Now open http://localhost:2342/ in a Web browser to see the user interface.
+Sign in with the user `admin` and the initial password configured via `PHOTOPRISM_ADMIN_PASSWORD`.
+You may change it on the [account settings page](../user-guide/settings/account.md),
+or using the `photoprism passwd` command in a terminal.
+A minimum length of 4 characters is required.
+
+!!! note ""
+    It's not possible to **change the initial password** via `PHOTOPRISM_ADMIN_PASSWORD` after PhotoPrism
+    has been started for the first time. You may run `docker exec -ti photoprism photoprism reset` in a terminal to
+    reset your index database for a clean start.
 
 This is a simplified configuration compared to our [Docker Compose](docker-compose.md) example:
 
@@ -62,10 +73,6 @@ Multiple folders can be indexed by mounting them as sub-folders of `/photoprism/
     You may enable it by adding `-e PHOTOPRISM_READONLY="true"`.
     In addition, you may mount the *originals* folder with `:ro` flag so that Docker
     blocks write operations.
-
-!!! attention
-    Make sure there is enough disk space available and verify file system permissions before starting to index:
-    The *originals* folder must be readable, while *storage* must be readable and writeable.
 
 ### Step 2: Index your library ###
 

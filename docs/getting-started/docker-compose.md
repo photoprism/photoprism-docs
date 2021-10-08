@@ -39,8 +39,8 @@ and change the [configuration](config-options.md) as needed:
 wget https://dl.photoprism.org/docker/docker-compose.yml
 ```
 
-!!! attention "Change Password"
-    Please change `PHOTOPRISM_ADMIN_PASSWORD` so that PhotoPrism starts with a secure **initial password**.
+!!! danger ""
+    Please change `PHOTOPRISM_ADMIN_PASSWORD` so that PhotoPrism starts with a **secure initial password**.
     Never use `photoprism`, or other easy-to-guess passwords, on a public server.
     A minimum length of 4 characters is required.
 	
@@ -57,6 +57,10 @@ volumes:
   - "~/friends:/photoprism/originals/friends"
   - "/media/photos:/photoprism/originals/media"
 ```
+
+!!! attention ""
+    Make sure there is enough disk space available and verify file system permissions before starting to index:
+    The *originals* folder must be readable, while *storage* must be readable and writeable.
 
 The *import* folder points to `~/Import` by default, so that you can easily access it.
 If you don't need this feature, e.g. because you manage all files manually or 
@@ -75,10 +79,6 @@ upgrading the container.
     In addition, you may mount the *originals* folder with `:ro` flag so that Docker 
     blocks write operations.
 
-!!! attention
-    Make sure there is enough disk space available and verify file system permissions before starting to index:
-    The *originals* folder must be readable, while *storage* must be readable and writeable.
-
 ### Step 2: Start the server ###
 
 Open a terminal, go to the folder in which you saved the config file and run this command to start the server:
@@ -87,10 +87,16 @@ Open a terminal, go to the folder in which you saved the config file and run thi
 docker-compose up -d
 ```
 
-Now open http://localhost:2342/ in a Web browser to see the user interface
-and sign in using the password set in `PHOTOPRISM_ADMIN_PASSWORD`.
-You may change it in Settings, or using the `photoprism passwd` command in a terminal.
+Now open http://localhost:2342/ in a Web browser to see the user interface.
+Sign in with the user `admin` and the initial password configured via `PHOTOPRISM_ADMIN_PASSWORD`.
+You may change it on the [account settings page](../user-guide/settings/account.md), 
+or using the `photoprism passwd` command in a terminal.
 A minimum length of 4 characters is required.
+
+!!! note ""
+    It's not possible to **change the initial password** via `PHOTOPRISM_ADMIN_PASSWORD` after PhotoPrism 
+    has been started for the first time. You may run `docker-compose exec photoprism photoprism reset` in a terminal to
+    reset your index database for a clean start.
 
 The port and other basic settings may be changed in `docker-compose.yml`.
 Remember to stop and re-create the container whenever configuration values have been changed:
@@ -120,7 +126,7 @@ or the *Logs* tab in *Library*.
 Your photos and videos can now be browsed, organized in albums, and shared with others.
 You may continue using your favorite tools, like Photoshop or Lightroom,
 to edit, add and delete files in the *originals* folder.
-Run `photoprism index`, or go to *Library* and click *Start*, to update the index as needed.
+Run `docker-compose exec photoprism photoprism index`, or go to *Library* and click *Start*, to update the index as needed.
 
 Easy, isn't it?
 
@@ -170,7 +176,7 @@ like `docker-compose exec photoprism photoprism backup --help`.
 | Logs     | `docker-compose logs --tail=25 -f`                        |
 | Terminal | `docker-compose exec photoprism bash`                     |
 | Help     | `docker-compose exec photoprism photoprism help`          |                
-| Config   | `docker-compose exec photoprism photoprism config`        |                   
+| Config   | `docker-compose exec photoprism photoprism config`        |
 | Reset    | `docker-compose exec photoprism photoprism reset`         |                   
 | Backup   | `docker-compose exec photoprism photoprism backup -a -i`  |                      
 | Restore  | `docker-compose exec photoprism photoprism restore -a -i` |                   

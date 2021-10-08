@@ -20,7 +20,7 @@ Build [211007-8f55d6f8](https://drone.photoprism.app/photoprism/photoprism/2031)
 - UX: [Enhanced visibility of file errors in the edit dialog files tab](https://github.com/photoprism/photoprism/commit/6cd5ee6d9b53aed74d92c46ccb29f78adf11811a)
 - CLI: [Revised descriptions of commands and configuration flags](https://github.com/photoprism/photoprism/search?q=cli+help&type=commits)
 
-*Early-access feature for our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.org/developer-guide/):*
+*[Early-access feature](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+label%3Aearly-access) for our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.org/developer-guide/):*
 
 - People: [Recognized faces can be hidden on the overview page](https://github.com/photoprism/photoprism/issues/1554) 
 

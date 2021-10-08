@@ -57,7 +57,7 @@ The backend is compatible with [MariaDB 10.5.10+](https://mariadb.org/) (earlier
 see [MDEV-25362](https://jira.mariadb.org/browse/MDEV-25362)), [MySQL 8](https://www.mysql.com/),
 and [SQLite 3](https://www.sqlite.org/)
 
-!!! attention ""
+!!! danger ""
     When installing PhotoPrism on a public server outside your home network, please **always run it
     behind a secure HTTPS reverse proxy** like [Traefik](proxies/traefik.md), 
     [Caddy](proxies/caddy-2.md), or [NGINX](proxies/nginx.md).

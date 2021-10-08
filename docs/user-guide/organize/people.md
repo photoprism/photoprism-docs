@@ -42,7 +42,7 @@ The person you just added will appear under *Recognized*
 You can hide a person in the *Recognized* section by clicking :material-close: in the upper right corner.
 
 !!! example ""
-    **This is an early-access feature to [say thanks to our sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md) and contributors.**
+    **This is an [early-access feature](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+label%3Aearly-access) to [say thanks to our sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md) and contributors.**
     We'll let you know how to enable it when you sign up on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism).
     Your continued support helps us fund operating costs, provide services like satellite maps,
     and develop new features. Thank you very much! 💜

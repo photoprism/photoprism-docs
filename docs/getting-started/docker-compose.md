@@ -88,7 +88,7 @@ docker-compose up -d
 ```
 
 Now open http://localhost:2342/ in a Web browser to see the user interface
-and sign in using the password set in `PHOTOPRISM_ADMIN_PASSWORD`.
+and sign in with `admin` as the user and the password set in `PHOTOPRISM_ADMIN_PASSWORD`.
 You may change it in Settings, or using the `photoprism passwd` command in a terminal.
 A minimum length of 4 characters is required.
 

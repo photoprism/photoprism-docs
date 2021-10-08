@@ -69,7 +69,7 @@ nav:
       - Calendar: user-guide/organize/calendar.md
       - Edit Details: user-guide/organize/edit.md
       - Download Files: user-guide/organize/download.md
-      - Delete Permanently: user-guide/organize/delete.md
+      - Delete Files: user-guide/organize/delete.md
     - Sync:
       - WebDAV: user-guide/sync/webdav.md
       - Mobile Devices: user-guide/sync/mobile-devices.md

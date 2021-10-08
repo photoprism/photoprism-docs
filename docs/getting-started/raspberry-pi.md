@@ -20,7 +20,7 @@ Your device should have at least 4 GB of memory. Also make sure it has at least
 4 GB of [swap](https://opensource.com/article/18/9/swap-space-linux-systems)
 configured, so that indexing doesn't cause restarts when there are memory usage spikes.
 
-!!! note
+!!! note ""
     Indexing large photo and video collections significantly benefits from fast, local SSD storage,
     and plenty of memory for caching. Especially the conversion of RAW images and the transcoding of
     videos are very demanding.

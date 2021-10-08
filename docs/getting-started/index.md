@@ -36,12 +36,12 @@ Also make sure it has at least 4 GB of swap configured, so that indexing doesn't
 restarts when there are memory usage spikes.
 Beyond these minimum requirements, the amount of RAM should match the number of cores.
 
-!!! note
+!!! note ""
     Indexing large photo and video collections significantly benefits from fast, local SSD storage,
     and plenty of memory for caching. Especially the conversion of RAW images and the transcoding of
     videos are very demanding.
 
-!!! info
+!!! info ""
     RAW file conversion and TensorFlow will be disabled on servers 
     with less than 2 GB of physical memory.
     If you're running out of memory - or other system resources - while indexing, please reduce the
@@ -57,7 +57,7 @@ The backend is compatible with [MariaDB 10.5.10+](https://mariadb.org/) (earlier
 see [MDEV-25362](https://jira.mariadb.org/browse/MDEV-25362)), [MySQL 8](https://www.mysql.com/),
 and [SQLite 3](https://www.sqlite.org/)
 
-!!! attention
+!!! attention ""
     When installing PhotoPrism on a public server outside your home network, please **always run it
     behind a secure HTTPS reverse proxy** like [Traefik](proxies/traefik.md), 
     [Caddy](proxies/caddy-2.md), or [NGINX](proxies/nginx.md).

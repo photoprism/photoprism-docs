@@ -1,3 +1,10 @@
+# Config Options #
+
+!!! attention ""
+    Changing config values in your `docker-compose.yml` file (or on the [advanced settings](../user-guide/settings/advanced.md) page)
+    always requires a restart to take effect. Open a terminal, run `docker-compose stop photoprism` and then
+    `docker-compose up -d photoprism` to restart your instance.
+
 Variable                        | Parameter                  | Description
 :------------------------------ |:-------------------------- |:-------------------------------------------
 `PHOTOPRISM_DEBUG`              | --debug                    | enable debug mode, show additional log messages

@@ -5,8 +5,7 @@ would be a mistake to state there will be no costs because clearly, we have huge
 will have a price tag, and then maybe you'd like to have some extra features that need to be developed.
 
 If you enjoy using our software, please consider backing us on [Patreon](https://www.patreon.com/photoprism)
-or [GitHub Sponsors](https://github.com/sponsors/photoprism) — especially if you have
-feature requests or need help with using our software.
+or [GitHub Sponsors](https://github.com/sponsors/photoprism).
 
 Your continued support helps us fund operating costs, provide services like satellite maps,
 and develop new features.

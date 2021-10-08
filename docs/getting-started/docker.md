@@ -101,8 +101,7 @@ Easy, isn't it?
 !!! example ""
     **This open-source project is made possible [thanks to our sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md).**
     If you enjoy using PhotoPrism, please consider backing us on [Patreon](https://www.patreon.com/photoprism)
-    or [GitHub Sponsors](https://github.com/sponsors/photoprism) — especially if you have
-    feature requests or need help with using our software.
+    or [GitHub Sponsors](https://github.com/sponsors/photoprism).
     Your continued support helps us fund operating costs, provide services like satellite maps,
     and develop new features. Thank you very much! 💜
 

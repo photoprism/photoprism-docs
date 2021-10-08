@@ -64,7 +64,7 @@ documented in [Setup Using Docker Compose](../docker-compose.md):
 Please refer to the [official documentation](https://doc.traefik.io/traefik/user-guides/docker-compose/basic-example/)
 for further details.
 
-!!! attention
+!!! danger ""
     When installing PhotoPrism on a public server outside your home network, please **always run it
     behind a secure HTTPS reverse proxy**.
     Your files and passwords will be transmitted in clear text otherwise, and can be intercepted

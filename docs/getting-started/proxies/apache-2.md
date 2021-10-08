@@ -11,7 +11,7 @@
 
 The [official documentation](https://httpd.apache.org/docs/2.4/mod/mod_proxy_wstunnel.html) explains in detail, how to configure Apache Web Server 2.4 to reverse proxy WebSockets.
 
-!!! attention
+!!! danger ""
     When installing PhotoPrism on a public server outside your home network, please **always run it
     behind a secure HTTPS reverse proxy**.
     Your files and passwords will be transmitted in clear text otherwise, and can be intercepted

@@ -15,6 +15,7 @@
 
 - UX: [Fixed sidebar navigation on small screens](https://github.com/photoprism/photoprism/issues/1175)
 - UX: [Improved wording for notifications and search results](https://github.com/photoprism/photoprism/commit/67d06fd647a7bf4fcf2c3e487a590b6597111d08)
+- Users: [Show name and email in sidebar navigation](https://github.com/photoprism/photoprism/commit/d6cc8df531dbc17ffc6f55bc259bb45c8ea60011)
 - Folders: [Directory names listed in .ppignore are ignored](https://github.com/photoprism/photoprism/issues/1609)
 - Config: [Allows bypassing low memory suggestion](https://github.com/photoprism/photoprism/issues/1611)
 - Docs: [Updated about page](https://github.com/photoprism/photoprism/commit/1cc8cb7ad42bcd847a03a3bba52ad265b0f3fce2)

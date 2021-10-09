@@ -18,7 +18,7 @@
 - Folders: [Directory names listed in .ppignore are ignored](https://github.com/photoprism/photoprism/issues/1609)
 - Config: [Allows bypassing low memory suggestion](https://github.com/photoprism/photoprism/issues/1611)
 - Docs: [Updated about page](https://github.com/photoprism/photoprism/commit/1cc8cb7ad42bcd847a03a3bba52ad265b0f3fce2)
-- Translations: [Updated German](https://github.com/photoprism/photoprism/tree/develop/frontend/src/locales)
+- Translations: [Updated all locales](https://github.com/photoprism/photoprism/tree/develop/frontend/src/locales)
 
 ### October 7, 2021 ###
 

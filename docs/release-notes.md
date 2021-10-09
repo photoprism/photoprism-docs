@@ -11,7 +11,9 @@
     instead of `photoprism/photoprism:latest` for testing
     our [development preview](https://github.com/photoprism/photoprism/tree/preview).
 
-### Development Preview ###
+### October 9, 2021 ###
+
+Build [211009-d6cc8df5](https://drone.photoprism.app/photoprism/photoprism/2068)
 
 - UX: [Improved wording of search result notifications](https://github.com/photoprism/photoprism/commit/67d06fd647a7bf4fcf2c3e487a590b6597111d08)
 - UX: [Fixed sidebar navigation on small screens](https://github.com/photoprism/photoprism/issues/1175)

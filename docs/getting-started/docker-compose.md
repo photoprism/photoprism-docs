@@ -49,7 +49,7 @@ for your [home directory](https://en.wikipedia.org/wiki/Home_directory). Its abs
 operating system and username.
 We'll refer to `/photoprism/originals` as the *originals* folder as it points to your original photo and video files.
 
-You may connect it to any folder accessible from the host, including network drives.
+All folders accessible from the host may be mounted, including network drives.
 Since PhotoPrism is running inside a container, it won't be able to see folders that have not been mounted.
 That's an important security feature.
 

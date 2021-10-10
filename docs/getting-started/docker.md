@@ -87,7 +87,7 @@ to watch the indexer working.
 
 Of course, you can continue using your favorite tools for processing RAW files, editing metadata,
 or importing new shots. Go to *Library* and click *Start* to update the index after files have been
-changed, added, or removed. This can also be automated using a scheduler and PhotoPrism's CLI commands.
+changed, added, or removed. This can also be automated using terminal commands and a scheduler.
 
 Easy, isn't it?
 

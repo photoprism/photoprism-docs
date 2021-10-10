@@ -3,7 +3,7 @@
 PhotoPrism uses [gettext](https://en.wikipedia.org/wiki/Gettext) for localizing frontend and backend.
 It's one of the most widely adopted standards for translating user interfaces.
  
-Human readable messages like `File not found` are used as ids for finding matching translations, 
+Human-readable messages like `File not found` are used as ids for finding matching translations, 
 and used as defaults whenever there is no translation available.
 
 Messages may optionally contain placeholders, like `Found %{n} files`, for numbers and 
@@ -20,8 +20,8 @@ is `translations.pot`.
 
 `*.po` files contain localized messages for each 
 [language](https://www.gnu.org/software/gettext/manual/html_node/Usual-Language-Codes.html#Usual-Language-Codes),
-identified by their [two-letter locale](https://www.gnu.org/software/gettext/manual/html_node/Locale-Names.html), 
-like `de.po` for German or `pt_BR` for Brazilian Portuguese.
+identified by their [locale](https://www.gnu.org/software/gettext/manual/html_node/Locale-Names.html), 
+like `de.po` for German or `pt_BR.po` for Brazilian Portuguese.
 You can open, edit and save them with Poedit to update existing translations.
 
 ### Add new translation ###
@@ -29,7 +29,7 @@ You can open, edit and save them with Poedit to update existing translations.
 - Install a translation tool e.g. Poedit
 - Open the `/frontend/src/locales/translations.pot` file with Poedit
 - In Poedit click on "Create New Translation" at the bottom, select the language, and start translating
-- When done, save your translation as `*.po` file using the two-letter language locale (e.g. `de.po`) as name
+- When done, save your translation as `*.po` file using the language locale (e.g. `de.po`) as name
 - Add the new language to the `Languages` function in  `/frontend/src/options/options.js`
 - Run `npm run gettext-compile` to compile existing translations into a single `translations.json` file
 - To test your translations you need to build the frontend again using `npm run build` or `npm run watch`
@@ -61,9 +61,10 @@ Localizations are kept in `/assets/locales`. The POT file, only containing messa
 
 `default.po` files in sub directories contain localized messages for each 
 [language](https://www.gnu.org/software/gettext/manual/html_node/Usual-Language-Codes.html#Usual-Language-Codes),
-identified by their [two-letter locale](https://www.gnu.org/software/gettext/manual/html_node/Locale-Names.html), 
-like `de/default.po` for German. You can open, edit and save them with Poedit. Please
-also add and commit binary `*.mo` files, which will be automatically created by Poedit.
+identified by their [locale](https://www.gnu.org/software/gettext/manual/html_node/Locale-Names.html), 
+like `de/default.po` for German or `pt_BR/default.po` for Brazilian Portuguese. 
+You can open, edit and save them with Poedit. Please also add and commit binary `*.mo` files, 
+which will be automatically created by Poedit.
 
 
 ### Add new translation ###
@@ -77,7 +78,7 @@ also add and commit binary `*.mo` files, which will be automatically created by 
 - Open the `/assets/locales/fr/default.po` file with Poedit
 - In the Poedit menu click "Catalogue" --> "Update from POT File" --> select the messages.pot file from /assets/locales/
 - Now you can start proofreading and adding the missing translations
-- Once your done, save the changes in the default.po file
+- Once you're done, save the changes in the default.po file
 
 !!! info
     Note that this will only work when you have gettext installed on your system.

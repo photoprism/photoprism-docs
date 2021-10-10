@@ -53,7 +53,7 @@ All folders accessible from the host may be mounted, including network drives.
 Since PhotoPrism is running inside a container, it won't be able to see folders that have not been mounted.
 That's an important security feature.
 
-Multiple folders can be made accessible by mounting them as subfolders like this:
+Multiple folders can be made accessible by mounting them as subfolders:
 
 ```
 volumes:

@@ -56,7 +56,7 @@ index and other these files after restarting or upgrading the container.
 The default port 2342 and other configuration values may be changed as needed,
 see [Config Options](config-options.md) for details.
 
-Multiple folders can be made accessible by mounting them as subfolders like this:
+Multiple folders can be made accessible by mounting them as subfolders:
 
 ```
 -v ~/Example:/photoprism/originals/Example

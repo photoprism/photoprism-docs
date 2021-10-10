@@ -99,7 +99,7 @@ In case you can't connect, try starting the server without `-d` so that you see 
 PhotoPrism will report specific issues like bad folder permissions, or when it can't connect to the database.
 
 The server port and other basic settings may be changed in `docker-compose.yml` at any time.
-Remember to properly restart the container whenever it has been changed:
+Remember to restart the container whenever it has been changed:
 
 ```
 docker-compose stop photoprism

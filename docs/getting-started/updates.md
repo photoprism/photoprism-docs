@@ -15,7 +15,7 @@
 
 ### Docker Compose ###
 
-Open a terminal and change to the directory in which the `docker-compose.yml` file has been saved.
+Open a terminal and change to the folder in which the `docker-compose.yml` file has been saved.
 Now run the following commands to pull the most recent Docker image and restart your instance in the background:
 
 ```

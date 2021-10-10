@@ -36,12 +36,15 @@ Now open http://localhost:2342/ in a Web browser to see the user interface.
 Sign in with the user `admin` and the initial password configured via `PHOTOPRISM_ADMIN_PASSWORD`.
 You may change it on the [account settings page](../user-guide/settings/account.md),
 or using the `photoprism passwd` command in a terminal.
-A minimum length of 4 characters is required.
+Enabling [public mode](config-options.md) will disable authentication.
 
 !!! note ""
     It's not possible to **change the initial password** via `PHOTOPRISM_ADMIN_PASSWORD` after PhotoPrism
     has been started for the first time. You may run `docker exec -ti photoprism photoprism reset` in a terminal to
     reset your database for a clean start.
+
+In case you can't connect, try starting the server without `-d` so that you see log messages for troubleshooting.
+PhotoPrism will report specific issues like bad folder permissions, or when it can't connect to the database.
 
 This is a simplified configuration compared to our [Docker Compose](docker-compose.md) example:
 

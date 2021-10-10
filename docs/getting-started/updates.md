@@ -16,7 +16,7 @@
 ### Docker Compose ###
 
 Open a terminal and change to the directory where your `docker-compose.yml` is located.
-Now run the following commands to pull the latest Docker image and restart your instance in the background:
+Now run the following commands to pull the most recent Docker image and restart your instance in the background:
 
 ```
 docker-compose pull photoprism
@@ -70,7 +70,7 @@ services:
 
 ### Pure Docker ###
 
-Open a terminal on your server, and run the following command to pull the latest container image:
+Open a terminal on your server, and run the following command to pull the most recent container image:
 
 ```
 docker pull photoprism/photoprism:latest

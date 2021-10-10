@@ -19,16 +19,17 @@ Localizations can be found in `/frontend/src/locales`. The POT file, only contai
 is `translations.pot`.
 
 `*.po` files contain localized messages for each 
-[language](https://www.gnu.org/software/gettext/manual/html_node/Usual-Language-Codes.html#Usual-Language-Codes),
+[language](https://www.gnu.org/software/gettext/manual/html_node/Usual-Language-Codes.html)
 identified by their [locale](https://www.gnu.org/software/gettext/manual/html_node/Locale-Names.html), 
-like `de.po` for German or `pt_BR.po` for Brazilian Portuguese.
+for example `de.po` for German and `pt_BR.po` for Brazilian Portuguese.
 You can open, edit and save them with Poedit to update existing translations.
 
 ### Add new translation ###
 - In /frontend run `npm run gettext-extract`
 - Install a translation tool e.g. Poedit
 - Open the `/frontend/src/locales/translations.pot` file with Poedit
-- In Poedit click on "Create New Translation" at the bottom, select the language, and start translating
+- In Poedit click on "Create New Translation" at the bottom and select the language
+- Now you can start translating
 - When done, save your translation as `*.po` file using the language locale (e.g. `de.po`) as name
 - Add the new language to the `Languages` function in  `/frontend/src/options/options.js`
 - Run `npm run gettext-compile` to compile existing translations into a single `translations.json` file
@@ -60,9 +61,9 @@ Technical log messages should be in English to avoid ambiguities and (even sligh
 Localizations are kept in `/assets/locales`. The POT file, only containing message ids, is `messages.pot`.
 
 `default.po` files in sub directories contain localized messages for each 
-[language](https://www.gnu.org/software/gettext/manual/html_node/Usual-Language-Codes.html#Usual-Language-Codes),
+[language](https://www.gnu.org/software/gettext/manual/html_node/Usual-Language-Codes.html)
 identified by their [locale](https://www.gnu.org/software/gettext/manual/html_node/Locale-Names.html), 
-like `de/default.po` for German or `pt_BR/default.po` for Brazilian Portuguese. 
+for example `de/default.po` for German and `pt_BR/default.po` for Brazilian Portuguese. 
 You can open, edit and save them with Poedit. Please also add and commit binary `*.mo` files, 
 which will be automatically created by Poedit.
 
@@ -70,7 +71,8 @@ which will be automatically created by Poedit.
 ### Add new translation ###
 - Run `make generate` to update `/assets/locales/messages.pot`
 - Open the `/assets/locales/messages.pot` file with Poedit
-- In Poedit click on "Create New Translation" at the bottom, select the language, and start translating
+- In Poedit click on "Create New Translation" at the bottom and select the language
+- Now you can start translating
 - When done, create a new directory (using the locale as name) and save your translation there as `default.po`
 
 ### Update existing translation ###

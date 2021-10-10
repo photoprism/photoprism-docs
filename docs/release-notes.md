@@ -11,6 +11,10 @@
     instead of `photoprism/photoprism:latest` for testing
     our [development preview](https://github.com/photoprism/photoprism/tree/preview).
 
+### Development Preview ###
+
+- [Updated backend translations](https://github.com/photoprism/photoprism/tree/develop/assets/locales), [learn how to contribute](developer-guide/translations.md)
+
 ### October 9, 2021 ###
 
 Build [211009-d6cc8df5](https://drone.photoprism.app/photoprism/photoprism/2068)
@@ -21,7 +25,7 @@ Build [211009-d6cc8df5](https://drone.photoprism.app/photoprism/photoprism/2068)
 - Folders: [Directory names listed in .ppignore are ignored](https://github.com/photoprism/photoprism/issues/1609)
 - Config: [Allows bypassing low memory suggestion](https://github.com/photoprism/photoprism/issues/1611)
 - Docs: [Updated about page](https://github.com/photoprism/photoprism/commit/1cc8cb7ad42bcd847a03a3bba52ad265b0f3fce2)
-- Translations: [Updated all locales](https://github.com/photoprism/photoprism/tree/develop/frontend/src/locales), [learn how to contribute](developer-guide/translations.md)
+- [Updated frontend translations](https://github.com/photoprism/photoprism/tree/develop/frontend/src/locales), [learn how to contribute](developer-guide/translations.md)
 
 ### October 7, 2021 ###
 

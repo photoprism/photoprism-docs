@@ -13,6 +13,7 @@
 
 ### Development Preview ###
 
+- [Fixed typo in German frontend translation](https://github.com/photoprism/photoprism/blob/fa57db7aa43fa03eef7a738122e15a98af574713/frontend/src/locales/de.po#L494)
 - [Updated backend translations](https://github.com/photoprism/photoprism/tree/develop/assets/locales), [learn how to contribute](developer-guide/translations.md)
 
 ### October 9, 2021 ###

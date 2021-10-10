@@ -1,13 +1,19 @@
 # Running PhotoPrism on a Raspberry Pi
 
-Our latest release comes as a single [multi-arch image](https://hub.docker.com/r/photoprism/photoprism) 
-for AMD64, ARM64, and ARMv7. If your device meets the system requirements, 
-mostly the same [installation instructions](docker-compose.md) as for regular Linux servers apply.
+The [stable version](../release-notes.md) and development preview now come as a single
+[multi-arch image](https://hub.docker.com/r/photoprism/photoprism) for AMD64, ARM64, and ARMv7.
 
-### MariaDB ###
+Existing users don't need to pull from a different Docker repository anymore. We recommend updating your
+`docker-compose.yml` config based on [our examples](https://dl.photoprism.org/docker/).
 
-ARMv7 users need an [alternative MariaDB image](https://hub.docker.com/r/linuxserver/mariadb)
-as the [official image](https://hub.docker.com/_/mariadb) is available for AMD64 and ARM64 only.
+If your device meets the system requirements, mostly the same [installation instructions](docker-compose.md) 
+as for regular Linux servers apply.
+
+!!! missing ""
+    Owners of ARMv7-based devices have to revert to an [alternative image](https://hub.docker.com/r/linuxserver/mariadb) 
+    if they want to use MariaDB.
+    The [official image](https://hub.docker.com/_/mariadb) is available for AMD64 and ARM64 only.
+    Pay close attention to changed default directories and environment variable names.
 
 ### System Requirements ###
 

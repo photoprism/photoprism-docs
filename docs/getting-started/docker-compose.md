@@ -40,17 +40,20 @@ wget https://dl.photoprism.org/docker/docker-compose.yml
 ```
 
 !!! danger ""
-    Please change `PHOTOPRISM_ADMIN_PASSWORD` so that PhotoPrism starts with a **secure initial password**.
-    Never use `photoprism`, or other easy-to-guess passwords, on a public server.
+    Always change `PHOTOPRISM_ADMIN_PASSWORD` so that PhotoPrism starts with a **secure initial password**.
+    Never use easy-to-guess passwords or default values like `insecure` on publicly accessible servers.
     A minimum length of 4 characters is required.
 	
-Your personal photo and video collection will be mounted from `~/Pictures` by default,
-where `~` is a placeholder for your [home directory](https://en.wikipedia.org/wiki/Home_directory).
-We'll refer to this as the *originals* folder.
+Your pictures will be mounted from `~/Pictures` by default, where `~` is a placeholder 
+for your [home directory](https://en.wikipedia.org/wiki/Home_directory). Its absolute path depends on your
+operating system and username.
+We'll refer to `/photoprism/originals` as the *originals* folder as it points to your original photo and video files.
 
-You may mount any folder accessible from your computer, including network drives.
-Note that PhotoPrism won't be able to see folders that have not been mounted.
-Multiple folders can be indexed by mounting them as sub-folders of `/photoprism/originals`:
+You may connect it to any folder accessible from the host, including network drives.
+Since PhotoPrism is running inside a container, it won't be able to see folders that have not been mounted.
+That's an important security feature.
+
+Multiple folders can be made accessible by mounting them as subfolders like this:
 
 ```
 volumes:
@@ -58,20 +61,11 @@ volumes:
   - "/media/photos:/photoprism/originals/media"
 ```
 
-!!! attention ""
-    Make sure there is enough disk space available for creating thumbnails and verify file system permissions
-    before starting to index: Files in the *originals* folder must be readable, while the *storage* folder
-    including all subfolders must be readable and writeable.
+Mounting an *import* folder for adding new files to your library is optional. If you prefer a different workflow 
+or read-only mode is enabled, you can skip this.
 
-The *import* folder points to `~/Import` by default, so that you can easily access it.
-If you don't need this feature, e.g. because you manage all files manually or 
-use a different tool for importing, you can safely remove the volume. Using import is strictly 
-optional.
-
-Settings, index, sidecar files, and thumbnails will be put in `storage` by default. 
-You may use an [anonymous volume](https://docs.docker.com/storage/bind-mounts/) or absolute path instead, 
-just don't remove it completely so that you don't lose your index and albums after restarting or 
-upgrading the container.
+Cache, session, thumbnail, and sidecar files will be created in the *storage* folder. Never remove the volume from
+your `docker-compose.yml` file so that you don't lose these files after restarting or upgrading the container.
 
 !!! info "Read-Only Mode"
     Running PhotoPrism in read-only mode disables all features that require write permissions,
@@ -82,25 +76,30 @@ upgrading the container.
 
 ### Step 2: Start the server ###
 
-Open a terminal, go to the folder in which you saved the config file and run this command to start the server:
+Open a terminal and change to the directory in which the `docker-compose.yml` file has been saved.
+Use this command to start the server in the background and keep it running:
 
 ```
 docker-compose up -d
 ```
-
-Now open http://localhost:2342/ in a Web browser to see the user interface.
+ 
+Now open http://localhost:2342/ in a browser to see the Web UI.
 Sign in with the user `admin` and the initial password configured via `PHOTOPRISM_ADMIN_PASSWORD`.
 You may change it on the [account settings page](../user-guide/settings/account.md), 
 or using the `photoprism passwd` command in a terminal.
-A minimum length of 4 characters is required.
+Enabling [public mode](config-options.md) will disable authentication.
 
 !!! note ""
     It's not possible to **change the initial password** via `PHOTOPRISM_ADMIN_PASSWORD` after PhotoPrism 
-    has been started for the first time. You may run `docker-compose exec photoprism photoprism reset` in a terminal to
-    reset your database for a clean start.
+    has been started for the first time. The terminal command `docker-compose exec photoprism photoprism reset`
+    will reset your database for a clean start. Ensure you're in the right directory and the container is running 
+    before using it.
 
-The port and other basic settings may be changed in `docker-compose.yml`.
-Remember to stop and re-create the container whenever configuration values have been changed:
+In case you can't connect, try starting the server without `-d` so that you see log messages for troubleshooting.
+PhotoPrism will report specific issues like bad folder permissions, or when it can't connect to the database.
+
+The server port and other basic settings may be changed in `docker-compose.yml` at any time.
+Remember to properly restart the container whenever it has been changed:
 
 ```
 docker-compose stop photoprism
@@ -109,25 +108,23 @@ docker-compose up -d photoprism
 
 ### Step 3: Index your library ###
 
-Go to *Library* in our Web UI to start indexing or importing. Alternatively, you may run this command 
-in a terminal to index all files in your *originals* folder:
+!!! attention ""
+    Ensure there is enough disk space available for creating thumbnails and verify file system permissions
+    before starting to index: Files in the *originals* folder must be readable, while the *storage* folder
+    including all subdirectories must be readable and writeable.
 
-```
-docker-compose exec photoprism photoprism index
-```
+Go to *Library* in the Web UI to start indexing your pictures.
 
-While indexing, a JPEG sidecar file may automatically be created for RAW, HEIF, TIFF, PNG, BMP, 
-and GIF files. It is required for classification and resampling. By default, it will be created
-in the *storage* folder, so that your originals can be mounted read-only.
-You may configure PhotoPrism to store it in the same folder, next to the original, instead.
+While indexing, JPEG sidecar files may be created for originals in other formats such as RAW and HEIF. 
+This is required for image classification, facial recognition, and for displaying them in a Web browser. 
+Sidecar and thumbnail files will be added to the *storage* folder, so that your *originals* folder won't be modified.
 
-Pictures will become visible one after another. You can watch the indexer working in the terminal, 
-or the *Logs* tab in *Library*.
+Pictures will become visible one after another. Open the *Logs* tab in *Library* 
+to watch the indexer working.
 
-Your photos and videos can now be browsed, organized in albums, and shared with others.
-You may continue using your favorite tools, like Photoshop or Lightroom,
-to edit, add and delete files in the *originals* folder.
-Run `docker-compose exec photoprism photoprism index`, or go to *Library* and click *Start*, to update the index as needed.
+Of course, you can continue using your favorite tools for processing RAW files, editing metadata, 
+or importing new shots. Go to *Library* and click *Start* to update the index after files have been 
+changed, added, or removed. This can also be automated using a scheduler and PhotoPrism's CLI commands.
 
 Easy, isn't it?
 

@@ -28,14 +28,9 @@ docker run -d \
 ```
 
 !!! danger ""
-    Please change `PHOTOPRISM_ADMIN_PASSWORD` so that PhotoPrism starts with a **secure initial password**.
-    Never use `photoprism`, or other easy-to-guess passwords, on a public server.
+    Always change `PHOTOPRISM_ADMIN_PASSWORD` so that PhotoPrism starts with a **secure initial password**.
+    Never use easy-to-guess passwords or default values like `insecure` on publicly accessible servers.
     A minimum length of 4 characters is required.
-
-!!! attention ""
-    Make sure there is enough disk space available for creating thumbnails and verify file system permissions 
-    before starting to index: Files in the *originals* folder must be readable, while the *storage* folder 
-    including all subfolders must be readable and writeable.
 
 Now open http://localhost:2342/ in a Web browser to see the user interface.
 Sign in with the user `admin` and the initial password configured via `PHOTOPRISM_ADMIN_PASSWORD`.
@@ -50,19 +45,18 @@ A minimum length of 4 characters is required.
 
 This is a simplified configuration compared to our [Docker Compose](docker-compose.md) example:
 
-* The `/photoprism/import` folder is not [mounted](https://docs.docker.com/storage/bind-mounts/) 
-  so that you can't easily access it from your host machine. 
-  Uploading files or mounting it via [WebDAV](../user-guide/sync/webdav.md) 
-  is still possible.
-* Settings, index, sidecar files, and thumbnails will be put 
-  in `/photoprism/storage`. 
-  You may also [mount](https://docs.docker.com/storage/bind-mounts/)
-  this path to a local folder instead of an anonymous volume.
+No host folder has been [mounted](https://docs.docker.com/storage/bind-mounts/) to `/photoprism/import`.
+Importing files via Web upload or [WebDAV](../user-guide/sync/webdav.md) is still possible.
+
+Cache, session, thumbnail, and sidecar files will be created in `/photoprism/storage`, which is mounted as 
+an [anonymous volume](https://docs.docker.com/storage/bind-mounts/) in our example. You may want to 
+mount a specific host directory instead. Never remove the volume completely so that you don't lose your 
+index and other these files after restarting or upgrading the container.
 
 The default port 2342 and other configuration values may be changed as needed,
 see [Config Options](config-options.md) for details.
 
-Multiple folders can be indexed by mounting them as sub-folders of `/photoprism/originals`:
+Multiple folders can be made accessible by mounting them as subfolders like this:
 
 ```
 -v ~/Example:/photoprism/originals/Example
@@ -77,25 +71,23 @@ Multiple folders can be indexed by mounting them as sub-folders of `/photoprism/
 
 ### Step 2: Index your library ###
 
-Go to *Library* in our Web UI to start indexing or importing.
-Alternatively, you can run this command in a terminal to index all files in your *originals* folder:
+!!! attention ""
+    Ensure there is enough disk space available for creating thumbnails and verify file system permissions
+    before starting to index: Files in the *originals* folder must be readable, while the *storage* folder
+    including all subdirectories must be readable and writeable.
 
-```
-docker exec -ti photoprism photoprism index
-```
+Go to *Library* in the Web UI to start indexing your pictures.
 
-While indexing, a JPEG sidecar file may automatically be created for RAW, HEIF, TIFF, PNG, BMP,
-and GIF files. It is required for classification and resampling. By default, it will be created
-in the *storage* folder, so that your originals can be mounted read-only.
-You may configure PhotoPrism to store it in the same folder, next to the original, instead.
+While indexing, JPEG sidecar files may be created for originals in other formats such as RAW and HEIF.
+This is required for image classification, facial recognition, and for displaying them in a Web browser.
+Sidecar and thumbnail files will be added to the *storage* folder, so that your *originals* folder won't be modified.
 
-Pictures will become visible one after another. You can watch the indexer working in the terminal,
-or the *Logs* tab in *Library*.
+Pictures will become visible one after another. Open the *Logs* tab in *Library*
+to watch the indexer working.
 
-Your photos and videos can now be browsed, organized in albums, and shared with others.
-You may continue using your favorite tools, like Photoshop or Lightroom,
-to edit, add and delete files in the *originals* folder.
-Run `photoprism index`, or go to *Library* and click *Start*, to update the index as needed.
+Of course, you can continue using your favorite tools for processing RAW files, editing metadata,
+or importing new shots. Go to *Library* and click *Start* to update the index after files have been
+changed, added, or removed. This can also be automated using a scheduler and PhotoPrism's CLI commands.
 
 Easy, isn't it?
 

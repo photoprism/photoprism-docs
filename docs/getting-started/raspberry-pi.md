@@ -13,7 +13,7 @@ as for regular Linux servers apply.
     Owners of ARMv7-based devices have to revert to an [alternative image](https://hub.docker.com/r/linuxserver/mariadb) 
     if they want to use MariaDB.
     The [official image](https://hub.docker.com/_/mariadb) is available for AMD64 and ARM64 only.
-    Pay close attention to changed default directories and environment variable names.
+    Pay close attention to changed directory and environment variable names.
 
 ### System Requirements ###
 

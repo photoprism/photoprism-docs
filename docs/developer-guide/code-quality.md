@@ -1,4 +1,4 @@
-# A Few Words About Code Quality
+# Code Quality
 
 !!! quote "[Allen Holub](https://twitter.com/allenholub/status/1073738216140791808)"
     Code quality has a practical impact on both your agility and the cost of development. 
@@ -15,7 +15,7 @@ results in bloated code, and fewer developers understand what is going on.
 Write tests instead so that you can safely 
 [refactor](https://martinfowler.com/bliki/DefinitionOfRefactoring.html) when really needed.
 
-!!! tip
+!!! tip ""
     Maintaining small amounts of duplicate code is much easier and less work
     than choosing the wrong abstraction.
 
@@ -31,7 +31,7 @@ we encourage all contributors to refactor whenever they see a specific issue, an
 on related code anyways (so that you can validate if your changes are helpful). 
 This way, there is no need for extra refactoring tasks or epics. Let's experiment and see how far we get with this.
 
-!!! tip
+!!! tip ""
     Ugly code is not a problem as long as there are tests, 
     there are no security issues, and it can be easily refactored later. 
     Nobody needs beautiful code that doesn't work.
@@ -58,7 +58,7 @@ A coverage log file created by the Go test runner is automatically sent to [Code
 
 [Go Report Card][goreport] finds typical issues in Go code while [Codacy][codacy] is a more general service that also reports issues found in Dockerfiles and other programming languages.
 
-!!! tip
+!!! tip ""
     Not every issue reported by tools is really important and needs to be fixed instantly. Use reports for inspiration when you need some.
 
 [goreport]: https://goreportcard.com/report/github.com/photoprism/photoprism

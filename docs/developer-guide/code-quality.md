@@ -54,9 +54,9 @@ We strive for complete test coverage. Code that cannot be tested is flawed.
 
 A coverage log file created by the Go test runner is automatically sent to [Codecov][codecov] every time our `develop` branch was successfully built and tested on [Travis CI](https://travis-ci.org/photoprism/photoprism). Codecov provides a beautiful UI for displaying coverage reports and renders a badge showing the current test coverage. Custom settings for our report are located in [codecov.yml](https://github.com/photoprism/photoprism/blob/develop/codecov.yml). For example, `range: 50..90` means the badge will be green if coverage is >= 90% and red if it is <= 50%.
 
-## Quality Reports [![Code Quality](https://goreportcard.com/badge/github.com/photoprism/photoprism)][goreport] [![Codacy Badge](https://api.codacy.com/project/badge/Grade/ea5b6b16814540469f384b8ff35ba511)][codacy] ##
+## Quality Reports [![Code Quality](https://goreportcard.com/badge/github.com/photoprism/photoprism)][goreport] ##
 
-[Go Report Card][goreport] finds typical issues in Go code while [Codacy][codacy] is a more general service that also reports issues found in Dockerfiles and other programming languages.
+* [goreportcard.com][goreport] finds typical issues in Go source code
 
 !!! tip ""
     Not every issue reported by tools is really important and needs to be fixed instantly. Use reports for inspiration when you need some.

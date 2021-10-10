@@ -46,10 +46,9 @@ Enabling [public mode](config-options.md) will disable authentication.
 In case you can't connect, try starting the server without `-d` so that you see log messages for troubleshooting.
 PhotoPrism will report specific issues like bad folder permissions, or when it can't connect to the database.
 
-This is a simplified configuration compared to our [Docker Compose](docker-compose.md) example:
-
-No host folder has been [mounted](https://docs.docker.com/storage/bind-mounts/) to `/photoprism/import`.
-Importing files via Web upload or [WebDAV](../user-guide/sync/webdav.md) is still possible.
+[Mounting](https://docs.docker.com/storage/bind-mounts/) an *import* folder to `/photoprism/import` for adding new 
+files is optional. If you prefer a different workflow, you can skip this. Importing files via Web upload 
+or [WebDAV](../user-guide/sync/webdav.md) is still possible, unless [read-only mode](config-options.md) is enabled.
 
 Cache, session, thumbnail, and sidecar files will be created in `/photoprism/storage`, which is mounted as 
 an [anonymous volume](https://docs.docker.com/storage/bind-mounts/) in our example. You may want to 

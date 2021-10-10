@@ -61,8 +61,9 @@ volumes:
   - "/media/photos:/photoprism/originals/media"
 ```
 
-Mounting an *import* folder for adding new files to your library is optional. If you prefer a different workflow 
-or read-only mode is enabled, you can skip this.
+Mounting an *import* folder for adding new files to your library is optional. If you prefer a different workflow, 
+you can skip this. Importing files via Web upload or [WebDAV](../user-guide/sync/webdav.md) is still possible, 
+unless [read-only mode](config-options.md) is enabled.
 
 Cache, session, thumbnail, and sidecar files will be created in the *storage* folder. Never remove the volume from
 your `docker-compose.yml` file so that you don't lose these files after restarting or upgrading the container.

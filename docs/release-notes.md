@@ -1,20 +1,26 @@
 # Release Notes
 
-!!! important "New Release"
-    Our latest release comes as a single [multi-arch image](https://hub.docker.com/r/photoprism/photoprism)
-    for AMD64, ARM64, and ARMv7. That means you don't need to pull from different Docker repositories anymore.
+!!! note ""
+    The stable version and development preview now come as a single [multi-arch image](https://hub.docker.com/r/photoprism/photoprism)
+    for **AMD64, ARM64, and ARMv7**. That means you don't need to pull from different Docker repositories anymore. 
     We recommend updating your existing `docker-compose.yml` config based on [our examples](https://dl.photoprism.org/docker/).
-
-!!! info "Preview Builds"
-    [Update](getting-started/updates.md) your [`docker-compose.yml`](https://dl.photoprism.org/docker/) 
-    to use [`photoprism/photoprism:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&ordering=last_updated)
-    instead of `photoprism/photoprism:latest` for testing
-    our [development preview](https://github.com/photoprism/photoprism/tree/preview).
 
 ### Development Preview ###
 
-- [Fixed typo in German frontend translation](https://github.com/photoprism/photoprism/blob/fa57db7aa43fa03eef7a738122e15a98af574713/frontend/src/locales/de.po#L494)
-- [Updated backend translations](https://github.com/photoprism/photoprism/tree/develop/assets/locales), [learn how to contribute](developer-guide/translations.md)
+!!! info ""
+    You can test our latest features and improvements by changing the image from `photoprism/photoprism:latest` 
+    to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.org/docker/). 
+    Then [pull the most recent image](getting-started/updates.md) and restart your instance.
+
+### October 10, 2021 ###
+
+Build [211010-83b4f783](https://drone.photoprism.app/photoprism/photoprism/2076)
+
+- Translations: [Fixed German frontend typo](https://github.com/photoprism/photoprism/blob/fa57db7aa43fa03eef7a738122e15a98af574713/frontend/src/locales/de.po#L494)
+- Translations: [Updated all backend locales](https://github.com/photoprism/photoprism/tree/develop/assets/locales)
+
+*We've generated missing translations with the help of DeepL and Google Translate. Native speakers are 
+invited to help us improve those if needed. [Learn how to contribute](developer-guide/translations.md).*
 
 ### October 9, 2021 ###
 
@@ -26,7 +32,7 @@ Build [211009-d6cc8df5](https://drone.photoprism.app/photoprism/photoprism/2068)
 - Folders: [Directory names listed in .ppignore are ignored](https://github.com/photoprism/photoprism/issues/1609)
 - Config: [Allows bypassing low memory suggestion](https://github.com/photoprism/photoprism/issues/1611)
 - Docs: [Updated about page](https://github.com/photoprism/photoprism/commit/1cc8cb7ad42bcd847a03a3bba52ad265b0f3fce2)
-- [Updated frontend translations](https://github.com/photoprism/photoprism/tree/develop/frontend/src/locales), [learn how to contribute](developer-guide/translations.md)
+- Translations: [Updated all frontend locales](https://github.com/photoprism/photoprism/tree/develop/frontend/src/locales)
 
 ### October 7, 2021 ###
 

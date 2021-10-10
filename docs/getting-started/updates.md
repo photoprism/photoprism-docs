@@ -1,5 +1,11 @@
 # Getting Updates
 
+!!! note ""
+    The [stable version](../release-notes.md) and [development preview](https://github.com/photoprism/photoprism/tree/preview) 
+    now come as a single [multi-arch image](https://hub.docker.com/r/photoprism/photoprism) for **AMD64, ARM64, and ARMv7**. 
+    That means you don't need to pull from different Docker repositories anymore. We recommend updating your existing 
+    `docker-compose.yml` config based on [our examples](https://dl.photoprism.org/docker/).
+
 !!! example ""
     **This open-source project is made possible [thanks to our sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md).**
     If you enjoy using PhotoPrism, please consider backing us on [Patreon](https://www.patreon.com/photoprism)
@@ -23,15 +29,10 @@ Advanced users may put this into a `Makefile` so that they only need to type a s
 
 See [Setup Using Docker Compose](docker-compose.md) for a full command reference.
 
-
-!!! important "New Release"
-    Our [latest release](../release-notes.md) comes as a single [multi-arch image](https://hub.docker.com/r/photoprism/photoprism)
-    for AMD64, ARM64, and ARMv7. That means you don't need to pull from different Docker repositories anymore.
-    We recommend updating your existing `docker-compose.yml` config based on [our examples](https://dl.photoprism.org/docker/).
-
-!!! info "Preview Builds"
-    Update your `docker-compose.yml` to use `photoprism/photoprism:preview` instead of 
-    `photoprism/photoprism:latest` for testing our latest development preview.
+!!! info ""
+    You can test our latest features and improvements by changing the image from `photoprism/photoprism:latest`
+    to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.org/docker/).
+    Then pull the most recent image and restart your instance.
 
 ### Facial Recognition ###
 
@@ -76,6 +77,6 @@ docker pull photoprism/photoprism:latest
 
 See [Running PhotoPrism with Docker](docker.md) for a full command reference.
 
-!!! info "Preview Builds"
-    Use `photoprism/photoprism:preview` instead of `photoprism/photoprism:latest` for testing 
-    our latest development preview.
+!!! info ""
+    You can test our latest features and improvements by using `photoprism/photoprism:preview` 
+    instead of `photoprism/photoprism:latest`.

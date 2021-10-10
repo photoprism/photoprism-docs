@@ -15,7 +15,8 @@
 
 ### Docker Compose ###
 
-Open a terminal on your server, and run the following commands to pull the latest container image and restart PhotoPrism:
+Open a terminal and change to the directory where your `docker-compose.yml` is located.
+Now run the following commands to pull the latest Docker image and restart your instance in the background:
 
 ```
 docker-compose pull photoprism
@@ -23,7 +24,7 @@ docker-compose stop photoprism
 docker-compose up -d photoprism
 ```
 
-Pulling a new version can take several minutes, depending on your internet connection.
+Pulling a new version can take several minutes, depending on your internet connection speed.
 
 Advanced users may put this into a `Makefile` so that they only need to type a single command.
 

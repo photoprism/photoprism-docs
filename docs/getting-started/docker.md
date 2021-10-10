@@ -76,7 +76,7 @@ Multiple folders can be made accessible by mounting them as subfolders like this
     before starting to index: Files in the *originals* folder must be readable, while the *storage* folder
     including all subdirectories must be readable and writeable.
 
-Go to *Library* in the Web UI to start indexing your pictures.
+Open the Web UI, go to *Library* and click *Start* to start indexing your pictures.
 
 While indexing, JPEG sidecar files may be created for originals in other formats such as RAW and HEIF.
 This is required for image classification, facial recognition, and for displaying them in a Web browser.

@@ -33,8 +33,9 @@ docker run -d \
     A minimum length of 4 characters is required.
 
 !!! attention ""
-    Make sure there is enough disk space available and verify file system permissions before starting to index:
-    The *originals* folder must be readable, while *storage* must be readable and writeable.
+    Make sure there is enough disk space available for creating thumbnails and verify file system permissions 
+    before starting to index: Files in the *originals* folder must be readable, while the *storage* folder 
+    including all subfolders must be readable and writeable.
 
 Now open http://localhost:2342/ in a Web browser to see the user interface.
 Sign in with the user `admin` and the initial password configured via `PHOTOPRISM_ADMIN_PASSWORD`.

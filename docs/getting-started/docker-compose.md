@@ -59,8 +59,9 @@ volumes:
 ```
 
 !!! attention ""
-    Make sure there is enough disk space available and verify file system permissions before starting to index:
-    The *originals* folder must be readable, while *storage* must be readable and writeable.
+    Make sure there is enough disk space available for creating thumbnails and verify file system permissions
+    before starting to index: Files in the *originals* folder must be readable, while the *storage* folder
+    including all subfolders must be readable and writeable.
 
 The *import* folder points to `~/Import` by default, so that you can easily access it.
 If you don't need this feature, e.g. because you manage all files manually or 

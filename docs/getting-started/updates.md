@@ -28,7 +28,7 @@ Pulling a new version can take several minutes, depending on your internet conne
 
 Advanced users may put this into a `Makefile` so that they only need to type a single command.
 
-See [Setup Using Docker Compose](docker-compose.md) for a full command reference.
+See [Setup Using Docker Compose](docker-compose.md) for a command reference.
 
 !!! info ""
     You can test our latest features and improvements by changing the image from `photoprism/photoprism:latest`
@@ -76,7 +76,7 @@ Open a terminal on your server, and run the following command to pull the latest
 docker pull photoprism/photoprism:latest
 ```
 
-See [Running PhotoPrism with Docker](docker.md) for a full command reference.
+See [Running PhotoPrism with Docker](docker.md) for a command reference.
 
 !!! info ""
     You can test our latest features and improvements by using `photoprism/photoprism:preview` 

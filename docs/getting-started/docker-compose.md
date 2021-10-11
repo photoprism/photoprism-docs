@@ -52,7 +52,7 @@ installed on your system. It is available for Mac, Linux, and Windows.
     [Microsoft doesn't offer](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements) 
     to its Windows Home customers. Docker Desktop uses dynamic memory allocation with WSL 2. It's important 
     to explicitly [increase the Docker memory limit](img/docker-resources-advanced.jpg) to 4 GB or more when using 
-    Hyper-V. The default of 2 GB may reduce indexing performance or cause unexpected restarts.
+    Hyper-V. The default of 2 GB may reduce indexing performance and cause unexpected restarts.
 
 === "macOS"
 
@@ -65,7 +65,7 @@ installed on your system. It is available for Mac, Linux, and Windows.
     ``` 
     
     It's important to [increase the Docker memory limit](img/docker-resources-advanced.jpg) to 4 GB or more,
-    as the default of 2 GB may reduce indexing performance or cause unexpected restarts.
+    as the default of 2 GB may reduce indexing performance and cause unexpected restarts.
 
 !!! danger ""
     Always change `PHOTOPRISM_ADMIN_PASSWORD` so that PhotoPrism starts with a **secure initial password**.

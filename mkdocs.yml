@@ -32,7 +32,6 @@ nav:
   - User Guide:
     - Introduction: user-guide/index.md
     # - Setting up: user-guide/setup.md
-    - Navigate: user-guide/navigate.md
     - Index:
       - Introduction: user-guide/library/index.md
       - Originals: user-guide/library/originals.md
@@ -48,34 +47,35 @@ nav:
     # - Sync and Back Up:
     # - WebDAV Sync
     #    - Nextcloud: user-guide/nextcloud.md
-    - Organize:
-      - Browse:
-        - Sections: user-guide/organize/browse.md
-        - Views: user-guide/organize/views.md
+    - Browse & Search:
+      - Navigate: user-guide/navigate.md
+      - Views: user-guide/organize/views.md
       - Search: user-guide/organize/search.md
-      - Review: user-guide/organize/review.md
-      - Stacks: user-guide/organize/stacks.md
-      - Panoramas: user-guide/organize/panoramas.md
-      - Scans: user-guide/organize/scans.md
-      - Private: user-guide/organize/private.md
-      - Archive: user-guide/organize/archive.md
+      - Sections: user-guide/organize/browse.md
+    - Organize:
       - Albums: user-guide/organize/albums.md
       - People: user-guide/organize/people.md
       - Labels: user-guide/organize/labels.md
-      - Places: user-guide/organize/places.md
+      - Archive: user-guide/organize/archive.md
+      - Delete: user-guide/organize/delete.md
+      - Private: user-guide/organize/private.md
+      - Review: user-guide/organize/review.md
+      - Stacks: user-guide/organize/stacks.md
+      - Add/Edit Metadata: user-guide/organize/edit.md
+      - Download: user-guide/organize/download.md
       - Videos: user-guide/organize/video.md
+      - Places: user-guide/organize/places.md
       - Moments: user-guide/organize/moments.md
-      - Folders: user-guide/organize/folders.md
       - Calendar: user-guide/organize/calendar.md
-      - Edit Details: user-guide/organize/edit.md
-      - Download Files: user-guide/organize/download.md
-      - Delete Files: user-guide/organize/delete.md
+      - Folders: user-guide/organize/folders.md
+      - Panoramas: user-guide/organize/panoramas.md
+      - Scans: user-guide/organize/scans.md
+    - Share:
+        - Album Link: user-guide/share/share.md
     - Sync:
       - WebDAV: user-guide/sync/webdav.md
       - Mobile Devices: user-guide/sync/mobile-devices.md
       - Dropbox: user-guide/sync/dropbox.md
-    - Share:
-      - Album Link: user-guide/share/share.md
     - Settings:
       - General: user-guide/settings/general.md
       - Library: user-guide/settings/library.md

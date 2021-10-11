@@ -6,7 +6,7 @@ Say goodbye to uploading your visual memories to the cloud!
 
 ![Screenshot](https://dl.photoprism.org/assets/img/preview.jpg)
 
-## Features ##
+## Key Features ##
 
 * PhotoPrism® makes browsing and organizing your pictures as easy as it should be, whether it’s on a phone, tablet, or desktop computer
 * Because the [user interface](https://demo.photoprism.org/) is a [Progressive Web App](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps),

@@ -6,7 +6,7 @@ system is a Web browser and [Docker](https://store.docker.com/search?type=editio
 It is available for Mac, Linux, and Windows.
 
 When setup is complete, you can start [indexing your pictures](../user-guide/library/index.md).
-Be patient, this may take a while depending on your server hardware and how many pictures you have.
+Be patient, this may take a while depending on your server hardware and how many files you have.
 
 Already indexed photos can be browsed in [Photos](../user-guide/organize/browse.md)
 while videos show up in [Videos](../user-guide/organize/video.md).

@@ -18,7 +18,7 @@ You can turn this and other features off in [Settings](settings/general.md), dep
 your specific use case.
 
 !!! note ""
-    The [stable version](../release-notes.md) and development preview now come as a single
+    Our [stable version](../release-notes.md) and development preview now come as a single
     [multi-arch image](https://hub.docker.com/r/photoprism/photoprism) for **AMD64, ARM64, and ARMv7**.
     That means you don't need to pull from different Docker repositories anymore. We recommend updating your existing
     `docker-compose.yml` config based on [our examples](https://dl.photoprism.org/docker/).

@@ -1,6 +1,6 @@
 # Running PhotoPrism on a Raspberry Pi
 
-The [stable version](../release-notes.md) and development preview now come as a single
+Our [stable version](../release-notes.md) and development preview now come as a single
 [multi-arch image](https://hub.docker.com/r/photoprism/photoprism) for AMD64, ARM64, and ARMv7.
 
 Existing users don't need to pull from a different Docker repository anymore. We recommend updating your

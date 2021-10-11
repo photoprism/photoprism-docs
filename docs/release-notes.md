@@ -1,7 +1,7 @@
 # Release Notes
 
 !!! note ""
-    The stable version and development preview now come as a single [multi-arch image](https://hub.docker.com/r/photoprism/photoprism)
+    Our stable version and development preview now come as a single [multi-arch image](https://hub.docker.com/r/photoprism/photoprism)
     for **AMD64, ARM64, and ARMv7**. That means you don't need to pull from different Docker repositories anymore. 
     We recommend updating your existing `docker-compose.yml` config based on [our examples](https://dl.photoprism.org/docker/).
 

@@ -1,26 +1,6 @@
 # Frequently Asked Questions
 
-## General ##
-
-??? question "Which file types are supported?"
-
-    PhotoPrism's primary image file format is JPEG.
-    While indexing, a JPEG sidecar file may automatically be created for RAW, HEIF, TIFF, PNG, BMP,
-    and GIF files. It is required for classification and resampling.
-
-    Support for specific RAW formats depends on the runtime environment and configuration. PhotoPrism may use
-    [Darktable](https://www.darktable.org/) and [RawTherapee](https://rawtherapee.com/) for RAW to JPEG conversion.
-    On Mac OS, [Sips](https://ss64.com/osx/sips.html) can be used as well.
-    
-    We support [all common video types](../developer-guide/media/videos.md).
-    You should configure PhotoPrism to automatically create JSON sidecar files so that
-    video metadata like location and duration can be indexed.
-    
-    You're welcome to open an issue if you experience issues with a specific file format.
-
-??? question "Can I use the web interface to permanently delete files?"
-
-    Yes, you can [permanently delete](./organize/delete.md) files.
+## User Interface ##
 
 ??? question "Can I use trees for organizing my pictures and albums?"
       Except in *Library > Originals* and for object classification in *Labels*, PhotoPrism does not
@@ -56,7 +36,28 @@
       * **Keywords** are primarily used for searching. They may include similar terms and translations,
       like "kitten", "kitty", and "cat".
 
-## Files ##
+??? question "Can I use the web interface to permanently delete files?"
+
+    Yes, you can [permanently delete](./organize/delete.md) files.
+
+## Library, Counts & Files ##
+
+??? question "Which file types are supported?"
+
+    PhotoPrism's primary image file format is JPEG.
+    While indexing, a JPEG sidecar file may automatically be created for RAW, HEIF, TIFF, PNG, BMP,
+    and GIF files. It is required for classification and resampling.
+
+    Support for specific RAW formats depends on the runtime environment and configuration. PhotoPrism may use
+    [Darktable](https://www.darktable.org/) and [RawTherapee](https://rawtherapee.com/) for RAW to JPEG conversion.
+    On Mac OS, [Sips](https://ss64.com/osx/sips.html) can be used as well.
+    
+    We support [all common video types](../developer-guide/media/videos.md).
+    You should configure PhotoPrism to automatically create JSON sidecar files so that
+    video metadata like location and duration can be indexed.
+    
+    You're welcome to open an issue if you experience issues with a specific file format.
+
 ??? question "Some files seem hidden, where are they?"
 
     If the [quality filter](organize/review.md) is enabled, you might find them in *Photos > Review*. Otherwise, their
@@ -92,6 +93,7 @@
     In the UI they are shown in the *Originals* section and added to its count.
 
 ## Metadata ##
+
 ??? question "Why do some of my photos without geolocation information show a random location?"
 
     PhotoPrism estimates the location of photos without geolocation from photos that have been taken on the same day.
@@ -106,7 +108,7 @@
     To fix the date directly in your image or video files, please use other applications
     like Photoshop, or Exiftool, and re-index your library.
 
-## Synchronization ##
+## WebDAV, Sync & Upload ##
 
 ??? question "Why do I get an error when trying to add a remote server for syncing?" 
 

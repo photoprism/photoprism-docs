@@ -13,6 +13,7 @@ Say goodbye to uploading your visual memories to the cloud!
   it provides a native app-like experience, and you can easily install it on the home screen of common operating systems and devices
 * Includes four high-resolution [world maps](https://demo.photoprism.org/places) to see where you've been,
   and for rediscovering long-forgotten shots
+* Play Live Photos™ by hovering over them in albums and search results
 * Enjoy privacy-preserving face detection and recognition 💎
 * AI-powered [image classification](https://docs.photoprism.org/developer-guide/metadata/classification/)
   based on Google TensorFlow

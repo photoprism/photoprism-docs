@@ -10,7 +10,7 @@ based on our [Dockerfile](https://github.com/photoprism/photoprism/blob/develop/
 git clone git@github.com:photoprism/photoprism.git
 ```
 
-!!! tip
+!!! tip ""
     If you're on windows, make sure to disable auto CR LF. Otherwise, the build won't work.
     `git config --global core.autocrlf false`
     

@@ -46,7 +46,7 @@ You can open, edit and save them with Poedit to update existing translations.
 - Run `npm run gettext-compile` to compile existing translations into a single `translations.json` file
 - To test your translations you need to build the frontend again using `npm run build` or `npm run watch`
 
-!!! note
+!!! note ""
     A binary `*.mo` (machine object) file will be automatically saved along with every `*.po` file. 
     You won't be able to open those in a text editor, but please include them in git commits or when sending
     translations via email. The compiled `translations.json` file is not required for pull requests 
@@ -82,7 +82,7 @@ which will be automatically created by Poedit.
 - Now you can start proofreading and adding the missing translations
 - Once you're done, save the changes in the default.po file
 
-!!! info
+!!! info ""
     Note that this will only work when you have gettext installed on your system.
     We recommend using our latest development image as described in the Developer Guide.
 

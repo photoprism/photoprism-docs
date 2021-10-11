@@ -36,10 +36,6 @@ Acceptance Criteria:
 
 > It is fundamentally the confusion between effectiveness and efficiency that stands between doing the right things and doing things right. There is surely nothing quite so useless as doing with great efficiency what should not be done at all.<br>— <cite>Peter Drucker</cite>
 
-### Mailing List ###
-
-Please join our [developers mailing list](https://groups.google.com/a/photoprism.org/forum/#!forum/developers) to receive regular project updates, get in contact with other contributors and discuss your ideas. Don't be afraid to ask stupid questions.
-
 ### Developer Chat ###
 
 [![Community Chat](https://img.shields.io/badge/community%20chat-on%20gitter-4aa087.svg)](https://gitter.im/browseyourlife/community)

@@ -20,7 +20,7 @@ To submit new code, follow these steps:
     * `git merge upstream/develop`
   * We recommend running [tests](https://docs.photoprism.org/developer-guide/tests/) after each change to make sure you didn't break anything:
     * `make test`
-  * **Add [tests](https://docs.photoprism.org/developer-guide/tests/) for any new code.** If you have questions about how to do this, please ask in your pull request or on our [mailing list](https://groups.google.com/a/photoprism.org/forum/#!forum/developers).
+  * **Add [tests](https://docs.photoprism.org/developer-guide/tests/) for any new code.** If you have questions about how to do this, please ask in your pull request.
   * Please run `make fmt` to ensure code is properly formatted according to our standards.
   * If all tests are green and you see no other errors, commit your changes. To reference related [GitHub issues](https://github.com/photoprism/photoprism/issues), please end your commit message with the issue ID like `#1234`:
       * `git status -s`

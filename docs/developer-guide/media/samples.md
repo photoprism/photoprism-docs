@@ -1,6 +1,7 @@
 For now, we only want to support RAW and JPEG from the most popular camera brands/models. Therefore we need an archive of example pictures for testing purposes. 
 
 In the tables below you see for which camera models we still need images. In case you have images from the requested cameras you want to share with us:
+
 * You can get an account for uploading example images to https://dl.photoprism.org/samples/, please ask
 * You can also send us images per mail
 

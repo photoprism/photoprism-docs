@@ -12,7 +12,7 @@ Your [photos](organize/browse.md) and [videos](organize/video.md) will successiv
 in search results and other parts of the user interface. The counts in the navigation are constantly 
 updated, so you can follow the progress.
 
-In case some of your pictures are still missing when indexing has been completed,
+In case some of your pictures are still missing after indexing has been completed,
 they might be in [Review](organize/review.md) due to low quality or incomplete metadata.
 You can turn this and other features off in [Settings](settings/general.md), depending on
 your specific use case.

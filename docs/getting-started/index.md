@@ -12,7 +12,7 @@ Your [photos](../user-guide/organize/browse.md) and [videos](../user-guide/organ
 will successively become visible in search results and other parts of the user interface.
 The counts in the navigation are constantly updated, so you can follow the progress.
 
-In case some of your pictures are still missing when indexing has been completed, 
+In case some of your pictures are still missing after indexing has been completed, 
 they might be in [Review](../user-guide/organize/review.md) due to low quality or incomplete metadata. 
 You can turn this and other features off in [Settings](../user-guide/settings/general.md), 
 depending on your specific use case.

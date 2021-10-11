@@ -37,14 +37,13 @@ See [Setup Using Docker Compose](docker-compose.md) for a command reference.
 
 ### Facial Recognition ###
 
-Existing users may index faces in originals without performing a complete rescan:
+Existing users may index faces without performing a complete rescan by running this command in a terminal:
 
 ```
 docker-compose exec photoprism photoprism faces index
 ```
 
-For a fresh start e.g. after upgrading from a development preview, remove
-known people and faces before re-indexing:
+For a fresh start e.g. after upgrading from a development preview, remove known people and faces before re-indexing:
 
 ```
 docker-compose exec photoprism photoprism faces reset -f

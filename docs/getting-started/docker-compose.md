@@ -1,57 +1,91 @@
 # Setup Using Docker Compose
 
-Before you start, make sure you have [Docker](https://store.docker.com/search?type=edition&offering=community) installed on your system. 
-It is available for Mac, Linux and Windows.
-Developers may skip this and move on to the [Developer Guide](../developer-guide/index.md).
-
+Before you start, make sure you have [Docker](https://store.docker.com/search?type=edition&offering=community) 
+installed on your system. It is available for Mac, Linux and Windows.
 We plan to provide downloadable installation packages for future releases.
-
-!!! note "Windows"
-    Windows users may need to [disable](img/docker-disable-wsl2.jpg) the WSL 2 based engine in *Docker Settings > General*
-    to mount drives other than `C:`. Please use this [docker-compose.yml](https://dl.photoprism.org/docker/windows/docker-compose.yml)
-    example to get started and [increase](img/docker-resources-advanced.jpg) the Docker memory limit 
-    to 4 GB or more, as the default of 2 GB may reduce indexing performance or cause restarts.
-
-!!! note "macOS"
-    macOS users should [increase](img/docker-resources-advanced.jpg) the Docker memory limit to 4 GB or more,
-    as the default of 2 GB may reduce indexing performance or cause restarts.
-    Please use this [docker-compose.yml](https://dl.photoprism.org/docker/macos/docker-compose.yml)
-    example to get started.
-
-!!! note "Linux & Raspberry Pi"
-    Our latest release comes as a single [multi-arch image](https://hub.docker.com/r/photoprism/photoprism)
-    for AMD64, ARM64, and ARMv7. If your device meets the [system requirements](raspberry-pi.md),
-    mostly the same installation instructions as for regular Linux servers apply. 
-    ARMv7 users need an [alternative MariaDB image](https://hub.docker.com/r/linuxserver/mariadb) 
-    as the [official image](https://hub.docker.com/_/mariadb) is available for AMD64 and ARM64 only.
-    Commands may have to be prefixed with `sudo` when not running as root.
-    Note that this will point the home directory placeholder `~` to `/root` in your configuration.
-    Kernel security modules such as SELinux have been reported to cause 
-    [issues](https://docs.photoprism.org/getting-started/faq/#why-is-photoprism-getting-stuck-in-a-restart-loop).
 
 ### Step 1: Configure ###
 
-Download our [docker-compose.yml](https://dl.photoprism.org/docker/docker-compose.yml) file
-(right click and *Save Link As...* or use `wget`) to a folder of your choice,
-and change the [configuration](config-options.md) as needed:
+=== "Linux"
 
-```
-wget https://dl.photoprism.org/docker/docker-compose.yml
-```
+    Download our standard [docker-compose.yml](https://dl.photoprism.org/docker/docker-compose.yml) example
+    (right click and *Save Link As...* or use `wget`) to a folder of your choice,
+    and change the [configuration](config-options.md) as needed:
+    
+    ```
+    wget https://dl.photoprism.org/docker/docker-compose.yml
+    ``` 
+    
+    Commands on Linux may have to be prefixed with `sudo` when not running as root.
+    Note that this will point the home directory placeholder `~` to `/root` in volume mounts.
+    Kernel security modules such as AppArmor and SELinux have been reported to cause
+    [issues](https://docs.photoprism.org/getting-started/faq/#why-is-photoprism-getting-stuck-in-a-restart-loop).
+
+=== "Raspberry Pi"
+
+    Download our [docker-compose.yml](https://dl.photoprism.org/docker/arm64/docker-compose.yml) example for 
+    the Raspberry Pi (right click and *Save Link As...* or use `wget`) to a folder of your choice,
+    and change the [configuration](config-options.md) as needed:
+    
+    ```
+    wget https://dl.photoprism.org/docker/arm64/docker-compose.yml
+    ```
+
+    Mostly the same installation instructions as for regular Linux servers apply.
+    Commands may have to be prefixed with `sudo` when not running as root.
+    Ensure your device meets the [system requirements](raspberry-pi.md) before you continue.
+
+    !!! missing ""
+        Owners of ARMv7-based devices have to revert to an [alternative image](https://hub.docker.com/r/linuxserver/mariadb)
+        if they want to use MariaDB. The [official image](https://hub.docker.com/_/mariadb) is available for AMD64 and ARM64 only.
+        Pay close attention to changed directory and environment variable names.
+
+=== "Windows"
+
+    Download our [docker-compose.yml](https://dl.photoprism.org/docker/windows/docker-compose.yml) example for Windows
+    (right click and *Save Link As...*) to a folder of your choice,
+    and change the [configuration](config-options.md) as needed:
+ 
+    [https://dl.photoprism.org/docker/windows/docker-compose.yml :material-download:](https://dl.photoprism.org/docker/windows/docker-compose.yml)
+
+    Windows Pro users should [disable](img/docker-disable-wsl2.jpg) the WSL 2 based engine in *Docker Settings > General* 
+    so that they can mount drives other than `C:`. This will enable Hyper-V, which 
+    [Microsoft doesn't offer](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements) 
+    to its Windows Home customers. Docker Desktop uses dynamic memory allocation with WSL 2. It's important 
+    to [increase the Docker memory limit](img/docker-resources-advanced.jpg) to 4 GB or more otherwise, as the default 
+    of 2 GB may reduce indexing performance or cause restarts. 
+
+=== "macOS"
+
+    Download our [docker-compose.yml](https://dl.photoprism.org/docker/macos/docker-compose.yml) example for macOS
+    (right click and *Save Link As...* or use `wget`) to a folder of your choice,
+    and change the [configuration](config-options.md) as needed:
+
+    ```
+    curl -sSL https://dl.photoprism.org/docker/macos/docker-compose.yml -o docker-compose.yml
+    ``` 
+    
+    It's important to [increase the Docker memory limit](img/docker-resources-advanced.jpg) to 4 GB or more,
+    as the default of 2 GB may reduce indexing performance or cause unexpected restarts.
 
 !!! danger ""
     Always change `PHOTOPRISM_ADMIN_PASSWORD` so that PhotoPrism starts with a **secure initial password**.
     Never use easy-to-guess passwords or default values like `insecure` on publicly accessible servers.
+    For security reasons, there also is no default in case no password was provided.
     A minimum length of 4 characters is required.
-	
-Your pictures will be mounted from `~/Pictures` by default, where `~` is a placeholder 
-for your [home directory](https://en.wikipedia.org/wiki/Home_directory). Its absolute path depends on your
-operating system and username.
-We'll refer to `/photoprism/originals` as the *originals* folder as it points to your original photo and video files.
 
-All folders accessible from the host may be mounted, including network drives.
-Since PhotoPrism is running inside a container, it won't be able to see folders that have not been mounted.
-That's an important security feature.
+#### Volumes ####
+
+##### /photoprism/originals #####
+
+The *originals* folder contains your original photo and video files.
+
+They will be mounted from `~/Pictures` by default, where `~` is a placeholder for 
+your [home directory](https://en.wikipedia.org/wiki/Home_directory). 
+
+All folders accessible from the host [may be mounted](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes), 
+including network drives. Since PhotoPrism is running inside a container, it won't be able to see 
+folders that have not been mounted. That's an important security feature.
 
 Multiple folders can be made accessible by mounting them as subfolders:
 
@@ -61,9 +95,18 @@ volumes:
   - "/media/photos:/photoprism/originals/media"
 ```
 
-Mounting an *import* folder for adding new files to your library is optional. If you prefer a different workflow, 
-you can skip this. Importing files via Web upload or [WebDAV](../user-guide/sync/webdav.md) is still possible, 
-unless [read-only mode](config-options.md) is enabled.
+##### /photoprism/import #####
+
+You may optionally mount an *import* folder from which files can be transferred to the *originals* folder
+in a structured way that avoid duplicates. Imported files receive a canonical filename and will be
+organized by year and month.
+
+!!! note ""
+    You can safely skip this. Adding files via [Web Upload](../user-guide/library/upload.md)
+    and [WebDAV](../user-guide/sync/webdav.md) remains possible, unless [read-only mode](config-options.md)
+    is enabled, or the [features have been disabled](../user-guide/settings/general.md).
+
+##### /photoprism/storage #####
 
 Cache, session, thumbnail, and sidecar files will be created in the *storage* folder. Never remove the volume from
 your `docker-compose.yml` file so that you don't lose these files after restarting or upgrading the container.
@@ -78,26 +121,32 @@ your `docker-compose.yml` file so that you don't lose these files after restarti
 ### Step 2: Start the server ###
 
 Open a terminal and change to the folder in which the `docker-compose.yml` file has been saved.
-Use this command to start the server in the background and keep it running:
+Run this command to start PhotoPrism in the background and keep it running:
 
 ```
 docker-compose up -d
 ```
- 
-Now open http://localhost:2342/ in a browser to see the Web UI.
+
+Navigate to http://localhost:2342/ to open the Web UI. You should see a login screen.
+
+!!! hint ""
+    If you can't connect, try starting the server without `-d`. This keeps it in the foreground
+    and shows log messages for troubleshooting. Many issues are easy to fix.
+    You're welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
+    Should the server already be running, or you see no errors, there may be an issue with your browser,
+    desktop firewall security settings, or the server is running on a different host and/or port.
+
 Sign in with the user `admin` and the initial password configured via `PHOTOPRISM_ADMIN_PASSWORD`.
 You may change it on the [account settings page](../user-guide/settings/account.md), 
 or using the `photoprism passwd` command in a terminal.
 Enabling [public mode](config-options.md) will disable authentication.
 
 !!! note ""
-    It's not possible to **change the initial password** via `PHOTOPRISM_ADMIN_PASSWORD` after PhotoPrism 
-    has been started for the first time. The terminal command `docker-compose exec photoprism photoprism reset`
-    will reset your database for a clean start. Ensure you're in the right directory and the container is running 
-    before using it.
-
-In case you can't connect, try starting the server without `-d` so that you see log messages for troubleshooting.
-PhotoPrism will report specific issues like bad folder permissions, or when it can't connect to the database.
+    For security reasons, it is **not possible to change an existing admin password via `PHOTOPRISM_ADMIN_PASSWORD`** after 
+    your instance has been started for the first time. The terminal command `docker-compose exec photoprism photoprism reset`
+    can reset your database for a clean start if needed. Ensure you're in the folder in which the `docker-compose.yml` 
+    file has been saved and the container is running before using it or other CLI commands. Alternatively, you can 
+    drop and recreate the database or manually delete database files from its storage folder before restarting your instance.
 
 The server port and other basic settings may be changed in `docker-compose.yml` at any time.
 Remember to restart the container whenever it has been changed:
@@ -125,7 +174,7 @@ to watch the indexer working.
 
 Of course, you can continue using your favorite tools for processing RAW files, editing metadata, 
 or importing new shots. Go to *Library* and click *Start* to update the index after files have been 
-changed, added, or removed. This can also be automated using terminal commands and a scheduler.
+changed, added, or removed. This can also be automated using CLI commands and a [scheduler](https://dl.photoprism.org/docker/scheduler/).
 
 Easy, isn't it?
 
@@ -136,52 +185,59 @@ Easy, isn't it?
     Your continued support helps us fund operating costs, provide services like satellite maps,
     and develop new features. Thank you very much! 💜
 
-!!! tip "Reducing Server Load"
-    If you're running out of memory - or other system resources - while indexing, please limit the 
+!!! note "Reducing Server Load"
+    If you're running out of memory - or other system resources - while indexing, try limiting the 
     [number of workers](https://docs.photoprism.org/getting-started/config-options/) by setting
-    `PHOTOPRISM_WORKERS` to a value less than the number of logical CPU cores in `docker-compose.yml`.
+    `PHOTOPRISM_WORKERS` to a reasonable, small value in `docker-compose.yml`, depending on your CPU and expectations.
     Also make sure your server has at least 4 GB of [swap](https://opensource.com/article/18/9/swap-space-linux-systems) 
     configured so that indexing doesn't cause restarts when there are memory usage spikes.
     Especially the conversion of RAW images and the transcoding of videos are very demanding.
     As a measure of last resort, you may disable using TensorFlow for image classification and facial recognition.
 
-### Facial Recognition ###
+### Command-Line Interface ###
 
-Existing users may index faces in originals without performing a complete rescan:
-
-```
-docker-compose exec photoprism photoprism faces index
-```
-
-For a fresh start e.g. after upgrading from a development preview, remove
-known people and faces before re-indexing:
+`photoprism help` lists all commands and config options available in the current version:
 
 ```
-docker-compose exec photoprism photoprism faces reset -f
+docker-compose exec photoprism photoprism help
 ```
 
-### Command Reference ###
+Use the `--help` flag to see a detailed command description, for example:
 
-The help command shows a complete list of commands and config options.
-Use the `--help` flag to see a detailed command info 
-like `docker-compose exec photoprism photoprism backup --help`.
+```
+docker-compose exec photoprism photoprism backup --help
+```
 
-| Action   | Command                                                   |
-|----------|-----------------------------------------------------------|
-| Start    | `docker-compose up -d`                                    |
-| Stop     | `docker-compose stop`                                     |
-| Update   | `docker-compose pull`                                     |
-| Logs     | `docker-compose logs --tail=25 -f`                        |
-| Terminal | `docker-compose exec photoprism bash`                     |
-| Help     | `docker-compose exec photoprism photoprism help`          |                
-| Config   | `docker-compose exec photoprism photoprism config`        |
-| Reset    | `docker-compose exec photoprism photoprism reset`         |                   
-| Backup   | `docker-compose exec photoprism photoprism backup -a -i`  |                      
-| Restore  | `docker-compose exec photoprism photoprism restore -a -i` |                   
-| Index    | `docker-compose exec photoprism photoprism index`         |                  
-| Re-index | `docker-compose exec photoprism photoprism index -f`      |                   
-| Import   | `docker-compose exec photoprism photoprism import`        |                  
+!!! tip ""
+    Prefixing commands with `docker-compose exec [service name]` runs them inside an app container.
+    If this fails with *no container found*, make sure the app has been started,
+    its service name is the same, and you are in the folder in which the `docker-compose.yml` 
+    file has been saved.
+
+PhotoPrism's command-line interface is well suited for job automation using a
+[scheduler](https://dl.photoprism.org/docker/scheduler/).
+
+#### Examples ####
+
+| Action                    | Command                                                   |
+| ------------------------- | --------------------------------------------------------- |
+| *Start App*               | `docker-compose up -d`                                    |
+| *Stop App*                | `docker-compose stop`                                     |
+| *Remove App*              | `docker-compose down`                                     |
+| *Update App Image*        | `docker-compose pull`                                     |
+| *Show App Logs*           | `docker-compose logs --tail=25 -f`                        |
+| *Open Terminal*           | `docker-compose exec photoprism bash`                     |
+| *Show Config Values*      | `docker-compose exec photoprism photoprism config`        |
+| *Show Facial Recognition Subcommands* | `docker-compose exec photoprism photoprism faces help`    |
+| *Show User Management Subcommands*    | `docker-compose exec photoprism photoprism users help`    |
+| *Reset Database*          | `docker-compose exec photoprism photoprism reset`         |                   
+| *Backup Database*         | `docker-compose exec photoprism photoprism backup -a -i`  |                      
+| *Restore Database*        | `docker-compose exec photoprism photoprism restore -a -i` |                   
+| *Update Index*            | `docker-compose exec photoprism photoprism index`         |                  
+| *Import Files*            | `docker-compose exec photoprism photoprism import [path]` |                  
 
 !!! info "Complete Rescan"
-    `photoprism index -f` will re-index all originals, including already indexed and unchanged files. This may be
-    necessary after upgrading, especially to new major versions.
+    `docker-compose exec photoprism photoprism index -f` rescans all originals, including already indexed and unchanged files. 
+    This may be necessary after major upgrades or when issues that affected you have been resolved.
+
+*[CLI]: Command-Line Interface

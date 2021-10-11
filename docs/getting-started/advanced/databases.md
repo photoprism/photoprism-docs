@@ -51,7 +51,7 @@ services:
 - Install <https://github.com/techouse/mysql-to-sqlite3> on your host.
 - Stop Photoprism: `docker-compose stop photoprism`
 - Add the port to the MariaDB service
-- On the **host** now run `sudo mysql2sqlite -f <PATH_TO_STORAGE_MOUNT>/storage/index.db -d photoprism -u root --mysql-password 'please_change'`
+- On the **host** now run `sudo mysql2sqlite -f <PATH_TO_STORAGE_MOUNT>/storage/index.db -d photoprism -u root --mysql-password 'insecure'`
 - Shutdown your current stack fully: `docker-compose down`
 - Edit your `docker-compose.yml`:
   - Remove the MariaDB service.
@@ -67,7 +67,7 @@ services:
   section where you expose port 3306 to the Host. In my case this looked like attachment 1.
 - Start the stack again: `docker-compose up -d`
 - Stop Photoprism: `docker-compose stop photoprism`
-- On the **host** now run `sudo sqlite3mysql -f <PATH_TO_STORAGE_MOUNT>/storage/index.db -d photoprism -u root --mysql-password 'please_change'`
+- On the **host** now run `sudo sqlite3mysql -f <PATH_TO_STORAGE_MOUNT>/storage/index.db -d photoprism -u root --mysql-password 'insecure'`
 - Shutdown your current stack again: `docker-compose down`
 - Edit your `docker-compose.yml` so it uses the MariaDB database you added before. Don't forget to remove the `ports`
   section of the MariaDB Container.
@@ -91,7 +91,7 @@ mariadb:
     volumes: # Don't remove permanent storage for index database files!
       - "./database:/var/lib/mysql"
     environment:
-      MYSQL_ROOT_PASSWORD: please_change
+      MYSQL_ROOT_PASSWORD: insecure
       MYSQL_DATABASE: photoprism
       MYSQL_USER: photoprism
       MYSQL_PASSWORD: insecure

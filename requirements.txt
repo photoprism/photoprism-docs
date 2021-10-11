@@ -4,3 +4,4 @@ markdown>=3.2
 pymdown-extensions>=7.0
 mkdocs-material>=5.2
 mkdocs-material-extensions>=1.0
+mkdocs-tooltips>=0.1.0

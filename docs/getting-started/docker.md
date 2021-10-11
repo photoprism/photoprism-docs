@@ -1,39 +1,49 @@
 # Running PhotoPrism with Docker
 
-If you're not sure, try using [Docker Compose](docker-compose.md) first as it requires remembering
-less command line parameters, and is generally easier to start with for beginners.
-
-!!! info "Linux"
-    Commands may have to be prefixed with `sudo` when not running as root.
-    Note that this will point the home directory placeholder `~` to `/root` in your configuration.
-    Kernel security modules such as SELinux have been reported to cause
-    [issues](https://docs.photoprism.org/getting-started/faq/#why-is-photoprism-getting-stuck-in-a-restart-loop).
+We recommend using [Docker Compose](docker-compose.md) as it is generally easier to start with for beginners.
+It provides more comfort than the pure Docker command-line interface.
 
 ### Step 1: Start the server ###
 
-Open a terminal and run this command after replacing `~/Pictures` with
-the folder containing your personal photo and video collection:
+=== "Linux"
 
-```
-docker run -d \
-  --name photoprism \
-  --security-opt seccomp=unconfined \
-  --security-opt apparmor=unconfined \
-  -p 2342:2342 \
-  -e PHOTOPRISM_UPLOAD_NSFW="true" \
-  -e PHOTOPRISM_ADMIN_PASSWORD="please_change" \
-  -v /photoprism/storage \
-  -v ~/Pictures:/photoprism/originals \
-  photoprism/photoprism
-```
+    Open a terminal and run this command after replacing `~/Pictures` with
+    the folder containing your pictures:
+    
+    ```
+    docker run -d \
+      --name photoprism \
+      --security-opt seccomp=unconfined \
+      --security-opt apparmor=unconfined \
+      -p 2342:2342 \
+      -e PHOTOPRISM_UPLOAD_NSFW="true" \
+      -e PHOTOPRISM_ADMIN_PASSWORD="insecure" \
+      -v /photoprism/storage \
+      -v ~/Pictures:/photoprism/originals \
+      photoprism/photoprism
+    ```
+
+    The command may have to be prefixed with `sudo` when not running as root.
+    Note that this will point the home directory placeholder `~` to `/root` in volume mounts.
+    Kernel security modules such as AppArmor and SELinux have been reported to cause
+    [issues](https://docs.photoprism.org/getting-started/faq/#why-is-photoprism-getting-stuck-in-a-restart-loop).
 
 !!! danger ""
     Always change `PHOTOPRISM_ADMIN_PASSWORD` so that PhotoPrism starts with a **secure initial password**.
     Never use easy-to-guess passwords or default values like `insecure` on publicly accessible servers.
+    For security reasons, there also is no default in case no password was provided.
     A minimum length of 4 characters is required.
 
-Now open http://localhost:2342/ in a Web browser to see the user interface.
-Sign in with the user `admin` and the initial password configured via `PHOTOPRISM_ADMIN_PASSWORD`.
+Navigate to http://localhost:2342/ to open the Web UI. You should see a login screen.
+
+!!! hint ""
+    If you can't connect, try starting the server without `-d`. This keeps it in the foreground
+    and shows log messages for troubleshooting. Many issues are easy to fix.
+    You're welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
+    Should the server already be running, or you see no errors, there may be an issue with your browser,
+    desktop firewall security settings, or the server is running on a different host and/or port.
+
+Sign in with the user `admin` and the password configured via `PHOTOPRISM_ADMIN_PASSWORD`.
 You may change it on the [account settings page](../user-guide/settings/account.md),
 or using the `photoprism passwd` command in a terminal.
 Enabling [public mode](config-options.md) will disable authentication.
@@ -43,26 +53,45 @@ Enabling [public mode](config-options.md) will disable authentication.
     has been started for the first time. You may run `docker exec -ti photoprism photoprism reset` in a terminal to
     reset your database for a clean start.
 
-In case you can't connect, try starting the server without `-d` so that you see log messages for troubleshooting.
-PhotoPrism will report specific issues like bad folder permissions, or when it can't connect to the database.
-
-[Mounting](https://docs.docker.com/storage/bind-mounts/) an *import* folder to `/photoprism/import` for adding new 
-files is optional. If you prefer a different workflow, you can skip this. Importing files via Web upload 
-or [WebDAV](../user-guide/sync/webdav.md) is still possible, unless [read-only mode](config-options.md) is enabled.
-
-Cache, session, thumbnail, and sidecar files will be created in `/photoprism/storage`, which is mounted as 
-an [anonymous volume](https://docs.docker.com/storage/bind-mounts/) in our example. You may want to 
-mount a specific host directory instead. Never remove the volume completely so that you don't lose your 
-index and other these files after restarting or upgrading the container.
-
-The default port 2342 and other configuration values may be changed as needed,
+The default port 2342 and other configuration values may be changed as needed, 
 see [Config Options](config-options.md) for details.
+
+#### Volumes ####
+
+##### /photoprism/originals #####
+
+The *originals* folder contains your original photo and video files.
+
+They are mounted from `~/Pictures` in the example above, where `~` is a placeholder for 
+your [home directory](https://en.wikipedia.org/wiki/Home_directory).
+
+All folders accessible from the host [may be mounted](https://docs.docker.com/storage/bind-mounts/), 
+including network drives. Since PhotoPrism is running inside a container, it won't be able to see 
+folders that have not been mounted. That's an important security feature.
 
 Multiple folders can be made accessible by mounting them as subfolders:
 
 ```
 -v ~/Example:/photoprism/originals/Example
 ``` 
+
+##### /photoprism/import #####
+
+You may optionally mount an *import* folder from which files can be transferred to the *originals* folder
+in a structured way that avoid duplicates. Imported files receive a canonical filename and will be 
+organized by year and month.
+
+!!! note ""
+    You can safely skip this. Adding files via [Web Upload](../user-guide/library/upload.md)
+    and [WebDAV](../user-guide/sync/webdav.md) remains possible, unless [read-only mode](config-options.md)
+    is enabled, or the [features have been disabled](../user-guide/settings/general.md).
+
+##### /photoprism/storage #####
+
+Cache, session, thumbnail, and sidecar files will be created in `/photoprism/storage`, which is mounted as 
+an [anonymous volume](https://docs.docker.com/storage/bind-mounts/) in our example. You may want to 
+mount a specific host directory instead. Never remove the volume completely so that you don't lose your 
+index and other these files after restarting or upgrading the container.
 
 !!! info "Read-Only Mode"
     Running PhotoPrism in read-only mode disables all features that require write permissions,
@@ -89,7 +118,7 @@ to watch the indexer working.
 
 Of course, you can continue using your favorite tools for processing RAW files, editing metadata,
 or importing new shots. Go to *Library* and click *Start* to update the index after files have been
-changed, added, or removed. This can also be automated using terminal commands and a scheduler.
+changed, added, or removed. This can also be automated using CLI commands and a [scheduler](https://dl.photoprism.org/docker/scheduler/).
 
 Easy, isn't it?
 
@@ -100,10 +129,10 @@ Easy, isn't it?
     Your continued support helps us fund operating costs, provide services like satellite maps,
     and develop new features. Thank you very much! 💜
 
-!!! tip "Reducing Server Load"
-    If you're running out of memory - or other system resources - while indexing, please limit the
+!!! note "Reducing Server Load"
+    If you're running out of memory - or other system resources - while indexing, try limiting the
     [number of workers](https://docs.photoprism.org/getting-started/config-options/) by setting
-    `PHOTOPRISM_WORKERS` to a value less than the number of logical CPU cores.
+    `PHOTOPRISM_WORKERS` to a reasonable, small value, depending on your CPU and expectations.
     Also make sure your server has at least 4 GB of [swap](https://opensource.com/article/18/9/swap-space-linux-systems)
     configured so that indexing doesn't cause restarts when there are memory usage spikes.
     Especially the conversion of RAW images and the transcoding of videos are very demanding.
@@ -111,7 +140,7 @@ Easy, isn't it?
 
 ### Step 3: When you're done... ###
 
-You can stop the server and start it again using the following commands:
+You can stop PhotoPrism and start it again using the following commands:
 
 ```
 docker stop photoprism
@@ -124,42 +153,49 @@ To remove the container completely:
 docker rm -f photoprism
 ```
 
-### Facial Recognition ###
+### Command-Line Interface ###
 
-Existing users may index faces in originals without performing a complete rescan:
-
-```
-docker exec -ti photoprism photoprism photoprism faces index
-```
-
-For a fresh start e.g. after upgrading from a development preview, remove 
-known people and faces before re-indexing:
+`photoprism help` lists all commands and config options available in the current version:
 
 ```
-docker exec -ti photoprism photoprism faces reset -f`
+docker exec -ti photoprism photoprism help
 ```
 
-### Command Reference ###
+Use the `--help` flag to see a detailed command description, for example:
 
-The help command shows a complete list of commands and config options.
-Use the `--help` flag to see a detailed command info
-like `docker exec -ti photoprism photoprism backup --help`.
+```
+docker exec -ti photoprism photoprism backup --help
+```
 
-| Action   | Command                                               |
-|----------|-------------------------------------------------------|
-| Update   | `docker pull photoprism`                              |
-| Remove   | `docker rm -f photoprism`                             |
-| Logs     | `docker logs --tail=25 -f photoprism`                 |
-| Terminal | `docker exec -ti photoprism bash`                     |
-| Help     | `docker exec -ti photoprism photoprism help`          |                
-| Config   | `docker exec -ti photoprism photoprism config`        |                   
-| Reset    | `docker exec -ti photoprism photoprism reset`         |                   
-| Backup   | `docker exec -ti photoprism photoprism backup -a -i`  |                      
-| Restore  | `docker exec -ti photoprism photoprism restore -a -i` |                   
-| Index    | `docker exec -ti photoprism photoprism index`         |                  
-| Re-index | `docker exec -ti photoprism photoprism index -f`      |                   
-| Import   | `docker exec -ti photoprism photoprism import`        |                  
+!!! tip ""
+    Prefixing commands with `docker exec -ti [container name]` runs them inside an app container.
+    If this fails with *no container found*, make sure the app has been started and 
+    its container has the same name.
+
+PhotoPrism's command-line interface is well suited for job automation using a
+[scheduler](https://dl.photoprism.org/docker/scheduler/).
+
+#### Examples ####
+
+| Action                      | Command                                               |
+| --------------------------- | ----------------------------------------------------- |
+| *Start App*                 | `docker start photoprism`                             |
+| *Stop App*                  | `docker stop photoprism`                              |
+| *Remove App*                | `docker rm -f photoprism`                             |
+| *Download App Image*        | `docker pull photoprism/photoprism:latest`            |
+| *Show App Logs*             | `docker logs --tail=25 -f photoprism`                 |
+| *Open Terminal*             | `docker exec -ti photoprism bash`                     |
+| *Show Config Values*        | `docker exec -ti photoprism photoprism config`        |
+| *Show Facial Recognition Subcommands* | `docker exec -ti photoprism photoprism faces help`    |
+| *Show User Management Subcommands*    | `docker exec -ti photoprism photoprism users help`    |
+| *Reset Database*            | `docker exec -ti photoprism photoprism reset`         |                   
+| *Backup Database*           | `docker exec -ti photoprism photoprism backup -a -i`  |                      
+| *Restore Database*          | `docker exec -ti photoprism photoprism restore -a -i` |                   
+| *Update Index*              | `docker exec -ti photoprism photoprism index`         |                  
+| *Import Files*              | `docker exec -ti photoprism photoprism import [path]` |
 
 !!! info "Complete Rescan"
-    `photoprism index -f` will re-index all originals, including already indexed and unchanged files. This may be
-    necessary after upgrading, especially to new major versions.
+    `docker exec -ti photoprism photoprism index -f` rescans all originals, including already indexed and unchanged files.
+    This may be necessary after major upgrades or when issues that affected you have been resolved.
+
+*[CLI]: Command-Line Interface

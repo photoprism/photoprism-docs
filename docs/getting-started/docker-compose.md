@@ -51,8 +51,8 @@ installed on your system. It is available for Mac, Linux, and Windows.
     so that they can mount drives other than `C:`. This will enable Hyper-V, which 
     [Microsoft doesn't offer](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements) 
     to its Windows Home customers. Docker Desktop uses dynamic memory allocation with WSL 2. It's important 
-    to [increase the Docker memory limit](img/docker-resources-advanced.jpg) to 4 GB or more otherwise, as the default 
-    of 2 GB may reduce indexing performance or cause restarts. 
+    to explicitly [increase the Docker memory limit](img/docker-resources-advanced.jpg) to 4 GB or more when using 
+    Hyper-V. The default of 2 GB may reduce indexing performance or cause unexpected restarts.
 
 === "macOS"
 

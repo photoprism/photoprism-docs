@@ -9,11 +9,12 @@ When setup is complete, you can start [indexing your pictures](../user-guide/lib
 Be patient, this may take a while depending on your server hardware and how many files you have.
 
 Your [photos](../user-guide/organize/browse.md) and [videos](../user-guide/organize/video.md) 
-will successively become visible in search results and other parts of the user interface,
-one after another. The counts in the navigation are constantly updated, so you can follow the progress.
+will successively become visible in search results and other parts of the user interface.
+The counts in the navigation are constantly updated, so you can follow the progress.
 
-If files are missing, they might be in [Review](../user-guide/organize/review.md) due to low quality
-or incomplete metadata. You can turn this and other features off in [Settings](../user-guide/settings/general.md), 
+In case some of your pictures are still missing when indexing has been completed, 
+they might be in [Review](../user-guide/organize/review.md) due to low quality or incomplete metadata. 
+You can turn this and other features off in [Settings](../user-guide/settings/general.md), 
 depending on your specific use case.
 
 !!! note ""

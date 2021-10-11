@@ -15,10 +15,6 @@ In *Videos* you find all your videos. To play a video click :material-play:.
 
 ![Screenshot](img/video-1.png)
 
-To play videos in fullscreen mode click :material-play: on the video or :material-movie: next to the videos title.
-
-![Screenshot](img/video.png)
-
 ### Live Photos ###
 Live photos are treated as photos.
 They are marked with :material-adjust: in the upper left corner.

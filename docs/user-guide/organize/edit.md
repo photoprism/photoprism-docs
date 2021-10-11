@@ -5,54 +5,27 @@ PhotoPrisms *edit dialogue* enables you to add/edit various types of metadata re
 During [*indexing*](../index.md) PhotoPrism collects as much data as possible from sidecar files and the photo itself.
 
 ### Open Edit Dialogue ###
-
-#### Card View ####
-
-1. Click on the photos title, time or camera information
+=== "From Card View"
+     1. Click on the photos title, time or camera information
 
     ![Screenshot](img/edit-open-1.png)
 
-#### Full Screen Mode ####
-
-1. In the upper right corner click :material-pencil:
+=== "From Full Screen Mode"
+     1. In the upper right corner click :material-pencil:
 
     ![Screenshot](img/edit-open-2.png)
 
-#### Any View ####
+=== "Using Context Menu"
+     1. Select one or multiple photos
+     2. Click on context menu
+     3. Click :material-pencil:
 
-1. Select one or multiple photos
-2. Click on context menu
-3. Click :material-pencil:
-
-![Screenshot](img/edit-open-3.png)
+    ![Screenshot](img/edit-open-3.png)
 
 ### Edit Details ###
 In the edit dialogue's *Detail tab* you can view and edit the following data:
 
-* Title
-* Day
-* Month
-* Year
-* UTC time
-* UTC date
-* Time zone
-* Latitude
-* Longitude
-* Altitude
-* Country
-* Camera
-* ISO
-* Exposure
-* Lens
-* F Number
-* Focal Length
-* Subject
-* Artist
-* Copyright
-* License
-* Description
-* Keywords
-* Notes
+* Title, Day, Month, Year, UTC time, UTC date, Time zone, Latitude, Longitude, Altitude, Country, Camera, ISO, Exposure, Lens, F Number, Focal Length, Subject, Artist, Copyright, License, Description, Keywords, Notes
 
 ![Screenshot](img/edit-details.png)
 

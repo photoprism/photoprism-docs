@@ -1,22 +1,28 @@
 # Downloading Files #
 
-### Download Single Photo ###
+=== "Using Context Menu"
+     1. Select photos
+     2. Click on the context menu
+     3. Click :material-cloud-download:. Photos will be downloaded in original size
 
-1. Click on the photo
+        ![Screenshot](img/multi-download.png)
 
-    ![Screenshot](img/download-1.png)
-    
-2. In fullscreen mode click :material-download:
+    !!! tip ""
+        You can select many photos at once using shift.
 
-    ![Screenshot](img/download-2.png)
+=== "From Fullscreen Mode"
+     1. Click on the photo
 
-### Download Multiple Photos ###
+        ![Screenshot](img/download-1.png)
 
-1. Select photos
-2. Click on the context menu
-3. Click :material-cloud-download:. Photos will be downloaded in original size
+     2. In fullscreen mode click :material-download:
 
-    ![Screenshot](img/multi-download.png)
+        ![Screenshot](img/download-2.png)
 
-!!! tip ""
-    You can select many photos at once using shift.
+=== "From Edit Dialogue"
+    1. Open the photo's  [*edit dialogue*](edit.md)
+    2. Open the *Files Tab*
+    3. Click *Download*
+
+
+

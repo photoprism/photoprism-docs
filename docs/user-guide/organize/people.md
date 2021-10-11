@@ -3,7 +3,7 @@ PhotoPrism automatically detects faces and clusters them.
 Each time you assign a name to a face or change an existing assignment, PhotoPrism improves face clusters intelligently.
 
 ## People Section ##
-The people section shows you recognized persons as well as new face clusters.
+The people section shows you recognized people as well as new face clusters.
 
 To star a person click :material-star:. Stared persons appear first.
 
@@ -16,25 +16,25 @@ To star a person click :material-star:. Stared persons appear first.
     The photo [*edit dialogue*](edit.md) shows all faces of a photo independent from whether they are clustered or not.
 
 ## Assign Names to Faces ##
-1. Go to *People*
-2. Go to *New*
-3. Click on the input field
-4. Start typing a name
-5. Press *enter*
 
-![Screenshot](img/add-name-new.png)
+=== "From People"
+     1. Go to *People*
+     2. Go to *New*
+     3. Click on the input field
+     4. Start typing a name
+     5. Press *enter*
 
-<!--![Screenshot](img/add-name-new-2.png)-->
+        ![Screenshot](img/add-name-new.png)
 
-OR
+=== "From Photo Edit Dialogue"
 
-1. Open the photo [*edit dialogue*](edit.md)
-2. Go to the *People* tab
-3. Click on the input field
-4. Start typing a name
-5. Press *enter*
+      1. Open the photo [*edit dialogue*](edit.md)
+      2. Go to the *People* tab
+      3. Click on the input field
+      4. Start typing a name
+      5. Press *enter*
 
-![Screenshot](img/add-name-edit.png)
+        ![Screenshot](img/add-name-edit.png)
 
 The person you just added will appear under *Recognized*
 
@@ -64,18 +64,18 @@ Hidden people can be recovered by clicking :material-eye-off:
 You can hide face clusters from the *New* section, in the same way you [hide people](#hiding-people) from the *Recognized* section.
 
 ## View all Photos of a Person ##
-1. Go to *People*
-2. Go to *Recognized*
-3. Click on the person you want to view
+=== "From People"
+      1. Go to *People*
+      2. Go to *Recognized*
+      3. Click on the person you want to view
 
-![Screenshot](img/view-person.png)
+        ![Screenshot](img/view-person.png)
 
-OR
+=== "From Search"
+      1. Go to *Search*
+      2. Search for person:"jane-doe"
 
-1. Go to *Search*
-2. Search for person:"jane-doe"
-
-![Screenshot](img/view-person-2.png)
+        ![Screenshot](img/view-person-2.png)
 
 ## Rename People ##
 To rename all photos of a person:

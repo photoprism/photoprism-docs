@@ -1,15 +1,21 @@
 # Views #
 PhotoPrism provides you three beautiful views to enjoy your photos and videos.
 
-* The *card view* displays important metadata like title, time and location next to the photos
+=== "Card View"
+
+    The *card view* displays important metadata like title, time and location next to the photos
 
     ![Screenshot](img/card.png)
-    
-* The *mosaic view* lets you enjoy your photos without distraction
+
+=== "Mosaic View"
+
+    The *mosaic view* lets you enjoy your photos without distraction
 
     ![Screenshot](img/mosaic.png)
-    
-* The *list view* provides you photos and metadata in a  well-arranged list
+
+=== "List View"
+
+    The *list view* provides you photos and metadata in a  well-arranged list
 
     ![Screenshot](img/list.png)
 

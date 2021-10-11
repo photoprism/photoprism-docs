@@ -14,18 +14,23 @@ The quality score depends on the following:
     In case you do not need the review mechanism you can turn it off in [Settings](../settings/general.md)
 
 ### Approve Photos ###
+=== "Edit Dialog"
+     1. Open the photo's  [*edit dialogue*](edit.md)
+     2. Click *approve*
 
-1. Open the photo's  [*edit dialogue*](edit.md)
-2. Click *approve*
+        ![Screenshot](img/review.png)
 
-    ![Screenshot](img/review.png)
-    
-**Or:**
+=== "Card View"
+     1. Go to *Review* and make sure you are in *card view*
+     2. Click *approve*
 
-1. In the *review section* make sure you are in *card view*
-2. Click *approve*
+        ![Screenshot](img/review-2.png)
 
-    ![Screenshot](img/review-2.png)
+=== "Context Menu"
+     1. Go to *Review* 
+     2. Select photos and open the context menu
+     3. Click *approve*
+
 
 !!! attention ""
     The quality score is constantly updated. 

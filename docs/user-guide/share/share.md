@@ -1,19 +1,21 @@
 # Sharing Albums via Link #
 
 ## Create Sharing Link ##
-1. Go to *Albums*
-2. Select the album you want to share
-3. Open the context menu
-4. Click :material-share-variant:
-    
-    ![Screenshot](img/share-1.png)
-    
-Or
 
-2. Open the album by clicking on it
-3. Click :material-share-variant:
+=== "Using Context Menu"
+     1. Go to *Albums*
+     2. Select the album you want to share
+     3. Open the context menu
+     4. Click :material-share-variant:
+    
+      ![Screenshot](img/share-1.png)
 
-   ![Screenshot](img/share-5.png)
+=== "Via Toolbar"
+     1. Go to *Albums*
+     2. Open the album by clicking on it
+     3. Click :material-share-variant:
+
+      ![Screenshot](img/share-5.png)
 
 Then
 

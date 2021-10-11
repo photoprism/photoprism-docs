@@ -1,5 +1,5 @@
 # Browse through your photo collection #
-PhotoPrisms photo/video views are a nice way for you to browse through your photo collection.
+PhotoPrisms sections are a nice way for you to browse through your photo collection in multiple dimensions.
 They enable you to re-discover forgotten photos, find specific photos you are looking for or organize your photos.
 
 ### Sections ###
@@ -13,15 +13,39 @@ Shows all photos and videos that are not in review or archived or private.
 
 ![Screenshot](img/search-section.jpg)
 
+##### Monochrome #####
+Shows all monochrome photos and videos.
+
+##### [Panoramas](panoramas.md) #####
+Shows all panorama photos.
+
+##### [Stacks](stacks.md) #####
+Shows all stacked photos.
+
+##### [Scans](scans.md) #####
+Shows all scans.
+
+##### [Review](review.md) #####
+Shows all photos that are in review.
+
+##### [Archive](archive.md) #####
+Shows archived photos.
+
 #### :material-image-album: [Albums](albums.md) ####
 Shows albums you created.
 
 ![Screenshot](img/albums.jpg)
 
+##### Unsorted #####
+Shows all photos that are not part of an album.
+
 #### :material-movie: [Videos](video.md) ####
 Shows videos that are not in review or archived or private.
 
 ![Screenshot](img/videos.jpg)
+
+#### :material-account: People ####
+Shows photos and videos grouped by people on it.
 
 #### :material-heart: Favorites ####
 Shows all photos and videos you liked.
@@ -42,6 +66,9 @@ Organizes your photos due to time taken.
 Displays all photos and videos with location information on a worldmap.
 
 ![Screenshot](img/places.jpg)
+
+##### States #####
+Shows your photos grouped by location.
 
 #### :material-label: [Labels](labels.md) ####
 Shows your photos and videos grouped by labels like cat, dog or beach.

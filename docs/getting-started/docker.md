@@ -78,7 +78,7 @@ Multiple folders can be made accessible by mounting them as subfolders:
 ##### /photoprism/import #####
 
 You may optionally mount an *import* folder from which files can be transferred to the *originals* folder
-in a structured way that avoid duplicates. Imported files receive a canonical filename and will be 
+in a structured way that avoids duplicates. Imported files receive a canonical filename and will be 
 organized by year and month.
 
 !!! note ""

@@ -184,7 +184,7 @@ Easy, isn't it?
 !!! info "Reducing Server Load"
     If you're running out of memory - or other system resources - while indexing, try limiting the 
     [number of workers](https://docs.photoprism.org/getting-started/config-options/) by setting
-    `PHOTOPRISM_WORKERS` to a reasonable, small value in `docker-compose.yml` (depending on your CPU and expectations).
+    `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml` (depending on your CPU and expectations).
     Also make sure your server has at least 4 GB of [swap](https://opensource.com/article/18/9/swap-space-linux-systems) 
     configured so that indexing doesn't cause restarts when there are memory usage spikes.
     Especially the conversion of RAW images and the transcoding of videos are very demanding.

@@ -31,5 +31,7 @@ Say goodbye to uploading your visual memories to the cloud!
 </p>
 
 Step-by-step installation instructions for our self-hosted community edition can be found 
-in the [Setup Guide](getting-started/index.md).
-All you need is a Web browser and Docker to run the server. It is available for Mac, Linux, and Windows.
+in [Getting Started](getting-started/index.md). All you need to have installed on your 
+system is a Web browser and [Docker](https://store.docker.com/search?type=edition&offering=community).
+It is available for Mac, Linux, and Windows.
+

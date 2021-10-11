@@ -14,7 +14,7 @@ We additionally parse XMP.
 
 This table gives an overview what tags from exiftool or XMP are mapped to which fields in PhotoPrism.
 
-!!!attention
+!!!attention ""
     In case a field is populated with data from xmp, the data from xmp is the single source for this field.
     Meaning e.g keywords from xmp overwrite other keywords coming from PhotoPrism such as colors or keywords derived from folder names. 
 

@@ -18,5 +18,5 @@
 
     ![Screenshot](img/multi-download.png)
 
-!!! tip
+!!! tip ""
     You can select many photos at once using shift.

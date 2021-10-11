@@ -31,7 +31,7 @@ To auto-import uploaded files into PhotoPrism;
     ```
 5. Optional: Enable 'delete on import' in PhotoPrism's settings to delete imported files from Dropbox. This saves Dropbox space, allowing you to remain within the 2GB free tier.
 
-!!! note
+!!! note ""
     The Dropbox mobile app needs to be opened periodically or it tends to fail to identify and sync new photos.
 
     The [PhotoPrism mobile app](https://github.com/photoprism/photoprism-mobile) is also under development and provides a sync feature.

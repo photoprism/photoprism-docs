@@ -13,7 +13,7 @@ By default, photos marked as private will not appear in the following sections:
  * Favorites
  * Shared albums
  
-!!! info
+!!! info ""
     In case you want private content to appear everywhere you can configure that in [Settings](../settings/general.md).
  
 #### Mark Single Photos as Private ####

@@ -12,11 +12,11 @@
 
 ![Screenshot](img/import.png)
 
-!!! tip
+!!! tip ""
     You may use [WebDAV](webdav.md) for adding files to the *import* folder.
     This is especially helpful if PhotoPrism is running on a remote server.
 
-!!! attention
+!!! attention ""
     Importing is not possible in [read-only mode](../settings/library.md) as it requires
     write permissions for the *originals* folder.
     

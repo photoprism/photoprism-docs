@@ -40,6 +40,6 @@ The following fields are saved:**
 - Date/Time Created
 - Date/Time Updated
 
-!!! note
+!!! note ""
     Google Photos albums won't be imported yet as we're trying to find a way to deal with 
     auto-generated albums users may not want to import.

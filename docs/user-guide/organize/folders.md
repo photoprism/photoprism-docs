@@ -12,7 +12,7 @@ The context menu allows you to perform the following actions:
 3. Click :material-delete:
 4. Confirm
 
-!!! hint
+!!! hint ""
     Only the representation of the folder will be deleted. Your files stay untouched.
 
 ## Download Folders ##

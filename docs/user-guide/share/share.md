@@ -31,7 +31,7 @@ Then
 
 
 
-!!!tip
+!!!tip ""
     You can create additional links with different secrets and expiry dates by clicking :material-link-plus:.
 
 ## Delete Sharing Link ##

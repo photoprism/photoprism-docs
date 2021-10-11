@@ -4,10 +4,10 @@ PhotoPrism uses [*ffmpeg*](https://www.ffmpeg.org/documentation.html) to transco
 other common video formats to [MPEG-4 AVC](https://en.wikipedia.org/wiki/MPEG-4).
 All video formats, that can be transcoded by ffmpeg are supported.
 
-!!! info
+!!! info ""
     In case you have problems with a specific format, let us know!
 
-!!! info
+!!! info ""
     By default PhotoPrism transcodes videos, when they are first played. This may lead to long loading times for very long or high resolution videos.
     You can use `docker-compose exec photoprism photoprism convert` to convert videos upfront.
 

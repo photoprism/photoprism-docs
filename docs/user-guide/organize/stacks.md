@@ -7,7 +7,7 @@ Grouped files are displayed in *Stacks*.
 
 ![Screenshot](img/stacks-1.png)
 
-!!! info
+!!! info ""
     Files can be grouped for the following reasons:
     
     1. Filenames are related: 'IMG_1234 (2)' or 'IMG_1234 copy 2' are assumed to belong to the same photo.

@@ -23,7 +23,7 @@ In case you set multiple filters only photos, that fulfill all filter criteria, 
 
  ![Screenshot](img/color-red.png)
 
-!!! tip
+!!! tip ""
     You can use filters in the search bar like this:
     
     `label:cat`
@@ -61,7 +61,7 @@ This query will show all photos that have the keywords water **and** buffalo.
 
 * albums, keywords, subject/person, subjects/people.
 
-!!!info
+!!!info ""
     The label filter does not support &. You can use the keywords filter instead, as all labels are keywords as well.
 
 ## OR Search ##
@@ -93,7 +93,7 @@ name:"*_23*"
 
 This will show all photos which name contain `_23`, like `IMG_2356.MOV` , `2021_02_23.jpg`, etc.
 
-!!!info
+!!!info ""
     Wildcards can be combined with & or |: `filename:"*IMG123*|*_22F6FC19.jpg"`
 
 ## Search Filter Overview ##

@@ -2,7 +2,7 @@
 
 To synchronize photos / videos on your phone with PhotoPrism, you can use any app that supports WebDAV.
 
-!!! info
+!!! info ""
     WebDAV access is disabled in public mode.
 
 ## PhotoSync ##
@@ -27,7 +27,7 @@ We recommend [PhotoSync](https://www.photosync-app.com/home.html) which is avail
       ![Screenshot](img/photosync-5.png){: style="width:35%"}
 
 
-!!! attention
+!!! attention ""
       If you are using PhotoSync on Android you need to choose WebDAV as target.
 
 ### Set Up Automatic Sync ###

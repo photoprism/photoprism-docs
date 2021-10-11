@@ -5,7 +5,7 @@ can connect directly to PhotoPrism.
 This mounts the *originals folder* as a network drive and allows you to open, edit, and delete
 files from your computer or smartphone as if they were local.
 
-!!! note
+!!! note ""
     PhotoPrism can also sync files *from* an external storage system (like ownCloud) via WebDAV.
     See [instructions](/user-guide/settings/sync/).
 
@@ -21,7 +21,7 @@ The slash at the end is important and cannot be omitted.
 When connecting, you'll have to authenticate using your regular password.
 It will also change when you update it in *Settings*. The user name is `admin`.
 
-!!! info
+!!! info ""
     You can also connect to the import folder by replacing `originals/` with `import/` in the URL.
 
 For users, who are running PhotoPrism locally on the default port *2342*, the *originals* folder URL is:
@@ -30,7 +30,7 @@ For users, who are running PhotoPrism locally on the default port *2342*, the *o
 http://admin@localhost:2342/originals/
 ```
 
-!!! attention
+!!! attention ""
     Never use WebDAV **without HTTPS** outside your local, private network as your
     password would be transmitted, in clear text, over the Internet. Backup tools and file sync apps 
     like [FolderSync](https://www.tacit.dk/foldersync/faq/#i-can-not-connect-to-a-non-https-webdav-server-why)

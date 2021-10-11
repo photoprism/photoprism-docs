@@ -2,7 +2,7 @@
 
 This page describes how PhotoPrism can sync files *from* an external storage system (like ownCloud) via WebDAV.
 
-!!! note
+!!! note ""
     PhotoPrism can also serve/share files via WebDAV to be browsed on macOS or Windows.
     See [instructions](/user-guide/sync/webdav/).
 
@@ -45,11 +45,11 @@ so that you can automatically sync your latest pictures.
 
 ![Screenshot](img/upload-3.png)
 
-!!! info
+!!! info ""
     Only JPEGs are copied when uploading manually.
     Support for RAW and video files will be added in a future release.
 
-!!! attention
+!!! attention ""
     Due to problems with some Nextcloud settings it might be that uploading to Nextcloud results in 0 byte files. You find information on how to solve it [here](https://github.com/photoprism/photoprism/issues/443).
 
 ## Backup/Sync Files with your Server ##

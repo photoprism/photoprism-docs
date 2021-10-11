@@ -15,7 +15,7 @@ The storage path can be configured using `PHOTOPRISM_STORAGE_PATH`.
 In case cache, sidecar and config path are not defined separately, those are located in the storage directory.
 In addition the storage directory contains [album backups](./backups.md#album-backups) in `/albums` as well as database files.
 
-!!! attention
+!!! attention ""
     You storage path must NOT be located in your originals path. Otherwise your thumbnails will be indexed as well!
 
 ### Cache

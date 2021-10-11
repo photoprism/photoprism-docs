@@ -10,7 +10,7 @@ To star a person click :material-star:. Stared persons appear first.
 ![Screenshot](img/recognized.png)
 ![Screenshot](img/new.png)
 
-!!!info
+!!!info ""
     As not all faces belong to a cluster, there might be more faces than visible in the New section.
     You find all photos with faces that are not assigned to a person using the search filter `face:new`.
     The photo [*edit dialogue*](edit.md) shows all faces of a photo independent from whether they are clustered or not.
@@ -47,7 +47,7 @@ You can hide a person in the *Recognized* section by clicking :material-close: i
     Your continued support helps us fund operating costs, provide services like satellite maps,
     and develop new features. Thank you very much! 💜
 
-!!! attention
+!!! attention ""
     Pictures of this person continue to be visible in search results and albums.
 
 ![Screenshot](img/person-hide.png)
@@ -93,7 +93,7 @@ To rename all photos of a person:
 ## Change People Assignments ##
 In case the wrong person is assigned to a photo you can easily reject this. 
 
-!!!attention
+!!!attention ""
     Each time you reject a face, the face clusters are updated in the background.
 
 1. Open the photo [*edit dialogue*](edit.md)

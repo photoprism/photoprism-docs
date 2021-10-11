@@ -31,7 +31,7 @@ Once all files are added, you can start [importing or indexing](index.md) them.
 
  -->
 
-!!! tip 
+!!! tip ""
     You can use WebDAV to download photos from the server as well. 
     Just connect to `http://server-ip:2342/originals/` or `https://yourdomain/originals/` for public servers,
     and copy the files to your preferred destination.

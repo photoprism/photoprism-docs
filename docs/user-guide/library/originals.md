@@ -1,6 +1,6 @@
 # Indexing Originals #
 
-!!! info
+!!! info ""
     If you're using PhotoPrism for the first time, make sure your photo and video 
     collection is properly configured as *originals* folder.
     See installation instructions in [Getting Started](../../getting-started/index.md) for details.
@@ -19,11 +19,11 @@
 ![Screenshot](img/index.png)
 
 
-!!! tip
+!!! tip ""
     You may use [WebDAV](webdav.md) for adding files to the *originals* folder.
     This is especially helpful if PhotoPrism is running on a remote server.
 
-!!! tip 
+!!! tip ""
     A NSFW detector can be enabled to automatically flag pictures as private which 
     may have offensive content. Note that this is only somewhat reliable. 
 

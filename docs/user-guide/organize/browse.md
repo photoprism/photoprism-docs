@@ -8,7 +8,7 @@ Using the main navigation you can visit the different sections of your photo lib
 #### :material-magnify: Search ####
 Shows all photos and videos that are not in review or archived or private.
 
-!!! hint
+!!! hint ""
     In case the review, private or archive functions are turned off - Search displays those photos and videos as well.
 
 ![Screenshot](img/search-section.jpg)

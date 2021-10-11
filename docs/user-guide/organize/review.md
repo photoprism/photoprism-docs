@@ -10,7 +10,7 @@ The quality score depends on the following:
 * Photo not classified as info or screenshot
 * Photo is favorite, was edited or approved
 
-!!! info
+!!! info ""
     In case you do not need the review mechanism you can turn it off in [Settings](../settings/general.md)
 
 ### Approve Photos ###
@@ -27,7 +27,7 @@ The quality score depends on the following:
 
     ![Screenshot](img/review-2.png)
 
-!!! attention
+!!! attention ""
     The quality score is constantly updated. 
     If you add date or location information to a photo or like it, the quality score increases automatically. 
     In case the new score is equal or greater than 3 the photo is approved automatically.

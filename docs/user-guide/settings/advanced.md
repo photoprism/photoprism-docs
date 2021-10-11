@@ -9,7 +9,7 @@ The same options can all be set using their corresponding
 [config options](/getting-started/config-options/) instead.
 Settings are saved in the `storage/config` directory.
 
-!!! note
+!!! note ""
     The Advanced Settings page is not available if public mode is [enabled](/getting-started/config-options/).
 
 ## Options
@@ -123,7 +123,7 @@ The equivalent [config option](/getting-started/config-options/) is `PHOTOPRISM_
 no thumbnails will be created above this size.
 The equivalent [config option](/getting-started/config-options/) is `PHOTOPRISM_THUMB_SIZE`.
 
-!!! warning
+!!! warning ""
     When the configured size limits are exceeded (for example if users have a larger screen),
     no sufficiently large thumbnail will be generated,
     so the photo viewer may be forced to use original image files instead.
@@ -140,7 +140,7 @@ but set a high Dynamic Size Limit.
 This will allow the server to generate downsampled preview images on-demand,
 causing a delay when previewing a photo in full screen mode.
 
-!!! tip
+!!! tip ""
     To view original images, enable *Dynamic Previews*,
     and configure *Dynamic Size Limit* and *Static Size Limit*
     to a small value like `720`. When viewing images exceeding that limit,
@@ -252,7 +252,7 @@ In addition, PhotoPrism also supports TIFF, PNG, BMP and GIF files. Be aware tha
 
 ![](img/editPhoto.png)
 
-!!! info
+!!! info ""
     Generated sidecar files will be stored outside your originals folder by default, so that
     RAW to JPEG conversion also works in read-only mode.
 

@@ -10,7 +10,7 @@ importing is more efficient when adding files as you don't need to re-index all 
 Use *index* when you want to index your photos and videos directly in the *originals* folder without copying,
 moving or renaming them in any way.
 
-!!! tip
+!!! tip ""
     You may [configure ignore list](originals.md#ignoring-directories-and-files)
     before starting the index.
 
@@ -66,7 +66,7 @@ After import using "move" your folders might look like this:
 * No duplicates in your originals directory
 
 
-!!! info
+!!! info ""
     Original file and folder names are used to create keywords. 
     In case you import and index or only index a directory with the path "Vacation/Africa". All files from this folder get the keywords "vacation" and "africa".
 

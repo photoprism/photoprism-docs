@@ -50,7 +50,7 @@
 
     ![Screenshot](img/add-photo-album-3.png)
 
-!!! tip
+!!! tip ""
     You can select many photos at once using shift.
 
 ### Remove Photos from Albums ###

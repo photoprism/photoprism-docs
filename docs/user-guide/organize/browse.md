@@ -1,9 +1,9 @@
 # Browse Your Pictures #
 
 PhotoPrism offers many views and search filters so that you can browse your pictures in multiple dimensions
-instead of just scrolling through them day by day.
+instead of only scrolling through them day by day.
 
-This helps you rediscover long-forgotten shots, find specific pictures, or create albums based on filters.
+This helps you rediscover long-forgotten shots, find specific pictures, or quickly create albums based on filters.
 
 ### Views & Filters ###
 

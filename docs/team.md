@@ -1,6 +1,6 @@
 # Our Team
 
-We strive to provide the most user-friendly solution for browsing, organizing, and sharing your photo collection.
+We strive to provide the most user-friendly solution for browsing, organizing, and sharing your pictures.
 
 ## Michael Mayer ##
 

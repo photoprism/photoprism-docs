@@ -13,7 +13,7 @@ you have the opportunity to learn Docker, Go, TensorFlow and much more.
 
 ## Questions?
 
-Follow us on [Twitter](https://twitter.com/photoprism_app) to receive regular project updates, 
+Follow us on [Twitter](https://twitter.com/photoprism_app) or join our [community chat](https://gitter.im/browseyourlife/community) to receive regular project updates, 
 get in contact with other contributors and discuss your ideas. Don't be afraid to ask stupid questions.
 
 Of all the tools we tested, it works best to get and give continuous feedback. 

@@ -29,7 +29,7 @@ The quality score depends on the following:
 === "Context Menu"
      1. Go to *Review* 
      2. Select photos and open the context menu
-     3. Click *approve*
+     3. Click :material-check:
 
 
 !!! attention ""

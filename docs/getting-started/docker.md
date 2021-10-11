@@ -113,8 +113,9 @@ While indexing, JPEG sidecar files may be created for originals in other formats
 This is required for image classification, facial recognition, and for displaying them in a Web browser.
 Sidecar and thumbnail files will be added to the *storage* folder, so that your *originals* folder won't be modified.
 
-Pictures will become visible one after another. Open the *Logs* tab in *Library*
-to watch the indexer working.
+Your [photos](../user-guide/organize/browse.md) and [videos](../user-guide/organize/video.md) will
+successively become visible in search results and other parts of the user interface,
+one after another. Open the *Logs* tab in *Library* to watch the indexer working.
 
 Of course, you can continue using your favorite tools for processing RAW files, editing metadata,
 or importing new shots. Go to *Library* and click *Start* to update the index after files have been

@@ -1,11 +1,16 @@
-# Browse through your photo collection #
-PhotoPrisms sections are a nice way for you to browse through your photo collection in multiple dimensions.
-They enable you to re-discover forgotten photos, find specific photos you are looking for or organize your photos.
+# Browse Your Pictures #
 
-### Sections ###
+PhotoPrism offers many views and search filters so that you can browse your pictures in multiple dimensions
+instead of just scrolling through them day by day.
+
+This helps you rediscover long-forgotten shots, find specific pictures, or create albums based on filters.
+
+### Views & Filters ###
+
 Using the main navigation you can visit the different sections of your photo library:
 
 #### :material-magnify: Search ####
+
 Shows all photos and videos that are not in review or archived or private.
 
 !!! hint ""

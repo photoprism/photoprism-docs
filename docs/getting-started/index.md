@@ -47,7 +47,7 @@ Beyond these minimum requirements, the amount of RAM should match the number of 
     with less than 2 GB of physical memory.
     If you're running out of memory - or other system resources - while indexing, please reduce the
     [number of workers](https://docs.photoprism.org/getting-started/config-options/)
-    to a reasonable, small value in `docker-compose.yml`, depending on your CPU and expectations.
+    to a reasonable, small value in `docker-compose.yml` (depending on your CPU and expectations).
     As a measure of last resort, you may disable using TensorFlow for image classification and facial recognition.
 
 Our Web UI works with most modern browsers, and runs best on Chrome, Chromium, Safari, Firefox, and Edge.

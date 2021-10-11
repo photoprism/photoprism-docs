@@ -42,8 +42,7 @@ installed on your system. It is available for Mac, Linux, and Windows.
 === "Windows"
 
     Download our [docker-compose.yml](https://dl.photoprism.org/docker/windows/docker-compose.yml) example for Windows
-    (right click and *Save Link As...*) to a folder of your choice,
-    and change the [configuration](config-options.md) as needed:
+    (right click and *Save Link As...*) to a folder of your choice, and change the [configuration](config-options.md) as needed:
  
     [https://dl.photoprism.org/docker/windows/docker-compose.yml :material-download:](https://dl.photoprism.org/docker/windows/docker-compose.yml)
 
@@ -57,12 +56,9 @@ installed on your system. It is available for Mac, Linux, and Windows.
 === "macOS"
 
     Download our [docker-compose.yml](https://dl.photoprism.org/docker/macos/docker-compose.yml) example for macOS
-    (right click and *Save Link As...* or use `wget`) to a folder of your choice,
-    and change the [configuration](config-options.md) as needed:
+    (right click and *Save Link As...*) to a folder of your choice, and change the [configuration](config-options.md) as needed:
 
-    ```
-    curl -sSL https://dl.photoprism.org/docker/macos/docker-compose.yml -o docker-compose.yml
-    ``` 
+    [https://dl.photoprism.org/docker/macos/docker-compose.yml :material-download:](https://dl.photoprism.org/docker/macos/docker-compose.yml)
     
     It's important to [increase the Docker memory limit](img/docker-resources-advanced.jpg) to 4 GB or more,
     as the default of 2 GB may reduce indexing performance and cause unexpected restarts.

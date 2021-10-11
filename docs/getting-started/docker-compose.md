@@ -1,8 +1,7 @@
 # Setup Using Docker Compose
 
 Before you start, make sure you have [Docker](https://store.docker.com/search?type=edition&offering=community) 
-installed on your system. It is available for Mac, Linux and Windows.
-We plan to provide downloadable installation packages for future releases.
+installed on your system. It is available for Mac, Linux, and Windows.
 
 ### Step 1: Configure ###
 

@@ -1,14 +1,16 @@
 # Setup
 
-To simplify running PhotoPrism on a server, we strongly recommend using [Docker Compose](docker-compose.md).
-It is available for Mac, Linux and Windows.
+We recommend running PhotoPrism with [Docker Compose](docker-compose.md).
+All you need to have installed on your system is a Web browser 
+and [Docker](https://store.docker.com/search?type=edition&offering=community). 
+It is available for Mac, Linux, and Windows.
 
-Next, you'll have to [index](../user-guide/library/index.md) 
-your library. Please be patient, this will take a while depending on the size of your photo collection.
+When setup is complete, you can start [indexing your pictures](../user-guide/library/index.md).
+Be patient, this may will take a while depending on your server hardware and how many pictures you have.
 
 Already indexed photos can be browsed in [Photos](../user-guide/organize/browse.md) 
 while videos show up in [Videos](../user-guide/organize/video.md).
-Counts are getting continuously updated in the navigation.
+Counts in the navigation are constantly updated, so you can follow the progress.
 
 If files are missing, they might be in [Review](../user-guide/organize/review.md) due to low quality
 or incomplete metadata. You can turn this and other features off in [Settings](../user-guide/settings/general.md), 
@@ -19,6 +21,10 @@ depending on your specific use case.
     [multi-arch image](https://hub.docker.com/r/photoprism/photoprism) for **AMD64, ARM64, and ARMv7**.
     That means you don't need to pull from different Docker repositories anymore. We recommend updating your existing
     `docker-compose.yml` config based on [our examples](https://dl.photoprism.org/docker/).
+
+!!! info ""
+    Downloadable installation packages are planned for a later release. Developers can build PhotoPrism from source
+    by following the instructions in our [Developer Guide](../developer-guide/setup.md).
 
 ## Roadmap ##
 

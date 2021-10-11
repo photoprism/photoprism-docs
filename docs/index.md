@@ -31,4 +31,4 @@ Say goodbye to uploading your visual memories to the cloud!
 
 Step-by-step installation instructions for our self-hosted community edition can be found 
 in the [Setup Guide](getting-started/index.md).
-All you need is a Web browser and Docker to run the server. It is available for Mac, Linux and Windows.
+All you need is a Web browser and Docker to run the server. It is available for Mac, Linux, and Windows.

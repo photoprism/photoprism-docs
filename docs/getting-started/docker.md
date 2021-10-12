@@ -1,6 +1,6 @@
 # Running PhotoPrism with Docker
 
-We recommend using [Docker Compose](docker-compose.md) as it is easier to start with for beginners,
+We recommend using [Docker Compose](docker-compose.md) as it is easier to start with for beginners
 and provides more comfort than the pure Docker command-line interface.
 
 ### Step 1: Start the server ###

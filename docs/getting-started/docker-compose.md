@@ -115,7 +115,7 @@ your `docker-compose.yml` file so that you don't lose these files after restarti
 ### Step 2: Start the server ###
 
 Open a terminal and change to the folder in which the `docker-compose.yml` file has been saved.
-Run this command to start the app container in the background and keep it running:
+Run this command to start the app and database in the background:
 
 ```
 docker-compose up -d

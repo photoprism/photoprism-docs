@@ -55,16 +55,16 @@ the app for changes to take effect.
 
 #### Volumes ####
 
+Since the app is running inside a container, you have to explicitly mount the folders you want to use.
+PhotoPrism won't be able to see folders that have not been mounted. That's an important security feature.
+
 ##### /photoprism/originals #####
 
 The *originals* folder contains your original photo and video files.
 
 They are mounted from `~/Pictures` in the example above, where `~` is a placeholder for 
-your [home directory](https://en.wikipedia.org/wiki/Home_directory).
-
-All folders accessible from the host [may be mounted](https://docs.docker.com/storage/bind-mounts/), 
-including network drives. Since PhotoPrism is running inside a container, it won't be able to see 
-folders that have not been mounted. That's an important security feature.
+your [home directory](https://en.wikipedia.org/wiki/Home_directory). All folders accessible from 
+the host [may be mounted](https://docs.docker.com/storage/bind-mounts/), including network drives. 
 
 Multiple folders can be made accessible by mounting them as subfolders:
 

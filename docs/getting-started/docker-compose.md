@@ -124,6 +124,11 @@ docker-compose up -d
 
 Now open the Web UI by navigating to http://localhost:2342/. You should see a login screen.
 
+Sign in with the user `admin` and the initial password configured via `PHOTOPRISM_ADMIN_PASSWORD`.
+You may change it on the [account settings page](../user-guide/settings/account.md),
+or using the `photoprism passwd` command in a terminal.
+Enabling [public mode](config-options.md) will disable authentication.
+
 !!! hint ""
     If you can't connect, try starting the server without `-d`. This keeps it in the foreground
     and shows log messages for troubleshooting. You're welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
@@ -131,19 +136,14 @@ Now open the Web UI by navigating to http://localhost:2342/. You should see a lo
     on a different host and/or port. There could also be an issue with your browser,
     ad blocker or firewall settings.
 
-Sign in with the user `admin` and the initial password configured via `PHOTOPRISM_ADMIN_PASSWORD`.
-You may change it on the [account settings page](../user-guide/settings/account.md), 
-or using the `photoprism passwd` command in a terminal.
-Enabling [public mode](config-options.md) will disable authentication.
-
 !!! note ""
     For security reasons, it is **not possible to change the password** via `PHOTOPRISM_ADMIN_PASSWORD` after 
     the app has been started for the first time. You may run `docker-compose exec photoprism photoprism reset` 
     in a terminal to reset your database for a clean start. Alternatively, you can drop and recreate the 
     database or manually delete all files from the database storage folder before restarting your instance.
 
-The server port and other basic settings may be changed in `docker-compose.yml` at any time.
-Remember to restart the container whenever it has been changed:
+The server port and [config options](config-options.md) may be changed in `docker-compose.yml` at any time.
+Remember to restart the app container for changes to take effect:
 
 ```
 docker-compose stop photoprism

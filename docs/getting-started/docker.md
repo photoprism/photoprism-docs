@@ -34,8 +34,13 @@ and provides more comfort than the pure Docker command-line interface.
     For security reasons, there also is no default in case no password was provided.
     A minimum length of 4 characters is required.
 
-When the app container has been started, open the Web UI by navigating 
-to http://localhost:2342/. You should see a login screen.
+When the app container has been started, open the Web UI by navigating to http://localhost:2342/. 
+You should see a login screen.
+
+Sign in with the user `admin` and the password configured via `PHOTOPRISM_ADMIN_PASSWORD`.
+You may change it on the [account settings page](../user-guide/settings/account.md),
+or using the `photoprism passwd` command in a terminal.
+Enabling [public mode](config-options.md) will disable authentication.
 
 !!! hint ""
     If you can't connect, try starting the server without `-d`. This keeps it in the foreground
@@ -44,18 +49,13 @@ to http://localhost:2342/. You should see a login screen.
     on a different host and/or port. There could also be an issue with your browser, 
     ad blocker or firewall settings.
 
-Sign in with the user `admin` and the password configured via `PHOTOPRISM_ADMIN_PASSWORD`.
-You may change it on the [account settings page](../user-guide/settings/account.md),
-or using the `photoprism passwd` command in a terminal.
-Enabling [public mode](config-options.md) will disable authentication.
-
 !!! note ""
     For security reasons, it is **not possible to change the password** via `PHOTOPRISM_ADMIN_PASSWORD` 
     after the app has been started for the first time. You may run `docker exec -ti photoprism photoprism reset` 
     in a terminal to reset your database for a clean start.
 
-The default port 2342 and other configuration values may be changed as needed, 
-see [Config Options](config-options.md) for details.
+The server port and [config options](config-options.md) may be changed as needed. Remember to restart 
+the app container for changes to take effect.
 
 #### Volumes ####
 
@@ -91,8 +91,8 @@ organized by year and month.
 
 Cache, session, thumbnail, and sidecar files will be created in `/photoprism/storage`, which is mounted as 
 an [anonymous volume](https://docs.docker.com/storage/bind-mounts/) in our example. You may want to 
-mount a specific host directory instead. Never remove the volume completely so that you don't lose your 
-index and other these files after restarting or upgrading the container.
+mount a specific host directory instead. Never remove the volume completely so that you don't lose 
+these files after restarting or upgrading the container.
 
 !!! info "Read-Only Mode"
     Running PhotoPrism in read-only mode disables all features that require write permissions,

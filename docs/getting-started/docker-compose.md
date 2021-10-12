@@ -7,7 +7,7 @@ installed on your system. It is available for Mac, Linux, and Windows.
 
 === "Linux"
 
-    Download our standard [docker-compose.yml](https://dl.photoprism.org/docker/docker-compose.yml) example
+    Download our [docker-compose.yml](https://dl.photoprism.org/docker/docker-compose.yml) example
     (right click and *Save Link As...* or use `wget`) to a folder of your choice,
     and change the [configuration](config-options.md) as needed:
     

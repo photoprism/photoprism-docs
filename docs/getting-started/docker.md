@@ -182,12 +182,14 @@ PhotoPrism's command-line interface is well suited for job automation using a
 | *Uninstall*                 | `docker rm -f photoprism`                                |
 | *Show Server Logs*          | `docker logs --tail=100 -f photoprism`                   |
 | *Show Config Values*        | `docker exec -ti photoprism photoprism config`           |
-| *Change Admin Password*     | `docker exec -ti photoprism photoprism passwd`           | 
 | *Reset Database*            | `docker exec -ti photoprism photoprism reset`            |                   
 | *Backup Database*           | `docker exec -ti photoprism photoprism backup -a -i`     |                      
 | *Restore Database*          | `docker exec -ti photoprism photoprism restore -a -i`    |                   
-| *Show Facial Recognition Commands* | `docker exec -ti photoprism photoprism faces help`|
+| *Change Admin Password*     | `docker exec -ti photoprism photoprism passwd`           | 
 | *Show User Management Commands*    | `docker exec -ti photoprism photoprism users help`|
+| *Show Facial Recognition Commands* | `docker exec -ti photoprism photoprism faces help`|
+| *Index Faces*               | `docker exec -ti photoprism photoprism faces index`      |
+| *Remove People & Faces*     | `docker exec -ti photoprism photoprism faces reset -f`   |
 | *Transcode Videos & RAW Images*    | `docker exec -ti photoprism photoprism convert`   |
 | *Update Index*              | `docker exec -ti photoprism photoprism index --cleanup`  |                  
 | *Import Files*              | `docker exec -ti photoprism photoprism import [path]`    |

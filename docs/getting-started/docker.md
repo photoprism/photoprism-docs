@@ -23,17 +23,17 @@ and provides more comfort than the pure Docker command-line interface.
       photoprism/photoprism
     ```
     
-    The server port and [config options](config-options.md) may be changed as needed.
-
-    The command may have to be prefixed with `sudo` when not running as root.
-    Note that this will point the home directory placeholder `~` to `/root` in volume mounts.
-    Kernel security modules such as AppArmor and SELinux have been reported to cause
-    [issues](https://docs.photoprism.org/getting-started/faq/#why-is-photoprism-getting-stuck-in-a-restart-loop).
+The server port and [config options](config-options.md) may be changed as needed.
 
 !!! danger ""
     Always change `PHOTOPRISM_ADMIN_PASSWORD` so that the app starts with a **secure initial password**.
     Never use easy-to-guess passwords or default values like `insecure` on publicly accessible servers.
     There is no default in case no password was provided. A minimum length of 4 characters is required.
+
+Commands on Linux may have to be prefixed with `sudo` when not running as root.
+Note that this will point the home directory placeholder `~` to `/root` in volume mounts.
+Kernel security modules such as AppArmor and SELinux have been reported to cause
+[issues](https://docs.photoprism.org/getting-started/faq/#why-is-photoprism-getting-stuck-in-a-restart-loop).
 
 When the app has been started, open the Web UI by navigating to http://localhost:2342/. You should see a login screen.
 Sign in with the user `admin` and the password configured via `PHOTOPRISM_ADMIN_PASSWORD`.
@@ -174,21 +174,22 @@ PhotoPrism's command-line interface is well suited for job automation using a
 
 #### Examples ####
 
-| Action                      | Command                                               |
-| --------------------------- | ----------------------------------------------------- |
-| *Start App*                 | `docker start photoprism`                             |
-| *Stop App*                  | `docker stop photoprism`                              |
-| *Remove App*                | `docker rm -f photoprism`                             |
-| *Update App Image*          | `docker pull photoprism/photoprism:latest`            |
-| *Show Server Logs*          | `docker logs --tail=25 -f photoprism`                 |
-| *Show Config Values*        | `docker exec -ti photoprism photoprism config`        |
-| *Show Facial Recognition Commands* | `docker exec -ti photoprism photoprism faces help`    |
-| *Show User Management Commands*    | `docker exec -ti photoprism photoprism users help`    |
-| *Reset Database*            | `docker exec -ti photoprism photoprism reset`         |                   
-| *Backup Database*           | `docker exec -ti photoprism photoprism backup -a -i`  |                      
-| *Restore Database*          | `docker exec -ti photoprism photoprism restore -a -i` |                   
-| *Update Index*              | `docker exec -ti photoprism photoprism index`         |                  
-| *Import Files*              | `docker exec -ti photoprism photoprism import [path]` |
+| Action                      | Command                                                  |
+| --------------------------- | -------------------------------------------------------- |
+| *Start App*                 | `docker start photoprism`                                |
+| *Stop App*                  | `docker stop photoprism`                                 |
+| *Update App Image*          | `docker pull photoprism/photoprism:latest`               |
+| *Uninstall*                 | `docker rm -f photoprism`                                |
+| *Show Server Logs*          | `docker logs --tail=100 -f photoprism`                   |
+| *Show Config Values*        | `docker exec -ti photoprism photoprism config`           |
+| *Reset Database*            | `docker exec -ti photoprism photoprism reset`            |                   
+| *Backup Database*           | `docker exec -ti photoprism photoprism backup -a -i`     |                      
+| *Restore Database*          | `docker exec -ti photoprism photoprism restore -a -i`    |                   
+| *Show Facial Recognition Commands* | `docker exec -ti photoprism photoprism faces help`|
+| *Show User Management Commands*    | `docker exec -ti photoprism photoprism users help`|
+| *Transcode RAW Images & Videos*    | `docker exec -ti photoprism photoprism convert`   |
+| *Update Index*              | `docker exec -ti photoprism photoprism index --cleanup`  |                  
+| *Import Files*              | `docker exec -ti photoprism photoprism import [path]`    |
 
 !!! info "Complete Rescan"
     `docker exec -ti photoprism photoprism index -f` rescans all originals, including already indexed and unchanged files.

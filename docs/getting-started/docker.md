@@ -22,14 +22,13 @@ and provides more comfort than the pure Docker command-line interface.
       -v ~/Pictures:/photoprism/originals \
       photoprism/photoprism
     ```
+    
+    The server port and [config options](config-options.md) may be changed as needed.
 
     The command may have to be prefixed with `sudo` when not running as root.
     Note that this will point the home directory placeholder `~` to `/root` in volume mounts.
     Kernel security modules such as AppArmor and SELinux have been reported to cause
     [issues](https://docs.photoprism.org/getting-started/faq/#why-is-photoprism-getting-stuck-in-a-restart-loop).
-
-The server port and [config options](config-options.md) may be changed as needed. Remember to restart
-the app for changes to take effect.
 
 !!! danger ""
     Always change `PHOTOPRISM_ADMIN_PASSWORD` so that the app starts with a **secure initial password**.

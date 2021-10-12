@@ -38,8 +38,7 @@ When the app container has been started, open the Web UI by navigating to http:/
 You should see a login screen.
 
 Sign in with the user `admin` and the password configured via `PHOTOPRISM_ADMIN_PASSWORD`.
-You may change it on the [account settings page](../user-guide/settings/account.md),
-or using the `photoprism passwd` command in a terminal.
+You may change it on the [account settings page](../user-guide/settings/account.md).
 Enabling [public mode](config-options.md) will disable authentication.
 
 !!! hint ""

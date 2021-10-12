@@ -220,6 +220,7 @@ PhotoPrism's command-line interface is well suited for job automation using a
 | *Uninstall*                     | `docker-compose rm -s -v`                                   |
 | *Show Server Logs*              | `docker-compose logs --tail=100 -f`                         |
 | *Show Config Values*            | `docker-compose exec photoprism photoprism config`          |
+| *Change Admin Password*         | `docker-compose exec photoprism photoprism passwd`          |
 | *Reset Database*                | `docker-compose exec photoprism photoprism reset`           |                   
 | *Backup Database*               | `docker-compose exec photoprism photoprism backup -a -i`    |                      
 | *Restore Database*              | `docker-compose exec photoprism photoprism restore -a -i`   |                   

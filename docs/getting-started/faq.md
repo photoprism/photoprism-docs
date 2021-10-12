@@ -170,14 +170,11 @@ PhotoPrism after failures, which may be caused by the following conditions:
 4. You have accidentally mounted the wrong folders
 5. The database server is unavailable, incompatible or configured incorrectly 
 6. There are connection issues caused by a proxy or firewall
-7. Kernel security modules such as
-   [AppArmor](https://wiki.ubuntu.com/AppArmor) and
-   [SELinux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux)
-   may be blocking permissions as they have been configured incorrectly or not at all
+7. Kernel security modules such as [AppArmor](https://wiki.ubuntu.com/AppArmor) and
+   [SELinux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) may be blocking permissions
 
-Please check your operating system and Docker logs for errors like *disk full*, *wrong permissions*, 
-and *connection timeout*. 
-If you're using Docker Compose, run this command to see the last 100 log messages:
+Please check your operating system and Docker logs for messages like *disk full*, *wrong permissions*, 
+and *connection timeout*. If using Docker Compose, run this command to see the last 100 log messages:
 
 ```
 docker-compose logs --tail=100

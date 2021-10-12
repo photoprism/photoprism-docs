@@ -1,7 +1,7 @@
 # Running PhotoPrism with Docker
 
-We recommend using [Docker Compose](docker-compose.md) as it is generally easier to start with for beginners.
-It provides more comfort than the pure Docker command-line interface.
+We recommend using [Docker Compose](docker-compose.md) as it is easier to start with for beginners,
+and provides more comfort than the pure Docker command-line interface.
 
 ### Step 1: Start the server ###
 
@@ -34,14 +34,15 @@ It provides more comfort than the pure Docker command-line interface.
     For security reasons, there also is no default in case no password was provided.
     A minimum length of 4 characters is required.
 
-Navigate to http://localhost:2342/ to open the Web UI. You should see a login screen.
+When the app container has been started, open the Web UI by navigating 
+to http://localhost:2342/. You should see a login screen.
 
 !!! hint ""
     If you can't connect, try starting the server without `-d`. This keeps it in the foreground
-    and shows log messages for troubleshooting. Many issues are easy to fix.
-    You're welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
-    Should the server already be running, or you see no errors, there may be an issue with your browser,
-    desktop firewall security settings, or the server is running on a different host and/or port.
+    and shows log messages for troubleshooting. You're welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
+    Should the server already be running, or you see no errors, you may have started it 
+    on a different host and/or port. There could also be an issue with your browser, 
+    ad blocker or firewall settings.
 
 Sign in with the user `admin` and the password configured via `PHOTOPRISM_ADMIN_PASSWORD`.
 You may change it on the [account settings page](../user-guide/settings/account.md),
@@ -197,6 +198,6 @@ PhotoPrism's command-line interface is well suited for job automation using a
 
 !!! info "Complete Rescan"
     `docker exec -ti photoprism photoprism index -f` rescans all originals, including already indexed and unchanged files.
-    This may be necessary after major upgrades or when issues that affected you have been resolved.
+    This may be necessary after major upgrades.
 
 *[CLI]: Command-Line Interface

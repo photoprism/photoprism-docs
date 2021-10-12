@@ -128,8 +128,9 @@ You may change it on the [account settings page](../user-guide/settings/account.
 Enabling [public mode](config-options.md) will disable authentication.
 
 !!! hint ""
-    If you can't connect, try starting the server without `-d`. This keeps it in the foreground
-    and shows log messages for troubleshooting. You're welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
+    If you can't connect, try starting the app container without `-d`: `docker-compose up photoprism`. 
+    This keeps it in the foreground and shows log messages for troubleshooting. You're welcome to ask 
+    for help in our [community chat](https://gitter.im/browseyourlife/community).
     Should the server already be running, or you see no errors, you may have started it
     on a different host and/or port. There could also be an issue with your browser,
     ad blocker, or firewall settings.
@@ -211,22 +212,21 @@ PhotoPrism's command-line interface is well suited for job automation using a
 
 #### Examples ####
 
-| Action                    | Command                                                   |
-| ------------------------- | --------------------------------------------------------- |
-| *Start App*               | `docker-compose up -d`                                    |
-| *Stop App*                | `docker-compose stop`                                     |
-| *Remove App*              | `docker-compose down`                                     |
-| *Update App Image*        | `docker-compose pull`                                     |
-| *Show App Logs*           | `docker-compose logs --tail=25 -f`                        |
-| *Open Terminal*           | `docker-compose exec photoprism bash`                     |
-| *Show Config Values*      | `docker-compose exec photoprism photoprism config`        |
-| *Show Facial Recognition Subcommands* | `docker-compose exec photoprism photoprism faces help`    |
-| *Show User Management Subcommands*    | `docker-compose exec photoprism photoprism users help`    |
-| *Reset Database*          | `docker-compose exec photoprism photoprism reset`         |                   
-| *Backup Database*         | `docker-compose exec photoprism photoprism backup -a -i`  |                      
-| *Restore Database*        | `docker-compose exec photoprism photoprism restore -a -i` |                   
-| *Update Index*            | `docker-compose exec photoprism photoprism index`         |                  
-| *Import Files*            | `docker-compose exec photoprism photoprism import [path]` |                  
+| Action                         | Command                                                   |
+| ------------------------------ | --------------------------------------------------------- |
+| *Start App & Database Server*  | `docker-compose up -d`                                    |
+| *Stop App & Database Server*   | `docker-compose stop`                                     |
+| *Remove App & Database*        | `docker-compose down`                                     |
+| *Update App & Database Images* | `docker-compose pull`                                     |
+| *Show Server Logs*             | `docker-compose logs --tail=25 -f`                        |
+| *Show Config Values*           | `docker-compose exec photoprism photoprism config`        |
+| *Show Facial Recognition Commands* | `docker-compose exec photoprism photoprism faces help`    |
+| *Show User Management Commands*    | `docker-compose exec photoprism photoprism users help`    |
+| *Reset Database*               | `docker-compose exec photoprism photoprism reset`         |                   
+| *Backup Database*              | `docker-compose exec photoprism photoprism backup -a -i`  |                      
+| *Restore Database*             | `docker-compose exec photoprism photoprism restore -a -i` |                   
+| *Update Index*                 | `docker-compose exec photoprism photoprism index`         |                  
+| *Import Files*                 | `docker-compose exec photoprism photoprism import [path]` |                  
 
 !!! info "Complete Rescan"
     `docker-compose exec photoprism photoprism index -f` rescans all originals, including already indexed and unchanged files. 

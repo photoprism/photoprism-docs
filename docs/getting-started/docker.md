@@ -41,7 +41,7 @@ You may change it on the [account settings page](../user-guide/settings/account.
 Enabling [public mode](config-options.md) will disable authentication.
 
 !!! hint ""
-    If you can't connect, try starting the server without `-d`. This keeps it in the foreground
+    If you can't connect, try starting the app container without `-d`. This keeps it in the foreground
     and shows log messages for troubleshooting. You're welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
     Should the server already be running, or you see no errors, you may have started it 
     on a different host and/or port. There could also be an issue with your browser, 
@@ -179,15 +179,14 @@ PhotoPrism's command-line interface is well suited for job automation using a
 
 | Action                      | Command                                               |
 | --------------------------- | ----------------------------------------------------- |
-| *Start App*                 | `docker start photoprism`                             |
-| *Stop App*                  | `docker stop photoprism`                              |
+| *Start App Server*          | `docker start photoprism`                             |
+| *Stop App Server*           | `docker stop photoprism`                              |
 | *Remove App*                | `docker rm -f photoprism`                             |
-| *Download App Image*        | `docker pull photoprism/photoprism:latest`            |
-| *Show App Logs*             | `docker logs --tail=25 -f photoprism`                 |
-| *Open Terminal*             | `docker exec -ti photoprism bash`                     |
+| *Update App Image*          | `docker pull photoprism/photoprism:latest`            |
+| *Show Server Logs*          | `docker logs --tail=25 -f photoprism`                 |
 | *Show Config Values*        | `docker exec -ti photoprism photoprism config`        |
-| *Show Facial Recognition Subcommands* | `docker exec -ti photoprism photoprism faces help`    |
-| *Show User Management Subcommands*    | `docker exec -ti photoprism photoprism users help`    |
+| *Show Facial Recognition Commands* | `docker exec -ti photoprism photoprism faces help`    |
+| *Show User Management Commands*    | `docker exec -ti photoprism photoprism users help`    |
 | *Reset Database*            | `docker exec -ti photoprism photoprism reset`         |                   
 | *Backup Database*           | `docker exec -ti photoprism photoprism backup -a -i`  |                      
 | *Restore Database*          | `docker exec -ti photoprism photoprism restore -a -i` |                   

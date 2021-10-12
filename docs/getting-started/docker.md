@@ -51,7 +51,7 @@ Enabling [public mode](config-options.md) will disable authentication.
 !!! note ""
     For security reasons, it is **not possible to change the password** via `PHOTOPRISM_ADMIN_PASSWORD` 
     after the app has been started for the first time. You may run `docker exec -ti photoprism photoprism passwd`
-    in a terminal to change an existing password or reset your database for a clean start. 
+    in a terminal to change an existing password. You can also reset your database for a clean start. 
 
 The server port and [config options](config-options.md) may be changed as needed. Remember to restart 
 the app container for changes to take effect.

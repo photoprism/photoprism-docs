@@ -83,7 +83,7 @@ organized by year and month.
 !!! note ""
     You can safely skip this. Adding files via [Web Upload](../user-guide/library/upload.md)
     and [WebDAV](../user-guide/sync/webdav.md) remains possible, unless [read-only mode](config-options.md)
-    is enabled, or the [features have been disabled](../user-guide/settings/general.md).
+    is enabled or the [features have been disabled](../user-guide/settings/general.md).
 
 ##### /photoprism/storage #####
 

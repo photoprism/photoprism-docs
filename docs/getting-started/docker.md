@@ -33,9 +33,7 @@ and provides more comfort than the pure Docker command-line interface.
     Never use easy-to-guess passwords or default values like `insecure` on publicly accessible servers.
     There is no default in case no password was provided. A minimum length of 4 characters is required.
 
-When the app has been started, open the Web UI by navigating to http://localhost:2342/. 
-You should see a login screen.
-
+When the app has been started, open the Web UI by navigating to http://localhost:2342/. You should see a login screen.
 Sign in with the user `admin` and the password configured via `PHOTOPRISM_ADMIN_PASSWORD`.
 You may change it on the [account settings page](../user-guide/settings/account.md).
 Enabling [public mode](config-options.md) will disable authentication.

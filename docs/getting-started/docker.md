@@ -47,12 +47,12 @@ Enabling [public mode](config-options.md) will disable authentication.
     and shows log messages for troubleshooting. You're welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
     Should the server already be running, or you see no errors, you may have started it 
     on a different host and/or port. There could also be an issue with your browser, 
-    ad blocker or firewall settings.
+    ad blocker, or firewall settings.
 
 !!! note ""
     For security reasons, it is **not possible to change the password** via `PHOTOPRISM_ADMIN_PASSWORD` 
-    after the app has been started for the first time. You may run `docker exec -ti photoprism photoprism reset` 
-    in a terminal to reset your database for a clean start.
+    after the app has been started for the first time. You may run `docker exec -ti photoprism photoprism passwd`
+    in a terminal to change an existing password or reset your database for a clean start. 
 
 The server port and [config options](config-options.md) may be changed as needed. Remember to restart 
 the app container for changes to take effect.

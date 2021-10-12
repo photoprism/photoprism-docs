@@ -161,30 +161,32 @@ of all apps installed.  Sharing links will be longer as well.
 
 ### Why is PhotoPrism getting stuck in a restart loop? ###
 
-This typically happens when Docker was configured to automatically restart 
-PhotoPrism after failures, which may be caused by the following conditions:
+This typically happens when Docker was configured to automatically restart the app 
+after failures. Fatal errors are typically caused by one of the following conditions:
 
 1. Your (virtual) server disk is full
 2. There is disk space left, but the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached
-3. The storage folder is not writable
+3. The storage folder is not writable or there are other filesystem permission issues
 4. You have accidentally mounted the wrong folders
-5. The database server is unavailable, incompatible or configured incorrectly 
-6. There are connection issues caused by a proxy or firewall
-7. Kernel security modules such as [AppArmor](https://wiki.ubuntu.com/AppArmor) and
+5. The server is low on memory
+6. The database server is not available, incompatible or incorrectly configured
+7. There are network problems caused by a proxy, firewall or unstable connection
+8. Kernel security modules such as [AppArmor](https://wiki.ubuntu.com/AppArmor) and
    [SELinux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) may be blocking permissions
 
-Please check your operating system and Docker logs for messages like *disk full*, *wrong permissions*, 
-and *connection timeout*. If using Docker Compose, run this command to see the last 100 log messages:
+Please search your operating system and server logs for messages like *disk full*, *wrong permissions*, 
+and *connection timeout* before reporting a bug. If you are using Docker Compose, run this command 
+to display the last 100 log messages:
 
 ```
 docker-compose logs --tail=100
 ```
 
-Linux kernel security may be disabled on private servers, especially if you have no experience
-with configuration. Use the commands `chmod` and `chown` to fix file system permissions
-on Linux and macOS.
+Linux kernel security can be disabled on private servers, especially if you do not have experience
+with the configuration. Use a file manager, or the commands `chmod` and `chown` on Unix-like operating systems, 
+to verify and fix filesystem permissions.
 Available disk space can be displayed with `df -h`. The size of virtual disks and memory can be
-increased in Docker settings.
+increased in Docker and/or VM settings.
 
 ### How can I uninstall PhotoPrism? ###
 

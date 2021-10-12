@@ -137,11 +137,10 @@ or using the `photoprism passwd` command in a terminal.
 Enabling [public mode](config-options.md) will disable authentication.
 
 !!! note ""
-    For security reasons, it is **not possible to change an existing admin password via `PHOTOPRISM_ADMIN_PASSWORD`** after 
-    your instance has been started for the first time. The terminal command `docker-compose exec photoprism photoprism reset`
-    can reset your database for a clean start if needed. Ensure you're in the folder in which the `docker-compose.yml` 
-    file has been saved and the container is running before using it or other CLI commands. Alternatively, you can 
-    drop and recreate the database or manually delete database files from its storage folder before restarting your instance.
+    For security reasons, it is **not possible to change the password** via `PHOTOPRISM_ADMIN_PASSWORD` after 
+    the app has been started for the first time. You may run `docker-compose exec photoprism photoprism reset` 
+    in a terminal to reset your database for a clean start. Alternatively, you can drop and recreate the 
+    database or manually delete all files from the database storage folder before restarting your instance.
 
 The server port and other basic settings may be changed in `docker-compose.yml` at any time.
 Remember to restart the container whenever it has been changed:

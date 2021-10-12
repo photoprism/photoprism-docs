@@ -50,9 +50,9 @@ or using the `photoprism passwd` command in a terminal.
 Enabling [public mode](config-options.md) will disable authentication.
 
 !!! note ""
-    It's not possible to **change the initial password** via `PHOTOPRISM_ADMIN_PASSWORD` after PhotoPrism
-    has been started for the first time. You may run `docker exec -ti photoprism photoprism reset` in a terminal to
-    reset your database for a clean start.
+    For security reasons, it is **not possible to change the password** via `PHOTOPRISM_ADMIN_PASSWORD` 
+    after the app has been started for the first time. You may run `docker exec -ti photoprism photoprism reset` 
+    in a terminal to reset your database for a clean start.
 
 The default port 2342 and other configuration values may be changed as needed, 
 see [Config Options](config-options.md) for details.

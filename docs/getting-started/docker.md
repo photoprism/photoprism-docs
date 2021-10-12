@@ -7,7 +7,7 @@ and provides more comfort than the pure Docker command-line interface.
 
 === "Linux"
 
-    Open a terminal and run this command after replacing `~/Pictures` with
+    Open a terminal and run this command to start the app after replacing `~/Pictures` with
     the folder containing your pictures:
     
     ```
@@ -33,7 +33,7 @@ and provides more comfort than the pure Docker command-line interface.
     Never use easy-to-guess passwords or default values like `insecure` on publicly accessible servers.
     There is no default in case no password was provided. A minimum length of 4 characters is required.
 
-When the app container has been started, open the Web UI by navigating to http://localhost:2342/. 
+When the app has been started, open the Web UI by navigating to http://localhost:2342/. 
 You should see a login screen.
 
 Sign in with the user `admin` and the password configured via `PHOTOPRISM_ADMIN_PASSWORD`.
@@ -41,7 +41,7 @@ You may change it on the [account settings page](../user-guide/settings/account.
 Enabling [public mode](config-options.md) will disable authentication.
 
 !!! hint ""
-    If you can't connect, try starting the app container without `-d`. This keeps it in the foreground
+    If you can't connect, try starting the app without `-d`. This keeps it in the foreground
     and shows log messages for troubleshooting. You're welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
     Should the server already be running, or you see no errors, you may have started it 
     on a different host and/or port. There could also be an issue with your browser, 
@@ -53,7 +53,7 @@ Enabling [public mode](config-options.md) will disable authentication.
     in a terminal to change an existing password. You can also reset your database for a clean start. 
 
 The server port and [config options](config-options.md) may be changed as needed. Remember to restart 
-the app container for changes to take effect.
+the app for changes to take effect.
 
 #### Volumes ####
 
@@ -179,8 +179,8 @@ PhotoPrism's command-line interface is well suited for job automation using a
 
 | Action                      | Command                                               |
 | --------------------------- | ----------------------------------------------------- |
-| *Start App Server*          | `docker start photoprism`                             |
-| *Stop App Server*           | `docker stop photoprism`                              |
+| *Start App*                 | `docker start photoprism`                             |
+| *Stop App*                  | `docker stop photoprism`                              |
 | *Remove App*                | `docker rm -f photoprism`                             |
 | *Update App Image*          | `docker pull photoprism/photoprism:latest`            |
 | *Show Server Logs*          | `docker logs --tail=25 -f photoprism`                 |

@@ -8,7 +8,7 @@ Say goodbye to uploading your visual memories to the cloud!
 
 ## Features ##
 
-* Browse all your photos and videos without worrying about duplicates, RAW images or video transcoding
+* Browse all your photos and videos without worrying about duplicates, RAW images or video codecs
 * Powerful [search filters](https://demo.photoprism.org/browse?q=mono%3Atrue%20quality%3A3%20photo%3Atrue) make finding the right picture a walk in the park
 * Since the [user interface](https://demo.photoprism.org/) is a [Progressive Web App](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps),
   it provides a native app-like experience, and you can easily install it on the home screen of all major operating systems and mobile devices

@@ -64,10 +64,9 @@ installed on your system. It is available for Mac, Linux, and Windows.
     as the default of 2 GB may reduce indexing performance and cause unexpected restarts.
 
 !!! danger ""
-    Always change `PHOTOPRISM_ADMIN_PASSWORD` so that PhotoPrism starts with a **secure initial password**.
+    Always change `PHOTOPRISM_ADMIN_PASSWORD` so that the app starts with a **secure initial password**.
     Never use easy-to-guess passwords or default values like `insecure` on publicly accessible servers.
-    For security reasons, there also is no default in case no password was provided.
-    A minimum length of 4 characters is required.
+    There is no default in case no password was provided. A minimum length of 4 characters is required.
 
 #### Volumes ####
 

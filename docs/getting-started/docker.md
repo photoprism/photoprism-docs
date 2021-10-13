@@ -35,7 +35,7 @@ If you provide no database server credentials, a SQLite database file will be cr
 Commands on Linux may have to be prefixed with `sudo` when not running as root.
 Note that this will point the home directory placeholder `~` to `/root` in volume mounts.
 Kernel security modules such as AppArmor and SELinux have been reported to cause
-[issues](https://docs.photoprism.org/getting-started/faq/#why-is-photoprism-getting-stuck-in-a-restart-loop).
+[issues](troubleshooting.md).
 
 When the app has been started, open the Web UI by navigating to http://localhost:2342/. You should see a login screen.
 Sign in with the user `admin` and the password configured via `PHOTOPRISM_ADMIN_PASSWORD`.

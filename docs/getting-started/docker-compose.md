@@ -18,7 +18,7 @@ installed on your system. It is available for Mac, Linux, and Windows.
     Commands on Linux may have to be prefixed with `sudo` when not running as root.
     Note that this will point the home directory placeholder `~` to `/root` in volume mounts.
     Kernel security modules such as AppArmor and SELinux have been reported to cause
-    [issues](https://docs.photoprism.org/getting-started/faq/#why-is-photoprism-getting-stuck-in-a-restart-loop).
+    [issues](troubleshooting.md).
 
 === "Raspberry Pi"
 

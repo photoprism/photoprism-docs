@@ -63,7 +63,7 @@ PhotoPrism won't be able to see folders that have not been mounted. That's an im
 
 The *originals* folder contains your original photo and video files.
 They are mounted from `~/Pictures` in the example above, where `~` is a placeholder for 
-your home directory. All folders accessible from the host 
+your home directory. Other folders accessible from the host 
 [may be mounted](https://docs.docker.com/storage/bind-mounts/) instead, including network drives. 
 
 Multiple folders can be made accessible by mounting them as subfolders:

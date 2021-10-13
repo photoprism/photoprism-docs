@@ -96,7 +96,7 @@ volumes:
   - "~/Pictures:/photoprism/originals"
 ```
 
-Other folders accessible from the host [may be mounted](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes) instead, 
+Other folders accessible from the host may be [mounted](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes) instead, 
 including network drives. Multiple folders can be made accessible by mounting them as subfolders:
 
 ```

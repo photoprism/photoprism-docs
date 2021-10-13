@@ -97,7 +97,7 @@ organized by year and month.
 
 ### Step 2: Index your library ###
 
-!!! help ""
+!!! check ""
     Ensure there is enough disk space available for creating thumbnails and verify file system permissions
     before starting to index: Files in the *originals* folder must be readable, while the *storage* folder
     including all subdirectories must be readable and writeable.
@@ -118,7 +118,7 @@ changed, added, or removed. This can also be automated using CLI commands and a 
 
 Easy, isn't it?
 
-!!! info "Reducing Server Load"
+!!! tldr ""
     If you're running out of memory - or other system resources - while indexing, try limiting the
     [number of workers](https://docs.photoprism.org/getting-started/config-options/) by setting
     `PHOTOPRISM_WORKERS` to a reasonably small value (depending on your CPU and expectations).

@@ -24,8 +24,8 @@ and provides more comfort than the pure Docker command-line interface.
     ```
     
 The server port and app [config options](config-options.md) may be changed as needed.
-If you provide no database server credentials, a file-based SQLite database will 
-be created in the *storage* folder.
+If you provide no database server credentials, a SQLite database file will be created in the
+*storage* folder.
 
 !!! danger ""
     Always change `PHOTOPRISM_ADMIN_PASSWORD` so that the app starts with a **secure initial password**.

@@ -23,7 +23,7 @@ depending on your specific use case.
     That means you don't need to pull from different Docker repositories anymore. We recommend updating your existing
     `docker-compose.yml` config based on [our examples](https://dl.photoprism.org/docker/).
 
-!!! info ""
+!!! tldr ""
     Downloadable installation packages are planned for a later release. Developers can build PhotoPrism from source
     by following the instructions in our [Developer Guide](../developer-guide/setup.md).
 

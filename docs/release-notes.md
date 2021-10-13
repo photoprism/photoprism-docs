@@ -7,7 +7,7 @@
 
 ### Development Preview ###
 
-!!! info ""
+!!! tldr ""
     You can test our latest features and improvements by changing the image from `photoprism/photoprism:latest` 
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.org/docker/). 
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.

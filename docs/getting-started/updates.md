@@ -30,7 +30,7 @@ Advanced users may put this into a `Makefile` so that they only need to type a s
 
 See [Setup Using Docker Compose](docker-compose.md) for a command reference.
 
-!!! info ""
+!!! tldr ""
     You can test our latest features and improvements by changing the image from `photoprism/photoprism:latest`
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.org/docker/).
     Then pull the most recent image and restart your instance.
@@ -80,6 +80,6 @@ docker pull photoprism/photoprism:latest
 
 See [Running PhotoPrism with Docker](docker.md) for a command reference.
 
-!!! info ""
+!!! tldr ""
     You can test our latest features and improvements by using `photoprism/photoprism:preview` 
     instead of `photoprism/photoprism:latest`.

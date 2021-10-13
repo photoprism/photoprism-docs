@@ -63,8 +63,8 @@ PhotoPrism won't be able to see folders that have not been mounted. That's an im
 
 The *originals* folder contains your original photo and video files.
 They are mounted from `~/Pictures` in the example above, where `~` is a placeholder for 
-your [home directory](https://en.wikipedia.org/wiki/Home_directory). All folders accessible from 
-the host [may be mounted](https://docs.docker.com/storage/bind-mounts/), including network drives. 
+your home directory. All folders accessible from the host 
+[may be mounted](https://docs.docker.com/storage/bind-mounts/) instead, including network drives. 
 
 Multiple folders can be made accessible by mounting them as subfolders:
 
@@ -197,7 +197,9 @@ PhotoPrism's command-line interface is well suited for job automation using a
     `docker exec -ti photoprism photoprism index -f` rescans all originals, including already indexed and unchanged files.
     This may be necessary after major upgrades.
 
+*[home directory]: \user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux
+*[host]: A physical computer, cloud server, or virtual machine that runs Docker
 *[HEIF]: High Efficiency Image File Format
 *[RAW]: RAW files contain image data captured during exposure in an unprocessed format
-*[Web UI]: PhotoPrism is a Progressive Web App that provides a native app-like experience
+*[Web UI]: Progressive Web App that can be installed on your home screen and provides a native app-like experience
 *[CLI]: Command-Line Interface

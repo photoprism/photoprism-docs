@@ -87,13 +87,17 @@ PhotoPrism won't be able to see folders that have not been mounted. That's an im
 
 ##### /photoprism/originals #####
 
-The *originals* folder contains your original photo and video files.
-They will be mounted from `~/Pictures` by default, where `~` is a placeholder for 
-your [home directory](https://en.wikipedia.org/wiki/Home_directory). All folders accessible from 
-the host [may be mounted](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes), 
-including network drives. 
+The *originals* folder contains your original photo and video files. 
 
-Multiple folders can be made accessible by mounting them as subfolders:
+`~/Pictures` will be mounted by default, where `~` is a placeholder for your home directory:
+
+```
+volumes:
+  - "~/Pictures:/photoprism/originals"
+```
+
+Other folders accessible from the host [may be mounted](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes) instead, 
+including network drives. Multiple folders can be made accessible by mounting them as subfolders:
 
 ```
 volumes:
@@ -245,7 +249,9 @@ PhotoPrism's command-line interface is well suited for job automation using a
     `docker-compose exec photoprism photoprism index -f` rescans all originals, including already indexed and unchanged files. 
     This may be necessary after major upgrades.
 
+*[home directory]: \user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux
+*[host]: A physical computer, cloud server, or virtual machine that runs Docker
 *[HEIF]: High Efficiency Image File Format
 *[RAW]: RAW files contain image data captured during exposure in an unprocessed format
-*[Web UI]: PhotoPrism is a Progressive Web App that provides a native app-like experience
+*[Web UI]: Progressive Web App that can be installed on your home screen and provides a native app-like experience
 *[CLI]: Command-Line Interface

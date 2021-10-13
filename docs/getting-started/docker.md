@@ -56,7 +56,7 @@ Enabling [public mode](config-options.md) will disable authentication.
 
 #### Volumes ####
 
-Since the app is running inside a container, you have to explicitly mount the folders you want to use.
+Since the app is running inside a container, you have to explicitly mount the host folders you want to use.
 PhotoPrism won't be able to see folders that have not been mounted. That's an important security feature.
 
 ##### /photoprism/originals #####
@@ -76,7 +76,7 @@ Multiple folders can be made accessible by mounting them as subfolders:
 
 Cache, session, thumbnail, and sidecar files will be created the *storage* folder, which is mounted as 
 an [anonymous volume](https://docs.docker.com/storage/bind-mounts/) in our example. You may want to 
-mount a specific host directory instead. Never remove the volume completely so that you don't lose 
+mount a specific host folder instead. Never remove the volume completely so that you don't lose 
 these files after restarting or upgrading the container.
 
 !!! info ""

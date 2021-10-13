@@ -82,7 +82,7 @@ and provide no other database server credentials, a file-based SQLite database w
 
 #### Volumes ####
 
-Since the app is running inside a container, you have to explicitly mount the folders you want to use.
+Since the app is running inside a container, you have to explicitly mount the host folders you want to use.
 PhotoPrism won't be able to see folders that have not been mounted. That's an important security feature.
 
 ##### /photoprism/originals #####

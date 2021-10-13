@@ -138,9 +138,10 @@ adding files as you don't need to re-index *originals*.
 
 ### What exactly does the read-only mode? ###
 
-There are users who don't want us to modify their original files and folders in any way, so we've added
-a configuration option for this use case. It will disable uploads, import and future features
-that might rename, update or delete files in the *originals* folder.
+When you enable *read-only mode*, all features that require write permission to the *originals* folder
+are disabled, in particular import, upload, and delete. Set `PHOTOPRISM_READONLY` to `"true"`
+in `docker-compose.yml` for this. You can mount a folder with the `:ro` flag to make Docker block
+write operations as well.
 
 ### I could not find a documentation of config parameters? ###
 

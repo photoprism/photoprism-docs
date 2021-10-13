@@ -105,15 +105,16 @@ volumes:
   - "/media/photos:/photoprism/originals/media"
 ```
 
+!!! tldr ""
+    When you enable *read-only mode*, all features that require write permission to the *originals* folder 
+    are disabled, in particular import, upload, and delete. Set `PHOTOPRISM_READONLY` to `"true"`
+    in `docker-compose.yml` for this. You can mount a folder with the `:ro` flag to make Docker block 
+    write operations as well.
+
 ##### /photoprism/storage #####
 
 Cache, session, thumbnail, and sidecar files will be created in the *storage* folder. Never remove the volume from
 your `docker-compose.yml` file so that you don't lose these files after restarting or upgrading the container.
-
-!!! info ""
-    Enabling *read-only mode* by setting `PHOTOPRISM_READONLY` to `"true"` disables all features that
-    require write permissions for the *originals* folder, in particular import, upload, and delete.
-    In addition, you may mount the *originals* folder with `:ro` flag so that Docker blocks write operations.
 
 ##### /photoprism/import #####
 

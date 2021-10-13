@@ -72,17 +72,17 @@ Multiple folders can be made accessible by mounting them as subfolders:
 -v ~/Example:/photoprism/originals/Example
 ``` 
 
+!!! tldr ""
+    When you enable *read-only mode*, all features that require write permission to the *originals* folder
+    are disabled, in particular import, upload, and delete. Run the app with `-e PHOTOPRISM_READONLY="true"` 
+    for this. You can mount a folder with the `:ro` flag to make Docker block write operations as well.
+
 ##### /photoprism/storage #####
 
 Cache, session, thumbnail, and sidecar files will be created the *storage* folder, which is mounted as 
 an [anonymous volume](https://docs.docker.com/storage/bind-mounts/) in our example. You may want to 
 mount a specific host folder instead. Never remove the volume completely so that you don't lose 
 these files after restarting or upgrading the container.
-
-!!! info ""
-    Enabling *read-only mode* via `-e PHOTOPRISM_READONLY="true"` disables all features that 
-    require write permissions for the *originals* folder, in particular import, upload, and delete.
-    In addition, you may mount the *originals* folder with `:ro` flag so that Docker blocks write operations.
 
 ##### /photoprism/import #####
 

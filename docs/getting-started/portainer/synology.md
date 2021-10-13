@@ -52,64 +52,15 @@ To install Portainer:
 
 ### Step 3: install Photoprism in your Synology NAS using Portainer, accessible over http / direct IP ###
 
-With Portainer installed we can use a docker-compose file to deploy a stack composed by Photoprism and MariaDB to quickly get Photoprism running in our NAS. We can use [Photoprism's default docker-compose yml file](https://dl.photoprism.org/docker/docker-compose.yml) but we need to make a few cosmetic changes since Portainer only understands docker-compose version 2 syntax in standalone docker hosts.
+With Portainer installed we can use a docker-compose file to deploy a stack composed by Photoprism and MariaDB to quickly get Photoprism running in our NAS. We can use [Photoprism's default docker-compose yml file](https://dl.photoprism.org/docker/docker-compose.yml).
 
 11. open Synology's File Station app and browse to the _docker_ shared folder;
 12. create a folder named _photoprism_ inside _docker_, which will persist relevant Photoprism's data in our local filesystem;
 13. inside _photoprism_ folder, create three more folders: _storage_, _originals_ and _database_.
 14. Open Portainer by visiting http://[YOUR-LOCAL-IP]:9000/;
-15. Click _Stacks_ in the left menu, then _Add stack_, give it a meaningful name (for eg. Photoprism) and in the Web Editor place the below code, which was based on [Photoprism's default docker-compose yml file](https://dl.photoprism.org/docker/docker-compose.yml) but downgraded to compose version 2. **BE SURE TO USE YOUR OWN [LOCAL-PORT], [YOUR-ADMIN-PASS], [YOUR-DB-PASS] and [YOUR-LOCAL-IP] BY CHANGING THE VALUES ACCORDINGLY, AND CHECK THE LOCAL VOLUMES PATHS TO MATCH THOSE DEFINED IN STEP 13**.
+15. Click _Stacks_ in the left menu, then _Add stack_, give it a meaningful name (for eg. Photoprism) and in the Web Editor place the content of [Photoprism's default docker-compose yml file](https://dl.photoprism.org/docker/docker-compose.yml).
 
-```yaml
-version: '2'
-services:
-  photoprism:
-    image: photoprism/photoprism:latest
-    security_opt:
-      - seccomp:unconfined
-      - apparmor:unconfined
-    ports:
-      - 2342:2342 # [server]:[container]
-    environment:
-      - PHOTOPRISM_HTTP_PORT=2342
-      - PHOTOPRISM_ADMIN_PASSWORD=[YOUR-ADMIN-PASS]
-      - PHOTOPRISM_DEBUG=false
-      - PHOTOPRISM_PUBLIC=false
-      - PHOTOPRISM_READONLY=false
-      - PHOTOPRISM_EXPERIMENTAL=true
-      - PHOTOPRISM_DISABLE_WEBDAV=false
-      - PHOTOPRISM_DISABLE_SETTINGS=false
-      - PHOTOPRISM_DISABLE_TENSORFLOW=false
-      - PHOTOPRISM_DETECT_NSFW=false
-      - PHOTOPRISM_UPLOAD_NSFW=true
-      - PHOTOPRISM_DATABASE_DRIVER=mysql
-      - PHOTOPRISM_DATABASE_SERVER=mariadb:3306
-      - PHOTOPRISM_DATABASE_NAME=photoprism
-      - PHOTOPRISM_DATABASE_USER=photoprism
-      - PHOTOPRISM_DATABASE_PASSWORD=[YOUR-DB-PASS]
-      - PHOTOPRISM_SITE_URL=http://[YOUR-LOCAL-IP]:[LOCAL-PORT]
-      - PHOTOPRISM_SITE_TITLE=PhotoPrism
-      - PHOTOPRISM_SITE_CAPTION=Browse Your Life
-      - PHOTOPRISM_SITE_DESCRIPTION=Photoprism
-      - PHOTOPRISM_SITE_AUTHOR=Photoprism
-    volumes:
-      - /volume1/docker/photoprism/originals:/photoprism/originals
-      - /volume1/docker/photoprism/storage:/photoprism/storage  
-  mariadb:
-    image: mariadb:10.5
-    restart: unless-stopped
-    security_opt:
-      - seccomp:unconfined
-      - apparmor:unconfined
-    command: mysqld --transaction-isolation=READ-COMMITTED --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --max-connections=512 --innodb-rollback-on-timeout=OFF --innodb-lock-wait-timeout=120
-    volumes:
-      - /volume1/docker/photoprism/database:/var/lib/mysql
-    environment:
-      - MYSQL_ROOT_PASSWORD=[YOUR-DB-PASS]
-      - MYSQL_DATABASE=photoprism
-      - MYSQL_USER=photoprism
-      - MYSQL_PASSWORD=[YOUR-DB-PASS]
-```
+**BE SURE TO USE YOUR OWN PHOTOPRISM_ADMIN_PASSWORD, PHOTOPRISM_DATABASE_PASSWORD, MYSQL_ROOT_PASSWORD, AND MYSQL_PASSWORD BY CHANGING THE VALUES ACCORDINGLY, AND CHECK THE LOCAL VOLUMES PATHS TO MATCH THOSE DEFINED IN STEP 13**.
 
 16. Click _Deploy the stack_. Give it a few minutes and PhotoPrism should be accessible in http://[YOUR-LOCAL-IP]:[LOCAL-PORT]/.
 

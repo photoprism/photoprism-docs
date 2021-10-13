@@ -68,6 +68,18 @@ installed on your system. It is available for Mac, Linux, and Windows.
     Never use easy-to-guess passwords or default values like `insecure` on publicly accessible servers.
     There is no default in case no password was provided. A minimum length of 4 characters is required.
 
+#### Database ####
+
+Our example includes a pre-configured [MariaDB](https://mariadb.com/) database server. If you remove it 
+and provide no other database server credentials, a file-based SQLite database will be created in the 
+*storage* folder.
+
+!!! tldr ""
+    It is not possible to change the password via `MYSQL_PASSWORD` after the database has been started 
+    for the first time. Choosing a secure password is not essential if you don't expose the database 
+    to other apps and hosts.
+
+
 #### Volumes ####
 
 Since the app is running inside a container, you have to explicitly mount the folders you want to use.
@@ -76,7 +88,6 @@ PhotoPrism won't be able to see folders that have not been mounted. That's an im
 ##### /photoprism/originals #####
 
 The *originals* folder contains your original photo and video files.
-
 They will be mounted from `~/Pictures` by default, where `~` is a placeholder for 
 your [home directory](https://en.wikipedia.org/wiki/Home_directory). All folders accessible from 
 the host [may be mounted](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes), 
@@ -90,28 +101,26 @@ volumes:
   - "/media/photos:/photoprism/originals/media"
 ```
 
+##### /photoprism/storage #####
+
+Cache, session, thumbnail, and sidecar files will be created in the *storage* folder. Never remove the volume from
+your `docker-compose.yml` file so that you don't lose these files after restarting or upgrading the container.
+
+!!! info ""
+    Enabling *read-only mode* by setting `PHOTOPRISM_READONLY` to `"true"` disables all features that
+    require write permissions for the *originals* folder, in particular import, upload, and delete.
+    In addition, you may mount the *originals* folder with `:ro` flag so that Docker blocks write operations.
+
 ##### /photoprism/import #####
 
 You may optionally mount an *import* folder from which files can be transferred to the *originals* folder
 in a structured way that avoids duplicates. Imported files receive a canonical filename and will be
 organized by year and month.
 
-!!! note ""
+!!! tldr ""
     You can safely skip this. Adding files via [Web Upload](../user-guide/library/upload.md)
     and [WebDAV](../user-guide/sync/webdav.md) remains possible, unless [read-only mode](config-options.md)
     is enabled or the [features have been disabled](../user-guide/settings/general.md).
-
-##### /photoprism/storage #####
-
-Cache, session, thumbnail, and sidecar files will be created in the *storage* folder. Never remove the volume from
-your `docker-compose.yml` file so that you don't lose these files after restarting or upgrading the container.
-
-!!! info "Read-Only Mode"
-    Running PhotoPrism in read-only mode disables all features that require write permissions,
-    like importing, uploading, renaming, and deleting files.
-    You may enable it by setting `PHOTOPRISM_READONLY` to `"true"`.
-    In addition, you may mount the *originals* folder with `:ro` flag so that Docker 
-    blocks write operations.
 
 ### Step 2: Start the server ###
 
@@ -127,7 +136,7 @@ Sign in with the user `admin` and the initial password configured via `PHOTOPRIS
 You may change it on the [account settings page](../user-guide/settings/account.md).
 Enabling [public mode](config-options.md) will disable authentication.
 
-!!! hint ""
+!!! info ""
     If you can't connect, try starting the app without `-d`: `docker-compose up photoprism`. 
     This keeps it in the foreground and shows log messages for troubleshooting. You're welcome to ask 
     for help in our [community chat](https://gitter.im/browseyourlife/community).
@@ -135,12 +144,12 @@ Enabling [public mode](config-options.md) will disable authentication.
     on a different host and/or port. There could also be an issue with your browser,
     ad blocker, or firewall settings.
 
-!!! note ""
-    For security reasons, it is **not possible to change the password** via `PHOTOPRISM_ADMIN_PASSWORD` after 
-    the app has been started for the first time. You may run `docker-compose exec photoprism photoprism passwd` 
+!!! tldr ""
+    It is not possible to change the password via `PHOTOPRISM_ADMIN_PASSWORD` after the app has been 
+    started for the first time. You may run `docker-compose exec photoprism photoprism passwd` 
     in a terminal to change an existing password. You can also reset your database for a clean start.
 
-The server port and [config options](config-options.md) may be changed in `docker-compose.yml` at any time.
+The server port and app [config options](config-options.md) may be changed in `docker-compose.yml` at any time.
 Remember to restart the app for changes to take effect:
 
 ```
@@ -150,7 +159,7 @@ docker-compose up -d photoprism
 
 ### Step 3: Index your library ###
 
-!!! attention ""
+!!! help ""
     Ensure there is enough disk space available for creating thumbnails and verify file system permissions
     before starting to index: Files in the *originals* folder must be readable, while the *storage* folder
     including all subdirectories must be readable and writeable.
@@ -171,6 +180,15 @@ changed, added, or removed. This can also be automated using CLI commands and a 
 
 Easy, isn't it?
 
+!!! info "Reducing Server Load"
+    If you're running out of memory - or other system resources - while indexing, try limiting the 
+    [number of workers](https://docs.photoprism.org/getting-started/config-options/) by setting
+    `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml` (depending on your hardware).
+    Also make sure your server has at least 4 GB of [swap](https://opensource.com/article/18/9/swap-space-linux-systems) 
+    configured so that indexing doesn't cause restarts when there are memory usage spikes.
+    Especially the conversion of RAW images and the transcoding of videos are very demanding.
+    As a measure of last resort, you may disable using TensorFlow for image classification and facial recognition.
+
 !!! example ""
     **This open-source project is made possible [thanks to our sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md).**
     If you enjoy using PhotoPrism, please consider backing us on [Patreon](https://www.patreon.com/photoprism)
@@ -178,18 +196,9 @@ Easy, isn't it?
     Your continued support helps us fund operating costs, provide services like satellite maps,
     and develop new features. Thank you very much! 💜
 
-!!! info "Reducing Server Load"
-    If you're running out of memory - or other system resources - while indexing, try limiting the 
-    [number of workers](https://docs.photoprism.org/getting-started/config-options/) by setting
-    `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml` (depending on your CPU and expectations).
-    Also make sure your server has at least 4 GB of [swap](https://opensource.com/article/18/9/swap-space-linux-systems) 
-    configured so that indexing doesn't cause restarts when there are memory usage spikes.
-    Especially the conversion of RAW images and the transcoding of videos are very demanding.
-    As a measure of last resort, you may disable using TensorFlow for image classification and facial recognition.
-
 ### Command-Line Interface ###
 
-`photoprism help` lists all commands and config options available in the current version:
+`photoprism help` lists all commands and [config options](config-options.md) available in the current version:
 
 ```
 docker-compose exec photoprism photoprism help
@@ -201,7 +210,7 @@ Use the `--help` flag to see a detailed command description, for example:
 docker-compose exec photoprism photoprism backup --help
 ```
 
-!!! tip ""
+!!! info ""
     Prefixing commands with `docker-compose exec [service name]` runs them inside an app container.
     If this fails with *no container found*, make sure the app has been started,
     its service name is the same, and you are in the folder in which the `docker-compose.yml` 
@@ -236,4 +245,7 @@ PhotoPrism's command-line interface is well suited for job automation using a
     `docker-compose exec photoprism photoprism index -f` rescans all originals, including already indexed and unchanged files. 
     This may be necessary after major upgrades.
 
+*[HEIF]: High Efficiency Image File Format
+*[RAW]: RAW files contain image data captured during exposure in an unprocessed format
+*[Web UI]: PhotoPrism is a Progressive Web App that provides a native app-like experience
 *[CLI]: Command-Line Interface

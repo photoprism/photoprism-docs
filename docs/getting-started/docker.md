@@ -23,7 +23,9 @@ and provides more comfort than the pure Docker command-line interface.
       photoprism/photoprism
     ```
     
-The server port and [config options](config-options.md) may be changed as needed.
+The server port and app [config options](config-options.md) may be changed as needed.
+If you provide no database server credentials, a file-based SQLite database will 
+be created in the *storage* folder.
 
 !!! danger ""
     Always change `PHOTOPRISM_ADMIN_PASSWORD` so that the app starts with a **secure initial password**.
@@ -40,16 +42,16 @@ Sign in with the user `admin` and the password configured via `PHOTOPRISM_ADMIN_
 You may change it on the [account settings page](../user-guide/settings/account.md).
 Enabling [public mode](config-options.md) will disable authentication.
 
-!!! hint ""
+!!! info ""
     If you can't connect, try starting the app without `-d`. This keeps it in the foreground
     and shows log messages for troubleshooting. You're welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
     Should the server already be running, or you see no errors, you may have started it 
     on a different host and/or port. There could also be an issue with your browser, 
     ad blocker, or firewall settings.
 
-!!! note ""
-    For security reasons, it is **not possible to change the password** via `PHOTOPRISM_ADMIN_PASSWORD` 
-    after the app has been started for the first time. You may run `docker exec -ti photoprism photoprism passwd`
+!!! tldr ""
+    It is not possible to change the password via `PHOTOPRISM_ADMIN_PASSWORD` after the app has been 
+    started for the first time. You may run `docker exec -ti photoprism photoprism passwd`
     in a terminal to change an existing password. You can also reset your database for a clean start. 
 
 #### Volumes ####
@@ -60,7 +62,6 @@ PhotoPrism won't be able to see folders that have not been mounted. That's an im
 ##### /photoprism/originals #####
 
 The *originals* folder contains your original photo and video files.
-
 They are mounted from `~/Pictures` in the example above, where `~` is a placeholder for 
 your [home directory](https://en.wikipedia.org/wiki/Home_directory). All folders accessible from 
 the host [may be mounted](https://docs.docker.com/storage/bind-mounts/), including network drives. 
@@ -71,34 +72,32 @@ Multiple folders can be made accessible by mounting them as subfolders:
 -v ~/Example:/photoprism/originals/Example
 ``` 
 
-##### /photoprism/import #####
-
-You may optionally mount an *import* folder from which files can be transferred to the *originals* folder
-in a structured way that avoids duplicates. Imported files receive a canonical filename and will be 
-organized by year and month.
-
-!!! note ""
-    You can safely skip this. Adding files via [Web Upload](../user-guide/library/upload.md)
-    and [WebDAV](../user-guide/sync/webdav.md) remains possible, unless [read-only mode](config-options.md)
-    is enabled or the [features have been disabled](../user-guide/settings/general.md).
-
 ##### /photoprism/storage #####
 
-Cache, session, thumbnail, and sidecar files will be created in `/photoprism/storage`, which is mounted as 
+Cache, session, thumbnail, and sidecar files will be created the *storage* folder, which is mounted as 
 an [anonymous volume](https://docs.docker.com/storage/bind-mounts/) in our example. You may want to 
 mount a specific host directory instead. Never remove the volume completely so that you don't lose 
 these files after restarting or upgrading the container.
 
-!!! info "Read-Only Mode"
-    Running PhotoPrism in read-only mode disables all features that require write permissions,
-    like importing, uploading, renaming, and deleting files.
-    You may enable it by adding `-e PHOTOPRISM_READONLY="true"`.
-    In addition, you may mount the *originals* folder with `:ro` flag so that Docker
-    blocks write operations.
+!!! info ""
+    Enabling *read-only mode* via `-e PHOTOPRISM_READONLY="true"` disables all features that 
+    require write permissions for the *originals* folder, in particular import, upload, and delete.
+    In addition, you may mount the *originals* folder with `:ro` flag so that Docker blocks write operations.
+
+##### /photoprism/import #####
+
+You may optionally mount an *import* folder from which files can be transferred to the *originals* folder
+in a structured way that avoids duplicates. Imported files receive a canonical filename and will be
+organized by year and month.
+
+!!! tldr ""
+    You can safely skip this. Adding files via [Web Upload](../user-guide/library/upload.md)
+    and [WebDAV](../user-guide/sync/webdav.md) remains possible, unless [read-only mode](config-options.md)
+    is enabled or the [features have been disabled](../user-guide/settings/general.md).
 
 ### Step 2: Index your library ###
 
-!!! attention ""
+!!! help ""
     Ensure there is enough disk space available for creating thumbnails and verify file system permissions
     before starting to index: Files in the *originals* folder must be readable, while the *storage* folder
     including all subdirectories must be readable and writeable.
@@ -118,13 +117,6 @@ or importing new shots. Go to *Library* and click *Start* to update the index af
 changed, added, or removed. This can also be automated using CLI commands and a [scheduler](https://dl.photoprism.org/docker/scheduler/).
 
 Easy, isn't it?
-
-!!! example ""
-    **This open-source project is made possible [thanks to our sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md).**
-    If you enjoy using PhotoPrism, please consider backing us on [Patreon](https://www.patreon.com/photoprism)
-    or [GitHub Sponsors](https://github.com/sponsors/photoprism).
-    Your continued support helps us fund operating costs, provide services like satellite maps,
-    and develop new features. Thank you very much! 💜
 
 !!! info "Reducing Server Load"
     If you're running out of memory - or other system resources - while indexing, try limiting the
@@ -150,9 +142,16 @@ To remove the container completely:
 docker rm -f photoprism
 ```
 
+!!! example ""
+    **This open-source project is made possible [thanks to our sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md).**
+    If you enjoy using PhotoPrism, please consider backing us on [Patreon](https://www.patreon.com/photoprism)
+    or [GitHub Sponsors](https://github.com/sponsors/photoprism).
+    Your continued support helps us fund operating costs, provide services like satellite maps,
+    and develop new features. Thank you very much! 💜
+
 ### Command-Line Interface ###
 
-`photoprism help` lists all commands and config options available in the current version:
+`photoprism help` lists all commands and [config options](config-options.md) available in the current version:
 
 ```
 docker exec -ti photoprism photoprism help
@@ -164,7 +163,7 @@ Use the `--help` flag to see a detailed command description, for example:
 docker exec -ti photoprism photoprism backup --help
 ```
 
-!!! tip ""
+!!! info ""
     Prefixing commands with `docker exec -ti [container name]` runs them inside an app container.
     If this fails with *no container found*, make sure the app has been started and 
     its container has the same name.
@@ -198,4 +197,7 @@ PhotoPrism's command-line interface is well suited for job automation using a
     `docker exec -ti photoprism photoprism index -f` rescans all originals, including already indexed and unchanged files.
     This may be necessary after major upgrades.
 
+*[HEIF]: High Efficiency Image File Format
+*[RAW]: RAW files contain image data captured during exposure in an unprocessed format
+*[Web UI]: PhotoPrism is a Progressive Web App that provides a native app-like experience
 *[CLI]: Command-Line Interface

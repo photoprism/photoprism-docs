@@ -15,7 +15,7 @@ Say goodbye to uploading your visual memories to the cloud!
 * Includes four high-resolution [world maps](https://demo.photoprism.org/places) to see where you've been and for rediscovering long-forgotten shots
 * Play Live Photos™ by hovering over them in [albums](https://demo.photoprism.org/albums) and [search results](https://demo.photoprism.org/browse?view=cards&q=type%3Alive)
 * Enjoy privacy-preserving [face detection and recognition](https://demo.photoprism.org/people) 💎
-* AI-powered [image classification](https://demo.photoprism.org/labels)
+* AI-powered [image classification](https://demo.photoprism.org/labels) and [facial recognition](https://docs.photoprism.org/developer-guide/metadata/face-recognition/)
   based on Google TensorFlow
 * Metadata is extracted and merged from Exif, XMP, and proprietary formats such as Google Photos JSON
 * Image properties like colors, chroma, luminance, quality, and location are automatically detected when you update the index or import files

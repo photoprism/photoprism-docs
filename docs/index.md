@@ -20,7 +20,7 @@ Say goodbye to uploading your visual memories to the cloud!
 * Metadata is extracted and merged from Exif, XMP, and proprietary formats such as Google Photos JSON
 * Image properties like colors, chroma, luminance, quality, and location are automatically detected when you update the index or import files
 * Use [PhotoSync](https://www.photosync-app.com/) to securely backup iOS and Android phones in the background
-* WebDAV clients such as Microsoft's Windows Explorer and Apple's Finder can [connect](https://docs.photoprism.org/user-guide/sync/webdav/) directly to PhotoPrism, allowing you to open, edit, and delete files from your computer or phone as if they were local
+* WebDAV clients such as Microsoft's Windows Explorer and Apple's Finder can [connect](https://docs.photoprism.org/user-guide/sync/webdav/) directly to PhotoPrism, allowing you to open, edit, and delete files from your computer as if they were local
 
 <p style="text-align: center; padding: 20px 4px;">
 <a class="md-button" style="background-color: #546e7a; font-size: 0.66rem; font-weight: normal; color: white" href="https://demo.photoprism.org/" target="_blank">TRY OUR DEMO</a>

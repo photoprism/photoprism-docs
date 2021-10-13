@@ -176,7 +176,7 @@ Fatal errors are often caused by one of the following conditions:
    [SELinux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) may be blocking permissions
 
 Please search your operating system and server logs for messages like *disk full*, *wrong permissions*, 
-and *connection timeout* before reporting a bug. If you are using Docker Compose, run this command 
+and *database connection failed* before reporting a bug. If you are using Docker Compose, run this command 
 to display the last 100 log messages:
 
 ```
@@ -187,7 +187,7 @@ Linux kernel security can be disabled on private servers, especially if you do n
 with the configuration. Use a file manager, or the commands `chmod` and `chown` on Unix-like operating systems, 
 to verify and fix filesystem permissions.
 Available disk space can be displayed with `df -h`. The size of virtual disks and memory can be
-increased in Docker and/or VM settings.
+increased in Docker and VM settings if needed. Please refer to the documentation.
 
 ### How can I uninstall PhotoPrism? ###
 

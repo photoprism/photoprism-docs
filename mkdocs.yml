@@ -8,6 +8,7 @@ nav:
     - Pure Docker: getting-started/docker.md
     - DigitalOcean App: getting-started/digitalocean.md
     - Config Options: getting-started/config-options.md
+    - Troubleshooting: getting-started/troubleshooting.md
     # - Support: getting-started/support.md
     - Getting Updates: getting-started/updates.md
     - Portainer:

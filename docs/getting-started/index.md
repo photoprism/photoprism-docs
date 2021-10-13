@@ -72,3 +72,5 @@ and [SQLite 3](https://www.sqlite.org/).
     by anyone in between including your provider, hackers, and governments. Backup tools and file sync apps
     like [FolderSync](https://www.tacit.dk/foldersync/faq/#i-can-not-connect-to-a-non-https-webdav-server-why) 
     may refuse to connect as well.
+
+*[Web UI]: Progressive Web App that can be installed on your home screen and provides a native app-like experience

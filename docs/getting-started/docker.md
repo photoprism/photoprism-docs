@@ -204,4 +204,4 @@ PhotoPrism's command-line interface is well suited for job automation using a
 *[RAW]: RAW files contain image data captured during exposure in an unprocessed format
 *[Web UI]: Progressive Web App that can be installed on your home screen and provides a native app-like experience
 *[CLI]: Command-Line Interface
-*[AVC]: Video compression standard, also known as H.264 and MPEG-4 AVC
+*[AVC]: MPEG-4 AVC video compression standard, also known as H.264

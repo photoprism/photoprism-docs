@@ -162,8 +162,8 @@ of all apps installed.  Sharing links will be longer as well.
 
 ### Why is PhotoPrism getting stuck in a restart loop? ###
 
-This typically happens when Docker was configured to automatically restart the app 
-after failures. Fatal errors are typically caused by one of the following conditions:
+This happens when Docker was configured to automatically restart the app after failures. 
+Fatal errors are often caused by one of the following conditions:
 
 1. Your (virtual) server disk is full
 2. There is disk space left, but the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached

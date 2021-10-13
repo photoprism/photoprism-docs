@@ -44,8 +44,8 @@ should include the following security options:
 Big thank you to [Guy Sheffer](https://github.com/guysoft) for
 [building](https://github.com/photoprism/photoprism/issues/109) this!
 
-!!! info "Reducing Server Load"
-    If you're running out of memory - or other system resources - while indexing, try limiting the
+!!! info ""
+    If you're running out of memory - or other system resources - while indexing, try reducing the
     [number of workers](https://docs.photoprism.org/getting-started/config-options/) by setting
-    `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml` (depending on your CPU and expectations).
+    `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml` (depending on the performance of the server).
     As a measure of last resort, you may disable using TensorFlow for image classification and facial recognition.

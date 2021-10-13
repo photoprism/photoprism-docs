@@ -118,10 +118,10 @@ changed, added, or removed. This can also be automated using CLI commands and a 
 
 Easy, isn't it?
 
-!!! tldr ""
-    If you're running out of memory - or other system resources - while indexing, try limiting the
+!!! info ""
+    If you're running out of memory - or other system resources - while indexing, try reducing the
     [number of workers](https://docs.photoprism.org/getting-started/config-options/) by setting
-    `PHOTOPRISM_WORKERS` to a reasonably small value (depending on your CPU and expectations).
+    `PHOTOPRISM_WORKERS` to a reasonably small value (depending on the performance of the server).
     Also make sure your server has at least 4 GB of [swap](https://opensource.com/article/18/9/swap-space-linux-systems)
     configured so that indexing doesn't cause restarts when there are memory usage spikes.
     Especially the conversion of RAW images and the transcoding of videos are very demanding.

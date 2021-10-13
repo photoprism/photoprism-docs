@@ -71,8 +71,8 @@ installed on your system. It is available for Mac, Linux, and Windows.
 #### Database ####
 
 Our example includes a pre-configured [MariaDB](https://mariadb.com/) database server. If you remove it 
-and provide no other database server credentials, a file-based SQLite database will be created in the 
-*storage* folder.
+and provide no other database server credentials, a SQLite database file will be created in the 
+*storage* folder. Local SSD storage is best for databases of any kind.
 
 !!! tldr ""
     It is not possible to change the password via `MYSQL_PASSWORD` after the database has been started 
@@ -115,6 +115,7 @@ volumes:
 
 Cache, session, thumbnail, and sidecar files will be created in the *storage* folder. Never remove the volume from
 your `docker-compose.yml` file so that you don't lose these files after restarting or upgrading the container.
+We recommend placing the *storage* folder on a local SSD drive for best performance.
 
 ##### /photoprism/import #####
 

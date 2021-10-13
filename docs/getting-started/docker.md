@@ -97,7 +97,7 @@ organized by year and month.
 
 ### Step 2: Index your library ###
 
-!!! check ""
+!!! note ""
     Ensure there is enough disk space available for creating thumbnails and verify file system permissions
     before starting to index: Files in the *originals* folder must be readable, while the *storage* folder
     including all subdirectories must be readable and writeable.

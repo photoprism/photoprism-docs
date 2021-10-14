@@ -19,8 +19,8 @@
 
         ![Screenshot](img/download-2.png)
 
-=== "From Edit Dialogue"
-    1. Open the photo's  [*edit dialogue*](edit.md)
+=== "From Edit Dialog"
+    1. Open the photo's  [*edit dialog*](edit.md)
     2. Open the *Files Tab*
     3. Click *Download*
 

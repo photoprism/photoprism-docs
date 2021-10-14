@@ -1,8 +1,12 @@
-PhotoPrism automatically detects faces and clusters them.
+PhotoPrism detects faces while indexing and then groups them by similarity.
+This may take a while, depending on how many pictures you have.
 
-Each time you assign a name to a face or change an existing assignment, PhotoPrism improves face clusters intelligently.
+!!! tldr ""
+    Face clusters are automatically optimized in the background, for example after new faces have 
+    been identified, you've reported a conflict, or new files have been added to your library.
 
 ## People Section ##
+
 The people section shows you recognized people as well as new face clusters.
 
 To star a person click :material-star:. Stared persons appear first.
@@ -10,10 +14,27 @@ To star a person click :material-star:. Stared persons appear first.
 ![Screenshot](img/recognized.png)
 ![Screenshot](img/new.png)
 
-!!!info ""
+!!! info ""
     As not all faces belong to a cluster, there might be more faces than visible in the New section.
     You find all photos with faces that are not assigned to a person using the search filter `face:new`.
-    The photo [*edit dialogue*](edit.md) shows all faces of a photo independent from whether they are clustered or not.
+    The photo [edit dialog](edit.md) shows all faces of a photo independent of whether they are clustered or not.
+
+### When a face was not detected... ###
+
+There can be several reasons why a face was not detected:
+
+- Only the primary file in stacks will be searched for faces
+- Faces can be smaller than the minimum size configured
+- Our face detection did not scan the image thoroughly enough
+- Reducing the resolution or quality of generated [thumbnails](../settings/advanced.md)
+  negatively impacts face detection and recognition results
+- In very rare cases an actual face may match a blacklist of false
+  positives, like background noise and food that looks like a face
+
+!!! info "" 
+    Recognition compares the similarity of detected faces. The standard similarity threshold 
+    is reduced when you report conflicts with faces of other people, for example by pressing the
+    :material-eject: button to remove a name from a face.
 
 ## Assign Names to Faces ##
 

@@ -41,7 +41,7 @@ It also contains the following buttons:
 * :material-bookmark: Add photos to album
 * :material-cloud-download: Download photos
 * :material-lock: Mark photos as private
-* :material-pencil: Open edit dialogue
+* :material-pencil: Open edit dialog
 * :material-share-variant: Share photos
 
 To unselect all items, click the cross at the top:

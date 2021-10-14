@@ -11,7 +11,7 @@
     ![Screenshot](img/album-name-1.png)
 
 ### Edit Album Details ###
-Go to *Albums* and open the *album edit dialogue*
+Go to *Albums* and open the *album edit dialog*
   
 === "From Title"
       Click on the *album title*

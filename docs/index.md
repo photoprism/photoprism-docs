@@ -16,7 +16,7 @@ It makes use of the latest technologies without getting in your way.
 * Recognizes the faces of your [family and friends](https://demo.photoprism.org/people) 💎
 * Automatic [classification](https://demo.photoprism.org/labels) of pictures based on their content and location
 * Metadata is extracted and merged from Exif, XMP, and other sources such as Google Photos
-* Many more image properties such as colors, luminance and quality can be searched as well
+* Many more image properties like colors, luminance and quality can be searched as well
 * Use [PhotoSync](https://www.photosync-app.com/) to securely backup iOS and Android phones in the background
 * WebDAV clients such as Microsoft's Windows Explorer and Apple's Finder can [connect](https://docs.photoprism.org/user-guide/sync/webdav/) directly to PhotoPrism, allowing you to open, edit, and delete files from your computer as if they were local
 

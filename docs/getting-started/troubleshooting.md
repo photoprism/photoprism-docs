@@ -16,8 +16,8 @@ before reporting a bug.
     If you see no errors or no logs at all, you may have started the server on a different host
     and/or port. There could also be an issue with your browser, ad blocker, or firewall settings.
 
-You can also try restarting the app without the `-d` command-line parameter. This keeps 
-it running in the foreground and shows log messages for troubleshooting:
+You can also try (re-)starting the app and database without `-d`. This keeps their containers running 
+in the foreground and shows log messages for troubleshooting:
 
 ```
 docker-compose stop

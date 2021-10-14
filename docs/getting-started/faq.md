@@ -154,7 +154,7 @@ has been added to simplify installation.
 ### Can I install PhotoPrism in a sub-directory on a shared domain?
 
 This is possible with our latest release if you run it behind a proxy.
-Note that for progressive web apps to work as designed, the service worker should 
+Note that for a Progressive Web App (PWA) to work as designed, the service worker should 
 be located in the root directory. Also keep in mind sharing a domain with
 other apps may negatively impact the performance and 
 [security](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy)

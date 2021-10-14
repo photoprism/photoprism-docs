@@ -259,6 +259,6 @@ PhotoPrism's command-line interface is well suited for job automation using a
 *[host]: A physical computer, cloud server, or virtual machine that runs Docker
 *[HEIF]: High Efficiency Image File Format
 *[RAW]: RAW files contain image data captured during exposure in an unprocessed format
-*[Web UI]: Progressive Web App that can be installed on your home screen and provides a native app-like experience
+*[Web UI]: A Progressive Web App that can be installed on your home screen and provides a native app-like experience
 *[CLI]: Command-Line Interface
 *[AVC]: MPEG-4 AVC video compression standard, also known as H.264

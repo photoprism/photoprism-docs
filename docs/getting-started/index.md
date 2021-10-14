@@ -73,4 +73,4 @@ and [SQLite 3](https://www.sqlite.org/).
     like [FolderSync](https://www.tacit.dk/foldersync/faq/#i-can-not-connect-to-a-non-https-webdav-server-why) 
     may refuse to connect as well.
 
-*[Web UI]: Progressive Web App that can be installed on your home screen and provides a native app-like experience
+*[Web UI]: A Progressive Web App that can be installed on your home screen and provides a native app-like experience

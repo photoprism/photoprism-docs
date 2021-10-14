@@ -15,7 +15,7 @@ The quality score depends on the following:
 
 ### Approve Photos ###
 === "Edit Dialog"
-     1. Open the photo's  [*edit dialogue*](edit.md)
+     1. Open the photo's  [*edit dialog*](edit.md)
      2. Click *approve*
 
         ![Screenshot](img/review.png)

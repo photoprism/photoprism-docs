@@ -34,7 +34,7 @@ The JPEG file marked as *primary* is used in our views. It is listed first in th
 
 To change the primary file:
 
-1. Open the photos [*edit dialogue*](edit.md)
+1. Open the photos [*edit dialog*](edit.md)
 
 2. Open *Files* tab
 
@@ -45,7 +45,7 @@ To change the primary file:
       ![Screenshot](img/group-3.png) 
 
 ### Ungroup Files ###
-1. Open the photos [*edit dialogue*](edit.md)
+1. Open the photos [*edit dialog*](edit.md)
 
 2. Open *Files* tab
 
@@ -60,7 +60,7 @@ Now, both files appear in our views.
 ![Screenshot](img/group-4.png)
 
 ### Remove not Primary Files Permanently ###
-1. Open the photos [*edit dialogue*](edit.md)
+1. Open the photos [*edit dialog*](edit.md)
 
 2. Open *Files* tab
 

@@ -23,7 +23,7 @@ To see only labels with high priority click :material-eye: in the upper right co
 
 ### Add Labels to Photos ###
 
-1. Go to the photo [*edit dialogue*](edit.md)
+1. Go to the photo [*edit dialog*](edit.md)
 2. Go to *Labels* tab
 3. Click on the *label field* in the last row of the label table
 4. Enter a label name
@@ -36,7 +36,7 @@ To see only labels with high priority click :material-eye: in the upper right co
 Labels that have been set automatically can be removed.
 Manually added labels can be deleted.
 
-1. Go to the photo [*edit dialogue*](edit.md)
+1. Go to the photo [*edit dialog*](edit.md)
 2. Go to *Labels* tab
 3. Click the :material-minus:/:material-delete: button of the label you want to remove/delete
 
@@ -52,7 +52,7 @@ Manually added labels can be deleted.
 
 ### Rename Labels ###
 
-1. Go to the photo [*edit dialogue*](edit.md) of any photo that has the label you want to rename
+1. Go to the photo [*edit dialog*](edit.md) of any photo that has the label you want to rename
 
     ![Screenshot](img/edit-label-1.png)
     

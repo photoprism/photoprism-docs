@@ -15,9 +15,12 @@ To star a person click :material-star:. Stared persons appear first.
 ![Screenshot](img/new.png)
 
 !!! info ""
-    As not all faces belong to a cluster, there might be more faces than visible in the New section.
-    You find all photos with faces that are not assigned to a person using the search filter `face:new`.
-    The photo [edit dialog](edit.md) shows all faces of a photo independent of whether they are clustered or not.
+    **The new faces page shows automatically recognized face clusters only.** There may be thousands of 
+    unidentified faces in your library including random people such as news speakers or faces on shampoo bottles.
+    You can use the search filter `face:new` to find pictures containing unknown people.
+    We recommend combining it with other filters, like year or location, when looking for specific people.
+    The *People* tab in the photo [edit dialog](edit.md) displays all detected faces, so you can name them
+    or report a bad match by pressing the :material-eject: button.
 
 ### When a face was not detected... ###
 
@@ -33,8 +36,7 @@ There can be several reasons why a face was not detected:
 
 !!! info "" 
     Recognition compares the similarity of detected faces. The standard similarity threshold 
-    is reduced when you report conflicts with faces of other people, for example by pressing the
-    :material-eject: button to remove a name from a face.
+    is reduced when you report a bad match.
 
 ## Assign Names to Faces ##
 
@@ -47,9 +49,9 @@ There can be several reasons why a face was not detected:
 
         ![Screenshot](img/add-name-new.png)
 
-=== "From Photo Edit Dialogue"
+=== "From Photo Edit dialog"
 
-      1. Open the photo [*edit dialogue*](edit.md)
+      1. Open the photo [*edit dialog*](edit.md)
       2. Go to the *People* tab
       3. Click on the input field
       4. Start typing a name
@@ -112,12 +114,15 @@ To rename all photos of a person:
 ![Screenshot](img/rename-recognized.png)
 
 ## Change People Assignments ##
-In case the wrong person is assigned to a photo you can easily reject this. 
 
-!!!attention ""
-    Each time you reject a face, the face clusters are updated in the background.
+You may report bad matches by pressing the :material-eject: button underneath a face in the *People* tab.
+This will remove the name. You can either leave it blank or enter the name of a different person.
 
-1. Open the photo [*edit dialogue*](edit.md)
+!!! attention ""
+    When you reject a match, the corresponding face cluster will be updated in the background so that similar 
+    issues can be resolved automatically.
+
+1. Open the photo [*edit dialog*](edit.md)
 2. Go to the *People* tab
 3. Click :material-eject:
 4. Then enter a new name or leave it empty
@@ -174,3 +179,4 @@ The person/subject and people/subjects filters can be used with & and | (see [se
 - Save people in backups
 - Option to exclude people from library
 
+*[face clusters]: A cluster is a group of faces expected to belong to the same person based on the similarity

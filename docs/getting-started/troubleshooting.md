@@ -40,7 +40,7 @@ PHOTOPRISM_DEBUG: "true"
 
 !!! info ""
     You're welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
-    Sponsors may contact us [directly via email](mailto:hello@photoprism.app).
+    [Sponsors](https://www.patreon.com/photoprism) may contact us [directly via email](mailto:hello@photoprism.app).
 
 ### Common Issues ###
 
@@ -54,7 +54,7 @@ Fatal errors are often caused by one of the following conditions:
 6. The database server is not available, incompatible or incorrectly configured
 7. There are network problems caused by a proxy, firewall or unstable connection
 8. Kernel security modules such as [AppArmor](https://wiki.ubuntu.com/AppArmor) and
-   [SELinux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) may be blocking permissions
+   [SELinux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) are blocking permissions
 
 ### Kernel Security ###
 

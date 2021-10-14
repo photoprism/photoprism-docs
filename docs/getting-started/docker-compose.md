@@ -3,6 +3,11 @@
 Before you start, make sure you have [Docker](https://store.docker.com/search?type=edition&offering=community) 
 installed on your system. It is available for Mac, Linux, and Windows.
 
+!!! info ""
+    You're welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
+    [Sponsors](https://www.patreon.com/photoprism) may contact us [directly via email](mailto:hello@photoprism.app).
+
+
 ### Step 1: Configure ###
 
 === "Linux"
@@ -144,8 +149,7 @@ Enabling [public mode](config-options.md) will disable authentication.
 
 !!! info ""
     If you can't connect, try starting the app without `-d`: `docker-compose up photoprism`. 
-    This keeps it in the foreground and shows log messages for troubleshooting. You're welcome to ask 
-    for help in our [community chat](https://gitter.im/browseyourlife/community).
+    This keeps it in the foreground and shows log messages for [troubleshooting](troubleshooting.md).
     Should the server already be running, or you see no errors, you may have started it
     on a different host and/or port. There could also be an issue with your browser,
     ad blocker, or firewall settings.
@@ -243,7 +247,7 @@ PhotoPrism's command-line interface is well suited for job automation using a
 | *Show Facial Recognition Commands* | `docker-compose exec photoprism photoprism faces help`   |
 | *Index Faces*                   | `docker-compose exec photoprism photoprism faces index`     |
 | *Reset People & Faces*          | `docker-compose exec photoprism photoprism faces reset -f`  |
-| *Pre-transcode Videos to AVC*   | `docker-compose exec photoprism photoprism convert`         |
+| *Transcode Videos to AVC*       | `docker-compose exec photoprism photoprism convert`         |
 | *Update Index*                  | `docker-compose exec photoprism photoprism index --cleanup` |                  
 | *Import Files*                  | `docker-compose exec photoprism photoprism import [path]`   |                  
 

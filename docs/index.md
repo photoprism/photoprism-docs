@@ -27,8 +27,9 @@ Say goodbye to uploading your visual memories to the cloud!
 <a class="md-button" style="background-color: #546e7a; font-size: 0.66rem; font-weight: normal; color: white" href="/getting-started/">GET STARTED</a>
 </p>
 
-Step-by-step installation instructions for our self-hosted community edition can be found 
-in [Getting Started](getting-started/index.md). All you need to have installed on your 
-system is a Web browser and [Docker](https://store.docker.com/search?type=edition&offering=community).
-It is available for Mac, Linux, and Windows.
+!!! info ""
+    Step-by-step installation instructions for our self-hosted community edition can be found 
+    in [Getting Started](getting-started/index.md). All you need to have installed on your 
+    system is a Web browser and [Docker](https://store.docker.com/search?type=edition&offering=community).
+    It is available for Mac, Linux, and Windows.
 

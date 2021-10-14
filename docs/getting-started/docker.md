@@ -3,6 +3,10 @@
 We recommend using [Docker Compose](docker-compose.md) as it is easier to start with for beginners
 and provides more comfort than the pure Docker command-line interface.
 
+!!! info ""
+    You're welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
+    [Sponsors](https://www.patreon.com/photoprism) may contact us [directly via email](mailto:hello@photoprism.app).
+
 ### Step 1: Start the server ###
 
 === "Linux"
@@ -44,7 +48,7 @@ Enabling [public mode](config-options.md) will disable authentication.
 
 !!! info ""
     If you can't connect, try starting the app without `-d`. This keeps it in the foreground
-    and shows log messages for troubleshooting. You're welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
+    and shows log messages for [troubleshooting](troubleshooting.md).
     Should the server already be running, or you see no errors, you may have started it 
     on a different host and/or port. There could also be an issue with your browser, 
     ad blocker, or firewall settings.
@@ -190,7 +194,7 @@ PhotoPrism's command-line interface is well suited for job automation using a
 | *Show Facial Recognition Commands* | `docker exec -ti photoprism photoprism faces help`  |
 | *Index Faces*                 | `docker exec -ti photoprism photoprism faces index`      |
 | *Reset People & Faces*        | `docker exec -ti photoprism photoprism faces reset -f`   |
-| *Pre-transcode Videos to AVC* | `docker exec -ti photoprism photoprism convert`          |
+| *Transcode Videos to AVC*     | `docker exec -ti photoprism photoprism convert`          |
 | *Update Index*                | `docker exec -ti photoprism photoprism index --cleanup`  |                  
 | *Import Files*                | `docker exec -ti photoprism photoprism import [path]`    |
 

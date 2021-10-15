@@ -1,9 +1,9 @@
 # Config Options #
 
 !!! attention ""
-    Changing config values on the [advanced settings](../user-guide/settings/advanced.md) page and in `docker-compose.yml`
-    always requires a restart to take effect. Open a terminal, run `docker-compose stop photoprism` and then
-    `docker-compose up -d photoprism` to restart your instance.
+    Changing basic system config options in `docker-compose.yml` or on the [advanced settings](../user-guide/settings/advanced.md) 
+    page always requires a restart to take effect. Open a terminal, run `docker-compose stop photoprism` and then
+    `docker-compose up -d photoprism` to restart the app container.
 
 Variable                        | Parameter                  | Description
 :------------------------------ |:-------------------------- |:-------------------------------------------

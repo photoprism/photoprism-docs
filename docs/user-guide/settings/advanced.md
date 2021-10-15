@@ -1,7 +1,12 @@
 # Advanced Settings #
 
-This page enables advanced control of PhotoPrism,
-and configuring image and thumbnail handling.
+Basic system [config options](../../getting-started/config-options.md) such as thumbnail quality can be changed 
+on the advanced settings page. You can also disable specific features and enable debug or read-only mode.
+
+!!! attention ""
+    Changing advanced settings always requires a restart to take effect. Selecting a different thumbnail image
+    quality or size won't replace existing thumbnails. You may regenerate them using the 
+    [command-line interface](https://docs.photoprism.org/getting-started/docker-compose/#command-line-interface).
 
 ![](img/advanced-settings.jpg)
 

@@ -1,4 +1,4 @@
-# People
+# Facial Recognition
 
 Discover long-forgotten shots! Our [latest version](../../release-notes.md) includes facial recognition 
 that lets you find pictures of your family and friends. New faces are detected as you scan your library.
@@ -10,7 +10,7 @@ They are then grouped by similarity, so you can quickly match them to people.
     the background, for example after new faces have been identified, you've reported a bad match, or new 
     files have been added to your library.
 
-## People Section ##
+## Recognized & New People ##
 
 The people section shows you recognized people as well as new face clusters.
 

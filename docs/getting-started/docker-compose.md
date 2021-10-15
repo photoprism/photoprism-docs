@@ -5,7 +5,7 @@ installed on your system. It is available for Mac, Linux, and Windows.
 
 !!! info ""
     You're welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
-    [Sponsors](https://www.patreon.com/photoprism) may contact us [directly via email](mailto:hello@photoprism.app).
+    Customers and [sponsors](../funding.md) may [contact us directly](https://photoprism.app/contact).
 
 
 ### Step 1: Configure ###

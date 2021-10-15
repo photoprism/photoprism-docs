@@ -1,7 +1,8 @@
 # Whatever it is, we'd love to hear from you!
 
-Feel free to use the chat or send an e-mail to [hello@photoprism.app](mailto:hello@photoprism.app) 
-if you have questions, want to support our work, or just want to say hello.
+Feel free to contact us at [hello@photoprism.app](mailto:hello@photoprism.app)  if you have general questions, 
+want to support our work, or just want to say hello. Customers and sponsors may also contact us for technical 
+support and assistance with enabling [early-access features](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20label%3Aearly-access).
 
 [![Community Chat](https://img.shields.io/badge/chat-on%20gitter-4aa087.svg)][chat]
 [![Twitter](https://img.shields.io/badge/follow-@photoprism_app-00acee.svg)][twitter]

@@ -1,6 +1,6 @@
 # Security Policy
 
-When you think you've discovered a security issue, please contact us at hello@photoprism.app.
+When you think you've discovered a security issue, please contact us at [hello@photoprism.app](mailto:hello@photoprism.app).
 
 Your report should at least include the following:
 

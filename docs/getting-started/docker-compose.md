@@ -200,11 +200,8 @@ Easy, isn't it?
     As a measure of last resort, you may disable using TensorFlow for image classification and facial recognition.
 
 !!! example ""
-    **This open-source project is made possible [thanks to our sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md).**
-    If you enjoy using PhotoPrism, please consider backing us on [Patreon](https://www.patreon.com/photoprism)
-    or [GitHub Sponsors](https://github.com/sponsors/photoprism).
-    Your continued support helps us fund operating costs, provide services like satellite maps,
-    and develop new features. Thank you very much! 💜
+    **Back us on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism).** 
+    Your continued support helps us provide services like satellite maps and develop new features. Thank you very much! 💜
 
 ### Command-Line Interface ###
 

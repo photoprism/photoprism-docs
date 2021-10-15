@@ -1,8 +1,8 @@
 # Funding
 
 **We value freedom and privacy.** Serving free beer can make you many friends, but it doesn't help us develop great 
-software and get closer to our vision. Your server hardware comes at a price, just as we have large expenses for 
-our infrastructure and team.
+software and get closer to our vision. Your private server comes at a price, just as we have large expenses for our 
+infrastructure and team.
 
 Please back us on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism)
 if you like our software and can't contribute in any other way. Your continued support helps us provide services like 

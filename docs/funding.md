@@ -1,6 +1,6 @@
 # Funding
 
-**We value freedom and privacy.** Serving free beer can make you many friends, that was never our motivation though.
+**We value freedom and privacy.** Serving free beer can make you many friends. It is not our motivation though.
 Your server hardware comes at a price, just as we have large expenses for our infrastructure and team.
 
 Please back us on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism)

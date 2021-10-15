@@ -1,9 +1,14 @@
-PhotoPrism detects faces while indexing and then groups them by similarity.
-This may take a while, depending on how many pictures you have.
+# People
+
+Discover long-forgotten shots! Our [latest version](../../release-notes.md) includes facial recognition 
+that lets you find pictures of your family and friends. New faces are detected as you scan your library.
+They are then grouped by similarity, so you can quickly match them to people. 
 
 !!! tldr ""
-    Face clusters are automatically optimized in the background, for example after new faces have 
-    been identified, you've reported a conflict, or new files have been added to your library.
+    Grouping faces to clusters may take a while, depending on your hardware and how many pictures you have.
+    It can also cause a temporarily high CPU load. Existing clusters will be automatically optimized in 
+    the background, for example after new faces have been identified, you've reported a bad match, or new 
+    files have been added to your library.
 
 ## People Section ##
 

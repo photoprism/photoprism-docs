@@ -1,8 +1,8 @@
 # User Guide #
 
 Step-by-step installation instructions for our self-hosted community edition can be found
-in [Getting Started](../getting-started/index.md). All you need to have installed on your
-system is a Web browser and [Docker](https://store.docker.com/search?type=edition&offering=community).
+in [Getting Started](../getting-started/index.md). All you need is a Web browser and 
+[Docker](https://store.docker.com/search?type=edition&offering=community) to run the server.
 It is available for Mac, Linux, and Windows.
 
 When setup is complete, you can start [indexing your pictures](library/index.md).

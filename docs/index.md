@@ -27,7 +27,7 @@ It makes use of the latest technologies without getting in your way.
 
 !!! info ""
     Step-by-step installation instructions for our self-hosted community edition can be found 
-    in [Getting Started](getting-started/index.md). All you need to have installed on your 
-    system is a Web browser and [Docker](https://store.docker.com/search?type=edition&offering=community).
+    in [Getting Started](getting-started/index.md). All you need is a Web browser and 
+    [Docker](https://store.docker.com/search?type=edition&offering=community) to run the server.
     It is available for Mac, Linux, and Windows.
 

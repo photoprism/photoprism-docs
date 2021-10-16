@@ -1,8 +1,8 @@
 # Setup
 
 We recommend running PhotoPrism with [Docker Compose](docker-compose.md).
-All you need to have installed on your system is a Web browser 
-and [Docker](https://store.docker.com/search?type=edition&offering=community). 
+All you need to have installed is a Web browser and 
+[Docker](https://store.docker.com/search?type=edition&offering=community). 
 It is available for Mac, Linux, and Windows.
 
 When setup is complete, you can start [indexing your pictures](../user-guide/library/index.md).

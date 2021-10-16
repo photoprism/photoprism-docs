@@ -1,6 +1,6 @@
 # Funding
 
-**We value freedom and privacy.** Serving free beer can make you many friends, but it doesn't help us develop great 
+**We value freedom and privacy.** Serving free beer[^1] can make you many friends, but it doesn't help us develop great 
 software and get closer to our vision. Your private server comes at a price, just as we have expenses for our 
 infrastructure and team.
 
@@ -12,3 +12,5 @@ Ideas endorsed by silver and [gold sponsors](https://github.com/photoprism/photo
 receive a [golden label](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3Asponsor) and will be prioritized. Let us know when we mistakenly label an idea as [unfunded](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3Aunfunded).
 
 Thank you very much! 💜
+
+[^1]: Think of “free” as in “free speech,” not as in “free beer.” We sometimes call it “libre software,” borrowing the French or Spanish word for “free” as in freedom, to show we do not mean the software is gratis. (https://www.gnu.org/philosophy/free-sw.en.html)

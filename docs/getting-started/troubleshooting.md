@@ -40,7 +40,7 @@ PHOTOPRISM_DEBUG: "true"
 
 !!! info ""
     You're welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
-    Customers and [sponsors](../funding.md) may [contact us directly](https://photoprism.app/contact).
+    [Sponsors](../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
 
 ### Common Issues ###
 

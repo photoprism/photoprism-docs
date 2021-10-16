@@ -1,11 +1,15 @@
 # Whatever it is, we'd love to hear from you!
 
-Feel free to contact us at [hello@photoprism.app](mailto:hello@photoprism.app)  if you have general questions, 
-want to support our work, or just want to say hello. Customers and sponsors may also contact us for technical 
-support and assistance with enabling [early-access features](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20label%3Aearly-access).
+#### Technical Support ####
+
+Customers and sponsors are welcome to contact us at [support@photoprism.app](mailto:support@photoprism.app) for technical support and assistance with enabling [early-access features](https://github.com/photoprism/photoprism/issues?q=is:issue%20label:early-access).
 
 [![Community Chat](https://img.shields.io/badge/chat-on%20gitter-4aa087.svg)][chat]
 [![Twitter](https://img.shields.io/badge/follow-@photoprism_app-00acee.svg)][twitter]
+
+#### General Inquiries ####
+
+Feel free to contact us at [hello@photoprism.app](mailto:hello@photoprism.app) if you have general questions, want to support our work, or just want to say hello.
 
 Responsible for editorial content according to § 5 TMG / § 55 RStV:
 
@@ -23,11 +27,6 @@ USt-ID: DE189758973
 PhotoPrism® is a registered trademark of Michael Mayer. You may use it as required to describe 
 our software, run your own server, for educational purposes, but not for offering commercial 
 goods, products, or services without prior written permission. In other words, please ask.
-
-## Disclaimer ##
-
-We are not marketing specialists but developers who work a lot and enjoy a bit of sarcasm from 
-time to time. Please let us know when there is an issue with our "nuance and tone", and we'll find a solution.
 
 ## Privacy Policy ##
 

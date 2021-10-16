@@ -24,7 +24,7 @@ To star a person click :material-star:. Stared persons appear first.
     unidentified faces in your library including random people such as news speakers or faces on shampoo bottles.
     You can use the search filter `face:new` to find pictures containing unknown people.
     We recommend combining it with other filters, like year or location, when looking for specific people.
-    The *People* tab in the photo [edit dialog](edit.md) displays all detected faces, so you can name them
+    The *People* tab in the photo [edit dialog](edit.md) displays all faces, so you can name them
     or report a bad match by pressing the :material-eject: button.
 
 ### When a face was not detected... ###
@@ -40,8 +40,8 @@ There can be several reasons why a face was not detected:
   positives, like background noise and food that looks like a face
 
 !!! info "" 
-    Recognition compares the similarity of detected faces. The standard similarity threshold 
-    is reduced when you report a bad match.
+    Recognition compares the similarity of faces. The similarity threshold for a face is reduced when 
+    you report a bad match.
 
 ## Assign Names to Faces ##
 

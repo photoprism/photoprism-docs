@@ -1,7 +1,7 @@
 # Facial Recognition
 
-Discover long-forgotten shots! Our [latest version](../../release-notes.md) includes facial recognition 
-that lets you find pictures of your family and friends. New faces are detected as you scan your library.
+Our [latest version](../../release-notes.md) includes facial recognition that lets you find pictures of your 
+family and friends. Be ready to discover long-forgotten shots! New faces are detected as you scan your library. 
 They are then grouped by similarity, so you can quickly match them to people. 
 
 !!! tldr ""

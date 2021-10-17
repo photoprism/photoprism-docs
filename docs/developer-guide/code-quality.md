@@ -33,7 +33,7 @@ This way, there is no need for extra refactoring tasks or epics. Let's experimen
 
 !!! tip ""
     Ugly code is not a problem as long as there are tests, 
-    there are no security issues, and it can be easily refactored later. 
+    there are no [security issues](../security-policy.md), and it can be easily refactored later. 
     Nobody needs beautiful code that doesn't work.
 
 ## Going Fast ##

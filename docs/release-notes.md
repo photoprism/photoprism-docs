@@ -7,6 +7,16 @@
 
 ### Development Preview ###
 
+- UI: [Updated *Lavender* theme](https://github.com/photoprism/photoprism/commit/1efdf1c1a3690fa22658bc42786aa6b1fff217e4)
+- Search: [Added `live` and `raw` filters](https://github.com/photoprism/photoprism/commit/25a954d56821108369cc1a397f1b0a7a3a22c504)
+- Search: [Added `faces:new` as alias for `face:new`](https://docs.photoprism.org/user-guide/organize/people/#recognized-new-people)
+- Security: [Added `Content-Security-Policy` header to prevent frame embedding](https://github.com/photoprism/photoprism/commit/2ddb1d6daaab847cd95f38aaa2f9293f35023f9a)
+- Translations: Updated [Russian](https://github.com/photoprism/photoprism/pull/1622) and [Slovak](https://github.com/photoprism/photoprism/pull/1620)
+
+*[Early-access feature](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+label%3Aearly-access) for our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.org/developer-guide/):*
+
+- UI: Added *Vanta* dark theme
+
 !!! tldr ""
     You can test our latest features and improvements by changing the image from `photoprism/photoprism:latest` 
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.org/docker/). 

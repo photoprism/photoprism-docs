@@ -15,7 +15,7 @@
 
 *[Early-access feature](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+label%3Aearly-access) for our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.org/developer-guide/):*
 
-- UI: Added *Vanta* dark theme
+- UI: New *Vanta* dark theme ✨
 
 !!! tldr ""
     You can test our latest features and improvements by changing the image from `photoprism/photoprism:latest` 

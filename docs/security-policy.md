@@ -1,6 +1,6 @@
 # Security Policy
 
-Please contact us at [security@photoprism.app](mailto:security@photoprism.app) if you have 
+Please contact us at [security@photoprism.app](mailto:security@photoprism.app) when you've 
 discovered a potential security issue.
 
 At a minimum, your report should include the following:

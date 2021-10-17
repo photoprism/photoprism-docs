@@ -106,6 +106,7 @@ nav:
     - Tests: developer-guide/tests.md
     - Issues: developer-guide/issues.md
     - Pull Requests: developer-guide/pull-requests.md
+    - Security Policy: security-policy.md
     - Code Quality: developer-guide/code-quality.md
     - Documentation: developer-guide/documentation.md
     - Translations: developer-guide/translations.md
@@ -133,11 +134,10 @@ nav:
       - XMP: developer-guide/metadata/xmp.md
       - EXIF: developer-guide/metadata/exif.md
       - Edit EXIF: developer-guide/metadata/edit-exif.md
-    - Security:
-      - Policy: developer-guide/security/policy.md
-      - Checklist: developer-guide/security/checklist.md
     - Clients:
       - Go: developer-guide/clients/go.md
+    - Checklists:
+      - Web Security: developer-guide/checklists/web-security.md
     - Technologies:
       - Golang: developer-guide/technologies/golang.md
       - TensorFlow: developer-guide/technologies/tensorflow.md

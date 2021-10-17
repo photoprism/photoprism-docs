@@ -1,10 +1,10 @@
-# How to Work With Pull Requests
+# Creating a Pull Request
 
 Because we want to create the best possible product for our users, we have a set of guidelines which ensure that all source code contributions are acceptable. They are not intended as a filter or barrier to participation. If you are unfamiliar with open source development on GitHub, [we will help you](https://groups.google.com/a/photoprism.org/forum/#!forum/developers).
 
 To submit new code, follow these steps:
 
-### Fork our main repository ###
+### Fork our repository ###
   * Click the [Fork button](https://help.github.com/articles/working-with-forks/) in the header of our [main repository](https://github.com/photoprism/photoprism)
   * Clone the forked repository on your local computer: 
     * `git clone https://github.com/[your username]/photoprism`
@@ -27,7 +27,7 @@ To submit new code, follow these steps:
       * `git add .`
       * `git commit -m "Your commit message #1234"`
 
-### When you’re ready... ###
+### When you are ready... ###
   * Sign the [Contributor License Agreement (CLA)](https://cla-assistant.io/photoprism/photoprism).
   * Verify you didn't forget to add / commit files (output should be empty): 
     * `git status -s`

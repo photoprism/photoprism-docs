@@ -11,6 +11,8 @@ Customers and sponsors are welcome to contact us at [support@photoprism.app](mai
 
 Feel free to contact us at [hello@photoprism.app](mailto:hello@photoprism.app) if you have general questions, want to support our work, or just want to say hello.
 
+Learn more about our [security policy](/security-policy).
+
 Responsible for editorial content according to § 5 TMG / § 55 RStV:
 
 <address>

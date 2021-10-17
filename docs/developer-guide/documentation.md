@@ -11,7 +11,9 @@ See the [README](https://github.com/photoprism/photoprism-docs/#readme) for how 
 
 [Godoc](https://blog.golang.org/godoc-documenting-go-code) generates documentation automatically, so it's tightly coupled to the photoprism source code.
 
-[View docs on pkg.go.dev](https://pkg.go.dev/github.com/photoprism/photoprism){: .md-button .md-button--primary }
+<p style="text-align: center; padding: 20px 4px;">
+    <a class="action-button" href="https://pkg.go.dev/github.com/photoprism/photoprism" target="_blank">View Package Docs</a>
+</p>
 
 Some highlights to explore:
 

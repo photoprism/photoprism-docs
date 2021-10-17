@@ -1,0 +1,18 @@
+a.action-button {
+    border-radius: .3rem;
+    background-color: #4d5966;
+    text-transform: uppercase;
+    font-size: 0.66rem;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 500;
+    padding: .625em 2em;
+    /* transition: color 150ms, background-color 150ms; */
+}
+
+a.action-button:hover {
+    font-weight: 500;
+    background-color: #fa0;
+    color: #000000;
+}

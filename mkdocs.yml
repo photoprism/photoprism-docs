@@ -151,6 +151,9 @@ nav:
       - License: license.md
       - Contact: contact.md
 
+extra_css:
+  - css/photoprism.css
+
 # External links.
 extra:
   social:

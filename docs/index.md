@@ -21,8 +21,8 @@ It makes use of the latest technologies without getting in your way.
 * WebDAV clients such as Microsoft's Windows Explorer and Apple's Finder can [connect](https://docs.photoprism.org/user-guide/sync/webdav/) directly to PhotoPrism, allowing you to open, edit, and delete files from your computer as if they were local
 
 <p style="text-align: center; padding: 20px 4px;">
-<a class="md-button" style="background-color: #546e7a; font-size: 0.66rem; font-weight: normal; color: white" href="https://demo.photoprism.org/" target="_blank">TRY OUR DEMO</a>
-<a class="md-button" style="background-color: #546e7a; font-size: 0.66rem; font-weight: normal; color: white" href="/getting-started/">GET STARTED</a>
+  <a class="action-button" href="https://demo.photoprism.org/" target="_blank">TRY OUR DEMO</a>
+  <a class="action-button" href="/getting-started/">GET STARTED</a>
 </p>
 
 !!! info ""

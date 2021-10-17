@@ -17,7 +17,7 @@ We will then try to reproduce the problem, determine the impact and get back to 
 
 !!! info ""
     You are welcome to also report vulnerabilities in third-party applications that we may not be able
-    to fix ourselves.
+    to fix directly.
 
 ### Responsible Disclosure ###
 

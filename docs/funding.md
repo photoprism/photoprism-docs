@@ -1,8 +1,6 @@
 # Funding
 
-**We value freedom and privacy.** Serving free beer[^1] can make you many friends, but it doesn't help us develop great 
-software and get closer to our vision. Your private server comes at a price, just as we have expenses for our 
-infrastructure and team.
+**We value freedom and privacy.** Serving free beer[^1] does not bring us closer to our vision.
 
 Please back us on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism)
 if you like our software. Your continued support helps us provide services like satellite maps and develop new features.
@@ -12,4 +10,4 @@ receive a [golden label](https://github.com/photoprism/photoprism/issues?q=is%3A
 
 Thank you very much! 💜
 
-[^1]: Think of “free” as in “free speech,” not as in “free beer.” We sometimes call it “libre software,” borrowing the French or Spanish word for “free” as in freedom, to show we do not mean the software is gratis. (https://www.gnu.org/philosophy/free-sw.en.html)
+[^1]: Think of “free software” as in “free speech,” not as in “free beer.” We sometimes call it “libre software,” borrowing the French or Spanish word for “free” as in freedom, to show we do not mean the software is gratis. (https://www.gnu.org/philosophy/free-sw.en.html)

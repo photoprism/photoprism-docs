@@ -1,6 +1,7 @@
 # Our Team
 
-We strive to provide the most user-friendly solution for browsing, organizing, and sharing your photo collection.
+!!! example ""
+    We strive to provide the most user- and privacy-friendly solution to keep your pictures organized and accessible.
 
 ## Michael Mayer ##
 

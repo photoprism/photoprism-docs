@@ -8,9 +8,10 @@
 ### Development Preview ###
 
 - UI: [Updated *Lavender* theme](https://github.com/photoprism/photoprism/commit/1efdf1c1a3690fa22658bc42786aa6b1fff217e4)
+- Places: [Fixed maps initialization after reload in non-public mode](https://github.com/photoprism/photoprism/commit/e200f322be07f6ada9cd88902ba65372c69f0364)
 - Search: [Added `live` and `raw:true` filters as alternative to `type:…`](https://github.com/photoprism/photoprism/commit/25a954d56821108369cc1a397f1b0a7a3a22c504)
 - Search: [Added `faces:new` alias for `face:new`](https://docs.photoprism.org/user-guide/organize/people/#recognized-new-people)
-- Config: [Increased the maximum background worker interval to 7 days](https://github.com/photoprism/photoprism/issues/1618)
+- Config: [Maximum background worker interval has been increased to 7 days](https://github.com/photoprism/photoprism/issues/1618)
 - Security: [Added `Content-Security-Policy` header to prevent framing attacks](https://github.com/photoprism/photoprism/commit/2ddb1d6daaab847cd95f38aaa2f9293f35023f9a)
 - Translations: Updated [Russian](https://github.com/photoprism/photoprism/pull/1622) and [Slovak](https://github.com/photoprism/photoprism/pull/1620)
 

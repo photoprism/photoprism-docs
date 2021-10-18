@@ -1,6 +1,7 @@
 # Funding
 
-**We value freedom and privacy.** Serving free beer[^1] does not bring us closer to our vision.
+**We value freedom and privacy.** Serving free beer[^1] doesn't bring us closer to our vision.
+Like any other team, we can't develop great software without adequate resources.
 
 Please back us on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism)
 if you like PhotoPrism. Your continued support helps us provide services like satellite maps and develop new features.

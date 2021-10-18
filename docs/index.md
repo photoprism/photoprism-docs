@@ -3,7 +3,7 @@
 PhotoPrism® is an AI-Powered Open Source App for browsing, organizing & sharing your photo collection. 
 You can install it at home or on a private server.
 
-![Screenshot](https://dl.photoprism.org/assets/img/preview.jpg)
+![Screenshot](img/preview.jpg)
 
 ## Features ##
 

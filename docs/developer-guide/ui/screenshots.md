@@ -70,3 +70,11 @@ Improved UI with flat look, photo upload and powerful filters as well as new pag
 ## June 24, 2020 ##
 
 ![](https://dl.photoprism.org/assets/wiki/screenshots/20200624-preview.jpg)
+
+## January 21, 2021 ##
+
+![](https://dl.photoprism.org/assets/img/preview_2021.jpg)
+
+## October 18, 2021 ##
+
+![](../../img/preview.jpg)

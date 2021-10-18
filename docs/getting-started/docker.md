@@ -192,6 +192,7 @@ PhotoPrism's command-line interface is well suited for job automation using a
 | *Index Faces*                 | `docker exec -ti photoprism photoprism faces index`      |
 | *Reset People & Faces*        | `docker exec -ti photoprism photoprism faces reset -f`   |
 | *Transcode Videos to AVC*     | `docker exec -ti photoprism photoprism convert`          |
+| *Regenerate Thumbnails*       | `docker exec -ti photoprism photoprism thumbs -f`        |
 | *Update Index*                | `docker exec -ti photoprism photoprism index --cleanup`  |                  
 | *Import Files*                | `docker exec -ti photoprism photoprism import [path]`    |
 

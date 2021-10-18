@@ -244,6 +244,7 @@ PhotoPrism's command-line interface is well suited for job automation using a
 | *Index Faces*                   | `docker-compose exec photoprism photoprism faces index`     |
 | *Reset People & Faces*          | `docker-compose exec photoprism photoprism faces reset -f`  |
 | *Transcode Videos to AVC*       | `docker-compose exec photoprism photoprism convert`         |
+| *Regenerate Thumbnails*         | `docker-compose exec photoprism photoprism thumbs -f`       |
 | *Update Index*                  | `docker-compose exec photoprism photoprism index --cleanup` |                  
 | *Import Files*                  | `docker-compose exec photoprism photoprism import [path]`   |                  
 

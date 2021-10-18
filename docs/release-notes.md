@@ -7,6 +7,15 @@
 
 ### Development Preview ###
 
+!!! tldr ""
+    You can test our latest features and improvements by changing the image from `photoprism/photoprism:latest` 
+    to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.org/docker/). 
+    Then [pull the most recent image](getting-started/updates.md) and restart your instance.
+
+### October 18, 2021 ###
+
+Build [211018-e200f322](https://drone.photoprism.app/photoprism/photoprism/2162)
+
 - UI: [Updated *Lavender* theme](https://github.com/photoprism/photoprism/commit/1efdf1c1a3690fa22658bc42786aa6b1fff217e4)
 - Places: [Fixed maps initialization after reload in non-public mode](https://github.com/photoprism/photoprism/commit/e200f322be07f6ada9cd88902ba65372c69f0364)
 - Search: [Added `live` and `raw:true` filters as alternative to `type:…`](https://github.com/photoprism/photoprism/commit/25a954d56821108369cc1a397f1b0a7a3a22c504)
@@ -18,11 +27,6 @@
 *[Early-access feature](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+label%3Aearly-access) for our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.org/developer-guide/):*
 
 - UI: New *Vanta* dark theme ✨
-
-!!! tldr ""
-    You can test our latest features and improvements by changing the image from `photoprism/photoprism:latest` 
-    to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.org/docker/). 
-    Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
 ### October 10, 2021 ###
 

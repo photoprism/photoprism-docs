@@ -5,7 +5,7 @@ It runs where you need it, at home or in the cloud. Say goodbye to selling your 
 
 ![Screenshot](img/preview.jpg)
 
-## Features ##
+## Feature Overview ##
 
 * Browse all your photos and [videos](https://demo.photoprism.org/videos) without worrying about RAW conversion, duplicates or video formats
 * Easily find specific pictures using powerful [search filters](https://demo.photoprism.org/browse?view=cards&q=flower%20color%3Ared)

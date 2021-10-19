@@ -138,7 +138,7 @@ organized by year and month.
 Most users with existing photo libraries will want to index their *originals* folder directly
 without importing files, leaving the existing file and folder names unchanged. On the other hand
 importing is an efficient way to add files, since PhotoPrism doesn't have to search your *originals*
-folder to find added files.
+folder to find new files.
 
 ### What exactly does the read-only mode? ###
 

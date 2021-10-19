@@ -10,8 +10,8 @@ If your device meets the system requirements, mostly the same [installation inst
 as for regular Linux servers apply.
 
 !!! missing ""
-    Owners of ARMv7-based devices have to revert to an [alternative image](https://hub.docker.com/r/linuxserver/mariadb) 
-    if they want to use MariaDB.
+    Owners of [ARMv7](https://dl.photoprism.org/docker/armv7/docker-compose.yml)-based devices have to revert 
+    to an [alternative image](https://hub.docker.com/r/linuxserver/mariadb) if they want to use MariaDB.
     The [official image](https://hub.docker.com/_/mariadb) is available for AMD64 and ARM64 only.
     Pay close attention to changed directory and environment variable names.
 

@@ -19,13 +19,13 @@
 ![Screenshot](img/index.png)
 
 
-!!! tip ""
-    You may use [WebDAV](webdav.md) for adding files to the *originals* folder.
-    This is especially helpful if PhotoPrism is running on a remote server.
+!!! info ""
+    You can use [WebDAV](webdav.md)-compatible apps, including Microsoft's Windows Explorer and Apple's Finder, 
+    to add files to your *originals* folders from a remote computer or mobile device.
 
-!!! tip ""
-    A NSFW detector can be enabled to automatically flag pictures as private which 
-    may have offensive content. Note that this is only somewhat reliable. 
+!!! tip "NSFW"
+    An NSFW detector can be enabled to automatically mark images with potentially objectionable content as 
+    private. Note that this feature is only partially reliable.
 
 #### Ignoring Files and Folders ####
 
@@ -48,12 +48,13 @@ MVI_*.MOV
 MVI_*.*
 ```
 
-Names will be ignored in the same directory and all subdirectories. You may use `*` as a wildcard.
+Names in the same directory and in all subdirectories are ignored. You can use `*` as a wildcard.
 
-Note that already indexed files and folders won't be removed from index retroactively. In this case, adding them to a `.ppignore` file will not result in a file or folder to be removed from PhotoPrism.
+Files and folders that have already been indexed cannot be retroactively removed from the index
+using a `.ppignore` file. Adding their name won't remove them from PhotoPrism.
 
-If you are a new user and files or folders have already been indexed, you generally easiest 
-to reset the database and start with a fresh index by running `photoprism reset` in a terminal.
+!!! tldr ""
+    If you are a new user and files or folders have already been indexed, it is generally easiest to reset the database and start with a new index by running `photoprism reset` in a [terminal](../../getting-started/docker-compose.md#command-line-interface).
 
 #### When should "Complete Rescan" be selected? ####
 

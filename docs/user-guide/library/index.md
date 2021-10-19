@@ -1,18 +1,25 @@
-# Shall I import or index my originals?
+# Managing Your Photo Library
 
-*Import* is a temporary folder from which you can move or copy files to *originals* in a structured way that avoids duplicates. 
-Most users with existing collections will want to index their originals directly without importing them, 
-so that existing file and directory names stay the same. On the other hand, 
-importing is more efficient when adding files as you don't need to re-index all originals to find new photos and videos.
+## Should I import or index my files? ##
+
+*Import* is a temporary folder from which files can be transferred to the *originals* folder
+in a structured way that avoids duplicates. Imported files receive a canonical filename and will be
+organized by year and month.
+
+Most users with existing photo libraries will want to index their *originals* folder directly
+without importing files, leaving the existing file and folder names unchanged. On the other hand
+importing is an efficient way to add files, since PhotoPrism doesn't have to search your *originals*
+folder to find added files.
+
+!!! info ""
+    Hidden files and folders that start with a `.` or `@` are automatically ignored. Other names to be
+    ignored can be added to a `.ppignore` file in the *originals* or *import* folder it should affect.
+    You can put it either in the main folder or in a subfolder to limit the scope.
 
 ### Index ###
 
 Use *index* when you want to index your photos and videos directly in the *originals* folder without copying,
 moving or renaming them in any way.
-
-!!! tip ""
-    You may [configure ignore list](originals.md#ignoring-directories-and-files)
-    before starting the index.
 
 Your folder structure in *originals* might look like this:
 

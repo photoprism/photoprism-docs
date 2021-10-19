@@ -1,4 +1,4 @@
-# Browse Your Pictures #
+# Browsing Your Photos #
 
 PhotoPrism offers many views and search filters so that you can browse your pictures in multiple dimensions
 instead of only scrolling through them day by day.

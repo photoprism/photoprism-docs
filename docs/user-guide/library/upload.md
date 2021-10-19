@@ -1,4 +1,4 @@
-# Uploading Files using the Web UI#
+# File Upload Using the Web UI #
 
 === "From Toolbar"
 

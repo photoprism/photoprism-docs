@@ -29,8 +29,9 @@
 
 #### Ignoring Files and Folders ####
 
-Hidden files and folders starting with a `.` or `@` will be ignored automatically. 
-Other names to be ignored can be added to a `.ppignore` file in the originals or import folder it should apply.
+Hidden files and folders that start with a `.` or `@` are automatically ignored. Other names to be 
+ignored can be added to a `.ppignore` file in the *originals* or *import* folder it should affect.
+You can put it either in the main folder or in a subfolder to limit the scope.
 
 Example:
 

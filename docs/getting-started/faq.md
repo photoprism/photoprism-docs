@@ -131,10 +131,14 @@ is too demanding, even for the most powerful servers.
 
 ### I'm having issues understanding the difference between the import and originals folders? ###
 
-Import is a temporary folder from which you can move or copy files to *originals* in a structured way that avoids duplicates.
-Most users with existing collections will want to index their *originals* folder without import, 
-so that existing file and directory names don't change. On the other hand, importing may be more efficient when
-adding files as you don't need to re-index *originals*.
+You may optionally mount an *import* folder from which files can be transferred to the *originals* folder
+in a structured way that avoids duplicates. Imported files receive a canonical filename and will be
+organized by year and month.
+
+Most users with existing photo libraries will want to index their *originals* folder directly
+without importing files, leaving the existing file and folder names unchanged. On the other hand
+importing is an efficient way to add files, since PhotoPrism doesn't have to search your *originals*
+folder to find added files.
 
 ### What exactly does the read-only mode? ###
 

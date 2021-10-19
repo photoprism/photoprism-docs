@@ -33,10 +33,10 @@ nav:
   - User Guide:
     - Introduction: user-guide/index.md
     # - Setting up: user-guide/setup.md
-    - Index:
+    - Library:
       - Introduction: user-guide/library/index.md
-      - Originals: user-guide/library/originals.md
-      - Importing Files: user-guide/library/import.md
+      - Index Originals: user-guide/library/originals.md
+      - Import Files: user-guide/library/import.md
       - Web Upload: user-guide/library/upload.md
       - WebDAV Sync: user-guide/library/webdav.md
       - File Browser: user-guide/library/files.md

@@ -1,4 +1,4 @@
-# Development of our user interface in time lapse ⏱
+# UI Development in Fast Motion ⏱
 
 ## August 15 , 2018 ##
 The first prototype was based on Bootstrap 4.

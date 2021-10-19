@@ -17,9 +17,9 @@ as for regular Linux servers apply.
 
 ### System Requirements ###
 
-It's important to [boot](https://www.raspberrypi.org/documentation/installation/installing-images/README.md)
-your Raspberry Pi 3 / 4 with the parameter `arm_64bit=1` in `config.txt` in order to use our ARM64 Docker image.
-Alternatively, you may run the image on [UbuntuDockerPi](https://github.com/guysoft/UbuntuDockerPi).
+It is important that you [boot](https://www.raspberrypi.org/documentation/installation/installing-images/README.md) 
+your Raspberry Pi 3 / 4 with the parameter `arm_64bit=1` in `config.txt` to use our ARM64 image.
+Alternatively, you may run it on [UbuntuDockerPi](https://github.com/guysoft/UbuntuDockerPi).
 It's a 64bit Ubuntu Server with Docker pre-installed.
 
 Your device should have at least 4 GB of memory. Also make sure it has at least

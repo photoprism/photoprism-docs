@@ -1,7 +1,6 @@
 # PhotoPrism: Browse Your Life in Pictures
 
-PhotoPrism® is an AI-powered Open Source app for browsing, organizing & sharing your photo collection.
-You can run it at home, on a private server, or in the cloud.
+PhotoPrism® is an AI-powered app for browsing, organizing & sharing your photo collection. It makes use of the latest technologies to tag and find pictures automatically without getting in your way. You can run it at home, on a private server, or in the cloud.
 
 ![Screenshot](img/preview.jpg)
 

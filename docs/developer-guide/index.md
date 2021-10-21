@@ -31,7 +31,7 @@ if you have verified that no similar [idea](https://github.com/photoprism/photop
 
 ## Questions?
 
-Follow us on [Twitter](https://twitter.com/photoprism_app) or join our [community chat](https://gitter.im/browseyourlife/community)
+Follow us on [Twitter](https://twitter.com/photoprism_app) or join our [Community Chat](https://gitter.im/browseyourlife/community)
 to get regular updates, connect with other contributors, and discuss your ideas. Don't be afraid to ask silly questions.
 
 !!! tldr ""
@@ -40,8 +40,9 @@ to get regular updates, connect with other contributors, and discuss your ideas.
 ## Reporting Bugs ##
 
 Please use [GitHub Issues](https://github.com/photoprism/photoprism/issues) only to report clearly identified bugs and impediments to us.
-If you are not sure, first ask in our [community chat](https://gitter.im/browseyourlife/community).
-[Sponsors](../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
+If you are not sure, first use [GitHub Discussions](https://github.com/photoprism/photoprism/discussions) or ask in 
+our [Community Chat](https://gitter.im/browseyourlife/community). [Sponsors](../funding.md) receive direct 
+[technical support](https://photoprism.app/contact) via email.
 
 When reporting a problem, please include the version you are using and information 
 about your environment such as browser, operating system, installed memory, and 
@@ -51,6 +52,5 @@ processor type.
 
 Issues labeled [help wanted](https://github.com/photoprism/photoprism/labels/help%20wanted) /
 [easy](https://github.com/photoprism/photoprism/labels/easy) can be good (first) contributions.
-The Developer Guide contains all information necessary to get you started.
 
 Our [step-by-step guide](pull-requests.md) explains how to submit new features, bugfixes and documentation.

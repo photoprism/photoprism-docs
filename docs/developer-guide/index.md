@@ -36,7 +36,7 @@ Follow us on [Twitter](https://twitter.com/photoprism_app) or join our [Communit
 to get regular updates, connect with other contributors, and discuss your ideas. Don't be afraid to ask silly questions.
 
 !!! tldr ""
-    Don't use GitHub Issues to ask general questions or for assistance.
+    Never use GitHub Issues to ask general questions or for assistance.
 
 ## Reporting Bugs ##
 

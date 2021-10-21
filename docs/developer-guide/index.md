@@ -40,7 +40,7 @@ to get regular updates, connect with other contributors, and discuss your ideas.
 ## Reporting Bugs ##
 
 Please use [GitHub Issues](https://github.com/photoprism/photoprism/issues) only to report clearly identified bugs and impediments to us.
-If you are not sure,  first ask in our [community chat](https://gitter.im/browseyourlife/community).
+If you are not sure, first ask in our [community chat](https://gitter.im/browseyourlife/community).
 [Sponsors](../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
 
 When reporting a problem, please include the version you are using and information 

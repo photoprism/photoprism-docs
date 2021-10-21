@@ -31,7 +31,7 @@ depending on your specific use case.
 
 Our vision is to provide the most user- and privacy-friendly solution to keep your pictures organized and accessible.
 The [roadmap](https://github.com/photoprism/photoprism/projects/5) shows what tasks are in progress, 
-what needs testing, and which feature requests are going to be implemented next.
+what needs testing, and which features are going to be implemented next.
 
 Please give ideas you like a thumbs-up, so that we know what is most popular.
 Ideas backed by silver and gold [sponsors](../funding.md) will be prioritized as well.

@@ -54,4 +54,4 @@ processor type.
 Issues labeled [help wanted](https://github.com/photoprism/photoprism/labels/help%20wanted) /
 [easy](https://github.com/photoprism/photoprism/labels/easy) can be good (first) contributions.
 
-Our [step-by-step guide](pull-requests.md) explains how to submit new features, bugfixes and documentation.
+Our step-by-step guide explains how to submit [pull requests](pull-requests.md).

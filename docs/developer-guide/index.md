@@ -24,24 +24,27 @@ what needs testing, and which features are going to be implemented next.
 Please give ideas you like a thumbs-up 👍  , so that we know what is most popular.
 Ideas backed by silver and gold [sponsors](../funding.md) will be prioritized as well.
 
-You are welcome to add specific feature requests directly to our [GitHub issue tracker](https://github.com/photoprism/photoprism/issues)
-if no similar [idea](https://github.com/photoprism/photoprism/labels/idea)
-or [todo](https://github.com/photoprism/photoprism/labels/todo) already exists.
-Please don't use the issue tracker to ask general questions.
+You are welcome to submit specific feature requests via [GitHub Issues](https://github.com/photoprism/photoprism/issues) 
+if you have verified that no similar [idea](https://github.com/photoprism/photoprism/labels/idea) or 
+[todo](https://github.com/photoprism/photoprism/labels/todo) already exists.
 
 ## Questions?
 
-Follow us on [Twitter](https://twitter.com/photoprism_app) or join our [community chat](https://gitter.im/browseyourlife/community) to receive regular project updates,
-get in contact with other contributors and discuss your ideas. Don't be afraid to ask stupid questions.
+Follow us on [Twitter](https://twitter.com/photoprism_app) or join our [community chat](https://gitter.im/browseyourlife/community)
+to get regular updates, connect with other contributors, and discuss your ideas. Don't be afraid to ask silly questions.
 
-Of all the tools we tested, it works best to get and give continuous feedback.
-Especially polls are amazing for product development.
+!!! tldr ""
+    Don't use GitHub Issues to ask general questions or for assistance.
 
 ## Reporting Bugs ##
 
-Please use the [GitHub issue tracker](https://github.com/photoprism/photoprism/issues) to report clearly identified bugs and impediments to us.
-If you're not sure, start by asking in our [community chat](https://gitter.im/browseyourlife/community) or [contact us via email](mailto:help@photoprism.app).
-When reporting an issue, please provide the version in use and information about your environment like browser, operating system, installed memory, and processor type.
+Please use [GitHub Issues](https://github.com/photoprism/photoprism/issues) only to report clearly identified bugs and impediments to us.
+If you are not sure,  first ask in our [community chat](https://gitter.im/browseyourlife/community).
+[Sponsors](../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
+
+When reporting a problem, please include the version you are using and information 
+about your environment such as browser, operating system, installed memory, and 
+processor type.
 
 ## Pull Requests
 

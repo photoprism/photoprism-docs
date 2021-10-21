@@ -5,6 +5,8 @@ in [Getting Started](../getting-started/index.md). All you need is a Web browser
 [Docker](https://store.docker.com/search?type=edition&offering=community) to run the server.
 It is available for Mac, Linux, and Windows.
 
+![Progressive Web App](https://dl.photoprism.org/img/ui/iphone-search-purple-320px.jpg){ align=right }
+
 When setup is complete, you can start [indexing your pictures](library/index.md).
 Be patient, this may take a while depending on your server hardware and how many files you have.
 
@@ -16,12 +18,6 @@ In case some of your pictures are still missing after indexing has been complete
 they might be in [Review](organize/review.md) due to low quality or incomplete metadata.
 You can turn this and other features off in [Settings](settings/general.md), depending on
 your specific use case.
-
-!!! note ""
-    Our [stable version](../release-notes.md) and development preview now come as a single
-    [multi-arch image](https://hub.docker.com/r/photoprism/photoprism) for **AMD64, ARM64, and ARMv7**.
-    That means you don't need to pull from different Docker repositories anymore. We recommend updating your existing
-    `docker-compose.yml` config based on [our examples](https://dl.photoprism.org/docker/).
 
 !!! example ""
     **Back us on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism).**

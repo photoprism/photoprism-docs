@@ -106,8 +106,8 @@ nav:
     - Tests: developer-guide/tests.md
     - Issues: developer-guide/issues.md
     - Pull Requests: developer-guide/pull-requests.md
-    - Security Policy: security-policy.md
     - Code Quality: developer-guide/code-quality.md
+    - Security Policy: security-policy.md
     - Documentation: developer-guide/documentation.md
     - Translations: developer-guide/translations.md
     - User Interface:

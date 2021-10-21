@@ -24,3 +24,5 @@ We will then try to reproduce the problem, determine the impact and get back to 
 1. Confirm that the vulnerability applies to a current version
 2. First share the vulnerability details with us
 3. Wait for resolution before sharing details
+
+Thank you!

@@ -5,7 +5,7 @@ in [Getting Started](../getting-started/index.md). All you need is a Web browser
 [Docker](https://store.docker.com/search?type=edition&offering=community) to run the server.
 It is available for Mac, Linux, and Windows.
 
-![Progressive Web App](https://dl.photoprism.org/img/ui/iphone-search-purple-320px.jpg){ align=right }
+![Progressive Web App](https://dl.photoprism.org/img/ui/iphone-index-360px.png){ align=right }
 
 When setup is complete, you can start [indexing your pictures](library/index.md).
 Be patient, this may take a while depending on your server hardware and how many files you have.

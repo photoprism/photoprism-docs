@@ -3,8 +3,8 @@
 Basic system [config options](../../getting-started/config-options.md) such as the thumbnail image quality can be changed 
 on the advanced settings page. You can also disable specific features and enable the debug or read-only mode.
 
-For security reasons, the advanced settings page is hidden and not available when 
-the [public mode](../../getting-started/config-options.md) is enabled.
+For security reasons, the advanced settings page is disabled and hidden when the 
+[public mode](../../getting-started/config-options.md) is enabled.
 
 !!! attention ""
     Changing advanced settings always requires a restart to take effect. Selecting a different thumbnail

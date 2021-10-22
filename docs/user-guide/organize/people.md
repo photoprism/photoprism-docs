@@ -34,7 +34,7 @@ There can be several reasons why a face was not detected:
 - Only the primary file in stacks will be searched for faces
 - Faces can be smaller than the minimum size configured
 - Our face detection did not scan the image thoroughly enough
-- Reducing the resolution or quality of generated [thumbnails](../settings/advanced.md) negatively impacts face detection and recognition results, just like when you can't see properly
+- Reducing the resolution or quality of generated [thumbnails](../settings/advanced.md) negatively impacts face detection and recognition results, just like when you cannot see properly
 - In very rare cases an actual face may match a blacklist of false positives, like background noise and food that looks like a face
 
 !!! info "" 

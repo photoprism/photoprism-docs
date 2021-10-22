@@ -3,6 +3,9 @@
 Basic system [config options](../../getting-started/config-options.md) such as the thumbnail image quality can be changed 
 on the advanced settings page. You can also disable specific features and enable the debug or read-only mode.
 
+For security reasons, the advanced settings page is hidden and not available when 
+the [public mode](../../getting-started/config-options.md) is enabled.
+
 !!! attention ""
     Changing advanced settings always requires a restart to take effect. Selecting a different thumbnail
     quality or size won't replace existing thumbnails. You may regenerate them using the 
@@ -13,9 +16,6 @@ on the advanced settings page. You can also disable specific features and enable
 The same options can all be set using their corresponding
 [config options](/getting-started/config-options/) instead.
 Settings are saved in the `storage/config` directory.
-
-!!! note ""
-    The Advanced Settings page is not available if public mode is [enabled](/getting-started/config-options/).
 
 ## Options
 
@@ -112,11 +112,12 @@ Read more [here](https://fotoforensics.com/tutorial-estq.php).
 As an example of file size, if a quality of 95 results in a preview file size of 500kB,
 reducing quality to 80 reduces that file size down to about 100kB.
 
-Image classification (which passes the thumbnails through TensorFlow)
-also works better with sharp images,
-so it's likely a lower quality will result in less accurate labels.
-
 The equivalent [config option](/getting-started/config-options/) is `PHOTOPRISM_JPEG_QUALITY`.
+
+!!! danger ""
+    Reducing the *Static Size Limit* or *JPEG Quality* of thumbnails negatively impacts
+    [facial recognition](../organize/people.md) and image classification results, just like 
+    when you cannot see properly.
 
 ### Dynamic and Static Size Limits
 

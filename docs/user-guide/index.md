@@ -19,6 +19,17 @@ they might be in [Review](organize/review.md) due to low quality or incomplete m
 You can turn this and other features off in [Settings](settings/general.md), depending on
 your specific use case.
 
+## Getting Support ##
+
+Please use [GitHub Issues](https://github.com/photoprism/photoprism/issues) only to report clearly identified bugs and
+impediments to us. If you are not sure, first use [GitHub Discussions](https://github.com/photoprism/photoprism/discussions)
+or ask in our [Community Chat](https://gitter.im/browseyourlife/community). [Sponsors](../funding.md)
+receive direct [technical support](https://photoprism.app/contact) via email.
+
+When reporting a problem, please include the version you are using and information
+about your environment such as browser, operating system, installed memory, and
+processor type.
+
 !!! example ""
     **Back us on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism).**
     Your continued support helps us provide services like satellite maps and develop new features. Thank you very much! 💜

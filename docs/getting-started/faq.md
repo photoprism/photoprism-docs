@@ -178,7 +178,7 @@ Note that for a Progressive Web App (PWA) to work as designed, the service worke
 be located in the root directory. Also keep in mind sharing a domain with
 other apps may negatively impact the performance and 
 [security](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy)
-of all apps installed. The length of share links will increase as well.
+of all apps installed. The length of share links increases as well.
 
 ### Why is PhotoPrism getting stuck in a restart loop? ###
 

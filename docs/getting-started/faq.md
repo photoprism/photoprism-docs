@@ -125,9 +125,14 @@ performance instead.
 
 ### Can I skip creating thumbnails completely? ###
 
-The smallest [configurable](../user-guide/settings/advanced.md) limit is 720px for consumption 
-by the indexer and TensorFlow during image classification. Recreating and keeping them in memory
-is too demanding, even for the most powerful servers.
+The smallest [configurable](../user-guide/settings/advanced.md) size is 720px for consumption by 
+the indexer to perform color detection, face detection, and image classification. Recreating them 
+every time they are needed is too demanding for even the most powerful servers. Unless you only 
+have a few small images, it would render the app unusable.
+
+!!! danger ""
+    Reducing the *Static Size Limit* of thumbnails has a **significant impact on  [facial recognition](../user-guide/organize/people.md)
+    and image classification** results. Simply put, it means that the indexer can no longer see properly.
 
 ### I'm having issues understanding the difference between the import and originals folders? ###
 

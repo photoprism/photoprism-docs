@@ -99,25 +99,28 @@ The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_
 
 ### JPEG Quality
 
-For best quality thumbnails, choose a value above 90.
-Higher quality values require more storage (larger thumbnails),
-and the thumbnails take more time to generate.
+Choose a value above 90 to display your images in the best possible quality. Note that higher values 
+require more space in the *storage* folder for less compressed thumbnail files, which may also take longer to create.
 
-Quality levels of 90% or higher are generally considered "high quality",
-80%-90% is "medium quality", and 70%-80% is low quality (as you may see
-in heavily compressed social media content).
-Anything below 70% is typically a very low quality image.
-Read more [here](https://fotoforensics.com/tutorial-estq.php).
+Lower quality thumbnails, on the other hand, are smaller, load faster on slow Internet connections, 
+and require less space in the *storage* folder and in the browser cache.
 
-As an example of file size, if a quality of 95 results in a preview file size of 500kB,
-reducing quality to 80 reduces that file size down to about 100kB.
+- Quality levels of 90% or higher are generally considered *high quality*
+- 80% to 90% is considered *medium quality*
+- 70% to 80% is considered *low quality*, as you might see with highly compressed content on social media 
+ 
+Anything below 70% is generally of [very low quality](https://fotoforensics.com/tutorial-estq.php).
+
+Example: If a quality of 95 results in a thumbnail file size of 500kB, then reducing the quality 
+to 80 reduces the file size to about 100kB.
 
 The equivalent [config option](/getting-started/config-options/) is `PHOTOPRISM_JPEG_QUALITY`.
 
-!!! danger ""
-    Reducing the *Static Size Limit* or *JPEG Quality* of thumbnails negatively impacts
-    [facial recognition](../organize/people.md) and image classification results, just like 
-    when you cannot see properly.
+!!! tldr ""
+    **The actual impression depends on how much information an image contains.** Empty areas and skies,
+    for example, are easier to compress. Images with a lot of details suffer the most.
+    For this reason, reducing the quality of thumbnails also negatively impacts [facial recognition](../organize/people.md)
+    and image classification results. Simply put, this means that the indexer sees fewer details.
 
 ### Dynamic and Static Size Limits
 
@@ -129,22 +132,26 @@ The equivalent [config option](/getting-started/config-options/) is `PHOTOPRISM_
 no thumbnails will be created above this size.
 The equivalent [config option](/getting-started/config-options/) is `PHOTOPRISM_THUMB_SIZE`.
 
+!!! danger ""
+    Reducing the *Static Size Limit* of thumbnails has a **significant impact on [facial recognition](../organize/people.md) 
+    and image classification** results. Simply put, it means that the indexer can no longer see properly.
+
 !!! warning ""
-    When the configured size limits are exceeded (for example if users have a larger screen),
-    no sufficiently large thumbnail will be generated,
-    so the photo viewer may be forced to use original image files instead.
-    Browsers can struggle to accurately resample the original file,
-    or can display images with the wrong orientation.
+    If the configured size limit is exceeded (for example, if users have a larger screen), a sufficiently large 
+    thumbnail can't be created, and the photo viewer may be forced to display the original image instead.
+    **Downscaling images in browsers typically results in poor quality, and they may also be displayed in 
+    the wrong orientation.**
 
-The smallest configurable limit is 720px, to enable reasonable preview sizes and for consumption by TensorFlow during image classification.
+The smallest configurable size is 720px for consumption by the indexer to perform color detection, face detection, 
+and image classification. Recreating them every time they are needed is too demanding for even the most powerful 
+servers. Unless you only have a few small images, it would render the app unusable.
 
-It's recommended to set these limits high, for the smoothest experience while browsing PhotoPrism.
-However, if disk space used by thumbnails is a serious concern,
-and you're willing to compromise heavily by increasing processing load on the server,
-it's possible to set the Static Size Limit as the minimum possible (720px),
-but set a high Dynamic Size Limit.
-This will allow the server to generate downsampled preview images on-demand,
-causing a delay when previewing a photo in full screen mode.
+It is recommended that you set these limits high so that browsing pictures is as smooth as possible.
+However, if the amount of disk storage required is a serious problem, and you are
+willing to increase server load instead, it is possible to set the
+*Static Size Limit* to the minimum of 720px in combination with a higher *Dynamic Size Limit*.
+This allows the server to generate larger thumbnails on demand. It may also result in a noticeable delay 
+when viewing pictures in full-screen mode.
 
 !!! tip ""
     To view original images, enable *Dynamic Previews*,

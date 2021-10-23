@@ -104,22 +104,6 @@ using `ffmpeg`. That's also what Twitter does when you post a GIF. They will the
 "live photos" and start playing on mouse over while also consuming less storage and bandwidth 
 compared to your original GIF files.
 
-### Should I use SQLite, MariaDB, or MySQL? ###
-
-If you have few pictures, concurrent users, and CPU cores, [SQLite](https://www.sqlite.org/)
-may seem faster compared to full-featured database servers like [MariaDB](https://mariadb.com/).
-
-This changes as the index grows and the number of concurrent accesses increases.
-The way MariaDB and MySQL handle multiple queries is completely different and optimized
-for high concurrency. SQLite, for example, locks the index on updates so that other
-operations have to wait. In the worst case, this can lead to timeout errors.
-Its main advantage is that you don't need to run a separate database server.
-This can be very useful for testing and also works great if you only have a few
-thousand files to index.
-
-MariaDB lacks some features that [MySQL Enterprise Edition](https://www.mysql.com/products/enterprise/) offers.
-On the other hand, MariaDB has many optimizations. It is also completely open-source.
-
 ### Why is my storage folder so large? What is in it? ###
 
 The storage folder contains sidecar, thumbnail, and configuration files.
@@ -156,12 +140,59 @@ without importing files, leaving the existing file and folder names unchanged. O
 importing is an efficient way to add files, since PhotoPrism doesn't have to search your *originals*
 folder to find new files.
 
-### What exactly does the read-only mode? ###
+### Should I use SQLite, MariaDB, or MySQL? ###
 
-When you enable *read-only mode*, all features that require write permission to the *originals* folder
-are disabled, in particular import, upload, and delete. Set `PHOTOPRISM_READONLY` to `"true"`
-in `docker-compose.yml` for this. You can mount a folder with the `:ro` flag to make Docker block
-write operations as well.
+If you have few pictures, concurrent users, and CPU cores, [SQLite](https://www.sqlite.org/)
+may seem faster compared to full-featured database servers like [MariaDB](https://mariadb.com/).
+
+This changes as the index grows and the number of concurrent accesses increases.
+The way MariaDB and MySQL handle multiple queries is completely different and optimized
+for high concurrency. SQLite, for example, locks the index on updates so that other
+operations have to wait. In the worst case, this can lead to timeout errors.
+Its main advantage is that you don't need to run a separate database server.
+This can be very useful for testing and also works great if you only have a few
+thousand files to index.
+
+MariaDB lacks some features that [MySQL Enterprise Edition](https://www.mysql.com/products/enterprise/) offers.
+On the other hand, MariaDB has many optimizations. It is also completely open-source.
+
+### Why is PhotoPrism getting stuck in a restart loop? ###
+
+This happens when Docker was configured to automatically restart the app after failures.
+Fatal errors are often caused by one of the following conditions:
+
+1. Your (virtual) server disk is full
+2. There is disk space left, but the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached
+3. The storage folder is not writable or there are other filesystem permission issues
+4. You have accidentally mounted the wrong folders
+5. The server is low on memory
+6. The database server is not available, incompatible or incorrectly configured
+7. There are network problems caused by a proxy, firewall or unstable connection
+8. Kernel security modules such as [AppArmor](https://wiki.ubuntu.com/AppArmor) and
+   [SELinux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) may be blocking permissions
+
+Please search your operating system and server logs for messages like *disk full*, *wrong permissions*,
+and *database connection failed* before reporting a bug. If you are using Docker Compose, run this command
+to display the last 100 log messages:
+
+```
+docker-compose logs --tail=100
+```
+
+Linux kernel security can be disabled on private servers, especially if you do not have experience
+with the configuration. Use a file manager, or the commands `chmod` and `chown` on Unix-like operating systems,
+to verify and fix filesystem permissions.
+Available disk space can be displayed with `df -h`. The size of virtual disks and memory can be
+increased in Docker and VM settings if needed. Please refer to the documentation.
+
+### Can I install PhotoPrism in a sub-directory on a shared domain?
+
+This is possible with our latest release if you run it behind a proxy.
+Note that for a Progressive Web App (PWA) to work as designed, the service worker should
+be located in the root directory. Also keep in mind sharing a domain with
+other apps may negatively impact the performance and
+[security](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy)
+of all apps installed. The length of share links increases as well.
 
 ### I could not find a documentation of config parameters? ###
 
@@ -177,43 +208,12 @@ docker-compose exec photoprism photoprism help
 Our [Docker Compose](docker-compose.md) [examples](https://dl.photoprism.org/docker/) are continuously 
 updated and inline documentation has been added to simplify installation.
 
-### Can I install PhotoPrism in a sub-directory on a shared domain?
+### What exactly does the read-only mode? ###
 
-This is possible with our latest release if you run it behind a proxy.
-Note that for a Progressive Web App (PWA) to work as designed, the service worker should 
-be located in the root directory. Also keep in mind sharing a domain with
-other apps may negatively impact the performance and 
-[security](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy)
-of all apps installed. The length of share links increases as well.
-
-### Why is PhotoPrism getting stuck in a restart loop? ###
-
-This happens when Docker was configured to automatically restart the app after failures. 
-Fatal errors are often caused by one of the following conditions:
-
-1. Your (virtual) server disk is full
-2. There is disk space left, but the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached
-3. The storage folder is not writable or there are other filesystem permission issues
-4. You have accidentally mounted the wrong folders
-5. The server is low on memory
-6. The database server is not available, incompatible or incorrectly configured
-7. There are network problems caused by a proxy, firewall or unstable connection
-8. Kernel security modules such as [AppArmor](https://wiki.ubuntu.com/AppArmor) and
-   [SELinux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) may be blocking permissions
-
-Please search your operating system and server logs for messages like *disk full*, *wrong permissions*, 
-and *database connection failed* before reporting a bug. If you are using Docker Compose, run this command 
-to display the last 100 log messages:
-
-```
-docker-compose logs --tail=100
-```
-
-Linux kernel security can be disabled on private servers, especially if you do not have experience
-with the configuration. Use a file manager, or the commands `chmod` and `chown` on Unix-like operating systems, 
-to verify and fix filesystem permissions.
-Available disk space can be displayed with `df -h`. The size of virtual disks and memory can be
-increased in Docker and VM settings if needed. Please refer to the documentation.
+When you enable *read-only mode*, all features that require write permission to the *originals* folder
+are disabled, in particular import, upload, and delete. Set `PHOTOPRISM_READONLY` to `"true"`
+in `docker-compose.yml` for this. You can mount a folder with the `:ro` flag to make Docker block
+write operations as well.
 
 ### How can I uninstall PhotoPrism? ###
 

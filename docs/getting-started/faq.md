@@ -161,7 +161,7 @@ Compared to full-featured relational database management systems (RDBMS)
 like MariaDB, SQLite may seem faster if you have only few pictures, 
 concurrent users, and CPU cores.
 
-As the database grows and the number of concurrent accesses increases, it will suffer. 
+This changes as the index grows and the number of concurrent accesses increases.
 The way MariaDB and MySQL handle multiple queries is completely different, much more 
 complex, and optimized for high concurrency. SQLite, for example, locks the entire table 
 when an update occurs and queues the requests. Its main advantage is that you don't need 
@@ -169,8 +169,7 @@ to run a separate database server. This can be very useful for testing and also 
 great if you only have a few thousand files to index.
 
 MariaDB lacks some features that MySQL Enterprise Edition offers.
-On the other hand, MariaDB has many optimizations like an improved thread 
-pool that improve performance. It is also completely open-source.
+On the other hand, MariaDB has many optimizations. It is also completely open-source.
 
 ### Can I install PhotoPrism in a sub-directory on a shared domain?
 

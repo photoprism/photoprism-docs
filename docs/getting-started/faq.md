@@ -169,8 +169,8 @@ to run a separate database server. This can be very useful for testing and also 
 great if you only have a few thousand files to index.
 
 MariaDB lacks some features that MySQL Enterprise Edition offers.
-On the other hand, MariaDB has many optimizations such as an improved
-thread pool that can run faster. It is also completely open-source.
+On the other hand, MariaDB has many optimizations like an improved thread 
+pool that improve performance. It is also completely open-source.
 
 ### Can I install PhotoPrism in a sub-directory on a shared domain?
 

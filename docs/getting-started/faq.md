@@ -150,8 +150,9 @@ write operations as well.
 ### I could not find a documentation of config parameters? ###
 
 We maintain a complete list of [config options](config-options.md) in *Getting Started*.
-Running `photoprism help` in a terminal lists all commands and [config options](config-options.md) 
-available your currently installed version:
+When you run `photoprism help` in a [terminal](docker-compose.md#command-line-interface), 
+all commands and parameters available in your currently installed [version](https://docs.photoprism.org/release-notes/) 
+are listed:
 
 ```
 docker-compose exec photoprism photoprism help
@@ -173,8 +174,8 @@ Its main advantage is that you don't need to run a separate database server.
 This can be very useful for testing and also works great if you only have a few 
 thousand files to index.
 
-MariaDB lacks some features that MySQL Enterprise Edition offers. On the other hand,
-MariaDB has many optimizations. It is also completely open-source.
+MariaDB lacks some features that [MySQL Enterprise Edition](https://www.mysql.com/products/enterprise/) offers. 
+On the other hand, MariaDB has many optimizations. It is also completely open-source.
 
 ### Can I install PhotoPrism in a sub-directory on a shared domain?
 

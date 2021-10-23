@@ -5,6 +5,7 @@
 Customers and sponsors are welcome to contact us at [support@photoprism.app](mailto:support@photoprism.app) for technical support and assistance with enabling [early-access features](https://github.com/photoprism/photoprism/issues?q=is:issue%20label:early-access).
 
 [![Community Chat](https://img.shields.io/badge/chat-on%20gitter-4aa087.svg)][chat]
+[![GitHub Discussions](https://img.shields.io/badge/ask-%20on%20github-4d6a91.svg)][ask]
 [![Twitter](https://img.shields.io/badge/follow-@photoprism_app-00acee.svg)][twitter]
 
 #### General Inquiries ####
@@ -48,4 +49,5 @@ They also collect potentially personally-identifying information like Internet P
 See [Privacy Statement](https://help.github.com/en/github/site-policy/github-privacy-statement) and [DMCA Takedown Policy](https://help.github.com/en/github/site-policy/dmca-takedown-policy).
 
 [chat]: https://gitter.im/browseyourlife/community
+[ask]: https://github.com/photoprism/photoprism/discussions
 [twitter]: https://twitter.com/photoprism_app

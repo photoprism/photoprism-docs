@@ -104,6 +104,22 @@ using `ffmpeg`. That's also what Twitter does when you post a GIF. They will the
 "live photos" and start playing on mouse over while also consuming less storage and bandwidth 
 compared to your original GIF files.
 
+### Should I use SQLite, MariaDB, or MySQL? ###
+
+If you have few pictures, concurrent users, and CPU cores, [SQLite](https://www.sqlite.org/)
+may seem faster compared to full-featured database servers like [MariaDB](https://mariadb.com/).
+
+This changes as the index grows and the number of concurrent accesses increases.
+The way MariaDB and MySQL handle multiple queries is completely different and optimized
+for high concurrency. SQLite, for example, locks the index on updates so that other
+operations have to wait. In the worst case, this can lead to timeout errors.
+Its main advantage is that you don't need to run a separate database server.
+This can be very useful for testing and also works great if you only have a few
+thousand files to index.
+
+MariaDB lacks some features that [MySQL Enterprise Edition](https://www.mysql.com/products/enterprise/) offers.
+On the other hand, MariaDB has many optimizations. It is also completely open-source.
+
 ### Why is my storage folder so large? What is in it? ###
 
 The storage folder contains sidecar, thumbnail, and configuration files.
@@ -160,22 +176,6 @@ docker-compose exec photoprism photoprism help
 
 Our [Docker Compose](docker-compose.md) [examples](https://dl.photoprism.org/docker/) are continuously 
 updated and inline documentation has been added to simplify installation.
-
-### Should I use SQLite, MariaDB, or MySQL? ###
-
-If you have few pictures, concurrent users, and CPU cores, [SQLite](https://www.sqlite.org/) 
-may seem faster compared to full-featured database servers like [MariaDB](https://mariadb.com/).
-
-This changes as the index grows and the number of concurrent accesses increases. 
-The way MariaDB and MySQL handle multiple queries is completely different and optimized
-for high concurrency. SQLite, for example, locks the index on updates so that other
-operations have to wait. In the worst case, this can lead to timeout errors.
-Its main advantage is that you don't need to run a separate database server. 
-This can be very useful for testing and also works great if you only have a few 
-thousand files to index.
-
-MariaDB lacks some features that [MySQL Enterprise Edition](https://www.mysql.com/products/enterprise/) offers. 
-On the other hand, MariaDB has many optimizations. It is also completely open-source.
 
 ### Can I install PhotoPrism in a sub-directory on a shared domain?
 

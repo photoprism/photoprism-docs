@@ -149,11 +149,16 @@ write operations as well.
 
 ### I could not find a documentation of config parameters? ###
 
-You may run `photoprism help` in a terminal to see all options and commands. 
-We also maintain a complete list of [config options](config-options.md) in these docs.
+We maintain a complete list of [config options](config-options.md) in *Getting Started*.
+Running `photoprism help` in a terminal lists all commands and [config options](config-options.md) 
+available your currently installed version:
 
-Our Docker Compose [examples](https://dl.photoprism.org/docker/docker-compose.yml) are continuously maintained and inline documentation 
-has been added to simplify installation.
+```
+docker-compose exec photoprism photoprism help
+```
+
+Our [Docker Compose](docker-compose.md) [examples](https://dl.photoprism.org/docker/) are continuously 
+updated and inline documentation has been added to simplify installation.
 
 ### Should I use SQLite, MariaDB, or MySQL? ###
 

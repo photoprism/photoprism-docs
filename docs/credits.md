@@ -20,6 +20,7 @@ A big **thank you** to everyone who made this possible!
 ## Artwork ##
 
 * [AI-Generated Faces](https://mymodernmet.com/free-ai-generated-faces/) by [generated.photos](https://generated.photos/)
+* [NGC 1499 California Nebula](https://commons.wikimedia.org/wiki/File:NGC_1499_(California_Nebula)_narrowband.jpg) by [Remidone](https://creativecommons.org/licenses/by-sa/4.0/deed.en)
 * [Prism Light Separation](https://www.flickr.com/photos/digitalvosem/44622462042/in/dateposted/) by [digitalvosem](https://www.flickr.com/photos/digitalvosem/)
 * [Follow that light](https://www.flickr.com/photos/32658783@N03/24226085838/in/faves-12602671@N04/) by [Margeois](https://www.flickr.com/photos/32658783@N03/)
 * [Gopher overlapping the TensorFlow logo](img/tensorgologo.png) was created by [Takuya Ueda](https://github.com/tenntenn)

@@ -132,8 +132,8 @@ This will remove the name. You can either leave it blank or enter the name of a 
 
 ![Screenshot](img/reject.png)
 
-## Remove Wrong Faces ##
-In case PhotoPrism detected something wrong as face (false positives), you can remove it.
+## Remove Wrong Faces or Faces you don't want to keep ##
+In case PhotoPrism detected something wrong as face (false positives), or in case you just don't want to keep a face on the people tab you're not interested in, you can remove it.
 
 1. Open the photo [*edit dialogue*](edit.md)
 2. Go to the *People* tab

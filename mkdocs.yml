@@ -210,7 +210,7 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: img/favicon-16.png
+  favicon: img/favicon.png
   icon:
     logo: logo
 

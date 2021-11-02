@@ -10,7 +10,7 @@ GitHub now also offers [one-time donations](https://github.com/sponsors/photopri
 Ideas endorsed by silver, [gold and platinum sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md) 
 receive a [golden label](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3Asponsor) and will be prioritized.
 
-You're welcome to [contact us](https://photoprism.app/contact) for other options and corporate sponsorship.
+You're welcome to [contact us](https://photoprism.app/contact) for other options.
 
 Thank you very much! 💜
 

@@ -5,7 +5,6 @@ and doesn't get you better software.
 
 Please back us on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism)
 if you enjoy PhotoPrism. Your continued support helps us provide services like satellite maps and develop new features.
-
 GitHub now also offers [one-time donations](https://github.com/sponsors/photoprism?frequency=one-time).
 You're welcome to [contact us](https://photoprism.app/contact) for other options.
  

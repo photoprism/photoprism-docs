@@ -35,6 +35,7 @@ There can be several reasons why a face was not detected:
 - Faces can be smaller than the minimum size configured
 - Our face detection did not scan the image thoroughly enough
 - Reducing the resolution or quality of generated [thumbnails](../settings/advanced.md) negatively impacts face detection and recognition results, just like when you cannot see properly
+- Contrast plays a major role, so a bright face with gray hair on a gray background may be less obvious to our face detection than it is to you
 - In very rare cases an actual face may match a blacklist of false positives, like background noise and food that looks like a face
 
 !!! info "" 

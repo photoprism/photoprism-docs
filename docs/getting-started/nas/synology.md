@@ -48,7 +48,7 @@ To install Portainer:
 7. Open Portainer by visiting http://[YOUR-LOCAL-IP]:9000/;
 8. Choose and confirm a strong password; you will manage Portainer using this password and the _admin_ username;
 9. Select _Docker - Manage the local Docker environment_ to link Portainer to your Synology's local docker endpoint and hit _Connect_; Portainer's admin page should open;
-10. Click _Endpoint_ in the left menu, then _local_ and under _Public IP_ place your local NAS IP (it should be the same [YOUR-LOCAL-IP] of step 6.
+10. Click _Environment_ in the left menu, then _local_ and under _Public IP_ place your local NAS IP (it should be the same [YOUR-LOCAL-IP] of step 6.
 
 ### Step 3: install Photoprism in your Synology NAS using Portainer, accessible over http / direct IP ###
 

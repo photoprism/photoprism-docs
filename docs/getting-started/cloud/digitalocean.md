@@ -80,11 +80,11 @@ Your droplet is now being created.
     Click *Advanced* and click *Open page*.
 
 - Use username "admin" and your initial password to sign in
-- You may [change your password](../user-guide/settings/account.md) using the Web UI
+- You may [change your password](../../user-guide/settings/account.md) using the Web UI
 
 ## Adding Files ##
 
-- Decide whether you want to [index or import your files](../user-guide/library/index.md)
-- [Add files to your import or originals folder via WebDAV](../user-guide/library/webdav.md), or upload via [Web UI](../user-guide/library/upload.md)
-- Set up [syncing automatically](../user-guide/sync/mobile-devices.md) from mobile devices
+- Decide whether you want to [index or import your files](../../user-guide/library/index.md)
+- [Add files to your import or originals folder via WebDAV](../../user-guide/library/webdav.md), or upload via [Web UI](../../user-guide/library/upload.md)
+- Set up [syncing automatically](../../user-guide/sync/mobile-devices.md) from mobile devices
 

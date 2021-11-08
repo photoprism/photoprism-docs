@@ -7,8 +7,8 @@ nav:
     - Pure Docker: getting-started/docker.md
     - Raspberry Pi: getting-started/raspberry-pi.md
     - FreeBSD: getting-started/freebsd.md
-    - Hosted:
-      - DigitalOcean: getting-started/hosted/digitalocean.md
+    - Cloud:
+      - DigitalOcean: getting-started/cloud/digitalocean.md
     - NAS Devices:
       - Synology NAS: getting-started/nas/synology.md
       - Unraid: getting-started/nas/unraid.md

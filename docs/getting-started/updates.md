@@ -61,7 +61,7 @@ services:
       - "/var/run/docker.sock:/var/run/docker.sock"
 ```
 
-Users of our [DigitalOcean 1-Click App](digitalocean.md) have Watchtower pre-installed.
+Users of our [DigitalOcean 1-Click App](cloud/digitalocean.md) have Watchtower pre-installed.
 
 !!! caution
     Automatic updates may interrupt indexing and import operations.

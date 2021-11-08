@@ -11,7 +11,7 @@ PhotoPrism® is an AI-powered app for browsing, organizing & sharing your photo 
 * Privacy-friendly: No data is ever sent to Google, Amazon, Facebook, or Apple unless you explicitly upload files to one of their services 🔐
 * Recognizes the faces of your [family and friends](https://demo.photoprism.org/people) 💎
 * [Automatic classification](https://demo.photoprism.org/labels) of pictures based on their content and location 🌈
-* Play :material-play-circle-outline: Live Photos™ by hovering over them in [albums](https://demo.photoprism.org/albums) and [search results](https://demo.photoprism.org/browse?view=cards&q=type%3Alive)
+* Play Live Photos™ by hovering over them in [albums](https://demo.photoprism.org/albums) and [search results](https://demo.photoprism.org/browse?view=cards&q=type%3Alive)
 * Since the [user interface](https://demo.photoprism.org/) is a [Progressive Web App](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps),
   it provides a native app-like experience, and you can conveniently install it on the home screen of all major operating systems and mobile devices
 * Includes four high-resolution [world maps](https://demo.photoprism.org/places) to bring back the memories of your favorite trips

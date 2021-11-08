@@ -12,6 +12,10 @@
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.org/docker/). 
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
+- UI: [Updated logo colors](https://twitter.com/photoprism_app/status/1453743504430075912)
+- RAW: [Upgraded Darktable to 3.6.0](https://github.com/photoprism/photoprism/issues/1632)
+- Translations: [Added Bahasa Indonesia](https://github.com/photoprism/photoprism/issues/1689)
+
 ### October 18, 2021 ###
 
 Build [211018-e200f322](https://drone.photoprism.app/photoprism/photoprism/2162)

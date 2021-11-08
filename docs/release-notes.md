@@ -14,7 +14,8 @@
 
 - UI: [Updated logo colors](https://twitter.com/photoprism_app/status/1453743504430075912)
 - RAW: [Upgraded Darktable to 3.6.0](https://github.com/photoprism/photoprism/issues/1632)
-- Translations: [Added Bahasa Indonesia](https://github.com/photoprism/photoprism/issues/1689)
+- People: [Tweaked matching of children's faces](https://github.com/photoprism/photoprism/issues/1587)
+- Translations: Added [Bahasa Indonesia](https://github.com/photoprism/photoprism/issues/1689) and updated [Italian](https://github.com/photoprism/photoprism/pull/1706)
 
 ### October 18, 2021 ###
 

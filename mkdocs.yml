@@ -4,15 +4,18 @@ nav:
     - Introduction: index.md
     - Setup: getting-started/index.md
     - Docker Compose: getting-started/docker-compose.md
-    - Raspberry Pi: getting-started/raspberry-pi.md
     - Pure Docker: getting-started/docker.md
-    - DigitalOcean App: getting-started/digitalocean.md
+    - Raspberry Pi: getting-started/raspberry-pi.md
+    - FreeBSD: getting-started/freebsd.md
+    - Hosted:
+      - DigitalOcean: getting-started/hosted/digitalocean.md
+    - NAS Devices:
+      - Synology NAS: getting-started/nas/synology.md
+      - Unraid: getting-started/nas/unraid.md
     - Config Options: getting-started/config-options.md
     - Troubleshooting: getting-started/troubleshooting.md
     # - Support: getting-started/support.md
     - Getting Updates: getting-started/updates.md
-    - Portainer:
-      - Synology: getting-started/portainer/synology.md
     - Reverse Proxies:
       - Traefik: getting-started/proxies/traefik.md
       - Caddy 1: getting-started/proxies/caddy-1.md
@@ -23,7 +26,6 @@ nav:
     - Advanced:
       - Transcoding: getting-started/advanced/transcoding.md
       - Kubernetes: getting-started/advanced/kubernetes.md
-      - FreeBSD: getting-started/advanced/freebsd.md
       - Backups: getting-started/advanced/backups.md
       - Databases: getting-started/advanced/databases.md
       - Caching: getting-started/advanced/caching.md

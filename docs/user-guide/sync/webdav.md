@@ -14,6 +14,13 @@ The originals folder URL for public servers is:
 ```
 https://admin@example.com/originals/
 ```
+ or
+
+```
+\\example.com@SSL\originals\
+```
+
+for Windows 10.
 
 Please replace *example.com* with your actual domain.
 The slash at the end is important and cannot be omitted.

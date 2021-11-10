@@ -57,17 +57,19 @@ point the home directory placeholder `~` to `/root` in volume mounts.
 If you have indexed your library and some pictures are missing:
 
 - [ ] Check *Library > Errors* for errors and warnings
-- [ ] They might be in [Review](../user-guide/organize/review.md) due to low quality or incomplete metadata
+- [ ] They may be in [Review](../user-guide/organize/review.md) due to low quality or incomplete metadata
 - [ ] Their [private](../user-guide/organize/private.md) or [archived](../user-guide/organize/archive.md) status may have been restored from a backup
-- [ ] They might have been stacked based on their metadata or file names
+- [ ] The NSFW (Not Safe For Work) filter may be enabled, so they were marked as [private](../user-guide/organize/private.md)
+- [ ] They may be in *Library > Hidden* because a JPEG could not be created
+- [ ] They may have been stacked based on their metadata or file names
 - [ ] The indexer may have skipped them because they are exact duplicates
 - [ ] Their file types may be unsupported
-- [ ] Some files have bad filesystem permissions, so they can't be opened by the indexer
+- [ ] The files may have bad filesystem permissions, so they can't be opened by the indexer
 - [ ] You may not be signed in as admin, so you cannot see all files
 - [ ] You try to index a shared drive on a remote server, but the server is offline
-- [ ] You might be connected to the wrong server or a DNS entry hasn't been updated yet
+- [ ] You may be connected to the wrong server or a DNS entry hasn't been updated yet
 - [ ] The indexer may have crashed because you didn't configure 4 GB of swap
-- [ ] They may be in *Library > Hidden* because a JPEG could not be created
+- [ ] Somebody may have deleted them without telling you
 
 #### Fatal Errors ####
 

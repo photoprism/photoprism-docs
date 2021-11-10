@@ -34,7 +34,7 @@ The [roadmap](https://github.com/photoprism/photoprism/projects/5) shows what ta
 what needs testing, and which features are going to be implemented next.
 
 Please give ideas you like a thumbs-up, so that we know what is most popular.
-Ideas backed by silver and gold [sponsors](../funding.md) will be prioritized as well.
+Ideas backed by silver, gold and platinum [sponsors](../funding.md) will be prioritized as well.
 
 ## System Requirements ##
 
@@ -71,5 +71,16 @@ and [SQLite 3](https://www.sqlite.org/).
     by anyone in between including your provider, hackers, and governments. Backup tools and file sync apps
     like [FolderSync](https://www.tacit.dk/foldersync/faq/#i-can-not-connect-to-a-non-https-webdav-server-why) 
     may refuse to connect as well.
+
+## Getting Support ##
+
+Please read our [Troubleshooting Guide](troubleshooting.md) before reporting installation problems and use 
+[GitHub Issues](https://github.com/photoprism/photoprism/issues) only to report clearly identified bugs to us.
+If you are not sure, first use [GitHub Discussions](https://github.com/photoprism/photoprism/discussions)
+or ask in our [Community Chat](https://gitter.im/browseyourlife/community). [Sponsors](../funding.md)
+receive direct [technical support](https://photoprism.app/contact) via email.
+
+When reporting a problem, please include the version you are using and information about your environment such as browser, 
+operating system, installed memory, and processor type.
 
 *[Web UI]: A Progressive Web App that can be installed on your home screen and provides a native app-like experience

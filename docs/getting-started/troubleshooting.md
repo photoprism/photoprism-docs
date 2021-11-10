@@ -60,9 +60,11 @@ If you have indexed your library and some pictures are missing:
 - [ ] They might be in [Review](../user-guide/organize/review.md) due to low quality or incomplete metadata
 - [ ] They might have been stacked based on their metadata or file names
 - [ ] The indexer may have skipped them because they are exact duplicates
-- [ ] You have bad filesystem permissions, so they can't be opened by the indexer
-- [ ] The indexer may have crashed because you didn't configure 4 GB of swap
 - [ ] Their file types may be unsupported
+- [ ] Some files have bad filesystem permissions, so they can't be opened by the indexer
+- [ ] You try to index a shared drive on a remote server, but the server is offline
+- [ ] You might be connected to the wrong server or a DNS entry hasn't been updated yet
+- [ ] The indexer may have crashed because you didn't configure 4 GB of swap
 - [ ] They may be in *Library > Hidden* because a JPEG could not be created
 
 #### Fatal Errors ####

@@ -21,7 +21,9 @@ your specific use case.
 
 ## Getting Support ##
 
-Please use [GitHub Issues](https://github.com/photoprism/photoprism/issues) only to report clearly identified bugs to us. If you are not sure, first use [GitHub Discussions](https://github.com/photoprism/photoprism/discussions)
+Please read our [Troubleshooting Guide](../getting-started/troubleshooting.md) before reporting installation problems and use 
+[GitHub Issues](https://github.com/photoprism/photoprism/issues) only to report clearly identified bugs to us. 
+If you are not sure, first use [GitHub Discussions](https://github.com/photoprism/photoprism/discussions)
 or ask in our [Community Chat](https://gitter.im/browseyourlife/community). [Sponsors](../funding.md)
 receive direct [technical support](https://photoprism.app/contact) via email.
 

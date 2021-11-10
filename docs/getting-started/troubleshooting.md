@@ -4,10 +4,10 @@
     You're welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
     [Sponsors](../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
 
-### Check Your Logs ###
+### Docker Compose Logs ###
 
 If you cannot connect to the Web UI even after waiting for a while, run this command to display 
-the last 100 log messages:
+the last 100 log messages (omit `--tail=100` to see all):
 
 ```
 docker-compose logs --tail=100

@@ -16,6 +16,8 @@
 - RAW: [Upgraded Darktable to 3.6.0](https://github.com/photoprism/photoprism/issues/1632)
 - People: [Tweaked matching of children's faces](https://github.com/photoprism/photoprism/issues/1587)
 - People: [Improved face detection performance](https://github.com/esimov/pigo/releases/tag/v1.4.5)
+- People: [Fixed naming faces in non-primary files](https://github.com/photoprism/photoprism/issues/1710)
+- Places: [State names and abbreviations are normalized](https://github.com/photoprism/photoprism/issues/1664)
 - Config: [Improved `docker-compose.yml` examples](https://dl.photoprism.org/docker/)
 - Translations: Added [Bahasa Indonesia](https://github.com/photoprism/photoprism/issues/1689)
 - Translations: Updated [Polish](https://github.com/photoprism/photoprism/pull/1674) and [Italian](https://github.com/photoprism/photoprism/pull/1706)

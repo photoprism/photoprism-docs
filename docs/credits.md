@@ -6,6 +6,7 @@ A big **thank you** to everyone who made this possible!
 
 * [Go](https://golang.org/), [Gin](https://github.com/gin-gonic/gin) and [Vuetify](https://vuetifyjs.com/en/)
 * [Google](https://developers.google.com/) [TensorFlow](https://www.tensorflow.org/) and [Material Design](https://material.io/)
+* [MkDocs](https://www.mkdocs.org/) and [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
 * [Complete list of 3rd-party software packages](https://raw.githubusercontent.com/photoprism/photoprism/develop/NOTICE)
 
 ## Infrastructure ##
@@ -13,8 +14,7 @@ A big **thank you** to everyone who made this possible!
 * [KeyCDN](https://www.keycdn.com/) provides CDN services for our site and demo
 * [Docker](https://www.docker.com/) hosts our app images and approved us for their Open Source Program
 * [GitHub](https://pages.github.com/) hosts all code repositories
-* [Travis-CI](https://travis-ci.org/photoprism/photoprism) builds and tests our code multiple times a day
-* [IssueHunt](https://issuehunt.io/repos/119160553) is a new service for funding Open Source development
+* [Drone CI](https://www.drone.io/) builds and tests our app
 * [DigitalOcean](https://www.digitalocean.com/) hosts our documentation and website
 
 ## Artwork ##

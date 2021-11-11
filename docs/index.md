@@ -26,7 +26,7 @@ PhotoPrism® is an AI-powered app for browsing, organizing & sharing your photo 
 </p>
 
 !!! example ""
-    Step-by-step installation instructions for our self-hosted community edition can be found 
+    **Step-by-step installation instructions** for our self-hosted community edition can be found 
     in [Getting Started](getting-started/index.md). All you need is a Web browser and 
     [Docker](https://store.docker.com/search?type=edition&offering=community) to run the server.
     It is available for Mac, Linux, and Windows. PhotoPrism also runs on [DigitalOcean](getting-started/cloud/digitalocean.md), 

@@ -16,7 +16,7 @@ docker-compose logs --tail=100
 Search them for messages like *disk full*, *wrong permissions*, and *database connection failed* 
 before reporting a bug.
 
-!!! info ""
+!!! note ""
     If you see no errors or no logs at all, you may have started the server on a different host
     and/or port. There could also be an issue with your browser, ad blocker, or firewall settings.
 

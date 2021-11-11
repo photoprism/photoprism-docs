@@ -82,19 +82,28 @@ volumes:
 
 ### Which file types are supported? ###
 
-PhotoPrism's primary image file format is JPEG.
-While indexing, a JPEG sidecar file may automatically be created for RAW, HEIF, TIFF, PNG, BMP, 
-and GIF files. It is required for classification and resampling.
+The primary image format is JPEG. Support for JPEG XL is planned but not available yet. 
+When indexing, a JPEG sidecar file may be created automatically for RAW, HEIF, TIFF, PNG, BMP, GIF, and video files. 
+It is needed for generating thumbnails, image classification, and facial recognition.
 
-Support for specific RAW formats depends on the runtime environment and configuration. PhotoPrism may use 
-[Darktable](https://www.darktable.org/) and [RawTherapee](https://rawtherapee.com/) for RAW to JPEG conversion. 
-On Mac OS, [Sips](https://ss64.com/osx/sips.html) can be used as well.
+Due to the patent situation and its complexity, [TIFF is only partially supported](https://github.com/golang/go/issues?q=is%3Aissue+image%2Ftiff+) at the moment.
 
-We support [all common video types](../developer-guide/media/videos.md).
-You should configure PhotoPrism to automatically create JSON sidecar files so that
-video metadata like location and duration can be indexed.
+The following RAW converters can be used to generate JPEGs (included in our Docker image,
+otherwise you may need to install them on your system):
 
-You're welcome to open an issue if you experience issues with a specific file format.
+- [Darktable](https://www.darktable.org/) ([supported cameras](https://www.darktable.org/resources/camera-support/))
+- [RawTherapee](https://rawtherapee.com/) ([supported cameras](https://www.libraw.org/supported-cameras))
+ 
+If you're running PhotoPrism directly on a Mac, RAW files will be converted with [Sips](https://ss64.com/osx/sips.html) ([supported cameras](https://support.apple.com/en-us/HT211241)) by default.
+Our goal is to provide top-notch support for all RAW formats, regardless of camera make and model.
+Please let us know when there are any issues with a particular camera or file format.
+
+Video formats supported by [FFmpeg](https://en.wikipedia.org/wiki/FFmpeg#Supported_codecs_and_formats) can be transcoded to
+[MPEG-4 AVC](https://en.wikipedia.org/wiki/Advanced_Video_Coding). Still images for generating thumbnails can be extracted from 
+most videos as well. 
+
+If you have videos, always enable JSON sidecar files so that video metadata such as date, location, codec, 
+and duration can be indexed and searched.
 
 ### Why don't you display animated GIFs natively? ###
 

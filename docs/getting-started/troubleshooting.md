@@ -6,7 +6,7 @@
 
 ### Docker Compose Logs ###
 
-If you cannot connect to the Web UI even after waiting for a while, run this command to display 
+If you cannot connect to the Web UI even after waiting a few minutes, run this command to display 
 the last 100 log messages (omit `--tail=100` to see all):
 
 ```

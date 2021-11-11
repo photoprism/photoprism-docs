@@ -9,6 +9,7 @@ a.action-button {
     display: inline-block;
     font-weight: 500;
     padding: 6px 20px;
+    margin: 0 0 3px 0;
 }
 
 a.action-button:hover {

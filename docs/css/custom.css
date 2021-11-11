@@ -1,0 +1,33 @@
+a.action-button {
+    border-radius: 5px;
+    background-color: #4d5966;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.6rem;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 500;
+    padding: 6px 20px;
+}
+
+a.action-button:hover {
+    text-decoration: none;
+    font-weight: 500;
+    background-color: #fa0;
+    color: #000000;
+}
+
+.md-footer-info {
+    text-align: left;
+    width: 100%;
+    color: var(--md-footer-fg-color--lighter);
+    font-size: .64rem;
+    margin: auto 0.6rem;
+    padding: 0.4rem 0 0 0;
+}
+
+html .md-footer-meta.md-typeset .md-footer-info a {
+    color: var(--md-footer-fg-color--lighter);
+}
+

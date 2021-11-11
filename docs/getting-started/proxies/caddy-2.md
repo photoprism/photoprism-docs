@@ -14,7 +14,7 @@ and update [Let's Encrypt](https://letsencrypt.org/) HTTPS certificates.
 Please refer to the [official documentation](https://caddyserver.com/docs/v2-upgrade#proxy)
 for further details.
 
-!!! danger ""
+!!! important ""
     When installing PhotoPrism on a public server outside your home network, please **always run it
     behind a secure HTTPS reverse proxy**.
     Your files and passwords will be transmitted in clear text otherwise, and can be intercepted

@@ -34,7 +34,7 @@ This [tutorial](https://www.serverlab.ca/tutorials/linux/web-servers-linux/how-t
 
 At the very least you will need to adapt `server_name` and the `ssl_certificate`/`ssl_certificate_key` paths to match your setup. Please refer to their [official documentation](https://nginx.org/en/docs/) for further details.
 
-!!! danger ""
+!!! important ""
     When installing PhotoPrism on a public server outside your home network, please **always run it
     behind a secure HTTPS reverse proxy**.
     Your files and passwords will be transmitted in clear text otherwise, and can be intercepted

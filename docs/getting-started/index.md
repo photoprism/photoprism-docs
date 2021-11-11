@@ -63,7 +63,7 @@ Note that not all [video formats](https://github.com/photoprism/photoprism/issue
 The backend is compatible with [MariaDB 10.5+](https://mariadb.org/), [MySQL 8](https://www.mysql.com/),
 and [SQLite 3](https://www.sqlite.org/).
 
-!!! danger ""
+!!! important ""
     When installing PhotoPrism on a public server outside your home network, please **always run it
     behind a secure HTTPS reverse proxy** like [Traefik](proxies/traefik.md), 
     [Caddy](proxies/caddy-2.md), or [NGINX](proxies/nginx.md).
@@ -80,7 +80,8 @@ If you are not sure, first use [GitHub Discussions](https://github.com/photopris
 or ask in our [Community Chat](https://gitter.im/browseyourlife/community). [Sponsors](../funding.md)
 receive direct [technical support](https://photoprism.app/contact) via email.
 
-When reporting a problem, please include the version you are using and information about your environment such as browser, 
-operating system, installed memory, and processor type.
+!!! tldr ""
+    When reporting a problem, always include the version you are using and information about your environment such as browser, 
+    operating system, installed memory, and processor type.
 
 *[Web UI]: A Progressive Web App that can be installed on your home screen and provides a native app-like experience

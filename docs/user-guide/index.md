@@ -3,7 +3,9 @@
 Step-by-step installation instructions for our self-hosted community edition can be found
 in [Getting Started](../getting-started/index.md). All you need is a Web browser and 
 [Docker](https://store.docker.com/search?type=edition&offering=community) to run the server.
-It is available for Mac, Linux, and Windows.
+It is available for Mac, Linux, and Windows. PhotoPrism also runs on [DigitalOcean](../getting-started/cloud/digitalocean.md),
+[Raspberry Pi](../getting-started/raspberry-pi.md), [FreeBSD](../getting-started/freebsd.md), and many
+[NAS devices](../getting-started/nas/synology.md).
 
 ![Progressive Web App](https://dl.photoprism.org/img/ui/iphone-index-360px.png){ align=right }
 
@@ -27,7 +29,7 @@ If you are not sure, first use [GitHub Discussions](https://github.com/photopris
 or ask in our [Community Chat](https://gitter.im/browseyourlife/community). [Sponsors](../funding.md)
 receive direct [technical support](https://photoprism.app/contact) via email.
 
-When reporting a problem, please include the version you are using and information
+When reporting a problem, always include the version you are using and information
 about your environment such as browser, operating system, installed memory, and
 processor type.
 

@@ -19,6 +19,7 @@
 - People: [Improved face detection performance](https://github.com/esimov/pigo/releases/tag/v1.4.5)
 - People: [Fixed naming faces in non-primary files](https://github.com/photoprism/photoprism/issues/1710)
 - People: [Optimized matching of children's faces](https://github.com/photoprism/photoprism/issues/1587)
+- Auth: [Normalized usernames to avoid login problems](https://github.com/photoprism/photoprism/commit/a354a170418371384ae047aef2bf49888e444dc5)
 - Config: [Improved `docker-compose.yml` examples](https://dl.photoprism.org/docker/)
 - Translations: Added [Bahasa Indonesia](https://github.com/photoprism/photoprism/issues/1689)
 - Translations: Updated [Polish](https://github.com/photoprism/photoprism/pull/1674) and [Italian](https://github.com/photoprism/photoprism/pull/1706)

@@ -16,13 +16,16 @@
 - RAW: [Upgraded Darktable to 3.6.0](https://github.com/photoprism/photoprism/issues/1632)
 - Places: [State names have been expanded and normalized](https://github.com/photoprism/photoprism/issues/1664)
 - Places: [Updated location information from OpenStreetMap](https://www.openstreetmap.org/)
-- Places: [New `photoprism places update` CLI command](https://docs.photoprism.org/getting-started/docker-compose/#command-line-interface)
 - People: [Improved face detection performance](https://github.com/esimov/pigo/releases/tag/v1.4.5)
 - People: [Fixed naming faces in non-primary files](https://github.com/photoprism/photoprism/issues/1710)
 - People: [Optimized matching of children's faces](https://github.com/photoprism/photoprism/issues/1587)
 - Config: [Improved `docker-compose.yml` examples](https://dl.photoprism.org/docker/)
 - Translations: Added [Bahasa Indonesia](https://github.com/photoprism/photoprism/issues/1689)
 - Translations: Updated [Polish](https://github.com/photoprism/photoprism/pull/1674) and [Italian](https://github.com/photoprism/photoprism/pull/1706)
+
+*For our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.org/developer-guide/):*
+
+- Places: [New `photoprism places update` CLI command](https://docs.photoprism.org/getting-started/docker-compose/#command-line-interface)
 
 ### October 18, 2021 ###
 
@@ -36,7 +39,7 @@ Build [211018-e200f322](https://drone.photoprism.app/photoprism/photoprism/2162)
 - Security: [Added `Content-Security-Policy` header to prevent framing attacks](https://github.com/photoprism/photoprism/commit/2ddb1d6daaab847cd95f38aaa2f9293f35023f9a)
 - Translations: Updated [Russian](https://github.com/photoprism/photoprism/pull/1622) and [Slovak](https://github.com/photoprism/photoprism/pull/1620)
 
-*[Early-access feature](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+label%3Aearly-access) for our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.org/developer-guide/):*
+*For our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.org/developer-guide/):*
 
 - UI: New *Vanta* dark theme ✨
 
@@ -71,7 +74,7 @@ Build [211007-8f55d6f8](https://drone.photoprism.app/photoprism/photoprism/2031)
 - UX: [Enhanced visibility of file errors in the edit dialog files tab](https://github.com/photoprism/photoprism/commit/6cd5ee6d9b53aed74d92c46ccb29f78adf11811a)
 - CLI: [Revised descriptions of commands and configuration flags](https://github.com/photoprism/photoprism/search?q=cli+help&type=commits)
 
-*[Early-access feature](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+label%3Aearly-access) for our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.org/developer-guide/):*
+*For our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.org/developer-guide/):*
 
 - People: [Recognized faces can be hidden on the overview page](https://github.com/photoprism/photoprism/issues/1554) 
 
@@ -263,7 +266,7 @@ Build [210925-96168e4b](https://drone.photoprism.app/photoprism/photoprism/1896)
 - Import: [Index keywords from non-primary filenames as well](https://github.com/photoprism/photoprism/issues/920)
 - WebDAV: [Improved service discovery](https://github.com/photoprism/photoprism/issues/496)
 - Purge: [Hide missing files in edit dialog and set new primary if needed](https://github.com/photoprism/photoprism/issues/917)
-- Archive: [Physically delete files after confirmation](https://github.com/photoprism/photoprism/issues/167) (early-access feature for our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.org/developer-guide/))
+- Archive: [Physically delete files after confirmation](https://github.com/photoprism/photoprism/issues/167)
 - Moments: [Added delete button to context menu](https://github.com/photoprism/photoprism/issues/942)
 - Settings: [Added Estimates and Delete feature flags](https://github.com/photoprism/photoprism/issues/954)
 - CLI: Added cleanup command to remove orphaned index entries and thumbnails
@@ -293,13 +296,14 @@ Build [210925-96168e4b](https://drone.photoprism.app/photoprism/photoprism/1896)
 - UX: Optimized user interface for [iOS and tablets](https://github.com/photoprism/photoprism/issues/832)
 - UX: Improved theme colors
 - UX: [Scroll position is restored when navigating back](https://github.com/photoprism/photoprism/issues/896)
-- UX: Added two [dark themes](https://github.com/photoprism/photoprism/issues/700) as early-access
-  feature for our [sponsors](https://www.patreon.com/photoprism) 
-  and [contributors](https://docs.photoprism.org/developer-guide/)
 - Translations: Added [Czech](https://github.com/photoprism/photoprism/issues/902)
 - Metadata: [Estimate timezone](https://github.com/photoprism/photoprism/issues/914) 
   and [allow overwriting estimated locations](https://github.com/photoprism/photoprism/pull/918) 
 - Settings: [Fixed disabling logs](https://github.com/photoprism/photoprism/issues/891)
+
+*For our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.org/developer-guide/):*
+
+- UX: Added two [dark themes](https://github.com/photoprism/photoprism/issues/700)
 
 ### January 11, 2021 ###
 

@@ -1,13 +1,19 @@
 # Whatever it is, we'd love to hear from you!
 
-#### Technical Support ####
-
-Customers and sponsors are welcome to contact us at [support@photoprism.app](mailto:support@photoprism.app) for technical support and assistance with enabling [early-access features](https://github.com/photoprism/photoprism/issues?q=is:issue%20label:early-access).
-
 [![Community Chat](https://dl.photoprism.org/img/badges/badge-chat-on-gitter.svg)][chat]
 [![GitHub Discussions](https://dl.photoprism.org/img/badges/badge-ask-on-github.svg)][ask]
 [![PIXLS.US Community](https://dl.photoprism.org/img/badges/badge-pixls-us.svg)][pixls]
 [![Twitter](https://dl.photoprism.org/img/badges/badge-twitter.svg)][twitter]
+
+#### Technical Support ####
+
+Customers and sponsors are welcome to contact us at [support@photoprism.app](mailto:support@photoprism.app) for technical support and assistance with enabling [early-access features](https://github.com/photoprism/photoprism/issues?q=is:issue%20label:early-access).
+
+#### File Samples ####
+
+Image and video file samples for testing can be sent to [samples@photoprism.app](mailto:samples@photoprism.app). This ensures they don't get lost in the flood of other emails we receive every day.
+
+The subject should contain the file extensions as well as the GitHub [issue number](https://github.com/photoprism/photoprism/issues) or any other reference that can be helpful. Also let us know if we have permission to upload your sample files to [dl.photoprism.org/samples](https://dl.photoprism.org/samples/) so that they can be used by our automated test suite and other developers.
 
 #### General Inquiries ####
 

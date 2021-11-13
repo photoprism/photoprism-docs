@@ -4,9 +4,10 @@
 
 Customers and sponsors are welcome to contact us at [support@photoprism.app](mailto:support@photoprism.app) for technical support and assistance with enabling [early-access features](https://github.com/photoprism/photoprism/issues?q=is:issue%20label:early-access).
 
-[![Community Chat](https://img.shields.io/badge/chat-on%20gitter-4aa087.svg)][chat]
-[![GitHub Discussions](https://img.shields.io/badge/ask-%20on%20github-4d6a91.svg)][ask]
-[![Twitter](https://img.shields.io/badge/follow-@photoprism_app-00acee.svg)][twitter]
+[![Community Chat](https://dl.photoprism.org/img/badges/badge-chat-on-gitter.svg)][chat]
+[![GitHub Discussions](https://dl.photoprism.org/img/badges/badge-ask-on-github.svg)][ask]
+[![PIXLS.US Community](https://dl.photoprism.org/img/badges/badge-pixls-us.svg)][pixls]
+[![Twitter](https://dl.photoprism.org/img/badges/badge-twitter.svg)][twitter]
 
 #### General Inquiries ####
 
@@ -50,4 +51,5 @@ See [Privacy Statement](https://help.github.com/en/github/site-policy/github-pri
 
 [chat]: https://gitter.im/browseyourlife/community
 [ask]: https://github.com/photoprism/photoprism/discussions
+[pixls]: https://discuss.pixls.us/photoprism
 [twitter]: https://twitter.com/photoprism_app

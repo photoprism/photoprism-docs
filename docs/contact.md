@@ -2,8 +2,9 @@
 
 [![Community Chat](https://dl.photoprism.org/img/badges/badge-chat-on-gitter.svg)][chat]
 [![GitHub Discussions](https://dl.photoprism.org/img/badges/badge-ask-on-github.svg)][ask]
-[![PIXLS.US Community](https://dl.photoprism.org/img/badges/badge-pixls-us.svg)][pixls]
+[![PIXLS.US Forum](https://dl.photoprism.org/img/badges/badge-pixls-us.svg)][pixls]
 [![Twitter](https://dl.photoprism.org/img/badges/badge-twitter.svg)][twitter]
+[![Reddit](https://dl.photoprism.org/img/badges/badge-reddit.svg)][reddit]
 
 #### Technical Support ####
 
@@ -57,5 +58,6 @@ See [Privacy Statement](https://help.github.com/en/github/site-policy/github-pri
 
 [chat]: https://gitter.im/browseyourlife/community
 [ask]: https://github.com/photoprism/photoprism/discussions
+[reddit]: https://www.reddit.com/r/photoprism/
 [pixls]: https://discuss.pixls.us/photoprism
 [twitter]: https://twitter.com/photoprism_app

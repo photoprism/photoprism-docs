@@ -42,10 +42,6 @@ html .md-footer-meta.md-typeset .md-footer-info a {
     white-space:nowrap;
 }
 
-.md-announce .twitter {
-    margin-left:.2em;color:#00acee;
-}
-
 .md-announce__inner {
     margin: .3rem auto;
 }

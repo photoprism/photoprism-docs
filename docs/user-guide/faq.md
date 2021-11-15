@@ -97,9 +97,10 @@
 
 ??? question "Why is the count for *Originals* higher than the number of files physically existing in my originals directory?" 
 
-    During indexing your files, PhotoPrism creates a .jpg Version for all other file types than .jpg (e.g. RAWS, Videos, PNGs etc).
-    These files are stored in /storage/sidecar (unless configured otherwise).
-    In the UI they are shown in the *Originals* section and added to its count.
+    When indexing, an additional JPEG sidecar file may be created automatically for RAW, HEIF, TIFF, PNG, BMP, GIF, and video files.
+    It is needed for generating thumbnails, image classification, and facial recognition.
+    You can find it in `/storage/sidecar` by default, so your originals folder remains untouched. The file browser 
+    in *Library > Originals* always displays it next to the orignal, idependent of the physical storage location.
 
 ## Metadata ##
 

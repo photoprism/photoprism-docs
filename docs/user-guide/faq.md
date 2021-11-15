@@ -86,12 +86,12 @@
 
 ??? question "Why does the count in *Search* not match the count of files in *Originals*?" 
 
-    The *Originals* section shows files, whereas the *Search* shows photos and videos.
+    *Library > Originals* shows actual files, whereas *Search* counts unique photos and videos.
 
-    Photos and video can consist of multiple files:
+    Photos and videos may have more than one file, for example:
 
-    * A raw file + related jpg file + related xmp file = 3 files but 1 photo
-    * A mp4 file + related jpg file = 2 files but 1 video
+    * A raw file + related jpg file + related xmp file = 3 files, 1 photo
+    * A mp4 file + related jpg file = 2 files, 1 video
 
     It is also possible that multiple .jpg files are stacked because they are related to each other.
 
@@ -100,7 +100,7 @@
     When indexing, an additional JPEG sidecar file may be created automatically for RAW, HEIF, TIFF, PNG, BMP, GIF, and video files.
     It is needed for generating thumbnails, image classification, and facial recognition.
     You can find it in `/storage/sidecar` by default, so your originals folder remains untouched. The file browser 
-    in *Library > Originals* always displays it next to the orignal, idependent of the physical storage location.
+    in *Library > Originals* always displays it next to the original, independent of the physical storage location.
 
 ## Metadata ##
 

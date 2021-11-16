@@ -170,6 +170,12 @@ thousand files to index.
 MariaDB lacks some features that [MySQL Enterprise Edition](https://www.mysql.com/products/enterprise/) offers.
 On the other hand, MariaDB has many optimizations. It is also completely open-source.
 
+### Why is only the logo displayed when I open the app? ###
+
+This may happen when the server cannot be reached, for example, because a proxy is misconfigured,
+JavaScript is disabled in your browser, an ad blocker is blocking requests, or you are using an incompatible browser.
+See [Troubleshooting Guide](troubleshooting.md).
+
 ### Why is PhotoPrism getting stuck in a restart loop? ###
 
 This happens when Docker was configured to automatically restart the app after failures.

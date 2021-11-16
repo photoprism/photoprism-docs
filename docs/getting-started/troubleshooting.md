@@ -71,7 +71,18 @@ If you have indexed your library and some pictures are missing:
 - [ ] The indexer may have crashed because you didn't configure 4 GB of swap
 - [ ] Somebody may have deleted them without telling you
 
-#### Fatal Errors ####
+#### App Not Loading ####
+
+If you only see the logo when you navigate to the server URL and nothing else happens, even if you wait a moment:
+
+- [ ] The user interface may not be able to communicate properly with your server, for example, because a proxy is misconfigured (check its config and try without a proxy)
+- [ ] JavaScript may be disabled in your browser settings (enable it)
+- [ ] JavaScript may be disabled by a browser plugin (disable it or add an exception)
+- [ ] An ad blocker may be blocking request (disable it or add an exception)
+- [ ] You may be using an incompatible browser (try a different browser)
+- [ ] There can be a problem with your network connection (test if other sites work)
+
+#### Fatal Server Errors ####
 
 Fatal errors are often caused by one of the following conditions:
 

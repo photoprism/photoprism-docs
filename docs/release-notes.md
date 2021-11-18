@@ -12,14 +12,17 @@
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.org/docker/). 
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
-- UI: [Updated logo colors](https://twitter.com/photoprism_app/status/1453743504430075912)
+- UI: [Updated logo colors](https://twitter.com/photoprism_app/status/1453743504430075912) and [splash screen](https://github.com/photoprism/photoprism/commit/293fa0ca784ae19998cc8ff3459883a137fff4c2) 
 - RAW: [Upgraded Darktable to 3.6.0](https://github.com/photoprism/photoprism/issues/1632)
-- Places: [State names have been expanded and normalized](https://github.com/photoprism/photoprism/issues/1664)
-- Places: [Updated location information from OpenStreetMap](https://www.openstreetmap.org/)
+- Places: [Normalized names of states, oceans, and lakes](https://github.com/photoprism/photoprism/issues/1664)
+- Places: [Updated location data from OpenStreetMap](https://www.openstreetmap.org/)
 - People: [Improved face detection performance](https://github.com/esimov/pigo/releases/tag/v1.4.5)
 - People: [Fixed naming faces in non-primary files](https://github.com/photoprism/photoprism/issues/1710)
 - People: [Optimized matching of children's faces](https://github.com/photoprism/photoprism/issues/1587)
-- Auth: [Normalized usernames to avoid login problems](https://github.com/photoprism/photoprism/commit/a354a170418371384ae047aef2bf49888e444dc5)
+- Albums: [Grouped states by country name](https://github.com/photoprism/photoprism/issues/1608)
+- Metadata: [Less frequent estimates to reduce server load](https://github.com/photoprism/photoprism/issues/1736)
+- Auth: [Case-insensitive comparison of usernames](https://github.com/photoprism/photoprism/commit/a354a170418371384ae047aef2bf49888e444dc5)
+- CLI: [Improved parameter and command descriptions](https://github.com/photoprism/photoprism/commit/9da2e92fb603057cf7e2e596391e88db161d2bbc)
 - Config: [Improved `docker-compose.yml` examples](https://dl.photoprism.org/docker/)
 - Translations: Added [Bahasa Indonesia](https://github.com/photoprism/photoprism/issues/1689)
 - Translations: Updated [Polish](https://github.com/photoprism/photoprism/pull/1674) and [Italian](https://github.com/photoprism/photoprism/pull/1706)

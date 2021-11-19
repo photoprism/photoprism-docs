@@ -12,6 +12,8 @@ other variables.
 We strongly recommend [Poedit](https://poedit.net/download) for creating and updating translations.
 Download is free for Mac, Windows and Linux.
 Its source code can be obtained on [GitHub](https://github.com/vslavik/poedit).
+**Note:** We often update translations in all languages via translator. Resulting in grammar errors and meaning mischmaches. Please, list all translations in language you choose (typically your native language) to check for those errors.
+**Tip of the day:** If you already contributed by translation before, keep those files. When you decide to contribute again, you can just search for changes between those two files and see new translations. No need to re-check whole translation file. 
 
 ## Frontend ##
 

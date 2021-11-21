@@ -96,7 +96,7 @@ nav:
       - Backups: user-guide/advanced/backups.md
       - Folders: user-guide/advanced/folders.md
       #- Commands: user-guide/advanced/commands.md
-
+    - Mobile App (PWA): user-guide/pwa.md
     - Release Notes: release-notes.md
     - FAQ: user-guide/faq.md
   # - Metadata: user-guide/metadata.md

@@ -6,7 +6,7 @@ PhotoPrism® is an AI-powered app for browsing, organizing & sharing your photo 
 
 ## Feature Overview ##
 
-* Browse all your [Photos](https://docs.photoprism.org/user-guide/organize/browse/) and [Videos](https://demo.photoprism.org/videos) without worrying about [RAW conversion, duplicates or video formats](https://docs.photoprism.org/user-guide/settings/library/)
+* Browse all your [photos](https://docs.photoprism.org/user-guide/organize/browse/) and [videos](https://demo.photoprism.org/videos) without worrying about [RAW conversion, duplicates or video formats](https://docs.photoprism.org/user-guide/settings/library/)
 * Easily find specific pictures using powerful :material-filter-variant: [Search Filters](https://demo.photoprism.org/browse?view=cards&q=flower%20color%3Ared)
 * Privacy-friendly: No data is ever sent to Google, Amazon, Facebook, or Apple unless you explicitly upload files to one of their services :closed_lock_with_key:
 * Recognizes the :material-account-supervisor: [Faces](https://demo.photoprism.org/people) of your family and friends

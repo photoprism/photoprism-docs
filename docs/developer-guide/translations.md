@@ -13,6 +13,11 @@ We strongly recommend [Poedit](https://poedit.net/download) for creating and upd
 Download is free for Mac, Windows and Linux.
 Its source code can be obtained on [GitHub](https://github.com/vslavik/poedit).
 
+!!! note ""
+    We first translate new strings with a translator. This can lead to grammatical errors and misunderstandings. Please list all translations in your language to check them.
+    
+    If you already contributed translations before, keep those files. When you decide to contribute again, you can just search for changes between those two files to see what strings are new. 
+
 ## Frontend ##
 
 Localizations can be found in `/frontend/src/locales`. The POT file, only containing message ids, 

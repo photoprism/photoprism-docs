@@ -24,7 +24,7 @@
 - People: [Fixed naming faces in non-primary files](https://github.com/photoprism/photoprism/issues/1710)
 - People: [Optimized matching of children's faces](https://github.com/photoprism/photoprism/issues/1587)
 - Metadata: [Improved estimates and UTC time zone handling](https://github.com/photoprism/photoprism/issues/1668)
-- Auth: [Case-insensitive usernames to avoid login issues](https://github.com/photoprism/photoprism/commit/a354a170418371384ae047aef2bf49888e444dc5)
+- Auth: [Usernames are now no longer case sensitive](https://github.com/photoprism/photoprism/commit/a354a170418371384ae047aef2bf49888e444dc5)
 - CLI: [Added `--force` flag to `photoprism optimize` command](https://github.com/photoprism/photoprism/commit/04cde0f39254c7eff04b3e481ebdca4ead747b16)
 - CLI: [Improved parameter and command descriptions](https://github.com/photoprism/photoprism/commit/9da2e92fb603057cf7e2e596391e88db161d2bbc)
 - Config: [Improved `docker-compose.yml` examples](https://dl.photoprism.org/docker/)

@@ -13,6 +13,7 @@
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
 - UI: [Updated logo colors](https://twitter.com/photoprism_app/status/1453743504430075912) and [splash screen](https://github.com/photoprism/photoprism/commit/293fa0ca784ae19998cc8ff3459883a137fff4c2) 
+- UI: [Hint is shown when JavaScript is disabled](https://github.com/photoprism/photoprism/commit/d0dc3d4c1ea567fdb47a990ba1180b5946c988b5)
 - RAW: [Upgraded Darktable to 3.6.0](https://github.com/photoprism/photoprism/issues/1632)
 - Places: [Normalized names of states, oceans, and lakes](https://github.com/photoprism/photoprism/issues/1664)
 - Places: [Updated location data from OpenStreetMap](https://www.openstreetmap.org/)
@@ -22,15 +23,17 @@
 - People: [Improved face detection performance](https://github.com/esimov/pigo/releases/tag/v1.4.5)
 - People: [Fixed naming faces in non-primary files](https://github.com/photoprism/photoprism/issues/1710)
 - People: [Optimized matching of children's faces](https://github.com/photoprism/photoprism/issues/1587)
-- Auth: [Case-insensitive comparison of usernames](https://github.com/photoprism/photoprism/commit/a354a170418371384ae047aef2bf49888e444dc5)
+- Metadata: [Improved estimates and UTC time zone handling](https://github.com/photoprism/photoprism/issues/1668)
+- Auth: [Case-insensitive usernames to avoid login issues](https://github.com/photoprism/photoprism/commit/a354a170418371384ae047aef2bf49888e444dc5)
+- CLI: [Added `--force` flag to `photoprism optimize` command](https://github.com/photoprism/photoprism/commit/04cde0f39254c7eff04b3e481ebdca4ead747b16)
 - CLI: [Improved parameter and command descriptions](https://github.com/photoprism/photoprism/commit/9da2e92fb603057cf7e2e596391e88db161d2bbc)
 - Config: [Improved `docker-compose.yml` examples](https://dl.photoprism.org/docker/)
-- Translations: Added [Bahasa Indonesia](https://github.com/photoprism/photoprism/issues/1689)
+- Translations: Added [Bahasa Indonesia](https://github.com/photoprism/photoprism/issues/1689) and [Hungarian](https://github.com/photoprism/photoprism/pull/1751)
 - Translations: Updated [Polish](https://github.com/photoprism/photoprism/pull/1674) and [Italian](https://github.com/photoprism/photoprism/pull/1706)
 
 *For our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.org/developer-guide/):*
 
-- Places: [New `photoprism places update` CLI command](https://docs.photoprism.org/getting-started/docker-compose/#command-line-interface)
+- CLI: [New `photoprism places update` command](https://docs.photoprism.org/getting-started/docker-compose/#command-line-interface)
 
 ### October 18, 2021 ###
 

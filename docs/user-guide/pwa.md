@@ -1,12 +1,12 @@
 # Mobile App (PWA) #
 
-PhotoPrism doesn't have an official native mobile app yet, but you can install it as a Progressive Web App.
-
-!!! info ""
-    You can add the PWA to the home screen of your mobile phone, tablet or the desktop of your computer.
+At the moment, PhotoPrism doesn't have a native mobile app that can be installed through an official app store.
+However, our Progressive Web App (PWA) offers an almost native app-like experience. 
+You can conveniently install it on the home screen of all major operating systems and mobile devices.
 
 ## Install PWA
-=== "iOS/Safari"
+
+=== "iOS / Safari"
 
     1. Open PhotoPrism on your device's browser (on iOS, use Safari)
     2. Click :material-export-variant:
@@ -21,7 +21,7 @@ PhotoPrism doesn't have an official native mobile app yet, but you can install i
 
         ![Screenshot](img/ios-3.jpg){: style="width:35%"}
 
-=== "Android/Firefox/Chrome"
+=== "Android / Firefox / Chrome"
 
     1. Open PhotoPrism on your device's browser
     2. Click :material-dots-vertical:
@@ -36,7 +36,6 @@ PhotoPrism doesn't have an official native mobile app yet, but you can install i
 
         ![Screenshot](img/android-3.jpg){: style="width:35%"}
 
-
-PhotoPrism is now available on the home screen of your phone or tablet, or on the desktop of your computer.
+The PWA is now installed on the home screen of your device and can be launched from there.
 
 ![Screenshot](img/ios-4.jpg){: style="width:35%"}

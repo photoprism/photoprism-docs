@@ -13,7 +13,7 @@ For those familiar with [Helm](https://helm.sh), a PhotoPrism Helm chart [is ava
 
 Once you've got PhotoPrism deployed, you can `exec` into the running container and `photoprism import` your photos.
 
-Here's an example YAML file that creates a Kubernetes:
+Here's an example YAML file that creates the following Kubernetes objects:
 
 - `Namespace`
 - `Service` exposing PhotoPrism on port 80
@@ -152,4 +152,8 @@ spec:
     secretName: photoprism-cert
 ```
 
-See also: https://github.com/p80n/photoprism-helm
+To run this locally, you can use [minikube](https://minikube.sigs.k8s.io/docs/start/) or any similar local cluster deployer.
+
+Once your cluster is up and running with your `kubectl` commands set. Simply copy the above the above yaml into a file, make the necessary changes, and use the kubectl command to deploy: `kubectl create -f photoprism.yaml`
+
+If you prefer using helm, also see: https://github.com/p80n/photoprism-helm

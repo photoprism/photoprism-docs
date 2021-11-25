@@ -38,7 +38,7 @@ The handling of time zones has been completely reworked, in particular for UTC.
 
 *For our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.org/developer-guide/):*
 
-- CLI: [New `photoprism places update` command](https://docs.photoprism.org/getting-started/docker-compose/#command-line-interface)
+- CLI: [Run `photoprism places update` to retrieve updated location details](https://docs.photoprism.org/getting-started/docker-compose/#command-line-interface)
 - Config: [Use `PHOTOPRISM_APP_ICON` to select an alternative PWA icon](getting-started/config-options.md)
 
 ### October 18, 2021 ###

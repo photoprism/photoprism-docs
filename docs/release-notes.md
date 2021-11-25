@@ -12,6 +12,10 @@
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.org/docker/). 
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
+This exciting update brings you many more improvements than originally planned. When possible,
+location estimates now include a latitude and longitude so pictures can be shown on a map. 
+The handling of time zones has been completely reworked, in particular for UTC.
+
 - UI: [Updated logo colors](https://twitter.com/photoprism_app/status/1453743504430075912) and [splash screen](https://github.com/photoprism/photoprism/commit/293fa0ca784ae19998cc8ff3459883a137fff4c2) 
 - UI: [Hint is shown when JavaScript is disabled](https://github.com/photoprism/photoprism/commit/d0dc3d4c1ea567fdb47a990ba1180b5946c988b5)
 - RAW: [Upgraded Darktable to 3.6.0](https://github.com/photoprism/photoprism/issues/1632)
@@ -24,6 +28,7 @@
 - People: [Fixed naming faces in non-primary files](https://github.com/photoprism/photoprism/issues/1710)
 - People: [Optimized matching of children's faces](https://github.com/photoprism/photoprism/issues/1587)
 - Metadata: [Improved estimates and UTC time zone handling](https://github.com/photoprism/photoprism/issues/1668)
+- Metadata: [Altitude is indexed even if coordinates are missing](https://github.com/photoprism/photoprism/issues/1749)
 - Auth: [Usernames are not case sensitive anymore](https://github.com/photoprism/photoprism/commit/a354a170418371384ae047aef2bf49888e444dc5)
 - CLI: [Added `--force` flag to `photoprism optimize` command](https://github.com/photoprism/photoprism/commit/04cde0f39254c7eff04b3e481ebdca4ead747b16)
 - CLI: [Improved parameter and command descriptions](https://github.com/photoprism/photoprism/commit/9da2e92fb603057cf7e2e596391e88db161d2bbc)
@@ -34,6 +39,7 @@
 *For our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.org/developer-guide/):*
 
 - CLI: [New `photoprism places update` command](https://docs.photoprism.org/getting-started/docker-compose/#command-line-interface)
+- Config: [Use `PHOTOPRISM_APP_ICON` to select an alternative PWA icon](getting-started/config-options.md)
 
 ### October 18, 2021 ###
 

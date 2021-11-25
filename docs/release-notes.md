@@ -12,9 +12,9 @@
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.org/docker/). 
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
-This exciting update brings you many more improvements than originally planned. When possible,
-location estimates now include a latitude and longitude so pictures can be shown on a map. 
-The handling of time zones has been completely reworked, in particular for UTC.
+This update brings you many exciting improvements. When possible, location estimates now include a latitude 
+and longitude so pictures can be shown on a map. Time zone handling has been completely reworked, 
+in particular for UTC.
 
 - UI: [Updated logo colors](https://twitter.com/photoprism_app/status/1453743504430075912) and [splash screen](https://github.com/photoprism/photoprism/commit/293fa0ca784ae19998cc8ff3459883a137fff4c2) 
 - UI: [Hint is shown when JavaScript is disabled](https://github.com/photoprism/photoprism/commit/d0dc3d4c1ea567fdb47a990ba1180b5946c988b5)

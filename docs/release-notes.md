@@ -14,7 +14,7 @@
 
 This update brings you many exciting improvements. When possible, location estimates now include a latitude 
 and longitude so pictures can be shown on a map. Time zone handling has been completely reworked, 
-in particular for UTC.
+in particular for UTC. The Docker base image has been upgraded to Ubuntu 21.10.
 
 - UI: [Updated logo colors](https://twitter.com/photoprism_app/status/1453743504430075912) and [splash screen](https://github.com/photoprism/photoprism/commit/293fa0ca784ae19998cc8ff3459883a137fff4c2) 
 - UI: [Hint is shown when JavaScript is disabled](https://github.com/photoprism/photoprism/commit/d0dc3d4c1ea567fdb47a990ba1180b5946c988b5)

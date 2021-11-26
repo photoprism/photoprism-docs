@@ -39,7 +39,7 @@ in particular for UTC. The Docker base image has been upgraded to Ubuntu 21.10.
 *For our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.org/developer-guide/):*
 
 - CLI: [Run `photoprism places update` to retrieve updated location details](https://docs.photoprism.org/getting-started/docker-compose/#command-line-interface)
-- Config: [Use `PHOTOPRISM_APP_ICON` to select an alternative PWA icon](getting-started/config-options.md)
+- Config: [Set `PHOTOPRISM_APP_ICON` to choose an alternative PWA icon](getting-started/config-options.md)
 
 ### October 18, 2021 ###
 

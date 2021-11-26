@@ -14,11 +14,9 @@
 
 This update brings you many exciting improvements. When possible, location estimates now include a latitude 
 and longitude so pictures can be shown on a map. Time zone handling has been completely reworked, 
-in particular for UTC. The Docker base image has been upgraded to Ubuntu 21.10.
+in particular for UTC. The Docker base image has been upgraded to Ubuntu 21.10. 
 
-- UI: [Updated logo colors](https://twitter.com/photoprism_app/status/1453743504430075912) and [splash screen](https://github.com/photoprism/photoprism/commit/293fa0ca784ae19998cc8ff3459883a137fff4c2) 
-- UI: [Hint is shown when JavaScript is disabled](https://github.com/photoprism/photoprism/commit/d0dc3d4c1ea567fdb47a990ba1180b5946c988b5)
-- RAW: [Upgraded Darktable to 3.6.0](https://github.com/photoprism/photoprism/issues/1632)
+- UX: Redesigned [splash screen](https://github.com/photoprism/photoprism/commit/293fa0ca784ae19998cc8ff3459883a137fff4c2) based on theme colors
 - Places: [Normalized names of states, oceans, and lakes](https://github.com/photoprism/photoprism/issues/1664)
 - Places: [Updated location data from OpenStreetMap](https://www.openstreetmap.org/)
 - Places: [Less frequent estimates to reduce background activity](https://github.com/photoprism/photoprism/issues/1736)
@@ -27,6 +25,7 @@ in particular for UTC. The Docker base image has been upgraded to Ubuntu 21.10.
 - People: [Improved face detection performance](https://github.com/esimov/pigo/releases/tag/v1.4.5)
 - People: [Fixed naming faces in non-primary files](https://github.com/photoprism/photoprism/issues/1710)
 - People: [Optimized matching of children's faces](https://github.com/photoprism/photoprism/issues/1587)
+- RAW: [Upgraded Darktable to 3.6.0](https://github.com/photoprism/photoprism/issues/1632)
 - Metadata: [Improved estimates and UTC time zone handling](https://github.com/photoprism/photoprism/issues/1668)
 - Metadata: [Altitude is indexed even if coordinates are missing](https://github.com/photoprism/photoprism/issues/1749)
 - Auth: [Usernames are not case sensitive anymore](https://github.com/photoprism/photoprism/commit/a354a170418371384ae047aef2bf49888e444dc5)

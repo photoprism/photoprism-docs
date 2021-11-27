@@ -1,6 +1,7 @@
 # Creating a Pull Request
 
-Because we want to create the best possible product for our users, we have a set of guidelines which ensure that all source code contributions are acceptable. They are not intended as a filter or barrier to participation. If you are unfamiliar with open source development on GitHub, [we will help you](https://groups.google.com/a/photoprism.org/forum/#!forum/developers).
+Because we want to create the best possible product for our users, we have a set of [guidelines which](#please-be-patient) ensure that all source code contributions are acceptable. 
+They are not intended as a filter or barrier to participation. If you are unfamiliar with open source development on GitHub, [we will help you](https://gitter.im/browseyourlife/community).
 
 To submit new code, follow these steps:
 
@@ -38,3 +39,16 @@ To submit new code, follow these steps:
   * Write [documentation](https://docs.photoprism.org/developer-guide/documentation/) if you are adding new features or changing functionality. It is hosted on [docs.photoprism.org](https://docs.photoprism.org/) and automatically updates whenever changes are pushed to the repository.
 
 *Note: You can also create a pull request if your changes are not complete / working yet. Simply let us know that it is in progress, so that we don't try to merge it. We can help you with a code review or other feedback, if needed.*
+
+### Please be patient ###
+We have a set of guidelines which ensure that all source code contributions are acceptable:
+
+- The feature must be fully implemented
+- Unit and acceptance tests have to be written
+- The feature must work with sqlite and mysql
+- The UI must be fully responsive
+- It needs to be tested on multiple browsers and devices
+- Translations need to be created for all languages
+- Docs need to be updated
+
+Reviewing, testing and finally merging pull requests consumes significant resources on our side. Unless it's just a small fix, it may take several months.

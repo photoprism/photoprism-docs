@@ -19,7 +19,7 @@ This update brings you many exciting improvements: When possible, location estim
 and longitude so pictures can be shown on a map. Time zone handling has been completely reworked, 
 in particular for UTC. The Docker base image has been upgraded to Ubuntu 21.10, which ships with 
 Darktable 3.6 among other updated dependencies. Last but not least, photos load faster when you open 
-them in Places, and the viewer sorts them by distance. Previously, they were sorted by date.
+them in Places, and the viewer sorts them by distance.
 
 - UX: Redesigned [splash screen](https://github.com/photoprism/photoprism/commit/293fa0ca784ae19998cc8ff3459883a137fff4c2) based on theme colors
 - Places: [Viewer loads faster and sorts photos by distance instead of date](https://demo.photoprism.org/places)

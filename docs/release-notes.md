@@ -14,14 +14,17 @@
 
 This update brings you many exciting improvements. When possible, location estimates now include a latitude 
 and longitude so pictures can be shown on a map. Time zone handling has been completely reworked, 
-in particular for UTC. The Docker base image has been upgraded to Ubuntu 21.10. 
+in particular for UTC. The Docker base image has been upgraded to Ubuntu 21.10.
+Last but not least, photos load faster when you open them in Places. Also, the viewer now 
+sorts photos by distance. Previously they were sorted by date.
 
 - UX: Redesigned [splash screen](https://github.com/photoprism/photoprism/commit/293fa0ca784ae19998cc8ff3459883a137fff4c2) based on theme colors
+- Places: [Viewer loads faster and sorts photos by distance instead of date](https://demo.photoprism.org/places)
+- Places: [Less frequent estimates to reduce background activity](https://github.com/photoprism/photoprism/issues/1736)
 - Places: [Normalized names of states, oceans, and lakes](https://github.com/photoprism/photoprism/issues/1664)
 - Places: [Updated location data from OpenStreetMap](https://www.openstreetmap.org/)
-- Places: [Less frequent estimates to reduce background activity](https://github.com/photoprism/photoprism/issues/1736)
-- States: [Overview sorts albums by country](https://github.com/photoprism/photoprism/issues/1608)
-- Folders: [Search for full path names in addition to titles](https://github.com/photoprism/photoprism/issues/1737)
+- Places: [State albums are grouped by country name](https://github.com/photoprism/photoprism/issues/1608)
+- Folders: [Path names are searched in addition to titles](https://github.com/photoprism/photoprism/issues/1737)
 - People: [Improved face detection performance](https://github.com/esimov/pigo/releases/tag/v1.4.5)
 - People: [Fixed naming faces in non-primary files](https://github.com/photoprism/photoprism/issues/1710)
 - People: [Optimized matching of children's faces](https://github.com/photoprism/photoprism/issues/1587)

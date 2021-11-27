@@ -13,7 +13,7 @@
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
 ### November 27, 2021 ###
-###### Build 211127-86c43159 ######
+<span class="build">Build 211127-86c43159</span>
 
 This update brings you many exciting improvements: When possible, location estimates now include a latitude 
 and longitude so pictures can be shown on a map. Time zone handling has been completely reworked, 
@@ -47,7 +47,7 @@ them in Places, and the viewer sorts them by distance. Previously, they were sor
 - Config: [Set `PHOTOPRISM_APP_ICON` to choose an alternative PWA icon](getting-started/config-options.md)
 
 ### October 18, 2021 ###
-###### Build 211018-e200f322 ######
+<span class="build">Build 211018-e200f322</span>
 
 - UI: [Updated *Lavender* theme](https://github.com/photoprism/photoprism/commit/1efdf1c1a3690fa22658bc42786aa6b1fff217e4)
 - Places: [Fixed maps initialization after reload in non-public mode](https://github.com/photoprism/photoprism/commit/e200f322be07f6ada9cd88902ba65372c69f0364)
@@ -62,7 +62,7 @@ them in Places, and the viewer sorts them by distance. Previously, they were sor
 - UI: New *Vanta* dark theme ✨
 
 ### October 10, 2021 ###
-###### Build 211010-83b4f783 ######
+<span class="build">Build 211010-83b4f783</span>
 
 - Translations: [Fixed German frontend typo](https://github.com/photoprism/photoprism/blob/fa57db7aa43fa03eef7a738122e15a98af574713/frontend/src/locales/de.po#L494)
 - Translations: [Updated all backend locales](https://github.com/photoprism/photoprism/tree/develop/assets/locales)
@@ -71,7 +71,7 @@ them in Places, and the viewer sorts them by distance. Previously, they were sor
 invited to help us improve those if needed. [Learn how to contribute](developer-guide/translations.md).*
 
 ### October 9, 2021 ###
-###### Build 211009-d6cc8df5` ######
+<span class="build">Build 211009-d6cc8df5`</span>
 
 - UX: [Improved wording of search result notifications](https://github.com/photoprism/photoprism/commit/67d06fd647a7bf4fcf2c3e487a590b6597111d08)
 - UX: [Fixed sidebar navigation on small screens](https://github.com/photoprism/photoprism/issues/1175)
@@ -82,7 +82,7 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
 - Translations: [Updated all frontend locales](https://github.com/photoprism/photoprism/tree/develop/frontend/src/locales)
 
 ### October 7, 2021 ###
-###### Build 211007-8f55d6f8 ######
+<span class="build">Build 211007-8f55d6f8</span>
 
 - People: [Improved stability and performance of new faces overview page](https://github.com/photoprism/photoprism/issues/1576)
 - Index: [Duplicate error logs caused by broken JPEG files have been removed](https://github.com/photoprism/photoprism/commit/f7153cdd219d487733a7a3a8809b333bdace6294)
@@ -94,7 +94,7 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
 - People: [Recognized faces can be hidden on the overview page](https://github.com/photoprism/photoprism/issues/1554) 
 
 ### October 2, 2021 ###
-###### Build 211002-bf015326 ######
+<span class="build">Build 211002-bf015326</span>
 
 - People: [Enhanced UI / UX for renaming and merging faces](https://github.com/photoprism/photoprism/issues/1557)
 - People: [Improved face detection accuracy](https://github.com/photoprism/photoprism/commit/582a3308375b8a2aaf5ca578d3c2e7d9081b580d)
@@ -110,7 +110,7 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
 - Docker: [Entrypoint script uses prefixed environment variables, `UID` and `GID` are deprecated](https://github.com/photoprism/photoprism/issues/1545#issuecomment-929511730)
 
 ### September 25, 2021 ###
-###### Build 210925-96168e4b ######
+<span class="build">Build 210925-96168e4b</span>
 
 - [Recognizes faces so that specific people can be found](https://github.com/photoprism/photoprism/issues/22)
 - UX: [Improved UI design, navigation, and wording](https://github.com/photoprism/photoprism/search?o=desc&q=UX&s=committer-date&type=commits)
@@ -140,24 +140,24 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
 - Docker: [Single multi-arch image for AMD64, ARM64, and ARMv7](https://github.com/photoprism/photoprism/issues/1158)
 
 ### May 23, 2021 ###
-###### Build 210523-b1856b9d ######
+<span class="build">Build 210523-b1856b9d</span>
 
 - RAW: [Added RawTherapee flag to use existing sidecar files](https://github.com/photoprism/photoprism/issues/1267)
 - Import: [Never remove ignored folders such as for Syncthing](https://github.com/photoprism/photoprism/issues/1319)
 
 ### May 20, 2021 ###
-###### Build 210520-4b32bac7 ######
+<span class="build">Build 210520-4b32bac7</span>
 
 - Docker: [Fixed home directory permissions in new base image](https://github.com/photoprism/photoprism/issues/1301)
 - HEIF: [Test if JPEG was already rotated based on video metadata](https://github.com/photoprism/photoprism/blob/develop/docker/scripts/heif-convert.sh)
 
 ### May 19, 2021 ###
-###### Build 210519-24b5c7e6 ######
+<span class="build">Build 210519-24b5c7e6</span>
 
 - Metadata: [Upgraded Exiftool to fix security issue](https://github.com/photoprism/photoprism/issues/1302)
 
 ### May 18, 2021 ###
-###### Build 210518-80981c25 ######
+<span class="build">Build 210518-80981c25</span>
 
 - Safari: [Fixed PWA file download on iOS](https://github.com/photoprism/photoprism/issues/895)
 - Docker: [Added config example for scheduled background tasks](https://dl.photoprism.org/docker/scheduler/)
@@ -166,7 +166,7 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
 - Translations: [Updated French](https://github.com/photoprism/photoprism/pull/1286)
 
 ### May 5, 2021 ###
-###### Build 210505-d3e53a89 ######
+<span class="build">Build 210505-d3e53a89</span>
 
 - UI: [Improved RTL (right-to-left language) alignment](https://github.com/photoprism/photoprism/pull/1220)
 - RAW: [Added config options to disable specific converters](https://github.com/photoprism/photoprism/issues/1245)
@@ -177,7 +177,7 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
   and [German](https://github.com/photoprism/photoprism/commit/c9795495ee5b2a57be8ddcdb16ca29cfab018bb4)
 
 ### April 26, 2021 ###
-###### Build 210426-da6e948f ######
+<span class="build">Build 210426-da6e948f</span>
 
 - UI: [Added Yellowstone theme for sponsors, unlocked Grayscale theme for everyone](https://github.com/photoprism/photoprism/commit/180e46b95f52a5ef2d67ea8ac5e1d8a9b08ef970)
 - Metadata: [Support for XMP sidecar CreateDate and Keywords](https://github.com/photoprism/photoprism/issues/1151)
@@ -185,7 +185,7 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
 - Translations: Updated [Hebrew](https://github.com/photoprism/photoprism/pull/1221)
   
 ### April 22, 2021 ###
-###### Build 210422-97e75b04 ######
+<span class="build">Build 210422-97e75b04</span>
 
 - UX: [Improved touch event accuracy](https://github.com/photoprism/photoprism/issues/1048)
 - UX: [Optimized rendering on small screens](https://github.com/photoprism/photoprism/commit/b07ba63108dace2a8d5b2df18a06647252a36272)
@@ -196,7 +196,7 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
   and [Kurdish](https://github.com/photoprism/photoprism/commits?author=Hrazhan)
 
 ### February 22, 2021 ###
-###### Build 210222-ac5a9d5e ######
+<span class="build">Build 210222-ac5a9d5e</span>
 
 - UX: [Autofocus for input fields and confirm on enter](https://github.com/photoprism/photoprism/issues/1078)
 - Restore: [Find YAML album backups in originals folder](https://github.com/photoprism/photoprism/commit/32ef03083d9414e0ab1f52bbb3837251e0438689)
@@ -205,7 +205,7 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
 - Translations: [Added Norwegian (Bokmål)](https://github.com/photoprism/photoprism/pull/1079)
 
 ### February 17, 2021 ###
-###### Build 210217-49039368 ######
+<span class="build">Build 210217-49039368</span>
 
 - Videos: [Optimized transcoding parameters](https://github.com/photoprism/photoprism/issues/703)
 - Videos: [Use AAC audio for MP4 transcoding](https://github.com/photoprism/photoprism/issues/1061)  
@@ -213,7 +213,7 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
 - Translations: [Updated Brazilian Portuguese](https://github.com/photoprism/photoprism/pull/1053)
 
 ### February 16, 2021 ###
-###### Build 210216-4939e36a ######
+<span class="build">Build 210216-4939e36a</span>
 
 - UX: Automatically hide scrollbar in photo viewer and Places
 - Delete: [Permanently remove all related sidecar files](https://github.com/photoprism/photoprism/issues/167#issuecomment-779179817)
@@ -223,13 +223,13 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
 - Metadata: [Workaround for Exif strings containing newlines](https://github.com/dsoprea/go-exif/issues/55)
 
 ### February 11, 2021 ###
-###### Build 210211-b9595dd4 ######
+<span class="build">Build 210211-b9595dd4</span>
 
 - Videos: [Native player featuring performance and UX improvements](https://github.com/photoprism/photoprism/issues/915)
 - Index: [Improved detection of missing photos, files, and folders](https://github.com/photoprism/photoprism/issues/1010)
 
 ### February 8, 2021 ###
-###### Build 210208-9e10ba69 ######
+<span class="build">Build 210208-9e10ba69</span>
 
 - Upload: [Adds duplicates to selected albums as well](https://github.com/photoprism/photoprism/issues/991)
 - Library: [Show folder covers in Originals](https://github.com/photoprism/photoprism/issues/1011)
@@ -239,7 +239,7 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
 - Docker: [Improved entrypoint script](https://github.com/photoprism/photoprism/issues/1000)
 
 ### January 28, 2021 ###
-###### Build 210128-a82061e0 ######
+<span class="build">Build 210128-a82061e0</span>
 
 - UX: Improved theme colors and icons
 - UX: Download all related media files using their current name by default
@@ -259,20 +259,20 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
 - CLI: Added cleanup command to remove orphaned index entries and thumbnails
 
 ### January 21, 2021 ###
-###### Build 210121-07e559df ######
+<span class="build">Build 210121-07e559df</span>
 
 - UX: [Improved video playback and icons](https://github.com/photoprism/photoprism/issues/935)
 - UX: [Restructured main navigation](https://github.com/photoprism/photoprism/issues/859)
 - Mobile: [Show search field in albums](https://github.com/photoprism/photoprism/issues/937)
 
 ### January 20, 2021 ###
-###### Build 210120-e7cd5e9a ######
+<span class="build">Build 210120-e7cd5e9a</span>
 
 - API: [Apply limit, offset and sort order when searching for IDs](https://github.com/photoprism/photoprism/issues/890)
 - ARM64: [Reverted database image back to arm64v8/mariadb in config example](https://github.com/photoprism/photoprism/issues/535#issuecomment-763210250)
 
 ### January 19, 2021 ###
-###### Build 210119-a5399f06 ######
+<span class="build">Build 210119-a5399f06</span>
 
 - UX: Optimized user interface for [iOS and tablets](https://github.com/photoprism/photoprism/issues/832)
 - UX: Improved theme colors
@@ -287,7 +287,7 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
 - UX: Added two [dark themes](https://github.com/photoprism/photoprism/issues/700)
 
 ### January 11, 2021 ###
-###### Build 210111-cc05c430 ######
+<span class="build">Build 210111-cc05c430</span>
 
 - UX: Disabled preloading in live photo player to reduce memory footprint
 - UX: [Updated main navigation, find all media types via /browse](https://github.com/photoprism/photoprism/issues/859)
@@ -316,7 +316,7 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
   avoid [high load](https://twitter.com/miguelarios_/status/1347775696492503040) on hyper-threading capable CPUs
 
 ### January 4, 2021 ###
-###### Build 210104-7f9e806a ######
+<span class="build">Build 210104-7f9e806a</span>
 
 - Config: Added [auto index & import](https://github.com/photoprism/photoprism/issues/281) defaults to [Dockerfiles](https://github.com/photoprism/photoprism/commit/1d9ade4c22bba01e03182b04d5b819e0ee6211a5)
 - Import: [Extract metadata with ExifTool before moving](https://github.com/photoprism/photoprism/issues/810)
@@ -329,7 +329,7 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
 - WebDAV: Less verbose logging
 
 ### January 2, 2021 ###
-###### Build 210102-af71e5f7 ######
+<span class="build">Build 210102-af71e5f7</span>
 
 - WebDAV: Uploads and other changes trigger [auto indexing / importing](https://github.com/photoprism/photoprism/issues/281)
 - Config: Use random hash for improved preview token security 
@@ -339,6 +339,6 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
 - UX: Reduced icon size in "add to album" dialog
 
 ### December 31, 2020 ###
-###### Build 201231-8e22fbf8 ######
+<span class="build">Build 201231-8e22fbf8</span>
 
 - Initial Stable Release

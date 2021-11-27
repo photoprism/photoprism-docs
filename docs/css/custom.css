@@ -45,3 +45,7 @@ html .md-footer-meta.md-typeset .md-footer-info a {
 .md-announce__inner {
     margin: .3rem auto;
 }
+
+span.build {
+    font-size: .66rem;
+}

@@ -1,11 +1,22 @@
 # Creating a Pull Request
 
-Because we want to create the best possible product for our users, we have a set of [guidelines which](#please-be-patient) ensure that all source code contributions are acceptable. 
-They are not intended as a filter or barrier to participation. If you are unfamiliar with open source development on GitHub, [we will help you](https://gitter.im/browseyourlife/community).
+Because we want to create the best possible product for our users, we have a set of 
+guidelines to ensure that all submissions are acceptable:
 
-To submit new code, follow these steps:
+- Features must be fully implemented so that they can be released at any time without additional work
+- Including automated tests is mandatory to ensure the feature works as expected and to reduce repetitive, manual work
+- In case you submit database-related changes, they must be tested and compatible with SQLite, MariaDB, and MySQL
+- Front-end changes and additions must be fully responsive to work and look properly on phones, tablets, and desktop computers
+- You should have tested your changes on all supported browsers and devices
+- If needed, your contribution should include updated documentation in a separate pull request
 
-### Fork our repository ###
+They are not intended as a filter or barrier to participation. If you are unfamiliar with
+Open Source development on GitHub, we will [help you](https://gitter.im/browseyourlife/community).
+
+### To submit new code... ###
+
+#### Fork our repository ####
+
   * Click the [Fork button](https://help.github.com/articles/working-with-forks/) in the header of our [main repository](https://github.com/photoprism/photoprism)
   * Clone the forked repository on your local computer: 
     * `git clone https://github.com/[your username]/photoprism`
@@ -15,7 +26,8 @@ To submit new code, follow these steps:
     * `git checkout -b feature/your_feature_name` 
   * See also https://guides.github.com/activities/forking/
 
-### Make your changes ###
+#### Make your changes ####
+
   * While you are working on it and your pull request is not merged yet, pull in changes from "upstream" often so that you stay up to date and there is a lower risk for [merge conflicts](https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/):
     * `git fetch upstream`
     * `git merge upstream/develop`
@@ -28,7 +40,8 @@ To submit new code, follow these steps:
       * `git add .`
       * `git commit -m "Your commit message #1234"`
 
-### When you are ready... ###
+#### When you are ready... ####
+
   * Sign the [Contributor License Agreement (CLA)](https://cla-assistant.io/photoprism/photoprism).
   * Verify you didn't forget to add / commit files (output should be empty): 
     * `git status -s`
@@ -38,17 +51,9 @@ To submit new code, follow these steps:
   * Wait for our code review and fix remaining issues, if any.
   * Write [documentation](https://docs.photoprism.org/developer-guide/documentation/) if you are adding new features or changing functionality. It is hosted on [docs.photoprism.org](https://docs.photoprism.org/) and automatically updates whenever changes are pushed to the repository.
 
-*Note: You can also create a pull request if your changes are not complete / working yet. Simply let us know that it is in progress, so that we don't try to merge it. We can help you with a code review or other feedback, if needed.*
+You can also create a pull request if your changes are not yet complete or working. Just let us know 
+it's in progress, so we don't try to merge them. We can help you with a code review or other feedback 
+if needed. Please be patient with us.
 
-### Please be patient ###
-We have a set of guidelines which ensure that all source code contributions are acceptable:
-
-- The feature must be fully implemented
-- Unit and acceptance tests have to be written
-- The feature must work with sqlite and mysql
-- The UI must be fully responsive
-- It needs to be tested on multiple browsers and devices
-- Translations need to be created for all languages
-- Docs need to be updated
-
-Reviewing, testing and finally merging pull requests consumes significant resources on our side. Unless it's just a small fix, it may take several months.
+**Reviewing, testing and finally merging pull requests requires significant resources on our side.
+If it's not just a small fix, it can take several months.**

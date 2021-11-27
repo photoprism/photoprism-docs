@@ -12,7 +12,7 @@
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.org/docker/). 
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
-This update brings you many exciting improvements. When possible, location estimates now include a latitude 
+This update brings you many exciting improvements: When possible, location estimates now include a latitude 
 and longitude so pictures can be shown on a map. Time zone handling has been completely reworked, 
 in particular for UTC. The Docker base image has been upgraded to Ubuntu 21.10, which ships with 
 Darktable 3.6 among other updated dependencies. Last but not least, photos load faster when you 

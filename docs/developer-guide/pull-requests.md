@@ -6,7 +6,7 @@ guidelines to ensure that all submissions are acceptable:
 - Features must be fully implemented so that they can be released at any time without additional work
 - Including automated tests is mandatory to ensure the feature works as expected and to reduce repetitive, manual work
 - In case you submit database-related changes, they must be tested and compatible with SQLite, MariaDB, and MySQL
-- Front-end changes and additions must be fully responsive to work and look properly on phones, tablets, and desktop computers
+- Front-end changes must be fully responsive to work and look properly on phones, tablets, and desktop computers
 - You should have tested your changes on all supported browsers and devices
 - If needed, your contribution should include updated documentation in a separate pull request
 

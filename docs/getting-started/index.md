@@ -56,22 +56,26 @@ Beyond these minimum requirements, the amount of RAM should match the number of 
     to a reasonably small value in `docker-compose.yml` (depending on the performance of the server).
     As a measure of last resort, you may disable using TensorFlow for image classification and facial recognition.
 
+#### Browsers ####
+
 Our Web UI works with most modern browsers, and runs best on Chrome, Chromium, Safari, Firefox, and Edge.
 Opera and Samsung Internet have been reported to be compatible as well.
 Note that not all [video formats](https://github.com/photoprism/photoprism/issues/707) may be played with 
 every browser.
 
+#### Databases ####
+
 The backend is compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB 10.5+](https://mariadb.org/).
 Older databases using the same dialect, such as MySQL 8, may work but are not officially supported.
 
-!!! important ""
-    When installing PhotoPrism on a public server outside your home network, please **always run it
-    behind a secure HTTPS reverse proxy** like [Traefik](proxies/traefik.md), 
-    [Caddy](proxies/caddy-2.md), or [NGINX](proxies/nginx.md).
-    Your files and passwords will be transmitted in clear text otherwise, and can be intercepted 
-    by anyone in between including your provider, hackers, and governments. Backup tools and file sync apps
-    like [FolderSync](https://www.tacit.dk/foldersync/faq/#i-can-not-connect-to-a-non-https-webdav-server-why) 
-    may refuse to connect as well.
+#### HTTPS ####
+
+If you install PhotoPrism on a public server outside your home network, please always run it behind 
+a secure HTTPS reverse proxy such as [Traefik](proxies/traefik.md), [Caddy](proxies/caddy-2.md),
+or [NGINX](proxies/nginx.md). Your files and passwords will otherwise be transmitted in clear text 
+and can be intercepted by anyone, including your provider, hackers, and governments.
+Backup tools and file sync apps like [FolderSync](https://www.tacit.dk/foldersync/faq/#i-can-not-connect-to-a-non-https-webdav-server-why) 
+may refuse to connect as well.
 
 ## Getting Support ##
 

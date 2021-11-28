@@ -58,10 +58,11 @@ Beyond these minimum requirements, the amount of RAM should match the number of 
 
 Our Web UI works with most modern browsers, and runs best on Chrome, Chromium, Safari, Firefox, and Edge.
 Opera and Samsung Internet have been reported to be compatible as well.
-Note that not all [video formats](https://github.com/photoprism/photoprism/issues/707) may be played with every browser.
+Note that not all [video formats](https://github.com/photoprism/photoprism/issues/707) may be played with 
+every browser.
 
-The backend is compatible with [MariaDB 10.5+](https://mariadb.org/), [MySQL 8](https://www.mysql.com/),
-and [SQLite 3](https://www.sqlite.org/).
+The backend is compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB 10.5+](https://mariadb.org/).
+Older databases using the same dialect, such as MySQL 8, may work but are not officially supported.
 
 !!! important ""
     When installing PhotoPrism on a public server outside your home network, please **always run it

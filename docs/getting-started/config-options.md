@@ -45,9 +45,9 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_DISABLE_CLASSIFICATION`| --disable-classification| disable image classification
 `PHOTOPRISM_DETECT_NSFW`        | --detect-nsfw              | flag photos as private that may be offensive (requires TensorFlow)
 `PHOTOPRISM_UPLOAD_NSFW`        | --upload-nsfw              | allow uploads that may be offensive
+`PHOTOPRISM_APP_ICON`           | --app-icon ICON            | application ICON (logo, app, crisp, mint, bold) (default: "logo") |
 `PHOTOPRISM_APP_NAME`           | --app-name NAME            | application NAME when installed on a device (default: "PhotoPrism") |
 `PHOTOPRISM_APP_MODE`           | --app-mode MODE            | application MODE (fullscreen, standalone, minimal-ui, browser) (default: "standalone") |
-`PHOTOPRISM_APP_ICON`           | --app-icon ICON            | application ICON (default, square, glow, lens, camera)  |
 `PHOTOPRISM_CDN_URL`            | --cdn-url URL              | optional content delivery network URL
 `PHOTOPRISM_SITE_URL`           | --site-url URL             | public site URL (default: "http://localhost:2342/")
 `PHOTOPRISM_SITE_AUTHOR`        | --site-author COPYRIGHT        | site COPYRIGHT, artist, or owner name

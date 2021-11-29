@@ -12,6 +12,9 @@
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.org/docker/). 
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
+- UX: [Updated app icons, now also used in the navigation and as favicon](https://github.com/photoprism/photoprism/tree/develop/assets/static/icons)
+- Albums: [Manually created albums are sorted by name again](https://github.com/photoprism/photoprism/issues/1777)
+
 ### November 28, 2021 ###
 
 <span class="build">Build 211128-7e8974fd</span>

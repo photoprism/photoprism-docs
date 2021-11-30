@@ -12,11 +12,16 @@
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.org/docker/). 
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
-- PWA: [Updated app icons, selected style now also applied to the user interface](https://github.com/photoprism/photoprism/tree/develop/assets/static/icons)
-- Albums: [Manually created albums are sorted by name again](https://github.com/photoprism/photoprism/issues/1777)
+- Videos: [Live photos page has been added to sub-navigation](https://github.com/photoprism/photoprism/issues/1761)
+- Albums: [Manually created albums are sorted by name, with favorites first](https://github.com/photoprism/photoprism/issues/1777)
+- Places: [Improved location details in border regions](https://github.com/photoprism/photoprism/issues/1767) and [near Paris](https://github.com/photoprism/photoprism/issues/1776)
+- PWA: [Updated app icons, style is now also applied to the user interface](https://github.com/photoprism/photoprism/tree/develop/assets/static/icons)
+
+*For our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.org/developer-guide/):*
+
+- UI: New *Abyss* and *Gemstone* dark themes 💎
 
 ### November 28, 2021 ###
-
 <span class="build">Build 211128-7e8974fd</span>
 
 With this update, official support for MySQL is discontinued as it is not feasible to 
@@ -48,7 +53,7 @@ Darktable 3.6 among other updated dependencies.
 - RAW: [Upgraded Darktable to 3.6.0](https://github.com/photoprism/photoprism/issues/1632)
 - Metadata: [Improved estimates and UTC time zone handling](https://github.com/photoprism/photoprism/issues/1668)
 - Metadata: [Altitude is indexed even if coordinates are missing](https://github.com/photoprism/photoprism/issues/1749)
-- Auth: [Usernames are not case sensitive anymore](https://github.com/photoprism/photoprism/commit/a354a170418371384ae047aef2bf49888e444dc5)
+- Auth: [Usernames are not case-sensitive anymore](https://github.com/photoprism/photoprism/commit/a354a170418371384ae047aef2bf49888e444dc5)
 - CLI: [Added `--force` flag to `photoprism optimize` command](https://github.com/photoprism/photoprism/commit/04cde0f39254c7eff04b3e481ebdca4ead747b16)
 - CLI: [Improved parameter and command descriptions](https://github.com/photoprism/photoprism/commit/9da2e92fb603057cf7e2e596391e88db161d2bbc)
 - Config: [Improved `docker-compose.yml` examples](https://dl.photoprism.org/docker/)

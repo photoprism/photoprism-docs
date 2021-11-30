@@ -15,7 +15,7 @@
 ### November 30, 2021 ###
 <span class="build">Build 211130-13cfcf6d</span>
 
-- Videos: [Live photos page has been added to sub-navigation](https://github.com/photoprism/photoprism/issues/1761)
+- Videos: [Live photos page has been added to the sub-navigation](https://github.com/photoprism/photoprism/issues/1761)
 - Albums: [Manually created albums are sorted by name, with favorites first](https://github.com/photoprism/photoprism/issues/1777)
 - Places: [Improved location details in border regions](https://github.com/photoprism/photoprism/issues/1767) and [near Paris](https://github.com/photoprism/photoprism/issues/1776)
 - PWA: [Updated app icons, style is now also applied to the user interface](https://github.com/photoprism/photoprism/tree/develop/assets/static/icons)

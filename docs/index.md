@@ -6,12 +6,12 @@ PhotoPrism® is an AI-powered app for browsing, organizing & sharing your photo 
 
 ## Feature Overview ##
 
-* Browse all your [photos](https://docs.photoprism.org/user-guide/organize/browse/) and [videos](https://demo.photoprism.org/videos) without worrying about [RAW conversion, duplicates or video formats](https://docs.photoprism.org/user-guide/settings/library/)
-* Easily find specific pictures using powerful [search filters](https://demo.photoprism.org/browse?view=cards&q=flower%20color%3Ared)
+* Browse [all your photos](https://docs.photoprism.org/user-guide/organize/browse/) and [videos](https://demo.photoprism.org/videos) without worrying about [RAW conversion, duplicates or video formats](https://docs.photoprism.org/user-guide/settings/library/)
+* Easily find specific pictures using [powerful search filters](https://demo.photoprism.org/browse?view=cards&q=flower%20color%3Ared)
 * Privacy-friendly: No data is ever sent to Google, Amazon, Facebook, or Apple unless you explicitly upload files to one of their services :closed_lock_with_key:
-* Recognizes the [Faces](https://demo.photoprism.org/people) of your family and friends
+* Recognizes [the faces](https://demo.photoprism.org/people) of your family and friends
 * [Automatic Classification](https://demo.photoprism.org/labels) of pictures based on their content and location 
-* Play [Live Photos](https://demo.photoprism.org/browse?view=cards&q=type%3Alive) by hovering over them in [albums](https://demo.photoprism.org/albums) and search results
+* [Play Live Photos](https://demo.photoprism.org/browse?view=cards&q=type%3Alive) by hovering over them in [albums](https://demo.photoprism.org/albums) and search results
 * Since the [User Interface](https://demo.photoprism.org/) is a :material-language-html5: [Progressive Web App](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps),
   it provides a native app-like experience, and you can conveniently install it on the home screen of all major operating systems and mobile devices
 * Includes 4 high-resolution [World Maps](https://demo.photoprism.org/places) to bring back the memories of your favorite trips

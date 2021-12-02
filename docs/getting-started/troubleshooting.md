@@ -54,33 +54,33 @@ point the home directory placeholder `~` to `/root` in volume mounts.
 
 #### Missing Pictures ####
 
-If you have indexed your library and some pictures are missing:
+If you have indexed your library and some pictures are missing, first check *Library > Errors*
+for errors and warnings. In case the logs don't contain anything helpful:
 
-- [ ] Check *Library > Errors* for errors and warnings
-- [ ] They may be in [Review](../user-guide/organize/review.md) due to low quality or incomplete metadata
-- [ ] Their [private](../user-guide/organize/private.md) or [archived](../user-guide/organize/archive.md) status may have been restored from a backup
-- [ ] The NSFW (Not Safe For Work) filter may be enabled, so they were marked as [private](../user-guide/organize/private.md)
-- [ ] They may be in *Library > Hidden* because a JPEG could not be created
-- [ ] They may have been stacked based on their metadata or file names
-- [ ] The indexer may have skipped them because they are exact duplicates
-- [ ] Their file types may be unsupported
-- [ ] The files may have bad filesystem permissions, so they can't be opened by the indexer
-- [ ] You may not be signed in as admin, so you cannot see all files
+- [ ] The pictures are in [Review](../user-guide/organize/review.md) due to low quality or incomplete metadata
+- [ ] Their [private](../user-guide/organize/private.md) or [archived](../user-guide/organize/archive.md) status was restored from a backup
+- [ ] The NSFW (Not Safe For Work) filter is enabled, so they were marked as [private](../user-guide/organize/private.md)
+- [ ] They are in *Library > Hidden* because a JPEG could not be created
+- [ ] They were stacked based on their metadata or file names
+- [ ] The indexer has skipped them because they are exact duplicates
+- [ ] Their file types are unsupported
+- [ ] The files have bad filesystem permissions, so they can't be opened by the indexer
+- [ ] You are not signed in as admin, so you can't see everything
 - [ ] You try to index a shared drive on a remote server, but the server is offline
-- [ ] You may be connected to the wrong server or a DNS entry hasn't been updated yet
-- [ ] The indexer may have crashed because you didn't configure 4 GB of swap
-- [ ] Somebody may have deleted them without telling you
+- [ ] You are connected to the wrong server or a DNS entry hasn't been updated yet
+- [ ] The indexer has crashed because you didn't configure 4 GB of swap
+- [ ] Somebody has deleted files without telling you
 
 #### App Not Loading ####
 
 If you only see the logo when you navigate to the server URL and nothing else happens, even if you wait a moment:
 
-- [ ] The user interface may not be able to communicate properly with your server, for example, because a proxy is misconfigured (check its config and try without a proxy)
-- [ ] JavaScript may be disabled in your browser settings (enable it)
-- [ ] JavaScript may be disabled by a browser plugin (disable it or add an exception)
-- [ ] An ad blocker may be blocking requests (disable it or add an exception)
-- [ ] You may be using an incompatible browser (try a different browser)
-- [ ] There can be a problem with your network connection (test if other sites work)
+- [ ] The user interface can't communicate properly with your server, for example, because a proxy is misconfigured (check its config and try without a proxy)
+- [ ] JavaScript is disabled in your browser settings (enable it)
+- [ ] JavaScript was disabled by a browser plugin (disable it or add an exception)
+- [ ] An ad blocker is blocking requests (disable it or add an exception)
+- [ ] You are using an incompatible browser (try a different browser)
+- [ ] There is a problem with your network connection (test if other sites work)
 
 #### Fatal Server Errors ####
 

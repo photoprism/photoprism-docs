@@ -105,7 +105,7 @@ exit
 ```
 
 When you are done, remove the `--skip-grant-tables` parameter again to restore the original 
-command and restart the database service as described above.
+command and restart the `mariadb` service as described above.
 
 ### Checklists ###
 

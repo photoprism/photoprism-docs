@@ -150,5 +150,5 @@ If you start the server in the background (daemon mode), you can additionally sp
 
 Variable                        | Parameter                  | Description
 :------------------------------ |:-------------------------- |:-------------------------------------------
-`PHOTOPRISM_PID_FILENAME`       | --pid-filename FILENAME    | daemon mode process id FILENAME
-`PHOTOPRISM_LOG_FILENAME`       | --log-filename FILENAME    | daemon mode server log FILENAME
+`PHOTOPRISM_PID_FILENAME`       | --pid-filename FILENAME    | process id FILENAME (daemon mode only)
+`PHOTOPRISM_LOG_FILENAME`       | --log-filename FILENAME    | server log FILENAME (daemon mode only)

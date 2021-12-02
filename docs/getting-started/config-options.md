@@ -118,7 +118,7 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_FFMPEG_BUFFERS`     | --ffmpeg-buffers           | NUMBER of FFmpeg capture buffers (default: 32)
 `PHOTOPRISM_EXIFTOOL_BIN`       | --exiftool-bin COMMAND     | ExifTool COMMAND for extracting metadata (default: "exiftool")
 
-### Thumbnail Images ###
+### Images ###
 
 Variable                        | Parameter                  | Description
 :------------------------------ |:-------------------------- |:-------------------------------------------

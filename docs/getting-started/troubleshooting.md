@@ -50,7 +50,9 @@ running `sudo apt install docker-compose` in a terminal or using a graphical sof
 Commands on Linux may have to be prefixed with `sudo` when not running as root. Note that this will
 point the home directory placeholder `~` to `/root` in volume mounts.
 
-### Upgrading MariaDB ###
+### MariaDB ###
+
+#### Version Upgrade ####
 
 If the database doesn't start properly after upgrading from an earlier MySQL or MariaDB version, 
 you may need to run this command in a terminal:
@@ -64,6 +66,46 @@ Enter the MariaDB "root" password specified in your `docker-compose.yml` when pr
 Alternatively, you can downgrade to the previous version, create a database backup using the `photoprism backup`
 command, start a new database instance based on the latest version, and then restore your index with 
 the `photoprism restore` command.
+
+#### Lost Root Password ####
+
+In case you forgot the MariaDB "root" password and the one specified in your configuration does not work, 
+you can start the server with the [`--skip-grant-tables`](https://mariadb.com/docs/reference/mdb/cli/mariadbd/skip-grant-tables/) 
+parameter added to the `mysqld` command in your `docker-compose.yml`. This will temporarily give full access
+to all users after a restart:
+
+```
+services:
+  mariadb:
+    command: mysqld --skip-grant-tables
+```
+
+Restart the `mariadb` service for changes to take effect:
+
+```
+docker-compose stop mariadb
+docker-compose up -d mariadb
+```
+
+Now open a database console:
+
+```
+docker-compose exec mariadb mysql -uroot
+```
+
+Enter the following commands to change the password for "root":
+
+```
+FLUSH PRIVILEGES;
+ALTER USER 'root'@'%' IDENTIFIED BY 'new_password';
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'new_password';
+UPDATE mysql.user SET authentication_string = '' WHERE user = 'root';
+UPDATE mysql.user SET plugin = '' WHERE user = 'root';
+exit
+```
+
+When you are done, remove the `--skip-grant-tables` parameter again to restore the original 
+command and restart the database service as described above.
 
 ### Checklists ###
 

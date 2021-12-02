@@ -65,7 +65,7 @@ every browser.
 
 #### Databases ####
 
-The backend is compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB 10.5+](https://mariadb.org/).
+The backend is compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB 10.5.12+](https://mariadb.org/).
 Older databases using the same dialect, such as MySQL 8, may work but are not officially supported.
 
 #### HTTPS ####

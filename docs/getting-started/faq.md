@@ -156,7 +156,7 @@ folder to find new files.
 
 ### Should I use SQLite, MariaDB, or MySQL? ###
 
-PhotoPrism is compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB 10.5+](https://mariadb.org/).
+PhotoPrism is compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB 10.5.12+](https://mariadb.org/).
 Older databases using the same dialect, such as MySQL 8, may work but are not officially supported.
 
 If you have few pictures, concurrent users, and CPU cores, [SQLite](https://www.sqlite.org/)

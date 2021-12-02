@@ -1,8 +1,7 @@
 # Advanced Database Setup
 
-PhotoPrism is compatible with [MariaDB 10.5.10+](https://mariadb.org/) (earlier versions 
-see [MDEV-25362](https://jira.mariadb.org/browse/MDEV-25362)), [MySQL 8](https://www.mysql.com/), 
-and [SQLite 3](https://www.sqlite.org/).
+PhotoPrism is compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB 10.5.12+](https://mariadb.org/).
+Older databases using the same dialect, such as MySQL 8, may work but are not officially supported.
 
 !!! info
     Our [docker-compose.yml](https://dl.photoprism.org/docker/) examples include
@@ -79,7 +78,7 @@ Attachment 1:
 
 ```yml
 mariadb:
-    image: mariadb:10.5
+    image: mariadb:10.6
     container_name: mariadb
     restart: unless-stopped
     ports:
@@ -87,9 +86,9 @@ mariadb:
     security_opt:
       - seccomp:unconfined
       - apparmor:unconfined
-    command: mysqld --transaction-isolation=READ-COMMITTED --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --max-connections=512 --innodb-rollback-on-timeout=OFF --innodb-lock-wait-timeout=50
-    volumes: # Don't remove permanent storage for index database files!
-      - "./database:/var/lib/mysql"
+    command: mysqld --transaction-isolation=READ-COMMITTED --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --max-connections=512 --innodb-rollback-on-timeout=OFF --innodb-lock-wait-timeout=120
+    volumes:
+      - "./database:/var/lib/mysql" # never remove
     environment:
       MYSQL_ROOT_PASSWORD: insecure
       MYSQL_DATABASE: photoprism

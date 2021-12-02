@@ -107,7 +107,7 @@ Fatal errors are often caused by one of the following conditions:
 - [ ] You have accidentally mounted the wrong folders
 - [ ] The server is low on memory or swap
 - [ ] The database server is not available, incompatible or incorrectly configured
-- [ ] You've upgraded the MySQL or MariaDB server, but didn't run `mysql_upgrade`
+- [ ] You've upgraded the MariaDB server version without running `mariadb-upgrade`
 - [ ] There are network problems caused by a proxy, firewall or unstable connection
 - [ ] Kernel security modules such as [AppArmor](https://wiki.ubuntu.com/AppArmor) and [SELinux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) are blocking permissions
 - [ ] Your Raspberry Pi has not been configured according to our [recommendations](raspberry-pi.md#system-requirements)

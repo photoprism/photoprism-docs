@@ -25,7 +25,7 @@ as for regular Linux servers apply.
   Raspberry Pi 3 / 4 with the parameter `arm_64bit=1` in `config.txt` to use our ARM64 image.
   Alternatively, you may run it on [UbuntuDockerPi](https://github.com/guysoft/UbuntuDockerPi).
   It's a 64bit Ubuntu Server with Docker pre-installed.
-- If you see errors related to "cgroups", it may help to add the following to `/boot/firmware/cmdline.txt`:
+- If you see Docker errors related to "cgroups", it may help to add the following to `/boot/firmware/cmdline.txt`:
   ```
   cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1
   ```

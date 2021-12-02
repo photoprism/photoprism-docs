@@ -50,6 +50,21 @@ running `sudo apt install docker-compose` in a terminal or using a graphical sof
 Commands on Linux may have to be prefixed with `sudo` when not running as root. Note that this will
 point the home directory placeholder `~` to `/root` in volume mounts.
 
+### Upgrading MariaDB ###
+
+If the database doesn't start properly after upgrading from an earlier MySQL or MariaDB version, 
+you may need to run this command in a terminal:
+
+```
+docker-compose exec mariadb mariadb-upgrade -uroot -p
+```
+
+Enter the MariaDB "root" password specified in your `docker-compose.yml` when prompted.
+
+Alternatively, you can downgrade to the previous version, create a database backup using the `photoprism backup`
+command, start a new database instance based on the latest version, and then restore your index with 
+the `photoprism restore` command.
+
 ### Checklists ###
 
 #### Missing Pictures ####
@@ -92,8 +107,10 @@ Fatal errors are often caused by one of the following conditions:
 - [ ] You have accidentally mounted the wrong folders
 - [ ] The server is low on memory or swap
 - [ ] The database server is not available, incompatible or incorrectly configured
+- [ ] You've upgraded the MySQL or MariaDB server, but didn't run `mysql_upgrade`
 - [ ] There are network problems caused by a proxy, firewall or unstable connection
 - [ ] Kernel security modules such as [AppArmor](https://wiki.ubuntu.com/AppArmor) and [SELinux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) are blocking permissions
+- [ ] Your Raspberry Pi has not been configured according to our [recommendations](raspberry-pi.md#system-requirements)
 
 ### Adding Swap ###
 

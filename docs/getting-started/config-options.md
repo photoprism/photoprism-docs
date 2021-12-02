@@ -118,12 +118,17 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_FFMPEG_BUFFERS`     | --ffmpeg-buffers           | NUMBER of FFmpeg capture buffers (default: 32)
 `PHOTOPRISM_EXIFTOOL_BIN`       | --exiftool-bin COMMAND     | ExifTool COMMAND for extracting metadata (default: "exiftool")
 
-### Images ###
+### URL Tokens ###
 
 Variable                        | Parameter                  | Description
 :------------------------------ |:-------------------------- |:-------------------------------------------
 `PHOTOPRISM_DOWNLOAD_TOKEN`     | --download-token TOKEN     | custom download URL TOKEN (default: random)
 `PHOTOPRISM_PREVIEW_TOKEN`      | --preview-token TOKEN      | custom thumbnail and streaming URL TOKEN (default: random)
+
+### Thumbnail Images ###
+
+Variable                        | Parameter                  | Description
+:------------------------------ |:-------------------------- |:-------------------------------------------
 `PHOTOPRISM_THUMB_FILTER`       | --thumb-filter FILTER, -f FILTER | thumbnail downscaling FILTER (best to worst: blackman, lanczos, cubic, linear) (default: "lanczos")
 `PHOTOPRISM_THUMB_SIZE`         | --thumb-size PIXELS, -s PIXELS | maximum pre-cached thumbnail image size in PIXELS (720-7680) (default: 2048)
 `PHOTOPRISM_THUMB_UNCACHED`     | --thumb-uncached, -u       | enable on-demand thumbnail generation (high memory and cpu usage)

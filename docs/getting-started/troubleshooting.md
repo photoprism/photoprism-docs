@@ -78,7 +78,7 @@ If you only see the logo when you navigate to the server URL and nothing else ha
 - [ ] The user interface may not be able to communicate properly with your server, for example, because a proxy is misconfigured (check its config and try without a proxy)
 - [ ] JavaScript may be disabled in your browser settings (enable it)
 - [ ] JavaScript may be disabled by a browser plugin (disable it or add an exception)
-- [ ] An ad blocker may be blocking request (disable it or add an exception)
+- [ ] An ad blocker may be blocking requests (disable it or add an exception)
 - [ ] You may be using an incompatible browser (try a different browser)
 - [ ] There can be a problem with your network connection (test if other sites work)
 

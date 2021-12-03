@@ -12,7 +12,10 @@
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.org/docker/). 
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
-In this update, *early-access features* have been renamed to *sponsor features* as we did not reach our minimum [funding goal](https://github.com/sponsors/photoprism).
+### December 3, 2021 ###
+<span class="build">Build 211203-fdb6b5e1</span>
+
+In this update, *early-access features* have been renamed to *sponsor features* as we did not reach our [funding goal](https://github.com/sponsors/photoprism).
 It was important for us to risk this experiment, and it would have been great to make all features and maps generally available. 
 Offline and high-resolution street maps remain free for everyone, while hybrid, topographic and outdoor maps are now a 
 sponsor feature. We believe this is fair. A big thank you to all our [sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md)

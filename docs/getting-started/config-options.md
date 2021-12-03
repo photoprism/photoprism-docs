@@ -127,7 +127,7 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_DOWNLOAD_TOKEN`     | --download-token TOKEN     | custom download URL TOKEN (default: random)
 `PHOTOPRISM_PREVIEW_TOKEN`      | --preview-token TOKEN      | custom thumbnail and streaming URL TOKEN (default: random)
 
-### Thumbnail Images ###
+### Image Quality ###
 
 Variable                        | Parameter                  | Description
 :------------------------------ |:-------------------------- |:-------------------------------------------

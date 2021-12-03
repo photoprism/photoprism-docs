@@ -1,9 +1,11 @@
 # Config Options #
 
-!!! attention ""
-    Changing basic system config options in `docker-compose.yml` or on the [advanced settings](../user-guide/settings/advanced.md) 
-    page always requires a restart to take effect. Open a terminal, run `docker-compose stop photoprism` and then
+!!! tldr ""
+    Changing values in `docker-compose.yml` or on the [advanced settings](../user-guide/settings/advanced.md) 
+    page **always requires a restart** to take effect. Open a terminal, run `docker-compose stop photoprism` and then
     `docker-compose up -d photoprism` to restart the app container.
+
+### Basic Settings ###
 
 Variable                        | Parameter                  | Description
 :------------------------------ |:-------------------------- |:-------------------------------------------
@@ -137,6 +139,18 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_JPEG_QUALITY`       | --jpeg-quality QUALITY, -q QUALITY | QUALITY of generated JPEG images, a higher value reduces compression (25-100) (default: 92)
 
 ### Facial Recognition ###
+
+!!! info ""
+    To recognize faces, PhotoPrism first extracts crops from your images using a [library](https://github.com/esimov/pigo)
+    based on [pixel intensity comparisons](https://arxiv.org/pdf/1305.4537.pdf). These are then fed into TensorFlow to 
+    compute [512-dimensional vectors](https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Schroff_FaceNet_A_Unified_2015_CVPR_paper.pdf)
+    for characterization. In the final step, the [DBSCAN algorithm](https://en.wikipedia.org/wiki/DBSCAN) 
+    attempts to cluster these so-called face embeddings, so they can be matched to persons with just a few clicks.
+    A reasonable range for the similarity distance between face embeddings is between 0.60 and 0.70, with a higher 
+    value being more aggressive and leading to larger clusters with more false positives.
+    To cluster a smaller number of faces, you can reduce the core to 3 or 2 similar faces.
+
+We recommend that only advanced users change these parameters:
 
 Variable                        | Parameter                  | Description
 :------------------------------ |:-------------------------- |:-------------------------------------------

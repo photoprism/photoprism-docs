@@ -6,8 +6,8 @@ on the advanced settings page. You can also disable specific features and enable
 For security reasons, the advanced settings page is disabled and hidden when the 
 [public mode](../../getting-started/config-options.md) is enabled.
 
-!!! attention ""
-    Changing advanced settings always requires a restart to take effect. Selecting a different thumbnail
+!!! tldr ""
+    Changing advanced settings **always requires a restart** to take effect. Selecting a different thumbnail
     quality or size won't replace existing thumbnails. You may regenerate them using the 
     [command-line interface](https://docs.photoprism.org/getting-started/docker-compose/#command-line-interface).
 

@@ -141,9 +141,9 @@ Variable                        | Parameter                  | Description
 ### Facial Recognition ###
 
 !!! info ""
-    To recognize faces, PhotoPrism first extracts crops from your images using a [library](https://github.com/esimov/pigo)
-    based on [pixel intensity comparisons](https://arxiv.org/pdf/1305.4537.pdf). These are then fed into TensorFlow to 
-    compute [512-dimensional vectors](https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Schroff_FaceNet_A_Unified_2015_CVPR_paper.pdf)
+    To [recognize faces](../user-guide/organize/people.md), PhotoPrism first extracts crops from your images using a 
+    [library](https://github.com/esimov/pigo) based on [pixel intensity comparisons](https://arxiv.org/pdf/1305.4537.pdf).
+    These are then fed into TensorFlow to compute [512-dimensional vectors](https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Schroff_FaceNet_A_Unified_2015_CVPR_paper.pdf)
     for characterization. In the final step, the [DBSCAN algorithm](https://en.wikipedia.org/wiki/DBSCAN) 
     attempts to cluster these so-called face embeddings, so they can be matched to persons with just a few clicks.
     A reasonable range for the similarity distance between face embeddings is between 0.60 and 0.70, with a higher 

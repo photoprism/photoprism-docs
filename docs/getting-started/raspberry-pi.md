@@ -18,11 +18,11 @@ as for regular Linux servers apply.
 
 ### System Requirements ###
 
-- Your device should have at least 4 GB of memory. Running PhotoPrism on a server with [less than 4 GB of swap](troubleshooting.md#adding-swap), 
-  or setting a Docker memory / swap limit, can cause unexpected restarts ("crashes"), especially when it
-  temporarily needs more memory to process large files.
+- Your device should have at least 4 GB of memory. Running PhotoPrism on a server with [less than 4 GB of swap space](troubleshooting.md#adding-swap)
+  or setting a memory/swap limit can cause unexpected restarts ("crashes"), especially when the indexer temporarily
+  needs more memory to process large files.
 - It's important to [boot](https://www.raspberrypi.org/documentation/installation/installing-images/README.md) your 
-  Raspberry Pi 3 / 4 with the parameter `arm_64bit=1` in `config.txt` to use our ARM64 image.
+  Raspberry Pi 3/4 with the parameter `arm_64bit=1` in `config.txt` to use our ARM64 image.
   Alternatively, you may run it on [UbuntuDockerPi](https://github.com/guysoft/UbuntuDockerPi).
   It's a 64bit Ubuntu Server with Docker pre-installed.
 - If you see Docker errors related to "cgroups", it may help to add the following to `/boot/firmware/cmdline.txt`:

@@ -1,10 +1,10 @@
 # Advanced Settings #
 
-Basic system [config options](../../getting-started/config-options.md) such as the thumbnail image quality can be changed 
+System [config options](../../getting-started/config-options.md) such as the image quality can be changed 
 on the advanced settings page. You can also disable specific features and enable the debug or read-only mode.
 
-For security reasons, the advanced settings page is disabled and hidden when the 
-[public mode](../../getting-started/config-options.md) is enabled.
+For security reasons, the advanced settings page is disabled and hidden when [public mode](../../getting-started/config-options.md) 
+is enabled.
 
 !!! tldr ""
     Changing advanced settings **always requires a restart** to take effect. Selecting a different thumbnail
@@ -13,9 +13,9 @@ For security reasons, the advanced settings page is disabled and hidden when the
 
 ![](img/advanced-settings.jpg)
 
-The same options can all be set using their corresponding
-[config options](/getting-started/config-options/) instead.
-Settings are saved in the `storage/config` directory.
+All [config options](../../getting-started/config-options.md) can be set in your `docker-compose.yml` or
+via command-line parameters as well. Manually changed values are stored in a config file. It is stored in
+the `storage/config` folder by default.
 
 ## Options
 
@@ -23,17 +23,17 @@ Settings are saved in the `storage/config` directory.
 When enabled, debug logs are shown in *Library>Logs*.
 Requires restart.
 
-The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_DEBUG`.
+The equivalent [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_DEBUG`.
 
 ### Read-only Mode
 When enabled, importing, uploading and deleting files is not possible.
 
-The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_READONLY`.
+The equivalent [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_READONLY`.
 
 ### Experimental Features
 When enabled, your instance will be updated with experimental features.
 
-The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_EXPERIMENTAL`.
+The equivalent [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_EXPERIMENTAL`.
 
 ### Disable Backups
 This option prevents creating the following `yml` backups:
@@ -41,13 +41,13 @@ This option prevents creating the following `yml` backups:
 - For photos in `storage/sidecar`
 - For albums, months, states and folders in `storage/albums`
 
-The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_DISABLE_BACKUPS`.
+The equivalent [config toggle](../../getting-started/config-options.md/) is `PHOTOPRISM_DISABLE_BACKUPS`.
 
 ### Disable WebDAV
 This option prevents building WebDav connections.
 Requires restart for changes to be applied.
 
-The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_DISABLE_WEBDAV`.
+The equivalent [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_DISABLE_WEBDAV`.
 
 ### Disable Places
 When selected, geo-information (latitude, longitude) will still be read (and indexed)
@@ -56,19 +56,19 @@ determine place names using those coordinates as it normally would.
 
 The Places section will not be visible.
 
-The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_DISABLE_PLACES`.
+The equivalent [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_DISABLE_PLACES`.
 
 ### Disable ExifTool
 This option prevents the creation of `json` files with Exif data in `storage/sidecar`.
 
-The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_DISABLE_EXIFTOOL`.
+The equivalent [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_DISABLE_EXIFTOOL`.
 
 ### Disable TensorFlow
 When selected, image classification / object detection
 (using [TensorFlow](https://www.tensorflow.org/)) is disabled,
 so no labels are created for your files.
 
-The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_DISABLE_TENSORFLOW`.
+The equivalent [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_DISABLE_TENSORFLOW`.
 
 ## Images
 
@@ -86,7 +86,7 @@ but generates higher quality thumbnails.
 By comparison, the *cubic* filter may be 30% faster.
 See [section below](/user-guide/settings/advanced/#downscaling-filters) for detailed description of available filters.
 
-The equivalent [config option](/getting-started/config-options/) is `PHOTOPRISM_THUMB_FILTER`.
+The equivalent [config option](../../getting-started/config-options.md) is `PHOTOPRISM_THUMB_FILTER`.
 
 ### Dynamic Previews
 
@@ -95,7 +95,7 @@ Enable generating thumbnails on-the-fly as they're required
 This saves disk space, but is more processor-intensive and so not recommended
 when hosting on less powerful devices (such as Raspberry Pi).
 
-The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_THUMB_UNCACHED`.
+The equivalent [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_THUMB_UNCACHED`.
 
 ### JPEG Quality
 
@@ -114,7 +114,7 @@ Anything below 70% is generally of [very low quality](https://fotoforensics.com/
 Example: If a quality of 95 results in a thumbnail file size of 500kB, then reducing the quality 
 to 80 reduces the file size to about 100kB.
 
-The equivalent [config option](/getting-started/config-options/) is `PHOTOPRISM_JPEG_QUALITY`.
+The equivalent [config option](../../getting-started/config-options.md) is `PHOTOPRISM_JPEG_QUALITY`.
 
 !!! tldr ""
     **The actual impression depends on how much information an image contains.** Empty areas and skies,
@@ -126,11 +126,11 @@ The equivalent [config option](/getting-started/config-options/) is `PHOTOPRISM_
 
 **Dynamic Size Limit**: During dynamic (on-demand) thumbnail generation,
 no thumbnails will be created above this size.
-The equivalent [config option](/getting-started/config-options/) is `PHOTOPRISM_THUMB_SIZE_UNCACHED`.
+The equivalent [config option](../../getting-started/config-options.md) is `PHOTOPRISM_THUMB_SIZE_UNCACHED`.
 
 **Static Size Limit**: During initial indexing or import (as thumbnails are generated),
 no thumbnails will be created above this size.
-The equivalent [config option](/getting-started/config-options/) is `PHOTOPRISM_THUMB_SIZE`.
+The equivalent [config option](../../getting-started/config-options.md) is `PHOTOPRISM_THUMB_SIZE`.
 
 !!! danger ""
     Reducing the *Static Size Limit* of thumbnails has a **significant impact on [facial recognition](../organize/people.md) 
@@ -274,28 +274,28 @@ In addition, PhotoPrism also supports TIFF, PNG, BMP and GIF files. Be aware tha
 This controls the maximum size of downsampled JPEG preview files to create
 when converting original RAW images.
 
-The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_JPEG_SIZE`.
+The equivalent [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_JPEG_SIZE`.
 
 ### Use Presets
 
 Disables simultaneous conversion of RAW files to apply Darktable presets.
 
-The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_RAW_PRESETS`.
+The equivalent [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_RAW_PRESETS`.
 
 ### Disable Darktable
 
 When disabled Darktable won't be used for RAW conversion.
 
-The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_DISABLE_DARKTABLE`.
+The equivalent [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_DISABLE_DARKTABLE`.
 
 ### Disable RawTherapee
 
 When disabled RawTherapee won't be used for RAW conversion.
 
-The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_DISABLE_RAWTHERAPEE`.
+The equivalent [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_DISABLE_RAWTHERAPEE`.
 
 ### Disable FFmpeg
 
 When disabled FFmpeg won't be used for video transcoding.
 
-The equivalent [config toggle](/getting-started/config-options/) is `PHOTOPRISM_DISABLE_FFMPEG`.
+The equivalent [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_DISABLE_FFMPEG`.

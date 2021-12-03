@@ -14,7 +14,7 @@ is enabled.
 ![](img/advanced-settings.jpg)
 
 All [config options](../../getting-started/config-options.md) can be set in your `docker-compose.yml` or
-via command-line parameters as well. Manually changed values are stored in a config file. It is stored in
+via command-line parameters as well. Manually changed values are saved in a config file. It is stored in
 the `storage/config` folder by default.
 
 ## Options

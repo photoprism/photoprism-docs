@@ -8,7 +8,7 @@
 
 #### Technical Support ####
 
-Customers and sponsors are welcome to contact us at [support@photoprism.app](mailto:support@photoprism.app) for technical support and assistance with enabling [early-access features](https://github.com/photoprism/photoprism/issues?q=is:issue%20label:early-access).
+Customers and sponsors are welcome to contact us at [support@photoprism.app](mailto:support@photoprism.app) for technical support and assistance with enabling sponsor features.
 
 #### File Samples ####
 

@@ -5,7 +5,7 @@ Our [stable version](../release-notes.md) and development preview now come as a 
 as for regular Linux servers apply.
 
 !!! info ""
-    Use `photoprism/photoprism:latest`for the stable release or `photoprism/photoprism:preview` for testing 
+    Use `photoprism/photoprism:latest` for the stable release or `photoprism/photoprism:preview` for testing 
     preview builds. Make sure to [pull the most recent image](updates.md) from Docker Hub. Existing users are advised to 
     update their `docker-compose.yml` config based on our examples for [ARM64](https://dl.photoprism.org/docker/arm64/docker-compose.yml)
     and [ARMv7](https://dl.photoprism.org/docker/armv7/docker-compose.yml)-based devices.

@@ -77,7 +77,8 @@ installed on your system. It is available for Mac, Linux, and Windows.
 
 Our example includes a pre-configured [MariaDB](https://mariadb.com/) database server. If you remove it 
 and provide no other database server credentials, a SQLite database file will be created in the 
-*storage* folder. Local SSD storage is best for databases of any kind.
+*storage* folder. Local SSD storage is best for databases of any kind. Never store database files on a 
+shared network drive or open them with two server instances at the same time.
 
 !!! tldr ""
     It is not possible to change the password via `MYSQL_PASSWORD` after the database has been started 

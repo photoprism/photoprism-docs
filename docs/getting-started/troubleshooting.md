@@ -92,8 +92,8 @@ Fatal errors are often caused by one of the following conditions:
 - [ ] You have accidentally mounted the wrong folders
 - [ ] The server is low on memory or swap
 - [ ] The database server is not available, incompatible or incorrectly configured
-- [ ] Database files are corrupted because they are stored on a shared network drive
 - [ ] You've upgraded the MariaDB server version without running `mariadb-upgrade`
+- [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder
 - [ ] There are network problems caused by a proxy, firewall or unstable connection
 - [ ] Kernel security modules such as [AppArmor](https://wiki.ubuntu.com/AppArmor) and [SELinux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) are blocking permissions
 - [ ] Your Raspberry Pi has not been configured according to our [recommendations](raspberry-pi.md#system-requirements)
@@ -168,7 +168,7 @@ the `photoprism restore` command.
 #### Lost Root Password ####
 
 In case you forgot the MariaDB "root" password and the one specified in your configuration does not work,
-you can start the server [with the `--skip-grant-tables` flag](https://mariadb.com/docs/reference/mdb/cli/mariadbd/skip-grant-tables/)
+you can [start the server with the `--skip-grant-tables` flag](https://mariadb.com/docs/reference/mdb/cli/mariadbd/skip-grant-tables/)
 added to the `mysqld` command in your `docker-compose.yml`. This will temporarily give full access
 to all users after a restart:
 
@@ -207,13 +207,12 @@ command and restart the `mariadb` service as described above.
 
 #### Corrupted Files ####
 
-If your database files get corrupted frequently, it is usually because they are stored on a shared network drive 
-or other unreliable storage such as USB flash drives. It is also possible that you open the same database files 
-with more than one server instance.
+If your database files get corrupted frequently, it is usually because they are stored on an unreliable device such 
+as a USB flash drive or a shared network folder.
 
-To repair your tables after you have moved the files to a local disk, you can start MariaDB 
-[with the `--innodb-force-recovery=1` flag](https://mariadb.com/kb/en/innodb-recovery-modes/), 
-similar to how you recover a lost root password as described above.
+- Make sure not to open the same database files with more than one server instance.
+- To share a database over a network, run the database server directly on the remote server instead of sharing database files. 
+- To repair your tables after you have moved the files to a local disk, you can [start MariaDB with `--innodb-force-recovery=1`](https://mariadb.com/kb/en/innodb-recovery-modes/), similar to how you recover a lost root password as described above.
 
 ### Linux Kernel Security ###
 

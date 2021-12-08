@@ -1,7 +1,8 @@
 # Running PhotoPrism on a Raspberry Pi
 
 Our [stable version](../release-notes.md) and development preview now come as a single
-[multi-arch image](https://hub.docker.com/r/photoprism/photoprism) for AMD64, ARM64, and ARMv7. If your device meets the system requirements, mostly the same [installation instructions](docker-compose.md)
+[multi-arch image](https://hub.docker.com/r/photoprism/photoprism) for AMD64, ARM64 (64-bit), and ARMv7 (32-bit).
+If your device meets the system requirements, mostly the same [installation instructions](docker-compose.md)
 as for regular Linux servers apply.
 
 !!! info ""

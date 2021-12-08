@@ -1,24 +1,20 @@
 # Stacks #
 
-## Grouped Files ##
-
-In case you have "Stacks" configured in [*Settings*](../settings/general.md) you might have photos that consist of more than one JPEG file.
-Grouped files are displayed in *Stacks*.
+If you have enabled "Stacks" in  [*Settings*](../settings/general.md), you may come across photos that have more than 
+one JPEG file associated with them. Grouped files are displayed in *Stacks*.
 
 ![Screenshot](img/stacks-1.png)
 
-!!! info ""
-    Files can be grouped for the following reasons:
-    
-    1. Filenames are related: 'IMG_1234 (2)' or 'IMG_1234 copy 2' are assumed to belong to the same photo.
-    2. Photos have been taken at the same location AND in the same second.
-    3. Files have the same unique image or instance identifier.
-    
-    You can configure this in [*Settings*](../settings/general.md).
-    
+### For what reasons can files be stacked? ###
 
+ 1. Files sharing exactly the same file and folder name will always be stacked, for example `/2018/IMG_1234.jpg` and `/2018/IMG_1234.avi`
+ 2. Files with related, sequential names like `/2018/IMG_1234 (2).jpg` and `/2018/IMG_1234 (3).jpg` may be stacked as well (optional)
+ 3. Metadata suggests files have been taken at the same location and second (optional)
+ 4. File metadata contains the same unique image or instance identifier (optional)
+ 
+ You can change the behaviour for 2 - 4 in [*Settings*](../settings/general.md).
 
-### Browse through Related Files ###
+### Browse Related Files ###
 
 1. Click on :material-camera-burst:
 
@@ -30,6 +26,7 @@ Grouped files are displayed in *Stacks*.
    
 
 ### Change Primary Files ###
+
 The JPEG file marked as *primary* is used in our views. It is listed first in the files tab.
 
 To change the primary file:
@@ -44,14 +41,15 @@ To change the primary file:
 
       ![Screenshot](img/group-3.png) 
 
-### Ungroup Files ###
+### Unstack Files ###
+
 1. Open the photos [*edit dialog*](edit.md)
 
 2. Open *Files* tab
 
 3. Click :material-chevron-down: of the JPEG file that is not marked as primary
         
-4. Click *ungroup*
+4. Click *unstack*
 
       ![Screenshot](img/group-3.png)
 
@@ -59,7 +57,8 @@ Now, both files appear in our views.
 
 ![Screenshot](img/group-4.png)
 
-### Remove not Primary Files Permanently ###
+### Permanently Remove Non-Primary Files ###
+
 1. Open the photos [*edit dialog*](edit.md)
 
 2. Open *Files* tab

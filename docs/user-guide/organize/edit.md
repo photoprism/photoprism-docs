@@ -5,6 +5,7 @@ PhotoPrisms *edit dialog* enables you to add/edit various types of metadata rela
 During [*indexing*](../index.md) PhotoPrism collects as much data as possible from sidecar files and the photo itself.
 
 ### Open Edit dialog ###
+
 === "From Card View"
      1. Click on the photos title, time or camera information
 
@@ -23,6 +24,7 @@ During [*indexing*](../index.md) PhotoPrism collects as much data as possible fr
     ![Screenshot](img/edit-open-3.png)
 
 ### Edit Details ###
+
 In the edit dialog's *Detail tab* you can view and edit the following data:
 
 * Title, Day, Month, Year, UTC time, UTC date, Time zone, Latitude, Longitude, Altitude, Country, Camera, ISO, Exposure, Lens, F Number, Focal Length, Subject, Artist, Copyright, License, Description, Keywords, Notes
@@ -45,12 +47,15 @@ Geolocation Plugin is an [open source extension](https://github.com/andyvalerio/
 ![Screenshot](https://valerio.nu/maps/geolocation.jpg)
     
 ### Edit Labels ###
+
 In the edit dialog's *Labels tab* you can view and edit [*labels*](labels.md).
 
 ### Edit People ###
+
 In the edit dialog's *People tab* you can view and edit [*people*](people.md).
 
 ### Edit Files ###
+
 In the edit dialog's *Files tab* you see all files that belong to a photo.
 
 In PhotoPrism a photo can consist of multiple files like a *raw file* + a *jpeg version* of this raw file + a related *xmp or json file*.
@@ -61,6 +66,6 @@ To open file details click :material-chevron-down:.
 
 ![Screenshot](img/group-2.png)
 
-In case you have [*grouped files*](stacks.md) you can change the primary file, delete not primary files or ungroup files using the respective buttons.
+In case you have [*stacked files*](stacks.md) you can change the primary file, delete not primary files, or unstack files using the action buttons.
 
 

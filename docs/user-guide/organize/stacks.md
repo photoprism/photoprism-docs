@@ -59,7 +59,7 @@ Now, both files appear in our views.
 
 ![Screenshot](img/group-4.png)
 
-### Permanently Delete Non-Primary Files ###
+### Delete Non-Primary Files ###
 
 1. Open the photos [*edit dialog*](edit.md)
 

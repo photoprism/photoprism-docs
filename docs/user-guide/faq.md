@@ -74,11 +74,14 @@
     exact date & location, or unique image ID indicate they belong to the same photo. You may then unstack
     them if this happened by mistake e.g. because of bad metadata.
 
-??? question "Why are some files stacked?"
+??? question "For what reasons can files be stacked?"
 
-    Files with the same *XMP Instance ID* or *Unique Image ID* as well
-    as images with the exact same time and location are stacked by default. These are considered identical, not sequences
-    of related files based on their file names. You may disable this in [Settings](settings/library.md). Sidecar files are always going to be stacked as that's their purpose.
+    1. Files sharing exactly the same file and folder name will always be stacked, for example `/2018/IMG_1234.jpg` and `/2018/IMG_1234.avi`
+    2. Files with related, sequential names like `/2018/IMG_1234 (2).jpg` and `/2018/IMG_1234 (3).jpg` may be stacked as well (optional)
+    3. Metadata suggests files have been taken at the same location and second (optional)
+    4. File metadata contains the same *Unique Image ID* or *XMP Instance ID* (optional)
+
+    You can change the behaviour for 2 - 4 in [*Settings*](settings/library.md).
 
 ??? question "I already indexed some files. Why are Folders, Calendar and Moments still empty?"
 

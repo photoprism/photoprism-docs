@@ -45,7 +45,7 @@ as for regular Linux servers apply.
   including your provider, hackers, and governments.
 
 !!! note ""
-    Indexing large photo and video collections significantly benefits from fast, local SSD storage,
+    Indexing large photo and video collections significantly benefits from fast, [local SSD drive](troubleshooting.md#storage),
     and plenty of memory for caching. Especially the conversion of RAW images and the transcoding of
     videos are very demanding.
 

@@ -35,7 +35,7 @@ As an example, let's assume a [ZFS
 filesystem](https://en.wikipedia.org/wiki/ZFS) with two pools ("volumes" in
 classical terminology): A pool _tank_ in a raidz2 (RAID6) configuration based on
 hard drives that holds the original pictures, and a pool _dozer_ in a mirrored
-(RAID1) configuration based on SSD or NVMe drives to store the thumbnails. Our
+(RAID1) configuration [based on SSD or NVMe drives](../troubleshooting.md#storage) to store the thumbnails. Our
 docker script could be:
 
 ```

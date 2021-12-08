@@ -41,7 +41,7 @@ To change the primary file:
         
 4. Click *primary*
 
-      ![Screenshot](img/group-3.png) 
+      ![Screenshot](img/unstack-1.png) 
 
 ### Unstack Files ###
 
@@ -53,7 +53,7 @@ To change the primary file:
         
 4. Click *unstack*
 
-      ![Screenshot](img/group-3.png)
+      ![Screenshot](img/unstack-1.png)
 
 Now, both files appear in our views.
 

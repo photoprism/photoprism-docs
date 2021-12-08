@@ -210,9 +210,9 @@ command and restart the `mariadb` service as described above.
 If your database files get corrupted frequently, it is usually because they are stored on an unreliable device such 
 as a USB flash drive or a shared network folder.
 
-- Make sure not to open the same database files with more than one server instance.
-- To share a database over a network, run the database server directly on the remote server instead of sharing database files. 
-- To repair your tables after you have moved the files to a local disk, you can [start MariaDB with `--innodb-force-recovery=1`](https://mariadb.com/kb/en/innodb-recovery-modes/), similar to how you recover a lost root password as described above.
+- Make sure not to open the same database files with more than one server instance
+- To share a database over a network, run the database server directly on the remote server instead of sharing database files
+- To repair your tables after you have moved the files to a local disk, you can [start MariaDB with `--innodb-force-recovery=1`](https://mariadb.com/kb/en/innodb-recovery-modes/), similar to how you recover a lost root password as described above
 
 ### Linux Kernel Security ###
 

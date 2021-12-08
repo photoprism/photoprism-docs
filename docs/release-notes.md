@@ -41,8 +41,9 @@ and [contributors](https://github.com/photoprism/photoprism/graphs/contributors/
 <span class="build">Build 211128-7e8974fd</span>
 
 Official support for MySQL 8 is discontinued with this update as it's [not feasible](https://github.com/photoprism/photoprism/issues/1764) 
-to perform a full test before each release. We recommend [upgrading to MariaDB 10.6](https://mariadb.com/kb/en/function-differences-between-mariadb-106-and-mysql-80/)
-or later. PostgreSQL support is [planned for 2022](https://github.com/photoprism/photoprism/issues/47) without a specific release date yet.
+to perform a full test before each release. We recommend [upgrading](https://docs.photoprism.org/getting-started/troubleshooting/#version-upgrade)
+to [MariaDB 10.6](https://mariadb.com/kb/en/function-differences-between-mariadb-106-and-mysql-80/) or later.
+PostgreSQL support is [planned for 2022](https://github.com/photoprism/photoprism/issues/47) without a specific release date yet.
 
 - CLI: [`photoprism migrate --failed` will re-run previously failed migrations](https://github.com/photoprism/photoprism/commit/7e8974fd20fcbf3ec403541125599deaeb1ee353)
 

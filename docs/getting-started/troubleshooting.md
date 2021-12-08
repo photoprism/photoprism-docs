@@ -239,7 +239,7 @@ for storing database files:
 - The cost savings from using slow hard disks are minimal 
 
 Switching to SSDs usually makes a big difference, especially for write operations and when 
-the cache is not big enough or can't be used. Never store database files on an unreliable 
+the read cache is not big enough or can't be used. Never store database files on an unreliable 
 device such as a USB flash drive or a shared network folder.
 
 Last but not least, database performance can be limited by your server CPU. While consumer NAS 

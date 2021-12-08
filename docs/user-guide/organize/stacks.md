@@ -5,7 +5,7 @@ one image file associated with them.
 
 To show all photos with a group of related files, open *Stacks* in the expanded *Search* navigation:
 
-![Screenshot](img/stacks-1.png)
+![Screenshot](img/stack-page.png)
 
 ### For what reasons can files be stacked? ###
 

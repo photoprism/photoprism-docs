@@ -214,7 +214,7 @@ as a USB flash drive or a shared network folder.
 - To share a database over a network, run the database server directly on the remote server instead of sharing database files
 - To repair your tables after you have moved the files to a local disk, you can [start MariaDB with `--innodb-force-recovery=1`](https://mariadb.com/kb/en/innodb-recovery-modes/), similar to how you recover a lost root password as described above
 
-#### Cache Size ####
+#### Performance Tuning ####
 
 The [InnoDB buffer pool](https://mariadb.com/kb/en/innodb-buffer-pool/) serves as a cache for data and indexes.
 It is a key component for optimizing MariaDB performance. Its size should be as large as possible to keep frequently 
@@ -229,6 +229,10 @@ services:
   mariadb:
     command: mysqld --innodb-buffer-pool-size=1G ...
 ```
+
+Local SSD storage is best for database files because it reduces I/O latency and increases bandwidth.
+This can make a big difference, especially if the cache is not large enough or can't be used.
+Never store database files on an unreliable device such as a USB flash drive or a shared network folder.
 
 ### Linux Kernel Security ###
 

@@ -9,7 +9,7 @@
 If you cannot connect to the Web UI even after waiting a few minutes, run this command to display 
 the last 100 log messages (omit `--tail=100` to see all):
 
-```
+```bash
 docker-compose logs --tail=100
 ```
 
@@ -23,7 +23,7 @@ before reporting a bug.
 You can also try (re-)starting the app and database without `-d`. This keeps their containers running 
 in the foreground and shows log messages for troubleshooting:
 
-```
+```bash
 docker-compose stop
 docker-compose up 
 ```
@@ -104,7 +104,7 @@ Fatal errors are often caused by one of the following conditions:
 
 Open a terminal and run this command to check if your server has swap configured.
 
-```
+```bash
 swapon --show
 ```
 
@@ -119,7 +119,7 @@ This means you have 64 GB of swap and don't need to add more. [Learn how much yo
 
 Otherwise, run these commands to permanently add 4 GB of swap (or more depending on how much physical memory you have):
 
-```
+```bash
 sudo -i
 fallocate -l 4G /swapfile
 chmod 600 /swapfile
@@ -155,7 +155,7 @@ configure at least 4 GB of swap.
 If the database doesn't start properly after upgrading from an earlier MySQL or MariaDB version,
 you may need to run this command in a terminal:
 
-```
+```bash
 docker-compose exec mariadb mariadb-upgrade -uroot -p
 ```
 
@@ -172,7 +172,7 @@ you can [start the server with the `--skip-grant-tables` flag](https://mariadb.c
 added to the `mysqld` command in your `docker-compose.yml`. This will temporarily give full access
 to all users after a restart:
 
-```
+```yaml
 services:
   mariadb:
     command: mysqld --skip-grant-tables
@@ -180,20 +180,20 @@ services:
 
 Restart the `mariadb` service for changes to take effect:
 
-```
+```bash
 docker-compose stop mariadb
 docker-compose up -d mariadb
 ```
 
 Now open a database console:
 
-```
+```bash
 docker-compose exec mariadb mysql -uroot
 ```
 
 Enter the following commands to change the password for "root":
 
-```
+```sql
 FLUSH PRIVILEGES;
 ALTER USER 'root'@'%' IDENTIFIED BY 'new_password';
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'new_password';
@@ -213,6 +213,23 @@ as a USB flash drive or a shared network folder.
 - Never use the same database files with more than one server instance
 - To share a database over a network, run the database server directly on the remote server instead of sharing database files
 - To repair your tables after you have moved the files to a local disk, you can [start MariaDB with `--innodb-force-recovery=1`](https://mariadb.com/kb/en/innodb-recovery-modes/), similar to how you recover a lost root password as described above
+
+#### Cache Size ####
+
+The [InnoDB buffer pool](https://mariadb.com/kb/en/innodb-buffer-pool/) serves as a cache for data and indexes.
+It is a key component for optimizing MariaDB performance. Its size should be as large as possible to keep frequently 
+used data in memory and reduce disk I/O - typically the biggest bottleneck.
+
+The default buffer pool size is between 128 MB and 256 MB in our [docker-compose.yml examples](https://dl.photoprism.org/docker/), 
+depending on the platform. You can change it using the `--innodb-buffer-pool-size` parameter (`M` means Megabyte, `G` stands for Gigabyte).
+If your server has enough memory, we recommend a size of 1 GB:
+
+```yaml
+services:
+  mariadb:
+    image: mariadb:10.6
+    command: mysqld --innodb-buffer-pool-size=1G ...
+```
 
 ### Linux Kernel Security ###
 

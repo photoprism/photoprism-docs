@@ -15,8 +15,8 @@
 ### December 3, 2021 ###
 <span class="build">Build 211203-fdb6b5e1</span>
 
-Since we did not reach the [funding goal](https://github.com/sponsors/photoprism) required to make all features and maps generally available, 
-*early-access features* have been renamed to *sponsor features* in this release.
+Since the [funding goal](https://github.com/sponsors/photoprism) required to make all features and maps generally
+available has not been reached, *early-access features* have been renamed to *sponsor features* in this update.
 Offline and high-resolution street maps remain free for everyone, while hybrid, topographic and outdoor maps are 
 now a sponsor feature. We believe this is fair. A big thank you to all our [sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md)
 and [contributors](https://github.com/photoprism/photoprism/graphs/contributors/)!
@@ -40,11 +40,9 @@ and [contributors](https://github.com/photoprism/photoprism/graphs/contributors/
 ### November 28, 2021 ###
 <span class="build">Build 211128-7e8974fd</span>
 
-With this update, official support for MySQL is discontinued as it is not feasible to 
-perform a complete test with MySQL 8 before each release. Since important [features](https://stackoverflow.com/questions/2480148/how-can-i-employ-if-exists-for-creating-or-dropping-an-index-in-mysql)
-still haven't been implemented after more than 10 years, it doesn't look like Oracle is actively 
-supporting it anymore. We recommend [upgrading to MariaDB 10.6](https://mariadb.com/kb/en/function-differences-between-mariadb-106-and-mysql-80/).
-PostgreSQL support is [planned for next year](https://github.com/photoprism/photoprism/issues/47) without a specific release date.
+Official support for MySQL 8 is discontinued with this update as it's [not feasible](https://github.com/photoprism/photoprism/issues/1764) 
+to perform a full test before each release. We recommend [upgrading to MariaDB 10.6](https://mariadb.com/kb/en/function-differences-between-mariadb-106-and-mysql-80/)
+or later. PostgreSQL support is [planned for 2022](https://github.com/photoprism/photoprism/issues/47) without a specific release date yet.
 
 - CLI: [`photoprism migrate --failed` will re-run previously failed migrations](https://github.com/photoprism/photoprism/commit/7e8974fd20fcbf3ec403541125599deaeb1ee353)
 

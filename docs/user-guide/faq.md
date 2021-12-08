@@ -78,8 +78,8 @@
 
     1. Files sharing exactly the same file and folder name will always be stacked, for example `/2018/IMG_1234.jpg` and `/2018/IMG_1234.avi`
     2. Files with related, sequential names like `/2018/IMG_1234 (2).jpg` and `/2018/IMG_1234 (3).jpg` may be stacked as well (optional)
-    3. Metadata suggests files have been taken at the same location and second (optional)
-    4. File metadata contains the same *Unique Image ID* or *XMP Instance ID* (optional)
+    3. Metadata suggests pictures have been taken at the same GPS position and second (optional)
+    4. Image metadata contains the same *Unique Image ID* or *XMP Instance ID* (optional)
 
     You can change the behaviour for 2 - 4 in [*Settings*](settings/library.md).
 

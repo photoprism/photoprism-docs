@@ -227,7 +227,6 @@ Our [docker-compose.yml examples](https://dl.photoprism.org/docker/) have a defa
 ```yaml
 services:
   mariadb:
-    image: mariadb:10.6
     command: mysqld --innodb-buffer-pool-size=1G ...
 ```
 

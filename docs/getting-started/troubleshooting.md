@@ -242,6 +242,12 @@ Switching to SSDs usually makes a big difference, especially for write operation
 the cache is not big enough or can't be used. Never store database files on an unreliable 
 device such as a USB flash drive or a shared network folder.
 
+Last but not least, database performance can be limited by your server CPU. While consumer NAS 
+devices get faster with each generation, their hardware is optimized for low power consumption 
+and, of course, noise. [Benchmarks](https://www.google.com/search?q=cpu+benchmarks) prove that 
+even 8-year-old standard desktop CPUs are often many times faster. If you've tried everything else,
+then only moving your instance to a more powerful server may help.
+
 ### Linux Kernel Security ###
 
 We recommend disabling kernel security on private servers, especially if you do not have experience

@@ -1,7 +1,9 @@
 # Stacks #
 
-If you have enabled "Stacks" in  [*Settings*](../settings/general.md), you may come across photos that have more than 
-one JPEG file associated with them. Grouped files are displayed in *Stacks*.
+If you have enabled *Stacks* in [*Settings*](../settings/library.md), you may come across photos that have more than 
+one image file associated with them.
+
+To show all photos with a group of related files, open *Stacks* in the expanded *Search* navigation:
 
 ![Screenshot](img/stacks-1.png)
 

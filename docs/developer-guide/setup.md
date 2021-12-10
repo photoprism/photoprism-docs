@@ -60,7 +60,8 @@ Questions?
 ## Apple M1 and Raspberry Pi ##
 
 Our development environment has been built into a single [multi-arch image](https://hub.docker.com/r/photoprism/development) for 64-bit AMD, Intel, and ARM processors.
-That means, Apple M1 and Raspberry Pi 3 / 4 owners can pull from the same repository.
+That means, Apple M1 and [Raspberry Pi](../getting-started/raspberry-pi.md) 3 / 4 owners can 
+pull from the same repository.
 
 ## Building multi-arch images ##
 

@@ -18,12 +18,11 @@ You can turn this and other features off in [Settings](../user-guide/settings/ge
 depending on your specific use case.
 
 !!! note ""
-    Our [stable version](https://docs.photoprism.org/release-notes/) and development preview have been built into a single
-    [multi-arch image](https://hub.docker.com/r/photoprism/photoprism) for 64-bit AMD, Intel,
-    and [ARM processors](raspberry-pi.md).
-    That means, Raspberry Pi 3 / 4 owners can pull from the same repository, enjoy the exact same functionality,
-    and can follow the regular [installation instructions](docker-compose.md)  after going through a short list of
-    [requirements](raspberry-pi.md).
+    Our [stable version](https://docs.photoprism.org/release-notes/) and development preview have been built into a 
+    single [multi-arch image](https://hub.docker.com/r/photoprism/photoprism) for 64-bit AMD, Intel,
+    and ARM processors. That means, [Raspberry Pi](raspberry-pi.md) 3 / 4 owners can pull from the same repository, 
+    enjoy the exact same functionality, and can follow the regular [installation instructions](docker-compose.md)
+    after going through a short list of [requirements](raspberry-pi.md).
 
 !!! tldr ""
     Downloadable installation packages are planned for a later release. Developers can build PhotoPrism from source

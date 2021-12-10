@@ -68,7 +68,7 @@ It's a 64-bit Ubuntu Server with Docker pre-configured.
 #### Older ARMv7-based Devices ####
 
 You have to revert to alternative Docker images to run PhotoPrism and MariaDB on old ARMv7-based devices or modern
-Raspberrys with an old 32-bit operating system. Pay close attention to changed directory and environment variable names.
+Raspberrys with an old 32-bit operating system:
 
 | Image               | Name                                  |
 |---------------------|---------------------------------------|
@@ -76,8 +76,8 @@ Raspberrys with an old 32-bit operating system. Pay close attention to changed d
 | Development Preview | `photoprism/photoprism:armv7-preview` | 
 | MariaDB             | `linuxserver/mariadb:latest`          | 
 
-If your device meets the [requirements](#system-requirements), mostly the same installation instructions as for regular Linux
-servers apply otherwise.
+Pay close attention to changed directory and environment variable names. If your device meets the [requirements](#system-requirements),
+mostly the same installation instructions as for regular Linux servers apply otherwise.
 
 ### Getting Updates ###
 

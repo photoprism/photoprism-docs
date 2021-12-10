@@ -27,7 +27,7 @@ installed on your system. It is available for Mac, Linux, and Windows.
 === "Raspberry Pi"
 
     Download our [docker-compose.yml](https://dl.photoprism.org/docker/arm64/docker-compose.yml) example for 
-    the Raspberry Pi and other ARM-based devices (right click and *Save Link As...* or use `wget`) to a folder of your choice,
+    the Raspberry Pi 3 / 4 and modern ARM64-based devices (right click and *Save Link As...* or use `wget`) to a folder of your choice,
     and change the [configuration](config-options.md) as needed:
     
     ```
@@ -36,13 +36,21 @@ installed on your system. It is available for Mac, Linux, and Windows.
 
     Mostly the same installation instructions as for regular Linux servers apply.
     Commands may have to be prefixed with `sudo` when not running as root.
-    Ensure your device meets the [system requirements](raspberry-pi.md) before you continue.
+    Ensure your device meets the [requirements](raspberry-pi.md) before you continue.
 
-    !!! missing ""
-        Owners of [ARMv7-based devices](https://dl.photoprism.org/docker/armv7/docker-compose.yml) have to revert 
-        to an [alternative image](https://hub.docker.com/r/linuxserver/mariadb) if they want to use MariaDB. 
-        The [official image](https://hub.docker.com/_/mariadb) is available for AMD64 and ARM64 only.
-        Pay close attention to changed directory and environment variable names.
+=== "ARMv7"
+
+    Download our [docker-compose.yml](https://dl.photoprism.org/docker/armv7/docker-compose.yml) example for 
+    older ARMv7-based devices (right click and *Save Link As...* or use `wget`) to a folder of your choice,
+    and change the [configuration](config-options.md) as needed:
+    
+    ```
+    wget https://dl.photoprism.org/docker/armv7/docker-compose.yml
+    ```
+
+    Mostly the same installation instructions as for regular Linux servers apply.
+    Commands may have to be prefixed with `sudo` when not running as root.
+    Ensure your device meets the [requirements](raspberry-pi.md) before you continue.
 
 === "Windows"
 

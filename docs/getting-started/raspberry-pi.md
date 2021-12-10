@@ -1,31 +1,24 @@
 # Running PhotoPrism on a Raspberry Pi
 
-Our [stable version](../release-notes.md) and development preview now come as a single
-[multi-arch image](https://hub.docker.com/r/photoprism/photoprism) for AMD64, ARM64 (64-bit), and ARMv7 (32-bit).
-If your device meets the system requirements, mostly the same [installation instructions](docker-compose.md)
-as for regular Linux servers apply.
+Our [stable version](../release-notes.md) and development preview have been built into a single
+[multi-arch image](https://hub.docker.com/r/photoprism/photoprism) for 64-bit AMD, Intel, and ARM processors.
+That means, Raspberry Pi 3 / 4 owners can pull from the same repository, enjoy the exact same functionality,
+and can follow the regular [Installation Instructions](docker-compose.md) after going through a short list of
+[System Requirements](#system-requirements) and [Architecture Specific Notes](#architecture-specific-notes).
 
-!!! info ""
-    Use `photoprism/photoprism:latest` for the stable release or `photoprism/photoprism:preview` for testing 
-    preview builds. Make sure to [pull the most recent image](updates.md) from Docker Hub. Existing users are advised to 
-    update their `docker-compose.yml` config based on our examples for [ARM64](https://dl.photoprism.org/docker/arm64/docker-compose.yml)
-    and [ARMv7](https://dl.photoprism.org/docker/armv7/docker-compose.yml)-based devices.
+Existing users are advised to update their `docker-compose.yml` config based on our examples
+available at [dl.photoprism.org/docker/](https://dl.photoprism.org/docker/).
 
-!!! missing ""
-    Owners of [ARMv7-based devices](https://dl.photoprism.org/docker/armv7/docker-compose.yml) have to revert to 
-    an [alternative image](https://hub.docker.com/r/linuxserver/mariadb) if they want to use MariaDB. 
-    The [official image](https://hub.docker.com/_/mariadb) is available for AMD64 and ARM64 only. 
-    Pay close attention to changed directory and environment variable names.
+!!! tldr ""
+    To ensure compatibility with 64-bit Docker images, your Raspberry Pi 3 / 4 must boot with
+    the `arm_64bit=1` flag in [its config.txt file](https://www.raspberrypi.org/documentation/installation/installing-images/README.md).
+    An "exec format error" will occur otherwise.
 
 ### System Requirements ###
 
 - Your device should have at least 4 GB of memory. Running PhotoPrism on a server with [less than 4 GB of swap space](troubleshooting.md#adding-swap)
   or setting a memory/swap limit can cause unexpected restarts, especially when the indexer temporarily needs more
   memory to process large files.
-- It's important to [boot](https://www.raspberrypi.org/documentation/installation/installing-images/README.md) your 
-  Raspberry Pi 3 / 4 with the parameter `arm_64bit=1` in `config.txt` to use our ARM64 (64-bit) image.
-  An "exec format error" will occur otherwise. Alternatively, you may run it on
-  [UbuntuDockerPi](https://github.com/guysoft/UbuntuDockerPi). It's a 64bit Ubuntu Server with Docker pre-installed.
 - If you see Docker errors related to "cgroups", it may help to add the following to `/boot/firmware/cmdline.txt`:
   ```
   cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1
@@ -55,5 +48,44 @@ as for regular Linux servers apply.
     `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml` (depending on the performance of the server).
     As a measure of last resort, you may disable using TensorFlow for image classification and facial recognition.
 
-Big thank you to [Guy Sheffer](https://github.com/guysoft) for
-[building](https://github.com/photoprism/photoprism/issues/109) this!
+### Architecture Specific Notes ###
+
+#### Modern ARM64-based Devices ####
+
+| Image               | Name                               |
+|---------------------|------------------------------------|
+| Stable Release      | `photoprism/photoprism:latest`     | 
+| Development Preview | `photoprism/photoprism:preview`    | 
+| MariaDB             | `arm64v8/mariadb:10.6`             | 
+
+To ensure compatibility with 64-bit Docker images, your Raspberry Pi 3 / 4 must boot with
+the `arm_64bit=1` flag in [its config.txt file](https://www.raspberrypi.org/documentation/installation/installing-images/README.md).
+An "exec format error" will occur otherwise.
+
+Alternatively, you can run your device with [UbuntuDockerPi](https://github.com/guysoft/UbuntuDockerPi).
+It's a 64-bit Ubuntu Server with Docker pre-configured.
+
+#### Older ARMv7-based Devices ####
+
+You have to revert to alternative Docker images to run PhotoPrism and MariaDB on old ARMv7-based devices or modern
+Raspberrys with an old 32-bit operating system. Pay close attention to changed directory and environment variable names.
+
+| Image               | Name                                  |
+|---------------------|---------------------------------------|
+| Stable Release      | `photoprism/photoprism:armv7`         | 
+| Development Preview | `photoprism/photoprism:armv7-preview` | 
+| MariaDB             | `linuxserver/mariadb:latest`          | 
+
+If your device meets the [System Requirements](#system-requirements), mostly the same installation instructions as for regular Linux
+servers apply otherwise.
+
+### Getting Updates ###
+
+If an old version is running on your device and doesn't update, you need to [explicitly pull](updates.md)
+the latest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism). Assuming that `:latest` 
+means new versions are automatically downloaded is a common mistake for users new to Docker.
+
+### Credits ###
+
+A big thank you to [Guy Sheffer](https://github.com/guysoft) for helping us [build](https://github.com/photoprism/photoprism/issues/109)
+a Raspberry Pi version!

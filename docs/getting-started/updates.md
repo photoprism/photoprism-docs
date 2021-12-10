@@ -1,10 +1,12 @@
 # Getting Updates
 
 !!! note ""
-    Our [stable version](../release-notes.md) and development preview now come as a single
-    [multi-arch image](https://hub.docker.com/r/photoprism/photoprism) for **AMD64, ARM64, and ARMv7**. 
-    That means you don't need to pull from different Docker repositories anymore. We recommend updating your existing 
-    `docker-compose.yml` config based on [our examples](https://dl.photoprism.org/docker/).
+    Our [stable version](https://docs.photoprism.org/release-notes/) and development preview have been built into a single
+    [multi-arch image](https://hub.docker.com/r/photoprism/photoprism) for 64-bit AMD, Intel, 
+    and [ARM processors](raspberry-pi.md).
+    That means, Raspberry Pi 3 / 4 owners can pull from the same repository, enjoy the exact same functionality,
+    and can follow the regular [installation instructions](docker-compose.md) after going through a short list of
+    [requirements](raspberry-pi.md).
 
 !!! example ""
     **Back us on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism).**

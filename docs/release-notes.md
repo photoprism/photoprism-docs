@@ -27,7 +27,7 @@ time on our infrastructure.
 - People: [Concurrent updates are no longer possible to prevent inconsistencies](https://github.com/photoprism/photoprism/commit/1b583e071e80b68352b1b366d60e010d8f8f9535)
 - Places: [Additional logs to detect invalid GPS coordinates in metadata](https://github.com/photoprism/photoprism/commit/4e358bbfd488eda86efa3265a6c443be0ae8f038)
 - SQLite: [Reduced routine maintenance log levels and fixed migration warnings](https://github.com/photoprism/photoprism/discussions/1791)
-- Thumbnails: [Apple Display P3 profile support](https://github.com/photoprism/photoprism/issues/1798) [for more accurate colors](https://github.com/photoprism/photoprism/issues/1522)
+- Thumbnails: [Apple Display P3 profile support for more accurate colors](https://github.com/photoprism/photoprism/issues/1798)
 - Translations: [Updated French](https://github.com/photoprism/photoprism/pull/1799)
 
 ### December 3, 2021 ###

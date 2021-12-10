@@ -1,9 +1,12 @@
 # Release Notes
 
 !!! note ""
-    Our stable version and development preview now come as a single [multi-arch image](https://hub.docker.com/r/photoprism/photoprism)
-    for **AMD64, ARM64, and ARMv7**. That means you don't need to pull from different Docker repositories anymore. 
-    We recommend updating your existing `docker-compose.yml` config based on [our examples](https://dl.photoprism.org/docker/).
+    Our [stable version](https://docs.photoprism.org/release-notes/) and development preview have been built into a single
+    [multi-arch image](https://hub.docker.com/r/photoprism/photoprism) for 64-bit AMD, Intel,
+    and [ARM processors](getting-started/raspberry-pi.md).
+    That means, Raspberry Pi 3 / 4 owners can pull from the same repository, enjoy the exact same functionality,
+    and can follow the regular [installation instructions](getting-started/docker-compose.md) after going through a short list of
+    [requirements](getting-started/raspberry-pi.md).
 
 ### Development Preview ###
 
@@ -12,10 +15,20 @@
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.org/docker/). 
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
-- Places: [Additional logs to detect invalid GPS coordinates in metadata](https://github.com/photoprism/photoprism/commit/4e358bbfd488eda86efa3265a6c443be0ae8f038)
+### December 10, 2021 ###
+<span class="build">Build 211210-2cb90e7e</span>
+
+Starting with this release, the [regular multi-arch Docker image](https://hub.docker.com/r/photoprism/photoprism/tags?name=latest) is 64-bit only. 
+A 32-bit version of our stable release for [older devices](getting-started/raspberry-pi.md#older-armv7-based-devices) 
+is offered separately. In the long run, this frees up development resources and saves weeks of upload, compilation, 
+and build time on our infrastructure.
+
+- [Based on Go version 1.17.5, which includes important HTTP/2 and network security fixes](https://groups.google.com/g/golang-announce/c/hcmEScgc00k)
 - People: [Concurrent updates are no longer possible to prevent inconsistencies](https://github.com/photoprism/photoprism/commit/1b583e071e80b68352b1b366d60e010d8f8f9535)
+- Places: [Additional logs to detect invalid GPS coordinates in metadata](https://github.com/photoprism/photoprism/commit/4e358bbfd488eda86efa3265a6c443be0ae8f038)
 - SQLite: [Reduced routine maintenance log levels and fixed migration warnings](https://github.com/photoprism/photoprism/discussions/1791)
-- Thumbnails: [Convert *Display P3* to *sRGB* for more accurate colors](https://github.com/photoprism/photoprism/issues/1798)
+- Thumbnails: [*Display P3* profile support](https://github.com/photoprism/photoprism/issues/1798) [for more accurate colors](https://github.com/photoprism/photoprism/issues/1522)
+- Translations: [Updated French](https://github.com/photoprism/photoprism/pull/1799)
 
 ### December 3, 2021 ###
 <span class="build">Build 211203-fdb6b5e1</span>

@@ -76,7 +76,7 @@ Raspberrys with an old 32-bit operating system. Pay close attention to changed d
 | Development Preview | `photoprism/photoprism:armv7-preview` | 
 | MariaDB             | `linuxserver/mariadb:latest`          | 
 
-If your device meets the [System Requirements](#system-requirements), mostly the same installation instructions as for regular Linux
+If your device meets the [requirements](#system-requirements), mostly the same installation instructions as for regular Linux
 servers apply otherwise.
 
 ### Getting Updates ###

@@ -67,7 +67,7 @@ It's a 64-bit Ubuntu Server with Docker pre-configured.
 
 #### Older ARMv7-based Devices ####
 
-You have to resort to alternative Docker images to run *PhotoPrism* and *MariaDB* on ARMv7-based devices
+You have to resort to alternative Docker images to run PhotoPrism and MariaDB on ARMv7-based devices
 and those with a 32-bit operating system:
 
 | Image               | Name                                  |

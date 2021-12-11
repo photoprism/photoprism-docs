@@ -11,7 +11,7 @@ available at [dl.photoprism.org/docker/](https://dl.photoprism.org/docker/).
 
 !!! tldr ""
     To ensure compatibility with 64-bit Docker images, your Raspberry Pi 3 / 4 must boot with
-    the `arm_64bit=1` flag in [its config.txt file](https://www.raspberrypi.org/documentation/installation/installing-images/README.md).
+    the `arm_64bit=1` flag in its [config.txt file](https://www.raspberrypi.org/documentation/installation/installing-images/README.md).
     An "exec format error" will occur otherwise.
 
 ### System Requirements ###
@@ -38,7 +38,7 @@ available at [dl.photoprism.org/docker/](https://dl.photoprism.org/docker/).
   including your provider, hackers, and governments.
 
 !!! note ""
-    Indexing large photo and video collections significantly benefits from fast, [local SSD drive](troubleshooting.md#storage),
+    Indexing large photo and video collections significantly benefits from fast, [local SSD drive](troubleshooting.md#storage)
     and plenty of memory for caching. Especially the conversion of RAW images and the transcoding of
     videos are very demanding.
 
@@ -59,7 +59,7 @@ available at [dl.photoprism.org/docker/](https://dl.photoprism.org/docker/).
 | MariaDB             | `arm64v8/mariadb:10.6`             | 
 
 To ensure compatibility with 64-bit Docker images, your Raspberry Pi 3 / 4 must boot with
-the `arm_64bit=1` flag in [its config.txt file](https://www.raspberrypi.org/documentation/installation/installing-images/README.md).
+the `arm_64bit=1` flag in its [config.txt file](https://www.raspberrypi.org/documentation/installation/installing-images/README.md).
 An "exec format error" will occur otherwise.
 
 Alternatively, you can run your device with [UbuntuDockerPi](https://github.com/guysoft/UbuntuDockerPi).

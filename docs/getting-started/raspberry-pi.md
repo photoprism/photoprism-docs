@@ -7,7 +7,7 @@ and can follow the regular [Installation Instructions](docker-compose.md) after 
 [System Requirements](#system-requirements) and [Architecture Specific Notes](#architecture-specific-notes).
 
 Existing users are advised to update their `docker-compose.yml` config based on our examples
-available at [dl.photoprism.org/docker/](https://dl.photoprism.org/docker/).
+available at [dl.photoprism.app/docker/](https://dl.photoprism.app/docker/).
 
 !!! tldr ""
     To ensure compatibility with 64-bit Docker images, your Raspberry Pi 3 / 4 must boot with
@@ -24,7 +24,7 @@ available at [dl.photoprism.org/docker/](https://dl.photoprism.org/docker/).
   cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1
   ```
 - We [recommend](troubleshooting.md#linux-kernel-security) disabling Linux kernel security in your 
-  [docker-compose.yml](https://dl.photoprism.org/docker/arm64/docker-compose.yml), especially if you do 
+  [docker-compose.yml](https://dl.photoprism.app/docker/arm64/docker-compose.yml), especially if you do 
   not have experience with the configuration:
   ```yaml
   photoprism:

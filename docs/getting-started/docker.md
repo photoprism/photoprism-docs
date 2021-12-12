@@ -119,7 +119,7 @@ Open the *Logs* tab in *Library* to watch the indexer working.
 
 Of course, you can continue using your favorite tools for processing RAW files, editing metadata,
 or importing new shots. Go to *Library* and click *Start* to update the index after files have been
-changed, added, or removed. This can also be automated using CLI commands and a [scheduler](https://dl.photoprism.org/docker/scheduler/).
+changed, added, or removed. This can also be automated using CLI commands and a [scheduler](https://dl.photoprism.app/docker/scheduler/).
 
 Easy, isn't it?
 
@@ -171,7 +171,7 @@ docker exec -ti photoprism photoprism backup --help
     its container has the same name.
 
 PhotoPrism's command-line interface is well suited for job automation using a
-[scheduler](https://dl.photoprism.org/docker/scheduler/).
+[scheduler](https://dl.photoprism.app/docker/scheduler/).
 
 #### Examples ####
 

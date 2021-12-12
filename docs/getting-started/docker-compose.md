@@ -11,12 +11,12 @@ installed on your system. It is available for Mac, Linux, and Windows.
 
 === "Linux"
 
-    Download our [docker-compose.yml](https://dl.photoprism.org/docker/docker-compose.yml) example
+    Download our [docker-compose.yml](https://dl.photoprism.app/docker/docker-compose.yml) example
     (right click and *Save Link As...* or use `wget`) to a folder of your choice,
     and change the [configuration](config-options.md) as needed:
     
     ```
-    wget https://dl.photoprism.org/docker/docker-compose.yml
+    wget https://dl.photoprism.app/docker/docker-compose.yml
     ``` 
     
     Commands on Linux may have to be prefixed with `sudo` when not running as root.
@@ -26,12 +26,12 @@ installed on your system. It is available for Mac, Linux, and Windows.
 
 === "Raspberry Pi"
 
-    Download our [docker-compose.yml](https://dl.photoprism.org/docker/arm64/docker-compose.yml) example for 
+    Download our [docker-compose.yml](https://dl.photoprism.app/docker/arm64/docker-compose.yml) example for 
     the Raspberry Pi 3 / 4 and modern ARM64-based devices (right click and *Save Link As...* or use `wget`) to a folder of your choice,
     and change the [configuration](config-options.md) as needed:
     
     ```
-    wget https://dl.photoprism.org/docker/arm64/docker-compose.yml
+    wget https://dl.photoprism.app/docker/arm64/docker-compose.yml
     ```
 
     Mostly the same installation instructions as for regular Linux servers apply.
@@ -40,12 +40,12 @@ installed on your system. It is available for Mac, Linux, and Windows.
 
 === "ARMv7"
 
-    Download our [docker-compose.yml](https://dl.photoprism.org/docker/armv7/docker-compose.yml) example for 
+    Download our [docker-compose.yml](https://dl.photoprism.app/docker/armv7/docker-compose.yml) example for 
     older ARMv7-based devices (right click and *Save Link As...* or use `wget`) to a folder of your choice,
     and change the [configuration](config-options.md) as needed:
     
     ```
-    wget https://dl.photoprism.org/docker/armv7/docker-compose.yml
+    wget https://dl.photoprism.app/docker/armv7/docker-compose.yml
     ```
 
     Mostly the same installation instructions as for regular Linux servers apply.
@@ -54,10 +54,10 @@ installed on your system. It is available for Mac, Linux, and Windows.
 
 === "Windows"
 
-    Download our [docker-compose.yml](https://dl.photoprism.org/docker/windows/docker-compose.yml) example for Windows
+    Download our [docker-compose.yml](https://dl.photoprism.app/docker/windows/docker-compose.yml) example for Windows
     (right click and *Save Link As...*) to a folder of your choice, and change the [configuration](config-options.md) as needed:
  
-    [https://dl.photoprism.org/docker/windows/docker-compose.yml](https://dl.photoprism.org/docker/windows/docker-compose.yml) :material-download:
+    [https://dl.photoprism.app/docker/windows/docker-compose.yml](https://dl.photoprism.app/docker/windows/docker-compose.yml) :material-download:
 
     Windows Pro users should [disable](img/docker-disable-wsl2.jpg) the WSL 2 based engine in *Docker Settings > General* 
     so that they can mount drives other than `C:`. This will enable Hyper-V, which 
@@ -68,10 +68,10 @@ installed on your system. It is available for Mac, Linux, and Windows.
 
 === "macOS"
 
-    Download our [docker-compose.yml](https://dl.photoprism.org/docker/macos/docker-compose.yml) example for macOS
+    Download our [docker-compose.yml](https://dl.photoprism.app/docker/macos/docker-compose.yml) example for macOS
     (right click and *Save Link As...*) to a folder of your choice, and change the [configuration](config-options.md) as needed:
 
-    [https://dl.photoprism.org/docker/macos/docker-compose.yml](https://dl.photoprism.org/docker/macos/docker-compose.yml) :material-download:
+    [https://dl.photoprism.app/docker/macos/docker-compose.yml](https://dl.photoprism.app/docker/macos/docker-compose.yml) :material-download:
     
     It's important to [increase the Docker memory limit](img/docker-resources-advanced.jpg) to 4 GB or more,
     as the default of 2 GB may reduce indexing performance and cause unexpected restarts.
@@ -196,7 +196,7 @@ Open the *Logs* tab in *Library* to watch the indexer working.
 
 Of course, you can continue using your favorite tools for processing RAW files, editing metadata, 
 or importing new shots. Go to *Library* and click *Start* to update the index after files have been 
-changed, added, or removed. This can also be automated using CLI commands and a [scheduler](https://dl.photoprism.org/docker/scheduler/).
+changed, added, or removed. This can also be automated using CLI commands and a [scheduler](https://dl.photoprism.app/docker/scheduler/).
 
 Easy, isn't it?
 
@@ -234,7 +234,7 @@ docker-compose exec photoprism photoprism backup --help
     file has been saved.
 
 PhotoPrism's command-line interface is well suited for job automation using a
-[scheduler](https://dl.photoprism.org/docker/scheduler/).
+[scheduler](https://dl.photoprism.app/docker/scheduler/).
 
 #### Examples ####
 

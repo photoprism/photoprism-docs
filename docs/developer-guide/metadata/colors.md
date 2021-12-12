@@ -10,22 +10,22 @@ TODO: Complete table with ID, Color Name, HTML Code and Sample
 
 | ID | Name     | Code     | Sample                                                       |
 | -- | -------- | -------- | ------------------------------------------------------------ |
-| 0  | Black    | #000000  | <img src="https://dl.photoprism.org/assets/img/colors/black.jpg" width="512"> |
-| 1  | Brown    | #795548  | <img src="https://dl.photoprism.org/assets/img/colors/brown.jpg" width="512">|
-| 2  |  Grey    | #9E9E9E  | <img src="https://dl.photoprism.org/assets/img/colors/grey.jpg" width="512">|
-| 3  |  White   | #FFFFFF  | <img src="https://dl.photoprism.org/assets/img/colors/white.jpg" width="512">|
-| 4  |  Purple  | #9C27B0  | <img src="https://dl.photoprism.org/assets/img/colors/purple.jpg" width="512"> |
-| 5  | Gold     | #FFDF00  | <img src="https://dl.photoprism.org/assets/img/colors/gold.jpg" width="512">|
-| 6  | Blue     | #3F51B5  | <img src="https://dl.photoprism.org/assets/img/colors/blue.jpg" width="512"> |
-| 7  | Cyan     | #00BCD4  | <img src="https://dl.photoprism.org/assets/img/colors/cyan.jpg" width="512"> |
-| 8  | Teal     | #009688  | <img src="https://dl.photoprism.org/assets/img/colors/teal.jpg" width="512"> |
-| 9  | Green    | #4CAF50  | <img src="https://dl.photoprism.org/assets/img/colors/green.jpg" width="512"> |
-| A  | Lime     | #CDDC39  | <img src="https://dl.photoprism.org/assets/img/colors/lime.jpg" width="512"> |
-| B  | Yellow   | #FFEB3B  | <img src="https://dl.photoprism.org/assets/img/colors/yellow.jpg" width="512"> |
-| C  | Magenta  | #FF00FF  | <img src="https://dl.photoprism.org/assets/img/colors/magenta.jpg" width="512"> |
-| D  | Orange   | #FF9800  |<img src="https://dl.photoprism.org/assets/img/colors/orange.jpg" width="512"> |
-| E  | Red      | #F44336  | <img src="https://dl.photoprism.org/assets/img/colors/red.jpg" width="512"> |
-| F  | Pink     | #E91E63  | <img src="https://dl.photoprism.org/assets/img/colors/pink.jpg" width="512"> |
+| 0  | Black    | #000000  | <img src="https://dl.photoprism.app/assets/img/colors/black.jpg" width="512"> |
+| 1  | Brown    | #795548  | <img src="https://dl.photoprism.app/assets/img/colors/brown.jpg" width="512">|
+| 2  |  Grey    | #9E9E9E  | <img src="https://dl.photoprism.app/assets/img/colors/grey.jpg" width="512">|
+| 3  |  White   | #FFFFFF  | <img src="https://dl.photoprism.app/assets/img/colors/white.jpg" width="512">|
+| 4  |  Purple  | #9C27B0  | <img src="https://dl.photoprism.app/assets/img/colors/purple.jpg" width="512"> |
+| 5  | Gold     | #FFDF00  | <img src="https://dl.photoprism.app/assets/img/colors/gold.jpg" width="512">|
+| 6  | Blue     | #3F51B5  | <img src="https://dl.photoprism.app/assets/img/colors/blue.jpg" width="512"> |
+| 7  | Cyan     | #00BCD4  | <img src="https://dl.photoprism.app/assets/img/colors/cyan.jpg" width="512"> |
+| 8  | Teal     | #009688  | <img src="https://dl.photoprism.app/assets/img/colors/teal.jpg" width="512"> |
+| 9  | Green    | #4CAF50  | <img src="https://dl.photoprism.app/assets/img/colors/green.jpg" width="512"> |
+| A  | Lime     | #CDDC39  | <img src="https://dl.photoprism.app/assets/img/colors/lime.jpg" width="512"> |
+| B  | Yellow   | #FFEB3B  | <img src="https://dl.photoprism.app/assets/img/colors/yellow.jpg" width="512"> |
+| C  | Magenta  | #FF00FF  | <img src="https://dl.photoprism.app/assets/img/colors/magenta.jpg" width="512"> |
+| D  | Orange   | #FF9800  |<img src="https://dl.photoprism.app/assets/img/colors/orange.jpg" width="512"> |
+| E  | Red      | #F44336  | <img src="https://dl.photoprism.app/assets/img/colors/red.jpg" width="512"> |
+| F  | Pink     | #E91E63  | <img src="https://dl.photoprism.app/assets/img/colors/pink.jpg" width="512"> |
 
 
 | ID | Name     | Code     | Sample                                                       |
@@ -68,7 +68,7 @@ TODO: Complete table with ID, Color Name, HTML Code and Sample
 
 ## HCL vs HSL ##
 
-![](https://dl.photoprism.org/assets/img/color-hsl-hcl.jpg)
+![](https://dl.photoprism.app/assets/img/color-hsl-hcl.jpg)
 
 See also https://github.com/lucasb-eyer/go-colorful#so-which-colorspace-should-i-use
 

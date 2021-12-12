@@ -13,7 +13,7 @@ and pull requests. If you help with development, you'll have the opportunity to 
 
 ## Our Milestones
 
-![](https://dl.photoprism.org/img/diagrams/milestones.png)
+![](https://dl.photoprism.app/img/diagrams/milestones.png)
 
 ## Roadmap ##
 

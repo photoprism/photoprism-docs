@@ -11,7 +11,7 @@
 
 !!! tldr ""
     You can test our latest features and improvements by changing the image from `photoprism/photoprism:latest` 
-    to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.org/docker/). 
+    to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/). 
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
 ### December 10, 2021 ###
@@ -40,7 +40,7 @@ and [contributors](https://github.com/photoprism/photoprism/graphs/contributors/
 
 - CLI: [Improved parameter](https://github.com/photoprism/photoprism/issues/1778) and [command descriptions](https://github.com/photoprism/photoprism/issues/1735)
 - CLI: [Reset command optionally also deletes files in the cache folder](https://github.com/photoprism/photoprism/issues/1787)
-- Config: [Improved `docker-compose.yml` examples](https://dl.photoprism.org/docker/)
+- Config: [Improved `docker-compose.yml` examples](https://dl.photoprism.app/docker/)
 
 ### November 30, 2021 ###
 <span class="build">Build 211130-13cfcf6d</span>
@@ -88,7 +88,7 @@ Darktable 3.6 among other updated dependencies.
 - Auth: [Usernames are not case-sensitive anymore](https://github.com/photoprism/photoprism/commit/a354a170418371384ae047aef2bf49888e444dc5)
 - CLI: [Added `--force` flag to `photoprism optimize` command](https://github.com/photoprism/photoprism/commit/04cde0f39254c7eff04b3e481ebdca4ead747b16)
 - CLI: [Improved parameter and command descriptions](https://github.com/photoprism/photoprism/commit/9da2e92fb603057cf7e2e596391e88db161d2bbc)
-- Config: [Improved `docker-compose.yml` examples](https://dl.photoprism.org/docker/)
+- Config: [Improved `docker-compose.yml` examples](https://dl.photoprism.app/docker/)
 - Translations: Added [Bahasa Indonesia](https://github.com/photoprism/photoprism/issues/1689) and [Hungarian](https://github.com/photoprism/photoprism/pull/1751)
 - Translations: Updated [Polish](https://github.com/photoprism/photoprism/pull/1674) and [Italian](https://github.com/photoprism/photoprism/pull/1706)
 
@@ -211,7 +211,7 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
 <span class="build">Build 210518-80981c25</span>
 
 - Safari: [Fixed PWA file download on iOS](https://github.com/photoprism/photoprism/issues/895)
-- Docker: [Added config example for scheduled background tasks](https://dl.photoprism.org/docker/scheduler/)
+- Docker: [Added config example for scheduled background tasks](https://dl.photoprism.app/docker/scheduler/)
 - Docker: [Updated base image includes Darktable 3.4.1, RawTherapee 5.8, and FFmpeg 4.3.2](https://github.com/photoprism/photoprism/commit/77ddcecf29c95e1b33ba11046fd002ed3d408382)
 - TensorFlow: [Improved error handling](https://github.com/photoprism/photoprism/issues/1270)
 - Translations: [Updated French](https://github.com/photoprism/photoprism/pull/1286)
@@ -361,7 +361,7 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
   [German](https://github.com/photoprism/photoprism/commit/e015e17f3f2b7d29d2d7d71518b9d8657daff99c)
 - Index: Automatically create [JPEGs for related media files](https://github.com/photoprism/photoprism/issues/813) as well
 - Import: Improved [error handling](https://github.com/photoprism/photoprism/issues/261) when the file system becomes unavailable
-- Config: [Updated docker-compose.yml examples](https://dl.photoprism.org/docker/)
+- Config: [Updated docker-compose.yml examples](https://dl.photoprism.app/docker/)
 - Config: [Added optional gzip compression for built-in web server](getting-started/config-options.md)
 - Config: Limit number of indexing workers to half the number of physical cores by default to 
   avoid [high load](https://twitter.com/miguelarios_/status/1347775696492503040) on hyper-threading capable CPUs
@@ -386,7 +386,7 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
 - Config: Use random hash for improved preview token security 
 - UX: Disabled page zoom so that app feels more native on mobile devices
 - UX: Reduced min password length to 4 characters
-- UX: Improved [docker-compose.yml examples](https://dl.photoprism.org/docker/)
+- UX: Improved [docker-compose.yml examples](https://dl.photoprism.app/docker/)
 - UX: Reduced icon size in "add to album" dialog
 
 ### December 31, 2020 ###

@@ -6,7 +6,7 @@ Older databases using the same dialect, such as MySQL 8, may work but are not of
 Never store database files on a shared network drive or open them with two server instances at the same time.
 
 !!! info
-    Our [docker-compose.yml](https://dl.photoprism.org/docker/) examples include
+    Our [docker-compose.yml](https://dl.photoprism.app/docker/) examples include
     tested and working database configurations. These docs are for advanced users only.
 
 ## MariaDB ##
@@ -42,7 +42,7 @@ services:
 
 !!! note
     `mariadb:3306` needs to be replaced with the actual database server host and port, 
-    unless you're using our [docker-compose.yml](https://dl.photoprism.org/docker/docker-compose.yml)
+    unless you're using our [docker-compose.yml](https://dl.photoprism.app/docker/docker-compose.yml)
     example without modifications.
 
 ## Database Migrations ##

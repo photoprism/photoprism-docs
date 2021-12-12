@@ -228,7 +228,7 @@ are listed:
 docker-compose exec photoprism photoprism help
 ```
 
-Our [Docker Compose](docker-compose.md) [examples](https://dl.photoprism.org/docker/) are continuously 
+Our [Docker Compose](docker-compose.md) [examples](https://dl.photoprism.app/docker/) are continuously 
 updated and inline documentation has been added to simplify installation.
 
 ### What exactly does the read-only mode? ###

@@ -30,7 +30,7 @@ See [Setup Using Docker Compose](docker-compose.md) for a command reference.
 
 !!! tldr ""
     You can test our latest features and improvements by changing the image from `photoprism/photoprism:latest`
-    to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.org/docker/).
+    to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/).
     Then pull the most recent image and restart your instance.
 
 ### Facial Recognition ###

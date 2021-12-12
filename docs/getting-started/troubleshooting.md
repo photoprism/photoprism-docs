@@ -222,7 +222,7 @@ The [InnoDB buffer pool](https://mariadb.com/kb/en/innodb-buffer-pool/) serves a
 It is a key component for optimizing MariaDB performance. Its size should be as large as possible to keep frequently
 used data in memory and reduce disk I/O - typically the biggest bottleneck.
 
-Our [docker-compose.yml examples](https://dl.photoprism.org/docker/) have a default buffer pool size between
+Our [docker-compose.yml examples](https://dl.photoprism.app/docker/) have a default buffer pool size between
 128 MB and 256 MB, depending on the platform. You can change it using the `--innodb-buffer-pool-size` parameter
 (`M` means Megabyte, `G` stands for Gigabyte). If your server has enough memory, we recommend increasing the size to 1 GB:
 

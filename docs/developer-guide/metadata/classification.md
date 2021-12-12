@@ -1,4 +1,4 @@
-Image classification is performed using a [pre-trained model](https://dl.photoprism.org/tensorflow/), *NASNet Mobile 224*, that we have chosen because of its size, performance and accuracy. To get a basic understanding of how this works, you can read [Image Classification using Deep Neural Networks](https://medium.com/@tifa2up/image-classification-using-deep-neural-networks-a-beginner-friendly-approach-using-tensorflow-94b0a090ccd4).
+Image classification is performed using a [pre-trained model](https://dl.photoprism.app/tensorflow/), *NASNet Mobile 224*, that we have chosen because of its size, performance and accuracy. To get a basic understanding of how this works, you can read [Image Classification using Deep Neural Networks](https://medium.com/@tifa2up/image-classification-using-deep-neural-networks-a-beginner-friendly-approach-using-tensorflow-94b0a090ccd4).
 
 In addition, we manually matched the model classification with the [labels](https://github.com/photoprism/photoprism/blob/develop/internal/classify/rules.yml) you see in our UI:
 
@@ -130,4 +130,4 @@ Source: http://www.asimovinstitute.org/neural-network-zoo/
 - https://datahub.io/collections/yago - YAGO3 is a huge semantic knowledge base, derived from Wikipedia WordNet and GeoNames
 - [Google AI Blog: Improving Inception and Image Classification in TensorFlow](https://ai.googleblog.com/2016/08/improving-inception-and-image.html)
 - [CNN Architectures: LeNet, AlexNet, VGG, GoogLeNet, ResNet and more](https://medium.com/@sidereal/cnns-architectures-lenet-alexnet-vgg-googlenet-resnet-and-more-666091488df5)
-- [Gildas Chabot - AI image search with Go & Tensorflow](https://dl.photoprism.org/slides/Image%20Search%20with%20Go%20and%20TensorFlow.pdf) (slides)
+- [Gildas Chabot - AI image search with Go & Tensorflow](https://dl.photoprism.app/slides/Image%20Search%20with%20Go%20and%20TensorFlow.pdf) (slides)

@@ -7,7 +7,7 @@ It is available for Mac, Linux, and Windows. PhotoPrism also runs on [DigitalOce
 [Raspberry Pi](../getting-started/raspberry-pi.md), [FreeBSD](../getting-started/freebsd.md), and many
 [NAS devices](../getting-started/nas/synology.md).
 
-![Progressive Web App](https://dl.photoprism.org/img/ui/iphone-index-360px.png){ align=right }
+![Progressive Web App](https://dl.photoprism.app/img/ui/iphone-index-360px.png){ align=right }
 
 When setup is complete, you can start [indexing your pictures](library/index.md).
 Be patient, this may take a while depending on your server hardware and how many files you have.

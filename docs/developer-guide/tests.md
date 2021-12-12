@@ -75,7 +75,7 @@ To test javascript code we use [mocha](https://mochajs.org/) in combination with
 ### Download test and config files
 Download the following directory and unzip it within your storage directory
 
-``wget https://dl.photoprism.org/qa/acceptance.tar.gz``
+``wget https://dl.photoprism.app/qa/acceptance.tar.gz``
 
 ### Run tests within the docker container
 You can run the tests from within the photoprism container in firefox or chromium.

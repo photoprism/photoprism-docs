@@ -43,15 +43,15 @@ Photiva | ? | macOS, Linux, Windows | - | - | - | - | - | ? |
 `*` Compared to JPG/EXIF converted from photoshop
 
 ### Image Diff ###
-The following table shows the difference between the JPEG files converted by Darktable, Sips, Rawtherapee, UFraw and ImageMagick compared to Adobe Photoshop. Red are pixel that differ from the photoshop version, white are equal pixels. In total 5 Images have been compared ([full results](https://dl.photoprism.org/assets/img/raw-converter/)). The diff was created using https://github.com/ewanmellor/git-diff-image.
+The following table shows the difference between the JPEG files converted by Darktable, Sips, Rawtherapee, UFraw and ImageMagick compared to Adobe Photoshop. Red are pixel that differ from the photoshop version, white are equal pixels. In total 5 Images have been compared ([full results](https://dl.photoprism.app/assets/img/raw-converter/)). The diff was created using https://github.com/ewanmellor/git-diff-image.
 
 Tool         | Diff (left is Photoshop)                        |
 ------------ | ----------------------------------------------- |
-Darktable    |  <img src="https://dl.photoprism.org/assets/img/raw-converter/ps_vs_darktable.jpg" width="512"><br><img src="https://dl.photoprism.org/assets/img/raw-converter/ps_vs_darktable_2.jpg" width="512"> |
-[Sips](https://ss64.com/osx/sips.html) | <img src="https://dl.photoprism.org/assets/img/raw-converter/ps_vs_sips.jpg" width="512"><br><img src="https://dl.photoprism.org/assets/img/raw-converter/ps_vs_sips_2.jpg" width="512"> |
-[Rawtherapee](https://rawpedia.rawtherapee.com/Command-Line_Options) | <img src="https://dl.photoprism.org/assets/img/raw-converter/ps_vs_rawtherapee.jpg" width="512"><br><img src="https://dl.photoprism.org/assets/img/raw-converter/ps_vs_rawtherapee_2.jpg" width="512"> |
-[UFraw](https://www.systutorials.com/docs/linux/man/1-ufraw/) | <img src="https://dl.photoprism.org/assets/img/raw-converter/ps_vs_ufraw.jpg" width="512"> |
-[ImageMagick](https://www.imagemagick.org/script/command-line-processing.php) | <img src="https://dl.photoprism.org/assets/img/raw-converter/ps_vs_imagemagick.jpg" width="512"> |
+Darktable    |  <img src="https://dl.photoprism.app/assets/img/raw-converter/ps_vs_darktable.jpg" width="512"><br><img src="https://dl.photoprism.app/assets/img/raw-converter/ps_vs_darktable_2.jpg" width="512"> |
+[Sips](https://ss64.com/osx/sips.html) | <img src="https://dl.photoprism.app/assets/img/raw-converter/ps_vs_sips.jpg" width="512"><br><img src="https://dl.photoprism.app/assets/img/raw-converter/ps_vs_sips_2.jpg" width="512"> |
+[Rawtherapee](https://rawpedia.rawtherapee.com/Command-Line_Options) | <img src="https://dl.photoprism.app/assets/img/raw-converter/ps_vs_rawtherapee.jpg" width="512"><br><img src="https://dl.photoprism.app/assets/img/raw-converter/ps_vs_rawtherapee_2.jpg" width="512"> |
+[UFraw](https://www.systutorials.com/docs/linux/man/1-ufraw/) | <img src="https://dl.photoprism.app/assets/img/raw-converter/ps_vs_ufraw.jpg" width="512"> |
+[ImageMagick](https://www.imagemagick.org/script/command-line-processing.php) | <img src="https://dl.photoprism.app/assets/img/raw-converter/ps_vs_imagemagick.jpg" width="512"> |
 
 ### EXIF Diff ###
 The following table shows the difference between the JPG files converted by the tools compared to JPG files converted by photoshop. 5 Images have been compared.

@@ -202,7 +202,7 @@ Easy, isn't it?
 
 !!! info ""
     If you're running out of memory - or other system resources - while indexing, try reducing the 
-    [number of workers](https://docs.photoprism.org/getting-started/config-options/) by setting
+    [number of workers](https://docs.photoprism.app/getting-started/config-options/) by setting
     `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml` (depending on the performance of the server).
     Also make sure your server has at least 4 GB of [swap](https://opensource.com/article/18/9/swap-space-linux-systems) 
     configured so that indexing doesn't cause restarts when there are memory usage spikes.

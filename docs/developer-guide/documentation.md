@@ -3,7 +3,7 @@
 ## User Facing Documentation
 
 User-facing documentation lives in the [photoprism-docs](https://github.com/photoprism/photoprism-docs/)
-repository and can be browsed on [docs.photoprism.org](https://docs.photoprism.org/).
+repository and can be browsed on [docs.photoprism.app](https://docs.photoprism.app/).
 
 See the [README](https://github.com/photoprism/photoprism-docs/#readme) for how to easily edit the docs yourself.
 

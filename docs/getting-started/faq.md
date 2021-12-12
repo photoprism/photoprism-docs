@@ -221,7 +221,7 @@ of all apps installed. The length of share links increases as well.
 
 We maintain a complete list of [config options](config-options.md) in *Getting Started*.
 When you run `photoprism help` in a [terminal](docker-compose.md#command-line-interface), 
-all commands and parameters available in your currently installed [version](https://docs.photoprism.org/release-notes/) 
+all commands and parameters available in your currently installed [version](https://docs.photoprism.app/release-notes/) 
 are listed:
 
 ```

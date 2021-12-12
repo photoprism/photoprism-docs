@@ -6,7 +6,7 @@ PhotoPrism® is an AI-powered app for browsing, organizing & sharing your photo 
 
 ## Feature Overview ##
 
-* Browse [all your photos](https://docs.photoprism.org/user-guide/organize/browse/) and [videos](https://demo.photoprism.app/videos) without worrying about [RAW conversion, duplicates or video formats](https://docs.photoprism.org/user-guide/settings/library/)
+* Browse [all your photos](https://docs.photoprism.app/user-guide/organize/browse/) and [videos](https://demo.photoprism.app/videos) without worrying about [RAW conversion, duplicates or video formats](https://docs.photoprism.app/user-guide/settings/library/)
 * Easily find specific pictures using [powerful search filters](https://demo.photoprism.app/browse?view=cards&q=flower%20color%3Ared)
 * Privacy-friendly: No data is ever sent to Google, Amazon, Facebook, or Apple unless you explicitly upload files to one of their services :closed_lock_with_key:
 * Recognizes [the faces of your family and friends](https://demo.photoprism.app/people)
@@ -18,7 +18,7 @@ PhotoPrism® is an AI-powered app for browsing, organizing & sharing your photo 
 * Metadata is extracted and merged from Exif, XMP, and other sources such as Google Photos
 * Many more image properties like [Colors](https://demo.photoprism.app/browse?view=cards&q=color:red), [Chroma](https://demo.photoprism.app/browse?view=cards&q=mono%3Atrue), and [Quality](https://demo.photoprism.app/review) can be searched as well
 * Use [PhotoSync](https://www.photosync-app.com/) to securely backup iOS and Android phones in the background
-* WebDAV clients such as Microsoft's Windows Explorer and Apple's Finder [can connect directly](https://docs.photoprism.org/user-guide/sync/webdav/) to PhotoPrism, allowing you to open, edit, and delete files from your computer as if they were local
+* WebDAV clients such as Microsoft's Windows Explorer and Apple's Finder [can connect directly](https://docs.photoprism.app/user-guide/sync/webdav/) to PhotoPrism, allowing you to open, edit, and delete files from your computer as if they were local
 
 <p style="text-align: center; padding: 20px 4px;">
   <a class="action-button" href="https://demo.photoprism.app/" target="_blank">TRY OUR DEMO</a>

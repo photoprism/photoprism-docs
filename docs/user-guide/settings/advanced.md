@@ -9,7 +9,7 @@ is enabled.
 !!! tldr ""
     Changing advanced settings **always requires a restart** to take effect. Selecting a different thumbnail
     quality or size won't replace existing thumbnails. You may regenerate them using the 
-    [command-line interface](https://docs.photoprism.org/getting-started/docker-compose/#command-line-interface).
+    [command-line interface](https://docs.photoprism.app/getting-started/docker-compose/#command-line-interface).
 
 ![](img/advanced-settings.jpg)
 

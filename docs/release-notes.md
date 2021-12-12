@@ -1,7 +1,7 @@
 # Release Notes
 
 !!! note ""
-    Our [stable version](https://docs.photoprism.org/release-notes/) and development preview have been built into a 
+    Our [stable version](https://docs.photoprism.app/release-notes/) and development preview have been built into a 
     single [multi-arch image](https://hub.docker.com/r/photoprism/photoprism) for 64-bit AMD, Intel,
     and ARM processors. That means, [Raspberry Pi](getting-started/raspberry-pi.md) 3 / 4 owners can pull from the 
     same repository, enjoy the exact same functionality, and can follow the regular [installation instructions](getting-started/docker-compose.md) 
@@ -50,7 +50,7 @@ and [contributors](https://github.com/photoprism/photoprism/graphs/contributors/
 - Places: [Improved location details in border regions](https://github.com/photoprism/photoprism/issues/1767) and [near Paris](https://github.com/photoprism/photoprism/issues/1776)
 - PWA: [Updated app icons, style is now also applied to the user interface](https://github.com/photoprism/photoprism/tree/develop/assets/static/icons)
 
-*For our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.org/developer-guide/):*
+*For our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.app/developer-guide/):*
 
 - UI: New *Abyss* and *Gemstone* dark themes 💎
 
@@ -58,7 +58,7 @@ and [contributors](https://github.com/photoprism/photoprism/graphs/contributors/
 <span class="build">Build 211128-7e8974fd</span>
 
 Official support for MySQL 8 is discontinued with this update as it's [not feasible](https://github.com/photoprism/photoprism/issues/1764) 
-to perform a full test before each release. We recommend [upgrading](https://docs.photoprism.org/getting-started/troubleshooting/#version-upgrade)
+to perform a full test before each release. We recommend [upgrading](https://docs.photoprism.app/getting-started/troubleshooting/#version-upgrade)
 to [MariaDB 10.6](https://mariadb.com/kb/en/function-differences-between-mariadb-106-and-mysql-80/) or later.
 PostgreSQL support is [planned for 2022](https://github.com/photoprism/photoprism/issues/47) without a specific release date yet.
 
@@ -92,9 +92,9 @@ Darktable 3.6 among other updated dependencies.
 - Translations: Added [Bahasa Indonesia](https://github.com/photoprism/photoprism/issues/1689) and [Hungarian](https://github.com/photoprism/photoprism/pull/1751)
 - Translations: Updated [Polish](https://github.com/photoprism/photoprism/pull/1674) and [Italian](https://github.com/photoprism/photoprism/pull/1706)
 
-*For our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.org/developer-guide/):*
+*For our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.app/developer-guide/):*
 
-- CLI: [Run `photoprism places update` to retrieve updated location details](https://docs.photoprism.org/getting-started/docker-compose/#command-line-interface)
+- CLI: [Run `photoprism places update` to retrieve updated location details](https://docs.photoprism.app/getting-started/docker-compose/#command-line-interface)
 - Config: [Set `PHOTOPRISM_APP_ICON` to choose an alternative PWA icon](getting-started/config-options.md)
 
 ### October 18, 2021 ###
@@ -103,12 +103,12 @@ Darktable 3.6 among other updated dependencies.
 - UI: [Updated *Lavender* theme](https://github.com/photoprism/photoprism/commit/1efdf1c1a3690fa22658bc42786aa6b1fff217e4)
 - Places: [Fixed maps initialization after reload in non-public mode](https://github.com/photoprism/photoprism/commit/e200f322be07f6ada9cd88902ba65372c69f0364)
 - Search: [Added `live` and `raw:true` filters as alternative to `type:…`](https://github.com/photoprism/photoprism/commit/25a954d56821108369cc1a397f1b0a7a3a22c504)
-- Search: [Added `faces:new` alias for `face:new`](https://docs.photoprism.org/user-guide/organize/people/#recognized-new-people)
+- Search: [Added `faces:new` alias for `face:new`](https://docs.photoprism.app/user-guide/organize/people/#recognized-new-people)
 - Config: [Maximum background worker interval has been increased to 7 days](https://github.com/photoprism/photoprism/issues/1618)
 - Security: [Added `Content-Security-Policy` header to prevent framing attacks](https://github.com/photoprism/photoprism/commit/2ddb1d6daaab847cd95f38aaa2f9293f35023f9a)
 - Translations: Updated [Russian](https://github.com/photoprism/photoprism/pull/1622) and [Slovak](https://github.com/photoprism/photoprism/pull/1620)
 
-*For our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.org/developer-guide/):*
+*For our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.app/developer-guide/):*
 
 - UI: New *Vanta* dark theme ✨
 
@@ -140,7 +140,7 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
 - UX: [Enhanced visibility of file errors in the edit dialog files tab](https://github.com/photoprism/photoprism/commit/6cd5ee6d9b53aed74d92c46ccb29f78adf11811a)
 - CLI: [Revised descriptions of commands and configuration flags](https://github.com/photoprism/photoprism/search?q=cli+help&type=commits)
 
-*For our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.org/developer-guide/):*
+*For our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.app/developer-guide/):*
 
 - People: [Recognized faces can be hidden on the overview page](https://github.com/photoprism/photoprism/issues/1554) 
 
@@ -182,7 +182,7 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
 - Metadata: [Improved Exif parser with cycle detection](https://github.com/photoprism/photoprism/issues/1326)
 - Metadata: [Support for long projection type names like transverse-cylindrical](https://github.com/photoprism/photoprism/issues/1508)
 - Config: [Added RAW file extension blacklists for Darktable and RawTherapee](https://github.com/photoprism/photoprism/issues/1362)
-- Config: [Added disable options for image classification and facial recognition](https://docs.photoprism.org/getting-started/config-options/)
+- Config: [Added disable options for image classification and facial recognition](https://docs.photoprism.app/getting-started/config-options/)
 - Config: [Added support for non-root site URLs](https://github.com/photoprism/photoprism/issues/425)
 - Config: [Added content delivery network URL option](https://github.com/photoprism/photoprism/issues/1351)
 - MariaDB: [Set explicit table engine, charset, and collation](https://github.com/photoprism/photoprism/issues/1371)
@@ -333,7 +333,7 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
   and [allow overwriting estimated locations](https://github.com/photoprism/photoprism/pull/918) 
 - Settings: [Fixed disabling logs](https://github.com/photoprism/photoprism/issues/891)
 
-*For our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.org/developer-guide/):*
+*For our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.app/developer-guide/):*
 
 - UX: Added two [dark themes](https://github.com/photoprism/photoprism/issues/700)
 

@@ -1,7 +1,7 @@
 # Getting Updates
 
 !!! note ""
-    Our [stable version](https://docs.photoprism.org/release-notes/) and development preview have been built into a 
+    Our [stable version](https://docs.photoprism.app/release-notes/) and development preview have been built into a 
     single [multi-arch image](https://hub.docker.com/r/photoprism/photoprism) for 64-bit AMD, Intel, 
     and ARM processors. That means, [Raspberry Pi](raspberry-pi.md) 3 / 4 owners can pull from the same repository, 
     enjoy the exact same functionality, and can follow the regular [installation instructions](docker-compose.md)
@@ -42,7 +42,7 @@ docker-compose exec photoprism photoprism faces index
 ```
 
 Remove existing people and faces for a clean start e.g. after upgrading from our 
-[development preview](https://docs.photoprism.org/release-notes/#development-preview):
+[development preview](https://docs.photoprism.app/release-notes/#development-preview):
 
 ```
 docker-compose exec photoprism photoprism faces reset -f

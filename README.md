@@ -9,7 +9,7 @@ PhotoPrism Documentation
 
 This repository contains the source files of [PhotoPrism](https://photoprism.org)'s documentation in markdown.
 
-They are meant to be parsed with the [Mkdocs](https://www.mkdocs.org/) documentation builder to build the HTML documentation on [docs.photoprism.org](https://docs.photoprism.org/).
+They are meant to be parsed with the [Mkdocs](https://www.mkdocs.org/) documentation builder to build the HTML documentation on [docs.photoprism.app](https://docs.photoprism.app/).
 
 ## Contributing changes
 
@@ -55,7 +55,7 @@ commit the changes, push them to your fork and submit a pull request.
 All the content of this repository is licensed under the Attribution-ShareAlike 4.0 International license ([CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)).
 
 [paypal]: https://www.paypal.me/photoprism
-[docs]: https://docs.photoprism.org/
+[docs]: https://docs.photoprism.app/
 [chat]: https://gitter.im/browseyourlife/community
 [ask]: https://github.com/photoprism/photoprism/discussions
 [twitter]: https://twitter.com/photoprism_app

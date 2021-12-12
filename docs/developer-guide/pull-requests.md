@@ -32,9 +32,9 @@ guidelines to ensure that all submissions are acceptable:
   * While you are working on it and your pull request is not merged yet, pull in changes from "upstream" often so that you stay up to date and there is a lower risk for [merge conflicts](https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/):
     * `git fetch upstream`
     * `git merge upstream/develop`
-  * We recommend running [tests](https://docs.photoprism.org/developer-guide/tests/) after each change to make sure you didn't break anything:
+  * We recommend running [tests](https://docs.photoprism.app/developer-guide/tests/) after each change to make sure you didn't break anything:
     * `make test`
-  * **Add [tests](https://docs.photoprism.org/developer-guide/tests/) for any new code.** If you have questions about how to do this, please ask in your pull request.
+  * **Add [tests](https://docs.photoprism.app/developer-guide/tests/) for any new code.** If you have questions about how to do this, please ask in your pull request.
   * Please run `make fmt` to ensure code is properly formatted according to our standards.
   * If all tests are green and you see no other errors, commit your changes. To reference related [GitHub issues](https://github.com/photoprism/photoprism/issues), please end your commit message with the issue ID like `#1234`:
       * `git status -s`
@@ -50,7 +50,7 @@ guidelines to ensure that all submissions are acceptable:
     * `git push -u origin feature/your_feature_name`
   * **[Create a pull request](https://help.github.com/articles/creating-a-pull-request/)** with a helpful description of what it does.
   * Wait for our code review and fix remaining issues, if any.
-  * Write [documentation](https://docs.photoprism.org/developer-guide/documentation/) if you are adding new features or changing functionality. It is hosted on [docs.photoprism.org](https://docs.photoprism.org/) and automatically updates whenever changes are pushed to the repository.
+  * Write [documentation](https://docs.photoprism.app/developer-guide/documentation/) if you are adding new features or changing functionality. It is hosted on [docs.photoprism.app](https://docs.photoprism.app/) and automatically updates whenever changes are pushed to the repository.
 
 You can also create a pull request if your changes are not yet complete or working. Just let us know 
 it's in progress, so we don't try to merge them. We can help you with a code review or other feedback 

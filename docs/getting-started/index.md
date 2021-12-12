@@ -18,7 +18,7 @@ You can turn this and other features off in [Settings](../user-guide/settings/ge
 depending on your specific use case.
 
 !!! note ""
-    Our [stable version](https://docs.photoprism.org/release-notes/) and development preview have been built into a 
+    Our [stable version](https://docs.photoprism.app/release-notes/) and development preview have been built into a 
     single [multi-arch image](https://hub.docker.com/r/photoprism/photoprism) for 64-bit AMD, Intel,
     and ARM processors. That means, [Raspberry Pi](raspberry-pi.md) 3 / 4 owners can pull from the same repository, 
     enjoy the exact same functionality, and can follow the regular [installation instructions](docker-compose.md)
@@ -53,7 +53,7 @@ Beyond these minimum requirements, the amount of RAM should match the number of 
     RAW file conversion and TensorFlow will be disabled on servers 
     with less than 2 GB of physical memory.
     If you're running out of memory - or other system resources - while indexing, try reducing the
-    [number of workers](https://docs.photoprism.org/getting-started/config-options/)
+    [number of workers](https://docs.photoprism.app/getting-started/config-options/)
     to a reasonably small value in `docker-compose.yml` (depending on the performance of the server).
     As a measure of last resort, you may disable using TensorFlow for image classification and facial recognition.
 

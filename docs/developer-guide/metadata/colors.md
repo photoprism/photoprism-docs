@@ -1,6 +1,6 @@
 We've reimplemented color indexing using a 3x3 thumbnail. It enables us to search specific parts of an image. Our previous algorithm was not deterministic, so search would have returned different results every time.
 
-Demo: https://demo.photoprism.org/photos?q=green
+Demo: https://demo.photoprism.app/photos?q=green
 
 ## Colors ##
 

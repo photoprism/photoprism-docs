@@ -73,7 +73,7 @@ in particular for UTC. The Docker base image has been upgraded to Ubuntu 21.10, 
 Darktable 3.6 among other updated dependencies. 
 
 - UX: Redesigned [splash screen](https://github.com/photoprism/photoprism/commit/293fa0ca784ae19998cc8ff3459883a137fff4c2) based on theme colors
-- Places: [Viewer loads faster and sorts photos by distance instead of date](https://demo.photoprism.org/places)
+- Places: [Viewer loads faster and sorts photos by distance instead of date](https://demo.photoprism.app/places)
 - Places: [Less frequent estimates to reduce background activity](https://github.com/photoprism/photoprism/issues/1736)
 - Places: [Normalized names of states, oceans, and lakes](https://github.com/photoprism/photoprism/issues/1664)
 - Places: [Updated location data from OpenStreetMap](https://www.openstreetmap.org/)

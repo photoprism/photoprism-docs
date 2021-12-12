@@ -7,7 +7,7 @@ and can follow the regular [Installation Instructions](docker-compose.md) after 
 [System Requirements](#system-requirements) and [Architecture Specific Notes](#architecture-specific-notes).
 
 Existing users are advised to update their `docker-compose.yml` config based on our examples
-available at [dl.photoprism.app/docker/](https://dl.photoprism.app/docker/).
+available at [dl.photoprism.app/docker](https://dl.photoprism.app/docker/).
 
 !!! tldr ""
     To ensure compatibility with 64-bit Docker images, your Raspberry Pi 3 / 4 must boot with

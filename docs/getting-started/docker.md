@@ -149,7 +149,7 @@ docker rm -f photoprism
 
 !!! example ""
     **Back us on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism).**
-    Your continued support helps us provide services like satellite maps and develop new features. Thank you very much! 💜
+    Your continued support helps us provide services like satellite maps and develop new features. Thank you! 💜
 
 ### Command-Line Interface ###
 

@@ -23,20 +23,18 @@ your specific use case.
 
 ## Getting Support ##
 
-Please read the [Troubleshooting Guide](../getting-started/troubleshooting.md) before reporting installation problems.
+Please read the [Troubleshooting Guide](../getting-started/troubleshooting.md) before reporting problems.
+If this doesn't help, or you have other questions:
 
-If this doesn't help or you have other questions:
+- you are welcome to ask in our [Community Chat](https://gitter.im/browseyourlife/community)
+- and post your question in [GitHub Discussions](https://github.com/photoprism/photoprism/discussions)
 
-- you're welcome to ask in our [Community Chat](https://gitter.im/browseyourlife/community)
-- or post your question in [GitHub Discussions](https://github.com/photoprism/photoprism/discussions)
-
-In addition, [Sponsors](../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
-
-When reporting a problem, always include the version you are using and information
-about your environment such as browser, operating system, installed memory, and
-processor type.
+In addition, [sponsors](../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
 
 We'll do our best to answer all your questions. In return, we ask you to back us on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism).
-Think of "free software" as in "free speech," not as in "free beer".
+Think of "free software" as in "free speech," not as in "free beer". Thank you! 💜
 
-Thank you! 💜
+!!! tldr ""
+    When reporting a problem, always include the version you are using and information
+    about your environment such as browser, operating system, installed memory, and
+    processor type.

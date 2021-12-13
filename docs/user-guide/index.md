@@ -23,16 +23,20 @@ your specific use case.
 
 ## Getting Support ##
 
-Please read our [Troubleshooting Guide](../getting-started/troubleshooting.md) before reporting installation problems and use 
-[GitHub Issues](https://github.com/photoprism/photoprism/issues) only to report clearly identified bugs to us. 
-If you are not sure, first use [GitHub Discussions](https://github.com/photoprism/photoprism/discussions)
-or ask in our [Community Chat](https://gitter.im/browseyourlife/community). [Sponsors](../funding.md)
-receive direct [technical support](https://photoprism.app/contact) via email.
+Please read the [Troubleshooting Guide](../getting-started/troubleshooting.md) before reporting installation problems.
+
+If this doesn't help or you have other questions:
+
+- you're welcome to ask in our [Community Chat](https://gitter.im/browseyourlife/community)
+- or post your question in [GitHub Discussions](https://github.com/photoprism/photoprism/discussions)
+
+In addition, [Sponsors](../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
 
 When reporting a problem, always include the version you are using and information
 about your environment such as browser, operating system, installed memory, and
 processor type.
 
-!!! example ""
-    **Back us on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism).**
-    Your continued support helps us provide services like satellite maps and develop new features. Thank you very much! 💜
+We'll do our best to answer all your questions. In return, we ask you to back us on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism).
+Think of "free software" as in "free speech," not as in "free beer".
+
+Thank you! 💜

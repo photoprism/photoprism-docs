@@ -163,7 +163,7 @@ extra:
       link: /
       lang: en
     - name: 🇩🇪 Deutsch
-      link: https://docs.photoprism.de/
+      link: https://docs-de.photoprism.app/
       lang: de
   social:
     - icon: fontawesome/brands/github

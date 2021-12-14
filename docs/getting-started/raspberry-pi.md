@@ -75,10 +75,8 @@ and those with a 32-bit operating system:
 | ARMv7 Release     | `photoprism/photoprism:armv7`       | 
 | MariaDB           | `linuxserver/mariadb:latest`        | 
 
-Pay close attention to changed directory and environment variable names.
-
 If your device meets the [requirements](#system-requirements), mostly the same installation instructions as 
-for regular Linux servers apply.
+for regular Linux servers apply. Pay close attention to changed directory and environment variable names.
 
 ### Getting Updates ###
 

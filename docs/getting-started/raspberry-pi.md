@@ -67,18 +67,13 @@ It's a 64-bit Ubuntu Server with Docker pre-configured.
 
 #### Older ARMv7-based Devices ####
 
-!!! fail ""
-    The ARMv7 build is currently failing due to an issue in the network stack. We are working on a solution.
-    You can use the [previous multi-arch image](https://hub.docker.com/r/photoprism/photoprism/tags) `photoprism/photoprism:20211203` meanwhile.
-
 You have to resort to alternative Docker images to run PhotoPrism and MariaDB on ARMv7-based devices
 and those with a 32-bit operating system:
 
-| Image               | Name                                  |
-|---------------------|---------------------------------------|
-| Stable Release      | `photoprism/photoprism:armv7`         | 
-| Development Preview | `photoprism/photoprism:armv7-preview` | 
-| MariaDB             | `linuxserver/mariadb:latest`          | 
+| Image             | Name                                |
+|-------------------|-------------------------------------|
+| ARMv7 Release     | `photoprism/photoprism:armv7`       | 
+| MariaDB           | `linuxserver/mariadb:latest`        | 
 
 Pay close attention to changed directory and environment variable names.
 

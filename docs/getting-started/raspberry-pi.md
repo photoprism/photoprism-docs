@@ -78,7 +78,7 @@ and those with a 32-bit operating system:
 Pay close attention to changed directory and environment variable names.
 
 If your device meets the [requirements](#system-requirements), mostly the same installation instructions as 
-for regular Linux servers apply otherwise.
+for regular Linux servers apply.
 
 ### Getting Updates ###
 

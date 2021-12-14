@@ -12,7 +12,7 @@ available at [dl.photoprism.app/docker](https://dl.photoprism.app/docker/).
 !!! tldr ""
     To ensure compatibility with 64-bit Docker images, your Raspberry Pi 3 / 4 must boot with
     the `arm_64bit=1` flag in its [config.txt file](https://www.raspberrypi.org/documentation/installation/installing-images/README.md).
-    An "exec format error" will occur otherwise.
+    An "exec format" or "no matching manifest" error will occur otherwise.
 
 ### System Requirements ###
 
@@ -60,12 +60,16 @@ available at [dl.photoprism.app/docker](https://dl.photoprism.app/docker/).
 
 To ensure compatibility with 64-bit Docker images, your Raspberry Pi 3 / 4 must boot with
 the `arm_64bit=1` flag in its [config.txt file](https://www.raspberrypi.org/documentation/installation/installing-images/README.md).
-An "exec format error" will occur otherwise.
+An "exec format" or "no matching manifest" error will occur otherwise.
 
 Alternatively, you can run your device with [UbuntuDockerPi](https://github.com/guysoft/UbuntuDockerPi).
 It's a 64-bit Ubuntu Server with Docker pre-configured.
 
 #### Older ARMv7-based Devices ####
+
+!!! fail ""
+    The ARMv7 build is currently failing due to an issue in the network stack. We are working on a solution.
+    You can use the [previous multi-arch image](https://hub.docker.com/r/photoprism/photoprism/tags) `photoprism/photoprism:20211203` meanwhile.
 
 You have to resort to alternative Docker images to run PhotoPrism and MariaDB on ARMv7-based devices
 and those with a 32-bit operating system:

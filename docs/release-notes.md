@@ -14,10 +14,13 @@
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/). 
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
-In response to the [Apache Log4j](https://blog.malwarebytes.com/exploits-and-vulnerabilities/2021/12/log4j-zero-day-log4shell-arrives-just-in-time-to-ruin-your-weekend/) vulnerability, log and request parameter sanitation has been improved. 
-Let us know if this causes any unintended side effects.
+PhotoPrism is not directly affected by the [Apache Log4j](https://blog.malwarebytes.com/exploits-and-vulnerabilities/2021/12/log4j-zero-day-log4shell-arrives-just-in-time-to-ruin-your-weekend/) vulnerability.
+Logs may still contain messages that can cause harm if consumed by an unpatched Java application.
+As a precaution, this release includes additional [rules and filters to validate user input](https://github.com/photoprism/photoprism/issues/1814).
 
+- Docker: [ARMv7 image for 32-bit processors and operating systems](https://github.com/photoprism/photoprism/issues/1815)
 - Sharing: [Fixed album link redirect on shared domains](https://github.com/photoprism/photoprism/issues/1617)
+- Import: [More helpful warning when another import is already running](https://github.com/photoprism/photoprism/issues/1810)
 
 ### December 10, 2021 ###
 <span class="build">Build 211210-2cb90e7e</span>

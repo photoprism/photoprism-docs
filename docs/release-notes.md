@@ -14,6 +14,9 @@
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/). 
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
+### December 15, 2021 ###
+<span class="build">Build 211215-3e052cfb</span>
+
 PhotoPrism is not directly affected by the [Apache Log4j](https://blog.malwarebytes.com/exploits-and-vulnerabilities/2021/12/log4j-zero-day-log4shell-arrives-just-in-time-to-ruin-your-weekend/) vulnerability.
 Logs may still contain messages that can cause harm if consumed by an unpatched Java application.
 As a precaution, this release includes additional [rules and filters to validate user input](https://github.com/photoprism/photoprism/issues/1814).

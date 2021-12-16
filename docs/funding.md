@@ -14,9 +14,9 @@ We currently have the following sponsorship options:
 - You're welcome to [contact us](https://photoprism.app/contact) for other options.
 
 Sponsors receive direct [technical support](https://photoprism.app/contact) via email
-and have access to additional features. In addition, ideas endorsed by [silver, 
+and have access to additional features. Ideas endorsed by [silver, 
 gold, and platinum sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md) 
-receive a [golden label](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3Asponsor) and 
-will be prioritized. Thank you! 💜
+receive a [golden label](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3Asponsor) and
+will be prioritized on our [roadmap](https://github.com/photoprism/photoprism/projects/5). Thank you! 💜
 
 [^1]: Think of “free software” as in “free speech,” not as in “free beer.” We sometimes call it “libre software,” borrowing the French or Spanish word for “free” as in freedom, to show we do not mean the software is gratis. (https://www.gnu.org/philosophy/free-sw.en.html)

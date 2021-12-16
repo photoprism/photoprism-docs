@@ -13,8 +13,9 @@
 
 ### Docker Compose ###
 
-Open a terminal and change to the folder in which the `docker-compose.yml` file has been saved.
-Now run the following commands to **pull the most recent image** from Docker Hub and restart your instance in the background:
+Open a terminal and change to the folder where the `docker-compose.yml` file was saved.
+Now run the following commands to download the most recent image from Docker Hub and
+restart your instance in the background:
 
 ```
 docker-compose pull photoprism
@@ -24,14 +25,18 @@ docker-compose up -d photoprism
 
 Pulling a new version can take several minutes, depending on your internet connection speed.
 
-Advanced users may put this into a `Makefile` so that they only need to type a single command.
+Advanced users can add these commands to a `Makefile` so that they only have to type a single 
+command like `make update`. See [Setup Using Docker Compose](docker-compose.md#command-line-interface)
+for a command reference.
 
-See [Setup Using Docker Compose](docker-compose.md) for a command reference.
+!!! note ""
+    Running an image with `:latest` tag does not cause Docker to automatically download new images.
 
 !!! tldr ""
-    You can test our latest features and improvements by changing the image from `photoprism/photoprism:latest`
+    You can test upcoming features and improvements by changing the image from `photoprism/photoprism:latest`
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/).
-    Then pull the most recent image and restart your instance.
+    Then pull the most recent image and restart your instance as shown above.
+    There is no preview available for 32-bit operating systems.
 
 ### Facial Recognition ###
 
@@ -77,7 +82,3 @@ docker pull photoprism/photoprism:latest
 ```
 
 See [Running PhotoPrism with Docker](docker.md) for a command reference.
-
-!!! tldr ""
-    You can test our latest features and improvements by using `photoprism/photoprism:preview` 
-    instead of `photoprism/photoprism:latest`.

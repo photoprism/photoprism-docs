@@ -80,9 +80,24 @@ for regular Linux servers apply. Pay close attention to changed directory and en
 
 ### Getting Updates ###
 
-If an old version is running on your device and is not updated, you may need to [explicitly](updates.md) 
-pull the latest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism). 
-Note that the `:latest` image tag does not cause Docker to automatically download new images.
+Open a terminal and change to the folder where the `docker-compose.yml` file was saved.
+Now run the following commands to download the most recent image from Docker Hub and
+restart your instance in the background:
+
+```
+docker-compose pull photoprism
+docker-compose stop photoprism
+docker-compose up -d photoprism
+```
+
+Pulling a new version can take several minutes, depending on your internet connection speed.
+
+Advanced users can add these commands to a `Makefile` so that they only have to type a single
+command like `make update`. See [Setup Using Docker Compose](docker-compose.md#command-line-interface)
+for a command reference.
+
+!!! note ""
+    Running an image with `:latest` tag does not cause Docker to automatically download new images.
 
 ### Credits ###
 

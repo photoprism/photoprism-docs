@@ -10,9 +10,10 @@
 ### Development Preview ###
 
 !!! tldr ""
-    You can test our latest features and improvements by changing the image from `photoprism/photoprism:latest` 
+    You can test upcoming features and improvements by changing the image from `photoprism/photoprism:latest` 
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/). 
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
+    There is no preview available for 32-bit operating systems.
 
 - Search: [Added `uid:...` search filter](https://github.com/photoprism/photoprism/issues/1820)
 - Search: [Improved query parser for additional security](https://github.com/photoprism/photoprism/issues/1814)

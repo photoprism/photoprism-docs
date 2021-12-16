@@ -19,7 +19,7 @@ docker-compose up -d photoprism
 Pulling a new version can take several minutes, depending on your internet connection speed.
 
 Advanced users can add these commands to a `Makefile` so that they only have to type a single 
-command like `make update`. See [command reference](docker-compose.md#command-line-interface)
+command like `make update`. See [Command-Line Interface](docker-compose.md#command-line-interface)
 to learn more about terminal commands.
 
 !!! info ""

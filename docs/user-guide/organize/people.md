@@ -71,7 +71,7 @@ You can hide a person in the *Recognized* section by clicking :material-close: i
 !!! example ""
     **This currently is a sponsor feature to thank everyone who supports the development of this application.**
     We'll let you know how to enable it when you sign up on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism).
-    Your continued support helps us provide services like world maps and develop new features. Thank you! 💜
+    Your continued support [helps us](../../funding.md) provide services like world maps and develop new features. Thank you! 💜
 
 !!! attention ""
     Pictures of this person continue to be visible in search results and albums.

@@ -14,6 +14,9 @@
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/). 
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
+- Search: [Added `uid:...` search filter](https://github.com/photoprism/photoprism/issues/1820)
+- Search: [Improved query parser for additional security](https://github.com/photoprism/photoprism/issues/1814)
+
 ### December 15, 2021 ###
 <span class="build">Build 211215-93b26f19</span>
 

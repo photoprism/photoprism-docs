@@ -1,11 +1,8 @@
 # Getting Updates
 
-!!! note ""
-    Our [stable version](https://docs.photoprism.app/release-notes/) and development preview have been built into a 
-    single [multi-arch image](https://hub.docker.com/r/photoprism/photoprism) for 64-bit AMD, Intel, 
-    and ARM processors. That means, [Raspberry Pi](raspberry-pi.md) 3 / 4 owners can pull from the same repository, 
-    enjoy the exact same functionality, and can follow the regular [installation instructions](docker-compose.md)
-    after going through a short list of [requirements](raspberry-pi.md).
+!!! example ""
+    **Back us on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism).**
+    Your continued support helps us provide services like world maps and develop new features. Thank you! 💜
 
 ### Docker Compose ###
 
@@ -25,7 +22,7 @@ Advanced users can add these commands to a `Makefile` so that they only have to 
 command like `make update`. See [Setup Using Docker Compose](docker-compose.md#command-line-interface)
 for a command reference.
 
-!!! note ""
+!!! info ""
     Running an image with `:latest` tag does not cause Docker to automatically download new images.
 
 !!! tldr ""
@@ -34,9 +31,18 @@ for a command reference.
     Then pull the most recent image and restart your instance as shown above.
     There is no preview available for 32-bit operating systems.
 
-!!! example ""
-    **Back us on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism).**
-    Your continued support helps us provide services like world maps and develop new features. Thank you! 💜
+### Raspberry Pi ###
+
+Our [stable version](https://docs.photoprism.app/release-notes/) and development preview have been built into a
+single [multi-arch image](https://hub.docker.com/r/photoprism/photoprism) for common 64-bit AMD, Intel,
+and ARM processors.
+
+That means, [Raspberry Pi](raspberry-pi.md) 3 / 4 owners can now pull from the same repository,
+enjoy the exact same functionality, and can follow the regular [installation instructions](docker-compose.md)
+after going through a short list of [requirements](raspberry-pi.md#system-requirements).
+
+Alternative Docker images are provided for [ARMv7-based devices](raspberry-pi.md#older-armv7-based-devices)
+and those with a 32-bit operating system.
 
 ### Facial Recognition ###
 

@@ -96,7 +96,7 @@ Advanced users can add these commands to a `Makefile` so that they only have to 
 command like `make update`. See [Setup Using Docker Compose](docker-compose.md#command-line-interface)
 for a command reference.
 
-!!! note ""
+!!! info ""
     Running an image with `:latest` tag does not cause Docker to automatically download new images.
 
 ### Credits ###

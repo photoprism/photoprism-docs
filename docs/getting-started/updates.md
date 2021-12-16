@@ -7,10 +7,6 @@
     enjoy the exact same functionality, and can follow the regular [installation instructions](docker-compose.md)
     after going through a short list of [requirements](raspberry-pi.md).
 
-!!! example ""
-    **Back us on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism).**
-    Your continued support helps us provide services like world maps and develop new features. Thank you! 💜
-
 ### Docker Compose ###
 
 Open a terminal and change to the folder where the `docker-compose.yml` file was saved.
@@ -37,6 +33,10 @@ for a command reference.
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/).
     Then pull the most recent image and restart your instance as shown above.
     There is no preview available for 32-bit operating systems.
+
+!!! example ""
+    **Back us on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism).**
+    Your continued support helps us provide services like world maps and develop new features. Thank you! 💜
 
 ### Facial Recognition ###
 

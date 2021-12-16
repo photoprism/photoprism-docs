@@ -19,8 +19,8 @@ docker-compose up -d photoprism
 Pulling a new version can take several minutes, depending on your internet connection speed.
 
 Advanced users can add these commands to a `Makefile` so that they only have to type a single 
-command like `make update`. See [Setup Using Docker Compose](docker-compose.md#command-line-interface)
-for a command reference.
+command like `make update`. See [command reference](docker-compose.md#command-line-interface)
+to learn more about terminal commands.
 
 !!! info ""
     Running an image with `:latest` tag does not cause Docker to automatically download new images.

@@ -1,40 +1,51 @@
 # Frequently Asked Questions
 
+## General ##
+
+??? question "When exactly will new features be released?"
+    We have a zero bug policy and do our best to help users when they need support or have other questions.
+    Updating and improving the documentation you are reading takes up a large part of our time too.
+
+    This comes at a price, as we can't give exact deadlines for new features. Also keep in mind that epics 
+    like multi-user support can't be delivered in a single update. Working on big features is a continuous process
+    that can take months to years until all use cases are covered.
+
+    Having said that, funding really has the highest impact. So users can do their part and 
+    [become a sponsor](../funding.md) to get their favorite features as soon as possible.
+
 ## User Interface ##
 
 ??? question "Can I use trees for organizing my pictures and albums?"
-      Except in *Library > Originals* and for object classification in *Labels*, PhotoPrism does not
-      support hierarchically organized content for a number of reasons:
-      
-      First, there are many tools (including Windows Explorer and Mac OS Finder) that already browse folders in such a way.
-      
-      A common UX challenge is dealing with namespaces.
-      For example, the album "Berlin" may exist 5 times in different parts of a tree.
-      To avoid ambiguities, simple input fields need to be replaced with a tree browser that
-      shows the complete context.
-      This is especially difficult on mobile screens.
-      
-      Personal albums can typically be browsed by time, with optional filters for more specific results.
-      This is different in Enterprise asset management, where trees are required to manage
-      responsibilities & [permissions](https://github.com/photoprism/photoprism/issues/455#issuecomment-675859270).
-      We might do a special release for professional users later.
-      
-      While you have complete freedom with organizing your original files and folders,
-      we don't think trees should be an integral part of our user interface.
-      Most users won't be able to sort their memories in a strictly hierarchical way
-      and prefer to explore them in multiple dimensions instead.
+    Except in *Library > Originals* and for object classification in *Labels*, PhotoPrism does not
+    support hierarchically organized content for a number of reasons:
+    
+    First, there are many tools (including Windows Explorer and Mac OS Finder) that already browse folders in such a way.
+    
+    A common UX challenge is dealing with namespaces.
+    For example, the album "Berlin" may exist 5 times in different parts of a tree.
+    To avoid ambiguities, simple input fields need to be replaced with a tree browser that
+    shows the complete context.
+    This is especially difficult on mobile screens.
+    
+    Personal albums can typically be browsed by time, with optional filters for more specific results.
+    This is different in Enterprise asset management, where trees are required to manage
+    responsibilities & [permissions](https://github.com/photoprism/photoprism/issues/455#issuecomment-675859270).
+    We might do a special release for professional users later.
+    
+    While you have complete freedom with organizing your original files and folders,
+    we don't think trees should be an integral part of our user interface.
+    Most users won't be able to sort their memories in a strictly hierarchical way
+    and prefer to explore them in multiple dimensions instead.
 
 ??? question "What's the difference between keywords and labels?"
-      Keywords contain a list of search terms extracted from metadata, file names, and other sources
-      like geodata. Pictures with matching keywords automatically show up in related *Labels*.
+    Keywords contain a list of search terms extracted from metadata, file names, and other sources
+    like geodata. Pictures with matching keywords automatically show up in related *Labels*.
 
-      Although related, keywords and labels serve different purposes:
+    Although related, keywords and labels serve different purposes:
 
-      * **Labels** may have parent categories and are primarily used for classification, like "animal", "cat", or "boat".
-      Duplicates and ambiguities should be avoided.
+    * **Labels** may have parent categories and are primarily used for classification, like "animal", "cat", or "boat". Duplicates and ambiguities should be avoided.
 
-      * **Keywords** are primarily used for searching. They may include similar terms and translations,
-      like "kitten", "kitty", and "cat".
+    * **Keywords** are primarily used for searching. They may include similar terms and translations, like "kitten", "kitty", and "cat".
 
 ??? question "Can I use the web interface to permanently delete files?"
 
@@ -87,7 +98,7 @@
 
     Folders, Calendar and Moments are populated at the end of the indexing process.
 
-??? question "Why does the count in *Search* not match the count of files in *Originals*?" 
+??? question "Why does the count in *Search* not match the count of files in *Originals*?"
 
     *Library > Originals* shows actual files, whereas *Search* counts unique photos and videos.
 
@@ -98,7 +109,7 @@
 
     It is also possible that multiple .jpg files are stacked because they are related to each other.
 
-??? question "Why is the count for *Originals* higher than the number of files physically existing in my originals directory?" 
+??? question "Why is the count for *Originals* higher than the number of files physically existing in my originals directory?"
 
     When indexing, an additional JPEG sidecar file may be created automatically for RAW, HEIF, TIFF, PNG, BMP, GIF, and video files.
     It is needed for generating thumbnails, image classification, and facial recognition.
@@ -123,7 +134,7 @@
 
 ## WebDAV, Sync & Upload ##
 
-??? question "Why do I get an error when trying to add a remote server for syncing?" 
+??? question "Why do I get an error when trying to add a remote server for syncing?"
 
     When adding a new remote server, PhotoPrism tests a number of
     [common endpoints](https://raw.githubusercontent.com/photoprism/photoprism/develop/internal/remote/heuristic.go).

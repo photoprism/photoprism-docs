@@ -34,8 +34,11 @@ Our vision is to provide the most user- and privacy-friendly solution to keep yo
 The [roadmap](https://github.com/photoprism/photoprism/projects/5) shows what tasks are in progress, 
 what needs testing, and which features are going to be implemented next.
 
-Please give ideas you like a thumbs-up, so that we know what is most popular.
-Ideas backed by silver, gold and platinum [sponsors](../funding.md) will be prioritized as well.
+We have a zero bug policy and do our best to help users when they need support or have other questions.
+This comes at a price, as we can't give exact deadlines for new features.
+
+Having said that, funding really has the highest impact. So users can do their part and
+[become a sponsor](../funding.md) to get their favorite features as soon as possible.
 
 ## System Requirements ##
 

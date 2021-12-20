@@ -34,6 +34,7 @@ Responsible for editorial content according to § 5 TMG / § 55 RStV:
 ## Trademark Guidelines ##
 
 PhotoPrism® is a registered trademark. It is important to us that any permitted use is fair and meets the highest standards.
+
 Visit [photoprism.app/trademark](https://photoprism.app/trademark) to learn more.
 
 ## Privacy Policy ##

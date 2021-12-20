@@ -31,13 +31,10 @@ Responsible for editorial content according to § 5 TMG / § 55 RStV:
   Germany
 </address>
 
-USt-ID: DE189758973
+## Trademark Guidelines ##
 
-## Trademarks ##
-
-PhotoPrism® is a registered trademark of Michael Mayer. You may use it as required to describe 
-our software, run your own server, for educational purposes, but not for offering commercial 
-goods, products, or services without prior written permission. In other words, please ask.
+PhotoPrism® is a registered trademark. It is important to us that any permitted use is fair and meets the highest standards.
+Visit [photoprism.app/trademark](https://photoprism.app/trademark) to learn more.
 
 ## Privacy Policy ##
 

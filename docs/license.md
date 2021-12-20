@@ -609,8 +609,14 @@ copy of the Program in return for a fee.
 
 _END OF TERMS AND CONDITIONS_
 
-## Trademarks
+## PhotoPrism® Trademark ##
 
-PhotoPrism® is a registered trademark of Michael Mayer. You may use it as required to describe 
-our software, run your own server, for educational purposes, but not for offering commercial 
-goods, products, or services without prior written permission. In other words, please ask.
+You may not include the PhotoPrism trademark in the name of your app, product or service, whether commercial or non-commercial in nature.
+This includes online services such as e-commerce, community, blog, information, advertising, and personal home pages, 
+as well as apps, client apps, or third-party apps that interact with PhotoPrism.
+
+Third parties, including licensees, may never claim ownership of PhotoPrism's brand assets or brands confusingly similar
+to PhotoPrism's brand assets in any way, including, without limitation, as a trademark, service mark, company name or
+designation, domain name, social media profile/handle, or otherwise.
+
+Visit [photoprism.app/trademark](https://photoprism.app/trademark) to learn more.

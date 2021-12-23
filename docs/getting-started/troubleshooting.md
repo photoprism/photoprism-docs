@@ -60,15 +60,16 @@ for errors and warnings. In case the logs don't contain anything helpful:
 - [ ] The pictures are in [Review](../user-guide/organize/review.md) due to low quality or incomplete metadata
 - [ ] The [file type](faq.md#which-file-types-are-supported) is generally unsupported
 - [ ] The [file type](faq.md#which-file-types-are-supported) is generally supported, but a specific feature or codec is not
-- [ ] They are in *Library > Hidden* because a JPEG could not be created:
+- [ ] The files have bad filesystem permissions, so they can't be opened by the indexer
+- [ ] They are in *Library > Hidden* because thumbnails could not be created:
     - [ ] *Convert to JPEG* is disabled in *Settings > Library*
     - [ ] FFmpeg and/or RAW converters are disabled in *Settings > Advanced*
     - [ ] The file is broken and cannot be opened
+    - [ ] The sidecar and/or cache folders are not writable
+- [ ] The indexer has skipped files because they are exact duplicates
+- [ ] Multiple files were [stacked](../user-guide/organize/stacks.md#for-what-reasons-can-files-be-stacked) based on their metadata or file names
 - [ ] The [private](../user-guide/organize/private.md) or [archived](../user-guide/organize/archive.md) status was restored from a backup
 - [ ] The NSFW (Not Safe For Work) filter is enabled, so they were marked as [private](../user-guide/organize/private.md)
-- [ ] Multiple files were [stacked](../user-guide/organize/stacks.md#for-what-reasons-can-files-be-stacked) based on their metadata or file names
-- [ ] The indexer has skipped files because they are exact duplicates (same SHA1 hash)
-- [ ] The files have bad filesystem permissions, so they can't be opened by the indexer
 - [ ] You are not signed in as admin, so you can't see everything
 - [ ] You try to index a shared drive on a remote server, but the server is offline
 - [ ] You are connected to the wrong server or a DNS entry hasn't been updated yet

@@ -61,12 +61,12 @@ for errors and warnings. In case the logs don't contain anything helpful:
 - [ ] The [file type](faq.md#which-file-types-are-supported) is generally unsupported
 - [ ] The [file type](faq.md#which-file-types-are-supported) is generally supported, but a specific feature or codec is not
 - [ ] The files have bad filesystem permissions, so they can't be opened by the indexer
+- [ ] The indexer has skipped the files because they are exact duplicates
 - [ ] They are in *Library > Hidden* because thumbnails could not be created:
     - [ ] *Convert to JPEG* is disabled in *Settings > Library*
     - [ ] FFmpeg and/or RAW converters are disabled in *Settings > Advanced*
     - [ ] The file is broken and cannot be opened
     - [ ] The sidecar and/or cache folders are not writable
-- [ ] The indexer has skipped files because they are exact duplicates
 - [ ] Multiple files were [stacked](../user-guide/organize/stacks.md#for-what-reasons-can-files-be-stacked) based on their metadata or file names
 - [ ] The [private](../user-guide/organize/private.md) or [archived](../user-guide/organize/archive.md) status was restored from a backup
 - [ ] The NSFW (Not Safe For Work) filter is enabled, so they were marked as [private](../user-guide/organize/private.md)

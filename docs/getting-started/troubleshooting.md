@@ -64,10 +64,10 @@ for errors and warnings. In case the logs don't contain anything helpful:
     - [ ] *Convert to JPEG* is disabled in *Settings > Library*
     - [ ] FFmpeg and/or RAW converters are disabled in *Settings > Advanced*
     - [ ] The file is broken and cannot be opened
-- [ ] Their [private](../user-guide/organize/private.md) or [archived](../user-guide/organize/archive.md) status was restored from a backup
+- [ ] The [private](../user-guide/organize/private.md) or [archived](../user-guide/organize/archive.md) status was restored from a backup
 - [ ] The NSFW (Not Safe For Work) filter is enabled, so they were marked as [private](../user-guide/organize/private.md)
-- [ ] They were [stacked](../user-guide/organize/stacks.md#for-what-reasons-can-files-be-stacked) based on their metadata or file names
-- [ ] The indexer has skipped them because they are exact duplicates
+- [ ] Multiple files were [stacked](../user-guide/organize/stacks.md#for-what-reasons-can-files-be-stacked) based on their metadata or file names
+- [ ] The indexer has skipped files because they are exact duplicates (same SHA1 hash)
 - [ ] The files have bad filesystem permissions, so they can't be opened by the indexer
 - [ ] You are not signed in as admin, so you can't see everything
 - [ ] You try to index a shared drive on a remote server, but the server is offline

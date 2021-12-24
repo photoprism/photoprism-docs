@@ -611,7 +611,7 @@ _END OF TERMS AND CONDITIONS_
 
 ## PhotoPrism® Trademark and Brand Guidelines ##
 
-PhotoPrism® is a registered trademark in Germany and the EU. PhotoPrism’s Brand Assets—including trademarks, 
+PhotoPrism® is a registered trademark in Germany and the EU. PhotoPrism’s Brand Assets — including trademarks, 
 logos, icons, designs, fonts, products, services, and any other brand features and elements, whether registered 
 or unregistered („Brand Assets“) — are proprietary assets owned exclusively by Michael Mayer and his legal 
 successors („PhotoPrism“).

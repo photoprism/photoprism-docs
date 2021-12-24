@@ -609,7 +609,7 @@ copy of the Program in return for a fee.
 
 _END OF TERMS AND CONDITIONS_
 
-## PhotoPrism® Trademark ##
+## PhotoPrism® Trademark and Brand Guidelines ##
 
 PhotoPrism® is a registered trademark in Germany and the EU. PhotoPrism’s Brand Assets—including trademarks, 
 logos, icons, designs, fonts, products, services, and any other brand features and elements, whether registered 

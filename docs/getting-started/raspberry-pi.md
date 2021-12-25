@@ -65,7 +65,7 @@ An "exec format" error will occur otherwise.
 ##### No Matching Manifest #####
 
 Try explicitly pulling the ARM64 version if you've booted your device with the `arm_64bit=1` flag 
-and you still see the "no matching manifest" error on Raspberry Pi OS (Raspbian):
+and you see the "no matching manifest" error on Raspberry Pi OS (Raspbian):
 
 ```bash
 docker pull --platform=arm64 photoprism/photoprism:latest

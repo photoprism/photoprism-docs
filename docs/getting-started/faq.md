@@ -154,6 +154,14 @@ without importing files, leaving the existing file and folder names unchanged. O
 importing is an efficient way to add files, since PhotoPrism doesn't have to search your *originals*
 folder to find new files.
 
+### Should I use an SD card or a USB stick? ###
+
+Conventional USB sticks and SD cards are not suitable for long-term storage. Not only because of the 
+performance, but also because they can lose data over time.
+
+[SSD drives are best](troubleshooting.md#storage), even when connected externally via USB 3.
+USB 1 and 2 devices will be slow either way.
+
 ### Should I use SQLite, MariaDB, or MySQL? ###
 
 PhotoPrism is compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB 10.5.12+](https://mariadb.org/).

@@ -13,8 +13,8 @@ the last 100 log messages (omit `--tail=100` to see all):
 docker-compose logs --tail=100
 ```
 
-Search them for messages like *disk full*, *wrong permissions*, and *database connection failed* 
-before reporting a bug.
+Search them for messages like *disk full*, *wrong permissions*, *killed*, and *database connection failed* 
+before reporting a bug. If the server was killed, this points to a memory issue.
 
 !!! note ""
     If you see no errors or no logs at all, you may have started the server on a different host
@@ -55,7 +55,7 @@ point the home directory placeholder `~` to `/root` in volume mounts.
 #### Missing Pictures ####
 
 If you have indexed your library and some images or videos are missing, first check *Library > Errors*
-for errors and warnings. In case the logs don't contain anything helpful:
+for errors and warnings. In case the application logs don't contain anything helpful:
 
 - [ ] The pictures are in [Review](../user-guide/organize/review.md) due to low quality or incomplete metadata
 - [ ] The [file type](faq.md#which-file-types-are-supported) is generally unsupported
@@ -72,9 +72,33 @@ for errors and warnings. In case the logs don't contain anything helpful:
 - [ ] The NSFW (Not Safe For Work) filter is enabled, so they were marked as [private](../user-guide/organize/private.md)
 - [ ] You are not signed in as admin, so you can't see everything
 - [ ] You try to index a shared drive on a remote server, but the server is offline
-- [ ] You are connected to the wrong server or a DNS entry hasn't been updated yet
-- [ ] The indexer has crashed because you didn't configure 4 GB of swap
+- [ ] The indexer has crashed because you didn't configure at least 4 GB of swap
 - [ ] Somebody has deleted files without telling you
+- [ ] You are connected to the wrong server, CDN, or a DNS entry hasn't been updated yet
+
+#### Broken Thumbnails ####
+
+If some pictures have broken or missing thumbnails, first check *Library > Errors* for errors and warnings.
+In case the application logs don't contain anything helpful:
+
+- [ ] The issue can be resolved by reloading the page or clearing the browser cache
+- [ ] *Dynamic Previews* are enabled in *Settings > Advanced*, but the server is not powerful enough
+- [ ] The sizes in *Settings > Advanced* have been changed so the request can't be fulfilled
+- [ ] FFmpeg and/or RAW converters are disabled in *Settings > Advanced*
+- [ ] *Convert to JPEG* is disabled in *Settings > Library*
+- [ ] Your (virtual) server disk is full
+- [ ] Your sidecar and/or cache folders are not writable (anymore)
+- [ ] Files were deleted manually, for example to free up disk space
+- [ ] Files can't be opened, for example because filesystem permissions changed
+- [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder
+- [ ] Some thumbnails could not be created because you didn't configure at least 4 GB of swap
+- [ ] The user interface can't communicate properly with your server, for example, because a proxy is misconfigured (check its config and try without a proxy)
+- [ ] There are network problems caused by a firewall or unstable connection
+- [ ] An ad blocker is blocking requests (disable it or add an exception)
+- [ ] You are connected to the wrong server, CDN, or a DNS entry hasn't been updated yet
+
+We also recommend checking your Docker logs for messages like *disk full*, *wrong permissions*, and *killed* as
+described above. If the server was killed, this points to a memory issue.
 
 #### App Not Loading ####
 
@@ -95,7 +119,8 @@ Fatal errors are often caused by one of the following conditions:
 - [ ] There is disk space left, but the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached
 - [ ] The storage folder is not writable or there are other filesystem permission issues
 - [ ] You have accidentally mounted the wrong folders
-- [ ] The server is low on memory or swap
+- [ ] The server is low on memory
+- [ ] You didn't configure at least 4 GB of swap
 - [ ] The database server is not available, incompatible or incorrectly configured
 - [ ] You've upgraded the MariaDB server version without running `mariadb-upgrade`
 - [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder

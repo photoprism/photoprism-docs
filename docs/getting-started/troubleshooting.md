@@ -89,7 +89,7 @@ In case the application logs don't contain anything helpful:
 - [ ] Your (virtual) server disk is full
 - [ ] Your sidecar and/or cache folders are not writable (anymore)
 - [ ] Files were deleted manually, for example to free up disk space
-- [ ] Files can't be opened, for example because filesystem permissions changed
+- [ ] Files can't be opened, e.g. because the file system permissions have been changed
 - [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder
 - [ ] Some thumbnails could not be created because you didn't configure at least 4 GB of swap
 - [ ] The user interface can't communicate properly with your server, for example, because a proxy is misconfigured (check its config and try without a proxy)

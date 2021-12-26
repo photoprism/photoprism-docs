@@ -622,7 +622,7 @@ Brand Assets or brands confusingly similar to PhotoPrism's Brand Assets in any
 way, including, without limitation, as a trademark, service mark, company name
 or designation, domain name, social media profile/handle, or in any other manner.
 
-You may not include the PhotoPrism trademark in the name of your app, product
+You may not include the PhotoPrism trademark in the name of your app, product,
 or service, whether commercial or non-commercial in nature. This includes online
 services such as e-commerce, community, blog, information, advertising, and personal
 home pages, as well as apps, client apps, or third-party apps that interact with

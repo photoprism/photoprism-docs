@@ -159,7 +159,7 @@ folder to find new files.
 Conventional USB sticks and SD cards are not suitable for long-term storage. Not only because of the 
 performance, but also because they can lose data over time.
 
-[SSD drives are best](troubleshooting.md#storage), even when connected externally via USB 3.
+[SSD drives are best](performance.md#storage), even when connected externally via USB 3.
 USB 1 and 2 devices will be slow either way.
 
 ### Should I use SQLite, MariaDB, or MySQL? ###

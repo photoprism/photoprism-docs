@@ -27,7 +27,7 @@ installed on your system. It is available for Mac, Linux, and Windows.
 === "Raspberry Pi"
 
     Download our [docker-compose.yml](https://dl.photoprism.app/docker/arm64/docker-compose.yml) example for 
-    the Raspberry Pi 3 / 4 and modern ARM64-based devices (right click and *Save Link As...* or use `wget`) to a folder of your choice,
+    the Raspberry Pi 3 / 4 and other ARM64-based devices (right click and *Save Link As...* or use `wget`) to a folder of your choice,
     and change the [configuration](config-options.md) as needed:
     
     ```
@@ -85,7 +85,7 @@ installed on your system. It is available for Mac, Linux, and Windows.
 
 Our example includes a pre-configured [MariaDB](https://mariadb.com/) database server. If you remove it 
 and provide no other database server credentials, a SQLite database file will be created in the 
-*storage* folder. Local [SSD storage is best](troubleshooting.md#storage) for databases of any kind.
+*storage* folder. Local [SSD storage is best](performance.md#storage) for databases of any kind.
 Never [store](troubleshooting.md#corrupted-files) database files on an unreliable device such as a USB flash drive,
 an SD card, or a shared network folder.
 
@@ -130,7 +130,7 @@ volumes:
 
 Cache, session, thumbnail, and sidecar files will be created in the *storage* folder. Never remove the volume from
 your `docker-compose.yml` file so that you don't lose these files after restarting or upgrading the container.
-We recommend placing the *storage* folder on a [local SSD drive](troubleshooting.md#storage) for best performance.
+We recommend placing the *storage* folder on a [local SSD drive](performance.md#storage) for best performance.
 
 ##### /photoprism/import #####
 

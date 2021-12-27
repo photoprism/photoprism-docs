@@ -38,7 +38,7 @@ available at [dl.photoprism.app/docker](https://dl.photoprism.app/docker/).
   including your provider, hackers, and governments.
 
 !!! note ""
-    Indexing large photo and video collections significantly benefits from [local SSD storage](troubleshooting.md#storage)
+    Indexing large photo and video collections significantly benefits from [local SSD storage](performance.md#storage)
     and plenty of memory for caching. Especially the conversion of RAW images and the transcoding of
     videos are very demanding.
 

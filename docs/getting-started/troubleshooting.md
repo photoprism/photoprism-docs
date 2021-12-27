@@ -13,7 +13,7 @@ the last 100 log messages (omit `--tail=100` to see all):
 docker-compose logs --tail=100
 ```
 
-Search them for messages like *disk full*, *wrong permissions*, *killed*, and *database connection failed* 
+Check them for messages like *disk full*, *wrong permissions*, *database connection failed*, and *killed*
 before reporting a bug. If the server was killed, this points to a memory issue.
 
 !!! note ""
@@ -122,12 +122,17 @@ Fatal errors are often caused by one of the following conditions:
 - [ ] You have accidentally mounted the wrong folders
 - [ ] The server is low on memory
 - [ ] You didn't configure at least 4 GB of swap
+- [ ] The server CPU is overheating
+- [ ] The server has an outdated operating system that is not fully compatible
 - [ ] The database server is not available, incompatible or incorrectly configured
 - [ ] You've upgraded the MariaDB server version without running `mariadb-upgrade`
 - [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder
 - [ ] There are network problems caused by a proxy, firewall or unstable connection
 - [ ] Kernel security modules such as [AppArmor](https://wiki.ubuntu.com/AppArmor) and [SELinux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) are blocking permissions
 - [ ] Your Raspberry Pi has not been configured according to our [recommendations](raspberry-pi.md#system-requirements)
+
+We recommend checking your Docker logs for messages like *disk full*, *wrong permissions*, *database connection failed*,
+and *killed* as described above. If the server was killed, this points to a memory issue.
 
 ### Adding Swap ###
 
@@ -244,46 +249,6 @@ as a USB flash drive, an SD card, or a shared network folder.
 - Never use the same database files with more than one server instance
 - To share a database over a network, run the database server directly on the remote server instead of sharing database files
 - To repair your tables after you have moved the files to a local disk, you can [start MariaDB with `--innodb-force-recovery=1`](https://mariadb.com/kb/en/innodb-recovery-modes/), similar to how you recover a lost root password as described above
-
-#### Performance Tuning ####
-
-##### Cache #####
-
-The [InnoDB buffer pool](https://mariadb.com/kb/en/innodb-buffer-pool/) serves as a cache for data and indexes.
-It is a key component for optimizing MariaDB performance. Its size should be as large as possible to keep frequently
-used data in memory and reduce disk I/O - typically the biggest bottleneck.
-
-Our [docker-compose.yml examples](https://dl.photoprism.app/docker/) have a default buffer pool size between
-128 MB and 256 MB, depending on the platform. You can change it using the `--innodb-buffer-pool-size` parameter
-(`M` means Megabyte, `G` stands for Gigabyte). If your server has enough memory, we recommend increasing the size to 1 GB:
-
-```yaml
-services:
-  mariadb:
-    command: mysqld --innodb-buffer-pool-size=1G ...
-```
-
-##### Storage #####
-
-Local Solid-State Drives (SSD) are [best for databases](https://mariadb.com/de/resources/blog/how-to-tune-mariadb-write-performance/)
-of any kind:
-
-- Database performance extremely benefits from high throughput which HDDs can't provide
-- SSDs have more predictable performance and can handle more concurrent requests
-- Due to the HDD seek time, HDDs only support 5% of the reads per second of SSDs
-- The cost savings from using slow hard disks are minimal
-
-Switching to SSDs makes a big difference, especially for write operations and when the read cache is not 
-big enough or can't be used. Never store database files on an unreliable device such as a USB flash drive, 
-an SD card, or a shared network folder.
-
-##### CPU #####
-
-Last but not least, performance can be limited by your server CPU. While consumer NAS devices get faster
-with each generation, their hardware is optimized for low power consumption and, of course, noise.
-[Benchmarks](https://www.google.com/search?q=cpu+benchmarks) prove that even 8-year-old standard desktop 
-CPUs are often many times faster. If you've tried everything else, then only moving your instance to a more
-powerful server may help.
 
 ### Linux Kernel Security ###
 

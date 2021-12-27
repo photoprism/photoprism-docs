@@ -157,10 +157,17 @@ folder to find new files.
 ### Should I use an SD card or a USB stick? ###
 
 Conventional USB sticks and SD cards are not suitable for long-term storage. Not only because of the 
-performance, but also because they can lose data over time.
+performance, but also because they can lose data over time. Local [Solid-State Drives](performance.md#storage) 
+(SSDs) are best, even when connected externally via USB 3. USB 1 and 2 devices will be slow either way.
 
-[SSD drives are best](performance.md#storage), even when connected externally via USB 3.
-USB 1 and 2 devices will be slow either way.
+### Is a Raspberry Pi fast enough? ###
+
+This largely depends on your expectations and the number of files you have. Most users report that
+PhotoPrism runs smoothly on their Raspberry Pi 4. However, initial indexing typically takes much longer
+than on standard desktop computers.
+
+Also keep in mind that the hardware has limited video transcoding capabilities, so the conversion of video
+file formats is not well-supported and software transcoding is generally slow.
 
 ### Should I use SQLite, MariaDB, or MySQL? ###
 

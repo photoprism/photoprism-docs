@@ -20,9 +20,9 @@ depending on your specific use case.
 !!! note ""
     Our [stable version](https://docs.photoprism.app/release-notes/) and development preview have been built into a 
     single [multi-arch image](https://hub.docker.com/r/photoprism/photoprism) for 64-bit AMD, Intel,
-    and ARM processors. That means, [Raspberry Pi](raspberry-pi.md) 3 / 4 owners can pull from the same repository, 
-    enjoy the exact same functionality, and can follow the regular [installation instructions](docker-compose.md)
-    after going through a short list of [requirements](raspberry-pi.md).
+    and ARM processors. That means, [Raspberry Pi](raspberry-pi.md) 3 / 4, Apple M1, and other ARM64 users 
+    can pull from the same repository, enjoy the exact same functionality, and can follow the regular 
+    [installation instructions](docker-compose.md) after going through a short list of [requirements](raspberry-pi.md).
 
 !!! tldr ""
     Downloadable installation packages are planned for a later release. Developers can build PhotoPrism from source

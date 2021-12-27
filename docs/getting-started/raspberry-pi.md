@@ -2,17 +2,15 @@
 
 Our [stable version](../release-notes.md) and development preview have been built into a single
 [multi-arch image](https://hub.docker.com/r/photoprism/photoprism) for 64-bit AMD, Intel, and ARM processors.
-That means, Raspberry Pi 3 / 4 owners can pull from the same repository, enjoy the exact same functionality,
-and can follow the regular [Installation Instructions](docker-compose.md) after going through a short list of
-[System Requirements](#system-requirements) and [Architecture Specific Notes](#architecture-specific-notes).
 
-Existing users are advised to update their `docker-compose.yml` config based on our examples
-available at [dl.photoprism.app/docker](https://dl.photoprism.app/docker/).
+That means, Raspberry Pi 3 / 4, Apple M1, and other ARM64 users can pull from the same repository, 
+enjoy the exact same functionality, and can follow the regular [Installation Instructions](docker-compose.md) 
+after going through a short list of [System Requirements](#system-requirements) and 
+[Architecture Specific Notes](#architecture-specific-notes).
 
 !!! tldr ""
-    To ensure compatibility with 64-bit Docker images, your Raspberry Pi 3 / 4 must boot with
-    the `arm_64bit=1` flag in its [config.txt file](https://www.raspberrypi.org/documentation/installation/installing-images/README.md).
-    An "exec format" error will occur otherwise.
+    Existing users are advised to keep their `docker-compose.yml` config updated based on the examples
+    available at [dl.photoprism.app/docker](https://dl.photoprism.app/docker/).
 
 ### System Requirements ###
 
@@ -58,11 +56,11 @@ available at [dl.photoprism.app/docker](https://dl.photoprism.app/docker/).
 | Development Preview | `photoprism/photoprism:preview`    | 
 | MariaDB             | `arm64v8/mariadb:10.6`             | 
 
+##### Raspberry Pi OS #####
+
 To ensure compatibility with 64-bit Docker images, your Raspberry Pi 3 / 4 must boot with
 the `arm_64bit=1` flag in its [config.txt file](https://www.raspberrypi.org/documentation/installation/installing-images/README.md).
 An "exec format" error will occur otherwise.
-
-##### No Matching Manifest #####
 
 Try explicitly pulling the ARM64 version if you've booted your device with the `arm_64bit=1` flag 
 and you see the "no matching manifest" error on Raspberry Pi OS (Raspbian):
@@ -73,8 +71,14 @@ docker pull --platform=arm64 photoprism/photoprism:latest
 
 It may also help to set the `DOCKER_DEFAULT_PLATFORM` environment variable to `linux/arm64`.
 
-Alternatively, you can run your device with [UbuntuDockerPi](https://github.com/guysoft/UbuntuDockerPi).
-It's a 64-bit Ubuntu Server with Docker pre-configured.
+##### Raspbian Alternatives #####
+
+Raspberry Pi OS is designed to be compatible with older 32-bit applications. We recommend choosing 
+a standard 64-bit Linux distribution to run modern server applications, for example:
+
+- [UbuntuDockerPi](https://github.com/guysoft/UbuntuDockerPi) is a 64-bit Ubuntu Server with Docker pre-configured
+- [Ubuntu for Raspberry Pi](https://ubuntu.com/raspberry-pi)
+- [Ubuntu MATE for Raspberry Pi](https://ubuntu-mate.org/raspberry-pi/)
 
 #### Older ARMv7-based Devices ####
 
@@ -88,6 +92,9 @@ and those with a 32-bit operating system:
 
 If your device meets the [requirements](#system-requirements), mostly the same installation instructions as 
 for regular Linux servers apply. Pay close attention to changed directory and environment variable names.
+
+!!! tldr ""
+    Darktable is not included in the ARMv7 version because it is not 32-bit compatible.
 
 ### Getting Updates ###
 

@@ -13,8 +13,8 @@ nav:
       - Synology NAS: getting-started/nas/synology.md
       - Unraid: getting-started/nas/unraid.md
     - Config Options: getting-started/config-options.md
-    - Troubleshooting: getting-started/troubleshooting.md
     - Performance: getting-started/performance.md
+    - Troubleshooting: getting-started/troubleshooting.md
     # - Support: getting-started/support.md
     - Getting Updates: getting-started/updates.md
     - Reverse Proxies:

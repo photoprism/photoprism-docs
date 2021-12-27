@@ -124,10 +124,10 @@ Fatal errors are often caused by one of the following conditions:
 - [ ] You didn't configure at least 4 GB of swap
 - [ ] The server CPU is overheating
 - [ ] The server has an outdated operating system that is not fully compatible
-- [ ] The database server is not available, incompatible or incorrectly configured
+- [ ] The database server is not available, incompatible, or incorrectly configured
 - [ ] You've upgraded the MariaDB server version without running `mariadb-upgrade`
 - [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder
-- [ ] There are network problems caused by a proxy, firewall or unstable connection
+- [ ] There are network problems caused by a proxy, firewall, or unstable connection
 - [ ] Kernel security modules such as [AppArmor](https://wiki.ubuntu.com/AppArmor) and [SELinux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) are blocking permissions
 - [ ] Your Raspberry Pi has not been configured according to our [recommendations](raspberry-pi.md#system-requirements)
 

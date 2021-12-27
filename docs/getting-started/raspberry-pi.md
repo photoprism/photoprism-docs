@@ -96,6 +96,15 @@ for regular Linux servers apply. Pay close attention to changed directory and en
 !!! tldr ""
     Darktable is not included in the ARMv7 version because it is not 32-bit compatible.
 
+### Is a Raspberry Pi fast enough? ###
+
+This depends largely on your expectations and the number of files you have. Most users report that
+PhotoPrism runs smoothly on their Raspberry Pi 4. However, the initial indexing typically takes longer
+than even on 8-year-old standard desktop CPUs.
+
+Also keep in mind that the hardware has limited video transcoding capabilities, so the conversion of video
+file formats is not well-supported and software transcoding is generally slow.
+
 ### Getting Updates ###
 
 Open a terminal and change to the folder where the `docker-compose.yml` file was saved.
@@ -116,17 +125,6 @@ to learn more about terminal commands.
 
 !!! info ""
     Running an image with `:latest` tag does not cause Docker to automatically download new images.
-
-### Is a Raspberry Pi fast enough? ###
-
-This depends largely on your expectations and the number of files you have. Most users report that
-PhotoPrism runs smoothly on their Raspberry Pi 4. However, the initial indexing typically takes longer
-than even on 8-year-old standard desktop CPUs.
-
-Also keep in mind that the hardware has limited video transcoding capabilities, so the conversion of video
-file formats is not well-supported and software transcoding is generally slow.
-
-Ideally, you can test a friend's device before you buy one, or make sure you can return it.
 
 ### Credits ###
 

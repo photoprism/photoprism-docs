@@ -82,7 +82,7 @@ If some pictures have broken or missing thumbnails, first check *Library > Error
 In case the application logs don't contain anything helpful:
 
 - [ ] The issue can be resolved by reloading the page or clearing the browser cache
-- [ ] You view RAW or sidecar files in the file browser which have an icon but no preview
+- [ ] You browse [non-JPEG](faq.md#which-file-types-are-supported) files in *Library > Originals* which have an icon but no preview
 - [ ] *Dynamic Previews* are enabled in *Settings > Advanced*, but the server is not powerful enough
 - [ ] The sizes in *Settings > Advanced* have been changed so the request can't be fulfilled
 - [ ] FFmpeg and/or RAW converters are disabled in *Settings > Advanced*

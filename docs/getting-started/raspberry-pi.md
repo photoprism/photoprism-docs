@@ -119,12 +119,11 @@ to learn more about terminal commands.
 
 ### Is a Raspberry Pi fast enough? ###
 
-This depends largely on your expectations and the number of files you have.
+This depends largely on your expectations and the number of files you have. Most users report that
+PhotoPrism runs smoothly on their Raspberry Pi 4. However, the initial indexing typically takes longer
+than even on 8-year-old standard desktop CPUs.
 
-Most users report that PhotoPrism runs smoothly on their Raspberry Pi 4. However, the initial indexing 
-often takes longer than even on 8-year-old standard desktop CPUs.
-
-Also keep in mind that the hardware has limited video transcoding capabilities, so the conversion of video 
+Also keep in mind that the hardware has limited video transcoding capabilities, so the conversion of video
 file formats is not well-supported and software transcoding is generally slow.
 
 Ideally, you can test a friend's device before you buy one, or make sure you can return it.

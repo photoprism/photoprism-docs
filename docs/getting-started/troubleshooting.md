@@ -265,17 +265,16 @@ services:
 
 ##### Storage #####
 
-Local [Solid-State Drives (SSD) are best](https://mariadb.com/de/resources/blog/how-to-tune-mariadb-write-performance/)
-for storing database files:
+Local Solid-State Drives (SSD) [are generally best](https://mariadb.com/de/resources/blog/how-to-tune-mariadb-write-performance/):
 
-- SSDs have more predictable performance and can handle more concurrent requests
 - Database performance extremely benefits from high throughput which HDDs can't provide
+- SSDs have more predictable performance and can handle more concurrent requests
 - Due to the HDD seek time, HDDs only support 5% of the reads per second of SSDs
 - The cost savings from using slow hard disks are minimal
 
 Switching to SSDs usually makes a big difference, especially for write operations and when
 the read cache is not big enough or can't be used. Never store database files on an unreliable
-device such as a USB flash drive or a shared network folder.
+device such as a USB flash drive, an SD card, or a shared network folder.
 
 ##### CPU #####
 

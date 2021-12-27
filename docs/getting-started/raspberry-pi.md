@@ -117,7 +117,7 @@ to learn more about terminal commands.
 !!! info ""
     Running an image with `:latest` tag does not cause Docker to automatically download new images.
 
-### Will it be fast enough? ###
+### Is a Raspberry Pi fast enough? ###
 
 This depends largely on your expectations and the number of files you have.
 

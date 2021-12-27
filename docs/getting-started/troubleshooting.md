@@ -265,7 +265,8 @@ services:
 
 ##### Storage #####
 
-Local Solid-State Drives (SSD) are [generally best](https://mariadb.com/de/resources/blog/how-to-tune-mariadb-write-performance/):
+Local Solid-State Drives (SSD) are [best for databases](https://mariadb.com/de/resources/blog/how-to-tune-mariadb-write-performance/)
+of any kind:
 
 - Database performance extremely benefits from high throughput which HDDs can't provide
 - SSDs have more predictable performance and can handle more concurrent requests

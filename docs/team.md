@@ -5,15 +5,17 @@
 
 ## Michael Mayer ##
 
-Michael learned coding on an Atari 1040 ST and started his first open-source projects in the 90s. He has more than 25 years of experience in building Web applications.
-His motivation is to explore the latest technologies and build an amazing product outside the constraints of a corporate environment.
+Michael learned programming on an Atari 1040 ST and started his first Open Source projects in the 90s.
+He has more than 25 years of experience in building Web applications.
+His motivation is to explore the latest technologies and develop an amazing product outside the constraints 
+of a traditional corporate environment.
 
 You can find him on [GitHub](https://github.com/lastzero), [LinkedIn](https://www.linkedin.com/in/lastzero/) and [Twitter](https://twitter.com/lastzero)
 
 ## Theresa Gresch ##
 
-Theresa works as a freelance product manager and developer in Berlin. She has a Master's in Neurobiology
-and aims to dive deeper into machine learning while working on this project.
+Theresa has a background in neurobiology and started working as a software product manager in Berlin after graduating from university.
+Her goal is to dive deeper into machine learning and explore new directions in product development.
 
 You can find her on [GitHub](https://github.com/graciousgrey) and [LinkedIn](https://www.linkedin.com/in/theresa-gresch-886924103/)
 

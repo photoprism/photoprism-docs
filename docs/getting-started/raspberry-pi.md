@@ -17,10 +17,6 @@ after going through a short list of [System Requirements](#system-requirements) 
 - Your device should have at least 4 GB of memory. Running PhotoPrism on a server with [less than 4 GB of swap space](troubleshooting.md#adding-swap)
   or setting a memory/swap limit can cause unexpected restarts, especially when the indexer temporarily needs more
   memory to process large files.
-- If you see Docker errors related to "cgroups", it may help to add the following to `/boot/firmware/cmdline.txt`:
-  ```
-  cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1
-  ```
 - We [recommend](troubleshooting.md#linux-kernel-security) disabling Linux kernel security in your 
   [docker-compose.yml](https://dl.photoprism.app/docker/arm64/docker-compose.yml), especially if you do 
   not have experience with the configuration:
@@ -71,9 +67,16 @@ docker pull --platform=arm64 photoprism/photoprism:latest
 
 It may also help to set the `DOCKER_DEFAULT_PLATFORM` environment variable to `linux/arm64`.
 
+In case you see Docker errors related to "cgroups", try adding the following parameters 
+to `/boot/firmware/cmdline.txt`:
+
+```
+cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1
+```
+
 ##### Raspbian Alternatives #####
 
-Raspberry Pi OS is designed to be compatible with older 32-bit applications. We recommend choosing 
+Raspberry Pi OS is designed to be compatible with older 32-bit software. We recommend choosing 
 a standard 64-bit Linux distribution to run modern server applications, for example:
 
 - [UbuntuDockerPi](https://github.com/guysoft/UbuntuDockerPi) is a 64-bit Ubuntu Server with Docker pre-configured

@@ -19,7 +19,7 @@ You can find him on [GitHub](https://github.com/lastzero), [LinkedIn](https://ww
 
 Theresa has a background in Neurobiology and started working as a Software Product Manager for startups after graduating from Free University in 2016.
 
-Her personal goals are to dive deeper into machine learning and explore new directions in product development.
+Her personal goals are to dive deeper into machine learning and to explore new directions in product development.
 
 You can find her on [GitHub](https://github.com/graciousgrey) and [LinkedIn](https://www.linkedin.com/in/theresa-gresch-886924103/)
 

@@ -33,13 +33,13 @@ to learn more about terminal commands.
 
 ### Raspberry Pi ###
 
-Our [stable version](https://docs.photoprism.app/release-notes/) and development preview have been built into a
-single [multi-arch image](https://hub.docker.com/r/photoprism/photoprism) for common 64-bit AMD, Intel,
-and ARM processors.
+Our [stable version](../release-notes.md) and development preview have been built into a single
+[multi-arch image](https://hub.docker.com/r/photoprism/photoprism) for 64-bit AMD, Intel, and ARM processors.
 
-That means, [Raspberry Pi](raspberry-pi.md) 3 / 4, Apple M1, and other ARM64-based devices can pull from the same 
-repository, enjoy the exact same functionality, and can follow the regular [installation instructions](docker-compose.md)
-after going through a short list of [requirements](raspberry-pi.md#system-requirements).
+That means, Raspberry Pi 3 / 4, Apple M1, and other ARM64-based devices can pull from the same repository,
+enjoy the exact same functionality, and can follow the regular [Installation Instructions](docker-compose.md)
+after going through a short list of [System Requirements](raspberry-pi.md#system-requirements) and
+[Architecture Specific Notes](raspberry-pi.md#architecture-specific-notes).
 
 Try explicitly pulling the ARM64 version if you've booted your device with the `arm_64bit=1` flag
 and you see the "no matching manifest" error on [Raspberry Pi OS](raspberry-pi.md#raspberry-pi-os) (Raspbian):
@@ -47,6 +47,9 @@ and you see the "no matching manifest" error on [Raspberry Pi OS](raspberry-pi.m
 ```bash
 docker pull --platform=arm64 photoprism/photoprism:latest
 ```
+
+We recommend choosing a [standard 64-bit Linux distribution](raspberry-pi.md#raspbian-alternatives) instead 
+of Raspbian to run modern server applications.
 
 Alternative Docker images are provided for [ARMv7-based devices](raspberry-pi.md#older-armv7-based-devices)
 and those with a 32-bit operating system.

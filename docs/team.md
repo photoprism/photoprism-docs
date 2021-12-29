@@ -36,7 +36,7 @@ You can find him on [Google Scholar](https://scholar.google.de/citations?user=JH
 
 ## Guy Sheffer ##
 
-*Contributor, Raspberry Pi Expert*
+*Contributor, Raspberry Pi Specialist*
 
 Known as [GuySoft](https://github.com/guysoft) on the web. Active developer in the Free Software and Maker community.
 Creator of [OctoPi](https://github.com/guysoft/OctoPi) and [FullPageOS](https://github.com/guysoft/FullPageOS), 

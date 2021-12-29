@@ -13,6 +13,20 @@
     Having said that, funding really has the highest impact. So users can do their part and 
     [become a sponsor](../funding.md) to get their favorite features as soon as possible.
 
+??? question "Are there plans to introduce premium features?"
+    Yes. Voluntary donations don't cover even our most basic expenses. It is in the best interest of all 
+    users that funding is sustainable in the long run.
+
+    For those who don't like recurring subscriptions, there will be discounted multi-year / lifetime payment options.
+    As soon as we have details, we will announce them publicly.
+
+    Meanwhile, GitHub Sponsors has [one-time donation](https://github.com/sponsors/photoprism?frequency=one-time) 
+    options if you don't need ongoing support after installation and don't expect updates with additional
+    premium features for more than 12 months.
+
+    The fully functional Community Edition will always remain free. You will be able to upgrade and downgrade 
+    without losing any data.
+
 ## User Interface ##
 
 ??? question "Can I use trees for organizing my pictures and albums?"

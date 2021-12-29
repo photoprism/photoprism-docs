@@ -10,12 +10,13 @@ He has more than 25 years of experience in building Web applications.
 His motivation is to explore the latest technologies and develop an amazing product outside the constraints 
 of a traditional corporate environment.
 
-You can find him on [GitHub](https://github.com/lastzero), [LinkedIn](https://www.linkedin.com/in/lastzero/) and [Twitter](https://twitter.com/lastzero)
+You can find him on [GitHub](https://github.com/lastzero), [LinkedIn](https://www.linkedin.com/in/lastzero/), and [Twitter](https://twitter.com/lastzero)
 
 ## Theresa Gresch ##
 
-Theresa has a background in neurobiology and started working as a software product manager in Berlin after graduating from university.
-Her goal is to dive deeper into machine learning and explore new directions in product development.
+Theresa has a background in neurobiology and started working as a software product manager in Berlin after 
+graduating from university. Her goal is to dive deeper into machine learning and explore new directions in 
+product development.
 
 You can find her on [GitHub](https://github.com/graciousgrey) and [LinkedIn](https://www.linkedin.com/in/theresa-gresch-886924103/)
 

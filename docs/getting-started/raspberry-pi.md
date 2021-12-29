@@ -3,7 +3,7 @@
 Our [stable version](../release-notes.md) and development preview have been built into a single
 [multi-arch image](https://hub.docker.com/r/photoprism/photoprism) for 64-bit AMD, Intel, and ARM processors.
 
-That means, Raspberry Pi 3 / 4, Apple M1, and other ARM64 users can pull from the same repository, 
+That means, Raspberry Pi 3 / 4, Apple M1, and other ARM64-based devices can pull from the same repository, 
 enjoy the exact same functionality, and can follow the regular [Installation Instructions](docker-compose.md) 
 after going through a short list of [System Requirements](#system-requirements) and 
 [Architecture Specific Notes](#architecture-specific-notes).

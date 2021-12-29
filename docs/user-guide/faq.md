@@ -14,8 +14,9 @@
     [become a sponsor](../funding.md) to get their favorite features as soon as possible.
 
 ??? question "Are there plans to introduce premium features?"
-    Yes. Voluntary donations don't cover even our most basic expenses. It is in the best interest of all 
-    users that funding is sustainable in the long run.
+    Yes, we plan to offer non-essential premium features to fund further development as voluntary donations 
+    don't cover even our most basic expenses. It is in the best interest of all users that funding is sustainable 
+    in the long run.
 
     For those who don't like recurring subscriptions, there will be discounted multi-year / lifetime payment options.
     As soon as we have details, we will announce them publicly.

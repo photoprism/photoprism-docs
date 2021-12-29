@@ -1,12 +1,8 @@
 # Release Notes
 
-!!! note ""
-    Our [stable version](https://docs.photoprism.app/release-notes/) and development preview have been built into a 
-    single [multi-arch image](https://hub.docker.com/r/photoprism/photoprism) for 64-bit AMD, Intel,
-    and ARM processors. That means, [Raspberry Pi](getting-started/raspberry-pi.md) 3 / 4, Apple M1, and other
-    ARM64-based devices can pull from the same repository, enjoy the exact same functionality, and can follow the 
-    regular [installation instructions](getting-started/docker-compose.md) after going through a short list of 
-    [requirements](getting-started/raspberry-pi.md).
+!!! example ""
+    **Back us on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism).**
+    Your continued support [helps us](funding.md) provide services like world maps and develop new features. Thank you! 💜
 
 ### Development Preview ###
 

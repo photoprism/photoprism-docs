@@ -41,8 +41,18 @@ That means, [Raspberry Pi](raspberry-pi.md) 3 / 4, Apple M1, and other ARM64-bas
 repository, enjoy the exact same functionality, and can follow the regular [installation instructions](docker-compose.md)
 after going through a short list of [requirements](raspberry-pi.md#system-requirements).
 
+Try explicitly pulling the ARM64 version if you've booted your device with the `arm_64bit=1` flag
+and you see the "no matching manifest" error on [Raspberry Pi OS](raspberry-pi.md#raspberry-pi-os) (Raspbian):
+
+```bash
+docker pull --platform=arm64 photoprism/photoprism:latest
+```
+
 Alternative Docker images are provided for [ARMv7-based devices](raspberry-pi.md#older-armv7-based-devices)
 and those with a 32-bit operating system.
+
+!!! tldr ""
+    Darktable is not included in the ARMv7 version because it is not 32-bit compatible.
 
 ### Facial Recognition ###
 

@@ -17,7 +17,7 @@ You can find him on [GitHub](https://github.com/lastzero), [LinkedIn](https://ww
 
 *Founder, Product Development, and Community Management*
 
-Theresa has a background in Neurobiology and started working as a Software Product Manager for startups after graduating from Free University in 2016.
+Theresa has a background in Neurobiology and started working as a Software Product Manager for startups after graduating from Free University of Berlin in 2016.
 
 Her personal goals are to dive deeper into machine learning and to explore new directions in product development.
 

@@ -14,9 +14,8 @@ You can find him on [GitHub](https://github.com/lastzero), [LinkedIn](https://ww
 
 ## Theresa Gresch ##
 
-Theresa has a background in neurobiology and started working as a software product manager in Berlin after 
-graduating from university. Her goal is to dive deeper into machine learning and explore new directions in 
-product development.
+Theresa has a background in Neurobiology and started working as a Software Product Manager after graduating from 
+university. Her goal is to dive deeper into machine learning and explore new directions in product development.
 
 You can find her on [GitHub](https://github.com/graciousgrey) and [LinkedIn](https://www.linkedin.com/in/theresa-gresch-886924103/)
 

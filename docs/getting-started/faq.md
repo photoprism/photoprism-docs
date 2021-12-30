@@ -196,32 +196,8 @@ See [Troubleshooting Guide](troubleshooting.md).
 
 ### Why is PhotoPrism getting stuck in a restart loop? ###
 
-This happens when Docker was configured to automatically restart the app after failures.
-Fatal errors are often caused by one of the following conditions:
-
-1. Your (virtual) server disk is full
-2. There is disk space left, but the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached
-3. The storage folder is not writable or there are other filesystem permission issues
-4. You have accidentally mounted the wrong folders
-5. The server is low on memory
-6. The database server is not available, incompatible or incorrectly configured
-7. There are network problems caused by a proxy, firewall or unstable connection
-8. Kernel security modules such as [AppArmor](https://wiki.ubuntu.com/AppArmor) and
-   [SELinux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) may be blocking permissions
-
-Please search your operating system and server logs for messages like *disk full*, *wrong permissions*,
-and *database connection failed* before reporting a bug. If you are using Docker Compose, run this command
-to display the last 100 log messages:
-
-```
-docker-compose logs --tail=100
-```
-
-Linux kernel security can be disabled on private servers, especially if you do not have experience
-with the configuration. Use a file manager, or the commands `chmod` and `chown` on Unix-like operating systems,
-to verify and fix filesystem permissions.
-Available disk space can be displayed with `df -h`. The size of virtual disks and memory can be
-increased in Docker and VM settings if needed. Please refer to the documentation.
+This happens when Docker was configured to automatically restart services after failures.
+See [Troubleshooting Guide](troubleshooting.md#fatal-server-errors).
 
 ### Can I install PhotoPrism in a sub-directory on a shared domain?
 

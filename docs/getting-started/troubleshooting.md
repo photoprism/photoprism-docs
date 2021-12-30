@@ -13,8 +13,21 @@ the last 100 log messages (omit `--tail=100` to see all):
 docker-compose logs --tail=100
 ```
 
-Check them for messages like *disk full*, *wrong permissions*, *database connection failed*, and *killed*
-before reporting a bug. If the server was killed, this points to a memory issue.
+Check them for messages like *disk full*, *wrong permissions*, *no route to host*, *connection failed*, and *killed*
+before reporting a bug. If a service has been killed or otherwise automatically terminated, this points to a memory problem.
+
+Should MariaDB get stuck in a restart loop and PhotoPrism can't connect to it, this indicates a memory, filesystem, 
+or permission issue:
+
+```
+mariadb: mysqld: ready for connections.
+mariadb: mysqld (initiated by: unknown): Normal shutdown
+photoprism: dial tcp 172.18.0.2:3306: connect: no route to host
+mariadb: mysqld: Shutdown complete
+```
+
+We recommend going through the [checklist for fatal server errors](#fatal-server-errors) and to verify that 
+your computer meets the [system requirements](index.md#system-requirements).
 
 !!! note ""
     If you see no errors or no logs at all, you may have started the server on a different host
@@ -99,7 +112,7 @@ In case the application logs don't contain anything helpful:
 - [ ] You are connected to the wrong server, CDN, or a DNS entry hasn't been updated yet
 
 We also recommend checking your Docker logs for messages like *disk full*, *wrong permissions*, and *killed* as
-described above. If the server was killed, this points to a memory issue.
+described above. If a service has been killed or otherwise automatically terminated, this points to a memory problem.
 
 #### App Not Loading ####
 
@@ -131,8 +144,9 @@ Fatal errors are often caused by one of the following conditions:
 - [ ] Kernel security modules such as [AppArmor](https://wiki.ubuntu.com/AppArmor) and [SELinux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) are blocking permissions
 - [ ] Your Raspberry Pi has not been configured according to our [recommendations](raspberry-pi.md#system-requirements)
 
-We recommend checking your Docker logs for messages like *disk full*, *wrong permissions*, *database connection failed*,
-and *killed* as described above. If the server was killed, this points to a memory issue.
+We recommend checking your Docker logs for messages like *disk full*, *wrong permissions*, *no route to host*, 
+*connection failed*, and *killed* as described above. If a service has been killed or otherwise automatically terminated, 
+this points to a memory problem.
 
 ### Adding Swap ###
 

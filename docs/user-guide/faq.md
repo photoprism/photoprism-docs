@@ -28,6 +28,9 @@
     The fully functional Community Edition will always remain free. You will be able to upgrade and downgrade 
     without losing any data.
 
+    We encourage you to [become a sponsor](../funding.md), even and especially if you are satisfied with the 
+    basic functionality. Think of "free software" as in "free speech," not as in "free beer". Thank you!
+
 ## User Interface ##
 
 ??? question "Can I use trees for organizing my pictures and albums?"

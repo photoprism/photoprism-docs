@@ -192,12 +192,16 @@ On the other hand, MariaDB has many optimizations. It is also completely open-so
 
 This may happen when the server cannot be reached, for example, because a proxy is misconfigured,
 JavaScript is disabled in your browser, an ad blocker is blocking requests, or you are using an incompatible browser.
-See [Troubleshooting Guide](troubleshooting.md).
+
+We recommend going through the [checklist provided](troubleshooting.md#app-not-loading) and to verify that
+your browser meets the [system requirements](index.md#system-requirements).
 
 ### Why is PhotoPrism getting stuck in a restart loop? ###
 
 This happens when Docker was configured to automatically restart services after failures.
-See [Troubleshooting Guide](troubleshooting.md#fatal-server-errors).
+
+We recommend going through the [checklist for fatal server errors](troubleshooting.md#fatal-server-errors) and to verify that
+your computer meets the [system requirements](index.md#system-requirements).
 
 ### Can I install PhotoPrism in a sub-directory on a shared domain?
 

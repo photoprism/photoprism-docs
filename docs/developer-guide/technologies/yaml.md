@@ -50,7 +50,7 @@ services:
       - "/mnt/photos:/photoprism/originals"
 ```
 
-## Key-Value Lists  ##
+## Key-Value Pairs  ##
 
 Dictionaries are collections of key/value pairs and often used to define environment variables in config files:
 

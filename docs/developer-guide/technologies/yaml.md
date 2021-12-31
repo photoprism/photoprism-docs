@@ -1,8 +1,10 @@
 # Introduction to YAML
 
-YAML is an indentation-based markup language designed to be easy to read and write even for non-developers.
-PhotoPrism uses it for metadata backups and config files because of its simplicity and widespread support 
-in other applications and tools like [Docker Compose](https://dl.photoprism.app/docker/docker-compose.yml).
+[YAML](https://en.wikipedia.org/wiki/YAML) is a human-readable markup language. PhotoPrism uses it for metadata 
+backups and config files because of its simplicity and widespread support in other applications and tools 
+like [Docker Compose](https://dl.photoprism.app/docker/docker-compose.yml).
+
+Commonly used file extensions are `.yml` and `.yaml`, for example `docker-compose.yml`.
 
 ## Keys and Values ##
 
@@ -13,15 +15,19 @@ characters and [Emojis](https://home.unicode.org/emoji/about-emoji/).
 The difference between single and double quotes is that double quotes support escape sequences like `\t` for a tab
 or `\n` for a new line.
 
-Related values start at the same indentation level. We recommend using 2 spaces, but e.g. 4 spaces are also
-possible as long as the indentation is consistent in a file:
+Related values start at the same indentation level. We recommend using 2 spaces, but any number of spaces will work 
+as long as the indentation is consistent (tabs are not allowed).
+
+Comments begin with the number sign `#`, can start anywhere on a line and continue until the end of the line.
 
 ```yaml
+## EXAMPLE
 Type: image
 Title: "La Tour Eiffel ✨"
 Year: 2014
 Details:
-  Notes: "Hello\nWorld!"
+  # Dictionaries are key/value pairs:
+  Notes: "Hello\nWorld!" # contains a new line
   Keywords: 'paris, france'
 ```
 

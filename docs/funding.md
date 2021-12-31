@@ -4,7 +4,7 @@
 and doesn't get you better software.
 
 Please back us on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism)
-if you enjoy PhotoPrism. Your continued support helps us provide services like world maps and develop [new features](https://github.com/photoprism/photoprism/projects/5).
+if you enjoy PhotoPrism. Your continued support helps us provide [regular updates](https://github.com/photoprism/photoprism/projects/5) and services like [world maps](https://demo.photoprism.app/places).
 
 We currently have the following sponsorship options:
 
@@ -13,13 +13,16 @@ We currently have the following sponsorship options:
 - Stripe will be available in early 2022, so you can sign up directly in the app without having a Patreon or GitHub account
 - You're welcome to [contact us](https://photoprism.app/contact) for other options
 
+Unlike traditional offline apps such as Microsoft Office or single-player games, software exposed to the Internet 
+must be updated regularly to stay secure and compatible with the latest standards.
+
 Sponsors get access to [additional features](https://github.com/photoprism/photoprism/issues?q=label%3Asponsor-feature), receive direct [technical support](https://photoprism.app/contact) via email, and can join our private chat room on [matrix.org](https://matrix.org/).
 
 In addition, ideas endorsed by [silver, gold, and platinum sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md) 
 receive a [golden label](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3Asponsor) and
 will be prioritized on the [roadmap](https://github.com/photoprism/photoprism/projects/5).
 
-We encourage you to become a sponsor, even and especially if you are satisfied with the basic functionality.
-Thank you! 💜
+We encourage everyone who can afford it to become a sponsor as this is ultimately best for the product
+and the community. Think of "free software" as in "free speech," not as in "free beer". Thank you! 💜
 
 [^1]: Think of “free software” as in “free speech,” not as in “free beer.” We sometimes call it “libre software,” borrowing the French or Spanish word for “free” as in freedom, to show we do not mean the software is gratis. (https://www.gnu.org/philosophy/free-sw.en.html)

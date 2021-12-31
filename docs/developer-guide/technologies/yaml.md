@@ -34,8 +34,8 @@ Details:
 ## Simple Lists ##
 
 List are lines that start at the same indentation level and begin with a `- ` (a dash and a space).
-They are commonly used to define service dependencies or folders shared between host and container 
-in `docker-compose.yml` files (volume mounts):
+They are commonly used to define service dependencies, exposed network ports, or folders shared between 
+host and container in `docker-compose.yml` files (volume mounts):
 
 ```yaml
 services:

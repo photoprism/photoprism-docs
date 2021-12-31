@@ -7,8 +7,8 @@ Commonly used file extensions are `.yml` and `.yaml`, for example `docker-compos
 
 ## Basics ##
 
-Value names, which are referred to as keys, are always case-sensitive. If values contain more than letters and numbers,
-they should be enclosed in single `'` or double quotes `"`. You can generally use all [Unicode](https://home.unicode.org/)
+Value names, which are referred to as keys, are case-sensitive. If values contain more than letters and numbers, they 
+should be enclosed in single `'` or double quotes `"`. You can generally use all [Unicode](https://home.unicode.org/)
 characters and [Emojis](https://home.unicode.org/emoji/about-emoji/).
 
 The difference between single and double quotes is that double quotes support escape sequences like `\t` for a tab

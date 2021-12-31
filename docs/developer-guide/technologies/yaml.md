@@ -24,9 +24,9 @@ Comments begin with the number sign `#`, can start anywhere on a line, and conti
 Type: image
 Title: "La Tour Eiffel ✨"
 Year: 2014
-# Dictionaries are collections of key/value pairs:
+# Collection of key-value pairs:
 Details:
-  Notes: "Hello\nWorld!" # contains a new line
+  Notes: "Hello\nWorld!" # comment
   Keywords: 'paris, france'
 ```
 
@@ -45,8 +45,8 @@ services:
     ports:
       - "2342:2342"
     volumes:
-      # Originals folder ("/host:/container")
-      - "/mnt/photos:/photoprism/originals"
+      # "/host/folder:/container/folder"
+      - "/photos:/photoprism/originals"
 ```
 
 ## Key-Value Pairs  ##

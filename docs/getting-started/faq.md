@@ -40,7 +40,7 @@ YAML sidecar files while indexing and after manually editing fields like title, 
 They **serve as a backup** in case the database (index) gets lost, or when folders are synced with a remote 
 PhotoPrism instance.
 
-Like JSON, YAML files can be opened using common development tools and text editors.
+Like JSON, [YAML](../developer-guide/technologies/yaml.md) files can be opened using common development tools and text editors.
 Changes won't be synced back to the original index though as this might overwrite existing data.
 
 #### XMP ####

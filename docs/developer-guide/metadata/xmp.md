@@ -1,4 +1,4 @@
-XMP (Extensible Metadata Platform) is the standard sidecar file format supported by Adobe Lightroom. While YAML files might be easier to understand, read and edit for humans, using the XML-based XMP format simplifies importing metadata from Lightroom and we can leverage a documented standard. Ideally, data can be kept in sync continuously between PhotoPrism and other photo management applications.
+XMP (Extensible Metadata Platform) is the standard sidecar file format supported by Adobe Lightroom. While [YAML](../technologies/yaml.md) files might be easier to understand, read and edit for humans, using the XML-based XMP format simplifies importing metadata from Lightroom and we can leverage a documented standard. Ideally, data can be kept in sync continuously between PhotoPrism and other photo management applications.
 
 A proof-of-concept for reading `Title`, `Copyright`, `Artist` and `Description` is implemented but full support is a lot more work, contributions welcome. One issue is proper XML parsing in Go as basic types like date and time are not supported by `xml.Unmarshaler`. GPS coordinates are not stored as float but as a string like `52,27.5814N`.
 

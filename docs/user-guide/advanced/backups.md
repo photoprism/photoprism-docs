@@ -1,4 +1,4 @@
-In case you have backups enabled in your [Settings](../settings/advanced.md), PhotoPrism automatically creates YAML backup files for albums and photos.
+In case you have backups enabled in your [Settings](../settings/advanced.md), PhotoPrism automatically creates [YAML](../../developer-guide/technologies/yaml.md) backup files for albums and photos.
 
 We do this to give you full control over your data.
 

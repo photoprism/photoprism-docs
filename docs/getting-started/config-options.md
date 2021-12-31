@@ -48,7 +48,7 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_DISABLE_WEBDAV`     | --disable-webdav           | disable built-in WebDAV server
 `PHOTOPRISM_DISABLE_SETTINGS`   | --disable-settings         | disable settings UI and API
 `PHOTOPRISM_DISABLE_PLACES`     | --disable-places           | disable reverse geocoding and map
-`PHOTOPRISM_DISABLE_BACKUPS`    | --disable-backups          | disable creating YAML metadata backup files
+`PHOTOPRISM_DISABLE_BACKUPS`    | --disable-backups          | disable creating [YAML](../developer-guide/technologies/yaml.md) metadata backup files
 `PHOTOPRISM_DISABLE_EXIFTOOL`   | --disable-exiftool         | disable creating JSON metadata sidecar files with ExifTool
 `PHOTOPRISM_DISABLE_FFMPEG`     | --disable-ffmpeg           | disable video transcoding and still image extraction with FFmpeg
 `PHOTOPRISM_DISABLE_DARKTABLE`  | --disable-darktable        | disable converting RAW files with Darktable

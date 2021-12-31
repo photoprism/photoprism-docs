@@ -10,8 +10,8 @@ Value names, which are referred to as keys, are always case-sensitive. If values
 they should be enclosed in single `'` or double quotes `"`. You can generally use all [Unicode](https://home.unicode.org/)
 characters and [Emojis](https://home.unicode.org/emoji/about-emoji/).
 
-The difference between single quotes and double quotes is that double quotes support escape sequences 
-like `\t` for a tab or `\n` for a new line.
+The difference between single and double quotes is that double quotes support escape sequences like `\t` for a tab
+or `\n` for a new line.
 
 Related values start at the same indentation level. We recommend using 2 spaces, but e.g. 4 spaces are also
 possible as long as the indentation is consistent in a file:

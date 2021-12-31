@@ -91,7 +91,7 @@ If this doesn't help, or you have other questions:
 
 In addition, [sponsors](../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
 
-We'll do our best to answer all your questions. In return, we ask you to back us on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism).
+We'll do our best to answer all your questions. In return, we ask you to [back us](../funding.md) on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism).
 Think of "free software" as in "free speech," not as in "free beer". Thank you! 💜
 
 !!! tldr ""

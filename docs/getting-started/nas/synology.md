@@ -1,4 +1,10 @@
-## Setup Using Synology NAS and Portainer
+
+## Setting up PhotoPrism on Synology using Docker ##
+Here is a great tutorial for setting up PhotoPrism on Synology NAS:
+
+- https://www.wundertech.net/how-to-setup-photoprism-on-a-synology-nas
+
+## Setting up PhotoPrism on Synology using Portainer
 
 *Note: This is contributed content and work in progress. Click the edit link to perform changes and send a pull request.*
 
@@ -7,7 +13,7 @@ This guide will help you install PhotoPrism in your Synology NAS using [Portaine
 - install Portainer in your Synology NAS using Task Manager;
 - configure Portainer to use your Synology's docker endpoint;
 - install PhotoPrism in your Synology NAS using Portainer, accessible over http / direct IP;
-- (TO-DO) configure a reverse proxy in your Synology NAS to access Photoprism over https / custom domain name.
+- (TO-DO) configure a reverse proxy in your Synology NAS to access PhotoPrism over https / custom domain name.
 
 #### Step 1: Install Portainer in your Synology NAS using Task Manager ####
 
@@ -50,15 +56,15 @@ To install Portainer:
 9. Select _Docker - Manage the local Docker environment_ to link Portainer to your Synology's local docker endpoint and hit _Connect_; Portainer's admin page should open;
 10. Click _Environment_ in the left menu, then _local_ and under _Public IP_ place your local NAS IP (it should be the same [YOUR-LOCAL-IP] of step 6.
 
-#### Step 3: Install Photoprism in your Synology NAS using Portainer, accessible over http / direct IP ####
+#### Step 3: Install PhotoPrism in your Synology NAS using Portainer, accessible over http / direct IP ####
 
-With Portainer installed we can use a docker-compose file to deploy a stack composed by Photoprism and MariaDB to quickly get Photoprism running in our NAS. We can use [Photoprism's default docker-compose yml file](https://dl.photoprism.app/docker/docker-compose.yml).
+With Portainer installed we can use a docker-compose file to deploy a stack composed by PhotoPrism and MariaDB to quickly get PhotoPrism running in our NAS. We can use [PhotoPrism's default docker-compose yml file](https://dl.photoprism.app/docker/docker-compose.yml).
 
 11. open Synology's File Station app and browse to the _docker_ shared folder;
 12. create a folder named _photoprism_ inside _docker_, which will persist relevant Photoprism's data in our local filesystem;
 13. inside _photoprism_ folder, create three more folders: _storage_, _originals_ and _database_.
 14. Open Portainer by visiting http://[YOUR-LOCAL-IP]:9000/;
-15. Click _Stacks_ in the left menu, then _Add stack_, give it a meaningful name (for eg. Photoprism) and in the Web Editor place the content of [Photoprism's default docker-compose yml file](https://dl.photoprism.app/docker/docker-compose.yml).
+15. Click _Stacks_ in the left menu, then _Add stack_, give it a meaningful name (for eg. Photoprism) and in the Web Editor place the content of [PhotoPrism's default docker-compose yml file](https://dl.photoprism.app/docker/docker-compose.yml).
 
 **BE SURE TO USE YOUR OWN PHOTOPRISM_ADMIN_PASSWORD, PHOTOPRISM_DATABASE_PASSWORD, MYSQL_ROOT_PASSWORD, AND MYSQL_PASSWORD BY CHANGING THE VALUES ACCORDINGLY, AND CHECK THE LOCAL VOLUMES PATHS TO MATCH THOSE DEFINED IN STEP 13**.
 
@@ -73,15 +79,12 @@ With Portainer installed we can use a docker-compose file to deploy a stack comp
 #### Step 4: Configure a reverse proxy in your Synology NAS to access PhotoPrism over https / custom domain name ####
 
 Synology allows you to configure a nginx reverse proxy to serve your applications over HTTPS. Configurations can be made in Diskstation manager _Control Panel_, _Application Portal_, _Reverse proxy_.:
-Click create. [Description] give it a meaningful name (for eg. Photoprism) [Protocol]=HTTPS [Hostname]=[YOUR-HOSTNAME] [Port]=[YOUR-PORT] (for eg. 2343) check Enable HSTS and HTTP/2 . under Destination [Protocol]=HTTP [Hostname]=[YOUR-LOCAL-IP][PORT]=[YOUR-PORT] (default is 2342)
+Click create. [Description] give it a meaningful name (for eg. PhotoPrism) [Protocol]=HTTPS [Hostname]=[YOUR-HOSTNAME] [Port]=[YOUR-PORT] (for eg. 2343) check Enable HSTS and HTTP/2 . under Destination [Protocol]=HTTP [Hostname]=[YOUR-LOCAL-IP][PORT]=[YOUR-PORT] (default is 2342)
 Last step under _Custom Header_.:
 Click create [Websocket] and hit OK (this step makes that your browser receive photo counts, log messages, or metadata updates).
 
 **IMPORTANT: make sure that you have forwarded the selected port (for eg. 2343) in your router:**
 
-## Other Tutorials ##
-
-- https://www.wundertech.net/how-to-setup-photoprism-on-a-synology-nas
 
 
 

@@ -39,7 +39,9 @@
     discovered yet. This is a known risk that may affect you even if your computer isn't directly exposed to
     the Internet.
 
-    Please also keep your operating system and Web browsers up to date. Don't push your luck.
+    It's essential to keep your operating system, Web browsers, and all other software up to date. Don't push your luck 
+    and don't expect developers to spend time providing individual updates for old versions that contain only 
+    critical security updates, but nothing else.
 
 ## User Interface ##
 

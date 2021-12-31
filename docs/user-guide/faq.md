@@ -14,22 +14,32 @@
     [become a sponsor](../funding.md) to get their favorite features as soon as possible.
 
 ??? question "Are there plans to introduce premium features?"
-    Yes, we plan to offer non-essential premium features to fund further development as voluntary donations 
-    don't cover even our most basic expenses. It is in the best interest of all users that funding is sustainable 
+    Yes, we plan to offer non-essential premium features and services as voluntary donations currently don't 
+    cover even our most basic expenses. It is in the best interest of all users that funding is sustainable 
     in the long run.
 
-    For those who don't like recurring subscriptions, there will be discounted multi-year / lifetime payment options.
-    As soon as we have details, we will announce them publicly.
+    Unless your plan includes additional cloud storage, you will be able to upgrade and downgrade without 
+    losing any data. For those who don't like recurring subscriptions, there will be discounted multi-year / lifetime 
+    payment options. To account for income differences, pricing may also vary by region. As soon as we have 
+    details, we will announce them publicly.
 
     Meanwhile, GitHub Sponsors has [one-time donation](https://github.com/sponsors/photoprism?frequency=one-time) 
     options if you don't need ongoing support after installation and don't expect updates with additional
     premium features for more than 12 months.
 
-    The fully functional Community Edition will always remain free. You will be able to upgrade and downgrade 
-    without losing any data.
+    We encourage everyone who can afford it to [become a sponsor](../funding.md) as this is ultimately best for 
+    the product and the community. Think of "free software" as in "free speech," not as in "free beer".
 
-    We encourage you to [become a sponsor](../funding.md), even and especially if you are satisfied with the 
-    basic functionality. Think of "free software" as in "free speech," not as in "free beer". Thank you!
+??? question "Why can't I just purchase and download a single version?"
+    Offering single versions for one-time purchase without ongoing updates would be irresponsible.
+    Unlike traditional offline apps such as Microsoft Office or single-player games, software exposed to the Internet
+    must be updated regularly to stay secure and compatible with the latest standards.
+
+    Updates are also important because basically all file format parsers have flaws that just haven't 
+    been discovered yet. This is a known risk that may affect you even if your instance isn't directly exposed to
+    the Internet.
+
+    Please also keep your operating system and Web browsers up to date. Don't push your luck.
 
 ## User Interface ##
 

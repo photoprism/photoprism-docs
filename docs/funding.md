@@ -24,4 +24,4 @@ and the community. Thank you! 💜
 
 [^1]: Think of “free software” as in “free speech,” not as in “free beer.” We sometimes call it “libre software,” borrowing the French or Spanish word for “free” as in freedom, to show we do not mean the software is gratis. (https://www.gnu.org/philosophy/free-sw.en.html)
 
-[^2]: Unlike traditional offline apps such as Microsoft Office or single-player games, software exposed to the Internet must be updated regularly to stay secure and compatible with the latest standards.
+[^2]: Unlike traditional offline apps such as Microsoft Office or single-player games, software exposed to the Internet must be [updated regularly](https://docs.photoprism.app/release-notes/) to stay secure and compatible with the latest standards.

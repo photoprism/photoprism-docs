@@ -4,7 +4,8 @@
 and doesn't get you better software.
 
 Please back us on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism)
-if you enjoy PhotoPrism. Your continued support helps us provide [regular updates](https://github.com/photoprism/photoprism/projects/5) and services like [world maps](https://demo.photoprism.app/places).
+if you enjoy PhotoPrism. Your continued support helps us provide [regular updates](https://github.com/photoprism/photoprism/projects/5)
+and services like [world maps](https://demo.photoprism.app/places).
 
 We currently have the following sponsorship options:
 

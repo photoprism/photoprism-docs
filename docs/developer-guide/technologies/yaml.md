@@ -1,7 +1,7 @@
 # Introduction to YAML
 
 [YAML](https://en.wikipedia.org/wiki/YAML) is a human-readable markup language. PhotoPrism uses it for metadata 
-backups and config files because of its simplicity and widespread support in other applications.
+backups and config files because of its simplicity and widespread support.
 
 Commonly used file extensions are `.yml` and `.yaml`, for example `docker-compose.yml`.
 

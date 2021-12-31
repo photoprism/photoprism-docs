@@ -35,8 +35,8 @@
     Unlike traditional offline apps such as Microsoft Office or single-player games, software exposed to the Internet
     must be updated regularly to stay secure and compatible with the latest standards.
 
-    Updates are also important because basically all file format parsers have flaws that just haven't
-    been discovered yet. This is a known risk that may affect you even if your server isn't directly exposed to
+    Updates are also important because basically all file format parsers have flaws that just haven't been 
+    discovered yet. This is a known risk that may affect you even if your computer isn't directly exposed to
     the Internet.
 
     Please also keep your operating system and Web browsers up to date. Don't push your luck.

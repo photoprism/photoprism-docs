@@ -6,28 +6,28 @@
     We have a zero bug policy and do our best to help users when they need support or have other questions.
     Updating and improving the documentation you are reading takes up a large part of our time too.
 
-    This comes at a price, as we can't give exact deadlines for new features. Also keep in mind that epics 
+    This comes at a price, as we can't give exact deadlines for new features. Also keep in mind that epics
     like multi-user support can't be delivered in a single update. Working on big features is a continuous process
     that can take months to years until all use cases are covered.
 
-    Having said that, funding really has the highest impact. So users can do their part and 
+    Having said that, funding really has the highest impact. So users can do their part and
     [become a sponsor](../funding.md) to get their favorite features as soon as possible.
 
 ??? question "Are there plans to introduce premium features?"
-    Yes, we plan to offer non-essential premium features and services as voluntary donations currently don't 
-    cover even our most basic expenses. It is in the best interest of all users that funding is sustainable 
+    Yes, we plan to offer non-essential premium features and services as voluntary donations currently don't
+    cover even our most basic expenses. It is in the best interest of all users that funding is sustainable
     in the long run.
 
-    Unless your plan includes additional cloud storage, you will be able to upgrade and downgrade without 
-    losing any data. For those who don't like recurring subscriptions, there will be discounted multi-year / lifetime 
-    payment options. To account for income differences, pricing may also vary by region. As soon as we have 
+    Unless your plan includes additional cloud storage, you will be able to upgrade and downgrade without
+    losing any data. For those who don't like recurring subscriptions, there will be discounted multi-year / lifetime
+    payment options. To account for income differences, pricing may also vary by region. As soon as we have
     details, we will announce them publicly.
 
-    Meanwhile, GitHub Sponsors has [one-time donation](https://github.com/sponsors/photoprism?frequency=one-time) 
+    Meanwhile, GitHub Sponsors has [one-time donation](https://github.com/sponsors/photoprism?frequency=one-time)
     options if you don't need ongoing support after installation and don't expect updates with additional
     premium features for more than 12 months.
 
-    We encourage everyone who can afford it to [become a sponsor](../funding.md) as this is ultimately best for 
+    We encourage everyone who can afford it to [become a sponsor](../funding.md) as this is ultimately best for
     the product and the community. Think of "free software" as in "free speech," not as in "free beer".
 
 ??? question "Why can't I just purchase and download a single version?"
@@ -35,8 +35,8 @@
     Unlike traditional offline apps such as Microsoft Office or single-player games, software exposed to the Internet
     must be updated regularly to stay secure and compatible with the latest standards.
 
-    Updates are also important because basically all file format parsers have flaws that just haven't 
-    been discovered yet. This is a known risk that may affect you even if your instance isn't directly exposed to
+    Updates are also important because basically all file format parsers have flaws that just haven't
+    been discovered yet. This is a known risk that may affect you even if your server isn't directly exposed to
     the Internet.
 
     Please also keep your operating system and Web browsers up to date. Don't push your luck.

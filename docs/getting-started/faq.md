@@ -35,10 +35,10 @@ and can be processed using common development tools and text editors.
 
 #### YAML ####
 
-If not disabled via `PHOTOPRISM_DISABLE_BACKUPS` or `--disable-backups`, PhotoPrism will automatically create / update 
-YAML sidecar files while indexing and after manually editing fields like title, date, or location. 
-They **serve as a backup** in case the database (index) gets lost, or when folders are synced with a remote 
-PhotoPrism instance.
+If not disabled via `PHOTOPRISM_DISABLE_BACKUPS` or `--disable-backups`, PhotoPrism will automatically create / update
+[YAML](../developer-guide/technologies/yaml.md) sidecar files while indexing and after manually editing fields like 
+title, date, or location. They **serve as a backup** in case the database (index) gets lost, or when folders are synced 
+with a remote PhotoPrism instance.
 
 Like JSON, [YAML](../developer-guide/technologies/yaml.md) files can be opened using common development tools and text editors.
 Changes won't be synced back to the original index though as this might overwrite existing data.
@@ -247,8 +247,7 @@ for further details.
 
 ### How can I mount network shares with Docker? ###
 
-There are multiple ways of using network storage. 
-One of the easiest might be to directly mount NFS shares with Docker.
+There are multiple ways of using network storage. One of the easiest might be to directly mount NFS shares with Docker.
 
 You can mount any number of NFS shares as folders. Follow this `docker-compose.yml` example 
 if you want to mount the *originals* folder as a share:

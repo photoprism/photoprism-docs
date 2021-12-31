@@ -41,7 +41,7 @@ services:
 
 ## Dictionaries ##
 
-Dictionaries are collections of key/value pairs and are typically used to set environment variables:
+Dictionaries are collections of key/value pairs and often used to define environment variables in config files:
 
 ```yaml
 services:

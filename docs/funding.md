@@ -19,7 +19,7 @@ In addition, ideas endorsed by [silver, gold, and platinum sponsors](https://git
 receive a [golden label](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3Asponsor) and
 will be prioritized on the [roadmap](https://github.com/photoprism/photoprism/projects/5).
 
-**We encourage everyone who can afford it to become a sponsor** as this is ultimately best for the product
+We encourage everyone who can afford it to become a sponsor as this is ultimately best for the product
 and the community. Thank you! 💜
 
 [^1]: Think of “free software” as in “free speech,” not as in “free beer.” We sometimes call it “libre software,” borrowing the French or Spanish word for “free” as in freedom, to show we do not mean the software is gratis. (https://www.gnu.org/philosophy/free-sw.en.html)

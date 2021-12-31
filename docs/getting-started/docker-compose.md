@@ -83,7 +83,7 @@ installed on your system. It is available for Mac, Linux, and Windows.
 
 !!! note ""
     A Docker Compose [YAML file](../developer-guide/technologies/yaml.md) defines application services, networks,
-    and storage volumes. Its default filename is `docker-compose.yml`. For simplicity, the name doesn't need to be
+    and storage volumes. Its default filename is `docker-compose.yml`. For simplicity, it doesn't need to be
     specified when running the `docker-compose` command in the same directory. Config files for other apps or
     instances should be placed in separate folders.
 

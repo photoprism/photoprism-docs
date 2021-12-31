@@ -7,6 +7,7 @@
 
 *Founder, Core Developer*
 
+![Michael Mayer](https://dl.photoprism.app/img/team/michael-mayer-800x600.jpg){ align=right width="40%" }
 Michael learned programming on an Atari 1040 ST and started his first Open Source projects in the 90s. He has more than 25 years of experience in building Web applications.
 
 His motivation is to explore the latest technologies and develop an amazing product outside the constraints of a traditional corporate environment.
@@ -17,6 +18,7 @@ You can find him on [GitHub](https://github.com/lastzero), [LinkedIn](https://ww
 
 *Founder, Product Development, and Community Management*
 
+![Theresa Gresch](https://dl.photoprism.app/img/team/theresa-gresch-800x600.jpg){ align=right width="40%" }
 Theresa has a background in Neurobiology and started working as a Software Product Manager for startups after graduating from Free University of Berlin in 2016.
 
 Her personal goals are to dive deeper into machine learning and to explore new directions in product development.

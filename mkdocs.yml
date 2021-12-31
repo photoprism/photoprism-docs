@@ -142,6 +142,7 @@ nav:
     - Checklists:
       - Web Security: developer-guide/checklists/web-security.md
     - Technologies:
+      - YAML: developer-guide/technologies/yaml.md
       - Golang: developer-guide/technologies/golang.md
       - TensorFlow: developer-guide/technologies/tensorflow.md
       - Docker: developer-guide/technologies/docker.md

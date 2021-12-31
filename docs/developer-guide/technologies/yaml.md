@@ -17,7 +17,7 @@ or `\n` for a new line.
 Related values start at the same indentation level. We recommend using 2 spaces, but any number of spaces will work 
 as long as the indentation is consistent (tabs are not allowed).
 
-Comments begin with the number sign `#`, can start anywhere on a line and continue until the end of the line.
+Comments begin with the number sign `#`, can start anywhere on a line, and continue until the end of the line.
 
 ```yaml
 ## EXAMPLE

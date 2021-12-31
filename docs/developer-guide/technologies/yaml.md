@@ -6,7 +6,7 @@ like [Docker Compose](https://dl.photoprism.app/docker/docker-compose.yml).
 
 Commonly used file extensions are `.yml` and `.yaml`, for example `docker-compose.yml`.
 
-## Keys and Values ##
+## Basics ##
 
 Value names, which are referred to as keys, are always case-sensitive. If values contain more than letters and numbers,
 they should be enclosed in single `'` or double quotes `"`. You can generally use all [Unicode](https://home.unicode.org/)
@@ -31,7 +31,7 @@ Details:
   Keywords: 'paris, france'
 ```
 
-## Simple Lists ##
+## Lists ##
 
 List are lines that start at the same indentation level and begin with a `- ` (a dash and a space):
 

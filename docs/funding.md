@@ -18,12 +18,11 @@ Unlike traditional offline apps such as Microsoft Office or single-player games,
 must be updated regularly to stay secure and compatible with the latest standards.
 
 Sponsors get access to [additional features](https://github.com/photoprism/photoprism/issues?q=label%3Asponsor-feature), receive direct [technical support](https://photoprism.app/contact) via email, and can join our private chat room on [matrix.org](https://matrix.org/).
-
 In addition, ideas endorsed by [silver, gold, and platinum sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md) 
 receive a [golden label](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3Asponsor) and
 will be prioritized on the [roadmap](https://github.com/photoprism/photoprism/projects/5).
 
-We encourage everyone who can afford it to become a sponsor as this is ultimately best for the product
+**We encourage everyone who can afford it to become a sponsor** as this is ultimately best for the product
 and the community. Thank you! 💜
 
 [^1]: Think of “free software” as in “free speech,” not as in “free beer.” We sometimes call it “libre software,” borrowing the French or Spanish word for “free” as in freedom, to show we do not mean the software is gratis. (https://www.gnu.org/philosophy/free-sw.en.html)

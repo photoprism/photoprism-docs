@@ -24,8 +24,8 @@ Comments begin with the number sign `#`, can start anywhere on a line, and conti
 Type: image
 Title: "La Tour Eiffel ✨"
 Year: 2014
+# Dictionaries are collections of key/value pairs:
 Details:
-  # Dictionaries are key/value pairs:
   Notes: "Hello\nWorld!" # contains a new line
   Keywords: 'paris, france'
 ```

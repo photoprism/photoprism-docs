@@ -30,7 +30,7 @@ Details:
   Keywords: 'paris, france'
 ```
 
-## Simple Lists ##
+## Lists ##
 
 List are lines that start at the same indentation level and begin with a `- ` (a dash and a space).
 They are commonly used to define service dependencies, exposed network ports, or folders shared between 

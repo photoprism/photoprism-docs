@@ -31,9 +31,11 @@ Details:
   Keywords: 'paris, france'
 ```
 
-## Lists ##
+## Simple Lists ##
 
-List are lines that start at the same indentation level and begin with a `- ` (a dash and a space):
+List are lines that start at the same indentation level and begin with a `- ` (a dash and a space).
+They are commonly used to define service dependencies or folders shared between host and container 
+in `docker-compose.yml` files (volume mounts):
 
 ```yaml
 services:
@@ -43,9 +45,12 @@ services:
       - jobrunner
     ports:
       - "2342:2342"
+    volumes:
+      # Originals folder ("/host:/container")
+      - "/mnt/photos:/photoprism/originals"
 ```
 
-## Dictionaries ##
+## Key-Value Lists  ##
 
 Dictionaries are collections of key/value pairs and often used to define environment variables in config files:
 

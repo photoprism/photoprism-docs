@@ -170,12 +170,12 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/photoprism
-    - icon: fontawesome/brands/paypal
-      link: https://www.paypal.me/photoprism
     - icon: material/chat
       link: https://gitter.im/browseyourlife/community
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/photoprism_app
+    - icon: fontawesome/brands/reddit
+      link: https://www.reddit.com/r/photoprism/
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/company/photoprism/
     - icon: material/home

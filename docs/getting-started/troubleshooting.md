@@ -144,7 +144,8 @@ In case the application logs don't contain anything helpful:
 - [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder
 - [ ] Some thumbnails could not be created because you didn't configure at least 4 GB of swap
 - [ ] The user interface can't communicate properly with your server, for example, because a proxy is misconfigured (check its config and try without a proxy)
-- [ ] There are network problems caused by a firewall or unstable connection
+- [ ] Your proxy, router, or firewall has a request rate limit 
+- [ ] There are other network problems caused by a firewall, router, or unstable connection
 - [ ] An ad blocker is blocking requests (disable it or add an exception)
 - [ ] You are connected to the wrong server, CDN, or a DNS entry hasn't been updated yet
 

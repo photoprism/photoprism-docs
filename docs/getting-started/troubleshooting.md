@@ -4,50 +4,6 @@
     You're welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
     [Sponsors](../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
 
-### Docker Compose Logs ###
-
-If you cannot connect to the Web UI even after waiting a few minutes, run this command to display 
-the last 100 log messages (omit `--tail=100` to see all):
-
-```bash
-docker-compose logs --tail=100
-```
-
-Check them for messages like *disk full*, *wrong permissions*, *no route to host*, *connection failed*, and *killed*
-before reporting a bug. If a service has been killed or otherwise automatically terminated, this points to a memory problem.
-
-Should MariaDB get stuck in a restart loop and PhotoPrism can't connect to it, this indicates a memory, filesystem, 
-or permission issue:
-
-```
-mariadb: mysqld: ready for connections.
-mariadb: mysqld (initiated by: unknown): Normal shutdown
-photoprism: dial tcp 172.18.0.2:3306: connect: no route to host
-mariadb: mysqld: Shutdown complete
-```
-
-We recommend going through the [checklist for fatal server errors](#fatal-server-errors) and to verify that 
-your computer meets the [system requirements](index.md#system-requirements).
-
-!!! note ""
-    If you see no errors or no logs at all, you may have started the server on a different host
-    and/or port. There could also be an issue with your browser, ad blocker, or firewall settings.
-
-You can also try (re-)starting the app and database without `-d`. This keeps their containers running 
-in the foreground and shows log messages for troubleshooting:
-
-```bash
-docker-compose stop
-docker-compose up 
-```
-
-To enable [debug mode](config-options.md), add this to the environment variables of the `photoprism` 
-service in your `docker-compose.yml` and restart for changes to take effect:
-
-```
-PHOTOPRISM_DEBUG: "true"
-```
-
 ### Installing and Using Docker ###
 
 If you can't use the `docker` and `docker-compose` commands at all, make sure [Docker](https://docs.docker.com/config/daemon/#start-the-daemon-manually)
@@ -57,11 +13,92 @@ is running on the host you are connected to and your current user has the permis
 - [Microsoft Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 - [Apple macOS](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 
-Many Linux distributions require you to install `docker-compose` separately, for example by
-running `sudo apt install docker-compose` in a terminal or using a graphical software package manager.
+!!! info "Docker Compose"
+    Linux distributions may require you to install `docker-compose` separately, for example by
+    running `sudo apt install docker-compose` in a terminal or using a graphical software package manager.
 
-Commands on Linux may have to be prefixed with `sudo` when not running as root. Note that this will
-point the home directory placeholder `~` to `/root` in volume mounts.
+#### Cannot Connect ####
+
+If you see the error message "Cannot connect to the Docker daemon", it means that Docker is not installed or 
+not running yet. Before you try anything else, it may help to simply restart your computer.
+
+On many Linux distributions, this command will start the Docker daemon manually if needed:
+
+```bash
+sudo systemctl start docker.service
+```
+
+On other operating systems, start Docker Desktop and enable the "Start Docker Desktop when you log in" 
+option in its settings.
+
+#### Connection Aborted ####
+
+If you see the error message "Connection aborted" or "Connection denied", it usually means that your 
+current user does not have permission to use Docker.
+
+On Linux, this command grants permission by adding a user to the `docker` group (relogin for changes to take effect):
+
+```bash
+sudo usermod -aG docker [username]
+```
+
+Alternatively, you can prefix the `docker` and `docker-compose` commands with `sudo` when not running as root,
+for example:
+
+```bash
+sudo docker-compose stop
+sudo docker-compose up -d
+```
+
+Note that this will point the home directory placeholder `~` to `/root` in the `volumes:` section 
+of your `docker-compose.yml`.
+
+### Docker Compose Logs ###
+
+If you cannot connect to the Web UI even after waiting a few minutes, run this command to display
+the last 100 log messages (omit `--tail=100` to see all):
+
+```bash
+docker-compose logs --tail=100
+```
+
+Check them for messages like *disk full*, *wrong permissions*, *no route to host*, *connection failed*, and *killed*
+before reporting a bug. If a service has been killed or otherwise automatically terminated, this points to a memory problem.
+
+Should MariaDB get stuck in a restart loop and PhotoPrism can't connect to it, this indicates a memory, filesystem,
+or permission issue:
+
+```
+mariadb: mysqld: ready for connections.
+mariadb: mysqld (initiated by: unknown): Normal shutdown
+photoprism: dial tcp 172.18.0.2:3306: connect: no route to host
+mariadb: mysqld: Shutdown complete
+```
+
+We recommend going through the [checklist for fatal server errors](#fatal-server-errors) and to verify that
+your computer meets the [system requirements](index.md#system-requirements).
+
+!!! tldr ""
+    The default Docker Compose config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running the `docker-compose` command in the same directory. Config files for other apps or instances should be placed in separate folders.
+
+!!! note ""
+    If you see no errors or no logs at all, you may have started the server on a different host
+    and/or port. There could also be an issue with your browser, ad blocker, or firewall settings.
+
+You can also try (re-)starting the app and database without `-d`. This keeps their containers running
+in the foreground and shows log messages for troubleshooting:
+
+```bash
+docker-compose stop
+docker-compose up 
+```
+
+To enable [debug mode](config-options.md), add this to the environment variables of the `photoprism`
+service in your `docker-compose.yml` and restart for changes to take effect:
+
+```
+PHOTOPRISM_DEBUG: "true"
+```
 
 ### Checklists ###
 

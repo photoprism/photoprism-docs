@@ -22,9 +22,9 @@ installed on your system. It is available for Mac, Linux, and Windows.
     ``` 
     
     Commands on Linux may have to be prefixed with `sudo` when not running as root.
-    Note that this will point the home directory placeholder `~` to `/root` in volume mounts.
-    Kernel security modules such as AppArmor and SELinux have been reported to cause
-    [issues](troubleshooting.md).
+    Note that this will point the home directory placeholder `~` to `/root` in the `volumes:` 
+    section of your `docker-compose.yml`. Kernel security modules such as AppArmor and SELinux 
+    have been reported to cause [issues](troubleshooting.md#linux-kernel-security).
 
 === "Raspberry Pi"
 

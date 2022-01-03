@@ -52,7 +52,7 @@ services:
 
 ## Key-Value Pairs ##
 
-Collections of key/value pairs and often used to define environment variables in config files:
+Collections of key/value pairs are often used to define environment variables in config files:
 
 ```yaml
 services:

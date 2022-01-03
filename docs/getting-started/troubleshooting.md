@@ -145,7 +145,7 @@ In case the application logs don't contain anything helpful:
 - [ ] Some thumbnails could not be created because you didn't configure at least 4 GB of swap
 - [ ] The user interface can't communicate properly with your server, for example, because a proxy is misconfigured (check its config and try without a proxy)
 - [ ] Your proxy, router, or firewall has a request rate limit, so some requests fail
-- [ ] There are network problems caused by a firewall, router, or unstable connection
+- [ ] There are other network problems caused by a firewall, router, or unstable connection
 - [ ] An ad blocker is blocking requests (disable it or add an exception)
 - [ ] You are connected to the wrong server, CDN, or a DNS entry hasn't been updated yet
 

@@ -22,7 +22,7 @@
 - Search: [No results are displayed if keywords contain only stopwords](https://github.com/photoprism/photoprism/issues/1859)
 - Videos: [Added Apple Video Toolbox hardware transcoding support for macOS](https://github.com/photoprism/photoprism/pull/1843)
 - Live Photos: [Indexer selects related HEIF files as primary image](https://github.com/photoprism/photoprism/issues/926)
-- Metadata: [Size of projection and color profile fields has been increased to 40 characters](https://github.com/photoprism/photoprism/issues/1830)
+- Metadata: [Increased size of projection and color profile fields to 40 characters](https://github.com/photoprism/photoprism/issues/1830)
 - Config: [Added `/opt/photoprism` to search path for asset and storage folders](https://github.com/photoprism/photoprism/issues/1821)
 - Help: [Fixed reverse proxy documentation links](https://github.com/photoprism/photoprism/pull/1870)
 

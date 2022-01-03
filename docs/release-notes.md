@@ -11,6 +11,8 @@
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/). 
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
     There is no preview available for 32-bit operating systems.
+                                 
+<span class="build">Build 220103-1a4158c7</span>
 
 - Albums: [Private pictures are excluded from download as zip](https://github.com/photoprism/photoprism/issues/1836)
 - People: [Improved update performance on MariaDB](https://github.com/photoprism/photoprism/pull/1804)
@@ -21,7 +23,7 @@
 - Videos: [Added Apple Video Toolbox hardware acceleration support for macOS](https://github.com/photoprism/photoprism/pull/1843)
 - Live Photos: [If available, HEIF images are automatically selected as primary](https://github.com/photoprism/photoprism/issues/926)
 - Metadata: [Size of projection and color profile fields has been increased to 40 characters](https://github.com/photoprism/photoprism/issues/1830)
-- Config: [Added /opt/photoprism to search path for assets and media files](https://github.com/photoprism/photoprism/issues/1821)
+- Config: [Added `/opt/photoprism` to search path for assets and media files](https://github.com/photoprism/photoprism/issues/1821)
 - Help: [Fixed reverse proxy documentation links](https://github.com/photoprism/photoprism/pull/1870)
 
 ### December 15, 2021 ###

@@ -1,6 +1,8 @@
 # Setup Using Docker Compose
 
-Before you start, make sure you have [Docker](https://store.docker.com/search?type=edition&offering=community) 
+Docker Compose works with [human-readable YAML files](../developer-guide/technologies/yaml.md) that define application 
+services, networks, and storage volumes, so you don't have to remember complicated commands and parameters.
+Before you start, make sure you have [Docker](https://store.docker.com/search?type=edition&offering=community)
 installed on your system. It is available for Mac, Linux, and Windows.
 
 !!! info ""
@@ -81,12 +83,6 @@ installed on your system. It is available for Mac, Linux, and Windows.
     Never use easy-to-guess passwords or default values like `insecure` on publicly accessible servers.
     There is no default in case no password was provided. A minimum length of 4 characters is required.
 
-!!! note ""
-    A Docker Compose [YAML file](../developer-guide/technologies/yaml.md) defines application services, networks,
-    and storage volumes. Its default filename is `docker-compose.yml`. For simplicity, it doesn't need to be
-    specified when running the `docker-compose` command in the same directory. Config files for other apps or
-    instances should be placed in separate folders.
-
 #### Database ####
 
 Our example includes a pre-configured [MariaDB](https://mariadb.com/) database server. If you remove it 
@@ -151,7 +147,7 @@ organized by year and month.
 
 ### Step 2: Start the server ###
 
-Open a terminal and change to the folder in which the `docker-compose.yml` file has been saved.
+Open a terminal and change to the folder in which the `docker-compose.yml` file has been saved.[^1]
 Run this command to start the app and database in the background:
 
 ```
@@ -277,3 +273,5 @@ PhotoPrism's command-line interface is well suited for job automation using a
 *[Web UI]: A Progressive Web App that can be installed on your home screen and provides a native app-like experience
 *[CLI]: Command-Line Interface
 *[AVC]: MPEG-4 AVC video compression standard, also known as H.264
+
+[^1]: The default Docker Compose config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running the `docker-compose` command in the same directory. Config files for other apps or instances should be placed in separate folders.

@@ -22,12 +22,12 @@ Comments begin with the number sign `#`, can start anywhere on a line, and conti
 ```yaml
 ## EXAMPLE
 Type: image
-Title: "La Tour Eiffel ✨"
+Title: "La Tour Eiffel 🌈"
 Year: 2014
 # Collection of key-value pairs:
 Details:
-  Notes: "Hello\nWorld!" # comment
-  Keywords: 'paris, france'
+  Notes: "Bonjour\nla France!" 
+  Keywords: 'paris, france' # Comment
 ```
 
 ## Lists ##
@@ -40,18 +40,19 @@ host and container in `docker-compose.yml` files (volume mounts):
 services:
   photoprism:
     depends_on:
-      - database
-      - jobrunner
+      - mariadb
+      - nextcloud
     ports:
+      # "host:container"
       - "2342:2342"
     volumes:
       # "/host/folder:/container/folder"
       - "/photos:/photoprism/originals"
 ```
 
-## Key-Value Pairs  ##
+## Key-Value Pairs ##
 
-Dictionaries are collections of key/value pairs and often used to define environment variables in config files:
+Collections of key/value pairs and often used to define environment variables in config files:
 
 ```yaml
 services:

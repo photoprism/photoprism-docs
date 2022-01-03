@@ -110,7 +110,7 @@ file formats is not well-supported and software transcoding is generally slow.
 
 ### Getting Updates ###
 
-Open a terminal and change to the folder where the `docker-compose.yml` file was saved.
+Open a terminal and change to the folder where the `docker-compose.yml` file is located.[^1]
 Now run the following commands to download the most recent image from Docker Hub and
 restart your instance in the background:
 
@@ -133,3 +133,5 @@ to learn more about terminal commands.
 
 A big thank you to [Guy Sheffer](https://github.com/guysoft) for helping us [build](https://github.com/photoprism/photoprism/issues/109)
 a Raspberry Pi version!
+
+[^1]: The default Docker Compose config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running the `docker-compose` command in the same directory. Config files for other apps or instances should be placed in separate folders.

@@ -7,7 +7,7 @@
 
 ### Docker Compose ###
 
-Open a terminal and change to the folder where the `docker-compose.yml` file was saved.
+Open a terminal and change to the folder where the `docker-compose.yml` file is located.[^1]
 Now run the following commands to download the most recent image from Docker Hub and
 restart your instance in the background:
 
@@ -102,3 +102,5 @@ docker pull photoprism/photoprism:latest
 ```
 
 See [Running PhotoPrism with Docker](docker.md) for a command reference.
+
+[^1]: The default Docker Compose config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running the `docker-compose` command in the same directory. Config files for other apps or instances should be placed in separate folders.

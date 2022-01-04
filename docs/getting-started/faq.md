@@ -338,7 +338,7 @@ which will be available in a future release.
 
 ### PhotoPrism is really terrible, can I tell you how bad it is? ###
 
-This is what we have in store. If you [want to troll around](https://photoprism.app/code-of-conduct),
+If you are [having a bad day](https://photoprism.app/code-of-conduct) and want to offend someone,
 please go somewhere else.
 
 !!! info

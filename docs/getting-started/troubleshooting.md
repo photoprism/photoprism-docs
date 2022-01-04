@@ -14,7 +14,7 @@ is running on the host you are connected to and your current user has the permis
 - [Apple macOS](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 
 !!! info "Docker Compose"
-    Linux distributions may require you to install `docker-compose` separately, for example by
+    Linux distributions may require you to install the `docker-compose` command separately, for example by
     running `sudo apt install docker-compose` in a terminal or using a graphical software package manager.
 
 #### Cannot Connect ####
@@ -79,7 +79,7 @@ We recommend going through the [checklist for fatal server errors](#fatal-server
 your computer meets the [system requirements](index.md#system-requirements).
 
 !!! tldr ""
-    The default Docker Compose config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running the `docker-compose` command in the same directory. Config files for other apps or instances should be placed in separate folders.
+    The default [Docker Compose](https://docs.docker.com/compose/) config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running the `docker-compose` command in the same directory. Config files for other apps or instances should be placed in separate folders.
 
 !!! note ""
     If you see no errors or no logs at all, you may have started the server on a different host

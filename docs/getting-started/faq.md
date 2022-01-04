@@ -247,7 +247,7 @@ write operations as well.
 
 ### How can I uninstall PhotoPrism? ###
 
-This depends on how you installed it. If you're running PhotoPrism with Docker Compose, 
+This depends on how you installed it. If you're running PhotoPrism with [Docker Compose](docker-compose.md), 
 this command will stop and remove the Docker container:
 
 ```

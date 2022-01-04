@@ -1,7 +1,7 @@
 # Setup Using Docker Compose
 
-Docker Compose works with [human-readable YAML files](../developer-guide/technologies/yaml.md) that define application 
-services, networks, and storage volumes, so you don't have to remember complicated commands and parameters.
+[Docker Compose](https://docs.docker.com/compose/) works with [human-readable YAML files](../developer-guide/technologies/yaml.md) 
+that define application services, networks, and storage volumes, so you don't have to remember complicated commands and parameters.
 Before you start, make sure you have [Docker](https://store.docker.com/search?type=edition&offering=community)
 installed on your system. It is available for Mac, Linux, and Windows.
 
@@ -274,4 +274,4 @@ PhotoPrism's command-line interface is well suited for job automation using a
 *[CLI]: Command-Line Interface
 *[AVC]: MPEG-4 AVC video compression standard, also known as H.264
 
-[^1]: The default Docker Compose config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running the `docker-compose` command in the same directory. Config files for other apps or instances should be placed in separate folders.
+[^1]: The default [Docker Compose](https://docs.docker.com/compose/) config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running the `docker-compose` command in the same directory. Config files for other apps or instances should be placed in separate folders.

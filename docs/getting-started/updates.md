@@ -103,4 +103,4 @@ docker pull photoprism/photoprism:latest
 
 See [Running PhotoPrism with Docker](docker.md) for a command reference.
 
-[^1]: The default Docker Compose config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running the `docker-compose` command in the same directory. Config files for other apps or instances should be placed in separate folders.
+[^1]: The default [Docker Compose](https://docs.docker.com/compose/) config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running the `docker-compose` command in the same directory. Config files for other apps or instances should be placed in separate folders.

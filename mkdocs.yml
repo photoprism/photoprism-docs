@@ -95,6 +95,8 @@ nav:
     - Advanced:
       - Metadata: user-guide/advanced/metadata.md
       - Backups: user-guide/advanced/backups.md
+      - Restore: user-guide/advanced/restore.md
+      - Export: user-guide/advanced/export.md
       - Folders: user-guide/advanced/folders.md
       #- Commands: user-guide/advanced/commands.md
     - Mobile App (PWA): user-guide/pwa.md

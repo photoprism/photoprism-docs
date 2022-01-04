@@ -304,7 +304,7 @@ volumes:
     and trigger the index in the GUI afterwards. So you can skip the upload dialog in the 
     GUI and it's a little faster.
 
-### Why are you using Docker? ###
+### Why are you using Docker, isn't it pretty new and complicated? ###
 
 Containers are nothing new; [Solaris Zones](https://en.wikipedia.org/wiki/Solaris_Containers) have been around for
 almost 15 years, first released publicly in 2004. The chroot system call was introduced during

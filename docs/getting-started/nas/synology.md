@@ -35,19 +35,21 @@ is generally slow.
 
 ## Setup using Docker ##
 
-We recommend following these instructions to set up PhotoPrism on a Synology NAS:
+We recommend following these instructions to install PhotoPrism on your Synology NAS:
 
 https://www.wundertech.net/how-to-setup-photoprism-on-a-synology-nas
 
 ## Setup using Portainer ##
 
 !!! missing ""
-    This community-maintained guide is currently out of date. Updating it is a great way to contribute! 🌷
+    This community-maintained guide is currently out of date. Updating it to work with the latest Portainer 
+    version is a great way to contribute! 🌷
 
     Click the [edit link](https://github.com/photoprism/photoprism-docs/tree/master/docs/getting-started/nas/synology.md)
     to perform changes and send a pull request.
 
-This guide will help you install PhotoPrism in your Synology NAS using [Portainer](https://www.portainer.io/), an open-source container manager system. The guide will cover the following steps:
+This guide will help you install PhotoPrism in your Synology NAS using [Portainer](https://www.portainer.io/),
+an open-source container manager system. The guide will cover the following steps:
 
 - install Portainer in your Synology NAS using Task Manager;
 - configure Portainer to use your Synology's docker endpoint;

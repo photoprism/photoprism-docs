@@ -307,7 +307,7 @@ volumes:
 ### Why are you using Docker, isn't it pretty new and complicated? ###
 
 Containers are nothing new; [Solaris Zones](https://en.wikipedia.org/wiki/Solaris_Containers) have been around for
-almost 15 years, first released publicly in 2004. The chroot system call was introduced during
+about 15 years, first released publicly in 2004. The chroot system call was introduced during
 [development of Version 7 Unix in 1979](https://en.wikipedia.org/wiki/Chroot). It is used ever since for hosting
 applications exposed to the public Internet.
 

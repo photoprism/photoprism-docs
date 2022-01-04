@@ -33,8 +33,8 @@ Never store database files on an unreliable device such as a USB flash drive, an
 
 ## Server CPU ##
 
-Last but not least, performance can be limited by your server CPU. While consumer NAS devices get faster
-with each generation, their hardware is optimized for low power consumption.
+Last but not least, performance can be limited by your server CPU. While [NAS devices](https://kb.synology.com/en-us/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have)
+get faster with each generation, their hardware is optimized for minimal power consumption and low production costs.
 
 [Benchmarks](https://www.google.com/search?q=cpu+benchmarks) prove that even 8-year-old standard desktop
 CPUs are often many times faster. If you've tried everything else, then only moving your instance to a more

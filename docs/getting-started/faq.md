@@ -154,6 +154,18 @@ without importing files, leaving the existing file and folder names unchanged. O
 importing is an efficient way to add files, since PhotoPrism doesn't have to search your *originals*
 folder to find new files.
 
+### Can I use PhotoPrism to sort files into a configurable folder structure? ###
+
+You have complete freedom in how you organize your originals. If you don't like the unique names and 
+folders used by the import function, you can resort to external batch renaming tools, for example
+[ExifTool](https://ninedegreesbelow.com/photography/exiftool-commands.html#rename),
+[PhockUp](https://github.com/ivandokov/phockup),
+or [Photo Organizer](https://www.systweak.com/photo-organizer).
+
+Configurable import folders may be available in a later version. This is because - depending on the specific 
+pattern - appropriate conflict resolution is required and the patterns must be well understood and validated 
+to avoid typos or other misconfigurations that lead to undesired results for which we do not want to be responsible.
+
 ### Should I use an SD card or a USB stick? ###
 
 Conventional USB sticks and SD cards are not suitable for long-term storage. Not only because of the 
@@ -323,6 +335,10 @@ PhotoPrism, see [issue #147](https://github.com/photoprism/photoprism/issues/147
 There is no single sign-on support yet as we didn't consider it essential for our initial release.
 Our team is currently working on [OpenID Connect](https://github.com/photoprism/photoprism/issues/782),
 which will be available in a future release.
+
+### PhotoPrism is really terrible, can I tell you how bad it is? ###
+
+No, we [don't have time](https://photoprism.app/code-of-conduct) for this. Please move on.
 
 !!! info
     Our development and testing efforts are focused on small servers and home users. Adding functionality

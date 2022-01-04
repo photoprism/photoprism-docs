@@ -200,26 +200,6 @@ thousand files to index.
 MariaDB lacks some features that [MySQL Enterprise Edition](https://www.mysql.com/products/enterprise/) offers.
 On the other hand, MariaDB has many optimizations. It is also completely open-source.
 
-### Why are you using Docker? ###
-
-Containers are nothing new; [Solaris Zones](https://en.wikipedia.org/wiki/Solaris_Containers) have been around for
-almost 15 years, first released publicly in 2004. The chroot system call was introduced during
-[development of Version 7 Unix in 1979](https://en.wikipedia.org/wiki/Chroot). It is used ever since for hosting
-applications exposed to the public Internet.
-
-Modern Linux containers are an incremental improvement. A main advantage of Docker is that application images
-can be easily made available to users via the Internet. It provides a common standard across most operating 
-systems and devices, which saves our team a lot of time that we can then spend more effectively, for example, 
-providing support and developing one of the many features that users are waiting for.
-
-Human-readable and versioned Dockerfiles as part of our public source code also help avoid surprises and
-"works for me" moments by enabling us to have the exact same environment everywhere in development and production.
-
-Last but not least, virtually all file format parsers have vulnerabilities that just haven't been discovered yet.
-This is a known risk that can affect you even if your computer is not directly connected to the Internet.
-Running apps in a container with limited host access is an easy way to improve security without
-compromising performance and usability.
-
 ### Why is only the logo displayed when I open the app? ###
 
 This may happen when the server cannot be reached, for example, because a proxy is misconfigured,
@@ -323,6 +303,26 @@ volumes:
     is especially handy, as you can dump all data from a SD card / camera directly into that folder 
     and trigger the index in the GUI afterwards. So you can skip the upload dialog in the 
     GUI and it's a little faster.
+
+### Why are you using Docker? ###
+
+Containers are nothing new; [Solaris Zones](https://en.wikipedia.org/wiki/Solaris_Containers) have been around for
+almost 15 years, first released publicly in 2004. The chroot system call was introduced during
+[development of Version 7 Unix in 1979](https://en.wikipedia.org/wiki/Chroot). It is used ever since for hosting
+applications exposed to the public Internet.
+
+Modern Linux containers are an incremental improvement. A main advantage of Docker is that application images
+can be easily made available to users via the Internet. It provides a common standard across most operating
+systems and devices, which saves our team a lot of time that we can then spend more effectively, for example,
+providing support and developing one of the many features that users are waiting for.
+
+Human-readable and versioned Dockerfiles as part of our public source code also help avoid surprises and
+"works for me" moments by enabling us to have the exact same environment everywhere in development and production.
+
+Last but not least, virtually all file format parsers have vulnerabilities that just haven't been discovered yet.
+This is a known risk that can affect you even if your computer is not directly connected to the Internet.
+Running apps in a container with limited host access is an easy way to improve security without
+compromising performance and usability.
 
 ### I'm using an operating system without Docker support. How to install and use PhotoPrism without Docker? ###
 

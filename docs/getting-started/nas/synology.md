@@ -1,12 +1,54 @@
+# Running PhotoPrism on a Synology NAS
 
-## Setting up PhotoPrism on Synology using Docker ##
-Here is a great tutorial for setting up PhotoPrism on Synology NAS:
+## Frequently Asked Questions ##
 
-- https://www.wundertech.net/how-to-setup-photoprism-on-a-synology-nas
+#### Does my device meet the system requirements? ####
 
-## Setting up PhotoPrism on Synology using Portainer
+Visit the [Synology Knowledge Base](https://kb.synology.com/en-us/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have)
+to learn what kind of CPU and how much memory your device has.
+We [recommend](../index.md#system-requirements) hosting PhotoPrism on a server with **at least 2 cores**
+and **4 GB of memory**. Also verify it has at least 4 GB of swap configured, so that indexing doesn't cause
+restarts when there are memory usage spikes.
 
-*Note: This is contributed content and work in progress. Click the edit link to perform changes and send a pull request.*
+You have to resort to [alternative Docker images](../raspberry-pi.md#older-armv7-based-devices) to run 
+PhotoPrism and MariaDB on ARMv7-based devices like the Synology DS218j.
+
+!!! note ""
+    Indexing large photo and video collections significantly benefits from [local SSD storage](../performance.md#storage)
+    instead of traditional hard drives commonly used in entry-level NAS devices. Especially the conversion of RAW 
+    images and the transcoding of videos are very demanding.
+
+!!! info ""
+    While PhotoPrism has been reported to work on devices with 2 GB of memory, we won't take responsibility for
+    instability or performance issues.
+
+    If you're running out of memory - or other system resources - while indexing, try reducing the
+    [number of workers](https://docs.photoprism.app/getting-started/config-options/) by setting
+    `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml` (depending on the performance of the server).
+    As a measure of last resort, you may disable using TensorFlow for image classification and facial recognition.
+
+#### Will my NAS be fast enough? ####
+
+This largely depends on your expectations and the number of files you have. Most users report that
+PhotoPrism runs well on their Synology NAS. However, initial indexing may take much longer
+than on standard desktop computers.
+
+Also keep in mind that the hardware has no video transcoding support and software transcoding
+is generally slow.
+
+## Setup using Docker ##
+
+We recommend following these instructions to set up PhotoPrism on a Synology NAS:
+
+https://www.wundertech.net/how-to-setup-photoprism-on-a-synology-nas
+
+## Setup using Portainer ##
+
+!!! missing ""
+    This community-maintained guide is currently out of date. Updating it is a great way to contribute! 🌷
+
+    Click the [edit link](https://github.com/photoprism/photoprism-docs/tree/master/docs/getting-started/nas/synology.md)
+    to perform changes and send a pull request.
 
 This guide will help you install PhotoPrism in your Synology NAS using [Portainer](https://www.portainer.io/), an open-source container manager system. The guide will cover the following steps:
 

@@ -40,6 +40,12 @@ The following fields are saved:**
 - Date/Time Created
 - Date/Time Updated
 
+## Transfer Albums ##
+
 !!! note ""
-    Google Photos albums won't be imported yet as we're trying to find a way to deal with 
+    Google Photos albums won't be automatically imported yet as we're trying to find a way to deal with 
     auto-generated albums users may not want to import.
+
+The community has created a bash script to import albums from a Google Takeout.
+For more information and support, see the project page on Github:
+https://github.com/inthreedee/photoprism-transfer-album

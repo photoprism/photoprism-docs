@@ -30,3 +30,15 @@ This will save storage if you don't want to keep them as backup, or for any othe
 The Importer is triggered automatically 15 Minutes after the import folder has been edited via WebDAV.
 15 Minutes is the default value, it can be changed using the respective [config option](../../getting-started/config-options.md).
 
+
+!!! info "Can I use PhotoPrism to sort files into a configurable folder structure?"
+    You have complete freedom in how you organize your originals. If you don't like the unique names and
+    folders used by the import function, you can resort to external batch renaming tools, for example:
+
+    * [ExifTool](https://ninedegreesbelow.com/photography/exiftool-commands.html#rename)
+    * [PhockUp](https://github.com/ivandokov/phockup)
+    * [Photo Organizer](https://www.systweak.com/photo-organizer)
+
+    Configurable import folders may be available in a later version. This is because - depending on the specific 
+    pattern - appropriate conflict resolution is required and the patterns must be well understood and validated
+    to avoid typos or other misconfigurations that lead to undesired results for which we do not want to be responsible.

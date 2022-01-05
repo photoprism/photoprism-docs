@@ -10,10 +10,7 @@ In order to fully restore your PhotoPrism instance you need the following:
 After verifying that you have all you need, continue with the following restore-procedure:
 
 1. Restore the contents in your `originals` folder
-2. 
-```
-photoprism restore -i [filename-to-your-sql-dump]
- ```
+2. `photoprism restore -i [filename-to-your-sql-dump]`
 3. [Re-index (Complete rescan)](../../user-guide/library/originals.md) your library, in order to re-generate thumbnails.
 
 

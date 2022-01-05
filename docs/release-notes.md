@@ -19,7 +19,7 @@
 - Albums: [Excluded private pictures from download as zip](https://github.com/photoprism/photoprism/issues/1836)
 - Search: [Added `uid:...` search filter to find photos by id](https://github.com/photoprism/photoprism/issues/1820)
 - Search: [Improved query parser for additional security](https://github.com/photoprism/photoprism/issues/1814)
-- Search: [No results are displayed if keywords contain only stopwords](https://github.com/photoprism/photoprism/issues/1859)
+- Search: [`keywords:...` filter does not exclude stopwords anymore](https://github.com/photoprism/photoprism/issues/1859)
 - Videos: [Added Apple Video Toolbox hardware transcoding support for macOS](https://github.com/photoprism/photoprism/pull/1843)
 - Live Photos: [Indexer selects related HEIF files as primary image](https://github.com/photoprism/photoprism/issues/926)
 - Metadata: [Increased size of projection and color profile fields to 40 characters](https://github.com/photoprism/photoprism/issues/1830)

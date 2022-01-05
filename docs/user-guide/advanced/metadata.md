@@ -5,7 +5,7 @@ This is an ongoing task. If you are using certain standard exif or xmp fields th
 PhotoPrism does not yet write back changes to EXIF or XMP (see [discussion](https://github.com/photoprism/photoprism/discussions/1092)). 
 
 We want you to have access to your metadata independent from PhotoPrism or its database,
-that's why we create human-readable [YAML backups](./backups.md) with metadata you add to your files using PhotoPrism.
+that's why we create human-readable [YAML backups](./export.md) with metadata you add to your files using PhotoPrism.
 
 ##Supported Metadata Tags
 

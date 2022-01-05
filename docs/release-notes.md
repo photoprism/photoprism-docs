@@ -12,7 +12,7 @@
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
     There is no preview available for 32-bit operating systems.
                                  
-<span class="build">Build 220105-d67e3258</span>
+<span class="build">Build 220105-c5301a68</span>
 
 - People: [Improved update performance on MariaDB](https://github.com/photoprism/photoprism/pull/1804)
 - People: [Improved contrast of person selection menu](https://github.com/photoprism/photoprism/issues/1824)

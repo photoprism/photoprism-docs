@@ -22,6 +22,7 @@
 - Search: [`keywords:...` filter does not exclude stopwords anymore](https://github.com/photoprism/photoprism/issues/1859)
 - Videos: [Added Apple Video Toolbox hardware transcoding support for macOS](https://github.com/photoprism/photoprism/pull/1843)
 - Live Photos: [Indexer selects related HEIF files as primary image](https://github.com/photoprism/photoprism/issues/926)
+- Index: [Improved indexing and unstacking of related files](https://github.com/photoprism/photoprism/issues/1823)
 - Metadata: [Increased size of projection and color profile fields to 40 characters](https://github.com/photoprism/photoprism/issues/1830)
 - Metadata: [Reduced log level for missing Exif data from warn to info](https://github.com/photoprism/photoprism/commit/5462b1e69eddccedbf0259263aba04b68cf8044c)
 - CLI: [Renamed album YAML backups to exports and improved command help](https://github.com/photoprism/photoprism/issues/1887)

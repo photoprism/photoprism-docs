@@ -17,17 +17,17 @@
 - People: [Improved update performance on MariaDB](https://github.com/photoprism/photoprism/pull/1804)
 - People: [Improved contrast of person selection menu](https://github.com/photoprism/photoprism/issues/1824)
 - Albums: [Excluded private pictures from download as zip](https://github.com/photoprism/photoprism/issues/1836)
-- Search: [Added `uid:...` search filter to find photos by uid](https://github.com/photoprism/photoprism/issues/1820)
 - Search: [Improved query parser for additional security](https://github.com/photoprism/photoprism/issues/1814)
+- Search: [Added `uid:...` search filter to find photos by uid](https://github.com/photoprism/photoprism/issues/1820)
 - Search: [`keywords:...` filter does not exclude stopwords anymore](https://github.com/photoprism/photoprism/issues/1859)
-- Videos: [Added Apple Video Toolbox hardware transcoding support for macOS](https://github.com/photoprism/photoprism/pull/1843)
-- Live Photos: [HEIF is used to create the primary JPEG instead of a MOV still image](https://github.com/photoprism/photoprism/issues/926)
 - Index: [More accurate and resilient handling of related files and photo stacks](https://github.com/photoprism/photoprism/issues/1823)
-- Metadata: [Increased size of projection and color profile fields to 40 characters](https://github.com/photoprism/photoprism/issues/1830)
+- Live Photos: [HEIF is used to create primary JPEG instead of a MOV still image](https://github.com/photoprism/photoprism/issues/926)
 - Metadata: [Reduced log level for missing Exif data from warn to info](https://github.com/photoprism/photoprism/commit/5462b1e69eddccedbf0259263aba04b68cf8044c)
+- Metadata: [Increased size of projection and color profile fields to 40 characters](https://github.com/photoprism/photoprism/issues/1830)
 - Backups: [Improved help for config options and CLI commands](https://github.com/photoprism/photoprism/issues/1887)
-- Config: [Added `/opt/photoprism` to search path for asset and storage folders](https://github.com/photoprism/photoprism/issues/1821)
 - Help: [Fixed reverse proxy documentation links](https://github.com/photoprism/photoprism/pull/1870)
+- Config: [Added Apple Video Toolbox hardware transcoding support for macOS](https://github.com/photoprism/photoprism/pull/1843)
+- Config: [Added `/opt/photoprism` to search path for asset and storage folders](https://github.com/photoprism/photoprism/issues/1821)
 
 ### December 15, 2021 ###
 <span class="build">Build 211215-93b26f19</span>

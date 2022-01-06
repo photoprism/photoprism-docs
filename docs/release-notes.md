@@ -12,7 +12,7 @@
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
     There is no preview available for 32-bit operating systems.
                                  
-<span class="build">Build 220105-c5301a68</span>
+<span class="build">Build 220106-f5b7ef83</span>
 
 - People: [Improved update performance on MariaDB](https://github.com/photoprism/photoprism/pull/1804)
 - People: [Improved contrast of person selection menu](https://github.com/photoprism/photoprism/issues/1824)
@@ -25,7 +25,7 @@
 - Index: [Improved indexing and unstacking of related files](https://github.com/photoprism/photoprism/issues/1823)
 - Metadata: [Increased size of projection and color profile fields to 40 characters](https://github.com/photoprism/photoprism/issues/1830)
 - Metadata: [Reduced log level for missing Exif data from warn to info](https://github.com/photoprism/photoprism/commit/5462b1e69eddccedbf0259263aba04b68cf8044c)
-- CLI: [Renamed album YAML backups to exports and improved command help](https://github.com/photoprism/photoprism/issues/1887)
+- CLI: [Improved backup and restore command help](https://github.com/photoprism/photoprism/issues/1887)
 - Config: [Added `/opt/photoprism` to search path for asset and storage folders](https://github.com/photoprism/photoprism/issues/1821)
 - Help: [Fixed reverse proxy documentation links](https://github.com/photoprism/photoprism/pull/1870)
 

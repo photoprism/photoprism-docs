@@ -20,6 +20,7 @@
 - Search: [Improved query parser for additional security](https://github.com/photoprism/photoprism/issues/1814)
 - Search: [Added `uid:...` search filter to find photos by uid](https://github.com/photoprism/photoprism/issues/1820)
 - Search: [`keywords:...` filter does not exclude stopwords anymore](https://github.com/photoprism/photoprism/issues/1859)
+- Index: [Original filenames can be extracted from Exiftool JSON](https://github.com/photoprism/photoprism/issues/1892)
 - Index: [More accurate and resilient handling of related files and photo stacks](https://github.com/photoprism/photoprism/issues/1823)
 - Live Photos: [HEIF is used to create primary JPEG instead of a MOV still image](https://github.com/photoprism/photoprism/issues/926)
 - Metadata: [Reduced log level for missing Exif data from warn to info](https://github.com/photoprism/photoprism/commit/5462b1e69eddccedbf0259263aba04b68cf8044c)

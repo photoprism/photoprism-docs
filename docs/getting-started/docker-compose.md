@@ -119,7 +119,7 @@ of `/photoprism/originals`, for example:
 
 ```yaml
 volumes:
-  - "~/Pictures:/photoprism/originals"
+  - "/home/username/Pictures:/photoprism/originals"
   - "/mnt/friends:/photoprism/originals/friends"
   - "/mnt/photos:/photoprism/originals/media"
 ```

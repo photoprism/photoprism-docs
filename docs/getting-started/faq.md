@@ -327,7 +327,7 @@ compromising performance and usability.
 !!! tldr ""
     A virtual machine running its own operating system provides more security, but typically has side effects 
     such as lower performance and more difficult handling. Note that you can also run Docker in a VM to get the 
-    best of both worlds.
+    best of both worlds. It's essentially what happens when you run Docker on operating systems other than Linux.
 
 ### I'm using an operating system without Docker support. How to install and use PhotoPrism without Docker? ###
 

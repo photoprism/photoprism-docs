@@ -341,12 +341,13 @@ make all install
 
 If build dependencies are missing, you must install them manually as shown in our development 
 [Dockerfile](https://github.com/photoprism/photoprism/blob/develop/docker/develop/Dockerfile).
-You often don't need to use the exact same versions, so it's possible replace packages with what is available 
+You often don't need to use the exact same versions, so it's possible to replace packages with what is available 
 in your environment.
 
-Note we don't have the resources to provide private users with dependencies and TensorFlow libraries for their personal environments.
-We therefore recommend learning Docker if your operating system supports it. Docker vastly simplifies installation and 
-upgrades. It saves our team a lot of time that we can then spend more effectively, see previous question.
+Note we don't have the resources to provide private users with dependencies and TensorFlow libraries for their personal
+environments. We therefore recommend learning Docker if your operating system supports it. Docker vastly simplifies
+installation and upgrades. It saves our team a lot of time that we can then spend more effectively,
+see previous question.
 
 !!! missing ""
     Everyone is invited to contribute by building & testing native packages for Linux distributions and other

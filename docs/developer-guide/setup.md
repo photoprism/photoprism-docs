@@ -1,8 +1,11 @@
 # Development Environment
 
 Before you start, make sure you have [Git](https://git-scm.com/downloads) and [Docker](https://store.docker.com/search?q=docker&type=edition&offering=community) installed on your system.
-Instead of using Docker, you can create your own development environment
-based on our [Dockerfile](https://github.com/photoprism/photoprism/blob/develop/docker/develop/Dockerfile) (not recommended). You'll need [Go](https://golang.org/dl/) >= 1.17, [TensorFlow for C](https://www.tensorflow.org/install/lang_c), [Make](http://www.gnu.org/software/make//make.html), [NPM](https://nodejs.org/en/download/), and [MariaDB](https://mariadb.com/). Without Docker, test results will be less reliable and you also won't be able to use our other Dockerfiles (e.g. for TensorFlow).
+Instead of using Docker, you can create your own development environment based on our
+[Dockerfile](https://github.com/photoprism/photoprism/blob/develop/docker/develop/Dockerfile) (not recommended).
+You'll need [Go](https://golang.org/dl/) >= 1.17, [TensorFlow for C](https://www.tensorflow.org/install/lang_c), 
+[Make](http://www.gnu.org/software/make//make.html), [NPM](https://nodejs.org/en/download/), and [MariaDB](https://mariadb.com/).
+Without Docker, test results will be less reliable and you also won't be able to use our other Dockerfiles (e.g. for TensorFlow).
 
 **Step 1:** Run [Git](https://git-scm.com/downloads) to clone this project:
 
@@ -37,11 +40,14 @@ make all
 ./photoprism start
 ```
 
-You can see a list of all `make` targets in our [Makefile](https://github.com/photoprism/photoprism/blob/develop/Makefile). For example, `make test` will run the tests and `make install` will build a `photoprism` production binary without debug information and install it in the user's directory including all assets.
+You can see a list of all `make` targets in our [Makefile](https://github.com/photoprism/photoprism/blob/develop/Makefile).
+For example, `make test` will run the tests and `make install` will build a `photoprism` production binary without debug
+information and install it in the user's directory including all assets.
 
 **Step 4:** Build the frontend in watch mode:
 
-The Go webserver will serve static assets in addition to providing the backend API. The static assets can be automatically built whenever you change a file. In a new terminal window, outside the Docker container, run:
+The Go webserver will serve static assets in addition to providing the backend API. The static assets can be automatically
+built whenever you change a file. In a new terminal window, outside the Docker container, run:
 
 ```
 make dep-js

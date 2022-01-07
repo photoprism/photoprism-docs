@@ -15,13 +15,13 @@
 ### January 7, 2022 ###
 <span class="build">Build 220107-f5b7ef83</span>
 
-Based on our zero bug policy, this update focuses on bug fixes and UX improvements, especially for search filters and 
-the indexer. In addition, one of the merged pull requests may improve face recognition performance on smaller 
-devices and with large libraries.
+Based on our zero bug policy, this update focuses on bug fixes, security, and UX improvements for search 
+filters, metadata, and the indexer. In addition, one of the merged pull requests may improve face recognition 
+performance on smaller devices and with large libraries.
 
 - People: [Improved update performance on MariaDB](https://github.com/photoprism/photoprism/pull/1804)
 - People: [Improved contrast of person selection menu](https://github.com/photoprism/photoprism/issues/1824)
-- Albums: [Excluded private pictures from download as zip](https://github.com/photoprism/photoprism/issues/1836)
+- Albums: [Private pictures are excluded from download as zip](https://github.com/photoprism/photoprism/issues/1836)
 - Search: [Improved query parser for additional security](https://github.com/photoprism/photoprism/issues/1814)
 - Search: [Added `uid:...` search filter to find photos by uid](https://github.com/photoprism/photoprism/issues/1820)
 - Search: [`keywords:...` filter does not exclude stopwords anymore](https://github.com/photoprism/photoprism/issues/1859)
@@ -51,8 +51,7 @@ As a precaution, this release includes additional [rules and filters to validate
 
 Starting with this release, the [regular multi-arch Docker image](https://hub.docker.com/r/photoprism/photoprism/tags?name=latest) is 64-bit only. 
 A 32-bit version of our stable release for [older devices](getting-started/raspberry-pi.md#older-armv7-based-devices) 
-is offered separately. In the long run, this frees up development resources and saves weeks of build, upload, and test 
-time on our infrastructure.
+is offered separately. This frees up development and backend infrastructure resources with minimal impact.
 
 - [Based on Go version 1.17.5, which includes important HTTP/2 and network security fixes](https://groups.google.com/g/golang-announce/c/hcmEScgc00k)
 - People: [Concurrent updates are no longer possible to prevent inconsistencies](https://github.com/photoprism/photoprism/commit/1b583e071e80b68352b1b366d60e010d8f8f9535)

@@ -11,8 +11,13 @@
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/). 
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
     There is no preview available for 32-bit operating systems.
-                                 
-<span class="build">Build 220106-f5b7ef83</span>
+
+### January 7, 2022 ###                        
+<span class="build">Build 220107-f5b7ef83</span>
+
+Based on our zero bug policy, this update focuses on bug fixes and UX improvements, especially for search filters and 
+the indexer. In addition, one of the merged pull requests may improve face recognition performance on smaller 
+devices and with large libraries.
 
 - People: [Improved update performance on MariaDB](https://github.com/photoprism/photoprism/pull/1804)
 - People: [Improved contrast of person selection menu](https://github.com/photoprism/photoprism/issues/1824)

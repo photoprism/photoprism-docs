@@ -24,8 +24,8 @@
     details, we will announce them publicly.
 
     Meanwhile, GitHub Sponsors has [one-time donation](https://github.com/sponsors/photoprism?frequency=one-time)
-    options if you don't need ongoing support after installation and don't expect updates with additional
-    premium features for more than 12 months.
+    options if you don't need ongoing support after installation and don't expect updates with additional features
+    for more than 12 months.
 
     We encourage everyone who can afford it to [become a sponsor](../funding.md) as this is ultimately best for
     the product and the community. Think of "free software" as in "free speech," not as in "free beer".

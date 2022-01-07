@@ -114,7 +114,7 @@ Open a terminal and change to the folder where the `docker-compose.yml` file is 
 Now run the following commands to download the most recent image from Docker Hub and
 restart your instance in the background:
 
-```
+```bash
 docker-compose pull photoprism
 docker-compose stop photoprism
 docker-compose up -d photoprism

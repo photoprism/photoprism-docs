@@ -9,13 +9,13 @@ The port will compile and install libtensorflow 1.15.2 and build `photoprism` fr
 
 **1. Clone or download the port:**
 
-```
+```bash
 git clone https://github.com/huo-ju/photoprism-freebsd-port
 ```
 
 **2. Build TensorFlow and PhotoPrism from source, then install:**
 
-```
+```bash
 cd photoprism-freebsd-port
 make config
 make && make install
@@ -25,7 +25,7 @@ When running the make config command, a CPU feature options dialog will be prese
 
 **3. Add entries to rc.conf:**
 
-```
+```bash
 photoprism_enable="YES"
 photoprism_assetspath="/var/photoprism/assets"
 photoprism_storagepath="/var/photoprism/storage"
@@ -37,7 +37,7 @@ You can add more command line parameters into photoprism_flags="" in the rc.conf
 
 **4. Start the service:**
 
-```
+```bash
 service photoprism start
 ```
 

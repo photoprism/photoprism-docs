@@ -348,9 +348,9 @@ Note we don't have the resources to provide private users with dependencies and 
 We therefore recommend learning Docker if your operating system supports it. Docker vastly simplifies installation and 
 upgrades. It saves our team a lot of time that we can then spend more effectively, see previous question.
 
-!!! tldr ""
-    Everyone is invited to contribute by building & testing native packages for Linux distributions and other 
-    operating systems! 💐
+!!! missing ""
+    Everyone is invited to contribute by building & testing native packages for Linux distributions and other
+    operating systems! 🌷
 
 ### Do you support Podman? ###
 

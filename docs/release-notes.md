@@ -12,7 +12,7 @@
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
     There is no preview available for 32-bit operating systems.
 
-### January 7, 2022 ###                        
+### January 7, 2022 ###
 <span class="build">Build 220107-f5b7ef83</span>
 
 Based on our zero bug policy, this update focuses on bug fixes and UX improvements, especially for search filters and 

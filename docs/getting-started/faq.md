@@ -2,83 +2,80 @@
 
 ### What are sidecar files and where do I find them? ###
 
-A sidecar is a file which sits **alongside** your main photo or video files, 
-typically using the same name, and a different extension like 
+A sidecar is a file that sits next to your main photo or video files and usually has the same name
+but a different extension:
 
- * `IMG_0101.jpg`
- * `IMG_0101.json`
- * `IMG_0101.yaml`
+ * `IMG_0123.mov`
+ * `IMG_0123.mov.jpg`
+ * `IMG_0123.json`
 
-New sidecar files will be created in the *storage* folder by default so that the *originals* folder 
-can be mounted read-only.
+New sidecar files are created in the *storage* folder by default, so the *originals* folder can be mounted read-only.
 
-!!! info
-    PhotoPrism will always look out for existing sidecar files and use them for indexing, 
-    even if `PHOTOPRISM_DISABLE_EXIFTOOL` and `PHOTOPRISM_DISABLE_BACKUPS` are set to `"true"`.
+!!! tldr ""
+    Even if `PHOTOPRISM_DISABLE_EXIFTOOL` and `PHOTOPRISM_DISABLE_BACKUPS` are set to `true`,
+    the indexer looks for existing sidecar files and uses them.
 
-Three types of metadata sidecar files are supported currently:
+#### File Formats ####
 
-#### JSON ####
+Currently, three types of metadata sidecar files are supported:
 
-If not disabled via `PHOTOPRISM_DISABLE_EXIFTOOL` or `--disable-exiftool`, [Exiftool](https://exiftool.org/) is used to 
-automatically create a JSON sidecar for each media file. 
-**This way, embedded XMP and video metadata can be indexed as well.**
-Native metadata extraction is limited to common Exif headers.
-Note that this causes moderate overhead when indexing for the first time.
+##### JSON #####
 
-JSON files may also be useful for debugging as they contain the complete metadata, 
-and can be processed using common development tools and text editors.
+If not disabled via `PHOTOPRISM_DISABLE_EXIFTOOL` or `--disable-exiftool`, [Exiftool](https://exiftool.org/) is used
+to automatically create a JSON sidecar for each media file. **In this way, embedded XMP and video metadata can also be indexed.**
+Native metadata extraction is limited to common Exif headers. Note that this causes small amount of overhead when
+indexing for the first time.
 
-!!! tip
-    PhotoPrism can also read JSON files exported by Google Photos. Support for additional
-    schemas may be added over time.
+JSON files can also be useful for debugging, as they contain the full metadata and can be processed with common 
+development tools and text editors.
 
-#### YAML ####
+!!! info ""
+    JSON files exported from Google Photos can be read as well. Support for more schemas may be added over time.
 
-If not disabled via `PHOTOPRISM_DISABLE_BACKUPS` or `--disable-backups`, PhotoPrism will automatically create / update
-[YAML](../developer-guide/technologies/yaml.md) sidecar files while indexing and after manually editing fields like 
-title, date, or location. They **serve as a backup** in case the database (index) gets lost, or when folders are synced 
-with a remote PhotoPrism instance.
+##### YAML #####
 
-Like JSON, [YAML](../developer-guide/technologies/yaml.md) files can be opened using common development tools and text editors.
-Changes won't be synced back to the original index though as this might overwrite existing data.
+Unless disabled via `PHOTOPRISM_DISABLE_BACKUPS` or `--disable-backups`, PhotoPrism automatically creates/updates
+[YAML](../developer-guide/technologies/yaml.md) sidecar files during indexing and after manual editing of fields 
+such as title, date, or location. They serve as a backup in case the database (index) is lost, or when folders 
+are synchronized with a remote PhotoPrism instance.
 
-#### XMP ####
+Like JSON, [YAML](../developer-guide/technologies/yaml.md) files can be opened with common development tools and 
+text editors. However, changes are not synchronized with the original index, as this could overwrite existing data.
 
-XMP (Extensible Metadata Platform) is an XML-based metadata container format 
-[invented by Adobe](https://www.adobe.com/products/xmp.html). 
-It offers much more fields (as part of embedded models like Dublin Core) than Exif. 
-That also makes it difficult - if not impossible - to provide complete support.
-Reading Title, Copyright, Artist, and Description from XMP sidecar files is implemented as a proof-of-concept, 
-[contributions welcome](../developer-guide/metadata/xmp.md).
-Indexing embedded XMP is only possible via Exiftool, see above.
+##### XMP #####
+
+XMP (Extensible Metadata Platform) is an XML-based metadata container format [developed by Adobe](https://www.adobe.com/products/xmp.html).
+It provides many more fields (as part of embedded models like Dublin Core) than Exif. This also makes it difficult - if not 
+impossible - to provide full support. Reading title, copyright, artist, and description from XMP sidecar files is 
+implemented as a proof-of-concept, [contributions are welcome](../developer-guide/metadata/xmp.md). Indexing of 
+embedded XMP is only possible via Exiftool, see above.
 
 ### Which folder will be indexed? ###
 
-This depends on your [runtime environment](docker-compose.md) and [configuration](config-options.md).
-While sub-folders can be selected for indexing in the UI, changing the *originals* base folder 
-requires a restart for security reasons.
+This depends on your environment and [configuration](config-options.md). While subfolders can be selected for indexing
+in the UI, changing the *originals* base folder requires a restart for security reasons.
 
-If you skip configuration and don't use one of our Docker images, PhotoPrism will try to find 
-a photo library by going through a list of common 
-[folder names](https://github.com/photoprism/photoprism/blob/develop/pkg/fs/dirs.go) 
-like `/photoprism/originals`, `Pictures`, and `~/Photos`. It will also search for other resources
-like external applications, classification models, and frontend assets.
+If you skip configuration and don't use one of our Docker images, PhotoPrism will attempt to find a photo library
+by searching a list of common [folder names](https://github.com/photoprism/photoprism/blob/develop/pkg/fs/dirs.go) 
+such as `/photoprism/originals` and `~/Pictures`. It also searches for other resources such as external applications, 
+classification models, and frontend assets.
 
-Your library will be mounted from `~/Pictures` by default when using our 
-example [docker-compose.yml](docker-compose.md) file, where `~` is a placeholder for your home directory. 
+If you use our [Docker Compose](docker-compose.md) example without modifications, your library will be 
+mounted from `~/Pictures` where `~` is a placeholder for your home directory:
 
-You may mount any folder accessible from your computer, including network drives.
-Note that PhotoPrism won't be able to see folders that have not been mounted unless you install it locally
-without Docker (developers only).
+- `\user\username` on Windows
+- `/Users/username` on macOS
+- and `/root` or `/home/username` on Linux
 
-Multiple folders can be indexed by mounting them as sub-folders of `/photoprism/originals`:
+Since the app is running inside a container, you have to explicitly mount the host folders you want to use.
+PhotoPrism won't be able to see folders that have not been mounted. Multiple folders can be made accessible
+by mounting them as subfolders of `/photoprism/originals`, for example:
 
-```
+```yaml
 volumes:
-  - "~/Family:/photoprism/originals/Family"
-  - "~/Friends:/photoprism/originals/Friends"
-``` 
+  - "~/friends:/photoprism/originals/friends"
+  - "/media/photos:/photoprism/originals/media"
+```
 
 ### Which file types are supported? ###
 
@@ -124,9 +121,9 @@ Note we don't have the resources to provide private users with dependencies and 
 environments. We therefore recommend learning Docker if your operating system supports it. Docker vastly simplifies
 installation and upgrades. It saves our team a lot of time that we can then spend more effectively, see next question.
 
-!!! missing ""
-    Everyone is invited to contribute by building & testing native packages for Linux distributions and other
-    operating systems! 🌷
+!!! help ""
+    Everyone is [invited to contribute](../developer-guide/index.md) by building and testing native packages 
+    for Linux distributions and other operating systems! 💐
 
 ### Why are you using Docker? ###
 
@@ -279,7 +276,7 @@ When you run `photoprism help` in a [terminal](docker-compose.md#command-line-in
 all commands and parameters available in your currently installed [version](https://docs.photoprism.app/release-notes/) 
 are listed:
 
-```
+```bash
 docker-compose exec photoprism photoprism help
 ```
 
@@ -298,7 +295,7 @@ write operations as well.
 This depends on how you installed it. If you're running PhotoPrism with [Docker Compose](docker-compose.md), 
 this command will stop and remove the Docker container:
 
-```
+```bash
 docker-compose rm -s -v
 ```
 

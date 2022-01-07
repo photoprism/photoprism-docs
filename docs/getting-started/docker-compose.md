@@ -17,7 +17,7 @@ installed on your system. It is available for Mac, Linux, and Windows.
     (right click and *Save Link As...* or use `wget`) to a folder of your choice,
     and change the [configuration](config-options.md) as needed:
     
-    ```
+    ```bash
     wget https://dl.photoprism.app/docker/docker-compose.yml
     ``` 
     
@@ -32,7 +32,7 @@ installed on your system. It is available for Mac, Linux, and Windows.
     the Raspberry Pi 3 / 4 and other ARM64-based devices (right click and *Save Link As...* or use `wget`) to a folder of your choice,
     and change the [configuration](config-options.md) as needed:
     
-    ```
+    ```bash
     wget https://dl.photoprism.app/docker/arm64/docker-compose.yml
     ```
 
@@ -46,7 +46,7 @@ installed on your system. It is available for Mac, Linux, and Windows.
     older ARMv7-based devices (right click and *Save Link As...* or use `wget`) to a folder of your choice,
     and change the [configuration](config-options.md) as needed:
     
-    ```
+    ```bash
     wget https://dl.photoprism.app/docker/armv7/docker-compose.yml
     ```
 
@@ -108,15 +108,16 @@ The *originals* folder contains your original photo and video files.
 
 `~/Pictures` will be mounted by default, where `~` is a placeholder for your home directory:
 
-```
+```yaml
 volumes:
   - "~/Pictures:/photoprism/originals"
 ```
 
 Other folders accessible from the host may be [mounted](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes) instead, 
-including network drives. Multiple folders can be made accessible by mounting them as subfolders:
+including network drives. Multiple folders can be made accessible by mounting them as subfolders
+of `/photoprism/originals`, for example:
 
-```
+```yaml
 volumes:
   - "~/friends:/photoprism/originals/friends"
   - "/media/photos:/photoprism/originals/media"
@@ -150,7 +151,7 @@ organized by year and month.
 Open a terminal and change to the folder in which the `docker-compose.yml` file has been saved.[^1]
 Run this command to start the app and database in the background:
 
-```
+```bash
 docker-compose up -d
 ```
 
@@ -174,7 +175,7 @@ Enabling [public mode](config-options.md) will disable authentication.
 The server port and app [config options](config-options.md) may be changed in `docker-compose.yml` at any time.
 Remember to restart the app for changes to take effect:
 
-```
+```bash
 docker-compose stop photoprism
 docker-compose up -d photoprism
 ```
@@ -220,13 +221,13 @@ Easy, isn't it?
 
 `photoprism help` lists all commands and [config options](config-options.md) available in the current version:
 
-```
+```bash
 docker-compose exec photoprism photoprism help
 ```
 
 Use the `--help` flag to see a detailed command description, for example:
 
-```
+```bash
 docker-compose exec photoprism photoprism backup --help
 ```
 

@@ -14,7 +14,7 @@ and provides more comfort than the pure Docker command-line interface.
     Open a terminal and run this command to start the app after replacing `~/Pictures` with
     the folder containing your pictures:
     
-    ```
+    ```bash
     docker run -d \
       --name photoprism \
       --security-opt seccomp=unconfined \
@@ -72,7 +72,7 @@ including network drives.
 
 Multiple folders can be made accessible by mounting them as subfolders:
 
-```
+```bash
 -v ~/Example:/photoprism/originals/Example
 ``` 
 
@@ -136,14 +136,14 @@ Easy, isn't it?
 
 You can stop PhotoPrism and start it again using the following commands:
 
-```
+```bash
 docker stop photoprism
 docker start photoprism
 ```
 
 To remove the container completely:
 
-```
+```bash
 docker rm -f photoprism
 ```
 
@@ -156,13 +156,13 @@ docker rm -f photoprism
 
 `photoprism help` lists all commands and [config options](config-options.md) available in the current version:
 
-```
+```bash
 docker exec -ti photoprism photoprism help
 ```
 
 Use the `--help` flag to see a detailed command description, for example:
 
-```
+```bash
 docker exec -ti photoprism photoprism backup --help
 ```
 

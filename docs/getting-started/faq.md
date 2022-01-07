@@ -128,7 +128,7 @@ installation and upgrades. It saves our team a lot of time that we can then spen
     Everyone is invited to contribute by building & testing native packages for Linux distributions and other
     operating systems! 🌷
 
-### I don't like Docker. Why are you using it? ###
+### Why are you using Docker? ###
 
 Containers are nothing new; [Solaris Zones](https://en.wikipedia.org/wiki/Solaris_Containers) have been around for
 about 15 years, first released publicly in 2004. The chroot system call was introduced during

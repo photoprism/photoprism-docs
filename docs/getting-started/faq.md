@@ -324,17 +324,33 @@ This is a known risk that can affect you even if your computer is not directly c
 Running apps in a container with limited host access is an easy way to improve security without
 compromising performance and usability.
 
+!!! tldr ""
+    A virtual machine running its own operating system provides more security, but typically has side effects 
+    such as lower performance and more difficult handling. Note that you can also run Docker in a VM to get the 
+    best of both worlds.
+
 ### I'm using an operating system without Docker support. How to install and use PhotoPrism without Docker? ###
 
-In general, you would build / install it like a [developer](../developer-guide/setup.md) since we don't have packages 
-for specific operating systems yet.
+You can build and install PhotoPrism from the publicly available [source code](../developer-guide/setup.md):
 
-Instead of using Docker, you can manually type the commands listed in our development 
-[Dockerfile](https://github.com/photoprism/photoprism/blob/develop/docker/development/Dockerfile) and replace packages with 
-what is available in your environment. You often don't need to use the exact same versions for dependencies.
+```bash
+git clone https://github.com/photoprism/photoprism.git
+cd photoprism
+make all install
+```
 
-If your operating system has Docker support, we recommend learning Docker as it vastly simplifies installing
-and upgrading.
+If build dependencies are missing, you must install them manually as shown in our development 
+[Dockerfile](https://github.com/photoprism/photoprism/blob/develop/docker/development/Dockerfile).
+You often don't need to use the exact same versions, so it's possible replace packages with what is available 
+in your environment.
+
+Note we don't have the resources to provide private users with dependencies and TensorFlow libraries for their personal environments.
+We therefore recommend learning Docker if your operating system supports it. Docker vastly simplifies installation and 
+upgrades. It saves our team a lot of time that we can then spend more effectively, see previous question.
+
+!!! tldr ""
+    Everyone is invited to contribute by building & testing native packages for Linux distributions and other 
+    operating systems! 💐
 
 ### Do you support Podman? ###
 

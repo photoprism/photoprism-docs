@@ -73,8 +73,9 @@ by mounting them as subfolders of `/photoprism/originals`, for example:
 
 ```yaml
 volumes:
-  - "~/friends:/photoprism/originals/friends"
-  - "/media/photos:/photoprism/originals/media"
+  - "~/Pictures:/photoprism/originals"
+  - "/mnt/friends:/photoprism/originals/friends"
+  - "/mnt/photos:/photoprism/originals/media"
 ```
 
 ### Which file types are supported? ###

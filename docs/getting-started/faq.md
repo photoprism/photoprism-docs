@@ -60,7 +60,7 @@ by searching a list of common [folder names](https://github.com/photoprism/photo
 such as `/photoprism/originals` and `~/Pictures`. It also searches for other resources such as external applications, 
 classification models, and frontend assets.
 
-If you use our [Docker Compose](docker-compose.md) example without modifications, your library will be 
+If you use our [Docker Compose](docker-compose.md) example without modifications, pictures will be 
 mounted from `~/Pictures` where `~` is a placeholder for your home directory:
 
 - `\user\username` on Windows

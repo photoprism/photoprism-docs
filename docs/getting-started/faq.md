@@ -339,8 +339,8 @@ cd photoprism
 make all install
 ```
 
-If build dependencies are missing, you must install them manually as shown in our development 
-[Dockerfile](https://github.com/photoprism/photoprism/blob/develop/docker/develop/Dockerfile).
+If build dependencies are missing, you must install them manually as shown in our human-readable and
+versioned [Dockerfile](https://github.com/photoprism/photoprism/blob/develop/docker/develop/Dockerfile).
 You often don't need to use the exact same versions, so it's possible to replace packages with what is available 
 in your environment.
 

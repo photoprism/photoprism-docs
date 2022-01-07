@@ -105,6 +105,54 @@ most videos as well.
 If you have videos, always enable JSON sidecar files so that video metadata such as date, location, codec, 
 and duration can be indexed and searched.
 
+### How to install and use PhotoPrism without Docker? ###
+
+If your environment doesn't support Docker and there are no [ports](freebsd.md) or native packages available, 
+you can build and install PhotoPrism from the publicly available [source code](../developer-guide/setup.md):
+
+```bash
+git clone https://github.com/photoprism/photoprism.git
+cd photoprism
+make all install
+```
+
+Missing build dependencies must be installed manually as shown in our human-readable and versioned
+[Dockerfile](https://github.com/photoprism/photoprism/blob/develop/docker/develop/Dockerfile). You often don't 
+need to use the exact same versions, so it's possible to replace packages with what is available in your environment.
+
+Note we don't have the resources to provide private users with dependencies and TensorFlow libraries for their personal
+environments. We therefore recommend learning Docker if your operating system supports it. Docker vastly simplifies
+installation and upgrades. It saves our team a lot of time that we can then spend more effectively, see next question.
+
+!!! missing ""
+    Everyone is invited to contribute by building & testing native packages for Linux distributions and other
+    operating systems! 🌷
+
+### Why are you using Docker? ###
+
+Containers are nothing new; [Solaris Zones](https://en.wikipedia.org/wiki/Solaris_Containers) have been around for
+about 15 years, first released publicly in 2004. The chroot system call was introduced during
+[development of Version 7 Unix in 1979](https://en.wikipedia.org/wiki/Chroot). It is used ever since for hosting
+applications exposed to the public Internet.
+
+Modern Linux containers are an incremental improvement. A main advantage of Docker is that application images
+can be easily made available to users via Internet. It provides a common standard across most operating
+systems and devices, which saves our team a lot of time that we can then spend more effectively, for example,
+providing support and developing one of the many features that users are waiting for.
+
+Human-readable and versioned Dockerfiles as part of our public source code also help avoid surprises and
+"works for me" moments by enabling us to have the exact same environment everywhere in development and production.
+
+Last but not least, virtually all file format parsers have vulnerabilities that just haven't been discovered yet.
+This is a known risk that can affect you even if your computer is not directly connected to the Internet.
+Running apps in a container with limited host access is an easy way to improve security without
+compromising performance and usability.
+
+!!! tldr ""
+    A virtual machine running its own operating system provides more security, but typically has side effects
+    such as lower performance and more difficult handling. Note that you can also run Docker in a VM to get the
+    best of both worlds. It's essentially what happens when you run Docker on operating systems other than Linux.
+
 ### Why don't you display animated GIFs natively? ###
 
 PhotoPrism focuses on photographic images and short videos. You may
@@ -303,55 +351,6 @@ volumes:
     is especially handy, as you can dump all data from a SD card / camera directly into that folder 
     and trigger the index in the GUI afterwards. So you can skip the upload dialog in the 
     GUI and it's a little faster.
-
-### Why are you using Docker, isn't it pretty new and complicated? ###
-
-Containers are nothing new; [Solaris Zones](https://en.wikipedia.org/wiki/Solaris_Containers) have been around for
-about 15 years, first released publicly in 2004. The chroot system call was introduced during
-[development of Version 7 Unix in 1979](https://en.wikipedia.org/wiki/Chroot). It is used ever since for hosting
-applications exposed to the public Internet.
-
-Modern Linux containers are an incremental improvement. A main advantage of Docker is that application images
-can be easily made available to users via Internet. It provides a common standard across most operating
-systems and devices, which saves our team a lot of time that we can then spend more effectively, for example,
-providing support and developing one of the many features that users are waiting for.
-
-Human-readable and versioned Dockerfiles as part of our public source code also help avoid surprises and
-"works for me" moments by enabling us to have the exact same environment everywhere in development and production.
-
-Last but not least, virtually all file format parsers have vulnerabilities that just haven't been discovered yet.
-This is a known risk that can affect you even if your computer is not directly connected to the Internet.
-Running apps in a container with limited host access is an easy way to improve security without
-compromising performance and usability.
-
-!!! tldr ""
-    A virtual machine running its own operating system provides more security, but typically has side effects 
-    such as lower performance and more difficult handling. Note that you can also run Docker in a VM to get the 
-    best of both worlds. It's essentially what happens when you run Docker on operating systems other than Linux.
-
-### I'm using an operating system without Docker support. How to install and use PhotoPrism without Docker? ###
-
-You can build and install PhotoPrism from the publicly available [source code](../developer-guide/setup.md):
-
-```bash
-git clone https://github.com/photoprism/photoprism.git
-cd photoprism
-make all install
-```
-
-If build dependencies are missing, you must install them manually as shown in our human-readable and
-versioned [Dockerfile](https://github.com/photoprism/photoprism/blob/develop/docker/develop/Dockerfile).
-You often don't need to use the exact same versions, so it's possible to replace packages with what is available 
-in your environment.
-
-Note we don't have the resources to provide private users with dependencies and TensorFlow libraries for their personal
-environments. We therefore recommend learning Docker if your operating system supports it. Docker vastly simplifies
-installation and upgrades. It saves our team a lot of time that we can then spend more effectively,
-see previous question.
-
-!!! missing ""
-    Everyone is invited to contribute by building & testing native packages for Linux distributions and other
-    operating systems! 🌷
 
 ### Do you support Podman? ###
 

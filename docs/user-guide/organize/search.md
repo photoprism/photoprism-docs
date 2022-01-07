@@ -143,6 +143,7 @@ PhotoPrism allows you to use multiple filters in its search.
 | subjects/people  |"Jane Doe" | Subject Name|
 | title     | "Holiday*", "Holiday / 2012" | |
 | type     |   image, video, raw, live     | |
+| uid       |  pqbcf5j446s0futy       | |
 | unsorted     |    yes, no    | |
 | video | yes, no | |
 

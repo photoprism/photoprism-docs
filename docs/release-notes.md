@@ -66,7 +66,7 @@ time on our infrastructure.
 
 Since the [funding goal](https://github.com/sponsors/photoprism) required to make all features and maps generally
 available has not been reached, *early-access features* have been renamed to *sponsor features* in this update.
-Offline and high-resolution street maps remain free for everyone, while hybrid, topographic and outdoor maps are 
+Offline and high-resolution street maps remain free for everyone, while hybrid, topographic, and outdoor maps are 
 now a sponsor feature. We believe this is fair. A big thank you to all our [sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md)
 and [contributors](https://github.com/photoprism/photoprism/graphs/contributors/)!
 

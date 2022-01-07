@@ -10,7 +10,7 @@ nav:
     - Cloud:
       - DigitalOcean: getting-started/cloud/digitalocean.md
     - NAS Devices:
-      - Synology NAS: getting-started/nas/synology.md
+      - Synology: getting-started/nas/synology.md
       - Unraid: getting-started/nas/unraid.md
     - Config Options: getting-started/config-options.md
     - Performance: getting-started/performance.md

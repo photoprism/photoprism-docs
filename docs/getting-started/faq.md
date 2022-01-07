@@ -340,7 +340,7 @@ make all install
 ```
 
 If build dependencies are missing, you must install them manually as shown in our development 
-[Dockerfile](https://github.com/photoprism/photoprism/blob/develop/docker/development/Dockerfile).
+[Dockerfile](https://github.com/photoprism/photoprism/blob/develop/docker/develop/Dockerfile).
 You often don't need to use the exact same versions, so it's possible replace packages with what is available 
 in your environment.
 

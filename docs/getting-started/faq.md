@@ -128,7 +128,7 @@ installation and upgrades. It saves our team a lot of time that we can then spen
     Everyone is invited to contribute by building & testing native packages for Linux distributions and other
     operating systems! 🌷
 
-### Why are you using Docker? ###
+### I don't like Docker. Why are you using it? ###
 
 Containers are nothing new; [Solaris Zones](https://en.wikipedia.org/wiki/Solaris_Containers) have been around for
 about 15 years, first released publicly in 2004. The chroot system call was introduced during
@@ -152,6 +152,40 @@ compromising performance and usability.
     A virtual machine running its own operating system provides more security, but typically has side effects
     such as lower performance and more difficult handling. Note that you can also run Docker in a VM to get the
     best of both worlds. It's essentially what happens when you run Docker on operating systems other than Linux.
+
+### Should I use SQLite, MariaDB, or MySQL? ###
+
+PhotoPrism is compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB 10.5.12+](https://mariadb.org/).
+Older databases using the same dialect, such as MySQL 8, may work but are not officially supported.
+
+If you have few pictures, concurrent users, and CPU cores, [SQLite](https://www.sqlite.org/)
+may seem faster compared to full-featured database servers like [MariaDB](https://mariadb.com/).
+
+This changes as the index grows and the number of concurrent accesses increases.
+The way MariaDB and MySQL handle multiple queries is completely different and optimized
+for high concurrency. SQLite, for example, locks the index on updates so that other
+operations have to wait. In the worst case, this can lead to timeout errors.
+Its main advantage is that you don't need to run a separate database server.
+This can be very useful for testing and also works great if you only have a few
+thousand files to index.
+
+MariaDB lacks some features that [MySQL Enterprise Edition](https://www.mysql.com/products/enterprise/) offers.
+On the other hand, MariaDB has many optimizations. It is also completely open-source.
+
+### Is a Raspberry Pi fast enough? ###
+
+This largely depends on your expectations and the number of files you have. Most users report that
+PhotoPrism runs smoothly on their Raspberry Pi 4. However, initial indexing typically takes much longer
+than on standard desktop computers.
+
+Also keep in mind that the hardware has limited video transcoding capabilities, so the conversion of video
+file formats is not well-supported and software transcoding is generally slow.
+
+### Should I use an SD card or a USB stick? ###
+
+Conventional USB sticks and SD cards are not suitable for long-term storage. Not only because of the
+performance, but also because they can lose data over time. Local [Solid-State Drives](performance.md#storage)
+(SSDs) are best, even when connected externally via USB 3. USB 1 and 2 devices will be slow either way.
 
 ### Why don't you display animated GIFs natively? ###
 
@@ -213,40 +247,6 @@ or [Photo Organizer](https://www.systweak.com/photo-organizer).
 Configurable import folders may be available in a later version. This is because - depending on the specific 
 pattern - appropriate conflict resolution is required and the patterns must be well understood and validated 
 to avoid typos or other misconfigurations that lead to undesired results for which we do not want to be responsible.
-
-### Should I use an SD card or a USB stick? ###
-
-Conventional USB sticks and SD cards are not suitable for long-term storage. Not only because of the 
-performance, but also because they can lose data over time. Local [Solid-State Drives](performance.md#storage) 
-(SSDs) are best, even when connected externally via USB 3. USB 1 and 2 devices will be slow either way.
-
-### Is a Raspberry Pi fast enough? ###
-
-This largely depends on your expectations and the number of files you have. Most users report that
-PhotoPrism runs smoothly on their Raspberry Pi 4. However, initial indexing typically takes much longer
-than on standard desktop computers.
-
-Also keep in mind that the hardware has limited video transcoding capabilities, so the conversion of video
-file formats is not well-supported and software transcoding is generally slow.
-
-### Should I use SQLite, MariaDB, or MySQL? ###
-
-PhotoPrism is compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB 10.5.12+](https://mariadb.org/).
-Older databases using the same dialect, such as MySQL 8, may work but are not officially supported.
-
-If you have few pictures, concurrent users, and CPU cores, [SQLite](https://www.sqlite.org/)
-may seem faster compared to full-featured database servers like [MariaDB](https://mariadb.com/).
-
-This changes as the index grows and the number of concurrent accesses increases.
-The way MariaDB and MySQL handle multiple queries is completely different and optimized
-for high concurrency. SQLite, for example, locks the index on updates so that other
-operations have to wait. In the worst case, this can lead to timeout errors.
-Its main advantage is that you don't need to run a separate database server.
-This can be very useful for testing and also works great if you only have a few
-thousand files to index.
-
-MariaDB lacks some features that [MySQL Enterprise Edition](https://www.mysql.com/products/enterprise/) offers.
-On the other hand, MariaDB has many optimizations. It is also completely open-source.
 
 ### Why is only the logo displayed when I open the app? ###
 

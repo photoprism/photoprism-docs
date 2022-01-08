@@ -83,7 +83,7 @@
 
 ## Library, Counts & Files ##
 
-??? question "Which file types are supported?"
+??? question "What media file types are supported?"
 
     The primary image format is JPEG. Support for JPEG XL is planned but not available yet.
     When indexing, a JPEG sidecar file may be created automatically for RAW, HEIF, TIFF, PNG, BMP, GIF, and video files.
@@ -107,6 +107,39 @@
       
     If you have videos, always enable JSON sidecar files so that video metadata such as date, location, codec,
     and duration can be indexed and searched.
+
+??? question "Which metadata sidecar files are supported?"
+    Currently, three types of metadata file formats are supported:
+    
+    #### JSON ####
+    
+    If not disabled via `PHOTOPRISM_DISABLE_EXIFTOOL` or `--disable-exiftool`, [Exiftool](https://exiftool.org/) is used
+    to automatically create a JSON sidecar for each media file. **In this way, embedded XMP and video metadata can also be indexed.**
+    Native metadata extraction is limited to common Exif headers. Note that this causes small amount of overhead when
+    indexing for the first time.
+    
+    JSON files can also be useful for debugging, as they contain the full metadata and can be processed with common
+    development tools and text editors.
+    
+    *Metadata JSON files exported from Google Photos can be read as well. Support for more schemas may be added over time.*
+    
+    #### YAML ####
+    
+    Unless disabled via `PHOTOPRISM_DISABLE_BACKUPS` or `--disable-backups`, PhotoPrism automatically creates/updates
+    [human-friendly YAML sidecar files](../developer-guide/technologies/yaml.md) during indexing and after manual
+    editing of fields such as title, date, or location. They serve as a backup in case the database (index) is lost,
+    or when folders are synchronized with a remote instance.
+    
+    Like JSON, [YAML](../developer-guide/technologies/yaml.md) files can be opened with common development tools and
+    text editors. However, changes are not synchronized with the original index, as this could overwrite existing data.
+    
+    #### XMP ####
+    
+    XMP (Extensible Metadata Platform) is an XML-based metadata container format [developed by Adobe](https://www.adobe.com/products/xmp.html).
+    It provides many more fields (as part of embedded models like Dublin Core) than Exif. This also makes it difficult - if not
+    impossible - to provide full support. Reading title, copyright, artist, and description from XMP sidecar files is
+    implemented as a proof-of-concept, [contributions are welcome](../developer-guide/metadata/xmp.md). Indexing of
+    embedded XMP is only possible via Exiftool, see above.
 
 ??? question "Some files seem hidden, where are they?"
 
@@ -197,3 +230,5 @@
     HTTPS reverse proxy. Your files and passwords will otherwise be transmitted in clear text and can be intercepted 
     by anyone, including your provider, hackers, and governments. Backup tools and file sync apps may refuse to 
     connect as well.
+
+*[sidecar files]: additional files that sit next to a main file

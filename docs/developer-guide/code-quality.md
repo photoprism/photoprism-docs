@@ -66,13 +66,17 @@ untested parts of our code base. Test coverage is of limited use as a numerical 
 !!! note ""
     Code that cannot be tested is flawed.
 
+<!--
 ### Codecov [![Test Coverage](https://codecov.io/gh/photoprism/photoprism/branch/develop/graph/badge.svg)][codecov] ###
 
 A coverage log file created by the Go test runner is automatically sent to [Codecov][codecov] every time our `develop` branch was successfully built and tested on [Travis CI](https://travis-ci.org/photoprism/photoprism). Codecov provides a beautiful UI for displaying coverage reports and renders a badge showing the current test coverage. Custom settings for our report are located in [codecov.yml](https://github.com/photoprism/photoprism/blob/develop/codecov.yml). For example, `range: 50..90` means the badge will be green if coverage is >= 90% and red if it is <= 50%.
+-->
 
-## Quality Reports [![Code Quality](https://goreportcard.com/badge/github.com/photoprism/photoprism)][goreport] ##
+## Quality Reports ##
 
-[goreportcard.com][goreport] finds typical issues in Go source code
+[GoReportCard.com][goreport] finds typical issues in Go source code:
+
+[![Code Quality](https://goreportcard.com/badge/github.com/photoprism/photoprism)][goreport]
 
 !!! note ""
     Not every problem reported by tools is really important and needs to be fixed immediately. Use the reports as

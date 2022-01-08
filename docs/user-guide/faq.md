@@ -108,8 +108,8 @@
     If you have videos, always enable JSON sidecar files so that video metadata such as date, location, codec,
     and duration can be indexed and searched.
 
-??? question "Which metadata sidecar files are supported?"
-    Currently, three types of metadata file formats are supported:
+??? question "What metadata sidecar file types are supported?"
+    Currently, three types of file formats are supported:
     
     #### JSON ####
     

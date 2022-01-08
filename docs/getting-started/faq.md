@@ -15,7 +15,7 @@ New sidecar files are created in the *storage* folder by default, so the *origin
     Even if `PHOTOPRISM_DISABLE_EXIFTOOL` and `PHOTOPRISM_DISABLE_BACKUPS` are set to `true`,
     the indexer looks for existing sidecar files and uses them.
 
-### Which metadata file types are supported? ###
+### What metadata file types are supported? ###
 
 Currently, three types of metadata sidecar files are supported:
 
@@ -50,7 +50,7 @@ impossible - to provide full support. Reading title, copyright, artist, and desc
 implemented as a proof-of-concept, [contributions are welcome](../developer-guide/metadata/xmp.md). Indexing of 
 embedded XMP is only possible via Exiftool, see above.
 
-### Which media file types are supported? ###
+### What media file types are supported? ###
 
 The primary image format is JPEG. Support for JPEG XL is planned but not available yet. 
 When indexing, a JPEG sidecar file may be created automatically for RAW, HEIF, TIFF, PNG, BMP, GIF, and video files. 

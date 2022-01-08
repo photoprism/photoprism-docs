@@ -97,7 +97,6 @@ an SD card, or a shared network folder.
     for the first time. Choosing a secure password is not essential if you don't expose the database 
     to other apps and hosts.
 
-
 #### Volumes ####
 
 Since the app is running inside a container, you have to explicitly mount the host folders you want to use.

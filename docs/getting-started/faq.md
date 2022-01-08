@@ -103,7 +103,7 @@ volumes:
   - "/mnt/photos:/photoprism/originals/media"
 ```
 
-### How to install and use PhotoPrism without Docker? ###
+### How can I install PhotoPrism without Docker? ###
 
 #### Building From Source ####
 

@@ -74,7 +74,7 @@ A coverage log file created by the Go test runner is automatically sent to [Code
 
 ## Quality Reports ##
 
-[GoReportCard.com][goreport] finds typical issues in Go source code:
+Code scanners like [goreportcard.com][goreport] find typical problems in Go source code:
 
 [![Code Quality](https://goreportcard.com/badge/github.com/photoprism/photoprism)][goreport]
 

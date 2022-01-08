@@ -128,11 +128,8 @@ installation and upgrades. It saves our team a lot of time that we can then spen
 Everyone is [invited to contribute](https://docs.photoprism.app/developer-guide/) by building and testing installation
 packages for Linux distributions and other operating systems! We currently don't have the resources to do this,
 as new versions are released several times a month and the long list of dependencies would lead to an enormous
-testing effort.
-
-#### BSD Ports ####
-
-An [unofficial port](https://docs.photoprism.app/getting-started/freebsd/) is available for FreeBSD / FreeNAS users.
+testing effort. An [unofficial port](https://docs.photoprism.app/getting-started/freebsd/) is available for
+FreeBSD / FreeNAS users.
 
 ### Why are you using Docker? ###
 

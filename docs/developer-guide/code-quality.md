@@ -79,6 +79,8 @@ including `gofmt`, `go vet`, `go lint` and `gocyclo`:
 
 [![Code Quality](https://goreportcard.com/badge/github.com/photoprism/photoprism)][goreport]
 
+You are welcome to support the developers on [Patreon](https://www.patreon.com/goreportcard).
+
 !!! note ""
     Not every problem reported by tools is really important and needs to be fixed immediately. Use the reports as
     inspiration when you need some.

@@ -17,6 +17,13 @@ Maintaining small amounts of duplicate code is much easier and less work than ch
 !!! tldr ""
     Premature optimization is the root of all evil. — Donald Knuth
 
+## Bottom-Up ##
+
+!!! tldr ""
+    I compared Mel's hand-optimized programs with the same code massaged by the optimizing assembler program, and Mel's always ran faster.
+    That was because the “top-down” method of program design hadn't been invented yet, and Mel wouldn't have used it anyway. 
+    He wrote the innermost parts of his program loops first. — [The Story of Mel](http://www.catb.org/jargon/html/story-of-mel.html)
+
 ## Caching ##
 
 !!! tldr ""

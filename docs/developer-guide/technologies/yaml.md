@@ -1,38 +1,35 @@
 # Introduction to YAML
 
-[YAML](https://en.wikipedia.org/wiki/YAML) is a human-readable markup language. PhotoPrism uses it for metadata 
-backups and config files because of its simplicity and widespread support.
+[YAML](https://en.wikipedia.org/wiki/YAML) is a human-friendly data format. The name originally meant
+*Yet Another Markup Language*. We use it for metadata exports and config files because of its simplicity and
+widespread support. Common file extensions are `.yml`and `.yaml`.
 
-Commonly used file extensions are `.yml` and `.yaml`, for example `docker-compose.yml`.
-
-## Basics ##
-
-Value names, which are referred to as keys, are case-sensitive. If values contain more than letters and numbers, they 
-should be enclosed in single `'` or double quotes `"`. You can generally use all [Unicode](https://home.unicode.org/)
-characters and [Emojis](https://home.unicode.org/emoji/about-emoji/).
-
-The difference between single and double quotes is that double quotes support escape sequences like `\t` for a tab
-or `\n` for a new line.
-
-Related values start at the same indentation level. We recommend using 2 spaces, but any number of spaces will work 
-as long as the indentation is consistent (tabs are not allowed).
-
-Comments begin with the number sign `#`, can start anywhere on a line, and continue until the end of the line.
+Values are represented in the form `key: value` with one entry per line:
 
 ```yaml
-## EXAMPLE
 Type: image
 Title: "La Tour Eiffel 🌈"
 Year: 2014
-# Collection of key-value pairs:
+# Key-Value Collection Example:
 Details:
   Notes: "Bonjour\nla France!" 
   Keywords: 'paris, france' # Comment
 ```
 
-## Lists ##
+## Basic Rules ##
 
-List are lines that start at the same indentation level and begin with a `- ` (a dash and a space).
+- Keys are case-sensitive
+- Related values start at the same indentation level
+    - Tabs are not allowed for indentation
+    - We recommend using 2 spaces, but any number will work as long as it is consistent
+- You can generally use all [Unicode](https://home.unicode.org/) characters and [Emojis](https://home.unicode.org/emoji/about-emoji/)
+    - To avoid ambiguity, it is generally best to enclose values in single `'` or double quotes `"` if they contain more than letters and numbers, and especially if they contain a colon `:`
+    - The difference between single and double quotes is that double quotes support [escape sequences](https://symfony.com/doc/current/components/yaml/yaml_format.html#strings) like `\t` for a tab or `\n` for a new line
+- Comments begin with the `#` sign, can start anywhere on a line, and continue until the end of the line
+
+## Multiple Values ##
+
+List are lines that start at the same indentation level and begin with a dash and a space `- `.
 They are commonly used to define service dependencies, exposed network ports, or folders shared between 
 host and container in `docker-compose.yml` files (volume mounts):
 
@@ -50,7 +47,7 @@ services:
       - "/photos:/photoprism/originals"
 ```
 
-## Key-Value Pairs ##
+## Key-Value Collections ##
 
 Collections of key/value pairs are often used to define environment variables in config files:
 
@@ -63,3 +60,7 @@ services:
       MYSQL_USER: photoprism
       MYSQL_PASSWORD: insecure
 ```
+
+*[Keys]: the names of values
+*[tab]: a tab advances the cursor to the next tab stop
+*[key/value]: a key-value pair consists of two related data elements

@@ -31,7 +31,7 @@ Details:
 
 List are lines that start at the same indentation level and begin with a dash and a space as shown in the example below.
 They are commonly used to define service dependencies, exposed network ports, or folders shared between host and
-container in `docker-compose.yml` files (volume mounts):
+container in `docker-compose.yml` files:
 
 ```yaml
 services:

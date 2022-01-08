@@ -1,7 +1,8 @@
 # Setup Using Docker Compose
 
-[Docker Compose](https://docs.docker.com/compose/) works with [human-readable YAML files](../developer-guide/technologies/yaml.md) 
-that define application services, networks, and storage volumes, so you don't have to remember complicated commands and parameters.
+With [Docker Compose](https://docs.docker.com/compose/), you [use a YAML file](../developer-guide/technologies/yaml.md)
+to configure all application services so you can easily start them with a single command.
+
 Before you start, make sure you have [Docker](https://store.docker.com/search?type=edition&offering=community)
 installed on your system. It is available for Mac, Linux, and Windows.
 

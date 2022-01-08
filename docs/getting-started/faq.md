@@ -15,11 +15,11 @@ New sidecar files are created in the *storage* folder by default, so the *origin
     Even if `PHOTOPRISM_DISABLE_EXIFTOOL` and `PHOTOPRISM_DISABLE_BACKUPS` are set to `true`,
     the indexer looks for existing sidecar files and uses them.
 
-#### File Formats ####
+### Which metadata file types are supported? ###
 
 Currently, three types of metadata sidecar files are supported:
 
-##### JSON #####
+#### JSON ####
 
 If not disabled via `PHOTOPRISM_DISABLE_EXIFTOOL` or `--disable-exiftool`, [Exiftool](https://exiftool.org/) is used
 to automatically create a JSON sidecar for each media file. **In this way, embedded XMP and video metadata can also be indexed.**
@@ -32,7 +32,7 @@ development tools and text editors.
 !!! info ""
     JSON files exported from Google Photos can be read as well. Support for more schemas may be added over time.
 
-##### YAML #####
+#### YAML ####
 
 Unless disabled via `PHOTOPRISM_DISABLE_BACKUPS` or `--disable-backups`, PhotoPrism automatically creates/updates
 [YAML](../developer-guide/technologies/yaml.md) sidecar files during indexing and after manual editing of fields 
@@ -42,7 +42,7 @@ are synchronized with a remote PhotoPrism instance.
 Like JSON, [YAML](../developer-guide/technologies/yaml.md) files can be opened with common development tools and 
 text editors. However, changes are not synchronized with the original index, as this could overwrite existing data.
 
-##### XMP #####
+#### XMP ####
 
 XMP (Extensible Metadata Platform) is an XML-based metadata container format [developed by Adobe](https://www.adobe.com/products/xmp.html).
 It provides many more fields (as part of embedded models like Dublin Core) than Exif. This also makes it difficult - if not 
@@ -50,35 +50,7 @@ impossible - to provide full support. Reading title, copyright, artist, and desc
 implemented as a proof-of-concept, [contributions are welcome](../developer-guide/metadata/xmp.md). Indexing of 
 embedded XMP is only possible via Exiftool, see above.
 
-### Which folder will be indexed? ###
-
-This depends on your environment and [configuration](config-options.md). While subfolders can be selected for indexing
-in the UI, changing the *originals* base folder requires a restart for security reasons.
-
-If you skip configuration and don't use one of our Docker images, PhotoPrism will attempt to find a photo library
-by searching a list of common [folder names](https://github.com/photoprism/photoprism/blob/develop/pkg/fs/dirs.go) 
-such as `/photoprism/originals` and `~/Pictures`. It also searches for other resources such as external applications, 
-classification models, and frontend assets.
-
-If you use our [Docker Compose](docker-compose.md) example without modifications, pictures will be 
-mounted from `~/Pictures` where `~` is a placeholder for your home directory:
-
-- `\user\username` on Windows
-- `/Users/username` on macOS
-- and `/root` or `/home/username` on Linux
-
-Since the app is running inside a container, you have to explicitly mount the host folders you want to use.
-PhotoPrism won't be able to see folders that have not been mounted. Multiple folders can be made accessible
-by mounting them as subfolders of `/photoprism/originals`, for example:
-
-```yaml
-volumes:
-  - "/home/username/Pictures:/photoprism/originals"
-  - "/mnt/friends:/photoprism/originals/friends"
-  - "/mnt/photos:/photoprism/originals/media"
-```
-
-### Which file types are supported? ###
+### Which media file types are supported? ###
 
 The primary image format is JPEG. Support for JPEG XL is planned but not available yet. 
 When indexing, a JPEG sidecar file may be created automatically for RAW, HEIF, TIFF, PNG, BMP, GIF, and video files. 
@@ -102,6 +74,34 @@ most videos as well.
 
 If you have videos, always enable JSON sidecar files so that video metadata such as date, location, codec, 
 and duration can be indexed and searched.
+
+### Which folder will be indexed? ###
+
+This depends on your environment and [configuration](config-options.md). While subfolders can be selected for indexing
+in the UI, changing the *originals* base folder requires a restart for security reasons.
+
+If you skip configuration and don't use one of our Docker images, PhotoPrism will attempt to find a photo library
+by searching a list of common [folder names](https://github.com/photoprism/photoprism/blob/develop/pkg/fs/dirs.go)
+such as `/photoprism/originals` and `~/Pictures`. It also searches for other resources such as external applications,
+classification models, and frontend assets.
+
+If you use our [Docker Compose](docker-compose.md) example without modifications, pictures will be
+mounted from `~/Pictures` where `~` is a placeholder for your home directory:
+
+- `\user\username` on Windows
+- `/Users/username` on macOS
+- and `/root` or `/home/username` on Linux
+
+Since the app is running inside a container, you have to explicitly mount the host folders you want to use.
+PhotoPrism won't be able to see folders that have not been mounted. Multiple folders can be made accessible
+by mounting them as subfolders of `/photoprism/originals`, for example:
+
+```yaml
+volumes:
+  - "/home/username/Pictures:/photoprism/originals"
+  - "/mnt/friends:/photoprism/originals/friends"
+  - "/mnt/photos:/photoprism/originals/media"
+```
 
 ### How to install and use PhotoPrism without Docker? ###
 

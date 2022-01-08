@@ -29,9 +29,9 @@ Details:
 
 ## Multiple Values ##
 
-List are lines that start at the same indentation level and begin with a dash and a space `- `.
-They are commonly used to define service dependencies, exposed network ports, or folders shared between 
-host and container in `docker-compose.yml` files (volume mounts):
+List are lines that start at the same indentation level and begin with a dash and a space as shown in the example below.
+They are commonly used to define service dependencies, exposed network ports, or folders shared between host and
+container in `docker-compose.yml` files (volume mounts):
 
 ```yaml
 services:
@@ -49,7 +49,7 @@ services:
 
 ## Key-Value Collections ##
 
-Collections of key/value pairs are often used to define environment variables in config files:
+Collections of key-value pairs are often used to define environment variables in config files:
 
 ```yaml
 services:
@@ -63,4 +63,4 @@ services:
 
 *[Keys]: the names of values
 *[tab]: a tab advances the cursor to the next tab stop
-*[key/value]: a key-value pair consists of two related data elements
+*[key-value]: a key-value pair consists of two related data elements

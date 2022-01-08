@@ -1,5 +1,30 @@
 # Frequently Asked Questions
 
+### What media file types are supported? ###
+
+The primary image format is JPEG. Support for JPEG XL is planned but not available yet.
+When indexing, a JPEG sidecar file may be created automatically for RAW, HEIF, TIFF, PNG, BMP, GIF, and video files.
+It is needed for generating thumbnails, image classification, and facial recognition.
+
+Due to the patent situation and its complexity, [TIFF is only partially supported](https://github.com/golang/go/issues?q=is%3Aissue+image%2Ftiff+) at the moment.
+
+The following RAW converters can be used to generate JPEGs (included in our Docker image,
+otherwise you may need to install them on your system):
+
+- [Darktable](https://www.darktable.org/) ([supported cameras](https://www.darktable.org/resources/camera-support/))
+- [RawTherapee](https://rawtherapee.com/) ([supported cameras](https://www.libraw.org/supported-cameras))
+
+If you're running PhotoPrism directly on a Mac, RAW files will be converted with [Sips](https://ss64.com/osx/sips.html) ([supported cameras](https://support.apple.com/en-us/HT211241)) by default.
+Our goal is to provide top-notch support for all RAW formats, regardless of camera make and model.
+Please let us know when there are any issues with a particular camera or file format.
+
+Video formats supported by [FFmpeg](https://en.wikipedia.org/wiki/FFmpeg#Supported_codecs_and_formats) can be transcoded to
+[MPEG-4 AVC](https://en.wikipedia.org/wiki/Advanced_Video_Coding). Still images for generating thumbnails can be extracted from
+most videos as well.
+
+If you have videos, always enable JSON sidecar files so that video metadata such as date, location, codec,
+and duration can be indexed and searched.
+
 ### What are sidecar files and where do I find them? ###
 
 A sidecar is a file that sits next to your main photo or video files and usually has the same name
@@ -15,9 +40,9 @@ New sidecar files are created in the *storage* folder by default, so the *origin
     Even if `PHOTOPRISM_DISABLE_EXIFTOOL` and `PHOTOPRISM_DISABLE_BACKUPS` are set to `true`,
     the indexer looks for existing sidecar files and uses them.
 
-### What metadata file types are supported? ###
+### Which metadata sidecar files are supported? ###
 
-Currently, three types of metadata sidecar files are supported:
+Currently, three types of metadata file formats are supported:
 
 #### JSON ####
 
@@ -35,9 +60,9 @@ development tools and text editors.
 #### YAML ####
 
 Unless disabled via `PHOTOPRISM_DISABLE_BACKUPS` or `--disable-backups`, PhotoPrism automatically creates/updates
-[YAML](../developer-guide/technologies/yaml.md) sidecar files during indexing and after manual editing of fields 
-such as title, date, or location. They serve as a backup in case the database (index) is lost, or when folders 
-are synchronized with a remote PhotoPrism instance.
+[human-friendly YAML sidecar files](../developer-guide/technologies/yaml.md) during indexing and after manual editing
+of fields such as title, date, or location. They serve as a backup in case the database (index) is lost, or when
+folders are synchronized with a remote instance.
 
 Like JSON, [YAML](../developer-guide/technologies/yaml.md) files can be opened with common development tools and 
 text editors. However, changes are not synchronized with the original index, as this could overwrite existing data.
@@ -49,31 +74,6 @@ It provides many more fields (as part of embedded models like Dublin Core) than 
 impossible - to provide full support. Reading title, copyright, artist, and description from XMP sidecar files is 
 implemented as a proof-of-concept, [contributions are welcome](../developer-guide/metadata/xmp.md). Indexing of 
 embedded XMP is only possible via Exiftool, see above.
-
-### What media file types are supported? ###
-
-The primary image format is JPEG. Support for JPEG XL is planned but not available yet. 
-When indexing, a JPEG sidecar file may be created automatically for RAW, HEIF, TIFF, PNG, BMP, GIF, and video files. 
-It is needed for generating thumbnails, image classification, and facial recognition.
-
-Due to the patent situation and its complexity, [TIFF is only partially supported](https://github.com/golang/go/issues?q=is%3Aissue+image%2Ftiff+) at the moment.
-
-The following RAW converters can be used to generate JPEGs (included in our Docker image,
-otherwise you may need to install them on your system):
-
-- [Darktable](https://www.darktable.org/) ([supported cameras](https://www.darktable.org/resources/camera-support/))
-- [RawTherapee](https://rawtherapee.com/) ([supported cameras](https://www.libraw.org/supported-cameras))
- 
-If you're running PhotoPrism directly on a Mac, RAW files will be converted with [Sips](https://ss64.com/osx/sips.html) ([supported cameras](https://support.apple.com/en-us/HT211241)) by default.
-Our goal is to provide top-notch support for all RAW formats, regardless of camera make and model.
-Please let us know when there are any issues with a particular camera or file format.
-
-Video formats supported by [FFmpeg](https://en.wikipedia.org/wiki/FFmpeg#Supported_codecs_and_formats) can be transcoded to
-[MPEG-4 AVC](https://en.wikipedia.org/wiki/Advanced_Video_Coding). Still images for generating thumbnails can be extracted from 
-most videos as well. 
-
-If you have videos, always enable JSON sidecar files so that video metadata such as date, location, codec, 
-and duration can be indexed and searched.
 
 ### Which folder will be indexed? ###
 

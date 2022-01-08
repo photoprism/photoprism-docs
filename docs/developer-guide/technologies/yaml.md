@@ -49,8 +49,8 @@ services:
 
 ## Key-Value Collections ##
 
-Collections of key-value pairs are commonly used for photo metadata details and to define environment variables
-in `docker-compose.yml` files:
+Collections of key-value pairs are commonly used for photo metadata details as shown in the first example
+and to define environment variables in `docker-compose.yml` files:
 
 ```yaml
 services:

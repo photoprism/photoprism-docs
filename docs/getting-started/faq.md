@@ -126,7 +126,7 @@ installation and upgrades. It saves our team a lot of time that we can then spen
 #### Installation Packages ####
 
 Everyone is invited to contribute by building and testing installation packages
-for Linux distributions and other operating systems! Visit [docs.photoprism.app/developer-guide](https://docs.photoprism.app/developer-guide/) to learn more. 💐
+for Linux distributions and other operating systems! Visit [docs.photoprism.app/developer-guide](https://docs.photoprism.app/developer-guide/) to learn more.
 
 #### BSD Ports ####
 

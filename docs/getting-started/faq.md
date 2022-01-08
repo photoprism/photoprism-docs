@@ -377,7 +377,7 @@ There is no single sign-on support yet as we didn't consider it essential for ou
 Our team is currently working on [OpenID Connect](https://github.com/photoprism/photoprism/issues/782),
 which will be available in a future release.
 
-### PhotoPrism is really terrible, can I tell you how bad it is? ###
+### Your app is really terrible, can I tell you how bad it is? ###
 
 If you are [having a bad day](https://photoprism.app/code-of-conduct) and want to offend someone,
 please go somewhere else.

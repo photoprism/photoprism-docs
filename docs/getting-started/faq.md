@@ -40,9 +40,9 @@ New sidecar files are created in the *storage* folder by default, so the *origin
     Even if `PHOTOPRISM_DISABLE_EXIFTOOL` and `PHOTOPRISM_DISABLE_BACKUPS` are set to `true`,
     the indexer looks for existing sidecar files and uses them.
 
-### Which metadata sidecar files are supported? ###
+### What metadata sidecar file types are supported? ###
 
-Currently, three types of metadata file formats are supported:
+Currently, three types of file formats are supported:
 
 #### JSON ####
 

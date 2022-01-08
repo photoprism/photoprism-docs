@@ -74,7 +74,8 @@ A coverage log file created by the Go test runner is automatically sent to [Code
 
 ## Quality Reports ##
 
-Code scanners like [goreportcard.com][goreport] find typical problems in Go source code:
+[goreportcard.com][goreport] generates reports on the quality of Open Source Go projects. It uses several measures,
+including `gofmt`, `go vet`, `go lint` and `gocyclo`:
 
 [![Code Quality](https://goreportcard.com/badge/github.com/photoprism/photoprism)][goreport]
 

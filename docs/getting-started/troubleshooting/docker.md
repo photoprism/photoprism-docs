@@ -134,8 +134,8 @@ We recommend disabling Linux kernel security on private servers, especially if y
 configuration.
 
 !!! info ""
-    If you have experience and working configuration rules for a particular Linux distribution, feel free to share 
-    instructions with the community so that less experienced users can harden their installation without running into issues.
+    If you have working configuration rules for a particular Linux distribution, feel free to share instructions
+    with the community so that less experienced users can harden their installation without running into issues.
 
 ### File Permissions ###
 

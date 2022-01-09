@@ -19,6 +19,7 @@ Before reporting a bug:
 - [ ] Check the logs for messages like *disk full*, *wrong permissions*, *no route to host*, *connection failed*, and *killed*; if a service has been killed or otherwise automatically terminated, this points to a [memory problem](docker.md#adding-swap)
 - [ ] Make sure you are using the correct protocol (http or https), port (default is 2342), and hostname or IP address
 (default is localhost)
+- [ ] HTTP security headers may prevent the app from loading in a frame (override them or wait for additional config options)
 - [ ] Verify that your computer meets the [system requirements](../index.md#system-requirements)
 - [ ] Go through the [checklist for fatal server errors](#fatal-server-errors)
 
@@ -94,7 +95,7 @@ this points to a memory problem.
 If you only see the logo when you navigate to the server URL and nothing else happens, even if you wait a moment:
 
 - [ ] The browser cannot communicate properly with your server, e.g. because a proxy or CDN is configured incorrectly (check its configuration and try without)
-- [ ] HTTP security headers prevent loading the app in a frame
+- [ ] HTTP security headers prevent the app from loading in a frame (override them or wait for additional config options)
 - [ ] JavaScript is disabled in your browser settings (enable it)
 - [ ] JavaScript was disabled by a browser plugin (disable it or add an exception)
 - [ ] An ad blocker blocks requests (disable it or add an exception)

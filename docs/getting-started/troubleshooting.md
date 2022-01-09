@@ -162,7 +162,7 @@ If videos do not play and/or you only see a white/black area when you open a vid
 - [ ] An ad blocker blocks requests (disable it or add an exception)
 - [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder (check if the files are accessible)
 - [ ] There are network problems caused by a proxy, firewall, or unstable connection (try a direct connection)
-- [ ] You are connected to the wrong server or CDN, or a DNS record has not been updated yet.
+- [ ] You are connected to the wrong server or CDN, or a DNS record has not been updated yet
 
 #### App Not Loading ####
 

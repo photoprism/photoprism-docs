@@ -164,6 +164,8 @@ If videos do not play and/or you only see a white/black area when you open a vid
 - [ ] There are network problems caused by a proxy, firewall, or unstable connection (try a direct connection)
 - [ ] You are connected to the wrong server or CDN, or a DNS record has not been updated yet
 
+We also recommend checking your logs as described above.
+
 #### App Not Loading ####
 
 If you only see the logo when you navigate to the server URL and nothing else happens, even if you wait a moment:

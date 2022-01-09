@@ -1,9 +1,15 @@
-# Diagnosing Browser Issues
+# Diagnosing Frontend Issues
 
 !!! info ""
     You are welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
     [Sponsors](../../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
     Before reporting a bug, try to determine the cause of your problem.
+
+!!! tldr ""
+    We recommend going through the [troubleshooting checklist](index.md#app-not-loading) if you only see the logo
+    and nothing else happens, even if you wait a moment.
+
+### Try Another Browser ###
 
 If you have a frontend problem, it may be due to a bug or because your browser is incompatible.
 In particular, nightly, test, unstable, and patent-free browser builds may not support certain
@@ -26,7 +32,7 @@ To test if you have a general problem that is not browser-specific, open the Web
 If possible, please also include the error type, error message, and URL of the affected resource when submitting a
 support request. You may find this information in the browser console:
 
-#### Google Chrome, Chromium, and Edge ####
+#### Chrome, Chromium, and Edge ####
 
 - Press Command+Option+J (Mac) or Ctrl+Shift+J (Windows, Linux, Chrome OS) to go directly to the Developer Tools
 - Or, navigate to *More tools* > *Developer tools* in the browser menu and open the *Console* tab
@@ -38,3 +44,6 @@ support request. You may find this information in the browser console:
 
 !!! note ""
     If you don't see any errors, try reloading the page, as the error may occur while the page is loading.
+
+*[UI]: User Interface
+*[URL]: Web Address

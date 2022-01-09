@@ -151,4 +151,5 @@ If you use *Docker Desktop* on operating systems other than Linux and/or a virtu
 settings to adjust the size of virtual disks and memory. For details, refer to the corresponding documentation.
 
 *[home directory]: \user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux
-*[host]: A physical computer, cloud server, or virtual machine that runs Docker
+*[host]: physical computer, cloud server, or virtual machine that runs Docker
+*[swap]: substitute for physical memory

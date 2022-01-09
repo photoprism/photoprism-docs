@@ -93,7 +93,7 @@ this points to a memory problem.
 
 If you only see the logo when you navigate to the server URL and nothing else happens, even if you wait a moment:
 
-- [ ] The user interface can't communicate properly with your server, for example, because a proxy is misconfigured (check its config and try without a proxy)
+- [ ] The browser cannot communicate properly with your server, e.g. because a proxy or CDN is configured incorrectly (check its configuration and try without)
 - [ ] JavaScript is disabled in your browser settings (enable it)
 - [ ] JavaScript was disabled by a browser plugin (disable it or add an exception)
 - [ ] An ad blocker blocks requests (disable it or add an exception)
@@ -119,7 +119,7 @@ for errors and warnings. In case the application logs don't contain anything hel
     - [ ] The sidecar and/or cache folders are not writable
 - [ ] Multiple files were [stacked](../../user-guide/organize/stacks.md#for-what-reasons-can-files-be-stacked) based on their metadata or file names
 - [ ] The [private](../../user-guide/organize/private.md) or [archived](../../user-guide/organize/archive.md) status was restored from a backup
-- [ ] The NSFW (Not Safe For Work) filter is enabled, so they were marked as [private](../../user-guide/organize/private.md)
+- [ ] The NSFW filter is enabled, so they were marked as [private](../../user-guide/organize/private.md)
 - [ ] You are not signed in as admin, so you can't see everything
 - [ ] You try to index a shared drive on a remote server, but the server is offline
 - [ ] The indexer has crashed because you didn't configure [at least 4 GB of swap](docker.md#adding-swap)
@@ -143,7 +143,7 @@ In case the application logs don't contain anything helpful:
 - [ ] Files can't be opened, e.g. because the file system permissions have been changed
 - [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder
 - [ ] Some thumbnails could not be created because you didn't configure [at least 4 GB of swap](docker.md#adding-swap)
-- [ ] The user interface can't communicate properly with your server, for example, because a proxy is misconfigured (check its config and try without a proxy)
+- [ ] The browser cannot communicate properly with your server, e.g. because a proxy or CDN is configured incorrectly (check its configuration and try without)
 - [ ] Your proxy, router, or firewall has a request rate limit, so some requests fail
 - [ ] There are other network problems caused by a firewall, router, or unstable connection
 - [ ] An ad blocker blocks requests (disable it or add an exception)
@@ -166,3 +166,20 @@ If videos do not play and/or you only see a white/black area when you open a vid
 
 We also recommend that you check your [Docker](docker.md#viewing-logs) and [browser logs](browsers.md)
 for messages related to *HTTP requests*, *permissions*, *security*, *FFmpeg*, *videos*, and *file conversion*.
+
+*[AVC]: MPEG-4 / H.264
+*[CDN]: Content Delivery Network
+*[CPU]: Central Processing Unit
+*[DNS]: Domain Name System
+*[HTTP]: Hypertext Transfer Protocol
+*[USB]: Universal Serial Bus
+*[SSD]: Solid-State Drive
+*[RAW]: image format that contains unprocessed sensor data
+*[UI]: User Interface
+*[URL]: Web Address
+*[proxy]: for example, an HTTPS reverse proxy
+*[firewall]: network security system that controls traffic
+*[FFmpeg]: transcodes video files
+*[NSFW]: Not Safe For Work
+*[swap]: substitute for physical memory
+*[host]: physical computer, cloud server, or virtual machine that runs Docker

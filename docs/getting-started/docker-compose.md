@@ -275,11 +275,15 @@ PhotoPrism's command-line interface is well suited for job automation using a
     This may be necessary after major upgrades.
 
 *[home directory]: \user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux
-*[host]: A physical computer, cloud server, or virtual machine that runs Docker
+*[host]: physical computer, cloud server, or virtual machine that runs Docker
+*[swap]: substitute for physical memory
 *[HEIF]: High Efficiency Image File Format
-*[RAW]: RAW files contain image data captured during exposure in an unprocessed format
-*[Web UI]: A Progressive Web App that can be installed on your home screen and provides a native app-like experience
+*[RAW]: image format that contains unprocessed sensor data
+*[SSD]: Solid-State Drive
+*[CDN]: Content Delivery Network
+*[UI]: User Interface
 *[CLI]: Command-Line Interface
-*[AVC]: MPEG-4 AVC video compression standard, also known as H.264
+*[AVC]: MPEG-4 / H.264
+*[FFmpeg]: transcodes video files'
 
 [^1]: The default [Docker Compose](https://docs.docker.com/compose/) config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running the `docker-compose` command in the same directory. Config files for other apps or instances should be placed in separate folders.

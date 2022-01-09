@@ -284,6 +284,6 @@ PhotoPrism's command-line interface is well suited for job automation using a
 *[UI]: User Interface
 *[CLI]: Command-Line Interface
 *[AVC]: MPEG-4 / H.264
-*[FFmpeg]: transcodes video files'
+*[FFmpeg]: transcodes video files
 
 [^1]: The default [Docker Compose](https://docs.docker.com/compose/) config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running the `docker-compose` command in the same directory. Config files for other apps or instances should be placed in separate folders.

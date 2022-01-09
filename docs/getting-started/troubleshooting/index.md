@@ -19,7 +19,7 @@ Before reporting a bug:
 - [ ] Check the logs for messages like *disk full*, *wrong permissions*, *no route to host*, *connection failed*, and *killed*; if a service has been killed or otherwise automatically terminated, this points to a [memory problem](docker.md#adding-swap)
 - [ ] Make sure you are using the correct protocol (http or https), port (default is 2342), and hostname or IP address
 (default is localhost)
-- [ ] Note that HTTP security headers prevent the app from loading in a frame (override them or wait for additional config options)
+- [ ] Note that HTTP security headers will prevent the app from loading in a frame (override them or wait for additional config options)
 - [ ] Verify your computer meets the [system requirements](../index.md#system-requirements)
 - [ ] Go through the [checklist for fatal server errors](#fatal-server-errors)
 

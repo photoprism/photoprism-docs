@@ -190,7 +190,7 @@ file formats is not well-supported and software transcoding is generally slow.
 ### Should I use an SD card or a USB stick? ###
 
 Conventional USB sticks and SD cards are not suitable for long-term storage. Not only because of the
-performance, but also because they can lose data over time. Local [Solid-State Drives](performance.md#storage)
+performance, but also because they can lose data over time. Local [Solid-State Drives](troubleshooting/performance.md#storage)
 (SSDs) are best, even when connected externally via USB 3. USB 1 and 2 devices will be slow either way.
 
 ### Why don't you display animated GIFs natively? ###
@@ -259,14 +259,14 @@ to avoid typos or other misconfigurations that lead to undesired results for whi
 This may happen when the server cannot be reached, for example, because a proxy is misconfigured,
 JavaScript is disabled in your browser, an ad blocker is blocking requests, or you are using an incompatible browser.
 
-We recommend going through the [checklist provided](troubleshooting.md#app-not-loading) and to verify that
+We recommend going through the [checklist provided](troubleshooting/index.md#app-not-loading) and to verify that
 your browser meets the [system requirements](index.md#system-requirements).
 
 ### Why is PhotoPrism getting stuck in a restart loop? ###
 
 This happens when Docker was configured to automatically restart services after failures.
 
-We recommend going through the [checklist for fatal server errors](troubleshooting.md#fatal-server-errors) and to verify that
+We recommend going through the [checklist for fatal server errors](troubleshooting/index.md#fatal-server-errors) and to verify that
 your computer meets the [system requirements](index.md#system-requirements).
 
 ### Can I install PhotoPrism in a sub-directory on a shared domain?

@@ -5,7 +5,7 @@
 #### Does my device meet the system requirements? ####
 
 Visit the [Synology Knowledge Base](https://kb.synology.com/en-us/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have)
-to learn what [kind of CPU](../performance.md#server-cpu) and how much memory your device has.
+to learn what [kind of CPU](../troubleshooting/performance.md#server-cpu) and how much memory your device has.
 We [recommend](../index.md#system-requirements) a 64-bit processor with **at least 2 cores** and **4 GB of memory**. 
 While PhotoPrism has been reported to work on devices with 2 GB of memory, we won't take responsibility for 
 instability or performance issues.
@@ -14,7 +14,7 @@ You will have to resort to [32-bit Docker images](../raspberry-pi.md#older-armv7
 PhotoPrism and MariaDB on ARMv7-based entry-level devices like the Synology DS218j.
 
 !!! note ""
-    Indexing large photo and video collections significantly benefits from [local SSD storage](../performance.md#storage)
+    Indexing large photo and video collections significantly benefits from [local SSD storage](../troubleshooting/performance.md#storage)
     instead of traditional hard drives commonly used in NAS devices. Especially the conversion of RAW 
     images and the transcoding of videos are very demanding.
 

@@ -48,7 +48,7 @@ restarts when there are memory usage spikes.
 Beyond these minimum requirements, the amount of RAM should match the number of cores.
 
 !!! note ""
-    Indexing large photo and video collections significantly benefits from [local SSD storage](performance.md#storage),
+    Indexing large photo and video collections significantly benefits from [local SSD storage](troubleshooting/performance.md#storage),
     and plenty of memory for caching. Especially the conversion of RAW images and the transcoding of
     videos are very demanding.
 
@@ -83,7 +83,7 @@ may refuse to connect as well.
 
 ## Getting Support ##
 
-Please read the [Troubleshooting Guide](../getting-started/troubleshooting.md) before reporting problems.
+Please read the [Troubleshooting Guide](troubleshooting/index.md) before reporting problems.
 If this doesn't help, or you have other questions:
 
 - you are welcome to ask in our [Community Chat](https://gitter.im/browseyourlife/community)

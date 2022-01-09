@@ -1,5 +1,9 @@
 # Performance Tips
 
+!!! info ""
+    You're welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
+    [Sponsors](../../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
+
 ## MariaDB ##
 
 The [InnoDB buffer pool](https://mariadb.com/kb/en/innodb-buffer-pool/) serves as a cache for data and indexes.

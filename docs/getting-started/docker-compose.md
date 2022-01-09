@@ -25,7 +25,9 @@ installed on your system. It is available for Mac, Linux, and Windows.
     Commands on Linux may have to be prefixed with `sudo` when not running as root.
     Note that this will point the home directory placeholder `~` to `/root` in the `volumes:` 
     section of your `docker-compose.yml`. Kernel security modules such as AppArmor and SELinux 
-    have been reported to cause [issues](troubleshooting.md#linux-kernel-security).
+    have been [reported to cause issues](troubleshooting/docker.md#kernel-security).
+    Ensure that your server has [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured so that
+    indexing doesn't cause restarts when there are memory usage spikes.
 
 === "Raspberry Pi"
 
@@ -39,7 +41,8 @@ installed on your system. It is available for Mac, Linux, and Windows.
 
     Mostly the same installation instructions as for regular Linux servers apply.
     Commands may have to be prefixed with `sudo` when not running as root.
-    Ensure your device meets the [requirements](raspberry-pi.md) before you continue.
+    Ensure your device meets the [requirements](raspberry-pi.md) and has
+    [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured before you continue.
 
 === "ARMv7"
 
@@ -53,7 +56,8 @@ installed on your system. It is available for Mac, Linux, and Windows.
 
     Mostly the same installation instructions as for regular Linux servers apply.
     Commands may have to be prefixed with `sudo` when not running as root.
-    Ensure your device meets the [requirements](raspberry-pi.md) before you continue.
+    Ensure your device meets the [requirements](raspberry-pi.md) and has
+    [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured before you continue.
 
 === "Windows"
 
@@ -65,9 +69,10 @@ installed on your system. It is available for Mac, Linux, and Windows.
     Windows Pro users should [disable](img/docker-disable-wsl2.jpg) the WSL 2 based engine in *Docker Settings > General* 
     so that they can mount drives other than `C:`. This will enable Hyper-V, which 
     [Microsoft doesn't offer](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements) 
-    to its Windows Home customers. Docker Desktop uses dynamic memory allocation with WSL 2. It's important 
-    to explicitly [increase the Docker memory limit](img/docker-resources-advanced.jpg) to 4 GB or more when using 
-    Hyper-V. The default of 2 GB may reduce indexing performance and cause unexpected restarts.
+    to its Windows Home customers. Docker Desktop uses dynamic memory allocation with WSL 2. It is important 
+    to explicitly [increase the Docker memory limit to 4 GB](img/docker-resources-advanced.jpg) or more when using 
+    Hyper-V. The default of 2 GB can reduce indexing performance and cause unexpected restarts.
+    Also, ensure that you configure at least 4 GB of swap space.
 
 === "macOS"
 
@@ -76,8 +81,9 @@ installed on your system. It is available for Mac, Linux, and Windows.
 
     [https://dl.photoprism.app/docker/macos/docker-compose.yml](https://dl.photoprism.app/docker/macos/docker-compose.yml) :material-download:
     
-    It's important to [increase the Docker memory limit](img/docker-resources-advanced.jpg) to 4 GB or more,
-    as the default of 2 GB may reduce indexing performance and cause unexpected restarts.
+    It is important to [increase the Docker memory limit to 4 GB](img/docker-resources-advanced.jpg) or more,
+    as the default of 2 GB can reduce indexing performance and cause unexpected restarts.
+    Also, ensure that you configure at least 4 GB of swap space.
 
 !!! danger ""
     Always change `PHOTOPRISM_ADMIN_PASSWORD` so that the app starts with a **secure initial password**.
@@ -88,8 +94,8 @@ installed on your system. It is available for Mac, Linux, and Windows.
 
 Our example includes a pre-configured [MariaDB](https://mariadb.com/) database server. If you remove it 
 and provide no other database server credentials, a SQLite database file will be created in the 
-*storage* folder. Local [SSD storage is best](performance.md#storage) for databases of any kind.
-Never [store](troubleshooting.md#corrupted-files) database files on an unreliable device such as a USB flash drive,
+*storage* folder. Local [SSD storage is best](troubleshooting/performance.md#storage) for databases of any kind.
+Never [store](troubleshooting/mariadb.md#corrupted-files) database files on an unreliable device such as a USB flash drive,
 an SD card, or a shared network folder.
 
 !!! tldr ""
@@ -134,7 +140,7 @@ volumes:
 
 Cache, session, thumbnail, and sidecar files will be created in the *storage* folder. Never remove the volume from
 your `docker-compose.yml` file so that you don't lose these files after restarting or upgrading the container.
-We recommend placing the *storage* folder on a [local SSD drive](performance.md#storage) for best performance.
+We recommend placing the *storage* folder on a [local SSD drive](troubleshooting/performance.md#storage) for best performance.
 
 ##### /photoprism/import #####
 
@@ -163,7 +169,7 @@ Enabling [public mode](config-options.md) will disable authentication.
 
 !!! info ""
     If you can't connect, try starting the app without `-d`: `docker-compose up photoprism`. 
-    This keeps it in the foreground and shows log messages for [troubleshooting](troubleshooting.md).
+    This keeps it in the foreground and shows log messages for [troubleshooting](troubleshooting/index.md).
     Should the server already be running, or you see no errors, you may have started it
     on a different host and/or port. There could also be an issue with your browser,
     ad blocker, or firewall settings.
@@ -208,10 +214,10 @@ Easy, isn't it?
     If you're running out of memory - or other system resources - while indexing, try reducing the 
     [number of workers](https://docs.photoprism.app/getting-started/config-options/) by setting
     `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml` (depending on the performance of the server).
-    Also make sure your server has at least 4 GB of [swap](https://opensource.com/article/18/9/swap-space-linux-systems) 
-    configured so that indexing doesn't cause restarts when there are memory usage spikes.
-    Especially the conversion of RAW images and the transcoding of videos are very demanding.
-    As a measure of last resort, you may disable using TensorFlow for image classification and facial recognition.
+    Also, ensure that your server has [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured so that
+    indexing doesn't cause restarts when there are memory usage spikes. Especially the conversion of RAW images and the
+    transcoding of videos are very demanding. As a measure of last resort, you may disable using TensorFlow for image
+    classification and facial recognition.
 
 !!! example ""
     **Back us on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism).**

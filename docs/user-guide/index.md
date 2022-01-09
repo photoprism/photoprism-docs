@@ -23,7 +23,7 @@ your specific use case.
 
 ## Getting Support ##
 
-Please read the [Troubleshooting Guide](../getting-started/troubleshooting.md) before reporting problems.
+Please read the [Troubleshooting Guide](../getting-started/troubleshooting/index.md) before reporting problems.
 If this doesn't help, or you have other questions:
 
 - you are welcome to ask in our [Community Chat](https://gitter.im/browseyourlife/community)

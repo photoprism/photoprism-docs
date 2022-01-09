@@ -13,10 +13,13 @@ nav:
       - Synology: getting-started/nas/synology.md
       - Unraid: getting-started/nas/unraid.md
     - Config Options: getting-started/config-options.md
-    - Performance: getting-started/performance.md
-    - Troubleshooting: getting-started/troubleshooting.md
-    # - Support: getting-started/support.md
     - Getting Updates: getting-started/updates.md
+    - Troubleshooting:
+      - Checklists: getting-started/troubleshooting/index.md
+      - Docker: getting-started/troubleshooting/docker.md
+      - MariaDB: getting-started/troubleshooting/mariadb.md
+      - Performance: getting-started/troubleshooting/performance.md
+    # - Support: getting-started/support.md
     - Reverse Proxies:
       - Traefik: getting-started/proxies/traefik.md
       - Caddy 1: getting-started/proxies/caddy-1.md

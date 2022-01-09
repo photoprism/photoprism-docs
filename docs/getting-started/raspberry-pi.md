@@ -14,10 +14,10 @@ after going through a short list of [System Requirements](#system-requirements) 
 
 ### System Requirements ###
 
-- Your device should have at least 4 GB of memory. Running PhotoPrism on a server with [less than 4 GB of swap space](troubleshooting.md#adding-swap)
+- Your device should have at least 4 GB of memory. Running PhotoPrism on a server with [less than 4 GB of swap space](troubleshooting/docker.md#adding-swap)
   or setting a memory/swap limit can cause unexpected restarts, especially when the indexer temporarily needs more
   memory to process large files.
-- We [recommend](troubleshooting.md#linux-kernel-security) disabling Linux kernel security in your 
+- We recommend disabling [kernel security](troubleshooting/docker.md#kernel-security) in your 
   [docker-compose.yml](https://dl.photoprism.app/docker/arm64/docker-compose.yml), especially if you do 
   not have experience with the configuration:
   ```yaml
@@ -32,7 +32,7 @@ after going through a short list of [System Requirements](#system-requirements) 
   including your provider, hackers, and governments.
 
 !!! note ""
-    Indexing large photo and video collections significantly benefits from [local SSD storage](performance.md#storage)
+    Indexing large photo and video collections significantly benefits from [local SSD storage](troubleshooting/performance.md#storage)
     and plenty of memory for caching. Especially the conversion of RAW images and the transcoding of
     videos are very demanding.
 

@@ -39,7 +39,7 @@ If you provide no database server credentials, a SQLite database file will be cr
 Commands on Linux may have to be prefixed with `sudo` when not running as root.
 Note that this will point the home directory placeholder `~` to `/root` in volume mounts.
 Kernel security modules such as AppArmor and SELinux have been reported to cause
-[issues](troubleshooting.md).
+[issues](troubleshooting/index.md).
 
 When the app has been started, open the Web UI by navigating to http://localhost:2342/. You should see a login screen.
 Sign in with the user `admin` and the password configured via `PHOTOPRISM_ADMIN_PASSWORD`.
@@ -48,7 +48,7 @@ Enabling [public mode](config-options.md) will disable authentication.
 
 !!! info ""
     If you can't connect, try starting the app without `-d`. This keeps it in the foreground
-    and shows log messages for [troubleshooting](troubleshooting.md).
+    and shows log messages for [troubleshooting](troubleshooting/index.md).
     Should the server already be running, or you see no errors, you may have started it 
     on a different host and/or port. There could also be an issue with your browser, 
     ad blocker, or firewall settings.
@@ -87,7 +87,7 @@ Cache, session, thumbnail, and sidecar files will be created the *storage* folde
 an [anonymous volume](https://docs.docker.com/storage/bind-mounts/) in our example. You may want to 
 mount a specific host folder instead. Never remove the volume completely so that you don't lose 
 these files after restarting or upgrading the container. We recommend placing the *storage* folder 
-on a [local SSD drive](performance.md#storage) for best performance.
+on a [local SSD drive](troubleshooting/performance.md#storage) for best performance.
 
 ##### /photoprism/import #####
 

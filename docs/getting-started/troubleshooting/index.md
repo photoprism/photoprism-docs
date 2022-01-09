@@ -19,8 +19,8 @@ Before reporting a bug:
 - [ ] Check the logs for messages like *disk full*, *wrong permissions*, *no route to host*, *connection failed*, and *killed*; if a service has been killed or otherwise automatically terminated, this points to a [memory problem](docker.md#adding-swap)
 - [ ] Make sure you are using the correct protocol (http or https), port (default is 2342), and hostname or IP address
 (default is localhost)
-- [ ] HTTP security headers may prevent the app from loading in a frame (override them or wait for additional config options)
-- [ ] Verify that your computer meets the [system requirements](../index.md#system-requirements)
+- [ ] Note that HTTP security headers prevent the app from loading in a frame (override them or wait for additional config options)
+- [ ] Verify your computer meets the [system requirements](../index.md#system-requirements)
 - [ ] Go through the [checklist for fatal server errors](#fatal-server-errors)
 
 Should MariaDB get stuck in a restart loop and PhotoPrism can't connect to it, this indicates a [memory](docker.md#adding-swap),

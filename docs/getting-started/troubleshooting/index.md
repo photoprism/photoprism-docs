@@ -6,7 +6,7 @@
 
 ### Connection Fails ###
 
-If your browser cannot connect to the Web UI even after waiting a few minutes, run this command to display
+If [your browser](browsers.md) cannot connect to the Web UI even after waiting a few minutes, run this command to display
 the last 100 log messages (omit `--tail=100` to see all):
 
 ```bash
@@ -36,7 +36,7 @@ mariadb: mysqld: Shutdown complete
 
 !!! note ""
     If you see no errors or no logs at all, you may have started the server on a different host
-    and/or port. There could also be an issue with your browser, ad blocker, or firewall settings.
+    and/or port. There could also be an [issue with your browser](browsers.md), ad blocker, or firewall settings.
 
 You can also try (re-)starting the app and database without `-d`. This keeps their containers running
 in the foreground and shows log messages for troubleshooting:
@@ -96,10 +96,10 @@ If you only see the logo when you navigate to the server URL and nothing else ha
 - [ ] JavaScript is disabled in your browser settings (enable it)
 - [ ] JavaScript was disabled by a browser plugin (disable it or add an exception)
 - [ ] An ad blocker blocks requests (disable it or add an exception)
-- [ ] You are using an [incompatible browser](../index.md#browsers) (try another browser)
+- [ ] You are using an [incompatible browser](browsers.md) (try another browser)
 - [ ] There is a problem with your network connection (test if other sites work)
 
-We also recommend that you check your [browser logs](https://wordpress.org/support/article/using-your-browser-to-diagnose-javascript-errors/) for errors and warnings.
+We also recommend that you check your [browser logs](browsers.md) for errors and warnings.
 
 ### Missing Pictures ###
 
@@ -155,7 +155,7 @@ described above. If a service has been killed or otherwise automatically termina
 
 If videos do not play and/or you only see a white/black area when you open a video:
 
-- [ ] You are using an [incompatible browser](../index.md#browsers), e.g. without AVC support (try another browser)
+- [ ] You are using an [incompatible browser](browsers.md), e.g. without AVC support (try another browser)
 - [ ] AVC support or related JavaScript features have been disabled in your browser (check the settings and try another browser)
 - [ ] It is a large non-AVC video that needs to be transcoded first (wait or pre-transcode with the [convert command](http://localhost:8000/getting-started/docker-compose/#command-line-interface))
 - [ ] An ad blocker blocks requests (disable it or add an exception)
@@ -163,5 +163,5 @@ If videos do not play and/or you only see a white/black area when you open a vid
 - [ ] There are network problems caused by a proxy, firewall, or unstable connection (try a direct connection)
 - [ ] You are connected to the wrong server or CDN, or a DNS record has not been updated yet
 
-We also recommend that you check your [Docker](docker.md#viewing-logs) and [browser logs](https://wordpress.org/support/article/using-your-browser-to-diagnose-javascript-errors/)
+We also recommend that you check your [Docker](docker.md#viewing-logs) and [browser logs](browsers.md)
 for messages related to *HTTP requests*, *permissions*, *security*, *FFmpeg*, *videos*, and *file conversion*.

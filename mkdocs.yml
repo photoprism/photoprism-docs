@@ -18,6 +18,7 @@ nav:
       - Checklists: getting-started/troubleshooting/index.md
       - Docker: getting-started/troubleshooting/docker.md
       - MariaDB: getting-started/troubleshooting/mariadb.md
+      - Browsers: getting-started/troubleshooting/browsers.md
       - Performance: getting-started/troubleshooting/performance.md
     # - Support: getting-started/support.md
     - Reverse Proxies:

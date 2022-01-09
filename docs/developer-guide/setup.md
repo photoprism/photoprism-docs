@@ -71,7 +71,7 @@ pull from the same repository.
 
 ## Building multi-arch images ##
 
-This works out of the box with Docker Desktop. Just run `make docker-development-multiarch`. If you want to build those images for different architectures on Linux, 
+This works out of the box with *Docker Desktop*. Just run `make docker-development-multiarch`. If you want to build those images for different architectures on Linux, 
 you need to setup `docker buildx` builder instances or setup QEMU on your machine which shall run your builds. 
 More info can be found in the docker docs: [Docker Buildx](https://docs.docker.com/buildx/working-with-buildx/), [Leverage multi-CPU architecture support](https://docs.docker.com/desktop/multi-arch/)
 

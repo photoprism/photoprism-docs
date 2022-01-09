@@ -30,7 +30,7 @@ On many Linux distributions, this command will start the Docker daemon manually 
 sudo systemctl start docker.service
 ```
 
-On other operating systems, start Docker Desktop and enable the "Start Docker Desktop when you log in"
+On other operating systems, start *Docker Desktop* and enable the "Start Docker Desktop when you log in"
 option in its settings.
 
 #### Connection Aborted ####
@@ -115,7 +115,8 @@ echo '/swapfile none swap sw 0 0' | tee -a /etc/fstab
 Windows Pro users should [disable](../img/docker-disable-wsl2.jpg) the *WSL 2* based engine in *Docker Settings > General*
 so that they can mount drives other than `C:`. This will enable *Hyper-V*, which
 [Microsoft doesn't offer](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements)
-to its Windows Home customers. Docker Desktop uses dynamic memory allocation with *WSL 2*.
+to its Windows Home customers. [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
+uses dynamic memory allocation with *WSL 2*.
 
 It is important to explicitly [increase the Docker memory limit](../img/docker-resources-advanced.jpg) to 4 GB or more
 when using *Hyper-V*. The default of 2 GB can reduce indexing performance and cause unexpected restarts.
@@ -146,7 +147,7 @@ so that the app container can access them. If you have configured specific user 
 On Linux and other Unix-like operating systems, the [available disk space](https://opensource.com/article/18/7/how-check-free-disk-space-linux)
 can be viewed by running `df -h` in a terminal.
 
-If you use Docker Desktop on operating systems other than Linux and/or a virtual machine, they have their own
+If you use *Docker Desktop* on operating systems other than Linux and/or a virtual machine, they have their own
 settings to adjust the size of virtual disks and memory. For details, refer to the corresponding documentation.
 
 *[home directory]: \user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux

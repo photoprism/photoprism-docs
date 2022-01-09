@@ -69,8 +69,8 @@ installed on your system. It is available for Mac, Linux, and Windows.
     Windows Pro users should [disable](img/docker-disable-wsl2.jpg) the WSL 2 based engine in *Docker Settings > General* 
     so that they can mount drives other than `C:`. This will enable Hyper-V, which 
     [Microsoft doesn't offer](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements) 
-    to its Windows Home customers. Docker Desktop uses dynamic memory allocation with WSL 2. It is important 
-    to explicitly [increase the Docker memory limit to 4 GB](img/docker-resources-advanced.jpg) or more when using 
+    to its Windows Home customers. [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
+    uses dynamic memory allocation with WSL 2. It is important to explicitly [increase the Docker memory limit to 4 GB](img/docker-resources-advanced.jpg) or more when using 
     Hyper-V. The default of 2 GB can reduce indexing performance and cause unexpected restarts.
     Also, ensure that you configure at least 4 GB of swap space.
 

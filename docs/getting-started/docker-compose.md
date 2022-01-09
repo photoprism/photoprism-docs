@@ -7,7 +7,7 @@ Before you continue, make sure you have [Docker](https://store.docker.com/search
 installed on your system. It is available for Mac, Linux, and Windows.
 
 !!! info ""
-    You're welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
+    You are welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
     [Sponsors](../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
 
 ### Step 1: Configure ###

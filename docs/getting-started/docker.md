@@ -4,7 +4,7 @@ We recommend using [Docker Compose](docker-compose.md) as it is easier to start 
 and provides more comfort than the pure Docker command-line interface.
 
 !!! info ""
-    You're welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
+    You are welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
     [Sponsors](../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
 
 ### Step 1: Start the server ###

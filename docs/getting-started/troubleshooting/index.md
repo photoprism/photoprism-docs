@@ -179,7 +179,7 @@ for messages related to *HTTP requests*, *permissions*, *security*, *FFmpeg*, *v
 *[RAW]: image format that contains unprocessed sensor data
 *[UI]: User Interface
 *[URL]: Web Address
-*[proxy]: for example, an HTTPS reverse proxy
+*[proxy]: HTTPS reverse proxy
 *[firewall]: network security system that controls traffic
 *[FFmpeg]: transcodes video files
 *[NSFW]: Not Safe For Work

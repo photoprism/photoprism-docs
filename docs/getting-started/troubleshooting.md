@@ -124,7 +124,7 @@ for errors and warnings. In case the application logs don't contain anything hel
 - [ ] You try to index a shared drive on a remote server, but the server is offline
 - [ ] The indexer has crashed because you didn't configure at least 4 GB of swap
 - [ ] Somebody has deleted files without telling you
-- [ ] You are connected to the wrong server or CDN, or a DNS record has not been updated yet.
+- [ ] You are connected to the wrong server or CDN, or a DNS record has not been updated yet
 
 #### Broken Thumbnails ####
 
@@ -147,7 +147,7 @@ In case the application logs don't contain anything helpful:
 - [ ] Your proxy, router, or firewall has a request rate limit, so some requests fail
 - [ ] There are other network problems caused by a firewall, router, or unstable connection
 - [ ] An ad blocker blocks requests (disable it or add an exception)
-- [ ] You are connected to the wrong server or CDN, or a DNS record has not been updated yet.
+- [ ] You are connected to the wrong server or CDN, or a DNS record has not been updated yet
 
 We also recommend checking your Docker logs for messages like *disk full*, *wrong permissions*, and *killed* as
 described above. If a service has been killed or otherwise automatically terminated, this points to a memory problem.

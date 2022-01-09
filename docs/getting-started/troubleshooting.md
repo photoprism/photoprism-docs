@@ -108,8 +108,8 @@ If you have indexed your library and some images or videos are missing, first ch
 for errors and warnings. In case the application logs don't contain anything helpful:
 
 - [ ] The pictures are in [Review](../user-guide/organize/review.md) due to low quality or incomplete metadata
-- [ ] The [file type](faq.md#which-file-types-are-supported) is generally unsupported
-- [ ] The [file type](faq.md#which-file-types-are-supported) is generally supported, but a specific feature or codec is not
+- [ ] The [file type](faq.md#what-media-file-types-are-supported) is generally unsupported
+- [ ] The [file type](faq.md#what-media-file-types-are-supported) is generally supported, but a specific feature or codec is not
 - [ ] The files have bad filesystem permissions, so they can't be opened by the indexer
 - [ ] The indexer has skipped the files because they are exact duplicates
 - [ ] They are in *Library > Hidden* because thumbnails could not be created:
@@ -132,7 +132,7 @@ If some pictures have broken or missing thumbnails, first check *Library > Error
 In case the application logs don't contain anything helpful:
 
 - [ ] The issue can be resolved by reloading the page or clearing the browser cache
-- [ ] You browse [non-JPEG](faq.md#which-file-types-are-supported) files in *Library > Originals* which have an icon but no preview
+- [ ] You browse [non-JPEG](faq.md#what-media-file-types-are-supported) files in *Library > Originals* which have an icon but no preview
 - [ ] *Dynamic Previews* are enabled in *Settings > Advanced*, but the server is not powerful enough
 - [ ] The sizes in *Settings > Advanced* have been changed so the request can't be fulfilled
 - [ ] FFmpeg and/or RAW converters are disabled in *Settings > Advanced*

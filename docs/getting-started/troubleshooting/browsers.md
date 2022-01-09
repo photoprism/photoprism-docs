@@ -3,7 +3,7 @@
 !!! info ""
     You're welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
     [Sponsors](../../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
-    Before reporting a bug in PhotoPrism, try to determine the cause of your problem.
+    Before reporting a bug, try to determine the cause of your problem.
 
 If you have a frontend problem, it may be due to a bug or because your browser is incompatible.
 In particular, nightly, test, unstable, and patent-free browser builds may not support certain

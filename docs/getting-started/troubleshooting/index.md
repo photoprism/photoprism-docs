@@ -94,6 +94,7 @@ this points to a memory problem.
 If you only see the logo when you navigate to the server URL and nothing else happens, even if you wait a moment:
 
 - [ ] The browser cannot communicate properly with your server, e.g. because a proxy or CDN is configured incorrectly (check its configuration and try without)
+- [ ] HTTP security headers prevent loading the app in a frame
 - [ ] JavaScript is disabled in your browser settings (enable it)
 - [ ] JavaScript was disabled by a browser plugin (disable it or add an exception)
 - [ ] An ad blocker blocks requests (disable it or add an exception)

@@ -124,7 +124,7 @@ for errors and warnings. In case the application logs don't contain anything hel
 - [ ] You try to index a shared drive on a remote server, but the server is offline
 - [ ] The indexer has crashed because you didn't configure at least 4 GB of swap
 - [ ] Somebody has deleted files without telling you
-- [ ] You are connected to the wrong server, CDN, or a DNS entry hasn't been updated yet
+- [ ] You are connected to the wrong server or CDN, or a DNS record has not been updated yet.
 
 #### Broken Thumbnails ####
 
@@ -146,11 +146,23 @@ In case the application logs don't contain anything helpful:
 - [ ] The user interface can't communicate properly with your server, for example, because a proxy is misconfigured (check its config and try without a proxy)
 - [ ] Your proxy, router, or firewall has a request rate limit, so some requests fail
 - [ ] There are other network problems caused by a firewall, router, or unstable connection
-- [ ] An ad blocker is blocking requests (disable it or add an exception)
-- [ ] You are connected to the wrong server, CDN, or a DNS entry hasn't been updated yet
+- [ ] An ad blocker blocks requests (disable it or add an exception)
+- [ ] You are connected to the wrong server or CDN, or a DNS record has not been updated yet.
 
 We also recommend checking your Docker logs for messages like *disk full*, *wrong permissions*, and *killed* as
 described above. If a service has been killed or otherwise automatically terminated, this points to a memory problem.
+
+#### Videos Don't Play ####
+
+If videos do not play and/or you only see a white/black area when you open a video:
+
+- [ ] You are using an [incompatible browser](index.md#browsers), e.g. without AVC support (try another browser)
+- [ ] AVC support or related JavaScript features have been disabled in your browser (check the settings and try another browser)
+- [ ] It is a large non-AVC video that needs to be transcoded first (wait or pre-transcode with the [convert command](http://localhost:8000/getting-started/docker-compose/#command-line-interface))
+- [ ] An ad blocker blocks requests (disable it or add an exception)
+- [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder (check if the files are accessible)
+- [ ] There are network problems caused by a proxy, firewall, or unstable connection (try a direct connection)
+- [ ] You are connected to the wrong server or CDN, or a DNS record has not been updated yet.
 
 #### App Not Loading ####
 
@@ -159,8 +171,8 @@ If you only see the logo when you navigate to the server URL and nothing else ha
 - [ ] The user interface can't communicate properly with your server, for example, because a proxy is misconfigured (check its config and try without a proxy)
 - [ ] JavaScript is disabled in your browser settings (enable it)
 - [ ] JavaScript was disabled by a browser plugin (disable it or add an exception)
-- [ ] An ad blocker is blocking requests (disable it or add an exception)
-- [ ] You are using an incompatible browser (try a different browser)
+- [ ] An ad blocker blocks requests (disable it or add an exception)
+- [ ] You are using an [incompatible browser](index.md#browsers) (try another browser)
 - [ ] There is a problem with your network connection (test if other sites work)
 
 #### Fatal Server Errors ####
@@ -175,7 +187,7 @@ Fatal errors are often caused by one of the following conditions:
 - [ ] You didn't configure at least 4 GB of swap
 - [ ] The server CPU is overheating
 - [ ] The server has an outdated operating system that is not fully compatible
-- [ ] The database server is not available, incompatible, or incorrectly configured
+- [ ] The database server is not available, [incompatible](index.md#databases), or incorrectly configured
 - [ ] You've upgraded the MariaDB server version without running `mariadb-upgrade`
 - [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder
 - [ ] There are network problems caused by a proxy, firewall, or unstable connection

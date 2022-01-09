@@ -164,7 +164,8 @@ If videos do not play and/or you only see a white/black area when you open a vid
 - [ ] There are network problems caused by a proxy, firewall, or unstable connection (try a direct connection)
 - [ ] You are connected to the wrong server or CDN, or a DNS record has not been updated yet
 
-We also recommend checking your logs as described above.
+We also recommend that you check your server and [browser logs](https://wordpress.org/support/article/using-your-browser-to-diagnose-javascript-errors/)
+for related messages and errors.
 
 #### App Not Loading ####
 
@@ -176,6 +177,8 @@ If you only see the logo when you navigate to the server URL and nothing else ha
 - [ ] An ad blocker blocks requests (disable it or add an exception)
 - [ ] You are using an [incompatible browser](index.md#browsers) (try another browser)
 - [ ] There is a problem with your network connection (test if other sites work)
+
+We also recommend that you check your [browser logs](https://wordpress.org/support/article/using-your-browser-to-diagnose-javascript-errors/) for errors.
 
 #### Fatal Server Errors ####
 

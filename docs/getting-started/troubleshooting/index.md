@@ -86,7 +86,7 @@ Fatal errors are often caused by one of the following conditions:
 - [ ] Kernel security modules such as [AppArmor](https://wiki.ubuntu.com/AppArmor) and [SELinux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) are blocking permissions
 - [ ] Your Raspberry Pi has not been configured according to our [recommendations](../raspberry-pi.md#system-requirements)
 
-We recommend checking your [Docker logs](docker.md#viewing-logs) for messages like *disk full*, *wrong permissions*, *no route to host*,
+We recommend [checking your Docker logs](docker.md#viewing-logs) for messages like *disk full*, *wrong permissions*, *no route to host*,
 *connection failed*, and *killed* as described above. If a service has been killed or otherwise automatically terminated,
 this points to a memory problem.
 
@@ -102,7 +102,7 @@ If you only see the logo when you navigate to the server URL and nothing else ha
 - [ ] You are using an [incompatible browser](browsers.md) (try another browser)
 - [ ] There is a problem with your network connection (test if other sites work)
 
-We also recommend that you check your [browser logs](browsers.md) for errors and warnings.
+We recommend that you [check your browser logs](browsers.md) for helpful errors and warnings.
 
 ### Missing Pictures ###
 
@@ -151,7 +151,7 @@ In case the application logs don't contain anything helpful:
 - [ ] An ad blocker blocks requests (disable it or add an exception)
 - [ ] You are connected to the wrong server or CDN, or a DNS record has not been updated yet
 
-We also recommend checking your [Docker logs](docker.md#viewing-logs) for messages like *disk full*, *wrong permissions*, and *killed* as
+We also recommend [checking your Docker logs](docker.md#viewing-logs) for messages like *disk full*, *wrong permissions*, and *killed* as
 described above. If a service has been killed or otherwise automatically terminated, this points to a memory problem.
 
 ### Videos Don't Play ###
@@ -166,7 +166,7 @@ If videos do not play and/or you only see a white/black area when you open a vid
 - [ ] There are network problems caused by a proxy, firewall, or unstable connection (try a direct connection)
 - [ ] You are connected to the wrong server or CDN, or a DNS record has not been updated yet
 
-We also recommend that you check your [Docker](docker.md#viewing-logs) and [browser logs](browsers.md)
+We recommend that you [check your Docker](docker.md#viewing-logs) and [browser logs](browsers.md)
 for messages related to *HTTP requests*, *permissions*, *security*, *FFmpeg*, *videos*, and *file conversion*.
 
 *[AVC]: MPEG-4 / H.264

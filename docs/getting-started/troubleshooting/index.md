@@ -98,7 +98,7 @@ this points to a memory problem.
 
 If you only see the logo when you navigate to the server URL and nothing else happens, even if you wait a moment:
 
-- [ ] The browser cannot communicate properly with your server, e.g. because a proxy or CDN is configured incorrectly (check its configuration and try without)
+- [ ] The browser cannot communicate properly with your server, e.g. because a proxy, VPN, or CDN is configured incorrectly (check its configuration and try without)
 - [ ] HTTP security headers prevent the app from loading in a frame (override them or wait for additional config options)
 - [ ] JavaScript is disabled in your browser settings (enable it)
 - [ ] JavaScript was disabled by a browser plugin (disable it or add an exception)
@@ -149,7 +149,7 @@ In case the application logs don't contain anything helpful:
 - [ ] Files can't be opened, e.g. because the file system permissions have been changed
 - [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder
 - [ ] Some thumbnails could not be created because you didn't configure [at least 4 GB of swap](docker.md#adding-swap)
-- [ ] The browser cannot communicate properly with your server, e.g. because a proxy or CDN is configured incorrectly (check its configuration and try without)
+- [ ] The browser cannot communicate properly with your server, e.g. because a proxy, VPN, or CDN is configured incorrectly (check its configuration and try without)
 - [ ] Your proxy, router, or firewall has a request rate limit, so some requests fail
 - [ ] There are other network problems caused by a firewall, router, or unstable connection
 - [ ] An ad blocker or other plugins block requests (disable them or add an exception)
@@ -175,6 +175,7 @@ for messages related to *HTTP requests*, *permissions*, *security*, *FFmpeg*, *v
 
 *[AVC]: MPEG-4 / H.264
 *[CDN]: Content Delivery Network
+*[VPN]: Virtual Private Network
 *[CPU]: Central Processing Unit
 *[DNS]: Domain Name System
 *[HTTP]: Hypertext Transfer Protocol

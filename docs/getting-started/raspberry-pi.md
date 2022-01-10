@@ -1,7 +1,7 @@
 # Running PhotoPrism on a Raspberry Pi
 
-Our [stable version](../release-notes.md) and development preview have been built into a single
-[multi-arch image](https://hub.docker.com/r/photoprism/photoprism) for 64-bit AMD, Intel, and ARM processors.
+Our [stable version and development preview](../release-notes.md) have been built into a single
+[multi-arch Docker image](https://hub.docker.com/r/photoprism/photoprism) for 64-bit AMD, Intel, and ARM processors.
 
 That means, Raspberry Pi 3 / 4, Apple M1, and other ARM64-based devices can pull from the same repository, 
 enjoy the exact same functionality, and can follow the regular [Installation Instructions](docker-compose.md) 

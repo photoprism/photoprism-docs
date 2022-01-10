@@ -99,7 +99,7 @@ If you only see the logo when you navigate to the server URL and nothing else ha
 - [ ] HTTP security headers prevent the app from loading in a frame (override them or wait for additional config options)
 - [ ] JavaScript is disabled in your browser settings (enable it)
 - [ ] JavaScript was disabled by a browser plugin (disable it or add an exception)
-- [ ] An ad blocker blocks requests (disable it or add an exception)
+- [ ] An ad blocker or other plugins block requests (disable them or add an exception)
 - [ ] You are using an [incompatible browser](browsers.md) (try another browser)
 - [ ] There is a problem with your network connection (test if other sites work)
 
@@ -149,7 +149,7 @@ In case the application logs don't contain anything helpful:
 - [ ] The browser cannot communicate properly with your server, e.g. because a proxy or CDN is configured incorrectly (check its configuration and try without)
 - [ ] Your proxy, router, or firewall has a request rate limit, so some requests fail
 - [ ] There are other network problems caused by a firewall, router, or unstable connection
-- [ ] An ad blocker blocks requests (disable it or add an exception)
+- [ ] An ad blocker or other plugins block requests (disable them or add an exception)
 - [ ] You are connected to the wrong server or CDN, or a DNS record has not been updated yet
 
 We also recommend checking [your Docker logs](docker.md#viewing-logs) for messages like *disk full*, *wrong permissions*, and *killed* as
@@ -162,7 +162,7 @@ If videos do not play and/or you only see a white/black area when you open a vid
 - [ ] You are using an [incompatible browser](browsers.md), e.g. without AVC support (try another browser)
 - [ ] AVC support or related JavaScript features have been disabled in your browser (check the settings and try another browser)
 - [ ] It is a large non-AVC video that needs to be transcoded first (wait or pre-transcode with the [convert command](http://localhost:8000/getting-started/docker-compose/#command-line-interface))
-- [ ] An ad blocker blocks requests (disable it or add an exception)
+- [ ] An ad blocker or other plugins block requests (disable them or add an exception)
 - [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder (check if the files are accessible)
 - [ ] There are network problems caused by a proxy, firewall, or unstable connection (try a direct connection)
 - [ ] You are connected to the wrong server or CDN, or a DNS record has not been updated yet

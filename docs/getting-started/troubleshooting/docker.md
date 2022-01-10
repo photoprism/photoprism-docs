@@ -68,7 +68,8 @@ docker-compose logs --tail=100
 
 !!! note ""
     If you see no errors or no logs at all, you may have started the server on a different host
-    and/or port. There could also be an issue with your browser, ad blocker, or firewall settings.
+    and/or port. There could also be an [issue with your browser](browsers.md), browser plugins, firewall settings,
+    or other tools you may have installed.
 
 To enable [debug mode](../config-options.md), add this to the environment variables of the `photoprism`
 service in your `docker-compose.yml` and restart for changes to take effect:

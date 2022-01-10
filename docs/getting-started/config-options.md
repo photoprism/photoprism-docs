@@ -12,7 +12,7 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_ADMIN_PASSWORD`     | --admin-password PASSWORD  | initial admin user PASSWORD, minimum 4 characters
 `PHOTOPRISM_LOG_LEVEL`          | --log-level value, -l value| trace, debug, info, warning, error, fatal, or panic (default: "info")
 `PHOTOPRISM_DEBUG`              | --debug                    | enable debug mode, show additional log messages
-`PHOTOPRISM_PUBLIC`             | --public, -p               | disable password authentication
+`PHOTOPRISM_PUBLIC`             | --public, -p               | disable password authentication, [WebDAV](../user-guide/sync/webdav.md), and the [advanced settings UI](../user-guide/settings/advanced.md)
 `PHOTOPRISM_READONLY`           | --read-only, -r            | disable import, upload, and delete
 `PHOTOPRISM_EXPERIMENTAL`       | --experimental, -e         | enable experimental features
 `PHOTOPRISM_CONFIG_FILE`        | --config-file FILENAME, -c FILENAME  | load config values from FILENAME

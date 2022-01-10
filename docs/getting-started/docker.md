@@ -1,11 +1,14 @@
 # Running PhotoPrism with Docker
 
-We recommend using [Docker Compose](docker-compose.md) as it is easier to start with for beginners
-and provides more comfort than the pure Docker command-line interface.
+We recommend using [Docker Compose](docker-compose.md) because it is easier and provides more convenience for
+running multiple services than the [pure Docker command-line interface](https://docs.docker.com/engine/reference/commandline/cli/).
+Before you proceed, make sure you have [Docker](https://store.docker.com/search?type=edition&offering=community)
+installed on your system. It is available for Mac, Linux, and Windows.
 
 !!! info ""
     You are welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
     [Sponsors](../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
+    Before reporting a bug, try to [determine the cause of your problem](troubleshooting/index.md).
 
 ### Step 1: Start the server ###
 

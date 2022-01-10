@@ -33,6 +33,11 @@ than on standard desktop computers.
 Also keep in mind that the hardware has no video transcoding support and software transcoding
 is generally slow.
 
+!!! info ""
+    You are welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
+    [Sponsors](../../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
+    Before reporting a bug, try to [determine the cause of your problem](../troubleshooting/index.md).
+
 ## Setup using Docker ##
 
 We recommend following these instructions to install PhotoPrism on your Synology NAS:

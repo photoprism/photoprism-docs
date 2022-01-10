@@ -5,9 +5,9 @@
     [Sponsors](../../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
     Before reporting a bug, try to determine the cause of your problem.
 
-!!! tldr ""
-    We recommend going through the [troubleshooting checklist](index.md#app-not-loading) if you only see the logo
-    and nothing else happens, even if you wait a moment.
+!!! note ""
+    We recommend going through the related [troubleshooting checklist](index.md#app-not-loading) if you only see the
+    logo and nothing else happens, even if you wait a moment.
 
 ### Try Another Browser ###
 

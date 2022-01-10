@@ -8,9 +8,13 @@ enjoy the exact same functionality, and can follow the regular [Installation Ins
 after going through a short list of [System Requirements](#system-requirements) and 
 [Architecture Specific Notes](#architecture-specific-notes).
 
-!!! tldr ""
-    Existing users are advised to keep their `docker-compose.yml` config updated based on the examples
-    available at [dl.photoprism.app/docker](https://dl.photoprism.app/docker/).
+Existing users are advised to keep their `docker-compose.yml` config updated based on the examples
+available at [dl.photoprism.app/docker](https://dl.photoprism.app/docker/).
+
+!!! info ""
+    You are welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
+    [Sponsors](../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
+    Before reporting a bug, try to [determine the cause of your problem](troubleshooting/index.md).
 
 ### System Requirements ###
 

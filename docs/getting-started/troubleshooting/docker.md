@@ -63,20 +63,31 @@ Run this command to display the last 100 log messages (omit `--tail=100` to see 
 docker-compose logs --tail=100
 ```
 
-!!! tldr ""
-    The default [Docker Compose](https://docs.docker.com/compose/) config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running the `docker-compose` command in the same directory. Config files for other apps or instances should be placed in separate folders.
+To enable [debug mode](../config-options.md), set `PHOTOPRISM_DEBUG` to `true` in the `environment:` section
+of the `photoprism` service (or use the `--debug` flag when running the `photoprism` command directly):
+
+```yaml
+services:
+  photoprism:
+    environment:
+      PHOTOPRISM_DEBUG: "true"
+```
+
+Then restart all services for the changes to take effect. It can be helpful to keep Docker running in the foreground
+while debugging so that log messages are displayed directly. To do this, omit the `-d` parameter when restarting:
+
+```bash
+docker-compose stop
+docker-compose up 
+```
 
 !!! note ""
     If you see no errors or no logs at all, you may have started the server on a different host
     and/or port. There could also be an [issue with your browser](browsers.md), browser plugins, firewall settings,
     or other tools you may have installed.
 
-To enable [debug mode](../config-options.md), add this to the environment variables of the `photoprism`
-service in your `docker-compose.yml` and restart for changes to take effect:
-
-```
-PHOTOPRISM_DEBUG: "true"
-```
+!!! tldr ""
+    The default [Docker Compose](https://docs.docker.com/compose/) config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running the `docker-compose` command in the same directory. Config files for other apps or instances should be placed in separate folders.
 
 ### Adding Swap ###
 

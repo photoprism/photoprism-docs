@@ -31,8 +31,8 @@ To test if you have a general problem that is not browser-specific, open the Web
 ### Getting Error Details ###
 
 If possible, please also include the error type, error message, and URL of the affected resource when submitting a
-support request. You may find this information in the browser console. It is perfectly fine to take screenshots
-instead of writing it down.
+support request. You may find this information in the **browser console**. It is perfectly fine to take screenshots
+instead of writing the details down.
 
 #### Chrome, Chromium, and Edge ####
 

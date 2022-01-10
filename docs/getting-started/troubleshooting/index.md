@@ -102,7 +102,7 @@ If you only see the logo when you navigate to the server URL and nothing else ha
 - [ ] You are using an [incompatible browser](browsers.md) (try another browser)
 - [ ] There is a problem with your network connection (test if other sites work)
 
-We recommend that you [check your browser logs](browsers.md) for helpful errors and warnings.
+We recommend that you [check the browser console](browsers.md) for helpful errors and warnings.
 
 ### Missing Pictures ###
 
@@ -166,7 +166,7 @@ If videos do not play and/or you only see a white/black area when you open a vid
 - [ ] There are network problems caused by a proxy, firewall, or unstable connection (try a direct connection)
 - [ ] You are connected to the wrong server or CDN, or a DNS record has not been updated yet
 
-We recommend that you [check your Docker](docker.md#viewing-logs) and [browser logs](browsers.md)
+We recommend that you [check your Docker](docker.md#viewing-logs) and the [browser console](browsers.md)
 for messages related to *HTTP requests*, *permissions*, *security*, *FFmpeg*, *videos*, and *file conversion*.
 
 *[AVC]: MPEG-4 / H.264

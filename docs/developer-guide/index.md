@@ -33,10 +33,10 @@ if you have verified that no similar [idea](https://github.com/photoprism/photop
 ## Questions?
 
 Follow us on [Twitter](https://twitter.com/photoprism_app) or join our [Community Chat](https://gitter.im/browseyourlife/community)
-to get regular updates, connect with other contributors, and discuss your ideas. Don't be afraid to ask silly questions.
+to get regular updates, connect with other contributors, and discuss your ideas. Our [Code of Conduct](https://photoprism.app/code-of-conduct) explains the "dos and don’ts."
 
-!!! tldr ""
-    Never use GitHub Issues to ask general questions or for assistance.
+!!! note ""
+    Never use GitHub Issues if you are unsure, have a general question, or need assistance.
 
 ## Reporting Bugs ##
 
@@ -48,8 +48,8 @@ to determine the cause of your problem. If you are unsure, have a general questi
 
 In addition, [sponsors](../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
 
-!!! note ""
-    When reporting a problem, always include the software versions you are using and [other information about your environment](https://github.com/photoprism/photoprism/blob/develop/.github/ISSUE_TEMPLATE/bug_report.md) such as browser, browser plugins, operating system, installed memory, and processor type.
+!!! tldr ""
+    When reporting a problem, always include the software versions you are using and [other information about your environment](https://github.com/photoprism/photoprism/blob/develop/.github/ISSUE_TEMPLATE/bug_report.md) such as [browser](../getting-started/troubleshooting/browsers.md), browser plugins, operating system, storage type, memory size, and processor.
 
 ## Pull Requests
 

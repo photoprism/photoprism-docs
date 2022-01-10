@@ -1,5 +1,8 @@
 # WebDAV File Upload #
 
+!!! tldr ""
+    For security reasons, the built-in WebDAV server is disabled when running in [public mode](../../getting-started/config-options.md) without authentication.
+
 You can use WebDAV-compatible apps, including Microsoft's Windows Explorer and Apple's Finder, 
 to add files to your *originals* and *import* folders from a remote computer or mobile device.
 

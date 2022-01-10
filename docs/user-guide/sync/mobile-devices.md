@@ -3,7 +3,7 @@
 To sync photos and videos on your phone with PhotoPrism, you can use any app that supports WebDAV.
 
 !!! tldr ""
-    For security reasons, WebDAV access is disabled when you run PhotoPrism in public mode without authentication.
+    For security reasons, the built-in WebDAV server is disabled when running in [public mode](../../getting-started/config-options.md) without authentication.
 
 ## PhotoSync ##
 

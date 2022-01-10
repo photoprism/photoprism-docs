@@ -5,9 +5,11 @@ can connect directly to PhotoPrism.
 This mounts the *originals folder* as a network drive and allows you to open, edit, and delete
 files from your computer or smartphone as if they were local.
 
+!!! tldr ""
+    For security reasons, the built-in WebDAV server is disabled when running in [public mode](../../getting-started/config-options.md) without authentication.
+
 !!! note ""
-    PhotoPrism can also sync files *from* an external storage system (like ownCloud) via WebDAV.
-    See [instructions](/user-guide/settings/sync/).
+    It is also possible to [sync files with external WebDAV servers](../settings/sync.md) such as ownCloud or other PhotoPrism instances.
 
 The originals folder URL for public servers is:
 

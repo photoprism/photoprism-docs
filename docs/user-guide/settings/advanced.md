@@ -3,10 +3,10 @@
 System [config options](../../getting-started/config-options.md) such as the image quality can be changed 
 on the advanced settings page. You can also disable specific features and enable the debug or read-only mode.
 
-For security reasons, the advanced settings page is disabled and hidden when [public mode](../../getting-started/config-options.md) 
-is enabled.
-
 !!! tldr ""
+    For security reasons, the advanced settings page is disabled and hidden when running in [public mode](../../getting-started/config-options.md).
+
+!!! note ""
     Changing advanced settings **always requires a restart** to take effect. Selecting a different thumbnail
     quality or size won't replace existing thumbnails. You may regenerate them using the 
     [command-line interface](https://docs.photoprism.app/getting-started/docker-compose/#command-line-interface).

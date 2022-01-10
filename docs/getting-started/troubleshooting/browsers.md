@@ -12,13 +12,14 @@
 ### Try Another Browser ###
 
 If you have a frontend problem, it may be due to a bug or because your browser is incompatible.
-In particular, nightly, test, unstable, and patent-free browser builds may not support certain
+In particular, nightly, unstable, and patent-free browser builds may not support certain
 features, standards, and [video formats](https://github.com/photoprism/photoprism/issues/707).
 
 To test if you have a general problem that is not browser-specific, open the Web UI in other browsers:
 
-- If you are using [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/), try the [stable version](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) and [Google Chrome](https://www.google.com/chrome/) or [Chromium](https://www.chromium.org/getting-involved/download-chromium)
-- When the problem disappears, you know that the issue is browser-dependent
+- If you are using [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/), try the [stable version](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) and [Chrome](https://www.google.com/chrome/) or [Chromium](https://www.chromium.org/getting-involved/download-chromium)
+- If you have browser plugins installed, try disabling them to see if this makes a difference
+- When the problem disappears, you know that the issue is browser-dependent or caused by a plugin
 - Otherwise, the issue may not be specific to the browser version
 - Make a note in which browsers the problem occurs, as this will be helpful when submitting a support request
 

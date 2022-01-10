@@ -174,13 +174,10 @@ for messages related to *HTTP requests*, *permissions*, *security*, *FFmpeg*, *v
 *[CPU]: Central Processing Unit
 *[DNS]: Domain Name System
 *[HTTP]: Hypertext Transfer Protocol
-*[USB]: Universal Serial Bus
 *[SSD]: Solid-State Drive
 *[RAW]: image format that contains unprocessed sensor data
 *[UI]: User Interface
 *[URL]: Web Address
-*[proxy]: HTTPS reverse proxy
-*[firewall]: network security system that controls traffic
 *[FFmpeg]: transcodes video files
 *[NSFW]: Not Safe For Work
 *[swap]: substitute for physical memory

@@ -40,14 +40,16 @@ to get regular updates, connect with other contributors, and discuss your ideas.
 
 ## Reporting Bugs ##
 
-Please use [GitHub Issues](https://github.com/photoprism/photoprism/issues) only to report clearly identified bugs and impediments to us.
-If you are not sure, first use [GitHub Discussions](https://github.com/photoprism/photoprism/discussions) or ask in 
-our [Community Chat](https://gitter.im/browseyourlife/community). [Sponsors](../funding.md) receive direct 
-[technical support](https://photoprism.app/contact) via email.
+Before reporting a bug, please use our [Troubleshooting Checklists](../getting-started/troubleshooting/index.md)
+to determine the cause of your problem. If you are unsure, have a general question, or need assistance:
 
-When reporting a problem, please include the version you are using and information 
-about your environment such as browser, operating system, installed memory, and 
-processor type.
+- you are welcome to ask in our [Community Chat](https://gitter.im/browseyourlife/community)
+- and post your question in [GitHub Discussions](https://github.com/photoprism/photoprism/discussions)
+
+In addition, [sponsors](../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
+
+!!! note ""
+    When reporting a problem, always include the software versions you are using and [other information about your environment](https://github.com/photoprism/photoprism/blob/develop/.github/ISSUE_TEMPLATE/bug_report.md) such as browser, browser plugins, operating system, installed memory, and processor type.
 
 ## Pull Requests
 

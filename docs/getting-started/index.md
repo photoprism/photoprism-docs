@@ -17,19 +17,19 @@ they might be in [Review](../user-guide/organize/review.md) due to low quality o
 You can turn this and other features off in [Settings](../user-guide/settings/general.md), 
 depending on your specific use case.
 
-!!! info "Installation Packages"
-    Everyone is invited to [contribute by building and testing installation packages](https://docs.photoprism.app/developer-guide/)
-    for Linux distributions and other operating systems. We currently don't have the resources to do this,
-    as new versions are released several times a month and the long list of dependencies would lead to an enormous
-    testing effort. An [unofficial port](https://docs.photoprism.app/getting-started/freebsd/) is available for
-    FreeBSD / FreeNAS users. Advanced users [can build and install](faq.md#building-from-source) PhotoPrism from the [publicly available source code](https://github.com/photoprism/photoprism).
-
 !!! note ""
     Our [stable version and development preview](https://docs.photoprism.app/release-notes/) have been built into a
     single [multi-arch Docker image](https://hub.docker.com/r/photoprism/photoprism) for 64-bit AMD, Intel,
     and ARM processors. That means, [Raspberry Pi](raspberry-pi.md) 3 / 4, Apple M1, and other ARM64-based
     devices can pull from the same repository, enjoy the exact same functionality, and can follow the regular
     [installation instructions](docker-compose.md) after going through a short list of [requirements](raspberry-pi.md).
+
+!!! info ""
+    Everyone is invited to [contribute by building and testing standalone packages](https://docs.photoprism.app/developer-guide/)
+    for Linux distributions and other operating systems. We currently don't have the resources to do this,
+    as new versions are released several times a month and the long list of dependencies would lead to an enormous
+    testing effort. An [unofficial port](https://docs.photoprism.app/getting-started/freebsd/) is available for
+    FreeBSD / FreeNAS users. Advanced users [can build and install](faq.md#building-from-source) PhotoPrism from the [publicly available source code](https://github.com/photoprism/photoprism).
 
 ## Roadmap ##
 

@@ -5,6 +5,17 @@
     [Sponsors](../../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
     Before reporting a bug, try to determine the cause of your problem.
 
+!!! note ""
+    Official support for MySQL is discontinued as Oracle seems to have stopped shipping [new features and improvements](https://github.com/photoprism/photoprism/issues/1764).
+    As a result, the testing effort required before each release is no longer feasible.
+
+#### Unicode Support ####
+
+If the logs show "incorrect string value" database errors and you are running a custom MariaDB or MySQL
+server that is not based on our [default configuration](https://dl.photoprism.app/docker/docker-compose.yml):
+
+- [ ] Full [Unicode](https://home.unicode.org/basic-info/faq/) support [must be enabled](https://mariadb.com/kb/en/setting-character-sets-and-collations/#example-changing-the-default-character-set-to-utf-8), for example using the `mysqld` command parameters `--character-set-server=utf8mb4` and `--collation-server=utf8mb4_unicode_ci`
+
 #### Version Upgrade ####
 
 If the database doesn't start properly after upgrading from an earlier MySQL or MariaDB version,

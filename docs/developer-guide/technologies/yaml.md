@@ -22,7 +22,7 @@ Details:
 - Related values start at the same indentation level
     - Tabs are not allowed for indentation
     - We recommend using 2 spaces, but any number will work as long as it is consistent
-- You can generally use all [Unicode](https://home.unicode.org/) characters and [Emojis](https://home.unicode.org/emoji/about-emoji/)
+- You can generally use all [Unicode](https://home.unicode.org/basic-info/faq/) characters and [Emojis](https://home.unicode.org/emoji/about-emoji/)
     - To avoid ambiguity, it is generally best to enclose values in single `'` or double quotes `"` if they contain more than letters and numbers, and especially if they contain a colon `:`
     - The difference between single and double quotes is that double quotes support [escape sequences](https://symfony.com/doc/current/components/yaml/yaml_format.html#strings) like `\t` for a tab or `\n` for a new line
 - Comments begin with the `#` sign, can start anywhere on a line, and continue until the end of the line

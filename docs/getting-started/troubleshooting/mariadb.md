@@ -15,9 +15,9 @@ If the logs show "incorrect string value" database errors and you are running a 
 server that is not based on our [default configuration](https://dl.photoprism.app/docker/docker-compose.yml):
 
 - [ ] Full [Unicode](https://home.unicode.org/basic-info/faq/) support [must be enabled](https://mariadb.com/kb/en/setting-character-sets-and-collations/#example-changing-the-default-character-set-to-utf-8), e.g. using the `mysqld` command parameters `--character-set-server=utf8mb4` and `--collation-server=utf8mb4_unicode_ci`
-- [ ] Before reporting a bug, verify that the problem still occurs with a newly created database based on our example
+- [ ] Note that an existing database may use a different character set if you imported it from another server
+- [ ] Before reporting a bug, verify the problem still occurs with a newly created database based on our example
 
-Note that your database may also use a different character set if you imported it from another server.
 Run this command in a terminal to see the current values of the collation and character set variables (change the root
 password `insecure` and database name `photoprism` as specified in your `docker-compose.yml`):
 

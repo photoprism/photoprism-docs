@@ -119,15 +119,22 @@ volumes:
   - "~/Pictures:/photoprism/originals"
 ```
 
-Other folders accessible from the host may be [mounted](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes) instead, 
-including network drives. Multiple folders can be made accessible by mounting them as subfolders
-of `/photoprism/originals`, for example:
+All folders accessible from the host can be [mounted](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes), 
+including [network drives](troubleshooting/mariadb.md#corrupted-files). Multiple folders can be made accessible by mounting them as subfolders
+of `/photoprism/originals`:
 
 ```yaml
 volumes:
   - "/home/username/Pictures:/photoprism/originals"
   - "/example/friends:/photoprism/originals/friends"
   - "/mnt/photos:/photoprism/originals/media"
+```
+
+On Windows, prefix the host path with the drive letter and use `/` instead of `\` as separator:
+
+```yaml
+volumes:
+  - "D:/Example/Pictures:/photoprism/originals"
 ```
 
 !!! tldr ""

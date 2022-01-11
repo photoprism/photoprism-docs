@@ -84,7 +84,7 @@ may refuse to connect as well.
 
 ## Getting Support ##
 
-Before reporting a bug, please use our [Troubleshooting Checklists](../getting-started/troubleshooting/index.md)
+Before submitting a support request, please use our [Troubleshooting Checklists](../getting-started/troubleshooting/index.md)
 to determine the cause of your problem. If this doesn't help, or you have other questions:
 
 - you are welcome to ask in our [Community Chat](https://gitter.im/browseyourlife/community)

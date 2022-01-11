@@ -4,8 +4,7 @@ Think of Open Source development as free training with a visible outcome. Explor
 in traditional enterprise environments, where risk tends to be avoided and developers often struggle to maintain
 decades-old code loaded with technical debt.
 
-We welcome contributions of any kind, including bug reports, testing, writing documentation, tutorials, blog posts,
-and pull requests.
+We welcome contributions of any kind, including blog posts, tutorials, testing, writing documentation, and pull requests.
 
 !!! quote ""
     Simple, elegant solutions are more effective, but they are harder to find than complex ones, and they require more 

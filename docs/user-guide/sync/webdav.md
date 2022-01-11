@@ -58,16 +58,43 @@ http://admin@localhost:2342/originals/
      1. Open Windows **File Explorer**
      2. Right click **This PC**
      3. From the dropdown, select **Map network drive...**
+
+        ![Screenshot](img/webdav-1.png)
+
      4. Enter the drive letter and folder you want to map your WebDAV connection to
      5. Check the boxes **Reconnect at sign-in** and **Connect using different credentials**
      6. Click the **Connect to a Web site that you can use to store your documents and pictures** link
-     7. Click the **Next** button
-     8. Click **Choose a custom network location** and then click the **Next** button
-     9. In the **Internet or network address** field, enter the URL as shown above
-     10. Click the **Next** button and then **Finish**
-
-    The originals folder appears as a mapped drive in Windows Explorer, and you can immediately add,
-    edit, or delete files and directories using the Windows File Explorer.
+     
+        ![Screenshot](img/webdav-2.png)
+     
+     7. Click **Next**
+     
+        ![Screenshot](img/webdav-3.png)
+     
+     8. Click **Choose a custom network location** and then click **Next**
+     
+        ![Screenshot](img/webdav-4.png)     
+     
+     9. In the **Internet or network address** field, enter the URL as shown above and click **Next**
+        
+        ![Screenshot](img/webdav-5.png)
+     
+     10. Enter your username and password and click **Ok**
+     
+        ![Screenshot](img/webdav-6.png)
+     
+     11. Enter a name for the network location and click **Next**
+    
+        ![Screenshot](img/webdav-7.png)
+    
+     12. Click **Finish**
+    
+        ![Screenshot](img/webdav-8.png)
+    
+     The originals folder appears as a mapped drive in Windows Explorer, and you can immediately add,
+     edit, or delete files and directories using the Windows File Explorer.
+    
+     ![Screenshot](img/webdav-9.png)
     
     If you still have trouble connecting via WebDAV, you may have to
     [update](https://help.dreamhost.com/hc/en-us/articles/216473357-Accessing-WebDAV-with-Windows) the

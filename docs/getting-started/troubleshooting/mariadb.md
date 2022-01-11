@@ -3,7 +3,7 @@
 !!! info ""
     You are welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
     [Sponsors](../../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
-    Before reporting a bug, try to determine the cause of your problem.
+    Before submitting a support request, try to determine the cause of your problem.
 
 !!! note ""
     Official support for MySQL is discontinued as Oracle seems to have stopped shipping [new features and improvements](https://github.com/photoprism/photoprism/issues/1764).
@@ -16,7 +16,7 @@ server that is not based on our [default configuration](https://dl.photoprism.ap
 
 - [ ] Full [Unicode](https://home.unicode.org/basic-info/faq/) support [must be enabled](https://mariadb.com/kb/en/setting-character-sets-and-collations/#example-changing-the-default-character-set-to-utf-8), e.g. using the `mysqld` command parameters `--character-set-server=utf8mb4` and `--collation-server=utf8mb4_unicode_ci`
 - [ ] Note that an existing database may use a different character set if you imported it from another server
-- [ ] Before reporting a bug, verify the problem still occurs with a newly created database based on our example
+- [ ] Before submitting a support request, verify the problem still occurs with a newly created database based on our example
 
 Run this command in a terminal to see the current values of the collation and character set variables (change the root
 password `insecure` and database name `photoprism` as specified in your `docker-compose.yml`):

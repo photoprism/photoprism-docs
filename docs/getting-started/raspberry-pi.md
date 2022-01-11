@@ -14,7 +14,7 @@ available at [dl.photoprism.app/docker](https://dl.photoprism.app/docker/).
 !!! info ""
     You are welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
     [Sponsors](../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
-    Before reporting a bug, try to [determine the cause of your problem](troubleshooting/index.md).
+    Before submitting a support request, try to [determine the cause of your problem](troubleshooting/index.md).
 
 ### System Requirements ###
 

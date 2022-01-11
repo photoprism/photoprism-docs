@@ -39,5 +39,4 @@ Think of "free software" as in "free speech," not as in "free beer". Thank you! 
 
 !!! note ""
     Please don't use GitHub Issues if you have a [general question](https://github.com/photoprism/photoprism/discussions),
-    need help, or an issue has not (yet) been clearly identified. Before reporting a bug, try to [determine the cause of your problem](../getting-started/troubleshooting/index.md).
-    Thank you! 💐
+    need help, or an issue has not (yet) been clearly identified.

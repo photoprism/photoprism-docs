@@ -98,7 +98,7 @@ this points to a memory problem.
 
 If you only see the logo when you navigate to the server URL and nothing else happens, even if you wait a moment:
 
-- [ ] The browser cannot communicate properly with your server, e.g. because a proxy, VPN, or CDN is configured incorrectly (check its configuration and try without)
+- [ ] The browser cannot communicate properly with your server, e.g. because a [Reverse Proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
 - [ ] HTTP security headers prevent the app from loading in a frame (override them or wait for additional config options)
 - [ ] JavaScript is disabled in your browser settings (enable it)
 - [ ] JavaScript was disabled by a browser plugin (disable it or add an exception)
@@ -149,7 +149,7 @@ In case the application logs don't contain anything helpful:
 - [ ] Files can't be opened, e.g. because the file system permissions have been changed
 - [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder
 - [ ] Some thumbnails could not be created because you didn't configure [at least 4 GB of swap](docker.md#adding-swap)
-- [ ] The browser cannot communicate properly with your server, e.g. because a proxy, VPN, or CDN is configured incorrectly (check its configuration and try without)
+- [ ] The browser cannot communicate properly with your server, e.g. because a [Reverse Proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
 - [ ] Your proxy, router, or firewall has a request rate limit, so some requests fail
 - [ ] There are other network problems caused by a firewall, router, or unstable connection
 - [ ] An ad blocker or other plugins block requests (disable them or add an exception)
@@ -167,6 +167,7 @@ If videos do not play and/or you only see a white/black area when you open a vid
 - [ ] It is a large non-AVC video that needs to be transcoded first (wait or pre-transcode with the [convert command](http://localhost:8000/getting-started/docker-compose/#command-line-interface))
 - [ ] An ad blocker or other plugins block requests (disable them or add an exception)
 - [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder (check if the files are accessible)
+- [ ] The browser cannot communicate properly with your server, e.g. because a [Reverse Proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
 - [ ] There are network problems caused by a proxy, firewall, or unstable connection (try a direct connection)
 - [ ] You are connected to the wrong server, VPN, or CDN, or a DNS record has not been updated yet
 

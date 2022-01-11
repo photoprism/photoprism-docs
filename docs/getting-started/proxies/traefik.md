@@ -12,7 +12,7 @@ documented in [Setup Using Docker Compose](../docker-compose.md):
     ```yaml
     services:
       traefik:
-        image: traefik:v2.2
+        image: traefik:v2.5
         restart: unless-stopped
         ports:
           - "80:80"

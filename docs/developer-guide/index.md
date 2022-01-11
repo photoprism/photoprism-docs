@@ -35,12 +35,15 @@ Follow us on [Twitter](https://twitter.com/photoprism_app) or join our [Communit
 to get regular updates, connect with other contributors, and discuss your ideas. Our [Code of Conduct](https://photoprism.app/code-of-conduct) explains the "dos and don’ts."
 
 !!! note ""
-    Never use GitHub Issues if you are unsure, have a general question, or need assistance.
+    Please don't use GitHub Issues if you have a [general question](https://github.com/photoprism/photoprism/discussions),
+    need help, or an issue has not (yet) been clearly identified. Before reporting a bug, try to [determine the cause of your problem](../getting-started/troubleshooting/index.md).
+    Thank you! 💐
 
 ## Reporting Bugs ##
 
 Before reporting a bug, please use our [Troubleshooting Checklists](../getting-started/troubleshooting/index.md)
-to determine the cause of your problem. If you are unsure, have a general question, or need assistance:
+to determine the cause of your problem. If you have a general question, need help, or an issue has not (yet) been clearly
+identified:
 
 - you are welcome to ask in our [Community Chat](https://gitter.im/browseyourlife/community)
 - and post your question in [GitHub Discussions](https://github.com/photoprism/photoprism/discussions)

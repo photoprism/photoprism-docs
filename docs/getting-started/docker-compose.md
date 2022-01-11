@@ -116,6 +116,7 @@ The *originals* folder contains your original photo and video files.
 
 ```yaml
 volumes:
+  # "/host/folder:/photoprism/folder"  # example
   - "~/Pictures:/photoprism/originals"
 ```
 

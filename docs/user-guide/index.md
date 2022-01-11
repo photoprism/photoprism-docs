@@ -38,5 +38,5 @@ Think of "free software" as in "free speech," not as in "free beer". Thank you! 
     When reporting a problem, always include the software versions you are using and [other information about your environment](https://github.com/photoprism/photoprism/blob/develop/.github/ISSUE_TEMPLATE/bug_report.md) such as [browser](../getting-started/troubleshooting/browsers.md), browser plugins, operating system, storage type, memory size, and processor.
 
 !!! note ""
-    Please don't use GitHub Issues if you have a [general question](https://github.com/photoprism/photoprism/discussions),
+    Don't use GitHub Issues if you have a [general question](https://github.com/photoprism/photoprism/discussions),
     need help, or an issue has not (yet) been clearly identified.

@@ -130,7 +130,7 @@ for errors and warnings. In case the application logs don't contain anything hel
 - [ ] You try to index a shared drive on a remote server, but the server is offline
 - [ ] The indexer has crashed because you didn't configure [at least 4 GB of swap](docker.md#adding-swap)
 - [ ] Somebody has deleted files without telling you
-- [ ] You are connected to the wrong server or CDN, or a DNS record has not been updated yet
+- [ ] You are connected to the wrong server, VPN, or CDN, or a DNS record has not been updated yet
 
 ### Broken Thumbnails ###
 
@@ -153,7 +153,7 @@ In case the application logs don't contain anything helpful:
 - [ ] Your proxy, router, or firewall has a request rate limit, so some requests fail
 - [ ] There are other network problems caused by a firewall, router, or unstable connection
 - [ ] An ad blocker or other plugins block requests (disable them or add an exception)
-- [ ] You are connected to the wrong server or CDN, or a DNS record has not been updated yet
+- [ ] You are connected to the wrong server, VPN, or CDN, or a DNS record has not been updated yet
 
 We also recommend checking [your Docker logs](docker.md#viewing-logs) for messages like *disk full*, *wrong permissions*, and *killed* as
 described above. If a service has been killed or otherwise automatically terminated, this points to a memory problem.
@@ -168,7 +168,7 @@ If videos do not play and/or you only see a white/black area when you open a vid
 - [ ] An ad blocker or other plugins block requests (disable them or add an exception)
 - [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder (check if the files are accessible)
 - [ ] There are network problems caused by a proxy, firewall, or unstable connection (try a direct connection)
-- [ ] You are connected to the wrong server or CDN, or a DNS record has not been updated yet
+- [ ] You are connected to the wrong server, VPN, or CDN, or a DNS record has not been updated yet
 
 We recommend that you check [your Docker logs](docker.md#viewing-logs) and [the browser console](browsers.md#getting-error-details)
 for messages related to *HTTP requests*, *permissions*, *security*, *FFmpeg*, *videos*, and *file conversion*.

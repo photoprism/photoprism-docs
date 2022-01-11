@@ -1,7 +1,7 @@
 # Using NGINX as Reverse Proxy
 
 !!! info "Getting Support"
-    In case you experience issues when using NGINX, such as failed uploads, [connection errors](../troubleshooting/index.md#connection-fails), [broken thumbnails](../troubleshooting/index.md#broken-thumbnails), and [video playback problems](../troubleshooting/index.md#videos-dont-play):
+    In case you experience issues when using [NGINX](https://www.nginx.com/), such as failed uploads, [connection errors](../troubleshooting/index.md#connection-fails), [broken thumbnails](../troubleshooting/index.md#broken-thumbnails), and [video playback problems](../troubleshooting/index.md#videos-dont-play):
 
     - Consider [asking the NGINX community for advice](https://www.nginx.com/support/) as we do not specialize in supporting their product, which is [known to be difficult](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+nginx) to configure properly
     - We recommend [using Traefik as reverse proxy](traefik.md) instead because it is easier and provides more convenience

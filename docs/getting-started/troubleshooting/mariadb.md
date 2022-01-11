@@ -19,11 +19,11 @@ server that is not based on our [default configuration](https://dl.photoprism.ap
 
 Note that your database may also use a different character set if you imported it from another server.
 Run this command in a terminal to see the current values of the collation and character set variables (change the root
-password `insecure` as specified in your `docker-compose.yml`):
+password `insecure` and database name `photoprism` as specified in your `docker-compose.yml`):
 
 ```bash
 echo "SHOW VARIABLES WHERE Variable_name LIKE 'character\_set\_%' OR Variable_name LIKE 'collation%';" | \
-docker-compose exec -T mariadb mysql -uroot -pinsecure
+docker-compose exec -T mariadb mysql -uroot -pinsecure photoprism
 ```
 
 #### Version Upgrade ####

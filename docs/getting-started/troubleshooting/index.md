@@ -168,7 +168,7 @@ If videos do not play and/or you only see a white/black area when you open a vid
 - [ ] An ad blocker or other plugins block requests (disable them or add an exception)
 - [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder (check if the files are accessible)
 - [ ] The browser cannot communicate properly with your server, e.g. because a [Reverse Proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
-- [ ] There are network problems caused by a proxy, firewall, or unstable connection (try a direct connection)
+- [ ] There are other network problems caused by a proxy, firewall, or unstable connection (try a direct connection)
 - [ ] You are connected to the wrong server, VPN, CDN, or a DNS record has not been updated yet
 
 We recommend that you check [your Docker logs](docker.md#viewing-logs) and [the browser console](browsers.md#getting-error-details)

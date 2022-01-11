@@ -50,7 +50,7 @@ In addition, [sponsors](../funding.md) receive direct [technical support](https:
 
 !!! note ""
     Don't use GitHub Issues if you have a [general question](https://github.com/photoprism/photoprism/discussions),
-    need help, or an issue has not (yet) been clearly identified. Before reporting a bug, try to [determine the cause of your problem](../getting-started/troubleshooting/index.md).
+    [need help](https://photoprism.app/contact), or an issue has not (yet) been clearly identified. Try to [determine the cause of your problem](../getting-started/troubleshooting/index.md) before submitting a bug report.
     Thank you! 💐
 
 ## Pull Requests

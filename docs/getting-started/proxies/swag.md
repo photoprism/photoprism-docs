@@ -94,7 +94,7 @@ If everything went well, you can now access photoprism on the subdomain you conf
     <b>Keep in mind to not have two photoprism containers with the same name!</b> 
     You could also change the config file of Swag with the right name in the proxy-confs directory.
 
-!!! tldr ""
+!!! tldr "Why use a reverse proxy?"
 	If you install PhotoPrism on a public server outside your home network, please always run it behind a secure
 	HTTPS reverse proxy. Your files and passwords will otherwise be transmitted in clear text and can be intercepted
 	by anyone, including your provider, hackers, and governments. Backup tools and file sync apps may refuse to

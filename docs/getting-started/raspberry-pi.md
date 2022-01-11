@@ -31,7 +31,7 @@ available at [dl.photoprism.app/docker](https://dl.photoprism.app/docker/).
       - apparmor:unconfined
   ```
 - If you install PhotoPrism on a public server outside your home network, please always run it behind a secure
-  HTTPS reverse proxy such as [Traefik](proxies/traefik.md), [Caddy](proxies/caddy-2.md), or [NGINX](proxies/nginx.md).
+  HTTPS reverse proxy such as [Traefik](proxies/traefik.md) or [Caddy](proxies/caddy-2.md).
   Your files and passwords will otherwise be transmitted in clear text and can be intercepted by anyone, 
   including your provider, hackers, and governments.
 

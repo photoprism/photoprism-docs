@@ -19,7 +19,7 @@ depending on your specific use case.
 
 !!! info "Installation Packages"
     Everyone is invited to [contribute by building and testing installation packages](https://docs.photoprism.app/developer-guide/)
-    for Linux distributions and other operating systems! We currently don't have the resources to do this,
+    for Linux distributions and other operating systems. We currently don't have the resources to do this,
     as new versions are released several times a month and the long list of dependencies would lead to an enormous
     testing effort. An [unofficial port](https://docs.photoprism.app/getting-started/freebsd/) is available for
     FreeBSD / FreeNAS users. Advanced users [can build and install](faq.md#building-from-source) PhotoPrism from the [publicly available source code](https://github.com/photoprism/photoprism).

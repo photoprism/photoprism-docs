@@ -86,7 +86,7 @@ such as `/photoprism/originals` and `~/Pictures`. It also searches for other res
 classification models, and frontend assets.
 
 If you use our [Docker Compose](docker-compose.md) example without modifications, pictures will be
-mounted from `~/Pictures` where `~` is a placeholder for your home directory:
+mounted from `~/Pictures` where `~` is a shortcut for your home directory:
 
 - `\user\username` on Windows
 - `/Users/username` on macOS

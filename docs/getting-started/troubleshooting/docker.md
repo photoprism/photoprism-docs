@@ -52,7 +52,7 @@ sudo docker-compose stop
 sudo docker-compose up -d
 ```
 
-Note that this will point the home directory placeholder `~` to `/root` in the `volumes:` section
+Note that this will point the home directory shortcut `~` to `/root` in the `volumes:` section
 of your `docker-compose.yml`.
 
 ### Viewing Logs ###

@@ -40,7 +40,7 @@ If you provide no database server credentials, a SQLite database file will be cr
     There is no default in case no password was provided. A minimum length of 4 characters is required.
 
 Commands on Linux may have to be prefixed with `sudo` when not running as root.
-Note that this will point the home directory placeholder `~` to `/root` in volume mounts.
+Note that this will point the home directory shortcut `~` to `/root` in volume mounts.
 Kernel security modules such as AppArmor and SELinux have been reported to cause
 [issues](troubleshooting/index.md).
 
@@ -69,7 +69,7 @@ PhotoPrism won't be able to see folders that have not been mounted. That's an im
 ##### /photoprism/originals #####
 
 The *originals* folder contains your original photo and video files.
-They are mounted from `~/Pictures` in the example above, where `~` is a placeholder for 
+They are mounted from `~/Pictures` in the example above, where `~` is a shortcut for 
 your home directory. Other folders accessible from the host may be [mounted](https://docs.docker.com/storage/bind-mounts/) instead, 
 including network drives. 
 

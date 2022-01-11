@@ -23,7 +23,7 @@ installed on your system. It is available for Mac, Linux, and Windows.
     ``` 
     
     Commands on Linux may have to be prefixed with `sudo` when not running as root.
-    Note that this will point the home directory placeholder `~` to `/root` in the `volumes:` 
+    Note that this will point the home directory shortcut `~` to `/root` in the `volumes:` 
     section of your `docker-compose.yml`. Kernel security modules such as AppArmor and SELinux 
     have been [reported to cause issues](troubleshooting/docker.md#kernel-security).
     Ensure that your server has [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured so that
@@ -112,7 +112,7 @@ PhotoPrism won't be able to see folders that have not been mounted. That's an im
 
 The *originals* folder contains your original photo and video files. 
 
-`~/Pictures` will be mounted by default, where `~` is a placeholder for your home directory:
+`~/Pictures` will be mounted by default, where `~` is a shortcut for your home directory:
 
 ```yaml
 volumes:

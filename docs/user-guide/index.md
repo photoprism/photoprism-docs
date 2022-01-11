@@ -23,7 +23,7 @@ your specific use case.
 
 ## Getting Support ##
 
-Before reporting a bug, please use our [Troubleshooting Checklists](../getting-started/troubleshooting/index.md)
+Before submitting a support request, please use our [Troubleshooting Checklists](../getting-started/troubleshooting/index.md)
 to determine the cause of your problem. If this doesn't help, or you have other questions:
 
 - you are welcome to ask in our [Community Chat](https://gitter.im/browseyourlife/community)
@@ -39,4 +39,4 @@ Think of "free software" as in "free speech," not as in "free beer". Thank you! 
 
 !!! note ""
     Don't use GitHub Issues if you have a [general question](https://github.com/photoprism/photoprism/discussions),
-    need help, or an issue has not (yet) been clearly identified.
+    [need help](https://photoprism.app/contact), or an issue has not (yet) been clearly identified.

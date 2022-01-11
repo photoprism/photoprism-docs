@@ -22,10 +22,10 @@ Variable                        | Parameter                  | Description
 
 Variable                        | Parameter                  | Description
 :------------------------------ |:-------------------------- |:-------------------------------------------
-`PHOTOPRISM_ORIGINALS_PATH`     | --originals-path PATH      | original media library PATH containing your photo and video collection
-`PHOTOPRISM_ORIGINALS_LIMIT`    | --originals-limit MB       | original media file size limit in MB (default: 1000)
-`PHOTOPRISM_IMPORT_PATH`        | --import-path PATH         | optional import PATH from which files can be added to originals
-`PHOTOPRISM_STORAGE_PATH`       | --storage-path PATH        | writable storage PATH for cache, database, and sidecar files
+`PHOTOPRISM_ORIGINALS_PATH`     | --originals-path PATH      | [storage PATH of your **original media files** (photos and videos)](docker-compose.md#photoprismoriginals)
+`PHOTOPRISM_ORIGINALS_LIMIT`    | --originals-limit MB       | file size limit in MB (default: 1000)
+`PHOTOPRISM_STORAGE_PATH`       | --storage-path PATH        | [**writable** storage PATH for cache, database, and sidecar files](docker-compose.md#photoprismstorage)
+`PHOTOPRISM_IMPORT_PATH`        | --import-path PATH         | [**optional** base PATH from which files can be imported to originals](docker-compose.md#photoprismimport)
 `PHOTOPRISM_SIDECAR_PATH`       | --sidecar-path PATH        | optional custom relative or absolute sidecar PATH
 `PHOTOPRISM_CACHE_PATH`         | --cache-path PATH          | optional custom cache PATH for sessions and thumbnail files
 `PHOTOPRISM_TEMP_PATH`          | --temp-path PATH           | optional custom temporary file PATH

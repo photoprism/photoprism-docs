@@ -5,7 +5,7 @@
     [Sponsors](../../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
     Before submitting a support request, try to determine the cause of your problem.
 
-If you have a frontend problem, it may be due to a bug or because your browser is incompatible:
+If you have a frontend problem, it can be due to a bug or because your browser is incompatible:
 
 - Nightly, test, and unofficial browser builds may not support certain features and standards
 - Not [all video formats](https://caniuse.com/?search=video%20format) can be [played with every browser](https://github.com/photoprism/photoprism/issues/707)

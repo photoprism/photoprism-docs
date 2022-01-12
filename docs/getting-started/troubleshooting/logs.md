@@ -19,7 +19,7 @@
    
     !!! note ""
         Only a limited number of messages are visible to reduce memory usage. You can see the same messages in the
-        [Docker logs](docker.md#viewing-logs). This can be more convenient if you want to search for older messages related
+        [Docker logs](docker.md#viewing-logs). This may be more convenient if you want to search for older messages related
         to a particular file or attach your full logs to a [support request](../../user-guide/index.md#getting-support).
 
     **Errors and Warnings**

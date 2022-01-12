@@ -96,15 +96,16 @@ this points to a memory problem.
 
 ### App Not Loading ###
 
-If the app doesn't load in your browser when you navigate to the server URL, first [check the browser console](browsers.md#getting-error-details) for helpful errors and warnings. Sometimes you just need to wait a moment, for example, if
-you are using a slow wireless connection or the server was started only a few seconds ago. In case this does not help:
+If the app doesn't load in your browser when you navigate to the server URL, you can [check the browser console](browsers.md#getting-error-details)
+for helpful errors and warnings. Sometimes you just need to wait a moment, for example, if you are using a slow wireless
+connection or the server was started only a few seconds ago. In case this does not help:
 
-- [ ] Your browser cannot communicate properly with the server, e.g. because a [Reverse Proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
-- [ ] HTTP security headers prevent the app from loading in a frame (override them)
+- [ ] You are using an [incompatible browser](browsers.md) (try another browser)
 - [ ] JavaScript is disabled in your browser settings, so you only see the splash screen (enable it)
 - [ ] JavaScript was disabled by a browser plugin (disable it or add an exception)
+- [ ] Your browser cannot communicate properly with the server, e.g. because a [Reverse Proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
+- [ ] HTTP security headers prevent the app from loading in a frame (override them)
 - [ ] An ad blocker or other plugins block requests (disable them or add an exception)
-- [ ] You are using an [incompatible browser](browsers.md) (try another browser)
 - [ ] There is a problem with your network connection (test if other sites work)
 - [ ] You are connected to the wrong server, VPN, CDN, or a DNS record has not been updated yet
 

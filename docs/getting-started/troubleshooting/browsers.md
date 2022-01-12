@@ -31,8 +31,9 @@ To test if you have a general problem that is not browser-specific, open the Web
 ### Getting Error Details ###
 
 If possible, please also include the error type, error message, and URL of the affected resource when
-[submitting a support request](../../user-guide/index.md#getting-support). You may find this information in
-the *browser console*. It is perfectly fine to take screenshots instead of writing the details down.
+[submitting a support request](../../user-guide/index.md#getting-support). For this purpose, check the
+browser console for warnings and errors as described below. It is perfectly fine to take screenshots
+instead of writing down the details.
 
 === "Chrome & Edge"
    

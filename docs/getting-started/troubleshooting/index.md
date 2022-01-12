@@ -96,11 +96,11 @@ this points to a memory problem.
 
 ### App Not Loading ###
 
-If you only see the logo when you navigate to the server URL and nothing else happens, even if you wait a moment:
+In case the app doesn't load in your browser when you navigate to the server URL, even if you wait a moment:
 
 - [ ] The browser cannot communicate properly with your server, e.g. because a [Reverse Proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
 - [ ] HTTP security headers prevent the app from loading in a frame (override them or wait for additional config options)
-- [ ] JavaScript is disabled in your browser settings (enable it)
+- [ ] JavaScript is disabled in your browser settings, so you only see the splash screen (enable it)
 - [ ] JavaScript was disabled by a browser plugin (disable it or add an exception)
 - [ ] An ad blocker or other plugins block requests (disable them or add an exception)
 - [ ] You are using an [incompatible browser](browsers.md) (try another browser)

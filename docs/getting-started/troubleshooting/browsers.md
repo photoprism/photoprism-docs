@@ -5,15 +5,15 @@
     [Sponsors](../../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
     Before submitting a support request, try to determine the cause of your problem.
 
-!!! note ""
-    We recommend going through the related [troubleshooting checklist](index.md#app-not-loading) if you only see the
-    logo and nothing else happens, even if you wait a moment.
+If you have a frontend problem, it may be due to a bug or because your browser is incompatible:
+
+- Nightly, test, and unofficial browser builds may not support certain features and standards
+- Not [all video formats](https://caniuse.com/?search=video%20format) can be [played with every browser](https://github.com/photoprism/photoprism/issues/707)
+
+We recommend going through our related [troubleshooting checklist](index.md#app-not-loading) in case the app doesn't
+load at all, even if you wait for a moment.
 
 ### Try Another Browser ###
-
-If you have a frontend problem, it may be due to a bug or because your browser is incompatible.
-In particular, nightly, unstable, and patent-free browser builds may not support certain
-features, standards, and [video formats](https://github.com/photoprism/photoprism/issues/707).
 
 To test if you have a general problem that is not browser-specific, open the Web UI in other browsers:
 
@@ -24,8 +24,8 @@ To test if you have a general problem that is not browser-specific, open the Web
 - Make a note in which browsers the problem occurs, as this will be helpful when submitting a support request
 
 !!! tldr ""
-    The user interface works with most modern browsers, and runs best on Chrome, Chromium, Safari, Firefox, and Edge.
-    Opera and Samsung Internet have been reported to be compatible as well. Due to limited resources, we can
+    The user interface works with most modern browsers, and runs best on [Chrome](https://www.google.com/chrome/), [Chromium](https://www.chromium.org/getting-involved/download-chromium), [Safari](https://www.apple.com/safari/), [Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release), and [Edge](https://www.microsoft.com/en-us/edge).
+    Opera and Samsung Internet have been reported to be compatible as well. Due to [limited resources](../../funding.md), we can
     not test every release with all browser types and versions.
 
 ### Getting Error Details ###

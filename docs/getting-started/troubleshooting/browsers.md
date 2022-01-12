@@ -35,7 +35,7 @@ If possible, please also include the error type, error message, and URL of the a
 browser console for warnings and errors as described below. It is perfectly fine to take screenshots
 instead of writing down the details.
 
-=== "Chrome & Edge"
+=== "Chrome, Chromium, and Edge"
    
     - Press ⌘+Option+J (Mac) or Ctrl+Shift+J (Windows, Linux, Chrome OS) to go directly to the Developer Tools
     - Or, navigate to *More tools* > *Developer tools* in the browser menu and open the *Console* tab

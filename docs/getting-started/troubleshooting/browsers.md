@@ -11,7 +11,7 @@ If you have a frontend problem, it can be due to a bug or because your browser i
 - Not [all video formats](https://caniuse.com/?search=video%20format) can be [played with every browser](https://github.com/photoprism/photoprism/issues/707)
 
 We recommend going through our related [troubleshooting checklist](index.md#app-not-loading) in case the app doesn't
-load at all, even if you wait for a moment.
+load at all.
 
 ### Try Another Browser ###
 

@@ -19,7 +19,7 @@ Before reporting a bug:
 - [ ] Check the logs for messages like *disk full*, *wrong permissions*, *no route to host*, *connection failed*, and *killed*; if a service has been killed or otherwise automatically terminated, this points to a [memory problem](docker.md#adding-swap)
 - [ ] Make sure you are using the correct protocol (http or https), port (default is 2342), and hostname or IP address
 (default is localhost)
-- [ ] Note that HTTP security headers will prevent the app from loading in a frame (override them or wait for additional config options)
+- [ ] Note that HTTP security headers will prevent the app from loading in a frame (override them)
 - [ ] Verify your computer meets the [system requirements](../index.md#system-requirements)
 - [ ] Go through the [checklist for fatal server errors](#fatal-server-errors)
 
@@ -96,17 +96,17 @@ this points to a memory problem.
 
 ### App Not Loading ###
 
-In case the app doesn't load in your browser when you navigate to the server URL, even if you wait a moment:
+If the app doesn't load in your browser when you navigate to the server URL, first [check the browser console](browsers.md#getting-error-details) for helpful errors and warnings. Sometimes you just need to wait a moment, for example, if
+you are using a slow wireless connection or the server was started only a few seconds ago. In case this does not help:
 
-- [ ] The browser cannot communicate properly with your server, e.g. because a [Reverse Proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
-- [ ] HTTP security headers prevent the app from loading in a frame (override them or wait for additional config options)
+- [ ] Your browser cannot communicate properly with the server, e.g. because a [Reverse Proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
+- [ ] HTTP security headers prevent the app from loading in a frame (override them)
 - [ ] JavaScript is disabled in your browser settings, so you only see the splash screen (enable it)
 - [ ] JavaScript was disabled by a browser plugin (disable it or add an exception)
 - [ ] An ad blocker or other plugins block requests (disable them or add an exception)
 - [ ] You are using an [incompatible browser](browsers.md) (try another browser)
 - [ ] There is a problem with your network connection (test if other sites work)
-
-We recommend that you [check the browser console](browsers.md#getting-error-details) for helpful errors and warnings.
+- [ ] You are connected to the wrong server, VPN, CDN, or a DNS record has not been updated yet
 
 ### Missing Pictures ###
 
@@ -149,7 +149,7 @@ In case the application logs don't contain anything helpful:
 - [ ] Files can't be opened, e.g. because the file system permissions have been changed
 - [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder
 - [ ] Some thumbnails could not be created because you didn't configure [at least 4 GB of swap](docker.md#adding-swap)
-- [ ] The browser cannot communicate properly with your server, e.g. because a [Reverse Proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
+- [ ] Your browser cannot communicate properly with the server, e.g. because a [Reverse Proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
 - [ ] Your proxy, router, or firewall has a request rate limit, so some requests fail
 - [ ] There are other network problems caused by a firewall, router, or unstable connection
 - [ ] An ad blocker or other plugins block requests (disable them or add an exception)
@@ -167,7 +167,7 @@ If videos do not play and/or you only see a white/black area when you open a vid
 - [ ] It is a large non-AVC video that needs to be transcoded first (wait or pre-transcode with the [convert command](http://localhost:8000/getting-started/docker-compose/#command-line-interface))
 - [ ] An ad blocker or other plugins block requests (disable them or add an exception)
 - [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder (check if the files are accessible)
-- [ ] The browser cannot communicate properly with your server, e.g. because a [Reverse Proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
+- [ ] Your browser cannot communicate properly with the server, e.g. because a [Reverse Proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
 - [ ] There are other network problems caused by a proxy, firewall, or unstable connection (try a direct connection)
 - [ ] You are connected to the wrong server, VPN, CDN, or a DNS record has not been updated yet
 

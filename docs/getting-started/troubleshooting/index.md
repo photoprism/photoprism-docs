@@ -165,7 +165,7 @@ If videos do not play and/or you only see a white/black area when you open a vid
 
 - [ ] You are using an [incompatible browser](browsers.md), e.g. without AVC support (try another browser)
 - [ ] AVC support or related JavaScript features have been disabled in your browser (check the settings and try another browser)
-- [ ] It is a large non-AVC video that needs to be transcoded first (wait or pre-transcode with the [convert command](http://localhost:8000/getting-started/docker-compose/#command-line-interface))
+- [ ] It is a large non-AVC video that needs to be transcoded first (wait or [run `photoprism convert` to pre-transcode videos](../docker-compose.md#command-line-interface))
 - [ ] An ad blocker or other plugins block requests (disable them or add an exception)
 - [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder (check if the files are accessible)
 - [ ] Your browser cannot communicate properly with the server, e.g. because a [Reverse Proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)

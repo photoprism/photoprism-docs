@@ -19,7 +19,6 @@ The [roadmap](https://github.com/photoprism/photoprism/projects/5) shows what ta
 what needs testing, and which features are going to be implemented next.
 
 Please give ideas you like a thumbs-up 👍  , so that we know what is most popular.
-Ideas backed by silver and gold [sponsors](../funding.md) will be prioritized as well.
 
 You are welcome to submit specific feature requests via [GitHub Issues](https://github.com/photoprism/photoprism/issues) 
 if you have verified that no similar [idea](https://github.com/photoprism/photoprism/labels/idea) or 
@@ -46,8 +45,7 @@ In addition, [sponsors](../funding.md) receive direct [technical support](https:
 
 !!! note ""
     Don't use GitHub Issues if you have a [general question](https://github.com/photoprism/photoprism/discussions),
-    [need help](https://photoprism.app/contact), or an issue has not (yet) been clearly identified. Try to [determine the cause of your problem](../getting-started/troubleshooting/index.md) before submitting a bug report.
-    Thank you! 💐
+    [need help](https://photoprism.app/contact), or an issue has not (yet) been clearly identified.
 
 ## Pull Requests
 

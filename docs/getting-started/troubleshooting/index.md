@@ -75,19 +75,19 @@ docker-compose up
 
 Fatal errors are often caused by one of the following conditions:
 
-- [ ] Your (virtual) server disk is full
+- [ ] Your (virtual) server [disk is full](docker.md#disk-space)
 - [ ] There is disk space left, but the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached
-- [ ] The storage folder is not writable or there are other filesystem permission issues
-- [ ] You have accidentally mounted the wrong folders
-- [ ] The server is low on memory
+- [ ] The storage folder is not writable or there are other [filesystem permission issues](docker.md#file-permissions)
+- [ ] You have accidentally [mounted the wrong folders](../docker-compose.md#volumes)
+- [ ] The [server is low on memory](../index.md#system-requirements)
 - [ ] You didn't configure [at least 4 GB of swap](docker.md#adding-swap)
 - [ ] The server CPU is overheating
 - [ ] The server has an outdated operating system that is not fully compatible
-- [ ] The database server is not available, [incompatible](../index.md#databases), or incorrectly configured
-- [ ] You've upgraded the MariaDB server version without running `mariadb-upgrade`
-- [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder
-- [ ] There are network problems caused by a proxy, firewall, or unstable connection
-- [ ] Kernel security modules such as [AppArmor](https://wiki.ubuntu.com/AppArmor) and [SELinux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) are blocking permissions
+- [ ] The [database server](mariadb.md) is not running, [incompatible](../index.md#databases), or misconfigured
+- [ ] You've [upgraded the MariaDB server](mariadb.md#version-upgrade) without running `mariadb-upgrade`
+- [ ] Files are [stored on an unreliable device such as a USB flash drive or a shared network folder](mariadb.md#corrupted-files)
+- [ ] There are network problems caused by a bad configuration, firewall, or unstable connection
+- [ ] [Kernel security modules](docker.md#kernel-security) such as [AppArmor](https://wiki.ubuntu.com/AppArmor) and [SELinux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) are blocking permissions
 - [ ] Your Raspberry Pi has not been configured according to our [recommendations](../raspberry-pi.md#system-requirements)
 
 We recommend checking [your Docker logs](docker.md#viewing-logs) for messages like *disk full*, *wrong permissions*, *no route to host*,

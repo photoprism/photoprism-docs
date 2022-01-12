@@ -37,10 +37,10 @@ Acceptance Criteria:
 ### Effectiveness > Efficiency ###
 
 !!! note ""
-    It is fundamentally the confusion between effectiveness and efficiency that stands between doing the right things and doing things right. There is surely nothing quite so useless as doing with great efficiency what should not be done at all.<br>— <cite>[Peter Drucker](https://en.wikipedia.org/wiki/Peter_Drucker)</cite>
+    It is fundamentally the confusion between effectiveness and efficiency that stands between doing the right things and doing things right. There is surely nothing quite so useless as doing with great efficiency what should not be done at all. — <cite>[Peter Drucker](https://en.wikipedia.org/wiki/Peter_Drucker)</cite>
 
 !!! note ""
-    Optimize for effectiveness before efficiency.<br>Optimize for value before cost.<br>— <cite>[Sam Briesemeister](https://twitter.com/systemalias/status/1480987512004919302)</cite>
+    Optimize for effectiveness before efficiency. Optimize for value before cost. — <cite>[Sam Briesemeister](https://twitter.com/systemalias/status/1480987512004919302)</cite>
 
 [![Feature Factory](https://dl.photoprism.app/img/diagrams/feature-factory.jpg)](https://twitter.com/johncutlefish/status/780102280162840576)
 

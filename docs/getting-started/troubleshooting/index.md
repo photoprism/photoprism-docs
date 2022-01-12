@@ -3,7 +3,7 @@
 !!! info ""
     You are welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
     [Sponsors](../../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
-    Before submitting a support request, try to determine the cause of your problem.
+    Before [submitting a support request](../../user-guide/index.md#getting-support), try to determine the cause of your problem.
 
 ### Connection Fails ###
 
@@ -111,8 +111,8 @@ connection or the server was started only a few seconds ago. In case this does n
 
 ### Missing Pictures ###
 
-If you have indexed your library and some images or videos are missing, first check *Library > Errors*
-for errors and warnings. In case the application logs don't contain anything helpful:
+If you have indexed your library and some images or videos are missing, first [check *Library > Errors* for errors and warnings](logs.md).
+In case the application logs don't contain anything helpful:
 
 - [ ] The pictures are in [Review](../../user-guide/organize/review.md) due to low quality or incomplete metadata
 - [ ] The [file type](../faq.md#what-media-file-types-are-supported) is generally unsupported
@@ -135,7 +135,7 @@ for errors and warnings. In case the application logs don't contain anything hel
 
 ### Broken Thumbnails ###
 
-If some pictures have broken or missing thumbnails, first check *Library > Errors* for errors and warnings.
+If some pictures have broken or missing thumbnails, first [check *Library > Errors* for errors and warnings](logs.md).
 In case the application logs don't contain anything helpful:
 
 - [ ] The issue can be resolved by reloading the page or clearing the browser cache

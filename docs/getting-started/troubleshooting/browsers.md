@@ -3,7 +3,7 @@
 !!! info ""
     You are welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
     [Sponsors](../../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
-    Before submitting a support request, try to determine the cause of your problem.
+    Before [submitting a support request](../../user-guide/index.md#getting-support), try to determine the cause of your problem.
 
 If you have a frontend problem, it can be due to a bug or because your browser is incompatible:
 
@@ -34,18 +34,30 @@ If possible, please also include the error type, error message, and URL of the a
 support request. You may find this information in the **browser console**. It is perfectly fine to take screenshots
 instead of writing the details down.
 
-#### Chrome, Chromium, and Edge ####
+=== "Chrome & Edge"
+   
+    - Press ⌘+Option+J (Mac) or Ctrl+Shift+J (Windows, Linux, Chrome OS) to go directly to the Developer Tools
+    - Or, navigate to *More tools* > *Developer tools* in the browser menu and open the *Console* tab
 
-- Press Command+Option+J (Mac) or Ctrl+Shift+J (Windows, Linux, Chrome OS) to go directly to the Developer Tools
-- Or, navigate to *More tools* > *Developer tools* in the browser menu and open the *Console* tab
+=== "Firefox"
 
-#### Firefox ####
+    - Press ⌘+Option+K (Mac) or Ctrl+Shift+K (Windows) to go directly to the Firefox Web Console panel
+    - Or, navigate to *Web Development* > *Web Console* in the menu and open the *Console* panel
 
-- Press Command+Option+K (Mac) or Ctrl+Shift+K (Windows) to go directly to the Firefox Web Console panel
-- Or, navigate to *Web Development* > *Web Console* in the menu and open the *Console* panel
+=== "Safari"
 
-!!! note ""
-    If you don't see any errors, try reloading the page, as the error may occur while the page is loading.
+    Before you can access the console in Safari, you first need to enable the *Develop* menu:
+
+    1. Choose Safari *Menu* > *Preferences* and select the *Advanced Tab*
+    2. Select "Show Develop menu in menu bar"
+
+    Once the *Develop* menu is enabled:
+
+    - Press Option+⌘+C to go directly to the *Javascript Console*
+    - Or, navigate to *Develop* > *Show Javascript Console* in the browser menu
+
+!!! tldr ""
+    In case you don't see any log messages, try reloading the page, as the problem may occur while the page is loading.
 
 *[UI]: User Interface
 *[URL]: Web Address

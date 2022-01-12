@@ -16,6 +16,7 @@ nav:
     - Getting Updates: getting-started/updates.md
     - Troubleshooting:
       - Checklists: getting-started/troubleshooting/index.md
+      - Logs:  getting-started/troubleshooting/logs.md
       - Docker: getting-started/troubleshooting/docker.md
       - MariaDB: getting-started/troubleshooting/mariadb.md
       - Browsers: getting-started/troubleshooting/browsers.md

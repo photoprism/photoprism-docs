@@ -81,7 +81,7 @@ This depends on your environment and [configuration](config-options.md). While s
 in the UI, changing the *originals* base folder requires a restart for security reasons.
 
 If you skip configuration and don't use one of our Docker images, PhotoPrism will attempt to find a photo library
-by searching a list of common [folder names](https://github.com/photoprism/photoprism/blob/develop/pkg/fs/dirs.go)
+by searching a [list of common folder names](https://github.com/photoprism/photoprism/blob/develop/pkg/fs/dirs.go)
 such as `/photoprism/originals` and `~/Pictures`. It also searches for other resources such as external applications,
 classification models, and frontend assets.
 
@@ -126,7 +126,7 @@ installation and upgrades. It saves our team a lot of time that we can then spen
 #### Installation Packages ####
 
 Everyone is invited to [contribute by building and testing standalone packages](https://docs.photoprism.app/developer-guide/)
-for Linux distributions and other operating systems. We currently don't have the resources to do this,
+for Linux distributions and other operating systems. We currently [don't have the resources](../funding.md) to do this,
 as new versions are released several times a month and the long list of dependencies would lead to an enormous
 testing effort. An [unofficial port](https://docs.photoprism.app/getting-started/freebsd/) is available for
 FreeBSD / FreeNAS users.

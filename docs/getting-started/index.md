@@ -26,7 +26,7 @@ depending on your specific use case.
 
 !!! note ""
     Everyone is invited to [contribute by building and testing standalone packages](https://docs.photoprism.app/developer-guide/)
-    for Linux distributions and other operating systems. We currently don't have the resources to do this,
+    for Linux distributions and other operating systems. We currently [don't have the resources](../funding.md) to do this,
     as new versions are released several times a month and the long list of dependencies would lead to an enormous
     testing effort. An [unofficial port](https://docs.photoprism.app/getting-started/freebsd/) is available for
     FreeBSD / FreeNAS users. Advanced users [can build and install](faq.md#building-from-source) PhotoPrism from the [publicly available source code](https://github.com/photoprism/photoprism).
@@ -64,10 +64,9 @@ Beyond these minimum requirements, the amount of RAM should match the number of 
 
 #### Browsers ####
 
-Our Web UI works with most modern browsers, and runs best on Chrome, Chromium, Safari, Firefox, and Edge.
+Our Web UI works with most modern browsers, and runs best on [Chrome](https://www.google.com/chrome/), [Chromium](https://www.chromium.org/getting-involved/download-chromium), [Safari](https://www.apple.com/safari/), [Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release), and [Edge](https://www.microsoft.com/en-us/edge).
 Opera and Samsung Internet have been reported to be compatible as well.
-Note that not all [video formats](https://github.com/photoprism/photoprism/issues/707) may be played with 
-every browser.
+Note that not [all video formats](https://caniuse.com/?search=video%20format) can be [played with every browser](https://github.com/photoprism/photoprism/issues/707).
 
 #### Databases ####
 

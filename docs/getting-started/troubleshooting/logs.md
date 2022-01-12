@@ -9,7 +9,7 @@
 
     Make sure *Logs* is enabled under *Settings* > *General* so you can see log messages in the Web UI.
 
-    #### Live Logs ####
+    **Live Logs**
 
     The continuously updated live logs in *Library* > *Logs* are especially useful for diagnosing indexing and import issues,
     but also display other types of logs (depending on the [log level](../config-options.md#basic-settings)):
@@ -22,7 +22,7 @@
         [Docker logs](docker.md#viewing-logs). This can be more convenient if you want to search for older messages related
         to a particular file or attach your full logs to a [support request](../../user-guide/index.md#getting-support).
 
-    #### Errors and Warnings ####
+    **Errors and Warnings**
 
     1. Expand the main navigation
     2. Open the *Library* sub navigation
@@ -38,17 +38,17 @@
     !!! tldr ""
         In case you don't see any log messages, try reloading the page, as the problem may occur while the page is loading.
     
-    #### Chrome, Chromium, and Edge ####
+    **Chrome, Chromium, and Edge**
 
     - Press ⌘+Option+J (Mac) or Ctrl+Shift+J (Windows, Linux, Chrome OS) to go directly to the Developer Tools
     - Or, navigate to *More tools* > *Developer tools* in the browser menu and open the *Console* tab
 
-    #### Firefox ####
+    **Firefox**
 
     - Press ⌘+Option+K (Mac) or Ctrl+Shift+K (Windows) to go directly to the Firefox Web Console panel
     - Or, navigate to *Web Development* > *Web Console* in the menu and open the *Console* panel
 
-    #### Safari ####
+    **Safari**
 
     Before you can access the console in Safari, you first need to enable the *Develop* menu:
 

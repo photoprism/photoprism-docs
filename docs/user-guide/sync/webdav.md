@@ -1,12 +1,14 @@
 # Connecting via WebDAV #
 
-WebDAV clients, like Microsoft’s Windows Explorer or Apple's Finder,
-can connect directly to PhotoPrism.
-This mounts the *originals folder* as a network drive and allows you to open, edit, and delete
-files from your computer or smartphone as if they were local.
+WebDAV-compatible apps and clients such as Microsoft's Windows Explorer and Apple's Finder can connect directly to PhotoPrism.
+
+This mounts the *originals* folder as a network drive, allowing you to open, edit, and delete files from a remote device
+as if they were local.
 
 !!! tldr ""
-    For security reasons, the built-in WebDAV server is disabled when running in [public mode](../../getting-started/config-options.md) without authentication.
+    You can disable WebDAV in [Advanced Settings](../settings/advanced.md). For security reasons, the built-in WebDAV
+    server is automatically disabled when running in [public mode](../../getting-started/config-options.md) without
+    authentication.
 
 !!! note ""
     It is also possible to [sync files with external WebDAV servers](../settings/sync.md) such as ownCloud or other PhotoPrism instances.

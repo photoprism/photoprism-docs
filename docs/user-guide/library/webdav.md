@@ -1,14 +1,18 @@
 # WebDAV File Upload #
 
 !!! tldr ""
-    For security reasons, the built-in WebDAV server is disabled when running in [public mode](../../getting-started/config-options.md) without authentication.
+    You can disable WebDAV in [Advanced Settings](../settings/advanced.md). For security reasons, the built-in WebDAV
+    server is automatically disabled when running in [public mode](../../getting-started/config-options.md) without
+    authentication.
+
+WebDAV-compatible apps and clients such as Microsoft's Windows Explorer and Apple's Finder can connect directly
+to PhotoPrism, allowing you to open, edit, and delete files from your computer as if they were local.
 
 You can use WebDAV-compatible apps, including Microsoft's Windows Explorer and Apple's Finder, 
 to add files to your *originals* and *import* folders from a remote computer or mobile device.
+Follow the [instructions to learn how to connect](../sync/webdav.md).
 
-Follow the [instructions](../sync/webdav.md) to learn how to connect.
-
-You can start [importing or indexing](index.md) as usual after files have been transferred
+You can [start to index or import](index.md) as usual after files have been transferred
 to your library.
 
 !!! tip ""

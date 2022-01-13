@@ -4,11 +4,12 @@ System [config options](../../getting-started/config-options.md) such as the ima
 on the advanced settings page. You can also disable specific features and enable the debug or read-only mode.
 
 !!! tldr ""
-    For security reasons, the advanced settings page is disabled and hidden when running in [public mode](../../getting-started/config-options.md).
+    For security reasons, the advanced settings page is disabled and hidden when running in [public mode](../../getting-started/config-options.md#basic-settings). Changing [config options](../../getting-started/config-options.md)
+    remains possible directly in the service configuration, via config file, and with command parameters.
 
 !!! note ""
-    Changing advanced settings **always requires a restart** to take effect. Selecting a different thumbnail
-    quality or size won't replace existing thumbnails. You may regenerate them using the 
+    Changing advanced settings always **requires a restart** to take effect. Selecting a different thumbnail
+    quality or size won't replace existing thumbnails. You can regenerate them using the 
     [command-line interface](https://docs.photoprism.app/getting-started/docker-compose/#command-line-interface).
 
 ![](img/advanced-settings.jpg)

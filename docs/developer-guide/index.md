@@ -12,7 +12,7 @@ The [public roadmap](https://github.com/photoprism/photoprism/projects/5) shows 
 what needs testing, and which features are going to be implemented next.
 
 You are welcome to [submit specific feature requests](issues.md) if you have verified that no similar
-[idea](https://github.com/photoprism/photoprism/labels/idea) or[todo](https://github.com/photoprism/photoprism/labels/todo)
+[idea](https://github.com/photoprism/photoprism/labels/idea) or [todo](https://github.com/photoprism/photoprism/labels/todo)
 already exists. Give ideas you like a thumbs-up 👍  , so that we know what is most popular.
 
 !!! example ""

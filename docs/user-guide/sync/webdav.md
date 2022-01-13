@@ -13,7 +13,7 @@ as if they were local.
 !!! note ""
     It is also possible to [sync files with external WebDAV servers](../settings/sync.md) such as ownCloud or other PhotoPrism instances.
 
-The originals folder URL for public servers is:
+The *originals* folder URL for a server exposed to the public Internet is:
 
 ```
 https://admin@example.com/originals/

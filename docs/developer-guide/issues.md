@@ -44,16 +44,3 @@ Optimize for effectiveness before efficiency.
     It is fundamentally the confusion between effectiveness and efficiency that stands between doing the right things and doing things right. There is surely nothing quite so useless as doing with great efficiency what should not be done at all. — <cite>[Peter Drucker](https://en.wikipedia.org/wiki/Peter_Drucker)</cite>
 
 [![Feature Factory](https://dl.photoprism.app/img/diagrams/feature-factory.jpg)](https://twitter.com/johncutlefish/status/780102280162840576)
-
-### Upcoming Features and Improvements ###
-
-Our [public roadmap](https://github.com/photoprism/photoprism/projects/5) shows what tasks are in progress,
-what needs testing, and which features are going to be implemented next.
-
-You are welcome to submit specific feature requests via [GitHub Issues](https://github.com/photoprism/photoprism/issues)
-if you have verified that no similar [idea](https://github.com/photoprism/photoprism/labels/idea) or
-[todo](https://github.com/photoprism/photoprism/labels/todo) already exists. Give ideas you like a thumbs-up 👍  ,
-so that we know what is most popular.
-
-!!! example ""
-    Our vision is to provide the most user- and privacy-friendly solution to keep your pictures organized and accessible.

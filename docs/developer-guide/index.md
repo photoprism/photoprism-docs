@@ -31,7 +31,7 @@ to get regular updates, connect with other contributors, and discuss your ideas.
 
 An important part of our journey is to explore new ways in product development and build better software through
 simplicity and consistent use of community feedback. You are [welcome to share your thoughts](../contact.md) with us,
-especially if you haven't actively contributed yet.
+also if you are "just" a user and haven't actively contributed yet.
 
 ## Creating Bug Reports ##
 

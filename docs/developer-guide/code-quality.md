@@ -32,9 +32,12 @@ Advantages of the bottom-up approach are component reusability, agility, and tes
     That was because the “top-down” method of program design hadn't been invented yet, and Mel wouldn't have used it anyway. 
     He wrote the innermost parts of his program loops first. — <cite>[The Story of Mel](http://www.catb.org/jargon/html/story-of-mel.html)</cite>
 
-## Be Careful with Caching ##
+## Caching Is Hard ##
 
-There are only two hard things in Computer Science: cache invalidation and naming things.
+There are only two hard things in Computer Science:
+
+- [cache invalidation](https://msol.io/blog/tech/youre-probably-wrong-about-caching/)
+- and naming things
 
 !!! note ""
     A cache is just a memory leak you haven't met yet. — <cite>Dave Cheney</cite>

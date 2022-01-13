@@ -121,7 +121,7 @@ need to use the exact same versions, so it's possible to replace packages with w
 
 Note we don't have the resources to provide private users with dependencies and [TensorFlow libraries](https://dl.photoprism.app/tensorflow/) for their personal
 environments. We therefore recommend learning Docker if your operating system supports it. Docker vastly simplifies
-installation and upgrades. It saves our team a lot of time that we can then spend [more effectively](../developer-guide/issues.md#effectiveness-efficiency), see next question.
+installation and upgrades. It saves our team a lot of time that we can then spend [more effectively](../developer-guide/issues.md#effectiveness-efficiency), see [next question](#why-are-you-using-docker).
 
 #### Installation Packages ####
 

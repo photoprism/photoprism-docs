@@ -125,11 +125,10 @@ installation and upgrades. It saves our team a lot of time that we can then spen
 
 #### Installation Packages ####
 
-Everyone is invited to [contribute by building and testing standalone packages](https://docs.photoprism.app/developer-guide/)
-for Linux distributions and other operating systems. We currently [don't have the resources](../funding.md) to do this,
-as new versions are released several times a month and the long list of dependencies would lead to an enormous
-testing effort. An [unofficial port](https://docs.photoprism.app/getting-started/freebsd/) is available for
-FreeBSD / FreeNAS users.
+You are invited to [contribute by building and testing standalone packages](https://docs.photoprism.app/developer-guide/)
+for Linux distributions and other operating systems. New versions are released several times a month, and testing
+the long list of dependencies in all environments would [absorb much of our resources needed for development](../funding.md).
+An [unofficial port](https://docs.photoprism.app/getting-started/freebsd/) is available for FreeBSD / FreeNAS users.
 
 ### Why are you using Docker? ###
 

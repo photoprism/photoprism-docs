@@ -44,9 +44,9 @@ There are only two hard things in Computer Science:
 
 ## Opportunistic Refactoring ##
 
-While we know this is difficult when working with a distributed team, branches, and pull requests, we encourage
-all contributors to refactor when they see a specific problem - ideally while you are working on the same code
-anyway to implement a feature or improvement.
+While we know this is difficult when working with a distributed team, branches, and pull requests, we encourage all
+contributors to refactor when they see a specific problem. Ideally when they are working on the same code anyway to
+implement a feature or improvement.
 
 This also helps verify that the changes are helpful and avoids the need for additional refactoring iterations.
 

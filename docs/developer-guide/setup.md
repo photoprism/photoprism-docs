@@ -1,4 +1,4 @@
-# Development Environment
+# Setting Up Your Development Environment
 
 Before you start, make sure you have [Git](https://git-scm.com/downloads) and [Docker](https://store.docker.com/search?q=docker&type=edition&offering=community) installed on your system.
 Instead of using Docker, you can create your own development environment based on our

@@ -6,11 +6,12 @@
     authentication.
 
 WebDAV-compatible apps and clients such as Microsoft's Windows Explorer and Apple's Finder can connect directly
-to PhotoPrism, allowing you to open, edit, and delete files from a remote device as if they were local.
-Follow the [instructions to learn how to connect](../sync/webdav.md).
+to PhotoPrism, allowing you to open, edit, and delete files from a remote device as if they were local:
 
-You can [start to index or import](index.md) as usual after files have been transferred
-to your library.
+↪ [Connecting via WebDAV](../sync/webdav.md)
+
+After files have been transferred, you can [index](../library/index.md) or [import](../library/import.md) them as usual.
+By default, indexing and importing start automatically after a safety delay when files have been uploaded using WebDAV.
 
 !!! tip ""
     You can use also WebDAV to download files from your library. Simply connect to 

@@ -5,6 +5,9 @@ WebDAV-compatible apps and clients such as Microsoft's Windows Explorer and Appl
 This mounts the *originals* folder as a network drive, allowing you to open, edit, and delete files from a remote device
 as if they were local.
 
+After files have been transferred, you can [index](../library/index.md) or [import](../library/import.md) them as usual.
+By default, indexing and importing start automatically after a safety delay when files have been uploaded using WebDAV.
+
 !!! tldr ""
     You can disable WebDAV in [Advanced Settings](../settings/advanced.md). For security reasons, the built-in WebDAV
     server is automatically disabled when running in [public mode](../../getting-started/config-options.md) without
@@ -30,7 +33,7 @@ Please replace *example.com* with your actual domain.
 The slash at the end is important and cannot be omitted.
 
 When connecting, you'll have to authenticate using your regular password.
-It will also change when you update it in *Settings*. The user name is `admin`.
+It will also change when you update it in *Settings*. The username is `admin`.
 
 !!! info ""
     You can also connect to the import folder by replacing `originals/` with `import/` in the URL.

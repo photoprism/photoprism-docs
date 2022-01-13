@@ -36,8 +36,8 @@ Advantages of the bottom-up approach are component reusability, agility, and tes
 
 There are only two hard things in Computer Science:
 
-- [cache invalidation](https://msol.io/blog/tech/youre-probably-wrong-about-caching/)
-- and naming things
+1. [cache invalidation](https://msol.io/blog/tech/youre-probably-wrong-about-caching/)
+2. and naming things
 
 !!! note ""
     A cache is just a memory leak you haven't met yet. — <cite>Dave Cheney</cite>

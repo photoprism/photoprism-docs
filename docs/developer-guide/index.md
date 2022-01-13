@@ -11,10 +11,9 @@ We welcome contributions of any kind, including blog posts, tutorials, testing, 
 The [public roadmap](https://github.com/photoprism/photoprism/projects/5) shows what tasks are in progress, 
 what needs testing, and which features are going to be implemented next.
 
-You are welcome to submit specific feature requests via [GitHub Issues](https://github.com/photoprism/photoprism/issues) 
-if you have verified that no similar [idea](https://github.com/photoprism/photoprism/labels/idea) or 
-[todo](https://github.com/photoprism/photoprism/labels/todo) already exists. Give ideas you like a thumbs-up 👍  ,
-so that we know what is most popular.
+You are welcome to [submit specific feature requests](issues.md) if you have verified that no similar
+[idea](https://github.com/photoprism/photoprism/labels/idea) or[todo](https://github.com/photoprism/photoprism/labels/todo)
+already exists. Give ideas you like a thumbs-up 👍  , so that we know what is most popular.
 
 !!! example ""
     Our vision is to provide the most user- and privacy-friendly solution to keep your pictures organized and accessible.
@@ -28,16 +27,20 @@ to get regular updates, connect with other contributors, and discuss your ideas.
     Don't use GitHub Issues if you have a [general question](https://github.com/photoprism/photoprism/discussions),
     [need help](https://photoprism.app/contact), or an issue has not (yet) been clearly identified.
 
+## We Love Feedback ##
+
+An important part of our journey is to explore new ways in product development and build better software through
+simplicity and consistent use of community feedback. You are [welcome to share your thoughts](../contact.md) with us,
+especially if you haven't actively contributed yet.
+
 ## Creating Bug Reports ##
 
 Before reporting a bug, please use our [Troubleshooting Checklists](../getting-started/troubleshooting/index.md)
-to determine the cause of your problem. If you have a general question, need help, or an issue has not (yet) been clearly
+to determine the cause of your problem. If you have a general question, need help, or an issue has not been clearly
 identified:
 
 - you are welcome to ask in our [Community Chat](https://gitter.im/browseyourlife/community)
 - and post your question in [GitHub Discussions](https://github.com/photoprism/photoprism/discussions)
-
-In addition, [sponsors](../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
 
 !!! tldr ""
     When reporting a problem, always include the software versions you are using and [other information about your environment](https://github.com/photoprism/photoprism/blob/develop/.github/ISSUE_TEMPLATE/bug_report.md) such as [browser](../getting-started/troubleshooting/browsers.md), browser plugins, operating system, storage type, memory size, and processor.
@@ -52,9 +55,3 @@ Issues labeled [help wanted](https://github.com/photoprism/photoprism/labels/hel
     Simple, elegant solutions are [more effective](issues.md#effectiveness-efficiency), but they are harder to find than complex ones, and they require more
     time, which we too often believe to be unaffordable. — <cite>Niklaus Wirth, Feb 1985</cite>
 
-## We Love Feedback ##
-
-An important part of our journey is to explore new ways in product development and build better software through simplicity
-and consistent use of community feedback.
-
-You are [welcome to share your experience](../contact.md) with us, in particular if you have not yet actively contributed.

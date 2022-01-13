@@ -86,9 +86,9 @@ may refuse to connect as well.
 Before submitting a support request, please use our [Troubleshooting Checklists](../getting-started/troubleshooting/index.md)
 to determine the cause of your problem. If this doesn't help, or you have other questions:
 
-- you are welcome to ask in our [Community Chat](https://gitter.im/browseyourlife/community) 
+- you are welcome to join us on [Reddit](https://www.reddit.com/r/photoprism/)
 - post your question in [GitHub Discussions](https://github.com/photoprism/photoprism/discussions)
-- and join us on [Reddit](https://www.reddit.com/r/photoprism/)
+- ask in our [Community Chat](https://gitter.im/browseyourlife/community)
 
 In addition, [sponsors](../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
 

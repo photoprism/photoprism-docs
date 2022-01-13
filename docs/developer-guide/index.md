@@ -51,4 +51,10 @@ Our step-by-step guide explains how to submit [pull requests](pull-requests.md).
 
 !!! quote ""
     Simple, elegant solutions are [more effective](issues.md#effectiveness-efficiency), but they are harder to find than complex ones, and they require more
-    time, which we too often believe to be unaffordable. — Niklaus Wirth, Feb 1985
+    time, which we too often believe to be unaffordable. — <cite>Niklaus Wirth, Feb 1985</cite>
+
+## Share Your Experience ##
+
+Part of our journey is to find better ways to organize product development, for example through simplicity
+and consistent use of community feedback. Please [share your experiences](../contact.md) with us, in particular if you have
+not yet actively contributed.

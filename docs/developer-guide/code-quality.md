@@ -4,7 +4,7 @@
     Code quality has a practical impact on both your agility and the cost of development. 
     You can’t change buggy code fast enough to be truly agile. Existing bugs can easily 
     increase dev costs (and time) by 10x. You can't afford not to fix them.
-    — [Allen Holub](https://twitter.com/allenholub/status/1073738216140791808)
+    — <cite>[Allen Holub](https://twitter.com/allenholub/status/1073738216140791808)</cite>
 
 ## Premature Optimization ##
 
@@ -15,7 +15,7 @@ when you really need to.
 Maintaining small amounts of duplicate code is much easier and less burdensome than choosing the wrong abstraction.
 
 !!! note ""
-    Premature optimization is the root of all evil. — Donald Knuth
+    Premature optimization is the root of all evil. — <cite>Donald Knuth</cite>
 
 ## Bottom-Up Development ##
 
@@ -30,7 +30,7 @@ Advantages of the bottom-up approach are component reusability, agility, and tes
 !!! note ""
     I compared Mel's hand-optimized programs with the same code massaged by the optimizing assembler program, and Mel's always ran faster.
     That was because the “top-down” method of program design hadn't been invented yet, and Mel wouldn't have used it anyway. 
-    He wrote the innermost parts of his program loops first. — [The Story of Mel](http://www.catb.org/jargon/html/story-of-mel.html)
+    He wrote the innermost parts of his program loops first. — <cite>[The Story of Mel](http://www.catb.org/jargon/html/story-of-mel.html)</cite>
 
 ## Be Careful with Caching ##
 
@@ -56,7 +56,7 @@ You have to go slow before you can go fast. Keep it simple. Done is better than 
 !!! note ""
     Feel free to think ahead, just don't code ahead. But also, don't feel the need to decide so many 
     details ahead. Learn enough to get started and build only what you need.
-    — [J. B. Rainsberger](https://twitter.com/jbrains/status/1064212803542818816)
+    — <cite>[J. B. Rainsberger](https://twitter.com/jbrains/status/1064212803542818816)</cite>
 
 ## Test Coverage ##
 

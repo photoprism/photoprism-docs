@@ -1,22 +1,23 @@
 # Issues
 
 We use GitHub issues for managing [bugs](https://github.com/photoprism/photoprism/labels/bug), 
-[ideas](https://github.com/photoprism/photoprism/labels/idea), 
-[todos](https://github.com/photoprism/photoprism/labels/todo), and 
-[epics](https://github.com/photoprism/photoprism/labels/epic) (collection of todos).
+[ideas](https://github.com/photoprism/photoprism/labels/idea),
+and [todos](https://github.com/photoprism/photoprism/labels/todo).
  
 Issues labeled [help wanted](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) / [easy](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3Aeasy) can be good (first) contributions.
 Reach out if you're unsure, or would like to work on something else.
  
-### Roadmap ###
+### Development Roadmap ###
 
-Our [roadmap](https://github.com/photoprism/photoprism/projects/5) shows what tasks are in progress, 
+Our [public roadmap](https://github.com/photoprism/photoprism/projects/5) shows what tasks are in progress,
 what needs testing, and which features are going to be implemented next.
 
-Please give ideas you like a thumbs-up 👍  , so that we know what is most popular.
-Ideas backed by silver and gold [sponsors](../funding.md) will be prioritized as well.
+You are welcome to submit specific feature requests via [GitHub Issues](https://github.com/photoprism/photoprism/issues)
+if you have verified that no similar [idea](https://github.com/photoprism/photoprism/labels/idea) or
+[todo](https://github.com/photoprism/photoprism/labels/todo) already exists. Give ideas you like a thumbs-up 👍  ,
+so that we know what is most popular.
 
-### User Stories ###
+### How to Write User Stories ###
 
 Start the description of new ideas and todos with a [user story](https://en.wikipedia.org/wiki/User_story) similar to this: 
 
@@ -44,13 +45,8 @@ Acceptance Criteria:
 
 [![Feature Factory](https://dl.photoprism.app/img/diagrams/feature-factory.jpg)](https://twitter.com/johncutlefish/status/780102280162840576)
 
-### Developer Chat ###
+### Share Your Experience ###
 
-[![Community Chat](https://img.shields.io/badge/community%20chat-on%20gitter-4aa087.svg)](https://gitter.im/browseyourlife/community)
-
-Please add the outcomes of important discussions from chat sessions to our docs or related GitHub issues, 
-so that the information doesn't get lost.
-
-### Feedback ###
-
-Part of this project is to find better ways of organizing product development, in particular by embracing simplicity and consistently leveraging community feedback. Please [share your experience](https://goo.gl/forms/mwDqrqhN9TY50c2Z2) with us, especially if you haven't actively contributed yet.
+Part of our journey is to find better ways to organize product development, for example through simplicity
+and consistent use of community feedback. Please [share your experiences](../contact.md) with us, in particular if you have
+not yet actively contributed.

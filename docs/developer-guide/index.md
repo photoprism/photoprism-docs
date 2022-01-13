@@ -8,7 +8,7 @@ We welcome contributions of any kind, including blog posts, tutorials, testing, 
 
 ## Upcoming Features and Improvements ##
 
-Our [public roadmap](https://github.com/photoprism/photoprism/projects/5) shows what tasks are in progress, 
+The [public roadmap](https://github.com/photoprism/photoprism/projects/5) shows what tasks are in progress, 
 what needs testing, and which features are going to be implemented next.
 
 You are welcome to submit specific feature requests via [GitHub Issues](https://github.com/photoprism/photoprism/issues) 
@@ -28,7 +28,7 @@ to get regular updates, connect with other contributors, and discuss your ideas.
     Don't use GitHub Issues if you have a [general question](https://github.com/photoprism/photoprism/discussions),
     [need help](https://photoprism.app/contact), or an issue has not (yet) been clearly identified.
 
-## Reporting Bugs ##
+## Creating Bug Reports ##
 
 Before reporting a bug, please use our [Troubleshooting Checklists](../getting-started/troubleshooting/index.md)
 to determine the cause of your problem. If you have a general question, need help, or an issue has not (yet) been clearly
@@ -42,7 +42,7 @@ In addition, [sponsors](../funding.md) receive direct [technical support](https:
 !!! tldr ""
     When reporting a problem, always include the software versions you are using and [other information about your environment](https://github.com/photoprism/photoprism/blob/develop/.github/ISSUE_TEMPLATE/bug_report.md) such as [browser](../getting-started/troubleshooting/browsers.md), browser plugins, operating system, storage type, memory size, and processor.
 
-## Pull Requests
+## Sending Pull Requests ##
 
 Issues labeled [help wanted](https://github.com/photoprism/photoprism/labels/help%20wanted) /
 [easy](https://github.com/photoprism/photoprism/labels/easy) can be good (first) contributions.

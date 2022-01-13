@@ -13,8 +13,8 @@ By default, indexing and importing start automatically after a safety delay when
     server is automatically disabled when running in [public mode](../../getting-started/config-options.md) without
     authentication.
 
-!!! tip ""
-    You can use also WebDAV to download files from your library. Simply connect to 
+!!! note ""
+    You can also use WebDAV to download files from your library: Simply connect to 
     `http://server-ip:2342/originals/` (local server without HTTPS) or 
-    `https://yourdomain/originals/` (public server with HTTPS enabled), and copy the files to 
+    `https://yourdomain/originals/` (public server with HTTPS enabled), and then copy the files to 
     a folder on your local device.

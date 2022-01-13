@@ -1,6 +1,6 @@
 # Connecting via WebDAV #
 
-WebDAV-compatible apps and clients such as [PhotoSync](https://photoprism.app/partners), Microsoft's Windows Explorer,
+WebDAV-compatible apps and clients such as [PhotoSync](mobile-devices.md), Microsoft's Windows Explorer,
 and Apple's Finder can connect directly to PhotoPrism.
 
 This mounts the *originals* and/or *import* folder as a network drive, allowing you to open, edit, and delete files from a remote device

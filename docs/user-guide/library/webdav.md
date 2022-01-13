@@ -1,6 +1,6 @@
 # WebDAV File Upload #
 
-WebDAV-compatible apps and clients such as [PhotoSync](https://photoprism.app/partners), Microsoft's Windows Explorer,
+WebDAV-compatible apps and clients such as [PhotoSync](../sync/mobile-devices.md), Microsoft's Windows Explorer,
 and Apple's Finder can connect directly to PhotoPrism:
 
 ↪ [Connecting via WebDAV](../sync/webdav.md)

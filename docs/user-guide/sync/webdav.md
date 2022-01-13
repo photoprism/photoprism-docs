@@ -16,6 +16,8 @@ By default, indexing and importing start automatically after a safety delay when
 !!! note ""
     It is also possible to [sync files with external WebDAV servers](../settings/sync.md) such as ownCloud or other PhotoPrism instances.
 
+## Server URL ##
+
 The *originals* folder URL for a server exposed to the public Internet is:
 
 ```
@@ -50,7 +52,7 @@ http://admin@localhost:2342/originals/
     like [FolderSync](https://www.tacit.dk/foldersync/faq/#i-can-not-connect-to-a-non-https-webdav-server-why)
     may refuse to connect as well.
 
-## Connect to a WebDAV Server##
+## Connect to a WebDAV Server ##
 
 === "macOS"
 

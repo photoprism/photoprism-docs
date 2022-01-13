@@ -52,8 +52,9 @@ Issues labeled [help wanted](https://github.com/photoprism/photoprism/labels/hel
     Simple, elegant solutions are [more effective](issues.md#effectiveness-efficiency), but they are harder to find than complex ones, and they require more
     time, which we too often believe to be unaffordable. — <cite>Niklaus Wirth, Feb 1985</cite>
 
-## Share Your Experience ##
+## We Love Feedback ##
 
-Part of our journey is to find better ways to organize product development, for example through simplicity
-and consistent use of community feedback. Please [share your experiences](../contact.md) with us, in particular if you have
-not yet actively contributed.
+An important part of our journey is to explore new ways in product development and build better software through simplicity
+and consistent use of community feedback.
+
+You are [welcome to share your experience](../contact.md) with us, in particular if you have not yet actively contributed.

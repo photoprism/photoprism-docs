@@ -54,9 +54,3 @@ Acceptance Criteria:
     Optimize for effectiveness before efficiency. Optimize for value before cost. — <cite>[Sam Briesemeister](https://twitter.com/systemalias/status/1480987512004919302)</cite>
 
 [![Feature Factory](https://dl.photoprism.app/img/diagrams/feature-factory.jpg)](https://twitter.com/johncutlefish/status/780102280162840576)
-
-### Share Your Experience ###
-
-Part of our journey is to find better ways to organize product development, for example through simplicity
-and consistent use of community feedback. Please [share your experiences](../contact.md) with us, in particular if you have
-not yet actively contributed.

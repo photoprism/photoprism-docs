@@ -29,9 +29,8 @@ to get regular updates, connect with other contributors, and discuss your ideas.
 
 ## We Love Feedback ##
 
-An important part of our journey is to explore new ways in product development and build better software through
-simplicity and consistent use of community feedback. You are always [welcome to share your thoughts](../contact.md) with us,
-also if you haven't actively contributed yet.
+An important part of our journey is to explore new ways in product development and build better software through simplicity
+and consistent use of community feedback. You are always [welcome to share your thoughts](../contact.md) with us.
 
 ## Creating Bug Reports ##
 

@@ -6,7 +6,7 @@
     increase dev costs (and time) by 10x. You can't afford not to fix them.
     — <cite>[Allen Holub](https://twitter.com/allenholub/status/1073738216140791808)</cite>
 
-## Premature Optimization ##
+## No Premature Optimization ##
 
 Don't abstract if you don't have to. Premature optimization often causes pain, leads to bloated code, and fewer
 developers understand what's going on. Instead, write tests so you can safely [refactor](https://martinfowler.com/bliki/DefinitionOfRefactoring.html)

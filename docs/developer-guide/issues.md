@@ -3,7 +3,6 @@
 We use GitHub issues for managing [bugs](https://github.com/photoprism/photoprism/labels/bug), 
 [ideas](https://github.com/photoprism/photoprism/labels/idea),
 and [todos](https://github.com/photoprism/photoprism/labels/todo).
- 
 Issues labeled [help wanted](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) / [easy](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3Aeasy) can be good (first) contributions.
 Reach out if you're unsure, or would like to work on something else.
  
@@ -22,16 +21,24 @@ so that we know what is most popular.
 
 ### How to Write User Stories ###
 
-Start the description of new ideas and todos with a [user story](https://en.wikipedia.org/wiki/User_story) similar to this: 
+Start describing new ideas and tasks with a [user story](https://en.wikipedia.org/wiki/User_story) similar to this one:
 
 <tt>As a [type of person] I'd like to be able to [do something] so that I can [get some result].</tt>
 
-That makes it easier for others to understand who wants what and why. It can take a lot of time to read between the lines otherwise. It takes even more time if the wrong thing gets done.
+This makes it easier for everyone to understand who wants what and why. Reading between the lines can otherwise cost a
+lot of time. It becomes even more expensive when the wrong things are implemented, or they don't bring any benefit.
 
-Issues should therefore contain a list of acceptance criteria that clearly define when a story is done so that it can be properly implemented and tested. Use MAY, SHOULD and MUST as keywords to indicate priorities. This [Markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/) example renders with [clickable checkboxes](https://help.github.com/articles/about-task-lists/):
+### Acceptance Criteria ###
+
+Issues should include a list of *Acceptance Criteria* that clearly specify when a story is ready to be implemented
+and then finally tested. We recommend using MAY, SHOULD, and MUST as keywords to indicate priorities.
+
+Clickable [checkboxes](https://help.github.com/articles/about-task-lists/) for each item can be created via
+[GitHub Markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/):
 
 ```
 Acceptance Criteria:
+
 - [ ] "Log In" button MUST be visible on /login page
 - [ ] "Log In" button MAY be disabled if password field is empty
 - [ ] Page SHOULD use existing Vuetify components

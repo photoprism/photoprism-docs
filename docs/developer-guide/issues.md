@@ -7,7 +7,7 @@ and [todos](https://github.com/photoprism/photoprism/labels/todo).
 Issues labeled [help wanted](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) / [easy](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3Aeasy) can be good (first) contributions.
 Reach out if you're unsure, or would like to work on something else.
  
-### Development Roadmap ###
+### Upcoming Features and Improvements ###
 
 Our [public roadmap](https://github.com/photoprism/photoprism/projects/5) shows what tasks are in progress,
 what needs testing, and which features are going to be implemented next.
@@ -16,6 +16,9 @@ You are welcome to submit specific feature requests via [GitHub Issues](https://
 if you have verified that no similar [idea](https://github.com/photoprism/photoprism/labels/idea) or
 [todo](https://github.com/photoprism/photoprism/labels/todo) already exists. Give ideas you like a thumbs-up 👍  ,
 so that we know what is most popular.
+
+!!! example ""
+    Our vision is to provide the most user- and privacy-friendly solution to keep your pictures organized and accessible.
 
 ### How to Write User Stories ###
 

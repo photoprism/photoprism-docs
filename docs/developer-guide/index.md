@@ -6,18 +6,18 @@ We welcome contributions of any kind, including blog posts, tutorials, testing, 
 
 ![](https://dl.photoprism.app/img/diagrams/milestones.png)
 
-## Roadmap ##
+## Upcoming Features and Improvements ##
 
-!!! example ""
-    Our vision is to provide the most user- and privacy-friendly solution to keep your pictures organized and accessible.
-
-The [roadmap](https://github.com/photoprism/photoprism/projects/5) shows what tasks are in progress, 
+Our [public roadmap](https://github.com/photoprism/photoprism/projects/5) shows what tasks are in progress, 
 what needs testing, and which features are going to be implemented next.
 
 You are welcome to submit specific feature requests via [GitHub Issues](https://github.com/photoprism/photoprism/issues) 
 if you have verified that no similar [idea](https://github.com/photoprism/photoprism/labels/idea) or 
 [todo](https://github.com/photoprism/photoprism/labels/todo) already exists. Give ideas you like a thumbs-up 👍  ,
 so that we know what is most popular.
+
+!!! example ""
+    Our vision is to provide the most user- and privacy-friendly solution to keep your pictures organized and accessible.
 
 ## Questions?
 

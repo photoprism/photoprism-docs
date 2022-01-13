@@ -15,10 +15,10 @@ Start describing new ideas and tasks with a [user story](https://en.wikipedia.or
 
 <tt>As a [type of person] I'd like to be able to [do something] so that I can [get some result].</tt>
 
-This makes it easier for everyone to understand who wants what and why. Reading between the lines consumes a lot of time
-that should be used [more effectively](#effectiveness-efficiency).
+This makes it easier for everyone to understand who wants what and why.
 
 !!! tldr ""
+    Reading between the lines consumes a lot of time that should be used [more effectively](#effectiveness-efficiency).
     Vague requirements become even more expensive when the wrong things are implemented, or they don't provide value
     in the way they were implemented.
 

@@ -9,8 +9,7 @@
 ## No Premature Optimization ##
 
 Don't abstract if you don't have to. Premature optimization often causes pain, leads to bloated code, and fewer
-developers understand what's going on. Instead, write tests so you can safely [refactor](https://martinfowler.com/bliki/DefinitionOfRefactoring.html)
-when you really need to.
+developers understand what's going on. [Instead, write tests so you can safely refactor when you really need to.](https://martinfowler.com/bliki/DefinitionOfRefactoring.html)
 
 Maintaining small amounts of duplicate code is much easier and less burdensome than choosing the wrong abstraction.
 
@@ -62,7 +61,7 @@ You have to go slow before you can go fast. Keep it simple. Done is better than 
 
 ## Test Coverage ##
 
-We strive for complete [test coverage](https://martinfowler.com/bliki/TestCoverage.html) as it is a useful tool for finding 
+We strive for [complete test coverage](https://martinfowler.com/bliki/TestCoverage.html) as it is a useful tool for finding 
 untested parts of our code base. Test coverage is of limited use as a numerical statement of how good our tests are.
 
 !!! note ""

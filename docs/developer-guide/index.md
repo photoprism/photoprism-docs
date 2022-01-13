@@ -2,7 +2,7 @@
 
 We welcome contributions of any kind, including blog posts, tutorials, testing, writing documentation, and pull requests.
 
-## Our Milestones
+## Our Milestones ##
 
 ![](https://dl.photoprism.app/img/diagrams/milestones.png)
 
@@ -19,7 +19,7 @@ so that we know what is most popular.
 !!! example ""
     Our vision is to provide the most user- and privacy-friendly solution to keep your pictures organized and accessible.
 
-## Questions?
+## Questions? ##
 
 Follow us on [Twitter](https://twitter.com/photoprism_app) or join our [Community Chat](https://gitter.im/browseyourlife/community)
 to get regular updates, connect with other contributors, and discuss your ideas. Our [Code of Conduct](https://photoprism.app/code-of-conduct) explains the "dos and don’ts."
@@ -42,7 +42,7 @@ In addition, [sponsors](../funding.md) receive direct [technical support](https:
 !!! tldr ""
     When reporting a problem, always include the software versions you are using and [other information about your environment](https://github.com/photoprism/photoprism/blob/develop/.github/ISSUE_TEMPLATE/bug_report.md) such as [browser](../getting-started/troubleshooting/browsers.md), browser plugins, operating system, storage type, memory size, and processor.
 
-## Sending Pull Requests ##
+## Submitting Pull Requests ##
 
 Issues labeled [help wanted](https://github.com/photoprism/photoprism/labels/help%20wanted) /
 [easy](https://github.com/photoprism/photoprism/labels/easy) can be good (first) contributions.

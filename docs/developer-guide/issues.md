@@ -6,9 +6,6 @@ and [todos](https://github.com/photoprism/photoprism/labels/todo).
 Issues labeled [help wanted](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) / [easy](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3Aeasy) can be good (first) contributions.
 Feel free to [contact us](../contact.md) if you are unsure or want to work on something specific.
 
-!!! example ""
-    Our vision is to provide the most user- and privacy-friendly solution to keep your pictures organized and accessible.
-
 ### How to Write User Stories ###
 
 Start describing new ideas and tasks with a [user story](https://en.wikipedia.org/wiki/User_story) similar to this one:

@@ -110,9 +110,9 @@ nav:
   # - Metadata: user-guide/metadata.md
   - Developer Guide:
     - Introduction: developer-guide/index.md
-    - Setup: developer-guide/setup.md
     - GitHub Issues: developer-guide/issues.md
     - Code Quality: developer-guide/code-quality.md
+    - Setup: developer-guide/setup.md
     - Directories: developer-guide/directories.md
     - Configuration: developer-guide/configuration.md
     - Running Tests: developer-guide/tests.md

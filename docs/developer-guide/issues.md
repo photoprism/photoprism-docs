@@ -54,3 +54,6 @@ You are welcome to submit specific feature requests via [GitHub Issues](https://
 if you have verified that no similar [idea](https://github.com/photoprism/photoprism/labels/idea) or
 [todo](https://github.com/photoprism/photoprism/labels/todo) already exists. Give ideas you like a thumbs-up 👍  ,
 so that we know what is most popular.
+
+!!! example ""
+    Our vision is to provide the most user- and privacy-friendly solution to keep your pictures organized and accessible.

@@ -50,5 +50,5 @@ Issues labeled [help wanted](https://github.com/photoprism/photoprism/labels/hel
 Our step-by-step guide explains how to submit [pull requests](pull-requests.md).
 
 !!! quote ""
-    Simple, elegant solutions are more effective, but they are harder to find than complex ones, and they require more
+    Simple, elegant solutions are [more effective](issues.md#effectiveness-efficiency), but they are harder to find than complex ones, and they require more
     time, which we too often believe to be unaffordable. — Niklaus Wirth, Feb 1985

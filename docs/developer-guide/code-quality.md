@@ -44,9 +44,11 @@ There are only two hard things in Computer Science:
 
 ## Opportunistic Refactoring ##
 
-While we know this is difficult when working with a distributed team, branches, forks, and pull requests, we encourage
-all contributors to refactor when they see a specific problem and are working on the same code anyway. This also helps
-verify that the changes are helpful and avoids the need for additional refactoring iterations.
+While we know this is difficult when working with a distributed team, branches, and pull requests, we encourage
+all contributors to refactor when they see a specific problem - ideally while you are working on the same code
+anyway to implement a feature or improvement.
+
+This also helps verify that the changes are helpful and avoids the need for additional refactoring iterations.
 
 !!! note ""
     Ugly code is not a problem as long as there are tests, there are no [security issues](https://photoprism.app/security-policy),

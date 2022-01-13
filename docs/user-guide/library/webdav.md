@@ -1,7 +1,7 @@
 # WebDAV File Upload #
 
-WebDAV-compatible apps and clients such as Microsoft's Windows Explorer and Apple's Finder can connect directly
-to PhotoPrism, allowing you to open, edit, and delete files from a remote device as if they were local:
+WebDAV-compatible apps and clients such as [PhotoSync](https://photoprism.app/partners), Microsoft's Windows Explorer,
+and Apple's Finder can connect directly to PhotoPrism:
 
 ↪ [Connecting via WebDAV](../sync/webdav.md)
 

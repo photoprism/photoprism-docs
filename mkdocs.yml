@@ -114,7 +114,7 @@ nav:
     - Directories: developer-guide/directories.md
     - Configuration: developer-guide/configuration.md
     - Tests: developer-guide/tests.md
-    - Issues: developer-guide/issues.md
+    - GitHub Issues: developer-guide/issues.md
     - Pull Requests: developer-guide/pull-requests.md
     - Code Quality: developer-guide/code-quality.md
     - Security Policy: security-policy.md

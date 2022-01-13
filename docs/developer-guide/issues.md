@@ -1,6 +1,6 @@
-# Issues
+# GitHub Issues
 
-We use GitHub issues for managing [bugs](https://github.com/photoprism/photoprism/labels/bug), 
+We use [GitHub issues](https://github.com/photoprism/photoprism/issues) for managing [bugs](https://github.com/photoprism/photoprism/labels/bug), 
 [ideas](https://github.com/photoprism/photoprism/labels/idea),
 and [todos](https://github.com/photoprism/photoprism/labels/todo).
 Issues labeled [help wanted](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) / [easy](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3Aeasy) can be good (first) contributions.

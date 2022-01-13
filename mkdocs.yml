@@ -113,7 +113,7 @@ nav:
     - Setup: developer-guide/setup.md
     - Directories: developer-guide/directories.md
     - Configuration: developer-guide/configuration.md
-    - Tests: developer-guide/tests.md
+    - Running Tests: developer-guide/tests.md
     - GitHub Issues: developer-guide/issues.md
     - Pull Requests: developer-guide/pull-requests.md
     - Code Quality: developer-guide/code-quality.md

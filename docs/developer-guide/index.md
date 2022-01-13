@@ -44,10 +44,9 @@ In addition, [sponsors](../funding.md) receive direct [technical support](https:
 
 ## Submitting Pull Requests ##
 
+Our step-by-step guide explains how to [submit pull requests](pull-requests.md).
 Issues labeled [help wanted](https://github.com/photoprism/photoprism/labels/help%20wanted) /
 [easy](https://github.com/photoprism/photoprism/labels/easy) can be good (first) contributions.
-
-Our step-by-step guide explains how to submit [pull requests](pull-requests.md).
 
 !!! quote ""
     Simple, elegant solutions are [more effective](issues.md#effectiveness-efficiency), but they are harder to find than complex ones, and they require more

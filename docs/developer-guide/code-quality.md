@@ -42,10 +42,8 @@ There are only two hard things in Computer Science: [cache invalidation](https:/
 ## Opportunistic Refactoring ##
 
 While we know this is difficult when working with a distributed team, branches, and pull requests, we encourage all
-contributors to refactor when they see a specific problem. Ideally when they are working on the same code anyway to
-implement a feature or improvement.
-
-This also helps verify that the changes are helpful and avoids the need for additional refactoring iterations.
+contributors to refactor when they see a specific problem. Ideally, when they are working on the same code anyway to
+implement a feature or improvement. This helps to verify that the changes are helpful in practice.
 
 !!! note ""
     Ugly code is not a problem as long as there are tests, there are no [security issues](https://photoprism.app/security-policy),

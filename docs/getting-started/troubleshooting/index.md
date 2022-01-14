@@ -69,8 +69,7 @@ docker-compose up
 
 ### MySQL Errors ###
 
-Official support for MySQL is discontinued as Oracle seems to have stopped shipping [new features](https://github.com/photoprism/photoprism/issues/1764) and [improvements](https://github.com/photoprism/photoprism/issues/1938).
-As a result, the testing effort required before each release is no longer feasible.
+Official [support for MySQL is discontinued](../index.md#databases) as Oracle seems to have stopped shipping [new features](https://github.com/photoprism/photoprism/issues/1764) and [improvements](https://github.com/photoprism/photoprism/issues/1938).
 
 ### Bad Performance ###
 

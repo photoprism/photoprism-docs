@@ -67,6 +67,11 @@ docker-compose up
 
 ↪ [Troubleshooting MariaDB Problems](mariadb.md)
 
+### MySQL Errors ###
+
+Official support for MySQL is discontinued as Oracle seems to have stopped shipping [new features](https://github.com/photoprism/photoprism/issues/1764) and [improvements](https://github.com/photoprism/photoprism/issues/1938).
+As a result, the testing effort required before each release is no longer feasible.
+
 ### Bad Performance ###
 
 ↪ [Performance Tips](performance.md)

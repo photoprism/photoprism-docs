@@ -16,7 +16,7 @@ docker-compose logs --tail=100
 
 Before reporting a bug:
 
-- [ ] Check the logs for messages like *disk full*, *disk quota exceeded*, *wrong permissions*, *no route to host*, *connection failed*, and *killed*; if a service has been killed or otherwise automatically terminated, this points to a [memory problem](docker.md#adding-swap); in case the logs show "disk full" or "disk quota exceeded" errors, either the disk containing the storage folder is full (get a new one or use a different disk) or a disk usage limit is configured, for example in the Kubernetes configuration (change it)
+- [ ] Check the logs for messages like *disk full*, *disk quota exceeded*, *wrong permissions*, *no route to host*, *connection failed*, and *killed*; if a service has been killed or otherwise automatically terminated, this points to a [memory problem](docker.md#adding-swap); in case the logs show "disk full" or "disk quota exceeded" errors, either the disk containing the *storage* folder is full (get a new one or use a different disk) or a disk usage limit is configured, for example in the Kubernetes configuration (change it)
 - [ ] Make sure you are using the correct protocol (http or https), port (default is 2342), and hostname or IP address
 (default is localhost)
 - [ ] Note that HTTP security headers will prevent the app from loading in a frame (override them)
@@ -81,7 +81,7 @@ Fatal errors are often caused by one of the following conditions:
 
 - [ ] Your (virtual) server [disk is full](docker.md#disk-space)
 - [ ] There is disk space left, but the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached
-- [ ] The storage folder is not writable or there are other [filesystem permission issues](docker.md#file-permissions)
+- [ ] The *storage* folder is not writable or there are other [filesystem permission issues](docker.md#file-permissions)
 - [ ] You have accidentally [mounted the wrong folders](../docker-compose.md#volumes)
 - [ ] The [server is low on memory](../index.md#system-requirements)
 - [ ] You didn't configure [at least 4 GB of swap](docker.md#adding-swap)
@@ -97,7 +97,7 @@ Fatal errors are often caused by one of the following conditions:
 We recommend checking [your Docker logs](docker.md#viewing-logs) for messages like *disk full*, *disk quota exceeded*, *wrong permissions*, *no route to host*,
 *connection failed*, and *killed* as described above. If a service has been killed or otherwise automatically terminated,
 this points to a memory problem.
-In case the logs show "disk full" or "disk quota exceeded" errors, either the disk containing the storage folder is full
+In case the logs show "disk full" or "disk quota exceeded" errors, either the disk containing the *storage* folder is full
 (get a new one or use a different disk) or a disk usage limit is configured, for example in the Kubernetes configuration
 (change it).
 
@@ -165,7 +165,7 @@ In case the application logs don't contain anything helpful:
 
 We also recommend checking [your Docker logs](docker.md#viewing-logs) for messages like *disk full*, *disk quota exceeded*, *wrong permissions*, and *killed* as
 described above. If a service has been killed or otherwise automatically terminated, this points to a memory problem.
-In case the logs show "disk full" or "disk quota exceeded" errors, either the disk containing the storage folder is full
+In case the logs show "disk full" or "disk quota exceeded" errors, either the disk containing the *storage* folder is full
 (get a new one or use a different disk) or a disk usage limit is configured, for example in the Kubernetes configuration
 (change it).
 

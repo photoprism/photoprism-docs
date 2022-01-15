@@ -16,7 +16,10 @@ docker-compose logs --tail=100
 
 Before reporting a bug:
 
-- [ ] Check the logs for messages like *disk full*, *disk quota exceeded*, *wrong permissions*, *no route to host*, *connection failed*, and *killed*; if a service has been killed or otherwise automatically terminated, this points to a [memory problem](docker.md#adding-swap); in case the logs show "disk full" or "disk quota exceeded" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space) (add storage) or a disk usage limit is configured (remove or increase it)
+- [ ] Check the logs for messages like *disk full*, *disk quota exceeded*, *wrong permissions*, *no route to host*, *connection failed*, and *killed*:
+    - [ ] If a service has been killed or otherwise automatically terminated, this points to a [memory problem](docker.md#adding-swap) (add swap and/or memory; remove or increase usage limits)
+    - [ ] In case the logs show "disk full" or "disk quota exceeded" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space) (add storage) or a disk usage limit is configured (remove or increase it)
+    - [ ] Log messages that contain "no route to host" indicate a [problem with the database](mariadb.md) or network configuration (follow our [examples](https://dl.photoprism.app/docker/))
 - [ ] Make sure you are using the correct protocol (http or https), port (default is 2342), and hostname or IP address
 (default is localhost)
 - [ ] Note that HTTP security headers will prevent the app from loading in a frame (override them)
@@ -94,11 +97,13 @@ Fatal errors are often caused by one of the following conditions:
 - [ ] [Kernel security modules](docker.md#kernel-security) such as [AppArmor](https://wiki.ubuntu.com/AppArmor) and [SELinux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) are blocking permissions
 - [ ] Your Raspberry Pi has not been configured according to our [recommendations](../raspberry-pi.md#system-requirements)
 
-We recommend checking [your Docker logs](docker.md#viewing-logs) for messages like *disk full*, *disk quota exceeded*, *wrong permissions*, *no route to host*,
-*connection failed*, and *killed* as described above. If a service has been killed or otherwise automatically terminated,
-this points to a memory problem.
-In case the logs show "disk full" or "disk quota exceeded" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space)
-(add storage) or a disk usage limit is configured (remove or increase it).
+We recommend checking [your Docker logs](docker.md#viewing-logs) for messages like *disk full*, *disk quota exceeded*,
+*wrong permissions*, *no route to host*, *connection failed*, and *killed*:
+
+- [ ] If a service has been killed or otherwise automatically terminated, this points to a [memory problem](docker.md#adding-swap) (add swap and/or memory; remove or increase usage limits)
+- [ ] In case the logs show "disk full" or "disk quota exceeded" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space)
+(add storage) or a disk usage limit is configured (change it)
+- [ ] Log messages that contain "no route to host" indicate a [problem with the database](mariadb.md) or network configuration (follow our [examples](https://dl.photoprism.app/docker/))
 
 *Start a full rescan if necessary, for example, if it looks like [thumbnails](index.md#broken-thumbnails) or [pictures are missing](index.md#missing-pictures).*
 
@@ -170,11 +175,10 @@ In case the application logs don't contain anything helpful:
 - [ ] An ad blocker or other plugins block requests (disable them or add an exception)
 - [ ] You are connected to the wrong server, VPN, CDN, or a DNS record has not been updated yet
 
-We also recommend checking [your Docker logs](docker.md#viewing-logs) for messages like *disk full*, *disk quota exceeded*, *wrong permissions*, and *killed* as
-described above:
-
-- [ ] If a service has been killed or otherwise automatically terminated, this points to a [memory problem](docker.md#adding-swap)
-- [ ] In case the logs show "disk full" or "disk quota exceeded" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space) (add storage) or a disk usage limit is configured, for example in the Docker, Kubernetes, or Virtual Machine configuration (remove or increase it)
+We also recommend checking [your Docker logs](docker.md#viewing-logs) for messages like *disk full*, *disk quota exceeded*,
+*wrong permissions*, and *killed*. If a service has been killed or otherwise automatically terminated, this points to a
+memory problem. In case the logs show "disk full" or "disk quota exceeded" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space)
+(add storage) or a disk usage limit is configured (remove or increase it).
 
 *Depending on the cause of the problem, you may need to perform a full rescan once the issue is resolved.*
 

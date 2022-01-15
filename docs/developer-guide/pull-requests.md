@@ -10,7 +10,7 @@ guidelines to ensure that all submissions are acceptable:
 - You should have tested your changes on all supported browsers and devices
 - If needed, your contribution should include updated documentation in a separate pull request
 
-!!! tldr ""
+!!! example ""
     These guidelines are not intended as a filter or barrier to participation. If you are unfamiliar with
     Open Source development, we will [help you](https://gitter.im/browseyourlife/community).
 

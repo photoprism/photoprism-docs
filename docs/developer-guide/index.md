@@ -23,10 +23,6 @@ already exists. Give ideas you like a thumbs-up 👍  , so that we know what is 
 Follow us on [Twitter](https://twitter.com/photoprism_app) or join our [Community Chat](https://gitter.im/browseyourlife/community)
 to get regular updates, connect with other contributors, and discuss your ideas. Our [Code of Conduct](https://photoprism.app/code-of-conduct) explains the "dos and don’ts."
 
-!!! note ""
-    Don't use GitHub Issues if you have a [general question](https://github.com/photoprism/photoprism/discussions),
-    [need help](https://photoprism.app/contact), or an issue has not (yet) been clearly identified.
-
 ## We Love Feedback ##
 
 An important part of our journey is to explore new ways in product development and build better software through simplicity
@@ -41,8 +37,12 @@ identified:
 - you are welcome to ask in our [Community Chat](https://gitter.im/browseyourlife/community)
 - and post your question in [GitHub Discussions](https://github.com/photoprism/photoprism/discussions)
 
-!!! tldr ""
-    When reporting a problem, always include the software versions you are using and [other information about your environment](https://github.com/photoprism/photoprism/blob/develop/.github/ISSUE_TEMPLATE/bug_report.md) such as [browser](../getting-started/troubleshooting/browsers.md), browser plugins, operating system, storage type, memory size, and processor.
+!!! example ""
+    **Never report a bug unless you are sure you found a new problem that must be fixed directly in [our source code](https://github.com/photoprism/photoprism):**
+
+    - Ask for [technical support](../user-guide/index.md#getting-support) if you need help, it could be a local configuration issue, or a misunderstanding in how the software works
+    - This gives our team the opportunity to [improve the documentation](documentation.md) and provide best-in-class support to you, instead of spending time handling unclear and duplicate bug reports
+    - When reporting a problem, always include the software versions you are using and [other information about your environment](https://github.com/photoprism/photoprism/blob/develop/.github/ISSUE_TEMPLATE/bug_report.md) such as [browser, browser plugins](../getting-started/troubleshooting/browsers.md), operating system, storage type, memory size, and processor
 
 ## Submitting Pull Requests ##
 
@@ -50,7 +50,7 @@ Our step-by-step guide explains how to [submit pull requests](pull-requests.md).
 Issues labeled [help wanted](https://github.com/photoprism/photoprism/labels/help%20wanted) /
 [easy](https://github.com/photoprism/photoprism/labels/easy) can be good (first) contributions.
 
-!!! quote ""
+!!! example ""
     Simple, elegant solutions are [more effective](issues.md#effectiveness-efficiency), but they are harder to find than complex ones, and they require more
     time, which we too often believe to be unaffordable. — <cite>Niklaus Wirth, Feb 1985</cite>
 

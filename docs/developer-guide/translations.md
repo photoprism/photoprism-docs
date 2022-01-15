@@ -1,22 +1,16 @@
 # Translations
 
-PhotoPrism uses [gettext](https://en.wikipedia.org/wiki/Gettext) for localizing frontend and backend.
-It's one of the most widely adopted standards for translating user interfaces.
- 
-Human-readable messages like `File not found` are used as ids for finding matching translations, 
-and used as defaults whenever there is no translation available.
+PhotoPrism uses [gettext](https://en.wikipedia.org/wiki/Gettext) for frontend and backend localization.
+It is one of the most widely used standards for user interface translation:
 
-Messages may optionally contain placeholders, like `Found %{n} files`, for numbers and 
-other variables.
+- Human-readable messages such as `File not found` are used as identifiers to search for appropriate translations. They also serve as default values when no translation is available.
+- Messages can optionally contain placeholders for numbers and other variables, for example `Found %{n} files`.
 
-We strongly recommend [Poedit](https://poedit.net/download) for creating and updating translations.
-Download is free for Mac, Windows and Linux.
-Its source code can be obtained on [GitHub](https://github.com/vslavik/poedit).
+We recommend [Poedit](https://poedit.net/download) for creating and updating translations. The download is free
+for Mac, Windows and Linux. The source code can be obtained on [GitHub](https://github.com/vslavik/poedit).
 
-!!! note ""
-    We first translate new strings with a translator. This can lead to grammatical errors and misunderstandings. Please list all translations in your language to check them.
-    
-    If you already contributed translations before, keep those files. When you decide to contribute again, you can just search for changes between those two files to see what strings are new. 
+!!! example ""
+    **If translations are missing, we pre-translate messages using services such as DeepL and Google Translate.** This can lead to grammatical errors and misunderstandings. Native speakers should check existing translations and improve them if necessary. You can use the version compare feature on GitHub to detect changes in translation files.
 
 ## Frontend ##
 
@@ -51,7 +45,7 @@ You can open, edit and save them with Poedit to update existing translations.
 - Run `npm run gettext-compile` to compile existing translations into a single `translations.json` file
 - To test your translations you need to build the frontend again using `npm run build` or `npm run watch`
 
-!!! note ""
+!!! example ""
     A binary `*.mo` (machine object) file will be automatically saved along with every `*.po` file. 
     You won't be able to open those in a text editor, but please include them in git commits or when sending
     translations via email. The compiled `translations.json` file is not required for pull requests 
@@ -87,8 +81,8 @@ which will be automatically created by Poedit.
 - Now you can start proofreading and adding the missing translations
 - Once you're done, save the changes in the default.po file
 
-!!! info ""
-    Note that this will only work when you have gettext installed on your system.
-    We recommend using our latest development image as described in the Developer Guide.
+!!! example ""
+    This will only work when you have gettext installed on your system. We recommend using our latest development
+    image as described in the [setup instructions](setup.md).
 
 

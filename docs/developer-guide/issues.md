@@ -4,7 +4,11 @@ We use [GitHub issues](https://github.com/photoprism/photoprism/issues) for mana
 [ideas](https://github.com/photoprism/photoprism/labels/idea),
 and [todos](https://github.com/photoprism/photoprism/labels/todo).
 Issues labeled [help wanted](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) / [easy](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3Aeasy) can be good (first) contributions.
-Feel free to [contact us](../contact.md) if you are unsure or want to work on something specific.
+
+!!! example ""
+    - Feel free to [contact us](../contact.md) if you want to work on something specific
+    - Ask in our [Community Chat](https://gitter.im/browseyourlife/community) or use [GitHub Discussions](https://github.com/photoprism/photoprism/discussions) if you have a general question or need help
+    - Never [report a bug](index.md#creating-bug-reports) unless you are sure you found a new problem that must be fixed directly in [our source code](https://github.com/photoprism/photoprism)
 
 ### How to Write User Stories ###
 
@@ -14,7 +18,7 @@ Start describing new ideas and tasks with a [user story](https://en.wikipedia.or
 
 This makes it easier for everyone to understand who wants what and why.
 
-!!! tldr ""
+!!! example ""
     Reading between the lines consumes a lot of time that can be used [more effectively](#effectiveness-efficiency).
     Vague requirements become even more expensive when the wrong things are implemented, or they don't provide value
     in the way they were implemented.
@@ -40,7 +44,7 @@ Acceptance Criteria:
 
 Optimize for effectiveness before efficiency.
 
-!!! note ""
+!!! example ""
     It is fundamentally the confusion between effectiveness and efficiency that stands between doing the right things and doing things right. There is surely nothing quite so useless as doing with great efficiency what should not be done at all. — <cite>[Peter Drucker](https://en.wikipedia.org/wiki/Peter_Drucker)</cite>
 
 [![Feature Factory](https://dl.photoprism.app/img/diagrams/feature-factory.jpg)](https://twitter.com/johncutlefish/status/780102280162840576)

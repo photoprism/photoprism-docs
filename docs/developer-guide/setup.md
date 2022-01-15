@@ -13,7 +13,7 @@ Without Docker, test results will be less reliable and you also won't be able to
 git clone git@github.com:photoprism/photoprism.git
 ```
 
-!!! tip ""
+!!! example ""
     If you're on windows, make sure to disable auto CR LF. Otherwise, the build won't work.
     `git config --global core.autocrlf false`
     

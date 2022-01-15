@@ -3,12 +3,11 @@
 Because we want to create the best possible product for our users, we have a set of 
 guidelines to ensure that all submissions are acceptable:
 
-- Features must be fully implemented so that they can be released at any time without additional work
-- Including automated tests is mandatory to ensure the feature works as expected and to reduce repetitive, manual work
+- *Features must be fully implemented* so that they can be released at any time without additional work
+- *Automated tests are mandatory* to ensure the changes work as expected and to reduce repetitive manual work on our side
 - In case you submit database-related changes, they must be tested and compatible with SQLite, MariaDB, and MySQL
-- Front-end components must be fully responsive to work and look properly on phones, tablets, and desktop computers
-- You should have tested your changes on all supported browsers and devices
-- If needed, your contribution should include updated documentation in a separate pull request
+- Front-end components must be fully responsive to work and look properly on phones, tablets, and desktop computers; you must have tested them on all major browsers and different devices
+- If needed, updated documentation should be provided in a separate pull request
 
 !!! example ""
     These guidelines are not intended as a filter or barrier to participation. If you are unfamiliar with

@@ -16,7 +16,7 @@ docker-compose logs --tail=100
 
 Before reporting a bug:
 
-- [ ] Check the logs for messages like *disk full*, *disk quota exceeded*, *wrong permissions*, *no route to host*, *connection failed*, and *killed*; if a service has been killed or otherwise automatically terminated, this points to a [memory problem](docker.md#adding-swap); in case the logs show "disk full" or "disk quota exceeded" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space) (get a new one or use a different disk) or a disk usage limit is configured (increase or remove it)
+- [ ] Check the logs for messages like *disk full*, *disk quota exceeded*, *wrong permissions*, *no route to host*, *connection failed*, and *killed*; if a service has been killed or otherwise automatically terminated, this points to a [memory problem](docker.md#adding-swap); in case the logs show "disk full" or "disk quota exceeded" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space) (add storage) or a disk usage limit is configured (remove or increase it)
 - [ ] Make sure you are using the correct protocol (http or https), port (default is 2342), and hostname or IP address
 (default is localhost)
 - [ ] Note that HTTP security headers will prevent the app from loading in a frame (override them)
@@ -79,11 +79,11 @@ docker-compose up
 
 Fatal errors are often caused by one of the following conditions:
 
-- [ ] Your (virtual) server [disk is full](docker.md#disk-space)
+- [ ] Your (virtual) server [disk is full](docker.md#disk-space) (add storage)
 - [ ] There is disk space left, but a usage or the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (change it)
 - [ ] [The *storage* folder is not writable](docker.md#file-permissions) (change permissions)
 - [ ] You have accidentally [mounted the wrong folders](../docker-compose.md#volumes)
-- [ ] The [server is low on memory](../index.md#system-requirements) (add more)
+- [ ] The [server is low on memory](../index.md#system-requirements) (add memory)
 - [ ] You didn't [configure at least 4 GB of swap](docker.md#adding-swap)
 - [ ] The server CPU is overheating (improve cooling)
 - [ ] The server has an outdated operating system that is not fully compatible (update)
@@ -98,7 +98,7 @@ We recommend checking [your Docker logs](docker.md#viewing-logs) for messages li
 *connection failed*, and *killed* as described above. If a service has been killed or otherwise automatically terminated,
 this points to a memory problem.
 In case the logs show "disk full" or "disk quota exceeded" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space)
-(get a new one or use a different disk) or a disk usage limit is configured (increase or remove it).
+(add storage) or a disk usage limit is configured (remove or increase it).
 
 *Start a full rescan if necessary, for example, if it looks like [thumbnails](index.md#broken-thumbnails) or [pictures are missing](index.md#missing-pictures).*
 
@@ -132,9 +132,9 @@ In case the application logs don't contain anything helpful:
     - [ ] *Convert to JPEG* is [disabled in *Settings > Library*](../../user-guide/settings/library.md)
     - [ ] FFmpeg and/or RAW converters are [disabled in *Settings > Advanced*](../../user-guide/settings/advanced.md)
     - [ ] The file is broken and cannot be opened
+    - [ ] [Your (virtual) server disk is full](docker.md#disk-space) (add storage)
     - [ ] [The *storage* folder is not writable](docker.md#file-permissions) (change permissions)
-    - [ ] [Your (virtual) server disk is full](docker.md#disk-space)
-    - [ ] A disk usage or the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (increase or remove it)
+    - [ ] A disk usage or the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (remove or increase it)
 - [ ] Multiple files were [stacked](../../user-guide/organize/stacks.md#for-what-reasons-can-files-be-stacked) based on their metadata or file names
 - [ ] The [private](../../user-guide/organize/private.md) or [archived](../../user-guide/organize/archive.md) status was restored from a backup
 - [ ] The NSFW filter is enabled, so they were marked as [private](../../user-guide/organize/private.md)
@@ -157,8 +157,8 @@ In case the application logs don't contain anything helpful:
 - [ ] The sizes in *Settings > Advanced* have been changed so the request can't be fulfilled
 - [ ] FFmpeg and/or RAW converters are disabled in *Settings > Advanced*
 - [ ] *Convert to JPEG* is disabled in *Settings > Library*
-- [ ] [Your (virtual) server disk is full](docker.md#disk-space)
-- [ ] A disk usage or the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (increase or remove it)
+- [ ] [Your (virtual) server disk is full](docker.md#disk-space) (add storage)
+- [ ] A disk usage or the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (remove or increase it)
 - [ ] [The *storage* folder is not writable](docker.md#file-permissions) (change permissions)
 - [ ] Files were deleted manually, for example to free up disk space
 - [ ] Files can't be opened, e.g. because the file system permissions have been changed
@@ -174,7 +174,7 @@ We also recommend checking [your Docker logs](docker.md#viewing-logs) for messag
 described above:
 
 - [ ] If a service has been killed or otherwise automatically terminated, this points to a [memory problem](docker.md#adding-swap)
-- [ ] In case the logs show "disk full" or "disk quota exceeded" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space) (get a new one or use a different disk) or a disk usage limit is configured, for example in the Docker, Kubernetes, or Virtual Machine configuration (increase or remove it)
+- [ ] In case the logs show "disk full" or "disk quota exceeded" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space) (add storage) or a disk usage limit is configured, for example in the Docker, Kubernetes, or Virtual Machine configuration (remove or increase it)
 
 *Depending on the cause of the problem, you may need to perform a full rescan once the issue is resolved.*
 
@@ -186,8 +186,8 @@ If videos do not play and/or you only see a white/black area when you open a vid
 - [ ] AVC support or related JavaScript features have been disabled in your browser (check the settings and try another browser)
 - [ ] It is a large non-AVC video that needs to be transcoded first (wait or [run `photoprism convert` to pre-transcode videos](../docker-compose.md#command-line-interface))
 - [ ] An ad blocker or other plugins block requests (disable them or add an exception)
-- [ ] [Your (virtual) server disk is full](docker.md#disk-space)
-- [ ] A disk usage or the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (increase or remove it)
+- [ ] [Your (virtual) server disk is full](docker.md#disk-space) (add storage)
+- [ ] A disk usage or the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (remove or increase it)
 - [ ] [The *storage* folder is not writable](docker.md#file-permissions) (change permissions)
 - [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder (check if the files are accessible)
 - [ ] Your browser cannot communicate properly with the server, e.g. because a [Reverse Proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)

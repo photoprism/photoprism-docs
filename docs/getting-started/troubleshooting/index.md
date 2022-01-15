@@ -16,7 +16,7 @@ docker-compose logs --tail=100
 
 Before reporting a bug:
 
-- [ ] Check the logs for messages like *disk full*, *disk quota exceeded*, *wrong permissions*, *no route to host*, *connection failed*, and *killed*; if a service has been killed or otherwise automatically terminated, this points to a [memory problem](docker.md#adding-swap); in case the logs show "disk full" or "disk quota exceeded" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space) (get a new one or use a different disk) or a disk usage limit is configured, for example in the Kubernetes, Docker, or Virtual Machine configuration (change it)
+- [ ] Check the logs for messages like *disk full*, *disk quota exceeded*, *wrong permissions*, *no route to host*, *connection failed*, and *killed*; if a service has been killed or otherwise automatically terminated, this points to a [memory problem](docker.md#adding-swap); in case the logs show "disk full" or "disk quota exceeded" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space) (get a new one or use a different disk) or a disk usage limit is configured (change it)
 - [ ] Make sure you are using the correct protocol (http or https), port (default is 2342), and hostname or IP address
 (default is localhost)
 - [ ] Note that HTTP security headers will prevent the app from loading in a frame (override them)
@@ -80,12 +80,12 @@ docker-compose up
 Fatal errors are often caused by one of the following conditions:
 
 - [ ] Your (virtual) server [disk is full](docker.md#disk-space)
-- [ ] There is disk space left, but the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached
-- [ ] The *storage* folder is not writable or there are other [filesystem permission issues](docker.md#file-permissions)
+- [ ] There is disk space left, but a usage or the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (change it)
+- [ ] [The *storage* folder is not writable](docker.md#file-permissions) (or there are other permission issues)
 - [ ] You have accidentally [mounted the wrong folders](../docker-compose.md#volumes)
-- [ ] The [server is low on memory](../index.md#system-requirements)
-- [ ] You didn't configure [at least 4 GB of swap](docker.md#adding-swap)
-- [ ] The server CPU is overheating
+- [ ] The [server is low on memory](../index.md#system-requirements) (add more)
+- [ ] You didn't [configure at least 4 GB of swap](docker.md#adding-swap)
+- [ ] The server CPU is overheating (improve cooling)
 - [ ] The server has an outdated operating system that is not fully compatible
 - [ ] The [database server](mariadb.md) is not running, [incompatible](../index.md#databases), or misconfigured
 - [ ] You've [upgraded the MariaDB server](mariadb.md#version-upgrade) without running `mariadb-upgrade`
@@ -98,8 +98,9 @@ We recommend checking [your Docker logs](docker.md#viewing-logs) for messages li
 *connection failed*, and *killed* as described above. If a service has been killed or otherwise automatically terminated,
 this points to a memory problem.
 In case the logs show "disk full" or "disk quota exceeded" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space)
-(get a new one or use a different disk) or a disk usage limit is configured, for example in the Kubernetes, Docker,
-or Virtual Machine configuration (change it). Start a full rescan if necessary.
+(get a new one or use a different disk) or a disk usage limit is configured (change it).
+
+*Start a full rescan if necessary, for example, if it looks like [thumbnails](index.md#broken-thumbnails) or [pictures are missing](index.md#missing-pictures).*
 
 ### App Not Loading ###
 
@@ -124,24 +125,26 @@ In case the application logs don't contain anything helpful:
 - [ ] The pictures are in [Review](../../user-guide/organize/review.md) due to low quality or incomplete metadata
 - [ ] The [file type](../faq.md#what-media-file-types-are-supported) is generally unsupported
 - [ ] The [file type](../faq.md#what-media-file-types-are-supported) is generally supported, but a specific feature or codec is not
-- [ ] The files have bad filesystem permissions, so they can't be opened by the indexer
+- [ ] The *originals* have bad filesystem permissions, so they can't be opened by the indexer
 - [ ] The indexer has skipped the files because they are exact duplicates
-- [ ] The files are ignored based on pattern in a `.ppignore` file
-- [ ] They are in *Library > Hidden* because thumbnails could not be created:
-    - [ ] *Convert to JPEG* is disabled in *Settings > Library*
-    - [ ] FFmpeg and/or RAW converters are disabled in *Settings > Advanced*
+- [ ] The files are [ignored based on pattern in a `.ppignore` file](../../user-guide/library/originals.md#ignoring-files-and-folders)
+- [ ] They [are in *Library > Hidden*](https://demo.photoprism.app/library/hidden) because thumbnails could not be created:
+    - [ ] *Convert to JPEG* is [disabled in *Settings > Library*](../../user-guide/settings/library.md)
+    - [ ] FFmpeg and/or RAW converters are [disabled in *Settings > Advanced*](../../user-guide/settings/advanced.md)
     - [ ] The file is broken and cannot be opened
-    - [ ] The sidecar and/or cache folders are not writable
+    - [ ] [The *storage* folder is not writable](docker.md#file-permissions)
+    - [ ] [Your (virtual) server disk is full](docker.md#disk-space)
+    - [ ] A disk usage or the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (change it)
 - [ ] Multiple files were [stacked](../../user-guide/organize/stacks.md#for-what-reasons-can-files-be-stacked) based on their metadata or file names
 - [ ] The [private](../../user-guide/organize/private.md) or [archived](../../user-guide/organize/archive.md) status was restored from a backup
 - [ ] The NSFW filter is enabled, so they were marked as [private](../../user-guide/organize/private.md)
 - [ ] You are not signed in as admin, so you can't see everything
 - [ ] You try to index a shared drive on a remote server, but the server is offline
-- [ ] The indexer has crashed because you didn't configure [at least 4 GB of swap](docker.md#adding-swap)
+- [ ] The indexer has crashed because you didn't [configure at least 4 GB of swap](docker.md#adding-swap)
 - [ ] Somebody has deleted files without telling you
 - [ ] You are connected to the wrong server, VPN, CDN, or a DNS record has not been updated yet
 
-Start a rescan once the issue has been resolved.
+*Depending on the cause of the problem, you may need to perform a full rescan once the issue is resolved.*
 
 ### Broken Thumbnails ###
 
@@ -154,12 +157,13 @@ In case the application logs don't contain anything helpful:
 - [ ] The sizes in *Settings > Advanced* have been changed so the request can't be fulfilled
 - [ ] FFmpeg and/or RAW converters are disabled in *Settings > Advanced*
 - [ ] *Convert to JPEG* is disabled in *Settings > Library*
-- [ ] Your (virtual) server disk is full
-- [ ] Your sidecar and/or cache folders are not writable (anymore)
+- [ ] [Your (virtual) server disk is full](docker.md#disk-space)
+- [ ] A disk usage or the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (change it)
+- [ ] [The *storage* folder is not writable](docker.md#file-permissions) (or there are other permission issues)
 - [ ] Files were deleted manually, for example to free up disk space
 - [ ] Files can't be opened, e.g. because the file system permissions have been changed
 - [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder
-- [ ] Some thumbnails could not be created because you didn't configure [at least 4 GB of swap](docker.md#adding-swap)
+- [ ] Some thumbnails could not be created because you didn't [configure at least 4 GB of swap](docker.md#adding-swap)
 - [ ] Your browser cannot communicate properly with the server, e.g. because a [Reverse Proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
 - [ ] Your proxy, router, or firewall has a request rate limit, so some requests fail
 - [ ] There are other network problems caused by a firewall, router, or unstable connection
@@ -170,9 +174,9 @@ We also recommend checking [your Docker logs](docker.md#viewing-logs) for messag
 described above:
 
 - [ ] If a service has been killed or otherwise automatically terminated, this points to a [memory problem](docker.md#adding-swap)
-- [ ] In case the logs show "disk full" or "disk quota exceeded" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space) (get a new one or use a different disk) or a disk usage limit is configured, for example in the Kubernetes, Docker, or Virtual Machine configuration (change it)
+- [ ] In case the logs show "disk full" or "disk quota exceeded" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space) (get a new one or use a different disk) or a disk usage limit is configured, for example in the Docker, Kubernetes, or Virtual Machine configuration (change it)
 
-Start a rescan once the issue has been resolved.
+*Depending on the cause of the problem, you may need to perform a full rescan once the issue is resolved.*
 
 ### Videos Don't Play ###
 
@@ -182,6 +186,9 @@ If videos do not play and/or you only see a white/black area when you open a vid
 - [ ] AVC support or related JavaScript features have been disabled in your browser (check the settings and try another browser)
 - [ ] It is a large non-AVC video that needs to be transcoded first (wait or [run `photoprism convert` to pre-transcode videos](../docker-compose.md#command-line-interface))
 - [ ] An ad blocker or other plugins block requests (disable them or add an exception)
+- [ ] [Your (virtual) server disk is full](docker.md#disk-space)
+- [ ] A disk usage or the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (change it)
+- [ ] [The *storage* folder is not writable](docker.md#file-permissions) (or there are other permission issues)
 - [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder (check if the files are accessible)
 - [ ] Your browser cannot communicate properly with the server, e.g. because a [Reverse Proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
 - [ ] There are other network problems caused by a proxy, firewall, or unstable connection (try a direct connection)

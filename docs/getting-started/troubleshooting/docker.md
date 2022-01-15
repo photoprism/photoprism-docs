@@ -154,18 +154,21 @@ configuration.
 Use a file manager, or the commands `chmod` and `chown` on Unix-like operating systems, to [change file and folder permissions](https://kb.iu.edu/d/abdb)
 so that the app container can access them. If you have configured specific user and group IDs, make sure they match.
 
+*Start a full rescan if necessary, for example, if it looks like [thumbnails](index.md#broken-thumbnails) or [pictures are missing](index.md#missing-pictures).*
+
 ### Disk Space ###
 
 In case the logs show "disk full" or "disk quota exceeded" errors, either the disk containing the *storage* folder is full
-(get a new one or use a different disk) or a disk usage limit is configured, for example in the Kubernetes, Docker,
-or Virtual Machine configuration (change it). Then start a full rescan if necessary, for example, if thumbnails are missing
-or pictures are hidden.
+(get a new one or use a different disk) or a disk usage limit is configured, for example in the Docker, Kubernetes,
+or Virtual Machine configuration (change it).
 
 On Linux and other Unix-like operating systems, the [available disk space](https://opensource.com/article/18/7/how-check-free-disk-space-linux)
 can be viewed by running `df -h` in a terminal.
 
 If you use *Docker Desktop* on operating systems other than Linux and/or a virtual machine, they have their own
 settings to adjust the size of virtual disks and memory. For details, refer to the corresponding documentation.
+
+*Start a full rescan if necessary, for example, if it looks like [thumbnails](index.md#broken-thumbnails) or [pictures are missing](index.md#missing-pictures).*
 
 *[home directory]: \user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux
 *[host]: physical computer, cloud server, or virtual machine that runs Docker

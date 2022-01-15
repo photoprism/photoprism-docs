@@ -9,6 +9,35 @@
     Official support for MySQL is discontinued as Oracle seems to have stopped shipping [new features and improvements](https://github.com/photoprism/photoprism/issues/1764).
     As a result, the testing effort required before each release is no longer feasible.
 
+#### Cannot Connect ####
+
+First, verify that you are using the correct port (default is `3306`) and hostname or IP address:
+
+- in the Docker environment, the default hostname is `mariadb` (same as the service name) 
+- use `localhost` on your host if the port has been exposed as described below
+- use your private host IP from inside your home network (see network settings)
+
+If this doesn't help, check the [Docker Logs](docker.md#viewing-logs) for messages like *disk full*, *disk quota exceeded*,
+*wrong permissions*, *no route to host*, *connection failed*, and *killed*:
+
+- [ ] Make sure that the database *storage* folder is readable and writable
+- [ ] If the MariaDB service has been killed or otherwise automatically terminated, this can point to a [memory problem](docker.md#adding-swap) (add swap and/or memory; remove or increase usage limits)
+- [ ] In case the logs also show "disk full" or "disk quota exceeded" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space) (add storage) or a disk usage limit is configured (remove or increase it)
+- [ ] Log messages that contain "no route to host" may also indicate a general network configuration problem (follow our [examples](https://dl.photoprism.app/docker/))
+
+To connect to MariaDB from your host or home network, you need to expose port `3306` in your `docker-compose.yml`
+and [restart the service for changes to take effect](../docker-compose.md#step-2-start-the-server):
+
+```yaml
+services:
+  mariadb:
+    ports:
+      - "3306:3306"
+```
+
+!!! danger ""
+    Never expose your database to the public Internet in this way, for example, if it is running on a cloud server.
+
 #### Unicode Support ####
 
 If the logs show "incorrect string value" database errors and you are running a custom MariaDB or MySQL

@@ -20,8 +20,8 @@ Before reporting a bug:
     - [ ] If a service has been killed or otherwise automatically terminated, this points to a [memory problem](docker.md#adding-swap) (add swap and/or memory; remove or increase usage limits)
     - [ ] In case the logs show "disk full" or "disk quota exceeded" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space) (add storage) or a disk usage limit is configured (remove or increase it)
     - [ ] Log messages that contain "no route to host" indicate a [problem with the database](mariadb.md) or network configuration (follow our [examples](https://dl.photoprism.app/docker/))
-- [ ] Make sure you are using the correct protocol (http or https), port (default is 2342), and hostname or IP address
-(default is localhost)
+- [ ] Make sure you are using the correct protocol (default is `http`), port (default is `2342`), and hostname or IP address
+(default is `localhost`)
 - [ ] Note that HTTP security headers will prevent the app from loading in a frame (override them)
 - [ ] Verify your computer meets the [system requirements](../index.md#system-requirements)
 - [ ] Go through the [checklist for fatal server errors](#fatal-server-errors)
@@ -97,7 +97,7 @@ Fatal errors are often caused by one of the following conditions:
 - [ ] [Kernel security modules](docker.md#kernel-security) such as [AppArmor](https://wiki.ubuntu.com/AppArmor) and [SELinux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) are blocking permissions
 - [ ] Your Raspberry Pi has not been configured according to our [recommendations](../raspberry-pi.md#system-requirements)
 
-We recommend checking [your Docker logs](docker.md#viewing-logs) for messages like *disk full*, *disk quota exceeded*,
+We recommend checking your [Docker Logs](docker.md#viewing-logs) for messages like *disk full*, *disk quota exceeded*,
 *wrong permissions*, *no route to host*, *connection failed*, and *killed*:
 
 - [ ] If a service has been killed or otherwise automatically terminated, this points to a [memory problem](docker.md#adding-swap) (add swap and/or memory; remove or increase usage limits)
@@ -175,7 +175,7 @@ In case the application logs don't contain anything helpful:
 - [ ] An ad blocker or other plugins block requests (disable them or add an exception)
 - [ ] You are connected to the wrong server, VPN, CDN, or a DNS record has not been updated yet
 
-We also recommend checking [your Docker logs](docker.md#viewing-logs) for messages like *disk full*, *disk quota exceeded*,
+We also recommend checking your [Docker Logs](docker.md#viewing-logs) for messages like *disk full*, *disk quota exceeded*,
 *wrong permissions*, and *killed*. If a service has been killed or otherwise automatically terminated, this points to a
 memory problem. In case the logs show "disk full" or "disk quota exceeded" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space)
 (add storage) or a disk usage limit is configured (remove or increase it).
@@ -198,7 +198,7 @@ If videos do not play and/or you only see a white/black area when you open a vid
 - [ ] There are other network problems caused by a proxy, firewall, or unstable connection (try a direct connection)
 - [ ] You are connected to the wrong server, VPN, CDN, or a DNS record has not been updated yet
 
-We recommend that you check [your Docker logs](docker.md#viewing-logs) and [the browser console](browsers.md#getting-error-details)
+We recommend that you check your [Docker Logs](docker.md#viewing-logs) and [the browser console](browsers.md#getting-error-details)
 for messages related to *HTTP requests*, *permissions*, *security*, *FFmpeg*, *videos*, and *file conversion*.
 
 *[AVC]: MPEG-4 / H.264

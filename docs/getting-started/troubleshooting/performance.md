@@ -47,9 +47,9 @@ powerful server may help.
 
 !!! note ""
     If your server runs out of memory, the index is frequently locked, or other system resources are running low
-    while indexing, you should [try reducing the number of workers](https://docs.photoprism.app/getting-started/config-options/)
+    while indexing, you should [try reducing the number of workers](../config-options.md#index-workers)
     by setting `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml` (depending on the performance
     of the server). Also, ensure that [your server has at least 4 GB of swap configured](docker.md#adding-swap) so that
     indexing doesn't cause restarts when there are memory usage spikes. Especially the conversion of RAW images and the
-    transcoding of videos are very demanding. As a measure of last resort, you may disable using TensorFlow for image
-    classification and facial recognition.
+    transcoding of videos are very demanding. As a measure of last resort, you may [disable using TensorFlow](../config-options.md#feature-flags)
+    for image classification and facial recognition.

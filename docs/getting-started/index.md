@@ -95,7 +95,11 @@ In addition, [sponsors](../funding.md) receive direct [technical support](https:
 We'll do our best to answer all your questions. In return, we ask you to [back us](../funding.md) on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism).
 Think of "free software" as in "free speech," not as in "free beer". Thank you! 💜
 
-!!! tldr ""
-    When reporting a problem, always include the software versions you are using and [other information about your environment](https://github.com/photoprism/photoprism/blob/develop/.github/ISSUE_TEMPLATE/bug_report.md) such as [browser](troubleshooting/browsers.md), browser plugins, operating system, storage type, memory size, and processor.
+!!! example ""
+    **Don't open a GitHub Issue unless you are sure you found a new problem that must be fixed directly in the app:**
+
+    - Ask for [technical support](https://photoprism.app/contact) if you need help, it could be a local configuration issue, or a misunderstanding in how the software works
+    - This gives our team the opportunity to [improve the documentation](troubleshooting/index.md) and provide best-in-class support to you, instead of spending time handling unclear and duplicate bug reports
+    - When reporting a problem, always include the software versions you are using and other information about your environment such as [browser, browser plugins](troubleshooting/browsers.md), operating system, storage type, memory size, and processor
 
 *[Web UI]: A Progressive Web App that can be installed on your home screen and provides a native app-like experience

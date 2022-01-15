@@ -41,10 +41,10 @@ available at [dl.photoprism.app/docker](https://dl.photoprism.app/docker/).
     videos are very demanding.
 
 !!! info ""
-    If you're running out of memory - or other system resources - while indexing, try reducing the
-    [number of workers](https://docs.photoprism.app/getting-started/config-options/) by setting
-    `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml` (depending on the performance of the server).
-    As a measure of last resort, you may disable using TensorFlow for image classification and facial recognition.
+    If your server runs out of memory, the index is frequently locked, or other system resources are running low
+    while indexing, you should [try reducing the number of workers](https://docs.photoprism.app/getting-started/config-options/)
+    by setting `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml` (depending on the performance
+    of the server). As a measure of last resort, you may disable using TensorFlow for image classification and facial recognition.
 
 ### Architecture Specific Notes ###
 

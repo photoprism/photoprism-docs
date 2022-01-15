@@ -176,8 +176,8 @@ In case the application logs don't contain anything helpful:
 - [ ] You are connected to the wrong server, VPN, CDN, or a DNS record has not been updated yet
 
 We also recommend checking your [Docker Logs](docker.md#viewing-logs) for messages like *disk full*, *disk quota exceeded*,
-*wrong permissions*, and *killed*. If a service has been killed or otherwise automatically terminated, this points to a
-memory problem. In case the logs show "disk full" or "disk quota exceeded" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space)
+*no space left on device*, *wrong permissions*, and *killed*. If a service has been killed or otherwise automatically terminated, this points to a
+memory problem. In case the logs show "disk full", "quota exceeded", or "no space left" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space)
 (add storage) or a disk usage limit is configured (remove or increase it).
 
 *Depending on the cause of the problem, you may need to perform a full rescan once the issue is resolved.*

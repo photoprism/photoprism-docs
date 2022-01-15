@@ -100,8 +100,7 @@ an SD card, or a shared network folder.
 
 !!! tldr ""
     It is not possible to change the password via `MYSQL_PASSWORD` after the database has been started 
-    for the first time. Choosing a secure password is not essential if you don't expose the database 
-    to other apps and hosts.
+    for the first time. Choosing a secure password is not essential if you don't [expose the database to other apps and hosts](troubleshooting/mariadb.md#cannot-connect).
 
 #### Volumes ####
 

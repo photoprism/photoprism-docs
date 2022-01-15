@@ -80,13 +80,13 @@ docker-compose up
 Fatal errors are often caused by one of the following conditions:
 
 - [ ] Your (virtual) server [disk is full](docker.md#disk-space)
-- [ ] There is disk space left, but a usage or the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (increase or remove it)
+- [ ] There is disk space left, but a usage or the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (change it)
 - [ ] [The *storage* folder is not writable](docker.md#file-permissions) (change permissions)
 - [ ] You have accidentally [mounted the wrong folders](../docker-compose.md#volumes)
 - [ ] The [server is low on memory](../index.md#system-requirements) (add more)
 - [ ] You didn't [configure at least 4 GB of swap](docker.md#adding-swap)
 - [ ] The server CPU is overheating (improve cooling)
-- [ ] The server has an outdated operating system that is not fully compatible
+- [ ] The server has an outdated operating system that is not fully compatible (update)
 - [ ] The [database server](mariadb.md) is not running, [incompatible](../index.md#databases), or misconfigured
 - [ ] You've [upgraded the MariaDB server](mariadb.md#version-upgrade) without running `mariadb-upgrade`
 - [ ] Files are [stored on an unreliable device such as a USB flash drive or a shared network folder](mariadb.md#corrupted-files)

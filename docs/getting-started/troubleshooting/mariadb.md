@@ -38,6 +38,10 @@ If this doesn't help, check the [Docker Logs](docker.md#viewing-logs) for messag
 - [ ] In case the logs also show "disk full" or "disk quota exceeded" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space) (add storage) or a disk usage limit is configured (remove or increase it)
 - [ ] Log messages that contain "no route to host" may also indicate a general network configuration problem (follow our [examples](https://dl.photoprism.app/docker/))
 
+!!! tldr ""
+    You have to resort to [alternative Docker images](../raspberry-pi.md#older-armv7-based-devices) to run MariaDB
+    on ARMv7-based devices and those with a 32-bit operating system.
+
 #### Unicode Support ####
 
 If the logs show "incorrect string value" database errors and you are running a custom MariaDB or MySQL

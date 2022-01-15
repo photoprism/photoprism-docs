@@ -157,8 +157,9 @@ so that the app container can access them. If you have configured specific user 
 ### Disk Space ###
 
 In case the logs show "disk full" or "disk quota exceeded" errors, either the disk containing the *storage* folder is full
-(get a new one or use a different disk) or a disk usage limit is configured, for example in the Kubernetes configuration
-(change it).
+(get a new one or use a different disk) or a disk usage limit is configured, for example in the Kubernetes, Docker,
+or Virtual Machine configuration (change it). Then start a full rescan if necessary, for example, if thumbnails are missing
+or pictures are hidden.
 
 On Linux and other Unix-like operating systems, the [available disk space](https://opensource.com/article/18/7/how-check-free-disk-space-linux)
 can be viewed by running `df -h` in a terminal.

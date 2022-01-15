@@ -16,7 +16,7 @@ docker-compose logs --tail=100
 
 Before reporting a bug:
 
-- [ ] Check the logs for messages like *disk full*, *disk quota exceeded*, *wrong permissions*, *no route to host*, *connection failed*, and *killed*; if a service has been killed or otherwise automatically terminated, this points to a [memory problem](docker.md#adding-swap); in case the logs show "disk full" or "disk quota exceeded" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space) (get a new one or use a different disk) or a disk usage limit is configured, for example in the Kubernetes configuration (change it)
+- [ ] Check the logs for messages like *disk full*, *disk quota exceeded*, *wrong permissions*, *no route to host*, *connection failed*, and *killed*; if a service has been killed or otherwise automatically terminated, this points to a [memory problem](docker.md#adding-swap); in case the logs show "disk full" or "disk quota exceeded" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space) (get a new one or use a different disk) or a disk usage limit is configured, for example in the Kubernetes, Docker, or Virtual Machine configuration (change it)
 - [ ] Make sure you are using the correct protocol (http or https), port (default is 2342), and hostname or IP address
 (default is localhost)
 - [ ] Note that HTTP security headers will prevent the app from loading in a frame (override them)
@@ -98,8 +98,8 @@ We recommend checking [your Docker logs](docker.md#viewing-logs) for messages li
 *connection failed*, and *killed* as described above. If a service has been killed or otherwise automatically terminated,
 this points to a memory problem.
 In case the logs show "disk full" or "disk quota exceeded" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space)
-(get a new one or use a different disk) or a disk usage limit is configured, for example in the Kubernetes configuration
-(change it).
+(get a new one or use a different disk) or a disk usage limit is configured, for example in the Kubernetes, Docker,
+or Virtual Machine configuration (change it). Start a full rescan if necessary.
 
 ### App Not Loading ###
 
@@ -126,6 +126,7 @@ In case the application logs don't contain anything helpful:
 - [ ] The [file type](../faq.md#what-media-file-types-are-supported) is generally supported, but a specific feature or codec is not
 - [ ] The files have bad filesystem permissions, so they can't be opened by the indexer
 - [ ] The indexer has skipped the files because they are exact duplicates
+- [ ] The files are ignored based on pattern in a `.ppignore` file
 - [ ] They are in *Library > Hidden* because thumbnails could not be created:
     - [ ] *Convert to JPEG* is disabled in *Settings > Library*
     - [ ] FFmpeg and/or RAW converters are disabled in *Settings > Advanced*
@@ -139,6 +140,8 @@ In case the application logs don't contain anything helpful:
 - [ ] The indexer has crashed because you didn't configure [at least 4 GB of swap](docker.md#adding-swap)
 - [ ] Somebody has deleted files without telling you
 - [ ] You are connected to the wrong server, VPN, CDN, or a DNS record has not been updated yet
+
+Start a rescan once the issue has been resolved.
 
 ### Broken Thumbnails ###
 
@@ -164,10 +167,12 @@ In case the application logs don't contain anything helpful:
 - [ ] You are connected to the wrong server, VPN, CDN, or a DNS record has not been updated yet
 
 We also recommend checking [your Docker logs](docker.md#viewing-logs) for messages like *disk full*, *disk quota exceeded*, *wrong permissions*, and *killed* as
-described above. If a service has been killed or otherwise automatically terminated, this points to a memory problem.
-In case the logs show "disk full" or "disk quota exceeded" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space)
-(get a new one or use a different disk) or a disk usage limit is configured, for example in the Kubernetes configuration
-(change it).
+described above:
+
+- [ ] If a service has been killed or otherwise automatically terminated, this points to a [memory problem](docker.md#adding-swap)
+- [ ] In case the logs show "disk full" or "disk quota exceeded" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space) (get a new one or use a different disk) or a disk usage limit is configured, for example in the Kubernetes, Docker, or Virtual Machine configuration (change it)
+
+Start a rescan once the issue has been resolved.
 
 ### Videos Don't Play ###
 

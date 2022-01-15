@@ -31,16 +31,13 @@ services:
     Never expose your database to the public Internet in this way, for example, if it is running on a cloud server.
 
 If this doesn't help, check the [Docker Logs](docker.md#viewing-logs) for messages like *disk full*, *disk quota exceeded*,
-*wrong permissions*, *no route to host*, *connection failed*, and *killed*:
+*wrong permissions*, *no route to host*, *connection failed*, *exec format error*, *no matching manifest*, and *killed*:
 
 - [ ] Make sure that the database *storage* folder is readable and writable
 - [ ] If the MariaDB service has been killed or otherwise automatically terminated, this can point to a [memory problem](docker.md#adding-swap) (add swap and/or memory; remove or increase usage limits)
 - [ ] In case the logs also show "disk full" or "disk quota exceeded" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space) (add storage) or a disk usage limit is configured (remove or increase it)
 - [ ] Log messages that contain "no route to host" may also indicate a general network configuration problem (follow our [examples](https://dl.photoprism.app/docker/))
-
-!!! tldr ""
-    You have to resort to [alternative Docker images](../raspberry-pi.md#older-armv7-based-devices) to run MariaDB
-    on ARMv7-based devices and those with a 32-bit operating system.
+- [ ] You have to resort to [alternative Docker images](../raspberry-pi.md#older-armv7-based-devices) to run MariaDB on ARMv7-based devices and those with a 32-bit operating system
 
 #### Unicode Support ####
 

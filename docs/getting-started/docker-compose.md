@@ -219,13 +219,12 @@ changed, added, or removed. This can also be automated using CLI commands and a 
 Easy, isn't it?
 
 !!! info ""
-    If your server runs out of memory, the index is frequently locked, or other system resources are running low
-    while indexing, you should [try reducing the number of workers](config-options.md#index-workers)
-    by setting `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml` (depending on the performance
-    of the server). Also, ensure that [your server has at least 4 GB of swap configured](troubleshooting/docker.md#adding-swap) so that
-    indexing doesn't cause restarts when there are memory usage spikes. Especially the conversion of RAW images and the
-    transcoding of videos are very demanding. As a measure of last resort, you may [disable using TensorFlow](config-options.md#feature-flags) for image
-    classification and facial recognition.
+    **If your server runs out of memory, the index is frequently locked, or other system resources are running low:**
+
+    - [ ] Try [reducing the number of workers](config-options.md#index-workers) by setting `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml` (depending on the performance of the server)
+    - [ ] Ensure that [your server has at least 4 GB of swap configured](troubleshooting/docker.md#adding-swap) so that indexing doesn't cause restarts when there are memory usage spikes (especially the conversion of RAW images and the
+    transcoding of videos are very demanding)
+    - [ ] As a measure of last resort, you may [disable using TensorFlow](config-options.md#feature-flags) for image classification and facial recognition
 
 !!! example ""
     **Back us on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism).**

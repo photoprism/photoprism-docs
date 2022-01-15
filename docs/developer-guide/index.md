@@ -41,7 +41,7 @@ identified:
     **Never report a bug unless you are sure you found a new problem that must be fixed directly in [our source code](https://github.com/photoprism/photoprism):**
 
     - Ask for [technical support](../user-guide/index.md#getting-support) if you need help, it could be a local configuration issue, or a misunderstanding in how the software works
-    - This gives our team the opportunity to [improve the documentation](documentation.md) and provide best-in-class support to you, instead of spending time handling unclear and duplicate bug reports
+    - This gives our team the opportunity to [improve the documentation](documentation.md) and provide best-in-class support to you, instead of spending time handling incomplete and/or duplicate bug reports
     - When reporting a problem, always include the software versions you are using and [other information about your environment](https://github.com/photoprism/photoprism/blob/develop/.github/ISSUE_TEMPLATE/bug_report.md) such as [browser, browser plugins](../getting-started/troubleshooting/browsers.md), operating system, storage type, memory size, and processor
 
 ## Submitting Pull Requests ##

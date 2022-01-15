@@ -131,7 +131,7 @@ In case the application logs don't contain anything helpful:
 - [ ] They [are in *Library > Hidden*](https://demo.photoprism.app/library/hidden) because thumbnails could not be created:
     - [ ] *Convert to JPEG* is [disabled in *Settings > Library*](../../user-guide/settings/library.md)
     - [ ] FFmpeg and/or RAW converters are [disabled in *Settings > Advanced*](../../user-guide/settings/advanced.md)
-    - [ ] The file is broken and cannot be opened
+    - [ ] The file is broken and cannot be opened (try to fix it)
     - [ ] [Your (virtual) server disk is full](docker.md#disk-space) (add storage)
     - [ ] [The *storage* folder is not writable](docker.md#file-permissions) (change permissions)
     - [ ] A disk usage or the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (remove or increase it)

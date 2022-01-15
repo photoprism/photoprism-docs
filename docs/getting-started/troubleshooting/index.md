@@ -16,9 +16,9 @@ docker-compose logs --tail=100
 
 Before reporting a bug:
 
-- [ ] Check the logs for messages like *disk full*, *disk quota exceeded*, *wrong permissions*, *no route to host*, *connection failed*, and *killed*:
+- [ ] Check the logs for messages like *disk full*, *disk quota exceeded*, *no space left on device*, *wrong permissions*, *no route to host*, *connection failed*, and *killed*:
     - [ ] If a service has been killed or otherwise automatically terminated, this points to a [memory problem](docker.md#adding-swap) (add swap and/or memory; remove or increase usage limits)
-    - [ ] In case the logs show "disk full" or "disk quota exceeded" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space) (add storage) or a disk usage limit is configured (remove or increase it)
+    - [ ] In case the logs show "disk full", "quota exceeded", or "no space left" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space) (add storage) or a disk usage limit is configured (remove or increase it)
     - [ ] Log messages that contain "no route to host" indicate a [problem with the database](mariadb.md) or Docker network configuration (follow our [examples](https://dl.photoprism.app/docker/))
 - [ ] Make sure you are using the correct protocol (default is `http`), port (default is `2342`), and hostname or IP address
 (default is `localhost`)
@@ -98,10 +98,10 @@ Fatal errors are often caused by one of the following conditions:
 - [ ] Your Raspberry Pi has not been configured according to our [recommendations](../raspberry-pi.md#system-requirements)
 
 We recommend checking your [Docker Logs](docker.md#viewing-logs) for messages like *disk full*, *disk quota exceeded*,
-*wrong permissions*, *no route to host*, *connection failed*, and *killed*:
+*no space left on device*, *wrong permissions*, *no route to host*, *connection failed*, and *killed*:
 
 - [ ] If a service has been killed or otherwise automatically terminated, this points to a [memory problem](docker.md#adding-swap) (add swap and/or memory; remove or increase usage limits)
-- [ ] In case the logs show "disk full" or "disk quota exceeded" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space)
+- [ ] In case the logs show "disk full", "quota exceeded", or "no space left" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space)
 (add storage) or a disk usage limit is configured (change it)
 - [ ] Log messages that contain "no route to host" indicate a [problem with the database](mariadb.md) or network configuration (follow our [examples](https://dl.photoprism.app/docker/))
 

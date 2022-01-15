@@ -158,9 +158,9 @@ so that the app container can access them. If you have configured specific user 
 
 ### Disk Space ###
 
-In case the logs show "disk full" or "disk quota exceeded" errors, either the disk containing the *storage* folder is full
-(get a new one or use a different disk) or a disk usage limit is configured, for example in the Docker, Kubernetes,
-or Virtual Machine configuration (remove or increase it).
+In case the logs show "disk full", "quota exceeded", or "no space left" errors, either the disk containing the
+*storage* folder is full (get a new one or use a different disk) or a disk usage limit is configured, for example
+in the Docker, Kubernetes, or Virtual Machine configuration (remove or increase it).
 
 On Linux and other Unix-like operating systems, the [available disk space](https://opensource.com/article/18/7/how-check-free-disk-space-linux)
 can be viewed by running `df -h` in a terminal.

@@ -84,7 +84,7 @@ Fatal errors are often caused by one of the following conditions:
 - [ ] [The *storage* folder is not writable](docker.md#file-permissions) (change permissions)
 - [ ] You have accidentally [mounted the wrong folders](../docker-compose.md#volumes)
 - [ ] The [server is low on memory](../index.md#system-requirements) (add memory)
-- [ ] You didn't [configure at least 4 GB of swap](docker.md#adding-swap)
+- [ ] You didn't [configure at least 4 GB of swap](docker.md#adding-swap) (add swap)
 - [ ] The server CPU is overheating (improve cooling)
 - [ ] The server has an outdated operating system that is not fully compatible (update)
 - [ ] The [database server](mariadb.md) is not running, [incompatible](../index.md#databases), or misconfigured

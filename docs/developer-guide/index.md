@@ -20,7 +20,7 @@ already exists. Give ideas you like a thumbs-up 👍  , so that we know what is 
 
 ## Questions? ##
 
-Follow us on [Twitter](https://twitter.com/photoprism_app) or join our [Community Chat](https://gitter.im/browseyourlife/community)
+Follow us on [Twitter](https://twitter.com/photoprism_app) and join the [Community Chat](https://gitter.im/browseyourlife/community)
 to get regular updates, connect with other contributors, and discuss your ideas. Our [Code of Conduct](https://photoprism.app/code-of-conduct) explains the "dos and don’ts."
 
 An important part of our journey is to explore new ways in product development and build better software through simplicity

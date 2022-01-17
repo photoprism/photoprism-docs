@@ -152,7 +152,9 @@ configuration.
 ### File Permissions ###
 
 Use a file manager, or the commands `chmod` and `chown` on Unix-like operating systems, to [change file and folder permissions](https://kb.iu.edu/d/abdb)
-so that the app container can access them. If you have configured specific user and group IDs, make sure they match.
+so that the app container can access them.
+
+If you have configured specific user and group IDs for PhotoPrism, make sure they match.
 
 *Start a full rescan if necessary, for example, if it looks like [thumbnails](index.md#broken-thumbnails) or [pictures are missing](index.md#missing-pictures).*
 
@@ -160,13 +162,11 @@ so that the app container can access them. If you have configured specific user 
 
 In case the logs show "disk full", "quota exceeded", or "no space left" errors, either the disk containing the
 *storage* folder is full (get a new one or use a different disk) or a disk usage limit is configured, for example
-in the Docker, Kubernetes, or Virtual Machine configuration (remove or increase it).
+in the Docker, Kubernetes, or Virtual Machine configuration (remove or increase it):
 
-On Linux and other Unix-like operating systems, the [available disk space](https://opensource.com/article/18/7/how-check-free-disk-space-linux)
-can be viewed by running `df -h` in a terminal.
-
-If you use *Docker Desktop* on operating systems other than Linux and/or a virtual machine, they have their own
-settings to adjust the size of virtual disks and memory. For details, refer to the corresponding documentation.
+- On Linux and other Unix-like operating systems, the [available disk space](https://opensource.com/article/18/7/how-check-free-disk-space-linux) can be viewed by running `df -h` in a terminal
+- If you are using *Kubernetes*, *Docker Desktop*, *Hyper-V*, or a Virtual Machine, they have their own settings to adjust the size of [storage](../docker-compose.md#volumes), [RAM](../index.md#system-requirements), and [swap](#adding-swap)
+- For details, refer to the corresponding documentation
 
 *Start a full rescan if necessary, for example, if it looks like [thumbnails](index.md#broken-thumbnails) or [pictures are missing](index.md#missing-pictures).*
 

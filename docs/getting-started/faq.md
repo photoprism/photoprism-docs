@@ -121,8 +121,9 @@ need to use the exact same versions, so it's possible to replace packages with w
 
 Please note that we do not have the resources to provide private users with dependencies and
 [TensorFlow libraries](https://dl.photoprism.app/tensorflow/) for their personal environments.
-We recommend learning Docker if you are using Linux as it saves developers a lot of time and
-helps avoid "works for me" moments, see [next question](#why-are-you-using-docker).
+We recommend giving Docker a try if you use Linux as it saves developers a lot of time when building,
+testing, and deploying complex applications like PhotoPrism. It also effectively helps avoid
+"works for me" moments and missing dependencies, see [next question](#why-are-you-using-docker).
 
 #### Installation Packages ####
 

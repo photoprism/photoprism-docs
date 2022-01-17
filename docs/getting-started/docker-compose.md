@@ -186,7 +186,7 @@ Enabling [public mode](config-options.md) will disable authentication.
     started for the first time. You may run `docker-compose exec photoprism photoprism passwd` 
     in a terminal to change an existing password. You can also reset your database for a clean start.
 
-The server port and app [config options](config-options.md) may be changed in `docker-compose.yml` at any time.
+The server port and other [config options](config-options.md) can be changed in `docker-compose.yml` at any time.
 Remember to restart the services for changes to take effect:
 
 ```bash

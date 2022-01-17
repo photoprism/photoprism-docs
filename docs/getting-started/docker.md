@@ -29,8 +29,8 @@ installed on your system. It is available for Mac, Linux, and Windows.
       -v ~/Pictures:/photoprism/originals \
       photoprism/photoprism
     ```
-    
-The server port and app [config options](config-options.md) may be changed as needed.
+
+The server port and other [config options](config-options.md) can be changed as needed.
 If you provide no database server credentials, a SQLite database file will be created in the
 *storage* folder.
 

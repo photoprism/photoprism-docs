@@ -163,7 +163,7 @@ organized by year and month.
 ### Step 2: Start the server ###
 
 Open a terminal and change to the folder in which the `docker-compose.yml` file has been saved.[^1]
-Run this command to start the app and database in the background:
+Run this command to start the application and database services in the background:
 
 ```bash
 docker-compose up -d
@@ -175,11 +175,11 @@ You may change it on the [account settings page](../user-guide/settings/account.
 Enabling [public mode](config-options.md) will disable authentication.
 
 !!! info ""
-    If you can't connect, try starting the app without `-d`: `docker-compose up photoprism`. 
-    This keeps it in the foreground and shows log messages for [troubleshooting](troubleshooting/index.md).
+    It can be helpful to [keep Docker running in the foreground while debugging](troubleshooting/docker.md#viewing-logs) so that log messages are displayed directly. To do this, omit the `-d` parameter when restarting.
+
     Should the server already be running, or you see no errors, you may have started it
-    on a different host and/or port. There could also be an issue with your browser,
-    ad blocker, or firewall settings.
+    on a different host and/or port. There could also be an [issue with your browser,
+    ad blocker, or firewall settings](troubleshooting/index.md#connection-fails).
 
 !!! tldr ""
     It is not possible to change the password via `PHOTOPRISM_ADMIN_PASSWORD` after the app has been 
@@ -187,11 +187,11 @@ Enabling [public mode](config-options.md) will disable authentication.
     in a terminal to change an existing password. You can also reset your database for a clean start.
 
 The server port and app [config options](config-options.md) may be changed in `docker-compose.yml` at any time.
-Remember to restart the app for changes to take effect:
+Remember to restart the services for changes to take effect:
 
 ```bash
-docker-compose stop photoprism
-docker-compose up -d photoprism
+docker-compose stop
+docker-compose up -d
 ```
 
 ### Step 3: Index your library ###

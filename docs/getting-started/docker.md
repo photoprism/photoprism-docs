@@ -50,11 +50,12 @@ You may change it on the [account settings page](../user-guide/settings/account.
 Enabling [public mode](config-options.md) will disable authentication.
 
 !!! info ""
-    If you can't connect, try starting the app without `-d`. This keeps it in the foreground
-    and shows log messages for [troubleshooting](troubleshooting/index.md).
-    Should the server already be running, or you see no errors, you may have started it 
-    on a different host and/or port. There could also be an issue with your browser, 
-    ad blocker, or firewall settings.
+    It can be helpful to keep Docker running in the foreground while debugging
+    so that log messages are displayed directly. To do this, omit the `-d` parameter when restarting.
+
+    Should the server already be running, or you see no errors, you may have started it
+    on a different host and/or port. There could also be an [issue with your browser,
+    ad blocker, or firewall settings](troubleshooting/index.md#connection-fails).
 
 !!! tldr ""
     It is not possible to change the password via `PHOTOPRISM_ADMIN_PASSWORD` after the app has been 

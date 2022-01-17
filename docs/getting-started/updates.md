@@ -12,9 +12,9 @@ Now run the following commands to download the most recent image from Docker Hub
 restart your instance in the background:
 
 ```
-docker-compose pull photoprism
-docker-compose stop photoprism
-docker-compose up -d photoprism
+docker-compose pull
+docker-compose stop
+docker-compose up -d
 ```
 
 Pulling a new version can take several minutes, depending on your internet connection speed.

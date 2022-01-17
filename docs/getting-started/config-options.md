@@ -2,8 +2,8 @@
 
 !!! tldr ""
     Changing values in `docker-compose.yml` or in [Advanced Settings](../user-guide/settings/advanced.md) 
-    always **requires a restart** to take effect. Open a terminal, run `docker-compose stop photoprism` and then
-    `docker-compose up -d photoprism` to restart the service.
+    always **requires a restart** to take effect. Open a terminal, run `docker-compose stop` and then
+    `docker-compose up -d` to restart all services.
 
 ### Basic Settings ###
 

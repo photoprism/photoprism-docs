@@ -11,7 +11,7 @@ Problems with the user interface can be caused by a bug or an incompatible brows
 - In particular, not [all video formats](https://caniuse.com/?search=video%20format) can be [played with every browser](https://github.com/photoprism/photoprism/issues/707)
 
 !!! tldr ""
-    We recommend going through our related [troubleshooting checklist](index.md#app-not-loading) in case the app doesn't load at all.
+    We recommend going through our related [Troubleshooting Checklist](index.md#app-not-loading) in case the app doesn't load at all.
 
 #### Try Another Browser ####
 

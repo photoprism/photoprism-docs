@@ -1,17 +1,17 @@
 # Diagnosing Frontend Issues
 
 !!! info ""
-    User interface issues can be caused by a bug or because your browser is incompatible:
-
-    - Some [features may not be supported](https://caniuse.com/) by non-standard browsers, as well as nightly, test, and unofficial versions
-    - In particular, not [all video formats](https://caniuse.com/?search=video%20format) can be [played with every browser](https://github.com/photoprism/photoprism/issues/707)
-
     You are welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
     [Sponsors](../../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
     Before [submitting a support request](../../user-guide/index.md#getting-support), try to determine the cause of your problem.
 
-We recommend going through our related [troubleshooting checklist](index.md#app-not-loading) in case the app doesn't
-load at all.
+!!! info ""
+    **Problems with the user interface can be caused by a bug or an incompatible browser:**
+
+    - Some [features are not supported](https://caniuse.com/) by non-standard browsers, as well as nightly, test, and unofficial versions
+    - In particular, not [all video formats](https://caniuse.com/?search=video%20format) can be [played with every browser](https://github.com/photoprism/photoprism/issues/707)
+
+    We recommend going through our related [troubleshooting checklist](index.md#app-not-loading) in case the app doesn't load at all.
 
 #### Try Another Browser ####
 

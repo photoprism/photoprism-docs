@@ -6,7 +6,7 @@ and Apple's Finder can connect directly to PhotoPrism.
 This mounts the *originals* and/or *import* folder as a network drive, allowing you to open, edit, and delete files from a remote device
 as if they were local.
 
-After files have been transferred, you can [index](../library/index.md) or [import](../library/import.md) them as usual.
+After files have been transferred, you can [index](../library/originals.md) or [import](../library/import.md) them as usual.
 By default, indexing and importing start automatically after a safety delay when files have been uploaded using WebDAV.
 
 !!! tldr ""

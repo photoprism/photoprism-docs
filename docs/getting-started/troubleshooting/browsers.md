@@ -1,21 +1,21 @@
 # Diagnosing Frontend Issues
 
 !!! info ""
+    If you have a user interface issue, it can be due to a bug or because your browser is incompatible:
+
+    - Nightly, test, and unofficial browser builds may not support certain features and standards
+    - Not [all video formats](https://caniuse.com/?search=video%20format) can be [played with every browser](https://github.com/photoprism/photoprism/issues/707)
+
     You are welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
     [Sponsors](../../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
     Before [submitting a support request](../../user-guide/index.md#getting-support), try to determine the cause of your problem.
 
-If you have a frontend problem, it can be due to a bug or because your browser is incompatible:
-
-- Nightly, test, and unofficial browser builds may not support certain features and standards
-- Not [all video formats](https://caniuse.com/?search=video%20format) can be [played with every browser](https://github.com/photoprism/photoprism/issues/707)
-
 We recommend going through our related [troubleshooting checklist](index.md#app-not-loading) in case the app doesn't
 load at all.
 
-### Try Another Browser ###
+#### Try Another Browser ####
 
-To test if you have a general problem that is not browser-specific, open the Web UI in other browsers:
+To test if you have a general problem that is not browser-specific, [open the Web UI](../docker-compose.md#step-2-start-the-server) in other browsers:
 
 - If you are using [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/), try the [stable version](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) and [Chrome](https://www.google.com/chrome/) or [Chromium](https://www.chromium.org/getting-involved/download-chromium)
 - If you have browser plugins installed, try disabling them to see if this makes a difference
@@ -28,7 +28,7 @@ To test if you have a general problem that is not browser-specific, open the Web
     Opera and Samsung Internet have been reported to be compatible as well. Due to [limited resources](../../funding.md), we can
     not test every release with all browser types and versions.
 
-### Getting Error Details ###
+#### Getting Error Details ####
 
 If possible, please also include the error type, error message, and URL of the affected resource when
 [submitting a support request](../../user-guide/index.md#getting-support). For this purpose, check the

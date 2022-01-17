@@ -36,8 +36,7 @@ We'll do our best to answer all your questions. In return, we ask you to [back u
 Think of "free software" as in "free speech," not as in "free beer". Thank you! 💜
 
 !!! example ""
-    **Don't open a GitHub Issue unless you are sure you found a new problem that must be fixed directly in the app:**
-
-    - Ask for [technical support](https://photoprism.app/contact) if you need help, it could be a local configuration issue, or a misunderstanding in how the software works
-    - This gives our team the opportunity to [improve the documentation](../getting-started/troubleshooting/index.md) and provide best-in-class support to you, instead of handling incomplete and/or duplicate bug reports
-    - When reporting a problem, always include the software versions you are using and other information about your environment such as [browser, browser plugins](../getting-started/troubleshooting/browsers.md), operating system, storage type, memory size, and processor
+    **We kindly ask you not to report bugs via GitHub Issues unless you are certain to have found a new issue that must be fixed directly in the app.**
+    Contact us or a community member if you need help, it could be a local configuration problem, or a misunderstanding
+    in how the software works. This gives our team the opportunity to [improve the documentation](../getting-started/troubleshooting/index.md)
+    and provide best-in-class support to you, instead of handling unclear and/or duplicate bug reports.

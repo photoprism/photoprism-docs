@@ -3,8 +3,8 @@
 !!! info ""
     User interface issues can be caused by a bug or because your browser is incompatible:
 
-    - Uncommon browsers, as well as nightly, test, and unofficial browser versions, may [not support certain features](https://caniuse.com/)
-    - Not [all video formats](https://caniuse.com/?search=video%20format) can be [played with every browser](https://github.com/photoprism/photoprism/issues/707)
+    - Some [features may not be supported](https://caniuse.com/) by non-standard browsers, as well as nightly, test, and unofficial versions
+    - In particular, not [all video formats](https://caniuse.com/?search=video%20format) can be [played with every browser](https://github.com/photoprism/photoprism/issues/707)
 
     You are welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
     [Sponsors](../../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.

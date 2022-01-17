@@ -12,6 +12,10 @@
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
     There is no preview available for 32-bit operating systems.
 
+- Auth: [Logout redirects to base URI instead of `/`](https://github.com/photoprism/photoprism/issues/1901)
+- Videos: [Excluded streaming from gzip compression](https://github.com/photoprism/photoprism/commit/4d8292a9c3e357dc8d956a13ee9d6faa34b69119)
+- Folders: [Fixed search query string substitutions and sanitation](https://github.com/photoprism/photoprism/issues/1930)
+
 ### January 7, 2022 ###
 <span class="build">Build 220107-f5b7ef83</span>
 

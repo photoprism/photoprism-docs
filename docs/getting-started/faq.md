@@ -128,8 +128,8 @@ testing, and deploying complex applications like PhotoPrism. It also effectively
 #### Installation Packages ####
 
 Developers are invited to [contribute by building and testing standalone packages](https://docs.photoprism.app/developer-guide/)
-for Linux distributions and other operating systems. New versions are [released several times a month](../release-notes.md), and testing
-the long list of dependencies in multiple environments would [absorb much of our resources](../funding.md).
+for Linux distributions and other operating systems. New versions are [released several times a month](../release-notes.md),
+so maintaining and testing the long list of dependencies in multiple environments would [consume much of our resources](../funding.md).
 An [unofficial port](https://docs.photoprism.app/getting-started/freebsd/) is available for FreeBSD / FreeNAS users.
 
 ### Why are you using Docker? ###

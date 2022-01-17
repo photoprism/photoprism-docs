@@ -18,13 +18,12 @@ already exists. Give ideas you like a thumbs-up 👍  , so that we know what is 
 !!! example ""
     Our vision is to provide the most user- and privacy-friendly solution to keep your pictures organized and accessible.
 
-## Questions? ##
+## Join the Community ##
 
 Follow us on [Twitter](https://twitter.com/photoprism_app) and join the [Community Chat](https://gitter.im/browseyourlife/community)
 to get regular updates, connect with other contributors, and discuss your ideas. Our [Code of Conduct](https://photoprism.app/code-of-conduct) explains the "dos and don’ts."
 
-An important part of our journey is to explore new ways in product development and build better software through simplicity
-and consistent use of community feedback. Feel free to [share your thoughts](../contact.md) with us at any time.
+An important part of our journey is to explore new ways in product development and build better software through consistent use of community feedback. Feel free to [share your thoughts](../contact.md) with us at any time.
 
 ## Creating Bug Reports ##
 

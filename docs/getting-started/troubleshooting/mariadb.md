@@ -5,11 +5,6 @@
     [Sponsors](../../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
     Before [submitting a support request](../../user-guide/index.md#getting-support), try to determine the cause of your problem.
 
-#### MySQL Errors ####
-
-Official [support for MySQL is discontinued](../index.md#databases) as Oracle seems to have stopped shipping [new features and improvements](https://github.com/photoprism/photoprism/issues/1764).
-As a result, the testing effort required before each release is no longer feasible.
-
 #### Cannot Connect ####
 
 First, verify that you are using the correct port (default is `3306`) and hostname or IP address:
@@ -121,3 +116,8 @@ as a USB flash drive, an SD card, or a shared network folder.
 - [ ] Never use the same database files with more than one server instance
 - [ ] To share a database over a network, run the database server directly on the remote server instead of sharing database files
 - [ ] To repair your tables after you have moved the files to a local disk, you can [start MariaDB with `--innodb-force-recovery=1`](https://mariadb.com/kb/en/innodb-recovery-modes/) (otherwise the same procedure as for recovering a lost password, see above)
+
+#### MySQL Errors ####
+
+Official [support for MySQL is discontinued](../index.md#databases) as Oracle seems to have stopped shipping [new features and improvements](https://github.com/photoprism/photoprism/issues/1764).
+As a result, the testing effort required before each release is no longer feasible.

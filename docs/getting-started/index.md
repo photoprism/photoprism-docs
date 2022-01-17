@@ -97,8 +97,9 @@ Think of "free software" as in "free speech," not as in "free beer". Thank you! 
 
 !!! example ""
     **We kindly ask you not to report bugs via GitHub Issues unless you are certain to have found a new issue that must be fixed directly in the app.**
-    Contact us or a community member if you need help, it could be a local configuration problem, or a misunderstanding
-    in how the software works. This gives our team the opportunity to [improve the documentation](troubleshooting/index.md)
+    [Contact us](https://photoprism.app/contact) or [a community member](https://github.com/photoprism/photoprism/discussions)
+    if you need help, it could be a local configuration problem, or a misunderstanding in how the software works.
+    This gives our team the opportunity to [improve the documentation](troubleshooting/index.md)
     and provide best-in-class support to you, instead of handling unclear and/or duplicate bug reports.
 
 *[Web UI]: A Progressive Web App that can be installed on your home screen and provides a native app-like experience

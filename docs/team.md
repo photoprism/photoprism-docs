@@ -1,7 +1,7 @@
 # Our Team
 
 !!! example ""
-    We strive to provide the most user- and privacy-friendly solution to keep your pictures organized and accessible.
+    We strive to provide the most user- and privacy-friendly solution to keep your pictures organized and accessible. Feel free to contact us at [hello@photoprism.app](mailto:hello@photoprism.app) if you have general questions, want to support our work, or just want to say hello.
 
 ## Michael Mayer ##
 

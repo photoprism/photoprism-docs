@@ -14,7 +14,7 @@
     [become a sponsor](../funding.md) to get their favorite features as soon as possible.
 
 ??? question "Are there plans to introduce premium features?"
-    Yes, we plan to offer non-essential premium features and services as voluntary donations currently don't
+    PhotoPrism is 100% self-funded and independent. We plan to offer non-essential premium features and services as voluntary donations currently don't
     cover even our most basic expenses. It is in the best interest of all users that funding is sustainable
     in the long run.
 

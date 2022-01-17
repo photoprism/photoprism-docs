@@ -10,7 +10,7 @@ guidelines to ensure that all submissions are acceptable:
 - If needed, updated documentation should be provided in a separate pull request
 
 !!! example ""
-    **These guidelines are not intended as a filter or barrier to participation.** If you are unfamiliar with
+    These guidelines are not intended as a filter or barrier to participation. If you are unfamiliar with
     Open Source development, we [will help you](https://gitter.im/browseyourlife/community).
 
 ### To submit new code... ###

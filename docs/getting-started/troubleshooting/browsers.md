@@ -1,9 +1,9 @@
 # Diagnosing Frontend Issues
 
 !!! info ""
-    If you have a user interface issue, it can be due to a bug or because your browser is incompatible:
+    User interface issues can be caused by a bug or because your browser is incompatible:
 
-    - Nightly, test, and unofficial browser builds may not support certain features and standards
+    - Especially nightly, test, and unofficial browser builds [may not support certain features](https://caniuse.com/) and standards
     - Not [all video formats](https://caniuse.com/?search=video%20format) can be [played with every browser](https://github.com/photoprism/photoprism/issues/707)
 
     You are welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).

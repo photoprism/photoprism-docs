@@ -32,9 +32,11 @@
 
 === "Browser"
     
-    If you [have a frontend problem](browsers.md), it can be helpful to check the browser console for errors and warnings.
+    If you [have a frontend problem](browsers.md), it is often helpful to check the browser console for errors and warnings.
     A console is available in all modern browsers and can be activated via keyboard shortcuts or the browser menu.
     
+    User interface issues can be caused by a bug or because your browser is incompatible: Especially nightly, test, and unofficial browser builds [may not support certain features](https://caniuse.com/) and standards.
+
     !!! tldr ""
         In case you don't see any log messages, try reloading the page, as the problem may occur while the page is loading.
     

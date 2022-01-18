@@ -1,4 +1,4 @@
-# Directory Structure
+# Repository Folder Structure
 
 Our directory layout is loosely based on https://github.com/golang-standards/project-layout:
 

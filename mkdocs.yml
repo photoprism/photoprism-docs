@@ -111,15 +111,15 @@ nav:
   - Developer Guide:
     - Introduction: developer-guide/index.md
     - GitHub Issues: developer-guide/issues.md
+    - Pull Requests: developer-guide/pull-requests.md
     - Code Quality: developer-guide/code-quality.md
     - Setup: developer-guide/setup.md
     - Directories: developer-guide/directories.md
     - Configuration: developer-guide/configuration.md
     - Running Tests: developer-guide/tests.md
-    - Pull Requests: developer-guide/pull-requests.md
-    - Security Policy: security-policy.md
     - Documentation: developer-guide/documentation.md
     - Translations: developer-guide/translations.md
+    - Security Policy: security-policy.md
     - User Interface:
       - Introduction: developer-guide/ui/introduction.md
       - Screenshots: developer-guide/ui/screenshots.md

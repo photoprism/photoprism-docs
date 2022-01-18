@@ -12,7 +12,7 @@
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
     There is no preview available for 32-bit operating systems.
 
-- Albums: [Improved performance when updating moments](https://github.com/photoprism/photoprism/issues/1953) *(please test)*
+- Albums: [Improved performance when updating moments](https://github.com/photoprism/photoprism/issues/1953)
 
 ### January 18, 2022 ###
 <span class="build">Build 220118-76c94a1f</span>

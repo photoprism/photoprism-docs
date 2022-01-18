@@ -43,7 +43,7 @@ Now open [http://localhost:8000/](http://localhost:8000/) in a browser to view t
 
 ### Contributor License Agreement (CLA) ###
 
-After submitting your first pull request, you will automatically be asked to accept our [Contributor License Agreement](https://cla-assistant.io/photoprism/photoprism):
+After submitting your first pull request, you will automatically be asked to [accept our CLA](https://cla-assistant.io/photoprism/photoprism):
 
 - This gives us the ability to [(re-)license all code and documentation](https://en.wikipedia.org/wiki/Software_relicensing) at any time, *almost* as if we had created it ourselves (you retain the rights to your own work, which may be different for other CLAs)
 - Otherwise, we cannot accept pull requests, as this would mean that we are not able to change the license of our software and documentation at a later time, even though most of it was developed and written by us

@@ -12,6 +12,8 @@
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
     There is no preview available for 32-bit operating systems.
 
+- Albums: [Added an index for album filters to improve performance](https://github.com/photoprism/photoprism/issues/1953) *(please test)*
+
 ### January 18, 2022 ###
 <span class="build">Build 220118-76c94a1f</span>
 

@@ -15,7 +15,7 @@
 - Videos: [Excluded streaming from gzip compression](https://github.com/photoprism/photoprism/commit/4d8292a9c3e357dc8d956a13ee9d6faa34b69119)
 - Videos: [Fixed Content-Type header and streaming in Safari](https://github.com/photoprism/photoprism/issues/1648)
 - Folders: [Fixed search query string substitutions and sanitation](https://github.com/photoprism/photoprism/issues/1930)
-- Auth: [Logout redirects to base URI instead of site root path](https://github.com/photoprism/photoprism/issues/1901)
+- Auth: [Logout redirects to base URI instead of site root](https://github.com/photoprism/photoprism/issues/1901)
 - UI: [Updated information and links in *Settings* > *About*](https://demo.photoprism.app/about)
 - UI: [Improved bootstrap template rendering performance](https://github.com/photoprism/photoprism/commit/03457bdb755b7cfb088a72f564119fb8e7a46ec2)
 

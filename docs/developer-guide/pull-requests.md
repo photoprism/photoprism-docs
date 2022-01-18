@@ -7,9 +7,9 @@ guidelines to ensure that all submissions are acceptable:
 
 - [ ] **Features and improvements must be fully implemented** so that they can be released at any time without additional work
 - [ ] **Automated unit and/or acceptance tests are mandatory** to ensure the changes work as expected and to reduce repetitive manual work on our side
-- [ ] **Frontend components must be responsive** to work and look properly on phones, tablets, and desktop computers; you must have tested them on all major browsers and different devices
-- [ ] In case you submit database-related changes, they must be tested and compatible with SQLite, MariaDB, and MySQL
-- [ ] Updated documentation and translations should be provided (specify if needed)
+- [ ] **Frontend components must be responsive** to work and look properly on phones, tablets, and desktop computers; you must have tested them on [all major browsers](../getting-started/index.md#browsers) and different devices
+- [ ] In case you submit database-related changes, they must be tested and [compatible](../getting-started/index.md#databases) with [SQLite 3](https://www.sqlite.org/) and [MariaDB 10.5.12+](https://mariadb.org/)
+- [ ] Updated [documentation](documentation.md) and [translations](translations.md) should be provided if needed
 
 !!! example ""
     These guidelines are not intended as a filter or barrier to participation. If you are unfamiliar with

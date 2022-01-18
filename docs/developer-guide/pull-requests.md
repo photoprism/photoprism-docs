@@ -3,15 +3,24 @@
 Because we want to create the best possible product for our users, we have a set of 
 guidelines to ensure that all submissions are acceptable:
 
-- **Features and improvements must be fully implemented** so that they can be released at any time without additional work
-- **Automated tests are mandatory to ensure the changes work as expected** and to reduce repetitive manual work on our side
-- **Frontend components must be responsive** to work and look properly on phones, tablets, and desktop computers; you must have tested them on all major browsers and different devices
-- In case you submit database-related changes, they must be tested and compatible with SQLite, MariaDB, and MySQL
-- If needed, updated documentation should be provided in a separate pull request
+- [ ] **Features and improvements must be fully implemented** so that they can be released at any time without additional work
+- [ ] **Automated unit and/or acceptance tests are mandatory** to ensure the changes work as expected and to reduce repetitive manual work on our side
+- [ ] **Frontend components must be responsive** to work and look properly on phones, tablets, and desktop computers; you must have tested them on all major browsers and different devices
+- [ ] In case you submit database-related changes, they must be tested and compatible with SQLite, MariaDB, and MySQL
+- [ ] Updated documentation and translations should be provided (specify if needed)
 
 !!! example ""
     These guidelines are not intended as a filter or barrier to participation. If you are unfamiliar with
     Open Source development, we [will help you](https://gitter.im/browseyourlife/community).
+
+### Contributor License Agreement ###
+
+After submitting your first pull request, you will automatically be asked to accept our [Contributor License Agreement (CLA)](https://cla-assistant.io/photoprism/photoprism):
+
+- This gives us the ability to [(re-)license all code and documentation](https://en.wikipedia.org/wiki/Software_relicensing) at any time, *almost* as if we had created it ourselves (you retain the rights to your own work, which may be different for other CLAs)
+- Otherwise, we cannot accept pull requests, as this would mean that we are not able to change the license at a later time, even though most of the code was developed by us
+- This may be necessary, for example, if the license is incompatible with a larger combined work, we want to remove some restrictions on the AGPL/Creative Commons license, or it turns out that someone is abusing the existing license in a way we don't yet know about
+- The lack of a formal contract would also lead to legal uncertainty, as some contributors could later claim that they did not intend to license their code in any way and that it was stolen
 
 ### To submit new code... ###
 
@@ -33,8 +42,9 @@ guidelines to ensure that all submissions are acceptable:
     * `git merge upstream/develop`
   * We recommend running [tests](https://docs.photoprism.app/developer-guide/tests/) after each change to make sure you didn't break anything:
     * `make test`
-  * **Add [tests](https://docs.photoprism.app/developer-guide/tests/) for any new code.** If you have questions about how to do this, please ask in your pull request.
-  * Please run `make fmt` to ensure code is properly formatted according to our standards.
+  * **Add [tests](https://docs.photoprism.app/developer-guide/tests/) for any new code** 
+    * If you have questions about how to do this, please ask in your pull request
+  * Run `make fmt` to ensure code is properly formatted according to our standards
   * If all tests are green and you see no other errors, commit your changes. To reference related [GitHub issues](https://github.com/photoprism/photoprism/issues), please end your commit message with the issue ID like `#1234`:
       * `git status -s`
       * `git add .`
@@ -42,14 +52,12 @@ guidelines to ensure that all submissions are acceptable:
 
 #### When you are ready... ####
 
-  * Sign the [Contributor License Agreement (CLA)](https://cla-assistant.io/photoprism/photoprism).
-  * Verify you didn't forget to add / commit files (output should be empty): 
-    * `git status -s`
-  * Push all commits to your forked remote repository on GitHub:
-    * `git push -u origin feature/your_feature_name`
-  * **[Create a pull request](https://help.github.com/articles/creating-a-pull-request/)** with a helpful description of what it does.
-  * Wait for our code review and fix remaining issues, if any.
-  * Write [documentation](https://docs.photoprism.app/developer-guide/documentation/) if you are adding new features or changing functionality. It is hosted on [docs.photoprism.app](https://docs.photoprism.app/) and automatically updates whenever changes are pushed to the repository.
+- [ ] Verify you didn't forget to add / commit files, output of `git status -s` should be empty
+- [ ] Push all commits to your forked remote repository on GitHub:<br>`git push -u origin feature/your_feature_name`
+- [ ] **[Create a pull request](https://help.github.com/articles/creating-a-pull-request/)** with a helpful description of what it does
+- [ ] Wait for us to perform a code review and fix the remaining issues, if any
+- [ ] Update and/or add [documentation](https://docs.photoprism.app/developer-guide/documentation/) if needed
+- [ ] Sign the [Contributor License Agreement (CLA)](#contributor-license-agreement)
 
 You can also create a pull request if your changes are not yet complete or working. Just let us know 
 it's in progress, so we don't try to merge them. We can help you with a code review or other feedback 

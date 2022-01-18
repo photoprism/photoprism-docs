@@ -1,4 +1,6 @@
-# Creating a Pull Request
+# Pull Requests
+
+## Acceptance Criteria ##
 
 Because we want to create the best possible product for our users, we have a set of 
 guidelines to ensure that all submissions are acceptable:
@@ -22,7 +24,7 @@ After submitting your first pull request, you will automatically be asked to [ac
 - This may be necessary, for example, if the license is incompatible with a larger combined work, we want to remove some restrictions on the AGPL/Creative Commons license, or it turns out that someone is abusing the existing license in a way we don't yet know about
 - The lack of a formal contract would also lead to legal uncertainty for us and all users, as some contributors could later claim that they did not intend to license their code in any way and that it was stolen
 
-### To submit new code... ###
+## How to Create and Submit a Pull Request ##
 
 #### Fork our repository ####
 

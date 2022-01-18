@@ -13,9 +13,9 @@ guidelines to ensure that all submissions are acceptable:
     These guidelines are not intended as a filter or barrier to participation. If you are unfamiliar with
     Open Source development, we [will help you](https://gitter.im/browseyourlife/community).
 
-### Contributor License Agreement ###
+### Contributor License Agreement (CLA) ###
 
-After submitting your first pull request, you will automatically be asked to accept our [Contributor License Agreement (CLA)](https://cla-assistant.io/photoprism/photoprism):
+After submitting your first pull request, you will automatically be asked to [accept our CLA](https://cla-assistant.io/photoprism/photoprism):
 
 - This gives us the ability to [(re-)license all code and documentation](https://en.wikipedia.org/wiki/Software_relicensing) at any time, *almost* as if we had created it ourselves (you retain the rights to your own work, which may be different for other CLAs)
 - Otherwise, we cannot accept pull requests, as this would mean that we are not able to change the license of our software and documentation at a later time, even though most of it was developed and written by us
@@ -57,7 +57,7 @@ After submitting your first pull request, you will automatically be asked to acc
 - [ ] **[Create a pull request](https://help.github.com/articles/creating-a-pull-request/)** with a helpful description of what it does
 - [ ] Wait for us to perform a code review and fix the remaining issues, if any
 - [ ] Update and/or add [documentation](https://docs.photoprism.app/developer-guide/documentation/) if needed
-- [ ] Sign the [Contributor License Agreement (CLA)](#contributor-license-agreement)
+- [ ] Sign the [Contributor License Agreement (CLA)](#contributor-license-agreement-cla)
 
 You can also create a pull request if your changes are not yet complete or working. Just let us know 
 it's in progress, so we don't try to merge them. We can help you with a code review or other feedback 

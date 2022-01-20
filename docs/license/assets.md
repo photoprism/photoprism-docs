@@ -12,9 +12,7 @@ services, and any other brand features and elements, whether registered or unreg
 claim ownership of PhotoPrism's Brand Assets or brands confusingly similar to PhotoPrism's
 Brand Assets in any way, including, without limitation, as a trademark, service mark,
 company name or designation, domain name, social media profile/handle, or in any other
-manner.
-
-Visit [photoprism.app/trademark](https://photoprism.app/trademark) to learn more.
+manner, see [Trademark and Brand Guidelines](https://photoprism.app/trademark).
 
 Because some Digital Assets are licensed to us only for direct distribution, we cannot
 redistribute them under a more permissive license for other purposes. If the author or

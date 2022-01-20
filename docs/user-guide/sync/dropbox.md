@@ -29,7 +29,7 @@ To auto-import uploaded files into PhotoPrism;
     volumes:
       - "~/Dropbox/Camera Uploads:/photoprism/import"
     ```
-5. Optional: Enable 'delete on import' in PhotoPrism's settings to delete imported files from Dropbox. This saves Dropbox space, allowing you to remain within the 2GB free tier.
+5. Optional: Enable 'delete on import' in PhotoPrism's settings to delete imported files from Dropbox. This saves Dropbox space, allowing you to remain within the 2 GB free tier.
 
 !!! note ""
     The Dropbox mobile app needs to be opened periodically or it tends to fail to identify and sync new photos.

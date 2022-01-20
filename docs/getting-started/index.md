@@ -45,10 +45,12 @@ Having said that, funding really has the highest impact. So users can do their p
 
 ## System Requirements ##
 
-We recommend hosting PhotoPrism on a server with **at least 2 cores** and **4 GB of memory**.
-Also make sure it has at least 4 GB of swap configured, so that indexing doesn't cause 
-restarts when there are memory usage spikes.
+We recommend hosting PhotoPrism on a server with **at least 2 cores** and **3 GB of physical memory**.
 Beyond these minimum requirements, the amount of RAM should match the number of cores.
+
+If less than [4 GB of swap space](troubleshooting/docker.md#adding-swap) is configured or a manual
+memory/swap limit is set, this can cause unexpected restarts, especially if the indexer temporarily
+needs more memory to process large files.
 
 !!! note ""
     Indexing large photo and video collections significantly benefits from [local SSD storage](troubleshooting/performance.md#storage),
@@ -56,7 +58,7 @@ Beyond these minimum requirements, the amount of RAM should match the number of 
     videos are very demanding.
 
 !!! info ""
-    RAW file conversion and TensorFlow are disabled on servers with less than 2 GB of physical memory.
+    RAW file conversion and TensorFlow are disabled on systems with 1 GB or less of physical memory.
     If you're running out of memory - or other system resources - while indexing, try reducing the
     [number of workers](https://docs.photoprism.app/getting-started/config-options/)
     to a reasonably small value in `docker-compose.yml` (depending on the performance of the server).

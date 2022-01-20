@@ -24,8 +24,10 @@ The PhotoPrism image will be pre-selected
 
 #### Choose a plan ####
 
-We recommend hosting PhotoPrism on a server with at least 2 cores and 4 GB of memory. 
-Indexing and searching may be slow on smaller Droplets, depending on how many and what types of files you upload.
+We recommend hosting PhotoPrism on a server with at least 2 cores and 3 GB of physical memory. Indexing and searching can be slow on smaller Droplets, depending on how many and what types of files you upload.
+
+!!! info ""
+    While PhotoPrism has been reported to work on Droplets with less memory, we take no responsibility for instability or performance issues. RAW file conversion and TensorFlow are disabled on Droplets with 1 GB or less of physical memory.
 
 ![Screenshot](img/2-do-setup.png)
 

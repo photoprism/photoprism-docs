@@ -1,14 +1,10 @@
 # Running PhotoPrism on a Synology NAS
 
-## Frequently Asked Questions ##
-
-#### Does my device meet the system requirements? ####
-
 Visit the [Synology Knowledge Base](https://kb.synology.com/en-us/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have)
 to learn what [kind of CPU](../troubleshooting/performance.md#server-cpu) and how much memory your device has.
-We [recommend](../index.md#system-requirements) a 64-bit processor with **at least 2 cores** and **4 GB of memory**. 
-While PhotoPrism has been reported to work on devices with 2 GB of memory, we won't take responsibility for 
-instability or performance issues.
+We [recommend](../index.md#system-requirements) hosting PhotoPrism on a 64-bit system with **at least 2 cores** and **3 GB of physical memory**.
+
+RAW file conversion and TensorFlow are disabled on devices with 1 GB or less of physical memory. We take no responsibility for instability or performance issues if your NAS does not meet the minimum requirements.
 
 You will have to resort to [32-bit Docker images](../raspberry-pi.md#older-armv7-based-devices) to run 
 PhotoPrism and MariaDB on ARMv7-based entry-level devices like the Synology DS218j.
@@ -19,12 +15,12 @@ PhotoPrism and MariaDB on ARMv7-based entry-level devices like the Synology DS21
     images and the transcoding of videos are very demanding.
 
 !!! info ""
-    If your server runs out of memory, the index is frequently locked, or other system resources are running low
-    while indexing, you should [try reducing the number of workers](../config-options.md#index-workers)
-    by setting `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml` (depending on the performance
-    of the server). As a measure of last resort, you may [disable using TensorFlow](../config-options.md#feature-flags) for image classification and facial recognition.
+    If your device runs out of memory, the index is frequently locked, or other system resources are running low:
 
-#### Will my NAS be fast enough? ####
+    - [ ] Try [reducing the number of workers](../config-options.md#index-workers) by setting `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml` (depending on the performance of the server)
+    - [ ] As a measure of last resort, you may [disable using TensorFlow](../config-options.md#feature-flags) for image classification and facial recognition
+
+## Will my device be fast enough? ##
 
 This largely depends on your expectations and the number of files you have. Most users report that
 PhotoPrism runs well on their Synology NAS. However, initial indexing may take much longer

@@ -46,7 +46,7 @@ CPUs are often many times faster. If you've tried everything else, then only mov
 powerful server may help.
 
 !!! info ""
-    **If your server runs out of memory, the index is frequently locked, or other system resources are running low:**
+    If your server runs out of memory, the index is frequently locked, or other system resources are running low:
 
     - [ ] Try [reducing the number of workers](../config-options.md#index-workers) by setting `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml` (depending on the performance of the server)
     - [ ] Ensure that [your server has at least 4 GB of swap configured](docker.md#adding-swap) so that indexing doesn't cause restarts when there are memory usage spikes (especially the conversion of RAW images and the

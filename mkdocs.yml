@@ -160,7 +160,7 @@ nav:
       - Funding: funding.md
       - Credits: credits.md
       - Contact: contact.md
-      - Licence:
+      - License:
           - GNU AGPL: license/agpl.md
           - Digital Assets: license/assets.md
           - Documentation: license/documentation.md

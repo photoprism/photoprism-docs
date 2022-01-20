@@ -2,6 +2,12 @@
 
 We hereby grant you a non-exclusive, non-transferable right to use the Digital Assets separately accompanying the software, embedded in the documentation, or provided for download — such as icons, graphics, fonts, wallpapers, videos, sounds, models, and sample files („Digital Assets“) — as part of the Official Software Distribution, unless otherwise noted.
 
+Because some Digital Assets are licensed to us only for direct distribution, we cannot
+redistribute them under a more permissive license for other purposes. If the author or
+copyright holder has not released them under a permissive license, you must obtain a
+license before using them in your own work, whether commercial or non-commercial in
+nature.
+
 PhotoPrism’s Brand Assets — including trademarks, logos, icons, designs, fonts, products,
 services, and any other brand features and elements, whether registered or unregistered
 („Brand Assets“) — are proprietary assets. Third parties, including licensees, may never
@@ -10,13 +16,7 @@ Brand Assets in any way, including, without limitation, as a trademark, service 
 company name or designation, domain name, social media profile/handle, or in any other
 manner, see [Trademark and Brand Guidelines](https://photoprism.app/trademark).
 
-Because some Digital Assets are licensed to us only for direct distribution, we cannot
-redistribute them under a more permissive license for other purposes. If the author or
-copyright holder has not released them under a permissive license, you must obtain a
-license before using them in your own work, whether commercial or non-commercial in
-nature.
-
-The names of authors, copyright holders, and contributors may NOT be used to promote any
+The names of authors, copyright holders, and contributors may not be used to promote any
 products or services without their prior written permission.
 
 THESE DIGITAL ASSETS ARE PROVIDED “AS IS” AND WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES,

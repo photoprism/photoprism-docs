@@ -52,7 +52,7 @@ After submitting your first pull request, you will automatically be asked to [ac
 
 ## Related Repositories
 
-- [photoprism/photoprism-docs-de](https://github.com/photoprism/photoprism-docs-de) - German User Guide
+- [photoprism/photoprism-docs-de](https://github.com/photoprism/photoprism-docs-de) - User Guide (German)
 - [photoprism/photoprism](https://github.com/photoprism/photoprism) - Application Source Code
 
 ----

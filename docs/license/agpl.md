@@ -609,7 +609,9 @@ copy of the Program in return for a fee.
 
 _END OF TERMS AND CONDITIONS_
 
-## PhotoPrism® Trademark ##
+## Additional Terms
+
+### PhotoPrism® Trademark
 
 PhotoPrism’s Brand Assets — including trademarks, logos, icons, designs, fonts,
 products, services, and any other brand features and elements, whether registered
@@ -629,3 +631,6 @@ PhotoPrism.
 
 We reserve the right to object to any use or misuse in any jurisdiction worldwide.
 Visit [photoprism.app/trademark](https://photoprism.app/trademark) to learn more.
+
+In the event that any provision is found to be unenforceable by a court or other competent
+jurisdiction, the remaining portions hereof shall remain in full force and effect.

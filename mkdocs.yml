@@ -159,8 +159,11 @@ nav:
       - Team: team.md
       - Funding: funding.md
       - Credits: credits.md
-      - License: license.md
       - Contact: contact.md
+      - Licence:
+          - GNU AGPL: license/agpl.md
+          - Digital Assets: license/assets.md
+          - Documentation: license/documentation.md
 
 extra_css:
   - css/custom.css

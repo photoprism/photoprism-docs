@@ -1,10 +1,6 @@
 # PhotoPrism® Digital Assets License
 
-Michael Mayer and his legal successors („PhotoPrism“) hereby grant you a non-exclusive,
-non-transferable right to use the Digital Assets separately accompanying the software, 
-embedded in the documentation, or provided for download — such as icons, graphics, fonts,
-wallpapers, videos, sounds, models, and sample files („Digital Assets“) — as part of the
-Official Software Distribution, unless otherwise noted.
+We hereby grant you a non-exclusive, non-transferable right to use the Digital Assets separately accompanying the software, embedded in the documentation, or provided for download — such as icons, graphics, fonts, wallpapers, videos, sounds, models, and sample files („Digital Assets“) — as part of the Official Software Distribution, unless otherwise noted.
 
 PhotoPrism’s Brand Assets — including trademarks, logos, icons, designs, fonts, products,
 services, and any other brand features and elements, whether registered or unregistered

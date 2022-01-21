@@ -12,6 +12,7 @@
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
     There is no preview available for 32-bit operating systems.
 
+- [Minimum memory requirements have been reduced to 3 GB](https://github.com/photoprism/photoprism/discussions/1921#discussioncomment-2005493)
 - Photos: [Fixed SVG buttons in full screen view](https://github.com/photoprism/photoprism/issues/1961)
 - People: [Fixed typo that prevented face matching optimization](https://github.com/photoprism/photoprism/issues/1957)
 - Moments: [Improved update performance on MariaDB](https://github.com/photoprism/photoprism/issues/1953)

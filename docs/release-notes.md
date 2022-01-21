@@ -12,8 +12,10 @@
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
     There is no preview available for 32-bit operating systems.
 
-- UI: [Pre-translated missing messages](https://github.com/photoprism/photoprism/commit/f7b82f616d73ed2f61e0195e31d5029ca1bda3b6)
-- Albums: [Improved performance when updating moments](https://github.com/photoprism/photoprism/issues/1953)
+- Photos: [Fixed SVG buttons in full screen view](https://github.com/photoprism/photoprism/issues/1961)
+- People: [Fixed typo that prevented face matching optimization](https://github.com/photoprism/photoprism/issues/1957)
+- Moments: [Improved update performance on MariaDB](https://github.com/photoprism/photoprism/issues/1953)
+- Translations: [Pre-translated missing UI messages](https://github.com/photoprism/photoprism/commit/f7b82f616d73ed2f61e0195e31d5029ca1bda3b6)
 
 *We've generated missing translations with the help of DeepL and Google Translate. Native speakers are
 invited to help us improve those if needed. [Learn how to contribute](developer-guide/translations.md).*

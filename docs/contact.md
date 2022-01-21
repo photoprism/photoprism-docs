@@ -31,6 +31,23 @@ Responsible for editorial content according to § 5 TMG / § 55 RStV:
   Germany
 </address>
 
+## Privacy Policy ##
+
+If you just browse the documentation, our hosting provider collects the same basic information as most websites. They use common Internet technologies such as web server logs and possibly cookies. They collect this basic information from everyone, regardless of whether you are a registered user or not.
+
+The information they collect about all visitors includes:
+
+  - the visitor’s browser type
+  - language preference
+  - referring site
+  - the date and time of each visitor request
+
+They also collect potentially personally identifying information such as Internet Protocol (IP) addresses.
+For details, see:
+
+- [DigitalOcean Privacy Policy](https://www.digitalocean.com/legal/privacy-policy/)
+- [DigitalOcean Data Processing Agreement](https://www.digitalocean.com/legal/data-processing-agreement/)
+
 ## PhotoPrism® Trademark ##
 
 Please always use our [official logo](https://dl.photoprism.org/img/logo/logo.svg), do not alter it in any way,
@@ -44,23 +61,6 @@ When referring to PhotoPrism, make sure that it is spelled correctly:
 Our [Trademark and Brand Guidelines](https://photoprism.app/trademark), which may be updated from time to time,
 describe how our Brand Assets may be used. It is important to us that any permitted use of our Brand Assets is
 fair and meets the highest standards.
-
-## Privacy Policy ##
-
-If you’re just browsing the website, GitHub collects the same basic information that most websites collect. 
-They use common internet technologies, such as cookies and web server logs. 
-They collect this basic information from everybody, whether they have an account or not.
-
-The information they collect about all visitors includes:
-
-  - the visitor’s browser type
-  - language preference
-  - referring site
-  - the date and time of each visitor request
-
-They also collect potentially personally-identifying information like Internet Protocol (IP) addresses.
-
-See [Privacy Statement](https://help.github.com/en/github/site-policy/github-privacy-statement) and [DMCA Takedown Policy](https://help.github.com/en/github/site-policy/dmca-takedown-policy).
 
 [chat]: https://gitter.im/browseyourlife/community
 [ask]: https://github.com/photoprism/photoprism/discussions

@@ -8,7 +8,7 @@
 
 #### Technical Support ####
 
-Customers and sponsors are welcome to contact us at [support@photoprism.app](mailto:support@photoprism.app) for technical support and assistance with enabling sponsor features.
+Sponsors are welcome to contact us at [sponsors@photoprism.app](mailto:sponsors@photoprism.app) for technical support and assistance with enabling sponsor features.
 
 #### File Samples ####
 
@@ -31,13 +31,19 @@ Responsible for editorial content according to § 5 TMG / § 55 RStV:
   Germany
 </address>
 
-
 ## PhotoPrism® Trademark ##
 
-Our [trademark and brand guidelines](https://photoprism.app/trademark), which may be updated
-from time to time, describe how our Brand Assets may be used. It is important to us that any
-permitted use of our Brand Assets is fair and meets the highest standards. To ensure this,
-we reserve the right to object to any use or misuse in any jurisdiction worldwide.
+Please always use our [official logo](https://dl.photoprism.org/img/logo/logo.svg), do not alter it in any way,
+and avoid overlapping with other logos or images.
+
+When referring to PhotoPrism, make sure that it is spelled correctly:
+
+* The name has two capital letters, so Photoprism is not a correct spelling
+* PhotoPrism is one word and must not be separated into two words
+
+Our [Trademark and Brand Guidelines](https://photoprism.app/trademark), which may be updated from time to time,
+describe how our Brand Assets may be used. It is important to us that any permitted use of our Brand Assets is
+fair and meets the highest standards.
 
 ## Privacy Policy ##
 

@@ -20,7 +20,7 @@ The subject should contain the file extensions as well as the GitHub [issue numb
 
 Feel free to contact us at [hello@photoprism.app](mailto:hello@photoprism.app) if you have general questions, want to support our work, or just want to say hello.
 
-Learn more about our [security policy](/security-policy).
+Visit [photoprism.app/security-policy](https://photoprism.app/security-policy) to learn more about our security policy.
 
 Responsible for editorial content according to § 5 TMG / § 55 RStV:
 

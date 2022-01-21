@@ -8,7 +8,7 @@ copyright holder has not released them under a permissive license, you must obta
 license before using them in your own work, whether commercial or non-commercial in
 nature.
 
-PhotoPrism’s Brand Assets — including trademarks, logos, icons, designs, fonts, products,
+Our Brand Assets — including trademarks, logos, icons, designs, fonts, products,
 services, and any other brand features and elements, whether registered or unregistered
 („Brand Assets“) — are proprietary assets. Third parties, including licensees, may never
 claim ownership of PhotoPrism's Brand Assets or brands confusingly similar to PhotoPrism's

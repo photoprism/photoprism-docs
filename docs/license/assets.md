@@ -1,6 +1,10 @@
 # PhotoPrism® Digital Assets License
 
-We hereby grant you a non-exclusive, non-transferable right to use the Digital Assets separately accompanying the software, embedded in the documentation, or provided for download — such as icons, graphics, fonts, wallpapers, videos, sounds, models, and sample files („Digital Assets“) — as part of the Official Software Distribution, unless otherwise noted.
+We hereby grant you a non-exclusive, non-transferable right to use the Digital Assets
+separately accompanying the software, embedded in the documentation, or provided for
+download — such as icons, graphics, fonts, wallpapers, videos, sounds, models, and
+sample files („Digital Assets“) — as part of the Official Software Distribution,
+unless otherwise noted.
 
 Because some Digital Assets are licensed to us only for direct distribution, we cannot
 redistribute them under a more permissive license for other purposes. If the author or
@@ -8,13 +12,16 @@ copyright holder has not released them under a permissive license, you must obta
 license before using them in your own work, whether commercial or non-commercial in
 nature.
 
-Our Brand Assets — including trademarks, logos, icons, designs, fonts, products,
-services, and any other brand features and elements, whether registered or unregistered
-(„Brand Assets“) — are proprietary assets. Third parties, including licensees, may never
-claim ownership of PhotoPrism's Brand Assets or brands confusingly similar to PhotoPrism's
-Brand Assets in any way, including, without limitation, as a trademark, service mark,
-company name or designation, domain name, social media profile/handle, or in any other
-manner, see [Trademark and Brand Guidelines](https://photoprism.app/trademark).
+PhotoPrism’s Brand Assets — including trademarks, logos, icons, designs, fonts,
+products, services, and any other brand features and elements, whether registered
+or unregistered („Brand Assets“) — are proprietary assets owned exclusively by
+Michael Mayer and his legal successors („PhotoPrism“).
+
+Third parties, including licensees, may never claim ownership of PhotoPrism's Brand
+Assets or brands confusingly similar to PhotoPrism's Brand Assets in any way, including,
+without limitation, as a trademark, service mark, company name or designation, domain name,
+social media profile/handle, or in any other manner,
+see [Trademark and Brand Guidelines](https://photoprism.app/trademark).
 
 THESE DIGITAL ASSETS ARE PROVIDED “AS IS” AND WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES,
 INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY, TITLE,

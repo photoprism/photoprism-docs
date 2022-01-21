@@ -73,20 +73,27 @@ To test javascript code we use [mocha](https://mochajs.org/) in combination with
 
 ## Acceptance Tests ##
 
-### Download test and config files
-Download the following directory and unzip it within your storage directory
+Before you proceed, use `wget` to download [acceptance.tar.gz](https://dl.photoprism.app/qa/acceptance.tar.gz)
+to the storage folder and extract it there:
 
-``wget https://dl.photoprism.app/qa/acceptance.tar.gz``
+```bash
+cd storage
+wget https://dl.photoprism.app/qa/acceptance.tar.gz
+tar -xzf acceptance.tar.gz
+```
 
-### Run tests within the docker container
-You can run the tests from within the photoprism container in firefox or chromium.
+### Running Tests Inside the Docker Container
+
+In the development container environment, you can run the tests in Firefox and Chromium:
+
   
 * ```make acceptance-run-chromium```: This executes all tests in headless chromium
   
 * ```make acceptance-run-firefox ```: This executes all tests in headless firefox
 
-### Run tests locally
-Locally you can run the tests in all supported browsers you have installed.
+### Running Tests Locally
+
+Locally, you can run the tests in all supported browsers that you have installed.
 
 To run tests locally you need to install testcafe on your machine.
 ```
@@ -114,8 +121,6 @@ To run tests on remote or mobile devices use
 testcafe  remote -S \
   -s frontend/tests/acceptance/screenshots frontend/tests/acceptance/
 ```
-
-
 
 ### Test Frameworks
 

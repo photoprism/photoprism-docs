@@ -138,6 +138,7 @@ Easy, isn't it?
     - [ ] Try [reducing the number of workers](config-options.md#index-workers) by setting `PHOTOPRISM_WORKERS` to a reasonably small value (depending on the performance of the server)
     - [ ] Ensure that [your server has at least 4 GB of swap configured](troubleshooting/docker.md#adding-swap) so that indexing doesn't cause restarts when there are memory usage spikes (especially the conversion of RAW images and the
     transcoding of videos are very demanding)
+    - [ ] If you are using SQLite, switch to MariaDB, which is [better optimized for high concurrency](faq.md#should-i-use-sqlite-mariadb-or-mysql)
     - [ ] As a measure of last resort, you may [disable using TensorFlow](config-options.md#feature-flags) for image classification and facial recognition
 
 

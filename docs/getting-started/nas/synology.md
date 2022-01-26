@@ -18,6 +18,7 @@ PhotoPrism and MariaDB on ARMv7-based entry-level devices like the Synology DS21
     If your device runs out of memory, the index is frequently locked, or other system resources are running low:
 
     - [ ] Try [reducing the number of workers](../config-options.md#index-workers) by setting `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml` (depending on the performance of the server)
+    - [ ] If you are using SQLite, switch to MariaDB, which is [better optimized for high concurrency](../faq.md#should-i-use-sqlite-mariadb-or-mysql)
     - [ ] As a measure of last resort, you may [disable using TensorFlow](../config-options.md#feature-flags) for image classification and facial recognition
 
 ## Will my device be fast enough? ##

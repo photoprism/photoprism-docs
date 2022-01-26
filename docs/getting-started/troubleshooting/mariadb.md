@@ -38,7 +38,7 @@ If this doesn't help, check the [Docker Logs](docker.md#viewing-logs) for messag
 - [ ] You have to resort to [alternative Docker images](../raspberry-pi.md#older-armv7-based-devices) to run MariaDB on ARMv7-based devices and those with a 32-bit operating system
 
 !!! tldr ""
-    When you move MariaDB to another host, remember to move the complete *storage* folder along with it and perform a [version upgrade](#version-upgrade) if necessary.
+    When moving MariaDB to another host, remember to move the complete *storage* folder along with it and perform a [version upgrade](#version-upgrade) if necessary.
 
 #### Unicode Support ####
 

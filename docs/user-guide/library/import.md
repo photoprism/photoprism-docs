@@ -18,7 +18,7 @@
 
 !!! attention ""
     Importing is not possible in [read-only mode](../settings/library.md) as it requires
-    write permissions for the *originals* folder.
+    [write permissions](../../getting-started/troubleshooting/docker.md#file-permissions) for the *originals* folder.
     
 #### When should "Move Files" be selected? ####
 

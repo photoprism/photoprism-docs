@@ -96,7 +96,7 @@ host folder as for *originals*, which is better for production environments.
 - Don't mount [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) and do not use them inside the *storage* folder
 
 !!! tldr ""
-    When moving your installation to another host, move the complete *storage* folder along with it.
+    When moving your installation to another host, always move the complete *storage* folder along with it.
 
 ##### /photoprism/import #####
 

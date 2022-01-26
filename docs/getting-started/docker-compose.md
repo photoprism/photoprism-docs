@@ -119,7 +119,7 @@ volumes:
   - "~/Pictures:/photoprism/originals"
 ```
 
-You may [mount any folder accessible from the host](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax)
+You may [mount any folder accessible from the host](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-3)
 instead, including [network drives](faq.md#how-can-i-mount-network-shares-with-docker). Additional directories can
 be mounted as subfolders of `/photoprism/originals`:
 
@@ -140,7 +140,7 @@ volumes:
 !!! tldr ""
     When you enable *read-only mode*, all features that require write permission to the *originals* folder 
     are disabled, in particular import, upload, and delete. Set `PHOTOPRISM_READONLY` to `"true"`
-    in `docker-compose.yml` for this. You can [mount a folder with the `:ro` flag](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax) to make Docker block 
+    in `docker-compose.yml` for this. You can [mount a folder with the `:ro` flag](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-3) to make Docker block 
     write operations as well.
 
 ##### /photoprism/storage #####

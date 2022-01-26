@@ -1,6 +1,6 @@
 # Credits
 
-A big **thank you** to everyone who made this possible!
+**Thanks to everyone** who made this possible!
 
 ## Technologies ##
 

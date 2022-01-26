@@ -47,8 +47,8 @@ Currently, VP R&D and Co-Founder at [ShapeDo](https://shapedo.com/).
 
 ## ...and many more ##
 
-Thanks to all who [contributed](https://github.com/photoprism/photoprism/graphs/contributors) to PhotoPrism!
-
 <a href="https://github.com/photoprism/photoprism/graphs/contributors">
   <img src="https://dl.photoprism.org/img/social/contibutors.svg" />
 </a>
+
+![THANK YOU](img/thank-you-colorful-1500x260.png)

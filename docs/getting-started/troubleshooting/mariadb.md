@@ -24,7 +24,8 @@ services:
 ```
 
 !!! danger ""
-    Never expose your database to the public Internet in this way, for example, if it is running on a cloud server.
+    Set strong passwords if the database is exposed to an external network. Never expose your database to the public
+    Internet in this way, for example, if it is running on a cloud server.
 
 If this doesn't help, check the [Docker Logs](docker.md#viewing-logs) for messages like *disk full*, *disk quota exceeded*,
 *no space left on device*, *read-only file system*, *error creating path*, *wrong permissions*, *no route to host*, *connection failed*, *exec format error*,
@@ -37,25 +38,16 @@ If this doesn't help, check the [Docker Logs](docker.md#viewing-logs) for messag
 - [ ] Log messages that contain "no route to host" may also indicate a general network configuration problem (follow our [examples](https://dl.photoprism.app/docker/))
 - [ ] You have to resort to [alternative Docker images](../raspberry-pi.md#older-armv7-based-devices) to run MariaDB on ARMv7-based devices and those with a 32-bit operating system
 
-!!! tldr ""
-    When moving MariaDB to another host, remember to move the complete *storage* folder along with it and perform a [version upgrade](#version-upgrade) if necessary.
+#### Server Migration ####
 
-#### Unicode Support ####
+When moving MariaDB to another computer, cloud server, or virtual machine:
 
-If the logs show "incorrect string value" database errors and you are running a custom MariaDB or MySQL
-server that is not based on our [default configuration](https://dl.photoprism.app/docker/docker-compose.yml):
-
-- [ ] Full [Unicode](https://home.unicode.org/basic-info/faq/) support [must be enabled](https://mariadb.com/kb/en/setting-character-sets-and-collations/#example-changing-the-default-character-set-to-utf-8), e.g. using the `mysqld` command parameters `--character-set-server=utf8mb4` and `--collation-server=utf8mb4_unicode_ci`
-- [ ] Note that an existing database may use a different character set if you imported it from another server
-- [ ] Before submitting a support request, verify the problem still occurs with a newly created database based on our example
-
-Run this command in a terminal to see the current values of the collation and character set variables (change the root
-password `insecure` and database name `photoprism` as specified in your `docker-compose.yml`):
-
-```bash
-echo "SHOW VARIABLES WHERE Variable_name LIKE 'character\_set\_%' OR Variable_name LIKE 'collation%';" | \
-docker-compose exec -T mariadb mysql -uroot -pinsecure photoprism
-```
+- [ ] Move the complete *storage* folder along with it and preserve the file permissions
+- [ ] **or** restore your index [from an SQL dump](https://mariadb.com/kb/en/mysqldump/) (backup file)
+- [ ] Perform a [version upgrade](#version-upgrade) if necessary
+- [ ] Make sure that PhotoPrism can access the database on the new host
+- [ ] Set strong passwords if the database is exposed to an external network
+- [ ] Never expose your database to the public Internet
 
 #### Version Upgrade ####
 
@@ -120,6 +112,23 @@ as a USB flash drive, an SD card, or a shared network folder.
 - [ ] Never use the same database files with more than one server instance
 - [ ] To share a database over a network, run the database server directly on the remote server instead of sharing database files
 - [ ] To repair your tables after you have moved the files to a local disk, you can [start MariaDB with `--innodb-force-recovery=1`](https://mariadb.com/kb/en/innodb-recovery-modes/) (otherwise the same procedure as for recovering a lost password, see above)
+
+#### Unicode Support ####
+
+If the logs show "incorrect string value" database errors and you are running a custom MariaDB or MySQL
+server that is not based on our [default configuration](https://dl.photoprism.app/docker/docker-compose.yml):
+
+- [ ] Full [Unicode](https://home.unicode.org/basic-info/faq/) support [must be enabled](https://mariadb.com/kb/en/setting-character-sets-and-collations/#example-changing-the-default-character-set-to-utf-8), e.g. using the `mysqld` command parameters `--character-set-server=utf8mb4` and `--collation-server=utf8mb4_unicode_ci`
+- [ ] Note that an existing database may use a different character set if you imported it from another server
+- [ ] Before submitting a support request, verify the problem still occurs with a newly created database based on our example
+
+Run this command in a terminal to see the current values of the collation and character set variables (change the root
+password `insecure` and database name `photoprism` as specified in your `docker-compose.yml`):
+
+```bash
+echo "SHOW VARIABLES WHERE Variable_name LIKE 'character\_set\_%' OR Variable_name LIKE 'collation%';" | \
+docker-compose exec -T mariadb mysql -uroot -pinsecure photoprism
+```
 
 #### MySQL Errors ####
 

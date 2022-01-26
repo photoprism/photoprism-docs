@@ -45,7 +45,7 @@ get faster with each generation, their hardware is optimized for minimal power c
 CPUs are often many times faster. If you've tried everything else, then only moving your instance to a more
 powerful server may help.
 
-!!! info ""
+!!! tip "Troubleshooting"
     If your server runs out of memory, the index is frequently locked, or other system resources are running low:
 
     - [ ] Try [reducing the number of workers](../config-options.md#index-workers) by setting `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml` (depending on the performance of the server)
@@ -53,5 +53,7 @@ powerful server may help.
     transcoding of videos are very demanding)
     - [ ] If you are using SQLite, switch to MariaDB, which is [better optimized for high concurrency](../faq.md#should-i-use-sqlite-mariadb-or-mysql)
     - [ ] As a measure of last resort, you may [disable using TensorFlow](../config-options.md#feature-flags) for image classification and facial recognition
+
+    Other issues? Our [troubleshooting checklists](../troubleshooting/index.md) help you quickly diagnose and solve them.
 
 *[SQLite]: self-contained, serverless SQL database 

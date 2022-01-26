@@ -2,17 +2,14 @@
 
 Visit the [Synology Knowledge Base](https://kb.synology.com/en-us/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have)
 to learn what [kind of CPU](../troubleshooting/performance.md#server-cpu) and how much memory your device has.
-We [recommend](../index.md#system-requirements) hosting PhotoPrism on a 64-bit system with **at least 2 cores** and **3 GB of physical memory**.
+We [recommend](../index.md#system-requirements) hosting PhotoPrism on a 64-bit system with **at least 2 cores** and **3 GB of physical memory**. Indexing large photo and video collections also benefits from [SSD storage](../troubleshooting/performance.md#storage)
+instead of traditional hard drives commonly used in NAS devices.
 
-RAW file conversion and TensorFlow are disabled on devices with 1 GB or less of physical memory. We take no responsibility for instability or performance issues if your NAS does not meet the minimum requirements.
+We take no responsibility for instability or performance issues if your NAS does not meet the minimum requirements.
+RAW file conversion and TensorFlow are disabled on devices with 1 GB or less of physical memory.
 
 You will have to resort to [32-bit Docker images](../raspberry-pi.md#older-armv7-based-devices) to run 
 PhotoPrism and MariaDB on ARMv7-based entry-level devices like the Synology DS218j.
-
-!!! note ""
-    Indexing large photo and video collections significantly benefits from [local SSD storage](../troubleshooting/performance.md#storage)
-    instead of traditional hard drives commonly used in NAS devices. Especially the conversion of RAW 
-    images and the transcoding of videos are very demanding.
 
 !!! tip "Troubleshooting"
     If your device runs out of memory, the index is frequently locked, or other system resources are running low:
@@ -20,6 +17,8 @@ PhotoPrism and MariaDB on ARMv7-based entry-level devices like the Synology DS21
     - [ ] Try [reducing the number of workers](../config-options.md#index-workers) by setting `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml` (depending on the performance of the server)
     - [ ] If you are using SQLite, switch to MariaDB, which is [better optimized for high concurrency](../faq.md#should-i-use-sqlite-mariadb-or-mysql)
     - [ ] As a measure of last resort, you may [disable using TensorFlow](../config-options.md#feature-flags) for image classification and facial recognition
+
+    Other issues? Our [troubleshooting checklists](../troubleshooting/index.md) help you quickly diagnose and solve them.
 
 ## Will my device be fast enough? ##
 

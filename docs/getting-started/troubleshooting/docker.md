@@ -154,9 +154,9 @@ configuration.
 Error messages containing "read-only file system", "error creating path", or "wrong permissions" indicate a filesystem permission problem:
 
 - [ ] Use a file manager, or the commands `ls -alh`, `chmod`, and `chown` on Unix-like operating systems, to [check and change filesystem permissions](https://kb.iu.edu/d/abdb) so all files and folders are accessible
-- [ ] If you have configured specific user and group IDs for a service, make sure they match
 - [ ] The app and database *storage* folders must be writable as well: Verify that the services have write permissions and that you have **not** mounted the folders read-only on your host or [via Docker using the `:ro` flag](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-3)
-- [ ] Never use [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) for or within the app and database *storage* folders
+- [ ] If you have configured specific user and group IDs for a service, make sure they match
+- [ ] If [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) are mounted or used within *storage* folders, replace them with actual paths
 - [ ] When mounting folders that only root has access to, you may have to prefix the `docker` and `docker-compose` commands with `sudo` on Linux if you are not already logged in as root
 
 *Start a full rescan if necessary, for example, if it looks like [thumbnails](index.md#broken-thumbnails) or [pictures are missing](index.md#missing-pictures).*

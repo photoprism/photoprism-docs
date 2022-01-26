@@ -86,7 +86,7 @@ Fatal errors are often caused by one of the following conditions:
 - [ ] Your (virtual) server [disk is full](docker.md#disk-space) (add storage)
 - [ ] You have accidentally [mounted the wrong folders](../docker-compose.md#volumes) (update config and restart)
 - [ ] There is disk space left, but a usage or the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (change it)
-- [ ] [The *storage* folder is not writable or was mounted with the `:ro` option](docker.md#file-permissions) (check and change permissions)
+- [ ] [The *storage* folder is not writable or was mounted with the `:ro` option](docker.md#file-permissions) (check and change [permissions](docker.md#file-permissions))
 - [ ] [Symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) are used for or within the *storage* folder (replace with real paths)
 - [ ] The [server is low on memory](../index.md#system-requirements) (add memory)
 - [ ] You didn't [configure at least 4 GB of swap](docker.md#adding-swap) (add swap)
@@ -141,7 +141,7 @@ In case the application logs don't contain anything helpful:
     - [ ] FFmpeg and/or RAW converters are [disabled in *Settings > Advanced*](../../user-guide/settings/advanced.md)
     - [ ] The file is broken, e.g. [*short Huffman data*](https://github.com/golang/go/issues/10447) (try to fix it)
     - [ ] [Your (virtual) server disk is full](docker.md#disk-space) (add storage)
-    - [ ] [The *storage* folder is not writable](docker.md#file-permissions) (change permissions)
+    - [ ] [The *storage* folder is not writable](docker.md#file-permissions) (change [permissions](docker.md#file-permissions))
     - [ ] A disk usage or the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (remove or increase it)
 - [ ] Multiple files were [stacked](../../user-guide/organize/stacks.md#for-what-reasons-can-files-be-stacked) based on their metadata or file names
 - [ ] The [private](../../user-guide/organize/private.md) or [archived](../../user-guide/organize/archive.md) status was restored from a backup
@@ -167,7 +167,7 @@ In case the application logs don't contain anything helpful:
 - [ ] *Convert to JPEG* is disabled in *Settings > Library*
 - [ ] [Your (virtual) server disk is full](docker.md#disk-space) (add storage)
 - [ ] A disk usage or the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (remove or increase it)
-- [ ] [The *storage* folder is not writable](docker.md#file-permissions) (change permissions)
+- [ ] [The *storage* folder is not writable](docker.md#file-permissions) (change [permissions](docker.md#file-permissions))
 - [ ] Files were deleted manually, for example to free up disk space
 - [ ] Files can't be opened, e.g. because the file system permissions have been changed
 - [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder
@@ -197,7 +197,7 @@ If videos do not play and/or you only see a white/black area when you open a vid
 - [ ] An ad blocker or other plugins block requests (disable them or add an exception)
 - [ ] [Your (virtual) server disk is full](docker.md#disk-space) (add storage)
 - [ ] A disk usage or the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (remove or increase it)
-- [ ] [The *storage* folder is not writable](docker.md#file-permissions) (change permissions)
+- [ ] [The *storage* folder is not writable](docker.md#file-permissions) (change [permissions](docker.md#file-permissions))
 - [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder (check if the files are accessible)
 - [ ] Your browser cannot communicate properly with the server, e.g. because a [Reverse Proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
 - [ ] There are other network problems caused by a proxy, firewall, or unstable connection (try a direct connection)

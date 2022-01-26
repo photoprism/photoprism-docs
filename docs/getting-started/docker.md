@@ -110,7 +110,7 @@ organized by year and month.
 ### Step 2: Index your library ###
 
 !!! note ""
-    Ensure there is enough disk space available for creating thumbnails and verify file system permissions
+    Ensure [there is enough disk space available](troubleshooting/docker.md#disk-space) for creating thumbnails and [verify filesystem permissions](troubleshooting/docker.md#file-permissions)
     before starting to index: Files in the *originals* folder must be readable, while the *storage* folder
     including all subdirectories must be readable and writeable.
 

@@ -64,14 +64,14 @@ Enabling [public mode](config-options.md) will disable authentication.
 
 #### Volumes ####
 
-Since the app is running inside a container, you have to explicitly mount the host folders you want to use.
+Since the app is running inside a container, you have to explicitly [mount the host folders](https://docs.docker.com/storage/bind-mounts/) you want to use.
 PhotoPrism won't be able to see folders that have not been mounted. That's an important security feature.
 
 ##### /photoprism/originals #####
 
 The *originals* folder contains your original photo and video files.
 They are mounted from `~/Pictures` in the example above, where `~` is a shortcut for 
-your home directory. Other folders accessible from the host may be [mounted](https://docs.docker.com/storage/bind-mounts/) instead, 
+your home directory. Other folders accessible from the host [may be mounted](https://docs.docker.com/storage/bind-mounts/) instead, 
 including network drives. 
 
 Multiple folders can be made accessible by mounting them as subfolders:

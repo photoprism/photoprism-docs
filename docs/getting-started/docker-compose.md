@@ -104,7 +104,7 @@ an SD card, or a shared network folder.
 
 #### Volumes ####
 
-Since the app is running inside a container, you have to explicitly mount the host folders you want to use.
+Since the app is running inside a container, you have to explicitly [mount the host folders](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes) you want to use.
 PhotoPrism won't be able to see folders that have not been mounted. That's an important security feature.
 
 ##### /photoprism/originals #####
@@ -119,7 +119,7 @@ volumes:
   - "~/Pictures:/photoprism/originals"
 ```
 
-You can [mount any folder](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes) accessible from the
+You can [mount any folder](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax) accessible from the
 host instead, including [network drives](faq.md#how-can-i-mount-network-shares-with-docker). Additional directories may
 be mounted as subfolders of `/photoprism/originals`:
 
@@ -140,7 +140,7 @@ volumes:
 !!! tldr ""
     When you enable *read-only mode*, all features that require write permission to the *originals* folder 
     are disabled, in particular import, upload, and delete. Set `PHOTOPRISM_READONLY` to `"true"`
-    in `docker-compose.yml` for this. You can [mount a folder with the `:ro` flag](https://docs.docker.com/storage/bind-mounts/#use-a-read-only-bind-mount) to make Docker block 
+    in `docker-compose.yml` for this. You can [mount a folder with the `:ro` flag](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax) to make Docker block 
     write operations as well.
 
 ##### /photoprism/storage #####

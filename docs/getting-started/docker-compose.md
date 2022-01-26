@@ -119,8 +119,8 @@ volumes:
   - "~/Pictures:/photoprism/originals"
 ```
 
-You can [mount any folder](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax) accessible from the
-host instead, including [network drives](faq.md#how-can-i-mount-network-shares-with-docker). Additional directories may
+You may [mount any folder accessible from the host](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax)
+instead, including [network drives](faq.md#how-can-i-mount-network-shares-with-docker). Additional directories can
 be mounted as subfolders of `/photoprism/originals`:
 
 ```yaml

@@ -90,7 +90,7 @@ Multiple folders can be made accessible by mounting them as subfolders:
 SQLite, cache, session, thumbnail, and sidecar files will be created in the *storage* folder, which is mounted as
 an [anonymous volume](https://docs.docker.com/storage/bind-mounts/) in our example:
 
-- You can mount a specific host folder instead like for *originals*, which is better for production environments
+- You can instead mount a specific host folder like for *originals*, which is better for production environments
 - Never remove the *storage* volume mount so that you don't lose these files after restarting or upgrading PhotoPrism
 - We recommend placing the *storage* folder on a [local SSD drive](troubleshooting/performance.md#storage) for best performance
 - When moving your installation to another host or drive, move the *storage* folder along with it

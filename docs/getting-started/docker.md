@@ -81,20 +81,22 @@ be mounted as subfolders of `/photoprism/originals`:
 ``` 
 
 !!! tldr ""
-    When you enable *read-only mode*, all features that require write permission to the *originals* folder
+    If *read-only mode* is enabled, all features that require write permission to the *originals* folder
     are disabled, in particular import, upload, and delete. Run the app with `-e PHOTOPRISM_READONLY="true"` 
     for this. You can [mount a folder with the `:ro` flag](https://docs.docker.com/storage/bind-mounts/#use-a-read-only-bind-mount) to make Docker block write operations as well.
 
 ##### /photoprism/storage #####
 
 SQLite, cache, session, thumbnail, and sidecar files will be created in the *storage* folder, which is mounted as
-an [anonymous volume](https://docs.docker.com/storage/bind-mounts/) in our example:
+an [anonymous volume](https://docs.docker.com/storage/bind-mounts/) in our example. You may instead mount a specific
+host folder as for *originals*, which is better for production environments.
 
-- You can instead mount a specific host folder like for *originals*, which is better for production environments
 - Never remove the *storage* volume mount so that you don't lose these files after restarting or upgrading PhotoPrism
 - We recommend placing the *storage* folder on a [local SSD drive](troubleshooting/performance.md#storage) for best performance
-- When moving your installation to another host or drive, move the *storage* folder along with it
-- Never use [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) for or within the *storage* folder
+- Don't mount [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) and do not use them inside the *storage* folder
+
+!!! tldr ""
+    When moving your installation to another host, move the complete *storage* folder along with it.
 
 ##### /photoprism/import #####
 

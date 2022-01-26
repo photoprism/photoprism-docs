@@ -138,7 +138,7 @@ volumes:
 ```
 
 !!! tldr ""
-    When you enable *read-only mode*, all features that require write permission to the *originals* folder 
+    If *read-only mode* is enabled, all features that require write permission to the *originals* folder 
     are disabled, in particular import, upload, and delete. Set `PHOTOPRISM_READONLY` to `"true"`
     in `docker-compose.yml` for this. You can [mount a folder with the `:ro` flag](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-3) to make Docker block 
     write operations as well.
@@ -149,8 +149,10 @@ Cache, session, thumbnail, and sidecar files will be created in the *storage* fo
 
 - Never remove the volume from your `docker-compose.yml` file so that you don't lose these files after restarting or upgrading PhotoPrism
 - We recommend placing the *storage* folder on a [local SSD drive](troubleshooting/performance.md#storage) for best performance
-- When moving your installation to another host or drive, move the *storage* folder along with it
-- Never use [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) for or within the *storage* folder
+- Don't mount [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) and do not use them inside the *storage* folder 
+
+!!! tldr ""
+    When moving your installation to another host, move the complete *storage* folder along with it.
 
 ##### /photoprism/import #####
 

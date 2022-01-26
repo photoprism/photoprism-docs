@@ -37,7 +37,8 @@ If this doesn't help, check the [Docker Logs](docker.md#viewing-logs) for messag
 - [ ] Log messages that contain "no route to host" may also indicate a general network configuration problem (follow our [examples](https://dl.photoprism.app/docker/))
 - [ ] You have to resort to [alternative Docker images](../raspberry-pi.md#older-armv7-based-devices) to run MariaDB on ARMv7-based devices and those with a 32-bit operating system
 
-When you move your database server, remember to move the *storage* folder along with it and perform a [version upgrade](#version-upgrade) if necessary.
+!!! tldr ""
+    When you move MariaDB to another host, remember to move the *storage* folder along with it and perform a [version upgrade](#version-upgrade) if necessary.
 
 #### Unicode Support ####
 

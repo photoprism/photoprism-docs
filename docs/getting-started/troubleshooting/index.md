@@ -16,9 +16,10 @@ docker-compose logs --tail=100
 
 Before reporting a bug:
 
-- [ ] Check the logs for messages like *disk full*, *disk quota exceeded*, *no space left on device*, *wrong permissions*, *no route to host*, *connection failed*, and *killed*:
+- [ ] Check the logs for messages like *disk full*, *disk quota exceeded*, *no space left on device*, *read-only file system*, *error creating path*, *wrong permissions*, *no route to host*, *connection failed*, and *killed*:
     - [ ] If a service has been killed or otherwise automatically terminated, this points to a [memory problem](docker.md#adding-swap) (add swap and/or memory; remove or increase usage limits)
     - [ ] In case the logs show "disk full", "quota exceeded", or "no space left" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space) (add storage) or a disk usage limit is configured (remove or increase it)
+    - [ ] Error messages containing "read-only file system", "error creating path", or "wrong permissions" indicate a [filesystem permission problem](docker.md#file-permissions)
     - [ ] Log messages that contain "no route to host" indicate a [problem with the database](mariadb.md) or Docker network configuration (follow our [examples](https://dl.photoprism.app/docker/))
 - [ ] Make sure you are using the correct protocol (default is `http`), port (default is `2342`), and hostname or IP address
 (default is `localhost`)
@@ -83,9 +84,10 @@ docker-compose up
 Fatal errors are often caused by one of the following conditions:
 
 - [ ] Your (virtual) server [disk is full](docker.md#disk-space) (add storage)
+- [ ] You have accidentally [mounted the wrong folders](../docker-compose.md#volumes) (update config and restart)
 - [ ] There is disk space left, but a usage or the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (change it)
-- [ ] [The *storage* folder is not writable](docker.md#file-permissions) (change permissions)
-- [ ] You have accidentally [mounted the wrong folders](../docker-compose.md#volumes)
+- [ ] [The *storage* folder is not writable or was mounted with the `:ro` option](docker.md#file-permissions) (check and change permissions)
+- [ ] [Symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) are used for or within the *storage* folder (replace with real paths)
 - [ ] The [server is low on memory](../index.md#system-requirements) (add memory)
 - [ ] You didn't [configure at least 4 GB of swap](docker.md#adding-swap) (add swap)
 - [ ] The server CPU is overheating (improve cooling)
@@ -98,11 +100,12 @@ Fatal errors are often caused by one of the following conditions:
 - [ ] Your Raspberry Pi has not been configured according to our [recommendations](../raspberry-pi.md#system-requirements)
 
 We recommend checking your [Docker Logs](docker.md#viewing-logs) for messages like *disk full*, *disk quota exceeded*,
-*no space left on device*, *wrong permissions*, *no route to host*, *connection failed*, and *killed*:
+*no space left on device*, *read-only file system*, *error creating path*, *wrong permissions*, *no route to host*, *connection failed*, and *killed*:
 
 - [ ] If a service has been killed or otherwise automatically terminated, this points to a [memory problem](docker.md#adding-swap) (add swap and/or memory; remove or increase usage limits)
 - [ ] In case the logs show "disk full", "quota exceeded", or "no space left" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space)
 (add storage) or a disk usage limit is configured (change it)
+- [ ] Error messages containing "read-only file system", "error creating path", or "wrong permissions" indicate a [filesystem permission problem](docker.md#file-permissions) 
 - [ ] Log messages that contain "no route to host" indicate a [problem with the database](mariadb.md) or network configuration (follow our [examples](https://dl.photoprism.app/docker/))
 
 *Start a full rescan if necessary, for example, if it looks like [thumbnails](index.md#broken-thumbnails) or [pictures are missing](index.md#missing-pictures).*
@@ -136,7 +139,7 @@ In case the application logs don't contain anything helpful:
 - [ ] They [are in *Library > Hidden*](https://demo.photoprism.app/library/hidden) because thumbnails could not be created:
     - [ ] *Convert to JPEG* is [disabled in *Settings > Library*](../../user-guide/settings/library.md)
     - [ ] FFmpeg and/or RAW converters are [disabled in *Settings > Advanced*](../../user-guide/settings/advanced.md)
-    - [ ] The file is broken and cannot be opened (try to fix it)
+    - [ ] The file data is invalid, e.g. with an error like [*short Huffman data*](https://github.com/golang/go/issues/10447) (try to fix it)
     - [ ] [Your (virtual) server disk is full](docker.md#disk-space) (add storage)
     - [ ] [The *storage* folder is not writable](docker.md#file-permissions) (change permissions)
     - [ ] A disk usage or the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (remove or increase it)
@@ -214,6 +217,9 @@ for messages related to *HTTP requests*, *permissions*, *security*, *FFmpeg*, *v
 *[UI]: User Interface
 *[URL]: Web Address
 *[FFmpeg]: transcodes video files
+*[SQLite]: self-contained, serverless SQL database
 *[NSFW]: Not Safe For Work
 *[swap]: substitute for physical memory
-*[host]: physical computer, cloud server, or virtual machine that runs Docker
+*[host]: Computer, Cloud Server, or VM that runs Docker
+*[read-only]: write protected
+*[filesystem]: contains your files and folders

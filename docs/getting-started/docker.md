@@ -31,7 +31,7 @@ installed on your system. It is available for Mac, Linux, and Windows.
     ```
 
 The server port and other [config options](config-options.md) can be changed as needed.
-If you provide no database server credentials, a SQLite database file will be created in the
+If you provide no database server credentials, SQLite database files will be created in the
 *storage* folder.
 
 !!! danger ""
@@ -83,15 +83,18 @@ Multiple folders can be made accessible by mounting them as subfolders:
 !!! tldr ""
     When you enable *read-only mode*, all features that require write permission to the *originals* folder
     are disabled, in particular import, upload, and delete. Run the app with `-e PHOTOPRISM_READONLY="true"` 
-    for this. You can mount a folder with the `:ro` flag to make Docker block write operations as well.
+    for this. You can [mount a folder with the `:ro` flag](https://docs.docker.com/storage/bind-mounts/#use-a-read-only-bind-mount) to make Docker block write operations as well.
 
 ##### /photoprism/storage #####
 
-Cache, session, thumbnail, and sidecar files will be created the *storage* folder, which is mounted as 
-an [anonymous volume](https://docs.docker.com/storage/bind-mounts/) in our example. You may want to 
-mount a specific host folder instead. Never remove the volume completely so that you don't lose 
-these files after restarting or upgrading the container. We recommend placing the *storage* folder 
-on a [local SSD drive](troubleshooting/performance.md#storage) for best performance.
+SQLite, cache, session, thumbnail, and sidecar files will be created in the *storage* folder, which is mounted as
+an [anonymous volume](https://docs.docker.com/storage/bind-mounts/) in our example:
+
+- You can mount a specific host folder instead like for *originals*, which is better for production environments
+- Never remove the *storage* volume mount so that you don't lose these files after restarting or upgrading PhotoPrism
+- We recommend placing the *storage* folder on a [local SSD drive](troubleshooting/performance.md#storage) for best performance
+- When moving your installation to another host or drive, move the *storage* folder along with it
+- Never use [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) for or within the *storage* folder
 
 ##### /photoprism/import #####
 
@@ -206,9 +209,12 @@ PhotoPrism's command-line interface is well suited for job automation using a
     This may be necessary after major upgrades.
 
 *[home directory]: \user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux
-*[host]: physical computer, cloud server, or virtual machine that runs Docker
+*[host]: Computer, Cloud Server, or VM that runs Docker
 *[HEIF]: High Efficiency Image File Format
 *[RAW]: image format that contains unprocessed sensor data
 *[UI]: User Interface
 *[CLI]: Command-Line Interface
 *[AVC]: MPEG-4 / H.264
+*[read-only]: write protected
+*[filesystem]: contains your files and folders
+*[SQLite]: self-contained, serverless SQL database 

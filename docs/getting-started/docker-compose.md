@@ -93,7 +93,7 @@ installed on your system. It is available for Mac, Linux, and Windows.
 #### Database ####
 
 Our example includes a pre-configured [MariaDB](https://mariadb.com/) database server. If you remove it 
-and provide no other database server credentials, a SQLite database file will be created in the 
+and provide no other database server credentials, SQLite database files will be created in the 
 *storage* folder. Local [SSD storage is best](troubleshooting/performance.md#storage) for databases of any kind.
 Never [store](troubleshooting/mariadb.md#corrupted-files) database files on an unreliable device such as a USB flash drive,
 an SD card, or a shared network folder.
@@ -140,14 +140,17 @@ volumes:
 !!! tldr ""
     When you enable *read-only mode*, all features that require write permission to the *originals* folder 
     are disabled, in particular import, upload, and delete. Set `PHOTOPRISM_READONLY` to `"true"`
-    in `docker-compose.yml` for this. You can mount a folder with the `:ro` flag to make Docker block 
+    in `docker-compose.yml` for this. You can [mount a folder with the `:ro` flag](https://docs.docker.com/storage/bind-mounts/#use-a-read-only-bind-mount) to make Docker block 
     write operations as well.
 
 ##### /photoprism/storage #####
 
-Cache, session, thumbnail, and sidecar files will be created in the *storage* folder. Never remove the volume from
-your `docker-compose.yml` file so that you don't lose these files after restarting or upgrading the container.
-We recommend placing the *storage* folder on a [local SSD drive](troubleshooting/performance.md#storage) for best performance.
+Cache, session, thumbnail, and sidecar files will be created in the *storage* folder:
+
+- Never remove the volume from your `docker-compose.yml` file so that you don't lose these files after restarting or upgrading PhotoPrism
+- We recommend placing the *storage* folder on a [local SSD drive](troubleshooting/performance.md#storage) for best performance
+- When moving your installation to another host or drive, move the *storage* folder along with it
+- Never use [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) for or within the *storage* folder
 
 ##### /photoprism/import #####
 
@@ -281,7 +284,7 @@ PhotoPrism's command-line interface is well suited for job automation using a
     This may be necessary after major upgrades.
 
 *[home directory]: \user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux
-*[host]: physical computer, cloud server, or virtual machine that runs Docker
+*[host]: Computer, Cloud Server, or VM that runs Docker
 *[swap]: substitute for physical memory
 *[HEIF]: High Efficiency Image File Format
 *[RAW]: image format that contains unprocessed sensor data
@@ -291,5 +294,8 @@ PhotoPrism's command-line interface is well suited for job automation using a
 *[CLI]: Command-Line Interface
 *[AVC]: MPEG-4 / H.264
 *[FFmpeg]: transcodes video files
+*[SQLite]: self-contained, serverless SQL database
+*[read-only]: write protected
+*[filesystem]: contains your files and folders
 
 [^1]: The default [Docker Compose](https://docs.docker.com/compose/) config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running the `docker-compose` command in the same directory. Config files for other apps or instances should be placed in separate folders.

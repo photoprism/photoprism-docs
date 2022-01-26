@@ -151,10 +151,12 @@ configuration.
 
 ### File Permissions ###
 
-Use a file manager, or the commands `chmod` and `chown` on Unix-like operating systems, to [change file and folder permissions](https://kb.iu.edu/d/abdb)
-so that the app container can access them.
+Error messages containing "read-only file system", "error creating path", or "wrong permissions" indicate a filesystem permission problem:
 
-If you have configured specific user and group IDs for PhotoPrism, make sure they match.
+- [ ] Use a file manager, or the commands `ls -alh`, `chmod`, and `chown` on Unix-like operating systems, to [check and change filesystem permissions](https://kb.iu.edu/d/abdb) so that files and folders are readable (and writable if needed, e.g. the app and database *storage* folders)
+- [ ] Verify that you have **not** mounted the app and database *storage* folders read-only on your host or [via Docker using the `:ro` flag](https://docs.docker.com/storage/bind-mounts/#use-a-read-only-bind-mount)
+- [ ] If you have configured specific user and group IDs for a service, make sure they match
+- [ ] Never use [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) for or within the app and database *storage* folders
 
 *Start a full rescan if necessary, for example, if it looks like [thumbnails](index.md#broken-thumbnails) or [pictures are missing](index.md#missing-pictures).*
 
@@ -171,5 +173,7 @@ in the Docker, Kubernetes, or Virtual Machine configuration (remove or increase 
 *Start a full rescan if necessary, for example, if it looks like [thumbnails](index.md#broken-thumbnails) or [pictures are missing](index.md#missing-pictures).*
 
 *[home directory]: \user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux
-*[host]: physical computer, cloud server, or virtual machine that runs Docker
+*[host]: Computer, Cloud Server, or VM that runs Docker
 *[swap]: substitute for physical memory
+*[read-only]: write protected
+*[filesystem]: contains your files and folders

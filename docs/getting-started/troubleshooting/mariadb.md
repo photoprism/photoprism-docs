@@ -27,10 +27,11 @@ services:
     Never expose your database to the public Internet in this way, for example, if it is running on a cloud server.
 
 If this doesn't help, check the [Docker Logs](docker.md#viewing-logs) for messages like *disk full*, *disk quota exceeded*,
-*no space left on device*, *wrong permissions*, *no route to host*, *connection failed*, *exec format error*,
+*no space left on device*, *read-only file system*, *error creating path*, *wrong permissions*, *no route to host*, *connection failed*, *exec format error*,
 *no matching manifest*, and *killed*:
 
-- [ ] Make sure that the database *storage* folder is readable and writable
+- [ ] Make sure that the database *storage* folder is readable and writable: Error messages containing "read-only file system", "error creating path", or "wrong permissions" indicate a [filesystem permission problem](docker.md#file-permissions)
+- [ ] [Symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) are used for or within the *storage* folder (replace with real paths)
 - [ ] If the MariaDB service has been killed or otherwise automatically terminated, this can point to a [memory problem](docker.md#adding-swap) (add swap and/or memory; remove or increase usage limits)
 - [ ] In case the logs also show "disk full", "quota exceeded", or "no space left" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space) (add storage) or a disk usage limit is configured (remove or increase it)
 - [ ] Log messages that contain "no route to host" may also indicate a general network configuration problem (follow our [examples](https://dl.photoprism.app/docker/))
@@ -121,3 +122,5 @@ as a USB flash drive, an SD card, or a shared network folder.
 
 Official [support for MySQL is discontinued](../index.md#databases) as Oracle seems to have stopped shipping [new features and improvements](https://github.com/photoprism/photoprism/issues/1764).
 As a result, the testing effort required before each release is no longer feasible.
+
+*[SQLite]: self-contained, serverless SQL database

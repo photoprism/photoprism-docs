@@ -153,7 +153,7 @@ configuration.
 
 Error messages containing "read-only file system", "error creating path", or "wrong permissions" indicate a filesystem permission problem:
 
-- [ ] Use a file manager, or the commands `ls -alh`, `chmod`, and `chown` on Unix-like operating systems, to [check and change filesystem permissions](https://kb.iu.edu/d/abdb) so all files and folder are accessible
+- [ ] Use a file manager, or the commands `ls -alh`, `chmod`, and `chown` on Unix-like operating systems, to [check and change filesystem permissions](https://kb.iu.edu/d/abdb) so all files and folders are accessible
 - [ ] If you have configured specific user and group IDs for a service, make sure they match
 - [ ] The app and database *storage* folders must be writable as well: Verify that the services have write permissions and that you have **not** mounted the folders read-only on your host or [via Docker using the `:ro` flag](https://docs.docker.com/storage/bind-mounts/#use-a-read-only-bind-mount)
 - [ ] Never use [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) for or within the app and database *storage* folders

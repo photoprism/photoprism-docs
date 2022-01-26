@@ -17,7 +17,7 @@ docker-compose logs --tail=100
 Before reporting a bug:
 
 - [ ] Check the logs for messages like *disk full*, *disk quota exceeded*, *no space left on device*, *read-only file system*, *error creating path*, *wrong permissions*, *no route to host*, *connection failed*, and *killed*:
-    - [ ] If a service has been killed or otherwise automatically terminated, this points to a [memory problem](docker.md#adding-swap) (add swap and/or memory; remove or increase usage limits)
+    - [ ] If a service has been "killed" or otherwise automatically terminated, this points to a [memory problem](docker.md#adding-swap) (add swap and/or memory; remove or increase usage limits)
     - [ ] In case the logs show "disk full", "quota exceeded", or "no space left" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space) (add storage) or a disk usage limit is configured (remove or increase it)
     - [ ] Error messages containing "read-only file system", "error creating path", or "wrong permissions" indicate a [filesystem permission problem](docker.md#file-permissions)
     - [ ] Log messages that contain "no route to host" indicate a [problem with the database](mariadb.md) or Docker network configuration (follow our [examples](https://dl.photoprism.app/docker/))
@@ -102,9 +102,8 @@ Fatal errors are often caused by one of the following conditions:
 We recommend checking your [Docker Logs](docker.md#viewing-logs) for messages like *disk full*, *disk quota exceeded*,
 *no space left on device*, *read-only file system*, *error creating path*, *wrong permissions*, *no route to host*, *connection failed*, and *killed*:
 
-- [ ] If a service has been killed or otherwise automatically terminated, this points to a [memory problem](docker.md#adding-swap) (add swap and/or memory; remove or increase usage limits)
-- [ ] In case the logs show "disk full", "quota exceeded", or "no space left" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space)
-(add storage) or a disk usage limit is configured (change it)
+- [ ] If a service has been "killed" or otherwise automatically terminated, this points to a [memory problem](docker.md#adding-swap) (add swap and/or memory; remove or increase usage limits)
+- [ ] In case the logs show "disk full", "quota exceeded", or "no space left" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space) (add storage) or a disk usage limit is configured (remove or increase it)
 - [ ] Error messages containing "read-only file system", "error creating path", or "wrong permissions" indicate a [filesystem permission problem](docker.md#file-permissions) 
 - [ ] Log messages that contain "no route to host" indicate a [problem with the database](mariadb.md) or network configuration (follow our [examples](https://dl.photoprism.app/docker/))
 
@@ -133,7 +132,7 @@ In case the application logs don't contain anything helpful:
 - [ ] The pictures are in [Review](../../user-guide/organize/review.md) due to low quality or incomplete metadata
 - [ ] The [file type](../faq.md#what-media-file-types-are-supported) is generally unsupported
 - [ ] The [file type](../faq.md#what-media-file-types-are-supported) is generally supported, but a specific feature or codec is not
-- [ ] The *originals* have bad filesystem permissions, so they can't be opened by the indexer
+- [ ] The *originals* have [bad filesystem permissions](docker.md#file-permissions), so they cannot be opened by the indexer
 - [ ] The indexer has skipped the files because they are exact duplicates
 - [ ] The files are [ignored based on pattern in a `.ppignore` file](../../user-guide/library/originals.md#ignoring-files-and-folders)
 - [ ] They [are in *Library > Hidden*](https://demo.photoprism.app/library/hidden) because thumbnails could not be created:
@@ -167,7 +166,7 @@ In case the application logs don't contain anything helpful:
 - [ ] *Convert to JPEG* is disabled in *Settings > Library*
 - [ ] [Your (virtual) server disk is full](docker.md#disk-space) (add storage)
 - [ ] A disk usage or the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (remove or increase it)
-- [ ] [The *storage* folder is not writable](docker.md#file-permissions) (change [permissions](docker.md#file-permissions))
+- [ ] [The *storage* folder is not writable or mounted read-only](docker.md#file-permissions) (change [permissions](docker.md#file-permissions))
 - [ ] Files were deleted manually, for example to free up disk space
 - [ ] Files can't be opened, e.g. because the file system permissions have been changed
 - [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder
@@ -179,11 +178,12 @@ In case the application logs don't contain anything helpful:
 - [ ] You are connected to the wrong server, VPN, CDN, or a DNS record has not been updated yet
 
 We also recommend checking your [Docker Logs](docker.md#viewing-logs) for messages like *disk full*, *disk quota exceeded*,
-*no space left on device*, *wrong permissions*, and *killed*:
+*no space left on device*, *read-only file system*, *error creating path*, *wrong permissions*, and *killed*:
 
-- [ ] If a service has been killed or otherwise automatically terminated, this points to a
+- [ ] If a service has been "killed" or otherwise automatically terminated, this points to a
 memory problem
 - [ ] In case the logs show "disk full", "quota exceeded", or "no space left" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space) (add storage) or a disk usage limit is configured (remove or increase it)
+- [ ] Error messages containing "read-only file system", "error creating path", or "wrong permissions" indicate a [filesystem permission problem](docker.md#file-permissions)
 
 *Depending on the cause of the problem, you may need to perform a full rescan once the issue is resolved.*
 
@@ -197,7 +197,7 @@ If videos do not play and/or you only see a white/black area when you open a vid
 - [ ] An ad blocker or other plugins block requests (disable them or add an exception)
 - [ ] [Your (virtual) server disk is full](docker.md#disk-space) (add storage)
 - [ ] A disk usage or the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (remove or increase it)
-- [ ] [The *storage* folder is not writable](docker.md#file-permissions) (change [permissions](docker.md#file-permissions))
+- [ ] [The *storage* folder is not writable or mounted read-only](docker.md#file-permissions) (change [permissions](docker.md#file-permissions))
 - [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder (check if the files are accessible)
 - [ ] Your browser cannot communicate properly with the server, e.g. because a [Reverse Proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
 - [ ] There are other network problems caused by a proxy, firewall, or unstable connection (try a direct connection)

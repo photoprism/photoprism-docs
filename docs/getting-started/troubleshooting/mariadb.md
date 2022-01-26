@@ -42,7 +42,7 @@ If this doesn't help, check the [Docker Logs](docker.md#viewing-logs) for messag
 
 When moving MariaDB to another computer, cloud server, or virtual machine:
 
-- [ ] Move the complete *storage* folder along with it and preserve the file permissions
+- [ ] Move the complete *storage* folder along with it and preserve the [file permissions](docker.md#file-permissions)
 - [ ] **or** restore your index [from an SQL dump](https://mariadb.com/kb/en/mysqldump/) (backup file)
 - [ ] Perform a [version upgrade](#version-upgrade) if necessary
 - [ ] Make sure that PhotoPrism can access the database on the new host

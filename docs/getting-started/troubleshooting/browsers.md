@@ -1,27 +1,22 @@
 # Diagnosing Frontend Issues
 
-!!! info ""
-    You are welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
-    [Sponsors](../../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
-    Before [submitting a support request](../../user-guide/index.md#getting-support), try to determine the cause of your problem.
-
 Problems with the user interface can be caused by a bug or an incompatible browser:
 
-- Some [features may not be supported](https://caniuse.com/) by non-standard browsers, as well as nightly, test, and unofficial versions
-- In particular, not [all video formats](https://caniuse.com/?search=video%20format) can be [played with every browser](https://github.com/photoprism/photoprism/issues/707)
+- some [features may not be supported](https://caniuse.com/) by non-standard browsers, as well as nightly, test, and unofficial versions
+- in particular, not [all video formats](https://caniuse.com/?search=video%20format) can be [played with every browser](https://github.com/photoprism/photoprism/issues/707)
 
-!!! tldr ""
-    We recommend going through our related [Troubleshooting Checklist](index.md#app-not-loading) in case the app doesn't load at all.
+!!! note ""
+    If the user interface doesn't load at all, our [*App Not Loading*](index.md#app-not-loading) checklist helps you identify and resolve the cause.
 
 #### Try Another Browser ####
 
 To test if you have a general problem that is not browser-specific, [open the Web UI](../docker-compose.md#step-2-start-the-server) in other browsers:
 
-- If you are using [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/), try the [stable version](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) and [Chrome](https://www.google.com/chrome/) or [Chromium](https://www.chromium.org/getting-involved/download-chromium)
-- If you have browser plugins installed, try disabling them to see if this makes a difference
-- When the problem disappears, you know that the issue is browser-dependent or caused by a plugin
-- Otherwise, the issue may not be specific to the browser version
-- Make a note in which browsers the problem occurs, as this will be helpful when submitting a support request
+- if you are using [Firefox Nightly](https://www.mozilla.org/en-US/firefox/channel/desktop/), try the [stable version](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release) and [Chrome](https://www.google.com/chrome/) or [Chromium](https://www.chromium.org/getting-involved/download-chromium)
+- if you have browser plugins installed, try disabling them to see if this makes a difference
+- when the problem disappears, you know that the issue is browser-dependent or caused by a plugin
+- otherwise, the issue may not be specific to the browser version
+- make a note in which browsers the problem occurs, as this will be helpful when submitting a support request
 
 !!! tldr ""
     The user interface works with most modern browsers, and runs best on [Chrome](https://www.google.com/chrome/), [Chromium](https://www.chromium.org/getting-involved/download-chromium), [Safari](https://www.apple.com/safari/), [Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release), and [Edge](https://www.microsoft.com/en-us/edge).
@@ -37,13 +32,13 @@ instead of writing down the details.
 
 === "Chrome, Chromium, and Edge"
    
-    - Press ⌘+Option+J (Mac) or Ctrl+Shift+J (Windows, Linux, Chrome OS) to go directly to the Developer Tools
-    - Or, navigate to *More tools* > *Developer tools* in the browser menu and open the *Console* tab
+    - press ⌘+Option+J (Mac) or Ctrl+Shift+J (Windows, Linux, Chrome OS) to go directly to the Developer Tools
+    - or, navigate to *More tools* > *Developer tools* in the browser menu and open the *Console* tab
 
 === "Firefox"
 
-    - Press ⌘+Option+K (Mac) or Ctrl+Shift+K (Windows) to go directly to the Firefox Web Console panel
-    - Or, navigate to *Web Development* > *Web Console* in the menu and open the *Console* panel
+    - press ⌘+Option+K (Mac) or Ctrl+Shift+K (Windows) to go directly to the Firefox Web Console panel
+    - or, navigate to *Web Development* > *Web Console* in the menu and open the *Console* panel
 
 === "Safari"
 
@@ -54,8 +49,8 @@ instead of writing down the details.
 
     Once the *Develop* menu is enabled:
 
-    - Press Option+⌘+C to go directly to the *Javascript Console*
-    - Or, navigate to *Develop* > *Show Javascript Console* in the browser menu
+    - press Option+⌘+C to go directly to the *Javascript Console*
+    - or, navigate to *Develop* > *Show Javascript Console* in the browser menu
 
 !!! tldr ""
     In case you don't see any log messages, try reloading the page, as the problem may occur while the page is loading.

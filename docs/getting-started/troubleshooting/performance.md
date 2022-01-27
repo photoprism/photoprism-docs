@@ -28,10 +28,10 @@ services:
 Local Solid-State Drives (SSDs) are [best for databases](https://mariadb.com/de/resources/blog/how-to-tune-mariadb-write-performance/)
 of any kind:
 
-- Database performance extremely benefits from high throughput which HDDs can't provide
+- database performance extremely benefits from high throughput which HDDs can't provide
 - SSDs have more predictable performance and can handle more concurrent requests
-- Due to the HDD seek time, HDDs only support 5% of the reads per second of SSDs
-- The cost savings from using slow hard disks are minimal
+- due to the HDD seek time, HDDs only support 5% of the reads per second of SSDs
+- the cost savings from using slow hard disks are minimal
 
 Switching to SSDs makes a big difference, especially for write operations and when the read cache is not
 big enough or can't be used.

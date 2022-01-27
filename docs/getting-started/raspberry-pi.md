@@ -8,9 +8,14 @@ enjoy the exact same functionality, and can follow the regular [Installation Ins
 after going through a short list of [System Requirements](#system-requirements) and
 [Architecture Specific Notes](#architecture-specific-notes).
 
-!!! tldr ""
-    Existing users are advised to keep their `docker-compose.yml` config updated based on the examples
-    available at [dl.photoprism.app/docker](https://dl.photoprism.app/docker/).
+Existing users are advised to keep their `docker-compose.yml` config updated based on the examples
+available at [dl.photoprism.app/docker](https://dl.photoprism.app/docker/).
+
+!!! note ""
+    Indexing large photo and video collections significantly benefits from [local SSD storage](troubleshooting/performance.md#storage),
+    and plenty of memory for caching. Especially the conversion of RAW images and the transcoding of videos are very demanding.
+    We take no responsibility for instability or [performance](troubleshooting/performance.md) problems if your device
+    does not meet the minimum requirements.
 
 ### System Requirements ###
 
@@ -30,11 +35,6 @@ after going through a short list of [System Requirements](#system-requirements) 
   HTTPS reverse proxy such as [Traefik](proxies/traefik.md) or [Caddy](proxies/caddy-2.md).
   Your files and passwords will otherwise be transmitted in clear text and can be intercepted by anyone, 
   including your provider, hackers, and governments.
-
-!!! note ""
-    Indexing large photo and video collections significantly benefits from [local SSD storage](troubleshooting/performance.md#storage)
-    and plenty of memory for caching. Especially the conversion of RAW images and the transcoding of
-    videos are very demanding.
 
 ### Architecture Specific Notes ###
 

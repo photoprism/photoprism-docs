@@ -1,10 +1,5 @@
 # Collecting Debug Information
 
-!!! info ""
-    You are welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
-    [Sponsors](../../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
-    Before [submitting a support request](../../user-guide/index.md#getting-support), try to determine the cause of your problem.
-
 === "Web App"
 
     Make sure *Logs* is enabled under *Settings* > *General* so you can see log messages in the Web UI.
@@ -97,3 +92,8 @@
     
     !!! tldr ""
         The default [Docker Compose](https://docs.docker.com/compose/) config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running the `docker-compose` command in the same directory. Config files for other apps or instances should be placed in separate folders.
+
+!!! info ""
+    You are welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
+    [Sponsors](../../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
+    Before [submitting a support request](../../user-guide/index.md#getting-support), try to [determine the cause of your problem](index.md).

@@ -78,6 +78,6 @@ Other issues? Our [troubleshooting checklists](index.md) help you quickly diagno
 !!! info ""
     You are welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
     [Sponsors](../../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
-    Before [submitting a support request](../index.md#getting-support), try to [determine the cause of your problem](index.md).
+    Before [submitting a support request](../../user-guide/index.md#getting-support), try to [determine the cause of your problem](index.md).
 
 *[SQLite]: self-contained, serverless SQL database 

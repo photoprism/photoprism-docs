@@ -38,14 +38,16 @@ Never store database files on an unreliable device such as a USB flash drive, an
 
 ## Memory ##
 
-Indexing large photo and video collections benefits from plenty of memory for caching and processing large media files.
-Especially the conversion of RAW images and the transcoding of videos are very demanding.
-
+Indexing large photo and video collections benefits from plenty of memory for [caching](#mariadb) and processing large media files.
 Ideally, the amount of RAM should match the number of physical CPU cores. If not, reduce the number of workers 
 as [explained below](#troubleshooting).
 
-RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory.
-We take no responsibility for instability or performance problems if your device does not meet the minimum requirements.
+Especially the conversion of RAW images and the transcoding of videos are very demanding. High-resolution panoramic
+images may require [additional swap space](docker.md#adding-swap) and/or physical memory above the recommended minimum.
+
+!!! note ""
+    RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory. We take no responsibility
+    for instability or performance problems if your device does not meet the requirements.
 
 ## Server CPU ##
 

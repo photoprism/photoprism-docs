@@ -91,6 +91,8 @@ docker-compose up
 
 ### Adding Swap ###
 
+*Note that high-resolution panoramic images may require additional swap space and/or [physical memory](performance.md#memory) above the [recommended minimum](../index.md#system-requirements).*
+
 #### Linux ####
 
 Open a terminal and run this command to check if your server has swap configured.

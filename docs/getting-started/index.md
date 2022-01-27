@@ -45,18 +45,18 @@ Having said that, funding really has the highest impact. So users can do their p
 
 ## System Requirements ##
 
-We recommend hosting PhotoPrism on a server with **at least 2 cores**, **3 GB of physical memory**, and
+We recommend hosting PhotoPrism on a server with **at least 2 cores**, **3 GB of physical memory**,[^1] and
 a 64-bit operating system. Beyond these minimum requirements, the amount of RAM should [match the number of CPU cores](troubleshooting/performance.md#memory).
-RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory.
 
 If your server has [less than 4 GB of swap space](troubleshooting/docker.md#adding-swap) or a manual
 memory/swap limit is set, this can cause unexpected restarts, for example, when the indexer temporarily
-needs more memory to process large files.
+needs more memory to process large files. High-resolution panoramic images may require additional swap space
+and/or physical memory above the recommended minimum.
 
 !!! note ""
     Indexing large photo and video collections significantly benefits from [local SSD storage](troubleshooting/performance.md#storage)
     and plenty of memory for caching. Especially the conversion of RAW images and the transcoding of videos are very demanding.
-    We take no responsibility for instability or performance problems if your device does not meet the minimum requirements.
+    We take no responsibility for instability or performance problems if your device does not meet the requirements.
 
 #### Browsers ####
 
@@ -96,3 +96,5 @@ Think of "free software" as in "free speech," not as in "free beer". Thank you! 
     **We kindly ask you not to report bugs via GitHub Issues unless you are certain to have found a new issue that must be fixed directly in the app.**
     [Contact us](https://photoprism.app/contact) or [a community member](https://github.com/photoprism/photoprism/discussions)
     if you need help, it could be a local configuration problem, or a misunderstanding in how the software works.
+
+[^1]: RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory

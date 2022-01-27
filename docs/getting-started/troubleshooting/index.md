@@ -92,8 +92,8 @@ Fatal errors are often caused by one of the following conditions:
 - [ ] You didn't [configure at least 4 GB of swap](docker.md#adding-swap) (add swap)
 - [ ] The server CPU is overheating (improve cooling)
 - [ ] The server has an outdated operating system that is not fully compatible (update)
-- [ ] The server hardware is defective and [causes random panics](https://github.com/photoprism/photoprism/discussions/1984) 
-- [ ] The [database server](mariadb.md) is not running, [incompatible](../index.md#databases), or misconfigured
+- [ ] The server hardware is defective and [causes random panics](https://github.com/photoprism/photoprism/discussions/1984) (test on another server)
+- [ ] The [database server](mariadb.md) is not running, [incompatible](../index.md#databases), or misconfigured (start, upgrade, or fix it)
 - [ ] You've [upgraded the MariaDB server](mariadb.md#version-upgrade) without running `mariadb-upgrade`
 - [ ] Files are [stored on an unreliable device such as a USB flash drive or a shared network folder](mariadb.md#corrupted-files)
 - [ ] There are network problems caused by a bad configuration, firewall, or unstable connection

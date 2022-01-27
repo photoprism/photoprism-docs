@@ -5,23 +5,20 @@ to learn what [kind of CPU](../troubleshooting/performance.md#server-cpu) and ho
 We [recommend](../index.md#system-requirements) hosting PhotoPrism on a 64-bit system with **at least 2 cores** and **3 GB of physical memory**. Indexing large photo and video collections benefits from [SSD storage](../troubleshooting/performance.md#storage)
 instead of traditional hard drives commonly used in NAS devices.
 
-We take no responsibility for instability or performance issues if your NAS does not meet the minimum requirements.
-RAW image conversion and TensorFlow are disabled on devices with 1 GB or less of physical memory.
-
 You will have to resort to [32-bit Docker images](../raspberry-pi.md#older-armv7-based-devices) to run 
 PhotoPrism and MariaDB on ARMv7-based entry-level devices like the Synology DS218j.
 
-!!! tldr "Troubleshooting"
-    If your device runs out of memory, the index is frequently locked, or other system resources are running low:
+!!! tldr ""
+    We take no responsibility for instability or performance issues if your NAS does not meet the minimum requirements.
+    RAW image conversion and TensorFlow are disabled on devices with 1 GB or less memory.
 
-    - [ ] Try [reducing the number of workers](../config-options.md#index-workers) by setting `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml`, depending on the performance of your device
-    - [ ] Make sure [your device has at least 4 GB of swap space](../troubleshooting/docker.md#adding-swap) so that indexing doesn't cause restarts when memory usage spikes; RAW image conversion and video transcoding are especially demanding
-    - [ ] If you are using SQLite, switch to MariaDB, which is [better optimized for high concurrency](../faq.md#should-i-use-sqlite-mariadb-or-mysql)
-    - [ ] As a last measure, you can [disable the use of TensorFlow](../config-options.md#feature-flags) for image classification and facial recognition
+## Setup using Docker ##
 
-    Other issues? Our [troubleshooting checklists](../troubleshooting/index.md) help you quickly diagnose and solve them.
+We recommend following these instructions to install PhotoPrism on your Synology NAS:
 
-## Will my device be fast enough? ##
+https://www.wundertech.net/how-to-setup-photoprism-on-a-synology-nas
+
+### Will my device be fast enough? ###
 
 This largely depends on your expectations and the number of files you have. Most users report that
 PhotoPrism runs well on their Synology NAS. However, initial indexing may take much longer
@@ -30,16 +27,23 @@ than on standard desktop computers.
 Also keep in mind that the hardware has no video transcoding support and software transcoding
 is generally slow.
 
-## Setup using Docker ##
+## Troubleshooting ##
 
-We recommend following these instructions to install PhotoPrism on your Synology NAS:
+If your device runs out of memory, the index is frequently locked, or other system resources are running low:
 
-https://www.wundertech.net/how-to-setup-photoprism-on-a-synology-nas
+- [ ] Try [reducing the number of workers](../config-options.md#index-workers) by setting `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml`, depending on the performance of your device
+- [ ] Make sure [your device has at least 4 GB of swap space](../troubleshooting/docker.md#adding-swap) so that indexing doesn't cause restarts when memory usage spikes; RAW image conversion and video transcoding are especially demanding
+- [ ] If you are using SQLite, switch to MariaDB, which is [better optimized for high concurrency](../faq.md#should-i-use-sqlite-mariadb-or-mysql)
+- [ ] As a last measure, you can [disable the use of TensorFlow](../config-options.md#feature-flags) for image classification and facial recognition
+
+Other issues? Our [troubleshooting checklists](../troubleshooting/index.md) help you quickly diagnose and solve them.
 
 !!! info ""
     You are welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
     [Sponsors](../../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
     Before submitting a support request, try to [determine the cause of your problem](../troubleshooting/index.md).
+
+<!---
 
 ## Setup using Portainer ##
 
@@ -128,6 +132,4 @@ Click create [Websocket] and hit OK (this step makes that your browser receive p
 
 **IMPORTANT: make sure that you have forwarded the selected port (for eg. 2343) in your router:**
 
-
-
-
+-->

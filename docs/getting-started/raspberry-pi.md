@@ -11,15 +11,10 @@ after going through a short list of [System Requirements](#system-requirements) 
 Existing users are advised to keep their `docker-compose.yml` config updated based on the examples
 available at [dl.photoprism.app/docker](https://dl.photoprism.app/docker/).
 
-!!! info ""
-    You are welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
-    [Sponsors](../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
-    Before submitting a support request, try to [determine the cause of your problem](troubleshooting/index.md).
-
 ### System Requirements ###
 
 - Your device should have at least 3 GB of physical memory and a 64-bit operating system.
-- While PhotoPrism has been reported to work on devices with less memory, we take no responsibility for instability or performance issues. RAW image conversion and TensorFlow are disabled on systems with 1 GB or less of physical memory.
+- While PhotoPrism has been reported to work on devices with less memory, we take no responsibility for instability or performance issues. RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory.
 - If less than [4 GB of swap space](troubleshooting/docker.md#adding-swap) is configured or a manual memory/swap limit is set, this can cause unexpected restarts, especially if the indexer temporarily needs more memory to process large files.
 - We recommend disabling [kernel security](troubleshooting/docker.md#kernel-security) in your 
   [docker-compose.yml](https://dl.photoprism.app/docker/arm64/docker-compose.yml), especially if you do 
@@ -130,8 +125,24 @@ Advanced users can add this to a `Makefile` so that they only have to type a sin
 command like `make update`. See [Command-Line Interface](docker-compose.md#command-line-interface) 
 to learn more about terminal commands.
 
-!!! info ""
+!!! tldr ""
     Running an image with `:latest` tag does not cause Docker to automatically download new images.
+
+### Troubleshooting ###
+
+If your device runs out of memory, the index is frequently locked, or other system resources are running low:
+
+- [ ] Try [reducing the number of workers](config-options.md#index-workers) by setting `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml`, depending on the performance of your device
+- [ ] Make sure [your device has at least 4 GB of swap space](troubleshooting/docker.md#adding-swap) so that indexing doesn't cause restarts when memory usage spikes; RAW image conversion and video transcoding are especially demanding
+- [ ] If you are using SQLite, switch to MariaDB, which is [better optimized for high concurrency](faq.md#should-i-use-sqlite-mariadb-or-mysql)
+- [ ] As a last measure, you can [disable the use of TensorFlow](config-options.md#feature-flags) for image classification and facial recognition
+
+Other issues? Our [troubleshooting checklists](troubleshooting/index.md) help you quickly diagnose and solve them.
+
+!!! info ""
+    You are welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
+    [Sponsors](../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
+    Before submitting a support request, try to [determine the cause of your problem](troubleshooting/index.md).
 
 ### Credits ###
 

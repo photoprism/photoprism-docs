@@ -1,25 +1,27 @@
 # Performance Tips
 
-!!! info ""
-    You are welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
-    [Sponsors](../../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
-    Before [submitting a support request](../../user-guide/index.md#getting-support), try to determine the cause of your problem.
-
 ## MariaDB ##
 
 The [InnoDB buffer pool](https://mariadb.com/kb/en/innodb-buffer-pool/) serves as a cache for data and indexes.
 It is a key component for optimizing MariaDB performance. Its size should be as large as possible to keep frequently
 used data in memory and reduce disk I/O - typically the biggest bottleneck.
 
-Our [docker-compose.yml examples](https://dl.photoprism.app/docker/) have a default buffer pool size of 128 MB. 
-You can change it using the `--innodb-buffer-pool-size` parameter (`M` means Megabyte, `G` stands for Gigabyte).
-If your server has enough memory, we recommend increasing the size to 1 GB:
+By default, the size of the buffer pool is only 128 MB. You can change it using the `--innodb-buffer-pool-size`
+parameter in the database service config of your `docker-compose.yml`. `M` stands for Megabyte, `G` for Gigabyte.
+Do not use spaces.
+
+If your server has plenty of physical memory, we recommend increasing the size to 1 or 2 GB:
 
 ```yaml
 services:
   mariadb:
     command: mysqld --innodb-buffer-pool-size=1G ...
 ```
+
+!!! note ""
+    Remember to also [increase the memory available to services](../img/docker-resources-advanced.jpg) in case you are
+    using *Docker Desktop* on Windows or macOS. If PhotoPrism and MariaDB are running in a virtual machine, the available
+    memory must be increased as well. For details, refer to the corresponding documentation.
 
 ## Storage ##
 
@@ -34,7 +36,8 @@ of any kind:
 Switching to SSDs makes a big difference, especially for write operations and when the read cache is not
 big enough or can't be used.
 
-Never store database files on an unreliable device such as a USB flash drive, an SD card, or a shared network folder.
+!!! note ""
+    Never store database files on an unreliable device such as a USB flash drive, an SD card, or a shared network folder.
 
 ## Memory ##
 
@@ -54,9 +57,10 @@ images may require [additional swap space](docker.md#adding-swap) and/or physica
 Last but not least, performance can be limited by your server CPU. While [NAS devices](https://kb.synology.com/en-us/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have)
 get faster with each generation, their hardware is optimized for minimal power consumption and low production costs.
 
-[Benchmarks](https://www.google.com/search?q=cpu+benchmarks) prove that even 8-year-old standard desktop
-CPUs are often many times faster. If you've tried everything else, then only moving your instance to a more
-powerful server may help.
+[Benchmarks](https://www.google.com/search?q=cpu+benchmarks) show that even 8-year-old standard desktop CPUs are often many times faster.
+If you've tried everything else, then only moving your instance to a more powerful server may help.
+
+![CPU Benchmark](img/passmark-cpu.svg)
 
 ## Troubleshooting ##
 
@@ -67,6 +71,11 @@ If your server runs out of memory, the index is frequently locked, or other syst
 - [ ] If you are using SQLite, switch to MariaDB, which is [better optimized for high concurrency](../faq.md#should-i-use-sqlite-mariadb-or-mysql)
 - [ ] As a last measure, you can [disable the use of TensorFlow](../config-options.md#feature-flags) for image classification and facial recognition
 
-Other issues? Our [troubleshooting checklists](../troubleshooting/index.md) help you quickly diagnose and solve them.
+Other issues? Our [troubleshooting checklists](index.md) help you quickly diagnose and solve them.
+
+!!! info ""
+    You are welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
+    [Sponsors](../../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
+    Before [submitting a support request](../index.md#getting-support), try to [determine the cause of your problem](index.md).
 
 *[SQLite]: self-contained, serverless SQL database 

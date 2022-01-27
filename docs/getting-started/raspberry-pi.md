@@ -8,8 +8,9 @@ enjoy the exact same functionality, and can follow the regular [Installation Ins
 after going through a short list of [System Requirements](#system-requirements) and 
 [Architecture Specific Notes](#architecture-specific-notes).
 
-Existing users are advised to keep their `docker-compose.yml` config updated based on the examples
-available at [dl.photoprism.app/docker](https://dl.photoprism.app/docker/).
+!!! tldr ""
+    Existing users are advised to keep their `docker-compose.yml` config updated based on the examples
+    available at [dl.photoprism.app/docker](https://dl.photoprism.app/docker/).
 
 ### System Requirements ###
 

@@ -7,7 +7,7 @@ Issues labeled [help wanted](https://github.com/photoprism/photoprism/issues?q=i
 
 Don't hesitate to [contact us](../contact.md) if you want to work on something specific or need [help with a pull request](pull-requests.md). 
 We kindly ask you not to [report bugs](index.md#creating-bug-reports) via GitHub Issues unless you are certain to have
-found a new issue that must be fixed directly in the app.
+found a fully reproducible and previously unreported issue that must be fixed directly in the app.
 
 ### How to Write User Stories ###
 

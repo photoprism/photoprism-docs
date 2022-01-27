@@ -58,7 +58,7 @@ needs more memory to process large files.
     videos are very demanding.
 
 !!! info ""
-    RAW file conversion and TensorFlow are disabled on systems with 1 GB or less of physical memory.
+    RAW image conversion and TensorFlow are disabled on systems with 1 GB or less of physical memory.
     If you're running out of memory - or other system resources - while indexing, try reducing the
     [number of workers](https://docs.photoprism.app/getting-started/config-options/)
     to a reasonably small value in `docker-compose.yml` (depending on the performance of the server).

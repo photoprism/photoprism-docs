@@ -96,7 +96,7 @@ host folder as for *originals*, which is better for production environments.
 - Don't mount [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) and do not use them inside the *storage* folder
 
 !!! tldr ""
-    When moving your installation to another host, move the complete *storage* folder along with it and preserve the [file permissions](troubleshooting/docker.md#file-permissions).
+    When moving your installation to another host, move the complete *storage* folder along with it.
 
 ##### /photoprism/import #####
 
@@ -132,17 +132,15 @@ changed, added, or removed. This can also be automated using CLI commands and a 
 
 Easy, isn't it?
 
-!!! tip "Troubleshooting"
+!!! tldr "Troubleshooting"
     If your server runs out of memory, the index is frequently locked, or other system resources are running low:
 
-    - [ ] Try [reducing the number of workers](config-options.md#index-workers) by setting `PHOTOPRISM_WORKERS` to a reasonably small value (depending on the performance of the server)
-    - [ ] Ensure that [your server has at least 4 GB of swap configured](troubleshooting/docker.md#adding-swap) so that indexing doesn't cause restarts when there are memory usage spikes (especially the conversion of RAW images and the
-    transcoding of videos are very demanding)
+    - [ ] Try [reducing the number of workers](config-options.md#index-workers) by setting `PHOTOPRISM_WORKERS` to a reasonably small value, depending on the performance of your device or cloud server
+    - [ ] Make sure [your server has at least 4 GB of swap space](troubleshooting/docker.md#adding-swap) so that indexing doesn't cause restarts when memory usage spikes; RAW image conversion and video transcoding are especially demanding
     - [ ] If you are using SQLite, switch to MariaDB, which is [better optimized for high concurrency](faq.md#should-i-use-sqlite-mariadb-or-mysql)
-    - [ ] As a measure of last resort, you may [disable using TensorFlow](config-options.md#feature-flags) for image classification and facial recognition
+    - [ ] As a last measure, you can [disable the use of TensorFlow](config-options.md#feature-flags) for image classification and facial recognition
 
     Other issues? Our [troubleshooting checklists](troubleshooting/index.md) help you quickly diagnose and solve them.
-
 
 ### Step 3: When you're done... ###
 

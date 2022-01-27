@@ -108,11 +108,11 @@ Variable                        | Parameter                  | Description
 Variable                        | Parameter                  | Description
 :------------------------------ |:-------------------------- |:-------------------------------------------
 `PHOTOPRISM_RAW_PRESETS`        | --raw-presets              | enable RAW file converter presets (may reduce performance)
-`PHOTOPRISM_DARKTABLE_BIN`      | --darktable-bin COMMAND    | Darktable CLI COMMAND for RAW file conversion (default: "darktable-cli")
+`PHOTOPRISM_DARKTABLE_BIN`      | --darktable-bin COMMAND    | Darktable CLI COMMAND for RAW image conversion (default: "darktable-cli")
 `PHOTOPRISM_DARKTABLE_BLACKLIST` | --darktable-blacklist BLACKLIST | file EXTENSIONS not to be converted with Darktable (default: "raf,cr3,dng")
-`PHOTOPRISM_RAWTHERAPEE_BIN`    | --rawtherapee-bin COMMAND  | RawTherapee CLI COMMAND for RAW file conversion (default: "rawtherapee-cli")
+`PHOTOPRISM_RAWTHERAPEE_BIN`    | --rawtherapee-bin COMMAND  | RawTherapee CLI COMMAND for RAW image conversion (default: "rawtherapee-cli")
 `PHOTOPRISM_RAWTHERAPEE_BLACKLIST` | --rawtherapee-blacklist BLACKLIST | file EXTENSIONS not to be converted with RawTherapee
-`PHOTOPRISM_SIPS_BIN`           | --sips-bin FILENAME        | Sips COMMAND for RAW file conversion (macOS only) (default: "sips")
+`PHOTOPRISM_SIPS_BIN`           | --sips-bin FILENAME        | Sips COMMAND for RAW image conversion (macOS only) (default: "sips")
 `PHOTOPRISM_HEIFCONVERT_BIN`    | --heifconvert-bin COMMAND  | HEIC/HEIF image convert COMMAND (default: "heif-convert")
 `PHOTOPRISM_FFMPEG_BIN`         | --ffmpeg-bin COMMAND       | FFmpeg COMMAND for video transcoding and still image extraction (default: "ffmpeg")
 `PHOTOPRISM_FFMPEG_ENCODER`     | --ffmpeg-encoder NAME      | maximum FFmpeg encoding BITRATE (Mbit/s) (default: 50)

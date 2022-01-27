@@ -6,7 +6,7 @@ We [recommend](../index.md#system-requirements) hosting PhotoPrism on a 64-bit s
 instead of traditional hard drives commonly used in NAS devices.
 
 We take no responsibility for instability or performance issues if your NAS does not meet the minimum requirements.
-RAW file conversion and TensorFlow are disabled on devices with 1 GB or less of physical memory.
+RAW image conversion and TensorFlow are disabled on devices with 1 GB or less of physical memory.
 
 You will have to resort to [32-bit Docker images](../raspberry-pi.md#older-armv7-based-devices) to run 
 PhotoPrism and MariaDB on ARMv7-based entry-level devices like the Synology DS218j.
@@ -14,9 +14,10 @@ PhotoPrism and MariaDB on ARMv7-based entry-level devices like the Synology DS21
 !!! tldr "Troubleshooting"
     If your device runs out of memory, the index is frequently locked, or other system resources are running low:
 
-    - [ ] Try [reducing the number of workers](../config-options.md#index-workers) by setting `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml` (depending on the performance of the server)
+    - [ ] Try [reducing the number of workers](../config-options.md#index-workers) by setting `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml`, depending on the performance of your device
+    - [ ] Make sure [your server has at least 4 GB of swap space](docker.md#adding-swap) so that indexing doesn't cause restarts when memory usage spikes; RAW image conversion and video transcoding are especially demanding
     - [ ] If you are using SQLite, switch to MariaDB, which is [better optimized for high concurrency](../faq.md#should-i-use-sqlite-mariadb-or-mysql)
-    - [ ] As a measure of last resort, you may [disable using TensorFlow](../config-options.md#feature-flags) for image classification and facial recognition
+    - [ ] As a last measure, you can [disable the use of TensorFlow](../config-options.md#feature-flags) for image classification and facial recognition
 
     Other issues? Our [troubleshooting checklists](../troubleshooting/index.md) help you quickly diagnose and solve them.
 
@@ -29,16 +30,16 @@ than on standard desktop computers.
 Also keep in mind that the hardware has no video transcoding support and software transcoding
 is generally slow.
 
-!!! info ""
-    You are welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
-    [Sponsors](../../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
-    Before submitting a support request, try to [determine the cause of your problem](../troubleshooting/index.md).
-
 ## Setup using Docker ##
 
 We recommend following these instructions to install PhotoPrism on your Synology NAS:
 
 https://www.wundertech.net/how-to-setup-photoprism-on-a-synology-nas
+
+!!! info ""
+    You are welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
+    [Sponsors](../../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
+    Before submitting a support request, try to [determine the cause of your problem](../troubleshooting/index.md).
 
 ## Setup using Portainer ##
 

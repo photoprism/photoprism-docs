@@ -263,26 +263,26 @@ PhotoPrism's command-line interface is well suited for job automation using a
 
 #### Examples ####
 
-| Action                             | Command                                                     |
-|------------------------------------| ----------------------------------------------------------- |
-| *Start Services*                   | `docker-compose up -d`                                      | 
-| *Stop Services*                    | `docker-compose stop`                                       |
-| *Download Updates*                 | `docker-compose pull`                                       |
-| *Uninstall*                        | `docker-compose rm -s -v`                                   |
-| *Show Server Logs*                 | `docker-compose logs --tail=100 -f`                         |
-| *Show Config Values*               | `docker-compose exec photoprism photoprism config`          |
-| *Reset Database*                   | `docker-compose exec photoprism photoprism reset`           |                   
-| *Backup Database*                  | `docker-compose exec photoprism photoprism backup -a -i`    |                      
-| *Restore Database*                 | `docker-compose exec photoprism photoprism restore -a -i`   |                   
-| *Change Admin Password*            | `docker-compose exec photoprism photoprism passwd`          |
-| *Show User Management Commands*    | `docker-compose exec photoprism photoprism users help`   |
-| *Show Facial Recognition Commands* | `docker-compose exec photoprism photoprism faces help`   |
-| *Index Faces*                      | `docker-compose exec photoprism photoprism faces index`     |
-| *Reset People & Faces*             | `docker-compose exec photoprism photoprism faces reset -f`  |
-| *Transcode Videos to AVC*          | `docker-compose exec photoprism photoprism convert`         |
-| *Regenerate Thumbnails*            | `docker-compose exec photoprism photoprism thumbs -f`       |
-| *Update Index*                     | `docker-compose exec photoprism photoprism index --cleanup` |                  
-| *Import Files*                     | `docker-compose exec photoprism photoprism import [path]`   |                  
+| Action                                                | Command                                                     |
+|-------------------------------------------------------| ----------------------------------------------------------- |
+| *Start Services*                                      | `docker-compose up -d`                                      | 
+| *Stop Services*                                       | `docker-compose stop`                                       |
+| *Download Updates*                                    | `docker-compose pull`                                       |
+| *Uninstall*                                           | `docker-compose rm -s -v`                                   |
+| [*View Logs*](troubleshooting/docker.md#viewing-logs) | `docker-compose logs --tail=100 -f`                         |
+| *List Config Values*                                  | `docker-compose exec photoprism photoprism config`          |
+| *Reset Database*                                      | `docker-compose exec photoprism photoprism reset`           |                   
+| *Backup Database*                                     | `docker-compose exec photoprism photoprism backup -a -i`    |                      
+| *Restore Database*                                    | `docker-compose exec photoprism photoprism restore -a -i`   |                   
+| *Change Admin Password*                               | `docker-compose exec photoprism photoprism passwd`          |
+| *Show User Management Commands*                       | `docker-compose exec photoprism photoprism users help`   |
+| *Show Facial Recognition Commands*                    | `docker-compose exec photoprism photoprism faces help`   |
+| *Index Faces*                                         | `docker-compose exec photoprism photoprism faces index`     |
+| *Reset People & Faces*                                | `docker-compose exec photoprism photoprism faces reset -f`  |
+| *Transcode Videos to AVC*                             | `docker-compose exec photoprism photoprism convert`         |
+| *Regenerate Thumbnails*                               | `docker-compose exec photoprism photoprism thumbs -f`       |
+| [*Update Index*](../user-guide/library/originals.md)  | `docker-compose exec photoprism photoprism index --cleanup` |                  
+| [*Import Files*](../user-guide/library/import.md)     | `docker-compose exec photoprism photoprism import [path]`   |                  
 
 !!! info "Complete Rescan"
     `docker-compose exec photoprism photoprism index -f` rescans all originals, including already indexed and unchanged files. 

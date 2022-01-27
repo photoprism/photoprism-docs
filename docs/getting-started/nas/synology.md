@@ -10,7 +10,7 @@ You will have to resort to [32-bit Docker images](../raspberry-pi.md#older-armv7
 PhotoPrism and MariaDB on ARMv7-based entry-level devices like the Synology DS218j.
 
 !!! note ""
-    Indexing large photo and video collections significantly benefits from [local SSD storage](../troubleshooting/performance.md#storage),
+    Indexing large photo and video collections significantly benefits from [local SSD storage](../troubleshooting/performance.md#storage)
     and plenty of memory for caching. Especially the conversion of RAW images and the transcoding of videos are very demanding.
     We take no responsibility for instability or [performance](../troubleshooting/performance.md) problems if your
     device does not meet the minimum requirements.

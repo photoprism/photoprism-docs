@@ -12,7 +12,7 @@ Existing users are advised to keep their `docker-compose.yml` config updated bas
 available at [dl.photoprism.app/docker](https://dl.photoprism.app/docker/).
 
 !!! note ""
-    Indexing large photo and video collections significantly benefits from [local SSD storage](troubleshooting/performance.md#storage),
+    Indexing large photo and video collections significantly benefits from [local SSD storage](troubleshooting/performance.md#storage)
     and plenty of memory for caching. Especially the conversion of RAW images and the transcoding of videos are very demanding.
     We take no responsibility for instability or [performance](troubleshooting/performance.md) problems if your device
     does not meet the minimum requirements.

@@ -137,7 +137,7 @@ In case the application logs don't contain anything helpful:
 - [ ] The indexer has skipped the files because they are exact duplicates
 - [ ] The files are [ignored based on pattern in a `.ppignore` file](../../user-guide/library/originals.md#ignoring-files-and-folders)
 - [ ] They [are in *Library > Hidden*](https://demo.photoprism.app/library/hidden) because thumbnails could not be created:
-    - [ ] *Convert to JPEG* is [disabled in *Settings > Library*](../../user-guide/settings/library.md)
+    - [ ] *Convert to JPEG* is [disabled in *Settings > Library*](../../user-guide/settings/library.md) (enable it)
     - [ ] FFmpeg and/or RAW converters are [disabled in *Settings > Advanced*](../../user-guide/settings/advanced.md)
     - [ ] The file is broken, e.g. because of [*short Huffman data*](https://github.com/golang/go/issues/10447) (try to fix it)
     - [ ] [Your (virtual) server disk is full](docker.md#disk-space) (add storage)
@@ -163,8 +163,8 @@ In case the application logs don't contain anything helpful:
 - [ ] You browse [non-JPEG](../faq.md#what-media-file-types-are-supported) files in *Library > Originals* which have an icon but no preview
 - [ ] *Dynamic Previews* are enabled in *Settings > Advanced*, but the server is not powerful enough
 - [ ] The sizes in *Settings > Advanced* have been changed so the request can't be fulfilled
-- [ ] FFmpeg and/or RAW converters are disabled in *Settings > Advanced*
-- [ ] *Convert to JPEG* is disabled in *Settings > Library*
+- [ ] FFmpeg and/or RAW converters are disabled in *Settings > Advanced* (enable them)
+- [ ] *Convert to JPEG* is disabled in *Settings > Library* (enable it)
 - [ ] [Your (virtual) server disk is full](docker.md#disk-space) (add storage)
 - [ ] A disk usage or the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (remove or increase it)
 - [ ] The *storage* folder [is not writable or mounted read-only](docker.md#file-permissions) (change [permissions](docker.md#file-permissions))

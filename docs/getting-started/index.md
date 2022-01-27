@@ -46,8 +46,8 @@ Having said that, funding really has the highest impact. So users can do their p
 ## System Requirements ##
 
 We recommend hosting PhotoPrism on a server with **at least 2 cores**, **3 GB of physical memory**, and
-a 64-bit operating system. Beyond these minimum requirements, the amount of RAM should match the
-number of cores. RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory.
+a 64-bit operating system. Beyond these minimum requirements, the amount of RAM should [match the number of CPU cores](troubleshooting/performance.md#memory).
+RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory.
 
 If your server has [less than 4 GB of swap space](troubleshooting/docker.md#adding-swap) or a manual
 memory/swap limit is set, this can cause unexpected restarts, for example, when the indexer temporarily

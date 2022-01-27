@@ -187,26 +187,26 @@ PhotoPrism's command-line interface is well suited for job automation using a
 
 #### Examples ####
 
-| Action                           | Command                                                  |
-|----------------------------------| -------------------------------------------------------- |
-| *Start PhotoPrism*               | `docker start photoprism`                                |
-| *Stop PhotoPrism*                | `docker stop photoprism`                                 |
-| *Download Updates*               | `docker pull photoprism/photoprism:latest`               |
-| *Uninstall*                      | `docker rm -f photoprism`                                |
-| *View Logs*                      | `docker logs --tail=100 -f photoprism`                   |
-| *List Config Values*             | `docker exec -ti photoprism photoprism config`           |
-| *Reset Database*                 | `docker exec -ti photoprism photoprism reset`            |                   
-| *Backup Database*                | `docker exec -ti photoprism photoprism backup -a -i`     |                      
-| *Restore Database*               | `docker exec -ti photoprism photoprism restore -a -i`    |                   
-| *Change Admin Password*          | `docker exec -ti photoprism photoprism passwd`           | 
-| *Show User Management Commands*  | `docker exec -ti photoprism photoprism users help`  |
+| Action                             | Command                                                  |
+|------------------------------------| -------------------------------------------------------- |
+| *Start PhotoPrism*                 | `docker start photoprism`                                |
+| *Stop PhotoPrism*                  | `docker stop photoprism`                                 |
+| *Download Update*                  | `docker pull photoprism/photoprism:latest`               |
+| *Uninstall*                        | `docker rm -f photoprism`                                |
+| *View Logs*                        | `docker logs --tail=100 -f photoprism`                   |
+| *List Config Values*               | `docker exec -ti photoprism photoprism config`           |
+| *Reset Database*                   | `docker exec -ti photoprism photoprism reset`            |                   
+| *Backup Database*                  | `docker exec -ti photoprism photoprism backup -a -i`     |                      
+| *Restore Database*                 | `docker exec -ti photoprism photoprism restore -a -i`    |                   
+| *Change Admin Password*            | `docker exec -ti photoprism photoprism passwd`           | 
+| *Show User Management Commands*    | `docker exec -ti photoprism photoprism users help`  |
 | *Show Facial Recognition Commands* | `docker exec -ti photoprism photoprism faces help`  |
-| *Index Faces*                    | `docker exec -ti photoprism photoprism faces index`      |
-| *Reset People & Faces*           | `docker exec -ti photoprism photoprism faces reset -f`   |
-| *Transcode Videos to AVC*        | `docker exec -ti photoprism photoprism convert`          |
-| *Regenerate Thumbnails*          | `docker exec -ti photoprism photoprism thumbs -f`        |
-| *Update Index*                   | `docker exec -ti photoprism photoprism index --cleanup`  |                  
-| *Import Files*                   | `docker exec -ti photoprism photoprism import [path]`    |
+| *Index Faces*                      | `docker exec -ti photoprism photoprism faces index`      |
+| *Reset People & Faces*             | `docker exec -ti photoprism photoprism faces reset -f`   |
+| *Transcode Videos to AVC*          | `docker exec -ti photoprism photoprism convert`          |
+| *Regenerate Thumbnails*            | `docker exec -ti photoprism photoprism thumbs -f`        |
+| *Update Index*                     | `docker exec -ti photoprism photoprism index --cleanup`  |                  
+| *Import Files*                     | `docker exec -ti photoprism photoprism import [path]`    |
 
 !!! info "Complete Rescan"
     `docker exec -ti photoprism photoprism index -f` rescans all originals, including already indexed and unchanged files.

@@ -145,9 +145,8 @@ at least 4 GB of swap space.
 We recommend disabling Linux kernel security on private servers, especially if you do not have experience with the
 configuration.
 
-!!! info ""
-    If you have working configuration rules for a particular Linux distribution, feel free to share instructions
-    with the community so that less experienced users can harden their installation without running into issues.
+If you have working configuration rules for a particular Linux distribution, feel free to share instructions
+with the community so that less experienced users can harden their installation without running into issues.
 
 ### File Permissions ###
 
@@ -159,7 +158,16 @@ Errors such as "read-only file system", "error creating path", or "wrong permiss
 - [ ] If [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) are mounted or used within *storage* folders, replace them with actual paths
 - [ ] When mounting folders that only root has access to, you may have to prefix the `docker` and `docker-compose` commands with `sudo` on Linux if you are not already logged in as root
 
-*Start a full rescan if necessary, for example, if it looks like [thumbnails](index.md#broken-thumbnails) or [pictures are missing](index.md#missing-pictures).*
+An easy way to test for missing permissions is to (temporarily) remove restrictions and make the entire folder accessible to everyone:
+
+```bash
+sudo chmod -R a+rwx [folder]
+```
+*Start a full rescan once all issues have been resolved, especially if it looks like [thumbnails](index.md#broken-thumbnails) or [pictures are missing](index.md#missing-pictures).*
+
+!!! danger ""
+    **Be very careful when changing permissions in shared hosting environments.** If you are using PhotoPrism on corporate
+    or university servers, we recommend that you ask your IT help desk for advice.
 
 ### Disk Space ###
 

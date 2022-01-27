@@ -203,13 +203,13 @@
     [common endpoints](https://raw.githubusercontent.com/photoprism/photoprism/develop/internal/remote/heuristic.go).
     Only when that fails, you'll see an error. There may be different reasons for this:
 
-    - You're using HTTPS with an invalid certificate (not signed, outdated, domain doesn't match,...).
-    - Your server has permission issues, or an otherwise bad configuration. For example, Nextcloud blocks requests
-    if the host doesn't match `trusted_domains` in its `config.php`.
-    - The IP is not reachable from your PhotoPrism instance due to network settings, or a firewall.
-    - The internal hostname can not be resolved to an IP address.
-    - It's the wrong host or port.
-    - Username or password are wrong.
+    - you are using HTTPS with an invalid certificate (not signed, outdated, domain doesn't match,...)
+    - your server has permission issues, or an otherwise bad configuration. For example, Nextcloud blocks requests
+    if the host doesn't match `trusted_domains` in its `config.php`
+    - the IP is not reachable from your PhotoPrism instance due to network settings, or a firewall
+    - the internal hostname can not be resolved to an IP address
+    - it's the wrong host or port
+    - username or password are wrong
 
     [Curl](https://curl.se/) is an excellent tool for
     [testing HTTP connections](https://code.blogs.iiidefix.net/posts/webdav-with-curl/) if you don't mind using a terminal:

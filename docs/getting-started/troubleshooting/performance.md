@@ -43,7 +43,7 @@ Ideally, the amount of RAM should match the number of physical CPU cores. If not
 as [explained below](#troubleshooting).
 
 Especially the conversion of RAW images and the transcoding of videos are very demanding. High-resolution panoramic
-images may require [additional swap space](docker.md#adding-swap) and/or physical memory above the recommended minimum.
+images may require [additional swap space](docker.md#adding-swap) and/or physical memory above the [recommended minimum](../index.md#system-requirements).
 
 !!! note ""
     RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory. We take no responsibility

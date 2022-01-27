@@ -33,9 +33,9 @@ to determine the cause of your problem. If this doesn't help, or you have other 
 In addition, [sponsors](../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
 
 We'll do our best to answer all your questions. In return, we ask you to [back us](../funding.md) on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism).
-Think of "free software" as in "free speech," not as in "free beer". Thank you! 💜
+Think of "free software" as in "free speech," not as in "free beer". Thank you!
 
-!!! example ""
-    **We kindly ask you not to report bugs via GitHub Issues unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.**
+!!! info ""
+    We kindly ask you not to report bugs via *GitHub Issues* unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.
     [Contact us](https://photoprism.app/contact) or [a community member](https://github.com/photoprism/photoprism/discussions)
     if you need help, it could be a local configuration problem, or a misunderstanding in how the software works.

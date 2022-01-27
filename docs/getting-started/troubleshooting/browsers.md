@@ -30,6 +30,8 @@ If possible, please also include the error type, error message, and URL of the a
 browser console for warnings and errors as described below. It is perfectly fine to take screenshots
 instead of writing down the details.
 
+*In case you don't see any log messages, try reloading the page, as the problem may occur while the page is loading.*
+
 === "Chrome, Chromium, and Edge"
    
     - press ⌘+Option+J (Mac) or Ctrl+Shift+J (Windows, Linux, Chrome OS) to go directly to the Developer Tools
@@ -52,8 +54,9 @@ instead of writing down the details.
     - press Option+⌘+C to go directly to the *Javascript Console*
     - or, navigate to *Develop* > *Show Javascript Console* in the browser menu
 
-!!! tldr ""
-    In case you don't see any log messages, try reloading the page, as the problem may occur while the page is loading.
+!!! info ""
+    We kindly ask you not to report bugs via *GitHub Issues* unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.
+    [Ask for technical support](../../user-guide/index.md#getting-support) if you need help, it could be a local
+    configuration problem, or a misunderstanding in how the software works.
 
-*[UI]: User Interface
 *[URL]: Web Address

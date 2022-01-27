@@ -208,6 +208,11 @@ If videos do not play and/or you only see a white/black area when you open a vid
 We recommend that you check your [Docker Logs](docker.md#viewing-logs) and [the browser console](browsers.md#getting-error-details)
 for messages related to *HTTP requests*, *permissions*, *security*, *FFmpeg*, *videos*, and *file conversion*.
 
+!!! info ""
+    We kindly ask you not to report bugs via *GitHub Issues* unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.
+    [Ask for technical support](../../user-guide/index.md#getting-support) if you need help, it could be a local
+    configuration problem, or a misunderstanding in how the software works.
+
 *[AVC]: MPEG-4 / H.264
 *[CDN]: Content Delivery Network
 *[VPN]: Virtual Private Network
@@ -216,7 +221,6 @@ for messages related to *HTTP requests*, *permissions*, *security*, *FFmpeg*, *v
 *[HTTP]: Hypertext Transfer Protocol
 *[SSD]: Solid-State Drive
 *[RAW]: image format that contains unprocessed sensor data
-*[UI]: User Interface
 *[URL]: Web Address
 *[FFmpeg]: transcodes video files
 *[SQLite]: self-contained, serverless SQL database

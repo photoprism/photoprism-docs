@@ -3,7 +3,7 @@
 !!! info ""
     You are welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
     [Sponsors](../../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
-    Before [submitting a support request](../../user-guide/index.md#getting-support), try to determine the cause of your problem.
+    Before [submitting a support request](../../user-guide/index.md#getting-support), try to [determine the cause of your problem](index.md).
 
 ### Installation ###
 
@@ -182,6 +182,11 @@ in the Docker, Kubernetes, or Virtual Machine configuration (remove or increase 
 - for details, refer to the corresponding documentation
 
 *Start a full rescan if necessary, for example, if it looks like [thumbnails](index.md#broken-thumbnails) or [pictures are missing](index.md#missing-pictures).*
+
+!!! info ""
+    We kindly ask you not to report bugs via *GitHub Issues* unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.
+    [Ask for technical support](../../user-guide/index.md#getting-support) if you need help, it could be a local
+    configuration problem, or a misunderstanding in how the software works.
 
 *[home directory]: \user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux
 *[host]: Computer, Cloud Server, or VM that runs Docker

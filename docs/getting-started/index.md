@@ -45,40 +45,35 @@ Having said that, funding really has the highest impact. So users can do their p
 
 ## System Requirements ##
 
-We recommend hosting PhotoPrism on a server with **at least 2 cores** and **3 GB of physical memory**.
-Beyond these minimum requirements, the amount of RAM should match the number of cores.
+We recommend hosting PhotoPrism on a server with **at least 2 cores**, **3 GB of physical memory**, and
+a 64-bit operating system. Beyond these minimum requirements, the amount of RAM should match the
+number of cores. RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory.
 
-If less than [4 GB of swap space](troubleshooting/docker.md#adding-swap) is configured or a manual
-memory/swap limit is set, this can cause unexpected restarts, especially if the indexer temporarily
+If your server has [less than 4 GB of swap space](troubleshooting/docker.md#adding-swap) or a manual
+memory/swap limit is set, this can cause unexpected restarts, for example, when the indexer temporarily
 needs more memory to process large files.
 
 !!! note ""
     Indexing large photo and video collections significantly benefits from [local SSD storage](troubleshooting/performance.md#storage),
-    and plenty of memory for caching. Especially the conversion of RAW images and the transcoding of
-    videos are very demanding.
-
-!!! info ""
-    RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory.
-    If you're running out of memory - or other system resources - while indexing, try reducing the
-    [number of workers](https://docs.photoprism.app/getting-started/config-options/)
-    to a reasonably small value in `docker-compose.yml` (depending on the performance of the server).
-    As a measure of last resort, you may disable using TensorFlow for image classification and facial recognition.
+    and plenty of memory for caching. Especially the conversion of RAW images and the transcoding of videos are very demanding.
+    We take no responsibility for instability or performance issues if your device does not meet the minimum requirements.
 
 #### Browsers ####
 
-Our Web UI works with most modern browsers, and runs best on [Chrome](https://www.google.com/chrome/), [Chromium](https://www.chromium.org/getting-involved/download-chromium), [Safari](https://www.apple.com/safari/), [Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release), and [Edge](https://www.microsoft.com/en-us/edge).
+Our [Progressive Web App](../user-guide/pwa.md) (PWA) works with most modern browsers, and runs best on [Chrome](https://www.google.com/chrome/), [Chromium](https://www.chromium.org/getting-involved/download-chromium), [Safari](https://www.apple.com/safari/), [Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release), and [Edge](https://www.microsoft.com/en-us/edge).
+You can conveniently install it on the home screen of all major operating systems and mobile devices.
+
 Opera and Samsung Internet have been reported to be compatible as well.
-Note that not [all video formats](https://caniuse.com/?search=video%20format) can be [played with every browser](https://github.com/photoprism/photoprism/issues/707).
+Note that not [all video formats](https://caniuse.com/?search=video%20format) can be [played with every browser](troubleshooting/browsers.md).
 
 #### Databases ####
 
 The backend is compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB 10.5.12+](https://mariadb.org/).
-Official support for MySQL is discontinued as Oracle seems to have stopped shipping [new features and improvements](https://github.com/photoprism/photoprism/issues/1764). As a result, the testing effort required before each release is no longer feasible.
+Official support for MySQL 8 is discontinued as Oracle seems to have stopped shipping [new features and improvements](https://github.com/photoprism/photoprism/issues/1764). As a result, the testing effort required before each release is no longer feasible.
 
 #### HTTPS ####
 
-If you install PhotoPrism on a public server outside your home network, please always run it behind 
-a secure HTTPS reverse proxy such as [Traefik](proxies/traefik.md) or [Caddy](proxies/caddy-2.md).
+If you install PhotoPrism on a public server outside your home network, please **always run it behind a secure HTTPS reverse proxy** such as [Traefik](proxies/traefik.md) or [Caddy](proxies/caddy-2.md).
 Your files and passwords will otherwise be transmitted in clear text and can be intercepted by anyone, 
 including your provider, hackers, and governments. Backup tools and file sync apps like [FolderSync](https://www.tacit.dk/foldersync/faq/#i-can-not-connect-to-a-non-https-webdav-server-why) 
 may refuse to connect as well.
@@ -101,5 +96,3 @@ Think of "free software" as in "free speech," not as in "free beer". Thank you! 
     **We kindly ask you not to report bugs via GitHub Issues unless you are certain to have found a new issue that must be fixed directly in the app.**
     [Contact us](https://photoprism.app/contact) or [a community member](https://github.com/photoprism/photoprism/discussions)
     if you need help, it could be a local configuration problem, or a misunderstanding in how the software works.
-
-*[Web UI]: A Progressive Web App that can be installed on your home screen and provides a native app-like experience

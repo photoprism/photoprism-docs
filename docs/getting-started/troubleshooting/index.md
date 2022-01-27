@@ -73,7 +73,7 @@ docker-compose up
 
 ### MySQL Errors ###
 
-↪ [Official support for MySQL is discontinued](../index.md#databases)
+↪ [Official support for MySQL 8 is discontinued](../index.md#databases)
 
 ### Bad Performance ###
 

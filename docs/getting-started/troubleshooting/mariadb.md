@@ -132,7 +132,7 @@ docker-compose exec -T mariadb mysql -uroot -pinsecure photoprism
 
 #### MySQL Errors ####
 
-Official [support for MySQL is discontinued](../index.md#databases) as Oracle seems to have stopped shipping [new features and improvements](https://github.com/photoprism/photoprism/issues/1764).
+Official [support for MySQL 8 is discontinued](../index.md#databases) as Oracle seems to have stopped shipping [new features and improvements](https://github.com/photoprism/photoprism/issues/1764).
 As a result, the testing effort required before each release is no longer feasible.
 
 *[SQLite]: self-contained, serverless SQL database

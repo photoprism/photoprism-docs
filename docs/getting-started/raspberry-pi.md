@@ -15,7 +15,7 @@ available at [dl.photoprism.app/docker](https://dl.photoprism.app/docker/).
 
 - Your device should have at least 3 GB of physical memory and a 64-bit operating system.
 - While PhotoPrism has been reported to work on devices with less memory, we take no responsibility for instability or performance issues. RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory.
-- If less than [4 GB of swap space](troubleshooting/docker.md#adding-swap) is configured or a manual memory/swap limit is set, this can cause unexpected restarts, especially if the indexer temporarily needs more memory to process large files.
+- If less than [4 GB of swap space](troubleshooting/docker.md#adding-swap) is configured or a manual memory/swap limit is set, this can cause unexpected restarts, for example, when the indexer temporarily needs more memory to process large files.
 - We recommend disabling [kernel security](troubleshooting/docker.md#kernel-security) in your 
   [docker-compose.yml](https://dl.photoprism.app/docker/arm64/docker-compose.yml), especially if you do 
   not have experience with the configuration:
@@ -34,12 +34,6 @@ available at [dl.photoprism.app/docker](https://dl.photoprism.app/docker/).
     Indexing large photo and video collections significantly benefits from [local SSD storage](troubleshooting/performance.md#storage)
     and plenty of memory for caching. Especially the conversion of RAW images and the transcoding of
     videos are very demanding.
-
-!!! info ""
-    If your server runs out of memory, the index is frequently locked, or other system resources are running low
-    while indexing, you should [try reducing the number of workers](config-options.md#index-workers)
-    by setting `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml` (depending on the performance
-    of the server). As a measure of last resort, you may [disable using TensorFlow](config-options.md#feature-flags) for image classification and facial recognition.
 
 ### Architecture Specific Notes ###
 

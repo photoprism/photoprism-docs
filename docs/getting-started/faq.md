@@ -163,7 +163,7 @@ compromising performance and usability.
 ### Should I use SQLite, MariaDB, or MySQL? ###
 
 PhotoPrism is compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB 10.5.12+](https://mariadb.org/).
-Official support for MySQL is discontinued as Oracle seems to have stopped shipping [new features and improvements](https://github.com/photoprism/photoprism/issues/1764).
+Official support for MySQL 8 is discontinued as Oracle seems to have stopped shipping [new features and improvements](https://github.com/photoprism/photoprism/issues/1764).
 As a result, the testing effort required before each release is no longer feasible.
 
 If you have few pictures, concurrent users, and CPU cores, [SQLite](https://www.sqlite.org/)

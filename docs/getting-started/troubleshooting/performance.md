@@ -36,6 +36,16 @@ big enough or can't be used.
 
 Never store database files on an unreliable device such as a USB flash drive, an SD card, or a shared network folder.
 
+## Memory ##
+
+Indexing large photo and video collections benefits from plenty of memory for caching and processing large media files.
+Especially the conversion of RAW images and the transcoding of videos are very demanding.
+
+Ideally, the amount of RAM should match the number of CPU cores. If not, reduce the number of workers as [explained below](#troubleshooting).
+
+RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory.
+We take no responsibility for instability or performance issues if your device does not meet the minimum requirements.
+
 ## Server CPU ##
 
 Last but not least, performance can be limited by your server CPU. While [NAS devices](https://kb.synology.com/en-us/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have)

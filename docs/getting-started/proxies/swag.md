@@ -1,15 +1,20 @@
 # Using SWAG as Reverse Proxy
 
-*Note: This is contributed content.*
+*Note: This is contributed content and may be outdated. Click the edit link to perform changes and send a pull request.*
 
-To make the setup of a Reverse Proxy much easier, Linuxserver.io developed [SWAG](https://github.com/linuxserver/docker-swag)  
-SWAG - Secure Web Application Gateway (formerly known as letsencrypt, no relation to Let's Encrypt™) sets up an Nginx web server and reverse proxy with PHP support and a built-in certbot client that automates free SSL server certificate generation and renewal processes (Let's Encrypt and ZeroSSL). It also contains fail2ban for intrusion prevention.
+To simplify the setup of a reverse HTTPS proxy, Linuxserver.io developed [SWAG](https://github.com/linuxserver/docker-swag).
 
-## Step 1: Get a domain
+SWAG - Secure Web Application Gateway (formerly known as *letsencrypt*, no relation to Let's Encrypt™) sets up a Nginx
+web server and reverse proxy with PHP support and a built-in certbot client that automates free SSL server certificate
+generation and renewal processes (Let's Encrypt and ZeroSSL). It also contains fail2ban for intrusion prevention.
+
+## Setup ##
+
+### Step 1: Get a domain ###
 
 The first step is to grab a dynamic DNS if you don't have your own subdomain already. You can get this from for example [DuckDNS](https://www.duckdns.org).
 
-## Step 2: Set-up SWAG
+### Step 2: Set-up SWAG ###
 
 Then you will need to set up SWAG, the variables of the docker-compose are explained on the Github page of [SWAG](https://github.com/linuxserver/docker-swag).
 This is an example of how to set it up using duckdns and docker-compose. 
@@ -46,7 +51,7 @@ This is an example of how to set it up using duckdns and docker-compose.
 
 Don't forget to change the <code>mydomain.duckns</code> into your personal domain and the <code>duckdnstoken</code> into your token and remove the brackets.
 
-## Step 3: Change the config files
+### Step 3: Change the config files ###
 
 Navigate to the config folder of SWAG and head to <code>proxy-confs</code>. If you used the example above, you should navigate to: <code>/etc/config/swag/nginx/proxy-confs/ </code>.
 There are a lot of preconfigured files to use for different apps such as radarr,sonarr,overseerr,... 
@@ -78,11 +83,11 @@ Alternatively, you can create a new file <code>photoprism.subdomain.conf</code> 
 	}	
     ```
 
-## Step 4: Port-forward port 443
+### Step 4: Port-forward port 443 ###
 
 Since SWAG allows you to set up a secure connection, you will need to open port 443 on your router for encrypted traffic. This is way more secure than port 80 for http.
 
-## Step 5: Restart SWAG
+### Step 5: Restart SWAG ##
 
 When you change anything in the config of Nginx, you will need to restart the container using <code>docker restart swag</code>.
 If everything went well, you can now access photoprism on the subdomain you configured: photoprism.mydomain.duckdns.org
@@ -94,8 +99,9 @@ If everything went well, you can now access photoprism on the subdomain you conf
     <b>Keep in mind to not have two photoprism containers with the same name!</b> 
     You could also change the config file of Swag with the right name in the proxy-confs directory.
 
-!!! tldr "Why use a reverse proxy?"
-	If you install PhotoPrism on a public server outside your home network, please always run it behind a secure
-	HTTPS reverse proxy. Your files and passwords will otherwise be transmitted in clear text and can be intercepted
-	by anyone, including your provider, hackers, and governments. Backup tools and file sync apps may refuse to
-	connect as well.
+## Why use a reverse proxy? ##
+
+If you install PhotoPrism on a public server outside your home network, please always run it behind a secure
+HTTPS reverse proxy. Your files and passwords will otherwise be transmitted in clear text and can be intercepted
+by anyone, including your provider, hackers, and governments. Backup tools and file sync apps may refuse to
+connect as well.

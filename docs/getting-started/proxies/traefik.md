@@ -64,8 +64,9 @@ documented in [Setup Using Docker Compose](../docker-compose.md):
 Please refer to the [official documentation](https://doc.traefik.io/traefik/user-guides/docker-compose/basic-example/)
 for further details.
 
-!!! tldr "Why use a reverse proxy?"
-    If you install PhotoPrism on a public server outside your home network, please always run it behind a secure
-    HTTPS reverse proxy. Your files and passwords will otherwise be transmitted in clear text and can be intercepted
-    by anyone, including your provider, hackers, and governments. Backup tools and file sync apps may refuse to
-    connect as well.
+### Why use a reverse proxy? ###
+
+If you install PhotoPrism on a public server outside your home network, please always run it behind a secure
+HTTPS reverse proxy. Your files and passwords will otherwise be transmitted in clear text and can be intercepted
+by anyone, including your provider, hackers, and governments. Backup tools and file sync apps may refuse to
+connect as well.

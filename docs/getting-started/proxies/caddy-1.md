@@ -15,8 +15,9 @@ For PhotoPrism to work properly, you need to enable websockets and transparent p
 Please refer to the [official documentation](https://caddyserver.com/v1/docs/websocket)
 for further details.
 
-!!! tldr "Why use a reverse proxy?"
-    If you install PhotoPrism on a public server outside your home network, please always run it behind a secure
-    HTTPS reverse proxy. Your files and passwords will otherwise be transmitted in clear text and can be intercepted
-    by anyone, including your provider, hackers, and governments. Backup tools and file sync apps may refuse to
-    connect as well.
+### Why use a reverse proxy? ###
+
+If you install PhotoPrism on a public server outside your home network, please always run it behind a secure
+HTTPS reverse proxy. Your files and passwords will otherwise be transmitted in clear text and can be intercepted
+by anyone, including your provider, hackers, and governments. Backup tools and file sync apps may refuse to
+connect as well.

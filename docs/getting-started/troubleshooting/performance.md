@@ -45,7 +45,7 @@ Ideally, the amount of RAM should match the number of physical CPU cores. If not
 as [explained below](#troubleshooting).
 
 RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory.
-We take no responsibility for instability or performance issues if your device does not meet the minimum requirements.
+We take no responsibility for instability or performance problems if your device does not meet the minimum requirements.
 
 ## Server CPU ##
 

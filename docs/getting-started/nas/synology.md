@@ -9,7 +9,7 @@ You will have to resort to [32-bit Docker images](../raspberry-pi.md#older-armv7
 PhotoPrism and MariaDB on ARMv7-based entry-level devices like the Synology DS218j.
 
 !!! tldr ""
-    We take no responsibility for instability or performance issues if your NAS does not meet the minimum requirements.
+    We take no responsibility for instability or performance problems if your NAS does not meet the minimum requirements.
     RAW image conversion and TensorFlow are disabled on devices with 1 GB or less memory.
 
 ## Setup using Docker ##

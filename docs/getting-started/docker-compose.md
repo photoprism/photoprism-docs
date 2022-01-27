@@ -5,11 +5,6 @@ to configure all application services so you can easily start them with a single
 Before you proceed, make sure you have [Docker](https://store.docker.com/search?type=edition&offering=community)
 installed on your system. It is available for Mac, Linux, and Windows.
 
-!!! info ""
-    You are welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
-    [Sponsors](../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
-    Before submitting a support request, try to [determine the cause of your problem](troubleshooting/index.md).
-
 ### Step 1: Configure ###
 
 === "Linux"
@@ -237,6 +232,11 @@ If your server runs out of memory, the index is frequently locked, or other syst
 - [ ] As a last measure, you can [disable the use of TensorFlow](config-options.md#feature-flags) for image classification and facial recognition
 
 Other issues? Our [troubleshooting checklists](troubleshooting/index.md) help you quickly diagnose and solve them.
+
+!!! info ""
+    You are welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
+    [Sponsors](../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
+    Before submitting a support request, try to [determine the cause of your problem](troubleshooting/index.md).
 
 ### Command-Line Interface ###
 

@@ -81,10 +81,10 @@ a standard 64-bit Linux distribution to run modern server applications, for exam
 You have to resort to alternative Docker images to run PhotoPrism and MariaDB on ARMv7-based devices
 and those with a 32-bit operating system:
 
-| Image             | Name                                |
-|-------------------|-------------------------------------|
-| ARMv7 Release     | `photoprism/photoprism:armv7`       | 
-| MariaDB           | `linuxserver/mariadb:latest`        | 
+| Image      | Name                                |
+|------------|-------------------------------------|
+| PhotoPrism | `photoprism/photoprism:armv7`       | 
+| MariaDB    | `linuxserver/mariadb:latest`        | 
 
 If your device meets the [requirements](#system-requirements), mostly the same installation instructions as 
 for regular Linux servers apply. Pay close attention to changed directory and environment variable names.

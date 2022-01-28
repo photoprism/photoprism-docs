@@ -72,7 +72,7 @@ The smallest configurable static and dynamic size limit is 720px, so all formats
 by default while indexing.
 
 Higher settings allow PhotoPrism to generate thumbnails with more detail in higher resolutions - either 
-*statically* (pre-generated) or *dynamically* (on-demand).
+*statically* (while indexing) or *dynamically* (on-demand).
 
  Name       | Width | Height | Common Use               |
 :-----------|:-----:|:------:|:-------------------------|

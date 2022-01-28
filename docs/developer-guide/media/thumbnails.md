@@ -20,6 +20,7 @@ Avoiding cookies helps minimize request latency by eliminating unnecessary netwo
 - one potential use of cookies can be to prevent the user from intentionally or accidentally sharing cryptic thumbnail URLs with others
 - however, this is possible with most real-world image hosting services and could also be considered a feature if you only want to share specific thumbnails without bells and whistles
 - once images have been spread on the Internet, blocking the original URL provides little additional security
+- nonetheless, this can be done by simply [changing the security token](../../getting-started/config-options.md#url-tokens)
 
 Another advantage - in addition to better performance - is that users can easily integrate a content
 delivery network (CDN), as there are no secret key to share and no cookies to check.

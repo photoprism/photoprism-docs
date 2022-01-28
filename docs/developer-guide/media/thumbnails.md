@@ -23,7 +23,7 @@ Avoiding cookies helps minimize request latency by eliminating unnecessary netwo
 - nonetheless, this can be done by simply [changing the security token](../../getting-started/config-options.md#url-tokens)
 
 Another advantage - in addition to better performance - is that users can easily integrate a content
-delivery network (CDN), as there are no secret key to share and no cookies to check.
+delivery network (CDN), as there are no secret keys to share and no cookies to check.
 
 Because most users have only one domain/host name and modern Web apps can store authentication tokens in *localStorage*
 instead, PhotoPrism does not use any cookies by default.

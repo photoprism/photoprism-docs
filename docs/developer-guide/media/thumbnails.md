@@ -92,7 +92,7 @@ Higher settings allow PhotoPrism to generate thumbnails with more detail in high
 `fit_4096`  | 4096  |  4096  | Ultra HD, Retina 4K      |
 `fit_7680`  | 7680  |  4320  | 8K Ultra HD 2, Retina 6K |
 
-See [`internal/thumb/types.go`](https://github.com/photoprism/photoprism/blob/master/internal/thumb/types.go) for details.
+See [`/internal/thumb/sizes.go`](https://github.com/photoprism/photoprism/blob/develop/internal/thumb/sizes.go) for details.
 
 ## Storage Folders ##
 

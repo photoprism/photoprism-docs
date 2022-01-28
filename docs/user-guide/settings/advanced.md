@@ -73,8 +73,7 @@ The equivalent [config toggle](../../getting-started/config-options.md) is `PHOT
 
 ## Images
 
-This section controls how original files are converted to
-JPEG for use as thumbnails and image previews.
+This section controls how original files are converted to JPEG for use as thumbnails and image previews.
 
 ### Downscaling Filter
 

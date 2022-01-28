@@ -16,7 +16,7 @@ image classification. See [Advanced Settings](../../user-guide/settings/advanced
 Avoiding cookies helps minimize request latency by eliminating unnecessary network traffic:
 
 - when a browser requests static files such as images from a server via HTTPS, it is generally needless to send a
-  cookie along with each request if the URLs cannot be guessed realistically - that is, for most practical use cases
+  cookie along with each request if the URLs cannot be guessed, so for most practical use cases
 - one potential use of cookies can be to prevent the user from intentionally or accidentally sharing cryptic thumbnail URLs with others
 - however, this is possible with most real-world image hosting services and could also be considered a feature if you only want to share specific thumbnails without bells and whistles
 - once images have been spread on the Internet, blocking the original URL provides little additional security

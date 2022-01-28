@@ -4,8 +4,8 @@ PhotoPrism uses the [disintegration/imaging](https://github.com/disintegration/i
 images that are displayed in search results and in the full-screen viewer.
 
 The smallest configurable size is 720 pixels for use by the indexer to perform color detection, face detection,
-and image classification. For more details, see the [Advanced Settings](../../user-guide/settings/advanced.md)
-documentation in the [User Guide](../../user-guide/index.md).
+and image classification. For more details, see [Advanced Settings](../../user-guide/settings/advanced.md)
+in the [User Guide](../../user-guide/index.md).
 
 ## API Design ##
 

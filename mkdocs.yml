@@ -162,8 +162,7 @@ nav:
       - Contact: contact.md
       - License:
           - GNU AGPL: license/agpl.md
-          - Digital Assets: license/assets.md
-          - Documentation: license/documentation.md
+          - Documentation: license/docs.md
 
 extra_css:
   - css/custom.css

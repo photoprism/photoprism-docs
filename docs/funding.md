@@ -1,4 +1,4 @@
-# Help Us Make a Difference
+# PhotoPrism® Needs Your Support
 
 **We value freedom and privacy.** Serving free beer[^1] doesn't bring us closer to our vision 
 and doesn't get you better software.

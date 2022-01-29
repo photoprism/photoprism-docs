@@ -23,7 +23,7 @@ We encourage everyone who can afford it to become a sponsor as this is ultimatel
 and the community.
 
 <div style="text-align: center">
-    <img src="/img/thank-you-colorful-1500x260.png" width="64%" alt="THANK YOU"/>
+    <img src="https://art.photoprism.app/thank-you-750x312.jpg" width="100%" alt="THANK YOU"/>
 </div>
 
 [^1]: Think of “free software” as in “free speech,” not as in “free beer.” We sometimes call it “libre software,” borrowing the French or Spanish word for “free” as in freedom, to show we do not mean the software is gratis. (https://www.gnu.org/philosophy/free-sw.en.html)

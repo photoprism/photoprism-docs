@@ -119,6 +119,7 @@ nav:
     - Running Tests: developer-guide/tests.md
     - Documentation: developer-guide/documentation.md
     - Translations: developer-guide/translations.md
+    - Security Policy: security-policy.md
     - User Interface:
       - Introduction: developer-guide/ui/introduction.md
       - Screenshots: developer-guide/ui/screenshots.md
@@ -159,7 +160,6 @@ nav:
       - Funding: funding.md
       - Credits: credits.md
       - Contact: contact.md
-      - Security Policy: security-policy.md
       - License:
           - GNU AGPL: license/agpl.md
           - Documentation: license/docs.md

@@ -22,9 +22,7 @@ will be prioritized on the [roadmap](https://github.com/photoprism/photoprism/pr
 We encourage everyone who can afford it to become a sponsor as this is ultimately best for the product
 and the community.
 
-<div style="text-align: center">
-    <img src="https://art.photoprism.app/thank-you-750x312.jpg" width="100%" alt="THANK YOU"/>
-</div>
+<img src="https://art.photoprism.app/thank-you-750x312.jpg" width="100%" alt="THANK YOU"/>
 
 [^1]: Think of “free software” as in “free speech,” not as in “free beer.” We sometimes call it “libre software,” borrowing the French or Spanish word for “free” as in freedom, to show we do not mean the software is gratis. (https://www.gnu.org/philosophy/free-sw.en.html)
 

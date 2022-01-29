@@ -63,16 +63,16 @@ Questions?
 * if you never used Go before and would like to learn it, you are welcome to [reach out](mailto:hello@photoprism.app). We might start organizing regular learning sessions for beginners in Berlin.
 * this guide was not tested on Windows, you might need to change docker-compose.yml to make it work with Windows specific paths.
 
-## Apple M1 and Raspberry Pi ##
+## Apple Silicon, Raspberry Pi, and ARM64 ##
 
 Our development environment has been built into a single [multi-arch image](https://hub.docker.com/r/photoprism/development) for 64-bit AMD, Intel, and ARM processors.
-That means, Apple M1 and [Raspberry Pi](../getting-started/raspberry-pi.md) 3 / 4 owners can 
+That means, Apple Silicon, [Raspberry Pi](../getting-started/raspberry-pi.md) 3 / 4, and other ARM64-based devices can 
 pull from the same repository.
 
-## Building multi-arch images ##
+## Multi-Arch Builds ##
 
 This works out of the box with *Docker Desktop*. Just run `make docker-development-multiarch`. If you want to build those images for different architectures on Linux, 
-you need to setup `docker buildx` builder instances or setup QEMU on your machine which shall run your builds. 
+you need to set up `docker buildx` builder instances or setup QEMU on your machine which shall run your builds. 
 More info can be found in the docker docs: [Docker Buildx](https://docs.docker.com/buildx/working-with-buildx/), [Leverage multi-CPU architecture support](https://docs.docker.com/desktop/multi-arch/)
 
 ### QEMU Quick Start ###

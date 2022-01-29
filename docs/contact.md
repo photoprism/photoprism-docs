@@ -58,7 +58,7 @@ When referring to PhotoPrism, make sure that it is spelled correctly:
 * the name has two capital letters, so Photoprism is not a correct spelling
 * PhotoPrism is one word and must not be separated into two words
 
-Our [Trademark and Brand Guidelines](https://photoprism.app/trademark), which may be updated from time to time,
+Our [trademark and brand guidelines](https://photoprism.app/trademark), which may be updated from time to time,
 describe how our Brand Assets may be used. It is important to us that any permitted use of our Brand Assets is
 fair and meets the highest standards.
 

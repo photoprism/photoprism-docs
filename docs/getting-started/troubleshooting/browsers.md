@@ -55,7 +55,7 @@ instead of writing down the details.
     - or, navigate to *Develop* > *Show Javascript Console* in the browser menu
 
 !!! info ""
-    We kindly ask you not to report bugs via *GitHub Issues* unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.
+    **We kindly ask you not to report bugs via *GitHub Issues* unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.**
     [Ask for technical support](../../user-guide/index.md#getting-support) if you need help, it could be a local
     configuration problem, or a misunderstanding in how the software works.
 

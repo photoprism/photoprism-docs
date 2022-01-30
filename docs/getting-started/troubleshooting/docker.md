@@ -184,7 +184,7 @@ in the Docker, Kubernetes, or Virtual Machine configuration (remove or increase 
 *Start a full rescan if necessary, for example, if it looks like [thumbnails](index.md#broken-thumbnails) or [pictures are missing](index.md#missing-pictures).*
 
 !!! info ""
-    We kindly ask you not to report bugs via *GitHub Issues* unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.
+    **We kindly ask you not to report bugs via *GitHub Issues* unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.**
     [Ask for technical support](../../user-guide/index.md#getting-support) if you need help, it could be a local
     configuration problem, or a misunderstanding in how the software works.
 

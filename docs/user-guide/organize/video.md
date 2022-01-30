@@ -11,9 +11,9 @@ so that they can be played without causing any problems, even if your browser mi
 
 ## Live Photos ##
 
-Short videos up to 3 seconds are displayed as live photos, independent of your phone's brand and model.
+Short videos up to 3 seconds are categorized and displayed as *Live Photos*, regardless of your phone's make and model.
+You can recognize this by the :material-adjust: icon that appears in the upper left corner.
 
-In this case, the :material-adjust: icon appears in the upper left corner.
 Move the mouse cursor over the thumbnail to play the video without changing the view.
 
 You can limit the search to live photos by using the `type:live` filter or the keyword `live`.

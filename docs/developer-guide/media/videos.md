@@ -14,8 +14,8 @@ ffmpeg -decoders
 Firefox may only play the corresponding AAC audio codec if the operating system supports it, see https://caniuse.com/aac.
 All other browsers shouldn't have any issues.
 
-HEVC video files can have a `.mp4` file extension too, which is typically associated with AVC. This is because MP4 is
-a *container* format or wrapper - the content could be compressed with H.264, H.265, or something else. The file
+HEVC video files can have a `.mp4` file extension too, which is typically associated with AVC. This is because MP4 is a
+*container* format, meaning that the actual video content may be compressed with H.264, H.265, or something else. The file
 extension doesn't really tell you anything other than that it's probably a video file.
 
 !!! info
@@ -30,3 +30,5 @@ extension doesn't really tell you anything other than that it's probably a video
 ## Codecs ##
 
 - https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs
+
+*[HEVC]: H.265 / High Efficiency Video Coding

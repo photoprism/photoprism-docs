@@ -37,7 +37,8 @@ docker-compose exec photoprism photoprism convert
     require a significant amount of extra storage.
 
 !!! tldr ""
-    HEVC video files can have a `.mp4` file extension too, which is typically associated with AVC. This is because
-    MP4 is a *container* format or wrapper - the content could be compressed with H.264, H.265, or something else.
+    HEVC video files can have a `.mp4` file extension too, which is typically associated with AVC. This is because MP4 is a
+    *container* format, meaning that the actual video content may be compressed with H.264, H.265, or something else.
     The file extension doesn't really tell you anything other than that it's probably a video file.
 
+*[HEVC]: H.265 / High Efficiency Video Coding

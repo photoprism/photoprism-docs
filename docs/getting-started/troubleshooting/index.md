@@ -208,8 +208,8 @@ If videos do not play and/or you only see a white/black area when you open a vid
 We recommend that you check your [Docker Logs](docker.md#viewing-logs) and [the browser console](browsers.md#getting-error-details)
 for messages related to *HTTP requests*, *permissions*, *security*, *FFmpeg*, *videos*, and *file conversion*.
 
-HEVC video files can have a `.mp4` file extension too, which is typically associated with AVC. This is because MP4 is
-a *container* format or wrapper - the content could be compressed with H.264, H.265, or something else. The file
+HEVC video files can have a `.mp4` file extension too, which is typically associated with AVC. This is because MP4 is a
+*container* format, meaning that the actual video content may be compressed with H.264, H.265, or something else. The file
 extension doesn't really tell you anything other than that it's probably a video file.
 
 !!! info ""
@@ -227,6 +227,7 @@ extension doesn't really tell you anything other than that it's probably a video
 *[RAW]: image format that contains unprocessed sensor data
 *[URL]: Web Address
 *[FFmpeg]: transcodes video files
+*[HEVC]: H.265 / High Efficiency Video Coding
 *[SQLite]: self-contained, serverless SQL database
 *[NSFW]: Not Safe For Work
 *[swap]: substitute for physical memory

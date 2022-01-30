@@ -25,8 +25,8 @@ You can limit the search to live photos by using the `type:live` filter or the k
 Videos in formats other than AVC are transcoded on demand. This can cause unacceptable delays when large video files
 are played for the first time.
 
-In this case, you may [run this command in a terminal](../../getting-started/docker-compose.md#command-line-interface)
-to pre-transcode all videos in other formats:
+In that case, you may [run the following command in a terminal](../../getting-started/docker-compose.md#command-line-interface)
+to pre-transcode all video originals if needed:
 
 ```
 docker-compose exec photoprism photoprism convert

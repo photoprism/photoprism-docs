@@ -4,18 +4,18 @@ The quality of code has a practical impact on both your agility and the cost of 
 
 You can't change buggy code fast enough to be truly agile. Existing bugs can easily increase development costs (and time) by 10x. You can't afford not to fix them.
 
+## Keep It Simple ##
+
+!!! example ""
+    Simple, elegant solutions are [more effective](issues.md#effectiveness-efficiency), but they are harder to find than complex ones, and they require more
+    time, which we too often believe to be unaffordable. — <cite>Niklaus Wirth, Feb 1985</cite>
+
 ## Caching Is Hard ##
 
 There are only two hard things in Computer Science: [cache invalidation](https://msol.io/blog/tech/youre-probably-wrong-about-caching/) and naming things.
 
 !!! example ""
     A cache is just a memory leak you haven't met yet. — <cite>Dave Cheney</cite>
-
-## Keep It Simple ##
-
-!!! example ""
-    Simple, elegant solutions are [more effective](issues.md#effectiveness-efficiency), but they are harder to find than complex ones, and they require more
-    time, which we too often believe to be unaffordable. — <cite>Niklaus Wirth, Feb 1985</cite>
 
 ## Bottom-Up Development ##
 
@@ -32,6 +32,16 @@ Advantages of the bottom-up approach are component reusability, agility, and tes
     That was because the “top-down” method of program design hadn't been invented yet, and Mel wouldn't have used it anyway. 
     He wrote the innermost parts of his program loops first. — <cite>[The Story of Mel](http://www.catb.org/jargon/html/story-of-mel.html)</cite>
 
+## Avoid Unnecessary Abstractions and Optimizations ##
+
+Don't abstract if you don't have to. Premature optimization causes unnecessary pain and leads to bloated code that fewer developers understand.
+
+Instead, perform test-driven [bottom-up development](#bottom-up-development), so you can [safely refactor](https://martinfowler.com/bliki/DefinitionOfRefactoring.html)
+if and when it makes sense. Maintaining small amounts of duplicate code is much easier and less burdensome than choosing the wrong abstraction.
+
+!!! example ""
+    Premature optimization is the root of all evil. — <cite>Donald Knuth</cite>
+
 ## Opportunistic Refactoring ##
 
 While we know this is difficult when working with a distributed team, branches, and pull requests, we encourage all
@@ -43,16 +53,6 @@ that the changes are helpful in practice.
 !!! example ""
     Ugly code is not a problem as long as there are tests, there are no [security issues](https://photoprism.app/security-policy),
     and it can be easily refactored later. Nobody needs beautiful code that doesn't work.
-
-## Avoid Unnecessary Abstractions and Optimizations ##
-
-Don't abstract if you don't have to. Premature optimization causes unnecessary pain and leads to bloated code that fewer developers understand.
-
-Instead, perform test-driven [bottom-up development](#bottom-up-development), so you can [safely refactor](https://martinfowler.com/bliki/DefinitionOfRefactoring.html)
-if and when it makes sense. Maintaining small amounts of duplicate code is much easier and less burdensome than choosing the wrong abstraction.
-
-!!! example ""
-    Premature optimization is the root of all evil. — <cite>Donald Knuth</cite>
 
 ## Go Slow Before You Go Fast 🐰 ##
 

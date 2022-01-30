@@ -23,17 +23,21 @@ You can limit the search to live photos by using the `type:live` filter or the k
 ## Transcoding ##
 
 Videos in formats other than AVC are transcoded on demand. This can cause unacceptable delays when large video files
-are played for the first time. In this case, we recommend running this command in a terminal to pre-transcode videos:
+are played for the first time.
+
+In this case, you may [run this command in a terminal](../../getting-started/docker-compose.md#command-line-interface)
+to pre-transcode all videos in other formats:
 
 ```
 docker-compose exec photoprism photoprism convert
 ```
 
 !!! note ""
-    Make sure you have enough disk space before you start transcoding all your video files.
+    Make sure that there is enough disk space available on your server before transcoding all video files, as this may
+    require a significant amount of extra storage.
 
 !!! tldr ""
-    Note that HEVC video files can have a `.mp4` file extension too, which is typically associated with AVC. This is because
-    MP4 is a *container* format or wrapper - the content could be compressed with H.264, H.265, or something else. The file
-    extension doesn't really tell you anything other than that it's probably a video file.
+    HEVC video files can have a `.mp4` file extension too, which is typically associated with AVC. This is because
+    MP4 is a *container* format or wrapper - the content could be compressed with H.264, H.265, or something else.
+    The file extension doesn't really tell you anything other than that it's probably a video file.
 

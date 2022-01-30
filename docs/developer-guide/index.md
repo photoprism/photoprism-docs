@@ -48,7 +48,4 @@ Our step-by-step guide explains how to [submit pull requests](pull-requests.md).
 Issues labeled [help wanted](https://github.com/photoprism/photoprism/labels/help%20wanted) /
 [easy](https://github.com/photoprism/photoprism/labels/easy) can be good (first) contributions.
 
-!!! example ""
-    Simple, elegant solutions are [more effective](issues.md#effectiveness-efficiency), but they are harder to find than complex ones, and they require more
-    time, which we too often believe to be unaffordable. — <cite>Niklaus Wirth, Feb 1985</cite>
-
+*Reviewing, testing, and finally merging pull requests requires significant resources on our side. If it's not just a small fix, it can take several months.*

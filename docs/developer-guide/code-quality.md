@@ -4,6 +4,10 @@ The quality of code has a practical impact on both your agility and the cost of 
 
 You can't change buggy code fast enough to be truly agile. Existing bugs can easily increase development costs (and time) by 10x. You can't afford not to fix them.
 
+!!! example ""
+    Simple, elegant solutions are [more effective](issues.md#effectiveness-efficiency), but they are harder to find than complex ones, and they require more
+    time, which we too often believe to be unaffordable. — <cite>Niklaus Wirth, Feb 1985</cite>
+
 ## Caching Is Hard ##
 
 There are only two hard things in Computer Science: [cache invalidation](https://msol.io/blog/tech/youre-probably-wrong-about-caching/) and naming things.

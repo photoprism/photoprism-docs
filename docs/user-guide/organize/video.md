@@ -1,11 +1,10 @@
 # Browsing and Playing Videos
 
 Navigate to *Videos* to browse all your videos. To play a video, click :material-play:.
-
 Videos in MPEG-4 AVC format can be played natively by virtually all modern browsers.
 
 Other video formats are [automatically transcoded](#transcoding) in the background with [FFmpeg](https://www.ffmpeg.org/documentation.html)
-so that they can be played without causing any problems, even if your browser might support the format as well.
+so that they can be played without causing any problems, even if your browser might support the format.
 
 ![Screenshot](img/video-1.png)
 
@@ -15,8 +14,7 @@ Short videos up to 3 seconds are categorized and displayed as *Live Photos*, reg
 You can recognize this by the :material-adjust: icon that appears in the upper left corner.
 
 Move the mouse cursor over the thumbnail to play the video without changing the view.
-
-You can limit the search to live photos by using the `type:live` filter or the keyword `live`.
+You can limit a search to *Live Photos* by using the `type:live` filter or the keyword `live`.
 
 ![Screenshot](img/live-photo.png)
 

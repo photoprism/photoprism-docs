@@ -38,10 +38,9 @@ When reporting a problem, always include the software versions you are using and
 such as [browser, browser plugins](../getting-started/troubleshooting/browsers.md), operating system, storage type,
 memory size, and processor.
 
-!!! example ""
-    **We kindly ask you not to report bugs via GitHub Issues unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.**
-    [Contact us](https://photoprism.app/contact) or [a community member](https://github.com/photoprism/photoprism/discussions)
-    if you need help, it could be a local configuration problem, or a misunderstanding in how the software works.
+**We kindly ask you not to report bugs via GitHub Issues unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.**
+[Contact us](https://photoprism.app/contact) or [a community member](https://github.com/photoprism/photoprism/discussions)
+if you need help, it could be a local configuration problem, or a misunderstanding in how the software works.
 
 ## Submitting Pull Requests ##
 

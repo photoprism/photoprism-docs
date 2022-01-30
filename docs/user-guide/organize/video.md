@@ -4,7 +4,7 @@ Navigate to *Videos* to browse all your videos. To play a video, click :material
 
 Videos in MPEG-4 AVC format can be played natively by virtually all modern browsers.
 
-Other video formats are [automatically transcoded](#video-transcoding) in the background with [FFmpeg](https://www.ffmpeg.org/documentation.html)
+Other video formats are [automatically transcoded](#transcoding) in the background with [FFmpeg](https://www.ffmpeg.org/documentation.html)
 so that they can be played without causing any problems, even if your browser might support the format as well.
 
 ![Screenshot](img/video-1.png)

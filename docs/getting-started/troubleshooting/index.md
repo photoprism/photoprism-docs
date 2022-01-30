@@ -213,7 +213,7 @@ HEVC video files can have a `.mp4` file extension too, which is typically associ
 extension doesn't really tell you anything other than that it's probably a video file.
 
 !!! info ""
-    We kindly ask you not to report bugs via *GitHub Issues* unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.
+    **We kindly ask you not to report bugs via *GitHub Issues* unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.**
     [Ask for technical support](../../user-guide/index.md#getting-support) if you need help, it could be a local
     configuration problem, or a misunderstanding in how the software works.
 

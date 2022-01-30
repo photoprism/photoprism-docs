@@ -39,8 +39,6 @@ such as [browser, browser plugins](../getting-started/troubleshooting/browsers.m
 memory size, and processor.
 
 **We kindly ask you not to report bugs via GitHub Issues unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.**
-[Contact us](https://photoprism.app/contact) or [a community member](https://github.com/photoprism/photoprism/discussions)
-if you need help, it could be a local configuration problem, or a misunderstanding in how the software works.
 
 ## Submitting Pull Requests ##
 
@@ -48,4 +46,4 @@ Our step-by-step guide explains how to [submit pull requests](pull-requests.md).
 Issues labeled [help wanted](https://github.com/photoprism/photoprism/labels/help%20wanted) /
 [easy](https://github.com/photoprism/photoprism/labels/easy) can be good (first) contributions.
 
-*Reviewing, testing, and finally merging pull requests requires significant resources on our side. If it's not just a small fix, it can take several months.*
+**Reviewing, testing, and finally merging pull requests requires significant resources on our side. If it's not just a small fix, it can take several months.**

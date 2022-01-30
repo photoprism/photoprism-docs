@@ -65,4 +65,4 @@ You can also create a pull request if your changes are not yet complete or worki
 it's in progress, so we don't try to merge them. We can help you with a code review or other feedback 
 if needed. Please be patient with us.
 
-*Reviewing, testing, and finally merging pull requests requires significant resources on our side. If it's not just a small fix, it can take several months.*
+**Reviewing, testing, and finally merging pull requests requires significant resources on our side. If it's not just a small fix, it can take several months.**

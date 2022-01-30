@@ -1,26 +1,39 @@
-### Videos ###
-Videos with the MPEG-4 AVC format can be played natively by most modern browsers.
-PhotoPrism uses [*ffmpeg*](https://www.ffmpeg.org/documentation.html) to transcode
-other common video formats to [MPEG-4 AVC](https://en.wikipedia.org/wiki/MPEG-4).
-All video formats, that can be transcoded by ffmpeg are supported.
+# Browsing and Playing Videos
 
-!!! info ""
-    In case you have problems with a specific format, let us know!
+Navigate to *Videos* to browse all your videos. To play a video, click :material-play:.
 
-!!! info ""
-    By default PhotoPrism transcodes videos, when they are first played. This may lead to long loading times for very long or high resolution videos.
-    You can use `docker-compose exec photoprism photoprism convert` to convert videos upfront.
+Videos in MPEG-4 AVC format can be played natively by virtually all modern browsers.
 
-In *Videos* you find all your videos. To play a video click :material-play:.
+Other video formats are [automatically transcoded](#video-transcoding) in the background with [FFmpeg](https://www.ffmpeg.org/documentation.html)
+so that they can be played without causing any problems, even if your browser might support the format as well.
 
 ![Screenshot](img/video-1.png)
 
-### Live Photos ###
-Live photos are treated as photos.
-They are marked with :material-adjust: in the upper left corner.
+## Live Photos ##
 
-You can filter for them using `type:live`.
+Short videos up to 3 seconds are displayed as live photos, independent of your phone's brand and model.
+
+In this case, the :material-adjust: icon appears in the upper left corner.
+Move the mouse cursor over the thumbnail to play the video without changing the view.
+
+You can limit the search to live photos by using the `type:live` filter or the keyword `live`.
 
 ![Screenshot](img/live-photo.png)
 
-To play a live photo just hover over it.
+## Transcoding ##
+
+Videos in formats other than AVC are transcoded on demand. This can cause unacceptable delays when large video files
+are played for the first time. In this case, we recommend running this command in a terminal to pre-transcode videos:
+
+```
+docker-compose exec photoprism photoprism convert
+```
+
+!!! note ""
+    Make sure you have enough disk space before you start transcoding all your video files.
+
+!!! tldr ""
+    Note that HEVC video files can have a `.mp4` file extension too, which is typically associated with AVC. This is because
+    MP4 is a *container* format or wrapper - the content could be compressed with H.264, H.265, or something else. The file
+    extension doesn't really tell you anything other than that it's probably a video file.
+

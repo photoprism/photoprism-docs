@@ -11,10 +11,12 @@ For a list of codecs *ffmpeg* supports, run this command in a terminal:
 ffmpeg -decoders
 ```
 
-Note that Firefox may only play the corresponding AAC audio codec if the 
-operating system supports it, see https://caniuse.com/aac.
-
+Firefox may only play the corresponding AAC audio codec if the operating system supports it, see https://caniuse.com/aac.
 All other browsers shouldn't have any issues.
+
+HEVC video files can have a `.mp4` file extension too, which is typically associated with AVC. This is because MP4 is
+a *container* format or wrapper - the content could be compressed with H.264, H.265, or something else. The file
+extension doesn't really tell you anything other than that it's probably a video file.
 
 !!! info
     While the QuickTime `.mov` container format served as the basis for MPEG-4,

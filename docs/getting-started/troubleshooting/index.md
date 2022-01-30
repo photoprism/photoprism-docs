@@ -208,6 +208,10 @@ If videos do not play and/or you only see a white/black area when you open a vid
 We recommend that you check your [Docker Logs](docker.md#viewing-logs) and [the browser console](browsers.md#getting-error-details)
 for messages related to *HTTP requests*, *permissions*, *security*, *FFmpeg*, *videos*, and *file conversion*.
 
+HEVC video files can have a `.mp4` file extension too, which is typically associated with AVC. This is because MP4 is
+a *container* format or wrapper - the content could be compressed with H.264, H.265, or something else. The file
+extension doesn't really tell you anything other than that it's probably a video file.
+
 !!! info ""
     We kindly ask you not to report bugs via *GitHub Issues* unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.
     [Ask for technical support](../../user-guide/index.md#getting-support) if you need help, it could be a local

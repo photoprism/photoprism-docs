@@ -102,7 +102,7 @@ PhotoPrism allows you to use multiple filters in its search.
 | Filter      | Examples | Notes |
 | ----------- | ----------- | - |
 | after      |    2015-06-30    | |
-| albums | "Holiday 2020" | Album Name |
+| album | "ar66ki01cd9m6pnt" | Album ID |
 | archived     |    yes, no    | |
 | before      |   2016-12-22     | |
 | chroma     |   5     | |

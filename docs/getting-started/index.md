@@ -23,7 +23,7 @@ depending on your specific use case.
     and ARM processors. That means, [Raspberry Pi](raspberry-pi.md) 3 / 4, Apple Silicon, and other ARM64-based
     devices can pull from the same repository, enjoy the exact same functionality, and can follow the regular
     [installation instructions](docker-compose.md) after going through a short list of [requirements](raspberry-pi.md).
-    See [FAQ](faq.md#how-can-i-install-photoprism-without-docker) for other options.
+    See [FAQs](faq.md) for instructions and notes on [alternative installation methods](faq.md#how-can-i-install-photoprism-without-docker).
 
 ## Roadmap ##
 

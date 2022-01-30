@@ -133,6 +133,10 @@ for Linux distributions and other operating systems.
 
 Updates are [released several times a month](https://docs.photoprism.app/release-notes/), so maintaining the long list of dependencies for additional environments would currently consume too many of [our resources](https://docs.photoprism.app/funding/).
 
+#### LXC Images ####
+
+There is no official [LXC image](https://linuxcontainers.org/) available yet, see [related GitHub issue](https://github.com/photoprism/photoprism/issues/147) for details.
+
 ### Why are you using Docker? ###
 
 Containers are nothing new; [Solaris Zones](https://en.wikipedia.org/wiki/Solaris_Containers) have been around for
@@ -316,10 +320,12 @@ for further details.
 
 ### How can I mount network shares with Docker? ###
 
-There are multiple ways of using network storage. One of the easiest might be to directly mount NFS shares with Docker.
+You can mount remote folders that you can access on your host if they have already been mounted there,
+using your operating system's standard tools and methods. This requires no changes compared to specifying
+any other path or drive on your host.
 
-You can mount any number of NFS shares as folders. Follow this `docker-compose.yml` example 
-if you want to mount the *originals* folder as a share:
+Alternatively, you can [mount network storage using Docker Compose](https://docs.docker.com/compose/compose-file/compose-file-v3/#driver_opts). 
+Follow this `docker-compose.yml` example for NFS (Linux, Unix) shares:
 
 ```yaml
 services:
@@ -340,7 +346,7 @@ volumes:
       device: ":/mnt/photos" 
 ```
 
-For Windows / CIFS shares:
+For mounting CIFS (Windows, Samba, SMB) network shares:
 
 ```yaml
 volumes:
@@ -352,14 +358,11 @@ volumes:
       device: "//host/folder"
 ```
 
-!!! info 
-    This was tested with TrueNAS and NFS, but other (network) file systems may be mounted with Docker as well.
-
-!!! tip 
-    Mounting the *import* folder to a share which is also accessible via other ways (e.g. CIFS)
-    is especially handy, as you can dump all data from a SD card / camera directly into that folder 
-    and trigger the index in the GUI afterwards. So you can skip the upload dialog in the 
-    GUI and it's a little faster.
+!!! tip ""
+    Mounting the import folder from a network drive that can also be accessed via other ways (e.g. CIFS) is handy 
+    because you can dump all data from an SD card/camera directly to this folder and then start the import process
+    under [*Library* > *Import*](../user-guide/library/import.md). PhotoPrism also [has WebDAV support](../user-guide/sync/webdav.md)
+    for remote file management and uploading, for example, through [PhotoSync](https://photoprism.app/partners).
 
 ### Do you support Podman? ###
 
@@ -369,11 +372,6 @@ Red Hat compatible systems, you may hit permission error problems.
 More details on on how to run PhotoPrism with [Podman](https://podman.io/) on CentOS in 
 [this blog post](https://lukas.zapletalovi.com/2020/01/deploy-photoprism-in-centos-80.html), 
 it includes all the details including root and rootless modes, user mapping and SELinux.
-
-### Do you provide LXC images? ###
-
-There is currently no [LXC](https://linuxcontainers.org/) build for
-PhotoPrism, see [issue #147](https://github.com/photoprism/photoprism/issues/147) for details.
 
 ### Any plans to add support for Active Directory, LDAP or other centralized account management options? ###
 
@@ -386,8 +384,6 @@ which will be available in a future release.
 If you are [having a bad day](https://photoprism.app/code-of-conduct) and want to offend someone,
 please go somewhere else.
 
-!!! info
-    Our development and testing efforts are focused on small servers and home users. Adding functionality
-    that is primarily useful for business environments, or that only benefits few private 
-    users with special needs, diverts resources away from features that benefit everyone.
-    Professional users are welcome to [reach out](../contact.md) to us for a custom solution.
+!!! info "Professional Users"
+    Our Community Edition is designed primarily for small servers and home users. Professional users are welcome
+    to [contact us for a commercial solution](https://photoprism.app/contact).

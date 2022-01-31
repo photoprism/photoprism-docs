@@ -42,8 +42,11 @@ memory size, and processor.
 
 ## Submitting Pull Requests ##
 
-Our step-by-step guide explains how to [submit pull requests](pull-requests.md).
-Issues labeled [help wanted](https://github.com/photoprism/photoprism/labels/help%20wanted) /
+Because we want to create the best possible product for our users, we have a [set of criteria](pull-requests.md#acceptance-criteria)
+to ensure that all submissions are acceptable.
+
+Follow our [step-by-step guide](pull-requests.md#how-to-create-and-submit-a-pull-request) to learn how to submit
+new features, bug fixes, and documentation improvements. Issues labeled [help wanted](https://github.com/photoprism/photoprism/labels/help%20wanted) /
 [easy](https://github.com/photoprism/photoprism/labels/easy) can be good (first) contributions.
 
 **Reviewing, testing, and finally merging pull requests requires significant resources on our side. If it's not just a small fix, it can take several months.**

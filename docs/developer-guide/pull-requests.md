@@ -2,8 +2,8 @@
 
 ## Acceptance Criteria ##
 
-Because we want to create the best possible product for our users, we have a set of 
-guidelines to ensure that all submissions are acceptable:
+Because we want to create the best possible product for our users, we have a set of criteria to ensure that all
+submissions are acceptable:
 
 - [ ] **Features and improvements must be fully implemented** so that they can be released at any time without additional work
 - [ ] **Automated unit and/or acceptance tests are mandatory** to ensure the changes work as expected and to reduce repetitive manual work

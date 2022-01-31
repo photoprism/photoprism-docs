@@ -20,7 +20,7 @@ A cookie-free API helps minimize request latency by avoiding unnecessary network
 - one potential use of cookies can be to prevent the user from intentionally or accidentally sharing confidential thumbnail URLs with others
 - this is possible on most image hosting services/social media sites and could also be considered a feature if you just want to share a few thumbnails without any bells and whistles
 - once an image has been downloaded by someone else, blocking the original URL provides little additional security, as digital copies are just as good as the original
-- keeping this in mind, previously shared URLs can be invalidated by [changing the security token in your configuration](../../getting-started/config-options.md#url-tokens)
+- keeping that in mind, previously shared URLs can be invalidated by [changing the security token in your configuration](../../getting-started/config-options.md#url-tokens)
 - this renders the browser cache unusable on all connected devices, requiring previously cached thumbnails to be downloaded again
 - be aware that frequent token changes lead to performance degradation and a poor user experience
 

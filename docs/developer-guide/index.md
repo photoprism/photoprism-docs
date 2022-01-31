@@ -28,8 +28,8 @@ An important part of our journey is to explore new ways in product development a
 ## Creating Bug Reports ##
 
 Before reporting a bug, please use our [Troubleshooting Checklists](../getting-started/troubleshooting/index.md)
-to determine the cause of your problem. If you have a general question, need help, or an issue has not been clearly
-identified:
+to determine the cause of your problem. If you have a general question, need help, it could be a local configuration
+issue, or a misunderstanding in how the software works:
 
 - you are welcome to ask in our [Community Chat](https://gitter.im/browseyourlife/community)
 - or post your question in [GitHub Discussions](https://github.com/photoprism/photoprism/discussions)

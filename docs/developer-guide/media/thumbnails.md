@@ -11,7 +11,7 @@ image classification, see [Advanced Settings](../../user-guide/settings/advanced
 
 ## Server API ##
 
-### Cookie-Free Requests ###
+### No Cookies Required ###
 
 A cookie-free API helps minimize request latency by avoiding unnecessary network traffic:
 
@@ -20,14 +20,14 @@ A cookie-free API helps minimize request latency by avoiding unnecessary network
 - one potential use of cookies can be to prevent the user from intentionally or accidentally sharing confidential thumbnail URLs with others
 - this is possible on most image hosting services/social media sites and could also be considered a feature if you just want to share a few thumbnails without any bells and whistles
 - once an image has been downloaded by someone else, blocking the original URL provides little additional security, as digital copies are just as good as the original
-- keeping this in mind, all thumbnail URLs can be invalidated by [changing the security token](../../getting-started/config-options.md#url-tokens)
-- this renders the browser cache unusable on all connected devices, requiring previously cached thumbnails to be downloaded again, resulting in unacceptable performance if done frequently
+- keeping this in mind, previously shared URLs can be invalidated by [changing the security token in your configuration](../../getting-started/config-options.md#url-tokens)
+- this renders the browser cache unusable on all connected devices, requiring previously cached thumbnails to be downloaded again
+- be aware that frequent token changes lead to performance degradation and a poor user experience
 
-Another important benefit of a cookie-free thumbnail API - besides better performance - is that users can easily integrate
-a content delivery network (CDN), since there are no secret keys to exchange and no cookies to verify on edge servers.
+Another major benefit of a cookie-free thumbnail API - besides improved performance - is that users can easily  integrate a content delivery network (CDN), as there is no need to check cookies on edge servers.
 
 Because most users have only one domain/host name and modern web applications can store authentication tokens in
-*localStorage* instead, our REST API does not require or use cookies by default.
+*localStorage* instead, our REST API does not require or use any cookies by default.
 
 **See also:**
 

@@ -1,8 +1,15 @@
 # Code Quality
 
-The quality of code has a practical impact on both your agility and the cost of development:[^1]
+**The quality of code has a practical impact on both your agility and the cost of development:**[^1]
 
-You can't change buggy code fast enough to be truly agile. Existing bugs can easily increase development costs (and time) by 10x. You can't afford not to fix them.
+- you can't change buggy and/or bloated code fast enough to be truly agile
+- existing bugs can easily increase development costs (and time) by 10x
+- the mess eventually becomes so big and so deep that you cannot clean it up anymore[^2]
+
+<figure markdown>
+  ![Productivity vs Time](img/productivity-vs-time.jpg){ width="500" }
+  <figcaption>Productivity vs Time</figcaption>
+</figure>
 
 ## Keep It Simple ##
 
@@ -50,23 +57,40 @@ contributors to refactor when they see a specific problem.
 Ideally, when you are working on the same code anyway to implement a feature or improvement. This helps to verify
 that the changes are helpful in practice.
 
+Ugly code is not a big problem as long as there are tests and it can be easily refactored later. No one needs beautiful
+code that doesn't work. Pretty much all software projects start like this.
+
+There is one important exception: If you discover a security vulnerability, please [report it to us immediately](https://photoprism.app/security-policy)
+and, if possible, offer a solution.
+
 !!! example ""
-    Ugly code is not a problem as long as there are tests, there are no [security issues](https://photoprism.app/security-policy),
-    and it can be easily refactored later. Nobody needs beautiful code that doesn't work.
+    Feel free to think ahead, just don't code ahead. But also, don't feel the need to decide so many
+    details ahead. Learn enough to get started and build only what you need.
+    — <cite>[J. B. Rainsberger](https://twitter.com/jbrains/status/1064212803542818816)</cite>
 
 ## Go Slow Before You Go Fast 🐰 ##
 
 You have to go slow before you can go fast. Keep it simple. Done is better than perfect. Be pragmatic. Stay focused.
 
 !!! example ""
-    Feel free to think ahead, just don't code ahead. But also, don't feel the need to decide so many 
-    details ahead. Learn enough to get started and build only what you need.
-    — <cite>[J. B. Rainsberger](https://twitter.com/jbrains/status/1064212803542818816)</cite>
+    All developers with more than a few years experience know that previous messes slow them down. And yet all
+    developers feel the pressure to make messes in order to meet deadlines. In short, they don’t take the time
+    to go fast! You will not make the deadline by making a mess. Indeed, the mess will slow you down instantly, and
+    will force you to miss the deadline. — <cite>Robert C. Martin[^2]</cite>
 
 ## Code That Cannot Be Tested Is Flawed ##
 
 We strive for [complete test coverage](https://martinfowler.com/bliki/TestCoverage.html) as it is a useful tool for finding 
 untested parts of our code base. Test coverage is of limited use as a numerical statement of how good our tests are.
+
+The *F.I.R.S.T.* principle includes five rules that good tests should follow:[^2]
+
+**Fast:** If tests are slow, you won't run them frequently, which makes them much less useful and increases the cost of development.<br>
+**Independent:** You should be able to run each test independently and run the tests in any order you like. When tests depend on each other, then the first one to fail causes a cascade of downstream failures, making diagnosis difficult and hiding downstream defects.<br>
+**Repeatable:** If your tests aren’t repeatable in any environment, then you’ll always have an excuse for why they fail. You’ll also find yourself unable to run the tests when the environment isn’t available.<br>
+**Self-Validating:** You should not have to read through a log file to tell whether the tests pass. If the tests aren’t
+self-validating, then failure can become subjective and running the tests can require a long manual evaluation.<br>
+**Timely:** If you write tests after the production code, then you may find the production code to be hard to test. You may decide that some production code is too hard to test. You may not design the production code to be testable.
 
 <!--
 ### Codecov [![Test Coverage](https://codecov.io/gh/photoprism/photoprism/branch/develop/graph/badge.svg)][codecov] ###
@@ -92,3 +116,4 @@ You can support the developers on [Patreon](https://www.patreon.com/goreportcard
 [codecov]: https://codecov.io/gh/photoprism/photoprism
 
 [^1]: https://twitter.com/allenholub/status/1073738216140791808
+[^2]: Martin, Robert C. [*Clean Code: A Handbook of Agile Software Craftsmanship*](https://enos.itcollege.ee/~jpoial/oop/naited/Clean%20Code.pdf). Upper Saddle River, NJ: Prentice Hall, 2009.

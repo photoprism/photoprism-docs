@@ -275,3 +275,4 @@ markdown_extensions:
   - pymdownx.tilde
   - attr_list
   - abbr
+  - md_in_html

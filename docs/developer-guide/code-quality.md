@@ -54,7 +54,7 @@ if and when it makes sense. Maintaining small amounts of duplicate code is much 
 While we know this is difficult when working with a distributed team, branches, and pull requests, we encourage all
 contributors to refactor when they see a specific problem.
 
-Ideally, when you are working on the same code anyway to implement a feature or improvement. This helps to verify
+Ideally when you are working on the same code anyway to implement a feature or improvement. This helps to verify
 that the changes are helpful in practice.
 
 Imperfection is not a big problem as long as your code is testable and tests exist so that formatting and
@@ -63,8 +63,7 @@ implementation details can be easily improved at a later time and/or by another 
 No one needs nice-looking code that doesn't work. Be pragmatic. Done is better than perfect.
 Pretty much all software projects start this way.
 
-There is one important exception: If you know about (potential) security issues, please [report them to us](https://photoprism.app/security-policy)
-and, if possible, offer a solution.
+However, if you know about (potential) security issues, please [report them to us](https://photoprism.app/security-policy) immediately and, if possible, offer a solution.
 
 !!! example ""
     Feel free to think ahead, just don't code ahead. But also, don't feel the need to decide so many

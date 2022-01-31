@@ -29,7 +29,7 @@ Another major benefit of a cookie-free thumbnail API - besides improved performa
 Because most users have only one domain/host name and modern web applications can store authentication tokens in
 *localStorage* instead, our REST API does not require or use any cookies by default.
 
-**See also:**
+**References:**
 
 - https://www.keycdn.com/support/how-to-use-cookie-free-domains
 - https://ourcodeworld.com/articles/read/1341/why-you-should-use-a-cookie-less-domain-for-serving-your-static-content-cdn

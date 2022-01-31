@@ -57,10 +57,13 @@ contributors to refactor when they see a specific problem.
 Ideally, when you are working on the same code anyway to implement a feature or improvement. This helps to verify
 that the changes are helpful in practice.
 
-Ugly code is not a big problem as long as there are tests and it can be easily refactored later. No one needs beautiful
-code that doesn't work. Pretty much all software projects start like this.
+Imperfection is not a big problem as long as your code is testable and tests exist so that formatting and
+implementation details can be easily improved at a later time and/or by another developer.
 
-There is one important exception: If you discover a security vulnerability, please [report it to us immediately](https://photoprism.app/security-policy)
+No one needs nice-looking code that doesn't work. Be pragmatic. Done is better than perfect.
+Pretty much all software projects start this way.
+
+There is one important exception: If you know about (potential) security issues, please [report them to us](https://photoprism.app/security-policy)
 and, if possible, offer a solution.
 
 !!! example ""
@@ -70,7 +73,8 @@ and, if possible, offer a solution.
 
 ## Go Slow Before You Go Fast 🐰 ##
 
-You have to go slow before you can go fast. Keep it simple. Done is better than perfect. Be pragmatic. Stay focused.
+You have to go slow before you can go fast. Understand the big picture and gather missing information before
+starting to code. Read the documentation. Write tests. Take your time. Stay focused.
 
 !!! example ""
     All developers with more than a few years experience know that previous messes slow them down. And yet all

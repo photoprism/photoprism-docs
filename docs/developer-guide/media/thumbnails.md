@@ -13,20 +13,21 @@ image classification, see [Advanced Settings](../../user-guide/settings/advanced
 
 ### Cookie-Free Requests ###
 
-Avoiding cookies helps minimize request latency by eliminating unnecessary network traffic:
+A cookie-free API helps minimize request latency by avoiding unnecessary network traffic:
 
 - when a browser requests static files such as images from a server via HTTPS, it is generally needless to send a
   cookie along with each request if the URLs cannot be guessed, so for most practical use cases
-- one potential use of cookies can be to prevent the user from intentionally or accidentally sharing cryptic thumbnail URLs with others
-- however, this is possible with most real-world image hosting services and could also be considered a feature if you only want to share specific thumbnails without bells and whistles
-- once images have been spread on the Internet, blocking the original URL provides little additional security
-- nonetheless, this can be done by simply [changing the security token](../../getting-started/config-options.md#url-tokens)
+- one potential use of cookies can be to prevent the user from intentionally or accidentally sharing confidential thumbnail URLs with others
+- this is possible on most image hosting services/social media sites and could also be considered a feature if you just want to share a few thumbnails without any bells and whistles
+- once an image has been downloaded by someone else, blocking the original URL provides little additional security, as digital copies are just as good as the original
+- keeping this in mind, all thumbnail URLs can be invalidated by [changing the security token](../../getting-started/config-options.md#url-tokens)
+- this renders the browser cache unusable on all connected devices, requiring previously cached thumbnails to be downloaded again, resulting in unacceptable performance if done frequently
 
-Another advantage - in addition to better performance - is that users can easily integrate a content
-delivery network (CDN), as there are no secret keys to share and no cookies to check.
+Another important benefit of a cookie-free thumbnail API - besides better performance - is that users can easily integrate
+a content delivery network (CDN), since there are no secret keys to exchange and no cookies to verify on edge servers.
 
-Because most users have only one domain/host name and modern Web apps can store authentication tokens in *localStorage*
-instead, PhotoPrism does not use any cookies by default.
+Because most users have only one domain/host name and modern web applications can store authentication tokens in
+*localStorage* instead, our REST API does not require or use cookies by default.
 
 **See also:**
 

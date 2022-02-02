@@ -223,6 +223,8 @@ theme:
   language: en
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
   palette:
     scheme: default
     primary: white

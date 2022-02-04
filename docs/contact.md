@@ -20,8 +20,6 @@ The subject should contain the file extensions as well as the GitHub [issue numb
 
 Feel free to contact us at [hello@photoprism.app](mailto:hello@photoprism.app) if you have general questions, want to support our work, or just want to say hello.
 
-Visit [photoprism.app/security-policy](https://photoprism.app/security-policy) to learn more about our security policy.
-
 Responsible for editorial content according to § 5 TMG / § 55 RStV:
 
 <address>
@@ -48,6 +46,10 @@ For details, see:
 - [DigitalOcean Privacy Policy](https://www.digitalocean.com/legal/privacy-policy/)
 - [DigitalOcean Data Processing Agreement](https://www.digitalocean.com/legal/data-processing-agreement/)
 
+## Security Policy ##
+
+Visit [photoprism.app/security-policy](https://photoprism.app/security-policy) to learn more about our security policy.
+
 ## PhotoPrism® Trademark ##
 
 Please always use our [official logo](https://dl.photoprism.org/img/logo/logo.svg), do not alter it in any way,
@@ -61,6 +63,14 @@ When referring to PhotoPrism, make sure that it is spelled correctly:
 Our [trademark and brand guidelines](https://photoprism.app/trademark), which may be updated from time to time,
 describe how our Brand Assets may be used. It is important to us that any permitted use of our Brand Assets is
 fair and meets the highest standards.
+
+## Sustainability and Environmental Protection ##
+<img src="https://dl.photoprism.app/img/badges/green-power.svg" width="130" style="padding: 0 0 30px 30px; float: right;">
+Sustainability has been a core value for us from the beginning. That's why we ensure our office and hosting infrastructure is powered by 100% climate-neutral, renewable energy.
+
+More information can be found on the website of [Polarstern Energie](https://www.polarstern-energie.de/entdecke-polarstern/?rc=3GH5ZA64LD "100% certified renewable energy"), the electricity provider for our Berlin office, as well as in the statements of our infrastructure partners [Hetzner Online](https://www.hetzner.com/unternehmen/umweltschutz/ "Backend Services") and [DigitalOcean](https://twitter.com/digitalocean/status/1220061608837353478 "DNS and Cloud Hosting").
+
+We do not engage in crypto mining at this time and will fully assess the environmental impact before permanently adopting any distributed ledger technologies.
 
 [chat]: https://gitter.im/browseyourlife/community
 [ask]: https://github.com/photoprism/photoprism/discussions

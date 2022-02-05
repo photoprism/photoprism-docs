@@ -11,12 +11,10 @@ For a list of codecs *ffmpeg* supports, run this command in a terminal:
 ffmpeg -decoders
 ```
 
-Firefox may only play the corresponding AAC audio codec if the operating system supports it, see https://caniuse.com/aac.
-All other browsers shouldn't have any issues.
+Please note:
 
-HEVC video files can have a `.mp4` file extension too, which is typically associated with AVC. This is because MP4 is a
-*container* format, meaning that the actual video content may be compressed with H.264, H.265, or something else. The file
-extension doesn't really tell you anything other than that it's probably a video file.
+1. Not [all video and audio formats](https://caniuse.com/?search=video%20format) can be [played with every browser](../../getting-started/troubleshooting/browsers.md). For example, [AAC](https://caniuse.com/aac "Advanced Audio Coding") - the default audio codec for [MPEG-4 AVC / H.264](https://caniuse.com/avc "Advanced Video Coding") - is supported natively in Chrome, Safari, and Edge, while it is only optionally supported by the OS in Firefox and Opera.
+2. HEVC/H.265 video files can have a `.mp4` file extension too, which is often associated with AVC only. This is because MP4 is a *container* format, meaning that the actual video content may be compressed with H.264, H.265, or something else. The file extension doesn't really tell you anything other than that it's probably a video file.
 
 !!! info
     While the QuickTime `.mov` container format served as the basis for MPEG-4,
@@ -31,4 +29,4 @@ extension doesn't really tell you anything other than that it's probably a video
 
 - https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs
 
-*[HEVC]: H.265 / High Efficiency Video Coding
+*[HEVC]: High Efficiency Video Coding / H.265

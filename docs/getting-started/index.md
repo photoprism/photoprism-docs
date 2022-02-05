@@ -57,8 +57,7 @@ and/or physical memory above the recommended minimum.
 Our [Progressive Web App](../user-guide/pwa.md) (PWA) works with most modern browsers, and runs best on [Chrome](https://www.google.com/chrome/), [Chromium](https://www.chromium.org/getting-involved/download-chromium), [Safari](https://www.apple.com/safari/), [Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release), and [Edge](https://www.microsoft.com/en-us/edge).
 You can conveniently install it on the home screen of all major operating systems and mobile devices.
 
-Opera and Samsung Internet have been reported to be compatible as well.
-Note that not [all video formats](https://caniuse.com/?search=video%20format) can be [played with every browser](troubleshooting/browsers.md).
+Please note that not [all video and audio formats](https://caniuse.com/?search=video%20format) can be [played with every browser](troubleshooting/browsers.md). For example, [AAC](https://caniuse.com/aac "Advanced Audio Coding") - the default audio codec for [MPEG-4 AVC / H.264](https://caniuse.com/avc "Advanced Video Coding") - is supported natively in Chrome, Safari, and Edge, while it is only optionally supported by the OS in Firefox and Opera.
 
 #### Databases ####
 
@@ -67,7 +66,7 @@ Official support for MySQL 8 is discontinued as Oracle seems to have stopped shi
 
 #### HTTPS ####
 
-If you install PhotoPrism on a public server outside your home network, please **always run it behind a secure HTTPS reverse proxy** such as [Traefik](proxies/traefik.md) or [Caddy](proxies/caddy-2.md).
+If you install PhotoPrism on a public server outside your home network, **always run it behind a secure HTTPS reverse proxy** such as [Traefik](proxies/traefik.md) or [Caddy](proxies/caddy-2.md).
 Your files and passwords will otherwise be transmitted in clear text and can be intercepted by anyone, 
 including your provider, hackers, and governments. Backup tools and file sync apps like [FolderSync](https://www.tacit.dk/foldersync/faq/#i-can-not-connect-to-a-non-https-webdav-server-why) 
 may refuse to connect as well.

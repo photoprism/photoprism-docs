@@ -208,9 +208,10 @@ If videos do not play and/or you only see a white/black area when you open a vid
 We recommend that you check your [Docker Logs](docker.md#viewing-logs) and [the browser console](browsers.md#getting-error-details)
 for messages related to *HTTP requests*, *permissions*, *security*, *FFmpeg*, *videos*, and *file conversion*.
 
-HEVC video files can have a `.mp4` file extension too, which is typically associated with AVC. This is because MP4 is a
-*container* format, meaning that the actual video content may be compressed with H.264, H.265, or something else. The file
-extension doesn't really tell you anything other than that it's probably a video file.
+Please note:
+
+1. Not [all video and audio formats](https://caniuse.com/?search=video%20format) can be [played with every browser](browsers.md). For example, [AAC](https://caniuse.com/aac "Advanced Audio Coding") - the default audio codec for [MPEG-4 AVC / H.264](https://caniuse.com/avc "Advanced Video Coding") - is supported natively in Chrome, Safari, and Edge, while it is only optionally supported by the OS in Firefox and Opera.
+2. HEVC/H.265 video files can have a `.mp4` file extension too, which is often associated with AVC only. This is because MP4 is a *container* format, meaning that the actual video content may be compressed with H.264, H.265, or something else. The file extension doesn't really tell you anything other than that it's probably a video file.
 
 !!! info ""
     **We kindly ask you not to report bugs via *GitHub Issues* unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.**
@@ -227,7 +228,7 @@ extension doesn't really tell you anything other than that it's probably a video
 *[RAW]: image format that contains unprocessed sensor data
 *[URL]: Web Address
 *[FFmpeg]: transcodes video files
-*[HEVC]: H.265 / High Efficiency Video Coding
+*[HEVC]: High Efficiency Video Coding / H.265 
 *[SQLite]: self-contained, serverless SQL database
 *[NSFW]: Not Safe For Work
 *[swap]: substitute for physical memory

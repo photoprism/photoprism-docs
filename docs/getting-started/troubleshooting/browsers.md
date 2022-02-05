@@ -2,8 +2,9 @@
 
 Problems with the user interface can be caused by a bug or an incompatible browser:
 
-- some [features may not be supported](https://caniuse.com/) by non-standard browsers, as well as nightly, test, and unofficial versions
-- in particular, not [all video formats](https://caniuse.com/?search=video%20format) can be [played with every browser](https://github.com/photoprism/photoprism/issues/707)
+- some [features may not be supported](https://caniuse.com/) by non-standard browsers, as well as nightly, unofficial, or outdated versions
+- not [all video and audio formats](https://caniuse.com/?search=video%20format) can be played with every browser, device, and operating system
+- for example, [AAC](https://caniuse.com/aac "Advanced Audio Coding") - the default audio codec for [MPEG-4 AVC / H.264](https://caniuse.com/avc "Advanced Video Coding") - is supported natively in Chrome, Safari, and Edge, while it is only optionally supported by the OS in Firefox and Opera
 
 !!! note ""
     If the user interface doesn't load at all, our [*App Not Loading*](index.md#app-not-loading) checklist helps you identify and resolve the cause.

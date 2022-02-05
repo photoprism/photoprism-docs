@@ -31,8 +31,8 @@
     A console is available in all modern browsers and can be activated via keyboard shortcuts or the browser menu.
 
     Problems with the user interface can be caused by a bug or an [incompatible browser](browsers.md#try-another-browser):
-    Some [features may not be supported](https://caniuse.com/) by non-standard browsers, as well as nightly, test,
-    and unofficial versions.
+    Some [features may not be supported](https://caniuse.com/) by non-standard browsers, as well as nightly, unofficial,
+    or outdated versions.
 
     *In case you don't see any log messages, try reloading the page, as the problem may occur while the page is loading.*
     

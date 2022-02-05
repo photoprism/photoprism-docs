@@ -2,8 +2,8 @@
 
 Problems with the user interface can be caused by a bug or an incompatible browser:
 
-- some [features may not be supported](https://caniuse.com/) by non-standard browsers, as well as nightly, unofficial, or outdated versions
-- not [all video and audio formats](https://caniuse.com/?search=video%20format) can be played with every browser, device, and operating system
+- some features [may not be supported](https://caniuse.com/) by non-standard browsers, as well as nightly, unofficial, or outdated versions
+- not all [video and audio formats](https://caniuse.com/?search=video%20format) can be played with every browser, device, and operating system
 - for example, [AAC](https://caniuse.com/aac "Advanced Audio Coding") - the default audio codec for [MPEG-4 AVC / H.264](https://caniuse.com/avc "Advanced Video Coding") - is supported natively in Chrome, Safari, and Edge, while it is only optionally supported by the OS in Firefox and Opera
 
 !!! note ""

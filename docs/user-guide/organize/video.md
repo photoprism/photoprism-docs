@@ -6,7 +6,7 @@ Videos in MPEG-4 AVC format can be played natively by virtually all modern brows
 Other video formats are [automatically transcoded](#transcoding) in the background with [FFmpeg](https://www.ffmpeg.org/documentation.html)
 so that they can be played without causing any problems, even if your browser might support the format.
 
-Please note that not [all video and audio formats](https://caniuse.com/?search=video%20format) can be [played with every browser](../../getting-started/troubleshooting/browsers.md). For example, [AAC](https://caniuse.com/aac "Advanced Audio Coding") - the default audio codec for [MPEG-4 AVC / H.264](https://caniuse.com/avc "Advanced Video Coding") - is supported natively in Chrome, Safari, and Edge, while it is only optionally supported by the OS in Firefox and Opera.
+Please note that not all [video and audio formats](https://caniuse.com/?search=video%20format) can be [played with every browser](../../getting-started/troubleshooting/browsers.md). For example, [AAC](https://caniuse.com/aac "Advanced Audio Coding") - the default audio codec for [MPEG-4 AVC / H.264](https://caniuse.com/avc "Advanced Video Coding") - is supported natively in Chrome, Safari, and Edge, while it is only optionally supported by the OS in Firefox and Opera.
 
 ![Screenshot](img/video-1.png)
 

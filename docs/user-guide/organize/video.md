@@ -6,6 +6,8 @@ Videos in MPEG-4 AVC format can be played natively by virtually all modern brows
 Other video formats are [automatically transcoded](#transcoding) in the background with [FFmpeg](https://www.ffmpeg.org/documentation.html)
 so that they can be played without causing any problems, even if your browser might support the format.
 
+Please note that not [all video and audio formats](https://caniuse.com/?search=video%20format) can be [played with every browser](../../getting-started/troubleshooting/browsers.md). For example, [AAC](https://caniuse.com/aac "Advanced Audio Coding") - the default audio codec for [MPEG-4 AVC / H.264](https://caniuse.com/avc "Advanced Video Coding") - is supported natively in Chrome, Safari, and Edge, while it is only optionally supported by the OS in Firefox and Opera.
+
 ![Screenshot](img/video-1.png)
 
 ## Live Photos ##
@@ -35,8 +37,8 @@ docker-compose exec photoprism photoprism convert
     require a significant amount of extra storage.
 
 !!! tldr ""
-    HEVC video files can have a `.mp4` file extension too, which is typically associated with AVC. This is because MP4 is a
-    *container* format, meaning that the actual video content may be compressed with H.264, H.265, or something else.
-    The file extension doesn't really tell you anything other than that it's probably a video file.
+    HEVC/H.265 video files can have a `.mp4` file extension too, which is often associated with AVC only. This is because
+    MP4 is a *container* format, meaning that the actual video content may be compressed with H.264, H.265, or something
+    else. The file extension doesn't really tell you anything other than that it's probably a video file.
 
-*[HEVC]: H.265 / High Efficiency Video Coding
+*[HEVC]: High Efficiency Video Coding / H.265

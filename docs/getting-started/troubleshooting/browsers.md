@@ -9,7 +9,7 @@ Problems with the user interface can be caused by a bug or an incompatible brows
 !!! note ""
     If the user interface doesn't load at all, our [*App Not Loading*](index.md#app-not-loading) checklist helps you identify and resolve the cause.
 
-#### Try Another Browser ####
+## Try Another Browser ##
 
 To test if you have a general problem that is not browser-specific, [open the Web UI](../docker-compose.md#step-2-start-the-server) in other browsers:
 
@@ -24,7 +24,7 @@ To test if you have a general problem that is not browser-specific, [open the We
     Opera and Samsung Internet have been reported to be compatible as well. Due to [limited resources](../../funding.md), we can
     not test every release with all browser types and versions.
 
-#### Getting Error Details ####
+## Getting Error Details ##
 
 If possible, please also include the error type, error message, and URL of the affected resource when
 [submitting a support request](../../user-guide/index.md#getting-support). For this purpose, check the

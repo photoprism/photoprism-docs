@@ -169,6 +169,7 @@ extra_css:
 
 # External links.
 extra:
+  generator: false
   alternate:
     - name: 🇬🇧 English
       link: /
@@ -270,7 +271,8 @@ markdown_extensions:
   - pymdownx.snippets:
       check_paths: true
   - pymdownx.superfences
-  - pymdownx.tabbed
+  - pymdownx.tabbed:
+      alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
       clickable_checkbox: true

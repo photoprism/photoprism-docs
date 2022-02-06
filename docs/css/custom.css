@@ -19,7 +19,7 @@ a.action-button:hover {
     color: #000000;
 }
 
-.md-footer-info {
+.footer-info {
     text-align: left;
     width: 100%;
     color: var(--md-footer-fg-color--lighter);
@@ -28,24 +28,36 @@ a.action-button:hover {
     padding: 0.4rem 0 0 0;
 }
 
-html .md-footer-meta.md-typeset .md-footer-info a {
-    color: var(--md-footer-fg-color--lighter);
+html .footer-info a {
+    color: var(--md-footer-fg-color--lighter) !important;
 }
 
-.md-announce a,
-.md-announce a:focus,
-.md-announce a:hover {
+p.announce-banner a,
+p.announce-banner a:focus,
+p.announce-banner a:hover {
     color:currentColor;
 }
 
-.md-announce strong {
+p.announce-banner {
+    margin: 0;
+    padding: 0;
+}
+
+p.announce-banner strong {
     white-space:nowrap;
 }
 
-.md-announce__inner {
+.md-banner__inner {
     margin: .3rem auto;
 }
 
 span.build {
     font-size: .66rem;
+}
+
+header.md-header .md-ellipsis {
+    font-family: Roboto,sans-serif!important;
+    font-size: 20px!important;
+    font-weight: 500;
+    letter-spacing: .02em!important;
 }

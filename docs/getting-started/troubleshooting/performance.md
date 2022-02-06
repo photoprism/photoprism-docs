@@ -59,8 +59,7 @@ your instance to a more powerful device or cloud server may help.
 
 Be aware that most [NAS devices](https://kb.synology.com/en-us/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have) are
 optimized for minimal power consumption and low production costs. Although their hardware gets faster with each generation,
-[benchmarks show](https://www.google.com/search?q=cpu+benchmarks) that even 8-year-old standard desktop CPUs are often
-many times faster:
+[benchmarks](https://www.google.com/search?q=cpu+benchmarks) show that even 8-year-old standard desktop CPUs like the [Intel Core i3-4130](https://www.cpubenchmark.net/compare/Intel-Pentium-J3710-vs-Intel-i3-4130/2784vs2015) are often many times faster:
 
 ![CPU Benchmark](img/passmark-cpu.svg)
 

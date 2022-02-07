@@ -14,7 +14,7 @@ packages are affected.
 
 **Responsible Disclosure:**
 
-<img src='https://photoprism.app/user/pages/07.security-policy/thank-you-600x600.png' width='25%' style='float: right' />
+<img src="/img/thank-you-postit.png" alt="Thank You!" style="float: right" width="25%">
 
 1. Confirm that the vulnerability applies to a current version and is reproducible
 2. First share the vulnerability details with us so that users are not put at risk

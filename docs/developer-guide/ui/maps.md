@@ -1,8 +1,8 @@
 # Rendering Interactive Maps in the UI
 
-Visit [demo.photoprism.app/places](https://demo.photoprism.app/places) to try our demo.
-
 ![Places UI Example](https://dl.photoprism.app/img/ui/desktop-places-chicago-1000px.jpg)
+
+Visit [demo.photoprism.app/places](https://demo.photoprism.app/places) to try our demo.
 
 ## Mapbox/MapLibre GL JS ##
 

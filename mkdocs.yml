@@ -127,6 +127,7 @@ nav:
       - Design: developer-guide/ui/design.md
       - REST API: developer-guide/ui/rest-api.md
       - Browsers: developer-guide/ui/browsers.md
+      - Interactive Maps: developer-guide/ui/maps.md
     - Media Files:
       - Import: developer-guide/media/import.md
       - Abstraction: developer-guide/media/abstraction.md

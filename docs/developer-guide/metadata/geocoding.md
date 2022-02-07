@@ -1,11 +1,11 @@
 # Maps & Places
 
-PhotoPrism includes four high-resolution [world maps](https://demo.photoprism.app/places)  to see where you've been, and for rediscovering long-forgotten shots.
+Our privacy-friendly backend services provide worldwide location information to enrich metadata with details
+such as state, city, and category. Future releases will be able to use public event data to automatically create albums
+of popular music festivals or sporting events.
 
-To enhance your photos with location data such as state, city and category, we've also launched our own geo-information service based on OpenStreetMap.
-A future release will additionally provide public events' data, so that albums of popular music festivals, or sports gatherings, can be created automatically.
-
-We are happy to assist other OSS projects that don't have the time or expertise to run their own infrastructure.
+To show where you've been, the user interface includes four high-resolution [world maps](https://demo.photoprism.app/places).
+For details, see [Rendering Interactive Maps in the UI](../ui/maps.md).
 
 ## Example Request ##
 

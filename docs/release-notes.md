@@ -12,6 +12,11 @@
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
     There is no preview available for 32-bit operating systems.
 
+- UX: [Redesigned login page with background images depending on the theme](https://github.com/photoprism/photoprism/issues/782)
+- UX: [Improved display of metadata in the Files tab of the edit dialog](https://github.com/photoprism/photoprism/issues/2017)
+- Config: [Added imprint text and url options to display legal information at the bottom of the browser window](https://github.com/photoprism/photoprism/issues/1990)
+- ...as well as many other small improvements!
+
 ### January 21, 2022 ###
 <span class="build">Build 220121-2b4c8e1f</span>
 

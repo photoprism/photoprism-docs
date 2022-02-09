@@ -218,9 +218,9 @@ changed, added, or removed. This can also be automated using CLI commands and a 
 Easy, isn't it?
 
 !!! example ""
-    **Back us on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism).**
+    **Back us on [Patreon](https://link.photoprism.app/patreon) or [GitHub Sponsors](https://link.photoprism.app/sponsor).**
     Your continued support [helps us](../funding.md) provide [regular updates](https://docs.photoprism.app/release-notes/)
-    and services like [world maps](https://demo.photoprism.app/places). Thank you! 💜
+    and services like [world maps](https://try.photoprism.app/places). Thank you! 💜
 
 ### Troubleshooting ###
 
@@ -234,7 +234,7 @@ If your server runs out of memory, the index is frequently locked, or other syst
 Other issues? Our [troubleshooting checklists](troubleshooting/index.md) help you quickly diagnose and solve them.
 
 !!! info ""
-    You are welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
+    You are welcome to ask for help in our [community chat](https://link.photoprism.app/chat).
     [Sponsors](../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
     Before [submitting a support request](index.md#getting-support), try to [determine the cause of your problem](troubleshooting/index.md).
 

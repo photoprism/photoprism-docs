@@ -13,11 +13,11 @@ submissions are acceptable:
 
 !!! example ""
     These guidelines are not intended as a filter or barrier to participation. If you are unfamiliar with
-    Open Source development, we [will help you](https://gitter.im/browseyourlife/community).
+    Open Source development, we [will help you](https://link.photoprism.app/chat).
 
 ### Contributor License Agreement (CLA) ###
 
-After submitting your first pull request, you will automatically be asked to [accept our CLA](https://cla-assistant.io/photoprism/photoprism):
+After submitting your first pull request, you will automatically be asked to [accept our CLA](https://link.photoprism.app/cla):
 
 - this gives us the ability to [(re-)license all code and documentation](https://en.wikipedia.org/wiki/Software_relicensing) at any time, *almost* as if we had created it ourselves (you retain the rights to your own work, which may be different for other CLAs)
 - otherwise, we cannot accept pull requests, as this would mean that we are not able to change the license of our software and documentation at a later time, even though most of it was developed and written by us

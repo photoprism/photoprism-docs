@@ -8,7 +8,7 @@ We welcome contributions of any kind, including blog posts, tutorials, testing, 
 
 ## Upcoming Features and Improvements ##
 
-The [public roadmap](https://github.com/photoprism/photoprism/projects/5) shows what tasks are in progress, 
+The [public roadmap](https://link.photoprism.app/roadmap) shows what tasks are in progress, 
 what needs testing, and which features are going to be implemented next.
 
 You are welcome to [submit specific feature requests](issues.md) if you have verified that no similar
@@ -20,7 +20,7 @@ already exists. Give ideas you like a thumbs-up 👍  , so that we know what is 
 
 ## Join the Community ##
 
-Follow us on [Twitter](https://twitter.com/photoprism_app) and join the [Community Chat](https://gitter.im/browseyourlife/community)
+Follow us on [Twitter](https://link.photoprism.app/twitter) and join the [Community Chat](https://link.photoprism.app/chat)
 to get regular updates, connect with other contributors, and discuss your ideas. Our [Code of Conduct](https://photoprism.app/code-of-conduct) explains the "dos and don’ts."
 
 An important part of our journey is to explore new ways in product development and build better software through consistent use of community feedback. Feel free to [share your thoughts](../contact.md) with us at any time.
@@ -31,8 +31,8 @@ Before reporting a bug, please use our [Troubleshooting Checklists](../getting-s
 to determine the cause of your problem. If you have a general question, need help, it could be a local configuration
 issue, or a misunderstanding in how the software works:
 
-- you are welcome to ask in our [Community Chat](https://gitter.im/browseyourlife/community)
-- or post your question in [GitHub Discussions](https://github.com/photoprism/photoprism/discussions)
+- you are welcome to ask in our [Community Chat](https://link.photoprism.app/chat)
+- or post your question in [GitHub Discussions](https://link.photoprism.app/discussions)
 
 When reporting a problem, always include the software versions you are using and [other information about your environment](https://github.com/photoprism/photoprism/blob/develop/.github/ISSUE_TEMPLATE/bug_report.md)
 such as [browser, browser plugins](../getting-started/troubleshooting/browsers.md), operating system, storage type,

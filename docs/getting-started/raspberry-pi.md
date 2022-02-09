@@ -136,7 +136,7 @@ If your device runs out of memory, the index is frequently locked, or other syst
 Other issues? Our [troubleshooting checklists](troubleshooting/index.md) help you quickly diagnose and solve them.
 
 !!! info ""
-    You are welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
+    You are welcome to ask for help in our [community chat](https://link.photoprism.app/chat).
     [Sponsors](../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
     Before submitting a support request, try to [determine the cause of your problem](troubleshooting/index.md).
 

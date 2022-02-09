@@ -23,7 +23,7 @@
     payment options. To account for income differences, pricing may also vary by region. As soon as we have
     details, we will announce them publicly.
 
-    Meanwhile, GitHub Sponsors has [one-time donation](https://github.com/sponsors/photoprism?frequency=one-time)
+    Meanwhile, GitHub Sponsors has [one-time donation](https://link.photoprism.app/donate)
     options if you don't need ongoing support after installation and don't expect updates with additional features
     for more than 12 months.
 

@@ -19,7 +19,7 @@ depending on your specific use case.
 
 !!! tldr ""
     Our [stable version and development preview](https://docs.photoprism.app/release-notes/) have been built into a
-    single [multi-arch Docker image](https://hub.docker.com/r/photoprism/photoprism) for 64-bit AMD, Intel,
+    single [multi-arch Docker image](https://link.photoprism.app/docker-hub) for 64-bit AMD, Intel,
     and ARM processors. That means, [Raspberry Pi](raspberry-pi.md) 3 / 4, Apple Silicon, and other ARM64-based
     devices can pull from the same repository, enjoy the exact same functionality, and can follow the regular
     [installation instructions](docker-compose.md) after going through a short list of [requirements](raspberry-pi.md).
@@ -28,7 +28,7 @@ depending on your specific use case.
 ## Roadmap ##
 
 Our vision is to provide the most user- and privacy-friendly solution to keep your pictures organized and accessible.
-The [roadmap](https://github.com/photoprism/photoprism/projects/5) shows what tasks are in progress, 
+The [roadmap](https://link.photoprism.app/roadmap) shows what tasks are in progress, 
 what needs testing, and which features are going to be implemented next.
 
 We have a zero bug policy and do our best to help users when they need support or have other questions.
@@ -76,18 +76,18 @@ may refuse to connect as well.
 Before submitting a support request, please use our [Troubleshooting Checklists](../getting-started/troubleshooting/index.md)
 to determine the cause of your problem. If this doesn't help, or you have other questions:
 
-- you are welcome to join us on [Reddit](https://www.reddit.com/r/photoprism/)
-- post your question in [GitHub Discussions](https://github.com/photoprism/photoprism/discussions)
-- or ask in our [Community Chat](https://gitter.im/browseyourlife/community)
+- you are welcome to join us on [Reddit](https://link.photoprism.app/reddit)
+- post your question in [GitHub Discussions](https://link.photoprism.app/discussions)
+- or ask in our [Community Chat](https://link.photoprism.app/chat)
 
 In addition, [sponsors](../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
 
-We'll do our best to answer all your questions. In return, we ask you to [back us](../funding.md) on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism).
+We'll do our best to answer all your questions. In return, we ask you to [back us](../funding.md) on [Patreon](https://link.photoprism.app/patreon) or [GitHub Sponsors](https://link.photoprism.app/sponsor).
 Think of "free software" as in "free speech," not as in "free beer". Thank you!
 
 !!! info ""
     **We kindly ask you not to report bugs via *GitHub Issues* unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.**
-    [Contact us](https://photoprism.app/contact) or [a community member](https://github.com/photoprism/photoprism/discussions)
+    [Contact us](https://photoprism.app/contact) or [a community member](https://link.photoprism.app/discussions)
     if you need help, it could be a local configuration problem, or a misunderstanding in how the software works.
 
 [^1]: RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory

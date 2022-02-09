@@ -34,8 +34,6 @@ To auto-import uploaded files into PhotoPrism;
 !!! note ""
     The Dropbox mobile app needs to be opened periodically or it tends to fail to identify and sync new photos.
 
-    The [PhotoPrism mobile app](https://github.com/photoprism/photoprism-mobile) is also under development and provides a sync feature.
-
 ## Smart / Selective Sync
 
 A useful (although paid) feature is [Dropbox Smart Sync](https://www.dropbox.com/smart-sync) (with optional auto-evict) which will download the files from Dropbox's servers only when you (or PhotoPrism) accesses them (such as during initial indexing, or when downloading an original file via the PhotoPrism interface).

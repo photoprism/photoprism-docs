@@ -1,9 +1,9 @@
 # Getting Updates
 
 !!! example ""
-    **Back us on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism).**
+    **Back us on [Patreon](https://link.photoprism.app/patreon) or [GitHub Sponsors](https://link.photoprism.app/sponsor).**
     Your continued support [helps us](../funding.md) provide [regular updates](https://docs.photoprism.app/release-notes/)
-    and services like [world maps](https://demo.photoprism.app/places). Thank you! 💜
+    and services like [world maps](https://try.photoprism.app/places). Thank you! 💜
 
 ### Docker Compose ###
 

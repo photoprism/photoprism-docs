@@ -180,15 +180,17 @@ extra:
       lang: de
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/photoprism
+      link: https://link.photoprism.app/github
+    - icon: fontawesome/brands/patreon
+      link: https://link.photoprism.app/patreon
     - icon: material/chat
-      link: https://gitter.im/browseyourlife/community
+      link: https://link.photoprism.app/chat
     - icon: fontawesome/brands/twitter
-      link: https://twitter.com/photoprism_app
+      link: https://link.photoprism.app/twitter
     - icon: fontawesome/brands/reddit
-      link: https://www.reddit.com/r/photoprism/
+      link: https://link.photoprism.app/reddit
     - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/company/photoprism/
+      link: https://link.photoprism.app/linkedin
     - icon: material/home
       link: https://photoprism.app/
 

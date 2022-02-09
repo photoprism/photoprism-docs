@@ -26,16 +26,16 @@ your specific use case.
 Before submitting a support request, please use our [Troubleshooting Checklists](../getting-started/troubleshooting/index.md)
 to determine the cause of your problem. If this doesn't help, or you have other questions:
 
-- you are welcome to join us on [Reddit](https://www.reddit.com/r/photoprism/)
-- post your question in [GitHub Discussions](https://github.com/photoprism/photoprism/discussions)
-- or ask in our [Community Chat](https://gitter.im/browseyourlife/community)
+- you are welcome to join us on [Reddit](https://link.photoprism.app/reddit)
+- post your question in [GitHub Discussions](https://link.photoprism.app/discussions)
+- or ask in our [Community Chat](https://link.photoprism.app/chat)
 
 In addition, [sponsors](../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
 
-We'll do our best to answer all your questions. In return, we ask you to [back us](../funding.md) on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism).
+We'll do our best to answer all your questions. In return, we ask you to [back us](../funding.md) on [Patreon](https://link.photoprism.app/patreon) or [GitHub Sponsors](https://link.photoprism.app/sponsors).
 Think of "free software" as in "free speech," not as in "free beer". Thank you!
 
 !!! info ""
     **We kindly ask you not to report bugs via *GitHub Issues* unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.**
-    [Contact us](https://photoprism.app/contact) or [a community member](https://github.com/photoprism/photoprism/discussions)
+    [Contact us](https://photoprism.app/contact) or [a community member](https://link.photoprism.app/discussions)
     if you need help, it could be a local configuration problem, or a misunderstanding in how the software works.

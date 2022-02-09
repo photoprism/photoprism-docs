@@ -43,7 +43,7 @@ Now open [http://localhost:8000/](http://localhost:8000/) in a browser to view t
 
 ### Contributor License Agreement (CLA) ###
 
-After submitting your first pull request, you will automatically be asked to [accept our CLA](https://cla-assistant.io/photoprism/photoprism):
+After submitting your first pull request, you will automatically be asked to [accept our CLA](https://link.photoprism.app/cla):
 
 - this gives us the ability to [(re-)license all code and documentation](https://en.wikipedia.org/wiki/Software_relicensing) at any time, *almost* as if we had created it ourselves (you retain the rights to your own work, which may be different for other CLAs)
 - otherwise, we cannot accept pull requests, as this would mean that we are not able to change the license of our software and documentation at a later time, even though most of it was developed and written by us
@@ -60,6 +60,7 @@ After submitting your first pull request, you will automatically be asked to [ac
 *PhotoPrism® is a [registered trademark](https://photoprism.app/trademark). Docs are available under the [CC BY-NC-SA 4.0 License](https://creativecommons.org/licenses/by-nc-sa/4.0/); additional terms may apply. By using our software, you agree to our [terms of service](https://photoprism.app/terms).*
 
 [docs]: https://docs.photoprism.app/
-[chat]: https://gitter.im/browseyourlife/community
-[ask]: https://github.com/photoprism/photoprism/discussions
-[twitter]: https://twitter.com/photoprism_app
+[chat]: https://link.photoprism.app/chat
+[ask]: https://link.photoprism.app/discussions
+[twitter]: https://link.photoprism.app/twitter
+

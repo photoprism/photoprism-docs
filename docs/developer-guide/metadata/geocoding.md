@@ -4,7 +4,7 @@ Our privacy-friendly backend services provide worldwide location information to 
 such as state, city, and category. Future releases will be able to use public event data to automatically create albums
 of popular music festivals or sporting events.
 
-To show where you've been, the user interface includes four high-resolution [world maps](https://demo.photoprism.app/places).
+To show where you've been, the user interface includes four high-resolution [world maps](https://try.photoprism.app/places).
 For details, see [Rendering Interactive Maps in the UI](../ui/maps.md).
 
 ## Example Request ##

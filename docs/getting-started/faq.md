@@ -362,7 +362,7 @@ volumes:
     Mounting the import folder from a network drive that can also be accessed via other ways (e.g. CIFS) is handy 
     because you can dump all data from an SD card/camera directly to this folder and then start the import process
     under [*Library* > *Import*](../user-guide/library/import.md). PhotoPrism also [has WebDAV support](../user-guide/sync/webdav.md)
-    for remote file management and uploading, for example, through [PhotoSync](https://photoprism.app/partners).
+    for remote file management and uploading, for example, through [PhotoSync](https://link.photoprism.app/photosync).
 
 ### Do you support Podman? ###
 

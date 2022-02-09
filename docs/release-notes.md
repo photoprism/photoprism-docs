@@ -1,8 +1,8 @@
 # Release Notes
 
 !!! example ""
-    **Back us on [Patreon](https://www.patreon.com/photoprism) or [GitHub Sponsors](https://github.com/sponsors/photoprism).**
-    Your continued support [helps us](funding.md) provide regular updates and services like [world maps](https://demo.photoprism.app/places). Thank you! 💜
+    **Back us on [Patreon](https://link.photoprism.app/patreon) or [GitHub Sponsors](https://link.photoprism.app/sponsor).**
+    Your continued support [helps us](funding.md) provide regular updates and services like [world maps](https://try.photoprism.app/places). Thank you! 💜
 
 ### Development Preview ###
 
@@ -36,7 +36,7 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
 - Videos: [Excluded streaming from gzip compression](https://github.com/photoprism/photoprism/commit/4d8292a9c3e357dc8d956a13ee9d6faa34b69119)
 - Videos: [Fixed Content-Type header and streaming in Safari](https://github.com/photoprism/photoprism/issues/1648)
 - Folders: [Fixed search query string substitutions and sanitation](https://github.com/photoprism/photoprism/issues/1930)
-- UI: [Updated information and links in *Settings* > *About*](https://demo.photoprism.app/about)
+- UI: [Updated information and links in *Settings* > *About*](https://try.photoprism.app/about)
 - UI: [Improved bootstrap template rendering performance](https://github.com/photoprism/photoprism/commit/03457bdb755b7cfb088a72f564119fb8e7a46ec2)
 
 ### January 7, 2022 ###
@@ -90,10 +90,10 @@ is offered separately. This frees up development and backend infrastructure reso
 ### December 3, 2021 ###
 <span class="build">Build 211203-fdb6b5e1</span>
 
-Since the [funding goal](https://github.com/sponsors/photoprism) required to make all features and maps generally
+Since the [funding goal](https://link.photoprism.app/sponsor) required to make all features and maps generally
 available has not been reached, *early-access features* have been renamed to *sponsor features* in this update.
 Offline and high-resolution street maps remain free for everyone, while hybrid, topographic, and outdoor maps are 
-now a sponsor feature. We believe this is fair. A big thank you to all our [sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md)
+now a sponsor feature. We believe this is fair. A big thank you to all our [sponsors](https://link.photoprism.app/sponsors)
 and [contributors](https://github.com/photoprism/photoprism/graphs/contributors/)!
 
 - CLI: [Improved parameter](https://github.com/photoprism/photoprism/issues/1778) and [command descriptions](https://github.com/photoprism/photoprism/issues/1735)
@@ -108,7 +108,7 @@ and [contributors](https://github.com/photoprism/photoprism/graphs/contributors/
 - Places: [Improved location details in border regions](https://github.com/photoprism/photoprism/issues/1767) and [near Paris](https://github.com/photoprism/photoprism/issues/1776)
 - PWA: [Updated app icons, style is now also applied to the user interface](https://github.com/photoprism/photoprism/tree/develop/assets/static/icons)
 
-*For our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.app/developer-guide/):*
+*For our [sponsors](https://link.photoprism.app/patreon) and [contributors](https://docs.photoprism.app/developer-guide/):*
 
 - UI: New *Abyss* and *Gemstone* dark themes 💎
 
@@ -131,7 +131,7 @@ in particular for UTC. The Docker base image has been upgraded to Ubuntu 21.10, 
 Darktable 3.6 among other updated dependencies. 
 
 - UX: Redesigned [splash screen](https://github.com/photoprism/photoprism/commit/293fa0ca784ae19998cc8ff3459883a137fff4c2) based on theme colors
-- Places: [Viewer loads faster and sorts photos by distance instead of date](https://demo.photoprism.app/places)
+- Places: [Viewer loads faster and sorts photos by distance instead of date](https://try.photoprism.app/places)
 - Places: [Less frequent estimates to reduce background activity](https://github.com/photoprism/photoprism/issues/1736)
 - Places: [Normalized names of states, oceans, and lakes](https://github.com/photoprism/photoprism/issues/1664)
 - Places: [Updated location data from OpenStreetMap](https://www.openstreetmap.org/)
@@ -150,7 +150,7 @@ Darktable 3.6 among other updated dependencies.
 - Translations: Added [Bahasa Indonesia](https://github.com/photoprism/photoprism/issues/1689) and [Hungarian](https://github.com/photoprism/photoprism/pull/1751)
 - Translations: Updated [Polish](https://github.com/photoprism/photoprism/pull/1674) and [Italian](https://github.com/photoprism/photoprism/pull/1706)
 
-*For our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.app/developer-guide/):*
+*For our [sponsors](https://link.photoprism.app/patreon) and [contributors](https://docs.photoprism.app/developer-guide/):*
 
 - CLI: [Run `photoprism places update` to retrieve updated location details](https://docs.photoprism.app/getting-started/docker-compose/#command-line-interface)
 - Config: [Set `PHOTOPRISM_APP_ICON` to choose an alternative PWA icon](getting-started/config-options.md)
@@ -166,7 +166,7 @@ Darktable 3.6 among other updated dependencies.
 - Security: [Added `Content-Security-Policy` header to prevent framing attacks](https://github.com/photoprism/photoprism/commit/2ddb1d6daaab847cd95f38aaa2f9293f35023f9a)
 - Translations: Updated [Russian](https://github.com/photoprism/photoprism/pull/1622) and [Slovak](https://github.com/photoprism/photoprism/pull/1620)
 
-*For our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.app/developer-guide/):*
+*For our [sponsors](https://link.photoprism.app/patreon) and [contributors](https://docs.photoprism.app/developer-guide/):*
 
 - UI: New *Vanta* dark theme ✨
 
@@ -198,7 +198,7 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
 - UX: [Enhanced visibility of file errors in the edit dialog files tab](https://github.com/photoprism/photoprism/commit/6cd5ee6d9b53aed74d92c46ccb29f78adf11811a)
 - CLI: [Revised descriptions of commands and configuration flags](https://github.com/photoprism/photoprism/search?q=cli+help&type=commits)
 
-*For our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.app/developer-guide/):*
+*For our [sponsors](https://link.photoprism.app/patreon) and [contributors](https://docs.photoprism.app/developer-guide/):*
 
 - People: [Recognized faces can be hidden on the overview page](https://github.com/photoprism/photoprism/issues/1554) 
 
@@ -391,7 +391,7 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
   and [allow overwriting estimated locations](https://github.com/photoprism/photoprism/pull/918) 
 - Settings: [Fixed disabling logs](https://github.com/photoprism/photoprism/issues/891)
 
-*For our [sponsors](https://www.patreon.com/photoprism) and [contributors](https://docs.photoprism.app/developer-guide/):*
+*For our [sponsors](https://link.photoprism.app/patreon) and [contributors](https://docs.photoprism.app/developer-guide/):*
 
 - UX: Added two [dark themes](https://github.com/photoprism/photoprism/issues/700)
 

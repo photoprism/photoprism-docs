@@ -9,7 +9,7 @@ To sync photos and videos on your phone with PhotoPrism, you can use any app tha
 
 ## PhotoSync ##
 
-We recommend [PhotoSync](https://www.photosync-app.com/home.html) which is available for Android and iOS.
+We recommend [PhotoSync](https://link.photoprism.app/photosync) which is available for Android and iOS.
 
 ### Set PhotoPrism as Target ###
 

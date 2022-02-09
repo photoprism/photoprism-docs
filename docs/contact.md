@@ -68,12 +68,12 @@ fair and meets the highest standards.
 <img src="https://dl.photoprism.app/img/badges/green-power.svg" width="130" style="padding: 0 0 30px 30px; float: right;">
 Sustainability has been a core value for us from the beginning. That's why we ensure our office and hosting infrastructure is powered by 100% climate-neutral, renewable energy.
 
-More information can be found on the website of [Polarstern Energie](https://www.polarstern-energie.de/entdecke-polarstern/?rc=3GH5ZA64LD "100% certified renewable energy"), the electricity provider for our Berlin office, as well as in the statements of our infrastructure partners [Hetzner Online](https://www.hetzner.com/unternehmen/umweltschutz/ "Backend Services") and [DigitalOcean](https://twitter.com/digitalocean/status/1220061608837353478 "DNS and Cloud Hosting").
+More information can be found on the website of [Polarstern Energie](https://link.photoprism.app/polarstern "100% certified renewable energy"), the electricity provider for our Berlin office, as well as in the statements of our infrastructure partners [Hetzner Online](https://link.photoprism.app/sustainability-hetzner "Backend Services") and [DigitalOcean](https://link.photoprism.app/sustainability-digitalocean "DNS and Cloud Hosting").
 
 We do not engage in crypto mining at this time and will fully assess the environmental impact before permanently adopting any distributed ledger technologies.
 
-[chat]: https://gitter.im/browseyourlife/community
-[ask]: https://github.com/photoprism/photoprism/discussions
-[reddit]: https://www.reddit.com/r/photoprism/
-[pixls]: https://discuss.pixls.us/photoprism
-[twitter]: https://twitter.com/photoprism_app
+[chat]: https://link.photoprism.app/chat
+[ask]: https://link.photoprism.app/discussions
+[reddit]: https://link.photoprism.app/reddit
+[pixls]: https://link.photoprism.app/pixls-us
+[twitter]: https://link.photoprism.app/twitter

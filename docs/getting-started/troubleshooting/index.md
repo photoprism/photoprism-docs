@@ -1,7 +1,7 @@
 # Troubleshooting Checklists
 
 !!! info ""
-    You are welcome to ask for help in our [community chat](https://gitter.im/browseyourlife/community).
+    You are welcome to ask for help in our [community chat](https://link.photoprism.app/chat).
     [Sponsors](../../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
     Before [submitting a support request](../../user-guide/index.md#getting-support), try to determine the cause of your problem.
 
@@ -137,7 +137,7 @@ In case the application logs don't contain anything helpful:
 - [ ] The *originals* have [bad filesystem permissions](docker.md#file-permissions), so they cannot be opened by the indexer
 - [ ] The indexer has skipped the files because they are exact duplicates
 - [ ] The files are [ignored based on pattern in a `.ppignore` file](../../user-guide/library/originals.md#ignoring-files-and-folders)
-- [ ] They [are in *Library > Hidden*](https://demo.photoprism.app/library/hidden) because thumbnails could not be created:
+- [ ] They [are in *Library > Hidden*](https://try.photoprism.app/library/hidden) because thumbnails could not be created:
     - [ ] *Convert to JPEG* is [disabled in *Settings > Library*](../../user-guide/settings/library.md) (enable it)
     - [ ] FFmpeg and/or RAW converters are [disabled in *Settings > Advanced*](../../user-guide/settings/advanced.md)
     - [ ] The file is broken, e.g. because of [*short Huffman data*](https://github.com/golang/go/issues/10447) (try to fix it)

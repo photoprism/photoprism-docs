@@ -89,10 +89,11 @@ You may use the following [32-bit Docker images](https://hub.docker.com/r/photop
 | MariaDB             | `linuxserver/mariadb:latest`          |
 
 If your device meets the [requirements](#system-requirements), mostly the same installation instructions as 
-for regular Linux servers apply. Pay close attention to changed directory and environment variable names.
+for regular Linux servers apply. Please pay close attention to changed directory and environment variable names.
 
 !!! note ""
-    Darktable is not included in the ARMv7 image because it is not 32-bit compatible. Always choose the regular 64-bit version if your device supports it.
+    Darktable is not included in the ARMv7 image because it is not 32-bit compatible. Always choose the regular
+    64-bit version if your device supports it.
 
 ### Is a Raspberry Pi fast enough? ###
 

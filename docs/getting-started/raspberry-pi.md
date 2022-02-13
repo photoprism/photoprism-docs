@@ -80,19 +80,19 @@ a standard 64-bit Linux distribution to run modern server applications, for exam
 
 #### Older ARMv7-based Devices ####
 
-You have to resort to alternative Docker images to run PhotoPrism and MariaDB on ARMv7-based devices
-and those with a 32-bit operating system:
+You may use [32-bit Docker images](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=armv7) to run PhotoPrism and MariaDB on ARMv7-based devices and operating systems without 64-bit support:
 
-| Image      | Name                                |
-|------------|-------------------------------------|
-| PhotoPrism | `photoprism/photoprism:armv7`       | 
-| MariaDB    | `linuxserver/mariadb:latest`        | 
+| Image               | Name                                  |
+|---------------------|---------------------------------------|
+| Stable Release      | `photoprism/photoprism:armv7`         |
+| Development Preview | `photoprism/photoprism:armv7-preview` |
+| MariaDB             | `linuxserver/mariadb:latest`          |
 
 If your device meets the [requirements](#system-requirements), mostly the same installation instructions as 
 for regular Linux servers apply. Pay close attention to changed directory and environment variable names.
 
 !!! tldr ""
-    Darktable is not included in the ARMv7 version because it is not 32-bit compatible.
+    Darktable is not included in the ARMv7 version because it is not 32-bit compatible. Always choose the 64-bit version if your device supports it.
 
 ### Is a Raspberry Pi fast enough? ###
 

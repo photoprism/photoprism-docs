@@ -20,10 +20,12 @@ To make more extensive changes, fork this repository, modify the corresponding `
 
 ### Project Layout ###
 
+```text
     mkdocs.yml    # The configuration file.
     docs/
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
+```
 
 ### Using Mkdocs ###
 

@@ -13,6 +13,9 @@ We recommend [PhotoSync](https://link.photoprism.app/photosync) which is availab
 
 ### Set PhotoPrism as Target ###
 
+!!! attention ""
+      If you are using PhotoSync on Android you need to choose WebDAV as target.
+
 1. Open PhotoSync and click :material-cog-outline:
 2. Click *Configure*
 3. Select PhotoPrism as target
@@ -26,13 +29,9 @@ We recommend [PhotoSync](https://link.photoprism.app/photosync) which is availab
 
 5. Click *Done*
 6. You may adapt transfer details to match your preferences
-   
+
       ![Screenshot](img/photosync-4.png){: style="width:35%"}
       ![Screenshot](img/photosync-5.png){: style="width:35%"}
-
-
-!!! attention ""
-      If you are using PhotoSync on Android you need to choose WebDAV as target.
 
 ### Set Up Automatic Sync ###
 
@@ -42,9 +41,9 @@ We recommend [PhotoSync](https://link.photoprism.app/photosync) which is availab
       ![Screenshot](img/photosync-1.png){: style="width:35%"}
 
 3. Click *Add new trigger* and choose one or more trigger
-   
+
       ![Screenshot](img/photosync-6.png){: style="width:35%"}
-   
+
 4. Choose PhotoPrism as target
 5. Click *Done*
 

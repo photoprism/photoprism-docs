@@ -21,10 +21,10 @@ To make more extensive changes, fork this repository, modify the corresponding `
 ### Project Layout ###
 
 ```text
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+mkdocs.yml    # The configuration file.
+docs/
+    index.md  # The documentation homepage.
+    ...       # Other markdown pages, images and other files.
 ```
 
 ### Using Mkdocs ###
@@ -64,4 +64,3 @@ After submitting your first pull request, you will automatically be asked to [ac
 [chat]: https://link.photoprism.app/chat
 [ask]: https://link.photoprism.app/discussions
 [twitter]: https://link.photoprism.app/twitter
-

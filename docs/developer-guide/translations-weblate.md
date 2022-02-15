@@ -1,11 +1,11 @@
 # Translations
 
 PhotoPrism uses [Weblate](https://translate.photoprism.app) for frontend and backend localization.
-You can easily register with your github account and edit translations.
+You can easily register and edit translations without having any programming skills.
 
 === "Sign up"
 
-    1. Open our [translation page](https://translate.photoprism.app)
+    1. Open https://translate.photoprism.app
 
     2. Click *Register* and create an account
 
@@ -17,7 +17,7 @@ You can easily register with your github account and edit translations.
 === "Agree to CLA"
     
     1. Sign in 
-    2. Select language you want translate to
+    2. Select the language you want translate to
 
        ![Screenshot](img/WeblateChooseLanguages.png)
     3. Open your *Dashboard* and click *Backend*
@@ -29,11 +29,12 @@ You can easily register with your github account and edit translations.
     5. Accept the contributor agreement and click *Submit*
 
       ![Screenshot](img/CLAAgree.png)
-    6. Go back to your Dashboard and repeat steps 3-5 for the *Frontend*
+    6. Go back to your *Dashboard* and repeat steps 3-5 for the *Frontend-Component*
 
 === "Add missing translations"
     
-    On your Dahsboard you see an overview of how many strings have no translation yet
+    Your *Dashboard* shows you how many strings have no translation yet.
+
       ![Screenshot](img/DashboardUntranslated.png)
 
     1. Click on the count
@@ -44,22 +45,24 @@ You can easily register with your github account and edit translations.
     
       Your translations will be reviewed and included in one of the next releases.
 
-=== "Edit translations"
-
-     If translations are missing, we pre-translate messages using services such as DeepL and Google Translate. This can lead to grammatical errors and misunderstandings. Native speakers should check existing translations and improve them if necessary.
-
-     1. From your Dashboard open one of the components by clicking on the language
-
-       ![Screenshot](img/WeblateOpenComponent.png)
-     2. Click *Edit* for all strings
-
-       ![Screenshot](img/WeblateEditAllStrings.png)
-     3. Now you can go trhough all strings and edit the ones that need to be improved
-
-      ![Screenshot](img/WeblateAddTranslation.png)
+=== "Review translations"
     
-      Your translations will be reviewed and included in one of the next releases.
+    If translations are missing, we pre-translate messages using services such as DeepL and Google Translate. 
+    This can lead to grammatical errors and misunderstandings. 
+    Native speakers should check existing translations and improve them if necessary.
 
+    If you are a native speaker and would like to support us by reviewing existing translations, please write to us at hello@photoprism.app so that we can grant you the rights to review.
+    
+    1. From your *Dashboard* open one of the components by clicking on the language
+
+     ![Screenshot](img/WeblateOpenComponent.png)
+    2. Click on *Strings waiting for review*
+
+     ![Screenshot](img/WeblateStringsForReview.png)
+    3. Review the translation - edit the string if needed. Then select *Approved* and click *Save and continue*
+
+     ![Screenshot](img/WeblateApproveString.png)
+    4.  Repeat until all strings are reviewed
 === "Add new language"
 
     Please contact us at hello@photoprism.app and we will set up a new language for you to translate!

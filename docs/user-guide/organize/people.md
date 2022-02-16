@@ -16,8 +16,8 @@ The people section shows you recognized people as well as new face clusters.
 
 To star a person click :material-star:. Stared persons appear first.
 
-![Screenshot](img/recognized.png)
-![Screenshot](img/new.png)
+![Screenshot](img/recognized-new.png)
+![Screenshot](img/new-new.png)
 
 !!! info ""
     **The new faces page shows automatically recognized face clusters only.** There may be thousands of 
@@ -51,7 +51,7 @@ There can be several reasons why a face was not detected:
      4. Start typing a name
      5. Press *enter*
 
-        ![Screenshot](img/add-name-new.png)
+        ![Screenshot](img/add-name-new-new.png)
 
 === "From Photo Edit dialog"
 
@@ -61,7 +61,7 @@ There can be several reasons why a face was not detected:
       4. Start typing a name
       5. Press *enter*
 
-        ![Screenshot](img/add-name-edit.png)
+        ![Screenshot](img/add-name-edit-new.png)
 
 The person you just added will appear under *Recognized*
 
@@ -77,15 +77,15 @@ You can hide a person in the *Recognized* section by clicking :material-close: i
 !!! attention ""
     Pictures of this person continue to be visible in search results and albums.
 
-![Screenshot](img/person-hide.png)
+![Screenshot](img/person-hide-new.png)
 
 To see all people including hidden ones click :material-eye:.
 
-![Screenshot](img/person-show-all.png)
+![Screenshot](img/person-show-all-new.png)
 
 Hidden people can be recovered by clicking :material-eye-off:
 
-![Screenshot](img/person-recover.png)
+![Screenshot](img/person-recover-new.png)
 
 ## Hiding Faces ##
 You can hide face clusters from the *New* section, in the same way you [hide people](#hiding-people) from the *Recognized* section.
@@ -96,13 +96,13 @@ You can hide face clusters from the *New* section, in the same way you [hide peo
       2. Go to *Recognized*
       3. Click on the person you want to view
 
-        ![Screenshot](img/view-person.png)
+        ![Screenshot](img/view-person-new.png)
 
 === "From Search"
       1. Go to *Search*
       2. Search for person:"jane-doe"
 
-        ![Screenshot](img/view-person-2.png)
+        ![Screenshot](img/view-person-2-new.png)
 
 ## Rename People ##
 To rename all photos of a person:
@@ -113,9 +113,9 @@ To rename all photos of a person:
 4. Type in a new name
 5. Press *enter*
 
-![Screenshot](img/rename-recognized-0.png)
+![Screenshot](img/rename-recognized-0-new.png)
 
-![Screenshot](img/rename-recognized.png)
+![Screenshot](img/rename-recognized-new.png)
 
 ## Change People Assignments ##
 
@@ -131,7 +131,7 @@ This will remove the name. You can either leave it blank or enter the name of a 
 3. Click :material-eject:
 4. Then enter a new name or leave it empty
 
-![Screenshot](img/reject.png)
+![Screenshot](img/reject-new.png)
 
 ## Remove Faces ##
 In case PhotoPrism detected something wrong as face (false positives), or in case you just don't want to keep a face on the people tab you're not interested in, you can remove it.
@@ -160,7 +160,7 @@ You might undo this action before a reload.
 5. Select existing album or enter new album name
 6. Click *add to album*
 
-![Screenshot](img/people-context-menu.png)
+![Screenshot](img/people-context-menu-new.png)
 
 ## Search ##
 You can find photos with people on it using the following queries:

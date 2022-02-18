@@ -27,22 +27,26 @@ docker-compose up
 
 *Note: This docker-compose configuration is for testing and development purposes only.*
 
-**Step 3:** Open a terminal to the PhotoPrism container:
+**Step 3:** Open a terminal to run commands directly in the build and test environment:
 
 ```
-docker-compose exec photoprism bash
+make terminal
 ```
 
-Now you can run commands inside this terminal. To run the Go webserver, run:
+Before you proceed, make sure that all dependencies, such as NPM packages for the frontend, are installed:
 
 ```
 make all
-./photoprism start
 ```
 
-You can see a list of all `make` targets in our [Makefile](https://github.com/photoprism/photoprism/blob/develop/Makefile).
-For example, `make test` will run the tests and `make install` will build a `photoprism` production binary without debug
-information and install it in the user's directory including all assets.
+Congratulations! You can now compile and start PhotoPrism in your local development environment:
+
+```
+make build-go
+./photoprism start
+```
+You can find a list of all `make` targets in the [Makefile](https://github.com/photoprism/photoprism/blob/develop/Makefile).
+For example, `make test` will run frontend and backend unit tests.
 
 **Step 4:** Build the frontend in watch mode:
 

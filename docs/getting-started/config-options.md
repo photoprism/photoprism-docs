@@ -26,10 +26,10 @@ Variable                        | Parameter                  | Description
 `PHOTOPRISM_ORIGINALS_LIMIT`    | --originals-limit MB       | file size limit in MB (default: 1000)
 `PHOTOPRISM_STORAGE_PATH`       | --storage-path PATH        | [**writable** storage PATH for cache, database, and sidecar files](docker-compose.md#photoprismstorage)
 `PHOTOPRISM_IMPORT_PATH`        | --import-path PATH         | [**optional** base PATH from which files can be imported to originals](docker-compose.md#photoprismimport)
-`PHOTOPRISM_SIDECAR_PATH`       | --sidecar-path PATH        | optional custom relative or absolute sidecar PATH
-`PHOTOPRISM_CACHE_PATH`         | --cache-path PATH          | optional custom cache PATH for sessions and thumbnail files
-`PHOTOPRISM_TEMP_PATH`          | --temp-path PATH           | optional custom temporary file PATH
-`PHOTOPRISM_BACKUP_PATH`        | --backup-path PATH         | optional custom backup PATH for index backup files
+`PHOTOPRISM_SIDECAR_PATH`       | --sidecar-path PATH        | custom relative or absolute sidecar PATH (optional)
+`PHOTOPRISM_CACHE_PATH`         | --cache-path PATH          | custom cache PATH for sessions and thumbnail files (optional)
+`PHOTOPRISM_TEMP_PATH`          | --temp-path PATH           | custom temporary file PATH (optional)
+`PHOTOPRISM_BACKUP_PATH`        | --backup-path PATH         | custom backup PATH for index backup files (optional)
 `PHOTOPRISM_ASSETS_PATH`        | --assets-path PATH         | assets PATH containing static resources like icons, models, and translations
 
 ### Index Workers ###
@@ -109,9 +109,9 @@ Variable                        | Parameter                  | Description
 :------------------------------ |:-------------------------- |:-------------------------------------------
 `PHOTOPRISM_RAW_PRESETS`        | --raw-presets              | enable RAW file converter presets (may reduce performance)
 `PHOTOPRISM_DARKTABLE_BIN`      | --darktable-bin COMMAND    | Darktable CLI COMMAND for RAW image conversion (default: "darktable-cli")
-`PHOTOPRISM_DARKTABLE_BLACKLIST` | --darktable-blacklist BLACKLIST | file EXTENSIONS not to be converted with Darktable (default: "raf,cr3,dng")
+`PHOTOPRISM_DARKTABLE_BLACKLIST` | --darktable-blacklist BLACKLIST | file EXTENSIONS incompatible with Darktable (default: "dng")
 `PHOTOPRISM_RAWTHERAPEE_BIN`    | --rawtherapee-bin COMMAND  | RawTherapee CLI COMMAND for RAW image conversion (default: "rawtherapee-cli")
-`PHOTOPRISM_RAWTHERAPEE_BLACKLIST` | --rawtherapee-blacklist BLACKLIST | file EXTENSIONS not to be converted with RawTherapee
+`PHOTOPRISM_RAWTHERAPEE_BLACKLIST` | --rawtherapee-blacklist BLACKLIST | file EXTENSIONS incompatible with RawTherapee
 `PHOTOPRISM_SIPS_BIN`           | --sips-bin FILENAME        | Sips COMMAND for RAW image conversion (macOS only) (default: "sips")
 `PHOTOPRISM_HEIFCONVERT_BIN`    | --heifconvert-bin COMMAND  | HEIC/HEIF image convert COMMAND (default: "heif-convert")
 `PHOTOPRISM_FFMPEG_BIN`         | --ffmpeg-bin COMMAND       | FFmpeg COMMAND for video transcoding and still image extraction (default: "ffmpeg")

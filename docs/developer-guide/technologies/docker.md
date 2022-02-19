@@ -42,7 +42,7 @@ FROM photoprism/development:20181112 as build
 # Build PhotoPrism
 WORKDIR "/go/src/github.com/photoprism/photoprism"
 COPY . .
-RUN make all install
+RUN make all install DESTDIR=/opt/photoprism
 
 # Base base image as photoprism/development
 FROM ubuntu:18.04

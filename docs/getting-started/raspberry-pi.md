@@ -12,7 +12,7 @@ Raspberry software. This requires [special configuration](#raspberry-pi-os) to r
 images, see [Architecture Specific Notes](#architecture-specific-notes).
 
 Existing users are advised to check their `docker-compose.yml` against our examples at [dl.photoprism.app/docker](https://dl.photoprism.app/docker/)
-from time to time in case there are new or changed configuration options or other improvements.
+from time to time in case there are new config options or other improvements.
 
 ### System Requirements ###
 
@@ -78,7 +78,8 @@ cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1
 
 #### Older ARMv7-based Devices ####
 
-You may use the following [32-bit Docker images](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=armv7) to run PhotoPrism and MariaDB on ARMv7-based devices as well as operating systems without 64-bit support such as Raspbian and CoreELEC:
+You may use the following [32-bit Docker images](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=armv7)
+to run PhotoPrism and MariaDB on ARMv7-based devices (always use our ARM64 image if possible):
 
 | Image               | Name                                  |
 |---------------------|---------------------------------------|

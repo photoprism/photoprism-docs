@@ -83,7 +83,7 @@ You may use the following [32-bit Docker images](https://hub.docker.com/r/photop
 | Image               | Name                                  |
 |---------------------|---------------------------------------|
 | Stable Release      | `photoprism/photoprism:armv7`         |
-| Development Preview | `photoprism/photoprism:armv7-preview` |
+| Development Preview | `photoprism/photoprism:preview-armv7` |
 | MariaDB             | `linuxserver/mariadb:latest`          |
 
 If your device meets the [requirements](#system-requirements), mostly the same installation instructions as 

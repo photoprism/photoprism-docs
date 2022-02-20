@@ -1,4 +1,4 @@
-.PHONY: all pull watch deploy chown;
+.PHONY: all pull update-mkdocs-material watch deploy chown;
 
 UID := $(shell id -u)
 GID := $(shell id -g)
@@ -6,6 +6,10 @@ GID := $(shell id -g)
 all: pull deploy chown
 pull:
 	docker pull photoprism/mkdocs-material:8
+update-mkdocs-material:
+	docker pull squidfunk/mkdocs-material:latest
+	docker tag squidfunk/mkdocs-material:latest photoprism/mkdocs-material:8
+	docker push photoprism/mkdocs-material:8
 watch:
 	docker run --rm -it -p 8000:8000 -v ${PWD}:/docs photoprism/mkdocs-material:8
 chown:

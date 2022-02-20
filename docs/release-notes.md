@@ -12,8 +12,12 @@
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
     There is no preview available for 32-bit operating systems.
 
+Our upcoming release is based on a stripped down version of Debian 11 "Bullseye". It is faster to download and includes
+many updated dependencies like Darktable 3.8.
+
 - UX: [Redesigned login page with background images depending on the theme](https://github.com/photoprism/photoprism/issues/782)
-- UX: [Improved display of metadata in the Files tab of the edit dialog](https://github.com/photoprism/photoprism/issues/2017)
+- UX: [Redesigned metadata details on the Files tab of the edit dialog](https://github.com/photoprism/photoprism/issues/2017)
+- Thumbnails: [Additional cache control header for improved performance](ttps://github.com/photoprism/photoprism/issues/822#issuecomment-1046276315)
 - Config: [Added imprint text and url options to display legal information at the bottom of the browser window](https://github.com/photoprism/photoprism/issues/1990)
 - ...as well as many other improvements!
 

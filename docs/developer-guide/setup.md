@@ -63,19 +63,25 @@ Default settings can be found in the `docker-compose.yml` file in the root direc
 
 **Optional:** Build the frontend in watch mode
 
-In addition to providing the backend API the built-in webserver also serves static assets. These can automatically be
-re-built (updated) whenever you change a file. To do this, run the following command in a terminal, either inside
-or outside the container:
+The integrated web server not only provides the backend API, but is also used to serve static assets. These can be
+automatically rebuilt (updated) when you change a file. To do this, run the following command in a terminal, either
+inside or outside the container (outside is faster if your host is not running Linux):
 
 ```
 make watch-js
 ```
 
-Alternatively, you can use NPM directly to watch the frontend code and rebuild assets whenever changes are made:
+Alternatively, you can change to the `frontend` directory and run NPM directly:
 
 ```
 cd fronend
 npm run watch
+```
+
+To update the frontend dependencies, also change to the `frontend` directory and run:
+
+```
+npm update
 ```
 
 Questions?

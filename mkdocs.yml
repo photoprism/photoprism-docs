@@ -164,7 +164,7 @@ nav:
       - Credits: credits.md
       - Contact: contact.md
       - License:
-          - PhotoPrism: license/agpl.md
+          - GNU AGPL: license/agpl.md
           - Documentation: license/docs.md
 
 extra_css:

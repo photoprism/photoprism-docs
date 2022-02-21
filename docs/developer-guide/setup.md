@@ -86,22 +86,22 @@ npm update
 
 Questions?
 
-* Radomir Sohlich wrote a [pragmatic introduction to Makefiles](https://sohlich.github.io/post/go_makefile/) for Go developers.
-* we are using [Go Modules](https://github.com/golang/go/wiki/Modules) for managing our dependencies (new in 1.11).
-* if you never used Go before and would like to learn it, you are welcome to [reach out](mailto:hello@photoprism.app). We might start organizing regular learning sessions for beginners in Berlin.
-* this guide was not tested on Windows, you might need to change docker-compose.yml to make it work with Windows specific paths.
+* Radomir Sohlich wrote a [pragmatic introduction to Makefiles](https://sohlich.github.io/post/go_makefile/) for Go developers
+* we are using [Go Modules](https://github.com/golang/go/wiki/Modules) for managing our dependencies (new in 1.11)
+* this guide was not tested on Windows, you might need to change docker-compose.yml to make it work with Windows specific paths
 
 ## Apple Silicon, Raspberry Pi, and ARM64 ##
 
-Our development environment has been built into a single [multi-arch image](https://hub.docker.com/r/photoprism/development) for 64-bit AMD, Intel, and ARM processors.
-That means, Apple Silicon, [Raspberry Pi](../getting-started/raspberry-pi.md) 3 / 4, and other ARM64-based devices can 
-pull from the same repository.
+Our development environment has been built into a single [multi-arch image](https://hub.docker.com/r/photoprism/development)
+for 64-bit AMD, Intel, and ARM processors. That means, Apple Silicon, [Raspberry Pi](../getting-started/raspberry-pi.md)
+3 / 4, and other ARM64-based devices can pull from the same repository.
 
-## Multi-Arch Builds ##
+## Multi-Arch Docker Builds ##
 
-This works out of the box with *Docker Desktop*. Just run `make docker-development-multiarch`. If you want to build those images for different architectures on Linux, 
-you need to set up `docker buildx` builder instances or setup QEMU on your machine which shall run your builds. 
-More info can be found in the docker docs: [Docker Buildx](https://docs.docker.com/buildx/working-with-buildx/), [Leverage multi-CPU architecture support](https://docs.docker.com/desktop/multi-arch/)
+For information about multi-architecture Docker builds, see the following documentation:
+
+- [Docker Buildx](https://docs.docker.com/buildx/working-with-buildx/)
+- [Leverage multi-CPU architecture support](https://docs.docker.com/desktop/multi-arch/)
 
 ### QEMU Quick Start ###
 
@@ -110,8 +110,11 @@ More info can be found in the docker docs: [Docker Buildx](https://docs.docker.c
 3. create buildx builder: `docker buildx create --name multiarch-builder && docker buildx inspect --builder multiarch-builder --bootstrap`
 4. start building: `make docker-development-multiarch` or `make docker-photoprism-multiarch`
 
+<!--
 ### Alternate Development Environments ###
 
-The following are setup instructions for development and testing and should be avoided unless Docker is either not supported or not allowed in your environment:
+The following are setup instructions for development and testing and should be avoided unless Docker is either
+not supported or not allowed in your environment:
 
 * [Fedora 32](setup-fedora.md)
+-->

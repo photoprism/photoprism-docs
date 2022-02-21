@@ -7,7 +7,7 @@ You'll need [Go](https://golang.org/dl/) >= 1.17, [TensorFlow for C](https://www
 [Make](http://www.gnu.org/software/make//make.html), [NPM](https://nodejs.org/en/download/), and [MariaDB](https://mariadb.com/).
 Without Docker, test results will be less reliable and you also won't be able to use our other Dockerfiles (e.g. for TensorFlow).
 
-**Step 1:** Run [Git](https://git-scm.com/downloads) to clone this project:
+**Step 1:** Run [Git](https://git-scm.com/downloads) to clone (download) the source code
 
 ```
 git clone git@github.com:photoprism/photoprism.git
@@ -18,7 +18,7 @@ git clone git@github.com:photoprism/photoprism.git
     `git config --global core.autocrlf false`
     
 
-**Step 2:** Start [Docker](https://www.docker.com/) containers:
+**Step 2:** Start the [Docker](https://www.docker.com/) services
 
 ```
 cd photoprism
@@ -27,7 +27,7 @@ docker-compose up
 
 *Note: This docker-compose configuration is for testing and development purposes only.*
 
-**Step 3:** Open a terminal to run commands directly in the build and test environment:
+**Step 3:** Open a terminal to run commands directly in the build and test environment
 
 ```
 make terminal
@@ -39,20 +39,23 @@ Before you proceed, make sure that all dependencies, such as NPM packages for th
 make all
 ```
 
-Congratulations! You can now compile and start PhotoPrism in your local development environment:
+Congratulations! You can now compile and run PhotoPrism in your local development environment:
 
 ```
 make build
 ./photoprism start
 ```
 
-You can find a list of all `make` targets in the [Makefile](https://github.com/photoprism/photoprism/blob/develop/Makefile).
-For example, `make test` will run frontend and backend unit tests.
+Open the user interface by navigating to [localhost:2342](http://localhost:2342/) (HTTP) or 
+[https://photoprism.localssl.dev](https://photoprism.localssl.dev/) (HTTPS). Authentication is disabled by default
+in development environments. Use the `--public=false` parameter to enable it.
 
 !!! example ""
-    Bad filesystem permissions can be fixed by running `make fix-permissions` in a container terminal.
+    You can find a list of all `make` targets in the [Makefile](https://github.com/photoprism/photoprism/blob/develop/Makefile).
+    For example, `make test` will run frontend and backend unit tests. Bad filesystem permissions can be fixed by
+    running `make fix-permissions` in a container terminal.
 
-**Step 4:** Build the frontend in watch mode:
+**Optional:** Build the frontend in watch mode
 
 The Go webserver will serve static assets in addition to providing the backend API. The static assets can be automatically
 built whenever you change a file. In a new terminal window, outside the Docker container, run:
@@ -61,8 +64,6 @@ built whenever you change a file. In a new terminal window, outside the Docker c
 make dep-js
 make watch-js
 ```
-
-PhotoPrism will now be available at [localhost:2342](http://localhost:2342/). This is set in the [docker-compose.yml](https://github.com/photoprism/photoprism/blob/develop/docker-compose.yml).
 
 Questions?
 

@@ -1,11 +1,12 @@
 # Setting Up Your Development Environment
 
-Before you start, make sure you have [Git](https://git-scm.com/downloads) and [Docker](https://store.docker.com/search?q=docker&type=edition&offering=community) installed on your system.
-Instead of using Docker, you can create your own development environment based on our
-[Dockerfile](https://github.com/photoprism/photoprism/blob/develop/docker/develop/Dockerfile) (not recommended).
-You'll need [Go](https://golang.org/dl/) >= 1.17, [TensorFlow for C](https://www.tensorflow.org/install/lang_c), 
-[Make](http://www.gnu.org/software/make//make.html), [NPM](https://nodejs.org/en/download/), and [MariaDB](https://mariadb.com/).
-Without Docker, test results will be less reliable and you also won't be able to use our other Dockerfiles (e.g. for TensorFlow).
+Before you proceed, make sure you have [Git](https://git-scm.com/downloads) and [Docker](https://store.docker.com/search?q=docker&type=edition&offering=community)
+installed on your system. It is available for Mac, Linux, and Windows.
+
+Instead of using Docker, you can create your own development environment based on our [Dockerfiles](https://github.com/photoprism/photoprism/tree/develop/docker)
+(not recommended). These are text documents that contain all commands a user could call in a terminal to assemble
+an application image. At a minimum, you need Go >= 1.17, TensorFlow for C, Make, NPM, and MariaDB.
+Note that test results are unreliable without Docker, so this method is not suitable for contributors.
 
 **Step 1:** Run [Git](https://git-scm.com/downloads) to clone (download) the source code
 

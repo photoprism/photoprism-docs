@@ -84,7 +84,7 @@ To update the frontend dependencies, also change to the `frontend` directory and
 npm update
 ```
 
-Questions?
+**Questions?**
 
 * Radomir Sohlich wrote a [pragmatic introduction to Makefiles](https://sohlich.github.io/post/go_makefile/) for Go developers
 * we are using [Go Modules](https://github.com/golang/go/wiki/Modules) for managing our dependencies (new in 1.11)

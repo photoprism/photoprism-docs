@@ -42,11 +42,15 @@ make all
 Congratulations! You can now compile and start PhotoPrism in your local development environment:
 
 ```
-make build-go
+make build
 ./photoprism start
 ```
+
 You can find a list of all `make` targets in the [Makefile](https://github.com/photoprism/photoprism/blob/develop/Makefile).
 For example, `make test` will run frontend and backend unit tests.
+
+!!! example ""
+    Bad filesystem permissions can be fixed by running `make fix-permissions` in a container terminal.
 
 **Step 4:** Build the frontend in watch mode:
 

@@ -10,7 +10,6 @@
     You can test upcoming features and improvements by changing the image from `photoprism/photoprism:latest` 
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/). 
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
-    There is no preview available for 32-bit operating systems.
 
 Our upcoming release is based on a stripped down version of Debian 11 "Bullseye". It is faster to download and includes
 many updated dependencies like Darktable 3.8.

@@ -75,7 +75,7 @@ impossible - to provide full support. Reading title, copyright, artist, and desc
 implemented as a proof-of-concept, [contributions are welcome](../developer-guide/metadata/xmp.md). Indexing of 
 embedded XMP is only possible via Exiftool, see above.
 
-### Will JPEGs be updated when RAW or XMP files change? ###
+### Are JPEGs updated when RAW or XMP files change? ###
 
 JPEGs are currently not regenerated when related RAW or XMP files change. RAW files are digital negatives by design. PhotoPrism therefore assumes that their image information is immutable. Other metadata changes are detected and reflected in the index as usual when scanning your library.
 

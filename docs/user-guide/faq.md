@@ -141,7 +141,7 @@
     implemented as a proof-of-concept, [contributions are welcome](../developer-guide/metadata/xmp.md). Indexing of
     embedded XMP is only possible via Exiftool, see above.
 
-??? question "Will JPEGs be updated when RAW or XMP files change?"
+??? question "Are JPEGs updated when RAW or XMP files change?"
     JPEGs are currently not regenerated when related RAW or XMP files change. RAW files are digital negatives by design. PhotoPrism therefore assumes that their image information is immutable. Other metadata changes are detected and reflected in the index as usual when scanning your library.
 
     XMP files can affect the appearance, but most of the metadata they contain, such as title and description, does not. Creating JPEGs from RAW files is a time-consuming task, and in most cases would cause a huge, unjustified amount of overhead. In addition, the rendering information in XMP files is not well standardized. For example, changes you make in Photoshop may not be compatible with Darktable. We recommend that you update the JPEG sidecar file manually if necessary.

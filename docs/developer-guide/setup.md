@@ -46,9 +46,15 @@ make build
 ./photoprism start
 ```
 
-Open the user interface by navigating to [localhost:2342](http://localhost:2342/) (HTTP) or 
-[https://photoprism.localssl.dev](https://photoprism.localssl.dev/) (HTTPS). Authentication is disabled by default
-in development environments. Use the `--public=false` parameter to enable it.
+The user interface can be opened in a browser by navigating to... 
+
+- [http://localhost:2342/](http://localhost:2342/) (HTTP)
+- or [https://photoprism.localssl.dev/](https://photoprism.localssl.dev/) (HTTPS)
+ 
+Authentication is disabled by default in development environments. Use the `--public=false` parameter to enable it.
+
+Default settings can be found in the `docker-compose.yml` file in the root directory of the project. Keep them unchanged
+[when running tests](tests.md), otherwise the tests may fail for others, even if they [pass in your local environment](code-quality.md#code-that-cannot-be-tested-is-flawed).
 
 !!! example ""
     You can find a list of all `make` targets in the [Makefile](https://github.com/photoprism/photoprism/blob/develop/Makefile).
@@ -57,12 +63,19 @@ in development environments. Use the `--public=false` parameter to enable it.
 
 **Optional:** Build the frontend in watch mode
 
-The Go webserver will serve static assets in addition to providing the backend API. The static assets can be automatically
-built whenever you change a file. In a new terminal window, outside the Docker container, run:
+In addition to providing the backend API the built-in webserver also serves static assets. These can automatically be
+re-built (updated) whenever you change a file. To do this, run the following command in a terminal, either inside
+or outside the container:
 
 ```
-make dep-js
 make watch-js
+```
+
+Alternatively, you can use NPM directly to watch the frontend code and rebuild assets whenever changes are made:
+
+```
+cd fronend
+npm run watch
 ```
 
 Questions?

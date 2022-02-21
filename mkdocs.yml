@@ -164,7 +164,7 @@ nav:
       - Credits: credits.md
       - Contact: contact.md
       - License:
-          - GNU AGPL: license/agpl.md
+          - PhotoPrism: license/agpl.md
           - Documentation: license/docs.md
 
 extra_css:
@@ -272,7 +272,6 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.magiclink
   - pymdownx.mark
-  - pymdownx.smartsymbols
   - pymdownx.snippets:
       check_paths: true
   - pymdownx.superfences

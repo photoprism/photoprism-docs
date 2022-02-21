@@ -23,16 +23,17 @@ Advanced users can add this to a `Makefile` so that they only have to type a sin
 command like `make update`. See [Command-Line Interface](docker-compose.md#command-line-interface)
 to learn more about terminal commands.
 
-!!! info ""
+!!! note ""
     Running an image with `:latest` tag does not cause Docker to automatically download new images.
+    We recommend that you compare your `docker-compose.yml` with our examples at [dl.photoprism.app/docker](https://dl.photoprism.app/docker/) from time to time in case there are new configuration options or other improvements.
 
-!!! tldr ""
-    You can test upcoming features and improvements by changing the image from `photoprism/photoprism:latest`
-    to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/).
-    Then pull the most recent image and restart your instance as shown above.
-    There is no preview available for 32-bit operating systems.
+#### Development Preview ####
 
-### Raspberry Pi ###
+You can test upcoming features and improvements by changing the image from `photoprism/photoprism:latest`
+to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/).
+Then pull the most recent image and restart your instance as shown above.
+
+#### Raspberry Pi ####
 
 Our [stable version and development preview](../release-notes.md) have been built into a single
 [multi-arch Docker image](https://hub.docker.com/r/photoprism/photoprism) for 64-bit AMD, Intel, and ARM processors.
@@ -49,16 +50,13 @@ and you see the "no matching manifest" error on [Raspberry Pi OS](raspberry-pi.m
 docker pull --platform=arm64 photoprism/photoprism:latest
 ```
 
-We recommend choosing a [standard 64-bit Linux distribution](raspberry-pi.md#raspbian-alternatives) instead 
-of Raspbian to run modern server applications.
-
-Alternative Docker images are provided for [ARMv7-based devices](raspberry-pi.md#older-armv7-based-devices)
-and those with a 32-bit operating system.
+If you do not have legacy software, we recommend [choosing a standard 64-bit Linux distribution](raspberry-pi.md#modern-arm64-based-devices)
+as this requires less experience. Alternative 32-bit Docker images are provided for [ARMv7-based devices](raspberry-pi.md#older-armv7-based-devices).
 
 !!! tldr ""
     Darktable is not included in the ARMv7 version because it is not 32-bit compatible.
 
-### Facial Recognition ###
+#### Facial Recognition ####
 
 Existing users may index faces without performing a complete rescan:
 
@@ -73,7 +71,7 @@ Remove existing people and faces for a clean start e.g. after upgrading from our
 docker-compose exec photoprism photoprism faces reset -f
 ```
 
-### Watchtower ###
+#### Watchtower ####
 
 Adding [Watchtower](https://github.com/containrrr/watchtower) as a service to your `docker-compose.yml` will
 automatically keep images up-to-date:

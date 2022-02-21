@@ -11,9 +11,6 @@ Note that Raspberry Pi OS (Raspbian) is a 32-bit user-space Linux with a 64-bit 
 Raspberry software. This requires [special configuration](#raspberry-pi-os) to run modern 64-bit applications and Docker
 images, see [Architecture Specific Notes](#architecture-specific-notes).
 
-Existing users are advised to check their `docker-compose.yml` against our examples at [dl.photoprism.app/docker](https://dl.photoprism.app/docker/)
-from time to time in case there are new config options or other improvements.
-
 ### System Requirements ###
 
 - Your device should have at least 3 GB of physical memory and a 64-bit operating system
@@ -44,7 +41,7 @@ from time to time in case there are new config options or other improvements.
 | MariaDB             | `arm64v8/mariadb:10.6`             | 
 
 Raspberry Pi OS (Raspbian) requires [special configuration](#raspberry-pi-os) to run modern 64-bit applications and
-Docker images. If you do not have legacy software, we recommend choosing a standard 64-bit Linux distribution as it
+Docker images. If you do not have legacy software, we recommend choosing a standard 64-bit Linux distribution as this
 requires less experience:
 
 - [Raspberry Pi Debian](https://raspi.debian.net/)
@@ -123,6 +120,7 @@ to learn more about terminal commands.
 
 !!! tldr ""
     Running an image with `:latest` tag does not cause Docker to automatically download new images.
+    We recommend that you compare your `docker-compose.yml` with our examples at [dl.photoprism.app/docker](https://dl.photoprism.app/docker/) from time to time in case there are new configuration options or other improvements.
 
 ### Troubleshooting ###
 

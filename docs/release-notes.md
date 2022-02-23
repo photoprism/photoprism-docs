@@ -11,10 +11,10 @@
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/). 
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
-The Docker image of our upcoming release is based on Debian 11 "Bullseye" instead of Ubuntu Server. It is smaller and comes with many updated dependencies like Darktable 3.8. The new build process also makes it easier to provide standalone packages in the near future.
+The Docker image of our [upcoming release](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) is based on Debian 11 "Bullseye" instead of Ubuntu Server. It is smaller and comes with many updated dependencies like [Darktable 3.8.1](https://www.darktable.org/2022/02/darktable-3.8.1-released/). The new build process also makes it easier to provide standalone packages in the near future.
 
 - Auth: [New login page with space for additional buttons, links, and legal information](https://github.com/photoprism/photoprism/issues/782)
-- UX: [Redesigned metadata details in the Files tab of the edit dialog](https://github.com/photoprism/photoprism/issues/2017)
+- UX: [Redesigned metadata details in the files tab of the edit dialog](https://github.com/photoprism/photoprism/issues/2017)
 - API: [Added cache control header for faster thumbnail loading](https://github.com/photoprism/photoprism/issues/822#issuecomment-1046276315)
 - Config: [Simplified configuration of Unix domain socket database connections](https://github.com/photoprism/photoprism/commit/9c1325f38ec38bc4ca01df4ca8bc723841cc7cc7)
 - Config: [Added `--imprint` and `--imprint-url` to display legal information in the footer](https://github.com/photoprism/photoprism/issues/1990)

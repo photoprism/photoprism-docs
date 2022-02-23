@@ -13,7 +13,7 @@
 
 The Docker image of our upcoming release is based on Debian 11 "Bullseye" instead of Ubuntu Server. It is smaller and comes with many updated dependencies like Darktable 3.8. The new build process also makes it easier to provide standalone packages in the near future.
 
-- UX: [New login page with space for additional buttons, links, and legal information](https://github.com/photoprism/photoprism/issues/782)
+- Auth: [New login page with space for additional buttons, links, and legal information](https://github.com/photoprism/photoprism/issues/782)
 - UX: [Redesigned metadata details in the Files tab of the edit dialog](https://github.com/photoprism/photoprism/issues/2017)
 - API: [Added cache control header for faster thumbnail loading](https://github.com/photoprism/photoprism/issues/822#issuecomment-1046276315)
 - Config: [Simplified configuration of Unix domain socket database connections](https://github.com/photoprism/photoprism/commit/9c1325f38ec38bc4ca01df4ca8bc723841cc7cc7)

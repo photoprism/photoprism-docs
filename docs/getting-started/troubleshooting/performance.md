@@ -19,7 +19,7 @@ services:
 ```
 
 Advanced users can further improve the database performance by [changing additional parameters](https://github.com/photoprism/photoprism-docs/issues/102),
-for example, based on the recommendations provided by the [mysqltuner.pl](https://github.com/major/MySQLTuner-perl) script.
+for example based on recommendations provided by the [mysqltuner.pl](https://github.com/major/MySQLTuner-perl) script.
 
 !!! note ""
     Remember to also [increase the memory available to services](../img/docker-resources-advanced.jpg) in case you are

@@ -94,9 +94,9 @@ Variable                        | Parameter                  | Description
 
 Variable                        | Parameter                    | Description
 :------------------------------ |:-----------------------------|:-------------------------------------------
-`PHOTOPRISM_DATABASE_DRIVER`    | --database-driver NAME       | database DRIVER (sqlite or mysql) (default: "sqlite")
-`PHOTOPRISM_DATABASE_DSN`       | --database-dsn DSN           | sqlite file name, providing a DSN is optional for other drivers
-`PHOTOPRISM_DATABASE_SERVER`    | --database-server HOST       | database server HOST with optional port e.g. mysql:3306
+`PHOTOPRISM_DATABASE_DRIVER`    | --database-driver NAME       | database DRIVER (sqlite, mysql) (default: "sqlite")
+`PHOTOPRISM_DATABASE_DSN`       | --database-dsn DSN           | database connection DSN (sqlite filename, optional for mysql)
+`PHOTOPRISM_DATABASE_SERVER`    | --database-server HOST       | database HOST incl. port e.g. "mariadb:3306" (or socket path)
 `PHOTOPRISM_DATABASE_NAME`      | --database-name NAME         | database schema NAME (default: "photoprism")
 `PHOTOPRISM_DATABASE_USER`      | --database-user NAME         | database user NAME (default: "photoprism")
 `PHOTOPRISM_DATABASE_PASSWORD`  | --database-password PASSWORD | database user PASSWORD

@@ -18,6 +18,9 @@ services:
     command: mysqld --innodb-buffer-pool-size=1G ...
 ```
 
+Advanced users can further improve the database performance by [changing additional parameters](https://github.com/photoprism/photoprism-docs/issues/102),
+for example, based on the recommendations provided by the [mysqltuner.pl](https://github.com/major/MySQLTuner-perl) script.
+
 !!! note ""
     Remember to also [increase the memory available to services](../img/docker-resources-advanced.jpg) in case you are
     using *Docker Desktop* on Windows or macOS. If PhotoPrism and MariaDB are running in a virtual machine, the available

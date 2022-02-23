@@ -95,7 +95,7 @@ Variable                        | Parameter                  | Description
 Variable                        | Parameter                    | Description
 :------------------------------ |:-----------------------------|:-------------------------------------------
 `PHOTOPRISM_DATABASE_DRIVER`    | --database-driver NAME       | database DRIVER (sqlite, mysql) (default: "sqlite")
-`PHOTOPRISM_DATABASE_DSN`       | --database-dsn DSN           | database connection DSN (sqlite filename, optional for mysql)
+`PHOTOPRISM_DATABASE_DSN`       | --database-dsn DSN           | database connection DSN ([sqlite filename](https://pkg.go.dev/github.com/mattn/go-sqlite3#readme-connection-string), optional for [mysql](https://github.com/go-sql-driver/mysql#address))
 `PHOTOPRISM_DATABASE_SERVER`    | --database-server HOST       | database HOST incl. port e.g. "mariadb:3306" (or socket path)
 `PHOTOPRISM_DATABASE_NAME`      | --database-name NAME         | database schema NAME (default: "photoprism")
 `PHOTOPRISM_DATABASE_USER`      | --database-user NAME         | database user NAME (default: "photoprism")

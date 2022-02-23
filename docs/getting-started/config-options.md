@@ -34,12 +34,12 @@ Variable                        | Parameter                  | Description
 
 ### Index Workers ###
 
-Variable                        | Parameter                  | Description
-:------------------------------ |:-------------------------- |:-------------------------------------------
-`PHOTOPRISM_WORKERS`            | --workers NUMBER, -w NUMBER | maximum NUMBER of indexing workers, default and limit depend on the number of CPU cores
-`PHOTOPRISM_WAKEUP_INTERVAL`    | --wakeup-interval SECONDS  | background worker wakeup interval in SECONDS (default: 900)
-`PHOTOPRISM_AUTO_INDEX`         | --auto-index SECONDS       | WebDAV auto indexing safety delay in SECONDS, disable with -1 (default: 300)
-`PHOTOPRISM_AUTO_IMPORT`        | --auto-import SECONDS      | WebDAV auto import safety delay in SECONDS, disable with -1 (default: 180)
+Variable                        | Parameter                    | Description
+:------------------------------ |:-----------------------------|:-------------------------------------------
+`PHOTOPRISM_WORKERS`            | --workers NUMBER, -w NUMBER  | maximum NUMBER of indexing workers, default and limit depend on the number of CPU cores
+`PHOTOPRISM_WAKEUP_INTERVAL`    | --wakeup-interval SECONDS    | background worker wakeup interval in SECONDS (default: 900)
+`PHOTOPRISM_AUTO_INDEX`         | --auto-index SECONDS         | WebDAV auto indexing safety delay in SECONDS, disable with -1 (default: 300)
+`PHOTOPRISM_AUTO_IMPORT`        | --auto-import SECONDS        | WebDAV auto import safety delay in SECONDS, disable with -1 (default: 180)
 
 ### Feature Flags ###
 
@@ -71,15 +71,15 @@ Variable                        | Parameter                  | Description
 
 ### Site Information ###
 
-Variable                        | Parameter                  | Description
-:------------------------------ |:-------------------------- |:-------------------------------------------
-`PHOTOPRISM_CDN_URL`            | --cdn-url URL              | optional content delivery network URL
-`PHOTOPRISM_SITE_URL`           | --site-url URL             | public site URL (default: "http://localhost:2342/")
+Variable                        | Parameter                      | Description
+:------------------------------ |:-------------------------------|:-------------------------------------------
+`PHOTOPRISM_CDN_URL`            | --cdn-url URL                  | optional content delivery network URL
+`PHOTOPRISM_SITE_URL`           | --site-url URL                 | public site URL (default: "http://localhost:2342/")
 `PHOTOPRISM_SITE_AUTHOR`        | --site-author COPYRIGHT        | site COPYRIGHT, artist, or owner name
 `PHOTOPRISM_SITE_TITLE`         | --site-title TITLE             | site TITLE (default: "PhotoPrism")
 `PHOTOPRISM_SITE_CAPTION`       | --site-caption CAPTION         | site CAPTION (default: "Browse Your Life")
 `PHOTOPRISM_SITE_DESCRIPTION`   | --site-description DESCRIPTION | optional site DESCRIPTION
-`PHOTOPRISM_SITE_PREVIEW`       | --site-preview URL         | optional preview image URL
+`PHOTOPRISM_SITE_PREVIEW`       | --site-preview URL             | optional preview image URL
 
 ### Web Server ###
 
@@ -92,33 +92,33 @@ Variable                        | Parameter                  | Description
 
 ### Database Connection ###
 
-Variable                        | Parameter                  | Description
-:------------------------------ |:-------------------------- |:-------------------------------------------
-`PHOTOPRISM_DATABASE_DRIVER`    | --database-driver NAME     | database DRIVER (sqlite or mysql) (default: "sqlite")
-`PHOTOPRISM_DATABASE_DSN`       | --database-dsn DSN         | sqlite file name, providing a DSN is optional for other drivers
-`PHOTOPRISM_DATABASE_SERVER`    | --database-server HOST     | database server HOST with optional port e.g. mysql:3306
-`PHOTOPRISM_DATABASE_NAME`      | --database-name NAME       | database schema NAME (default: "photoprism")
-`PHOTOPRISM_DATABASE_USER`      | --database-user NAME       | database user NAME (default: "photoprism")
+Variable                        | Parameter                    | Description
+:------------------------------ |:-----------------------------|:-------------------------------------------
+`PHOTOPRISM_DATABASE_DRIVER`    | --database-driver NAME       | database DRIVER (sqlite or mysql) (default: "sqlite")
+`PHOTOPRISM_DATABASE_DSN`       | --database-dsn DSN           | sqlite file name, providing a DSN is optional for other drivers
+`PHOTOPRISM_DATABASE_SERVER`    | --database-server HOST       | database server HOST with optional port e.g. mysql:3306
+`PHOTOPRISM_DATABASE_NAME`      | --database-name NAME         | database schema NAME (default: "photoprism")
+`PHOTOPRISM_DATABASE_USER`      | --database-user NAME         | database user NAME (default: "photoprism")
 `PHOTOPRISM_DATABASE_PASSWORD`  | --database-password PASSWORD | database user PASSWORD
-`PHOTOPRISM_DATABASE_CONNS`     | --database-conns NUMBER    | maximum NUMBER of open database connections
+`PHOTOPRISM_DATABASE_CONNS`     | --database-conns NUMBER      | maximum NUMBER of open database connections
 `PHOTOPRISM_DATABASE_CONNS_IDLE`| --database-conns-idle NUMBER | maximum NUMBER of idle database connections
 
 ### External Tools ###
 
-Variable                        | Parameter                  | Description
-:------------------------------ |:-------------------------- |:-------------------------------------------
-`PHOTOPRISM_RAW_PRESETS`        | --raw-presets              | enable RAW file converter presets (may reduce performance)
-`PHOTOPRISM_DARKTABLE_BIN`      | --darktable-bin COMMAND    | Darktable CLI COMMAND for RAW image conversion (default: "darktable-cli")
-`PHOTOPRISM_DARKTABLE_BLACKLIST` | --darktable-blacklist BLACKLIST | file EXTENSIONS incompatible with Darktable (default: "dng")
-`PHOTOPRISM_RAWTHERAPEE_BIN`    | --rawtherapee-bin COMMAND  | RawTherapee CLI COMMAND for RAW image conversion (default: "rawtherapee-cli")
+Variable                        | Parameter                         | Description
+:------------------------------ |:----------------------------------|:-------------------------------------------
+`PHOTOPRISM_RAW_PRESETS`        | --raw-presets                     | enable RAW file converter presets (may reduce performance)
+`PHOTOPRISM_DARKTABLE_BIN`      | --darktable-bin COMMAND           | Darktable CLI COMMAND for RAW image conversion (default: "darktable-cli")
+`PHOTOPRISM_DARKTABLE_BLACKLIST` | --darktable-blacklist BLACKLIST   | file EXTENSIONS incompatible with Darktable (default: "dng")
+`PHOTOPRISM_RAWTHERAPEE_BIN`    | --rawtherapee-bin COMMAND         | RawTherapee CLI COMMAND for RAW image conversion (default: "rawtherapee-cli")
 `PHOTOPRISM_RAWTHERAPEE_BLACKLIST` | --rawtherapee-blacklist BLACKLIST | file EXTENSIONS incompatible with RawTherapee
-`PHOTOPRISM_SIPS_BIN`           | --sips-bin FILENAME        | Sips COMMAND for RAW image conversion (macOS only) (default: "sips")
-`PHOTOPRISM_HEIFCONVERT_BIN`    | --heifconvert-bin COMMAND  | HEIC/HEIF image convert COMMAND (default: "heif-convert")
-`PHOTOPRISM_FFMPEG_BIN`         | --ffmpeg-bin COMMAND       | FFmpeg COMMAND for video transcoding and still image extraction (default: "ffmpeg")
-`PHOTOPRISM_FFMPEG_ENCODER`     | --ffmpeg-encoder NAME      | maximum FFmpeg encoding BITRATE (Mbit/s) (default: 50)
-`PHOTOPRISM_FFMPEG_BITRATE`     | --ffmpeg-bitrate LIMIT     | FFmpeg encoding bitrate LIMIT in Mbit/s (default: "50")
-`PHOTOPRISM_FFMPEG_BUFFERS`     | --ffmpeg-buffers           | NUMBER of FFmpeg capture buffers (default: 32)
-`PHOTOPRISM_EXIFTOOL_BIN`       | --exiftool-bin COMMAND     | ExifTool COMMAND for extracting metadata (default: "exiftool")
+`PHOTOPRISM_SIPS_BIN`           | --sips-bin FILENAME               | Sips COMMAND for RAW image conversion (macOS only) (default: "sips")
+`PHOTOPRISM_HEIFCONVERT_BIN`    | --heifconvert-bin COMMAND         | HEIC/HEIF image convert COMMAND (default: "heif-convert")
+`PHOTOPRISM_FFMPEG_BIN`         | --ffmpeg-bin COMMAND              | FFmpeg COMMAND for video transcoding and still image extraction (default: "ffmpeg")
+`PHOTOPRISM_FFMPEG_ENCODER`     | --ffmpeg-encoder NAME             | maximum FFmpeg encoding BITRATE (Mbit/s) (default: 50)
+`PHOTOPRISM_FFMPEG_BITRATE`     | --ffmpeg-bitrate LIMIT            | FFmpeg encoding bitrate LIMIT in Mbit/s (default: "50")
+`PHOTOPRISM_FFMPEG_BUFFERS`     | --ffmpeg-buffers                  | NUMBER of FFmpeg capture buffers (default: 32)
+`PHOTOPRISM_EXIFTOOL_BIN`       | --exiftool-bin COMMAND            | ExifTool COMMAND for extracting metadata (default: "exiftool")
 
 ### URL Tokens ###
 
@@ -129,14 +129,14 @@ Variable                        | Parameter                  | Description
 
 ### Image Quality ###
 
-Variable                        | Parameter                  | Description
-:------------------------------ |:-------------------------- |:-------------------------------------------
-`PHOTOPRISM_THUMB_FILTER`       | --thumb-filter FILTER, -f FILTER | thumbnail downscaling FILTER (best to worst: blackman, lanczos, cubic, linear) (default: "lanczos")
-`PHOTOPRISM_THUMB_SIZE`         | --thumb-size PIXELS, -s PIXELS | maximum pre-cached thumbnail image size in PIXELS (720-7680) (default: 2048)
-`PHOTOPRISM_THUMB_UNCACHED`     | --thumb-uncached, -u       | enable on-demand thumbnail generation (high memory and cpu usage)
+Variable                        | Parameter                               | Description
+:------------------------------ |:----------------------------------------|:-------------------------------------------
+`PHOTOPRISM_THUMB_FILTER`       | --thumb-filter FILTER, -f FILTER        | thumbnail downscaling FILTER (best to worst: blackman, lanczos, cubic, linear) (default: "lanczos")
+`PHOTOPRISM_THUMB_SIZE`         | --thumb-size PIXELS, -s PIXELS          | maximum pre-cached thumbnail image size in PIXELS (720-7680) (default: 2048)
+`PHOTOPRISM_THUMB_UNCACHED`     | --thumb-uncached, -u                    | enable on-demand thumbnail generation (high memory and cpu usage)
 `PHOTOPRISM_THUMB_SIZE_UNCACHED`| --thumb-size-uncached PIXELS, -x PIXELS | maximum size of on-demand generated thumbnails in PIXELS (720-7680) (default: 7680)
-`PHOTOPRISM_JPEG_SIZE`          | --jpeg-size PIXELS         | maximum size of generated JPEG images in PIXELS (720-30000) (default: 7680)
-`PHOTOPRISM_JPEG_QUALITY`       | --jpeg-quality QUALITY, -q QUALITY | QUALITY of generated JPEG images, a higher value reduces compression (25-100) (default: 92)
+`PHOTOPRISM_JPEG_SIZE`          | --jpeg-size PIXELS                      | maximum size of generated JPEG images in PIXELS (720-30000) (default: 7680)
+`PHOTOPRISM_JPEG_QUALITY`       | --jpeg-quality QUALITY, -q QUALITY      | QUALITY of generated JPEG images, a higher value reduces compression (25-100) (default: 92)
 
 ### Facial Recognition ###
 
@@ -152,16 +152,16 @@ Variable                        | Parameter                  | Description
 
 We recommend that only advanced users change these parameters:
 
-Variable                        | Parameter                  | Description
-:------------------------------ |:-------------------------- |:-------------------------------------------
-`PHOTOPRISM_FACE_SIZE`          | --face-size PIXELS         | minimum face size in PIXELS (default: 50)
-`PHOTOPRISM_FACE_SCORE`         | --face-score QUALITY       | minimum face QUALITY score (default: 9)
-`PHOTOPRISM_FACE_OVERLAP`       | --face-overlap PERCENT      | face area overlap threshold in PERCENT (default: 42)
-`PHOTOPRISM_FACE_CLUSTER_SIZE`  | --face-cluster-size PIXELS      | minimum size of automatically clustered faces in PIXELS (default: 80)
-`PHOTOPRISM_FACE_CLUSTER_SCORE` | --face-cluster-score QUALITY  | minimum QUALITY score of automatically clustered faces (default: 15)
-`PHOTOPRISM_FACE_CLUSTER_CORE`  | --face-cluster-core NUMBER | NUMBER of faces forming a cluster core (default: 4)
-`PHOTOPRISM_FACE_CLUSTER_DIST`  | --face-cluster-dist DISTANCE | similarity DISTANCE of faces forming a cluster core (default: 0.64)
-`PHOTOPRISM_FACE_MATCH_DIST`    | --face-match-dist OFFSET   | similarity OFFSET for matching faces with existing clusters (default: 0.46)
+Variable                        | Parameter                    | Description
+:------------------------------ |:-----------------------------|:-------------------------------------------
+`PHOTOPRISM_FACE_SIZE`          | --face-size PIXELS           | minimum face size in PIXELS (20-10000) (default: 50)
+`PHOTOPRISM_FACE_SCORE`         | --face-score QUALITY         | minimum face QUALITY score (1-100) (default: 9)
+`PHOTOPRISM_FACE_OVERLAP`       | --face-overlap PERCENT       | face area overlap threshold in PERCENT (1-100) (default: 42)
+`PHOTOPRISM_FACE_CLUSTER_SIZE`  | --face-cluster-size PIXELS   | minimum size of automatically clustered faces in PIXELS (20-10000) (default: 80)
+`PHOTOPRISM_FACE_CLUSTER_SCORE` | --face-cluster-score QUALITY | minimum QUALITY score of automatically clustered faces (1-100) (default: 15)
+`PHOTOPRISM_FACE_CLUSTER_CORE`  | --face-cluster-core NUMBER   | NUMBER of faces forming a cluster core (1-100) (default: 4)
+`PHOTOPRISM_FACE_CLUSTER_DIST`  | --face-cluster-dist DISTANCE | similarity DISTANCE of faces forming a cluster core (0.1-1.5) (default: 0.64)
+`PHOTOPRISM_FACE_MATCH_DIST`    | --face-match-dist OFFSET     | similarity OFFSET for matching faces with existing clusters (0.1-1.5) (default: 0.46)
 
 ### Daemon Mode ###
 

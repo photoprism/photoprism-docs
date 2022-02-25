@@ -5,9 +5,11 @@ Labels are set automatically when adding new photos.
 You can manually add new labels or edit/remove the ones that have been created by us.
 
 In *Labels* you find all labels of your photos and videos. 
-You can star labels by clicking :material-star:. Stared labels will be listed first.
+You can star labels by clicking :material-star:. Starred labels will be listed first.
 
-To see only labels with high priority click :material-eye: in the upper right corner.
+PhotoPrism also attaches each generated label to a broader group (or category) of labels. For example, there is a general category 'vehicle' which will include labels such as 'cab', 'catamaran', 'lifeboat' and 'bullet train'. These broad label categories cannot be edited, but can be used in a search, in an identical way to all other labels.
+
+You may wish to see these broad label categories in addition to the usual labels in the *Labels* pages. Clicking the icon in the upper right-hand corner :material-eye: will switch between turning them on ('Show More') and off ('Show Less'). You can also include these label categories as part of a more complex search filter - the label categories from your photos will appear in the search filter bar as a drop-down selection under the option 'All Categories'.
 
 ![Screenshot](img/labels-1.png)
 

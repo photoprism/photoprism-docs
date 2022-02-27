@@ -15,7 +15,7 @@ The Docker image of our [upcoming release](https://hub.docker.com/r/photoprism/p
 
 - Auth: [New login page with space for additional buttons, links, and legal information](https://github.com/photoprism/photoprism/issues/782)
 - UX: [Redesigned metadata details in the files tab of the edit dialog](https://github.com/photoprism/photoprism/issues/2017)
-- iOS: [Improved long-touch responsiveness for selecting multiple items](https://github.com/photoprism/photoprism/issues/2074)
+- iOS: [Improved touch responsiveness when selecting multiple items](https://github.com/photoprism/photoprism/issues/2074)
 - API: [Added cache control header for faster thumbnail loading](https://github.com/photoprism/photoprism/issues/822#issuecomment-1046276315)
 - WebDAV: [Fixed upload of complete albums](https://github.com/photoprism/photoprism/issues/1376)
 - Config: [Simplified configuration of Unix domain socket database connections](https://github.com/photoprism/photoprism/commit/9c1325f38ec38bc4ca01df4ca8bc723841cc7cc7)

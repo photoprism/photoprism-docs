@@ -17,11 +17,11 @@ Just try it!
 ## Search Filter ##
 Additionally to the search you can set the following filters using the filter bar:
 
-* Country, Year, Order, Camera, Lens, Color, Category
+* Country, Year, Month, Order, Camera, Color, Category
 
 In case you set multiple filters only photos, that fulfill all filter criteria, are shown in the search result.
 
- ![Screenshot](img/color-red.png)
+ ![Screenshot](img/search-1.png)
 
 !!! tip ""
     You can use filters in the search bar like this:
@@ -32,7 +32,7 @@ In case you set multiple filters only photos, that fulfill all filter criteria, 
     
     You find the full list of filters below.
     
-   ![Screenshot](img/color-green.png)
+   ![Screenshot](img/search-2.png)
 
 ## AND Search ##
 To combine different filters use a space as separator:

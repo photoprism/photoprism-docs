@@ -18,7 +18,7 @@ Behind the scenes, the build process has also been improved so that it will be e
 - Auth: [New login screen with more space for buttons, links, and legal information](https://github.com/photoprism/photoprism/issues/782)
 - Metadata: [Redesigned file details tab in the edit dialog](https://github.com/photoprism/photoprism/issues/2017)
 - Metadata: [Support for Zulu formatted timestamps in Exiftool JSON and XMP](https://github.com/photoprism/photoprism/issues/2082)
-- Sharing: [Fixed uploading complete albums via WebDAV](https://github.com/photoprism/photoprism/issues/1376)
+- Sharing: [Fixed upload of complete albums via WebDAV](https://github.com/photoprism/photoprism/issues/1376)
 - iOS: [Fixed multi-select via long touch in Safari PWA mode](https://github.com/photoprism/photoprism/issues/2074)
 - API: [Added cache control header for faster thumbnail loading](https://github.com/photoprism/photoprism/issues/822#issuecomment-1046276315)
 - Config: [Simplified configuration of Unix domain socket database connections](https://github.com/photoprism/photoprism/commit/9c1325f38ec38bc4ca01df4ca8bc723841cc7cc7)

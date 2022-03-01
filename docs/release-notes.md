@@ -11,17 +11,19 @@
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/). 
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
-The Docker image of our [upcoming release](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) is based on Debian 11 "Bullseye" instead of Ubuntu Server. It is smaller and comes with many updated dependencies like [Darktable 3.8.1](https://www.darktable.org/2022/02/darktable-3.8.1-released/). The new build process also makes it easier to provide standalone packages in the near future.
+The Docker image of our [upcoming release](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview)
+is based on Debian 11 "Bullseye" and includes many updated dependencies such as [Darktable 3.8](https://www.darktable.org/2022/02/darktable-3.8.1-released/).
+The new build process also makes it easier to provide standalone packages in the future.
 
-- Auth: [New login page with space for additional buttons, links, and legal information](https://github.com/photoprism/photoprism/issues/782)
+- Auth: [New login screen with more space for buttons, links, and legal information](https://github.com/photoprism/photoprism/issues/782)
+- Metadata: [Redesigned file details tab in edit dialog](https://github.com/photoprism/photoprism/issues/2017)
+- Metadata: [Support for Zulu formatted timestamps in Exiftool JSON and XMP](https://github.com/photoprism/photoprism/issues/2082)
 - Sharing: [Fixed uploading complete albums via WebDAV](https://github.com/photoprism/photoprism/issues/1376)
-- iOS: [Improved touch responsiveness when selecting multiple items](https://github.com/photoprism/photoprism/issues/2074)
-- UX: [Redesigned metadata details in the files tab of the edit dialog](https://github.com/photoprism/photoprism/issues/2017)
+- iOS: [Fixed multi-select via long touch in Safari PWA mode](https://github.com/photoprism/photoprism/issues/2074)
 - API: [Added cache control header for faster thumbnail loading](https://github.com/photoprism/photoprism/issues/822#issuecomment-1046276315)
 - Config: [Simplified configuration of Unix domain socket database connections](https://github.com/photoprism/photoprism/commit/9c1325f38ec38bc4ca01df4ca8bc723841cc7cc7)
 - Config: [Added `--imprint` and `--imprint-url` to display legal information in the footer](https://github.com/photoprism/photoprism/issues/1990)
-- Docker: [Automatic detection of compatible CPU and GPU drivers](https://github.com/photoprism/photoprism/issues/1337)
-- ...as well as many other improvements!
+- Docker: [Automatic installation of compatible CPU and GPU drivers](https://github.com/photoprism/photoprism/issues/2076)
 
 ### January 21, 2022 ###
 <span class="build">Build 220121-2b4c8e1f</span>

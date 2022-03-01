@@ -16,7 +16,7 @@ The [new Docker image](https://hub.docker.com/r/photoprism/photoprism/tags) for 
 Behind the scenes, the build process has also been improved so that it will be easier to build standalone packages in the future.
 
 - Auth: [New login screen with more space for buttons, links, and legal information](https://github.com/photoprism/photoprism/issues/782)
-- Metadata: [Redesigned file details tab in edit dialog](https://github.com/photoprism/photoprism/issues/2017)
+- Metadata: [Redesigned file details tab in the edit dialog](https://github.com/photoprism/photoprism/issues/2017)
 - Metadata: [Support for Zulu formatted timestamps in Exiftool JSON and XMP](https://github.com/photoprism/photoprism/issues/2082)
 - Sharing: [Fixed uploading complete albums via WebDAV](https://github.com/photoprism/photoprism/issues/1376)
 - iOS: [Fixed multi-select via long touch in Safari PWA mode](https://github.com/photoprism/photoprism/issues/2074)

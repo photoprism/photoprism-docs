@@ -24,6 +24,9 @@ The new build process also makes it easier to provide standalone packages in the
 - Config: [Simplified configuration of Unix domain socket database connections](https://github.com/photoprism/photoprism/commit/9c1325f38ec38bc4ca01df4ca8bc723841cc7cc7)
 - Config: [Added `--imprint` and `--imprint-url` to display legal information in the footer](https://github.com/photoprism/photoprism/issues/1990)
 - Docker: [Automatic installation of compatible CPU and GPU drivers](https://github.com/photoprism/photoprism/issues/2076)
+- Translations: [Updated all front- and backend locales](https://github.com/photoprism/photoprism/issues/2083)
+
+*You can now join us on [translate.photoprism.app](https://translate.photoprism.app/) to help translate the UI!*
 
 ### January 21, 2022 ###
 <span class="build">Build 220121-2b4c8e1f</span>

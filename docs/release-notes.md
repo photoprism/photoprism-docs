@@ -12,7 +12,7 @@
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
 ### March 2, 2022 ###
-<span class="build">Build 220302-a6436b59</span>
+<span class="build">Build 220302-0059f429</span>
 
 The new [Docker image](https://hub.docker.com/r/photoprism/photoprism/tags) for this release is based on Debian 11
 "Bullseye" and includes many updated dependencies such as [Darktable 3.8](https://www.darktable.org/2022/02/darktable-3.8.1-released/).

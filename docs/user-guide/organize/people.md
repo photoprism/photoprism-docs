@@ -37,6 +37,7 @@ There can be several reasons why a face was not detected:
 - Reducing the resolution or quality of generated [thumbnails](../settings/advanced.md) negatively impacts face detection and recognition results, just like when you cannot see properly
 - Contrast plays a major role, so a bright face with gray hair on a gray background may be less obvious to our face detection than it is to you
 - In very rare cases an actual face may match a blacklist of false positives, like background noise and food that looks like a face
+- Make sure indexing of new files is finished. Face detection starts **after** indexing is done.
 
 !!! info "" 
     Recognition compares the similarity of faces. The similarity threshold for a face is reduced when 

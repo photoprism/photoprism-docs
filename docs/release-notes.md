@@ -11,7 +11,10 @@
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/). 
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
-The [new Docker image](https://hub.docker.com/r/photoprism/photoprism/tags) for this release is based on Debian 11
+### March 2, 2022 ###
+<span class="build">Build 220302-a6436b59</span>
+
+The new [Docker image](https://hub.docker.com/r/photoprism/photoprism/tags) for this release is based on Debian 11
 "Bullseye" and includes many updated dependencies such as [Darktable 3.8](https://www.darktable.org/2022/02/darktable-3.8.1-released/).
 Behind the scenes, the build process has also been improved so that it will be easier to provide standalone packages in the future.
 

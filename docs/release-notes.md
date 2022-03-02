@@ -14,8 +14,8 @@
 ### March 2, 2022 ###
 <span class="build">Build 220302-0059f429</span>
 
-The new [Docker image](https://hub.docker.com/r/photoprism/photoprism/tags) for this release is based on Debian 11
-"Bullseye" and includes many updated dependencies such as [Darktable 3.8](https://www.darktable.org/2022/02/darktable-3.8.1-released/).
+The new [Docker images](https://hub.docker.com/r/photoprism/photoprism/tags) for this release are based on Debian 11
+"Bullseye" and include many updated dependencies such as [Darktable 3.8](https://www.darktable.org/2022/02/darktable-3.8.1-released/).
 Behind the scenes, the build process has also been improved so that it will be easier to provide standalone packages in the future.
 
 - Auth: [New login screen with more space for buttons, links, and legal information](https://github.com/photoprism/photoprism/issues/782)

@@ -383,7 +383,7 @@ volumes:
 Podman works just fine both in rootless and under root. Mind the SELinux which is enabled on 
 Red Hat compatible systems, you may hit permission error problems. 
 
-More details on on how to run PhotoPrism with [Podman](https://podman.io/) on CentOS in 
+More details on how to run PhotoPrism with [Podman](https://podman.io/) on CentOS in 
 [this blog post](https://lukas.zapletalovi.com/2020/01/deploy-photoprism-in-centos-80.html), 
 it includes all the details including root and rootless modes, user mapping and SELinux.
 

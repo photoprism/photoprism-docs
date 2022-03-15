@@ -80,6 +80,7 @@ Variable                        | Parameter                      | Description
 `PHOTOPRISM_SITE_CAPTION`       | --site-caption CAPTION         | site CAPTION (default: "Browse Your Life")
 `PHOTOPRISM_SITE_DESCRIPTION`   | --site-description DESCRIPTION | optional site DESCRIPTION
 `PHOTOPRISM_SITE_PREVIEW`       | --site-preview URL             | optional preview image URL
+`PHOTOPRISM_IMPRINT`            | --imprint INFO                 | legal INFO, displayed in the page footer ([sponsor feature](../funding.md)) 
 
 ### Web Server ###
 

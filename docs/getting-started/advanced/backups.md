@@ -2,7 +2,7 @@
 
 A full backup of your PhotoPrism instance includes:
 
-1. All photo, video, and sidecar files in your `originals` folder
+1. All content from your `originals` folder
 2. An index database SQL dump
 
 The best way to create an index backup is to run this command in a terminal:

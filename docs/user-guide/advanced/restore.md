@@ -2,7 +2,7 @@
 
 In order to fully restore your PhotoPrism instance you need the following:
 
-* All photo, video, and sidecar files in your `originals` folder
+* All content from your `originals` folder
 * An index database SQL dump
 
 (A backup based on [our documentation](../../getting-started/advanced/backups.md) will be enough)

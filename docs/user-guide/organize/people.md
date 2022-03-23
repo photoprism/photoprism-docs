@@ -5,7 +5,7 @@ of your family and friends. Be ready to discover long forgotten shots! New faces
 you scan your library. They are then grouped by similarity, so you can quickly match them to people.
 
 !!! note ""
-    Face recognition does not start until your library has been fully scanned. Searching and updating faces
+    Recognition does not start until your library has been fully scanned. Searching and updating faces
     temporarily causes a high CPU load and may take a while, depending on your hardware and the number of
     images you have.
 

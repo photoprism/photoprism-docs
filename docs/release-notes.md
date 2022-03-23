@@ -11,7 +11,7 @@
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/). 
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
-- UX: [Fixed search form event handling](https://github.com/photoprism/photoprism/issues/1995)
+- UX: [Faster and more intuitive handling of search query changes](https://github.com/photoprism/photoprism/issues/1995)
 - Config: [Added NVIDIA hardware video transcoding support](https://github.com/photoprism/photoprism/issues/2125)
 - Docker: [Upgraded base image to Debian 12 "Bookworm"](https://github.com/photoprism/photoprism/issues/2178)
 

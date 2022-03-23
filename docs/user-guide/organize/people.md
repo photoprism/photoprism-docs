@@ -1,14 +1,17 @@
 # Facial Recognition
 
-Our [latest version](../../release-notes.md) includes facial recognition that lets you find pictures of your 
-family and friends. Be ready to discover long-forgotten shots! New faces are detected as you scan your library. 
-They are then grouped by similarity, so you can quickly match them to people. 
+Our [latest version](../../release-notes.md) includes facial recognition that lets you find pictures
+of your family and friends. Be ready to discover long forgotten shots! New faces are detected as
+you scan your library. They are then grouped by similarity, so you can quickly match them to people.
+
+!!! note ""
+    Face recognition does not start until your library has been fully scanned. Searching and updating faces
+    temporarily causes a high CPU load and may take a while, depending on your hardware and the number of
+    images you have.
 
 !!! tldr ""
-    Grouping faces to clusters may take a while, depending on your hardware and how many pictures you have.
-    It can also cause a temporarily high CPU load. Existing clusters will be automatically optimized in 
-    the background, for example after new faces have been identified, you've reported a bad match, or new 
-    files have been added to your library.
+    Existing clusters are automatically optimized in the background, for example, when new
+    faces are detected, you have reported a bad match, or new files are added to your library.
 
 ## Recognized & New People ##
 
@@ -19,27 +22,29 @@ To star a person click :material-star:. Stared persons appear first.
 ![Screenshot](img/recognized-new.png)
 ![Screenshot](img/new-new.png)
 
-!!! info ""
-    **The new faces page shows automatically recognized face clusters only.** There may be thousands of 
-    unidentified faces in your library including random people such as news speakers or faces on shampoo bottles.
-    You can use the search filter `face:new` to find pictures containing unknown people.
-    We recommend combining it with other filters, like year or location, when looking for specific people.
-    The *People* tab in the photo [edit dialog](edit.md) displays all faces, so you can name them
-    or report a bad match by pressing the :material-eject: button.
+### Why doesn't the New Faces page show all faces? ###
+
+The 'New Faces' page only shows automatically recognized face clusters, as there may be thousands
+of unknown faces in your library, including random movie actors or faces on shampoo bottles.
+
+You can use the `face:new` search filter to find images with unknown people.
+We recommend combining this filter with other filters like year or location
+when searching for specific people. The *People* tab in the photo [edit dialog](edit.md)
+shows all faces, so you can name them or report a bad match by pressing the :material-eject: button.
 
 ### When a face was not detected... ###
 
 There can be several reasons why a face was not detected:
 
+- You may need to wait until indexing is complete, as face recognition will not begin until your library has been scanned
 - Only the primary file in stacks will be searched for faces
 - Faces can be smaller than the minimum size configured
 - Our face detection did not scan the image thoroughly enough
 - Reducing the resolution or quality of generated [thumbnails](../settings/advanced.md) negatively impacts face detection and recognition results, just like when you cannot see properly
 - Contrast plays a major role, so a bright face with gray hair on a gray background may be less obvious to our face detection than it is to you
 - In very rare cases an actual face may match a blacklist of false positives, like background noise and food that looks like a face
-- Make sure indexing of new files is finished. Face detection starts **after** indexing is done.
 
-!!! info "" 
+!!! tldr "" 
     Recognition compares the similarity of faces. The similarity threshold for a face is reduced when 
     you report a bad match.
 
@@ -67,16 +72,15 @@ There can be several reasons why a face was not detected:
 The person you just added will appear under *Recognized*
 
 ## Hiding People ##
+
 You can hide a person in the *Recognized* section by clicking :material-close: in the upper right corner.
+Pictures of this person continue to be visible in search results and albums.
 
 !!! example ""
     **This currently is a sponsor feature to thank everyone who supports the development of this application.**
     We'll let you know how to enable it when you sign up on [Patreon](https://link.photoprism.app/patreon) or [GitHub Sponsors](https://link.photoprism.app/sponsor).
     Your continued support [helps us](../../funding.md) provide [regular updates](https://docs.photoprism.app/release-notes/)
     and services like [world maps](https://try.photoprism.app/places). Thank you! 💜
-
-!!! attention ""
-    Pictures of this person continue to be visible in search results and albums.
 
 ![Screenshot](img/person-hide-new.png)
 

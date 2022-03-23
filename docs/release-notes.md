@@ -11,10 +11,13 @@
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/). 
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
+- Config: [Added NVIDIA hardware video transcoding support](https://github.com/photoprism/photoprism/issues/2125)
+- Docker: [Upgraded base image to Debian 12 "Bookworm"](https://github.com/photoprism/photoprism/issues/2178)
+
 ### March 2, 2022 ###
 <span class="build">Build 220302-0059f429</span>
 
-The new [Docker images](https://hub.docker.com/r/photoprism/photoprism/tags) for this release are based on Debian 11
+The [Docker images](https://hub.docker.com/r/photoprism/photoprism/tags) for this release are based on Debian 11
 "Bullseye" and include many updated dependencies such as [Darktable 3.8](https://www.darktable.org/2022/02/darktable-3.8.1-released/).
 Behind the scenes, the build process has also been improved so that it will be easier to provide standalone packages in the future.
 

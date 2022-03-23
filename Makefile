@@ -15,4 +15,5 @@ update-mkdocs-material:
 watch:
 	docker run --rm -u $(UID):$(GID) -it -p 8000:8000 -v ${PWD}:/docs photoprism/mkdocs-material:latest
 deploy:
-	docker run --rm -u 0:0 -it -v ~/.ssh/id_rsa:/root/.ssh/id_rsa:ro -v ~/.ssh/id_rsa.pub:/root/.ssh/id_rsa.pub:ro  -v ${PWD}:/docs photoprism/mkdocs-material:latest gh-deploy
+	docker run --rm -it -v ~/.ssh/id_rsa:/root/.ssh/id_rsa:ro -v ~/.ssh/id_rsa.pub:/root/.ssh/id_rsa.pub:ro \
+ 	-v ~/.ssh/known_hosts:/root/.ssh/known_hosts -v ${PWD}:/docs photoprism/mkdocs-material:latest gh-deploy

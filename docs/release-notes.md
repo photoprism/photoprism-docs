@@ -11,6 +11,8 @@
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/). 
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
+- Search: [Album names starting with a number can now be found](https://github.com/photoprism/photoprism/issues/1994)
+- Search: [Camera and lens can now be filtered by name](https://github.com/photoprism/photoprism/issues/2079)
 - UX: [Faster and more intuitive handling of search query changes](https://github.com/photoprism/photoprism/issues/1995)
 - UX: [Increased the number of searchable albums in the "Add to album" dialog](https://github.com/photoprism/photoprism/pull/2152)
 - Config: [Added NVIDIA hardware video transcoding support](https://github.com/photoprism/photoprism/issues/2125)

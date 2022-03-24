@@ -12,6 +12,7 @@
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
 - UX: [Faster and more intuitive handling of search query changes](https://github.com/photoprism/photoprism/issues/1995)
+- UX: [Increased the number of searchable albums in the "Add to album" dialog](https://github.com/photoprism/photoprism/pull/2152)
 - Config: [Added NVIDIA hardware video transcoding support](https://github.com/photoprism/photoprism/issues/2125)
 - Docker: [Upgraded base image to Debian 12 "Bookworm"](https://github.com/photoprism/photoprism/issues/2178)
 

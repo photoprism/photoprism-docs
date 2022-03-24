@@ -66,8 +66,8 @@ docker pull --platform=arm64 photoprism/photoprism:latest
 
 It may also help to set the `DOCKER_DEFAULT_PLATFORM` environment variable to `linux/arm64`.
 
-In case you see Docker errors related to "cgroups", try adding the following parameters 
-to `/boot/firmware/cmdline.txt`:
+In case you see Docker errors related to "cgroups", try adding the following parameters to 
+`/boot/firmware/cmdline.txt` or `/boot/cmdline.txt` (file location depends on the OS in use):
 
 ```
 cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1

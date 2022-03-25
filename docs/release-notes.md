@@ -17,7 +17,7 @@
 - Search: [Improved `camera:...` and `lens:...` filters accept camera/lens names in addition to numeric ids](https://github.com/photoprism/photoprism/issues/2079)
 - Albums: [Title and slug are shortened if necessary to avoid errors when saving](https://github.com/photoprism/photoprism/issues/2181)
 - Config: [Added NVIDIA hardware video transcoding support](https://github.com/photoprism/photoprism/issues/2125)
-- Docker: [Upgraded base image to Debian 12 "Bookworm"](https://github.com/photoprism/photoprism/issues/2178)
+- Docker: [Upgraded base image to Debian 12 "Bookworm", which includes FFmpeg 4.4.1 and Darktable 3.8.1](https://github.com/photoprism/photoprism/issues/2178)
 
 ### March 2, 2022 ###
 <span class="build">Build 220302-0059f429</span>

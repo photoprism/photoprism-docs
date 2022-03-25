@@ -11,10 +11,10 @@
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/). 
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
-- UX: [Faster and more intuitive handling of search query changes](https://github.com/photoprism/photoprism/issues/1995)
-- UX: [Increased the number of searchable albums in the "Add to album" dialog](https://github.com/photoprism/photoprism/pull/2152)
-- Search: [Improved `album:...` filter allows searching for numeric album names, `albums:..` also supports AND/OR conditions](https://github.com/photoprism/photoprism/issues/1994)
-- Search: [Improved `camera:...` and `lens:...` filters now accept camera/lens names as parameters](https://github.com/photoprism/photoprism/issues/2079)
+- UX: [Fixed typing lag when entering queries in the search toolbar](https://github.com/photoprism/photoprism/issues/1995)
+- UX: ["Add to album" dialog preloads more items for auto-completion](https://github.com/photoprism/photoprism/pull/2152)
+- Search: [Improved `album:...` filter allows searching for numeric names, `albums:..` also supports AND/OR conditions](https://github.com/photoprism/photoprism/issues/1994)
+- Search: [In addition to numeric ids, the `camera:...` and `lens:...` filters accept camera/lens names](https://github.com/photoprism/photoprism/issues/2079)
 - Albums: [Title and slug are shortened if necessary to avoid errors when saving](https://github.com/photoprism/photoprism/issues/2181)
 - Config: [Added NVIDIA hardware video transcoding support](https://github.com/photoprism/photoprism/issues/2125)
 - Docker: [Upgraded base image to Debian 12 "Bookworm"](https://github.com/photoprism/photoprism/issues/2178)

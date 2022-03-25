@@ -116,7 +116,7 @@ Variable                        | Parameter                         | Descriptio
 `PHOTOPRISM_SIPS_BIN`           | --sips-bin FILENAME               | Sips COMMAND for RAW image conversion (macOS only) (default: "sips")
 `PHOTOPRISM_HEIFCONVERT_BIN`    | --heifconvert-bin COMMAND         | HEIC/HEIF image convert COMMAND (default: "heif-convert")
 `PHOTOPRISM_FFMPEG_BIN`         | --ffmpeg-bin COMMAND              | FFmpeg COMMAND for video transcoding and still image extraction (default: "ffmpeg")
-`PHOTOPRISM_FFMPEG_ENCODER`     | --ffmpeg-encoder NAME             | maximum FFmpeg encoding BITRATE (Mbit/s) (default: 50)
+`PHOTOPRISM_FFMPEG_ENCODER`     | --ffmpeg-encoder NAME             | FFmpeg encoder to use (default: "libx264")
 `PHOTOPRISM_FFMPEG_BITRATE`     | --ffmpeg-bitrate LIMIT            | FFmpeg encoding bitrate LIMIT in Mbit/s (default: "50")
 `PHOTOPRISM_FFMPEG_BUFFERS`     | --ffmpeg-buffers                  | NUMBER of FFmpeg capture buffers (default: 32)
 `PHOTOPRISM_EXIFTOOL_BIN`       | --exiftool-bin COMMAND            | ExifTool COMMAND for extracting metadata (default: "exiftool")

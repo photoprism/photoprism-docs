@@ -11,7 +11,7 @@
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/). 
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
-- UX: [Fixed typing lag when entering queries in the search toolbar](https://github.com/photoprism/photoprism/issues/1995)
+- UX: [Fixed occasional typing lag when entering queries in the search toolbar](https://github.com/photoprism/photoprism/issues/1995)
 - UX: ["Add to album" dialog preloads more items for auto-completion](https://github.com/photoprism/photoprism/pull/2152)
 - Search: [Improved `album:...` filter allows searching for numeric names, `albums:..` also supports AND/OR conditions via `&` and `|`](https://github.com/photoprism/photoprism/issues/1994)
 - Search: [Improved `camera:...` and `lens:...` filters accept camera/lens names in addition to numeric ids](https://github.com/photoprism/photoprism/issues/2079)

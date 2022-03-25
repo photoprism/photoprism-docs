@@ -20,7 +20,7 @@ languages have been added and updated. Thanks to all involved!
 - Search: [Improved `camera:...` and `lens:...` filters accept camera/lens names in addition to numeric ids](https://github.com/photoprism/photoprism/issues/2079)
 - Metadata: [Improved parsing of timestamps from Exif and JSON sidecar files](https://github.com/photoprism/photoprism/issues/625)
 - Albums: ["Add to album" dialog preloads more items for auto-completion](https://github.com/photoprism/photoprism/pull/2152)
-- Albums: [If necessary, album name and slug are shortened to avoid errors when saving](https://github.com/photoprism/photoprism/issues/2181)
+- Albums: [If necessary, album names and slugs are shortened to avoid errors when saving](https://github.com/photoprism/photoprism/issues/2181)
 - Config: [Added NVIDIA hardware video transcoding support for sponsors](https://github.com/photoprism/photoprism/issues/2125)
 - Docker: [Upgraded base image to Debian 12 "Bookworm", which includes FFmpeg 4.4.1 and Darktable 3.8.1](https://github.com/photoprism/photoprism/issues/2178)
 

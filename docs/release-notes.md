@@ -11,11 +11,16 @@
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/). 
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
+This update features search UX improvements, a new Docker base image based on Debian 12 "Bookworm",
+as well as fixes for recently discovered issues. Front- and backend [translations](https://translate.photoprism.app/) in numerous
+languages have been added and updated. Thanks to all involved!
+
 - UX: [Fixed occasional typing lag when entering queries in the search toolbar](https://github.com/photoprism/photoprism/issues/1995)
 - Search: [Improved `album:...` filter allows searching for numeric names, `albums:..` also supports AND/OR conditions via `&` and `|`](https://github.com/photoprism/photoprism/issues/1994)
 - Search: [Improved `camera:...` and `lens:...` filters accept camera/lens names in addition to numeric ids](https://github.com/photoprism/photoprism/issues/2079)
 - Albums: ["Add to album" dialog preloads more items for auto-completion](https://github.com/photoprism/photoprism/pull/2152)
 - Albums: [If necessary, album name and slug are shortened to avoid errors when saving](https://github.com/photoprism/photoprism/issues/2181)
+- Metadata: [Improved parsing of (incomplete) timestamps in Exif headers and JSON sidecar files](https://github.com/photoprism/photoprism/issues/625)
 - Config: [Added NVIDIA hardware video transcoding support for sponsors](https://github.com/photoprism/photoprism/issues/2125)
 - Docker: [Upgraded base image to Debian 12 "Bookworm", which includes FFmpeg 4.4.1 and Darktable 3.8.1](https://github.com/photoprism/photoprism/issues/2178)
 

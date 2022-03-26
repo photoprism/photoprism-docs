@@ -38,7 +38,9 @@ When reporting a problem, always include the software versions you are using and
 such as [browser, browser plugins](../getting-started/troubleshooting/browsers.md), operating system, storage type,
 memory size, and processor.
 
-**We kindly ask you not to report bugs via GitHub Issues unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.**
+We kindly ask you not to report bugs via GitHub Issues **unless you are certain to have found a fully reproducible and previously unreported issue** that must be fixed directly in the app.
+
+Note that all issue **subscribers receive an email notification** from GitHub for each new comment, so these should only be used for sharing important information and not for personal discussions/questions.
 
 ## Submitting Pull Requests ##
 

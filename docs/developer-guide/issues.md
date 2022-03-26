@@ -4,10 +4,11 @@ We use [GitHub issues](https://github.com/photoprism/photoprism/issues) for mana
 [ideas](https://github.com/photoprism/photoprism/labels/idea),
 and [todos](https://github.com/photoprism/photoprism/labels/todo).
 Issues labeled [help wanted](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) / [easy](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3Aeasy) can be good (first) contributions.
-
 Don't hesitate to [contact us](../contact.md) if you want to work on something specific or need [help with a pull request](pull-requests.md). 
-We kindly ask you not to [report bugs](index.md#creating-bug-reports) via *GitHub Issues* unless you are certain to have
-found a fully reproducible and previously unreported issue that must be fixed directly in the app.
+
+We kindly ask you not to [report bugs](index.md#creating-bug-reports) via GitHub Issues **unless you are certain to have found a fully reproducible and previously unreported issue** that must be fixed directly in the app.
+
+Note that all issue **subscribers receive an email notification** from GitHub for each new comment, so these should only be used for sharing important information and not for personal discussions/questions.
 
 ### How to Write User Stories ###
 

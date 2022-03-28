@@ -20,10 +20,10 @@ languages have been added and updated. Thanks to all involved!
 - Search: [Improved `camera:...` and `lens:...` filters accept camera/lens names in addition to numeric ids](https://github.com/photoprism/photoprism/issues/2079)
 - Albums: ["Add to album" dialog preloads more items for auto-completion](https://github.com/photoprism/photoprism/pull/2152)
 - Albums: [Album names and slugs are shortened if necessary to avoid saving errors](https://github.com/photoprism/photoprism/issues/2181)
-- Index: [Disabled hidden files warning while indexing as it can be misleading](https://github.com/photoprism/photoprism/issues/2189)
+- Library: [Disabled hidden files warning while indexing as it can be misleading](https://github.com/photoprism/photoprism/issues/2189)
+- Metadata: [Fault-tolerant parsing of timestamps from Exif and JSON sidecar files](https://github.com/photoprism/photoprism/issues/625)
 - WebDAV: [Up- and download sync can no longer be enabled at the same time to prevent unexpected behavior](https://github.com/photoprism/photoprism/issues/1785)
 - WebDAV: [Added timeout/retry settings and improved handling of sync errors](https://github.com/photoprism/photoprism/issues/1781)
-- Metadata: [Fault-tolerant parsing of timestamps from Exif and JSON sidecar files](https://github.com/photoprism/photoprism/issues/625)
 - Config: [Added NVIDIA hardware video transcoding support for sponsors](https://github.com/photoprism/photoprism/issues/2125)
 - Docker: [Upgraded base image to Debian 12 "Bookworm", which includes FFmpeg 4.4.1 and Darktable 3.8.1](https://github.com/photoprism/photoprism/issues/2178)
 

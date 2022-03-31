@@ -15,6 +15,7 @@ This update features search UX improvements, a new Docker base image based on De
 as well as fixes for recently discovered issues. Front- and backend [translations](https://translate.photoprism.app/) in numerous
 languages have been added and updated. Thanks to all involved!
 
+- Search: [User interface and database performance optimizations](https://github.com/photoprism/photoprism/issues/1438)
 - Search: [Fixed occasional lag when entering queries in the search toolbar](https://github.com/photoprism/photoprism/issues/1995)
 - Search: [Improved `album:...` filter allows searching for numeric names, `albums:..` also supports AND/OR conditions via `&` and `|`](https://github.com/photoprism/photoprism/issues/1994)
 - Search: [Improved `camera:...` and `lens:...` filters accept camera/lens names in addition to numeric ids](https://github.com/photoprism/photoprism/issues/2079)

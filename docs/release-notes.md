@@ -22,7 +22,7 @@ languages have been added and updated. Thanks to all involved!
 - Albums: ["Add to album" dialog preloads more items for auto-completion](https://github.com/photoprism/photoprism/pull/2152)
 - Albums: [Album names and slugs are shortened if necessary to avoid saving errors](https://github.com/photoprism/photoprism/issues/2181)
 - Library: [Disabled hidden files warning while indexing as it can be misleading](https://github.com/photoprism/photoprism/issues/2189)
-- Thumbnails: [Reduced default JPEG quality from 92 to 85 to optimize storage size and load time](https://github.com/photoprism/photoprism/issues/2215)
+- Thumbnails: [Reduced default JPEG quality from 92 to 85 to optimize storage and loading](https://github.com/photoprism/photoprism/issues/2215)
 - Metadata: [Fault-tolerant parsing of timestamps from Exif and JSON sidecar files](https://github.com/photoprism/photoprism/issues/625)
 - Metadata: [Omit brute-force search for standard file formats if no Exif headers were found](https://github.com/photoprism/photoprism/issues/2196)
 - Metadata: [Fixed Exif orientation flag when converting HEIC photos to JPEG](https://github.com/photoprism/photoprism/discussions/2214)

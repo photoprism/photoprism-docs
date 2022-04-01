@@ -24,6 +24,7 @@ languages have been added and updated. Thanks to all involved!
 - Library: [Disabled hidden files warning while indexing as it can be misleading](https://github.com/photoprism/photoprism/issues/2189)
 - Metadata: [Fault-tolerant parsing of timestamps from Exif and JSON sidecar files](https://github.com/photoprism/photoprism/issues/625)
 - Metadata: [Omit brute-force search for standard file formats if no Exif headers were found](https://github.com/photoprism/photoprism/issues/2196)
+- Metadata: [Fixed Exif orientation flag when converting HEIC photos to JPEG](https://github.com/photoprism/photoprism/discussions/2214)
 - WebDAV: [Up- and download sync can no longer be enabled at the same time to prevent unexpected behavior](https://github.com/photoprism/photoprism/issues/1785)
 - WebDAV: [Added timeout/retry settings and improved handling of sync errors](https://github.com/photoprism/photoprism/issues/1781)
 - Docker: [Upgraded base image to Debian 12 "Bookworm", which includes FFmpeg 4.4.1 and Darktable 3.8.1](https://github.com/photoprism/photoprism/issues/2178)

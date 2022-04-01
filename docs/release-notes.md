@@ -156,7 +156,7 @@ As a result, the testing effort required before each release is no longer feasib
 to [MariaDB 10.6](https://mariadb.com/kb/en/function-differences-between-mariadb-106-and-mysql-80/) or later.
 PostgreSQL support is [planned for 2022](https://github.com/photoprism/photoprism/issues/47) without a specific release date yet.
 
-- CLI: [`photoprism migrate --failed` will re-run previously failed migrations](https://github.com/photoprism/photoprism/commit/7e8974fd20fcbf3ec403541125599deaeb1ee353)
+- CLI: [`photoprism migrations run --failed` will re-run previously failed migrations](https://github.com/photoprism/photoprism/commit/7e8974fd20fcbf3ec403541125599deaeb1ee353)
 
 ### November 27, 2021 ###
 <span class="build">Build 211127-86c43159</span>

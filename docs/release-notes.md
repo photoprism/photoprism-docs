@@ -15,6 +15,7 @@ This update features search UX improvements, a new Docker base image based on De
 as well as fixes for recently discovered issues. Front- and backend [translations](https://translate.photoprism.app/) in numerous
 languages have been added and updated. Thanks to all involved!
 
+- Index: [Added native support for the WebP image file format](https://github.com/photoprism/photoprism/issues/1226)
 - Search: [User interface and database performance optimizations](https://github.com/photoprism/photoprism/issues/1438)
 - Search: [Fixed occasional lag when entering queries in the search toolbar](https://github.com/photoprism/photoprism/issues/1995)
 - Search: [Improved `album:...` filter allows searching for numeric names, `albums:..` also supports AND/OR conditions via `&` and `|`](https://github.com/photoprism/photoprism/issues/1994)
@@ -30,7 +31,7 @@ languages have been added and updated. Thanks to all involved!
 - WebDAV: [Added timeout/retry settings and improved handling of sync errors](https://github.com/photoprism/photoprism/issues/1781)
 - Docker: [Upgraded base image to Debian 12 "Bookworm", which includes FFmpeg 4.4.1 and Darktable 3.8.1](https://github.com/photoprism/photoprism/issues/2178)
 - Config: [Added NVIDIA hardware video transcoding support for sponsors](https://github.com/photoprism/photoprism/issues/2125)
-- Config: [Added `megapixel-limit` and `thumb-colorspace` config options](https://github.com/photoprism/photoprism/issues/1017)
+- Config: [Added `resolution-limit` and `thumb-colorspace` config options](https://github.com/photoprism/photoprism/issues/1017)
 - Config: [Added short names for common CLI parameters, e.g. `-i` for `--wakeup-interval`](https://github.com/photoprism/photoprism/issues/2195)
 
 ### March 2, 2022 ###

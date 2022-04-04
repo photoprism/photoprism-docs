@@ -20,7 +20,7 @@ You can easily register and edit translations without having any programming ski
     2. Select the language you want translate to
 
        ![Screenshot](img/WeblateChooseLanguages.png)
-    3. Open your *Dashboard* and click *Backend*
+    3. Open your *Dashboard* and click *Backend* (or access to the Backend by clicking [here](https://translate.photoprism.app/projects/photoprism/backend/))
 
       ![Screenshot](img/WeblateDashboard.png)
     4. Click on *View contributor agreement*

@@ -34,7 +34,6 @@ The following fields are saved:**
 
 - Title
 - Description
-- Number of Views
 - Geolocation Info (lat/long)
 - Date/Time Taken
 - Date/Time Created

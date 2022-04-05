@@ -5,11 +5,7 @@
     Your continued support [helps us](funding.md) provide regular updates and services like [world maps](https://try.photoprism.app/places). Thank you! 💜
 
 ### Development Preview ###
-
-!!! tldr ""
-    You can test upcoming features and improvements by changing the image from `photoprism/photoprism:latest` 
-    to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/). 
-    Then [pull the most recent image](getting-started/updates.md) and restart your instance.
+<span class="build">Build 220405-7b508d6a</span>
 
 This update features search UX improvements, a new Docker base image based on Debian 12 "Bookworm",
 as well as fixes for recently discovered issues. Front- and backend [translations](https://translate.photoprism.app/) in numerous
@@ -35,6 +31,11 @@ languages have been added and updated. Thanks to all involved!
 - Config: [Added NVIDIA hardware video transcoding support for sponsors](https://github.com/photoprism/photoprism/issues/2125)
 - Config: [Added `resolution-limit` and `thumb-colorspace` config options](https://github.com/photoprism/photoprism/issues/1017)
 - Config: [Added short names for common CLI parameters, e.g. `-i` for `--wakeup-interval`](https://github.com/photoprism/photoprism/issues/2195)
+
+!!! tldr ""
+    You can test upcoming features and improvements by changing the image from `photoprism/photoprism:latest`
+    to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/).
+    Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
 ### March 2, 2022 ###
 <span class="build">Build 220302-0059f429</span>

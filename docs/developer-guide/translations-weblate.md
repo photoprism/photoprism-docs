@@ -3,6 +3,9 @@
 PhotoPrism uses [Weblate](https://translate.photoprism.app) for frontend and backend localization.
 You can easily register and edit translations without having any programming skills.
 
+!!! note "Please Note"
+    The name and e-mail of your weblate account will appear as commit authorship.
+
 === "Sign up"
 
     1. Open https://translate.photoprism.app

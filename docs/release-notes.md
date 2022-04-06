@@ -30,8 +30,8 @@ languages have been added and updated. Thanks to all involved!
 - Docker: [Upgraded base image to Debian 12 "Bookworm", which includes FFmpeg 4.4.1 and Darktable 3.8.1](https://github.com/photoprism/photoprism/issues/2178)
 - Config: [Improved FFmpeg parameters for Intel QSV hardware transcoding](https://github.com/photoprism/photoprism/issues/2222)
 - Config: [Added NVIDIA hardware video transcoding support for sponsors](https://github.com/photoprism/photoprism/issues/2125)
-- Config: [Added `disable-raw` flag to disable indexing and conversion of RAW files](https://github.com/photoprism/photoprism/issues/2227)
-- Config: [Added `resolution-limit` option to skip high-resolution images when indexing](https://github.com/photoprism/photoprism/issues/1017)
+- Config: [Added `--disable-raw` flag to disable indexing and conversion of RAW files](https://github.com/photoprism/photoprism/issues/2227)
+- Config: [Added `--resolution-limit` option to skip high-resolution images when indexing](https://github.com/photoprism/photoprism/issues/1017)
 - Config: [Added short names for common CLI parameters, e.g. `-i` for `--wakeup-interval`](https://github.com/photoprism/photoprism/issues/2195)
 
 !!! tldr ""

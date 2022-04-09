@@ -5,7 +5,7 @@
     Your continued support [helps us](funding.md) provide regular updates and services like [world maps](https://try.photoprism.app/places). Thank you! 💜
 
 ### Development Preview ###
-<span class="build">Build 220409-9085f729</span>
+<span class="build">Build 220409-e1996f80</span>
 
 This update features search UX improvements, a new Docker base image based on Debian 12 "Bookworm",
 as well as fixes for recently discovered issues. Front- and backend [translations](https://translate.photoprism.app/) in numerous
@@ -23,6 +23,7 @@ languages have been added and updated. Thanks to all involved!
 - Library: [Disabled hidden files warning while indexing as it can be misleading](https://github.com/photoprism/photoprism/issues/2189)
 - Thumbnails: [Reduced default JPEG quality from 92 to 85 to optimize storage and loading](https://github.com/photoprism/photoprism/issues/2215)
 - Metadata: [Fault-tolerant parsing of timestamps from Exif and JSON sidecar files](https://github.com/photoprism/photoprism/issues/625)
+- Metadata: [Ignore IFD1 tags with existing IFD0 values in Exif data](https://github.com/photoprism/photoprism/issues/2231)
 - Metadata: [Omit brute-force search for standard file formats if no Exif headers were found](https://github.com/photoprism/photoprism/issues/2196)
 - Metadata: [Fixed Exif orientation flag when converting HEIC photos to JPEG](https://github.com/photoprism/photoprism/discussions/2214)
 - WebDAV: [Up- and download sync can no longer be enabled at the same time to prevent unexpected behavior](https://github.com/photoprism/photoprism/issues/1785)

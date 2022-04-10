@@ -5,7 +5,7 @@
     Your continued support [helps us](funding.md) provide regular updates and services like [world maps](https://try.photoprism.app/places). Thank you! 💜
 
 ### Development Preview ###
-<span class="build">Build 220409-e1996f80</span>
+<span class="build">Build 220410-b97e0e9c</span>
 
 This update features search UX improvements, a new Docker base image based on Debian 12 "Bookworm",
 as well as fixes for recently discovered issues. Front- and backend [translations](https://translate.photoprism.app/) in numerous
@@ -18,6 +18,7 @@ languages have been added and updated. Thanks to all involved!
 - Search: [Improved `camera:...` and `lens:...` filters accept camera/lens names in addition to numeric ids](https://github.com/photoprism/photoprism/issues/2079)
 - Albums: ["Add to album" dialog preloads more names for auto-completion](https://github.com/photoprism/photoprism/pull/2152)
 - Albums: [Album names are shortened if necessary to avoid errors when saving](https://github.com/photoprism/photoprism/issues/2181)
+- Albums: [Fixed accidental creation of duplicates by pressing Enter multiple times](https://github.com/photoprism/photoprism/issues/2233)
 - People: [Improved logging and fixed potential issues with matching unrecognized faces](https://github.com/photoprism/photoprism/issues/2182)
 - Library: [Added button to clear log history in *Library* > *Errors*](https://github.com/photoprism/photoprism/discussions/1683)
 - Library: [Disabled hidden files warning while indexing as it can be misleading](https://github.com/photoprism/photoprism/issues/2189)

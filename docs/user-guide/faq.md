@@ -98,7 +98,7 @@
 
 ??? question "What media file types are supported?"
 
-    The primary image format is JPEG. Support for JPEG XL is planned but not available yet.
+    The primary [image format](../developer-guide/media/index.md) is JPEG. Support for JPEG XL is planned but not available yet.
     When indexing, a JPEG sidecar file may be created automatically for RAW, HEIF, TIFF, PNG, BMP, GIF, and video files.
     It is needed for generating thumbnails, image classification, and facial recognition.
     
@@ -114,7 +114,7 @@
     Our goal is to provide top-notch support for all RAW formats, regardless of camera make and model.
     Please let us know when there are any issues with a particular camera or file format.
   
-    Video formats supported by [FFmpeg](https://en.wikipedia.org/wiki/FFmpeg#Supported_codecs_and_formats) can be transcoded to
+    [Video formats](../developer-guide/media/index.md) supported by [FFmpeg](https://en.wikipedia.org/wiki/FFmpeg#Supported_codecs_and_formats) can be transcoded to
     [MPEG-4 AVC](https://en.wikipedia.org/wiki/Advanced_Video_Coding). Still images for generating thumbnails can be extracted from
     most videos as well.
       
@@ -122,7 +122,7 @@
     and duration can be indexed and searched.
 
 ??? question "What metadata sidecar file types are supported?"
-    Currently, three types of file formats are supported:
+    Currently, three types of [file formats](../developer-guide/media/index.md) are supported:
     
     #### JSON ####
     

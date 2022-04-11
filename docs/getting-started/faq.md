@@ -2,7 +2,7 @@
 
 ### What media file types are supported? ###
 
-The primary image format is JPEG. Support for JPEG XL is planned but not available yet.
+The primary [image format](../developer-guide/media/index.md) is JPEG. Support for JPEG XL is planned but not available yet.
 When indexing, a JPEG sidecar file may be created automatically for RAW, HEIF, TIFF, PNG, BMP, GIF, and video files.
 It is needed for generating thumbnails, image classification, and facial recognition.
 
@@ -18,7 +18,7 @@ If you're running PhotoPrism directly on a Mac, RAW files will be converted with
 Our goal is to provide top-notch support for all RAW formats, regardless of camera make and model.
 Please let us know when there are any issues with a particular camera or file format.
 
-Video formats supported by [FFmpeg](https://en.wikipedia.org/wiki/FFmpeg#Supported_codecs_and_formats) can be transcoded to
+[Video formats](../developer-guide/media/index.md) supported by [FFmpeg](https://en.wikipedia.org/wiki/FFmpeg#Supported_codecs_and_formats) can be transcoded to
 [MPEG-4 AVC](https://en.wikipedia.org/wiki/Advanced_Video_Coding). Still images for generating thumbnails can be extracted from
 most videos as well.
 
@@ -42,7 +42,7 @@ New sidecar files are created in the *storage* folder by default, so the *origin
 
 ### What metadata sidecar file types are supported? ###
 
-Currently, three types of file formats are supported:
+Currently, three types of [file formats](../developer-guide/media/index.md) are supported:
 
 #### JSON ####
 
@@ -206,7 +206,7 @@ PhotoPrism runs smoothly on their Raspberry Pi 4. However, initial indexing typi
 than on standard desktop computers.
 
 Also keep in mind that the hardware has limited video transcoding capabilities, so the conversion of video
-file formats is not well-supported and software transcoding is generally slow.
+[file formats](../developer-guide/media/index.md) is not well-supported and software transcoding is generally slow.
 
 ### Should I use an SD card or a USB stick? ###
 

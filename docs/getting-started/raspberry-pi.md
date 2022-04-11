@@ -98,7 +98,7 @@ PhotoPrism runs smoothly on their Raspberry Pi 4. However, initial indexing typi
 than on standard desktop computers.
 
 Also keep in mind that the hardware has limited video transcoding capabilities, so the conversion of video
-file formats is not well-supported and software transcoding is generally slow.
+[file formats](../developer-guide/media/index.md) is not well-supported and software transcoding is generally slow.
 
 ### Getting Updates ###
 

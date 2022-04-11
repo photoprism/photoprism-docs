@@ -131,6 +131,7 @@ nav:
       - Browsers: developer-guide/ui/browsers.md
       - Interactive Maps: developer-guide/ui/maps.md
     - Media Files:
+      - Formats: developer-guide/media/index.md
       - Import: developer-guide/media/import.md
       - Abstraction: developer-guide/media/abstraction.md
       - Encryption: developer-guide/media/encryption.md

@@ -83,12 +83,12 @@
 
 ## Search ##
 
-??? question "Why can't I play live photos when I search for the filename of an image?"
-    Our search API and user interface perform a file search. This is intentional because a "stack" may contain files of different types and properties, such as color.
+??? question "Why can't I play live photos or find stacks when I search for image file names?"
+    Our search API and user interface perform a file search. This is intentional since "stacks" can contain files of different types and properties, such as color.
     
-    For example, there may be color and monochrome versions of images. Now, when you search for them or sort them by color, the user interface must display individual files. Otherwise, the results showing a color image when you filter by monochrome would make no sense.
+    For example, there may be color and monochrome versions. Now, when you search for them or sort them by color, the user interface must display individual files. Otherwise, the results showing a color image when you filter by monochrome would make no sense.
     
-    Likewise, if you search for `filename.mp4.*`, you are expected to find only related JPEGs - without video - because the video file extension is not .mp4.jpg, but .mp4 (without an extra dot at the end).
+    Likewise, if you search for `filename.mp4.*`, you will find only JPEGs without video, because the video file extension is `.mp4` without an extra dot at the end.
 
     We recommend using the `path:` and/or `name:` filters with wildcards if searching for individual files limits the search results too much. Most users will want to find all related files so that they can be displayed together, e.g. as live photos consisting of a video and an image.
     

@@ -84,7 +84,7 @@
 ## Search ##
 
 ??? question "Why can't I play live photos when I search for the filename of an image?"
-    Our search API and the user interface provide file search. This is intentional because a "stack" may contain files of different types and properties, such as color.
+    Our search API and user interface perform a file search. This is intentional because a "stack" may contain files of different types and properties, such as color.
     
     For example, there may be color and monochrome versions of images. Now, when you search for them or sort them by color, the user interface must display individual files. Otherwise, the results showing a color image when you filter by monochrome would make no sense.
     

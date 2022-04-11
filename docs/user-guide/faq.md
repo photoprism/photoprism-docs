@@ -92,7 +92,7 @@
 
     We recommend using the `path:` and/or `name:` filters with wildcards if searching for individual files limits the search results too much. Most users will want to find all related files so that they can be displayed together, e.g. as live photos consisting of a video and an image.
     
-    You can combine these filters with other filters such as `live` to ensure that the results include only results with a specific media type. Alternatively, you can use the `filename:` filter with a more permissive wildcard that excludes the file extension.
+    You can combine these filters with other filters such as `live` to ensure that the results include only pictures with a specific media type. Alternatively, you can use the `filename:` filter with a more permissive wildcard that excludes the file extension.
 
 ## Library, Counts & Files ##
 

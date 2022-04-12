@@ -5,7 +5,7 @@
     Your continued support [helps us](funding.md) provide regular updates and services like [world maps](https://try.photoprism.app/places). Thank you! 💜
 
 ### Development Preview ###
-<span class="build">Build 220411-ad345805</span>
+<span class="build">Build 220412-20c8d73b</span>
 
 This update features search UX improvements, a new Docker base image based on Debian 12 "Bookworm",
 as well as fixes for recently discovered issues. Front- and backend [translations](https://translate.photoprism.app/) in numerous
@@ -13,6 +13,7 @@ languages have been added and updated. Thanks to all involved!
 
 - File Formats: [Added native support for WebP images](https://github.com/photoprism/photoprism/issues/1226)
 - UX: [RAW files are skipped by default when downloading photos and albums](https://github.com/photoprism/photoprism/issues/2234)
+- Auth: [Passwords must have at least 8 characters to mitigate brute-force attacks](https://github.com/photoprism/photoprism/issues/2248)
 - Search: [User interface and database performance optimizations](https://github.com/photoprism/photoprism/issues/1438)
 - Search: [Fixed occasional lag when entering queries in the search toolbar](https://github.com/photoprism/photoprism/issues/1995)
 - Search: [Improved `album:...` filter allows searching for numeric names, `albums:..` also supports AND/OR conditions via `&` and `|`](https://github.com/photoprism/photoprism/issues/1994)
@@ -24,18 +25,20 @@ languages have been added and updated. Thanks to all involved!
 - Library: [Added button to clear log history in *Library* > *Errors*](https://github.com/photoprism/photoprism/discussions/1683)
 - Library: [Disabled hidden files warning while indexing as it can be misleading](https://github.com/photoprism/photoprism/issues/2189)
 - Thumbnails: [Reduced default JPEG quality from 92 to 85 to optimize storage and loading](https://github.com/photoprism/photoprism/issues/2215)
+- Metadata: [Manual local time changes are always preserved when reindexing](https://github.com/photoprism/photoprism/issues/2239)
 - Metadata: [Fixed Exif orientation flag when converting HEIC photos to JPEG](https://github.com/photoprism/photoprism/discussions/2214)
 - Metadata: [Fault-tolerant parsing of timestamps from Exif and JSON sidecar files](https://github.com/photoprism/photoprism/issues/625)
 - Metadata: [Exif IFD1 tags with existing IFD0 values are ignored to improve standard compliance](https://github.com/photoprism/photoprism/issues/2231)
 - Metadata: [Brute-force search is skipped by default if no Exif headers were found in JPEG, PNG, TIFF, and HEIF files](https://github.com/photoprism/photoprism/issues/2196)
 - WebDAV: [Up- and download sync can no longer be enabled at the same time to prevent unexpected behavior](https://github.com/photoprism/photoprism/issues/1785)
 - WebDAV: [Added timeout/retry settings and improved handling of sync errors](https://github.com/photoprism/photoprism/issues/1781)
+- CLI: [Added short names for common config flags, e.g. `-i` for `--wakeup-interval`](https://github.com/photoprism/photoprism/issues/2195)
+- CLI: [Run `photoprism show formats` to display supported media and sidecar file formats](https://github.com/photoprism/photoprism/issues/2247)
 - Docker: [Upgraded base image to Debian 12 "Bookworm", which includes FFmpeg 4.4.1 and Darktable 3.8.1](https://github.com/photoprism/photoprism/issues/2178)
 - Config: [Improved FFmpeg parameters for Intel QSV hardware transcoding](https://github.com/photoprism/photoprism/issues/2222)
 - Config: [Added NVIDIA hardware video transcoding support for sponsors](https://github.com/photoprism/photoprism/issues/2125)
 - Config: [Added `--disable-raw` flag to disable indexing and conversion of RAW files](https://github.com/photoprism/photoprism/issues/2227)
 - Config: [Added `--resolution-limit` option to skip high-resolution images when indexing](https://github.com/photoprism/photoprism/issues/1017)
-- Config: [Added short names for common CLI parameters, e.g. `-i` for `--wakeup-interval`](https://github.com/photoprism/photoprism/issues/2195)
 
 !!! tldr ""
     You can test upcoming features and improvements by changing the image from `photoprism/photoprism:latest`

@@ -83,7 +83,7 @@ installed on your system. It is available for Mac, Linux, and Windows.
 !!! danger ""
     Always change `PHOTOPRISM_ADMIN_PASSWORD` so that the app starts with a **secure initial password**.
     Never use easy-to-guess passwords or default values like `insecure` on publicly accessible servers.
-    There is no default in case no password was provided. A minimum length of 4 characters is required.
+    There is no default in case no password was provided. A minimum length of 8 characters is required.
 
 #### Database ####
 

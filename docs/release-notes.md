@@ -5,14 +5,14 @@
     Your continued support [helps us](funding.md) provide regular updates and services like [world maps](https://try.photoprism.app/places). Thank you! 💜
 
 ### Development Preview ###
-<span class="build">Build 220413-04271632</span>
+<span class="build">Build 220413-8f215571</span>
 
 This update features search UX improvements, a new Docker base image based on Debian 12 "Bookworm",
 as well as fixes for recently discovered issues. Front- and backend [translations](https://translate.photoprism.app/) in numerous
 languages have been added and updated. Thanks to all involved!
 
-- File Formats: [Added native support for WebP images](https://github.com/photoprism/photoprism/issues/1226)
-- UX: [RAW files are skipped by default when downloading photos and albums](https://github.com/photoprism/photoprism/issues/2234)
+- File Formats: [Added native support for WebP images](https://github.com/photoprism/photoprism/issues/1226) and [animated GIFs](https://github.com/photoprism/photoprism/commit/82d61d1f93961daa5b9ffea31e2ae4ab8897d2a7)
+- UX: [RAW files are skipped by default when downloading photos and ZIP archives](https://github.com/photoprism/photoprism/issues/2234)
 - Auth: [Passwords must have at least 8 characters to mitigate brute-force attacks](https://github.com/photoprism/photoprism/issues/2248)
 - Search: [User interface and database performance optimizations](https://github.com/photoprism/photoprism/issues/1438)
 - Search: [Fixed occasional lag when entering queries in the search toolbar](https://github.com/photoprism/photoprism/issues/1995)
@@ -33,13 +33,14 @@ languages have been added and updated. Thanks to all involved!
 - Metadata: [Brute-force search is skipped by default if no Exif headers were found in JPEG, PNG, TIFF, and HEIF files](https://github.com/photoprism/photoprism/issues/2196)
 - WebDAV: [Up- and download sync can no longer be enabled at the same time to prevent unexpected behavior](https://github.com/photoprism/photoprism/issues/1785)
 - WebDAV: [Added timeout/retry settings and improved handling of sync errors](https://github.com/photoprism/photoprism/issues/1781)
+- CLI: [Renamed `--config-file` to `--defaults-yaml` and improve command help](https://github.com/photoprism/photoprism/issues/2250)
 - CLI: [Added short names for common config flags, e.g. `-i` for `--wakeup-interval`](https://github.com/photoprism/photoprism/issues/2195)
 - CLI: [Run `photoprism show formats` to display supported media and sidecar file formats](https://github.com/photoprism/photoprism/issues/2247)
-- Docker: [Upgraded base image to Debian 12 "Bookworm", which includes FFmpeg 4.4.1 and Darktable 3.8.1](https://github.com/photoprism/photoprism/issues/2178)
 - Config: [Improved FFmpeg parameters for Intel QSV hardware transcoding](https://github.com/photoprism/photoprism/issues/2222)
 - Config: [Added NVIDIA hardware video transcoding support for sponsors](https://github.com/photoprism/photoprism/issues/2125)
 - Config: [Added `--disable-raw` flag to disable indexing and conversion of RAW files](https://github.com/photoprism/photoprism/issues/2227)
 - Config: [Added `--resolution-limit` option to skip high-resolution images when indexing](https://github.com/photoprism/photoprism/issues/1017)
+- Docker: [Upgraded base image to Debian 12 "Bookworm", which includes FFmpeg 4.4.1 and Darktable 3.8.1](https://github.com/photoprism/photoprism/issues/2178)
 
 !!! tldr ""
     You can test upcoming features and improvements by changing the image from `photoprism/photoprism:latest`

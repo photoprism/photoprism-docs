@@ -18,6 +18,7 @@ languages have been added and updated. Thanks to all involved!
 - Search: [Fixed occasional lag when entering queries in the search toolbar](https://github.com/photoprism/photoprism/issues/1995)
 - Search: [Improved `album:...` filter allows searching for numeric names, `albums:..` also supports AND/OR conditions via `&` and `|`](https://github.com/photoprism/photoprism/issues/1994)
 - Search: [Improved `camera:...` and `lens:...` filters accept camera/lens names in addition to numeric ids](https://github.com/photoprism/photoprism/issues/2079)
+- Search: [Added `square:yes` and `landscape:yes` filters](https://github.com/photoprism/photoprism/issues/2169)
 - Albums: ["Add to album" dialog preloads more names for auto-completion](https://github.com/photoprism/photoprism/pull/2152)
 - Albums: [Album names are shortened if necessary to avoid errors when saving](https://github.com/photoprism/photoprism/issues/2181)
 - Albums: [Fixed accidental creation of duplicates by pressing Enter multiple times](https://github.com/photoprism/photoprism/issues/2233)

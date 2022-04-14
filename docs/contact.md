@@ -23,7 +23,7 @@ Feel free to contact us at [hello@photoprism.app](mailto:hello@photoprism.app) i
 Responsible for editorial content according to § 5 TMG / § 55 RStV:
 
 <address>
-  Michael Mayer<br />
+  PhotoPrism UG (haftungsbeschränkt)<br />
   Zimmermannstr. 37<br />
   12163 Berlin<br />
   Germany

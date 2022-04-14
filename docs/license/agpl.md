@@ -612,12 +612,11 @@ copy of the Program in return for a fee.
 ### 18. PhotoPrism® Trademark and Brand Assets
 
 **(a)** PhotoPrism’s Brand Assets — including trademarks, logos, icons, fonts,
-corporate design, product and service names, and any other brand features
-and elements, whether registered or unregistered („Brand Assets“) — are
-proprietary assets owned exclusively by Michael Mayer and his legal successors
-(„PhotoPrism“). We reserve the right to object to any use or misuse in any
-jurisdiction worldwide. Visit [photoprism.app/trademark](https://photoprism.app/trademark)
-to learn more.
+corporate design, product and service names, and any other brand features and
+elements, whether registered or unregistered („Brand Assets“) — are
+proprietary assets owned exclusively by PhotoPrism UG („PhotoPrism“). We
+reserve the right to object to any use or misuse in any jurisdiction worldwide.
+Visit [photoprism.app/trademark](https://photoprism.app/trademark) to learn more.
 
 **(b)** Contributors, licensees, business partners, and other third parties
 may never claim ownership of PhotoPrism's Brand Assets or brands confusingly

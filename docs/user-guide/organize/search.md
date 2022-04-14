@@ -98,54 +98,68 @@ This will show all photos which name contain `_23`, like `IMG_2356.MOV` , `2021_
 
 ## Search Filter Overview ##
 PhotoPrism allows you to use multiple filters in its search.
-    
-| Filter      | Examples | Notes |
-| ----------- | ----------- | - |
-| after      |    2015-06-30    | |
-| albums | "Holiday 2020" | Album Name |
-| archived     |    yes, no    | |
-| before      |   2016-12-22     | |
-| chroma     |   5     | |
-| color  | purple, magenta, pink, red, orange, gold, yellow, lime, green, teal, cyan, blue, brown, white, grey, black       | |
-| country     | de | |
-| day     |  23    | |
-| dist     | 5 | Distance to coordinates (radius in kilometre). Only applicable in combination with the lat/lng filters.|
-| month     |  5    | |
-| year     |  2012    | |
-| error     |    yes, no    | |
-| faces     |  yes, no, 1, 3    | 1 means minimum 1 face |
-| favorite     |    yes, no    | |
-| filename | 2021/07/12345.jpg | |
-| fmax     |    4.5  | |
-| fmin     |    1.8    | |
-| folder | "2020/Holiday", "2020/*" | |
-| geo | yes, no | |
-| hidden     |    yes, no    | |
-| keywords    | love | |
-| label      |    cat    | |
-| lat     |    38.300457    | Latitude |
-| lng     |   8.931358   | Longitude |
-| mono     |    yes, no  | Monochrome images |
-| name     | "IMG_9831-112*", "IMG_9831-112" | |
-| original     | "IMG_9831-112*", "IMG_9831-112" | Only applicable when file have been imported |
-| panorama     |    yes, no    | |
-| path | "2020/Holiday" | |
-| photo | yes, no | |
-| portrait     |    yes, no  | |
-| primary | yes, no | |
-| private     |    yes, no    | |
-| quality     |   1, 2, 3, 4, 5   | |
-| review     |   yes, no   | |
-| scan     |    yes, no    | |
-| stack     |    yes, no    | |
-| state     | "Baden-Württemberg", "Baden*" | |
-| subject/person  |"Jane Doe" | Subject Name --> only exact matches are found|
-| subjects/people  |"Jane Doe" | Subject Name|
-| title     | "Holiday*", "Holiday / 2012" | |
-| type     |   image, video, raw, live     | |
-| uid       |  pqbcf5j446s0futy       | |
-| unsorted     |    yes, no    | |
-| video | yes, no | |
+
+|  Filter   |   Type    |                     Examples                      |                                                                    Notes                                                                    |
+|-----------|-----------|---------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| fmax      | decimal   | fmax:1.245                                        |                                                                                                                                             |
+| fmin      | decimal   | fmin:1.245                                        |                                                                                                                                             |
+| lat       | decimal   | lat:1.245                                         |                                                                                                                                             |
+| lng       | decimal   | lng:1.245                                         |                                                                                                                                             |
+| chroma    | number    | chroma:-1 chroma:2                                |                                                                                                                                             |
+| dist      | number    | dist:-1 dist:2                                    | Distance to coordinates (radius in kilometre). Only applicable in combination with the lat/lng filters.                                     |
+| quality   | number    | quality:0 quality:3                               | Options: 0, 1, 2, 3, 4, 5                                                                                                                   |
+| album     | string    | album:berlin                                      | Single name with * wildcard                                                                                                                 |
+| albums    | string    | albums:"South Africa & Birds"                     | Album names can be combined with & and \|                                                                                                    |
+| camera    | string    | camera:canon                                      |                                                                                                                                             |
+| color     | string    | color:"red\|blue"                                  | Can be combined with \|. Options: purple, magenta, pink, red, orange, gold, yellow, lime, green, teal, cyan, blue, brown, white, grey, black |
+| country   | string    | country:"de\|us"                                   | Can be combined with \|.                                                                                                                     |
+| day       | string    | day:3\|13                                          | Can be combined with \|.                                                                                                                     |
+| faces     | string    | faces:yes faces:no faces:3                        | 3 means minimum 3 faces                                                                                                                     |
+| filename  | string    | filename:"2021/07/12345.jpg"                      | Can be combined with \|.                                                                                                                     |
+| folder    | string    | folder:2020/Holiday, folder:"*/2020"              | Same as path. Can be combined with \|.                                                                                                       |
+| hash      | string    | hash:2fd4e1c67a2d                                 | Can be combined with \|.                                                                                                                     |
+| keywords  | string    | keywords:"buffalo&water"                          | Keywords can be combined with & and \|                                                                                                       |
+| label     | string    | label:cat\|dog                                     | Can be combined with \|.                                                                                                                     |
+| lens      | string    | lens:ef24                                         |                                                                                                                                             |
+| month     | string    | month:7\|10                                        | Can be combined with \|.                                                                                                                     |
+| name      | string    | name:"IMG_9831-112", name:"IMG_9831-112*"         | Can be combined with \|.                                                                                                                     |
+| original  | string    | original:"IMG_9831-112", original:"IMG_9831-112*" | Can be combined with \|. Only applicable when files have been imported                                                                       |
+| path      | string    | path:2020/Holiday, path:"*/2020"                  | Same as folder. Can be combined with \|.                                                                                                     |
+| people    | string    | people:"Jane & John"                              | Same as subjects. Names can be combined with & and \|                                                                                        |
+| person    | string    | person:"Jane Doe & John Doe"                      | Same as subject. Only exact matches. Names can be combined with & and \|                                                                     |
+| state     | string    | state:"Baden-Württemberg"                         | Can be combined with \|.                                                                                                                     |
+| subject   | string    | subject:"Jane Doe & John Doe"                     | Same as person. Only exact matches. Names can be combined with & and \|                                                                      |
+| subjects  | string    | subjects:"Jane & John"                            | Same as people. Names can be combined with & and \|                                                                                          |
+| title     | string    | title:"Lake*"                                     | Can be combined with \|.                                                                                                                     |
+| type      | string    | type:raw                                          | Can be combined with \|. Options: image, video, raw, live, animated                                                                          |
+| uid       | string    | uid:pqbcf5j446s0futy                              |                                                                                                                                             |
+| year      | string    | year:1990\|2003                                    | Can be combined with \|.                                                                                                                     |
+| animated  | switch    | animated:yes                          | Animated GIFs                                                                                                                               |
+| archived  | switch    | archived:yes                         |                                                                                                                                             |
+| error     | switch    | error:yes                                |                                                                                                                                             |
+| favorite  | switch    | favorite:yes                          |                                                                                                                                             |
+| geo       | switch    | geo:yes                                    |                                                                                                                                             |
+| hidden    | switch    | hidden:yes                             |                                                                                                                                             |
+| landscape | switch    | landscape:yes                       |                                                                                                                                             |
+| live      | switch    | live:yes                                  | Live Photos, Short Videos                                                                                                                   |
+| mono      | switch    | mono:yes                                  |                                                                                                                                             |
+| panorama  | switch    | panorama:yes                          | Aspect Ratio > 1.9:1                                                                                                                        |
+| photo     | switch    | photo:yes                                | No Videos                                                                                                                                   |
+| portrait  | switch    | portrait:yes                          |                                                                                                                                             |
+| primary   | switch    | primary:yes                            |                                                                                                                                             |
+| private   | switch    | private:yes                            |                                                                                                                                             |
+| public    | switch    | public:yes                              |                                                                                                                                             |
+| raw       | switch    | raw:yes                                    | RAW Images                                                                                                                                  |
+| review    | switch    | review:yes                             |                                                                                                                                             |
+| scan      | switch    | scan:yes                                  | Scanned Images, Documents                                                                                                                   |
+| square    | switch    | square:yes                              |                                                                                                                                             |
+| stack     | switch    | stack:yes                                |                                                                                                                                             |
+| unsorted  | switch    | unsorted:yes                         |                                                                                                                                             |
+| vector    | switch    | vector:yes                              | Vector Graphics                                                                                                                             |
+| video     | switch    | video:yes                                |                                                                                                                                             |
+| after     | timestamp | after:"2022-01-30 15:23:42"                       | Taken after this date                                                                                                                       |
+| before    | timestamp | before:"2022-01-30 15:23:42"                      | Taken before this date                                                                                                                      |
+
 
 !!! question "Why can't I play live photos or find stacks when I search for specific images?"
     Our search API and user interface perform a file search. This is intentional since "stacks" can contain files of different types and properties, such as color.

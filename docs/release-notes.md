@@ -35,6 +35,8 @@ languages have been added and updated. Thanks to all involved!
 - WebDAV: [Added timeout/retry settings and improved handling of sync errors](https://github.com/photoprism/photoprism/issues/1781)
 - CLI: [Renamed `--config-file` to `--defaults-yaml` and improve command help](https://github.com/photoprism/photoprism/issues/2250)
 - CLI: [Added short names for common config flags, e.g. `-i` for `--wakeup-interval`](https://github.com/photoprism/photoprism/issues/2195)
+- CLI: [Run `photoprism show tags` to list supported metadata values and their corresponding tags](https://github.com/photoprism/photoprism/issues/2252)
+- CLI: [Run `photoprism show filters` to display a search filter overview with examples](https://github.com/photoprism/photoprism/commit/7291c1d70329d85af2dfc1e9de512d28378974a5)
 - CLI: [Run `photoprism show formats` to display supported media and sidecar file formats](https://github.com/photoprism/photoprism/issues/2247)
 - Config: [Improved FFmpeg parameters for Intel QSV hardware transcoding](https://github.com/photoprism/photoprism/issues/2222)
 - Config: [Added NVIDIA hardware video transcoding support for sponsors](https://github.com/photoprism/photoprism/issues/2125)

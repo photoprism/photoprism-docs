@@ -39,9 +39,9 @@
 
 ## CLI Command ##
 
-Run `photoprism show formats` to display all supported formats as a Markdown formatted table.
+Run `photoprism show formats` in a terminal to list supported media and sidecar file formats.
 
 Command Flags:
 
-- `-c` hides format descriptions to make the output more compact
-- `-n` disables text-wrapping so [the output can be pasted into Markdown files](https://github.com/photoprism/photoprism-docs/blob/master/docs/developer-guide/media/index.md)
+- `--compact`, `-c`  hide format descriptions to make the output more compact
+- `--md`, `-m`       renders valid [Markdown](https://github.com/photoprism/photoprism-docs/blob/master/docs/developer-guide/media/index.md)

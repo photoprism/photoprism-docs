@@ -5,7 +5,7 @@
     Your continued support [helps us](funding.md) provide regular updates and services like [world maps](https://try.photoprism.app/places). Thank you! 💜
 
 ### Development Preview ###
-<span class="build">Build 220414-bc62b388</span>
+<span class="build">Build 220415-e50cb574</span>
 
 This update features search UX improvements, a new Docker base image based on Debian 12 "Bookworm",
 as well as fixes for recently discovered issues. Front- and backend [translations](https://translate.photoprism.app/) in numerous
@@ -27,13 +27,13 @@ languages have been added and updated. Thanks to all involved!
 - Library: [Disabled hidden files warning while indexing as it can be misleading](https://github.com/photoprism/photoprism/issues/2189)
 - Thumbnails: [Reduced default JPEG quality from 92 to 85 to optimize storage and loading](https://github.com/photoprism/photoprism/issues/2215)
 - Metadata: [Manual local time changes are always preserved when reindexing](https://github.com/photoprism/photoprism/issues/2239)
-- Metadata: [Fixed Exif orientation flag when converting HEIC photos to JPEG](https://github.com/photoprism/photoprism/discussions/2214)
+- Metadata: [Fixed Exif orientation flag when converting HEIF/HEIC images to JPEG](https://github.com/photoprism/photoprism/discussions/2214)
 - Metadata: [Fault-tolerant parsing of timestamps from Exif and JSON sidecar files](https://github.com/photoprism/photoprism/issues/625)
 - Metadata: [Exif IFD1 tags with existing IFD0 values are ignored to improve standard compliance](https://github.com/photoprism/photoprism/issues/2231)
 - Metadata: [Brute-force search is skipped by default if no Exif headers were found in JPEG, PNG, TIFF, and HEIF files](https://github.com/photoprism/photoprism/issues/2196)
 - WebDAV: [Up- and download sync can no longer be enabled at the same time to prevent unexpected behavior](https://github.com/photoprism/photoprism/issues/1785)
 - WebDAV: [Added timeout/retry settings and improved handling of sync errors](https://github.com/photoprism/photoprism/issues/1781)
-- CLI: [Renamed `--config-file` to `--defaults-yaml` and improve command help](https://github.com/photoprism/photoprism/issues/2250)
+- CLI: [Renamed `--config-file` to `--defaults-yaml` and improved command help](https://github.com/photoprism/photoprism/issues/2250)
 - CLI: [Added short names for common config flags, e.g. `-i` for `--wakeup-interval`](https://github.com/photoprism/photoprism/issues/2195)
 - CLI: [Run `photoprism show tags` to list supported metadata values and their corresponding tags](https://github.com/photoprism/photoprism/issues/2252)
 - CLI: [Run `photoprism show filters` to display a search filter overview with examples](https://github.com/photoprism/photoprism/commit/7291c1d70329d85af2dfc1e9de512d28378974a5)

@@ -46,6 +46,8 @@ nav:
       - Introduction: user-guide/library/index.md
       - Index Originals: user-guide/library/originals.md
       - Import Files: user-guide/library/import.md
+      - Duplicates: user-guide/library/duplicates.md
+      - Metadata: user-guide/advanced/metadata.md
       - Web Upload: user-guide/library/upload.md
       - WebDAV Sync: user-guide/library/webdav.md
       - File Browser: user-guide/library/files.md
@@ -99,10 +101,9 @@ nav:
       - Flickr: user-guide/use-cases/flickr.md
       #- Link directories from remote:
     - Advanced:
-      - Metadata: user-guide/advanced/metadata.md
-      - Backups: user-guide/advanced/backups.md
+      - Backups: getting-started/advanced/backups.md
       - Restore: user-guide/advanced/restore.md
-      - Export: user-guide/advanced/export.md
+      - Metadata Export: user-guide/advanced/export.md
       - Folders: user-guide/advanced/folders.md
       #- Commands: user-guide/advanced/commands.md
     - Mobile App (PWA): user-guide/pwa.md

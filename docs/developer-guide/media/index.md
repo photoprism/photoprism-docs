@@ -44,6 +44,7 @@
 Run `photoprism show formats` in a terminal to list supported media and sidecar file formats.
 
 Command Flags:
-
-- `--compact`, `-c`  hide format descriptions to make the output more compact
-- `--md`, `-m`       renders valid [Markdown](https://github.com/photoprism/photoprism-docs/blob/master/docs/developer-guide/media/index.md)
+- `--md`, `-m`     format as machine-readable Markdown
+- `--csv`, `-c`    export as semicolon separated values
+- `--tsv`, `-t`    export as tab separated values
+- `--short`, `-s`  hide links to documentation

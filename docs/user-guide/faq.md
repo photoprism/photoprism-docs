@@ -97,29 +97,24 @@
 ## Library, Counts & Files ##
 
 ??? question "What media file types are supported?"
-
-    The primary [image format](../developer-guide/media/index.md) is JPEG. Support for JPEG XL is planned but not available yet.
-    When indexing, a JPEG sidecar file may be created automatically for RAW, HEIF, TIFF, PNG, BMP, GIF, and video files.
-    It is needed for generating thumbnails, image classification, and facial recognition.
     
-    Due to the patent situation and its complexity, [TIFF is only partially supported](https://github.com/golang/go/issues?q=is%3Aissue+image%2Ftiff+) at the moment.
+    PhotoPrism supports indexing, viewing, and converting most common image, video, and RAW file formats, including JPEG, PNG, GIF, BMP, HEIF, HEIC, MP4, MOV, WebP, and WebM. [TIFF](https://github.com/golang/go/issues?q=is%3Aissue+image%2Ftiff+) is partially supported without extensions such as GeoTIFF. For a complete list of file formats and extensions, see our [fact sheet](https://dl.photoprism.app/factsheets/PhotoPrism%2520Factsheet%2520-%2520File%2520Format%2520Support.pdf).
     
-    The following RAW converters can be used to generate JPEGs (included in our Docker image,
-    otherwise you may need to install them on your system):
+    The internally used [image format](../developer-guide/media/index.md) is JPEG. Support for JPEG XL is planned but not yet available. When indexing, a JPEG sidecar file can be created automatically for RAW, HEIF, TIFF, PNG, BMP, GIF, and video files. It is needed for thumbnail creation, image classification, and face detection.
+    
+    If installed, converting RAW files is possible with the following converters (our Docker image includes both):
 
     - [Darktable](https://www.darktable.org/) ([supported cameras](https://www.darktable.org/resources/camera-support/))
     - [RawTherapee](https://rawtherapee.com/) ([supported cameras](https://www.libraw.org/supported-cameras))
 
-    If you're running PhotoPrism directly on a Mac, RAW files will be converted with [Sips](https://ss64.com/osx/sips.html) ([supported cameras](https://support.apple.com/en-us/HT211241)) by default.
+    On a Mac, RAW files can also be converted with [Sips](https://ss64.com/osx/sips.html) ([supported cameras](https://support.apple.com/en-us/HT211241)).
     Our goal is to provide top-notch support for all RAW formats, regardless of camera make and model.
-    Please let us know when there are any issues with a particular camera or file format.
-  
+    Please let us know about any issues with a particular camera or file format.
+    
     [Video formats](../developer-guide/media/index.md) supported by [FFmpeg](https://en.wikipedia.org/wiki/FFmpeg#Supported_codecs_and_formats) can be transcoded to
-    [MPEG-4 AVC](https://en.wikipedia.org/wiki/Advanced_Video_Coding). Still images for generating thumbnails can be extracted from
-    most videos as well.
-      
-    If you have videos, always enable JSON sidecar files so that video metadata such as date, location, codec,
-    and duration can be indexed and searched.
+    [MPEG-4 AVC](https://en.wikipedia.org/wiki/Advanced_Video_Coding) for maximum browser compatibility. Still images for thumbnail creation can also be extracted from most videos.
+    
+    Make sure you have JSON sidecar files enabled if you have videos, live photos, and/or animated GIFs so that video-specific metadata such as codec, frames, and duration can be extracted, indexed, and searched.
 
 ??? question "What metadata sidecar file types are supported?"
     Currently, three types of [file formats](../developer-guide/media/index.md) are supported:

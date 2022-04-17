@@ -211,11 +211,7 @@ performance, but also because they can lose data over time. Local [Solid-State D
 
 ### Why don't you display animated GIFs natively? ###
 
-PhotoPrism focuses on photographic images and short videos. You may
-[convert your GIF files to  H.264 / MPEG-4 AVC](https://unix.stackexchange.com/questions/40638/how-to-do-i-convert-an-animated-gif-to-an-mp4-or-mv4-on-the-command-line) 
-using `ffmpeg`. That's also what Twitter does when you post a GIF. They will then be shown as 
-"live photos" and start playing on mouse over while also consuming less storage and bandwidth 
-compared to your original GIF files.
+Support for animated GIFs was [added in April 2022](https://github.com/photoprism/photoprism/commit/82d61d1f93961daa5b9ffea31e2ae4ab8897d2a7).
 
 ### Why is my storage folder so large? What is in it? ###
 

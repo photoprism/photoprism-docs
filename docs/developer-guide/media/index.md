@@ -44,6 +44,7 @@
 Run `photoprism show formats` in a terminal to list supported media and sidecar file formats.
 
 Command Flags:
+
 - `--md`, `-m`     format as machine-readable Markdown
 - `--csv`, `-c`    export as semicolon separated values
 - `--tsv`, `-t`    export as tab separated values

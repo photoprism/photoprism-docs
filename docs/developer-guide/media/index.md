@@ -47,4 +47,4 @@ Command Flags:
 - `--md`, `-m`     format as machine-readable Markdown
 - `--csv`, `-c`    export as semicolon separated values
 - `--tsv`, `-t`    export as tab separated values
-- `--short`, `-s`  hide links to documentation
+- `--short`, `-s`  hide format descriptions

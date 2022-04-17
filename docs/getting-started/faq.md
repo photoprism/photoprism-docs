@@ -16,7 +16,7 @@ Please let us know about any issues with a particular camera or file format.
 [Video formats](../developer-guide/media/index.md) supported by [FFmpeg](https://en.wikipedia.org/wiki/FFmpeg#Supported_codecs_and_formats) can be transcoded to
 [MPEG-4 AVC](https://en.wikipedia.org/wiki/Advanced_Video_Coding) for maximum browser compatibility. Still images for thumbnail creation can also be extracted from most videos.
 
-Make sure you have JSON sidecar files enabled if you have videos, live photos, and/or animated GIFs so that video-specific metadata such as codec, frames, and duration can be extracted, indexed, and searched.
+Make sure you have JSON sidecar files enabled if you have videos, live photos, and/or [animated GIFs](https://github.com/photoprism/photoprism/issues/590) so that video-specific metadata such as codec, frames, and duration can be extracted, indexed, and searched.
 
 For a complete list of file formats and extensions, see our [fact sheet](https://dl.photoprism.app/factsheets/PhotoPrism%2520Factsheet%2520-%2520File%2520Format%2520Support.pdf) and [developer guide](../developer-guide/media/index.md).
 
@@ -211,7 +211,7 @@ performance, but also because they can lose data over time. Local [Solid-State D
 
 ### Why don't you display animated GIFs natively? ###
 
-Support for animated GIFs was [added in April 2022](https://github.com/photoprism/photoprism/commit/82d61d1f93961daa5b9ffea31e2ae4ab8897d2a7).
+Support for animated GIFs was [added in April 2022](https://github.com/photoprism/photoprism/issues/590).
 
 ### Why is my storage folder so large? What is in it? ###
 

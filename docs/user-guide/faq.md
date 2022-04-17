@@ -98,7 +98,7 @@
 
 ??? question "What media file types are supported?"
 
-    PhotoPrism supports indexing, viewing, and converting most common image, video, and RAW file formats, including JPEG, PNG, GIF, BMP, HEIF, HEIC, MP4, MOV, WebP, and WebM. [TIFF is partially supported](https://github.com/golang/go/issues?q=is%3Aissue+image%2Ftiff+) without extensions such as GeoTIFF. The internally used image format is JPEG. Support for JPEG XL is planned but not yet available. When indexing, a JPEG sidecar file can be created automatically for RAW, HEIF, TIFF, PNG, BMP, GIF, and video files. It is needed for thumbnail creation, image classification, and face detection.
+    PhotoPrism supports indexing, viewing, and [converting](settings/library.md) most common image, video, and RAW file formats, including JPEG, PNG, GIF, BMP, HEIF, HEIC, MP4, MOV, WebP, and WebM. [TIFF is partially supported](https://github.com/golang/go/issues?q=is%3Aissue+image%2Ftiff+) without extensions such as GeoTIFF. The internally used image format is JPEG. Support for JPEG XL is planned but not yet available. When indexing, a JPEG sidecar file can be created automatically for RAW, HEIF, TIFF, PNG, BMP, GIF, and video files. It is needed for thumbnail creation, image classification, and face detection.
     
     If installed, converting RAW files is possible with the following converters (our Docker image includes both):
 

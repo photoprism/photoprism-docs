@@ -97,10 +97,8 @@
 ## Library, Counts & Files ##
 
 ??? question "What media file types are supported?"
-    
-    PhotoPrism supports indexing, viewing, and converting most common image, video, and RAW file formats, including JPEG, PNG, GIF, BMP, HEIF, HEIC, MP4, MOV, WebP, and WebM. [TIFF](https://github.com/golang/go/issues?q=is%3Aissue+image%2Ftiff+) is partially supported without extensions such as GeoTIFF. For a complete list of file formats and extensions, see our [fact sheet](https://dl.photoprism.app/factsheets/PhotoPrism%2520Factsheet%2520-%2520File%2520Format%2520Support.pdf).
-    
-    The internally used [image format](../developer-guide/media/index.md) is JPEG. Support for JPEG XL is planned but not yet available. When indexing, a JPEG sidecar file can be created automatically for RAW, HEIF, TIFF, PNG, BMP, GIF, and video files. It is needed for thumbnail creation, image classification, and face detection.
+
+    PhotoPrism supports indexing, viewing, and converting most common image, video, and RAW file formats, including JPEG, PNG, GIF, BMP, HEIF, HEIC, MP4, MOV, WebP, and WebM. [TIFF is partially supported](https://github.com/golang/go/issues?q=is%3Aissue+image%2Ftiff+) without extensions such as GeoTIFF. The internally used image format is JPEG. Support for JPEG XL is planned but not yet available. When indexing, a JPEG sidecar file can be created automatically for RAW, HEIF, TIFF, PNG, BMP, GIF, and video files. It is needed for thumbnail creation, image classification, and face detection.
     
     If installed, converting RAW files is possible with the following converters (our Docker image includes both):
 
@@ -115,6 +113,8 @@
     [MPEG-4 AVC](https://en.wikipedia.org/wiki/Advanced_Video_Coding) for maximum browser compatibility. Still images for thumbnail creation can also be extracted from most videos.
     
     Make sure you have JSON sidecar files enabled if you have videos, live photos, and/or animated GIFs so that video-specific metadata such as codec, frames, and duration can be extracted, indexed, and searched.
+
+    For a complete list of file formats and extensions, see our [fact sheet](https://dl.photoprism.app/factsheets/PhotoPrism%2520Factsheet%2520-%2520File%2520Format%2520Support.pdf) and [developer guide](../developer-guide/media/index.md).
 
 ??? question "What metadata sidecar file types are supported?"
     Currently, three types of [file formats](../developer-guide/media/index.md) are supported:

@@ -29,6 +29,12 @@ Responsible for editorial content according to § 5 TMG / § 55 RStV:
   Germany
 </address>
 
+Commercial Register Berlin (Charlottenburg), HRB 240600 B
+
+## Terms of Service ##
+
+By using our site, documentation, software, and services, you agree to our [terms of service](https://photoprism.app/terms).
+
 ## Privacy Policy ##
 
 If you just browse the documentation, our hosting provider collects the same basic information as most websites. They use common Internet technologies such as web server logs and possibly cookies. They collect this basic information from everyone, regardless of whether you are a registered user or not.

@@ -5,7 +5,7 @@
     Your continued support [helps us](funding.md) provide regular updates and services like [world maps](https://try.photoprism.app/places). Thank you! 💜
 
 ### Development Preview ###
-<span class="build">Build 220417-5d6cb9ea</span>
+<span class="build">Build 220418-f093b498</span>
 
 This update features search UX improvements, a new Docker base image based on Debian 12 "Bookworm",
 as well as fixes for recently discovered issues. Front- and backend [translations](https://translate.photoprism.app/) in numerous
@@ -26,6 +26,7 @@ languages have been added and updated. Thanks to all involved!
 - Library: [Added button to clear log history in *Library* > *Errors*](https://github.com/photoprism/photoprism/discussions/1683)
 - Library: [Disabled hidden files warning while indexing as it can be misleading](https://github.com/photoprism/photoprism/issues/2189)
 - Index: [Fixed errors when re-indexing libraries with archived photos](https://github.com/photoprism/photoprism/issues/2257)
+- Index: [RAW and video conversion commands run in a virtual home directory](https://github.com/photoprism/photoprism/issues/2262)
 - Thumbnails: [Reduced default JPEG quality from 92 to 85 to optimize storage and loading](https://github.com/photoprism/photoprism/issues/2215)
 - Metadata: [Manual local time changes are always preserved when reindexing](https://github.com/photoprism/photoprism/issues/2239)
 - Metadata: [Fixed Exif orientation flag when converting HEIF/HEIC images to JPEG](https://github.com/photoprism/photoprism/discussions/2214)
@@ -36,14 +37,15 @@ languages have been added and updated. Thanks to all involved!
 - WebDAV: [Added timeout/retry settings and improved handling of sync errors](https://github.com/photoprism/photoprism/issues/1781)
 - CLI: [Renamed `--config-file` to `--defaults-yaml` and improved command help](https://github.com/photoprism/photoprism/issues/2250)
 - CLI: [Added short names for common config flags, e.g. `-i` for `--wakeup-interval`](https://github.com/photoprism/photoprism/issues/2195)
-- CLI: [Run `photoprism show tags` to list supported metadata values and their corresponding tags](https://github.com/photoprism/photoprism/issues/2252)
-- CLI: [Run `photoprism show filters` to display a search filter overview with examples](https://github.com/photoprism/photoprism/commit/7291c1d70329d85af2dfc1e9de512d28378974a5)
+- CLI: [Run `photoprism show tags` to display metadata tags and supported standards](https://github.com/photoprism/photoprism/issues/2252)
 - CLI: [Run `photoprism show formats` to display supported media and sidecar file formats](https://github.com/photoprism/photoprism/issues/2247)
+- CLI: [Run `photoprism show filters` to display a search filter overview with examples](https://github.com/photoprism/photoprism/commit/7291c1d70329d85af2dfc1e9de512d28378974a5)
 - Config: [Improved FFmpeg parameters for Intel QSV hardware transcoding](https://github.com/photoprism/photoprism/issues/2222)
 - Config: [Added NVIDIA hardware video transcoding support for sponsors](https://github.com/photoprism/photoprism/issues/2125)
 - Config: [Added `--disable-raw` flag to disable indexing and conversion of RAW files](https://github.com/photoprism/photoprism/issues/2227)
 - Config: [Added `--resolution-limit` option to skip high-resolution images when indexing](https://github.com/photoprism/photoprism/issues/1017)
 - Docker: [Upgraded base image to Debian 12 "Bookworm", which includes FFmpeg 4.4.1 and Darktable 3.8.1](https://github.com/photoprism/photoprism/issues/2178)
+- Docker: [Added default user accounts belonging to the groups *photoprism*, *video*, and *render*](https://github.com/photoprism/photoprism/issues/2228)
 
 !!! tldr ""
     You can test upcoming features and improvements by changing the image from `photoprism/photoprism:latest`

@@ -16,8 +16,8 @@ languages have been added and updated. Thanks to all involved!
 - Auth: [Passwords must have at least 8 characters to mitigate brute-force attacks](https://github.com/photoprism/photoprism/issues/2248)
 - Search: [User interface and database performance optimizations](https://github.com/photoprism/photoprism/issues/1438)
 - Search: [Fixed occasional lag when entering queries in the search toolbar](https://github.com/photoprism/photoprism/issues/1995)
-- Search: [Improved `album:...` filter allows searching for numeric names, `albums:..` also supports AND/OR conditions via `&` and `|`](https://github.com/photoprism/photoprism/issues/1994)
-- Search: [Improved `camera:...` and `lens:...` filters accept camera/lens names in addition to numeric ids](https://github.com/photoprism/photoprism/issues/2079)
+- Search: [Improved `album:...` filter supports numeric names, `albums:..` also AND/OR](https://github.com/photoprism/photoprism/issues/1994)
+- Search: [Improved `camera:...` and `lens:...` filters accept names in addition to IDs](https://github.com/photoprism/photoprism/issues/2079)
 - Search: [Added `square:yes` and `landscape:yes` filters](https://github.com/photoprism/photoprism/issues/2169)
 - Albums: ["Add to album" dialog preloads more names for auto-completion](https://github.com/photoprism/photoprism/pull/2152)
 - Albums: [Album names are shortened if necessary to avoid errors when saving](https://github.com/photoprism/photoprism/issues/2181)
@@ -44,7 +44,7 @@ languages have been added and updated. Thanks to all involved!
 - Config: [Added NVIDIA hardware video transcoding support for sponsors](https://github.com/photoprism/photoprism/issues/2125)
 - Config: [Added `--disable-raw` flag to disable indexing and conversion of RAW files](https://github.com/photoprism/photoprism/issues/2227)
 - Config: [Added `--resolution-limit` option to skip high-resolution images when indexing](https://github.com/photoprism/photoprism/issues/1017)
-- Docker: [Upgraded base image to Debian 12 "Bookworm", which includes FFmpeg 4.4.1 and Darktable 3.8.1](https://github.com/photoprism/photoprism/issues/2178)
+- Docker: [New Debian 12 "Bookworm" base image with FFmpeg 4.4.1 and Darktable 3.8.1](https://github.com/photoprism/photoprism/issues/2178)
 - Docker: [Added default user accounts belonging to the groups *photoprism*, *video*, and *render*](https://github.com/photoprism/photoprism/issues/2228)
 
 !!! tldr ""

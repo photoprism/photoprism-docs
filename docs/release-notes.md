@@ -47,7 +47,7 @@ languages have been added and updated. Thanks to all involved!
 - Config: [Added `--disable-raw` flag to disable indexing and conversion of RAW files](https://github.com/photoprism/photoprism/issues/2227)
 - Config: [Added `--resolution-limit` option to skip high-resolution images when indexing](https://github.com/photoprism/photoprism/issues/1017)
 - Docker: [New Debian 12 "Bookworm" base image with FFmpeg 4.4.1 and Darktable 3.8.1](https://github.com/photoprism/photoprism/issues/2178)
-- Docker: [Added default user accounts belonging to the groups *photoprism*, *video*, and *render*](https://github.com/photoprism/photoprism/issues/2228)
+- Docker: [Added default users and groups for improved video transcoding compatibility](https://github.com/photoprism/photoprism/issues/2228)
 
 !!! tldr ""
     You can test upcoming features and improvements by changing the image from `photoprism/photoprism:latest`

@@ -5,7 +5,7 @@
     Your continued support [helps us](funding.md) provide regular updates and services like [world maps](https://try.photoprism.app/places). Thank you! 💜
 
 ### Development Preview ###
-<span class="build">Build 220418-410d7d72</span>
+<span class="build">Build 220421-d4662efd</span>
 
 This update features search UX improvements, a new Docker base image based on Debian 12 "Bookworm",
 as well as fixes for recently discovered issues. Front- and backend [translations](https://translate.photoprism.app/) in numerous
@@ -23,7 +23,9 @@ languages have been added and updated. Thanks to all involved!
 - Albums: [Album names are shortened if necessary to avoid errors when saving](https://github.com/photoprism/photoprism/issues/2181)
 - Albums: [Fixed accidental creation of duplicates by pressing Enter multiple times](https://github.com/photoprism/photoprism/issues/2233)
 - People: [Improved logging and fixed potential issues with matching unrecognized faces](https://github.com/photoprism/photoprism/issues/2182)
+- Places: [Limited the number of images displayed on the map to 500,000](https://github.com/photoprism/photoprism/commit/49e923232380117c8b1eab9ff5b41de878d46ab2)
 - Library: [Added button to clear log history in *Library* > *Errors*](https://github.com/photoprism/photoprism/discussions/1683)
+- Library: [RAW previews and the number of actual files are shown under Originals](https://github.com/photoprism/photoprism/issues/2273)
 - Library: [Disabled hidden files warning while indexing as it can be misleading](https://github.com/photoprism/photoprism/issues/2189)
 - Index: [Fixed errors when re-indexing libraries with archived photos](https://github.com/photoprism/photoprism/issues/2257)
 - Index: [RAW and video conversion commands run in a virtual home directory](https://github.com/photoprism/photoprism/issues/2262)

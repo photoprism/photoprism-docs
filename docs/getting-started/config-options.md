@@ -31,12 +31,12 @@
 | PHOTOPRISM_ORIGINALS_LIMIT  | originals-limit, mb  | maximum size of media files in `MB` (1-100000; -1 to disable)                                        |
 | PHOTOPRISM_RESOLUTION_LIMIT | resolution-limit, mp | maximum resolution of media files in `MEGAPIXELS` (1-900; -1 to disable) *sponsors only*             |
 | PHOTOPRISM_STORAGE_PATH     | storage-path, s      | writable storage `PATH` for sidecar, cache, and database files                                       |
-| PHOTOPRISM_SIDECAR_PATH     | sidecar-path, sc     | custom relative or absolute sidecar `PATH` (optional)                                                |
-| PHOTOPRISM_BACKUP_PATH      | backup-path, ba      | custom backup `PATH` for index backup files (optional)                                               |
-| PHOTOPRISM_CACHE_PATH       | cache-path, ca       | custom cache `PATH` for sessions and thumbnail files (optional)                                      |
-| PHOTOPRISM_IMPORT_PATH      | import-path, im      | base `PATH` from which files can be imported to originals (optional)                                 |
+| PHOTOPRISM_SIDECAR_PATH     | sidecar-path, sc     | custom relative or absolute sidecar `PATH` *optional*                                                |
+| PHOTOPRISM_BACKUP_PATH      | backup-path, ba      | custom backup `PATH` for index backup files *optional*                                               |
+| PHOTOPRISM_CACHE_PATH       | cache-path, ca       | custom cache `PATH` for sessions and thumbnail files *optional*                                      |
+| PHOTOPRISM_IMPORT_PATH      | import-path, im      | base `PATH` from which files can be imported to originals *optional*                                 |
 | PHOTOPRISM_ASSETS_PATH      | assets-path, as      | assets `PATH` containing static resources like icons, models, and translations                       |
-| PHOTOPRISM_TEMP_PATH        | temp-path, tmp       | temporary file `PATH` (optional)                                                                     |
+| PHOTOPRISM_TEMP_PATH        | temp-path, tmp       | temporary file `PATH` *optional*                                                                     |
 
 ### Index Workers ###
 
@@ -71,30 +71,30 @@
 | PHOTOPRISM_EXIF_BRUTEFORCE        | exif-bruteforce        | always perform a brute-force search if no Exif headers were found                       |
 | PHOTOPRISM_DETECT_NSFW            | detect-nsfw            | flag photos as private that may be offensive (requires TensorFlow)                      |
 | PHOTOPRISM_UPLOAD_NSFW            | upload-nsfw, n         | allow uploads that may be offensive                                                     |
-| PHOTOPRISM_DEFAULT_LOCALE         | default-locale, lang   | standard user interface language `CODE`                                                 |
 
 ### Customization ###
 
-|         Variable         |     Flag      |                             Usage                             |
-|--------------------------|---------------|---------------------------------------------------------------|
-| PHOTOPRISM_DEFAULT_THEME | default-theme | standard user interface theme `NAME` *sponsors only*          |
-| PHOTOPRISM_APP_ICON      | app-icon      | web app `ICON` (logo, app, crisp, mint, bold) *sponsors only* |
-| PHOTOPRISM_APP_NAME      | app-name      | web app `NAME` when installed on a device *sponsors only*     |
-| PHOTOPRISM_APP_MODE      | app-mode      | web app `MODE` (fullscreen, standalone, minimal-ui, browser)  |
+|         Variable          |         Flag         |                               Usage                               |
+|---------------------------|----------------------|-------------------------------------------------------------------|
+| PHOTOPRISM_DEFAULT_LOCALE | default-locale, lang | standard user interface language `CODE`                           |
+| PHOTOPRISM_DEFAULT_THEME  | default-theme        | standard user interface theme `NAME` *sponsors only*              |
+| PHOTOPRISM_APP_MODE       | app-mode             | web app `MODE` (fullscreen, standalone, minimal-ui, browser)      |
+| PHOTOPRISM_APP_ICON       | app-icon             | web app `ICON` (logo, app, crisp, mint, bold) *sponsors only*     |
+| PHOTOPRISM_APP_NAME       | app-name             | web app `NAME` when installed on a device *sponsors only*         |
+| PHOTOPRISM_IMPRINT        | imprint              | legal `INFORMATION`, displayed in the page footer *sponsors only* |
+| PHOTOPRISM_IMPRINT_URL    | imprint-url          | legal information `URL` *sponsors only*                           |
 
 ### Site Information ###
 
-|          Variable           |       Flag       |                           Usage                            |
-|-----------------------------|------------------|------------------------------------------------------------|
-| PHOTOPRISM_CDN_URL          | cdn-url          | content delivery network `URL` *sponsors only*             |
-| PHOTOPRISM_SITE_URL         | site-url, url    | public site `URL`                                          |
-| PHOTOPRISM_SITE_AUTHOR      | site-author      | site `OWNER`, copyright, or artist                         |
-| PHOTOPRISM_SITE_TITLE       | site-title       | site `TITLE` *sponsors only*                               |
-| PHOTOPRISM_SITE_CAPTION     | site-caption     | site `CAPTION`                                             |
-| PHOTOPRISM_SITE_DESCRIPTION | site-description | site `DESCRIPTION` (optional)                              |
-| PHOTOPRISM_SITE_PREVIEW     | site-preview     | site preview image `URL` (optional) *sponsors only*        |
-| PHOTOPRISM_IMPRINT          | imprint          | legal `INFO`, displayed in the page footer *sponsors only* |
-| PHOTOPRISM_IMPRINT_URL      | imprint-url      | optional legal info `URL` *sponsors only*                  |
+|          Variable           |       Flag       |                     Usage                      |
+|-----------------------------|------------------|------------------------------------------------|
+| PHOTOPRISM_CDN_URL          | cdn-url          | content delivery network `URL` *sponsors only* |
+| PHOTOPRISM_SITE_URL         | site-url, url    | public site `URL`                              |
+| PHOTOPRISM_SITE_AUTHOR      | site-author      | site `OWNER`, copyright, or artist             |
+| PHOTOPRISM_SITE_TITLE       | site-title       | site `TITLE` *sponsors only*                   |
+| PHOTOPRISM_SITE_CAPTION     | site-caption     | site `CAPTION`                                 |
+| PHOTOPRISM_SITE_DESCRIPTION | site-description | site `DESCRIPTION` *optional*                  |
+| PHOTOPRISM_SITE_PREVIEW     | site-preview     | sharing preview image `URL` *sponsors only*    |
 
 ### Web Server ###
 
@@ -141,12 +141,12 @@
 |---------------------------|----------------|--------------------------------------------------------------------|
 | PHOTOPRISM_DOWNLOAD_TOKEN | download-token | `SECRET` download URL token for originals (default: random)        |
 | PHOTOPRISM_PREVIEW_TOKEN  | preview-token  | `SECRET` thumbnail and video streaming URL token (default: random) |
-| PHOTOPRISM_THUMB_COLOR    | thumb-color    | standard color `PROFILE` for thumbnails (leave blank to disable)   |
 
 ### Image Quality ###
 
 |            Variable            |         Flag         |                                            Usage                                            |
 |--------------------------------|----------------------|---------------------------------------------------------------------------------------------|
+| PHOTOPRISM_THUMB_COLOR         | thumb-color          | standard color `PROFILE` for thumbnails (leave blank to disable)                            |
 | PHOTOPRISM_THUMB_FILTER        | thumb-filter, filter | image downscaling filter `NAME` (best to worst: blackman, lanczos, cubic, linear)           |
 | PHOTOPRISM_THUMB_SIZE          | thumb-size           | maximum size of thumbnails created during indexing in `PIXELS` (720-7680)                   |
 | PHOTOPRISM_THUMB_SIZE_UNCACHED | thumb-size-uncached  | maximum size of missing thumbnails created on demand in `PIXELS` (720-7680)                 |

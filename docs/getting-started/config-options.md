@@ -74,15 +74,16 @@
 
 ### Customization ###
 
-|         Variable          |         Flag         |                               Usage                               |
-|---------------------------|----------------------|-------------------------------------------------------------------|
-| PHOTOPRISM_DEFAULT_LOCALE | default-locale, lang | standard user interface language `CODE`                           |
-| PHOTOPRISM_DEFAULT_THEME  | default-theme        | standard user interface theme `NAME` *sponsors only*              |
-| PHOTOPRISM_APP_MODE       | app-mode             | web app `MODE` (fullscreen, standalone, minimal-ui, browser)      |
-| PHOTOPRISM_APP_ICON       | app-icon             | web app `ICON` (logo, app, crisp, mint, bold) *sponsors only*     |
-| PHOTOPRISM_APP_NAME       | app-name             | web app `NAME` when installed on a device *sponsors only*         |
-| PHOTOPRISM_IMPRINT        | imprint              | legal `INFORMATION`, displayed in the page footer *sponsors only* |
-| PHOTOPRISM_IMPRINT_URL    | imprint-url          | legal information `URL` *sponsors only*                           |
+|         Variable          |         Flag         |                                   Usage                                   |
+|---------------------------|----------------------|---------------------------------------------------------------------------|
+| PHOTOPRISM_DEFAULT_LOCALE | default-locale, lang | standard user interface language `CODE`                                   |
+| PHOTOPRISM_DEFAULT_THEME  | default-theme        | standard user interface theme `NAME` *sponsors only*                      |
+| PHOTOPRISM_APP_MODE       | app-mode             | progressive web app `MODE` (fullscreen, standalone, minimal-ui, browser)  |
+| PHOTOPRISM_APP_ICON       | app-icon             | progressive web app `ICON` (logo, app, crisp, mint, bold) *sponsors only* |
+| PHOTOPRISM_APP_NAME       | app-name             | progressive web app `NAME` when installed on a device *sponsors only*     |
+| PHOTOPRISM_IMPRINT        | imprint              | legal `INFORMATION`, displayed in the page footer *sponsors only*         |
+| PHOTOPRISM_IMPRINT_URL    | imprint-url          | legal information `URL` *sponsors only*                                   |
+| PHOTOPRISM_WALLPAPER_URI  | wallpaper-uri        | login screen background image `URI` *sponsors only*                       |
 
 ### Site Information ###
 

@@ -6,6 +6,16 @@
 [![Twitter](https://dl.photoprism.app/img/badges/badge-twitter.svg)][twitter]
 [![Reddit](https://dl.photoprism.app/img/badges/badge-reddit.svg)][reddit]
 
+*While we continue to work towards our vision, we receive an extremely high volume of emails and contact requests. Please bear with us if we are unable to get back to you immediately. We do our best to respond within five business days or less.*
+
+If you are seeking help with installing PhotoPrism at home, our [Reddit Community](https://link.photoprism.app/reddit) and [Community Chat](https://link.photoprism.app/chat) are a great place to start! Technical issues? Our [troubleshooting checklists](https://docs.photoprism.app/getting-started/troubleshooting/) help you quickly diagnose and solve them.
+
+You may contact us at [privacy@photoprism.app](mailto:privacy@photoprism.app) if you have specific questions about our [Privacy Policy](https://photoprism.app/privacy) or [GDPR Compliance Statement](https://photoprism.app/privacy/gdpr).
+
+[Security vulnerabilities](https://photoprism.app/security-policy) can be reported to [security@photoprism.app](mailto:security@photoprism.app). This ensures that your report does not get lost and that we can react as quickly as possible.
+
+By using our website, app and/or services, you agree to our [Terms of Service](https://photoprism.app/terms).
+
 #### Technical Support ####
 
 Sponsors are welcome to contact us at [sponsors@photoprism.app](mailto:sponsors@photoprism.app) for technical support and assistance with enabling sponsor features.
@@ -29,32 +39,7 @@ Responsible for editorial content according to § 5 TMG / § 55 RStV:
   Germany
 </address>
 
-Commercial Register Berlin (Charlottenburg), HRB 240600 B
-
-## Terms of Service ##
-
-By using our site, documentation, software, and services, you agree to our [terms of service](https://photoprism.app/terms).
-
-## Privacy Policy ##
-
-If you just browse the documentation, our hosting provider collects the same basic information as most websites. They use common Internet technologies such as web server logs and possibly cookies. They collect this basic information from everyone, regardless of whether you are a registered user or not.
-
-The information they collect about all visitors includes:
-
-  - the visitor’s browser type
-  - language preference
-  - referring site
-  - the date and time of each visitor request
-
-They also collect potentially personally identifying information such as Internet Protocol (IP) addresses.
-For details, see:
-
-- [DigitalOcean Privacy Policy](https://www.digitalocean.com/legal/privacy-policy/)
-- [DigitalOcean Data Processing Agreement](https://www.digitalocean.com/legal/data-processing-agreement/)
-
-## Security Policy ##
-
-Visit [photoprism.app/security-policy](https://photoprism.app/security-policy) to learn more about our security policy.
+Commercial Register Berlin, HRB 240600 B
 
 ## PhotoPrism® Trademark ##
 

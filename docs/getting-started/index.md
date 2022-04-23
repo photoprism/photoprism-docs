@@ -85,6 +85,8 @@ In addition, [sponsors](../funding.md) receive direct [technical support](https:
 We'll do our best to answer all your questions. In return, we ask you to [back us](../funding.md) on [Patreon](https://link.photoprism.app/patreon) or [GitHub Sponsors](https://link.photoprism.app/sponsor).
 Think of "free software" as in "free speech," not as in "free beer". Thank you!
 
+*While we continue to work towards our vision, we receive an extremely high volume of emails and contact requests. Please bear with us if we are unable to get back to you immediately. We do our best to respond within five business days or less.*
+
 !!! info ""
     **We kindly ask you not to report bugs via *GitHub Issues* unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.**
     [Contact us](https://photoprism.app/contact) or [a community member](https://link.photoprism.app/discussions)

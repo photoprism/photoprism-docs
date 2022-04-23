@@ -161,8 +161,7 @@ systems and devices, which saves our team a lot of time that we can then spend [
 providing support and developing one of the many features that users are waiting for.
 
 Human-readable and [versioned Dockerfiles as part of our public source code](https://github.com/photoprism/photoprism/tree/develop/docker)
-also help avoid "works for me" moments and other unwelcome surprises by enabling teams to have the exact same environment everywhere
-in [development](https://github.com/photoprism/photoprism/blob/develop/docker/develop/Dockerfile), staging,
+also help avoid "works for me" moments and other unwelcome surprises by enabling teams to have the exact same environment everywhere in [development](https://github.com/photoprism/photoprism/blob/develop/docker/develop/Dockerfile), staging,
 and [production](https://github.com/photoprism/photoprism/blob/develop/docker/photoprism/Dockerfile).
 
 Last but not least, virtually all file format parsers have vulnerabilities that just haven't been discovered yet.

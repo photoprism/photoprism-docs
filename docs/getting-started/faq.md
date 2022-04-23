@@ -4,7 +4,7 @@
 
 PhotoPrism supports indexing, viewing, and [converting](../user-guide/settings/library.md) most common image, video, and RAW file formats, including JPEG, PNG, GIF, BMP, HEIF, HEIC, MP4, MOV, WebP, and WebM. [TIFF is partially supported](https://github.com/golang/go/issues?q=is%3Aissue+image%2Ftiff+) without extensions such as GeoTIFF.
 
-The internally used image format is JPEG. Support for JPEG XL is planned but not yet available. When indexing, a JPEG sidecar file can be created automatically for videos and images in other formats. It is needed for thumbnail generation, image classification, and face detection.
+The internally used image format is JPEG. When indexing, a JPEG sidecar file can be created automatically for videos and images in other formats. It is needed for thumbnail generation, image classification, and face detection. JPEG XL support is planned as soon as it is generally available and enough compatible tools exist.
 
 If installed, converting RAW files is possible with the following converters (our Docker image includes both):
 
@@ -20,7 +20,7 @@ Please let us know about any issues with a particular camera or file format.
 
 Make sure you have JSON sidecar files enabled if you have videos, live photos, and/or [animated GIFs](https://github.com/photoprism/photoprism/issues/590) so that video-specific metadata such as codec, frames, and duration can be extracted, indexed, and searched.
 
-For a complete list of file formats and extensions, see our [fact sheet](https://dl.photoprism.app/factsheets/PhotoPrism%2520Factsheet%2520-%2520File%2520Format%2520Support.pdf) and [Developer Guide](../developer-guide/media/index.md).
+For a complete list of file formats and extensions, see our downloadable [Feature Overview](https://link.photoprism.app/overview).
 
 ### What are sidecar files and where do I find them? ###
 
@@ -161,8 +161,8 @@ systems and devices, which saves our team a lot of time that we can then spend [
 providing support and developing one of the many features that users are waiting for.
 
 Human-readable and [versioned Dockerfiles as part of our public source code](https://github.com/photoprism/photoprism/tree/develop/docker)
-also help avoid "works for me" moments and other unwelcome surprises by enabling us to have the exact same environment everywhere
-in [development](https://github.com/photoprism/photoprism/blob/develop/docker/develop/Dockerfile)
+also help avoid "works for me" moments and other unwelcome surprises by enabling teams to have the exact same environment everywhere
+in [development](https://github.com/photoprism/photoprism/blob/develop/docker/develop/Dockerfile), staging,
 and [production](https://github.com/photoprism/photoprism/blob/develop/docker/photoprism/Dockerfile).
 
 Last but not least, virtually all file format parsers have vulnerabilities that just haven't been discovered yet.

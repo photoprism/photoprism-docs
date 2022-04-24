@@ -23,7 +23,9 @@ already exists. Give ideas you like a thumbs-up 👍  , so that we know what is 
 Follow us on [Twitter](https://link.photoprism.app/twitter) and join the [Community Chat](https://link.photoprism.app/chat)
 to get regular updates, connect with other contributors, and discuss your ideas. Our [Code of Conduct](https://photoprism.app/code-of-conduct) explains the "dos and don’ts."
 
-An important part of our journey is to explore new ways in product development and build better software through consistent use of community feedback. Feel free to [share your thoughts](../contact.md) with us at any time.
+An important part of our journey is to explore new directions in product development and build better software through consistent use of feedback.
+
+Feel free to [contact us](https://photoprism.app/contact) with anything that is on your mind, even if you just want to say hello. It is our goal to answer all questions we receive from our users, customers, partners, and the developer community. Our team also welcomes feedback if you believe something can or should be improved.
 
 ## Creating Bug Reports ##
 

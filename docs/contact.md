@@ -32,13 +32,15 @@ Feel free to contact us at [hello@photoprism.app](mailto:hello@photoprism.app) w
 Responsible for editorial content according to § 5 TMG / § 55 RStV:
 
 <address>
-  PhotoPrism UG (haftungsbeschränkt)<br />
-  Zimmermannstr. 37<br />
-  12163 Berlin<br />
-  Germany
+PhotoPrism UG (haftungsbeschränkt)<br>
+Zimmermannstr. 37<br>
+12163 Berlin<br>
+Germany<br>
+<br>
+Commercial Register: Berlin (Charlottenburg), HRB 240600 B<br>
+Managing Directors: Theresa Gresch, Michael Mayer<br>
+Phone: +49 178 168 23 42 (no cold calls)
 </address>
-
-Commercial Register Berlin, HRB 240600 B
 
 ## PhotoPrism® Trademark ##
 

@@ -165,7 +165,7 @@ nav:
       - Team: team.md
       - Funding: funding.md
       - Credits: credits.md
-      - Contact: contact.md
+      # - Contact: contact.md
       - License:
           - GNU AGPL: license/agpl.md
           - Documentation: license/docs.md

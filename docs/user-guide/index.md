@@ -23,19 +23,12 @@ your specific use case.
 
 ## Getting Support ##
 
-Before submitting a support request, please use our [Troubleshooting Checklists](../getting-started/troubleshooting/index.md)
-to determine the cause of your problem. If this doesn't help, or you have other questions:
-
-- you are welcome to join us on [Reddit](https://link.photoprism.app/reddit)
-- post your question in [GitHub Discussions](https://link.photoprism.app/discussions)
-- or ask in our [Community Chat](https://link.photoprism.app/chat)
-
-In addition, [sponsors](../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
+If you need help installing our software at home, you can [join us on Reddit](https://link.photoprism.app/reddit), ask in our [Community Chat](https://link.photoprism.app/chat), or post your question in [GitHub Discussions](https://link.photoprism.app/discussions)! Common problems can be quickly diagnosed and solved using the [Troubleshooting Checklists](https://docs.photoprism.app/getting-started/troubleshooting/) in [Getting Started](https://docs.photoprism.app/getting-started/).
 
 We'll do our best to answer all your questions. In return, we ask you to [back us](../funding.md) on [Patreon](https://link.photoprism.app/patreon) or [GitHub Sponsors](https://link.photoprism.app/sponsors).
 Think of "free software" as in "free speech," not as in "free beer". Thank you!
 
-*While we continue to work towards our vision, we receive an extremely high volume of emails and contact requests. Please bear with us if we are unable to get back to you immediately. We do our best to respond within five business days or less.*
+In exchange for their continued support, [Sponsors](../funding.md) are also welcome to request direct technical [support via email](mailto:sponsors@photoprism.app). Please bear with us if we are unable to get back to you immediately. We do our best to respond within five business days or less.
 
 !!! info ""
     **We kindly ask you not to report bugs via *GitHub Issues* unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.**

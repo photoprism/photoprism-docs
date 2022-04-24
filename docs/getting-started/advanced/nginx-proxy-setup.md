@@ -55,11 +55,15 @@ You can just use  their `certbot` tool and acquire a new certificate in seconds.
 
 For Ubuntu / Debian the package is directly in the repository.
 Therefore, you can easily install it using this command: 
+
 ```bash
 apt-get update && apt-get install -y certbot python3-certbot-nginx
 ```
+
 #### Generate the certificate
+
 Now, just request a new certificate by using this command: 
+
 ```bash
 certbot -d photoprism.example.com
 ```

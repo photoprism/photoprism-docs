@@ -175,6 +175,14 @@ compromising performance and usability.
     both worlds. It's essentially what happens when you run dockerized applications on [virtual cloud servers](cloud/digitalocean.md)
     and operating systems other than Linux.
 
+### Will the self-hosted version continue to be supported once a hosted version is available? ###
+
+Absolutely! Self-hosting is the easiest way to stay in control and protect your privacy (a key part of our mission). It also provides the best experience for advanced users who often rely on a local toolchain to select, edit, and publish their pictures.
+
+We understand that there is a great demand and many practical uses for a hosted version, which we plan to offer in addition so that users have more choice. Selected hosting partners will ensure that the privacy of our users is protected as much as technically possible, even in the cloud.
+
+Likewise, businesses demand a commercial offering with features and support options geared towards professional users. They are willing to pay for the value they receive, which helps fund development and allows us to expand our team.
+
 ### Should I use SQLite, MariaDB, or MySQL? ###
 
 PhotoPrism is compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB 10.5.12+](https://mariadb.org/).

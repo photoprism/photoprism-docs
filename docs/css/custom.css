@@ -19,17 +19,23 @@ a.action-button:hover {
     color: #000000;
 }
 
-.footer-info {
+footer.md-footer .footer-info {
     text-align: left;
     width: 100%;
-    color: var(--md-footer-fg-color--lighter);
+    color: rgba(255, 255, 255, 0.5);
     font-size: .64rem;
     margin: auto 0.6rem;
     padding: 0.4rem 0 0 0;
 }
 
-html .footer-info a {
-    color: var(--md-footer-fg-color--lighter) !important;
+footer.md-footer .footer-info a {
+    color: rgba(255, 255, 255, 0.55)!important;
+}
+
+footer.md-footer .md-copyright a:hover,
+footer.md-footer  .footer-info a:hover {
+    color: rgba(255, 255, 255, 0.7)!important;
+    text-decoration: underline;
 }
 
 p.announce-banner a,

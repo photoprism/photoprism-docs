@@ -3,6 +3,7 @@
 ## General ##
 
 ??? question "When exactly will new features be released?"
+
     We have a zero bug policy and do our best to help users when they need support or have other questions.
     Updating and improving the documentation you are reading takes up a large part of our time too.
 
@@ -14,6 +15,7 @@
     [become a sponsor](../funding.md) to get their favorite features as soon as possible.
 
 ??? question "Are there plans to introduce premium features?"
+
     PhotoPrism is 100% self-funded and independent. We plan to offer non-essential premium features and services as voluntary donations currently don't
     cover even our most basic expenses. It is in the best interest of all users that funding is sustainable
     in the long run.
@@ -31,6 +33,7 @@
     the product and the community. Think of "free software" as in "free speech," not as in "free beer".
 
 ??? question "Why can't I just purchase and download a single version?"
+
     Offering single versions for one-time purchase without ongoing updates would be irresponsible.
     Unlike traditional offline apps such as Microsoft Office or single-player games, software exposed to the Internet
     must be updated regularly to stay secure and compatible with the latest standards.
@@ -43,9 +46,18 @@
     and don't expect developers to spend time providing individual updates for old versions that contain only 
     critical security updates, but nothing else.
 
+??? question "Will the self-hosted version continue to be supported once a hosted version is available?"
+
+    Absolutely! Self-hosting is the easiest way to stay in control and protect your privacy (a key part of our mission). It also provides the best experience for advanced users who often rely on a local toolchain to select, edit, and publish their pictures.
+    
+    We understand that there is a great demand and many practical uses for a hosted version, which we plan to offer in addition so that users have more choice. Selected hosting partners will ensure that the privacy of our users is protected as much as technically possible, even in the cloud.
+    
+    Likewise, businesses demand a commercial offering with features and support options geared towards professional users. They are willing to pay for the value they receive, which helps fund development and allows us to expand our team.
+
 ## User Interface ##
 
 ??? question "Can I use trees for organizing my pictures and albums?"
+
     Except in *Library > Originals* and for object classification in *Labels*, PhotoPrism does not
     support hierarchically organized content for a number of reasons:
     
@@ -68,6 +80,7 @@
     and prefer to explore them in multiple dimensions instead.
 
 ??? question "What's the difference between keywords and labels?"
+
     Keywords contain a list of search terms extracted from metadata, file names, and other sources
     like geodata. Pictures with matching keywords automatically show up in related *Labels*.
 
@@ -84,6 +97,7 @@
 ## Search ##
 
 ??? question "Why can't I play live photos or find stacks when I search for specific images?"
+
     Our search API and user interface perform a file search. This is intentional since "stacks" can contain files of different types and properties, such as color.
     
     For example, there may be color and monochrome versions. Now, when you search for them or sort them by color, the user interface must display individual files. Otherwise, the results showing a color image/video when you filter by monochrome would make no sense.
@@ -122,6 +136,7 @@
     For a complete list of file formats and extensions, see our downloadable [Feature Overview](https://link.photoprism.app/overview).
 
 ??? question "What metadata sidecar file types are supported?"
+
     Currently, three types of [file formats](../developer-guide/media/index.md) are supported:
     
     #### JSON ####
@@ -155,6 +170,7 @@
     embedded XMP is only possible via Exiftool, see above.
 
 ??? question "Are JPEGs updated when RAW or XMP files change?"
+
     JPEGs are currently not regenerated when related RAW or XMP files change. RAW files are digital negatives by design. PhotoPrism therefore assumes that their image information is immutable.
 
     XMP files can affect the appearance, but most of the metadata they contain, such as title and description, does not. Creating JPEGs from RAW files is a time-consuming task, and in most cases would cause a huge, unjustified amount of overhead. In addition, the rendering information in XMP files is not well standardized. For example, changes you make in Photoshop may not be compatible with Darktable.

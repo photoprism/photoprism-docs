@@ -8,17 +8,16 @@
 
 *While we continue to work towards our vision, we receive an extremely high volume of emails and contact requests. Please bear with us if we are unable to get back to you immediately. We do our best to respond within five business days or less.*
 
-If you are seeking help with installing PhotoPrism at home, our [Reddit Community](https://link.photoprism.app/reddit) and [Community Chat](https://link.photoprism.app/chat) are a great place to start! Technical issues? Our [troubleshooting checklists](https://docs.photoprism.app/getting-started/troubleshooting/) help you quickly diagnose and solve them.
+If you need help installing our software at home, you can [join us on Reddit](https://link.photoprism.app/reddit), ask in our [Community Chat](https://link.photoprism.app/chat), or post your question in [GitHub Discussions](https://link.photoprism.app/discussions)! Common problems can be quickly diagnosed and solved using the [Troubleshooting Checklists](https://docs.photoprism.app/getting-started/troubleshooting/) in [Getting Started](https://docs.photoprism.app/getting-started/).
 
 You may contact us at [privacy@photoprism.app](mailto:privacy@photoprism.app) if you have specific questions about our [Privacy Policy](https://photoprism.app/privacy) or [GDPR Compliance Statement](https://photoprism.app/privacy/gdpr).
+Security researchers may [report vulnerabilities](https://photoprism.app/security-policy) to [security@photoprism.app](mailto:security@photoprism.app) so they do not get lost and we can respond without delay.
 
-[Security vulnerabilities](https://photoprism.app/security-policy) can be reported to [security@photoprism.app](mailto:security@photoprism.app). This ensures that your report does not get lost and that we can react as quickly as possible.
-
-By using our website, app and/or services, you agree to our [Terms of Service](https://photoprism.app/terms).
+By using our software and/or services, you agree to our [terms of service](https://photoprism.app/terms), [privacy policy](https://photoprism.app/privacy), and [code of conduct](https://photoprism.app/code-of-conduct).
 
 #### Technical Support ####
 
-Sponsors are welcome to contact us at [sponsors@photoprism.app](mailto:sponsors@photoprism.app) for technical support and assistance with enabling sponsor features.
+In exchange for their continued support, [Sponsors](funding.md) are also welcome to request direct technical [support via email](mailto:sponsors@photoprism.app). Please bear with us if we are unable to get back to you immediately. We do our best to respond within five business days or less.
 
 #### File Samples ####
 

@@ -78,7 +78,7 @@ If you need help installing our software at home, you can [join us on Reddit](ht
 We'll do our best to answer all your questions. In return, we ask you to [back us](../funding.md) on [Patreon](https://link.photoprism.app/patreon) or [GitHub Sponsors](https://link.photoprism.app/sponsors).
 Think of "free software" as in "free speech," not as in "free beer". Thank You!
 
-In exchange for their continued support, [Sponsors](../funding.md) are also welcome to request direct technical [support via email](mailto:sponsors@photoprism.app). Please bear with us if we are unable to get back to you immediately. We do our best to respond within five business days or less.
+In exchange for their continued support, [Sponsors](../funding.md) are also welcome to request direct technical [support via email](mailto:sponsors@photoprism.app). Please bear with us if we are unable to get back to you immediately.
 
 !!! info ""
     **We kindly ask you not to report bugs via *GitHub Issues* unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.**

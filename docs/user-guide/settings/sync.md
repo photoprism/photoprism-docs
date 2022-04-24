@@ -48,23 +48,24 @@ so that you can automatically sync your latest pictures.
 !!! attention ""
     Due to problems with some Nextcloud settings it might be that uploading to Nextcloud results in 0 byte files. You find information on how to solve it [here](https://github.com/photoprism/photoprism/issues/443).
 
-## Backup/Sync Files with your Server ##
+## Automatically Upload/Download Files to/from a WebDAV Server ##
 
 1. Go to *Settings*
 2. Open *Sync* tab
 3. Click into the sync cell of your server
 ![Screenshot](img/sync-sync-1.png)
 4. Enable synchronization in the upper right corner
-5. Choose the folder in which all your photos are located
-6. Select how often you want your files to be synced
-7. Select the options that are suitable for you and click *save*
+5. Choose a folder on your server
+6. Choose a sync interval
+7. Select the options that are suitable for you and click *Save*
+
 
 ![Screenshot](img/sync-sync-2.png)
 
 ### Remote Sync Options ###
 
-* *Download remote files* will download all files from your server that do not yet exist in PhotoPrism
-* *Upload local files* will upload all files from PhotoPrism to your server that do not yet exist there
+* *Download remote files* will download all files from the selected folder on your server that do not yet exist in PhotoPrism
+* *Upload local files* will upload all files (including private or archived ones) from PhotoPrism to your server that do not yet exist there
 * *Preserve filenames* will keep filenames from your server without renaming them
 * *Sync raw and video files* will upload/download raw and video files alongside with JPEGS
 

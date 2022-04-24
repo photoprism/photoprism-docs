@@ -27,7 +27,7 @@ The subject should contain the file extensions as well as the GitHub [issue numb
 
 #### General Inquiries ####
 
-Feel free to contact us at [hello@photoprism.app](mailto:hello@photoprism.app) if you have general questions, want to support our work, or just want to say hello.
+Feel free to contact us at [hello@photoprism.app](mailto:hello@photoprism.app) with anything that is on your mind, even if you just want to say hello. It is our goal to answer all questions we receive from our users, customers, partners, and the developer community. Our team also welcomes feedback if you believe something can or should be improved.
 
 Responsible for editorial content according to § 5 TMG / § 55 RStV:
 

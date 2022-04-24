@@ -1,7 +1,7 @@
 # Our Team
 
 !!! example ""
-    **We strive to provide the most user- and privacy-friendly solution to keep your pictures organized and accessible.** Feel free to contact us at [hello@photoprism.app](mailto:hello@photoprism.app) if you have general questions, want to support our work, or just want to say hello.
+    **We strive to provide the most user- and privacy-friendly solution to keep your pictures organized and accessible.** Feel free to contact us at [hello@photoprism.app](mailto:hello@photoprism.app) with anything that is on your mind, even if you just want to say hello. It is our goal to answer all questions we receive from our users, customers, partners, and the developer community. Our team also welcomes feedback if you believe something can or should be improved.
 
 ## Michael Mayer ##
 

@@ -208,13 +208,6 @@
 
     It is also possible that multiple .jpg files are stacked because they are related to each other.
 
-??? question "Why is the count for *Originals* higher than the number of files physically existing in my originals directory?"
-
-    When indexing, an additional JPEG sidecar file may be created automatically for RAW, HEIF, TIFF, PNG, BMP, GIF, and video files.
-    It is needed for generating thumbnails, image classification, and facial recognition.
-    You can find it in `/storage/sidecar` by default, so your originals folder remains untouched. The file browser 
-    in *Library > Originals* always displays it next to the original, independent of the physical storage location.
-
 ## Metadata ##
 
 ??? question "Why do some of my photos without geolocation information show a random location?"

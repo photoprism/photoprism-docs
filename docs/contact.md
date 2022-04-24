@@ -17,7 +17,7 @@ By using our software and/or services, you agree to our [terms of service](https
 
 #### Technical Support ####
 
-In exchange for their continued support, [sponsors](funding.md) are also welcome to request direct technical [support via email](mailto:sponsors@photoprism.app).
+In exchange for their continued support, [sponsors](funding.md) and customers are welcome to request direct technical [support via email](mailto:sponsors@photoprism.app).
 
 #### File Samples ####
 

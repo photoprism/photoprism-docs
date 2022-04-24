@@ -17,7 +17,7 @@ By using our software and/or services, you agree to our [terms of service](https
 
 #### Technical Support ####
 
-In exchange for their continued support, [Sponsors](funding.md) are also welcome to request direct technical [support via email](mailto:sponsors@photoprism.app). Please bear with us if we are unable to get back to you immediately. We do our best to respond within five business days or less.
+In exchange for their continued support, [Sponsors](funding.md) are also welcome to request direct technical [support via email](mailto:sponsors@photoprism.app).
 
 #### File Samples ####
 

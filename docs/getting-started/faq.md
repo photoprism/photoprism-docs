@@ -177,7 +177,7 @@ compromising performance and usability.
 
 ### Will the self-hosted version continue to be supported once a hosted version is available? ###
 
-Absolutely! Self-hosting is the easiest way to stay in control and protect your privacy (a key part of our mission). It also provides the best experience for advanced users who often rely on a local toolchain to select, edit, and publish their pictures.
+Absolutely! Self-hosting is the easiest way to stay in control and protect [your privacy](https://photoprism.app/privacy) (a key part of our mission). It also provides the best experience for advanced users who often rely on a local toolchain to select, edit, and publish their pictures.
 
 We understand that there is a great demand and many practical uses for a hosted version, which we plan to offer in addition so that users have more choice. Selected hosting partners will ensure that the privacy of our users is protected as much as technically possible, even in the cloud.
 

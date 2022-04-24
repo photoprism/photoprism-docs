@@ -270,7 +270,7 @@ PhotoPrism's command-line interface is well suited for job automation using a
 | *Download Updates*                                    | `docker-compose pull`                                               |
 | *Uninstall*                                           | `docker-compose rm -s -v`                                           |
 | [*View Logs*](troubleshooting/docker.md#viewing-logs) | `docker-compose logs --tail=100 -f`                                 |
-| *Display Config Values*                               | `docker-compose exec photoprism photoprism config`                  |
+| *Display Config Values*                               | `docker-compose exec photoprism photoprism show config`                  |
 | *Repeat Failed Migrations*                            | `docker-compose exec photoprism photoprism migrations run --failed` |
 | *Reset Database*                                      | `docker-compose exec photoprism photoprism reset`                   |                   
 | *Backup Database*                                     | `docker-compose exec photoprism photoprism backup -a -i`            |                      

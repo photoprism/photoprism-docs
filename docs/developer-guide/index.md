@@ -54,3 +54,11 @@ new features, bug fixes, and documentation improvements. Issues labeled [help wa
 [easy](https://github.com/photoprism/photoprism/labels/easy) can be good (first) contributions.
 
 **Reviewing, testing, and finally merging pull requests requires significant resources on our side. If it's not just a small fix, it can take several months.**
+
+## Privacy Notice ##
+
+We operate a number of web services that help us develop and maintain our software in collaboration with the open source community, such as Weblate hosted at [translate.photoprism.app](https://translate.photoprism.app/) to keep translations up to date.
+
+Because many of these apps and tools were originally developed for internal use without a high level of privacy in mind, we ask that you do not enter personal information such as your real name or personal email address if you want it to remain private.
+ 
+**Be aware that such information may unexpectedly show up in logs, source code, translation files, commit messages, and pull request comments.**

@@ -1,14 +1,18 @@
-# Translations
+# Contributing Translations with Weblate
 
-PhotoPrism uses [Weblate](https://translate.photoprism.app) for frontend and backend localization.
-You can easily register and edit translations without having any programming skills.
+We operate [translate.photoprism.app](https://translate.photoprism.app/) so that you can easily add and update user interface translations without having any development skills.
 
-!!! note "Please Note"
-    The name and e-mail of your weblate account will appear as commit authorship.
+You can either sign in with your GitHub account or create a new account with an email account you have access to:
+
+- Provide an alternate address if you want your personal email to remain private as it may appear as authorship in commits, translation files, and pull requests.
+- You are also not required to provide your full name if you do not wish to do so.
+- Let us know privately that you have registered so that we can grant you permissions if needed.
+
+When you sign up, you will be asked to accept our Contributor License Agreement (CLA). Visit [photoprism.app/cla](https://photoprism.app/cla) to learn more.
 
 === "Sign up"
 
-    1. Open https://translate.photoprism.app
+    1. Navigate to <https://translate.photoprism.app/>
 
     2. Click *Register* and create an account
 

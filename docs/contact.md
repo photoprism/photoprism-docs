@@ -8,7 +8,7 @@
 
 *While we continue to work towards our vision, we receive an extremely high volume of emails and contact requests. Please bear with us if we are unable to get back to you immediately. We do our best to respond within five business days or less.*
 
-If you need help installing our software at home, you can [join us on Reddit](https://link.photoprism.app/reddit), ask in our [Community Chat](https://link.photoprism.app/chat), or post your question in [GitHub Discussions](https://link.photoprism.app/discussions)! Common problems can be quickly diagnosed and solved using the [Troubleshooting Checklists](https://docs.photoprism.app/getting-started/troubleshooting/) in [Getting Started](https://docs.photoprism.app/getting-started/).
+If you need help installing our software at home, you can [join us on Reddit](https://link.photoprism.app/reddit), ask in our [Community Chat](https://link.photoprism.app/chat), or post your question in [GitHub Discussions](https://link.photoprism.app/discussions). Common problems can be quickly diagnosed and solved using the [Troubleshooting Checklists](https://docs.photoprism.app/getting-started/troubleshooting/) in [Getting Started](https://docs.photoprism.app/getting-started/).
 
 You may contact us at [privacy@photoprism.app](mailto:privacy@photoprism.app) if you have specific questions about our [Privacy Policy](https://photoprism.app/privacy) or [GDPR Compliance Statement](https://photoprism.app/privacy/gdpr).
 Security researchers may [report vulnerabilities](https://photoprism.app/security-policy) to [security@photoprism.app](mailto:security@photoprism.app) so they do not get lost and we can respond without delay.

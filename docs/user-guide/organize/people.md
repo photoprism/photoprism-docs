@@ -184,18 +184,21 @@ The person/subject and people/subjects filters can be used with & and | (see [se
 
 ## Performance Tips ##
 
-It is a [known issue](https://docs.photoprism.app/getting-started/troubleshooting/performance/#server-cpu) that the user interface and backend operations, especially face recognition, can be slow or even crash on older hardware due to a lack of resources. Like most applications, PhotoPrism has certain requirements and our development process does not include testing on unsupported or unusual hardware.
+### Background Worker ###
 
 Face recognition was developed and tested under the assumption that the background worker runs every 15 minutes, unless the backend is busy with other tasks such as indexing. It has not been tested with much longer intervals and is not designed for that.
 
 The background worker groups new faces by similarity, compares faces with clusters, and optimizes existing clusters as needed. Without these routine tasks, the number of faces to be processed becomes too large. The first and next time the worker runs, it can then cause a heavy server load until all the faces, face clusters, and related pictures have been updated. The longer you wait, the more CPU is required and the longer it takes.
 
+### Legacy Hardware ###
 
-## Coming Soon ##
+It is a [known issue](https://docs.photoprism.app/getting-started/troubleshooting/performance/#server-cpu) that the user interface and backend operations, especially face recognition, can be slow or even crash on older hardware due to a lack of resources. Like most applications, PhotoPrism has certain requirements and our development process does not include testing on unsupported or unusual hardware.
 
-- Manual tagging of faces
-- Importing of XMP face tags
-- Excluding people when browsing your pictures
-- Automatic backup of tagged people in YAML files
+!!! info "Coming Soon"
+
+    - Manual tagging of faces
+    - Importing of XMP face tags
+    - Excluding people when browsing your pictures
+    - Automatic backup of tagged people in YAML files
 
 *[face clusters]: A cluster is a group of faces expected to belong to the same person based on the similarity

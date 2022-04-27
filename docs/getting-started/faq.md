@@ -205,8 +205,9 @@ On the other hand, MariaDB has many optimizations. It is also completely open-so
 
 ### Can you improve performance when using older or otherwise slow hardware? ###
 
-In most cases performance could be improved at least a little through optimizations.
+We are aware that PhotoPrism can feel slow on older hardware, both on the user interface and when performing backend operations such as indexing or face recognition. Like most applications, PhotoPrism has certain requirements and our development process does not include testing on unsupported or unusual hardware.
 
+In most cases performance could be improved at least a little through optimizations.
 Since no team has infinite resources and this can cost significant amounts of time and money,
 users and developers must decide on a case-by-case basis whether this provides sufficient
 benefit for the cost or whether using more powerful hardware is cheaper overall while
@@ -215,9 +216,7 @@ offering many more benefits.
 The good news is that PhotoPrism is Open Source. That means [users can become developers](https://docs.photoprism.app/developer-guide/) and submit pull requests with
 performance improvements without the core team having to find free time on their often
 overcrowded to-do list. In any case, please do not immediately open a problem report on GitHub Issues for
-performance issues on older hardware.
-
-[GitHub Discussions](https://github.com/photoprism/photoprism/discussions)
+performance issues on older hardware. [GitHub Discussions](https://github.com/photoprism/photoprism/discussions)
 or one of our other public forums, communities, or chats would be the place to start
 discussing such issues.
 

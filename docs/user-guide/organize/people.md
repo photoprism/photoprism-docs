@@ -182,10 +182,20 @@ The person/subject and people/subjects filters can be used with & and | (see [se
 
 ![Screenshot](img/people-search.png)
 
+## Performance Tips ##
+
+It is a [known issue](https://docs.photoprism.app/getting-started/troubleshooting/performance/#server-cpu) that the user interface and backend operations, especially face recognition, can be slow or even crash on older hardware. Like most applications, PhotoPrism has certain requirements and our development process does not include testing on unsupported or unusual hardware.
+
+Also note that face recognition was developed and tested assuming the default 15-minute background worker interval. It has not been tested with much longer intervals and is not designed for that.
+
+The worker takes care of clustering faces by similarity and then optimizing the clusters as needed. Without these routine tasks, the number of faces to be processed becomes too large. The first and next time the worker runs, it can then cause a heavy server load until all the faces, face clusters, and related pictures have been updated. The longer you wait, the more CPU is required and the longer it takes.
+
+
 ## Coming Soon ##
-- Manual face tagging
-- Import of xmp face tags
-- Save people in backups
-- Option to exclude people from library
+
+- Manual tagging of faces
+- Importing of XMP face tags
+- Excluding people when browsing your pictures
+- Automatic backup of tagged people in YAML files
 
 *[face clusters]: A cluster is a group of faces expected to belong to the same person based on the similarity

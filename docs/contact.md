@@ -6,7 +6,7 @@
 [![Twitter](https://dl.photoprism.app/img/badges/badge-twitter.svg)][twitter]
 [![Reddit](https://dl.photoprism.app/img/badges/badge-reddit.svg)][reddit]
 
-*While we continue to work towards our vision, we receive an extremely high volume of emails and contact requests. Please bear with us if we are unable to get back to you immediately. We do our best to respond within five business days or less.*
+*We appreciate feedback from our users, customers, partners, and the developer community. Please bear with us if we are unable to get back to you immediately due to the high volume of emails and contact requests we receive.*
 
 If you need help installing our software at home, you can [join us on Reddit](https://link.photoprism.app/reddit), ask in our [Community Chat](https://link.photoprism.app/chat), or post your question in [GitHub Discussions](https://link.photoprism.app/discussions). Common problems can be quickly diagnosed and solved using the [Troubleshooting Checklists](https://docs.photoprism.app/getting-started/troubleshooting/) in [Getting Started](https://docs.photoprism.app/getting-started/).
 

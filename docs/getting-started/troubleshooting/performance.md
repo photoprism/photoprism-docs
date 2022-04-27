@@ -66,6 +66,8 @@ optimized for minimal power consumption and low production costs. Although their
 
 ![CPU Benchmark](img/passmark-cpu.svg)
 
+## Legacy Hardware ##
+
 It is a known issue that the user interface and backend operations, especially face recognition, can be slow or even crash on older hardware due to a lack of resources. Like most applications, PhotoPrism has certain requirements and our development process does not include testing on unsupported or unusual hardware.
 
 In many cases, performance can be improved through optimizations. Since their implementation can be very time-consuming and cost-intensive, users and developers must decide on a case-by-case basis whether this provides sufficient benefit in relation to the costs or whether the use of more powerful hardware is faster and cheaper overall.

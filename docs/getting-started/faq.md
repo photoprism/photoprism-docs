@@ -207,12 +207,11 @@ On the other hand, MariaDB has many optimizations. It is also completely open-so
 
 It is a known issue that the user interface and backend operations, especially face recognition, can be slow or even crash on older hardware due to a lack of resources. Like most applications, PhotoPrism has certain requirements and our development process does not include testing on unsupported or unusual hardware.
 
-In many cases, performance can be improved through optimizations. Since their implementation can be very time-consuming and cost-intensive, users and developers must decide on a case-by-case basis whether this provides sufficient benefit in relation to the costs or whether the use of more powerful hardware is faster and cheaper overall.
+In many cases, performance can be improved through optimizations. Since these can prove to be very time-consuming and cost-intensive in practice, users and developers must decide on a case-by-case basis whether this provides sufficient benefit in relation to the costs or whether the use of more powerful hardware is faster and cheaper overall.
 
-That said, the good news is that PhotoPrism is Open Source. This means [users can become developers](https://docs.photoprism.app/developer-guide/) and submit [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/) with
-performance improvements without the core team having to find a spot on their often
-overcrowded to-do list.
-Please do not open a problem report on GitHub Issues for poor performance on older hardware until a full cause and feasibility analysis has been performed. [GitHub Discussions](https://github.com/photoprism/photoprism/discussions) or any of our other public forums and communities are great places to start a discussion.
+We kindly ask you not to open a problem report on GitHub Issues for poor performance on older hardware until a full cause and feasibility analysis has been performed. [GitHub Discussions](https://github.com/photoprism/photoprism/discussions) or any of our other public forums and communities are great places to start a discussion.
+
+That being said, one of the advantages of [open source software](https://docs.photoprism.app/developer-guide/) is that users can submit [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/) with performance and other improvements they would like to see implemented. This will result in a much faster solution than waiting for a core team member to remotely analyze your problem and then provide a fix.
 
 ### Is a Raspberry Pi fast enough? ###
 

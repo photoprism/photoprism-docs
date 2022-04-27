@@ -188,7 +188,7 @@ It is a [known issue](https://docs.photoprism.app/getting-started/troubleshootin
 
 Face recognition was developed and tested under the assumption that the background worker runs every 15 minutes, unless the backend is busy with other tasks such as indexing. It has not been tested with much longer intervals and is not designed for that.
 
-The worker takes care of clustering faces by similarity and then optimizing the clusters as needed. Without these routine tasks, the number of faces to be processed becomes too large. The first and next time the worker runs, it can then cause a heavy server load until all the faces, face clusters, and related pictures have been updated. The longer you wait, the more CPU is required and the longer it takes.
+The worker groups new faces by similarity, compares faces with clusters, and optimizes existing clusters as needed. Without these routine tasks, the number of faces to be processed becomes too large. The first and next time the worker runs, it can then cause a heavy server load until all the faces, face clusters, and related pictures have been updated. The longer you wait, the more CPU is required and the longer it takes.
 
 
 ## Coming Soon ##

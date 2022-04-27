@@ -74,12 +74,10 @@ users and developers must decide on a case-by-case basis whether this provides s
 benefit for the cost or whether using more powerful hardware is cheaper overall while
 offering many more benefits.
 
-The good news is that PhotoPrism is Open Source. That means [users can become developers](https://docs.photoprism.app/developer-guide/) and submit pull requests with
-performance improvements without the core team having to find free time on their often
-overcrowded to-do list. In any case, please do not immediately open a problem report on GitHub Issues for
-performance issues on older hardware. [GitHub Discussions](https://github.com/photoprism/photoprism/discussions)
-or one of our other public forums, communities, or chats would be the place to start
-discussing such issues.
+The good news is that PhotoPrism is Open Source. That means [users can become developers](https://docs.photoprism.app/developer-guide/) and submit [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/) with
+performance improvements without the core team having to find a spot on their often
+overcrowded to-do list.
+Please do not open a problem report on GitHub Issues for poor performance on older hardware until a full cause and feasibility analysis has been performed. [GitHub Discussions](https://github.com/photoprism/photoprism/discussions) or any of our other public forums and communities are great places to start a discussion.
 
 ## Troubleshooting ##
 

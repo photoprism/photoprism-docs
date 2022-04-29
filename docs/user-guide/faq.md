@@ -112,8 +112,7 @@
 
 ??? question "What media file types are supported?"
 
-    PhotoPrism supports indexing, viewing, and [converting](settings/library.md) most common image, video, 
-    and RAW file formats, including JPEG, PNG, GIF, BMP, HEIF, HEIC, MP4, MOV, WebP, and WebM. 
+    PhotoPrism supports indexing, viewing, and [converting](settings/library.md) most popular image, video and RAW formats, including JPEG, PNG, GIF, BMP, HEIF, HEIC, MP4, MOV, WebP, and WebM. 
     [TIFF is partially supported](https://github.com/golang/go/issues?q=is%3Aissue+image%2Ftiff+)
     without extensions like GeoTIFF.
 
@@ -127,9 +126,8 @@
     On a Mac, RAW files can also be converted with [Sips](https://ss64.com/osx/sips.html) ([supported cameras](https://support.apple.com/en-us/HT211241)).
     Our goal is to provide top-notch support for all RAW formats, regardless of camera make and model.
     Please let us know about any issues with a particular camera or file format.
-    
-    [Video formats](../developer-guide/media/index.md) supported by [FFmpeg](https://en.wikipedia.org/wiki/FFmpeg#Supported_codecs_and_formats) can be transcoded to
-    [MPEG-4 AVC](https://en.wikipedia.org/wiki/Advanced_Video_Coding) for maximum browser compatibility. Still images for thumbnail creation can also be extracted from most videos.
+
+    For maximum browser compatibility, [video codecs and containers](../developer-guide/media/index.md) supported by [FFmpeg](https://en.wikipedia.org/wiki/FFmpeg#Supported_codecs_and_formats) can be transcoded to [MPEG-4 AVC](https://en.wikipedia.org/wiki/Advanced_Video_Coding) on demand, just as still images can be extracted for thumbnail creation.
     
     Make sure you have JSON sidecar files enabled if you have videos, live photos, and/or [animated GIFs](https://github.com/photoprism/photoprism/issues/590) so that video-specific metadata such as codec, frames, and duration can be extracted, indexed, and searched.
 

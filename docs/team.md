@@ -5,7 +5,7 @@
 
 ## Michael Mayer ##
 
-*Founder, Core Developer*
+*Core Developer, Founder*
 
 ![Michael Mayer](https://dl.photoprism.app/img/team/michael-mayer-800x600.jpg){ align=right width="40%" }
 Michael learned coding on an Atari 1040 ST, survived Usenet, and got involved with Web development and Open Source software in the early 90s.
@@ -16,7 +16,7 @@ You can find him on [GitHub](https://github.com/lastzero), [LinkedIn](https://ww
 
 ## Theresa Gresch ##
 
-*Founder, Product & Community*
+*Product & Community, Founder*
 
 ![Theresa Gresch](https://dl.photoprism.app/img/team/theresa-gresch-800x600.jpg){ align=right width="40%" }
 Theresa holds a Master's degree in Neurobiology and enjoys every opportunity to dive deeper into machine learning.

@@ -19,9 +19,9 @@ You can find him on [GitHub](https://github.com/lastzero), [LinkedIn](https://ww
 *Founder, Product & Community*
 
 ![Theresa Gresch](https://dl.photoprism.app/img/team/theresa-gresch-800x600.jpg){ align=right width="40%" }
-Before starting to work on PhotoPrism, Theresa used her organizational skills as a freelance product manager at startups and creative agencies.
+Theresa holds a Master's degree in Neurobiology and enjoys every opportunity to dive deeper into machine learning.
 
-She holds a Master's degree in Neurobiology and enjoys every opportunity to dive deeper into machine learning.
+Before starting to work on PhotoPrism, she used her organizational skills as a freelance product manager at startups and creative agencies.
 
 You can find her on [GitHub](https://github.com/graciousgrey) and [LinkedIn](https://www.linkedin.com/in/theresa-gresch-886924103/)
 

@@ -5,7 +5,7 @@
 
 ## Michael Mayer ##
 
-*Core Developer, Founder*
+*Core Developer*
 
 ![Michael Mayer](https://dl.photoprism.app/img/team/michael-mayer-800x600.jpg){ align=right width="40%" }
 Michael learned coding on an Atari 1040 ST, survived Usenet, and got involved with Web development and Open Source software in the early 90s.
@@ -16,7 +16,7 @@ You can find him on [GitHub](https://github.com/lastzero), [LinkedIn](https://ww
 
 ## Theresa Gresch ##
 
-*Product & Community, Founder*
+*Product & Community*
 
 ![Theresa Gresch](https://dl.photoprism.app/img/team/theresa-gresch-800x600.jpg){ align=right width="40%" }
 Theresa holds a Master's degree in Neurobiology and enjoys every opportunity to dive deeper into machine learning.
@@ -25,9 +25,12 @@ Before starting to work on PhotoPrism, she used her organizational skills as a f
 
 You can find her on [GitHub](https://github.com/graciousgrey) and [LinkedIn](https://www.linkedin.com/in/theresa-gresch-886924103/)
 
-## Andrea Ceroni ##
+<!-- p style="margin-bottom: -1em; margin-top: 3em">CONTRIBUTORS</p -->
+## Contributors ##
 
-*Contributor, Scientific Advisor*
+### Andrea Ceroni ###
+
+*Scientific Advisor*
 
 Andrea is a data scientist specialized in temporal information retrieval and machine learning.
 He holds a PhD in Computer Science from the Leibniz University of Hannover (L3S Research Center) and wrote numerous papers on topics such as
@@ -36,16 +39,18 @@ and [Photo Selection Models for Personal Photo Collections](https://www.iti.gr/~
 
 You can find him on [Google Scholar](https://scholar.google.de/citations?user=JHsQY5YAAAAJ&hl=en) and [LinkedIn](https://www.linkedin.com/in/andrea-ceroni/)
 
-## Guy Sheffer ##
+### Guy Sheffer ###
 
-*Contributor, Raspberry Pi Specialist*
+*Raspberry Pi Specialist*
 
 Known as [GuySoft](https://github.com/guysoft) on the web. Active developer in the Free Software and Maker community.
 Creator of [OctoPi](https://github.com/guysoft/OctoPi) and [FullPageOS](https://github.com/guysoft/FullPageOS), 
 which have hundreds of thousands of downloads. Raspberry Pi distro expert. 
 Currently, VP R&D and Co-Founder at [ShapeDo](https://shapedo.com/).
 
-## ...and many more ##
+### ...and many more ###
+
+*Thanks to all who contributed!*
 
 <a href="https://github.com/photoprism/photoprism/graphs/contributors">
   <img src="https://dl.photoprism.org/img/social/contibutors.svg" />

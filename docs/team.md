@@ -8,20 +8,20 @@
 *Founder, Core Developer*
 
 ![Michael Mayer](https://dl.photoprism.app/img/team/michael-mayer-800x600.jpg){ align=right width="40%" }
-Michael learned programming on an Atari 1040 ST and started his first Open Source projects in the 90s. He has more than 25 years of experience in building Web applications.
+Michael learned coding on an Atari 1040 ST, survived Usenet, and got involved with Web development and Open Source software in the early 90s.
 
-His motivation is to explore the latest technologies and develop an amazing product outside the constraints of a traditional corporate environment.
+Before founding PhotoPrism, he spent more than two decades advising corporate clients on software engineering and management.
 
 You can find him on [GitHub](https://github.com/lastzero), [LinkedIn](https://www.linkedin.com/in/lastzero/), and [Twitter](https://twitter.com/lastzero)
 
 ## Theresa Gresch ##
 
-*Founder, Product Development, and Community Management*
+*Founder, Product & Community*
 
 ![Theresa Gresch](https://dl.photoprism.app/img/team/theresa-gresch-800x600.jpg){ align=right width="40%" }
-Theresa has a background in Neurobiology and started working as a Software Product Manager for startups after graduating from Free University of Berlin in 2016.
+Before starting to work on PhotoPrism, Theresa used her organizational skills as a freelance product manager at startups and creative agencies.
 
-Her personal goals are to dive deeper into machine learning and to explore new directions in product development.
+She holds a Master's degree in Neurobiology and enjoys every opportunity to dive deeper into machine learning.
 
 You can find her on [GitHub](https://github.com/graciousgrey) and [LinkedIn](https://www.linkedin.com/in/theresa-gresch-886924103/)
 

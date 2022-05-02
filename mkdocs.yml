@@ -162,9 +162,9 @@ nav:
       - Broadway: developer-guide/technologies/broadway.md
       - External APIs: developer-guide/technologies/external-apis.md
   - About:
-      - Team: team.md
       - Funding: funding.md
       - Credits: credits.md
+      # - Team: team.md
       # - Contact: contact.md
       - License:
           - GNU AGPL: license/agpl.md
@@ -247,6 +247,12 @@ theme:
 
 plugins:
   - search
+  - redirects:
+      redirect_maps:
+        'team.md': 'https://photoprism.app/team'
+        'privacy.md': 'https://photoprism.app/privacy'
+        'terms.md': 'https://photoprism.app/terms'
+        'code-of-conduct.md': 'https://photoprism.app/code-of-conduct'
 
 # MkDocs extensions.
 markdown_extensions:

@@ -1,6 +1,6 @@
 # PhotoPrism: Browse Your Life in Pictures
 
-PhotoPrism® is an AI-powered Photos App for the Decentralized Web. It makes use of the latest technologies to tag and find pictures automatically without getting in your way. You can run it at home, on a private server, or in the cloud.
+PhotoPrism® is an AI-Powered Photos App for the Decentralized Web. It makes use of the latest technologies to tag and find pictures automatically without getting in your way. You can run it at home, on a private server, or in the cloud.
 
 ![Screenshot](img/preview.jpg)
 

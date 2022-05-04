@@ -67,7 +67,7 @@ spec:
         - name: PHOTOPRISM_EXPORT_PATH
           value: /assets/photos/export
         - name: PHOTOPRISM_ORIGINALS_PATH
-          vale: /assets/photos/originals
+          value: /assets/photos/originals
         - name: PHOTOPRISM_DATABASE_DRIVER
           value: mysql
         - name: PHOTOPRISM_HTTP_HOST
@@ -125,7 +125,7 @@ spec:
     app: photoprism
   type: ClusterIP
 ---
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   annotations:
@@ -144,9 +144,12 @@ spec:
     http:
       paths:
       - backend:
-          serviceName: photoprism
-          servicePort: http
+          service:
+            name: photoprism
+            port:
+              name: http
         path: /
+        pathType: Prefix
   tls:
   - hosts:
     - photoprism.my.domain

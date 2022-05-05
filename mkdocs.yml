@@ -1,7 +1,7 @@
 # Main navigation.
 nav:
   - Getting Started:
-    - Feature Overview: index.md
+    - Features: index.md
     - Setup: getting-started/index.md
     - Docker Compose: getting-started/docker-compose.md
     - Pure Docker: getting-started/docker.md
@@ -111,7 +111,7 @@ nav:
     - FAQ: user-guide/faq.md
   # - Metadata: user-guide/metadata.md
   - Developer Guide:
-    - Introduction: developer-guide/index.md
+    - Welcome: developer-guide/index.md
     - GitHub Issues: developer-guide/issues.md
     - Pull Requests: developer-guide/pull-requests.md
     - Code Quality: developer-guide/code-quality.md

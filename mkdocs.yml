@@ -205,8 +205,8 @@ site_dir: site
 
 # Project information.
 site_name: PhotoPrism
-site_description: User Guide
-site_author: PhotoPrism
+site_description: Official Documentation
+site_author: PhotoPrism UG
 site_url: https://docs.photoprism.app/
 
 # Repository information.

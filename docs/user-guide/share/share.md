@@ -1,5 +1,12 @@
 # Sharing Albums via Link #
+Create sharing links to share albums, moments or folders with your friends.
 
+Your friends are able to view and download photos from shared albums.
+Photos marked as private won't show up.
+
+![Screenshot](img/shared-album.png)
+
+Support for optional password protection of sharing links as well as other improvements are [planned](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+sharing+in%3Atitle+label%3Aidea).
 ## Create Sharing Link ##
 
 === "Using Context Menu"

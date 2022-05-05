@@ -78,3 +78,11 @@ Improved UI with flat look, photo upload and powerful filters as well as new pag
 ## October 18, 2021 ##
 
 ![](../../img/preview.jpg)
+
+## March 2, 2022 ##
+
+![](./img/login-redesign.png)
+
+![](./img/files-details-new.png)
+
+![](./img/new-mosaic-view.png)

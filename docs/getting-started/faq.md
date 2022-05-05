@@ -387,6 +387,10 @@ volumes:
     under [*Library* > *Import*](../user-guide/library/import.md). PhotoPrism also [has WebDAV support](../user-guide/sync/webdav.md)
     for remote file management and uploading, for example, through [PhotoSync](https://link.photoprism.app/photosync).
 
+### Why does changing permissions using chmod does not work for my  network shares? ###
+This is a common phenomenon with NFS shares. For security reasons, permissions must be changed on the server to take effect; unless the server allows them to be changed remotely, which depends on the settings. 
+Even then, the actual permissions on the server and those effective on the clients may be different in the worst case.
+
 ### Do you support Podman? ###
 
 Podman works just fine both in rootless and under root. Mind the SELinux which is enabled on 

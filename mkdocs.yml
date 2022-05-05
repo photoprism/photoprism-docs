@@ -1,7 +1,7 @@
 # Main navigation.
 nav:
   - Getting Started:
-    - Introduction: index.md
+    - Feature Overview: index.md
     - Setup: getting-started/index.md
     - Docker Compose: getting-started/docker-compose.md
     - Pure Docker: getting-started/docker.md

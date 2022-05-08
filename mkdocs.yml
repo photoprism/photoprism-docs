@@ -162,7 +162,7 @@ nav:
       - Broadway: developer-guide/technologies/broadway.md
       - External APIs: developer-guide/technologies/external-apis.md
   - About:
-      - Funding: funding.md
+      # - Funding: funding.md
       - Credits: credits.md
       # - Team: team.md
       # - Contact: contact.md

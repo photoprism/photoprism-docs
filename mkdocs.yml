@@ -250,6 +250,7 @@ plugins:
   - redirects:
       redirect_maps:
         'team.md': 'https://photoprism.app/team'
+        'funding.md': 'https://photoprism.app/membership'
         'privacy.md': 'https://photoprism.app/privacy'
         'terms.md': 'https://photoprism.app/terms'
         'code-of-conduct.md': 'https://photoprism.app/code-of-conduct'

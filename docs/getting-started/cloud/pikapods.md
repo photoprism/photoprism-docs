@@ -1,31 +1,35 @@
-# PikaPods Open Source App Hosting
+---
+icon: material/emoticon-happy
+# icon: material/verified
+---
+
+# PikaPods Cloud Hosting
 
 !!! check "Official Partner"
-    PhotoPrism has partnered with [PikaPods](https://www.pikapods.com/) to offer the first official app hosting solution! This cloud version is pre-configured, requires virtually no technical knowledge to set up, and includes [sponsor features](https://photoprism.app/membership) like interactive world maps and dark themes - at no additional cost.
+    PhotoPrism has partnered with [PikaPods](https://www.pikapods.com/) to offer the first official cloud-hosted solution! Your app instance will be up and running in just a few steps and includes [sponsor features](https://photoprism.app/membership) like interactive world maps and dark themes - at no additional cost.
 
+## Starting Your App Pod
 
-## Cloud Setup
+This step-by-step guide explains how to launch a new PhotoPrism cloud instance at PikaPods.
 
-The following step-by-step guide explains how to set up new PhotoPrism cloud instance at PikaPods:
+### 1. Sign Up
 
-### 1. Create a Customer Account
+Sign up at [www.pikapods.com/register](https://www.pikapods.com/register) with your payment details and make sure to confirm your email before you proceed.
 
-Sign up at [www.pikapods.com/register](https://www.pikapods.com/register) with your contact and payment details.
-
-### 2. Deploy a New PhotoPrism Instance
+### 2. Start PhotoPrism
 
 - Go to [Available Apps](https://www.pikapods.com/apps) and select PhotoPrism 
-- Click *Run your own*
+- Click *Run Your Own*
 
-![Screenshot](img/PikaPodsAppStore-crop.png)
+![Screenshot](img/pikapods-appstore.png){ class="indent" }
 
-- Enter a Pod Name and choose a Region
+- Enter a Pod Name and select a Region
 
-![Screenshot](img/AddPod1.png)
+![Screenshot](img/pikapods-step-1.png){ class="shadow indent" }
 
-- Enter a secure admin password
+- Specify the initial Password for the "admin" user account
 
-![Screenshot](img/AddPod2.png)
+![Screenshot](img/pikapods-step-2.png){ class="shadow indent" }
 
 - Configure the resources you need
   
@@ -36,16 +40,16 @@ Sign up at [www.pikapods.com/register](https://www.pikapods.com/register) with y
 - The approximate monthly pricing is displayed at the bottom of the page
 - Click *Add Pod*
 
-![Screenshot](img/AddPod3.png)
+![Screenshot](img/pikapods-step-3.png){ class="shadow indent" }
 
-### 3. Enjoy
+### 3. Enjoy!
 
-PhotoPrism is now fully set up and ready to use. To log in, click *Open Pod*, enter the username "admin" and the password you have specified.
+PhotoPrism is now fully set up and ready to use. To log in, click *Open Pod*, enter the username "admin" and the password you have specified:
 
-![Screenshot](img/PodOverview.png)
+![Screenshot](img/pikapods-overview.png){ class="indent" }
 
-## First Steps
+## Setting Up Your Devices
 
-1. Choose whether you want to [index your files](../../user-guide/library/index.md) so that the original file and folder names are preserved, or import them so that they are automatically sorted by year and month.
-2. To add files, you can either copy them to your *Import* or *Originals* folder via [WebDAV](../../user-guide/sync/webdav.md), or [upload them using the Web UI](../../user-guide/library/upload.md) which will import them automatically after the upload is complete.
-3. Finally, set up [automatic syncing](../../user-guide/sync/mobile-devices.md) from your phone and install the [Progressive Web App (PWA)](../../user-guide/pwa.md) on your desktop, tablet, and phone home screens as needed.
+1. [Choose](../../user-guide/library/index.md) whether you want to [index your originals](../../user-guide/library/originals.md) so that the existing file and folder names are preserved, or [import them](../../user-guide/library/import.md) so that they are automatically organized by year and month.
+2. To add pictures, you can either copy them to the *import* or *originals* folder using [WebDAV](../../user-guide/sync/webdav.md), or [upload them](../../user-guide/library/upload.md) with the web user interface, which will import them automatically after upload.
+3. Finally, set up [automatic syncing](../../user-guide/sync/mobile-devices.md) from your mobile phone and install the [Progressive Web App (PWA)](../../user-guide/pwa.md) on your desktop, tablet, and phone home screens as needed.

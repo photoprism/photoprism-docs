@@ -1,4 +1,4 @@
-# PikaPods App Hosting
+# PikaPods Open Source App Hosting
 
 !!! check "Official Partner"
     PhotoPrism has partnered with [PikaPods](https://www.pikapods.com/) to offer the first official app hosting solution! This cloud version is pre-configured, requires virtually no technical knowledge to set up, and includes [sponsor features](https://photoprism.app/membership) like interactive world maps and dark themes - at no additional cost.

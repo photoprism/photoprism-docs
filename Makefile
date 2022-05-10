@@ -12,11 +12,11 @@ fix:
 pip:
 	sudo apt install pip
 upgrade:
-	pip install --user -U -q -r requirements.txt
+	pip3 install --user --no-warn-script-location -U -q -r requirements.txt
 install:
-	pip install --user -r requirements.txt
+	pip3 install --user --no-warn-script-location -r requirements.txt
 replace:
-	pip install --user -U --force-reinstall  -r requirements.txt
+	pip3 install --user --no-warn-script-location -U --force-reinstall  -r requirements.txt
 serve:
 	mkdocs serve -a 0.0.0.0:8000
 deploy:

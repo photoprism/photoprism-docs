@@ -13,14 +13,14 @@ If you have no DigitalOcean account yet, you may use this sign-up link to receiv
 - Open the [PhotoPrism listing](https://marketplace.digitalocean.com/apps/photoprism) in the marketplace
 - Click *Create PhotoPrism Droplet*
 
-![Screenshot](img/create-photoprism-droplet.png){ class="shadow indent" }
+![Screenshot](img/create-photoprism-droplet.png){ class="shadow" }
 
 ### Configure Your Droplet ###
 #### Choose an Image ####
 
 The PhotoPrism image will be pre-selected
 
-![Screenshot](img/1-do-setup.png){ class="shadow indent" }
+![Screenshot](img/1-do-setup.png){ class="shadow" }
 
 #### Choose a Plan ####
 
@@ -29,24 +29,24 @@ We recommend hosting PhotoPrism on a server with at least 2 cores and 3 GB of ph
 !!! info ""
     While PhotoPrism has been reported to work on Droplets with less memory, we take no responsibility for instability or performance problems. RAW image conversion and TensorFlow are disabled on Droplets with 1 GB or less memory.
 
-![Screenshot](img/2-do-setup.png){ class="shadow indent" }
+![Screenshot](img/2-do-setup.png){ class="shadow" }
 
 #### Choose a Datacenter Region ####
 
-![Screenshot](img/3-do-setup.png){ class="shadow indent" }
+![Screenshot](img/3-do-setup.png){ class="shadow" }
 
-![Screenshot](img/4-do-setup.png){ class="shadow indent" }
+![Screenshot](img/4-do-setup.png){ class="shadow" }
 
 #### Choose an Authentication Mode ####
 
-![Screenshot](img/5-do-setup.png){ class="shadow indent" }
+![Screenshot](img/5-do-setup.png){ class="shadow" }
 
 #### Finalize Your Droplet ####
 
 Finalize your droplet and click *Create Droplet*
-![Screenshot](img/6-do-setup-edited.png){ class="shadow indent" }
+![Screenshot](img/6-do-setup-edited.png){ class="shadow" }
 
-![Screenshot](img/7-do-setup.png){ class="shadow indent" }
+![Screenshot](img/7-do-setup.png){ class="shadow" }
 
 Your droplet is now being created.
 
@@ -54,15 +54,15 @@ Your droplet is now being created.
 
 - Click *More*
 
-![Screenshot](img/do-more-options-edited.png){ class="shadow indent" }
+![Screenshot](img/do-more-options-edited.png){ class="shadow" }
 
 - Click *Access console*
 
-![Screenshot](img/do-access-console-edited.png){ class="shadow indent" }
+![Screenshot](img/do-access-console-edited.png){ class="shadow" }
 
 - Launch the console as root
 
-![Screenshot](img/do-launch-droplet-console.png){ class="shadow indent" }
+![Screenshot](img/do-launch-droplet-console.png){ class="shadow" }
 
 - Within the console type ```cat /root/.initial-password.txt``` and click enter
 - Copy your initial password
@@ -71,11 +71,11 @@ Your droplet is now being created.
 
 - Click *Get started*
 
-![Screenshot](img/do-get-started-edited.png){ class="shadow indent" }
+![Screenshot](img/do-get-started-edited.png){ class="shadow" }
 
 - Click *Quick access*
 
-![Screenshot](img/do-quick-access.png){ class="shadow indent" }
+![Screenshot](img/do-quick-access.png){ class="shadow" }
 
 !!!info
     In case you have no domain and let's encrypt set up you will see the notice "Your connection is not private". 

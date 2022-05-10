@@ -8,4 +8,4 @@
 4. Enter your new password twice
 5. Click *Change*
 
-![Screenshot](img/account-settings.jpg)
+![Screenshot](img/account-settings.jpg){ class="shadow" }

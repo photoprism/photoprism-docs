@@ -12,7 +12,7 @@ on the advanced settings page. You can also disable specific features and enable
     quality or size won't replace existing thumbnails. You can regenerate them using the 
     [command-line interface](https://docs.photoprism.app/getting-started/docker-compose/#command-line-interface).
 
-![](img/advanced-settings.jpg)
+![](img/advanced-settings.jpg){ class="shadow" }
 
 All [config options](../../getting-started/config-options.md) can be set in your `docker-compose.yml` or
 via command-line parameters as well. Manually changed values are saved in a config file. It is stored in
@@ -241,7 +241,7 @@ Blackman is a modification of Lanczos that has better control of ringing artifac
 
 Original image:
 
-![](img/branches.png)
+![](img/branches.png){ class="shadow" }
 
 The same image resized from 600x400px to 150x100px using different resampling filters.
 From faster (lower quality) to slower (higher quality):
@@ -263,7 +263,7 @@ Web browsers in general cannot display RAW image files. They need to be converte
 
 In addition, PhotoPrism also supports TIFF, PNG, BMP and GIF files. Be aware that files in those formats often don't contain useful metadata and are typically used for screenshots, charts, graphs and icons only.
 
-![](img/editPhoto.png)
+![](img/editPhoto.png){ class="shadow" }
 
 !!! info ""
     Generated sidecar files will be stored outside your originals folder by default, so that

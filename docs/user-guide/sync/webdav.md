@@ -67,42 +67,42 @@ http://admin@localhost:2342/originals/
      2. Right click **This PC**
      3. From the dropdown, select **Map network drive...**
 
-        ![Screenshot](img/webdav-1.png)
+        ![Screenshot](img/webdav-1.png){ class="shadow" }
 
      4. Enter the drive letter and folder you want to map your WebDAV connection to
      5. Check the boxes **Reconnect at sign-in** and **Connect using different credentials**
      6. Click the **Connect to a Web site that you can use to store your documents and pictures** link
      
-        ![Screenshot](img/webdav-2.png)
+        ![Screenshot](img/webdav-2.png){ class="shadow" }
      
      7. Click **Next**
      
-        ![Screenshot](img/webdav-3.png)
+        ![Screenshot](img/webdav-3.png){ class="shadow" }
      
      8. Click **Choose a custom network location** and then click **Next**
      
-        ![Screenshot](img/webdav-4.png)     
+        ![Screenshot](img/webdav-4.png){ class="shadow" }     
      
      9. In the **Internet or network address** field, enter the URL as shown above and click **Next**
         
-        ![Screenshot](img/webdav-5.png)
+        ![Screenshot](img/webdav-5.png){ class="shadow" }
      
      10. Enter your username and password and click **Ok**
      
-        ![Screenshot](img/webdav-6.png)
+        ![Screenshot](img/webdav-6.png){ class="shadow" }
      
      11. Enter a name for the network location and click **Next**
     
-        ![Screenshot](img/webdav-7.png)
+        ![Screenshot](img/webdav-7.png){ class="shadow" }
     
      12. Click **Finish**
     
-        ![Screenshot](img/webdav-8.png)
+        ![Screenshot](img/webdav-8.png){ class="shadow" }
     
      The originals folder appears as a mapped drive in Windows Explorer, and you can immediately add,
      edit, or delete files and directories using the Windows File Explorer.
     
-     ![Screenshot](img/webdav-9.png)
+     ![Screenshot](img/webdav-9.png){ class="shadow" }
     
     If you still have trouble connecting via WebDAV, you may have to
     [update](https://help.dreamhost.com/hc/en-us/articles/216473357-Accessing-WebDAV-with-Windows) the

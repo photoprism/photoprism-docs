@@ -16,10 +16,10 @@ so that you can automatically sync your latest pictures.
 1. Go to *Settings*
 2. Open *Sync tab*
 3. Click *Add Server*
-    ![Screenshot](img/sync-1.png)
+    ![Screenshot](img/sync-1.png){ class="shadow" }
 4. Fill in your WebDAV server url, username and password
 5. Click *connect*
-    ![Screenshot](img/sync-2.png)
+    ![Screenshot](img/sync-2.png){ class="shadow" }
 6. Now the other WebDAV server is connected with PhotoPrism
 
 ## Manually Upload Files to a WebDAV Server ##
@@ -30,10 +30,10 @@ so that you can automatically sync your latest pictures.
 2. Open *Sync* tab
 3. Click into the upload cell of your server
 
-![Screenshot](img/sync-upload-1.png)
+![Screenshot](img/sync-upload-1.png){ class="shadow" }
 4. Select the folder to which photos should be uploaded and click *save*
 
-![Screenshot](img/sync-upload-2.png)
+![Screenshot](img/sync-upload-2.png){ class="shadow" }
 
 **To upload files from PhotoPrism to the WebDAV server:**
 
@@ -43,7 +43,7 @@ so that you can automatically sync your latest pictures.
 4. Click :material-cloud:
 5. Select your server account and click *upload*
 
-![Screenshot](img/upload-3.png)
+![Screenshot](img/upload-3.png){ class="shadow" }
 
 !!! attention ""
     Due to problems with some Nextcloud settings it might be that uploading to Nextcloud results in 0 byte files. You find information on how to solve it [here](https://github.com/photoprism/photoprism/issues/443).
@@ -53,14 +53,14 @@ so that you can automatically sync your latest pictures.
 1. Go to *Settings*
 2. Open *Sync* tab
 3. Click into the sync cell of your server
-![Screenshot](img/sync-sync-1.png)
+![Screenshot](img/sync-sync-1.png){ class="shadow" }
 4. Enable synchronization in the upper right corner
 5. Choose a folder on your server
 6. Choose a sync interval
 7. Select the options that are suitable for you and click *Save*
 
 
-![Screenshot](img/sync-sync-2.png)
+![Screenshot](img/sync-sync-2.png){ class="shadow" }
 
 ### Remote Sync Options ###
 

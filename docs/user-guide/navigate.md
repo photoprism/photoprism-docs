@@ -2,9 +2,9 @@
 Photo and video search is based on the following components. Note that all pages are fully responsive, 
 our screenshots show the user-interface in a desktop browser with medium resolution.
 
-![Screenshot](img/nav1edited.png)
+![Screenshot](img/nav1edited.png){ class="shadow" }
 
-![Screenshot](img/nav2edited.png)
+![Screenshot](img/nav2edited.png){ class="shadow" }
 
 #### 1. Main Navigation ####
 
@@ -46,5 +46,5 @@ It also contains the following buttons:
 
 To unselect all items, click the cross at the top:
 
-![Screenshot](img/nav3edited.png)
+![Screenshot](img/nav3edited.png){ class="shadow" }
 

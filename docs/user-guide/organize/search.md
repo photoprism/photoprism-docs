@@ -12,7 +12,7 @@ You can search for all kind of things:
 
 Just try it!
 
-![Screenshot](img/fulltext-search-1.png)
+![Screenshot](img/fulltext-search-1.png){ class="shadow" }
 
 ## Search Filter ##
 The following filters can be set using the filter bar:
@@ -21,7 +21,7 @@ The following filters can be set using the filter bar:
 
 In case you set multiple filters only photos, that fulfill all filter criteria, are shown in the search result.
 
- ![Screenshot](img/filter-bar-new.png)
+ ![Screenshot](img/filter-bar-new.png){ class="shadow" }
 
 Filters can be also be set in the search bar like this:
     
@@ -29,7 +29,7 @@ Filters can be also be set in the search bar like this:
     
 You find the full list of available filters [below](#search-filter-overview).
 
-![Screenshot](img/search-filters.png)
+![Screenshot](img/search-filters.png){ class="shadow" }
 
 ### AND Search ###
 To combine different filters use a space as separator:

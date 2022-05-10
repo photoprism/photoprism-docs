@@ -11,14 +11,14 @@ PhotoPrism also attaches each generated label to a broader group (or category) o
 
 You may wish to see these broad label categories in addition to the usual labels in the *Labels* pages. Clicking the icon in the upper right-hand corner :material-eye: will switch between turning them on ('Show More') and off ('Show Less'). You can also include these label categories as part of a more complex search filter - the label categories from your photos will appear in the search filter bar as a drop-down selection under the option 'All Categories'.
 
-![Screenshot](img/labels-1.png)
+![Screenshot](img/labels-1.png){ class="shadow" }
 
 ### View all Photos with a Label ###
 1. Go to *Labels*
 2. Click on the label you are interested in
 
-    ![Screenshot](img/labels-2.png)
-    ![Screenshot](img/labels-3.png)
+    ![Screenshot](img/labels-2.png){ class="shadow" }
+    ![Screenshot](img/labels-3.png){ class="shadow" }
 
 !!! info ""
     Alternatively you can use the search field in Photos/Videos. You search for photos with a special label like this: `label:dog`.
@@ -31,7 +31,7 @@ You may wish to see these broad label categories in addition to the usual labels
 4. Enter a label name
 5. Click :material-plus: on the right side of this row
 
-    ![Screenshot](img/add-label.png)
+    ![Screenshot](img/add-label.png){ class="shadow" }
     
 ### Remove/Delete Labels from Photos ###
 
@@ -42,12 +42,12 @@ Manually added labels can be deleted.
 2. Go to *Labels* tab
 3. Click the :material-minus:/:material-delete: button of the label you want to remove/delete
 
-    ![Screenshot](img/remove-label-1.png)
+    ![Screenshot](img/remove-label-1.png){ class="shadow" }
     
 !!! info ""
     Removed labels have a confidence of 0% and can be activated again at any time by clicking *add*.
     
-   ![Screenshot](img/remove-label-2.png)
+   ![Screenshot](img/remove-label-2.png){ class="shadow" }
 
 !!! info ""
     You can hide Labels in [Settings](../settings/general.md)
@@ -56,19 +56,19 @@ Manually added labels can be deleted.
 
 1. Go to the photo [*edit dialog*](edit.md) of any photo that has the label you want to rename
 
-    ![Screenshot](img/edit-label-1.png)
+    ![Screenshot](img/edit-label-1.png){ class="shadow" }
     
 2. Go to *Labels* tab
 3. Click on the *label name* you want to change
 4. Change the name and click *enter*
 
-    ![Screenshot](img/edit-label-2.png)
+    ![Screenshot](img/edit-label-2.png){ class="shadow" }
     
-    ![Screenshot](img/edit-label-3.png)
+    ![Screenshot](img/edit-label-3.png){ class="shadow" }
     
 5. The changes will be applied to all photos with this label after the next  [*indexing*](../index.md)
 
-    ![Screenshot](img/edit-label-4.png)
+    ![Screenshot](img/edit-label-4.png){ class="shadow" }
 
 !!! attention ""
     Be aware this change applies to all photos that have this label.

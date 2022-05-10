@@ -9,19 +9,19 @@ During [*indexing*](../index.md) PhotoPrism collects as much data as possible fr
 === "From Card View"
      1. Click on the photos title, time or camera information
 
-    ![Screenshot](img/edit-open-1.png)
+    ![Screenshot](img/edit-open-1.png){ class="shadow" }
 
 === "From Full Screen Mode"
      1. In the upper right corner click :material-pencil:
 
-    ![Screenshot](img/edit-open-2.png)
+    ![Screenshot](img/edit-open-2.png){ class="shadow" }
 
 === "Using Context Menu"
      1. Select one or multiple photos
      2. Click on context menu
      3. Click :material-pencil:
 
-    ![Screenshot](img/edit-open-3.png)
+    ![Screenshot](img/edit-open-3.png){ class="shadow" }
 
 ### Edit Details ###
 
@@ -29,7 +29,7 @@ In the edit dialog's *Detail tab* you can view and edit the following data:
 
 * Title, Day, Month, Year, UTC time, UTC date, Time zone, Latitude, Longitude, Altitude, Country, Camera, ISO, Exposure, Lens, F Number, Focal Length, Subject, Artist, Copyright, License, Description, Keywords, Notes
 
-![Screenshot](img/edit-details.png)
+![Screenshot](img/edit-details.png){ class="shadow" }
 
 *Apply* saves changes. *Ok* saves changes and closes edit dialog.
 
@@ -44,7 +44,7 @@ In the edit dialog's *Detail tab* you can view and edit the following data:
 
 Geolocation Plugin is an [open source extension](https://github.com/andyvalerio/photoprism-geolocation) that makes it easy to change latitude and longitude of a photo by selecting places on a graphical map. It can be [installed through the Chrome web store](https://chrome.google.com/webstore/detail/geolocation-plugin-for-ph/oggmpodnbdcmfiognbkkeffacpeaifch).
 
-![Screenshot](https://valerio.nu/maps/geolocation.jpg)
+![Screenshot](https://valerio.nu/maps/geolocation.jpg){ class="shadow" }
     
 ### Edit Labels ###
 
@@ -60,11 +60,11 @@ In the edit dialog's *Files tab* you see all files that belong to a photo.
 
 In PhotoPrism a photo can consist of multiple files like a *raw file* + a *jpeg version* of this raw file + a related *xmp or json file*.
 
-![Screenshot](img/files-1.png)
+![Screenshot](img/files-1.png){ class="shadow" }
 
 To open file details click :material-chevron-down:.
 
-![Screenshot](img/group-2.png)
+![Screenshot](img/group-2.png){ class="shadow" }
 
 In case you have [*stacked files*](stacks.md) you can change the primary file, delete not primary files, or unstack files using the action buttons.
 

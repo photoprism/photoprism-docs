@@ -16,7 +16,7 @@ Shows all photos and videos that are not in review or archived or private.
 !!! hint ""
     In case the review, private or archive functions are turned off - Search displays those photos and videos as well.
 
-![Screenshot](img/search-section.jpg)
+![Screenshot](img/search-section.jpg){ class="shadow" }
 
 ##### Monochrome #####
 Shows all monochrome photos and videos.
@@ -39,7 +39,7 @@ Shows archived photos.
 #### :material-image-album: [Albums](albums.md) ####
 Shows albums you created.
 
-![Screenshot](img/albums.jpg)
+![Screenshot](img/albums.jpg){ class="shadow" }
 
 ##### Unsorted #####
 Shows all photos that are not part of an album.
@@ -47,7 +47,7 @@ Shows all photos that are not part of an album.
 #### :material-movie: [Videos](video.md) ####
 Shows videos that are not in review or archived or private.
 
-![Screenshot](img/videos.jpg)
+![Screenshot](img/videos.jpg){ class="shadow" }
 
 #### :material-account: People ####
 Shows photos and videos grouped by people on it.
@@ -55,22 +55,22 @@ Shows photos and videos grouped by people on it.
 #### :material-heart: Favorites ####
 Shows all photos and videos you liked.
 
-![Screenshot](img/favorites.jpg)
+![Screenshot](img/favorites.jpg){ class="shadow" }
 
 #### :material-compass: [Moments](moments.md) ####
 Discover albums we automatically create for you.
 
-![Screenshot](img/moments.jpg)
+![Screenshot](img/moments.jpg){ class="shadow" }
 
 #### :material-calendar-range: [Calendar](calendar.md)  ####
 Organizes your photos due to time taken.
 
-![Screenshot](img/calendar.jpg)
+![Screenshot](img/calendar.jpg){ class="shadow" }
 
 #### :material-map-marker: [Places](places.md) ####
 Displays all photos and videos with location information on a worldmap.
 
-![Screenshot](img/places.jpg)
+![Screenshot](img/places.jpg){ class="shadow" }
 
 ##### States #####
 Shows your photos grouped by location.
@@ -78,7 +78,7 @@ Shows your photos grouped by location.
 #### :material-label: [Labels](labels.md) ####
 Shows your photos and videos grouped by labels like cat, dog or beach.
 
-![Screenshot](img/labels.jpg)
+![Screenshot](img/labels.jpg){ class="shadow" }
 
 #### :material-folder: [Folders](folders.md) ####
 Displays all folders of your originals directory.
@@ -89,9 +89,9 @@ Shows photos and videos marked as private.
 #### :material-film: [Originals](../library/files.md) ####
 Hierarchical view of your originals directory.
 
-![Screenshot](img/originals.jpg)
+![Screenshot](img/originals.jpg){ class="shadow" }
 
-![Screenshot](img/originals2.jpg)
+![Screenshot](img/originals2.jpg){ class="shadow" }
 
 
 

@@ -18,13 +18,13 @@ The quality score depends on the following:
      1. Open the photo's  [*edit dialog*](edit.md)
      2. Click *approve*
 
-        ![Screenshot](img/review.png)
+        ![Screenshot](img/review.png){ class="shadow" }
 
 === "Card View"
      1. Go to *Review* and make sure you are in *card view*
      2. Click *approve*
 
-        ![Screenshot](img/review-2.png)
+        ![Screenshot](img/review-2.png){ class="shadow" }
 
 === "Context Menu"
      1. Go to *Review* 

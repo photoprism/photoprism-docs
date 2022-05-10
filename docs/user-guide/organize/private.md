@@ -23,11 +23,11 @@ By default, photos marked as private will not appear in the following sections:
       3. Click context menu
       4. Click :material-lock:
 
-        ![Screenshot](img/private-context-menu.png)
+        ![Screenshot](img/private-context-menu.png){ class="shadow" }
 
 === "From List View"
      1. Go to *Search*
      2. Make sure you are in *list view*
      3. Click :material-lock-open: or :material-lock: on the right
 
-        ![Screenshot](img/private-list.png)
+        ![Screenshot](img/private-list.png){ class="shadow" }

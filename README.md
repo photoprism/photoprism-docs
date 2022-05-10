@@ -27,7 +27,25 @@ docs/
     ...       # Other markdown pages, images and other files.
 ```
 
-### Using Mkdocs ###
+### Build Setup ###
+
+#### Installing MkDocs ####
+
+Run this command the first time you work with this repository on your computer so that the dependencies are installed:
+
+```
+make deps
+```
+
+#### Fixing Permissions ####
+
+In case files in the project directory have bad permissions and mkdocs cannot read or write them:
+
+```
+make fix
+```
+
+### Using MkDocs ###
 
 First make sure you have Docker and common development tools like `make` installed on your computer.
 
@@ -35,7 +53,7 @@ Then use this command in the main project directory to download and run the late
 [mkdocs-material](https://github.com/squidfunk/mkdocs-material):
 
 ```sh
-make pull watch
+make watch
 ```
 
 Now open [http://localhost:8000/](http://localhost:8000/) in a browser to view the rendered documentation.

@@ -1,19 +1,23 @@
-.PHONY: all pull update-mkdocs-material watch deploy chown;
+.PHONY: all deps fix pip install upgrade reinstall watch deploy;
 
 UID := $(shell id -u)
 GID := $(shell id -g)
 
-all: pull deploy chown
-chown:
+all: fix upgrade deploy
+deps: pip upgrade
+watch: upgrade serve
+fix:
 	sudo chown -R $(UID):$(GID) .
-pull:
-	docker pull photoprism/mkdocs-material:latest
-update-mkdocs-material:
-	docker pull squidfunk/mkdocs-material:latest
-	docker build --no-cache --pull -t photoprism/mkdocs-material:latest -f Dockerfile .
-	docker push photoprism/mkdocs-material:latest
-watch:
-	docker run --rm -u $(UID):$(GID) -it -p 8000:8000 -v ${PWD}:/docs photoprism/mkdocs-material:latest
+	sudo chmod -R a+rwX .
+pip:
+	sudo apt install pip
+upgrade:
+	pip install --user -U -q -r requirements.txt
+install:
+	pip install --user -r requirements.txt
+replace:
+	pip install --user -U --force-reinstall  -r requirements.txt
+serve:
+	mkdocs serve -a 0.0.0.0:8000
 deploy:
-	docker run --rm -it -v ~/.ssh/id_rsa:/root/.ssh/id_rsa:ro -v ~/.ssh/id_rsa.pub:/root/.ssh/id_rsa.pub:ro \
- 	-v ~/.ssh/known_hosts:/root/.ssh/known_hosts -v ${PWD}:/docs photoprism/mkdocs-material:latest gh-deploy
+	mkdocs gh-deploy --force

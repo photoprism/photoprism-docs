@@ -23,7 +23,7 @@ moving or renaming them in any way.
 
 Your folder structure in *originals* might look like this:
 
-   ![Screenshot](img/originals-before-after.png)
+   ![Screenshot](img/originals-before-after.png){ class="shadow" }
      
 **During indexing:**
 
@@ -35,7 +35,7 @@ Your folder structure in *originals* might look like this:
 
 After indexing your originals folder has not been touched:
 
-![Screenshot](img/originals-before-after.png)
+![Screenshot](img/originals-before-after.png){ class="shadow" }
 
     
 
@@ -52,7 +52,7 @@ After indexing your originals folder has not been touched:
 
 Your initial folder structure in *import* might look like this:
 
-   ![Screenshot](img/before-import.png)
+   ![Screenshot](img/before-import.png){ class="shadow" }
    
 **During import:**
  
@@ -62,11 +62,11 @@ Your initial folder structure in *import* might look like this:
 
 After import using "copy" (this is the default) your folders could look like this:
 
-   ![Screenshot](img/copy-import.png)
+   ![Screenshot](img/copy-import.png){ class="shadow" }
 
 After import using "move" your folders might look like this:
 
-   ![Screenshot](img/move-import.png)
+   ![Screenshot](img/move-import.png){ class="shadow" }
 
 #### Advantages ####
 * Unsupported files stay untouched in the import directory

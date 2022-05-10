@@ -16,7 +16,7 @@
 4. Press *Start* to start indexing
 
 
-![Screenshot](img/index.png)
+![Screenshot](img/index.png){ class="shadow" }
 
 
 !!! info ""

@@ -4,13 +4,13 @@
 
     1. Click :material-cloud-upload: in the upper right corner
 
-         ![Screenshot](img/upload-3.png)
+         ![Screenshot](img/upload-3.png){ class="shadow" }
 
     2. In case you want to upload the files directly to an album select one
 
     3. Click *Upload*
 
-         ![Screenshot](img/upload-to-album.png)
+         ![Screenshot](img/upload-to-album.png){ class="shadow" }
 
     4. Select files
 
@@ -23,13 +23,13 @@
 
     2. Click *Upload*
 
-         ![Screenshot](img/upload-1.png)
+         ![Screenshot](img/upload-1.png){ class="shadow" }
 
     3. In case you want to upload the files directly to an album select one
 
     4. Click *Upload*
 
-         ![Screenshot](img/upload-to-album.png)
+         ![Screenshot](img/upload-to-album.png){ class="shadow" }
 
     5. Select files
 

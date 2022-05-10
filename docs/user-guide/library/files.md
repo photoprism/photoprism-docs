@@ -4,7 +4,7 @@ The *Originals* section displays all files of your *originals* directory.
 
 Clicking on a file opens its edit dialog. 
 
-![Screenshot](img/files.png)
+![Screenshot](img/files.png){ class="shadow" }
 
 The context menu allows you to perform the following actions:
 

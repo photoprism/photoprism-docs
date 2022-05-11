@@ -24,7 +24,7 @@ You can change the behaviour for 2 - 4 in [*Settings*](../settings/library.md).
     
 2. Use arrows to see all photos of the sequence
 
-    ![Screenshot](img/sequential3.png){ class="shadow indent" } ![Screenshot](img/sequential4.png){ class="shadow indent" }
+    ![Screenshot](img/sequential3.png){ class="shadow" } ![Screenshot](img/sequential4.png){ class="shadow" }
    
 
 ### Change Primary Files ###

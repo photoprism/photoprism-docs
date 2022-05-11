@@ -17,15 +17,15 @@ You will then receive a confirmation email with an activation link that you must
 - Go to [Available Apps](https://prism.ws/pikapods-apps) and select PhotoPrism 
 - Click *Run Your Own*
 
-![Screenshot](img/pikapods-appstore.png){ class="indent" }
+![Screenshot](img/pikapods-appstore.png)
 
 - Enter a Pod Name and select a Region
 
-![Screenshot](img/pikapods-step-1.png){ class="shadow indent" }
+![Screenshot](img/pikapods-step-1.png){ class="shadow" }
 
 - Specify the initial Password for the "admin" user account
 
-![Screenshot](img/pikapods-step-2.png){ class="shadow indent" }
+![Screenshot](img/pikapods-step-2.png){ class="shadow" }
 
 - Configure the resources you need
   
@@ -36,13 +36,13 @@ You will then receive a confirmation email with an activation link that you must
 - The approximate monthly pricing is displayed at the bottom of the page
 - Click *Add Pod*
 
-![Screenshot](img/pikapods-step-3.png){ class="shadow indent" }
+![Screenshot](img/pikapods-step-3.png){ class="shadow" }
 
 ### 3. Sign In
 
 PhotoPrism is now fully set up and ready to use. To log in, click *Open Pod*, enter the username "admin" and the password you have specified:
 
-![Screenshot](img/pikapods-overview.png){ class="indent" }
+![Screenshot](img/pikapods-overview.png)
 
 ## Setting Up Your Devices
 

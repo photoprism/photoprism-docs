@@ -29,11 +29,10 @@ Before proceeding, please also provide your credit card details to avoid usage r
 
 ![Screenshot](img/pikapods-step-2.png){ class="shadow" }
 
-- Configure the resources you need
-  
+- Configure the file storage space available to you and the computing resources that PhotoPrism can use, e.g. for indexing and face recognition
 
 !!! info "Minimum Requirements"
-    PhotoPrism requires at least 2CPUs and 8GB memory. Those minimum requirements might be reduced in future versions.
+    PhotoPrism currently requires **at least 2 CPUs and 8 GB of memory**. We are working to lower these requirements in the future.
 
 - The approximate monthly pricing is displayed at the bottom of the page
 - Click *Add Pod*

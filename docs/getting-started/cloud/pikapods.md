@@ -10,7 +10,6 @@ This step-by-step guide explains how to set up a new PhotoPrism instance at Pika
 ### 1. Create Account
 
 Sign up at [www.pikapods.com/register](https://prism.ws/pikapods-register) with your contact details.
-
 You will then receive a confirmation email with an activation link that you must click to continue.
 
 Before proceeding, please also provide your credit card details to avoid usage restrictions.

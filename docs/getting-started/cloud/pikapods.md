@@ -29,7 +29,7 @@ Before proceeding, please also provide your credit card details to avoid usage r
 
 ![Screenshot](img/pikapods-step-2.png){ class="shadow" }
 
-- Configure the storage space available for photos and videos, as well as the compute resources PhotoPrism can use, such as for indexing and face detection
+- Configure the storage space available for photos and videos, as well as the compute resources PhotoPrism can use, such as for indexing, transcoding, and face recognition
 
 !!! info "Minimum Requirements"
     PhotoPrism currently requires **at least 2 CPUs and 8 GB of memory**. We are working to lower these requirements.

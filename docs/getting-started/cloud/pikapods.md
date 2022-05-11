@@ -25,19 +25,20 @@ Before proceeding, please also provide your credit card details to avoid usage r
 
 ![Screenshot](img/pikapods-step-1.png){ class="shadow" }
 
-- Specify the initial Password for the "admin" user account
+- Click *ENV VARS* to specify the initial password for the "admin" user account
 
 ![Screenshot](img/pikapods-step-2.png){ class="shadow" }
 
-- Configure the storage space available for photos and videos, as well as the compute resources PhotoPrism can use, such as for indexing, transcoding, and face recognition
+- In *RESOURCES*, you can configure the storage space available for photos and videos, as well as the compute resources PhotoPrism can use, such as for indexing and face recognition
 
-!!! info "Minimum Requirements"
-    PhotoPrism currently requires **at least 2 CPUs and 8 GB of memory**. We are working to lower these requirements.
+!!! info ""
+    PhotoPrism currently requires **at least 2 CPUs and 8 GB of memory**. We are working to lower these minimum requirements.
 
-- The approximate monthly pricing is displayed at the bottom of the page
-- Click *Add Pod*
+- The approximate price per month is shown at the bottom
 
 ![Screenshot](img/pikapods-step-3.png){ class="shadow" }
+
+- Click *Add Pod* to complete the setup
 
 ### 3. Sign In
 

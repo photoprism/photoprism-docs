@@ -3,7 +3,7 @@
 UID := $(shell id -u)
 GID := $(shell id -g)
 
-all: fix upgrade deploy
+all: deploy
 deps: pip upgrade
 watch: upgrade serve
 fix:

@@ -14,7 +14,7 @@ You will then receive a confirmation email with an activation link that you must
 
 ### 2. Start PhotoPrism
 
-- Go to [Available Apps](https://www.pikapods.com/apps) and select PhotoPrism 
+- Go to [Available Apps](https://prism.ws/pikapods-apps) and select PhotoPrism 
 - Click *Run Your Own*
 
 ![Screenshot](img/pikapods-appstore.png){ class="indent" }

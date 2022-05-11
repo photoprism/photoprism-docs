@@ -1,20 +1,16 @@
----
-icon: material/emoticon-happy
-# icon: material/verified
----
+# **PikaPods** Open Source App Hosting
 
-# PikaPods Cloud Hosting
+!!! verified "Trusted Partner"
+    PhotoPrism teamed up with [PikaPods](https://www.pikapods.com/) to offer the first officially supported **cloud-hosted solution**. Your personal app instance will be up and running in just a few steps and includes [sponsor features](https://photoprism.app/membership) like interactive world maps and dark themes - at no additional cost.
 
-!!! check "Official Partner"
-    PhotoPrism has partnered with [PikaPods](https://www.pikapods.com/) to offer the first official cloud-hosted solution! Your app instance will be up and running in just a few steps and includes [sponsor features](https://photoprism.app/membership) like interactive world maps and dark themes - at no additional cost.
+## Setting Up Your Pod
 
-## Starting Your App Pod
+This step-by-step guide explains how to set up a new PhotoPrism instance at PikaPods. You can currently get started for free with a **$5 welcome credit**. No credit card required.
 
-This step-by-step guide explains how to launch a new PhotoPrism cloud instance at PikaPods.
+### 1. Create Account
 
-### 1. Sign Up
-
-Sign up at [www.pikapods.com/register](https://www.pikapods.com/register) with your payment details and make sure to confirm your email before you proceed.
+Sign up at [www.pikapods.com/register](https://www.pikapods.com/register) with your contact details.
+You will then receive a confirmation email with an activation link that you must click to continue.
 
 ### 2. Start PhotoPrism
 
@@ -42,7 +38,7 @@ Sign up at [www.pikapods.com/register](https://www.pikapods.com/register) with y
 
 ![Screenshot](img/pikapods-step-3.png){ class="shadow indent" }
 
-### 3. Enjoy!
+### 3. Sign In
 
 PhotoPrism is now fully set up and ready to use. To log in, click *Open Pod*, enter the username "admin" and the password you have specified:
 

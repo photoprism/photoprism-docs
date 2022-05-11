@@ -32,7 +32,7 @@ Before proceeding, please also provide your credit card details to avoid usage r
 - Configure the storage space available for photos and videos, as well as the compute resources PhotoPrism can use, such as for indexing and face detection
 
 !!! info "Minimum Requirements"
-    PhotoPrism currently requires **at least 2 CPUs and 8 GB of memory**. We are working to lower these requirements in the future.
+    PhotoPrism currently requires **at least 2 CPUs and 8 GB of memory**. We are working to lower these requirements.
 
 - The approximate monthly pricing is displayed at the bottom of the page
 - Click *Add Pod*

@@ -13,7 +13,7 @@ Sign up at [www.pikapods.com/register](https://prism.ws/pikapods-register) with 
 
 You will then receive a confirmation email with an activation link that you must click to continue.
 
-Before proceeding, please also add your credit card details to avoid usage restrictions.
+Before proceeding, please also provide your credit card details to avoid usage restrictions.
 
 ### 2. Start PhotoPrism
 

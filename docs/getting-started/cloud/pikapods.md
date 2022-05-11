@@ -1,16 +1,19 @@
 # **PikaPods** Open Source App Hosting
 
 !!! verified "Trusted Partner"
-    PhotoPrism teamed up [with PikaPods](https://prism.ws/pikapods-com) to offer the first officially supported **cloud-hosted solution**. Your personal app instance will be up and running in just a few steps and [includes sponsor features](https://photoprism.app/membership) like interactive world maps and dark themes - at no additional cost.
+    PhotoPrism teamed up [with PikaPods](https://prism.ws/pikapods-com) to offer the first officially supported **cloud-hosted solution**. Your personal app instance will be up and running in just a few steps and [includes sponsor features](https://photoprism.app/membership) like interactive world maps and dark themes - at no additional cost. New customers currently also receive a **$5 welcome credit**.
 
 ## Setting Up Your Pod
 
-This step-by-step guide explains how to set up a new PhotoPrism instance at PikaPods. You can currently get started for free with a **$5 welcome credit**. No credit card required.
+This step-by-step guide explains how to set up a new PhotoPrism instance at PikaPods.
 
 ### 1. Create Account
 
 Sign up at [www.pikapods.com/register](https://prism.ws/pikapods-register) with your contact details.
+
 You will then receive a confirmation email with an activation link that you must click to continue.
+
+Before proceeding, please also add your credit card details to avoid usage restrictions.
 
 ### 2. Start PhotoPrism
 

@@ -8,7 +8,7 @@ nav:
     - Raspberry Pi: getting-started/raspberry-pi.md
     - FreeBSD: getting-started/freebsd.md
     - Cloud:
-      - PikaPods: getting-started/cloud/pikapods.md
+      - PikaPods App: getting-started/cloud/pikapods.md
       - DigitalOcean: getting-started/cloud/digitalocean.md
     - NAS Devices:
       - Synology: getting-started/nas/synology.md

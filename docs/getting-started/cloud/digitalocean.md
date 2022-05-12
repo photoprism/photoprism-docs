@@ -4,7 +4,7 @@ PhotoPrism can be deployed at DigitalOcean with just a few clicks.
 If you have no DigitalOcean account yet, you may use this sign-up link to receive a $100, 60-day account credit:
 
 <p style="text-align: center; padding: 10px 4px 5px 4px;">
-<a class="md-button shadow" style="background-color: #0052ff; font-size: 0.66rem; font-weight: normal; color: white" href="https://m.do.co/c/f9725a28bb6b">Sign up at DigitalOcean</a>
+<a class="md-button" style="background-color: #0052ff; font-size: 0.66rem; font-weight: normal; color: white" href="https://m.do.co/c/f9725a28bb6b">Sign up at DigitalOcean</a>
 </p>
 
 ## Install PhotoPrism ##

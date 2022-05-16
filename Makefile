@@ -3,6 +3,9 @@
 UID := $(shell id -u)
 GID := $(shell id -g)
 
+-include .env
+export
+
 all: deploy
 deps: pip upgrade
 watch: upgrade serve
@@ -14,6 +17,11 @@ pip:
 upgrade:
 	pip3 install --user --no-warn-script-location -U -q -r requirements.txt
 install:
+ifdef GH_TOKEN
+	pip install --user --no-warn-script-location git+https://${GH_TOKEN}@github.com/photoprism/mkdocs-material-insiders
+else
+	@echo "GH_TOKEN not set in .env file, skipped installing mkdocs-material-insiders"
+endif
 	pip3 install --user --no-warn-script-location -r requirements.txt
 replace:
 	pip3 install --user --no-warn-script-location -U --force-reinstall  -r requirements.txt

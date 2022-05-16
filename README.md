@@ -29,6 +29,17 @@ docs/
 
 ### Build Setup ###
 
+#### Create .env File ####
+
+If you have a personal access token for the MkDocs Material Insider edition,
+add you GitHub access token to an .env file in the main project directory:
+
+```env
+GH_TOKEN=[YOUR TOKEN]
+```
+
+New GitHub access tokens can be generated on https://github.com/settings/tokens.
+
 #### Installing MkDocs ####
 
 When using a Debian, Ubuntu, or Mint Linux, run this command the first time you work with this repository on your computer so that the dependencies are installed:

@@ -5,6 +5,13 @@
     Your continued support [helps us](funding.md) provide regular updates and services like [world maps](https://try.photoprism.app/places). Thank you! 💜
 
 ### Development Preview ###
+
+!!! tldr ""
+    You can test upcoming features and improvements by changing the image from `photoprism/photoprism:latest`
+    to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/).
+    Then [pull the most recent image](getting-started/updates.md) and restart your instance.
+
+### May 17, 2022 ###
 <span class="build">Build 220517-b9c68f8f</span>
 
 This update features search UX improvements, a new Docker base image based on Debian 12 "Bookworm",
@@ -52,11 +59,6 @@ languages have been added and updated. Thanks to all involved!
 - Docker: [New Debian 12 "Bookworm" base image with FFmpeg 4.4.1 and Darktable 3.8.1](https://github.com/photoprism/photoprism/issues/2178)
 - Docker: [Added default users and groups for enhanced video transcoding compatibility](https://github.com/photoprism/photoprism/issues/2228)
 - Translations: [Added Swedish, Romanian, Turkish, Lithuanian, Bulgarian, Malay, and Croatian](https://translate.photoprism.app/)
-
-!!! tldr ""
-    You can test upcoming features and improvements by changing the image from `photoprism/photoprism:latest`
-    to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/).
-    Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
 ### March 2, 2022 ###
 <span class="build">Build 220302-0059f429</span>

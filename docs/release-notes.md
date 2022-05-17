@@ -5,7 +5,7 @@
     Your continued support [helps us](funding.md) provide regular updates and services like [world maps](https://try.photoprism.app/places). Thank you! 💜
 
 ### Development Preview ###
-<span class="build">Build 220422-1af2d295</span>
+<span class="build">Build 220517-53d814e6</span>
 
 This update features search UX improvements, a new Docker base image based on Debian 12 "Bookworm",
 as well as fixes for recently discovered issues. Front- and backend [translations](https://translate.photoprism.app/) in numerous
@@ -36,8 +36,10 @@ languages have been added and updated. Thanks to all involved!
 - Metadata: [Improved parsing of two-digit years in original file paths](https://github.com/photoprism/photoprism/issues/2271)
 - Metadata: [Exif IFD1 tags with existing IFD0 values are ignored to improve standard compliance](https://github.com/photoprism/photoprism/issues/2231)
 - Metadata: [Brute-force search is skipped by default if no Exif headers were found in JPEG, PNG, TIFF, and HEIF files](https://github.com/photoprism/photoprism/issues/2196)
+- Metadata: [SubSecDateTimeOriginal and SubSecCreateDate timestamps are preferred](https://github.com/photoprism/photoprism/issues/2320)
 - WebDAV: [Up- and download sync can no longer be enabled at the same time to prevent unexpected behavior](https://github.com/photoprism/photoprism/issues/1785)
 - WebDAV: [Added timeout/retry settings and improved handling of sync errors](https://github.com/photoprism/photoprism/issues/1781)
+- WebDAV: [Fixed sharing videos and uploading automatically created albums](https://github.com/photoprism/photoprism/issues/2293)
 - CLI: [Renamed `--config-file` to `--defaults-yaml` and improved command help](https://github.com/photoprism/photoprism/issues/2250)
 - CLI: [Added short names for common config flags, e.g. `-i` for `--wakeup-interval`](https://github.com/photoprism/photoprism/issues/2195)
 - CLI: [Run `photoprism show tags` to display metadata tags and supported standards](https://github.com/photoprism/photoprism/issues/2252)

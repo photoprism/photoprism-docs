@@ -220,7 +220,7 @@ Easy, isn't it?
 !!! example ""
     **Back us on [Patreon](https://link.photoprism.app/patreon) or [GitHub Sponsors](https://link.photoprism.app/sponsor).**
     Your continued support [helps us](../funding.md) provide [regular updates](https://docs.photoprism.app/release-notes/)
-    and services like [world maps](https://try.photoprism.app/places). Thank you! 💜
+    and services like [world maps](https://try.photoprism.app/places). Thank you! :octicons-heart-fill-24:{ .heart .purple }
 
 ### Troubleshooting ###
 

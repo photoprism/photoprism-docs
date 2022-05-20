@@ -94,6 +94,11 @@ header.md-header .md-ellipsis {
         transform: scale(1.15);
     }
 }
+
+.purple {
+    color: #b65fc5!important;
+}
+
 .heart {
     animation: heart 1000ms infinite;
 }

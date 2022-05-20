@@ -80,7 +80,7 @@ Pictures of this person continue to be visible in search results and albums.
     **This currently is a sponsor feature to thank everyone who supports the development of this application.**
     We'll let you know how to enable it when you sign up on [Patreon](https://link.photoprism.app/patreon) or [GitHub Sponsors](https://link.photoprism.app/sponsor).
     Your continued support [helps us](../../funding.md) provide [regular updates](https://docs.photoprism.app/release-notes/)
-    and services like [world maps](https://try.photoprism.app/places). Thank you! 💜
+    and services like [world maps](https://try.photoprism.app/places). Thank you! :octicons-heart-fill-24:{ .heart .purple }
 
 ![Screenshot](img/person-hide-new.png){ class="shadow" }
 

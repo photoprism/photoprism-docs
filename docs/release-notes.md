@@ -7,9 +7,12 @@
 ### Development Preview ###
 <span class="build">Build 220520-a96c1958</span>
 
-- Logs: [Omission of repeated messages and minimum level for frontend viewer](https://github.com/photoprism/photoprism/issues/2335)
-- Docker: [Specified explicitly supported user and group ID ranges](https://github.com/photoprism/photoprism/issues/2336)
+Based on the feedback we received on the stable version, we have made additional improvements. If you are affected by any of these issues, we encourage you to test our preview and report back to us.
+
+- Logs: [Repeated log messages are omitted to prevent feedback loops](https://github.com/photoprism/photoprism/issues/2335)
+- Logs: [Only messages with a log level of *info* or higher are displayed in the UI](https://github.com/photoprism/photoprism/issues/2335)
 - Docker: [Removed incorrect permission check for storage folder on startup](https://github.com/photoprism/photoprism/issues/2334)
+- Docker: [Specified explicitly supported user and group ID ranges](https://github.com/photoprism/photoprism/issues/2336)
 
 !!! tldr ""
     You can test upcoming features and improvements by changing the image from `photoprism/photoprism:latest`

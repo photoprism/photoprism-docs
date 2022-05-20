@@ -5,10 +5,11 @@
     Your continued support [helps us](funding.md) provide regular updates and services like [world maps](https://try.photoprism.app/places). Thank you! :octicons-heart-fill-24:{ .heart .purple }
 
 ### Development Preview ###
-<span class="build">Build 220520-a96c1958</span>
+<span class="build">Build 220520-d600d5fa</span>
 
 Based on the feedback we received on the stable version, we have made additional improvements. If you are affected by any of these issues, we encourage you to test our preview and report back to us.
 
+- Auth: [Short initial passwords are accepted to prevent failed logins](https://github.com/photoprism/photoprism/issues/2339)
 - Logs: [Repeated log messages are omitted to prevent feedback loops](https://github.com/photoprism/photoprism/issues/2335)
 - Logs: [Only messages with a log level of *info* or higher are displayed in the UI](https://github.com/photoprism/photoprism/issues/2335)
 - Docker: [Removed incorrect permission check for storage folder on startup](https://github.com/photoprism/photoprism/issues/2334)

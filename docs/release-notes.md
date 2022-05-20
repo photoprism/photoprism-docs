@@ -13,7 +13,7 @@ Based on the feedback we received on the stable version, we have made additional
 - Logs: [Repeated log messages are omitted to prevent feedback loops](https://github.com/photoprism/photoprism/issues/2335)
 - Logs: [Only messages with a log level of *info* or higher are displayed in the UI](https://github.com/photoprism/photoprism/issues/2335)
 - Docker: [Removed incorrect permission check for storage folder on startup](https://github.com/photoprism/photoprism/issues/2334)
-- Docker: [Documented supported user and group ID ranges](https://github.com/photoprism/photoprism/issues/2336)
+- Docker: [Supported user and group ID ranges have been documented](https://github.com/photoprism/photoprism/issues/2336)
 
 !!! tldr ""
     You can test upcoming features and improvements by changing the image from `photoprism/photoprism:latest`

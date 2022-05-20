@@ -2,7 +2,7 @@ name: ci
 on:
   push:
     branches:
-      - release
+      - deploy
 env:
   GH_TOKEN: ${{ secrets.GH_TOKEN }}
 jobs:

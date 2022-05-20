@@ -77,6 +77,10 @@ Now open [http://localhost:8000/](http://localhost:8000/) in a browser to view t
 
 **The content will be updated automatically when changes are detected.**
 
+### Deployment ###
+
+When you merge the main/master branch to `deploy`, the live documentation is automatically created, uploaded and will be visible shortly.
+
 ### Contributor License Agreement (CLA) ###
 
 After submitting your first pull request, you will automatically be asked to [accept our CLA](https://link.photoprism.app/cla):

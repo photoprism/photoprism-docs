@@ -7,7 +7,7 @@
 ### Development Preview ###
 <span class="build">Build 220520-a96c1958</span>
 
-- Logs: [Omission of repeated messages and log level filter for logs displayed in the UI](https://github.com/photoprism/photoprism/issues/2335)
+- Logs: [Omission of repeated messages and minimum level for logs forwarded to the UI](https://github.com/photoprism/photoprism/issues/2335)
 - Docker: [Specified explicitly supported user and group ID ranges](https://github.com/photoprism/photoprism/issues/2336)
 - Docker: [Removed incorrect permission check for storage folder on startup](https://github.com/photoprism/photoprism/issues/2334)
 

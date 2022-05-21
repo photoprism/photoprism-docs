@@ -7,7 +7,7 @@
 ### Development Preview ###
 <span class="build">Build 220521-75ec9909</span>
 
-This service release fixes potential issues with our new Debian 12-based Docker image which was part of the last update. These may have prevented some users from updating PhotoPrism without making changes to their environment. In our ongoing effort to improve usability and performance, we have also made improvements to the user interface, such as using the operating system font by default instead of Google's Roboto.
+This service release fixes potential issues with our new Debian 12-based Docker image which was part of the last update. These may have prevented some users from updating PhotoPrism without making changes to their environment. In our ongoing effort to improve usability and performance, we have also made changes to the user interface, such as using the operating system font by default instead of Google's Roboto.
 
 *Thank you to everyone who [helped with testing](https://github.com/photoprism/photoprism/projects/5?card_filter_query=label%3Aplease-test), [signed up as a sponsor](https://photoprism.app/membership), or [contributed](https://github.com/photoprism/photoprism/graphs/contributors) in other ways! We appreciate it very much.*
 

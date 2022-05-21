@@ -133,6 +133,7 @@ nav:
       - REST API: developer-guide/ui/rest-api.md
       - Browsers: developer-guide/ui/browsers.md
       - Interactive Maps: developer-guide/ui/maps.md
+      - Infinite Scrolling: developer-guide/ui/infinite-scrolling.md
     - Media Files:
       - Formats: developer-guide/media/index.md
       - Import: developer-guide/media/import.md

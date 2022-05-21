@@ -17,7 +17,7 @@ In our ongoing effort to improve usability and performance, we have also impleme
 - UX: [Improved UI styles for right-to-left languages](https://github.com/photoprism/photoprism/commit/ab185f719e9f79f01a32f1d38279ec1dfddc826a)
 - Auth: [Short initial passwords are permitted again to avoid login problems](https://github.com/photoprism/photoprism/issues/2339)
 - Logs: [Repeated log messages are omitted to prevent feedback loops](https://github.com/photoprism/photoprism/issues/2335)
-- Logs: [Trace and debug messages are no longer displayed in the Web UI](https://github.com/photoprism/photoprism/issues/2335)
+- Logs: [Trace and debug messages are no longer displayed in the UI to avoid information leaks and reduce the amount of data transmitted via Websockets](https://github.com/photoprism/photoprism/issues/2335)
 - Search: [`mono:true` filter now omits files with unknown chroma](https://github.com/photoprism/photoprism/issues/2341)
 - Docker: [Removed incorrect permission check for storage folder on startup](https://github.com/photoprism/photoprism/issues/2334)
 - Docker: [Supported User and Group ID ranges have been documented](https://github.com/photoprism/photoprism/issues/2336)

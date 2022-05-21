@@ -6,15 +6,11 @@
 
     We have a zero-bug policy and do our best to help users when they need support or have other questions. This comes at a price as we can't give exact deadlines for new features. Also note that while our team appreciates your feedback, we are not obligated to implement the features, improvements, or other changes you request.
 
-    That being said, sustainable funding has a huge impact on how quickly we can deliver new features.
-    We hope this provides a great reason for you to [support our mission and sign up for a membership](https://link.photoprism.app/patreon).
-    Visit [photoprism.app/membership](https://photoprism.app/membership) to learn more.
+    That being said, sustainable funding has a huge impact on how quickly we can deliver new features. We hope this provides a great reason for you to [support our mission and sign up for a membership](https://photoprism.app/membership).
 
-??? question "Are there plans to introduce premium features?"
+??? question "Which benefits do sponsors receive?"
 
-    Yes. Our sponsors additionally enjoy all features with a [sponsor-feature](https://github.com/photoprism/photoprism/issues?q=label%3Asponsor-feature) label attached or marked as [sponsors only](https://docs.photoprism.app/getting-started/config-options/) in the docs, including [Interactive World Maps](https://demo.photoprism.app/places?target=_blank). We will also provide a detailed feature table with comparisons shortly.
-
-    It is your decision whether you want to sign up to enjoy additional benefits. Visit [photoprism.app/membership](https://photoprism.app/membership) to learn more.
+    Our sponsors additionally enjoy all features with a [sponsor-feature](https://github.com/photoprism/photoprism/issues?q=label%3Asponsor-feature) label attached or marked as [sponsors only](https://docs.photoprism.app/getting-started/config-options/) in the docs, including [Interactive World Maps](https://demo.photoprism.app/places). It is your decision whether you want to sign up to enjoy additional benefits. Visit [photoprism.app/membership](https://photoprism.app/membership) to learn more. *We will also provide a detailed feature table with comparisons shortly.*
 
 ??? question "Shouldn't free software be free of costs?"
 
@@ -22,17 +18,13 @@
 
 ??? question "Why can't I just purchase and download a single version?"
 
-    Offering single versions for one-time purchase without ongoing updates would be irresponsible.
-    Unlike traditional offline apps such as Microsoft Office or single-player games, software exposed to the Internet
-    must be updated regularly to stay secure and compatible with the latest standards.
+    Unlike traditional offline apps such as Microsoft Office or single-player games, software exposed to the Internet must be [updated regularly](https://docs.photoprism.app/release-notes/) to stay secure and compatible with the latest standards.
 
-    Updates are also important because virtually all file format parsers have flaws that just haven't been 
-    discovered yet. This is a known risk that may affect you even if your computer isn't directly exposed to
-    the Internet.
-
-    It's essential to keep your operating system, Web browsers, and all other software up to date. Don't push your luck 
+    *It's essential to keep your operating system, Web browsers, and all other software up to date. Don't push your luck 
     and don't expect developers to spend time providing individual updates for old versions that contain only 
-    critical security updates, but nothing else.
+    critical security updates, but nothing else.*
+
+    *Historically, [even large tech companies have not supported their old products](https://docs.microsoft.com/en-us/lifecycle/end-of-support/end-of-support-2022) for an extended period of time, with only a few exceptions. Windows XP, for example, sold 400 million copies, which is why Micorosoft was able to offer updates for such a long time.*
 
 ??? question "Will the self-hosted version continue to be supported?"
 

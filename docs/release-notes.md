@@ -7,7 +7,7 @@
 ### Development Preview ###
 <span class="build">Build 220521-da866a98</span>
 
-This service release fixes potential issues with our new Debian 12-based Docker image that was included in the last update. These may have prevented some users from updating PhotoPrism without making changes to their environment. In our ongoing effort to improve usability and performance, we have also made some improvements to the user interface, such as using the operating system font by default instead of Google's Roboto.
+This service release fixes potential issues with our new Debian 12-based Docker image that was included in the last update. These may have prevented some users from updating PhotoPrism without making changes to their environment. In our ongoing effort to improve usability and performance, we have also made improvements to the user interface, such as using the operating system font by default instead of Google's Roboto.
 
 - Auth: [Short initial passwords are permitted again to avoid login problems](https://github.com/photoprism/photoprism/issues/2339)
 - Logs: [Repeated log messages are omitted to prevent feedback loops](https://github.com/photoprism/photoprism/issues/2335)

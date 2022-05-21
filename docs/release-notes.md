@@ -5,10 +5,13 @@
     Your continued support [helps us](funding.md) provide regular updates and services like [world maps](https://try.photoprism.app/places). Thank you! :octicons-heart-fill-24:{ .heart .purple }
 
 ### Development Preview ###
-<span class="build">Build 220521-441b51b2</span>
+<span class="build">Build 220521-ab185f71</span>
 
 This service release fixes potential issues with our new Debian 12-based Docker image which was part of the last update. These may have prevented some users from updating PhotoPrism without making changes to their environment. In our ongoing effort to improve usability and performance, we have also made improvements to the user interface, such as using the operating system font by default instead of Google's Roboto.
 
+- UX: [Added mobile toolbar navigation sub menu](https://github.com/photoprism/photoprism/commit/8b5fbec950ddf6209609f17fa829cc8adabf3699)
+- UX: [Updated slash screen information and animation](https://github.com/photoprism/photoprism/commit/c1d06f5d2b74e1975442589f2b7ac280cbd4da88)
+- UX: [Improved RTL (right-to-left language) styles](https://github.com/photoprism/photoprism/commit/ab185f719e9f79f01a32f1d38279ec1dfddc826a)
 - Auth: [Short initial passwords are permitted again to avoid login problems](https://github.com/photoprism/photoprism/issues/2339)
 - Logs: [Repeated log messages are omitted to prevent feedback loops](https://github.com/photoprism/photoprism/issues/2335)
 - Logs: [Only messages with a log level of *info* or higher are displayed in the UI](https://github.com/photoprism/photoprism/issues/2335)

@@ -6,7 +6,7 @@
 
     We have a zero-bug policy and do our best to help users when they need support or have other questions. This comes at a price as we can't give exact deadlines for new features. Also note that while our team appreciates your feedback, we are not obligated to implement the features, improvements, or other changes you request.
 
-    That being said, sustainable funding has a huge impact on how quickly we can deliver new features. We hope this provides a great reason for you to [support our mission and sign up for a membership](https://photoprism.app/membership).
+    That being said, sustainable funding has a huge impact on how quickly we can deliver new features. We hope this provides a great reason for you to [support our mission and become a sponsor](https://photoprism.app/membership).
 
 ??? question "Which benefits do sponsors receive?"
 

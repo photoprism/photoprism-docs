@@ -4,33 +4,21 @@
 
 ??? question "When exactly will new features be released?"
 
-    We have a zero bug policy and do our best to help users when they need support or have other questions.
-    Updating and improving the documentation you are reading takes up a large part of our time too.
+    We have a zero-bug policy and do our best to help users when they need support or have other questions. This comes at a price as we can't give exact deadlines for new features. Also note that while our team appreciates your feedback, we are not obligated to implement the features, improvements, or other changes you request.
 
-    This comes at a price, as we can't give exact deadlines for new features. Also keep in mind that epics
-    like multi-user support can't be delivered in a single update. Working on big features is a continuous process
-    that can take months to years until all use cases are covered.
-
-    Having said that, funding really has the highest impact. So users can do their part and
-    [become a sponsor](../funding.md) to get their favorite features as soon as possible.
+    That being said, sustainable funding has a huge impact on how quickly we can deliver new features.
+    So we hope this provides a great reasons to [support our mission and sign up for a membership](https://link.photoprism.app/patreon).
+    Visit [photoprism.app/membership](https://photoprism.app/membership) to learn more.
 
 ??? question "Are there plans to introduce premium features?"
 
-    PhotoPrism is 100% self-funded and independent. We plan to offer non-essential premium features and services as voluntary donations currently don't
-    cover even our most basic expenses. It is in the best interest of all users that funding is sustainable
-    in the long run.
+    Yes. Our sponsors additionally enjoy all features with a [sponsor-feature](https://github.com/photoprism/photoprism/issues?q=label%3Asponsor-feature) label attached or marked as [sponsors only](https://docs.photoprism.app/getting-started/config-options/) in the docs, including [Interactive World Maps](https://demo.photoprism.app/places?target=_blank). We will also provide a detailed feature table with comparisons shortly.
 
-    Unless your plan includes additional cloud storage, you will be able to upgrade and downgrade without
-    losing any data. For those who don't like recurring subscriptions, there will be discounted multi-year / lifetime
-    payment options. To account for income differences, pricing may also vary by region. As soon as we have
-    details, we will announce them publicly.
+    It is your decision whether you want to sign up to enjoy additional benefits. Visit [photoprism.app/membership](https://photoprism.app/membership) to learn more.
 
-    Meanwhile, GitHub Sponsors has [one-time donation](https://link.photoprism.app/donate)
-    options if you don't need ongoing support after installation and don't expect updates with additional features
-    for more than 12 months.
+??? question "Shouldn't free software be free of costs?"
 
-    We encourage everyone who can afford it to [become a sponsor](../funding.md) as this is ultimately best for
-    the product and the community. Think of "free software" as in "free speech," not as in "free beer".
+    Think of “free software” as in “free speech,” not as in “free beer.” The [Free Software Foundation](https://www.gnu.org/philosophy/free-sw.en.html) sometimes calls it “libre software,” borrowing the French or Spanish word for “free” as in freedom, to show they do not mean the software is gratis.
 
 ??? question "Why can't I just purchase and download a single version?"
 
@@ -46,11 +34,11 @@
     and don't expect developers to spend time providing individual updates for old versions that contain only 
     critical security updates, but nothing else.
 
-??? question "Will the self-hosted version continue to be supported once a hosted version is available?"
+??? question "Will the self-hosted version continue to be supported?"
 
-    Absolutely! Self-hosting is the easiest way to stay in control and protect [your privacy](https://photoprism.app/privacy) (a key part of our mission). It also provides the best experience for advanced users who often rely on a local toolchain to select, edit, and publish their pictures.
-    
-    We understand that there is a great demand and many practical uses for a hosted version, which we plan to offer in addition so that users have more choice. Selected hosting partners will ensure that the privacy of our users is protected as much as technically possible, even in the cloud.
+    Absolutely! We are on a mission to protect your freedom and privacy. Self-hosting is the easiest way to stay in control and protect [your privacy](https://photoprism.app/privacy). It also provides the best experience for advanced users who often rely on a local toolchain to select, edit, and publish their pictures.
+
+    At the same time, we understand that there is a great demand and many practical uses for a hosted version. It is thus offered in addition so our users have more choice. Selected hosting partners ensure that the privacy of our users is protected as much as technically possible, even in the cloud.
     
     Likewise, businesses demand a commercial offering with features and support options geared towards professional users. They are willing to pay for the value they receive, which helps fund development and allows us to expand our team.
 

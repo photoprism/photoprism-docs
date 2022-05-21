@@ -2,16 +2,19 @@
 
 !!! example ""
     **Back us on [Patreon](https://link.photoprism.app/patreon) or [GitHub Sponsors](https://link.photoprism.app/sponsor).**
-    Your continued support [helps us](funding.md) provide regular updates and services like [world maps](https://try.photoprism.app/places). Thank you! :octicons-heart-fill-24:{ .heart .purple }
+    Your continued support [helps us](funding.md) provide regular updates and services like [world maps](https://try.photoprism.app/places). Thank you! 💖
 
 ### Development Preview ###
-<span class="build">Build 220521-ab185f71</span>
+<span class="build">Build 220521-75ec9909</span>
 
 This service release fixes potential issues with our new Debian 12-based Docker image which was part of the last update. These may have prevented some users from updating PhotoPrism without making changes to their environment. In our ongoing effort to improve usability and performance, we have also made improvements to the user interface, such as using the operating system font by default instead of Google's Roboto.
 
+*Thank you to everyone who [helped with testing](https://github.com/photoprism/photoprism/projects/5?card_filter_query=label%3Aplease-test), [signed up as a sponsor](https://photoprism.app/membership), or [contributed](https://github.com/photoprism/photoprism/graphs/contributors) in other ways! We appreciate it very much.*
+
 - UX: [Added submenu to mobile navigation toolbar](https://github.com/photoprism/photoprism/commit/8b5fbec950ddf6209609f17fa829cc8adabf3699)
 - UX: [Updated splash screen information and animation](https://github.com/photoprism/photoprism/commit/c1d06f5d2b74e1975442589f2b7ac280cbd4da88)
-- UX: [Improved right-to-left language styles](https://github.com/photoprism/photoprism/commit/ab185f719e9f79f01a32f1d38279ec1dfddc826a)
+- UX: [Numerous translations have been added and updated](https://translate.photoprism.app/)
+- UX: [Improved UI styles for right-to-left languages](https://github.com/photoprism/photoprism/commit/ab185f719e9f79f01a32f1d38279ec1dfddc826a)
 - Auth: [Short initial passwords are permitted again to avoid login problems](https://github.com/photoprism/photoprism/issues/2339)
 - Logs: [Repeated log messages are omitted to prevent feedback loops](https://github.com/photoprism/photoprism/issues/2335)
 - Logs: [Only messages with a log level of *info* or higher are displayed in the UI](https://github.com/photoprism/photoprism/issues/2335)

@@ -95,12 +95,12 @@ header.md-header .md-ellipsis {
     }
 }
 
-.purple {
-    color: #b65fc5!important;
-}
-
 .heart {
     animation: heart 1000ms infinite;
+}
+
+.purple {
+    color: #b65fc5!important;
 }
 
 .shadow {

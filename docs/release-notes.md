@@ -5,15 +5,16 @@
     Your continued support [helps us](funding.md) provide regular updates and services like [world maps](https://try.photoprism.app/places). Thank you! :octicons-heart-fill-24:{ .heart .purple }
 
 ### Development Preview ###
-<span class="build">Build 220520-9f6d15db</span>
+<span class="build">Build 220521-da866a98</span>
 
-Based on the feedback we received on the stable version, we have made additional improvements. If you are affected by any of these issues, we encourage you to test our preview and report back to us.
+This service release provides improvements to address potential issues with the new Debian 12-based Docker image that shipped with our last update. These may have prevented some users from updating PhotoPrism without making changes to their environment. Thanks so much for the great feedback! We appreciate it.
 
-- Auth: [Allowed the use of short initial passwords to avoid login problems](https://github.com/photoprism/photoprism/issues/2339)
+- Auth: [Short initial passwords are permitted again to avoid login problems](https://github.com/photoprism/photoprism/issues/2339)
 - Logs: [Repeated log messages are omitted to prevent feedback loops](https://github.com/photoprism/photoprism/issues/2335)
 - Logs: [Only messages with a log level of *info* or higher are displayed in the UI](https://github.com/photoprism/photoprism/issues/2335)
+- Search: [`mono:true` filter now omits files with unknown chroma](https://github.com/photoprism/photoprism/issues/2341)
 - Docker: [Removed incorrect permission check for storage folder on startup](https://github.com/photoprism/photoprism/issues/2334)
-- Docker: [Supported user and group id ranges have been documented](https://github.com/photoprism/photoprism/issues/2336)
+- Docker: [Supported User and Group ID ranges have been documented](https://github.com/photoprism/photoprism/issues/2336)
 
 !!! tldr ""
     You can test upcoming features and improvements by changing the image from `photoprism/photoprism:latest`

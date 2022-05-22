@@ -28,7 +28,7 @@
     and don't expect developers to spend time providing individual updates for old versions that contain only 
     critical security updates, but nothing else.*
 
-    *Historically, [even large tech companies have not supported their old products](https://docs.microsoft.com/en-us/lifecycle/end-of-support/end-of-support-2022) for an extended period of time, with only a few exceptions. Windows XP, for example, sold 400 million copies, which is why Micorosoft was able to offer updates for such a long time.*
+    *Historically, even large tech companies [have not supported their old products](https://docs.microsoft.com/en-us/lifecycle/end-of-support/end-of-support-2022) for an extended period of time, with only a few exceptions. Windows XP, for example, sold 400 million copies, which is why Micorosoft was able to offer updates for such a long time.*
 
 ??? question "Will the self-hosted version continue to be supported?"
 

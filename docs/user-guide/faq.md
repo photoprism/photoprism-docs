@@ -4,7 +4,9 @@
 
 ??? question "When exactly will new features be released?"
 
-    We have a zero-bug policy and do our best to help users when they need support or have other questions. This comes at a price as we can't give exact deadlines for new features. Since our team receives many more requests than can be implemented, and for the avoidance of doubt, we would also like to emphasize that we are in no way obligated to implement the features, improvements, or other changes you request. We do, however, appreciate your feedback and carefully consider all requests. Prioritization generally depends on their value to most users, whether all dependencies are met, and how much time their implementation, testing, and deployment will take.
+    We have a zero-bug policy and do our best to help users when they need support or have other questions. This comes at a price as we can't give exact deadlines for new features.
+
+    Since our team receives many more requests than can be implemented, and for the avoidance of doubt, we would also like to emphasize that we are in no way obligated to implement the features, improvements, or other changes you request. We do, however, appreciate your feedback and carefully consider all requests. Prioritization generally depends on their value to most users, whether all dependencies are met, and how much time their implementation, testing, and deployment will take.
 
     All in all, sustainable funding has the biggest long-term impact on how quickly we can deliver new features to you. We therefore encourage everyone who enjoys PhotoPrism to [become a sponsor](https://photoprism.app/membership), as this is ultimately best for the product and the community.
 

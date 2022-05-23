@@ -90,14 +90,18 @@ After submitting your first pull request, you will automatically be asked to [ac
 - this may be necessary, for example, if the license is incompatible with a larger combined work, we want to remove some restrictions on the AGPL/Creative Commons license, or it turns out that someone is abusing the existing license in a way we don't yet know about
 - the lack of a formal contract [would also lead to legal uncertainty](https://en.wikipedia.org/wiki/SCO%E2%80%93Linux_disputes) for us and all users, as some contributors could later claim that they did not intend to license their code in any way and that it was stolen
 
-## Related Repositories ##
+## Other Documentation ##
 
 - [photoprism/photoprism-docs-de](https://github.com/photoprism/photoprism-docs-de) - User Guide (German)
-- [photoprism/photoprism](https://github.com/photoprism/photoprism) - Application Source Code
+
+## Related Repositories ##
+
+- [photoprism/photoprism](https://github.com/photoprism/photoprism) - AI-Powered Photos App for the Decentralized Web 🌈💎✨
+- [photoprism/photoprism-contrib](https://github.com/photoprism/photoprism-contrib) - Contributed Resources, Scripts, Tutorials and Examples
 
 ----
 
-*PhotoPrism® is a [registered trademark](https://photoprism.app/trademark). Docs are available under the [CC BY-NC-SA 4.0 License](https://creativecommons.org/licenses/by-nc-sa/4.0/); additional terms may apply. By using our software, you agree to our [terms of service](https://photoprism.app/terms).*
+*PhotoPrism® is a [registered trademark](https://photoprism.app/trademark). By using the software and services we provide, you agree to our [Terms of Service](https://photoprism.app/terms), [Privacy Policy](https://photoprism.app/privacy), and [Code of Conduct](https://photoprism.app/code-of-conduct). Docs are [available](https://link.photoprism.app/github-docs) under the [CC BY-NC-SA 4.0 License](https://creativecommons.org/licenses/by-nc-sa/4.0/); [additional terms](https://github.com/photoprism/photoprism/blob/develop/assets/README.md) may apply.*
 
 [docs]: https://docs.photoprism.app/
 [chat]: https://link.photoprism.app/chat

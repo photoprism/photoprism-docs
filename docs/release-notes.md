@@ -5,11 +5,16 @@
     Your continued support [helps us](funding.md) provide regular updates and services like [world maps](https://try.photoprism.app/places). Thank you! 💜
 
 ### Development Preview ###
-<span class="build">Build 220521-75ec9909</span>
 
-This service release fixes potential issues with our new Debian 12-based Docker image that was part of the last update. These may have prevented some users from updating PhotoPrism without making changes to their environment.
+!!! tldr ""
+    You can test upcoming features and improvements by changing the image from `photoprism/photoprism:latest`
+    to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/).
+    Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
-In our ongoing effort to improve usability and performance, we have also implemented a number of user interface optimizations. For example, the UI now uses the operating system font by default instead of Google's Roboto.
+### May 24, 2022 ###
+<span class="build">Build 220524-c76de0df</span>
+
+This service release fixes potential issues with our new Debian 12-based Docker image that shipped with the last update. These may have prevented users from deploying it without making changes to their environment. In our ongoing effort to improve usability and performance, we have also implemented a number of UX/UI optimizations, such as using the default operating system font instead of Google's Roboto.
 
 - UX: [Added submenu to mobile navigation toolbar](https://github.com/photoprism/photoprism/commit/8b5fbec950ddf6209609f17fa829cc8adabf3699)
 - UX: [Updated splash screen information and animation](https://github.com/photoprism/photoprism/commit/c1d06f5d2b74e1975442589f2b7ac280cbd4da88)
@@ -17,17 +22,12 @@ In our ongoing effort to improve usability and performance, we have also impleme
 - UX: [Improved UI styles for right-to-left languages](https://github.com/photoprism/photoprism/commit/ab185f719e9f79f01a32f1d38279ec1dfddc826a)
 - Auth: [Short initial passwords are permitted again to avoid login problems](https://github.com/photoprism/photoprism/issues/2339)
 - Logs: [Repeated log messages are omitted to prevent feedback loops](https://github.com/photoprism/photoprism/issues/2335)
-- Logs: [Trace and debug messages are no longer displayed in the UI to avoid information leaks and reduce the amount of data transmitted via Websockets](https://github.com/photoprism/photoprism/issues/2335)
+- Logs: [Trace and debug messages are no longer displayed in the UI to avoid information leaks and reduce websocket communication overhead](https://github.com/photoprism/photoprism/issues/2335)
 - Search: [`mono:true` filter now omits files with unknown chroma](https://github.com/photoprism/photoprism/issues/2341)
 - Docker: [Removed incorrect permission check for storage folder on startup](https://github.com/photoprism/photoprism/issues/2334)
 - Docker: [Supported User and Group ID ranges have been documented](https://github.com/photoprism/photoprism/issues/2336)
 
 **Thank you to everyone who [helped with testing](https://github.com/photoprism/photoprism/projects/5?card_filter_query=label%3Aplease-test), [signed up as a sponsor](https://photoprism.app/membership), or [contributed](https://github.com/photoprism/photoprism/graphs/contributors) in other ways! We appreciate it very much.**
-
-!!! tldr ""
-    You can test upcoming features and improvements by changing the image from `photoprism/photoprism:latest`
-    to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/).
-    Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
 ### May 17, 2022 ###
 <span class="build">Build 220517-b9c68f8f</span>

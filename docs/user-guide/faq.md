@@ -12,7 +12,7 @@
 
 ??? question "Which benefits do sponsors receive?"
 
-    Our sponsors additionally enjoy all features with a [sponsor-feature](https://github.com/photoprism/photoprism/issues?q=label%3Asponsor-feature) label attached or marked as [sponsors only](https://docs.photoprism.app/getting-started/config-options/) in the docs, including [Interactive World Maps](https://demo.photoprism.app/places). It is your decision whether you want to sign up to enjoy additional benefits. Visit [photoprism.app/membership](https://photoprism.app/membership) to learn more. We are working to provide a detailed feature chart with comparisons shortly.
+    Our sponsors additionally enjoy all features with a [sponsor-feature](https://github.com/photoprism/photoprism/issues?q=label%3Asponsor-feature) label attached or marked as [sponsors only](https://docs.photoprism.app/getting-started/config-options/) in the docs, including [Interactive World Maps](https://demo.photoprism.app/places). Visit [photoprism.app/membership](https://photoprism.app/membership) to learn more.
 
 ??? question "Shouldn't free software be free of costs?"
 
@@ -22,11 +22,8 @@
 
     Unlike traditional offline apps such as Microsoft Office or single-player games, software exposed to the Internet must be [updated regularly](https://docs.photoprism.app/release-notes/) to stay secure and compatible with the latest standards.
 
-    *It's essential to keep your operating system, Web browsers, and all other software up to date. Don't push your luck 
-    and don't expect developers to spend time providing individual updates for old versions that contain only 
-    critical security updates, but nothing else.*
-
-    *Historically, even large tech companies [have not supported their old products](https://docs.microsoft.com/en-us/lifecycle/end-of-support/end-of-support-2022) for an extended period of time, with only a few exceptions. Windows XP, for example, sold 400 million copies, which is why Micorosoft was able to offer updates for such a long time.*
+    It's essential to keep your operating system, Web browsers, and all other software up to date. Don't push your luck. 
+    Historically, even large tech companies [have not supported their old products](https://docs.microsoft.com/en-us/lifecycle/end-of-support/end-of-support-2022) for an extended period of time, with only a few exceptions. Windows XP, for example, sold 400 million copies, which is why Micorosoft was able to offer updates for such a long time.
 
 ??? question "Will the self-hosted version continue to be supported?"
 

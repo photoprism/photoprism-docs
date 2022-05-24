@@ -171,7 +171,7 @@ div.action-buttons {
     margin-bottom: 2em;
 }
 
-a.action-button {
+.action-button {
     background-color: #4d5966;
     color: #ffffff;
     font-size: 12px;
@@ -188,11 +188,11 @@ a.action-button {
     user-select: none;
 }
 
-p a.action-button {
+p .action-button {
     color: #ffffff!important;
 }
 
-a.action-button.bold {
+.action-button.bold {
     font-weight: bold !important;
 }
 
@@ -209,8 +209,9 @@ p.center-align.action-buttons {
     padding: 20px 5px 25px;
 }
 
-.md-content article a.action-button,
-.center-align.action-buttons a.action-button {
+p.action-buttons .action-button,
+.md-content article .action-button,
+.center-align.action-buttons .action-button {
     background-color: #4c516d;
     margin-left: 2px;
     margin-right: 2px;
@@ -220,9 +221,10 @@ p.center-align.action-buttons .action-button {
     min-width: 138px;
 }
 
-.center-align.action-buttons a.action-button:hover,
-a.action-button.prominent:hover,
-a.action-button:hover {
+p.action-buttons .action-button:hover,
+.center-align.action-buttons .action-button:hover,
+.action-button.prominent:hover,
+.action-button:hover {
     background-color: #fa0!important;
     color: #000000!important;
     font-weight: 500;
@@ -230,7 +232,7 @@ a.action-button:hover {
 }
 
 @media only screen and (min-width: 601px) {
-    .center-align.action-buttons a.action-button {
+    .center-align.action-buttons .action-button {
         margin-left: 5px;
         margin-right: 5px;
     }
@@ -245,7 +247,7 @@ div.action-buttons.membership {
     text-align: center;
 }
 
-div.action-buttons.membership a.action-button {
+div.action-buttons.membership .action-button {
     min-width: 180px;
     font-size: .9em;
     padding: 0.525em;
@@ -253,7 +255,7 @@ div.action-buttons.membership a.action-button {
     background-color: #5E35B1;
 }
 
-div.action-buttons.membership a.action-button:hover {
+div.action-buttons.membership .action-button:hover {
     background-color: #fa0;
 }
 

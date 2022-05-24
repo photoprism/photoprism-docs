@@ -19,27 +19,6 @@
     display: none;
 }
 
-a.action-button {
-    border-radius: 5px;
-    background-color: #4d5966;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 0.6rem;
-    color: white;
-    cursor: pointer;
-    display: inline-block;
-    font-weight: 500;
-    padding: 6px 20px;
-    margin: 0 0 3px 0;
-}
-
-a.action-button:hover {
-    text-decoration: none;
-    font-weight: 500;
-    background-color: #fa0;
-    color: #000000;
-}
-
 footer.md-footer .footer-info {
     text-align: left;
     width: 100%;
@@ -149,13 +128,6 @@ header.md-header .md-ellipsis {
     .only-sm-and-up {
         display: inherit;
     }
-
-    a.action-button,
-    a.action-button:hover {
-        font-weight: 600;
-        margin: 0 9px 3px 9px;
-        min-width: 120px;
-    }
 }
 
 @media only screen and (min-width: 993px) {
@@ -176,4 +148,125 @@ header.md-header .md-ellipsis {
     .only-lg-and-up {
         display: inherit;
     }
+}
+
+/* General Button Styles */
+
+button {
+    user-select: none;
+    text-decoration: none;
+}
+
+a.btn,
+a.btn-small,
+a.btn-large,
+a.action-button {
+    text-decoration: none !important;
+}
+
+/* Action Button Styles */
+
+div.action-buttons {
+    margin-top: 2.5em;
+    margin-bottom: 2em;
+}
+
+a.action-button {
+    background-color: #4d5966;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    margin: 2px 0;
+    padding: 8px 26px;
+    border-radius: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    user-select: none;
+}
+
+p a.action-button {
+    color: #ffffff!important;
+}
+
+a.action-button.bold {
+    font-weight: bold !important;
+}
+
+.center-align.action-buttons {
+    text-align: center;
+    user-select: none;
+}
+
+p.action-buttons {
+    padding-bottom: 1em;
+}
+
+p.center-align.action-buttons {
+    padding: 20px 5px 25px;
+}
+
+.md-content article a.action-button,
+.center-align.action-buttons a.action-button {
+    background-color: #4c516d;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+p.center-align.action-buttons .action-button {
+    min-width: 138px;
+}
+
+.center-align.action-buttons a.action-button:hover,
+a.action-button.prominent:hover,
+a.action-button:hover {
+    background-color: #fa0!important;
+    color: #000000!important;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 601px) {
+    .center-align.action-buttons a.action-button {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
+
+/* Sign Up Buttons */
+
+div.action-buttons.membership {
+    /* border-radius: 0.3em; */
+    padding: 1.5em 0;
+    margin: 0 0 1em 0;
+    text-align: center;
+}
+
+div.action-buttons.membership a.action-button {
+    min-width: 180px;
+    font-size: .9em;
+    padding: 0.525em;
+    margin: 0 0.625em 15px 0.625em;
+    background-color: #5E35B1;
+}
+
+div.action-buttons.membership a.action-button:hover {
+    background-color: #fa0;
+}
+
+/* App Store Buttons */
+
+div.appstore-buttons {
+    clear: both;
+    margin-top: 2.5em;
+    margin-bottom: 2.5em;
+    text-align: center;
+}
+
+div.appstore-buttons a {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
 }

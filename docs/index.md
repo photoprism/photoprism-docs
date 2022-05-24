@@ -26,7 +26,7 @@ PhotoPrism was designed from the ground up to run wherever you need it, without 
 
 Because PhotoPrism is [**100% self-funded and independent**](https://photoprism.app/membership), we can promise you that we will [never sell your data](https://photoprism.app/privacy) and that we will [always be transparent](https://photoprism.app/terms) about our software and services. Your data will also never be shared with Google, Amazon, Facebook, or Apple unless you intentionally upload files to one of their services.
 
-<p style="text-align: center; padding: 20px 4px;">
+<p class="center-align action-buttons">
   <a class="action-button" href="https://try.photoprism.app/" target="_blank">TRY OUR DEMO</a>
-  <a class="action-button" href="getting-started/">GET STARTED</a>
+  <a class="action-button bold" href="getting-started/">GET STARTED</a>
 </p>

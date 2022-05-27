@@ -14,10 +14,10 @@
 ### May 27, 2022 ###
 <span class="build">Build 220527-005770ca</span>
 
-This update improves navigation fonts and [mobile submenu colors](https://dl.photoprism.app/img/ui/mobile-submenu.jpg) for light themes. We are also working to establish [PhotoPrism+](https://photoprism.app/membership) as the name for our community membership and associated benefits. For this, sponsorship [information in the app](https://demo.photoprism.app/about), [on our website](https://photoprism.app/membership), on [GitHub Sponsors](https://link.photoprism.app/sponsor) and [Patreon](https://link.photoprism.app/patreon) is gradually being updated.
+This update improves navigation fonts and [mobile submenu colors](https://dl.photoprism.app/img/ui/mobile-submenu-light-797x567.png) for light themes. We are also working to establish [PhotoPrism+](https://photoprism.app/membership) as the name for our community membership and associated benefits. For this, sponsorship [information in the app](https://demo.photoprism.app/about), [on our website](https://photoprism.app/membership), on [GitHub Sponsors](https://link.photoprism.app/sponsor) and [Patreon](https://link.photoprism.app/patreon) is gradually being updated.
 
-- UX: [Fixed light theme colors in mobile navigation submenu](https://github.com/photoprism/photoprism/issues/2359)
-- UX: [Splash screen colors no longer depend on user settings](https://github.com/photoprism/photoprism/issues/2360)
+- UX: [Fixed light theme colors of mobile navigation submenu](https://github.com/photoprism/photoprism/issues/2359)
+- UX: [Splash screen has been updated and no longer depends on admin theme](https://github.com/photoprism/photoprism/issues/2360)
 
 ### May 24, 2022 ###
 <span class="build">Build 220524-c76de0df</span>

@@ -29,3 +29,15 @@ serve:
 	mkdocs serve -a 0.0.0.0:8000
 deploy:
 	mkdocs gh-deploy --force
+pull:
+	git checkout master
+	git pull origin master
+push:
+	git checkout master
+	git push origin master
+merge:
+	git checkout deploy
+	git pull origin deploy
+	git merge master
+	git push origin deploy
+	git checkout master

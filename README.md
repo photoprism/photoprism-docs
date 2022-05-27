@@ -81,6 +81,8 @@ Now open [http://localhost:8000/](http://localhost:8000/) in a browser to view t
 
 When you merge the main/master branch to `deploy`, the live documentation is automatically created, uploaded and will be visible shortly.
 
+Linux/Unix users can run `make merge` in a terminal. Otherwise please use the tools provided by your development environment or editor.
+
 ### Contributor License Agreement (CLA) ###
 
 After you submit your first pull request, you will be asked to accept our Contributor License Agreement (CLA). Visit [photoprism.app/cla](https://photoprism.app/cla) to learn more.

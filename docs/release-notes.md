@@ -14,7 +14,7 @@
 ### May 27, 2022 ###
 <span class="build">Build 220527-005770ca</span>
 
-- UI: [Fixed light themes colors in mobile navigation submenu](https://github.com/photoprism/photoprism/issues/2359)
+- UI: [Fixed light theme colors in mobile navigation submenu](https://github.com/photoprism/photoprism/issues/2359)
 - UI: [Splash screen colors no longer depend on user settings](https://github.com/photoprism/photoprism/issues/2360)
 
 ### May 24, 2022 ###

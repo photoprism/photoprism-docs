@@ -11,9 +11,7 @@ image classification, see [Advanced Settings](../../user-guide/settings/advanced
 
 ## Server API ##
 
-### No Cookies Required ###
-
-A cookie-free API helps minimize request latency by avoiding unnecessary network traffic:
+Like most commercial image hosting services, we have chosen to implement a **cookie-free thumbnail API** to minimize request latency by avoiding unnecessary network traffic:
 
 - when a browser requests static files such as images from a server via HTTPS, it is generally needless to send a
   cookie along with each request if the URLs cannot be guessed, so for most practical use cases

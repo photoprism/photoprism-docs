@@ -81,7 +81,7 @@ Now open [http://localhost:8000/](http://localhost:8000/) in a browser to view t
 
 When you merge the main/master branch to `deploy`, the live documentation is automatically created, uploaded and will be visible shortly.
 
-Linux/Unix users can run `make merge` in a terminal. Otherwise please use the tools provided by your development environment or editor.
+Linux/Unix users can run `make merge` in a terminal. Otherwise, please use the tools provided by your development environment or editor.
 
 ### Contributor License Agreement (CLA) ###
 

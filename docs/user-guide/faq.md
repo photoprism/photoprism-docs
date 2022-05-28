@@ -8,7 +8,7 @@
 
     Be aware that we have a zero-bug policy and do our best to help users when they need support or have other questions. This comes at a price though, as we can't give exact release dates for new features. Our team receives many more requests than can be implemented, so we want to emphasize that we are in no way obligated to implement the features, improvements, or other changes you request. We do, however, appreciate your feedback and carefully consider all requests.
     
-    Because sustained funding is key to releasing new features in a timely manner, we encourage you to support our mission by [signing up as a sponsor](https://photoprism.app/membership) or purchasing a commercial license. Ultimately, that's what's best for the product and the community.
+    Because sustained funding is key to releasing new features quickly, we encourage you to support our mission by [signing up as a sponsor](https://photoprism.app/membership) or purchasing a commercial license. Ultimately, that's what's best for the product and the community.
 
 ??? question "Which benefits do sponsors receive?"
 
@@ -201,7 +201,19 @@
     To fix the date directly in your image or video files, please use other applications
     like Photoshop, or Exiftool, and re-index your library.
 
-## WebDAV, Sync & Upload ##
+## Thumbnails ##
+
+??? question "Isn't it insecure that thumbnail image URLs work even if you are not logged in?"
+
+    Like most commercial image hosting services, we've chosen to use a cookie-free thumbnail API to minimize request latency and avoid unnecessary network traffic. If you were to copy private session cookies and use them in a different browser window, you would have a similar problem, except that they also work for other API endpoints, not just a single image.
+
+    Even if URLs were to become invalid every minute: Digital copies are as good as originals. Once shared and downloaded, such images should be considered "leaked" because they are cached and can be re-shared by the recipient at any time, with no sure way to get all copies back. Any form of protection we could provide would essentially be "snake oil", could be circumvented, and would have a negative impact on the user experience, such as disabling the browser cache or context menu.
+
+    For the highest level of protection, it is recommended to shield your private server from the public Internet. Always use **HTTPS, a VPN and/or ideally TLS client certificates** and make sure that only people you trust have access to your instance.
+
+    Visit [docs.photoprism.app/developer-guide/media/thumbnails/](https://docs.photoprism.app/developer-guide/media/thumbnails/) to learn more.
+
+## WebDAV ##
 
 ??? question "Why do I get an error when trying to add a remote server for syncing?"
 

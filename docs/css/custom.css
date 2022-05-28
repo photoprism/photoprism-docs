@@ -172,7 +172,7 @@ div.action-buttons {
 }
 
 .action-button {
-    background-color: #4d5966;
+    background-color: #54437c;
     color: #ffffff;
     font-size: 12px;
     font-weight: 500;
@@ -212,7 +212,7 @@ p.center-align.action-buttons {
 p.action-buttons .action-button,
 .md-content article .action-button,
 .center-align.action-buttons .action-button {
-    background-color: #4c516d;
+    background-color: #54437c;
     margin-left: 2px;
     margin-right: 2px;
 }

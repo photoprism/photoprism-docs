@@ -79,23 +79,23 @@ by default while indexing.
 Higher settings allow PhotoPrism to generate thumbnails with more detail in higher resolutions - either 
 *statically* (while indexing) or *dynamically* (on-demand).
 
- Name       | Width | Height | Common Use               |
-:-----------|:-----:|:------:|:-------------------------|
-`colors`    |   3   |   3    | Color Detection          |
-`tile_50`   |  50   |   50   | List Preview             |
-`tile_100`  |  100  |  100   | Maps Preview             |
-`tile_224`  |  224  |  224   | Mosaic Preview           |
-`left_224`  |  224  |  224   | TensorFlow               |
-`right_224` |  224  |  224   | TensorFlow               |
-`tile_500`  |  500  |  500   | Cards Preview            |
-`fit_720`   |  720  |  720   | Mobile, TV               |
-`fit_1280`  | 1280  |  1024  | Mobile, HD Ready TV      |
-`fit_1920`  | 1920  |  1200  | Mobile, Full HD TV       |
-`fit_2048`  | 2048  |  2048  | Tablets, Cinema 2K       |
-`fit_2560`  | 2560  |  1600  | Quad HD, Retina Display  |
-`fit_3840`  | 3840  |  2400  | Ultra HD                 |
-`fit_4096`  | 4096  |  4096  | Ultra HD, Retina 4K      |
-`fit_7680`  | 7680  |  4320  | 8K Ultra HD 2, Retina 6K |
+| Name        | Width | Height | Common Use               |
+|:------------|:-----:|:------:|:-------------------------|
+| `colors`    |   3   |   3    | Color Detection          |
+| `tile_50`   |  50   |   50   | List Preview             |
+| `tile_100`  |  100  |  100   | Maps Preview             |
+| `tile_224`  |  224  |  224   | Mosaic Preview           |
+| `left_224`  |  224  |  224   | TensorFlow               |
+| `right_224` |  224  |  224   | TensorFlow               |
+| `tile_500`  |  500  |  500   | Cards Preview            |
+| `fit_720`   |  720  |  720   | Mobile, TV               |
+| `fit_1280`  | 1280  |  1024  | Mobile, HD Ready TV      |
+| `fit_1920`  | 1920  |  1200  | Mobile, Full HD TV       |
+| `fit_2048`  | 2048  |  2048  | Tablets, Cinema 2K       |
+| `fit_2560`  | 2560  |  1600  | Quad HD, Retina Display  |
+| `fit_3840`  | 3840  |  2400  | Ultra HD                 |
+| `fit_4096`  | 4096  |  4096  | Ultra HD, Retina 4K      |
+| `fit_7680`  | 7680  |  4320  | 8K Ultra HD 2, Retina 6K |
 
 See [`/internal/thumb/sizes.go`](https://github.com/photoprism/photoprism/blob/develop/internal/thumb/sizes.go) for details.
 

@@ -11,7 +11,13 @@
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/).
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
-Our preview build includes the [latest translations](https://translate.photoprism.app/) and many other UI/UX improvements. Feel free to upgrade, so you can help us test and give feedback!
+### May 28, 2022 ###
+<span class="build">Build 220528-efb5d710</span>
+
+This update includes translations that were recently contributed via [translate.photoprism.app](https://translate.photoprism.app/). Missing translations were added by us using DeepL and Google Translate. Native speakers are invited to help improve those if needed. Thank you!
+
+- UX: [Mobile toolbar menu has been redesigned and made accessible in public mode](https://github.com/photoprism/photoprism/issues/2370)
+- Themes: [*Gemstone*](https://dl.photoprism.app/img/ui/desktop-gemstone-plus.png) and [*Raspberry*](https://github.com/photoprism/photoprism/commit/87f2c3d79606e26d5ea953fecaf2aa19cdaffbf8) have been updated
 
 ### May 27, 2022 ###
 <span class="build">Build 220527-005770ca</span>

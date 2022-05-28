@@ -219,7 +219,7 @@ Easy, isn't it?
 
 !!! example ""
     **Back us on [Patreon](https://link.photoprism.app/patreon) or [GitHub Sponsors](https://link.photoprism.app/sponsor).**
-    Your continued support [helps us](../funding.md) provide [regular updates](https://docs.photoprism.app/release-notes/)
+    Your continued support [helps us](https://photoprism.app/membership) provide [regular updates](https://docs.photoprism.app/release-notes/)
     and services like [world maps](https://try.photoprism.app/places). Thank you! :octicons-heart-fill-24:{ .heart .purple }
 
 ### Troubleshooting ###
@@ -235,7 +235,7 @@ Other issues? Our [troubleshooting checklists](troubleshooting/index.md) help yo
 
 !!! info ""
     You are welcome to ask for help in our [community chat](https://link.photoprism.app/chat).
-    [Sponsors](../funding.md) receive direct [technical support](https://photoprism.app/contact) via email.
+    [Sponsors](https://photoprism.app/membership) receive direct [technical support](https://photoprism.app/contact) via email.
     Before [submitting a support request](index.md#getting-support), try to [determine the cause of your problem](troubleshooting/index.md).
 
 ### Command-Line Interface ###

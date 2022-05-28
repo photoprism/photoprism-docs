@@ -21,7 +21,7 @@ To test if you have a general problem that is not browser-specific, [open the We
 
 !!! tldr ""
     The user interface works with most modern browsers, and runs best on [Chrome](https://www.google.com/chrome/), [Chromium](https://www.chromium.org/getting-involved/download-chromium), [Safari](https://www.apple.com/safari/), [Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release), and [Edge](https://www.microsoft.com/en-us/edge).
-    Opera and Samsung Internet have been reported to be compatible as well. Due to [limited resources](../../funding.md), we can
+    Opera and Samsung Internet have been reported to be compatible as well. Due to [limited resources](https://photoprism.app/membership), we can
     not test every release with all browser types and versions.
 
 ## Getting Error Details ##

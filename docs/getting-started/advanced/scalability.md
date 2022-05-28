@@ -1,6 +1,6 @@
 # Scalability, Distributed Computing and Cloud Storage 
 
-Our [team](../../team.md) aims to get the most of what is there.
+Our [team](https://photoprism.app/team) aims to get the most of what is there.
 Development and testing have been focused on smaller servers and typical home users with 
 less than 500,000 files.
 

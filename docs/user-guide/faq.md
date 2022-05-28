@@ -8,7 +8,7 @@
 
     Be aware that we have a zero-bug policy and do our best to help users when they need support or have other questions. This comes at a price though, as we can't give exact release dates for new features. Our team receives many more requests than can be implemented, so we want to emphasize that we are in no way obligated to implement the features, improvements, or other changes you request. We do, however, appreciate your feedback and carefully consider all requests.
     
-    Because sustained funding is key to releasing new features quickly, we encourage you to support our mission by [signing up as a sponsor](https://photoprism.app/membership) or purchasing a commercial license. Ultimately, that's what's best for the product and the community.
+    **Because sustained funding is key to quickly releasing new features, we encourage all users to support our mission by [signing up as a sponsor](https://photoprism.app/membership) or purchasing a commercial license. Ultimately, that's what's best for the product and the community.**
 
 ??? question "Which benefits do sponsors receive?"
 

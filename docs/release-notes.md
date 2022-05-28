@@ -16,8 +16,8 @@
 
 This update includes translations that were recently contributed via [translate.photoprism.app](https://translate.photoprism.app/). Missing translations were added by us using DeepL and Google Translate. Native speakers are invited to help improve those if needed. Thank you very much!
 
-- UX: [Mobile toolbar menu has been redesigned](https://dl.photoprism.app/img/ui/desktop-gemstone-plus.png) and [made accessible in public mode](https://github.com/photoprism/photoprism/issues/2370)
-- Themes: [*Gemstone*](https://dl.photoprism.app/img/ui/desktop-gemstone-plus.png) and [*Raspberry*](https://github.com/photoprism/photoprism/commit/87f2c3d79606e26d5ea953fecaf2aa19cdaffbf8) have been updated
+- UX: [Mobile toolbar menu has been redesigned](https://dl.photoprism.app/img/ui/mobile-grayscale-submenu.png) and [made accessible in public mode](https://github.com/photoprism/photoprism/issues/2370)
+- Themes: [*Gemstone* and *Raspberry* have been updated](https://dl.photoprism.app/img/ui/desktop-gemstone-plus.png)
 
 ### May 27, 2022 ###
 <span class="build">Build 220527-005770ca</span>

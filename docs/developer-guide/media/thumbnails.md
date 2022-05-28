@@ -13,25 +13,31 @@ image classification, see [Advanced Settings](../../user-guide/settings/advanced
 
 Like most commercial image hosting services, we have chosen to implement a **cookie-free thumbnail API** to minimize request latency by avoiding unnecessary network traffic:
 
-- when a browser requests static files such as images from a server via HTTPS, it is generally needless to send a
-  cookie along with each request if the URLs cannot be guessed, so for most practical use cases
-- one potential use of cookies can be to prevent the user from intentionally or accidentally sharing confidential thumbnail URLs with others
-- this is possible on most image hosting services/social media sites and could also be considered a feature if you just want to share a few thumbnails without any bells and whistles
-- once an image has been downloaded by someone else, blocking the original URL provides little additional security, as digital copies are just as good as the original
-- keeping that in mind, previously shared URLs can be invalidated by [changing the security token in your configuration](../../getting-started/config-options.md#url-tokens)
-- this renders the browser cache unusable on all connected devices, requiring previously cached thumbnails to be downloaded again
-- be aware that frequent token changes lead to performance degradation and a poor user experience
+- When a browser requests static files such as images from a server over HTTPS, it is generally unnecessary to send a cookie with each request if the URLs cannot be guessed, so for most practical use cases
+- One possible use of cookies may be to prevent the user from intentionally or accidentally sharing confidential thumbnail URLs with others
+- This is possible with most image hosting services/social media sites, and could also be considered a feature if you just want to share a few thumbnails without a lot of bells and whistles
+- Once an image has been downloaded by someone else, blocking the original URL provides little additional security, as digital copies are just as good as the original, see info box below
+- Keeping that in mind, previously shared URLs can be invalidated by [changing the security token in your config](../../getting-started/config-options.md#url-tokens)
+- This will invalidate the browser cache on all connected devices, requiring previously cached thumbnails to be downloaded again
+- Be aware that frequent token changes result in performance degradation and a poor user experience.
 
-Another major benefit of a cookie-free thumbnail API - besides improved performance - is that users can easily  integrate a content delivery network (CDN), as there is no need to check cookies on edge servers.
+In addition to better performance, a major advantage of cookie-free thumbnails is that they can be easily integrated into a content delivery network (CDN), since there is no need to check cookies or add other complex logic on edge servers.
 
-Because most users have only one domain/host name and modern web applications can store authentication tokens in
-*localStorage* instead, our REST API does not require or use any cookies by default.
+!!! info "Web Security"
+    Digital copies are as good as originals: Once shared and downloaded, such images should be considered "leaked" because they are cached and can be re-shared by the recipient at any time, with no sure way to get all copies back, even if the download URL becomes invalid or the service is shut down completely.
 
-**References:**
+    Any form of protection we could provide would essentially be "snake oil", could be circumvented, and would have a negative impact on the user experience, such as disabling the browser cache or context menu.
+  
+    For the highest level of protection, it is recommended to shield your private server from the public Internet. Always use **HTTPS, a VPN and/or ideally TLS client certificates** and make sure that only people you trust have access to your instance.
+
+### References ####
 
 - https://www.keycdn.com/support/how-to-use-cookie-free-domains
 - https://ourcodeworld.com/articles/read/1341/why-you-should-use-a-cookie-less-domain-for-serving-your-static-content-cdn
 - https://pragmaticwebsecurity.com/articles/oauthoidc/localstorage-xss.html
+
+!!! tldr ""
+    Since most users have only one domain/host name and modern web applications can store authentication tokens in *localStorage*, our REST API **does not require or use cookies** by default.
 
 ### Image Endpoint URI ####
 

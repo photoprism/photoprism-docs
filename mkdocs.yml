@@ -162,6 +162,7 @@ nav:
       - Docker: developer-guide/technologies/docker.md
       - Broadway: developer-guide/technologies/broadway.md
       - External APIs: developer-guide/technologies/external-apis.md
+    - FAQ: developer-guide/faq.md
   - About:
       # - Funding: funding.md
       - Credits: credits.md

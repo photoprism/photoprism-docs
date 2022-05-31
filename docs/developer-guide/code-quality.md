@@ -81,7 +81,7 @@ Don't worry that this will take too long. Take your time. It's the fastest and o
 Optimize for effectiveness before efficiency when prioritizing tasks:
 
 - **Effectiveness** is about achieving a specific outcome, such as providing the features that best help users solve their problems.
-- **Efficiency** means doing things in an optimal way, which usually means faster or cheaper. We all strive to be efficient, but that's worthless if it doesn't contribute to effectiveness.
+- **Efficiency** means doing things in an optimal way, for example, faster and cheaper. We all strive to be efficient, but that's worthless if it doesn't contribute to effectiveness.
 
 In contrast, a feature factory focuses on the quantity of new features rather than their quality:
 

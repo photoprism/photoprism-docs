@@ -44,7 +44,7 @@ One of the hardest parts of software development is knowing what to work on.
 Don't get carried away implementing unnecessary abstractions and focusing on scalability optimization before you've even validated the functionality of a feature or component.
 
 Instead of spending a lot of time on something you may not need, focus on user needs and [test automation](#code-that-cannot-be-tested-is-flawed).
-That way, you'll make sure you're developing the right functionality, and you can [refactor it later](https://martinfowler.com/bliki/DefinitionOfRefactoring.html) for scalability and other non-functional features without breaking anything.
+That way, you'll make sure you're developing the right functionality, and you can [refactor it later](https://martinfowler.com/bliki/DefinitionOfRefactoring.html) for scalability and other non-functional aspects without breaking anything.
 
 Also keep in mind that it's much easier and less effort to maintain small amounts of duplicate code than to choose the wrong abstraction.
 

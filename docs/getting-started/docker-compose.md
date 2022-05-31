@@ -286,8 +286,8 @@ PhotoPrism's command-line interface is well suited for job automation using a
 | [*Import Files*](../user-guide/library/import.md)     | `docker-compose exec photoprism photoprism import [path]`           |                  
 
 !!! info "Complete Rescan"
-    `docker-compose exec photoprism photoprism index -f` rescans all originals, including already indexed and unchanged files. 
-    This may be necessary after major upgrades.
+    `docker-compose exec photoprism photoprism index -f` rescans all originals, including already indexed and unchanged files.
+    This may be necessary after major upgrades and after migrations of the database schema, especially if problems like missing data or wrong sort orders occur. You can also start a [rescan from the user interface](../user-guide/library/originals.md) by navigating to *Library* > *Index*, checking "Full Rescan" and then clicking "Start". Be careful not to start multiple indexing processes at the same time, as this will lead to a high server load.
 
 *[home directory]: \user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux
 *[host]: Computer, Cloud Server, or VM that runs Docker

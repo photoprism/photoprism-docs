@@ -102,6 +102,17 @@ docker-compose exec photoprism photoprism migrations run -f
 
 The `-f` flag instructs the `photoprism migrations run` subcommand to re-run previously failed migrations. Use the `--help` flag to see other options or learn more about terminal commands in our [introduction](../docker-compose.md#command-line-interface), which also includes additional examples.
 
+##### Complete Rescan #####
+
+We recommend that you always **perform a full rescan after a schema migration**, especially if problems such as missing data or incorrect sort orders persist. You can either start a [rescan from the user interface](../../user-guide/library/originals.md) by navigating to *Library* > *Index*, checking "Complete Rescan", and then clicking "Start", or by running this command in a terminal:
+
+```bash
+docker-compose exec photoprism photoprism index -f
+```
+
+!!! tldr ""
+    Be careful not to start multiple indexing processes at the same time, as this will lead to a high server load.
+
 #### Lost Root Password ####
 
 In case you forgot the MariaDB "root" password and the one specified in your configuration does not work,

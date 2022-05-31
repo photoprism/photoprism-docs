@@ -110,11 +110,9 @@ self-validating, then failure can become subjective and running the tests can re
 ## Code Quality Reports ##
 
 [goreportcard.com][goreport] generates reports on the quality of Open Source Go projects. It uses several measures,
-including `gofmt`, `go vet`, `go lint` and `gocyclo`:
+including `gofmt`, `go vet`, `go lint` and `gocyclo`. If you find this helpful and also use the tool for your own projects, you can support the developers on [Patreon](https://www.patreon.com/goreportcard).
 
 [![Code Quality](https://goreportcard.com/badge/github.com/photoprism/photoprism)][goreport]
-
-You can support the developers on [Patreon](https://www.patreon.com/goreportcard).
 
 !!! example ""
     Use reports for inspiration when you need some, keeping in mind that not every issue reported needs to be resolved immediately.

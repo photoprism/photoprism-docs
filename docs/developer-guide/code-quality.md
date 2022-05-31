@@ -117,7 +117,7 @@ including `gofmt`, `go vet`, `go lint` and `gocyclo`:
 You can support the developers on [Patreon](https://www.patreon.com/goreportcard).
 
 !!! example ""
-    Use reports as inspiration when you need some. Be aware that not every reported issue requires immediate resolution.
+    Use reports for inspiration when you need some, keeping in mind that not every issue reported needs to be resolved immediately.
 
 [goreport]: https://goreportcard.com/report/github.com/photoprism/photoprism
 [codacy]: https://www.codacy.com/project/lastzero/photoprism/dashboard

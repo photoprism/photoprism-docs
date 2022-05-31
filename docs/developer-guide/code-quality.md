@@ -91,7 +91,7 @@ self-validating, then failure can become subjective and running the tests can re
 **Timely:** If you write tests after the production code, then you may find the production code to be hard to test. You may decide that some production code is too hard to test. You may not design the production code to be testable.
 
 !!! example ""
-    A code that cannot be tested is flawed. — <cite>Anonymous</cite>
+    Code that cannot be tested is flawed. — <cite>Anonymous</cite>
 
 ## Code Quality Reports ##
 

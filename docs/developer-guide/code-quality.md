@@ -29,8 +29,7 @@ There are only two hard things in Computer Science: [cache invalidation](https:/
 Breaking a problem down into small, coherent fragments lends itself to organization. Start with the basic low-level
 components and then proceed to higher-level abstractions.
 
-Bottom-up development emphasizes coding and early testing, which can begin before having a detailed understanding 
-of the final system. In practice, that may never really exist as requirements are constantly evolving.
+Bottom-up development emphasizes coding and early testing, which can begin before having a detailed understanding of the final system. In practice, this may never be the case, as requirements are constantly evolving.
 
 Advantages of the bottom-up approach are component reusability, agility, and testability.
 

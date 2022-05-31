@@ -102,7 +102,7 @@ The *F.I.R.S.T. Principle* includes five rules that good tests should follow:[^2
 - **Repeatable.** If your tests aren’t repeatable in any environment, then you’ll always have an excuse for why they fail. You’ll also find yourself unable to run the tests when the environment isn’t available.<br>
 - **Self-Validating.** You should not have to read through a log file to tell whether the tests pass. If the tests aren’t
 self-validating, then failure can become subjective and running the tests can require a long manual evaluation.<br>
-- **Timely.** If you write tests after the production code, then you may find the production code to be hard to test. You may decide that some production code is too hard to test. You may not design the production code to be testable.
+- **Timely.** If you write the tests after the production code, you will generally find that the production code is difficult to test. Instead, add tests at implementation time to ensure that the code is testable, does what you expect it to do, and meets the requirements.
 
 !!! example ""
     Code that cannot be tested is flawed. — <cite>Anonymous</cite>

@@ -55,7 +55,7 @@ Also keep in mind that it's much easier and less effort to maintain small amount
 
 We encourage developers to refactor existing code when they notice a specific issue, even though this may seem difficult when working with a distributed team, branches, and pull requests due to potential merge conflicts and delayed feedback.
 
-It is best to do this while you are working on the same code anyway, for example to implement a feature or enhancement. This way you can easily validate if the proposed changes make sense and you avoid conflicts with others.
+It is best to do this while you are working on the same component anyway, for example to implement a feature or enhancement. This way you can easily validate if the proposed changes make sense and you avoid conflicts with others.
 
 Releasing imperfect code is not a problem as long as it is [accompanied by automated tests](#code-that-cannot-be-tested-is-flawed). This makes it easy to refactor later without breaking anything or requiring detailed knowledge of the requirements and a lot of time for manual testing. Be pragmatic. Done is better than perfect.
 

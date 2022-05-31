@@ -38,21 +38,14 @@ If this doesn't help, check the [Docker Logs](docker.md#viewing-logs) for messag
 - [ ] Log messages that contain "no route to host" may also indicate a general network configuration problem (follow our [examples](https://dl.photoprism.app/docker/))
 - [ ] You have to resort to [alternative Docker images](../raspberry-pi.md#older-armv7-based-devices) to run MariaDB on ARMv7-based devices and those with a 32-bit operating system
 
-#### Server Migration ####
-
-When moving MariaDB to another computer, cloud server, or virtual machine:
-
-- [ ] Move the complete *storage* folder along with it and preserve the [file permissions](docker.md#file-permissions)
-- [ ] **or** restore your index [from an SQL dump](https://mariadb.com/kb/en/mysqldump/) (backup file)
-- [ ] Perform a [version upgrade](#version-upgrade) if necessary
-- [ ] Make sure that PhotoPrism can access the database on the new host
-- [ ] Set strong passwords if the database is exposed to an external network
-- [ ] Never expose your database to the public Internet
-
 #### Version Upgrade ####
 
-If the database doesn't start properly after upgrading from an earlier MySQL or MariaDB version,
-you may need to run this command in a terminal:
+If the database does not start properly after upgrading from a previous MySQL or MariaDB version, the internal schema for managing user accounts and other database functionality may be outdated.
+With older versions, the schema could only be updated manually. However, newer MariaDB Docker images **support automatic upgrades** on startup, so you don't have to worry about that anymore.
+
+##### Manual Update #####
+
+To manually upgrade the internal database schema, run this command in a terminal:
 
 ```bash
 docker-compose exec mariadb mariadb-upgrade -uroot -p
@@ -63,6 +56,51 @@ Enter the MariaDB "root" password specified in your `docker-compose.yml` when pr
 Alternatively, you can downgrade to the previous version, create a database backup using the `photoprism backup`
 command, start a new database instance based on the latest version, and then restore your index with
 the `photoprism restore` command.
+
+##### Auto Upgrade #####
+
+To enable automatic schema updates, set `MARIADB_AUTO_UPGRADE` to a non-empty value in your `docker-compose.yml` as shown in [config example](https://dl.photoprism.app/docker/docker-compose.yml):
+
+```yaml
+services:
+  ...
+
+  mariadb:
+    image: mariadb:10.7
+    ...
+    environment:
+      MARIADB_AUTO_UPGRADE: "1"
+      MARIADB_INITDB_SKIP_TZINFO: "1"
+      ...
+```
+
+Before starting MariaDB in production mode, the database image entrypoint script now makes sure to run `mariadb-upgrade` to upgrade the internal database schema as needed. For example, when you pull a new major release and restart the service.
+
+!!! tldr ""
+    Since PhotoPrism does not require time zone support, you can also add the flag `MARIADB_INITDB_SKIP_TZINFO` to your config as shown above. However, this is only a recommendation and optional.
+
+#### Incompatible Schema ####
+
+If your database schema does not appear to be compatible with the currently installed version of PhotoPrism, first make sure that you are using a [supported database server](../index.md#databases) and that the internal database schema is up-to-date, as explained in the previous section.
+
+Once you have verified that neither is a problem or has already been resolved, you can run the following command in a terminal to check the status of the index database migrations:
+
+```bash
+docker-compose exec photoprism photoprism migrations ls
+```
+
+!!! note ""
+    Omit the `docker-compose exec photoprism` prefix if you are using an interactive terminal session and have installed PhotoPrism natively without Docker.
+
+##### Re-Run Migrations #####
+
+Should the status of any migration not be OK, you can re-run failed migrations using this command in a terminal:
+
+```bash
+docker-compose exec photoprism photoprism migrations run -f
+```
+
+The `-f` flag instructs the `photoprism migrations run` subcommand to re-run previously failed migrations. Use the `--help` flag to see other options or learn more about terminal commands in our [introduction](../docker-compose.md#command-line-interface), which also includes additional examples.
 
 #### Lost Root Password ####
 
@@ -112,6 +150,17 @@ as a USB flash drive, an SD card, or a shared network folder.
 - [ ] Never use the same database files with more than one server instance
 - [ ] To share a database over a network, run the database server directly on the remote server instead of sharing database files
 - [ ] To repair your tables after you have moved the files to a local disk, you can [start MariaDB with `--innodb-force-recovery=1`](https://mariadb.com/kb/en/innodb-recovery-modes/) (otherwise the same procedure as for recovering a lost password, see above)
+
+#### Server Relocation ####
+
+When moving MariaDB to another computer, cloud server, or virtual machine:
+
+- [ ] Move the complete *storage* folder along with it and preserve the [file permissions](docker.md#file-permissions)
+- [ ] **or** restore your index [from an SQL dump](https://mariadb.com/kb/en/mysqldump/) (backup file)
+- [ ] Perform a [version upgrade](#version-upgrade) if necessary
+- [ ] Make sure that PhotoPrism can access the database on the new host
+- [ ] Set strong passwords if the database is exposed to an external network
+- [ ] Never expose your database to the public Internet
 
 #### Unicode Support ####
 

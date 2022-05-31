@@ -77,7 +77,7 @@ services:
 Before starting MariaDB in production mode, the database image entrypoint script now runs `mariadb-upgrade` to upgrade the internal database schema as needed. For example, when you pull a new major release and restart the service.
 
 !!! tldr ""
-    Since PhotoPrism does not require time zone support, you can also add the flag `MARIADB_INITDB_SKIP_TZINFO` to your config as shown above. However, this is only a recommendation and optional.
+    Since PhotoPrism does not require time zone support, you can also add `MARIADB_INITDB_SKIP_TZINFO` to your config as shown above. However, this is only a recommendation and optional.
 
 #### Incompatible Schema ####
 

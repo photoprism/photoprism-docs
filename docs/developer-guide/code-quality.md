@@ -73,12 +73,12 @@ Read the docs, understand the context, and talk to others to gather missing info
 Don't worry that this will take too long. Take your time. It's the fastest and only sustainable way to get things done. You have to go slow before you can go fast.
 
 !!! example ""
-    Simple, elegant solutions are [more effective](issues.md#effectiveness-efficiency), but they are harder to find than complex ones, and they require more
+    Simple, elegant solutions are [more effective](#effectiveness-efficiency), but they are harder to find than complex ones, and they require more
     time, which we too often believe to be unaffordable. — <cite>Niklaus Wirth, Feb 1985</cite>
 
 ## Effectiveness > Efficiency ##
 
-Focus on effectiveness rather than efficiency when prioritizing tasks:
+Optimize for effectiveness before efficiency when prioritizing tasks:
 
 - **Effectiveness** is about achieving a specific outcome, such as providing the features that best help users solve their problems.
 - **Efficiency** means doing things in an optimal way, which usually means faster or cheaper. We all strive to be efficient, but that's worthless if it doesn't contribute to effectiveness.

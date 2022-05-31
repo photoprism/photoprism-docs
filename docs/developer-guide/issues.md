@@ -19,7 +19,7 @@ Start describing new ideas and tasks with a [user story](https://en.wikipedia.or
 This makes it easier for everyone to understand who wants what and why.
 
 !!! example ""
-    Reading between the lines consumes a lot of time that can be used [more effectively](#effectiveness-efficiency).
+    Reading between the lines consumes a lot of time that can be used [more effectively](code-quality.md#effectiveness-efficiency).
     Vague requirements become even more expensive when the wrong things are implemented, or they don't provide value
     in the way they were implemented.
 

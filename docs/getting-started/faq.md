@@ -156,7 +156,7 @@ applications exposed to the public Internet.
 
 Modern Linux containers are an incremental improvement. A main advantage of Docker is that application images
 can be easily made available to users via Internet. It provides a common standard across most operating
-systems and devices, which saves our team a lot of time that we can then spend [more effectively](../developer-guide/issues.md#effectiveness-efficiency), for example,
+systems and devices, which saves our team a lot of time that we can then spend [more effectively](../developer-guide/code-quality.md#effectiveness-efficiency), for example,
 providing support and developing one of the many features that users are waiting for.
 
 Human-readable and [versioned Dockerfiles as part of our public source code](https://github.com/photoprism/photoprism/tree/develop/docker)

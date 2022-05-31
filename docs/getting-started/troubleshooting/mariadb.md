@@ -90,7 +90,7 @@ docker-compose exec photoprism photoprism migrations ls
 ```
 
 !!! note ""
-    Omit the `docker-compose exec photoprism` prefix if you are using an interactive terminal session and have installed PhotoPrism natively without Docker.
+    Omit the `docker-compose exec photoprism` prefix if you are using an interactive terminal session or have installed PhotoPrism natively without Docker.
 
 ##### Re-Run Migrations #####
 

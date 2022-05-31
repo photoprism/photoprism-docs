@@ -81,7 +81,7 @@ Before starting MariaDB in production mode, the database image entrypoint script
 
 #### Incompatible Schema ####
 
-If your database schema does not seem to be compatible with the currently installed version of PhotoPrism, data is missing, or search results are not sorted correctly after an upgrade, first make sure you are using a [supported database](../index.md#databases) and that its internal management schema is up-to-date, as explained in the previous section.
+If your database schema does not seem to be compatible with the currently installed version of PhotoPrism, data is missing, or search results are not sorted correctly after an upgrade, first make sure you are using a [supported database](../index.md#databases) and that its internal management schema is up-to-date. How to do that is explained in the previous section.
 
 Once you have verified that neither is a problem or has already been resolved, you can run the following command in a terminal to check the status of the index database migrations:
 

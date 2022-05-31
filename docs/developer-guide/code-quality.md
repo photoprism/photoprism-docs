@@ -95,14 +95,14 @@ In contrast, a feature factory focuses on the quantity of new features rather th
 We strive for [complete test coverage](https://martinfowler.com/bliki/TestCoverage.html) as it is a useful tool for finding 
 untested parts of our code base. Test coverage is of limited use as a numerical statement of how good our tests are.
 
-The *F.I.R.S.T.* principle includes five rules that good tests should follow:[^2]
+The *F.I.R.S.T. Principle* includes five rules that good tests should follow:[^2]
 
-**Fast:** If tests are slow, you won't run them frequently, which makes them much less useful and increases the cost of development.<br>
-**Independent:** You should be able to run each test independently and run the tests in any order you like. When tests depend on each other, then the first one to fail causes a cascade of downstream failures, making diagnosis difficult and hiding downstream defects.<br>
-**Repeatable:** If your tests aren’t repeatable in any environment, then you’ll always have an excuse for why they fail. You’ll also find yourself unable to run the tests when the environment isn’t available.<br>
-**Self-Validating:** You should not have to read through a log file to tell whether the tests pass. If the tests aren’t
+- **Fast.** If tests are slow, you won't run them frequently, which makes them much less useful and increases the cost of development.<br>
+- **Independent.** You should be able to run each test independently and run the tests in any order you like. When tests depend on each other, then the first one to fail causes a cascade of downstream failures, making diagnosis difficult and hiding downstream defects.<br>
+- **Repeatable.** If your tests aren’t repeatable in any environment, then you’ll always have an excuse for why they fail. You’ll also find yourself unable to run the tests when the environment isn’t available.<br>
+- **Self-Validating.** You should not have to read through a log file to tell whether the tests pass. If the tests aren’t
 self-validating, then failure can become subjective and running the tests can require a long manual evaluation.<br>
-**Timely:** If you write tests after the production code, then you may find the production code to be hard to test. You may decide that some production code is too hard to test. You may not design the production code to be testable.
+- **Timely.** If you write tests after the production code, then you may find the production code to be hard to test. You may decide that some production code is too hard to test. You may not design the production code to be testable.
 
 !!! example ""
     Code that cannot be tested is flawed. — <cite>Anonymous</cite>

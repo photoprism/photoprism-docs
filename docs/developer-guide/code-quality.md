@@ -76,6 +76,20 @@ Don't worry that this will take too long. Take your time. It's the fastest and o
     Simple, elegant solutions are [more effective](issues.md#effectiveness-efficiency), but they are harder to find than complex ones, and they require more
     time, which we too often believe to be unaffordable. — <cite>Niklaus Wirth, Feb 1985</cite>
 
+## Effectiveness > Efficiency ##
+
+Optimize for effectiveness before efficiency:
+
+- **Effectiveness** is about achieving an ultimate outcome, such as implementing the features that help users the most and solve their problems.
+- **Efficiency** means doing things in an optimal way, which usually means faster or cheaper. We all strive to be efficient, but that's worthless if it doesn't contribute to effectiveness.
+
+In contrast, a feature factory focuses on the quantity of features added to a product, not the quality:
+
+[![Feature Factory](https://dl.photoprism.app/img/diagrams/feature-factory.jpg)](https://twitter.com/johncutlefish/status/780102280162840576)
+
+!!! example ""
+    It is fundamentally the confusion between effectiveness and efficiency that stands between doing the right things and doing things right. There is surely nothing quite so useless as doing with great efficiency what should not be done at all. — <cite>[Peter Drucker](https://en.wikipedia.org/wiki/Peter_Drucker)</cite>
+
 ## Effective Test Automation ##
 
 We strive for [complete test coverage](https://martinfowler.com/bliki/TestCoverage.html) as it is a useful tool for finding 

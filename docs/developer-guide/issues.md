@@ -39,12 +39,3 @@ Acceptance Criteria:
 - [ ] Page SHOULD use existing Vuetify components
 - [ ] Login MUST work in latest Firefox, Safari and Chrome
 ```
-
-### Effectiveness > Efficiency ###
-
-Optimize for effectiveness before efficiency.
-
-!!! example ""
-    It is fundamentally the confusion between effectiveness and efficiency that stands between doing the right things and doing things right. There is surely nothing quite so useless as doing with great efficiency what should not be done at all. — <cite>[Peter Drucker](https://en.wikipedia.org/wiki/Peter_Drucker)</cite>
-
-[![Feature Factory](https://dl.photoprism.app/img/diagrams/feature-factory.jpg)](https://twitter.com/johncutlefish/status/780102280162840576)

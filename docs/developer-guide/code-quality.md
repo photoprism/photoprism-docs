@@ -61,7 +61,7 @@ Also keep in mind that it's much easier and less effort to maintain small amount
 
 ## Be Careful with Caching ##
 
-There are two hard things in computer science: [cache invalidation](https://msol.io/blog/tech/youre-probably-wrong-about-caching/), naming things, and off-by-one errors.
+There are two hard things in computer science: [cache invalidation](https://msol.io/blog/tech/youre-probably-wrong-about-caching/) and naming things.
 
 !!! example ""
     A cache is just a memory leak you haven't met yet. — <cite>Dave Cheney</cite>

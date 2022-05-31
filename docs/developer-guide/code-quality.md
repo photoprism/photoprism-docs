@@ -11,7 +11,7 @@
   <figcaption>Productivity vs Time</figcaption>
 </figure>
 
-## Keep It Simple ##
+## Simple Is Beautiful ##
 
 !!! example ""
     Simple, elegant solutions are [more effective](issues.md#effectiveness-efficiency), but they are harder to find than complex ones, and they require more
@@ -29,7 +29,7 @@ There are only two hard things in Computer Science: [cache invalidation](https:/
 Breaking a problem down into small, coherent fragments lends itself to organization. Start with the basic low-level
 components and then proceed to higher-level abstractions.
 
-Bottom-up development emphasizes coding and early testing, which can begin before having a detailed understanding of the final system. In practice, this may never be the case, as requirements are constantly evolving.
+Bottom-up development emphasizes coding and early testing, which can begin before having a detailed understanding of the final system. In practice, this may never be the case as requirements are constantly evolving.
 
 Advantages of the bottom-up approach are component reusability, agility, and testability.
 
@@ -38,31 +38,28 @@ Advantages of the bottom-up approach are component reusability, agility, and tes
     That was because the “top-down” method of program design hadn't been invented yet, and Mel wouldn't have used it anyway. 
     He wrote the innermost parts of his program loops first. — <cite>[The Story of Mel](http://www.catb.org/jargon/html/story-of-mel.html)</cite>
 
-## Avoid Unnecessary Abstractions and Optimizations ##
+## Premature Optimization ##
 
-Don't abstract if you don't have to. Premature optimization causes unnecessary pain and leads to bloated code that fewer developers understand.
+One of the hardest parts of software development is knowing what to work on.
+Don't get carried away implementing unnecessary abstractions and focusing on scalability optimization before you've even validated the functionality of a new feature or improvement.
 
-Instead, perform test-driven [bottom-up development](#bottom-up-development), so you can [safely refactor](https://martinfowler.com/bliki/DefinitionOfRefactoring.html)
-if and when it makes sense. Maintaining small amounts of duplicate code is much easier and less burdensome than choosing the wrong abstraction.
+Instead of spending a lot of time on something you may not need, focus on user needs and [test automation](#code-that-cannot-be-tested-is-flawed).
+That way, you'll make sure you're developing the right functionality, and you can [refactor it later](https://martinfowler.com/bliki/DefinitionOfRefactoring.html) for scalability and other non-functional features without breaking anything.
+
+Also keep in mind that it's much easier and less effort to maintain small amounts of duplicate code than to choose the wrong abstraction.
 
 !!! example ""
     Premature optimization is the root of all evil. — <cite>Donald Knuth</cite>
 
 ## Opportunistic Refactoring ##
 
-While we know this is difficult when working with a distributed team, branches, and pull requests, we encourage all
-contributors to refactor when they see a specific problem.
+We encourage developers to refactor code when they see a specific problem, although this may seem difficult when working with a distributed team, branches, and pull requests due to potential merge conflicts and delayed feedback.
 
-Ideally when you are working on the same code anyway to implement a feature or improvement. This helps to verify
-that the changes are helpful in practice.
+It is best to do this while you are working on the same code anyway, for example to implement a feature or enhancement. This way you can easily check if the proposed changes make sense.
 
-Imperfection is not a big problem as long as your code is testable and tests exist so that formatting and
-implementation details can be easily improved at a later time and/or by another developer.
+Releasing imperfect code is not a problem as long as it is [accompanied by automated tests](#code-that-cannot-be-tested-is-flawed). This makes it easy to refactor later without breaking anything or requiring detailed knowledge of the requirements and a lot of time for manual testing. Be pragmatic. Done is better than perfect.
 
-No one needs nice-looking code that doesn't work. Be pragmatic. Done is better than perfect.
-Pretty much all software projects start this way.
-
-However, if you know about (potential) security issues, please [report them to us](https://photoprism.app/security-policy) immediately and, if possible, offer a solution.
+Potential security issues are an important exception. These should never be ignored. If you find a problem, please [report it to us](https://photoprism.app/security-policy) immediately so we can fix it.
 
 !!! example ""
     Feel free to think ahead, just don't code ahead. But also, don't feel the need to decide so many
@@ -71,8 +68,9 @@ However, if you know about (potential) security issues, please [report them to u
 
 ## Go Slow Before You Go Fast 🐰 ##
 
-You have to go slow before you can go fast. Understand the big picture and gather missing information before
-starting to code. Read the documentation. Write tests. Take your time. Stay focused.
+Read the docs, understand the context, and talk to others to gather missing information before you start coding. Write tests. Stay focused.
+
+Don't worry that this will take too long. Take your time. It's the fastest and only sustainable way to get things done. You have to go slow before you can go fast.
 
 !!! example ""
     All developers with more than a few years experience know that previous messes slow them down. And yet all

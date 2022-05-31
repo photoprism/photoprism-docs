@@ -53,7 +53,7 @@ Also keep in mind that it's much easier and less effort to maintain small amount
 
 ## Opportunistic Refactoring ##
 
-We encourage developers to refactor code when they notice a specific issue, even though this may seem difficult when working with a distributed team, branches, and pull requests due to potential merge conflicts and delayed feedback.
+We encourage developers to refactor existing code when they notice a specific issue, even though this may seem difficult when working with a distributed team, branches, and pull requests due to potential merge conflicts and delayed feedback.
 
 It is best to do this while you are working on the same code anyway, for example to implement a feature or enhancement. This way you can easily validate if the proposed changes make sense and you avoid conflicts with others.
 

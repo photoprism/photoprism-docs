@@ -90,7 +90,7 @@ In contrast, a feature factory focuses on the quantity of new features rather th
 !!! example ""
     It is fundamentally the confusion between effectiveness and efficiency that stands between doing the right things and doing things right. There is surely nothing quite so useless as doing with great efficiency what should not be done at all. — <cite>[Peter Drucker](https://en.wikipedia.org/wiki/Peter_Drucker)</cite>
 
-## Principles of Test Automation ##
+## Test Automation Guidelines ##
 
 We strive for [complete test coverage](https://martinfowler.com/bliki/TestCoverage.html) as it is a useful tool for finding 
 untested parts of our code base. Test coverage is of limited use as a numerical statement of how good our tests are.

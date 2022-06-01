@@ -108,7 +108,7 @@ The `-f` flag instructs the `photoprism migrations run` subcommand to re-run pre
 
 ##### Complete Rescan #####
 
-We recommend that you always **perform a rescan after a schema migration**, especially if problems persist. You can either start a [rescan from the user interface](../../user-guide/library/originals.md) by navigating to *Library* > *Index*, checking "Complete Rescan", and then clicking "Start", or by running this command in a terminal:
+We recommend that you **re-index your pictures after a schema migration**, especially if problems persist. You can either start a [rescan from the user interface](../../user-guide/library/originals.md) by navigating to *Library* > *Index*, checking "Complete Rescan", and then clicking "Start", or by running this command in a terminal:
 
 ```bash
 docker-compose exec photoprism photoprism index -f

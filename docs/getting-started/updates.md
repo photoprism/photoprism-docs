@@ -32,7 +32,7 @@ We recommend that you compare your own `docker-compose.yml` with [our latest exa
 
 #### MariaDB Server ####
 
-Our [config examples](https://dl.photoprism.app/docker/) are generally based on the latest [MariaDB Server](https://mariadb.com/kb/en/mariadb-server-release-dates/) release to take advantage of performance improvements.
+Our [config examples](https://dl.photoprism.app/docker/) are generally based on the [latest stable release](https://mariadb.com/kb/en/mariadb-server-release-dates/) to take advantage of performance improvements.
 This does not mean [older versions](index.md#databases) are no longer supported and you have to upgrade immediately.
 
 !!! note ""

@@ -6,7 +6,7 @@ The [InnoDB buffer pool](https://mariadb.com/kb/en/innodb-buffer-pool/) serves a
 It is a key component for optimizing MariaDB performance. Its size should be as large as possible to keep frequently
 used data in memory and reduce disk I/O - typically the biggest bottleneck.
 
-By default, the size of the buffer pool is only 128 MB. You can change it using the `--innodb-buffer-pool-size`
+By default, the size of the buffer pool is only 128 MB ([increased to 512 MB](https://github.com/photoprism/photoprism/issues/2390) in June 2022). You can change it using the `--innodb-buffer-pool-size`
 parameter in the database service config of your `docker-compose.yml`. `M` stands for Megabyte, `G` for Gigabyte.
 Do not use spaces.
 
@@ -18,13 +18,17 @@ services:
     command: mysqld --innodb-buffer-pool-size=1G ...
 ```
 
-Advanced users can further improve the database performance by [changing additional parameters](https://github.com/photoprism/photoprism-docs/issues/102),
-for example based on recommendations provided by the [mysqltuner.pl](https://github.com/major/MySQLTuner-perl) script.
+As a rule of thumb, [`Innodb_buffer_pool_pages_free`](https://mariadb.com/kb/en/innodb-status-variables/#innodb_buffer_pool_pages_free) should never be [less than 5% of the total pages](https://vettabase.com/blog/is-innodb-buffer-pool-big-enough/).
+You can run the following SQL statement, for example using the [`mariadb` command](https://mariadb.com/kb/en/mysql-command-line-client/) in a terminal, to display the number of free pages and other InnoDB-related status information:
 
-!!! note ""
-    Remember to also [increase the memory available to services](../img/docker-resources-advanced.jpg) in case you are
-    using *Docker Desktop* on Windows or macOS. If PhotoPrism and MariaDB are running in a virtual machine, the available
-    memory must be increased as well. For details, refer to the corresponding documentation.
+```SQL
+SHOW GLOBAL STATUS LIKE 'Innodb_buffer%';
+```
+
+Advanced users may adjust [additional parameters](https://github.com/photoprism/photoprism-docs/issues/102) to further improve performance. Tools such as the [mysqltuner.pl](https://github.com/major/MySQLTuner-perl) script can provide helpful recommendations for this.
+
+!!! info "Windows and macOS"
+    If you are using *Docker Desktop* on Windows or macOS, remember to increase the [total memory available](../img/docker-resources-advanced.jpg) for Docker services. Otherwise, they may run out of resources and cannot benefit from a larger cache size. In case PhotoPrism and MariaDB are running in a virtual machine, its memory size should be increased as well. Restart for changes to take effect.
 
 ## Storage ##
 

@@ -103,3 +103,7 @@ services:
       MARIADB_PASSWORD: "insecure"
       MARIADB_ROOT_PASSWORD: "insecure"
 ```
+
+!!! danger ""
+    Set strong passwords if the database is exposed to an external network. Never expose your database to the public
+    Internet in this way, for example, if it is running on a cloud server.

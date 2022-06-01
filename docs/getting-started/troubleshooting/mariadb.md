@@ -38,6 +38,10 @@ If this doesn't help, check the [Docker Logs](docker.md#viewing-logs) for messag
 - [ ] Log messages that contain "no route to host" may also indicate a general network configuration problem (follow our [examples](https://dl.photoprism.app/docker/))
 - [ ] You have to resort to [alternative Docker images](../raspberry-pi.md#older-armv7-based-devices) to run MariaDB on ARMv7-based devices and those with a 32-bit operating system
 
+#### Bad Performance ####
+
+↪ [Performance Tips](performance.md#mariadb)
+
 #### Version Upgrade ####
 
 If the database does not start properly after upgrading from a previous MySQL or MariaDB version, the internal schema for managing user accounts and other database functionality may be outdated.

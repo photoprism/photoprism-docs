@@ -84,7 +84,7 @@ nav:
       - Panoramas: user-guide/organize/panoramas.md
       - Scans: user-guide/organize/scans.md
     - Share:
-        - Album Link: user-guide/share/share.md
+      - Album Link: user-guide/share/index.md
     - Sync:
       - WebDAV: user-guide/sync/webdav.md
       - Mobile Devices: user-guide/sync/mobile-devices.md

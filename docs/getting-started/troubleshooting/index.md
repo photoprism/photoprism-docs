@@ -159,7 +159,7 @@ In case the application logs don't contain anything helpful:
 
 If search results are incorrect, for example, in the wrong order or not filtered properly:
 
-- [ ] You have to wait until your [originals are fully indexed](../../user-guide/library/originals.md)
+- [ ] Indexing [is still in progress](../../user-guide/library/originals.md) and has not been completed yet
 - [ ] You need to [re-index your pictures](mariadb.md#complete-rescan), for example after updating PhotoPrism
 - [ ] Previously [failed migrations must be re-run](mariadb.md#incompatible-schema) to update the index schema
 - [ ] The database server is [incompatible or needs to be updated](../index.md#databases)

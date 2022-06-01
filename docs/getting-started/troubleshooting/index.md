@@ -159,10 +159,10 @@ In case the application logs don't contain anything helpful:
 
 If search results are incorrect, for example, in the wrong order or not filtered properly:
 
+- [ ] You have to wait until your [originals are fully indexed](../../user-guide/library/originals.md)
 - [ ] You need to [re-index your pictures](mariadb.md#complete-rescan), for example after updating PhotoPrism
 - [ ] Previously [failed migrations must be re-run](mariadb.md#incompatible-schema) to update the index schema
 - [ ] The database server is [incompatible or needs to be updated](../index.md#databases)
-- [ ] Your configuration does not match [our examples](https://dl.photoprism.app/docker/) and [recommendations](../docker-compose.md)
 
 *It may be a bug if you cannot find any other reasons, such as a local configuration problem or a misunderstanding in how the software works. Please note that [reports must be reproducible](../../user-guide/index.md#getting-support) in order for us to provide a solution.*
 

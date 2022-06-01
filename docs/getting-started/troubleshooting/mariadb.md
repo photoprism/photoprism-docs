@@ -85,9 +85,9 @@ Before starting MariaDB in production mode, the database image entrypoint script
 
 #### Incompatible Schema ####
 
-If your database schema does not seem to be compatible with the currently installed version of PhotoPrism, data is missing, or search results are not sorted correctly after an upgrade, first make sure you are using a [supported database](../index.md#databases) and that its internal management schema is up-to-date. How to do that is explained in the [previous section](#version-upgrade).
+If your database does not seem to be compatible with the currently installed version of PhotoPrism, for example because search results are missing or incorrect, first make sure you are using a [supported database](../index.md#databases) and that its internal management schema is up-to-date. How to do that is explained in the [previous section](#version-upgrade).
 
-Once you have verified that neither is a problem or has already been resolved, you can run the following command in a terminal to check the status of the index database migrations:
+Once you have verified that neither is a problem, you can run the following command [in a terminal](../docker-compose.md#command-line-interface) to check the status of previous database schema migrations:
 
 ```bash
 docker-compose exec photoprism photoprism migrations ls
@@ -104,11 +104,11 @@ Should the status of any migration not be OK, you can re-run failed migrations u
 docker-compose exec photoprism photoprism migrations run -f
 ```
 
-The `-f` flag instructs the `photoprism migrations run` subcommand to re-run previously failed migrations. Use the `--help` flag to see other options or learn more about terminal commands in our [introduction](../docker-compose.md#command-line-interface), which also includes additional examples.
+The `-f` flag instructs the `photoprism migrations run` subcommand to re-run previously failed migrations. Use `--help` to see the command help.
 
 ##### Complete Rescan #####
 
-We recommend that you always **perform a full rescan after a schema migration**, especially if problems such as missing data or incorrect sort orders persist. You can either start a [rescan from the user interface](../../user-guide/library/originals.md) by navigating to *Library* > *Index*, checking "Complete Rescan", and then clicking "Start", or by running this command in a terminal:
+We recommend that you always **perform a rescan after a schema migration**, especially if problems persist. You can either start a [rescan from the user interface](../../user-guide/library/originals.md) by navigating to *Library* > *Index*, checking "Complete Rescan", and then clicking "Start", or by running this command in a terminal:
 
 ```bash
 docker-compose exec photoprism photoprism index -f

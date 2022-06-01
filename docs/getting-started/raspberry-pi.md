@@ -118,7 +118,7 @@ Advanced users can add this to a `Makefile` so that they only have to type a sin
 command like `make update`. See [Command-Line Interface](docker-compose.md#command-line-interface) 
 to learn more about terminal commands.
 
-!!! tldr ""
+!!! note ""
     Running an image with `:latest` tag does not cause Docker to automatically download new images.
 
 #### Config Examples ####

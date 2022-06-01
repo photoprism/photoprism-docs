@@ -44,8 +44,8 @@ If this doesn't help, check the [Docker Logs](docker.md#viewing-logs) for messag
 
 #### Version Upgrade ####
 
-If the database does not start properly after upgrading from a previous MySQL or MariaDB version, the internal schema for managing user accounts and other database functionality may be outdated.
-With older versions, the schema could only be updated manually. However, newer MariaDB Docker images **support automatic upgrades** on startup, so you don't have to worry about that anymore.
+If the database does not start properly after upgrading from a previous MariaDB version (or migrating from MySQL to MariaDB), the [internal management schema](https://mariadb.com/kb/en/understanding-mariadb-architecture/#system-databases) may be outdated. With older versions, it could only be updated manually.
+However, newer MariaDB Docker images **support automatic upgrades** on startup, so you don't have to worry about that anymore.
 
 ##### Manual Update #####
 

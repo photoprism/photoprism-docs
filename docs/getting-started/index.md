@@ -61,11 +61,7 @@ Please note that not all [video and audio formats](https://caniuse.com/?search=v
 
 #### Databases ####
 
-The backend is compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB 10.5.12+](https://mariadb.org/).
-Official support for MySQL 8 is discontinued as Oracle seems to have stopped shipping [new features and improvements](https://github.com/photoprism/photoprism/issues/1764). As a result, the testing effort required before each release is no longer feasible.
-
-!!! tldr ""
-    Our [`docker-compose.yml` examples](https://dl.photoprism.app/docker/docker-compose.yml) are generally based on the latest [MariaDB Server](https://mariadb.com/kb/en/mariadb-server-release-dates/) release to take advantage of performance improvements. This does not mean other versions are no longer supported.
+The backend is compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB](https://mariadb.org/) 10.5.12+.[^2] Support for MySQL 8 has been discontinued due to low demand and missing features.[^3]
 
 #### HTTPS ####
 
@@ -89,3 +85,5 @@ In exchange for their continued support, [sponsors](https://photoprism.app/membe
     if you need help, it could be a local configuration problem, or a misunderstanding in how the software works.
 
 [^1]: RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory
+[^2]: Our [`docker-compose.yml` examples](https://dl.photoprism.app/docker/docker-compose.yml) are generally based on the latest [MariaDB Server](https://mariadb.com/kb/en/mariadb-server-release-dates/) release to take advantage of performance improvements. That doesn't mean older versions are no longer supported.
+[^3]: Oracle seems to have stopped shipping [new features and improvements](https://github.com/photoprism/photoprism/issues/1764). As a result, the testing effort required before each release is no longer feasible.

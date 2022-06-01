@@ -301,12 +301,7 @@ your computer meets the [system requirements](index.md#system-requirements).
 
 ### Can I install PhotoPrism in a sub-directory on a shared domain?
 
-This is possible with our latest release if you run it behind a proxy.
-Note that for a Progressive Web App (PWA) to work as designed, the service worker should
-be located in the root directory. Also keep in mind sharing a domain with
-other apps may negatively impact the performance and
-[security](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy)
-of all apps installed. The length of share links increases as well.
+This is possible if you run it behind a [reverse proxy](proxies/traefik.md), though *experimental and not extensively tested*. Depending on the [resources available to us](https://photoprism.app/membership), we work to resolve known issues over time. To give specific examples: (a) For a Progressive Web App (PWA) to work as intended, the service worker should normally be installed in the root directory. (b) Due to the way Web browsers function, sharing a domain with other services can affect the performance and security of all the apps installed. (c) The length of sharing and other links increases and may not match the documentation. (d) There may be problems with WebDAV sharing and [automatic indexing/importing](https://github.com/photoprism/photoprism/discussions/2386).
 
 ### I could not find a documentation of config parameters? ###
 

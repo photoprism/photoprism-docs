@@ -84,7 +84,7 @@ Attachment 1:
 
 ```yml
 mariadb:
-    image: mariadb:10.6
+    image: mariadb:10.7
     container_name: mariadb
     restart: unless-stopped
     ports:
@@ -92,12 +92,14 @@ mariadb:
     security_opt:
       - seccomp:unconfined
       - apparmor:unconfined
-    command: mysqld --transaction-isolation=READ-COMMITTED --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --max-connections=512 --innodb-rollback-on-timeout=OFF --innodb-lock-wait-timeout=120
+    command: mysqld --innodb-buffer-pool-size=1G --transaction-isolation=READ-COMMITTED --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --max-connections=512 --innodb-rollback-on-timeout=OFF --innodb-lock-wait-timeout=120
     volumes:
-      - "./database:/var/lib/mysql" # never remove
+      - "./database:/var/lib/mysql" # DO NOT REMOVE
     environment:
-      MYSQL_ROOT_PASSWORD: insecure
-      MYSQL_DATABASE: photoprism
-      MYSQL_USER: photoprism
-      MYSQL_PASSWORD: insecure
+      MARIADB_AUTO_UPGRADE: "1"
+      MARIADB_INITDB_SKIP_TZINFO: "1"      
+      MARIADB_ROOT_PASSWORD: insecure
+      MARIADB_DATABASE: photoprism
+      MARIADB_USER: photoprism
+      MARIADB_PASSWORD: insecure
 ```

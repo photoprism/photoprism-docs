@@ -94,8 +94,9 @@ Never [store](troubleshooting/mariadb.md#corrupted-files) database files on an u
 an SD card, or a shared network folder.
 
 !!! tldr ""
-    It is not possible to change the password via `MYSQL_PASSWORD` after the database has been started 
+    It is not possible to change the password via `MARIADB_PASSWORD` after the database has been started 
     for the first time. Choosing a secure password is not essential if you don't [expose the database to other apps and hosts](troubleshooting/mariadb.md#cannot-connect).
+    To enable [automatic schema updates](troubleshooting/mariadb.md#auto-upgrade) after upgrading to a new major version, set `MARIADB_AUTO_UPGRADE` to a non-empty value in your `docker-compose.yml`.
 
 #### Volumes ####
 

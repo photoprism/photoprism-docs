@@ -34,11 +34,11 @@ images, see [Architecture Specific Notes](#architecture-specific-notes).
 
 #### Modern ARM64-based Devices ####
 
-| Image               | Name                               |
-|---------------------|------------------------------------|
-| Stable Release      | `photoprism/photoprism:latest`     | 
-| Development Preview | `photoprism/photoprism:preview`    | 
-| MariaDB             | `arm64v8/mariadb:10.6`             | 
+| Image               | Name                            |
+|---------------------|---------------------------------|
+| Stable Release      | `photoprism/photoprism:latest`  | 
+| Development Preview | `photoprism/photoprism:preview` | 
+| MariaDB             | `arm64v8/mariadb:10.7`          | 
 
 Raspberry Pi OS (Raspbian) requires [special configuration](#raspberry-pi-os) to run modern 64-bit applications and
 Docker images. If you do not have legacy software, we recommend choosing a standard 64-bit Linux distribution as this

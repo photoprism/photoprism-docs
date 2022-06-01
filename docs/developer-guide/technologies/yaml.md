@@ -56,10 +56,12 @@ and to define environment variables in `docker-compose.yml` files:
 services:
   mariadb:
     environment:
-      MYSQL_ROOT_PASSWORD: "Y(&^UIk34"
-      MYSQL_DATABASE: photoprism
-      MYSQL_USER: photoprism
-      MYSQL_PASSWORD: insecure
+      MARIADB_AUTO_UPGRADE: "1"
+      MARIADB_INITDB_SKIP_TZINFO: "1"
+      MARIADB_ROOT_PASSWORD: "Y(&^UIk34"
+      MARIADB_DATABASE: photoprism
+      MARIADB_USER: photoprism
+      MARIADB_PASSWORD: insecure
 ```
 
 *[Keys]: the names of values

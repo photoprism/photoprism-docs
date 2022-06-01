@@ -59,7 +59,7 @@ the `photoprism restore` command.
 
 ##### Auto Upgrade #####
 
-To enable automatic schema updates, set `MARIADB_AUTO_UPGRADE` to a non-empty value in your `docker-compose.yml` as shown in [config example](https://dl.photoprism.app/docker/docker-compose.yml):
+To enable automatic schema updates, set `MARIADB_AUTO_UPGRADE` to a non-empty value in your `docker-compose.yml` as shown in our [config example](https://dl.photoprism.app/docker/docker-compose.yml):
 
 ```yaml
 services:

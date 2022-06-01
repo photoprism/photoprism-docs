@@ -64,6 +64,9 @@ Please note that not all [video and audio formats](https://caniuse.com/?search=v
 The backend is compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB 10.5.12+](https://mariadb.org/).
 Official support for MySQL 8 is discontinued as Oracle seems to have stopped shipping [new features and improvements](https://github.com/photoprism/photoprism/issues/1764). As a result, the testing effort required before each release is no longer feasible.
 
+!!! tldr ""
+    Our [`docker-compose.yml` examples](https://dl.photoprism.app/docker/docker-compose.yml) are generally based on the latest [MariaDB Server](https://mariadb.com/kb/en/mariadb-server-release-dates/) release to take advantage of performance improvements. This does not mean other versions are no longer supported.
+
 #### HTTPS ####
 
 If you install PhotoPrism on a public server outside your home network, **always run it behind a secure HTTPS reverse proxy** such as [Traefik](proxies/traefik.md) or [Caddy](proxies/caddy-2.md).

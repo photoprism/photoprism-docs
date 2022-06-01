@@ -82,13 +82,13 @@ services:
 
 Attachment 1:
 
-```yml
-mariadb:
-    image: mariadb:10.7
-    container_name: mariadb
+```yaml
+services:
+  mariadb:
     restart: unless-stopped
+    image: mariadb:10.7
     ports:
-      - 3306:3306
+      - 3306:3306 # Expose Port 3306 
     security_opt:
       - seccomp:unconfined
       - apparmor:unconfined
@@ -97,9 +97,9 @@ mariadb:
       - "./database:/var/lib/mysql" # DO NOT REMOVE
     environment:
       MARIADB_AUTO_UPGRADE: "1"
-      MARIADB_INITDB_SKIP_TZINFO: "1"      
-      MARIADB_ROOT_PASSWORD: insecure
-      MARIADB_DATABASE: photoprism
-      MARIADB_USER: photoprism
-      MARIADB_PASSWORD: insecure
+      MARIADB_INITDB_SKIP_TZINFO: "1"
+      MARIADB_DATABASE: "photoprism"
+      MARIADB_USER: "photoprism"
+      MARIADB_PASSWORD: "insecure"
+      MARIADB_ROOT_PASSWORD: "insecure"
 ```

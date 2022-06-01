@@ -76,7 +76,7 @@ docker-compose exec photoprism photoprism faces reset -f
 Adding [Watchtower](https://github.com/containrrr/watchtower) as a service to your `docker-compose.yml` will
 automatically keep images up-to-date:
 
-```yml
+```yaml
 services:
   watchtower:
     image: containrrr/watchtower

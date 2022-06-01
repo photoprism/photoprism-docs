@@ -23,7 +23,7 @@ Advanced users can add this to a `Makefile` so that they only have to type a sin
 command like `make update`. See [Command-Line Interface](docker-compose.md#command-line-interface)
 to learn more about terminal commands.
 
-!!! note ""
+!!! tldr ""
     Running an image with `:latest` tag does not cause Docker to automatically download new images.
 
 #### Config Examples ####
@@ -35,7 +35,7 @@ We recommend that you compare your own `docker-compose.yml` with [our latest exa
 Our [config examples](https://dl.photoprism.app/docker/) are generally based on the latest [MariaDB Server](https://mariadb.com/kb/en/mariadb-server-release-dates/) release to take advantage of performance improvements.
 This does not mean [older versions](index.md#databases) are no longer supported and you have to upgrade immediately.
 
-!!! tldr ""
+!!! note ""
     If MariaDB fails to start after upgrading from an earlier version (or migrating from MySQL), the internal management schema may be outdated. See [Troubleshooting MariaDB Problems](troubleshooting/mariadb.md#version-upgrade) for instructions on how to fix this.
 
 #### Development Preview ####

@@ -7,9 +7,9 @@ This overview documents issues of general concern until they can be addressed. P
 
 ## Self-Hosted Setup
 
-### Shared Domain
+### Installation on a Shared Domain
 
-Setting up PhotoPrism behind a [reverse proxy](../proxies/traefik.md) in a sub-directory on a shared domain is generally possible, however experimental as a number of detailed issues remain to be addressed to ensure full functionality:
+Setting up PhotoPrism behind a [reverse proxy](../proxies/traefik.md) in a sub-directory on a shared domain is possible in principle. This method is experimental, however, and not generally recommended because a number of detailed issues remain to be addressed and technical expertise is required:
 
 - [Hosting: Resolve known issues when installing in a sub-directory on a shared domain #2391](https://github.com/photoprism/photoprism/issues/2391)
 

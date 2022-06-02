@@ -1,4 +1,4 @@
-# Known Bugs and Issues
+# Known Issues
 
 This overview documents issues of general concern until they can be addressed. PhotoPrism has a zero-bug policy, which means we work to resolve all problems we learn about.
 

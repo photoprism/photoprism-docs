@@ -13,6 +13,15 @@ Setting up PhotoPrism behind a [reverse proxy](../proxies/traefik.md) in a sub-d
 
 - [Hosting: Resolve known issues when installing in a sub-directory on a shared domain #2391](https://github.com/photoprism/photoprism/issues/2391)
 
+## Files & Metadata
+
+### JPEG: Bad RST Marker
+
+This error can occur when decoding JPEG images that contain consecutive 0xFF bytes, e.g. images that have a "glich" (typically a few lines of missing image information at the end) or were created with software that inserts them for padding, although this is based on a edge case of the specification and is rather uncommon:
+
+- [Bug: (invalid JPEG format: bad RST marker) #1673](https://github.com/photoprism/photoprism/issues/1673)
+- [image/jpeg: "bad RST marker" error when decoding #40130](https://github.com/golang/go/issues/40130)
+
 ## Reporting Bugs ##
 
 Before reporting a bug, please use our [Troubleshooting Checklists](index.md)

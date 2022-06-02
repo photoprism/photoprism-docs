@@ -1,6 +1,8 @@
 # Known Issues
 
-This overview documents issues of general concern until they can be addressed. PhotoPrism has a zero-bug policy, which means we work to resolve all problems we learn about.
+This overview documents issues in our stable release that are of general importance.
+
+PhotoPrism has a zero-bug policy, which means we work to fix all issues we learn about. In a few cases this is not possible straight away, for example because they need to be fixed in third-party software over which we have no direct control.
 
 !!! tldr ""
     In order to improve readability and reduce maintenance, minor issues and those we plan to fix in the short term are not listed here. You can browse all reported bugs, ideas, and planned improvements on [GitHub Issues](https://github.com/photoprism/photoprism/issues).

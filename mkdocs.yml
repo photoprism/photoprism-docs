@@ -23,6 +23,7 @@ nav:
       - MariaDB: getting-started/troubleshooting/mariadb.md
       - Browsers: getting-started/troubleshooting/browsers.md
       - Performance: getting-started/troubleshooting/performance.md
+      - Known Issues: getting-started/troubleshooting/known-issues.md
     # - Support: getting-started/support.md
     - Reverse Proxies:
       - Traefik: getting-started/proxies/traefik.md

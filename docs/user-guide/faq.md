@@ -7,8 +7,8 @@
     Our [Project Roadmap](https://link.photoprism.app/roadmap) shows what tasks are in progress and what features will be implemented next. You may give ideas you like a thumbs-up, so we know what's most popular.
 
     Be aware that we have a zero-bug policy and do our best to help users when they need support or have other questions. This comes at a price though, as we can't give exact release dates for new features. Our team receives many more requests than can be implemented, so we want to emphasize that we are in no way obligated to implement the features, improvements, or other changes you request. We do, however, appreciate your feedback and carefully consider all requests.
-    
-    **Because sustained funding is key to quickly releasing new features, we encourage all users to support our mission by [signing up as a sponsor](https://photoprism.app/membership) or purchasing a commercial license. Ultimately, that's what's best for the product and the community.**
+
+    **Since sustained funding is key to quickly releasing new features, we encourage all users to support our mission by [signing up as a sponsor](https://photoprism.app/membership) or purchasing a commercial license.**
 
 ??? question "Which benefits do sponsors receive?"
 
@@ -29,9 +29,11 @@
 
     Absolutely! We are on a mission to protect your freedom and privacy. Self-hosting is the easiest way to stay in control and protect [your privacy](https://photoprism.app/privacy). It also provides the best experience for advanced users who often rely on a local toolchain to select, edit, and publish their pictures.
 
-    At the same time, we understand that there is a great demand and many practical uses for a hosted version. It is thus offered in addition so our users have more choice. Selected hosting partners ensure that the privacy of our users is protected as much as technically possible, even in the cloud.
-    
-    Likewise, businesses demand a commercial offering with features and support options geared towards professional users. They are willing to pay for the value they receive, which helps fund development and allows us to expand our team.
+    At the same time, we know there's a huge demand and many practical uses for a cloud-hosted app that is easy to set up. We like to give our users the choice and therefore offer a fully managed service as a deployment option. Selected hosting partners ensure that your privacy is protected as much as technically possible, even in the cloud.
+
+??? question "What are the advantages of purchasing a commercial license?"
+
+    A key difference between the open source and commercial license is that you get access to additional support and configuration options, as well as the right to customize functionality to your needs without having to publicly disclose your changes. We also work to optimize the standard configuration, feature set, and scalability of the Pro Edition to meet the requirements of professional users and organizations. Regular updates ensure that you can take advantage of the latest enhancements, provide feedback on new features, and we're able to quickly resolve any issues that may arise.
 
 ## User Interface ##
 

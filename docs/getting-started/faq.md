@@ -178,9 +178,11 @@ compromising performance and usability.
 
 Absolutely! We are on a mission to protect your freedom and privacy. Self-hosting is the easiest way to stay in control and protect [your privacy](https://photoprism.app/privacy). It also provides the best experience for advanced users who often rely on a local toolchain to select, edit, and publish their pictures.
 
-At the same time, we understand that there is a great demand and many practical uses for a hosted version. It is thus offered in addition so our users have more choice. Selected hosting partners ensure that the privacy of our users is protected as much as technically possible, even in the cloud.
+At the same time, we know there's a huge demand and many practical uses for a cloud-hosted app that is easy to set up. We like to give our users the choice and therefore offer a fully managed service as a deployment option. Selected hosting partners ensure that your privacy is protected as much as technically possible, even in the cloud.
 
-Likewise, businesses demand a commercial offering with features and support options geared towards professional users. They are willing to pay for the value they receive, which helps fund development and allows us to expand our team.
+### What are the advantages of purchasing a commercial license? ###
+
+A key difference between the open source and commercial license is that you get access to additional support and configuration options, as well as the right to customize functionality to your needs without having to publicly disclose your changes. We also work to optimize the standard configuration, feature set, and scalability of the Pro Edition to meet the requirements of professional users and organizations. Regular updates ensure that you can take advantage of the latest enhancements, provide feedback on new features, and we're able to quickly resolve any issues that may arise.
 
 ### Should I use SQLite, MariaDB, or MySQL? ###
 

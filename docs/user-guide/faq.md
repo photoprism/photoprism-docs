@@ -33,7 +33,7 @@
 
 ??? question "What are the advantages of purchasing a commercial license?"
 
-    A key difference between the open source and commercial license is that you get access to additional support and configuration options, as well as the right to customize functionality to your needs without having to publicly disclose your changes. We also work to optimize the standard configuration, feature set, and scalability of the Pro Edition to meet the requirements of professional users and organizations. Regular updates ensure that you can take advantage of the latest enhancements, provide feedback on new features, and we're able to quickly resolve any issues that may arise.
+    A key difference between the open source and commercial license is that you get access to additional support and configuration options, as well as the right to customize functionality to your needs without having to publicly disclose your changes. We also work to optimize the standard configuration, feature set, and scalability of the Pro Edition to meet the requirements of professional users and organizations.
 
 ## User Interface ##
 

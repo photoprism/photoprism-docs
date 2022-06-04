@@ -405,8 +405,7 @@ which will be available in a future release.
 
 ### Your app is really terrible, can I tell you how bad it is? ###
 
-If you are [having a bad day](https://photoprism.app/code-of-conduct) and want to offend someone,
-please go somewhere else.
+The internet is huge, and so you inevitably run into people with poor social skills or who have simply had too much coffee. Visit [photoprism.app/code-of-conduct](https://photoprism.app/code-of-conduct) to learn more.
 
 !!! info "Professional Users"
     Our Community Edition is designed primarily for small servers and home users. Professional users are welcome

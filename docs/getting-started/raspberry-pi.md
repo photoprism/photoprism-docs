@@ -3,13 +3,12 @@
 Our [stable version and development preview](../release-notes.md) have been built into a single
 [multi-arch Docker image](https://hub.docker.com/r/photoprism/photoprism) for 64-bit AMD, Intel, and ARM processors.
 
-That means, Raspberry Pi 3 / 4, Apple Silicon, and other ARM64-based devices can pull from the same repository,
-enjoy the exact same functionality, and can follow the regular [Installation Instructions](docker-compose.md) 
-after going through a short list of [System Requirements](#system-requirements).
+As a result, Raspberry Pi 3 / 4, Apple Silicon, and other ARM64-based devices can pull from the same repository,
+enjoy the same functionality, and can follow the regular [installation instructions](docker-compose.md)
+after going through a short list of platform-specific [system requirements](#system-requirements).
 
-Note that Raspberry Pi OS (Raspbian) is a 32-bit user-space Linux with a 64-bit kernel to remain compatible with older
-Raspberry software. This requires [special configuration](#raspberry-pi-os) to run modern 64-bit applications and Docker
-images, see [Architecture Specific Notes](#architecture-specific-notes).
+Raspbian users should be aware that they are using a 32-bit Linux with merely a 64-bit kernel to ensure compatibility with legacy software. 
+This requires a minimum of technical experience for the necessary [configuration changes](#raspberry-pi-os) to run modern 64-bit applications. See below for [details and alternatives](#architecture-specific-notes).
 
 ### System Requirements ###
 
@@ -40,9 +39,7 @@ images, see [Architecture Specific Notes](#architecture-specific-notes).
 | Development Preview | `photoprism/photoprism:preview` | 
 | MariaDB             | `arm64v8/mariadb:10.7`          | 
 
-Raspberry Pi OS (Raspbian) requires [special configuration](#raspberry-pi-os) to run modern 64-bit applications and
-Docker images. If you do not have legacy software, we recommend choosing a standard 64-bit Linux distribution as this
-requires less experience:
+Please note that running 64-bit Docker images under Raspbian requires a minimum of technical experience to perform the necessary [configuration changes](#raspberry-pi-os). If you don't need compatibility with 32-bit legacy software, we recommend choosing a standard 64-bit Linux distribution instead as this saves time and requires less experience:
 
 - [Raspberry Pi Debian](https://raspi.debian.net/)
 - [Ubuntu for Raspberry Pi](https://ubuntu.com/raspberry-pi)
@@ -155,3 +152,6 @@ A big thank you to [Guy Sheffer](https://github.com/guysoft) for helping us [bui
 a Raspberry Pi version!
 
 [^1]: The default [Docker Compose](https://docs.docker.com/compose/) config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running the `docker-compose` command in the same directory. Config files for other apps or instances should be placed in separate folders.
+
+*[Raspbian]: Raspberry Pi OS
+*[Apple Silicon]: Apple M1 and M2

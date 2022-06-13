@@ -11,6 +11,12 @@
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/).
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
+### June 14, 2022 ###
+<span class="build">Build 220614-046acbd0</span>
+
+- MariaDB: [Fixed incorrect migration that could truncate descriptions in index](https://github.com/photoprism/photoprism/issues/2398)
+- Translations: [Updated Arabic](https://github.com/photoprism/photoprism/pull/2417), [Danish and Polish](https://github.com/photoprism/photoprism/pull/2413)
+
 ### May 28, 2022 ###
 <span class="build">Build 220528-efb5d710</span>
 

@@ -7,7 +7,7 @@ As a result, Raspberry Pi 3 / 4, Apple Silicon, and other ARM64-based devices ca
 enjoy the same functionality, and can follow the regular [installation instructions](docker-compose.md)
 after going through a short list of platform-specific [system requirements](#system-requirements).
 
-Raspbian users should be aware that they are using a 32-bit Linux with merely a 64-bit kernel to ensure compatibility with legacy software. 
+Raspbian users should be aware that they are using a 32-bit Linux with only a 64-bit kernel to ensure compatibility with legacy software. 
 This requires a minimum of technical experience for the necessary [configuration changes](#raspberry-pi-os) to run modern 64-bit applications. See below for [details and alternatives](#architecture-specific-notes).
 
 ### System Requirements ###

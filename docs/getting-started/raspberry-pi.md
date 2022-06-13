@@ -39,7 +39,7 @@ This requires a minimum of technical experience for the necessary [configuration
 | Development Preview | `photoprism/photoprism:preview` | 
 | MariaDB             | `arm64v8/mariadb:10.7`          | 
 
-Please note that running 64-bit Docker images under Raspbian requires a minimum of technical experience to perform the necessary [configuration changes](#raspberry-pi-os). If you don't need compatibility with 32-bit legacy software, we recommend choosing a standard 64-bit Linux distribution instead as this saves time and requires less experience:
+Keep in mind that running 64-bit Docker images under Raspbian requires a minimum of technical experience to perform the necessary [configuration changes](#raspberry-pi-os). If you don't need compatibility with 32-bit legacy software, we recommend choosing a standard 64-bit Linux distribution instead as this saves time and requires less experience:
 
 - [Raspberry Pi Debian](https://raspi.debian.net/)
 - [Ubuntu for Raspberry Pi](https://ubuntu.com/raspberry-pi)

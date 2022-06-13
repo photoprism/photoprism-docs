@@ -14,7 +14,7 @@
 ### June 14, 2022 ###
 <span class="build">Build 220614-046acbd0</span>
 
-- MariaDB: [Fixed incorrect migration that could truncate descriptions in index](https://github.com/photoprism/photoprism/issues/2398)
+- MariaDB: [Removed migration that could truncate descriptions in the index](https://github.com/photoprism/photoprism/issues/2398)
 - Translations: [Updated Arabic](https://github.com/photoprism/photoprism/pull/2417), [Danish and Polish](https://github.com/photoprism/photoprism/pull/2413)
 
 ### May 28, 2022 ###

@@ -5,10 +5,10 @@ Our [stable version and development preview](../release-notes.md) have been buil
 
 As a result, Raspberry Pi 3 / 4, Apple Silicon, and other ARM64-based devices can pull from the same repository,
 enjoy the same functionality, and can follow the regular [installation instructions](docker-compose.md)
-after going through a short list of platform-specific [system requirements](#system-requirements).
+after going through a short list of [system requirements](#system-requirements).
 
-Raspbian users should be aware that they are using a 32-bit Linux with only a 64-bit kernel to ensure compatibility with legacy software. 
-This requires a minimum of technical experience for the necessary [configuration changes](#raspberry-pi-os) to run modern 64-bit applications. See below for [details and alternatives](#architecture-specific-notes).
+!!! info "Raspberry Pi OS"
+    Running 64-bit Docker images under Raspbian Linux requires a minimum of technical experience to perform the necessary [configuration changes](#raspberry-pi-os). This is because it is a 32-bit operating system with merely a 64-bit kernel to ensure compatibility with legacy software. For details and alternatives, see [architecture-specific notes](#architecture-specific-notes).
 
 ### System Requirements ###
 
@@ -39,14 +39,15 @@ This requires a minimum of technical experience for the necessary [configuration
 | Development Preview | `photoprism/photoprism:preview` | 
 | MariaDB             | `arm64v8/mariadb:10.7`          | 
 
-Keep in mind that running 64-bit Docker images under Raspbian requires a minimum of technical experience to perform the necessary [configuration changes](#raspberry-pi-os). If you don't need compatibility with 32-bit legacy software, we recommend choosing a standard 64-bit Linux distribution instead as this saves time and requires less experience:
+Be aware that running 64-bit Docker images under Raspbian requires a minimum of technical experience to perform the necessary [configuration changes](#raspberry-pi-os). If you don't need compatibility with 32-bit legacy software, we recommend choosing a standard 64-bit Linux distribution instead as it will save you time and requires less experience:
 
 - [Raspberry Pi Debian](https://raspi.debian.net/)
 - [Ubuntu for Raspberry Pi](https://ubuntu.com/raspberry-pi)
 - [UbuntuDockerPi](https://github.com/guysoft/UbuntuDockerPi) is a 64-bit Ubuntu Server with Docker pre-configured
 
-Other distributions that target the same use case as Raspbian, such as CoreELEC, may have the same problems and
-should also not be used to run modern server applications.
+
+!!! info ""
+    Other distributions that target the same use case as Raspbian, such as CoreELEC, will have similar issues and should therefore also be avoided to run modern server applications.
 
 ##### Raspberry Pi OS #####
 

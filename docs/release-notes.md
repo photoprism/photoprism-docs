@@ -12,7 +12,7 @@
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
 ### June 14, 2022 ###
-<span class="build">Build 220614-942fedf6</span>
+<span class="build">Build 220614-f2916dc1</span>
 
 - Security: [Go has been upgraded to v1.18.3](https://github.com/photoprism/photoprism/commit/942fedf67992ef5eb9d8f371da88aec333a13af0), which [includes TLS and validation fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.18.3)
 - MariaDB: [Removed migration that could corrupt photo descriptions in the index](https://github.com/photoprism/photoprism/issues/2398)

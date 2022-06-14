@@ -1,4 +1,5 @@
-# VPN
+# Tailscale VPN
+
 *Note: This is contributed content and work in progress. Click the edit link to perform changes and send a pull request.*
 
 1. Open the [Tailscale website](https://tailscale.com/) and Select Use Tailscale button. 

@@ -25,6 +25,8 @@ nav:
       - Performance: getting-started/troubleshooting/performance.md
       - Known Issues: getting-started/troubleshooting/known-issues.md
     # - Support: getting-started/support.md
+    - Remote Access:
+      - Tailscale VPN: getting-started/vpn/tailscale.md
     - Reverse Proxies:
       - Traefik: getting-started/proxies/traefik.md
       - Caddy 1: getting-started/proxies/caddy-1.md

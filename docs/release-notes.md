@@ -14,6 +14,8 @@
 ### June 14, 2022 ###
 <span class="build">Build 220614-dea9ff68</span>
 
+A small but important update that includes translations to Arabic, a migration fix for MariaDB, and many updated dependencies.
+
 - Security: [Upgraded Go to v1.18.3](https://github.com/photoprism/photoprism/commit/942fedf67992ef5eb9d8f371da88aec333a13af0), [which includes TLS and validation fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.18.3)
 - MariaDB: [Removed migration that could corrupt photo descriptions in the index](https://github.com/photoprism/photoprism/issues/2398)
 - Translations: [Updated Arabic](https://github.com/photoprism/photoprism/pull/2417), [Danish and Polish](https://github.com/photoprism/photoprism/pull/2413)

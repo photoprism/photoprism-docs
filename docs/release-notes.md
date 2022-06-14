@@ -12,8 +12,9 @@
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
 ### June 14, 2022 ###
-<span class="build">Build 220614-046acbd0</span>
+<span class="build">Build 220614-942fedf6</span>
 
+- Security: [Go has been upgraded to v1.18.3](https://github.com/photoprism/photoprism/commit/942fedf67992ef5eb9d8f371da88aec333a13af0), which [includes TLS and validation fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.18.3)
 - MariaDB: [Removed migration that could corrupt photo descriptions in the index](https://github.com/photoprism/photoprism/issues/2398)
 - Translations: [Updated Arabic](https://github.com/photoprism/photoprism/pull/2417), [Danish and Polish](https://github.com/photoprism/photoprism/pull/2413)
 
@@ -184,7 +185,7 @@ Starting with this release, the [regular multi-arch Docker image](https://hub.do
 A 32-bit version of our stable release for [older devices](getting-started/raspberry-pi.md#older-armv7-based-devices) 
 is offered separately. This frees up development and infrastructure resources with minimal impact.
 
-- [Based on Go version 1.17.5, which includes important HTTP/2 and network security fixes](https://groups.google.com/g/golang-announce/c/hcmEScgc00k)
+- Security: [Go has been upgraded to v1.17.5, which includes HTTP/2 and networking fixes](https://groups.google.com/g/golang-announce/c/hcmEScgc00k)
 - People: [Concurrent updates are no longer possible to prevent inconsistencies](https://github.com/photoprism/photoprism/commit/1b583e071e80b68352b1b366d60e010d8f8f9535)
 - Places: [Additional logs to detect invalid GPS coordinates in metadata](https://github.com/photoprism/photoprism/commit/4e358bbfd488eda86efa3265a6c443be0ae8f038)
 - SQLite: [Reduced routine maintenance log levels and fixed migration warnings](https://github.com/photoprism/photoprism/discussions/1791)

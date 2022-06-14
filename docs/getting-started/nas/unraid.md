@@ -1,8 +1,8 @@
 # Setting Up PhotoPrism on Unraid
 
-We recommend following these instructions to install PhotoPrism on Unraid:
+We recommend following this great tutorial from IBRACORP to install PhotoPrism on Unraid:
 
-https://www.youtube.com/watch?v=WMNsO-0BuG8&t=8s
+https://youtu.be/WMNsO-0BuG8
 
 !!! info ""
     You are welcome to ask for help in our [community chat](https://link.photoprism.app/chat).

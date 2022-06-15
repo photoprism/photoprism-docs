@@ -70,7 +70,7 @@ The setup for a component that uses the placeholder-virtualization is as follows
 
 1. Add a ref to all the elements whose visibilty needs to be tracked
 2. create a single `IntersectionObserver` in the `beforeCreate` that calls a (yet to be defined) `this.visibilitiesChanged`
-3. on `mounted` and `updated`, call [observe](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/observe) on all refs from step 1
+3. add a watcher that is called when the list of elements changes. call [observe](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/observe) on all refs from step 1
 4. define a function that takes an [IntersectionObserverEntry](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry) and returns the index of the corresponding target (for example by adding a `data-index`-attribute to the observed element)
 5. add `firstVisibleElementIndex: 0`, `lastVisibleElementIndex: 0` and `visibleElementIndices: new Set()` to the components state
 6. conditionally render elements whose index is between `firstVisibleElementIndex` and `lastVisibleElementIndex`. Render placeholders for all other elements
@@ -81,6 +81,8 @@ We also use `firstVisibleElementIndex` and `lastVisibleElementIndex` for two rea
 
 1. Vue doesn't react to Set-changes (because its identity never changes), so manipulating it doesn't cause a rerender
 2. When scrolling very fast, the set may for a very brief moment contain holes (for example it has the indices `1, 2, 4, 5, 6`). By implying that everything between the smallest and largest index is visible, these short-lived holes don't have any negative effect (index 3 would be rendered anyway)
+
+As a bonus, you can make the IntersectionObserver only observe for example every 5th element to speed up calculation of intersections. If you do so, you should add for Example -4 to `firstVisibleElementIndex` and +4 to `lastVisibleElementIndex`
 
 ### Render Performance
 
@@ -95,7 +97,6 @@ Here are some tips on how to gain performance. They are ordered from most to lea
 - Prefer conditional rendering over hiding/showing elements via css
     - showing/hiding via css may prevent rerenders, but it increases the amount of rendered elements
     - The less elements (and therefore domnodes) are rendered the better
-    - **Exception:** 
 - Use less elements
     - Why use a `<v-card><v-img></v-img></v-card>` when performance is important and a `<div></div>` with some css works too?
 
@@ -105,7 +106,7 @@ Memoization is a technique to speed up function calls by caching results.
 This can have a noticable impact on render-performance, especially when function
 results are used for placeholders
 
-Example: The the texts on the cards in the cards-view. There are function-calls like `photo.locationInfo()` and `photo.getDateString()`.  
+Example: The texts on the cards in the cards-view. There are function-calls like `photo.locationInfo()` and `photo.getDateString()`.  
 The resulting values rarely change, but are calculated again and again on every render, resulting in ~280k calls per function when scrolling through ~2k pictures.
 
 We use [`memoize-one`](https://www.npmjs.com/package/memoize-one) for much called, non-trivial functions whose parameters rarely change.

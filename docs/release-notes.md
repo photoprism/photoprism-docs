@@ -2,10 +2,10 @@
 
 !!! example ""
     **Back us on [Patreon](https://link.photoprism.app/patreon) or [GitHub Sponsors](https://link.photoprism.app/sponsor).**
-    Your continued support [helps us](https://photoprism.app/membership) provide regular updates and services like [world maps](https://try.photoprism.app/places). Thank you! 💜
+    Your continued support [helps us provide regular updates](https://photoprism.app/membership) and services like [world maps](https://try.photoprism.app/places). Thank you! 💜
 
 !!! tldr ""
-    You can test upcoming features by changing the image tag name from `:latest` to `:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/), then pulling the most recent image, and finally restarting your instance as [described in our docs](getting-started/updates.md).
+    You may test upcoming features by changing the image tag name from `:latest` to `:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/), then pulling the most recent image, and finally restarting your instance as [described in our docs](getting-started/updates.md).
 
 ### Development Preview ###
 <span class="build">Build 220615-c5031ae1</span>

@@ -11,6 +11,8 @@
     to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/).
     Then [pull the most recent image](getting-started/updates.md) and restart your instance.
 
+- Translations: [Updated Arabic](https://github.com/photoprism/photoprism/pull/2421)
+
 ### June 14, 2022 ###
 <span class="build">Build 220614-dea9ff68</span>
 

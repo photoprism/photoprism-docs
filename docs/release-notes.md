@@ -10,9 +10,7 @@
 - Translations: [Updated Arabic, Czech, Korean, and Norwegian Bokmål](https://github.com/photoprism/photoprism/pull/2421)
 
 !!! tldr ""
-    You can test upcoming features and improvements by changing the image from `photoprism/photoprism:latest`
-    to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/).
-    Then [pull the most recent image](getting-started/updates.md) and restart your instance.
+    You can test upcoming features by changing the image tag name from `:latest` to `:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/), then pulling the most recent image, and finally restarting your instance as [described in our docs](getting-started/updates.md).
 
 ### June 14, 2022 ###
 <span class="build">Build 220614-dea9ff68</span>

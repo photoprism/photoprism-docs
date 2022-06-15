@@ -147,7 +147,7 @@ nav:
       - Thumbnails: developer-guide/media/thumbnails.md
       - Samples: developer-guide/media/samples.md
     - Metadata:
-      - Geocoding: developer-guide/metadata/geocoding.md
+      - Reverse Geocoding: developer-guide/metadata/geocoding.md
       - Color Extraction: developer-guide/metadata/colors.md
       - Image Classification: developer-guide/metadata/classification.md
       - Face Recognition: developer-guide/metadata/face-recognition.md

@@ -1,52 +1,50 @@
-# Maps & Places
+# Reverse Geocoding API
 
-Our privacy-friendly backend services provide worldwide location information to enrich metadata with details
-such as state, city, and category. Future releases will be able to use public event data to automatically create albums
-of popular music festivals or sporting events.
+If enabled, our privacy-preserving reverse geocoding service provides global location information to enrich your photo and video metadata with details such as country, state, city, and category:
 
-To show where you've been, the user interface includes four high-resolution [world maps](https://try.photoprism.app/places).
-For details, see [Rendering Interactive Maps in the UI](../ui/maps.md).
+- API requests are not logged permanently.
+- Location data is cached so that it can be reused for subsequent requests from you or other users.
+- Our API approximates the coordinates and encodes them with a [fuzzy S2 cell ID](https://s2geometry.io/resources/s2cell_statistics.html) that does not include the house number or any other data identifying a specific residential address, except possibly in very sparsely populated areas of the world. Even then, we cannot trace the request back to a person, picture or point in time.
+- We may store your server's IP address and other HTTP request headers for a limited time to perform authorization checks, prevent abuse, and implement rate limits. Since the traffic is encrypted, no one intercepting the server-to-server communication can see the exact request and response; only the fact that you exchanged data with our backend.
+
+To show where you've been, the user interface includes four high-resolution [interactive world maps](https://try.photoprism.app/places).
+For details, see [rendering maps](../ui/maps.md).
 
 ## Example Request ##
 
-https://places.photoprism.app/v1/location/149ce78563
+`GET https://places.photoprism.app/v1/location/149ce78563`
 
 ```json
 {
-  "id":"149ce78563",
-  "name":"Pink Beach",
-  "category":"nature",
-  "timezone":"Europe/Athens",
-  "lat":35.26963621850717,
-  "lng":23.53695076231683,
+  "id": "s2:149ce78563",
+  "name": "Elafonisi Kite Club",
+  "street": "Κεφαλή",
+  "postcode": "",
+  "category": "nature",
+  "timezone": "Europe/Athens",
+  "lat": 35.269638,
+  "lng": 23.536951,
   "place": {
-    "id":"149ce78563",
-    "label":"Chrisoskalitissa, Crete, Greece",
-    "city":"Chrisoskalitissa",
-    "state":"Crete",
-    "country":"gr"
+    "id": "gr:GCd9oey68OFr",
+    "label": "Χρυσοσκαλίτισσα, Greece",
+    "district": "",
+    "city": "Χρυσοσκαλίτισσα",
+    "state": "Αποκεντρωμένη Διοίκηση Κρήτης",
+    "country": "gr",
+    "keywords": "χρυσοσκαλίτσα"
   },
-  "events":[],
-  "licence":"Data © OpenStreetMap contributors"
+  "events": [],
+  "licence": "Data © PhotoPrism"
 }
 ```
 
-## Privacy ##
+## Related Resources ##
 
-Reverse geocoding requests won't be logged. Location data is cached though so
-that it can be used to serve subsequent requests.
-Because of HTTPS, your internet provider can't see the exact request - only the fact that you exchanged data with our backend.
-
-Our API approximates coordinates, encodes them with [S2](https://s2geometry.io/resources/s2cell_statistics.html),
-and doesn't care about street or house number:
-
-![](img/placesPrivacy.jpeg)
-
-## Event Discovery ##
+### Event Discovery ###
 - https://schedjoules.github.io/event-discovery-api/#introduction
 - https://www.gdeltproject.org/data.html#rawdatafiles
 
-## Open Source Libraries ##
+### Libraries ###
 - https://tegola.io/ - An open source vector tile server written in Go
 - https://tegola.io/tutorials/tegola-with-open-layers/ - Using Tegola with OpenLayers
 - https://github.com/go-spatial/tegola-osm - scripts for importing and running a mirror of OSM with tegola
@@ -63,16 +61,16 @@ and doesn't care about street or house number:
 - https://github.com/siddontang/ledisdb - a high performance NoSQL DB powered by Go ([homepage](http://ledisdb.com/))
 - https://github.com/blevesearch/bleve/tree/master/geo - geo support in bleve
 
-## OpenStreetMap ##
+### OpenStreetMap ###
 At the moment, we use the [reverse lookup API](https://wiki.openstreetmap.org/wiki/Nominatim#Reverse_Geocoding) of OpenStreetMap as well as the their tiles for our Leaflet-based Places page.
 
 Code: [internal/maps/osm/location.go](https://github.com/photoprism/photoprism/blob/develop/internal/maps/osm/location.go)
 
-## Commercial Maps ##
+### Commercial Maps ###
 - https://developers.google.com/maps/documentation/
 - https://www.mapbox.com/maps/
 
-## Tutorials ##
+### Tutorials ###
 - https://developers.google.com/maps/solutions/store-locator/clothing-store-locator#findnearsql
 - https://blog.mastermaps.com/2014/08/showing-geotagged-photos-on-leaflet-map.html - Showing geotagged photos on a Leaflet map
 - https://rubenspgcavalcante.github.io/leaflet-ant-path/ - Animate polylines as ants walking in a path

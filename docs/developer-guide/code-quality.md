@@ -117,14 +117,11 @@ including `gofmt`, `go vet`, `go lint` and `gocyclo`. If you find this helpful a
 !!! example ""
     Use reports for inspiration when you need some, keeping in mind that not every issue reported needs to be resolved immediately.
 
-## OpenSSF Best Practices ##
+## Security Best Practices ##
 
-Open Source Security Foundation (OpenSSF) Best Practices Badge:
+The [Open Source Security Foundation (OpenSSF)](https://bestpractices.coreinfrastructure.org/en/) maintains standardized security criteria and awards a badge upon completion of the questionnaire:
 
 [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/6132/badge)](https://bestpractices.coreinfrastructure.org/projects/6132)
-
-!!! example ""
-    The questionnaire has not yet been completed in all details. Submission of the remaining information is planned for the future, as soon as time permits.
 
 [goreport]: https://goreportcard.com/report/github.com/photoprism/photoprism
 [codacy]: https://www.codacy.com/project/lastzero/photoprism/dashboard

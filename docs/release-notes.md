@@ -10,7 +10,7 @@
 ### Development Preview ###
 <span class="build">Build 220617-fb2ea605</span>
 
-Includes major user interface improvements, so you can more quickly scroll through search results. You can also test these on our public demo at [demo.photoprism.app](https://try.photoprism.app/).
+Includes major user interface improvements, so you can more quickly scroll through search results. You can also test this on our public demo at [demo.photoprism.app](https://try.photoprism.app/). Please note this is not a release candidate yet and more changes will follow.
 
 - UX: [Improved search view render performance](https://github.com/photoprism/photoprism/pull/2433)
 - UX: [Pseudo-virtualized mosaic, cards, and list view](https://github.com/photoprism/photoprism/pull/2292)

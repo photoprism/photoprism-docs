@@ -7,11 +7,11 @@
 !!! tldr ""
     You may test upcoming features by changing the image tag name from `:latest` to `:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/), then pulling the most recent image, and finally restarting your instance as [described in our docs](getting-started/updates.md).
 
-### Development Preview ###
-<span class="build">Build 220616-632f401a</span>
+### June 17, 2022 ###
+<span class="build">Build 220617-0402b8d3</span>
 
-- Albums: [Deleted album is restored when trying to create new album with same name](https://github.com/photoprism/photoprism/issues/2429)
-- WebDAV: [Fixed auto indexing/importing in a sub-directory on a shared domain](https://github.com/photoprism/photoprism/pull/2392)
+- Albums: [Deleted album is restored when trying to add a new album with the same name](https://github.com/photoprism/photoprism/issues/2429)
+- WebDAV: [Added support for auto indexing/importing in a sub-directory on a shared domain](https://github.com/photoprism/photoprism/pull/2392)
 - Translations: [Updated Arabic, Czech, Korean, and Norwegian Bokmål](https://github.com/photoprism/photoprism/pull/2421)
 
 ### June 14, 2022 ###

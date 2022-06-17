@@ -10,7 +10,7 @@
 ### June 17, 2022 ###
 <span class="build">Build 220617-0402b8d3</span>
 
-We’re constantly working to bring you a better experience.
+We are constantly working to improve our app and bring you a better experience.
 
 - Albums: [Deleted album is restored when trying to add a new album with the same name](https://github.com/photoprism/photoprism/issues/2429)
 - WebDAV: [Added support for auto indexing/importing in a sub-directory on a shared domain](https://github.com/photoprism/photoprism/pull/2392)

@@ -7,6 +7,12 @@
 !!! tldr ""
     You may test upcoming features by changing the image tag name from `:latest` to `:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/), then pulling the most recent image, and finally restarting your instance as [described in our docs](getting-started/updates.md).
 
+### Development Preview ###
+<span class="build">Build 220617-735136c2</span>
+
+- UX: [Improved search view render performance](https://github.com/photoprism/photoprism/pull/2433)
+- UX: [Pseudo-virtualized mosaic, cards, and list view](https://github.com/photoprism/photoprism/pull/2292)
+
 ### June 17, 2022 ###
 <span class="build">Build 220617-0402b8d3</span>
 

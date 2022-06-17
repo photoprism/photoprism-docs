@@ -11,7 +11,7 @@
 <span class="build">Build 220617-735136c2</span>
 
 - UX: [Improved search view render performance](https://github.com/photoprism/photoprism/pull/2433)
-- UX: [Pseudo-virtualized mosaic, cards, and list view](https://github.com/photoprism/photoprism/pull/2292)
+- UI: [Pseudo-virtualized mosaic, cards, and list view](https://github.com/photoprism/photoprism/pull/2292)
 
 ### June 17, 2022 ###
 <span class="build">Build 220617-0402b8d3</span>

@@ -13,7 +13,8 @@
 Includes major user interface improvements, so you can more quickly scroll through search results. You can try these on our public demo at [demo.photoprism.app](https://try.photoprism.app/).
 
 - UX: [Improved search view render performance](https://github.com/photoprism/photoprism/pull/2433)
-- UI: [Pseudo-virtualized mosaic, cards, and list view](https://github.com/photoprism/photoprism/pull/2292)
+- UX: [Pseudo-virtualized mosaic, cards, and list view](https://github.com/photoprism/photoprism/pull/2292)
+- Sharing: [Fixed app navigation layout on small screens](https://github.com/photoprism/photoprism/pull/2430)
 - Translations: [Updated Dutch and Polish](https://github.com/photoprism/photoprism/pull/2435)
 
 ### June 17, 2022 ###

@@ -1,6 +1,6 @@
 # Known Issues
 
-This is a high-level overview of the currently unresolved issues. Note that PhotoPrism generally has a zero-bug policy, which means that we do our best to fix any issues we learn about. However, sometimes this is not immediately possible, for example because of dependencies on third-party apps and libraries.
+This is a high-level overview of the currently unresolved issues. PhotoPrism generally follows a zero-bug policy, which means that we do our best to fix any issues we learn about. However, sometimes this is not immediately possible, for example due to dependencies on third-party libraries, other apps, or because it is a specific use case that we do not support at this time.
 
 !!! tldr ""
     In order to improve readability and reduce maintenance, minor issues and those we plan to fix in the short term are not listed here. You can browse all reported bugs, ideas, and planned improvements on [GitHub Issues](https://github.com/photoprism/photoprism/issues).

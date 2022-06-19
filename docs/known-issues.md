@@ -9,9 +9,7 @@ This is a high-level overview of the currently unresolved issues. PhotoPrism gen
 
 ### Shared Domain
 
-Installation in a sub-directory on a shared domain is generally possible if you run your instance behind a [reverse proxy](getting-started/proxies/traefik.md).
-
-At the moment, this method is experimental. We do not recommend it because technical expertise is required and a number of specific issues still need to be addressed:
+Installation in a sub-directory on a shared domain is generally possible if you run your instance behind a [reverse proxy](getting-started/proxies/traefik.md). At the moment, this method is experimental. We do not recommend it because technical expertise is required and a number of specific issues still need to be addressed:
 
 - [Hosting: Resolve known issues when installing in a sub-directory on a shared domain #2391](https://github.com/photoprism/photoprism/issues/2391)
 

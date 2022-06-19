@@ -9,11 +9,23 @@ This is a high-level overview of the currently unresolved issues. PhotoPrism gen
 
 ### Installation on a Shared Domain
 
-Setting up PhotoPrism behind a [reverse proxy](../proxies/traefik.md) in a sub-directory on a shared domain is possible in principle. This method is experimental, however, and not generally recommended because a number of detailed issues remain to be addressed and technical expertise is required:
+Setting up PhotoPrism behind a [reverse proxy](getting-started/proxies/traefik.md) in a sub-directory on a shared domain is possible in principle. This method is experimental, however, and not generally recommended because a number of detailed issues remain to be addressed and technical expertise is required:
 
 - [Hosting: Resolve known issues when installing in a sub-directory on a shared domain #2391](https://github.com/photoprism/photoprism/issues/2391)
 
-## Files & Metadata
+## User Authentication ##
+
+### Session Invalidation ###
+
+User authentication sessions expire automatically after 7 days. In some cases, you may want to ensure that all sessions expire immediately to require re-login, for example, after a password change if the previously used password is known to people who should no longer be able to access your instance:
+
+- [Security: Changing password doesn't invalidate existing auth tokens #1935](https://github.com/photoprism/photoprism/issues/1935)
+
+This is a known limitation with the current implementation. One of the reasons for this trade-off is that the account may be used by background processes that are synchronizing files. Invalidating the session immediately could then lead to data loss, which we consider unacceptable. At the very least, immediate invalidation would require more complex client logic and additional documentation to help developers implement it correctly.
+
+While our team is working on a new implementation as part of full multi-user support, you can manually delete `storage/config/sessions.json` to revoke all sessions and require re-login.
+
+## File Format Support
 
 ### JPEG: Bad RST Marker
 
@@ -32,7 +44,7 @@ issue, or a misunderstanding in how the software works:
 - or post your question in [GitHub Discussions](https://link.photoprism.app/discussions)
 
 When reporting a problem, always include the software versions you are using and [other information about your environment](https://github.com/photoprism/photoprism/blob/develop/.github/ISSUE_TEMPLATE/bug_report.md)
-such as [browser, browser plugins](browsers.md), operating system, storage type,
+such as [browser, browser plugins](getting-started/troubleshooting/browsers.md), operating system, storage type,
 memory size, and processor.
 
 We kindly ask you not to report bugs via GitHub Issues **unless you are certain to have found a fully reproducible and previously unreported issue** that must be fixed directly in the app.

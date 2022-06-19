@@ -23,7 +23,6 @@ nav:
       - MariaDB: getting-started/troubleshooting/mariadb.md
       - Browsers: getting-started/troubleshooting/browsers.md
       - Performance: getting-started/troubleshooting/performance.md
-      - Known Issues: getting-started/troubleshooting/known-issues.md
     # - Support: getting-started/support.md
     - Remote Access:
       - Tailscale VPN: getting-started/vpn/tailscale.md
@@ -42,6 +41,7 @@ nav:
       - Caching: getting-started/advanced/caching.md
       - NGINX: getting-started/advanced/nginx-proxy-setup.md
       - Scalability: getting-started/advanced/scalability.md
+    - Known Issues: known-issues.md
     - FAQ: getting-started/faq.md
   - User Guide:
     - Introduction: user-guide/index.md

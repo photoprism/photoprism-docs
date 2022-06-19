@@ -33,8 +33,6 @@ This [tutorial](https://www.serverlab.ca/tutorials/linux/web-servers-linux/how-t
           proxy_http_version 1.1;
           proxy_set_header Upgrade $http_upgrade;
           proxy_set_header Connection "upgrade";
-          
-          client_max_body_size 500M;
         }
       }
     }

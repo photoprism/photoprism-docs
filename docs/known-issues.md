@@ -23,7 +23,7 @@ User authentication sessions expire automatically after 7 days. In some cases, y
 
 This is a known limitation with the current implementation. One of the reasons for this trade-off is that the account may be used by background processes that are synchronizing files. Invalidating the session immediately could then lead to data loss, which we consider unacceptable. At the very least, immediate invalidation would require more complex client logic and additional documentation to help developers implement it correctly.
 
-While our team is working on a new implementation as part of full multi-user support, you can manually delete `storage/config/sessions.json` to revoke all sessions and require re-login.
+While our team is working on a new implementation as part of full multi-user support, you can manually delete `storage/config/sessions.json` and then restart your instance to revoke all sessions and require re-login.
 
 ## File Format Support
 

@@ -12,9 +12,9 @@
 
 Our upcoming release includes major user interface improvements, so you can more quickly scroll through search results. You can also test this on our public demo at [demo.photoprism.app](https://try.photoprism.app/). Please note this is not a release candidate yet and more changes will follow.
 
-- UX: [Improved search view render performance](https://github.com/photoprism/photoprism/pull/2433)
-- UX: [Pseudo-virtualized mosaic, cards, and list view](https://github.com/photoprism/photoprism/pull/2292)
-- UX: [Fixed sharing navigation layout on small screens](https://github.com/photoprism/photoprism/pull/2430)
+- Search: [Improved scrolling and render performance](https://github.com/photoprism/photoprism/pull/2433)
+- Search: [Pseudo-virtualized mosaic, cards, and list view](https://github.com/photoprism/photoprism/pull/2292)
+- Sharing: [Fixed top navigation spacing on small screens](https://github.com/photoprism/photoprism/pull/2430)
 - Videos: [Fixed incorrect NVIDIA hardware transcoding parameter](https://github.com/photoprism/photoprism/issues/2442)
 - Known Issues: [Added information on manual session invalidation](https://docs.photoprism.app/known-issues/#session-invalidation)
 - Translations: [Updated Dutch, Polish](https://github.com/photoprism/photoprism/pull/2435), [Japanese, and Chinese](https://github.com/photoprism/photoprism/pull/2445/files)

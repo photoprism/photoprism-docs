@@ -8,14 +8,16 @@
     You may test upcoming features by changing the image tag name from `:latest` to `:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/), then pulling the most recent image, and finally restarting your instance as [described in our docs](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 220617-fb2ea605</span>
+<span class="build">Build 220619-71ae3388</span>
 
-Includes major user interface improvements, so you can more quickly scroll through search results. You can also test this on our public demo at [demo.photoprism.app](https://try.photoprism.app/). Please note this is not a release candidate yet and more changes will follow.
+Our upcoming release includes major user interface improvements, so you can more quickly scroll through search results. You can also test this on our public demo at [demo.photoprism.app](https://try.photoprism.app/). Please note this is not a release candidate yet and more changes will follow.
 
 - UX: [Improved search view render performance](https://github.com/photoprism/photoprism/pull/2433)
 - UX: [Pseudo-virtualized mosaic, cards, and list view](https://github.com/photoprism/photoprism/pull/2292)
-- Sharing: [Fixed app navigation layout on small screens](https://github.com/photoprism/photoprism/pull/2430)
-- Translations: [Updated Dutch and Polish](https://github.com/photoprism/photoprism/pull/2435)
+- UX: [Fixed sharing navigation layout on small screens](https://github.com/photoprism/photoprism/pull/2430)
+- Videos: [Fixed incorrect NVIDIA hardware transcoding parameter](https://github.com/photoprism/photoprism/issues/2442)
+- Known Issues: [Added information on manual session invalidation](https://docs.photoprism.app/known-issues/#session-invalidation)
+- Translations: [Updated Dutch, Polish](https://github.com/photoprism/photoprism/pull/2435), [Japanese, and Chinese](https://github.com/photoprism/photoprism/pull/2445/files)
 
 ### June 17, 2022 ###
 <span class="build">Build 220617-0402b8d3</span>

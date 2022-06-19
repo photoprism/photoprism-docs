@@ -36,7 +36,7 @@ This error can occur when decoding JPEG images that contain consecutive 0xFF byt
 
 ## Reporting Bugs ##
 
-Before reporting a bug, please use our [Troubleshooting Checklists](index.md)
+Before reporting a bug, please use our [Troubleshooting Checklists](getting-started/troubleshooting/index.md)
 to determine the cause of your problem. If you have a general question, need help, it could be a local configuration
 issue, or a misunderstanding in how the software works:
 

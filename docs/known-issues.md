@@ -33,7 +33,7 @@ This is a known limitation with the current implementation. One of the reasons f
 
 While our team is working on a new implementation as part of full multi-user support, you can manually delete `storage/config/sessions.json` and then restart your instance to revoke all sessions and require re-login.
 
-## File Support
+## File Compatibility
 
 ### JPEG: Bad RST Marker
 

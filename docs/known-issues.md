@@ -42,6 +42,14 @@ This error can occur when decoding JPEG images that contain consecutive 0xFF byt
 - [Bug: (invalid JPEG format: bad RST marker) #1673](https://github.com/photoprism/photoprism/issues/1673)
 - [image/jpeg: "bad RST marker" error when decoding #40130](https://github.com/golang/go/issues/40130)
 
+## Conversion
+
+### PHOTOPRISM_JPEG_SIZE / jpeg-size
+
+PhotoPrism supports limiting the size of generated JPEG images when converting from RAW files using the environment variable `PHOTOPRISM_JPEG_SIZE` or the CLI option `jpeg-size`. However this currently does not work if Rawtherapee is used as converter, as it does not support any CLI options to limit the JPEG size (unlike Darktable). It would be bad for indexing performance if PhotoPrism would downsample the generated file after Rawtherapee finishes converting, therefore this option is ignored when a RAW file is converted with Rawtherapee. Depending on your settings such as `PHOTOPRISM_DARKTABLE_BLACKLIST` (default: .raf and .cr3 files) or `PHOTOPRISM_DISABLE_DARKTABLE` (default: false) you may or may not run into this issue. If you really need to limit the generated JPEG size the only available workaround for now is to not use Rawtherappee as converter.
+
+- [RAW: PHOTOPRISM_JPEG_SIZE is ignored when converting RAW with RawTherapee](https://github.com/photoprism/photoprism/issues/2446)
+
 ## Reporting Bugs ##
 
 Before reporting a bug, please use our [Troubleshooting Checklists](getting-started/troubleshooting/index.md)

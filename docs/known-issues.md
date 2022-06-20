@@ -50,7 +50,7 @@ If you want to limit the size of the generated JPEGs, you currently cannot use R
 
 - [RAW: PHOTOPRISM_JPEG_SIZE is ignored when converting RAW with RawTherapee #2446](https://github.com/photoprism/photoprism/issues/2446)
 
-It would also be bad for indexing performance if PhotoPrism downsized the generated file after converting it with RawTherapee. As a result, this option is ignored when converting a RAW file with RawTherapee. Whether RawTherapee is used depends on additional settings such as `PHOTOPRISM_DARKTABLE_BLACKLIST` (default: "dng,cr3") or `PHOTOPRISM_DISABLE_DARKTABLE` (default: "false").
+It would also be bad for indexing performance if PhotoPrism downsized the generated file after converting it with RawTherapee. As a result, this option is ignored when converting a RAW file with RawTherapee. Whether RawTherapee is used depends on additional settings such as `PHOTOPRISM_DARKTABLE_BLACKLIST` (default: "dng,cr3") and `PHOTOPRISM_DISABLE_DARKTABLE` (default: "false").
 
 ## Reporting Bugs ##
 

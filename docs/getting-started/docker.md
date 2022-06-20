@@ -84,7 +84,7 @@ be mounted as subfolders of `/photoprism/originals`:
 
 SQLite, cache, session, thumbnail, and sidecar files will be created in the *storage* folder:
 
-- it must always be configured as a volume mount so that you do not lose these files after a reboot or upgrade
+- it must always be configured as a volume mount so that you do not lose these files after a restart or upgrade
 - never configure the *storage* folder to be inside the *originals* folder unless the name starts with a `.` to indicate that it is hidden
 - we recommend placing the *storage* folder on a [local SSD drive](troubleshooting/performance.md#storage) for best performance
 - mounting [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) or using them inside the *storage* folder is currently not supported

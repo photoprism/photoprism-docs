@@ -143,12 +143,13 @@ volumes:
 
 Cache, session, thumbnail, and sidecar files will be created in the *storage* folder:
 
-- Never remove the volume from your `docker-compose.yml` file so that you don't lose these files after restarting or upgrading PhotoPrism
+- It must always be configured in your `docker-compose.yml` file so that you do not lose these files after a reboot or upgrade
+- Never configure the *storage* folder to be inside the *originals* folder unless the name starts with a `.` to indicate that it is hidden
 - We recommend placing the *storage* folder on a [local SSD drive](troubleshooting/performance.md#storage) for best performance
 - Don't mount [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) and do not use them inside the *storage* folder 
 
 !!! tldr ""
-    When moving your installation to another host, move the complete *storage* folder along with it.
+    Should you later move your instance to another host, the easiest and most time-saving way is to copy the entire *storage* folder, although some files may be recreated.
 
 ##### /photoprism/import #####
 

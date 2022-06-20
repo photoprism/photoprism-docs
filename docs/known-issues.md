@@ -19,7 +19,7 @@ It leads to increasingly longer indexing times and additional storage consumptio
 
 - [Config: Prevent nesting of "storage" folder inside "originals" unless hidden #1642](https://github.com/photoprism/photoprism/issues/1642)
 
-In practice, this will not be an issue as long as you follow our [documentation](getting-started/docker-compose.md) and [examples](https://dl.photoprism.app/docker/). Nevertheless, we intend to automatically detect and report such problems. Due to the flexible mapping of folders within a Docker container to host directories, this is not as easy as it seems and therefore not implemented yet.
+In practice, this will not be an issue as long as you [follow our documentation](getting-started/docker-compose.md#photoprismstorage) and [examples](https://dl.photoprism.app/docker/). Nevertheless, we intend to automatically detect and report such problems. Due to the flexible mapping of folders within a Docker container to host directories, this is not as easy as it seems and therefore not implemented yet.
 
 ### Symbolic Links
 

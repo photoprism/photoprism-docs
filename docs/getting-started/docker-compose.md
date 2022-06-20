@@ -149,7 +149,7 @@ Cache, session, thumbnail, and sidecar files will be created in the *storage* fo
 - mounting [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) or using them inside the *storage* folder is currently not supported
 
 !!! tldr ""
-    Should you later move your instance to another host, the easiest and most time-saving way is to copy the entire *storage* folder, although some files may be recreated.
+    Should you later want to move your instance to another host, the easiest and most time-saving way is to copy the entire *storage* folder along with your originals and database.
 
 ##### /photoprism/import #####
 

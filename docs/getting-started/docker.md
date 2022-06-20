@@ -92,7 +92,7 @@ SQLite, cache, session, thumbnail, and sidecar files will be created in the *sto
 Using our example, an [anonymous volume](https://docs.docker.com/storage/bind-mounts/) is created and mounted as *storage* folder. You can mount a specific host folder instead, just as with *originals*, which is better for production environments.
 
 !!! tldr ""
-    Should you later move your instance to another host, the easiest and most time-saving way is to copy the entire *storage* folder, although some files may be recreated.
+    Should you later want to move your instance to another host, the easiest and most time-saving way is to copy the entire *storage* folder along with your originals and database.
 
 ##### /photoprism/import #####
 

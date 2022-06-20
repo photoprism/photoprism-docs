@@ -15,7 +15,7 @@ Our upcoming release includes major user interface improvements, so you can more
 - Search: [Improved scrolling and render performance](https://github.com/photoprism/photoprism/pull/2433)
 - Search: [Pseudo-virtualized mosaic, cards, and list view](https://github.com/photoprism/photoprism/pull/2292)
 - Sharing: [Fixed top navigation spacing on small screens](https://github.com/photoprism/photoprism/pull/2430)
-- RAW: [Fixed resolution information for `.NEF` files](https://github.com/photoprism/photoprism/issues/2447)
+- RAW: [Fixed width and height information for `.NEF` files](https://github.com/photoprism/photoprism/issues/2447)
 - Videos: [Fixed incorrect NVIDIA hardware transcoding parameter](https://github.com/photoprism/photoprism/issues/2442)
 - Known Issues: [Added information on manual session invalidation](https://docs.photoprism.app/known-issues/#session-invalidation)
 - Translations: [Updated Dutch, Polish](https://github.com/photoprism/photoprism/pull/2435), [Japanese, and Chinese](https://github.com/photoprism/photoprism/pull/2445/files)

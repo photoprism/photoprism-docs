@@ -46,11 +46,11 @@ This error can occur when decoding JPEG images that contain consecutive 0xFF byt
 
 ### JPEG Size Limit
 
-If you want to limit the size of the generated JPEGs, you currently cannot use RawTherapee as a converter. In general, you can limit the size of the generated JPEG images when converting RAW files with the environment variable `PHOTOPRISM_JPEG_SIZE` or the CLI option `jpeg-size`. However, this does not work if you use RawTherapee as converter, because unlike Darktable it does not support CLI options to limit JPEG size:
+If you want to limit the size of the generated JPEGs, you currently cannot use RawTherapee as a converter. In general, you can limit the size of the generated JPEG images when converting RAW files with the environment variable `PHOTOPRISM_JPEG_SIZE` or the CLI parameter `--jpeg-size`. However, this does not work if you use RawTherapee as converter, because unlike Darktable it does not support CLI options to limit JPEG size:
 
 - [RAW: PHOTOPRISM_JPEG_SIZE is ignored when converting RAW with RawTherapee #2446](https://github.com/photoprism/photoprism/issues/2446)
 
-It would also be bad for indexing performance if PhotoPrism downsized the generated file after converting it with RawTherapee. As a result, this option is ignored when converting a RAW file with RawTherapee. Whether RawTherapee is used depends on additional settings such as `PHOTOPRISM_DARKTABLE_BLACKLIST` (default: .raf and .cr3 files) or `PHOTOPRISM_DISABLE_DARKTABLE` (default: false).
+It would also be bad for indexing performance if PhotoPrism downsized the generated file after converting it with RawTherapee. As a result, this option is ignored when converting a RAW file with RawTherapee. Whether RawTherapee is used depends on additional settings such as `PHOTOPRISM_DARKTABLE_BLACKLIST` (default: "dng,cr3") or `PHOTOPRISM_DISABLE_DARKTABLE` (default: "false").
 
 ## Reporting Bugs ##
 

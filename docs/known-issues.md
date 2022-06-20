@@ -33,7 +33,7 @@ This is a known limitation with the current implementation. One of the reasons f
 
 While our team is working on a new implementation as part of full multi-user support, you can manually delete `storage/config/sessions.json` and then restart your instance to revoke all sessions and require re-login.
 
-## File Format Support
+## File Support
 
 ### JPEG: Bad RST Marker
 
@@ -42,13 +42,15 @@ This error can occur when decoding JPEG images that contain consecutive 0xFF byt
 - [Bug: (invalid JPEG format: bad RST marker) #1673](https://github.com/photoprism/photoprism/issues/1673)
 - [image/jpeg: "bad RST marker" error when decoding #40130](https://github.com/golang/go/issues/40130)
 
-## Conversion
+## RAW Converters
 
-### PHOTOPRISM_JPEG_SIZE / jpeg-size
+### JPEG Size Limit
 
-PhotoPrism supports limiting the size of generated JPEG images when converting from RAW files using the environment variable `PHOTOPRISM_JPEG_SIZE` or the CLI option `jpeg-size`. However this currently does not work if Rawtherapee is used as converter, as it does not support any CLI options to limit the JPEG size (unlike Darktable). It would be bad for indexing performance if PhotoPrism would downsample the generated file after Rawtherapee finishes converting, therefore this option is ignored when a RAW file is converted with Rawtherapee. Depending on your settings such as `PHOTOPRISM_DARKTABLE_BLACKLIST` (default: .raf and .cr3 files) or `PHOTOPRISM_DISABLE_DARKTABLE` (default: false) you may or may not run into this issue. If you really need to limit the generated JPEG size the only available workaround for now is to not use Rawtherappee as converter.
+If you want to limit the size of the generated JPEGs, you currently cannot use RawTherapee as a converter. In general, you can limit the size of the generated JPEG images when converting RAW files with the environment variable `PHOTOPRISM_JPEG_SIZE` or the CLI option `jpeg-size`. However, this does not work if you use RawTherapee as converter, because unlike Darktable it does not support CLI options to limit JPEG size:
 
-- [RAW: PHOTOPRISM_JPEG_SIZE is ignored when converting RAW with RawTherapee](https://github.com/photoprism/photoprism/issues/2446)
+- [RAW: PHOTOPRISM_JPEG_SIZE is ignored when converting RAW with RawTherapee #2446](https://github.com/photoprism/photoprism/issues/2446)
+
+It would also be bad for indexing performance if PhotoPrism downsized the generated file after converting it with RawTherapee. As a result, this option is ignored when converting a RAW file with RawTherapee. Whether RawTherapee is used depends on additional settings such as `PHOTOPRISM_DARKTABLE_BLACKLIST` (default: .raf and .cr3 files) or `PHOTOPRISM_DISABLE_DARKTABLE` (default: false).
 
 ## Reporting Bugs ##
 

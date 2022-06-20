@@ -15,15 +15,15 @@ Our upcoming release includes major user interface improvements, so you can more
 - Search: [Improved scrolling and render performance](https://github.com/photoprism/photoprism/pull/2433)
 - Search: [Pseudo-virtualized mosaic, cards, and list view](https://github.com/photoprism/photoprism/pull/2292)
 - Sharing: [Fixed top navigation spacing on small screens](https://github.com/photoprism/photoprism/pull/2430)
-- RAW: [Fixed width and height information for `.NEF` files](https://github.com/photoprism/photoprism/issues/2447)
-- Videos: [Fixed incorrect NVIDIA hardware transcoding parameter](https://github.com/photoprism/photoprism/issues/2442)
-- Known Issues: [Added information on manual session invalidation](https://docs.photoprism.app/known-issues/#session-invalidation)
+- RAW: [Fixed indexing of actual width and height if Exif data is wrong, e.g. for `.NEF` files](https://github.com/photoprism/photoprism/issues/2447)
+- Videos: [Fixed incorrect NVIDIA hardware transcoding framerate](https://github.com/photoprism/photoprism/issues/2442)
+- Known Issues: [Added notes on manual session invalidation and other issues](https://docs.photoprism.app/known-issues/#session-invalidation)
 - Translations: [Updated Dutch, Polish](https://github.com/photoprism/photoprism/pull/2435), [Japanese, and Chinese](https://github.com/photoprism/photoprism/pull/2445/files)
 
 ### June 17, 2022 ###
 <span class="build">Build 220617-0402b8d3</span>
 
-We are constantly working to improve our app and give you an even better experience. That's a completely meaningless release note like you get them from other vendors all the time. We can't believe they get away with this.
+This update features updated translations as well as fixes for recently discovered issues.
 
 - Albums: [A deleted album is restored when trying to add a new album with the same name](https://github.com/photoprism/photoprism/issues/2429)
 - WebDAV: [Added support for auto indexing/importing in a sub-directory on a shared domain](https://github.com/photoprism/photoprism/pull/2392)

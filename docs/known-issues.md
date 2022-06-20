@@ -21,6 +21,14 @@ It leads to increasingly longer indexing times and additional storage consumptio
 
 In practice, this will not be an issue as long as you follow our [documentation](getting-started/docker-compose.md) and [examples](https://dl.photoprism.app/docker/). Nevertheless, we intend to automatically detect and report such problems. Due to the flexible mapping of folders within a Docker container to host directories, this is not as easy as it seems and therefore not implemented yet.
 
+### Symbolic Links
+
+Symbolic links to directories within the *originals* folder are supported if they are accessible from the environment your instance is running in. However, please note that file links are not supported at this time:
+
+- [Support indexing of symlinked files #1049](https://github.com/photoprism/photoprism/issues/1049)
+
+It is also not supported to mount a symbolic link as *storage* folder, or to use links inside the *storage* folder.
+
 ## User Authentication
 
 ### Session Invalidation

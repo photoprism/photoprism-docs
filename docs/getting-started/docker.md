@@ -82,16 +82,17 @@ be mounted as subfolders of `/photoprism/originals`:
 
 ##### /photoprism/storage #####
 
-SQLite, cache, session, thumbnail, and sidecar files will be created in the *storage* folder, which is mounted as
-an [anonymous volume](https://docs.docker.com/storage/bind-mounts/) in our example. You may instead mount a specific
-host folder as for *originals*, which is better for production environments.
+SQLite, cache, session, thumbnail, and sidecar files will be created in the *storage* folder:
 
-- Never remove the *storage* volume mount so that you don't lose these files after restarting or upgrading PhotoPrism
-- We recommend placing the *storage* folder on a [local SSD drive](troubleshooting/performance.md#storage) for best performance
-- Don't mount [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) and do not use them inside the *storage* folder
+- it must always be configured as a volume mount so that you do not lose these files after a reboot or upgrade
+- never configure the *storage* folder to be inside the *originals* folder unless the name starts with a `.` to indicate that it is hidden
+- we recommend placing the *storage* folder on a [local SSD drive](troubleshooting/performance.md#storage) for best performance
+- mounting [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) or using them inside the *storage* folder is currently not supported
+
+Using our example, an [anonymous volume](https://docs.docker.com/storage/bind-mounts/) is created and mounted as *storage* folder. You can mount a specific host folder instead, just as with *originals*, which is better for production environments.
 
 !!! tldr ""
-    When moving your installation to another host, move the complete *storage* folder along with it.
+    Should you later move your instance to another host, the easiest and most time-saving way is to copy the entire *storage* folder, although some files may be recreated.
 
 ##### /photoprism/import #####
 

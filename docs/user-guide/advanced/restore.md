@@ -13,5 +13,6 @@ After verifying that you have all you need, continue with the following restore-
 2. `photoprism restore -i [filename-to-your-sql-dump]`
 3. [Re-index (Complete rescan)](../../user-guide/library/originals.md) your library, in order to re-generate thumbnails.
 
+**Important**: When restoring the database, the login credentials will also be restored.
 
 Helpful information can be found on [GitHub](https://github.com/photoprism/photoprism/discussions/772) as well.

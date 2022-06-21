@@ -36,7 +36,7 @@ issue, or a misunderstanding in how the software works:
 - you are welcome to ask in our [Community Chat](https://link.photoprism.app/chat)
 - or post your question in [GitHub Discussions](https://link.photoprism.app/discussions)
 
-When reporting a problem, always include the software versions you are using and [other information about your environment](https://github.com/photoprism/photoprism/blob/develop/.github/ISSUE_TEMPLATE/bug_report.md)
+When reporting a problem, always include the software versions you are using and [other information about your environment](https://photoprism.app/kb/bug-report-template)
 such as [browser, browser plugins](../getting-started/troubleshooting/browsers.md), operating system, storage type,
 memory size, and processor.
 

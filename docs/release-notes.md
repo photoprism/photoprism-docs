@@ -8,13 +8,13 @@
     You may test upcoming features by changing the image tag name from `:latest` to `:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/), then pulling the most recent image, and finally restarting your instance as [described in our docs](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 220621-375270ef</span>
+<span class="build">Build 220621-3d277b2e</span>
 
 Our upcoming release includes major user interface improvements, so you can more quickly scroll through search results. You can also test this on our public demo at [demo.photoprism.app](https://try.photoprism.app/). Please note this is not a release candidate yet and more changes will follow.
 
 - Search: [Virtualized result views to improve scrolling and rendering performance](https://github.com/photoprism/photoprism/pull/2433)
 - Search: [Added aspect-ratio CSS fallback to support older browsers](https://github.com/photoprism/photoprism/pull/2448)
-- Search: [Maximum number of results has been increased to 100,000 files](https://github.com/photoprism/photoprism/commit/b6d32f828b6f4beea504e433f67c5395df178053)
+- API: [Maximum number of search results has been increased to 100,000 files](https://github.com/photoprism/photoprism/commit/b6d32f828b6f4beea504e433f67c5395df178053)
 - Sharing: [Fixed top navigation spacing on small screens](https://github.com/photoprism/photoprism/pull/2430)
 - RAW: [Fixed indexing of actual width and height if Exif data is wrong, e.g. for `.NEF` files](https://github.com/photoprism/photoprism/issues/2447)
 - Videos: [Fixed incorrect NVIDIA hardware transcoding framerate](https://github.com/photoprism/photoprism/issues/2442)

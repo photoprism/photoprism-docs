@@ -322,7 +322,7 @@ updated and inline documentation has been added to simplify installation.
 ### What exactly does the read-only mode? ###
 
 When you enable *read-only mode*, all features that require write permission to the *originals* folder
-are disabled, in particular import, upload, and delete. Set `PHOTOPRISM_READONLY` to `"true"`
+are disabled, for example import, upload, and delete. Set `PHOTOPRISM_READONLY` to `"true"`
 in `docker-compose.yml` for this. You can [mount a folder with the `:ro` flag](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-3) to make Docker block
 write operations as well.
 

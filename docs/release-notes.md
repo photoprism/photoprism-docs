@@ -16,7 +16,7 @@ Our upcoming release includes major user interface improvements, so you can more
 - Search: [Added aspect-ratio CSS fallback to support older browsers](https://github.com/photoprism/photoprism/pull/2448)
 - Sharing: [Fixed top navigation spacing on small screens](https://github.com/photoprism/photoprism/pull/2430)
 - API: [Maximum number of search results has been increased to 100,000 files](https://github.com/photoprism/photoprism/commit/b6d32f828b6f4beea504e433f67c5395df178053)
-- RAW: [Fixed indexing of actual width and height if Exif data is wrong, e.g. for `.NEF` files](https://github.com/photoprism/photoprism/issues/2447)
+- RAW: [Fixed actual width and height info if Exif data is wrong, e.g. for `.NEF` files](https://github.com/photoprism/photoprism/issues/2447)
 - Videos: [Fixed incorrect NVIDIA hardware transcoding framerate](https://github.com/photoprism/photoprism/issues/2442)
 - Known Issues: [Added notes on manual session invalidation and other issues](https://docs.photoprism.app/known-issues/#session-invalidation)
 - Translations: [Updated Dutch, Polish](https://github.com/photoprism/photoprism/pull/2435), [Japanese, and Chinese](https://github.com/photoprism/photoprism/pull/2445/files)

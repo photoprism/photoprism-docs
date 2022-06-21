@@ -15,11 +15,11 @@ Installation in a sub-directory on a shared domain is generally possible if you 
 
 ### Nested Storage Folder
 
-It leads to increasingly longer indexing times and additional storage consumption if the *storage* folder is configured to be inside the *originals* folder and does not start with a `.` to indicate that it is hidden. This is because nesting causes a loop by re-indexing previously created thumbnails and sidecar files:
+It is not supported to configure the *storage* folder to be inside the *originals* folder unless the name starts with a `.` to indicate that it is hidden. Otherwise, this will result in increasingly longer indexing times and high disk usage, since such nesting causes a loop by re-indexing previously created thumbnails and sidecar files:
 
 - [Config: Prevent nesting of "storage" folder inside "originals" unless hidden #1642](https://github.com/photoprism/photoprism/issues/1642)
 
-In practice, this will not be an issue as long as you [follow our documentation](getting-started/docker-compose.md#photoprismstorage) and [examples](https://dl.photoprism.app/docker/). Nevertheless, we intend to automatically detect and report such problems. Due to the flexible mapping of folders within a Docker container to host directories, this is not as easy as it seems and therefore not implemented yet.
+In practice, this is not a problem as long as you [follow our documentation](getting-started/docker-compose.md#photoprismstorage) and [examples](https://dl.photoprism.app/docker/). We intend to automatically detect, report, and prevent such issues in the future. Due to the flexible mapping of folders within a Docker container to host directories, this has not yet been implemented.
 
 ### Symbolic Links
 

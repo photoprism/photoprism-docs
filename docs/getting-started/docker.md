@@ -82,7 +82,7 @@ be mounted as subfolders of `/photoprism/originals`:
 
 ##### /photoprism/storage #####
 
-SQLite, cache, session, thumbnail, and sidecar files will be created in the *storage* folder:
+SQLite, cache, session, thumbnail and sidecar files are created in the *storage* folder:
 
 - a *storage* folder must always be mounted so that you do not lose these files after a restart or upgrade
 - never configure the *storage* folder to be inside the *originals* folder unless the name starts with a `.` to indicate that it is hidden

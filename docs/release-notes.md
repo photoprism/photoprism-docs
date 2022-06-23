@@ -8,7 +8,7 @@
     You may test upcoming features by changing the image tag name from `:latest` to `:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/), then pulling the most recent image, and finally restarting your instance as [described in our docs](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 220621-3d277b2e</span>
+<span class="build">Build 220623-15b1f572</span>
 
 Our upcoming release includes major user interface improvements, so you can more quickly scroll through search results. You can also test this on our public demo at [demo.photoprism.app](https://try.photoprism.app/). Please note this is not a release candidate yet and more changes will follow.
 
@@ -19,7 +19,7 @@ Our upcoming release includes major user interface improvements, so you can more
 - RAW: [Fixed actual width and height info if Exif data is wrong, e.g. for `.NEF` files](https://github.com/photoprism/photoprism/issues/2447)
 - Videos: [Fixed incorrect NVIDIA hardware transcoding framerate](https://github.com/photoprism/photoprism/issues/2442)
 - Known Issues: [Added notes on manual session invalidation and other issues](https://docs.photoprism.app/known-issues/#session-invalidation)
-- Translations: [Updated Dutch, Polish](https://github.com/photoprism/photoprism/pull/2435), [Japanese, and Chinese](https://github.com/photoprism/photoprism/pull/2445/files)
+- Translations: [Updated Arabic](https://github.com/photoprism/photoprism/pull/2458/files), [Dutch, Polish](https://github.com/photoprism/photoprism/pull/2435/files), [Japanese, and Chinese](https://github.com/photoprism/photoprism/pull/2445/files)
 
 ### June 17, 2022 ###
 <span class="build">Build 220617-0402b8d3</span>

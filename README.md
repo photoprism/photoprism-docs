@@ -6,10 +6,9 @@
 [![GitHub Discussions](https://img.shields.io/badge/ask-%20on%20github-4d6a91.svg)][ask]
 [![Twitter](https://img.shields.io/badge/follow-@photoprism_app-00acee.svg)][twitter]
 
-This repository contains the source files of [PhotoPrism's](https://photoprism.app/) documentation for editing in human-friendly Markdown files.
-They are intended to be parsed with the [Mkdocs documentation builder](https://www.mkdocs.org/) to generate the final HTML pages available at [docs.photoprism.app](https://docs.photoprism.app/).
+These source files are written in [human-friendly Markdown](https://squidfunk.github.io/mkdocs-material/reference/). They are meant to be parsed with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) to generate the final HTML pages published at [docs.photoprism.app](https://docs.photoprism.app/).
 
-Although arguably less convenient to work with than a Wiki, this Git repository enables us to easily merge pull requests and constantly improve our documentation in a transparent way.
+Although arguably less convenient to work with than a Wiki, this enables us to easily merge pull requests and constantly improve our documentation in a transparent way.
 Direct access to the source files in a revision control system is a big plus to ensure the quality of our documentation.
 
 ## Editing Content ##

@@ -10,7 +10,7 @@
 ### Development Preview ###
 <span class="build">Build 220623-15b1f572</span>
 
-Our upcoming release includes major user interface improvements, so you can more quickly scroll through search results. You can also test this on our public demo at [demo.photoprism.app](https://try.photoprism.app/). Please note this is not a release candidate yet and more changes will follow.
+Our upcoming release includes major user interface improvements so that scrolling through search results is faster and uses less memory. You can also test this on our public demo at [demo.photoprism.app](https://try.photoprism.app/). Please note this is not a release candidate yet and more changes will follow.
 
 - Search: [Virtualized result views to improve scrolling and rendering performance](https://github.com/photoprism/photoprism/pull/2433)
 - Search: [Added aspect-ratio CSS fallback to support older browsers](https://github.com/photoprism/photoprism/pull/2448)

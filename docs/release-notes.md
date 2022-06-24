@@ -8,7 +8,7 @@
     You may test upcoming features by changing the image tag name from `:latest` to `:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/), then pulling the most recent image, and finally restarting your instance as [described in our docs](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 220623-15b1f572</span>
+<span class="build">Build 220624-519f0c49</span>
 
 Our upcoming release includes major user interface improvements so that scrolling through search results is faster and uses less memory. You can also test this on our public demo at [demo.photoprism.app](https://try.photoprism.app/). Please note this is not a release candidate yet and more changes will follow.
 
@@ -17,6 +17,7 @@ Our upcoming release includes major user interface improvements so that scrollin
 - Sharing: [Fixed top navigation spacing on small screens](https://github.com/photoprism/photoprism/pull/2430)
 - API: [Maximum number of search results has been increased to 100,000 files](https://github.com/photoprism/photoprism/commit/b6d32f828b6f4beea504e433f67c5395df178053)
 - RAW: [Fixed actual width and height info if Exif data is wrong, e.g. for `.NEF` files](https://github.com/photoprism/photoprism/issues/2447)
+- Videos: [OGV, VP8, VP9, AV1, WebM, and HEVC can be streamed without transcoding](https://github.com/photoprism/photoprism/issues/2461)
 - Videos: [Fixed incorrect NVIDIA hardware transcoding framerate](https://github.com/photoprism/photoprism/issues/2442)
 - Known Issues: [Added notes on manual session invalidation and other issues](https://docs.photoprism.app/known-issues/#session-invalidation)
 - Translations: [Updated Arabic](https://github.com/photoprism/photoprism/pull/2458/files), [Dutch, Polish](https://github.com/photoprism/photoprism/pull/2435/files), [Japanese, and Chinese](https://github.com/photoprism/photoprism/pull/2445/files)

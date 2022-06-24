@@ -49,6 +49,7 @@ This error can occur when decoding JPEG images that contain consecutive 0xFF byt
 
 - [Bug: (invalid JPEG format: bad RST marker) #1673](https://github.com/photoprism/photoprism/issues/1673)
 - [image/jpeg: "bad RST marker" error when decoding #40130](https://github.com/golang/go/issues/40130)
+- [JPEG: Automatically check and repair broken/invalid images #2463](https://github.com/photoprism/photoprism/issues/2463)
 
 ## RAW Converters
 

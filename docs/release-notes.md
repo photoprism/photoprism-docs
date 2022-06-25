@@ -13,14 +13,13 @@
 Our upcoming release includes major user interface improvements so that scrolling through search results is faster and uses less memory. You can also test this on our public demo at [demo.photoprism.app](https://try.photoprism.app/). Please note this is not a release candidate yet and more changes will follow.
 
 - Search: [Virtualized result views to improve scrolling and rendering performance](https://github.com/photoprism/photoprism/pull/2433)
-- Search: [Added aspect-ratio CSS fallback to support older browsers](https://github.com/photoprism/photoprism/pull/2448)
-- Sharing: [Fixed top navigation spacing on small screens](https://github.com/photoprism/photoprism/pull/2430)
-- API: [Maximum number of search results has been increased to 100,000 files](https://github.com/photoprism/photoprism/commit/b6d32f828b6f4beea504e433f67c5395df178053)
-- RAW: [Fixed actual width and height info if Exif data is wrong, e.g. for `.NEF` files](https://github.com/photoprism/photoprism/issues/2447)
 - Videos: [OGV, VP8, VP9, AV1, WebM, and HEVC can be streamed without transcoding](https://github.com/photoprism/photoprism/issues/2461)
 - Videos: [Fixed incorrect NVIDIA hardware transcoding framerate](https://github.com/photoprism/photoprism/issues/2442)
+- Sharing: [Fixed top navigation toolbar spacing on small screens](https://github.com/photoprism/photoprism/pull/2430)
+- RAW: [Show actual width and height as Exif data can be wrong, e.g. for `.NEF` files](https://github.com/photoprism/photoprism/issues/2447)
 - WebDAV: [Endpoints have been disabled in public mode as they cannot be used](https://github.com/photoprism/photoprism/issues/2464)
-- Known Issues: [Added notes on manual session invalidation and other issues](https://docs.photoprism.app/known-issues/#session-invalidation)
+- API: [Maximum number of search results has been increased to 100,000 files](https://github.com/photoprism/photoprism/commit/b6d32f828b6f4beea504e433f67c5395df178053)
+- Docs: [Added notes on manual session invalidation and other known issues](https://docs.photoprism.app/known-issues/)
 - Translations: [Updated Arabic](https://github.com/photoprism/photoprism/pull/2458/files), [Dutch, Polish](https://github.com/photoprism/photoprism/pull/2435/files), [Japanese, and Chinese](https://github.com/photoprism/photoprism/pull/2445/files)
 
 ### June 17, 2022 ###

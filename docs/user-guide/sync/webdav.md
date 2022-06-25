@@ -10,9 +10,8 @@ After files have been transferred, you can [index](../library/originals.md) or [
 By default, indexing and importing start automatically after a safety delay when files have been uploaded using WebDAV.
 
 !!! tldr ""
-    You can disable WebDAV in [Advanced Settings](../settings/advanced.md). For security reasons, the built-in WebDAV
-    server is automatically disabled when running in [public mode](../../getting-started/config-options.md) without
-    authentication.
+    You can disable WebDAV in the [advanced settings](../settings/advanced.md). Since it requires write permissions and authentication, the built-in WebDAV server is automatically disabled when running in [read-only](../../getting-started/config-options.md#feature-flags) and/or [public mode](../../getting-started/config-options.md#authentication).
+
 
 !!! note ""
     It is also possible to [sync files with external WebDAV servers](../settings/sync.md) such as ownCloud or other PhotoPrism instances.

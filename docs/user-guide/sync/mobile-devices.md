@@ -3,9 +3,7 @@
 To sync photos and videos on your phone with PhotoPrism, you can use any app that supports WebDAV.
 
 !!! tldr ""
-    You can disable WebDAV in [Advanced Settings](../settings/advanced.md). For security reasons, the built-in WebDAV
-    server is automatically disabled when running in [public mode](../../getting-started/config-options.md) without
-    authentication.
+    You can disable WebDAV in the [advanced settings](../settings/advanced.md). Since it requires write permissions and authentication, the built-in WebDAV server is automatically disabled when running in [read-only](../../getting-started/config-options.md#feature-flags) and/or [public mode](../../getting-started/config-options.md#authentication).
 
 ## PhotoSync ##
 

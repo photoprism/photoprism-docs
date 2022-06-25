@@ -77,7 +77,7 @@ be mounted as subfolders of `/photoprism/originals`:
 
 !!! tldr ""
     If *read-only mode* is enabled, all features that require write permission to the *originals* folder
-    are disabled, for example import, upload, and delete. Run the app with `-e PHOTOPRISM_READONLY="true"` 
+    are disabled, e.g. [WebDAV](../user-guide/sync/webdav.md), uploading and deleting files. Run the app with `-e PHOTOPRISM_READONLY="true"` 
     for this. You can [mount a folder with the `:ro` flag](https://docs.docker.com/storage/bind-mounts/#use-a-read-only-bind-mount) to make Docker block write operations as well.
 
 ##### /photoprism/storage #####

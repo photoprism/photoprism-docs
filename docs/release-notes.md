@@ -8,7 +8,7 @@
     You may test upcoming features by changing the image tag name from `:latest` to `:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/), then pulling the most recent image, and finally restarting your instance as [described in our docs](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 220626-b0911205</span>
+<span class="build">Build 220627-161fa2b3</span>
 
 Our upcoming release includes major user interface improvements so that scrolling through search results is faster and uses less memory. You can also test this on our public demo at [demo.photoprism.app](https://try.photoprism.app/). Please note this is not a release candidate yet and more changes will follow.
 

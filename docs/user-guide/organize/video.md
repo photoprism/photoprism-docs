@@ -1,10 +1,6 @@
 # Browsing and Playing Videos
 
 Navigate to *Videos* to browse all your videos. To play a video, click :material-play:.
-Videos in MPEG-4 AVC format can be played natively by virtually all modern browsers.
-
-Other video formats are [automatically transcoded](#transcoding) in the background with [FFmpeg](https://www.ffmpeg.org/documentation.html)
-so that they can be played without causing any problems, even if your browser might support the format.
 
 Please note that not all [video and audio formats](https://caniuse.com/?search=video%20format) can be [played with every browser](../../getting-started/troubleshooting/browsers.md). For example, [AAC](https://caniuse.com/aac "Advanced Audio Coding") - the default audio codec for [MPEG-4 AVC / H.264](https://caniuse.com/avc "Advanced Video Coding") - is supported natively in Chrome, Safari, and Edge, while it is only optionally supported by the OS in Firefox and Opera.
 
@@ -22,7 +18,15 @@ You can limit a search to *Live Photos* by using the `type:live` filter or the k
 
 ## Transcoding ##
 
-Videos in formats other than AVC are transcoded on demand. This can cause unacceptable delays when large video files
+PhotoPrism may use [*ffmpeg*](https://www.ffmpeg.org/documentation.html) to transcode
+common video formats to [MPEG-4 AVC](https://en.wikipedia.org/wiki/MPEG-4).
+
+Videos in MPEG-4 AVC format can be played natively by virtually all modern browsers.
+
+OGV, VP8, VP9, AV1, WebM and HEVC videos will be streamed directly in case they are supported by your browser and if they do not exceed the configured [bitrate limit](../../getting-started/config-options.md#file-converters).
+Otherwise those formats will be transcoded as well.
+
+When needed videos are transcoded on demand. This can cause unacceptable delays when large video files
 are played for the first time.
 
 In that case, you may [run the following command in a terminal](../../getting-started/docker-compose.md#command-line-interface)

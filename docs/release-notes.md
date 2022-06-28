@@ -7,20 +7,21 @@
 !!! tldr ""
     You may test upcoming features by changing the image tag name from `:latest` to `:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/), then pulling the most recent image, and finally restarting your instance as [described in our docs](getting-started/updates.md).
 
-### Development Preview ###
-<span class="build">Build 220627-161fa2b3</span>
+### June 28, 2022 ###
+<span class="build">Build 220628-b47d71d6</span>
 
-Our upcoming release includes major user interface improvements so that scrolling through search results is faster and uses less memory. You can also test this on our public demo at [demo.photoprism.app](https://try.photoprism.app/). Please note this is not a release candidate yet and more changes will follow.
+With this update, the user interface offers a [faster and smoother scrolling experience](https://github.com/photoprism/photoprism/pull/2433), as well as [direct streaming](https://github.com/photoprism/photoprism/issues/2461) of OGV, VP8, VP9, AV1, WebM and HEVC videos if they do not exceed the [configured bitrate limit](https://docs.photoprism.app/getting-started/config-options/#file-converters). Special thanks to [Heiko Mathes](https://github.com/heikomat) and [Andre Carrera](https://github.com/acarrera94) for their contributions!
 
-- Search: [Virtualized result views to improve scrolling and rendering performance](https://github.com/photoprism/photoprism/pull/2433)
-- Videos: [OGV, VP8, VP9, AV1, WebM, and HEVC can be streamed without transcoding](https://github.com/photoprism/photoprism/issues/2461)
-- Videos: [Fixed incorrect NVIDIA hardware transcoding framerate](https://github.com/photoprism/photoprism/issues/2442)
-- Sharing: [Fixed top navigation toolbar spacing on small screens](https://github.com/photoprism/photoprism/pull/2430)
-- RAW: [Show actual width and height as Exif data can be wrong, e.g. for `.NEF` files](https://github.com/photoprism/photoprism/issues/2447)
+- UX: [Faster and smoother scrolling experience in albums and search results](https://github.com/photoprism/photoprism/pull/2433)
+- Videos: [Direct streaming of OGV, VP8, VP9, AV1, WebM, and HEVC where supported](https://github.com/photoprism/photoprism/issues/2461)
+- Videos: [Fixed incorrect frame rate when using NVIDIA hardware transcoding](https://github.com/photoprism/photoprism/issues/2442)
+- Sharing: [Fixed the spacing of the top navigation toolbar on small screens](https://github.com/photoprism/photoprism/pull/2430)
+- RAW: [Display actual dimensions as Exif metadata can be wrong, e.g. for `.NEF` files](https://github.com/photoprism/photoprism/issues/2447)
 - WebDAV: [Endpoints have been disabled in public mode as they cannot be used](https://github.com/photoprism/photoprism/issues/2464)
 - API: [Maximum number of search results has been increased to 100,000 files](https://github.com/photoprism/photoprism/commit/b6d32f828b6f4beea504e433f67c5395df178053)
-- Docs: [Added notes on manual session invalidation and other known issues](https://docs.photoprism.app/known-issues/)
-- Translations: [Updated Arabic](https://github.com/photoprism/photoprism/pull/2458/files), [Dutch, Polish](https://github.com/photoprism/photoprism/pull/2435/files), [Japanese, and Chinese](https://github.com/photoprism/photoprism/pull/2445/files)
+- CLI: [Config command also lists `disable-webdav` and `http-compression`](https://github.com/photoprism/photoprism/issues/2476)
+- Documentation: [Added notes about manual session invalidation and other known issues](https://docs.photoprism.app/known-issues/)
+- Translations: [Updated Arabic](https://github.com/photoprism/photoprism/pull/2458/files), [Dutch, Polish](https://github.com/photoprism/photoprism/pull/2435/files), [Japanese, Chinese](https://github.com/photoprism/photoprism/pull/2445/files), [French](https://github.com/photoprism/photoprism/commit/0f0d2b4df05ff0534c9435a7802e47672f0adcb7), [German, and Italian](https://github.com/photoprism/photoprism/commit/49b9c4afb76ea316620194142e836003b0298f23)
 
 ### June 17, 2022 ###
 <span class="build">Build 220617-0402b8d3</span>

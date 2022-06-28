@@ -5,6 +5,10 @@ common video formats to [MPEG-4 AVC](https://en.wikipedia.org/wiki/MPEG-4).
 This container / codec combination doesn't require transcoding as it can be played 
 natively by most modern browsers, see https://caniuse.com/mpeg4.
 
+OGV, VP8, VP9, AV1, WebM and HEVC videos will be streamed directly in case they are supported by your browser and if they do not exceed the configured [bitrate limit](../../getting-started/config-options.md#file-converters). 
+Otherwise those formats will be transcoded as well.
+
+
 For a list of codecs *ffmpeg* supports, run this command in a terminal:
 
 ```

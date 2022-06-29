@@ -5,7 +5,7 @@
     Your continued support [helps us provide regular updates](https://photoprism.app/membership) and services like [world maps](https://try.photoprism.app/places). Thank you! 💜
 
 !!! tldr ""
-    You may test upcoming features by changing the image tag name from `:latest` to `:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/), then pulling the most recent image, and finally restarting your instance as [described in our docs](getting-started/updates.md).
+    You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the latest version, and finally [restarting your instance](getting-started/updates.md).
 
 ### June 29, 2022 ###
 <span class="build">Build 220629-5d7448d2</span>

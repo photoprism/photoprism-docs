@@ -117,7 +117,7 @@ command like `make update`. See [Command-Line Interface](docker-compose.md#comma
 to learn more about terminal commands.
 
 !!! tldr ""
-    Running an image with `:latest` tag does not cause Docker to automatically download new images.
+    Even when you use an image with the `:latest` tag, Docker does not automatically download new images for you. You can either manually upgrade as shown above, or set up a service like [Watchtower](updates.md#watchtower) to get automatic updates.
 
 #### Config Examples ####
 

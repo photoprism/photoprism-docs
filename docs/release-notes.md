@@ -579,3 +579,7 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
 <span class="build">Build 201231-8e22fbf8</span>
 
 - Initial Stable Release
+
+### Getting Updates ###
+
+Even when you use an image with the `:latest` tag, Docker does not automatically download new images for you. To update, you can either [manually pull the most recent image](getting-started/updates.md) and restart, or set up a service like [Watchtower](getting-started/updates.md#watchtower) to get automatic updates.

@@ -70,7 +70,7 @@ services:
   ...
 
   mariadb:
-    image: mariadb:10.7
+    image: mariadb:10.8
     ...
     environment:
       MARIADB_AUTO_UPGRADE: "1"

@@ -47,21 +47,21 @@ The detail view.
 
 Improved UI with flat look, photo upload and powerful filters as well as new pages for searching places and labels.
 
-![](https://dl.photoprism.app/assets/wiki/screenshots/20190703-photoprism-search.jpg)
+![](https://dl.photoprism.app/img/docs/wiki/screenshots/20190703-photoprism-search.jpg)
 
-![](https://dl.photoprism.app/assets/wiki/screenshots/20190703-photoprism-map.jpg)
+![](https://dl.photoprism.app/img/docs/wiki/screenshots/20190703-photoprism-map.jpg)
 
-![](https://dl.photoprism.app/assets/wiki/screenshots/20190703-photoprism-map.jpg)
+![](https://dl.photoprism.app/img/docs/wiki/screenshots/20190703-photoprism-map.jpg)
 
 ## January 24, 2020 ##
 
-![](https://dl.photoprism.app/assets/wiki/screenshots/20200124-maps.jpg)
+![](https://dl.photoprism.app/img/docs/wiki/screenshots/20200124-maps.jpg)
 
-![](https://dl.photoprism.app/assets/wiki/screenshots/20200124-login.jpg)
+![](https://dl.photoprism.app/img/docs/wiki/screenshots/20200124-login.jpg)
 
-![](https://dl.photoprism.app/assets/wiki/screenshots/20200124-prism-context-menu.jpg)
+![](https://dl.photoprism.app/img/docs/wiki/screenshots/20200124-prism-context-menu.jpg)
 
-![](https://dl.photoprism.app/assets/wiki/screenshots/20200124-edit-photo-dialog.jpg)
+![](https://dl.photoprism.app/img/docs/wiki/screenshots/20200124-edit-photo-dialog.jpg)
 
 ## January 26, 2020 ##
 
@@ -69,11 +69,11 @@ Improved UI with flat look, photo upload and powerful filters as well as new pag
 
 ## June 24, 2020 ##
 
-![](https://dl.photoprism.app/assets/wiki/screenshots/20200624-preview.jpg)
+![](https://dl.photoprism.app/img/docs/wiki/screenshots/20200624-preview.jpg)
 
 ## January 21, 2021 ##
 
-![](https://dl.photoprism.app/assets/img/preview_2021.jpg)
+![](https://dl.photoprism.app/img/docs/preview_2021.jpg)
 
 ## October 18, 2021 ##
 

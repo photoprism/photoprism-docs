@@ -27,7 +27,7 @@ Our UI themes should all contain a color spectrum so that they look like a prism
 
 It's easiest to use the context menu for this:
 
-![context menu](https://dl.photoprism.app/assets/wiki/docs/prism-context-menu.jpg)
+![context menu](https://dl.photoprism.app/img/docs/wiki/docs/prism-context-menu.jpg)
 
 ## Links ##
 - [Screenshots](screenshots.md) - development of our user interface in time lapse ⏱

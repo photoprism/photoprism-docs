@@ -204,6 +204,10 @@ thousand files to index.
 MariaDB lacks some features that [MySQL Enterprise Edition](https://www.mysql.com/products/enterprise/) offers.
 On the other hand, MariaDB has many optimizations. It is also completely open-source.
 
+### I've configured an external database, but can't connect? ###
+
+Most often this happens when new users configure `localhost` or `127.0.0.1` as database server host, since these always point back to the current container or computer. So it is not possible to access an external service with such a hostname or an IP address starting with 127. It works only if it is used directly in the container or on the computer where the database server is running. Instead, you must use a hostname or IP address that is accessible from other machines and containers.
+
 ### Can you improve performance when using older or otherwise slow hardware? ###
 
 It is a known issue that the user interface and backend operations, especially face recognition, can be slow or even crash on older hardware due to a lack of resources. Like most applications, PhotoPrism has certain requirements and our development process does not include testing on unsupported or unusual hardware.

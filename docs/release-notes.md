@@ -10,7 +10,7 @@
 ### Development Preview ###
 <span class="build">Build 220703-18473e4d</span>
 
-- [Updated backend and frontend translations](https://translate.photoprism.app/)
+- [Updated backend and frontend translations](https://translate.photoprism.app/projects/photoprism/)
 
 ### June 29, 2022 ###
 <span class="build">Build 220629-5d7448d2</span>

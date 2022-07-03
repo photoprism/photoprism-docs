@@ -29,7 +29,7 @@ It's easiest to use the context menu for this:
 
 ![context menu](https://dl.photoprism.app/img/docs/wiki/docs/prism-context-menu.jpg)
 
-## Links ##
+## External Resources ##
 - [Screenshots](screenshots.md) - development of our user interface in time lapse ⏱
 - [The 7 pillars of design](http://thesign.it/Codemotion/Berlin2018.pdf) - slides by Raffaella Isidori (Codemotion Berlin 2018)
 - [A fork + fixes for Google's Material Design icons](https://www.npmjs.com/package/material-design-icons-iconfont)

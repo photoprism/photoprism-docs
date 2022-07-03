@@ -112,7 +112,8 @@ Source: https://gitcdn.xyz/cdn/Tony607/blog_statics/ce9c3391932e24655b78e27a5454
 ![http://www.asimovinstitute.org/wp-content/uploads/2016/09/neuralnetworks.png](img/neuralnetworks.png)
 Source: http://www.asimovinstitute.org/neural-network-zoo/
 
-## Links ##
+## External Resources ##
+
 - https://ai.facebook.com/blog/roberta-an-optimized-method-for-pretraining-self-supervised-nlp-systems/ - An optimized method for pretraining self-supervised NLP systems
 - https://github.com/zihangdai/xlnet - Generalized Autoregressive Pretraining for Language Understanding
 - https://pjreddie.com/darknet/yolo/ - real time image detection

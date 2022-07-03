@@ -10,7 +10,7 @@ It is not possible to statically link against the C library, but the [issue is k
 
 Our long-term goal is to become an open platform for machine learning research based on real-world photo collections.
 
-## Links ##
+## External Resources ##
 - https://tfhub.dev/ - TensorFlow Hub is a library for reusable machine learning modules
 - https://www.tensorflow.org/install/lang_c - TensorFlow for C
 - http://www.asimovinstitute.org/neural-network-zoo/ - types of neural networks explained

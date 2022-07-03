@@ -63,7 +63,7 @@ CMD photoprism start
 - https://forge.sh/ - Define and deploy multi-container apps in Kubernetes, from source
 - https://www.telepresence.io/ - a local development environment for a remote Kubernetes cluster
 
-## Links ##
+## External Resources ##
 - https://github.com/estesp/manifest-tool
 - https://github.com/docker/app
 - https://github.com/moby/moby

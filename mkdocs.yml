@@ -128,8 +128,7 @@ nav:
     - Translations:
         - Add Translations: developer-guide/translations-weblate.md
         - Legacy Method: developer-guide/translations.md
-    - Security Policy: security-policy.md
-    - User Interface:
+    - Web User Interface:
       - Introduction: developer-guide/ui/introduction.md
       - Screenshots: developer-guide/ui/screenshots.md
       - Components: developer-guide/ui/components.md
@@ -138,8 +137,8 @@ nav:
       - Browsers: developer-guide/ui/browsers.md
       - Interactive Maps: developer-guide/ui/maps.md
       - Infinite Scrolling: developer-guide/ui/infinite-scrolling.md
-    - Media Files:
-      - Formats: developer-guide/media/index.md
+    - Photo & Video Formats:
+      - Overview: developer-guide/media/index.md
       - Import: developer-guide/media/import.md
       - Abstraction: developer-guide/media/abstraction.md
       - Encryption: developer-guide/media/encryption.md
@@ -148,25 +147,28 @@ nav:
       - Videos: developer-guide/media/videos.md
       - Thumbnails: developer-guide/media/thumbnails.md
       - Samples: developer-guide/media/samples.md
-    - Metadata:
-      - Reverse Geocoding: developer-guide/metadata/geocoding.md
-      - Color Extraction: developer-guide/metadata/colors.md
+    - Picture Metadata:
       - Image Classification: developer-guide/metadata/classification.md
       - Face Recognition: developer-guide/metadata/face-recognition.md
-      - XMP: developer-guide/metadata/xmp.md
-      - EXIF: developer-guide/metadata/exif.md
-      - Edit EXIF: developer-guide/metadata/edit-exif.md
-    - Clients:
-      - Go: developer-guide/clients/go.md
-    - Checklists:
-      - Web Security: developer-guide/checklists/web-security.md
-    - Technologies:
+      - Reverse Geocoding: developer-guide/metadata/geocoding.md
+      - Color Detection: developer-guide/metadata/colors.md
+      - Adobe XMP: developer-guide/metadata/xmp.md
+      - Exif Info:
+        - Extraction: developer-guide/metadata/exif/index.md
+        - Editing: developer-guide/metadata/exif/edit.md
+    - Base Technologies:
       - YAML: developer-guide/technologies/yaml.md
       - Golang: developer-guide/technologies/golang.md
       - TensorFlow: developer-guide/technologies/tensorflow.md
       - Docker: developer-guide/technologies/docker.md
       - Broadway: developer-guide/technologies/broadway.md
       - External APIs: developer-guide/technologies/external-apis.md
+    - REST API Clients:
+      - Golang: developer-guide/clients/go.md
+    - Security:
+      - Testing Guide: developer-guide/security/index.md
+      - Secure Coding in Go: developer-guide/security/go.md
+      - Security Policy: developer-guide/security/policy.md
     - FAQ: developer-guide/faq.md
   - About:
       # - Funding: funding.md

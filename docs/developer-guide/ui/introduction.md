@@ -22,7 +22,7 @@ The full list of dependencies can be found in `frontend/package.json`. You need 
 
 A build can be triggered by running `npm run watch` (watches for changes and re-builds when needed) or `npm run build` (single build) in the **frontend directory**. [NPM](https://www.npmjs.com/) is the default package manager that comes with [NodeJS](https://nodejs.org/en/docs/guides/), a JavaScript run-time environment that executes JavaScript code outside of a browser.
 
-## Links ##
+## External Resources ##
 - https://developers.google.com/web/progressive-web-apps/
 - https://github.com/vuejs-templates/pwa - a progressive web app template for VueJS
 - https://hackernoon.com/a-progressive-web-app-in-vue-tutorial-part-1-the-vue-app-f9231b032a0b

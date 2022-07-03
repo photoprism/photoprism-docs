@@ -2,7 +2,7 @@ Since we're already linking against [TensorFlow](../technologies/tensorflow.md) 
 
 ![](https://www.facefirst.com/wp-content/uploads/2017/01/AdobeStock_123607404-copy.jpeg)
 
-## Links ##
+## External Resources ##
 - https://cheppers.com/deploying-distributed-face-recognition-application-kubernetes - Deploying a distributed face-recognition application with Kubernetes
 - http://dlib.net/ - Machine learning library, good for face recognition
 - https://github.com/Kagami/go-face - implements face recognition for Go using [dlib](http://dlib.net/)

@@ -6,7 +6,7 @@ https://github.com/spf13/afero
 - [Embedded Database + Bleve for search? #55](https://github.com/photoprism/photoprism/issues/55)
 - [Postgres support? #47](https://github.com/photoprism/photoprism/issues/47)
 
-## Links ##
+## External Resources ##
 - https://github.com/rclone/rclone - rsync for cloud storage (Google Drive, AWS, One Drive, ...)
 - https://github.com/minio - Object Storage for AI
 - [upper.io/db.v3](https://github.com/upper/db) - a productive data access layer for Go

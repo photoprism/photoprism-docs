@@ -272,3 +272,137 @@ div.appstore-buttons a {
     margin-left: 0.5em;
     margin-right: 0.5em;
 }
+
+/* IMAGES */
+
+img.center {
+    display: block;
+    margin: 0 auto;
+}
+
+img.right {
+    float: right;
+    margin: 0 0 0.8em 0.9em;
+}
+
+img.left {
+    float: left;
+    margin: 0 0.9em 0.8em 0;
+}
+
+img.tiny,
+img.xs {
+    min-width: 75px;
+    max-width: 125px;
+}
+
+img.small,
+img.sm {
+    min-width: 100px;
+    width: 20%;
+    max-width: 250px;
+}
+
+img.medium,
+img.md {
+    min-width: 75px;
+    width: 40%;
+    max-width: 400px;
+}
+
+img.large,
+img.lg {
+    min-width: 75px;
+    width: 60%;
+    max-width: 480px;
+}
+
+img.w20 {
+    max-width: 20%;
+}
+
+img.w25 {
+    max-width: 25%;
+}
+
+img.w33 {
+    max-width: 33.3333%;
+}
+
+img.w40 {
+    max-width: 40%;
+}
+
+img.w50 {
+    max-width: 40%;
+}
+
+img.w60 {
+    max-width: 60%;
+}
+
+img.w66 {
+    max-width: 66.6666%;
+}
+
+img.pt-2 {
+    padding-top: 15px !important;
+}
+
+img.pt-3 {
+    padding-top: 30px !important;
+}
+
+img.pt-4 {
+    padding-top: 40px !important;
+}
+
+img.pt-5 {
+    padding-top: 50px !important;
+}
+
+img.pt-6 {
+    padding-top: 60px !important;
+}
+
+img.pb-2 {
+    padding-bottom: 15px !important;
+}
+
+img.pb-3 {
+    padding-bottom: 30px !important;
+}
+
+img.pb-4 {
+    padding-bottom: 40px !important;
+}
+
+img.pb-5 {
+    padding-bottom: 50px !important;
+}
+
+img.pb-6 {
+    padding-bottom: 60px !important;
+}
+
+img.pb-7 {
+    padding-bottom: 70px !important;
+}
+
+img.pb-8 {
+    padding-bottom: 80px !important;
+}
+
+img.pb-9 {
+    padding-bottom: 90px !important;
+}
+
+img.pb-10 {
+    padding-bottom: 100px !important;
+}
+
+img.w100,
+img.full,
+img.fullwidth {
+    width: 100%;
+}

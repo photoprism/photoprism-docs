@@ -1,4 +1,4 @@
-# Reverse Geocoding API
+# Reverse Geocoding
 
 If enabled, our privacy-preserving reverse geocoding service provides global location information to enrich your photo and video metadata with details such as country, state, city, and category:
 

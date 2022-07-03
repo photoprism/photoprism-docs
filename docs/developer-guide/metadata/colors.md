@@ -75,6 +75,6 @@ See also https://github.com/lucasb-eyer/go-colorful#so-which-colorspace-should-i
 ## Issues ##
 - ~~[Improved color indexing #7](https://github.com/photoprism/photoprism/issues/7)~~
 
-## Links ##
+## External Resources ##
 - https://opencv.org/
 - https://github.com/RobCherry/vibrant

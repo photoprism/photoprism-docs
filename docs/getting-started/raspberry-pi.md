@@ -1,5 +1,8 @@
 # Running PhotoPrism on a Raspberry Pi
 
+The simplest path to running PhotoPrism on a Raspberry Pi is using the [PhotoPrismPi](https://github.com/guysoft/PhotoPrismPi) project, thanks to [Guy Sheffer](https://github.com/guysoft). This option allows you install an image on an SD card, plug that into the Pi and boot it. PhotoPrism will already be installed and running once you login. Instructions on how to get started are found [here](https://github.com/guysoft/PhotoPrismPi#how-to-use-it).
+
+
 Our [stable version and development preview](../release-notes.md) have been built into a single
 [multi-arch Docker image](https://hub.docker.com/r/photoprism/photoprism) for 64-bit AMD, Intel, and ARM processors.
 

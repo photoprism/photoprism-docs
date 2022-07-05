@@ -160,7 +160,7 @@ command and restart the `mariadb` service as described above.
 #### Corrupted Files ####
 
 If your database files get corrupted frequently, it is usually because they are stored on an unreliable device such
-as a USB flash drive, an SD card, or a shared network folder.
+as a USB flash drive, an SD card, or a shared network folder. These may also have [unexpected file size limitations](https://thegeekpage.com/fix-the-file-size-exceeds-the-limit-allowed-and-cannot-be-saved/), which is especially problematic for databases that do not split data into smaller files.
 
 - [ ] Never use the same database files with more than one server instance
 - [ ] To share a database over a network, run the database server directly on the remote server instead of sharing database files

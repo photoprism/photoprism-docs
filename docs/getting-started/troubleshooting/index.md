@@ -86,6 +86,7 @@ Fatal errors are often caused by one of the following conditions:
 - [ ] Your (virtual) server [disk is full](docker.md#disk-space) (add storage)
 - [ ] You have accidentally [mounted the wrong folders](../docker-compose.md#volumes) (update config and restart)
 - [ ] There is disk space left, but a usage or the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (change it)
+- [ ] You are using a [filesystem or network drive with a file size limit](https://thegeekpage.com/fix-the-file-size-exceeds-the-limit-allowed-and-cannot-be-saved/) (change settings or storage)
 - [ ] The *storage* folder [is not writable or mounted read-only](docker.md#file-permissions) (change [permissions](docker.md#file-permissions))
 - [ ] [Symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) were mounted or used within a *storage* folder (replace with actual paths)
 - [ ] The [server is low on memory](../index.md#system-requirements) (add memory)

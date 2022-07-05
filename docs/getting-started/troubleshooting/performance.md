@@ -42,7 +42,7 @@ Switching to SSDs makes a big difference, especially for write operations and wh
 big enough or can't be used.
 
 !!! note ""
-    Never store database files on an unreliable device such as a USB flash drive, an SD card, or a shared network folder.
+    Never store database files on an unreliable device such as a USB flash drive, SD card, or shared network folder. These may also have [unexpected file size limitations](https://thegeekpage.com/fix-the-file-size-exceeds-the-limit-allowed-and-cannot-be-saved/), which is especially problematic for databases that do not split data into smaller files.
 
 ## Memory ##
 

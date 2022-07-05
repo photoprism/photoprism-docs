@@ -3,7 +3,7 @@
 PhotoPrism is compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB 10.5.12+](https://mariadb.org/).
 Older databases using the same dialect, such as MySQL 8, may work but are not officially supported.
 
-Never store database files on a shared network drive or open them with two server instances at the same time.
+Never store database files on an unreliable device such as a USB flash drive, SD card, or shared network folder. These may also have [unexpected file size limitations](https://thegeekpage.com/fix-the-file-size-exceeds-the-limit-allowed-and-cannot-be-saved/), which is especially problematic for databases that do not split data into smaller files.
 
 !!! info
     Our [docker-compose.yml](https://dl.photoprism.app/docker/) examples include

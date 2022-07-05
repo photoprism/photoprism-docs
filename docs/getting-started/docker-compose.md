@@ -90,8 +90,8 @@ installed on your system. It is available for Mac, Linux, and Windows.
 Our example includes a pre-configured [MariaDB](https://mariadb.com/) database server. If you remove it 
 and provide no other database server credentials, SQLite database files will be created in the 
 *storage* folder. Local [SSD storage is best](troubleshooting/performance.md#storage) for databases of any kind.
-Never [store](troubleshooting/mariadb.md#corrupted-files) database files on an unreliable device such as a USB flash drive,
-an SD card, or a shared network folder.
+
+Never [store database files](troubleshooting/mariadb.md#corrupted-files) on an unreliable device such as a USB flash drive, SD card, or shared network folder. These may also have [unexpected file size limitations](https://thegeekpage.com/fix-the-file-size-exceeds-the-limit-allowed-and-cannot-be-saved/), which is especially problematic for databases that do not split data into smaller files.
 
 !!! tldr ""
     It is not possible to change the password via `MARIADB_PASSWORD` after the database has been started 

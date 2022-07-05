@@ -63,4 +63,4 @@ This may be necessary after upgrading, especially to new major versions.
 
 #### Automatic Indexing ####
 The Indexer is triggered automatically 15 Minutes after the originals folder has been edited via WebDAV.
-15 Minutes is the default value, it can be changed using the respective [config option](../../getting-started/config-options.md).
+15 Minutes is the default value, it can be changed using the respective [config option](../../getting-started/config-options.md#index-workers).

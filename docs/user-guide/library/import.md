@@ -28,7 +28,7 @@ This will save storage if you don't want to keep them as backup, or for any othe
 
 #### Automatic Import ####
 The Importer is triggered automatically 15 Minutes after the import folder has been edited via WebDAV.
-15 Minutes is the default value, it can be changed using the respective [config option](../../getting-started/config-options.md).
+15 Minutes is the default value, it can be changed using the respective [config option](../../getting-started/config-options.md#index-workers).
 
 
 !!! info "Can I use PhotoPrism to sort files into a configurable folder structure?"

@@ -6,8 +6,7 @@ PhotoPrism® is an AI-Powered Photos App for the Decentralized Web. It makes use
 
 ## Feature Overview
 
-Our mission is to provide the most user- and privacy-friendly solution to keep your pictures organized and accessible.
-PhotoPrism was designed from the ground up to run wherever you need it, without compromising freedom, privacy, or functionality:
+Our mission is to provide the most user- and privacy-friendly solution to keep your pictures organized and accessible. That's why PhotoPrism was built from the ground up to run wherever you need it, without compromising freedom, privacy, or functionality:
 
 * Browse [all your photos](https://docs.photoprism.app/user-guide/organize/browse/) and [videos](https://try.photoprism.app/videos) without worrying about [RAW conversion, duplicates or video formats](https://docs.photoprism.app/user-guide/settings/library/)
 * Easily find specific pictures using [powerful search filters](https://try.photoprism.app/browse?view=cards&q=flower%20color%3Ared)
@@ -24,7 +23,7 @@ PhotoPrism was designed from the ground up to run wherever you need it, without 
 
 ### 100% Privacy :lock:
 
-Because PhotoPrism is [**100% self-funded and independent**](https://photoprism.app/membership), we can promise you that we will [never sell your data](https://photoprism.app/privacy) and that we will [always be transparent](https://photoprism.app/terms) about our software and services. Your data will also never be shared with Google, Amazon, Facebook, or Apple unless you intentionally upload files to one of their services.
+Because PhotoPrism is [**100% self-funded and independent**](https://photoprism.app/membership), we can promise you that we will [never sell your data](https://photoprism.app/privacy) and that we will [always be transparent](https://photoprism.app/terms) about our software and services. Your data will never be shared with Google, Amazon, Microsoft or Apple unless you intentionally upload files to one of their services.
 
 <p class="center-align action-buttons">
   <a class="action-button" href="https://try.photoprism.app/" target="_blank">TRY OUR DEMO</a>

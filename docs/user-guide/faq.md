@@ -36,6 +36,9 @@
     A key difference between the open source and commercial license is that you get access to additional support and configuration options, as well as the right to customize functionality to your needs without having to publicly disclose your changes. We also work to optimize the standard configuration, feature set, and scalability of the Pro Edition to meet the requirements of professional users and organizations.
 
 ## User Interface ##
+??? question "Can I select multiple photos at once?"
+
+    Yes, you can [select multiple photos at once](./navigate.md#selection-mode-and-multi-select) 
 
 ??? question "Can I use trees for organizing my pictures and albums?"
 

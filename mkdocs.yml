@@ -303,4 +303,5 @@ markdown_extensions:
   - pymdownx.tilde
   - attr_list
   - abbr
+  - meta
   - md_in_html

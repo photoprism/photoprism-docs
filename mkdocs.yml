@@ -15,6 +15,7 @@ nav:
       - Unraid: getting-started/nas/unraid.md
       - openmediavault: getting-started/nas/openmediavault.md
     - Config Options: getting-started/config-options.md
+    - Quick Start: getting-started/first-steps.md
     - Getting Updates: getting-started/updates.md
     - Troubleshooting:
       - Checklists: getting-started/troubleshooting/index.md

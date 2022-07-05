@@ -5,7 +5,13 @@ All you need to have installed is a Web browser and
 [Docker](https://store.docker.com/search?type=edition&offering=community). 
 It is available for Mac, Linux, and Windows.
 
-When setup is complete, you can start [indexing your pictures](../user-guide/library/index.md).
+PhotoPrism also runs on [PikaPods](./cloud/pikapods.md) or [DigitalOcean](./cloud/digitalocean.md),
+[Raspberry Pi](./raspberry-pi.md), [FreeBSD](../getting-started/freebsd.md), and many
+[NAS devices](./nas/synology.md).
+
+When setup is complete, follow our [quick start guide](./first-steps.md) to get your photos into PhotoPrism.
+
+<!-- When setup is complete, you can start [indexing your pictures](../user-guide/library/index.md).
 Be patient, this may take a while depending on your server hardware and how many files you have.
 
 Your [photos](../user-guide/organize/browse.md) and [videos](../user-guide/organize/video.md) 
@@ -15,7 +21,7 @@ The counts in the navigation are constantly updated, so you can follow the progr
 In case some of your pictures are still missing after indexing has been completed, 
 they might be in [Review](../user-guide/organize/review.md) due to low quality or incomplete metadata. 
 You can turn this and other features off in [Settings](../user-guide/settings/general.md), 
-depending on your specific use case.
+depending on your specific use case. -->
 
 !!! tldr ""
     Our [stable version and development preview](https://docs.photoprism.app/release-notes/) have been built into a

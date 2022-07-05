@@ -105,9 +105,10 @@ organized by year and month.
     and [WebDAV](../user-guide/sync/webdav.md) remains possible, unless [read-only mode](config-options.md)
     is enabled or the [features have been disabled](../user-guide/settings/general.md).
 
-### Step 2: Index your library ###
+### Step 2: First steps ###
+Follow our [quick start guide](./first-steps.md).
 
-!!! note ""
+<!-- !!! note ""
     Ensure [there is enough disk space available](troubleshooting/docker.md#disk-space) for creating thumbnails and [verify filesystem permissions](troubleshooting/docker.md#file-permissions)
     before starting to index: Files in the *originals* folder must be readable, while the *storage* folder
     including all subdirectories must be readable and writeable.
@@ -124,7 +125,7 @@ Open the *Logs* tab in *Library* to watch the indexer working.
 
 Of course, you can continue using your favorite tools for processing RAW files, editing metadata,
 or importing new shots. Go to *Library* and click *Start* to update the index after files have been
-changed, added, or removed. This can also be automated using CLI commands and a [scheduler](https://dl.photoprism.app/docker/scheduler/).
+changed, added, or removed. This can also be automated using CLI commands and a [scheduler](https://dl.photoprism.app/docker/scheduler/). -->
 
 Easy, isn't it?
 

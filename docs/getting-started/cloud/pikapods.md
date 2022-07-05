@@ -46,8 +46,10 @@ PhotoPrism is now fully set up and ready to use. To log in, click *Open Pod*, en
 
 ![Screenshot](img/pikapods-overview.png)
 
-## Next Steps
+## First Steps
+1. Configure [library](../../user-guide/settings/library.md) and [advanced settings](../../user-guide/settings/advanced.md) according to your needs.
+2. [Choose](../../user-guide/library/index.md) whether you want to [index your originals](../../user-guide/library/originals.md) so that the existing file and folder names are preserved, or [import them](../../user-guide/library/import.md) so that they are automatically organized by year and month.
+3. To add new pictures, you can either copy them to the *import* or *originals* folder [e.g. using WebDAV](../../user-guide/sync/webdav.md), or [upload them with a browser](../../user-guide/library/upload.md), which will import them automatically after upload.
+4. Start [indexing](../../user-guide/library/originals.md) or [importing](../../user-guide/library/import.md)
+5. Finally, set up [automatic syncing](../../user-guide/sync/mobile-devices.md) from your mobile phone and install the [Progressive Web App (PWA)](../../user-guide/pwa.md) on your desktop, tablet, and phone home screens as needed.
 
-1. [Choose](../../user-guide/library/index.md) whether you want to [index your originals](../../user-guide/library/originals.md) so that the existing file and folder names are preserved, or [import them](../../user-guide/library/import.md) so that they are automatically organized by year and month.
-2. To add pictures, you can either copy them to the *import* or *originals* folder [using WebDAV](../../user-guide/sync/webdav.md), or [upload them with a browser](../../user-guide/library/upload.md), which will import them automatically after upload.
-3. Finally, set up [automatic syncing](../../user-guide/sync/mobile-devices.md) from your mobile phone and install the [Progressive Web App (PWA)](../../user-guide/pwa.md) on your desktop, tablet, and phone home screens as needed.

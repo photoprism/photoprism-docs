@@ -28,3 +28,6 @@ PhotoPrism offers three methods for stacking files:
 * :material-clock-outline: Place & Time 
 * :material-fingerprint: Unique ID
 * :material-format-list-numbered-rtl: Sequential Name
+
+!!! attention ""
+    Changing stacking settings won't unstack already stacked files.

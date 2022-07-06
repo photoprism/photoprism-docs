@@ -9,7 +9,7 @@ PhotoPrism also runs on [PikaPods](./cloud/pikapods.md) or [DigitalOcean](./clou
 [Raspberry Pi](./raspberry-pi.md), [FreeBSD](../getting-started/freebsd.md), and many
 [NAS devices](./nas/synology.md).
 
-When setup is complete, follow our [quick start guide](./first-steps.md) to get your photos into PhotoPrism.
+Once the initial setup is complete, a [tutorial will guide you](first-steps.md) through the first steps to ensure that your library is indexed according to your individual preferences.
 
 <!-- When setup is complete, you can start [indexing your pictures](../user-guide/library/index.md).
 Be patient, this may take a while depending on your server hardware and how many files you have.

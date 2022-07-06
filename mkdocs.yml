@@ -4,9 +4,8 @@ nav:
     - Features: index.md
     - Setup: getting-started/index.md
     - Docker Compose: getting-started/docker-compose.md
-    - Pure Docker: getting-started/docker.md
+    - Config Options: getting-started/config-options.md
     - Raspberry Pi: getting-started/raspberry-pi.md
-    - FreeBSD: getting-started/freebsd.md
     - Cloud:
       - PikaPods App: getting-started/cloud/pikapods.md
       - DigitalOcean: getting-started/cloud/digitalocean.md
@@ -14,8 +13,9 @@ nav:
       - Synology: getting-started/nas/synology.md
       - Unraid: getting-started/nas/unraid.md
       - openmediavault: getting-started/nas/openmediavault.md
-    - Config Options: getting-started/config-options.md
-    - Quick Start: getting-started/first-steps.md
+    - Ports:
+        - FreeBSD: getting-started/freebsd.md
+    - First Steps 👣: getting-started/first-steps.md
     - Getting Updates: getting-started/updates.md
     - Troubleshooting:
       - Checklists: getting-started/troubleshooting/index.md
@@ -36,8 +36,9 @@ nav:
       - SWAG: getting-started/proxies/swag.md
       - Haproxy: getting-started/proxies/haproxy.md
     - Advanced:
-      - Transcoding: getting-started/advanced/transcoding.md
+      - Pure Docker: getting-started/docker.md
       - Kubernetes: getting-started/advanced/kubernetes.md
+      - Transcoding: getting-started/advanced/transcoding.md
       - Backups: getting-started/advanced/backups.md
       - Databases: getting-started/advanced/databases.md
       - Caching: getting-started/advanced/caching.md

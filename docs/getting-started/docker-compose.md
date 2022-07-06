@@ -197,7 +197,9 @@ docker-compose up -d
 ```
 
 ### Step 3: First steps ###
-Follow our [quick start guide](./first-steps.md).
+
+Our [tutorial will guide you](first-steps.md) through the necessary steps to ensure that your library is indexed according to your individual preferences.
+
 <!--
 !!! note ""
     Ensure [there is enough disk space available](troubleshooting/docker.md#disk-space) for creating thumbnails and [verify filesystem permissions](troubleshooting/docker.md#file-permissions)

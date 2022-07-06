@@ -1,27 +1,10 @@
 # Setup
 
-We recommend running PhotoPrism with [Docker Compose](docker-compose.md).
-All you need to have installed is a Web browser and 
-[Docker](https://store.docker.com/search?type=edition&offering=community). 
-It is available for Mac, Linux, and Windows.
+PhotoPrism can be installed on all operating systems supporting [Docker](https://store.docker.com/search?type=edition&offering=community), as well as [FreeBSD](../getting-started/freebsd.md), [Raspberry Pi](raspberry-pi.md), and many [NAS devices](nas/synology.md). It is also available in the cloud on [PikaPods](cloud/pikapods.md) and [DigitalOcean](cloud/digitalocean.md).
 
-PhotoPrism also runs on [PikaPods](./cloud/pikapods.md) or [DigitalOcean](./cloud/digitalocean.md),
-[Raspberry Pi](./raspberry-pi.md), [FreeBSD](../getting-started/freebsd.md), and many
-[NAS devices](./nas/synology.md).
+We recommend running PhotoPrism with [Docker Compose](docker-compose.md) when hosting it on a private server. All you need to have installed is a Web browser and [Docker](https://store.docker.com/search?type=edition&offering=community). It is available for Mac, Linux, and Windows.
 
 Once the initial setup is complete, a [tutorial will guide you](first-steps.md) through the first steps to ensure that your library is indexed according to your individual preferences.
-
-<!-- When setup is complete, you can start [indexing your pictures](../user-guide/library/index.md).
-Be patient, this may take a while depending on your server hardware and how many files you have.
-
-Your [photos](../user-guide/organize/browse.md) and [videos](../user-guide/organize/video.md) 
-will successively become visible in search results and other parts of the user interface.
-The counts in the navigation are constantly updated, so you can follow the progress.
-
-In case some of your pictures are still missing after indexing has been completed, 
-they might be in [Review](../user-guide/organize/review.md) due to low quality or incomplete metadata. 
-You can turn this and other features off in [Settings](../user-guide/settings/general.md), 
-depending on your specific use case. -->
 
 !!! tldr ""
     Our [stable version and development preview](https://docs.photoprism.app/release-notes/) have been built into a

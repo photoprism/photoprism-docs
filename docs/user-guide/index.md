@@ -11,18 +11,6 @@ It is available for Mac, Linux, and Windows. PhotoPrism also runs on [PikaPods](
 
 Once the [initial setup](../getting-started/index.md) is complete, a [tutorial will guide you](../getting-started/first-steps.md) through the first steps to ensure that your library is indexed according to your individual preferences.
 
-<!--When setup is complete, you can start [indexing your pictures](library/index.md).
-Be patient, this may take a while depending on your server hardware and how many files you have.
-
-Your [photos](organize/browse.md) and [videos](organize/video.md) will successively become visible 
-in search results and other parts of the user interface. The counts in the navigation are constantly 
-updated, so you can follow the progress.
-
-In case some of your pictures are still missing after indexing has been completed,
-they might be in [Review](organize/review.md) due to low quality or incomplete metadata.
-You can turn this and other features off in [Settings](settings/general.md), depending on
-your specific use case. -->
-
 ## Getting Support ##
 
 If you need help installing our software at home, you can [join us on Reddit](https://link.photoprism.app/reddit), ask in our [Community Chat](https://link.photoprism.app/chat), or post your question in [GitHub Discussions](https://link.photoprism.app/discussions). Common problems can be quickly diagnosed and solved using the [Troubleshooting Checklists](https://docs.photoprism.app/getting-started/troubleshooting/) in [Getting Started](https://docs.photoprism.app/getting-started/).

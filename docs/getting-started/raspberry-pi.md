@@ -1,8 +1,5 @@
 # Running PhotoPrism on a Raspberry Pi
 
-The simplest path to running PhotoPrism on a Raspberry Pi is using the [PhotoPrismPi](https://github.com/guysoft/PhotoPrismPi) project, thanks to [Guy Sheffer](https://github.com/guysoft). This option allows you install an image on an SD card, plug that into the Pi and boot it. PhotoPrism will already be installed and running once you login. Instructions on how to get started are found [here](https://github.com/guysoft/PhotoPrismPi#how-to-use-it).
-
-
 Our [stable version and development preview](../release-notes.md) have been built into a single
 [multi-arch Docker image](https://hub.docker.com/r/photoprism/photoprism) for 64-bit AMD, Intel, and ARM processors.
 
@@ -10,8 +7,8 @@ As a result, Raspberry Pi 3 / 4, Apple Silicon, and other ARM64-based devices ca
 enjoy the same functionality, and can follow the regular [installation instructions](docker-compose.md)
 after going through a short list of [system requirements](#system-requirements).
 
-!!! info "Raspberry Pi OS"
-    Running 64-bit Docker images under Raspbian Linux requires a minimum of technical experience to perform the necessary [configuration changes](#raspberry-pi-os). This is because it is a 32-bit operating system with merely a 64-bit kernel to ensure compatibility with legacy software. For details and alternatives, see [architecture-specific notes](#architecture-specific-notes).
+!!! verified "PhotoPrismPi"
+    The easiest way to run PhotoPrism on a Raspberry Pi is with [PhotoPrismPi](https://github.com/guysoft/PhotoPrismPi) by [Guy Sheffer](https://github.com/guysoft). Simply install the image on an SD card, plug it into the Pi and boot it. Once you log in, PhotoPrism is already installed and running!
 
 ### System Requirements ###
 
@@ -42,7 +39,7 @@ after going through a short list of [system requirements](#system-requirements).
 | Development Preview | `photoprism/photoprism:preview` | 
 | MariaDB             | `arm64v8/mariadb:10.8`          | 
 
-Be aware that running 64-bit Docker images under Raspbian requires a minimum of technical experience to perform the necessary [configuration changes](#raspberry-pi-os). If you don't need compatibility with 32-bit legacy software, we recommend choosing a standard 64-bit Linux distribution instead as it will save you time and requires less experience:
+Running 64-bit Docker images under Raspbian Linux requires a minimum of technical experience to perform the necessary [configuration changes](#raspberry-pi-os). This is because it is a 32-bit operating system with merely a 64-bit kernel to ensure compatibility with legacy software.  If you don't need compatibility with 32-bit apps, we recommend choosing a standard 64-bit Linux distribution instead as it will save you time and requires less experience:
 
 - [Raspberry Pi Debian](https://raspi.debian.net/)
 - [Ubuntu for Raspberry Pi](https://ubuntu.com/raspberry-pi)

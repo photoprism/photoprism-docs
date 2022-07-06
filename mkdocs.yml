@@ -7,7 +7,7 @@ nav:
     - Config Options: getting-started/config-options.md
     - Raspberry Pi: getting-started/raspberry-pi.md
     - Cloud:
-      - PikaPods App: getting-started/cloud/pikapods.md
+      - PikaPods: getting-started/cloud/pikapods.md
       - DigitalOcean: getting-started/cloud/digitalocean.md
     - NAS Devices:
       - Synology: getting-started/nas/synology.md

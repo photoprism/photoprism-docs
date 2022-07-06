@@ -2,7 +2,7 @@
 
 PhotoPrism can be installed on all operating systems supporting [Docker](https://store.docker.com/search?type=edition&offering=community), as well as [FreeBSD](../getting-started/freebsd.md), [Raspberry Pi](raspberry-pi.md), and many [NAS devices](nas/synology.md). It is also available in the cloud on [PikaPods](cloud/pikapods.md) and [DigitalOcean](cloud/digitalocean.md).
 
-We recommend running PhotoPrism with [Docker Compose](docker-compose.md) when hosting it on a private server. All you need to have installed is a Web browser and [Docker](https://store.docker.com/search?type=edition&offering=community). It is available for Mac, Linux, and Windows.
+We recommend running PhotoPrism with [Docker Compose](docker-compose.md) when hosting it on a private server. It is available for Mac, Linux, and Windows.
 
 Once the initial setup is complete, a [tutorial will guide you](first-steps.md) through the first steps to ensure that your library is indexed according to your individual preferences.
 

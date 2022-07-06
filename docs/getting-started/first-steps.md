@@ -7,7 +7,7 @@ Once the [initial setup](index.md) is complete, there are only two more steps be
 
 If you want to use folders that already exist on your computer, make sure you configured them as *originals* respectively *import* folders during setup.
 
-To add new pictures, you can either copy them to the *import* or *originals* folder, for example [using WebDAV](../user-guide/sync/webdav.md), or [upload them using a browser](../user-guide/library/upload.md), which will automatically import them once uploaded.
+To add new pictures, you can either copy them to the *originals* or *import* folder, for example [using WebDAV](../user-guide/sync/webdav.md), or [upload them using a browser](../user-guide/library/upload.md), which will automatically import them once uploaded.
 
 Then start [indexing](../user-guide/library/originals.md) or [importing](../user-guide/library/import.md), depending on which strategy you have chosen.
 

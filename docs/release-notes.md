@@ -8,9 +8,20 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 220703-18473e4d</span>
+<span class="build">Build 220707-a73ee4821</span>
 
-- [Updated backend and frontend translations](https://translate.photoprism.app/projects/photoprism/)
+Our preview includes indexing and authentication enhancements as well as [updated translations](https://translate.photoprism.app/projects/photoprism/). Thank you to everyone who helps with testing! We appreciate it very much.
+
+What's new?
+
+- [Index: Added support for indexing and importing symbolically linked files](https://github.com/photoprism/photoprism/issues/1049)
+- [Thumbs: Creating redundant JPEG files is skipped to save disk space](https://github.com/photoprism/photoprism/issues/1874)
+- [Config: Added `PHOTOPRISM_AUTH_MODE` option to select authentication mode](https://github.com/photoprism/photoprism/commit/591a6562707457045f504defba69e693afccba65)
+
+Breaking Changes
+
+- [Config: `PHOTOPRISM_AUTH` has been removed in favor of `PHOTOPRISM_AUTH_MODE`](https://github.com/photoprism/photoprism/commit/591a6562707457045f504defba69e693afccba65)
+- [Config: `PHOTOPRISM_PUBLIC` has been deprecated in favor of `PHOTOPRISM_AUTH_MODE`](https://github.com/photoprism/photoprism/commit/591a6562707457045f504defba69e693afccba65)
 
 ### June 29, 2022 ###
 <span class="build">Build 220629-5d7448d2</span>

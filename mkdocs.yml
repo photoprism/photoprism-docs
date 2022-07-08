@@ -130,16 +130,7 @@ nav:
     - Translations:
         - Add Translations: developer-guide/translations-weblate.md
         - Legacy Method: developer-guide/translations.md
-    - Web User Interface:
-      - Introduction: developer-guide/ui/introduction.md
-      - Screenshots: developer-guide/ui/screenshots.md
-      - Components: developer-guide/ui/components.md
-      - Design: developer-guide/ui/design.md
-      - REST API: developer-guide/ui/rest-api.md
-      - Browsers: developer-guide/ui/browsers.md
-      - Interactive Maps: developer-guide/ui/maps.md
-      - Infinite Scrolling: developer-guide/ui/infinite-scrolling.md
-    - Photo & Video Formats:
+    - Media Files:
       - Overview: developer-guide/media/index.md
       - Import: developer-guide/media/import.md
       - Abstraction: developer-guide/media/abstraction.md
@@ -149,7 +140,7 @@ nav:
       - Videos: developer-guide/media/videos.md
       - Thumbnails: developer-guide/media/thumbnails.md
       - Samples: developer-guide/media/samples.md
-    - Picture Metadata:
+    - Media Metadata:
       - Image Classification: developer-guide/metadata/classification.md
       - Face Recognition: developer-guide/metadata/face-recognition.md
       - Reverse Geocoding: developer-guide/metadata/geocoding.md
@@ -158,15 +149,25 @@ nav:
       - Exif Info:
         - Extraction: developer-guide/metadata/exif/index.md
         - Editing: developer-guide/metadata/exif/edit.md
-    - Base Technologies:
-      - YAML: developer-guide/technologies/yaml.md
-      - Golang: developer-guide/technologies/golang.md
-      - TensorFlow: developer-guide/technologies/tensorflow.md
-      - Docker: developer-guide/technologies/docker.md
-      - Broadway: developer-guide/technologies/broadway.md
-      - External APIs: developer-guide/technologies/external-apis.md
-    - REST API Clients:
-      - Golang: developer-guide/clients/go.md
+    - Web User Interface:
+      - Introduction: developer-guide/ui/introduction.md
+      - Screenshots: developer-guide/ui/screenshots.md
+      - Components: developer-guide/ui/components.md
+      - Design: developer-guide/ui/design.md
+      - Browsers: developer-guide/ui/browsers.md
+      - Interactive Maps: developer-guide/ui/maps.md
+      - Infinite Scrolling: developer-guide/ui/infinite-scrolling.md
+    - Web Service API:
+      - Introduction: developer-guide/api/index.md
+      - Clients:
+        - Golang: developer-guide/api/clients/go.md
+    - Technologies:
+        - YAML: developer-guide/technologies/yaml.md
+        - Golang: developer-guide/technologies/golang.md
+        - TensorFlow: developer-guide/technologies/tensorflow.md
+        - Docker: developer-guide/technologies/docker.md
+        - Broadway: developer-guide/technologies/broadway.md
+        - External APIs: developer-guide/technologies/external-apis.md
     - Security:
       - Testing Guide: developer-guide/security/index.md
       - Secure Coding in Go: developer-guide/security/go.md

@@ -28,6 +28,10 @@ Advanced users may adjust [additional parameters](https://github.com/photoprism/
 !!! info "Windows and macOS"
     If you are using *Docker Desktop* on Windows or macOS, remember to increase the [total memory available](../img/docker-resources-advanced.jpg) for Docker services. Otherwise, they may run out of resources and cannot benefit from a larger cache size. In case PhotoPrism and MariaDB are running in a virtual machine, its memory size should be increased as well. Restart for changes to take effect.
 
+## Windows ##
+
+↪ [Solving Windows-Specific Issues](windows.md)
+
 ## Storage ##
 
 Local Solid-State Drives (SSDs) are [best for databases](https://mariadb.com/de/resources/blog/how-to-tune-mariadb-write-performance/)

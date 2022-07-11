@@ -24,6 +24,7 @@ nav:
       - MariaDB: getting-started/troubleshooting/mariadb.md
       - Browsers: getting-started/troubleshooting/browsers.md
       - Performance: getting-started/troubleshooting/performance.md
+      - Windows: getting-started/troubleshooting/windows.md
     # - Support: getting-started/support.md
     - Remote Access:
       - Tailscale VPN: getting-started/vpn/tailscale.md
@@ -108,7 +109,7 @@ nav:
       - Flickr: user-guide/use-cases/flickr.md
       #- Link directories from remote:
     - Advanced:
-      - Backups: getting-started/advanced/backups.md
+      - Backups: user-guide/advanced/backups.md
       - Restore: user-guide/advanced/restore.md
       - Metadata Export: user-guide/advanced/export.md
       - Folders: user-guide/advanced/folders.md

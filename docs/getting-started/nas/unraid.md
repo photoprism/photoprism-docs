@@ -2,7 +2,7 @@
 
 We recommend following this great tutorial from IBRACORP to install PhotoPrism on Unraid:
 
-https://youtu.be/WMNsO-0BuG8
+↪ <https://youtu.be/WMNsO-0BuG8>
 
 !!! info ""
     You are welcome to ask for help in our [community chat](https://link.photoprism.app/chat).

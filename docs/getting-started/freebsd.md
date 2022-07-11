@@ -1,7 +1,5 @@
 # Running PhotoPrism On FreeBSD
 
-*Note: This is contributed content. Click the edit link to perform changes and send a pull request.*
-
 For FreeBSD / FreeNAS users, an unofficial [PhotoPrism port](https://github.com/huo-ju/photoprism-freebsd-port) 
 is available.
 
@@ -11,6 +9,9 @@ The port will compile and install libtensorflow 1.15.2 and build `photoprism` fr
     You are welcome to ask for help in our [community chat](https://link.photoprism.app/chat).
     [Sponsors](https://photoprism.app/membership) receive direct [technical support](https://photoprism.app/contact) via email.
     Before submitting a support request, try to [determine the cause of your problem](troubleshooting/index.md).
+
+!!! quote ""
+    Help improve this page! You can contribute by clicking :material-pencil: to send a pull request with your changes.
 
 **1. Clone or download the port:**
 

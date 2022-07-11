@@ -1,7 +1,5 @@
 # Running PhotoPrism on a Synology NAS
 
-*Note: This is contributed content intended for advanced users. If you find any errors or want to improve something, click :material-pencil: to make changes and send a pull request.*
-
 Visit the [Synology Knowledge Base](https://kb.synology.com/en-us/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have)
 to learn what [kind of CPU](../troubleshooting/performance.md#server-cpu) and how much memory your device has.
 We [recommend](../index.md#system-requirements) hosting PhotoPrism on a 64-bit system with **at least 2 cores** and

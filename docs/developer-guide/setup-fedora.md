@@ -1,6 +1,6 @@
 # Development Environment (Fedora 32)
 
-*Note: This is contributed content intended for advanced users. If you find any errors or want to improve something, click :material-pencil: to make changes and send a pull request.*
+*Note: This is contributed content intended for developers. You can contribute by clicking :material-pencil: to send a pull request with your changes.*
 
 Before you start, make sure you have [Git](https://git-scm.com/downloads) and `Development Tools` installed on your system (git, gcc, g++, llvm, cmake, etc...).
 

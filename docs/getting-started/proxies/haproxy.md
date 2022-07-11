@@ -1,6 +1,7 @@
-*Note: This is contributed content and may be outdated. Click the edit link to perform changes and send a pull request.*
+# Using HAPROXY as Reverse Proxy
 
-# HAPROXY Example Configuration
+!!! quote ""
+    Help improve this page! You can contribute by clicking :material-pencil: to send a pull request with your changes.
 
 ```bigquery
 #frontend connection handling

@@ -1,5 +1,8 @@
 # Creating Backups
 
+!!! quote ""
+    Help improve this page! You can contribute by clicking :material-pencil: to send a pull request with your changes.
+
 A full backup of your PhotoPrism instance includes:
 
 1. All content from your `originals` folder

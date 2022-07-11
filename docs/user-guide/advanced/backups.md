@@ -1,4 +1,7 @@
-## Backup Command
+# Creating Backups
+
+!!! quote ""
+    Help improve this page! You can contribute by clicking :material-pencil: to send a pull request with your changes.
 
 PhotoPrism automatically creates the album and photo backup YAML files.
 If you want to update album backups or create a database backup you can use the backup command:
@@ -12,3 +15,4 @@ If you want to update album backups or create a database backup you can use the 
 * -f = overwrite existing backup files
 * A custom index sql backup FILENAME may be passed as first argument. Use - for stdout.
 
+See also: [Getting Started > Advanced > Backups](../../getting-started/advanced/backups.md)

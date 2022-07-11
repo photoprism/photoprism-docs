@@ -1,4 +1,4 @@
-# Restoring from backup
+# Restoring Backups
 
 In order to fully restore your PhotoPrism instance you need the following:
 

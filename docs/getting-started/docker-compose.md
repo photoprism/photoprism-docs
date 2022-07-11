@@ -62,7 +62,7 @@ installed on your system. It is available for Mac, Linux, and Windows.
     [https://dl.photoprism.app/docker/windows/docker-compose.yml](https://dl.photoprism.app/docker/windows/docker-compose.yml) :material-download:
 
     Windows Pro users should [disable](img/docker-disable-wsl2.jpg) the WSL 2 based engine in *Docker Settings > General* 
-    so that they can mount drives other than `C:`. This will enable Hyper-V, which 
+    so that they can mount drives other than `C:`. [^1] This will enable Hyper-V, which 
     [Microsoft doesn't offer](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements) 
     to its Windows Home customers. [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
     uses dynamic memory allocation with WSL 2. It is important to explicitly [increase the Docker memory limit to 4 GB](img/docker-resources-advanced.jpg) or more when using 
@@ -164,7 +164,7 @@ organized by year and month.
 
 ### Step 2: Start the server ###
 
-Open a terminal and change to the folder in which the `docker-compose.yml` file has been saved.[^1]
+Open a terminal and change to the folder in which the `docker-compose.yml` file has been saved.[^2]
 Run this command to start the application and database services in the background:
 
 ```bash
@@ -309,4 +309,5 @@ PhotoPrism's command-line interface is well suited for job automation using a
 *[read-only]: write protected
 *[filesystem]: contains your files and folders
 
-[^1]: The default [Docker Compose](https://docs.docker.com/compose/) config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running the `docker-compose` command in the same directory. Config files for other apps or instances should be placed in separate folders.
+[^1]: <https://rominirani.com/docker-on-windows-mounting-host-directories-d96f3f056a2c>
+[^2]: The default [Docker Compose](https://docs.docker.com/compose/) config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running the `docker-compose` command in the same directory. Config files for other apps or instances should be placed in separate folders.

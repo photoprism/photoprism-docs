@@ -79,6 +79,8 @@ docker-compose up
 
 ↪ [Performance Tips](performance.md)
 
+↪ [Solving Windows-Specific Issues](windows.md)
+
 ### Fatal Server Errors ###
 
 Fatal errors are often caused by one of the following conditions:

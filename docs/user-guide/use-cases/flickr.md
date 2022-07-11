@@ -1,5 +1,8 @@
 # Migrate from Flickr #
 
+!!! quote ""
+    Help improve this page! You can contribute by clicking :material-pencil: to send a pull request with your changes.
+
 ## Transfer Files ##
 
 1. Go to https://www.flickr.com/account

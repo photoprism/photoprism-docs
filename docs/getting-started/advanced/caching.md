@@ -1,6 +1,6 @@
 # Optimizing Cache Performance
 
-*Note: This is contributed content intended for advanced users. If you find any errors or want to improve something, click :material-pencil: to make changes and send a pull request.*
+*Note: This is contributed content intended for advanced users. You can contribute by clicking :material-pencil: to send a pull request with your changes.*
 
 Some users might want to place the thumbnail cache on a separate, faster file
 system while keeping the actual photo files on large, slow bulk storage. This

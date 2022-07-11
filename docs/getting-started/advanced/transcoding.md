@@ -1,6 +1,6 @@
 # Video Transcoding
 
-*Note: This is contributed content intended for advanced users. If you find any errors or want to improve something, click :material-pencil: to make changes and send a pull request.*
+*Note: This is contributed content intended for advanced users. You can contribute by clicking :material-pencil: to send a pull request with your changes.*
 
 The encoder used by FFmpeg can be configured within your `docker-compose.yml` config file.  
 

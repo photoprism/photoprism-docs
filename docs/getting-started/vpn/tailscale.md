@@ -1,6 +1,7 @@
 # Tailscale VPN
 
-*Note: This is contributed content and work in progress. Click the edit link to perform changes and send a pull request.*
+!!! quote ""
+    Help improve this page! You can contribute by clicking :material-pencil: to send a pull request with your changes.
 
 1. Open the [Tailscale website](https://tailscale.com/) and Select Use Tailscale button. 
 

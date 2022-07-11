@@ -1,10 +1,10 @@
-
 ## Extraction
+
 PhotoPrism aims to extract as much metadata from your original files as possible.
 
 This is an ongoing task. If you are using certain standard exif or xmp fields that are not supported yet, feel free to open an [issue](https://github.com/photoprism/photoprism/issues) or pull request.
 
-###Supported Exiftool & XMP Tags
+### Supported Exiftool & XMP Tags
 
 PhotoPrism uses [exiftool](https://exiftool.org/) to extract metadata from different file formats like EXIF, XMP, IPTC and more.
 

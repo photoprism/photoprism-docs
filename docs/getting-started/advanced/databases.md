@@ -51,6 +51,8 @@ services:
 
 ## Database Migrations ##
 
+*Note: This is contributed content intended for advanced users. If you find any errors or want to improve something, click :material-pencil: to make changes and send a pull request.*
+
 ### MariaDB to Sqlite ###
 
 - Install <https://github.com/techouse/mysql-to-sqlite3> on your host.

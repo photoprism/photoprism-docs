@@ -1,4 +1,5 @@
 ## Backup Command
+
 PhotoPrism automatically creates the album and photo backup YAML files.
 If you want to update album backups or create a database backup you can use the backup command:
 

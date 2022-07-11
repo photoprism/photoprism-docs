@@ -1,5 +1,7 @@
 # Development Environment (Fedora 32)
 
+*Note: This is contributed content intended for advanced users. If you find any errors or want to improve something, click :material-pencil: to make changes and send a pull request.*
+
 Before you start, make sure you have [Git](https://git-scm.com/downloads) and `Development Tools` installed on your system (git, gcc, g++, llvm, cmake, etc...).
 
 Instead of using Docker, you can create your own development environment.

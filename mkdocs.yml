@@ -163,7 +163,7 @@ nav:
       - Clients:
         - Golang: developer-guide/api/clients/go.md
     - Index Database:
-      - Entity-Relationship Diagram: developer-guide/database/schema.md
+      - Entity Diagram: developer-guide/database/schema.md
     - Technologies:
       - YAML: developer-guide/technologies/yaml.md
       - Golang: developer-guide/technologies/golang.md

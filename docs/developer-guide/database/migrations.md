@@ -6,7 +6,7 @@
 
 ## Show Migration Status
 
-Run the `photoprism migrations ls` command in a terminal to see a list of all migrations:
+Run the `photoprism migrations ls` command in a terminal to see a list of all migrations and their current status:
 
 ```
 $ photoprism migrations ls
@@ -36,14 +36,6 @@ $ photoprism migrations ls
 |-----------------|---------|---------------------|---------------------|--------|
 ```
 
-## Retry Failed Migrations
-
-To automatically retry previously failed migrations, use the `-f` flag:
-
-```
-$ photoprism migrations run -f
-```
-
 ## Run Specific Migrations
 
 To explicitly re-run specific migrations, you can pass them as arguments to the `photoprism migrations run` command:
@@ -54,4 +46,12 @@ $ photoprism migrations run 20220521-000003
 INFO[2022-07-12T11:45:29Z] migrate: 20220521-000003 successful [12.967654ms] 
 INFO[2022-07-12T11:45:29Z] migration completed in 40.89123ms            
 INFO[2022-07-12T11:45:29Z] closed database connection 
+```
+
+## Retry Failed Migrations
+
+To automatically retry previously failed migrations, pass the `-f` flag to the `photoprism migrations run` command:
+
+```
+$ photoprism migrations run -f
 ```

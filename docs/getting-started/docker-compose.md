@@ -258,8 +258,8 @@ docker-compose exec photoprism photoprism backup --help
 ```
 
 !!! tip ""
-    When using Docker Compose, you can prepend commands like `docker-compose exec [service] [command]` to run them in a container.
-    Should this fail with *no container found*, make sure that the app has been started, you have specified an existing service (typically `photoprism`) and you are in the folder where the `docker-compose.yml` file is located.
+    When using *Docker Compose*, you can prepend commands like `docker-compose exec [service] [command]` to run them in a service container.
+    Should this fail with *no container found*, make sure the service has been started, you have specified an existing service (usually `photoprism`) and you are in the folder where the `docker-compose.yml` file is located.
 
 PhotoPrism's command-line interface is well suited for job automation using a
 [scheduler](https://dl.photoprism.app/docker/scheduler/).

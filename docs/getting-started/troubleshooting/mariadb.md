@@ -106,6 +106,8 @@ docker-compose exec photoprism photoprism migrations run -f
 
 The `-f` flag instructs the `photoprism migrations run` subcommand to re-run previously failed migrations. Use `--help` to see the command help.
 
+Additional migration command examples can be found in the [Developer Guide](../../developer-guide/database/migrations.md).
+
 ##### Complete Rescan #####
 
 We recommend that you **re-index your pictures after a schema migration**, especially if problems persist. You can either start a [rescan from the user interface](../../user-guide/library/originals.md) by navigating to *Library* > *Index*, checking "Complete Rescan", and then clicking "Start", or by running this command in a terminal:

@@ -181,9 +181,7 @@ docker exec -ti photoprism photoprism backup --help
 ```
 
 !!! tip ""
-    Prefixing commands with `docker exec -ti [container name]` runs them inside an app container.
-    If this fails with *no container found*, make sure the app has been started and 
-    its container has the same name.
+    When using *Docker*, you can prepend commands like `docker exec -ti [container] [command]` to run them in a container. Should this fail with *no container found*, make sure the container has been started and you have specified an existing container name or id.
 
 PhotoPrism's command-line interface is well suited for job automation using a
 [scheduler](https://dl.photoprism.app/docker/scheduler/).

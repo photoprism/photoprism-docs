@@ -4,6 +4,7 @@ nav:
     - Features: index.md
     - Setup: getting-started/index.md
     - Docker Compose: getting-started/docker-compose.md
+    - Pure Docker: getting-started/docker.md
     - Config Options: getting-started/config-options.md
     - Raspberry Pi: getting-started/raspberry-pi.md
     - Cloud:
@@ -37,7 +38,6 @@ nav:
       - SWAG: getting-started/proxies/swag.md
       - Haproxy: getting-started/proxies/haproxy.md
     - Advanced:
-      - Pure Docker: getting-started/docker.md
       - Kubernetes: getting-started/advanced/kubernetes.md
       - Transcoding: getting-started/advanced/transcoding.md
       - Backups: getting-started/advanced/backups.md

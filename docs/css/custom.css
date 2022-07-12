@@ -101,6 +101,9 @@ header.md-header .md-ellipsis {
     cursor: zoom-in;
 }
 
+/* Fix for Mermaid SVG bug */
+.mermaid svg { height: auto; }
+
 .md-typeset .admonition.verified,
 .md-typeset details.verified {
     border-color: #7c4dff;

@@ -162,6 +162,8 @@ nav:
       - Introduction: developer-guide/api/index.md
       - Clients:
         - Golang: developer-guide/api/clients/go.md
+    - Index Database:
+      - Entity-Relationship Diagram: developer-guide/database/schema.md
     - Technologies:
       - YAML: developer-guide/technologies/yaml.md
       - Golang: developer-guide/technologies/golang.md
@@ -189,6 +191,7 @@ extra_css:
 # External links.
 extra:
   generator: false
+  homepage: https://photoprism.app
   alternate:
     - name: 🇬🇧 English
       link: /
@@ -297,14 +300,18 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.snippets:
       check_paths: true
-  - pymdownx.superfences
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.tasklist:
       custom_checkbox: true
       clickable_checkbox: true
-  - pymdownx.tilde
+  - md_in_html
   - attr_list
+  - tables
   - abbr
   - meta
-  - md_in_html

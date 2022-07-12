@@ -163,6 +163,8 @@ nav:
       - Clients:
         - Golang: developer-guide/api/clients/go.md
     - Index Database:
+      - Schema: developer-guide/database/index.md
+      - Migrations: developer-guide/database/migrations.md
       - Entity Diagram: developer-guide/database/schema.md
     - Technologies:
       - YAML: developer-guide/technologies/yaml.md

@@ -1,5 +1,7 @@
 # Database Schema
 
+*Please keep in mind that some information may be outdated or missing, as these docs were automatically generated from the source code. You can contribute by clicking :material-pencil: to send a pull request with your changes.*
+
 ## Entity Relationships
 
 ↪ [Entity-Relationship Diagram](schema.md)
@@ -13,6 +15,3 @@
 ## MariaDB SQL
 
 ↪ [mariadb.sql](https://raw.githubusercontent.com/photoprism/photoprism/develop/internal/entity/schema/mariadb.sql)
-
-!!! example ""
-    Please note that some information may be outdated or missing, as this documentation is automatically generated from the source code. You can contribute by clicking :material-pencil: to send a pull request with your changes.

@@ -165,7 +165,7 @@ nav:
     - Index Database:
       - Schema: developer-guide/database/index.md
       - Migrations: developer-guide/database/migrations.md
-      - Entity Diagram: developer-guide/database/schema.md
+      - Diagram: developer-guide/database/schema.md
     - Technologies:
       - YAML: developer-guide/technologies/yaml.md
       - Golang: developer-guide/technologies/golang.md

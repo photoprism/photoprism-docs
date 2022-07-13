@@ -98,7 +98,7 @@ nav:
       - Albums: user-guide/share/index.md
     - Remote Sync:
       - WebDAV Access: user-guide/sync/webdav.md
-      - Mobile Device Sync: user-guide/sync/mobile-devices.md
+      - Mobile Devices: user-guide/sync/mobile-devices.md
       - Dropbox Sync: user-guide/sync/dropbox.md
     - Settings:
       - General: user-guide/settings/general.md

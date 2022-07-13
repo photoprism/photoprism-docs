@@ -1,7 +1,6 @@
-# Search #
-PhotoPrism's powerful search enables you to easily find specific photos and videos.
+# Using Search Filters
 
-You can search for all kind of things:
+PhotoPrism's powerful search filters let you easily find specific photos and videos, for example:
 
 * People on the photo
 * Objects that are displayed on the photo

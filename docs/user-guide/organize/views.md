@@ -1,5 +1,6 @@
-# Views #
-PhotoPrism provides you three beautiful views to enjoy your photos and videos.
+# Search Result Views
+
+PhotoPrism offers you three different views to browse your photos and videos:
 
 === "Card View"
 

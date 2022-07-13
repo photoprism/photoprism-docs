@@ -72,10 +72,10 @@ nav:
     # - WebDAV Sync
     #    - Nextcloud: user-guide/nextcloud.md
     - Browsing Pictures:
-      - Navigate: user-guide/navigate.md
-      - Views: user-guide/organize/views.md
-      - Search: user-guide/organize/search.md
-      - Sections: user-guide/organize/browse.md
+      - Overview: user-guide/navigate.md
+      - Features and Sections: user-guide/organize/browse.md
+      - Search Result Views: user-guide/organize/views.md
+      - Using Search Filters: user-guide/organize/search.md
     - Organizing Pictures:
       - Albums: user-guide/organize/albums.md
       - People: user-guide/organize/people.md
@@ -100,10 +100,6 @@ nav:
       - WebDAV: user-guide/sync/webdav.md
       - Mobile Devices: user-guide/sync/mobile-devices.md
       - Dropbox: user-guide/sync/dropbox.md
-    - Cloud Migration:
-      - Google Photos: user-guide/use-cases/google.md
-      - Apple Photos: user-guide/use-cases/apple.md
-      - Flickr: user-guide/use-cases/flickr.md
     - Settings:
       - General: user-guide/settings/general.md
       - Library: user-guide/settings/library.md
@@ -116,6 +112,10 @@ nav:
       - Metadata Export: user-guide/advanced/export.md
       - Folder Overview: user-guide/advanced/folders.md
       #- Commands: user-guide/advanced/commands.md
+    - Cloud Migration:
+      - Google Photos: user-guide/use-cases/google.md
+      - Apple Photos: user-guide/use-cases/apple.md
+      - Flickr: user-guide/use-cases/flickr.md
     - Mobile App (PWA): user-guide/pwa.md
     - Release Notes: release-notes.md
     - FAQ: user-guide/faq.md

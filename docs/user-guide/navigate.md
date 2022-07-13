@@ -1,6 +1,6 @@
-# Navigate #
-Photo and video search is based on the following components. Note that all pages are fully responsive, 
-our screenshots show the user-interface in a desktop browser with medium resolution.
+# Browsing Your Pictures #
+
+The user interface for browsing your images is based on the following components. Our screenshots generally show pages in a medium-resolution desktop browser. All pages are fully responsive, which means they may appear differently on mobile devices.
 
 ![Screenshot](img/nav1edited.png){ class="shadow" }
 

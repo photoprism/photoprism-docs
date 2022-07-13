@@ -1,4 +1,4 @@
-# Indexing Originals #
+# Indexing Your Originals #
 
 !!! info ""
     If you're using PhotoPrism for the first time, make sure your photo and video 

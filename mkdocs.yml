@@ -37,7 +37,7 @@ nav:
       - Apache 2.4: getting-started/proxies/apache-2.md
       - SWAG: getting-started/proxies/swag.md
       - Haproxy: getting-started/proxies/haproxy.md
-    - Advanced:
+    - Advanced Topics:
       - Kubernetes: getting-started/advanced/kubernetes.md
       - Transcoding: getting-started/advanced/transcoding.md
       - Backups: getting-started/advanced/backups.md
@@ -46,22 +46,22 @@ nav:
       - Scalability: getting-started/advanced/scalability.md
       - Database Setup: getting-started/advanced/databases.md
       - Index Migrations:
-          - Database Schema: getting-started/advanced/migrations/index.md
-          - SQLite to MariaDB: getting-started/advanced/migrations/sqlite-to-mariadb.md
-          - MariaDB to SQLite: getting-started/advanced/migrations/mariadb-to-sqlite.md
+        - Migrate Manually: getting-started/advanced/migrations/index.md
+        - SQLite to MariaDB: getting-started/advanced/migrations/sqlite-to-mariadb.md
+        - MariaDB to SQLite: getting-started/advanced/migrations/mariadb-to-sqlite.md
     - Known Issues: known-issues.md
     - FAQ: getting-started/faq.md
   - User Guide:
     - Introduction: user-guide/index.md
     # - Setting up: user-guide/setup.md
-    - Library:
+    - Your Library:
       - Introduction: user-guide/library/index.md
-      - Index Originals: user-guide/library/originals.md
-      - Import Files: user-guide/library/import.md
-      - Duplicates: user-guide/library/duplicates.md
-      - Metadata: user-guide/advanced/metadata.md
-      - Web Upload: user-guide/library/upload.md
-      - WebDAV Sync: user-guide/library/webdav.md
+      - Indexing Originals: user-guide/library/originals.md
+      - Importing Files: user-guide/library/import.md
+      - Duplicate Files: user-guide/library/duplicates.md
+      - Picture Metadata: user-guide/advanced/metadata.md
+      - Web File Upload: user-guide/library/upload.md
+      - WebDAV File Sync: user-guide/library/webdav.md
       - File Browser: user-guide/library/files.md
       #- Import from camera: user-guide.md
       #- Import from Facebook: user-guide.md
@@ -71,12 +71,12 @@ nav:
     # - Sync and Back Up:
     # - WebDAV Sync
     #    - Nextcloud: user-guide/nextcloud.md
-    - Browse & Search:
+    - Browsing Pictures:
       - Navigate: user-guide/navigate.md
       - Views: user-guide/organize/views.md
       - Search: user-guide/organize/search.md
       - Sections: user-guide/organize/browse.md
-    - Organize:
+    - Organizing Pictures:
       - Albums: user-guide/organize/albums.md
       - People: user-guide/organize/people.md
       - Labels: user-guide/organize/labels.md
@@ -94,29 +94,27 @@ nav:
       - Folders: user-guide/organize/folders.md
       - Panoramas: user-guide/organize/panoramas.md
       - Scans: user-guide/organize/scans.md
-    - Share:
-      - Album Link: user-guide/share/index.md
-    - Sync:
+    - Link Sharing:
+      - Albums: user-guide/share/index.md
+    - Remote Sync:
       - WebDAV: user-guide/sync/webdav.md
       - Mobile Devices: user-guide/sync/mobile-devices.md
       - Dropbox: user-guide/sync/dropbox.md
+    - Cloud Migration:
+      - Google Photos: user-guide/use-cases/google.md
+      - Apple Photos: user-guide/use-cases/apple.md
+      - Flickr: user-guide/use-cases/flickr.md
     - Settings:
       - General: user-guide/settings/general.md
       - Library: user-guide/settings/library.md
       - Advanced: user-guide/settings/advanced.md
       - Sync: user-guide/settings/sync.md
       - Account: user-guide/settings/account.md
-      # - Places: user-guide/settings/places.md
-    - Migrate:
-      - Google Photos: user-guide/use-cases/google.md
-      - Apple Photos: user-guide/use-cases/apple.md
-      - Flickr: user-guide/use-cases/flickr.md
-      #- Link directories from remote:
-    - Advanced:
-      - Backups: user-guide/advanced/backups.md
-      - Restore: user-guide/advanced/restore.md
+    - Backup Guide:
+      - Creating Backups: user-guide/advanced/backups.md
+      - Restoring Backups: user-guide/advanced/restore.md
       - Metadata Export: user-guide/advanced/export.md
-      - Folders: user-guide/advanced/folders.md
+      - Folder Overview: user-guide/advanced/folders.md
       #- Commands: user-guide/advanced/commands.md
     - Mobile App (PWA): user-guide/pwa.md
     - Release Notes: release-notes.md
@@ -133,8 +131,8 @@ nav:
     - Running Tests: developer-guide/tests.md
     - Documentation: developer-guide/documentation.md
     - Translations:
-        - Add Translations: developer-guide/translations-weblate.md
-        - Legacy Method: developer-guide/translations.md
+      - Add Translations: developer-guide/translations-weblate.md
+      - Legacy Method: developer-guide/translations.md
     - Media Files:
       - Overview: developer-guide/media/index.md
       - Import: developer-guide/media/import.md
@@ -183,13 +181,10 @@ nav:
       - Security Policy: developer-guide/security/policy.md
     - FAQ: developer-guide/faq.md
   - About:
-      # - Funding: funding.md
-      - Credits: credits.md
-      # - Team: team.md
-      # - Contact: contact.md
-      - License:
-          - GNU AGPL: license/agpl.md
-          - Documentation: license/docs.md
+    - Credits: credits.md
+    - License:
+      - GNU AGPL: license/agpl.md
+      - Documentation: license/docs.md
 
 extra_css:
   - css/custom.css

@@ -19,7 +19,7 @@ ifdef GH_TOKEN
 	@echo "Found GH_TOKEN, upgrading mkdocs-material-insiders"
 	pip3 install --user --no-warn-script-location --disable-pip-version-check -U git+https://${GH_TOKEN}@github.com/photoprism/mkdocs-material-insiders.git
 else
-	@echo "GH_TOKEN not set in .env file, skipped upgrading mkdocs-material-insiders"
+	@echo "GH_TOKEN not set in .env file, upgrading regular mkdocs-material"
 	pip3 install --user --no-warn-script-location --disable-pip-version-check -U mkdocs-material
 endif
 	pip3 install --user --no-warn-script-location --disable-pip-version-check -U -r requirements.txt
@@ -28,7 +28,7 @@ ifdef GH_TOKEN
 	@echo "Found GH_TOKEN, installing mkdocs-material-insiders"
 	pip3 install --user --no-warn-script-location --disable-pip-version-check git+https://${GH_TOKEN}@github.com/photoprism/mkdocs-material-insiders.git
 else
-	@echo "GH_TOKEN not set in .env file, skipped installing mkdocs-material-insiders"
+	@echo "GH_TOKEN not set in .env file, installing regular mkdocs-material"
 	pip3 install --user --no-warn-script-location --disable-pip-version-check mkdocs-material
 endif
 	pip3 install --user --no-warn-script-location --disable-pip-version-check -r requirements.txt

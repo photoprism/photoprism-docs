@@ -264,6 +264,9 @@ theme:
     logo: logo
 
 plugins:
+  ## Error: "Config value: 'plugins'. Error: The "privacy" plugin is not installed" (reported)
+  # - privacy:
+  #    externals: bundle
   - search
   - redirects:
       redirect_maps:

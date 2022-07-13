@@ -18,6 +18,6 @@ jobs:
         with:
           key: ${{ github.ref }}
           path: .cache
-      - run: pip install --user --no-warn-script-location git+https://${GH_TOKEN}@github.com/photoprism/mkdocs-material-insiders
-      - run: pip install --user --no-warn-script-location -U -r requirements.txt
+      - run: pip install --user --no-warn-script-location --disable-pip-version-check -U git+https://${GH_TOKEN}@github.com/photoprism/mkdocs-material-insiders.git
+      - run: pip install --user --no-warn-script-location --disable-pip-version-check -U -r requirements.txt
       - run: mkdocs gh-deploy --force

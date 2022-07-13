@@ -1,9 +1,17 @@
-jinja2>=2.11.1
+jinja2>=3.0.2
 markdown>=3.2
 mkdocs>=1.3.0
-mkdocs-material>=8.3
 mkdocs-material-extensions>=1.0.3
 pygments>=2.12
 pymdown-extensions>=9.4
 mkdocs-tooltips>=0.1.0
 mkdocs-redirects>=1.0.3
+regex>=2022.4.24
+
+# Requirements for social plugin
+cairosvg>=2.5
+pillow>=8.0
+requests>=2.26
+
+# Requirements for privacy plugin
+lxml>=4.6

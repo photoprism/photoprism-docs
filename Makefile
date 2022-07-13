@@ -15,17 +15,27 @@ fix:
 pip:
 	sudo apt install pip
 upgrade:
+ifdef GH_TOKEN
+	@echo "Found GH_TOKEN, upgrading mkdocs-material-insiders"
+	pip3 install --user --no-warn-script-location --disable-pip-version-check -U git+https://${GH_TOKEN}@github.com/photoprism/mkdocs-material-insiders.git
+else
+	@echo "GH_TOKEN not set in .env file, skipped upgrading mkdocs-material-insiders"
+	pip3 install --user --no-warn-script-location --disable-pip-version-check -U mkdocs-material
+endif
 	pip3 install --user --no-warn-script-location --disable-pip-version-check -U -r requirements.txt
 install:
 ifdef GH_TOKEN
 	@echo "Found GH_TOKEN, installing mkdocs-material-insiders"
-	pip install --user --no-warn-script-location --disable-pip-version-check git+https://${GH_TOKEN}@github.com/photoprism/mkdocs-material-insiders
+	pip3 install --user --no-warn-script-location --disable-pip-version-check git+https://${GH_TOKEN}@github.com/photoprism/mkdocs-material-insiders.git
 else
 	@echo "GH_TOKEN not set in .env file, skipped installing mkdocs-material-insiders"
+	pip3 install --user --no-warn-script-location --disable-pip-version-check mkdocs-material
 endif
 	pip3 install --user --no-warn-script-location --disable-pip-version-check -r requirements.txt
 replace:
 	pip3 install --user --no-warn-script-location --disable-pip-version-check -U --force-reinstall  -r requirements.txt
+build:
+	mkdocs build
 serve:
 	mkdocs serve -a 0.0.0.0:8000
 deploy:

@@ -50,17 +50,17 @@ Your initial folder structure in *import* might look like this:
    
 **During import:**
 
-* files are copied or moved from their current directory to the *originals* folder
-* duplicates are skipped automatically
+* files are copied or moved from their source directory to the *originals* folder.
+* duplicates are automatically skipped, "Move" also deletes them in the source directory
 * imported files are given a unique file name and are sorted by year and month
 * the original file name is indexed as a file property
 * all imported files are indexed, the rest remains in the import folder
 
-After import using "copy" (this is the default) your folders could look like this:
+After importing with "Copy" (default setting), your folders might look like this::
 
 ![Screenshot](img/copy-import.png){ class="shadow" }
 
-After import using "move" your folders might look like this:
+After importing with "Move" your folders might look like this:
 
 ![Screenshot](img/move-import.png){ class="shadow" }
 
@@ -68,7 +68,6 @@ After import using "move" your folders might look like this:
 
 * unsupported files stay untouched in the import directory
 * no duplicates in your originals directory
-
 
 !!! info ""
     The original file and folder names are used to extract keywords. For example, when you index a folder with the path "Vacation/Africa", all files from this folder will get the keywords "vacation" and "africa".

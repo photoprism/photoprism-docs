@@ -50,7 +50,7 @@ Your initial folder structure in *import* might look like this:
    
 **During import:**
 
-* Files are copied or moved from their current directory to the *originals* folder
+* files are copied or moved from their current directory to the *originals* folder
 * duplicates are skipped automatically
 * imported files are given a unique file name and are sorted by year and month
 * the original file name is indexed as a file property

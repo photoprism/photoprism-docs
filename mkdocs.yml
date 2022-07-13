@@ -46,7 +46,7 @@ nav:
       - Scalability: getting-started/advanced/scalability.md
       - Database Setup: getting-started/advanced/databases.md
       - Database Migrations:
-        - Migrate Manually: getting-started/advanced/migrations/index.md
+        - Index Schema: getting-started/advanced/migrations/index.md
         - SQLite to MariaDB: getting-started/advanced/migrations/sqlite-to-mariadb.md
         - MariaDB to SQLite: getting-started/advanced/migrations/mariadb-to-sqlite.md
     - Known Issues: known-issues.md

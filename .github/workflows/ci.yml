@@ -20,4 +20,4 @@ jobs:
           path: .cache
       - run: pip install --user --no-warn-script-location --disable-pip-version-check -U git+https://${GH_TOKEN}@github.com/photoprism/mkdocs-material-insiders.git
       - run: pip install --user --no-warn-script-location --disable-pip-version-check -U -r requirements.txt
-      - run: mkdocs gh-deploy --force
+      - run: mkdocs gh-deploy --force --config-file mkdocs.deploy.yml

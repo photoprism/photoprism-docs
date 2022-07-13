@@ -48,22 +48,22 @@ TODO: Complete table with ID, Color Name, HTML Code and Sample
 | F  | Pink     | #FCE4EC #FDC8EB #E79FA6 #F8BBD0 #F48FB1 #FF80AB #FF4081 #F50057 #F06292 #EC407A #E91E63 #D81B60 #C2185B | <img src="https://dummyimage.com/50x12/FCE4EC/FCE4EC.png" /> <img src="https://dummyimage.com/50x12/FDC8EB/FDC8EB.png" /> <img src="https://dummyimage.com/50x12/E79FA6/E79FA6.png" /> <img src="https://dummyimage.com/50x12/F8BBD0/F8BBD0.png" /> <img src="https://dummyimage.com/50x12/F48FB1/F48FB1.png" /> <img src="https://dummyimage.com/50x12/FF80AB/FF80AB.png" /> <img src="https://dummyimage.com/50x12/FF4081/FF4081.png" /> <img src="https://dummyimage.com/50x12/F50057/F50057.png" /> <img src="https://dummyimage.com/50x12/F06292/F06292.png" /> <img src="https://dummyimage.com/50x12/EC407A/EC407A.png" /> <img src="https://dummyimage.com/50x12/E91E63/E91E63.png" /> <img src="https://dummyimage.com/50x12/D81B60/D81B60.png" /> <img src="https://dummyimage.com/50x12/C2185B/C2185B.png" /> |
 
 ```
-        Black:  "black",  // 0
-	Brown:  "brown",  // 1
-	Grey:   "grey",   // 2
-	White:  "white",  // 3
-	Purple: "purple", // 4
-	Gold: "gold",     // 5
-	Blue:   "blue",   // 6
-	Cyan:   "cyan",   // 7
-	Teal:   "teal",   // 8
-	Green:  "green",  // 9
-	Lime:   "lime",   // A
-	Yellow: "yellow", // B
-	Magenta: "magenta",  // C
-	Orange: "orange", // D
-	Red:    "red",    // E
-	Pink:   "pink",   // F
+Black:  "black",  // 0
+Brown:  "brown",  // 1
+Grey:   "grey",   // 2
+White:  "white",  // 3
+Purple: "purple", // 4
+Gold: "gold",     // 5
+Blue:   "blue",   // 6
+Cyan:   "cyan",   // 7
+Teal:   "teal",   // 8
+Green:  "green",  // 9
+Lime:   "lime",   // A
+Yellow: "yellow", // B
+Magenta: "magenta",  // C
+Orange: "orange", // D
+Red:    "red",    // E
+Pink:   "pink",   // F
 ```
 
 ## HCL vs HSL ##

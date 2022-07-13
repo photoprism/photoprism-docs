@@ -2,7 +2,7 @@
 
 Most users with an existing library will want to [index their originals](originals.md) directly without using the optional import feature, leaving the file and folder names unchanged.
 
-When [importing](import.md), files are first transferred from a temporary folder to the *originals* folder. In the process, duplicates are automatically skipped, and the imported files are given a unique file name and will be sorted by year and month.
+When [importing](import.md), files are first transferred from a temporary folder to the *originals* folder. In the process, duplicates are automatically skipped, and the imported files are given a unique file name and are sorted by year and month.
 
 Importing is also an efficient way to add files, since PhotoPrism does not need to search your *originals* folder to find new files.
 
@@ -17,25 +17,27 @@ Use *index* if you want to index your photos and videos directly in the *origina
 
 Your folder structure in *originals* might look like this:
 
-   ![Screenshot](img/originals-before-after.png){ class="shadow" }
+![Screenshot](img/originals-before-after.png){ class="shadow" }
      
 **During indexing:**
 
-* Files are not renamed or moved
-* Your existing folder structure remains. You might decide to have your folders displayed as albums in PhotoPrism
-* Metadata from your files is read to create labels, titles and locations for your photos
-* Thumbnails are rendered for JPEGs
-* Optionally json and or yml files containing metadata are created
+* files will not be renamed or moved
+* your existing folder structure is preserved, so you can later choose to have your folders appear as albums
+* metadata from your files is read to create captions, titles, and locations for your photos
+* thumbnails and optionally JSON and/or YAML files containing metadata are created
 
-After indexing your originals folder has not been touched:
+After indexing, the *originals* folder has not been changed in any way:
 
 ![Screenshot](img/originals-before-after.png){ class="shadow" }
 
 ### Advantages
 
-* You keep your existing folder structure
-* You can display your existing folder structure in PhotoPrism
-* You can move photos between the various folders within your Originals folder.  PhotoPrism will recognize this move and update appropriately during the next index.
+* existing file and folder names remain unchanged.
+* you can search your images by their current name and location
+* indexing is usually faster because no files have to be copied or moved
+
+!!! tldr ""
+    You can move media files between the different directories within your *originals* folder. The indexer detects this and updates the path automatically when running the next time.
 
 ## Importing Files
 
@@ -44,34 +46,35 @@ After indexing your originals folder has not been touched:
 
 Your initial folder structure in *import* might look like this:
 
-   ![Screenshot](img/before-import.png){ class="shadow" }
+![Screenshot](img/before-import.png){ class="shadow" }
    
 **During import:**
- 
-* Files are moved or copied from import directory to originals directory
-* In the originals directory files are renamed and get a new folder structure. The original name is saved as property of the file
-* All imported files are indexed
+
+* Files are copied or moved from their current directory to the *originals* folder
+* duplicates are skipped automatically
+* imported files are given a unique file name and are sorted by year and month
+* the original file name is indexed as a file property
+* all imported files are indexed, the rest remains in the import folder
 
 After import using "copy" (this is the default) your folders could look like this:
 
-   ![Screenshot](img/copy-import.png){ class="shadow" }
+![Screenshot](img/copy-import.png){ class="shadow" }
 
 After import using "move" your folders might look like this:
 
-   ![Screenshot](img/move-import.png){ class="shadow" }
+![Screenshot](img/move-import.png){ class="shadow" }
 
 ### Advantages
-* Unsupported files stay untouched in the import directory
-* No duplicates in your originals directory
+
+* unsupported files stay untouched in the import directory
+* no duplicates in your originals directory
 
 
 !!! info ""
-    Original file and folder names are used to create keywords. 
-    In case you import and index or only index a directory with the path "Vacation/Africa". All files from this folder get the keywords "vacation" and "africa".
-
+    The original file and folder names are used to extract keywords. For example, when you index a folder with the path "Vacation/Africa", all files from this folder will get the keywords "vacation" and "africa".
 
 ## Conclusion
-In case you have no organization in your existing photo collection and you assume you have many duplicates on various hard drives.
-*Import* is the way to go. It will organize all your photos and videos due to time taken and it will avoid duplicates.
 
-In case you have your photo collection organized nicely in folders and you prefer to keep this organization displayed in the filesystem. *Index* will be the right option for you.
+In case your picture library is not well organized and/or you have many duplicates, you may consider importing your files as this will remove duplicates. Be aware that imported files are given a unique file name and are sorted by year and month.
+
+Provided you have a well-organized library with meaningful file and folder names, it is best to index your originals directly and leave the file and folder names unchanged.

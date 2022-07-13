@@ -1,4 +1,4 @@
-# Managing Your Library
+# Indexing Your Library
 
 Most users with an existing library will want to [index their originals](originals.md) directly without using the optional import feature, leaving the file and folder names unchanged.
 

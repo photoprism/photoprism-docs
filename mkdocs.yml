@@ -45,7 +45,7 @@ nav:
       - NGINX: getting-started/advanced/nginx-proxy-setup.md
       - Scalability: getting-started/advanced/scalability.md
       - Database Setup: getting-started/advanced/databases.md
-      - Index Migrations:
+      - Database Migrations:
         - Migrate Manually: getting-started/advanced/migrations/index.md
         - SQLite to MariaDB: getting-started/advanced/migrations/sqlite-to-mariadb.md
         - MariaDB to SQLite: getting-started/advanced/migrations/mariadb-to-sqlite.md

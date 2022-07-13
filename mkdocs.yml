@@ -72,7 +72,7 @@ nav:
     # - WebDAV Sync
     #    - Nextcloud: user-guide/nextcloud.md
     - Browsing Pictures:
-      - Overview: user-guide/navigate.md
+      - User Interface: user-guide/navigate.md
       - Features and Sections: user-guide/organize/browse.md
       - Search Result Views: user-guide/organize/views.md
       - Using Search Filters: user-guide/organize/search.md

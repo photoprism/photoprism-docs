@@ -4,7 +4,7 @@ Step-by-step installation instructions for our self-hosted community edition can
 in [Getting Started](../getting-started/index.md). All you need is a Web browser and 
 [Docker](https://store.docker.com/search?type=edition&offering=community) to run the server.
 It is available for Mac, Linux, and Windows. PhotoPrism also runs on [PikaPods](../getting-started/cloud/pikapods.md), [DigitalOcean](../getting-started/cloud/digitalocean.md),
-[Raspberry Pi](../getting-started/raspberry-pi.md), [FreeBSD](../getting-started/freebsd.md), and many
+[Raspberry Pi](../getting-started/raspberry-pi.md), [FreeBSD](../getting-started/ports/freebsd.md), and many
 [NAS devices](../getting-started/nas/synology.md).
 
 ![Progressive Web App](https://dl.photoprism.app/img/ui/iphone-index-360px.png){ align=right }

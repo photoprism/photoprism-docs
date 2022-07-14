@@ -8,7 +8,7 @@ The port will compile and install libtensorflow 1.15.2 and build `photoprism` fr
 !!! info ""
     You are welcome to ask for help in our [community chat](https://link.photoprism.app/chat).
     [Sponsors](https://photoprism.app/membership) receive direct [technical support](https://photoprism.app/contact) via email.
-    Before submitting a support request, try to [determine the cause of your problem](troubleshooting/index.md).
+    Before submitting a support request, try to [determine the cause of your problem](../troubleshooting/index.md).
 
 !!! quote ""
     Help improve this page! You can contribute by clicking :material-pencil: to send a pull request with your changes.

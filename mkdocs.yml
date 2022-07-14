@@ -6,16 +6,18 @@ nav:
     - Docker Compose: getting-started/docker-compose.md
     - Pure Docker: getting-started/docker.md
     - Config Options: getting-started/config-options.md
-    - Raspberry Pi: getting-started/raspberry-pi.md
     - Cloud:
       - PikaPods: getting-started/cloud/pikapods.md
       - DigitalOcean: getting-started/cloud/digitalocean.md
+    - Raspberry Pi:
+      - Requirements: getting-started/raspberry-pi.md
+      - SD Card Image: getting-started/raspberry-pi/microsd-card.md
     - NAS Devices:
       - Synology: getting-started/nas/synology.md
       - Unraid: getting-started/nas/unraid.md
       - openmediavault: getting-started/nas/openmediavault.md
-    - Ports:
-        - FreeBSD: getting-started/freebsd.md
+    - BSD Ports:
+      - FreeBSD: getting-started/ports/freebsd.md
     - First Steps 👣: getting-started/first-steps.md
     - Getting Updates: getting-started/updates.md
     - Troubleshooting:
@@ -271,6 +273,7 @@ plugins:
         'privacy.md': 'https://photoprism.app/privacy'
         'terms.md': 'https://photoprism.app/terms'
         'code-of-conduct.md': 'https://photoprism.app/code-of-conduct'
+        'getting-started/freebsd.md': 'getting-started/ports/freebsd.md'
 
 # MkDocs extensions.
 markdown_extensions:

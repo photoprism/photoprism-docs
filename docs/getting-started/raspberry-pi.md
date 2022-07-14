@@ -8,7 +8,8 @@ enjoy the same functionality, and can follow the regular [installation instructi
 after going through a short list of [system requirements](#system-requirements).
 
 !!! verified "PhotoPrismPi"
-    The easiest way to run PhotoPrism on a Raspberry Pi is with [PhotoPrismPi](https://github.com/guysoft/PhotoPrismPi) by [Guy Sheffer](https://github.com/guysoft). Simply install the image on an SD card, plug it into the Pi and boot it. Once you log in, PhotoPrism is already installed and running!
+    The easiest way to run PhotoPrism on a Raspberry Pi is with [PhotoPrismPi](raspberry-pi/microsd-card.md).[^1]
+    Simply [flash the image](raspberry-pi/microsd-card.md) to an SD card, plug it into the Pi and boot it. After a few minutes, our latest release will be ready to use!
 
 ### System Requirements ###
 
@@ -100,7 +101,7 @@ Also keep in mind that the hardware has limited video transcoding capabilities, 
 
 ### Getting Updates ###
 
-Open a terminal and change to the folder where the `docker-compose.yml` file is located.[^1]
+Open a terminal and change to the folder where the `docker-compose.yml` file is located.[^2]
 Now run the following commands to download the most recent image from Docker Hub and
 restart your instance in the background:
 
@@ -149,10 +150,8 @@ Other issues? Our [troubleshooting checklists](troubleshooting/index.md) help yo
 
 ### Credits ###
 
-A big thank you to [Guy Sheffer](https://github.com/guysoft) for helping us [build](https://github.com/photoprism/photoprism/issues/109)
-a Raspberry Pi version!
-
-[^1]: The default [Docker Compose](https://docs.docker.com/compose/) config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running the `docker-compose` command in the same directory. Config files for other apps or instances should be placed in separate folders.
+[^1]: A big thank you to [Guy Sheffer](https://github.com/guysoft) for helping us [build](https://github.com/photoprism/photoprism/issues/109) a Raspberry Pi version!
+[^2]: The default [Docker Compose](https://docs.docker.com/compose/) config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running the `docker-compose` command in the same directory. Config files for other apps or instances should be placed in separate folders.
 
 *[Raspbian]: Raspberry Pi OS
 *[Apple Silicon]: Apple M1 and M2

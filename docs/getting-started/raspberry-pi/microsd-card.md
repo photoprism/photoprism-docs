@@ -26,7 +26,7 @@ We recommend using a fast MicroSD card with at least 16 GB. These are usually so
 
 ## Step 3: Boot Your Device
 
-Insert the MicroSD card into the Pi, make sure your device is connected to a wired network, and turn it on. After a few minutes,[^2] our latest release should be ready to use when you navigate to `http://photoprismpi.local/` (or the IP address, depending on your local network)!
+Insert the MicroSD card into the Pi, make sure your device is connected to a wired network, and turn it on. After a few minutes,[^2] our latest release should be ready to use when you navigate to <http://photoprismpi.local/>![^3]
 
 External drives can be connected via USB and accessed as folders `/mnt/a` to `/mnt/d`.
 

@@ -18,7 +18,7 @@ Etcher is a powerful OS image flasher that makes flashing an SD card a pleasant 
 Open balenaEtcher and enter the following URL as image source:
 
 ```url
-https://dl.photoprism.app/live/photoprismpi/latest.zip
+https://dl.photoprism.app/dist/photoprismpi/latest.zip
 ```
 
 ![](image/flash-from-url.png)

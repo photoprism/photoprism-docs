@@ -11,7 +11,7 @@ nav:
       - DigitalOcean: getting-started/cloud/digitalocean.md
     - Raspberry Pi:
       - Requirements: getting-started/raspberry-pi.md
-      - SD Card Image: getting-started/raspberry-pi/image.md
+      - SD Card Image: getting-started/raspberry-pi/microsd-image.md
     - NAS Devices:
       - Synology: getting-started/nas/synology.md
       - Unraid: getting-started/nas/unraid.md

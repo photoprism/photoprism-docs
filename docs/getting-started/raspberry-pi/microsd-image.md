@@ -1,6 +1,6 @@
 # MicroSD Image for the Raspberry Pi 
 
-![](image/microsd.jpg){ class="w25 right" }
+![](microsd-image/card.jpg){ class="w25 right" }
 The easiest way to run PhotoPrism on a Raspberry Pi is with [PhotoPrismPi](https://dl.photoprism.app/raspberrypi/).[^1]
 Simply flash the image to an SD card and boot your device with it.
 
@@ -21,7 +21,7 @@ Open balenaEtcher and enter the following URL as image source:
 https://dl.photoprism.app/dist/photoprismpi/latest.zip
 ```
 
-![](image/flash-from-url.png)
+![](microsd-image/flash-url.png)
 
 When you have selected the image and inserted a suitable card into your computer, press **Flash!**.
 

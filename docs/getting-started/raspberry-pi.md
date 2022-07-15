@@ -8,8 +8,8 @@ enjoy the same functionality, and can follow the regular [installation instructi
 after going through a short list of [system requirements](#system-requirements).
 
 !!! verified "PhotoPrismPi"
-    The easiest way to run PhotoPrism on a Raspberry Pi is with [PhotoPrismPi](raspberry-pi/microsd-card.md).[^1]
-    Simply [flash the image](raspberry-pi/microsd-card.md) to an SD card, plug it into the Pi and boot it. After a few minutes, our latest release will be ready to use!
+    The easiest way to run PhotoPrism on a Raspberry Pi is with [PhotoPrismPi](raspberry-pi/image.md).[^1]
+    Simply [flash the image](raspberry-pi/image.md) to an SD card, plug it into the Pi and boot it. After a few minutes, our latest release will be ready to use!
 
 ### System Requirements ###
 

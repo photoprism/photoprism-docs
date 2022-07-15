@@ -11,7 +11,7 @@ nav:
       - DigitalOcean: getting-started/cloud/digitalocean.md
     - Raspberry Pi:
       - Requirements: getting-started/raspberry-pi.md
-      - SD Card Image: getting-started/raspberry-pi/microsd-card.md
+      - SD Card Image: getting-started/raspberry-pi/image.md
     - NAS Devices:
       - Synology: getting-started/nas/synology.md
       - Unraid: getting-started/nas/unraid.md
@@ -300,7 +300,12 @@ markdown_extensions:
           - overrides/.icons
   - pymdownx.inlinehilite
   - pymdownx.keys
-  - pymdownx.magiclink
+  - pymdownx.magiclink:
+      repo_url_shortener: true
+      social_url_shortener: true
+      normalize_issue_symbols: true
+      user: 'photoprism'
+      repo: 'photoprism'
   - pymdownx.mark
   - pymdownx.snippets:
       check_paths: true
@@ -316,6 +321,7 @@ markdown_extensions:
       clickable_checkbox: true
   - md_in_html
   - attr_list
+  - def_list
   - tables
   - abbr
   - meta

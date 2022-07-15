@@ -3,7 +3,7 @@
 Once the [initial setup](index.md) is complete, there are only two more steps before you can start browsing your pictures:
 
 1. Configure [your library](../user-guide/settings/library.md) and [advanced settings](../user-guide/settings/advanced.md) according to your individual preferences.
-2. [Choose](../user-guide/library/index.md) whether you want to simply [index your originals](../user-guide/library/originals.md) so that the existing file and folder names are preserved, or [import them](../user-guide/library/import.md) so that they are automatically renamed and organized by date to avoid duplicates.
+2. Choose [whether you want](../user-guide/library/index.md) to [index your originals directly](../user-guide/library/originals.md), leaving all file and folder names unchanged, or use the [optional import feature](../user-guide/library/import.md), which automatically removes duplicates, gives files a unique name, and sorts them by year and month.
 
 If you want to use folders that already exist on your computer, make sure you configured them as *originals* respectively *import* folders during setup.
 

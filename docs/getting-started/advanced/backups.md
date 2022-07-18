@@ -29,3 +29,6 @@ If you want, you can also export your cache and thumbnails, but it can also be r
 It will save you from re-generating thumbnails from scratch however.
 
 Helpful information can be found on [GitHub](https://github.com/photoprism/photoprism/discussions/772) as well.
+
+## Restore from Backup
+Follow [this guide to restore](../../user-guide/advanced/restore.md) PhotoPrism from backups.

@@ -11,7 +11,7 @@ The port will compile and install libtensorflow 1.15.2 and build `photoprism` fr
     Before submitting a support request, try to [determine the cause of your problem](../troubleshooting/index.md).
 
 !!! quote ""
-    Help improve this page! You can contribute by clicking :material-pencil: to send a pull request with your changes.
+    Help improve these docs! You can contribute by clicking :material-pencil: to send a pull request with your changes.
 
 **1. Clone or download the port:**
 

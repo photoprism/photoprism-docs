@@ -1,7 +1,7 @@
 # Running PhotoPrism on openmediavault
 
 !!! quote ""
-    Help improve this page! You can contribute by clicking :material-pencil: to send a pull request with your changes.
+    Help improve these docs! You can contribute by clicking :material-pencil: to send a pull request with your changes.
 
 PhotoPrism can be conveniently installed using the openmediavault [plugin](https://www.openmediavault.org/?p=3146).
 

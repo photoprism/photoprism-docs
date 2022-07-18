@@ -1,7 +1,7 @@
 # Syncing with Dropbox #
 
 !!! quote ""
-    Help improve this page! You can contribute by clicking :material-pencil: to send a pull request with your changes.
+    Help improve these docs! You can contribute by clicking :material-pencil: to send a pull request with your changes.
 
 It's possible to use [Dropbox](https://www.dropbox.com/) to store your photos, while viewing and managing them through PhotoPrism.
 

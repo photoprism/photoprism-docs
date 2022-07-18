@@ -1,7 +1,7 @@
 # Using SWAG as Reverse Proxy
 
 !!! quote ""
-	Help improve this page! You can contribute by clicking :material-pencil: to send a pull request with your changes.
+		Help improve these docs! You can contribute by clicking :material-pencil: to send a pull request with your changes.
 
 To simplify the setup of a reverse HTTPS proxy, Linuxserver.io developed [SWAG](https://github.com/linuxserver/docker-swag).
 

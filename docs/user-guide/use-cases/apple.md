@@ -1,7 +1,7 @@
 # Migrate from Apple Photos #
 
 !!! quote ""
-    Help improve this page! You can contribute by clicking :material-pencil: to send a pull request with your changes.
+    Help improve these docs! You can contribute by clicking :material-pencil: to send a pull request with your changes.
 
 ## Transfer Files ##
 

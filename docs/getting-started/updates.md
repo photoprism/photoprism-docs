@@ -67,7 +67,7 @@ as this requires less experience. Alternative 32-bit Docker images are provided 
 !!! tldr ""
     Darktable is not included in the ARMv7 version because it is not 32-bit compatible.
 
-#### Facial Recognition ####
+#### Face Recognition ####
 
 Existing users may index faces without performing a complete rescan:
 

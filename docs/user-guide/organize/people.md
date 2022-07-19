@@ -1,4 +1,4 @@
-# Facial Recognition
+# Face Recognition
 
 Our [latest version](../../release-notes.md) includes facial recognition that lets you find pictures
 of your family and friends. Be ready to discover long forgotten shots! New faces are detected as

@@ -8,12 +8,13 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 220719-5ac9a4d01</span>
+<span class="build">Build 220719-efbe57303</span>
 
 Our preview includes indexing and authentication enhancements as well as [updated translations](https://translate.photoprism.app/projects/photoprism/). Thank you to everyone who helps with testing! We appreciate it very much.
 
 What's new?
 
+- [Updated Go to v1.18.4, which includes a number of security and compiler fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.18.4+label%3ACherryPickApproved)
 - [Library: Added support for indexing and importing symbolically linked files](https://github.com/photoprism/photoprism/issues/1049)
 - [Thumbs: Creating redundant JPEG files is skipped to save disk space](https://github.com/photoprism/photoprism/issues/1874)
 - [Config: Added `PHOTOPRISM_AUTH_MODE` option to select authentication mode](https://github.com/photoprism/photoprism/commit/591a6562707457045f504defba69e693afccba65)

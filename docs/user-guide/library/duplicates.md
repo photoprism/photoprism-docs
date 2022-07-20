@@ -6,7 +6,7 @@ Duplicates are detected and automatically skipped, so they only appear once in s
 
 When [importing](import.md), files are first copied or moved from a temporary folder to the *originals* folder. In the process, duplicates are automatically skipped. "Move" also deletes them in the source directory as if they were successfully moved.
 
-↪ [Import to Originals](originals.md)
+↪ [Import to Originals](import.md)
 
 ## Related Files
 

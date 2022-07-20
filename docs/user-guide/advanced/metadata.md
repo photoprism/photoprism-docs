@@ -23,9 +23,9 @@ When a field is populated with data from an XMP sidecar file, that data is the o
 
 PhotoPrism also reads metadata from Google Photos JSON and Apple XMP files:
 
-↪ [Google Photos](../use-cases/google.md)
+↪ [Migrate from Google Photos](../use-cases/google.md)
 
-↪ [Apple Photos](../use-cases/apple.md)
+↪ [Migrate from Apple Photos](../use-cases/apple.md)
 
 ## Enrichment
 

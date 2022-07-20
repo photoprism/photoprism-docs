@@ -196,9 +196,9 @@ docker-compose stop
 docker-compose up -d
 ```
 
-### Step 3: First steps ###
+### Step 3: Index Your Library ###
 
-Our [tutorial will guide you](first-steps.md) through the necessary steps to ensure that your library is indexed according to your individual preferences.
+Our [First Steps 👣](../user-guide/first-steps.md) tutorial guides you through the user interface and settings to ensure your library is indexed according to your individual preferences.
 
 <!--
 !!! note ""

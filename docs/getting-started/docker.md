@@ -107,7 +107,7 @@ organized by year and month.
 
 ### Step 2: First steps ###
 
-Our [tutorial will guide you](first-steps.md) through the necessary steps to ensure that your library is indexed according to your individual preferences.
+Our [First Steps 👣](../user-guide/first-steps.md) tutorial guides you through the user interface and settings to ensure your library is indexed according to your individual preferences.
 
 <!-- !!! note ""
     Ensure [there is enough disk space available](troubleshooting/docker.md#disk-space) for creating thumbnails and [verify filesystem permissions](troubleshooting/docker.md#file-permissions)

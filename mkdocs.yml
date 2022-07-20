@@ -18,7 +18,6 @@ nav:
       - openmediavault: getting-started/nas/openmediavault.md
     - BSD Ports:
       - FreeBSD: getting-started/ports/freebsd.md
-    - First Steps 👣: getting-started/first-steps.md
     - Getting Updates: getting-started/updates.md
     - Troubleshooting:
       - Checklists: getting-started/troubleshooting/index.md
@@ -54,16 +53,17 @@ nav:
     - Known Issues: known-issues.md
     - FAQ: getting-started/faq.md
   - User Guide:
-    - Introduction: user-guide/index.md
+    - Installation: user-guide/index.md
+    - First Steps 👣: user-guide/first-steps.md
     # - Setting up: user-guide/setup.md
     - Your Library:
-      - Introduction: user-guide/library/index.md
+      - Overview: user-guide/library/index.md
       - Indexing Originals: user-guide/library/originals.md
-      - Importing Files: user-guide/library/import.md
-      - Duplicate Files: user-guide/library/duplicates.md
+      - Import to Originals: user-guide/library/import.md
+      - Duplicate Detection: user-guide/library/duplicates.md
       - Picture Metadata: user-guide/advanced/metadata.md
-      - Web File Upload: user-guide/library/upload.md
-      - WebDAV File Sync: user-guide/library/webdav.md
+      - Web Upload: user-guide/library/upload.md
+      - WebDAV Sync: user-guide/library/webdav.md
       - File Browser: user-guide/library/files.md
       #- Import from camera: user-guide.md
       #- Import from Facebook: user-guide.md
@@ -73,12 +73,12 @@ nav:
     # - Sync and Back Up:
     # - WebDAV Sync
     #    - Nextcloud: user-guide/nextcloud.md
-    - Browsing Pictures:
+    - Finding Pictures:
       - User Interface: user-guide/navigate.md
-      - Features and Sections: user-guide/organize/browse.md
+      - Search Your Library: user-guide/organize/browse.md
       - Search Result Views: user-guide/organize/views.md
-      - Using Search Filters: user-guide/organize/search.md
-    - Organizing Pictures:
+      - Search Filters: user-guide/organize/search.md
+    - Features:
       - Albums: user-guide/organize/albums.md
       - People: user-guide/organize/people.md
       - Labels: user-guide/organize/labels.md

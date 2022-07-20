@@ -1,5 +1,8 @@
 # Importing Files to Originals #
 
+!!! tldr ""
+    Most users with an existing library will want to [index their originals](originals.md) directly without using the optional import feature, leaving the file and folder names unchanged. Importing first copies or moves from their source directory to the *originals* folder, which is optional.
+
 1. Add files to the *import* folder if not done already
 
 2. Go to *Library* using the main navigation, and open the *Import* tab

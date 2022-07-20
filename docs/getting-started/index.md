@@ -4,7 +4,7 @@ PhotoPrism can be installed on all operating systems supporting [Docker](https:/
 
 We recommend running PhotoPrism with [Docker Compose](docker-compose.md) when hosting it on a private server. It is available for Mac, Linux, and Windows.
 
-Once the initial setup is complete, a [tutorial will guide you](first-steps.md) through the first steps to ensure that your library is indexed according to your individual preferences.
+Once the initial setup is complete, our [First Steps 👣](../user-guide/first-steps.md) tutorial guides you through the user interface and settings to ensure your library is indexed according to your individual preferences.
 
 !!! tldr ""
     Our [stable version and development preview](https://docs.photoprism.app/release-notes/) have been built into a

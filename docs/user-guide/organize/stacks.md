@@ -1,4 +1,4 @@
-# Stacks #
+# File Stacks
 
 If you have enabled *Stacks* in [*Settings*](../settings/library.md), you may come across photos that have more than 
 one image file associated with them.
@@ -7,7 +7,7 @@ To show all photos with a group of related files, open *Stacks* in the expanded 
 
 ![Screenshot](img/stack-page.png){ class="shadow" }
 
-### For what reasons can files be stacked? ###
+### For what reasons can files be stacked?
 
 1. Files sharing exactly the same file and folder name will always be stacked, for example `/2018/IMG_1234.jpg` and `/2018/IMG_1234.avi`
 2. Files with related, sequential names like `/2018/IMG_1234 (2).jpg` and `/2018/IMG_1234 (3).jpg` may be stacked as well (optional)

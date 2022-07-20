@@ -1,4 +1,4 @@
-# Browsing Your Pictures #
+# Navigating the User Interface
 
 The user interface for browsing your images is based on the following components. Our screenshots generally show pages in a medium-resolution desktop browser. All pages are fully responsive, which means they may appear differently on mobile devices.
 

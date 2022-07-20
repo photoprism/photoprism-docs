@@ -20,3 +20,4 @@ plugins:
         'privacy.md': 'https://photoprism.app/privacy'
         'terms.md': 'https://photoprism.app/terms'
         'code-of-conduct.md': 'https://photoprism.app/code-of-conduct'
+        'getting-started/first-steps.md': 'user-guide/first-steps.md'

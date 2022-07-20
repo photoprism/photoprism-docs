@@ -50,8 +50,8 @@ Your initial folder structure in *import* might look like this:
    
 **During import:**
 
-* files are copied or moved from their source directory to the *originals* folder.
-* duplicates are automatically skipped, "Move" also deletes them in the source directory
+* files are copied or moved from their source directory to the *originals* folder
+* duplicates are automatically skipped, "Move" also deletes them in the source directory as if they were successfully moved
 * imported files are given a unique file name and are sorted by year and month
 * the original file name is indexed as a file property
 * all imported files are indexed, the rest remains in the import folder

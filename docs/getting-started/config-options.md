@@ -1,8 +1,3 @@
----
-hide:
-- toc
----
-
 # Config Options #
 
 !!! tldr ""

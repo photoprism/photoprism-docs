@@ -38,7 +38,7 @@ nav:
       - Apache 2.4: getting-started/proxies/apache-2.md
       - SWAG: getting-started/proxies/swag.md
       - Haproxy: getting-started/proxies/haproxy.md
-    - Advanced Topics:
+    - Advanced:
       - Kubernetes: getting-started/advanced/kubernetes.md
       - Transcoding: getting-started/advanced/transcoding.md
       - Backups: getting-started/advanced/backups.md
@@ -101,7 +101,7 @@ nav:
     - Remote Sync:
       - WebDAV Access: user-guide/sync/webdav.md
       - Mobile Devices: user-guide/sync/mobile-devices.md
-      - Dropbox Sync: user-guide/sync/dropbox.md
+      - Dropbox: user-guide/sync/dropbox.md
     - Settings:
       - General: user-guide/settings/general.md
       - Library: user-guide/settings/library.md

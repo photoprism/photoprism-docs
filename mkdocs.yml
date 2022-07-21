@@ -61,7 +61,7 @@ nav:
       - Indexing Originals: user-guide/library/originals.md
       - Import to Originals: user-guide/library/import.md
       - Duplicate Detection: user-guide/library/duplicates.md
-      - Picture Metadata: user-guide/advanced/metadata.md
+      - Metadata Support: user-guide/library/metadata.md
       - Web Upload: user-guide/library/upload.md
       - WebDAV Sync: user-guide/library/webdav.md
       - File Browser: user-guide/library/files.md
@@ -274,6 +274,8 @@ plugins:
         'terms.md': 'https://photoprism.app/terms'
         'code-of-conduct.md': 'https://photoprism.app/code-of-conduct'
         'getting-started/freebsd.md': 'getting-started/ports/freebsd.md'
+        'getting-started/first-steps.md': 'user-guide/first-steps.md'
+        'user-guide/advanced/metadata.md': 'user-guide/library/metadata.md'
 
 # MkDocs extensions.
 markdown_extensions:

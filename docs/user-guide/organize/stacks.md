@@ -1,13 +1,12 @@
-# File Stacks
+# Stacks
 
-If you have enabled *Stacks* in [*Settings*](../settings/library.md), you may come across photos that have more than 
-one image file associated with them.
+If you have *Stacks* enabled in your [library settings](../settings/library.md), you may come across pictures that are associated with more than one media file.
 
-To show all photos with a group of related files, open *Stacks* in the expanded *Search* navigation:
+To see all pictures with a group of related files, open *Stacks* in the expanded *Search* navigation:
 
 ![Screenshot](img/stack-page.png){ class="shadow" }
 
-### For what reasons can files be stacked?
+## For what reasons can files be stacked?
 
 1. Files sharing exactly the same file and folder name will always be stacked, for example `/2018/IMG_1234.jpg` and `/2018/IMG_1234.avi`
 2. Files with related, sequential names like `/2018/IMG_1234 (2).jpg` and `/2018/IMG_1234 (3).jpg` may be stacked as well (optional)
@@ -16,7 +15,7 @@ To show all photos with a group of related files, open *Stacks* in the expanded 
 
 You can change the behaviour for 2 - 4 in [*Settings*](../settings/library.md).
 
-### Browse Related Files ###
+## Browse Related Files
 
 1. Click on :material-camera-burst:
 
@@ -27,7 +26,7 @@ You can change the behaviour for 2 - 4 in [*Settings*](../settings/library.md).
     ![Screenshot](img/sequential3.png){ class="shadow" } ![Screenshot](img/sequential4.png){ class="shadow" }
    
 
-### Change Primary Files ###
+## Change Primary Files
 
 The JPEG file marked as *primary* is used in our views. It is listed first in the files tab.
 
@@ -43,7 +42,7 @@ To change the primary file:
 
       ![Screenshot](img/unstack-1.png){ class="shadow" } 
 
-### Unstack Files ###
+## Unstack Files
 
 1. Open the photos [*edit dialog*](edit.md)
 
@@ -59,7 +58,7 @@ Now, both files appear in our views.
 
 ![Screenshot](img/group-4.png){ class="shadow" }
 
-### Delete Non-Primary Files ###
+## Delete Non-Primary Files
 
 1. Open the photos [*edit dialog*](edit.md)
 

@@ -1,19 +1,18 @@
-# Picture Metadata
+# Metadata Support
 
-Original media and sidecar files are scanned for Exif and XMP data, as well as proprietary metadata, including Google Photos JSON. The combined information is then normalized, merged, and [enriched with additional information](#enrichment).
-
-## Compatibility
-
-PhotoPrism has a [built-in Exif parser](../../developer-guide/metadata/exif/index.md), a [simple XMP reader](../../developer-guide/metadata/xmp.md) and can also use [Exiftool](https://exiftool.org/) to extract metadata in various formats such as Exif, XMP and IPTC:
+Original media and sidecar files are scanned for Exif and XMP data, as well as proprietary metadata, including Google Photos JSON.
+For this, PhotoPrism has a [built-in Exif parser](../../developer-guide/metadata/exif/index.md), a [simple XMP reader](../../developer-guide/metadata/xmp.md) and can also use [Exiftool](https://exiftool.org/) to extract metadata in various formats such as Exif, XMP and IPTC:
 
 ↪  [Supported Exif, XMP, IPTC and DCMI Tags](https://photoprism.app/kb/metadata)
+
+The combined information is then normalized, merged, and [enriched with additional information](#enrichment).
 
 !!! tldr ""
     Feel free to [submit a feature](../../developer-guide/issues.md) [or pull request](../../developer-guide/pull-requests.md) for Exif or XMP metadata that is not  supported yet.
 
-### Metadata Updates
+### External Changes
 
-If you update one of these tags with another tool such as Exiftool or Digikam, PhotoPrism will read the changes the next time you index the file, provided the file's modification date has been updated.
+If you update one of these tags with external tools such as Exiftool or Digikam, PhotoPrism reads the changes the next time it indexes the file, provided the file's modification date has been updated.
 
 ### XMP Sidecar Files
 
@@ -38,7 +37,7 @@ In addition to reading metadata from your original and sidecar files, PhotoPrism
 
 ## Export
 
-We want you to be able to access your metadata independently of PhotoPrism and its database. That's why the indexer additionally creates [human-readable YAML sidecar files](export.md) that you can open with a text editor or other tools if needed.
+We want you to be able to access your metadata independently of PhotoPrism and its database. That's why the indexer additionally creates [human-readable YAML sidecar files](../advanced/export.md) that you can open with a text editor or other tools if needed.
 
 !!! note ""
     PhotoPrism does not yet offer the ability to write changed metadata back to the original files to avoid eventual data loss and conflicts with third-party apps. See [GitHub Discussions](https://github.com/photoprism/photoprism/discussions/1092).

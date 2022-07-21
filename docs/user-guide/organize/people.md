@@ -176,7 +176,7 @@ You can find photos with people on it using the following queries:
 - `person:"John Doe"` or `subject:"John Doe"` will show all photos of the person with the exact name John Doe
 - `people:"John"` or `subjects:"John"` will show all photos of people with a name like John e.g. John Doe and John Smith
 
-The person/subject and people/subjects filters can be used with & and | (see [search](search.md) for more details). Filters may be combined.
+The person/subject and people/subjects filters can be used with & and | (see [search](../search/filters.md) for more details). Filters may be combined.
 
 `person:"John Doe&Jane Doe" faces:3` will show all photos with John and Jane Doe and one other person.
 

@@ -75,9 +75,9 @@ nav:
     #    - Nextcloud: user-guide/nextcloud.md
     - Finding Pictures:
       - User Interface: user-guide/navigate.md
-      - Search Your Library: user-guide/organize/browse.md
-      - Search Result Views: user-guide/organize/views.md
-      - Search Filters: user-guide/organize/search.md
+      - Search Your Library: user-guide/search/index.md
+      - Search Result Views: user-guide/search/views.md
+      - Search Filters: user-guide/search/filters.md
     - Features:
       - Albums: user-guide/organize/albums.md
       - People: user-guide/organize/people.md
@@ -276,6 +276,9 @@ plugins:
         'getting-started/freebsd.md': 'getting-started/ports/freebsd.md'
         'getting-started/first-steps.md': 'user-guide/first-steps.md'
         'user-guide/advanced/metadata.md': 'user-guide/library/metadata.md'
+        'user-guide/organize/browse.md': 'user-guide/search/index.md'
+        'user-guide/organize/views.md': 'user-guide/search/views.md'
+        'user-guide/organize/search.md': 'user-guide/search/filters.md'
 
 # MkDocs extensions.
 markdown_extensions:

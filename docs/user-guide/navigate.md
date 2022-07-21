@@ -1,6 +1,6 @@
 # Navigating the User Interface
 
-The user interface for browsing your images is based on the following components. Our screenshots generally show pages in a medium-resolution desktop browser. All pages are fully responsive, which means they may appear differently on mobile devices.
+The user interface for browsing and searching your pictures is based on the following components. Screenshots in this documentation generally show pages in a medium-resolution desktop browser. All pages are fully responsive, so they may look different on mobile devices.
 
 ![Screenshot](img/nav1edited.png){ class="shadow" }
 
@@ -13,7 +13,7 @@ Click on the links to switch between different pages like Photos, Albums, Places
 
 #### 2. Toolbar ####
 
-Located on the top. Find photos or videos by entering search terms like `cats` and filters like `label:cat`. A list with possible search filters can be found [here](organize/search.md).
+Located on the top. Find photos or videos by entering search terms like `cats` and filters like `label:cat`. A list with possible search filters can be found [here](search/filters.md).
 
 #### 3. Reload Button ####
 

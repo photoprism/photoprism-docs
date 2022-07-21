@@ -9,43 +9,45 @@ PhotoPrism's powerful search filters let you easily find specific photos and vid
 * Location where the photo has been taken
 * Other metadata such as camera, lens, chroma...
 
-Just try it!
+Just give it a try!
 
-![Screenshot](img/fulltext-search-1.png){ class="shadow" }
+![Screenshot](../organize/img/fulltext-search-1.png){ class="shadow" }
 
-## Search Filter ##
-The following filters can be set using the filter bar:
+## Introduction ##
 
-* Country, Year, Month, Order, Camera, Color, Category
+The following filters can be set via dropdowns in the search toolbar:
 
-In case you set multiple filters only photos, that fulfill all filter criteria, are shown in the search result.
+* Country, Year, Month, Order, Camera, Color, Category.
 
- ![Screenshot](img/filter-bar-new.png){ class="shadow" }
+If you set multiple filters, only pictures that meet all filter criteria will be displayed in the search result. Filters can generally be combined unless they contradict each other.
 
-Filters can be also be set in the search bar like this:
-    
+ ![Screenshot](../organize/img/filter-bar-new.png){ class="shadow" }
+
+In addition, these and many other filters can be entered into the toolbar search box as follows:
+
     `label:cat color:green type:live`
-    
-You find the full list of available filters [below](#search-filter-overview).
 
-![Screenshot](img/search-filters.png){ class="shadow" }
+A complete overview of the [available search filters](#filter-reference) can be found below.
+
+![Screenshot](../organize/img/search-filters.png){ class="shadow" }
 
 ### AND Search ###
+
 To combine different filters use a space as separator:
 
 ```
 mono:true review:false
 ```
 
-The search result shows photos that are monochrome **and** not in review.
+The search result shows pictures that are monochrome **and** not in the overview.
 
-Additionally some filters can be used with &:
+Additionally some filters can be combined with `&` as follows:
 
 ```bigquery
 keywords:buffalo&water
 ```
 
-Or:
+or:
 
 ```bigquery
 keywords:"buffalo & water"
@@ -61,6 +63,7 @@ This query will show all photos that have the keywords water **and** buffalo.
     The label filter does not support &. You can use the keywords filter instead, as all labels are keywords as well.
 
 ### OR Search ###
+
 An OR search is possible using `|`:
 
 ```
@@ -74,6 +77,7 @@ The following filters work with |:
 * albums, color, country, day, month, year, keywords, label, path, state, subject/person, subjects/people, title, type, name, filename, original, hash
 
 ### Wildcard ###
+
 The `*` character will act as a wildcard:
 
 ```
@@ -81,7 +85,6 @@ name:"IMG_23*"
 ```
 
 This will show all photos which name start with `IMG_23`.
-
 
 ```
 name:"*_23*"
@@ -92,8 +95,9 @@ This will show all photos which name contain `_23`, like `IMG_2356.MOV` , `2021_
 !!!info ""
     Wildcards can be combined with & or |: `filename:"*IMG123*|*_22F6FC19.jpg"`
 
-### Search Filter Overview ###
-PhotoPrism allows you to use multiple filters in its search.
+## Filter Reference
+
+This is a complete list of supported search filters with examples. Filters can generally be combined unless they contradict each other, e.g. results cannot be monochrome and have high color saturation at the same time.
 
 |  Filter   |   Type    |           Examples            |                                                                   Notes                                                                    |
 |-----------|-----------|-------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
@@ -159,8 +163,6 @@ PhotoPrism allows you to use multiple filters in its search.
 | video     | switch    | video:yes                     | Finds video files only                                                                                                                     |
 | after     | timestamp | after:"2022-01-30 15:23:42"   | Finds pictures taken after this date                                                                                                       |
 | before    | timestamp | before:"2022-01-30 15:23:42"  | Finds pictures taken before this date                                                                                                      |
-
-
 
 
 !!! question "Why can't I play live photos or find stacks when I search for specific images?"

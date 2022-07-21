@@ -16,7 +16,7 @@ Then start [indexing](library/originals.md) or [importing](library/import.md), d
 
 ## While indexing is in progress...
 
-Your [photos](organize/browse.md) and [videos](organize/video.md) will
+Your [photos](search/index.md) and [videos](organize/video.md) will
 successively become visible in search results and other parts of the user interface.
 Open the *Logs* tab in *Library* to watch the indexer working.
 The counts in the navigation are constantly updated, so you can follow the progress.

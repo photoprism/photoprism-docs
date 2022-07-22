@@ -8,7 +8,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 220722-397159d4</span>
+<span class="build">Build 220722-d8157907</span>
 
 Our preview includes improvements to indexing, metadata, and authentication, as well as [updated translations](https://translate.photoprism.app/projects/photoprism/).
 
@@ -19,6 +19,7 @@ What's new?
 - Zip: [Improved file system rights detection and temporary file handling](https://github.com/photoprism/photoprism/issues/2532)
 - Metadata: [Creation time is extracted from DateTimeCreated, if available](https://github.com/photoprism/photoprism/pull/2513)
 - Metadata: [Unknown values are ignored when parsing timestamps](https://github.com/photoprism/photoprism/issues/2510)
+- Purge: [Fixed SQL error when the photo ID of a file is missing](https://github.com/photoprism/photoprism/issues/2540)
 - Cleanup: [Improved logging when deleting related sidecar files](https://github.com/photoprism/photoprism/issues/2521)
 - Config: [Added `PHOTOPRISM_AUTH_MODE` option to select authentication mode](https://github.com/photoprism/photoprism/commit/591a6562707457045f504defba69e693afccba65)
 - Config: [Improved inline docs in `docker-compose.yml` examples](https://github.com/photoprism/photoprism/pull/2536)

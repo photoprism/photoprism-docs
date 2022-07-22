@@ -10,7 +10,7 @@
 ### Development Preview ###
 <span class="build">Build 220722-3b2f53da</span>
 
-Our preview includes indexing and authentication enhancements as well as [updated translations](https://translate.photoprism.app/projects/photoprism/). Thank you to everyone who helps with testing! We appreciate it very much.
+Our preview includes improvements to indexing, metadata, and authentication, as well as [updated translations](https://translate.photoprism.app/projects/photoprism/).
 
 What's new?
 

@@ -171,6 +171,14 @@ Run this command to start the application and database services in the backgroun
 docker-compose up -d
 ```
 
+!!! info ""
+    if you are using docker compose V2 remove the "-" from the command, so run:
+    ```bash
+    docker compose up -d
+    ``` 
+    ([see this](https://askubuntu.com/questions/1396689/docker-compose-cant-execute-command-docker-compose-not-found))
+
+
 Now open the Web UI by navigating to http://localhost:2342/. You should see a login screen.
 Sign in with the user `admin` and the initial password configured via `PHOTOPRISM_ADMIN_PASSWORD`.
 You may change it on the [account settings page](../user-guide/settings/account.md).

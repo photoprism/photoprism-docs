@@ -29,6 +29,12 @@ Symbolic links to directories within the *originals* folder are supported if the
 
 It is also not supported to mount a symbolic link as *storage* folder, or to use links inside the *storage* folder.
 
+### Failed Imports with Network Storage and Docker
+
+When network-based storage (e.g. SMB/CIFS) is combined with running PhotoPrism under Docker, the originals and import directories should be mounted to the container as a single mount point, rather than as two separate mounts. If this is not done, you may observe 'empty file' errors when the import runs, due to caching of zero-length inode data after the files are moved into the library.
+
+- [Photos fail to index after import, empty file error](https://github.com/photoprism/photoprism/issues/2516)
+
 ## User Authentication
 
 ### Session Invalidation

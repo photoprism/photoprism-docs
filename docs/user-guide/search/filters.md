@@ -39,7 +39,7 @@ To combine different filters use a space as separator:
 mono:true review:false
 ```
 
-The search result shows pictures that are monochrome **and** not in the overview.
+The search result shows pictures that are monochrome **and** not in review.
 
 Additionally some filters can be combined with `&` as follows:
 

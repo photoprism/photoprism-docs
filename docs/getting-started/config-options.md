@@ -7,10 +7,10 @@
 
 ### Authentication ###
 
-|        Environment        |     CLI Flag     | Default |                            Description                             |
-|---------------------------|------------------|---------|--------------------------------------------------------------------|
-| PHOTOPRISM_ADMIN_PASSWORD | --admin-password |         | initial admin `PASSWORD`, must have at least 4 characters          |
-| PHOTOPRISM_PUBLIC         | --public         |         | disable password authentication, incl WebDAV and Advanced Settings |
+|        Environment        |     CLI Flag     | Default  |                        Description                        |
+|---------------------------|------------------|----------|-----------------------------------------------------------|
+| PHOTOPRISM_AUTH_MODE      | --auth-mode      | password | authentication `MODE` (public, password)                  |
+| PHOTOPRISM_ADMIN_PASSWORD | --admin-password |          | initial admin `PASSWORD`, must have at least 8 characters |
 
 ### Logging ###
 
@@ -57,8 +57,8 @@
 | PHOTOPRISM_DISABLE_PLACES         | --disable-places         |         | disable reverse geocoding and maps                                                      |
 | PHOTOPRISM_DISABLE_BACKUPS        | --disable-backups        |         | disable backing up albums and photo metadata to YAML files                              |
 | PHOTOPRISM_DISABLE_TENSORFLOW     | --disable-tensorflow     |         | disable all features depending on TensorFlow                                            |
-| PHOTOPRISM_DISABLE_FACES          | --disable-faces          |         | disable facial recognition                                                              |
-| PHOTOPRISM_DISABLE_CLASSIFICATION | --disable-classification |         | disable image classification                                                            |
+| PHOTOPRISM_DISABLE_FACES          | --disable-faces          |         | disable face detection and recognition using TensorFlow                                 |
+| PHOTOPRISM_DISABLE_CLASSIFICATION | --disable-classification |         | disable image classification using TensorFlow                                           |
 | PHOTOPRISM_DISABLE_FFMPEG         | --disable-ffmpeg         |         | disable video transcoding and thumbnail extraction with FFmpeg                          |
 | PHOTOPRISM_DISABLE_EXIFTOOL       | --disable-exiftool       |         | disable creating JSON metadata sidecar files with ExifTool                              |
 | PHOTOPRISM_DISABLE_HEIFCONVERT    | --disable-heifconvert    |         | disable conversion of HEIC/HEIF files                                                   |
@@ -68,8 +68,8 @@
 | PHOTOPRISM_DISABLE_RAW            | --disable-raw            |         | disable indexing and conversion of RAW files                                            |
 | PHOTOPRISM_RAW_PRESETS            | --raw-presets            |         | enables applying user presets when converting RAW files (reduces performance)           |
 | PHOTOPRISM_EXIF_BRUTEFORCE        | --exif-bruteforce        |         | always perform a brute-force search if no Exif headers were found                       |
-| PHOTOPRISM_DETECT_NSFW            | --detect-nsfw            |         | flag photos as private that may be offensive (requires TensorFlow)                      |
-| PHOTOPRISM_UPLOAD_NSFW            | --upload-nsfw            |         | allow uploads that may be offensive                                                     |
+| PHOTOPRISM_DETECT_NSFW            | --detect-nsfw            |         | automatically flag photos as private that MAY be offensive (requires TensorFlow)        |
+| PHOTOPRISM_UPLOAD_NSFW            | --upload-nsfw            |         | allow uploads that MAY be offensive (no effect without TensorFlow)                      |
 
 ### Customization ###
 
@@ -151,7 +151,7 @@
 | PHOTOPRISM_THUMB_SIZE          | --thumb-size          |    2048 | maximum size of thumbnails created during indexing in `PIXELS` (720-7680)                   |
 | PHOTOPRISM_THUMB_SIZE_UNCACHED | --thumb-size-uncached |    7680 | maximum size of missing thumbnails created on demand in `PIXELS` (720-7680)                 |
 | PHOTOPRISM_THUMB_UNCACHED      | --thumb-uncached      |         | enable on-demand creation of missing thumbnails (high memory and cpu usage)                 |
-| PHOTOPRISM_JPEG_QUALITY        | --jpeg-quality        |      85 | `QUALITY` of created JPEG sidecars and thumbnails (25-100, best, high, default, low, worst) |
+| PHOTOPRISM_JPEG_QUALITY        | --jpeg-quality        |      85 | a higher value increases the `QUALITY` and file size of JPEG images and thumbnails (25-100) |
 | PHOTOPRISM_JPEG_SIZE           | --jpeg-size           |    7680 | maximum size of created JPEG sidecar files in `PIXELS` (720-30000)                          |
 
 ### Face Recognition ###

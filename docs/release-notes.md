@@ -7,10 +7,10 @@
 !!! tldr ""
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
-### Development Preview ###
-<span class="build">Build 220723-66a2a389</span>
+### July 28, 2022 ###
+<span class="build">Build 220728-66a2a389e</span>
 
-Our preview includes improvements to indexing, metadata, and authentication, as well as [updated translations](https://translate.photoprism.app/projects/photoprism/).
+Our latest release includes indexing, metadata, and authentication improvements, as well as [updated translations](https://translate.photoprism.app/projects/photoprism/).
 
 What's new?
 

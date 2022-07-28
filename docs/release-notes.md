@@ -10,7 +10,7 @@
 ### July 28, 2022 ###
 <span class="build">Build 220728-729ddd920</span>
 
-Our latest release includes indexing, metadata, and authentication improvements, as well as [updated translations](https://translate.photoprism.app/projects/photoprism/).
+Includes indexing, metadata, and authentication improvements, as well as [updated translations](https://translate.photoprism.app/projects/photoprism/).
 
 What's new?
 

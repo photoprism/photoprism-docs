@@ -23,8 +23,8 @@ What's new?
 - Cleanup: [Improved logging when deleting related sidecar files](https://github.com/photoprism/photoprism/issues/2521)
 - Config: [Added `PHOTOPRISM_AUTH_MODE` option to select authentication mode](https://github.com/photoprism/photoprism/commit/591a6562707457045f504defba69e693afccba65)
 - Config: [Improved inline docs in `docker-compose.yml` examples](https://github.com/photoprism/photoprism/pull/2536)
-- Translations: [Added Greek](https://github.com/photoprism/photoprism/pull/2529)
 - Build: [Updated Go to v1.18.4, which includes a number of security and compiler fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.18.4+label%3ACherryPickApproved)
+- Translations: [Added Greek](https://github.com/photoprism/photoprism/pull/2529)
 
 Breaking Changes
 

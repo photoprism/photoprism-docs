@@ -198,4 +198,4 @@ The following variables are used by our Docker images only and have no effect ot
 | PHOTOPRISM_GID           | 0       | run with a specific group id after initialization, to be used together with `PHOTOPRISM_UID`        |
 | PHOTOPRISM_UMASK         | 0002    | [file-creation mode](https://linuxize.com/post/umask-command-in-linux/) (default: u=rwx,g=rwx,o=rx) |
 | PHOTOPRISM_INIT          |         | run/install on first startup (options: update gpu tensorflow davfs clitools clean)                  |
-| PHOTOPRISM_DISABLE_CHOWN | false   | prevent updating storage permissions via chmod and chown on startup                                 |
+| PHOTOPRISM_DISABLE_CHOWN | false   | disable updating storage permissions via chmod and chown on startup                                 |

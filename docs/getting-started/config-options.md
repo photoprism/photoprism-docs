@@ -156,7 +156,7 @@
 
 ### Face Recognition ###
 
-!!! info ""    
+!!! info ""
     To [recognize faces](https://docs.photoprism.app/user-guide/organize/people/), PhotoPrism first extracts crops from your images using a
     [library](https://github.com/esimov/pigo) based on [pixel intensity comparisons](https://arxiv.org/pdf/1305.4537.pdf).
     These are then fed into TensorFlow to compute [512-dimensional vectors](https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Schroff_FaceNet_A_Unified_2015_CVPR_paper.pdf)
@@ -187,3 +187,15 @@ If you start the server as a *daemon* in the background, you can additionally sp
 |-------------------------|----------------|---------|--------------------------------------|
 | PHOTOPRISM_PID_FILENAME | --pid-filename |         | process id `FILE` *daemon-mode only* |
 | PHOTOPRISM_LOG_FILENAME | --log-filename |         | server log `FILE` *daemon-mode only* |
+
+### Docker Image ###
+
+The following variables are used by our Docker images only and have no effect otherwise:
+
+| Environment              | Default | Description                                                                                         |
+|--------------------------|---------|-----------------------------------------------------------------------------------------------------|
+| PHOTOPRISM_UID           | 0       | switch to a non-root user after initialization (supported: 0, 33, 50-99, 500-600, and 900-1200)     |
+| PHOTOPRISM_GID           | 0       | run with a specific group id, to be used together with `PHOTOPRISM_UID`                             |
+| PHOTOPRISM_UMASK         | 0002    | [file-creation mode](https://linuxize.com/post/umask-command-in-linux/) (default: u=rwx,g=rwx,o=rx) |
+| PHOTOPRISM_INIT          |         | run/install on first startup (options: update gpu tensorflow davfs clitools clean)                  |
+| PHOTOPRISM_DISABLE_CHOWN | false   | prevent update of storage permissions on startup via chmod and chown                                |

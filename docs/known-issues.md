@@ -23,11 +23,7 @@ In practice, this is not a problem as long as you [follow our documentation](get
 
 ### Symbolic Links
 
-Symbolic links to directories within the *originals* folder are supported if they are accessible from the environment your instance is running in. However, please note that file links are not supported at this time:
-
-- [Support indexing of symlinked files #1049](https://github.com/photoprism/photoprism/issues/1049)
-
-It is also not supported to mount a symbolic link as *storage* folder, or to use links inside the *storage* folder.
+Symbolic [links to files and directories](https://github.com/photoprism/photoprism/issues/1049) within the *originals* folder are supported if they are accessible from the environment in which your instance is running. However, you cannot mount a symbolic link as a *storage* folder or use links within the *storage* folder.
 
 ## User Authentication
 

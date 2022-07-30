@@ -10,11 +10,11 @@
 ### July 30, 2022 ###
 <span class="build">Build 220730-0e1222c83</span>
 
-Fixes activating public mode with the new configuration option `PHOTOPRISM_AUTH_MODE` instead of `PHOTOPRISM_PUBLIC`.
+Fixes the activation of public mode with `PHOTOPRISM_AUTH_MODE` instead of `PHOTOPRISM_PUBLIC`.
 
 What's new?
 
-- Auth: [Activate public mode via `PHOTOPRISM_AUTH_MODE="public`](https://github.com/photoprism/photoprism/issues/2565)
+- Auth: [Activate public mode via `PHOTOPRISM_AUTH_MODE="public"`](https://github.com/photoprism/photoprism/issues/2565)
 
 ### July 28, 2022 ###
 <span class="build">Build 220728-729ddd920</span>

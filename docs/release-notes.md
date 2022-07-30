@@ -7,7 +7,7 @@
 !!! tldr ""
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
-### Development Preview ###
+### July 30, 2022 ###
 <span class="build">Build 220730-0e1222c83</span>
 
 Fixes activating public mode with the new configuration option `PHOTOPRISM_AUTH_MODE` instead of `PHOTOPRISM_PUBLIC`.

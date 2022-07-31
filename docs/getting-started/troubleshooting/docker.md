@@ -159,6 +159,7 @@ Errors such as "read-only file system", "error creating path", or "wrong permiss
 - [ ] If you have configured specific user and group IDs for a service, make sure they match
 - [ ] If [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) are mounted or used within *storage* folders, replace them with actual paths
 - [ ] When mounting folders that only root has access to, you may have to prefix the `docker` and `docker-compose` commands with `sudo` on Linux if you are not already logged in as root
+- [ ] When using `SELinux`, ensure that you have added the proper [Docker mount flag (`:z` or `:Z`)](https://docs.docker.com/storage/bind-mounts/#configure-the-selinux-label).
 
 An easy way to test for missing permissions is to (temporarily) remove restrictions and make the entire folder accessible to everyone:
 

@@ -8,7 +8,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 220801-eba9fd701</span>
+<span class="build">Build 220802-194e7d121</span>
 
 Our team will be on vacation until the end of August. In the meantime, feel free to help us test these changes. Thank you!
 
@@ -17,6 +17,8 @@ What's new?
 - Library: [Indexing will be aborted if the originals folder is empty](https://github.com/photoprism/photoprism/pull/2299)
 - Albums: [Private pictures are shown if "Private" has been disabled in *Settings*](https://github.com/photoprism/photoprism/issues/2570)
 - Docker: [Permissions of original media files are no longer updated on startup](https://github.com/photoprism/photoprism/pull/2371)
+- Build: [Updated Go to v1.18.5, which includes a number of security and compiler fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.18.5+label%3ACherryPickApproved)
+- Translations: [Added Catalan, Finnish, and Ukrainian](https://github.com/photoprism/photoprism/pull/2574)
 
 ### July 30, 2022 ###
 <span class="build">Build 220730-0e1222c83</span>

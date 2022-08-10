@@ -14,9 +14,9 @@ nav:
       - SD Card Image: getting-started/raspberry-pi/microsd-image.md
     - NAS Devices:
       - Synology: getting-started/nas/synology.md
+      - QNAP: getting-started/nas/qnap.md
       - Unraid: getting-started/nas/unraid.md
       - openmediavault: getting-started/nas/openmediavault.md
-      - QNAP: getting-started/nas/qnap.md
     - BSD Ports:
       - FreeBSD: getting-started/ports/freebsd.md
     - Getting Updates: getting-started/updates.md

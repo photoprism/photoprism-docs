@@ -1,5 +1,8 @@
 # Using Caddy 2 as Reverse Proxy
 
+!!! info "Getting Support"
+    Should you experience problems with Caddy, we recommend that you ask the Caddy community for advice, as we cannot provide support for third-party software.
+
 WebSocket proxying automatically works in Caddy 2. There is no need to enable this as necessary for Caddy 1, Apache,
 and NGINX. In addition, Caddy 2 may [automatically create](https://caddyserver.com/docs/caddyfile/directives/tls) 
 and update [Let's Encrypt](https://letsencrypt.org/) HTTPS certificates.

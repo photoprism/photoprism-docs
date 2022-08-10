@@ -16,6 +16,7 @@ nav:
       - Synology: getting-started/nas/synology.md
       - Unraid: getting-started/nas/unraid.md
       - openmediavault: getting-started/nas/openmediavault.md
+      - QNAP: getting-started/nas/qnap.md
     - BSD Ports:
       - FreeBSD: getting-started/ports/freebsd.md
     - Getting Updates: getting-started/updates.md

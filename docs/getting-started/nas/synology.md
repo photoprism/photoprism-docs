@@ -41,10 +41,9 @@ If your device runs out of memory, the index is frequently locked, or other syst
 
 Other issues? Our [troubleshooting checklists](../troubleshooting/index.md) help you quickly diagnose and solve them.
 
-!!! info ""
-    You are welcome to ask for help in our [community chat](https://link.photoprism.app/chat).
-    [Sponsors](https://photoprism.app/membership) receive direct [technical support](https://photoprism.app/contact) via email.
-    Before submitting a support request, try to [determine the cause of your problem](../troubleshooting/index.md).
+!!! info "Getting Support"
+    Should you experience problems with the installation, we recommend that you ask the Synology community for advice, as we cannot provide support for third-party software.
+
 
 <!---
 

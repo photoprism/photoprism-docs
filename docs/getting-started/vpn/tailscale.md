@@ -3,6 +3,9 @@
 !!! quote ""
     Help improve these docs! You can contribute by clicking :material-pencil: to send a pull request with your changes.
 
+!!! info "Getting Support"
+    Should you experience problems with Tailscale, we recommend that you ask the Tailscale community for advice, as we cannot provide support for third-party software.
+
 1. Open the [Tailscale website](https://tailscale.com/) and Select Use Tailscale button. 
 
 2. Sign up with an email address or using any of your other accounts and install Tailscale on all the relevant devices. Detailed and clear instructions are available to guide your through the process depending on the operating system.

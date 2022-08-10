@@ -1,5 +1,8 @@
 # Using Apache 2.4 as Reverse Proxy
 
+!!! info "Getting Support"
+    Should you experience problems with Apache, we recommend that you ask the Apache community for advice, as we cannot provide support for third-party software.
+
 !!! example
     ```
     ProxyPass /api/v1/ws ws://photoprism.lxd:2342/api/v1/ws

@@ -4,7 +4,5 @@ We recommend following this great tutorial from IBRACORP to install PhotoPrism o
 
 ↪ <https://youtu.be/WMNsO-0BuG8>
 
-!!! info ""
-    You are welcome to ask for help in our [community chat](https://link.photoprism.app/chat).
-    [Sponsors](https://photoprism.app/membership) receive direct [technical support](https://photoprism.app/contact) via email.
-    Before submitting a support request, try to [determine the cause of your problem](../troubleshooting/index.md).
+!!! info "Getting Support"
+    Should you experience problems with the installation, we recommend that you ask the Unraid community for advice, as we cannot provide support for third-party software.

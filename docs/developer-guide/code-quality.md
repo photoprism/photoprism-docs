@@ -39,7 +39,7 @@ It is best to do this while you are working on the same component anyway, for ex
 
 Releasing imperfect code is not a problem as long as it is [accompanied by automated tests](#code-that-cannot-be-tested-is-flawed). This makes it easy to refactor later without breaking anything or requiring detailed knowledge of the requirements and a lot of time for manual testing. Be pragmatic. Done is better than perfect.
 
-Potential security issues are an important exception. These should never be ignored. If you find a problem, please [report it to us](https://photoprism.app/security-policy) immediately so we can fix it.
+Potential [security issues](security/index.md) are an important exception. These should never be ignored. If you find a problem, please [report it to us](https://photoprism.app/security-policy) immediately so we can fix it.
 
 !!! example ""
     Feel free to think ahead, just don't code ahead. But also, don't feel the need to decide so many
@@ -74,7 +74,7 @@ Don't worry that this will take too long. Take your time. It's the fastest and o
 
 !!! example ""
     Simple, elegant solutions are [more effective](#effectiveness-efficiency), but they are harder to find than complex ones, and they require more
-    time, which we too often believe to be unaffordable. — <cite>Niklaus Wirth, Feb 1985</cite>
+    time, which we too often believe to be unaffordable. — <cite>Niklaus Wirth, [Communications of the ACM](https://dl.acm.org/doi/10.1145/2786.2789), 1985</cite>
 
 ## Effectiveness > Efficiency ##
 
@@ -88,7 +88,7 @@ In contrast, a feature factory focuses on the quantity of new features rather th
 [![Feature Factory](https://dl.photoprism.app/img/diagrams/feature-factory.jpg)](https://twitter.com/johncutlefish/status/780102280162840576)
 
 !!! example ""
-    It is fundamentally the confusion between effectiveness and efficiency that stands between doing the right things and doing things right. There is surely nothing quite so useless as doing with great efficiency what should not be done at all. — <cite>[Peter Drucker](https://en.wikipedia.org/wiki/Peter_Drucker)</cite>
+    **It is fundamentally the confusion between effectiveness and efficiency that stands between doing the right things and doing things right.** There is surely nothing quite so useless as doing with great efficiency what should not be done at all. — <cite>[Peter Drucker](https://en.wikipedia.org/wiki/Peter_Drucker)</cite>
 
 ## Test Automation Guidelines ##
 
@@ -119,13 +119,15 @@ including `gofmt`, `go vet`, `go lint` and `gocyclo`. If you find this helpful a
 
 ## Security Best Practices ##
 
-The [Open Source Security Foundation (OpenSSF)](https://bestpractices.coreinfrastructure.org/en/) maintains standardized security criteria and awards a badge upon completion of the questionnaire:
+The [Open Source Security Foundation](https://bestpractices.coreinfrastructure.org/en/) (OpenSSF) maintains standardized security criteria and best practices for open-source projects:
 
-[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/6132/badge)](https://bestpractices.coreinfrastructure.org/projects/6132)
+<a href="https://bestpractices.coreinfrastructure.org/projects/6132" target="_blank"><img src="/developer-guide/security/openssf.png" alt="OpenSSF Best Practices" class="center pt-2 small"></a>
+
+↪ [Security Testing Guide](security/index.md)
 
 [goreport]: https://goreportcard.com/report/github.com/photoprism/photoprism
 [codacy]: https://www.codacy.com/project/lastzero/photoprism/dashboard
 [codecov]: https://codecov.io/gh/photoprism/photoprism
 
-[^1]: https://twitter.com/allenholub/status/1073738216140791808
-[^2]: Martin, Robert C. [*Clean Code: A Handbook of Agile Software Craftsmanship*](https://enos.itcollege.ee/~jpoial/oop/naited/Clean%20Code.pdf). Upper Saddle River, NJ: Prentice Hall, 2009.
+[^1]: Allen Holub, [*twitter.com/allenholub/status/1073738216140791808*](https://twitter.com/allenholub/status/1073738216140791808), 2018
+[^2]: Robert C. Martin, [*Clean Code: A Handbook of Agile Software Craftsmanship*](https://www.amazon.com/-/dp/0132350882/), 2009

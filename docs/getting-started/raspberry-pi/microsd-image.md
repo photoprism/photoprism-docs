@@ -1,7 +1,7 @@
 # MicroSD Image for the Raspberry Pi 
 
 ![](microsd-image/card.jpg){ class="w25 right" }
-The easiest way to run PhotoPrism on a Raspberry Pi is with [PhotoPrismPi](https://dl.photoprism.app/raspberrypi/).[^1]
+The easiest way to run PhotoPrism on a Raspberry Pi is with [PhotoPrismPi](https://dl.photoprism.app/dist/photoprismpi/).[^1]
 Simply flash the image to an SD card and boot your device with it.
 
 We recommend using a fast MicroSD card with at least 64 GB so that you don't run out of storage space later on. These are usually sold with an adapter that fits into normal SD card slots.

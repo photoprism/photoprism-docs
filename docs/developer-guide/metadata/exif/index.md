@@ -2,7 +2,7 @@ We are using the [dsoprea/go-exif](https://github.com/dsoprea/go-exif) package t
 
 See [internal/meta/exif.go](https://github.com/photoprism/photoprism/blob/master/internal/meta/exif.go) for which tags are integrated into PhotoPrism. 
 
-See the [official EXIF specification](https://dl.photoprism.app/pdf/20120101_Exif_v2.3.pdf) for more information about EXIF tags.
+See the [official EXIF specification](https://dl.photoprism.app/pdf/20120101-Exif_v2.3.pdf) for more information about EXIF tags.
 
 ## Screenshots ##
 

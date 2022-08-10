@@ -43,7 +43,7 @@
     
     Should you still wish to operate one or both of these services on your own premises, [we can set up such a fully autonomous solution](https://photoprism.app/contact) for you, provided you are prepared to cover the initial setup costs as well as ongoing maintenance fees for content licenses and updates.
 
-    ↪ [Privacy Policy](https://photoprism.app/privacy){ class="pr-3" } ↪ [Compliance FAQ](https://photoprism.app/kb/compliance-faq#privacy)
+    ↪ [Privacy Policy](https://photoprism.app/privacy#section-7){ class="pr-3" } ↪ [Compliance FAQ](https://photoprism.app/kb/compliance-faq#privacy)
 
 ## User Interface ##
 

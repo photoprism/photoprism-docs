@@ -52,6 +52,10 @@ Please note that not all [video and audio formats](https://caniuse.com/?search=v
 
 The backend is compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB](https://mariadb.org/) 10.5.12+.[^2] Support for MySQL 8 has been discontinued due to low demand and missing features.[^3]
 
+#### External Services ####
+
+As explained in detail in our [Privacy Policy](https://photoprism.app/privacy), reverse geocoding and interactive world maps depend on the necessary data being [retrieved from us](https://photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services require an Internet connection if you want to use them.[^4]
+
 #### HTTPS ####
 
 If you install PhotoPrism on a public server outside your home network, **always run it behind a secure HTTPS reverse proxy** such as [Traefik](proxies/traefik.md) or [Caddy](proxies/caddy-2.md).
@@ -76,3 +80,4 @@ In exchange for their continued support, [sponsors](https://photoprism.app/membe
 [^1]: RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory
 [^2]: Our [`docker-compose.yml` examples](https://dl.photoprism.app/docker/docker-compose.yml) are generally based on the latest [MariaDB Server](https://mariadb.com/kb/en/mariadb-server-release-dates/) release to take advantage of performance improvements. That doesn't mean older versions are no longer supported.
 [^3]: Oracle seems to have stopped shipping [new features and improvements](https://github.com/photoprism/photoprism/issues/1764). As a result, the testing effort required before each release is no longer feasible.
+[^4]: [Compliance FAQ](https://photoprism.app/kb/compliance-faq#privacy)

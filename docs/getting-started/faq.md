@@ -79,7 +79,7 @@ Your use of these services is fully covered by us. So there are no usage-based f
 
 Should you still wish to operate one or both of these services on your own premises, [we can set up such a fully autonomous solution](https://photoprism.app/contact) for you, provided you are prepared to cover the initial setup costs as well as ongoing maintenance fees for content licenses and updates.
 
-↪ [Compliance FAQ](https://photoprism.app/kb/compliance-faq)
+↪ [Privacy Policy](https://photoprism.app/privacy){ class="pr-3" } ↪ [Compliance FAQ](https://photoprism.app/kb/compliance-faq#privacy)
 
 ### Are JPEGs updated when RAW or XMP files change?
 

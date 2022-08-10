@@ -136,7 +136,7 @@ make all install DESTDIR=/opt/photoprism
 ```
 
 Missing build dependencies must be installed manually as shown in our human-readable and versioned
-[Dockerfile](https://github.com/photoprism/photoprism/blob/develop/docker/develop/Dockerfile). You often don't
+[Dockerfile](https://github.com/photoprism/photoprism/blob/develop/docker/develop/bookworm/Dockerfile). You often don't
 need to use the exact same versions, so it's possible to replace packages with what is available in your environment.
 
 Please note that we do not have the resources to provide private users with dependencies and
@@ -170,8 +170,8 @@ systems and devices, which saves our team a lot of time that we can then spend [
 providing support and developing one of the many features that users are waiting for.
 
 Human-readable and [versioned Dockerfiles as part of our public source code](https://github.com/photoprism/photoprism/tree/develop/docker)
-also help avoid "works for me" moments and other unwelcome surprises by enabling teams to have the exact same environment everywhere in [development](https://github.com/photoprism/photoprism/blob/develop/docker/develop/Dockerfile), staging,
-and [production](https://github.com/photoprism/photoprism/blob/develop/docker/photoprism/Dockerfile).
+also help avoid "works for me" moments and other unwelcome surprises by enabling teams to have the exact same environment everywhere in [development](https://github.com/photoprism/photoprism/blob/develop/docker/develop/bookworm/Dockerfile), staging,
+and [production](https://github.com/photoprism/photoprism/blob/develop/docker/photoprism/bookworm/Dockerfile).
 
 Last but not least, virtually all file format parsers have vulnerabilities that just haven't been discovered yet.
 This is a known risk that can affect you even if your computer is not directly connected to the Internet.

@@ -12,12 +12,12 @@ We would be happy to receive more [XMP files for testing](https://github.com/pho
 
 ## XMP Specification
 
-- [Part 1: Data and Serialization Model](https://dl.photoprism.app/pdf/20120101_Adobe_XMP_Specification_Part_1.pdff)
-- [Part 2: Standard Schemas](https://dl.photoprism.app/pdf/20120101_Adobe_XMP_Specification_Part_2.pdf)
-- [Part 3: Storage in Files](https://dl.photoprism.app/pdf/20120101_Adobe_XMP_Specification_Part_3.pdf) 
-- [Adobe XMP Programmers Guide](https://dl.photoprism.app/pdf/20120101_Adobe_XMP_Programmers_Guide.pdf)
-- [Adobe XMP Files Plugin SDK](https://dl.photoprism.app/pdf/20120101_Adobe_XMP_Files_Plugin_SDK.pdf)
-- [Adobe BSD 3-Clause License](https://dl.photoprism.app/pdf/20120101_Adobe_XMP_Specification_License.txt) and [XMP Toolkit SDK](https://github.com/adobe/XMP-Toolkit-SDK)
+- [Part 1: Data and Serialization Model](https://dl.photoprism.app/pdf/20120101-Adobe_XMP_Specification_Part_1.pdf)
+- [Part 2: Standard Schemas](https://dl.photoprism.app/pdf/20120101-Adobe_XMP_Specification_Part_2.pdf)
+- [Part 3: Storage in Files](https://dl.photoprism.app/pdf/20120101-Adobe_XMP_Specification_Part_3.pdf) 
+- [Adobe XMP Programmers Guide](https://dl.photoprism.app/pdf/20120101-Adobe_XMP_Programmers_Guide.pdf)
+- [Adobe XMP Files Plugin SDK](https://dl.photoprism.app/pdf/20120101-Adobe_XMP_Files_Plugin_SDK.pdf)
+- [Adobe BSD 3-Clause License](https://dl.photoprism.app/pdf/20120101-Adobe_XMP_Specification_License.txt) and [XMP Toolkit SDK](https://github.com/adobe/XMP-Toolkit-SDK)
 
 ## Open Issues
 

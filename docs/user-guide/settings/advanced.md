@@ -42,7 +42,7 @@ This option prevents creating the following `yml` backups:
 - For photos in `storage/sidecar`
 - For albums, months, states and folders in `storage/albums`
 
-The equivalent [config toggle](../../getting-started/config-options.md/) is `PHOTOPRISM_DISABLE_BACKUPS`.
+The equivalent [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_DISABLE_BACKUPS`.
 
 ### Disable WebDAV
 This option prevents building WebDav connections.

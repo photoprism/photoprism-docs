@@ -9,7 +9,7 @@ It is available for Mac, Linux, and Windows. PhotoPrism also runs on [PikaPods](
 
 ![Progressive Web App](https://dl.photoprism.app/img/ui/iphone-index-360px.png){ align=right }
 
-Once the [initial setup](../getting-started/index.md) is complete, our [First Steps 👣](first-steps.md) tutorial guides you through the user interface and settings to ensure your library is indexed according to your individual preferences.
+Once the [initial setup](../getting-started/index.md) is complete, our [First Steps 👣](./first-steps.md) tutorial guides you through the user interface and settings to ensure your library is indexed according to your individual preferences.
 
 ## Getting Support ##
 

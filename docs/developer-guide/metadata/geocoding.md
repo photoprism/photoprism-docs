@@ -38,13 +38,19 @@ For details, see [rendering maps](../ui/maps.md).
 }
 ```
 
+## Location Data ##
+
+See: [internal/maps/location.go](https://github.com/photoprism/photoprism/blob/develop/internal/maps/location.go)
+
 ## Related Resources ##
 
 ### Event Discovery ###
+
 - https://schedjoules.github.io/event-discovery-api/#introduction
 - https://www.gdeltproject.org/data.html#rawdatafiles
 
 ### Libraries ###
+
 - https://tegola.io/ - An open source vector tile server written in Go
 - https://tegola.io/tutorials/tegola-with-open-layers/ - Using Tegola with OpenLayers
 - https://github.com/go-spatial/tegola-osm - scripts for importing and running a mirror of OSM with tegola
@@ -61,16 +67,13 @@ For details, see [rendering maps](../ui/maps.md).
 - https://github.com/siddontang/ledisdb - a high performance NoSQL DB powered by Go ([homepage](http://ledisdb.com/))
 - https://github.com/blevesearch/bleve/tree/master/geo - geo support in bleve
 
-### OpenStreetMap ###
-At the moment, we use the [reverse lookup API](https://wiki.openstreetmap.org/wiki/Nominatim#Reverse_Geocoding) of OpenStreetMap as well as the their tiles for our Leaflet-based Places page.
+### Commercial Services ###
 
-Code: [internal/maps/osm/location.go](https://github.com/photoprism/photoprism/blob/develop/internal/maps/osm/location.go)
-
-### Commercial Maps ###
 - https://developers.google.com/maps/documentation/
 - https://www.mapbox.com/maps/
 
 ### Tutorials ###
+
 - https://developers.google.com/maps/solutions/store-locator/clothing-store-locator#findnearsql
 - https://blog.mastermaps.com/2014/08/showing-geotagged-photos-on-leaflet-map.html - Showing geotagged photos on a Leaflet map
 - https://rubenspgcavalcante.github.io/leaflet-ant-path/ - Animate polylines as ants walking in a path

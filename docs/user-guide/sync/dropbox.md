@@ -1,8 +1,5 @@
 # Syncing with Dropbox #
 
-!!! quote ""
-    Help improve these docs! You can contribute by clicking :material-pencil: to send a pull request with your changes.
-
 It's possible to use [Dropbox](https://www.dropbox.com/) to store your photos, while viewing and managing them through PhotoPrism.
 
 1. Set up a Dropbox account.
@@ -40,3 +37,6 @@ To auto-import uploaded files into PhotoPrism;
 A useful (although paid) feature is [Dropbox Smart Sync](https://www.dropbox.com/smart-sync) (with optional auto-evict) which will download the files from Dropbox's servers only when you (or PhotoPrism) accesses them (such as during initial indexing, or when downloading an original file via the PhotoPrism interface).
 
 This can save space on your server by automically offloading the originals unless/until they're viewed.
+
+!!! example ""
+    **Help improve these docs!** You can contribute by clicking :material-pencil: to send a pull request with your changes.

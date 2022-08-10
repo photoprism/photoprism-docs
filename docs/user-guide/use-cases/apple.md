@@ -1,8 +1,5 @@
 # Migrate from Apple Photos #
 
-!!! quote ""
-    Help improve these docs! You can contribute by clicking :material-pencil: to send a pull request with your changes.
-
 ## Transfer Files ##
 
 1. Select the files or albums you want to export
@@ -28,3 +25,5 @@
 - TakenAt Date
 - Keywords
 
+!!! example ""
+    **Help improve these docs!** You can contribute by clicking :material-pencil: to send a pull request with your changes.

@@ -474,7 +474,7 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
 - UX: [Improved touch event accuracy](https://github.com/photoprism/photoprism/issues/1048)
 - UX: [Optimized rendering on small screens](https://github.com/photoprism/photoprism/commit/b07ba63108dace2a8d5b2df18a06647252a36272)
 - UX: [Fixed autocomplete in "add to album" dialog](https://github.com/photoprism/photoprism/issues/1130)
-- HEIF: [Prevent redundant sidecar JPEG files](https://github.com/photoprism/photoprism/issues/1200)
+- HEIF: [Prevent redundant sidecar JPEG files](https://github.com/photoprism/photoprism/issues/926)
 - Backup: [Added command flags and usage docs](https://github.com/photoprism/photoprism/issues/1190)
 - Translations: Added [Danish](https://github.com/photoprism/photoprism/commits?author=tcarlsen) 
   and [Kurdish](https://github.com/photoprism/photoprism/commits?author=Hrazhan)

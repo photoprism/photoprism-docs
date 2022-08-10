@@ -35,7 +35,18 @@
 
     A key difference between the open source and commercial license is that you get access to additional support and configuration options, as well as the right to customize functionality to your needs without having to publicly disclose your changes. We also work to optimize the standard configuration, feature set, and scalability of the Pro Edition to meet the requirements of professional users and organizations.
 
+??? question "Does PhotoPrism depend on any external services?"
+
+    As explained in detail in our [Privacy Policy](https://photoprism.app/privacy), reverse geocoding and interactive world maps depend on retrieving the necessary data from external systems [supplied by us](https://photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality.
+    
+    Your use of these services is fully covered by us. So there are no usage-based fees, unlike with other vendors who may charge additional fees and may also not allow you to use caching, e.g. Google Maps.
+    
+    Should you still wish to operate one or both of these services on your own premises, [we can set up such a fully autonomous solution](https://photoprism.app/contact) for you, provided you are prepared to cover the initial setup costs as well as ongoing maintenance fees for content licenses and updates.
+
+    ↪ [Compliance FAQ](https://photoprism.app/kb/compliance-faq)
+
 ## User Interface ##
+
 ??? question "Can I select multiple photos at once?"
 
     Yes, you can [select multiple photos at once](./navigate.md#selection-mode-and-multi-select) 

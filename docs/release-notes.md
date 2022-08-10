@@ -432,7 +432,7 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
 <span class="build">Build 210520-4b32bac7</span>
 
 - Docker: [Fixed home directory permissions in new base image](https://github.com/photoprism/photoprism/issues/1301)
-- HEIF: [Test if JPEG was already rotated based on video metadata](https://github.com/photoprism/photoprism/blob/develop/docker/scripts/heif-convert.sh)
+- HEIF: [Test if JPEG was already rotated based on video metadata](https://github.com/photoprism/photoprism/blob/develop/scripts/dist/heif-convert.sh)
 
 ### May 19, 2021 ###
 <span class="build">Build 210519-24b5c7e6</span>

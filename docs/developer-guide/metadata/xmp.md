@@ -8,18 +8,26 @@ The original plan to build upon `go-xmp` didn't work out as we couldn't read man
 
 Please send more XMP files for testing ([pull request](../pull-requests.md)):
 
-https://github.com/photoprism/photoprism/tree/develop/internal/meta/testdata
+see https://github.com/photoprism/photoprism/tree/develop/internal/meta/testdata
 
-## Todo ##
+## Specification
+
+- [Part 1: Data and Serialization Model](https://dl.photoprism.app/pdf/20080101-Adobe_XMP_Specification_Part_1.pdf)
+- [Part 2: Standard Schemas](https://dl.photoprism.app/pdf/20080101-Adobe_XMP_Specification_Part_2.pdf)
+- [Part 3: Storage in Files](https://dl.photoprism.app/pdf/20080101-Adobe_XMP_Specification_Part_3.pdf) 
+
+## Open Issues
+
 - Experiment with Adobe Lightroom to see how it uses sidecar files. The new version doesn't seem to use XMP to automatically sync metadata anymore, probably because Adobe focuses on cloud storage. Needs further investigation.
 - Create a matrix showing what fields are used/supported by which application/tool (Photoshop, Lightroom, Darktable and others, [see](../media/raw.md)
 - Read http://www.exiv2.org/tags-xmp-crs.html (Camera Raw Schema)
 
-## Issues ## 
+## Released Features
+
 - [Store metadata in the filesystem #4](https://github.com/photoprism/photoprism/issues/4)
 - [Compare the quality and XMP compatibility of different RAW converters #65](https://github.com/photoprism/photoprism/issues/65)
 
-## External Resources ##
+## External Resources
+
 - https://github.com/trimmer-io/go-xmp - A native Go SDK for the Extensible Metadata Platform (XMP)
-- Adobe XMP Specification [Part 1](http://wwwimages.adobe.com/content/dam/Adobe/en/devnet/xmp/pdfs/XMP%20SDK%20Release%20cc-2016-08/XMPSpecificationPart1.pdf), [Part 2](http://wwwimages.adobe.com/content/dam/Adobe/en/devnet/xmp/pdfs/XMP%20SDK%20Release%20cc-2016-08/XMPSpecificationPart2.pdf) and [Part 3](http://wwwimages.adobe.com/content/dam/Adobe/en/devnet/xmp/pdfs/XMP%20SDK%20Release%20cc-2016-08/XMPSpecificationPart3.pdf), a.k.a ISO 16684-1:2011(E)
 - [XMP code in GIMP](https://gitlab.gnome.org/GNOME/gimp/tree/master/plug-ins/metadata) - Nothing beyond some comments. It was a code drop, we needed the feature, but unfortunately the original contributor left.

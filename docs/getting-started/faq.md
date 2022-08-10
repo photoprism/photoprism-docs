@@ -1,6 +1,6 @@
 # Frequently Asked Questions
 
-### What media file types are supported? ###
+### What media file types are supported?
 
 PhotoPrism supports indexing, viewing, and [converting](../user-guide/settings/library.md) most popular image, video and RAW formats, including JPEG, PNG, GIF, BMP, HEIF, HEIC, MP4, MOV, WebP, and WebM. [TIFF is partially supported](https://github.com/golang/go/issues?q=is%3Aissue+image%2Ftiff+) without extensions such as GeoTIFF.
 
@@ -21,7 +21,7 @@ Make sure you have JSON sidecar files enabled if you have videos, live photos, a
 
 For a complete list of file formats and extensions, see our downloadable [Feature Overview](https://link.photoprism.app/overview).
 
-### What are sidecar files and where do I find them? ###
+### What are sidecar files and where do I find them?
 
 A sidecar is a file that sits next to your main photo or video files and usually has the same name
 but a different extension:
@@ -36,7 +36,7 @@ New sidecar files are created in the *storage* folder by default, so the *origin
     Even if `PHOTOPRISM_DISABLE_EXIFTOOL` and `PHOTOPRISM_DISABLE_BACKUPS` are set to `true`,
     the indexer looks for existing sidecar files and uses them.
 
-### What metadata sidecar file types are supported? ###
+### What metadata sidecar file types are supported?
 
 Currently, three types of [file formats](../developer-guide/media/index.md) are supported:
 
@@ -71,7 +71,17 @@ impossible - to provide full support. Reading title, copyright, artist, and desc
 implemented as a proof-of-concept, [contributions are welcome](../developer-guide/metadata/xmp.md). Indexing of 
 embedded XMP is only possible via Exiftool, see above.
 
-### Are JPEGs updated when RAW or XMP files change? ###
+### Does PhotoPrism depend on any external services?
+
+As explained in detail in our [Privacy Policy](https://photoprism.app/privacy), reverse geocoding and interactive world maps depend on retrieving the necessary data from external systems [supplied by us](https://photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality.
+
+Your use of these services is fully covered by us. So there are no usage-based fees, unlike with other vendors who may charge additional fees and may also not allow you to use caching, e.g. Google Maps.
+
+Should you still wish to operate one or both of these services on your own premises, [we can set up such a fully autonomous solution](https://photoprism.app/contact) for you, provided you are prepared to cover the initial setup costs as well as ongoing maintenance fees for content licenses and updates.
+
+↪ [Compliance FAQ](https://photoprism.app/kb/compliance-faq)
+
+### Are JPEGs updated when RAW or XMP files change?
 
 JPEGs are currently not regenerated when related RAW or XMP files change. RAW files are digital negatives by design.
 PhotoPrism therefore assumes that their image information is immutable.
@@ -85,7 +95,7 @@ We recommend manually updating existing JPEG sidecar files as needed or creating
 between different versions. New files and other metadata changes are detected and reflected in the index as usual when
 your library is scanned.
 
-### Which folder will be indexed? ###
+### Which folder will be indexed?
 
 This depends on your environment and [configuration](config-options.md). While subfolders can be selected for indexing
 in the UI, changing the *originals* base folder requires a restart for security reasons.
@@ -113,7 +123,7 @@ volumes:
   - "/mnt/photos:/photoprism/originals/media"
 ```
 
-### How can I install PhotoPrism without Docker? ###
+### How can I install PhotoPrism without Docker?
 
 #### Building From Source ####
 
@@ -147,7 +157,7 @@ Updates are [released several times a month](https://docs.photoprism.app/release
 
 There is no official [LXC image](https://linuxcontainers.org/) available yet, see [related GitHub issue](https://github.com/photoprism/photoprism/issues/147) for details.
 
-### Why are you using Docker? ###
+### Why are you using Docker?
 
 Containers are nothing new; [Solaris Zones](https://en.wikipedia.org/wiki/Solaris_Containers) have been around for
 about 15 years, first released publicly in 2004. The chroot system call was introduced during
@@ -174,17 +184,17 @@ compromising performance and usability.
     both worlds. It's essentially what happens when you run dockerized applications on [virtual cloud servers](cloud/digitalocean.md)
     and operating systems other than Linux.
 
-### Will the self-hosted version continue to be supported? ###
+### Will the self-hosted version continue to be supported?
 
 Absolutely! We are on a mission to protect your freedom and privacy. Self-hosting is the easiest way to stay in control and protect [your privacy](https://photoprism.app/privacy). It also provides the best experience for advanced users who often rely on a local toolchain to select, edit, and publish their pictures.
 
 At the same time, we know there's a huge demand and many practical uses for a cloud-hosted app that is easy to set up. We like to give our users the choice and therefore offer a fully managed service as a deployment option. Selected hosting partners ensure that your privacy is protected as much as technically possible, even in the cloud.
 
-### What are the advantages of purchasing a commercial license? ###
+### What are the advantages of purchasing a commercial license?
 
 A key difference between the open source and commercial license is that you get access to additional support and configuration options, as well as the right to customize functionality to your needs without having to publicly disclose your changes. We also work to optimize the standard configuration, feature set, and scalability of the Pro Edition to meet the requirements of professional users and organizations.
 
-### Should I use SQLite, MariaDB, or MySQL? ###
+### Should I use SQLite, MariaDB, or MySQL?
 
 PhotoPrism is compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB 10.5.12+](https://mariadb.org/).
 Official support for MySQL 8 is discontinued as Oracle seems to have stopped shipping [new features and improvements](https://github.com/photoprism/photoprism/issues/1764).
@@ -204,11 +214,11 @@ thousand files to index.
 MariaDB lacks some features that [MySQL Enterprise Edition](https://www.mysql.com/products/enterprise/) offers.
 On the other hand, MariaDB has many optimizations. It is also completely open-source.
 
-### I've configured an external database, but can't connect? ###
+### I've configured an external database, but can't connect?
 
 Most often this happens when new users configure `localhost` or `127.0.0.1` as database server host, since these always point back to the current container or computer. So it is not possible to access an external service with such a hostname or an IP address starting with 127. It works only if it is used directly in the container or on the computer where the database server is running. Instead, you must use a hostname or IP address that is accessible from other machines and containers.
 
-### Can you improve performance when using older or otherwise slow hardware? ###
+### Can you improve performance when using older or otherwise slow hardware?
 
 It is a known issue that the user interface and backend operations, especially face recognition, can be slow or even crash on older hardware due to a lack of resources. Like most applications, PhotoPrism has certain requirements and our development process does not include testing on unsupported or unusual hardware.
 
@@ -218,7 +228,7 @@ We kindly ask you not to open a problem report on GitHub Issues for poor perform
 
 That being said, one of the advantages of [open-source software](https://docs.photoprism.app/developer-guide/) is that users can submit [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/) with performance and other improvements they would like to see implemented. This will result in a much faster solution than waiting for a core team member to remotely analyze your problem and then provide a fix.
 
-### Is a Raspberry Pi fast enough? ###
+### Is a Raspberry Pi fast enough?
 
 This largely depends on your expectations and the number of files you have. Most users report that
 PhotoPrism runs smoothly on their Raspberry Pi 4. However, initial indexing typically takes much longer
@@ -227,17 +237,17 @@ than on standard desktop computers.
 Also keep in mind that the hardware has limited video transcoding capabilities, so the conversion of video
 [file formats](../developer-guide/media/index.md) is not well-supported and software transcoding is generally slow.
 
-### Should I use an SD card or a USB stick? ###
+### Should I use an SD card or a USB stick?
 
 Conventional USB sticks and SD cards are not suitable for long-term storage. Not only because of the
 performance, but also because they can lose data over time. Local [Solid-State Drives](troubleshooting/performance.md#storage)
 (SSDs) are best, even when connected externally via USB 3. USB 1 and 2 devices will be slow either way.
 
-### Why don't you display animated GIFs natively? ###
+### Why don't you display animated GIFs natively?
 
 Support for animated GIFs was [added in April 2022](https://github.com/photoprism/photoprism/issues/590).
 
-### Why is my storage folder so large? What is in it? ###
+### Why is my storage folder so large? What is in it?
 
 The storage folder contains sidecar, thumbnail, and configuration files.
 It may also contain index database files if you're using SQLite.
@@ -256,7 +266,7 @@ You may also choose to render thumbnails on-demand if you have a fast CPU and en
 However, storage is typically affordable enough for most users to go for better quality and 
 performance instead.
 
-### Can I skip creating thumbnails completely? ###
+### Can I skip creating thumbnails completely?
 
 The smallest [configurable](../user-guide/settings/advanced.md) size is 720px for consumption by 
 the indexer to perform color detection, face detection, and image classification. Recreating them 
@@ -267,7 +277,7 @@ have a few small images, it would render the app unusable.
     Reducing the *Static Size Limit* of thumbnails has a **significant impact on  [facial recognition](../user-guide/organize/people.md)
     and image classification** results. Simply put, it means that the indexer can no longer see properly.
 
-### I'm having issues understanding the difference between the import and originals folders? ###
+### I'm having issues understanding the difference between the import and originals folders?
 
 You may optionally mount an *import* folder from which files can be transferred to the *originals* folder
 in a structured way that avoids duplicates. Imported files receive a canonical filename and will be
@@ -278,7 +288,7 @@ without importing files, leaving the existing file and folder names unchanged. O
 importing is an efficient way to add files, since PhotoPrism doesn't have to search your *originals*
 folder to find new files.
 
-### Can I use PhotoPrism to sort files into a configurable folder structure? ###
+### Can I use PhotoPrism to sort files into a configurable folder structure?
 
 You have complete freedom in how you organize your originals. If you don't like the unique names and 
 folders used by the import function, you can resort to external batch renaming tools, for example
@@ -290,7 +300,7 @@ Configurable import folders may be available in a later version. This is because
 pattern - appropriate conflict resolution is required and the patterns must be well understood and validated 
 to avoid typos or other misconfigurations that lead to undesired results for which we do not want to be responsible.
 
-### Why is only the logo displayed when I open the app? ###
+### Why is only the logo displayed when I open the app?
 
 This may happen when the server cannot be reached, for example, because a proxy is misconfigured,
 JavaScript is disabled in your browser, an ad blocker is blocking requests, or you are using an incompatible browser.
@@ -298,7 +308,7 @@ JavaScript is disabled in your browser, an ad blocker is blocking requests, or y
 We recommend going through the [checklist provided](troubleshooting/index.md#app-not-loading) and to verify that
 your browser meets the [system requirements](index.md#system-requirements).
 
-### Why is PhotoPrism getting stuck in a restart loop? ###
+### Why is PhotoPrism getting stuck in a restart loop?
 
 This happens when Docker was configured to automatically restart services after failures.
 
@@ -309,7 +319,7 @@ your computer meets the [system requirements](index.md#system-requirements).
 
 Setting up PhotoPrism behind a [reverse proxy](proxies/traefik.md) in a sub-directory on a shared domain is possible in principle. This method is experimental, however, and not generally recommended because a number of [detailed issues remain to be addressed](https://github.com/photoprism/photoprism/issues/2391) and technical expertise is required.
 
-### I could not find a documentation of config parameters? ###
+### I could not find a documentation of config parameters?
 
 We maintain a complete list of [config options](config-options.md) in *Getting Started*.
 When you run `photoprism help` in a [terminal](docker-compose.md#command-line-interface), 
@@ -323,14 +333,14 @@ docker-compose exec photoprism photoprism help
 Our [Docker Compose](docker-compose.md) [examples](https://dl.photoprism.app/docker/) are continuously 
 updated and inline documentation has been added to simplify installation.
 
-### What exactly does the read-only mode? ###
+### What exactly does the read-only mode?
 
 When you enable *read-only mode*, all features that require write permission to the *originals* folder
 are disabled, for example import, upload, and delete. Set `PHOTOPRISM_READONLY` to `"true"`
 in `docker-compose.yml` for this. You can [mount a folder with the `:ro` flag](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-3) to make Docker block
 write operations as well.
 
-### How can I uninstall PhotoPrism? ###
+### How can I uninstall PhotoPrism?
 
 This depends on how you installed it. If you're running PhotoPrism with [Docker Compose](docker-compose.md), 
 this command will stop and remove the Docker container:
@@ -342,7 +352,7 @@ docker-compose rm -s -v
 Please refer to the official Docker [documentation](https://docs.docker.com/compose/reference/rm/) 
 for further details.
 
-### How can I mount network shares with Docker? ###
+### How can I mount network shares with Docker?
 
 You can mount remote folders that you can access on your host if they have already been mounted there,
 using your operating system's standard tools and methods. This requires no changes compared to specifying
@@ -388,11 +398,11 @@ volumes:
     under [*Library* > *Import*](../user-guide/library/import.md). PhotoPrism also [has WebDAV support](../user-guide/sync/webdav.md)
     for remote file management and uploading, for example, through [PhotoSync](https://link.photoprism.app/photosync).
 
-### Why does changing permissions using chmod does not work for my  network shares? ###
+### Why does changing permissions using chmod does not work for my  network shares?
 This is a common phenomenon with NFS shares. For security reasons, permissions must be changed on the server to take effect; unless the server allows them to be changed remotely, which depends on the settings. 
 Even then, the actual permissions on the server and those effective on the clients may be different in the worst case.
 
-### Do you support Podman? ###
+### Do you support Podman?
 
 Podman works just fine both in rootless and under root. Mind the SELinux which is enabled on 
 Red Hat compatible systems, you may hit permission error problems. 
@@ -401,13 +411,13 @@ More details on how to run PhotoPrism with [Podman](https://podman.io/) on CentO
 [this blog post](https://lukas.zapletalovi.com/2020/01/deploy-photoprism-in-centos-80.html), 
 it includes all the details including root and rootless modes, user mapping and SELinux.
 
-### Any plans to add support for Active Directory, LDAP or other centralized account management options? ###
+### Any plans to add support for Active Directory, LDAP or other centralized account management options?
 
 There is no single sign-on support yet as we didn't consider it essential for our initial release.
 Our team is currently working on [OpenID Connect](https://github.com/photoprism/photoprism/issues/782),
 which will be available in a future release.
 
-### Your app is really terrible, can I tell you how bad it is? ###
+### Your app is really terrible, can I tell you how bad it is?
 
 Please take the time to read this documentation and [determine the cause of your problem](https://docs.photoprism.app/getting-started/troubleshooting/) before opening invalid bug reports, starting a public "shitstorm" or insulting other community members in our chat rooms. Aside from being annoying for everyone, it also keeps our team from working on features and improvements that users like you are waiting for. Visit [photoprism.app/code-of-conduct](https://photoprism.app/code-of-conduct) to learn more.
 

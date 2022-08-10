@@ -13,7 +13,7 @@ This is comparable to doing a backup, but to a human readable format.
 
 ## Album Backups
 Album backups are created for the following album types: album, folder, state, moment and month.
-You find those backups inside of your `storage path` in `/albums`.
+You find those backups inside your `storage path` in `/albums`.
 
 ### Album Backups
 For each album the following metadata is stored in the YAML file:

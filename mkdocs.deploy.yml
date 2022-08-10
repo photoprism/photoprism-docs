@@ -4,12 +4,8 @@ plugins:
   - privacy:
       externals: bundle
       externals_exclude:
-        - cdn.jsdelivr.net/npm/mathjax@3/*
         - photoprism.app/*
-        - dummyimage.com/*
-        - fonts.googleapis.com/*
         - dl.photoprism.app/*
-        - github.com/*
         - docs.photoprism.app/*
         - a.photoprism.app/*
         - goreportcard.com/*

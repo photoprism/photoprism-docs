@@ -240,7 +240,7 @@ performance on smaller devices and with large libraries.
 ### December 15, 2021 ###
 <span class="build">Build 211215-93b26f19</span>
 
-PhotoPrism is not directly affected by the [Apache Log4j](https://blog.malwarebytes.com/exploits-and-vulnerabilities/2021/12/log4j-zero-day-log4shell-arrives-just-in-time-to-ruin-your-weekend/) vulnerability.
+PhotoPrism is not directly affected by the [Apache Log4j](https://www.malwarebytes.com/blog/news/2021/12/log4j-zero-day-log4shell-arrives-just-in-time-to-ruin-your-weekend) vulnerability.
 Logs may still contain messages that can cause harm if consumed by an unpatched Java application.
 As a precaution, this release includes additional [rules and filters to validate user input](https://github.com/photoprism/photoprism/issues/1814).
 

@@ -1,7 +1,7 @@
 # Using Caddy 1 as Reverse Proxy
 
-!!! info "Getting Support"
-        Should you experience problems with Caddy, we recommend that you ask the Caddy community for advice, as we cannot provide support for third-party software.
+!!! info ""
+    Should you experience problems with Caddy, we recommend that you ask the Caddy community for advice, as we cannot provide support for third-party software.
 
 For PhotoPrism to work properly, you need to enable websockets and transparent proxying:
 

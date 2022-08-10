@@ -1,10 +1,10 @@
 # Using HAPROXY as Reverse Proxy
 
-!!! quote ""
-Help improve these docs! You can contribute by clicking :material-pencil: to send a pull request with your changes.
-
-!!! info "Getting Support"
+!!! info ""
     Should you experience problems with Haproxy, we recommend that you ask the Haproxy community for advice, as we cannot provide support for third-party software.
+
+!!! quote ""
+    Help improve these docs! You can contribute by clicking :material-pencil: to send a pull request with your changes.
 
 
 

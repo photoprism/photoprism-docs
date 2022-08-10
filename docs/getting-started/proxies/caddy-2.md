@@ -1,6 +1,6 @@
 # Using Caddy 2 as Reverse Proxy
 
-!!! info "Getting Support"
+!!! info ""
     Should you experience problems with Caddy, we recommend that you ask the Caddy community for advice, as we cannot provide support for third-party software.
 
 WebSocket proxying automatically works in Caddy 2. There is no need to enable this as necessary for Caddy 1, Apache,

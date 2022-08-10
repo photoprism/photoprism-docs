@@ -1,5 +1,8 @@
 # Running PhotoPrism on a Synology NAS
 
+!!! info ""
+    Should you experience problems with the installation, we recommend that you ask the Synology community for advice, as we cannot provide support for third-party software.
+
 Visit the [Synology Knowledge Base](https://kb.synology.com/en-us/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have)
 to learn what [kind of CPU](../troubleshooting/performance.md#server-cpu) and how much memory your device has.
 We [recommend](../index.md#system-requirements) hosting PhotoPrism on a 64-bit system with **at least 2 cores** and
@@ -40,9 +43,6 @@ If your device runs out of memory, the index is frequently locked, or other syst
 - [ ] As a last measure, you can [disable the use of TensorFlow](../config-options.md#feature-flags) for image classification and facial recognition
 
 Other issues? Our [troubleshooting checklists](../troubleshooting/index.md) help you quickly diagnose and solve them.
-
-!!! info "Getting Support"
-    Should you experience problems with the installation, we recommend that you ask the Synology community for advice, as we cannot provide support for third-party software.
 
 
 <!---

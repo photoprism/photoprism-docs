@@ -6,9 +6,9 @@ A proof-of-concept for reading `Title`, `Copyright`, `Artist` and `Description` 
 
 The original plan to build upon `go-xmp` didn't work out as we couldn't read many fields, so we're using pure Go for now until we find a way to get the data we need with `go-xmp`. It might be a bug and/or it's an issue with our specific XMP files.
 
-Please send more XMP files for testing ([pull request](../pull-requests.md)):
+## File Samples
 
-see https://github.com/photoprism/photoprism/tree/develop/internal/meta/testdata
+We would be happy to receive more [XMP files for testing](https://github.com/photoprism/photoprism/tree/develop/internal/meta/testdata), either via [pull request](../pull-requests.md) or [email](https://photoprism.app/contact).
 
 ## Specification
 

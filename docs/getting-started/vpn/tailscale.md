@@ -1,10 +1,7 @@
 # Tailscale VPN
 
-!!! info ""
-    Should you experience problems with Tailscale, we recommend that you ask the Tailscale community for advice, as we cannot provide support for third-party software.
-
-!!! quote ""
-    Help improve these docs! You can contribute by clicking :material-pencil: to send a pull request with your changes.
+!!! tldr ""
+    Should you experience problems with Tailscale, we recommend that you ask the Tailscale community for advice, as we cannot provide support for third-party software and services.
 
 1. Open the [Tailscale website](https://tailscale.com/) and Select Use Tailscale button. 
 
@@ -23,3 +20,6 @@
 4. Each device gets an IP address allocated (100.xxx.xxx.xxx), which can be used to reach them via the VPN network. This IP address with addition of the port number where Photoprism is run on can be used to reach Photoprism outside the home network. 
 
    ![](img/tailscale-5.png){ class="shadow" }
+
+!!! example ""
+    **Help improve these docs!** You can contribute by clicking :material-pencil: to send a pull request with your changes.

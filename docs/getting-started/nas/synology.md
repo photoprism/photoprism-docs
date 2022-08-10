@@ -1,7 +1,7 @@
 # Running PhotoPrism on a Synology NAS
 
-!!! info ""
-    Should you experience problems with the installation, we recommend that you ask the Synology community for advice, as we cannot provide support for third-party software.
+!!! tldr ""
+    Should you experience problems with the installation, we recommend that you ask the Synology community for advice, as we cannot provide support for third-party software and services.
 
 Visit the [Synology Knowledge Base](https://kb.synology.com/en-us/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have)
 to learn what [kind of CPU](../troubleshooting/performance.md#server-cpu) and how much memory your device has.
@@ -135,3 +135,6 @@ Click create [Websocket] and hit OK (this step makes that your browser receive p
 **IMPORTANT: make sure that you have forwarded the selected port (for eg. 2343) in your router:**
 
 -->
+
+!!! example ""
+    **Help improve these docs!** You can contribute by clicking :material-pencil: to send a pull request with your changes.

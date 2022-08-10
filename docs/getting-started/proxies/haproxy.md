@@ -1,12 +1,7 @@
 # Using HAPROXY as Reverse Proxy
 
-!!! info ""
-    Should you experience problems with Haproxy, we recommend that you ask the Haproxy community for advice, as we cannot provide support for third-party software.
-
-!!! quote ""
-    Help improve these docs! You can contribute by clicking :material-pencil: to send a pull request with your changes.
-
-
+!!! tldr ""
+    Should you experience problems with Haproxy, we recommend that you ask the Haproxy community for advice, as we cannot provide support for third-party software and services.
 
 ```bigquery
 #frontend connection handling
@@ -44,3 +39,5 @@ acl is_websocket hdr_beg(Host) -i ws
 server photo x.x.x.x:2342 id 106  
 ```
 
+!!! example ""
+    **Help improve these docs!** You can contribute by clicking :material-pencil: to send a pull request with your changes.

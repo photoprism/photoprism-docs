@@ -1,8 +1,5 @@
 # Creating Backups
 
-!!! quote ""
-    Help improve these docs! You can contribute by clicking :material-pencil: to send a pull request with your changes.
-
 A full backup of your PhotoPrism instance includes:
 
 1. All content from your `originals` folder
@@ -31,4 +28,8 @@ It will save you from re-generating thumbnails from scratch however.
 Helpful information can be found on [GitHub](https://github.com/photoprism/photoprism/discussions/772) as well.
 
 ## Restore from Backup
+
 Follow [this guide to restore](../../user-guide/advanced/restore.md) PhotoPrism from backups.
+
+!!! example ""
+    **Help improve these docs!** You can contribute by clicking :material-pencil: to send a pull request with your changes.

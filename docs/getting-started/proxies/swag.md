@@ -1,11 +1,7 @@
 # Using SWAG as Reverse Proxy
 
-!!! info ""
-	Should you experience problems with Swag, we recommend that you ask the Swag community for advice, as we cannot provide support for third-party software.
-
-!!! quote ""
-	Help improve these docs! You can contribute by clicking :material-pencil: to send a pull request with your changes.
-
+!!! tldr ""
+    Should you experience problems with Swag, we recommend that you ask the Swag community for advice, as we cannot provide support for third-party software and services.
 
 To simplify the setup of a reverse HTTPS proxy, Linuxserver.io developed [SWAG](https://github.com/linuxserver/docker-swag).
 
@@ -110,3 +106,6 @@ If you install PhotoPrism on a public server outside your home network, **always
 HTTPS reverse proxy**. Your files and passwords will otherwise be transmitted in clear text and can be intercepted
 by anyone, including your provider, hackers, and governments. Backup tools and file sync apps may refuse to
 connect as well.
+
+!!! example ""
+    **Help improve these docs!** You can contribute by clicking :material-pencil: to send a pull request with your changes.

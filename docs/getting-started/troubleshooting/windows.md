@@ -1,8 +1,5 @@
 # Solving Windows-Specific Issues
 
-!!! quote ""
-    Help improve these docs! You can contribute by clicking :material-pencil: to send a pull request with your changes.
-
 ## NTFS File System
 
 If you experience poor performance when indexing large libraries stored on NTFS:
@@ -16,3 +13,6 @@ If you experience poor performance when indexing large libraries stored on NTFS:
 [^2]: <https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc781134(v=ws.10)?redirectedfrom=MSDN#how-ntfs-generates-short-file-names>
 [^3]: <https://stackoverflow.com/a/9600126>
 [^4]: <https://www.bleepingcomputer.com/news/microsoft/windows-10-now-lets-you-mount-linux-ext4-filesystems-in-wsl-2/>
+
+!!! example ""
+    **Help improve these docs!** You can contribute by clicking :material-pencil: to send a pull request with your changes.

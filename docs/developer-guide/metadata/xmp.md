@@ -10,11 +10,14 @@ The original plan to build upon `go-xmp` didn't work out as we couldn't read man
 
 We would be happy to receive more [XMP files for testing](https://github.com/photoprism/photoprism/tree/develop/internal/meta/testdata), either via [pull request](../pull-requests.md) or [email](https://photoprism.app/contact).
 
-## Specification
+## XMP Specification
 
-- [Part 1: Data and Serialization Model](https://dl.photoprism.app/pdf/20080101-Adobe_XMP_Specification_Part_1.pdf)
-- [Part 2: Standard Schemas](https://dl.photoprism.app/pdf/20080101-Adobe_XMP_Specification_Part_2.pdf)
-- [Part 3: Storage in Files](https://dl.photoprism.app/pdf/20080101-Adobe_XMP_Specification_Part_3.pdf) 
+- [Part 1: Data and Serialization Model](https://dl.photoprism.app/pdf/20120101_Adobe_XMP_Specification_Part_1.pdff)
+- [Part 2: Standard Schemas](https://dl.photoprism.app/pdf/20120101_Adobe_XMP_Specification_Part_2.pdf)
+- [Part 3: Storage in Files](https://dl.photoprism.app/pdf/20120101_Adobe_XMP_Specification_Part_3.pdf) 
+- [Adobe XMP Programmers Guide](https://dl.photoprism.app/pdf/20120101_Adobe_XMP_Programmers_Guide.pdf)
+- [Adobe XMP Files Plugin SDK](https://dl.photoprism.app/pdf/20120101_Adobe_XMP_Files_Plugin_SDK.pdf)
+- [Adobe BSD 3-Clause License](https://dl.photoprism.app/pdf/20120101_Adobe_XMP_Specification_License.txt) and [XMP Toolkit SDK](https://github.com/adobe/XMP-Toolkit-SDK)
 
 ## Open Issues
 

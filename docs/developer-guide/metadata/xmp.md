@@ -10,7 +10,7 @@ The original plan to build upon `go-xmp` didn't work out as we couldn't read man
 
 We would be happy to receive more [XMP files for testing](https://github.com/photoprism/photoprism/tree/develop/internal/meta/testdata), either via [pull request](../pull-requests.md) or [email](https://photoprism.app/contact).
 
-## XMP Specification
+## Specification
 
 - [Part 1: Data and Serialization Model](https://dl.photoprism.app/pdf/20120101-Adobe_XMP_Specification_Part_1.pdf)
 - [Part 2: Standard Schemas](https://dl.photoprism.app/pdf/20120101-Adobe_XMP_Specification_Part_2.pdf)

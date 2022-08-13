@@ -56,17 +56,17 @@ services:
 !!! danger ""
     Set strong passwords if the database is exposed to an external network. Never expose your database to the public Internet in this way, for example, if it is running on a cloud server.
 
-## Manual Schema Migrations
+## Schema Migrations
 
-An index schema migration is performed automatically when PhotoPrism starts. The following instructions may be helpful in special cases, such as when a temporary issue has prevented a successful migration:
+An index schema migration is performed automatically every time PhotoPrism is (re)started. The following instructions may be helpful in special cases, such as when a temporary problem has prevented a successful migration:
 
-↪ [Performing Index Migrations](migrations/index.md)
+[Run Migrations ›](migrations/index.md)
 
-## Migrating to a Different Database
+## Change Database
 
-↪ [from SQLite to MariaDB](migrations/sqlite-to-mariadb.md)
+[Migrate from SQLite to MariaDB ›](migrations/sqlite-to-mariadb.md)
 
-↪ [from MariaDB to SQLite](migrations/mariadb-to-sqlite.md)
+[Migrate from MariaDB to SQLite ›](migrations/mariadb-to-sqlite.md)
 
 !!! warning "Performance Issues"
     After migrating, it is possible that columns do not have exactly the data type they should have or that indexes are missing. This can lead to poor performance. For example, MariaDB cannot process rows with `text` columns in memory and always uses temporary tables on disk if there are any. If this is the case, please make sure that your migrated database schema matches that of a fresh, non-migrated installation, e.g. by re-running the migrations manually in a terminal with the `photoprism migrations ls` and `photoprism migrations run [id]` subcommands.

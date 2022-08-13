@@ -79,7 +79,7 @@ Your use of these services is fully covered by us. So there are no usage-based f
 
 Should you still wish to operate one or both of these services on your own premises, [we can set up such a fully autonomous solution](https://photoprism.app/contact) for you, provided you are prepared to cover the initial setup costs as well as ongoing maintenance fees for content licenses and updates.
 
-↪ [Privacy Policy](https://photoprism.app/privacy#section-7){ class="pr-3" } ↪ [Compliance FAQ](https://photoprism.app/kb/compliance-faq#privacy)
+[View Privacy Policy ›](https://photoprism.app/privacy#section-7){ class="pr-3" } [View Compliance FAQ ›](https://photoprism.app/kb/compliance-faq#privacy)
 
 ### Are JPEGs updated when RAW or XMP files change?
 
@@ -192,7 +192,9 @@ At the same time, we know there's a huge demand and many practical uses for a cl
 
 ### What are the advantages of purchasing a commercial license?
 
-A key difference between the open source and commercial license is that you get access to additional support and configuration options, as well as the right to customize functionality to your needs without having to publicly disclose your changes. We also work to optimize the standard configuration, feature set, and scalability of the Pro Edition to meet the requirements of professional users and organizations.
+A key difference between the open source and [commercial license](https://photoprism.app/teams) is that you get access to additional support and configuration options, as well as the right to customize functionality to your needs without having to publicly disclose your changes.
+
+[Compare Features ›](https://photoprism.app/teams#compare)
 
 ### Should I use SQLite, MariaDB, or MySQL?
 

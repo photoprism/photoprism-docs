@@ -186,7 +186,7 @@ nav:
   - About:
     - Credits: credits.md
     - License:
-      - GNU AGPL: license/agpl.md
+      - Public License: license/agpl.md
       - Documentation: license/docs.md
 
 extra_css:

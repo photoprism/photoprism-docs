@@ -226,7 +226,7 @@ Many users reporting poor performance and high CPU load have migrated from SQLit
 
 In some instances, users have manually changed the contents of the database. It is also possible that the database is in an inconsistent state for other reasons, e.g. due to bugs in previous versions that have been fixed in the meantime. However, we are not currently aware of any such cases.
 
-Due to the amount of time required to review each report, we can only offer this to eligible sponsors and business customers, and not to users who have chosen our free community edition.
+Due to the amount of time required to review each report, we can only offer this to [eligible sponsors](https://photoprism.app/membership) and [business customers](https://photoprism.app/teams), and not to users who have chosen our free community edition.
 
 [Get Performance Tips ›](troubleshooting/performance.md#mariadb){ class="pr-3" } [View Database Schema ›](../developer-guide/database/index.md)
 

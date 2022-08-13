@@ -222,13 +222,13 @@ Most often this happens when new users configure `localhost` or `127.0.0.1` as d
 
 ### Why does PhotoPrism always consume 100% of CPU when the background worker is running?
 
-Many users reporting poor performance and high CPU load have migrated from SQLite to MariaDB so that their database schema is not optimized for performance, for example, because indexes are missing or columns have the wrong data type. The instructions for these migrations were provided by a contributor and are not part of the original software distribution. As such, they have not been officially released, recommended, or extensively tested by us.
+Many users reporting poor performance and high CPU load have migrated from SQLite to MariaDB so that [their database schema is not optimized for performance](advanced/databases.md), for example, because indexes are missing or columns have the wrong data type. The [instructions for these migrations](advanced/migrations/sqlite-to-mariadb.md) were provided by a contributor and are not part of the original software distribution. As such, they have not been officially released, recommended, or extensively tested by us.
 
-In other cases, users manually changed the contents of the database or the database was in an inconsistent state for other reasons, such as bugs in previous versions that have been fixed in the meantime.
+In some instances, users have manually changed the contents of the database. It is also possible that the database is in an inconsistent state for other reasons, e.g. due to bugs in previous versions that have been fixed in the meantime. However, we are not currently aware of any such cases.
 
 Due to the amount of time required to review each report, we can only offer this to eligible sponsors and business customers, and not to users who have chosen our free community edition.
 
-[View Database Schema ›](../developer-guide/database/index.md) 
+[Get Performance Tips ›](troubleshooting/performance.md#mariadb){ class="pr-3" } [View Database Schema ›](../developer-guide/database/index.md)
 
 ### Can you improve performance when using older or otherwise slow hardware?
 

@@ -40,7 +40,13 @@ If this doesn't help, check the [Docker Logs](docker.md#viewing-logs) for messag
 
 #### Bad Performance ####
 
-↪ [Performance Tips](performance.md#mariadb)
+Many users reporting poor performance and high CPU usage have migrated from SQLite to MariaDB, so their database schema is no longer optimized for performance. For example, MariaDB cannot handle rows with `text` columns in memory and always uses temporary tables on disk if there are any.
+
+The instructions for these migrations were provided by a contributor and are not part of the original software distribution. As such, they have not been officially released, recommended, or extensively tested by us.
+
+If this is the case, please make sure that your migrated database schema matches that of a [fresh, non-migrated installation](../../developer-guide/database/index.md) . It may help to [run the migrations manually](../advanced/migrations/index.md) in a terminal using the *migrations* subcommands. However, this does not guarantee that all issues such as missing indexing are resolved.
+
+[Get Performance Tips ›](performance.md#mariadb){ class="pr-3" } [View Database Schema ›](../../developer-guide/database/index.md)
 
 #### Version Upgrade ####
 

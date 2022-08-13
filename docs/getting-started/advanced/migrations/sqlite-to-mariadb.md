@@ -1,6 +1,6 @@
 # Migrating from SQLite to MariaDB
 
-*Note: This is contributed content intended for advanced users. You can contribute by clicking :material-pencil: to send a pull request with your changes.*
+*For advanced users only: The instructions for these migrations were provided by a contributor and are not part of the original software distribution. As such, they have not been officially released, recommended, or extensively tested by us. You can contribute by clicking :material-pencil: to send a pull request with your changes.*
 
 - Install <https://github.com/techouse/sqlite3-to-mysql> on your host. (openSUSE: `zypper in python-sqlite3-to-mysql`)
 - Shutdown your current stack: `docker-compose down`
@@ -43,8 +43,9 @@ services:
       MARIADB_ROOT_PASSWORD: "insecure"
 ```
 
-## Solving Performance Issues
+!!! warning "Bad Performance"
+    Many users reporting poor performance and high CPU usage have migrated from SQLite to MariaDB, so their database schema is no longer optimized for performance. For example, MariaDB cannot handle rows with `text` columns in memory and always uses temporary tables on disk if there are any.
 
-After migrating from SQLite, it is possible that columns do not have exactly the data type they should have or that indexes are missing. This can lead to poor performance. For example, MariaDB cannot process rows with `text` columns in memory and always uses temporary tables on disk if there are any.
+    If this is the case, please make sure that your migrated database schema matches that of a fresh, non-migrated installation. It may help to [run the migrations manually](../../advanced/migrations/index.md) in a terminal using the *migrations* subcommands. However, this does not guarantee that all issues such as missing indexing are resolved.
 
-If this is the case, please make sure that your migrated database schema matches that of a fresh, non-migrated installation, e.g. by [re-running the migrations manually](index.md) in a terminal with the `photoprism migrations ls` and `photoprism migrations run [id]` subcommands.
+    [View Database Schema ›](../../../developer-guide/database/index.md) 

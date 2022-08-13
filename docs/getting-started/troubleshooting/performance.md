@@ -32,11 +32,15 @@ Advanced users may adjust [additional parameters](https://github.com/photoprism/
 
 After [migrating from SQLite](../advanced/migrations/sqlite-to-mariadb.md), it is possible that columns do not have exactly the data type they should have or that indexes are missing. This can lead to poor performance. For example, MariaDB cannot process rows with `text` columns in memory and always uses temporary tables on disk if there are any.
 
-If this is the case, please make sure that your migrated database schema matches that of a fresh, non-migrated installation, e.g. by [re-running the migrations manually](../advanced/migrations/index.md) in a terminal with the `photoprism migrations ls` and `photoprism migrations run [id]` subcommands.
+The instructions for these migrations were provided by a contributor and are not part of the original software distribution. As such, they have not been officially released, recommended, or extensively tested by us.
+
+If this is the case, please make sure that your migrated database schema matches that of a [fresh, non-migrated installation](../../developer-guide/database/index.md) . It may help to [run the migrations manually](../advanced/migrations/index.md) in a terminal using the *migrations* subcommands. However, this does not guarantee that all issues such as missing indexing are resolved.
+
+[View Database Schema ›](../../developer-guide/database/index.md)
 
 ## Windows ##
 
-↪ [Solving Windows-Specific Issues](windows.md)
+[Solve Windows-Specific Issues ›](windows.md)
 
 ## Storage ##
 

@@ -1,6 +1,6 @@
 # Migrating from MariaDB to SQLite
 
-*Note: This is contributed content intended for advanced users. You can contribute by clicking :material-pencil: to send a pull request with your changes.*
+*For advanced users only: The instructions for these migrations were provided by a contributor and are not part of the original software distribution. As such, they have not been officially released, recommended, or extensively tested by us. You can contribute by clicking :material-pencil: to send a pull request with your changes.*
 
 - Install <https://github.com/techouse/mysql-to-sqlite3> on your host.
 - Stop Photoprism: `docker-compose stop photoprism`
@@ -13,8 +13,7 @@
 - Start your stack again with `docker-compose up -d`
 - If this worked you may want to delete the old mountpoint for the MariaDB database.
 
-## Solving Performance Issues
+!!! warning "Bad Performance"
+    Many users reporting poor performance and high CPU usage have migrated, so their database schema is no longer optimized for performance, for example, because indexes are missing or columns have the wrong data type.
 
-After migrating from MariaDB, it is possible that columns do not have exactly the data type they should have or that indexes are missing. This can lead to poor performance.
-
-If this is the case, please make sure that your migrated database schema matches that of a fresh, non-migrated installation, e.g. by [re-running the migrations manually](index.md) in a terminal with the `photoprism migrations ls` and `photoprism migrations run [id]` subcommands.
+    If this is the case, please make sure that your migrated database schema matches that of a fresh, non-migrated installation. It may help to [run the migrations manually](../../advanced/migrations/index.md) in a terminal using the *migrations* subcommands. However, this does not guarantee that all issues such as missing indexing are resolved.

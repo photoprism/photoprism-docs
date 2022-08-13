@@ -220,6 +220,16 @@ On the other hand, MariaDB has many optimizations. It is also completely open-so
 
 Most often this happens when new users configure `localhost` or `127.0.0.1` as database server host, since these always point back to the current container or computer. So it is not possible to access an external service with such a hostname or an IP address starting with 127. It works only if it is used directly in the container or on the computer where the database server is running. Instead, you must use a hostname or IP address that is accessible from other machines and containers.
 
+### Why does PhotoPrism always consume 100% of CPU when the background worker is running?
+
+Many users reporting poor performance and high CPU load have migrated from SQLite to MariaDB so that their database schema is not optimized for performance, for example, because indexes are missing or columns have the wrong data type. The instructions for these migrations were provided by a contributor and are not part of the original software distribution. As such, they have not been officially released, recommended, or extensively tested by us.
+
+In other cases, users manually changed the contents of the database or the database was in an inconsistent state for other reasons, such as bugs in previous versions that have been fixed in the meantime.
+
+Due to the amount of time required to review each report, we can only offer this to eligible sponsors and business customers, and not to users who have chosen our free community edition.
+
+[View Database Schema ›](../developer-guide/database/index.md) 
+
 ### Can you improve performance when using older or otherwise slow hardware?
 
 It is a known issue that the user interface and backend operations, especially face recognition, can be slow or even crash on older hardware due to a lack of resources. Like most applications, PhotoPrism has certain requirements and our development process does not include testing on unsupported or unusual hardware.

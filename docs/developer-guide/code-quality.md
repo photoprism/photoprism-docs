@@ -123,7 +123,7 @@ The [Open Source Security Foundation](https://bestpractices.coreinfrastructure.o
 
 <a href="https://bestpractices.coreinfrastructure.org/projects/6132" target="_blank"><img src="/developer-guide/security/openssf.png" alt="OpenSSF Best Practices" class="center pt-2 small"></a>
 
-↪ [Security Testing Guide](security/index.md)
+[View Security Testing Guide ›](security/index.md)
 
 [goreport]: https://goreportcard.com/report/github.com/photoprism/photoprism
 [codacy]: https://www.codacy.com/project/lastzero/photoprism/dashboard

@@ -3,7 +3,7 @@
 WebDAV-compatible apps and clients such as [PhotoSync](../sync/mobile-devices.md), Microsoft's Windows Explorer,
 and Apple's Finder can connect directly to PhotoPrism:
 
-↪ [Connecting via WebDAV](../sync/webdav.md)
+[Connect via WebDAV ›](../sync/webdav.md)
 
 After files have been transferred, you can [index](../library/originals.md) or [import](../library/import.md) them as usual.
 By default, indexing and importing start automatically after a safety delay when files have been uploaded using WebDAV.

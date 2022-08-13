@@ -8,11 +8,13 @@
 
     Be aware that we have a zero-bug policy and do our best to help users when they need support or have other questions. This comes at a price though, as we can't give exact release dates for new features. Our team receives many more requests than can be implemented, so we want to emphasize that we are in no way obligated to implement the features, improvements, or other changes you request. We do, however, appreciate your feedback and carefully consider all requests.
 
-    **Since sustained funding is key to quickly releasing new features, we encourage all users to support our mission by [signing up as a sponsor](https://photoprism.app/membership) or purchasing a commercial license.**
+    **Since sustained funding is key to quickly releasing new features, we encourage all users to support our mission by [signing up as a sponsor](https://photoprism.app/membership) or purchasing a [commercial license](https://photoprism.app/teams).**
 
 ??? question "Which benefits do sponsors receive?"
 
-    Our sponsors additionally enjoy all features with a [sponsor-feature](https://github.com/photoprism/photoprism/issues?q=label%3Asponsor-feature) label attached or marked as [sponsors only](https://docs.photoprism.app/getting-started/config-options/) in the docs, including [Interactive World Maps](https://demo.photoprism.app/places). Visit [photoprism.app/membership](https://photoprism.app/membership) to learn more.
+    Our sponsors additionally enjoy all features with a [sponsor-feature](https://github.com/photoprism/photoprism/issues?q=label%3Asponsor-feature) label attached or marked as [sponsors only](https://docs.photoprism.app/getting-started/config-options/) in the docs, including [Interactive World Maps](https://demo.photoprism.app/places).
+
+    [Compare Features ›](https://photoprism.app/editions#compare)
 
 ??? question "Shouldn't free software be free of costs?"
 
@@ -33,7 +35,9 @@
 
 ??? question "What are the advantages of purchasing a commercial license?"
 
-    A key difference between the open source and commercial license is that you get access to additional support and configuration options, as well as the right to customize functionality to your needs without having to publicly disclose your changes. We also work to optimize the standard configuration, feature set, and scalability of the Pro Edition to meet the requirements of professional users and organizations.
+    A key difference between the open source and [commercial license](https://photoprism.app/teams) is that you get access to additional support and configuration options, as well as the right to customize functionality to your needs without having to publicly disclose your changes.
+
+    [Compare Features ›](https://photoprism.app/teams#compare)
 
 ??? question "Does PhotoPrism depend on any external services?"
 
@@ -43,7 +47,7 @@
     
     Should you still wish to operate one or both of these services on your own premises, [we can set up such a fully autonomous solution](https://photoprism.app/contact) for you, provided you are prepared to cover the initial setup costs as well as ongoing maintenance fees for content licenses and updates.
 
-    ↪ [Privacy Policy](https://photoprism.app/privacy#section-7){ class="pr-3" } ↪ [Compliance FAQ](https://photoprism.app/kb/compliance-faq#privacy)
+    [View Privacy Policy ›](https://photoprism.app/privacy#section-7){ class="pr-3" } [View Compliance FAQ ›](https://photoprism.app/kb/compliance-faq#privacy)
 
 ## User Interface ##
 

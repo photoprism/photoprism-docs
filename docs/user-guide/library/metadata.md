@@ -3,7 +3,7 @@
 Original media and sidecar files are scanned for Exif and XMP data, as well as proprietary metadata, including Google Photos JSON.
 For this, PhotoPrism has a [built-in Exif parser](../../developer-guide/metadata/exif/index.md), a [simple XMP reader](../../developer-guide/metadata/xmp.md) and can also use [Exiftool](https://exiftool.org/) to extract metadata in various formats such as Exif, XMP and IPTC:
 
-↪  [Supported Exif, XMP, IPTC and DCMI Tags](https://photoprism.app/kb/metadata)
+[View Supported Tags ›](https://photoprism.app/kb/metadata)
 
 The combined information is then normalized, merged, and [enriched with additional information](#enrichment).
 
@@ -22,9 +22,9 @@ When a field is populated with data from an XMP sidecar file, that data is the o
 
 PhotoPrism also reads metadata from Google Photos JSON and Apple XMP files:
 
-↪ [Migrate from Google Photos](../use-cases/google.md)
+[Migrate from Google Photos ›](../use-cases/google.md)
 
-↪ [Migrate from Apple Photos](../use-cases/apple.md)
+[Migrate from Apple Photos ›](../use-cases/apple.md)
 
 ## Enrichment
 

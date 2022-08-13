@@ -12,7 +12,7 @@
 
 ??? question "Which benefits do sponsors receive?"
 
-    Our sponsors additionally enjoy all features with a [sponsor-feature](https://github.com/photoprism/photoprism/issues?q=label%3Asponsor-feature) label attached or marked as [sponsors only](https://docs.photoprism.app/getting-started/config-options/) in the docs, including [Interactive World Maps](https://demo.photoprism.app/places).
+    Our sponsors additionally enjoy all features with a [sponsor-feature](https://github.com/photoprism/photoprism/issues?q=label%3Asponsor-feature) label attached or marked as [sponsors only](https://docs.photoprism.app/getting-started/config-options/) in the docs, including [Interactive World Maps](https://demo.photoprism.app/places). Visit [photoprism.app/membership](https://photoprism.app/membership) to learn more.
 
     [Compare Features ›](https://photoprism.app/editions#compare)
 

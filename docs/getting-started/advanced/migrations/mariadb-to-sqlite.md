@@ -16,4 +16,4 @@
 !!! warning "Bad Performance"
     Many users reporting poor performance and high CPU usage have migrated, so their database schema is no longer optimized for performance, for example, because indexes are missing or columns have the wrong data type.
 
-    If this is the case, please make sure that your migrated database schema matches that of a fresh, non-migrated installation. It may help to [run the migrations manually](../../advanced/migrations/index.md) in a terminal using the *migrations* subcommands. However, this does not guarantee that all issues such as missing indexing are resolved.
+    If this is the case, please make sure that your migrated database schema matches that of a fresh, non-migrated installation. It may help to [run the migrations manually](../../advanced/migrations/index.md) in a terminal using the *migrations* subcommands. However, this does not guarantee that all issues such as missing indexes are resolved.

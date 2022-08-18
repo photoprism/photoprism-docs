@@ -19,4 +19,4 @@ curl -H "X-Session-ID: xyz" http://localhost:2342/api/v1/photos?count=10
 Replace `xyz` by `session_id` value of your active browser session, which can be found inside local storage. 
 
 ## External Resources ##
-- [Mat Ryer: How I write Go HTTP services after seven years](https://medium.com/statuscode/how-i-write-go-http-services-after-seven-years-37c208122831)
+- [Mat Ryer: How I write Go HTTP services after eight years](https://pace.dev/blog/2018/05/09/how-I-write-http-services-after-eight-years.html)

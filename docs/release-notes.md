@@ -8,7 +8,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 220812-bed325155</span>
+<span class="build">Build 220824-01f4dd4d2</span>
 
 Our team will be on vacation until the end of August. In the meantime, feel free to help us test these changes. Thank you!
 
@@ -19,7 +19,7 @@ What's new?
 - Docker: [Permissions of original media files are no longer updated on startup](https://github.com/photoprism/photoprism/pull/2371)
 - Build: [Go has been upgraded to v1.19, which includes fixes and enhancements](https://tip.golang.org/doc/go1.19)
 - Build: [NodeJS has been upgraded from v16 to v18](https://nodejs.org/en/blog/announcements/v18-release-announce/)
-- Translations: [Added Catalan, Finnish, and Ukrainian](https://github.com/photoprism/photoprism/pull/2574)
+- Translations: [Added Catalan, Finnish, Ukrainian](https://github.com/photoprism/photoprism/pull/2574), [and Slovene](https://github.com/photoprism/photoprism/pull/2636)
 
 ### July 30, 2022 ###
 <span class="build">Build 220730-0e1222c83</span>

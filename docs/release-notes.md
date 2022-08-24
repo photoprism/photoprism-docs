@@ -8,13 +8,14 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 220824-e65c26065</span>
+<span class="build">Build 220824-af2b0ba7d</span>
 
 Our team will be on vacation until the end of August. In the meantime, feel free to help us test these changes. Thank you!
 
 What's new?
 
 - Library: [Indexing will be aborted if the originals folder is empty](https://github.com/photoprism/photoprism/pull/2299)
+- Videos: [Local time is extracted from `DateTimeOriginal` if possible](https://github.com/photoprism/photoprism/issues/2640)
 - Albums: [Private pictures are shown if "Private" has been disabled in *Settings*](https://github.com/photoprism/photoprism/issues/2570)
 - Docker: [Permissions of original media files are no longer updated on startup](https://github.com/photoprism/photoprism/pull/2371)
 - Build: [Go has been upgraded to v1.19, which includes fixes and enhancements](https://tip.golang.org/doc/go1.19)

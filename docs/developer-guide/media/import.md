@@ -7,4 +7,4 @@ There has been a debate on whether PhotoPrism should be responsible for file nam
 After importing new images, it would be amazing to be able to quickly sort / review them. This way the library stays clean and well organized, even without applying filters to hide bad shots. Apparently this is common among users of [Adobe Bridge](https://www.adobe.com/products/bridge.html), a tool used by many professionals. They go through complete asset collections and sort photos using keyboard shortcuts, where keys toggle pre-defined tags or flags like "favorite".
 
 ## Upload ##
-Idea: We can use Webassembly for performance improvements / faster upload.
+Idea: We can use Webassembly for performance enhancements / faster upload.

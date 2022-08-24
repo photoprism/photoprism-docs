@@ -164,7 +164,7 @@ about 15 years, first released publicly in 2004. The chroot system call was intr
 [development of Version 7 Unix in 1979](https://en.wikipedia.org/wiki/Chroot). It is used ever since for hosting
 applications exposed to the public Internet.
 
-Modern Linux containers are an incremental improvement. A main advantage of Docker is that application images
+Modern Linux containers are an incremental enhancement. A main advantage of Docker is that application images
 can be easily made available to users via Internet. It provides a common standard across most operating
 systems and devices, which saves our team a lot of time that we can then spend [more effectively](../developer-guide/code-quality.md#effectiveness-efficiency), for example,
 providing support and developing one of the many features that users are waiting for.
@@ -199,7 +199,7 @@ A key difference between the open source and [commercial license](https://photop
 ### Should I use SQLite, MariaDB, or MySQL?
 
 PhotoPrism is compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB 10.5.12+](https://mariadb.org/).
-Official support for MySQL 8 is discontinued as Oracle seems to have stopped shipping [new features and improvements](https://github.com/photoprism/photoprism/issues/1764).
+Official support for MySQL 8 is discontinued as Oracle seems to have stopped shipping [new features and enhancements](https://github.com/photoprism/photoprism/issues/1764).
 As a result, the testing effort required before each release is no longer feasible.
 
 If you have few pictures, concurrent users, and CPU cores, [SQLite](https://www.sqlite.org/)
@@ -238,7 +238,7 @@ In many cases, performance can be improved through optimizations. Since these ca
 
 We kindly ask you not to open a problem report on GitHub Issues for poor performance on older hardware until a full cause and feasibility analysis has been performed. [GitHub Discussions](https://github.com/photoprism/photoprism/discussions) or any of our other public forums and communities are great places to start a discussion.
 
-That being said, one of the advantages of [open-source software](https://docs.photoprism.app/developer-guide/) is that users can submit [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/) with performance and other improvements they would like to see implemented. This will result in a much faster solution than waiting for a core team member to remotely analyze your problem and then provide a fix.
+That being said, one of the advantages of [open-source software](https://docs.photoprism.app/developer-guide/) is that users can submit [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/) with performance and other enhancements they would like to see implemented. This will result in a much faster solution than waiting for a core team member to remotely analyze your problem and then provide a fix.
 
 ### Is a Raspberry Pi fast enough?
 
@@ -431,7 +431,7 @@ which will be available in a future release.
 
 ### Your app is really terrible, can I tell you how bad it is?
 
-Please take the time to read this documentation and [determine the cause of your problem](https://docs.photoprism.app/getting-started/troubleshooting/) before opening invalid bug reports, starting a public "shitstorm" or insulting other community members in our chat rooms. Aside from being annoying for everyone, it also keeps our team from working on features and improvements that users like you are waiting for. Visit [photoprism.app/code-of-conduct](https://photoprism.app/code-of-conduct) to learn more.
+Please take the time to read this documentation and [determine the cause of your problem](https://docs.photoprism.app/getting-started/troubleshooting/) before opening invalid bug reports, starting a public "shitstorm" or insulting other community members in our chat rooms. Aside from being annoying for everyone, it also keeps our team from working on features and enhancements that users like you are waiting for. Visit [photoprism.app/code-of-conduct](https://photoprism.app/code-of-conduct) to learn more.
 
 !!! info "Professional Users"
     Our Community Edition is designed primarily for small servers and home users. Professional users are welcome

@@ -6,7 +6,7 @@ Photos marked as private won't show up.
 
 ![Screenshot](img/shared-album.png){ class="shadow" }
 
-Support for optional password protection of sharing links as well as other improvements are [planned](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+sharing+in%3Atitle+label%3Aidea).
+Support for optional password protection of sharing links as well as other enhancements are [planned](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+sharing+in%3Atitle+label%3Aidea).
 ## Create Sharing Link ##
 
 === "Using Context Menu"

@@ -5,7 +5,7 @@
 Because we want to create the best possible product for our users, we have a set of criteria to ensure that all
 submissions are acceptable:
 
-- [ ] **[Features and improvements](issues.md) must be fully implemented** so that they can be released at any time without additional work
+- [ ] **[Features and enhancements](issues.md) must be fully implemented** so that they can be released at any time without additional work
 - [ ] **[Automated unit and/or acceptance tests](code-quality.md#code-that-cannot-be-tested-is-flawed) are mandatory** to ensure the changes work as expected and to reduce repetitive manual work
 - [ ] **[Frontend components](ui/introduction.md) must be responsive** to work and look properly on phones, tablets, and desktop computers; you must have tested them on [all major browsers](../getting-started/index.md#browsers) and different devices
 - [ ] **[Documentation](documentation.md) and [translation](translations.md) updates** should be provided if needed

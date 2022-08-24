@@ -122,11 +122,11 @@ to learn more about terminal commands.
 
 #### Config Examples ####
 
-We recommend that you compare your own `docker-compose.yml` with [our latest examples](https://dl.photoprism.app/docker/) from time to time, as they may include new [config options](config-options.md) or other improvements relevant to you.
+We recommend that you compare your own `docker-compose.yml` with [our latest examples](https://dl.photoprism.app/docker/) from time to time, as they may include new [config options](config-options.md) or other enhancements relevant to you.
 
 #### MariaDB Server ####
 
-Our [config examples](https://dl.photoprism.app/docker/) are generally based on the [latest stable release](https://mariadb.com/kb/en/mariadb-server-release-dates/) to take advantage of performance improvements.
+Our [config examples](https://dl.photoprism.app/docker/) are generally based on the [latest stable release](https://mariadb.com/kb/en/mariadb-server-release-dates/) to take advantage of performance enhancements.
 This does not mean [older versions](index.md#databases) are no longer supported and you have to upgrade immediately.
 
 !!! note ""

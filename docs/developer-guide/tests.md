@@ -1,7 +1,7 @@
 # Running Unit and Acceptance Tests
 
 !!! example ""
-    In any process, obsessing about the wait times will yield greater improvements than practically anything else, for longer than you might think. Automation, simplification, etc. are implementation details of that obsession. — <cite>Dan North</cite>
+    In any process, obsessing about the wait times will yield greater enhancements than practically anything else, for longer than you might think. Automation, simplification, etc. are implementation details of that obsession. — <cite>Dan North</cite>
 
 ## Unit Tests ##
 ### Go ###

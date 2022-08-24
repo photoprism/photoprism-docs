@@ -10,7 +10,7 @@ Never store database files on an unreliable device such as a USB flash drive, SD
     tested and working database configurations. These docs are for advanced users only.
 
 !!! note "MySQL"
-    Official support for MySQL 8 is discontinued as Oracle seems to have stopped shipping [new features and improvements](https://github.com/photoprism/photoprism/issues/1764).
+    Official support for MySQL 8 is discontinued as Oracle seems to have stopped shipping [new features and enhancements](https://github.com/photoprism/photoprism/issues/1764).
     As a result, the testing effort required before each release is no longer feasible.
 
 ## Configuring MariaDB ##

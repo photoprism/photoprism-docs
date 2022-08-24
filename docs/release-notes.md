@@ -33,7 +33,7 @@ What's new?
 ### July 28, 2022 ###
 <span class="build">Build 220728-729ddd920</span>
 
-Includes indexing, metadata, and authentication improvements, as well as [updated translations](https://translate.photoprism.app/projects/photoprism/).
+Includes indexing, metadata, and authentication enhancements, as well as [updated translations](https://translate.photoprism.app/projects/photoprism/).
 
 What's new?
 
@@ -125,7 +125,7 @@ This service release fixes potential issues with our new Debian 12-based Docker 
 ### May 17, 2022 ###
 <span class="build">Build 220517-b9c68f8f</span>
 
-This update features search UX improvements, a new Docker base image based on Debian 12 "Bookworm",
+This update features search UX enhancements, a new Docker base image based on Debian 12 "Bookworm",
 as well as fixes for recently discovered issues. Front- and backend [translations](https://translate.photoprism.app/) in numerous
 languages have been added and updated. Thanks to all involved!
 
@@ -217,7 +217,7 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
 ### January 7, 2022 ###
 <span class="build">Build 220107-f5b7ef83</span>
 
-Based on our zero bug policy, this update focuses on bug fixes, security, and UX improvements for search 
+Based on our zero bug policy, this update focuses on bug fixes, security, and UX enhancements for search 
 filters, metadata, and the indexer. In addition, one of the merged pull requests may improve face recognition 
 performance on smaller devices and with large libraries.
 
@@ -290,7 +290,7 @@ and [contributors](https://github.com/photoprism/photoprism/graphs/contributors/
 ### November 28, 2021 ###
 <span class="build">Build 211128-7e8974fd</span>
 
-Official support for MySQL 8 is discontinued with this update as Oracle seems to have stopped shipping [new features and improvements](https://github.com/photoprism/photoprism/issues/1764).
+Official support for MySQL 8 is discontinued with this update as Oracle seems to have stopped shipping [new features and enhancements](https://github.com/photoprism/photoprism/issues/1764).
 As a result, the testing effort required before each release is no longer feasible. We recommend [upgrading](https://docs.photoprism.app/getting-started/troubleshooting/#version-upgrade)
 to [MariaDB 10.6](https://mariadb.com/kb/en/function-differences-between-mariadb-106-and-mysql-80/) or later.
 PostgreSQL support is [planned for 2022](https://github.com/photoprism/photoprism/issues/47) without a specific release date yet.
@@ -509,7 +509,7 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
 ### February 11, 2021 ###
 <span class="build">Build 210211-b9595dd4</span>
 
-- Videos: [Native player featuring performance and UX improvements](https://github.com/photoprism/photoprism/issues/915)
+- Videos: [Native player featuring performance and UX enhancements](https://github.com/photoprism/photoprism/issues/915)
 - Index: [Improved detection of missing photos, files, and folders](https://github.com/photoprism/photoprism/issues/1010)
 
 ### February 8, 2021 ###

@@ -15,8 +15,7 @@ Non-photographic and low-quality images require a [review](../organize/review.md
 Automatically creates JPEGs for other file types so that they can be displayed in a browser.
 
 !!! attention ""
-    *Convert to JPEG* should not be disabled as this will effectively prevent PhotoPrism from indexing
-    file types other than JPEG - unless files were already converted to JPEG, and stored using the same file name prefix.
+    *Convert to JPEG* should not be disabled, as this effectively prevents PhotoPrism from indexing file types other than JPEG unless the files have already been converted to JPEG and saved under the same filename prefix.
 
 ## Stacks ##
 

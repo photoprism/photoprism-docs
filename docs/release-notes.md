@@ -8,16 +8,17 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 220825-78801795f</span>
+<span class="build">Build 220826-ecadf17d5</span>
 
 Our team will be on vacation until the end of August. In the meantime, feel free to help us test these changes. Thank you!
 
 What's new?
 
+- UX: [Mobile toolbar menu has been redesigned and expanded](https://github.com/photoprism/photoprism/commit/ecadf17d506e2a4cfa9fb1bb33e942f1a6499c25)
+- UX: [Improved search result and *Gemstone* theme styles](https://github.com/photoprism/photoprism/commit/3612ea016dd3b20af352009e92258f55d47a550b)
 - Library: [Indexing will be aborted if the originals folder is empty](https://github.com/photoprism/photoprism/pull/2299)
 - Videos: [Local time is extracted from `DateTimeOriginal` if possible](https://github.com/photoprism/photoprism/issues/2640)
 - Albums: [Private pictures are shown if "Private" has been disabled in *Settings*](https://github.com/photoprism/photoprism/issues/2570)
-- UI/UX: [Improved search result and *Gemstone* theme styles](https://github.com/photoprism/photoprism/commit/3612ea016dd3b20af352009e92258f55d47a550b)
 - Docker: [Permissions of original media files are no longer updated on startup](https://github.com/photoprism/photoprism/pull/2371)
 - Build: [Go has been upgraded to v1.19, which includes fixes and enhancements](https://tip.golang.org/doc/go1.19)
 - Build: [NodeJS has been upgraded from v16 to v18](https://nodejs.org/en/blog/announcements/v18-release-announce/)

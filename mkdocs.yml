@@ -54,7 +54,6 @@ nav:
     - Known Issues: known-issues.md
     - FAQ: getting-started/faq.md
   - User Guide:
-    - Introduction: index.md
     - Installation: user-guide/index.md
     - First Steps 👣: user-guide/first-steps.md
     # - Setting up: user-guide/setup.md

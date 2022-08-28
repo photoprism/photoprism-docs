@@ -220,6 +220,10 @@ On the other hand, MariaDB has many optimizations. It is also completely open-so
 
 Most often this happens when new users configure `localhost` or `127.0.0.1` as database server host, since these always point back to the current container or computer. So it is not possible to access an external service with such a hostname or an IP address starting with 127. It works only if it is used directly in the container or on the computer where the database server is running. Instead, you must use a hostname or IP address that is accessible from other machines and containers.
 
+### Why do I see connection errors when requesting Maps API keys at startup?
+
+As explained in detail in our [Privacy Policy](https://photoprism.app/privacy), reverse geocoding and interactive world maps depend on the necessary data being [retrieved from us](https://photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Please make sure that you allow these requests if you have a firewall installed and verify that your Internet connection is working.
+
 ### Why does PhotoPrism always consume 100% of CPU when the background worker is running?
 
 Many users reporting poor performance and high CPU load have migrated from SQLite to MariaDB so that [their database schema is not optimized for performance](advanced/databases.md), for example, because indexes are missing or columns have the wrong data type. The [instructions for these migrations](advanced/migrations/sqlite-to-mariadb.md) were provided by a contributor and are not part of the original software distribution. As such, they have not been officially released, recommended, or extensively tested by us.

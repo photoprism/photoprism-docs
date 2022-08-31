@@ -21,7 +21,13 @@ PhotoPrism and MariaDB on ARMv7-based entry-level devices like the Synology DS21
 
 ## Setup using Docker ##
 
-We recommend following these instructions to install PhotoPrism on your Synology NAS:
+!!! attention ""
+    The Synology user interface has been updated in the meantime, so the screenshots from the tutorial below may be outdated. Also, we recommend using mariadb instead of SQlite.
+
+    Since we don't have a Synology test device, contributions to a step-by-step tutorial are greatly appreciated.
+    You can contribute by clicking :material-pencil: to send a pull request with your changes.
+
+You can follow these instructions to install PhotoPrism on your Synology NAS:
 
 https://www.wundertech.net/how-to-setup-photoprism-on-a-synology-nas
 

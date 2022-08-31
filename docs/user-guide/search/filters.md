@@ -74,7 +74,7 @@ This will show all photos that have either the label cat **or** dog.
 
 The following filters work with |:
 
-* albums, color, country, day, month, year, keywords, label, path, state, subject/person, subjects/people, title, type, name, filename, original, hash
+* albums, color, country, day, month, year, keywords, label, path, state, city, subject/person, subjects/people, title, type, name, filename, original, hash
 
 ### Wildcard ###
 
@@ -130,6 +130,7 @@ This is a complete list of supported search filters with examples. Filters can g
 | people    | string    | people:"Jane & John"          | Subject Names, can be combined with & and \|                                                                                               |
 | person    | string    | person:"Jane Doe & John Doe"  | Subject Names, exact matches, can be combined with & and \|                                                                                |
 | state     | string    | state:"Baden-Württemberg"     | OR search with \|                                                                                                                          |
+| city      | string    | city:"Berlin"                 | OR search with \|                                                                                                                          |
 | subject   | string    | subject:"Jane Doe & John Doe" | Alias for person                                                                                                                           |
 | subjects  | string    | subjects:"Jane & John"        | Alias for people                                                                                                                           |
 | title     | string    | title:"Lake*"                 | Title, OR search with \|                                                                                                                   |

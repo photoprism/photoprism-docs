@@ -20,7 +20,7 @@ What's new?
 - Library: [Indexing will be aborted if the originals folder is empty](https://github.com/photoprism/photoprism/pull/2299)
 - Videos: [Local time is extracted from `DateTimeOriginal` if possible](https://github.com/photoprism/photoprism/issues/2640)
 - Albums: [All pictures are shown if "Private" has been disabled in *Settings*](https://github.com/photoprism/photoprism/issues/2570)
-- Thumbs: [`photoprism thumbs` command also regenerates thumbnails of sidecar files](https://github.com/photoprism/photoprism/issues/2669)
+- Thumbs: [`photoprism thumbs` command regenerates thumbnails of sidecar files](https://github.com/photoprism/photoprism/issues/2669)
 - Docker: [Permissions of original media files are no longer updated on startup](https://github.com/photoprism/photoprism/pull/2371)
 - Build: [Go has been upgraded to v1.19, which includes fixes and enhancements](https://tip.golang.org/doc/go1.19)
 - Build: [NodeJS has been upgraded from v16 to v18](https://nodejs.org/en/blog/announcements/v18-release-announce/)

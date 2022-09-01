@@ -7,10 +7,10 @@
 !!! tldr ""
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
-### Development Preview ###
-<span class="build">Build 220831-204c0e2c2</span>
+### September 1, 2022 ###
+<span class="build">Build 220901-f493607b0</span>
 
-Our team will be on vacation until the end of August. In the meantime, feel free to help us test these changes. Thank you!
+With this update you get all the latest translations [contributed by our community](https://translate.photoprism.app/projects/photoprism/), [mobile navigation enhancements](https://dl.photoprism.app/img/ui/mobile-toolbar-navigation.jpg), updated dependencies and, as usual, fixes for recently discovered issues. Thanks to everyone involved!
 
 What's new?
 

@@ -10,7 +10,7 @@
 ### September 1, 2022 ###
 <span class="build">Build 220901-f493607b0</span>
 
-With this update you get all the latest translations [contributed by our community](https://translate.photoprism.app/projects/photoprism/), [mobile navigation enhancements](https://dl.photoprism.app/img/ui/mobile-toolbar-navigation.jpg), updated dependencies and, as usual, fixes for recently discovered issues. Thanks to everyone involved!
+With this update you get all the [latest translations contributed by our community](https://translate.photoprism.app/projects/photoprism/), [mobile navigation enhancements](https://dl.photoprism.app/img/ui/mobile-toolbar-navigation-open.jpg), upgraded dependencies and, as usual, fixes for recently discovered issues. Thanks to everyone involved!
 
 What's new?
 

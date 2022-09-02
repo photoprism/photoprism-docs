@@ -7,6 +7,10 @@
 !!! tldr ""
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
+### Development Preview ###
+
+In order to improve security and compatibility, the default Docker image of our upcoming release will be based on Ubuntu 22.04 LTS instead of Debian 11. You will still be able to choose a different Linux distribution by changing the name of the image tag in your local configuration.
+
 ### September 1, 2022 ###
 <span class="build">Build 220901-f493607b0</span>
 

@@ -9,7 +9,8 @@
 
 ### Development Preview ###
 
-In order to improve security and compatibility, the default Docker image of our upcoming release will be based on Ubuntu 22.04 LTS instead of Debian 11. You will still be able to choose a different Linux distribution by changing the name of the image tag in your local configuration.
+In order to improve security and compatibility, the default Docker image of our upcoming release will be based on Ubuntu 22.04 LTS instead of Debian 11.
+You will still be able to choose a different Linux distribution by changing the [image tag](https://hub.docker.com/r/photoprism/photoprism/tags) in your local [service configuration](https://dl.photoprism.app/docker/docker-compose.yml).
 
 ### September 1, 2022 ###
 <span class="build">Build 220901-f493607b0</span>

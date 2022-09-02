@@ -16,7 +16,7 @@ What's new?
 
 - UX: [Mobile toolbar menu has been redesigned and expanded](https://github.com/photoprism/photoprism/commit/ecadf17d506e2a4cfa9fb1bb33e942f1a6499c25)
 - UX: [Improved search result and *Gemstone* theme styles](https://github.com/photoprism/photoprism/commit/3612ea016dd3b20af352009e92258f55d47a550b)
-- Search: [Known file extensions are stripped from `name:...` filter search string](https://github.com/photoprism/photoprism/issues/2667)
+- Search: [Known file extensions are stripped from `name:...` filter string](https://github.com/photoprism/photoprism/issues/2667)
 - Library: [Indexing will be aborted if the originals folder is empty](https://github.com/photoprism/photoprism/pull/2299)
 - Videos: [Local time is extracted from `DateTimeOriginal` if possible](https://github.com/photoprism/photoprism/issues/2640)
 - Albums: [All pictures are shown if "Private" has been disabled in *Settings*](https://github.com/photoprism/photoprism/issues/2570)

@@ -13,12 +13,13 @@
 In order to improve security and compatibility, the default Docker image of our upcoming release will be based on Ubuntu 22.04 LTS (Jammy Jellyfish) instead of Debian 12 (Bookworm).
 You will still be able to choose a different Linux distribution by changing the [image tag](https://hub.docker.com/r/photoprism/photoprism/tags) in your local [service configuration](https://dl.photoprism.app/docker/docker-compose.yml).
 
-What else is new?
+What's new?
 
 - UX: [Scroll position is restored when navigating back](https://github.com/photoprism/photoprism/issues/2597)
 - Search: [Added `city:...` filter](https://github.com/photoprism/photoprism/pull/2670)
+- HEIF: [Added support for Sony `.HIF` file extension](https://github.com/photoprism/photoprism/pull/2693)
 - Index: [Delayed raw file check to improve performance](https://github.com/photoprism/photoprism/issues/2702)
-- HEIF: [Support for Sony `.HIF` file extension](https://github.com/photoprism/photoprism/pull/2693)
+- Docker: [Now based on Ubuntu 22.04 LTS (Jammy Jellyfish) by default](https://github.com/photoprism/photoprism/issues/2178)
 - Build: [Go has been upgraded to v1.19.1, which includes security fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.19.1+label%3ACherryPickApproved)
 
 ### September 1, 2022 ###

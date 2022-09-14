@@ -19,7 +19,7 @@ What else is new?
 - Search: [Added `city:...` filter](https://github.com/photoprism/photoprism/pull/2670)
 - Index: [Delayed raw file check to improve performance](https://github.com/photoprism/photoprism/issues/2702)
 - HEIF: [Support for Sony `.HIF` file extension](https://github.com/photoprism/photoprism/pull/2693)
-- Build: [Go has been upgraded to v1.19.1, which includes security fixes)(https://github.com/golang/go/issues?q=milestone%3AGo1.19.1+label%3ACherryPickApproved)
+- Build: [Go has been upgraded to v1.19.1, which includes security fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.19.1+label%3ACherryPickApproved)
 
 ### September 1, 2022 ###
 <span class="build">Build 220901-f493607b0</span>

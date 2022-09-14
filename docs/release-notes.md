@@ -13,6 +13,8 @@
 In order to improve security and compatibility, the default Docker image of our upcoming release will be based on Ubuntu 22.04 LTS (Jammy Jellyfish) instead of Debian 12 (Bookworm).
 You will still be able to choose a different Linux distribution by changing the [image tag](https://hub.docker.com/r/photoprism/photoprism/tags) in your local [service configuration](https://dl.photoprism.app/docker/docker-compose.yml).
 
+What else is new?
+
 - UX: [Scroll position is restored when navigating back](https://github.com/photoprism/photoprism/issues/2597)
 - Index: [Index: Delayed raw file check to improve performance](https://github.com/photoprism/photoprism/issues/2702)
 - Search: [Added `city:...` filter](https://github.com/photoprism/photoprism/pull/2670)

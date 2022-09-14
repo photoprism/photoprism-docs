@@ -15,10 +15,10 @@ You will still be able to choose a different Linux distribution by changing the 
 
 What's new?
 
-- UX: [Scroll position is restored when navigating back](https://github.com/photoprism/photoprism/issues/2597)
-- Search: [Added `city:...` and `state:...` filters](https://github.com/photoprism/photoprism/pull/2670)
-- HEIF: [Added support for Sony `.HIF` file extension](https://github.com/photoprism/photoprism/pull/2693)
+- UX: [Scroll position is restored again when navigating back](https://github.com/photoprism/photoprism/issues/2597)
 - RAW: [Upgraded Darktable from v3.8.1 to v4.0.1 (AMD64 only)](https://github.com/photoprism/photoprism/issues/2703)
+- HEIF: [Added support for Sony `.HIF` file extension](https://github.com/photoprism/photoprism/pull/2693)
+- Search: [Added `city:...` and `state:...` filters](https://github.com/photoprism/photoprism/pull/2670)
 - Albums: [Background worker no longer creates a full backup on every run](https://github.com/photoprism/photoprism/issues/2705)
 - Index: [Delayed raw file check to improve performance](https://github.com/photoprism/photoprism/issues/2702)
 - Docker: [Now based on Ubuntu 22.04 LTS (Jammy Jellyfish) by default](https://github.com/photoprism/photoprism/issues/2178)

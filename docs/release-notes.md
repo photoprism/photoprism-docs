@@ -21,7 +21,7 @@ What's new?
 - Images: [Added support for Sony's `.HIF` HEIF file extension](https://github.com/photoprism/photoprism/pull/2693)
 - Search: [Added `city:...` and `state:...` filters](https://github.com/photoprism/photoprism/pull/2670)
 - Albums: [Background worker no longer creates a full backup on every run](https://github.com/photoprism/photoprism/issues/2705)
-- Index: [Delayed RAW format check to improve performance](https://github.com/photoprism/photoprism/issues/2702)
+- Index: [Delayed RAW file format check to improve performance](https://github.com/photoprism/photoprism/issues/2702)
 - Docker: [Now based on Ubuntu 22.04 LTS (Jammy Jellyfish) by default](https://github.com/photoprism/photoprism/issues/2178)
 - Build: [Go has been upgraded to v1.19.1, which includes security fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.19.1+label%3ACherryPickApproved)
 

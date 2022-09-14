@@ -8,10 +8,16 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 220902-62aba3200</span>
+<span class="build">Build 220914-3e86a88af</span>
 
 In order to improve security and compatibility, the default Docker image of our upcoming release will be based on Ubuntu 22.04 LTS (Jammy Jellyfish) instead of Debian 12 (Bookworm).
 You will still be able to choose a different Linux distribution by changing the [image tag](https://hub.docker.com/r/photoprism/photoprism/tags) in your local [service configuration](https://dl.photoprism.app/docker/docker-compose.yml).
+
+- UX: [Scroll position is restored when navigating back](https://github.com/photoprism/photoprism/issues/2597)
+- Index: [Index: Delayed raw file check to improve performance](https://github.com/photoprism/photoprism/issues/2702)
+- Search: [Added `city:...` filter](https://github.com/photoprism/photoprism/pull/2670)
+- HEIF: [Added support for Sony `.HIF` file extension](https://github.com/photoprism/photoprism/pull/2693)
+- Build: [Go has been upgraded to v1.19.1, which includes security fixes)(https://github.com/golang/go/issues?q=milestone%3AGo1.19.1+label%3ACherryPickApproved)
 
 ### September 1, 2022 ###
 <span class="build">Build 220901-f493607b0</span>

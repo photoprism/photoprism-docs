@@ -11,7 +11,7 @@
 <span class="build">Build 220915-0cb9cbc56</span>
 
 In order to improve security and compatibility, the default Docker image of our upcoming release will be based on Ubuntu 22.04 LTS (Jammy Jellyfish) instead of Debian 12 (Bookworm).
-You will still be able to choose a different Linux distribution by changing the [image tag](https://hub.docker.com/r/photoprism/photoprism/tags) in your local [service configuration](https://dl.photoprism.app/docker/docker-compose.yml). Thanks a lot to all who contributed!
+You will still be able to choose a different Linux distribution by changing the [image tag](https://hub.docker.com/r/photoprism/photoprism/tags) in your local [service configuration](https://dl.photoprism.app/docker/docker-compose.yml). Thanks a lot to all who [contributed](https://docs.photoprism.app/developer-guide/)!
 
 What's new?
 

@@ -117,7 +117,7 @@ The corresponding [config option](../../getting-started/config-options.md) is `P
 !!! tldr ""
     **The actual impression depends on how much information an image contains.** Empty areas and skies,
     for example, are easier to compress. Images with a lot of details suffer the most.
-    For this reason, reducing the quality of thumbnails also negatively impacts [facial recognition](../organize/people.md)
+    For this reason, reducing the quality of thumbnails also negatively impacts [face recognition](../organize/people.md)
     and image classification results. Simply put, this means that the indexer sees fewer details.
 
 ### Dynamic and Static Size Limits
@@ -131,7 +131,7 @@ no thumbnails will be created above this size.
 The corresponding [config option](../../getting-started/config-options.md) is `PHOTOPRISM_THUMB_SIZE`.
 
 !!! danger ""
-    Reducing the *Static Size Limit* of thumbnails has a **significant impact on [facial recognition](../organize/people.md) 
+    Reducing the *Static Size Limit* of thumbnails has a **significant impact on [face recognition](../organize/people.md) 
     and image classification** results. Simply put, it means that the indexer can no longer see properly.
 
 !!! warning ""

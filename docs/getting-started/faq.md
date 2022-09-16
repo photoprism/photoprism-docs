@@ -270,7 +270,7 @@ Thumbnails are necessary because web browsers are bad at resizing large images t
 
 We are working to implement storage optimizations whenever there is an opportunity. It is also possible to [increase the JPEG compression and/or limit the resolution](../user-guide/settings/advanced.md) if you are happy with lower quality thumbnails.
 
-To free up as much space as possible, the most effective way is to delete all files in the `/cache/thumbnails` *storage* folder. It is located outside the *originals* folder by default, depending on [your configuration](config-options.md#storage). Then perform a full rescan of your library or run the command `photoprism thumbs -f` in a terminal if you have direct server access. This command can also be used to replace existing thumbnails, for example after changing the quality settings. Unneeded or higher resolution thumbnails won't be automatically removed.
+To free up as much space as possible, the most effective way is to delete all files in the `/cache/thumbnails` *storage* folder. It is located outside the *originals* folder by default, depending on [your configuration](config-options.md#storage). Then perform a full rescan of your library or run the command `photoprism thumbs -f` in a terminal if you have direct server access. This command can also be used to replace existing thumbnails, for example after changing the quality settings. Higher resolution thumbnails cannot be automatically removed at this time.
 
 If you have a fast CPU and enough memory, you can [choose to render certain thumbnails only on demand](../user-guide/settings/advanced.md). However, memory is usually so cheap that most users opt for better quality and performance instead.
 

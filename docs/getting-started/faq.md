@@ -272,7 +272,7 @@ We are working to implement storage optimizations whenever there is an opportuni
 
 To free up as much space as possible, the most effective way is to delete all files in the `/cache/thumbnails` *storage* folder. It is located outside the *originals* folder by default, depending on [your configuration](config-options.md#storage). Then perform a full rescan of your library or run the command `photoprism thumbs -f` in a terminal if you have direct server access. This command can also be used to replace existing thumbnails, for example after changing the quality settings. Higher resolution thumbnails cannot be automatically removed at this time.
 
-If you have a fast CPU and enough memory, you can [choose to render certain thumbnails only on demand](../user-guide/settings/advanced.md). However, memory is usually so cheap that most users opt for better quality and performance instead.
+If you have a fast CPU and enough memory, you can [choose to render certain thumbnails only on demand](../user-guide/settings/advanced.md). However, storage is usually so cheap that most users opt for better quality and performance instead.
 
 ### Can I skip creating thumbnails completely?
 

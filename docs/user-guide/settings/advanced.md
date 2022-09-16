@@ -73,7 +73,9 @@ The equivalent [config toggle](../../getting-started/config-options.md) is `PHOT
 
 ## Images
 
-This section controls how your originals are rendered as thumbnail images. Thumbnails [are necessary](../../getting-started/faq.md#why-is-my-storage-folder-so-large-what-is-in-it) because web browsers are bad at resizing large images to fit the screen. Using full-resolution originals for slideshows and search result previews would also consume a lot of browser memory and significantly reduce indexing performance.
+This section controls how JPEG preview and thumbnail images are rendered. These are high-quality, scaled-down versions of your originals.
+
+Thumbnails [are necessary](../../getting-started/faq.md#why-is-my-storage-folder-so-large-what-is-in-it) because web browsers are bad at resizing large images to fit the screen. Using full-resolution originals for slideshows and in search results would also consume a lot of browser memory and significantly reduce indexing performance.
 
 ### Downscaling Filter
 

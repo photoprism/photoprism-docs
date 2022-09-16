@@ -275,12 +275,11 @@ To free up as much space as possible, the most effective way is to delete all fi
 
 If you have a fast CPU and enough memory, you can [choose to render certain thumbnails only on demand](../user-guide/settings/advanced.md#images). However, storage is usually so cheap that most users opt for better quality and performance instead.
 
+Actual storage requirements vary and depend, among other things, on file resolutions and formats (RAW, JPEG, video,...). For highly compressed, high-resolution videos in modern formats that cannot be displayed natively by browsers, the storage folder may even be larger than the originals, since [videos transcoded to AVC](../user-guide/organize/video.md#transcoding) are not as heavily compressed.
+
 ### Can I skip creating thumbnails completely?
 
-The smallest [configurable](../user-guide/settings/advanced.md) size is 720px for consumption by 
-the indexer to perform color detection, face detection, and image classification. Recreating them 
-every time they are needed is too demanding for even the most powerful servers. Unless you only 
-have a few small images, it would render the app unusable.
+The smallest [configurable](../user-guide/settings/advanced.md#images) size is 720px for use by the indexer to perform color detection, image classification, as well as face detection and recognition. Recreating them every time they are needed is too demanding even for the most powerful servers. Unless you have just a few small pictures, this would make the app unusable.
 
 !!! danger ""
     Reducing the *Static Size Limit* of thumbnails has a **significant impact on  [facial recognition](../user-guide/organize/people.md)

@@ -171,23 +171,23 @@ with file paths dependent on the size and original file's hash, such as:
 
 The table below shows each generated size, with the PhotoPrism features using each.
 
-Name      | Width  | Height  | Use                      |
-:---------|:------:|:-------:|:-------------------------|
-colors    | 3      | 3       | Color Detection          |
-tile_50   | 50     | 50      | List Preview             |
-tile_100  | 100    | 100     | Maps Preview             |
-tile_224  | 224    | 224     | Mosaic Preview           |
-left_224  | 224    | 224     | TensorFlow               |
-right_224 | 224    | 224     | TensorFlow               |
-tile_500  | 500    | 500     | Cards Preview            |
-fit_720   | 720    | 720     | Mobile, TV               |
-fit_1280  | 1280   | 1024    | Mobile, HD Ready TV      |
-fit_1920  | 1920   | 1200    | Mobile, Full HD TV       |
-fit_2048  | 2048   | 2048    | Tablets, Cinema 2K       |
-fit_2560  | 2560   | 1600    | Quad HD, Retina Display  |
-fit_3840  | 3840   | 2400    | Ultra HD                 |
-fit_4096  | 4096   | 4096    | Ultra HD, Retina 4K      |
-fit_7680  | 7680   | 4320    | 8K Ultra HD 2, Retina 6K |
+| Name      | Width | Height | Use                      |
+|:----------|:-----:|:------:|:-------------------------|
+| colors    |   3   |   3    | Color Detection          |
+| tile_50   |  50   |   50   | List Preview             |
+| tile_100  |  100  |  100   | Maps Preview             |
+| tile_224  |  224  |  224   | Mosaic Preview           |
+| left_224  |  224  |  224   | TensorFlow               |
+| right_224 |  224  |  224   | TensorFlow               |
+| tile_500  |  500  |  500   | Cards Preview            |
+| fit_720   |  720  |  720   | Mobile, TV               |
+| fit_1280  | 1280  |  1024  | Mobile, HD Ready TV      |
+| fit_1920  | 1920  |  1200  | Mobile, Full HD TV       |
+| fit_2048  | 2048  |  2048  | Tablets, Cinema 2K       |
+| fit_2560  | 2560  |  1600  | Quad HD, Retina Display  |
+| fit_3840  | 3840  |  2400  | Ultra HD                 |
+| fit_4096  | 4096  |  4096  | Ultra HD, Retina 4K      |
+| fit_7680  | 7680  |  4320  | 8K Ultra HD 2, Retina 6K |
 
 ## Downscaling Filters
 
@@ -246,12 +246,12 @@ Original image:
 The same image resized from 600x400px to 150x100px using different resampling filters.
 From faster (lower quality) to slower (higher quality):
 
-Filter                    | Resize result
---------------------------|---------------------------------------------
-Nearest Neighbor          | ![](img/out_resize_nearest.png)
-Bilinear                  | ![](img/out_resize_linear.png)
-Sharp Bicubic             | ![](img/out_resize_catrom.png)
-Lanczos                   | ![](img/out_resize_lanczos.png)
+| Filter           | Resize result                   |
+|------------------|---------------------------------|
+| Nearest Neighbor | ![](img/out_resize_nearest.png) |
+| Bilinear         | ![](img/out_resize_linear.png)  |
+| Sharp Bicubic    | ![](img/out_resize_catrom.png)  |
+| Lanczos          | ![](img/out_resize_lanczos.png) |
 
 Source: [A Comparative Analysis of Image Interpolation Algorithms](https://dl.photoprism.app/pdf/20160201-Comparative_Analysis_of_Image_Interpolation.pdf)
 

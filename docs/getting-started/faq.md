@@ -265,22 +265,14 @@ Support for animated GIFs was [added in April 2022](https://github.com/photopris
 
 ### Why is my storage folder so large? What is in it?
 
-The storage folder contains sidecar, thumbnail, and configuration files.
-It may also contain index database files if you're using SQLite.
-Most space is consumed by thumbnails: These are high-quality resampled, smaller 
-versions of your originals.
+The storage folder contains sidecar, thumbnail, cache, and possibly configuration files. It may also contain index database files if you are using SQLite. Most of the space is taken up by the thumbnails: These are high-quality, scaled-down versions of your originals.
+Thumbnails are necessary because web browsers are bad at resizing large images to fit the screen. Using full-resolution originals for slideshows and search result previews would also consume a lot of browser memory and significantly reduce indexing performance.
 
-Thumbnails are required because Web browsers do a pretty bad job at resampling large images 
-so that they fit your screen. Using originals for slideshows and search result previews 
-would consume much more browser memory, and reduce overall performance, as well.
+We are working to implement storage optimizations whenever there is an opportunity. It is also possible to [increase the JPEG compression and/or limit the resolution](../user-guide/settings/advanced.md) if you are happy with lower quality thumbnails.
 
-If you're happy with lower quality thumbnails, you can reduce their JPEG quality 
-and/or set a size limit. Note that existing thumbnail files won't be replaced automatically 
-after changing [config values](config-options.md).
+To free up as much space as possible, the most effective way is to delete all files and folders in the *storage* folder `/cache/thumbnails`. This is by default outside your *originals* folder, see your [local configuration](config-options.md). Then perform a full rescan of your library or run the command `photoprism thumbs -f` in a terminal if you have direct server access. This command can also be used to replace existing thumbnails, for example after changing the quality settings. However, unneeded or higher resolution thumbnails are not automatically removed.
 
-You may also choose to render thumbnails on-demand if you have a fast CPU and enough memory. 
-However, storage is typically affordable enough for most users to go for better quality and 
-performance instead.
+If you have a fast CPU and enough memory, you can [choose to render certain thumbnails only on demand](../user-guide/settings/advanced.md). However, memory is usually so cheap that most users opt for better quality and performance instead.
 
 ### Can I skip creating thumbnails completely?
 

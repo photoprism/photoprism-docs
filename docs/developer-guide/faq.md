@@ -14,4 +14,6 @@ Visit [docs.photoprism.app/developer-guide/media/thumbnails/](https://docs.photo
 
 The API keys required to use the maps are unfortunately not free for us due to the number of users we have. Those costs are one of the reasons why we encourage all users to support our mission by [signing up as a sponsor](https://photoprism.app/membership) or purchasing a [commercial license](https://photoprism.app/teams).
 
-While we could register lots of "non-commercial test accounts" instead, we don't think that would be fair and [Maptiler](https://www.maptiler.com/) might then stop offering them to those in need.
+While we could register several "non-commercial test accounts" instead, we don't think that would be fair and [Maptiler](https://www.maptiler.com/) might then stop offering them to those in need.
+
+[Compare Features ›](https://photoprism.app/editions#compare)

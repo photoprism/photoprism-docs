@@ -14,7 +14,7 @@
 
     As explained in detail in our [Privacy Policy](https://photoprism.app/privacy), reverse geocoding and interactive world maps depend on retrieving the necessary information from [us](https://photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality. Please make sure that you allow requests to these API endpoints if you have a firewall installed, and verify that your Internet connection is working.
     
-    Your use of these services is fully covered by us. Depending on your usage, this can save you thousands of dollars every month. Other providers typically charge usage-based fees and may also not allow you to cache the data they provide, compromising your privacy with unnecessary requests.
+    Your use of these services is fully covered by us at the moment. Depending on your usage, this can save you thousands of dollars every month. Other providers typically charge usage-based fees and may also not allow you to cache the data they provide, compromising your privacy with unnecessary requests.
     
     Should you still wish to operate one or both of these services on your own premises, [we can set up such a fully autonomous solution](https://photoprism.app/contact) for you, provided you are prepared to cover the [initial setup costs](https://photoprism.app/kb/compliance-faq#fully-autonomous-solution) as well as ongoing maintenance fees for content licenses and updates.
 

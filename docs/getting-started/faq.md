@@ -71,9 +71,9 @@ impossible - to provide full support. Reading title, copyright, artist, and desc
 implemented as a proof-of-concept, [contributions are welcome](../developer-guide/metadata/xmp.md). Indexing of 
 embedded XMP is only possible via Exiftool, see above.
 
-### Does PhotoPrism depend on any external services?
+### Does your software depend on any external services?
 
-As explained in detail in our [Privacy Policy](https://photoprism.app/privacy), reverse geocoding and interactive world maps depend on retrieving the necessary data from external systems [supplied by us](https://photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality.
+As explained in detail in our [Privacy Policy](https://photoprism.app/privacy), reverse geocoding and interactive world maps depend on retrieving the necessary information from external systems [supplied by us](https://photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality.
 
 Your use of these services is entirely covered by us. Depending on usage, this can save you thousands of dollars in service fees every month and allows us to provide much of the functionality for free to home users. Other providers typically charge usage-based fees and may also not allow you to cache the data they provide.
 
@@ -81,11 +81,29 @@ Should you still wish to operate one or both of these services on your own premi
 
 [View Privacy Policy ›](https://photoprism.app/privacy#section-7){ class="pr-3" } [View Compliance FAQ ›](https://photoprism.app/kb/compliance-faq#privacy)
 
+### Why do I see connection errors when requesting API keys at startup?
+
+As explained above, reverse geocoding and interactive world maps depend on retrieving the necessary information from external services. Please make sure that you allow requests to these API endpoints if you have a firewall installed, and verify that your Internet connection is working.
+
 ### Are the keys for using interactive world maps provided free of charge?
 
 The API keys required to use the maps are unfortunately not free for us due to the number of users we have. Those costs are one of the reasons why we encourage all users to support our mission by [signing up as a sponsor](https://photoprism.app/membership) or purchasing a [commercial license](https://photoprism.app/teams).
 
-While we could register lots of "non-commercial test accounts" instead, we don't think that would be fair and [Maptiler](https://www.maptiler.com/) might then stop offering them to those in need.
+While we could register several "non-commercial test accounts" instead, we don't think that would be fair and [Maptiler](https://www.maptiler.com/) might then stop offering them to those in need.
+
+[Compare Personal Editions ›](https://photoprism.app/editions#compare)
+
+### What are the advantages of purchasing a commercial license?
+
+A key difference between the [public license](https://docs.photoprism.app/license/agpl/) and a [commercial license agreement](https://photoprism.app/teams) is that you get access to additional support and configuration options, as well as the right to customize functionality to your needs without having to publicly disclose your changes. Our [Compliance FAQ](https://photoprism.app/kb/compliance-faq) gives answers to the most frequently asked questions about product compliance and scalability.
+
+[Compare Team Editions ›](https://photoprism.app/teams#compare)
+
+### Will the self-hosted version continue to be supported?
+
+Absolutely! We are on a mission to protect your freedom and privacy. Self-hosting is the easiest way to stay in control and protect [your privacy](https://photoprism.app/privacy). It also provides the best experience for advanced users who often rely on a local toolchain to select, edit, and publish their pictures.
+
+At the same time, we know there's a huge demand and many practical uses for a cloud-hosted app that is easy to set up. We like to give our users the choice and therefore offer a fully managed service as a deployment option. Selected hosting partners ensure that your privacy is protected as much as technically possible, even in the cloud.
 
 ### Are JPEGs updated when RAW or XMP files change?
 
@@ -190,18 +208,6 @@ compromising performance and usability.
     both worlds. It's essentially what happens when you run dockerized applications on [virtual cloud servers](cloud/digitalocean.md)
     and operating systems other than Linux.
 
-### Will the self-hosted version continue to be supported?
-
-Absolutely! We are on a mission to protect your freedom and privacy. Self-hosting is the easiest way to stay in control and protect [your privacy](https://photoprism.app/privacy). It also provides the best experience for advanced users who often rely on a local toolchain to select, edit, and publish their pictures.
-
-At the same time, we know there's a huge demand and many practical uses for a cloud-hosted app that is easy to set up. We like to give our users the choice and therefore offer a fully managed service as a deployment option. Selected hosting partners ensure that your privacy is protected as much as technically possible, even in the cloud.
-
-### What are the advantages of purchasing a commercial license?
-
-A key difference between the open source and [commercial license](https://photoprism.app/teams) is that you get access to additional support and configuration options, as well as the right to customize functionality to your needs without having to publicly disclose your changes.
-
-[Compare Features ›](https://photoprism.app/teams#compare)
-
 ### Should I use SQLite, MariaDB, or MySQL?
 
 PhotoPrism is compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB 10.5.12+](https://mariadb.org/).
@@ -225,10 +231,6 @@ On the other hand, MariaDB has many optimizations. It is also completely open-so
 ### I've configured an external database, but can't connect?
 
 Most often this happens when new users configure `localhost` or `127.0.0.1` as database server host, since these always point back to the current container or computer. So it is not possible to access an external service with such a hostname or an IP address starting with 127. It works only if it is used directly in the container or on the computer where the database server is running. Instead, you must use a hostname or IP address that is accessible from other machines and containers.
-
-### Why do I see connection errors when requesting Maps API keys at startup?
-
-As explained in detail in our [Privacy Policy](https://photoprism.app/privacy), reverse geocoding and interactive world maps depend on the necessary data being [retrieved from us](https://photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Please make sure that you allow these requests if you have a firewall installed and verify that your Internet connection is working.
 
 ### Why does PhotoPrism always consume 100% of CPU when the background worker is running?
 

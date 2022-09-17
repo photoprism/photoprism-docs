@@ -54,7 +54,9 @@ The backend is compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB]
 
 #### External Services ####
 
-As explained in detail in our [Privacy Policy](https://photoprism.app/privacy), reverse geocoding and interactive world maps depend on the necessary data being [retrieved from us](https://photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services require an Internet connection if you want to use them.[^4]
+As explained in detail in our [Privacy Policy](https://photoprism.app/privacy), reverse geocoding and interactive world maps depend on retrieving the necessary information from external systems [supplied by us](https://photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality.[^4]
+
+Please make sure that you allow requests to these API endpoints if you have a firewall installed, and verify that your Internet connection is working.
 
 #### HTTPS ####
 
@@ -80,4 +82,4 @@ In exchange for their continued support, [sponsors](https://photoprism.app/membe
 [^1]: RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory
 [^2]: Our [`docker-compose.yml` examples](https://dl.photoprism.app/docker/docker-compose.yml) are generally based on the latest [MariaDB Server](https://mariadb.com/kb/en/mariadb-server-release-dates/) release to take advantage of performance enhancements. That doesn't mean older versions are no longer supported.
 [^3]: Oracle seems to have stopped shipping [new features and enhancements](https://github.com/photoprism/photoprism/issues/1764). As a result, the testing effort required before each release is no longer feasible.
-[^4]: Please make sure that you allow these requests if you have a firewall installed and verify that your Internet connection is working. See also "Privacy and Security" in our [Compliance FAQ](https://photoprism.app/kb/compliance-faq#privacy).
+[^4]: Our [Compliance FAQ](https://photoprism.app/kb/compliance-faq#privacy) gives answers to the most frequently asked questions about product compliance and scalability.

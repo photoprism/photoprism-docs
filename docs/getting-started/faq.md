@@ -75,9 +75,9 @@ embedded XMP is only possible via Exiftool, see above.
 
 As explained in detail in our [Privacy Policy](https://photoprism.app/privacy), reverse geocoding and interactive world maps depend on retrieving the necessary data from external systems [supplied by us](https://photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality.
 
-Your use of these services is fully covered by us. So there are no usage-based fees, unlike with other vendors who may charge additional fees and may also not allow you to use caching, e.g. Google Maps.
+Your use of these services is entirely covered by us. Depending on usage, this can save you thousands of dollars in service fees every month and allows us to provide much of the functionality for free to home users. Other providers typically charge usage-based fees and may also not allow you to cache the data they provide.
 
-Should you still wish to operate one or both of these services on your own premises, [we can set up such a fully autonomous solution](https://photoprism.app/contact) for you, provided you are prepared to cover the initial setup costs as well as ongoing maintenance fees for content licenses and updates.
+Should you still wish to operate one or both of these services on your own premises, [we can set up such a fully autonomous solution](https://photoprism.app/contact) for you, provided you are prepared to cover the [initial setup costs](https://photoprism.app/kb/compliance-faq#fully-autonomous-solution) as well as ongoing maintenance fees for content licenses and updates.
 
 [View Privacy Policy ›](https://photoprism.app/privacy#section-7){ class="pr-3" } [View Compliance FAQ ›](https://photoprism.app/kb/compliance-faq#privacy)
 

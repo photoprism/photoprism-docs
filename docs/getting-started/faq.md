@@ -81,6 +81,12 @@ Should you still wish to operate one or both of these services on your own premi
 
 [View Privacy Policy ›](https://photoprism.app/privacy#section-7){ class="pr-3" } [View Compliance FAQ ›](https://photoprism.app/kb/compliance-faq#privacy)
 
+### Are the keys for using interactive world maps provided free of charge?
+
+The API keys required to use the maps are unfortunately not free for us due to the number of users we have. Those costs are one of the reasons why we encourage all users to support our mission by [signing up as a sponsor](https://photoprism.app/membership) or purchasing a [commercial license](https://photoprism.app/teams).
+
+While we could register lots of "non-commercial test accounts" instead, we don't think that would be fair and [Maptiler](https://www.maptiler.com/) might then stop offering them to those in need.
+
 ### Are JPEGs updated when RAW or XMP files change?
 
 JPEGs are currently not regenerated when related RAW or XMP files change. RAW files are digital negatives by design.

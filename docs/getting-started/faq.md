@@ -73,7 +73,7 @@ embedded XMP is only possible via Exiftool, see above.
 
 ### Does your software depend on any external services?
 
-As explained in detail in our [Privacy Policy](https://photoprism.app/privacy), reverse geocoding and interactive world maps depend on retrieving the necessary information from external systems [supplied by us](https://photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality.
+As explained in detail in our [Privacy Policy](https://photoprism.app/privacy), reverse geocoding and interactive world maps depend on retrieving the necessary information from [us](https://photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality.
 
 Your use of these services is entirely covered by us. Depending on usage, this can save you thousands of dollars in service fees every month and allows us to provide much of the functionality for free to home users. Other providers typically charge usage-based fees and may also not allow you to cache the data they provide.
 

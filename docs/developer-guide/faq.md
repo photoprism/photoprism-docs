@@ -1,5 +1,9 @@
 # Frequently Asked Questions
 
+### Why not use a more permissive public license so that, for example, developers at Google can contribute more easily? ###
+
+Since we had hoped for a collaboration with Google and were aware of [their AGPL policy](https://opensource.google/documentation/reference/using/agpl-policy), PhotoPrism was initially licensed under Apache 2.0, which is much more permissive. However, no one seemed interested, although we did talk to quite a few personal acquaintances at Google. That made it easy for our community to convince us to use AGPL instead.
+
 ### Isn't it insecure that thumbnail URLs work even if you are not logged in? ###
 
 Like most commercial image hosting services, we've chosen to use a **cookie-free thumbnail API** to minimize request latency and avoid unnecessary network traffic. If you were to copy private session cookies and use them in a different browser window, you would have a similar problem, except that they also work for other API endpoints, not just a single image.

@@ -4,7 +4,7 @@ applications on any computer without extensive installation, configuration, or p
 We are aware Docker is not widely used by end users despite its many advantages. For this reason, we aim 
 to provide native binaries for common operating systems at a later time.
 
-### Why are we using Docker? ###
+## Why are we using Docker?
 
 Containers are nothing new; [Solaris Zones](https://en.wikipedia.org/wiki/Solaris_Containers) have been around for
 about 15 years, first released publicly in 2004. The chroot system call was introduced during
@@ -24,6 +24,29 @@ Last but not least, virtually all file format parsers have vulnerabilities that 
 This is a known risk that can affect you even if your computer is not directly connected to the Internet.
 Running apps in a container with limited host access is an easy way to improve security without
 compromising performance and usability.
+
+## Running Docker Images
+
+Assuming you have Docker installed and want to test Debian 12 "Bookworm", you can simply run this command to open a terminal:
+
+```bash
+docker run --rm -v ${PWD}:/test -w /test -ti debian:bookworm bash
+```
+
+This will mount the current working directory as `/test`. Of course, you can also specify a full path instead of `${PWD}`.
+
+The available Ubuntu, Debian and PhotoPrism images can be found on Docker Hub:
+
+- https://hub.docker.com/_/ubuntu
+- https://hub.docker.com/_/debian
+- https://hub.docker.com/r/photoprism/photoprism/tags
+
+Additional packages can be installed via `apt`:
+
+```bash
+apt update
+apt install -y exiftool libheif-examples
+```
 
 ## Continuous Integration / Deployment ##
 

@@ -1,14 +1,16 @@
 # Reverse Geocoding
 
-If enabled, our privacy-preserving reverse geocoding service provides global location information to enrich your photo and video metadata with details such as country, state, city, and category:
+If enabled, reverse geocoding enriches photo and video metadata with details such as country, state, city, and category.
+
+## Privacy Policy ##
+
+As explained in detail in our [Privacy Policy](https://photoprism.app/privacy), reverse geocoding depends on retrieving the necessary information from a backend that we provide for this purpose.
+
+The costs are currently fully covered by us for all users, including non-sponsors, and we ensure a very high level of privacy and confidentiality:
 
 - API requests are not logged permanently.
-- Location data is cached so that it can be reused for subsequent requests from you or other users.
 - Our API approximates the coordinates and encodes them with a [fuzzy S2 cell ID](https://s2geometry.io/resources/s2cell_statistics.html) that does not include the house number or any other data identifying a specific residential address, except possibly in very sparsely populated areas of the world. Even then, we cannot trace the request back to a person, picture or point in time.
 - We may store your server's IP address and other HTTP request headers for a limited time to perform authorization checks, prevent abuse, and implement rate limits. Since the traffic is encrypted, no one intercepting the server-to-server communication can see the exact request and response; only the fact that you exchanged data with our backend.
-
-To show where you've been, the user interface includes four high-resolution [interactive world maps](https://try.photoprism.app/places).
-For details, see [rendering maps](../ui/maps.md).
 
 ## Example Request ##
 
@@ -41,6 +43,12 @@ For details, see [rendering maps](../ui/maps.md).
 ## Location Data ##
 
 See: [internal/maps/location.go](https://github.com/photoprism/photoprism/blob/develop/internal/maps/location.go)
+
+## World Maps ##
+
+PhotoPrism also includes four [high-resolution world maps](https://try.photoprism.app/places) that allow you to browse photos by location, see [rendering maps](../ui/maps.md).
+
+The API keys required to use these maps are unfortunately not free for us due to the number of users we have. Those costs are one of the reasons why we encourage all users to support our mission by [signing up as a sponsor](https://photoprism.app/membership) or purchasing a [commercial license](https://photoprism.app/teams).
 
 ## Related Resources ##
 

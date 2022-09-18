@@ -1,8 +1,10 @@
+# Image Classification
+
 Image classification is performed using a [pre-trained model](https://dl.photoprism.app/tensorflow/), *NASNet Mobile 224*, that we have chosen because of its size, performance and accuracy. To get a basic understanding of how this works, you can read [Image Classification using Deep Neural Networks](https://medium.com/@tifa2up/image-classification-using-deep-neural-networks-a-beginner-friendly-approach-using-tensorflow-94b0a090ccd4).
 
 In addition, we manually matched the model classification with the [labels](https://github.com/photoprism/photoprism/blob/develop/internal/classify/rules.yml) you see in our UI:
 
-```
+```yaml
 cat:
   label: cat
   threshold: 0.3

@@ -147,14 +147,15 @@ nav:
       - Thumbnails: developer-guide/media/thumbnails.md
       - Samples: developer-guide/media/samples.md
     - Media Metadata:
-      - Image Classification: developer-guide/metadata/classification.md
+      - Classification: developer-guide/metadata/classification.md
       - Face Recognition: developer-guide/metadata/face-recognition.md
-      - Reverse Geocoding: developer-guide/metadata/geocoding.md
+      - Geocoding: developer-guide/metadata/geocoding.md
       - Color Detection: developer-guide/metadata/colors.md
-      - Adobe XMP: developer-guide/metadata/xmp.md
-      - Exif Info:
+      - Orientation: developer-guide/metadata/orientation.md
+      - Exif Data:
         - Extraction: developer-guide/metadata/exif/index.md
         - Editing: developer-guide/metadata/exif/edit.md
+      - Adobe XMP: developer-guide/metadata/xmp.md
     - Web User Interface:
       - Introduction: developer-guide/ui/introduction.md
       - Screenshots: developer-guide/ui/screenshots.md

@@ -1,8 +1,8 @@
-HEIF is a new image file format employing HEVC (h.265) image coding for the best compression ratios currently possible. Newer iPhones use it for internal photo storage. It is supported on iOS 11 and macOS High Sierra and later.
+# Image Orientation
 
-## Testing Conversion and Orientation
+## Using Exiftool
 
-Let's say you have Docker installed and want to test HEIF image conversion and orientation with Debian 12 "Bookworm", you can simply run this command to open a terminal:
+Assuming you have Docker installed and want to run `exiftool` with Debian 12 "Bookworm", you can simply run this command to open a terminal:
 
 ```bash
 docker run --rm -v ${PWD}:/test -w /test -ti debian:bookworm bash
@@ -16,19 +16,11 @@ The available Ubuntu, Debian and PhotoPrism images can be found on Docker Hub:
 - https://hub.docker.com/_/debian
 - https://hub.docker.com/r/photoprism/photoprism/tags
 
-Now install the packages you want to test via `apt`:
+Now install `exiftool` and any other packages you need, e.g. `libheif-examples` to convert HEIF images to JPEG, via `apt`:
 
 ```bash
 apt update
-apt install -y libheif-examples exiftool
-```
-
-Finally, run the `heif-convert` command (`-q 92` is optional and determines the JPEG quality/compression):
-
-```
-root@1ad9fb887a4f:/test# heif-convert -q 92 IMG_8437.HEIC IMG_8437.HEIC.jpg
-File contains 1 image
-Written to IMG_8437.HEIC.jpg
+apt install -y exiftool libheif-examples
 ```
 
 To view the image metadata, run `exiftool -n <filename>` and optionally use grep to filter the output:
@@ -55,7 +47,7 @@ Rotation                        : 270
 - `-j` will format the output as JSON
 - `-g` groups the output by metadata source
 
-## Exif Orientation
+## Exif Values
 
 The Exif orientation values are numbered from 1 to 8:
 
@@ -68,11 +60,4 @@ The Exif orientation values are numbered from 1 to 8:
 7. = 270 degrees: image has been flipped back-to-front and is on its far side.
 8. = 270 degrees, mirrored: image is on its far side.
 
-## External Resources ##
-
-- https://www.idownloadblog.com/2017/10/18/how-to-convert-heif-to-jpeg-imazing-heic-converter/ - How to convert HEIF images to JPEGs with iMazing HEIC Converter
-- https://github.com/strukturag/libheif - libheif is a ISO/IEC 23008-12:2017 HEIF file format decoder and encoder (C++)
-- https://github.com/nokiatech/heif - Reader/Writer Engine is an implementation of the HEIF standard to demonstrate its powerful features and capabilities (C++)
-- https://github.com/monostream/tifig - A fast HEIF image converter aimed at thumbnailing
-- https://github.com/perkeep/perkeep/issues/969 - HEIC/HEVC support in Perkeep
-- https://github.com/jdeng/goheif/ - A decoder/converter for HEIC based on libde265 (CGO)
+See also [sirv.com/help/articles/rotate-photos-to-be-upright/](https://sirv.com/help/articles/rotate-photos-to-be-upright/).

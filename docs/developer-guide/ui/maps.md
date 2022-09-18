@@ -1,12 +1,11 @@
 # Rendering Interactive Maps in the UI
 
-PhotoPrism includes four [high-resolution world maps](https://try.photoprism.app/places) that allow you to browse photos by location, see [rendering maps](../ui/maps.md).
-
-The API keys required to use these maps are unfortunately not free for us due to the number of users we have. Those costs are one of the reasons why we encourage all users to support our mission by [signing up as a sponsor](https://photoprism.app/membership) or purchasing a [commercial license](https://photoprism.app/teams).
+PhotoPrism includes four [high-resolution world maps](https://try.photoprism.app/places) that allow you to browse photos by location.
+Visit [try.photoprism.app/places](https://try.photoprism.app/places) to try them on our demo.
 
 ![Places UI Example](https://dl.photoprism.app/img/ui/desktop-places-chicago-1000px.jpg)
 
-Visit [try.photoprism.app/places](https://try.photoprism.app/places) to try our demo.
+The API keys required to use these maps are unfortunately not free for us due to the number of users we have, see [FAQ](../faq.md).
 
 ## Mapbox/MapLibre GL JS ##
 

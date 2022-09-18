@@ -24,6 +24,7 @@ What's new?
 - Albums: [Background worker no longer creates a full backup on every run](https://github.com/photoprism/photoprism/issues/2705)
 - Index: [Delayed RAW file format check to improve performance](https://github.com/photoprism/photoprism/issues/2702)
 - Import: [Related original names are indexed in addition to the main filename](https://github.com/photoprism/photoprism/pull/2623)
+- Config: [Increased default resolution limit from 100 to 150 MP](https://github.com/photoprism/photoprism/discussions/2677)
 - SQLite: [Preset 5s busy timeout to avoid locking errors when indexing](https://github.com/photoprism/photoprism/issues/2707)
 - Docker: [Now based on Ubuntu 22.04 LTS (Jammy Jellyfish) by default](https://github.com/photoprism/photoprism/issues/2178)
 - Build: [Go has been upgraded to v1.19.1, which includes security fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.19.1+label%3ACherryPickApproved)

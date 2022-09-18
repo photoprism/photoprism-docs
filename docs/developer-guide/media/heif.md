@@ -16,7 +16,7 @@ The available Ubuntu, Debian and PhotoPrism images can be found on Docker Hub:
 - https://hub.docker.com/_/debian
 - https://hub.docker.com/r/photoprism/photoprism/tags
 
-Now install the packages you want to test via `apt`:
+Now install `exiftool` and `libheif-examples` (includes the `heif-convert` command) via `apt`:
 
 ```bash
 apt update

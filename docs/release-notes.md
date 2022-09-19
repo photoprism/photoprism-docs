@@ -8,7 +8,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 220918-86d7bfdb9</span>
+<span class="build">Build 220919-cc8bab446</span>
 
 In order to improve security and compatibility, the default Docker image of our upcoming release will be based on Ubuntu 22.04 LTS (Jammy Jellyfish) instead of Debian 12 (Bookworm).
 You will still be able to choose a different Linux distribution by changing the [image tag](https://hub.docker.com/r/photoprism/photoprism/tags) in your local [service configuration](https://dl.photoprism.app/docker/docker-compose.yml). Thanks a lot to all who [contributed](https://docs.photoprism.app/developer-guide/)!
@@ -24,11 +24,12 @@ What's new?
 - Albums: [Background worker no longer creates a full backup on every run](https://github.com/photoprism/photoprism/issues/2705)
 - Index: [Delayed RAW file format check to improve performance](https://github.com/photoprism/photoprism/issues/2702)
 - Import: [Related original names are indexed in addition to the main filename](https://github.com/photoprism/photoprism/pull/2623)
+- Settings: [Disabled Sync tab in Public Mode as WebDAV cannot be used](https://github.com/photoprism/photoprism/discussions/2468)
 - Config: [Increased default resolution limit from 100 to 150 MP](https://github.com/photoprism/photoprism/discussions/2677)
 - SQLite: [Preset 5s busy timeout to avoid locking errors when indexing](https://github.com/photoprism/photoprism/issues/2707)
 - Docker: [Now based on Ubuntu 22.04 LTS (Jammy Jellyfish) by default](https://github.com/photoprism/photoprism/issues/2178)
 - Build: [Go has been upgraded to v1.19.1, which includes security fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.19.1+label%3ACherryPickApproved)
-- Translations: [Updated Finnish](https://github.com/photoprism/photoprism/pull/2712/files)
+- Translations: [Updated Finnish](https://github.com/photoprism/photoprism/pull/2712/files) and [Chinese](https://github.com/photoprism/photoprism/commit/6d435cab9e23c9c64fe418dafb26e0ac41970175)
 
 ### September 1, 2022 ###
 <span class="build">Build 220901-f493607b0</span>

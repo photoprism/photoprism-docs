@@ -2,6 +2,9 @@
 
 This page describes how PhotoPrism can sync files *from* an external storage system (like ownCloud) via WebDAV.
 
+!!! tldr ""
+    Since they are not safe to use without authentication, these settings are not available when running in [public mode](../../getting-started/config-options.md#authentication).
+
 !!! note ""
     PhotoPrism can also serve/share files via WebDAV to be browsed on macOS or Windows.
     See [instructions](/user-guide/sync/webdav/).

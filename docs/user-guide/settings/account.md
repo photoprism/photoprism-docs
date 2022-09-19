@@ -1,5 +1,8 @@
 # Account Settings #
 
+!!! tldr ""
+    Since they are not needed, these settings are not available when running in [public mode](../../getting-started/config-options.md#authentication).
+
 ## Change Password ##
 
 1. Click *Settings*

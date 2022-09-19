@@ -4,8 +4,7 @@ System [config options](../../getting-started/config-options.md) such as the ima
 on the advanced settings page. You can also disable specific features and enable the debug or read-only mode.
 
 !!! tldr ""
-    For security reasons, the advanced settings page is disabled and hidden when running in [public mode](../../getting-started/config-options.md#authentication). Changing [config options](../../getting-started/config-options.md)
-    remains possible directly in the service configuration, via config file, and with command parameters.
+    Since they are not safe to use without authentication, these settings are not available when running in [public mode](../../getting-started/config-options.md#authentication). Changing [config options](../../getting-started/config-options.md) is still possible via configuration files and with command parameters.
 
 !!! note ""
     Changing advanced settings always **requires a restart** to take effect. Selecting a different thumbnail

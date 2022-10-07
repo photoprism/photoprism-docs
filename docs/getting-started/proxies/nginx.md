@@ -11,7 +11,7 @@ This [tutorial](https://www.serverlab.ca/tutorials/linux/web-servers-linux/how-t
       server {
         listen 80 ssl;
         listen [::]:80 ssl;
-        server_name example.com
+        server_name example.com;
         client_max_body_size 500M;
     
         # With SSL via Let's Encrypt

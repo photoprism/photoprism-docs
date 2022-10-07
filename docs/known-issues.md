@@ -29,6 +29,9 @@ Symbolic [links to files and directories](https://github.com/photoprism/photopri
 
 ### Session Invalidation
 
+!!! info ""
+    Session management has been improved in our development version to address this issue.
+
 User authentication sessions expire automatically after 7 days. In some cases, you may want to ensure that all sessions expire immediately to require re-login, for example, after a password change if the previously used password is known to people who should no longer be able to access your instance:
 
 - [Security: Changing password doesn't invalidate existing auth tokens #1935](https://github.com/photoprism/photoprism/issues/1935)

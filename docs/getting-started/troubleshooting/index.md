@@ -159,9 +159,9 @@ In case the application logs don't contain anything helpful:
 
 *Depending on the cause of the problem, you may need to perform a full rescan once the issue is resolved.*
 
-#### ZIP Files ####
+#### Zip Archives ####
 
-If you're trying to download multiple photos and notice that some are missing from the resulting zip archive, or you get an error message saying "No files available for downloading", your index might be incomplete or outdated (e.g. after an update of PhotoPrism). A full rescan of your library should fix this.
+When you try to download multiple pictures and find that some are missing from the resulting zip archive, or you get the error message "No files available for download," your index may be incomplete or out of date (for example, after updating PhotoPrism). A complete rescan of your library may solve the problem.
 
 ### Wrong Search Results ###
 

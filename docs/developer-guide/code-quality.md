@@ -115,7 +115,7 @@ including `gofmt`, `go vet`, `go lint` and `gocyclo`. If you find this helpful a
 [![Code Quality](https://goreportcard.com/badge/github.com/photoprism/photoprism)][goreport]
 
 !!! example ""
-    Use reports for inspiration when you need some, keeping in mind that not every issue reported needs to be resolved immediately.
+    Take inspiration from quality reports, but keep in mind that not every reported issue must be fixed immediately.
 
 ## Security Best Practices ##
 

@@ -370,38 +370,45 @@ for further details.
 
 ### How can I mount network shares with Docker?
 
-You can mount remote folders that you can access on your host if they have already been mounted there,
-using your operating system's standard tools and methods. This requires no changes compared to specifying
-any other path or drive on your host.
+Shared folders that have already been mounted on your host can be mounted like any local drive or directory.
+Alternatively, you can mount network storage with [Docker Compose](https://docs.docker.com/compose/compose-file/compose-file-v3/#driver_opts).
+Please never store database files on an unreliable device such as a USB stick, SD card, or network drive.
 
-Alternatively, you can [mount network storage using Docker Compose](https://docs.docker.com/compose/compose-file/compose-file-v3/#driver_opts). 
-Follow this `docker-compose.yml` example for NFS (Linux, Unix) shares:
+Follow this `docker-compose.yml` example to mount NFS shares from Linux servers or NAS devices:
 
 ```yaml
 services:
   photoprism:
     # ...
     volumes:
-      # Map originals folder to NFS:
-      - "photoprism-originals:/photoprism/originals"     
+      # Map originals to the volume below:
+      - "originals:/photoprism/originals"     
 
 volumes:
-  photoprism-originals:
-    driver: local
+  originals:
     driver_opts:
-      type: nfs
-      # The IP of your NAS:
-      o: "username=user,password=secret,addr=1.2.3.4,soft,rw"
-      # Share path on your NAS:
-      device: ":/mnt/photos" 
+      type: "nfs"
+      # Authentication and other mounting options:
+      o: "addr=1.2.3.4,username=user,password=secret,soft,rw,nfsvers=4"
+      # Mount this path:
+      device: ":/mnt/example"
 ```
+
+`device` should contain the path to the share on the NFS server, note the `:` at the beginning. In the above example, the share can be mounted as the named volume `originals` in your `docker-compose.yml`.
+
+Driver-specific options can be set after the server address in `o`, see the [nfs manual page](https://man7.org/linux/man-pages/man5/nfs.5.html). Here are some examples of commonly used options:
+
+- `nfsvers=3` or `nfsvers=4` to specify the NFS version
+- `nolock` (optional): Remote applications on the NFS server are not affected by lock files inside the Docker container (only other processes inside the container are affected by locks)
+- `timeo=n` (optional, default 600): The NFS client waits `n` tenths of a second before retrying an NFS request
+- `soft` (optional): The NFS client aborts an NFS request after `retrans=n` unsuccessful retries, otherwise it retries indefinitely
+- `retrans=n` (optional, default 2): Sets the number of retries for NFS requests, only relevant when using `soft`
 
 For mounting CIFS (Windows, Samba, SMB) network shares:
 
 ```yaml
 volumes:
-  photoprism-originals:
-    driver: local
+  originals:
     driver_opts:
       type: cifs
       o: "username=user,password=secret,rw"

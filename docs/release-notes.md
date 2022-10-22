@@ -8,7 +8,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 221020-9260c9b71</span>
+<span class="build">Build 221022-ac47a0a64</span>
 
 Due to the many new features, enhancements and bug fixes, this is one of those updates that take longer to release.
 Before you upgrade, be sure to read the full release notes. We appreciate your patience and feedback on the changes.
@@ -24,8 +24,8 @@ Breaking Changes
 What's new?
 
 - Auth: [Session and user management have been re-implemented](https://github.com/photoprism/photoprism/issues/98)
+- Auth: [API has been changed to prevent unnecessary re-logins](https://github.com/photoprism/photoprism/pull/1746)
 - Auth: [User interface routes have been prefixed with `/library`](https://github.com/photoprism/photoprism/issues/840)
-- Auth: [API response codes have been changed to prevent unnecessary re-logins](https://github.com/photoprism/photoprism/pull/1746)
 - UX: [Scroll position is restored again when navigating back](https://github.com/photoprism/photoprism/pull/2782)
 - UX: [Loading screen has been redesigned](https://github.com/photoprism/photoprism/issues/2409)
 - UX: [Improved user interface styles for RTL languages](https://github.com/photoprism/photoprism/pull/2732)

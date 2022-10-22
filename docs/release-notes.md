@@ -8,28 +8,49 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 220919-cc8bab446</span>
+<span class="build">Build 221020-9260c9b71</span>
 
-In order to improve security and compatibility, the default Docker image of our upcoming release will be based on Ubuntu 22.04 LTS (Jammy Jellyfish) instead of Debian 12 (Bookworm).
-You will still be able to choose a different Linux distribution by changing the [image tag](https://hub.docker.com/r/photoprism/photoprism/tags) in your local [service configuration](https://dl.photoprism.app/docker/docker-compose.yml). Thanks a lot to all who [contributed](https://docs.photoprism.app/developer-guide/)!
+Due to the many new features, enhancements and bug fixes, this is one of those updates that take longer to release.
+Before you upgrade, be sure to read the full release notes. We appreciate your patience and feedback on the changes.
+A special thank you to [everyone who contributed](https://docs.photoprism.app/developer-guide/)!
+
+Breaking Changes
+
+- In order to improve security and compatibility, the default Docker image is now based on Ubuntu 22.04 LTS (Jammy Jellyfish) instead of Debian 12 (Bookworm). The entrypoint script has been reworked as well to [preserve group permissions required for hardware transcoding](https://github.com/photoprism/photoprism/issues/2739).
+- Session and user management have been replaced with a completely new implementation. If you have already created additional accounts with the previously offered unofficial multi-user support, you will notice that only the main admin account is migrated automatically. We welcome feedback on the upgrade experience.
+- Sharing link visitors can now see the picture locations in the regular album view and optionally on a map after clicking the link. Based on user feedback, we may add settings to hide the locations for enhanced privacy.
+- Because of changes in the underlying database and to take advantage of new features, we recommend performing a full rescan after the upgrade.
 
 What's new?
 
-- UX: [Scroll position is restored again when navigating back](https://github.com/photoprism/photoprism/issues/2597)
+- Auth: [Session and user management have been replaced](https://github.com/photoprism/photoprism/issues/98)
+- Auth: [Prefixed user interface routes with `/library`](https://github.com/photoprism/photoprism/issues/840)
+- API [Updated response codes to prevent unnecessary re-logins](https://github.com/photoprism/photoprism/pull/1746)
+- UX: [Scroll position is restored again when navigating back](https://github.com/photoprism/photoprism/pull/2782)
+- UX: [Loading screen has been redesigned](https://github.com/photoprism/photoprism/issues/2409)
+- UX: [Improved user interface styles for RTL languages](https://github.com/photoprism/photoprism/pull/2732)
 - RAW: [Upgraded Darktable from v3.8.1 to v4.0.1 (AMD64 only)](https://github.com/photoprism/photoprism/issues/2703)
 - AVIF: [Added support for the AV1 Image File Format](https://github.com/photoprism/photoprism/issues/2706)
 - HEIF: [Added support for Sony's `.HIF` file extension](https://github.com/photoprism/photoprism/pull/2693)
-- HEIF: [Fixed rotation of images converted to JPEG on Ubuntu 22.04](https://github.com/photoprism/photoprism/issues/1064#issuecomment-1250118219)
+- HEIF: [Updated `heif-convert` tool to fix conversion problems](https://github.com/photoprism/photoprism/issues/2726)
 - Search: [Added `city:...` and `state:...` filters](https://github.com/photoprism/photoprism/pull/2670)
+- Videos: [Added VAAPI hardware video encoder support](https://github.com/photoprism/photoprism/pull/2709)
+- Videos: [Search results can be sorted by duration](https://github.com/photoprism/photoprism/issues/2620)
+- Albums: [Added breadcrumbs to navigate back on large screens](https://github.com/photoprism/photoprism/issues/1409)
 - Albums: [Background worker no longer creates a full backup on every run](https://github.com/photoprism/photoprism/issues/2705)
-- Index: [Delayed RAW file format check to improve performance](https://github.com/photoprism/photoprism/issues/2702)
+- Metadata: [Added more place names with known countries](https://github.com/photoprism/photoprism/pull/2720)
+- Index: [Delayed RAW file format check to improve performance](https://github.com/photoprism/photoprism/pull/2683)
 - Import: [Related original names are indexed in addition to the main filename](https://github.com/photoprism/photoprism/pull/2623)
 - Settings: [Sync tab is not available in public mode to increase security](https://github.com/photoprism/photoprism/discussions/2468#discussioncomment-3678435)
 - Config: [Increased default resolution limit from 100 to 150 MP](https://github.com/photoprism/photoprism/discussions/2677)
+- MariaDB: [Startup fails with an error message if an unsupported version is used](https://github.com/photoprism/photoprism/issues/2381)
 - SQLite: [Preset 5s busy timeout to avoid locking errors when indexing](https://github.com/photoprism/photoprism/issues/2707)
 - Docker: [Now based on Ubuntu 22.04 LTS (Jammy Jellyfish) by default](https://github.com/photoprism/photoprism/issues/2178)
+- Docker: [Switched from `gosu` to `setpriv` in entrypoint.sh script](https://github.com/photoprism/photoprism/pull/2730)
 - Build: [Go has been upgraded to v1.19.1, which includes security fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.19.1+label%3ACherryPickApproved)
-- Translations: [Updated Finnish](https://github.com/photoprism/photoprism/pull/2712/files) and [Chinese](https://github.com/photoprism/photoprism/commit/6d435cab9e23c9c64fe418dafb26e0ac41970175)
+- Translations: [Added Persian](https://github.com/photoprism/photoprism/pull/2767), [updated Finnish](https://github.com/photoprism/photoprism/pull/2712/files) and [Chinese](https://github.com/photoprism/photoprism/commit/6d435cab9e23c9c64fe418dafb26e0ac41970175)
+
+*Kindly note that this pre-release does not yet include support for roles other than Admin and Visitor (for link sharing), as we have to decide which roles will be part of the final release first. Please do not use this pre-release in production until we have completed all security testing.*
 
 ### September 1, 2022 ###
 <span class="build">Build 220901-f493607b0</span>

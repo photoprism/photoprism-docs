@@ -47,7 +47,7 @@ What's new?
 - SQLite: [Preset 5s busy timeout to avoid locking errors when indexing](https://github.com/photoprism/photoprism/issues/2707)
 - Docker: [Now based on Ubuntu 22.04 LTS (Jammy Jellyfish) by default](https://github.com/photoprism/photoprism/issues/2178)
 - Docker: [Switched from `gosu` to `setpriv` in entrypoint.sh script](https://github.com/photoprism/photoprism/pull/2730)
-- Build: [Go has been upgraded to v1.19.1, which includes security fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.19.1+label%3ACherryPickApproved)
+- Build: [Go has been upgraded to v1.19.2, which includes security fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.19.2)
 - Translations: [Added Persian](https://github.com/photoprism/photoprism/pull/2767), [updated Finnish](https://github.com/photoprism/photoprism/pull/2712/files) and [Chinese](https://github.com/photoprism/photoprism/commit/6d435cab9e23c9c64fe418dafb26e0ac41970175)
 
 *Kindly note that this pre-release does not yet include support for roles other than Admin and Visitor (for link sharing), as we have to decide which roles will be part of the final release first. Please do not use this pre-release in production until we have completed all security testing.*

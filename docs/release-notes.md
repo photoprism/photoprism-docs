@@ -23,9 +23,9 @@ Breaking Changes
 
 What's new?
 
-- Auth: [Session and user management have been replaced](https://github.com/photoprism/photoprism/issues/98)
-- Auth: [Prefixed user interface routes with `/library`](https://github.com/photoprism/photoprism/issues/840)
-- API [Updated response codes to prevent unnecessary re-logins](https://github.com/photoprism/photoprism/pull/1746)
+- Auth: [Session and user management have been re-implemented](https://github.com/photoprism/photoprism/issues/98)
+- Auth: [User interface routes have been prefixed with `/library`](https://github.com/photoprism/photoprism/issues/840)
+- Auth: [API response codes have been changed to prevent unnecessary re-logins](https://github.com/photoprism/photoprism/pull/1746)
 - UX: [Scroll position is restored again when navigating back](https://github.com/photoprism/photoprism/pull/2782)
 - UX: [Loading screen has been redesigned](https://github.com/photoprism/photoprism/issues/2409)
 - UX: [Improved user interface styles for RTL languages](https://github.com/photoprism/photoprism/pull/2732)

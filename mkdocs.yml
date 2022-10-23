@@ -25,6 +25,7 @@ nav:
       - Logs:  getting-started/troubleshooting/logs.md
       - Docker: getting-started/troubleshooting/docker.md
       - MariaDB: getting-started/troubleshooting/mariadb.md
+      - SQLite: getting-started/troubleshooting/sqlite.md
       - Browsers: getting-started/troubleshooting/browsers.md
       - Performance: getting-started/troubleshooting/performance.md
       - Windows: getting-started/troubleshooting/windows.md

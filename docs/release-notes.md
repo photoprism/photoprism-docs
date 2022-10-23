@@ -17,35 +17,36 @@ A special thank you to [everyone who contributed](https://docs.photoprism.app/de
 Breaking Changes
 
 - In order to improve security and compatibility, the default Docker image is now based on Ubuntu 22.04 LTS (Jammy Jellyfish) instead of Debian 12 (Bookworm). The entrypoint script has been updated to [preserve group permissions required for hardware transcoding](https://github.com/photoprism/photoprism/issues/2739).
-- Session and user management have been re-implemented. If you are upgrading from the last preview, you may need to run the "photoprism users reset" command in a terminal after the upgrade to recreate the new database tables. They are not compatible with the last preview, which is why we have stopped releasing previews until they are somewhat stable.
+- Session and user management have been re-implemented. If you are upgrading from the last preview, you may need to run the "photoprism users reset" [command in a terminal](getting-started/docker-compose.md#command-line-interface) after the upgrade to recreate the new database tables. They are not compatible with the last preview, which is why we have stopped releasing previews until they are somewhat stable.
 - Upgrading from the last stable version should work without any problems. However, if you have already created additional accounts with the previously offered unofficial multi-user support, you will notice that only the main admin account is migrated automatically. We welcome feedback on your upgrade experience.
 - Sharing link visitors can now see the picture locations in the regular album view and optionally on a map after clicking the link. Based on user feedback, we may add settings to hide the locations for enhanced privacy.
-- Because of changes in the underlying database and to take advantage of new features, we recommend performing a full rescan after the upgrade.
+- We recommend performing a full rescan after the upgrade to take advantage of new search filters and sort options. Indexing is also necessary to search HEIC, DNG, and AVIF images that were previously unsupported or had errors. In some cases with incorrectly converted HEIC files, it may also be necessary to recreate the JPEG sidecar files by running the "photoprism convert -f" [command in a terminal](getting-started/docker-compose.md#command-line-interface).
 
 What's new?
 
 - Auth: [Session and user management have been re-implemented](https://github.com/photoprism/photoprism/issues/98)
-- Auth: [API has been changed to prevent unnecessary re-logins](https://github.com/photoprism/photoprism/pull/1746)
+- Auth: [API has been improved to prevent unnecessary re-logins](https://github.com/photoprism/photoprism/pull/1746)
 - Auth: [User interface routes have been prefixed with `/library`](https://github.com/photoprism/photoprism/issues/840)
 - UX: [Scroll position is restored again when navigating back](https://github.com/photoprism/photoprism/pull/2782)
-- UX: [Loading screen has been redesigned](https://github.com/photoprism/photoprism/issues/2409)
+- UX: [Loading screen and mobile toolbar menu have been redesigned](https://github.com/photoprism/photoprism/issues/2409)
 - UX: [Improved user interface styles for RTL languages](https://github.com/photoprism/photoprism/pull/2732)
-- RAW: [Upgraded Darktable from v3.8.1 to v4.0.1 (AMD64 only)](https://github.com/photoprism/photoprism/issues/2703)
+- HEIC: [Added support for Sony's `.HIF` file extension](https://github.com/photoprism/photoprism/pull/2693)
+- HEIC: [Updated `heif-convert` tool to fix conversion problems](https://github.com/photoprism/photoprism/issues/2726)
 - AVIF: [Added support for the AV1 Image File Format](https://github.com/photoprism/photoprism/issues/2706)
-- HEIF: [Added support for Sony's `.HIF` file extension](https://github.com/photoprism/photoprism/pull/2693)
-- HEIF: [Updated `heif-convert` tool to fix conversion problems](https://github.com/photoprism/photoprism/issues/2726)
+- RAW: [Upgraded Darktable from v3.8.1 to v4.0.1 (AMD64 only)](https://github.com/photoprism/photoprism/issues/2703)
+- ProRAW: [JPEGs embedded in `.DNG` files can be searched and viewed](https://github.com/photoprism/photoprism/issues/2291#issuecomment-1271704046)
 - Search: [Added `city:...` and `state:...` filters](https://github.com/photoprism/photoprism/pull/2670)
-- Videos: [Added VAAPI hardware video encoder support](https://github.com/photoprism/photoprism/pull/2709)
 - Videos: [Search results can be sorted by duration](https://github.com/photoprism/photoprism/issues/2620)
+- Videos: [Added VAAPI hardware AVC encoder support](https://github.com/photoprism/photoprism/pull/2709)
 - Albums: [Added breadcrumbs to navigate back on large screens](https://github.com/photoprism/photoprism/issues/1409)
-- Albums: [Background worker no longer creates a full backup on every run](https://github.com/photoprism/photoprism/issues/2705)
-- Metadata: [Added more place names with known countries](https://github.com/photoprism/photoprism/pull/2720)
-- Index: [Delayed RAW file format check to improve performance](https://github.com/photoprism/photoprism/pull/2683)
+- Index: [Delayed RAW file format check to improve indexing performance](https://github.com/photoprism/photoprism/pull/2683)
 - Import: [Related original names are indexed in addition to the main filename](https://github.com/photoprism/photoprism/pull/2623)
 - Settings: [Sync tab is not available in public mode to increase security](https://github.com/photoprism/photoprism/discussions/2468#discussioncomment-3678435)
+- Backups: [Worker no longer recreates all album YAML files on every run](https://github.com/photoprism/photoprism/issues/2705)
+- Metadata: [Added more place names with known countries](https://github.com/photoprism/photoprism/pull/2720)
 - Config: [Increased default resolution limit from 100 to 150 MP](https://github.com/photoprism/photoprism/discussions/2677)
+- SQLite: [Added busy timeout preset to reduce locking errors when indexing](https://github.com/photoprism/photoprism/issues/2707)
 - MariaDB: [Startup fails with an error message if an unsupported version is used](https://github.com/photoprism/photoprism/issues/2381)
-- SQLite: [Preset 5s busy timeout to avoid locking errors when indexing](https://github.com/photoprism/photoprism/issues/2707)
 - Docker: [Default image is based on Ubuntu 22.04 LTS (Jammy Jellyfish)](https://github.com/photoprism/photoprism/issues/2178)
 - Docker: [Switched from `gosu` to `setpriv` in entrypoint.sh script](https://github.com/photoprism/photoprism/pull/2730)
 - Build: [Go has been upgraded to v1.19.2, which includes security fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.19.2)

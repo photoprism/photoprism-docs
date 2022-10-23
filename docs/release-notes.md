@@ -17,7 +17,8 @@ A special thank you to [everyone who contributed](https://docs.photoprism.app/de
 Breaking Changes
 
 - In order to improve security and compatibility, the default Docker image is now based on Ubuntu 22.04 LTS (Jammy Jellyfish) instead of Debian 12 (Bookworm). The entrypoint script has been updated to [preserve group permissions required for hardware transcoding](https://github.com/photoprism/photoprism/issues/2739).
-- Session and user management were replaced with a new implementation. If you have already created additional accounts with the previously offered unofficial multi-user support, you will notice that only the main admin account is migrated automatically. We welcome feedback on the upgrade experience.
+- Session and user management have been re-implemented. If you are upgrading from the last preview, you may need to run the "photoprism users reset" command in a terminal after the upgrade to recreate the new database tables. They are not compatible with the last preview, which is why we have stopped releasing previews until they are somewhat stable.
+- Upgrading from the last stable version should work without any problems. However, if you have already created additional accounts with the previously offered unofficial multi-user support, you will notice that only the main admin account is migrated automatically. We welcome feedback on your upgrade experience.
 - Sharing link visitors can now see the picture locations in the regular album view and optionally on a map after clicking the link. Based on user feedback, we may add settings to hide the locations for enhanced privacy.
 - Because of changes in the underlying database and to take advantage of new features, we recommend performing a full rescan after the upgrade.
 

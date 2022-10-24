@@ -8,7 +8,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 221024-ac84dce3a</span>
+<span class="build">Build 221024-22b7da8e3</span>
 
 Due to the many new features, enhancements and bug fixes, this is one of those updates that take longer to release.
 Before you upgrade, be sure to read the full release notes. We appreciate your patience and feedback on the changes.

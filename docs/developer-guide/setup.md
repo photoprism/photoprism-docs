@@ -22,7 +22,7 @@ cd photoprism
     
 ### Step 2: Launch Your Local Development Environment
 
-Pull the latest Docker images and then launch the pre-configured build environment we provide to have an isolated development container pre-installed with all the tools you might need, including the latest version of Go, NodeJS, and NPM:[^2]
+Pull the latest Docker images and then launch the pre-configured build environment we provide to have an isolated development container pre-installed with all the tools you might need, including the latest versions of Go, NodeJS, and NPM:[^2]
 
 ```
 make docker-build

@@ -45,7 +45,7 @@ What's new?
 - Backups: [Worker no longer recreates all album YAML files on every run](https://github.com/photoprism/photoprism/issues/2705)
 - Metadata: [Added more place names with known countries](https://github.com/photoprism/photoprism/pull/2720)
 - Config: [Increased default resolution limit from 100 to 150 MP](https://github.com/photoprism/photoprism/discussions/2677)
-- Config: [Renamed "imprint" option to "legal-info"](https://github.com/photoprism/photoprism/issues/2797)
+- Config: [`imprint` info text option has been renamed to `legal-info`](https://github.com/photoprism/photoprism/issues/2797)
 - SQLite: [Added busy timeout preset to reduce locking errors when indexing](https://github.com/photoprism/photoprism/issues/2707)
 - MariaDB: [Startup fails with an error message if an unsupported version is used](https://github.com/photoprism/photoprism/issues/2381)
 - Docker: [Default image is based on Ubuntu 22.04 LTS (Jammy Jellyfish)](https://github.com/photoprism/photoprism/issues/2178)

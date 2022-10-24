@@ -129,5 +129,5 @@ not supported or not allowed in your environment:
 * [Fedora 32](setup-fedora.md)
 -->
 
-[^1]: Instead of using Docker, you can also set up your own development environment, for example, based on the installation steps show the the [Dockerfiles](https://github.com/photoprism/photoprism/tree/develop/docker) we provide. You need at least Go 1.19, TensorFlow for C, Make, NPM 8 and MariaDB 10.9. Note that test results are unreliable without Docker. Therefore, this method is not suitable for contributors and we cannot provide support if something does not work as expected.
-[^2]: Docker uses human-readable [Dockerfiles](https://github.com/photoprism/photoprism/tree/develop/docker) that contain all the commands a user could invoke in a terminal to assemble a complete application image.  
+[^1]: Instead of using Docker, you can also set up your own build environment, for example, based on the steps documented in the [Dockerfiles](https://github.com/photoprism/photoprism/tree/develop/docker) we provide. You need at least Go 1.19, TensorFlow for C, Make, NPM 8 and MariaDB 10.9. Note that test results are unreliable without Docker. As a result, this method is not suitable for contributors and we cannot provide support if something does not work as expected.
+[^2]: Docker uses human-readable [Dockerfiles](https://github.com/photoprism/photoprism/tree/develop/docker) that contain all the commands a user would invoke in a terminal to assemble a complete application image.  

@@ -46,7 +46,7 @@ See: [internal/maps/location.go](https://github.com/photoprism/photoprism/blob/d
 
 ## World Maps ##
 
-PhotoPrism also includes four [high-resolution world maps](https://try.photoprism.app/places) that allow you to browse photos by location, see [Web User Interface > Interactice Maps](../ui/maps.md). Visit [try.photoprism.app/places](https://try.photoprism.app/places) to try them on our demo.
+PhotoPrism also includes four [high-resolution world maps](https://try.photoprism.app/library/places) that allow you to browse photos by location, see [Web User Interface > Interactice Maps](../ui/maps.md). Visit [try.photoprism.app/library/places](https://try.photoprism.app/library/places) to try them on our demo.
 
 ## Related Resources ##
 

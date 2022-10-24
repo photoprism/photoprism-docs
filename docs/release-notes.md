@@ -2,7 +2,7 @@
 
 !!! example ""
     **Back us on [Patreon](https://link.photoprism.app/patreon) or [GitHub Sponsors](https://link.photoprism.app/sponsor).**
-    Your continued support [helps us provide regular updates](https://photoprism.app/membership) and services like [world maps](https://try.photoprism.app/places). Thank you! 💜
+    Your continued support [helps us provide regular updates](https://photoprism.app/membership) and services like [world maps](https://try.photoprism.app/library/places). Thank you! 💜
 
 !!! tldr ""
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
@@ -151,7 +151,7 @@ This update includes translations that were recently contributed via [translate.
 ### May 27, 2022 ###
 <span class="build">Build 220527-005770ca</span>
 
-This update improves navigation fonts and [mobile submenu colors](https://dl.photoprism.app/img/ui/mobile-submenu-light-797x567.png) for light themes. We are also working to establish [PhotoPrism+](https://photoprism.app/membership) as the name for our community membership and associated benefits. For this, sponsorship [information in the app](https://demo.photoprism.app/about), [on our website](https://photoprism.app/membership), on [GitHub Sponsors](https://link.photoprism.app/sponsor) and [Patreon](https://link.photoprism.app/patreon) is gradually being updated.
+This update improves navigation fonts and [mobile submenu colors](https://dl.photoprism.app/img/ui/mobile-submenu-light-797x567.png) for light themes. We are also working to establish [PhotoPrism+](https://photoprism.app/membership) as the name for our community membership and associated benefits. For this, sponsorship [information in the app](https://try.photoprism.app/library/about), [on our website](https://photoprism.app/membership), on [GitHub Sponsors](https://link.photoprism.app/sponsor) and [Patreon](https://link.photoprism.app/patreon) is gradually being updated.
 
 - UX: [Fixed light theme colors of mobile navigation submenu](https://github.com/photoprism/photoprism/issues/2359)
 - UX: [Splash screen has been updated and no longer depends on admin theme](https://github.com/photoprism/photoprism/issues/2360)
@@ -263,7 +263,7 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
 - Videos: [Excluded streaming from gzip compression](https://github.com/photoprism/photoprism/commit/4d8292a9c3e357dc8d956a13ee9d6faa34b69119)
 - Videos: [Fixed Content-Type header and streaming in Safari](https://github.com/photoprism/photoprism/issues/1648)
 - Folders: [Fixed search query string substitutions and sanitation](https://github.com/photoprism/photoprism/issues/1930)
-- UI: [Updated information and links in *Settings* > *About*](https://try.photoprism.app/about)
+- UI: [Updated information and links in *Settings* > *About*](https://try.photoprism.app/library/about)
 - UI: [Improved bootstrap template rendering performance](https://github.com/photoprism/photoprism/commit/03457bdb755b7cfb088a72f564119fb8e7a46ec2)
 
 ### January 7, 2022 ###
@@ -358,7 +358,7 @@ in particular for UTC. The Docker base image has been upgraded to Ubuntu 21.10, 
 Darktable 3.6 among other updated dependencies. 
 
 - UX: Redesigned [splash screen](https://github.com/photoprism/photoprism/commit/293fa0ca784ae19998cc8ff3459883a137fff4c2) based on theme colors
-- Places: [Viewer loads faster and sorts photos by distance instead of date](https://try.photoprism.app/places)
+- Places: [Viewer loads faster and sorts photos by distance instead of date](https://try.photoprism.app/library/places)
 - Places: [Less frequent estimates to reduce background activity](https://github.com/photoprism/photoprism/issues/1736)
 - Places: [Normalized names of states, oceans, and lakes](https://github.com/photoprism/photoprism/issues/1664)
 - Places: [Updated location data from OpenStreetMap](https://www.openstreetmap.org/)

@@ -47,7 +47,7 @@ Before starting to build, make sure all dependencies, such as NPM packages and T
 make dep
 ```
 
-Congratulations! You can now build the frontend assets (JS), compile the backend (Go) and then run a custom PhotoPrism binary in your local development environment:
+**Congratulations!** You can now build the frontend assets (JS), compile the backend binary (Go) and then run a custom PhotoPrism version in your local environment:
 
 ```bash
 make build-js

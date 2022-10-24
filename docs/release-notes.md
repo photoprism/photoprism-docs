@@ -31,7 +31,7 @@ What's new?
 - UX: [Loading screen and mobile toolbar menu have been redesigned](https://github.com/photoprism/photoprism/issues/2409)
 - UX: [Improved user interface styles for RTL languages](https://github.com/photoprism/photoprism/pull/2732)
 - Search: [Added `city:...` and `state:...` to filter by location details](https://github.com/photoprism/photoprism/pull/2670)
-- Search: [Results can now also be sorted by file size and video duration](https://github.com/photoprism/photoprism/issues/2620)
+- Search: [Results can now also be sorted by "File Size" and "Video Duration"](https://github.com/photoprism/photoprism/issues/2620)
 - Albums: [Added breadcrumbs to navigate back on large screens](https://github.com/photoprism/photoprism/issues/1409)
 - HEIC: [Added support for Sony's `.HIF` file extension](https://github.com/photoprism/photoprism/pull/2693)
 - HEIC: [Updated `heif-convert` tool to fix conversion problems](https://github.com/photoprism/photoprism/issues/2726)

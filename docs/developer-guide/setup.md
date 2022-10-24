@@ -4,27 +4,29 @@
 
 Before running any commands, please make sure you have [Git](https://git-scm.com/downloads), [Make](https://www.gnu.org/software/make/), [Docker](https://store.docker.com/search?q=docker&type=edition&offering=community), and Docker Compose installed on your system. These are available for Mac, Linux, and Windows.[^1]
 
-Now open a terminal, change to the path where you usually keep your development projects, and run this command to download the project from GitHub:
+If you are working with Windows, you must also disable "autocrlf" in Git to avoid errors:
 
+```bash
+git config --global core.autocrlf false
 ```
+
+Now change to the directory where you usually keep your development projects, and run this command to download the project from GitHub:
+
+```bash
 git clone git@github.com:photoprism/photoprism.git
 ```
 
 Once all code has been downloaded, change to the project directory which should now exist:
 
-```
+```bash
 cd photoprism
 ```
 
-!!! example ""
-    If you are working with Windows, make sure you disable auto CR LF. Otherwise, the build will not work.
-    `git config --global core.autocrlf false`
-    
 ### Step 2: Launch Your Local Development Environment
 
 Pull the latest Docker images and then launch the pre-configured build environment we provide to have an isolated development container pre-installed with all the tools you might need, including the latest versions of Go, NodeJS, and NPM:[^2]
 
-```
+```bash
 make docker-build
 docker-compose up
 ```
@@ -35,19 +37,19 @@ docker-compose up
 
 Open a terminal to run commands directly in your local development environment:
 
-```
+```bash
 make terminal
 ```
 
 Before starting to build, make sure all dependencies, such as NPM packages and TensorFlow models, are installed:
 
-```
+```bash
 make dep
 ```
 
 Congratulations! You can now build the frontend assets (JS), compile the backend (Go) and then run a custom PhotoPrism binary in your local development environment:
 
-```
+```bash
 make build-js
 make build-go
 ./photoprism start
@@ -60,7 +62,7 @@ After PhotoPrism has been started as shown above, the user interface can be open
 
 In the build environment, the default login is `admin` with the password `photoprism`. You can disable it with the `--public` command flag:
 
-```
+```bash
 ./photoprism --public start
 ```
 
@@ -77,20 +79,20 @@ The integrated web server not only provides the backend API, but is also used to
 automatically rebuilt (updated) when you change a file. To do this, run the following command in a terminal, either
 inside or outside the container (outside is faster if your host is not running Linux):
 
-```
+```bash
 make watch-js
 ```
 
 Alternatively, you can change to the `frontend` directory and run NPM directly:
 
-```
-cd fronend
+```bash
+cd frontend
 npm run watch
 ```
 
 To update the frontend dependencies, also change to the `frontend` directory and run:
 
-```
+```bash
 npm update
 ```
 

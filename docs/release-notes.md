@@ -8,7 +8,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 221024-3cfea0f02</span>
+<span class="build">Build 221024-ac84dce3a</span>
 
 Due to the many new features, enhancements and bug fixes, this is one of those updates that take longer to release.
 Before you upgrade, be sure to read the full release notes. We appreciate your patience and feedback on the changes.
@@ -31,7 +31,7 @@ What's new?
 - UX: [Loading screen and mobile toolbar menu have been redesigned](https://github.com/photoprism/photoprism/issues/2409)
 - UX: [Improved user interface styles for RTL languages](https://github.com/photoprism/photoprism/pull/2732)
 - Search: [Added `city:...` and `state:...` filters](https://github.com/photoprism/photoprism/pull/2670)
-- Search: [Results can be sorted by video duration](https://github.com/photoprism/photoprism/issues/2620)
+- Search: [Results can be sorted by "File Size" and "Video Duration"](https://github.com/photoprism/photoprism/issues/2620)
 - Albums: [Added breadcrumbs to navigate back on large screens](https://github.com/photoprism/photoprism/issues/1409)
 - HEIC: [Added support for Sony's `.HIF` file extension](https://github.com/photoprism/photoprism/pull/2693)
 - HEIC: [Updated `heif-convert` tool to fix conversion problems](https://github.com/photoprism/photoprism/issues/2726)
@@ -45,6 +45,7 @@ What's new?
 - Backups: [Worker no longer recreates all album YAML files on every run](https://github.com/photoprism/photoprism/issues/2705)
 - Metadata: [Added more place names with known countries](https://github.com/photoprism/photoprism/pull/2720)
 - Config: [Increased default resolution limit from 100 to 150 MP](https://github.com/photoprism/photoprism/discussions/2677)
+- Config: [Renamed "imprint" option to "legal-info"](https://github.com/photoprism/photoprism/issues/2797)
 - SQLite: [Added busy timeout preset to reduce locking errors when indexing](https://github.com/photoprism/photoprism/issues/2707)
 - MariaDB: [Startup fails with an error message if an unsupported version is used](https://github.com/photoprism/photoprism/issues/2381)
 - Docker: [Default image is based on Ubuntu 22.04 LTS (Jammy Jellyfish)](https://github.com/photoprism/photoprism/issues/2178)

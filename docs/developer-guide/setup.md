@@ -53,20 +53,23 @@ make build-go
 ./photoprism start
 ```
 
-The user interface can be opened in a browser by navigating to... 
+After PhotoPrism has been started as shown above, the user interface can be opened in a web browser by navigating to one of these URLs:
 
-- [http://localhost:2342/](http://localhost:2342/) (HTTP)
-- or [https://photoprism.localssl.dev/](https://photoprism.localssl.dev/) (HTTPS)
- 
-Authentication is disabled by default in development environments. Use the `--public=false` parameter to enable it.
+- [http://localhost:2342/](http://photoprism.me:2342/) (HTTP)
+- [https://localssl.dev/](https://localssl.dev/) (HTTPS)
 
-Default settings can be found in the `docker-compose.yml` file in the root directory of the project. Keep them unchanged
-[when running tests](tests.md), otherwise the tests may fail for others, even if they [pass in your local environment](code-quality.md#code-that-cannot-be-tested-is-flawed).
+In the build environment, the default login is `admin` with the password `photoprism`. You can disable it with the `--public` command flag:
+
+```
+./photoprism --public start
+```
+
+You can find the default settings in [the docker-compose.yml file](https://github.com/photoprism/photoprism/blob/develop/docker-compose.yml) located in the root of the project. Keep them when [you run tests](tests.md). Otherwise, the tests may fail for others, even if they [succeed in your local environment](code-quality.md#test-automation-guidelines).
 
 !!! example ""
     You can find a list of all `make` targets in the [Makefile](https://github.com/photoprism/photoprism/blob/develop/Makefile).
-    For example, `make test` will run frontend and backend unit tests. Bad filesystem permissions can be fixed by
-    running `make fix-permissions` in a container terminal.
+    For example, `make test` will run frontend and backend unit tests. Wrong filesystem permissions can be fixed by
+    running `make fix-permissions` in a terminal.
 
 ### Optional: Build the Frontend in Watch Mode
 

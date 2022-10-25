@@ -25,7 +25,9 @@ If you set multiple filters, only pictures that meet all filter criteria will be
 
 In addition, these and many other filters can be entered into the toolbar search box as follows:
 
-    `label:cat color:green type:live`
+```
+label:cat color:green type:live
+```
 
 A complete overview of the [available search filters](#filter-reference) can be found below.
 

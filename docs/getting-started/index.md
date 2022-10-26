@@ -36,7 +36,8 @@ memory/swap limit is set, this can cause unexpected restarts, for example, when 
 needs more memory to process large files. High-resolution panoramic images may require additional swap space
 and/or physical memory above the recommended minimum.
 
-We take no responsibility for instability or performance problems if your device does not meet the requirements.
+!!! tldr ""
+    We take no responsibility for instability or performance problems if your device does not meet the requirements.
 
 #### Databases ####
 
@@ -53,13 +54,11 @@ Be aware that not all [video and audio formats](https://caniuse.com/?search=vide
 
 #### World Maps ####
 
-As explained in detail in our [Privacy Policy](https://photoprism.app/privacy), reverse geocoding and interactive world maps depend on retrieving the necessary information [from us](https://photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality.[^4]
+As explained in detail in our [Privacy Policy](https://photoprism.app/privacy#section-7), reverse geocoding and interactive world maps depend on retrieving the necessary information [from us](https://photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality.[^4]
 
 Your use of these services is [fully covered by us](faq.md#are-the-keys-for-using-interactive-world-maps-provided-free-of-charge). Depending on your usage, this can save you much more than the cost of a [PhotoPrism+ Membership](https://photoprism.app/membership), since other providers generally charge usage-based fees and may also not allow you to cache the data they provide, compromising your privacy with unnecessary requests.
 
 In order to use the maps and view location details in PhotoPrism, you must allow requests to these API endpoints if you have a firewall installed and make sure your Internet connection is working.
-
-[View GDPR Compliance Statement ›](https://photoprism.app/privacy/gdpr)
 
 #### HTTPS ####
 

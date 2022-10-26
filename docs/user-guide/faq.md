@@ -12,12 +12,14 @@
 
 ??? question "Does your software depend on any external services?"
 
-    As explained in detail in our [Privacy Policy](https://photoprism.app/privacy), reverse geocoding and interactive world maps depend on retrieving the necessary information from [us](https://photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality. Please make sure that you allow requests to these API endpoints if you have a firewall installed, and verify that your Internet connection is working.
+    As explained in our [Privacy Policy](https://photoprism.app/privacy#section-7), reverse geocoding and interactive world maps depend on retrieving the necessary information [from us](https://photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality.
     
-    Your use of these services is fully covered by us at the moment. Depending on your usage, this can save you thousands of dollars every month. Other providers typically charge usage-based fees and may also not allow you to cache the data they provide, compromising your privacy with unnecessary requests.
+    Your use of these services is [fully covered by us](../getting-started/faq.md#are-the-keys-for-using-interactive-world-maps-provided-free-of-charge). Depending on your usage, this can save you much more than the cost of a [PhotoPrism+ Membership](https://photoprism.app/membership), since other providers generally charge usage-based fees and may also not allow you to cache the data they provide, compromising your privacy with unnecessary requests.
     
-    Should you still wish to operate one or both of these services on your own premises, [we can set up such a fully autonomous solution](https://photoprism.app/contact) for you, provided you are prepared to cover the [initial setup costs](https://photoprism.app/kb/compliance-faq#fully-autonomous-solution) as well as ongoing maintenance fees for content licenses and updates.
-
+    In order to use the maps and view location details in PhotoPrism, you must allow requests to these API endpoints if you have a firewall installed and make sure your Internet connection is working.
+    
+    Should you wish to operate one or both of these services on your own premises, we can set up such a [fully autonomous solution](https://photoprism.app/kb/compliance-faq#fully-autonomous-solution) for you, provided you are prepared to cover the initial setup costs as well as ongoing maintenance fees for content licenses and updates.
+    
     [View Privacy Policy ›](https://photoprism.app/privacy#section-7){ class="pr-3" } [View Compliance FAQ ›](https://photoprism.app/kb/compliance-faq#privacy)
 
 ??? question "Are the keys for using interactive world maps provided free of charge?"

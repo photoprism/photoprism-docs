@@ -11,11 +11,10 @@
 <span class="build">Build 221025-3b9890e34</span>
 
 Due to the many new features, enhancements and bug fixes, this is one of those updates that take longer to release.
-Before you upgrade, be sure to read the full release notes. We appreciate your patience and feedback on the changes.
+Before upgrading, please read the full release notes and note that this release does not yet include support for roles other than *Admin* and *Visitor* (for link sharing), as we need to specify, create and test each additional role before we can release it.
 A special thank you to [everyone who contributed](https://docs.photoprism.app/developer-guide/)!
 
-Kindly note that this release does not yet include support for roles other than *Admin* and *Visitor* (for link sharing),
-as we need to specify, create and test each additional role before we can release it.
+*We appreciate your patience and feedback on the changes.*
 
 Breaking Changes
 

@@ -16,7 +16,7 @@
     
     Your use of these services is [fully covered by us](../getting-started/faq.md#are-the-keys-for-using-interactive-world-maps-provided-free-of-charge). Depending on your usage, this can save you much more than the cost of a [PhotoPrism+ Membership](https://photoprism.app/membership), since other providers generally charge usage-based fees and may also not allow you to cache the data they provide, compromising your privacy with unnecessary requests.
     
-    In order to use the maps and view location details in PhotoPrism, you must allow requests to these API endpoints if you have a firewall installed and make sure your Internet connection is working.
+    In order to use the maps and view location details in PhotoPrism, you must **allow requests to these API endpoints** if you have a firewall installed and make sure your Internet connection is working.
     
     Should you wish to operate one or both of these services on your own premises, we can set up such a [fully autonomous solution](https://photoprism.app/kb/compliance-faq#fully-autonomous-solution) for you, provided you are prepared to cover the initial setup costs as well as ongoing maintenance fees for content licenses and updates.
     

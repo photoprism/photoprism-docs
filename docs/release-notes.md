@@ -17,7 +17,7 @@ A special thank you to [everyone who contributed](https://docs.photoprism.app/de
 Breaking Changes
 
 - In order to improve security and compatibility, the default Docker image is now based on Ubuntu 22.04 LTS (Jammy Jellyfish) instead of Debian 12 (Bookworm). The entrypoint script has been updated to [preserve group permissions required for hardware transcoding](https://github.com/photoprism/photoprism/issues/2739).
-- Session and user management have been re-implemented. If you are upgrading from the last preview, you may need to run the "photoprism users reset" [command in a terminal](getting-started/docker-compose.md#command-line-interface) after the upgrade to recreate the new database tables. They are not compatible with the last preview, which is why we have stopped releasing preview builds until they are stable enough.
+- Session and user management have been re-implemented. **If you are upgrading from the last preview, you may need to run the "photoprism users reset" [command in a terminal](getting-started/docker-compose.md#command-line-interface) after the upgrade to recreate the new database tables.** They are not compatible with the last preview, which is why we have stopped releasing preview builds until they are stable enough.
 - Upgrading from the last stable version should work without any problems. However, if you have already created additional accounts with the previously offered unofficial multi-user support, you will notice that only the main admin account is migrated automatically. We welcome feedback on your upgrade experience.
 - Sharing link visitors can now see the picture locations in the regular album view and optionally on a map after clicking the link. Based on user feedback, we may add settings to hide the locations for enhanced privacy.
 - We recommend performing a full rescan after the upgrade to take advantage of new search filters and sort options. Indexing is also necessary to find and view HEIC, DNG, and AVIF images that were previously unsupported or had errors. In some cases with incorrectly converted HEIC files, it may be necessary to recreate the JPEG sidecar files by running the "photoprism convert -f" [command in a terminal](getting-started/docker-compose.md#command-line-interface). To regenerate your thumbnails, run "photoprism thumbs -f".
@@ -53,7 +53,7 @@ What's new?
 - Build: [Go has been upgraded to v1.19.2, which includes security fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.19.2)
 - Translations: [Added Persian](https://github.com/photoprism/photoprism/pull/2767), [updated Finnish](https://github.com/photoprism/photoprism/pull/2712/files) and [Chinese](https://github.com/photoprism/photoprism/commit/6d435cab9e23c9c64fe418dafb26e0ac41970175)
 
-*Kindly note that this pre-release does not yet include support for roles other than Admin and Visitor (for link sharing), as we have to decide which roles will be part of the final release first. Please do not use this pre-release in production until we have completed all security testing.*
+Please note that this release does not yet include support for roles other than *Admin* and *Visitor* (for link sharing), as we need to specify, create and test each additional role before we can release it.
 
 ### September 1, 2022 ###
 <span class="build">Build 220901-f493607b0</span>

@@ -40,7 +40,7 @@ We take no responsibility for instability or performance problems if your device
 
 #### Databases ####
 
-Our backend is currently compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB](https://mariadb.org/) 10.5.12+.[^2] Keep in mind that while SQLite works well if you only have a few thousand files to index, and can be useful for testing, it is not a good choice for users who demand scalability and high performance. Support for MySQL 8 has been discontinued due to low demand and missing features.[^3]
+Our backend is currently compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB](https://mariadb.org/) 10.5.12+.[^2] Keep in mind that while SQLite works well if you only have a few thousand files to index, and can be useful for testing, it is [not a good choice](troubleshooting/sqlite.md) for users who demand scalability and high performance. Support for [MySQL 8 has been discontinued](https://github.com/photoprism/photoprism/issues/1764) due to low demand and missing features.[^3]
 
 [Get Performance Tips ›](troubleshooting/performance.md)
 

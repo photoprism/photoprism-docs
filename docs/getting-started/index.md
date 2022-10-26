@@ -14,7 +14,7 @@ Once the initial setup is complete, our [First Steps 👣](../user-guide/first-s
     [installation instructions](docker-compose.md) after going through a short list of [requirements](raspberry-pi.md).
     See [FAQs](faq.md) for instructions and notes on [alternative installation methods](faq.md#how-can-i-install-photoprism-without-docker).
 
-## Roadmap ##
+## Roadmap
 
 Our vision is to provide the most user- and privacy-friendly solution to keep your pictures organized and accessible.
 The [roadmap](https://link.photoprism.app/roadmap) shows what tasks are in progress, 
@@ -26,7 +26,7 @@ This comes at a price, as we can't give exact deadlines for new features.
 Having said that, funding really has the highest impact. So users can do their part and
 [become a sponsor](https://photoprism.app/membership) to get their favorite features as soon as possible.
 
-## System Requirements ##
+## System Requirements
 
 You should host PhotoPrism on a server with **at least 2 cores**, **3 GB of physical memory**,[^1] and
 a 64-bit operating system. Beyond these minimum requirements, the amount of RAM should [match the number of CPU cores](troubleshooting/performance.md#memory). Indexing large photo and video collections also benefits greatly from [local SSD storage](troubleshooting/performance.md#storage), especially for the database and cache files.
@@ -50,16 +50,6 @@ You can conveniently install it on the home screen of all major operating system
 
 Not all [video and audio formats](https://caniuse.com/?search=video%20format) can be [played with every browser](troubleshooting/browsers.md). For example, [AAC](https://caniuse.com/aac "Advanced Audio Coding") - the default audio codec for [MPEG-4 AVC / H.264](https://caniuse.com/avc "Advanced Video Coding") - is supported natively in Chrome, Safari, and Edge, while it is only optionally supported by the OS in Firefox and Opera.
 
-#### World Maps ####
-
-As explained in our [Privacy Policy](https://photoprism.app/privacy#section-7), reverse geocoding and interactive world maps depend on retrieving the necessary information [from us](https://photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality.[^4]
-
-Your use of these services is [fully covered by us](faq.md#are-the-keys-for-using-interactive-world-maps-provided-free-of-charge). Depending on your usage, this can save you much more than the cost of a [PhotoPrism+ Membership](https://photoprism.app/membership), since other providers generally charge usage-based fees and may also not allow you to cache the data they provide, compromising your privacy with unnecessary requests.
-
-In order to use the maps and view location details in PhotoPrism, you must allow requests to these API endpoints if you have a firewall installed and make sure your Internet connection is working.
-
-[View Privacy Policy ›](https://photoprism.app/privacy#section-7){ class="pr-3" } [View Compliance FAQ ›](https://photoprism.app/kb/compliance-faq#privacy)
-
 #### HTTPS ####
 
 If you install PhotoPrism on a public server outside your home network, **always run it behind a secure HTTPS reverse proxy** such as [Traefik](proxies/traefik.md) or [Caddy](proxies/caddy-2.md).
@@ -67,7 +57,17 @@ Your files and passwords will otherwise be transmitted in clear text and can be 
 including your provider, hackers, and governments. Backup tools and file sync apps like [FolderSync](https://www.tacit.dk/foldersync/faq/#i-can-not-connect-to-a-non-https-webdav-server-why) 
 may refuse to connect as well.
 
-## Getting Support ##
+## Maps & Places
+
+As explained in our [Privacy Policy](https://photoprism.app/privacy#section-7), reverse geocoding and interactive world maps depend on retrieving the necessary information [from us](https://photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality.[^4]
+
+Your use of these services is [fully covered by us](faq.md#are-the-keys-for-using-interactive-world-maps-provided-free-of-charge). Depending on your usage, this can save you much more than the cost of a [PhotoPrism+ Membership](https://photoprism.app/membership), since other providers generally charge usage-based fees and may also not allow you to cache the data they provide, compromising your privacy with unnecessary requests.
+
+In order to use the maps and view location details in PhotoPrism, you must **allow requests to these API endpoints** if you have a firewall installed and make sure your Internet connection is working.
+
+[View Privacy Policy ›](https://photoprism.app/privacy#section-7){ class="pr-3" } [View Compliance FAQ ›](https://photoprism.app/kb/compliance-faq#privacy)
+
+## Getting Support
 
 If you need help installing our software at home, you can [join us on Reddit](https://link.photoprism.app/reddit), ask in our [Community Chat](https://link.photoprism.app/chat), or post your question in [GitHub Discussions](https://link.photoprism.app/discussions). Common problems can be quickly diagnosed and solved using our [Troubleshooting Checklists](https://docs.photoprism.app/getting-started/troubleshooting/).
 

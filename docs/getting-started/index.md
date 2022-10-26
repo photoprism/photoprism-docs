@@ -28,35 +28,38 @@ Having said that, funding really has the highest impact. So users can do their p
 
 ## System Requirements ##
 
-We recommend hosting PhotoPrism on a server with **at least 2 cores**, **3 GB of physical memory**,[^1] and
-a 64-bit operating system. Beyond these minimum requirements, the amount of RAM should [match the number of CPU cores](troubleshooting/performance.md#memory).
+You should host PhotoPrism on a server with **at least 2 cores**, **3 GB of physical memory**,[^1] and
+a 64-bit operating system. Beyond these minimum requirements, the amount of RAM should [match the number of CPU cores](troubleshooting/performance.md#memory). Indexing large photo and video collections also benefits greatly from [local SSD storage](troubleshooting/performance.md#storage), especially for the database and cache files.
 
 If your server has [less than 4 GB of swap space](troubleshooting/docker.md#adding-swap) or a manual
 memory/swap limit is set, this can cause unexpected restarts, for example, when the indexer temporarily
 needs more memory to process large files. High-resolution panoramic images may require additional swap space
 and/or physical memory above the recommended minimum.
 
-!!! note ""
-    Indexing large photo and video collections significantly benefits from [local SSD storage](troubleshooting/performance.md#storage)
-    and plenty of memory for caching. Especially the conversion of RAW images and the transcoding of videos are very demanding.
-    We take no responsibility for instability or performance problems if your device does not meet the requirements.
-
-#### Browsers ####
-
-Our [Progressive Web App](../user-guide/pwa.md) (PWA) works with most modern browsers, and runs best on [Chrome](https://www.google.com/chrome/), [Chromium](https://www.chromium.org/getting-involved/download-chromium), [Safari](https://www.apple.com/safari/), [Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release), and [Edge](https://www.microsoft.com/en-us/edge).
-You can conveniently install it on the home screen of all major operating systems and mobile devices.
-
-Please note that not all [video and audio formats](https://caniuse.com/?search=video%20format) can be [played with every browser](troubleshooting/browsers.md). For example, [AAC](https://caniuse.com/aac "Advanced Audio Coding") - the default audio codec for [MPEG-4 AVC / H.264](https://caniuse.com/avc "Advanced Video Coding") - is supported natively in Chrome, Safari, and Edge, while it is only optionally supported by the OS in Firefox and Opera.
+We take no responsibility for instability or performance problems if your device does not meet the requirements.
 
 #### Databases ####
 
-The backend is compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB](https://mariadb.org/) 10.5.12+.[^2] Support for MySQL 8 has been discontinued due to low demand and missing features.[^3]
+Our backend is currently compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB](https://mariadb.org/) 10.5.12+.[^2] Keep in mind that while SQLite works well if you only have a few thousand files to index, and can be useful for testing, it is not a good choice for users who demand scalability and high performance. Support for MySQL 8 has been discontinued due to low demand and missing features.[^3]
 
-#### External Services ####
+[Get Performance Tips ›](troubleshooting/performance.md)
 
-As explained in detail in our [Privacy Policy](https://photoprism.app/privacy), reverse geocoding and interactive world maps depend on retrieving the necessary information from [us](https://photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality.[^4]
+#### Browsers ####
 
-Please make sure that you allow requests to these API endpoints if you have a firewall installed, and verify that your Internet connection is working.
+Built as a [Progressive Web App](../user-guide/pwa.md) (PWA), the web interface works with most modern browsers, and runs best on [Chrome](https://www.google.com/chrome/), [Chromium](https://www.chromium.org/getting-involved/download-chromium), [Safari](https://www.apple.com/safari/), [Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release), and [Edge](https://www.microsoft.com/en-us/edge).
+You can conveniently install it on the home screen of all major operating systems and mobile devices.
+
+Be aware that not all [video and audio formats](https://caniuse.com/?search=video%20format) can be [played with every browser](troubleshooting/browsers.md). For example, [AAC](https://caniuse.com/aac "Advanced Audio Coding") - the default audio codec for [MPEG-4 AVC / H.264](https://caniuse.com/avc "Advanced Video Coding") - is supported natively in Chrome, Safari, and Edge, while it is only optionally supported by the OS in Firefox and Opera.
+
+#### World Maps ####
+
+As explained in detail in our [Privacy Policy](https://photoprism.app/privacy), reverse geocoding and interactive world maps depend on retrieving the necessary information [from us](https://photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality.[^4]
+
+Your use of these services is [fully covered by us](faq.md#are-the-keys-for-using-interactive-world-maps-provided-free-of-charge). Depending on your usage, this can save you much more than the cost of a [PhotoPrism+ Membership](https://photoprism.app/membership), since other providers generally charge usage-based fees and may also not allow you to cache the data they provide, compromising your privacy with unnecessary requests.
+
+In order to use the maps and view location details in PhotoPrism, you must allow requests to these API endpoints if you have a firewall installed and make sure your Internet connection is working.
+
+[View GDPR Compliance Statement ›](https://photoprism.app/privacy/gdpr)
 
 #### HTTPS ####
 

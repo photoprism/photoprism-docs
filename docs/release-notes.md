@@ -14,6 +14,9 @@ Due to the many new features, enhancements and bug fixes, this is one of those u
 Before you upgrade, be sure to read the full release notes. We appreciate your patience and feedback on the changes.
 A special thank you to [everyone who contributed](https://docs.photoprism.app/developer-guide/)!
 
+Kindly note that this release does not yet include support for roles other than *Admin* and *Visitor* (for link sharing),
+as we need to specify, create and test each additional role before we can release it.
+
 Breaking Changes
 
 - In order to improve security and compatibility, the default Docker image is now based on Ubuntu 22.04 LTS (Jammy Jellyfish) instead of Debian 12 (Bookworm). The entrypoint script has been updated to [preserve group permissions required for hardware transcoding](https://github.com/photoprism/photoprism/issues/2739).
@@ -52,8 +55,6 @@ What's new?
 - Docker: [Switched from `gosu` to `setpriv` in entrypoint.sh script](https://github.com/photoprism/photoprism/pull/2730)
 - Build: [Go has been upgraded to v1.19.2, which includes security fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.19.2)
 - Translations: [Added Persian](https://github.com/photoprism/photoprism/pull/2767), [updated Finnish](https://github.com/photoprism/photoprism/pull/2712/files) and [Chinese](https://github.com/photoprism/photoprism/commit/6d435cab9e23c9c64fe418dafb26e0ac41970175)
-
-Please note that this release does not yet include support for roles other than *Admin* and *Visitor* (for link sharing), as we need to specify, create and test each additional role before we can release it.
 
 ### September 1, 2022 ###
 <span class="build">Build 220901-f493607b0</span>

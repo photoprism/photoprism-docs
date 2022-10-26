@@ -12,9 +12,9 @@
 
 Due to the many new features, enhancements and bug fixes, this is one of those updates that take longer to release.
 Before upgrading, please read the full release notes and note that this release does not yet include support for roles other than *Admin* and *Visitor* (for link sharing), as we need to specify, create and test each additional role before we can release it.
-A special thank you to [everyone who contributed](https://docs.photoprism.app/developer-guide/)!
 
-*We appreciate your patience and feedback on the changes.*
+!!! example ""
+    We appreciate your patience and feedback on the changes. A special thank you to [everyone who contributed](https://docs.photoprism.app/developer-guide/)!
 
 Breaking Changes
 

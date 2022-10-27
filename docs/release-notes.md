@@ -8,7 +8,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 221026-7723e6b32</span>
+<span class="build">Build 221027-6a33ae2e9</span>
 
 Due to the many new features, enhancements and bug fixes, this is one of those updates that take longer to release.
 Before upgrading, please read the full release notes and note that this release does not yet include support for roles other than *Admin* and *Visitor* (for link sharing), as we need to specify, create and test each additional role before we can release it.
@@ -42,6 +42,7 @@ What's new?
 - ProRAW: [JPEGs embedded in `.DNG` files can be searched and viewed](https://github.com/photoprism/photoprism/issues/2291#issuecomment-1271704046)
 - Videos: [Added VAAPI hardware AVC encoder support](https://github.com/photoprism/photoprism/pull/2709)
 - Index: [Delayed RAW file format check to improve indexing performance](https://github.com/photoprism/photoprism/pull/2683)
+- Import: [Selection of a source folder with dots in its name is now possible](https://github.com/photoprism/photoprism/issues/2807)
 - Import: [Related original names are indexed in addition to the main filename](https://github.com/photoprism/photoprism/pull/2623)
 - Settings: [Sync tab is not available in public mode to increase security](https://github.com/photoprism/photoprism/discussions/2468#discussioncomment-3678435)
 - Backups: [Worker no longer recreates all album YAML files on every run](https://github.com/photoprism/photoprism/issues/2705)

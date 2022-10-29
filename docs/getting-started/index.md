@@ -41,7 +41,7 @@ and/or physical memory above the recommended minimum.
 
 #### Databases ####
 
-Our backend is currently compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB 10.5.12+](https://mariadb.org/).[^2] Note that [SQLite is generally not a good choice](troubleshooting/sqlite.md) for users who require scalability and high performance, and that support for [MySQL 8 has been discontinued](https://github.com/photoprism/photoprism/issues/1764) due to low demand and missing features.[^3]
+PhotoPrism is compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB 10.5.12+](https://mariadb.org/).[^2] Note that [SQLite is generally not a good choice](troubleshooting/sqlite.md) for users who require scalability and high performance, and that support for [MySQL 8 has been discontinued](https://github.com/photoprism/photoprism/issues/1764) due to low demand and missing features.[^3]
 
 #### Browsers ####
 

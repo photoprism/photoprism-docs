@@ -8,7 +8,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 221031-09773051a</span>
+<span class="build">Build 221031-ac62c10db</span>
 
 Due to the many new features, enhancements and bug fixes, this is one of those updates that take longer to release.
 Before upgrading, please read the full release notes and note that this release does not yet include support for roles other than *Admin* and *Visitor* (for link sharing), as we need to specify, create and test each additional role before we can release it.
@@ -58,7 +58,7 @@ What's new?
 - Security: [New files are created without execution permission](https://github.com/photoprism/photoprism/issues/2809)
 - Security: [Go has been upgraded to v1.19.2, which includes security fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.19.2)
 - Translations: Added [Persian](https://github.com/photoprism/photoprism/pull/2767)
-- Translations: Updated [German](https://github.com/photoprism/photoprism/pull/2825), [Finnish](https://github.com/photoprism/photoprism/pull/2712/files), and [Chinese](https://github.com/photoprism/photoprism/commit/6d435cab9e23c9c64fe418dafb26e0ac41970175)
+- Translations: Updated [German](https://github.com/photoprism/photoprism/pull/2825), [Finnish](https://github.com/photoprism/photoprism/pull/2712/files), [French](https://github.com/photoprism/photoprism/pull/2830), and [Chinese](https://github.com/photoprism/photoprism/commit/6d435cab9e23c9c64fe418dafb26e0ac41970175)
 
 ### September 1, 2022 ###
 <span class="build">Build 220901-f493607b0</span>

@@ -57,7 +57,10 @@ What's new?
 - Docker: [Switched from `gosu` to `setpriv` in entrypoint.sh script](https://github.com/photoprism/photoprism/pull/2730)
 - Security: [New files are created without execution permission](https://github.com/photoprism/photoprism/issues/2809)
 - Security: [Go has been upgraded to v1.19.2, which includes security fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.19.2)
-- Translations: [Added Persian](https://github.com/photoprism/photoprism/pull/2767), [updated Finnish](https://github.com/photoprism/photoprism/pull/2712/files) and [Chinese](https://github.com/photoprism/photoprism/commit/6d435cab9e23c9c64fe418dafb26e0ac41970175)
+- Translations: Added [Persian](https://github.com/photoprism/photoprism/pull/2767)
+- Translations: Updated [German](https://github.com/photoprism/photoprism/pull/2825), [Finnish](https://github.com/photoprism/photoprism/pull/2712/files), and [Chinese](https://github.com/photoprism/photoprism/commit/6d435cab9e23c9c64fe418dafb26e0ac41970175)
+
+*Native speakers are invited to [add and improve user interface translations for their language](developer-guide/translations-weblate.md). Thank you very much!*
 
 ### September 1, 2022 ###
 <span class="build">Build 220901-f493607b0</span>
@@ -253,7 +256,7 @@ Behind the scenes, the build process has also been improved so that it will be e
 <span class="build">Build 220121-2b4c8e1f</span>
 
 We've generated missing translations with the help of DeepL and Google Translate. Native speakers are
-invited to help us improve those if needed. [Learn how to contribute](developer-guide/translations.md).
+invited to help us improve those if needed. [Learn how to contribute](developer-guide/translations-weblate.md).
 
 - [Minimum memory requirements have been reduced to 3 GB](https://github.com/photoprism/photoprism/discussions/1921#discussioncomment-2005493)
 - Photos: [Fixed buttons in full screen view](https://github.com/photoprism/photoprism/issues/1961)
@@ -409,7 +412,7 @@ Darktable 3.6 among other updated dependencies.
 - Translations: [Updated all backend locales](https://github.com/photoprism/photoprism/tree/develop/assets/locales)
 
 *We've generated missing translations with the help of DeepL and Google Translate. Native speakers are 
-invited to help us improve those if needed. [Learn how to contribute](developer-guide/translations.md).*
+invited to help us improve those if needed. [Learn how to contribute](developer-guide/translations-weblate.md).*
 
 ### October 9, 2021 ###
 <span class="build">Build 211009-d6cc8df5`</span>

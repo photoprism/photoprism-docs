@@ -22,10 +22,11 @@ Before reporting a bug:
     - [ ] Errors such as "read-only file system", "error creating path", or "wrong permissions" indicate a [filesystem permission problem](docker.md#file-permissions)
     - [ ] It may help to [add the `:z` mount flag to volumes](https://docs.docker.com/storage/bind-mounts/#configure-the-selinux-label) when using SELinux (RedHat/Fedora)
     - [ ] Log messages that contain "no route to host" indicate a [problem with the database](mariadb.md) or Docker network configuration (follow our [examples](https://dl.photoprism.app/docker/))
-- [ ] Make sure you are using the correct protocol (default is `http`), port (default is `2342`), and host:
-(default is `localhost`)
-    - [ ] Use your private hostname within your home network (see network settings)
-    - [ ] Avoid using IP addresses directly, as [they can change](https://github.com/photoprism/photoprism/discussions/2791#discussioncomment-3985376)
+- [ ] Make sure you are using the correct protocol (default is `http`), port (default is `2342`), and host (default is `localhost`):
+    - [ ] Check if the server port you try to use [has been exposed](https://docs.docker.com/compose/compose-file/compose-file-v3/#ports) and no firewall is blocking it
+    - [ ] Only use `localhost` or `127.0.0.1` if the server is running on the same computer (host)
+    - [ ] Avoid using IP addresses other than `127.0.0.1` directly, as [they can change](https://github.com/photoprism/photoprism/discussions/2791#discussioncomment-3985376)
+    - [ ] Configure [a static hostname](https://dl.photoprism.app/img/docs/pihole-local-dns.png) to access servers within your home network
 - [ ] Note that HTTP security headers will prevent the app from loading in a frame (override them)
 - [ ] Verify your computer meets the [system requirements](../index.md#system-requirements)
 - [ ] Go through the [checklist for fatal server errors](#fatal-server-errors)
@@ -253,6 +254,6 @@ Please note:
 *[SQLite]: self-contained, serverless SQL database
 *[NSFW]: Not Safe For Work
 *[swap]: substitute for physical memory
-*[host]: Computer, Cloud Server, or VM that runs Docker
+*[host]: Computer, Cloud Server, or VM that runs PhotoPrism
 *[read-only]: write protected
 *[filesystem]: contains your files and folders

@@ -11,9 +11,9 @@ First, verify that you are using the correct port (default is `3306`) and host:
 
 - in the internal Docker network, use the default hostname `mariadb` (same as the [service](https://dl.photoprism.app/docker/docker-compose.yml)) 
 - avoid changing the default network configuration, unless you are experienced with this
-- [configure and use a static hostname](https://dl.photoprism.app/img/docs/pihole-local-dns.png) to access database servers within a private network
+- you should [configure a static hostname](https://dl.photoprism.app/img/docs/pihole-local-dns.png) to access database servers within your home network
 - avoid using IP addresses other than `127.0.0.1` (localhost) directly, as [they can change](https://github.com/photoprism/photoprism/discussions/2791#discussioncomment-3985376)
-- only use `localhost` or `127.0.0.1` if the database port has been exposed as described below and you are on the same computer (host)
+- only use `localhost` or `127.0.0.1` if the database port [has been exposed](https://docs.docker.com/compose/compose-file/compose-file-v3/#ports) as described below and you are on the same computer (host)
 
 To connect to MariaDB from your host or home network, you need to expose port `3306` in your `docker-compose.yml`
 and [restart the service for changes to take effect](../docker-compose.md#step-2-start-the-server):

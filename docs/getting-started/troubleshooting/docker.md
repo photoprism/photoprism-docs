@@ -235,7 +235,7 @@ volumes:
     configuration problem, or a misunderstanding in how the software works.
 
 *[home directory]: \user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux
-*[host]: Computer, Cloud Server, or VM that runs Docker
+*[host]: Computer, Cloud Server, or VM that runs PhotoPrism
 *[swap]: substitute for physical memory
 *[read-only]: write protected
 *[filesystem]: contains your files and folders

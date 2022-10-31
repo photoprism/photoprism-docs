@@ -216,7 +216,7 @@ PhotoPrism's command-line interface is well suited for job automation using a
     This may be necessary after major upgrades and after migrations of the database schema, especially if search results are missing or incorrect. Note You can also start a [rescan from the user interface](../user-guide/library/originals.md) by navigating to *Library* > *Index*, checking "Full Rescan" and then clicking "Start".
 
 *[home directory]: \user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux
-*[host]: Computer, Cloud Server, or VM that runs Docker
+*[host]: Computer, Cloud Server, or VM that runs PhotoPrism
 *[HEIF]: High Efficiency Image File Format
 *[RAW]: image format that contains unprocessed sensor data
 *[UI]: User Interface

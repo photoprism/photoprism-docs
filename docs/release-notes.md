@@ -45,7 +45,7 @@ What's new?
 - Index: [Delayed RAW file format check to improve indexing performance](https://github.com/photoprism/photoprism/pull/2683)
 - Import: [Selection of a source folder with dots in its name is now possible](https://github.com/photoprism/photoprism/issues/2807)
 - Import: [Related original names are indexed in addition to the main filename](https://github.com/photoprism/photoprism/pull/2623)
-- Settings: [Sync tab is not available in public mode to increase security](https://github.com/photoprism/photoprism/discussions/2468#discussioncomment-3678435)
+- Settings: [Services cannot be managed in public mode to increase security](https://github.com/photoprism/photoprism/discussions/2468#discussioncomment-3678435)
 - Backups: [Worker no longer recreates all album YAML files on every run](https://github.com/photoprism/photoprism/issues/2705)
 - Metadata: [Added more place names with known countries](https://github.com/photoprism/photoprism/pull/2720)
 - Metadata: [Default to UTC when reading time from XMP file](https://github.com/photoprism/photoprism/issues/636#issuecomment-1241686328)

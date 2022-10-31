@@ -8,7 +8,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 221027-6a33ae2e9</span>
+<span class="build">Build 221031-6e27210f9</span>
 
 Due to the many new features, enhancements and bug fixes, this is one of those updates that take longer to release.
 Before upgrading, please read the full release notes and note that this release does not yet include support for roles other than *Admin* and *Visitor* (for link sharing), as we need to specify, create and test each additional role before we can release it.
@@ -35,6 +35,7 @@ What's new?
 - Search: [Added `city:...` and `state:...` to filter by location details](https://github.com/photoprism/photoprism/pull/2670)
 - Search: [Results can now also be sorted by "File Size" and "Video Duration"](https://github.com/photoprism/photoprism/issues/2620)
 - Albums: [Added breadcrumbs to navigate back on large screens](https://github.com/photoprism/photoprism/issues/1409)
+- Albums: [Deselected labels are ignored when adding photos by label](https://github.com/photoprism/photoprism/issues/2821)
 - HEIC: [Added support for Sony's `.HIF` file extension](https://github.com/photoprism/photoprism/pull/2693)
 - HEIC: [Updated `heif-convert` tool to fix conversion problems](https://github.com/photoprism/photoprism/issues/2726)
 - AVIF: [Added support for the AV1 Image File Format](https://github.com/photoprism/photoprism/issues/2706)
@@ -47,13 +48,15 @@ What's new?
 - Settings: [Sync tab is not available in public mode to increase security](https://github.com/photoprism/photoprism/discussions/2468#discussioncomment-3678435)
 - Backups: [Worker no longer recreates all album YAML files on every run](https://github.com/photoprism/photoprism/issues/2705)
 - Metadata: [Added more place names with known countries](https://github.com/photoprism/photoprism/pull/2720)
+- Metadata: [Default to UTC when reading time from XMP file](https://github.com/photoprism/photoprism/issues/636#issuecomment-1241686328)
 - Config: [Increased default resolution limit from 100 to 150 MP](https://github.com/photoprism/photoprism/discussions/2677)
 - Config: [`imprint` info text option has been renamed to `legal-info`](https://github.com/photoprism/photoprism/issues/2797)
 - SQLite: [Added busy timeout preset to reduce locking errors when indexing](https://github.com/photoprism/photoprism/issues/2707)
 - MariaDB: [Startup fails with an error message if an unsupported version is used](https://github.com/photoprism/photoprism/issues/2381)
 - Docker: [Default image is based on Ubuntu 22.04 LTS (Jammy Jellyfish)](https://github.com/photoprism/photoprism/issues/2178)
 - Docker: [Switched from `gosu` to `setpriv` in entrypoint.sh script](https://github.com/photoprism/photoprism/pull/2730)
-- Build: [Go has been upgraded to v1.19.2, which includes security fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.19.2)
+- Security: [New files are created without execution permission](https://github.com/photoprism/photoprism/issues/2809)
+- Security: [Go has been upgraded to v1.19.2, which includes security fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.19.2)
 - Translations: [Added Persian](https://github.com/photoprism/photoprism/pull/2767), [updated Finnish](https://github.com/photoprism/photoprism/pull/2712/files) and [Chinese](https://github.com/photoprism/photoprism/commit/6d435cab9e23c9c64fe418dafb26e0ac41970175)
 
 ### September 1, 2022 ###

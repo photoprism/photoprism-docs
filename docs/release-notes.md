@@ -14,7 +14,7 @@ Due to the many new features, enhancements and bug fixes, this is one of those u
 Before upgrading, please read the full release notes and note that this release does not yet include support for roles other than *Admin* and *Visitor* (for link sharing), as we need to specify, create and test each additional role before we can release it.
 
 !!! example ""
-    We appreciate your patience and feedback on the changes. A special thank you to [everyone who contributed](https://docs.photoprism.app/developer-guide/)!
+    We appreciate your patience and feedback on the changes. Native speakers are invited to [add missing user interface translations for their language](developer-guide/translations-weblate.md). A special thank you to [everyone who contributed](https://docs.photoprism.app/developer-guide/)!
 
 Breaking Changes
 
@@ -59,8 +59,6 @@ What's new?
 - Security: [Go has been upgraded to v1.19.2, which includes security fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.19.2)
 - Translations: Added [Persian](https://github.com/photoprism/photoprism/pull/2767)
 - Translations: Updated [German](https://github.com/photoprism/photoprism/pull/2825), [Finnish](https://github.com/photoprism/photoprism/pull/2712/files), and [Chinese](https://github.com/photoprism/photoprism/commit/6d435cab9e23c9c64fe418dafb26e0ac41970175)
-
-*Native speakers are invited to [add and improve user interface translations for their language](developer-guide/translations-weblate.md). Thank you very much!*
 
 ### September 1, 2022 ###
 <span class="build">Build 220901-f493607b0</span>

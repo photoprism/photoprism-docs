@@ -26,7 +26,7 @@ Before reporting a bug:
     - [ ] Check if the server port you try to use [has been exposed](https://docs.docker.com/compose/compose-file/compose-file-v3/#ports) and no firewall is blocking it
     - [ ] Only use `localhost` or `127.0.0.1` if the server is running on the same computer (host)
     - [ ] Avoid using IP addresses other than `127.0.0.1` directly, as [they can change](https://github.com/photoprism/photoprism/discussions/2791#discussioncomment-3985376)
-    - [ ] Configure [a static hostname](https://dl.photoprism.app/img/docs/pihole-local-dns.png) to access servers within your home network
+    - [ ] Configure [a local hostname](https://dl.photoprism.app/img/docs/pihole-local-dns.png) to access other hosts within your home network
 - [ ] Note that HTTP security headers will prevent the app from loading in a frame (override them)
 - [ ] Verify your computer meets the [system requirements](../index.md#system-requirements)
 - [ ] Go through the [checklist for fatal server errors](#fatal-server-errors)

@@ -22,8 +22,10 @@ Before reporting a bug:
     - [ ] Errors such as "read-only file system", "error creating path", or "wrong permissions" indicate a [filesystem permission problem](docker.md#file-permissions)
     - [ ] It may help to [add the `:z` mount flag to volumes](https://docs.docker.com/storage/bind-mounts/#configure-the-selinux-label) when using SELinux (RedHat/Fedora)
     - [ ] Log messages that contain "no route to host" indicate a [problem with the database](mariadb.md) or Docker network configuration (follow our [examples](https://dl.photoprism.app/docker/))
-- [ ] Make sure you are using the correct protocol (default is `http`), port (default is `2342`), and hostname or IP address
+- [ ] Make sure you are using the correct protocol (default is `http`), port (default is `2342`), and host:
 (default is `localhost`)
+    - [ ] Use your private hostname within your home network (see network settings)
+    - [ ] Avoid using IP addresses directly, as [they can change](https://github.com/photoprism/photoprism/discussions/2791#discussioncomment-3985376)
 - [ ] Note that HTTP security headers will prevent the app from loading in a frame (override them)
 - [ ] Verify your computer meets the [system requirements](../index.md#system-requirements)
 - [ ] Go through the [checklist for fatal server errors](#fatal-server-errors)

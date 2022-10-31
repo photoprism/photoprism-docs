@@ -58,7 +58,7 @@ What's new?
 - Security: [New files are created without execution permission](https://github.com/photoprism/photoprism/issues/2809)
 - Security: [Go has been upgraded to v1.19.2, which includes security fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.19.2)
 - Translations: Added [Persian](https://github.com/photoprism/photoprism/pull/2767)
-- Translations: Updated [German](https://github.com/photoprism/photoprism/pull/2825), [Finnish](https://github.com/photoprism/photoprism/pull/2712/files), [French](https://github.com/photoprism/photoprism/pull/2830), and [Chinese](https://github.com/photoprism/photoprism/commit/6d435cab9e23c9c64fe418dafb26e0ac41970175)
+- Translations: Updated [Chinese](https://github.com/photoprism/photoprism/commit/6d435cab9e23c9c64fe418dafb26e0ac41970175), [Finnish](https://github.com/photoprism/photoprism/pull/2712/files), [French](https://github.com/photoprism/photoprism/pull/2830), and [German](https://github.com/photoprism/photoprism/pull/2825)
 
 ### September 1, 2022 ###
 <span class="build">Build 220901-f493607b0</span>

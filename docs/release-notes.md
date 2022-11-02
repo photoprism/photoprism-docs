@@ -8,11 +8,11 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 221102-9be52990f</span>
+<span class="build">Build 221102-7c634a1f5</span>
 
 What's new?
 
-- Index: [File and folder names starting with "_." are ignored](https://github.com/photoprism/photoprism/issues/2844)
+- Index: [Paths starting with `_.` and `__` like `__MACOSX` are ignored](https://github.com/photoprism/photoprism/issues/2844)
 - Security: [Go has been upgraded to v1.19.3, which includes security fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.19.3)
 
 ### November 2, 2022 ###

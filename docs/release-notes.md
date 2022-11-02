@@ -8,10 +8,10 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 221101-31c3e850f</span>
+<span class="build">Build 221102-9f5ef7dd3</span>
 
-Due to the many new features, enhancements and bug fixes, this is one of those updates that take longer to release.
-Before upgrading, please read the full release notes and note that this release does not yet include support for roles other than *Admin* and *Visitor* (for link sharing), as we need to specify, create and test each additional role before we can release it.
+Due to the many new features, enhancements and bug fixes, this is one of those updates that took longer to release.
+Before upgrading, please read the full release notes and note that this release does not yet include support for user roles other than *Admin*, as we need to specify, create and test each new role before we can release it. Once this is done, we will also provide additional user management documentation.
 
 !!! example ""
     We've generated missing translations with the help of DeepL and Google Translate. Native speakers are
@@ -21,10 +21,11 @@ Before upgrading, please read the full release notes and note that this release 
 Breaking Changes
 
 - In order to improve security and compatibility, the default Docker image is now based on Ubuntu 22.04 LTS (Jammy Jellyfish) instead of Debian 12 (Bookworm). The entrypoint script has been updated to [preserve group permissions required for hardware transcoding](https://github.com/photoprism/photoprism/issues/2739).
-- Session and user management have been re-implemented. **If you are upgrading from a preview, you may need to run the "photoprism users reset" [command in a terminal](getting-started/docker-compose.md#command-line-interface) after the upgrade to recreate the new database tables.** They are not compatible with the last preview, which is why we have stopped releasing preview builds until they are stable enough.
-- Upgrading from the last stable version should work without any problems. However, if you have already created additional accounts with the previously offered unofficial multi-user support, you will notice that only the main admin account is migrated automatically. We welcome feedback on your upgrade experience.
+- Session and user management have been re-implemented. **If you are upgrading from a preview build, you must run the "photoprism users reset" [command in a terminal](getting-started/docker-compose.md#command-line-interface) after the upgrade to recreate the new database tables.**
+- Upgrading from the last stable version should work without any problems. However, if you have already created additional accounts with the previously offered unofficial multi-user support, you will notice that only the main admin account is migrated automatically.
 - Sharing link visitors can now see the picture locations in the regular album view and optionally on a map after clicking the link. Based on user feedback, we may add settings to hide the locations for enhanced privacy.
-- We recommend performing a full rescan after the upgrade to take advantage of new search filters and sort options. Indexing is also necessary to find and view HEIC, DNG, and AVIF images that were previously unsupported or had errors. In some cases with incorrectly converted images, it may be necessary to recreate the JPEG sidecar files by running the "photoprism convert -f" [command in a terminal](getting-started/docker-compose.md#command-line-interface). To regenerate your thumbnails, run "photoprism thumbs -f".
+- We recommend performing a full rescan after the upgrade to take advantage of new search filters and sort options.
+- Indexing is also necessary to find and view HEIC, DNG, and AVIF images that were previously unsupported or had errors. In some cases with incorrectly converted images, it may be necessary to recreate the JPEG sidecar files by running the "photoprism convert -f" [command in a terminal](getting-started/docker-compose.md#command-line-interface) before starting the rescan. To regenerate your thumbnails, run "photoprism thumbs -f".
 
 What's new?
 

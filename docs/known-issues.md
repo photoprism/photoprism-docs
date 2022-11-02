@@ -27,19 +27,12 @@ Symbolic [links to files and directories](https://github.com/photoprism/photopri
 
 ## User Authentication
 
-### Session Invalidation
+Session and user management have been re-implemented in the latest [stable release](release-notes.md). If you are upgrading from a preview build, you will need to run the "photoprism users reset" command [in a terminal](getting-started/docker-compose.md#command-line-interface) after the upgrade to recreate the new database tables so that they are compatible with the stable version. This will not affect your pictures or albums.
 
-!!! info ""
-    Session management has been improved in our development version to address this issue.
+Upgrading from the last stable version should work without any problems. However, if you have already created additional accounts with the previously offered unofficial multi-user support, you will notice that only the main admin account is migrated automatically. Run "photoprism users legacy" [in a terminal](getting-started/docker-compose.md#command-line-interface) to display the legacy accounts so you can migrate them manually if needed.
 
-User authentication sessions expire automatically after 7 days. In some cases, you may want to ensure that all sessions expire immediately to require re-login, for example, after a password change if the previously used password is known to people who should no longer be able to access your instance:
-
-- [Security: Changing password doesn't invalidate existing auth tokens #1935](https://github.com/photoprism/photoprism/issues/1935)
-
-This is a known limitation with the current implementation. One of the reasons for this trade-off is that the account may be used by background processes that are synchronizing files. Invalidating the session immediately could then lead to data loss, which we consider unacceptable. At the very least, immediate invalidation would require more complex client logic and additional documentation to help developers implement it correctly.
-
-While our team is working on a new implementation as part of full multi-user support, you can manually delete `storage/config/sessions.json` and then restart your instance to revoke all sessions and require re-login.
-
+Please note that the current release does not yet include support for user roles other than *Admin*, as we need to specify, create and test each new role before we can release it. Once this is done, we will also provide additional user management documentation.
+ 
 ## File Compatibility
 
 ### JPEG: Bad RST Marker

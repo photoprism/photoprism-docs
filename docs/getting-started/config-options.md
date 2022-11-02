@@ -106,8 +106,8 @@
 |          Environment          |       CLI Flag       |      Default      |                            Description                            |
 |-------------------------------|----------------------|-------------------|-------------------------------------------------------------------|
 | PHOTOPRISM_TRUSTED_PROXY      | --trusted-proxy      | 172.16.0.0/12     | `CIDR` range from which IP and HTTPS proxy headers can be trusted |
-| PHOTOPRISM_HTTPS_PROXY_HEADER | --https-proxy-header | X-Forwarded-Proto | proxy protocol header `NAME`                                      |
-| PHOTOPRISM_HTTPS_PROXY_PROTO  | --https-proxy-proto  | https             | forwarded HTTPS protocol `NAME`                                   |
+| PHOTOPRISM_PROXY_PROTO_HEADER | --proxy-proto-header | X-Forwarded-Proto | proxy protocol header `NAME`                                      |
+| PHOTOPRISM_PROXY_PROTO_HTTPS  | --proxy-proto-https  | https             | forwarded HTTPS protocol `NAME`                                   |
 | PHOTOPRISM_HTTP_MODE          | --http-mode          |                   | Web server `MODE` (debug, release, or test)                       |
 | PHOTOPRISM_HTTP_COMPRESSION   | --http-compression   |                   | Web server compression `METHOD` (none or gzip)                    |
 | PHOTOPRISM_HTTP_HOST          | --http-host          |                   | Web server `IP` address                                           |

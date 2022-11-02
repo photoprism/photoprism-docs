@@ -7,7 +7,7 @@ When [importing](import.md), files are first transferred from a temporary folder
 Importing is also an efficient way to add files, since PhotoPrism does not need to search your *originals* folder to find new files.
 
 !!! info ""
-    Hidden files and folders that start with a `.`, `@`, or `_` like `__MACOSX` are automatically ignored. Other names to be
+    Hidden files and folders that start with a `.`, `@`, `_.`, or `__` like `__MACOSX` are automatically ignored. Other names to be
     ignored can be added to a `.ppignore` file in the *originals* or *import* folder it should affect.
     You can put it either in the main folder or in a subfolder to limit the scope.
 

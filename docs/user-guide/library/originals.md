@@ -29,7 +29,7 @@
 
 #### Ignoring Files and Folders ####
 
-Hidden files and folders that start with a `.`, `@`, or `_` like `__MACOSX` are automatically ignored. Other names to be 
+Hidden files and folders that start with a `.`, `@`, `_.`, or `__` like `__MACOSX` are automatically ignored. Other names to be 
 ignored can be added to a `.ppignore` file in the *originals* or *import* folder it should affect.
 You can put it either in the main folder or in a subfolder to limit the scope.
 

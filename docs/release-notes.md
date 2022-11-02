@@ -8,7 +8,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 221102-9f5ef7dd3</span>
+<span class="build">Build 221102-905925b4d</span>
 
 Due to the many new features, enhancements and bug fixes, this is one of those updates that took longer to release.
 Before upgrading, please read the full release notes and note that this release does not yet include support for user roles other than *Admin*, as we need to specify, create and test each new role before we can release it. Once this is done, we will also provide additional user management documentation.

@@ -1,6 +1,6 @@
 # Running PhotoPrism with Kubernetes
 
-*For advanced users only: The instructions for these migrations were provided by a contributor and are not part of the original software distribution. As such, they have not been officially released, recommended, or extensively tested by us. You can contribute by clicking :material-pencil: to send a pull request with your changes.*
+*For advanced users only. You can contribute by clicking :material-pencil: to send a pull request with your changes.*
 
 Running PhotoPrism on a Kubernetes cluster is straightforward.
 

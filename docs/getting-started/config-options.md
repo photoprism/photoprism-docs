@@ -103,16 +103,16 @@
 
 ### Web Server ###
 
-|          Environment          |       CLI Flag       |      Default      |                            Description                            |
-|-------------------------------|----------------------|-------------------|-------------------------------------------------------------------|
-| PHOTOPRISM_TRUSTED_PROXY      | --trusted-proxy      | 172.16.0.0/12     | `CIDR` range from which IP and HTTPS proxy headers can be trusted |
-| PHOTOPRISM_PROXY_PROTO_HEADER | --proxy-proto-header | X-Forwarded-Proto | proxy protocol header `NAME`                                      |
-| PHOTOPRISM_PROXY_PROTO_HTTPS  | --proxy-proto-https  | https             | forwarded HTTPS protocol `NAME`                                   |
-| PHOTOPRISM_HTTP_MODE          | --http-mode          |                   | Web server `MODE` (debug, release, or test)                       |
-| PHOTOPRISM_HTTP_COMPRESSION   | --http-compression   |                   | Web server compression `METHOD` (none or gzip)                    |
-| PHOTOPRISM_HTTP_HOST          | --http-host          |                   | Web server `IP` address                                           |
-| PHOTOPRISM_HTTP_PORT          | --http-port          |              2342 | Web server port `NUMBER`                                          |
-| PHOTOPRISM_DISABLE_TLS        | --disable-tls        |                   | disable HTTPS even if a certificate is available                  |
+|          Environment          |       CLI Flag       |      Default      | Description                                                  |
+|-------------------------------|----------------------|-------------------|--------------------------------------------------------------|
+| PHOTOPRISM_TRUSTED_PROXY      | --trusted-proxy      | 172.16.0.0/12     | `CIDR` range from which reverse proxy headers can be trusted |
+| PHOTOPRISM_PROXY_PROTO_HEADER | --proxy-proto-header | X-Forwarded-Proto | proxy protocol header `NAME`                                 |
+| PHOTOPRISM_PROXY_PROTO_HTTPS  | --proxy-proto-https  | https             | forwarded HTTPS protocol `NAME`                              |
+| PHOTOPRISM_HTTP_MODE          | --http-mode          |                   | Web server `MODE` (debug, release, or test)                  |
+| PHOTOPRISM_HTTP_COMPRESSION   | --http-compression   |                   | Web server compression `METHOD` (none or gzip)               |
+| PHOTOPRISM_HTTP_HOST          | --http-host          |                   | Web server `IP` address                                      |
+| PHOTOPRISM_HTTP_PORT          | --http-port          |              2342 | Web server port `NUMBER`                                     |
+| PHOTOPRISM_DISABLE_TLS        | --disable-tls        |                   | disable HTTPS even if a certificate is available             |
 
 ### Database Connection ###
 

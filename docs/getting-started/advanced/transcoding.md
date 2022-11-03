@@ -40,3 +40,30 @@ PHOTOPRISM_FFMPEG_BUFFERS: "64" # FFmpeg capture buffers (default: 32)
     It may not work on all server configurations.
     Some users report unexpected hangs in the FFmpeg process when attempting to 
     transcode large video files. 
+
+## Using the Nvidia Container Toolkit
+
+This involves installing a toolkit on the host machine. For instructions for your chosen distro please refer to [Nvidia Container Toolkit Installation Guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html).
+
+### Docker Compose file setup for Nvidia Container Toolkit
+
+On the same level as volumes, place the `deploy` section and re-create your containers.
+
+```yaml
+# --- cut out for brevity ---
+volumes:
+  # "/host/folder:/photoprism/folder"                # Example
+  - "/photoprism/originals/:/photoprism/originals"   # Original media files (DO NOT REMOVE)
+  # - "/example/family:/photoprism/originals/family" # *Additional* media folders can be mounted like this
+  - "/photoprism/import:/photoprism/import"          # *Optional* base folder from which files can be imported to originals
+  - "/photoprism/data:/photoprism/storage"           # *Writable* storage folder for cache, database, and sidecar files (DO NOT REMOVE)
+deploy:
+  resources:
+    reservations:
+      devices:
+        - driver: nvidia
+          count: 1
+          capabilities: [gpu]
+# --- cut out for brevity ---    
+```
+

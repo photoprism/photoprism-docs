@@ -51,6 +51,10 @@ On the same level as volumes, place the `deploy` section and re-create your cont
 
 ```yaml
 # --- cut out for brevity ---
+environment:
+  NVIDIA_VISIBLE_DEVICES: all
+  NVIDIA_DRIVER_CAPABILITIES: compute,video,utility
+# --- cut out for brevity ---
 volumes:
   # "/host/folder:/photoprism/folder"                # Example
   - "/photoprism/originals/:/photoprism/originals"   # Original media files (DO NOT REMOVE)

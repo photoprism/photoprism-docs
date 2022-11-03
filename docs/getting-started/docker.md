@@ -203,6 +203,7 @@ PhotoPrism's command-line interface is well suited for job automation using a
 | *Restore Index Database*         | `docker exec -ti photoprism photoprism restore -a -i`     |                   
 | *Change Admin Password*          | `docker exec -ti photoprism photoprism passwd`            | 
 | *Show User Management Commands*  | `docker exec -ti photoprism photoprism users help`        |
+| *Reset User Database*            | `docker exec -ti photoprism photoprism users reset --yes` |
 | *Show Face Recognition Commands* | `docker exec -ti photoprism photoprism faces help`        |
 | *Index Faces*                    | `docker exec -ti photoprism photoprism faces index`       |
 | *Reset People & Faces*           | `docker exec -ti photoprism photoprism faces reset -f`    |

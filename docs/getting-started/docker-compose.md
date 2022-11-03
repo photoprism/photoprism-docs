@@ -281,6 +281,7 @@ PhotoPrism's command-line interface is well suited for job automation using a
 | *Restore Index Database*                              | `docker-compose exec photoprism photoprism restore -a -i`     |                   
 | *Change Admin Password*                               | `docker-compose exec photoprism photoprism passwd`            |
 | *Show User Management Commands*                       | `docker-compose exec photoprism photoprism users help`        |
+| *Reset User Database*                                 | `docker-compose exec photoprism photoprism users reset --yes` |
 | *Show Face Recognition Commands*                      | `docker-compose exec photoprism photoprism faces help`        |
 | *Index Faces*                                         | `docker-compose exec photoprism photoprism faces index`       |
 | *Reset People & Faces*                                | `docker-compose exec photoprism photoprism faces reset -f`    |

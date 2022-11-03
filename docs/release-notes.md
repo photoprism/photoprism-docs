@@ -10,6 +10,8 @@
 ### November 3, 2022 ###
 <span class="build">Build 221103-211eb36ea</span>
 
+With this update you'll get the latest [translations contributed by our community](https://translate.photoprism.app/projects/photoprism/), updated dependencies as well as a few minor bug fixes and improvements.
+
 What's new?
 
 - Index: [Paths starting with `_.` and `__` like `__MACOSX` are ignored](https://github.com/photoprism/photoprism/issues/2844)

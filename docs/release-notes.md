@@ -7,6 +7,13 @@
 !!! tldr ""
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
+### Development Preview ###
+<span class="build">Build 221103-06744f356</span>
+
+What's new?
+
+- NVIDIA: [Updated FFmpeg parameters for hardware video transcoding](https://github.com/photoprism/photoprism/issues/2613#issuecomment-1288293791)
+
 ### November 3, 2022 ###
 <span class="build">Build 221103-211eb36ea</span>
 

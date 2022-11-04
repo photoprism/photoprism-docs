@@ -7,10 +7,10 @@
 !!! tldr ""
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
-### Development Preview ###
-<span class="build">Build 221104-6d865152d</span>
+### November 4, 2022 ###
+<span class="build">Build 221104-20d180b21</span>
 
-Our preview includes [improved NVIDIA GPU support](https://docs.photoprism.app/getting-started/advanced/transcoding/#nvidia-container-toolkit), the latest [translations contributed by our community](https://translate.photoprism.app/projects/photoprism/), as well as updated dependencies.
+A small update featuring [improved NVIDIA GPU support](https://docs.photoprism.app/getting-started/advanced/transcoding/#nvidia-container-toolkit), the latest [translations contributed by our community](https://translate.photoprism.app/projects/photoprism/), and updated dependencies.
 
 What's new?
 

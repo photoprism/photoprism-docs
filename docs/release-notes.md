@@ -8,11 +8,14 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 221103-06744f356</span>
+<span class="build">Build 221104-f728b1a1f</span>
+
+Our preview includes improved FFmpeg transcoding parameters for NVIDIA, the latest [translations contributed by our community](https://translate.photoprism.app/projects/photoprism/), as well as updated dependencies.
 
 What's new?
 
 - NVIDIA: [Updated FFmpeg parameters for hardware video transcoding](https://github.com/photoprism/photoprism/issues/2613#issuecomment-1288293791)
+- Translations: [Updated Chinese](https://github.com/photoprism/photoprism/commit/ddc1da8a30463932fc3792698827c01f270b1035)
 
 ### November 3, 2022 ###
 <span class="build">Build 221103-211eb36ea</span>

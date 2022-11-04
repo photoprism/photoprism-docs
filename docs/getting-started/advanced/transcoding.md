@@ -59,6 +59,8 @@ services:
     # --- cut out for brevity ---    
 ```
 
+See our [ready-to-use `docker-compose.yml` example](https://dl.photoprism.app/docker/nvidia/docker-compose.yml).
+
 ## Raspberry Pi
 
 Experimental hardware-accelerated transcoding on a Raspberry Pi (and compatible devices) can be enabled by choosing the `raspberry` encoder:

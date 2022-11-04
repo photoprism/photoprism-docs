@@ -10,11 +10,11 @@
 ### Development Preview ###
 <span class="build">Build 221104-6d865152d</span>
 
-Our preview includes improved FFmpeg transcoding parameters for NVIDIA, the latest [translations contributed by our community](https://translate.photoprism.app/projects/photoprism/), as well as updated dependencies.
+Our preview includes improved NVIDIA GPU support, the latest [translations contributed by our community](https://translate.photoprism.app/projects/photoprism/), as well as updated dependencies.
 
 What's new?
 
-- NVIDIA: [Added ready-to-use `docker-compose.yml` example](https://dl.photoprism.app/docker/nvidia/docker-compose.yml)
+- NVIDIA: [Added a ready-to-use `docker-compose.yml` config example](https://dl.photoprism.app/docker/nvidia/docker-compose.yml)
 - NVIDIA: [Updated FFmpeg parameters for hardware video transcoding](https://github.com/photoprism/photoprism/issues/2613#issuecomment-1288293791)
 - NVIDIA: [Updated install-gpu.sh script](https://github.com/photoprism/photoprism/commit/6d865152df0736ce2e3f826684015d982d2882c6) and [related documentation](https://docs.photoprism.app/getting-started/advanced/transcoding/#nvidia-container-toolkit)
 - Translations: [Updated Chinese](https://github.com/photoprism/photoprism/commit/ddc1da8a30463932fc3792698827c01f270b1035)

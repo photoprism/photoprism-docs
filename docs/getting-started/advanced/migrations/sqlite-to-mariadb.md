@@ -22,7 +22,7 @@ Attachment 1:
 services:
   mariadb:
     restart: unless-stopped
-    image: mariadb:10.8
+    image: mariadb:10.9
     ports:
       - 3306:3306 # Expose Port 3306 
     security_opt:

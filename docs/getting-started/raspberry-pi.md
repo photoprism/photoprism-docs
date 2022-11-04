@@ -38,7 +38,7 @@ after going through a short list of [system requirements](#system-requirements).
 |---------------------|---------------------------------|
 | Stable Release      | `photoprism/photoprism:latest`  | 
 | Development Preview | `photoprism/photoprism:preview` | 
-| MariaDB             | `arm64v8/mariadb:10.8`          | 
+| MariaDB             | `arm64v8/mariadb:10.9`          | 
 
 Running 64-bit Docker images under Raspbian Linux requires a minimum of technical experience to perform the necessary [configuration changes](#raspberry-pi-os). This is because it is a 32-bit operating system with merely a 64-bit kernel to ensure compatibility with legacy software.  If you don't need compatibility with 32-bit apps, we recommend choosing a standard 64-bit Linux distribution instead as it will save you time and requires less experience:
 

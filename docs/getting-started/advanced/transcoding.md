@@ -20,6 +20,13 @@ It defaults to `software` if no value is set or hardware transcoding fails. Plea
 !!! tldr ""
     For transcoding to work, FFmpeg must be enabled and installed. When using our Docker images, it is already pre-installed. In addition, the service must have permission to use the related video devices. This depends on your hardware and operating system, so we can only give you examples that may need to be changed to work for you.
 
+## GPU Drivers
+
+Depending on your hardware, it may be necessary to install additional packages for FFmpeg to use the AVC encoding device. One way to do this is to set `PHOTOPRISM_INIT` to `"gpu tensorflow"` when using our Docker images. Note this is experimental and currently only required for *Intel HD Graphics i915* hardware. For example, if you use the *NVIDIA Container Toolkit*, as described below, you don't need to set the `gpu` target. See the [related installation script on GitHub](https://github.com/photoprism/photoprism/blob/develop/scripts/dist/install-gpu.sh) for details. We welcome contributions to support additional devices or update package names if needed.
+
+!!! tldr ""
+    Most users can either skip `PHOTOPRISM_INIT` completely or just use `PHOTOPRISM_INIT: "tensorflow"` to install a special version of TensorFlow that improves indexing performance if your server CPU supports AVX, a technology unrelated to video transcoding.
+
 ## NVIDIA Container Toolkit
 
 For hardware transcoding with an NVIDIA graphics card, the NVIDIA Container Toolkit must be installed on the host computer first. Instructions can be found in their [installation guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html).
@@ -31,6 +38,8 @@ At the same level as the volumes, add the `deploy` section and then restart all 
 ```yaml
 # --- cut out for brevity ---
 environment:
+  PHOTOPRISM_FFMPEG_ENCODER: "nvidia"
+  PHOTOPRISM_INIT: "tensorflow"
   NVIDIA_VISIBLE_DEVICES: all
   NVIDIA_DRIVER_CAPABILITIES: compute,video,utility
 # --- cut out for brevity ---

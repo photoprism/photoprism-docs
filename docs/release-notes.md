@@ -10,7 +10,7 @@
 ### Development Preview ###
 <span class="build">Build 221104-6d865152d</span>
 
-Our preview includes improved NVIDIA GPU support, the latest [translations contributed by our community](https://translate.photoprism.app/projects/photoprism/), as well as updated dependencies.
+Our preview includes [improved NVIDIA GPU support](https://docs.photoprism.app/getting-started/advanced/transcoding/#nvidia-container-toolkit), the latest [translations contributed by our community](https://translate.photoprism.app/projects/photoprism/), as well as updated dependencies.
 
 What's new?
 

@@ -36,23 +36,25 @@ For hardware transcoding with an NVIDIA graphics card, the NVIDIA Container Tool
 At the same level as the volumes, add the `deploy` section and then restart all services for the changes to take effect:
 
 ```yaml
-# --- cut out for brevity ---
-environment:
-  PHOTOPRISM_FFMPEG_ENCODER: "nvidia"
-  PHOTOPRISM_INIT: "tensorflow"
-  NVIDIA_VISIBLE_DEVICES: all
-  NVIDIA_DRIVER_CAPABILITIES: compute,video,utility
-# --- cut out for brevity ---
-volumes:
-  - ...
-deploy:
-  resources:
-    reservations:
-      devices:
-        - driver: nvidia
-          count: 1
-          capabilities: [gpu]
-# --- cut out for brevity ---    
+services:
+  photoprism:
+    # --- cut out for brevity ---
+    environment:
+      PHOTOPRISM_FFMPEG_ENCODER: "nvidia"
+      PHOTOPRISM_INIT: "tensorflow"
+      NVIDIA_VISIBLE_DEVICES: "all"
+      NVIDIA_DRIVER_CAPABILITIES: "compute,video,utility"
+    # --- cut out for brevity ---
+    volumes:
+      - ...
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: "nvidia"
+              count: 1
+              capabilities: [gpu]
+    # --- cut out for brevity ---    
 ```
 
 ## Raspberry Pi

@@ -17,6 +17,8 @@ docker compose stop
 docker compose up -d
 ```
 
+*Note that our guides now use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` to start and stop your instance.*
+
 Pulling a new version can take several minutes, depending on your internet connection speed.
 
 Advanced users can add this to a `Makefile` so that they only have to type a single 

@@ -7,16 +7,17 @@
 
 ### Installation
 
-If you can't use the `docker` and `docker-compose` commands at all, make sure [Docker](https://docs.docker.com/config/daemon/#start-the-daemon-manually)
-is running on the host you are connected to and your current user has the permission to use it. The following guides explain how to install Docker:
+If you cannot use the `docker` and `docker compose` or `docker-compose` commands, make sure [Docker](https://docs.docker.com/config/daemon/#start-the-daemon-manually) is running on the host you are connected to and your current user has permission to use it.
+The following instructions explain how to install Docker:
 
 - [Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04), [Mint](https://techviewleo.com/how-to-install-and-use-docker-in-linux-mint/), [Debian](https://www.linode.com/docs/guides/installing-and-using-docker-on-ubuntu-and-debian/), [Arch](https://wiki.archlinux.org/title/docker#Installation), and [Fedora](https://docs.docker.com/engine/install/fedora/) Linux
 - [Microsoft Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 - [Apple macOS](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 
+Our guides now use the new `docker compose` command by default. However, if your server does not yet support it, you can still use `docker-compose` to start and stop your instance.
+
 !!! info "Docker Compose"
-    Linux distributions may require you to install the `docker-compose` command separately, for example by
-    running `sudo apt install docker-compose` in a terminal or using a graphical software package manager.
+    On some Linux distributions, you may need to install additional packages to use `docker compose` or `docker-compose`, for example by running `sudo apt install docker-compose` in a terminal or using a graphical software package manager.
 
 ### Using Docker
 #### Cannot Connect

@@ -10,7 +10,7 @@
 ### November 5, 2022 ###
 <span class="build">Build 221105-7a295cab4</span>
 
-This service release provides UX improvements for the photo editing dialog and includes the latest [translations contributed by our community](https://translate.photoprism.app/projects/photoprism/). Note that our Docker Compose examples now use the "docker compose" command by default. If your server does not yet support the new command, you can still use "docker-compose" to start and stop your instance.
+This service release provides UX improvements for the photo editing dialog and includes the latest [translations contributed by our community](https://translate.photoprism.app/projects/photoprism/). Note that [our guides now use the new `docker compose` command](https://docs.photoprism.app/getting-started/docker-compose/#step-2-start-the-server) by default. If your server does not yet support it, you can still use `docker-compose` to start and stop your instance.
 
 What's new?
 

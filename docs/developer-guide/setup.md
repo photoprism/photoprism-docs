@@ -31,7 +31,7 @@ make docker-build
 docker compose up
 ```
 
-*Note: This environment is for testing and development purposes only. Do not use it in production.*
+*This environment is for testing and development purposes only. Do not use it in production. Also note that our guides now use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose`.*
 
 ### Step 3: Install the Dependencies and Start Developing
 

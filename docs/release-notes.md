@@ -10,6 +10,8 @@
 ### November 5, 2022 ###
 <span class="build">Build 221105-7a295cab4</span>
 
+This service release provides UX improvements for the photo editing dialog and includes the latest [translations contributed by our community](https://translate.photoprism.app/projects/photoprism/). Note that our Docker Compose examples now use the "docker compose" command by default. If your server does not yet support the new command, you can still use "docker-compose" to start and stop your instance.
+
 What's new?
 
 - UX: [Improved layout of form fields in photo edit dialog](https://github.com/photoprism/photoprism/commit/7a295cab4931d15d685e272b9363c734cfe78c0f)

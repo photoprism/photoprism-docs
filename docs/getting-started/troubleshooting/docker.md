@@ -48,8 +48,8 @@ Alternatively, you can prefix the `docker` and `docker-compose` commands with `s
 for example:
 
 ```bash
-sudo docker-compose stop
-sudo docker-compose up -d
+sudo docker compose stop
+sudo docker compose up -d
 ```
 
 Note that this will point the home directory shortcut `~` to `/root` in the `volumes:` section
@@ -60,7 +60,7 @@ of your `docker-compose.yml`.
 Run this command to display the last 100 log messages (omit `--tail=100` to see all):
 
 ```bash
-docker-compose logs --tail=100
+docker compose logs --tail=100
 ```
 
 To enable [debug mode](../config-options.md), set `PHOTOPRISM_DEBUG` to `true` in the `environment:` section
@@ -77,8 +77,8 @@ Then restart all services for the changes to take effect. It can be helpful to k
 while debugging so that log messages are displayed directly. To do this, omit the `-d` parameter when restarting:
 
 ```bash
-docker-compose stop
-docker-compose up 
+docker compose stop
+docker compose up 
 ```
 
 !!! note ""

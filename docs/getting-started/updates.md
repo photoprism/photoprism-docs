@@ -12,9 +12,9 @@ Now run the following commands to download the most recent image from Docker Hub
 restart your instance in the background:
 
 ```
-docker-compose pull
-docker-compose stop
-docker-compose up -d
+docker compose pull
+docker compose stop
+docker compose up -d
 ```
 
 Pulling a new version can take several minutes, depending on your internet connection speed.
@@ -72,14 +72,14 @@ as this requires less experience. Alternative 32-bit Docker images are provided 
 Existing users may index faces without performing a complete rescan:
 
 ```
-docker-compose exec photoprism photoprism faces index
+docker compose exec photoprism photoprism faces index
 ```
 
 Remove existing people and faces for a clean start e.g. after upgrading from our 
 [development preview](https://docs.photoprism.app/release-notes/#development-preview):
 
 ```
-docker-compose exec photoprism photoprism faces reset -f
+docker compose exec photoprism photoprism faces reset -f
 ```
 
 #### Watchtower ####

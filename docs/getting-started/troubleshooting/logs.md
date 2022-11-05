@@ -63,7 +63,7 @@
     Run this command to display the last 100 log messages (omit `--tail=100` to see all):
 
     ```bash
-    docker-compose logs --tail=100
+    docker compose logs --tail=100
     ```
     
     To enable [debug mode](../config-options.md), set `PHOTOPRISM_DEBUG` to `true` in the `environment:` section
@@ -80,8 +80,8 @@
     while debugging so that log messages are displayed directly. To do this, omit the `-d` parameter when restarting:
     
     ```bash
-    docker-compose stop
-    docker-compose up 
+    docker compose stop
+    docker compose up 
     ```
     
     !!! note ""

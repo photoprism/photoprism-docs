@@ -113,13 +113,13 @@ To install Portainer:
 
 #### Step 3: Install PhotoPrism in your Synology NAS using Portainer, accessible over http / direct IP ####
 
-With Portainer installed we can use a docker-compose file to deploy a stack composed by PhotoPrism and MariaDB to quickly get PhotoPrism running in our NAS. We can use [PhotoPrism's default docker-compose yml file](https://dl.photoprism.app/docker/docker-compose.yml).
+With Portainer installed we can use a docker-compose.yml file to deploy a stack composed by PhotoPrism and MariaDB to quickly get PhotoPrism running in our NAS. We can use [PhotoPrism's default docker compose yml file](https://dl.photoprism.app/docker/docker-compose.yml).
 
 11. open Synology's File Station app and browse to the _docker_ shared folder;
 12. create a folder named _photoprism_ inside _docker_, which will persist relevant Photoprism's data in our local filesystem;
 13. inside _photoprism_ folder, create three more folders: _storage_, _originals_ and _database_.
 14. Open Portainer by visiting http://[YOUR-LOCAL-IP]:9000/;
-15. Click _Stacks_ in the left menu, then _Add stack_, give it a meaningful name (for eg. Photoprism) and in the Web Editor place the content of [PhotoPrism's default docker-compose yml file](https://dl.photoprism.app/docker/docker-compose.yml).
+15. Click _Stacks_ in the left menu, then _Add stack_, give it a meaningful name (for eg. Photoprism) and in the Web Editor place the content of [PhotoPrism's default docker compose yml file](https://dl.photoprism.app/docker/docker-compose.yml).
 
 **BE SURE TO USE YOUR OWN PHOTOPRISM_ADMIN_PASSWORD, PHOTOPRISM_DATABASE_PASSWORD, MYSQL_ROOT_PASSWORD, AND MYSQL_PASSWORD BY CHANGING THE VALUES ACCORDINGLY, AND CHECK THE LOCAL VOLUMES PATHS TO MATCH THOSE DEFINED IN STEP 13**.
 

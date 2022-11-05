@@ -60,7 +60,7 @@ However, newer MariaDB Docker images **support automatic upgrades** on startup, 
 To manually upgrade the internal database schema, run this command in a terminal:
 
 ```bash
-docker-compose exec mariadb mariadb-upgrade -uroot -p
+docker compose exec mariadb mariadb-upgrade -uroot -p
 ```
 
 Enter the MariaDB "root" password specified in your `docker-compose.yml` when prompted.
@@ -98,18 +98,18 @@ If your database does not seem to be compatible with the currently installed ver
 Once you have verified that neither is a problem, you can run the following command [in a terminal](../docker-compose.md#command-line-interface) to check the status of previous database schema migrations:
 
 ```bash
-docker-compose exec photoprism photoprism migrations ls
+docker compose exec photoprism photoprism migrations ls
 ```
 
 !!! note ""
-    Omit the `docker-compose exec photoprism` prefix if you are using an interactive terminal session or are running PhotoPrism directly on your computer without Docker.
+    Omit the `docker compose exec photoprism` prefix if you are using an interactive terminal session or are running PhotoPrism directly on your computer without Docker.
 
 ##### Re-Run Migrations #####
 
 Should the status of any migration not be OK, you can re-run failed migrations using this command in a terminal:
 
 ```bash
-docker-compose exec photoprism photoprism migrations run -f
+docker compose exec photoprism photoprism migrations run -f
 ```
 
 The `-f` flag instructs the `photoprism migrations run` subcommand to re-run previously failed migrations. Use `--help` to see the command help.
@@ -121,7 +121,7 @@ Additional migration command examples can be found in the [Developer Guide](../.
 We recommend that you **re-index your pictures after a schema migration**, especially if problems persist. You can either start a [rescan from the user interface](../../user-guide/library/originals.md) by navigating to *Library* > *Index*, checking "Complete Rescan", and then clicking "Start", or by running this command in a terminal:
 
 ```bash
-docker-compose exec photoprism photoprism index -f
+docker compose exec photoprism photoprism index -f
 ```
 
 !!! tldr ""
@@ -143,14 +143,14 @@ services:
 Restart the `mariadb` service for changes to take effect:
 
 ```bash
-docker-compose stop mariadb
-docker-compose up -d mariadb
+docker compose stop mariadb
+docker compose up -d mariadb
 ```
 
 Now open a database console:
 
 ```bash
-docker-compose exec mariadb mysql -uroot
+docker compose exec mariadb mysql -uroot
 ```
 
 Enter the following commands to change the password for "root":
@@ -201,7 +201,7 @@ password `insecure` and database name `photoprism` as specified in your `docker-
 
 ```bash
 echo "SHOW VARIABLES WHERE Variable_name LIKE 'character\_set\_%' OR Variable_name LIKE 'collation%';" | \
-docker-compose exec -T mariadb mysql -uroot -pinsecure photoprism
+docker compose exec -T mariadb mysql -uroot -pinsecure photoprism
 ```
 
 #### MySQL Errors ####

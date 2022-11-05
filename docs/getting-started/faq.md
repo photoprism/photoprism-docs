@@ -345,7 +345,7 @@ all commands and parameters available in your currently installed [version](http
 are listed:
 
 ```bash
-docker-compose exec photoprism photoprism help
+docker compose exec photoprism photoprism help
 ```
 
 Our [Docker Compose](docker-compose.md) [examples](https://dl.photoprism.app/docker/) are continuously 
@@ -364,7 +364,7 @@ This depends on how you installed it. If you're running PhotoPrism with [Docker 
 this command will stop and remove the Docker container:
 
 ```bash
-docker-compose rm -s -v
+docker compose rm -s -v
 ```
 
 Please refer to the official Docker [documentation](https://docs.docker.com/compose/reference/rm/) 

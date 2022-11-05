@@ -168,7 +168,7 @@ Open a terminal and change to the folder in which the `docker-compose.yml` file 
 Run this command to start the application and database services in the background:
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 Now open the Web UI by navigating to http://localhost:2342/. You should see a login screen.
@@ -185,15 +185,15 @@ Enabling [public mode](config-options.md) will disable authentication.
 
 !!! tldr ""
     It is not possible to change the password via `PHOTOPRISM_ADMIN_PASSWORD` after the app has been 
-    started for the first time. You may run `docker-compose exec photoprism photoprism passwd` 
+    started for the first time. You may run `docker compose exec photoprism photoprism passwd` 
     in a terminal to change an existing password. You can also reset your database for a clean start.
 
 The server port and other [config options](config-options.md) can be changed in `docker-compose.yml` at any time.
 Remember to restart the services for changes to take effect:
 
 ```bash
-docker-compose stop
-docker-compose up -d
+docker compose stop
+docker compose up -d
 ```
 
 ### Step 3: Index Your Library ###
@@ -248,17 +248,17 @@ Other issues? Our [troubleshooting checklists](troubleshooting/index.md) help yo
 `photoprism help` lists all commands and [config options](config-options.md) available in the current version:
 
 ```bash
-docker-compose exec photoprism photoprism help
+docker compose exec photoprism photoprism help
 ```
 
 Use the `--help` flag to see a detailed command description, for example:
 
 ```bash
-docker-compose exec photoprism photoprism backup --help
+docker compose exec photoprism photoprism backup --help
 ```
 
 !!! tip ""
-    When using *Docker Compose*, you can prepend commands like `docker-compose exec [service] [command]` to run them in a service container.
+    When using *Docker Compose*, you can prepend commands like `docker compose exec [service] [command]` to run them in a service container.
     Should this fail with *no container found*, make sure the service has been started, you have specified an existing service (usually `photoprism`) and you are in the folder where the `docker-compose.yml` file is located.
 
 PhotoPrism's command-line interface is well suited for job automation using a
@@ -268,30 +268,30 @@ PhotoPrism's command-line interface is well suited for job automation using a
 
 | Action                                                | Command                                                       |
 |-------------------------------------------------------|---------------------------------------------------------------|
-| *Start Services*                                      | `docker-compose up -d`                                        | 
-| *Stop Services*                                       | `docker-compose stop`                                         |
-| *Download Updates*                                    | `docker-compose pull`                                         |
-| *Uninstall*                                           | `docker-compose rm -s -v`                                     |
-| [*View Logs*](troubleshooting/docker.md#viewing-logs) | `docker-compose logs --tail=100 -f`                           |
-| *Display Config Values*                               | `docker-compose exec photoprism photoprism show config`       |
-| *Show Migration Status*                               | `docker-compose exec photoprism photoprism migrations ls`     |
-| *Repeat Failed Migrations*                            | `docker-compose exec photoprism photoprism migrations run -f` |
-| *Reset Index Database*                                | `docker-compose exec photoprism photoprism reset -y`          |
-| *Backup Index Database*                               | `docker-compose exec photoprism photoprism backup -a -i`      |                      
-| *Restore Index Database*                              | `docker-compose exec photoprism photoprism restore -a -i`     |                   
-| *Change Admin Password*                               | `docker-compose exec photoprism photoprism passwd`            |
-| *Show User Management Commands*                       | `docker-compose exec photoprism photoprism users help`        |
-| *Reset User Database*                                 | `docker-compose exec photoprism photoprism users reset --yes` |
-| *Show Face Recognition Commands*                      | `docker-compose exec photoprism photoprism faces help`        |
-| *Index Faces*                                         | `docker-compose exec photoprism photoprism faces index`       |
-| *Reset People & Faces*                                | `docker-compose exec photoprism photoprism faces reset -f`    |
-| *Transcode Videos to AVC*                             | `docker-compose exec photoprism photoprism convert`           |
-| *Regenerate Thumbnails*                               | `docker-compose exec photoprism photoprism thumbs -f`         |
-| [*Update Index*](../user-guide/library/originals.md)  | `docker-compose exec photoprism photoprism index --cleanup`   |                  
-| [*Import Files*](../user-guide/library/import.md)     | `docker-compose exec photoprism photoprism import [path]`     |                  
+| *Start Services*                                      | `docker compose up -d`                                        | 
+| *Stop Services*                                       | `docker compose stop`                                         |
+| *Download Updates*                                    | `docker compose pull`                                         |
+| *Uninstall*                                           | `docker compose rm -s -v`                                     |
+| [*View Logs*](troubleshooting/docker.md#viewing-logs) | `docker compose logs --tail=100 -f`                           |
+| *Display Config Values*                               | `docker compose exec photoprism photoprism show config`       |
+| *Show Migration Status*                               | `docker compose exec photoprism photoprism migrations ls`     |
+| *Repeat Failed Migrations*                            | `docker compose exec photoprism photoprism migrations run -f` |
+| *Reset Index Database*                                | `docker compose exec photoprism photoprism reset -y`          |
+| *Backup Index Database*                               | `docker compose exec photoprism photoprism backup -a -i`      |                      
+| *Restore Index Database*                              | `docker compose exec photoprism photoprism restore -a -i`     |                   
+| *Change Admin Password*                               | `docker compose exec photoprism photoprism passwd`            |
+| *Show User Management Commands*                       | `docker compose exec photoprism photoprism users help`        |
+| *Reset User Database*                                 | `docker compose exec photoprism photoprism users reset --yes` |
+| *Show Face Recognition Commands*                      | `docker compose exec photoprism photoprism faces help`        |
+| *Index Faces*                                         | `docker compose exec photoprism photoprism faces index`       |
+| *Reset People & Faces*                                | `docker compose exec photoprism photoprism faces reset -f`    |
+| *Transcode Videos to AVC*                             | `docker compose exec photoprism photoprism convert`           |
+| *Regenerate Thumbnails*                               | `docker compose exec photoprism photoprism thumbs -f`         |
+| [*Update Index*](../user-guide/library/originals.md)  | `docker compose exec photoprism photoprism index --cleanup`   |                  
+| [*Import Files*](../user-guide/library/import.md)     | `docker compose exec photoprism photoprism import [path]`     |                  
 
 !!! info "Complete Rescan"
-    `docker-compose exec photoprism photoprism index -f` rescans all originals, including already indexed and unchanged files.
+    `docker compose exec photoprism photoprism index -f` rescans all originals, including already indexed and unchanged files.
     This may be necessary after major upgrades and after migrations of the database schema, especially if search results are missing or incorrect. Note you can also start a [rescan from the user interface](../user-guide/library/originals.md) by navigating to *Library* > *Index*, checking "Full Rescan" and then clicking "Start".
 
 *[home directory]: \user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux

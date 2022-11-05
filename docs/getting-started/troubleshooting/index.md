@@ -11,7 +11,7 @@ If [your browser](browsers.md) cannot connect to the Web UI even after waiting a
 the last 100 log messages (omit `--tail=100` to see all):
 
 ```bash
-docker-compose logs --tail=100
+docker compose logs --tail=100
 ```
 
 Before reporting a bug:
@@ -55,8 +55,8 @@ Then restart all services for the changes to take effect. It can be helpful to k
 while debugging so that log messages are displayed directly. To do this, omit the `-d` parameter when restarting:
 
 ```bash
-docker-compose stop
-docker-compose up 
+docker compose stop
+docker compose up 
 ```
 
 !!! note ""

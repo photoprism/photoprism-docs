@@ -28,7 +28,7 @@ Pull the latest Docker images and then launch the pre-configured build environme
 
 ```bash
 make docker-build
-docker-compose up
+docker compose up
 ```
 
 *Note: This environment is for testing and development purposes only. Do not use it in production.*

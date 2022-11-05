@@ -14,7 +14,7 @@ photoprism backup -i [filename]
 Or the following for [docker-compose](../docker-compose.md):
 
 ```
-docker-compose exec -T photoprism photoprism backup -i - > photoprism-db.sql
+docker compose exec -T photoprism photoprism backup -i - > photoprism-db.sql
 ```
 
 As seen above, you can use `-` as filename to write the backup to stdout.

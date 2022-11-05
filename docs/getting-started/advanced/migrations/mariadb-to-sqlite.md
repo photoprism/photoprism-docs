@@ -3,14 +3,14 @@
 *For advanced users only: The instructions for these migrations were provided by a contributor and are not part of the original software distribution. As such, they have not been officially released, recommended, or extensively tested by us. You can contribute by clicking :material-pencil: to send a pull request with your changes.*
 
 - Install <https://github.com/techouse/mysql-to-sqlite3> on your host.
-- Stop Photoprism: `docker-compose stop photoprism`
+- Stop Photoprism: `docker compose stop photoprism`
 - Add the port to the MariaDB service
 - On the **host** now run `sudo mysql2sqlite -f <PATH_TO_STORAGE_MOUNT>/storage/index.db -d photoprism -u root --mysql-password 'insecure'`
-- Shutdown your current stack fully: `docker-compose down`
+- Shutdown your current stack fully: `docker compose down`
 - Edit your `docker-compose.yml`:
   - Remove the MariaDB service.
   - Change in the Photoprism settings to use the sqlite driver and remove the other database settings
-- Start your stack again with `docker-compose up -d`
+- Start your stack again with `docker compose up -d`
 - If this worked you may want to delete the old mountpoint for the MariaDB database.
 
 !!! warning "Bad Performance"

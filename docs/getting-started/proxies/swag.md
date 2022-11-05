@@ -17,7 +17,7 @@ The first step is to grab a dynamic DNS if you don't have your own subdomain alr
 
 ### Step 2: Set-up SWAG ###
 
-Then you will need to set up SWAG, the variables of the docker-compose are explained on the Github page of [SWAG](https://github.com/linuxserver/docker-swag).
+Then you will need to set up SWAG, the variables of the docker compose are explained on the Github page of [SWAG](https://github.com/linuxserver/docker-swag).
 This is an example of how to set it up using duckdns and docker-compose. 
 
 !!! example "docker-compose.yml"
@@ -96,7 +96,7 @@ If everything went well, you can now access photoprism on the subdomain you conf
 !!! attention
     The docker-container of photoprism won't be named "photoprism", it will be "name_photoprism".
     To check this, execute <code>docker ps</code> and check wether it is named "photoprism".
-    If it's not, go to your docker-compose file and add the following line to photoprism below 'image' <code>container_name=photoprism</code>. Restart swag afterwards.
+    If it's not, go to your docker-compose.yml file and add the following line to photoprism below 'image' <code>container_name=photoprism</code>. Restart swag afterwards.
     <b>Keep in mind to not have two photoprism containers with the same name!</b> 
     You could also change the config file of Swag with the right name in the proxy-confs directory.
 

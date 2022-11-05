@@ -33,7 +33,7 @@ In that case, you may [run the following command in a terminal](../../getting-st
 to pre-transcode all video originals if needed:
 
 ```
-docker-compose exec photoprism photoprism convert
+docker compose exec photoprism photoprism convert
 ```
 
 !!! note ""

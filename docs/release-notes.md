@@ -7,11 +7,12 @@
 !!! tldr ""
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
-### Development Preview ###
-<span class="build">Build 221105-5538170b2</span>
+### November 5, 2022 ###
+<span class="build">Build 221105-08a7ab2b7</span>
 
 What's new?
 
+- Account: [Disabled "gender" dropdown when busy or in demo mode](https://github.com/photoprism/photoprism/commit/08a7ab2b78885e698e9cc026ac66d818769d6705)
 - Docker: [Changed "docker-compose" command to "docker compose"](https://github.com/photoprism/photoprism/pull/1192)
 - Translations: [Updated Estonian, Hungarian, and Russian](https://github.com/photoprism/photoprism/commit/95c0ff6c7f908a90b927939e96c2475f8087cd5f#diff-1669a8e9dc01e9e39ed09a83475354fdc8ed4617fa36f9904c7272991ee35ed2)
 

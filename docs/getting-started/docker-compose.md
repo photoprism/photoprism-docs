@@ -278,12 +278,12 @@ PhotoPrism's command-line interface is well suited for job automation using a
 | *Display Config Values*                               | `docker compose exec photoprism photoprism show config`       |
 | *Show Migration Status*                               | `docker compose exec photoprism photoprism migrations ls`     |
 | *Repeat Failed Migrations*                            | `docker compose exec photoprism photoprism migrations run -f` |
-| *Reset Index Database*                                | `docker compose exec photoprism photoprism reset -y`          |
-| *Backup Index Database*                               | `docker compose exec photoprism photoprism backup -a -i`      |                      
-| *Restore Index Database*                              | `docker compose exec photoprism photoprism restore -a -i`     |                   
+| *Reset Database*                                      | `docker compose exec photoprism photoprism reset -y`          |
+| *Backup Database*                                     | `docker compose exec photoprism photoprism backup -a -i`      |                      
+| *Restore Database*                                    | `docker compose exec photoprism photoprism restore -a -i`     |                   
 | *Change Admin Password*                               | `docker compose exec photoprism photoprism passwd`            |
 | *Show User Management Commands*                       | `docker compose exec photoprism photoprism users help`        |
-| *Reset User Database*                                 | `docker compose exec photoprism photoprism users reset --yes` |
+| *Reset Users*                                         | `docker compose exec photoprism photoprism users reset -y`    |
 | *Show Face Recognition Commands*                      | `docker compose exec photoprism photoprism faces help`        |
 | *Index Faces*                                         | `docker compose exec photoprism photoprism faces index`       |
 | *Reset People & Faces*                                | `docker compose exec photoprism photoprism faces reset -f`    |

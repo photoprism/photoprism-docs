@@ -15,7 +15,7 @@ Shows all photos and videos that are not in review or archived or private.
 !!! hint ""
     In case the review, private or archive functions are turned off - Search displays those photos and videos as well.
 
-![Screenshot](../organize/img/search-section.jpg){ class="shadow" }
+![Screenshot](../organize/img/search-section-dark.png){ class="shadow" }
 
 #### Monochrome
 
@@ -45,17 +45,17 @@ Shows archived photos.
 
 Shows albums you created.
 
-![Screenshot](../organize/img/albums.jpg){ class="shadow" }
+![Screenshot](../organize/img/albums-section-dark.png){ class="shadow" }
 
 #### Unsorted
 
 Shows all photos that are not part of an album.
 
+![Screenshot](../organize/img/unsorted-section-dark.png){ class="shadow" }
+
 ### :material-movie: [Videos](../organize/video.md)
 
 Shows videos that are not in review or archived or private.
-
-![Screenshot](../organize/img/videos.jpg){ class="shadow" }
 
 ### :material-account: People
 
@@ -65,39 +65,41 @@ Shows photos and videos grouped by people on it.
 
 Shows all photos and videos you liked.
 
-![Screenshot](../organize/img/favorites.jpg){ class="shadow" }
-
 ### :material-compass: [Moments](../organize/moments.md)
 
 Discover albums we automatically create for you.
 
-![Screenshot](../organize/img/moments.jpg){ class="shadow" }
+![Screenshot](../organize/img/moments-section-dark.png){ class="shadow" }
 
 ### :material-calendar-range: [Calendar](../organize/calendar.md)
 
 Organizes your photos due to time taken.
 
-![Screenshot](../organize/img/calendar.jpg){ class="shadow" }
+![Screenshot](../organize/img/calendar-section-dark.png){ class="shadow" }
 
 ### :material-map-marker: [Places](../organize/places.md)
 
 Displays all photos and videos with location information on a worldmap.
 
-![Screenshot](../organize/img/places.jpg){ class="shadow" }
+![Screenshot](../organize/img/places-section-dark.png){ class="shadow" }
 
 #### States
 
 Shows your photos grouped by location.
 
+![Screenshot](../organize/img/states-section-dark.png){ class="shadow" }
+
 ### :material-label: [Labels](../organize/labels.md)
 
 Shows your photos and videos grouped by labels like cat, dog or beach.
 
-![Screenshot](../organize/img/labels.jpg){ class="shadow" }
+![Screenshot](../organize/img/labels-section-dark.png){ class="shadow" }
 
 ### :material-folder: [Folders](../organize/folders.md)
 
 Displays all folders of your originals directory.
+
+![Screenshot](../organize/img/folder-section-dark.png){ class="shadow" }
 
 ### :material-lock: [Private](../organize/private.md)
 
@@ -107,9 +109,9 @@ Shows photos and videos marked as private.
 
 Hierarchical view of your originals directory.
 
-![Screenshot](../organize/img/originals.jpg){ class="shadow" }
+![Screenshot](../library/img/files-dark.png){ class="shadow" }
 
-![Screenshot](../organize/img/originals2.jpg){ class="shadow" }
+![Screenshot](../library/img/files-2-dark.png){ class="shadow" }
 
 
 

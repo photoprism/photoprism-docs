@@ -14,22 +14,25 @@ The quality score depends on the following:
     In case you do not need the review mechanism you can turn it off in [Settings](../settings/general.md)
 
 ### Approve Photos ###
-=== "Edit Dialog"
-     1. Open the photo's  [*edit dialog*](edit.md)
-     2. Click *approve*
-
-        ![Screenshot](img/review.png){ class="shadow" }
-
 === "Card View"
      1. Go to *Review* and make sure you are in *card view*
      2. Click *approve*
 
-        ![Screenshot](img/review-2.png){ class="shadow" }
+        ![Screenshot](img/review-2-light.png){ class="shadow" }
 
 === "Context Menu"
      1. Go to *Review* 
      2. Select photos and open the context menu
      3. Click :material-check:
+
+        ![Screenshot](img/review-3-light.png){ class="shadow" }
+
+=== "Edit Dialog"
+     1. Open the photo's  [*edit dialog*](edit.md)
+     2. Click *approve*
+
+         ![Screenshot](img/review-light.png){ class="shadow" }
+
 
 
 !!! attention ""

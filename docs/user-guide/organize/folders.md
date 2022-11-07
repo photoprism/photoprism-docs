@@ -2,7 +2,7 @@
 We automatically display all folders of your *originals directory* in the *Folders section*.
 In case you add new files to your *originals directory* your folders will be updated.
 
-![Screenshot](img/folders-1.png){ class="shadow" }
+![Screenshot](img/folders-light.png){ class="shadow" }
 
 The context menu allows you to perform the following actions:
 

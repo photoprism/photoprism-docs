@@ -2,7 +2,7 @@
 PhotoPrism automatically marks photos with an aspect ratio of 2/1 or higher as *panorama*.
 You can view all your panorama images in the *Panorama section*.
 
-![Screenshot](img/panorama-1.png){ class="shadow" }
+![Screenshot](img/panorama-1-light.png){ class="shadow" }
 
 ## Edit Panorama Flags ##
 
@@ -10,4 +10,4 @@ You can view all your panorama images in the *Panorama section*.
  2. Click :material-cog:
  3. Set or unset the panorama flag
 
-![Screenshot](img/panorama-2.png){ class="shadow" }
+![Screenshot](img/panorama-2-light.png){ class="shadow" }

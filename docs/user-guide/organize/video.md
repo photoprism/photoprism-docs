@@ -4,7 +4,7 @@ Navigate to *Videos* to browse all your videos. To play a video, click :material
 
 Please note that not all [video and audio formats](https://caniuse.com/?search=video%20format) can be [played with every browser](../../getting-started/troubleshooting/browsers.md). For example, [AAC](https://caniuse.com/aac "Advanced Audio Coding") - the default audio codec for [MPEG-4 AVC / H.264](https://caniuse.com/avc "Advanced Video Coding") - is supported natively in Chrome, Safari, and Edge, while it is only optionally supported by the OS in Firefox and Opera.
 
-![Screenshot](img/video-1.png){ class="shadow" }
+![Screenshot](img/video-light.png){ class="shadow" }
 
 ## Live Photos ##
 
@@ -14,7 +14,7 @@ You can recognize this by the :material-adjust: icon that appears in the upper l
 Move the mouse cursor over the thumbnail to play the video without changing the view.
 You can limit a search to *Live Photos* by using the `type:live` filter or the keyword `live`.
 
-![Screenshot](img/live-photo.png){ class="shadow" }
+![Screenshot](img/live-photo-light.png){ class="shadow" }
 
 ## Transcoding ##
 

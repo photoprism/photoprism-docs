@@ -56,7 +56,7 @@ Edit album details and click *save*
 1. Go to your album
 3. Select photos/videos you want to remove
 4. Click context menu
-5. Click :material-minus:
+5. Click :material-eject:
 
     ![Screenshot](img/remove-from-album-1-light.png){ class="shadow" }
 

@@ -15,6 +15,9 @@ To see all pictures with a group of related files, open *Stacks* in the expanded
 
 You can change the behaviour for 2 - 4 in [*Settings*](../settings/library.md).
 
+!!! attention ""
+      Changing stacking settings won't unstack already stacked files.
+
 ## Browse Related Files
 
 1. Click on :material-camera-burst:

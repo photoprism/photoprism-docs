@@ -6,15 +6,6 @@ In case you add new files to your *originals directory* your folders will be upd
 
 The context menu allows you to perform the following actions:
 
-## Remove Folders ##
-1. Select folder
-2. Open context menu
-3. Click :material-delete:
-4. Confirm
-
-!!! hint ""
-    Only the representation of the folder will be deleted. Your files stay untouched.
-
 ## Download Folders ##
 1. Select folder
 2. Open context menu

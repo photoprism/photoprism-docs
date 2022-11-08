@@ -11,7 +11,7 @@ on the advanced settings page. You can also disable specific features and enable
     quality or size won't replace existing thumbnails. You can regenerate them using the 
     [command-line interface](https://docs.photoprism.app/getting-started/docker-compose/#command-line-interface).
 
-![](img/advanced-settings.jpg){ class="shadow" }
+![](img/settings-advanced-light.png){ class="shadow" }
 
 All [config options](../../getting-started/config-options.md) can be set in your `docker-compose.yml` or
 via command-line parameters as well. Manually changed values are saved in a config file. It is stored in

@@ -1,5 +1,8 @@
 # Library Settings
 
+![](img/settings-library-light.png){ class="shadow" }
+
+
 ## Index ##
 
 #### :material-chart-timeline-variant: Estimates ####

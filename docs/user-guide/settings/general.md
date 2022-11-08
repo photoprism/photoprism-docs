@@ -2,8 +2,7 @@
 
 In the *General* settings tab, you can configure basic user interface settings as well as the maps in *Places*:
 
-![](img/general-settings.jpg){ class="shadow" }
-<!--![](img/settings-general.png)-->
+![](img/settings-general-light.png){ class="shadow" }
 
 ## User Interface ##
 You can change the *theme* and *language* of the User interface.

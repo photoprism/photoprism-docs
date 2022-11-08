@@ -98,17 +98,19 @@ nav:
       - Folders: user-guide/organize/folders.md
       - Panoramas: user-guide/organize/panoramas.md
       - Scans: user-guide/organize/scans.md
-    - Link Sharing:
-      - Albums: user-guide/share/index.md
+    - Sharing:
+      - Link Sharing: user-guide/share/index.md
+      - With Apps: user-guide/share/services-share.md
     - Remote Sync:
-      - WebDAV Access: user-guide/sync/webdav.md
+      - Remote Access: user-guide/sync/webdav.md
       - Mobile Devices: user-guide/sync/mobile-devices.md
+      - Other Apps: user-guide/sync/services-sync.md
       - Dropbox: user-guide/sync/dropbox.md
     - Settings:
       - General: user-guide/settings/general.md
       - Library: user-guide/settings/library.md
       - Advanced: user-guide/settings/advanced.md
-      - Sync: user-guide/settings/sync.md
+      - Services: user-guide/settings/sync.md
       - Account: user-guide/settings/account.md
     - Backup Guide:
       - Creating Backups: user-guide/advanced/backups.md

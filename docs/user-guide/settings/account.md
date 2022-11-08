@@ -7,12 +7,20 @@
 
 ## Change Password ##
 
-1. Click *Settings*
-2. Click *Account*
-3. Enter your current password
-4. Enter your new password twice
-5. Click *Change*
+1. Go to *Settings*
+2. Open *Account* tab
+3. Click *Change Password*
+4. Enter your current password
+5. Enter your new password twice
+6. Click *Change*
 
 ![Screenshot](img/change-password-light.png){ class="shadow" }
+
+
+## Show WebDAV Url ##
+
+1. Go to *Settings*
+2. Open *Account* tab
+3. Click *Connect via WebDAV*
 
 ![Screenshot](img/show-webdav-light.png){ class="shadow" }

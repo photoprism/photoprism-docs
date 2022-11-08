@@ -32,7 +32,11 @@ https://admin@example.com/originals/
 for Windows 10.
 
 Please replace *example.com* with your actual domain.
+
 The slash at the end is important and cannot be omitted.
+
+!!! tip ""
+    You can find your server url on the [account page](../settings/account.md) in settings.
 
 When connecting, you'll have to authenticate using your regular password.
 It will also change when you update it in *Settings*. The username is `admin`.

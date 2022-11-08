@@ -57,6 +57,10 @@ Shows all photos that are not part of an album.
 
 Shows videos that are not in review or archived or private.
 
+#### Live Photos
+
+Shows all short videos up to 3 seconds. 
+
 ### :material-account: People
 
 Shows photos and videos grouped by people on it.

@@ -76,7 +76,7 @@ This will show all photos that have either the label cat **or** dog.
 
 The following filters work with |:
 
-* albums, color, country, day, month, year, keywords, label, path, state, subject/person, subjects/people, title, type, name, filename, original, hash
+* albums, color, country, state, city, day, month, year, keywords, label, path, subject/person, subjects/people, title, type, name, filename, original, hash
 
 ### Wildcard ###
 

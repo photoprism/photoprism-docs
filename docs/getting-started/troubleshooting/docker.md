@@ -14,12 +14,21 @@ The following instructions explain how to install Docker:
 - [Microsoft Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 - [Apple macOS](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 
-Our guides now use the new `docker compose` command by default. However, if your server does not yet support it, you can still use `docker-compose` to start and stop your instance.
+#### Docker Compose
 
-!!! info "Docker Compose"
-    On some Linux distributions, you may need to install an additional package to use Docker Compose. To do this, you can use a graphical software package manager or run one of the following commands in a terminal:
-    - `sudo apt install docker-compose-plugin` 
-    - `sudo apt install docker-compose`
+The examples in our guides now use the new `docker compose` command by default. However, if your *Docker* version does not yet support the *Compose Plugin*, you can still use the standalone `docker-compose` command to start and stop your instance.
+
+On some Linux distributions, you may need to install an additional package. To do so, you can use a graphical software package manager or run the following command in a terminal to install the *Compose Plugin* for *Docker* on Ubuntu and Debian:
+
+```
+sudo apt install docker-compose-plugin 
+```
+
+If that does not work, this will install the legacy `docker-compose` command:
+
+```
+sudo apt install docker-compose
+```
 
 ### Using Docker
 #### Cannot Connect

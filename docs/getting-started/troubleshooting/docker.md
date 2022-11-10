@@ -17,7 +17,7 @@ The following instructions explain how to install Docker:
 Our guides now use the new `docker compose` command by default. However, if your server does not yet support it, you can still use `docker-compose` to start and stop your instance.
 
 !!! info "Docker Compose"
-    On some Linux distributions, you may need to install additional packages to use `docker compose` or `docker-compose`, for example by running `sudo apt install docker-compose` in a terminal or using a graphical software package manager.
+    On some Linux distributions, you may need to install additional packages to use `docker compose` or `docker-compose`, for example by running `sudo apt install docker-compose-plugin` or `sudo apt install docker-compose` in a terminal or using a graphical software package manager.
 
 ### Using Docker
 #### Cannot Connect

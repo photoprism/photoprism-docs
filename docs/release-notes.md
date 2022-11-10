@@ -8,7 +8,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 221110-5bba4d5fb</span>
+<span class="build">Build 221110-3acb65179</span>
 
 - MariaDB: [Unsupported versions are allowed in "unsafe" mode](https://github.com/photoprism/photoprism/issues/2878)
 - Translations: [Added Estonian](https://github.com/photoprism/photoprism/pull/2879), [updated Polish](https://github.com/photoprism/photoprism/commit/196fc8b2077267a8fd6fddc66c091a53617dbfa4)

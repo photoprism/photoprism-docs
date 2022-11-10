@@ -10,7 +10,7 @@ We [recommend](../index.md#system-requirements) hosting PhotoPrism on a 64-bit s
 and/or physical memory above the recommended minimum.
 
 RAW image conversion and TensorFlow are disabled on devices with 1 GB or less memory.
-You will have to resort to [32-bit Docker images](../raspberry-pi.md#older-armv7-based-devices) to run 
+You will have to resort to [32-bit Docker images](../raspberry-pi.md#older-armv7-based-devices) to run
 PhotoPrism and MariaDB on ARMv7-based entry-level devices like the Synology DS218j.
 
 !!! note ""
@@ -18,18 +18,6 @@ PhotoPrism and MariaDB on ARMv7-based entry-level devices like the Synology DS21
     and plenty of memory for caching. Especially the conversion of RAW images and the transcoding of videos are very demanding.
     We take no responsibility for instability or [performance](../troubleshooting/performance.md) problems if your
     device does not meet the requirements.
-
-## Setup using Docker ##
-
-!!! attention ""
-    The Synology user interface has been updated in the meantime, so the screenshots from the tutorial below may be outdated. Also, we recommend using mariadb instead of SQlite.
-
-    Since we don't have a Synology test device, contributions to a step-by-step tutorial are greatly appreciated.
-    You can contribute by clicking :material-pencil: to send a pull request with your changes.
-
-You can follow these instructions to install PhotoPrism on your Synology NAS:
-
-https://www.wundertech.net/how-to-setup-photoprism-on-a-synology-nas
 
 ### Will my device be fast enough? ###
 
@@ -49,6 +37,76 @@ If your device runs out of memory, the index is frequently locked, or other syst
 - [ ] As a last measure, you can [disable the use of TensorFlow](../config-options.md#feature-flags) for image classification and facial recognition
 
 Other issues? Our [troubleshooting checklists](../troubleshooting/index.md) help you quickly diagnose and solve them.
+
+
+## Setup using Docker & SQLite ##
+
+!!! attention ""
+    Note that [SQLite is generally not a good choice](../troubleshooting/sqlite.md) for users who require scalability and high performance.
+
+    Since we don't have a Synology test device, contributions to a step-by-step tutorial using mariadb are greatly appreciated.
+    You can contribute by clicking :material-pencil: to send a pull request with your changes.
+
+!!! example ""
+    **Help improve these docs!** You can contribute by clicking :material-pencil: to send a pull request with your changes.
+
+This guide describes how to set up PhotoPrism using the new Synology user interface.
+
+### Prerequisites
+- Docker is installed
+- folders config and photos are created:
+
+  ![Photoprism_1](./img/synology/Photoprism_1.jpg){ class="shadow" }
+
+- for testing purposes, add some pictures to your photos folder
+- later, if you're ok with your setup, you can link your pictures to the photos folder
+
+### Get the image
+- Launch Docker
+- Search for photoprism/photoprism in the Registry
+- Download and choose your flavor
+- Wait until you get the message your image is downloaded. It is big, so this can take a while
+
+### Set PhotoPrism up
+- double-click the image you just downloaded
+- Network: choose your network - next
+- give your container a name and click on Advanced Settings
+
+  ![Photoprism_2_en](./img/synology/Photoprism_2_en.jpg){ class="shadow" }
+
+- Add Variable PHOTOPRISM_ADMIN_PASSWORD with your password
+
+  ![Photoprism_3_en](./img/synology/Photoprism_3_en.jpg){ class="shadow" }
+
+- enter values for PHOTPRISM_SITE_DESCRIPTION and PHOTOPRISM_SITE_AUTOR
+- PHOTOPRISM_DATABASE_SERVER and PHOTOPRISM_DATABASE_PASSWORD are used for mariadb. It is recommended to use mariadb but not part of this guide
+- Save
+
+  ![Photoprism_4_2_en](./img/synology/Photoprism_4_2_en.jpg){ class="shadow" }
+
+- Next
+- enter the local port you want to use to connect to PhotoPrism
+
+  ![Photoprism_5_en](./img/synology/Photoprism_5_en.jpg){ class="shadow" }
+
+- in the Volume Settings we're adding the two folders (see prerequisites)
+- choose config, add /photoprism/storage as Mount path
+- choose photos, add /photoprism/originals as Mount path
+
+  ![Photoprism_6_en](./img/synology/Photoprism_6_en.jpg){ class="shadow" }
+  ![Photoprism_7_en](./img/synology/Photoprism_7_en.jpg){ class="shadow" }
+  ![Photoprism_8](./img/synology/Photoprism_8.jpg){ class="shadow" }
+
+- Done
+- Run the container and give it some minutes to create
+- connect to your instance of Photoprism with your browser ip-to-your-nas:port and login
+
+### First Steps
+
+Our [First Steps 👣](../../user-guide/first-steps.md) tutorial guides you through the user interface and settings to ensure your library is indexed according to your individual preferences.
+
+
+
 
 
 <!---
@@ -141,6 +199,3 @@ Click create [Websocket] and hit OK (this step makes that your browser receive p
 **IMPORTANT: make sure that you have forwarded the selected port (for eg. 2343) in your router:**
 
 -->
-
-!!! example ""
-    **Help improve these docs!** You can contribute by clicking :material-pencil: to send a pull request with your changes.

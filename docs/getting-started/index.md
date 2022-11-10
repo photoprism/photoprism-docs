@@ -54,7 +54,7 @@ Not all [video and audio formats](https://caniuse.com/?search=video%20format) ca
 
 If you install PhotoPrism on a public server outside your home network, **always run it behind a secure HTTPS reverse proxy** such as [Traefik](proxies/traefik.md) or [Caddy](proxies/caddy-2.md).
 Your files and passwords will otherwise be transmitted in clear text and can be intercepted by anyone, 
-including your provider, hackers, and governments. Backup tools and file sync apps like [FolderSync](https://www.tacit.dk/foldersync/faq/#i-can-not-connect-to-a-non-https-webdav-server-why) 
+including your provider, hackers, and governments. Backup tools and file sync apps like [FolderSync](https://foldersync.io/docs/faq/#https-connection-errors) 
 may refuse to connect as well.
 
 ## Maps & Places

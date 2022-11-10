@@ -53,7 +53,7 @@ http://admin@localhost:2342/originals/
 !!! attention ""
     Never use WebDAV **without HTTPS** outside your local, private network as your
     password would be transmitted, in clear text, over the Internet. Backup tools and file sync apps 
-    like [FolderSync](https://www.tacit.dk/foldersync/faq/#i-can-not-connect-to-a-non-https-webdav-server-why)
+    like [FolderSync](https://foldersync.io/docs/faq/#https-connection-errors)
     may refuse to connect as well.
 
 ## Connect to a WebDAV Server ##

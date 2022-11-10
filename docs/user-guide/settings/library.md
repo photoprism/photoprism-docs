@@ -1,6 +1,6 @@
 # Library Settings
 
-![](img/settings-library-light.png){ class="shadow" }
+![](img/settings-library-light.jpg){ class="shadow" }
 
 
 ## Index ##

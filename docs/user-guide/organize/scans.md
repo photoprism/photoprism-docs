@@ -9,4 +9,4 @@ We aim to automatically mark scans in the future.
  2. Click :material-cog:
  3. Set or unset the scan flag
 
-![Screenshot](img/scans-light.png){ class="shadow" }
+![Screenshot](img/scans-light.jpg){ class="shadow" }

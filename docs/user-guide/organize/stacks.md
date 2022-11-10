@@ -4,7 +4,7 @@ If you have *Stacks* enabled in your [library settings](../settings/library.md),
 
 To see all pictures with a group of related files, open *Stacks* in the expanded *Search* navigation:
 
-![Screenshot](img/stack-page-dark.png){ class="shadow" }
+![Screenshot](img/stack-page-dark.jpg){ class="shadow" }
 
 ## For what reasons can files be stacked?
 
@@ -22,11 +22,11 @@ You can change the behaviour for 2 - 4 in [*Settings*](../settings/library.md).
 
 1. Click on :material-camera-burst:
 
-    ![Screenshot](img/sequential1-dark.png){ class="shadow" }
+    ![Screenshot](img/sequential1-dark.jpg){ class="shadow" }
     
 2. Use arrows to see all photos of the sequence
 
-    ![Screenshot](img/sequential3.png){ class="shadow" } ![Screenshot](img/sequential4.png){ class="shadow" }
+    ![Screenshot](img/sequential3.jpg){ class="shadow" } ![Screenshot](img/sequential4.jpg){ class="shadow" }
    
 
 ## Change Primary Files
@@ -43,7 +43,7 @@ To change the primary file:
         
 4. Click *primary*
 
-      ![Screenshot](img/stacks-edit-dark.png){ class="shadow" } 
+      ![Screenshot](img/stacks-edit-dark.jpg){ class="shadow" } 
 
 ## Unstack Files
 
@@ -55,11 +55,11 @@ To change the primary file:
         
 4. Click *unstack*
 
-   ![Screenshot](img/stacks-edit-dark.png){ class="shadow" }
+   ![Screenshot](img/stacks-edit-dark.jpg){ class="shadow" }
 
 Now, both files appear in our views.
 
-![Screenshot](img/unstacked-dark.png){ class="shadow" }
+![Screenshot](img/unstacked-dark.jpg){ class="shadow" }
 
 ## Delete Non-Primary Files
 
@@ -73,4 +73,4 @@ Now, both files appear in our views.
 
 5. Confirm
 
-   ![Screenshot](img/stacks-edit-dark.png){ class="shadow" } 
+   ![Screenshot](img/stacks-edit-dark.jpg){ class="shadow" } 

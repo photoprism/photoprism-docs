@@ -13,4 +13,4 @@ Before you start, make sure the **Delete** feature is enabled in [Settings](../s
 3. Click :material-delete:
 4. Confirm
 
-   ![Screenshot](img/delete-dark.png){ class="shadow" }
+   ![Screenshot](img/delete-dark.jpg){ class="shadow" }

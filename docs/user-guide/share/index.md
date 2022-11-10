@@ -4,13 +4,13 @@ Create sharing links to share albums, moments, calendar months, states or folder
 Your friends are able to view and download photos from shared albums.
 Photos marked as private won't show up.
 
-![Screenshot](img/link-card-dark.png){ class="shadow" }
+![Screenshot](img/link-card-dark.jpg){ class="shadow" }
 
 !!! info ""
     When link visitors click on the location of a photo, they can view the photos of the shared album in the map view
 
 
-![Screenshot](img/link-places-dark.png){ class="shadow" }
+![Screenshot](img/link-places-dark.jpg){ class="shadow" }
 
 Clicking :material-power: allows link visitors to end their session.
 
@@ -24,14 +24,14 @@ Support for optional password protection of sharing links as well as other enhan
      3. Open the context menu
      4. Click :material-share-variant:
     
-      ![Screenshot](img/share-menu-dark.png){ class="shadow" }
+      ![Screenshot](img/share-menu-dark.jpg){ class="shadow" }
 
 === "Via Toolbar"
      1. Go to *Albums* / *Moments* / *Calendar* / *States* / *Folders*
      2. Open the album by clicking on it
      3. Click :material-share-variant:
 
-      ![Screenshot](img/share-toolbar-dark.png){ class="shadow" }
+      ![Screenshot](img/share-toolbar-dark.jpg){ class="shadow" }
 
 Then
 
@@ -39,11 +39,11 @@ Then
 6. Set a *secret* and *expiry date*
 7. Click *save*
     
-    ![Screenshot](img/share-dialog-add-dark.png){ class="shadow" }
+    ![Screenshot](img/share-dialog-add-dark.jpg){ class="shadow" }
     
 8. Copy the link by clicking on it
     
-    ![Screenshot](img/share-dialog-copy-dark.png){ class="shadow" }
+    ![Screenshot](img/share-dialog-copy-dark.jpg){ class="shadow" }
     
 9. Share it with your friends
 
@@ -58,9 +58,9 @@ Then
 1. Go to *Albums*
 2. Click :material-share-variant: on the album cover
 
-    ![Screenshot](img/share-delete-1-dark.png){ class="shadow" }
+    ![Screenshot](img/share-delete-1-dark.jpg){ class="shadow" }
     
 3. Click :material-chevron-down:
 4. Click :material-delete:
 
-     ![Screenshot](img/share-delete-2-dark.png){ class="shadow" }
+     ![Screenshot](img/share-delete-2-dark.jpg){ class="shadow" }

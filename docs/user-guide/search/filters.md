@@ -11,7 +11,7 @@ PhotoPrism's powerful search filters let you easily find specific photos and vid
 
 Just give it a try!
 
-![Screenshot](../organize/img/fulltext-search-1.png){ class="shadow" }
+![Screenshot](../organize/img/fulltext-search-1.jpg){ class="shadow" }
 
 ## Introduction ##
 
@@ -21,7 +21,7 @@ The following filters can be set via dropdowns in the search toolbar:
 
 If you set multiple filters, only pictures that meet all filter criteria will be displayed in the search result. Filters can generally be combined unless they contradict each other.
 
- ![Screenshot](../organize/img/filter-bar-new.png){ class="shadow" }
+ ![Screenshot](../organize/img/filter-bar-new.jpg){ class="shadow" }
 
 In addition, these and many other filters can be entered into the toolbar search box as follows:
 
@@ -31,7 +31,7 @@ label:cat color:green type:live
 
 A complete overview of the [available search filters](#filter-reference) can be found below.
 
-![Screenshot](../organize/img/search-filters.png){ class="shadow" }
+![Screenshot](../organize/img/search-filters.jpg){ class="shadow" }
 
 ### AND Search ###
 

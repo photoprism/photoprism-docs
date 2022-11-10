@@ -2,7 +2,7 @@
 
 Our *Calendar* enables you to browse through your photos by year and month.
 
-![Screenshot](img/calendar-light.png){ class="shadow" }
+![Screenshot](img/calendar-light.jpg){ class="shadow" }
 
 The context menu allows you to perform the following actions:
 

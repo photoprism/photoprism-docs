@@ -27,11 +27,11 @@ Private photos will be displayed in the private section, in user generated album
       3. Click context menu
       4. Click :material-lock:
 
-        ![Screenshot](img/private-context-menu-light.png){ class="shadow" }
+        ![Screenshot](img/private-context-menu-light.jpg){ class="shadow" }
 
 === "From List View"
      1. Go to *Search*
      2. Make sure you are in *list view*
      3. Click :material-lock-open: or :material-lock: on the right
 
-        ![Screenshot](img/private-list-light.png){ class="shadow" }
+        ![Screenshot](img/private-list-light.jpg){ class="shadow" }

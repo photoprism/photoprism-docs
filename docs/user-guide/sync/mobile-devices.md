@@ -18,34 +18,34 @@ We recommend [PhotoSync](https://link.photoprism.app/photosync) which is availab
 2. Click *Configure*
 3. Select PhotoPrism as target
 
-      ![Screenshot](img/photosync-1.png){: style="width:35%" class="shadow"}
-      ![Screenshot](img/photosync-2.png){: style="width:35%" class="shadow"}
+      ![Screenshot](img/photosync-1.jpg){: style="width:35%" class="shadow"}
+      ![Screenshot](img/photosync-2.jpg){: style="width:35%" class="shadow"}
 
 4. Enter your settings
 
-      ![Screenshot](img/photosync-3.png){: style="width:35%" class="shadow"}
+      ![Screenshot](img/photosync-3.jpg){: style="width:35%" class="shadow"}
 
 5. Click *Done*
 6. You may adapt transfer details to match your preferences
 
-      ![Screenshot](img/photosync-4.png){: style="width:35%" class="shadow"}
-      ![Screenshot](img/photosync-5.png){: style="width:35%" class="shadow"}
+      ![Screenshot](img/photosync-4.jpg){: style="width:35%" class="shadow"}
+      ![Screenshot](img/photosync-5.jpg){: style="width:35%" class="shadow"}
 
 ### Set Up Automatic Sync ###
 
 1. Open PhotoSync and click :material-cog-outline:
 2. Click *Autotransfer*
 
-      ![Screenshot](img/photosync-1.png){: style="width:35%" class="shadow"}
+      ![Screenshot](img/photosync-1.jpg){: style="width:35%" class="shadow"}
 
 3. Click *Add new trigger* and choose one or more trigger
 
-      ![Screenshot](img/photosync-6.png){: style="width:35%" class="shadow"}
+      ![Screenshot](img/photosync-6.jpg){: style="width:35%" class="shadow"}
 
 4. Choose PhotoPrism as target
 5. Click *Done*
 
-      ![Screenshot](img/photosync-7.png){: style="width:35%" class="shadow"}
+      ![Screenshot](img/photosync-7.jpg){: style="width:35%" class="shadow"}
 
 Because PhotoSync uses WebDAV to send files, PhotoPrism automatically starts importing/indexing when it receives new files.
 

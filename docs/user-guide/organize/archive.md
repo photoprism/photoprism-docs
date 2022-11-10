@@ -8,9 +8,9 @@ Content that is archived is not deleted but it will not appear in any section ap
 2. Click context menu
 3. Click :material-archive-arrow-down:
    
-    ![Screenshot](img/archive-light.png){ class="shadow" }
+    ![Screenshot](img/archive-light.jpg){ class="shadow" }
     
-    <!--![Screenshot](img/confirm-archive.png)-->
+    <!--![Screenshot](img/confirm-archive.jpg)-->
 
 
 ### Restore Photos from Archive ###
@@ -20,5 +20,5 @@ Content that is archived is not deleted but it will not appear in any section ap
 3. Click context menu
 4. Click :material-archive-arrow-up:
 
-    ![Screenshot](img/restore-light.png){ class="shadow" }
+    ![Screenshot](img/restore-light.jpg){ class="shadow" }
 

@@ -11,7 +11,7 @@ on the advanced settings page. You can also disable specific features and enable
     quality or size won't replace existing thumbnails. You can regenerate them using the 
     [command-line interface](https://docs.photoprism.app/getting-started/docker-compose/#command-line-interface).
 
-![](img/settings-advanced-light.png){ class="shadow" }
+![](img/settings-advanced-light.jpg){ class="shadow" }
 
 All [config options](../../getting-started/config-options.md) can be set in your `docker-compose.yml` or
 via command-line parameters as well. Manually changed values are saved in a config file. It is stored in
@@ -238,17 +238,17 @@ Blackman is a modification of Lanczos that has better control of ringing artifac
 
 Original image:
 
-![](img/branches.png){ class="shadow" }
+![](img/branches.jpg){ class="shadow" }
 
 The same image resized from 600x400px to 150x100px using different resampling filters.
 From faster (lower quality) to slower (higher quality):
 
 | Filter           | Resize result                   |
 |------------------|---------------------------------|
-| Nearest Neighbor | ![](img/out_resize_nearest.png) |
-| Bilinear         | ![](img/out_resize_linear.png)  |
-| Sharp Bicubic    | ![](img/out_resize_catrom.png)  |
-| Lanczos          | ![](img/out_resize_lanczos.png) |
+| Nearest Neighbor | ![](img/out_resize_nearest.jpg) |
+| Bilinear         | ![](img/out_resize_linear.jpg)  |
+| Sharp Bicubic    | ![](img/out_resize_catrom.jpg)  |
+| Lanczos          | ![](img/out_resize_lanczos.jpg) |
 
 Source: [A Comparative Analysis of Image Interpolation Algorithms](https://dl.photoprism.app/pdf/20160201-Comparative_Analysis_of_Image_Interpolation.pdf)
 
@@ -260,7 +260,7 @@ Web browsers in general cannot display RAW image files. They need to be converte
 
 In addition, PhotoPrism also supports TIFF, PNG, BMP and GIF files. Be aware that files in those formats often don't contain useful metadata and are typically used for screenshots, charts, graphs and icons only.
 
-![](img/editPhoto.png){ class="shadow" }
+![](img/editPhoto.jpg){ class="shadow" }
 
 !!! info ""
     Generated sidecar files will be stored outside your originals folder by default, so that

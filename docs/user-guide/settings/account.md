@@ -3,7 +3,7 @@
 !!! tldr ""
     Since they are not needed, these settings are not available when running in [public mode](../../getting-started/config-options.md#authentication).
 
-![Screenshot](img/settings-account-light.png){ class="shadow" }
+![Screenshot](img/settings-account-light.jpg){ class="shadow" }
 
 ## Change Password ##
 
@@ -14,7 +14,7 @@
 5. Enter your new password twice
 6. Click *Change*
 
-![Screenshot](img/change-password-light.png){ class="shadow" }
+![Screenshot](img/change-password-light.jpg){ class="shadow" }
 
 
 ## Show WebDAV Url ##
@@ -23,4 +23,4 @@
 2. Open *Account* tab
 3. Click *Connect via WebDAV*
 
-![Screenshot](img/show-webdav-light.png){ class="shadow" }
+![Screenshot](img/show-webdav-light.jpg){ class="shadow" }

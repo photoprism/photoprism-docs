@@ -17,7 +17,7 @@ Use *index* if you want to index your photos and videos directly in the *origina
 
 Your folder structure in *originals* might look like this:
 
-![Screenshot](img/originals-before-after.png){ class="shadow" }
+![Screenshot](img/originals-before-after.jpg){ class="shadow" }
      
 **During indexing:**
 
@@ -28,7 +28,7 @@ Your folder structure in *originals* might look like this:
 
 After indexing, the *originals* folder has not been changed in any way:
 
-![Screenshot](img/originals-before-after.png){ class="shadow" }
+![Screenshot](img/originals-before-after.jpg){ class="shadow" }
 
 ### Advantages
 
@@ -46,7 +46,7 @@ After indexing, the *originals* folder has not been changed in any way:
 
 Your initial folder structure in *import* might look like this:
 
-![Screenshot](img/before-import.png){ class="shadow" }
+![Screenshot](img/before-import.jpg){ class="shadow" }
    
 **During import:**
 
@@ -58,11 +58,11 @@ Your initial folder structure in *import* might look like this:
 
 After importing with "Copy" (default setting), your folders might look like this::
 
-![Screenshot](img/copy-import.png){ class="shadow" }
+![Screenshot](img/copy-import.jpg){ class="shadow" }
 
 After importing with "Move" your folders might look like this:
 
-![Screenshot](img/move-import.png){ class="shadow" }
+![Screenshot](img/move-import.jpg){ class="shadow" }
 
 ### Advantages
 

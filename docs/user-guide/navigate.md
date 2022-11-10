@@ -2,9 +2,9 @@
 
 The user interface for browsing and searching your pictures is based on the following components. Screenshots in this documentation generally show pages in a medium-resolution desktop browser. All pages are fully responsive, so they may look different on mobile devices.
 
-![Screenshot](img/nav1edited-dark.png){ class="shadow" }
+![Screenshot](img/nav1edited-dark.jpg){ class="shadow" }
 
-![Screenshot](img/nav2edited-dark.png){ class="shadow" }
+![Screenshot](img/nav2edited-dark.jpg){ class="shadow" }
 
 #### 1. Main Navigation ####
 
@@ -46,7 +46,7 @@ It also contains the following buttons:
 
 To unselect all items, click the cross at the top:
 
-![Screenshot](img/nav3edited-light.png){ class="shadow" }
+![Screenshot](img/nav3edited-light.jpg){ class="shadow" }
 
 ## Selection Mode and Multi-Select ##
 ### Desktop ###

@@ -13,7 +13,7 @@
 
 5. Click on *Import*
 
-![Screenshot](img/import-light.png){ class="shadow" }
+![Screenshot](img/import-light.jpg){ class="shadow" }
 
 !!! tip ""
     You may use [WebDAV](webdav.md) for adding files to the *import* folder.

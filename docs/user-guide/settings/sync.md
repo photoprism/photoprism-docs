@@ -19,10 +19,10 @@ so that you can automatically sync your latest pictures. -->
 1. Go to *Settings*
 2. Open *Services tab*
 3. Click *Connect*
-    ![Screenshot](img/services-connect-1-light.png){ class="shadow" }
+    ![Screenshot](img/services-connect-1-light.jpg){ class="shadow" }
 4. Fill in your service url, username and password
 5. Click *connect*
-    ![Screenshot](img/services-connect-2-light.png){ class="shadow" }
+    ![Screenshot](img/services-connect-2-light.jpg){ class="shadow" }
 6. Now the other service is connected with PhotoPrism
 
 
@@ -32,7 +32,7 @@ so that you can automatically sync your latest pictures. -->
 3. Click :material-pencil:
 4. Edit account details and click *Save*
 
-   ![Screenshot](img/services-edit-light.png){ class="shadow" }
+   ![Screenshot](img/services-edit-light.jpg){ class="shadow" }
 
 
 ## Edit Upload Settings ##
@@ -41,10 +41,10 @@ so that you can automatically sync your latest pictures. -->
 2. Open *Services* tab
 3. Click into the upload cell of your service
 
-![Screenshot](img/services-upload-1-light.png){ class="shadow" }
+![Screenshot](img/services-upload-1-light.jpg){ class="shadow" }
 4. Select the folder to which photos should be uploaded and click *save*
 
-![Screenshot](img/services-upload-2-light.png){ class="shadow" }
+![Screenshot](img/services-upload-2-light.jpg){ class="shadow" }
 
 You can now [share albums or files with this service](../share/services-share.md).
 
@@ -57,14 +57,14 @@ You can now [share albums or files with this service](../share/services-share.md
 1. Go to *Settings*
 2. Open *Services* tab
 3. Click into the sync cell of your service
-   ![Screenshot](img/services-sync-1-light.png){ class="shadow" }
+   ![Screenshot](img/services-sync-1-light.jpg){ class="shadow" }
 4. Enable synchronization in the upper right corner
 5. Choose a folder from your service
 6. Choose a sync interval
 7. Select the options that are suitable for you and click *Save*
 
 
-![Screenshot](img/services-sync-2-light.png){ class="shadow" }
+![Screenshot](img/services-sync-2-light.jpg){ class="shadow" }
 
 ### Remote Sync Options ###
 

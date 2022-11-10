@@ -9,19 +9,19 @@ During [*indexing*](../index.md) PhotoPrism collects as much data as possible fr
 === "From Card View"
      1. Click on the photos title, time or camera information
 
-    ![Screenshot](img/edit-open-1-light.png){ class="shadow" }
+    ![Screenshot](img/edit-open-1-light.jpg){ class="shadow" }
 
 === "From Full Screen Mode"
      1. In the upper right corner click :material-pencil:
 
-    ![Screenshot](img/edit-open-3-light.png){ class="shadow" }
+    ![Screenshot](img/edit-open-3-light.jpg){ class="shadow" }
 
 === "Using Context Menu"
      1. Select one or multiple photos
      2. Click on context menu
      3. Click :material-pencil:
 
-    ![Screenshot](img/edit-open-2-light.png){ class="shadow" }
+    ![Screenshot](img/edit-open-2-light.jpg){ class="shadow" }
 
 ### Edit Details ###
 
@@ -29,7 +29,7 @@ In the edit dialog's *Detail tab* you can view and edit the following data:
 
 * Title, Day, Month, Year, UTC time, UTC date, Time zone, Latitude, Longitude, Altitude, Country, Camera, ISO, Exposure, Lens, F Number, Focal Length, Subject, Artist, Copyright, License, Description, Keywords, Notes
 
-![Screenshot](img/edit-details-light.png){ class="shadow" }
+![Screenshot](img/edit-details-light.jpg){ class="shadow" }
 
 *Apply* saves changes. *Ok* saves changes and closes edit dialog.
 
@@ -60,11 +60,11 @@ In the edit dialog's *Files tab* you see all files that belong to a photo.
 
 In PhotoPrism a photo can consist of multiple files like a *raw file* + a *jpeg version* of this raw file + a related *xmp or json file*.
 
-![Screenshot](img/edit-files-1-light.png){ class="shadow" }
+![Screenshot](img/edit-files-1-light.jpg){ class="shadow" }
 
 To open file details click :material-chevron-down:.
 
-![Screenshot](img/edit-files-2-light.png){ class="shadow" }
+![Screenshot](img/edit-files-2-light.jpg){ class="shadow" }
 
 In case you have [*stacked files*](stacks.md) you can change the primary file, delete not primary files, or unstack files using the action buttons.
 

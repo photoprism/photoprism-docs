@@ -21,7 +21,7 @@ The examples in our guides now use the new `docker compose` command by default. 
 On some Linux distributions, you may need to install an additional package. To do so, you can use a graphical software package manager or run the following command in a terminal to install the *Compose Plugin* for *Docker* on Ubuntu and Debian:
 
 ```
-sudo apt install docker-compose-plugin 
+sudo apt install docker-compose-plugin
 ```
 
 If that does not work, this will install the legacy `docker-compose` command:

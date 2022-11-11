@@ -73,25 +73,21 @@ To test javascript code we use [mocha](https://mochajs.org/) in combination with
 
 ## Acceptance Tests ##
 
-Before you proceed, use `wget` to download [acceptance.tar.gz](https://dl.photoprism.app/qa/acceptance.tar.gz)
-to the storage folder and extract it there:
+Before you proceed run
 
 ```bash
-cd storage
-wget https://dl.photoprism.app/qa/acceptance.tar.gz
-tar -xzf acceptance.tar.gz
+make dep-acceptance
 ```
 
 ### Running Tests Inside the Docker Container
 
-In the development container environment, you can run the tests in Firefox and Chromium:
+In the development container environment, you can run the tests in headless chrome:
 
-  
-* ```make acceptance-run-chromium```: This executes all tests in headless chromium
-  
-* ```make acceptance-run-firefox ```: This executes all tests in headless firefox
+``` bash 
+make acceptance-run-chromium
+```
 
-### Running Tests Locally
+<!-- ### Running Tests Locally
 
 Locally, you can run the tests in all supported browsers that you have installed.
 
@@ -118,10 +114,9 @@ make stop
 
 To run tests on remote or mobile devices use
 ```
-testcafe  remote -S \
-  -s frontend/tests/acceptance/screenshots frontend/tests/acceptance/
+testcafe  remote frontend/tests/acceptance/
 ```
-
+--> 
 ### Test Frameworks
 
 Our goal was to implement UI acceptance tests using JavaScript, so that frontend developers are able to run and write them without learning Go.<br>

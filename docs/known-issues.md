@@ -49,8 +49,8 @@ An important reason for the worker to run independently of actual changes in the
 
 Under certain conditions, inconsistent face assignments cannot be automatically resolved by the background worker, which can result in an unusually high CPU load when it is running:
 
-- if you use multiple tabs when assigning faces and don't wait until saving changes is complete, you will likely experience this problem, especially if you enter inconsistent names for the same face in each tab
-- another possible cause is running multiple instances (for example, parallel indexing workers started by a scheduler in the background) or modifying database content directly, as this may also lead to inconsistent faces, markers, and subjects
+- if you use multiple browser tabs or windows for assigning faces and don't wait until saving the changes is complete, the likelihood of this problem increases, especially if you accidentally enter different names for the same face
+- another possible cause is running multiple instances (for example, parallel indexing workers started by a scheduler in the background) or modifying database content directly, as this may also lead to inconsistent faces, markers and subjects
 - see [Faces: Error "Failed removing merged clusters for subject" seems to cause tagging of faces to become slow #2806](https://github.com/photoprism/photoprism/issues/2806)
 
 Running the following command [in a terminal](getting-started/docker-compose.md#command-line-interface) can resolve problems with inconsistent data:
@@ -60,6 +60,7 @@ docker compose exec photoprism photoprism faces audit --fix
 ```
 
 It can also be helpful to manually check for inconsistent assignments and fix them in the user interface.
+Alternatively, you can use the `photoprism faces reset` command for a clean start if you haven't invested much time in assigning faces yet.
 
 *Advanced users affected by this are welcome to [privately provide us](https://photoprism.app/contact) with a SQL dump of their subjects, faces, and markers database tables for debugging. Thank you very much!*
 

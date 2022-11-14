@@ -168,6 +168,8 @@ Other issues? Our [troubleshooting checklists](troubleshooting/index.md) help yo
 
 ### Command-Line Interface ###
 
+#### Introduction
+
 `photoprism help` lists all commands and [config options](config-options.md) available in the current version:
 
 ```bash
@@ -180,13 +182,28 @@ Use the `--help` flag to see a detailed command description, for example:
 docker exec -ti photoprism photoprism backup --help
 ```
 
+PhotoPrism's command-line interface is also well suited for job automation using a
+[scheduler](https://dl.photoprism.app/docker/scheduler/).
+
 !!! tip ""
     When using *Docker*, you can prepend commands like `docker exec -ti [container] [command]` to run them in a container. Should this fail with *no container found*, make sure the container has been started and you have specified an existing container name or id.
 
-PhotoPrism's command-line interface is well suited for job automation using a
-[scheduler](https://dl.photoprism.app/docker/scheduler/).
+#### Opening a Terminal
 
-#### Examples ####
+To open a terminal session as the current user, you can do the following:
+
+```bash
+docker exec -ti -u $UID photoprism bash
+```
+
+Specifying the `-ti` flag is important for interactive commands to work, for example when you need to confirm an action.
+
+#### Changing the User ID
+
+Specifying a user via `-u $UID` is possible for all commands you run with Docker. In the following examples, it is omitted for brevity.
+The currently supported user ID ranges are 0, 33, 50-99, 500-600, and 900-1200. Note that commands will otherwise be executed as *root*.
+
+#### Examples
 
 | Action                           | Command                                                   |
 |----------------------------------|-----------------------------------------------------------|

@@ -247,6 +247,8 @@ Other issues? Our [troubleshooting checklists](troubleshooting/index.md) help yo
 
 ### Command-Line Interface ###
 
+#### Introduction
+
 `photoprism help` lists all commands and [config options](config-options.md) available in the current version:
 
 ```bash
@@ -259,14 +261,30 @@ Use the `--help` flag to see a detailed command description, for example:
 docker compose exec photoprism photoprism backup --help
 ```
 
+PhotoPrism's command-line interface is also well suited for job automation using a
+[scheduler](https://dl.photoprism.app/docker/scheduler/).
+
 !!! tip ""
     When using *Docker Compose*, you can prepend commands like `docker compose exec [service] [command]` to run them in a service container.
     Should this fail with *no container found*, make sure the service has been started, you have specified an existing service (usually `photoprism`) and you are in the folder where the `docker-compose.yml` file is located.
 
-PhotoPrism's command-line interface is well suited for job automation using a
-[scheduler](https://dl.photoprism.app/docker/scheduler/).
+#### Opening a Terminal
 
-#### Examples ####
+To open a terminal session as the current user, you can do the following:
+
+```bash
+docker compose exec -u $UID photoprism bash
+```
+
+#### Changing the User ID
+
+Specifying a user via `-u $UID` is possible for all commands you run with Docker Compose. In the following examples, it is omitted for brevity.
+The currently supported user ID ranges are 0, 33, 50-99, 500-600, and 900-1200. Note that commands will otherwise be executed as *root*.
+
+!!! tip ""
+    We also recommend running the PhotoPrism service as a non-root user by setting either the [user service property](https://docs.docker.com/compose/compose-file/#user) or the `PHOTOPRISM_UID` [environment variable](config-options.md#docker-image) in the `docker-compose.yml` file. The currently supported user ID ranges are 0, 33, 50-99, 500-600, and 900-1200. Don't forget to update the file permissions when performing changes.
+
+#### Examples
 
 | Action                                                | Command                                                       |
 |-------------------------------------------------------|---------------------------------------------------------------|

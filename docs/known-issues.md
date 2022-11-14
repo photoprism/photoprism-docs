@@ -27,6 +27,12 @@ Symbolic [links to files and directories](https://github.com/photoprism/photopri
 
 ## Face Recognition
 
+### Legacy Hardware ###
+
+It is a [known issue](getting-started/troubleshooting/performance.md#legacy-hardware) that the user interface and backend operations, especially face recognition, can be slow or even crash on older hardware due to a lack of resources.
+
+*Like most applications, PhotoPrism has certain requirements and our development process does not include testing on unsupported or unusual hardware.*
+
 ### Asian Faces and Children
 
 It is a known issue that children and Asian-looking faces cannot be recognized reliably. Detection without automatic recognition should not be affected by that.

@@ -282,7 +282,7 @@ Specifying a user via `-u $UID` is possible for all commands you run with Docker
 The currently supported user ID ranges are 0, 33, 50-99, 500-600, and 900-1200. Note that commands will otherwise be executed as *root*.
 
 !!! tip ""
-    We also recommend running the PhotoPrism service as a non-root user by setting either the [user service property](https://docs.docker.com/compose/compose-file/#user) or the `PHOTOPRISM_UID` [environment variable](config-options.md#docker-image) in the `docker-compose.yml` file. The currently supported user ID ranges are 0, 33, 50-99, 500-600, and 900-1200. Don't forget to update the file permissions when performing changes.
+    We also recommend running the PhotoPrism service as a non-root user by setting either the [user service property](https://docs.docker.com/compose/compose-file/#user) or the `PHOTOPRISM_UID` [environment variable](config-options.md#docker-image) in the `docker-compose.yml` file. Don't forget to update file permissions and/or ownership with the `chown` command when you make changes.
 
 #### Examples
 

@@ -188,9 +188,9 @@ For all known issues, see [Getting Started > Known Issues > Face Recognition](..
 
 ### Legacy Hardware ###
 
-It is a [known issue](../../getting-started/troubleshooting/performance.md#legacy-hardware) that the user interface and backend operations, especially face recognition, can be slow or even crash on older hardware due to a lack of resources.
+Face recognition can be slow (or even crash) on [old devices](../../getting-started/troubleshooting/performance.md#legacy-hardware) due to insufficient RAM or CPU.
 
-*Like most applications, PhotoPrism has certain requirements and our development process does not include testing on unsupported or unusual hardware.*
+*Like most applications, PhotoPrism has [certain requirements](../../getting-started/index.md#system-requirements) and our development process does not include testing on unsupported or unusual hardware.*
 
 ### Asian Faces and Children
 

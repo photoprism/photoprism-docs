@@ -182,23 +182,38 @@ The person/subject and people/subjects filters can be used with & and | (see [se
 
 ![Screenshot](img/people-search.jpg){ class="shadow" }
 
-## Performance Tips ##
+## Known Issues ##
 
-### Background Worker ###
-
-Face recognition was developed and tested under the assumption that the background worker runs every 15 minutes, unless the backend is busy with other tasks such as indexing. It has not been tested with much longer intervals and is not designed for that.
-
-The background worker groups new faces by similarity, compares faces with clusters, and optimizes existing clusters as needed. Without these routine tasks, the number of faces to be processed becomes too large. The first and next time the worker runs, it can then cause a heavy server load until all the faces, face clusters, and related pictures have been updated. The longer you wait, the more CPU is required and the longer it takes.
+For all known issues, see [Getting Started > Known Issues > Face Recognition](../../known-issues.md#face-recognition).
 
 ### Legacy Hardware ###
 
-It is a [known issue](https://docs.photoprism.app/getting-started/troubleshooting/performance/#legacy-hardware) that the user interface and backend operations, especially face recognition, can be slow or even crash on older hardware due to a lack of resources. Like most applications, PhotoPrism has certain requirements and our development process does not include testing on unsupported or unusual hardware.
+It is a [known issue](../../getting-started/troubleshooting/performance.md#legacy-hardware) that the user interface and backend operations, especially face recognition, can be slow or even crash on older hardware due to a lack of resources.
 
-!!! info "Coming Soon"
+*Like most applications, PhotoPrism has certain requirements and our development process does not include testing on unsupported or unusual hardware.*
 
-    - Manual tagging of faces
-    - Importing of XMP face tags
-    - Excluding people when browsing your pictures
-    - Automatic backup of tagged people in YAML files
+### Asian Faces and Children
+
+It is a known issue that children and Asian-looking faces cannot be recognized reliably. Detection without automatic recognition should not be affected by that.
+
+This is because the model we use was trained with North American images, which unfortunately do not include many Asians. The absence of children in the training data comes from the fact that parents do not usually share such images under a public license (and may not have the right to do so).
+
+*We will continue to improve our models over time as our resources allow.*
+
+### Background Worker ###
+
+Face recognition was developed and tested under the assumption that the [background worker](../../getting-started/config-options.md#index-workers) runs every 15 minutes, unless the backend is busy with other tasks like indexing. It has not been tested with much longer intervals and is not designed for that.
+
+PhotoPrism's background worker groups new faces by similarity, compares faces with clusters, and optimizes existing clusters as needed. Without these routine tasks, the number of faces to be processed becomes too large. The first and next time the worker runs, it can then cause a heavy server load until all the faces, face clusters, and related pictures have been updated. The longer you wait, the more CPU is required and the longer it takes.
+
+An important reason for the worker to run independently of actual changes in the main instance is that some users change the database content directly or run additional instances, for example for indexing. It is a problem that can be solved, but it takes time. If we were to ignore this and don't run the worker at all times, it could lead to many additional support requests, further reducing the amount of time we can spend on development. 
+
+*The handling of changes in multiple instances will be improved over time so that the worker can be run less frequently in future releases.*
+
+!!! info "Upcoming Features"
+    - manual tagging of faces
+    - importing of XMP face tags
+    - excluding people when browsing your pictures
+    - automatic backup of tagged people in YAML files
 
 *[face clusters]: A cluster is a group of faces expected to belong to the same person based on the similarity

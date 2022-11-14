@@ -25,6 +25,44 @@ In practice, this is not a problem as long as you [follow our documentation](get
 
 Symbolic [links to files and directories](https://github.com/photoprism/photoprism/issues/1049) within the *originals* folder are supported if they are accessible from the environment in which your instance is running. However, you cannot mount a symbolic link as a *storage* folder or use links within the *storage* folder.
 
+## Face Recognition
+
+### Asian Faces and Children
+
+It is a known issue that children and Asian-looking faces cannot be recognized reliably. Detection without automatic recognition should not be affected by that.
+
+This is because the model we use was trained with North American images, which unfortunately do not include many Asians. The absence of children in the training data comes from the fact that parents do not usually share such images under a public license (and may not have the right to do so).
+
+*We will continue to improve our models over time as our resources allow.*
+
+### Background Worker
+
+[Face recognition](user-guide/organize/people.md) was developed and tested under the assumption that the [background worker](getting-started/config-options.md#index-workers) runs every 15 minutes, unless the backend is busy with other tasks like indexing. It has not been tested with much longer intervals and is not designed for that.
+
+PhotoPrism's background worker groups new faces by similarity, compares faces with clusters, and optimizes existing clusters as needed. Without these routine tasks, the number of faces to be processed becomes too large. The first and next time the worker runs, it can then cause a heavy server load until all the faces, face clusters, and related pictures have been updated. The longer you wait, the more CPU is required and the longer it takes.
+
+An important reason for the worker to run independently of actual changes in the main instance is that some users change the database content directly or run additional instances, for example for indexing. It is a problem that can be solved, but it takes time. If we were to ignore this and don't run the worker at all times, it could lead to many additional support requests, further reducing the amount of time we can spend on development. 
+
+*The handling of changes in multiple instances will be improved over time so that the worker can be run less frequently in future releases.*
+
+### Removing Merged Clusters Fails
+
+Under certain conditions, inconsistent face assignments cannot be automatically resolved by the background worker, which can result in an unusually high CPU load when it is running:
+
+- if you use multiple tabs when assigning faces and don't wait until saving changes is complete, you will likely experience this problem, especially if you enter inconsistent names for the same face in each tab
+- another possible cause is running multiple instances (for example, parallel indexing workers started by a scheduler in the background) or modifying database content directly, as this may also lead to inconsistent faces, markers, and subjects
+- see [Faces: Error "Failed removing merged clusters for subject" seems to cause tagging of faces to become slow #2806](https://github.com/photoprism/photoprism/issues/2806)
+
+Running the following command [in a terminal](getting-started/docker-compose.md#command-line-interface) can resolve problems with inconsistent data:
+
+```
+docker compose exec photoprism photoprism faces audit --fix
+```
+
+It can also be helpful to manually check for inconsistent assignments and fix them in the user interface.
+
+*Advanced users affected by this are welcome to [privately provide us](https://photoprism.app/contact) with a SQL dump of their subjects, faces, and markers database tables for debugging. Thank you very much!*
+
 ## User Authentication
 
 Session and user management have been re-implemented in the latest [stable release](release-notes.md). If you are upgrading from a preview build, you will need to run the `photoprism users reset --yes` command [in a terminal](getting-started/docker-compose.md#command-line-interface) after the upgrade to recreate the new database tables so that they are compatible with the stable version. This will not affect your pictures or albums.
@@ -32,7 +70,7 @@ Session and user management have been re-implemented in the latest [stable relea
 Upgrading from the last stable version should work without any problems. However, if you have already created additional accounts with the previously offered unofficial multi-user support, you will notice that only the main admin account is migrated automatically. Run `photoprism users legacy` [in a terminal](getting-started/docker-compose.md#command-line-interface) to display the legacy accounts so you can migrate them manually if needed.
 
 Please note that the current release does not yet include support for user roles other than *Admin*, as we need to specify, create and test each new role before we can release it. Once this is done, we will also provide additional user management documentation.
- 
+
 ## File Compatibility
 
 ### JPEG: Bad RST Marker

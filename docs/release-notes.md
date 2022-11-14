@@ -11,7 +11,7 @@
 <span class="build">Build 221114-f639691f8</span>
 
 - MariaDB: [Unsupported versions are allowed in "unsafe" mode](https://github.com/photoprism/photoprism/issues/2878)
-- Translations: [Added Estonian](https://github.com/photoprism/photoprism/pull/2879), [updated Polish](https://github.com/photoprism/photoprism/commit/196fc8b2077267a8fd6fddc66c091a53617dbfa4), [Italian](https://github.com/photoprism/photoprism/pull/2886/files), [Korean, Romanian](https://github.com/photoprism/photoprism/pull/2884/files), and [Chinese (Traditional)](https://github.com/photoprism/photoprism/pull/2890)
+- Translations: [Added Estonian](https://github.com/photoprism/photoprism/pull/2879), [updated Polish](https://github.com/photoprism/photoprism/commit/196fc8b2077267a8fd6fddc66c091a53617dbfa4), [Italian](https://github.com/photoprism/photoprism/pull/2886/files), [Korean, Romanian](https://github.com/photoprism/photoprism/pull/2884/files) and [Chinese (Traditional)](https://github.com/photoprism/photoprism/pull/2890)
 
 ### November 5, 2022 ###
 <span class="build">Build 221105-7a295cab4</span>

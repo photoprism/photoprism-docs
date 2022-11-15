@@ -13,9 +13,13 @@ Installation in a sub-directory on a shared domain is generally possible if you 
 
 - [Hosting: Resolve known issues when installing in a sub-directory on a shared domain #2391](https://github.com/photoprism/photoprism/issues/2391)
 
+### Nested Import Folder
+
+You may not configure the *import* folder to be inside the *originals* folder, as this will cause a loop by importing already indexed files.
+
 ### Nested Storage Folder
 
-It is not supported to configure the *storage* folder to be inside the *originals* folder unless the name starts with a `.` to indicate that it is hidden. Otherwise, this will result in increasingly longer indexing times and high disk usage, since such nesting causes a loop by re-indexing previously created thumbnails and sidecar files:
+You may not configure the *storage* folder to be inside the *originals* folder unless the name starts with a `.` to indicate that it is hidden, as this will cause a loop when indexing the thumbnails of already indexed files:
 
 - [Config: Prevent nesting of "storage" folder inside "originals" unless hidden #1642](https://github.com/photoprism/photoprism/issues/1642)
 

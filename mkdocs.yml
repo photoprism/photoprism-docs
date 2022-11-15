@@ -102,7 +102,7 @@ nav:
       - Link Sharing: user-guide/share/index.md
       - With Apps: user-guide/share/services-share.md
     - Remote Sync:
-      - Remote Access: user-guide/sync/webdav.md
+      - WebDAV Access: user-guide/sync/webdav.md
       - Mobile Devices: user-guide/sync/mobile-devices.md
       - Other Apps: user-guide/sync/services-sync.md
       - Dropbox: user-guide/sync/dropbox.md

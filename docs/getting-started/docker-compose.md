@@ -157,7 +157,7 @@ You can optionally mount an *import* folder from which files can be transferred 
 in a structured way that avoids duplicates:
 
 - [imported files](../user-guide/library/import.md) receive a canonical filename and will be organized by year and month
-- you may not configure the *import* folder to be inside the *originals* folder, as this will cause a loop by importing already indexed files
+- never configure the *import* folder to be inside the *originals* folder, as this will cause a loop by importing already indexed files
 
 !!! tldr ""
     You can safely skip this. Adding files via [Web Upload](../user-guide/library/upload.md)

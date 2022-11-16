@@ -10,6 +10,8 @@
 ### November 16, 2022 ###
 <span class="build">Build 221116-122ebfb70</span>
 
+With this update you get the [latest translations](https://translate.photoprism.app/projects/photoprism/), updated dependencies, as well as two metadata bug fixes. Thanks to [all who contributed](https://github.com/photoprism/photoprism/graphs/contributors)!
+
 - Metadata: [Bad Unicode strings are sanitized automatically](https://github.com/photoprism/photoprism/issues/2897) 
 - Metadata: [UTC can be overridden by local time with unknown zone](https://github.com/photoprism/photoprism/issues/2876)
 - MariaDB: [Unsupported versions are allowed in "unsafe" mode](https://github.com/photoprism/photoprism/issues/2878)

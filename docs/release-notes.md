@@ -7,8 +7,8 @@
 !!! tldr ""
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
-### Development Preview ###
-<span class="build">Build 221115-6ab04088e</span>
+### November 16, 2022 ###
+<span class="build">Build 221116-122ebfb70</span>
 
 - Metadata: [Bad Unicode strings are sanitized automatically](https://github.com/photoprism/photoprism/issues/2897) 
 - Metadata: [UTC can be overridden by local time with unknown zone](https://github.com/photoprism/photoprism/issues/2876)

@@ -24,10 +24,10 @@ It defaults to `software` if no value is set or hardware transcoding fails. Plea
 
 Depending on your hardware, it may be necessary to install additional packages for FFmpeg to use the AVC encoding device. One way to do this is to set `PHOTOPRISM_INIT` to `"gpu tensorflow"` when using our Docker images.
 
-Note this is experimental and currently only required for *Intel HD Graphics i915* hardware. For example, if you use the *NVIDIA Container Toolkit*, as described below, you don't need to set the `gpu` target. See the [related installation script on GitHub](https://github.com/photoprism/photoprism/blob/develop/scripts/dist/install-gpu.sh) for details. We welcome contributions to support additional devices or update package names if needed.
+Note this is experimental and currently only required for *Intel Quick Sync*. So if you use the *NVIDIA Container Toolkit*, as described below, you don't need to set the `gpu` target. See the [related installation script on GitHub](https://github.com/photoprism/photoprism/blob/develop/scripts/dist/install-gpu.sh) for details. We welcome contributions to support additional devices or update package names if needed.
 
 !!! tldr ""
-    Most users can either skip `PHOTOPRISM_INIT` completely or just use `PHOTOPRISM_INIT: "tensorflow"` to install a special version of TensorFlow that improves indexing performance if your server CPU supports AVX, a technology unrelated to video transcoding.
+    Most users can either skip `PHOTOPRISM_INIT` completely or just use `PHOTOPRISM_INIT: "tensorflow"` to install a special version of TensorFlow that improves indexing performance if the server CPU supports AVX, which is independent of video transcoding and the type of GPU.
 
 ## NVIDIA Container Toolkit
 

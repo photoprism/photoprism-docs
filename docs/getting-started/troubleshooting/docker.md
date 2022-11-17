@@ -16,7 +16,7 @@ The following instructions explain how to install Docker:
 
 #### Docker Compose
 
-The examples in our guides now use the new `docker compose` command by default. However, if your *Docker* version does not yet support the *Compose Plugin*, you can still use the standalone `docker-compose` command to start and stop your instance.
+The examples in our guides now use the new `docker compose` command by default. However, if your *Docker* version does not yet support the *Compose Plugin*, you can still use the standalone `docker-compose` command.
 
 On some Linux distributions, you may need to install an additional package. To do so, you can use a graphical software package manager or run the following command in a terminal to install the *Compose Plugin* for *Docker* on Ubuntu and Debian:
 

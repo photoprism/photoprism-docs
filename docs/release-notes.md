@@ -7,7 +7,7 @@
 !!! tldr ""
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
-### Development Preview ###
+### November 17, 2022 ###
 <span class="build">Build 221117-2c658281b</span>
 
 - Videos: [Fixed installation of Intel Quick Sync drivers for hardware transcoding](https://github.com/photoprism/photoprism/issues/2700)

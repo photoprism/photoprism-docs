@@ -8,11 +8,11 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 221116-50c9291b9</span>
+<span class="build">Build 221117-2c658281b</span>
 
 - Videos: [Fixed installation of Intel Quick Sync drivers for hardware transcoding](https://github.com/photoprism/photoprism/issues/2700)
 - Videos: [Added `.m2ts` to known file extensions](https://github.com/photoprism/photoprism/issues/2899)
-- Translations: [Updated Chinese (Traditional)](https://github.com/photoprism/photoprism/pull/2903/files)
+- Translations: [Updated Chinese (Traditional)](https://github.com/photoprism/photoprism/pull/2903/files) and [Estonian](https://github.com/photoprism/photoprism/pull/2906/files)
 
 ### November 16, 2022 ###
 <span class="build">Build 221116-122ebfb70</span>

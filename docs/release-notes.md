@@ -7,6 +7,16 @@
 !!! tldr ""
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
+### Development Preview ###
+<span class="build">Build 221118-e58fee0fb</span>
+
+This service release includes compatibility fixes for MariaDB 10.10, the [latest translations](https://translate.photoprism.app/projects/photoprism/), a new theme, and updated dependencies.
+
+
+- UI: [Added Electra theme](https://github.com/photoprism/photoprism/issues/2916)
+- MariaDB: [Compatibility fixes for version 10.10](https://github.com/photoprism/photoprism/issues/2913)
+- Translations: [Updated Czech and Estonian](https://github.com/photoprism/photoprism/pull/2911/files)
+
 ### November 17, 2022 ###
 <span class="build">Build 221117-3268c4de8</span>
 

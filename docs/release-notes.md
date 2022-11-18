@@ -12,6 +12,7 @@
 
 This service release includes compatibility fixes for MariaDB 10.10, the [latest translations](https://translate.photoprism.app/projects/photoprism/), a new theme, and updated dependencies.
 
+What's new?
 
 - UI: [Added Electra theme](https://github.com/photoprism/photoprism/issues/2916)
 - MariaDB: [Compatibility fixes for version 10.10](https://github.com/photoprism/photoprism/issues/2913)

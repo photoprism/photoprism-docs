@@ -23,6 +23,8 @@ What's new?
 
 This update includes [video transcoding](https://docs.photoprism.app/getting-started/advanced/transcoding/) improvements and the latest [translations contributed by our community](https://translate.photoprism.app/projects/photoprism/).
 
+What's new?
+
 - Videos: [Fixed installation of Intel Quick Sync drivers for hardware transcoding](https://github.com/photoprism/photoprism/issues/2700)
 - Videos: [Added `.m2ts` to known file extensions](https://github.com/photoprism/photoprism/issues/2899)
 - Translations: [Updated Chinese (Traditional)](https://github.com/photoprism/photoprism/pull/2903/files) and [Estonian](https://github.com/photoprism/photoprism/pull/2906/files)

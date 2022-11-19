@@ -60,6 +60,7 @@ The corresponding [config toggle](../../getting-started/config-options.md) is `P
 
 ### Disable ExifTool
 This option prevents the creation of `json` files with Exif data in `storage/sidecar`.
+Note that you must have Exiftool enabled to extract video metadata such as duration, resolution, and codec.
 
 The corresponding [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_DISABLE_EXIFTOOL`.
 
@@ -268,10 +269,12 @@ In addition, PhotoPrism also supports TIFF, PNG, BMP and GIF files. Be aware tha
 
 ### JPEG Size Limit
 
-This controls the maximum size of downsampled JPEG preview files to create
-when converting original RAW images.
+This sets the maximum size of the JPEG files created when converting original RAW images.
 
 The corresponding [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_JPEG_SIZE`.
+
+!!! tldr ""
+    [RawTherapee and "heif-convert" cannot limit the resolution](../../known-issues.md#jpeg-size-limit) of JPEG files when converting files from other formats such as RAW, DNG, HEIC or AVIF.
 
 ### Use Presets
 
@@ -281,18 +284,18 @@ The corresponding [config toggle](../../getting-started/config-options.md) is `P
 
 ### Disable Darktable
 
-When disabled Darktable won't be used for RAW conversion.
+If this feature is disabled, [Darktable](https://www.darktable.org/) will not be used for RAW conversion.
 
 The corresponding [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_DISABLE_DARKTABLE`.
 
 ### Disable RawTherapee
 
-When disabled RawTherapee won't be used for RAW conversion.
+If this feature is disabled, [RawTherapee](https://www.rawtherapee.com/) is not used for RAW conversion.
 
 The corresponding [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_DISABLE_RAWTHERAPEE`.
 
 ### Disable FFmpeg
 
-When disabled FFmpeg won't be used for video transcoding.
+If this feature is disabled, [FFmpeg](https://www.ffmpeg.org/documentation.html) is not used to transcode videos or extract still images for thumbnail creation, and indexing or importing video files is not possible.
 
 The corresponding [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_DISABLE_FFMPEG`.

@@ -32,4 +32,4 @@ PhotoPrism offers three methods for stacking files:
 * :material-format-list-numbered-rtl: Sequential Name
 
 !!! attention ""
-    Changing stacking settings won't unstack already stacked files.
+    If you change the stacking settings, already stacked files will not be unstacked automatically.

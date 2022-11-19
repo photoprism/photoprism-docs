@@ -21,6 +21,10 @@ Make sure you have JSON sidecar files enabled if you have videos, live photos, a
 
 For a complete list of file formats and extensions, see our downloadable [Feature Overview](https://link.photoprism.app/overview).
 
+!!! tldr ""
+    In case [FFmpeg is disabled](config-options.md#feature-flags) or not installed, videos cannot be indexed because still images cannot be created.
+    You should also have [Exiftool enabled](config-options.md#feature-flags) to extract metadata such as duration, resolution, and codec.
+
 ### What are sidecar files and where do I find them?
 
 A sidecar is a file that sits next to your main photo or video files and usually has the same name

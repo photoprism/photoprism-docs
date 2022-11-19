@@ -213,6 +213,8 @@ memory problem
 
 ### Videos Don't Play ###
 
+In case [FFmpeg is disabled](../../user-guide/settings/advanced.md#disable-ffmpeg) or not installed, videos cannot be indexed because still images cannot be created. You should also have [Exiftool enabled](../config-options.md#feature-flags) to extract metadata such as duration, resolution, and codec.
+
 If videos do not play and/or you only see a white/black area when you open a video:
 
 - [ ] You are using an [incompatible browser](browsers.md), e.g. without AVC support (try another browser)

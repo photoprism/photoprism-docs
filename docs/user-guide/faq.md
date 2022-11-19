@@ -170,6 +170,11 @@
     implemented as a proof-of-concept, [contributions are welcome](../developer-guide/metadata/xmp.md). Indexing of
     embedded XMP is only possible via Exiftool, see above.
 
+??? question "Why are my video files not indexed?"
+
+    In case [FFmpeg is disabled](settings/advanced.md#disable-ffmpeg) or not installed, videos cannot be indexed because still images cannot be created.
+    You should also have [Exiftool enabled](../getting-started/config-options.md#feature-flags) to extract metadata such as duration, resolution, and codec.
+
 ??? question "Are JPEGs updated when RAW or XMP files change?"
 
     JPEGs are currently not regenerated when related RAW or XMP files change. RAW files are digital negatives by design. PhotoPrism therefore assumes that their image information is immutable.
@@ -193,6 +198,8 @@
     4. Image metadata contains the same *Unique Image ID* or *XMP Instance ID* (optional)
 
     You can change the behaviour for 2 - 4 in [*Settings*](settings/library.md).
+    
+    Note that already stacked files are not automatically unstacked when you change the stacking settings.
 
 ??? question "I already indexed some files. Why are Folders, Calendar and Moments still empty?"
 

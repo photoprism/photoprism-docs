@@ -31,6 +31,8 @@ make docker-build
 docker compose up
 ```
 
+If your version of Docker doesn't support `docker compose`, use `docker-compose` instead and call `DOCKER_COMPOSE='docker-compose'` before calling `make`.
+
 *This environment is for testing and development purposes only. Do not use it in production. Also note that our guides now use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose`.*
 
 ### Step 3: Install the Dependencies and Start Developing

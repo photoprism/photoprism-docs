@@ -138,10 +138,11 @@ connection or the server was started only a few seconds ago. In case this does n
 If you have indexed your library and some images or videos are missing, first [check *Library > Errors* for errors and warnings](logs.md).
 In case the application logs don't contain anything helpful:
 
+- [ ] The files exceed the [size limit in megabyte or the resolution limit in megapixels](../config-options.md#storage)
+- [ ] The files have [bad filesystem permissions or the wrong owner](docker.md#file-permissions), so they cannot be opened
 - [ ] The pictures are in [Review](../../user-guide/organize/review.md) due to low quality or incomplete metadata
 - [ ] The [file type](../faq.md#what-media-file-types-are-supported) is generally unsupported
 - [ ] The [file type](../faq.md#what-media-file-types-are-supported) is generally supported, but a specific feature or codec is not
-- [ ] The *originals* have [bad filesystem permissions](docker.md#file-permissions), so they cannot be opened by the indexer
 - [ ] The indexer has skipped the files because they are exact duplicates
 - [ ] The files are [ignored based on pattern in a `.ppignore` file](../../user-guide/library/originals.md#ignoring-files-and-folders)
 - [ ] They [are in *Library > Hidden*](https://try.photoprism.app/library/hidden) because thumbnails could not be created:

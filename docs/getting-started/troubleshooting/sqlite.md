@@ -21,6 +21,18 @@ If you use [traditional hard drives instead of SSDs](performance.md#storage), yo
 
 You may be able to optimize the behavior and reduce locking errors [with SQLite parameters](https://github.com/photoprism/photoprism/issues/2707) that you can set with the [database DSN config option](../config-options.md#database-connection), but ultimately you should use an SSD if you want to keep SQLite or switch to MariaDB. Please note that our team cannot provide support otherwise.
 
+#### Server Crashes ####
+
+If the server crashes unexpectedly or your database files get corrupted frequently, it is usually because they are stored on an unreliable device such as a USB flash drive, an SD card, or a shared network folder mounted via NFS or CIFS. These may also have [unexpected file size limitations](https://thegeekpage.com/fix-the-file-size-exceeds-the-limit-allowed-and-cannot-be-saved/), which is especially problematic for databases that do not split data into smaller files.
+
+- [ ] Never use the same database files with more than one server instance
+- [ ] Use SSDs instead of traditional hard drives, never use network storage
+- [ ] Consider using MariaDB instead of SQLite
+
+#### Corrupted Files ####
+
+↪ [Server Crashes](#server-crashes)
+
 #### Migrating to MariaDB ####
 
 When [migrating from SQLite to MariaDB](../advanced/migrations/sqlite-to-mariadb.md), e.g. using scripts and instructions from the community, you should note that your database schema may no longer be optimized for performance and indexes may be missing. Also, MariaDB cannot handle rows with "text" columns in memory and always uses temporary tables on disk if there are any.

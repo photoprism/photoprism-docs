@@ -127,6 +127,19 @@ docker compose exec photoprism photoprism index -f
 !!! tldr ""
     Be careful not to start multiple indexing processes at the same time, as this will lead to a high server load.
 
+#### Server Crashes ####
+
+If the server crashes unexpectedly or your database files get corrupted frequently, it is usually because they are stored on an unreliable device such as a USB flash drive, an SD card, or a shared network folder mounted via NFS or CIFS. These may also have [unexpected file size limitations](https://thegeekpage.com/fix-the-file-size-exceeds-the-limit-allowed-and-cannot-be-saved/), which is especially problematic for databases that do not split data into smaller files.
+
+- [ ] Never use the same database files with more than one server instance
+- [ ] To share a database over a network, run the database server directly on the remote server instead of sharing database files
+- [ ] To repair your tables after you have moved the files to a local disk, you can [start MariaDB with `--innodb-force-recovery=1`](https://mariadb.com/kb/en/innodb-recovery-modes/) (otherwise the same procedure as for recovering a lost password, see above)
+- [ ] Make sure you are using the latest Docker version and read the release notes for the database server version you are using
+
+#### Corrupted Files ####
+
+↪ [Server Crashes](#server-crashes)
+
 #### Lost Root Password ####
 
 In case you forgot the MariaDB "root" password and the one specified in your configuration does not work,
@@ -166,15 +179,6 @@ exit
 
 When you are done, remove the `--skip-grant-tables` flag again to restore the original
 command and restart the `mariadb` service as described above.
-
-#### Corrupted Files ####
-
-If your database files get corrupted frequently, it is usually because they are stored on an unreliable device such
-as a USB flash drive, an SD card, or a shared network folder. These may also have [unexpected file size limitations](https://thegeekpage.com/fix-the-file-size-exceeds-the-limit-allowed-and-cannot-be-saved/), which is especially problematic for databases that do not split data into smaller files.
-
-- [ ] Never use the same database files with more than one server instance
-- [ ] To share a database over a network, run the database server directly on the remote server instead of sharing database files
-- [ ] To repair your tables after you have moved the files to a local disk, you can [start MariaDB with `--innodb-force-recovery=1`](https://mariadb.com/kb/en/innodb-recovery-modes/) (otherwise the same procedure as for recovering a lost password, see above)
 
 #### Server Relocation ####
 

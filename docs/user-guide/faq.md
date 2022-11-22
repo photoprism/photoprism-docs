@@ -190,6 +190,8 @@
     exact date & location, or unique image ID indicate they belong to the same photo. You may then unstack
     them if this happened by mistake e.g. because of bad metadata.
 
+    [View Troubleshooting Checklist ›](../getting-started/troubleshooting/index.md#missing-pictures)
+
 ??? question "For what reasons can files be stacked?"
 
     1. Files sharing exactly the same file and folder name will always be stacked, for example `/2018/IMG_1234.jpg` and `/2018/IMG_1234.avi`

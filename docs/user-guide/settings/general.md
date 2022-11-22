@@ -7,7 +7,7 @@ In the *General* settings tab, you can configure basic user interface settings a
 ## User Interface ##
 You can change the *theme* and *language* of the User interface.
 
-To make PhotoPrism suite your individual needs the following sections and functionalities can be en- or disabled.
+To make PhotoPrism suit your individual needs, the following sections and functionalities can be en- or disabled.
 Disabled sections do not appear in the main navigation.
 
 #### :material-cloud-upload: Upload ####

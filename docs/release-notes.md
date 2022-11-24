@@ -7,6 +7,14 @@
 !!! tldr ""
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
+### Development Preview ###
+<span class="build">Build 221124-f77c8bbbe</span>
+
+What's new?
+
+- UI: [Improved "Electra" theme and removed "Seaweed"](https://github.com/photoprism/photoprism/commit/e1405eba5430d30769d90292bdc69debe0e27092)
+- Translations: [Updated Bulgarian](https://github.com/photoprism/photoprism/pull/2920/filess)
+
 ### November 18, 2022 ###
 <span class="build">Build 221118-e58fee0fb</span>
 

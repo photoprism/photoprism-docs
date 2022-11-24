@@ -12,7 +12,7 @@
 
 What's new?
 
-- UI: [Improved "Electra" theme and removed "Seaweed"](https://github.com/photoprism/photoprism/commit/e1405eba5430d30769d90292bdc69debe0e27092)
+- UI: [Updated "Electra" theme and removed "Seaweed"](https://github.com/photoprism/photoprism/commit/e1405eba5430d30769d90292bdc69debe0e27092)
 - Translations: [Updated Bulgarian](https://github.com/photoprism/photoprism/pull/2920/filess)
 
 ### November 18, 2022 ###
@@ -22,7 +22,7 @@ This service release includes compatibility fixes for MariaDB 10.10, the [latest
 
 What's new?
 
-- UI: [Added Electra theme](https://github.com/photoprism/photoprism/issues/2916)
+- UI: [Added "Electra" theme](https://github.com/photoprism/photoprism/issues/2916)
 - MariaDB: [Compatibility fixes for version 10.10](https://github.com/photoprism/photoprism/issues/2913)
 - Translations: [Updated Czech and Estonian](https://github.com/photoprism/photoprism/pull/2911/files)
 

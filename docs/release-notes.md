@@ -13,6 +13,7 @@
 What's new?
 
 - UI: [Updated "Electra" theme and removed "Seaweed"](https://github.com/photoprism/photoprism/commit/e1405eba5430d30769d90292bdc69debe0e27092)
+- Index: [Improved the query performance when flagging hidden files](https://github.com/photoprism/photoprism/issues/2928)
 - Translations: [Updated Bulgarian](https://github.com/photoprism/photoprism/pull/2920/filess)
 
 ### November 18, 2022 ###

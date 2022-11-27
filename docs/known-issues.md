@@ -65,11 +65,11 @@ An important reason for the worker to run independently of actual changes in the
 
 ### Photos With All Faces Assigned Appear Under “New Faces”
 
-This can happen when multiple media files are automatically [grouped into a stack](user-guide/organize/stacks.md) after indexing, for example, because they were taken at the same place and time, and stacking is enabled.
+This can happen when multiple image files are automatically [grouped into a stack](user-guide/organize/stacks.md) after indexing, for example, because they were taken at the same place and time, and stacking is enabled.
 
 To solve this problem, you can change the primary image of a stack to assign faces to the other images in the stack. You can also manually unstack these files and disable stacking in *Settings > Library*. Note that files that are already stacked are not automatically unstacked when you change the stacking settings.
  
-Secondary images are not searched for faces by default, so this can only become a problem in special cases when they are stacked after detection, which may indicate more fundamental problems, e.g. with the metadata or incorrect settings. 
+Secondary images are not searched for faces by default, so this can only become a problem in special cases when they are stacked after detection, which may indicate more fundamental problems, e.g. with the metadata, filenames, or settings. 
 
 ### Removing Merged Clusters Fails
 

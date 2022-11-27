@@ -4,7 +4,7 @@
 
 ## AVC Encoders
 
-The encoder used by FFmpeg can be configured with `PHOTOPRISM_FFMPEG_ENCODER` in your `docker-compose.yml` config file:
+The encoder used by FFmpeg can be configured with [`PHOTOPRISM_FFMPEG_ENCODER`](../config-options.md#file-converters) in your `docker-compose.yml` config file:
 
 | Encoder                    | Value       |
 |----------------------------|-------------|
@@ -20,6 +20,15 @@ It defaults to `software` if no value is set or hardware transcoding fails. Plea
 !!! tldr ""
     For transcoding to work, FFmpeg must be enabled and installed. When using our Docker images, it is already pre-installed. In addition, the service must have permission to use the related video devices. This depends on your hardware and operating system, so we can only give you examples that may need to be changed to work for you.
 
+### Bitrate Limiting
+
+You can limit the bitrate of the AVC encoder with the config option [`PHOTOPRISM_FFMPEG_BITRATE`](../config-options.md#file-converters). Keep in mind that this is a "soft limit", so the actual bitrate varies and depends on the encoder used as well as the specific FFmpeg parameters, which in turn depend on the encoder. It may also depend on the operating system and the GPU drivers.
+
+If the bitrate is significantly exceeded in your environment and you want improvements to be implemented, we recommend that you [take a look at the FFmpeg documentation](https://trac.ffmpeg.org/wiki/Limiting%20the%20output%20bitrate) and the [parameters in our source code](https://github.com/photoprism/photoprism/blob/develop/internal/ffmpeg/convert.go) so you can tell us which parameters should be changed to make it work for you.
+
+!!! tldr ""
+    Already transcoded video files are not automatically re-transcoded when the limit is changed. To do this, you must manually remove the `*.avc` files in the `sidecar` [storage folder](../docker-compose.md#photoprismstorage) and run the `photoprism convert` command [in a terminal](../docker-compose.md#opening-a-terminal).
+
 ## GPU Drivers
 
 Depending on your hardware, it may be necessary to install additional packages for FFmpeg to use the AVC encoding device. 
@@ -31,7 +40,7 @@ See the [related installation script on GitHub](https://github.com/photoprism/ph
 !!! tldr ""
     Most users can either skip `PHOTOPRISM_INIT` completely or just use `PHOTOPRISM_INIT: "tensorflow"` to install a special version of TensorFlow that improves indexing performance if the server CPU supports AVX, which is independent of video transcoding and the type of GPU.
 
-## Intel Quick Sync
+### Intel Quick Sync
 
 To enable *Intel Quick Sync* hardware video transcoding, add the `intel` target to `PHOTOPRISM_INIT`, choose the `intel` encoder, and share the `/dev/dri` devices with the `photoprism` service:
 
@@ -50,7 +59,7 @@ services:
 
 Now [restart the services](../docker-compose.md#step-2-start-the-server) for the changes to take effect.
 
-## NVIDIA Container Toolkit
+### NVIDIA Container Toolkit
 
 For hardware transcoding with an NVIDIA graphics card, the *NVIDIA Container Toolkit* must be installed on the host computer first. Instructions can be found in their [installation guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html).
 
@@ -82,7 +91,7 @@ Now [restart the services](../docker-compose.md#step-2-start-the-server) for the
 !!! info ""
     We also provide a [ready-to-use `docker-compose.yml` example](https://dl.photoprism.app/docker/nvidia/docker-compose.yml) for your convenience.
 
-## Raspberry Pi
+### Raspberry Pi
 
 Experimental hardware-accelerated transcoding on a Raspberry Pi (and compatible devices) can be enabled by choosing the `raspberry` encoder:
 

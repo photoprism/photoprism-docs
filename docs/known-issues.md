@@ -65,7 +65,7 @@ An important reason for the worker to run independently of actual changes in the
 
 ### Photos With All Faces Assigned Appear Under “New Faces”
 
-This can happen when multiple image files are automatically [grouped into a stack](user-guide/organize/stacks.md), for example, because they were taken at the same place and time, and stacking is enabled.
+This can happen when multiple image files are [grouped into a stack](user-guide/organize/stacks.md), for example, because they were taken at the same place and time, and stacking is enabled.
 
 Secondary images are not searched for faces by default. So the problem is limited to specific cases where you have manually changed the primary image or the images are stacked after detection, which may indicate more fundamental problems, e.g. with the [metadata, filenames, or settings](user-guide/organize/stacks.md#for-what-reasons-can-files-be-stacked).
 

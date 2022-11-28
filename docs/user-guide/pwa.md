@@ -28,9 +28,9 @@ You can conveniently install it on the home screen of all major operating system
 
         ![Screenshot](img/android-1.jpg){: style="width:35%" class="shadow"} 
 
-    3. Click *Add to Home screen*
+    3. Click *Install app*
 
-        ![Screenshot](img/android-2.jpg){: style="width:35%" class="shadow"}
+        ![Screenshot](img/android-install-app.jpg){: style="width:35%" class="shadow"}
 
     4. Choose a name and click *Add*
 

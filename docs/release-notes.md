@@ -8,13 +8,16 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 221125-bfe7705af</span>
+<span class="build">Build 221128-c09b6c62b</span>
 
 What's new?
 
 - UI: [Updated "Electra" theme and removed "Seaweed"](https://github.com/photoprism/photoprism/commit/e1405eba5430d30769d90292bdc69debe0e27092)
-- Index: [Improved the query performance when flagging hidden files](https://github.com/photoprism/photoprism/issues/2928)
-- Translations: [Updated Bulgarian](https://github.com/photoprism/photoprism/pull/2920/filess)
+- Videos: [Improved player compatibility with browser plugins](https://github.com/photoprism/photoprism/issues/1439)
+- Albums: [Double quotes in titles are replaced with Unicode instead of single quotes](https://github.com/photoprism/photoprism/issues/2891)
+- Index: [Improved query performance when flagging hidden files](https://github.com/photoprism/photoprism/issues/2928)
+- Config: [Custom template path is not searched for files if not specified](https://github.com/photoprism/photoprism/issues/2946) 
+- Translations: Updated Bulgarian, Chinese (traditional), Estonian, German, and Ukrainian 
 
 ### November 18, 2022 ###
 <span class="build">Build 221118-e58fee0fb</span>

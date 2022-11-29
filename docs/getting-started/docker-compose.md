@@ -314,7 +314,7 @@ The currently supported user ID ranges are 0, 33, 50-99, 500-600, and 900-1200. 
 
 !!! info "Complete Rescan"
     `docker compose exec photoprism photoprism index -f` rescans all originals, including already indexed and unchanged files.
-    This may be necessary after major upgrades and after migrations of the database schema, especially if search results are missing or incorrect. Note you can also start a [rescan from the user interface](../user-guide/library/originals.md) by navigating to *Library* > *Index*, checking "Full Rescan" and then clicking "Start".
+    This may be necessary after major upgrades and after migrations of the database schema, especially if search results are missing or incorrect. Note you can also start a [rescan from the user interface](../user-guide/library/originals.md) by navigating to *Library* > *Index*, checking "Complete Rescan" and then clicking "Start".
 
 *[home directory]: \user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux
 *[host]: Computer, Cloud Server, or VM that runs PhotoPrism

@@ -58,8 +58,11 @@ using a `.ppignore` file. Adding their name won't remove them from PhotoPrism.
 
 #### When should "Complete Rescan" be selected? ####
 
-If selected, all files in the *originals* folder will be re-indexed, including already indexed and unchanged files. 
-This may be necessary after upgrading, especially to new major versions.
+If selected, all files in the *originals* folder will be re-indexed, including already indexed and unchanged files.
+
+We recommend performing a complete rescan after major updates to take advantage of new search filters and sorting options. Be sure to [read the notes for each release](../../release-notes.md) to find out what changes have been made and if they might affect your library, for example, because of the file types you have or because new search features have been added. If you encounter problems that you cannot solve otherwise (i.e. before reporting a bug), please also try a rescan and see if it solves the problem.
+
+Manually entered information such as labels, people, titles or descriptions will not be modified when indexing, even if you perform a "complete rescan".
 
 #### Automatic Indexing ####
 The Indexer is triggered automatically 15 Minutes after the originals folder has been edited via WebDAV.

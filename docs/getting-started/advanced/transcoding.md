@@ -26,7 +26,7 @@ You can limit the bitrate of the AVC encoder with the config option [`PHOTOPRISM
 
 If the bitrate is significantly exceeded in your environment and you want improvements to be implemented, we recommend that you [take a look at the FFmpeg documentation](https://trac.ffmpeg.org/wiki/Limiting%20the%20output%20bitrate) and the [parameters in our source code](https://github.com/photoprism/photoprism/blob/develop/internal/ffmpeg/convert.go) so you can tell us which parameters should be changed to make it work for you.
 
-Note that MPEG-4 AVC videos are not re-encoded if they exceed the [configured bitrate limit](../../getting-started/advanced/transcoding.md#bitrate-limiting). To reduce the size of AVC videos, you can manually replace the original files with a smaller version or wait for a future release that offers this functionality.
+Note that MPEG-4 AVC videos are not re-encoded if they exceed the [configured bitrate limit](../config-options.md#file-converters). To reduce the size of AVC videos, you can manually replace the original files with a smaller version or wait for a future release that offers this functionality.
 
 !!! tldr ""
     Already transcoded video files are not automatically re-transcoded when the limit is changed. To do this, you must manually remove the `*.avc` files in the `sidecar` [storage folder](../docker-compose.md#photoprismstorage) and run the `photoprism convert` command [in a terminal](../docker-compose.md#opening-a-terminal).

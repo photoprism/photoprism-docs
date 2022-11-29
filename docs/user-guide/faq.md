@@ -218,6 +218,12 @@
 
     It is also possible that multiple .jpg files are stacked because they are related to each other.
 
+??? question "When should I perform a complete rescan?"
+
+    We recommend performing a complete rescan after major updates to take advantage of new search filters and sorting options. Be sure to [read the notes for each release](../release-notes.md) to find out what changes have been made and if they might affect your library, for example, because of the file types you have or because new search features have been added. If you encounter problems that you cannot solve otherwise (i.e. before reporting a bug), please also try a rescan and see if it solves the problem.
+    
+    You can start a [rescan from the user interface](library/originals.md) by navigating to *Library* > *Index*, selecting "Complete Rescan", and then clicking "Start".
+
 ## Metadata ##
 
 ??? question "Why do some of my photos without geolocation information show a random location?"

@@ -6,7 +6,6 @@
     See installation instructions in [Getting Started](../../getting-started/index.md) for details.
     When starting with an empty folder, you need to add or upload files first.
 
-
 1. Go to *Library* using the main navigation
 
 2. Select a sub-folder or keep the default to index all files
@@ -15,9 +14,7 @@
 
 4. Press *Start* to start indexing
 
-
 ![Screenshot](img/index-dark.jpg){ class="shadow" }
-
 
 !!! info ""
     You can use [WebDAV](webdav.md)-compatible apps, including Microsoft's Windows Explorer and Apple's Finder, 
@@ -58,12 +55,15 @@ using a `.ppignore` file. Adding their name won't remove them from PhotoPrism.
 
 #### When should "Complete Rescan" be selected? ####
 
-If selected, all files in the *originals* folder will be re-indexed, including already indexed and unchanged files.
+If you select this option, all files in the *originals* folder will be re-indexed, including already indexed and unchanged files.
 
-We recommend performing a complete rescan after major updates to take advantage of new search filters and sorting options. Be sure to [read the notes for each release](../../release-notes.md) to find out what changes have been made and if they might affect your library, for example, because of the file types you have or because new search features have been added. If you encounter problems that you cannot solve otherwise (i.e. before reporting a bug), please also try a rescan and see if it solves the problem.
+We recommend performing a complete rescan after major updates to take advantage of new search filters and sorting options. Be sure to [read the notes for each release](../../release-notes.md) to see what changes have been made and if they might affect your library, for example, because of the file types you have or because new search features have been added. If you encounter problems that you cannot solve otherwise (i.e. before reporting a bug), please also try a rescan and see if it solves the problem.
 
-Manually entered information such as labels, people, titles or descriptions will not be modified when indexing, even if you perform a "complete rescan".
+!!! tldr ""
+    Manually entered information such as labels, people, titles or descriptions will not be modified when indexing, even if you perform a "complete rescan".
 
 #### Automatic Indexing ####
-The Indexer is triggered automatically 15 Minutes after the originals folder has been edited via WebDAV.
-15 Minutes is the default value, it can be changed using the respective [config option](../../getting-started/config-options.md#index-workers).
+
+Indexing is triggered automatically when files are [synced with the *originals* folder via WebDAV](../sync/webdav.md).
+
+The default safety delay for automatic indexing is 5 minutes. You can change it through the [PHOTOPRISM_AUTO_INDEX](../../getting-started/config-options.md#index-workers) config option.

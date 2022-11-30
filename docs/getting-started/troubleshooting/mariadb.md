@@ -13,7 +13,7 @@ As a result, the testing effort required before each release is no longer feasib
 
 Our [configuration examples](https://dl.photoprism.app/docker/) are usually based on the [current stable version](https://mariadb.com/kb/en/mariadb-server-release-dates/) to take advantage of performance improvements. This does not mean that [older versions](../index.md#databases) are no longer supported and you must upgrade immediately.
 
-Since it is possible that new major versions of MariaDB require changes in PhotoPrism to be compatible, you should check compatibility before upgrading to new MariaDB versions that have been released very recently. We therefore recommend not using the `:latest` tag for the Docker image and to upgrade manually by changing the tag e.g. from `:10.8` to `:10.9` once we had the chance to test the new release:
+We recommend not using the `:latest` tag for the MariaDB Docker image and to upgrade manually by changing the tag once we had a chance to test a new major version, e.g.:
 
 ```yaml
 services:

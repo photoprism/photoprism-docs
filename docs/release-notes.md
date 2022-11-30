@@ -22,14 +22,8 @@ What's new?
 ### November 18, 2022 ###
 <span class="build">Build 221118-e58fee0fb</span>
 
-This service release includes compatibility fixes for MariaDB 10.10, the [latest translations](https://translate.photoprism.app/projects/photoprism/), a new theme, and updated dependencies. Note that since it is possible that new major versions of MariaDB require changes in PhotoPrism to be compatible, you should check compatibility before upgrading to new MariaDB versions that have been released very recently. We therefore recommend not using the `:latest` tag for the Docker image and to upgrade manually by changing the tag e.g. from `:10.8` to `:10.9` once we had the chance to test the new release:
-
-```yaml
-services:
-  mariadb:
-    image: mariadb:10.9
-    ...
-```
+This service release includes compatibility fixes for MariaDB 10.10, the [latest translations](https://translate.photoprism.app/projects/photoprism/), a new theme, and updated dependencies.
+We recommend not using the `:latest` tag for the MariaDB Docker image and to upgrade manually by changing the tag once we had a chance to test a new major version.
 
 What's new?
 

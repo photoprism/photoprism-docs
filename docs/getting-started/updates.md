@@ -74,6 +74,9 @@ We recommend performing a [complete rescan](../user-guide/library/originals.md#w
 
 You can start a [rescan from the user interface](../user-guide/library/originals.md) by navigating to *Library* > *Index*, selecting "Complete Rescan", and then clicking "Start". Manually entered information such as labels, people, titles or descriptions will not be modified when indexing, even if you perform a "complete rescan".
 
+!!! tldr ""
+    Be careful not to start multiple indexing processes at the same time, as this will lead to a high server load.
+
 ### Face Recognition
 
 Existing users may index faces without performing a complete rescan:
@@ -91,8 +94,16 @@ docker compose exec photoprism photoprism faces reset -f
 
 ### MariaDB Server
 
-Our [config examples](https://dl.photoprism.app/docker/) are generally based on the [latest stable release](https://mariadb.com/kb/en/mariadb-server-release-dates/) to take advantage of performance enhancements.
-This does not mean [older versions](index.md#databases) are no longer supported and you have to upgrade immediately.
+Our [configuration examples](https://dl.photoprism.app/docker/) are usually based on the [current stable version](https://mariadb.com/kb/en/mariadb-server-release-dates/) to take advantage of performance improvements. This does not mean that [older versions](index.md#databases) are no longer supported and you must upgrade immediately.
+
+Since it is possible that new major versions of MariaDB require changes in PhotoPrism to be compatible, you should check compatibility before upgrading to new MariaDB versions that have been released very recently. We therefore recommend not using the `:latest` tag for the Docker image and to upgrade manually by changing the tag e.g. from `:10.8` to `:10.9` once we had the chance to test the new release:
+
+```yaml
+services:
+  mariadb:
+    image: mariadb:10.9
+    ...
+```
 
 !!! note ""
     If MariaDB fails to start after upgrading from an earlier version (or migrating from MySQL), the internal management schema may be outdated. See [Troubleshooting MariaDB Problems](troubleshooting/mariadb.md#version-upgrade) for instructions on how to fix this.

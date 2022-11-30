@@ -5,7 +5,7 @@
     [Sponsors](https://photoprism.app/membership) receive direct [technical support](https://photoprism.app/contact) via email.
     Before [submitting a support request](../../user-guide/index.md#getting-support), try to [determine the cause of your problem](index.md).
 
-### Installation
+## Installation
 
 If you cannot use the `docker` and `docker compose` or `docker-compose` commands, make sure [Docker](https://docs.docker.com/config/daemon/#start-the-daemon-manually) is running on the host you are connected to and your current user has permission to use it.
 The following instructions explain how to install Docker:
@@ -14,7 +14,7 @@ The following instructions explain how to install Docker:
 - [Microsoft Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 - [Apple macOS](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 
-#### Docker Compose
+### Docker Compose
 
 The examples in our guides now use the new `docker compose` command by default. However, if your *Docker* version does not yet support the *Compose Plugin*, you can still use the standalone `docker-compose` command.
 
@@ -30,8 +30,8 @@ If that does not work, this will install the legacy `docker-compose` command:
 sudo apt install docker-compose
 ```
 
-### Using Docker
-#### Cannot Connect
+## Using Docker
+### Cannot Connect
 
 If you see the error message "Cannot connect to the Docker daemon", it means that Docker is not installed or
 not running yet. Before you try anything else, it may help to simply restart your computer.
@@ -45,7 +45,7 @@ sudo systemctl start docker.service
 On other operating systems, start *Docker Desktop* and enable the "Start Docker Desktop when you log in"
 option in its settings.
 
-#### Connection Aborted
+### Connection Aborted
 
 If you see the error message "Connection aborted" or "Connection denied", it usually means that your
 current user does not have permission to use Docker.
@@ -67,7 +67,7 @@ sudo docker compose up -d
 Note that this will point the home directory shortcut `~` to `/root` in the `volumes:` section
 of your `docker-compose.yml`.
 
-### Viewing Logs
+## Viewing Logs
 
 Run this command to display the last 100 log messages (omit `--tail=100` to see all):
 
@@ -101,11 +101,11 @@ docker compose up
 !!! tldr ""
     The default [Docker Compose](https://docs.docker.com/compose/) config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running the `docker-compose` command in the same directory. Config files for other apps or instances should be placed in separate folders.
 
-### Adding Swap
+## Adding Swap
 
 *Note that high-resolution panoramic images may require additional swap space and/or [physical memory](performance.md#memory) above the [recommended minimum](../index.md#system-requirements).*
 
-#### Linux
+### Linux
 
 Open a terminal and run this command to check if your server has swap configured.
 
@@ -136,7 +136,7 @@ echo '/swapfile none swap sw 0 0' | tee -a /etc/fstab
 !!! note ""
     You can skip `sudo -i` if you are already logged in as root.
 
-#### Windows
+### Windows
 
 Windows Pro users should [disable](../img/docker-disable-wsl2.jpg) the *WSL 2* based engine in *Docker Settings > General*
 so that they can mount drives other than `C:`. This will enable *Hyper-V*, which
@@ -148,19 +148,19 @@ It is important to explicitly [increase the Docker memory limit](../img/docker-r
 when using *Hyper-V*. The default of 2 GB can reduce indexing performance and cause unexpected restarts.
 Also, ensure that you configure at least 4 GB of swap space.
 
-#### macOS
+### macOS
 
 It is important to [increase the Docker memory limit](../img/docker-resources-advanced.jpg) to 4 GB or more, as the
 default of 2 GB can reduce indexing performance and cause unexpected restarts. Also, ensure that you configure
 at least 4 GB of swap space.
 
-### Kernel Security
+## Kernel Security
 
 We recommend disabling Linux kernel security modules like *SELinux* (RedHat/Fedora) on private servers, especially if you have no experience configuring them.
 
 If you have working configuration rules for a particular Linux distribution, feel free to share the instructions with the community so that less experienced users can harden their installation without running into problems.
 
-### File Permissions
+## File Permissions
 
 Errors such as "read-only file system", "error creating path", or "wrong permissions" indicate a filesystem permission problem:
 
@@ -182,7 +182,7 @@ sudo chmod -R a+rwx [folder]
     **Be very careful when changing permissions in shared hosting environments.** If you are using PhotoPrism on corporate
     or university servers, we recommend that you ask your IT help desk for advice.
 
-### Disk Space
+## Disk Space
 
 In case the logs show "disk full", "quota exceeded", or "no space left" errors, either the disk containing the
 *storage* folder is full (get a new one or use a different disk) or a disk usage limit is configured, for example
@@ -194,7 +194,7 @@ in the Docker, Kubernetes, or Virtual Machine configuration (remove or increase 
 
 *Start a full rescan if necessary, for example, if it looks like [thumbnails](index.md#broken-thumbnails) or [pictures are missing](index.md#missing-pictures).*
 
-### Network Storage
+## Network Storage
 
 Shared folders that have already been mounted on your host can be mounted like any local drive or directory.
 Alternatively, you can mount network storage with [Docker Compose](https://docs.docker.com/compose/compose-file/compose-file-v3/#driver_opts).

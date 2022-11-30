@@ -1,19 +1,22 @@
 # Advanced Database Setup
 
+*Note that this guide is intended for advanced users and that our [docker-compose.yml examples](https://dl.photoprism.app/docker/) already contain a tested and working database configuration. You can contribute by clicking :material-pencil: to send a pull request with your changes.*
+
+## Compatibility
+
 PhotoPrism is compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB 10.5.12+](https://mariadb.org/).
-Older databases using the same dialect, such as MySQL 8, may work but are not officially supported.
+Official support for MySQL 8 is discontinued as Oracle seems to have stopped shipping [new features and enhancements](https://github.com/photoprism/photoprism/issues/1764).
+As a result, the testing effort required before each release is no longer feasible.
 
-Never store database files on an unreliable device such as a USB flash drive, SD card, or shared network folder. These may also have [unexpected file size limitations](https://thegeekpage.com/fix-the-file-size-exceeds-the-limit-allowed-and-cannot-be-saved/), which is especially problematic for databases that do not split data into smaller files.
+Our [configuration examples](https://dl.photoprism.app/docker/) are usually based on the [current stable version](https://mariadb.com/kb/en/mariadb-server-release-dates/) to take advantage of performance improvements. This does not mean that [older versions](../index.md#databases) are no longer supported and you must upgrade immediately.
 
-!!! info
-    Our [docker-compose.yml](https://dl.photoprism.app/docker/) examples include
-    tested and working database configurations. These docs are for advanced users only.
+Since it is possible that new major versions of MariaDB require changes in PhotoPrism to be compatible, you should check compatibility before upgrading to new MariaDB versions that have been released very recently. We therefore recommend not using the `:latest` tag for the Docker image and to upgrade manually by changing the tag e.g. from `:10.8` to `:10.9` once we had the chance to test the new release.
 
-!!! note "MySQL"
-    Official support for MySQL 8 is discontinued as Oracle seems to have stopped shipping [new features and enhancements](https://github.com/photoprism/photoprism/issues/1764).
-    As a result, the testing effort required before each release is no longer feasible.
+## Storage
 
-## Configuring MariaDB ##
+Local Solid-State Drives (SSDs) are [best for databases](../troubleshooting/performance.md#storage) of any kind. Never store database files on an unreliable device such as a USB flash drive, SD card, or shared network folder. These may also have [unexpected file size limitations](https://thegeekpage.com/fix-the-file-size-exceeds-the-limit-allowed-and-cannot-be-saved/), which is especially problematic for databases that do not split data into smaller files.
+
+## Configuration ##
 
 When creating a new database, make sure to set the charset and collation as follows:
 

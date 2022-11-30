@@ -1,7 +1,7 @@
 # Running PhotoPrism On FreeBSD
 
 !!! tldr ""
-    Should you experience problems with the installation, we recommend that you ask the FreeBSD community for advice, as we cannot provide support for third-party software and services.
+    Should you experience problems with the installation, we recommend that you ask the FreeBSD community for advice, as we cannot provide support for third-party software and services. You can contribute by clicking :material-pencil: to send a pull request with your changes.
 
 For FreeBSD / FreeNAS users, an unofficial [PhotoPrism port](https://github.com/huo-ju/photoprism-freebsd-port) 
 is available.
@@ -50,5 +50,5 @@ We recommend performing a [complete rescan](../../user-guide/library/originals.m
 
 You can start a [rescan from the user interface](../../user-guide/library/originals.md) by navigating to *Library* > *Index*, selecting "Complete Rescan", and then clicking "Start". Manually entered information such as labels, people, titles or descriptions will not be modified when indexing, even if you perform a "complete rescan".
 
-!!! example ""
-    **Help improve these docs!** You can contribute by clicking :material-pencil: to send a pull request with your changes.
+!!! tldr ""
+    Be careful not to start multiple indexing processes at the same time, as this will lead to a high server load.

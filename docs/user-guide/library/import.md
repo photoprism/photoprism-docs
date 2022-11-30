@@ -25,14 +25,14 @@
     
 #### When should "Move Files" be selected? ####
 
-If selected, files that have been moved to the *originals* folder, or that already exist,
-will automatically be deleted from the *import* folder.
-This will save storage if you don't want to keep them as backup, or for any other reason.
+If you select this option, files that have been moved to the *originals* folder or already exist will be automatically deleted from the *import* folder.
+This way you save disk space if you don't want to keep them as backup or for other reasons.
 
 #### Automatic Import ####
-The Importer is triggered automatically 15 Minutes after the import folder has been edited via WebDAV.
-15 Minutes is the default value, it can be changed using the respective [config option](../../getting-started/config-options.md#index-workers).
 
+Importing is triggered automatically when files are [synced with the *import* folder via WebDAV](../sync/webdav.md).
+
+The default safety delay for automatic importing is 3 minutes. You can change it through the [PHOTOPRISM_AUTO_IMPORT](../../getting-started/config-options.md#index-workers) config option.
 
 !!! info "Can I use PhotoPrism to sort files into a configurable folder structure?"
     You have complete freedom in how you organize your originals. If you don't like the unique names and

@@ -23,7 +23,7 @@ What's new?
 <span class="build">Build 221118-e58fee0fb</span>
 
 This service release includes compatibility fixes for MariaDB 10.10, the [latest translations](https://translate.photoprism.app/projects/photoprism/), a new theme, and updated dependencies.
-We recommend not using the `:latest` tag for the MariaDB Docker image and to upgrade manually by changing the tag once we had a chance to test a new major version.
+We recommend not using the `:latest` tag for the MariaDB Docker image and to [upgrade manually](getting-started/updates.md#mariadb-server) by changing the tag once we had a chance to test a new major version.
 
 What's new?
 

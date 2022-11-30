@@ -25,7 +25,7 @@
     
 #### When should "Move Files" be selected? ####
 
-If you select this option, files that have been moved to the *originals* folder or already exist will be automatically deleted from the *import* folder.
+If you select this option, files that have been moved to the *originals* folder, or that already exist, will be automatically deleted from the *import* folder.
 This way you save disk space if you don't want to keep them as backup or for other reasons.
 
 #### Automatic Import ####

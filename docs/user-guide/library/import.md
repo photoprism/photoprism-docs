@@ -20,8 +20,7 @@
     This is especially helpful if PhotoPrism is running on a remote server.
 
 !!! attention ""
-    Importing is not possible in [read-only mode](../settings/library.md) as it requires
-    [write permissions](../../getting-started/troubleshooting/docker.md#file-permissions) for the *originals* folder.
+    Import is not possible in [read-only mode](../settings/library.md) because it requires [write permissions](../../getting-started/troubleshooting/docker.md#file-permissions) to the folder of *originals*.
     
 #### When should "Move Files" be selected? ####
 
@@ -30,9 +29,9 @@ This way you save disk space if you don't want to keep them as backup or for oth
 
 #### Automatic Import ####
 
-Importing is triggered automatically when files are [synced with the *import* folder via WebDAV](../sync/webdav.md).
+An import is triggered automatically when files are synced to the *import* folder [via WebDAV](../sync/webdav.md).
 
-The default safety delay for automatic importing is 3 minutes. You can change it through the [PHOTOPRISM_AUTO_IMPORT](../../getting-started/config-options.md#index-workers) config option.
+The default safety delay for automatic import is 3 minutes. You can change it using the [PHOTOPRISM_AUTO_IMPORT](../../getting-started/config-options.md#index-workers) config option.
 
 !!! info "Can I use PhotoPrism to sort files into a configurable folder structure?"
     You have complete freedom in how you organize your originals. If you don't like the unique names and

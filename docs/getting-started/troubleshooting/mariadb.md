@@ -92,8 +92,6 @@ To enable automatic schema updates, set `MARIADB_AUTO_UPGRADE` to a non-empty va
 
 ```yaml
 services:
-  ...
-
   mariadb:
     image: mariadb:10.9
     ...

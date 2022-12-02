@@ -8,7 +8,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 221129-51aae94e6</span>
+<span class="build">Build 221202-c1ae2a01d</span>
 
 What's new?
 
@@ -17,7 +17,7 @@ What's new?
 - Albums: [Double quotes in titles are replaced with Unicode instead of single quotes](https://github.com/photoprism/photoprism/issues/2891)
 - Index: [Improved query performance when flagging hidden files](https://github.com/photoprism/photoprism/issues/2928)
 - Config: [Custom template path is not searched for files if not specified](https://github.com/photoprism/photoprism/issues/2946) 
-- Translations: Updated Bulgarian, Chinese (traditional), Estonian, German, and Ukrainian 
+- Translations: Updated Bulgarian, Chinese (traditional), Estonian, French, German, and Ukrainian 
 
 ### November 18, 2022 ###
 <span class="build">Build 221118-e58fee0fb</span>

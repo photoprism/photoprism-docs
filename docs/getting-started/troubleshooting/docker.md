@@ -10,9 +10,17 @@
 If you cannot use the `docker` and `docker compose` or `docker-compose` commands, make sure [Docker](https://docs.docker.com/config/daemon/#start-the-daemon-manually) is running on the host you are connected to and your current user has permission to use it.
 The following instructions explain how to install Docker:
 
-- [Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-20-04), [Mint](https://techviewleo.com/how-to-install-and-use-docker-in-linux-mint/), [Debian](https://www.linode.com/docs/guides/installing-and-using-docker-on-ubuntu-and-debian/), [Arch](https://wiki.archlinux.org/title/docker#Installation), and [Fedora](https://docs.docker.com/engine/install/fedora/) Linux
+- [Ubuntu](https://docs.docker.com/engine/install/ubuntu/), [Mint](https://techviewleo.com/how-to-install-and-use-docker-in-linux-mint/), [Debian](https://www.linode.com/docs/guides/installing-and-using-docker-on-ubuntu-and-debian/), [Arch](https://wiki.archlinux.org/title/docker#Installation), and [Fedora](https://docs.docker.com/engine/install/fedora/) Linux
 - [Microsoft Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 - [Apple macOS](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
+
+### Ubuntu Linux
+
+If you are using Ubuntu Linux, you can run this script to install the latest *Docker* version, including the *Compose Plugin*, on your server in one step:
+
+```
+bash <(curl -s https://setup.photoprism.app/ubuntu/install-docker.sh)
+```
 
 ### Docker Compose
 
@@ -21,12 +29,14 @@ The examples in our guides now use the new `docker compose` command by default. 
 On some Linux distributions, you may need to install an additional package. To do so, you can use a graphical software package manager or run the following command in a terminal to install the *Compose Plugin* for *Docker* on Ubuntu and Debian:
 
 ```
+sudo apt update
 sudo apt install docker-compose-plugin
 ```
 
 If that does not work, this will install the legacy `docker-compose` command:
 
 ```
+sudo apt update
 sudo apt install docker-compose
 ```
 

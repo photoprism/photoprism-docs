@@ -4,7 +4,13 @@
 
 Before running any commands, please make sure you have [Git](https://git-scm.com/downloads), [Make](https://www.gnu.org/software/make/), [Docker](https://store.docker.com/search?q=docker&type=edition&offering=community), and Docker Compose installed on your system. These are available for Mac, Linux, and Windows.[^1]
 
-If you are working with Windows, you must also disable "autocrlf" in Git to avoid errors:
+In case you are using Ubuntu Linux, you can run this script to [install the latest *Docker*](../getting-started/troubleshooting/docker.md) version including the *Compose Plugin* on your computer in one step:
+
+```
+bash <(curl -s https://setup.photoprism.app/ubuntu/install-docker.sh)
+```
+
+When working with Windows, you need to install the latest version of [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/) and also disable "autocrlf" in Git to avoid errors:
 
 ```bash
 git config --global core.autocrlf false

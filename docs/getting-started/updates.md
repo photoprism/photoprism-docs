@@ -94,9 +94,7 @@ docker compose exec photoprism photoprism faces reset -f
 
 ### MariaDB Server
 
-Our [configuration examples](https://dl.photoprism.app/docker/) are usually based on the [current stable version](https://mariadb.com/kb/en/mariadb-server-release-dates/) to take advantage of performance improvements. This does not mean that [older versions](index.md#databases) are no longer supported and you must upgrade immediately.
-
-We recommend not using the `:latest` tag for the MariaDB Docker image and to upgrade manually by changing the tag once we had a chance to test a new major version, e.g.:
+Our [configuration examples](https://dl.photoprism.app/docker/) are generally based on the [current stable version](https://mariadb.com/kb/en/mariadb-server-release-dates/) to take advantage of performance improvements. This does not mean that [older versions](index.md#databases) are no longer supported and you must upgrade immediately. We recommend not using the `:latest` tag for the MariaDB Docker image and to upgrade manually by changing the tag once we had a chance to test a new major version, e.g.:
 
 ```yaml
 services:
@@ -131,4 +129,4 @@ as this requires less experience. Alternative 32-bit Docker images are provided 
 !!! tldr ""
     Darktable is not included in the ARMv7 version because it is not 32-bit compatible.
 
-[^1]: The default [Docker Compose](https://docs.docker.com/compose/) config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running the `docker-compose` command in the same directory. Config files for other apps or instances should be placed in separate folders.
+[^1]: The default [Docker Compose](https://docs.docker.com/compose/) config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running `docker compose` or `docker-compose` in the same directory. Config files for other apps or instances should be placed in separate folders.

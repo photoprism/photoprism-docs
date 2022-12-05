@@ -7,7 +7,7 @@
 
 ## Installation
 
-If you cannot use the `docker` and `docker compose` or `docker-compose` commands, make sure [Docker](https://docs.docker.com/config/daemon/#start-the-daemon-manually) is running on the host you are connected to and your current user has permission to use it.
+If you cannot use the `docker` and `docker compose`, or `docker-compose`, commands, make sure [Docker](https://docs.docker.com/config/daemon/#start-the-daemon-manually) is running on the host you are connected to and your current user has permission to use it.
 The following instructions explain how to install Docker:
 
 - [Ubuntu](https://docs.docker.com/engine/install/ubuntu/), [Mint](https://techviewleo.com/how-to-install-and-use-docker-in-linux-mint/), [Debian](https://www.linode.com/docs/guides/installing-and-using-docker-on-ubuntu-and-debian/), [Arch](https://wiki.archlinux.org/title/docker#Installation) and [Fedora](https://docs.docker.com/engine/install/fedora/) Linux
@@ -85,7 +85,7 @@ Run this command to display the last 100 log messages (omit `--tail=100` to see 
 docker compose logs --tail=100
 ```
 
-To enable [debug mode](../config-options.md), set `PHOTOPRISM_DEBUG` to `true` in the `environment:` section
+To enable [debug mode](../config-options.md), set `PHOTOPRISM_DEBUG` to `"true"` in the `environment:` section
 of the `photoprism` service (or use the `--debug` flag when running the `photoprism` command directly):
 
 ```yaml
@@ -109,7 +109,7 @@ docker compose up
     or other tools you may have installed.
 
 !!! tldr ""
-    The default [Docker Compose](https://docs.docker.com/compose/) config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running the `docker-compose` command in the same directory. Config files for other apps or instances should be placed in separate folders.
+    The default [Docker Compose](https://docs.docker.com/compose/) config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running `docker compose` or `docker-compose` in the same directory. Config files for other apps or instances should be placed in separate folders.
 
 ## Adding Swap
 

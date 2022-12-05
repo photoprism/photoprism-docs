@@ -151,7 +151,7 @@ Other issues? Our [troubleshooting checklists](troubleshooting/index.md) help yo
 ### Credits ###
 
 [^1]: A big thank you to [Guy Sheffer](https://github.com/guysoft) for helping us [build](https://github.com/photoprism/photoprism/issues/109) a Raspberry Pi version!
-[^2]: The default [Docker Compose](https://docs.docker.com/compose/) config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running the `docker-compose` command in the same directory. Config files for other apps or instances should be placed in separate folders.
+[^2]: The default [Docker Compose](https://docs.docker.com/compose/) config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running `docker compose` or `docker-compose` in the same directory. Config files for other apps or instances should be placed in separate folders.
 
 *[Raspbian]: Raspberry Pi OS
 *[Apple Silicon]: Apple M1 and M2

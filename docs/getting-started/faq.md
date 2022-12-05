@@ -37,7 +37,7 @@ but a different extension:
 New sidecar files are created in the *storage* folder by default, so the *originals* folder can be mounted read-only.
 
 !!! tldr ""
-    Even if `PHOTOPRISM_DISABLE_EXIFTOOL` and `PHOTOPRISM_DISABLE_BACKUPS` are set to `true`,
+    Even if `PHOTOPRISM_DISABLE_EXIFTOOL` and `PHOTOPRISM_DISABLE_BACKUPS` are set to `"true"`,
     the indexer looks for existing sidecar files and uses them.
 
 ### What metadata sidecar file types are supported?

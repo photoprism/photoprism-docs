@@ -27,9 +27,12 @@ Before reporting a bug:
     - [ ] Only use `localhost` or `127.0.0.1` if the server is running on the same computer (host)
     - [ ] Avoid using IP addresses other than `127.0.0.1` directly, as [they can change](https://github.com/photoprism/photoprism/discussions/2791#discussioncomment-3985376)
     - [ ] We recommend [configuring a local hostname](https://dl.photoprism.app/img/docs/pihole-local-dns.png) to access other hosts on your network
+- [ ] If you use a firewall, ensure that it is configured correctly and that [outgoing connections to our geocoding API are allowed](../index.md#maps-places)
 - [ ] Note that HTTP security headers will prevent the app from loading in a frame (override them)
 - [ ] Verify your computer meets the [system requirements](../index.md#system-requirements)
 - [ ] Go through the [checklist for fatal server errors](#fatal-server-errors)
+
+#### MariaDB
 
 Should MariaDB get stuck in a restart loop and PhotoPrism can't connect to it, this indicates a [memory](docker.md#adding-swap),
 [filesystem](docker.md#file-permissions), or other [permission issue](docker.md#kernel-security):
@@ -41,8 +44,17 @@ photoprism: dial tcp 172.18.0.2:3306: connect: no route to host
 mariadb: mysqld: Shutdown complete
 ```
 
-To enable [debug mode](../config-options.md), set `PHOTOPRISM_DEBUG` to `true` in the `environment:` section
-of the `photoprism` service (or use the `--debug` flag when running the `photoprism` command directly):
+[Learn more ›](mariadb.md)
+
+#### Maps & Places
+
+As explained in our [Privacy Policy](https://photoprism.app/privacy#section-7), reverse geocoding and interactive world maps depend on retrieving the necessary information [from us](https://photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. You therefore need **allow requests to these API endpoints** if you have a firewall installed and make sure your Internet connection is working.
+
+[Learn more ›](../index.md#maps-places)
+
+#### Debug Mode
+
+To enable [debug mode](../config-options.md), set `PHOTOPRISM_DEBUG` to `"true"` in the `environment:` section of the `photoprism` service (or use the `--debug` flag when running the `photoprism` command directly):
 
 ```yaml
 services:
@@ -51,8 +63,7 @@ services:
       PHOTOPRISM_DEBUG: "true"
 ```
 
-Then restart all services for the changes to take effect. It can be helpful to keep Docker running in the foreground
-while debugging so that log messages are displayed directly. To do this, omit the `-d` parameter when restarting:
+Then restart all services for the changes to take effect. It can be helpful to keep Docker running in the foreground while debugging so that log messages are displayed directly. To do this, omit the `-d` parameter when restarting:
 
 ```bash
 docker compose stop
@@ -65,19 +76,11 @@ docker compose up
     or other tools you may have installed.
 
 !!! tldr ""
-    The default [Docker Compose](https://docs.docker.com/compose/) config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running the `docker-compose` command in the same directory. Config files for other apps or instances should be placed in separate folders.
+    The default [Docker Compose](https://docs.docker.com/compose/) config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running `docker compose` or `docker-compose` in the same directory. Config files for other apps or instances should be placed in separate folders.
 
 ### Docker Doesn't Work ###
 
 ↪ [Getting Docker Up and Running](docker.md)
-
-### MariaDB Issues ###
-
-↪ [Troubleshooting MariaDB Problems](mariadb.md)
-
-### MySQL Errors ###
-
-↪ [Official support for MySQL 8 is discontinued](../index.md#databases)
 
 ### Bad Performance ###
 

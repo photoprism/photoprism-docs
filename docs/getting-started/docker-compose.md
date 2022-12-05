@@ -332,4 +332,4 @@ The currently supported user ID ranges are 0, 33, 50-99, 500-600, and 900-1200. 
 *[filesystem]: contains your files and folders
 
 [^1]: <https://rominirani.com/docker-on-windows-mounting-host-directories-d96f3f056a2c>
-[^2]: The default [Docker Compose](https://docs.docker.com/compose/) config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running the `docker-compose` command in the same directory. Config files for other apps or instances should be placed in separate folders.
+[^2]: The default [Docker Compose](https://docs.docker.com/compose/) config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running `docker compose` or `docker-compose` in the same directory. Config files for other apps or instances should be placed in separate folders.

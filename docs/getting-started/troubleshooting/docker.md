@@ -77,6 +77,12 @@ sudo docker compose up -d
 Note that this will point the home directory shortcut `~` to `/root` in the `volumes:` section
 of your `docker-compose.yml`.
 
+### IPTables Firewall
+
+On Linux, Docker manipulates the `iptables` rules to provide network isolation. This does have some implications for what you need to do if you want to have your own policies in addition to the rules Docker manages.
+
+[Learn more ›](https://docs.docker.com/network/iptables/)
+
 ## Viewing Logs
 
 Run this command to display the last 100 log messages (omit `--tail=100` to see all):

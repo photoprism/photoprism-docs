@@ -46,11 +46,15 @@ mariadb: mysqld: Shutdown complete
 
 [Learn more ›](mariadb.md)
 
-#### Maps & Places
+#### Firewall
 
-As explained in our [Privacy Policy](https://photoprism.app/privacy#section-7), reverse geocoding and interactive world maps depend on retrieving the necessary information [from us](https://photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. You therefore need **allow requests to these API endpoints** if you have a firewall installed and make sure your Internet connection is working.
+**Maps & Places:** As explained in our [Privacy Policy](https://photoprism.app/privacy#section-7), reverse geocoding and interactive world maps depend on retrieving the necessary information [from us](https://photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. You therefore need **allow requests to these API endpoints** if you have a firewall installed and make sure your Internet connection is working.
 
 [Learn more ›](../index.md#maps-places)
+
+**IPTables:** On Linux, Docker manipulates the `iptables` rules to provide network isolation. This does have some implications for what you need to do if you want to have your own policies in addition to the rules Docker manages.
+
+[Learn more ›](https://docs.docker.com/network/iptables/)
 
 #### Debug Mode
 

@@ -24,7 +24,7 @@ We recommend [PhotoSync](https://link.photoprism.app/photosync) which is availab
 4. Enter your settings
 
     !!! info ""
-        *Server:* Your server url, e.g. "example.photoprism.app".
+        *Server:* Your server url, e.g. "example.com".
         
         *Port:* Your port. If you are using HTTPS the port is 443.
 

@@ -2,6 +2,11 @@
 
 In [settings](../settings/sync.md) you can connect your PhotoPrism instance to other services with WebDAV support, such as other PhotoPrism instances, Nextcloud or ownCloud.
 
+!!! attention "" 
+      When syncing, your files are uploaded or downloaded to/from another service, so your files are duplicated.
+
+      If you want PhotoPrism to read from the same folder as another service, without making copies, you can simply [mount this folder as PhotoPrism's originals directory](../../getting-started/docker-compose.md#photoprismoriginals).
+
 ## Automatically Upload/Download Files to/from another App ##
 
 1. Go to *Settings*

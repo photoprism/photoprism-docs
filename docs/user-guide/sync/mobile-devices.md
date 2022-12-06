@@ -9,7 +9,7 @@ To sync photos and videos on your phone with PhotoPrism, you can use any app tha
 
 We recommend [PhotoSync](https://link.photoprism.app/photosync) which is available for Android and iOS.
 
-### Set PhotoPrism as Target ###
+### Set PhotoPrism or WebDAV as Target ###
 
 !!! attention ""
       If you are using PhotoSync on Android you need to choose WebDAV as target.
@@ -18,15 +18,30 @@ We recommend [PhotoSync](https://link.photoprism.app/photosync) which is availab
 2. Click *Configure*
 3. Select PhotoPrism as target
 
-      ![Screenshot](img/photosync-1.jpg){: style="width:35%" class="shadow"}
-      ![Screenshot](img/photosync-2.jpg){: style="width:35%" class="shadow"}
+    ![Screenshot](img/photosync-1.jpg){: style="width:35%" class="shadow"}
+    ![Screenshot](img/photosync-2.jpg){: style="width:35%" class="shadow"}
 
 4. Enter your settings
 
+    !!! info ""
+        *Server:* Your server url, e.g. "example.photoprism.app".
+        
+        *Port:* Your port. If you are using HTTPS the port is 443.
+
+        *Login:* Your username, e.g. "admin".
+        
+        *Password:* Your admin password.
+
+        *Directory:* /import/ or /originals/ depending on your preferred [ingestion method](../library/index.md).
+        
+        *Use SSL:* Should be enabled.
+
+        [PikaPods](../../getting-started/cloud/pikapods.md) users can find more information [here](https://docs.pikapods.com/apps/photoprism/#sync-from-mobile-apps). 
+
       ![Screenshot](img/photosync-3.jpg){: style="width:35%" class="shadow"}
 
-5. Click *Done*
-6. You may adapt transfer details to match your preferences
+6. Click *Done*
+7. You may adapt transfer details to match your preferences
 
       ![Screenshot](img/photosync-4.jpg){: style="width:35%" class="shadow"}
       ![Screenshot](img/photosync-5.jpg){: style="width:35%" class="shadow"}

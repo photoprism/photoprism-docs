@@ -27,6 +27,22 @@ It will save you from re-generating thumbnails from scratch however.
 
 Helpful information can be found on [GitHub](https://github.com/photoprism/photoprism/discussions/772) as well.
 
+## Sqlite Backups
+
+The 'photoprism backup` is not currently implemented for sqlite. 
+
+The following can be used with [docker-compose](../docker-compose.md)
+
+```
+docker compose exec -T photoprism sqlite3 /photoprism/storage/index.db .dump > photoprism-db.sql
+```
+
+Or if you are just using `Docker`:
+
+```
+docker exec -t PhotoPrism sqlite3 /photoprism/storage/index.db .dump > photoprism-db.sql
+```
+
 ## Restore from Backup
 
 Follow [this guide to restore](../../user-guide/advanced/restore.md) PhotoPrism from backups.

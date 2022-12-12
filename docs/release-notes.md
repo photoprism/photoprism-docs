@@ -8,7 +8,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 221205-6d3d1d188</span>
+<span class="build">Build 221212-2a42308ca</span>
 
 What's new?
 
@@ -16,8 +16,9 @@ What's new?
 - Videos: [Improved player compatibility with browser plugins](https://github.com/photoprism/photoprism/issues/1439)
 - Albums: [Double quotes in titles are replaced with Unicode instead of single quotes](https://github.com/photoprism/photoprism/issues/2891)
 - Index: [Improved query performance when flagging hidden files](https://github.com/photoprism/photoprism/issues/2928)
-- Config: [Custom template path is not searched for files if not specified](https://github.com/photoprism/photoprism/issues/2946) 
-- Translations: Updated Bulgarian, Chinese (traditional), Estonian, French, German, and Ukrainian 
+- Config: [Custom template path is not searched for files if not specified](https://github.com/photoprism/photoprism/issues/2946)
+- Security: [Go has been upgraded to v1.19.4, which includes security and stability fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.19.4)
+- Translations: Updated Bulgarian, Chinese (traditional), Czech, Dutch, Estonian, French, German, Italian, Russian, and Ukrainian 
 
 ### November 18, 2022 ###
 <span class="build">Build 221118-e58fee0fb</span>

@@ -424,7 +424,7 @@ Driver-specific options can be set after the server address in `o`, see the [nfs
 
 **SMB / CIFS**
 
-Follow this `docker-compose.yml` example to mount [CIFS network shares](https://en.wikipedia.org/wiki/Server_Message_Block), e.g. **from Windows**, NAS devices or Linux servers with Samba:
+Follow this `docker-compose.yml` example to mount [CIFS network shares](https://en.wikipedia.org/wiki/Server_Message_Block), e.g. **from Windows**, NAS devices or Linux servers with [Samba](https://www.samba.org/):
 
 ```yaml
 services:

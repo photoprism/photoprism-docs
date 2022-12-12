@@ -66,6 +66,6 @@ Because PhotoSync uses WebDAV to send files, PhotoPrism automatically starts imp
 
 ## Other Apps ##
 
-As long as you run PhotoPrism on a device where it is possible to enable Samba (Windows File Sharing), you can use this free opensource Android app:
+As long as you run PhotoPrism on a device with Windows file sharing (on Linux, for example, via [Samba](https://www.samba.org/)), you can use this free open-source Android app:
 
 [SMBSync2 - Github](https://github.com/Sentaroh/SMBSync2/releases) | [SMBSync2 - Google Play](https://play.google.com/store/apps/details?id=com.sentaroh.android.SMBSync2)

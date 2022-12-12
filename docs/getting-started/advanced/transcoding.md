@@ -95,6 +95,7 @@ Now [restart the services](../docker-compose.md#step-2-start-the-server) for the
 
 !!! info ""
     We also provide a [ready-to-use `docker-compose.yml` example](https://dl.photoprism.app/docker/nvidia/docker-compose.yml) for your convenience.
+    Note that older hardware may not support certain [video codecs and resolutions](https://en.wikipedia.org/wiki/Nvidia_NVENC#Versions).
 
 ### Raspberry Pi
 
@@ -120,7 +121,7 @@ PHOTOPRISM_FFMPEG_BUFFERS: "64" # FFmpeg capture buffers (default: 32)
 Now [restart the services](../docker-compose.md#step-2-start-the-server) for the changes to take effect.
 
 !!! info ""
-    Some server configurations, especially Raspberry Pi's, may experience memory allocation issues when using hardware acceleration. Carefully monitor your server's logs and increase the available GPU and/or CMA memory allocations if necessary.
+    Some server configurations, especially Raspberry Pi's, may experience memory allocation issues when using hardware acceleration. Carefully monitor your server's logs and increase the available GPU and/or CMA memory allocations if necessary. Note that the Raspberry Pi hardware currently only supports video resolutions up to 2160p.
 
 ## Other Hardware
 

@@ -40,6 +40,10 @@
 
     Think of “free software” as in “free speech,” not as in “free beer.” The [Free Software Foundation](https://www.gnu.org/philosophy/free-sw.en.html) sometimes calls it “libre software,” borrowing the French or Spanish word for “free” as in freedom, to show they do not mean the software is gratis.
 
+??? question "What functionality is generally available?"
+    
+    Our team evaluates this on an ongoing basis, depending on the support effort the features require, the cost to us, and whether they are generally needed by everyone or mainly requested by organizations and advanced users. As this allows us to provide more features to the public, we encourage all users to [support our mission](https://photoprism.app/editions#compare).
+
 ??? question "Why can't I just purchase and download a single version?"
 
     Unlike traditional offline apps such as Microsoft Office or single-player games, software exposed to the Internet must be [updated regularly](https://docs.photoprism.app/release-notes/) to stay secure and compatible with the latest standards.

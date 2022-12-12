@@ -99,6 +99,10 @@ While we could register several "non-commercial test accounts" instead, we don't
 
 [Compare Personal Editions ›](https://photoprism.app/editions#compare)
 
+### What functionality is generally available?
+    
+Our team evaluates this on an ongoing basis, depending on the support effort the features require, the cost to us, and whether they are generally needed by everyone or mainly requested by organizations and advanced users. As this allows us to provide more features to the public, we encourage all users to [support our mission](https://photoprism.app/editions#compare).
+
 ### What are the advantages of purchasing a commercial license?
 
 A key difference between the [public license](https://docs.photoprism.app/license/agpl/) and a [commercial license agreement](https://photoprism.app/teams) is that you get access to additional support and configuration options, as well as the right to customize functionality to your needs without having to publicly disclose your changes. Our [Compliance FAQ](https://photoprism.app/kb/compliance-faq) gives answers to the most frequently asked questions about product compliance and scalability.

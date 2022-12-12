@@ -386,20 +386,25 @@ Shared folders that have already been mounted on your host can be mounted like a
 Alternatively, you can mount network storage with [Docker Compose](https://docs.docker.com/compose/compose-file/compose-file-v3/#driver_opts).
 Please never store database files on an unreliable device such as a USB stick, SD card, or network drive.
 
-Follow this `docker-compose.yml` example to mount NFS shares from Linux servers or NAS devices:
+**NFS**
+
+Follow this `docker-compose.yml` example to mount NFS shares e.g. from NAS devices:
 
 ```yaml
 services:
   photoprism:
     # ...
     volumes:
-      # Map originals to the volume below:
+      # Map named volume "originals" to "/photoprism/originals":
       - "originals:/photoprism/originals"     
+  mariadb:
+    # ...
 
+# Specify named volumes:
 volumes:
   originals:
     driver_opts:
-      type: "nfs"
+      type: nfs
       # Authentication and other mounting options:
       o: "addr=1.2.3.4,username=user,password=secret,soft,rw,nfsvers=4"
       # Mount this path:
@@ -416,9 +421,21 @@ Driver-specific options can be set after the server address in `o`, see the [nfs
 - `soft` (optional): The NFS client aborts an NFS request after `retrans=n` unsuccessful retries, otherwise it retries indefinitely
 - `retrans=n` (optional, default 2): Sets the number of retries for NFS requests, only relevant when using `soft`
 
-For mounting CIFS (Windows, Samba, SMB) network shares:
+**CIFS**
+
+Follow this `docker-compose.yml` example to mount CIFS network shares, e.g. **from Windows**, NAS devices or Linux servers with Samba:
 
 ```yaml
+services:
+  photoprism:
+    # ...
+    volumes:
+      # Map named volume "originals" to "/photoprism/originals":
+      - "originals:/photoprism/originals"     
+  mariadb:
+    # ...
+
+# Specify named volumes:
 volumes:
   originals:
     driver_opts:
@@ -426,6 +443,8 @@ volumes:
       o: "username=user,password=secret,rw"
       device: "//host/folder"
 ```
+
+Note that related values must start at the same indentation level in [YAML](../developer-guide/technologies/yaml.md) and that **tabs are not allowed for indentation**. We recommend using 2 spaces, but any number will do as long as it is consistent.
 
 !!! tip ""
     Mounting the import folder from a network drive that can also be accessed via other ways (e.g. CIFS) is handy 

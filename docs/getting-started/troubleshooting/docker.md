@@ -225,7 +225,8 @@ services:
   photoprism:
     # ...
     volumes:
-      # Map named volume "originals" to "/photoprism/originals":
+      # Map named volume "originals"
+      # to "/photoprism/originals":
       - "originals:/photoprism/originals"     
   mariadb:
     # ...
@@ -260,7 +261,8 @@ services:
   photoprism:
     # ...
     volumes:
-      # Map named volume "originals" to "/photoprism/originals":
+      # Map named volume "originals"
+      # to "/photoprism/originals":
       - "originals:/photoprism/originals"     
   mariadb:
     # ...

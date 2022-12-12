@@ -446,7 +446,7 @@ volumes:
       device: "//host/folder"
 ```
 
-Note that related values must start at the same indentation level in [YAML](../developer-guide/technologies/yaml.md) and that **tabs are not allowed for indentation**. We recommend using 2 spaces, but any number will do as long as it is consistent.
+Then restart all services for the changes to take effect. Note that related values must start at the same indentation level [in YAML](../developer-guide/technologies/yaml.md) and that **tabs are not allowed for indentation**. We recommend using 2 spaces, but any number will do as long as it is consistent.
 
 !!! tip ""
     Mounting the import folder from a network drive that can also be accessed via other ways (e.g. CIFS) is handy 

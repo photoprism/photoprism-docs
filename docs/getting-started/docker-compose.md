@@ -80,6 +80,8 @@ installed on your system. It is available for Mac, Linux, and Windows.
     as the default of 2 GB can reduce indexing performance and cause unexpected restarts.
     Also, ensure that you configure at least 4 GB of swap space.
 
+Note that in [YAML files](../developer-guide/technologies/yaml.md), related values must start at the same indentation level and tabs are not allowed for indentation. We recommend using 2 spaces, but any number is allowed as long as it is consistent.
+
 !!! danger ""
     Always change `PHOTOPRISM_ADMIN_PASSWORD` so that the app starts with a **secure initial password**.
     Never use easy-to-guess passwords or default values like `insecure` on publicly accessible servers.

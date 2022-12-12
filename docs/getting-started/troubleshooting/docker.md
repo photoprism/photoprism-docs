@@ -216,9 +216,9 @@ Shared folders that have already been mounted on your host can be mounted like a
 Alternatively, you can mount network storage with [Docker Compose](https://docs.docker.com/compose/compose-file/compose-file-v3/#driver_opts).
 Please never store database files on an unreliable device such as a USB stick, SD card, or network drive.
 
-### NFS
+### Unix / NFS
 
-Follow this `docker-compose.yml` example to mount NFS shares e.g. from NAS devices:
+Follow this `docker-compose.yml` example to mount Network File System (NFS) shares e.g. from Unix servers or NAS devices:
 
 ```yaml
 services:
@@ -252,9 +252,9 @@ Driver-specific options can be set after the server address in `o`, see the [nfs
 - `soft` (optional): The NFS client aborts an NFS request after `retrans=n` unsuccessful retries, otherwise it retries indefinitely
 - `retrans=n` (optional, default 2): Sets the number of retries for NFS requests, only relevant when using `soft`
 
-### CIFS
+### SMB / CIFS
 
-Follow this `docker-compose.yml` example to mount CIFS network shares, e.g. **from Windows**, NAS devices or Linux servers with Samba:
+Follow this `docker-compose.yml` example to mount [CIFS network shares](https://en.wikipedia.org/wiki/Server_Message_Block), e.g. **from Windows**, NAS devices or Linux servers with Samba:
 
 ```yaml
 services:

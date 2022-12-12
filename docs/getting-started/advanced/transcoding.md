@@ -130,5 +130,6 @@ If you want to use other hardware for transcoding, choose the appropriate AVC en
 Which devices need to be shared and whether additional drivers are required depends on your specific hardware. For more information, see the [FFmpeg documentation](https://ffmpeg.org/ffmpeg-devices.html).
 
 !!! tldr ""
-    In case [FFmpeg is disabled](../config-options.md#feature-flags) or not installed, videos cannot be indexed because still images cannot be created.
+    If [FFmpeg is disabled](../config-options.md#feature-flags) or not installed, videos cannot be indexed because still images cannot be created.
     You should also have [Exiftool enabled](../config-options.md#feature-flags) to extract metadata such as duration, resolution, and codec.
+    Note that your hardware may not support certain video codecs and resolutions. In this case, the software encoder is used automatically.

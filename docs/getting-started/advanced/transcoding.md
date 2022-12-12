@@ -62,7 +62,7 @@ services:
 Now [restart the services](../docker-compose.md#step-2-start-the-server) for the changes to take effect.
 
 !!! info ""
-    Some Intel hardware [may not support 4K and 8K videos](https://en.wikipedia.org/wiki/Intel_Quick_Sync_Video#Development). In this case, it is not possible to transcode these videos with your hardware. We may later add a configuration option that allows you to downscale videos.
+    Note that older hardware may not support certain [video codecs and resolutions](https://en.wikipedia.org/wiki/Intel_Quick_Sync_Video#Development). In this case, it is not possible to use hardware transcoding for these videos. We may later add a configuration option that allows you to downscale videos.
 
 ### NVIDIA Container Toolkit
 

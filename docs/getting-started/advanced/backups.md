@@ -7,13 +7,13 @@ A full backup of your PhotoPrism instance includes:
 
 The best way to create an index backup is to run this command in a terminal:
 
-```
+```bash
 photoprism backup -i [filename]
 ```
 
 Or the following for [docker-compose](../docker-compose.md):
 
-```
+```bash
 docker compose exec -T photoprism photoprism backup -i - > photoprism-db.sql
 ```
 
@@ -27,23 +27,21 @@ It will save you from re-generating thumbnails from scratch however.
 
 Helpful information can be found on [GitHub](https://github.com/photoprism/photoprism/discussions/772) as well.
 
-## Sqlite Backups
+## SQLite Backups
 
-The 'photoprism backup` is not currently implemented for sqlite. 
+Note that creating SQL dumps from SQLite is currently not fully supported by the `photoprism backup` command. However, you can run this to create a backup file if you use [docker-compose:](../docker-compose.md#command-line-interface):
 
-The following can be used with [docker-compose](../docker-compose.md)
-
-```
+```bash
 docker compose exec -T photoprism sqlite3 /photoprism/storage/index.db .dump > photoprism-db.sql
 ```
 
-Or if you are just using `Docker`:
+If you only use `docker`, you can run the following:
 
-```
+```bash
 docker exec -t PhotoPrism sqlite3 /photoprism/storage/index.db .dump > photoprism-db.sql
 ```
 
-## Restore from Backup
+## Restore Backups
 
 Follow [this guide to restore](../../user-guide/advanced/restore.md) PhotoPrism from backups.
 

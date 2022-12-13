@@ -101,7 +101,7 @@ While we could register several "non-commercial test accounts" instead, we don't
 
 ### What functionality is generally available?
 
-Availability depends on the support effort required, server and licensing costs, and whether the features are generally needed by everyone or requested primarily by organizations and advanced users. As this allows us to make more features available to the public, we encourage all users to [support our mission](https://photoprism.app/editions#compare).
+Our team decides this on an ongoing basis depending on the support effort required, server and licensing costs, and whether the features are generally needed by everyone or mainly requested by organizations and advanced users. As this allows us to make more features available to the public, we encourage all users to [support our mission](https://photoprism.app/editions#compare).
 
 ### What are the advantages of purchasing a commercial license?
 

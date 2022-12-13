@@ -95,9 +95,12 @@ As explained above, reverse geocoding and interactive world maps depend on retri
 
 The API keys required to use the maps are unfortunately not free for us due to the number of users we have. Those costs are one of the reasons why we encourage all users to support our mission by [signing up as a sponsor](https://photoprism.app/membership) or purchasing a [commercial license](https://photoprism.app/teams).
 
-While we could register several "non-commercial test accounts" instead, we don't think that would be fair and [Maptiler](https://www.maptiler.com/) might then stop offering them to those in need.
+To improve the situation for those who don't want to or cannot sign up, it would be possible to add more details like cities and lakes to the basic maps. The only problem is that we don't have the resources to do it ourselves due to the large backlog of feature requests, so we hope someone can contribute this:
 
-[Compare Personal Editions ›](https://photoprism.app/editions#compare)
+- [Places: Improve the level of detail of the basic world map](https://github.com/photoprism/photoprism/issues/2998)
+
+!!! tldr ""
+    We are aware that advanced users could register "non-commercial test accounts" instead, but we think that would not be completely fair and [MapTiler](https://www.maptiler.com/) could then no longer offer them to those in need. Keep in mind that we have many more users than other open source projects that might encourage their users to do this. Likewise, using the OpenSteetMap development API is discouraged for consumer applications like ours, although some projects do it anyway.
 
 ### What functionality is generally available?
 

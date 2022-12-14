@@ -146,15 +146,15 @@ If [password authentication is enabled](../config-options.md#authentication) and
 
 - [ ] There is a problem with the [integrity, stability or connection of the database](mariadb.md) that you should be able to diagnose by [watching the logs for errors and warnings](docker.md#viewing-logs)
 - [ ] You had too many failed login attempts, therefore another attempt from your computer is temporarily not possible
+- [ ] Caps Lock is enabled on your keyboard, your computer has the wrong input locale set, or somebody else might have changed the password without telling you
 - [ ] `PHOTOPRISM_ADMIN_PASSWORD` does not have a minimum length of 8 characters, so PhotoPrism has been started without a password since there is no default
 - [ ] The password may be correct, but the username is wrong and does not match `PHOTOPRISM_ADMIN_USER`
 - [ ] You upgraded from a [Development Preview](../updates.md#development-preview) and might need to run the `photoprism users reset --yes` command [in a terminal](getting-started/docker-compose.md#command-line-interface) after the upgrade, see [Known Issues](../../known-issues.md#user-authentication) for details
-- [ ] Caps Lock is enabled on your keyboard, your computer has the wrong input locale set, or somebody else might have changed the password without telling you
 - [ ] Your browser cannot communicate properly with the server, e.g. because a [Reverse Proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
 - [ ] You are connected to the wrong server, VPN, CDN, or a DNS record has not been updated yet
 - [ ] Remember that the initial admin username and password cannot be changed after PhotoPrism has been started for the first time
 
-To see which user accounts exist, [open a terminal](../docker-compose.md#command-line-interface) and run `photoprism users ls`. A new admin password can be set with `photoprism passwd`. You can then try to log in again. Restart the application and check the logs again for errors and warnings if it still doesn't work.
+To see which user accounts exist, [open a terminal](../docker-compose.md#command-line-interface) and run `photoprism users ls`. A new admin password can be set with `photoprism passwd`. You can then try to log in again. [Upgrade to the latest release](../updates.md#docker-compose), restart the server, and [check the logs for errors and warnings](docker.md#viewing-logs) if it still doesn't work.
 
 ### Missing Pictures ###
 

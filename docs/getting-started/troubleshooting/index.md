@@ -188,7 +188,10 @@ In case the application logs don't contain anything helpful:
 
 #### Zip Archives ####
 
-When you try to download multiple pictures and find that some are missing from the resulting zip archive, or you get the error message "No files available for download," your index may be incomplete or out of date (for example, after updating PhotoPrism). A [complete rescan](../../user-guide/library/originals.md#when-should-complete-rescan-be-selected) of your library may solve the problem.
+When you want to [download multiple pictures](../../user-guide/organize/download.md) and find that some of them are missing from the resulting zip archive, or you get the error message "No files available for download":
+
+- [ ] [Index your library](../../user-guide/library/originals.md) and wait until indexing is complete, as your index may be incomplete or out of date
+- [ ] In some cases, you may have to perform a [complete rescan](../../user-guide/library/originals.md#when-should-complete-rescan-be-selected) of your library, for example after [upgrading to a new major release](../../release-notes.md)
 
 ### Wrong Search Results ###
 

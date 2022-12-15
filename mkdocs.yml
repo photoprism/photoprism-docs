@@ -159,11 +159,11 @@ nav:
         - Extraction: developer-guide/metadata/exif/index.md
         - Editing: developer-guide/metadata/exif/edit.md
       - Adobe XMP: developer-guide/metadata/xmp.md
-    - Web User Interface:
+    - User Interface:
       - Introduction: developer-guide/ui/introduction.md
       - Screenshots: developer-guide/ui/screenshots.md
       - Components: developer-guide/ui/components.md
-      - Design: developer-guide/ui/design.md
+      - Design & Colors: developer-guide/ui/design.md
       - Browsers: developer-guide/ui/browsers.md
       - Interactive Maps: developer-guide/ui/maps.md
       - Infinite Scrolling: developer-guide/ui/infinite-scrolling.md

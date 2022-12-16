@@ -5,13 +5,13 @@ However, our Progressive Web App (PWA) offers an almost native app-like experien
 You can conveniently install it on the home screen of all major operating systems and mobile devices.
 
 !!! tldr ""
-    If you are self-hosting PhotoPrism, make sure the site URL is configured correctly. Browsers also require the app to be hosted on its own domain with HTTPS in order to install it. When that is not possible, you can still choose "Create Shortcut...", "Add to Home Screen...", or a similarly named action from the browser menu to make the app accessible from your home screen.
+    If you are self-hosting PhotoPrism, please make sure the [site URL is configured correctly](../getting-started/config-options.md#site-information). In addition, PWAs must be hosted on a dedicated domain with HTTPS in order to be installed. When that is not possible, you can still choose "Create Shortcut...", "Add to Home Screen...", or a similarly named action from the browser menu to make the app accessible from your home screen.
 
-## Installation of the Web App
+## Installing PhotoPrism on iOS and Android
 
-=== "iOS / Safari"
+=== "Apple Safari (iOS)"
 
-    1. Open PhotoPrism on your device's browser (on iOS, use Safari)
+    1. Open PhotoPrism in Safari
     2. Click :material-export-variant:
 
         ![Screenshot](img/ios-1.jpg){: style="width:35%" class="shadow"}
@@ -24,9 +24,9 @@ You can conveniently install it on the home screen of all major operating system
 
         ![Screenshot](img/ios-3.jpg){: style="width:35%" class="shadow"}
 
-=== "Android / Firefox / Chrome"
+=== "Google Chrome (Android)"
 
-    1. Open PhotoPrism on your device's browser
+    1. Open PhotoPrism in Chrome
     2. Click :material-dots-vertical:
 
         ![Screenshot](img/android-1.jpg){: style="width:35%" class="shadow"} 

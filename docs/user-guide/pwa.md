@@ -7,7 +7,7 @@ You can conveniently install it on the home screen of all major operating system
 !!! tldr ""
     If you are self-hosting PhotoPrism, please make sure the [site URL is configured correctly](../getting-started/config-options.md#site-information). In addition, PWAs must be hosted on a dedicated domain with HTTPS in order to be installed. When that is not possible, you can still choose "Create Shortcut...", "Add to Home Screen...", or a similarly named action from the browser menu to make the app accessible from your home screen.
 
-## Installing PhotoPrism on iOS and Android
+## Step-by-Step Installation Instructions
 
 === "Apple Safari (iOS)"
 

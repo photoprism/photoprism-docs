@@ -4,7 +4,10 @@ At the moment, PhotoPrism doesn't have a native mobile app that can be installed
 However, our Progressive Web App (PWA) offers an almost native app-like experience. 
 You can conveniently install it on the home screen of all major operating systems and mobile devices.
 
-## Install PWA
+!!! tldr ""
+    If you are self-hosting PhotoPrism, make sure the site URL is configured correctly. Browsers also require the app to be hosted on its own domain with HTTPS in order to install it. When that is not possible, you can still choose "Create Shortcut...", "Add to Home Screen...", or a similarly named action from the browser menu to make the app accessible from your home screen.
+
+## Installation of the Web App
 
 === "iOS / Safari"
 

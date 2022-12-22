@@ -149,6 +149,16 @@ If the server crashes unexpectedly or your database files get corrupted frequent
 - [ ] To repair your tables after you have moved the files to a local disk, you can [start MariaDB with `--innodb-force-recovery=1`](https://mariadb.com/kb/en/innodb-recovery-modes/) (otherwise the same procedure as for recovering a lost password, see above)
 - [ ] Make sure you are using the latest Docker version and read the release notes for the database server version you are using
 
+## Invalid Table Errors
+
+If you are using macOS and see errors like `Invalid (old?) table or database name '._column_stats'`, it may be because you are running MariaDB on a file system like ExFAT that does not support extended attributes. In this case, macOS automatically creates these files and MariaDB then reports them as invalid tables (which is technically correct). To remove extended attribute files, you can run the following in a terminal:
+
+```
+find . -type f -name '._*' -delete
+```
+
+Unless you open the storage folder again in macOS Finder, the errors should then be gone after restarting the database.
+
 ## Corrupted Files
 
 ↪ [Server Crashes](#server-crashes)

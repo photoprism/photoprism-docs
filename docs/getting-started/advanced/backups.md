@@ -29,7 +29,7 @@ Helpful information can be found on [GitHub](https://github.com/photoprism/photo
 
 ## SQLite Backups
 
-Note that creating SQL dumps from SQLite is currently not fully supported by the `photoprism backup` command. However, you can run this to create a backup file if you use [docker-compose:](../docker-compose.md#command-line-interface):
+Creating SQL dumps from SQLite is currently not fully supported by the `photoprism backup` command. However, you can run this command to create a backup file if you use [docker-compose:](../docker-compose.md#command-line-interface):
 
 ```bash
 docker compose exec -T photoprism sqlite3 /photoprism/storage/index.db .dump > photoprism-db.sql

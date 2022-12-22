@@ -2,14 +2,6 @@
 
 ## General ##
 
-??? question "When exactly will new features be released?"
-    
-    Our [Project Roadmap](https://link.photoprism.app/roadmap) shows what tasks are in progress and what features will be implemented next. You may give ideas you like a thumbs-up, so we know what's most popular.
-
-    Be aware that we have a zero-bug policy and do our best to help users when they need support or have other questions. This comes at a price though, as we can't give exact release dates for new features. Our team receives many more requests than can be implemented, so we want to emphasize that we are in no way obligated to implement the features, enhancements, or other changes you request. We do, however, appreciate your feedback and carefully consider all requests.
-
-    **Since sustained funding is key to quickly releasing new features, we encourage all users to support our mission by [signing up as a sponsor](https://photoprism.app/membership) or purchasing a [commercial license](https://photoprism.app/teams).**
-
 ??? question "Does your software depend on any external services?"
 
     As explained in our [Privacy Policy](https://photoprism.app/privacy#section-7), reverse geocoding and interactive world maps depend on retrieving the necessary information [from us](https://photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality.
@@ -22,15 +14,19 @@
     
     [View Privacy Policy ›](https://photoprism.app/privacy#section-7){ class="pr-3" } [View Compliance FAQ ›](https://photoprism.app/kb/compliance-faq#privacy)
 
-??? question "Are the keys for using interactive world maps provided free of charge?"
-
-    The API keys required to use the maps are unfortunately not free for us due to the number of users we have. Those costs are one of the reasons why we encourage all users to support our mission by [signing up as a sponsor](https://photoprism.app/membership) or purchasing a [commercial license](https://photoprism.app/teams#compare).
-
-    To improve the situation for those who don't want to or cannot [sign up](https://photoprism.app/editions#compare), it would be possible to add more details like cities and lakes to the basic maps. The only problem is that we don't have the resources to do it ourselves due to the large backlog of feature requests, so we hope someone can contribute this:
+??? question "When exactly will new features be released?"
     
-    - [Places: Improve the level of detail of the basic world map](https://github.com/photoprism/photoprism/issues/2998)
+    Our [Project Roadmap](https://link.photoprism.app/roadmap) shows what tasks are in progress and what features will be implemented next. You may give ideas you like a thumbs-up, so we know what's most popular.
 
-    We are aware that advanced users could register "non-commercial test accounts" instead, but we think that would not be completely fair and [MapTiler](https://www.maptiler.com/) could then no longer offer them to those in need. Keep in mind that we have many more users than other open source projects that might encourage their users to do this. Likewise, using the OpenSteetMap development API is discouraged for consumer applications like ours, although some projects do it anyway.
+    Be aware that we have a zero-bug policy and do our best to help users when they need support or have other questions. This comes at a price though, as we can't give exact release dates for new features. Our team receives many more requests than can be implemented, so we want to emphasize that we are in no way obligated to implement the features, enhancements, or other changes you request. We do, however, appreciate your feedback and carefully consider all requests.
+
+    **Since sustained funding is key to quickly releasing new features, we encourage all users to support our mission by [signing up as a sponsor](https://photoprism.app/membership) or purchasing a [commercial license](https://photoprism.app/teams).**
+
+??? question "What functionality is generally available?"
+    
+    Our team decides this on an ongoing basis depending on the support effort required, server and licensing costs, and whether the features are generally needed by everyone or mainly requested by organizations and advanced users. As this allows us to make more features available to the public, we encourage all users to [support our mission](https://photoprism.app/editions#compare).
+
+    [Compare Personal Editions ›](https://photoprism.app/editions#compare)
 
 ??? question "What are the advantages of purchasing a commercial license?"
 
@@ -42,9 +38,7 @@
 
     Think of “free software” as in “free speech,” not as in “free beer.” The [Free Software Foundation](https://www.gnu.org/philosophy/free-sw.en.html) sometimes calls it “libre software,” borrowing the French or Spanish word for “free” as in freedom, to show they do not mean the software is gratis.
 
-??? question "What functionality is generally available?"
-    
-    Our team decides this on an ongoing basis depending on the support effort required, server and licensing costs, and whether the features are generally needed by everyone or mainly requested by organizations and advanced users. As this allows us to make more features available to the public, we encourage all users to [support our mission](https://photoprism.app/editions#compare).
+    [View Membership FAQ ›](https://photoprism.app/membership)
 
 ??? question "Why can't I just purchase and download a single version?"
 

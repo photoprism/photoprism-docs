@@ -162,7 +162,7 @@ volumes:
 
 ### Is PhotoPrism compatible with FAT formatted drives?
 
-Photos and videos can be mounted from FAT32 and ExFAT. Our tests have shown that PhotoPrism and MariaDB can also be started when their storage folders are located on a FAT file system. However, the logs might occasionally show directory access errors and you may be forced to reboot if problems occur, so we do not recommend this.
+Yes, photos and videos can be mounted from FAT32 and ExFAT. Our tests have shown that PhotoPrism and MariaDB can also be started if their storage folders are on a FAT file system. However, at least on macOS, the logs may occasionally show directory access errors and you may be forced to restart if problems occur, so we do not recommend this.
 
 ### How can I install PhotoPrism without Docker?
 

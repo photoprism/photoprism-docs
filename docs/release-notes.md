@@ -8,7 +8,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 221223-e19318f5f</span>
+<span class="build">Build 221223-f98fe5f7b</span>
 
 What's new?
 
@@ -16,8 +16,7 @@ What's new?
 - PWA: [Increased maximum length of app name](https://github.com/photoprism/photoprism/commit/5dc71ff1ff69c157568c11d08b941b1d1875dc38) [and changed start URL](https://github.com/photoprism/photoprism/commit/4c81d8b7e18e2113bba6ef8e20158fecec89dc15)
 - Search: [Increased batch size for better performance when loading results](https://github.com/photoprism/photoprism/ssues/3009)
 - Videos: [Improved player compatibility with browser plugins](https://github.com/photoprism/photoprism/issues/1439)
-- Videos: [Still image is now extracted after 3s, except for short clips](https://github.com/photoprism/photoprism/issues/1241#issuecomment-1363473310)
-- Albums: [Changed default sort order from "oldest" to "newest"](https://github.com/photoprism/photoprism/issues/3021)
+- Videos: [Delayed extraction of preview image, except for short clips](https://github.com/photoprism/photoprism/issues/1241#issuecomment-1363473310)
 - Albums: [Fixed form field styles in the share dialog](https://github.com/photoprism/photoprism/commit/7c671e0dfc52936b1a3af426db1e0f5e165a12f7)
 - Albums: [Double quotes in titles are replaced with Unicode instead of single quotes](https://github.com/photoprism/photoprism/issues/2891)
 - Index: [Improved query performance when flagging hidden files](https://github.com/photoprism/photoprism/issues/2928)

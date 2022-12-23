@@ -12,7 +12,6 @@
 
 What's new?
 
-- UI: [Added "Carbon" and "Neon" themes; removed "Electra", "Moonlight", and "Seaweed"](https://github.com/photoprism/photoprism/commit/e1405eba5430d30769d90292bdc69debe0e27092)
 - UX: [Improved page layout for RTL languages](https://github.com/photoprism/photoprism/commit/3a1293d5d42ba8d0cf6f4efa1540a9db7f3681d9)
 - PWA: [Increased maximum length of app name](https://github.com/photoprism/photoprism/commit/5dc71ff1ff69c157568c11d08b941b1d1875dc38) [and changed start URL](https://github.com/photoprism/photoprism/commit/4c81d8b7e18e2113bba6ef8e20158fecec89dc15)
 - Search: [Increased batch size for better performance when loading results](https://github.com/photoprism/photoprism/ssues/3009)
@@ -22,6 +21,7 @@ What's new?
 - Albums: [Fixed form field styles in the share dialog](https://github.com/photoprism/photoprism/commit/7c671e0dfc52936b1a3af426db1e0f5e165a12f7)
 - Albums: [Double quotes in titles are replaced with Unicode instead of single quotes](https://github.com/photoprism/photoprism/issues/2891)
 - Index: [Improved query performance when flagging hidden files](https://github.com/photoprism/photoprism/issues/2928)
+- Themes: [Added "Carbon" and "Neon"; removed "Electra", "Moonlight", and "Seaweed"](https://github.com/photoprism/photoprism/commit/e1405eba5430d30769d90292bdc69debe0e27092)
 - Config: [Custom template path is not searched for files if not specified](https://github.com/photoprism/photoprism/issues/2946)
 - Docker: [MariaDB client version has been upgraded from 10.9 to 10.10](https://github.com/photoprism/photoprism/commit/00022c90d3467655592858b0d3ad9c58fd9eee15) 
 - Security: [Go has been upgraded to v1.19.4, which includes security and stability fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.19.4)

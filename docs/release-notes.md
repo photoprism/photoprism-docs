@@ -23,7 +23,7 @@ What's new?
 - Index: [Improved query performance when flagging hidden files](https://github.com/photoprism/photoprism/issues/2928)
 - Themes: [Added "Carbon" and "Neon"; removed "Electra", "Moonlight", and "Seaweed"](https://github.com/photoprism/photoprism/commit/e1405eba5430d30769d90292bdc69debe0e27092)
 - Config: [Custom template path is not searched for files if not specified](https://github.com/photoprism/photoprism/issues/2946)
-- Docker: [MariaDB client version has been upgraded from 10.9 to 10.10](https://github.com/photoprism/photoprism/commit/00022c90d3467655592858b0d3ad9c58fd9eee15) 
+- Docker: [MariaDB image and binaries have been upgraded from v10.9 to v10.10](https://github.com/photoprism/photoprism/commit/00022c90d3467655592858b0d3ad9c58fd9eee15) 
 - Security: [Go has been upgraded to v1.19.4, which includes security and stability fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.19.4)
 - Translations: Updated Bulgarian, Chinese (traditional), Czech, Dutch, Estonian, French, German, Italian, Russian, and Ukrainian 
 

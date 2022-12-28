@@ -149,7 +149,7 @@ If [password authentication is enabled](../config-options.md#authentication) and
 - [ ] Caps Lock is enabled on your keyboard, your computer has the wrong input locale set, or somebody else might have changed the password without telling you
 - [ ] `PHOTOPRISM_ADMIN_PASSWORD` does not have a minimum length of 8 characters, so PhotoPrism has been started without a password since there is no default
 - [ ] The password may be correct, but the username is wrong and does not match `PHOTOPRISM_ADMIN_USER`
-- [ ] You upgraded from a [Development Preview](../updates.md#development-preview) and might need to run the `photoprism users reset --yes` command [in a terminal](getting-started/docker-compose.md#command-line-interface) after the upgrade, see [Known Issues](../../known-issues.md#user-authentication) for details
+- [ ] You upgraded from a [Development Preview](../updates.md#development-preview) and might need to run the `photoprism users reset --yes` command [in a terminal](../docker-compose.md#command-line-interface) after the upgrade, see [Known Issues](../../known-issues.md#user-authentication) for details
 - [ ] Your browser cannot communicate properly with the server, e.g. because a [Reverse Proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
 - [ ] You are connected to the wrong server, VPN, CDN, or a DNS record has not been updated yet
 - [ ] Remember that the initial admin username and password cannot be changed after PhotoPrism has been started for the first time

@@ -89,7 +89,7 @@ Should you wish to operate one or both of these services on your own premises, w
 
 ### Why do I see connection errors when requesting API keys at startup?
 
-As explained above, reverse geocoding and interactive world maps depend on retrieving the necessary information from external services. Please make sure that you allow requests to these API endpoints if you have a firewall installed, and verify that your Internet connection is working.
+As explained in our [Privacy Policy](https://photoprism.app/privacy#section-7), reverse geocoding and interactive world maps depend on retrieving the necessary information from external services. Please make sure that you allow requests to these API endpoints if you have a firewall installed, and verify that your Internet connection is working.
 
 ### Are the keys for using interactive world maps provided free of charge?
 

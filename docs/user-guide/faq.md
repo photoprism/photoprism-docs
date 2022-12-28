@@ -111,7 +111,7 @@
     
     You can combine these filters with other filters such as `live` to ensure that the results include only pictures with a specific media type. Alternatively, you can use the `filename:` filter with a more permissive wildcard that excludes the file extension.
 
-## Library, Counts & Files ##
+## Library ##
 
 ??? question "What media file types are supported?"
 
@@ -224,12 +224,13 @@
     
     You can start a [rescan from the user interface](library/originals.md) by navigating to *Library* > *Index*, selecting "Complete Rescan", and then clicking "Start". Manually entered information such as labels, people, titles or descriptions will not be modified when indexing, even if you perform a "complete rescan". Be careful not to start multiple indexing processes at the same time, as this will lead to a high server load.
 
+## Maps & Places ##
+
+??? question "Why are some pictures positioned at unvisited locations on the map?"
+
+    PhotoPrism can estimate the location of pictures taken without GPS information by extrapolating it from the location of other pictures taken on the same day. These estimates can be [disabled in the settings](./settings/library.md) if you don't want them.
+
 ## Metadata ##
-
-??? question "Why do some of my photos without geolocation information show a random location?"
-
-    PhotoPrism estimates the location of photos without geolocation from photos that have been taken on the same day.
-    You can disable estimations in [Settings](./settings/general.md).
 
 ??? question "Why do some pictures have an odd date like 01/01/1980?"
 

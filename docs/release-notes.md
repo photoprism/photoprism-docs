@@ -8,7 +8,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 221228-85517f32c</span>
+<span class="build">Build 221228-e6701323b</span>
 
 What's new?
 
@@ -26,7 +26,8 @@ What's new?
 - Config: [Custom template path is not searched for files if not specified](https://github.com/photoprism/photoprism/issues/2946)
 - Docker: [MariaDB image and binaries have been upgraded from v10.9 to v10.10](https://github.com/photoprism/photoprism/commit/00022c90d3467655592858b0d3ad9c58fd9eee15) 
 - Security: [Go has been upgraded to v1.19.4, which includes security and stability fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.19.4)
-- Translations: Updated Bulgarian, Chinese (traditional), Czech, Dutch, Estonian, French, German, Italian, Russian, and Ukrainian 
+- Translations: [Added Afrikaans (South Africa)](https://github.com/photoprism/photoprism/pull/3031/files)
+- Translations: Updated Bulgarian, Chinese, Chinese (traditional), Czech, Dutch, Estonian, French, German, Italian, Malay, Russian, and Ukrainian 
 
 ### November 18, 2022 ###
 <span class="build">Build 221118-e58fee0fb</span>

@@ -8,7 +8,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 221228-f2c9074f3</span>
+<span class="build">Build 221228-85517f32c</span>
 
 What's new?
 
@@ -21,6 +21,7 @@ What's new?
 - Albums: [Fixed form field styles in the share dialog](https://github.com/photoprism/photoprism/commit/7c671e0dfc52936b1a3af426db1e0f5e165a12f7)
 - Albums: [Double quotes in titles are replaced with Unicode instead of single quotes](https://github.com/photoprism/photoprism/issues/2891)
 - Index: [Improved query performance when flagging hidden files](https://github.com/photoprism/photoprism/issues/2928)
+- Metadata: [It is ensured that GPS Lat/Lng are within a valid range](https://github.com/photoprism/photoprism/issues/2109)
 - Themes: [Added "Carbon" and "Neon"; removed "Electra", "Moonlight", and "Seaweed"](https://github.com/photoprism/photoprism/commit/e1405eba5430d30769d90292bdc69debe0e27092)
 - Config: [Custom template path is not searched for files if not specified](https://github.com/photoprism/photoprism/issues/2946)
 - Docker: [MariaDB image and binaries have been upgraded from v10.9 to v10.10](https://github.com/photoprism/photoprism/commit/00022c90d3467655592858b0d3ad9c58fd9eee15) 

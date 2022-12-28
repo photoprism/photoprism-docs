@@ -25,9 +25,11 @@ Stacks are groups of files that have the same origin but differ in quality, form
 
 PhotoPrism offers three methods for stacking files:
 
-* :material-clock-outline: Place & Time 
-* :material-fingerprint: Unique ID
-* :material-format-list-numbered-rtl: Sequential Name
+* :material-clock-outline: **Place & Time** stacks pictures taken at same GPS position and second
+* :material-fingerprint: **Unique ID**, matches the *Unique Image ID* (Exif), *Document ID*, or *Instance ID* (XMP)
+* :material-format-list-numbered-rtl: **Sequential Name**, for example `/2018/IMG_1234 (2).jpg` and `/2018/IMG_1234 (3).jpg`
+
+Files that have exactly the same file and folder name are always stacked, for example `/2018/IMG_1234.jpg` and `/2018/IMG_1234.avi`.
 
 !!! attention ""
     If you change the stacking settings, already stacked files will not be unstacked automatically.

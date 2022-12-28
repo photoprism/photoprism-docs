@@ -15,10 +15,10 @@ Note that *[Videos](video.md)* and *[Live Photos](video.md#live-photos)*, which 
 3. Pictures were taken at the same GPS position and second (optional)
 4. Image metadata contains the same *Unique Image ID* or *XMP Instance ID* (optional)
 
-You can change the behaviour for 2 - 4 in [*Settings*](../settings/library.md).
+You can change the behaviour for 2 - 4 in *[Settings > Library](../settings/library.md)*.
 
-!!! attention ""
-    If you change the stacking settings, already stacked files will not be unstacked automatically.
+!!! warning ""
+    When you change the stacking settings, already stacked files will not be unstacked automatically.
 
 ## Browse Related Files
 

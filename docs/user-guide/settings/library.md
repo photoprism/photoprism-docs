@@ -16,8 +16,8 @@ Requires a [review of non-photographic and low-quality images](../organize/revie
 
 Automatically creates JPEG previews for other file types so they can be displayed in search results and in the full-screen viewer.
 
-!!! attention ""
-    *Convert to JPEG* should not be disabled, as this effectively prevents PhotoPrism from indexing file types other than JPEG unless the files have already been converted to JPEG and saved under the same filename prefix.
+!!! danger ""
+    *Convert to JPEG* should not be disabled, as this effectively prevents PhotoPrism from indexing file types other than JPEG unless JPEG sidecar files already exist with the same filename prefix. See *Stacks* to learn more about naming conventions of sidecar files.
 
 ## Stacks ##
 
@@ -31,5 +31,5 @@ PhotoPrism offers three methods for stacking files:
 
 Files that have exactly the same file and folder name are always stacked, for example `/2018/IMG_1234.jpg` and `/2018/IMG_1234.avi`.
 
-!!! attention ""
-    If you change the stacking settings, already stacked files will not be unstacked automatically.
+!!! warning ""
+    When you change the stacking settings, already stacked files will not be unstacked automatically.

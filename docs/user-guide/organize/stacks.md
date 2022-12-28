@@ -1,10 +1,12 @@
 # Stacks
 
-If you have *Stacks* enabled in your [library settings](../settings/library.md), you may come across pictures that are associated with more than one media file.
+Stacks are groups of files that have the same origin but differ in quality, format, size, or color. Go to *[Settings > Library](../settings/library.md)* to change the stacking settings for your library.
 
-To see all pictures with a group of related files, open *Stacks* in the expanded *Search* navigation:
+To see all images with a group of related files, open *Stacks* in the expanded *Search* navigation:
 
 ![Screenshot](img/stack-page-dark.jpg){ class="shadow" }
+
+Note that *[Videos](video.md)* and *[Live Photos](video.md#live-photos)*, which always have a preview image stacked with them, will not be displayed on the *Stacks* page.
 
 ## For what reasons can files be stacked?
 

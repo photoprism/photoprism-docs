@@ -21,7 +21,7 @@ What's new?
 - Albums: [Fixed form field styles in the share dialog](https://github.com/photoprism/photoprism/commit/7c671e0dfc52936b1a3af426db1e0f5e165a12f7)
 - Albums: [Double quotes in titles are replaced with Unicode instead of single quotes](https://github.com/photoprism/photoprism/issues/2891)
 - Index: [Improved query performance when flagging hidden files](https://github.com/photoprism/photoprism/issues/2928)
-- Metadata: [GPS coordinates are normalized to be within a valid range](https://github.com/photoprism/photoprism/issues/2109)
+- Metadata: [GPS coordinates are normalized to be within a common range](https://github.com/photoprism/photoprism/issues/2109)
 - Themes: [Added "Carbon" and "Neon"; removed "Electra", "Moonlight", and "Seaweed"](https://github.com/photoprism/photoprism/commit/e1405eba5430d30769d90292bdc69debe0e27092)
 - Config: [Custom template path is not searched for files if not specified](https://github.com/photoprism/photoprism/issues/2946)
 - CLI: [Added file extension flag to the `photoprism convert` command](https://github.com/photoprism/photoprism/issues/3038)

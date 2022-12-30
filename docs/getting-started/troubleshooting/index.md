@@ -154,7 +154,7 @@ If [password authentication is enabled](../config-options.md#authentication) and
 - [ ] You are connected to the wrong server, VPN, CDN, or a DNS record has not been updated yet
 - [ ] Remember that the initial admin username and password cannot be changed after PhotoPrism has been started for the first time
 
-To see which user accounts exist, [open a terminal](../docker-compose.md#command-line-interface) and run `photoprism users ls`. A new admin password can be set with `photoprism passwd`. You can then try to log in again. [Upgrade to the latest release](../updates.md#docker-compose), restart the server, and [check the logs for errors and warnings](docker.md#viewing-logs) if it still doesn't work.
+To see which user accounts exist, [open a terminal](../docker-compose.md#command-line-interface) and run `photoprism users ls`. A new password can be set with `photoprism passwd [username]`. You can then try to log in again. [Upgrade to the latest release](../updates.md#docker-compose), restart the server, and [check the logs for errors and warnings](docker.md#viewing-logs) if it still doesn't work.
 
 ### Missing Pictures ###
 

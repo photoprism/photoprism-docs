@@ -191,7 +191,7 @@ Enabling [public mode](config-options.md) will disable authentication.
 
 !!! tldr ""
     It is not possible to change the password via `PHOTOPRISM_ADMIN_PASSWORD` after the app has been 
-    started for the first time. You may run `docker compose exec photoprism photoprism passwd` 
+    started for the first time. You may run `docker compose exec photoprism photoprism passwd [username]` 
     in a terminal to change an existing password. You can also reset your database for a clean start.
 
 The server port and other [config options](config-options.md) can be changed in `docker-compose.yml` at any time.
@@ -303,7 +303,7 @@ The currently supported user ID ranges are 0, 33, 50-99, 500-600, and 900-1200. 
 | *Reset Database*                                      | `docker compose exec photoprism photoprism reset -y`          |
 | *Backup Database*                                     | `docker compose exec photoprism photoprism backup -a -i`      |                      
 | *Restore Database*                                    | `docker compose exec photoprism photoprism restore -a -i`     |                   
-| *Change Admin Password*                               | `docker compose exec photoprism photoprism passwd`            |
+| *Change Admin Password*                               | `docker compose exec photoprism photoprism passwd [username]` |
 | *Show User Management Commands*                       | `docker compose exec photoprism photoprism users help`        |
 | *Reset Users*                                         | `docker compose exec photoprism photoprism users reset -y`    |
 | *Show Face Recognition Commands*                      | `docker compose exec photoprism photoprism faces help`        |

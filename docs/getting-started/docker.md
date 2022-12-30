@@ -54,7 +54,7 @@ Enabling [public mode](config-options.md) will disable authentication.
 
 !!! tldr ""
     It is not possible to change the password via `PHOTOPRISM_ADMIN_PASSWORD` after the app has been 
-    started for the first time. You may run `docker exec -ti photoprism photoprism passwd`
+    started for the first time. You may run `docker exec -ti photoprism photoprism passwd [username]`
     in a terminal to change an existing password. You can also reset your database for a clean start. 
 
 #### Volumes ####
@@ -220,7 +220,7 @@ The currently supported user ID ranges are 0, 33, 50-99, 500-600, and 900-1200. 
 | *Reset Database*                 | `docker exec -ti photoprism photoprism reset -y`          |                   
 | *Backup Database*                | `docker exec -ti photoprism photoprism backup -a -i`      |                      
 | *Restore Database*               | `docker exec -ti photoprism photoprism restore -a -i`     |                   
-| *Change Admin Password*          | `docker exec -ti photoprism photoprism passwd`            | 
+| *Change Admin Password*          | `docker exec -ti photoprism photoprism passwd [username]` | 
 | *Show User Management Commands*  | `docker exec -ti photoprism photoprism users help`        |
 | *Reset Users*                    | `docker exec -ti photoprism photoprism users reset -y`    |
 | *Show Face Recognition Commands* | `docker exec -ti photoprism photoprism faces help`        |

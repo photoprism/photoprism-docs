@@ -10,9 +10,22 @@
 If you cannot use the `docker` and `docker compose`, or `docker-compose`, commands, make sure [Docker](https://docs.docker.com/config/daemon/#start-the-daemon-manually) is running on the host you are connected to and your current user has permission to use it.
 The following instructions explain how to install Docker:
 
-- [Ubuntu](https://docs.docker.com/engine/install/ubuntu/), [Mint](https://techviewleo.com/how-to-install-and-use-docker-in-linux-mint/), [Debian](https://www.linode.com/docs/guides/installing-and-using-docker-on-ubuntu-and-debian/), [Arch](https://wiki.archlinux.org/title/docker#Installation) and [Fedora](https://docs.docker.com/engine/install/fedora/) Linux
+- [Ubuntu](https://docs.docker.com/engine/install/ubuntu/), [Mint](https://techviewleo.com/how-to-install-and-use-docker-in-linux-mint/), [Debian](https://www.linode.com/docs/guides/installing-and-using-docker-on-ubuntu-and-debian/), and [Arch Linux](https://wiki.archlinux.org/title/docker#Installation)
 - [Microsoft Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 - [Apple macOS](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
+
+### RedHat Linux
+
+RedHat, CentOS, Fedora, and AlmaLinux users can substitute the `docker` and `docker compose` commands with `podman` and `podman-compose` as drop-in replacements:
+
+```
+sudo dnf update
+sudo dnf install podman podman-compose podman-docker -y
+sudo systemctl start podman
+sudo systemctl enable podman
+systemctl status podman
+podman info
+```
 
 ### Ubuntu Linux
 

@@ -8,7 +8,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 221231-15199c4e7</span>
+<span class="build">Build 230102-727b3eb55</span>
 
 What's new?
 
@@ -17,9 +17,12 @@ What's new?
 - Search: [Added `id:...` filter to find pictures by Exif UID, XMP Document ID or Instance ID](https://github.com/photoprism/photoprism/issues/3035)
 - Search: [Increased batch size for better performance when loading results](https://github.com/photoprism/photoprism/ssues/3009)
 - Videos: [Improved player compatibility with browser plugins](https://github.com/photoprism/photoprism/issues/1439)
-- Videos: [Delayed extraction of preview images, except for short clips](https://github.com/photoprism/photoprism/issues/1241#issuecomment-1363473310)
+- Videos: [Optimized preview thumbnail by duration](https://github.com/photoprism/photoprism/issues/1241#issuecomment-1363473310)
+- Albums: [Added extended search form with sorting options](https://github.com/photoprism/photoprism/issues/353)
 - Albums: [Fixed form field styles in the share dialog](https://github.com/photoprism/photoprism/commit/7c671e0dfc52936b1a3af426db1e0f5e165a12f7)
-- Albums: [Double quotes in titles are replaced with Unicode instead of single quotes](https://github.com/photoprism/photoprism/issues/2891)
+- Albums: [Double quotes in album names are replaced by Unicode characters](https://github.com/photoprism/photoprism/issues/2891)
+- Folders: [Search is case-insensitive and uses wildcards for improved usability](https://github.com/photoprism/photoprism/issues/2050)
+- Upload: [Displays the estimated time remaining in minutes and seconds](https://github.com/photoprism/photoprism/issues/3049)
 - Index: [Improved query performance when flagging hidden files](https://github.com/photoprism/photoprism/issues/2928)
 - Metadata: [GPS coordinates are normalized to be within a common range](https://github.com/photoprism/photoprism/issues/2109)
 - Themes: [Added "Carbon" and "Neon"; removed "Electra", "Moonlight", and "Seaweed"](https://github.com/photoprism/photoprism/commit/e1405eba5430d30769d90292bdc69debe0e27092)

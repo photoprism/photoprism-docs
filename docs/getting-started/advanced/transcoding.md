@@ -133,3 +133,18 @@ Which devices need to be shared and whether additional drivers are required depe
     If [FFmpeg is disabled](../config-options.md#feature-flags) or not installed, videos cannot be indexed because still images cannot be created.
     You should also have [Exiftool enabled](../config-options.md#feature-flags) to extract metadata such as duration, resolution, and codec.
     Note that your hardware may not support certain video codecs and resolutions. In this case, the software encoder is used automatically.
+
+## Troubleshooting
+
+A good way to debug the problems with transcoding is to increase the log level and inspect the full FFmpeg command line and output. This can be done
+through an environment variable in the Dockerfile.
+
+```yaml
+services:
+  photoprism:    
+    environment:
+      PHOTOPRISM_LOG_LEVEL: "debug"
+      ...
+```
+
+See [config options documentation](../config-options.md#logging) for more information.

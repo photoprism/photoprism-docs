@@ -8,7 +8,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 230102-727b3eb55</span>
+<span class="build">Build 230102-449f9f8b8</span>
 
 What's new?
 
@@ -16,6 +16,7 @@ What's new?
 - PWA: [Increased maximum length of app name](https://github.com/photoprism/photoprism/commit/5dc71ff1ff69c157568c11d08b941b1d1875dc38) [and changed start URL](https://github.com/photoprism/photoprism/commit/4c81d8b7e18e2113bba6ef8e20158fecec89dc15)
 - Search: [Added `id:...` filter to find pictures by Exif UID, XMP Document ID or Instance ID](https://github.com/photoprism/photoprism/issues/3035)
 - Search: [Increased batch size for better performance when loading results](https://github.com/photoprism/photoprism/ssues/3009)
+- Search: [Deleted albums are ignored when using the "unsorted" filter](https://github.com/photoprism/photoprism/issues/3051)
 - Videos: [Improved player compatibility with browser plugins](https://github.com/photoprism/photoprism/issues/1439)
 - Videos: [Optimized preview thumbnail by duration](https://github.com/photoprism/photoprism/issues/1241#issuecomment-1363473310)
 - Albums: [Added extended search form with sorting options](https://github.com/photoprism/photoprism/issues/353)

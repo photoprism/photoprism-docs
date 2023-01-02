@@ -33,7 +33,7 @@ What's new?
 - Docker: [MariaDB image and binaries have been upgraded from v10.9 to v10.10](https://github.com/photoprism/photoprism/commit/00022c90d3467655592858b0d3ad9c58fd9eee15) 
 - Security: [Go has been upgraded to v1.19.4, which includes security and stability fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.19.4)
 - Translations: [Added Afrikaans (South Africa)](https://github.com/photoprism/photoprism/pull/3031/files)
-- Translations: Updated Bulgarian, Chinese, Chinese (traditional), Czech, Dutch, Estonian, French, German, Italian, Malay, Russian, and Ukrainian 
+- Translations: Updated Bulgarian, Chinese, Czech, Dutch, Estonian, French, German, Italian, Malay, Russian, and Ukrainian 
 
 ### November 18, 2022 ###
 <span class="build">Build 221118-e58fee0fb</span>

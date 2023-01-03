@@ -44,6 +44,8 @@ installed on your system. It is available for Mac, Linux, and Windows.
     curl -sSf https://dl.photoprism.app/podman/install.sh | bash
     ```
 
+    In the following examples, please remember to replace the `docker` and `docker compose` commands with `podman` and `podman-compose`.
+
 === "Raspberry Pi"
 
     Download our [docker-compose.yml](https://dl.photoprism.app/docker/arm64/docker-compose.yml) example for 

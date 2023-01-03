@@ -36,7 +36,7 @@ installed on your system. It is available for Mac, Linux, and Windows.
     wget https://dl.photoprism.app/podman/docker-compose.yml
     ``` 
  
-    Alternatively, the following commands will install Podman and download the default configuration to `/opt/photoprism`:
+    Alternatively, you can run these commands to install Podman and download the default configuration to `/opt/photoprism`:
     
     ```
     mkdir -p /opt/photoprism
@@ -44,7 +44,7 @@ installed on your system. It is available for Mac, Linux, and Windows.
     curl -sSf https://dl.photoprism.app/podman/install.sh | bash
     ```
 
-    Please remember to replace the `docker` and `docker compose` commands with `podman` and `podman-compose` when following further instructions and examples.
+    Please remember to replace the `docker` and `docker compose` commands with `podman` and `podman-compose` in the following instructions and examples.
 
 === "Raspberry Pi"
 

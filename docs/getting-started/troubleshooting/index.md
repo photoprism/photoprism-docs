@@ -27,7 +27,7 @@ Before reporting a bug:
     - [ ] Only use `localhost` or `127.0.0.1` if the server is running on the same computer (host)
     - [ ] Avoid using IP addresses other than `127.0.0.1` directly, as [they can change](https://github.com/photoprism/photoprism/discussions/2791#discussioncomment-3985376)
     - [ ] We recommend [configuring a local hostname](https://dl.photoprism.app/img/docs/pihole-local-dns.png) to access other hosts on your network
-- [ ] If you use a firewall, ensure that it is configured correctly and that [outgoing connections to our geocoding API are allowed](../index.md#maps-places)
+- [ ] If you use a [firewall](firewall.md), ensure that it is configured correctly and that [outgoing connections to our geocoding API are allowed](../index.md#maps-places)
 - [ ] Note that HTTP security headers will prevent the app from loading in a frame (override them)
 - [ ] Verify your computer meets the [system requirements](../index.md#system-requirements)
 - [ ] Go through the [checklist for fatal server errors](#fatal-server-errors)
@@ -50,7 +50,7 @@ mariadb: mysqld: Shutdown complete
 
 **Maps & Places:** As explained in our [Privacy Policy](https://photoprism.app/privacy#section-7), reverse geocoding and interactive world maps depend on retrieving the necessary information [from us](https://photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. You therefore need **allow requests to these API endpoints** if you have a firewall installed and make sure your Internet connection is working.
 
-[Learn more ›](../index.md#maps-places)
+[Learn more ›](firewall.md)
 
 **IPTables:** On Linux, Docker manipulates the `iptables` rules to provide network isolation. This does have some implications for what you need to do if you want to have your own policies in addition to the rules Docker manages.
 
@@ -76,7 +76,7 @@ docker compose up
 
 !!! note ""
     If you see no errors or no logs at all, you may have started the server on a different host
-    and/or port. There could also be an [issue with your browser](browsers.md), browser plugins, firewall settings,
+    and/or port. There could also be an [issue with your browser](browsers.md), browser plugins, [firewall settings](firewall.md),
     or other tools you may have installed.
 
 !!! tldr ""
@@ -113,7 +113,7 @@ Fatal errors are often caused by one of the following conditions:
 - [ ] The [database server](mariadb.md) is not running, [incompatible](../index.md#databases), or misconfigured (start, upgrade, or [fix it](mariadb.md))
 - [ ] You've [upgraded the MariaDB server](mariadb.md#version-upgrade) without running `mariadb-upgrade`
 - [ ] Files are [stored on an unreliable device such as a USB flash drive or a shared network folder](mariadb.md#corrupted-files)
-- [ ] There are network problems caused by a bad configuration, firewall, or unstable connection
+- [ ] There are network problems caused by a bad configuration, [firewall](firewall.md), or unstable connection
 - [ ] [Kernel security modules](docker.md#kernel-security) such as [AppArmor](https://wiki.ubuntu.com/AppArmor) and [SELinux](https://en.wikipedia.org/wiki/Security-Enhanced_Linux) are blocking permissions
 - [ ] Your Raspberry Pi has not been configured according to our [recommendations](../raspberry-pi.md#system-requirements)
 
@@ -225,8 +225,8 @@ In case the application logs don't contain anything helpful:
 - [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder
 - [ ] Some thumbnails could not be created because you didn't [configure at least 4 GB of swap](docker.md#adding-swap)
 - [ ] Your browser cannot communicate properly with the server, e.g. because a [Reverse Proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
-- [ ] Your proxy, router, or firewall has a request rate limit, so some requests fail
-- [ ] There are other network problems caused by a firewall, router, or unstable connection
+- [ ] Your proxy, router, or [firewall](firewall.md) has a request rate limit, so some requests fail
+- [ ] There are other network problems caused by a [firewall](firewall.md), router, or unstable connection
 - [ ] An ad blocker or other plugins block requests (disable them or add an exception)
 - [ ] You are connected to the wrong server, VPN, CDN, or a DNS record has not been updated yet
 
@@ -255,7 +255,7 @@ If videos do not play and/or you only see a white/black area when you open a vid
 - [ ] The *storage* folder [is not writable or mounted read-only](docker.md#file-permissions) (change [permissions](docker.md#file-permissions))
 - [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder (check if the files are accessible)
 - [ ] Your browser cannot communicate properly with the server, e.g. because a [Reverse Proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
-- [ ] There are other network problems caused by a proxy, firewall, or unstable connection (try a direct connection)
+- [ ] There are other network problems caused by a proxy, [firewall](firewall.md), or unstable connection (try a direct connection)
 - [ ] You are connected to the wrong server, VPN, CDN, or a DNS record has not been updated yet
 
 We recommend that you check your [Docker Logs](docker.md#viewing-logs) and [the browser console](browsers.md#getting-error-details)

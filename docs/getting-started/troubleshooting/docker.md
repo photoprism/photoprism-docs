@@ -35,7 +35,7 @@ cd /opt/photoprism
 curl -sSf https://dl.photoprism.app/podman/install.sh | bash
 ```
 
-Please keep in mind to replace the `docker` and `docker compose` commands with `podman` and `podman-compose` when following the further instructions.
+Please keep in mind to replace the `docker` and `docker compose` commands with `podman` and `podman-compose` when following the examples in our documentation.
 
 ### Ubuntu Linux
 

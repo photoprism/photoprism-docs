@@ -46,7 +46,7 @@ installed on your system. It is available for Mac, Linux, and Windows.
       photoprism/photoprism
     ```
 
-    Please remember to replace the `docker` command with `podman` in the following instructions and examples.
+    Please keep in mind to replace the `docker` command with `podman` when following the further instructions.
 
 The server port and other [config options](config-options.md) can be changed as needed.
 If you provide no database server credentials, SQLite database files will be created in the

@@ -5,7 +5,7 @@ running multiple services than the [pure Docker command-line interface](https://
 Before you proceed, make sure you have [Docker](https://store.docker.com/search?type=edition&offering=community)
 installed on your system. It is available for Mac, Linux, and Windows.
 
-Users of Red Hat-compatible Linux distributions such as Red Hat Enterprise Linux®, CentOS, Fedora, AlmaLinux, and Rocky Linux can substitute the `docker` and `docker compose` commands with `podman` and `podman-compose` as  [drop-in replacements](troubleshooting/docker.md#podman).
+[Podman](https://podman.io/) is also supported as a [drop-in replacement](troubleshooting/docker.md#podman) for Docker on Red Hat-compatible Linux distributions such as CentOS, Fedora, AlmaLinux, and Rocky Linux.
 
 ### Step 1: Start the server ###
 

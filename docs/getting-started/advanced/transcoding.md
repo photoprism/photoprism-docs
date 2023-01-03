@@ -136,15 +136,17 @@ Which devices need to be shared and whether additional drivers are required depe
 
 ## Troubleshooting
 
-A good way to debug the problems with transcoding is to increase the log level and inspect the full FFmpeg command line and output. This can be done
-through an environment variable in the Dockerfile.
+A good way to troubleshoot transcoding issues is to increase the log level and examine the entire FFmpeg command and its output. To enable [debug mode](../config-options.md), set `PHOTOPRISM_DEBUG` to `"true"` in the `environment:` section of the `photoprism` service (or use the `--debug` flag when running the `photoprism` command directly):
+
 
 ```yaml
 services:
-  photoprism:    
+  photoprism:
     environment:
-      PHOTOPRISM_LOG_LEVEL: "debug"
+      PHOTOPRISM_DEBUG: "true"
       ...
 ```
 
-See [config options documentation](../config-options.md#logging) for more information.
+Then restart all services for the changes to take effect.
+
+[Learn more ›](../troubleshooting/docker.md#viewing-logs)

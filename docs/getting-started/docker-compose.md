@@ -5,7 +5,7 @@ to configure all application services so you can easily start them with a single
 Before you proceed, make sure you have [Docker](https://store.docker.com/search?type=edition&offering=community)
 installed on your system. It is available for Mac, Linux, and Windows.
 
-RedHat, CentOS, Fedora, and AlmaLinux users can substitute the `docker` and `docker compose` commands with `podman` and `podman-compose` as [drop-in replacements](troubleshooting/docker.md#redhat-linux).
+Users of Red Hat-compatible Linux distributions such as Red Hat Enterprise Linux®, CentOS, Fedora, AlmaLinux, and Rocky Linux can substitute the `docker` and `docker compose` commands with `podman` and `podman-compose` as  [drop-in replacements](troubleshooting/docker.md#podman).
 
 ### Step 1: Configure ###
 

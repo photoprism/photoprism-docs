@@ -186,7 +186,7 @@ at least 4 GB of swap space.
 
 ## Kernel Security
 
-We recommend disabling Linux kernel security modules like *SELinux* (RedHat/Fedora) on private servers, especially if you have no experience configuring them.
+We recommend disabling Linux kernel security modules like *SELinux* (Red Hat/Fedora) on private servers, especially if you have no experience configuring them.
 
 If you have working configuration rules for a particular Linux distribution, feel free to share the instructions with the community so that less experienced users can harden their installation without running into problems.
 
@@ -198,7 +198,7 @@ Errors such as "read-only file system", "error creating path", or "wrong permiss
 - [ ] The app and database *storage* folders must be writable as well: Verify that the services have write permissions and that you have **not** mounted the folders read-only on your host or [via Docker using the `:ro` flag](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-3)
 - [ ] If you have configured specific user and group IDs for a service, make sure they match
 - [ ] If [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) are mounted or used within *storage* folders, replace them with actual paths
-- [ ] It may help to [add the `:z` mount flag to volumes](https://docs.docker.com/storage/bind-mounts/#configure-the-selinux-label) when using *SELinux* (RedHat/Fedora)
+- [ ] It may help to [add the `:z` mount flag to volumes](https://docs.docker.com/storage/bind-mounts/#configure-the-selinux-label) when using *SELinux* (Red Hat/Fedora)
 - [ ] When mounting folders that only root has access to, you may have to prefix the `docker` and `docker-compose` commands with `sudo` on Linux if you are not already logged in as root
 
 An easy way to test for missing permissions is to (temporarily) remove restrictions and make the entire folder accessible to everyone:

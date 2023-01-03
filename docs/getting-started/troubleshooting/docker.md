@@ -16,7 +16,7 @@ The following instructions explain how to install Docker:
 
 ### Podman
 
-Users of Red Hat-compatible Linux distributions such as Red Hat Enterprise Linux®, CentOS, Fedora, AlmaLinux, and Rocky Linux can substitute the `docker` and `docker compose` commands with `podman` and `podman-compose` as drop-in replacements:
+[Podman](https://podman.io/) is supported as a replacement for Docker on Red Hat Enterprise Linux® and compatible Linux distributions such as CentOS, Fedora, AlmaLinux, and Rocky Linux. The following installs the `podman` and `podman-compose` commands if they are not already installed:
 
 ```
 sudo dnf update -y
@@ -27,13 +27,15 @@ sudo systemctl enable podman
 podman --version
 ```
 
-We also provide a complete setup script that installs Podman and downloads the default configuration to a directory of your choice:
+We also provide a setup script that conveniently installs Podman and downloads the default configuration to a directory of your choice:
 
 ```
 mkdir -p /opt/photoprism
 cd /opt/photoprism
 curl -sSf https://dl.photoprism.app/podman/install.sh | bash
 ```
+
+Please keep in mind to replace the `docker` and `docker compose` commands with `podman` and `podman-compose` when following the further instructions.
 
 ### Ubuntu Linux
 

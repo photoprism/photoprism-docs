@@ -21,7 +21,7 @@ docker compose up -d
 
 Pulling a new version can take several minutes, depending on your internet connection speed.
 
-Advanced users can add this to a `Makefile` so that they only have to type a single 
+Advanced users can [add this to a `Makefile`](https://dl.photoprism.app/docker/Makefile) so that they only have to type a single 
 command like `make update`. See [Command-Line Interface](docker-compose.md#command-line-interface)
 to learn more about terminal commands.
 

@@ -27,6 +27,14 @@ sudo systemctl enable podman
 podman --version
 ```
 
+We also provide a complete setup script that installs Podman and downloads the default configuration to a directory of your choice:
+
+```
+mkdir -p /opt/photoprism
+cd /opt/photoprism
+curl -sSf https://dl.photoprism.app/podman/install.sh | bash
+```
+
 ### Ubuntu Linux
 
 If you are using Ubuntu Linux, you can run this script to install the latest *Docker* version, including the *Compose Plugin*, on your server in one step:

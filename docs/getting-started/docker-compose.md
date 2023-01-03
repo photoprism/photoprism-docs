@@ -26,6 +26,24 @@ installed on your system. It is available for Mac, Linux, and Windows.
     Ensure that your server has [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured so that
     indexing doesn't cause restarts when there are memory usage spikes.
 
+=== "Podman"
+
+    Download our [docker-compose.yml](https://dl.photoprism.app/podman/docker-compose.yml) example
+    (right click and *Save Link As...* or use `wget`) to a folder of your choice,
+    and change the [configuration](config-options.md) as needed:
+    
+    ```bash
+    wget https://dl.photoprism.app/podman/docker-compose.yml
+    ``` 
+ 
+    Alternatively, the following commands will install Podman and download the default configuration to `/opt/photoprism`:
+    
+    ```
+    mkdir -p /opt/photoprism
+    cd /opt/photoprism
+    curl -sSf https://dl.photoprism.app/podman/install.sh | bash
+    ```
+
 === "Raspberry Pi"
 
     Download our [docker-compose.yml](https://dl.photoprism.app/docker/arm64/docker-compose.yml) example for 
@@ -82,7 +100,7 @@ installed on your system. It is available for Mac, Linux, and Windows.
     as the default of 2 GB can reduce indexing performance and cause unexpected restarts.
     Also, ensure that you configure at least 4 GB of swap space.
 
-Note that in [YAML files](../developer-guide/technologies/yaml.md), related values must start at the same indentation level and tabs are not allowed for indentation. We recommend using 2 spaces, but any number is allowed as long as it is consistent.
+When editing the configuration file, please note that related values must start at the same indentation level [in YAML files](../developer-guide/technologies/yaml.md) and that tabs are not allowed for indentation. We recommend using 2 spaces.
 
 !!! danger ""
     Always change `PHOTOPRISM_ADMIN_PASSWORD` so that the app starts with a **secure initial password**.

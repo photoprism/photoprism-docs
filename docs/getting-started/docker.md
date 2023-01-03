@@ -27,6 +27,25 @@ installed on your system. It is available for Mac, Linux, and Windows.
       photoprism/photoprism
     ```
 
+=== "Podman"
+
+    Open a terminal and run this command to start the app after replacing `~/Pictures` with
+    the folder containing your pictures:
+    
+    ```bash
+    podman run -d \
+      --name photoprism \
+      --privileged \
+      --security-opt seccomp=unconfined \
+      --security-opt apparmor=unconfined \
+      -p 2342:2342 \
+      -e PHOTOPRISM_UPLOAD_NSFW="true" \
+      -e PHOTOPRISM_ADMIN_PASSWORD="insecure" \
+      -v /photoprism/storage \
+      -v ~/Pictures:/photoprism/originals \
+      photoprism/photoprism
+    ```
+
 The server port and other [config options](config-options.md) can be changed as needed.
 If you provide no database server credentials, SQLite database files will be created in the
 *storage* folder.

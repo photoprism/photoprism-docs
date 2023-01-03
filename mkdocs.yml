@@ -29,6 +29,7 @@ nav:
       - Browsers: getting-started/troubleshooting/browsers.md
       - Performance: getting-started/troubleshooting/performance.md
       - Windows: getting-started/troubleshooting/windows.md
+      - Firewall: getting-started/troubleshooting/firewall.md
     # - Support: getting-started/support.md
     - Remote Access:
       - Tailscale VPN: getting-started/vpn/tailscale.md

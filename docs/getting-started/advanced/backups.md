@@ -1,6 +1,6 @@
 # Creating Backups
 
-A full backup of PhotoPrism® Pro should include, at a minimum, the files in your *originals* folder and a SQL dump of the database. We also recommend backing up the storage folder so you don't have to recreate thumbnails and have a complete backup of your configuration.
+A full backup of PhotoPrism should include, at a minimum, the files in your *originals* folder and a SQL dump of the database. We also recommend backing up the *storage* folder so you don't have to recreate thumbnails and have a complete backup of your configuration.
 
 The easiest way to create an index SQL backup is to run this command in a terminal:
 

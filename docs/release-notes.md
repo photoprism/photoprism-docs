@@ -19,7 +19,7 @@ What's new?
 - Search: [Increased batch size for better performance when loading results](https://github.com/photoprism/photoprism/ssues/3009)
 - Search: [Deleted albums are ignored when using the "unsorted" filter](https://github.com/photoprism/photoprism/issues/3051)
 - Videos: [Improved player compatibility with browser plugins](https://github.com/photoprism/photoprism/issues/1439)
-- Videos: [Optimized preview thumbnail by duration](https://github.com/photoprism/photoprism/issues/1241#issuecomment-1363473310)
+- Videos: [Improved preview image generation depending on duration](https://github.com/photoprism/photoprism/issues/1241#issuecomment-1363473310)
 - Albums: [Added extended search form with sorting options](https://github.com/photoprism/photoprism/issues/353)
 - Albums: [Fixed form field styles in the share dialog](https://github.com/photoprism/photoprism/commit/7c671e0dfc52936b1a3af426db1e0f5e165a12f7)
 - Albums: [Double quotes in album names are replaced by Unicode characters](https://github.com/photoprism/photoprism/issues/2891)

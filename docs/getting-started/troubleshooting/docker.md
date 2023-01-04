@@ -177,8 +177,9 @@ echo '/swapfile none swap sw 0 0' | tee -a /etc/fstab
     You can skip `sudo -i` if you are already logged in as root.
 
 
-### Raspian 
-Open a terminal and run this command to check if your server has swap configured.
+### Raspbian 
+
+Open a terminal on your [Raspberry Pi](../raspberry-pi.md) and run the following command to verify if it has swap configured:
 
 ```bash
 swapon --show
@@ -191,13 +192,19 @@ NAME      TYPE SIZE USED PRIO
 /swapfile file  100M  0B   -2
 ```
 
+If no swap has been configured or the command only shows 100 MB, open `/etc/dphys-swapfile` with a text editor, search for `CONF_SWAPSIZE=100` and increase the value to `2048` if your device has 4 GB of physical memory, and `4096` otherwise:
+
 ```bash
 sudo nano /etc/dphys-swapfile
+```
+
+Then restart for the changes to take effect:
+
+```bash
 sudo reboot
 ```
-Search for "CONF_SWAPSIZE=100" and increase the value at least to 4096. 
 
-Hint for raspberry 4 with 4GB of RAM, 2048 is the maximal value which is used and to improve the stability set `PHOTOPRISM_WORKERS` to 1 in `docker-compose.yml`. 
+In addition, you can reduce memory usage and improve stability by setting `PHOTOPRISM_WORKERS` to `1` in your `docker-compose.yml` file to limit the number of indexing workers.
 
 ### Windows
 

@@ -197,7 +197,7 @@ sudo reboot
 ```
 Search for "CONF_SWAPSIZE=100" and increase the value at least to 4096. 
 
-Hint for raspberry 4 with 4GB 2048 is the maximul value which is used and to improve the sability set PHOTOPRISM_WORKERS to 1 in the docker-compose.yml. 
+Hint for raspberry 4 with 4GB of RAM, 2048 is the maximal value which is used and to improve the stability set `PHOTOPRISM_WORKERS` to 1 in `docker-compose.yml`. 
 
 ### Windows
 

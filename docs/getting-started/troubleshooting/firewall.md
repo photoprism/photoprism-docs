@@ -7,7 +7,9 @@
 
 ## Incoming Requests
 
-Unless you have changed the default configuration, the application is accessible via port 2342 on all network devices. If you are using a firewall, please make sure that the port is accessible from other computers on your network.
+Unless you have changed the default configuration, the application is accessible via port 2342 on all network devices. If you are using a firewall, please make sure that the port is accessible from other computers on your network or your app instance is reachable [through a reverse proxy](../proxies/traefik.md):
+
+![](https://dl.photoprism.app/img/diagrams/proxy-cdn.png)
 
 ## Outgoing Connections
 
@@ -16,8 +18,6 @@ As explained in our [Privacy Policy](/privacy#section-7), reverse geocoding and 
 In order to successfully set up your installation and view location details in PhotoPrism, you must **allow requests to these API endpoints** if you have a firewall installed and make sure your Internet connection is working:
 
 - [ ] dl.photoprism.app
-- [ ] my.photoprism.app
-- [ ] api.photoprism.app
 - [ ] cdn.photoprism.app
 - [ ] hub.photoprism.app
 - [ ] setup.photoprism.app

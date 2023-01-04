@@ -49,6 +49,7 @@ We stick to Google's Material icons and use other icons only when absolutely nec
 - [Artyclick Color Name Finder](https://colors.artyclick.com/color-name-finder/)
 - [Coolors Color Palette Generator](https://coolors.co/)
 - [FFFuel HEX, RGB & HSL Color Picker](https://fffuel.co/cccolor/)
+- [iColorpalette](https://icolorpalette.com/color)
 
 ### Related Content
 

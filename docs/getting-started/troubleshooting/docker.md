@@ -176,6 +176,29 @@ echo '/swapfile none swap sw 0 0' | tee -a /etc/fstab
 !!! note ""
     You can skip `sudo -i` if you are already logged in as root.
 
+
+### Raspian 
+Open a terminal and run this command to check if your server has swap configured.
+
+```bash
+swapon --show
+```
+
+Example output:
+
+```
+NAME      TYPE SIZE USED PRIO
+/swapfile file  100M  0B   -2
+```
+
+```bash
+sudo nano /etc/dphys-swapfile
+sudo reboot
+```
+Search for "CONF_SWAPSIZE=100" and increase the value at least to 4096. 
+
+Hint for raspberry 4 with 4GB 2048 is the maximul value which is used and to improve the sability set PHOTOPRISM_WORKERS to 1 in the docker-compose.yml. 
+
 ### Windows
 
 Windows Pro users should [disable](../img/docker-disable-wsl2.jpg) the *WSL 2* based engine in *Docker Settings > General*

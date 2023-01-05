@@ -59,7 +59,7 @@ nav:
     - Installation: user-guide/index.md
     - First Steps 👣: user-guide/first-steps.md
     # - Setting up: user-guide/setup.md
-    - Your Library:
+    - Media Library:
       - Overview: user-guide/library/index.md
       - Indexing Originals: user-guide/library/originals.md
       - Import to Originals: user-guide/library/import.md
@@ -140,7 +140,7 @@ nav:
     - Translations:
       - Add Translations: developer-guide/translations-weblate.md
       - Legacy Method: developer-guide/translations.md
-    - Media Files:
+    - Media Library:
       - Overview: developer-guide/media/index.md
       - Import: developer-guide/media/import.md
       - Abstraction: developer-guide/media/abstraction.md

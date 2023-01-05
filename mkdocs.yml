@@ -150,7 +150,7 @@ nav:
       - Videos: developer-guide/media/videos.md
       - Thumbnails: developer-guide/media/thumbnails.md
       - Samples: developer-guide/media/samples.md
-    - Media Metadata:
+    - Metadata:
       - Classification: developer-guide/metadata/classification.md
       - Face Recognition: developer-guide/metadata/face-recognition.md
       - Geocoding: developer-guide/metadata/geocoding.md

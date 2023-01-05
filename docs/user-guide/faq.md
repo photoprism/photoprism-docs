@@ -12,7 +12,7 @@
     
     In order to use the maps and view location details in PhotoPrism, you must **allow requests to these API endpoints** if you have [a firewall installed](../getting-started/troubleshooting/firewall.md) and make sure your Internet connection is working:
 
-    ![](https://dl.photoprism.app/img/diagrams/proxy-cdn.png)
+    ![](https://dl.photoprism.app/img/diagrams/proxy-cdn.svg)
     
     Should you wish to operate one or both of these services on your own premises, we can set up such a [fully autonomous solution](https://photoprism.app/kb/compliance-faq#fully-autonomous-solution) for you, provided you are prepared to cover the initial setup costs as well as ongoing maintenance fees for content licenses and updates.
 

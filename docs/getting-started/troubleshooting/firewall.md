@@ -9,7 +9,7 @@
 
 Unless you have changed the default configuration, the application is accessible via port 2342 on all network devices. If you are using a firewall, please make sure that the port is accessible from other computers on your network or your app instance is reachable [through a reverse proxy](../proxies/traefik.md):
 
-![](https://dl.photoprism.app/img/diagrams/proxy-cdn.png)
+![](https://dl.photoprism.app/img/diagrams/proxy-cdn.svg){ class="w100" }
 
 ## Outgoing Connections
 

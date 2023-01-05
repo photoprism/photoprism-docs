@@ -71,5 +71,7 @@ HTTPS reverse proxy**. Your files and passwords will otherwise be transmitted in
 by anyone, including your provider, hackers, and governments. Backup tools and file sync apps may refuse to
 connect as well.
 
+![](https://dl.photoprism.app/img/diagrams/reverse-proxy.svg){ class="w100" }
+
 !!! example ""
     **Help improve these docs!** You can contribute by clicking :material-pencil: to send a pull request with your changes.

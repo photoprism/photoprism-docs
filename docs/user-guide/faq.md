@@ -28,8 +28,6 @@
 
     The high-quality maps have been a paid feature for a long time, but were still available for testing. Since many users didn't realize this and simply used the commercial maps for free, this was [recently changed](https://github.com/photoprism/photoprism/issues/2998). Please see the [feature comparison on our website](https://photoprism.app/editions#compare) for reference. 
 
-    As this allows us to make more features available to the public, we encourage all users to support our mission by [signing up as a sponsor](https://photoprism.app/editions#compare), purchasing a [commercial license](https://photoprism.app/teams#compare), or [contributing in other ways](../developer-guide/index.md). Ultimately, that's what's best for the product and the community. Thank you very much!
-
     [Compare Personal Editions ›](https://photoprism.app/editions#compare)
 
 ??? question "What functionality is generally available?"

@@ -49,18 +49,21 @@ To unselect all items, click the cross at the top:
 ![Screenshot](img/nav3edited-light.jpg){ class="shadow" }
 
 ## Selection Mode and Multi-Select ##
-### Desktop ###
-Select the first photo by clicking :material-checkbox-blank-circle-outline: in the lower right corner.
 
-PhotoPrism is now in selection mode.
+### Desktop Browser ###
 
-- To select more single images, click anywhere on the photo
-- To select multiple photos at once, press shift+click. All photos between the last selected photo and the photo you shift+click will be selected.
+Select the first picture by clicking :material-checkbox-blank-circle-outline: in the lower right corner.
 
-### Mobile ###
-Select the first photo with a long click.
+The user interface is now in selection mode:
 
-PhotoPrism is now in selection mode.
+- to select more single images, click anywhere on the photo
+- to select multiple pictures at once, press shift+click so all pictures between the last selected picture and the one you shift+click will be selected
 
-- To select additional single images use a normal click
-- To select multiple photos at once, do a long click. All photos between the last selected photo and the photo you long-click will be selected.
+### Mobile Devices ###
+
+Select the first picture with a long click.
+
+The user interface is now in selection mode:
+
+- to additionally select individual pictures, touch them anywhere except on the play/view icons in the corner
+- to select multiple pictures at once, do a long click so all pictures between the last selected picture and the one you long-click will be selected

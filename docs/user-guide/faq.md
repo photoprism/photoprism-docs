@@ -24,12 +24,6 @@
 
     **Since sustained funding is key to quickly releasing new features, we encourage all users to support our mission by [signing up as a sponsor](https://photoprism.app/membership) or purchasing a [commercial license](https://photoprism.app/teams).**
 
-??? question "Why are the streets on the Places map no longer loading?"
-
-    The high-quality maps have been a paid feature for a long time, but were still available for testing. Since many users didn't realize this and simply used the commercial maps for free, this was [recently changed](https://github.com/photoprism/photoprism/issues/2998). Please see the [feature comparison on our website](https://photoprism.app/editions#compare) for reference. 
-
-    [Compare Personal Editions ›](https://photoprism.app/editions#compare)
-
 ??? question "What functionality is generally available?"
     
     Our team decides this on an ongoing basis depending on the support effort required, server and licensing costs, and whether the features are generally needed by everyone or mainly requested by organizations and advanced users. As this allows us to make more features available to the public, we encourage all users to [support our mission](https://photoprism.app/editions#compare).
@@ -65,7 +59,25 @@
 
 ??? question "Can I select multiple photos at once?"
 
-    Yes, you can [select multiple photos at once](./navigate.md#selection-mode-and-multi-select) 
+    Yes, this is possible. How it works depends on what kind of device you use.
+
+    **Desktop Browser**
+    
+    Select the first picture by clicking :material-checkbox-blank-circle-outline: in the lower right corner.
+
+    The user interface is now in selection mode:
+    
+    - to additionally select individual pictures, click anywhere on them except the play/view icons in the corner
+    - to select multiple pictures at once, press shift+click so all pictures between the last selected picture and the one you shift+click will be selected
+    
+    **Mobile Devices**
+    
+    Select the first picture with a long click.
+
+    The user interface is now in selection mode:
+
+    - to additionally select individual pictures, touch them anywhere except on the play/view icons in the corner
+    - to select multiple pictures at once, do a long click so all pictures between the last selected picture and the one you long-click will be selected
 
 ??? question "Can I use trees for organizing my pictures and albums?"
 
@@ -90,36 +102,19 @@
     Most users won't be able to sort their memories in a strictly hierarchical way
     and prefer to explore them in multiple dimensions instead.
 
-??? question "What's the difference between keywords and labels?"
+## Maps & Places ##
 
-    Keywords contain a list of search terms extracted from metadata, file names, and other sources
-    like geodata. Pictures with matching keywords automatically show up in related *Labels*.
+??? question "Why are the streets on the Places map no longer loading?"
 
-    Although related, keywords and labels serve different purposes:
+    The high-quality maps have been a paid feature for a long time, but were still available for testing. Since many users didn't realize this and simply used the commercial maps for free, this was [recently changed](https://github.com/photoprism/photoprism/issues/2998). Please see the [feature comparison on our website](https://photoprism.app/editions#compare) for reference. 
 
-    * **Labels** may have parent categories and are primarily used for classification, like "animal", "cat", or "boat". Duplicates and ambiguities should be avoided.
+    [Compare Personal Editions ›](https://photoprism.app/editions#compare)
 
-    * **Keywords** are primarily used for searching. They may include similar terms and translations, like "kitten", "kitty", and "cat".
+??? question "Why are some pictures positioned at unvisited locations on the map?"
 
-??? question "Can I use the web interface to permanently delete files?"
+    PhotoPrism can estimate the location of pictures taken without GPS information by extrapolating it from the location of other pictures taken on the same day. These estimates can be [disabled in the settings](./settings/library.md) if you don't want them.
 
-    Yes, you can [permanently delete](./organize/delete.md) files.
-
-## Search ##
-
-??? question "Why can't I play live photos or find stacks when I search for specific images?"
-
-    Our search API and user interface perform a file search. This is intentional since "stacks" can contain files of different types and properties, such as color.
-    
-    For example, there may be color and monochrome versions. Now, when you search for them or sort them by color, the user interface must display individual files. Otherwise, the results showing a color image/video when you filter by monochrome would make no sense.
-    
-    Likewise, if you search for `filename.mp4.*`, you will find only JPEGs without video, because the video file extension is `.mp4` without an extra dot at the end.
-
-    We recommend using the `path:` and/or `name:` filters with wildcards if searching for individual files limits the search results too much. Most users will want to find all related files so that they can be displayed together, e.g. as live photos consisting of a video and an image.
-    
-    You can combine these filters with other filters such as `live` to ensure that the results include only pictures with a specific media type. Alternatively, you can use the `filename:` filter with a more permissive wildcard that excludes the file extension.
-
-## Library ##
+## Media Library ##
 
 ??? question "What media file types are supported?"
 
@@ -232,11 +227,9 @@
     
     You can start a [rescan from the user interface](library/originals.md) by navigating to *Library* > *Index*, selecting "Complete Rescan", and then clicking "Start". Manually entered information such as labels, people, titles or descriptions will not be modified when indexing, even if you perform a "complete rescan". Be careful not to start multiple indexing processes at the same time, as this will lead to a high server load.
 
-## Maps & Places ##
+??? question "Can I use the web interface to permanently delete files?"
 
-??? question "Why are some pictures positioned at unvisited locations on the map?"
-
-    PhotoPrism can estimate the location of pictures taken without GPS information by extrapolating it from the location of other pictures taken on the same day. These estimates can be [disabled in the settings](./settings/library.md) if you don't want them.
+    Yes, you can [permanently delete](./organize/delete.md) files.
 
 ## Metadata ##
 
@@ -248,6 +241,31 @@
     
     To fix the date directly in your image or video files, please use other applications
     like Photoshop, or Exiftool, and re-index your library.
+
+??? question "What's the difference between keywords and labels?"
+
+    Keywords contain a list of search terms extracted from metadata, file names, and other sources
+    like geodata. Pictures with matching keywords automatically show up in related *Labels*.
+
+    Although related, keywords and labels serve different purposes:
+
+    * **Labels** may have parent categories and are primarily used for classification, like "animal", "cat", or "boat". Duplicates and ambiguities should be avoided.
+
+    * **Keywords** are primarily used for searching. They may include similar terms and translations, like "kitten", "kitty", and "cat".
+
+## Live Photos ##
+
+??? question "Why can't I play Live Photos or find stacks when I search for specific images?"
+
+    Our search API and user interface perform a file search. This is intentional since "stacks" can contain files of different types and properties, such as color.
+    
+    For example, there may be color and monochrome versions. Now, when you search for them or sort them by color, the user interface must display individual files. Otherwise, the results showing a color image/video when you filter by monochrome would make no sense.
+    
+    Likewise, if you search for `filename.mp4.*`, you will find only JPEGs without video, because the video file extension is `.mp4` without an extra dot at the end.
+
+    We recommend using the `path:` and/or `name:` filters with wildcards if searching for individual files limits the search results too much. Most users will want to find all related files so that they can be displayed together, e.g. as live photos consisting of a video and an image.
+    
+    You can combine these filters with other filters such as `live` to ensure that the results include only pictures with a specific media type. Alternatively, you can use the `filename:` filter with a more permissive wildcard that excludes the file extension.
 
 ## Thumbnails ##
 

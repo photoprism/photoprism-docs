@@ -13,6 +13,10 @@
     /* --md-text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
 }
 
+.md-nav__link--passed, .md-nav__link--passed code, .md-nav__link[for] {
+    color: var(--md-primary-bg-color);
+}
+
 .only-sm,
 .only-sm-and-up,
 .only-md-and-up,

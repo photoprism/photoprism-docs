@@ -49,8 +49,9 @@ push:
 	git checkout master
 	git push origin master
 img-resize:
-	mogrify -resize '688x860>' docs/user-guide/img/*.jpg
-	mogrify -resize '688x860>' docs/user-guide/**/img/*.jpg
+	mogrify -resize '1000x860>' docs/user-guide/img/*.jpg
+	mogrify -resize '1000x860>' docs/user-guide/**/img/*.jpg
+	mogrify -resize '1000x860>' docs/getting-started/nas/img/asustor/*.jpg
 merge:
 	git checkout deploy
 	git pull origin deploy

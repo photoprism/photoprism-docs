@@ -13,6 +13,7 @@ nav:
       - Requirements: getting-started/raspberry-pi.md
       - SD Card Image: getting-started/raspberry-pi/microsd-image.md
     - NAS Devices:
+      - Asustor: getting-started/nas/asustor.md
       - Synology: getting-started/nas/synology.md
       - QNAP: getting-started/nas/qnap.md
       - Unraid: getting-started/nas/unraid.md

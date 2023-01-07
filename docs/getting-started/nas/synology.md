@@ -1,9 +1,8 @@
 # Running PhotoPrism on a Synology NAS
 
-Before setting up PhotoPrism on your NAS, we recommend that you visit the [Synology Knowledge Base](https://kb.synology.com/en-us/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have) to learn about the CPU and memory configuration of your device:
+Before setting up PhotoPrism on your NAS, we recommend that you check the [Synology Knowledge Base](https://kb.synology.com/en-us/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have) for the CPU and memory configuration of your device.
 
-- for a good user experience, a 64-bit system with at least [2 cores and 3 GB of physical memory](../index.md#system-requirements) is recommended
-- indexing large photo and video collections also benefits greatly from [using SSD storage](../troubleshooting/performance.md#storage), especially for the database and cache files 
+For a good user experience, it should be a 64-bit system with [at least 2 cores and 3 GB of RAM](../index.md#system-requirements). Indexing large photo and video collections also benefits greatly from [using SSD storage](../troubleshooting/performance.md#storage), especially for the database and cache files.
 
 !!! tldr ""
     Should you experience problems with the installation, we recommend that you ask the Synology community for advice, as we cannot provide support for third-party software and services.

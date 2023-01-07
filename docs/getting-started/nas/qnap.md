@@ -1,9 +1,8 @@
 # Setting Up PhotoPrism on QNAP
 
-Before setting up PhotoPrism on your NAS, we recommend that you visit the [QNAP product database](https://www.qnap.com/en/product) to learn about the CPU and memory configuration of your device:
+Before setting up PhotoPrism on your NAS, we recommend that you check the [QNAP product database](https://www.qnap.com/en/product) for the CPU and memory configuration of your device.
 
-- for a good user experience, a 64-bit system with at least [2 cores and 3 GB of physical memory](../index.md#system-requirements) is recommended
-- indexing large photo and video collections also benefits greatly from [using SSD storage](../troubleshooting/performance.md#storage), especially for the database and cache files 
+For a good user experience, it should be a 64-bit system with [at least 2 cores and 3 GB of RAM](../index.md#system-requirements). Indexing large photo and video collections also benefits greatly from [using SSD storage](../troubleshooting/performance.md#storage), especially for the database and cache files.
 
 !!! tldr ""
     Should you experience problems with the installation, we recommend that you ask the QNAP community for advice, as we cannot provide support for third-party software and services.

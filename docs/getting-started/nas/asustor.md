@@ -1,9 +1,8 @@
 # Running PhotoPrism on an Asustor NAS
 
-Before setting up PhotoPrism on your NAS, we recommend that you visit the [Asustor product database](https://www.asustor.com/en/product/product_list) to learn about the CPU and memory configuration of your device:
+Before setting up PhotoPrism on your NAS, we recommend that you check the [Asustor product database](https://www.asustor.com/en/product/product_list) for the CPU and memory configuration of your device.
 
-- for a good user experience, a 64-bit system with at least [2 cores and 3 GB of physical memory](../index.md#system-requirements) is recommended
-- indexing large photo and video collections also benefits greatly from [using SSD storage](../troubleshooting/performance.md#storage), especially for the database and cache files 
+For a good user experience, it should be a 64-bit system with [at least 2 cores and 3 GB of RAM](../index.md#system-requirements). Indexing large photo and video collections also benefits greatly from [using SSD storage](../troubleshooting/performance.md#storage), especially for the database and cache files.
 
 !!! tldr ""
     Note that [RAW image conversion and TensorFlow are disabled](../../user-guide/settings/advanced.md) on devices with 1 GB or less memory, and that high-resolution panoramic images may require [additional swap space](../troubleshooting/docker.md#adding-swap) and/or physical memory above the recommended minimum. We take no responsibility for [instability or performance problems](../troubleshooting/performance.md) if your device does not meet the requirements.

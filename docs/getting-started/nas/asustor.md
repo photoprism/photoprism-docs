@@ -22,7 +22,7 @@ Type *PhotoPrism* in the search box in the upper right corner and press Enter to
 
 ![Screenshot](img/asustor/asustor-step-1.jpg){ class="shadow" }
 
-Next, you will be informed about dependencies like Docker that need to be installed, and you can decide if you want your instance to be accessible from the Internet (if you have set this up for your NAS and your Internet router is compatible):
+Next, you will be informed about dependencies like Docker that need to be installed, and you can decide whether you want your instance to be accessible from the Internet (if you have set this up for your NAS and your Internet router is compatible):
 
 ![Screenshot](img/asustor/asustor-step-2.jpg){ class="shadow" }
 

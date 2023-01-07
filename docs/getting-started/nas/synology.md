@@ -1,25 +1,15 @@
 # Running PhotoPrism on a Synology NAS
 
+Before setting up PhotoPrism on your NAS, we recommend that you visit the [Synology Knowledge Base](https://kb.synology.com/en-us/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have) to learn about the CPU and memory configuration of your device:
+
+- for a good user experience, a 64-bit system with at least [2 cores and 3 GB of physical memory](../index.md#system-requirements) is recommended
+- indexing large photo and video collections also benefits greatly from [using SSD storage](../troubleshooting/performance.md#storage), especially for the database and cache files 
+
 !!! tldr ""
     Should you experience problems with the installation, we recommend that you ask the Synology community for advice, as we cannot provide support for third-party software and services.
+    Also note that [RAW image conversion and TensorFlow are disabled](../../user-guide/settings/advanced.md) on devices with 1 GB or less memory, and that high-resolution panoramic images may require [additional swap space](../troubleshooting/docker.md#adding-swap) and/or physical memory above the recommended minimum.
 
-Visit the [Synology Knowledge Base](https://kb.synology.com/en-us/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have)
-to learn what [kind of CPU](../troubleshooting/performance.md#server-cpu) and how much memory your device has.
-We [recommend](../index.md#system-requirements) hosting PhotoPrism on a 64-bit system with **at least 2 cores** and
-**3 GB of physical memory**. High-resolution panoramic images may require additional swap space
-and/or physical memory above the recommended minimum.
-
-RAW image conversion and TensorFlow are disabled on devices with 1 GB or less memory.
-You will have to resort to [32-bit Docker images](../raspberry-pi.md#older-armv7-based-devices) to run
-PhotoPrism and MariaDB on ARMv7-based entry-level devices like the Synology DS218j.
-
-!!! note ""
-    Indexing large photo and video collections significantly benefits from [local SSD storage](../troubleshooting/performance.md#storage)
-    and plenty of memory for caching. Especially the conversion of RAW images and the transcoding of videos are very demanding.
-    We take no responsibility for instability or [performance](../troubleshooting/performance.md) problems if your
-    device does not meet the requirements.
-
-### Will my device be fast enough? ###
+### Will my device be fast enough?
 
 This largely depends on your expectations and the number of files you have. Most users report that PhotoPrism runs
 well on their Synology NAS. However, you should keep in mind:

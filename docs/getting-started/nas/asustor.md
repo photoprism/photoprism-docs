@@ -41,10 +41,15 @@ When you see the login screen, enter the username "admin" and password "admin321
 
 Please remember to change your password after the first login. You can do this under Settings > Account.
 
-The *originals* folder for your original media files is `/share/Docker/PhotoPrism/data`, so you can copy or move your files there.
-It is also possible to import files from the shared folder of your NAS.
+### Step 4: Add Your Files
 
 Our [First Steps 👣](../../user-guide/first-steps.md) tutorial guides you through the user interface and settings to ensure your library is indexed according to your individual preferences.
+
+Depending on which strategy you choose, you can add your media files to the *originals* or *import* folder located in `/volume1/Docker/PhotoPrism/data`:
+
+![Screenshot](img/asustor/asustor-folder.jpg){ class="shadow" }
+
+The *storage* folder, which contains configuration, cache and sidecar files, can also be found there.
 
 !!! tldr ""
     Note that the folders that PhotoPrism uses cannot be dynamically configured at the moment when using this app store version. However, we are working to make this possible.

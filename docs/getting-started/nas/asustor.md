@@ -10,19 +10,19 @@ This step-by-step guide explains how to set up a new PhotoPrism instance through
 
 ### Step 1: Open App Central
 
-Log in to the user interface of your Asustor device by navigating to `https://hostname:7001/` (change hostname and port as needed).
+Log in to the user interface of your NAS. You can do this by navigating to *https://asustor:7001* if you replace *asustor* with the actual IP address or hostname of your device and change the port depending on your configuration.
 
-Open "App Central" on the home screen:
+Now open "App Central" on the home screen:
 
 ![Screenshot](img/asustor/asustor-home.jpg){ class="shadow" }
 
 ### Step 2: Install PhotoPrism
 
-Type *PhotoPrism* in the search box in the upper right corner and press Enter to start the search. Now PhotoPrism should be displayed and you should be able to click "Install":
+Type *PhotoPrism* in the search box in the upper right corner and press Enter to start the search. PhotoPrism should then be displayed so you can click "Install" to start the installation:
 
 ![Screenshot](img/asustor/asustor-step-1.jpg){ class="shadow" }
 
-You will now be informed about dependencies like Docker that need to be installed, and you can decide if you want your instance to be accessible from the Internet (if you have this set up for your device and your Internet router is compatible):
+Next, you will be informed about dependencies like Docker that need to be installed, and you can decide if you want your instance to be accessible from the Internet (if you have set this up for your NAS and your Internet router is compatible):
 
 ![Screenshot](img/asustor/asustor-step-2.jpg){ class="shadow" }
 
@@ -30,7 +30,7 @@ If you want to [uninstall PhotoPrism](img/asustor/asustor-step-3.jpg) later, you
 
 ### Step 3: Open PhotoPrism
 
-Once the installation is complete, you'll find PhotoPrism on your home screen and can open it with a click:
+Once the installation is complete, you will find PhotoPrism on your home screen, where you can open it in a new tab with one click:
 
 ![Screenshot](img/asustor/asustor-step-4.jpg){ class="shadow" }
 
@@ -39,13 +39,13 @@ When you see the login screen, enter the username "admin" and password "admin321
 
 ![Screenshot](img/asustor/asustor-login.jpg){ class="shadow" }
 
-Please remember to change your password after the first login. You can do this under Settings > Account.
+Remember to change your password after the first login. You can do this in [Settings > Account](../../user-guide/settings/account.md#change-password).
 
 ### Step 4: Add Your Files
 
 Our [First Steps 👣](../../user-guide/first-steps.md) tutorial guides you through the user interface and settings to ensure your library is indexed according to your individual preferences.
 
-Depending on which strategy you choose, you can add your media files to the *originals* or *import* folder located in `/volume1/Docker/PhotoPrism/data`:
+Depending on which strategy you choose, you can add your media files to the *originals* or *import* folder located in */volume1/Docker/PhotoPrism/data*:
 
 ![Screenshot](img/asustor/asustor-folder.jpg){ class="shadow" }
 

@@ -40,7 +40,7 @@
 
     Think of “free software” as in “free speech,” not as in “free beer.” The [Free Software Foundation](https://www.gnu.org/philosophy/free-sw.en.html) sometimes calls it “libre software,” borrowing the French or Spanish word for “free” as in freedom, to show [they do not mean the software is gratis](https://en.wikipedia.org/wiki/Gratis_versus_libre).
 
-    [Learn more ›](https://photoprism.app/kb/oss)
+    [View Open Source FAQ ›](https://photoprism.app/kb/oss)
 
 ??? question "Why can't I just purchase and download a single version?"
 
@@ -48,8 +48,6 @@
 
     It's essential to keep your operating system, Web browsers, and all other software up to date. Don't push your luck. 
     Historically, even large tech companies [have not supported their old products](https://docs.microsoft.com/en-us/lifecycle/end-of-support/end-of-support-2022) for an extended period of time, with only a few exceptions. Windows XP, for example, sold 400 million copies, which is why Micorosoft was able to offer updates for such a long time.
-
-    [Learn more ›](https://photoprism.app/kb/oss)
 
 ??? question "Will the self-hosted version continue to be supported?"
 

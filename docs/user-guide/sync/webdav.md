@@ -106,7 +106,5 @@ http://admin@localhost:2342/originals/
      edit, or delete files and directories using the Windows File Explorer.
     
      ![Screenshot](img/webdav-9.jpg){ class="shadow" }
-    
-    If you still have trouble connecting via WebDAV, you may have to
-    [update](https://help.dreamhost.com/hc/en-us/articles/216473357-Accessing-WebDAV-with-Windows) the
-    Basic Authentication Level in the registry.
+
+    If you are [unable to connect](../../getting-started/troubleshooting/windows.md#connecting-via-webdav) to your instance via WebDAV as described here, it may either be because you do not have sufficient user rights, your instance is using an invalid HTTPS certificate, or you need to [change the basic authentication level in the registry](../../getting-started/troubleshooting/windows.md#connecting-via-webdav).

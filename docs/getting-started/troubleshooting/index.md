@@ -136,7 +136,7 @@ connection or the server was started only a few seconds ago. In case this does n
 - [ ] You are using an [incompatible browser](browsers.md) (try another browser)
 - [ ] JavaScript is disabled in your browser settings, so you only see the splash screen (enable it)
 - [ ] JavaScript was disabled by a browser plugin (disable it or add an exception)
-- [ ] Your browser cannot communicate properly with the server, e.g. because a [Reverse Proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
+- [ ] Your browser cannot communicate properly with the server, e.g. because a [reverse proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
 - [ ] HTTP security headers prevent the app from loading in a frame (override them)
 - [ ] An ad blocker or other plugins block requests (disable them or add an exception)
 - [ ] There is a problem with your network connection (test if other sites work)
@@ -152,7 +152,7 @@ If [password authentication is enabled](../config-options.md#authentication) and
 - [ ] `PHOTOPRISM_ADMIN_PASSWORD` does not have a minimum length of 8 characters, so PhotoPrism has been started without a password since there is no default
 - [ ] The password may be correct, but the username is wrong and does not match `PHOTOPRISM_ADMIN_USER`
 - [ ] You upgraded from a [Development Preview](../updates.md#development-preview) and might need to run the `photoprism users reset --yes` command [in a terminal](../docker-compose.md#command-line-interface) after the upgrade, see [Known Issues](../../known-issues.md#user-authentication) for details
-- [ ] Your browser cannot communicate properly with the server, e.g. because a [Reverse Proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
+- [ ] Your browser cannot communicate properly with the server, e.g. because a [reverse proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
 - [ ] You are connected to the wrong server, VPN, CDN, or a DNS record has not been updated yet
 - [ ] Remember that the initial admin username and password cannot be changed after PhotoPrism has been started for the first time
 
@@ -224,7 +224,7 @@ In case the application logs don't contain anything helpful:
 - [ ] Files can't be opened, e.g. because the file system permissions have been changed
 - [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder
 - [ ] Some thumbnails could not be created because you didn't [configure at least 4 GB of swap](docker.md#adding-swap)
-- [ ] Your browser cannot communicate properly with the server, e.g. because a [Reverse Proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
+- [ ] Your browser cannot communicate properly with the server, e.g. because a [reverse proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
 - [ ] Your proxy, router, or [firewall](firewall.md) has a request rate limit, so some requests fail
 - [ ] There are other network problems caused by a [firewall](firewall.md), router, or unstable connection
 - [ ] An ad blocker or other plugins block requests (disable them or add an exception)
@@ -254,7 +254,7 @@ If videos do not play and/or you only see a white/black area when you open a vid
 - [ ] A disk usage or the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (remove or increase it)
 - [ ] The *storage* folder [is not writable or mounted read-only](docker.md#file-permissions) (change [permissions](docker.md#file-permissions))
 - [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder (check if the files are accessible)
-- [ ] Your browser cannot communicate properly with the server, e.g. because a [Reverse Proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
+- [ ] Your browser cannot communicate properly with the server, e.g. because a [reverse proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
 - [ ] There are other network problems caused by a proxy, [firewall](firewall.md), or unstable connection (try a direct connection)
 - [ ] You are connected to the wrong server, VPN, CDN, or a DNS record has not been updated yet
 

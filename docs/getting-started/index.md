@@ -65,7 +65,9 @@ As explained in our [Privacy Policy](https://photoprism.app/privacy#section-7), 
 
 Your use of these services is [fully covered by us](faq.md#are-the-keys-for-using-interactive-world-maps-provided-free-of-charge). Depending on your usage, this can save you much more than the cost of a [PhotoPrism+ Membership](https://photoprism.app/membership), since other providers generally charge usage-based fees and may also not allow you to cache the data they provide, compromising your privacy with unnecessary requests.
 
-In order to use the maps and view location details in PhotoPrism, you must **allow requests to these API endpoints** if you have [a firewall installed](troubleshooting/firewall.md) and make sure your Internet connection is working.
+In order to successfully set up your installation and view location details in PhotoPrism, you must [allow requests to these API endpoints](troubleshooting/firewall.md) if you have a firewall installed and make sure your Internet connection is working.
+
+[Configure Firewall ›](troubleshooting/firewall.md)
 
 ## Getting Support
 

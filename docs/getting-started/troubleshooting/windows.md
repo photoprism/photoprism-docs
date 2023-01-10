@@ -9,6 +9,25 @@ If you experience poor performance when indexing large libraries stored on NTFS:
 - [ ] [exFat](https://en.wikipedia.org/wiki/ExFAT) can be faster than NTFS, especially on external SSD drives with a lot of small files.
 - [ ] Windows 10 allows physical disks formatted with the Linux ext4 file system to be mounted directly in WSL 2, which may be an option for some use cases.[^4]
 
+## Connecting via WebDAV
+
+If you have [followed the instructions in our docs](../../user-guide/sync/webdav.md#__tabbed_1_2) and still have trouble connecting via WebDAV:
+
+- [ ] You are using the [wrong username or password](index.md#cannot-log-in)
+- [ ] You do not have sufficient user rights (try as admin)
+- [ ] Your instance is using an invalid HTTPS certificate (check and update)
+- [ ] Your browser cannot communicate properly with the server, e.g. because a [reverse proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
+- [ ] You are connected to the wrong server, VPN, or a DNS record has not been updated yet
+- [ ] You need to change the basic authentication level (see below)
+ 
+To change the basic authentication level in the Windows registry:
+
+1. Open the [Windows Registry Editor](https://support.microsoft.com/en-us/windows/how-to-open-registry-editor-in-windows-10-deab38e6-91d6-e0aa-4b7c-8878d9e07b11).
+2. Locate the following registry directory: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WebClient\Parameters`
+3. Locate the value `BasicAuthLevel`.
+4. The value data box should be set to 2. If the value is not 2, right click it and then select *Modify*.
+5. Change the value to 2.
+
 [^1]: <https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc781134(v=ws.10)?redirectedfrom=MSDN#last-access-time>
 [^2]: <https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc781134(v=ws.10)?redirectedfrom=MSDN#how-ntfs-generates-short-file-names>
 [^3]: <https://stackoverflow.com/a/9600126>

@@ -64,6 +64,13 @@ http://admin@localhost:2342/originals/
      2. Enter the URL as shown above in the **Server Address** field
      3. Click **Connect**
 
+    If you cannot connect to your instance via WebDAV using these instructions:
+
+    - [ ] You do not have sufficient user rights (try as admin)
+    - [ ] You are experiencing a [general authentication problem](../../getting-started/troubleshooting/index.md#cannot-log-in)
+    - [ ] Your instance or reverse proxy uses an invalid HTTPS certificate
+    - [ ] You are trying to connect to the wrong network or server
+
 === "Windows 10"
 
      1. Open Windows **File Explorer**

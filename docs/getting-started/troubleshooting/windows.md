@@ -11,16 +11,15 @@ If you experience poor performance when indexing large libraries stored on NTFS:
 
 ## Connecting via WebDAV
 
-If you [followed the step-by-step instructions in our docs](../../user-guide/sync/webdav.md#__tabbed_1_2) and still have trouble connecting via WebDAV:
+If you [followed our step-by-step instructions](../../user-guide/sync/webdav.md#__tabbed_1_2) and still have trouble connecting via WebDAV:
 
-- [ ] You are using the [wrong username or password](index.md#cannot-log-in)
-- [ ] You do not have sufficient user rights (try as admin)
-- [ ] Your instance is using an invalid HTTPS certificate (check and update)
-- [ ] Your browser cannot communicate properly with the server, e.g. because a [reverse proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
-- [ ] You are connected to the wrong server, VPN, or a DNS record has not been updated yet
 - [ ] You need to change the basic authentication level (see below)
- 
-To change the basic authentication level in the Windows registry:
+- [ ] You do not have sufficient user rights (try as admin)
+- [ ] You are experiencing a [general authentication problem](index.md#cannot-log-in)
+- [ ] Your instance is using an invalid HTTPS certificate (check and update)
+- [ ] You are connected to the wrong server, VPN, or a DNS record has not been updated yet
+
+To **change the basic authentication level** in the Windows registry:
 
 1. Open the [Windows Registry Editor](https://support.microsoft.com/en-us/windows/how-to-open-registry-editor-in-windows-10-deab38e6-91d6-e0aa-4b7c-8878d9e07b11).
 2. Locate the following registry directory: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WebClient\Parameters`

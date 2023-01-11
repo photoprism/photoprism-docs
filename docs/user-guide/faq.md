@@ -36,7 +36,7 @@
 
 ??? question "Shouldn't free software be free of costs?"
 
-    Think of “free software” as in “free speech,” not as in “free beer.” The [Free Software Foundation](https://www.gnu.org/philosophy/free-sw.en.html) sometimes calls it “libre software,” borrowing the French or Spanish word for “free” as in freedom, to show [they do not mean the software is gratis](https://en.wikipedia.org/wiki/Gratis_versus_libre).
+    Think of “free software” as in “free speech,” not as in “free beer.” The [Free Software Foundation](https://www.gnu.org/philosophy/free-sw.en.html) sometimes calls it “libre software,” borrowing the French or Spanish word for “free” as in freedom, to show they [do not mean the software is gratis](https://www.gnu.org/philosophy/selling.html).
 
     [View Open Source FAQ ›](https://photoprism.app/kb/oss)
 

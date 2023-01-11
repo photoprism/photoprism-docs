@@ -57,17 +57,19 @@ Your files and passwords will otherwise be transmitted in clear text and can be 
 including your provider, hackers, and governments. Backup tools and file sync apps like [FolderSync](https://foldersync.io/docs/faq/#https-connection-errors) 
 may refuse to connect as well.
 
+#### Firewall ####
+
+In order to successfully set up your installation and view location details in PhotoPrism, you must [allow incoming requests as well as those to our Geocoding API and Docker](troubleshooting/firewall.md) if you have a firewall installed, and make sure that your Internet connection is working.
+
+[Configure Firewall ›](troubleshooting/firewall.md)
+
 ## Maps & Places
 
 As explained in our [Privacy Policy](https://photoprism.app/privacy#section-7), reverse geocoding and interactive world maps depend on retrieving the necessary information [from us](https://photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality.[^4]
 
-[View Privacy Policy ›](https://photoprism.app/privacy#section-7){ class="pr-3" } [View Compliance FAQ ›](https://photoprism.app/kb/compliance-faq#privacy)
-
 Your use of these services is [fully covered by us](faq.md#are-the-keys-for-using-interactive-world-maps-provided-free-of-charge). Depending on your usage, this can save you much more than the cost of a [PhotoPrism+ Membership](https://photoprism.app/membership), since other providers generally charge usage-based fees and may also not allow you to cache the data they provide, compromising your privacy with unnecessary requests.
 
-In order to successfully set up your installation and view location details in PhotoPrism, you must [allow requests to these API endpoints](troubleshooting/firewall.md) if you have a firewall installed and make sure your Internet connection is working.
-
-[Configure Firewall ›](troubleshooting/firewall.md)
+[View Privacy Policy ›](https://photoprism.app/privacy#section-7){ class="pr-3" } [View Compliance FAQ ›](https://photoprism.app/kb/compliance-faq#privacy)
 
 ## Getting Support
 

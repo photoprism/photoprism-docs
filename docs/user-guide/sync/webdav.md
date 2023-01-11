@@ -107,4 +107,10 @@ http://admin@localhost:2342/originals/
     
      ![Screenshot](img/webdav-9.jpg){ class="shadow" }
 
-    If you are [unable to connect](../../getting-started/troubleshooting/windows.md#connecting-via-webdav) to your instance via WebDAV as described here, it may either be because you do not have sufficient user rights, your instance is using an invalid HTTPS certificate, or you need to [change the basic authentication level in the registry](../../getting-started/troubleshooting/windows.md#connecting-via-webdav).
+    If you [cannot connect to your instance via WebDAV](../../getting-started/troubleshooting/windows.md#connecting-via-webdav) using these instructions:
+
+    - [ ] You may need to **[change the basic authentication level](../../getting-started/troubleshooting/windows.md#connecting-via-webdav)** in the registry
+    - [ ] You do not have sufficient user rights (try as admin)
+    - [ ] You are experiencing a [general authentication problem](../../getting-started/troubleshooting/index.md#cannot-log-in)
+    - [ ] Your instance or reverse proxy uses an invalid HTTPS certificate
+    - [ ] You are trying to connect to the wrong network or server

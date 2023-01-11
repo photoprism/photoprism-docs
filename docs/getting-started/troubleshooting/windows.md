@@ -16,8 +16,8 @@ If you [followed our step-by-step instructions](../../user-guide/sync/webdav.md#
 - [ ] You need to change the basic authentication level (see below)
 - [ ] You do not have sufficient user rights (try as admin)
 - [ ] You are experiencing a [general authentication problem](index.md#cannot-log-in)
-- [ ] Your instance is using an invalid HTTPS certificate (check and update)
-- [ ] You are connected to the wrong server, VPN, or a DNS record has not been updated yet
+- [ ] Your instance or reverse proxy uses an invalid HTTPS certificate
+- [ ] You are trying to connect to the wrong network or server
 
 To **change the basic authentication level** in the Windows registry:
 

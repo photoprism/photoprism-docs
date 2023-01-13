@@ -12,45 +12,40 @@ This step-by-step guide explains how to set up a new PhotoPrism instance at Pika
 Sign up at [www.pikapods.com/register](https://prism.ws/pikapods-register) with your contact details.
 You will then receive a confirmation email with an activation link that you must click to continue.
 
-Before proceeding, please also provide your credit card details to avoid usage restrictions.
+Before proceeding, we recommend that you enter your credit card information first to avoid usage restrictions.
 
-### 2. Add Your Pod
+### 2. Start PhotoPrism
 
-- Go to [Available Apps](https://prism.ws/pikapods-apps) and select PhotoPrism 
-- Click *Run Your Own*
+Go to [Available Apps](https://prism.ws/pikapods-apps) and select PhotoPrism, then click *Run Your Own*:
 
 ![Screenshot](img/pikapods-appstore.png)
 
-- Enter a Pod Name and select a Region
+Enter a Pod Name and select a Region:
 
 ![Screenshot](img/pikapods-step-1.png){ class="shadow" }
 
-- Click *ENV VARS* to specify the initial password for the "admin" user account
+Click *ENV VARS* to specify the initial password for the "admin" user account:
 
 ![Screenshot](img/pikapods-step-2.png){ class="shadow" }
 
-- In *RESOURCES*, you can configure the storage space available for photos and videos, as well as the compute resources PhotoPrism can use, such as for indexing and face recognition
+In *RESOURCES*, you can configure the storage space available for photos and videos, as well as the compute resources PhotoPrism can use, such as for indexing and face recognition.
 
 !!! info ""
     PhotoPrism currently requires **at least 2 CPUs and 8 GB of memory**. We are working to lower these minimum requirements.
 
-- The approximate price per month is shown at the bottom
+The approximate price per month is shown at the bottom:
 
 ![Screenshot](img/pikapods-step-3.png){ class="shadow" }
 
-- Click *Add Pod* to complete the setup
+Finally, click *Add Pod* to complete the setup.
 
-### 3. Sign In
+### 3. Add Your Files
 
 PhotoPrism is now fully set up and ready to use. To log in, click *Open Pod*, enter the username "admin" and the password you have specified:
 
 ![Screenshot](img/pikapods-overview.png)
 
-## First Steps
-1. Configure [library](../../user-guide/settings/library.md) and [advanced settings](../../user-guide/settings/advanced.md) according to your needs.
-2. [Choose](../../user-guide/library/index.md) whether you want to [index your originals](../../user-guide/library/originals.md) so that the existing file and folder names are preserved, or [import them](../../user-guide/library/import.md) so that they are automatically organized by year and month.
-3. To add new pictures, you can either copy them to the *import* or *originals* folder [e.g. using WebDAV](../../user-guide/sync/webdav.md), or [upload them with a browser](../../user-guide/library/upload.md), which will import them automatically after upload.
-4. Start [indexing](../../user-guide/library/originals.md) or [importing](../../user-guide/library/import.md)
-5. Finally, set up [automatic syncing](../../user-guide/sync/mobile-devices.md) from your mobile phone and install the [Progressive Web App (PWA)](../../user-guide/pwa.md) on your desktop, tablet, and phone home screens as needed.
+If you want to change your password, you can do so in [Settings > Account](../../user-guide/settings/account.md#change-password).
+Our [First Steps 👣](../../user-guide/first-steps.md) tutorial will guide you through the user interface and settings to ensure your library is indexed according to your individual preferences.
 
 [^1]: A share of the revenue [helps fund the development](https://photoprism.app/kb/oss) and maintenance of PhotoPrism

@@ -1,7 +1,7 @@
 # **PikaPods** Open Source App Hosting
 
 !!! verified "Trusted Partner"
-    PhotoPrism has [partnered with PikaPods](https://prism.ws/pikapods-com) to offer you this **officially supported, cloud-hosted solution**. Your personal app instance is ready to use in just a few steps and [includes sponsor features](https://photoprism.app/membership) like interactive world maps and dark themes - at no additional cost! Plus, new customers receive a **$5 welcome credit**.
+    [PikaPods](https://prism.ws/pikapods-com) has partnered with us to offer you this **officially supported, cloud-hosted solution**.[^1] Your personal app instance is ready to use in just a few steps and [includes sponsor features](https://photoprism.app/editions#compare) like premium themes and high-resolution world maps - at no additional cost! New customers also receive a $5 welcome credit.
 
 ## Setup
 
@@ -53,3 +53,4 @@ PhotoPrism is now fully set up and ready to use. To log in, click *Open Pod*, en
 4. Start [indexing](../../user-guide/library/originals.md) or [importing](../../user-guide/library/import.md)
 5. Finally, set up [automatic syncing](../../user-guide/sync/mobile-devices.md) from your mobile phone and install the [Progressive Web App (PWA)](../../user-guide/pwa.md) on your desktop, tablet, and phone home screens as needed.
 
+[^1]: A share of the revenue [helps fund the development](https://photoprism.app/kb/oss) and maintenance of PhotoPrism

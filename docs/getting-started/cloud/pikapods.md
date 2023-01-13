@@ -37,7 +37,7 @@ The approximate price per month is shown at the bottom:
 
 ![Screenshot](img/pikapods-step-3.png){ class="shadow" }
 
-Finally, click *Add Pod* to complete the setup.
+Finally, click *Add Pod* to complete the setup and start your instance.
 
 ### 3. Add Your Files
 

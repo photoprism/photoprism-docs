@@ -78,9 +78,8 @@ Pictures of this person continue to be visible in search results and albums.
 
 !!! example ""
     **This currently is a sponsor feature to thank everyone who supports the development of this application.**
-    We'll let you know how to enable it when you sign up on [Patreon](https://link.photoprism.app/patreon) or [GitHub Sponsors](https://link.photoprism.app/sponsor).
-    Your continued support [helps us](https://photoprism.app/membership) provide [regular updates](https://docs.photoprism.app/release-notes/)
-    and services like [world maps](https://try.photoprism.app/library/places). Thank you! :octicons-heart-fill-24:{ .heart .purple }
+    You will learn how to enable it when you sign up on [Patreon](https://link.photoprism.app/patreon) or [GitHub Sponsors](https://link.photoprism.app/sponsor).
+    We encourage all users to [back our mission](https://photoprism.app/membership) as this [helps us provide more features](https://photoprism.app/kb/oss) to the public. Thank you! :octicons-heart-fill-24:{ .heart .purple }
 
 ![Screenshot](img/person-hide-new.jpg){ class="shadow" }
 

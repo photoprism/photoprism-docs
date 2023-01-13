@@ -1,8 +1,7 @@
 # Release Notes
 
 !!! example ""
-    **Back us on [Patreon](https://link.photoprism.app/patreon) or [GitHub Sponsors](https://link.photoprism.app/sponsor).**
-    Your continued support [helps us provide regular updates](https://photoprism.app/membership) and services like [world maps](https://try.photoprism.app/library/places). Thank you! 💜
+    **PhotoPrism is 100% self-funded.** We encourage all users to [support our mission](https://photoprism.app/membership) as this [helps us provide more features](https://photoprism.app/kb/oss) to the public. Thank you! :octicons-heart-fill-24:{ .heart .purple }
 
 !!! tldr ""
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).

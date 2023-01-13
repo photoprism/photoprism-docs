@@ -251,9 +251,7 @@ changed, added, or removed. This can also be automated using CLI commands and a 
 Easy, isn't it?
 
 !!! example ""
-    **Back us on [Patreon](https://link.photoprism.app/patreon) or [GitHub Sponsors](https://link.photoprism.app/sponsor).**
-    Your continued support [helps us](https://photoprism.app/membership) provide [regular updates](https://docs.photoprism.app/release-notes/)
-    and services like [world maps](https://try.photoprism.app/library/places). Thank you! :octicons-heart-fill-24:{ .heart .purple }
+    **PhotoPrism is 100% self-funded.** We encourage all users to [support our mission](https://photoprism.app/membership) as this [helps us provide more features](https://photoprism.app/kb/oss) to the public. Thank you! :octicons-heart-fill-24:{ .heart .purple }
 
 ### Troubleshooting ###
 

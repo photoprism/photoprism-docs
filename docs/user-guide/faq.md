@@ -235,7 +235,7 @@
 
     We recommend that you use [Exiftool](https://exiftool.org/install.html) to see all metadata fields and values, as Windows has limited functionality.
     
-    It might then become clear why there are differences. For example, it could be that Windows does not support some fields and therefore ignores them, or that the data shown is actually from the file system and not from the files. If you still think to have found a bug in PhotoPrism, we ask that you [provide us with sample files](https://photoprism.app/contact#file-samples) so we can reproduce the issue.
+    It might then become clear why there are differences. For example, it could be that Windows does not support some fields and therefore ignores them, or that the data shown is actually from the file system and not from the files. If you still think to have found a bug, we ask that you [provide us with sample files](https://photoprism.app/contact#file-samples) so we can reproduce the issue.
 
 ??? question "Why do some pictures have an odd date like 01/01/1980?"
 

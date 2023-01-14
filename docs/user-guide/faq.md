@@ -233,11 +233,9 @@
 
 ??? question "Windows shows different metadata values. Could this be a bug in PhotoPrism?"
 
-    In order for you to see all metadata and for us to be able to help, it is required that you use Exiftool to extract the metadata from your files and display it.
-    Oftentimes, it then becomes clear why you are seeing different values. For example, it may be that Windows does not support some fields and therefore ignores them,
-    or that the data you see actually comes from the file system and not from the files. 
-
-    Should you then still believe that you have found a bug in PhotoPrism, please always [provide us with sample files for testing](https://photoprism.app/contact#file-samples).
+    We recommend that you use [Exiftool](https://exiftool.org/install.html) to see all metadata fields and values, as Windows has limited functionality.
+    
+    It might then become clear why there are differences. For example, it could be that Windows does not support some fields and therefore ignores them, or that the data shown is actually from the file system and not from the files. If you still think to have found a bug in PhotoPrism, we ask that you [provide us with sample files](https://photoprism.app/contact#file-samples) so we can reproduce the issue.
 
 ??? question "Why do some pictures have an odd date like 01/01/1980?"
 

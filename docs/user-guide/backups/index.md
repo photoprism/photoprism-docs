@@ -25,11 +25,15 @@ If you are using Podman on a Red Hat-compatible Linux distribution:
 podman-compose exec photoprism photoprism backup -i -f
 ```
 
-By default, this will create a backup in `storage/backup/mysql/YYYY-MM-DD.sql`.
+By default, a backup is created in `storage/backup/mysql/[YYYY-MM-DD].sql`. A custom backup folder can be configured with [`PHOTOPRISM_BACKUP_PATH`](../../getting-started/config-options.md#storage)
 
-Omit the `-f` flag if you do not want to overwrite existing files. A custom backup folder can be configured with [`PHOTOPRISM_BACKUP_PATH`](../../getting-started/config-options.md#storage).
+Omit the `-f` flag if you do not want to overwrite existing files. You can also specify a custom filename as an argument (or `-` to write the SQL dump to [stdout](../../getting-started/advanced/backups.md)):
 
-Alternatively, you can pass a specific filename as argument or `-` to write the SQL dump to stdout. This and how to create SQL dumps from SQLite is shown in the [advanced backup guide](../../getting-started/advanced/backups.md).
+```
+docker compose exec photoprism photoprism backup -i [filename]
+```
+
+How to create SQL dumps from SQLite is shown in our [advanced backup guide](../../getting-started/advanced/backups.md).
 
 !!! tldr ""
     Note that our guides now use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose`.

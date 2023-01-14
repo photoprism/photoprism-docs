@@ -2,8 +2,9 @@
 
 To restore your instance, you must have the files in [your *originals* folder](../../getting-started/docker-compose.md#photoprismoriginals) and a copy of the index database. We also recommend [having a backup](index.md) of [the *storage* folder](../../getting-started/docker-compose.md#photoprismstorage) so that you don't need to recreate any thumbnail or sidecar files, and your backup includes the complete configuration:
 
-- if you have a backup copy of your *storage* and *originals* folders, the easiest way is to restore those folders first and then run the restore command as shown below
+- if you have a backup copy of your *storage* and *originals* folders, the easiest way is to restore those folders first and then run the restore command in case you are using MariaDB
 - otherwise, you additionally need to perform a [complete rescan of your library](../../user-guide/library/originals.md) to recreate missing sidecar and thumbnail files
+- some of the metadata and your albums can also be [recovered from YAML sidecar files](export.md) even if you don't have a copy of the index database, unless you have [disabled this feature](../../getting-started/config-options.md#feature-flags)
 
 ## Restore Command
 

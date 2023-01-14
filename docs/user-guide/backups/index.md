@@ -4,11 +4,12 @@ At a minimum, a backup of PhotoPrism should include the files in [your *original
 
 === "MariaDB"
 
-    The easiest way to create a full backup is to run the backup command to generate a MariaDB database dump as shown below. Then back up your *originals* and *storage* folders using any standard file backup utility.
+    1. The easiest way to create a full backup is to first run the backup command to generate a MariaDB database dump as shown below.
+    2. Then back up your *originals* and *storage* folders using any standard file backup utility.
 
 === "SQLite"
 
-    If you use SQLite instead of MariaDB, a full backup of both folders is mandatory, but it is not required to [create a dump](../../getting-started/advanced/backups.md#sqlite-backups) first because the database files are already in the *storage* folder.
+    A full backup of both folders is mandatory, but it is not necessary to [create a dump](../../getting-started/advanced/backups.md#sqlite-backups) first, as there already is a copy of the index database in the *storage* folder.
 
 ## Backup Command
 

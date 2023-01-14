@@ -1,7 +1,7 @@
 # Release Notes
 
 !!! example ""
-    Since sustained funding is key to quickly releasing new features, we encourage all users to [support our mission](https://photoprism.app/kb/oss) by [signing up as a sponsor](https://photoprism.app/membership) or [purchasing a commercial license](https://photoprism.app/teams#compare).
+    **Back us on [Patreon](https://link.photoprism.app/patreon) or [GitHub Sponsors](https://link.photoprism.app/sponsor).** Your [continued support](https://photoprism.app/editions#compare) helps us provide regular updates and remain independent, so we can [fulfill our mission](https://photoprism.app/kb/oss) and protect your privacy.
 
 !!! tldr ""
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).

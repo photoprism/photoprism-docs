@@ -1,6 +1,6 @@
 # Restoring Backups
 
-To restore your instance, you must have the files in [your *originals* folder](../../getting-started/docker-compose.md#photoprismoriginals) and [an SQL dump](https://mariadb.com/kb/en/mariadb-dumpmysqldump/) of the database. We also recommend [having a backup](index.md) of [the *storage* folder](../../getting-started/docker-compose.md#photoprismstorage) so that you don't need to recreate any thumbnail or sidecar files, and your backup includes the complete configuration:
+To restore your instance, you must have the files in [your *originals* folder](../../getting-started/docker-compose.md#photoprismoriginals) and a copy of the index database. We also recommend [having a backup](index.md) of [the *storage* folder](../../getting-started/docker-compose.md#photoprismstorage) so that you don't need to recreate any thumbnail or sidecar files, and your backup includes the complete configuration:
 
 - if you have a backup copy of your *storage* and *originals* folders, the easiest way is to restore those folders first and then run the restore command as shown below
 - otherwise, you additionally need to perform a [complete rescan of your library](../../user-guide/library/originals.md) to recreate missing sidecar and thumbnail files

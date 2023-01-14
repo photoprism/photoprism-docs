@@ -1,6 +1,6 @@
 # Advanced Backup Guide
 
-**A backup of PhotoPrism should include, at a minimum, the files in [your *originals* folder](../docker-compose.md#photoprismoriginals) and [an SQL dump](https://mariadb.com/kb/en/mariadb-dumpmysqldump/) of the database. We also recommend backing up [the *storage* folder](../docker-compose.md#photoprismstorage) so that you don't need to recreate the thumbnails and your backup includes all config files.**
+**A backup of PhotoPrism should include, at a minimum, the files in [your *originals* folder](../docker-compose.md#photoprismoriginals) and a copy of the index database. We also recommend backing up [the *storage* folder](../docker-compose.md#photoprismstorage) so that you don't need to recreate the thumbnails and your backup includes all config files.**
 
 You can create an index SQL backup by running this command in a terminal:
 

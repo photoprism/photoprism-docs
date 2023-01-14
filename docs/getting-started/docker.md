@@ -105,7 +105,7 @@ be mounted as subfolders of `/photoprism/originals`:
 
 ##### /photoprism/storage #####
 
-SQLite, cache, session, thumbnail and sidecar files are created in the *storage* folder:
+SQLite, config, cache, thumbnail and sidecar files are saved in the *storage* folder:
 
 - a *storage* folder must always be mounted so that you do not lose these files after a restart or upgrade
 - never configure the *storage* folder to be inside the *originals* folder unless the name starts with a `.` to indicate that it is hidden
@@ -171,7 +171,7 @@ docker rm -f photoprism
 ```
 
 !!! example ""
-    **PhotoPrism is 100% self-funded.** We encourage all users to [support our mission](https://photoprism.app/membership) as this [helps us provide more features](https://photoprism.app/kb/oss) to the public. Thank you! :octicons-heart-fill-24:{ .heart .purple }
+    Since sustained funding is key to quickly releasing new features, we encourage all users to [support our mission](https://photoprism.app/kb/oss) by [signing up as a sponsor](https://photoprism.app/membership) or [purchasing a commercial license](https://photoprism.app/teams#compare).
 
 ### Troubleshooting ###
 

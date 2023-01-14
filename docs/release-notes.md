@@ -1,7 +1,7 @@
 # Release Notes
 
 !!! example ""
-    **PhotoPrism is 100% self-funded.** We encourage all users to [support our mission](https://photoprism.app/membership) as this [helps us provide more features](https://photoprism.app/kb/oss) to the public. Thank you! :octicons-heart-fill-24:{ .heart .purple }
+    Since sustained funding is key to quickly releasing new features, we encourage all users to [support our mission](https://photoprism.app/kb/oss) by [signing up as a sponsor](https://photoprism.app/membership) or [purchasing a commercial license](https://photoprism.app/teams#compare).
 
 !!! tldr ""
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).

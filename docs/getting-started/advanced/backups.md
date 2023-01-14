@@ -1,8 +1,8 @@
-# Creating Backups
+# Advanced Backup Guide
 
-A full backup of PhotoPrism should include, at a minimum, the files in your *originals* folder and a SQL dump of the database. We also recommend backing up the *storage* folder so you don't have to recreate thumbnails and have a complete backup of your configuration.
+**A backup of PhotoPrism should include, at a minimum, the files in [your *originals* folder](../docker-compose.md#photoprismoriginals) and [an SQL dump](https://mariadb.com/kb/en/mariadb-dumpmysqldump/) of the database. We also recommend backing up [the *storage* folder](../docker-compose.md#photoprismstorage) so that you don't need to recreate the thumbnails and your backup includes all config files.**
 
-The easiest way to create an index SQL backup is to run this command in a terminal:
+You can create an index SQL backup by running this command in a terminal:
 
 ```bash
 photoprism backup -i [filename]
@@ -26,13 +26,15 @@ Helpful information can be found on [GitHub](https://github.com/photoprism/photo
 
 ## SQLite Backups
 
-Creating SQL dumps from SQLite is currently not fully supported by the `photoprism backup` command. However, you can run this command to create a backup file if you use [docker-compose:](../docker-compose.md#command-line-interface):
+Creating SQL dumps from SQLite is currently not supported by the `photoprism backup` command, since SQLite files are located in the *storage* folder and thus should automatically be part of any backup.
+
+However, if you prefer to have a dump, you can [run this command](../docker-compose.md#command-line-interface) to create one:
 
 ```bash
 docker compose exec -T photoprism sqlite3 /photoprism/storage/index.db .dump > photoprism-db.sql
 ```
 
-If you only use `docker`, you can run the following:
+If you use pure `docker`, you can run the following (or replace `docker` with `podman` on Red Hat-based Linux distributions):
 
 ```bash
 docker exec -t PhotoPrism sqlite3 /photoprism/storage/index.db .dump > photoprism-db.sql
@@ -40,7 +42,7 @@ docker exec -t PhotoPrism sqlite3 /photoprism/storage/index.db .dump > photopris
 
 ## Restore Backups
 
-Follow [this guide to restore](../../user-guide/advanced/restore.md) PhotoPrism from backups.
+See our user guide to learn how to [restore backups](../../user-guide/backups/restore.md).
 
 !!! example ""
     **Help improve these docs!** You can contribute by clicking :material-pencil: to send a pull request with your changes.

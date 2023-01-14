@@ -1,4 +1,4 @@
-# Exporting Your Data
+# Metadata Exports
 
 Control of your data does not only refer to being able to restore a backup in PhotoPrism.
 It also refers to providing users with multiple ways of accessing the metadata they've added to their libraries independent from the software itself.

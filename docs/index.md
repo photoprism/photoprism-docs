@@ -25,7 +25,7 @@ Our mission is to provide the most user- and privacy-friendly solution to keep y
 
 ### 100% Privacy :lock:
 
-Because PhotoPrism is [**100% self-funded and independent**](https://photoprism.app/membership), we can promise you that we will [never sell your data](https://photoprism.app/privacy) and that we will [always be transparent](https://photoprism.app/terms) about our software and services. Your data will never be shared with Google, Amazon, Microsoft or Apple unless you intentionally upload files to one of their services.
+Because PhotoPrism is [**100% self-funded and independent**](https://photoprism.app/kb/oss), we can promise you that we will [never sell your data](https://photoprism.app/privacy) and that we will [always be transparent](https://photoprism.app/terms) about our software and services. Your data will never be shared with Google, Amazon, Microsoft or Apple unless you intentionally upload files to one of their services.
 
 <p class="center-align action-buttons">
   <a class="action-button" href="https://try.photoprism.app/" target="_blank">TRY OUR DEMO</a>

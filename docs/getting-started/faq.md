@@ -34,7 +34,7 @@ but a different extension:
  * `IMG_0123.mov.jpg`
  * `IMG_0123.json`
 
-New sidecar files are created in the *storage* folder by default, so the *originals* folder can be mounted read-only.
+New sidecar files are saved in the *storage* folder by default, so the *originals* folder can be mounted read-only.
 
 !!! tldr ""
     Even if `PHOTOPRISM_DISABLE_EXIFTOOL` and `PHOTOPRISM_DISABLE_BACKUPS` are set to `"true"`,

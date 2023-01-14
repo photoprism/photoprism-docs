@@ -43,9 +43,10 @@ nav:
       - SWAG: getting-started/proxies/swag.md
       - Haproxy: getting-started/proxies/haproxy.md
     - Advanced:
-      - Kubernetes: getting-started/advanced/kubernetes.md
       - Transcoding: getting-started/advanced/transcoding.md
-      - Backups: getting-started/advanced/backups.md
+      - Docker Volumes: getting-started/advanced/volumes.md
+      - Using Kubernetes: getting-started/advanced/kubernetes.md
+      - Backup Guide: getting-started/advanced/backups.md
       - Database Setup: getting-started/advanced/databases.md
       - Database Migrations:
         - Index Schema: getting-started/advanced/migrations/index.md
@@ -115,10 +116,10 @@ nav:
       - Services: user-guide/settings/sync.md
       - Account: user-guide/settings/account.md
     - Backup Guide:
-      - Creating Backups: user-guide/advanced/backups.md
-      - Restoring Backups: user-guide/advanced/restore.md
-      - Metadata Export: user-guide/advanced/export.md
-      - Folder Overview: user-guide/advanced/folders.md
+      - Creating Backups: user-guide/backups/index.md
+      - Restoring Backups: user-guide/backups/restore.md
+      - Metadata Exports: user-guide/backups/export.md
+      - Folder Overview: user-guide/backups/folders.md
       #- Commands: user-guide/advanced/commands.md
     - Cloud Migration:
       - Google Photos: user-guide/use-cases/google.md

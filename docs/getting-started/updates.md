@@ -1,7 +1,7 @@
 # Getting Updates
 
 !!! example ""
-    **PhotoPrism is 100% self-funded.** We encourage all users to [support our mission](https://photoprism.app/membership) as this [helps us provide more features](https://photoprism.app/kb/oss) to the public. Thank you! :octicons-heart-fill-24:{ .heart .purple }
+    Since sustained funding is key to quickly releasing new features, we encourage all users to [support our mission](https://photoprism.app/kb/oss) by [signing up as a sponsor](https://photoprism.app/membership) or [purchasing a commercial license](https://photoprism.app/teams#compare).
 
 ### Docker Compose
 

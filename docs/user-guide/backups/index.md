@@ -18,8 +18,6 @@ The easiest way to create an index SQL dump of MariaDB is to run the backup comm
 docker compose exec photoprism photoprism backup -i -f
 ```
 
-*Note that our guides now use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose`.*
-
 If you are using Podman on a Red Hat-compatible Linux distribution:
 
 ```
@@ -31,6 +29,9 @@ By default, this will create a backup in `storage/backup/mysql/YYYY-MM-DD.sql`.
 Omit the `-f` flag if you do not want to overwrite existing files. A custom backup folder can be configured with [`PHOTOPRISM_BACKUP_PATH`](../../getting-started/config-options.md#storage).
 
 Alternatively, you can pass a specific filename as argument or `-` to write the SQL dump to stdout. This and how to create SQL dumps from SQLite is shown in the [advanced backup guide](../../getting-started/advanced/backups.md).
+
+!!! tldr ""
+    Note that our guides now use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose`.
 
 ## Important Folders
 

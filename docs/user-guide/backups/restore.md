@@ -13,8 +13,6 @@ To restore the index from an existing MariaDB dump, you can run the following co
 docker compose exec photoprism photoprism restore -i -f
 ```
 
-*Note that our guides now use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose`.*
-
 If you are using Podman on a Red Hat-compatible Linux distribution:
 
 ```
@@ -29,5 +27,8 @@ Omit the `-f` flag to prevent overwriting an existing index. As with the backup 
 docker compose exec photoprism photoprism restore -i [filename]
 ```
 
+When the database is restored, all user accounts and passwords are restored as well. If you have changed your password, you must thus use the old password to sign in.
+
 !!! tldr ""
-    When the database is restored, all user accounts and passwords will be restored as well.
+    Note that our guides now use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose`.
+    

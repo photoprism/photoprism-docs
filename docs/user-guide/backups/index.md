@@ -6,9 +6,6 @@ The easiest way to create a full backup is to run the backup command to generate
 
 Should you use SQLite instead of MariaDB, a full backup of both folders is mandatory, but it is not required to [create a dump](../../getting-started/advanced/backups.md#sqlite-backups) first because the database files are already in the *storage* folder.
 
-!!! example ""
-    Depending on the [resources available to us](https://photoprism.app/kb/oss), a future version may include additional features so that you do not have to rely on external tools to perform file backups and can use the web user interface.
-
 ## Backup Command
 
 The easiest way to create an index SQL dump of MariaDB is to run the backup command in a terminal:
@@ -42,3 +39,6 @@ The [*originals* folder](../../getting-started/docker-compose.md#photoprismorigi
 SQLite, config, cache, thumbnail and sidecar files are saved in [the *storage* folder](../../getting-started/docker-compose.md#photoprismstorage). As with the *originals* folder, the exact path on your computer [depends on your configuration](../../getting-started/config-options.md#storage).
 
 We recommend that you back up this folder as well so that you don't need to recreate the thumbnails and have a complete backup of your configuration. As for the *originals* folder, you can use any standard file backup utility to do this.
+
+!!! example ""
+    Depending on the [resources available to us](https://photoprism.app/kb/oss), a future version may include additional features so that you do not have to rely on external tools to perform file backups and can use a web interface.

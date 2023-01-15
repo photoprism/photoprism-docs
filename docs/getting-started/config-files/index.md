@@ -1,11 +1,11 @@
-# Using YAML Configuration Files
+# `options.yml`
 
-If you cannot configure your instance using [environment variables or CLI flags](config-options.md), for example because it was installed through an app store, an alternative is to use an `options.yml` file located in the *config* folder.
+If you cannot configure your instance using [environment variables or CLI flags](../config-options.md), for example because it was installed through an app store, an alternative is to use an `options.yml` file located in the *config* folder.
 
-A custom *config* path can be specified using the command flag `--config-path` or the environment variable `PHOTOPRISM_CONFIG_PATH`. If you use a third-party integration or package, you should find the exact location in the corresponding documentation. By default, the *config* folder is a subdirectory of [the *storage* folder](docker-compose.md#photoprismstorage).
+A custom *config* path can be specified using the command flag `--config-path` or the environment variable `PHOTOPRISM_CONFIG_PATH`. If you use a third-party integration or package, you should find the exact location in the corresponding documentation. By default, the *config* folder is a subdirectory of [the *storage* folder](../docker-compose.md#photoprismstorage).
 
 !!! tldr ""
-    Note that that all changes require a restart to take effect, and that config values changed in the [Advanced Settings](../user-guide/settings/advanced.md) UI will also be stored in the `options.yml` file. We therefore recommend that you edit the file only when PhotoPrism is not running. 
+    Note that that all changes require a restart to take effect, and that config values changed in the [Advanced Settings](../../user-guide/settings/advanced.md) UI will also be stored in the `options.yml` file. We therefore recommend that you edit the file only when PhotoPrism is not running. 
 
 ## Example
 
@@ -22,13 +22,11 @@ TrustedProxies:
   - "10.0.0.0/8"
 ```
 
-When editing YAML files, please note that related values must [start at the same indentation level](../developer-guide/technologies/yaml.md) and that tabs are not allowed for indentation. We recommend using 2 spaces when specifying a list of values e.g. of type `[]string` in the options overview below. You can use any text editor for this.
+When editing YAML files, please note that related values must [start at the same indentation level](../../developer-guide/technologies/yaml.md) and that tabs are not allowed for indentation. We recommend using 2 spaces when specifying a list of values e.g. of type `[]string` in the options overview below. You can use any text editor for this.
 
 ## Global Defaults
 
-Default values, including the *config* path to use, may optionally be specified in a `defaults.yml` file located in `/etc/photoprism`, unless you have set a custom filename with the `--defaults-yaml` flag.
-
-These defaults can be overridden by values in the `options.yml` file, command flags, and environment variables. While the `options.yml` file should be writable, the `defaults.yml` file may be read-only.
+↪ see [`defaults.yml`](defaults-yml.md)
 
 ## Config Options
 
@@ -212,4 +210,4 @@ If you start the server as a *daemon* in the background, you can additionally sp
 | DetachServer | bool   | --detach-server |
 
 !!! example ""
-    Some options, such as those for [hardware transcoding](advanced/transcoding.md), are [only available to sponsors](https://photoprism.app/membership) due to the time required for testing, maintenance, and providing support.
+    Some options, such as those for [hardware transcoding](../advanced/transcoding.md), are [only available to sponsors](https://photoprism.app/membership) due to the time required for testing, maintenance, and providing support.

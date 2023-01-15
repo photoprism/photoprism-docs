@@ -1,8 +1,8 @@
 # `options.yml`
 
-If you are unable to configure your instance using [environment variables or CLI flags](../config-options.md), e.g. because it was installed through an app store, you can alternatively use an `options.yml` file located in the *config* folder.
+If you are unable to configure your instance using [environment variables or command flags](../config-options.md), e.g. because it was installed through an app store, you can alternatively use an `options.yml` file located in the *config* folder.
 
-A custom *config* path can be specified using the command flag `--config-path` or the environment variable `PHOTOPRISM_CONFIG_PATH`. If you use a third-party integration or package, you should find the exact location in the corresponding documentation. By default, the *config* folder is a subdirectory of [the *storage* folder](../docker-compose.md#photoprismstorage).
+A custom *config* path can be specified using the flag `--config-path` or the variable `PHOTOPRISM_CONFIG_PATH`. If you use a third-party integration or package, you should find the exact location in the corresponding documentation. By default, the *config* folder is a subdirectory of [the *storage* folder](../docker-compose.md#photoprismstorage).
 
 !!! tldr ""
     Note that that all changes require a restart to take effect, and that config values changed in the [Advanced Settings](../../user-guide/settings/advanced.md) UI will also be stored in the `options.yml` file. We therefore recommend that you edit the file only when PhotoPrism is not running. 

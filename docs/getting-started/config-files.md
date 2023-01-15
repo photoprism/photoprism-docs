@@ -1,4 +1,4 @@
-# Using YAML Configuration Files
+# Using YAML Config Files
 
 If you cannot configure your instance using [environment variables or CLI flags](config-options.md), for example because it was installed through an app store, an alternative is to use an `options.yml` file located in the *config* folder.
 

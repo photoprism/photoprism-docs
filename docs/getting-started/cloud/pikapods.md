@@ -48,4 +48,4 @@ PhotoPrism is now fully set up and ready to use. To log in, click *Open Pod*, en
 If you want to change your password, you can do so in [Settings > Account](../../user-guide/settings/account.md#change-password).
 Our [First Steps 👣](../../user-guide/first-steps.md) tutorial will guide you through the user interface and settings to ensure your library is indexed according to your individual preferences.
 
-[^1]: A share of the revenue [helps fund the development of PhotoPrism](https://photoprism.app/kb/oss)
+[^1]: A share of the revenue [helps fund the development of PhotoPrism](https://photoprism.app/kb/oss#cloud)

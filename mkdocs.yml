@@ -6,6 +6,7 @@ nav:
     - Docker Compose: getting-started/docker-compose.md
     - Pure Docker: getting-started/docker.md
     - Config Options: getting-started/config-options.md
+    - Using Config Files: getting-started/config-files.md
     - Cloud Hosting:
       - PikaPods: getting-started/cloud/pikapods.md
       - DigitalOcean: getting-started/cloud/digitalocean.md
@@ -45,7 +46,6 @@ nav:
     - Advanced:
       - Transcoding: getting-started/advanced/transcoding.md
       - Docker Volumes: getting-started/advanced/volumes.md
-      - Configuration Files: getting-started/advanced/config-files.md
       - Using Kubernetes: getting-started/advanced/kubernetes.md
       - Backup Guide: getting-started/advanced/backups.md
       - Database Setup: getting-started/advanced/databases.md

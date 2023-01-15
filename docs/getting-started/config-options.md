@@ -202,4 +202,4 @@ The following variables are used by our Docker images only and have no effect ot
 | PHOTOPRISM_DISABLE_CHOWN | false   | disable updating storage permissions via chmod and chown on startup                                 |
 
 !!! example ""
-    Some options, such as those for [hardware transcoding](advanced/transcoding.md), are [only available to sponsors](https://photoprism.app/membership) due to the time required for testing and maintenance.
+    Some options, such as those for [hardware transcoding](advanced/transcoding.md), are [only available to sponsors](https://photoprism.app/membership) due to the time required for testing, maintenance, and providing support.

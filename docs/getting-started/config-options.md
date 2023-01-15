@@ -1,7 +1,7 @@
 # Config Options #
 
 !!! tldr ""
-    Changing values in a `docker-compose.yml` file and in the [Advanced Settings](../user-guide/settings/advanced.md) UI always **requires a restart** to take effect. Open a terminal, run `docker compose stop`, and then run `docker compose up -d` to restart all services.
+    Changing values in a `docker-compose.yml` file or in the [Advanced Settings](../user-guide/settings/advanced.md) UI always **requires a restart** to take effect. Open a terminal, run `docker compose stop`, and then run `docker compose up -d` to restart all services.
 
 ### Authentication ###
 

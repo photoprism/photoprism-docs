@@ -37,10 +37,6 @@ You can run `photoprism --help` to display all global config flags and variables
 |       Name       |  Type  |       CLI Flag       |
 |------------------|--------|----------------------|
 | AuthMode         | string | --auth-mode          |
-| LoginUri         | string | --login-uri          |
-| RegisterUri      | string | --register-uri       |
-| PasswordLength   | int    | --password-length    |
-| PasswordResetUri | string | --password-reset-uri |
 | Public           | bool   | --public             |
 | AdminUser        | string | --admin-user         |
 | AdminPassword    | string | --admin-password     |

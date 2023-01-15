@@ -1,9 +1,7 @@
 # Config Options #
 
 !!! tldr ""
-    Changing values in `docker-compose.yml` or in [Advanced Settings](../user-guide/settings/advanced.md) 
-    always **requires a restart** to take effect. Open a terminal, run `docker compose stop` and then
-    `docker compose up -d` to restart all services.
+    Changing values in a `docker-compose.yml` file and in the [Advanced Settings](../user-guide/settings/advanced.md) UI always **requires a restart** to take effect. Open a terminal, run `docker compose stop`, and then run `docker compose up -d` to restart all services.
 
 ### Authentication ###
 
@@ -202,3 +200,6 @@ The following variables are used by our Docker images only and have no effect ot
 | PHOTOPRISM_UMASK         | 0002    | [file-creation mode](https://linuxize.com/post/umask-command-in-linux/) (default: u=rwx,g=rwx,o=rx) |
 | PHOTOPRISM_INIT          |         | run/install on first startup (options: update https gpu tensorflow davfs clitools clean)            |
 | PHOTOPRISM_DISABLE_CHOWN | false   | disable updating storage permissions via chmod and chown on startup                                 |
+
+!!! example ""
+    Some options, such as those for [hardware transcoding](advanced/transcoding.md), are [only available to sponsors](https://photoprism.app/membership) due to the time required for testing and maintenance.

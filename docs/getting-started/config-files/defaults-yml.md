@@ -4,7 +4,7 @@ Default values, including the *config* path to use, may optionally be specified 
 
 With the variable `PHOTOPRISM_DEFAULTS_YAML` or the flag `--defaults-yaml`, you can also specify a custom defaults file to be loaded when PhotoPrism starts.
 
-The default values can be overridden by values in an [`options.yml`](index.md) file, command flags, and environment variables. As with all global [config options](../config-options.md), changes require a restart to take effect.
+The [default values](index.md#authentication) can be overridden by values in an [`options.yml`](index.md) file, command flags, and environment variables. As with all global [config options](../config-options.md), changes require a restart to take effect.
 
 ### Example
 
@@ -19,7 +19,7 @@ TrustedProxies:
   - "10.0.0.0/8"
 ```
 
-When editing YAML files, please note that related values must [start at the same indentation level](../../developer-guide/technologies/yaml.md) and that tabs are not allowed for indentation.
+When editing YAML files, please note that related values must [start at the same indentation level](../../developer-guide/technologies/yaml.md) and that tabs are not allowed for indentation. You can use any text editor for this.
 
 ### Config Options
 

@@ -239,7 +239,7 @@
 
 ??? question "Why do some pictures have 08/12/2002 as date if they were not taken on that day?"
     
-    This is probably due to a [bug in Android](https://issuetracker.google.com/issues/36963276) that caused photos to be created with an incorrect CreateDate. You can use [Exiftool](https://exiftool.org/install.html) to correct the wrong dates.
+    This is usually caused by a [bug in Android](https://issuetracker.google.com/issues/36963276) that caused photos to be created with an incorrect CreateDate. You can use [Exiftool](https://exiftool.org/install.html) to correct the wrong dates.
 
 ??? question "Why do some pictures have an odd date like 01/01/1980?"
 

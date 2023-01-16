@@ -6,7 +6,7 @@ A custom *config* path can be specified with the variable `PHOTOPRISM_CONFIG_PAT
 
 To display all global config flags and variables, you can run `photoprism --help` in a [terminal](../docker-compose.md#command-line-interface). The corresponding names to use in the `options.yml` and [`defaults.yml`](defaults-yml.md) files are listed below, grouped by purpose.
 
-Note that that all changes require a restart to take effect, and that config values changed in the [Advanced Settings](../../user-guide/settings/advanced.md) UI will also be stored in the `options.yml` file. We therefore recommend that you edit the file only when PhotoPrism is not running. 
+Note that all changes require a restart to take effect, and that config values changed in the [Advanced Settings](../../user-guide/settings/advanced.md) UI will also be stored in the `options.yml` file. We therefore recommend that you edit the file only when PhotoPrism is not running. 
 
 ### Example
 

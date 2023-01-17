@@ -7,7 +7,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 230106-c0103e1d2</span>
+<span class="build">Build 230117-41774fcec</span>
 
 What's new?
 
@@ -32,7 +32,7 @@ What's new?
 - CLI: [Added file extension flag to the `photoprism convert` command](https://github.com/photoprism/photoprism/issues/3038)
 - Docker: [MariaDB image and binaries have been upgraded from v10.9 to v10.10](https://github.com/photoprism/photoprism/commit/00022c90d3467655592858b0d3ad9c58fd9eee15)
 - Podman: [Added config examples for users of Red Hat-based Linux distributions](https://github.com/photoprism/photoprism/tree/develop/setup/podman)
-- Security: [Go has been upgraded to v1.19.4, which includes security and stability fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.19.4)
+- Security: [Go has been upgraded to v1.19.5, which includes security and stability fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.19.5)
 - Translations: [Added Afrikaans (South Africa)](https://github.com/photoprism/photoprism/pull/3031/files)
 - Translations: Updated Bulgarian, Chinese, Czech, Dutch, Estonian, French, German, Italian, Malay, Russian, and Ukrainian 
 

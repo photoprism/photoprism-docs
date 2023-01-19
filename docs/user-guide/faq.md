@@ -56,7 +56,7 @@
 
 ## User Interface ##
 
-??? question "Can I select multiple photos at once?"
+??? question "Can I select multiple pictures at once?"
 
     Yes, this is possible. How it works depends on what kind of device you use.
 

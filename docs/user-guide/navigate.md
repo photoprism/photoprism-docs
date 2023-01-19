@@ -57,7 +57,7 @@ Select the first picture by clicking :material-checkbox-blank-circle-outline: in
 The user interface is now in selection mode:
 
 - to additionally select individual pictures, click them anywhere except on the play/view icons in the corner
-- to select multiple pictures at once, press shift+click so all pictures between the last selected picture and the one you shift+click will be selected
+- to select multiple pictures at once, use a shift+click to select all pictures between the last selected picture and the one you shift+click
 
 ### Mobile Devices ###
 
@@ -66,4 +66,4 @@ Select the first picture with a long touch.
 The user interface is now in selection mode:
 
 - to additionally select individual pictures, touch them anywhere except on the play/view icons in the corner
-- to select multiple pictures at once, use a long touch to select all pictures between the last selected picture and the picture you long touch
+- to select multiple pictures at once, use a long touch to select all pictures between the last selected picture and the one you long touch

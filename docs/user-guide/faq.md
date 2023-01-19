@@ -24,9 +24,10 @@
 
 ??? question "What functionality is generally available?"
     
-    Our team decides this on an ongoing basis depending on the support effort required, server and licensing costs, and whether the features are generally needed by everyone or mainly requested by organizations and advanced users. As this allows us to make more features available to the public, we encourage all users to [support our mission](https://photoprism.app/editions#compare).
+    Our team decides this on an ongoing basis depending on the support effort required, server and licensing costs, and whether the features are generally needed by everyone or mainly requested by organizations and advanced users.
+    As this helps us [provide more features](https://photoprism.app/editions#compare) to the public, we encourage all users to [support our mission](https://photoprism.app/membership).
 
-    [Compare Personal Editions ›](https://photoprism.app/editions#compare)
+    [Compare Features ›](https://photoprism.app/editions#compare){ class="pr-3" } [View Open Source FAQ ›](https://photoprism.app/kb/oss)
 
 ??? question "What are the advantages of purchasing a commercial license?"
 

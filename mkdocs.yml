@@ -7,9 +7,9 @@ nav:
     - Pure Docker: getting-started/docker.md
     - Config Options: getting-started/config-options.md
     - Config Files:
-      - options.yml: getting-started/config-files/index.md
-      - defaults.yml: getting-started/config-files/defaults.md
-      - settings.yml: getting-started/config-files/settings.md
+      - options.yml: getting-started/config/index.md
+      - defaults.yml: getting-started/config/defaults.md
+      - settings.yml: getting-started/config/settings.md
     - Cloud Hosting:
       - PikaPods: getting-started/cloud/pikapods.md
       - DigitalOcean: getting-started/cloud/digitalocean.md

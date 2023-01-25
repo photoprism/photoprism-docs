@@ -17,9 +17,6 @@ Since you only need to specify the values for which you want to set a default, a
 Debug: false
 ReadOnly: true
 JpegQuality: 85
-TrustedProxies:
-  - "172.16.0.0/12"
-  - "10.0.0.0/8"
 ```
 
 ### Config Options

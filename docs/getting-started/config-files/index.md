@@ -18,12 +18,9 @@ Since you only need to specify the values you want to change, an `options.yml` f
 ```yaml
 Debug: true
 ReadOnly: false
-JpegQuality: 85
+JpegQuality: 83
 SiteCaption: PhotoPrism
 SiteUrl: "http://127.0.0.1:2342/"
-TrustedProxies:
-  - "172.16.0.0/12"
-  - "10.0.0.0/8"
 ```
 
 ### Authentication ###

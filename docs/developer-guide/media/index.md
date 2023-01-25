@@ -42,7 +42,7 @@
 
 ## CLI Command ##
 
-Run `photoprism show formats` in a terminal to list supported media and sidecar file formats.
+Run `photoprism show file-formats` in a terminal to list supported media and sidecar file formats.
 
 Command Flags:
 

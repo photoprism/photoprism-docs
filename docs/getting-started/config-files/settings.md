@@ -34,7 +34,7 @@ Download:
   MediaSidecar: false
 ```
 
-The `Name` setting determines which file names are used when downloading files from search results or in the photo viewer. Currently, the following options are supported:
+The `Name` setting determines which file names are used when downloading pictures from search results or in the photo viewer. Currently, the following options are supported:
 
 - `file` uses the actual file name in the *originals* folder
 - `original` uses the original file name if the file was imported

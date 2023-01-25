@@ -65,6 +65,6 @@ Stack:
   Name: false
 ```
 
-These settings affect which files are stacked, as well as your preferences when indexing or importing files through the user interface.
+These settings affect which files are stacked, as well as your preferences when indexing or importing files.
 
-You can also find them by navigating to [Settings > Library](../../user-guide/settings/library.md#stacks) and there is generally no need to edit any of these values directly.
+You can also change these settings by navigating to [Settings > Library](../../user-guide/settings/library.md#stacks) and in the [Library UI](../../user-guide/library/originals.md), so it is generally not necessary to edit them directly in the config file.

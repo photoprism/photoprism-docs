@@ -4,9 +4,12 @@
 
 ## Index ##
 
-#### :material-chart-timeline-variant: Estimates ####
+#### :material-chart-timeline-variant: Extrapolated Location ####
 
 Estimates the location of pictures taken without GPS information by extrapolating it from the location of other pictures taken on the same day. 
+
+!!! danger ""
+    Be aware that, if you have pictures from unrelated events at different locations, the GPS coordinates of pictures from one event will be applied/extrapolated to pictures of the other event that lack coordinates (even if these are in different folders).
 
 #### :material-eye: Quality Filter ####
 

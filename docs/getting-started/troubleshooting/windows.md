@@ -28,7 +28,7 @@ To **change the basic authentication level** in the Windows registry:
 5. Change the value to 2.
 
 !!! example ""
-    **Help improve these docs!** You can contribute by clicking :material-pencil: to send a pull request with your changes.
+    **Help improve these docs!** You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.
 
 [^1]: <https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc781134(v=ws.10)?redirectedfrom=MSDN#last-access-time>
 [^2]: <https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc781134(v=ws.10)?redirectedfrom=MSDN#how-ntfs-generates-short-file-names>

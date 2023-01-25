@@ -262,6 +262,7 @@ theme:
   # Default values, taken from mkdocs_theme.yml
   language: en
   features:
+    - content.action.edit
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.top

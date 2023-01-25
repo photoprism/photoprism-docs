@@ -39,4 +39,4 @@ A useful (although paid) feature is [Dropbox Smart Sync](https://www.dropbox.com
 This can save space on your server by automically offloading the originals unless/until they're viewed.
 
 !!! example ""
-    **Help improve these docs!** You can contribute by clicking :material-pencil: to send a pull request with your changes.
+    **Help improve these docs!** You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.

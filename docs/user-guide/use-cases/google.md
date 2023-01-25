@@ -33,4 +33,4 @@ For more information and support, see the project page on Github:
 https://github.com/inthreedee/photoprism-transfer-album
 
 !!! example ""
-    **Help improve these docs!** You can contribute by clicking :material-pencil: to send a pull request with your changes.
+    **Help improve these docs!** You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.

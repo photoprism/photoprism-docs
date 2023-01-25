@@ -1,7 +1,7 @@
 # Running PhotoPrism On FreeBSD
 
 !!! tldr ""
-    Should you experience problems with the installation, we recommend that you ask the FreeBSD community for advice, as we cannot provide support for third-party software and services. You can contribute by clicking :material-pencil: to send a pull request with your changes.
+    Should you experience problems with the installation, we recommend that you ask the FreeBSD community for advice, as we cannot provide support for third-party software and services. You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.
 
 For FreeBSD / FreeNAS users, an unofficial [PhotoPrism port](https://github.com/huo-ju/photoprism-freebsd-port) 
 is available.

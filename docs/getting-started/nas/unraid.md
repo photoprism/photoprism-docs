@@ -11,4 +11,4 @@ We recommend you follow this tutorial [provided by IBRACORP](https://www.youtube
 [![](img/ibracorp.jpg)](https://youtu.be/WMNsO-0BuG8)
 
 !!! example ""
-    **Help improve these docs!** You can contribute by clicking :material-pencil: to send a pull request with your changes.
+    **Help improve these docs!** You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.

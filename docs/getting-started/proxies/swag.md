@@ -110,4 +110,4 @@ connect as well.
 ![](https://dl.photoprism.app/img/diagrams/reverse-proxy.svg){ class="w100" }
 
 !!! example ""
-    **Help improve these docs!** You can contribute by clicking :material-pencil: to send a pull request with your changes.
+    **Help improve these docs!** You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.

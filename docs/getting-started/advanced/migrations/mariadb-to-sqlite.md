@@ -1,6 +1,6 @@
 # Migrating from MariaDB to SQLite
 
-*For advanced users only: The instructions for these migrations were provided by a contributor and are not part of the original software distribution. As such, they have not been officially released, recommended, or extensively tested by us. You can contribute by clicking :material-pencil: to send a pull request with your changes.*
+*For advanced users only: The instructions for these migrations were provided by a contributor and are not part of the original software distribution. As such, they have not been officially released, recommended, or extensively tested by us. You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.*
 
 - Install <https://github.com/techouse/mysql-to-sqlite3> on your host.
 - Stop Photoprism: `docker compose stop photoprism`

@@ -8,4 +8,4 @@ PhotoPrism can be conveniently installed using the openmediavault [plugin](https
 ![Screenshot](../img/omv_photoprism_plugin_ui.png){ class="shadow" }
 
 !!! example ""
-    **Help improve these docs!** You can contribute by clicking :material-pencil: to send a pull request with your changes.
+    **Help improve these docs!** You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.

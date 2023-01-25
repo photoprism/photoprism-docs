@@ -34,10 +34,10 @@ Other issues? Our [troubleshooting checklists](../troubleshooting/index.md) help
     Note that [SQLite is generally not a good choice](../troubleshooting/sqlite.md) for users who require scalability and high performance.
 
     Since we don't have a Synology test device, contributions to a step-by-step tutorial using mariadb are greatly appreciated.
-    You can contribute by clicking :material-pencil: to send a pull request with your changes.
+    You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.
 
 !!! example ""
-    **Help improve these docs!** You can contribute by clicking :material-pencil: to send a pull request with your changes.
+    **Help improve these docs!** You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.
 
 This guide describes how to set up PhotoPrism using the new Synology user interface.
 

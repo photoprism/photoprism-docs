@@ -9,6 +9,7 @@ nav:
     - Config Files:
       - options.yml: getting-started/config-files/index.md
       - defaults.yml: getting-started/config-files/defaults-yml.md
+      - settings.yml: getting-started/config-files/settings-yml.md
     - Cloud Hosting:
       - PikaPods: getting-started/cloud/pikapods.md
       - DigitalOcean: getting-started/cloud/digitalocean.md

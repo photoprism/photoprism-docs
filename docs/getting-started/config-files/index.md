@@ -6,7 +6,10 @@ A custom *config* path can be specified with the variable `PHOTOPRISM_CONFIG_PAT
 
 To display all global config flags and variables, you can run `photoprism --help` in a [terminal](../docker-compose.md#command-line-interface). The corresponding names to use in the `options.yml` and [`defaults.yml`](defaults-yml.md) files are listed below, grouped by purpose.
 
-Note that all changes require a restart to take effect, and that config values changed in the [Advanced Settings](../../user-guide/settings/advanced.md) UI will also be stored in the `options.yml` file. We therefore recommend that you edit the file only when PhotoPrism is not running. 
+Note that all changes require a restart to take effect, and that config values changed in the [Advanced Settings](../../user-guide/settings/advanced.md) UI will also be stored in the `options.yml` file. We therefore recommend that you edit the file only while PhotoPrism is not running. 
+
+!!! tldr ""
+    When [editing YAML files](../../developer-guide/technologies/yaml.md), it is important that related values start at the same indentation level and that spaces are used, since tabs are not allowed. You can use any text editor for this.
 
 ### Example
 
@@ -22,8 +25,6 @@ TrustedProxies:
   - "172.16.0.0/12"
   - "10.0.0.0/8"
 ```
-
-When editing YAML files, please note that related values must [start at the same indentation level](../../developer-guide/technologies/yaml.md) and that tabs are not allowed for indentation. We recommend using 2 spaces when specifying a list of values e.g. of type `[]string` in the options overview below. You can use any text editor for this.
 
 ### Authentication ###
 

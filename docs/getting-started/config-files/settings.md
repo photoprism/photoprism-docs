@@ -17,7 +17,7 @@ UI:
   Language: en
 ```
 
-If you set `Scrollbar` to `false`, the scrollbar will be disabled regardless of which browser you use and which page you are on. This is generally not recommended, but can be useful e.g. when taking screenshots.
+If you set `Scrollbar` to `false`, the browser scrollbar will be hidden regardless of which device you use and which page you are on. This is generally not recommended, but can be useful e.g. when taking screenshots.
 
 Setting `Zoom` to `true` allows you to enlarge the user interface with gestures on mobile devices, making the app feel more like a regular web page. This can be useful for visually impaired users so that they can magnify text and images when needed.
 

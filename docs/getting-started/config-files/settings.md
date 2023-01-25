@@ -1,6 +1,6 @@
 # `settings.yml`
 
-User interface and indexing preferences are saved in the `settings.yml` file, which is located in the *config* folder. If it does not exist yet, it will be created automatically.
+User interface, download and indexing settings are stored in the `settings.yml` file located in the *config* folder. If it does not exist yet, it will be created automatically.
 
 Advanced users can edit the file directly to change certain settings, since not all of them can be modified through the user interface. Note that all changes require a restart to take effect, and that settings changed on the [web interface](../../user-guide/settings/general.md) will be saved in the same file. We therefore recommend that you edit it only while PhotoPrism is not running. 
 

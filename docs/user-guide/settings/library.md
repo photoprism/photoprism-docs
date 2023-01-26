@@ -4,7 +4,7 @@
 
 ## Index ##
 
-#### :material-chart-timeline-variant: Extrapolated Location ####
+#### :material-chart-timeline-variant: Estimates ####
 
 Estimates the location of pictures taken without GPS information by extrapolating it from the location of other pictures taken on the same day. 
 

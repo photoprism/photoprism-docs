@@ -8,7 +8,7 @@
   section where you expose port 3306 to the Host. In my case this looked like attachment 1.
 - Start the stack again: `docker compose up -d`
 - Stop Photoprism: `docker compose stop photoprism`
-- On the **host** now run `sudo sqlite3mysql -f <PATH_TO_STORAGE_MOUNT>/storage/index.db -d photoprism -u root --mysql-password 'insecure'`
+- On the **host** now run `sudo sqlite3mysql -f <PATH_TO_STORAGE_MOUNT>/storage/index.db -d photoprism -u root -p`. Input the password when asked (on the below example is `insecure`, make sure you use something else)
 - Shutdown your current stack again: `docker compose down`
 - Edit your `docker-compose.yml` so it uses the MariaDB database you added before. Don't forget to remove the `ports`
   section of the MariaDB Container.

@@ -13,7 +13,7 @@ When [editing YAML files](../../developer-guide/technologies/yaml.md), it is imp
 
 ### Defaults
 
-In the upcoming release, values can optionally be initialized from a `settings.yml` file located in the same folder as the [`defaults.yml` file](defaults.md) e.g. `/etc/photoprism`.
+In the [upcoming release](../../release-notes.md#development-preview), the settings can optionally be initialized from a `settings.yml` file located in the same folder as the [`defaults.yml` file](defaults.md) e.g. `/etc/photoprism`.
 
 ## Sections
 

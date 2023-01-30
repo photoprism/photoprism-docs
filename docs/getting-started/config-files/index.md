@@ -23,11 +23,11 @@ SiteCaption: PhotoPrism
 SiteUrl: "http://127.0.0.1:2342/"
 ```
 
-### Current Values
+### Values
 
 To display all global config flags and variables, you can run `photoprism --help` in a [terminal](../docker-compose.md#command-line-interface). The corresponding config option names to use in the `options.yml` and [`defaults.yml`](defaults.md) files are listed below, grouped by purpose.
 
-### Custom Defaults
+### Defaults
 
 Default values, including the *config* path to use, may optionally be specified in a [`defaults.yml` file](defaults.md) located in `/etc/photoprism`. A custom default config filename can be set with the `PHOTOPRISM_DEFAULTS_YAML` variable or the `--defaults-yaml` flag.
 

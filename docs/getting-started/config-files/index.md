@@ -5,7 +5,7 @@ If you are unable to configure your instance using [environment variables or com
 A custom *config* path can be specified with the variable `PHOTOPRISM_CONFIG_PATH` or the flag `--config-path`. If you use a third-party integration or package, you should find the exact location in the corresponding documentation. By default, it is a subdirectory of the [*storage* folder](../docker-compose.md#photoprismstorage).
 
 !!! tldr ""
-    All changes require a restart to take effect. Also note that config values changed in the [Advanced Settings](../../user-guide/settings/advanced.md) UI will be stored in the same file. We therefore recommend that you edit the file only while the server is not running.
+    All changes require a restart to take effect. Also note that config values changed in the [Advanced Settings](../../user-guide/settings/advanced.md) UI will be stored in the same file. We therefore recommend that you edit the file only while PhotoPrism is not running.
 
 ### Format
 

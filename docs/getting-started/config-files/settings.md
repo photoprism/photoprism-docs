@@ -5,7 +5,7 @@ User interface, download and indexing preferences are stored in the `settings.ym
 Advanced users can edit the file directly to change certain settings, since not all of them can be modified through the user interface.
 
 !!! tldr ""
-    All changes require a restart to take effect. Also note that settings changed on the [web interface](../../user-guide/settings/general.md) will be stored in the same file. We therefore recommend that you edit it only while the server is not running.
+    All changes require a restart to take effect. Also note that settings changed on the [web interface](../../user-guide/settings/general.md) will be stored in the same file. We therefore recommend that you edit it only while PhotoPrism is not running.
 
 ### Format
 

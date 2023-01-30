@@ -9,10 +9,6 @@ overriding Defaults
 
 When [editing YAML files](../../developer-guide/technologies/yaml.md), it is important that related values start at the same indentation level and that spaces are used, since tabs are not allowed. You can use any text editor for this.
 
-### Overriding Defaults
-
-The [default values](index.md#authentication) can be overridden by values in an [`options.yml`](index.md) file, command flags, and environment variables. As with all global [config options](../config-options.md), changes require a restart to take effect.
-
 ### Example
 
 Since you only need to specify the values for which you want to set a default, a `defaults.yml` file does not need to contain all possible options and could look like this, for example:
@@ -22,6 +18,10 @@ Debug: false
 ReadOnly: true
 JpegQuality: 85
 ```
+
+### Overriding Defaults
+
+The [default values](index.md#authentication) can be overridden by values in an [`options.yml`](index.md) file, command flags, and environment variables. As with all global [config options](../config-options.md), changes require a restart to take effect.
 
 ## Config Options
 

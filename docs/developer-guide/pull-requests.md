@@ -60,7 +60,7 @@ You can also create a pull request if your changes are not yet complete or worki
 it's in progress, so we don't try to merge them. We can help you with a code review or other feedback 
 if needed. Please be patient with us.
 
-**Reviewing, testing, and finally merging pull requests requires significant resources on our side. If it's not just a small fix, it can take several months.**
+**Be aware that reviewing, testing and finally merging pull requests requires significant resources on our side. It can therefore take several months if it is not just a small fix, especially if extensive testing is needed to prevent bugs from getting into our stable version.**
 
 ## Privacy Notice ##
 
@@ -68,4 +68,4 @@ We operate a number of web services that help us develop and maintain our softwa
 
 Because many of these apps and tools were originally developed for internal use without a high level of privacy in mind, we ask that you do not enter personal information such as your real name or personal email address if you want it to remain private.
 
-**Be aware that such information may unexpectedly show up in logs, source code, translation files, commit messages, and pull request comments.**
+**Personal details may otherwise show up in logs, source code, translation files, commit messages, and pull request comments.**

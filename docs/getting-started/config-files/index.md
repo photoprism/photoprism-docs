@@ -4,12 +4,16 @@ If you are unable to configure your instance using [environment variables or com
 
 A custom *config* path can be specified with the variable `PHOTOPRISM_CONFIG_PATH` or the flag `--config-path`. If you use a third-party integration or package, you should find the exact location in the corresponding documentation. By default, it is a subdirectory of the [*storage* folder](../docker-compose.md#photoprismstorage).
 
-To display all global config flags and variables, you can run `photoprism --help` in a [terminal](../docker-compose.md#command-line-interface). The corresponding names to use in the `options.yml` and [`defaults.yml`](defaults.md) files are listed below, grouped by purpose.
-
-Note that all changes require a restart to take effect, and that config values changed in the [Advanced Settings](../../user-guide/settings/advanced.md) UI will also be stored in the `options.yml` file. We therefore recommend that you edit the file only while PhotoPrism is not running. 
-
 !!! tldr ""
-    When [editing YAML files](../../developer-guide/technologies/yaml.md), it is important that related values start at the same indentation level and that spaces are used, since tabs are not allowed. You can use any text editor for this.
+    All changes require a restart to take effect. Also note that config values changed in the [Advanced Settings](../../user-guide/settings/advanced.md) UI will be stored in the same file. We therefore recommend that you edit the file only while the server is not running.
+
+### Format
+
+When [editing YAML files](../../developer-guide/technologies/yaml.md), it is important that related values start at the same indentation level and that spaces are used, since tabs are not allowed. You can use any text editor for this.
+
+### Current will be stored in the same file
+
+To display all global config flags and variables, you can run `photoprism --help` in a [terminal](../docker-compose.md#command-line-interface). The corresponding config option names to use in the `options.yml` and [`defaults.yml`](defaults.md) files are listed below, grouped by purpose.
 
 ### Example
 
@@ -22,6 +26,8 @@ JpegQuality: 83
 SiteCaption: PhotoPrism
 SiteUrl: "http://127.0.0.1:2342/"
 ```
+
+## Config Options
 
 ### Authentication ###
 

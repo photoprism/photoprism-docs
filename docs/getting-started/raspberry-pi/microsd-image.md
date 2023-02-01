@@ -31,9 +31,9 @@ Insert the MicroSD card into the Pi, make sure your device is connected to a wir
 
 ### User Accounts
 
-The password for the PhotoPrism `admin` account is `photoprismpi` when you log in for the first time.
+When you first log in to PhotoPrism, the username for the initial super admin account is `admin` and the password is `photoprismpi`.
 
-You can also [connect to the server via SSH](https://www.howtogeek.com/311287/how-to-connect-to-an-ssh-server-from-windows-macos-or-linux/) with the username `ubuntu` and password `ubuntu`.
+You can also connect to the server [via SSH](https://www.howtogeek.com/311287/how-to-connect-to-an-ssh-server-from-windows-macos-or-linux/) with the username `ubuntu` and password `ubuntu`.
 
 !!! danger ""
     Both passwords should be changed immediately if your Pi is connected to a public network, as they can be easily guessed.

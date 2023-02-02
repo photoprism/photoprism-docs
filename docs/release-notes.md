@@ -7,7 +7,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 230130-f5f850c2b</span>
+<span class="build">Build 230202-590212ca0</span>
 
 What's new?
 
@@ -30,12 +30,13 @@ What's new?
 - Metadata: [GPS coordinates are normalized to be within a common range](https://github.com/photoprism/photoprism/issues/2109)
 - API: [Search results can be sorted randomly to get a random set of pictures](https://github.com/photoprism/photoprism/issues/153#issuecomment-1408480166)
 - CLI: [Added file extension flag to the `photoprism convert` command](https://github.com/photoprism/photoprism/issues/3038)
+- Config: [Use dynamic social preview image based on app name](https://github.com/photoprism/photoprism/issues/3160)
 - Config: [Custom template path is not searched for files if not specified](https://github.com/photoprism/photoprism/issues/2946)
 - Docker: [MariaDB image and binaries have been upgraded from v10.9 to v10.10](https://github.com/photoprism/photoprism/commit/00022c90d3467655592858b0d3ad9c58fd9eee15)
 - Podman: [Added config examples for users of Red Hat-based Linux distributions](https://github.com/photoprism/photoprism/tree/develop/setup/podman)
 - Security: [Go has been upgraded to v1.19.5, which includes security and stability fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.19.5)
 - Translations: [Added Afrikaans (South Africa)](https://github.com/photoprism/photoprism/pull/3031/files)
-- Translations: Updated Bulgarian, Chinese, Czech, Dutch, Estonian, French, German, Italian, Malay, Russian, and Ukrainian 
+- Translations: Updated Bulgarian, Chinese, Czech, Dutch, Estonian, French, German, Italian, Malay, Russian, Ukrainian and many others
 
 ### November 18, 2022 ###
 <span class="build">Build 221118-e58fee0fb</span>

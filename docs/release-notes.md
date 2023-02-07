@@ -13,6 +13,7 @@ What's new?
 
 - UX: [Improved page layout for RTL languages](https://github.com/photoprism/photoprism/commit/3a1293d5d42ba8d0cf6f4efa1540a9db7f3681d9)
 - UX: [Improved background colors in the card view](https://github.com/photoprism/photoprism/commit/c243d45c118a6691c626397a9f81f08385ee6a60)
+- UX: [Navigation shows the total number of pictures without images under review](https://github.com/photoprism/photoprism/issues/3164)
 - PWA: [Increased maximum length of app name](https://github.com/photoprism/photoprism/commit/5dc71ff1ff69c157568c11d08b941b1d1875dc38) [and changed start URL](https://github.com/photoprism/photoprism/commit/4c81d8b7e18e2113bba6ef8e20158fecec89dc15)
 - Themes: [Added "Carbon", "Neon", and "Snow" based on colors from nordtheme.com](https://github.com/photoprism/photoprism/commit/93251d77a02a7de1ced8e28caf3deb2220a442c4)
 - Themes: [Removed "Electra", "Moonlight", and "Seaweed"](https://github.com/photoprism/photoprism/commit/e1405eba5430d30769d90292bdc69debe0e27092)

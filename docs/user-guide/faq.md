@@ -20,14 +20,14 @@
 
     Be aware that we have a zero-bug policy and do our best to help users when they need support or have other questions. This comes at a price though, as we can't give exact release dates for new features. Our team receives many more requests than can be implemented, so we want to emphasize that we are in no way obligated to implement the features, enhancements, or other changes you request. We do, however, appreciate your feedback and carefully consider all requests.
 
-    **Since [sustained funding](https://photoprism.app/kb/oss) is key to quickly releasing new features, we encourage all users to support our mission by [signing up as a sponsor](https://photoprism.app/membership) or purchasing a [commercial license](https://photoprism.app/teams).**
+    **Since [sustained funding](https://photoprism.app/oss/faq) is key to quickly releasing new features, we encourage all users to support our mission by [signing up as a sponsor](https://photoprism.app/membership) or purchasing a [commercial license](https://photoprism.app/teams).**
 
 ??? question "What functionality is generally available?"
     
     Our team decides this on an ongoing basis depending on the support effort required, server and licensing costs, and whether the features are generally needed by everyone or mainly requested by organizations and advanced users.
     As this helps us [provide more features](https://photoprism.app/editions#compare) to the public, we encourage all users to [support our mission](https://photoprism.app/membership).
 
-    [Compare Features ›](https://photoprism.app/editions#compare){ class="pr-3" } [View Open Source FAQ ›](https://photoprism.app/kb/oss)
+    [Compare Features ›](https://photoprism.app/editions#compare){ class="pr-3" } [View Open Source FAQ ›](https://photoprism.app/oss/faq)
 
 ??? question "What are the advantages of purchasing a commercial license?"
 
@@ -39,7 +39,7 @@
 
     Think of “free software” as in “free speech,” not as in “free beer.” The [Free Software Foundation](https://www.gnu.org/philosophy/free-sw.en.html) sometimes calls it “libre software,” borrowing the French or Spanish word for “free” as in freedom, to show they [do not mean the software is gratis](https://www.gnu.org/philosophy/selling.html).
 
-    [View Open Source FAQ ›](https://photoprism.app/kb/oss)
+    [View Open Source FAQ ›](https://photoprism.app/oss/faq)
 
 ??? question "Why can't I just purchase and download a single version?"
 

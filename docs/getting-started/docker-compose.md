@@ -249,7 +249,7 @@ changed, added, or removed. This can also be automated using CLI commands and a 
 Easy, isn't it?
 
 !!! example ""
-    **Back us on [Patreon](https://link.photoprism.app/patreon) or [GitHub Sponsors](https://link.photoprism.app/sponsor).** Your [continued support](https://photoprism.app/membership) helps us provide regular updates and remain independent, so we can [fulfill our mission](https://photoprism.app/kb/oss) and protect your privacy.
+    **Back us on [Patreon](https://link.photoprism.app/patreon) or [GitHub Sponsors](https://link.photoprism.app/sponsor).** Your [continued support](https://photoprism.app/membership) helps us provide regular updates and remain independent, so we can [fulfill our mission](https://photoprism.app/oss/faq) and protect your privacy.
 
 ### Troubleshooting ###
 

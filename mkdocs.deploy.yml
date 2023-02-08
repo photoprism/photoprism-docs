@@ -2,10 +2,12 @@ INHERIT: mkdocs.yml
 plugins:
   - search
   - privacy:
-      externals: bundle
-      externals_exclude:
+      enabled: true
+      external_assets: bundle
+      external_assets_exclude:
         - photoprism.app/*
         - dl.photoprism.app/*
+        - www.photoprism.app/*
         - docs.photoprism.app/*
         - a.photoprism.app/*
         - goreportcard.com/*

@@ -228,7 +228,7 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://link.photoprism.app/linkedin
     - icon: material/home
-      link: https://photoprism.app/
+      link: https://www.photoprism.app/
 
 # Project paths.
 docs_dir: docs
@@ -282,11 +282,11 @@ plugins:
   - search
   - redirects:
       redirect_maps:
-        'team.md': 'https://photoprism.app/team'
-        'funding.md': 'https://photoprism.app/membership'
-        'privacy.md': 'https://photoprism.app/privacy'
-        'terms.md': 'https://photoprism.app/terms'
-        'code-of-conduct.md': 'https://photoprism.app/code-of-conduct'
+        'team.md': 'https://www.photoprism.app/team'
+        'funding.md': 'https://www.photoprism.app/membership'
+        'privacy.md': 'https://www.photoprism.app/privacy'
+        'terms.md': 'https://www.photoprism.app/terms'
+        'code-of-conduct.md': 'https://www.photoprism.app/code-of-conduct'
         'getting-started/freebsd.md': 'getting-started/ports/freebsd.md'
         'getting-started/first-steps.md': 'user-guide/first-steps.md'
         'user-guide/advanced/metadata.md': 'user-guide/library/metadata.md'

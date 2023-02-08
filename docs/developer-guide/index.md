@@ -21,11 +21,11 @@ already exists. Give ideas you like a thumbs-up 👍  , so that we know what is 
 ## Join the Community ##
 
 Follow us on [Twitter](https://link.photoprism.app/twitter) and join the [Community Chat](https://link.photoprism.app/chat)
-to get regular updates, connect with other contributors, and discuss your ideas. Our [Code of Conduct](https://photoprism.app/code-of-conduct) explains the "dos and don’ts."
+to get regular updates, connect with other contributors, and discuss your ideas. Our [Code of Conduct](https://www.photoprism.app/code-of-conduct) explains the "dos and don’ts."
 
 An important part of our journey is to explore new directions in product development and build better software through consistent use of feedback.
 
-Feel free to [contact us](https://photoprism.app/contact) with anything that is on your mind, even if you just want to say hello. It is our goal to answer all questions we receive from our users, customers, partners, and the developer community. Our team also welcomes feedback if you believe something can or should be improved.
+Feel free to [contact us](https://www.photoprism.app/contact) with anything that is on your mind, even if you just want to say hello. It is our goal to answer all questions we receive from our users, customers, partners, and the developer community. Our team also welcomes feedback if you believe something can or should be improved.
 
 ## Creating Bug Reports ##
 
@@ -36,7 +36,7 @@ issue, or a misunderstanding in how the software works:
 - you are welcome to ask in our [Community Chat](https://link.photoprism.app/chat)
 - or post your question in [GitHub Discussions](https://link.photoprism.app/discussions)
 
-When reporting a problem, always include the software versions you are using and [other information about your environment](https://photoprism.app/kb/reporting-bugs)
+When reporting a problem, always include the software versions you are using and [other information about your environment](https://www.photoprism.app/kb/reporting-bugs)
 such as [browser, browser plugins](../getting-started/troubleshooting/browsers.md), operating system, storage type,
 memory size, and processor.
 

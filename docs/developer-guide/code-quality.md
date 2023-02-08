@@ -39,7 +39,7 @@ It is best to do this while you are working on the same component anyway, for ex
 
 Releasing imperfect code is not a problem as long as it is [accompanied by automated tests](#code-that-cannot-be-tested-is-flawed). This makes it easy to refactor later without breaking anything or requiring detailed knowledge of the requirements and a lot of time for manual testing. Be pragmatic. Done is better than perfect.
 
-Potential [security issues](security/index.md) are an important exception. These should never be ignored. If you find a problem, please [report it to us](https://photoprism.app/security-policy) immediately so we can fix it.
+Potential [security issues](security/index.md) are an important exception. These should never be ignored. If you find a problem, please [report it to us](https://www.photoprism.app/security-policy) immediately so we can fix it.
 
 !!! example ""
     Feel free to think ahead, just don't code ahead. But also, don't feel the need to decide so many

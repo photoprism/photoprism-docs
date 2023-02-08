@@ -1,7 +1,7 @@
 # **PikaPods** Open Source App Hosting
 
 !!! verified "Trusted Partner"
-    [PikaPods](https://prism.ws/pikapods-com) has partnered with us to offer you this **officially supported, cloud-hosted solution**.[^1] Your personal app instance is ready to use in just a few steps and [includes sponsor features](https://photoprism.app/editions#compare) like premium themes and high-resolution world maps - at no additional cost! New customers also receive a $5 welcome credit.
+    [PikaPods](https://prism.ws/pikapods-com) has partnered with us to offer you this **officially supported, cloud-hosted solution**.[^1] Your personal app instance is ready to use in just a few steps and [includes sponsor features](https://www.photoprism.app/editions#compare) like premium themes and high-resolution world maps - at no additional cost! New customers also receive a $5 welcome credit.
 
 ## Setup
 
@@ -48,4 +48,4 @@ PhotoPrism is now fully set up and ready to use. To log in, click *Open Pod*, en
 If you want to change your password, you can do so in [Settings > Account](../../user-guide/settings/account.md#change-password).
 Our [First Steps 👣](../../user-guide/first-steps.md) tutorial will guide you through the user interface and settings to ensure your library is indexed according to your individual preferences.
 
-[^1]: A share of the revenue [helps fund the development of PhotoPrism](https://photoprism.app/oss/faq#pikapods)
+[^1]: A share of the revenue [helps fund the development of PhotoPrism](https://www.photoprism.app/oss/faq#pikapods)

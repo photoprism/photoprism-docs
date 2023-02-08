@@ -8,7 +8,7 @@ The original plan to build upon `go-xmp` didn't work out as we couldn't read man
 
 ## File Samples
 
-We would be happy to receive more [XMP files for testing](https://github.com/photoprism/photoprism/tree/develop/internal/meta/testdata), either via [pull request](../pull-requests.md) or [email](https://photoprism.app/contact).
+We would be happy to receive more [XMP files for testing](https://github.com/photoprism/photoprism/tree/develop/internal/meta/testdata), either via [pull request](../pull-requests.md) or [email](https://www.photoprism.app/contact).
 
 ## Specification
 

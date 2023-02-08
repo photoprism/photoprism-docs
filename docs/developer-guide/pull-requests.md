@@ -17,7 +17,7 @@ submissions are acceptable:
 
 ## Contributor License Agreement ##
 
-After you submit your first pull request, you will be asked to accept our Contributor License Agreement (CLA). Visit [photoprism.app/cla](https://photoprism.app/cla) to learn more.
+After you submit your first pull request, you will be asked to accept our Contributor License Agreement (CLA). Visit [photoprism.app/cla](https://www.photoprism.app/cla) to learn more.
 
 ## How to Create and Submit a Pull Request ##
 

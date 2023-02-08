@@ -4,7 +4,7 @@ If enabled, reverse geocoding enriches photo and video metadata with details suc
 
 ## Privacy Policy ##
 
-As explained in detail in our [Privacy Policy](https://photoprism.app/privacy), reverse geocoding depends on retrieving the necessary information from a backend that we provide for this purpose.
+As explained in detail in our [Privacy Policy](https://www.photoprism.app/privacy), reverse geocoding depends on retrieving the necessary information from a backend that we provide for this purpose.
 
 The costs are currently fully covered by us for all users, including non-sponsors, and we ensure a very high level of privacy and confidentiality:
 

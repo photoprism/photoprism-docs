@@ -1,6 +1,6 @@
 # Scalability, Distributed Computing and Cloud Storage 
 
-Our [team](https://photoprism.app/team) aims to get the most of what is there.
+Our [team](https://www.photoprism.app/team) aims to get the most of what is there.
 Development and testing have been focused on smaller servers and typical home users with 
 less than 500,000 files.
 
@@ -23,5 +23,5 @@ Also, there is no native support for sharding or cloud storage APIs like S3.
 Instead, PhotoPrism prefers a fast, local solid-state drive. Support for S3 may be
 added for backing up originals later.
 
-We are [happy to assist](https://photoprism.app/contact) if you need a custom solution 
+We are [happy to assist](https://www.photoprism.app/contact) if you need a custom solution 
 that runs well in a corporate cloud environment.

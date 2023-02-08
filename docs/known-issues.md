@@ -88,7 +88,7 @@ docker compose exec photoprism photoprism faces audit --fix
 It can also be helpful to manually check for inconsistent assignments and fix them in the user interface.
 Alternatively, you can use the `photoprism faces reset` command for a clean start if you haven't invested much time in assigning faces yet.
 
-*Advanced users affected by this are welcome to [privately provide us](https://photoprism.app/contact) with a SQL dump of their subjects, faces, and markers database tables for debugging. Thank you very much!*
+*Advanced users affected by this are welcome to [privately provide us](https://www.photoprism.app/contact) with a SQL dump of their subjects, faces, and markers database tables for debugging. Thank you very much!*
 
 ## File Compatibility
 
@@ -123,7 +123,7 @@ issue, or a misunderstanding in how the software works:
 - you are welcome to ask in our [Community Chat](https://link.photoprism.app/chat)
 - or post your question in [GitHub Discussions](https://link.photoprism.app/discussions)
 
-When reporting a problem, always include the software versions you are using and [other information about your environment](https://photoprism.app/kb/reporting-bugs)
+When reporting a problem, always include the software versions you are using and [other information about your environment](https://www.photoprism.app/kb/reporting-bugs)
 such as [browser, browser plugins](getting-started/troubleshooting/browsers.md), operating system, storage type,
 memory size, and processor.
 

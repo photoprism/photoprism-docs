@@ -249,7 +249,7 @@ changed, added, or removed. This can also be automated using CLI commands and a 
 Easy, isn't it?
 
 !!! example ""
-    **Back us on [Patreon](https://link.photoprism.app/patreon) or [GitHub Sponsors](https://link.photoprism.app/sponsor).** Your [continued support](https://photoprism.app/membership) helps us provide regular updates and remain independent, so we can [fulfill our mission](https://photoprism.app/oss/faq) and protect your privacy.
+    **Back us on [Patreon](https://link.photoprism.app/patreon) or [GitHub Sponsors](https://link.photoprism.app/sponsor).** Your [continued support](https://www.photoprism.app/membership) helps us provide regular updates and remain independent, so we can [fulfill our mission](https://www.photoprism.app/oss/faq) and protect your privacy.
 
 ### Troubleshooting ###
 
@@ -264,7 +264,7 @@ Other issues? Our [troubleshooting checklists](troubleshooting/index.md) help yo
 
 !!! info ""
     You are welcome to ask for help in our [community chat](https://link.photoprism.app/chat).
-    [Sponsors](https://photoprism.app/membership) receive direct [technical support](https://photoprism.app/contact) via email.
+    [Sponsors](https://www.photoprism.app/membership) receive direct [technical support](https://www.photoprism.app/contact) via email.
     Before [submitting a support request](index.md#getting-support), try to [determine the cause of your problem](troubleshooting/index.md).
 
 ### Command-Line Interface ###

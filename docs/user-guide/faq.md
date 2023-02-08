@@ -4,11 +4,11 @@
 
 ??? question "Does your software depend on any external services?"
 
-    As explained in our [Privacy Policy](https://photoprism.app/privacy#section-7), reverse geocoding and interactive world maps depend on retrieving the necessary information [from us](https://photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality.
+    As explained in our [Privacy Policy](https://www.photoprism.app/privacy#section-7), reverse geocoding and interactive world maps depend on retrieving the necessary information [from us](https://www.photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality.
     
-    Your use of these services is [fully covered by us](../getting-started/faq.md#are-the-keys-for-using-interactive-world-maps-provided-free-of-charge). Depending on your usage, this can save you much more than the cost of a [PhotoPrism+ Membership](https://photoprism.app/membership), since other providers generally charge usage-based fees and may also not allow you to cache the data they provide, compromising your privacy with unnecessary requests.
+    Your use of these services is [fully covered by us](../getting-started/faq.md#are-the-keys-for-using-interactive-world-maps-provided-free-of-charge). Depending on your usage, this can save you much more than the cost of a [PhotoPrism+ Membership](https://www.photoprism.app/membership), since other providers generally charge usage-based fees and may also not allow you to cache the data they provide, compromising your privacy with unnecessary requests.
 
-    [View Privacy Policy ›](https://photoprism.app/privacy#section-7){ class="pr-3" } [View Compliance FAQ ›](https://photoprism.app/kb/compliance-faq#privacy)
+    [View Privacy Policy ›](https://www.photoprism.app/privacy#section-7){ class="pr-3" } [View Compliance FAQ ›](https://www.photoprism.app/kb/compliance-faq#privacy)
 
     In order to successfully set up your installation and view location details in PhotoPrism, you must [allow incoming requests as well as those to our Geocoding API and Docker](../getting-started/troubleshooting/firewall.md) if you have a firewall installed, and make sure that your Internet connection is working:
 
@@ -20,26 +20,26 @@
 
     Be aware that we have a zero-bug policy and do our best to help users when they need support or have other questions. This comes at a price though, as we can't give exact release dates for new features. Our team receives many more requests than can be implemented, so we want to emphasize that we are in no way obligated to implement the features, enhancements, or other changes you request. We do, however, appreciate your feedback and carefully consider all requests.
 
-    **Since [sustained funding](https://photoprism.app/oss/faq) is key to quickly releasing new features, we encourage all users to support our mission by [signing up as a sponsor](https://photoprism.app/membership) or purchasing a [commercial license](https://photoprism.app/teams).**
+    **Since [sustained funding](https://www.photoprism.app/oss/faq) is key to quickly releasing new features, we encourage all users to support our mission by [signing up as a sponsor](https://www.photoprism.app/membership) or purchasing a [commercial license](https://www.photoprism.app/teams).**
 
 ??? question "What functionality is generally available?"
     
     Our team decides this on an ongoing basis depending on the support effort required, server and licensing costs, and whether the features are generally needed by everyone or mainly requested by organizations and advanced users.
-    As this helps us [provide more features](https://photoprism.app/editions#compare) to the public, we encourage all users to [support our mission](https://photoprism.app/membership).
+    As this helps us [provide more features](https://www.photoprism.app/editions#compare) to the public, we encourage all users to [support our mission](https://www.photoprism.app/membership).
 
-    [Compare Features ›](https://photoprism.app/editions#compare){ class="pr-3" } [View Open Source FAQ ›](https://photoprism.app/oss/faq)
+    [Compare Features ›](https://www.photoprism.app/editions#compare){ class="pr-3" } [View Open Source FAQ ›](https://www.photoprism.app/oss/faq)
 
 ??? question "What are the advantages of purchasing a commercial license?"
 
-    A key difference between the [public license](https://docs.photoprism.app/license/agpl/) and a [commercial license agreement](https://photoprism.app/teams) is that you get access to additional support and configuration options, as well as the right to customize functionality to your needs without having to publicly disclose your changes. Our [Compliance FAQ](https://photoprism.app/kb/compliance-faq) gives answers to the most frequently asked questions about product compliance and scalability.
+    A key difference between the [public license](https://docs.photoprism.app/license/agpl/) and a [commercial license agreement](https://www.photoprism.app/teams) is that you get access to additional support and configuration options, as well as the right to customize functionality to your needs without having to publicly disclose your changes. Our [Compliance FAQ](https://www.photoprism.app/kb/compliance-faq) gives answers to the most frequently asked questions about product compliance and scalability.
 
-    [Compare Team Editions ›](https://photoprism.app/teams#compare)
+    [Compare Team Editions ›](https://www.photoprism.app/teams#compare)
 
 ??? question "Shouldn't free software be free of costs?"
 
     Think of “free software” as in “free speech,” not as in “free beer.” The [Free Software Foundation](https://www.gnu.org/philosophy/free-sw.en.html) sometimes calls it “libre software,” borrowing the French or Spanish word for “free” as in freedom, to show they [do not mean the software is gratis](https://www.gnu.org/philosophy/selling.html).
 
-    [View Open Source FAQ ›](https://photoprism.app/oss/faq)
+    [View Open Source FAQ ›](https://www.photoprism.app/oss/faq)
 
 ??? question "Why can't I just purchase and download a single version?"
 
@@ -50,7 +50,7 @@
 
 ??? question "Will the self-hosted version continue to be supported?"
 
-    Absolutely! We are on a mission to protect your freedom and privacy. Self-hosting is the easiest way to stay in control and protect [your privacy](https://photoprism.app/privacy). It also provides the best experience for advanced users who often rely on a local toolchain to select, edit, and publish their pictures.
+    Absolutely! We are on a mission to protect your freedom and privacy. Self-hosting is the easiest way to stay in control and protect [your privacy](https://www.photoprism.app/privacy). It also provides the best experience for advanced users who often rely on a local toolchain to select, edit, and publish their pictures.
 
     At the same time, we know there's a huge demand and many practical uses for a cloud-hosted app that is easy to set up. We like to give our users the choice and therefore offer a fully managed service as a deployment option. Selected hosting partners ensure that your privacy is protected as much as technically possible, even in the cloud.
 
@@ -105,9 +105,9 @@
 
 ??? question "Why are the streets on the Places map no longer loading?"
 
-    The high-quality maps have been a paid feature for a long time, but were still available for testing. Since many users didn't realize this and simply used the commercial maps for free, this was [recently changed](https://github.com/photoprism/photoprism/issues/2998). Please see the [feature comparison on our website](https://photoprism.app/editions#compare) for reference. 
+    The high-quality maps have been a paid feature for a long time, but were still available for testing. Since many users didn't realize this and simply used the commercial maps for free, this was [recently changed](https://github.com/photoprism/photoprism/issues/2998). Please see the [feature comparison on our website](https://www.photoprism.app/editions#compare) for reference. 
 
-    [Compare Personal Editions ›](https://photoprism.app/editions#compare)
+    [Compare Personal Editions ›](https://www.photoprism.app/editions#compare)
 
 ??? question "Why are some pictures positioned at unvisited locations on the map?"
 
@@ -236,7 +236,7 @@
 
     We recommend that you use [Exiftool](https://exiftool.org/install.html) to see all metadata fields and values, as Windows has limited functionality.
     
-    It might then become clear why there are differences. For example, it could be that Windows does not support some fields and therefore ignores them, or that the data shown is actually from the file system and not from the files. Should you still believe to have found a bug, please [provide us with sample files](https://photoprism.app/contact#file-samples) so that we can reproduce the issue.
+    It might then become clear why there are differences. For example, it could be that Windows does not support some fields and therefore ignores them, or that the data shown is actually from the file system and not from the files. Should you still believe to have found a bug, please [provide us with sample files](https://www.photoprism.app/contact#file-samples) so that we can reproduce the issue.
 
 ??? question "Why do some pictures have 08/12/2002 as date if they were not taken on that day?"
     

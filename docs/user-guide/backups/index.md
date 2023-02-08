@@ -51,4 +51,4 @@ SQLite, config, cache, thumbnail and sidecar files are saved in [the *storage* f
 We recommend that you back up this folder as well so that you don't need to recreate the thumbnails and have a complete backup of your configuration. As for the *originals* folder, you can use any standard file backup utility to do this.
 
 !!! example ""
-    Depending on the [resources available to us](https://photoprism.app/oss/faq), a future version may include additional features so that you do not have to rely on external tools to perform file backups and can use a web interface.
+    Depending on the [resources available to us](https://www.photoprism.app/oss/faq), a future version may include additional features so that you do not have to rely on external tools to perform file backups and can use a web interface.

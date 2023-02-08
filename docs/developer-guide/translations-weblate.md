@@ -8,7 +8,7 @@ You can either sign in with your GitHub account or create a new account with an 
 - You are also not required to provide your full name if you do not wish to do so.
 - Let us know privately that you have registered so that we can grant you permissions if needed.
 
-When you sign up, you will be asked to accept our Contributor License Agreement (CLA). Visit [photoprism.app/cla](https://photoprism.app/cla) to learn more.
+When you sign up, you will be asked to accept our Contributor License Agreement (CLA). Visit [photoprism.app/cla](https://www.photoprism.app/cla) to learn more.
 
 === "Sign up"
 

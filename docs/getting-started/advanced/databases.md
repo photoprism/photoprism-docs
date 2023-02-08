@@ -74,7 +74,7 @@ An index schema migration is performed automatically every time PhotoPrism is (r
 
     If this is the case, please make sure that your migrated database schema matches that of a fresh, non-migrated installation. It may help to [run the migrations manually](../advanced/migrations/index.md) in a terminal using the *migrations* subcommands. However, this does not guarantee that all issues such as missing indexes are resolved.
 
-    Due to the amount of time required to review each report, we can only offer this to [eligible sponsors](https://photoprism.app/membership) and [business customers](https://photoprism.app/teams), and not to users who have chosen our free community edition.
+    Due to the amount of time required to review each report, we can only offer this to [eligible sponsors](https://www.photoprism.app/membership) and [business customers](https://www.photoprism.app/teams), and not to users who have chosen our free community edition.
 
     [Get Performance Tips ›](../troubleshooting/performance.md#mariadb){ class="pr-3" } [View Database Schema ›](../../developer-guide/database/index.md) 
 

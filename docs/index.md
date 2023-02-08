@@ -21,7 +21,7 @@ Our mission is to provide the most user- and privacy-friendly solution to keep y
 * Use :material-sync: [PhotoSync](https://link.photoprism.app/photosync) to securely backup iOS and Android phones in the background
 * WebDAV clients such as Microsoft's Windows Explorer and Apple's Finder [can connect directly](https://docs.photoprism.app/user-guide/sync/webdav/) to PhotoPrism, allowing you to open, edit, and delete files from your computer as if they were local
 
-[See Complete Feature List ›](https://www.photoprism.app/editions#compare)
+[Compare Features ›](https://www.photoprism.app/editions#compare)
 
 ### 100% Privacy :lock:
 

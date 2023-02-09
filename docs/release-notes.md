@@ -7,14 +7,15 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 230208-b0328e6a7</span>
+<span class="build">Build 230209-77b97f78f</span>
 
 What's new?
 
-- UX: [Improved page layout for RTL languages](https://github.com/photoprism/photoprism/commit/3a1293d5d42ba8d0cf6f4efa1540a9db7f3681d9)
-- UX: [Improved background colors in the card view](https://github.com/photoprism/photoprism/commit/c243d45c118a6691c626397a9f81f08385ee6a60)
+- UX: [Improved page layout for languages with right-to-left writing](https://github.com/photoprism/photoprism/commit/3a1293d5d42ba8d0cf6f4efa1540a9db7f3681d9)
+- UX: [Improved highlight and background colors in the cards view](https://github.com/photoprism/photoprism/commit/c243d45c118a6691c626397a9f81f08385ee6a60)
 - UX: [Navigation shows the total number of pictures without those under review](https://github.com/photoprism/photoprism/issues/3164)
-- PWA: [Increased maximum length of app name](https://github.com/photoprism/photoprism/commit/5dc71ff1ff69c157568c11d08b941b1d1875dc38) [and changed start URL](https://github.com/photoprism/photoprism/commit/4c81d8b7e18e2113bba6ef8e20158fecec89dc15)
+- PWA: [Increased allowed length of app name on home screen](https://github.com/photoprism/photoprism/commit/5dc71ff1ff69c157568c11d08b941b1d1875dc38)
+- PWA: [Improved manifest.json for more reliable installation prompts](https://github.com/photoprism/photoprism/issues/3181)
 - Themes: [Added "Carbon", "Neon", and "Snow" based on colors from nordtheme.com](https://github.com/photoprism/photoprism/commit/93251d77a02a7de1ced8e28caf3deb2220a442c4)
 - Themes: [Removed "Electra", "Moonlight", and "Seaweed"](https://github.com/photoprism/photoprism/commit/e1405eba5430d30769d90292bdc69debe0e27092)
 - Search: [Added `id:...` filter to find pictures by Exif UID, XMP Document ID or Instance ID](https://github.com/photoprism/photoprism/issues/3035)
@@ -26,10 +27,13 @@ What's new?
 - Albums: [Fixed form field styles in the share dialog](https://github.com/photoprism/photoprism/commit/7c671e0dfc52936b1a3af426db1e0f5e165a12f7)
 - Albums: [Double quotes in album names are replaced by Unicode characters](https://github.com/photoprism/photoprism/issues/2891)
 - Folders: [Search is case-insensitive and uses wildcards for improved usability](https://github.com/photoprism/photoprism/issues/2050)
+- Metadata: [GPS coordinates are normalized to be within a common range](https://github.com/photoprism/photoprism/issues/2109)
+- Metadata: [Out-of-range altitude values are ignored to prevent indexing errors](https://github.com/photoprism/photoprism/issues/3182)
 - Index: [Improved performance when flagging hidden files](https://github.com/photoprism/photoprism/issues/2928)
 - Upload: [Estimated time remaining is displayed in minutes and seconds](https://github.com/photoprism/photoprism/issues/3049)
-- Metadata: [GPS coordinates are normalized to be within a common range](https://github.com/photoprism/photoprism/issues/2109)
+- WebDAV: [Originals and import folders can be accessed in read-only mode](https://github.com/photoprism/photoprism/issues/3183)
 - API: [Search results can be sorted randomly to get a random set of pictures](https://github.com/photoprism/photoprism/issues/153#issuecomment-1408480166)
+- API: [HEAD requests are now supported for frontend bootstrap paths](https://github.com/photoprism/photoprism/issues/2965)
 - CLI: [Added file extension flag to the `photoprism convert` command](https://github.com/photoprism/photoprism/issues/3038)
 - Config: [Use dynamic social preview image based on app name](https://github.com/photoprism/photoprism/issues/3160)
 - Config: [Custom template path is not searched for files if not specified](https://github.com/photoprism/photoprism/issues/2946)

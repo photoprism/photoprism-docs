@@ -7,13 +7,14 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 230211-fd635c0ce</span>
+<span class="build">Build 230213-32483cc88</span>
 
 What's new?
 
 - UX: [Improved page layout for languages with right-to-left writing](https://github.com/photoprism/photoprism/commit/3a1293d5d42ba8d0cf6f4efa1540a9db7f3681d9)
 - UX: [Improved highlight and background colors in the cards view](https://github.com/photoprism/photoprism/commit/c243d45c118a6691c626397a9f81f08385ee6a60)
 - UX: [Navigation shows the total number of pictures without those under review](https://github.com/photoprism/photoprism/issues/3164)
+- UX: [Enabled long-touch menu in photo viewer on iOS Safari](https://github.com/photoprism/photoprism/issues/1233)
 - PWA: [Increased allowed length of app name on home screen](https://github.com/photoprism/photoprism/commit/5dc71ff1ff69c157568c11d08b941b1d1875dc38)
 - PWA: [Improved manifest.json for more reliable installation prompts](https://github.com/photoprism/photoprism/issues/3181)
 - Themes: [Added "Carbon", "Neon", and "Snow" based on colors from nordtheme.com](https://github.com/photoprism/photoprism/commit/93251d77a02a7de1ced8e28caf3deb2220a442c4)

@@ -7,7 +7,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 230213-7f08efe36</span>
+<span class="build">Build 230213-e533aa7be</span>
 
 What's new?
 
@@ -31,6 +31,7 @@ What's new?
 - Metadata: [GPS coordinates are normalized to be within a common range](https://github.com/photoprism/photoprism/issues/2109)
 - Metadata: [Out-of-range altitude values are ignored to prevent indexing errors](https://github.com/photoprism/photoprism/issues/3182)
 - Index: [Improved performance when flagging hidden files](https://github.com/photoprism/photoprism/issues/2928)
+- Index: [Added file format support for Adobe PSD](https://github.com/photoprism/photoprism/issues/2207)
 - Upload: [Estimated time remaining is displayed in minutes and seconds](https://github.com/photoprism/photoprism/issues/3049)
 - WebDAV: [Originals and import folders can be accessed in read-only mode](https://github.com/photoprism/photoprism/issues/3183)
 - API: [Search results can be sorted randomly to get a random set of pictures](https://github.com/photoprism/photoprism/issues/153#issuecomment-1408480166)

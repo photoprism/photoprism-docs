@@ -7,7 +7,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 230219-03fbc992d</span>
+<span class="build">Build 230219-52b4db242</span>
 
 What's new?
 
@@ -39,9 +39,9 @@ What's new?
 - API: [HEAD requests are now supported for frontend bootstrap paths](https://github.com/photoprism/photoprism/issues/2965)
 - CLI: [Added file extension flag to the `photoprism convert` command](https://github.com/photoprism/photoprism/issues/3038)
 - CLI: [Commands create thumbnails and convert files in deterministic order](https://github.com/photoprism/photoprism/issues/3194)
-- Config: [Advanced settings page includes options for PNGs and vector graphics](https://github.com/photoprism/photoprism/issues/2207#issuecomment-1436041896)
 - Config: [Use dynamic social preview image based on app name](https://github.com/photoprism/photoprism/issues/3160)
 - Config: [Custom template path is not searched for files if not specified](https://github.com/photoprism/photoprism/issues/2946)
+- Config: [Advanced settings include additional options for PNGs and vector graphics](https://github.com/photoprism/photoprism/issues/2207#issuecomment-1436041896)
 - Docker: [MariaDB image and binaries have been upgraded from v10.9 to v10.10](https://github.com/photoprism/photoprism/commit/00022c90d3467655592858b0d3ad9c58fd9eee15)
 - Podman: [Added config examples for users of Red Hat-based Linux distributions](https://github.com/photoprism/photoprism/tree/develop/setup/podman)
 - Security: [Go has been upgraded to v1.20.1, which includes many fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.20.1)

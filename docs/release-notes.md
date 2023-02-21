@@ -7,7 +7,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 230221-f7f73dbc1</span>
+<span class="build">Build 230221-7ed5e0d12</span>
 
 What's new?
 
@@ -34,6 +34,7 @@ What's new?
 - Metadata: [GPS coordinates are normalized to be within a common range](https://github.com/photoprism/photoprism/issues/2109)
 - Metadata: [Out-of-range altitude values are ignored to prevent indexing errors](https://github.com/photoprism/photoprism/issues/3182)
 - Metadata: [Software name is displayed on the Files tab, if available](https://github.com/photoprism/photoprism/commit/3c1b7acf1191c48620e3bdc8256694b7513856c9)
+- Metadata: [Valid year range in Exif data and file names has been extended from 1990 to 1970](https://github.com/photoprism/photoprism/issues/3220)
 - Index: [Improved performance when flagging hidden files](https://github.com/photoprism/photoprism/issues/2928)
 - Index: [Added file format support for Adobe Photoshop PSD images](https://github.com/photoprism/photoprism/issues/2207)
 - Index: [Added support for decoding JPEG XL and playing PNG animations](https://github.com/photoprism/photoprism/issues/3197)

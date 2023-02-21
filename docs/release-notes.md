@@ -7,7 +7,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 230220-517675de3</span>
+<span class="build">Build 230221-906e29db5</span>
 
 What's new?
 
@@ -19,6 +19,7 @@ What's new?
 - PWA: [Improved manifest.json for more reliable installation prompts](https://github.com/photoprism/photoprism/issues/3181)
 - Themes: [Added "Carbon", "Neon", and "Snow" based on colors from nordtheme.com](https://github.com/photoprism/photoprism/commit/93251d77a02a7de1ced8e28caf3deb2220a442c4)
 - Themes: [Removed "Electra", "Moonlight", and "Seaweed"](https://github.com/photoprism/photoprism/commit/e1405eba5430d30769d90292bdc69debe0e27092)
+- People: [Ambiguous faces are skipped when matching to improve performance](https://github.com/photoprism/photoprism/issues/3124)
 - Search: [Added `id:...` filter to find pictures by Exif UID, XMP Document ID or Instance ID](https://github.com/photoprism/photoprism/issues/3035)
 - Search: [Increased batch size for better performance when loading results](https://github.com/photoprism/photoprism/ssues/3009)
 - Search: [Deleted albums are ignored when using the "unsorted" filter](https://github.com/photoprism/photoprism/issues/3051)
@@ -39,6 +40,7 @@ What's new?
 - API: [HEAD requests are now supported for frontend bootstrap paths](https://github.com/photoprism/photoprism/issues/2965)
 - CLI: [Added file extension flag to the `photoprism convert` command](https://github.com/photoprism/photoprism/issues/3038)
 - CLI: [Commands create thumbnails and convert files in deterministic order](https://github.com/photoprism/photoprism/issues/3194)
+- Config: [Migrations are skipped if the same version has already been initialized](https://github.com/photoprism/photoprism/issues/3215)
 - Config: [Use dynamic social preview image based on app name](https://github.com/photoprism/photoprism/issues/3160)
 - Config: [Custom template path is not searched for files if not specified](https://github.com/photoprism/photoprism/issues/2946)
 - Config: [Advanced settings include additional options for PNGs and vector graphics](https://github.com/photoprism/photoprism/issues/2207#issuecomment-1436041896)

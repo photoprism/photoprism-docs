@@ -7,7 +7,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 230221-4bd632881</span>
+<span class="build">Build 230222-4c90ba84e</span>
 
 What's new?
 
@@ -27,6 +27,7 @@ What's new?
 - Search: [Sepia colored pictures are excluded when using the `mono` filter](https://github.com/photoprism/photoprism/issues/2657)
 - Videos: [Improved player compatibility with browser plugins](https://github.com/photoprism/photoprism/issues/1439)
 - Videos: [Improved preview image generation depending on duration](https://github.com/photoprism/photoprism/issues/1241#issuecomment-1363473310)
+- Videos: [Playback durations of less than one second can be indexed and displayed](https://github.com/photoprism/photoprism/issues/3224)
 - Albums: [Added extended search form with sorting options](https://github.com/photoprism/photoprism/issues/353)
 - Albums: [Fixed form field styles in the share dialog](https://github.com/photoprism/photoprism/commit/7c671e0dfc52936b1a3af426db1e0f5e165a12f7)
 - Albums: [Double quotes in album names are replaced by Unicode characters](https://github.com/photoprism/photoprism/issues/2891)
@@ -35,6 +36,7 @@ What's new?
 - Metadata: [Out-of-range altitude values are ignored to prevent indexing errors](https://github.com/photoprism/photoprism/issues/3182)
 - Metadata: [Software name is displayed on the Files tab, if available](https://github.com/photoprism/photoprism/commit/3c1b7acf1191c48620e3bdc8256694b7513856c9)
 - Metadata: [Valid year range in Exif data and filenames has been extended from 1990 to 1970](https://github.com/photoprism/photoprism/issues/3220)
+- Metadata: [Scanned images are automatically recognized by device name](https://github.com/photoprism/photoprism/issues/3221)
 - Index: [Improved performance when flagging hidden files](https://github.com/photoprism/photoprism/issues/2928)
 - Index: [Added file format support for Adobe Photoshop PSD images](https://github.com/photoprism/photoprism/issues/2207)
 - Index: [Added support for decoding JPEG XL and playing PNG animations](https://github.com/photoprism/photoprism/issues/3197)
@@ -42,6 +44,7 @@ What's new?
 - Index: [TIFF images with unsupported file format features can be converted](https://github.com/photoprism/photoprism/issues/1612)
 - Upload: [Estimated time remaining is displayed in minutes and seconds](https://github.com/photoprism/photoprism/issues/3049)
 - WebDAV: [Originals and import folders can be accessed in read-only mode](https://github.com/photoprism/photoprism/issues/3183)
+- WebDAV: [Update studio-b12/gowebdav client library](https://github.com/photoprism/photoprism/issues/2267)
 - API: [Search results can be sorted randomly to get a random set of pictures](https://github.com/photoprism/photoprism/issues/153#issuecomment-1408480166)
 - API: [HEAD requests are now supported for frontend bootstrap paths](https://github.com/photoprism/photoprism/issues/2965)
 - CLI: [Added file extension flag to the `photoprism convert` command](https://github.com/photoprism/photoprism/issues/3038)

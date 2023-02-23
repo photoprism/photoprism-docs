@@ -7,7 +7,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 230223-3c9b309ea</span>
+<span class="build">Build 230223-a934d74c2</span>
 
 What's new?
 
@@ -28,6 +28,7 @@ What's new?
 - Videos: [Improved player compatibility with browser plugins](https://github.com/photoprism/photoprism/issues/1439)
 - Videos: [Improved preview image generation depending on duration](https://github.com/photoprism/photoprism/issues/1241#issuecomment-1363473310)
 - Videos: [Playback durations of less than one second can be indexed and displayed](https://github.com/photoprism/photoprism/issues/3224)
+- Videos: [Added .dv to the list of known video file types](https://github.com/photoprism/photoprism/issues/3226)
 - Albums: [Added extended search form with sorting options](https://github.com/photoprism/photoprism/issues/353)
 - Albums: [Fixed form field styles in the share dialog](https://github.com/photoprism/photoprism/commit/7c671e0dfc52936b1a3af426db1e0f5e165a12f7)
 - Albums: [Double quotes in album names are replaced by Unicode characters](https://github.com/photoprism/photoprism/issues/2891)
@@ -37,6 +38,7 @@ What's new?
 - Metadata: [Software name is displayed on the Files tab, if available](https://github.com/photoprism/photoprism/commit/3c1b7acf1191c48620e3bdc8256694b7513856c9)
 - Metadata: [Valid year range in Exif data and filenames has been extended from 1990 to 1970](https://github.com/photoprism/photoprism/issues/3220)
 - Metadata: [Scanned images are automatically recognized by device name](https://github.com/photoprism/photoprism/issues/3221)
+- Index: [Improved performance by skipping updates when there are no changes](https://github.com/photoprism/photoprism/issues/3227)
 - Index: [Improved performance when flagging hidden files](https://github.com/photoprism/photoprism/issues/2928)
 - Index: [Added file format support for Adobe Photoshop PSD images](https://github.com/photoprism/photoprism/issues/2207)
 - Index: [Added support for decoding JPEG XL and playing PNG animations](https://github.com/photoprism/photoprism/issues/3197)

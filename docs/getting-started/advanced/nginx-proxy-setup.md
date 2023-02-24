@@ -76,14 +76,18 @@ After that you should have a new certificate in: `/etc/letsencrypt/live/photopri
 Now that we have our certificate its time to setup the NGINX itself.
 Since it is best practice to create a configuration file per application / domain, this is exactly what we gonna do.
 
-Create a new file `/etc/nginx/sites-enabled/photoprism.example.com` and put the following content in it.
+Create a new file `/etc/nginx/sites-available/photoprism.example.com` and put the following content in it.
 **Keep in mind to change the domain (there a multiple entries!)**
 ```nginx
 # PhotoPrism Nginx config with SSL HTTP/2 and reverse proxy
 # This file gives you an example on how to secure you PP instance with SSL
 server {
-    # listen 80; # If you really need HTTP (unsecure) remove the "#" on the beginning. Not recommended!
-    # listen [::]:80; # HTTP IPv6
+    listen       80;
+    listen [::]:80; # HTTP IPv6
+    # enforce https
+    return 301 https://$server_name$request_uri;
+}
+server {
 
     listen 443 ssl http2; # Listen on port 443 and enable ssl and HTTP/2
     listen [::]:443 ssl http2; # Same for IPv6
@@ -159,7 +163,9 @@ Have a look at the individual comments in the configuration for a further descri
 Once you've changed everything you need, let's restart `nginx`:
 
 ```bash
-service nginx restart
+sudo nginx -t
+sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/
+systemctl restart nginx
 ```
 Now, you should have access to PhotoPrism.
 

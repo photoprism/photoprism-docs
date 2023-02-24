@@ -165,7 +165,7 @@ Once you've changed everything you need, let's restart `nginx`:
 ```bash
 sudo nginx -t
 sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/
-systemctl restart nginx
+systemctl reload nginx
 ```
 Now, you should have access to PhotoPrism.
 

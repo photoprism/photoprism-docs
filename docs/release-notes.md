@@ -7,7 +7,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 230223-a934d74c2</span>
+<span class="build">Build 230224-96ea73263</span>
 
 What's new?
 
@@ -35,6 +35,7 @@ What's new?
 - Folders: [Search is case-insensitive and uses wildcards for improved usability](https://github.com/photoprism/photoprism/issues/2050)
 - Metadata: [GPS coordinates are normalized to be within a common range](https://github.com/photoprism/photoprism/issues/2109)
 - Metadata: [Out-of-range altitude values are ignored to prevent indexing errors](https://github.com/photoprism/photoprism/issues/3182)
+- Metadata: [Date defaults caused by software or camera bugs are ignored](https://github.com/photoprism/photoprism/issues/3229)
 - Metadata: [Software name is displayed on the Files tab, if available](https://github.com/photoprism/photoprism/commit/3c1b7acf1191c48620e3bdc8256694b7513856c9)
 - Metadata: [Valid year range in Exif data and filenames has been extended from 1990 to 1970](https://github.com/photoprism/photoprism/issues/3220)
 - Metadata: [Scanned images are automatically recognized by device name](https://github.com/photoprism/photoprism/issues/3221)

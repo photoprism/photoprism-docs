@@ -46,7 +46,7 @@ What's new?
 - Index: [TIFF images with unsupported file format features can be converted](https://github.com/photoprism/photoprism/issues/1612)
 - Upload: [Estimated time remaining is displayed in minutes and seconds](https://github.com/photoprism/photoprism/issues/3049)
 - WebDAV: [Originals and import folders can be accessed in read-only mode](https://github.com/photoprism/photoprism/issues/3183)
-- WebDAV: [Update studio-b12/gowebdav client library](https://github.com/photoprism/photoprism/issues/2267)
+- WebDAV: [Updated studio-b12/gowebdav client library](https://github.com/photoprism/photoprism/issues/2267)
 - API: [Search results can be sorted randomly to get a random set of pictures](https://github.com/photoprism/photoprism/issues/153#issuecomment-1408480166)
 - API: [HEAD requests are now supported for frontend bootstrap paths](https://github.com/photoprism/photoprism/issues/2965)
 - CLI: [Added file extension flag to the `photoprism convert` command](https://github.com/photoprism/photoprism/issues/3038)
@@ -59,7 +59,7 @@ What's new?
 - Podman: [Added config examples for users of Red Hat-based Linux distributions](https://github.com/photoprism/photoprism/tree/develop/setup/podman)
 - Security: [Go has been upgraded to v1.20.1, which includes bug fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.20.1)
 - Translations: [Added Afrikaans (South Africa)](https://github.com/photoprism/photoprism/pull/3031/files)
-- Translations: Updated Bulgarian, Chinese, Czech, Dutch, Estonian, French, German, Italian, Malay, Russian, Ukrainian and many others
+- Translations: Updated Arabic, Bulgarian, Chinese, Czech, Dutch, Estonian, French, German, Italian, Malay, Russian, Ukrainian and many others
 
 ### November 18, 2022 ###
 <span class="build">Build 221118-e58fee0fb</span>

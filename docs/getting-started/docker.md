@@ -253,7 +253,8 @@ The currently supported user ID ranges are 0, 33, 50-99, 500-600, and 900-1200. 
 | *Transcode Videos to AVC*        | `docker exec -ti photoprism photoprism convert`           |
 | *Regenerate Thumbnails*          | `docker exec -ti photoprism photoprism thumbs -f`         |
 | *Update Index*                   | `docker exec -ti photoprism photoprism index --cleanup`   |                  
-| *Import Files*                   | `docker exec -ti photoprism photoprism import [path]`     |
+| *Import Files*                   | `docker exec -ti photoprism photoprism import [path]`     |                 
+| *Copy Files*                     | `docker exec -ti photoprism photoprism copy [path]`       |
 
 !!! info "Complete Rescan"
     `docker exec -ti photoprism photoprism index -f` rescans all originals, including already indexed and unchanged files.

@@ -331,6 +331,7 @@ The currently supported user ID ranges are 0, 33, 50-99, 500-600, and 900-1200. 
 | *Regenerate Thumbnails*                               | `docker compose exec photoprism photoprism thumbs -f`         |
 | [*Update Index*](../user-guide/library/originals.md)  | `docker compose exec photoprism photoprism index --cleanup`   |                  
 | [*Import Files*](../user-guide/library/import.md)     | `docker compose exec photoprism photoprism import [path]`     |                  
+| *Copy Files*                                          | `docker compose exec photoprism photoprism copy [path]`     |                  
 
 !!! info "Complete Rescan"
     `docker compose exec photoprism photoprism index -f` rescans all originals, including already indexed and unchanged files.

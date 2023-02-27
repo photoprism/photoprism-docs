@@ -21,7 +21,7 @@ What's new?
 - Themes: [Added "Carbon", "Neon", and "Snow" based on colors from nordtheme.com](https://github.com/photoprism/photoprism/commit/93251d77a02a7de1ced8e28caf3deb2220a442c4)
 - Themes: [Removed "Electra", "Moonlight", and "Seaweed"](https://github.com/photoprism/photoprism/commit/e1405eba5430d30769d90292bdc69debe0e27092)
 - People: [Ambiguous faces are skipped when matching to improve performance](https://github.com/photoprism/photoprism/issues/3124)
-- People: [Improved performance of the face labeling page](https://github.com/photoprism/photoprism/issues/3124)
+- People: [Entering names is faster with many faces tagged](https://github.com/photoprism/photoprism/issues/3151)
 - Search: [Added `id:...` filter to find pictures by Exif UID, XMP Document ID or Instance ID](https://github.com/photoprism/photoprism/issues/3035)
 - Search: [Increased batch size for better performance when loading results](https://github.com/photoprism/photoprism/ssues/3009)
 - Search: [Deleted albums are ignored when using the `unsorted` filter](https://github.com/photoprism/photoprism/issues/3051)

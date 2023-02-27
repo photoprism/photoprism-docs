@@ -7,7 +7,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 230224-77714e8e3</span>
+<span class="build">Build 230227-b6f312e57</span>
 
 What's new?
 
@@ -330,6 +330,7 @@ languages have been added and updated. Thanks to all involved!
 - Albums: [Album names are shortened if necessary to avoid errors when saving](https://github.com/photoprism/photoprism/issues/2181)
 - Albums: [Fixed accidental creation of duplicates by pressing Enter multiple times](https://github.com/photoprism/photoprism/issues/2233)
 - People: [Improved logging and fixed potential issues with matching unrecognized faces](https://github.com/photoprism/photoprism/issues/2182)
+- People: [Improved performance of the face labeling page](https://github.com/photoprism/photoprism/issues/3124)
 - Places: [Number of pictures rendered on the map has been limited to 500,000](https://github.com/photoprism/photoprism/commit/49e923232380117c8b1eab9ff5b41de878d46ab2)
 - Library: [Added button to clear log history in *Library* > *Errors*](https://github.com/photoprism/photoprism/discussions/1683)
 - Library: [RAW previews and the number of actual files are shown under Originals](https://github.com/photoprism/photoprism/issues/2273)

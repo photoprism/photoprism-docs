@@ -4,39 +4,47 @@
     Should you experience problems with Haproxy, we recommend that you ask the Haproxy community for advice, as we cannot provide support for third-party software and services.
 
 ```bigquery
-#frontend connection handling
-#'photo' is the name of the subdomain
-acl photo hdr(host) -i photo.example.com
-use_backend be_photo_ipvANY if photo aclcrt_fe_http
+defaults
+    #Defaults used in frontend and backends
+    #Defined here to avoid repitition
+    #Can be overwritten in frontends and/or backends
+    log global
+    option logasap
+    mode http
+    timeout connect 30000ms
+    timeout client 30000ms
+    timeout server 30000ms
+    timeout tunnel 120000ms
+    timeout queue 5000ms
 
-#backend config
-#be_photo is the name of the backend
-backend be_photo_ipvANY
-mode http
-id 112
-log global
-timeout connect 30000
-timeout server 30000
-retries 3
-load-server-state-from-file global
-timeout queue 5s
-timeout tunnel 2m
-option redispatch
+##########################################################
 
-mode http
-option forwardfor
-no option httpclose
+#Frontend config
+frontend fe-photoprism
+    #'photo' is the name of the subdomain
+    #TLS certs should be referenced here, maybe created by dehydrated, certbot, ...
+    bind *:443 ssl crt /etc/ssl/localcerts/wildcard.example.com.pem
 
-http-request set-header Host photo.example.com
-http-request del-header  X-Frame-Options
-http-request del-header  Connection
-http-request add-header  X-Frame-Options SAMEORIGIN
-http-request add-header  Connection Upgrade
-             # Websocket configuration
-             acl is_websocket hdr(Upgrade) -i WebSocket
-acl is_websocket hdr_beg(Host) -i ws
-             # photoprism ip address and port
-server photo x.x.x.x:2342 id 106  
+    #SNI-Detection
+    #Can be removed, if not needed
+    acl sni_photo hdr(host) -i photo.example.com
+    #Use Backend if domain (acl is set) detected
+    use_backend be-photoprism if sni_photo
+
+    #Every unflagged request goes here, may target to another backend as well
+    default_backend be-photoprism
+
+##########################################################
+
+#Backend config
+#be-photoprism is the name of the backend referenced in frontend
+backend be-photoprism
+    retries 3
+    option forwardfor
+    no option httpclose
+    
+    #Local PhotoPrism-Instance
+    server photo 127.0.0.1:2342
 ```
 
 ## Why Use a Proxy? ##

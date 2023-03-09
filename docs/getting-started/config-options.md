@@ -5,6 +5,9 @@
 
 ### Authentication ###
 
+!!! danger ""
+    `PHOTOPRISM_AUTH_MODE: public` is NOT recommended for instances installed on a server accessible from outside your home network.
+
 |        Environment         |     CLI Flag      | Default  |                                  Description                                  |
 |----------------------------|-------------------|----------|-------------------------------------------------------------------------------|
 | PHOTOPRISM_AUTH_MODE       | --auth-mode       | password | authentication `MODE` (public, password)                                      |

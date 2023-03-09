@@ -22,7 +22,9 @@
 
 !!! tip "NSFW"
     An NSFW detector can be enabled to automatically mark images with potentially objectionable content as 
-    private. Note that this feature is only partially reliable.
+    private. Note that this feature is only partially reliable. 
+    
+    Images that have already been indexed before the NSWF detector is activated will not be scanned by the detector.
 
 #### Ignoring Files and Folders ####
 

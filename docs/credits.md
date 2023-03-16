@@ -11,10 +11,8 @@
 
 ## Infrastructure ##
 
-* [KeyCDN](https://www.keycdn.com/) provides CDN services for our site and demo
 * [Docker](https://www.docker.com/) hosts our app images and approved us for their Open Source Program
 * [GitHub](https://pages.github.com/) hosts all code repositories
-* [Drone CI](https://www.drone.io/) builds and tests our code  
 * [DigitalOcean](https://www.digitalocean.com/) hosts our documentation and website
 
 ## Artwork ##

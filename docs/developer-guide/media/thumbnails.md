@@ -32,7 +32,6 @@ In addition to better performance, a major advantage of cookie-free thumbnails i
 
 ### References ####
 
-- https://www.keycdn.com/support/how-to-use-cookie-free-domains
 - https://ourcodeworld.com/articles/read/1341/why-you-should-use-a-cookie-less-domain-for-serving-your-static-content-cdn
 - https://pragmaticwebsecurity.com/articles/oauthoidc/localstorage-xss.html
 

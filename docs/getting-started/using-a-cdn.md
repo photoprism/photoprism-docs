@@ -8,11 +8,11 @@ If you connect your instance to the public Internet and expect the number of use
 
 You can use the following config options to specify the URL of an external CDN and change the expiration time for caching thumbnails and other static content:
 
-| Environment                  | CLI Flag            | Default | Description                                                                      |
-|------------------------------|---------------------|---------|----------------------------------------------------------------------------------|
-| PHOTOPRISM_CDN_URL           | --cdn-url           |         | content delivery network `URL` *sponsors only*                                   |
-| PHOTOPRISM_HTTP_CACHE_TTL    | --http-cache-ttl    | 2592000 | number of `SECONDS` that a browser or CDN is allowed to cache HTTP responses     |
-| PHOTOPRISM_HTTP_CACHE_PUBLIC | --http-cache-public |         | allow HTTP responses to be stored in a public cache, e.g. a CDN or caching proxy |
+| Environment                  | CLI Flag            | Default | Description                                                 |
+|------------------------------|---------------------|---------|-------------------------------------------------------------|
+| PHOTOPRISM_CDN_URL           | --cdn-url           |         | content delivery network `URL` *sponsors only*              |
+| PHOTOPRISM_HTTP_CACHE_MAXAGE | --http-cache-maxage | 2592000 | time in `SECONDS` until cached content expires              |
+| PHOTOPRISM_HTTP_CACHE_PUBLIC | --http-cache-public |         | allow static content to be cached by a CDN or caching proxy |
 
 !!! note ""
     `PHOTOPRISM_HTTP_CACHE_TTL` and `PHOTOPRISM_HTTP_CACHE_PUBLIC` will be available with our upcoming release.

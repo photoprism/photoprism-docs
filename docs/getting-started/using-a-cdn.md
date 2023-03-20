@@ -6,7 +6,7 @@ If you connect your instance to the public Internet and expect the number of use
 
 ## Config Options
 
-You can use the following config options to specify the URL of an external CDN and change the expiration time for caching server responses:
+You can use the following config options to specify the URL of an external CDN and change the expiration time for caching thumbnails and other static content:
 
 | Environment                  | CLI Flag            | Default | Description                                                                      |
 |------------------------------|---------------------|---------|----------------------------------------------------------------------------------|

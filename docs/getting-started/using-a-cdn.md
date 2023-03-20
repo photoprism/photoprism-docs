@@ -15,7 +15,7 @@ You can use the following config options to specify the URL of an external CDN a
 | PHOTOPRISM_HTTP_CACHE_PUBLIC | --http-cache-public |         | allow static content to be cached by a CDN or caching proxy |
 
 !!! note ""
-    `PHOTOPRISM_HTTP_CACHE_TTL` and `PHOTOPRISM_HTTP_CACHE_PUBLIC` will be available with our upcoming release.
+    `PHOTOPRISM_HTTP_CACHE_MAXAGE` and `PHOTOPRISM_HTTP_CACHE_PUBLIC` will be available with our upcoming release.
 
 ## CDN Providers
 

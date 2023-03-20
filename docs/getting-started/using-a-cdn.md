@@ -22,7 +22,7 @@ You can use the following config options to specify the URL of an external CDN a
 ### bunny.net
 
 ![Bunny CDN](https://dl.photoprism.app/img/website/bunny-cdn.svg){ class='md right' }
-If you don't have a CDN provider yet, we can recommend [bunny.net](https://bunny.net?ref=8wx1e6qu14). This EU-based company may have a funny name, but it's a reputable provider with a good feature set, an own Tier 1 network, and more than 10,000 customers including big names like Hyundai. We also chose [bunny.net](https://bunny.net?ref=8wx1e6qu14) for our website and public demo as they are fully compliant with the GDPR.[^1]
+If you don't have a CDN provider yet, we can recommend [bunny.net](https://bunny.net?ref=8wx1e6qu14). This EU-based company has a funny name, but is a reputable provider with a good feature set, an own Tier 1 network, and more than 10,000 customers including big names like Hyundai. We also chose [bunny.net](https://bunny.net?ref=8wx1e6qu14) for our website and public demo as they are fully compliant with the GDPR.[^1]
 
 Pricing is very affordable compared to other providers and there is no minimum usage or monthly fee, so you only pay for what you actually need.
 

@@ -7,7 +7,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 230315-f7d839c53</span>
+<span class="build">Build 230320-286f06d89</span>
 
 What's new?
 
@@ -60,6 +60,7 @@ What's new?
 - Config: [Use dynamic social preview image based on app name](https://github.com/photoprism/photoprism/issues/3160)
 - Config: [Custom template path is not searched for files if not specified](https://github.com/photoprism/photoprism/issues/2946)
 - Config: [Advanced settings include additional options for PNGs and vector graphics](https://github.com/photoprism/photoprism/issues/2207#issuecomment-1436041896)
+- Config: [Added options for better HTTP cache control](https://github.com/photoprism/photoprism/issues/3297)
 - Docker: [MariaDB image and binaries have been upgraded from v10.9 to v10.10](https://github.com/photoprism/photoprism/commit/00022c90d3467655592858b0d3ad9c58fd9eee15)
 - Podman: [Added config examples for users of Red Hat-based Linux distributions](https://github.com/photoprism/photoprism/tree/develop/setup/podman)
 - Security: [Go has been upgraded to v1.20.2, which includes bug fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.20.2)

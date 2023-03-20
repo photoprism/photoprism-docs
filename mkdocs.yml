@@ -48,6 +48,7 @@ nav:
       - Haproxy: getting-started/proxies/haproxy.md
     - Advanced:
       - Transcoding: getting-started/advanced/transcoding.md
+      - Using a CDN: getting-started/advanced/using-a-cdn.md
       - Docker Volumes: getting-started/advanced/volumes.md
       - Using Kubernetes: getting-started/advanced/kubernetes.md
       - Backup Guide: getting-started/advanced/backups.md

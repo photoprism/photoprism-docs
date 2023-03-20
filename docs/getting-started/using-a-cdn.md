@@ -28,4 +28,4 @@ Prices vary by region and are very reasonable compared to other providers. There
 
 [Learn more ›](https://bunny.net?ref=8wx1e6qu14)
 
-[^1]: If you use the link below to sign up for their service, we will receive a $20 credit that helps us operate our [public demo](https://demo.photoprism.app/).
+[^1]: If you use the link below to sign up for their service, we will receive a $20 credit that helps us operate [our demo](https://demo.photoprism.app/).

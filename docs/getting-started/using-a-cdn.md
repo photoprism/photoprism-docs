@@ -10,7 +10,7 @@ A *Content Delivery Network* is a distributed network of servers that can delive
 
 **Many Users:** If your PhotoPrism instance is getting a lot of traffic, a CDN can improve application performance by reducing the load on your server.
 
-![Network Diagram](https://dl.photoprism.app/img/diagrams/proxy-cdn.svg?classes=w100)
+![Network Diagram](https://dl.photoprism.app/img/diagrams/content-delivery.svg?classes=w100)
 
 ## Config Options
 

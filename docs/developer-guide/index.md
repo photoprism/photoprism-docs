@@ -52,14 +52,16 @@ Pull requests solving ["help wanted"](https://github.com/photoprism/photoprism/l
 
 **Be aware that reviewing, testing and finally merging pull requests requires significant resources on our side. It can therefore take several months if it is not just a small fix, especially if extensive testing is needed to prevent bugs from getting into our stable version.**
 
-## Infrastructure Sponsors ##
+## Project Sponsors ##
 
-[**We would like to thank all of our sponsors**](../credits.md), whose generous support has been and continues to be essential to the success of the project!
+[We would like to thank all of our sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md), whose generous support has been and continues to be essential to the success of the project!
 
 - [**GitHub**](https://github.com/) hosts our [code repositories](https://github.com/photoprism/photoprism) and also provides many other important services
 - [**Docker**](https://www.docker.com/) approved us for their [Open Source Program](https://www.docker.com/community/open-source/application/) and hosts all of our app images
 - [**Element**](https://element.io/) develops and [operates the infrastructure](https://matrix.org/) that our [community chat](https://link.photoprism.app/chat) is based on
 - [**BrowserStack**](https://www.browserstack.com/) provides [free access](https://www.browserstack.com/open-source) to their device and browser testing infrastructure
+
+[View Sponsors ›](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md){ class="pr-3" } [View Credits ›](../credits.md)
 
 <div class="py-1"></div>
 

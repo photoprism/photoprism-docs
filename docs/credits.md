@@ -2,8 +2,8 @@
 
 A big thank you goes to the following development infrastructure sponsors, whose generous support has been and continues to be very important to the growth and success of our project:
 
-- [**GitHub**](https://github.com/) hosts our [community forum](https://github.com/photoprism/photoprism/discussions) and all our [code repositories](https://github.com/photoprism/photoprism)
-- [**Docker**](https://www.docker.com/) approved us for their [Open Source Program](https://www.docker.com/community/open-source/application/) and hosts all our app images
+- [**GitHub**](https://github.com/) hosts our [code repositories](https://github.com/photoprism/photoprism) and also provides much of the [other infrastructure](https://github.com/photoprism/photoprism/discussions)
+- [**Docker**](https://www.docker.com/) approved us for their [Open Source Program](https://www.docker.com/community/open-source/application/) and hosts all of our app images
 - [**BrowserStack**](https://www.browserstack.com/) gives us [free access](https://www.browserstack.com/open-source) to their device and browser testing infrastructure
  
 ## Technologies ##

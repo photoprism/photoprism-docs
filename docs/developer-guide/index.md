@@ -60,7 +60,7 @@ A big thank you goes to the following sponsors, whose generous support has been 
 - [**Docker**](https://www.docker.com/) approved us for their [Open Source Program](https://www.docker.com/community/open-source/application/) and hosts all of our app images
 - [**BrowserStack**](https://www.browserstack.com/) gives us [free access](https://www.browserstack.com/open-source) to their device and browser testing infrastructure
 
-<div class="py-2"></div>
+<div class="py-1"></div>
 
 !!! example "Privacy Notice"
     We operate a number of web services that help us develop and maintain our software in collaboration with the open source community, such as Weblate hosted at [translate.photoprism.app](https://translate.photoprism.app/) to keep translations up to date.

@@ -1,6 +1,6 @@
 # Credits
 
-We would like to thank our sponsors, whose generous support has been and continues to be essential to the success of the project! :octicons-heart-fill-24:{ .heart .purple }
+**We would like to thank our sponsors,** whose generous support has been and continues to be essential to the success of the project! :octicons-heart-fill-24:{ .heart .purple }
 
 ## Infrastructure ##
 
@@ -22,6 +22,7 @@ We would like to thank our sponsors, whose generous support has been and continu
 * [NGC 1499 California Nebula](https://commons.wikimedia.org/wiki/File:NGC_1499_(California_Nebula)_narrowband.jpg) by [Remidone](https://creativecommons.org/licenses/by-sa/4.0/deed.en)
 * [Prism Light Separation](https://www.flickr.com/photos/digitalvosem/44622462042/in/dateposted/) by [digitalvosem](https://www.flickr.com/photos/digitalvosem/)
 * [Follow that light](https://www.flickr.com/photos/32658783@N03/24226085838/in/faves-12602671@N04/) by [Margeois](https://www.flickr.com/photos/32658783@N03/)
-* [Gopher overlapping the TensorFlow logo](img/tensorgologo.png) by [P. Galeone](https://pgaleone.eu/tensorflow/go/2017/05/29/understanding-tensorflow-using-go/)
 * [Go Gopher](https://go.dev/blog/gopher) designed by [Renee French](http://reneefrench.blogspot.com/)
 * [Gopher Stickers](https://github.com/tenntenn/gopher-stickers) created by [Takuya Ueda](https://github.com/tenntenn)
+
+![Thank You](img/credits.jpg){ class='w100 pt-2' }

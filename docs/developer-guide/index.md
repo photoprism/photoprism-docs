@@ -54,7 +54,7 @@ Pull requests solving ["help wanted"](https://github.com/photoprism/photoprism/l
 
 ## Infrastructure Sponsors ##
 
-A big thank you goes to the following sponsors, whose generous support has been and continues to be essential to the success of the project:
+A big thank you goes to [our sponsors](../credits.md), whose generous support has been and continues to be essential to the success of the project:
 
 - [**GitHub**](https://github.com/) hosts our [code repositories](https://github.com/photoprism/photoprism) and also provides many other important services
 - [**Docker**](https://www.docker.com/) approved us for their [Open Source Program](https://www.docker.com/community/open-source/application/) and hosts all of our app images

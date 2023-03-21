@@ -1,11 +1,14 @@
 # Credits
 
-A big thank you goes to the following development infrastructure sponsors, whose generous support has been and continues to be very important to the growth and success of our project:
+We would like to thank our sponsors, whose generous support has been and continues to be essential to the success of the project! :octicons-heart-fill-24:{ .heart .purple }
 
-- [**GitHub**](https://github.com/) hosts our [code repositories](https://github.com/photoprism/photoprism) and also provides much of the [other infrastructure](https://github.com/photoprism/photoprism/discussions)
+## Infrastructure ##
+
+- [**GitHub**](https://github.com/) hosts our [code repositories](https://github.com/photoprism/photoprism) and also provides many other important services
 - [**Docker**](https://www.docker.com/) approved us for their [Open Source Program](https://www.docker.com/community/open-source/application/) and hosts all of our app images
-- [**BrowserStack**](https://www.browserstack.com/) gives us [free access](https://www.browserstack.com/open-source) to their device and browser testing infrastructure
- 
+- [**Element**](https://element.io/) develops and [operates the infrastructure](https://matrix.org/) that our [community chat](https://link.photoprism.app/chat) is based on
+- [**BrowserStack**](https://www.browserstack.com/) provides [free access](https://www.browserstack.com/open-source) to their device and browser testing infrastructure
+
 ## Technologies ##
 
 * [Go](https://golang.org/), [Gin](https://github.com/gin-gonic/gin) and [Vuetify](https://vuetifyjs.com/en/)

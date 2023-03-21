@@ -62,8 +62,6 @@ if needed. Please be patient with us.
 
 **Be aware that reviewing, testing and finally merging pull requests requires significant resources on our side. It can therefore take several months if it is not just a small fix, especially if extensive testing is needed to prevent bugs from getting into our stable version.**
 
-<div class="py-1"></div>
-
 !!! example "Privacy Notice"
     We operate a number of web services that help us develop and maintain our software in collaboration with the open source community, for example [translate.photoprism.app](https://translate.photoprism.app/).
     

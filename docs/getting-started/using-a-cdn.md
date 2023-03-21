@@ -36,4 +36,4 @@ Pricing starts at $0.005/GB and there is no minimum usage or monthly fee, so you
 
 [Learn more ›](https://link.photoprism.app/bunny-cdn)
 
-[^1]: We receive a $20 credit when you sign up through our link, which helps us operate our infrastructure.
+[^1]: We receive a $20 credit when you sign up through our link, which helps us fund the project infrastructure. 

@@ -6,7 +6,7 @@ If you connect your instance to the public Internet and expect the number of use
 
 ## Config Options
 
-You can use the following config options to specify the URL of an external CDN and change the expiration time for caching thumbnails and other static content:
+You can use the following config options to specify the URL of an external CDN and change the cache expiration time for thumbnails and other static content:
 
 | Environment                  | CLI Flag            | Default | Description                                                 |
 |------------------------------|---------------------|---------|-------------------------------------------------------------|
@@ -22,10 +22,10 @@ You can use the following config options to specify the URL of an external CDN a
 ### bunny.net
 
 ![Bunny CDN](https://dl.photoprism.app/img/website/bunny-cdn.svg){ class='md right' }
-If you don't have a CDN provider yet, we can recommend [bunny.net](https://bunny.net?ref=8wx1e6qu14). This EU-based company has a funny name, but is a reputable provider with a good feature set, an own Tier 1 network, and more than 10,000 customers including big names like Hyundai. We also chose [bunny.net](https://bunny.net?ref=8wx1e6qu14) for our website and public demo as they are fully compliant with the GDPR.[^1]
+If you don't have a CDN provider yet, we can recommend [bunny.net](https://bunny.net?ref=8wx1e6qu14). This EU-based company has a funny name, but is a reputable provider with a wide range of features and more than 20,000 customers, including big names like Hyundai. We also chose [bunny.net](https://bunny.net?ref=8wx1e6qu14) for our website and public demo as they are fully compliant with the GDPR.[^1]
 
 Pricing is very affordable compared to other providers and there is no minimum usage or monthly fee, so you only pay for what you actually need.
 
 [Learn more ›](https://bunny.net?ref=8wx1e6qu14)
 
-[^1]: If you use our link to sign up, we receive a $20 credit which helps us operate [our demo](https://demo.photoprism.app/).
+[^1]: We receive a $20 credit when you sign up through our link, which helps us operate our infrastructure.

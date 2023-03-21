@@ -1,6 +1,14 @@
 # Using a Content Delivery Network (CDN)
 
-If you connect your instance to the public Internet and expect the number of users to fluctuate greatly or some users to access it from remote locations with high latency, we recommend configuring a *Content Delivery Network* as this can effectively reduce server load and improve the user experience:
+A *Content Delivery Network* is a distributed network of servers that can deliver static content to users around the world.
+
+## When to use a CDN?
+
+**Large Media Files:** PhotoPrism stores photos and videos that can be very large. A CDN can help speed up the delivery of these files to users.
+
+**Global Audience:** If your PhotoPrism instance is accessed from different locations around the world, a CDN can help reduce latency and improve the overall user experience by delivering content from servers that are closer to your users.
+
+**Many Users:** If your PhotoPrism instance is getting a lot of traffic, a CDN can improve application performance by reducing the load on your server.
 
 ![Network Diagram](https://dl.photoprism.app/img/diagrams/proxy-cdn.svg?classes=w100)
 

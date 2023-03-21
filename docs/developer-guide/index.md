@@ -52,10 +52,19 @@ Pull requests solving ["help wanted"](https://github.com/photoprism/photoprism/l
 
 **Be aware that reviewing, testing and finally merging pull requests requires significant resources on our side. It can therefore take several months if it is not just a small fix, especially if extensive testing is needed to prevent bugs from getting into our stable version.**
 
-## Privacy Notice ##
+## Infrastructure Sponsors ##
 
-We operate a number of web services that help us develop and maintain our software in collaboration with the open source community, such as Weblate hosted at [translate.photoprism.app](https://translate.photoprism.app/) to keep translations up to date.
+A big thank you goes to the following development infrastructure sponsors, whose generous support has been and continues to be very important to the growth and success of our project:
 
-Because many of these apps and tools were originally developed for internal use without a high level of privacy in mind, we ask that you do not enter personal information such as your real name or personal email address if you want it to remain private.
+- [**GitHub**](https://github.com/) hosts our [community forum](https://github.com/photoprism/photoprism/discussions) and all our [code repositories](https://github.com/photoprism/photoprism)
+- [**Docker**](https://www.docker.com/) approved us for their [Open Source Program](https://www.docker.com/community/open-source/application/) and hosts all our app images
+- [**BrowserStack**](https://www.browserstack.com/) gives us [free access](https://www.browserstack.com/open-source) to their device and browser testing infrastructure
 
-**Personal details may otherwise show up in logs, source code, translation files, commit messages, and pull request comments.**
+<div class="py-2"></div>
+
+!!! example "Privacy Notice"
+    We operate a number of web services that help us develop and maintain our software in collaboration with the open source community, such as Weblate hosted at [translate.photoprism.app](https://translate.photoprism.app/) to keep translations up to date.
+    
+    Because many of these apps and tools were originally developed for internal use without a high level of privacy in mind, we ask that you do not enter personal information such as your real name or personal email address if you want it to remain private.
+    
+    **Personal details may otherwise show up in logs, source code, translation files, commit messages, and pull request comments.**

@@ -1,19 +1,17 @@
 # Credits
 
-**Thanks to everyone** who made this possible!
+A big thank you goes to the following development infrastructure sponsors, whose generous support has been and continues to be very important to the growth and success of our project:
 
+- [**GitHub**](https://github.com/) hosts our [community forum](https://github.com/photoprism/photoprism/discussions) and all our [code repositories](https://github.com/photoprism/photoprism)
+- [**Docker**](https://www.docker.com/) approved us for their [Open Source Program](https://www.docker.com/community/open-source/application/) and hosts all our app images
+- [**BrowserStack**](https://www.browserstack.com/) gives us [free access](https://www.browserstack.com/open-source) to their device and browser testing infrastructure
+ 
 ## Technologies ##
 
 * [Go](https://golang.org/), [Gin](https://github.com/gin-gonic/gin) and [Vuetify](https://vuetifyjs.com/en/)
 * [Google](https://developers.google.com/) [TensorFlow](https://www.tensorflow.org/) and [Material Design](https://material.io/)
 * [MkDocs](https://www.mkdocs.org/) and [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
 * [Complete list of 3rd-party software packages](https://raw.githubusercontent.com/photoprism/photoprism/develop/NOTICE)
-
-## Infrastructure ##
-
-* [Docker](https://www.docker.com/) hosts our app images and approved us for their Open Source Program
-* [GitHub](https://pages.github.com/) hosts all code repositories
-* [DigitalOcean](https://www.digitalocean.com/) hosts our documentation and website
 
 ## Artwork ##
 

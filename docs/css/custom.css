@@ -10,6 +10,7 @@
     --md-accent-bg-color--light: rgba(0,0,0,.54);
     --md-typeset-a-color: #4051b5;
     --md-admonition-icon--verified: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M17.3 45 13.5 38.5 5.95 36.95 6.8 29.6 2 24 6.8 18.45 5.95 11.1 13.5 9.55 17.3 3 24 6.1 30.7 3 34.55 9.55 42.05 11.1 41.2 18.45 46 24 41.2 29.6 42.05 36.95 34.55 38.5 30.7 45 24 41.9ZM24 24ZM21.85 30.65 33.2 19.4 30.95 17.35 21.85 26.35 17.1 21.4 14.8 23.65ZM18.65 41.05 24 38.8 29.5 41.05 32.85 36.05 38.7 34.55 38.1 28.6 42.15 24 38.1 19.3 38.7 13.35 32.85 11.95 29.4 6.95 24 9.2 18.5 6.95 15.15 11.95 9.3 13.35 9.9 19.3 5.85 24 9.9 28.6 9.3 34.65 15.15 36.05Z"/></svg>');
+    --md-admonition-icon--example: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48"><path d="M480 936 80 456l120-240h560l120 240-400 480ZM368 426h224l-75-150h-74l-75 150Zm82 381V486H183l267 321Zm60 0 267-321H510v321Zm149-381h136l-75-150H584l75 150Zm-494 0h136l75-150H240l-75 150Z"/></svg>');
     /* --md-text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; */
 }
 
@@ -204,6 +205,10 @@ p .action-button {
     font-weight: bold !important;
 }
 
+.center-align {
+    text-align: center;
+}
+
 .center-align.action-buttons {
     text-align: center;
     user-select: none;
@@ -342,7 +347,7 @@ img.w40 {
 }
 
 img.w50 {
-    max-width: 40%;
+    max-width: 50%;
 }
 
 img.w60 {
@@ -413,6 +418,14 @@ img.w100,
 img.full,
 img.fullwidth {
     width: 100%;
+}
+
+img.sponsor-logo {
+    text-align: center;
+    vertical-align: middle;
+    width: auto;
+    height: 150px;
+    margin: 25px;
 }
 
 /* Common Styles */

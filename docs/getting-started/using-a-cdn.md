@@ -28,4 +28,4 @@ Pricing is very affordable compared to other providers and there is no minimum u
 
 [Learn more ›](https://bunny.net?ref=8wx1e6qu14)
 
-[^1]: If you use our link to sign up, we will receive a $20 credit that helps us operate [our demo](https://demo.photoprism.app/).
+[^1]: If you use our link to sign up, we receive a $20 credit which helps us operate [our demo](https://demo.photoprism.app/).

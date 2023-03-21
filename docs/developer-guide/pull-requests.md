@@ -62,10 +62,11 @@ if needed. Please be patient with us.
 
 **Be aware that reviewing, testing and finally merging pull requests requires significant resources on our side. It can therefore take several months if it is not just a small fix, especially if extensive testing is needed to prevent bugs from getting into our stable version.**
 
-## Privacy Notice ##
+<div class="py-1"></div>
 
-We operate a number of web services that help us develop and maintain our software in collaboration with the open source community, such as Weblate hosted at [translate.photoprism.app](https://translate.photoprism.app/) to keep translations up to date.
-
-Because many of these apps and tools were originally developed for internal use without a high level of privacy in mind, we ask that you do not enter personal information such as your real name or personal email address if you want it to remain private.
-
-**Personal details may otherwise show up in logs, source code, translation files, commit messages, and pull request comments.**
+!!! example "Privacy Notice"
+    We operate a number of web services that help us develop and maintain our software in collaboration with the open source community, for example [translate.photoprism.app](https://translate.photoprism.app/).
+    
+    Because many of these apps and tools were originally developed for internal use without a high level of privacy in mind, we ask that you do not enter personal information such as your real name or personal email address if you want it to remain private.
+    
+    **Personal details may otherwise show up in logs, source code, translation files, commit messages, and pull request comments.**

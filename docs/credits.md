@@ -1,6 +1,6 @@
 # Credits
 
-**We would like to thank our sponsors,** whose generous support has been and continues to be essential to the success of the project! :octicons-heart-fill-24:{ .heart .purple }
+**We would like to thank all of our sponsors,** whose generous support has been and continues to be essential to the success of the project! :octicons-heart-fill-24:{ .heart .purple }
 
 ## Infrastructure ##
 

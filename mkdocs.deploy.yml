@@ -14,7 +14,7 @@ plugins:
         - goreportcard.com/*
   - redirects:
       redirect_maps:
-        'team.md': 'https://www.photoprism.app/team'
+        'team.md': 'https://www.photoprism.app/about/team'
         'funding.md': 'https://www.photoprism.app/membership'
         'privacy.md': 'https://www.photoprism.app/privacy'
         'terms.md': 'https://www.photoprism.app/terms'

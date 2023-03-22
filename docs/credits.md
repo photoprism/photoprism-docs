@@ -1,6 +1,6 @@
 # Credits
 
-[We would like to thank all of our sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md), whose generous support has been and continues to be essential to the success of the project! :octicons-heart-fill-24:{ .heart .purple }
+[A big thank you to all current and past sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md), whose generous support has been and continues to be essential to the success of the project! :octicons-heart-fill-24:{ .heart .purple }
 
 ## Infrastructure ##
 

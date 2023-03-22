@@ -52,9 +52,11 @@ Pull requests solving ["help wanted"](https://github.com/photoprism/photoprism/l
 
 **Be aware that reviewing, testing and finally merging pull requests requires significant resources on our side. It can therefore take several months if it is not just a small fix, especially if extensive testing is needed to prevent bugs from getting into our stable version.**
 
-## Project Sponsors ##
+## Thank You to All Current and Past Sponsors ##
 
-[We would like to thank all of our sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md), whose generous support has been and continues to be essential to the success of the project!
+[A big thank you to all of our sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md), whose generous support has been and continues to be essential to the success of the project! :octicons-heart-fill-24:{ .heart .purple }
+
+Our project infrastructure is provided by the following companies:
 
 - [**GitHub**](https://github.com/) hosts our [code repositories](https://github.com/photoprism/photoprism) and also provides many other important services
 - [**Docker**](https://www.docker.com/) approved us for their [Open Source Program](https://www.docker.com/community/open-source/application/) and hosts all of our app images

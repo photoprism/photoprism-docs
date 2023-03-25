@@ -69,11 +69,11 @@ RUN make all install DESTDIR=/opt/photoprism
 # Base base image as photoprism/development
 FROM ubuntu:18.04
 
-WORKDIR /srv/photoprism
+WORKDIR /opt/photoprism
 
 # Copy built binaries and assets to this image
 COPY --from=build /usr/local/bin/photoprism /usr/local/bin/photoprism
-COPY --from=build /srv/photoprism /srv/photoprism
+COPY --from=build /opt/photoprism /opt/photoprism
 
 # Expose HTTP port
 EXPOSE 80

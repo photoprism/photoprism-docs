@@ -63,6 +63,12 @@ sudo apt update
 sudo apt install docker-compose
 ```
 
+Running the following commands as root will add a `docker-compose` alias for the new Compose plugin so that older scripts don't break:
+
+```
+echo 'docker compose "$@"' > /bin/docker-compose
+chmod +x /bin/docker-compose
+```
 
 ## Using Docker
 ### Cannot Connect

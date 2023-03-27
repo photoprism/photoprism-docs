@@ -258,6 +258,23 @@ sudo chmod -R a+rwx [folder]
     **Be very careful when changing permissions in shared hosting environments.** If you are using PhotoPrism on corporate
     or university servers, we recommend that you ask your IT help desk for advice.
 
+## Overlay Volumes
+
+Depending on overlay file system support, it is possible to mount additional host folders as subfolders of `/photoprism/originals` (or other storage folders), for example:
+
+```yaml
+volumes:
+  - "/home/username/Pictures:/photoprism/originals"
+  - "/example/friends:/photoprism/originals/friends"
+  - "/mnt/photos:/photoprism/originals/media"
+```
+
+For this to work, you should have the `cgroupfs-mount` package installed, as shown in the [installation script we provide](https://github.com/photoprism/photoprism/blob/develop/scripts/dist/install-docker.sh).
+You may otherwise find that files added to the mounted folders are not visible on the host, and data loss may occur.
+
+!!! note ""
+    We generally recommend that you start with a simple configuration without overlay volume mounts or path placeholders like `~`, and only move on to a more complex setup once this works.
+
 ## Disk Space
 
 In case the logs show "disk full", "quota exceeded", or "no space left" errors, either the disk containing the

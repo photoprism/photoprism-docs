@@ -273,7 +273,7 @@ For this to work, you should have the `cgroupfs-mount` package installed, as sho
 You may otherwise find that files added to the mounted folders are not visible on the host, and data loss may occur.
 
 !!! note ""
-    We generally recommend that you start with a simple configuration without overlay volume mounts or path placeholders like `~`, and only move on to a more complex setup once this works.
+    We recommend that you start with a simple configuration without overlay volume mounts or path placeholders like `~`, and only move on to a more complex setup once this works.
 
 ## Disk Space
 

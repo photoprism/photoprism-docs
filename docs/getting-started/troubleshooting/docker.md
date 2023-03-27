@@ -18,7 +18,7 @@ The following instructions explain how to install Docker:
 
 [Podman](https://podman.io/) is supported as a replacement for Docker on Red Hat Enterprise Linux® and compatible Linux distributions such as CentOS, Fedora, AlmaLinux, and Rocky Linux. The following installs the `podman` and `podman-compose` commands if they are not already installed:
 
-```
+```bash
 sudo dnf update -y
 sudo dnf install epel-release -y
 sudo dnf install netavark aardvark-dns podman podman-docker podman-compose -y
@@ -29,7 +29,7 @@ podman --version
 
 We also provide a setup script that conveniently installs Podman and downloads the default configuration to a directory of your choice:
 
-```
+```bash
 mkdir -p /opt/photoprism
 cd /opt/photoprism
 curl -sSf https://dl.photoprism.app/podman/install.sh | bash
@@ -41,7 +41,7 @@ Please keep in mind to replace the `docker` and `docker compose` commands with `
 
 If you are using Ubuntu Linux, you can run this script to install the latest *Docker* version, including the *Compose Plugin*, on your server in one step:
 
-```
+```bash
 bash <(curl -s https://setup.photoprism.app/ubuntu/install-docker.sh)
 ```
 
@@ -51,23 +51,23 @@ The examples in our guides now use the new `docker compose` command by default. 
 
 On some Linux distributions, you may need to install an additional package. To do so, you can use a graphical software package manager or run the following command in a terminal to install the *Compose Plugin* for *Docker* on Ubuntu and Debian:
 
-```
+```bash
 sudo apt update
 sudo apt install docker-compose-plugin
 ```
 
 If that does not work, this will install the legacy `docker-compose` command:
 
-```
+```bash
 sudo apt update
 sudo apt install docker-compose
 ```
 
-Running the following commands as root will add a `docker-compose` alias for the new Compose plugin so that older scripts don't break:
+Running the following commands will add a `docker-compose` alias for the new Compose plugin so that older scripts don't break:
 
-```
-echo 'docker compose "$@"' > /bin/docker-compose
-chmod +x /bin/docker-compose
+```bash
+echo 'docker compose "$@"' | sudo tee /bin/docker-compose
+sudo chmod +x /bin/docker-compose
 ```
 
 ## Using Docker

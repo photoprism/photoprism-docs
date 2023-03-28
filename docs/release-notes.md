@@ -7,7 +7,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 230328-1124df156</span>
+<span class="build">Build 230328-f8425652c</span>
 
 What's new?
 
@@ -20,6 +20,7 @@ What's new?
 - PWA: [Improved manifest.json for more reliable installation prompts](https://github.com/photoprism/photoprism/issues/3181)
 - Themes: [Added "Carbon", "Neon", and "Snow" based on colors from nordtheme.com](https://github.com/photoprism/photoprism/commit/93251d77a02a7de1ced8e28caf3deb2220a442c4)
 - Themes: [Removed "Electra", "Moonlight", and "Seaweed"](https://github.com/photoprism/photoprism/commit/e1405eba5430d30769d90292bdc69debe0e27092)
+- Themes: [Renamed "Snow" to "Nordic" and removed "Cyano"](https://github.com/photoprism/photoprism/commit/53cddf5a4365614024670bb455de41e2b45da2b0)
 - People: [Ambiguous faces are skipped when matching to improve performance](https://github.com/photoprism/photoprism/issues/3124)
 - People: [Entering names is faster with many faces tagged](https://github.com/photoprism/photoprism/issues/3151)
 - Search: [Added `id:...` filter to find pictures by Exif UID, XMP Document ID or Instance ID](https://github.com/photoprism/photoprism/issues/3035)
@@ -53,6 +54,7 @@ What's new?
 - Download: [Added settings to choose which files to download by default](https://github.com/photoprism/photoprism/issues/449)
 - WebDAV: [Originals and import folders can be accessed in read-only mode](https://github.com/photoprism/photoprism/issues/3183)
 - WebDAV: [Updated studio-b12/gowebdav client library](https://github.com/photoprism/photoprism/issues/2267)
+- WebDAV: [Replaced client library to prevent incomplete uploads to other servers](https://github.com/photoprism/photoprism/issues/3310)
 - API: [Search results can be sorted randomly to get a random set of pictures](https://github.com/photoprism/photoprism/issues/153#issuecomment-1408480166)
 - API: [HEAD requests are now supported for frontend bootstrap paths](https://github.com/photoprism/photoprism/issues/2965)
 - CLI: [Added file extension flag to the `photoprism convert` command](https://github.com/photoprism/photoprism/issues/3038)

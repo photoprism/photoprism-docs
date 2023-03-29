@@ -24,7 +24,7 @@ We have a zero bug policy and do our best to help users when they need support o
 This comes at a price, as we can't give exact deadlines for new features.
 
 Having said that, funding really has the highest impact. So users can do their part and
-[become a sponsor](https://www.photoprism.app/membership) to get their favorite features as soon as possible.
+[become a member](https://www.photoprism.app/membership) to get their favorite features as soon as possible.
 
 ## System Requirements
 

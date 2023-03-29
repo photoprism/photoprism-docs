@@ -20,7 +20,7 @@
 
     Be aware that we have a zero-bug policy and do our best to help users when they need support or have other questions. This comes at a price though, as we can't give exact release dates for new features. Our team receives many more requests than can be implemented, so we want to emphasize that we are in no way obligated to implement the features, enhancements, or other changes you request. We do, however, appreciate your feedback and carefully consider all requests.
 
-    **Since [sustained funding](https://www.photoprism.app/oss/faq) is key to quickly releasing new features, we encourage all users to support our mission by [signing up as a sponsor](https://www.photoprism.app/membership) or purchasing a [commercial license](https://www.photoprism.app/teams).**
+    **Since [sustained funding](https://www.photoprism.app/oss/faq) is key to quickly releasing new features, we encourage all users to support our mission by [signing up as a member](https://www.photoprism.app/membership) or purchasing a [commercial license](https://www.photoprism.app/teams).**
 
 ??? question "What functionality is generally available?"
     

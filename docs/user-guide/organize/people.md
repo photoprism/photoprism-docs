@@ -77,7 +77,7 @@ You can hide a person in the *Recognized* section by clicking :material-close: i
 Pictures of this person continue to be visible in search results and albums.
 
 !!! example ""
-    **This currently is a sponsor feature to thank everyone who supports the development of this application.**
+    **This currently is a member feature to thank everyone who supports the development of this application.**
     You will learn how to enable it when you sign up on [Patreon](https://link.photoprism.app/patreon) or [GitHub Sponsors](https://link.photoprism.app/sponsor).
     We encourage all users to [back our mission](https://www.photoprism.app/membership) as this [helps us provide more features](https://www.photoprism.app/oss/faq) to the public. Thank you! :octicons-heart-fill-24:{ .heart .purple }
 

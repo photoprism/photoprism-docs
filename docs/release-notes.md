@@ -294,7 +294,7 @@ This update includes translations that were recently contributed via [translate.
 ### May 27, 2022 ###
 <span class="build">Build 220527-005770ca</span>
 
-This update improves navigation fonts and [mobile submenu colors](https://dl.photoprism.app/img/ui/mobile-submenu-light-797x567.png) for light themes. We are also working to establish [PhotoPrism+](https://www.photoprism.app/membership) as the name for our community membership and associated benefits. For this, sponsorship [information in the app](https://try.photoprism.app/library/about), [on our website](https://www.photoprism.app/membership), on [GitHub Sponsors](https://link.photoprism.app/sponsor) and [Patreon](https://link.photoprism.app/patreon) is gradually being updated.
+This update improves navigation fonts and [mobile submenu colors](https://dl.photoprism.app/img/ui/mobile-submenu-light-797x567.png) for light themes. We are also working to establish [PhotoPrism+](https://www.photoprism.app/membership) as the name for our community membership and associated benefits. For this, membership [information in the app](https://try.photoprism.app/library/about), [on our website](https://www.photoprism.app/membership), on [GitHub Sponsors](https://link.photoprism.app/sponsor) and [Patreon](https://link.photoprism.app/patreon) is gradually being updated.
 
 - UX: [Fixed light theme colors of mobile navigation submenu](https://github.com/photoprism/photoprism/issues/2359)
 - UX: [Splash screen has been updated and no longer depends on admin theme](https://github.com/photoprism/photoprism/issues/2360)
@@ -315,7 +315,7 @@ This service release fixes potential issues with our new Debian 12-based Docker 
 - Docker: [Removed incorrect permission check for storage folder on startup](https://github.com/photoprism/photoprism/issues/2334)
 - Docker: [Supported User and Group ID ranges have been documented](https://github.com/photoprism/photoprism/issues/2336)
 
-**Thank you to everyone who [helped with testing](https://github.com/photoprism/photoprism/projects/5?card_filter_query=label%3Aplease-test), [signed up as a sponsor](https://www.photoprism.app/membership), or [contributed](https://github.com/photoprism/photoprism/graphs/contributors) in other ways! We appreciate it very much.**
+**Thank you to everyone who [helped with testing](https://github.com/photoprism/photoprism/projects/5?card_filter_query=label%3Aplease-test), [signed up as a member](https://www.photoprism.app/membership), or [contributed](https://github.com/photoprism/photoprism/graphs/contributors) in other ways! We appreciate it very much.**
 
 ### May 17, 2022 ###
 <span class="build">Build 220517-b9c68f8f</span>
@@ -359,7 +359,7 @@ languages have been added and updated. Thanks to all involved!
 - CLI: [Run `photoprism show formats` to display supported media and sidecar file formats](https://github.com/photoprism/photoprism/issues/2247)
 - CLI: [Run `photoprism show filters` to display a search filter overview with examples](https://github.com/photoprism/photoprism/commit/7291c1d70329d85af2dfc1e9de512d28378974a5)
 - Config: [Improved FFmpeg parameters for Intel QSV hardware transcoding](https://github.com/photoprism/photoprism/issues/2222)
-- Config: [Added NVIDIA hardware video transcoding support for sponsors](https://github.com/photoprism/photoprism/issues/2125)
+- Config: [Added NVIDIA hardware video transcoding support for members](https://github.com/photoprism/photoprism/issues/2125)
 - Config: [Added `--disable-raw` flag to disable indexing and conversion of RAW files](https://github.com/photoprism/photoprism/issues/2227)
 - Config: [Added `--resolution-limit` option to skip high-resolution images when indexing](https://github.com/photoprism/photoprism/issues/1017)
 - Docker: [New Debian 12 "Bookworm" base image with FFmpeg 4.4.1 and Darktable 3.8.1](https://github.com/photoprism/photoprism/issues/2178)
@@ -463,7 +463,7 @@ is offered separately. This frees up development and infrastructure resources wi
 Since the [funding goal](https://link.photoprism.app/sponsor) required to make all features and maps generally
 available has not been reached, *early-access features* have been renamed to *sponsor features* in this update.
 Offline and high-resolution street maps remain free for everyone, while hybrid, topographic, and outdoor maps are 
-now a sponsor feature. We believe this is fair. A big thank you to all our [sponsors](https://link.photoprism.app/sponsors)
+now a member feature. We believe this is fair. A big thank you to all our [sponsors](https://link.photoprism.app/sponsors)
 and [contributors](https://github.com/photoprism/photoprism/graphs/contributors/)!
 
 - CLI: [Improved parameter](https://github.com/photoprism/photoprism/issues/1778) and [command descriptions](https://github.com/photoprism/photoprism/issues/1735)
@@ -658,7 +658,7 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
 ### April 26, 2021 ###
 <span class="build">Build 210426-da6e948f</span>
 
-- UI: [Added Yellowstone theme for sponsors, unlocked Grayscale theme for everyone](https://github.com/photoprism/photoprism/commit/180e46b95f52a5ef2d67ea8ac5e1d8a9b08ef970)
+- UI: [Added Yellowstone theme for members, unlocked Grayscale theme for everyone](https://github.com/photoprism/photoprism/commit/180e46b95f52a5ef2d67ea8ac5e1d8a9b08ef970)
 - Metadata: [Support for XMP sidecar CreateDate and Keywords](https://github.com/photoprism/photoprism/issues/1151)
 - Metadata: [Merge keywords from different sources](https://github.com/photoprism/photoprism/issues/1153)
 - Translations: Updated [Hebrew](https://github.com/photoprism/photoprism/pull/1221)

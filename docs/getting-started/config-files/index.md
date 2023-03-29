@@ -207,4 +207,4 @@ If you start the server as a *daemon* in the background, you can additionally sp
 | DetachServer | bool   | --detach-server |
 
 !!! example ""
-    Some options, such as those for [hardware transcoding](../advanced/transcoding.md), are [only available to sponsors](https://www.photoprism.app/membership) due to the time required for testing, maintenance, and providing support.
+    Some options, such as those for [hardware transcoding](../advanced/transcoding.md), are [only available to members](https://www.photoprism.app/membership) due to the time required for testing, maintenance, and providing support.

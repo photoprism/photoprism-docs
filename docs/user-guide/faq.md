@@ -27,7 +27,7 @@
     Our team decides this on an ongoing basis depending on the support effort required, server and licensing costs, and whether the features are generally needed by everyone or mainly requested by organizations and advanced users.
     As this helps us [provide more features](https://www.photoprism.app/editions#compare) to the public, we encourage all users to [support our mission](https://www.photoprism.app/membership).
 
-    [Compare Features ›](https://www.photoprism.app/editions#compare){ class="pr-3" } [View Open Source FAQ ›](https://www.photoprism.app/oss/faq)
+    [Compare Memberships ›](https://www.photoprism.app/editions#compare){ class="pr-3" } [View Open Source FAQ ›](https://www.photoprism.app/oss/faq)
 
 ??? question "What are the advantages of purchasing a commercial license?"
 
@@ -107,7 +107,7 @@
 
     The high-quality maps have been a paid feature for a long time, but were still available for testing. Since many users didn't realize this and simply used the commercial maps for free, this was [recently changed](https://github.com/photoprism/photoprism/issues/2998). Please see the [feature comparison on our website](https://www.photoprism.app/editions#compare) for reference. 
 
-    [Compare Personal Editions ›](https://www.photoprism.app/editions#compare)
+    [Compare Memberships ›](https://www.photoprism.app/editions#compare)
 
 ??? question "Why are some pictures positioned at unvisited locations on the map?"
 

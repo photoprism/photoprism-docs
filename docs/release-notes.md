@@ -7,7 +7,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 230401-b6378a5c1</span>
+<span class="build">Build 230401-c426a184c</span>
 
 What's new?
 
@@ -52,6 +52,7 @@ What's new?
 - Index: [TIFF images with unsupported file format features can be converted](https://github.com/photoprism/photoprism/issues/1612)
 - Upload: [Estimated time remaining is displayed in minutes and seconds](https://github.com/photoprism/photoprism/issues/3049)
 - Download: [Added settings to choose which files to download by default](https://github.com/photoprism/photoprism/issues/449)
+- Backups: [Improved backup and restore commands to better handle large index dumps](https://github.com/photoprism/photoprism/issues/3140)
 - WebDAV: [Enabled access to the originals and import folders in read-only mode](https://github.com/photoprism/photoprism/issues/3183)
 - WebDAV: [Replaced client library to prevent incomplete uploads to other servers](https://github.com/photoprism/photoprism/issues/3310)
 - API: [Search results can be sorted randomly to get a random set of pictures](https://github.com/photoprism/photoprism/issues/153#issuecomment-1408480166)

@@ -7,7 +7,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 230401-1f13b95f3</span>
+<span class="build">Build 230402-2f663fea6</span>
 
 What's new?
 
@@ -35,7 +35,7 @@ What's new?
 - Albums: [Added extended search form with sorting options](https://github.com/photoprism/photoprism/issues/353)
 - Albums: [Fixed form field styles in the share dialog](https://github.com/photoprism/photoprism/commit/7c671e0dfc52936b1a3af426db1e0f5e165a12f7)
 - Albums: [Double quotes in album names are replaced by Unicode characters](https://github.com/photoprism/photoprism/issues/2891)
-- Albums: [Improved validation of API and database parameter values](https://github.com/photoprism/photoprism/issues/3320)
+- Albums: [Improved error handling and validation of API parameter values](https://github.com/photoprism/photoprism/issues/3320)
 - Moments: [Changed default sort order in the overview to "newest"](https://github.com/photoprism/photoprism/issues/3280)
 - Folders: [Search is case-insensitive and uses wildcards for improved usability](https://github.com/photoprism/photoprism/issues/2050)
 - Metadata: [GPS coordinates are normalized to be within a common range](https://github.com/photoprism/photoprism/issues/2109)

@@ -67,7 +67,7 @@ What's new?
 - Docker: [MariaDB image and binaries have been upgraded from v10.9 to v10.10](https://github.com/photoprism/photoprism/commit/00022c90d3467655592858b0d3ad9c58fd9eee15)
 - Podman: [Added config examples for users of Red Hat-based Linux distributions](https://github.com/photoprism/photoprism/tree/develop/setup/podman)
 - Security: [Go has been upgraded to v1.20.2, which includes bug fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.20.2)
-- Translations: [Added Afrikaans (South Africa)](https://github.com/photoprism/photoprism/pull/3031/files) and [Basque](https://github.com/photoprism/photoprism/pull/3323/files)
+- Translations: [Added Afrikaans (South Africa)](https://github.com/photoprism/photoprism/pull/3031/files) and [Basque](https://github.com/photoprism/photoprism/pull/3323/files) (Euskara)
 - Translations: Updated Arabic, Bulgarian, Chinese, Czech, Dutch, Estonian, French, German, Italian, Malay, Russian, Ukrainian and many others
 
 ### November 18, 2022 ###

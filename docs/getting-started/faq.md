@@ -377,6 +377,10 @@ are disabled, for example import, upload, and delete. Set `PHOTOPRISM_READONLY` 
 in `docker-compose.yml` for this. You can [mount a folder with the `:ro` flag](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-3) to make Docker block
 write operations as well.
 
+### In which cases could files in the originals folder get modified?
+
+PhotoPrism generally does not write to the *originals* folder, with the following exceptions: (1) You rotate an image in the user interface so its Exif header must be updated. (2) You add files using the import functionality. (3) You add files using the web upload. (4) You manually delete files in the user interface. (5) You have configured the *originals* folder as your sidecar folder. (6) You access the *originals* folder with a WebDAV client to manage your files without having *read-only mode* enabled.
+
 ### How can I uninstall PhotoPrism?
 
 This depends on how you installed it. If you're running PhotoPrism with [Docker Compose](docker-compose.md), 

@@ -230,6 +230,11 @@
 
     Yes, you can [permanently delete](./organize/delete.md) files.
 
+??? question "In which cases could files in the originals folder get modified?"
+
+    PhotoPrism generally does not write to the *originals* folder, with the following exceptions: (1) You rotate an image in the user interface so its Exif header must be updated. (2) You add files using the import functionality. (3) You add files using the web upload. (4) You manually delete files in the user interface. (5) You have configured the *originals* folder as your sidecar folder. (6) You access the *originals* folder with a WebDAV client to manage your files without having *read-only mode* enabled.
+
+
 ## Metadata ##
 
 ??? question "Windows shows different metadata values. Could this be a bug in PhotoPrism?"

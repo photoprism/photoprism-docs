@@ -7,7 +7,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 230404-2a058c77c</span>
+<span class="build">Build 230405-a74a02c0f</span>
 
 What's new?
 
@@ -64,9 +64,9 @@ What's new?
 - Config: [Custom template path is not searched for files if not specified](https://github.com/photoprism/photoprism/issues/2946)
 - Config: [Advanced settings include additional options for PNGs and vector graphics](https://github.com/photoprism/photoprism/issues/2207#issuecomment-1436041896)
 - Config: [Added advanced HTTP cache control options](https://github.com/photoprism/photoprism/issues/3297)
-- Docker: [MariaDB image and binaries have been upgraded from v10.9 to v10.10](https://github.com/photoprism/photoprism/commit/00022c90d3467655592858b0d3ad9c58fd9eee15)
+- Docker: [MariaDB image and binaries have been updated from v10.9 to v10.11](https://github.com/photoprism/photoprism/issues/3332)
 - Podman: [Added config examples for users of Red Hat-based Linux distributions](https://github.com/photoprism/photoprism/tree/develop/setup/podman)
-- Security: [Go has been upgraded to v1.20.2, which includes bug fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.20.2)
+- Security: [Go has been updated to v1.20.3, which includes bug fixes and other improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.20.3)
 - Translations: [Added Afrikaans (South Africa)](https://github.com/photoprism/photoprism/pull/3031/files) and [Basque](https://github.com/photoprism/photoprism/pull/3323/files) (Euskara)
 - Translations: Updated Arabic, Bulgarian, Chinese, Czech, Dutch, Estonian, French, German, Italian, Malay, Russian, Ukrainian and many others
 
@@ -140,7 +140,7 @@ What's new?
 - Index: [Paths starting with `_.` and `__` like `__MACOSX` are ignored](https://github.com/photoprism/photoprism/issues/2844)
 - Config: [Updated new trusted proxy header options and command help](https://github.com/photoprism/photoprism/commit/c29bc5a8d4c9ef49e7c265fca1338515d0008d64)
 - MariaDB: [Improved server version check on startup](https://github.com/photoprism/photoprism/issues/2845)
-- Security: [Go has been upgraded to v1.19.3, which includes security fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.19.3)
+- Security: [Go has been updated to v1.19.3, which includes security fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.19.3)
 - Translations: [Updated Chinese, French, Norwegian Bokmål, and Romanian](https://github.com/photoprism/photoprism/commit/46d6c3200b50d0afb2536e8042733582d2a097c3)
 
 ### November 2, 2022 ###
@@ -178,7 +178,7 @@ What's new?
 - HEIC: [Added support for Sony's `.HIF` file extension](https://github.com/photoprism/photoprism/pull/2693)
 - HEIC: [Updated `heif-convert` tool to fix conversion problems](https://github.com/photoprism/photoprism/issues/2726)
 - AVIF: [Added support for the AV1 Image File Format](https://github.com/photoprism/photoprism/issues/2706)
-- RAW: [Upgraded Darktable from v3.8.1 to v4.0.1 (AMD64 only)](https://github.com/photoprism/photoprism/issues/2703)
+- RAW: [Updated Darktable from v3.8.1 to v4.0.1 (AMD64 only)](https://github.com/photoprism/photoprism/issues/2703)
 - ProRAW: [JPEGs embedded in `.DNG` files can be searched and viewed](https://github.com/photoprism/photoprism/issues/2291#issuecomment-1271704046)
 - Videos: [Added VAAPI hardware AVC encoder support](https://github.com/photoprism/photoprism/pull/2709)
 - Index: [Delayed RAW file format check to improve indexing performance](https://github.com/photoprism/photoprism/pull/2683)
@@ -195,14 +195,14 @@ What's new?
 - Docker: [Default image is based on Ubuntu 22.04 LTS (Jammy Jellyfish)](https://github.com/photoprism/photoprism/issues/2178)
 - Docker: [Switched from `gosu` to `setpriv` in entrypoint.sh script](https://github.com/photoprism/photoprism/pull/2730)
 - Security: [New files are created without execution permission](https://github.com/photoprism/photoprism/issues/2809)
-- Security: [Go has been upgraded to v1.19.2, which includes security fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.19.2)
+- Security: [Go has been updated to v1.19.2, which includes security fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.19.2)
 - Translations: Added [Persian](https://github.com/photoprism/photoprism/pull/2767)
 - Translations: Updated [Chinese](https://github.com/photoprism/photoprism/commit/6d435cab9e23c9c64fe418dafb26e0ac41970175), [Dutch](https://github.com/photoprism/photoprism/pull/2841), [Finnish](https://github.com/photoprism/photoprism/pull/2712/files), [French](https://github.com/photoprism/photoprism/pull/2830), [German](https://github.com/photoprism/photoprism/pull/2825), [Spanish](https://github.com/photoprism/photoprism/pull/2835/files), and many more
 
 ### September 1, 2022 ###
 <span class="build">Build 220901-f493607b0</span>
 
-With this update you get all the [latest translations contributed by our community](https://translate.photoprism.app/projects/photoprism/), [mobile navigation enhancements](https://dl.photoprism.app/img/ui/mobile-toolbar-navigation-open.jpg), upgraded dependencies and, as usual, fixes for recently discovered issues. Thanks to everyone involved!
+With this update you get all the [latest translations contributed by our community](https://translate.photoprism.app/projects/photoprism/), [mobile navigation enhancements](https://dl.photoprism.app/img/ui/mobile-toolbar-navigation-open.jpg), updated dependencies and, as usual, fixes for recently discovered issues. Thanks to everyone involved!
 
 What's new?
 
@@ -214,8 +214,8 @@ What's new?
 - Albums: [All pictures are shown if "Private" has been disabled in *Settings*](https://github.com/photoprism/photoprism/issues/2570)
 - Thumbs: [`photoprism thumbs` command regenerates thumbnails of sidecar files](https://github.com/photoprism/photoprism/issues/2669)
 - Docker: [Permissions of original media files are no longer updated on startup](https://github.com/photoprism/photoprism/pull/2371)
-- Build: [Go has been upgraded to v1.19, which includes fixes and enhancements](https://tip.golang.org/doc/go1.19)
-- Build: [NodeJS has been upgraded from v16 to v18](https://nodejs.org/en/blog/announcements/v18-release-announce/)
+- Build: [Go has been updated to v1.19, which includes fixes and enhancements](https://tip.golang.org/doc/go1.19)
+- Build: [NodeJS has been updated from v16 to v18](https://nodejs.org/en/blog/announcements/v18-release-announce/)
 - Translations: [Added Catalan, Finnish, Ukrainian](https://github.com/photoprism/photoprism/pull/2574), [and Slovene](https://github.com/photoprism/photoprism/pull/2636)
 
 ### July 30, 2022 ###
@@ -281,7 +281,7 @@ This update features updated translations as well as fixes for recently discover
 
 A small but important update that includes translations to Arabic, a migration fix for MariaDB, and many updated dependencies.
 
-- Security: [Upgraded Go to v1.18.3](https://github.com/photoprism/photoprism/commit/942fedf67992ef5eb9d8f371da88aec333a13af0), [which includes TLS and validation fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.18.3)
+- Security: [Updated Go to v1.18.3](https://github.com/photoprism/photoprism/commit/942fedf67992ef5eb9d8f371da88aec333a13af0), [which includes TLS and validation fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.18.3)
 - MariaDB: [Removed migration that could corrupt photo descriptions in the index](https://github.com/photoprism/photoprism/issues/2398)
 - Translations: [Added Arabic](https://github.com/photoprism/photoprism/pull/2417), [updated Danish and Polish](https://github.com/photoprism/photoprism/pull/2413)
 
@@ -452,7 +452,7 @@ Starting with this release, the [regular multi-arch Docker image](https://hub.do
 A 32-bit version of our stable release for [older devices](getting-started/raspberry-pi.md#older-armv7-based-devices) 
 is offered separately. This frees up development and infrastructure resources with minimal impact.
 
-- Security: [Upgraded Go to v1.17.5, which includes HTTP/2 and networking fixes](https://groups.google.com/g/golang-announce/c/hcmEScgc00k)
+- Security: [Updated Go to v1.17.5, which includes HTTP/2 and networking fixes](https://groups.google.com/g/golang-announce/c/hcmEScgc00k)
 - People: [Concurrent updates are no longer possible to prevent inconsistencies](https://github.com/photoprism/photoprism/commit/1b583e071e80b68352b1b366d60e010d8f8f9535)
 - Places: [Additional logs to detect invalid GPS coordinates in metadata](https://github.com/photoprism/photoprism/commit/4e358bbfd488eda86efa3265a6c443be0ae8f038)
 - SQLite: [Reduced routine maintenance log levels and fixed migration warnings](https://github.com/photoprism/photoprism/discussions/1791)
@@ -499,7 +499,7 @@ PostgreSQL support is [planned for 2022](https://github.com/photoprism/photopris
 
 When possible, location estimates now include a latitude and longitude. Photos load faster when you open 
 them in *Places*, and the viewer sorts them by distance. Time zone handling has been completely reworked, 
-in particular for UTC. The Docker base image has been upgraded to Ubuntu 21.10, which ships with 
+in particular for UTC. The Docker base image has been updated to Ubuntu 21.10, which ships with 
 Darktable 3.6 among other updated dependencies. 
 
 - UX: Redesigned [splash screen](https://github.com/photoprism/photoprism/commit/293fa0ca784ae19998cc8ff3459883a137fff4c2) based on theme colors
@@ -512,7 +512,7 @@ Darktable 3.6 among other updated dependencies.
 - People: [Improved face detection performance](https://github.com/esimov/pigo/releases/tag/v1.4.5)
 - People: [Fixed naming faces in non-primary files](https://github.com/photoprism/photoprism/issues/1710)
 - People: [Optimized matching of children's faces](https://github.com/photoprism/photoprism/issues/1587)
-- RAW: [Upgraded Darktable to 3.6.0](https://github.com/photoprism/photoprism/issues/1632)
+- RAW: [Updated Darktable to 3.6.0](https://github.com/photoprism/photoprism/issues/1632)
 - Metadata: [Improved estimates and UTC time zone handling](https://github.com/photoprism/photoprism/issues/1668)
 - Metadata: [Altitude is indexed even if coordinates are missing](https://github.com/photoprism/photoprism/issues/1749)
 - Auth: [Usernames are not case-sensitive anymore](https://github.com/photoprism/photoprism/commit/a354a170418371384ae047aef2bf49888e444dc5)
@@ -635,7 +635,7 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
 ### May 19, 2021 ###
 <span class="build">Build 210519-24b5c7e6</span>
 
-- Metadata: [Upgraded Exiftool to fix security issue](https://github.com/photoprism/photoprism/issues/1302)
+- Metadata: [Updated Exiftool to fix security issue](https://github.com/photoprism/photoprism/issues/1302)
 
 ### May 18, 2021 ###
 <span class="build">Build 210518-80981c25</span>

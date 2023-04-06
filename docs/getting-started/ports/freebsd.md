@@ -1,5 +1,8 @@
 # Running PhotoPrism On FreeBSD
 
+!!! danger ""
+    Please note that third-party apps may not provide access to the docker-compose.yml file or the command line, and therefore you may not be able to use all of PhotoPrism's features and config options.
+
 !!! tldr ""
     Should you experience problems with the installation, we recommend that you ask the FreeBSD community for advice, as we cannot provide support for third-party software and services. You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.
 

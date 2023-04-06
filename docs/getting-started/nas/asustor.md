@@ -1,5 +1,8 @@
 # Running PhotoPrism on an Asustor NAS
 
+!!! danger ""
+    Please note that third-party apps may not provide access to the docker-compose.yml file or the command line, and therefore you may not be able to use all of PhotoPrism's features and config options.
+
 Before setting up PhotoPrism on your NAS, we recommend that you check the [Asustor product database](https://www.asustor.com/en/product/product_list) for the CPU and memory configuration of your device.
 
 For a good user experience, it should be a 64-bit system with [at least 2 cores and 3 GB of RAM](../index.md#system-requirements). Indexing large photo and video collections also benefits greatly from [using SSD storage](../troubleshooting/performance.md#storage), especially for the database and cache files.

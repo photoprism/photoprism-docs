@@ -3,6 +3,9 @@
 !!! verified "Trusted Partner"
     [PikaPods](https://prism.ws/pikapods-com) has partnered with us to offer you this **officially supported, cloud-hosted solution**.[^1] Your personal app instance is ready to use in just a few steps and [includes member features](https://www.photoprism.app/editions#compare) like premium themes and high-resolution world maps - at no additional cost! New customers also receive a $5 welcome credit.
 
+!!! danger ""
+    Please note that third-party apps may not provide access to the docker-compose.yml file or the command line, and therefore you may not be able to use all of PhotoPrism's features and config options.
+
 ## Setup
 
 This step-by-step guide explains how to set up a new PhotoPrism instance at PikaPods.

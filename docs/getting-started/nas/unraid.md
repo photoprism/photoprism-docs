@@ -1,5 +1,8 @@
 # Setting Up PhotoPrism on Unraid
 
+!!! danger ""
+    Please note that third-party apps may not provide access to the docker-compose.yml file or the command line, and therefore you may not be able to use all of PhotoPrism's features and config options.
+
 !!! tldr ""
     Should you experience problems with the installation, we recommend that you ask the Unraid community for advice, as we cannot provide support for third-party software and services.
 

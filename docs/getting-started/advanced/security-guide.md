@@ -4,7 +4,9 @@ The following recommendations are aimed at improving the security of your Docker
 
 ## Run Services as Non-Root User
 
-We recommend running the PhotoPrism service as a non-root user by setting either the user [service property](https://docs.docker.com/compose/compose-file/05-services/#user) or the `PHOTOPRISM_UID` [environment variable](https://docs.photoprism.app/getting-started/config-options/#docker-image) in the `docker-compose.yml` file. Don't forget to update file permissions and/or ownership with the `chown` command when you make changes.
+We recommend running the PhotoPrism service as a non-root user by setting either the user [service property](https://docs.docker.com/compose/compose-file/05-services/#user) or the `PHOTOPRISM_UID` [environment variable](https://docs.photoprism.app/getting-started/config-options/#docker-image) in the `docker-compose.yml` file.
+
+Don't forget to update file permissions and/or ownership with the `chown` command when you make changes.
 
 ## Remove Passwords from the Environment
 
@@ -43,4 +45,6 @@ services:
 
 ## Rootless Docker
 
-The Docker daemon can be run as a non-root user using Rootless Mode. Configuring this is beyond the scope of these help documents. See the [Docker Security Documentation](https://docs.docker.com/engine/security/rootless/) for more information and instructions.
+The Docker daemon can be run as a non-root user using Rootless Mode.
+
+Configuring this is beyond the scope of these help documents. See the [Docker Security Documentation](https://docs.docker.com/engine/security/rootless/) for more information and instructions.

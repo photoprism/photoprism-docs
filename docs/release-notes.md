@@ -7,7 +7,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 230406-73ffafe7c</span>
+<span class="build">Build 230413-fadc0f396</span>
 
 What's new?
 
@@ -18,6 +18,7 @@ What's new?
 - UX: [Enabled long-touch menu in photo viewer on iOS Safari](https://github.com/photoprism/photoprism/issues/1233)
 - PWA: [Increased allowed length of app name on home screen](https://github.com/photoprism/photoprism/commit/5dc71ff1ff69c157568c11d08b941b1d1875dc38)
 - PWA: [Improved manifest.json for more reliable installation prompts](https://github.com/photoprism/photoprism/issues/3181)
+- Auth: [Improved bcrypt password support with 72-character limit](https://github.com/photoprism/photoprism/issues/1987#issuecomment-1507190623)
 - Themes: [Added "Carbon", "Neon"](https://github.com/photoprism/photoprism/commit/93251d77a02a7de1ced8e28caf3deb2220a442c4), [and "Nordic"](https://github.com/photoprism/photoprism/commit/53cddf5a4365614024670bb455de41e2b45da2b0) based on [colors from nordtheme.com](https://www.nordtheme.com/)
 - Themes: [Removed "Electra", "Moonlight", "Seaweed"](https://github.com/photoprism/photoprism/commit/e1405eba5430d30769d90292bdc69debe0e27092), [and "Cyano"](https://github.com/photoprism/photoprism/commit/53cddf5a4365614024670bb455de41e2b45da2b0)
 - People: [Ambiguous faces are skipped when matching to improve performance](https://github.com/photoprism/photoprism/issues/3124)
@@ -55,6 +56,7 @@ What's new?
 - Backups: [Improved backup and restore commands to better handle large index dumps](https://github.com/photoprism/photoprism/issues/3140)
 - WebDAV: [Enabled access to the originals and import folders in read-only mode](https://github.com/photoprism/photoprism/issues/3183)
 - WebDAV: [Replaced client library to prevent incomplete uploads to other servers](https://github.com/photoprism/photoprism/issues/3310)
+- WebDAV: [Download sync is prevented when read-only mode is enabled](https://github.com/photoprism/photoprism/commit/d48db6cae4b25e8ff3daf867db42e106ea4c2297)
 - API: [Search results can be sorted randomly to get a random set of pictures](https://github.com/photoprism/photoprism/issues/153#issuecomment-1408480166)
 - API: [HEAD requests are now supported for frontend bootstrap paths](https://github.com/photoprism/photoprism/issues/2965)
 - CLI: [Added file extension flag to the `photoprism convert` command](https://github.com/photoprism/photoprism/issues/3038)

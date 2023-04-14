@@ -7,7 +7,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 230414-ffd307e11</span>
+<span class="build">Build 230414-89eb11de9</span>
 
 What's new?
 
@@ -45,6 +45,7 @@ What's new?
 - Metadata: [Software name is displayed on the Files tab, if available](https://github.com/photoprism/photoprism/commit/3c1b7acf1191c48620e3bdc8256694b7513856c9)
 - Metadata: [Valid year range in Exif data and filenames has been extended from 1990 to 1970](https://github.com/photoprism/photoprism/issues/3220)
 - Metadata: [Scanned images are automatically recognized by device name](https://github.com/photoprism/photoprism/issues/3221)
+- Metadata: [Added TakenAtLocal to YAML backups to prevent incorrectly restored times](https://github.com/photoprism/photoprism/issues/3338)
 - Index: [Improved performance by skipping updates when there are no changes](https://github.com/photoprism/photoprism/issues/3227)
 - Index: [Improved performance when flagging hidden files](https://github.com/photoprism/photoprism/issues/2928)
 - Index: [Added file format support for Adobe Photoshop PSD images](https://github.com/photoprism/photoprism/issues/2207)

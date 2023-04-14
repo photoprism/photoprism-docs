@@ -7,7 +7,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 230414-89eb11de9</span>
+<span class="build">Build 230414-99858cb8d</span>
 
 What's new?
 
@@ -33,6 +33,7 @@ What's new?
 - Videos: [Playback durations of less than one second can be indexed and displayed](https://github.com/photoprism/photoprism/issues/3224)
 - Videos: [Added .dv to the list of known video file types](https://github.com/photoprism/photoprism/issues/3226)
 - Videos: [Specific video and audio streams can be selected for transcoding](https://github.com/photoprism/photoprism/issues/3284)
+- Videos: [Improved detection of HEVC support for Google Chrome](https://github.com/photoprism/photoprism/issues/3275)
 - Albums: [Added extended search form with sorting options](https://github.com/photoprism/photoprism/issues/353)
 - Albums: [Fixed form field styles in the share dialog](https://github.com/photoprism/photoprism/commit/7c671e0dfc52936b1a3af426db1e0f5e165a12f7)
 - Albums: [Double quotes in album names are replaced by Unicode characters](https://github.com/photoprism/photoprism/issues/2891)

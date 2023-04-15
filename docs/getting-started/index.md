@@ -76,9 +76,9 @@ Your use of these services is [fully covered by us](faq.md#are-the-keys-for-usin
 If you need help installing our software at home, you can [join us on Reddit](https://link.photoprism.app/reddit), ask in our [Community Chat](https://link.photoprism.app/chat), or post your question in [GitHub Discussions](https://link.photoprism.app/discussions). Common problems can be quickly diagnosed and solved using our [Troubleshooting Checklists](https://docs.photoprism.app/getting-started/troubleshooting/).
 
 We'll do our best to answer all your questions. In return, we ask you to [back us](https://www.photoprism.app/membership) on [Patreon](https://link.photoprism.app/patreon) or [GitHub Sponsors](https://link.photoprism.app/sponsors).
-Think of "free software" as in "free speech," not as in "free beer". Thank you!
+Thank you very much!
 
-In exchange for their continued support, [sponsors](https://www.photoprism.app/membership) are also welcome to request direct technical [support via email](mailto:sponsors@photoprism.app). Please bear with us if we are unable to get back to you immediately due to the high volume of emails and contact requests we receive.
+[Compare Memberships ›](https://www.photoprism.app/editions#compare){ class="pr-3" } [View Open Source FAQ ›](https://www.photoprism.app/oss/faq)
 
 !!! info ""
     **We kindly ask you not to report bugs via *GitHub Issues* unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.**

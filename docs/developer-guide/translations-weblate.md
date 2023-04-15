@@ -58,7 +58,7 @@ When you sign up, you will be asked to accept our Contributor License Agreement 
     This can lead to grammatical errors and misunderstandings. 
     Native speakers should check existing translations and improve them if necessary.
 
-    If you are a native speaker and would like to support us by reviewing existing translations, please write to us at hello@photoprism.app so that we can grant you the rights to review.
+    If you are a native speaker and would like to support us by reviewing existing translations, please contact us at hello@photoprism.app so that we can grant you the rights to review.
     
     1. From your *Dashboard* open one of the components by clicking on the language
 

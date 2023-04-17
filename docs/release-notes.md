@@ -71,8 +71,8 @@ What's new?
 - Config: [Added option to stream videos over a Content Delivery Network (CDN)](https://github.com/photoprism/photoprism/issues/2875)
 - Docker: [MariaDB image and binaries have been updated from v10.9 to v10.11](https://github.com/photoprism/photoprism/issues/3332)
 - Podman: [Added config examples for users of Red Hat-based Linux distributions](https://github.com/photoprism/photoprism/tree/develop/setup/podman)
-- Security: [Go has been updated to v1.20.3, which includes bug fixes and other improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.20.3)
 - Security: [Improved bcrypt password support with explicit 72-character limit](https://github.com/photoprism/photoprism/issues/1987#issuecomment-1507190623)
+- Security: [Go has been updated to v1.20.3, which includes bug fixes and other improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.20.3)
 - Translations: [Added Afrikaans (South Africa)](https://github.com/photoprism/photoprism/pull/3031/files) and [Basque](https://github.com/photoprism/photoprism/pull/3323/files) (Euskara)
 - Translations: Updated Arabic, Bulgarian, Chinese, Czech, Dutch, Estonian, French, German, Italian, Malay, Russian, Ukrainian and many others
 

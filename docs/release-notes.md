@@ -11,7 +11,7 @@
 
 What's new?
 
-- UX: [Improved page layout for languages with right-to-left writing](https://github.com/photoprism/photoprism/commit/3a1293d5d42ba8d0cf6f4efa1540a9db7f3681d9)
+- UX: [Improved user interface layout for right-to-left languages](https://github.com/photoprism/photoprism/commit/3a1293d5d42ba8d0cf6f4efa1540a9db7f3681d9)
 - UX: [Improved highlight and background colors in the cards view](https://github.com/photoprism/photoprism/commit/c243d45c118a6691c626397a9f81f08385ee6a60)
 - UX: [Improved theme styles and search field contrast in Places](https://github.com/photoprism/photoprism/commit/0d2a25eb0cd12e114dff87570e4015b6eba8c73c)
 - UX: [Navigation shows the total number of pictures without those under review](https://github.com/photoprism/photoprism/issues/3164)

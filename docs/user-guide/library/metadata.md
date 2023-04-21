@@ -40,4 +40,4 @@ In addition to reading metadata from your original and sidecar files, PhotoPrism
 We want you to be able to access your metadata independently of PhotoPrism and its database. That's why the indexer additionally creates [human-readable YAML sidecar files](../backups/export.md) that you can open with a text editor or other tools if needed.
 
 !!! note ""
-    PhotoPrism does not yet offer the ability to write changed metadata back to the original files to avoid eventual data loss and conflicts with third-party apps. See [GitHub Discussions](https://github.com/photoprism/photoprism/discussions/1092).
+    Except for the [image orientation](../organize/rotate.md), PhotoPrism does not yet offer the ability to write changed metadata back to the original files to avoid possible data loss and conflicts with third-party apps. See [GitHub Discussions](https://github.com/photoprism/photoprism/discussions/1092).

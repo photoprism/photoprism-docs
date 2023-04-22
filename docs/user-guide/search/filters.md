@@ -119,11 +119,12 @@ This is a complete list of supported search filters with examples. Filters can g
 | color     | string    | color:"red\|blue"                     | Color Name (purple, magenta, pink, red, orange, gold, yellow, lime, green, teal, cyan, blue, brown, white, grey, black), OR search with \| |
 | country   | string    | country:"de\|us"                      | Country Code, OR search with \|                                                                                                            |
 | day       | string    | day:3\|13                             | Day of Month (1-31), OR search with \|                                                                                                     |
-| face      | string    | face:PN6QO5IN...                      | Face ID                                                                                                                                    |
+| face      | string    | face:PN6QO5INYTUSAATOFL43LL2ABAV5ACZG | Face ID, yes, no, new, or kind                                                                                                             |
 | faces     | string    | faces:yes faces:3                     | Minimum number of Faces (yes = 1)                                                                                                          |
 | filename  | string    | filename:"2021/07/12345.jpg"          | File Name with path and extension, OR search with \|                                                                                       |
 | folder    | string    | folder:"*/2020"                       | Path Name, OR search with \|, supports * wildcards                                                                                         |
 | hash      | string    | hash:2fd4e1c67a2d                     | SHA1 File Hash, OR search with \|                                                                                                          |
+| id        | string    | id:123e4567-e89b-...                  | Finds pictures by Exif UID, XMP Document ID or Instance ID                                                                                 |
 | keywords  | string    | keywords:"buffalo&water"              | Keywords, can be combined with & and \|                                                                                                    |
 | label     | string    | label:cat\|dog                        | Label Name, OR search with \|                                                                                                              |
 | lens      | string    | lens:ef24                             | Lens Make/Model Name                                                                                                                       |
@@ -138,12 +139,12 @@ This is a complete list of supported search filters with examples. Filters can g
 | subjects  | string    | subjects:"Jane & John"                | Alias for people                                                                                                                           |
 | title     | string    | title:"Lake*"                         | Title, OR search with \|                                                                                                                   |
 | type      | string    | type:raw                              | Media Type (image, video, raw, live, animated); OR search with \|                                                                          |
-| uid       | string    | uid:pqbcf5j446s0futy                  | Search for specific files or photos, only exact matches                                                                                    |
+| uid       | string    | uid:pqbcf5j446s0futy                  | Limits results to the specified internal unique IDs                                                                                        |
 | year      | string    | year:1990\|2003                       | Year Number, OR search with \|                                                                                                             |
 | animated  | switch    | animated:yes                          | Finds animated GIFs                                                                                                                        |
 | archived  | switch    | archived:yes                          | Finds archived pictures                                                                                                                    |
 | error     | switch    | error:yes                             | Finds pictures with errors                                                                                                                 |
-| favorite  | switch    | favorite:yes                          | Finds pictures marked as favorite                                                                                                          |
+| favorite  | switch    | favorite:yes                          | Finds favorites only                                                                                                                       |
 | geo       | switch    | geo:yes                               | Finds pictures with GPS location                                                                                                           |
 | hidden    | switch    | hidden:yes                            | Finds hidden pictures (broken or unsupported)                                                                                              |
 | landscape | switch    | landscape:yes                         | Finds pictures in landscape format                                                                                                         |
@@ -165,8 +166,8 @@ This is a complete list of supported search filters with examples. Filters can g
 | unstacked | switch    | unstacked:yes                         | Finds pictures with a file that has been removed from a stack                                                                              |
 | vector    | switch    | vector:yes                            | Finds vector graphics only                                                                                                                 |
 | video     | switch    | video:yes                             | Finds video files only                                                                                                                     |
-| after     | timestamp | after:"2022-01-30 15:23:42"           | Finds pictures taken after this date                                                                                                       |
-| before    | timestamp | before:"2022-01-30 15:23:42"          | Finds pictures taken before this date                                                                                                      |
+| after     | timestamp | after:"2022-01-30"                    | Finds pictures taken after this date                                                                                                       |
+| before    | timestamp | before:"2022-01-30"                   | Finds pictures taken before this date                                                                                                      |
 
 
 

@@ -1,7 +1,7 @@
 # Rotate Image #
 
 !!! info ""
-    This feature will be available soon in our next stable release.
+    This is a new feature that will be available in our upcoming stable release.
 
 PhotoPrism allows you to rotate JPG and PNG images.
 

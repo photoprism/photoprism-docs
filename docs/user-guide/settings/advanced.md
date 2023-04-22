@@ -11,7 +11,7 @@ on the advanced settings page. You can also disable specific features and enable
     quality or size won't replace existing thumbnails. You can regenerate them using the 
     [command-line interface](https://docs.photoprism.app/getting-started/docker-compose/#command-line-interface).
 
-![](img/settings-advanced-light.jpg){ class="shadow" }
+![](img/settings-advanced.jpg){ class="shadow" }
 
 All [config options](../../getting-started/config-options.md) can be set in your `docker-compose.yml` or
 via command-line parameters as well. Manually changed values are saved in a config file. It is stored in
@@ -276,6 +276,12 @@ The corresponding [config toggle](../../getting-started/config-options.md) is `P
 !!! tldr ""
     [RawTherapee and "heif-convert" cannot limit the resolution](../../known-issues.md#jpeg-size-limit) of JPEG files when converting files from other formats such as RAW, DNG, HEIC or AVIF.
 
+### PNG Size Limit
+
+This sets the maximum size of the PNG files created when converting original images.
+
+The corresponding [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_PNG_SIZE`.
+
 ### Use Presets
 
 Disables simultaneous conversion of RAW files to apply Darktable presets.
@@ -299,3 +305,10 @@ The corresponding [config toggle](../../getting-started/config-options.md) is `P
 If this feature is disabled, [FFmpeg](https://www.ffmpeg.org/documentation.html) is not used to transcode videos or extract still images for thumbnail creation, and indexing or importing video files is not possible.
 
 The corresponding [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_DISABLE_FFMPEG`.
+
+
+### Disable ImageMagick
+
+If this feature is disabled, [ImageMagick](https://imagemagick.org/) is not used for conversion.
+
+The corresponding [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_DISABLE_IMAGEMAGICK`.

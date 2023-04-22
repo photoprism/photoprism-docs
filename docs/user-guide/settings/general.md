@@ -2,7 +2,7 @@
 
 In the *General* settings tab, you can configure basic user interface settings as well as the maps in *Places*:
 
-![](img/settings-general-light.jpg){ class="shadow" }
+![](img/settings-general.jpg){ class="shadow" }
 
 ## User Interface ##
 You can change the *theme* and *language* of the User interface.
@@ -63,3 +63,20 @@ PhotoPrism includes four high-resolution world maps to see where you've been, an
 
 To enhance your photos with location data such as state, city and category, we've also launched our own geo-information service based on OpenStreetMap.
 A future release will additionally provide public events' data, so that albums of popular music festivals, or sports gatherings, can be created automatically.
+
+## Downloads ##
+
+!!! info ""
+    This is a new feature that will be available in our upcoming stable release.
+
+!!! info ""
+    Note that your choice will not affect ZIP archives when you download complete albums. However, we may add settings for this in a future release.
+
+#### :material-camera-iris: Originals ####
+Only the files in the *originals* folder will be downloaded, but not any files that were automatically created in the *sidecar* folder. This is the recommended default.
+
+#### :material-raw: RAW ####
+Download RAW image files.
+
+#### :material-paperclip: Sidecar ####
+Download sidecar files as used for XMP metadata. This is generally not recommended except for some professional workflows.

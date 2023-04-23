@@ -7,7 +7,7 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 230423-393ee5423</span>
+<span class="build">Build 230423-817c7428d</span>
 
 What's new?
 
@@ -27,6 +27,7 @@ What's new?
 - Search: [Deleted albums are ignored when using the `unsorted` filter](https://github.com/photoprism/photoprism/issues/3051)
 - Search: [Sepia colored pictures are excluded when using the `mono` filter](https://github.com/photoprism/photoprism/issues/2657)
 - Photos: [Image orientation can be changed through the user interface](https://github.com/photoprism/photoprism/issues/464)
+- RAW: [Upgraded RawTherapee from v5.8 to v.5.9 to fix ProRAW support](https://github.com/photoprism/photoprism/issues/2291)
 - Videos: [Improved player compatibility with browser plugins](https://github.com/photoprism/photoprism/issues/1439)
 - Videos: [Improved preview image generation depending on duration](https://github.com/photoprism/photoprism/issues/1241#issuecomment-1363473310)
 - Videos: [Playback durations of less than one second can be indexed and displayed](https://github.com/photoprism/photoprism/issues/3224)

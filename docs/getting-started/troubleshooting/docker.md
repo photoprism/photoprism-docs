@@ -157,6 +157,12 @@ Open a terminal and run this command to check if your server has swap configured
 
 ```bash
 swapon --show
+# or
+free -h
+```
+Note: if `swapon` is still not available after installing `util-linux` or `mount`, try updating PATH:
+```sh
+export PATH=$PATH:/sbin
 ```
 
 Example output:
@@ -168,7 +174,7 @@ NAME      TYPE SIZE USED PRIO
 
 This means you have 64 GB of swap and don't need to add more. [Learn how much you need.](https://opensource.com/article/18/9/swap-space-linux-systems)
 
-Otherwise, run these commands to permanently add 4 GB of swap (or more depending on how much physical memory you have):
+Otherwise, run these commands(one by one, do not copy-paste the whole block) to permanently add 4 GB of swap (or more depending on how much physical memory you have):
 
 ```bash
 sudo -i

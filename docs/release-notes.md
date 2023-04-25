@@ -78,6 +78,11 @@ What's new?
 - Translations: [Added Afrikaans (South Africa)](https://github.com/photoprism/photoprism/pull/3031/files) and [Basque](https://github.com/photoprism/photoprism/pull/3323/files) (Euskara)
 - Translations: Updated Arabic, Bulgarian, Chinese, Czech, Dutch, Estonian, French, German, Italian, Malay, Russian, Ukrainian and many others
 
+PhotoPrism® Plus
+
+- Auth: [Admins can manage user accounts and active sessions through the web UI](https://demo.photoprism.plus/library/admin/users) 
+- Index: [Added file format support for Adobe Photoshop PSD and vector graphics](https://github.com/photoprism/photoprism/issues/2207)
+
 ### November 18, 2022 ###
 <span class="build">Build 221118-e58fee0fb</span>
 

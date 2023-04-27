@@ -17,10 +17,10 @@ Requires a [review of non-photographic and low-quality images](../organize/revie
 
 #### :material-camera: Convert to JPEG ####
 
-Automatically creates JPEG previews for other file types so they can be displayed in search results and in the full-screen viewer.
+Automatically creates JPEG or PNG preview images for other file types so they can be displayed in search results and in the full-screen viewer.
 
 !!! danger ""
-    *Convert to JPEG* should not be disabled, as this effectively prevents PhotoPrism from indexing file types other than JPEG unless JPEG sidecar files already exist with the same filename prefix. See *Stacks* to learn more about naming conventions of sidecar files.
+    *Convert to JPEG* should be enabled, otherwise PhotoPrism cannot index file types other than JPEG or PNG unless a preview sidecar file with the same filename prefix already exists. See *Stacks* to learn more about naming conventions of sidecar files.
 
 ## Stacks ##
 

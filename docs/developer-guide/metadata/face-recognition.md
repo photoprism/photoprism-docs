@@ -16,11 +16,11 @@ In the final step, the [DBSCAN algorithm](https://en.wikipedia.org/wiki/DBSCAN) 
 | PHOTOPRISM_FACE_SIZE          | --face-size          |       50 | minimum size of faces in `PIXELS` (20-10000)                                            |
 | PHOTOPRISM_FACE_SCORE         | --face-score         | 9.000000 | minimum face `QUALITY` score (1-100)                                                    |
 | PHOTOPRISM_FACE_OVERLAP       | --face-overlap       |       42 | face area overlap threshold in `PERCENT` (1-100)                                        |
-| PHOTOPRISM_FACE_CLUSTER_SIZE  | --face-cluster-size  |       80 | minimum size of automatically clustered faces in `PIXELS` (20-10000) *sponsors only*    |
-| PHOTOPRISM_FACE_CLUSTER_SCORE | --face-cluster-score |       15 | minimum `QUALITY` score of automatically clustered faces (1-100) *sponsors only*        |
-| PHOTOPRISM_FACE_CLUSTER_CORE  | --face-cluster-core  |        4 | `NUMBER` of faces forming a cluster core (1-100) *sponsors only*                        |
-| PHOTOPRISM_FACE_CLUSTER_DIST  | --face-cluster-dist  | 0.640000 | similarity `DISTANCE` of faces forming a cluster core (0.1-1.5) *sponsors only*         |
-| PHOTOPRISM_FACE_MATCH_DIST    | --face-match-dist    | 0.460000 | similarity `OFFSET` for matching faces with existing clusters (0.1-1.5) *sponsors only* |
+| PHOTOPRISM_FACE_CLUSTER_SIZE  | --face-cluster-size  |       80 | minimum size of automatically clustered faces in `PIXELS` (20-10000) *members only*    |
+| PHOTOPRISM_FACE_CLUSTER_SCORE | --face-cluster-score |       15 | minimum `QUALITY` score of automatically clustered faces (1-100) *members only*        |
+| PHOTOPRISM_FACE_CLUSTER_CORE  | --face-cluster-core  |        4 | `NUMBER` of faces forming a cluster core (1-100) *members only*                        |
+| PHOTOPRISM_FACE_CLUSTER_DIST  | --face-cluster-dist  | 0.640000 | similarity `DISTANCE` of faces forming a cluster core (0.1-1.5) *members only*         |
+| PHOTOPRISM_FACE_MATCH_DIST    | --face-match-dist    | 0.460000 | similarity `OFFSET` for matching faces with existing clusters (0.1-1.5) *members only* |
 
 - A reasonable range for the similarity distance between face embeddings is between 0.60 and 0.70, with a higher value being more aggressive and leading to larger clusters with more false positives.
 - To cluster a smaller number of faces, you can reduce the kernel to 3 or 2 similar faces.

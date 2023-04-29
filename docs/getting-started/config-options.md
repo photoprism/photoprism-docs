@@ -85,27 +85,27 @@
 |        Environment        |     CLI Flag     |  Default   |                                Description                                |
 |---------------------------|------------------|------------|---------------------------------------------------------------------------|
 | PHOTOPRISM_DEFAULT_LOCALE | --default-locale | en         | standard user interface language `CODE`                                   |
-| PHOTOPRISM_DEFAULT_THEME  | --default-theme  |            | standard user interface theme `NAME` *sponsors only*                      |
-| PHOTOPRISM_APP_NAME       | --app-name       |            | progressive web app `NAME` when installed on a device *sponsors only*     |
+| PHOTOPRISM_DEFAULT_THEME  | --default-theme  |            | standard user interface theme `NAME` *members only*                      |
+| PHOTOPRISM_APP_NAME       | --app-name       |            | progressive web app `NAME` when installed on a device *members only*     |
 | PHOTOPRISM_APP_MODE       | --app-mode       | standalone | progressive web app `MODE` (fullscreen, standalone, minimal-ui, browser)  |
-| PHOTOPRISM_APP_ICON       | --app-icon       |            | home screen `ICON` (logo, app, crisp, mint, bold, square) *sponsors only* |
+| PHOTOPRISM_APP_ICON       | --app-icon       |            | home screen `ICON` (logo, app, crisp, mint, bold, square) *members only* |
 | PHOTOPRISM_APP_COLOR      | --app-color      | #000000    | splash screen `COLOR` code                                                |
-| PHOTOPRISM_LEGAL_INFO     | --legal-info     |            | legal information `TEXT`, displayed in the page footer *sponsors only*    |
-| PHOTOPRISM_LEGAL_URL      | --legal-url      |            | legal information `URL` *sponsors only*                                   |
+| PHOTOPRISM_LEGAL_INFO     | --legal-info     |            | legal information `TEXT`, displayed in the page footer *members only*    |
+| PHOTOPRISM_LEGAL_URL      | --legal-url      |            | legal information `URL` *members only*                                   |
 | PHOTOPRISM_WALLPAPER_URI  | --wallpaper-uri  |            | login screen background image `URI`                                       |
 
 ### Site Information ###
 
 |         Environment         |      CLI Flag      |          Default           |                     Description                      |
 |-----------------------------|--------------------|----------------------------|------------------------------------------------------|
-| PHOTOPRISM_CDN_URL          | --cdn-url          |                            | content delivery network `URL` *sponsors only*       |
-| PHOTOPRISM_CDN_VIDEO        | --cdn-video        |                            | stream videos over the specified CDN *sponsors only* |
+| PHOTOPRISM_CDN_URL          | --cdn-url          |                            | content delivery network `URL` *members only*       |
+| PHOTOPRISM_CDN_VIDEO        | --cdn-video        |                            | stream videos over the specified CDN *members only* |
 | PHOTOPRISM_SITE_URL         | --site-url         | http://photoprism.me:2342/ | public site `URL`                                    |
 | PHOTOPRISM_SITE_AUTHOR      | --site-author      |                            | site `OWNER`, copyright, or artist                   |
-| PHOTOPRISM_SITE_TITLE       | --site-title       |                            | site `TITLE` *sponsors only*                         |
+| PHOTOPRISM_SITE_TITLE       | --site-title       |                            | site `TITLE` *members only*                         |
 | PHOTOPRISM_SITE_CAPTION     | --site-caption     | AI-Powered Photos App      | site `CAPTION`                                       |
 | PHOTOPRISM_SITE_DESCRIPTION | --site-description |                            | site `DESCRIPTION` *optional*                        |
-| PHOTOPRISM_SITE_PREVIEW     | --site-preview     |                            | sharing preview image `URL` *sponsors only*          |
+| PHOTOPRISM_SITE_PREVIEW     | --site-preview     |                            | sharing preview image `URL` *members only*          |
 
 ### Proxy Servers ###
 
@@ -151,7 +151,7 @@
 | PHOTOPRISM_SIPS_BIN              | --sips-bin              | sips                           | Sips `COMMAND` for media file conversion *macOS only*                 |
 | PHOTOPRISM_SIPS_BLACKLIST        | --sips-blacklist        | avif,avifs                     | do not use Sips to convert files with these `EXTENSIONS` *macOS only* |
 | PHOTOPRISM_FFMPEG_BIN            | --ffmpeg-bin            | ffmpeg                         | FFmpeg `COMMAND` for video transcoding and thumbnail extraction       |
-| PHOTOPRISM_FFMPEG_ENCODER        | --ffmpeg-encoder        | libx264                        | FFmpeg AVC encoder `NAME` *sponsors only*                             |
+| PHOTOPRISM_FFMPEG_ENCODER        | --ffmpeg-encoder        | libx264                        | FFmpeg AVC encoder `NAME` *members only*                             |
 | PHOTOPRISM_FFMPEG_BITRATE        | --ffmpeg-bitrate        |                             50 | maximum FFmpeg encoding `BITRATE` (Mbit/s)                            |
 | PHOTOPRISM_FFMPEG_MAP_VIDEO      | --ffmpeg-map-video      | 0:v:0                          | video `STREAMS` that should be transcoded                             |
 | PHOTOPRISM_FFMPEG_MAP_AUDIO      | --ffmpeg-map-audio      | 0:a:0?                         | audio `STREAMS` that should be transcoded                             |
@@ -198,11 +198,11 @@ We recommend that only advanced users change these parameters:
 | PHOTOPRISM_FACE_SIZE          | --face-size          |       50 | minimum size of faces in `PIXELS` (20-10000)                                            |
 | PHOTOPRISM_FACE_SCORE         | --face-score         | 9.000000 | minimum face `QUALITY` score (1-100)                                                    |
 | PHOTOPRISM_FACE_OVERLAP       | --face-overlap       |       42 | face area overlap threshold in `PERCENT` (1-100)                                        |
-| PHOTOPRISM_FACE_CLUSTER_SIZE  | --face-cluster-size  |       80 | minimum size of automatically clustered faces in `PIXELS` (20-10000) *sponsors only*    |
-| PHOTOPRISM_FACE_CLUSTER_SCORE | --face-cluster-score |       15 | minimum `QUALITY` score of automatically clustered faces (1-100) *sponsors only*        |
-| PHOTOPRISM_FACE_CLUSTER_CORE  | --face-cluster-core  |        4 | `NUMBER` of faces forming a cluster core (1-100) *sponsors only*                        |
-| PHOTOPRISM_FACE_CLUSTER_DIST  | --face-cluster-dist  | 0.640000 | similarity `DISTANCE` of faces forming a cluster core (0.1-1.5) *sponsors only*         |
-| PHOTOPRISM_FACE_MATCH_DIST    | --face-match-dist    | 0.460000 | similarity `OFFSET` for matching faces with existing clusters (0.1-1.5) *sponsors only* |
+| PHOTOPRISM_FACE_CLUSTER_SIZE  | --face-cluster-size  |       80 | minimum size of automatically clustered faces in `PIXELS` (20-10000) *members only*    |
+| PHOTOPRISM_FACE_CLUSTER_SCORE | --face-cluster-score |       15 | minimum `QUALITY` score of automatically clustered faces (1-100) *members only*        |
+| PHOTOPRISM_FACE_CLUSTER_CORE  | --face-cluster-core  |        4 | `NUMBER` of faces forming a cluster core (1-100) *members only*                        |
+| PHOTOPRISM_FACE_CLUSTER_DIST  | --face-cluster-dist  | 0.640000 | similarity `DISTANCE` of faces forming a cluster core (0.1-1.5) *members only*         |
+| PHOTOPRISM_FACE_MATCH_DIST    | --face-match-dist    | 0.460000 | similarity `OFFSET` for matching faces with existing clusters (0.1-1.5) *members only* |
 
 ### Daemon Mode ###
 

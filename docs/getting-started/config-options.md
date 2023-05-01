@@ -8,11 +8,11 @@
 !!! danger ""
     `PHOTOPRISM_AUTH_MODE: public` is NOT recommended for instances installed on a server accessible from outside your home network.
 
-|          Environment          |       CLI Flag       | Default  |                                  Description                                  |
+|          Environment          |       CLI Flag       | Default  | Description                                                                   |
 |-------------------------------|----------------------|----------|-------------------------------------------------------------------------------|
 | PHOTOPRISM_AUTH_MODE          | --auth-mode          | password | authentication `MODE` (public, password)                                      |
 | PHOTOPRISM_ADMIN_USER         | --admin-user         | admin    | admin login `USERNAME`                                                        |
-| PHOTOPRISM_ADMIN_PASSWORD     | --admin-password     |          | initial admin `PASSWORD` (4-72 characters)                                    |
+| PHOTOPRISM_ADMIN_PASSWORD     | --admin-password     |          | initial admin `PASSWORD` (8-72 characters)                                    |
 | PHOTOPRISM_SESSION_MAXAGE     | --session-maxage     |  1209600 | time in `SECONDS` until API sessions expire automatically (-1 to disable)     |
 | PHOTOPRISM_SESSION_TIMEOUT    | --session-timeout    |   604800 | time in `SECONDS` until API sessions expire due to inactivity (-1 to disable) |
 | PHOTOPRISM_LOGIN_URI          | --login-uri          |          | user login `URI` *plus*                                                       |

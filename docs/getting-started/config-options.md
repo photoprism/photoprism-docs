@@ -15,7 +15,6 @@
 | PHOTOPRISM_ADMIN_PASSWORD     | --admin-password     |          | initial admin `PASSWORD` (8-72 characters)                                    |
 | PHOTOPRISM_SESSION_MAXAGE     | --session-maxage     |  1209600 | time in `SECONDS` until API sessions expire automatically (-1 to disable)     |
 | PHOTOPRISM_SESSION_TIMEOUT    | --session-timeout    |   604800 | time in `SECONDS` until API sessions expire due to inactivity (-1 to disable) |
-| PHOTOPRISM_LOGIN_URI          | --login-uri          |          | user login `URI` *plus*                                                       |
 | PHOTOPRISM_REGISTER_URI       | --register-uri       |          | user registration `URI` *plus*                                                |
 | PHOTOPRISM_PASSWORD_LENGTH    | --password-length    |        8 | minimum password `LENGTH` in characters *plus*                                |
 | PHOTOPRISM_PASSWORD_RESET_URI | --password-reset-uri |          | forgot password `URI` *plus*                                                  |

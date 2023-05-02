@@ -54,6 +54,26 @@
 
     At the same time, we know there's a huge demand and many practical uses for a cloud-hosted app that is easy to set up. We like to give our users the choice and therefore offer a fully managed service as a deployment option. Selected hosting partners ensure that your privacy is protected as much as technically possible, even in the cloud.
 
+## Membership ##
+
+??? question "How can I activate my membership?"
+
+    To connect a new instance to your membership account, you will need to log in with the admin user that is automatically created during setup (see your `docker-compose.yml` file or the app store documentation), and then follow the steps described in our activation guide.
+    
+    [View Activation Guide ›](https://www.photoprism.app/kb/activation)
+
+??? question "Are there alternatives to a recurring subscription?"
+
+    PhotoPrism+ members automatically receive a free lifetime Essentials membership after 24 months. Likewise, Silver members receive a lifetime Plus membership after 24 months, Gold members after 12 months, and Platinum members after only 6 months. To avoid subscriptions altogether, membership fees can also be paid in advance.
+
+    [View Membership FAQ ›](https://www.photoprism.app/kb/membership)
+
+??? question "What happens if I cancel my membership?"
+
+    If you are eligible for a lifetime Essentials or Plus membership, you can continue to use these features even if you decide to stop supporting us. Otherwise, you can continue to use all the freely available features. In no case will you lose access to your pictures.
+
+    [Compare Features ›](/editions#compare)
+
 ## User Interface ##
 
 ??? question "Can I select multiple pictures at once?"

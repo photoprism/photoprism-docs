@@ -9,7 +9,7 @@
 ### May 2, 2023 ###
 <span class="build">Build 230502-c405f6eff</span>
 
-With this major new release, you'll get a long list of new features and enhancements with a focus on performance, usability, and [file type support](https://www.photoprism.app/kb/file-formats). In addition, our PhotoPrism+ Members can now register directly in the app to [unlock additional features](https://www.photoprism.app/kb/activation) like [vector graphics support](https://demo.photoprism.app/library/browse?view=cards&order=added&q=vectors) and a new [admin web UI](https://demo.photoprism.app/library/admin/users) for user and session management. Thank you to all contributors and members who made this possible!
+With this major new release, you'll get a long list of new features and enhancements with a focus on [performance](https://twitter.com/photoprism_app/status/1628850699772600323), [security](https://twitter.com/photoprism_app/status/1651596098249662465), and [file type support](https://www.photoprism.app/kb/file-formats). In addition, our [Plus Members](https://www.photoprism.app/editions#compare) can now register directly in the app to [unlock additional features](https://www.photoprism.app/kb/activation) like [vector graphics support](https://demo.photoprism.app/library/browse?view=cards&order=added&q=vectors) and a new [admin web UI](https://demo.photoprism.app/library/admin/users) for user and session management. Thank you to all contributors and members who made this possible!
 
 What's new?
 

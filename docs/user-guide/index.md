@@ -11,12 +11,6 @@ It is available for Mac, Linux, and Windows. PhotoPrism also runs on [PikaPods](
 
 Once the [initial setup](../getting-started/index.md) is complete, our [First Steps 👣](./first-steps.md) tutorial guides you through the user interface and settings to ensure your library is indexed according to your individual preferences.
 
-### Activating Your Membership ###
-
-To connect a new instance to your [membership account](https://my.photoprism.app/), you will need to log in with the admin user that is automatically created during setup, and then follow the steps described in our activation guide.
-
-[View Activation Guide ›](https://www.photoprism.app/kb/activation){ class="pr-2" } [View Membership FAQ ›](https://www.photoprism.app/kb/membership)
-
 ## Getting Support ##
 
 If you need help installing our software at home, you can [join us on Reddit](https://link.photoprism.app/reddit), ask in our [Community Chat](https://link.photoprism.app/chat), or post your question in [GitHub Discussions](https://link.photoprism.app/discussions). Common problems can be quickly diagnosed and solved using the [Troubleshooting Checklists](https://docs.photoprism.app/getting-started/troubleshooting/) in [Getting Started](https://docs.photoprism.app/getting-started/).
@@ -30,3 +24,9 @@ Thank you very much!
     **We kindly ask you not to report bugs via *GitHub Issues* unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.**
     [Contact us](https://www.photoprism.app/contact) or [a community member](https://link.photoprism.app/discussions)
     if you need help, it could be a local configuration problem, or a misunderstanding in how the software works.
+
+## Activating Your Membership ##
+
+To connect a new instance to your [membership account](https://my.photoprism.app/), you will need to log in with the admin user that is automatically created during setup, and then follow the steps described in our activation guide.
+
+[View Activation Guide ›](https://www.photoprism.app/kb/activation){ class="pr-2" } [View Membership FAQ ›](https://www.photoprism.app/kb/membership)

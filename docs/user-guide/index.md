@@ -25,7 +25,7 @@ Thank you very much!
     [Contact us](https://www.photoprism.app/contact) or [a community member](https://link.photoprism.app/discussions)
     if you need help, it could be a local configuration problem, or a misunderstanding in how the software works.
 
-## Activating Your Membership ##
+## PhotoPrism® Plus ##
 
 To connect a new instance to your [membership account](https://my.photoprism.app/), you will need to log in with the admin user that is automatically created during setup, and then follow the steps described in our activation guide.
 

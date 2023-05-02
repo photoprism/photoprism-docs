@@ -6,8 +6,10 @@
 !!! tldr ""
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
-### Development Preview ###
-<span class="build">Build 230429-c809684b2</span>
+### May 2, 2023 ###
+<span class="build">Build 230502-c405f6eff</span>
+
+With this major new release, you'll get a long list of new features and enhancements with a focus on performance, usability, and [file type support](https://www.photoprism.app/kb/file-formats). In addition, our Essentials and PhotoPrism+ Members can now register directly in the app to [unlock additional features](https://www.photoprism.app/kb/activation) like [vector graphics support](https://demo.photoprism.app/library/browse?view=cards&order=added&q=vectors) and a new [admin web UI](https://demo.photoprism.app/library/admin/users) for user and session management. Thank you to all contributors and members who made this possible!
 
 What's new?
 
@@ -83,6 +85,11 @@ PhotoPrism® Plus
 
 - Auth: [Admins can manage user accounts and active sessions through the web UI](https://demo.photoprism.plus/library/admin/users) 
 - Index: [Added file format support for SVG, AI, PS and EPS vector graphics](https://github.com/photoprism/photoprism/issues/2207)
+
+!!! tldr ""
+    Our new [Plus License](https://www.photoprism.app/plus/license) is used for both the PhotoPrism+ extensions we provide to our members as well as the standard Docker image we distribute. This allows us to bundle the extensions, and other third-party components that we are not allowed to distribute under the AGPL, with the compiled application in the Docker image. The public source code, however, remains under the [Open Source AGPL License](https://docs.photoprism.app/license/agpl/). If you don't want additional features, you can alternatively use the "ce" tag instead of "latest" to get a smaller Docker image distributed under the AGPL license.
+    
+    [View Membership FAQ ›](https://www.photoprism.app/kb/membership){ class="pr-3" } [View Plus License ›](https://www.photoprism.app/plus/license)
 
 ### November 18, 2022 ###
 <span class="build">Build 221118-e58fee0fb</span>

@@ -102,9 +102,11 @@ To improve the situation for those who don't want to or cannot [sign up](https:/
 !!! tldr ""
     We are aware that advanced users could register "non-commercial test accounts" instead, but we think that would not be completely fair and [MapTiler](https://www.maptiler.com/) could then no longer offer them to those in need. Keep in mind that we have many more users than other open source projects that might encourage their users to do this. Likewise, using the OpenSteetMap development API is discouraged for consumer applications like ours, although some projects do it anyway.
 
-### What functionality is generally available?
+### How can I activate my membership?
 
-Our team decides this on an ongoing basis depending on the support effort required, server and licensing costs, and whether the features are generally needed by everyone or mainly requested by organizations and advanced users. As this allows us to make more features available to the public, we encourage all users to [support our mission](https://www.photoprism.app/editions#compare).
+To connect a new instance to your membership account, you will need to log in with the admin user that is automatically created during setup (see your `docker-compose.yml` file or the app store documentation), and then follow the steps described in our activation guide.
+
+[View Activation Guide ›](https://www.photoprism.app/kb/activation)
 
 ### What are the advantages of purchasing a commercial license?
 
@@ -224,6 +226,12 @@ compromising performance and usability.
     such as lower performance and more difficult handling. You can also run Docker in a VM to get the best of
     both worlds. It's essentially what happens when you run dockerized applications on [virtual cloud servers](cloud/digitalocean.md)
     and operating systems other than Linux.
+
+### Why does your Docker image use the Plus License instead of the AGPL?
+
+Our [Plus License](https://www.photoprism.app/plus/license) is used for both the PhotoPrism+ extensions we provide to our members as well as the standard Docker image we distribute. This allows us to bundle the extensions, and other third-party components that we are not allowed to distribute under the AGPL, with the compiled application in the Docker image. The public source code, however, remains under the [Open Source AGPL License](https://docs.photoprism.app/license/agpl/). If you don't want additional features, you can alternatively use the "ce" tag instead of "latest" to get a smaller Docker image distributed under the AGPL License. Note that third-party components and digital assets included in this image are still subject to additional terms and conditions.
+
+[View Plus License ›](https://www.photoprism.app/plus/license)
 
 ### Should I use SQLite, MariaDB, or MySQL?
 

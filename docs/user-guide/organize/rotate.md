@@ -1,8 +1,5 @@
 # Rotate Image #
 
-!!! info ""
-    This is a new feature that will be available in our upcoming stable release.
-
 PhotoPrism allows you to rotate JPG and PNG images.
 
 1. Open the photo [*edit dialog*](edit.md)

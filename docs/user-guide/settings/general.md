@@ -67,9 +67,6 @@ A future release will additionally provide public events' data, so that albums o
 ## Downloads ##
 
 !!! info ""
-    This is a new feature that will be available in our upcoming stable release.
-
-!!! info ""
     Note that your choice will not affect ZIP archives when you download complete albums. However, we may add settings for this in a future release.
 
 #### :material-camera-iris: Originals ####

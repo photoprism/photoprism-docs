@@ -13,7 +13,7 @@ This service release makes the Nordic theme and the [Hide People](user-guide/org
 
 What's new?
 
-Settings: [Changed order in the theme dropdown so that the freely available themes come first](https://github.com/photoprism/photoprism/issues/3368)
+- Settings: [Changed order in the theme dropdown so that the freely available themes come first](https://github.com/photoprism/photoprism/issues/3368)
 
 ### May 2, 2023 ###
 <span class="build">Build 230502-c405f6eff</span>

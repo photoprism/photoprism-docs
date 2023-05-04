@@ -11,6 +11,8 @@
 
 This service release makes the Nordic theme and the [Hide People](user-guide/organize/people.md#hiding-people) feature available to all users. It also changes the theme order in [Settings](user-guide/settings/general.md) so that the freely available themes come first.
 
+What's new?
+
 Settings: [Changed order in the theme dropdown so that the freely available themes come first](https://github.com/photoprism/photoprism/issues/3368)
 
 ### May 2, 2023 ###

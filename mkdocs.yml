@@ -131,8 +131,8 @@ nav:
       - Google Photos: user-guide/use-cases/google.md
       - Apple Photos: user-guide/use-cases/apple.md
       - Flickr: user-guide/use-cases/flickr.md
-    - Multi-User Support:
-      - User Management: user-guide/users/index.md
+    - Managing Users:
+      - Admin Web UI: user-guide/users/index.md
       - CLI Commands: user-guide/users/cli.md
       - Multiple Libraries: user-guide/users/libraries.md
     - Mobile App (PWA): user-guide/pwa.md

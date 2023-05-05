@@ -121,6 +121,10 @@ nav:
       - Advanced: user-guide/settings/advanced.md
       - Services: user-guide/settings/sync.md
       - Account: user-guide/settings/account.md
+    - User Management:
+        - Admin UI: user-guide/users/index.md
+        - CLI Commands: user-guide/users/cli.md
+        - Multiple Libraries: user-guide/users/libraries.md
     - Backup Guide:
       - Creating Backups: user-guide/backups/index.md
       - Restoring Backups: user-guide/backups/restore.md

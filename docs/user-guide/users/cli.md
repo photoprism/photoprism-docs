@@ -1,6 +1,6 @@
 # User Management Command-Line Interface
 
-!!! example ""
+!!! tldr ""
     User account roles and the admin web UI are features that are currently only available in [PhotoPrism+](https://www.photoprism.app/editions#compare).
 
 Local user accounts can be added, modified, and deleted by running the following commands in a terminal:

@@ -1,7 +1,7 @@
 # Managing User Accounts
 
-!!! tldr ""
-    User account roles and the admin web UI are features that are currently only available in [PhotoPrism+](https://www.photoprism.app/editions#compare).
+!!! example ""
+    User account roles and the admin web UI are features that are currently only available in [PhotoPrism® Plus](https://www.photoprism.app/editions#compare).
 
 You can add, edit and delete user accounts by navigating to *Settings > Users* as an [Admin](#admin):
 

@@ -33,8 +33,8 @@ For example, you could do the following to add a new admin with the username "bo
 docker compose exec photoprism photoprism users add -p mysecret -n "Bob" bob
 ```
 
-!!! tldr ""
-    User account roles and the admin web UI are features that are currently only available in [PhotoPrism+](https://www.photoprism.app/editions#compare).
+!!! example ""
+    User account roles and the admin web UI are features that are currently only available in [PhotoPrism® Plus](https://www.photoprism.app/editions#compare).
 
 !!! info ""
     Note that our guides now use the new `docker compose` command by default. If your server does not yet support it, the old `docker-compose` command will still work.

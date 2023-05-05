@@ -1,10 +1,7 @@
-!!! info "PhotoPrism® Plus"
+# User Management Command-Line Interface
 
-    The admin web UI as well as the account roles: user, viewer and guest are available in PhotoPrism® Plus only.
-    
-    [Compare Memberships ›](https://www.photoprism.app/editions#compare)
-
-## Command-Line Interface
+!!! example ""
+    User account roles and the admin web UI are features that are currently only available in [PhotoPrism+](https://www.photoprism.app/editions#compare).
 
 Local user accounts can be added, modified, and deleted by running the following commands in a terminal:
 
@@ -22,16 +19,16 @@ Local user accounts can be added, modified, and deleted by running the following
 
 You can combine the `add` and `mod` subcommands with these flags to set or change account properties:
 
-| Command Flag                         | Description                                    |
-|--------------------------------------|------------------------------------------------|
-| `--name NAME`, `-n NAME`             | full NAME for display in the interface         |
-| `--email EMAIL`, `-m EMAIL`          | unique EMAIL address of the user               |
-| `--password PASSWORD`, `-p PASSWORD` | PASSWORD for authentication                    |
-| `--role value`, `-r value`           | admin, user, viewer or guest (default: "user") |
-| `--superadmin`, `-s`                 | make user super admin with full access         |
-| `--no-login`, `-l`                   | disable login on the web interface             |
-| `--webdav`, `-w`                     | allow to sync files via WebDAV                 |
-| `--upload-path value`, `-u value`    | upload files to this sub-folder                |
+| Command Flag                         | Description                                     |
+|--------------------------------------|-------------------------------------------------|
+| `--name NAME`, `-n NAME`             | full NAME for display in the interface          |
+| `--email EMAIL`, `-m EMAIL`          | unique EMAIL address of the user                |
+| `--password PASSWORD`, `-p PASSWORD` | PASSWORD for authentication                     |
+| `--role value`, `-r value`           | admin, user, viewer or guest (default: "admin") |
+| `--superadmin`, `-s`                 | make user super admin with full access          |
+| `--no-login`, `-l`                   | disable login on the web interface              |
+| `--webdav`, `-w`                     | allow to sync files via WebDAV                  |
+| `--upload-path value`, `-u value`    | upload files to this sub-folder                 |
 
 For example, you could do the following to add a new user account with the username "bob" and the password "mysecret":
 
@@ -69,4 +66,3 @@ To display a description and the available options for a command, use the `--hel
 ```
 docker compose exec photoprism photoprism users ls --help
 ```
-

@@ -27,13 +27,13 @@ Super admins can reset a user's password, while regular admins can change passwo
 
 ## Roles and Permissions
 
-| Role    |   View Shared    |   View Private   |   View Library   |     Download     |      Upload      |  WebDAV  |      Admin       |
-|---------|:----------------:|:----------------:|:----------------:|:----------------:|:----------------:|:--------:|:----------------:|
-| admin   | :material-check: | :material-check: | :material-check: | :material-check: | :material-check: | optional | :material-check: |
-| user    | :material-check: | :material-check: | :material-check: | :material-check: | :material-check: | optional |                  | 
-| viewer  | :material-check: |                  |  except private  |  except private  |                  |          |                  |
-| guest   | :material-check: |                  |                  |      shared      |                  |          |                  |
-| visitor | :material-check: |                  |                  |      shared      |                  |          |                  |
+| Role    |   View Library   |     Download     |      Upload      |  WebDAV  |   Full Access    |
+|---------|:----------------:|:----------------:|:----------------:|:--------:|:----------------:|
+| admin   | :material-check: | :material-check: | :material-check: | optional | :material-check: |
+| user    | :material-check: | :material-check: | :material-check: | optional |                  | 
+| viewer  |  except private  |  except private  |                  |          |                  |
+| guest   |                  |      shared      |                  |          |                  |
+| visitor |                  |      shared      |                  |          |                  |
 
 ### Admin
 

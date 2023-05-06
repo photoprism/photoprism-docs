@@ -11,6 +11,8 @@
 
 This update resolves two recently reported issues and includes updated translations.
 
+What's new?
+
 - Sharing: [Upload checks if files have been deleted](https://github.com/photoprism/photoprism/issues/3379)
 - CLI: [Logging output is reduced in production mode](https://github.com/photoprism/photoprism/issues/3370)
 - Translations: [Updated French](https://github.com/photoprism/photoprism/pull/3373)

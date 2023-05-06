@@ -6,6 +6,15 @@
 !!! tldr ""
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
+### May 6, 2023 ###
+<span class="build">Build 230506-9de9a3540</span>
+
+This update resolves two recently reported issues and includes updated translations.
+
+- Sharing: [Upload checks if files have been deleted](https://github.com/photoprism/photoprism/issues/3379)
+- CLI: [Logging output is reduced in production mode](https://github.com/photoprism/photoprism/issues/3370)
+- Translations: [Updated French](https://github.com/photoprism/photoprism/pull/3373)
+
 ### May 4, 2023 ###
 <span class="build">Build 230504-cbf48798c</span>
 

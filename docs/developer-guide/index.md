@@ -15,9 +15,6 @@ You are welcome to [submit specific feature requests](issues.md) if you have ver
 [idea](https://github.com/photoprism/photoprism/labels/idea) or [todo](https://github.com/photoprism/photoprism/labels/todo)
 already exists. Give ideas you like a thumbs-up 👍  , so that we know what is most popular.
 
-!!! example ""
-    Our vision is to provide the most user- and privacy-friendly solution to keep your pictures organized and accessible.
-
 ## Join the Community ##
 
 Follow us on [Twitter](https://link.photoprism.app/twitter) and join the [Community Chat](https://link.photoprism.app/chat)

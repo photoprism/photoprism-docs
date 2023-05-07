@@ -22,13 +22,6 @@
 
     **Since [sustained funding](https://www.photoprism.app/oss/faq) is key to quickly releasing new features, we encourage all users to support our mission by [signing up as a member](https://www.photoprism.app/membership) or purchasing a [commercial license](https://www.photoprism.app/teams).**
 
-??? question "What functionality is generally available?"
-    
-    Our team decides this on an ongoing basis depending on the support effort required, server and licensing costs, and whether the features are generally needed by everyone or mainly requested by organizations and advanced users.
-    As this helps us [provide more features](https://www.photoprism.app/editions#compare) to the public, we encourage all users to [support our mission](https://www.photoprism.app/membership).
-
-    [Compare Memberships ›](https://www.photoprism.app/editions#compare){ class="pr-3" } [View Open Source FAQ ›](https://www.photoprism.app/oss/faq)
-
 ??? question "What are the advantages of purchasing a commercial license?"
 
     A key difference between the [public license](https://docs.photoprism.app/license/agpl/) and a [commercial license agreement](https://www.photoprism.app/teams) is that you get access to additional support and configuration options, as well as the right to customize functionality to your needs without having to publicly disclose your changes. Our [Compliance FAQ](https://www.photoprism.app/kb/compliance-faq) gives answers to the most frequently asked questions about product compliance and scalability.

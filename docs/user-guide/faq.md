@@ -52,7 +52,7 @@
 
     If you are eligible for a lifetime Essentials or Plus membership, you can continue to use these features even if you decide to stop supporting us. Otherwise, you can continue to use all the freely available features. In no case will you lose access to your pictures.
 
-    [Compare Features ›](/editions#compare)
+    [Compare Features ›](https://www.photoprism.app/editions#compare)
 
 ## User Interface ##
 

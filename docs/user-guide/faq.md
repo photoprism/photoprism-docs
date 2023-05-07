@@ -14,13 +14,11 @@
 
     [![](https://dl.photoprism.app/img/diagrams/proxy-cdn.svg){ class="w100" }](../getting-started/troubleshooting/firewall.md)
 
-??? question "When exactly will new features be released?"
-    
-    Our [Project Roadmap](https://link.photoprism.app/roadmap) shows what tasks are in progress and what features will be implemented next. You may give ideas you like a thumbs-up, so we know what's most popular.
+??? question "Why are some features only available to members?"
 
-    Be aware that we have a zero-bug policy and do our best to help users when they need support or have other questions. This comes at a price though, as we can't give exact release dates for new features. Our team receives many more requests than can be implemented, so we want to emphasize that we are in no way obligated to implement the features, enhancements, or other changes you request. We do, however, appreciate your feedback and carefully consider all requests.
+    PhotoPrism is **100% self-funded and independent**. Voluntary donations do not cover the cost of a team working full time to provide you with updates, documentation, and support. It is your decision whether you want to sign up to enjoy additional benefits.
 
-    **Since [sustained funding](https://www.photoprism.app/oss/faq) is key to quickly releasing new features, we encourage all users to support our mission by [signing up as a member](https://www.photoprism.app/membership) or purchasing a [commercial license](https://www.photoprism.app/teams).**
+    [View Membership FAQ ›](https://www.photoprism.app/kb/membership)
 
 ??? question "What are the advantages of purchasing a commercial license?"
 
@@ -28,24 +26,13 @@
 
     [Compare Team Editions ›](https://www.photoprism.app/teams#compare)
 
-??? question "Shouldn't free software be free of costs?"
+??? question "When exactly will new features be released?"
+    
+    Our [Project Roadmap](https://link.photoprism.app/roadmap) shows what tasks are in progress and what features will be implemented next. You may give ideas you like a thumbs-up, so we know what's most popular.
 
-    Think of “free software” as in “free speech,” not as in “free beer.” The [Free Software Foundation](https://www.gnu.org/philosophy/free-sw.en.html) sometimes calls it “libre software,” borrowing the French or Spanish word for “free” as in freedom, to show they [do not mean the software is gratis](https://www.gnu.org/philosophy/selling.html).
+    Be aware that we have a zero-bug policy and do our best to help users when they need support or have other questions. This comes at a price though, as we can't give exact release dates for new features. Our team receives many more requests than can be implemented, so we want to emphasize that we are in no way obligated to implement the features, enhancements, or other changes you request. We do, however, appreciate your feedback and carefully consider all requests.
 
-    [View Open Source FAQ ›](https://www.photoprism.app/oss/faq)
-
-??? question "Why can't I just purchase and download a single version?"
-
-    Unlike traditional offline apps such as Microsoft Office or single-player games, software exposed to the Internet must be [updated regularly](https://docs.photoprism.app/release-notes/) to stay secure and compatible with the latest standards.
-
-    It's essential to keep your operating system, Web browsers, and all other software up to date. Don't push your luck. 
-    Historically, even large tech companies [have not supported their old products](https://docs.microsoft.com/en-us/lifecycle/end-of-support/end-of-support-2022) for an extended period of time, with only a few exceptions. Windows XP, for example, sold 400 million copies, which is why Micorosoft was able to offer updates for such a long time.
-
-??? question "Will the self-hosted version continue to be supported?"
-
-    Absolutely! We are on a mission to protect your freedom and privacy. Self-hosting is the easiest way to stay in control and protect [your privacy](https://www.photoprism.app/privacy). It also provides the best experience for advanced users who often rely on a local toolchain to select, edit, and publish their pictures.
-
-    At the same time, we know there's a huge demand and many practical uses for a cloud-hosted app that is easy to set up. We like to give our users the choice and therefore offer a fully managed service as a deployment option. Selected hosting partners ensure that your privacy is protected as much as technically possible, even in the cloud.
+    **Since [sustained funding](https://www.photoprism.app/oss/faq) is key to quickly releasing new features, we encourage all users to support our mission by [signing up as a member](https://www.photoprism.app/membership) or purchasing a [commercial license](https://www.photoprism.app/teams).**
 
 ## Membership ##
 

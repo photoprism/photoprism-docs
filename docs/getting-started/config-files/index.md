@@ -38,6 +38,9 @@ Default values, including the *config* path to use, may optionally be specified 
 |       Name       |  Type  |       CLI Flag       |
 |------------------|--------|----------------------|
 | AuthMode         | string | --auth-mode          |
+| RegisterUri      | string | --register-uri       |
+| PasswordLength   | int    | --password-length    |
+| PasswordResetUri | string | --password-reset-uri |
 | Public           | bool   | --public             |
 | AdminUser        | string | --admin-user         |
 | AdminPassword    | string | --admin-password     |
@@ -61,9 +64,9 @@ Default values, including the *config* path to use, may optionally be specified 
 | OriginalsPath   | string | --originals-path   |
 | OriginalsLimit  | int    | --originals-limit  |
 | ResolutionLimit | int    | --resolution-limit |
+| UsersPath       | string | --users-path       |
 | StoragePath     | string | --storage-path     |
 | SidecarPath     | string | --sidecar-path     |
-| UsersPath       | string | --users-path       |
 | BackupPath      | string | --backup-path      |
 | CachePath       | string | --cache-path       |
 | ImportPath      | string | --import-path      |
@@ -86,19 +89,23 @@ Default values, including the *config* path to use, may optionally be specified 
 |-----------------------|------|--------------------------|
 | ReadOnly              | bool | --read-only              |
 | Experimental          | bool | --experimental           |
-| DisableWebDAV         | bool | --disable-webdav         |
-| DisableBackups        | bool | --disable-backups        |
 | DisableSettings       | bool | --disable-settings       |
+| DisableRestart        | bool | --disable-restart        |
+| DisableBackups        | bool | --disable-backups        |
+| DisableWebDAV         | bool | --disable-webdav         |
 | DisablePlaces         | bool | --disable-places         |
 | DisableTensorFlow     | bool | --disable-tensorflow     |
 | DisableFaces          | bool | --disable-faces          |
 | DisableClassification | bool | --disable-classification |
 | DisableFFmpeg         | bool | --disable-ffmpeg         |
 | DisableExifTool       | bool | --disable-exiftool       |
-| DisableHeifConvert    | bool | --disable-heifconvert    |
-| DisableDarktable      | bool | --disable-darktable      |
-| DisableRawtherapee    | bool | --disable-rawtherapee    |
 | DisableSips           | bool | --disable-sips           |
+| DisableDarktable      | bool | --disable-darktable      |
+| DisableRawTherapee    | bool | --disable-rawtherapee    |
+| DisableImageMagick    | bool | --disable-imagemagick    |
+| DisableHeifConvert    | bool | --disable-heifconvert    |
+| DisableVectors        | bool | --disable-vectors        |
+| DisableJpegXL         | bool | --disable-jpegxl         |
 | DisableRaw            | bool | --disable-raw            |
 | RawPresets            | bool | --raw-presets            |
 | ExifBruteForce        | bool | --exif-bruteforce        |
@@ -111,24 +118,28 @@ Default values, including the *config* path to use, may optionally be specified 
 |---------------|--------|------------------|
 | DefaultTheme  | string | --default-theme  |
 | DefaultLocale | string | --default-locale |
-| AppIcon       | string | --app-icon       |
 | AppName       | string | --app-name       |
 | AppMode       | string | --app-mode       |
+| AppIcon       | string | --app-icon       |
+| AppColor      | string | --app-color      |
 | LegalInfo     | string | --legal-info     |
 | LegalUrl      | string | --legal-url      |
 | WallpaperUri  | string | --wallpaper-uri  |
 
 ### Site Information ###
 
-|      Name       |  Type  |      CLI Flag      |
-|-----------------|--------|--------------------|
-| CdnUrl          | string | --cdn-url          |
-| SiteUrl         | string | --site-url         |
-| SiteAuthor      | string | --site-author      |
-| SiteTitle       | string | --site-title       |
-| SiteCaption     | string | --site-caption     |
-| SiteDescription | string | --site-description |
-| SitePreview     | string | --site-preview     |
+|        Name        |  Type  |        CLI Flag        |
+|--------------------|--------|------------------------|
+| CdnUrl             | string | --cdn-url              |
+| CdnVideo           | bool   | --cdn-video            |
+| SiteUrl            | string | --site-url             |
+| SiteAuthor         | string | --site-author          |
+| SiteTitle          | string | --site-title           |
+| SiteCaption        | string | --site-caption         |
+| SiteDescription    | string | --site-description     |
+| SitePreview        | string | --site-preview         |
+| HttpsProxy         | string | --https-proxy          |
+| HttpsProxyInsecure | bool   | --https-proxy-insecure |
 
 ### Web Server ###
 
@@ -137,14 +148,16 @@ Default values, including the *config* path to use, may optionally be specified 
 | TrustedProxies    | []string | --trusted-proxy      |
 | ProxyProtoHeaders | []string | --proxy-proto-header |
 | ProxyProtoHttps   | []string | --proxy-proto-https  |
-| HttpMode          | string   | --http-mode          |
-| HttpCompression   | string   | --http-compression   |
-| HttpHost          | string   | --http-host          |
-| HttpPort          | int      | --http-port          |
 | DisableTLS        | bool     | --disable-tls        |
 | TLSEmail          | string   | --tls-email          |
 | TLSCert           | string   | --tls-cert           |
 | TLSKey            | string   | --tls-key            |
+| HttpMode          | string   | --http-mode          |
+| HttpCompression   | string   | --http-compression   |
+| HttpCacheMaxAge   | int      | --http-cache-maxage  |
+| HttpCachePublic   | bool     | --http-cache-public  |
+| HttpHost          | string   | --http-host          |
+| HttpPort          | int      | --http-port          |
 
 ### Database Connection ###
 
@@ -158,6 +171,14 @@ Default values, including the *config* path to use, may optionally be specified 
 | DatabasePassword  | string | --database-password   |
 | DatabaseConns     | int    | --database-conns      |
 | DatabaseConnsIdle | int    | --database-conns-idle |
+| SipsBin           | string | --sips-bin            |
+| SipsBlacklist     | string | --sips-blacklist      |
+| FFmpegBin         | string | --ffmpeg-bin          |
+| FFmpegEncoder     | string | --ffmpeg-encoder      |
+| FFmpegBitrate     | int    | --ffmpeg-bitrate      |
+| FFmpegMapVideo    | string | --ffmpeg-map-video    |
+| FFmpegMapAudio    | string | --ffmpeg-map-audio    |
+| ExifToolBin       | string | --exiftool-bin        |
 
 ### File Converters ###
 
@@ -167,15 +188,12 @@ Default values, including the *config* path to use, may optionally be specified 
 | DarktableCachePath   | string | --darktable-cache-path  |
 | DarktableConfigPath  | string | --darktable-config-path |
 | DarktableBlacklist   | string | --darktable-blacklist   |
-| RawtherapeeBin       | string | --rawtherapee-bin       |
-| RawtherapeeBlacklist | string | --rawtherapee-blacklist |
-| SipsBin              | string | --sips-bin              |
-| SipsBlacklist        | string | --sips-blacklist        |
+| RawTherapeeBin       | string | --rawtherapee-bin       |
+| RawTherapeeBlacklist | string | --rawtherapee-blacklist |
+| ImageMagickBin       | string | --imagemagick-bin       |
+| ImageMagickBlacklist | string | --imagemagick-blacklist |
 | HeifConvertBin       | string | --heifconvert-bin       |
-| FFmpegBin            | string | --ffmpeg-bin            |
-| FFmpegEncoder        | string | --ffmpeg-encoder        |
-| FFmpegBitrate        | int    | --ffmpeg-bitrate        |
-| ExifToolBin          | string | --exiftool-bin          |
+| RsvgConvertBin       | string | --rsvgconvert-bin       |
 
 ### Security Tokens ###
 
@@ -195,6 +213,7 @@ Default values, including the *config* path to use, may optionally be specified 
 | ThumbUncached     | bool   | --thumb-uncached      |
 | JpegQuality       | string | --jpeg-quality        |
 | JpegSize          | int    | --jpeg-size           |
+| PngSize           | int    | --png-size            |
 
 ### Daemon Mode ###
 

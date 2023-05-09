@@ -10,7 +10,7 @@ After files have been transferred, you can [index](../library/originals.md) or [
 By default, indexing and importing start automatically after a safety delay when files have been uploaded using WebDAV.
 
 !!! tldr ""
-    You can disable WebDAV in the [advanced settings](../settings/advanced.md). Since it requires write permissions and authentication, the built-in WebDAV server is automatically disabled when running in [read-only](../../getting-started/config-options.md#feature-flags) or [public mode](../../getting-started/config-options.md#authentication).
+    You can disable WebDAV in the [advanced settings](../settings/advanced.md). Since it requires authentication, the built-in WebDAV server is automatically disabled when running in [public mode](../../getting-started/config-options.md#authentication).
 
 
 !!! note ""

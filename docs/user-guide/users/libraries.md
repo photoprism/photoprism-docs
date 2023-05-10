@@ -1,8 +1,8 @@
 # Multiple Libraries
 
-[PhotoPrism® Plus](https://www.photoprism.app/editions#compare) includes advanced multi-user features and additional account roles. These roles are intended for applications where multiple users share a single library, for example, to give family members access to your personal library without granting write permissions or exposing private content.
+[PhotoPrism® Plus](https://www.photoprism.app/editions#compare) includes advanced multi-user functionality and additional account roles. These roles are intended for situations where you want other users to have access to your library, such as giving family members access to your personal library without granting write permissions or exposing private content.
 
-It is recommended to set up multiple instances if you have multiple users, for example in a family, where everyone wants to manage their own files independently and share only selected albums. That way you can avoid problems with conflicting library settings, file permissions, and dealing with duplicates.
+It is recommended to set up additional instances if you have multiple users in a family, so that everyone can manage their own files independently and share only selected albums. This way you can avoid problems with conflicting library settings, file permissions, and dealing with duplicates.
 
 In future versions, users will be able to share albums and other content in a decentralized way, regardless of where their library is hosted. We are also working on a dedicated web interface for managing multiple libraries and user accounts, which will be made available as a separate tool.
 

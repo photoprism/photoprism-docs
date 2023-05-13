@@ -90,37 +90,37 @@
 |        Environment        |     CLI Flag     |  Default   |                               Description                                |
 |---------------------------|------------------|------------|--------------------------------------------------------------------------|
 | PHOTOPRISM_DEFAULT_LOCALE | --default-locale | en         | standard user interface language `CODE`                                  |
-| PHOTOPRISM_DEFAULT_THEME  | --default-theme  |            | standard user interface theme `NAME` *essentials*                        |
-| PHOTOPRISM_APP_NAME       | --app-name       |            | progressive web app `NAME` when installed on a device *essentials*       |
+| PHOTOPRISM_DEFAULT_THEME  | --default-theme  |            | standard user interface theme `NAME`                                     |
+| PHOTOPRISM_APP_NAME       | --app-name       |            | progressive web app `NAME` when installed on a device                    |
 | PHOTOPRISM_APP_MODE       | --app-mode       | standalone | progressive web app `MODE` (fullscreen, standalone, minimal-ui, browser) |
-| PHOTOPRISM_APP_ICON       | --app-icon       |            | home screen `ICON` (logo, app, crisp, mint, bold, square) *essentials*   |
+| PHOTOPRISM_APP_ICON       | --app-icon       |            | home screen `ICON` (logo, app, crisp, mint, bold, square)                |
 | PHOTOPRISM_APP_COLOR      | --app-color      | #000000    | splash screen `COLOR` code                                               |
-| PHOTOPRISM_LEGAL_INFO     | --legal-info     |            | legal information `TEXT`, displayed in the page footer *essentials*      |
-| PHOTOPRISM_LEGAL_URL      | --legal-url      |            | legal information `URL` *essentials*                                     |
+| PHOTOPRISM_LEGAL_INFO     | --legal-info     |            | legal information `TEXT`, displayed in the page footer                   |
+| PHOTOPRISM_LEGAL_URL      | --legal-url      |            | legal information `URL`                                                  |
 | PHOTOPRISM_WALLPAPER_URI  | --wallpaper-uri  |            | login screen background image `URI`                                      |
 
 ### Site Information ###
 
-|         Environment         |      CLI Flag      |          Default           |                    Description                    |
-|-----------------------------|--------------------|----------------------------|---------------------------------------------------|
-| PHOTOPRISM_CDN_URL          | --cdn-url          |                            | content delivery network `URL` *essentials*       |
-| PHOTOPRISM_CDN_VIDEO        | --cdn-video        |                            | stream videos over the specified CDN *essentials* |
-| PHOTOPRISM_SITE_URL         | --site-url         | http://photoprism.me:2342/ | public site `URL`                                 |
-| PHOTOPRISM_SITE_AUTHOR      | --site-author      |                            | site `OWNER`, copyright, or artist                |
-| PHOTOPRISM_SITE_TITLE       | --site-title       |                            | site `TITLE` *essentials*                         |
-| PHOTOPRISM_SITE_CAPTION     | --site-caption     | AI-Powered Photos App      | site `CAPTION`                                    |
-| PHOTOPRISM_SITE_DESCRIPTION | --site-description |                            | site `DESCRIPTION` *optional*                     |
-| PHOTOPRISM_SITE_PREVIEW     | --site-preview     |                            | sharing preview image `URL` *essentials*          |
+|         Environment         |      CLI Flag      |          Default           |             Description              |
+|-----------------------------|--------------------|----------------------------|--------------------------------------|
+| PHOTOPRISM_CDN_URL          | --cdn-url          |                            | content delivery network `URL`       |
+| PHOTOPRISM_CDN_VIDEO        | --cdn-video        |                            | stream videos over the specified CDN |
+| PHOTOPRISM_SITE_URL         | --site-url         | http://photoprism.me:2342/ | public site `URL`                    |
+| PHOTOPRISM_SITE_AUTHOR      | --site-author      |                            | site `OWNER`, copyright, or artist   |
+| PHOTOPRISM_SITE_TITLE       | --site-title       |                            | site `TITLE`                         |
+| PHOTOPRISM_SITE_CAPTION     | --site-caption     | AI-Powered Photos App      | site `CAPTION`                       |
+| PHOTOPRISM_SITE_DESCRIPTION | --site-description |                            | site `DESCRIPTION` *optional*        |
+| PHOTOPRISM_SITE_PREVIEW     | --site-preview     |                            | sharing preview image `URL`          |
 
 ### Proxy Servers ###
 
-|           Environment           |        CLI Flag        |      Default      |                            Description                            |
-|---------------------------------|------------------------|-------------------|-------------------------------------------------------------------|
-| PHOTOPRISM_HTTPS_PROXY          | --https-proxy          |                   | proxy server `URL` to be used for outgoing connections *optional* |
-| PHOTOPRISM_HTTPS_PROXY_INSECURE | --https-proxy-insecure |                   | ignore invalid HTTPS certificates when using a proxy              |
-| PHOTOPRISM_TRUSTED_PROXY        | --trusted-proxy        | 172.16.0.0/12     | `CIDR` range from which reverse proxy headers can be trusted      |
-| PHOTOPRISM_PROXY_PROTO_HEADER   | --proxy-proto-header   | X-Forwarded-Proto | proxy protocol header `NAME`                                      |
-| PHOTOPRISM_PROXY_PROTO_HTTPS    | --proxy-proto-https    | https             | forwarded HTTPS protocol `NAME`                                   |
+|           Environment           |        CLI Flag        |      Default      |                                               Description                                               |
+|---------------------------------|------------------------|-------------------|---------------------------------------------------------------------------------------------------------|
+| PHOTOPRISM_HTTPS_PROXY          | --https-proxy          |                   | proxy server `URL` to be used for outgoing connections *optional*                                       |
+| PHOTOPRISM_HTTPS_PROXY_INSECURE | --https-proxy-insecure |                   | ignore invalid HTTPS certificates when using a proxy                                                    |
+| PHOTOPRISM_TRUSTED_PROXY        | --trusted-proxy        | 172.16.0.0/12     | `CIDR` ranges or IPv4/v6 addresses from which reverse proxy headers can be trusted, separated by commas |
+| PHOTOPRISM_PROXY_PROTO_HEADER   | --proxy-proto-header   | X-Forwarded-Proto | proxy protocol header `NAME`                                                                            |
+| PHOTOPRISM_PROXY_PROTO_HTTPS    | --proxy-proto-https    | https             | forwarded HTTPS protocol `NAME`                                                                         |
 
 ### Web Server ###
 
@@ -164,15 +164,15 @@
 
 ### File Converters ###
 
-| Environment                      | CLI Flag                | Default                        | Description                                                           |
+|           Environment            |        CLI Flag         |            Default             |                              Description                              |
 |----------------------------------|-------------------------|--------------------------------|-----------------------------------------------------------------------|
 | PHOTOPRISM_SIPS_BIN              | --sips-bin              | sips                           | Sips `COMMAND` for media file conversion *macOS only*                 |
 | PHOTOPRISM_SIPS_BLACKLIST        | --sips-blacklist        | avif,avifs                     | do not use Sips to convert files with these `EXTENSIONS` *macOS only* |
 | PHOTOPRISM_FFMPEG_BIN            | --ffmpeg-bin            | ffmpeg                         | FFmpeg `COMMAND` for video transcoding and thumbnail extraction       |
-| PHOTOPRISM_FFMPEG_ENCODER        | --ffmpeg-encoder        | libx264                        | FFmpeg AVC encoder `NAME` *essentials*                                |
-| PHOTOPRISM_FFMPEG_BITRATE        | --ffmpeg-bitrate        | 50                             | maximum FFmpeg encoding `BITRATE` (Mbit/s)                            |
-| PHOTOPRISM_FFMPEG_MAP_VIDEO      | --ffmpeg-map-video      | `0:v:0`                        | video `STREAMS` that should be transcoded                             |
-| PHOTOPRISM_FFMPEG_MAP_AUDIO      | --ffmpeg-map-audio      | `0:a:0?`                       | audio `STREAMS` that should be transcoded                             |
+| PHOTOPRISM_FFMPEG_ENCODER        | --ffmpeg-encoder        | libx264                        | FFmpeg AVC encoder `NAME`                                             |
+| PHOTOPRISM_FFMPEG_BITRATE        | --ffmpeg-bitrate        |                             50 | maximum FFmpeg encoding `BITRATE` (Mbit/s)                            |
+| PHOTOPRISM_FFMPEG_MAP_VIDEO      | --ffmpeg-map-video      | 0:v:0                          | video `STREAMS` that should be transcoded                             |
+| PHOTOPRISM_FFMPEG_MAP_AUDIO      | --ffmpeg-map-audio      | 0:a:0?                         | audio `STREAMS` that should be transcoded                             |
 | PHOTOPRISM_EXIFTOOL_BIN          | --exiftool-bin          | exiftool                       | ExifTool `COMMAND` for extracting metadata                            |
 | PHOTOPRISM_DARKTABLE_BIN         | --darktable-bin         | darktable-cli                  | Darktable CLI `COMMAND` for RAW to JPEG conversion                    |
 | PHOTOPRISM_DARKTABLE_BLACKLIST   | --darktable-blacklist   |                                | do not use Darktable to convert files with these `EXTENSIONS`         |
@@ -212,16 +212,16 @@
 
 We recommend that only advanced users change these parameters:
 
-|          Environment          |       CLI Flag       | Default  |                                     Description                                      |
-|-------------------------------|----------------------|----------|--------------------------------------------------------------------------------------|
-| PHOTOPRISM_FACE_SIZE          | --face-size          |       50 | minimum size of faces in `PIXELS` (20-10000)                                         |
-| PHOTOPRISM_FACE_SCORE         | --face-score         | 9.000000 | minimum face `QUALITY` score (1-100)                                                 |
-| PHOTOPRISM_FACE_OVERLAP       | --face-overlap       |       42 | face area overlap threshold in `PERCENT` (1-100)                                     |
-| PHOTOPRISM_FACE_CLUSTER_SIZE  | --face-cluster-size  |       80 | minimum size of automatically clustered faces in `PIXELS` (20-10000) *essentials*    |
-| PHOTOPRISM_FACE_CLUSTER_SCORE | --face-cluster-score |       15 | minimum `QUALITY` score of automatically clustered faces (1-100) *essentials*        |
-| PHOTOPRISM_FACE_CLUSTER_CORE  | --face-cluster-core  |        4 | `NUMBER` of faces forming a cluster core (1-100) *essentials*                        |
-| PHOTOPRISM_FACE_CLUSTER_DIST  | --face-cluster-dist  | 0.640000 | similarity `DISTANCE` of faces forming a cluster core (0.1-1.5) *essentials*         |
-| PHOTOPRISM_FACE_MATCH_DIST    | --face-match-dist    | 0.460000 | similarity `OFFSET` for matching faces with existing clusters (0.1-1.5) *essentials* |
+|          Environment          |       CLI Flag       | Default  |                               Description                               |
+|-------------------------------|----------------------|----------|-------------------------------------------------------------------------|
+| PHOTOPRISM_FACE_SIZE          | --face-size          |       50 | minimum size of faces in `PIXELS` (20-10000)                            |
+| PHOTOPRISM_FACE_SCORE         | --face-score         | 9.000000 | minimum face `QUALITY` score (1-100)                                    |
+| PHOTOPRISM_FACE_OVERLAP       | --face-overlap       |       42 | face area overlap threshold in `PERCENT` (1-100)                        |
+| PHOTOPRISM_FACE_CLUSTER_SIZE  | --face-cluster-size  |       80 | minimum size of automatically clustered faces in `PIXELS` (20-10000)    |
+| PHOTOPRISM_FACE_CLUSTER_SCORE | --face-cluster-score |       15 | minimum `QUALITY` score of automatically clustered faces (1-100)        |
+| PHOTOPRISM_FACE_CLUSTER_CORE  | --face-cluster-core  |        4 | `NUMBER` of faces forming a cluster core (1-100)                        |
+| PHOTOPRISM_FACE_CLUSTER_DIST  | --face-cluster-dist  | 0.640000 | similarity `DISTANCE` of faces forming a cluster core (0.1-1.5)         |
+| PHOTOPRISM_FACE_MATCH_DIST    | --face-match-dist    | 0.460000 | similarity `OFFSET` for matching faces with existing clusters (0.1-1.5) |
 
 ### Daemon Mode ###
 
@@ -243,6 +243,3 @@ The following variables are used by our Docker images only and have no effect ot
 | PHOTOPRISM_UMASK         | 0002    | [file-creation mode](https://linuxize.com/post/umask-command-in-linux/) (default: u=rwx,g=rwx,o=rx) |
 | PHOTOPRISM_INIT          |         | run/install on first startup (options: update https gpu tensorflow davfs clitools clean)            |
 | PHOTOPRISM_DISABLE_CHOWN | false   | disable updating storage permissions via chmod and chown on startup                                 |
-
-!!! example ""
-    Some options, such as those for [hardware transcoding](advanced/transcoding.md), are [only available to members](https://www.photoprism.app/membership) due to the time required for testing, maintenance, and providing support. They are marked in their description as either an *essentials* or *plus* feature.

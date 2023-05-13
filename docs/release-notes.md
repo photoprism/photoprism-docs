@@ -9,7 +9,7 @@
 ### May 13, 2023 ###
 <span class="build">Build 230513-0b780defb</span>
 
-As [promised](https://twitter.com/photoprism_app/status/1632036907419877377), this update makes hardware transcoding and many other config options available to all users. [A big thank you to all of our sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md), whose generous support has been and continues to be essential to the success of the project! :octicons-heart-fill-24:{ .heart .purple }
+As [promised](https://twitter.com/photoprism_app/status/1632036907419877377), this update makes hardware transcoding and many other config options available to all users. [A big thank you to all of our contributors, members, and sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md), whose generous support has been and continues to be essential to the success of the project! :octicons-heart-fill-24:{ .heart .purple }
 
 What's new?
 

@@ -1,6 +1,6 @@
 # Video Transcoding
 
-*Note that this guide is intended for advanced users and that hardware transcoding is [only available to members](https://www.photoprism.app/membership) due to the high maintenance and support effort. You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.*
+*You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.*
 
 ## AVC Encoders
 

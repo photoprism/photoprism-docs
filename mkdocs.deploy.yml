@@ -3,8 +3,8 @@ plugins:
   - search
   - privacy:
       enabled: true
-      external_assets: bundle
-      external_assets_exclude:
+      assets_fetch: true
+      assets_exclude:
         - photoprism.app/*
         - dl.photoprism.app/*
         - www.photoprism.app/*

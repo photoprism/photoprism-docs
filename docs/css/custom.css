@@ -112,7 +112,7 @@ header.md-header .md-ellipsis {
 
 .md-typeset .admonition.verified,
 .md-typeset details.verified {
-    border-color: #7c4dff;
+    border-color: #50078d;
 }
 
 .md-typeset .verified > .admonition-title,
@@ -123,7 +123,7 @@ header.md-header .md-ellipsis {
 .md-typeset .verified > .admonition-title::before,
 .md-typeset .verified > summary::before {
     /* background-color: rgb(43, 155, 70); */
-    background-color: #7c4dff;
+    background-color: #50078d;
     -webkit-mask-image: var(--md-admonition-icon--verified);
     mask-image: var(--md-admonition-icon--verified);
 }
@@ -181,7 +181,7 @@ div.action-buttons {
 }
 
 .action-button {
-    background-color: #54437c;
+    background-color: #50078d;
     color: #ffffff;
     font-size: 12px;
     font-weight: 500;
@@ -225,7 +225,7 @@ p.center-align.action-buttons {
 p.action-buttons .action-button,
 .md-content article .action-button,
 .center-align.action-buttons .action-button {
-    background-color: #54437c;
+    background-color: #50078d;
     margin-left: 2px;
     margin-right: 2px;
 }
@@ -265,7 +265,7 @@ div.action-buttons.membership .action-button {
     font-size: .9em;
     padding: 0.525em;
     margin: 0 0.625em 15px 0.625em;
-    background-color: #5E35B1;
+    background-color: #654089;
 }
 
 div.action-buttons.membership .action-button:hover {

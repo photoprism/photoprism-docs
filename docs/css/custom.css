@@ -112,7 +112,7 @@ header.md-header .md-ellipsis {
 
 .md-typeset .admonition.verified,
 .md-typeset details.verified {
-    border-color: #50078d;
+    border-color: #663f8d;
 }
 
 .md-typeset .verified > .admonition-title,
@@ -123,7 +123,7 @@ header.md-header .md-ellipsis {
 .md-typeset .verified > .admonition-title::before,
 .md-typeset .verified > summary::before {
     /* background-color: rgb(43, 155, 70); */
-    background-color: #50078d;
+    background-color: #663f8d;
     -webkit-mask-image: var(--md-admonition-icon--verified);
     mask-image: var(--md-admonition-icon--verified);
 }
@@ -181,7 +181,7 @@ div.action-buttons {
 }
 
 .action-button {
-    background-color: #50078d;
+    background-color: #663f8d;
     color: #ffffff;
     font-size: 12px;
     font-weight: 500;
@@ -225,7 +225,7 @@ p.center-align.action-buttons {
 p.action-buttons .action-button,
 .md-content article .action-button,
 .center-align.action-buttons .action-button {
-    background-color: #50078d;
+    background-color: #663f8d;
     margin-left: 2px;
     margin-right: 2px;
 }

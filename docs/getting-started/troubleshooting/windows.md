@@ -27,6 +27,22 @@ To **change the basic authentication level** in the Windows registry:
 4. The value data box should be set to 2. If the value is not 2, right click it and then select *Modify*.
 5. Change the value to 2.
 
+## WebDAV download fails with file size exceeds the limit error
+
+If you get this error while downloading a large file (more than 50 MB) and get this error:
+
+```
+Error 0x800700DF: The file size exceeds the limit allowed and cannot be saved
+```
+
+You have to increase the file size limit set in Windows [^5]:
+
+1. Open the [Windows Registry Editor](https://support.microsoft.com/en-us/windows/how-to-open-registry-editor-in-windows-10-deab38e6-91d6-e0aa-4b7c-8878d9e07b11).
+2. Locate the following registry directory: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WebClient\Parameters`
+3. Locate the value `FileSizeLimitInBytes`.
+4. Set the value to 4294967295 (in Decimal). 
+5. Restart your computer.
+
 !!! example ""
     **Help improve these docs!** You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.
 
@@ -34,3 +50,4 @@ To **change the basic authentication level** in the Windows registry:
 [^2]: <https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc781134(v=ws.10)?redirectedfrom=MSDN#how-ntfs-generates-short-file-names>
 [^3]: <https://stackoverflow.com/a/9600126>
 [^4]: <https://www.bleepingcomputer.com/news/microsoft/windows-10-now-lets-you-mount-linux-ext4-filesystems-in-wsl-2/>
+[^5]: <https://docs.druva.com/Knowledge_Base/inSync/Troubleshooting/WebDAV_download_fails_with_file_size_exceeds__the_limit_error>

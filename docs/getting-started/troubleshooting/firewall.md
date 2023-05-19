@@ -20,8 +20,8 @@ As explained in our [Privacy Policy](/privacy#section-7), reverse geocoding and 
 In order to successfully set up your installation and view location details in PhotoPrism, you must **allow requests to the following hosts** if you have a firewall installed, and make sure that your Internet connection is working:
 
 - [ ] dl.photoprism.app
+- [ ] my.photoprism.app
 - [ ] cdn.photoprism.app
-- [ ] hub.photoprism.app
 - [ ] setup.photoprism.app
 - [ ] places.photoprism.app
 - [ ] places.photoprism.xyz

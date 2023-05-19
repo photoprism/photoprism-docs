@@ -270,6 +270,7 @@ theme:
   language: en
   features:
     - content.action.edit
+    - content.tooltips
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.top

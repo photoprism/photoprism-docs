@@ -19,14 +19,14 @@ As explained in our [Privacy Policy](/privacy#section-7), reverse geocoding and 
 
 In order to successfully set up your installation and view location details in PhotoPrism, you must **allow requests to the following hosts** if you have a firewall installed, and make sure that your Internet connection is working:
 
-- [ ] dl.photoprism.app
-- [ ] my.photoprism.app
-- [ ] cdn.photoprism.app
-- [ ] setup.photoprism.app
-- [ ] places.photoprism.app
-- [ ] places.photoprism.xyz
+- [ ] [dl.photoprism.app](https://dl.photoprism.app/ "File Downloads")
+- [ ] [my.photoprism.app](https://my.photoprism.app/ "Member Portal")
+- [ ] [cdn.photoprism.app](https://my.photoprism.app/ "Content Delivery Network (CDN)")
+- [ ] [setup.photoprism.app](https://my.photoprism.app/ "Setup Scripts")
+- [ ] [places.photoprism.app](https://places.photoprism.app/ "Reverse Geocoding API")
+- [ ] [places.photoprism.xyz](https://places.photoprism.xyz/ "Reverse Geocoding API")
 
-In addition, the following API endpoints should be whitelisted so that public Docker images can be pulled from [Docker Hub](https://hub.docker.com/):
+In addition, the following API endpoints should be whitelisted so that public [Docker](https://www.docker.com/) images can be pulled from [Docker Hub](https://hub.docker.com/):
 
 - [ ] auth.docker.io
 - [ ] registry-1.docker.io

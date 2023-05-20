@@ -27,15 +27,15 @@ To **change the basic authentication level** in the Windows registry:
 4. The value data box should be set to 2. If the value is not 2, right click it and then select *Modify*.
 5. Change the value to 2.
 
-## WebDAV download fails with file size exceeds the limit error
+## WebDAV File Size Limit
 
-If you get this error while downloading a large file (more than 50 MB) and get this error:
+When uploading or downloading large files (more than 50 MB) on Windows, this error may occur:
 
 ```
 Error 0x800700DF: The file size exceeds the limit allowed and cannot be saved
 ```
 
-You have to increase the file size limit set in Windows [^5]:
+To allow larger files, you must increase the size limit in the Windows registry:[^5]
 
 1. Open the [Windows Registry Editor](https://support.microsoft.com/en-us/windows/how-to-open-registry-editor-in-windows-10-deab38e6-91d6-e0aa-4b7c-8878d9e07b11).
 2. Locate the following registry directory: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WebClient\Parameters`

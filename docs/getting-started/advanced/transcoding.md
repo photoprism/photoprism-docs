@@ -1,7 +1,5 @@
 # Video Transcoding
 
-*You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.*
-
 ## AVC Encoders
 
 The encoder used by FFmpeg can be configured with [`PHOTOPRISM_FFMPEG_ENCODER`](../config-options.md#file-converters) in your `docker-compose.yml` config file:
@@ -150,3 +148,6 @@ Then restart all services for the changes to take effect.
     If [FFmpeg is disabled](../config-options.md#feature-flags) or not installed, videos cannot be indexed because still images cannot be created.
     You should also have [Exiftool enabled](../config-options.md#feature-flags) to extract metadata such as duration, resolution, and codec.
     Note that your hardware may not support certain video codecs and resolutions. In this case, the software encoder is used automatically.
+
+!!! example ""
+    **Help improve these docs!** You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.

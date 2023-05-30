@@ -32,9 +32,10 @@ nav:
       - Docker: getting-started/troubleshooting/docker.md
       - MariaDB: getting-started/troubleshooting/mariadb.md
       - SQLite: getting-started/troubleshooting/sqlite.md
+      - Raspberry Pi: getting-started/troubleshooting/raspberry-pi.md
+      - Windows: getting-started/troubleshooting/windows.md
       - Browsers: getting-started/troubleshooting/browsers.md
       - Performance: getting-started/troubleshooting/performance.md
-      - Windows: getting-started/troubleshooting/windows.md
       - Firewall: getting-started/troubleshooting/firewall.md
     # - Support: getting-started/support.md
     - Remote Access:

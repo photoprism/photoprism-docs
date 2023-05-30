@@ -50,7 +50,8 @@ nav:
       - Haproxy: getting-started/proxies/haproxy.md
     - Advanced:
       - Transcoding: getting-started/advanced/transcoding.md
-      - Docker Volumes: getting-started/advanced/volumes.md
+      - Docker Security: getting-started/advanced/docker-security.md
+      - Docker Volumes: getting-started/advanced/docker-volumes.md
       - Using Kubernetes: getting-started/advanced/kubernetes.md
       - Backup Guide: getting-started/advanced/backups.md
       - Database Setup: getting-started/advanced/databases.md

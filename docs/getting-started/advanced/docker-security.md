@@ -17,7 +17,7 @@ AdminPassword: "my super secret password"
 DatabasePassword: "my super secret password"
 ```
 
-Likewise, MariaDB can be configured to use Docker secret files. For details, see the [official Docker Compose documentation](https://docs.docker.com/compose/compose-file/05-services/#secrets).
+Likewise, MariaDB can be configured to use Docker secret files. For details, see the [Docker Compose Documentation](https://docs.docker.com/compose/compose-file/05-services/#secrets).
 
 The following is an example of the changes to the `docker-compose.yml` file. Note that this example includes only the additional lines required to pass secret files to the MariaDB container:
 

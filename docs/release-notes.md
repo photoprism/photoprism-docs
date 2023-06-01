@@ -7,15 +7,20 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 230530-64b0319c0</span>
+<span class="build">Build 230601-1554e0003</span>
 
 What's new?
 
-- Search: [Fixed "unknown country" filter](https://github.com/photoprism/photoprism/issues/3412) 
+- Search: [Fixed "unknown country" filter](https://github.com/photoprism/photoprism/issues/3412)
+- Folders: [Search returns all matching albums, even if the query contains spaces](https://github.com/photoprism/photoprism/issues/3441)
 - Navigation: [Fixed feature flag check for account settings](https://github.com/photoprism/photoprism/pull/3365)
 - Security: [Updated backend and frontend dependencies](https://github.com/photoprism/photoprism/commit/0ff2fee91d791f203a3c64bc0409746cd8a62a47)
 - Security: [Go has been updated to v1.20.4, which includes bug fixes and other improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.20.4)
 - Translations: [Updated Chinese (Traditional), Dutch, German, and French](https://translate.photoprism.app/projects/photoprism/)
+
+PhotoPrism® Plus
+
+- Security: Malicious requests can be detected and the IP blocked if the specified limit is exceeded
 
 ### May 13, 2023 ###
 <span class="build">Build 230513-0b780defb</span>

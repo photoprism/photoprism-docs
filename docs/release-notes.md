@@ -20,7 +20,7 @@ What's new?
 
 PhotoPrism® Plus
 
-- Security: Malicious requests can be detected and the IP blocked if the specified limit is exceeded
+- Security: Malicious client requests can be automatically detected and blocked
 
 ### May 13, 2023 ###
 <span class="build">Build 230513-0b780defb</span>

@@ -20,7 +20,7 @@ What's new?
 
 PhotoPrism® Plus
 
-- Security: Malicious client requests can be automatically detected and blocked
+- Security: [Malicious HTTP requests can be automatically detected and blocked](https://docs.photoprism.app/getting-started/config-options/#web-server)
 
 !!! tldr ""
     When upgrading from MariaDB 10.x to [11.0](https://mariadb.com/kb/en/release-notes-mariadb-11-0-series/), you [must replace](https://github.com/photoprism/photoprism/commit/bff649469d084498a1e75492c0bd99bda3f5a340#diff-03a31d6e73f48b7bba98b65352ce67a7d153fe2461f9c7b5e76be49a97ebf0cb) `command: mysqld` with `command: mariadbd` in your `docker-compose.yml` file, otherwise the database server may fail to start. 

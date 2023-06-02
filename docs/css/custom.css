@@ -44,23 +44,50 @@ footer.md-footer  .footer-info a:hover {
     text-decoration: underline;
 }
 
-p.announce-banner a,
-p.announce-banner a:focus,
-p.announce-banner a:hover {
-    color:currentColor;
+body > div > aside.md-banner {
+    display: none;
+    background-color: #894ada;
+    background-size: 110% 110%;
+    background-image: -o-repeating-linear-gradient(315deg,#a0f,#304ffe);
+    background-image: repeating-linear-gradient(135deg,#a0f,#304ffe);
+}
+
+.md-banner__inner {
+    margin: .23rem auto!important;
+}
+
+@media (min-width: 600px) {
+    body > div > aside.md-banner {
+        display: block;
+    }
 }
 
 p.announce-banner {
     margin: 0;
     padding: 0;
+    text-align: center;
+}
+
+p.announce-banner a,
+p.announce-banner a:focus,
+p.announce-banner a:hover {
+    color: #ffffff;
+}
+
+p.announce-banner a {
+    font-size: 15px;
+    font-weight: 400;
+    vertical-align: baseline;
+}
+
+p.announce-banner a span {
+    opacity: 0.95;
+    font-size: 14px;
+    vertical-align: baseline;
 }
 
 p.announce-banner strong {
     white-space:nowrap;
-}
-
-.md-banner__inner {
-    margin: .3rem auto;
 }
 
 span.build {
@@ -892,4 +919,26 @@ img.sponsor-logo {
     overflow: hidden !important;
     text-overflow: ellipsis !important;
     line-height: 1.1 !important;
+}
+
+.text-xs-left {
+    text-align: left;
+}
+.text-xs-right {
+    text-align: right;
+}
+.text-xs-center {
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+    .text-sm-left {
+        text-align: left!important;
+    }
+    .text-sm-right {
+        text-align: right!important;
+    }
+    .text-sm-center {
+        text-align: center!important;
+    }
 }

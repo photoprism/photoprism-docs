@@ -135,6 +135,8 @@
 | PHOTOPRISM_STS_PRELOAD          | --sts-preload          |               | submit to Google's HSTS preload service *plus*                                                          |
 | PHOTOPRISM_LOGIN_LIMIT          | --login-limit          |            10 | maximum number of consecutive failed LOGIN `ATTEMPTS` from a single IP *plus*                           |
 | PHOTOPRISM_LOGIN_INTERVAL       | --login-interval       | 1m0s          | average `DURATION` between failed LOGIN attempts from a single IP (0-86400s) *plus*                     |
+| PHOTOPRISM_IPS_LIMIT            | --ips-limit            |             3 | maximum number of malicious request `ATTEMPTS` before a client IP is blocked (-1 to disable) *plus*     |
+| PHOTOPRISM_IPS_INTERVAL         | --ips-interval         | 1h0m0s        | average `DURATION` between malicious request attempts from a single IP (0-86400s) *plus*                |
 | PHOTOPRISM_HTTP_CSP             | --http-csp             |               | HTTP Content-Security-Policy (CSP) `HEADER` *plus*                                                      |
 | PHOTOPRISM_HTTP_CTO             | --http-cto             | nosniff       | HTTP X-Content-Type-Options `HEADER` *plus*                                                             |
 | PHOTOPRISM_HTTP_COOP            | --http-coop            | same-origin   | HTTP Cross-Origin-Opener-Policy (COOP) `HEADER` *plus*                                                  |
@@ -164,13 +166,13 @@
 
 ### File Converters ###
 
-|           Environment            |        CLI Flag         | Default                        |                              Description                              |
+|           Environment            |        CLI Flag         |            Default             |                              Description                              |
 |----------------------------------|-------------------------|--------------------------------|-----------------------------------------------------------------------|
 | PHOTOPRISM_SIPS_BIN              | --sips-bin              | sips                           | Sips `COMMAND` for media file conversion *macOS only*                 |
 | PHOTOPRISM_SIPS_BLACKLIST        | --sips-blacklist        | avif,avifs                     | do not use Sips to convert files with these `EXTENSIONS` *macOS only* |
 | PHOTOPRISM_FFMPEG_BIN            | --ffmpeg-bin            | ffmpeg                         | FFmpeg `COMMAND` for video transcoding and thumbnail extraction       |
 | PHOTOPRISM_FFMPEG_ENCODER        | --ffmpeg-encoder        | libx264                        | FFmpeg AVC encoder `NAME`                                             |
-| PHOTOPRISM_FFMPEG_BITRATE        | --ffmpeg-bitrate        | 50                             | maximum FFmpeg encoding `BITRATE` (Mbit/s)                            |
+| PHOTOPRISM_FFMPEG_BITRATE        | --ffmpeg-bitrate        |                             50 | maximum FFmpeg encoding `BITRATE` (Mbit/s)                            |
 | PHOTOPRISM_FFMPEG_MAP_VIDEO      | --ffmpeg-map-video      | `0:v:0`                        | video `STREAMS` that should be transcoded                             |
 | PHOTOPRISM_FFMPEG_MAP_AUDIO      | --ffmpeg-map-audio      | `0:a:0?`                       | audio `STREAMS` that should be transcoded                             |
 | PHOTOPRISM_EXIFTOOL_BIN          | --exiftool-bin          | exiftool                       | ExifTool `COMMAND` for extracting metadata                            |

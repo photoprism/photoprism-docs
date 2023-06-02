@@ -61,14 +61,17 @@ Many users reporting poor performance and high CPU usage have migrated from SQLi
 
 The instructions for these migrations were provided by a contributor and are not part of the original software distribution. As such, they have not been officially released, recommended, or extensively tested by us.
 
-If this is the case, please make sure that your migrated database schema matches that of a [fresh, non-migrated installation](../../developer-guide/database/index.md) . It may help to [run the migrations manually](../advanced/migrations/index.md) in a terminal using the *migrations* subcommands. However, this does not guarantee that all issues such as missing indexes are resolved.
+If this is the case, please make sure that your migrated database schema matches that of a [fresh, non-migrated installation](../../developer-guide/database/index.md). It may help to [run the migrations manually](../advanced/migrations/index.md) in a terminal using the *migrations* subcommands. However, this does not guarantee that all issues such as missing indexes are resolved.
 
 [Get Performance Tips ›](performance.md#mariadb){ class="pr-3" } [View Database Schema ›](../../developer-guide/database/index.md)
 
 ## Version Upgrade
 
-If MariaDB fails to start after upgrading from an earlier version (or migrating from MySQL), the [internal management schema](https://mariadb.com/kb/en/understanding-mariadb-architecture/#system-databases) may be outdated. With older versions, it could only be updated manually.
+Should MariaDB fail to start after upgrading from an earlier version (or migrating from MySQL), the [internal management schema](https://mariadb.com/kb/en/understanding-mariadb-architecture/#system-databases) may be outdated. With older versions, it could only be updated manually.
 However, newer MariaDB Docker images **support automatic upgrades** on startup, so you don't have to worry about that anymore.
+
+!!! attention ""
+    When upgrading from MariaDB 10.x to [11.0](https://mariadb.com/kb/en/release-notes-mariadb-11-0-series/), you [must replace](https://github.com/photoprism/photoprism/commit/bff649469d084498a1e75492c0bd99bda3f5a340#diff-03a31d6e73f48b7bba98b65352ce67a7d153fe2461f9c7b5e76be49a97ebf0cb) `command: mysqld` with `command: mariadbd` in your `docker-compose.yml` file, otherwise the database server may fail to start. 
 
 ### Manual Update
 

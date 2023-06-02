@@ -54,6 +54,7 @@ body > div > aside.md-banner {
 
 .md-banner__inner {
     margin: .23rem auto!important;
+    max-width: 100%;
 }
 
 @media (min-width: 600px) {
@@ -68,20 +69,20 @@ p.announce-banner {
     text-align: center;
 }
 
+p.announce-banner a {
+    display: block;
+    font-size: 15px;
+    font-weight: 400;
+    vertical-align: baseline;
+}
+
 p.announce-banner a,
 p.announce-banner a:focus,
 p.announce-banner a:hover {
     color: #ffffff;
 }
 
-p.announce-banner a {
-    font-size: 15px;
-    font-weight: 400;
-    vertical-align: baseline;
-}
-
 p.announce-banner a span {
-    opacity: 0.95;
     font-size: 14px;
     vertical-align: baseline;
 }

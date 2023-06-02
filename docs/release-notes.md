@@ -1,10 +1,8 @@
 # Release Notes
 
-!!! example ""
-    **Back us on [Patreon](https://link.photoprism.app/patreon) or [GitHub Sponsors](https://link.photoprism.app/sponsor).** Your [continued support](https://www.photoprism.app/membership) helps us provide regular updates and remain independent, so we can [fulfill our mission](https://www.photoprism.app/oss/faq) and protect your privacy.
-
-!!! tldr ""
-    You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
+!!! note ""
+    You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview`,
+    and then [following our update guide](getting-started/updates.md#docker-compose) to download the [most recent image from Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
 <span class="build">Build 230602-ef49ebe5a</span>

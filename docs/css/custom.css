@@ -209,7 +209,7 @@ div.action-buttons {
 }
 
 .action-button {
-    background-color: #4d5965;
+    background-color: #4c0c85d1;
     color: #ffffff;
     font-size: 12px;
     font-weight: 500;
@@ -253,7 +253,7 @@ p.center-align.action-buttons {
 p.action-buttons .action-button,
 .md-content article .action-button,
 .center-align.action-buttons .action-button {
-    background-color: #4d5965;
+    background-color: #4c0c85d1;
     margin-left: 2px;
     margin-right: 2px;
 }
@@ -293,7 +293,7 @@ div.action-buttons.membership .action-button {
     font-size: .9em;
     padding: 0.525em;
     margin: 0 0.625em 15px 0.625em;
-    background-color: #4d5965;
+    background-color: #4c0c85d1;
 }
 
 div.action-buttons.membership .action-button:hover {

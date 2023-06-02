@@ -7,13 +7,14 @@
     You can test new features by changing the image tag in your [docker-compose.yml](https://dl.photoprism.app/docker/) from `:latest` to `:preview`, then pulling the most recent image, and finally [restarting your instance](getting-started/updates.md).
 
 ### Development Preview ###
-<span class="build">Build 230601-1554e0003</span>
+<span class="build">Build 230602-ef49ebe5a</span>
 
 What's new?
 
-- Folders: [Searching for substrings returns all matching albums](https://github.com/photoprism/photoprism/issues/3441)
-- Search: [Fixed an issue where the "Unknown country" has been ignored](https://github.com/photoprism/photoprism/issues/3412)
+- Search: [Fixed an issue where the "Unknown country" filter has been ignored](https://github.com/photoprism/photoprism/issues/3412)
+- Folders: [Searching for substrings now returns all matching albums](https://github.com/photoprism/photoprism/issues/3441)
 - Navigation: [Feature flag check for account settings disables link to profile](https://github.com/photoprism/photoprism/pull/3365)
+- Config: [Fixed setting the title of the search page based on the site title](https://github.com/photoprism/photoprism/issues/3439)
 - Security: [Updated all backend and frontend dependencies](https://github.com/photoprism/photoprism/commit/0ff2fee91d791f203a3c64bc0409746cd8a62a47)
 - Security: [Go has been updated to v1.20.4, which includes bug fixes and enhancements](https://github.com/golang/go/issues?q=milestone%3AGo1.20.4)
 - Translations: [Updated Chinese (Traditional), Dutch, German, and French](https://translate.photoprism.app/projects/photoprism/)

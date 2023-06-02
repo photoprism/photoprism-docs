@@ -1,8 +1,5 @@
 # Getting Updates
 
-!!! example ""
-    **Back us on [Patreon](https://link.photoprism.app/patreon) or [GitHub Sponsors](https://link.photoprism.app/sponsor).** Your [continued support](https://www.photoprism.app/membership) helps us provide regular updates and remain independent, so we can [fulfill our mission](https://www.photoprism.app/oss/faq) and protect your privacy.
-
 ### Docker Compose
 
 Open a terminal and change to the folder where the `docker-compose.yml` file is located.[^1]

@@ -248,9 +248,6 @@ changed, added, or removed. This can also be automated using CLI commands and a 
 
 Easy, isn't it?
 
-!!! example ""
-    **Back us on [Patreon](https://link.photoprism.app/patreon) or [GitHub Sponsors](https://link.photoprism.app/sponsor).** Your [continued support](https://www.photoprism.app/membership) helps us provide regular updates and remain independent, so we can [fulfill our mission](https://www.photoprism.app/oss/faq) and protect your privacy.
-
 ### Membership Activation ###
 
 To connect a new instance to your [membership account](https://my.photoprism.app/), you will need to log in with the admin user that is automatically created during setup, and then follow the steps described in our activation guide.

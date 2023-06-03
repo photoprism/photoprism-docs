@@ -50,10 +50,13 @@ body > div > aside.md-banner {
     background-size: 110% 110%;
     background-image: -o-repeating-linear-gradient(315deg,#a0f,#304ffe);
     background-image: repeating-linear-gradient(135deg,#a0f,#304ffe);
+    padding: 0;
 }
 
 .md-banner__inner {
-    margin: .23rem auto!important;
+    background-color: #00000013;
+    padding: .23rem 0;
+    margin: 0;
     max-width: 100%;
 }
 
@@ -71,9 +74,10 @@ p.announce-banner {
 
 p.announce-banner a {
     display: block;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 400;
     vertical-align: baseline;
+    margin: 0;
 }
 
 p.announce-banner a,

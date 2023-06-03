@@ -4,14 +4,14 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview`,
     and then [following our update guide](getting-started/updates.md#docker-compose) to download the [most recent image from Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
-### Development Preview ###
-<span class="build">Build 230602-bff649469</span>
+### June 3, 2023 ###
+<span class="build">Build 230603-378d4746a</span>
 
 What's new?
 
-- Search: [Fixed an issue where the "Unknown country" filter has been ignored](https://github.com/photoprism/photoprism/issues/3412)
 - Folders: [Searching for substrings now returns all matching albums](https://github.com/photoprism/photoprism/issues/3441)
-- Navigation: [Feature flag check for account settings disables link to profile](https://github.com/photoprism/photoprism/pull/3365)
+- Search: [Fixed an issue where the "Unknown country" filter has been ignored](https://github.com/photoprism/photoprism/issues/3412)
+- Navigation: [Fixed account feature check when clicking on the profile picture](https://github.com/photoprism/photoprism/pull/3365)
 - Config: [Fixed setting the title of the search page based on the site title](https://github.com/photoprism/photoprism/issues/3439)
 - MariaDB: [Improved compatibility with the upcoming release 11.0](https://github.com/photoprism/photoprism/issues/3443)
 - Security: [Updated all backend and frontend dependencies](https://github.com/photoprism/photoprism/commit/0ff2fee91d791f203a3c64bc0409746cd8a62a47)

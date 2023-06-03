@@ -22,7 +22,7 @@ What's new?
 
 PhotoPrism® Plus
 
-- Security: [Malicious HTTP requests can be automatically detected and blocked](https://docs.photoprism.app/getting-started/config-options/#web-server)
+- Security: [Malicious client requests can be automatically detected and blocked](https://docs.photoprism.app/getting-started/config-options/#web-server)
 
 ### May 13, 2023 ###
 <span class="build">Build 230513-0b780defb</span>

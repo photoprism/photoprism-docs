@@ -5,9 +5,9 @@
     and then [following our update guide](getting-started/updates.md#docker-compose) to download the [most recent image from Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 230605-db454641c</span>
+<span class="build">Build 230606-dda00ba23</span>
 
-Our new high-resolution world map is now [available for testing](https://demo.photoprism.app/library/places). It is going to [replace the "Low Resolution" offline map as the default option](https://github.com/photoprism/photoprism/issues/2998#issuecomment-1576460675) and will be free forever.
+Our new high-resolution world map is now [available for testing](https://demo.photoprism.app/library/places). It is going to [replace the "Low Resolution" offline map as the default option](https://github.com/photoprism/photoprism/issues/2998#issuecomment-1576460675) and will be free forever. In addition, this release includes a special terrain mode for mountain lovers, so you can view the "Satellite", "Outdoor" and "Topography" maps in 3D!
 
 What's new?
 

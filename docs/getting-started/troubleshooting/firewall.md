@@ -22,7 +22,7 @@ In order to successfully set up your installation and view location details in P
 - [ ] [dl.photoprism.app](https://dl.photoprism.app/ "File Downloads")
 - [ ] [my.photoprism.app](https://my.photoprism.app/ "Member Portal")
 - [ ] [cdn.photoprism.app](https://cdn.photoprism.app/ "Content Delivery Network (CDN)")
-- [ ] [setup.photoprism.app](https://setup.photoprism.app/ "Setup Scripts")
+- [ ] [maps.photoprism.app](https://maps.photoprism.app/ "Vector Map Tiles")
 - [ ] [places.photoprism.app](https://places.photoprism.app/ "Reverse Geocoding API")
 - [ ] [places.photoprism.xyz](https://places.photoprism.xyz/ "Reverse Geocoding API")
 

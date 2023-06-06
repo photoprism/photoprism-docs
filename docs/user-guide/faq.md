@@ -44,10 +44,10 @@
 
 ??? question "Are there alternatives to a recurring subscription?"
 
-    Yes, our Plus members automatically receive a free lifetime Essentials membership after 24 months. Likewise, Silver members receive a lifetime Plus membership after 24 months, Gold members after 12 months, and Platinum members after only 6 months. To avoid subscriptions altogether, membership fees can also be [paid in advance](https://www.photoprism.app/contact).
+    Yes, our Plus members automatically receive a free lifetime Essentials membership after 24 months. Likewise, Silver members receive a lifetime Plus membership after 24 months, Gold members after 12 months, and Platinum members after only 6 months. Note that as a lifetime member you will always receive updates and support for your personal use from us, unlike with so-called "lifetime" licenses, which may only be good until the next major version is released.
 
-    Please note that as a lifetime member you will always receive updates and support for your personal use from us, unlike with so-called "lifetime" licenses, which may only be good until the next major version is released.
-
+    If you would like to sign up for a Silver, Gold or Platinum membership, you can do so either [directly on our website](https://my.photoprism.app/register) or [on Patreon](https://www.patreon.com/photoprism), where you can opt for an annual payment to receive a 15% discount.
+ 
     [View Membership FAQ ›](https://www.photoprism.app/kb/membership) [Sign Up ›](https://link.photoprism.app/membership)
 
 ??? question "What happens if I cancel my membership?"

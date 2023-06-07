@@ -12,7 +12,7 @@ With this highly anticipated update, our new high-resolution vector world map is
 What's new?
 
 - Places: [Improved the level of detail of the freely available default world map](https://github.com/photoprism/photoprism/issues/2998#issuecomment-1575607476)
-- Places: [Added terrain mode to display the Satellite, Outdoor and Topography maps in 3D](https://github.com/photoprism/photoprism/issues/3455)
+- Places: [Added terrain mode to display the satellite, outdoor and topography maps in 3D](https://github.com/photoprism/photoprism/issues/3455)
 - Security: [Go has been updated to v1.20.5, which includes bug fixes and enhancements](https://github.com/golang/go/issues?q=milestone%3AGo1.20.5)
 
 PhotoPrism® Plus

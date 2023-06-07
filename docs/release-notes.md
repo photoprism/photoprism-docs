@@ -5,7 +5,7 @@
     and then [following our update guide](getting-started/updates.md#docker-compose) to download the [most recent image from Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 230607-83ce69b1d</span>
+<span class="build">Build 230607-d92613c43</span>
 
 With this highly anticipated update, our new high-resolution vector world map is now available to all users. In addition, this release includes a special terrain mode for mountain lovers, so you can view the "Satellite", "Outdoor" and "Topography" maps in 3D!
 

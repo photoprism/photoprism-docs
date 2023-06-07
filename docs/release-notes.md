@@ -5,7 +5,7 @@
     and then [following our update guide](getting-started/updates.md#docker-compose) to download the [most recent image from Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 230607-d92613c43</span>
+<span class="build">Build 230607-70dbf1d04</span>
 
 With this highly anticipated update, our new high-resolution vector world map is now available to all users. In addition, this release includes a special terrain mode for mountain lovers, so you can view the "Satellite", "Outdoor" and "Topography" maps in 3D!
 
@@ -14,6 +14,7 @@ What's new?
 - Places: [Improved the level of detail of the freely available default world map](https://github.com/photoprism/photoprism/issues/2998#issuecomment-1575607476)
 - Places: [Added terrain mode to display the satellite, outdoor and topography maps in 3D](https://github.com/photoprism/photoprism/issues/3455)
 - Security: [Go has been updated to v1.20.5, which includes bug fixes and enhancements](https://github.com/golang/go/issues?q=milestone%3AGo1.20.5)
+- Translations: [Updated Chinese (Simplified), Italian, and Slovak](https://translate.photoprism.app/projects/photoprism/)
 
 PhotoPrism® Plus
 

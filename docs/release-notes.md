@@ -7,7 +7,7 @@
 ### June 7, 2023 ###
 <span class="build">Build 230607-9e086c7eb</span>
 
-With this highly anticipated update, our new high-resolution vector world map becomes available to all users. In addition, this release includes a special terrain mode for mountain lovers, so you can view the "Satellite", "Outdoor" and "Topography" maps in 3D!
+With this much anticipated update, our new high-resolution vector world map becomes available to all users. It also features a special terrain mode for mountain lovers, so you can view the "Satellite", "Outdoor" and "Topography" maps in 3D!
 
 What's new?
 

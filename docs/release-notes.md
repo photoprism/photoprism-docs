@@ -5,13 +5,19 @@
     and then [following our update guide](getting-started/updates.md#docker-compose) to download the [most recent image from Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 230606-dda00ba23</span>
+<span class="build">Build 230607-83ce69b1d</span>
 
-Our new high-resolution world map is now [available for testing](https://demo.photoprism.app/library/places). It is going to [replace the "Low Resolution" offline map as the default option](https://github.com/photoprism/photoprism/issues/2998#issuecomment-1576460675) and will be free forever. In addition, this release includes a special terrain mode for mountain lovers, so you can view the "Satellite", "Outdoor" and "Topography" maps in 3D!
+With this highly anticipated update, our new high-resolution vector world map is now available to all users. In addition, this release includes a special terrain mode for mountain lovers, so you can view the "Satellite", "Outdoor" and "Topography" maps in 3D!
 
 What's new?
 
-- Places: [Improved the level of detail of the default world map](https://github.com/photoprism/photoprism/issues/2998#issuecomment-1575607476)
+- Places: [Improved the level of detail of the freely available default world map](https://github.com/photoprism/photoprism/issues/2998#issuecomment-1575607476)
+- Places: [Added terrain mode to display the Satellite, Outdoor and Topography maps in 3D](https://github.com/photoprism/photoprism/issues/3455)
+- Security: [Go has been updated to v1.20.5, which includes bug fixes and enhancements](https://github.com/golang/go/issues?q=milestone%3AGo1.20.5)
+
+PhotoPrism® Plus
+
+- Config: [CSP header is updated automatically when a CDN is configured](https://github.com/photoprism/photoprism/issues/3454)
 
 ### June 3, 2023 ###
 <span class="build">Build 230603-378d4746a</span>

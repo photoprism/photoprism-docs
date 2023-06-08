@@ -29,5 +29,5 @@ Because PhotoPrism is [**100% self-funded and independent**](https://www.photopr
 
 <p class="center-align action-buttons">
   <a class="action-button action-secondary" href="https://try.photoprism.app/" target="_blank">TRY OUR DEMO</a>
-  <a class="action-button action-primary" href="getting-started/">GET STARTED 🮥</a>
+  <a class="action-button action-primary" href="getting-started/">GET STARTED</a>
 </p>

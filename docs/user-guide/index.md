@@ -13,12 +13,9 @@ Once the [initial setup](../getting-started/index.md) is complete, our [First St
 
 ## Getting Support ##
 
-If you need help installing our software at home, you can [join us on Reddit](https://link.photoprism.app/reddit), ask in our [Community Chat](https://link.photoprism.app/chat), or post your question in [GitHub Discussions](https://link.photoprism.app/discussions). Common problems can be quickly diagnosed and solved using the [Troubleshooting Checklists](https://docs.photoprism.app/getting-started/troubleshooting/) in [Getting Started](https://docs.photoprism.app/getting-started/).
+If you need help installing our software at home, you can [join us on Reddit](https://link.photoprism.app/reddit), ask in our [Community Chat](https://link.photoprism.app/chat), or post your question in [GitHub Discussions](https://link.photoprism.app/discussions). Common problems can be quickly diagnosed and solved using our [Troubleshooting Checklists](https://docs.photoprism.app/getting-started/troubleshooting/). [Silver, Gold, and Platinum](https://link.photoprism.app/membership) members are also welcome to email us for technical support and advice.
 
-We'll do our best to answer all your questions. In return, we ask you to [back us](https://www.photoprism.app/membership) on [Patreon](https://link.photoprism.app/patreon) or [GitHub Sponsors](https://link.photoprism.app/sponsors).
-Thank you very much!
-
-[Compare Memberships ›](https://www.photoprism.app/editions#compare){ class="pr-3" } [View Open Source FAQ ›](https://www.photoprism.app/oss/faq)
+[View Support Options ›](https://www.photoprism.app/kb/getting-support){ class="pr-3" } [Compare Memberships ›](https://link.photoprism.app/membership)
 
 !!! info ""
     **We kindly ask you not to report bugs via *GitHub Issues* unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.**

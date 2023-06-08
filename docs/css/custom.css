@@ -46,10 +46,9 @@ footer.md-footer  .footer-info a:hover {
 
 body > div > aside.md-banner {
     display: none;
-    background-color: #894ada;
     background-size: 110% 110%;
-    background-image: -o-repeating-linear-gradient(315deg,#a0f,#304ffe);
-    background-image: repeating-linear-gradient(135deg,#a0f,#304ffe);
+    background-image: repeating-linear-gradient(195deg, #311b92, #8b00d1);
+    background-color: #9f00ff;
     padding: 0;
 }
 
@@ -213,7 +212,7 @@ div.action-buttons {
 }
 
 .action-button {
-    background-color: #4c0c85d1;
+    background-color: rgba(0, 0, 0, 0.62);
     color: #ffffff;
     font-size: 12px;
     font-weight: 500;
@@ -257,7 +256,7 @@ p.center-align.action-buttons {
 p.action-buttons .action-button,
 .md-content article .action-button,
 .center-align.action-buttons .action-button {
-    background-color: #4c0c85d1;
+    background-color: rgba(0, 0, 0, 0.62);
     margin-left: 2px;
     margin-right: 2px;
 }
@@ -297,7 +296,7 @@ div.action-buttons.membership .action-button {
     font-size: .9em;
     padding: 0.525em;
     margin: 0 0.625em 15px 0.625em;
-    background-color: #4c0c85d1;
+    background-color: rgba(0, 0, 0, 0.62);
 }
 
 div.action-buttons.membership .action-button:hover {

@@ -18,7 +18,7 @@
 
     PhotoPrism is **100% self-funded and independent**. Voluntary donations do not cover the cost of a team working full time to provide you with updates, documentation, and support. It is your decision whether you want to sign up to enjoy additional benefits.
 
-    [View Membership FAQ ›](https://www.photoprism.app/kb/membership)
+    [View Membership FAQ ›](https://www.photoprism.app/membership/faq)
 
 ??? question "What are the advantages of purchasing a commercial license?"
 
@@ -46,11 +46,11 @@
 
     Yes, our Plus members automatically receive a free lifetime Essentials membership after 24 months. Likewise, Silver members receive a lifetime Plus membership after 24 months, Gold members after 12 months, and Platinum members after only 6 months.
 
-    If you would like to sign up for a Silver, Gold or Platinum membership, you can do so either [directly on our website](https://my.photoprism.app/register) or [on Patreon](https://www.patreon.com/photoprism), where you can also choose to pay annually for a 15% discount.
+    If you would like to sign up for a Silver, Gold or Platinum membership, you can do so either [directly on our website](https://my.photoprism.app/register) or [on Patreon](https://www.patreon.com/photoprism). In addition, we are working on a Plus Feature Pack that includes just the features without support, so we can offer it to you at a lower price.
 
     Note that as a lifetime member you will always receive updates and support for your personal use from us, unlike with so-called "lifetime" licenses, which may only be good until the next major version is released.
  
-    [View Membership FAQ ›](https://www.photoprism.app/kb/membership) [Sign Up ›](https://link.photoprism.app/membership)
+    [View Membership FAQ ›](https://www.photoprism.app/membership/faq) [Sign Up ›](https://link.photoprism.app/membership)
 
 ??? question "What happens if I cancel my membership?"
 

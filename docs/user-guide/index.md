@@ -29,4 +29,4 @@ Thank you very much!
 
 To connect a new instance to your [membership account](https://my.photoprism.app/), you will need to log in with the admin user that is automatically created during setup, and then follow the steps described in our activation guide.
 
-[View Activation Guide ›](https://www.photoprism.app/kb/activation){ class="pr-3" } [View Membership FAQ ›](https://www.photoprism.app/kb/membership)
+[View Activation Guide ›](https://www.photoprism.app/kb/activation){ class="pr-3" } [View Membership FAQ ›](https://www.photoprism.app/membership/faq)

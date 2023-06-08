@@ -249,10 +249,6 @@ p.action-buttons {
     padding-bottom: 1em;
 }
 
-p.center-align.action-buttons {
-    padding: 20px 5px 25px;
-}
-
 p.action-buttons .action-button,
 .md-content article .action-button,
 .center-align.action-buttons .action-button {
@@ -944,5 +940,40 @@ img.sponsor-logo {
     }
     .text-sm-center {
         text-align: center!important;
+    }
+}
+
+/* Landing Page */
+
+.center-align.action-buttons {
+    padding: 16px 0 16px;
+}
+
+.center-align.action-buttons .action-button {
+    margin: 5px;
+}
+
+.center-align.action-buttons .action-button.action-secondary,
+.center-align.action-buttons .action-button.action-primary {
+    min-width: 185px;
+    font-weight: 700!important;
+}
+
+.action-buttons .action-button.action-secondary {
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #404040;
+    color: #404040!important;
+}
+
+.action-buttons .action-button.action-primary {
+    background-color: #404040;
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
+@media (max-width: 599px) {
+    .action-buttons .action-button.action-secondary,
+    .action-buttons .action-button.action-primary {
+        display: block;
+        min-width: auto;
     }
 }

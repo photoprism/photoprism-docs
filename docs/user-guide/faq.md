@@ -48,7 +48,7 @@
 
     If you would like to sign up for a Silver, Gold or Platinum membership, you can do so either [directly on our website](https://my.photoprism.app/register) or [on Patreon](https://link.photoprism.app/patreon). In addition, we are working on a Plus Feature Pack that includes just the features without support, so we can offer it to you at a lower price.
 
-    Note that as a lifetime member you will always receive updates and support for your personal use from us, unlike with so-called "lifetime" licenses, which may only be good until the next major version is released.
+    Note that as a lifetime member you will always receive updates and support for your personal use from us, unlike with so-called lifetime licenses, which may only be good until the next major version is released.
  
     [View Membership FAQ ›](https://www.photoprism.app/membership/faq) [Sign Up ›](https://link.photoprism.app/membership)
 

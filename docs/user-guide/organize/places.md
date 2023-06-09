@@ -18,3 +18,12 @@ You can choose between different map styles like streets or topographic in the [
 
    ![Screenshot](img/places-animation-1-dark.jpg){ class="shadow" }
    ![Screenshot](img/places-animation-2-dark.jpg){ class="shadow" }
+
+## Enable Terrain Mode 
+
+Our "Satellite", "Outdoor" and "Topography" maps can also be viewed in 3D. 
+
+To enable terrain mode click :material-image-filter-hdr-outline:. To change the perspective, you can hold down the right mouse button and move it.
+
+   ![Screenshot](img/terrain-maps-1.jpg){ class="shadow" }
+

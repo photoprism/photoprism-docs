@@ -346,6 +346,8 @@ without importing files, leaving the existing file and folder names unchanged. O
 importing is an efficient way to add files, since PhotoPrism doesn't have to search your *originals*
 folder to find new files.
 
+[View First Steps Tutorial ›](../user-guide/first-steps.md)
+
 ### Can I use PhotoPrism to sort files into a configurable folder structure?
 
 You have complete freedom in how you organize your originals. If you don't like the unique names and 

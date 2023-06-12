@@ -126,7 +126,7 @@ as this requires less experience. Alternative 32-bit Docker images are provided 
 
 ### How can I shorten the startup time after a restart or update?
 
-To reduce startup time, do not set `PHOTOPRISM_INIT` to avoid running additional setup scripts, and set `PHOTOPRISM_DISABLE_CHOWN` to `"true"` to [disable automatic storage permission updates](config-options.md#docker-image).
+To reduce startup time, do not set `PHOTOPRISM_INIT` to avoid running additional setup scripts, and set `PHOTOPRISM_DISABLE_CHOWN` to `"true"` to [disable automatic permission updates](config-options.md#docker-image).
 
 !!! tldr ""
     If your instance doesn't start even after waiting for some time, our [Troubleshooting Checklists](troubleshooting/index.md#connection-fails) help you quickly diagnose and solve the problem.

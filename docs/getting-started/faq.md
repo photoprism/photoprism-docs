@@ -322,6 +322,14 @@ We recommend performing a [complete rescan](../user-guide/library/originals.md#w
 
 You can start a [rescan from the user interface](../user-guide/library/originals.md) by navigating to *Library* > *Index*, selecting "Complete Rescan", and then clicking "Start". Manually entered information such as labels, people, titles or descriptions will not be modified when indexing, even if you perform a "complete rescan". Be careful not to start multiple indexing processes at the same time, as this will lead to a high server load.
 
+### How can I shorten the startup time after a restart or update?
+
+To shorten the startup time, do not set `PHOTOPRISM_INIT` so that no additional setup scripts are executed and set `PHOTOPRISM_DISABLE_CHOWN` to `"true"` to [disable updating storage permissions via chmod and chown](https://docs.photoprism.app/getting-started/config-options/#docker-image). If your instance doesn't start even after waiting a few minutes, our [Troubleshooting Checklists](https://docs.photoprism.app/getting-started/troubleshooting/#connection-fails) help you diagnose and solve the problem.
+
+### Why are files uploaded via WebDAV not indexed/imported immediately?
+
+`PHOTOPRISM_AUTO_INDEX` and `PHOTOPRISM_AUTO_IMPORT` let you specify how long PhotoPrism should [wait before indexing or importing](https://docs.photoprism.app/getting-started/config-options/#index-workers) newly uploaded files. The default setting is 300 seconds, or 5 minutes. This is a safety mechanism for users with slow uploads to avoid incomplete file sets, for example when uploading pictures with sidecar files. You can therefore reduce the delay if you have a fast connection and usually do not upload stacks of related files such as RAW images with sidecar JPEG and XMP files.
+
 ### I'm having issues understanding the difference between the import and originals folders?
 
 You may optionally mount an *import* folder from which files can be transferred to the *originals* folder

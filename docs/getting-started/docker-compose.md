@@ -147,13 +147,6 @@ volumes:
   - "/example/friends:/photoprism/originals/friends"
   - "/mnt/photos:/photoprism/originals/media"
 ```
-You can [mount folders with the `:ro` flag](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-3) to make Docker block write operations. Even with *read-only mode* disabled, these volumes will be protected from accidental file edit/delete you may do in PhotoPrism:
-
-```yaml
-volumes:
-  - "/home/username/Pictures:/photoprism/originals"
-  - "/example/friends:/photoprism/originals/friends:ro" # Read-only folder
-```
 
 On Windows, prefix the host path with the drive letter and use `/` instead of `\` as separator:
 
@@ -165,11 +158,12 @@ volumes:
 !!! tldr ""
     If *read-only mode* is enabled, all features that require write permission to the *originals* folder 
     are disabled, e.g. [WebDAV](../user-guide/sync/webdav.md), uploading and deleting files. Set `PHOTOPRISM_READONLY` to `"true"`
-    in `docker-compose.yml` for this. 
+    in `docker-compose.yml` for this. In addition, you can [mount volumes with the `:ro` flag](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-3)
+    so that writes are also blocked by Docker.
 
 ##### /photoprism/storage #####
 
-The *storage* folder is used by PhotoPrism to save SQLite, config, cache, thumbnail and sidecar files:
+The *storage* folder is used to save SQLite, config, cache, thumbnail and sidecar files:
 
 - a *storage* folder mount (with write access) must always be configured in your `docker-compose.yml` file so that you do not lose these files after a restart or upgrade
 - never configure the *storage* folder to be inside the *originals* folder unless the name starts with a `.` to indicate that it is hidden

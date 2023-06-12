@@ -299,6 +299,10 @@
 
 ## WebDAV ##
 
+??? question "Why are files uploaded via WebDAV not indexed/imported immediately?"
+
+    `PHOTOPRISM_AUTO_INDEX` and `PHOTOPRISM_AUTO_IMPORT` let you specify how long PhotoPrism should [wait before indexing or importing](https://docs.photoprism.app/getting-started/config-options/#index-workers) newly uploaded files. The default setting is 300 seconds, or 5 minutes. This is a safety mechanism for users with slow uploads to avoid incomplete file sets, for example when uploading pictures with sidecar files. You can therefore reduce the delay if you have a fast connection and usually do not upload stacks of related files such as RAW images with sidecar JPEG and XMP files.
+
 ??? question "Why do I get an error when trying to add a remote server for syncing?"
 
     When adding a new remote server, PhotoPrism tests a number of

@@ -124,4 +124,11 @@ as this requires less experience. Alternative 32-bit Docker images are provided 
 !!! tldr ""
     Darktable is not included in the ARMv7 version because it is not 32-bit compatible.
 
+### How can I shorten the startup time after a restart or update?
+
+To reduce startup time, do not set `PHOTOPRISM_INIT` to avoid running additional setup scripts, and set `PHOTOPRISM_DISABLE_CHOWN` to `"true"` to [disable automatic storage permission updates](config-options.md#docker-image).
+
+!!! tldr ""
+    If your instance doesn't start even after waiting for some time, our [Troubleshooting Checklists](troubleshooting/index.md#connection-fails) help you quickly diagnose and solve the problem.
+
 [^1]: The default [Docker Compose](https://docs.docker.com/compose/) config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running `docker compose` or `docker-compose` in the same directory. Config files for other apps or instances should be placed in separate folders.

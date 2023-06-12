@@ -324,13 +324,16 @@ You can start a [rescan from the user interface](../user-guide/library/originals
 
 ### How can I shorten the startup time after a restart or update?
 
-To shorten the startup time, do not set `PHOTOPRISM_INIT` so that no additional setup scripts are executed and set `PHOTOPRISM_DISABLE_CHOWN` to `"true"` to [disable updating storage permissions via chmod and chown](https://docs.photoprism.app/getting-started/config-options/#docker-image). If your instance doesn't start even after waiting a few minutes, our [Troubleshooting Checklists](https://docs.photoprism.app/getting-started/troubleshooting/#connection-fails) help you diagnose and solve the problem.
+To reduce startup time, do not set `PHOTOPRISM_INIT` to avoid running additional setup scripts, and set `PHOTOPRISM_DISABLE_CHOWN` to `"true"` to [disable automatic storage permission updates](config-options.md#docker-image).
+
+!!! tldr ""
+    If your instance doesn't start even after waiting for some time, our [Troubleshooting Checklists](troubleshooting/index.md#connection-fails) help you quickly diagnose and solve the problem.
 
 ### Why are files uploaded via WebDAV not indexed/imported immediately?
 
 `PHOTOPRISM_AUTO_INDEX` and `PHOTOPRISM_AUTO_IMPORT` let you specify how long PhotoPrism should [wait before indexing or importing](https://docs.photoprism.app/getting-started/config-options/#index-workers) newly uploaded files. The default setting is 300 seconds, or 5 minutes. This is a safety mechanism for users with slow uploads to avoid incomplete file sets, for example when uploading pictures with sidecar files. You can therefore reduce the delay if you have a fast connection and usually do not upload stacks of related files such as RAW images with sidecar JPEG and XMP files.
 
-In some cases, it is also possible that the index is already being updated, so you will have to wait until the process is complete before indexing new files.
+In some cases, it is also possible that [the index is already being updated](../user-guide/library/originals.md), so you will have to wait until the process is complete before indexing new files.
 
 ### I'm having issues understanding the difference between the import and originals folders?
 

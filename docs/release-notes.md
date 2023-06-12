@@ -9,7 +9,7 @@
 
 What's new?
 
-- CLI: [Added `find` command to search the index for specific files](https://github.com/photoprism/photoprism/pull/3222)
+- CLI: [Added `photoprism find` command to search the index for specific files](https://github.com/photoprism/photoprism/pull/3222)
 
 ### June 7, 2023 ###
 <span class="build">Build 230607-9e086c7eb</span>

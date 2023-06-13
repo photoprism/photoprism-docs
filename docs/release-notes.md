@@ -5,13 +5,14 @@
     and then [following our update guide](getting-started/updates.md#docker-compose) to download the [most recent image from Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 230613-53aeaffe0</span>
+<span class="build">Build 230613-a7cc1e367</span>
 
 What's new?
 
 - Photos: [Associated albums are displayed in the Info tab of the edit dialog](https://github.com/photoprism/photoprism/pull/3095)
 - Photos: [Added a link from the Files tab to the related folder in the file browser](https://github.com/photoprism/photoprism/pull/2926)
 - Moments: [Added labels to match *Holidays* as well as additional *Pets*](https://github.com/photoprism/photoprism/pull/3081)
+- CLI: [Fixed the `photoprism import` command destination parameter type](https://github.com/photoprism/photoprism/issues/3473)
 - CLI: [Added `photoprism find` command to search the index for specific files](https://github.com/photoprism/photoprism/pull/3222)
 
 ### June 7, 2023 ###

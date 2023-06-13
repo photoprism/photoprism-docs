@@ -5,10 +5,11 @@
     and then [following our update guide](getting-started/updates.md#docker-compose) to download the [most recent image from Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 230612-092fe04b2</span>
+<span class="build">Build 230613-6a4bfa84b</span>
 
 What's new?
 
+- UX: [Albums are shown in the Info tab of the edit dialog](https://github.com/photoprism/photoprism/pull/3095)
 - CLI: [Added `photoprism find` command to search the index for specific files](https://github.com/photoprism/photoprism/pull/3222)
 
 ### June 7, 2023 ###

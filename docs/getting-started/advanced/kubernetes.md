@@ -59,6 +59,10 @@ spec:
         env:
         - name: PHOTOPRISM_DEBUG
           value: "true"
+        - name: PHOTOPRISM_IMPORT_PATH
+          value: /import
+        - name: PHOTOPRISM_ORIGINALS_PATH
+          value: /originals
         - name: PHOTOPRISM_DATABASE_DRIVER
           value: mysql
         - name: PHOTOPRISM_HTTP_HOST
@@ -74,21 +78,29 @@ spec:
         - containerPort: 2342
           name: http
         volumeMounts:
-        - mountPath: /photoprism
-          name: photoprism
+        - mountPath: /originals
+          name: originals
+        - mountPath: /import
+          name: import
+        - mountPath: /photoprism/storage
+          name: photoprism-storage
         readinessProbe:
           httpGet:
             path: /api/v1/status
             port: http
       volumes:
-      - name: photoprism
+      - name: originals
         nfs:
-          path: /share
+          path: /originals
           readOnly: true
           server: my.nas.host
-      - name: photoprism
+      - name: import
         nfs:
-          path: /photoprism
+          path: /import
+          server: my.nas.host
+      - name: photoprism-storage
+        nfs:
+          path: /photoprism-storage
           server: my.nas.host
 ---
 apiVersion: v1

@@ -316,30 +316,30 @@ The currently supported user ID ranges are 0, 33, 50-99, 500-600, and 900-1200. 
 
 #### Examples
 
-| Action                                                       | Command                                                       |
-|--------------------------------------------------------------|---------------------------------------------------------------|
-| *Start Services*                                             | `docker compose up -d`                                        | 
-| *Stop Services*                                              | `docker compose stop`                                         |
-| *Download Updates*                                           | `docker compose pull`                                         |
-| *Uninstall*                                                  | `docker compose rm -s -v`                                     |
-| [*View Logs*](troubleshooting/docker.md#viewing-logs)        | `docker compose logs --tail=100 -f`                           |
-| *Display Config Values*                                      | `docker compose exec photoprism photoprism show config`       |
-| *Show Migration Status*                                      | `docker compose exec photoprism photoprism migrations ls`     |
-| *Repeat Failed Migrations*                                   | `docker compose exec photoprism photoprism migrations run -f` |
-| *Reset Database*                                             | `docker compose exec photoprism photoprism reset -y`          |
-| *Backup Database*                                            | `docker compose exec photoprism photoprism backup -a -i`      |                      
-| *Restore Database*                                           | `docker compose exec photoprism photoprism restore -a -i`     |                   
-| *Change Admin Password*                                      | `docker compose exec photoprism photoprism passwd [username]` |
-| *Show User Management Commands*                              | `docker compose exec photoprism photoprism users help`        |
-| *Reset Users*                                                | `docker compose exec photoprism photoprism users reset -y`    |
-| *Show Face Recognition Commands*                             | `docker compose exec photoprism photoprism faces help`        |
-| *Index Faces*                                                | `docker compose exec photoprism photoprism faces index`       |
-| *Reset People & Faces*                                       | `docker compose exec photoprism photoprism faces reset -f`    |
-| *Transcode Videos to AVC*                                    | `docker compose exec photoprism photoprism convert`           |
-| *Regenerate Thumbnails*                                      | `docker compose exec photoprism photoprism thumbs -f`         |
-| [*Update Index*](../user-guide/library/originals.md)         | `docker compose exec photoprism photoprism index --cleanup`   |                  
-| [*Move Files to Originals*](../user-guide/library/import.md) | `docker compose exec photoprism photoprism import [path]`     |                  
-| [*Copy Files to Originals*](../user-guide/library/import.md) | `docker compose exec photoprism photoprism cp [path]`         |                  
+| Action                                                 | Command                                                       |
+|--------------------------------------------------------|---------------------------------------------------------------|
+| *Start Services*                                       | `docker compose up -d`                                        | 
+| *Stop Services*                                        | `docker compose stop`                                         |
+| *Download Updates*                                     | `docker compose pull`                                         |
+| *Uninstall*                                            | `docker compose rm -s -v`                                     |
+| [*View Logs*](troubleshooting/docker.md#viewing-logs)  | `docker compose logs --tail=100 -f`                           |
+| *Display Config Values*                                | `docker compose exec photoprism photoprism show config`       |
+| *Show Migration Status*                                | `docker compose exec photoprism photoprism migrations ls`     |
+| *Repeat Failed Migrations*                             | `docker compose exec photoprism photoprism migrations run -f` |
+| *Reset Database*                                       | `docker compose exec photoprism photoprism reset -y`          |
+| *Backup Database*                                      | `docker compose exec photoprism photoprism backup -a -i`      |                      
+| *Restore Database*                                     | `docker compose exec photoprism photoprism restore -a -i`     |                   
+| *Change Admin Password*                                | `docker compose exec photoprism photoprism passwd [username]` |
+| *Show User Management Commands*                        | `docker compose exec photoprism photoprism users help`        |
+| *Reset Users*                                          | `docker compose exec photoprism photoprism users reset -y`    |
+| *Show Face Recognition Commands*                       | `docker compose exec photoprism photoprism faces help`        |
+| *Index Faces*                                          | `docker compose exec photoprism photoprism faces index`       |
+| *Reset People & Faces*                                 | `docker compose exec photoprism photoprism faces reset -f`    |
+| *Transcode Videos to AVC*                              | `docker compose exec photoprism photoprism convert`           |
+| *Regenerate Thumbnails*                                | `docker compose exec photoprism photoprism thumbs -f`         |
+| [*Update Index*](../user-guide/library/originals.md)   | `docker compose exec photoprism photoprism index --cleanup`   |                  
+| [*Move to Originals*](../user-guide/library/import.md) | `docker compose exec photoprism photoprism import [path]`     |                  
+| [*Copy to Originals*](../user-guide/library/import.md) | `docker compose exec photoprism photoprism cp [path]`         |                  
 
 !!! info "Complete Rescan"
     `docker compose exec photoprism photoprism index -f` rescans all originals, including already indexed and unchanged files.

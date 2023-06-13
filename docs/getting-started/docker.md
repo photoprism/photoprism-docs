@@ -231,30 +231,30 @@ The currently supported user ID ranges are 0, 33, 50-99, 500-600, and 900-1200. 
 
 #### Examples
 
-| Action                                                       | Command                                                   |
-|--------------------------------------------------------------|-----------------------------------------------------------|
-| *Start PhotoPrism*                                           | `docker start photoprism`                                 |
-| *Stop PhotoPrism*                                            | `docker stop photoprism`                                  |
-| *Download Update*                                            | `docker pull photoprism/photoprism:latest`                |
-| *Uninstall*                                                  | `docker rm -f photoprism`                                 |
-| *View Logs*                                                  | `docker logs --tail=100 -f photoprism`                    |
-| *Display Config Values*                                      | `docker exec -ti photoprism photoprism show config`       |
-| *Show Migration Status*                                      | `docker exec -ti photoprism photoprism migrations ls`     |
-| *Repeat Failed Migrations*                                   | `docker exec -ti photoprism photoprism migrations run -f` |
-| *Reset Database*                                             | `docker exec -ti photoprism photoprism reset -y`          |                   
-| *Backup Database*                                            | `docker exec -ti photoprism photoprism backup -a -i`      |                      
-| *Restore Database*                                           | `docker exec -ti photoprism photoprism restore -a -i`     |                   
-| *Change Admin Password*                                      | `docker exec -ti photoprism photoprism passwd [username]` | 
-| *Show User Management Commands*                              | `docker exec -ti photoprism photoprism users help`        |
-| *Reset Users*                                                | `docker exec -ti photoprism photoprism users reset -y`    |
-| *Show Face Recognition Commands*                             | `docker exec -ti photoprism photoprism faces help`        |
-| *Index Faces*                                                | `docker exec -ti photoprism photoprism faces index`       |
-| *Reset People & Faces*                                       | `docker exec -ti photoprism photoprism faces reset -f`    |
-| *Transcode Videos to AVC*                                    | `docker exec -ti photoprism photoprism convert`           |
-| *Regenerate Thumbnails*                                      | `docker exec -ti photoprism photoprism thumbs -f`         |
-| *Update Index*                                               | `docker exec -ti photoprism photoprism index --cleanup`   |                  
-| [*Move Files to Originals*](../user-guide/library/import.md) | `docker exec -ti photoprism photoprism import [path]`     |                  
-| [*Copy Files to Originals*](../user-guide/library/import.md) | `docker exec -ti photoprism photoprism cp [path]`         |                  
+| Action                                                 | Command                                                   |
+|--------------------------------------------------------|-----------------------------------------------------------|
+| *Start PhotoPrism*                                     | `docker start photoprism`                                 |
+| *Stop PhotoPrism*                                      | `docker stop photoprism`                                  |
+| *Download Update*                                      | `docker pull photoprism/photoprism:latest`                |
+| *Uninstall*                                            | `docker rm -f photoprism`                                 |
+| *View Logs*                                            | `docker logs --tail=100 -f photoprism`                    |
+| *Display Config Values*                                | `docker exec -ti photoprism photoprism show config`       |
+| *Show Migration Status*                                | `docker exec -ti photoprism photoprism migrations ls`     |
+| *Repeat Failed Migrations*                             | `docker exec -ti photoprism photoprism migrations run -f` |
+| *Reset Database*                                       | `docker exec -ti photoprism photoprism reset -y`          |                   
+| *Backup Database*                                      | `docker exec -ti photoprism photoprism backup -a -i`      |                      
+| *Restore Database*                                     | `docker exec -ti photoprism photoprism restore -a -i`     |                   
+| *Change Admin Password*                                | `docker exec -ti photoprism photoprism passwd [username]` | 
+| *Show User Management Commands*                        | `docker exec -ti photoprism photoprism users help`        |
+| *Reset Users*                                          | `docker exec -ti photoprism photoprism users reset -y`    |
+| *Show Face Recognition Commands*                       | `docker exec -ti photoprism photoprism faces help`        |
+| *Index Faces*                                          | `docker exec -ti photoprism photoprism faces index`       |
+| *Reset People & Faces*                                 | `docker exec -ti photoprism photoprism faces reset -f`    |
+| *Transcode Videos to AVC*                              | `docker exec -ti photoprism photoprism convert`           |
+| *Regenerate Thumbnails*                                | `docker exec -ti photoprism photoprism thumbs -f`         |
+| *Update Index*                                         | `docker exec -ti photoprism photoprism index --cleanup`   |                  
+| [*Move to Originals*](../user-guide/library/import.md) | `docker exec -ti photoprism photoprism import [path]`     |                  
+| [*Copy to Originals*](../user-guide/library/import.md) | `docker exec -ti photoprism photoprism cp [path]`         |                  
 
 
 !!! info "Complete Rescan"

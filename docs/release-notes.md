@@ -9,7 +9,7 @@
 
 What's new?
 
-- UX: [Albums are shown in the Info tab of the edit dialog](https://github.com/photoprism/photoprism/pull/3095)
+- Photos: [Albums are shown in the Info tab of the edit dialog](https://github.com/photoprism/photoprism/pull/3095)
 - CLI: [Added `photoprism find` command to search the index for specific files](https://github.com/photoprism/photoprism/pull/3222)
 
 ### June 7, 2023 ###

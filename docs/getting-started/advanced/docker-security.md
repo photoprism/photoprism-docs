@@ -1,6 +1,6 @@
 # Docker Security Guide
 
-*For advanced users only: The following recommendations, which are intended to improve the security of your Docker environment, were provided by a contributor and are not part of the original software distribution.  As such, they have not been officially released, recommended, or extensively tested by us. You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.*
+*For advanced users only. This guide is maintained by the community and may contain inaccurate or incomplete advice. You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.*
 
 ## Run Services as Non-Root User
 

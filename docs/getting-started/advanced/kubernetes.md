@@ -59,10 +59,6 @@ spec:
         env:
         - name: PHOTOPRISM_DEBUG
           value: "true"
-        - name: PHOTOPRISM_IMPORT_PATH
-          value: /import
-        - name: PHOTOPRISM_ORIGINALS_PATH
-          value: /originals
         - name: PHOTOPRISM_DATABASE_DRIVER
           value: mysql
         - name: PHOTOPRISM_HTTP_HOST
@@ -78,12 +74,12 @@ spec:
         - containerPort: 2342
           name: http
         volumeMounts:
-        - mountPath: /originals
+        - mountPath: /photoprism/originals
           name: originals
-        - mountPath: /import
+        - mountPath: /photoprism/import
           name: import
         - mountPath: /photoprism/storage
-          name: photoprism-storage
+          name: storage
         readinessProbe:
           httpGet:
             path: /api/v1/status
@@ -92,15 +88,15 @@ spec:
       - name: originals
         nfs:
           path: /originals
-          readOnly: true
+          # readOnly: true # Disables import and upload!
           server: my.nas.host
       - name: import
         nfs:
           path: /import
           server: my.nas.host
-      - name: photoprism-storage
+      - name: storage
         nfs:
-          path: /photoprism-storage
+          path: /storage
           server: my.nas.host
 ---
 apiVersion: v1
@@ -124,7 +120,7 @@ metadata:
   annotations:
     # For nginx ingress controller:
     kubernetes.io/ingress.class: nginx
-    # Default is very low so most photo uploads will fail
+    # Default is very low so most photo uploads will fail:
     nginx.ingress.kubernetes.io/proxy-body-size: "512M"
     # If using cert-manager:
     cert-manager.io/cluster-issuer: letsencrypt-prod

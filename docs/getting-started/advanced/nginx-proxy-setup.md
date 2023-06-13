@@ -2,8 +2,8 @@
 
 *For advanced users only. This guide is maintained by the community and may contain inaccurate or incomplete advice. You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.*
 
-!!! info "Getting Support"
-    If you are experiencing problems with [NGINX](https://www.nginx.com/), such as failed uploads, [connection errors](../troubleshooting/index.md#connection-fails), [broken thumbnails](../troubleshooting/index.md#broken-thumbnails), and [video playback problems](../troubleshooting/index.md#videos-dont-play), please consider [asking the NGINX community for advice](https://www.nginx.com/support/), as we do not specialize in supporting their product, which is [notoriously difficult](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+nginx) to configure. Instead, we recommend [using Traefik as a reverse proxy](../proxies/traefik.md) as this is easier and more convenient.
+!!! danger "Getting Support"
+    Since [NGINX](../proxies/nginx.md) is [notoriously difficult](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+nginx) to configure, we unfortunately can't offer you support in case something isn't working. If you have NGINX related issues such as failed uploads, [connection errors](../troubleshooting/index.md#connection-fails), [broken thumbnails](../troubleshooting/index.md#broken-thumbnails), and [video playback problems](../troubleshooting/index.md#videos-dont-play), we recommend that you [ask the NGINX community for advice](https://www.nginx.com/support/) or try to [use Traefik as a reverse proxy](../proxies/traefik.md), as it is easier to configure and much more convenient to work with overall.
 
 Using a reverse proxy in front of PhotoPrism has various benefits:
 

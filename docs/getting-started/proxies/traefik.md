@@ -1,6 +1,6 @@
 # Using Traefik as Reverse Proxy
 
-!!! check "Best Choice"
+!!! success "Best Choice"
     - No special settings required in combination with modern web applications
     - WebSocket proxying automatically works
     - [Traefik](https://doc.traefik.io/traefik/) can [create and update](https://doc.traefik.io/traefik/user-guides/docker-compose/acme-http/)  [Let's Encrypt](https://letsencrypt.org/) HTTPS certificates for you

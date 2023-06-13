@@ -16,7 +16,7 @@ Our [configuration examples](https://dl.photoprism.app/docker/) are generally ba
 ```yaml
 services:
   mariadb:
-    image: mariadb:10.9
+    image: mariadb:10.11
     ...
 ```
 
@@ -94,7 +94,7 @@ To enable automatic schema updates, set `MARIADB_AUTO_UPGRADE` to a non-empty va
 ```yaml
 services:
   mariadb:
-    image: mariadb:10.9
+    image: mariadb:10.11
     ...
     environment:
       MARIADB_AUTO_UPGRADE: "1"

@@ -94,7 +94,7 @@ Our [configuration examples](https://dl.photoprism.app/docker/) are generally ba
 ```yaml
 services:
   mariadb:
-    image: mariadb:10.9
+    image: mariadb:10.11
     ...
 ```
 

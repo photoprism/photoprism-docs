@@ -49,9 +49,8 @@ services:
 
 Users of our [DigitalOcean 1-Click App](cloud/digitalocean.md) have Watchtower pre-installed.
 
-!!! caution
-    Automatic updates may interrupt indexing and import operations.
-    Only enable Watchtower if you are comfortable with this.
+!!! danger
+    Keep in mind that automatic updates can interrupt indexing and import operations, and enable Watchtower only if this is acceptable to you.
 
 ### Pure Docker
 

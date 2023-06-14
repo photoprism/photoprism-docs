@@ -7,6 +7,9 @@
 ### Development Preview ###
 <span class="build">Build 230614-177672857</span>
 
+This update includes [new features and enhancements](https://github.com/photoprism/photoprism/pulls?q=is%3Apr+is%3Aclosed+label%3Amerged+sort%3Aupdated-desc) contributed [by our community](https://docs.photoprism.app/developer-guide/pull-requests/),
+as well as fixes for recently discovered issues. Thanks to everyone involved!
+
 What's new?
 
 - Photos: [Related albums are displayed in the Info tab of the edit dialog](https://github.com/photoprism/photoprism/pull/3095)

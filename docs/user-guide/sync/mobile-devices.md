@@ -11,9 +11,6 @@ We recommend [PhotoSync](https://link.photoprism.app/photosync) which is availab
 
 ### Set PhotoPrism or WebDAV as Target ###
 
-!!! attention ""
-      If you are using PhotoSync on Android you need to choose WebDAV as target.
-
 1. Open PhotoSync and click :material-cog-outline:
 2. Click *Configure*
 3. Select PhotoPrism as target

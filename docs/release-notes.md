@@ -12,8 +12,8 @@ What's new?
 - Photos: [Related albums are displayed in the Info tab of the edit dialog](https://github.com/photoprism/photoprism/pull/3095)
 - Photos: [Added a link from the Files tab to the related folder in the file browser](https://github.com/photoprism/photoprism/pull/2926)
 - Moments: [Added labels to match *Holidays* as well as additional *Pets*](https://github.com/photoprism/photoprism/pull/3081)
-- CLI: [Fixed the `photoprism import` command destination parameter type](https://github.com/photoprism/photoprism/issues/3473)
 - CLI: [Added `photoprism find` command to search the index for specific files](https://github.com/photoprism/photoprism/pull/3222)
+- CLI: [Fixed the `photoprism import` command destination parameter type](https://github.com/photoprism/photoprism/issues/3473)
 - Security: [Updated third-party dependencies in backend](https://github.com/photoprism/photoprism/commit/b91723e90caf3012cf55a4d2b2f68dda81c9f702) [and frontend](https://github.com/photoprism/photoprism/commit/9a5af3176e937a494d69f96e99d9191e0f1b5ee2)
 
 ### June 7, 2023 ###

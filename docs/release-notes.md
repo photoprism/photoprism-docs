@@ -4,6 +4,14 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview`,
     and then [following our update guide](getting-started/updates.md#docker-compose) to download the [most recent image from Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
+### Development Preview ###
+<span class="build">Build 230619-87b6d7247</span>
+
+What's new?
+
+- Albums: [Invalid entries are automatically flagged as missing](https://github.com/photoprism/photoprism/issues/3481)
+- CLI: [Fixed an issue where entering a very long password could disable the login](https://github.com/photoprism/photoprism/issues/3482)
+
 ### June 15, 2023 ###
 <span class="build">Build 230615-90a18f6e7</span>
 

@@ -5,12 +5,14 @@
     and then [following our update guide](getting-started/updates.md#docker-compose) to download the [most recent image from Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 230619-87b6d7247</span>
+<span class="build">Build 230620-bae5eace8</span>
 
 What's new?
 
 - Albums: [Invalid entries are automatically flagged as missing](https://github.com/photoprism/photoprism/issues/3481)
 - CLI: [Fixed an issue where entering a very long password could disable the login](https://github.com/photoprism/photoprism/issues/3482)
+- Security: [Updated third-party dependencies in backend](https://github.com/photoprism/photoprism/commit/96e0981c3179a428ea4c5614ee3ffec417232d52) [and frontend](https://github.com/photoprism/photoprism/commit/ee6e6c66e388ddb901e212dc6736f5dbfa28c459)
+- Translations: [Updated Chinese (Simplified), Italian, and Japanese](https://translate.photoprism.app/projects/photoprism/)
 
 ### June 15, 2023 ###
 <span class="build">Build 230615-90a18f6e7</span>

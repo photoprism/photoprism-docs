@@ -5,7 +5,9 @@
     and then [following our update guide](getting-started/updates.md#docker-compose) to download the [most recent image from Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 230620-bae5eace8</span>
+<span class="build">Build 230625-17242fb07</span>
+
+This service release includes the [latest translations contributed by our community](https://translate.photoprism.app/projects/photoprism/), as well as fixes for recently discovered issues.
 
 What's new?
 

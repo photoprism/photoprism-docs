@@ -20,6 +20,8 @@ As explained in our [Privacy Policy](https://www.photoprism.app/privacy#section-
 
 Your use of these services is [fully covered by us](../getting-started/faq.md#are-the-keys-for-using-interactive-world-maps-provided-free-of-charge). Depending on your usage, this can save you much more than the cost of a [PhotoPrism+ Membership](https://www.photoprism.app/membership), since other providers generally charge usage-based fees and may also not allow you to cache the data they provide, compromising your privacy with unnecessary requests.
 
+Note that other free apps often use the map tile service that openstreetmap.org provides for development purposes. In this case, your private instance hostname may show up in a public CSV file they make [available for download](https://planet.openstreetmap.org/tile_logs/). This is a major difference from our approach, which focuses on your privacy and user experience.
+
 In order to use the maps and view location details in PhotoPrism, as well as successfully run our test suite as a developer, you must **allow requests to these API endpoints** if you have a firewall installed and make sure your Internet connection is working.
 
 Should you wish to operate one or both of these services on your own premises, we can set up such a [fully autonomous solution](https://www.photoprism.app/kb/compliance-faq#fully-autonomous-solution) for you, provided you are prepared to cover the initial setup costs as well as ongoing maintenance fees for content licenses and updates.

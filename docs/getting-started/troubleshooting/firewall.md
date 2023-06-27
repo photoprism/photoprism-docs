@@ -34,9 +34,6 @@ In addition, the following API endpoints should be whitelisted so that public [D
 - [ ] dseasb33srnrn.cloudfront.net
 - [ ] production.cloudflare.docker.com
 
-!!! tldr ""
-    Other apps sometimes use the free map tile service that openstreetmap.org provides [for development purposes](https://operations.osmfoundation.org/policies/tiles/). In this case, your private instance hostname may show up in a public CSV file they make [available for download](https://planet.openstreetmap.org/tile_logs/). This is a major difference from our approach, which focuses on your privacy and user experience.
-
 ## IPTables and Docker
 
 On Linux, Docker manipulates the `iptables` rules to provide network isolation. This does have some implications for what you need to do if you want to have your own policies in addition to the rules Docker manages.

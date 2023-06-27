@@ -123,6 +123,12 @@ as this requires less experience. Alternative 32-bit Docker images are provided 
 !!! tldr ""
     Darktable is not included in the ARMv7 version because it is not 32-bit compatible.
 
+### PhotoPrism® Plus
+
+Our members can activate [additional features](https://link.photoprism.app/membership) by logging in with the [admin user created during setup](config-options.md#authentication) and then following the steps [described in our activation guide](https://www.photoprism.app/kb/activation). We recommend that new users [install PhotoPrism](index.md) before [signing up for a membership](https://link.photoprism.app/membership). Thank you for your support, which has been and continues to be essential to the success of the project! :octicons-heart-fill-24:{ .heart .purple }
+
+[Compare Memberships ›](https://link.photoprism.app/membership){ class="pr-3 block-xs" } [View Membership FAQ ›](https://www.photoprism.app/membership/faq) 
+
 ### How can I shorten the startup time after a restart or update?
 
 To reduce startup time, do not set `PHOTOPRISM_INIT` to avoid running additional setup scripts, and set `PHOTOPRISM_DISABLE_CHOWN` to `"true"` to [disable automatic permission updates](config-options.md#docker-image).

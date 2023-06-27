@@ -81,7 +81,7 @@ As explained in our [Privacy Policy](https://www.photoprism.app/privacy#section-
 
 Your use of these services is [fully covered by us](#are-the-keys-for-using-interactive-world-maps-provided-free-of-charge). Depending on your usage, this can save you much more than the cost of a [PhotoPrism+ Membership](https://www.photoprism.app/membership), since other providers generally charge usage-based fees and may also not allow you to cache the data they provide, compromising your privacy with unnecessary requests.
 
-Other apps sometimes use the free map tile service [offered by openstreetmap.org](https://operations.osmfoundation.org/policies/tiles/). In this case, [their privacy policy](https://wiki.osmfoundation.org/wiki/Privacy_Policy) applies and your data may be used to generate [publicly available reports](https://planet.openstreetmap.org/tile_logs/). This is a major difference from our approach, which focuses on your privacy and user experience.
+You might also come across other apps that use the free map tile service [offered by openstreetmap.org](https://operations.osmfoundation.org/policies/tiles/).  In this case, their [usage](https://operations.osmfoundation.org/policies/tiles/) and [privacy](https://wiki.osmfoundation.org/wiki/Privacy_Policy) policies apply, which means that your request data will be stored and used to create [publicly available reports](https://planet.openstreetmap.org/tile_logs/). This is a major difference from our approach, which [focuses on your privacy](https://www.photoprism.app/privacy) and user experience.
 
 [View Privacy Policy ›](https://www.photoprism.app/privacy#section-7){ class="pr-3" } [View Compliance FAQ ›](https://www.photoprism.app/kb/compliance-faq#privacy)
 

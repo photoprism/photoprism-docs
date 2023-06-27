@@ -981,6 +981,6 @@ img.sponsor-logo {
 @media (max-width: 560px) {
     .block-xs {
         display: block;
-        margin-bottom: 0.3em;
+        margin-bottom: 0.5em;
     }
 }

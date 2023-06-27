@@ -83,7 +83,7 @@ Your use of these services is [fully covered by us](#are-the-keys-for-using-inte
 
 You might also come across other apps that use the free map tile service [offered by openstreetmap.org](https://operations.osmfoundation.org/policies/tiles/). In this case, [their usage](https://operations.osmfoundation.org/policies/tiles/) and [privacy policies](https://wiki.osmfoundation.org/wiki/Privacy_Policy) apply, meaning that your request data is stored and used to create [publicly available reports](https://planet.openstreetmap.org/tile_logs/). This is a major difference from our approach, which [focuses on your privacy](https://www.photoprism.app/privacy) and user experience.
 
-[View Privacy Policy ›](https://www.photoprism.app/privacy#section-7){ class="pr-3" } [View Compliance FAQ ›](https://www.photoprism.app/kb/compliance-faq#privacy)
+[View Privacy Policy ›](https://www.photoprism.app/privacy#section-7){ class="pr-3 block-xs" } [View Compliance FAQ ›](https://www.photoprism.app/kb/compliance-faq#privacy)
 
 In order to successfully set up your installation and view location details in PhotoPrism, you must [allow incoming requests as well as those to our Geocoding API and Docker](troubleshooting/firewall.md) if you have a firewall installed, and make sure that your Internet connection is working:
 
@@ -267,7 +267,7 @@ In some instances, users have manually changed the contents of the database. It 
 
 Due to the amount of time required to review each report, we can only offer this to [eligible members](https://www.photoprism.app/membership) and [business customers](https://www.photoprism.app/teams), and not to users who have chosen our free community edition.
 
-[Get Performance Tips ›](troubleshooting/performance.md#mariadb){ class="pr-3" } [View Database Schema ›](../developer-guide/database/index.md)
+[Get Performance Tips ›](troubleshooting/performance.md#mariadb){ class="pr-3 block-xs" } [View Database Schema ›](../developer-guide/database/index.md)
 
 ### Can you improve performance when using older or otherwise slow hardware?
 

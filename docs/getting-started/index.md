@@ -69,14 +69,14 @@ As explained in our [Privacy Policy](https://www.photoprism.app/privacy#section-
 
 Your use of these services is [fully covered by us](faq.md#are-the-keys-for-using-interactive-world-maps-provided-free-of-charge). Depending on your usage, this can save you much more than the cost of a [PhotoPrism+ Membership](https://www.photoprism.app/membership), since other providers generally charge usage-based fees and often don't allow you to cache the data they provide, compromising performance and your privacy with unnecessary requests.
 
-[View Privacy Policy ›](https://www.photoprism.app/privacy#section-7){ class="pr-3" } [View Compliance FAQ ›](https://www.photoprism.app/kb/compliance-faq#privacy)
+[View Privacy Policy ›](https://www.photoprism.app/privacy#section-7){ class="pr-3 block-xs" } [View Compliance FAQ ›](https://www.photoprism.app/kb/compliance-faq#privacy)
 
 ## Getting Support
 
 If you need help installing our software at home, you are welcome to post your question in [GitHub Discussions](https://link.photoprism.app/discussions) or ask in our [Community Chat](https://link.photoprism.app/chat).
 Common problems can be quickly diagnosed and solved using our [Troubleshooting Checklists](https://docs.photoprism.app/getting-started/troubleshooting/). [Silver, Gold, and Platinum](https://link.photoprism.app/membership) members are also welcome to email us for technical support and advice.
 
-[View Support Options ›](https://www.photoprism.app/kb/getting-support){ class="pr-3" } [Compare Memberships ›](https://link.photoprism.app/membership)
+[View Support Options ›](https://www.photoprism.app/kb/getting-support){ class="pr-3 block-xs" } [Compare Memberships ›](https://link.photoprism.app/membership)
 
 !!! info ""
     **We kindly ask you not to report bugs via *GitHub Issues* unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.**

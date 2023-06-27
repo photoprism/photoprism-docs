@@ -76,5 +76,5 @@ An index schema migration is performed automatically every time PhotoPrism is (r
 
     Due to the amount of time required to review each report, we can only offer this to [eligible members](https://www.photoprism.app/membership) and [business customers](https://www.photoprism.app/teams), and not to users who have chosen our free community edition.
 
-    [Get Performance Tips ›](../troubleshooting/performance.md#mariadb){ class="pr-3" } [View Database Schema ›](../../developer-guide/database/index.md) 
+    [Get Performance Tips ›](../troubleshooting/performance.md#mariadb){ class="pr-3 block-xs" } [View Database Schema ›](../../developer-guide/database/index.md) 
 

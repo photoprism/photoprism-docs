@@ -13,7 +13,7 @@ This changes as the index grows and the number of concurrent requests increases.
 
 The biggest advantage of SQLite is that you don't need to run a separate database server. This can be very useful for testing and works well if you only have a few thousand files to index. If you are looking for scalability and high performance, it is not a good choice.
 
-[Get MariaDB Performance Tips ›](performance.md#mariadb){ class="pr-3" }
+[Get MariaDB Performance Tips ›](performance.md#mariadb){ class="pr-3 block-xs" }
 
 ## Locking Errors
 
@@ -39,4 +39,4 @@ When [migrating from SQLite to MariaDB](../advanced/migrations/sqlite-to-mariadb
 
 If this is the case, please make sure that your migrated database schema matches that of a [fresh, non-migrated installation](../../developer-guide/database/index.md) . It may help to [run the migrations manually](../advanced/migrations/index.md) in a terminal using the *migrations* subcommands. However, this does not guarantee that all issues such as missing indexes are resolved.
 
-[Troubleshoot MariaDB Problems ›](mariadb.md){ class="pr-3" }
+[Troubleshoot MariaDB Problems ›](mariadb.md){ class="pr-3 block-xs" }

@@ -63,7 +63,7 @@ The instructions for these migrations were provided by a contributor and are not
 
 If this is the case, please make sure that your migrated database schema matches that of a [fresh, non-migrated installation](../../developer-guide/database/index.md). It may help to [run the migrations manually](../advanced/migrations/index.md) in a terminal using the *migrations* subcommands. However, this does not guarantee that all issues such as missing indexes are resolved.
 
-[Get Performance Tips ›](performance.md#mariadb){ class="pr-3" } [View Database Schema ›](../../developer-guide/database/index.md)
+[Get Performance Tips ›](performance.md#mariadb){ class="pr-3 block-xs" } [View Database Schema ›](../../developer-guide/database/index.md)
 
 ## Version Upgrade
 

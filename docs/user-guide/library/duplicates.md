@@ -21,4 +21,4 @@ In addition to exact duplicates, there may be similar pictures and related sidec
 
 Depending on your library settings, such files may be automatically grouped into stacks:
 
-[Learn more ›](../organize/stacks.md){ class="pr-3" } [Library Settings ›](../settings/library.md)
+[Learn more ›](../organize/stacks.md){ class="pr-3 block-xs" } [Library Settings ›](../settings/library.md)

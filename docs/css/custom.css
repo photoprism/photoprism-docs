@@ -977,3 +977,10 @@ img.sponsor-logo {
         min-width: auto;
     }
 }
+
+@media (max-width: 560px) {
+    .block-xs {
+        display: block;
+        margin-bottom: 0.3em;
+    }
+}

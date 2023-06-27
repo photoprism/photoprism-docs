@@ -180,7 +180,7 @@ PhotoPrism® Plus
 !!! tldr ""
     Our new [Plus License](https://www.photoprism.app/plus/license) is used for both the PhotoPrism+ extensions we provide to our members as well as the standard Docker image we distribute. This allows us to bundle the extensions, and other third-party components that we are not allowed to distribute under the AGPL, with the compiled application in the Docker image. The public source code, however, remains under the [Open Source AGPL license](https://docs.photoprism.app/license/agpl/). If you don't want additional features, you can alternatively use the "ce" tag instead of "latest" to get a smaller Docker image distributed under the AGPL license.
     
-    [View Membership FAQ ›](https://www.photoprism.app/membership/faq){ class="pr-3" } [View Plus License ›](https://www.photoprism.app/plus/license)
+    [View Membership FAQ ›](https://www.photoprism.app/membership/faq){ class="pr-3 block-xs" } [View Plus License ›](https://www.photoprism.app/plus/license)
 
 ### November 18, 2022 ###
 <span class="build">Build 221118-e58fee0fb</span>

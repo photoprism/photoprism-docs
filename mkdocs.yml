@@ -276,6 +276,7 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.top
+    - navigation.footer
   palette:
     scheme: default
     primary: white

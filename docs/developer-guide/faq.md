@@ -26,7 +26,7 @@ In order to use the maps and view location details in PhotoPrism, as well as suc
 
 Should you wish to operate one or both of these services on your own premises, we can set up such a [fully autonomous solution](https://www.photoprism.app/kb/compliance-faq#fully-autonomous-solution) for you, provided you are prepared to cover the initial setup costs as well as ongoing maintenance fees for content licenses and updates.
 
-[View Privacy Policy ›](https://www.photoprism.app/privacy#section-7){ class="pr-3" } [View Compliance FAQ ›](https://www.photoprism.app/kb/compliance-faq#privacy)
+[View Privacy Policy ›](https://www.photoprism.app/privacy#section-7){ class="pr-3 block-xs" } [View Compliance FAQ ›](https://www.photoprism.app/kb/compliance-faq#privacy)
 
 ### Why do I see connection errors when requesting API keys at startup?
 

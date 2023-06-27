@@ -60,7 +60,7 @@ Our project infrastructure is provided by the following companies:
 - [**Element**](https://element.io/) develops and [operates the infrastructure](https://matrix.org/) that our [community chat](https://link.photoprism.app/chat) is based on
 - [**BrowserStack**](https://www.browserstack.com/) provides [free access](https://www.browserstack.com/open-source) to their device and browser testing infrastructure
 
-[View Sponsors ›](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md){ class="pr-3" } [View Credits ›](../credits.md)
+[View Sponsors ›](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md){ class="pr-3 block-xs" } [View Credits ›](../credits.md)
 
 <div class="py-1"></div>
 

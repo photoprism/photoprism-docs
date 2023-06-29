@@ -13,8 +13,8 @@ We appreciate your help with testing them. Thank you very much!
 What's new?
 
 - Photos: [JPEG files with missing EOI marker are automatically repaired](https://github.com/photoprism/photoprism/pull/2721)
-- Videos: [Added config option to limit the resolution when transcoding to AVC](https://github.com/photoprism/photoprism/pull/3498)
-- Metadata: [Dates in WhatsApp generated file names can be parsed](https://github.com/photoprism/photoprism/pull/2414)
+- Videos: [Added config option to limit the resolution when transcoding to AVC](https://github.com/photoprism/photoprism/issues/3466)
+- Metadata: [Dates in WhatsApp generated file names can be parsed](https://github.com/photoprism/photoprism/issues/1102)
 - Metadata: [Year 0 is mapped to 1 when parsing dates from Exiftool](https://github.com/photoprism/photoprism/pull/2508)
 - Config: [Self-signed HTTPS/TLS certificate is created at first startup](https://github.com/photoprism/photoprism/issues/3509)
 

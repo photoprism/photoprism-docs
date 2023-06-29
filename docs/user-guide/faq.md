@@ -52,7 +52,7 @@
 
     Note that as a lifetime member you will always receive updates and support for your personal use from us, unlike with so-called lifetime licenses, which may only be good until the next major version is released.
  
-    [View Membership FAQ ›](https://www.photoprism.app/membership/faq) [Sign Up ›](https://link.photoprism.app/membership)
+    [View Membership FAQ ›](https://www.photoprism.app/membership/faq)
 
 ??? question "What happens if I cancel my membership?"
 

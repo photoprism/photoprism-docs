@@ -5,7 +5,7 @@
     and then [following our update guide](getting-started/updates.md#docker-compose) to download the [most recent image from Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 230629-9a699f234</span>
+<span class="build">Build 230629-11e7d3f0d</span>
 
 Our latest preview build includes [new features and enhancements](https://github.com/photoprism/photoprism/pulls) contributed [by our community](https://docs.photoprism.app/developer-guide/pull-requests/).
 We appreciate your help with testing them. Thank you very much!
@@ -13,7 +13,8 @@ We appreciate your help with testing them. Thank you very much!
 What's new?
 
 - Photos: [JPEG files with missing EOI marker are automatically repaired](https://github.com/photoprism/photoprism/pull/2721)
-- Videos: [Added config option to limit the resolution when transcoding to AVC](https://github.com/photoprism/photoprism/issues/3466)
+- Photos: [Fixed an error when opening panoramas taken with a Samsung S21](https://github.com/photoprism/photoprism/issues/3363)
+- Videos: [Added config option to limit the resolution when transcoding](https://github.com/photoprism/photoprism/issues/3466)
 - Metadata: [Dates in WhatsApp generated file names can be parsed](https://github.com/photoprism/photoprism/issues/1102)
 - Metadata: [Year 0 is mapped to 1 when parsing dates from Exiftool](https://github.com/photoprism/photoprism/pull/2508)
 - Config: [Self-signed HTTPS/TLS certificate is created at first startup](https://github.com/photoprism/photoprism/issues/3509)

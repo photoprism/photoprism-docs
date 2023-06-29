@@ -1,14 +1,12 @@
 # Running PhotoPrism on an Asustor NAS
 
-!!! danger ""
-    Please note that third-party apps may not provide access to the docker-compose.yml file or the command line, and therefore you may not be able to use all of PhotoPrism's features and config options.
-
 Before setting up PhotoPrism on your NAS, we recommend that you check the [Asustor product database](https://www.asustor.com/en/product/product_list) for the CPU and memory configuration of your device.
 
 For a good user experience, it should be a 64-bit system with [at least 2 cores and 3 GB of RAM](../index.md#system-requirements). Indexing large photo and video collections also benefits greatly from [using SSD storage](../troubleshooting/performance.md#storage), especially for the database and cache files.
 
 !!! tldr ""
-    Note that [RAW image conversion and TensorFlow are disabled](../../user-guide/settings/advanced.md) on devices with 1 GB or less memory, and that high-resolution panoramic images may require [additional swap space](../troubleshooting/docker.md#adding-swap) and/or physical memory above the recommended minimum. We take no responsibility for [instability or performance problems](../troubleshooting/performance.md) if your device does not [meet the requirements](../index.md#system-requirements).
+    Third-party integrations may not provide direct access to config files or the command line, so you might not be able to use all features and config options.
+    Also note that [RAW image conversion and TensorFlow are disabled](../../user-guide/settings/advanced.md) on devices with 1 GB or less memory, and that high-resolution panoramic images may require [additional swap space](../troubleshooting/docker.md#adding-swap) and/or physical memory above the recommended minimum. We take no responsibility for [instability or performance problems](../troubleshooting/performance.md) if your device does not [meet the requirements](../index.md#system-requirements).
 
 ## Setup
 

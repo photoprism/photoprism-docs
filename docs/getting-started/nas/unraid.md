@@ -1,13 +1,10 @@
 # Setting Up PhotoPrism on Unraid
 
-!!! danger ""
-    Please note that third-party apps may not provide access to the docker-compose.yml file or the command line, and therefore you may not be able to use all of PhotoPrism's features and config options.
-
 !!! tldr ""
-    Should you experience problems with the installation, we recommend that you ask the Unraid community for advice, as we cannot provide support for third-party software and services.
+    Should you experience problems with the installation, we recommend that you ask the Unraid community for advice, as we cannot provide support for third-party software and services. Also note that third-party integrations may not provide direct access to config files or the command line, so you might not be able to use all features and config options.
 
 !!! attention ""
-    Note that [SQLite is generally not a good choice](../troubleshooting/sqlite.md) for users who require scalability and high performance. We recommend using MariaDB.
+    Using [SQLite is not recommended](../troubleshooting/sqlite.md) for users who require scalability and high performance. 
 
 We recommend you follow this tutorial [provided by IBRACORP](https://www.youtube.com/c/ibracorp) to install PhotoPrism on [Unraid](https://unraid.net/):
 

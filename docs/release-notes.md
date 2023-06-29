@@ -7,7 +7,7 @@
 ### Development Preview ###
 <span class="build">Build 230629-9a699f234</span>
 
-Our latest development preview includes [new features and enhancements](https://github.com/photoprism/photoprism/pulls) contributed [by our community](https://docs.photoprism.app/developer-guide/pull-requests/).
+Our latest preview build includes [new features and enhancements](https://github.com/photoprism/photoprism/pulls) contributed [by our community](https://docs.photoprism.app/developer-guide/pull-requests/).
 We appreciate your help with testing them. Thank you very much!
 
 What's new?

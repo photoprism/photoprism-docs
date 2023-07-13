@@ -5,7 +5,7 @@
     and then [following our update guide](getting-started/updates.md#docker-compose) to download the [most recent image from Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 230629-11e7d3f0d</span>
+<span class="build">Build 230712-945737b01</span>
 
 Our latest preview build includes [new features and enhancements](https://github.com/photoprism/photoprism/pulls) contributed [by our community](https://docs.photoprism.app/developer-guide/pull-requests/).
 We appreciate your help with testing them. Thank you very much!
@@ -18,6 +18,8 @@ What's new?
 - Metadata: [Dates in WhatsApp generated file names can be parsed](https://github.com/photoprism/photoprism/issues/1102)
 - Metadata: [Year 0 is mapped to 1 when parsing dates from Exiftool](https://github.com/photoprism/photoprism/pull/2508)
 - Config: [Self-signed HTTPS/TLS certificate is created at first startup](https://github.com/photoprism/photoprism/issues/3509)
+- Security: [Go has been updated to v1.20.6, which includes bug fixes and enhancements](https://github.com/golang/go/issues?q=milestone%3AGo1.20.6)
+- Translations: [Updated Japanese](https://translate.photoprism.app/projects/photoprism/)
 
 ### June 25, 2023 ###
 <span class="build">Build 230625-17242fb07</span>

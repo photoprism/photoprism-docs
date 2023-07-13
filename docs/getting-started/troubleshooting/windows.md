@@ -7,7 +7,7 @@ If you experience poor performance when indexing large libraries stored on NTFS:
 - [ ] The I/O bandwidth used to update the *Last Access Time* can be a significant percentage of the total I/O bandwidth on NTFS volumes with a large number of files or folders (disable updates).[^1]
 - [ ] In folders with many files, file names may start to conflict after NTFS uses all of the 8.3 short file names that are similar to the long names. Repeated conflicts between new and existing short names cause NTFS to regenerate the short file name from 6 to 8 times (disable short file names and reduce the number of files per folder).[^2] [^3]
 - [ ] [exFat](https://en.wikipedia.org/wiki/ExFAT) can be faster than NTFS, especially on external SSD drives with a lot of small files.
-- [ ] Windows 10 allows physical disks formatted with the Linux ext4 file system to be mounted directly in WSL 2, which may be an option for some use cases.[^4]
+- [ ] Windows 10 and 11 allow physical disks formatted with the Linux ext4 file system to be mounted directly in WSL 2, which may be an option for some use cases.[^4]
 
 ## Connecting via WebDAV
 

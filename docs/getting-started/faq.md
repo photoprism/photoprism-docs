@@ -168,6 +168,21 @@ volumes:
 
 Photos and videos can be mounted from FAT-formatted drives, such as an external SSD. Our tests have shown that PhotoPrism and [MariaDB can also be started](troubleshooting/mariadb.md#invalid-table-errors) from there. However, at least on macOS, the logs may occasionally show directory access errors and you will be forced to restart if problems occur.
 
+### I can't find a download link to install your software on Windows?
+
+PhotoPrism depends on a number of other open source tools and applications, such as Darktable, RawTherapee, and FFmpeg. While you can install them directly on Windows, it's a lot of work and we don't have the capacity to test the respective Windows versions before each release.
+
+We therefore recommend to [use Docker](https://docs.docker.com/desktop/install/windows-install/), so you can take advantage of [our pre-built and QA-tested Docker image](https://hub.docker.com/r/photoprism/photoprism/tags), which includes all the dependencies you need.
+It is a well-tested standard tool that also lets you run many other self-hosted apps without having to worry about the details or Windows-specific issues.
+To further simplify the setup for you, we offer [a batch script](https://dl.photoprism.app/docker/windows/install.bat) that you can run in the directory where you want to install PhotoPrism:
+        
+```bat
+curl.exe -o install.bat https://dl.photoprism.app/docker/windows/install.bat
+install.bat
+```
+
+This will automatically download all required config files and start the server for you. Before you run the script, make sure you have [Docker Desktop installed on your Windows PC](https://docs.docker.com/desktop/install/windows-install/).
+
 ### How can I install PhotoPrism without Docker?
 
 #### Building From Source ####

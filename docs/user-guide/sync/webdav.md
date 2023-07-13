@@ -29,7 +29,7 @@ https://admin@example.com/originals/
 \\example.com@SSL\originals\
 ```
 
-for Windows 10.
+for Windows.
 
 Please replace *example.com* with your actual domain.
 
@@ -71,7 +71,7 @@ http://admin@localhost:2342/originals/
     - [ ] Your instance or reverse proxy uses an invalid HTTPS certificate
     - [ ] You are trying to connect to the wrong network or server
 
-=== "Windows 10"
+=== "Windows"
 
      1. Open Windows **File Explorer**
      2. Right click **This PC**

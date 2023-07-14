@@ -13,6 +13,7 @@ We appreciate your help with testing them. Thank you very much!
 What's new?
 
 - Setup: [Added batch script for simplified installation under Windows](https://dl.photoprism.app/docker/windows/install.bat)
+- Search: [You can use the `geo:false` filter to find pictures without GPS coordinates](https://github.com/photoprism/photoprism/issues/3493)
 - Photos: [JPEG files with missing EOI marker are automatically repaired](https://github.com/photoprism/photoprism/pull/2721)
 - Photos: [Fixed an error when opening panoramas taken with a Samsung S21](https://github.com/photoprism/photoprism/issues/3363)
 - Metadata: [Dates in WhatsApp generated file names can be parsed](https://github.com/photoprism/photoprism/issues/1102)

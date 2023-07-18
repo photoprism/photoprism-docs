@@ -7,8 +7,7 @@
 ### Development Preview ###
 <span class="build">Build 230718-08070978c</span>
 
-Our latest preview build includes [new features and enhancements](https://github.com/photoprism/photoprism/pulls) contributed [by our community](https://docs.photoprism.app/developer-guide/pull-requests/).
-We appreciate your help with testing them. Thank you very much!
+Our latest preview build includes [new features and enhancement](https://github.com/photoprism/photoprism/pulls) contributed [by our community](https://docs.photoprism.app/developer-guide/pull-requests/), a number of security improvements, and fixes for recently discovered issues. If you are running PhotoPrism behind an HTTPS reverse proxy, we recommend that you [explicitly disable TLS](https://docs.photoprism.app/getting-started/config-options/#web-server) by either adding `PHOTOPRISM_DISABLE_TLS: "true"` to your `docker-compose.yml` file or using the `--disable-tls` command flag.
 
 What's new?
 

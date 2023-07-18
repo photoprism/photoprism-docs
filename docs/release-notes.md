@@ -5,7 +5,7 @@
     and then [following our update guide](getting-started/updates.md#docker-compose) to download the [most recent image from Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 230715-8c0955dd4</span>
+<span class="build">Build 230718-19b449023</span>
 
 Our latest preview build includes [new features and enhancements](https://github.com/photoprism/photoprism/pulls) contributed [by our community](https://docs.photoprism.app/developer-guide/pull-requests/).
 We appreciate your help with testing them. Thank you very much!
@@ -16,7 +16,7 @@ What's new?
 - Search: [You can use the `geo:false` filter to find pictures without GPS coordinates](https://github.com/photoprism/photoprism/issues/3493)
 - Photos: [JPEG files with missing EOI marker are automatically repaired](https://github.com/photoprism/photoprism/pull/2721)
 - Photos: [Fixed an error when opening panoramas taken with a Samsung S21](https://github.com/photoprism/photoprism/issues/3363)
-- Videos: [Added a config option to limit the](https://github.com/photoprism/photoprism/issues/3466) [transcoding resolution](https://docs.photoprism.app/getting-started/advanced/transcoding/)
+- Videos: [Added config option to limit the resolution of transcoded videos](https://github.com/photoprism/photoprism/issues/3466)
 - Metadata: [Dates in WhatsApp generated file names can be parsed](https://github.com/photoprism/photoprism/issues/1102)
 - Metadata: [Year 0 is mapped to 1 when parsing dates from Exiftool](https://github.com/photoprism/photoprism/pull/2508)
 - Security: [Default to a self-signed HTTPS/TLS certificate if no other certificate is available](https://github.com/photoprism/photoprism/issues/3509)

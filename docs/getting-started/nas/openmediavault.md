@@ -8,5 +8,14 @@ PhotoPrism can be conveniently installed using the openmediavault [plugin](https
 
 ![Screenshot](../img/omv_photoprism_plugin_ui.png){ class="shadow" }
 
+## Getting Updates
+
+To upgrade your instance, open a terminal, download our most recent image from Docker Hub, and then restart the service:
+
+```bash
+podman pull docker.io/photoprism/photoprism:latest
+systemctl restart pod-photoprism.service
+```
+
 !!! example ""
     **Help improve these docs!** You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.

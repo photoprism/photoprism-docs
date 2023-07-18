@@ -28,6 +28,21 @@ Please note:
     In case [FFmpeg is disabled](../../user-guide/settings/advanced.md#disable-ffmpeg) or not installed, videos cannot be indexed because still images cannot be created.
     You should also have [Exiftool enabled](../../getting-started/config-options.md#feature-flags) to extract metadata such as duration, resolution, and codec.   
 
+## Resolutions ##
+
+The [`PHOTOPRISM_FFMPEG_SIZE`](../../getting-started/config-options.md#file-converters) config option allows to limit the resolution of [transcoded videos](../../getting-started/advanced/transcoding.md). It accepts the following standard sizes, while other values are automatically adjusted to the next supported size:
+
+| Size |       Usage        |
+|------|--------------------|
+|  720 | SD TV, Mobile      |
+| 1280 | HD TV, SXGA        |
+| 1920 | Full HD            |
+| 2048 | DCI 2K, Tablets    |
+| 2560 | Quad HD, Notebooks |
+| 3840 | 4K Ultra HD        |
+| 4096 | DCI 4K, Retina 4K  |
+| 7680 | 8K Ultra HD 2      |
+
 ## Containers ##
 
 - https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Containers

@@ -149,6 +149,7 @@ Default values, including the *config* path to use, may optionally be specified 
 | ProxyProtoHeaders | []string | --proxy-proto-header |
 | ProxyProtoHttps   | []string | --proxy-proto-https  |
 | DisableTLS        | bool     | --disable-tls        |
+| DefaultTLS        | bool     | --default-tls        |
 | TLSEmail          | string   | --tls-email          |
 | TLSCert           | string   | --tls-cert           |
 | TLSKey            | string   | --tls-key            |
@@ -175,6 +176,7 @@ Default values, including the *config* path to use, may optionally be specified 
 | SipsBlacklist     | string | --sips-blacklist      |
 | FFmpegBin         | string | --ffmpeg-bin          |
 | FFmpegEncoder     | string | --ffmpeg-encoder      |
+| FFmpegSize        | int    | --ffmpeg-size         |
 | FFmpegBitrate     | int    | --ffmpeg-bitrate      |
 | FFmpegMapVideo    | string | --ffmpeg-map-video    |
 | FFmpegMapAudio    | string | --ffmpeg-map-audio    |

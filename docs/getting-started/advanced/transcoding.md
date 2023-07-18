@@ -18,7 +18,25 @@ It defaults to `software` if no value is set or hardware transcoding fails. Plea
 !!! tldr ""
     For transcoding to work, FFmpeg must be enabled and installed. When using our Docker images, it is already pre-installed. In addition, the service must have permission to use the related video devices. This depends on your hardware and operating system, so we can only give you examples that may need to be changed to work for you.
 
-### Bitrate Limiting
+### Size Limit ###
+
+The [`PHOTOPRISM_FFMPEG_SIZE`](../config-options.md#file-converters) config option allows to limit the resolution of transcoded videos. It accepts the following standard sizes, while other values are automatically adjusted to the next supported size:
+
+| Size |       Usage        |
+|------|--------------------|
+|  720 | SD TV, Mobile      |
+| 1280 | HD TV, SXGA        |
+| 1920 | Full HD            |
+| 2048 | DCI 2K, Tablets    |
+| 2560 | Quad HD, Notebooks |
+| 3840 | 4K Ultra HD        |
+| 4096 | DCI 4K, Retina 4K  |
+| 7680 | 8K Ultra HD 2      |
+
+!!! tldr ""
+    When transcoding videos, the original aspect ratio is maintained and smaller videos will not be upscaled.
+
+### Bitrate Limit ###
 
 You can limit the bitrate of the AVC encoder with the config option [`PHOTOPRISM_FFMPEG_BITRATE`](../config-options.md#file-converters). Keep in mind that this is a "soft limit", so the actual bitrate varies and depends on the encoder used as well as the specific FFmpeg parameters, which in turn depend on the encoder. It may also depend on the operating system and the GPU drivers.
 

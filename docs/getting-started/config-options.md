@@ -101,16 +101,16 @@
 
 ### Site Information ###
 
-|         Environment         |      CLI Flag      |          Default           |             Description              |
-|-----------------------------|--------------------|----------------------------|--------------------------------------|
-| PHOTOPRISM_CDN_URL          | --cdn-url          |                            | content delivery network `URL`       |
-| PHOTOPRISM_CDN_VIDEO        | --cdn-video        |                            | stream videos over the specified CDN |
-| PHOTOPRISM_SITE_URL         | --site-url         | http://photoprism.me:2342/ | public site `URL`                    |
-| PHOTOPRISM_SITE_AUTHOR      | --site-author      |                            | site `OWNER`, copyright, or artist   |
-| PHOTOPRISM_SITE_TITLE       | --site-title       |                            | site `TITLE`                         |
-| PHOTOPRISM_SITE_CAPTION     | --site-caption     | AI-Powered Photos App      | site `CAPTION`                       |
-| PHOTOPRISM_SITE_DESCRIPTION | --site-description |                            | site `DESCRIPTION` *optional*        |
-| PHOTOPRISM_SITE_PREVIEW     | --site-preview     |                            | sharing preview image `URL`          |
+|         Environment         |      CLI Flag      |        Default         |             Description              |
+|-----------------------------|--------------------|------------------------|--------------------------------------|
+| PHOTOPRISM_CDN_URL          | --cdn-url          |                        | content delivery network `URL`       |
+| PHOTOPRISM_CDN_VIDEO        | --cdn-video        |                        | stream videos over the specified CDN |
+| PHOTOPRISM_SITE_URL         | --site-url         | http://localhost:2342/ | public site `URL`                    |
+| PHOTOPRISM_SITE_AUTHOR      | --site-author      |                        | site `OWNER`, copyright, or artist   |
+| PHOTOPRISM_SITE_TITLE       | --site-title       |                        | site `TITLE`                         |
+| PHOTOPRISM_SITE_CAPTION     | --site-caption     | AI-Powered Photos App  | site `CAPTION`                       |
+| PHOTOPRISM_SITE_DESCRIPTION | --site-description |                        | site `DESCRIPTION` *optional*        |
+| PHOTOPRISM_SITE_PREVIEW     | --site-preview     |                        | sharing preview image `URL`          |
 
 ### Proxy Servers ###
 
@@ -124,9 +124,10 @@
 
 ### Web Server ###
 
-|           Environment           |        CLI Flag        |    Default    |                                               Description                                               |
+|           Environment           |        CLI Flag        |    Default    | Description                                                                                             |
 |---------------------------------|------------------------|---------------|---------------------------------------------------------------------------------------------------------|
-| PHOTOPRISM_DISABLE_TLS          | --disable-tls          |               | disable HTTPS even if a certificate is available                                                        |
+| PHOTOPRISM_DISABLE_TLS          | --disable-tls          |               | disable HTTPS/TLS even if the site URL starts with *https://* and a certificate is available            |
+| PHOTOPRISM_DEFAULT_TLS          | --default-tls          |               | default to a self-signed HTTPS/TLS certificate if no other certificate is available                     |
 | PHOTOPRISM_TLS_CERT             | --tls-cert             |               | public HTTPS certificate `FILE` (.crt)                                                                  |
 | PHOTOPRISM_TLS_KEY              | --tls-key              |               | private HTTPS key `FILE` (.key)                                                                         |
 | PHOTOPRISM_DISABLE_STS          | --disable-sts          |               | disable HTTP Strict-Transport-Security (STS) header                                                     |
@@ -166,26 +167,27 @@
 
 ### File Converters ###
 
-|           Environment            |        CLI Flag         |            Default             |                              Description                              |
-|----------------------------------|-------------------------|--------------------------------|-----------------------------------------------------------------------|
-| PHOTOPRISM_SIPS_BIN              | --sips-bin              | sips                           | Sips `COMMAND` for media file conversion *macOS only*                 |
-| PHOTOPRISM_SIPS_BLACKLIST        | --sips-blacklist        | avif,avifs                     | do not use Sips to convert files with these `EXTENSIONS` *macOS only* |
-| PHOTOPRISM_FFMPEG_BIN            | --ffmpeg-bin            | ffmpeg                         | FFmpeg `COMMAND` for video transcoding and thumbnail extraction       |
-| PHOTOPRISM_FFMPEG_ENCODER        | --ffmpeg-encoder        | libx264                        | FFmpeg AVC encoder `NAME`                                             |
-| PHOTOPRISM_FFMPEG_BITRATE        | --ffmpeg-bitrate        |                             50 | maximum FFmpeg encoding `BITRATE` (Mbit/s)                            |
-| PHOTOPRISM_FFMPEG_MAP_VIDEO      | --ffmpeg-map-video      | `0:v:0`                        | video `STREAMS` that should be transcoded                             |
-| PHOTOPRISM_FFMPEG_MAP_AUDIO      | --ffmpeg-map-audio      | `0:a:0?`                       | audio `STREAMS` that should be transcoded                             |
-| PHOTOPRISM_EXIFTOOL_BIN          | --exiftool-bin          | exiftool                       | ExifTool `COMMAND` for extracting metadata                            |
-| PHOTOPRISM_DARKTABLE_BIN         | --darktable-bin         | darktable-cli                  | Darktable CLI `COMMAND` for RAW to JPEG conversion                    |
-| PHOTOPRISM_DARKTABLE_BLACKLIST   | --darktable-blacklist   |                                | do not use Darktable to convert files with these `EXTENSIONS`         |
-| PHOTOPRISM_DARKTABLE_CACHE_PATH  | --darktable-cache-path  |                                | custom Darktable cache `PATH`                                         |
-| PHOTOPRISM_DARKTABLE_CONFIG_PATH | --darktable-config-path |                                | custom Darktable config `PATH`                                        |
-| PHOTOPRISM_RAWTHERAPEE_BIN       | --rawtherapee-bin       | rawtherapee-cli                | RawTherapee CLI `COMMAND` for RAW to JPEG conversion                  |
-| PHOTOPRISM_RAWTHERAPEE_BLACKLIST | --rawtherapee-blacklist | dng                            | do not use RawTherapee to convert files with these `EXTENSIONS`       |
-| PHOTOPRISM_IMAGEMAGICK_BIN       | --imagemagick-bin       | convert                        | ImageMagick CLI `COMMAND` for image file conversion                   |
-| PHOTOPRISM_IMAGEMAGICK_BLACKLIST | --imagemagick-blacklist | heif,heic,heics,avif,avifs,jxl | do not use ImageMagick to convert files with these `EXTENSIONS`       |
-| PHOTOPRISM_HEIFCONVERT_BIN       | --heifconvert-bin       | heif-convert                   | libheif HEIC image conversion `COMMAND`                               |
-| PHOTOPRISM_RSVGCONVERT_BIN       | --rsvgconvert-bin       | rsvg-convert                   | librsvg SVG graphics conversion `COMMAND` *plus*                      |
+| Environment                      | CLI Flag                | Default                        | Description                                                                     |
+|----------------------------------|-------------------------|--------------------------------|---------------------------------------------------------------------------------|
+| PHOTOPRISM_SIPS_BIN              | --sips-bin              | sips                           | Sips `COMMAND` for media file conversion *macOS only*                           |
+| PHOTOPRISM_SIPS_BLACKLIST        | --sips-blacklist        | avif,avifs                     | do not use Sips to convert files with these `EXTENSIONS` *macOS only*           |
+| PHOTOPRISM_FFMPEG_BIN            | --ffmpeg-bin            | ffmpeg                         | FFmpeg `COMMAND` for video transcoding and thumbnail extraction                 |
+| PHOTOPRISM_FFMPEG_ENCODER        | --ffmpeg-encoder        | libx264                        | FFmpeg AVC encoder `NAME`                                                       |
+| PHOTOPRISM_FFMPEG_SIZE           | --ffmpeg-size           | 3840                           | [maximum video size](advanced/transcoding.md#size-limit) in `PIXELS` (720-7680) |
+| PHOTOPRISM_FFMPEG_BITRATE        | --ffmpeg-bitrate        | 50                             | [maximum video `BITRATE`](advanced/transcoding.md#bitrate-limit) in Mbit/s      |
+| PHOTOPRISM_FFMPEG_MAP_VIDEO      | --ffmpeg-map-video      | `0:v:0`                        | video `STREAMS` that should be transcoded                                       |
+| PHOTOPRISM_FFMPEG_MAP_AUDIO      | --ffmpeg-map-audio      | `0:a:0?`                       | audio `STREAMS` that should be transcoded                                       |
+| PHOTOPRISM_EXIFTOOL_BIN          | --exiftool-bin          | exiftool                       | ExifTool `COMMAND` for extracting metadata                                      |
+| PHOTOPRISM_DARKTABLE_BIN         | --darktable-bin         | darktable-cli                  | Darktable CLI `COMMAND` for RAW to JPEG conversion                              |
+| PHOTOPRISM_DARKTABLE_BLACKLIST   | --darktable-blacklist   |                                | do not use Darktable to convert files with these `EXTENSIONS`                   |
+| PHOTOPRISM_DARKTABLE_CACHE_PATH  | --darktable-cache-path  |                                | custom Darktable cache `PATH`                                                   |
+| PHOTOPRISM_DARKTABLE_CONFIG_PATH | --darktable-config-path |                                | custom Darktable config `PATH`                                                  |
+| PHOTOPRISM_RAWTHERAPEE_BIN       | --rawtherapee-bin       | rawtherapee-cli                | RawTherapee CLI `COMMAND` for RAW to JPEG conversion                            |
+| PHOTOPRISM_RAWTHERAPEE_BLACKLIST | --rawtherapee-blacklist | dng                            | do not use RawTherapee to convert files with these `EXTENSIONS`                 |
+| PHOTOPRISM_IMAGEMAGICK_BIN       | --imagemagick-bin       | convert                        | ImageMagick CLI `COMMAND` for image file conversion                             |
+| PHOTOPRISM_IMAGEMAGICK_BLACKLIST | --imagemagick-blacklist | heif,heic,heics,avif,avifs,jxl | do not use ImageMagick to convert files with these `EXTENSIONS`                 |
+| PHOTOPRISM_HEIFCONVERT_BIN       | --heifconvert-bin       | heif-convert                   | libheif HEIC image conversion `COMMAND`                                         |
+| PHOTOPRISM_RSVGCONVERT_BIN       | --rsvgconvert-bin       | rsvg-convert                   | librsvg SVG graphics conversion `COMMAND` *plus*                                |
 
 ### Security Tokens ###
 

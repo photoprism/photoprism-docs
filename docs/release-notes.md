@@ -5,7 +5,7 @@
     and then [following our update guide](getting-started/updates.md#docker-compose) to download the [most recent image from Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 230718-4931889b5</span>
+<span class="build">Build 230718-73fa7bbe8</span>
 
 Our latest preview build includes [new features and enhancement](https://github.com/photoprism/photoprism/pulls) contributed [by our community](https://docs.photoprism.app/developer-guide/pull-requests/), a number of security improvements, and fixes for recently discovered issues. If you are running PhotoPrism behind a reverse proxy, we recommend that you [explicitly disable TLS](https://docs.photoprism.app/getting-started/config-options/#web-server) by either adding `PHOTOPRISM_DISABLE_TLS: "true"` to your `docker-compose.yml` file or using the `--disable-tls` command flag.
 Thank you to everyone who contributed with pull requests, reported bugs, and helped us test the changes!

@@ -7,9 +7,7 @@
 ### July 19, 2023 ###
 <span class="build">Build 230719-73fa7bbe8</span>
 
-Our latest preview build includes [new features and enhancement](https://github.com/photoprism/photoprism/pulls) contributed [by our community](https://docs.photoprism.app/developer-guide/pull-requests/), a number of security improvements, and fixes for recently discovered issues.
-
-Thank you to everyone who submitted pull requests, helped with testing, signed up as a member, or contributed in other ways! We appreciate it very much.
+Our latest preview build includes [new features and enhancement](https://github.com/photoprism/photoprism/pulls) contributed [by our community](https://docs.photoprism.app/developer-guide/pull-requests/), a number of security improvements, and fixes for recently discovered issues. Thank you to everyone who submitted pull requests, helped with testing, signed up as a member, or contributed in other ways! We appreciate it very much.
 
 What's new?
 

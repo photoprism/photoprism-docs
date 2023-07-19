@@ -7,8 +7,9 @@
 ### July 19, 2023 ###
 <span class="build">Build 230719-73fa7bbe8</span>
 
-Our latest preview build includes [new features and enhancement](https://github.com/photoprism/photoprism/pulls) contributed [by our community](https://docs.photoprism.app/developer-guide/pull-requests/), a number of security improvements, and fixes for recently discovered issues. If you are running PhotoPrism behind a reverse proxy, we recommend that you [explicitly disable TLS](https://docs.photoprism.app/getting-started/config-options/#web-server) by either adding `PHOTOPRISM_DISABLE_TLS: "true"` to your `docker-compose.yml` file or using the `--disable-tls` command flag.
-Thank you to everyone who contributed with pull requests, reported bugs, and helped us test the changes!
+Our latest preview build includes [new features and enhancement](https://github.com/photoprism/photoprism/pulls) contributed [by our community](https://docs.photoprism.app/developer-guide/pull-requests/), a number of security improvements, and fixes for recently discovered issues.
+
+Thank you to everyone who submitted pull requests, helped with testing, signed up as a member, or contributed in other ways! We appreciate it very much.
 
 What's new?
 
@@ -24,6 +25,9 @@ What's new?
 - Security: [Clipboard contents are cleared on logout and when user privileges change](https://github.com/photoprism/photoprism/issues/3512)
 - Security: [Go has been updated to v1.20.6, which includes bug fixes and enhancements](https://github.com/golang/go/issues?q=milestone%3AGo1.20.6)
 - Translations: [Updated Japanese](https://translate.photoprism.app/projects/photoprism/)
+
+!!! info ""
+    We recommend that you [explicitly disable TLS](https://docs.photoprism.app/getting-started/config-options/#web-server) by adding `PHOTOPRISM_DISABLE_TLS: "true"` to your `docker-compose.yml` file when running PhotoPrism behind a reverse proxy. HTTPS could otherwise be accidentally enabled if a certificate matching the site URL is found or [`PHOTOPRISM_DEFAULT_TLS` is set to `"true"`](https://docs.photoprism.app/getting-started/config-options/#web-server). 
 
 ### June 25, 2023 ###
 <span class="build">Build 230625-17242fb07</span>
@@ -198,7 +202,7 @@ PhotoPrism® Plus
 - Auth: [Admins can manage user accounts and active sessions through the web UI](https://demo.photoprism.plus/library/admin/users) 
 - Index: [Added file format support for SVG, AI, PS and EPS vector graphics](https://github.com/photoprism/photoprism/issues/2207)
 
-!!! tldr ""
+!!! info ""
     Our new [Plus License](https://www.photoprism.app/plus/license) is used for both the PhotoPrism+ extensions we provide to our members as well as the standard Docker image we distribute. This allows us to bundle the extensions, and other third-party components that we are not allowed to distribute under the AGPL, with the compiled application in the Docker image. The public source code, however, remains under the [Open Source AGPL license](https://docs.photoprism.app/license/agpl/). If you don't want additional features, you can alternatively use the "ce" tag instead of "latest" to get a smaller Docker image distributed under the AGPL license.
     
     [View Membership FAQ ›](https://www.photoprism.app/membership/faq){ class="pr-3 block-xs" } [View Plus License ›](https://www.photoprism.app/plus/license)

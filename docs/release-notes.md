@@ -7,7 +7,7 @@
 ### Development Preview ###
 <span class="build">Build 230720-7c70ac012</span>
 
-With our preview builds, you get all the latest changes before they are released.
+With our preview builds, you get all the latest changes before they become available in the stable release.
 
 What's new?
 

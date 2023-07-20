@@ -118,7 +118,7 @@ docker compose build photoprism
 docker compose up photoprism
 ```
 
-And then open a terminal to the container as described above:
+Then open a terminal to the container as described above:
 
 ```bash
 make terminal
@@ -133,12 +133,12 @@ make build-go
 You can then run the [Delve](https://github.com/go-delve/delve/blob/master/Documentation/usage/dlv.md) command from inside the container to start the debugger - the command-line options can be customized based on your needs:
 
 ```bash
-/dlv --listen=:40000 --headless=true --log=true --log-output=debugger,debuglineerr,gdbwire,lldbout,rpc --accept-multiclient --api-version=2 exec ./photoprism -- start
+dlv --listen=:40000 --headless=true --log=true --log-output=debugger,debuglineerr,gdbwire,lldbout,rpc --accept-multiclient --api-version=2 exec ./photoprism -- start
 ```
 
 Once you run this command, you can use VSCode or Goland to add breakpoints and step through breakpoints in the code. Follow the instructions [here](https://golangforall.com/en/post/go-docker-delve-remote-debug.html#visual-studio-code) to set up VSCode, and [here](https://golangforall.com/en/post/go-docker-delve-remote-debug.html#goland-ide) to set up Goland to connect to the debugger.
 
-Once the debugger is running in the IDE, you can view the app at `http://localhost:2342/` and debug the code.
+Once the debugger is running, you can view the app at `http://localhost:2342/` and debug the code.
 
 **Questions?**
 

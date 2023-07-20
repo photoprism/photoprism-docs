@@ -4,7 +4,7 @@
 
 Before running any commands, please make sure you have [Git](https://git-scm.com/downloads), [Make](https://www.gnu.org/software/make/), [Docker](https://store.docker.com/search?q=docker&type=edition&offering=community), and Docker Compose installed on your system. These are available for Mac, Linux, and Windows.[^1]
 
-In case you are using Ubuntu Linux, you can run this script to [install the latest *Docker*](../getting-started/troubleshooting/docker.md) version including the *Compose Plugin* on your computer in one step:
+In case you are using Ubuntu Linux, you can run this script to [install the latest _Docker_](../getting-started/troubleshooting/docker.md) version including the _Compose Plugin_ on your computer in one step:
 
 ```
 bash <(curl -s https://setup.photoprism.app/ubuntu/install-docker.sh)
@@ -37,7 +37,7 @@ make docker-build
 docker compose up
 ```
 
-*This environment is for testing and development purposes only. Do not use it in production. Also note that our guides now use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose`.*
+_This environment is for testing and development purposes only. Do not use it in production. Also note that our guides now use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose`._
 
 ### Step 3: Install the Dependencies and Start Developing
 
@@ -75,9 +75,9 @@ In the build environment, the default login is `admin` with the password `photop
 You can find the default settings in [the docker-compose.yml file](https://github.com/photoprism/photoprism/blob/develop/docker-compose.yml) located in the root of the project. Keep them when [you run tests](tests.md). Otherwise, the tests may fail for others, even if they [succeed in your local environment](code-quality.md#test-automation-guidelines).
 
 !!! example ""
-    You can find a list of all `make` targets in the [Makefile](https://github.com/photoprism/photoprism/blob/develop/Makefile).
-    For example, `make test` will run frontend and backend unit tests. Wrong filesystem permissions can be fixed by
-    running `make fix-permissions` in a terminal.
+You can find a list of all `make` targets in the [Makefile](https://github.com/photoprism/photoprism/blob/develop/Makefile).
+For example, `make test` will run frontend and backend unit tests. Wrong filesystem permissions can be fixed by
+running `make fix-permissions` in a terminal.
 
 ### Optional: Build the Frontend in Watch Mode
 
@@ -102,11 +102,49 @@ To update the frontend dependencies, also change to the `frontend` directory and
 npm update
 ```
 
+### Optional: Debug the Backend Go code
+
+To debug the backend Go code, first make sure you have built and run the containers as described above:
+
+```bash
+make docker-build
+docker compose up
+```
+
+_Note:_ If you make changes in the `Dockerfile` to test things out, you can build and run the `photoprism` container individually:
+
+```bash
+docker compose build photoprism
+docker compose up photoprism
+```
+
+And then open a terminal to the container as described above:
+
+```bash
+make terminal
+```
+
+and if you made code changes, make sure the rebuild the Go code:
+
+```bash
+make build-go
+```
+
+You can then run the [Delve](https://github.com/go-delve/delve/blob/master/Documentation/usage/dlv.md) command from inside the container to start the debugger - the command-line options can be customized based on your needs:
+
+```bash
+/dlv --listen=:40000 --headless=true --log=true --log-output=debugger,debuglineerr,gdbwire,lldbout,rpc --accept-multiclient --api-version=2 exec ./photoprism -- start
+```
+
+Once you run this command, you can use VSCode or Goland to add breakpoints and step through breakpoints in the code. Follow the instructions [here](https://golangforall.com/en/post/go-docker-delve-remote-debug.html#visual-studio-code) to set up VSCode, and [here](https://golangforall.com/en/post/go-docker-delve-remote-debug.html#goland-ide) to set up Goland to connect to the debugger.
+
+Once the debugger is running in the IDE, you can view the app at `http://localhost:2342/` and debug the code.
+
 **Questions?**
 
-* Radomir Sohlich wrote a [pragmatic introduction to Makefiles](https://sohlich.github.io/post/go_makefile/) for Go developers
-* we are using [Go Modules](https://github.com/golang/go/wiki/Modules) for managing our dependencies (new in 1.11)
-* this guide was not tested on Windows, you might need to change docker-compose.yml to make it work with Windows specific paths
+- Radomir Sohlich wrote a [pragmatic introduction to Makefiles](https://sohlich.github.io/post/go_makefile/) for Go developers
+- we are using [Go Modules](https://github.com/golang/go/wiki/Modules) for managing our dependencies (new in 1.11)
+- this guide was not tested on Windows, you might need to change docker-compose.yml to make it work with Windows specific paths
 
 ### Apple Silicon, Raspberry Pi, and ARM64
 
@@ -138,4 +176,4 @@ not supported or not allowed in your environment:
 -->
 
 [^1]: Instead of using Docker, you can also set up your own build environment, for example, based on the steps documented in the [Dockerfiles](https://github.com/photoprism/photoprism/tree/develop/docker) we provide. You need at least Go 1.20.5, TensorFlow for C, Make, NPM 8 and MariaDB 10.11. Note that test results are unreliable without Docker. As a result, this method is not suitable for contributors and we cannot provide support if something does not work as expected.
-[^2]: Docker uses human-readable [Dockerfiles](https://github.com/photoprism/photoprism/tree/develop/docker) that contain all the commands a user would invoke in a terminal to assemble a complete application image.  
+[^2]: Docker uses human-readable [Dockerfiles](https://github.com/photoprism/photoprism/tree/develop/docker) that contain all the commands a user would invoke in a terminal to assemble a complete application image.

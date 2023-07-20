@@ -5,9 +5,9 @@
     and then [following our update guide](getting-started/updates.md#docker-compose) to download the [most recent image from Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 230720-7c70ac012</span>
+<span class="build">Build 230720-74f6954a9</span>
 
-With our preview builds, you get all the latest changes before they become available in the stable release.
+With our [preview builds](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview), you get all the latest changes before they become available in the stable release.
 
 What's new?
 

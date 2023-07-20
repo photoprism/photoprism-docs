@@ -7,6 +7,8 @@
 ### Development Preview ###
 <span class="build">Build 230720-7c70ac012</span>
 
+Our regularly updated preview builds get you all the latest enhancements and bug fixes so you can test them and provide feedback before they are released.
+
 What's new?
 
 - UX: [Added a preview image to the labels tab in the photo edit dialog](https://github.com/photoprism/photoprism/pull/3532)

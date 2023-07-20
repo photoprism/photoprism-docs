@@ -7,7 +7,7 @@
 ### Development Preview ###
 <span class="build">Build 230720-7c70ac012</span>
 
-Our regularly updated preview builds get you all the latest enhancements and bug fixes so you can test them and provide feedback before they are released.
+With our preview builds, you get all the latest improvements and bug fixes so you can test them and provide feedback before they are released.
 
 What's new?
 

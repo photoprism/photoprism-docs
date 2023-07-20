@@ -7,7 +7,7 @@
 ### Development Preview ###
 <span class="build">Build 230720-74f6954a9</span>
 
-With our regularly updated [preview builds](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview), you get all the latest changes before they become available in the stable release.
+With our regularly updated [preview builds](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview), you can test new features and enhancements before they become available in the stable release.
 
 What's new?
 

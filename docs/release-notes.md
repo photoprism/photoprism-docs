@@ -1,8 +1,7 @@
 # Release Notes
 
 !!! note ""
-    You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview`,
-    and then [following our update guide](getting-started/updates.md#docker-compose) to download the [most recent image from Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
+    You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview` and then [following our update guide](getting-started/updates.md#docker-compose) to restart your instance.
 
 ### Development Preview ###
 <span class="build">Build 230720-74f6954a9</span>

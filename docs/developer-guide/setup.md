@@ -102,7 +102,7 @@ To update the frontend dependencies, also change to the `frontend` directory and
 npm update
 ```
 
-### Optional: Debug the Backend Go code
+### Optional: Use a Go Debugger
 
 To debug the backend Go code, first make sure you have built and run the containers as described above:
 

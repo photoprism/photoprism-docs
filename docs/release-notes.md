@@ -11,7 +11,7 @@ With our regularly updated [preview builds](https://hub.docker.com/r/photoprism/
 
 What's new?
 
-- UX: [Added an image preview to the *Labels* tab in the photo editing dialog](https://github.com/photoprism/photoprism/pull/3532)
+- UX: [Added an image preview to the *Labels* tab in the photo edit dialog](https://github.com/photoprism/photoprism/pull/3532)
 
 ### July 19, 2023 ###
 <span class="build">Build 230719-73fa7bbe8</span>

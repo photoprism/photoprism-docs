@@ -11,7 +11,7 @@ With our [regularly updated preview builds](https://hub.docker.com/r/photoprism/
 What's new?
 
 - UX: [A preview image has been added to the Labels tab in the photo edit dialog](https://github.com/photoprism/photoprism/pull/3532)
-- Themes: [Added *Mint* theme and improved default theme styles](https://github.com/photoprism/photoprism/commit/20df14e9d16b456a5edbc456544f875ee9da16a4)
+- Themes: [Added a new Mint theme and improved the default theme styles](https://github.com/photoprism/photoprism/commit/20df14e9d16b456a5edbc456544f875ee9da16a4)
 
 ### July 19, 2023 ###
 <span class="build">Build 230719-73fa7bbe8</span>

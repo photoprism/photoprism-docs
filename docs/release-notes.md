@@ -4,13 +4,14 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview` and then [following our update guide](getting-started/updates.md#docker-compose) to restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 230720-74f6954a9</span>
+<span class="build">Build 230721-20df14e9d</span>
 
 With our [regularly updated preview builds](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview), you can test new features and enhancements before they become available in the stable release.
 
 What's new?
 
 - UX: [Added an image preview to the *Labels* tab in the photo edit dialog](https://github.com/photoprism/photoprism/pull/3532)
+- Themes: [Added *Mint* theme and improved default theme styles](https://github.com/photoprism/photoprism/commit/20df14e9d16b456a5edbc456544f875ee9da16a4)
 
 ### July 19, 2023 ###
 <span class="build">Build 230719-73fa7bbe8</span>

@@ -10,13 +10,13 @@ With our [regularly updated preview builds](https://hub.docker.com/r/photoprism/
 
 What's new?
 
-- UX: [Added an image preview to the *Labels* tab in the photo edit dialog](https://github.com/photoprism/photoprism/pull/3532)
+- UX: [Added a thumbnail to the *Labels* tab in the photo edit dialog](https://github.com/photoprism/photoprism/pull/3532)
 - Themes: [Added *Mint* theme and improved default theme styles](https://github.com/photoprism/photoprism/commit/20df14e9d16b456a5edbc456544f875ee9da16a4)
 
 ### July 19, 2023 ###
 <span class="build">Build 230719-73fa7bbe8</span>
 
-Our latest release includes [new features and enhancement](https://github.com/photoprism/photoprism/pulls) contributed [by our community](https://docs.photoprism.app/developer-guide/pull-requests/), a number of security improvements, and fixes for recently discovered issues. Thank you to everyone who submitted pull requests, helped with testing, signed up as a member, or contributed in other ways! We appreciate it very much.
+Our latest release includes [new features and enhancements](https://github.com/photoprism/photoprism/pulls) contributed [by our community](https://docs.photoprism.app/developer-guide/pull-requests/), a number of security improvements, as well as fixes for recently discovered issues. Thank you to everyone who submitted pull requests, helped with testing, signed up as a member, or contributed in other ways! We appreciate it very much.
 
 What's new?
 

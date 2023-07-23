@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview` and then following [our update guide](getting-started/updates.md#docker-compose) to download the most recent image and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 230723-6b9aeda48</span>
+<span class="build">Build 230723-2a002eca7</span>
 
 What's new?
 

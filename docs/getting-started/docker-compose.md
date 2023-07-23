@@ -83,7 +83,7 @@ installed on your system. It is available for Mac, Linux, and Windows.
  
     [https://dl.photoprism.app/docker/windows/docker-compose.yml](https://dl.photoprism.app/docker/windows/docker-compose.yml) :material-download:
 
-    On older Windows Pro versions, you may need to [disable](img/docker-disable-wsl2.jpg) the WSL 2-based engine under *Docker Settings > General* 
+    On Windows Pro, you may need to [disable](img/docker-disable-wsl2.jpg) the WSL 2-based engine under *Docker Settings > General* 
     so that you can mount drives other than `C:`. [^1] This will enable Hyper-V, which 
     [Microsoft doesn't offer](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements) 
     to its Windows Home customers. [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
@@ -92,14 +92,14 @@ installed on your system. It is available for Mac, Linux, and Windows.
     Also, ensure that you configure at least 4 GB of swap space.
 
     !!! note ""
-        To further simplify the setup for you, we also offer [a batch script](https://dl.photoprism.app/docker/windows/install.bat) that you can run in the directory where you want to install PhotoPrism:
+        Running the following commands will automatically download all required config files and start the server for you:
         
         ```bat
         curl.exe -o install.bat https://dl.photoprism.app/docker/windows/install.bat
         install.bat
         ```
-
-        This will automatically download all required config files and start the server for you. Before you run the script, make sure you have [Docker Desktop installed on your Windows PC](https://docs.docker.com/desktop/install/windows-install/).
+        
+        Before you run this, make sure you are in the directory where you want to install PhotoPrism and that [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/) is installed and started on your PC.
 
 === "macOS"
 

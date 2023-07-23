@@ -214,7 +214,7 @@ In addition, you can reduce memory usage and improve stability by setting `PHOTO
 
 ### Windows
 
-On older Windows Pro versions, you may need to [disable](img/docker-disable-wsl2.jpg) the WSL 2-based engine under *Docker Settings > General* 
+On Windows Pro, you may need to [disable](img/docker-disable-wsl2.jpg) the WSL 2-based engine under *Docker Settings > General* 
 so that you can mount drives other than `C:` This will enable *Hyper-V*, which
 [Microsoft doesn't offer](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements)
 to its Windows Home customers. [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)

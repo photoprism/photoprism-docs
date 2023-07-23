@@ -34,7 +34,7 @@ docker compose exec photoprism photoprism users add -p mysecret -n "Bob" bob
 ```
 
 !!! example ""
-    User account roles and the admin web UI are features that are currently only available in [PhotoPrism® Plus](https://www.photoprism.app/editions#compare).
+    User account roles and the admin web UI are features that are currently only [available to our members](https://www.photoprism.app/editions#compare).
 
 !!! info ""
     Note that our guides now use the new `docker compose` command by default. If your server does not yet support it, the old `docker-compose` command will still work.

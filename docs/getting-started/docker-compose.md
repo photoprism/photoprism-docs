@@ -3,7 +3,7 @@
 With [Docker Compose](https://docs.docker.com/compose/), you [use a YAML file](../developer-guide/technologies/yaml.md)
 to configure all application services so you can easily start them with a single command.
 Before you proceed, make sure you have [Docker](https://store.docker.com/search?type=edition&offering=community)
-installed on your system. It is available for Mac, Linux, and Windows.
+installed on your system. It is available for [Mac](https://docs.docker.com/desktop/install/mac-install/), [Linux](troubleshooting/docker.md#installation), and [Windows](https://docs.docker.com/desktop/install/windows-install/).
 
 [Podman](https://podman.io/) is also supported as a [drop-in replacement](troubleshooting/docker.md#podman) for Docker on Red Hat-compatible Linux distributions such as CentOS, Fedora, AlmaLinux, and Rocky Linux.
 

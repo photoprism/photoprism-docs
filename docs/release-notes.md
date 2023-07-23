@@ -12,7 +12,7 @@ What's new?
 - UX: [Added a preview image to the Labels tab in the photo edit dialog](https://github.com/photoprism/photoprism/pull/3532)
 - UX: [Edit dialog allows pasting latitude and longitude in a single operation](https://github.com/photoprism/photoprism/pull/3568)
 - Albums: [Last edit timestamp is updated when photos are added](https://github.com/photoprism/photoprism/issues/3080)
-- XMP: [Added support for reading fstop favorite flag](https://github.com/photoprism/photoprism/pull/1873)
+- Metadata: [Added support for reading fstop favorite flag from XML sidecar files](https://github.com/photoprism/photoprism/pull/1873)
 - Themes: [Added "Mint" and improved the default theme styles](https://github.com/photoprism/photoprism/commit/20df14e9d16b456a5edbc456544f875ee9da16a4)
 
 ### July 19, 2023 ###

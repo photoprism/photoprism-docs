@@ -4,13 +4,14 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview` and then following [our update guide](getting-started/updates.md#docker-compose) to download the most recent image and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 230723-2a002eca7</span>
+<span class="build">Build 230724-60d280430</span>
 
 What's new?
 
 - UX: [Added "Delete All" button to the archive page toolbar](https://github.com/photoprism/photoprism/issues/272#issuecomment-1646880786)
 - UX: [Added a preview image to the Labels tab in the photo edit dialog](https://github.com/photoprism/photoprism/pull/3532)
 - UX: [Edit dialog allows pasting latitude and longitude in a single operation](https://github.com/photoprism/photoprism/pull/3568)
+- Places: [Added cluster view to browse pictures close to each other in an overlay](https://github.com/photoprism/photoprism/issues/1187)
 - Albums: [Last edited timestamp is updated when photos are added to an album](https://github.com/photoprism/photoprism/issues/3080)
 - Metadata: [Added support for reading fstop favorite flag from XMP sidecar files](https://github.com/photoprism/photoprism/pull/1873)
 - Themes: [Added "Mint" and improved the default theme styles](https://github.com/photoprism/photoprism/commit/20df14e9d16b456a5edbc456544f875ee9da16a4)

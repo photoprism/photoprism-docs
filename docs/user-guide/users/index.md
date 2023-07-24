@@ -1,7 +1,7 @@
 # Managing User Accounts
 
 !!! example ""
-    User account roles and the admin web UI are features that are currently only [available to our members](https://www.photoprism.app/editions#compare).
+    [PhotoPrism® Plus](https://www.photoprism.app/editions#compare) includes a web user interface for account and session management, in addition to the [command-line interface](cli.md) available in all editions.
 
 You can add, edit and delete user accounts by navigating to *Settings > Users* as an [Admin](#admin):
 
@@ -42,6 +42,9 @@ Super admins can reset a user's password, while regular admins can change passwo
 Regular *Admins* can lose their privileges due to an intentional or accidental role change. However, accounts with the optional "superadmin" status (can be set with the `-s` flag) retain their admin privileges even if they are assigned a non-admin or invalid role. This is to prevent them from locking themselves out.
 
 When *Super Admins* change settings such as the language or theme, these automatically become the default settings for other users, unless they have explicitly made a different choice. In addition, global feature flags can only be changed by *Super Admins*.
+
+!!! example ""
+    Additional account roles like User, Viewer, and Guest are currently [only available with a membership](https://www.photoprism.app/editions#compare) to support development and maintenance.
 
 ### User
 

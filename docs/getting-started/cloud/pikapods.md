@@ -16,11 +16,11 @@ Before proceeding, we recommend that you enter your credit card information firs
 
 ### 2. Start PhotoPrism
 
-Go to [Available Apps](https://prism.ws/pikapods-apps) and select PhotoPrism, then click *Run Your Own*:
+If it isn't already selected, go to [Available Apps](https://prism.ws/pikapods-apps) and select PhotoPrism, then click *Run Your Own*:
 
 ![Screenshot](img/pikapods-appstore.png)
 
-Enter a Pod Name and select a Region:
+Continue by entering a Pod Name and selecting a Region:
 
 ![Screenshot](img/pikapods-step-1.png){ class="shadow" }
 

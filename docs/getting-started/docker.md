@@ -176,6 +176,9 @@ Our members can activate [additional features](https://link.photoprism.app/membe
 
 [Compare Memberships ›](https://link.photoprism.app/membership){ class="pr-3 block-xs" } [View Membership FAQ ›](https://www.photoprism.app/membership/faq) 
 
+!!! example ""
+    We recommend that new users install our free Community Edition before [signing up for a membership](https://link.photoprism.app/membership).
+
 ### Troubleshooting ###
 
 If your server runs out of memory, the index is frequently locked, or other system resources are running low:

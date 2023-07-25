@@ -130,7 +130,7 @@ Our members can activate [additional features](https://link.photoprism.app/membe
 [Compare Memberships ›](https://link.photoprism.app/membership){ class="pr-3 block-xs" } [View Membership FAQ ›](https://www.photoprism.app/membership/faq) 
 
 !!! example ""
-    We recommend that new users [install PhotoPrism](index.md) before [signing up for a membership](https://link.photoprism.app/membership).
+    We recommend that new users install our free [Community Edition](index.md) before [signing up for a membership](https://link.photoprism.app/membership).
 
 ### How can I shorten the startup time after a restart or update?
 

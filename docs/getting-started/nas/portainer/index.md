@@ -85,7 +85,7 @@ in a structured way that avoids duplicates:
 
 ### Step 2: Edit Variables ###
 
-[Download the *stack.env* file from our server](https://dl.photoprism.app/docker/portainer/stack.env), click "Load variables from .env file", upload it to Portainer, and then change the values of the [environment variables](../../config-options.md) as needed:
+[Download the *stack.env* file from our server](https://dl.photoprism.app/docker/portainer/stack.env), click "Load variables from .env file", upload it to Portainer, and then [change them according to your needs](../../config-options.md):
 
 ![Screenshot](step-2-config.png){ class="shadow" }
 

@@ -21,7 +21,7 @@ Never [store database files](../../troubleshooting/mariadb.md#corrupted-files) o
 !!! tldr ""
     It is not possible to change the password via `MARIADB_PASSWORD` after the database has been started 
     for the first time. Choosing a secure password is not essential if you don't [expose the database to other apps and hosts](../../troubleshooting/mariadb.md#cannot-connect).
-    To enable [automatic schema updates](../../troubleshooting/mariadb.md#auto-upgrade) after upgrading to a new major version, set `MARIADB_AUTO_UPGRADE` to a non-empty value in your `docker-compose.yml`.
+    To enable [automatic schema updates](../../troubleshooting/mariadb.md#auto-upgrade) after upgrading to a new major version, set `MARIADB_AUTO_UPGRADE` to a non-empty value.
 
 #### Volumes ####
 
@@ -51,15 +51,13 @@ volumes:
 
 !!! tldr ""
     If *read-only mode* is enabled, all features that require write permission to the *originals* folder 
-    are disabled, e.g. [WebDAV](../../../user-guide/sync/webdav.md), uploading and deleting files. Set `PHOTOPRISM_READONLY` to `"true"`
-    in `docker-compose.yml` for this. In addition, you can [mount volumes with the `:ro` flag](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-3)
-    so that writes are also blocked by Docker.
+    are disabled, e.g. [WebDAV](../../../user-guide/sync/webdav.md), uploading and deleting files. 
 
 ##### /photoprism/storage #####
 
 The *storage* folder is used to save SQLite, config, cache, thumbnail and sidecar files:
 
-- a *storage* folder mount (with write access) must always be configured in your `docker-compose.yml` file so that you do not lose these files after a restart or upgrade
+- a *storage* folder mount (with write access) must always be specified so that you do not lose these files after a restart or upgrade
 - never configure the *storage* folder to be inside the *originals* folder unless the name starts with a `.` to indicate that it is hidden
 - we recommend placing the *storage* folder on a [local SSD drive](../../troubleshooting/performance.md#storage) for best performance
 - mounting [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) or using them inside the *storage* folder is currently not supported
@@ -104,8 +102,6 @@ When you're done with the configuration, scroll down and click "Deploy the stack
 
 Our [First Steps 👣](../../../user-guide/first-steps.md) tutorial will now guide you through the user interface and settings to ensure your library is indexed according to your individual preferences.
 
-Easy, isn't it?
-
 !!! tldr ""
     The [config options](../../config-options.md) can be changed at any time by navigating to "Stacks", selecting your existing PhotoPrism stack, clicking "Editor", and then updating the environment variable values to your needs, and then clicking "Update the stack" to apply the changes.
 
@@ -122,7 +118,7 @@ Our members can activate [additional features](https://link.photoprism.app/membe
 
 If your server runs out of memory, the index is frequently locked, or other system resources are running low:
 
-- [ ] Try [reducing the number of workers](../../config-options.md#index-workers) by setting `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml`, depending on the CPU performance and number of cores
+- [ ] Try [reducing the number of workers](../../config-options.md#index-workers) by setting `PHOTOPRISM_WORKERS` to a reasonably small value, depending on the CPU performance and number of cores
 - [ ] Make sure [your server has at least 4 GB of swap space](../../troubleshooting/docker.md#adding-swap) so that indexing doesn't cause restarts when memory usage spikes; RAW image conversion and video transcoding are especially demanding
 - [ ] If you are using SQLite, switch to MariaDB, which is [better optimized for high concurrency](../../faq.md#should-i-use-sqlite-mariadb-or-mysql)
 - [ ] As a last measure, you can [disable the use of TensorFlow](../../config-options.md#feature-flags) for image classification and facial recognition
@@ -155,10 +151,6 @@ docker compose exec photoprism photoprism backup --help
 PhotoPrism's command-line interface is also well suited for job automation using a
 [scheduler](https://dl.photoprism.app/docker/scheduler/).
 
-!!! tip ""
-    When using *Docker Compose*, you can prepend commands like `docker compose exec [service] [command]` to run them in a service container.
-    Should this fail with *no container found*, make sure the service has been started, you have specified an existing service (usually `photoprism`) and you are in the folder where the `docker-compose.yml` file is located.
-
 #### Opening a Terminal
 
 To open a terminal session as the current user, you can do the following:
@@ -173,7 +165,7 @@ Specifying a user via `-u $UID` is possible for all commands you run with Docker
 The currently supported user ID ranges are 0, 33, 50-99, 500-600, and 900-1200. Note that commands will otherwise be executed as *root*.
 
 !!! tip ""
-    We also recommend running the PhotoPrism service as a non-root user by setting either the [user service property](https://docs.docker.com/compose/compose-file/#user) or the `PHOTOPRISM_UID` [environment variable](../../config-options.md#docker-image) in the `docker-compose.yml` file. Don't forget to update file permissions and/or ownership with the `chown` command when you make changes.
+    We also recommend running the PhotoPrism service as a non-root user by setting either the [user service property](https://docs.docker.com/compose/compose-file/#user) or the `PHOTOPRISM_UID` [environment variable](../../config-options.md#docker-image). Don't forget to update file permissions and/or ownership with the `chown` command when you make changes.
 
 #### Examples
 

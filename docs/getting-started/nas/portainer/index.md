@@ -1,4 +1,4 @@
-# Setup Using Portainer
+# Portainer Setup Guide
 
 [Portainer](https://www.portainer.io/) allows you to manage Docker containers through a web interface. On many NAS devices it either comes pre-installed or you can easily install it from the vendor's app store.
 

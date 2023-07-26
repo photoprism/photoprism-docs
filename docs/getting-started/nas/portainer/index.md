@@ -83,7 +83,7 @@ in a structured way that avoids duplicates:
     and [WebDAV](../../../user-guide/sync/webdav.md) remains possible, unless [read-only mode](../../config-options.md)
     is enabled or the [features have been disabled](../../../user-guide/settings/general.md).
 
-### Step 2: Load Variables ###
+### Step 2: Edit Variables ###
 
 [Download the *stack.env* file from our server](https://dl.photoprism.app/docker/portainer/stack.env), click "Load variables from .env file", upload it to Portainer, and then change the values of the [environment variables](../../config-options.md) as needed:
 

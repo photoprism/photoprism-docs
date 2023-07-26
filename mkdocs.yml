@@ -20,6 +20,7 @@ nav:
       - Asustor: getting-started/nas/asustor.md
       - Synology: getting-started/nas/synology.md
       - QNAP: getting-started/nas/qnap.md
+      - Portainer: getting-started/nas/portainer/index.md
       - Unraid: getting-started/nas/unraid.md
       - openmediavault: getting-started/nas/openmediavault.md
     - BSD Ports:

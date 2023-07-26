@@ -138,9 +138,7 @@ Navigate to "Stacks", select the PhotoPrism stack, scroll down to the list of co
 
 ![Screenshot](terminal.png){ class="shadow" }
 
-#### Introduction
-
-`photoprism help` lists all commands and [config options](../../config-options.md) available in the current version:
+`photoprism help` will list all commands and [config options](../../config-options.md) available in the current version:
 
 ```bash
 photoprism help
@@ -152,7 +150,7 @@ Use the `--help` flag to see a detailed command description, for example:
 photoprism backup --help
 ```
 
-PhotoPrism's command-line interface is also well suited for job automation using a [scheduler](https://dl.photoprism.app/docker/scheduler/).
+The command-line interface is also well suited for job automation using a [scheduler](https://dl.photoprism.app/docker/scheduler/).
 
 #### Examples
 

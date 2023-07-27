@@ -6,4 +6,5 @@ It is recommended to set up additional instances if you have multiple users in a
 
 In future versions, users will be able to share albums and other content in a decentralized way, regardless of where their library is hosted. We are also working on a dedicated web interface for managing multiple libraries and user accounts, which will be made available as a separate tool.
 
-Our ultimate goal is to make personal sharing compatible with other apps like [Pixelfed](https://pixelfed.org/) and [Mastodon](https://joinmastodon.org/).
+!!! tldr ""
+    Our ultimate goal is to make personal sharing compatible with other apps like [Pixelfed](https://pixelfed.org/) and [Mastodon](https://joinmastodon.org/).

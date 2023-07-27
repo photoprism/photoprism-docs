@@ -1,6 +1,8 @@
-# User Management Command-Line Interface
+# User Management Commands
 
-As an alternative to the web user interface, you can also manage user accounts by running the following commands in a terminal:
+## Managing User Accounts
+
+As an alternative to the [web user interface](index.md), you can also add, view, modify, and delete user accounts by running the following commands [in a terminal](../../getting-started/docker-compose.md#command-line-interface):
 
 | CLI Command                                 | Description                                  |
 |---------------------------------------------|----------------------------------------------|
@@ -12,9 +14,9 @@ As an alternative to the web user interface, you can also manage user accounts b
 | `photoprism users rm [username]`            | Removes a user account                       |
 | `photoprism users reset`                    | Removes all accounts and resets the database |
 
-#### Adding and Changing Accounts
+### Command Options
 
-You can combine the `add` and `mod` subcommands with these flags to set or change account properties:
+The `add` and `mod` commands support these flags to set or change account properties:
 
 | Command Flag                         | Description                                     |
 |--------------------------------------|-------------------------------------------------|
@@ -34,12 +36,12 @@ docker compose exec photoprism photoprism users add -p mysecret -n "Bob" bob
 ```
 
 !!! example ""
-    Additional account roles like User, Viewer, and Guest are currently [only available with a membership](https://www.photoprism.app/editions#compare) to support development and maintenance.
+    Additional [account roles](roles.md) like user, viewer, and guest are currently [only available with a membership](https://www.photoprism.app/editions#compare) to support development and maintenance.
 
 !!! tldr ""
     Note that our guides now use the new `docker compose` command by default. If your server does not yet support it, the old `docker-compose` command will still work.
 
-#### Viewing Account Details
+### Viewing Account Details
 
 To see all account properties of a particular user, use the `show` subcommand:
 
@@ -47,7 +49,7 @@ To see all account properties of a particular user, use the `show` subcommand:
 docker compose exec photoprism photoprism users show bob
 ```
 
-#### Searching User Accounts
+### Searching User Accounts
 
 To list all existing accounts, you can run the following:
 
@@ -66,3 +68,44 @@ To display a description and the available options for a command, use the `--hel
 ```
 docker compose exec photoprism photoprism users ls --help
 ```
+
+## Viewing Login Attempts
+
+For security reasons, authentication logs are not visible on the regular web user interface and can only be viewed in the application service logs or searched in a terminal using the the following CLI command:
+
+```
+photoprism logins ls [search]
+```
+
+### Command Options
+
+You can combine it with these flags to change the output format and the maximum number of search results:
+
+| Command Flag | Description                            |
+|--------------|----------------------------------------|
+| `--md, -m `  | format as machine-readable Markdown    |
+| `--csv, -c`  | export as semicolon separated values   |
+| `--tsv, -t`  | export as tab separated values         |
+| `-n LIMIT`   | LIMIT number of results (default: 100) |
+
+### Example Report
+
+| Client IP  | User Name | Realm | Status |     Last Login      | Failed At |
+|------------|-----------|-------|--------|---------------------|-----------|
+| 172.19.0.1 | user      | api   | OK     | 2023-02-03 07:17:46 |           |
+| 172.19.0.1 | viewer    | api   | OK     | 2023-02-03 07:16:55 |           |
+| 172.19.0.1 | admin     | api   | OK     | 2023-02-03 06:55:06 |           |
+
+!!! tldr ""
+    Run `photoprism logins clear` to clear all recorded incidents and reset the database to a clean state.
+
+## Session Monitoring
+
+You can use the following terminal commands to find, examine and, if necessary, delete browser sessions:
+
+| CLI Command                   | Description                        |
+|-------------------------------|------------------------------------|
+| `photoprism sess ls [search]` | Finds and displays sessions        |
+| `photoprism sess show [id]`   | Shows detailed session information |
+| `photoprism sess rm [id]`     | Deletes the specified session      |
+| `photoprism sess clear`       | Removes all sessions               |

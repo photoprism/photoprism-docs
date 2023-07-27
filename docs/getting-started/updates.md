@@ -52,6 +52,16 @@ Users of our [DigitalOcean 1-Click App](cloud/digitalocean.md) have Watchtower p
 !!! danger
     Keep in mind that automatic updates can interrupt indexing and import operations, and enable Watchtower only if this is acceptable to you.
 
+### Portainer
+
+You can [change or update the image you are using](portainer/index.md) by navigating to "Stacks", selecting your existing PhotoPrism stack, and clicking "Editor":
+
+![Screenshot](portainer/preview.png){ class="shadow" }
+
+When you have [changed the configuration](portainer/index.md) to your needs or just want to get the latest image from Docker Hub, scroll down, click on "Update the stack", enable the "re-pull and redeploy" option, and then click on "Update":
+
+![Screenshot](portainer/update.png){ class="shadow" }
+
 ### Pure Docker
 
 Open a terminal on your server, and run the following command to pull the most recent container image:

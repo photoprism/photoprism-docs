@@ -97,7 +97,7 @@ When you're done, scroll down and click "Deploy the stack" without changing any 
 
 ![Screenshot](step-3-deploy.png){ class="shadow" }
 
-After waiting a few moments, you should be able to log in to the web interface by navigating to <http://localhost:2342/>.
+After waiting a few moments, you should be able to log in as `admin` with the password specified in `PHOTOPRISM_ADMIN_PASSWORD` when you navigate to <http://localhost:2342/>.
 
 !!! tldr ""
     If you have modified the server host, port, or protocol in your configuration, the URL to use will change accordingly.

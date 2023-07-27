@@ -16,6 +16,9 @@ Regular *Admins* can lose their privileges due to an intentional or accidental r
 
 When *Super Admins* change settings such as the language or theme, these automatically become the default settings for other users, unless they have explicitly made a different choice. In addition, global feature flags can only be changed by *Super Admins*.
 
+!!! example ""
+    Additional account roles like user, viewer, and guest are currently [only available with a membership](https://www.photoprism.app/editions#compare) to support development and maintenance.
+
 ## User
 
 *Users* have full access to the library and can view, edit, and delete all pictures and albums. Unlike *Admins*, *Users* cannot view or change the [Library](https://docs.photoprism.app/user-guide/settings/library/) and [Advanced Settings](https://docs.photoprism.app/user-guide/settings/advanced/), only personal  preferences such as theme, language, and password. In addition, their WebDAV access can be disabled. Future releases may include more ways to customize user privileges, e.g. with individual account attributes.
@@ -31,6 +34,3 @@ When *Super Admins* change settings such as the language or theme, these automat
 ## Visitor
 
 *Visitors* cannot be added manually. This special role is tied to a system account that represents anonymous users who use links to view albums or other content that has been shared with them. Visitors can only access these resources and cannot log in with a username or password. Other than guests, they also cannot retain their personal settings for longer than their browsing session lasts.
-
-!!! example ""
-    Additional account roles like user, viewer, and guest are currently [only available with a membership](https://www.photoprism.app/editions#compare) to support development and maintenance.

@@ -13,19 +13,26 @@ When using the *Web editor*, please note that related values must start at the s
 !!! tldr ""
     Which path names you need to configure for the *originals*, *storage*, and *database* volumes depends on your NAS device and its configuration. For more information, see below.
 
-#### MariaDB ####
-
-Our [stack template](https://dl.photoprism.app/docker/portainer/stack.yml){:target="_blank"} includes a pre-configured [MariaDB](https://mariadb.com/) database server. We recommend [using SSD storage](../troubleshooting/performance.md#storage) for it, if available. Also note that [database files should never be stored on an unreliable device](../troubleshooting/mariadb.md#corrupted-files) such as a USB flash drive, SD card, or shared network folder.
-
-!!! tldr ""
-    It is not possible to change the password via `MARIADB_PASSWORD` after the database has been started 
-    for the first time. Choosing a secure password is not essential if you don't [expose the database to other apps and hosts](../troubleshooting/mariadb.md#cannot-connect).
-    To enable [automatic schema updates](../troubleshooting/mariadb.md#auto-upgrade) after upgrading to a new major version, set `MARIADB_AUTO_UPGRADE` to a non-empty value.
-
 #### Volumes ####
 
-Since the app is running inside a container, you have to explicitly [mount the folders](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes) on your device that you want to use.
-PhotoPrism won't be able to see folders that have not been mounted. That's an important security feature.
+You must explicitly [specify the folders](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes) you want to use on your device, since PhotoPrism is unable to see folders that have not been shared. This is an important security feature and allows for a flexible configuration without having to change other variables.
+
+!!! tldr ""
+    As on most operating systems, `.` can be used to specify a path relative to the application directory. So if you keep the default paths, the files will be in the internal application folder that Portainer automatically creates when you add a new stack.
+
+##### MariaDB #####
+
+Our [stack template](https://dl.photoprism.app/docker/portainer/stack.yml){:target="_blank"} includes a pre-configured [MariaDB](https://mariadb.com/) database server.
+If your NAS device has a mixed drive configuration with solid-state drives (SSDs) and traditional hard disks, we recommend that you change `./database` to an absolute path located on an SSD, as this [significantly improves performance](../troubleshooting/performance.md#storage). You can otherwise keep the default to store database files in the internal application folder:
+
+```yaml
+  mariadb:
+    volumes:
+      - "./database:/var/lib/mysql" # DO NOT REMOVE
+```
+
+!!! tldr ""
+    [Database files should never be located on an unreliable device](../troubleshooting/mariadb.md#corrupted-files) such as a USB flash drive, SD card, or shared network folder.
 
 ##### /photoprism/originals #####
 
@@ -37,7 +44,7 @@ volumes:
   - "./originals:/photoprism/originals"
 ```
 
-We recommend that you change `./originals` to the path on your NAS that contains your existing media files. If you keep the default path, it will be located in the internal application folder that Portainer creates automatically.
+We recommend that you change `./originals` to the path on your NAS that contains your existing media files. If you want to start with an empty library, make sure the volume has enough free space for your needs. 
 
 You can mount [any folder accessible from your NAS](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-3), including [network shares](../troubleshooting/docker.md#network-storage). Additional directories can also be mounted as subfolders of `/photoprism/originals` (depending on [overlay file system support](../troubleshooting/docker.md#overlay-volumes)):
 
@@ -58,8 +65,9 @@ The *storage* folder is used to save config, cache, thumbnail and sidecar files:
 
 - a *storage* folder mount (with write access) must always be specified so that you do not lose these files after a restart or upgrade
 - never configure the *storage* folder to be inside the *originals* folder unless the name starts with a `.` to indicate that it is hidden
-- we recommend placing the *storage* folder on a [local SSD drive](../troubleshooting/performance.md#storage) for best performance
+- if available, we recommend placing the *storage* folder on a [local SSD drive](../troubleshooting/performance.md#storage) for best performance
 - mounting [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) or using them inside the *storage* folder is currently not supported
+- you can otherwise keep the default to store database files in the internal application folder
 
 ```yaml
 volumes:
@@ -77,6 +85,11 @@ in a structured way that avoids duplicates:
 - [imported files](../../user-guide/library/import.md) receive a canonical filename and will be organized by year and month
 - never configure the *import* folder to be inside the *originals* folder, as this will cause a loop by importing already indexed files
 
+```yaml
+volumes:
+  - "./import:/photoprism/import"
+```
+
 !!! tldr ""
     You can safely skip this. Adding files via [Web Upload](../../user-guide/library/upload.md)
     and [WebDAV](../../user-guide/sync/webdav.md) remains possible, unless [read-only mode](../config-options.md)
@@ -93,6 +106,10 @@ To complete the setup, [download the *stack.env* file from our server](https://d
     Never use easy-to-guess passwords or default values like `insecure` on publicly accessible servers.
     There is no default in case no password was provided. A minimum length of 8 characters is required.
 
+
+!!! tldr ""
+    It is not possible to change the password via `MARIADB_PASSWORD` after the database has been started for the first time. Choosing a secure password is not essential if you don't [expose the database to other apps and hosts](../troubleshooting/mariadb.md#cannot-connect). To enable [automatic schema updates](../troubleshooting/mariadb.md#auto-upgrade) after upgrading to a new major version, make sure that  `MARIADB_AUTO_UPGRADE` is set to a non-empty value.
+
 When you're done, scroll down and click "Deploy the stack" without changing any of the other options:
 
 ![Screenshot](step-3-deploy.png){ class="shadow" }
@@ -100,7 +117,7 @@ When you're done, scroll down and click "Deploy the stack" without changing any 
 After waiting a few moments, you should be able to log in as `admin` with the password specified in `PHOTOPRISM_ADMIN_PASSWORD` when you navigate to <http://localhost:2342/>.
 
 !!! tldr ""
-    If you have modified the server host, port, or protocol in your configuration, the URL to use will change accordingly.
+    If you have changed the server hostname, port, or protocol in your configuration, the URL needs to be adjusted accordingly. 
 
 ### Step 3: Index Your Library ###
 

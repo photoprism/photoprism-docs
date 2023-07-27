@@ -135,7 +135,7 @@ nav:
       - Apple Photos: user-guide/use-cases/apple.md
       - Flickr: user-guide/use-cases/flickr.md
     - Managing Users:
-      - Web Interface: user-guide/users/index.md
+      - Admin Web UI: user-guide/users/index.md
       - CLI Commands: user-guide/users/cli.md
       - Account Roles: user-guide/users/roles.md
       - Sharing with Guests: user-guide/users/sharing.md

@@ -134,8 +134,7 @@ Never [store database files](troubleshooting/mariadb.md#corrupted-files) on an u
 
 #### Volumes ####
 
-Since the app is running inside a container, you have to explicitly [mount the host folders](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes) you want to use.
-PhotoPrism won't be able to see folders that have not been mounted. That's an important security feature.
+You must explicitly [specify the directories](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes) you want to mount from your host, since PhotoPrism can't see files in folders that have not been shared. This is an important security feature and allows for a flexible configuration without having to change any other variables.
 
 ##### /photoprism/originals #####
 

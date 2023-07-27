@@ -15,7 +15,7 @@ When using the *Web editor*, please note that related values must start at the s
 
 #### Volumes ####
 
-You must explicitly [specify the folders](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes) you want to use on your device, since PhotoPrism is unable to see folders that have not been shared. This is an important security feature and allows for a flexible configuration without having to change other variables.
+You must explicitly [specify the directories](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes) you want to use on your NAS device, since PhotoPrism can't see files in folders that have not been shared. This is an important security feature and allows for a flexible configuration without having to change any other variables.
 
 !!! tldr ""
     As on most operating systems, `.` can be used to specify a path relative to the application directory. So if you keep the default paths, the files will be in the internal application folder that Portainer automatically creates when you add a new stack.

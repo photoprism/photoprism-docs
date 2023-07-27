@@ -4,6 +4,7 @@ nav:
     - Features: index.md
     - Setup: getting-started/index.md
     - Docker Compose: getting-started/docker-compose.md
+    - Portainer: getting-started/portainer/index.md
     - Pure Docker: getting-started/docker.md
     - Config Options: getting-started/config-options.md
     - Config Files:
@@ -20,7 +21,6 @@ nav:
       - Asustor: getting-started/nas/asustor.md
       - Synology: getting-started/nas/synology.md
       - QNAP: getting-started/nas/qnap.md
-      - Portainer: getting-started/nas/portainer/index.md
       - Unraid: getting-started/nas/unraid.md
       - openmediavault: getting-started/nas/openmediavault.md
     - BSD Ports:
@@ -135,8 +135,10 @@ nav:
       - Apple Photos: user-guide/use-cases/apple.md
       - Flickr: user-guide/use-cases/flickr.md
     - Managing Users:
-      - Admin Web UI: user-guide/users/index.md
+      - Web Interface: user-guide/users/index.md
       - CLI Commands: user-guide/users/cli.md
+      - Account Roles: user-guide/users/roles.md
+      - Sharing with Guests: user-guide/users/sharing.md
       - Multiple Libraries: user-guide/users/libraries.md
     - Mobile App (PWA): user-guide/pwa.md
     - Release Notes: release-notes.md

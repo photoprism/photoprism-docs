@@ -4,8 +4,8 @@ Step-by-step installation instructions for our self-hosted community edition can
 in [Getting Started](../getting-started/index.md). All you need is a Web browser and 
 [Docker](https://store.docker.com/search?type=edition&offering=community) to run the server.
 ![Progressive Web App](https://dl.photoprism.app/img/ui/iphone-index-360px.png){ align=right }
-It is available for [Mac](https://docs.docker.com/desktop/install/mac-install/), [Linux](../getting-started/troubleshooting/docker.md#installation), and [Windows](https://docs.docker.com/desktop/install/windows-install/).. PhotoPrism also runs on [PikaPods](../getting-started/cloud/pikapods.md), [DigitalOcean](../getting-started/cloud/digitalocean.md),
-[Raspberry Pi](../getting-started/raspberry-pi.md), [FreeBSD](../getting-started/ports/freebsd.md), and many
+It is available for [Mac](https://docs.docker.com/desktop/install/mac-install/), [Linux](../getting-started/troubleshooting/docker.md#installation), and [Windows](https://docs.docker.com/desktop/install/windows-install/). PhotoPrism also runs on [PikaPods](../getting-started/cloud/pikapods.md), [DigitalOcean](../getting-started/cloud/digitalocean.md),
+[Raspberry Pi](../getting-started/raspberry-pi.md), [Portainer](../getting-started/portainer/index.md), [FreeBSD](../getting-started/ports/freebsd.md), and many
 [NAS devices](../getting-started/nas/synology.md).
 
 Once the [initial setup](../getting-started/index.md) is complete, our [First Steps 👣](./first-steps.md) tutorial guides you through the user interface and settings to ensure your library is indexed according to your individual preferences.

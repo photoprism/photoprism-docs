@@ -115,7 +115,7 @@ installed on your system. It is available for [Mac](https://docs.docker.com/desk
 When editing the configuration file, please note that related values must start at the same indentation level [in YAML files](../developer-guide/technologies/yaml.md) and that tabs are not allowed for indentation. We recommend using 2 spaces.
 
 !!! danger ""
-    Always change `PHOTOPRISM_ADMIN_PASSWORD` so that the app starts with a **secure initial password**.
+    Always change `PHOTOPRISM_ADMIN_PASSWORD` so that the app **starts with a secure initial password**.
     Never use easy-to-guess passwords or default values like `insecure` on publicly accessible servers.
     There is no default in case no password was provided. A minimum length of 8 characters is required.
 
@@ -128,9 +128,7 @@ and provide no other database server credentials, SQLite database files will be 
 Never [store database files](troubleshooting/mariadb.md#corrupted-files) on an unreliable device such as a USB flash drive, SD card, or shared network folder. These may also have [unexpected file size limitations](https://thegeekpage.com/fix-the-file-size-exceeds-the-limit-allowed-and-cannot-be-saved/), which is especially problematic for databases that do not split data into smaller files.
 
 !!! tldr ""
-    It is not possible to change the password via `MARIADB_PASSWORD` after the database has been started 
-    for the first time. Choosing a secure password is not essential if you don't [expose the database to other apps and hosts](troubleshooting/mariadb.md#cannot-connect).
-    To enable [automatic schema updates](troubleshooting/mariadb.md#auto-upgrade) after upgrading to a new major version, set `MARIADB_AUTO_UPGRADE` to a non-empty value in your `docker-compose.yml`.
+    It is **not possible to change the database password** with `MARIADB_PASSWORD` after MariaDB has been started for the first time. However, choosing a secure password is not essential if you don't [expose the database to other apps or hosts](troubleshooting/mariadb.md#cannot-connect). To enable [automatic schema updates](troubleshooting/mariadb.md#auto-upgrade) after upgrading to a new major version, make sure that  `MARIADB_AUTO_UPGRADE` is set to a non-empty value in your `docker-compose.yml`.
 
 #### Volumes ####
 

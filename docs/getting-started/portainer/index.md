@@ -8,7 +8,7 @@ Navigate to "Stacks", click "Add stack" and paste the [contents of our *stack.ym
 
 ![Screenshot](step-1-add.png){ class="shadow" }
 
-When using the *Web editor*, please note that related values must start at the same indentation level [in YAML files](../../developer-guide/technologies/yaml.md) and that tabs are not allowed for indentation. We recommend using 2 spaces.
+When using the *Web editor*, please note that related values must start at the [same indentation level in YAML and that tabs are not allowed](../../developer-guide/technologies/yaml.md).
 
 !!! tldr ""
     Which path names you need to configure for the *originals*, *storage*, and *database* volumes depends on your NAS device and its configuration. For more information, see below.
@@ -103,7 +103,7 @@ To complete the setup, [download the *stack.env* file from our server](https://d
 
 !!! danger ""
     Always change `PHOTOPRISM_ADMIN_PASSWORD` so that the app starts with a **secure initial password**.
-    Never use easy-to-guess passwords or default values like `insecure` on publicly accessible servers.
+    Never use easy-to-guess passwords or default values like `insecure` on publicly accessible instances.
     There is no default in case no password was provided. A minimum length of 8 characters is required.
 
 
@@ -137,10 +137,10 @@ Our members can activate [additional features](https://link.photoprism.app/membe
 
 ### Troubleshooting ###
 
-If your server runs out of memory, the index is frequently locked, or other system resources are running low:
+If your device runs out of memory, the index is frequently locked, or other system resources are running low:
 
 - [ ] Try [reducing the number of workers](../config-options.md#index-workers) by setting `PHOTOPRISM_WORKERS` to a reasonably small value, depending on the CPU performance and number of cores
-- [ ] Make sure [your server has at least 4 GB of swap space](../troubleshooting/docker.md#adding-swap) so that indexing doesn't cause restarts when memory usage spikes; RAW image conversion and video transcoding are especially demanding
+- [ ] Make sure [your device has at least 4 GB of swap space](../troubleshooting/docker.md#adding-swap) so that indexing doesn't cause restarts when memory usage spikes; RAW image conversion and video transcoding are especially demanding
 - [ ] If you are using SQLite, switch to MariaDB, which is [better optimized for high concurrency](../faq.md#should-i-use-sqlite-mariadb-or-mysql)
 - [ ] As a last measure, you can [disable the use of TensorFlow](../config-options.md#feature-flags) for image classification and facial recognition
 
@@ -179,22 +179,22 @@ The command-line interface is also well suited for job automation using a [sched
 
 #### Examples
 
-| Action                                                       | Command                        |
-|--------------------------------------------------------------|--------------------------------|
-| *Display Config Values*                                      | `photoprism show config`       |
-| *Show Migration Status*                                      | `photoprism migrations ls`     |
-| *Repeat Failed Migrations*                                   | `photoprism migrations run -f` |
-| *Reset Database*                                             | `photoprism reset -y`          |
-| *Backup Database*                                            | `photoprism backup -a -i`      |                      
-| *Restore Database*                                           | `photoprism restore -a -i`     |                   
-| *Change Admin Password*                                      | `photoprism passwd [username]` |
-| *Show User Management Commands*                              | `photoprism users help`        |
-| *Reset Users*                                                | `photoprism users reset -y`    |
-| *Show Face Recognition Commands*                             | `photoprism faces help`        |
-| *Index Faces*                                                | `photoprism faces index`       |
-| *Reset People & Faces*                                       | `photoprism faces reset -f`    |
-| *Transcode Videos to AVC*                                    | `photoprism convert`           |
-| *Regenerate Thumbnails*                                      | `photoprism thumbs -f`         |
+| Action                                                    | Command                        |
+|-----------------------------------------------------------|--------------------------------|
+| *Display Config Values*                                   | `photoprism show config`       |
+| *Show Migration Status*                                   | `photoprism migrations ls`     |
+| *Repeat Failed Migrations*                                | `photoprism migrations run -f` |
+| *Reset Database*                                          | `photoprism reset -y`          |
+| *Backup Database*                                         | `photoprism backup -a -i`      |                      
+| *Restore Database*                                        | `photoprism restore -a -i`     |                   
+| *Change Admin Password*                                   | `photoprism passwd [username]` |
+| *Show User Management Commands*                           | `photoprism users help`        |
+| *Reset Users*                                             | `photoprism users reset -y`    |
+| *Show Face Recognition Commands*                          | `photoprism faces help`        |
+| *Index Faces*                                             | `photoprism faces index`       |
+| *Reset People & Faces*                                    | `photoprism faces reset -f`    |
+| *Transcode Videos to AVC*                                 | `photoprism convert`           |
+| *Regenerate Thumbnails*                                   | `photoprism thumbs -f`         |
 | [*Update Index*](../../user-guide/library/originals.md)   | `photoprism index --cleanup`   |                  
 | [*Move to Originals*](../../user-guide/library/import.md) | `photoprism import [path]`     |                  
 | [*Copy to Originals*](../../user-guide/library/import.md) | `photoprism cp [path]`         |                  

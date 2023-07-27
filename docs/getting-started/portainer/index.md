@@ -11,7 +11,7 @@ Navigate to "Stacks", click "Add stack" and paste the [contents of our *stack.ym
 When using the *Web editor*, please note that related values must start at the same indentation level [in YAML files](../../developer-guide/technologies/yaml.md) and that tabs are not allowed for indentation. We recommend using 2 spaces.
 
 !!! tldr ""
-    Which path names you need to configure for the *originals*, *storage*, and *database* volumes depends on your NAS device and its configuration. The following section describes them in detail.
+    Which path names you need to configure for the *originals*, *storage*, and *database* volumes depends on your NAS device and its configuration. For more information, see below.
 
 #### MariaDB ####
 

@@ -65,8 +65,7 @@ You can mount [any folder accessible from your NAS](https://docs.docker.com/comp
 ```
 
 !!! tldr ""
-    If *read-only mode* is enabled, all features that require write permission to the *originals* folder 
-    are disabled, e.g. [WebDAV](../../user-guide/sync/webdav.md), uploading and deleting files. 
+    If *read-only* mode is enabled, all features that require write permission to the *originals* folder are disabled, for example [WebDAV](../../user-guide/sync/webdav.md), [Web Upload](../../user-guide/library/upload.md) and [file deletion](../../user-guide/organize/delete.md).
 
 ##### /photoprism/storage #####
 

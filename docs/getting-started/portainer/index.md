@@ -18,41 +18,50 @@ When using the *Web editor*, please note that related values must start at the [
 You must explicitly [specify the directories](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes) you want to use on your NAS device, since PhotoPrism can't see files in folders that have not been shared. This is an important security feature and allows for a flexible configuration without having to change any other variables.
 
 !!! tldr ""
-    As on most operating systems, `.` can be used to specify a path relative to the application directory. So if you keep the default paths, the files will be in the internal application folder that Portainer automatically creates when you add a new stack.
+    As on most operating systems, `.` can be used to specify a path relative to the application directory. So if you keep the defaults, all files will be in the internal application folder that Portainer creates when you add a new stack.
 
-##### MariaDB #####
+##### Database #####
 
 Our [stack template](https://dl.photoprism.app/docker/portainer/stack.yml){:target="_blank"} includes a pre-configured [MariaDB](https://mariadb.com/) database server.
-If your NAS device has a mixed drive configuration with solid-state drives (SSDs) and traditional hard disks, we recommend that you change `./database` to an absolute path located on an SSD, as this [significantly improves performance](../troubleshooting/performance.md#storage). You can otherwise keep the default to store database files in the internal application folder:
+If your NAS device has a mixed drive configuration with solid-state drives (SSDs) and traditional hard disks, we recommend that you change `./database` to an absolute path located on an SSD as this [significantly improves performance](../troubleshooting/performance.md#storage), for example:
 
 ```yaml
+services:
   mariadb:
     volumes:
-      - "./database:/var/lib/mysql" # DO NOT REMOVE
+      - "/mnt/ssd:/var/lib/mysql"
+```
+
+You can otherwise keep the default to store database files in the internal application folder:
+
+```yaml
+    volumes:
+      - "./database:/var/lib/mysql"
 ```
 
 !!! tldr ""
-    [Database files should never be located on an unreliable device](../troubleshooting/mariadb.md#corrupted-files) such as a USB flash drive, SD card, or shared network folder.
+    Database files should [not be located on an unreliable device](../troubleshooting/mariadb.md#corrupted-files) such as a USB flash drive, SD card, or network folder.
 
 ##### /photoprism/originals #####
 
 The *originals* folder contains your original photo and video files:
 
 ```yaml
-volumes:
-  # "/nas/path:/container/path"
-  - "./originals:/photoprism/originals"
+services:
+  photoprism:
+    volumes:
+      # "/mnt/photos:/photoprism/originals"
+      - "./originals:/photoprism/originals"
 ```
 
 We recommend that you change `./originals` to the path on your NAS that contains your existing media files. If you want to start with an empty library, make sure the volume has enough free space for your needs. 
 
-You can mount [any folder accessible from your NAS](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-3), including [network shares](../troubleshooting/docker.md#network-storage). Additional directories can also be mounted as subfolders of `/photoprism/originals` (depending on [overlay file system support](../troubleshooting/docker.md#overlay-volumes)):
+You can mount [any folder accessible from your NAS](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-3), including [network shares](../troubleshooting/docker.md#network-storage). Additional directories can also be mounted as subfolders of `/photoprism/originals` (depending on [overlay file system support](../troubleshooting/docker.md#overlay-volumes)), for example:
 
 ```yaml
-volumes:
-  - "/home/username/Pictures:/photoprism/originals"
-  - "/example/friends:/photoprism/originals/friends"
-  - "/mnt/photos:/photoprism/originals/media"
+    volumes:
+      - "/mnt/photos:/photoprism/originals"
+      - "/mnt/videos:/photoprism/originals/videos"
 ```
 
 !!! tldr ""
@@ -61,39 +70,32 @@ volumes:
 
 ##### /photoprism/storage #####
 
-The *storage* folder is used to save config, cache, thumbnail and sidecar files:
-
-- a *storage* folder mount (with write access) must always be specified so that you do not lose these files after a restart or upgrade
-- never configure the *storage* folder to be inside the *originals* folder unless the name starts with a `.` to indicate that it is hidden
-- if available, we recommend placing the *storage* folder on a [local SSD drive](../troubleshooting/performance.md#storage) for best performance
-- mounting [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) or using them inside the *storage* folder is currently not supported
-- you can otherwise keep the default to store database files in the internal application folder
+The *storage* folder is used to save config, cache, thumbnail, and sidecar files. It must always be specified so that you do not lose these files after a restart or upgrade.
+If available, we recommend that you put the *storage* folder on a [local SSD drive](../troubleshooting/performance.md#storage) for best performance. You can otherwise keep the default to store the files in the internal application folder:
 
 ```yaml
-volumes:
-  - "./storage:/photoprism/storage"
+services:
+  photoprism:
+    volumes:
+      - "./storage:/photoprism/storage"
 ```
 
 !!! tldr ""
-    Should you later want to move your instance to another NAS, the easiest and most time-saving way is to copy the entire *storage* folder along with your originals and database.
+    Never configure the *storage* folder to be inside the *originals* folder unless the name starts with a `.` to indicate that it is hidden.
+    Should you later want to move your instance to another NAS, the easiest and most time-saving way is to copy the entire *storage* folder along with your *originals* and *database*.
 
 ##### /photoprism/import #####
 
-You can optionally mount an *import* folder from which files can be transferred to the *originals* folder
-in a structured way that avoids duplicates:
-
-- [imported files](../../user-guide/library/import.md) receive a canonical filename and will be organized by year and month
-- never configure the *import* folder to be inside the *originals* folder, as this will cause a loop by importing already indexed files
+You can optionally mount an *import* folder from which files can be transferred to the *originals* folder in a structured way that avoids duplicates, for example:
 
 ```yaml
-volumes:
-  - "./import:/photoprism/import"
+services:
+  photoprism:
+    volumes:
+      - "/mnt/media/usb:/photoprism/import"
 ```
 
-!!! tldr ""
-    You can safely skip this. Adding files via [Web Upload](../../user-guide/library/upload.md)
-    and [WebDAV](../../user-guide/sync/webdav.md) remains possible, unless [read-only mode](../config-options.md)
-    is enabled or the [features have been disabled](../../user-guide/settings/general.md).
+[Imported files](../../user-guide/library/import.md) receive a canonical filename and will be organized by year and month. You should never configure the *import* folder to be inside the *originals* folder, as this will cause a loop by importing already indexed files. You can also skip this. Adding files via [Web Upload](../../user-guide/library/upload.md) and [WebDAV](../../user-guide/sync/webdav.md) remains possible, unless [read-only mode](../config-options.md) is enabled or the [features have been disabled](../../user-guide/settings/general.md).
 
 ### Step 2: Finalize Setup ###
 
@@ -117,7 +119,7 @@ When you're done, scroll down and click "Deploy the stack" without changing any 
 After waiting a few moments, you should be able to log in as `admin` with the password specified in `PHOTOPRISM_ADMIN_PASSWORD` when you navigate to <http://localhost:2342/>.
 
 !!! tldr ""
-    If you have changed the server hostname, port, or protocol in your configuration, the URL needs to be adjusted accordingly. 
+    If you have modified the server hostname, port, or protocol in your configuration, the URL to use changes accordingly. 
 
 ### Step 3: Index Your Library ###
 

@@ -29,7 +29,7 @@ If your NAS device has a mixed drive configuration with solid-state drives (SSDs
 services:
   mariadb:
     volumes:
-      - "/mnt/ssd:/var/lib/mysql"
+      - "/mnt/ssd/database:/var/lib/mysql"
 ```
 
 You can otherwise keep the default to store database files in the internal application folder:

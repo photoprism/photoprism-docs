@@ -95,7 +95,10 @@ services:
       - "/mnt/media/usb:/photoprism/import"
 ```
 
-[Imported files](../../user-guide/library/import.md) receive a canonical filename and will be organized by year and month. You should never configure the *import* folder to be inside the *originals* folder, as this will cause a loop by importing already indexed files. You can also skip this. Adding files via [Web Upload](../../user-guide/library/upload.md) and [WebDAV](../../user-guide/sync/webdav.md) remains possible, unless [read-only mode](../config-options.md) is enabled or the [features have been disabled](../../user-guide/settings/general.md).
+[Imported files](../../user-guide/library/import.md) receive a canonical filename and will be organized by year and month. You should never configure the *import* folder to be inside the *originals* folder, as this will cause a loop by importing already indexed files.
+
+!!! tldr ""
+    Even if you don't specify an *import* folder, adding files via [Web Upload](../../user-guide/library/upload.md) and [WebDAV](../../user-guide/sync/webdav.md) remains possible unless [read-only mode](../config-options.md) is enabled or the [features have been disabled](../../user-guide/settings/general.md).
 
 ### Step 2: Finalize Setup ###
 

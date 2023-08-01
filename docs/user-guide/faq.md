@@ -248,6 +248,10 @@
     
     It might then become clear why there are differences. For example, it could be that Windows does not support some fields and therefore ignores them, or that the data shown is actually from the file system and not from the files. Should you still believe to have found a bug, please [provide us with sample files](https://www.photoprism.app/contact#file-samples) so that we can reproduce the issue.
 
+??? question "Why is the date of pictures without metadata displayed as *Unknown* in the search results?"
+    
+    If there is no date information available in the metadata or the original file names, the file system modification time is used to sort pictures in search results and to create canonical file names for them when importing. However, this is usually not the actual date a photo was taken (or a graphic was created by the original author), but only the time you downloaded or copied it. As a result, the date of pictures without a reliable creation date will be displayed as "Unknown" until you manually set a date in the edit dialog.
+
 ??? question "Why do some pictures have 08/12/2002 as date if they were not taken on that day?"
     
     This is usually caused by a [bug in Android](https://issuetracker.google.com/issues/36963276) that caused photos to be created with an incorrect CreateDate. While the date can easily be changed in the edit dialog, this only updates the index without modifying your originals.

@@ -250,7 +250,7 @@
 
 ??? question "Why is the date of pictures without metadata displayed as *Unknown* in the search results?"
     
-    If there is no date information available in the metadata or the original file names, the file system modification time is used to sort pictures in search results and to create canonical file names for them when importing. However, this is usually not the actual date a photo was taken (or a graphic was created by the original author), but only the time you downloaded or copied it. As a result, the date of pictures without a reliable creation date will be displayed as "Unknown" until you manually set a date in the edit dialog.
+    If there is no date information available in the metadata or the original file names, the file system modification time is used to sort pictures in search results and to [create canonical file names for them during import](library/import.md). However, this is usually not the actual date a photo was taken (or a graphic was created by the original author), but only the time you downloaded or copied it. As a result, the date of pictures without a reliable creation date will be displayed as "Unknown" until you manually [set a date in the edit dialog](organize/edit.md).
 
 ??? question "Why do some pictures have 08/12/2002 as date if they were not taken on that day?"
     

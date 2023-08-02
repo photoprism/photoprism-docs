@@ -138,7 +138,7 @@ your library is scanned.
 
 ### Which folder will be indexed?
 
-This depends on your environment and [configuration](config-options.md). While subfolders can be selected for indexing
+This depends on your environment and [configuration](config-options.md). While sub folders can be selected for indexing
 in the UI, changing the *originals* base folder requires a restart for security reasons.
 
 If you skip configuration and don't use one of our Docker images, PhotoPrism will attempt to find a photo library
@@ -155,7 +155,7 @@ mounted from `~/Pictures` where `~` is a shortcut for your home directory:
 
 Since the app is running inside a container, you have to explicitly mount the host folders you want to use.
 PhotoPrism won't be able to see folders that have not been mounted. Multiple folders can be made accessible
-by mounting them as subfolders of `/photoprism/originals`, for example:
+by mounting them as sub folders of `/photoprism/originals`, for example:
 
 ```yaml
 volumes:

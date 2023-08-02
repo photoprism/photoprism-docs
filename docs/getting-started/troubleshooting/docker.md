@@ -260,7 +260,7 @@ sudo chmod -R a+rwx [folder]
 
 ## Overlay Volumes
 
-Depending on overlay file system support, it is possible to mount additional host folders as subfolders of `/photoprism/originals` (or other storage folders), for example:
+Depending on overlay file system support, it is possible to mount additional host folders as sub folders of `/photoprism/originals` (or other storage folders), for example:
 
 ```yaml
 volumes:

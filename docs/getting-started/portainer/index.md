@@ -19,25 +19,23 @@ You need to explicitly [specify the directories](https://docs.docker.com/compose
 
 ##### Database #####
 
-Our [stack template](https://dl.photoprism.app/docker/portainer/stack.yml){:target="_blank"} includes a pre-configured [MariaDB](https://mariadb.com/) database server.
-If your NAS device has a mixed drive configuration with solid-state drives (SSDs) and traditional hard disks, we recommend that you change `./database` to an absolute path located on an SSD as this [significantly improves performance](../troubleshooting/performance.md#storage), for example:
+Our [stack template](https://dl.photoprism.app/docker/portainer/stack.yml){:target="_blank"} includes a pre-configured [MariaDB](https://mariadb.com/) database server that stores its data in the internal application folder by default:
 
 ```yaml
 services:
   mariadb:
     volumes:
-      - "/mnt/ssd/database:/var/lib/mysql"
-```
-
-You can otherwise keep the default to store database files in the internal application folder:
-
-```yaml
-    volumes:
       - "./database:/var/lib/mysql"
 ```
 
+If your NAS device has a mixed drive configuration with solid-state drives (SSDs) and traditional hard disks, we recommend that you change `./database` to an absolute path located on an SSD as this [significantly improves performance](../troubleshooting/performance.md#storage), for example:
+
+```yaml
+      - "/mnt/ssd/database:/var/lib/mysql"
+```
+
 !!! tldr ""
-    Database files should [not be located on an unreliable device](../troubleshooting/mariadb.md#corrupted-files) such as a USB flash drive, SD card, or network folder.
+    Database files should [never be located on an unreliable device](../troubleshooting/mariadb.md#corrupted-files) such as a USB flash drive, SD card, or network folder.
 
 ##### /photoprism/originals #####
 
@@ -47,13 +45,16 @@ The *originals* folder contains your original photo and video files:
 services:
   photoprism:
     volumes:
-      # "/mnt/photos:/photoprism/originals"
       - "./originals:/photoprism/originals"
 ```
 
-We recommend that you change `./originals` to the path on your NAS that contains your existing media files. If you want to start with an empty library, make sure the volume has enough free space for your needs. 
+We recommend that you change `./originals` to the directory on your NAS where your existing media files are, for example:
 
-You can mount [any folder accessible from your NAS](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-3), including [network shares](../troubleshooting/docker.md#network-storage). Additional directories can also be mounted as subfolders of `/photoprism/originals` (depending on [overlay file system support](../troubleshooting/docker.md#overlay-volumes)), for example:
+```yaml
+      - "/mnt/photos:/photoprism/originals"
+```
+
+Additional directories can be mounted as sub folders of `/photoprism/originals` (depending on [overlay filesystem support](../troubleshooting/docker.md#overlay-volumes)):
 
 ```yaml
     volumes:
@@ -62,7 +63,7 @@ You can mount [any folder accessible from your NAS](https://docs.docker.com/comp
 ```
 
 !!! tldr ""
-    If *read-only* mode is enabled, all features that require write permission to the *originals* folder are disabled, for example [WebDAV](../../user-guide/sync/webdav.md), [Web Upload](../../user-guide/library/upload.md) and [file deletion](../../user-guide/organize/delete.md).
+    If you want to start with an empty library, make sure the volume has enough free space for your needs.
 
 ##### /photoprism/storage #####
 

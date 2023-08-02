@@ -92,7 +92,7 @@ above, where `~` is a shortcut for your home directory.
 
 You may [mount any folder accessible from the host](https://docs.docker.com/storage/bind-mounts/) instead,
 including [network drives](faq.md#how-can-i-mount-network-shares-with-docker). Additional directories can
-be mounted as subfolders of `/photoprism/originals`:
+be mounted as sub folders of `/photoprism/originals`:
 
 ```bash
 -v ~/Example:/photoprism/originals/Example

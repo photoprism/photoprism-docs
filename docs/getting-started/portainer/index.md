@@ -62,6 +62,9 @@ Additional directories can be mounted as sub folders of `/photoprism/originals` 
       - "/mnt/videos:/photoprism/originals/videos"
 ```
 
+!!! tldr ""
+    If you want to start with an empty library, you can mount any volume that has enough free space for your needs.
+
 ##### /photoprism/storage #####
 
 The *storage* folder is used to save config, cache, thumbnail, and sidecar files. It must always be specified so that you do not lose these files after a restart or upgrade.

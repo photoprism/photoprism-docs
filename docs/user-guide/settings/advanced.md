@@ -115,7 +115,7 @@ to 80 reduces the file size to about 100kB.
 The corresponding [config option](../../getting-started/config-options.md) is `PHOTOPRISM_JPEG_QUALITY`.
 
 !!! tldr ""
-    **The actual impression depends on how much information an image contains.** Empty areas and skies,
+    **The actual compression depends on how much information an image contains.** Empty areas and skies,
     for example, are easier to compress. Images with a lot of details suffer the most.
     For this reason, reducing the quality of thumbnails also negatively impacts [face recognition](../organize/people.md)
     and image classification results. Simply put, this means that the indexer sees fewer details.

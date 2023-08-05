@@ -136,23 +136,27 @@ You must explicitly [specify the directories](https://docs.docker.com/compose/co
 
 ##### /photoprism/originals #####
 
-The *originals* folder contains your original photo and video files. 
-
-`~/Pictures` will be mounted by default, where `~` is a shortcut for your home directory:
+The *originals* folder contains your original photo and video files. `~/Pictures` will be mounted by default, where `~` is a shortcut for your home directory:
 
 ```yaml
-volumes:
-  # "/host/folder:/photoprism/folder"  # example
-  - "~/Pictures:/photoprism/originals"
+services:
+  photoprism:
+    volumes:
+      - "~/Pictures:/photoprism/originals"
 ```
 
-You can mount [any folder accessible from the host](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-3), including [network shares](troubleshooting/docker.md#network-storage). Additional directories can also be mounted as sub folders of `/photoprism/originals` (depending on [overlay file system support](troubleshooting/docker.md#overlay-volumes)):
+We recommend that you change `~/Pictures` to the directory where your existing media files are, for example:
 
 ```yaml
-volumes:
-  - "/home/username/Pictures:/photoprism/originals"
-  - "/example/friends:/photoprism/originals/friends"
-  - "/mnt/photos:/photoprism/originals/media"
+      - "/mnt/photos:/photoprism/originals"
+```
+
+Additional directories can be mounted as sub folders of `/photoprism/originals` (depending on [overlay filesystem support](troubleshooting/docker.md#overlay-volumes)):
+
+```yaml
+    volumes:
+      - "/mnt/photos:/photoprism/originals"
+      - "/mnt/videos:/photoprism/originals/videos"
 ```
 
 On Windows, prefix the host path with the drive letter and use `/` instead of `\` as separator:
@@ -170,33 +174,35 @@ volumes:
 
 ##### /photoprism/storage #####
 
-The *storage* folder is used to save SQLite, config, cache, thumbnail and sidecar files:
-
-- a *storage* folder mount (with write access) must always be configured in your `docker-compose.yml` file so that you do not lose these files after a restart or upgrade
-- never configure the *storage* folder to be inside the *originals* folder unless the name starts with a `.` to indicate that it is hidden
-- we recommend placing the *storage* folder on a [local SSD drive](troubleshooting/performance.md#storage) for best performance
-- mounting [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) or using them inside the *storage* folder is currently not supported
+The *storage* folder is used to save config, cache, thumbnail, and sidecar files. It must always be specified so that you do not lose these files after a restart or upgrade.
+If available, we recommend that you put the *storage* folder on a [local SSD drive](troubleshooting/performance.md#storage) for best performance. You can otherwise keep the default to store the files in the internal application folder:
 
 ```yaml
-volumes:
-  - "./storage:/photoprism/storage"
+services:
+  photoprism:
+    volumes:
+      - "./storage:/photoprism/storage"
 ```
 
 !!! tldr ""
-    Should you later want to move your instance to another host, the easiest and most time-saving way is to copy the entire *storage* folder along with your originals and database.
+    Never configure the *storage* folder to be inside the *originals* folder unless the name starts with a `.` to indicate that it is hidden.
+    Should you later want to move your instance to another host, the easiest and most time-saving way is to copy the entire *storage* folder along with your *originals* and *database*.
 
 ##### /photoprism/import #####
 
-You can optionally mount an *import* folder from which files can be transferred to the *originals* folder
-in a structured way that avoids duplicates:
+You can optionally mount an *import* folder from which files can be transferred to the *originals* folder in a structured way that avoids duplicates, for example:
 
-- [imported files](../user-guide/library/import.md) receive a canonical filename and will be organized by year and month
-- never configure the *import* folder to be inside the *originals* folder, as this will cause a loop by importing already indexed files
+```yaml
+services:
+  photoprism:
+    volumes:
+      - "/mnt/media/usb:/photoprism/import"
+```
+
+[Imported files](../user-guide/library/import.md) receive a canonical filename and will be organized by year and month. You should never configure the *import* folder to be inside the *originals* folder, as this will cause a loop by importing already indexed files.
 
 !!! tldr ""
-    You can safely skip this. Adding files via [Web Upload](../user-guide/library/upload.md)
-    and [WebDAV](../user-guide/sync/webdav.md) remains possible, unless [read-only mode](config-options.md)
-    is enabled or the [features have been disabled](../user-guide/settings/general.md).
+    Even if you don't specify an *import* folder, adding files via [Web Upload](../user-guide/library/upload.md) and [WebDAV](../user-guide/sync/webdav.md) remains possible unless [read-only mode](config-options.md) is enabled or the [features have been disabled](../user-guide/settings/general.md).
 
 ### Step 2: Start the server ###
 

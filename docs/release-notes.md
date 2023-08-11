@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview` and then following [our update guide](getting-started/updates.md#docker-compose) to download the most recent image and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 230807-16c78767b</span>
+<span class="build">Build 230811-34066da2d</span>
 
 What's new?
 
@@ -17,6 +17,7 @@ What's new?
 - Metadata: [Changed order of field names from which the title is extracted](https://github.com/photoprism/photoprism/commit/82dac4b7db65f1e490d3cd26a17b122832b0445f)
 - Metadata: [Added support for reading fstop favorite flag from XMP sidecar files](https://github.com/photoprism/photoprism/pull/1873)
 - Themes: [Added "Mint" and improved the default theme styles](https://github.com/photoprism/photoprism/commit/20df14e9d16b456a5edbc456544f875ee9da16a4)
+- Security: [Go has been updated to v1.21, which includes bug fixes and enhancements](https://github.com/golang/go/issues?q=milestone%3AGo1.21)
 
 ### July 19, 2023 ###
 <span class="build">Build 230719-73fa7bbe8</span>

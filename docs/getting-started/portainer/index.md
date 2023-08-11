@@ -63,7 +63,7 @@ Additional directories can be mounted as sub folders of `/photoprism/originals` 
 ```
 
 !!! tldr ""
-    If you want to start with an empty library, you can mount any volume that has enough free space for your needs.
+    If you want to start with an empty library, you can mount any directory that has enough free space for your needs.
 
 ##### /photoprism/storage #####
 

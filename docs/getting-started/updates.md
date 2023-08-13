@@ -72,6 +72,15 @@ docker pull photoprism/photoprism:latest
 
 See [Running PhotoPrism with Docker](docker.md) for a command reference.
 
+### OpenMediaVault
+
+To upgrade your instance, open a terminal, download our most recent image from Docker Hub, and then restart the service:
+
+```
+podman pull docker.io/photoprism/photoprism:latest
+systemctl restart pod-photoprism.service
+```
+
 ### Complete Rescan
 
 We recommend performing a [complete rescan](../user-guide/library/originals.md#when-should-complete-rescan-be-selected) after major updates to take advantage of new search filters and sorting options. Be sure to [read the notes for each release](../release-notes.md) to see what changes have been made and if they might affect your library, for example, because of the file types you have or because new search features have been added. If you encounter problems that you cannot solve otherwise (i.e. before reporting a bug), please also try a rescan and see if it solves the problem.

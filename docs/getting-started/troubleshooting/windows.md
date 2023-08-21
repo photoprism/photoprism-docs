@@ -11,7 +11,7 @@ If you experience poor performance when indexing large libraries stored on NTFS:
 
 ## Connecting via WebDAV
 
-If you [followed our step-by-step instructions](../../user-guide/sync/webdav.md#__tabbed_1_2) and still have trouble connecting via WebDAV:
+If you [followed our step-by-step guide](../../user-guide/sync/webdav.md#__tabbed_1_2) and still have trouble connecting via WebDAV:
 
 - [ ] You need to change the basic authentication level (see below)
 - [ ] You do not have sufficient user rights (try as admin)

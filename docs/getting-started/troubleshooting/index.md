@@ -158,6 +158,21 @@ If [password authentication is enabled](../config-options.md#authentication) and
 
 To see which user accounts exist, [open a terminal](../docker-compose.md#command-line-interface) and run `photoprism users ls`. A new password can be set with `photoprism passwd [username]`. You can then try to log in again. [Upgrade to the latest release](../updates.md#docker-compose), restart the server, and [check the logs for errors and warnings](docker.md#viewing-logs) if it still doesn't work.
 
+### No WebDAV Access ###
+
+If you [followed our step-by-step guide](../../user-guide/sync/webdav.md) and still have trouble connecting via WebDAV:
+
+- [ ] WebDAV has been disabled for all users in the [advanced settings](../../user-guide/settings/advanced.md)
+- [ ] WebDAV is disabled because your instance is running in public mode (disable it)
+- [ ] Your [user account role](../../user-guide/users/roles.md) is not permitted to use WebDAV (try as *User* or *Admin*)
+- [ ] WebDAV access [has not been enabled](../../user-guide/users/index.md) for your user account (enable it)
+- [ ] You are experiencing a [general authentication problem](#cannot-log-in), see *Cannot Log In*
+- [ ] Your WebDAV client requires a secure connection ([connect via HTTPS](../index.md#https))
+- [ ] Your instance or reverse proxy uses an invalid [HTTPS/TLS certificate](../config-options.md#web-server)
+- [ ] As a Windows user, you may need to [change the basic authentication level](windows.md#connecting-via-webdav)
+- [ ] Your browser cannot communicate properly with the server, e.g. because a [reverse proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
+- [ ] You are connected to the wrong server, VPN, CDN, or a DNS record has not been updated yet
+
 ### Missing Pictures ###
 
 If you have indexed your library and some images or videos are missing, first [check *Library > Errors* for errors and warnings](logs.md).

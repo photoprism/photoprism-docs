@@ -19,7 +19,7 @@ What's new?
 - Albums: [Last edited timestamp is updated when pictures are added](https://github.com/photoprism/photoprism/issues/3080)
 - People: [Fixed an error when reusing the name of a previously deleted person](https://github.com/photoprism/photoprism/issues/3414)
 - Places: [Added cluster view to browse pictures close to each other in an overlay](https://github.com/photoprism/photoprism/issues/1187)
-- Live Photos: [Added support for extracting videos from Samsung Motion Photos](https://github.com/photoprism/photoprism/issues/439)
+- Live Photos: [Added support for Samsung Motion Photos](https://github.com/photoprism/photoprism/issues/439)
 - Live Photos: [Fixed indexing of sidecar video file properties](https://github.com/photoprism/photoprism/issues/3559)
 - Metadata: [Changed order of field names from which the title is extracted](https://github.com/photoprism/photoprism/commit/82dac4b7db65f1e490d3cd26a17b122832b0445f)
 - Metadata: [Added support for reading fstop favorite flag from XMP sidecar files](https://github.com/photoprism/photoprism/pull/1873)

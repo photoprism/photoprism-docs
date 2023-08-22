@@ -164,6 +164,7 @@ If you [followed our step-by-step guide](../../user-guide/sync/webdav.md) and st
 
 - [ ] WebDAV has been disabled for all users in the [advanced settings](../../user-guide/settings/advanced.md)
 - [ ] WebDAV is disabled because your instance is running in public mode (disable it)
+- [ ] You are trying to connect to an invalid path, try `/originals/` without omitting the `/` at the end, and read our [notes on installing PhotoPrism in a subdirectory](../../known-issues.md#shared-domain) on a shared domain 
 - [ ] Your [user account role](../../user-guide/users/roles.md) is not permitted to use WebDAV (try as *User* or *Admin*)
 - [ ] WebDAV access [has not been enabled](../../user-guide/users/index.md) for your user account (enable it)
 - [ ] You are experiencing a [general authentication problem](#cannot-log-in), see *Cannot Log In*
@@ -171,7 +172,7 @@ If you [followed our step-by-step guide](../../user-guide/sync/webdav.md) and st
 - [ ] Your instance or reverse proxy uses an invalid [HTTPS/TLS certificate](../config-options.md#web-server)
 - [ ] As a Windows user, you may need to [change the basic authentication level](windows.md#connecting-via-webdav)
 - [ ] Your browser cannot communicate properly with the server, e.g. because a [reverse proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
-- [ ] You are connected to the wrong server, VPN, CDN, or a DNS record has not been updated yet
+- [ ] You are connected to the wrong server, VPN, or a DNS record has not been updated yet
 
 ### Missing Pictures ###
 

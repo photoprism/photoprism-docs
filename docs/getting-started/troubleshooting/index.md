@@ -163,7 +163,7 @@ To see which user accounts exist, [open a terminal](../docker-compose.md#command
 If you [followed our step-by-step guide](../../user-guide/sync/webdav.md) and still have trouble connecting via WebDAV:
 
 - [ ] WebDAV has been disabled for all users in the [advanced settings](../../user-guide/settings/advanced.md)
-- [ ] WebDAV is disabled because your instance is running in public mode (disable it)
+- [ ] WebDAV is unavailable because your instance is [running in public mode](../config-options.md#authentication) (disable it)
 - [ ] You are trying to connect to an invalid path, try `/originals/` without omitting the `/` at the end, and read our [notes on installing PhotoPrism in a subdirectory](../../known-issues.md#shared-domain) on a shared domain 
 - [ ] Your [user account role](../../user-guide/users/roles.md) is not permitted to use WebDAV (try as *User* or *Admin*)
 - [ ] WebDAV access [has not been enabled](../../user-guide/users/index.md) for your user account (enable it)

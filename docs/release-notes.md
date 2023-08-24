@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview` and then following [our update guide](getting-started/updates.md#docker-compose) to download the most recent image and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 230822-fd55b9046</span>
+<span class="build">Build 230824-ba612f661</span>
 
 What's new?
 
@@ -26,6 +26,7 @@ What's new?
 - Config: [Added support for serving HTTP requests over Unix sockets](https://github.com/photoprism/photoprism/issues/2337)
 - Config: [A lower cache duration can be set for video content](https://github.com/photoprism/photoprism/issues/3631)
 - Security: [Go has been updated to v1.21, which includes bug fixes and enhancements](https://github.com/golang/go/issues?q=milestone%3AGo1.21)
+- Translations: [Updated Chinese (Simplified and Traditional)](https://translate.photoprism.app/projects/photoprism/)
 
 ### July 19, 2023 ###
 <span class="build">Build 230719-73fa7bbe8</span>

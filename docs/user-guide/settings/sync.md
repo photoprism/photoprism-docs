@@ -9,7 +9,7 @@ This might be useful if you want to [share](../share/services-share.md) or [sync
 
 !!! note ""
     PhotoPrism can also serve/share files via WebDAV to be browsed on macOS or Windows.
-    See [instructions](/user-guide/sync/webdav/).
+    See [instructions](../sync/webdav.md).
 
 ## Add Service ##
 

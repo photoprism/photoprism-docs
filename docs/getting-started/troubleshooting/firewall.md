@@ -13,7 +13,7 @@ Unless you have changed the default configuration, PhotoPrism is reachable via p
 
 ## Outgoing Connections
 
-As explained in our [Privacy Policy](/privacy#section-7), reverse geocoding and interactive world maps depend on retrieving the necessary information [from us](/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality.
+As explained in our [Privacy Policy](https://www.photoprism.app/privacy#section-7), reverse geocoding and interactive world maps depend on retrieving the necessary information [from us](https://www.photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality.
 
 [View Privacy Policy ›](https://www.photoprism.app/privacy#section-7){ class="pr-3 block-xs" } [View Compliance FAQ ›](https://www.photoprism.app/kb/compliance-faq#privacy)
 

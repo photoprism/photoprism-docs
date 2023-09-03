@@ -2,7 +2,7 @@
 
 ## Help ##
 `photoprism help` shows available commands, config parameters and environment variable names.
-These are also listed in [Getting Started](/getting-started/config-options/).
+These are also listed in [Getting Started](../getting-started/config-options.md).
 
 ## Show current settings ##
 `photoprism config` shows all config parameters and their values.

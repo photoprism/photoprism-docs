@@ -17,7 +17,7 @@ docker compose exec -T photoprism photoprism backup -i - > photoprism-db.sql
 As seen above, you can use `-` as filename to write the backup to stdout.
 This is done to ensure the backup resides outside of the container environment.
 
-If you leave the filename empty, the backup will be written to the default backup folder configured via [`PHOTOPRISM_BACKUP_PATH`](../../config-options/#storage-folders).
+If you leave the filename empty, the backup will be written to the default backup folder configured via [`PHOTOPRISM_BACKUP_PATH`](../config-options.md#storage-folders).
 
 If you want, you can also export your cache and thumbnails, but it can also be re-generated after restore.
 It will save you from re-generating thumbnails from scratch however.

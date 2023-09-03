@@ -10,7 +10,7 @@ It's possible to use [Dropbox](https://www.dropbox.com/) to store your photos, w
     volumes:
       - "~/Dropbox/Photos:/photoprism/originals"
     ```
-5. Follow the PhotoPrism [getting started](/getting-started/) guide as normal.
+5. Follow the PhotoPrism [getting started](../../getting-started/index.md) guide as normal.
 
 ## Auto-upload from Mobile
 

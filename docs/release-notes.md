@@ -4,23 +4,25 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview` and then following [our update guide](getting-started/updates.md#docker-compose) to download the most recent image and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 230824-ba612f661</span>
+<span class="build">Build 230903-0e4ce95ff</span>
 
 What's new?
 
-- UX: [Added "Delete All" button to the archive page toolbar](https://github.com/photoprism/photoprism/issues/272#issuecomment-1646880786)
 - UX: [Added a preview image to the Labels tab in the photo edit dialog](https://github.com/photoprism/photoprism/pull/3532)
 - UX: [Reduced padding in mosaic view in favor of larger thumbnails](https://github.com/photoprism/photoprism/issues/3572)
 - UX: [Edit dialog allows pasting latitude and longitude in a single operation](https://github.com/photoprism/photoprism/pull/3568)
-- Themes: [Improved styles and added "Chrome" as well as "Mint"](https://github.com/photoprism/photoprism/commit/20df14e9d16b456a5edbc456544f875ee9da16a4)
+- Live Photos: [Added support for Samsung Motion Photos](https://github.com/photoprism/photoprism/issues/439)
+- Live Photos: [Fixed indexing of sidecar video file properties](https://github.com/photoprism/photoprism/issues/3559)
 - Search: [Added `scan:false` filter to find photos that are not scans](https://github.com/photoprism/photoprism/commit/be0fdc1774266bd4ec09e01ab93496fb07a4cbed)
+- Search: [Added `favorite:false` filter to find pictures not marked as favorites](https://github.com/photoprism/photoprism/commit/20d20c7fa923baa9b5041631b3bcf6873bc2c874)
 - Albums: [Current album is preselected when opening the upload dialog](https://github.com/photoprism/photoprism/issues/3644)
 - Albums: [Fixed preview image URL when sharing album links](https://github.com/photoprism/photoprism/issues/3658)
 - Albums: [Last edited timestamp is updated when pictures are added](https://github.com/photoprism/photoprism/issues/3080)
 - People: [Fixed an error when reusing the name of a previously deleted person](https://github.com/photoprism/photoprism/issues/3414)
 - Places: [Added cluster view to browse pictures close to each other in an overlay](https://github.com/photoprism/photoprism/issues/1187)
-- Live Photos: [Added support for Samsung Motion Photos](https://github.com/photoprism/photoprism/issues/439)
-- Live Photos: [Fixed indexing of sidecar video file properties](https://github.com/photoprism/photoprism/issues/3559)
+- Archive: [Added "Sweep" button to delete all archived pictures with one click](https://github.com/photoprism/photoprism/issues/3701)
+- Library: [Added option for admins to perform index and cache cleanup from the UI](https://github.com/photoprism/photoprism/issues/3699)
+- Themes: [Improved theme styles and added "Chrome" as well as "Mint"](https://github.com/photoprism/photoprism/commit/20df14e9d16b456a5edbc456544f875ee9da16a4)
 - Metadata: [Changed order of field names from which the title is extracted](https://github.com/photoprism/photoprism/commit/82dac4b7db65f1e490d3cd26a17b122832b0445f)
 - Metadata: [Added support for reading fstop favorite flag from XMP sidecar files](https://github.com/photoprism/photoprism/pull/1873)
 - Config: [Added support for serving HTTP requests over Unix sockets](https://github.com/photoprism/photoprism/issues/2337)

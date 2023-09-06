@@ -357,6 +357,8 @@ The currently supported user ID ranges are 0, 33, 50-99, 500-600, and 900-1200. 
 | [*Move to Originals*](../user-guide/library/import.md) | `docker compose exec photoprism photoprism import [path]`     |                  
 | [*Copy to Originals*](../user-guide/library/import.md) | `docker compose exec photoprism photoprism cp [path]`         |                  
 
+*Note that our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible Linux distributions.*
+
 !!! info "Complete Rescan"
     `docker compose exec photoprism photoprism index -f` rescans all originals, including already indexed and unchanged files.
     This may be necessary after major upgrades and after migrations of the database schema, especially if search results are missing or incorrect. Note you can also start a [rescan from the user interface](../user-guide/library/originals.md) by navigating to *Library* > *Index*, checking "Complete Rescan" and then clicking "Start". Manually entered information such as labels, people, titles or descriptions will not be modified when indexing, even if you perform a "complete rescan".
@@ -377,4 +379,4 @@ The currently supported user ID ranges are 0, 33, 50-99, 500-600, and 900-1200. 
 *[filesystem]: contains your files and folders
 
 [^1]: <https://rominirani.com/docker-on-windows-mounting-host-directories-d96f3f056a2c>
-[^2]: The default [Docker Compose](https://docs.docker.com/compose/) config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running `docker compose` or `docker-compose` in the same directory. Config files for other apps or instances should be placed in separate folders.
+[^2]: The default filename for the [Docker Compose](https://docs.docker.com/compose/) configuration is `docker-compose.yml`. For simplicity, it does not need to be specified if you run commands in the same directory. Config files for other apps and instances should be placed in separate folders.

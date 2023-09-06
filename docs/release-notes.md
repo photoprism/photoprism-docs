@@ -1,7 +1,7 @@
 # Release Notes
 
 !!! note ""
-    You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview` and then following [our update guide](getting-started/updates.md#docker-compose) to download the most recent image and restart your instance.
+    You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview` and then following [our update guide](getting-started/updates.md#docker-compose) to download the newest image and restart your instance.
 
 ### Development Preview ###
 <span class="build">Build 230904-5d26bada4</span>
@@ -987,4 +987,4 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
 
 ### Getting Updates ###
 
-Even when you use an image with the `:latest` tag, Docker does not automatically download new images for you. To update, you can either [manually pull the most recent image](getting-started/updates.md) and restart, or set up a service like [Watchtower](getting-started/updates.md#watchtower) to get automatic updates.
+Even when you use an image with the `:latest` tag, Docker does not automatically download new images for you. To update, you can either [manually pull the newest image](getting-started/updates.md) and restart, or set up a service like [Watchtower](getting-started/updates.md#watchtower) to get automatic updates.

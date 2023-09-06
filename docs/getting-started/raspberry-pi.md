@@ -102,7 +102,7 @@ Also keep in mind that the hardware has limited video transcoding capabilities, 
 ### Getting Updates ###
 
 Open a terminal and change to the folder where the `docker-compose.yml` file is located.[^2]
-Now run the following commands to download the most recent image from Docker Hub and
+Now run the following commands to download the newest image from Docker Hub and
 restart your instance in the background:
 
 ```bash

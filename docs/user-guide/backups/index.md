@@ -36,7 +36,7 @@ docker compose exec photoprism photoprism backup -i [filename]
 How to create SQL dumps from SQLite is shown in our [advanced backup guide](../../getting-started/advanced/backups.md).
 
 !!! tldr ""
-    Note that our guides now use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose`.
+    Note that our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible Linux distributions.
 
 ## Important Folders
 

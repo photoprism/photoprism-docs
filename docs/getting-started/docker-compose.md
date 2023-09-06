@@ -213,7 +213,7 @@ Run this command to start the application and database services in the backgroun
 docker compose up -d
 ```
 
-*Note that our guides now use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose`.*
+*Note that our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible Linux distributions.*
 
 Now open the Web UI by navigating to http://localhost:2342/. You should see a login screen.
 Sign in with the user `admin` and the initial password configured via `PHOTOPRISM_ADMIN_PASSWORD`.

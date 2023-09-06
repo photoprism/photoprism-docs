@@ -39,7 +39,7 @@ docker compose exec photoprism photoprism users add -p mysecret -n "Bob" bob
     Additional [account roles](roles.md) like user, viewer, and guest are currently [only available with a membership](https://www.photoprism.app/editions#compare) to support development and maintenance.
 
 !!! tldr ""
-    Note that our guides now use the new `docker compose` command by default. If your server does not yet support it, the old `docker-compose` command will still work.
+    Note that our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible Linux distributions.
 
 ### Viewing Account Details
 

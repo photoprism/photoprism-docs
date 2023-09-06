@@ -3,7 +3,7 @@
 ### Docker Compose
 
 Open a terminal and change to the folder where the `docker-compose.yml` file is located.[^1]
-Now run the following commands to download the most recent image from Docker Hub and
+Now run the following commands to download the newest image from Docker Hub and
 restart your instance in the background:
 
 ```
@@ -12,7 +12,7 @@ docker compose stop
 docker compose up -d
 ```
 
-*Note that our guides now use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose`.*
+*Note that our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible Linux distributions.*
 
 Pulling a new version can take several minutes, depending on your internet connection speed.
 
@@ -29,9 +29,15 @@ We recommend that you compare your own `docker-compose.yml` with [our latest exa
 
 #### Development Preview
 
-You can test upcoming features and enhancements by changing the image from `photoprism/photoprism:latest`
-to `photoprism/photoprism:preview` in your [`docker-compose.yml`](https://dl.photoprism.app/docker/).
-Then pull the most recent image and restart your instance as shown above.
+You can test [upcoming features and enhancements](../release-notes.md#development-preview) by changing the `photoprism/photoprism` image tag from `:latest` to `:preview` and running the following commands to pull the newest image from Docker Hub and restart your instance in the background:
+
+```
+docker compose pull
+docker compose stop
+docker compose up -d
+```
+
+*Note that our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible Linux distributions.*
 
 #### Watchtower
 
@@ -74,7 +80,7 @@ See [Running PhotoPrism with Docker](docker.md) for a command reference.
 
 ### OpenMediaVault
 
-To upgrade your instance, open a terminal, download our most recent image from Docker Hub, and then restart the service:
+To upgrade your instance, open a terminal, download our newest image from Docker Hub, and then restart the service:
 
 ```
 podman pull docker.io/photoprism/photoprism:latest

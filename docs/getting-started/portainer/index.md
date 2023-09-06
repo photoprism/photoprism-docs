@@ -15,11 +15,14 @@ When using the *Web editor*, please make sure that related values remain on the 
 You need to explicitly [specify the directories](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes) you want to use on your NAS device, since PhotoPrism can't see files in folders that have not been shared. This is an important security feature and allows for a flexible configuration without having to change any other variables.
 
 !!! tldr ""
-    The volume mount paths to configure depend on your NAS device and its configuration. As on most operating systems, `.` can be used to specify a path relative to the application directory. So if you keep the default settings, all files will be in the internal application folder that Portainer creates when you add a new stack.
+    The volume mount paths to configure depend on your NAS device and its configuration. As on most operating systems, `.` can be used to specify a path relative to the current directory. So if you keep the default settings, all files will be in the internal application folder that Portainer automatically creates when you add a new stack.
+
+!!! danger ""
+    It is important that all folders are located on a persistent volume on your device - ideally specified with an absolute path - to avoid potential data loss after a restart, e.g. if the default application folder managed by Portainer changes or gets lost for a reason beyond our control.
 
 ##### Database #####
 
-Our [stack template](https://dl.photoprism.app/docker/portainer/stack.yml){:target="_blank"} includes a pre-configured [MariaDB](https://mariadb.com/) database server that stores its data in the internal application folder by default:
+Our [stack template](https://dl.photoprism.app/docker/portainer/stack.yml){:target="_blank"} includes a pre-configured [MariaDB](https://mariadb.com/) database server that stores its data in the Portainer application folder by default:
 
 ```yaml
 services:

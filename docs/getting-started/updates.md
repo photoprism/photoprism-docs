@@ -3,7 +3,7 @@
 ### Docker Compose
 
 Open a terminal and change to the folder where the `docker-compose.yml` file is located.[^1]
-Now run the following commands to download the newest image from Docker Hub and
+Now run the following commands to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and
 restart your instance in the background:
 
 ```
@@ -29,7 +29,7 @@ We recommend that you compare your own `docker-compose.yml` with [our latest exa
 
 #### Development Preview
 
-You can test [upcoming features and enhancements](../release-notes.md#development-preview) by changing the `photoprism/photoprism` image tag from `:latest` to `:preview` and running the following commands to pull the newest image from Docker Hub and restart your instance in the background:
+You can test [upcoming features and enhancements](../release-notes.md#development-preview) by changing the `photoprism/photoprism` image tag from `:latest` to `:preview` and then running the following commands to pull the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance in the background:
 
 ```
 docker compose pull

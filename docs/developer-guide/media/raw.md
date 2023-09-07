@@ -18,7 +18,7 @@ From our experience, some basic edits done with Adobe tools - such as cropping -
 
 ## Darktable ##
 
-If installed, Darktable CLI can be used for RAW image conversion. Note that PhotoPrism can only run one instance of `darktable-cli` because it uses a lock file. If you run it more than once, it will fail. Be prepared to wait a bit.
+If installed, Darktable CLI can be used for RAW image conversion. Note that PhotoPrism will only run one instance of `darktable-cli` at the same time if the `PHOTOPRISM_RAW_PRESETS` config option is enabled, so existing Darktable presets can be applied (requires an exclusive lock).
 
 ### Using Darktable as library ###
 

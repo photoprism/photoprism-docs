@@ -240,7 +240,7 @@
 
     Since web browsers generally cannot display RAW image files directly, they must be converted. This is done during [import](library/import.md) or [initial indexing](library/index.md). It can also be triggered manually [in a terminal](../getting-started/docker-compose.md#command-line-interface) with the `photoprism convert` command.
 
-??? question "Are JPEGs updated when RAW or XMP files change?"
+??? question "Will JPEGs be updated when the related RAW or XMP files change?"
 
     JPEGs are currently not regenerated when related RAW or XMP files change. RAW files are digital negatives by design. PhotoPrism therefore assumes that their image information is immutable.
 

@@ -248,7 +248,7 @@
 
     We recommend manually updating existing JPEG sidecar files as needed or creating additional JPEGs, so you can choose between different versions. New files and other metadata changes are detected and reflected in the index as usual when your library is scanned.
 
-??? question "Does PhotoPrism preserve the edits when converting a RAW image with an XMP sidecar file?"
+??? question "Are edits preserved when converting a RAW image with an XMP sidecar file?"
 
     PhotoPrism currently supports Darktable and RawTherapee as RAW image converters. Darktable fully supports XMP sidecar files, RawTherapee might only partially. However, XMP is only a "container" format, so the fields (namespaces) used there to indicate how an image should be converted (as well as other metadata) differ between Lightroom/Photoshop, Darktable, and RawTherapee.
     

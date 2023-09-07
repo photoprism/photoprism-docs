@@ -122,7 +122,7 @@ Absolutely! We are on a mission to protect your freedom and privacy. Self-hostin
 
 At the same time, we know there's a huge demand and many practical uses for a cloud-hosted app that is easy to set up. We like to give our users the choice and therefore offer a fully managed service as a deployment option. Selected hosting partners ensure that your privacy is protected as much as technically possible, even in the cloud.
 
-### Are JPEGs updated when RAW or XMP files change?
+### Will JPEGs be updated when the related RAW or XMP files change?
 
 JPEGs are currently not regenerated when related RAW or XMP files change. RAW files are digital negatives by design.
 PhotoPrism therefore assumes that their image information is immutable.

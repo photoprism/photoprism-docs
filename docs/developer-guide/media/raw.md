@@ -1,26 +1,40 @@
-Many photographers keep their originals in some sort of lossless RAW format instead of compressed JPEG, especially when shooting with a Digital SLR. Some [mobile phones](https://www.fredericpaulussen.be/how-to-raw-photos-huawei-p30-pro/) also support RAW or use HEIC/HEIF for a similar purpose. PhotoPrism aims at providing excellent support for all [RAW](https://en.wikipedia.org/wiki/Raw_image_format) formats, independent of camera brand and model. Please let us know when there is an issue with your specific device.
-
-Web browsers in general can not display RAW image files. They need to be converted, which is what our import and convert commands do. You'll also find a checkbox for this step in our Web UI.
-
-In addition, PhotoPrism now also supports TIFF, PNG, BMP and GIF files. Be aware that files in those formats often don't contain useful metadata and are typically used for screenshots, charts, graphs and icons only.
+Professional and semi-professional photographers often keep their originals in a [lossless RAW format](https://en.wikipedia.org/wiki/Raw_image_format), close to how they were taken with the physical sensor, rather than in a compressed image format like JPEG, especially if they shoot with a digital SLR camera. Newer mobile phones may also be able to capture images in RAW mode. Our goal is to provide top-notch support for [all RAW images](https://docs.photoprism.app/getting-started/faq/#what-media-file-types-are-supported), regardless of camera make and model. A full list of file types and extensions can be found in our [Knowledge Base](https://www.photoprism.app/kb/file-formats).
 
 ![](img/editPhoto.png)
 
-## Sips ##
+## RAW Conversion
 
-On a Mac, PhotoPrism can convert multiple files at once using Sips (pre-installed on OS X). It is not available for other operating systems, as far as we know.
+Since web browsers generally cannot display RAW image files directly, they must be converted. This is done during [import](../../user-guide/library/import.md) or [initial indexing](../../user-guide/library/index.md). It can also be triggered manually [in a terminal](../../getting-started/docker-compose.md#command-line-interface) with the `photoprism convert` command.
+
+## Adobe XMP
+
+PhotoPrism currently supports Darktable and RawTherapee as RAW image converters (as well as Sips on macOS). Darktable fully supports XMP sidecar files, RawTherapee might only partially. However, XMP is only a "container" format, so the fields (namespaces) used there to indicate how an image should be converted (as well as other metadata) differ between Lightroom/Photoshop, Darktable, and RawTherapee.
+    
+In other words, just because an application generally supports XMP that doesn't mean it can use metadata created with another application or by another vendor like Adobe. If you think that's confusing, well, that's because it is. You have an open format, but you still suffer from vendor lock-in - probably not entirely unintentional on Adobe's part.
+
+From our experience, some basic edits done with Adobe tools - such as cropping - might be preserved when you convert the same RAW image with other software like Darktable. Advanced edits, such as lens or color corrections, will likely not be applied.
+
+[Learn more ›](../metadata/xmp.md)
 
 ## Darktable ##
 
-We've recently upgraded Darktable from 2.6.2 to 3.0.0. Since the old PPA is not maintained anymore, we switched to this repository that is hosted by SuSE:
-
-https://software.opensuse.org/download.html?project=graphics:darktable:master&package=darktable
-
-Note that PhotoPrism can only run one instance of `darktable-cli` because it uses a lock file. If you run it more than once, it will fail. Be prepared to wait a bit.
+If installed, Darktable CLI can be used for RAW image conversion. Note that PhotoPrism can only run one instance of `darktable-cli` because it uses a lock file. If you run it more than once, it will fail. Be prepared to wait a bit.
 
 ### Using Darktable as library ###
 
 We had the idea to use [cgo](https://golang.org/cmd/cgo/) and link directly against `libdarktable.so` to convert RAW images to JPEG, see [darktable-dev mailing list](https://www.mail-archive.com/darktable-dev@lists.darktable.org/msg03608.html). However this requires calling/wrapping a large number of C functions and also has other [disadvantages](https://dave.cheney.net/2016/01/18/cgo-is-not-go). The idea is postponed until a clear benefit becomes visible. Running `darktable-cli` or any other binary that does the job (see above) seems to be the way to go.
+
+## RawTherapee ##
+
+If installed, RawTherapee CLI can also be used for RAW image conversion. If it used by default if Darktable isn't installed or disabled.
+
+### JPEG Size Limit
+
+RawTherapee cannot limit the resolution of JPEG files when converting files from other formats such as RAW, DNG, HEIC or AVIF. In general, when converting images, the resolution of the generated JPEG files can be limited with the environment variable `PHOTOPRISM_JPEG_SIZE` or the CLI parameter `--jpeg-size`.
+
+## Scriptable Image Processing System (Sips) ##
+
+On a Mac, PhotoPrism can convert multiple files at once using Sips (pre-installed on OS X). It is not available for other operating systems.
 
 ## Comparison of RAW to JPEG converters ##
 

@@ -183,14 +183,6 @@
     In case [FFmpeg is disabled](settings/advanced.md#disable-ffmpeg) or not installed, videos cannot be indexed because still images cannot be created.
     You should also have [Exiftool enabled](../getting-started/config-options.md#feature-flags) to extract metadata such as duration, resolution, and codec.
 
-??? question "Are JPEGs updated when RAW or XMP files change?"
-
-    JPEGs are currently not regenerated when related RAW or XMP files change. RAW files are digital negatives by design. PhotoPrism therefore assumes that their image information is immutable.
-
-    XMP files can affect the appearance, but most of the metadata they contain, such as title and description, does not. Creating JPEGs from RAW files is a time-consuming task, and in most cases would cause a huge, unjustified amount of overhead. In addition, the rendering information in XMP files is not well standardized. For example, changes you make in Photoshop may not be compatible with Darktable.
-
-    We recommend manually updating existing JPEG sidecar files as needed or creating additional JPEGs, so you can choose between different versions. New files and other metadata changes are detected and reflected in the index as usual when your library is scanned.
-
 ??? question "Some files seem hidden, where are they?"
 
     If the [quality filter](organize/review.md) is enabled, you might find them in *Photos > Review*. Otherwise, their
@@ -240,6 +232,44 @@
 
     PhotoPrism generally does not write to the *originals* folder, with the following exceptions: (1) You rotate an image in the user interface, so its Exif header must be updated. (2) You unstack files that were stacked based on their name, so they must be renamed. (3) You add files using the import functionality or the web upload. (4) You manually delete files in the user interface. (5) You have configured the *originals* folder as your sidecar folder. (6) You access the *originals* folder with a WebDAV client to manage your files without having *read-only mode* enabled.
 
+## RAW Images ##
+
+??? question "What is a RAW image file?"
+
+    Professional and semi-professional photographers often keep their originals in a [lossless RAW format](https://en.wikipedia.org/wiki/Raw_image_format), close to how they were taken with the physical sensor, rather than in a compressed image format like JPEG, especially if they shoot with a digital SLR camera. Newer mobile phones may also be able to capture images in RAW mode. Our goal is to provide top-notch support for [all RAW images](https://docs.photoprism.app/getting-started/faq/#what-media-file-types-are-supported), regardless of camera make and model. A full list of file types and extensions can be found in our [Knowledge Base](https://www.photoprism.app/kb/file-formats).
+
+    Since web browsers generally cannot display RAW image files directly, they must be converted. This is done during [import](library/import.md) or [initial indexing](library/index.md). It can also be triggered manually [in a terminal](../getting-started/docker-compose.md#command-line-interface) with the `photoprism convert` command.
+
+??? question "Are JPEGs updated when RAW or XMP files change?"
+
+    JPEGs are currently not regenerated when related RAW or XMP files change. RAW files are digital negatives by design. PhotoPrism therefore assumes that their image information is immutable.
+
+    XMP files can affect the appearance, but most of the metadata they contain, such as title and description, does not. Creating JPEGs from RAW files is a time-consuming task, and in most cases would cause a huge, unjustified amount of overhead. In addition, the rendering information in XMP files is not well standardized. For example, changes you make in Photoshop may not be compatible with Darktable.
+
+    We recommend manually updating existing JPEG sidecar files as needed or creating additional JPEGs, so you can choose between different versions. New files and other metadata changes are detected and reflected in the index as usual when your library is scanned.
+
+??? question "Does PhotoPrism preserve the edits when converting a RAW image with an XMP sidecar file?"
+
+    PhotoPrism currently supports Darktable and RawTherapee as RAW image converters. Darktable fully supports XMP sidecar files, RawTherapee might only partially. However, XMP is only a "container" format, so the fields (namespaces) used there to indicate how an image should be converted (as well as other metadata) differ between Lightroom/Photoshop, Darktable, and RawTherapee.
+    
+    In other words, just because an application generally supports XMP that doesn't mean it can use metadata created with another application or by another vendor like Adobe. If you think that's confusing, well, that's because it is. You have an open format, but you still suffer from vendor lock-in - probably not entirely unintentional on Adobe's part.
+
+    From our experience, some basic edits done with Adobe tools - such as cropping - might be preserved when you convert the same RAW image with other software like Darktable. Advanced edits, such as lens or color corrections, will likely not be applied.
+
+## Live Photos ##
+
+??? question "Why can't I play Live Photos or find stacks when I search for specific images?"
+
+    Our search API and user interface perform a file search. This is intentional since "stacks" can contain files of different types and properties, such as color.
+    
+    For example, there may be color and monochrome versions. Now, when you search for them or sort them by color, the user interface must display individual files. Otherwise, the results showing a color image/video when you filter by monochrome would make no sense.
+    
+    Likewise, if you search for `filename.mp4.*`, you will find only JPEGs without video, because the video file extension is `.mp4` without an extra dot at the end.
+
+    We recommend using the `path:` and/or `name:` filters with wildcards if searching for individual files limits the search results too much. Most users will want to find all related files so that they can be displayed together, e.g. as live photos consisting of a video and an image.
+    
+    You can combine these filters with other filters such as `live` to ensure that the results include only pictures with a specific media type. Alternatively, you can use the `filename:` filter with a more permissive wildcard that excludes the file extension.
+
 ## Metadata ##
 
 ??? question "Windows shows different metadata values. Could this be a bug in PhotoPrism?"
@@ -276,20 +306,6 @@
     * **Labels** may have parent categories and are primarily used for classification, like "animal", "cat", or "boat". Duplicates and ambiguities should be avoided.
 
     * **Keywords** are primarily used for searching. They may include similar terms and translations, like "kitten", "kitty", and "cat".
-
-## Live Photos ##
-
-??? question "Why can't I play Live Photos or find stacks when I search for specific images?"
-
-    Our search API and user interface perform a file search. This is intentional since "stacks" can contain files of different types and properties, such as color.
-    
-    For example, there may be color and monochrome versions. Now, when you search for them or sort them by color, the user interface must display individual files. Otherwise, the results showing a color image/video when you filter by monochrome would make no sense.
-    
-    Likewise, if you search for `filename.mp4.*`, you will find only JPEGs without video, because the video file extension is `.mp4` without an extra dot at the end.
-
-    We recommend using the `path:` and/or `name:` filters with wildcards if searching for individual files limits the search results too much. Most users will want to find all related files so that they can be displayed together, e.g. as live photos consisting of a video and an image.
-    
-    You can combine these filters with other filters such as `live` to ensure that the results include only pictures with a specific media type. Alternatively, you can use the `filename:` filter with a more permissive wildcard that excludes the file extension.
 
 ## Thumbnails ##
 

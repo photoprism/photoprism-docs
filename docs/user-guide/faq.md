@@ -109,12 +109,6 @@
 
 ## Maps & Places ##
 
-??? question "Why are the streets on the Places map no longer loading?"
-
-    The high-quality maps have been a paid feature for a long time, but were still available for testing. Since many users didn't realize this and simply used the commercial maps for free, this was [recently changed](https://github.com/photoprism/photoprism/issues/2998). Please see the [feature comparison on our website](https://www.photoprism.app/editions#compare) for reference. 
-
-    [Compare Memberships ›](https://www.photoprism.app/editions#compare)
-
 ??? question "Why are some pictures positioned at unvisited locations on the map?"
 
     PhotoPrism can estimate the location of pictures taken without GPS information by extrapolating it from the location of other pictures taken on the same day. These estimates can be [disabled in the settings](./settings/library.md) if you don't want them.

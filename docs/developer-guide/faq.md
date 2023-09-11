@@ -36,7 +36,7 @@ As explained above, reverse geocoding and interactive world maps depend on retri
 
 The API keys required to use the maps are unfortunately not free for us due to the number of users we have. Those costs are one of the reasons why we encourage all users to support our mission by [signing up as a member](https://www.photoprism.app/membership) or purchasing a [commercial license](https://www.photoprism.app/teams#compare).
 
-To improve the situation for those who don't want to or cannot [sign up](https://www.photoprism.app/editions#compare), it would be possible to add more details like cities and lakes to the basic maps. The only problem is that we don't have the resources to do it ourselves due to the large backlog of feature requests, so we hope someone can contribute this:
+To improve the situation for those who don't want to or cannot [sign up](https://www.photoprism.app/editions#compare), more details such as cities and lakes have been added to the freely available basic maps:
 
 - [Places: Improve the level of detail of the basic world map](https://github.com/photoprism/photoprism/issues/2998)
 

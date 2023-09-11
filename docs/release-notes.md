@@ -30,7 +30,7 @@ What's new?
 - Config: [A lower cache duration can be set for video content](https://github.com/photoprism/photoprism/issues/3631)
 - FFmpeg: [Removed deprecated `-vsync vfr` transcoding command flag](https://github.com/photoprism/photoprism/issues/3659#issuecomment-1707529050)
 - Docker: [Added support for `amdgpu` in `install-gpu.sh` script](https://github.com/photoprism/photoprism/pull/3710)
-- Security: [Go has been updated to v1.21.1, which includes bug fixes and enhancements](https://github.com/golang/go/issues?q=milestone%3AGo1.21.1)
+- Security: [Go has been updated to the latest stable version v1.21.1](https://github.com/golang/go/issues?q=milestone%3AGo1.21.1)
 - Translations: [Updated Chinese (Simplified and Traditional)](https://translate.photoprism.app/projects/photoprism/)
 
 ### July 19, 2023 ###

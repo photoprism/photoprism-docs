@@ -17,7 +17,7 @@ What's new?
 - Search: [Added `favorite:false` filter to find pictures not marked as favorites](https://github.com/photoprism/photoprism/commit/20d20c7fa923baa9b5041631b3bcf6873bc2c874)
 - Albums: [Current album is preselected when opening the upload dialog](https://github.com/photoprism/photoprism/issues/3644)
 - Albums: [Fixed preview image URL when sharing album links](https://github.com/photoprism/photoprism/issues/3658)
-- Albums: [Improved sharing preview that looks like a stack of Polaroid pictures](https://github.com/photoprism/photoprism/issues/3658#issuecomment-1711870557)
+- Albums: [New share preview showing album contents as a stack of Polaroids](https://github.com/photoprism/photoprism/issues/3658#issuecomment-1711870557)
 - Albums: [Last edited timestamp is updated when pictures are added](https://github.com/photoprism/photoprism/issues/3080)
 - People: [Fixed an error when reusing the name of a previously deleted person](https://github.com/photoprism/photoprism/issues/3414)
 - Places: [Added cluster view to browse pictures close to each other in an overlay](https://github.com/photoprism/photoprism/issues/1187)

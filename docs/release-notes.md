@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview` and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 230906-132284eb0</span>
+<span class="build">Build 230911-2159038c7</span>
 
 What's new?
 
@@ -17,6 +17,7 @@ What's new?
 - Search: [Added `favorite:false` filter to find pictures not marked as favorites](https://github.com/photoprism/photoprism/commit/20d20c7fa923baa9b5041631b3bcf6873bc2c874)
 - Albums: [Current album is preselected when opening the upload dialog](https://github.com/photoprism/photoprism/issues/3644)
 - Albums: [Fixed preview image URL when sharing album links](https://github.com/photoprism/photoprism/issues/3658)
+- Albums: [Improved sharing preview that looks like a stack of Polaroid pictures](https://github.com/photoprism/photoprism/issues/3658#issuecomment-1711870557)
 - Albums: [Last edited timestamp is updated when pictures are added](https://github.com/photoprism/photoprism/issues/3080)
 - People: [Fixed an error when reusing the name of a previously deleted person](https://github.com/photoprism/photoprism/issues/3414)
 - Places: [Added cluster view to browse pictures close to each other in an overlay](https://github.com/photoprism/photoprism/issues/1187)
@@ -29,7 +30,7 @@ What's new?
 - Config: [A lower cache duration can be set for video content](https://github.com/photoprism/photoprism/issues/3631)
 - FFmpeg: [Removed deprecated `-vsync vfr` transcoding command flag](https://github.com/photoprism/photoprism/issues/3659#issuecomment-1707529050)
 - Docker: [Added support for `amdgpu` in `install-gpu.sh` script](https://github.com/photoprism/photoprism/pull/3710)
-- Security: [Go has been updated to v1.21, which includes bug fixes and enhancements](https://github.com/golang/go/issues?q=milestone%3AGo1.21)
+- Security: [Go has been updated to v1.21.1, which includes bug fixes and enhancements](https://github.com/golang/go/issues?q=milestone%3AGo1.21.1)
 - Translations: [Updated Chinese (Simplified and Traditional)](https://translate.photoprism.app/projects/photoprism/)
 
 ### July 19, 2023 ###

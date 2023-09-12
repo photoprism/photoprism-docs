@@ -8,10 +8,11 @@ We recommend using a fast MicroSD card with at least 64 GB so that you don't run
 
 ## Step 1: Install balenaEtcher
 
-Etcher is a powerful OS image flasher that makes flashing an SD card a pleasant and safe experience. You can download it from the official website or GitHub:
+Etcher is a powerful OS image flasher that makes flashing an SD card a pleasant and safe experience.  You can download it from the official website or directly from GitHub.
 
-- <https://www.balena.io/etcher/>
-- <https://github.com/balena-io/etcher/releases>
+- Homepage: <https://www.balena.io/etcher/>
+- Intel / AMD: <https://github.com/balena-io/etcher/releases>
+- Apple Silicon: <https://github.com/Augmentedjs/balena-io-etcher-builds/releases>
 
 ## Step 2: Flash from URL
 

@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview` and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 230911-7cb1dcbd2</span>
+<span class="build">Build 230912-ee9743653</span>
 
 What's new?
 
@@ -13,6 +13,7 @@ What's new?
 - UX: [Edit dialog allows pasting latitude and longitude in a single operation](https://github.com/photoprism/photoprism/pull/3568)
 - Live Photos: [Added support for Samsung Motion Photos](https://github.com/photoprism/photoprism/issues/439)
 - Live Photos: [Fixed indexing of sidecar video file properties](https://github.com/photoprism/photoprism/issues/3559)
+- Videos: [Removed deprecated FFmpeg `-vsync vfr` transcoding command flag](https://github.com/photoprism/photoprism/issues/3659#issuecomment-1707529050)
 - Search: [Added `scan:false` filter to find photos that are not scans](https://github.com/photoprism/photoprism/commit/be0fdc1774266bd4ec09e01ab93496fb07a4cbed)
 - Search: [Added `favorite:false` filter to find pictures not marked as favorites](https://github.com/photoprism/photoprism/commit/20d20c7fa923baa9b5041631b3bcf6873bc2c874)
 - Albums: [New share preview shows album contents as a stack of Polaroids](https://github.com/photoprism/photoprism/issues/3658#issuecomment-1711870557)
@@ -28,8 +29,9 @@ What's new?
 - Metadata: [Added support for reading fstop favorite flag from XMP sidecar files](https://github.com/photoprism/photoprism/pull/1873)
 - Config: [Added support for serving HTTP requests over Unix sockets](https://github.com/photoprism/photoprism/issues/2337)
 - Config: [A lower cache duration can be set for video content](https://github.com/photoprism/photoprism/issues/3631)
-- FFmpeg: [Removed deprecated `-vsync vfr` transcoding command flag](https://github.com/photoprism/photoprism/issues/3659#issuecomment-1707529050)
-- Docker: [Added support for `amdgpu` in `install-gpu.sh` script](https://github.com/photoprism/photoprism/pull/3710)
+- Docker: [Added support for AMD GPUs in `install-gpu.sh` script](https://github.com/photoprism/photoprism/pull/3710)
+- Docker: [Added support for user ID ranges 1201-1250 and 2000-2100](https://github.com/photoprism/photoprism/issues/3719)
+- Security: [Reduced bcrypt cost for faster login on small devices](https://github.com/photoprism/photoprism/issues/3718)
 - Security: [Go has been updated to the latest stable release v1.21.1](https://github.com/golang/go/issues?q=milestone%3AGo1.21.1)
 - Translations: [Updated Chinese (Simplified and Traditional)](https://translate.photoprism.app/projects/photoprism/)
 

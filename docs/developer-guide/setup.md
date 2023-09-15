@@ -38,7 +38,6 @@ docker compose up
 ```
 
 *This environment is for testing and development purposes only. Do not use it in production. Also note that our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible Linux distributions.*
-*
 
 ### Step 3: Install the Dependencies and Start Developing
 

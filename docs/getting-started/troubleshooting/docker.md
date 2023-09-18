@@ -132,31 +132,18 @@ services:
       ...
 ```
 
-Then [restart all services](../docker-compose.md#step-2-start-the-server) for your changes to take effect:
+Now [restart all services](../docker-compose.md#step-2-start-the-server) for your changes to take effect:
 
 ```bash
 docker compose stop
 docker compose up -d
 ```
 
-
-
-To enable [debug mode](../config-options.md), set `PHOTOPRISM_DEBUG` to `"true"` in the `environment:` section
-of the `photoprism` service (or use the `--debug` flag when running the `photoprism` command directly):
-
-```yaml
-services:
-  photoprism:
-    environment:
-      PHOTOPRISM_DEBUG: "true"
-```
-
-Then restart all services for the changes to take effect. It can be helpful to keep Docker running in the foreground
-while debugging so that log messages are displayed directly. To do this, omit the `-d` parameter when restarting:
+It can also be helpful to keep Docker running in the foreground while debugging, so that log messages are displayed directly. To do this, omit the `-d` parameter when (re)starting:
 
 ```bash
 docker compose stop
-docker compose up 
+docker compose up
 ```
 
 !!! note ""

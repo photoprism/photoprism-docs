@@ -75,10 +75,24 @@ services:
       - ...
 ```
 
-Now [restart the services](../docker-compose.md#step-2-start-the-server) for the changes to take effect.
+In addition, you can choose to run the `photoprism` service as a non-root user by setting either the `user` [service property](https://docs.docker.com/compose/compose-file/05-services/#user) or the `PHOTOPRISM_UID` and `PHOTOPRISM_GID` [environment variables](../config-options.md#docker-image) in your `docker-compose.yml` file:
+
+| Environment              | Default | Description                                                                                                                                                                       |
+|--------------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PHOTOPRISM_UID           | 0       | run as a non-root user after initialization (supported: 0, 33, 50-99, 500-600, and 900-1200)                                                                                      |
+| PHOTOPRISM_GID           | 0       | run with a specific group id after initialization, can optionally be used together with `PHOTOPRISM_UID` (supported: 0, 33, 44, 50-99, 105, 109, 115, 116, 500-600, and 900-1200) |
+
+*Which user and group you choose should depend on the owner of the `/dev/dri` video device so that the service has permission to access it.*
+
+Finally, remember to [update the file permissions and/or owner](../troubleshooting/docker.md#file-permissions) with the `chmod` and `chown` commands when you make changes to the UID or GID, and [restart the services](../docker-compose.md#step-2-start-the-server) for your changes to take effect:
+
+```bash
+docker compose stop
+docker compose up -d
+```
 
 !!! info ""
-    Note that older hardware may not support certain [video codecs and resolutions](https://en.wikipedia.org/wiki/Intel_Quick_Sync_Video#Development). In this case, it is not possible to use hardware transcoding for these videos. We may later add a configuration option that allows you to downscale videos.
+    Older Intel hardware may not support certain [video codecs and resolutions](https://en.wikipedia.org/wiki/Intel_Quick_Sync_Video#Development). In this case, it is not possible to use hardware transcoding for these videos. We may later add a configuration option that allows you to downscale videos.
 
 ### NVIDIA Container Toolkit
 
@@ -107,7 +121,12 @@ services:
     ...
 ```
 
-Now [restart the services](../docker-compose.md#step-2-start-the-server) for the changes to take effect.
+Now [restart the services](../docker-compose.md#step-2-start-the-server) for your changes to take effect:
+
+```bash
+docker compose stop
+docker compose up -d
+```
 
 !!! info ""
     We also provide a [ready-to-use `docker-compose.yml` example](https://dl.photoprism.app/docker/nvidia/docker-compose.yml) for your convenience.
@@ -134,7 +153,12 @@ Additional advanced configuration options are available to improve stability if 
 PHOTOPRISM_FFMPEG_BUFFERS: "64" # FFmpeg capture buffers (default: 32)
 ```
 
-Now [restart the services](../docker-compose.md#step-2-start-the-server) for the changes to take effect.
+Now [restart the services](../docker-compose.md#step-2-start-the-server) for your changes to take effect:
+
+```bash
+docker compose stop
+docker compose up -d
+```
 
 !!! info ""
     Some server configurations, especially Raspberry Pi's, may experience memory allocation issues when using hardware acceleration. Carefully monitor your server's logs and increase the available GPU and/or CMA memory allocations if necessary. Note that the Raspberry Pi hardware currently only supports video resolutions up to 2160p.
@@ -158,7 +182,12 @@ services:
       ...
 ```
 
-Then restart all services for the changes to take effect.
+Then [restart all services](../docker-compose.md#step-2-start-the-server) for your changes to take effect:
+
+```bash
+docker compose stop
+docker compose up -d
+```
 
 [Learn more ›](../troubleshooting/docker.md#viewing-logs)
 
@@ -166,6 +195,9 @@ Then restart all services for the changes to take effect.
     If [FFmpeg is disabled](../config-options.md#feature-flags) or not installed, videos cannot be indexed because still images cannot be created.
     You should also have [Exiftool enabled](../config-options.md#feature-flags) to extract metadata such as duration, resolution, and codec.
     Note that your hardware may not support certain video codecs and resolutions. In this case, the software encoder is used automatically.
+
+!!! tldr ""
+    Our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible Linux distributions.
 
 !!! example ""
     **Help improve these docs!** You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.

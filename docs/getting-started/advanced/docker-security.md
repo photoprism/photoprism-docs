@@ -4,9 +4,24 @@
 
 ## Run Services as Non-Root User
 
-It is recommended that you run the PhotoPrism service as a non-root user by setting either the `user` [service property](https://docs.docker.com/compose/compose-file/05-services/#user) or the `PHOTOPRISM_UID` [environment variable](../config-options.md#docker-image) in your `docker-compose.yml` file.
+It is recommended that you run the `photoprism` service as a non-root user by setting either the `user` [service property](https://docs.docker.com/compose/compose-file/05-services/#user) or the `PHOTOPRISM_UID` and `PHOTOPRISM_GID` [environment variable](../config-options.md#docker-image) in your `docker-compose.yml` file:
 
-Remember to [update the file permissions and/or ownership](../troubleshooting/docker.md#file-permissions) with the `chmod` and `chown` commands when you make changes to these settings.
+| Environment              | Default | Description                                                                                                                                                                       |
+|--------------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PHOTOPRISM_UID           | 0       | run as a non-root user after initialization (supported: 0, 33, 50-99, 500-600, and 900-1200)                                                                                      |
+| PHOTOPRISM_GID           | 0       | run with a specific group id after initialization, can optionally be used together with `PHOTOPRISM_UID` (supported: 0, 33, 44, 50-99, 105, 109, 115, 116, 500-600, and 900-1200) |
+
+*If you are using [hardware video transcoding](transcoding.md), it should depend on the owner of the video device which user and group you choose so that the service has permission to access it.*
+
+Finally, remember to [update the file permissions and/or owner](../troubleshooting/docker.md#file-permissions) with the `chmod` and `chown` commands when you make changes to the UID or GID, and [restart the services](../docker-compose.md#step-2-start-the-server) for your changes to take effect:
+
+```bash
+docker compose stop
+docker compose up -d
+```
+
+!!! tldr ""
+    Note that our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible Linux distributions.
 
 ## Remove Passwords From the Environment
 

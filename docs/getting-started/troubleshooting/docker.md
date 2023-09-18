@@ -115,10 +115,10 @@ On Linux, Docker manipulates the `iptables` rules to provide network isolation. 
 
 ## Viewing Logs
 
-Run this command to display the last 100 log messages (omit `--tail=100` to see all):
+Run this command to watch the logs including the last 100 messages (omit `--tail=100` to see all):
 
 ```bash
-docker compose logs --tail=100
+docker compose logs -f --tail=100 
 ```
 
 To enable [debug mode](../config-options.md), set `PHOTOPRISM_DEBUG` to `"true"` in the `environment:` section

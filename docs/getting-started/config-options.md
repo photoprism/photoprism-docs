@@ -240,10 +240,10 @@ If you start the server as a *daemon* in the background, you can additionally sp
 
 The following variables are used by our Docker images only and have no effect otherwise:
 
-| Environment              | Default | Description                                                                                         |
-|--------------------------|---------|-----------------------------------------------------------------------------------------------------|
-| PHOTOPRISM_UID           | 0       | run as a non-root user after initialization (supported: 0, 33, 50-99, 500-600, and 900-1200)        |
-| PHOTOPRISM_GID           | 0       | run with a specific group id after initialization, to be used together with `PHOTOPRISM_UID`        |
-| PHOTOPRISM_UMASK         | 0002    | [file-creation mode](https://linuxize.com/post/umask-command-in-linux/) (default: u=rwx,g=rwx,o=rx) |
-| PHOTOPRISM_INIT          |         | run/install on first startup (options: update https gpu tensorflow davfs clitools clean)            |
-| PHOTOPRISM_DISABLE_CHOWN | false   | disable updating storage permissions via chmod and chown on startup                                 |
+| Environment              | Default | Description                                                                                                                                                                       |
+|--------------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PHOTOPRISM_UID           | 0       | run as a non-root user after initialization (supported: 0, 33, 50-99, 500-600, and 900-1200)                                                                                      |
+| PHOTOPRISM_GID           | 0       | run with a specific group id after initialization, can optionally be used together with `PHOTOPRISM_UID` (supported: 0, 33, 44, 50-99, 105, 109, 115, 116, 500-600, and 900-1200) |
+| PHOTOPRISM_UMASK         | 0002    | [file-creation mode](https://linuxize.com/post/umask-command-in-linux/) (default: u=rwx,g=rwx,o=rx)                                                                               |
+| PHOTOPRISM_INIT          |         | run/install on first startup (options: update https gpu tensorflow davfs clitools clean)                                                                                          |
+| PHOTOPRISM_DISABLE_CHOWN | false   | disable updating storage permissions via chmod and chown on startup                                                                                                               |

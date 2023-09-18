@@ -121,6 +121,26 @@ You can run this command to watch the Docker service logs, including the last 10
 docker compose logs -f --tail=100 
 ```
 
+A good way to troubleshoot configuration issues is to increase the log level. To enable [trace log mode](../config-options.md), set `PHOTOPRISM_LOG_LEVEL` to `"trace"` in the `environment:` section of the `photoprism` service (or use the `--trace` flag when running the `photoprism` command directly):
+
+
+```yaml
+services:
+  photoprism:
+    environment:
+      PHOTOPRISM_LOG_LEVEL: "trace"
+      ...
+```
+
+Then [restart all services](../docker-compose.md#step-2-start-the-server) for your changes to take effect:
+
+```bash
+docker compose stop
+docker compose up -d
+```
+
+
+
 To enable [debug mode](../config-options.md), set `PHOTOPRISM_DEBUG` to `"true"` in the `environment:` section
 of the `photoprism` service (or use the `--debug` flag when running the `photoprism` command directly):
 

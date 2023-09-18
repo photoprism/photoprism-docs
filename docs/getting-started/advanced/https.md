@@ -86,3 +86,54 @@ docker run --rm -v "/opt/photoprism/storage/config/certificates:/data/" goacme/l
 ```
 
 Before running the command to request a certificate, also make sure that you have set your secret API token with the environment variable `DO_AUTH_TOKEN` (you can create one in the customer dashboard). For other providers the configuration is different, so you need to check the [documentation](https://go-acme.github.io/lego/usage/cli/obtain-a-certificate/).
+
+## Troubleshooting
+
+### Enabling Trace Log Mode
+
+A good way to troubleshoot configuration issues is to increase the log level. To enable [trace log mode](../config-options.md), set `PHOTOPRISM_LOG_LEVEL` to `"trace"` in the `environment:` section of the `photoprism` service (or use the `--trace` flag when running the `photoprism` command directly):
+
+
+```yaml
+services:
+  photoprism:
+    environment:
+      PHOTOPRISM_LOG_LEVEL: "trace"
+      ...
+```
+
+Then [restart all services](../docker-compose.md#step-2-start-the-server) for your changes to take effect:
+
+```bash
+docker compose stop
+docker compose up -d
+```
+
+### Viewing Docker Service Logs
+
+You can run this command to check the server logs for warnings and errors, including the last 100 messages (omit `--tail=100` to see them all, and `-f` to output only the last logs without watching them):
+
+```bash
+docker compose logs -f --tail=100 
+```
+
+[Learn more ›](../troubleshooting/docker.md#viewing-logs)
+
+### Failed to Find Any PEM Data in Key Input
+
+This error can indicate that your key file starts with an unexpected Byte Order Mark (BOM):
+
+- https://www.google.com/search?q=failed+to+find+any+pem+data+tls+golang
+- https://stackoverflow.com/questions/57596920/failed-to-find-any-pem-data-in-key
+
+While BOMs are not strictly forbidden, there is only one way to encode UTF-8, and so they are not needed and extremely rare. As a result, a lot of software has problems with them.
+
+You should be able to fix this by opening the file with a regular text or code editor (not Notepad) and then saving it again. Finally, restart all services for the changes to take effect:
+
+```bash
+docker compose stop
+docker compose up -d
+```
+
+!!! tldr ""
+    Our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible Linux distributions.

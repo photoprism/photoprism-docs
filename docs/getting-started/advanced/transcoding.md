@@ -171,14 +171,16 @@ Which devices need to be shared and whether additional drivers are required depe
 
 ## Troubleshooting
 
-A good way to troubleshoot transcoding issues is to increase the log level and examine the entire FFmpeg command and its output. To enable [debug mode](../config-options.md), set `PHOTOPRISM_DEBUG` to `"true"` in the `environment:` section of the `photoprism` service (or use the `--debug` flag when running the `photoprism` command directly):
+### Enabling Trace Log Mode
+
+A good way to troubleshoot configuration issues is to increase the log level. To enable [trace log mode](../config-options.md), set `PHOTOPRISM_LOG_LEVEL` to `"trace"` in the `environment:` section of the `photoprism` service (or use the `--trace` flag when running the `photoprism` command directly):
 
 
 ```yaml
 services:
   photoprism:
     environment:
-      PHOTOPRISM_DEBUG: "true"
+      PHOTOPRISM_LOG_LEVEL: "trace"
       ...
 ```
 
@@ -187,6 +189,14 @@ Then [restart all services](../docker-compose.md#step-2-start-the-server) for yo
 ```bash
 docker compose stop
 docker compose up -d
+```
+
+### Viewing Docker Service Logs
+
+You can run this command to check the server logs for warnings and errors, including the last 100 messages (omit `--tail=100` to see them all, and `-f` to output only the last logs without watching them):
+
+```bash
+docker compose logs -f --tail=100 
 ```
 
 [Learn more ›](../troubleshooting/docker.md#viewing-logs)

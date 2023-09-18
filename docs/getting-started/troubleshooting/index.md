@@ -7,7 +7,7 @@
 
 ### Connection Fails ###
 
-If [your browser](browsers.md) cannot connect to the Web UI even after waiting a few minutes, run this command to watch the logs including the last 100 messages (omit `--tail=100` to see all):
+If [your browser](browsers.md) cannot connect to the Web UI even after waiting a few minutes, run this command to watch the logs including the last 100 messages (omit `--tail=100` to see them all, and `-f` to output only the last logs without watching them):
 
 ```bash
 docker compose logs -f --tail=100

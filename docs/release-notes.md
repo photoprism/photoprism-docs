@@ -32,7 +32,7 @@ What's new?
 - Metadata: [Added support for reading fstop favorite flag from XMP sidecar files](https://github.com/photoprism/photoprism/pull/1873)
 - Config: [Added support for serving HTTP requests over Unix sockets](https://github.com/photoprism/photoprism/issues/2337)
 - Config: [A lower cache duration can be set for video content](https://github.com/photoprism/photoprism/issues/3631)
-- SQLite: [Updates are performed in batches to reduce the number of variables](https://github.com/photoprism/photoprism/issues/3742)
+- SQLite: [Updates are performed in batches to limit the number of variables](https://github.com/photoprism/photoprism/issues/3742)
 - Docker: [Added support for user ID ranges 1201-1250 and 2000-2100](https://github.com/photoprism/photoprism/issues/3719)
 - Security: [Reduced bcrypt cost for faster login on small devices](https://github.com/photoprism/photoprism/issues/3718)
 - Security: [Go has been updated to the latest stable release v1.21.1](https://github.com/golang/go/issues?q=milestone%3AGo1.21.1)

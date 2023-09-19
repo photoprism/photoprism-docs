@@ -2,18 +2,13 @@
 
 At a minimum, a backup of PhotoPrism should include the files in [your *originals* folder](../../getting-started/docker-compose.md#photoprismoriginals) and a copy of the index database. We also recommend backing up [the *storage* folder](../../getting-started/docker-compose.md#photoprismstorage) so that you don't need to recreate any thumbnail or sidecar files, and your backup includes the complete configuration.
 
-=== "MariaDB"
-
-    1. The easiest way to create a full backup is to first run the backup command to generate a MariaDB database dump as shown below.
-    2. Then back up your *originals* and *storage* folders using any standard file backup utility.
-
-=== "SQLite"
-
-    A full backup of both folders is mandatory, but it is not necessary to [create a dump](../../getting-started/advanced/backups.md#sqlite-backups) first, as there already is a copy of the index database in the *storage* folder.
+!!! tldr ""
+    The easiest way to create a full backup is to first run the backup command to generate a database dump as shown below.
+    Then back up your *originals* and *storage* folders using any standard file backup utility.
 
 ## Backup Command
 
-The easiest way to create an index SQL dump of MariaDB is to run the backup command in a terminal:
+The easiest way to create an SQL dump from MariaDB or SQLite is to run the backup command in a terminal:
 
 ```
 docker compose exec photoprism photoprism backup -i -f
@@ -33,7 +28,7 @@ Omit the `-f` flag if you do not want to overwrite existing files. You can also 
 docker compose exec photoprism photoprism backup -i [filename]
 ```
 
-How to create SQL dumps from SQLite is shown in our [advanced backup guide](../../getting-started/advanced/backups.md).
+Alternative ways to create SQL dumps from SQLite are shown in our [advanced backup guide](../../getting-started/advanced/backups.md#sqlite-backups).
 
 !!! tldr ""
     Note that our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible Linux distributions.

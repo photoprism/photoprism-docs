@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview` and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 230919-405d56237</span>
+<span class="build">Build 230919-b65362b35</span>
 
 What's new?
 
@@ -23,6 +23,7 @@ What's new?
 - Places: [Added map style and scale controls](https://github.com/photoprism/photoprism/issues/2106)
 - Archive: [Added "Sweep" button to delete all archived pictures with one click](https://github.com/photoprism/photoprism/issues/3701)
 - Library: [Added option for admins to perform index and cache cleanup from the UI](https://github.com/photoprism/photoprism/issues/3699)
+- Library: [Fixed escaping of hash marks in folder names](https://github.com/photoprism/photoprism/issues/3695)
 - Live Photos: [Added support for Samsung Motion Photos](https://github.com/photoprism/photoprism/issues/439)
 - Live Photos: [Fixed indexing of sidecar video file properties](https://github.com/photoprism/photoprism/issues/3559)
 - Videos: [Added support for AMD GPUs in `install-gpu.sh` script](https://github.com/photoprism/photoprism/pull/3710)
@@ -31,6 +32,7 @@ What's new?
 - Metadata: [Added support for reading fstop favorite flag from XMP sidecar files](https://github.com/photoprism/photoprism/pull/1873)
 - Config: [Added support for serving HTTP requests over Unix sockets](https://github.com/photoprism/photoprism/issues/2337)
 - Config: [A lower cache duration can be set for video content](https://github.com/photoprism/photoprism/issues/3631)
+- SQLite: [Updates are performed in batches to reduce the number of variables](https://github.com/photoprism/photoprism/issues/3742)
 - Docker: [Added support for user ID ranges 1201-1250 and 2000-2100](https://github.com/photoprism/photoprism/issues/3719)
 - Security: [Reduced bcrypt cost for faster login on small devices](https://github.com/photoprism/photoprism/issues/3718)
 - Security: [Go has been updated to the latest stable release v1.21.1](https://github.com/golang/go/issues?q=milestone%3AGo1.21.1)

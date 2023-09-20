@@ -26,7 +26,7 @@ What's new?
 - Places: [Added map style selector and a scale for comparing distances](https://github.com/photoprism/photoprism/issues/2106)
 - Archive: [Added "Delete All" button to permanently delete all archived files](https://github.com/photoprism/photoprism/issues/3701)
 - Library: [Added option for admins to perform index and cache cleanup from the UI](https://github.com/photoprism/photoprism/issues/3699)
-- Library: [Fixed escaping of hash marks in folder names](https://github.com/photoprism/photoprism/issues/3695)
+- Library: [Fixed escaping of hash characters in folder names](https://github.com/photoprism/photoprism/issues/3695)
 - Live Photos: [Added support for Samsung Motion Photos](https://github.com/photoprism/photoprism/issues/439)
 - Live Photos: [Fixed indexing of sidecar video file properties](https://github.com/photoprism/photoprism/issues/3559)
 - Videos: [Added support for AMD GPUs in `install-gpu.sh` script](https://github.com/photoprism/photoprism/pull/3710)

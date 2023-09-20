@@ -23,7 +23,7 @@ What's new?
 - Places: [Added cluster view to browse pictures close to each other in an overlay](https://github.com/photoprism/photoprism/issues/1187)
 - Places: [Added support sub-km distances when searching for locations](https://github.com/photoprism/photoprism/issues/3558)
 - Places: [Added map style and scale controls](https://github.com/photoprism/photoprism/issues/2106)
-- Archive: [Added "Delete All" button to purge all archived files with one click](https://github.com/photoprism/photoprism/issues/3701)
+- Archive: [Added "Delete All" button to permanently delete all archived files](https://github.com/photoprism/photoprism/issues/3701)
 - Library: [Added option for admins to perform index and cache cleanup from the UI](https://github.com/photoprism/photoprism/issues/3699)
 - Library: [Fixed escaping of hash marks in folder names](https://github.com/photoprism/photoprism/issues/3695)
 - Live Photos: [Added support for Samsung Motion Photos](https://github.com/photoprism/photoprism/issues/439)

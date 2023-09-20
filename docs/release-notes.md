@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview` and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 230920-267430bf7</span>
+<span class="build">Build 230920-a86530066</span>
 
 What's new?
 
@@ -22,7 +22,8 @@ What's new?
 - People: [Fixed an error when reusing the name of a previously deleted person](https://github.com/photoprism/photoprism/issues/3414)
 - Places: [Added cluster view to browse pictures close to each other in an overlay](https://github.com/photoprism/photoprism/issues/1187)
 - Places: [Added support sub-km distances when searching for locations](https://github.com/photoprism/photoprism/issues/3558)
-- Places: [Added map style and scale controls](https://github.com/photoprism/photoprism/issues/2106)
+- Places: [Added support for `label` and `category` search filters](https://github.com/photoprism/photoprism/commit/a865300666bfa26f8de47ac3fb19a31617f97056)
+- Places: [Added map style selector and a scale for comparing distances](https://github.com/photoprism/photoprism/issues/2106)
 - Archive: [Added "Delete All" button to permanently delete all archived files](https://github.com/photoprism/photoprism/issues/3701)
 - Library: [Added option for admins to perform index and cache cleanup from the UI](https://github.com/photoprism/photoprism/issues/3699)
 - Library: [Fixed escaping of hash marks in folder names](https://github.com/photoprism/photoprism/issues/3695)

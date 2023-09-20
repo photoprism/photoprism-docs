@@ -4,13 +4,14 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview` and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 230920-90e72bb48</span>
+<span class="build">Build 230920-58b66e395</span>
 
 What's new?
 
 - UX: [Added a preview image to the Labels tab in the photo edit dialog](https://github.com/photoprism/photoprism/pull/3532)
 - UX: [Reduced padding in mosaic view in favor of larger thumbnails](https://github.com/photoprism/photoprism/issues/3572)
 - UX: [Edit dialog allows pasting latitude and longitude in a single operation](https://github.com/photoprism/photoprism/pull/3568)
+- UX: [Reduced the number of info notifications in the user interface](https://github.com/photoprism/photoprism/issues/3608)
 - Themes: [Improved UI styles and added "Chrome" as well as "Mint"](https://github.com/photoprism/photoprism/commit/20df14e9d16b456a5edbc456544f875ee9da16a4)
 - Search: [Added `scan:false` filter to find photos that are not scans](https://github.com/photoprism/photoprism/commit/be0fdc1774266bd4ec09e01ab93496fb07a4cbed)
 - Search: [Added `favorite:false` filter to find pictures not marked as favorites](https://github.com/photoprism/photoprism/commit/20d20c7fa923baa9b5041631b3bcf6873bc2c874)

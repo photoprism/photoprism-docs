@@ -12,7 +12,7 @@ What's new?
 - UX: [Reduced padding in mosaic view in favor of larger thumbnails](https://github.com/photoprism/photoprism/issues/3572)
 - UX: [Edit dialog allows pasting latitude and longitude in a single operation](https://github.com/photoprism/photoprism/pull/3568)
 - UX: [Reduced the number of info notifications in the user interface](https://github.com/photoprism/photoprism/issues/3608)
-- Themes: [Improved UI styles and added "Chrome" as well as "Mint"](https://github.com/photoprism/photoprism/commit/20df14e9d16b456a5edbc456544f875ee9da16a4)
+- UX: [Improved user interface styles, added new "Chrome" and "Mint" themes](https://github.com/photoprism/photoprism/commit/20df14e9d16b456a5edbc456544f875ee9da16a4)
 - Search: [Added `scan:false` filter to find photos that are not scans](https://github.com/photoprism/photoprism/commit/be0fdc1774266bd4ec09e01ab93496fb07a4cbed)
 - Search: [Added `favorite:false` filter to find pictures not marked as favorites](https://github.com/photoprism/photoprism/commit/20d20c7fa923baa9b5041631b3bcf6873bc2c874)
 - Albums: [New share preview shows album contents as a stack of Polaroids](https://github.com/photoprism/photoprism/issues/3658#issuecomment-1711870557)

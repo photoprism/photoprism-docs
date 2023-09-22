@@ -24,6 +24,9 @@ Automatically creates JPEG or PNG preview images for other file types so they ca
 
 ## Stacks ##
 
+!!! warning ""
+    When you change the stacking settings, already stacked files will not be unstacked automatically.
+
 Stacks are groups of files that have the same origin but differ in quality, format, size, or color. Go to *[Photos > Stacks](../organize/stacks.md)* to see all the picture stacks in your library.
 
 PhotoPrism offers three methods for stacking files:
@@ -32,7 +35,15 @@ PhotoPrism offers three methods for stacking files:
 * :material-fingerprint: **Unique ID**, matches the *Unique Image ID* (Exif), *Document ID*, or *Instance ID* (XMP)
 * :material-format-list-numbered-rtl: **Sequential Name**, for example `/2018/IMG_1234 (2).jpg` and `/2018/IMG_1234 (3).jpg`
 
-Files that have exactly the same file and folder name are always stacked, for example `/2018/IMG_1234.jpg` and `/2018/IMG_1234.avi`.
+!!! info "Sequential Name Patterns"
+    Files with the following name patterns will get stacked with `/2018/IMG_1234.jpg` in case stacking by **sequential name** is enabled
+    
+    - `/2018/IMG_1234 (2).jpg` `/2018/IMG_1234 (3).jpg`
+     
+    - `/2018/IMG_1234 copy.jpg` `/2018/IMG_1234 copy 1.jpg` `/2018/IMG_1234 copy 2.jpg`
+    
+    - `/2018/IMG_1234 (-2.7)` `/2018/IMG_1234 (+3.3).jpg` `/2018/IMG_1234(-2.7).jpg`  `/2018/IMG_1234(+3.3).jpg`
 
-!!! warning ""
-    When you change the stacking settings, already stacked files will not be unstacked automatically.
+
+Files that have exactly the same file and folder name are **always** stacked, for example `/2018/IMG_1234.jpg` and `/2018/IMG_1234.avi`.
+

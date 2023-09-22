@@ -5,12 +5,20 @@ Photos and videos must be [archived](./archive.md) before they can be deleted pe
 
 Before you start, make sure the **Delete** feature is enabled in [Settings](../settings/general.md).
 
-### Delete Files ###
+### Delete Selected Files ###
 
-1. Go to *Archive*
-2. Select the photos and videos your want to delete
-2. Click context menu
-3. Click :material-delete:
-4. Confirm
+1. Select the photos and videos your want to delete
+2. Go to *Archive*
+3. Click context menu
+4. Click :material-delete:
+5. Confirm
 
    ![Screenshot](img/delete-dark.jpg){ class="shadow" }
+
+### Delete All Archived Photos ###
+
+1. Go to *Archive*
+2. Click :material-delete-sweep:
+3. Click *Delete All*
+
+   ![Screenshot](img/delete-all-dark.jpg){ class="shadow" }

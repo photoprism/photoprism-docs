@@ -21,4 +21,3 @@ Content that is archived is not deleted but it will not appear in any section ap
 4. Click :material-archive-arrow-up:
 
     ![Screenshot](img/restore-light.jpg){ class="shadow" }
-

@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview` and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 230920-b378d14b8</span>
+<span class="build">Build 230922-529103462</span>
 
 What's new?
 
@@ -28,11 +28,13 @@ What's new?
 - Library: [Added option for admins to perform index and cache cleanup from the UI](https://github.com/photoprism/photoprism/issues/3699)
 - Library: [Fixed escaping of hash characters in folder names](https://github.com/photoprism/photoprism/issues/3695)
 - Live Photos: [Added support for Samsung Motion Photos](https://github.com/photoprism/photoprism/issues/439)
+- Live Photos: [Added support for Google Camera Motion Photos](https://github.com/photoprism/photoprism/issues/1739)
 - Live Photos: [Fixed indexing of sidecar video file properties](https://github.com/photoprism/photoprism/issues/3559)
 - Videos: [Added support for AMD GPUs in `install-gpu.sh` script](https://github.com/photoprism/photoprism/pull/3710)
 - Videos: [Removed deprecated FFmpeg `-vsync vfr` command flag](https://github.com/photoprism/photoprism/issues/3659#issuecomment-1707529050)
 - Metadata: [Changed order of field names from which the title is extracted](https://github.com/photoprism/photoprism/commit/82dac4b7db65f1e490d3cd26a17b122832b0445f)
 - Metadata: [Added support for reading fstop favorite flag from XMP sidecar files](https://github.com/photoprism/photoprism/pull/1873)
+- Metadata: [Samsung/Google Motion Photos are flagged as Live Photos](https://github.com/photoprism/photoprism/issues/2788)
 - Config: [Added support for serving HTTP requests over Unix sockets](https://github.com/photoprism/photoprism/issues/2337)
 - Config: [A lower cache duration can be set for video content](https://github.com/photoprism/photoprism/issues/3631)
 - SQLite: [Updates are performed in batches to limit the number of variables](https://github.com/photoprism/photoprism/issues/3742)

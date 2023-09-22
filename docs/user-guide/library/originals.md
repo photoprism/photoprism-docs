@@ -64,6 +64,10 @@ We recommend performing a complete rescan after major updates to take advantage 
 !!! tldr ""
     Manually entered information such as labels, people, titles or descriptions will not be modified when indexing, even if you perform a "complete rescan".
 
+
+#### Cleanup ####
+Admins have the option to select the "Cleanup". When files are indexed with this option, PhotoPrism deletes orphaned index entries, sidecar files, and thumbnails after the indexing process.
+
 #### Automatic Indexing ####
 
 Indexing is triggered automatically when files are [synced with the *originals* folder via WebDAV](../sync/webdav.md).

@@ -35,15 +35,13 @@ PhotoPrism offers three methods for stacking files:
 * :material-fingerprint: **Unique ID**, matches the *Unique Image ID* (Exif), *Document ID*, or *Instance ID* (XMP)
 * :material-format-list-numbered-rtl: **Sequential Name**, for example `/2018/IMG_1234 (2).jpg` and `/2018/IMG_1234 (3).jpg`
 
-!!! info "Sequential Name Patterns"
+Files that have exactly the same file and folder name are **always** stacked, for example `/2018/IMG_1234.jpg` and `/2018/IMG_1234.avi`.
+
+!!! info "Sequential Naming Examples"
     Files with the following name patterns will get stacked with `/2018/IMG_1234.jpg` in case stacking by **sequential name** is enabled
-    
+
     - `/2018/IMG_1234 (2).jpg` `/2018/IMG_1234 (3).jpg`
      
     - `/2018/IMG_1234 copy.jpg` `/2018/IMG_1234 copy 1.jpg` `/2018/IMG_1234 copy 2.jpg`
     
     - `/2018/IMG_1234 (-2.7)` `/2018/IMG_1234 (+3.3).jpg` `/2018/IMG_1234(-2.7).jpg`  `/2018/IMG_1234(+3.3).jpg`
-
-
-Files that have exactly the same file and folder name are **always** stacked, for example `/2018/IMG_1234.jpg` and `/2018/IMG_1234.avi`.
-

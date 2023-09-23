@@ -6,7 +6,7 @@
 ### September 23, 2023 ###
 <span class="build">Build 230923-e59851350</span>
 
-Our latest release includes a [redesigned Places view](https://user-images.githubusercontent.com/301686/269433540-cd48e79f-b2a8-4fb5-bc54-52467b15b743.jpg), with the search box moved to the top and a preview for selected clusters at the bottom. We've also added support for [Samsung](https://github.com/photoprism/photoprism/issues/439)/[Google Motion Photos](https://github.com/photoprism/photoprism/issues/1739), so you can view them like Apple Live Photos after re-indexing your library. Beyond those highlights, you'll get many usability improvements, new search filters, and fixes for recently discovered issues. A big thank you to everyone who contributed!
+Our [latest release](getting-started/updates.md) includes a [redesigned Places view](https://user-images.githubusercontent.com/301686/269433540-cd48e79f-b2a8-4fb5-bc54-52467b15b743.jpg), with the search box moved to the top and a preview for selected clusters at the bottom. We've also added support for [Samsung](https://github.com/photoprism/photoprism/issues/439)/[Google Motion Photos](https://github.com/photoprism/photoprism/issues/1739), so you can view them like Apple Live Photos after [re-indexing your library](user-guide/library/originals.md). Beyond those highlights, you'll get many usability improvements, new search filters, and fixes for recently discovered issues. A big thank you to [everyone who contributed](https://github.com/photoprism/photoprism/graphs/contributors)!
 
 What's new?
 

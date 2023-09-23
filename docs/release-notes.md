@@ -3,8 +3,10 @@
 !!! note ""
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview` and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
-### Development Preview ###
-<span class="build">Build 230923-8b6de380d</span>
+### September 23, 2023 ###
+<span class="build">Build 230923-e59851350</span>
+
+Our latest release includes a [redesigned Places view](https://user-images.githubusercontent.com/301686/269433540-cd48e79f-b2a8-4fb5-bc54-52467b15b743.jpg), with the search box moved to the top and a preview for selected clusters at the bottom. We've also added support for [Samsung](https://github.com/photoprism/photoprism/issues/439)/[Google Motion Photos](https://github.com/photoprism/photoprism/issues/1739), so you can view them like Apple Live Photos after re-indexing your library. Beyond those highlights, you'll get many usability improvements, new search filters, and fixes for recently discovered issues. A big thank you to everyone who contributed!
 
 What's new?
 

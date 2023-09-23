@@ -66,8 +66,7 @@ We recommend performing a complete rescan after major updates to take advantage 
 
 
 #### Cleanup ####
-Admins have the option to select the "Cleanup". When files are indexed with this option, PhotoPrism deletes orphaned index entries, sidecar files, and thumbnails after the indexing process.
-
+Admins can optionally enable the cleanup option to delete unused thumbnails from the cache folder and remove orphaned index entries. If you do this from time to time, it can speed up indexing and reduce storage usage.
 #### Automatic Indexing ####
 
 Indexing is triggered automatically when files are [synced with the *originals* folder via WebDAV](../sync/webdav.md).

@@ -32,7 +32,6 @@ To display all global config flags and variables, you can run `photoprism --help
 Default values, including the *config* path to use, may optionally be specified in a [`defaults.yml` file](defaults.md) located in `/etc/photoprism`. A custom default config filename can be set with the `PHOTOPRISM_DEFAULTS_YAML` variable or the `--defaults-yaml` flag.
 
 ## Config Options
-
 ### Authentication ###
 
 |       Name       |  Type  |       CLI Flag       |
@@ -156,6 +155,7 @@ Default values, including the *config* path to use, may optionally be specified 
 | HttpMode          | string   | --http-mode          |
 | HttpCompression   | string   | --http-compression   |
 | HttpCacheMaxAge   | int      | --http-cache-maxage  |
+| HttpVideoMaxAge   | int      | --http-video-maxage  |
 | HttpCachePublic   | bool     | --http-cache-public  |
 | HttpHost          | string   | --http-host          |
 | HttpPort          | int      | --http-port          |

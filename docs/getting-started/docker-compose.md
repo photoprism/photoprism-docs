@@ -325,7 +325,7 @@ docker compose exec -u $UID photoprism bash
 #### Changing the User ID
 
 Specifying a user via `-u $UID` is possible for all commands you run with Docker Compose. In the following examples, it is omitted for brevity.
-The currently supported user ID ranges are 0, 33, 50-99, 500-600, and 900-1200. Note that commands will otherwise be executed as *root*.
+The currently supported user ID ranges are 0, 33, 50-99, 500-600, 900-1250, and 2000-2100. Note that commands will otherwise be executed as *root*.
 
 !!! tip ""
     We also recommend running the PhotoPrism service as a non-root user by setting either the [user service property](https://docs.docker.com/compose/compose-file/#user) or the `PHOTOPRISM_UID` [environment variable](config-options.md#docker-image) in the `docker-compose.yml` file. Don't forget to update file permissions and/or ownership with the `chown` command when you make changes.

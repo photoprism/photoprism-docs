@@ -126,10 +126,10 @@
 
 |           Environment           |        CLI Flag        |    Default    | Description                                                                                             |
 |---------------------------------|------------------------|---------------|---------------------------------------------------------------------------------------------------------|
-| PHOTOPRISM_DISABLE_TLS          | --disable-tls          |               | disable HTTPS/TLS even if the site URL starts with *https://* and a certificate is available            |
+| PHOTOPRISM_DISABLE_TLS          | --disable-tls          |               | disable HTTPS/TLS even if the site URL starts with https:// and a certificate is available              |
 | PHOTOPRISM_DEFAULT_TLS          | --default-tls          |               | default to a self-signed HTTPS/TLS certificate if no other certificate is available                     |
-| PHOTOPRISM_TLS_CERT             | --tls-cert             |               | public HTTPS certificate `FILE` (.crt)                                                                  |
-| PHOTOPRISM_TLS_KEY              | --tls-key              |               | private HTTPS key `FILE` (.key)                                                                         |
+| PHOTOPRISM_TLS_CERT             | --tls-cert             |               | public HTTPS certificate `FILE` (.crt), ignored for Unix domain sockets                                 |
+| PHOTOPRISM_TLS_KEY              | --tls-key              |               | private HTTPS key `FILE` (.key), ignored for Unix domain sockets                                        |
 | PHOTOPRISM_DISABLE_STS          | --disable-sts          |               | disable HTTP Strict-Transport-Security (STS) header                                                     |
 | PHOTOPRISM_STS_SECONDS          | --sts-seconds          |      31536000 | `TIME` for the browser to remember that the site is to be accessed only via HTTPS (0 to disable) *plus* |
 | PHOTOPRISM_STS_SUBDOMAINS       | --sts-subdomains       |               | rule applies to all subdomains as well *plus*                                                           |
@@ -147,9 +147,10 @@
 | PHOTOPRISM_HTTP_MODE            | --http-mode            |               | Web server `MODE` (debug, release, test)                                                                |
 | PHOTOPRISM_HTTP_COMPRESSION     | --http-compression     |               | Web server compression `METHOD` (gzip, none)                                                            |
 | PHOTOPRISM_HTTP_CACHE_MAXAGE    | --http-cache-maxage    |       2592000 | time in `SECONDS` until cached content expires                                                          |
+| PHOTOPRISM_HTTP_VIDEO_MAXAGE    | --http-video-maxage    |         21600 | time in `SECONDS` until cached videos expire                                                            |
 | PHOTOPRISM_HTTP_CACHE_PUBLIC    | --http-cache-public    |               | allow static content to be cached by a CDN or caching proxy                                             |
-| PHOTOPRISM_HTTP_HOST            | --http-host            |               | Web server `IP` address                                                                                 |
-| PHOTOPRISM_HTTP_PORT            | --http-port            |          2342 | Web server port `NUMBER`                                                                                |
+| PHOTOPRISM_HTTP_HOST            | --http-host            | 0.0.0.0       | Web server `IP` address or Unix domain socket, e.g. unix:/var/run/photoprism.sock                       |
+| PHOTOPRISM_HTTP_PORT            | --http-port            |          2342 | Web server port `NUMBER`, ignored for Unix domain sockets                                               |
 | PHOTOPRISM_HTTP_HOSTNAME        | --http-hostname        |               | serve requests for this `HOSTNAME` only *plus*                                                          |
 
 ### Database Connection ###
@@ -167,27 +168,27 @@
 
 ### File Converters ###
 
-| Environment                      | CLI Flag                | Default                        | Description                                                                     |
-|----------------------------------|-------------------------|--------------------------------|---------------------------------------------------------------------------------|
-| PHOTOPRISM_SIPS_BIN              | --sips-bin              | sips                           | Sips `COMMAND` for media file conversion *macOS only*                           |
-| PHOTOPRISM_SIPS_BLACKLIST        | --sips-blacklist        | avif,avifs                     | do not use Sips to convert files with these `EXTENSIONS` *macOS only*           |
-| PHOTOPRISM_FFMPEG_BIN            | --ffmpeg-bin            | ffmpeg                         | FFmpeg `COMMAND` for video transcoding and thumbnail extraction                 |
-| PHOTOPRISM_FFMPEG_ENCODER        | --ffmpeg-encoder        | libx264                        | FFmpeg AVC encoder `NAME`                                                       |
-| PHOTOPRISM_FFMPEG_SIZE           | --ffmpeg-size           | 3840                           | [maximum video size in `PIXELS`](advanced/transcoding.md#size-limit) (720-7680) |
-| PHOTOPRISM_FFMPEG_BITRATE        | --ffmpeg-bitrate        | 50                             | [maximum video `BITRATE` in Mbit/s ](advanced/transcoding.md#bitrate-limit)     |
-| PHOTOPRISM_FFMPEG_MAP_VIDEO      | --ffmpeg-map-video      | `0:v:0`                        | video `STREAMS` that should be transcoded                                       |
-| PHOTOPRISM_FFMPEG_MAP_AUDIO      | --ffmpeg-map-audio      | `0:a:0?`                       | audio `STREAMS` that should be transcoded                                       |
-| PHOTOPRISM_EXIFTOOL_BIN          | --exiftool-bin          | exiftool                       | ExifTool `COMMAND` for extracting metadata                                      |
-| PHOTOPRISM_DARKTABLE_BIN         | --darktable-bin         | darktable-cli                  | Darktable CLI `COMMAND` for RAW to JPEG conversion                              |
-| PHOTOPRISM_DARKTABLE_BLACKLIST   | --darktable-blacklist   |                                | do not use Darktable to convert files with these `EXTENSIONS`                   |
-| PHOTOPRISM_DARKTABLE_CACHE_PATH  | --darktable-cache-path  |                                | custom Darktable cache `PATH`                                                   |
-| PHOTOPRISM_DARKTABLE_CONFIG_PATH | --darktable-config-path |                                | custom Darktable config `PATH`                                                  |
-| PHOTOPRISM_RAWTHERAPEE_BIN       | --rawtherapee-bin       | rawtherapee-cli                | RawTherapee CLI `COMMAND` for RAW to JPEG conversion                            |
-| PHOTOPRISM_RAWTHERAPEE_BLACKLIST | --rawtherapee-blacklist | dng                            | do not use RawTherapee to convert files with these `EXTENSIONS`                 |
-| PHOTOPRISM_IMAGEMAGICK_BIN       | --imagemagick-bin       | convert                        | ImageMagick CLI `COMMAND` for image file conversion                             |
-| PHOTOPRISM_IMAGEMAGICK_BLACKLIST | --imagemagick-blacklist | heif,heic,heics,avif,avifs,jxl | do not use ImageMagick to convert files with these `EXTENSIONS`                 |
-| PHOTOPRISM_HEIFCONVERT_BIN       | --heifconvert-bin       | heif-convert                   | libheif HEIC image conversion `COMMAND`                                         |
-| PHOTOPRISM_RSVGCONVERT_BIN       | --rsvgconvert-bin       | rsvg-convert                   | librsvg SVG graphics conversion `COMMAND` *plus*                                |
+| Environment                      | CLI Flag                | Default                        | Description                                                           |
+|----------------------------------|-------------------------|--------------------------------|-----------------------------------------------------------------------|
+| PHOTOPRISM_SIPS_BIN              | --sips-bin              | sips                           | Sips `COMMAND` for media file conversion *macOS only*                 |
+| PHOTOPRISM_SIPS_BLACKLIST        | --sips-blacklist        | avif,avifs                     | do not use Sips to convert files with these `EXTENSIONS` *macOS only* |
+| PHOTOPRISM_FFMPEG_BIN            | --ffmpeg-bin            | ffmpeg                         | FFmpeg `COMMAND` for video transcoding and thumbnail extraction       |
+| PHOTOPRISM_FFMPEG_ENCODER        | --ffmpeg-encoder        | libx264                        | FFmpeg AVC encoder `NAME`                                             |
+| PHOTOPRISM_FFMPEG_SIZE           | --ffmpeg-size           | 3840                           | maximum video size in `PIXELS` (720-7680)                             |
+| PHOTOPRISM_FFMPEG_BITRATE        | --ffmpeg-bitrate        | 50                             | maximum video `BITRATE` in Mbit/s                                     |
+| PHOTOPRISM_FFMPEG_MAP_VIDEO      | --ffmpeg-map-video      | `0:v:0`                        | video `STREAMS` that should be transcoded                             |
+| PHOTOPRISM_FFMPEG_MAP_AUDIO      | --ffmpeg-map-audio      | `0:a:0?`                       | audio `STREAMS` that should be transcoded                             |
+| PHOTOPRISM_EXIFTOOL_BIN          | --exiftool-bin          | exiftool                       | ExifTool `COMMAND` for extracting metadata                            |
+| PHOTOPRISM_DARKTABLE_BIN         | --darktable-bin         | darktable-cli                  | Darktable CLI `COMMAND` for RAW to JPEG conversion                    |
+| PHOTOPRISM_DARKTABLE_BLACKLIST   | --darktable-blacklist   |                                | do not use Darktable to convert files with these `EXTENSIONS`         |
+| PHOTOPRISM_DARKTABLE_CACHE_PATH  | --darktable-cache-path  |                                | custom Darktable cache `PATH`                                         |
+| PHOTOPRISM_DARKTABLE_CONFIG_PATH | --darktable-config-path |                                | custom Darktable config `PATH`                                        |
+| PHOTOPRISM_RAWTHERAPEE_BIN       | --rawtherapee-bin       | rawtherapee-cli                | RawTherapee CLI `COMMAND` for RAW to JPEG conversion                  |
+| PHOTOPRISM_RAWTHERAPEE_BLACKLIST | --rawtherapee-blacklist | dng                            | do not use RawTherapee to convert files with these `EXTENSIONS`       |
+| PHOTOPRISM_IMAGEMAGICK_BIN       | --imagemagick-bin       | convert                        | ImageMagick CLI `COMMAND` for image file conversion                   |
+| PHOTOPRISM_IMAGEMAGICK_BLACKLIST | --imagemagick-blacklist | heif,heic,heics,avif,avifs,jxl | do not use ImageMagick to convert files with these `EXTENSIONS`       |
+| PHOTOPRISM_HEIFCONVERT_BIN       | --heifconvert-bin       | heif-convert                   | libheif HEIC image conversion `COMMAND`                               |
+| PHOTOPRISM_RSVGCONVERT_BIN       | --rsvgconvert-bin       | rsvg-convert                   | librsvg SVG graphics conversion `COMMAND` *plus*                      |
 
 ### Security Tokens ###
 
@@ -240,10 +241,10 @@ If you start the server as a *daemon* in the background, you can additionally sp
 
 The following variables are used by our Docker images only and have no effect otherwise:
 
-| Environment              | Default | Description                                                                                                                                                                       |
-|--------------------------|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| PHOTOPRISM_UID           | 0       | run as a non-root user after initialization (supported: 0, 33, 50-99, 500-600, and 900-1200)                                                                                      |
-| PHOTOPRISM_GID           | 0       | run with a specific group id after initialization, can optionally be used together with `PHOTOPRISM_UID` (supported: 0, 33, 44, 50-99, 105, 109, 115, 116, 500-600, and 900-1200) |
-| PHOTOPRISM_UMASK         | 0002    | [file-creation mode](https://linuxize.com/post/umask-command-in-linux/) (default: u=rwx,g=rwx,o=rx)                                                                               |
-| PHOTOPRISM_INIT          |         | run/install on first startup (options: update https gpu tensorflow davfs clitools clean)                                                                                          |
-| PHOTOPRISM_DISABLE_CHOWN | false   | disable updating storage permissions via chmod and chown on startup                                                                                                               |
+| Environment              | Default | Description                                                                                                                                                                                  |
+|--------------------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PHOTOPRISM_UID           | 0       | run as a non-root user after initialization (supported: 0, 33, 50-99, 500-600, and 900-1250, and 2000-2100)                                                                                  |
+| PHOTOPRISM_GID           | 0       | run with a specific group id after initialization, can optionally be used together with `PHOTOPRISM_UID` (supported: 0, 33, 44, 50-99, 105, 109, 115, 116, 500-600, 900-1250, and 2000-2100) |
+| PHOTOPRISM_UMASK         | 0002    | [file-creation mode](https://linuxize.com/post/umask-command-in-linux/) (default: u=rwx,g=rwx,o=rx)                                                                                          |
+| PHOTOPRISM_INIT          |         | run/install on first startup (options: update https gpu tensorflow davfs clitools clean)                                                                                                     |
+| PHOTOPRISM_DISABLE_CHOWN | false   | disable updating storage permissions via chmod and chown on startup                                                                                                                          |

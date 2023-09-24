@@ -8,8 +8,8 @@
 
 What's new?
 
-- RAW: [Show original media information in cards view details](https://github.com/photoprism/photoprism/issues/2040)
-- Videos: [Cache embedded media to allow streaming and transcoding](https://github.com/photoprism/photoprism/issues/3764)
+- RAW: [Original media information is shown in the cards view details](https://github.com/photoprism/photoprism/issues/2040)
+- Motion Photos: [Embedded videos can be streamed and transcoded](https://github.com/photoprism/photoprism/issues/3764)
 
 ### September 23, 2023 ###
 <span class="build">Build 230923-e59851350</span>

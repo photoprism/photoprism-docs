@@ -103,49 +103,54 @@ This is a complete list of supported search filters with examples. Filters can g
 
 |  Filter   |   Type    |               Examples                |                                                                   Notes                                                                    |
 |-----------|-----------|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| dist      | decimal   | dist:50                               | Distance to Position (km)                                                                                                                  |
 | fmax      | decimal   | fmax:1.245                            | F-number (max)                                                                                                                             |
 | fmin      | decimal   | fmin:1.245                            | F-number (min)                                                                                                                             |
-| lat       | decimal   | lat:1.245                             | Latitude (GPS Position)                                                                                                                    |
-| lng       | decimal   | lng:1.245                             | Longitude (GPS Position)                                                                                                                   |
+| lat       | decimal   | lat:41.894043                         | GPS Position (Latitude)                                                                                                                    |
+| lng       | decimal   | lng:-87.62448                         | GPS Position (Longitude)                                                                                                                   |
 | chroma    | number    | chroma:70                             | Chroma (0-100)                                                                                                                             |
 | diff      | number    | diff:-1 diff:2                        | Differential Perceptual Hash (000000-FFFFFF)                                                                                               |
-| dist      | number    | dist:5                                | Distance in km in combination with lat/lng                                                                                                 |
-| quality   | number    | quality:0 quality:3                   | Quality Score (0-7)                                                                                                                        |
+| quality   | number    | quality:0 quality:3                   | Minimum quality score (1-7)                                                                                                                |
 | album     | string    | album:berlin                          | Album UID or Name, supports * wildcards                                                                                                    |
-| albums    | string    | albums:"South Africa & Birds"         | Album Names, can be combined with & and \|                                                                                                 |
+| albums    | string    | albums:"South Africa & Birds"         | Album Names (combinable with & and \|)                                                                                                     |
 | camera    | string    | camera:canon                          | Camera Make/Model Name                                                                                                                     |
-| category  | string    | category:"name"                       | Location Category Name                                                                                                                     |
-| city      | string    | city:"Berlin"                         | Name of City (Location), OR search with \|                                                                                                 |
-| color     | string    | color:"red\|blue"                     | Color Name (purple, magenta, pink, red, orange, gold, yellow, lime, green, teal, cyan, blue, brown, white, grey, black), OR search with \| |
-| country   | string    | country:"de\|us"                      | Country Code, OR search with \|                                                                                                            |
-| day       | string    | day:3\|13                             | Day of Month (1-31), OR search with \|                                                                                                     |
+| category  | string    | category:airport                      | Location Category                                                                                                                          |
+| city      | string    | city:"Berlin"                         | Location City (separate with \|)                                                                                                           |
+| color     | string    | color:"red\|blue"                     | Color Name (purple, magenta, pink, red, orange, gold, yellow, lime, green, teal, cyan, blue, brown, white, grey, black) (separate with \|) |
+| country   | string    | country:"de\|us"                      | Location Country Code (separate with \|)                                                                                                   |
+| day       | string    | day:3\|13                             | Day of Month (1-31, separate with \|)                                                                                                      |
 | face      | string    | face:PN6QO5INYTUSAATOFL43LL2ABAV5ACZG | Face ID, yes, no, new, or kind                                                                                                             |
 | faces     | string    | faces:yes faces:3                     | Minimum number of Faces (yes = 1)                                                                                                          |
-| filename  | string    | filename:"2021/07/12345.jpg"          | File Name with path and extension, OR search with \|                                                                                       |
-| folder    | string    | folder:"*/2020"                       | Path Name, OR search with \|, supports * wildcards                                                                                         |
-| hash      | string    | hash:2fd4e1c67a2d                     | SHA1 File Hash, OR search with \|                                                                                                          |
+| favorite  | string    | favorite:true favorite:false          | Finds images by favorite status                                                                                                            |
+| filename  | string    | filename:"2021/07/12345.jpg"          | File Name with path and extension (separate with \|)                                                                                       |
+| folder    | string    | folder:"*/2020"                       | Path Name (separate with \|), supports * wildcards                                                                                         |
+| geo       | string    | geo:yes                               | Finds pictures with or without coordinates                                                                                                 |
+| hash      | string    | hash:2fd4e1c67a2d                     | SHA1 File Hash (separate with \|)                                                                                                          |
 | id        | string    | id:123e4567-e89b-...                  | Finds pictures by Exif UID, XMP Document ID or Instance ID                                                                                 |
-| keywords  | string    | keywords:"buffalo&water"              | Keywords, can be combined with & and \|                                                                                                    |
-| label     | string    | label:cat\|dog                        | Label Name, OR search with \|                                                                                                              |
+| keywords  | string    | keywords:"sand&water"                 | Keywords (combinable with & and \|)                                                                                                        |
+| label     | string    | label:cat\|dog                        | Label Names (separate with \|)                                                                                                             |
+| latlng    | string    | latlng:"name"                         | GPS Bounding Box (Lat N, Lng E, Lat S, Lng W)                                                                                              |
 | lens      | string    | lens:ef24                             | Lens Make/Model Name                                                                                                                       |
-| month     | string    | month:7\|10                           | Month (1-12), OR search with \|                                                                                                            |
-| name      | string    | name:"IMG_9831-112*"                  | File Name without path and extension, OR search with \|                                                                                    |
-| original  | string    | original:"IMG_9831-112*"              | Original file name of imported files, OR search with \|                                                                                    |
-| path      | string    | path:2020/Holiday                     | Path Name, OR search with \|, supports * wildcards                                                                                         |
-| people    | string    | people:"Jane & John"                  | Subject Names, can be combined with & and \|                                                                                               |
-| person    | string    | person:"Jane Doe & John Doe"          | Subject Names, exact matches, can be combined with & and \|                                                                                |
-| state     | string    | state:"Baden-Württemberg"             | Name of State (Location), OR search with \|                                                                                                |
+| month     | string    | month:7\|10                           | Month (1-12, separate with \|)                                                                                                             |
+| name      | string    | name:"IMG_9831-112*"                  | File Name without path and extension (separate with \|)                                                                                    |
+| near      | string    | near:pqbcf5j446s0futy                 | Finds nearby pictures (UID)                                                                                                                |
+| olc       | string    | olc:8FWCHX7W+                         | OLC Position (Open Location Code)                                                                                                          |
+| original  | string    | original:"IMG_9831-112*"              | Original file name of imported files (separate with \|)                                                                                    |
+| path      | string    | path:2020/Holiday                     | Path Name (separate with \|), supports * wildcards                                                                                         |
+| people    | string    | people:"Jane & John"                  | Subject Names (combinable with & and \|)                                                                                                   |
+| person    | string    | person:"Jane Doe & John Doe"          | Subject Names, exact matches (combinable with & and \|)                                                                                    |
+| s2        | string    | s2:4799e370ca54c8b9                   | S2 Position (Cell ID)                                                                                                                      |
+| scan      | string    | scan:true scan:false                  | Finds scanned photos and documents                                                                                                         |
+| state     | string    | state:"Baden-Württemberg"             | Location State (separate with \|)                                                                                                          |
 | subject   | string    | subject:"Jane Doe & John Doe"         | Alias for person                                                                                                                           |
 | subjects  | string    | subjects:"Jane & John"                | Alias for people                                                                                                                           |
-| title     | string    | title:"Lake*"                         | Title, OR search with \|                                                                                                                   |
-| type      | string    | type:raw                              | Media Type (image, video, raw, live, animated); OR search with \|                                                                          |
+| title     | string    | title:"Lake*"                         | Title (separate with \|)                                                                                                                   |
+| type      | string    | type:raw                              | Media Type (image, video, raw, live, animated); separate with \|                                                                           |
 | uid       | string    | uid:pqbcf5j446s0futy                  | Limits results to the specified internal unique IDs                                                                                        |
-| year      | string    | year:1990\|2003                       | Year Number, OR search with \|                                                                                                             |
+| year      | string    | year:1990\|2003                       | Year (separate with \|)                                                                                                                    |
 | animated  | switch    | animated:yes                          | Finds animated GIFs                                                                                                                        |
 | archived  | switch    | archived:yes                          | Finds archived pictures                                                                                                                    |
 | error     | switch    | error:yes                             | Finds pictures with errors                                                                                                                 |
-| favorite  | switch    | favorite:yes                          | Finds favorites only                                                                                                                       |
-| geo       | switch    | geo:yes                               | Finds pictures with GPS location                                                                                                           |
 | hidden    | switch    | hidden:yes                            | Finds hidden pictures (broken or unsupported)                                                                                              |
 | landscape | switch    | landscape:yes                         | Finds pictures in landscape format                                                                                                         |
 | live      | switch    | live:yes                              | Finds Live Photos and short videos                                                                                                         |
@@ -158,7 +163,6 @@ This is a complete list of supported search filters with examples. Filters can g
 | public    | switch    | public:yes                            | Excludes private pictures                                                                                                                  |
 | raw       | switch    | raw:yes                               | Finds pictures with RAW image file                                                                                                         |
 | review    | switch    | review:yes                            | Finds pictures in review                                                                                                                   |
-| scan      | switch    | scan:yes                              | Finds scanned images and documents                                                                                                         |
 | square    | switch    | square:yes                            | Finds images with an aspect ratio of 1:1                                                                                                   |
 | stack     | switch    | stack:yes                             | Finds pictures with more than one media file                                                                                               |
 | stackable | switch    | stackable:yes                         | Finds pictures that can be stacked with additional media files                                                                             |
@@ -167,9 +171,7 @@ This is a complete list of supported search filters with examples. Filters can g
 | vector    | switch    | vector:yes                            | Finds vector graphics only                                                                                                                 |
 | video     | switch    | video:yes                             | Finds video files only                                                                                                                     |
 | after     | timestamp | after:"2022-01-30"                    | Finds pictures taken after this date                                                                                                       |
-| before    | timestamp | before:"2022-01-30"                   | Finds pictures taken before this date                                                                                                      |
-
-
+| before    | timestamp | before:"2022-01-30"                   | Finds pictures taken before this date    
 
 !!! question "Why can't I play live photos or find stacks when I search for specific images?"
     Our search API and user interface perform a file search. This is intentional since "stacks" can contain files of different types and properties, such as color.

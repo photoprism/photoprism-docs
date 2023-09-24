@@ -3,6 +3,14 @@
 !!! note ""
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview` and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
+### Development Preview ###
+<span class="build">Build 230924-9cfd9c0b6</span>
+
+What's new?
+
+- RAW: [Show original media information in cards view details](https://github.com/photoprism/photoprism/issues/2040)
+- Videos: [Cache embedded media to allow streaming and transcoding](https://github.com/photoprism/photoprism/issues/3764)
+
 ### September 23, 2023 ###
 <span class="build">Build 230923-e59851350</span>
 

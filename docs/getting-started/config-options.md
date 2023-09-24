@@ -243,7 +243,7 @@ The following variables are used by our Docker images only and have no effect ot
 
 | Environment              | Default | Description                                                                                                                                                                                  |
 |--------------------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| PHOTOPRISM_UID           | 0       | run as a non-root user after initialization (supported: 0, 33, 50-99, 500-600, and 900-1250, and 2000-2100)                                                                                  |
+| PHOTOPRISM_UID           | 0       | run as a non-root user after initialization (supported: 0, 33, 50-99, 500-600, 900-1250, and 2000-2100)                                                                                      |
 | PHOTOPRISM_GID           | 0       | run with a specific group id after initialization, can optionally be used together with `PHOTOPRISM_UID` (supported: 0, 33, 44, 50-99, 105, 109, 115, 116, 500-600, 900-1250, and 2000-2100) |
 | PHOTOPRISM_UMASK         | 0002    | [file-creation mode](https://linuxize.com/post/umask-command-in-linux/) (default: u=rwx,g=rwx,o=rx)                                                                                          |
 | PHOTOPRISM_INIT          |         | run/install on first startup (options: update https gpu tensorflow davfs clitools clean)                                                                                                     |

@@ -1,12 +1,8 @@
 # Camera Brands and Models 
 
-## Most Popular Brands on Flickr
-
-<https://www.flickr.com/cameras>
-
 ## Market Share by Brand (2016)
 
-**DSLR Cameras:**
+**DSLR Cameras**
 
 | Brand                  | Share |
 |------------------------|-------|
@@ -23,6 +19,10 @@
 | Sony    | 17.9% |
 
 See also [Brands with the highest market share 2016](https://www.bilderrampe.de/2017/02/22/kamerahersteller-wer-hatte-2016-den-groessten-marktanteil/).
+
+## Most Popular Brands on Flickr
+
+<https://www.flickr.com/cameras>
 
 ## Camera Models Supported by Photoshop
 

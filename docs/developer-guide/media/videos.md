@@ -1,34 +1,28 @@
 # Video File Support
 
-For maximum browser compatibility, PhotoPrism can transcode video codecs and containers [supported by FFmpeg](https://www.ffmpeg.org/documentation.html) to [MPEG-4 AVC](https://en.wikipedia.org/wiki/MPEG-4), as well as extract still images for thumbnail creation:
+## Codecs and Containers
 
-- if [FFmpeg is disabled](../../getting-started/config-options.md#feature-flags) or not installed, indexing and importing videos is not possible because still images cannot be created
-- if [Exiftool is disabled](../../getting-started/config-options.md#feature-flags) or not installed, indexing and importing videos is only partially possible because the video metadata cannot be extracted and thus the duration, resolution, and codec are unknown
-- [MPEG-4 AVC](https://en.wikipedia.org/wiki/MPEG-4) videos can be [played natively by most modern browsers](https://caniuse.com/mpeg4) and are not re-encoded, even if they exceed the [configured bitrate limit](../../getting-started/advanced/transcoding.md#bitrate-limiting); to reduce the size of AVC videos, you can manually replace the original files with a smaller version or wait for a future release that offers this functionality
-- OGV, VP8, VP9, AV1, WebM, and HEVC videos will be streamed directly if they are supported by your browser and do not exceed the [configured bitrate limit](../../getting-started/advanced/transcoding.md#bitrate-limiting)
-- other formats must always be transcoded
+For maximum browser compatibility, PhotoPrism can transcode video codecs and containers [supported by FFmpeg](https://www.ffmpeg.org/documentation.html) to [MPEG-4 AVC](https://en.wikipedia.org/wiki/MPEG-4).
 
-You can view a list of codecs that FFmpeg supports by executing this command in a terminal:
+Running the following command in a terminal displays a list of supported codecs:
 
 ```
 ffmpeg -decoders
 ```
 
-Our setup guide for advanced users explains how to [configure hardware video transcoding](../../getting-started/advanced/transcoding.md).
+See our advanced setup guide to learn how to [configure hardware video transcoding](https://docs.photoprism.app/getting-started/advanced/transcoding/).
 
-Please note:
+Please Note:
 
-1. Not all [video and audio formats](https://caniuse.com/?search=video%20format) can be [played with every browser](../../getting-started/troubleshooting/browsers.md). For example, [AAC](https://caniuse.com/aac "Advanced Audio Coding") - the default audio codec for [MPEG-4 AVC / H.264](https://caniuse.com/avc "Advanced Video Coding") - is supported natively in Chrome, Safari, and Edge, while it is only optionally supported by the OS in Firefox and Opera.
+1. Not all [video and audio formats](https://caniuse.com/?search=video%20format) can be [played with every browser](https://docs.photoprism.app/getting-started/troubleshooting/browsers/). For example, [AAC](https://caniuse.com/aac "Advanced Audio Coding") - the default audio codec for [MPEG-4 AVC / H.264](https://caniuse.com/avc "Advanced Video Coding") - is supported natively in Chrome, Safari, and Edge, while it is only optionally supported by the OS in Firefox and Opera.
 2. HEVC/H.265 video files can have a `.mp4` file extension too, which is often associated with AVC only. This is because MP4 is a *container* format, meaning that the actual video content may be compressed with H.264, H.265, or something else. The file extension doesn't really tell you anything other than that it's probably a video file.
+3. In case [FFmpeg is disabled](https://docs.photoprism.app/user-guide/settings/advanced/#disable-ffmpeg) or not installed, videos cannot be indexed because still images cannot be created. You should also have [Exiftool enabled](https://docs.photoprism.app/getting-started/config-options/#feature-flags) to extract metadata such as duration, resolution, and codec.
 
-!!! info ""
-    Although the QuickTime `.mov` container format served as the basis for MPEG-4, there are differences and the two are not strictly interchangeable. Nevertheless, they can be played in most browsers and are not automatically transcoded for this reason.
+## Hybrid Photo/Video Formats
 
-!!! tldr ""
-    In case [FFmpeg is disabled](../../user-guide/settings/advanced.md#disable-ffmpeg) or not installed, videos cannot be indexed because still images cannot be created.
-    You should also have [Exiftool enabled](../../getting-started/config-options.md#feature-flags) to extract metadata such as duration, resolution, and codec.   
+For more information on hybrid photo/video file formats, e.g. Apple Live Photos and Samsung/Google Motion Photos, see [github.com/photoprism/photoprism/tree/develop/pkg/live](https://github.com/photoprism/photoprism/tree/develop/pkg/live) and [/developer-guide/media/live/](live.md).
 
-## Resolutions
+## Standard Resolutions
 
 The [`PHOTOPRISM_FFMPEG_SIZE`](../../getting-started/config-options.md#file-converters) config option allows to limit the resolution of [transcoded videos](../../getting-started/advanced/transcoding.md). It accepts the following standard sizes, while other values are automatically adjusted to the next supported size:
 
@@ -54,9 +48,5 @@ The [`PHOTOPRISM_FFMPEG_SIZE`](../../getting-started/config-options.md#file-conv
 | List of file signatures (Wikipedia) | https://en.wikipedia.org/wiki/List_of_file_signatures                       |
 | How to use the io.Reader interface  | https://yourbasic.org/golang/io-reader-interface-explained/                 |
 | AV1 Codec ISO Media File Format     | https://aomediacodec.github.io/av1-isobmff                                  |
-
-## Hybrid Photo/Video Formats
-
-For more information on hybrid photo/video file formats, e.g. Apple Live Photos and Samsung/Google Motion Photos, see [/developer-guide/media/live/](live.md).
 
 *[HEVC]: High Efficiency Video Coding / H.265

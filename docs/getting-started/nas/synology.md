@@ -112,8 +112,8 @@ The default compose file should work on any Synology NAS, with the following mod
 - PHOTOPRISM_SITE_URL: change the IP to the one of your NAS (if not using a reverse proxy)
 - change the default passwords
 - if the NAS has an Intel CPU capable of QSV hardware transcoding, set these 4 lines in the "Hardware Video Transcoding" and "devices" sections:
- - `PHOTOPRISM_FFMPEG_ENCODER: "intel"` and `PHOTOPRISM_INIT: "gpu intel tensorflow"`
- - uncomment `devices:` and `- "/dev/dri:/dev/dri"` below
+  - `PHOTOPRISM_FFMPEG_ENCODER: "intel"` and `PHOTOPRISM_INIT: "gpu intel tensorflow"`
+  - uncomment `devices:` and `- "/dev/dri:/dev/dri"` below
 - the Synology folder structure should be something like `/volume1/photo/originals`	- assuming a single-volume Synology NAS - check your path in the Synology File Station (right click a folder and select Properties)
 
 The resulting Compose file should look somewhat like this:
@@ -263,7 +263,8 @@ services:
       # - "~/.docker/config.json:/config.json" # optional, for authentication if you have a Docker Hub account
 ```
 
-After the containers are deployed, give it some minutes to initialise, and connect to your instance of Photoprism with your browser ip-to-your-nas:port and login.
+After the containers are deployed, give it some minutes to initialise, and connect to your instance of Photoprism with your browser `ip-to-your-nas:port` and login.
+
 Note: for first time setups, the MariaDB container might take a long time to initialise and the Photoprism container might crash due to timing out - just watch the logs of MariaDB until it's ready and then restart the Photoprism container.
 
 

@@ -1,6 +1,6 @@
 # Migrating from SQLite to MariaDB
 
-*For advanced users only: The instructions for these migrations were provided by a contributor and are not part of the original software distribution. As such, they have not been officially released, recommended, or extensively tested by us. You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.*
+*While we believe this contributed content may be helpful to advanced users, we have not yet thoroughly reviewed it. If you have suggestions for improvement, please let us know by clicking :material-file-edit-outline: to submit a change request.*
 
 - Install <https://github.com/techouse/sqlite3-to-mysql> on your host. (openSUSE: `zypper in python-sqlite3-to-mysql`)
 - Shutdown your current stack: `docker compose down`

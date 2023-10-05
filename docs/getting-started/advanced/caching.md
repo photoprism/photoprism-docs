@@ -1,5 +1,7 @@
 # Optimizing Cache Performance
 
+*While we believe this post may be helpful to advanced users, we have not yet reviewed it thoroughly. If you have any suggestions for improvement, please let us know by clicking :material-file-edit-outline: to submit a change request.*
+
 *For advanced users only. This guide is maintained by the community and may contain inaccurate or incomplete advice. You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.*
 
 Some users might want to place the thumbnail cache on a separate, faster file

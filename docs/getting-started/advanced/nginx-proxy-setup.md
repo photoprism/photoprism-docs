@@ -1,6 +1,6 @@
 # Advanced NGINX Proxy Setup
 
-*For advanced users only. This guide is maintained by the community and may contain inaccurate or incomplete advice. You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.*
+*While we believe this contributed content may be helpful to advanced users, we have not yet thoroughly reviewed it. If you have suggestions for improvement, please let us know by clicking :material-file-edit-outline: to submit a change request.*
 
 !!! danger "Getting Support"
     Since [NGINX](../proxies/nginx.md) is [notoriously difficult](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+nginx) to configure, we unfortunately can't offer you support in case something isn't working. If you have NGINX related issues such as failed uploads, [connection errors](../troubleshooting/index.md#connection-fails), [broken thumbnails](../troubleshooting/index.md#broken-thumbnails), and [video playback problems](../troubleshooting/index.md#videos-dont-play), we recommend that you [ask the NGINX community for advice](https://www.nginx.com/support/) or try to [use Traefik as a reverse proxy](../proxies/traefik.md), as it is easier to configure and much more convenient to work with overall.

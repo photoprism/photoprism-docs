@@ -1,6 +1,6 @@
 # Advanced Database Setup
 
-*Note that this guide is intended for advanced users and that our [docker-compose.yml examples](https://dl.photoprism.app/docker/) already contain a tested and working database configuration. You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.*
+*While we believe this contributed content may be helpful to advanced users, we have not yet thoroughly reviewed it. If you have suggestions for improvement, please let us know by clicking :material-file-edit-outline: to submit a change request.*
 
 ## Compatibility
 

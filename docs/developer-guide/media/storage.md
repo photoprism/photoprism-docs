@@ -1,12 +1,20 @@
-We need to add file system abstraction, also to speed up testing. Afero seems to be the gold standard for this in the Go world:
+# File System Storage
 
-https://github.com/spf13/afero
+At the moment, [all media and sidecar files](index.md) as well as [thumbnail images](thumbnails.md) are stored directly in the server's file system, see [Config Options](../../getting-started/config-options.md#storage).
 
-## Issues ##
+## Abstraction
+
+We may eventually want to add a filesystem abstraction e.g. to speed up testing or support cloud storage. Afero seems to be the gold standard for this in the Go world:
+
+- https://github.com/spf13/afero
+
+## Related Issues
+
 - [Embedded Database + Bleve for search? #55](https://github.com/photoprism/photoprism/issues/55)
 - [Postgres support? #47](https://github.com/photoprism/photoprism/issues/47)
 
-## External Resources ##
+## External Resources
+
 - https://github.com/rclone/rclone - rsync for cloud storage (Google Drive, AWS, One Drive, ...)
 - https://github.com/minio - Object Storage for AI
 - [upper.io/db.v3](https://github.com/upper/db) - a productive data access layer for Go

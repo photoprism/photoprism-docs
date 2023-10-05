@@ -1,4 +1,4 @@
-# Videos #
+# Video File Support
 
 For maximum browser compatibility, PhotoPrism can transcode video codecs and containers [supported by FFmpeg](https://www.ffmpeg.org/documentation.html) to [MPEG-4 AVC](https://en.wikipedia.org/wiki/MPEG-4), as well as extract still images for thumbnail creation:
 
@@ -28,7 +28,7 @@ Please note:
     In case [FFmpeg is disabled](../../user-guide/settings/advanced.md#disable-ffmpeg) or not installed, videos cannot be indexed because still images cannot be created.
     You should also have [Exiftool enabled](../../getting-started/config-options.md#feature-flags) to extract metadata such as duration, resolution, and codec.   
 
-## Resolutions ##
+## Resolutions
 
 The [`PHOTOPRISM_FFMPEG_SIZE`](../../getting-started/config-options.md#file-converters) config option allows to limit the resolution of [transcoded videos](../../getting-started/advanced/transcoding.md). It accepts the following standard sizes, while other values are automatically adjusted to the next supported size:
 
@@ -43,12 +43,20 @@ The [`PHOTOPRISM_FFMPEG_SIZE`](../../getting-started/config-options.md#file-conv
 | 4096 | DCI 4K, Retina 4K  |
 | 7680 | 8K Ultra HD 2      |
 
-## Containers ##
+## Technical References and Tutorials
 
-- https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Containers
+| Title                               | URL                                                                         |
+|-------------------------------------|-----------------------------------------------------------------------------|
+| Web Video Codec Guide               | https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs     |
+| Web Video Content-Type Headers      | https://developer.mozilla.org/en-US/docs/Web/Media/Formats/codecs_parameter |
+| Media Container Formats             | https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Containers       |
+| MP4 Signature Format                | https://www.file-recovery.com/mp4-signature-format.htm                      |
+| List of file signatures (Wikipedia) | https://en.wikipedia.org/wiki/List_of_file_signatures                       |
+| How to use the io.Reader interface  | https://yourbasic.org/golang/io-reader-interface-explained/                 |
+| AV1 Codec ISO Media File Format     | https://aomediacodec.github.io/av1-isobmff                                  |
 
-## Codecs ##
+## Hybrid Photo/Video Formats
 
-- https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Video_codecs
+For more information on hybrid photo/video file formats, e.g. Apple Live Photos and Samsung/Google Motion Photos, see [/developer-guide/media/live/](live.md).
 
 *[HEVC]: High Efficiency Video Coding / H.265

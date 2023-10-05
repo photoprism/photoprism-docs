@@ -158,16 +158,17 @@ nav:
     - Translations:
       - Add Translations: developer-guide/translations-weblate.md
       - Legacy Method: developer-guide/translations.md
-    - Media Library:
-      - Overview: developer-guide/media/index.md
-      - Import: developer-guide/media/import.md
-      - Abstraction: developer-guide/media/abstraction.md
-      - Encryption: developer-guide/media/encryption.md
-      - RAW Images: developer-guide/media/raw.md
-      - HEIF / HEIC: developer-guide/media/heif.md
-      - Videos: developer-guide/media/videos.md
-      - Thumbnails: developer-guide/media/thumbnails.md
+    - Media Files:
+      - File Types: developer-guide/media/index.md
       - Samples: developer-guide/media/samples.md
+      - Thumbnails: developer-guide/media/thumbnails.md
+      - RAW Images: developer-guide/media/raw.md
+      - HEIC / HEIF: developer-guide/media/heif.md
+      - Video Support: developer-guide/media/videos.md
+      - Live Photos: developer-guide/media/live.md
+      - File Import: developer-guide/media/import.md
+      - File Storage: developer-guide/media/storage.md
+      - Encryption: developer-guide/media/encryption.md
     - Metadata:
       - Classification: developer-guide/metadata/classification.md
       - Face Recognition: developer-guide/metadata/face-recognition.md

@@ -1,4 +1,4 @@
-HEIF is a new image file format employing HEVC (h.265) image coding for the best compression ratios currently possible. Newer iPhones use it for internal photo storage. It is supported on iOS 11 and macOS High Sierra and later.
+HEIC / HEIF is a new image file format employing HEVC (h.265) image coding for the best compression ratios currently possible. Newer iPhones use it for internal photo storage. It is supported on iOS 11 and macOS High Sierra and later.
 
 ## Testing Conversion and Orientation
 

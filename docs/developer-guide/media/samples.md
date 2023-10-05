@@ -1,36 +1,11 @@
-For now, we only want to support RAW and JPEG from the most popular camera brands/models. Therefore we need an archive of example pictures for testing purposes. 
+# File Samples
 
-In the tables below you see for which camera models we still need images. In case you have images from the requested cameras you want to share with us:
+We welcome image and video file samples from our community. You can email them to [samples@photoprism.app](mailto:samples@photoprism.app), either as attachments or with a download link.
 
-* You can get an account for uploading example images to https://dl.photoprism.app/samples/, please ask
-* You can also send us images per mail
+Please include the file format and GitHub issue number (if applicable) or other helpful reference (e.g. camera model) in the subject line, and let us know if we have permission to upload your files to [**dl.photoprism.app/samples**](https://dl.photoprism.app/samples/) for future use.
 
-
-### Most Popular Brands according to Flickr
-
-https://www.flickr.com/cameras
-
-### Market Share by Brand (2016):
-
-**DSLR cameras:**
-
-Brand | Share
------------- | -------------
-Canon | 63.3%
-Nikon | 31.6%
-Ricoh Imaging (Pentax) | 4.8%
-
-**System cameras:**
-
-Brand | Share
------------- | -------------
-Olympus | 26.8%
-Canon | 18.5%
-Sony| 17.9%
-
-[Brands with the highest market share 2016](https://www.bilderrampe.de/2017/02/22/kamerahersteller-wer-hatte-2016-den-groessten-marktanteil/)
-
-### Most popular camera models:
-
-### Camera models supported by photoshop:
-https://helpx.adobe.com/camera-raw/kb/camera-raw-plug-supported-cameras.html
+<p class="center-align action-buttons">
+    <a class="action-button action-secondary" href="https://www.photoprism.app/contact" target="_blank">Contact Us</a>  
+    <a class="action-button action-secondary" href="mailto:samples@photoprism.app" target="_blank">Submit Files</a>  
+    <a class="action-button action-primary" href="https://dl.photoprism.app/samples/">Browse Archive</a>
+</p>

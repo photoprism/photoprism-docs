@@ -1,19 +1,20 @@
-# File System Storage
+# File Storage
 
 At the moment, [all media and sidecar files](index.md) as well as [thumbnail images](thumbnails.md) are stored directly in the server's file system, see [Config Options](../../getting-started/config-options.md#storage).
 
-## Abstraction
+## Filesystem Abstraction
 
 We may eventually want to add a filesystem abstraction e.g. to speed up testing or support cloud storage. Afero seems to be the gold standard for this in the Go world:
 
 - https://github.com/spf13/afero
 
-## Related Issues
+## Related GitHub Issues
 
+- [Support for cloud storage with encryption](https://github.com/photoprism/photoprism/issues/93#)
 - [Embedded Database + Bleve for search? #55](https://github.com/photoprism/photoprism/issues/55)
 - [Postgres support? #47](https://github.com/photoprism/photoprism/issues/47)
 
-## External Resources
+## Software Libraries and References
 
 - https://github.com/rclone/rclone - rsync for cloud storage (Google Drive, AWS, One Drive, ...)
 - https://github.com/minio - Object Storage for AI

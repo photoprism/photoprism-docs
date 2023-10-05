@@ -68,7 +68,7 @@ The Exif orientation values are numbered from 1 to 8:
 7. = 270 degrees: image has been flipped back-to-front and is on its far side.
 8. = 270 degrees, mirrored: image is on its far side.
 
-## External Resources ##
+## Software Libraries and References ##
 
 - https://www.idownloadblog.com/2017/10/18/how-to-convert-heif-to-jpeg-imazing-heic-converter/ - How to convert HEIF images to JPEGs with iMazing HEIC Converter
 - https://github.com/strukturag/libheif - libheif is a ISO/IEC 23008-12:2017 HEIF file format decoder and encoder (C++)

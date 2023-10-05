@@ -168,7 +168,6 @@ nav:
       - Live Photos: developer-guide/media/live.md
       - File Import: developer-guide/media/import.md
       - File Storage: developer-guide/media/storage.md
-      - Encryption: developer-guide/media/encryption.md
     - Metadata:
       - Classification: developer-guide/metadata/classification.md
       - Face Recognition: developer-guide/metadata/face-recognition.md

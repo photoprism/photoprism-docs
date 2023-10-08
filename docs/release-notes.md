@@ -14,7 +14,7 @@ What's new?
 - RAW/HEIC: [Original media information is shown in the cards view details](https://github.com/photoprism/photoprism/issues/2040)
 - Motion Photos: [Embedded videos can be streamed and transcoded](https://github.com/photoprism/photoprism/issues/3764)
 - Metadata: [Improved camera make and model name normalization](https://github.com/photoprism/photoprism/discussions/3077)
-- Docker: [Dedicated ARMv7 image is available again on Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&ordering=last_updated&name=armv7)
+- ARMv7: [Dedicated Docker image is available again on Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&ordering=last_updated&name=armv7)
 
 ### September 23, 2023 ###
 <span class="build">Build 230923-e59851350</span>

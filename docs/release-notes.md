@@ -10,7 +10,7 @@ What's new?
 
 - Upload: [Current album is preselected when using mobile nav menu](https://github.com/photoprism/photoprism/issues/3784)
 - Videos: [Creation of thumbnails can only be disabled in experimental mode](https://github.com/photoprism/photoprism/issues/3793)
-- Settings: [Permanently deleting files is now possible by default](https://github.com/photoprism/photoprism/issues/3801)
+- Settings: [Ability to permanently delete files is now enabled by default](https://github.com/photoprism/photoprism/issues/3801)
 - RAW/HEIC: [Original media information is shown in the cards view details](https://github.com/photoprism/photoprism/issues/2040)
 - Motion Photos: [Embedded videos can be streamed and transcoded](https://github.com/photoprism/photoprism/issues/3764)
 - Metadata: [Improved camera make and model name normalization](https://github.com/photoprism/photoprism/discussions/3077)

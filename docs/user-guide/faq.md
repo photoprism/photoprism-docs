@@ -8,13 +8,13 @@
     
     Your use of these services is [fully covered by us](../getting-started/faq.md#are-the-keys-for-using-interactive-world-maps-provided-free-of-charge). Depending on your usage, this can save you much more than the cost of a [PhotoPrism+ Membership](https://www.photoprism.app/membership), since other providers generally charge usage-based fees and often don't allow you to cache the data they provide, compromising performance and your privacy with unnecessary requests.
 
-    You might also come across other apps that use the free map tile service [offered by openstreetmap.org](https://operations.osmfoundation.org/policies/tiles/). In this case, [their usage](https://operations.osmfoundation.org/policies/tiles/) and [privacy policies](https://wiki.osmfoundation.org/wiki/Privacy_Policy) apply, meaning that your request data is stored and used to create [publicly available reports](https://planet.openstreetmap.org/tile_logs/). This is a major difference from our approach, which [focuses on your privacy](https://www.photoprism.app/privacy) and user experience.
-
     [View Privacy Policy ›](https://www.photoprism.app/privacy#section-7){ class="pr-3 block-xs" } [View Compliance FAQ ›](https://www.photoprism.app/kb/compliance-faq#privacy)
 
     In order to successfully set up your installation and view location details in PhotoPrism, you must [allow incoming requests as well as those to our Geocoding API and Docker](../getting-started/troubleshooting/firewall.md) if you have a firewall installed, and make sure that your Internet connection is working:
 
     [![](https://dl.photoprism.app/img/diagrams/proxy-cdn.svg){ class="w100" }](../getting-started/troubleshooting/firewall.md)
+
+    *Other open source applications sometimes use the free map tile service operated by [openstreetmap.org](https://operations.osmfoundation.org/policies/tiles/). In this case, [their usage](https://operations.osmfoundation.org/policies/tiles/) and [privacy policies](https://wiki.osmfoundation.org/wiki/Privacy_Policy) apply, which means that your request data is stored and used to [create publicly available reports](https://planet.openstreetmap.org/tile_logs/). This is different from our approach, which focuses on [your privacy](https://www.photoprism.app/privacy) and user experience.*
 
 ??? question "Why are some features only available to members?"
 
@@ -46,7 +46,7 @@
 
 ??? question "Are there alternatives to a recurring subscription?"
 
-    Yes, our Plus members automatically receive a free lifetime Essentials membership after 24 months. Likewise, Silver members receive a lifetime Plus membership after 24 months, Gold members after 12 months, and Platinum members after only 6 months.
+    Yes, our Plus members automatically receive a free Lifetime Essentials membership after 24 months. Likewise, Silver members receive a Lifetime Plus membership after 24 months, Gold members after 12 months, and Platinum members after only 6 months.
 
     If you would like to sign up for a Silver, Gold or Platinum membership, you can do so either [directly on our website](https://my.photoprism.app/register) or [on Patreon](https://link.photoprism.app/patreon). In addition, we are working on a Plus Feature Pack that includes just the features without support, so we can offer it to you at a lower price.
 
@@ -56,7 +56,7 @@
 
 ??? question "What happens if I cancel my membership?"
 
-    If you are eligible for a lifetime Essentials or Plus membership, you can continue to use these features even if you decide to stop supporting us. Otherwise, you can continue to use all the freely available features. In no case will you lose access to your pictures.
+    If you are eligible for a Lifetime Essentials or Plus membership, you can continue to use these features even if you decide to stop supporting us. Otherwise, you can continue to use all the freely available features. In no case will you lose access to your pictures.
 
     [Compare Features ›](https://www.photoprism.app/editions#compare)
 

@@ -81,13 +81,13 @@ As explained in our [Privacy Policy](https://www.photoprism.app/privacy#section-
 
 Your use of these services is [fully covered by us](#are-the-keys-for-using-interactive-world-maps-provided-free-of-charge). Depending on your usage, this can save you much more than the cost of a [PhotoPrism+ Membership](https://www.photoprism.app/membership), since other providers generally charge usage-based fees and often don't allow you to cache the data they provide, compromising performance and your privacy with unnecessary requests.
 
-You might also come across other apps that use the free map tile service [offered by openstreetmap.org](https://operations.osmfoundation.org/policies/tiles/). In this case, [their usage](https://operations.osmfoundation.org/policies/tiles/) and [privacy policies](https://wiki.osmfoundation.org/wiki/Privacy_Policy) apply, meaning that your request data is stored and used to create [publicly available reports](https://planet.openstreetmap.org/tile_logs/). This is a major difference from our approach, which [focuses on your privacy](https://www.photoprism.app/privacy) and user experience.
-
 [View Privacy Policy ›](https://www.photoprism.app/privacy#section-7){ class="pr-3 block-xs" } [View Compliance FAQ ›](https://www.photoprism.app/kb/compliance-faq#privacy)
 
 In order to successfully set up your installation and view location details in PhotoPrism, you must [allow incoming requests as well as those to our Geocoding API and Docker](troubleshooting/firewall.md) if you have a firewall installed, and make sure that your Internet connection is working:
 
 [![](https://dl.photoprism.app/img/diagrams/proxy-cdn.svg){ class="w100" }](troubleshooting/firewall.md)
+
+*Other open source applications sometimes use the free map tile service operated by [openstreetmap.org](https://operations.osmfoundation.org/policies/tiles/). In this case, [their usage](https://operations.osmfoundation.org/policies/tiles/) and [privacy policies](https://wiki.osmfoundation.org/wiki/Privacy_Policy) apply, which means that your request data is stored and used to [create publicly available reports](https://planet.openstreetmap.org/tile_logs/). This is different from our approach, which focuses on [your privacy](https://www.photoprism.app/privacy) and user experience.*
 
 ### Why do I see connection errors when requesting API keys at startup?
 

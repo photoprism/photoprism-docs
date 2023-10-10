@@ -6,7 +6,7 @@
 ### October 11, 2023 ###
 <span class="build">Build 231011-f4dfc02a8</span>
 
-This service release offers a number of improvements requested by our users. We would like to thank everyone involved!
+This service release offers a number of improvements requested by our community. We would like to thank everyone involved!
 
 What's new?
 

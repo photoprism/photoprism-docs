@@ -14,29 +14,6 @@ The following instructions explain how to install Docker:
 - [Microsoft Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 - [Apple macOS](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 
-### Podman
-
-[Podman](https://podman.io/) is supported as a replacement for Docker on Red Hat Enterprise Linux® and compatible Linux distributions such as CentOS, Fedora, AlmaLinux, and Rocky Linux. The following installs the `podman` and `podman-compose` commands if they are not already installed:
-
-```bash
-sudo dnf update -y
-sudo dnf install epel-release -y
-sudo dnf install netavark aardvark-dns podman podman-docker podman-compose -y
-sudo systemctl start podman
-sudo systemctl enable podman
-podman --version
-```
-
-We also provide a setup script that conveniently installs Podman and downloads the default configuration to a directory of your choice:
-
-```bash
-mkdir -p /opt/photoprism
-cd /opt/photoprism
-curl -sSf https://dl.photoprism.app/podman/install.sh | bash
-```
-
-Please keep in mind to replace the `docker` and `docker compose` commands with `podman` and `podman-compose` when following the examples in our documentation.
-
 ### Ubuntu Linux
 
 If you are using Ubuntu Linux, you can run this script to install the latest *Docker* version, including the *Compose Plugin*, on your server in one step:
@@ -69,6 +46,30 @@ Running the following commands will add a `docker-compose` alias for the new Com
 echo 'docker compose "$@"' | sudo tee /bin/docker-compose
 sudo chmod +x /bin/docker-compose
 ```
+
+### Podman Compose
+
+[Podman](https://podman.io/) is supported as a replacement for Docker on **Red Hat-compatible** Linux distributions** like RHEL, CentOS, Fedora, AlmaLinux, and Rocky Linux. The following installs the `podman` and `podman-compose` commands if they are not already installed:
+
+```bash
+sudo dnf update -y
+sudo dnf install epel-release -y
+sudo dnf install netavark aardvark-dns podman podman-docker podman-compose -y
+sudo systemctl start podman
+sudo systemctl enable podman
+podman --version
+```
+
+We also provide a setup script that conveniently installs Podman and downloads the default configuration to a directory of your choice:
+
+```bash
+mkdir -p /opt/photoprism
+cd /opt/photoprism
+curl -sSf https://dl.photoprism.app/podman/install.sh | bash
+```
+
+!!! note ""
+    Please keep in mind to replace the `docker` and `docker compose` commands with `podman` and `podman-compose` when following the examples in our documentation.
 
 ## Using Docker
 ### Cannot Connect
@@ -372,3 +373,4 @@ Then restart all services for the changes to take effect. Note that related valu
 *[swap]: substitute for physical memory
 *[read-only]: write protected
 *[filesystem]: contains your files and folders
+*[RHEL]: Red Hat Enterprise Linux®

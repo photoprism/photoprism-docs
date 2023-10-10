@@ -1,11 +1,9 @@
 # Running PhotoPrism with Docker
 
-We recommend using [Docker Compose](docker-compose.md) because it is easier and provides more convenience for
-running multiple services than the [pure Docker command-line interface](https://docs.docker.com/engine/reference/commandline/cli/).
-Before you proceed, make sure you have [Docker](https://store.docker.com/search?type=edition&offering=community)
-installed on your system. It is available for Mac, Linux, and Windows.
+We recommend using [Docker Compose](docker-compose.md) because it is easier and provides more convenience for running multiple services than the [pure Docker command-line interface](https://docs.docker.com/engine/reference/commandline/cli/).
+Before you proceed, make sure you have [Docker](https://store.docker.com/search?type=edition&offering=community) installed on your system. It is available for Mac, Linux, and Windows.
 
-[Podman](https://podman.io/) is also supported as a [drop-in replacement](troubleshooting/docker.md#podman) for Docker on Red Hat-compatible Linux distributions such as CentOS, Fedora, AlmaLinux, and Rocky Linux.
+Alternatively, [Podman](https://podman.io/) is supported as a drop-in replacement for Docker on Red Hat-compatible Linux distributions like RHEL, CentOS, Fedora, AlmaLinux, and Rocky Linux.
 
 ### Step 1: Start the server ###
 
@@ -275,3 +273,4 @@ The currently supported user ID ranges are 0, 33, 50-99, 500-600, 900-1250, and 
 *[read-only]: write protected
 *[filesystem]: contains your files and folders
 *[SQLite]: self-contained, serverless SQL database 
+*[RHEL]: Red Hat Enterprise Linux®

@@ -14,6 +14,8 @@ The following instructions explain how to install Docker:
 - [Microsoft Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
 - [Apple macOS](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 
+Alternatively, [Podman](#podman-compose) is supported as a drop-in replacement for Docker on Red Hat-compatible Linux distributions like RHEL, CentOS, Fedora, AlmaLinux, and Rocky Linux.
+ 
 ### Ubuntu Linux
 
 If you are using Ubuntu Linux, you can run this script to install the latest *Docker* version, including the *Compose Plugin*, on your server in one step:
@@ -49,7 +51,7 @@ sudo chmod +x /bin/docker-compose
 
 ### Podman Compose
 
-[Podman](https://podman.io/) is supported as a replacement for Docker on **Red Hat-compatible** Linux distributions** like RHEL, CentOS, Fedora, AlmaLinux, and Rocky Linux. The following installs the `podman` and `podman-compose` commands if they are not already installed:
+On Red Hat-compatible Linux distributions like RHEL, CentOS, Fedora, AlmaLinux, and Rocky Linux, you can use [Podman](https://podman.io/) and [Podman Compose](https://docs.podman.io/en/latest/markdown/podman-compose.1.html) as direct replacements for Docker and Docker Compose. The following installs the `podman` and `podman-compose` commands if they are not already installed:
 
 ```bash
 sudo dnf update -y

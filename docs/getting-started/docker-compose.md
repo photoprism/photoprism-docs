@@ -1,11 +1,9 @@
 # Setup Using Docker Compose
 
-With [Docker Compose](https://docs.docker.com/compose/), you [use a YAML file](../developer-guide/technologies/yaml.md)
-to configure all application services so you can easily start them with a single command.
-Before you proceed, make sure you have [Docker](https://store.docker.com/search?type=edition&offering=community)
-installed on your system. It is available for [Mac](https://docs.docker.com/desktop/install/mac-install/), [Linux](troubleshooting/docker.md#installation), and [Windows](https://docs.docker.com/desktop/install/windows-install/).
+With [Docker Compose](https://docs.docker.com/compose/), you [use a YAML file](../developer-guide/technologies/yaml.md) to configure all application services so you can easily start them with a single command.
+Before you proceed, make sure you have [Docker](https://store.docker.com/search?type=edition&offering=community) installed on your system. It is available for [Mac](https://docs.docker.com/desktop/install/mac-install/), [Linux](troubleshooting/docker.md#installation), and [Windows](https://docs.docker.com/desktop/install/windows-install/).
 
-[Podman](https://podman.io/) is also supported as a [drop-in replacement](troubleshooting/docker.md#podman) for Docker on Red Hat-compatible Linux distributions such as CentOS, Fedora, AlmaLinux, and Rocky Linux.
+Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is supported as a drop-in replacement for Docker Compose on Red Hat-compatible Linux distributions like RHEL, CentOS, Fedora, AlmaLinux, and Rocky Linux.
 
 ### Step 1: Configure ###
 
@@ -377,6 +375,7 @@ The currently supported user ID ranges are 0, 33, 50-99, 500-600, 900-1250, and 
 *[SQLite]: self-contained, serverless SQL database
 *[read-only]: write protected
 *[filesystem]: contains your files and folders
+*[RHEL]: Red Hat Enterprise Linux®
 
 [^1]: <https://rominirani.com/docker-on-windows-mounting-host-directories-d96f3f056a2c>
 [^2]: The default filename for the [Docker Compose](https://docs.docker.com/compose/) configuration is `docker-compose.yml`. For simplicity, it does not need to be specified if you run commands in the same directory. Config files for other apps and instances should be placed in separate folders.

@@ -3,16 +3,18 @@
 !!! note ""
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview` and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
-### Development Preview ###
-<span class="build">Build 231010-f4dfc02a8</span>
+### October 11, 2023 ###
+<span class="build">Build 231011-f4dfc02a8</span>
+
+This service release offers a number of improvements requested by our users. We would like to thank everyone involved!
 
 What's new?
 
-- Upload: [Current album is preselected when using mobile nav menu](https://github.com/photoprism/photoprism/issues/3784)
+- Upload: [Current album is preselected when using the mobile nav menu](https://github.com/photoprism/photoprism/issues/3784)
 - Videos: [Creation of thumbnails can only be disabled in experimental mode](https://github.com/photoprism/photoprism/issues/3793)
 - Settings: [Ability to permanently delete files is now enabled by default](https://github.com/photoprism/photoprism/issues/3801)
 - RAW/HEIC: [Original media information is shown in the cards view details](https://github.com/photoprism/photoprism/issues/2040)
-- Motion Photos: [Embedded videos can be streamed and transcoded](https://github.com/photoprism/photoprism/issues/3764)
+- Live Photos: [Embedded videos can be streamed and transcoded](https://github.com/photoprism/photoprism/issues/3764)
 - Metadata: [Improved camera make and model name normalization](https://github.com/photoprism/photoprism/discussions/3077)
 - ARMv7: [Dedicated Docker image is available again on Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&ordering=last_updated&name=armv7)
 

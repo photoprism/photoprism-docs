@@ -4,9 +4,9 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview` and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 231011-ae5d8ae6d</span>
+<span class="build">Build 231011-63f708417</span>
 
-This update includes an [updated ARMv7 build](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&ordering=last_updated&name=armv7) that was missing for our last release, a number of usability improvements requested by our community, and fixes for recently discovered issues. We would like to thank everyone involved!
+This update includes an [updated ARMv7 build](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&ordering=last_updated&name=armv7) that was missing for our last release, a number of usability improvements requested by our community, and fixes for recently discovered issues.
 
 What's new?
 
@@ -17,7 +17,7 @@ What's new?
 - RAW/HEIC: [Original media information is shown in the cards view details](https://github.com/photoprism/photoprism/issues/2040)
 - Live Photos: [Embedded video files can be streamed and transcoded](https://github.com/photoprism/photoprism/issues/3764)
 - Metadata: [Improved camera make and model name normalization](https://github.com/photoprism/photoprism/discussions/3077)
-- Docker: [A dedicated ARMv7 image is available again on Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&ordering=last_updated&name=armv7)
+- Docker: [An updated ARMv7 image is available again on Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&ordering=last_updated&name=armv7)
 - Security: [Go has been updated to the latest stable release v1.21.3](https://github.com/golang/go/issues?q=milestone%3AGo1.21.3)
 
 ### September 23, 2023 ###

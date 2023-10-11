@@ -3,7 +3,7 @@
 !!! note ""
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview` and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
-### Development Preview ###
+### October 11, 2023 ###
 <span class="build">Build 231011-63f708417</span>
 
 This service release includes an [updated ARMv7 build](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&ordering=last_updated&name=armv7), a number of usability improvements requested by our community, and fixes for recently discovered issues. We would like to thank everyone involved!

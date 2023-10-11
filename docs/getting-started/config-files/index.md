@@ -33,16 +33,13 @@ Default values, including the *config* path to use, may optionally be specified 
 
 ## Config Options
 ### Authentication ###
-
 |       Name       |  Type  |       CLI Flag       |
 |------------------|--------|----------------------|
 | AuthMode         | string | --auth-mode          |
-| RegisterUri      | string | --register-uri       |
-| PasswordLength   | int    | --password-length    |
-| PasswordResetUri | string | --password-reset-uri |
 | Public           | bool   | --public             |
 | AdminUser        | string | --admin-user         |
 | AdminPassword    | string | --admin-password     |
+| PasswordLength   | int    | --password-length    |
 | SessionMaxAge    | int64  | --session-maxage     |
 | SessionTimeout   | int64  | --session-timeout    |
 
@@ -127,38 +124,38 @@ Default values, including the *config* path to use, may optionally be specified 
 
 ### Site Information ###
 
-|        Name        |  Type  |        CLI Flag        |
-|--------------------|--------|------------------------|
-| CdnUrl             | string | --cdn-url              |
-| CdnVideo           | bool   | --cdn-video            |
-| SiteUrl            | string | --site-url             |
-| SiteAuthor         | string | --site-author          |
-| SiteTitle          | string | --site-title           |
-| SiteCaption        | string | --site-caption         |
-| SiteDescription    | string | --site-description     |
-| SitePreview        | string | --site-preview         |
-| HttpsProxy         | string | --https-proxy          |
-| HttpsProxyInsecure | bool   | --https-proxy-insecure |
+|      Name       |  Type  |      CLI Flag      |
+|-----------------|--------|--------------------|
+| CdnUrl          | string | --cdn-url          |
+| CdnVideo        | bool   | --cdn-video        |
+| SiteUrl         | string | --site-url         |
+| SiteAuthor      | string | --site-author      |
+| SiteTitle       | string | --site-title       |
+| SiteCaption     | string | --site-caption     |
+| SiteDescription | string | --site-description |
+| SitePreview     | string | --site-preview     |
 
 ### Web Server ###
 
-|       Name        |   Type   |       CLI Flag       |
-|-------------------|----------|----------------------|
-| TrustedProxies    | []string | --trusted-proxy      |
-| ProxyProtoHeaders | []string | --proxy-proto-header |
-| ProxyProtoHttps   | []string | --proxy-proto-https  |
-| DisableTLS        | bool     | --disable-tls        |
-| DefaultTLS        | bool     | --default-tls        |
-| TLSEmail          | string   | --tls-email          |
-| TLSCert           | string   | --tls-cert           |
-| TLSKey            | string   | --tls-key            |
-| HttpMode          | string   | --http-mode          |
-| HttpCompression   | string   | --http-compression   |
-| HttpCacheMaxAge   | int      | --http-cache-maxage  |
-| HttpVideoMaxAge   | int      | --http-video-maxage  |
-| HttpCachePublic   | bool     | --http-cache-public  |
-| HttpHost          | string   | --http-host          |
-| HttpPort          | int      | --http-port          |
+|        Name        |   Type   |        CLI Flag        |
+|--------------------|----------|------------------------|
+| HttpsProxy         | string   | --https-proxy          |
+| HttpsProxyInsecure | bool     | --https-proxy-insecure |
+| TrustedProxies     | []string | --trusted-proxy        |
+| ProxyProtoHeaders  | []string | --proxy-proto-header   |
+| ProxyProtoHttps    | []string | --proxy-proto-https    |
+| DisableTLS         | bool     | --disable-tls          |
+| DefaultTLS         | bool     | --default-tls          |
+| TLSEmail           | string   | --tls-email            |
+| TLSCert            | string   | --tls-cert             |
+| TLSKey             | string   | --tls-key              |
+| HttpMode           | string   | --http-mode            |
+| HttpCompression    | string   | --http-compression     |
+| HttpCacheMaxAge    | int      | --http-cache-maxage    |
+| HttpVideoMaxAge    | int      | --http-video-maxage    |
+| HttpCachePublic    | bool     | --http-cache-public    |
+| HttpHost           | string   | --http-host            |
+| HttpPort           | int      | --http-port            |
 
 ### Database Connection ###
 
@@ -172,20 +169,20 @@ Default values, including the *config* path to use, may optionally be specified 
 | DatabasePassword  | string | --database-password   |
 | DatabaseConns     | int    | --database-conns      |
 | DatabaseConnsIdle | int    | --database-conns-idle |
-| SipsBin           | string | --sips-bin            |
-| SipsBlacklist     | string | --sips-blacklist      |
-| FFmpegBin         | string | --ffmpeg-bin          |
-| FFmpegEncoder     | string | --ffmpeg-encoder      |
-| FFmpegSize        | int    | --ffmpeg-size         |
-| FFmpegBitrate     | int    | --ffmpeg-bitrate      |
-| FFmpegMapVideo    | string | --ffmpeg-map-video    |
-| FFmpegMapAudio    | string | --ffmpeg-map-audio    |
-| ExifToolBin       | string | --exiftool-bin        |
 
 ### File Converters ###
 
 |         Name         |  Type  |        CLI Flag         |
 |----------------------|--------|-------------------------|
+| SipsBin              | string | --sips-bin              |
+| SipsBlacklist        | string | --sips-blacklist        |
+| FFmpegBin            | string | --ffmpeg-bin            |
+| FFmpegEncoder        | string | --ffmpeg-encoder        |
+| FFmpegSize           | int    | --ffmpeg-size           |
+| FFmpegBitrate        | int    | --ffmpeg-bitrate        |
+| FFmpegMapVideo       | string | --ffmpeg-map-video      |
+| FFmpegMapAudio       | string | --ffmpeg-map-audio      |
+| ExifToolBin          | string | --exiftool-bin          |
 | DarktableBin         | string | --darktable-bin         |
 | DarktableCachePath   | string | --darktable-cache-path  |
 | DarktableConfigPath  | string | --darktable-config-path |

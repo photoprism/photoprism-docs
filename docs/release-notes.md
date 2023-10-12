@@ -3,6 +3,15 @@
 !!! note ""
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview` and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
+### Development Preview ###
+<span class="build">Build 231012-8975c781c</span>
+
+What's new?
+
+- Search: [Added filters for ISO number, focal length, and aperture range](https://github.com/photoprism/photoprism/issues/3818)
+- Search: [Cards view shows ISO number, focal length, aperture, and exposure](https://github.com/photoprism/photoprism/issues/3816)
+- Live Photos: [Fixed Google Pixel 6 HVC1 motion photo playback](https://github.com/photoprism/photoprism/issues/3814)
+ 
 ### October 11, 2023 ###
 <span class="build">Build 231011-63f708417</span>
 

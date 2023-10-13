@@ -6,6 +6,8 @@
 ### Development Preview ###
 <span class="build">Build 231013-297b3adcc</span>
 
+This update lets you filter search results by ISO number, focal length, and aperture range. It also includes a fix for streaming and transcoding videos embedded in Google/Samsung Motion Photos.
+
 What's new?
 
 - Search: [Added filters for ISO number, focal length, and aperture range](https://github.com/photoprism/photoprism/issues/3818)

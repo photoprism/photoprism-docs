@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview` and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 231013-297b3adcc</span>
+<span class="build">Build 231014-89bbba06c</span>
 
 With this update, you can filter search results by ISO number, focal length, and aperture range. It also includes a fix for streaming and transcoding videos embedded in Google/Samsung Motion Photos.
 
@@ -13,7 +13,8 @@ What's new?
 - Search: [Added filters for ISO number, focal length, and aperture range](https://github.com/photoprism/photoprism/issues/3818)
 - Search: [Cards view shows ISO number, focal length, aperture, and exposure](https://github.com/photoprism/photoprism/issues/3816)
 - Live Photos: [Fixed Google Pixel 6 HVC1 motion photo playback](https://github.com/photoprism/photoprism/issues/3814)
- 
+- Config: [Creation of default certificate is skipped if default-tls option is "false"](https://github.com/photoprism/photoprism/issues/3823)
+
 ### October 11, 2023 ###
 <span class="build">Build 231011-63f708417</span>
 

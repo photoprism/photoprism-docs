@@ -14,6 +14,7 @@ nav:
     - Cloud Hosting:
       - PikaPods: getting-started/cloud/pikapods.md
       - DigitalOcean: getting-started/cloud/digitalocean.md
+      - Elestio: getting-started/cloud/elestio.md
     - Raspberry Pi:
       - Requirements: getting-started/raspberry-pi.md
       - SD Card Image: getting-started/raspberry-pi/microsd-image.md

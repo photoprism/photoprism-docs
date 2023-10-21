@@ -16,7 +16,7 @@ What's new?
 - Live Photos: [Fixed Google HEVC motion photo playback and transcoding](https://github.com/photoprism/photoprism/issues/3814)
 - Live Photos: [Improved indexing of related files with vendor-specific naming schemes](https://github.com/photoprism/photoprism/issues/2983)
 - Metadata: [Updated offline map data for more accurate timezone lookups](https://github.com/photoprism/go-tz)
-- Metadata: [Local time is calculated based on UTC offset if timezone is unknown](https://github.com/photoprism/photoprism/discussions/3780)
+- Metadata: [Creation time is calculated with UTC offset if timezone is unknown](https://github.com/photoprism/photoprism/discussions/3780)
 - Config: [Creation of default certificate is skipped if HTTPS/TLS is disabled](https://github.com/photoprism/photoprism/issues/3823)
 - Translations: [Updated German, Greek, and Romanian](https://translate.photoprism.app/projects/photoprism/)
 

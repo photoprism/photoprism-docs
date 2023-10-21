@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview` and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 231021-95e126023</span>
+<span class="build">Build 231021-09f8a5840</span>
 
 This update adds search filters for finding pictures by ISO number, focal length, aperture, and altitude. It also includes a number of user interface improvements, updated translations, as well as fixes for recently discovered issues. We would like to thank everyone who [submitted pull requests](https://docs.photoprism.app/developer-guide/) or [helped with testing](https://github.com/orgs/photoprism/projects/5)!
 
@@ -14,7 +14,7 @@ What's new?
 - Search: [Added `alt:...` filter to find pictures by altitude range](https://github.com/photoprism/photoprism/pull/3800)
 - Search: [Cards view shows ISO number, focal length, aperture, and exposure](https://github.com/photoprism/photoprism/issues/3816)
 - Live Photos: [Fixed Google HEVC motion photo playback and transcoding](https://github.com/photoprism/photoprism/issues/3814)
-- Live Photos: [Improved stacking of HEIC images with their related video files](https://github.com/photoprism/photoprism/issues/2983)
+- Live Photos: [Improved indexing of related files with vendor-specific naming schemes](https://github.com/photoprism/photoprism/issues/2983)
 - Metadata: [Updated offline map data for more accurate timezone lookups](https://github.com/photoprism/go-tz)
 - Metadata: [Local time is calculated based on UTC offset if timezone is unknown](https://github.com/photoprism/photoprism/discussions/3780)
 - Config: [Creation of default certificate is skipped if HTTPS/TLS is disabled](https://github.com/photoprism/photoprism/issues/3823)

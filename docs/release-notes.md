@@ -6,7 +6,7 @@
 ### Development Preview ###
 <span class="build">Build 231021-9abea5b55</span>
 
-This update adds search filters for finding pictures by ISO number, focal length, aperture, and altitude. It also includes a number of user interface improvements, updated translations, as well as fixes for recently discovered issues. We would like to thank everyone who [submitted pull requests](https://docs.photoprism.app/developer-guide/) or [helped with testing](https://github.com/orgs/photoprism/projects/5)!
+This update adds search filters for finding pictures by ISO number, focal length, aperture, and altitude. It also includes a number of user interface improvements, updated translations, as well as fixes for recently discovered issues. We would like to thank everyone who [submitted pull requests](https://docs.photoprism.app/developer-guide/), [helped with testing](https://github.com/orgs/photoprism/projects/5), or contributed in other ways!
 
 What's new?
 

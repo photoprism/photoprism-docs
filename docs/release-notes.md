@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview` and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 231021-c2b56346b</span>
+<span class="build">Build 231021-9abea5b55</span>
 
 This update adds search filters for finding pictures by ISO number, focal length, aperture, and altitude. It also includes a number of user interface improvements, updated translations, as well as fixes for recently discovered issues. We would like to thank everyone who [submitted pull requests](https://docs.photoprism.app/developer-guide/) or [helped with testing](https://github.com/orgs/photoprism/projects/5)!
 

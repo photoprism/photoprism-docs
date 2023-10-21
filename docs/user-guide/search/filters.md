@@ -104,8 +104,6 @@ This is a complete list of supported search filters with examples. Filters can g
 |  Filter   |   Type    |               Examples                |                                                                   Notes                                                                    |
 |-----------|-----------|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 | dist      | decimal   | dist:50                               | Distance to Position (km)                                                                                                                  |
-| fmax      | decimal   | fmax:1.245                            | F-number (max)                                                                                                                             |
-| fmin      | decimal   | fmin:1.245                            | F-number (min)                                                                                                                             |
 | lat       | decimal   | lat:41.894043                         | GPS Position (Latitude)                                                                                                                    |
 | lng       | decimal   | lng:-87.62448                         | GPS Position (Longitude)                                                                                                                   |
 | chroma    | number    | chroma:70                             | Chroma (0-100)                                                                                                                             |

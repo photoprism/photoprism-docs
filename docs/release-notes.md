@@ -14,7 +14,7 @@ What's new?
 - Search: [Added `alt:...` filter to find pictures by altitude range](https://github.com/photoprism/photoprism/pull/3800)
 - Search: [Cards view shows ISO number, focal length, aperture, and exposure](https://github.com/photoprism/photoprism/issues/3816)
 - Live Photos: [Fixed Google Pixel 6 HVC1 motion photo playback](https://github.com/photoprism/photoprism/issues/3814)
-- Index: [Improved matching of related iPhone / iPad media files](https://github.com/photoprism/photoprism/issues/2983)
+- Index: [Improved matching of related Apple iOS media files](https://github.com/photoprism/photoprism/issues/2983)
 - Metadata: [UTC offsets are used if the actual time zone is unknown](https://github.com/photoprism/photoprism/discussions/3780)
 - Config: [Creation of default certificate is skipped if HTTPS/TLS is disabled](https://github.com/photoprism/photoprism/issues/3823)
 - Translations: [Updated German, Greek, and Romanian](https://translate.photoprism.app/projects/photoprism/)

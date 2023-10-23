@@ -23,17 +23,14 @@ The *originals* folder URL for a server exposed to the public Internet is:
 ```
 https://admin@example.com/originals/
 ```
- or
+
+On Windows, you can enter the following resource in the connection dialog instead:
 
 ```
 \\example.com@SSL\originals\
 ```
 
-for Windows.
-
-Please replace *example.com* with your actual domain.
-
-The slash at the end is important and cannot be omitted.
+Please make sure to replace *example.com* with your actual domain and note that the slash at the end is important and cannot be omitted.
 
 !!! tip ""
     You can find your server url on the [account page](../settings/account.md) in settings.
@@ -44,11 +41,19 @@ It will also change when you update it in *Settings*. The username is `admin`.
 !!! info ""
     You can also connect to the import folder by replacing `originals/` with `import/` in the URL.
 
-For users, who are running PhotoPrism locally on the default port *2342*, the *originals* folder URL is:
+For users running their instance locally on the default port *2342*, the *originals* folder URL is:
 
 ```
 http://admin@localhost:2342/originals/
 ```
+
+On Windows, you can enter the following resource in the connection dialog instead:
+
+```
+\\localhost:2342\originals\
+```
+
+The URL or resource to use changes accordingly if you have modified the server hostname, port, or protocol in your configuration.
 
 !!! attention ""
     Never use WebDAV **without HTTPS** outside your local, private network as your

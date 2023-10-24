@@ -8,7 +8,9 @@ https://godoc.org/github.com/photoprism/photoprism/internal/api
 ```
 GET /api/v1/photos?count=10
 ```
-_Note: Routes are going to change while we are developing the frontend. The API is not covered by a deprecation policy._
+
+!!! example ""
+    Some routes and request parameters MAY change as we add new features. While the API is not covered by an official deprecation policy, we avoid making breaking changes, especially to APIs that we know other developers are using.
 
 ### With authentication
 

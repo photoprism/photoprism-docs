@@ -8,8 +8,8 @@ For the currently implemented REST request endpoints, please refer to our backen
 Our REST API is not currently covered by an official deprecation policy, so some routes and request parameters MAY change as we add new features.
 However, we avoid making breaking changes, especially to endpoints that we know other developers are using.
  
-!!! note ""
-    Any contributions that help improve our REST API docs and makes them easier to use are greatly appreciated by our team and the developer community.
+!!! tldr ""
+    Any contributions that help improve our REST API docs and make them easier to use are greatly appreciated by our team and the developer community.
 
 ## Request Examples
 

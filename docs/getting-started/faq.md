@@ -185,9 +185,33 @@ This will automatically download all required config files and start the server 
 
 ### How can I install PhotoPrism without Docker?
 
+#### Installation Packages ####
+
+We also [provide tar.gz packages](https://dl.photoprism.app/pkg/) that allow you to install PhotoPrism on Linux without using Docker, for example by running the following commands:
+
+```bash
+sudo mkdir -p /opt/photoprism
+cd /opt/photoprism
+wget -c https://dl.photoprism.app/pkg/linux/amd64.tar.gz -O - | sudo tar -xz
+sudo ln -sf /opt/photoprism/bin/photoprism /usr/local/bin/photoprism
+photoprism --version
+```
+
+Since these packages need to be set up manually and do not include the system dependencies required to make use of all the features, we recommend that only advanced users choose this installation method.
+
+[Read the Docs ›](https://dl.photoprism.app/pkg/linux/README.html)
+
+#### LXC Images ####
+
+There are no official [LXC images](https://linuxcontainers.org/) available yet, see [related GitHub issue](https://github.com/photoprism/photoprism/issues/147) for details.
+
+#### BSD Ports ####
+
+An [unofficial port](https://docs.photoprism.app/getting-started/freebsd/) is available for FreeBSD / FreeNAS users.
+
 #### Building From Source ####
 
-You can build and install PhotoPrism from the publicly available [source code](https://docs.photoprism.app/developer-guide/setup/):
+You can alternatively build and install PhotoPrism from the publicly available [source code](https://docs.photoprism.app/developer-guide/setup/), which includes all the [Community Edition](https://www.photoprism.app/editions#compare) features and most of the [Essentials](https://www.photoprism.app/editions#compare) features (except [additional user roles](https://docs.photoprism.app/user-guide/users/roles/)):
 
 ```bash
 git clone https://github.com/photoprism/photoprism.git
@@ -195,27 +219,12 @@ cd photoprism
 make all install DESTDIR=/opt/photoprism
 ```
 
-Missing build dependencies must be installed manually as shown in our human-readable and versioned
-[Dockerfile](https://github.com/photoprism/photoprism/blob/develop/docker/develop/bookworm/Dockerfile). You often don't
-need to use the exact same versions, so it's possible to replace packages with what is available in your environment.
+When choosing this installation method, missing build and system dependencies must be installed manually, as shown in our human-readable and versioned [Dockerfiles](https://github.com/photoprism/photoprism/tree/develop/docker/develop). Since you often don't need to use the exact same versions, you can replace most packages with those available in your environment.
 
-Please note that we do not have the resources to provide private users with dependencies and
-[TensorFlow libraries](https://dl.photoprism.app/tensorflow/) for their personal environments.
-We recommend giving Docker a try if you use Linux as it saves developers a lot of time when building,
-testing, and deploying complex applications like PhotoPrism. It also effectively helps avoid
-"works for me" moments and missing dependencies, see [next question](#why-are-you-using-docker).
+Please be aware, though, that we do not have the resources to provide support and special dependencies, such as [TensorFlow libraries](https://dl.photoprism.app/tensorflow/), to private users who choose to build from source. If possible, we recommend using [Docker Compose](docker-compose.md) or the [installation packages](#installation-packages) we provide, as they can save a lot of time creating and troubleshooting custom builds.
 
-#### Installation Packages ####
-
-An [unofficial port](https://docs.photoprism.app/getting-started/freebsd/) is available for FreeBSD / FreeNAS users.
-Developers are invited to contribute by [building and testing standalone packages](https://docs.photoprism.app/developer-guide/)
-for Linux distributions and other operating systems. 
-
-Updates are [released several times a month](https://docs.photoprism.app/release-notes/), so maintaining the long list of dependencies for additional environments would currently consume too many of [our resources](https://docs.photoprism.app/funding/).
-
-#### LXC Images ####
-
-There is no official [LXC image](https://linuxcontainers.org/) available yet, see [related GitHub issue](https://github.com/photoprism/photoprism/issues/147) for details.
+!!! example "PhotoPrism Plus"
+    If you are a [Plus, Silver, Gold, or Platinum member](https://www.photoprism.app/editions#compare) and would like to build from source, please [let us know](mailto:membership@photoprism.app) so we can give you access to our private extension repository and provide assistance.
 
 ### Why are you using Docker?
 
@@ -229,9 +238,7 @@ can be easily made available to users via Internet. It provides a common standar
 systems and devices, which saves our team a lot of time that we can then spend [more effectively](../developer-guide/code-quality.md#effectiveness-efficiency), for example,
 providing support and developing one of the many features that users are waiting for.
 
-Human-readable and [versioned Dockerfiles as part of our public source code](https://github.com/photoprism/photoprism/tree/develop/docker)
-also help avoid "works for me" moments and other unwelcome surprises by enabling teams to have the exact same environment everywhere in [development](https://github.com/photoprism/photoprism/blob/develop/docker/develop/bookworm/Dockerfile), staging,
-and [production](https://github.com/photoprism/photoprism/blob/develop/docker/photoprism/bookworm/Dockerfile).
+Human-readable and [versioned Dockerfiles as part of our public source code](https://github.com/photoprism/photoprism/tree/develop/docker) also help avoid "works for me" moments and other unwelcome surprises by enabling teams to have the exact same environment everywhere in [development](https://github.com/photoprism/photoprism/blob/develop/docker/develop/lunar/Dockerfile), staging, and [production](https://github.com/photoprism/photoprism/blob/develop/docker/photoprism/lunar/Dockerfile).
 
 Last but not least, virtually all file format parsers have vulnerabilities that just haven't been discovered yet.
 This is a known risk that can affect you even if your computer is not directly connected to the Internet.

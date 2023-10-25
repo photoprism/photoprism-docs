@@ -30,14 +30,12 @@ Other issues? Our [troubleshooting checklists](../troubleshooting/index.md) help
 
 ## Setup using Docker & SQLite ##
 
-!!! attention ""
-    Note that [SQLite is generally not a good choice](../troubleshooting/sqlite.md) for users who require scalability and high performance.
-
-    Since we don't have a Synology test device, contributions to a step-by-step tutorial using mariadb are greatly appreciated.
-    You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.
+!!! note ""
+    [SQLite is not a good choice](../troubleshooting/sqlite.md) for users who require scalability and high performance. We therefore do not recommend following this contributed guide without changing the configuration to connect your instance to a MariaDB database.
 
 !!! example ""
-    **Help improve these docs!** You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.
+    Since we don't have a Synology test device, contributions to a setup guide that uses MariaDB by default would be much appreciated.
+    You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.
 
 This guide describes how to set up PhotoPrism using the new Synology user interface.
 

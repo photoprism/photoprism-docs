@@ -46,9 +46,7 @@ Alternatively, [Podman](https://podman.io/) is supported as a drop-in replacemen
 
     Please keep in mind to replace the `docker` command with `podman` when following the examples in our documentation.
 
-The server port and other [config options](config-options.md) can be changed as needed.
-If you provide no database server credentials, SQLite database files will be created in the
-*storage* folder.
+The server port and other [config options](config-options.md) can be changed as needed. If you provide no database server credentials, SQLite database files will be created in the *storage* folder. Note, however, that SQLite is not a good choice for users who require scalability and high performance. We therefore do not recommend using this example to set up a production environment without modifying it, e.g. to connect it to an existing MariaDB database instance.
 
 !!! danger ""
     Always change `PHOTOPRISM_ADMIN_PASSWORD` so that the app starts with a **secure initial password**.

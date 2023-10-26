@@ -12,9 +12,9 @@ What's new?
 
 - PWA: [Fixed size of the 76px icon in the app manifest](https://github.com/photoprism/photoprism/pull/3838)
 - Search: [Improved cards view camera and lens details](https://github.com/photoprism/photoprism/issues/3816)
-- Setup: [Use tar.gz archives to install PhotoPrism on Linux](https://dl.photoprism.app/pkg/linux/README.html)
 - RAW: [Darktable has been upgraded from v4.2.1 to v4.4.2](https://github.com/photoprism/photoprism/issues/3741)
 - Docker: [New Ubuntu 23.10 (Mantic Minotaur) base image](https://github.com/photoprism/photoprism/blob/develop/docker/develop/mantic/Dockerfile)
+- Setup: [Added tar.gz packages for installation without Docker](https://dl.photoprism.app/pkg/linux/README.html)
 
 ### October 21, 2023 ###
 <span class="build">Build 231021-9abea5b55</span>

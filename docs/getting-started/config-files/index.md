@@ -151,9 +151,9 @@ Default values, including the *config* path to use, may optionally be specified 
 | TLSKey             | string   | --tls-key              |
 | HttpMode           | string   | --http-mode            |
 | HttpCompression    | string   | --http-compression     |
+| HttpCachePublic    | bool     | --http-cache-public    |
 | HttpCacheMaxAge    | int      | --http-cache-maxage    |
 | HttpVideoMaxAge    | int      | --http-video-maxage    |
-| HttpCachePublic    | bool     | --http-cache-public    |
 | HttpHost           | string   | --http-host            |
 | HttpPort           | int      | --http-port            |
 

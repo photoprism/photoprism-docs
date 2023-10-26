@@ -21,8 +21,9 @@ You can use the following config options to specify the URL of an external CDN a
 | PHOTOPRISM_CDN_URL           | --cdn-url           |         | content delivery network `URL`                              |
 | PHOTOPRISM_CDN_VIDEO         | --cdn-video         | false   | stream videos over the specified CDN                        |
 | PHOTOPRISM_HTTP_CSP          | --http-csp          |         | HTTP Content-Security-Policy (CSP) `HEADER` *plus*          |
-| PHOTOPRISM_HTTP_CACHE_MAXAGE | --http-cache-maxage | 2592000 | time in `SECONDS` until cached content expires              |
 | PHOTOPRISM_HTTP_CACHE_PUBLIC | --http-cache-public | true    | allow static content to be cached by a CDN or caching proxy |
+| PHOTOPRISM_HTTP_CACHE_MAXAGE | --http-cache-maxage | 2592000 | time in `SECONDS` until cached content expires              |
+| PHOTOPRISM_HTTP_VIDEO_MAXAGE | --http-video-maxage | 21600   | time in `SECONDS` until cached videos expire                |
 
 ## CDN Providers
 

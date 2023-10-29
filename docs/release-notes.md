@@ -4,14 +4,15 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview` and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 231027-ae585ba47</span>
+<span class="build">Build 231029-34fa0306b</span>
 
 As an alternative to our [Docker images](https://docs.photoprism.app/getting-started/docker-compose/), we now also provide [installation packages with binaries for Linux](https://dl.photoprism.app/pkg/linux/README.html). Since these need to be set up manually, we recommend that only experienced users choose this installation method.
 
 What's new?
 
-- PWA: [Fixed size of the 76px icon in the app manifest](https://github.com/photoprism/photoprism/pull/3838)
 - Search: [Improved cards view camera and lens details](https://github.com/photoprism/photoprism/issues/3816)
+- PWA: [Fixed icon size configuration in the app manifest](https://github.com/photoprism/photoprism/pull/3838)
+- HEIC: [Libheif has been upgraded from v1.13.0 to v1.17.1](https://github.com/photoprism/photoprism/issues/3852)
 - RAW: [Darktable has been upgraded from v4.2.1 to v4.4.2](https://github.com/photoprism/photoprism/issues/3741)
 - Docker: [New Ubuntu 23.10 (Mantic Minotaur) base image](https://github.com/photoprism/photoprism/blob/develop/docker/develop/mantic/Dockerfile)
 - Setup: [Added tar.gz packages for installation without Docker](https://dl.photoprism.app/pkg/linux/README.html)

@@ -14,7 +14,7 @@ What's new?
 - PWA: [Fixed icon size configuration in the app manifest](https://github.com/photoprism/photoprism/pull/3838)
 - JPEG: [Fixed regression when handling files with EOF error](https://github.com/photoprism/photoprism/issues/3855)
 - JPEG: [Fixed decoding of images with invalid color metadata](https://github.com/photoprism/photoprism/issues/3843)
-- JPEG: [Added panic handler for unexpected encoding errors](https://github.com/photoprism/photoprism/issues/3858)
+- JPEG/PNG: [Added panic handler for unexpected encoding errors](https://github.com/photoprism/photoprism/issues/3858)
 - HEIC: [Libheif has been upgraded from v1.13.0 to v1.17.1](https://github.com/photoprism/photoprism/issues/3852)
 - RAW: [Darktable has been upgraded from v4.2.1 to v4.4.2](https://github.com/photoprism/photoprism/issues/3741)
 - Docker: [New Ubuntu 23.10 (Mantic Minotaur) base image](https://github.com/photoprism/photoprism/blob/develop/docker/develop/mantic/Dockerfile)

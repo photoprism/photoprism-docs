@@ -4,24 +4,18 @@ applications on any computer without extensive installation, configuration, or p
 We are aware Docker is not widely used by end users despite its many advantages. For this reason, we aim 
 to provide native binaries for common operating systems at a later time.
 
-## Why are we using Docker?
+### What are the benefits of using Docker?
 
-Containers are nothing new; [Solaris Zones](https://en.wikipedia.org/wiki/Solaris_Containers) have been around for
-about 15 years, first released publicly in 2004. The chroot system call was introduced during
-[development of Version 7 Unix in 1979](https://en.wikipedia.org/wiki/Chroot). It is used ever since for hosting
-applications exposed to the public Internet.
+**(1) Docker uses standard features of the Linux kernel.** Containers are nothing new; [Solaris Zones](https://en.wikipedia.org/wiki/Solaris_Containers) have been around for about 15 years, first released publicly in 2004. The chroot system call was introduced during [development of Version 7 Unix in 1979](https://en.wikipedia.org/wiki/Chroot). It is used ever since for hosting applications exposed to the public Internet.
 
-Modern Linux containers are an incremental enhancement. A main advantage of Docker is that application images
-can be easily made available to users via Internet. It provides a common standard across most operating
-systems and devices, which saves our team a lot of time that we can then spend [more effectively](../code-quality.md#effectiveness-efficiency), for example,
-providing support and developing one of the many features that users are waiting for.
+**(2) Docker saves time through simplified deployment and testing.** Modern Linux containers are an incremental enhancement. A main advantage of Docker is that application images can be easily made available to users via Internet. It provides a common standard across most operating systems and devices, which saves our team a lot of time that we can then spend [more effectively](../code-quality.md#effectiveness-efficiency), for example, providing support and developing one of the many features that users are waiting for.
 
-Human-readable and [versioned Dockerfiles as part of our public source code](https://github.com/photoprism/photoprism/tree/develop/docker) also help avoid "works for me" moments and other unwelcome surprises by enabling teams to have the exact same environment everywhere in [development](https://github.com/photoprism/photoprism/blob/develop/docker/develop/lunar/Dockerfile), staging, and [production](https://github.com/photoprism/photoprism/blob/develop/docker/photoprism/lunar/Dockerfile).
+**(3) Versioned Dockerfiles can be included in the source code repository.** Human-readable and [versioned Dockerfiles as part of our public source code](https://github.com/photoprism/photoprism/tree/develop/docker) also help avoid "works for me" moments and other unwelcome surprises by enabling teams to have the exact same environment everywhere in [development](https://github.com/photoprism/photoprism/blob/develop/docker/develop/), staging, and [production](https://github.com/photoprism/photoprism/blob/develop/docker/photoprism/).
 
-Last but not least, virtually all file format parsers have vulnerabilities that just haven't been discovered yet.
-This is a known risk that can affect you even if your computer is not directly connected to the Internet.
-Running apps in a container with limited host access is an easy way to improve security without
-compromising performance and usability.
+**(4) Running applications in containers is more secure.** Last but not least, virtually all file format parsers have vulnerabilities that just haven't been discovered yet. This is a known risk that can affect you even if your computer is not directly connected to the Internet. Running apps in a container with limited host access is an easy way to improve security without compromising performance and usability.
+
+!!! tldr ""
+    A virtual machine with a dedicated operating system environment provides even more security, but usually has side effects such as lower performance and more difficult handling. Using a VM, however, doesn't prevent you from running containerized apps to get the best of both worlds. This is essentially what happens when you install Docker on [virtual cloud servers](../../getting-started/cloud/digitalocean.md) and operating systems other than Linux.
 
 ## Running Docker Images
 

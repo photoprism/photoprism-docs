@@ -207,7 +207,7 @@ There are no official LXC images available from us yet, see [related GitHub issu
 
 #### BSD Ports ####
 
-For FreeBSD and TrueNAS CORE (formerly FreeNAS) users, an [unofficial port is available](https://docs.photoprism.app/getting-started/freebsd/) that builds PhotoPrism from source. It also compiles and installs the required TensorFlow libraries for you.
+For FreeBSD and TrueNAS CORE (formerly FreeNAS) users, an [unofficial port is available](https://docs.photoprism.app/getting-started/freebsd/) that builds PhotoPrism from source. It will also compile and install the required TensorFlow libraries for you.
 
 #### Building From Source ####
 

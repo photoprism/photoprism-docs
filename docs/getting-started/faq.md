@@ -203,11 +203,11 @@ Since these packages need to be set up manually and do not include the system de
 
 #### LXC Images ####
 
-There are no official [LXC images](https://linuxcontainers.org/) available from us yet, see [related GitHub issue](https://github.com/photoprism/photoprism/issues/147) for details. However, you can [use the tar.gz packages](https://dl.photoprism.app/pkg/linux/README.html) we provide to install them in a LXC base image of your choice.
+There are no official [LXC images](https://linuxcontainers.org/) available from us yet, see [related GitHub issue](https://github.com/photoprism/photoprism/issues/147). However, you can [use the tar.gz packages](https://dl.photoprism.app/pkg/linux/README.html) we provide to install them in a LXC base image of your choice.
 
 #### BSD Ports ####
 
-An [unofficial port](https://docs.photoprism.app/getting-started/freebsd/) is available for users of FreeBSD and TrueNAS CORE (formerly FreeNAS).
+For FreeBSD and TrueNAS CORE (formerly FreeNAS) users, an [unofficial port is available](https://docs.photoprism.app/getting-started/freebsd/) that builds PhotoPrism from source. It also compiles and installs the required TensorFlow libraries for you.
 
 #### Building From Source ####
 

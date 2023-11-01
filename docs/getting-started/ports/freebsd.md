@@ -6,8 +6,7 @@
 !!! tldr ""
     Should you experience problems with the installation, we recommend that you ask the FreeBSD community for advice, as we cannot provide support for third-party software and services. You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.
 
-An [unofficial port](https://github.com/huo-ju/photoprism-freebsd-port) is available for users of FreeBSD and TrueNAS CORE (formerly FreeNAS).
-It will compile and install libtensorflow 1.15.2 and build `photoprism` from source.
+For FreeBSD and TrueNAS CORE (formerly FreeNAS) users, an [unofficial port is available](https://github.com/huo-ju/photoprism-freebsd-port) that builds PhotoPrism from source. It also compiles and installs the required TensorFlow libraries for you.
 
 **1. Clone or download the port:**
 

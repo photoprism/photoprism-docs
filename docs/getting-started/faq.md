@@ -224,7 +224,7 @@ When choosing this installation method, missing build and system dependencies mu
 Please be aware, though, that we do not have the resources to provide support and special dependencies, such as [TensorFlow libraries](https://dl.photoprism.app/tensorflow/), to private users who choose to build from source. If possible, we recommend using [Docker Compose](docker-compose.md) or the [installation packages](#installation-packages) we provide, as they can save a lot of time creating and troubleshooting custom builds.
 
 !!! example "PhotoPrism Plus"
-    If you are a [Plus, Silver, Gold, or Platinum member](https://www.photoprism.app/editions#compare) and would like to build from source, please [let us know](mailto:membership@photoprism.app) so we can give you access to our private extension repository and provide assistance.
+    If you are a [Plus, Silver, Gold or Platinum member](https://www.photoprism.app/editions#compare) and would like to build from source, please [let us know](mailto:membership@photoprism.app) so we can give you access to our private extension repository and provide assistance.
 
 ### What are the benefits of using Docker?
 

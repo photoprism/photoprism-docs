@@ -241,9 +241,11 @@ Please be aware, though, that we do not have the resources to provide support an
 
 ### Why does your Docker image use the Plus License instead of the AGPL?
 
-Our [Plus License](https://www.photoprism.app/plus/license) is used for both the PhotoPrism+ extensions we provide to our members as well as the standard Docker image we distribute. This allows us to bundle the extensions, and other third-party components that we are not allowed to distribute under the AGPL, with the compiled application in the Docker image. The public source code, however, remains under the [Open Source AGPL license](https://docs.photoprism.app/license/agpl/). If you don't want additional features, you can alternatively use the "ce" tag instead of "latest" to get a smaller Docker image distributed under the AGPL License. Note that third-party components and digital assets included in this image are still subject to additional terms and conditions.
+Our [Plus License](https://www.photoprism.app/plus/license) is used for both the PhotoPrism+ extensions we provide to our members as well as the standard [Docker image](https://hub.docker.com/r/photoprism/photoprism) we distribute. This allows us to bundle the extensions, and other third-party components that we are not allowed to distribute under the AGPL, with the compiled application in the Docker image. The public source code, however, remains under the [GNU Affero General Public License (AGPL)](https://docs.photoprism.app/license/agpl/).
 
-[View Plus License ›](https://www.photoprism.app/plus/license)
+If you don't want additional features, you can alternatively use the "ce" tag instead of "latest" to get a smaller Docker image distributed under the AGPL license. Note that third-party components and digital assets included in this image are still subject to additional terms and conditions.
+
+[View Open Source FAQ ›](https://www.photoprism.app/oss/faq){ class="pr-3 block-xs" } [View Plus License ›](https://www.photoprism.app/plus/license)
 
 ### Should I use SQLite, MariaDB, or MySQL?
 
@@ -268,6 +270,14 @@ On the other hand, MariaDB has many optimizations. It is also completely open-so
 ### I've configured an external database, but can't connect?
 
 Most often this happens when new users configure `localhost` or `127.0.0.1` as database server host, since these always point back to the current container or computer. So it is not possible to access an external service with such a hostname or an IP address starting with 127. It works only if it is used directly in the container or on the computer where the database server is running. Instead, you must use a hostname or IP address that is accessible from other machines and containers.
+
+### Why is my configured memory limit exceeded when indexing, even though PhotoPrism doesn't actually seem to use that much memory?
+
+When [indexing a media library](../user-guide/library/originals.md), many files are opened and processed very quickly, which is not a typical workload compared to other containerized applications and services. Various libraries and external applications simultaneously interact with each other in complex ways, so single spikes are inevitable. Some memory is also used by the kernel for buffered I/O to improve performance, although the extent to which caching counts towards a limit may vary.
+
+We therefore recommend not to set hard memory limits, unless you are familiar with memory management and understand the implications. Instead, you should [reduce the number of indexing workers](https://docs.photoprism.app/getting-started/config-options/#index-workers) and [limit file size and resolution](config-options.md#storage) if you are low on resources or want to limit memory usage for other reasons.
+
+[View System Requirements ›](index.md#system-requirements){ class="pr-3 block-xs" } [Get Performance Tips ›](troubleshooting/performance.md#troubleshooting)
 
 ### Why does PhotoPrism always consume 100% of CPU when the background worker is running?
 
@@ -327,14 +337,6 @@ The [smallest configurable size](../user-guide/settings/advanced.md#dynamic-and-
 !!! danger ""
     Reducing the *Static Size Limit* of thumbnails has a **significant impact on [face recognition](../user-guide/organize/people.md)
     and image classification** results. Simply put, it means that the indexer can no longer see properly.
-
-### Why is my configured memory limit exceeded when indexing, even though PhotoPrism doesn't actually seem to use that much memory?
-
-When [indexing a media library](../user-guide/library/originals.md), many files are opened and processed very quickly, which is not a typical workload compared to other containerized applications and services. Various libraries and external applications simultaneously interact with each other in complex ways, so single spikes are inevitable. Some memory is also used by the kernel for buffered I/O to improve performance, although the extent to which caching counts towards a limit may vary.
-
-We therefore recommend not to set hard memory limits, unless you are familiar with memory management and understand the implications. Instead, you should [reduce the number of indexing workers](https://docs.photoprism.app/getting-started/config-options/#index-workers) and [limit file size and resolution](config-options.md#storage) if you are low on resources or want to limit memory usage for other reasons.
-
-[View System Requirements ›](index.md#system-requirements){ class="pr-3 block-xs" } [Get Performance Tips ›](troubleshooting/performance.md#troubleshooting)
 
 ### When should I perform a complete rescan?
 

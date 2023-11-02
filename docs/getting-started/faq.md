@@ -277,7 +277,7 @@ When [indexing a media library](../user-guide/library/originals.md), many files 
 
 We therefore recommend not to set hard memory limits, unless you are familiar with memory management and understand the implications. Instead, you should [reduce the number of indexing workers](https://docs.photoprism.app/getting-started/config-options/#index-workers) and [limit file size and resolution](config-options.md#storage) if you are low on resources or want to limit memory usage for other reasons.
 
-[Get Performance Tips ›](troubleshooting/performance.md#troubleshooting){ class="pr-3 block-xs" } [View System Requirements ›](index.md#system-requirements)
+[View System Requirements ›](index.md#system-requirements){ class="pr-3 block-xs" } [Get Performance Tips ›](troubleshooting/performance.md#troubleshooting)
 
 ### Why does PhotoPrism always consume 100% of CPU when the background worker is running?
 

@@ -440,77 +440,9 @@ for further details.
 
 ### How can I mount network shares with Docker?
 
-Shared folders that have already been mounted on your host can be mounted like any local drive or directory.
-Alternatively, you can mount network storage with [Docker Compose](https://docs.docker.com/compose/compose-file/compose-file-v3/#driver_opts).
-Please never store database files on an unreliable device such as a USB stick, SD card, or network drive.
+Shared folders that have already been mounted on your host under a drive letter or path can be used with Docker containers like [any other drive or directory](docker-compose.md#volumes). Certain types of network storage can also be *mounted directly* with [Docker Compose](https://docs.docker.com/compose/compose-file/compose-file-v3/#driver_opts). See the [Network Storage](troubleshooting/docker.md#network-storage) section of our [Docker Troubleshooting Guide](troubleshooting/docker.md) for further information.
 
-**Unix / NFS**
-
-Follow this `docker-compose.yml` example to mount Network File System (NFS) shares e.g. from Unix servers or NAS devices:
-
-```yaml
-services:
-  photoprism:
-    # ...
-    volumes:
-      # Map named volume "originals"
-      # to "/photoprism/originals":
-      - "originals:/photoprism/originals"     
-  mariadb:
-    # ...
-
-# Specify named volumes:
-volumes:
-  originals:
-    driver_opts:
-      type: nfs
-      # Authentication and other mounting options:
-      o: "addr=1.2.3.4,username=user,password=secret,soft,rw,nfsvers=4"
-      # Mount this path:
-      device: ":/mnt/example"
-```
-
-`device` should contain the path to the share on the NFS server, note the `:` at the beginning. In the above example, the share can be mounted as the named volume `originals` in your `docker-compose.yml`.
-
-Driver-specific options can be set after the server address in `o`, see the [nfs manual page](https://man7.org/linux/man-pages/man5/nfs.5.html). Here are some examples of commonly used options:
-
-- `nfsvers=3` or `nfsvers=4` to specify the NFS version
-- `nolock` (optional): Remote applications on the NFS server are not affected by lock files inside the Docker container (only other processes inside the container are affected by locks)
-- `timeo=n` (optional, default 600): The NFS client waits `n` tenths of a second before retrying an NFS request
-- `soft` (optional): The NFS client aborts an NFS request after `retrans=n` unsuccessful retries, otherwise it retries indefinitely
-- `retrans=n` (optional, default 2): Sets the number of retries for NFS requests, only relevant when using `soft`
-
-**SMB / CIFS**
-
-Follow this `docker-compose.yml` example to mount [CIFS network shares](https://en.wikipedia.org/wiki/Server_Message_Block), e.g. **from Windows**, NAS devices or Linux servers with [Samba](https://www.samba.org/):
-
-```yaml
-services:
-  photoprism:
-    # ...
-    volumes:
-      # Map named volume "originals"
-      # to "/photoprism/originals":
-      - "originals:/photoprism/originals"     
-  mariadb:
-    # ...
-
-# Specify named volumes:
-volumes:
-  originals:
-    driver_opts:
-      type: cifs
-      o: "username=user,password=secret,rw"
-      device: "//host/folder"
-```
-
-Then restart all services for the changes to take effect. Note that related values must start at the same indentation level [in YAML](../developer-guide/technologies/yaml.md) and that **tabs are not allowed for indentation**. We recommend using 2 spaces, but any number will do as long as it is consistent.
-
-!!! tip ""
-    Mounting the import folder from a network drive that can also be accessed via other ways (e.g. CIFS) is handy 
-    because you can dump all data from an SD card/camera directly to this folder and then start the import process
-    under [*Library* > *Import*](../user-guide/library/import.md). PhotoPrism also [has WebDAV support](../user-guide/sync/webdav.md)
-    for remote file management and uploading, for example, through [PhotoSync](https://link.photoprism.app/photosync).
+[Configure Network Storage ›](troubleshooting/docker.md#network-storage)
 
 ### Why does changing permissions using chmod does not work for my  network shares?
 This is a common phenomenon with NFS shares. For security reasons, permissions must be changed on the server to take effect; unless the server allows them to be changed remotely, which depends on the settings. 

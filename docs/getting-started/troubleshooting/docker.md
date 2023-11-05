@@ -299,9 +299,12 @@ in the Docker, Kubernetes, or Virtual Machine configuration (remove or increase 
 
 ## Network Storage
 
-Shared folders that have already been mounted on your host can be mounted like any local drive or directory.
-Alternatively, you can mount network storage with [Docker Compose](https://docs.docker.com/compose/compose-file/compose-file-v3/#driver_opts).
-Please never store database files on an unreliable device such as a USB stick, SD card, or network drive.
+Shared folders that have already been mounted on your host under a drive letter or path can be used with Docker containers like [any other drive or directory](../docker-compose.md#volumes). As shown below, certain types of network storage can also be *mounted directly* with [Docker Compose](https://docs.docker.com/compose/compose-file/compose-file-v3/#driver_opts).
+
+Please note that the required system dependencies (e.g. the `cifs-utils` package on [Ubuntu Linux](https://wiki.ubuntu.com/MountWindowsSharesPermanently#CIFS_installation)) must be installed on your computer in order to mount NFS (Unix/Linux) and/or CIFS shares (Windows/Mac). Also make sure that your *Docker version* and *operating system* are up-to-date, and that the latest Subsystem for Linux (WSL) is installed if you have a Windows PC.
+
+!!! tldr ""
+    Never store database files, e.g. used by MariaDB or SQLite, on an unreliable device such as a USB stick, SD card, or network drive, as this can lead to data loss and poor performance.
 
 ### Unix / NFS
 
@@ -339,6 +342,8 @@ Driver-specific options can be set after the server address in `o`, see the [nfs
 - `soft` (optional): The NFS client aborts an NFS request after `retrans=n` unsuccessful retries, otherwise it retries indefinitely
 - `retrans=n` (optional, default 2): Sets the number of retries for NFS requests, only relevant when using `soft`
 
+When you are done, please [restart all services](../docker-compose.md#step-2-start-the-server) for the changes to take effect.
+
 ### SMB / CIFS
 
 Follow this `docker-compose.yml` example to mount [CIFS network shares](https://en.wikipedia.org/wiki/Server_Message_Block), e.g. **from Windows**, NAS devices or Linux servers with [Samba](https://www.samba.org/):
@@ -363,7 +368,7 @@ volumes:
       device: "//host/folder"
 ```
 
-Then restart all services for the changes to take effect. Note that related values must start at the same indentation level [in YAML](../../developer-guide/technologies/yaml.md) and that **tabs are not allowed for indentation**. We recommend using 2 spaces, but any number will do as long as it is consistent.
+Then [restart all services](../docker-compose.md#step-2-start-the-server) for the changes to take effect. Note that related values must start at the same indentation level [in YAML](../../developer-guide/technologies/yaml.md) and that **tabs are not allowed for indentation**. We recommend using 2 spaces, but any number will do as long as it is consistent.
 
 !!! info ""
     **We kindly ask you not to report bugs via *GitHub Issues* unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.**

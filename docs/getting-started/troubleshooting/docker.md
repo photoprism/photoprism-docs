@@ -304,7 +304,7 @@ Shared folders that have already been mounted on your host under a drive letter 
 Please note that the required system dependencies (e.g. the `cifs-utils` package on [Ubuntu Linux](https://wiki.ubuntu.com/MountWindowsSharesPermanently#CIFS_installation)) must be installed on your computer in order to mount NFS (Unix/Linux) and/or CIFS shares (Windows/Mac). Also make sure that your *Docker version* and *operating system* are up-to-date, and that the latest Subsystem for Linux (WSL) is installed if you have a Windows PC.
 
 !!! tldr ""
-    Never store database files, e.g. used by MariaDB or SQLite, on an unreliable device such as a USB stick, SD card, or network drive, as this can lead to data loss and poor performance.
+    Never store database files, e.g. used by MariaDB or SQLite, on an unreliable device such as a USB stick, SD card or network drive, as this can lead to data loss and poor performance.
 
 ### Unix / NFS
 

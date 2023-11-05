@@ -299,7 +299,7 @@ in the Docker, Kubernetes, or Virtual Machine configuration (remove or increase 
 
 ## Network Storage
 
-Shared folders that have already been mounted on your host under a drive letter or path can be used with Docker containers like [any other drive or directory](../docker-compose.md#volumes). As shown below, certain types of network storage can also be *mounted directly* with [Docker Compose](https://docs.docker.com/compose/compose-file/compose-file-v3/#driver_opts).
+Shared folders that have already been mounted on your host under a drive letter or path can be used with Docker containers like [any other drive or directory](../docker-compose.md#volumes). As shown below, certain types of network storage can *alternatively* also be mounted with [Docker Compose](https://docs.docker.com/compose/compose-file/compose-file-v3/#driver_opts).
 
 Please note that the required system dependencies (e.g. the `cifs-utils` package on [Ubuntu Linux](https://wiki.ubuntu.com/MountWindowsSharesPermanently#CIFS_installation)) must be installed on your computer in order to mount NFS (Unix/Linux) and/or CIFS shares (Windows/Mac). Also make sure that your *Docker version* and *operating system* are up-to-date, and that the latest Subsystem for Linux (WSL) is installed if you have a Windows PC.
 

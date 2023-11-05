@@ -441,7 +441,7 @@ for further details.
 ### How can I mount network shares with Docker?
 
 Shared folders that have already been mounted on your host under a drive letter or path can be used with Docker containers like [any other drive or directory](docker-compose.md#volumes).
-In addition, certain types of network storage like NFS (Unix/Linux) and CIFS (Windows/Mac) can also be *mounted* directly with [Docker Compose](https://docs.docker.com/compose/compose-file/compose-file-v3/#driver_opts).
+In addition, certain types of network storage like NFS (Unix/Linux) and CIFS (Windows/Mac) can also be *mounted directly* with [Docker Compose](https://docs.docker.com/compose/compose-file/compose-file-v3/#driver_opts).
 
 For more information, see the [Network Storage](troubleshooting/docker.md#network-storage) section of our [Docker Troubleshooting Guide](troubleshooting/docker.md).
 

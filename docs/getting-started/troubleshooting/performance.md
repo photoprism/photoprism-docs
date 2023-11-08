@@ -64,8 +64,9 @@ Indexing large photo and video collections benefits from plenty of memory for [c
 Ideally, the amount of RAM should match the number of physical CPU cores. If not, reduce the number of workers 
 as [explained below](#troubleshooting).
 
-Especially the conversion of RAW images and the transcoding of videos are very demanding. High-resolution panoramic
-images may require [additional swap space](docker.md#adding-swap) and/or physical memory above the [recommended minimum](../index.md#system-requirements).
+Also be aware that running PhotoPrism with [less than 4 GB of swap space](docker.md#adding-swap) or [setting a memory/swap limit](../faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory) can lead to unexpected restarts ("crashes"), for example when the indexer temporarily needs more memory to process large files.
+
+Especially the conversion of RAW images and the transcoding of videos are very demanding. High-resolution panoramic images may require [additional swap space](docker.md#adding-swap) and/or physical memory above the [recommended minimum](../index.md#system-requirements).
 
 !!! note ""
     RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory. We take no responsibility

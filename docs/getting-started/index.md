@@ -31,8 +31,8 @@ Having said that, funding really has the highest impact. So users can do their p
 You should host PhotoPrism on a server with **at least 2 cores**, **3 GB of physical memory**,[^1] and
 a 64-bit operating system. Beyond these minimum requirements, the amount of RAM should [match the number of CPU cores](troubleshooting/performance.md#memory). Indexing large photo and video collections also benefits greatly from [local SSD storage](troubleshooting/performance.md#storage), especially for the database and cache files.
 
-If your server has [less than 4 GB of swap space](troubleshooting/docker.md#adding-swap) or a manual
-memory/swap limit is set, this can cause unexpected restarts, for example, when the indexer temporarily
+If your server has [less than 4 GB of swap space](troubleshooting/docker.md#adding-swap) or a [manual
+memory/swap limit](faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory) is set, this can cause unexpected restarts, for example, when the indexer temporarily
 needs more memory to process large files. High-resolution panoramic images may require additional swap space
 and/or physical memory above the recommended minimum.
 

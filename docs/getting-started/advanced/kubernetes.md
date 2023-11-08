@@ -2,18 +2,15 @@
 
 *While we believe this contributed content may be helpful to advanced users, we have not yet thoroughly reviewed it. If you have suggestions for improvement, please let us know by clicking :material-file-edit-outline: to submit a change request.*
 
-Running PhotoPrism on a Kubernetes cluster is straightforward.
+At a minimum, you can just define a Kubernetes `Service` and a `StatefulSet` and be up and running. For more real-world usage, you'll probably want to at least include persistent storage, and possibly some `Ingress` rules for exposing PhotoPrism outside your cluster.
 
-At a minimum, you can just define a Kubernetes `Service` and a `StatefulSet` and be up and running.
-For more real-world usage, you'll probably want to at least include persistent storage,
-and possibly some `Ingress` rules for exposing PhotoPrism outside your cluster.
+Also note that running PhotoPrism on a server with less than 4 GB of swap space or [setting a memory/swap limit](../faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory) can cause unexpected restarts ("crashes"), for example, when the indexer temporarily needs more memory to process large files.
 
 For those familiar with [Helm](https://helm.sh), a PhotoPrism Helm chart [is available](https://github.com/p80n/photoprism-helm).
 
 Once you've got PhotoPrism deployed, you can `exec` into the running container and `photoprism import` your photos.
 
-Here's an [example of a YAML file](../../developer-guide/technologies/yaml.md) that creates the
-following Kubernetes objects:
+Here's an [example of a YAML file](../../developer-guide/technologies/yaml.md) that creates the following Kubernetes objects:
 
 - `Namespace`
 - `Service` exposing PhotoPrism on port 80

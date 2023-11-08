@@ -7,11 +7,18 @@ This [tutorial](https://www.serverlab.ca/tutorials/linux/web-servers-linux/how-t
 
 !!! example
     ```
-    http {
-      server {
-        listen 80 ssl;
-        listen [::]:80 ssl;
-        server_name example.com;
+     # If you want to make sure your port 80 gets redirected to a secure line (Uncomment this after you have obtained your LetsEncrypt cert!) :
+     # server {
+     #   listen 80 default;
+     #   listen [::]:80 default;
+     #   server_name domain.tld;
+     #   return 307 https://domain.tld$request_uri;
+     # }
+     
+     server {
+        listen  443 ssl;
+        listen  [::]:443 ssl;
+        server_name domain.tld abc.domain.tld www.domain.tld;
         client_max_body_size 500M;
     
         # With SSL via Let's Encrypt
@@ -24,7 +31,7 @@ This [tutorial](https://www.serverlab.ca/tutorials/linux/web-servers-linux/how-t
           proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
           proxy_set_header Host $host;
     
-          proxy_pass http://photoprism:2342;
+          proxy_pass http://localhost:2342;
     
           proxy_buffering off;
           proxy_http_version 1.1;

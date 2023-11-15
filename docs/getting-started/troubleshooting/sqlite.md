@@ -19,7 +19,12 @@ The biggest advantage of SQLite is that you don't need to run a separate databas
 
 If you use [traditional hard drives instead of SSDs](performance.md#storage), you will find that PhotoPrism frequently runs into locking issues with SQLite because your CPU is many times faster than the mechanical heads of your disks. To some extent, this may also happen with solid-state drives, but it is much more likely with slow storage.
 
-You may be able to optimize the behavior and reduce locking errors [with SQLite parameters](https://github.com/photoprism/photoprism/issues/2707) that you can set with the [database DSN config option](../config-options.md#database-connection), but ultimately you should use an SSD if you want to keep SQLite or switch to MariaDB. Please note that our team cannot provide support otherwise.
+You may be able to optimize the behavior and reduce locking errors [with SQLite parameters](https://github.com/photoprism/photoprism/issues/2707) that you can set with the [database DSN config option](../config-options.md#database-connection). In particular, enabling [Write-Ahead Logging](https://www.sqlite.org/wal.html) has been shown to resolve locking issues and improve performance:
+
+    sqlite3 index.db
+    sqlite> PRAGMA journal_mode=WAL;
+
+Ultimately you should use an SSD if you want to keep SQLite or switch to MariaDB. Please note that our team cannot provide support otherwise.
 
 ## Server Crashes
 

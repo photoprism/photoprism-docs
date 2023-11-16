@@ -166,16 +166,16 @@
 
 ### File Converters ###
 
-|           Environment            |        CLI Flag         |            Default             |                              Description                              |
+| Environment                      | CLI Flag                | Default                        | Description                                                           |
 |----------------------------------|-------------------------|--------------------------------|-----------------------------------------------------------------------|
 | PHOTOPRISM_SIPS_BIN              | --sips-bin              | sips                           | Sips `COMMAND` for media file conversion *macOS only*                 |
 | PHOTOPRISM_SIPS_BLACKLIST        | --sips-blacklist        | avif,avifs                     | do not use Sips to convert files with these `EXTENSIONS` *macOS only* |
 | PHOTOPRISM_FFMPEG_BIN            | --ffmpeg-bin            | ffmpeg                         | FFmpeg `COMMAND` for video transcoding and thumbnail extraction       |
 | PHOTOPRISM_FFMPEG_ENCODER        | --ffmpeg-encoder        | libx264                        | FFmpeg AVC encoder `NAME`                                             |
-| PHOTOPRISM_FFMPEG_SIZE           | --ffmpeg-size           |                           3840 | maximum video size in `PIXELS` (720-7680)                             |
-| PHOTOPRISM_FFMPEG_BITRATE        | --ffmpeg-bitrate        |                             50 | maximum video `BITRATE` in Mbit/s                                     |
-| PHOTOPRISM_FFMPEG_MAP_VIDEO      | --ffmpeg-map-video      | 0:v:0                          | video `STREAMS` that should be transcoded                             |
-| PHOTOPRISM_FFMPEG_MAP_AUDIO      | --ffmpeg-map-audio      | 0:a:0?                         | audio `STREAMS` that should be transcoded                             |
+| PHOTOPRISM_FFMPEG_SIZE           | --ffmpeg-size           | 3840                           | maximum video size in `PIXELS` (720-7680)                             |
+| PHOTOPRISM_FFMPEG_BITRATE        | --ffmpeg-bitrate        | 50                             | maximum video `BITRATE` in Mbit/s                                     |
+| PHOTOPRISM_FFMPEG_MAP_VIDEO      | --ffmpeg-map-video      | `0:v:0`                        | video `STREAMS` that should be transcoded                             |
+| PHOTOPRISM_FFMPEG_MAP_AUDIO      | --ffmpeg-map-audio      | `0:a:0?`                       | audio `STREAMS` that should be transcoded                             |
 | PHOTOPRISM_EXIFTOOL_BIN          | --exiftool-bin          | exiftool                       | ExifTool `COMMAND` for extracting metadata                            |
 | PHOTOPRISM_DARKTABLE_BIN         | --darktable-bin         | darktable-cli                  | Darktable CLI `COMMAND` for RAW to JPEG conversion                    |
 | PHOTOPRISM_DARKTABLE_BLACKLIST   | --darktable-blacklist   |                                | do not use Darktable to convert files with these `EXTENSIONS`         |

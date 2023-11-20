@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview` and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 231120-eb19a4a89</span>
+<span class="build">Build 231120-63d071a21</span>
 
 As an alternative to our [Docker images](https://docs.photoprism.app/getting-started/docker-compose/), we now also provide [installation packages with binaries for Linux](https://dl.photoprism.app/pkg/linux/README.html). Since these need to be set up manually, we recommend that only experienced users choose this installation method.
 

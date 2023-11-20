@@ -23,7 +23,7 @@ Automatically creates JPEG or PNG preview images for other file types so they ca
     *Preview Images* should be enabled, otherwise PhotoPrism cannot index file types other than JPEG or PNG unless a preview sidecar file with the same filename prefix already exists. See *Stacks* to learn more about naming conventions of sidecar files.
 
 !!! info ""
-    To prevent inexperienced users from accidentally disabling the creation of thumbnails *Preview Images* can only be disabled when experimental mode is enabled.
+    To prevent inexperienced users from accidentally disabling the creation of thumbnails *Preview Images* can only be disabled when [Experimental Features](advanced.md#experimental-features) are enabled.
 
 ## Stacks ##
 

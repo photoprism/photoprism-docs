@@ -306,6 +306,9 @@ If this feature is disabled, [FFmpeg](https://www.ffmpeg.org/documentation.html)
 
 The corresponding [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_DISABLE_FFMPEG`.
 
+!!! info ""
+    To prevent inexperienced users from accidentally disabling the creation of thumbnails for videos *FFmpeg* can only be disabled when [Experimental Features](#experimental-features) are enabled.
+
 
 ### Disable ImageMagick
 

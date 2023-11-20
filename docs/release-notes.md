@@ -4,20 +4,23 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview` and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 231108-1b41e89cb</span>
+<span class="build">Build 231120-eb19a4a89</span>
 
 As an alternative to our [Docker images](https://docs.photoprism.app/getting-started/docker-compose/), we now also provide [installation packages with binaries for Linux](https://dl.photoprism.app/pkg/linux/README.html). Since these need to be set up manually, we recommend that only experienced users choose this installation method.
 
 What's new?
 
-- Search: [Improved cards view camera and lens details](https://github.com/photoprism/photoprism/issues/3816)
-- PWA: [Fixed icon size configuration in the app manifest](https://github.com/photoprism/photoprism/pull/3838)
-- JPEG: [Fixed regression when handling files with EOF error](https://github.com/photoprism/photoprism/issues/3855)
-- JPEG: [Fixed decoding of images with invalid color metadata](https://github.com/photoprism/photoprism/issues/3843)
-- JPEG/PNG: [Added panic handler for unexpected encoding errors](https://github.com/photoprism/photoprism/issues/3858)
-- HEIC: [Libheif has been upgraded from v1.13.0 to v1.17.1](https://github.com/photoprism/photoprism/issues/3852)
-- RAW: [Darktable has been upgraded from v4.2.1 to v4.4.2](https://github.com/photoprism/photoprism/issues/3741)
-- Docker: [New Ubuntu 23.10 (Mantic Minotaur) base image](https://github.com/photoprism/photoprism/blob/develop/docker/develop/mantic/Dockerfile)
+- Search: [Improved cards view camera and lens detail information](https://github.com/photoprism/photoprism/issues/3816)
+- Search: [Added filter to find pictures by resolution range in Megapixels (MP)](https://github.com/photoprism/photoprism/issues/3896)
+- PWA: [Fixed list of available icon sizes in the app manifest file](https://github.com/photoprism/photoprism/pull/3838)
+- JPEG: [Fixed regression when handling image files with EOF error](https://github.com/photoprism/photoprism/issues/3855)
+- JPEG: [Fixed indexing of certain images with invalid color metadata](https://github.com/photoprism/photoprism/issues/3843)
+- JPEG/PNG: [Added panic handler for unexpected thumbnail save errors](https://github.com/photoprism/photoprism/issues/3858)
+- HEIC: [Libheif has been upgraded from version 1.13.0 to 1.17.1](https://github.com/photoprism/photoprism/issues/3852)
+- RAW: [Darktable has been upgraded from version 4.2.1 to 4.4.2](https://github.com/photoprism/photoprism/issues/3741)
+- Vectors: [Improved conversion of SVGs to PNG using RSVG instead of ImageMagick](https://github.com/photoprism/photoprism/issues/3885)
+- Videos: [Improved performance when extracting still images for creating thumbnails](https://github.com/photoprism/photoprism/pull/3893)
+- Docker: [Base image has been upgraded from Ubuntu 23.04 to 23.10 (Mantic Minotaur)](https://github.com/photoprism/photoprism/blob/develop/docker/develop/mantic/Dockerfile)
 - Setup: [Added `tar.gz`, `deb` and `rpm` installation packages](https://github.com/photoprism/photoprism/issues/3861)
 - Security: [Go has been updated to the latest stable release v1.21.4](https://github.com/golang/go/issues?q=milestone%3AGo1.21.4)
 

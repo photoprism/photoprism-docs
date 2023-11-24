@@ -301,7 +301,7 @@ in the Docker, Kubernetes, or Virtual Machine configuration (remove or increase 
 
 Shared folders that have already been mounted on your host under a drive letter or path can be used with Docker containers like [any other directory](../docker-compose.md#volumes). As shown below, certain types of network storage can alternatively be *mounted directly* with [Docker Compose](https://docs.docker.com/compose/compose-file/compose-file-v3/#driver_opts).
 
-Please note that the required system dependencies (e.g. the `cifs-utils` package on [Ubuntu Linux](https://wiki.ubuntu.com/MountWindowsSharesPermanently#CIFS_installation)) must be installed on your computer in order to mount NFS (Unix/Linux) and/or CIFS shares (Windows/Mac). Also make sure that your *Docker version* and *operating system* are up-to-date, and that the latest Subsystem for Linux (WSL) is installed if you have a Windows PC.
+Please note that the required system dependencies must be installed on your computer in order to mount NFS (Unix/Linux) and/or CIFS shares (Windows/Mac), e.g. the `nfs-client` and `cifs-utils` packages on [Ubuntu Linux](https://wiki.ubuntu.com/MountWindowsSharesPermanently#CIFS_installation). Also make sure that your Docker version and operating system are up-to-date, and that the latest Subsystem for Linux (WSL) is installed if you have a Windows PC.
 
 !!! tldr ""
     Never store database files, e.g. used by MariaDB or SQLite, on an unreliable device like a USB stick, SD card or network drive as this leads to poor performance and can also result in data loss.

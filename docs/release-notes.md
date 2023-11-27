@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview` and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 231120-63d071a21</span>
+<span class="build">Build 231127-5bc61b496</span>
 
 As an alternative to our [Docker images](https://docs.photoprism.app/getting-started/docker-compose/), we now also provide [installation packages with binaries for Linux](https://dl.photoprism.app/pkg/linux/README.html). Since these need to be set up manually, we recommend that only experienced users choose this installation method.
 
@@ -12,6 +12,7 @@ What's new?
 
 - Search: [Improved cards view camera and lens detail information](https://github.com/photoprism/photoprism/issues/3816)
 - Search: [Added filter to find pictures by resolution range in Megapixels (MP)](https://github.com/photoprism/photoprism/issues/3896)
+- Search: [Fixed cards view rendering when a lens has no model description](https://github.com/photoprism/photoprism/issues/3918)
 - PWA: [Fixed list of available icon sizes in the app manifest file](https://github.com/photoprism/photoprism/pull/3838)
 - JPEG: [Fixed regression when handling image files with EOF error](https://github.com/photoprism/photoprism/issues/3855)
 - JPEG: [Fixed indexing of certain images with invalid color metadata](https://github.com/photoprism/photoprism/issues/3843)

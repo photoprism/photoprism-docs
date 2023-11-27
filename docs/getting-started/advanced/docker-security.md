@@ -18,14 +18,14 @@ services:
       - ...
 ```
 
-This can be combined with [other init actions](../config-options.md#docker-image) such as `https`, `gpu` and `tensorflow`, e.g. `PHOTOPRISM_INIT: "update https gpu tensorflow"`. For the changes to take effect, run the following to restart the services (`--force-recreate` will always recreate the containers to apply any available updates, even if their configuration has not been changed):
+This can be combined with [other init actions](../config-options.md#docker-image) such as `https`, `gpu` and `tensorflow`, e.g. `PHOTOPRISM_INIT: "update https gpu tensorflow"`. For the changes to take effect, run the following to restart the services (`--force-recreate` will always recreate the containers to apply available updates, even if their configuration has not been changed):
 
 ```bash
 docker compose stop
 docker compose up -d --force-recreate
 ```
 
-We also recommend making sure that the latest Docker version and security updates are automatically installed on the host operating system.
+We also recommend making sure that the latest Docker version and security updates are automatically installed on your host operating system.
 
 !!! tldr ""
     Note that our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible Linux distributions.

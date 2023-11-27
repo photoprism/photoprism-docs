@@ -6,13 +6,13 @@
 ### Development Preview ###
 <span class="build">Build 231127-5bc61b496</span>
 
-As an alternative to our [Docker images](https://docs.photoprism.app/getting-started/docker-compose/), we now also provide [installation packages with binaries for Linux](https://dl.photoprism.app/pkg/linux/README.html). Since these need to be set up manually, we recommend that only experienced users choose this installation method.
+This service release includes updated dependencies and fixes for recently discovered issues. As an alternative to our [Docker images](https://docs.photoprism.app/getting-started/docker-compose/), we now also offer [installation packages with binaries for Linux](https://dl.photoprism.app/pkg/linux/README.html). As these need to be set up manually, we recommend that only experienced users choose this installation method.
 
 What's new?
 
-- Search: [Improved cards view camera and lens detail information](https://github.com/photoprism/photoprism/issues/3816)
-- Search: [Added filter to find pictures by resolution range in Megapixels (MP)](https://github.com/photoprism/photoprism/issues/3896)
+- Search: [Improved camera and lens information in the cards view details](https://github.com/photoprism/photoprism/issues/3816)
 - Search: [Fixed cards view rendering when a lens has no model description](https://github.com/photoprism/photoprism/issues/3918)
+- Search: [Added filter to find pictures by resolution range in Megapixels (MP)](https://github.com/photoprism/photoprism/issues/3896)
 - PWA: [Fixed list of available icon sizes in the app manifest file](https://github.com/photoprism/photoprism/pull/3838)
 - JPEG: [Fixed regression when handling image files with EOF error](https://github.com/photoprism/photoprism/issues/3855)
 - JPEG: [Fixed indexing of certain images with invalid color metadata](https://github.com/photoprism/photoprism/issues/3843)

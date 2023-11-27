@@ -44,9 +44,7 @@ services:
     Set strong passwords if the database is exposed to an external network. Never expose your database to the public
     Internet in this way, for example, if it is running on a cloud server.
 
-If this doesn't help, check the [Docker Logs](docker.md#viewing-logs) for messages like *disk full*, *disk quota exceeded*,
-*no space left on device*, *read-only file system*, *error creating path*, *wrong permissions*, *no route to host*, *connection failed*, *exec format error*,
-*no matching manifest*, and *killed*:
+If this doesn't help, check the [Docker Logs](docker.md#viewing-logs) for messages like *disk full*, *disk quota exceeded*, *no space left on device*, *read-only file system*, *error creating path*, *wrong permissions*, *no route to host*, *connection failed*, *exec format error*, *no matching manifest*, and *killed*:
 
 - [ ] Make sure that the database *storage* folder is readable and writable: Errors such as "read-only file system", "error creating path", or "wrong permissions" indicate a [filesystem permission problem](docker.md#file-permissions)
 - [ ] If [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) are mounted or used within the *storage* folder, replace them with the actual paths and verify that they are accessible
@@ -54,6 +52,22 @@ If this doesn't help, check the [Docker Logs](docker.md#viewing-logs) for messag
 - [ ] In case the logs also show "disk full", "quota exceeded", or "no space left" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space) (add storage) or a disk usage limit is configured (remove or increase it)
 - [ ] Log messages that contain "no route to host" may also indicate a general network configuration problem (follow our [examples](https://dl.photoprism.app/docker/))
 - [ ] You have to resort to [alternative Docker images](../raspberry-pi.md#older-armv7-based-devices) to run MariaDB on ARMv7-based devices and those with a 32-bit operating system
+
+## Wrong Password
+
+If the password you are using was specified in a `docker-compose.yml` file and contains one or more `$` characters, these [must be escaped with `$$`](../../developer-guide/technologies/yaml.md#dollar-signs) (a double dollar sign) so that, for example, `"compo$e"` becomes `"compo$$e"`:
+
+
+```yaml
+services:
+  mariadb:
+    environment:
+      MARIADB_PASSWORD: "compo$$e" # sets password to "compo$e"
+```
+
+Also note that it is **not possible to change the database password** with `MARIADB_PASSWORD` after MariaDB has been started for the first time.
+
+In this case, you can either delete the database storage folder and restart the database service or follow the instructions under [Lost Root Password](#lost-root-password).
 
 ## Bad Performance
 

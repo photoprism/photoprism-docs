@@ -6,7 +6,7 @@
 ### Development Preview ###
 <span class="build">Build 231127-5bc61b496</span>
 
-This service release includes updated dependencies and fixes for recently discovered issues. As an alternative to our [Docker images](https://docs.photoprism.app/getting-started/docker-compose/), we now also offer [installation packages with binaries for Linux](https://dl.photoprism.app/pkg/linux/README.html). As these need to be set up manually, we recommend that only experienced users choose this installation method.
+This service release includes updated dependencies and fixes for recently discovered issues. As an alternative to our [Docker images](https://docs.photoprism.app/getting-started/docker-compose/), we now also provide [installation packages with binaries for Linux](https://dl.photoprism.app/pkg/linux/README.html). Since these need to be set up manually, we recommend that only experienced users choose this installation method.
 
 What's new?
 

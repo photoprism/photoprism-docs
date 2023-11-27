@@ -15,7 +15,7 @@ What's new?
 - Search: [Added filter to find pictures by resolution range in Megapixels (MP)](https://github.com/photoprism/photoprism/issues/3896)
 - PWA: [Fixed list of available icon sizes in the app manifest file](https://github.com/photoprism/photoprism/pull/3838)
 - JPEG: [Fixed regression when handling image files with EOF error](https://github.com/photoprism/photoprism/issues/3855)
-- JPEG: [Fixed indexing of certain images with invalid color metadata](https://github.com/photoprism/photoprism/issues/3843)
+- JPEG: [Fixed indexing of image files with invalid color metadata](https://github.com/photoprism/photoprism/issues/3843)
 - JPEG/PNG: [Added panic handler for unexpected thumbnail save errors](https://github.com/photoprism/photoprism/issues/3858)
 - HEIC: [Libheif has been upgraded from version 1.13.0 to 1.17.1](https://github.com/photoprism/photoprism/issues/3852)
 - RAW: [Darktable has been upgraded from version 4.2.1 to 4.4.2](https://github.com/photoprism/photoprism/issues/3741)

@@ -1,15 +1,41 @@
 # Docker Security Guide
 
-*While we believe this contributed content may be helpful to advanced users, we have not yet thoroughly reviewed it. If you have suggestions for improvement, please let us know by clicking :material-file-edit-outline: to submit a change request.*
+*This documentation is intended for experienced users who want to enhance the security of their installation. If you have suggestions for improvement, please let us know by clicking :material-file-edit-outline: to submit a change request.*
+
+## Get the Latest Security Updates
+
+Even though [PhotoPrism](https://github.com/photoprism/photoprism) is [developed in Go](https://go.dev/) and therefore does not use many of the C libraries installed in our Docker image, external file converters like Darktable and FFmpeg as well as other tools installed as dependencies might use them. They may also be directly affected by [recently discovered vulnerabilities](https://ubuntu.com/security/cves) for which updates are available.
+
+To automatically install these updates when the container starts for the first time, you can add `PHOTOPRISM_INIT: "update"` to the `environment:` section of the *photoprism* service in your `docker-compose.yml`:
+
+```yaml
+services:
+  photoprism:
+    environment:
+      PHOTOPRISM_INIT: "update"
+      ...
+    volumes:
+      - ...
+```
+
+This can be combined with [other init actions](../config-options.md#docker-image) such as `https`, `gpu` and `tensorflow`, e.g. `PHOTOPRISM_INIT: "update https gpu tensorflow"`. For the changes to take effect, you can run the following to restart all services (`--force-recreate` will always recreate the containers to apply any available updates):
+
+```bash
+docker compose stop
+docker compose up -d --force-recreate
+```
+
+!!! tldr ""
+    Note that our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible Linux distributions.
 
 ## Run Services as Non-Root User
 
 It is recommended that you run the `photoprism` service as a non-root user by setting either the `user` [service property](https://docs.docker.com/compose/compose-file/05-services/#user) or the `PHOTOPRISM_UID` and `PHOTOPRISM_GID` [environment variable](../config-options.md#docker-image) in your `docker-compose.yml` file:
 
-| Environment    | Default | Description                                                                                                                                                                                  |
-|----------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| PHOTOPRISM_UID | 0       | run as a non-root user after initialization (supported: 0, 33, 50-99, 500-600, 900-1250, and 2000-2100)                                                                                      |
-| PHOTOPRISM_GID | 0       | run with a specific group id after initialization, can optionally be used together with `PHOTOPRISM_UID` (supported: 0, 33, 44, 50-99, 105, 109, 115, 116, 500-600, 900-1250, and 2000-2100) |
+| Environment              | Default | Description                                                                                                                                                                                  |
+|--------------------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PHOTOPRISM_UID           | 0       | run as a non-root user after initialization (supported: 0, 33, 50-99, 500-600, 900-1250, and 2000-2100)                                                                                      |
+| PHOTOPRISM_GID           | 0       | run with a specific group id after initialization, can optionally be used together with `PHOTOPRISM_UID` (supported: 0, 33, 44, 50-99, 105, 109, 115, 116, 500-600, 900-1250, and 2000-2100) |
 
 *If you are using [hardware video transcoding](transcoding.md#intel-quick-sync), it should depend on the owner of the video device which user and group you choose so that the service has permission to access it.*
 
@@ -19,9 +45,6 @@ Finally, remember to [update the file permissions and/or owner](../troubleshooti
 docker compose stop
 docker compose up -d
 ```
-
-!!! tldr ""
-    Note that our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible Linux distributions.
 
 ## Remove Passwords From the Environment
 

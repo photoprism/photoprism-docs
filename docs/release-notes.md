@@ -20,7 +20,7 @@ What's new?
 - HEIC: [Libheif has been upgraded from version 1.13.0 to 1.17.1](https://github.com/photoprism/photoprism/issues/3852)
 - RAW: [Darktable has been upgraded from version 4.2.1 to 4.4.2](https://github.com/photoprism/photoprism/issues/3741)
 - Videos: [Improved performance when extracting still images for creating thumbnails](https://github.com/photoprism/photoprism/pull/3893)
-- Vectors: [Improved conversion of SVGs to PNG using RSVG instead of ImageMagick](https://github.com/photoprism/photoprism/issues/3885)
+- Vectors: [Improved SVG conversion using RSVG instead of ImageMagick](https://github.com/photoprism/photoprism/issues/3885)
 - Docker: [Base image has been upgraded from Ubuntu 23.04 to 23.10 (Mantic Minotaur)](https://github.com/photoprism/photoprism/blob/develop/docker/develop/mantic/Dockerfile)
 - Setup: [Added `tar.gz`, `deb` and `rpm` installation packages](https://github.com/photoprism/photoprism/issues/3861)
 - Security: [Go has been updated to the latest stable release v1.21.4](https://github.com/golang/go/issues?q=milestone%3AGo1.21.4)

@@ -18,7 +18,7 @@ services:
       - ...
 ```
 
-This can be combined with [other init actions](../config-options.md#docker-image) such as `https`, `gpu` and `tensorflow`, e.g. `PHOTOPRISM_INIT: "update https gpu tensorflow"`. For the changes to take effect, you can run the following to restart all services (`--force-recreate` will always recreate the containers to apply any available updates, even if the configuration has not been changed):
+This can be combined with [other init actions](../config-options.md#docker-image) such as `https`, `gpu` and `tensorflow`, e.g. `PHOTOPRISM_INIT: "update https gpu tensorflow"`. For the changes to take effect, run the following to restart the services (`--force-recreate` will always recreate the containers to apply any available updates, even if their configuration has not been changed):
 
 ```bash
 docker compose stop

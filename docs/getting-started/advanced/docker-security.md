@@ -25,7 +25,7 @@ docker compose stop
 docker compose up -d --force-recreate
 ```
 
-We also recommend to have the latest Docker version and security updates installed on your host.
+We also recommend to always have the latest Docker version and security updates installed on your host.
 
 !!! tldr ""
     Note that our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible Linux distributions.

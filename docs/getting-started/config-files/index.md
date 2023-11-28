@@ -7,7 +7,7 @@ You can specify a custom *config path* by adding the `ConfigPath` option to a â†
 If you use a third-party integration or package, you should find the exact location of the configuration files in the corresponding documentation.
 
 !!! tldr ""
-    Changes to the [config options](#config-options) always require a restart to take effect. Also note that config values changed in the [Advanced Settings](../../user-guide/settings/advanced.md) UI are stored in the `options.yml` file. We therefore recommend that you only change it manually while your instance is stopped.
+    Note that changes to the `options.yml` file require a restart to take effect and that [config values changed through the web interface](../../user-guide/settings/advanced.md) will also be saved to this file. We therefore recommend that you only edit it manually while your instance is stopped.
 
 ### File Format ###
 

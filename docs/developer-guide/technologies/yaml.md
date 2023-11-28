@@ -65,7 +65,7 @@ services:
 
 ## Docker Compose ##
 
-Additional rules apply when using [Docker Compose](https://docs.docker.com/compose/compose-file/compose-file-v3/), as `docker-compose.yml` files extend the YAML format with advanced features such as [variable interpolation](https://docs.docker.com/compose/compose-file/12-interpolation/#interpolation).
+When using [Docker Compose](https://docs.docker.com/compose/compose-file/compose-file-v3/), some additional rules apply, as `docker-compose.yml` files extend the YAML format with features such as [variable interpolation](https://docs.docker.com/compose/compose-file/12-interpolation/#interpolation).
 
 ### Dollar Signs ###
 

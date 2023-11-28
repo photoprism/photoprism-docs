@@ -69,7 +69,7 @@ When using [Docker Compose](https://docs.docker.com/compose/compose-file/compose
 
 ### Dollar Signs ###
 
-When a configuration value [in a `docker-compose.yml` file](../../getting-started/docker-compose.md) contains a literal `$` character, for example in a password, you must use `$$` (a double dollar sign) to escape it so that e.g. `"compo$e"` becomes `"compo$$e"`:
+If a configuration value [in a `docker-compose.yml` file](../../getting-started/docker-compose.md) contains a literal `$` character, for example in a password, you must use `$$` (a double dollar sign) to escape it so that e.g. `"compo$e"` becomes `"compo$$e"`:
 
 ```yaml
 services:

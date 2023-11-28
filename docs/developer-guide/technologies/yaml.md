@@ -1,8 +1,6 @@
 # Introduction to YAML
 
-[YAML](https://en.wikipedia.org/wiki/YAML) is a human-friendly format that we use for metadata exports and configuration
-files because of its simplicity and widespread support. The name originally meant *Yet Another Markup Language*.
-Common file extensions are `.yml`and `.yaml`.
+[YAML](https://en.wikipedia.org/wiki/YAML) is a human-friendly format that we use for [metadata exports](../../user-guide/backups/export.md) and [configuration files](../../getting-started/config-files/index.md) because of its simplicity and widespread support. The name originally meant *Yet Another Markup Language*. Common file extensions are `.yml`and `.yaml`.
 
 Values are represented in the form `key: value` with one entry per line:
 

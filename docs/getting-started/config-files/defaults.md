@@ -1,7 +1,7 @@
 # `defaults.yml`
 
 Global config defaults, including the *config* and *storage* paths to be used, can be defined [with a `defaults.yml` file](https://dl.photoprism.app/pkg/linux/defaults.yml) in the `/etc/photoprism` directory (requires root privileges).
-You can use the environment variable `PHOTOPRISM_DEFAULTS_YAML` or the command flag `--defaults-yaml` to load the defaults from another file instead.
+It is possible to use the environment variable `PHOTOPRISM_DEFAULTS_YAML` or the command flag `--defaults-yaml` to load the defaults from another file instead.
 
 Keep in mind that any changes to the config options, either [through the UI](../../user-guide/settings/advanced.md), [config files](index.md), or by [setting environment variables](../config-options.md), always require a restart to take effect.
 

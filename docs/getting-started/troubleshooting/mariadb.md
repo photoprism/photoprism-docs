@@ -62,7 +62,8 @@ If the password you are using was specified in a `docker-compose.yml` file and c
 services:
   mariadb:
     environment:
-      MARIADB_PASSWORD: "compo$$e" # sets password to "compo$e"
+      # sets password to "compo$e"
+      MARIADB_PASSWORD: "compo$$e"
 ```
 
 Also note that it is **not possible to change the database password** with `MARIADB_PASSWORD` after MariaDB has been started for the first time.

@@ -122,7 +122,8 @@ If a configuration value [in a `docker-compose.yml` file](getting-started/docker
 services:
   mariadb:
     environment:
-      MARIADB_PASSWORD: "compo$$e" # sets password to "compo$e"
+      # sets password to "compo$e"
+      MARIADB_PASSWORD: "compo$$e"
 ```
 
 Values that contain a `$` are otherwise [interpreted as a variable](https://docs.docker.com/compose/compose-file/12-interpolation/#interpolation). In this case, both the `$VARIABLE` and the `${VARIABLE}` syntax are supported. Further details on the use of variables can be found in the [file format reference](https://docs.docker.com/compose/compose-file/12-interpolation/#interpolation).

@@ -21,7 +21,7 @@ Details:
     - Tabs are not allowed for indentation
     - We recommend using 2 spaces, but any number will work as long as it is consistent
 - You can generally use all [Unicode](https://home.unicode.org/basic-info/faq/) characters in YAML files, including [Emojis](https://home.unicode.org/emoji/about-emoji/)
-    - To avoid ambiguity, it is recommended to enclose text strings in single `'` or double quotes `"`, especially if they contain a colon `:`
+    - To avoid ambiguity, it is recommended to enclose text strings in single `'` or double quotes `"`, especially if they contain spaces, a colon, or other special characters
     - The difference between single and double quotes is that double quotes support [escape sequences](https://symfony.com/doc/current/components/yaml/yaml_format.html#strings) like `\t` for a tab or `\n` for a new line
 - Comments begin with the `#` sign, can start anywhere on a line, and continue until the end of the line
 
@@ -47,7 +47,7 @@ services:
 
 ### Key-Value Pairs ###
 
-Collections of key-value pairs are commonly used to set the names and values of environment variables in `docker-compose.yml` files (see below for [additional rules](#dollar-signs)):
+Collections of key-value pairs are commonly used to set the names and values of environment variables in `docker-compose.yml` files (see below for [additional rules](#docker-compose)):
 
 ```yaml
 services:

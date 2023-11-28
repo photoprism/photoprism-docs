@@ -5,7 +5,7 @@ User interface, download, and indexing preferences are stored in the `settings.y
 Experienced users may edit this file directly to change certain settings, as not all of them can be changed through the user interface.
 
 !!! tldr ""
-    Note that changes to the `settings.yml` file require a restart to take effect and that settings [changed through the web interface](../../user-guide/settings/general.md) will also be saved to this file. We therefore recommend that you only edit it manually while your instance is stopped.
+    Note that changes to the `settings.yml` file require a restart to take effect and that [settings changed through the web interface](../../user-guide/settings/general.md) will also be saved to this file. We therefore recommend that you only edit it manually while your instance is stopped.
 
 ### File Format ###
 

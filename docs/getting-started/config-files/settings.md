@@ -7,13 +7,21 @@ Advanced users can edit the file directly to change certain settings, since not 
 !!! tldr ""
     All changes require a restart to take effect. Also note that settings changed on the [web interface](../../user-guide/settings/general.md) will be stored in the same file. We therefore recommend that you edit it only while PhotoPrism is not running.
 
-### Format
+### File Format ###
 
-When [editing YAML files](../../developer-guide/technologies/yaml.md), it is important that related values start at the same indentation level and that spaces are used, since tabs are not allowed. You can use any text editor for this.
+You can use any text editor to [create or modify YAML configuration files](../../developer-guide/technologies/yaml.md). However, it is important that related values, e.g. key-value pairs, start at the same indentation level and that spaces are used for indentation, for example:
 
-### Defaults
+```yaml
+Index:
+  Path: "/"
+  Rescan: false
+```
 
-In the [upcoming release](../../release-notes.md#development-preview), the settings can optionally be initialized from a `settings.yml` file located in the same folder as the [`defaults.yml` file](defaults.md) e.g. `/etc/photoprism`.
+To avoid ambiguity, it is recommended to enclose text strings in double quotes `"`, especially if they contain spaces, a colon, or other special characters.
+
+### Global Defaults
+
+User settings can optionally be initialized from a `settings.yml` file located in the same folder as the ↪ [`defaults.yml`](defaults.md) file, e.g. `/etc/photoprism`.
 
 ## Sections
 

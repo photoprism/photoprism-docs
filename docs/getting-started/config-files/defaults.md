@@ -54,7 +54,7 @@ To avoid ambiguity, it is recommended to enclose text strings in `"` (double quo
 
 Defaults can be overridden by values in [an `options.yml` file](index.md) as well as by [command flags and environment variables](../config-options.md).
 
-To override values with an `options.yml` file, you can specify its path (without the file name) by adding the `ConfigPath` option to your `defaults.yml`. Alternatively, you can use the command flag `--config-path` or the environment variable `PHOTOPRISM_CONFIG_PATH`. By default, it is a subdirectory of the [*storage* folder](../docker-compose.md#photoprismstorage).
+To override values with an `options.yml` file, you can specify its path (without the file name) by adding the `ConfigPath` option to your `defaults.yml`. Alternatively, you can use the command flag `--config-path` or the environment variable `PHOTOPRISM_CONFIG_PATH`. By default, it is located in the *config* subdirectory of the [*storage path*](../docker-compose.md#photoprismstorage).
 
 The values in an `options.yml` file are not global by default and can be used to customize individual instances.
 In both files you can set any of the [supported options](index.md#config-options).

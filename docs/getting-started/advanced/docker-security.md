@@ -6,7 +6,7 @@
 
 Even though [PhotoPrism](https://github.com/photoprism/photoprism) is [developed in Go](https://go.dev/) and therefore does not use many of the C libraries installed in our Docker image, external file converters like Darktable and FFmpeg as well as other tools installed as dependencies might use them. They may also be directly affected by [recently discovered vulnerabilities](https://ubuntu.com/security/cves) for which updates are available.
 
-To automatically install these updates when the container starts for the first time, you can add `PHOTOPRISM_INIT: "update"` to the `environment:` section of the *photoprism* service in your `docker-compose.yml`:
+To automatically install these updates when the container starts for the first time, you can add `PHOTOPRISM_INIT: "update"` to the `environment` section of the `photoprism` service in your `docker-compose.yml`:
 
 ```yaml
 services:

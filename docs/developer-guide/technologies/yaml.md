@@ -82,7 +82,7 @@ Values that contain a `$` are otherwise [interpreted as a variable](https://docs
 
 ### True / False ###
 
-Boolean values like "true", "false", "yes", "no", "on", or "off" must be enclosed in quotes so that they are passed as intended:
+Boolean environment variable values like "true", "false", "yes", "no", "on", or "off" must be enclosed in quotes so that they are passed as intended:
 
 ```yaml
 services:

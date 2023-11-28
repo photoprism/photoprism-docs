@@ -1,6 +1,6 @@
 # `settings.yml`
 
-User interface, download, and indexing preferences are stored in the `settings.yml` file, located in the *config path*. If it does not exist yet, it will be created automatically.
+User interface, download, and indexing preferences are stored in a `settings.yml` file, located in the *config path*. If it does not exist yet, it will be created automatically.
 
 Experienced users may edit this file directly to change certain settings, as not all of them can be changed through the user interface.
 

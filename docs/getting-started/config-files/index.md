@@ -1,6 +1,6 @@
 # `options.yml`
 
-As an alternative to [configuring your instance with environment variables](../config-options.md), it may be more convenient to use an `options.yml` file located in your *config path*, for example if PhotoPrism was installed through an [app store](../nas/asustor.md) or with the [installation packages we provide](https://dl.photoprism.app/pkg/linux/README.html).
+As an alternative to [configuring your instance with environment variables](../config-options.md), it may be more convenient to use an `options.yml` file located in your *config path*, for example if PhotoPrism was installed [through an app store](../nas/asustor.md) or with the [installation packages we provide](https://dl.photoprism.app/pkg/linux/README.html).
 
 You can specify a custom *config path* by adding the `ConfigPath` option to a ↪ [`defaults.yml`](defaults.md) file in the `/etc/photoprism` directory (requires root privileges). It is also possible to use the command flag `--config-path` or the environment variable `PHOTOPRISM_CONFIG_PATH` for this. By default, it is a subdirectory of the [*storage path*](../docker-compose.md#photoprismstorage).
 

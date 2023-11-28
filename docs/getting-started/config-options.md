@@ -1,21 +1,18 @@
 # Config Options #
 
 !!! tldr ""
-    Changing values in a `docker-compose.yml` file or in the [Advanced Settings](../user-guide/settings/advanced.md) UI always **requires a restart** to take effect. Open a terminal, run `docker compose stop`, and then run `docker compose up -d` to restart all services.
+    Note that changes to the config options listed below **always require a restart** to take effect.[^1] Instead of using environment variables, you can alternatively use an ↪ [`options.yml`](config-files/index.md) file to configure your instance.
 
 ### Authentication ###
 
-!!! danger ""
-    `PHOTOPRISM_AUTH_MODE: public` is NOT recommended for instances installed on a server accessible from outside your home network.
-
-|        Environment         |     CLI Flag      | Default  |                                  Description                                  |
+| Environment                | CLI Flag          | Default  | Description                                                                   |
 |----------------------------|-------------------|----------|-------------------------------------------------------------------------------|
-| PHOTOPRISM_AUTH_MODE       | --auth-mode       | password | authentication `MODE` (public, password)                                      |
+| PHOTOPRISM_AUTH_MODE       | --auth-mode       | password | authentication `MODE` (public[^2], password)                                  |
 | PHOTOPRISM_ADMIN_USER      | --admin-user      | admin    | admin login `USERNAME`                                                        |
 | PHOTOPRISM_ADMIN_PASSWORD  | --admin-password  |          | initial admin `PASSWORD` (8-72 characters)                                    |
-| PHOTOPRISM_PASSWORD_LENGTH | --password-length |        8 | minimum password `LENGTH` in characters *plus*                                |
-| PHOTOPRISM_SESSION_MAXAGE  | --session-maxage  |  1209600 | time in `SECONDS` until API sessions expire automatically (-1 to disable)     |
-| PHOTOPRISM_SESSION_TIMEOUT | --session-timeout |   604800 | time in `SECONDS` until API sessions expire due to inactivity (-1 to disable) |
+| PHOTOPRISM_PASSWORD_LENGTH | --password-length | 8        | minimum password `LENGTH` in characters *plus*                                |
+| PHOTOPRISM_SESSION_MAXAGE  | --session-maxage  | 1209600  | time in `SECONDS` until API sessions expire automatically (-1 to disable)     |
+| PHOTOPRISM_SESSION_TIMEOUT | --session-timeout | 604800   | time in `SECONDS` until API sessions expire due to inactivity (-1 to disable) |
 
 ### Logging ###
 
@@ -246,3 +243,6 @@ The following variables are used by our Docker images only and have no effect ot
 | PHOTOPRISM_UMASK         | 0002    | [file-creation mode](https://linuxize.com/post/umask-command-in-linux/) (default: u=rwx,g=rwx,o=rx)                                                                                          |
 | PHOTOPRISM_INIT          |         | run/install on first startup (options: update https gpu tensorflow davfs clitools clean)                                                                                                     |
 | PHOTOPRISM_DISABLE_CHOWN | false   | disable updating storage permissions via chmod and chown on startup                                                                                                                          |
+
+[^1]: If you are using [Docker Compose](docker-compose.md), you can open a terminal, run `docker compose stop`, and then run `docker compose up -d` to restart all services.
+[^2]: Enabling public mode is not recommended for instances installed on a server outside your home network, as this allows others to access your pictures without authentication.

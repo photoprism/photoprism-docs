@@ -9,7 +9,7 @@ Advanced users can edit the file directly to change certain settings, since not 
 
 ### File Format ###
 
-You can use any text editor to [create or modify YAML configuration files](../../developer-guide/technologies/yaml.md). However, it is important that related values, e.g. key-value pairs, start at the same indentation level and that spaces are used for indentation, for example:
+You can use any text editor to [create or modify YAML config files](../../developer-guide/technologies/yaml.md). However, it is important that related values, e.g. key-value pairs, start at the same indentation level and that spaces are used for indentation, for example:
 
 ```yaml
 Index:

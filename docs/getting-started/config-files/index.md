@@ -11,7 +11,7 @@ If you use a third-party integration or package, you should find the exact locat
 
 ### File Format ###
 
-You can use any text editor to create or modify [YAML](../../developer-guide/technologies/yaml.md) config files. When specifying values, make sure that [their data type matches the documentation](index.md#config-options), e.g. *bool* values must be either `true` or `false` (without quotes, unlike [in `docker-compose.yml` files](../../developer-guide/technologies/yaml.md#true-false)) and *int* values must be whole numbers, as shown in [this example](https://dl.photoprism.app/pkg/linux/defaults.yml):
+You can use any text editor to [create or modify YAML config files](../../developer-guide/technologies/yaml.md). When specifying values, make sure that [their data type matches the documentation](index.md#config-options), e.g. *bool* values must be either `true` or `false` (without quotes, unlike [in `docker-compose.yml` files](../../developer-guide/technologies/yaml.md#true-false)) and *int* values must be whole numbers, as shown in [this example](https://dl.photoprism.app/pkg/linux/defaults.yml):
 
 ```yaml
 Debug: false

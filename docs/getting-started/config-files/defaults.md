@@ -39,7 +39,7 @@ DetectNSFW: false
 UploadNSFW: true
 ```
 
-To avoid ambiguity, it is recommended to enclose text strings in double quotes `"`, especially if they contain spaces, a colon, or other special characters.
+To avoid ambiguity, it is recommended to enclose text strings in `"` (double quotes), especially if they contain spaces, a colon, or other special characters.
 
 !!! note ""
     File and directory paths may be specified using `~` as a placeholder for the home directory of the current user, e.g. `~/Pictures`. Relative paths can also be specified via `./pathname`.

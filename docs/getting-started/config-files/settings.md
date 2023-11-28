@@ -17,7 +17,7 @@ Index:
   Rescan: false
 ```
 
-To avoid ambiguity, it is recommended to enclose text strings in double quotes `"`, especially if they contain spaces, a colon, or other special characters.
+To avoid ambiguity, it is recommended to enclose text strings in `"` (double quotes), especially if they contain spaces, a colon, or other special characters.
 
 ### Global Defaults
 

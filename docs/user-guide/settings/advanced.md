@@ -65,9 +65,7 @@ Note that you must have Exiftool enabled to extract video metadata such as durat
 The corresponding [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_DISABLE_EXIFTOOL`.
 
 ### Disable TensorFlow
-When selected, image classification / object detection
-(using [TensorFlow](https://www.tensorflow.org/)) is disabled,
-so no labels are created for your files.
+When selected, image classification and facial recognition will be disabled as both rely on tensorflow.
 
 The corresponding [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_DISABLE_TENSORFLOW`.
 

@@ -6,7 +6,7 @@
 ### November 28, 2023 ###
 <span class="build">Build 231128-f48ff16ef</span>
 
-This service release includes updated dependencies and fixes for recently discovered issues. As an alternative to our [Docker images](https://docs.photoprism.app/getting-started/docker-compose/), we now also provide [installation packages with binaries for Linux](https://dl.photoprism.app/pkg/linux/README.html). Since these need to be set up manually, we recommend that only experienced users choose this installation method.
+Our latest service release provides updated dependencies and fixes for recently discovered issues. In addition, official [installation packages with binaries for Linux are now available](https://dl.photoprism.app/pkg/linux/README.html) as an alternative to [our Docker images](https://docs.photoprism.app/getting-started/docker-compose/). Please note that only experienced users should choose this installation method, since these [do not include all dependencies](https://dl.photoprism.app/pkg/linux/README.html#dependencies) and need to be set up manually.
 
 What's new?
 
@@ -28,7 +28,7 @@ What's new?
 ### October 21, 2023 ###
 <span class="build">Build 231021-9abea5b55</span>
 
-This update adds search filters for finding pictures by ISO number, focal length, aperture, and altitude. It also includes a number of user interface improvements, updated translations, as well as fixes for recently discovered issues. We would like to thank everyone who [submitted pull requests](https://docs.photoprism.app/developer-guide/), [helped with testing](https://github.com/orgs/photoprism/projects/5), or contributed in other ways!
+This update adds search filters for finding pictures by ISO number, focal length, aperture, and altitude. It also includes a number of user interface improvements, updated translations, as well as fixes for recently discovered issues. We would like to thank everyone who [submitted pull requests](https://docs.photoprism.app/developer-guide/), [helped with testing](https://github.com/orgs/photoprism/projects/5), or [contributed in other ways](https://www.photoprism.app/oss/faq)! ✨
 
 What's new?
 

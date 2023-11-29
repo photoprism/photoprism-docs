@@ -18,7 +18,7 @@ You need to explicitly [specify the directories](https://docs.docker.com/compose
     The volume mount paths to configure depend on your NAS device and its configuration. As on most operating systems, `.` can be used to specify a path relative to the current directory. So if you keep the default settings, all files will be in the internal application folder that Portainer automatically creates when you add a new stack.
 
 !!! danger ""
-    It is important that all folders are located on a persistent volume on your device - ideally specified with an absolute path - to avoid potential data loss after a restart, e.g. if the default application folder managed by Portainer changes or gets lost for a reason beyond our control.
+    **It is important that all folders are located on a persistent volume on your device.** The paths in the "volumes" sections shown below should be specified absolutely to avoid potential data loss, e.g. if the default application folder managed by Portainer changes or is reset after an update.
 
 ##### Database #####
 

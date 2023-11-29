@@ -10,7 +10,7 @@
 
 ## Metadata ##
 
-**Apple saves the following information in it's XMP files:**
+**Apple saves the following information in its XMP files:**
 
 - Title
 - Description

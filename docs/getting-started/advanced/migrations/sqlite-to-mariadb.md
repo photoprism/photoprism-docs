@@ -25,10 +25,10 @@ services:
     image: mariadb:10.11
     ports:
       - 3306:3306 # Expose Port 3306 
-    security_opt:
-      - seccomp:unconfined
-      - apparmor:unconfined
-    command: mysqld --innodb-buffer-pool-size=1G >
+    #security_opt: # needed for Docker 20.10.9 or earlier - https://github.com/MariaDB/mariadb-docker/issues/434
+    #  - seccomp:unconfined
+    #  - apparmor:unconfined
+    command: --innodb-buffer-pool-size=1G >
       --transaction-isolation=READ-COMMITTED --character-set-server=utf8mb4
       --collation-server=utf8mb4_unicode_ci --max-connections=512
       --innodb-rollback-on-timeout=OFF --innodb-lock-wait-timeout=120

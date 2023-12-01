@@ -191,7 +191,7 @@ to all users after a restart:
 ```yaml
 services:
   mariadb:
-    command: mysqld --skip-grant-tables
+    command: --skip-grant-tables
 ```
 
 Restart the `mariadb` service for changes to take effect:
@@ -213,8 +213,6 @@ Enter the following commands to change the password for "root":
 FLUSH PRIVILEGES;
 ALTER USER 'root'@'%' IDENTIFIED BY 'new_password';
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'new_password';
-UPDATE mysql.user SET authentication_string = '' WHERE user = 'root';
-UPDATE mysql.user SET plugin = '' WHERE user = 'root';
 exit
 ```
 

@@ -13,7 +13,7 @@ If your server has plenty of physical memory, we recommend increasing the size t
 ```yaml
 services:
   mariadb:
-    command: mysqld --innodb-buffer-pool-size=1G ...
+    command: --innodb-buffer-pool-size=1G ...
 ```
 
 As a rule of thumb, [`Innodb_buffer_pool_pages_free`](https://mariadb.com/kb/en/innodb-status-variables/#innodb_buffer_pool_pages_free) should never be [less than 5% of the total pages](https://vettabase.com/blog/is-innodb-buffer-pool-big-enough/).

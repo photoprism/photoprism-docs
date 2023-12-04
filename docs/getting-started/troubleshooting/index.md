@@ -149,7 +149,7 @@ If [password authentication is enabled](../config-options.md#authentication) and
 - [ ] You had too many failed login attempts, therefore another attempt from your computer is temporarily not possible
 - [ ] Caps Lock is enabled on your keyboard, your computer has the wrong input locale set, or somebody else might have changed the password without telling you
 - [ ] `PHOTOPRISM_ADMIN_PASSWORD` does not have a minimum length of 8 characters, so PhotoPrism has been started without a password since there is no default
-- [ ] Your password [contains one or more `$` signs that were not properly escaped](../../developer-guide/technologies/yaml.md#dollar-signs) in the `docker-compose.yml` file ([escape them](../../developer-guide/technologies/yaml.md#dollar-signs) and [reset your database](https://docs.photoprism.app/getting-started/docker-compose/#examples) or [manually set a new password](https://docs.photoprism.app/getting-started/docker-compose/#examples))
+- [ ] Your password [contains one or more `$` signs that were not properly escaped](../../developer-guide/technologies/yaml.md#dollar-signs) in the `docker-compose.yml` file ([escape them](../../developer-guide/technologies/yaml.md#dollar-signs) and [reset your database](../docker-compose.md#examples) or [manually set a new password](../../user-guide/users/cli.md#changing-a-password))
 - [ ] The password may be correct, but the username is wrong and does not match `PHOTOPRISM_ADMIN_USER`
 - [ ] You upgraded from a [Development Preview](../updates.md#development-preview) and might need to run the `photoprism users reset --yes` command [in a terminal](../docker-compose.md#command-line-interface) after the upgrade, see [Known Issues](../../known-issues.md#user-authentication) for details
 - [ ] Your browser cannot communicate properly with the server, e.g. because a [reverse proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
@@ -163,7 +163,7 @@ We also recommend checking your [Docker Logs](docker.md#viewing-logs) for messag
 - [ ] Errors such as "read-only file system", "error creating path", or "wrong permissions" indicate a [filesystem permission problem](docker.md#file-permissions) 
 - [ ] Log messages that contain "no route to host" indicate a [problem with the database](mariadb.md) or network configuration (follow our [examples](https://dl.photoprism.app/docker/))
 
-To see [which user accounts exist](https://docs.photoprism.app/user-guide/users/cli/) on your instance, [open a terminal](../docker-compose.md#command-line-interface) and run `photoprism users ls`. A new password can be set with `photoprism passwd [username]`. You can then try to log in again. [Upgrade to the latest release](../updates.md#docker-compose), restart the server, and [check the logs for errors and warnings](docker.md#viewing-logs) if it still doesn't work.
+To see [which user accounts exist](https://docs.photoprism.app/user-guide/users/cli/) on your instance, [open a terminal](../docker-compose.md#command-line-interface) and [run `photoprism users ls`](../../user-guide/users/cli.md#managing-user-accounts). A new password can be [set with `photoprism passwd [username]`](../../user-guide/users/cli.md#changing-a-password). You can then try to log in again. [Upgrade to the latest release](../updates.md#docker-compose), restart the server, and [check the logs for errors and warnings](docker.md#viewing-logs) if it still doesn't work.
 
 ### No WebDAV Access ###
 

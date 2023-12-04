@@ -8,10 +8,10 @@ Running the following in a terminal changes the password of an existing user wit
 photoprism passwd [username]
 ```
 
-Note that when [using Docker Compose](../../getting-started/docker-compose.md#command-line-interface), you must prepend the command with `docker compose exec photoprism` so that it is executed within the `photoprism` container:
+Note that when [using Docker Compose](../../getting-started/docker-compose.md#command-line-interface), you must prepend the command with `docker compose exec photoprism` so that it is executed within the `photoprism` container, for example:
 
 ```
-docker compose exec photoprism photoprism passwd [username]
+docker compose exec photoprism photoprism passwd admin
 ```
 
 This also [applies to other terminal commands](../../getting-started/docker-compose.md#examples), including those listed below.

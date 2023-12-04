@@ -8,13 +8,13 @@ Running the `photoprism passwd` command in a terminal changes the password of an
 photoprism passwd [username]
 ```
 
-When [using Docker Compose](../../getting-started/docker-compose.md#command-line-interface), you need to prepend it with `docker compose exec photoprism` so that it is executed within the `photoprism` container:
+When [using Docker Compose](../../getting-started/docker-compose.md#command-line-interface), you need to prepend the command with `docker compose exec photoprism` so that it is executed within the `photoprism` container:
 
 ```
 docker compose exec photoprism photoprism passwd [username]
 ```
 
-Note that this [also applies to other terminal commands](../../getting-started/docker-compose.md#examples), including those listed below.
+*Note that this also [applies to other terminal commands](../../getting-started/docker-compose.md#examples), including those listed below.*
 
 ## Managing User Accounts
 

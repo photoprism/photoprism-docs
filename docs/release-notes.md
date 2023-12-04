@@ -22,7 +22,7 @@ What's new?
 - Videos: [Improved performance when extracting still images for creating thumbnails](https://github.com/photoprism/photoprism/pull/3893)
 - Vectors: [Improved SVG conversion using RSVG instead of ImageMagick](https://github.com/photoprism/photoprism/issues/3885)
 - Docker: [Base image has been upgraded from Ubuntu 23.04 to 23.10 (Mantic Minotaur)](https://github.com/photoprism/photoprism/blob/develop/docker/develop/mantic/Dockerfile)
-- Setup: [Added `tar.gz`, `deb` and `rpm` installation packages](https://github.com/photoprism/photoprism/issues/3861)
+- Setup: [Added `tar.gz`, `deb` and `rpm` packages for installation without Docker](https://github.com/photoprism/photoprism/issues/3861)
 - Security: [Go has been updated to the latest stable release v1.21.4](https://github.com/golang/go/issues?q=milestone%3AGo1.21.4)
 
 ### October 21, 2023 ###

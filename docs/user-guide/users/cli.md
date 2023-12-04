@@ -2,7 +2,7 @@
 
 ## Changing a Password
 
-Running the following in a terminal changes the password of an existing user without affecting other account settings, e.g. if you cannot remember the currently set password or if there was a problem [configuring the initial admin account](../../getting-started/config-options.md#authentication) (replace `[username]` with the username of the account you want to update):
+Running the following command in a terminal changes the password of an existing user without affecting other account settings, e.g. if you cannot remember the currently set password or if there was a problem [configuring the initial admin account](../../getting-started/config-options.md#authentication) (replace `[username]` with the username of the account you want to update):
 
 ```
 photoprism passwd [username]
@@ -18,7 +18,7 @@ This also [applies to other terminal commands](../../getting-started/docker-comp
 
 ## Managing User Accounts
 
-As an alternative to the [web user interface](index.md), you can perform user management tasks such as adding, viewing, editing, and deleting accounts [in a terminal](../../getting-started/docker-compose.md#command-line-interface) using the following commands:
+As an alternative to the [web user interface](index.md), you can also [run the following commands in a terminal](../../getting-started/docker-compose.md#command-line-interface) to perform tasks such as adding, viewing, editing and deleting user accounts:
 
 | CLI Command                                 | Description                                  |
 |---------------------------------------------|----------------------------------------------|

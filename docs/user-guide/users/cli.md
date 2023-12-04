@@ -2,19 +2,19 @@
 
 ## Changing a Password
 
-Running the `photoprism passwd` command in a terminal changes the password of an existing user without affecting other account settings, e.g. if you cannot remember the currently set password or if there was a problem [configuring the initial admin account](../../getting-started/config-options.md#authentication):
+Running the following in a terminal changes the password of an existing user without affecting other account settings, e.g. if you cannot remember the currently set password or if there was a problem [configuring the initial admin account](../../getting-started/config-options.md#authentication) (replace `[username]` with the username of the account you want to update):
 
 ```
 photoprism passwd [username]
 ```
 
-When [using Docker Compose](../../getting-started/docker-compose.md#command-line-interface), you need to prepend the command with `docker compose exec photoprism` so that it is executed within the `photoprism` container:
+Note that when [using Docker Compose](../../getting-started/docker-compose.md#command-line-interface), you must prepend the command with `docker compose exec photoprism` so that it is executed within the `photoprism` container:
 
 ```
 docker compose exec photoprism photoprism passwd [username]
 ```
 
-*Note that this also [applies to other terminal commands](../../getting-started/docker-compose.md#examples), including those listed below.*
+This also [applies to other terminal commands](../../getting-started/docker-compose.md#examples), including those listed below.
 
 ## Managing User Accounts
 

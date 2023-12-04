@@ -41,7 +41,7 @@ Global [configuration defaults](defaults.md), including the storage paths to be 
 
 ### Current Values
 
-Run `photoprism --help` in [a terminal](../docker-compose.md#command-line-interface) to get an [overview of the command flags and environment variables](config-options.md) available for configuration. Their current values can be displayed with the `photoprism config` command.
+Run `photoprism --help` in [a terminal](../docker-compose.md#command-line-interface) to get an [overview of the command flags and environment variables](../config-options.md) available for configuration. Their current values can be displayed with the `photoprism config` command.
 
 Below are the corresponding names of the config options that you can use in the `options.yml` and [`defaults.yml`](defaults.md) files, grouped by purpose.
 

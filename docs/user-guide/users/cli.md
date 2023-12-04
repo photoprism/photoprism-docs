@@ -18,7 +18,7 @@ This also [applies to other terminal commands](../../getting-started/docker-comp
 
 ## Managing User Accounts
 
-As an alternative to the [web user interface](index.md), you can also [run the following commands in a terminal](../../getting-started/docker-compose.md#command-line-interface) to perform tasks such as adding, viewing, editing and deleting user accounts:
+As an alternative to the [web user interface](index.md), you can [run the following commands in a terminal](../../getting-started/docker-compose.md#command-line-interface) to perform tasks such as adding, viewing, editing and deleting user accounts:
 
 | CLI Command                                 | Description                                  |
 |---------------------------------------------|----------------------------------------------|

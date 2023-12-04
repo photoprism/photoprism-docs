@@ -1,8 +1,24 @@
 # User Management Commands
 
+## Changing a Password
+
+Running the `photoprism passwd` command in a terminal changes the password of an existing user without affecting other account settings, e.g. if you cannot remember the currently set password or if there was a problem [configuring the initial admin account](../../getting-started/config-options.md#authentication):
+
+```
+photoprism passwd [username]
+```
+
+When [using Docker Compose](../../getting-started/docker-compose.md#command-line-interface), make sure to prepend the command with `docker compose exec photoprism` so that it runs inside the "photoprism" container:
+
+```
+docker compose exec photoprism photoprism passwd [username]
+```
+
+Note that this [also applies to other terminal commands](../../getting-started/docker-compose.md#examples), including those listed below.
+
 ## Managing User Accounts
 
-As an alternative to the [web user interface](index.md), you can also add, view, modify, and delete user accounts by running the following commands [in a terminal](../../getting-started/docker-compose.md#command-line-interface):
+As an alternative to the [web user interface](index.md), you can perform user management tasks such as adding, viewing, editing, and deleting accounts [in a terminal](../../getting-started/docker-compose.md#command-line-interface) using the following commands:
 
 | CLI Command                                 | Description                                  |
 |---------------------------------------------|----------------------------------------------|

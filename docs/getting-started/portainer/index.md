@@ -192,7 +192,7 @@ The command-line interface is also well suited for job automation using a [sched
 | *Reset Database*                                          | `photoprism reset -y`          |
 | *Backup Database*                                         | `photoprism backup -a -i`      |                      
 | *Restore Database*                                        | `photoprism restore -a -i`     |                   
-| *Change Admin Password*                                   | `photoprism passwd [username]` |
+| *Change Password*                                         | `photoprism passwd [username]` |
 | *Show User Management Commands*                           | `photoprism users help`        |
 | *Reset Users*                                             | `photoprism users reset -y`    |
 | *Show Face Recognition Commands*                          | `photoprism faces help`        |

@@ -260,7 +260,7 @@ Errors such as "read-only file system", "error creating path", or "wrong permiss
 An easy way to test for missing permissions is to (temporarily) remove restrictions and make the entire folder accessible to everyone:
 
 ```bash
-sudo chmod -R a+rwx [folder]
+sudo chmod -R a+rwX [folder]
 ```
 *Start a full rescan once all issues have been resolved, especially if it looks like [thumbnails](index.md#broken-thumbnails) or [pictures are missing](index.md#missing-pictures).*
 

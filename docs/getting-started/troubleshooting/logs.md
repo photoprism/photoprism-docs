@@ -61,27 +61,34 @@
 === "Docker Logs"
 
     You can run this command to watch the Docker service logs, including the last 100 messages (omit `--tail=100` to see them all, and `-f` to output only the last logs without watching them):
-
+    
     ```bash
-    docker compose logs -f --tail=100
+    docker compose logs -f --tail=100 
     ```
     
-    To enable [debug mode](../config-options.md), set `PHOTOPRISM_DEBUG` to `"true"` in the `environment:` section
-    of the `photoprism` service (or use the `--debug` flag when running the `photoprism` command directly):
+    A good way to troubleshoot configuration issues is to increase the log level. To enable [trace log mode](../config-options.md), set `PHOTOPRISM_LOG_LEVEL` to `"trace"` in the `environment:` section of the `photoprism` service (or use the `--trace` flag when running the `photoprism` command directly):
+    
     
     ```yaml
     services:
       photoprism:
         environment:
-          PHOTOPRISM_DEBUG: "true"
+          PHOTOPRISM_LOG_LEVEL: "trace"
+          ...
     ```
     
-    Then restart all services for the changes to take effect. It can be helpful to keep Docker running in the foreground
-    while debugging so that log messages are displayed directly. To do this, omit the `-d` parameter when restarting:
+    Now [restart all services](../docker-compose.md#step-2-start-the-server) for your changes to take effect:
     
     ```bash
     docker compose stop
-    docker compose up 
+    docker compose up -d
+    ```
+    
+    It can also be helpful to keep Docker running in the foreground while debugging, so that log messages are displayed directly. To do this, omit the `-d` parameter when (re)starting:
+    
+    ```bash
+    docker compose stop
+    docker compose up
     ```
     
     !!! note ""

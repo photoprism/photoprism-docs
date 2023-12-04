@@ -149,7 +149,7 @@ If [password authentication is enabled](../config-options.md#authentication) and
 - [ ] You had too many failed login attempts, therefore another attempt from your computer is temporarily not possible
 - [ ] Caps Lock is enabled on your keyboard, your computer has the wrong input locale set, or somebody else might have changed the password without telling you
 - [ ] `PHOTOPRISM_ADMIN_PASSWORD` does not have a minimum length of 8 characters, so PhotoPrism has been started without a password since there is no default
-- [ ] Your password [contains one or more `$` signs that were not properly escaped](../../developer-guide/technologies/yaml.md#dollar-signs) in the `docker-compose.yml` file ([escape them](../../developer-guide/technologies/yaml.md#dollar-signs) and [reset your database](https://docs.photoprism.app/getting-started/docker-compose/#examples) or [manually set a password](https://docs.photoprism.app/getting-started/docker-compose/#examples))
+- [ ] Your password [contains one or more `$` signs that were not properly escaped](../../developer-guide/technologies/yaml.md#dollar-signs) in the `docker-compose.yml` file ([escape them](../../developer-guide/technologies/yaml.md#dollar-signs) and [reset your database](https://docs.photoprism.app/getting-started/docker-compose/#examples) or [manually set a new password](https://docs.photoprism.app/getting-started/docker-compose/#examples))
 - [ ] The password may be correct, but the username is wrong and does not match `PHOTOPRISM_ADMIN_USER`
 - [ ] You upgraded from a [Development Preview](../updates.md#development-preview) and might need to run the `photoprism users reset --yes` command [in a terminal](../docker-compose.md#command-line-interface) after the upgrade, see [Known Issues](../../known-issues.md#user-authentication) for details
 - [ ] Your browser cannot communicate properly with the server, e.g. because a [reverse proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
@@ -213,10 +213,17 @@ In case the application logs don't contain anything helpful:
 
 #### Zip Archives ####
 
-When you want to [download multiple pictures](../../user-guide/organize/download.md) and find that some of them are missing from the resulting zip archive, or you get the error message "No files available for download":
+When you try to [download multiple pictures](../../user-guide/organize/download.md), e.g. from an album, and find that some of them are missing in the resulting zip archive or you get the error message "No files available for download":
 
-- [ ] [Index your library](../../user-guide/library/originals.md) and wait until indexing is complete, as your index may be incomplete or out of date
-- [ ] In some cases, you may have to perform a [complete rescan](../../user-guide/library/originals.md#when-should-complete-rescan-be-selected) of your library, for example after [upgrading to a new major release](../../release-notes.md)
+- [ ] Your index may be out of sync with the file system ([index your library](../../user-guide/library/originals.md) and wait until the operation has been completed)
+- [ ] You may have to perform a [complete rescan](../../user-guide/library/originals.md#when-should-complete-rescan-be-selected) of your library, for example after [upgrading to a new release](../../release-notes.md)
+- [ ] The [download preferences of the current user](../../user-guide/settings/general.md#downloads) must be changed under *Settings > General*
+
+#### File Downloads ####
+
+The [solutions to resolve zip download issues](#zip-archives) can also help if you have problems downloading individual files or stacks of files that belong to a single photo.
+
+In addition, problems downloading files may be caused by your browser settings, e.g. insufficient permissions to download multiple files, browser plugins, as well as a firewall, VPN, CDN or proxy that you use together with PhotoPrism.
 
 ### Wrong Search Results ###
 

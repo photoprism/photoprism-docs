@@ -221,7 +221,7 @@ When you try to [download multiple pictures](../../user-guide/organize/download.
 
 #### File Downloads ####
 
-The [solutions to resolve zip download issues](#zip-archives) can also help if you have problems downloading individual files or stacks of files that belong to a single photo.
+The [steps to resolve zip download issues](#zip-archives) can also help if you have problems downloading individual files or stacks of files that belong to a single photo.
 
 In addition, problems downloading files may be caused by your browser settings, e.g. insufficient permissions to download multiple files, browser plugins, as well as a firewall, VPN, CDN or proxy that you use together with PhotoPrism.
 

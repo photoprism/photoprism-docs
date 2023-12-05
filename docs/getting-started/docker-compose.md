@@ -110,7 +110,9 @@ Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is sup
     as the default of 2 GB can reduce indexing performance and cause unexpected restarts.
     Also, ensure that you configure at least 4 GB of swap space.
 
-When editing the configuration file, please note that related values must start at the same indentation level [in YAML files](../developer-guide/technologies/yaml.md) and that tabs are not allowed for indentation. We recommend using 2 spaces.
+!!! note ""
+    When editing the `docker-compose.yml` file, please note that [related values must start at the same indentation level](../developer-guide/technologies/yaml.md) and that [tabs are not allowed](../developer-guide/technologies/yaml.md#basic-rules). We recommend using 2 spaces.
+    If the value of an environment variable contains a literal `$` sign, for example in a password, it [must be escaped](../developer-guide/technologies/yaml.md#dollar-signs) with `$$` (a double dollar sign) so that e.g. `"compo$e"` becomes `"compo$$e"`.
 
 !!! danger ""
     Always change `PHOTOPRISM_ADMIN_PASSWORD` so that the app **starts with a secure initial password**.

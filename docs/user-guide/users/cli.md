@@ -77,7 +77,7 @@ To list all existing accounts, you can run the following:
 docker compose exec photoprism photoprism users ls
 ```
 
-This command can also filter the result if you provide a search term as argument:
+With the `photoprism users ls` command, you can also find specific accounts based on a search term you provide:
 
 ```bash
 docker compose exec photoprism photoprism users ls bob

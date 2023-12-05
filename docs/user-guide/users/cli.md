@@ -94,7 +94,7 @@ docker compose exec photoprism photoprism users ls --help
 For security reasons, authentication logs are not visible on the regular web user interface and can only be viewed in the application service logs or searched in a terminal using the the following CLI command:
 
 ```bash
-photoprism logins ls [search]
+docker compose exec photoprism photoprism logins ls [search]
 ```
 
 ### Command Options

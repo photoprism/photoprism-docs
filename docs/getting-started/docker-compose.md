@@ -111,13 +111,13 @@ Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is sup
     Also, ensure that you configure at least 4 GB of swap space.
 
 !!! note ""
-    When editing the `docker-compose.yml` file, please note that [related values must start at the same indentation level](../developer-guide/technologies/yaml.md) and that [tabs are not allowed](../developer-guide/technologies/yaml.md#basic-rules). We recommend using 2 spaces.
+    When editing the `docker-compose.yml` file, please make sure that [related values remain on the same indentation level](../developer-guide/technologies/yaml.md) and that [lists start with a dash](../developer-guide/technologies/yaml.md#multiple-values).
     If the value of an environment variable contains a literal `$` sign, for example in a password, it [must be escaped](../developer-guide/technologies/yaml.md#dollar-signs) with `$$` (a double dollar sign) so that e.g. `"compo$e"` becomes `"compo$$e"`.
 
 !!! danger ""
     Always change `PHOTOPRISM_ADMIN_PASSWORD` so that the app **starts with a secure initial password**.
     Never use easy-to-guess passwords or default values like `insecure` on publicly accessible servers.
-    There is no default in case no password was provided. A minimum length of 8 characters is required.
+    There is no default [in case no password was provided](../user-guide/users/cli.md#changing-a-password). A minimum length of 8 characters is required.
 
 #### Database ####
 

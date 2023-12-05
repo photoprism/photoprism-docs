@@ -17,13 +17,14 @@ Details:
 ## Basic Rules ##
 
 - Keys are case-sensitive
-- Related values start at the same indentation level
-    - Tabs are not allowed for indentation
+- Related values [must start at the same indentation level](#multiple-values)
     - We recommend using 2 spaces, but any number will work as long as it is consistent
+    - [Tabs](https://en.wikipedia.org/wiki/Tab_key#Tab_characters) are not allowed for indentation and using them may result in errors
+- Comments begin with `#`, can start anywhere on a line, and continue until the end of the line
 - You can generally use all [Unicode](https://home.unicode.org/basic-info/faq/) characters in YAML files, including [Emojis](https://home.unicode.org/emoji/about-emoji/)
-    - To avoid ambiguity, it is recommended to enclose text strings in single `'` or double quotes `"`, especially if they contain spaces, a colon, or other special characters
+    - To avoid ambiguity, it is recommended to enclose text strings in single `'` or double quotes `"`, especially if they contain spaces or [Boolean values](#true-false) like "true" or "false"
     - The difference between single and double quotes is that double quotes support [escape sequences](https://symfony.com/doc/current/components/yaml/yaml_format.html#strings) like `\t` for a tab or `\n` for a new line
-- Comments begin with the `#` sign, can start anywhere on a line, and continue until the end of the line
+    - Additional special characters may need to be escaped, e.g. [the `$` sign](#dollar-signs) when working with [Docker Compose](#docker-compose)
 
 ### Multiple Values ###
 
@@ -47,7 +48,8 @@ services:
 
 ### Key-Value Pairs ###
 
-Collections of key-value pairs are commonly used to set the names and values of environment variables in `docker-compose.yml` files (see below for [additional rules](#docker-compose)):
+Collections of key-value pairs are commonly used to specify the names and values of environment variables in `docker-compose.yml` files (see below for [additional rules](#docker-compose)).
+Similar to [lists](#multiple-values), the keys of related values start at the same indentation level, but without a dash:
 
 ```yaml
 services:
@@ -81,7 +83,7 @@ Values that contain a `$` are otherwise [interpreted as a variable](https://docs
 
 ### True / False ###
 
-Boolean environment variable values like "true", "false", "yes", "no", "on", or "off" must be enclosed in quotes so that they are passed as intended:
+Boolean variable values like "true", "false", "yes", "no", "on", or "off" must be enclosed in double or single quotes so that they are passed as intended:
 
 ```yaml
 services:
@@ -104,3 +106,4 @@ services:
 *[Keys]: the names of values
 *[tab]: a tab advances the cursor to the next tab stop
 *[key-value]: a key-value pair consists of two related data elements
+*[special characters]: characters that are not a number or letter

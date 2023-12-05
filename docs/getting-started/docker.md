@@ -51,7 +51,7 @@ The server port and other [config options](config-options.md) can be changed as 
 !!! danger ""
     Always change `PHOTOPRISM_ADMIN_PASSWORD` so that the app starts with a **secure initial password**.
     Never use easy-to-guess passwords or default values like `insecure` on publicly accessible servers.
-    There is no default in case no password was provided. A minimum length of 8 characters is required.
+    There is no default [in case no password was provided](../user-guide/users/cli.md#changing-a-password). A minimum length of 8 characters is required.
 
 Commands on Linux may have to be prefixed with `sudo` when not running as root.
 Note that this will point the home directory shortcut `~` to `/root` in volume mounts.

@@ -109,8 +109,7 @@ To complete the setup, [download the *stack.env* file from our server](https://d
 !!! danger ""
     Always change `PHOTOPRISM_ADMIN_PASSWORD` so that the app **starts with a secure initial password**.
     Never use easy-to-guess passwords or default values like `insecure` on publicly accessible instances.
-    There is no default in case no password was provided. A minimum length of 8 characters is required.
-
+    There is no default [in case no password was provided](../../user-guide/users/cli.md#changing-a-password). A minimum length of 8 characters is required.
 
 !!! tldr ""
     It is **not possible to change the database password** with `MARIADB_PASSWORD` after MariaDB has been started for the first time. However, choosing a secure password is not essential if you don't [expose the database to other apps or hosts](../troubleshooting/mariadb.md#cannot-connect). To enable [automatic schema updates](../troubleshooting/mariadb.md#auto-upgrade) after upgrading to a new major version, make sure that  `MARIADB_AUTO_UPGRADE` is set to a non-empty value.

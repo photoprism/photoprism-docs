@@ -316,19 +316,28 @@ PhotoPrism's command-line interface is also well suited for job automation using
 
 #### Opening a Terminal
 
-To open a terminal session as the current user, you can do the following:
+To open a terminal session as the default user specified with [the `user` service property](https://docs.docker.com/compose/compose-file/05-services/#user):
 
 ```bash
-docker compose exec -u $UID photoprism bash
+docker compose exec photoprism bash
 ```
+
+Since the above will open the terminal as root by default, we recommend that you pass the `-u` flag to explicitly open a non-root session if PhotoPrism is running under a specific user account, for example:
+
+```bash
+docker compose exec -u 1000 photoprism bash
+```
+
+This avoids potential [filesystem permission issues](troubleshooting/docker.md#file-permissions) that can occur when a command creates new files or folders as root, e.g. thumbnails or transcoded videos.
 
 #### Changing the User ID
 
-Specifying a user via `-u $UID` is possible for all commands you run with Docker Compose. In the following examples, it is omitted for brevity.
-The currently supported user ID ranges are 0, 33, 50-99, 500-600, 900-1250, and 2000-2100. Note that commands will otherwise be executed as *root*.
+Specifying a user with the `-u` flag is possible for all commands you run with [Docker](docker.md#command-line-interface) and Docker Compose. In the following examples, it is omitted for brevity.
+Note, however, that commands that you run without an explicit user ID might be executed as root.
+The currently supported user ID ranges are 0, 33, 50-99, 500-600, 900-1250, and 2000-2100.
 
 !!! tip ""
-    We also recommend running the PhotoPrism service as a non-root user by setting either the [user service property](https://docs.docker.com/compose/compose-file/#user) or the `PHOTOPRISM_UID` [environment variable](config-options.md#docker-image) in the `docker-compose.yml` file. Don't forget to update file permissions and/or ownership with the `chown` command when you make changes.
+    We recommend running the `photoprism` service as a non-root user by setting either the [user service property](https://docs.docker.com/compose/compose-file/05-services/#user) or the `PHOTOPRISM_UID` [environment variable](config-options.md#docker-image) in the `docker-compose.yml` file. Don't forget to update file permissions and/or ownership with the `chown` command when you make changes.
 
 #### Examples
 

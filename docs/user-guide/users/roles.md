@@ -17,7 +17,7 @@ Regular *Admins* can lose their privileges due to an intentional or accidental r
 When *Super Admins* change settings such as the language or theme, these automatically become the default settings for other users, unless they have explicitly made a different choice. In addition, global feature flags can only be changed by *Super Admins*.
 
 !!! example ""
-    Additional account roles like user, viewer, and guest are currently [only available with a membership](https://www.photoprism.app/editions#compare) to support development and maintenance.
+    Please note that additional roles such as *user*, *viewer*, and *guest* are [currently only available with a membership](https://www.photoprism.app/editions#compare) to support development and maintenance.
 
 ## User
 

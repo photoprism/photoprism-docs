@@ -215,18 +215,19 @@ PhotoPrism's command-line interface is also well suited for job automation using
 
 #### Opening a Terminal
 
-To open a terminal session as the current user, you can do the following:
+To open a terminal session, you can run the following (replace `$UID` with the user ID to be used or omit the `-u` flag altogether to open the terminal as root):
 
 ```bash
 docker exec -ti -u $UID photoprism bash
 ```
 
-Specifying the `-ti` flag is important for interactive commands to work, for example when you need to confirm an action.
+Passing the `-ti` flag is important for interactive commands to work, for example if you need to confirm an action.
 
 #### Changing the User ID
 
-Specifying a user via `-u $UID` is possible for all commands you run with Docker. In the following examples, it is omitted for brevity.
-The currently supported user ID ranges are 0, 33, 50-99, 500-600, 900-1250, and 2000-2100. Note that commands will otherwise be executed as *root*.
+Specifying a user with the `-u` flag is possible for all commands you run with Docker. In the following examples, it is omitted for brevity.
+Note, however, that commands that you run without an explicit user ID might be executed as root.
+The currently supported user ID ranges are 0, 33, 50-99, 500-600, 900-1250, and 2000-2100.
 
 #### Examples
 

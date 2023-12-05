@@ -4,17 +4,20 @@
 
 Running the following in a terminal changes the password of an existing user without affecting other account settings, e.g. if you cannot remember the currently set password or if there was a problem [configuring the initial admin account](../../getting-started/config-options.md#authentication) (replace `[username]` with the username of the account you want to update):
 
-```
+```bash
 photoprism passwd [username]
 ```
 
-Note that when [using Docker Compose](../../getting-started/docker-compose.md#command-line-interface), you must prepend the command with `docker compose exec photoprism` so that it is executed within the `photoprism` container, for example:
+Note that when you use [Docker Compose](../../getting-started/docker-compose.md#command-line-interface) and do not [already have a terminal session open](../../getting-started/docker-compose.md#opening-a-terminal), you must prepend `docker compose exec photoprism` so that the command is executed within the `photoprism` container, for example:
 
-```
+```bash
 docker compose exec photoprism photoprism passwd admin
 ```
 
 This also [applies to other terminal commands](../../getting-started/docker-compose.md#examples), including those listed below.
+
+!!! tldr ""
+    The examples in our documentation use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible Linux distributions.
 
 ## Managing User Accounts
 
@@ -45,23 +48,24 @@ The `add` and `mod` commands support these flags to set or change account proper
 | `--webdav`, `-w`                     | allow to sync files via WebDAV                  |
 | `--upload-path value`, `-u value`    | upload files to this sub-folder                 |
 
-For example, you could do the following to add a new admin with the username "bob" and the password "mysecret":
+### Creating a New Account
 
-```
+The command `photoprism users add` creates a new user account. For example, you could run the following to add a new admin with the username "bob" and the password "mysecret":
+
+```bash
 docker compose exec photoprism photoprism users add -p mysecret -n "Bob" bob
 ```
 
-!!! example ""
-    Additional [account roles](roles.md) like user, viewer, and guest are currently [only available with a membership](https://www.photoprism.app/editions#compare) to support development and maintenance.
+If you do not specify an initial password with the `-p` flag, you will be prompted to enter a password for the new account. Further account properties can be set with the flags listed above.
 
-!!! tldr ""
-    Note that our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible Linux distributions.
+!!! example ""
+    Please note that [additional account roles](roles.md) such as *user*, *viewer*, and *guest* are [currently only available with a membership](https://www.photoprism.app/editions#compare) to support development and maintenance.
 
 ### Viewing Account Details
 
-To see all account properties of a particular user, use the `show` subcommand:
+To view the account properties of a specific user, use the `show` subcommand:
 
-```
+```bash
 docker compose exec photoprism photoprism users show bob
 ```
 
@@ -69,19 +73,19 @@ docker compose exec photoprism photoprism users show bob
 
 To list all existing accounts, you can run the following:
 
-```
+```bash
 docker compose exec photoprism photoprism users ls
 ```
 
 This command can also filter the result if you provide a search term as argument:
 
-```
+```bash
 docker compose exec photoprism photoprism users ls bob
 ```
 
 To display a description and the available options for a command, use the `--help` flag:
 
-```
+```bash
 docker compose exec photoprism photoprism users ls --help
 ```
 
@@ -89,7 +93,7 @@ docker compose exec photoprism photoprism users ls --help
 
 For security reasons, authentication logs are not visible on the regular web user interface and can only be viewed in the application service logs or searched in a terminal using the the following CLI command:
 
-```
+```bash
 photoprism logins ls [search]
 ```
 

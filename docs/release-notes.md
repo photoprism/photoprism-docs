@@ -3,6 +3,13 @@
 !!! note ""
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to `:preview` and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
+### Development Preview ###
+<span class="build">Build 231206-0935d9fab</span>
+
+What's new?
+
+- Security: [Go has been updated to the latest stable release v1.21.5](https://github.com/golang/go/issues?q=milestone%3AGo1.21.5)
+
 ### November 28, 2023 ###
 <span class="build">Build 231128-f48ff16ef</span>
 

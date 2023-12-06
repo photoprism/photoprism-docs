@@ -316,7 +316,7 @@ PhotoPrism's command-line interface is also well suited for job automation using
 
 #### Opening a Terminal
 
-To open a terminal session as the default user specified with [the `user` service property](https://docs.docker.com/compose/compose-file/05-services/#user):
+To open a terminal session as the [default user](https://docs.docker.com/compose/compose-file/05-services/#user):
 
 ```bash
 docker compose exec photoprism bash
@@ -375,6 +375,7 @@ The currently supported user ID ranges are 0, 33, 50-99, 500-600, 900-1250, and 
 *[home directory]: \user\username on Windows, /Users/username on macOS, and /root or /home/username on Linux
 *[host]: Computer, Cloud Server, or VM that runs PhotoPrism
 *[swap]: substitute for physical memory
+*[root]: special user account used for system administration
 *[HEIF]: High Efficiency Image File Format
 *[RAW]: image format that contains unprocessed sensor data
 *[SSD]: Solid-State Drive

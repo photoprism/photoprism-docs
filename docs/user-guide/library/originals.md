@@ -37,6 +37,8 @@ Example:
 ```
 # ignore a directory by its name
 foo
+# ignore all folders starting with a #
+[#]*
 # ignore all files
 *.*
 # ignore all files with gif extension

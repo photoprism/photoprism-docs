@@ -215,15 +215,17 @@ In case the application logs don't contain anything helpful:
 
 When you try to [download multiple pictures](../../user-guide/organize/download.md), e.g. from an album, and find that some of them are missing in the resulting zip archive or you get the error message "No files available for download":
 
-- [ ] Your index may be out of sync with the file system ([index your library](../../user-guide/library/originals.md) and wait until the operation has been completed)
-- [ ] You may have to perform a [complete rescan](../../user-guide/library/originals.md#when-should-complete-rescan-be-selected) of your library, for example after [upgrading to a new release](../../release-notes.md)
-- [ ] The [download preferences of the current user](../../user-guide/settings/general.md#downloads) must be changed under *Settings > General*
+- [ ] Your index may be out of sync with the file system ([reindex your library](../../user-guide/library/originals.md) and wait until the operation has been completed)
+- [ ] In order to include RAW, XMP and/or generated sidecar files, your [download preferences](../../user-guide/settings/general.md#downloads) may need to be changed under *Settings > General*
+- [ ] If this didn't help, you may need to [perform a complete rescan of your library](../../user-guide/library/originals.md#when-should-complete-rescan-be-selected), e.g. after [upgrading to a new release](../../release-notes.md)
+
+Also make sure that there is [enough free disk space available](docker.md#disk-space), since the server creates a temporary zip file when multiple pictures are selected for download. Complete albums are compressed while downloading without needing temporary storage.
 
 #### File Downloads ####
 
-The [steps to resolve zip download issues](#zip-archives) can also help if you have problems downloading individual files or stacks of files that belong to a single photo.
+Follow the [steps to resolve zip download issues](#zip-archives) if you are having problems downloading selected pictures, individual files, or stacks of files that belong to a single photo.
 
-In addition, download problems may be caused by your browser settings, e.g. insufficient permissions to download multiple files, browser plugins, as well as a firewall, VPN, CDN or proxy that you use together with PhotoPrism.
+If this didn't help, the problems might be caused by your [browser settings](browsers.md), e.g. insufficient permissions to download multiple files, [browser plugins](browsers.md), a firewall, VPN, CDN or [proxy that you use](https://chaos.social/@tanuva/111529644552218630) together with PhotoPrism.
 
 ### Wrong Search Results ###
 

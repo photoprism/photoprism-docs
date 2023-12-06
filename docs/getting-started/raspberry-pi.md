@@ -3,12 +3,10 @@
 Our [stable version and development preview](../release-notes.md) have been built into a single
 [multi-arch Docker image](https://hub.docker.com/r/photoprism/photoprism) for 64-bit AMD, Intel, and ARM processors.
 
-As a result, Raspberry Pi 3 / 4, Apple Silicon, and other ARM64-based devices can pull from the same repository,
-enjoy the same functionality, and can follow the regular [installation instructions](docker-compose.md)
-after going through a short list of [system requirements](#system-requirements).
+As a result, users of ARM64-based devices like a Raspberry Pi and Macs based on Apple Silicon can pull from the same repository, enjoy the same functionality, and can follow the regular [installation instructions](docker-compose.md) after going through a short list of [system-requirements](#system-requirements).
 
 !!! verified "PhotoPrismPi"
-    The easiest way to run PhotoPrism on a Raspberry Pi is with [PhotoPrismPi](raspberry-pi/microsd-image.md).[^1]
+    The easiest way to run PhotoPrism on a Raspberry Pi[^1] is with [PhotoPrismPi](raspberry-pi/microsd-image.md).
     Simply [flash the image](raspberry-pi/microsd-image.md) to an SD card, plug it into the Pi and boot it. After a few minutes, our latest release will be ready to use!
 
 ### System Requirements ###
@@ -148,9 +146,7 @@ Other issues? Our [troubleshooting checklists](troubleshooting/index.md) help yo
     [Sponsors](https://www.photoprism.app/membership) receive direct [technical support](https://www.photoprism.app/contact) via email.
     Before submitting a support request, try to [determine the cause of your problem](troubleshooting/index.md).
 
-### Credits ###
-
-[^1]: A big thank you to [Guy Sheffer](https://github.com/guysoft) for helping us [build](https://github.com/photoprism/photoprism/issues/109) a Raspberry Pi version!
+[^1]: Since our current [MicroSD image](raspberry-pi/microsd-image.md) is based on Ubuntu 22.04 LTS, it is not yet compatible with the Raspberry Pi 5, which [requires Ubuntu 23.10+](https://ubuntu.com/download/raspberry-pi). An updated image will be provided as soon as possible.
 [^2]: The default [Docker Compose](https://docs.docker.com/compose/) config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running `docker compose` or `docker-compose` in the same directory. Config files for other apps or instances should be placed in separate folders.
 
 *[Raspbian]: Raspberry Pi OS

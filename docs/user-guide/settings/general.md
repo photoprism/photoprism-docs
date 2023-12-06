@@ -15,7 +15,7 @@ When disabled, uploading files via [*upload*](../library/upload.md) is not possi
 This might be useful when you grant others access to your PhotoPrism but do not want them to upload photos.
 
 #### :material-download: Download ####
-When disabled, no files can be downloaded.
+When disabled, no files can be downloaded using the PhotoPrism UI. Please note that it may still be possible to download files using the integrated browser functionalities.
 
 #### :material-share-variant: Share ####
 When disabled, album sharing and upload to remote services like ownCloud is not possible.
@@ -30,7 +30,7 @@ Excludes content marked as private from search results, shared albums, labels an
 When disabled, there is no *Archive*. Photos that have been archived beforehand will appear again in search results.
 
 #### :material-pencil: Edit ####
-When disabled, it is not possible to edit photo information.
+When disabled, it is not possible to edit photo details.
 
 #### :material-delete: Delete ####
 When disabled, permanent deletion of files from the archive is not possible.

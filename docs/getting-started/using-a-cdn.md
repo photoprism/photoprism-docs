@@ -42,6 +42,6 @@ Pricing starts at $0.005/GB and there is no minimum usage or monthly fee, so you
 
 This means that users accessing your instance through their service will only see a single URL, as if they were connecting directly.
 
-You must therefore not configure an external CDN URL, as this can prevent PhotoPrism from loading. Also note that their free version [does not include video streaming](https://www.cloudflare.com/plans/), so there may be problems with video playback if you are not a paying customer.
+You must therefore not configure an external CDN URL, since this could prevent PhotoPrism from loading. Also note that their free version [does not include video streaming](https://www.cloudflare.com/plans/), so there may be problems with video playback if you are not a paying customer.
 
 [^1]: We receive a $20 credit when you sign up through our link, which helps us fund the project infrastructure. 

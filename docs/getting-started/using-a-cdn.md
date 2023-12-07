@@ -38,9 +38,7 @@ Pricing starts at $0.005/GB and there is no minimum usage or monthly fee, so you
 
 ### Cloudflare
 
-[Cloudflare](https://www.cloudflare.com/) works similar to a [reverse proxy](proxies/traefik.md), allowing you to make a private server publicly accessible over the Internet. It is sometimes also referred to as a Web Application Firewall.
-
-This means that users accessing your instance through their service will only see a single URL, as if they were connecting directly.
+[Cloudflare](https://www.cloudflare.com/) works similar to a [reverse proxy](proxies/traefik.md), allowing you to make a private server publicly accessible over the Internet. This means that users accessing your instance through their service will only see a single URL, as if they were connecting directly.
 
 You must therefore not configure an external CDN URL, since this could prevent PhotoPrism from loading. Also note that their free version [does not include video streaming](https://www.cloudflare.com/plans/), so there may be problems with video playback if you are not a paying customer.
 

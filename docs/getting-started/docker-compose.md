@@ -328,7 +328,7 @@ Since the above will open the terminal as root by default, we recommend that you
 docker compose exec -u 1000 photoprism bash
 ```
 
-This avoids potential [filesystem permission issues](troubleshooting/docker.md#file-permissions) that can occur when a command creates new files or folders, e.g. for thumbnails.
+This avoids potential [filesystem permission issues](troubleshooting/docker.md#file-permissions) that can occur when a command creates new files or folders, e.g. to store thumbnails.
 
 #### Changing the User ID
 

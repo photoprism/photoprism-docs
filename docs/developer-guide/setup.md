@@ -62,7 +62,10 @@ make dep
 **Congratulations!** You can now build the frontend assets (JS), compile the backend binary (Go) and then run a custom PhotoPrism version in your local environment:
 
 ```bash
-make build-js && make build-go
+make build-js
+```
+```bash
+make build-go
 ```
 ```bash
 ./photoprism start

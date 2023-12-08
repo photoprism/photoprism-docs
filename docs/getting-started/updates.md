@@ -128,7 +128,7 @@ services:
 ### Raspberry Pi
 
 Our [stable releases](../release-notes.md) and [preview builds](updates.md#development-preview) are available as [multi-arch Docker images](https://hub.docker.com/r/photoprism/photoprism/tags) for 64-bit AMD, Intel, and ARM processors.
-That means, you can pull from the same repository and follow our [regular update instructions](#docker-compose) if your device [meets the system requirements](raspberry-pi.md#system-requirements).
+You therefore get the exact same functionality and can follow the same [update instructions](#docker-compose) if your device [meets the system requirements](raspberry-pi.md#system-requirements).
 
 Try explicitly pulling the ARM64 version if you've booted your device with the `arm_64bit=1` flag and you see the "no matching manifest" error on [Raspberry Pi OS](raspberry-pi.md#raspberry-pi-os) (Raspbian):
 

@@ -1,7 +1,7 @@
 # Running PhotoPrism on a Raspberry Pi
 
 Our [stable releases](../release-notes.md) and [preview builds](updates.md#development-preview) are available as [multi-arch Docker images](https://hub.docker.com/r/photoprism/photoprism/tags) for 64-bit AMD, Intel, and ARM processors.[^1]
-That means, Raspberry Pi owners can enjoy the exact same functionality and follow the same [installation steps](docker-compose.md) after going through a short list of [system requirements](#system-requirements) and [architecture specific notes](#architecture-specific-notes).
+As a Raspberry Pi owner, you therefore get the exact same functionality and can follow the same [installation steps](docker-compose.md) after going through a short list of [system requirements](#system-requirements) and [architecture specific notes](#architecture-specific-notes).
 
 !!! verified "PhotoPrismPi"
     The easiest way to run PhotoPrism on a Raspberry Pi[^2] is with [PhotoPrismPi](raspberry-pi/microsd-image.md).

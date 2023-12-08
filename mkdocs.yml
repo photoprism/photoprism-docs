@@ -235,6 +235,8 @@ extra:
       link: https://link.photoprism.app/chat
     - icon: fontawesome/brands/twitter
       link: https://link.photoprism.app/twitter
+    - icon: fontawesome/brands/mastodon
+      link: https://floss.social/@photoprism
     - icon: fontawesome/brands/reddit
       link: https://link.photoprism.app/reddit
     - icon: fontawesome/brands/linkedin

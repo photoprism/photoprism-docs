@@ -187,7 +187,7 @@ This will automatically download all required config files and start the server 
 
 #### Installation Packages ####
 
-We also [provide tar.gz packages](https://dl.photoprism.app/pkg/) that allow you to install PhotoPrism on Linux without using Docker, for example by running the following commands:
+Experienced users can use the packages available at [**dl.photoprism.app/pkg/linux/**](https://dl.photoprism.app/pkg/linux/README.html) to install PhotoPrism on compatible Linux distributions, e.g. by running the following commands:
 
 ```bash
 sudo mkdir -p /opt/photoprism
@@ -197,7 +197,7 @@ sudo ln -sf /opt/photoprism/bin/photoprism /usr/local/bin/photoprism
 photoprism --version
 ```
 
-Since these packages need to be set up manually and do not include the system dependencies required to make use of all the features, we recommend that only advanced users choose this installation method.
+Note that these packages [must be updated manually](https://dl.photoprism.app/pkg/linux/README.html#updates), do [not come with a default configuration](https://dl.photoprism.app/pkg/linux/README.html#configuration), and do [not include the system dependencies](https://dl.photoprism.app/pkg/linux/README.html#dependencies) required to make use of all the features. The minimum required glibc version is 2.35, so for example Ubuntu 22.04 and Debian Bookworm will work with these binaries, but older Linux distributions may not be compatible.
 
 [Read the Docs ›](https://dl.photoprism.app/pkg/linux/README.html)
 
@@ -301,12 +301,9 @@ That being said, one of the advantages of [open-source software](https://docs.ph
 
 ### Is a Raspberry Pi fast enough?
 
-This largely depends on your expectations and the number of files you have. Most users report that
-PhotoPrism runs smoothly on their Raspberry Pi 4. However, initial indexing typically takes much longer
-than on standard desktop computers.
+This mainly depends on your expectations and the number of files you have. Most users report that PhotoPrism runs smoothly on a Raspberry Pi 4 with 4 GB of RAM.
 
-Also keep in mind that the hardware has limited video transcoding capabilities, so the conversion of video
-[file formats](../developer-guide/media/index.md) is not well-supported and software transcoding is generally slow.
+Note, however, that [initial indexing usually takes much longer](../user-guide/first-steps.md) than on a regular desktop computer and that the hardware has [limited video transcoding capabilities](advanced/transcoding.md), so video file format conversion is not well supported and software transcoding is generally slow. We take no responsibility for instability or performance problems if your device does not [meet the requirements](raspberry-pi.md#system-requirements).
 
 ### Should I use an SD card or a USB stick?
 

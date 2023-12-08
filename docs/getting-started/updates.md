@@ -127,23 +127,16 @@ services:
 
 ### Raspberry Pi
 
-Our [stable version and development preview](../release-notes.md) have been built into a single
-[multi-arch Docker image](https://hub.docker.com/r/photoprism/photoprism) for 64-bit AMD, Intel, and ARM processors.
+Our [stable releases](../release-notes.md) and [preview builds](updates.md#development-preview) are available as [multi-arch Docker images](https://hub.docker.com/r/photoprism/photoprism/tags) for 64-bit AMD, Intel, and ARM processors.
+That means, you can pull from the same repository and follow our [regular update instructions](#docker-compose) if your device [meets the system requirements](raspberry-pi.md#system-requirements).
 
-That means, Raspberry Pi 3 / 4, Apple Silicon, and other ARM64-based devices can pull from the same repository,
-enjoy the exact same functionality, and can follow the regular [Installation Instructions](docker-compose.md)
-after going through a short list of [System Requirements](raspberry-pi.md#system-requirements) and
-[Architecture Specific Notes](raspberry-pi.md#architecture-specific-notes).
-
-Try explicitly pulling the ARM64 version if you've booted your device with the `arm_64bit=1` flag
-and you see the "no matching manifest" error on [Raspberry Pi OS](raspberry-pi.md#raspberry-pi-os) (Raspbian):
+Try explicitly pulling the ARM64 version if you've booted your device with the `arm_64bit=1` flag and you see the "no matching manifest" error on [Raspberry Pi OS](raspberry-pi.md#raspberry-pi-os) (Raspbian):
 
 ```bash
 docker pull --platform=arm64 photoprism/photoprism:latest
 ```
 
-If you do not have legacy software, we recommend [choosing a standard 64-bit Linux distribution](raspberry-pi.md#modern-arm64-based-devices)
-as this requires less experience. Alternative 32-bit Docker images are provided for [ARMv7-based devices](raspberry-pi.md#older-armv7-based-devices).
+If you don't use legacy software, we recommend choosing a [standard 64-bit Linux distribution](raspberry-pi.md#modern-arm64-based-devices) as it requires less experience. For [ARMv7-based devices](raspberry-pi.md#older-armv7-based-devices), 32-bit images are [provided separately](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=armv7).
 
 !!! tldr ""
     Darktable is not included in the ARMv7 version because it is not 32-bit compatible.

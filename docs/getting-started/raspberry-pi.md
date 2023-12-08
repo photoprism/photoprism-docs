@@ -9,21 +9,18 @@ That means, Raspberry Pi owners can enjoy the exact same functionality and follo
 
 ### System Requirements ###
 
-- For a good user experience, we recommend [running PhotoPrism on a Raspberry 4 or 5](#is-a-raspberry-pi-fast-enough), which should have at least 3 GB of physical memory and a 64-bit operating system
-- RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory
-- Indexing large photo and video collections significantly benefits from [local SSD storage](troubleshooting/performance.md#storage) and plenty of memory for caching, especially the conversion of RAW images and the transcoding of videos are very demanding
-- If less than [4 GB of swap space](troubleshooting/docker.md#adding-swap) is configured or a manual memory/swap limit is set, this can cause unexpected restarts, for example, when the indexer temporarily needs more memory to process large files
+- For a good user experience, we recommend running PhotoPrism on a [Raspberry 4 with at least 4 GB RAM](#is-a-raspberry-pi-fast-enough) and a [64-bit operating system](#modern-arm64-based-devices)
 - High-resolution panoramic images may require additional swap space and/or physical memory above the recommended minimum
-- We recommend disabling [kernel security](troubleshooting/docker.md#kernel-security) in your 
-  [docker-compose.yml](https://dl.photoprism.app/docker/arm64/docker-compose.yml), especially if you do 
-  not have experience with the configuration:
+- Indexing performance will benefit greatly from [using SSD storage](troubleshooting/performance.md#storage), e.g. connected via USB 3
+- Note that if [less than 4 GB of swap space](troubleshooting/docker.md#adding-swap) is configured or a manual memory/swap limit is set, this can cause unexpected restarts, for example, when the indexer temporarily needs more memory to process large files; RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory
+- You should [enable HTTPS](advanced/https.md#how-to-enable-https) or run your server behind a [secure HTTPS reverse proxy like Traefik](proxies/traefik.md) if it is connected to a shared network or the public Internet. Your files and passwords may otherwise be transmitted in clear text and could be intercepted by anyone, including your provider, hackers, and governments. Backup tools and file sync apps like [FolderSync](https://foldersync.io/docs/faq/#https-connection-errors) may refuse to connect as well.
+- Depending on the Linux distribution, you must set the following [security options](troubleshooting/docker.md#kernel-security) in your [docker-compose.yml](https://dl.photoprism.app/docker/arm64/docker-compose.yml):
   ```yaml
   photoprism:
     security_opt:
       - seccomp:unconfined
       - apparmor:unconfined
   ```
-- If you install PhotoPrism on a public server outside your home network, **always run it behind a secure HTTPS reverse proxy** such as [Traefik](proxies/traefik.md) or [Caddy](proxies/caddy-2.md)
 
 ### Architecture Specific Notes ###
 

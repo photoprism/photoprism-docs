@@ -7,7 +7,7 @@ Simply flash the image to an SD card and boot your device with it.
 We recommend using a fast MicroSD card with at least 64 GB so that you don't run out of storage space later on. These are usually sold with an adapter that fits into normal SD card slots.
 
 !!! info "Raspberry Pi 5"
-    Since our current [MicroSD image](https://dl.photoprism.app/dist/photoprismpi/) is based on Ubuntu 22.04 LTS, it is not yet compatible with the Raspberry Pi 5, which [requires Ubuntu 23.10+](https://ubuntu.com/download/raspberry-pi). An updated image will be provided as soon as possible. As an alternative, you can download [Ubuntu 23.10](https://ubuntu.com/download/raspberry-pi/thank-you?version=23.10&architecture=server-arm64+raspi), install [Docker](../troubleshooting/docker.md#ubuntu-linux), and then follow our regular [Setup Guide](../docker-compose.md).
+    Since our current [MicroSD image](https://dl.photoprism.app/dist/photoprismpi/) is based on Ubuntu 22.04 LTS, it is not yet compatible with the Raspberry Pi 5, which [requires Ubuntu 23.10+](https://ubuntu.com/download/raspberry-pi). As an alternative, you can download [Ubuntu 23.10](https://ubuntu.com/download/raspberry-pi/thank-you?version=23.10&architecture=server-arm64+raspi), install [Docker](../troubleshooting/docker.md#ubuntu-linux), and then follow our regular [Setup Guide](../docker-compose.md).
 
 ## Step 1: Install balenaEtcher
 

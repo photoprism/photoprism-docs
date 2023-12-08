@@ -13,7 +13,7 @@ That means, Raspberry Pi owners can enjoy the exact same functionality and follo
 - High-resolution panoramic images may require additional swap space and/or physical memory above the recommended minimum
 - Indexing performance will benefit greatly from [using SSD storage](troubleshooting/performance.md#storage), e.g. connected via USB 3
 - Note that if [less than 4 GB of swap space](troubleshooting/docker.md#adding-swap) is configured or a manual memory/swap limit is set, this can cause unexpected restarts, for example, when the indexer temporarily needs more memory to process large files; RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory
-- You should [enable HTTPS](advanced/https.md#how-to-enable-https) or run your server behind a [secure HTTPS reverse proxy like Traefik](proxies/traefik.md) if it is connected to a shared network or the public Internet. Your files and passwords may otherwise be transmitted in clear text and could be intercepted by anyone, including your provider, hackers, and governments. Backup tools and file sync apps like [FolderSync](https://foldersync.io/docs/faq/#https-connection-errors) may refuse to connect as well.
+- You should [enable HTTPS](advanced/https.md#how-to-enable-https) or run your server behind a [secure HTTPS reverse proxy like Traefik](proxies/traefik.md) if it is connected to a shared network or the public Internet
 - Depending on the Linux distribution, you may need to set the following [security options](troubleshooting/docker.md#kernel-security) in your [docker-compose.yml](https://dl.photoprism.app/docker/arm64/docker-compose.yml):
   ```yaml
   photoprism:

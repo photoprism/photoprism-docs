@@ -197,7 +197,7 @@ sudo ln -sf /opt/photoprism/bin/photoprism /usr/local/bin/photoprism
 photoprism --version
 ```
 
-Note that these packages [must be updated manually](https://dl.photoprism.app/pkg/linux/README.html#updates), do not come with a [default configuration](https://dl.photoprism.app/pkg/linux/README.html#configuration), and do not include the [system dependencies](https://dl.photoprism.app/pkg/linux/README.html#dependencies) required to make use of all the features. The minimum required glibc version is 2.35, so for example Ubuntu 22.04 and Debian Bookworm will work with these binaries, but older Linux distributions may not be compatible.
+Note that these packages [must be updated manually](https://dl.photoprism.app/pkg/linux/README.html#updates), do not come with a [default configuration](https://dl.photoprism.app/pkg/linux/README.html#configuration), and do not include the [system dependencies](https://dl.photoprism.app/pkg/linux/README.html#dependencies) required to make use of all the features. The minimum required glibc version is 2.35, so for example Ubuntu 22.04 and Debian Bookworm will work, but older Linux distributions may not be compatible.
 
 [Read the Docs ›](https://dl.photoprism.app/pkg/linux/README.html)
 

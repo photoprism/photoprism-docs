@@ -9,7 +9,7 @@ That means, Raspberry Pi owners can enjoy the exact same functionality and follo
 
 ### System Requirements ###
 
-- For a good user experience, we recommend running PhotoPrism on [a Raspberry 4 with at least 4 GB RAM](#is-a-raspberry-pi-fast-enough) and a [64-bit operating system](#modern-arm64-based-devices)
+- For a good user experience, we recommend running PhotoPrism on [a Raspberry Pi 4 or 5 with at least 4 GB RAM](#is-a-raspberry-pi-fast-enough) and a [64-bit operating system](#modern-arm64-based-devices)
 - High-resolution panoramic images may require additional swap space and/or physical memory above the recommended minimum
 - Indexing performance will benefit greatly from [using SSD storage](troubleshooting/performance.md#storage), e.g. connected via USB 3
 - Note that if [less than 4 GB of swap space](troubleshooting/docker.md#adding-swap) is configured or a manual memory/swap limit is set, this can cause unexpected restarts, for example, when the indexer temporarily needs more memory to process large files; RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory

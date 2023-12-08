@@ -203,7 +203,8 @@ Note that these packages [must be updated manually](https://dl.photoprism.app/pk
 
 #### LXC Images ####
 
-There are no official LXC images available from us yet, see [related GitHub issue](https://github.com/photoprism/photoprism/issues/147). However, you can [use the tar.gz packages](https://dl.photoprism.app/pkg/linux/README.html) we provide and install them in a [LXC base image](https://images.linuxcontainers.org/) of your choice.
+There are currently [no official LXC images](https://github.com/photoprism/photoprism/issues/147) available from us.
+However, you can use the [installation packages](#installation-packages) together [with the documentation](https://dl.photoprism.app/pkg/linux/README.html) we provide to set them up in a [base image](https://images.linuxcontainers.org/) of your choice.
 
 #### BSD Ports ####
 

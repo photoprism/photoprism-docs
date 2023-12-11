@@ -20,6 +20,7 @@ Our project infrastructure is provided by the following companies:
 
 ## Artwork ##
 
+* [Font Awesome Free](https://fontawesome.com/download) by [Fonticons, Inc.](https://fontawesome.com/)
 * [AI-Generated Faces](https://mymodernmet.com/free-ai-generated-faces/) by [generated.photos](https://generated.photos/)
 * [NGC 1499 California Nebula](https://commons.wikimedia.org/wiki/File:NGC_1499_(California_Nebula)_narrowband.jpg) by [Remidone](https://creativecommons.org/licenses/by-sa/4.0/deed.en)
 * [Prism Light Separation](https://www.flickr.com/photos/digitalvosem/44622462042/in/dateposted/) by [digitalvosem](https://www.flickr.com/photos/digitalvosem/)

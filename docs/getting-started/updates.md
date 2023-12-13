@@ -29,7 +29,7 @@ We recommend that you compare your own `docker-compose.yml` with [our latest exa
 
 #### Development Preview
 
-You can test [upcoming features and enhancements](../release-notes.md#development-preview) by changing the `photoprism/photoprism` image tag from `:latest` to `:preview` and then running the following commands to pull the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance in the background:
+You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the `photoprism/photoprism` image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then running the following commands to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance in the background:
 
 ```
 docker compose pull

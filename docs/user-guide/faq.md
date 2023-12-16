@@ -144,7 +144,7 @@
     
     #### JSON ####
     
-    If not disabled via `PHOTOPRISM_DISABLE_EXIFTOOL` or `--disable-exiftool`, [Exiftool](https://exiftool.org/) is used
+    If not disabled via `PHOTOPRISM_DISABLE_EXIFTOOL` or `--disable-exiftool`, [ExifTool](https://exiftool.org/) is used
     to automatically create a JSON sidecar for each media file. **In this way, embedded XMP and video metadata can also be indexed.**
     Native metadata extraction is limited to common Exif headers. Note that this causes small amount of overhead when
     indexing for the first time.
@@ -170,12 +170,12 @@
     It provides many more fields (as part of embedded models like Dublin Core) than Exif. This also makes it difficult - if not
     impossible - to provide full support. Reading title, copyright, artist, and description from XMP sidecar files is
     implemented as a proof-of-concept, [contributions are welcome](../developer-guide/metadata/xmp.md). Indexing of
-    embedded XMP is only possible via Exiftool, see above.
+    embedded XMP is only possible via [ExifTool](https://exiftool.org/), see above.
 
 ??? question "Why are my video files not indexed?"
 
     In case [FFmpeg is disabled](settings/advanced.md#disable-ffmpeg) or not installed, videos cannot be indexed because still images cannot be created.
-    You should also have [Exiftool enabled](../getting-started/config-options.md#feature-flags) to extract metadata such as duration, resolution, and codec.
+    You should also have [ExifTool enabled](../getting-started/config-options.md#feature-flags) to extract metadata such as duration, resolution, and codec.
 
 ??? question "Some files seem hidden, where are they?"
 
@@ -268,7 +268,7 @@
 
 ??? question "Windows shows different metadata values. Could this be a bug in PhotoPrism?"
 
-    We recommend that you use [Exiftool](https://exiftool.org/install.html) to see all metadata fields and values, as Windows has limited functionality.
+    We recommend that you use [ExifTool](https://exiftool.org/) to see all metadata fields and values, as Windows has limited functionality.
     
     It might then become clear why there are differences. For example, it could be that Windows does not support some fields and therefore ignores them, or that the data shown is actually from the file system and not from the files. Should you still believe to have found a bug, please [provide us with sample files](https://www.photoprism.app/contact#file-samples) so that we can reproduce the issue.
 
@@ -279,7 +279,7 @@
 ??? question "Why do some pictures have 08/12/2002 as date if they were not taken on that day?"
     
     This is usually caused by a [bug in Android](https://issuetracker.google.com/issues/36963276) that caused photos to be created with an incorrect CreateDate. While the date can easily be changed in the edit dialog, this only updates the index without modifying your originals.
-    To fix the date directly in your image or video files, please use other applications like Photoshop, or Exiftool, and re-index your library.
+    To fix the date directly in your image or video files, please use other applications like Photoshop, or [ExifTool](https://exiftool.org/), and re-index your library.
 
 ??? question "Why do some pictures have an odd date like 01/01/1980?"
 
@@ -288,7 +288,7 @@
     without modifying your originals.
     
     To fix the date directly in your image or video files, please use other applications
-    like Photoshop, or Exiftool, and re-index your library.
+    like Photoshop, or [ExifTool](https://exiftool.org/), and re-index your library.
 
 ??? question "What's the difference between keywords and labels?"
 

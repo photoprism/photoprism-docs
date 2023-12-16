@@ -23,8 +23,8 @@ The `cache` directory contains `json` and `thumbnails` directories.
 The path can be set using `PHOTOPRISM_CACHE_PATH`.
 
 #### JSON
-PhotoPrism creates JSON files containing a file's metadata, read by exiftool, in this directory.
-You can prevent PhotoPrism from creating those JSON files by disabling exiftool in [Settings](../settings/advanced.md).
+PhotoPrism creates JSON files containing a file's metadata, read by [ExifTool](https://exiftool.org/), in this directory.
+You can prevent PhotoPrism from creating those JSON files by disabling [ExifTool](https://exiftool.org/) in [Settings](../settings/advanced.md).
 
 #### Thumbnails
 PhotoPrism creates thumbnails in different sizes for each photo. Those are stored in the `thumbnails` directory.

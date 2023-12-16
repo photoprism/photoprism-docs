@@ -1,7 +1,7 @@
 # Metadata Support
 
 Original media and sidecar files are scanned for Exif and XMP data, as well as proprietary metadata, including Google Photos JSON.
-For this, PhotoPrism has a [built-in Exif parser](../../developer-guide/metadata/exif/index.md), a [simple XMP reader](../../developer-guide/metadata/xmp.md) and can also use [Exiftool](https://exiftool.org/) to extract metadata in various formats such as Exif, XMP and IPTC:
+For this, PhotoPrism has a [built-in Exif parser](../../developer-guide/metadata/exif/index.md), a [simple XMP reader](../../developer-guide/metadata/xmp.md) and can also use [ExifTool](https://exiftool.org/) to extract metadata in various formats such as Exif, XMP and IPTC:
 
 [View Supported Tags ›](https://www.photoprism.app/kb/metadata)
 
@@ -12,7 +12,7 @@ The combined information is then normalized, merged, and [enriched with addition
 
 ### External Changes
 
-If you update one of these tags with external tools such as Exiftool or Digikam, PhotoPrism reads the changes the next time it indexes the file, provided the file's modification date has been updated.
+If you update one of these tags with external tools such as [ExifTool](https://exiftool.org/) or Digikam, PhotoPrism reads the changes the next time it indexes the file, provided the file's modification date has been updated.
 
 ### XMP Sidecar Files
 

@@ -16,7 +16,7 @@ The available Ubuntu, Debian and PhotoPrism images can be found on Docker Hub:
 - https://hub.docker.com/_/debian
 - https://hub.docker.com/r/photoprism/photoprism/tags
 
-Now install `exiftool` and `libheif-examples` (includes the `heif-convert` command) via `apt`:
+Now install [`exiftool`](https://exiftool.org/) and `libheif-examples` (includes the `heif-convert` command) via `apt`:
 
 ```bash
 apt update

@@ -1,8 +1,10 @@
-Exiftool --> https://exiftool.org/
+You can install [ExifTool](https://exiftool.org/) via homebrew, another package manager, or from the homepage:
 
-Installation possible via brew or from homepage.
+https://exiftool.org/
 
-Exif-Read-Tool: https://github.com/dsoprea/go-exif
+The Exif-Read-Tool can be found on GitHub:
+
+https://github.com/dsoprea/go-exif
 
 ## Show exif data for debugging
 

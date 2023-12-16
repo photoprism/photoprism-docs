@@ -23,7 +23,7 @@ For a complete list of file formats and extensions, see our downloadable [Featur
 
 !!! tldr ""
     In case [FFmpeg is disabled](config-options.md#feature-flags) or not installed, videos cannot be indexed because still images cannot be created.
-    You should also have [Exiftool enabled](config-options.md#feature-flags) to extract metadata such as duration, resolution, and codec.
+    You should also have [ExifTool enabled](config-options.md#feature-flags) to extract metadata such as duration, resolution, and codec.
 
 ### What are sidecar files and where do I find them?
 
@@ -46,7 +46,7 @@ Currently, three types of [file formats](../developer-guide/media/index.md) are 
 
 #### JSON ####
 
-If not disabled via `PHOTOPRISM_DISABLE_EXIFTOOL` or `--disable-exiftool`, [Exiftool](https://exiftool.org/) is used
+If not disabled via `PHOTOPRISM_DISABLE_EXIFTOOL` or `--disable-exiftool`, [ExifTool](https://exiftool.org/) is used
 to automatically create a JSON sidecar for each media file. **In this way, embedded XMP and video metadata can also be indexed.**
 Native metadata extraction is limited to common Exif headers. Note that this causes small amount of overhead when
 indexing for the first time.
@@ -73,7 +73,7 @@ XMP (Extensible Metadata Platform) is an XML-based metadata container format [de
 It provides many more fields (as part of embedded models like Dublin Core) than Exif. This also makes it difficult - if not 
 impossible - to provide full support. Reading title, copyright, artist, and description from XMP sidecar files is 
 implemented as a proof-of-concept, [contributions are welcome](../developer-guide/metadata/xmp.md). Indexing of 
-embedded XMP is only possible via Exiftool, see above.
+embedded XMP is only possible via [ExifTool](https://exiftool.org/), see above.
 
 ### Does your software depend on any external services?
 

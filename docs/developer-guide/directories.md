@@ -1,6 +1,6 @@
-# Repository Folder Structure
+# Project Directory Structure
 
-Our directory layout is loosely based on https://github.com/golang-standards/project-layout:
+The directory layout that we use for our [public project repository](https://github.com/photoprism/photoprism) is loosely based on https://github.com/golang-standards/project-layout:
 
 - `/` contains a [Makefile](https://sohlich.github.io/post/go_makefile/), a readme, the license and various config files for dependency management, building and continuous integration
 - `/assets` contains subdirectories for various assets such as photos, built JS/HTML/CSS files and server-side HTML templates

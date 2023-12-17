@@ -146,7 +146,7 @@ nav:
     - FAQ: user-guide/faq.md
   # - Metadata: user-guide/metadata.md
   - Developer Guide:
-    - Welcome: developer-guide/index.md
+    - Introduction: developer-guide/index.md
     - Build Setup: developer-guide/setup.md
     - Best Practices: developer-guide/code-quality.md
     - GitHub Issues: developer-guide/issues.md

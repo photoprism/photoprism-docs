@@ -151,14 +151,14 @@ nav:
     - Best Practices: developer-guide/code-quality.md
     - GitHub Issues: developer-guide/issues.md
     - Pull Requests: developer-guide/pull-requests.md
-    - Directories: developer-guide/directories.md
+    - Directory Structure: developer-guide/directories.md
     - Configuration: developer-guide/configuration.md
-    - Running Tests: developer-guide/tests.md
+    - Unit & Acceptance Tests: developer-guide/tests.md
     - Documentation: developer-guide/documentation.md
     - Translations:
-      - Add Translations: developer-guide/translations-weblate.md
+      - Using Weblate: developer-guide/translations-weblate.md
       - Legacy Method: developer-guide/translations.md
-    - Media Files:
+    - Media Files & Storage:
       - File Types: developer-guide/media/index.md
       - File Samples: developer-guide/media/samples.md
       - Thumbnails: developer-guide/media/thumbnails.md
@@ -168,7 +168,7 @@ nav:
       - Live Photos: developer-guide/media/live.md
       - File Import: developer-guide/media/import.md
       - File Storage: developer-guide/media/storage.md
-    - Metadata:
+    - Image Metadata:
       - Adobe XMP: developer-guide/metadata/xmp.md
       - Exif Extraction: developer-guide/metadata/exif/index.md
       - Editing Exif Data: developer-guide/metadata/exif/edit.md
@@ -179,7 +179,7 @@ nav:
       - Face Recognition: developer-guide/metadata/face-recognition.md
       - Color Detection: developer-guide/metadata/colors.md
       - Camera Models: developer-guide/metadata/cameras.md
-    - User Interface:
+    - Web User Interface:
       - Introduction: developer-guide/ui/introduction.md
       - Screenshots: developer-guide/ui/screenshots.md
       - Components: developer-guide/ui/components.md
@@ -187,14 +187,14 @@ nav:
       - Browsers: developer-guide/ui/browsers.md
       - Interactive Maps: developer-guide/ui/maps.md
       - Infinite Scrolling: developer-guide/ui/infinite-scrolling.md
-    - Web Service API:
+    - Using the REST API:
       - Introduction: developer-guide/api/index.md
       - Clients:
         - Golang: developer-guide/api/clients/go.md
-    - Index Database:
-      - Schema: developer-guide/database/index.md
+    - Database Schema:
+      - Introduction: developer-guide/database/index.md
       - Migrations: developer-guide/database/migrations.md
-      - Diagram: developer-guide/database/schema.md
+      - ER Diagram: developer-guide/database/schema.md
     - Technologies:
       - YAML: developer-guide/technologies/yaml.md
       - Golang: developer-guide/technologies/golang.md

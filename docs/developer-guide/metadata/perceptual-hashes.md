@@ -1,14 +1,14 @@
 # Perceptual Image Hashes
 
-Perceptual image hashing refers to the use of a fingerprint algorithm to generate a hash that correlates with the appearance of an image without depending on other parameters such as file size, type, name, resolution, or other metadata.
+Perceptual Image Hashing refers to the use of a fingerprint algorithm to generate a hash that correlates with the *appearance of an image* without depending on other parameters such as file size, type, name, resolution, or other metadata.
 
 ## Sorting by Visual Similarity
 
 PhotoPrism currently [generates a perceptual hash](https://github.com/photoprism/photoprism/blob/develop/pkg/colors/lightmap.go) while indexing, which can be used to sort search results by visual similarity, e.g.:
 
-<https://demo.photoprism.app/library/browse?view=cards&order=similar>
+- <https://demo.photoprism.app/library/browse?view=cards&order=similar>
 
-Note, though, that it is not yet possible to automatically stack files based on this and that the hash is not 100% precise, so visually different images may have the same hash. This is because it was developed for sorting and not for stacking.
+Note, though, that it is not yet possible to automatically stack files based on this and that the hash is not 100% precise, so visually different images may have the same hash. This is because it was developed for sorting and not for stacking or finding duplicates.
 
 ## Stacking of Similar Files
 
@@ -16,11 +16,10 @@ Developing a user-friendly web interface for semi-automatic stacking of a large 
 
 A simpler solution could be to add one or more additional stacking options on the library settings page and allow them to be applied to existing pictures by pressing a button or running a terminal command, but without being able to see the result in advance or perform manual changes.
 
-See the following GitHub issues for related feature requests:
+See the following issues for related feature requests: 
 
 - [Stacks: Search + manually stack similar images #28](https://github.com/photoprism/photoprism/issues/28)
 - [Stacks: Stack compressed and original version of a photo e.g. from Google Photos #1182](https://github.com/photoprism/photoprism/issues/1182)
-- [Duplicates: Display duplicated files with option to delete #1308](https://github.com/photoprism/photoprism/issues/1308)
 
 ## Related Resources
 

@@ -8,11 +8,11 @@ PhotoPrism currently [generates a perceptual hash](https://github.com/photoprism
 
 <https://demo.photoprism.app/library/browse?view=cards&order=similar>
 
-Note, though, that this hash is not 100% accurate and that the user interface does not yet allow you to stack files based on it or any selection you have made.
+Note, though, that it is not yet possible to automatically stack files based on this and that the hash is not 100% precise, so visually different images may have the same hash. This is because it was developed for sorting and not for stacking.
 
 ## Stacking of Similar Files
 
-Developing a user-friendly web interface for semi-automatic stacking of a large number of images based on their appearance will require a significant amount of work.
+Developing a user-friendly web interface for semi-automatic stacking of a large number of images based on their appearance is expected to require a significant amount of work.
 
 A simpler solution could be to add one or more additional stacking options on the library settings page and allow them to be applied to existing pictures by pressing a button or running a terminal command, but without being able to see the result in advance or perform manual changes.
 

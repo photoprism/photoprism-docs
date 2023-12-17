@@ -8,7 +8,7 @@ PhotoPrism currently [generates a perceptual hash](https://github.com/photoprism
 
 <https://demo.photoprism.app/library/browse?view=cards&order=similar>
 
-Note, though, that this hash is not 100% accurate and that the user interface does not yet allow you to stack files based on it a selection you have made.
+Note, though, that this hash is not 100% accurate and that the user interface does not yet allow you to stack files based on it or any selection you have made.
 
 ## Stacking of Similar Files
 

@@ -175,6 +175,7 @@ nav:
       - Reverse Geocoding: developer-guide/metadata/geocoding.md
       - Image Orientation: developer-guide/metadata/orientation.md
       - Image Classification: developer-guide/metadata/classification.md
+      - Perceptual Hashes: developer-guide/metadata/perceptual-hashes.md
       - Face Recognition: developer-guide/metadata/face-recognition.md
       - Color Detection: developer-guide/metadata/colors.md
       - Camera Models: developer-guide/metadata/cameras.md

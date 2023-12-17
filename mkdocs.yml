@@ -190,7 +190,7 @@ nav:
     - Using the REST API:
       - Introduction: developer-guide/api/index.md
       - Clients:
-        - Golang: developer-guide/api/clients/go.md
+        - Go: developer-guide/api/clients/go.md
     - Database Schema:
       - Introduction: developer-guide/database/index.md
       - Migrations: developer-guide/database/migrations.md

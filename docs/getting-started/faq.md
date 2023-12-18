@@ -241,7 +241,7 @@ Please be aware, though, that we do not have the resources to provide support an
 
 ### Why does your Docker image use the Plus License instead of the AGPL?
 
-The [Plus License](https://www.photoprism.app/plus/license) is used for both the extensions [we provide to our members](https://www.photoprism.app/membership/faq#how-can-i-install-photoprism-plus-without-the-docker-image) and the standard Docker image [available on Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags). This allows us to bundle the extensions with the compiled application. Our public [source code](https://github.com/photoprism/photoprism), however, remains under the [GNU Affero General Public License (AGPL)](../license/agpl.md).
+Our [Plus License](https://www.photoprism.app/plus/license) is used for both the extensions [we provide to our members](https://www.photoprism.app/membership/faq#how-can-i-install-photoprism-plus-without-the-docker-image) and the standard Docker image [available on Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags). This allows us to bundle the extensions with the compiled application. The public [source code](https://github.com/photoprism/photoprism), however, remains under the [GNU Affero General Public License (AGPL)](../license/agpl.md).
 
 If you don't plan to use any [additional features](https://www.photoprism.app/editions#compare), you can alternatively use the "ce" tag instead of "latest" to get a slightly smaller Docker image distributed under the AGPL. Note that system dependencies and other third-party components included in this image are still subject to additional terms and conditions.
 

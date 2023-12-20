@@ -307,9 +307,11 @@ Note, however, that [initial indexing usually takes much longer](../user-guide/f
 
 ### Should I use an SD card or a USB stick?
 
-Conventional USB sticks and SD cards are not suitable for long-term storage. Not only because of the
-performance, but also because they can lose data over time. Local [Solid-State Drives](troubleshooting/performance.md#storage)
-(SSDs) are best, even when connected externally via USB 3. USB 1 and 2 devices will be slow either way.
+Due to their performance and because they can lose data over time, we do not recommend using conventional SD cards, USB sticks and older USB 1 or 2 devices to store your data, except for backups.
+
+External [Solid-State Drives (SSD)](troubleshooting/performance.md#storage) connected via USB 3 are generally reliable and fast enough to keep your *originals*, *database*, and *storage* folders. This way you can, for example, do the indexing on one computer, eject the drive, and then connect it to another computer to browse your pictures.
+
+Note, though, that database files may not be binary compatible in some cases (e.g. if the version or computer architecture does not match) and could also get corrupted when you disconnect an external drive before all changes have been written to disk. We therefore recommend that you regularly [create database backups](../user-guide/backups/index.md), so you can easily restore your index if necessary.
 
 ### Why don't you display animated GIFs natively?
 

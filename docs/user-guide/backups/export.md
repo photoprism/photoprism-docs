@@ -1,9 +1,9 @@
 # Metadata Exports
 
 Control over your data doesn't end with the [ability to create](index.md) and [restore a database](restore.md) backup.
-PhotoPrism additionally provides you [with human-readable YAML files](../../developer-guide/technologies/yaml.md) that allow you to view and restore the metadata of your albums and pictures, even if you didn't create a regular database backup or have lost it.
+PhotoPrism additionally provides you [with human-readable YAML files](../../developer-guide/technologies/yaml.md) that allow you to view and restore the metadata of your albums and photos, even if you didn't create a regular database backup or have lost it.
 
-If backups have not been disabled in the [Advanced Settings](../settings/advanced.md), metadata exports of all your albums and pictures are automatically created in your *storage* folder. They will also be updated when changes are made.
+If backups have not been disabled in the [Advanced Settings](../settings/advanced.md), metadata exports of all your [albums](#album-backups) and [photos](#photo-backups) are automatically created in your *storage* folder. They will also be updated when changes are made.
 
 Be aware that the original data remains in your database. Any changes you make to the files therefore have no effect on it and will not become visible on the user interface, unless your database gets lost and the index is restored from the files.
 

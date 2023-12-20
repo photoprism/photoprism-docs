@@ -2,7 +2,7 @@
 
 Control over your data doesn't end with the ability to create and restore a database backup. PhotoPrism can also provide you with human-readable YAML files that allow you to view, backup and restore the metadata of your albums and the pictures in your library. This will work even if you did not create a regular database backup or have lost it.
 
-If the *Backups* option is activated in your [Settings](../settings/advanced.md), [YAML](../../developer-guide/technologies/yaml.md) backup files for albums and photos are automatically created in your *storage* folder. They are also updated when changes are made.
+If backups have not been disabled in the [Advanced Settings](../settings/advanced.md), [YAML](../../developer-guide/technologies/yaml.md) backup files for albums and photos are automatically created in your *storage* folder. They are also updated when changes are made.
 
 Be aware that the original data remains in your database. Any changes you make to the files therefore have no effect on it and will not become visible on the user interface, unless your database gets lost and the index is restored from the files.
 

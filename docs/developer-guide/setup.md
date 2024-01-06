@@ -2,7 +2,7 @@
 
 !!! warning
 
-    Please note that this guide was not tested on Windows, you might need to change docker-compose.yml to make it work with Windows specific paths
+    Please note that this guide was not tested on Windows, you might need to change docker-compose.yml to make it work with Windows specific paths.
 
 ### Step 1: Use [Git](https://git-scm.com/downloads) to Clone the Project from GitHub
 

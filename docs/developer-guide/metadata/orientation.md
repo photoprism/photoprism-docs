@@ -2,7 +2,7 @@
 
 ## Using Exiftool
 
-Assuming you have Docker installed and want to run `exiftool` with Debian 12 "Bookworm", you can simply run this command to open a terminal:
+Assuming you have Docker installed and want to run [`exiftool`](https://exiftool.org/) with Debian 12 "Bookworm", you can simply run this command to open a terminal:
 
 ```bash
 docker run --rm -v ${PWD}:/test -w /test -ti debian:bookworm bash

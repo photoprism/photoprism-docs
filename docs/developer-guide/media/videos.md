@@ -16,7 +16,7 @@ Please Note:
 
 1. Not all [video and audio formats](https://caniuse.com/?search=video%20format) can be [played with every browser](https://docs.photoprism.app/getting-started/troubleshooting/browsers/). For example, [AAC](https://caniuse.com/aac "Advanced Audio Coding") - the default audio codec for [MPEG-4 AVC / H.264](https://caniuse.com/avc "Advanced Video Coding") - is supported natively in Chrome, Safari, and Edge, while it is only optionally supported by the OS in Firefox and Opera.
 2. HEVC/H.265 video files can have a `.mp4` file extension too, which is often associated with AVC only. This is because MP4 is a *container* format, meaning that the actual video content may be compressed with H.264, H.265, or something else. The file extension doesn't really tell you anything other than that it's probably a video file.
-3. In case [FFmpeg is disabled](https://docs.photoprism.app/user-guide/settings/advanced/#disable-ffmpeg) or not installed, videos cannot be indexed because still images cannot be created. You should also have [Exiftool enabled](https://docs.photoprism.app/getting-started/config-options/#feature-flags) to extract metadata such as duration, resolution, and codec.
+3. In case [FFmpeg is disabled](https://docs.photoprism.app/user-guide/settings/advanced/#disable-ffmpeg) or not installed, videos cannot be indexed because still images cannot be created. You should also have [ExifTool enabled](https://docs.photoprism.app/getting-started/config-options/#feature-flags) to extract metadata such as duration, resolution, and codec.
 
 ## Hybrid Photo/Video Formats
 

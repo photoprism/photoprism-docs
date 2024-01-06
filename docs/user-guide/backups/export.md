@@ -1,15 +1,11 @@
 # Metadata Exports
 
-Control of your data does not only refer to being able to restore a backup in PhotoPrism.
-It also refers to providing users with multiple ways of accessing the metadata they've added to their libraries independent from the software itself.
-People that don't know what to do with a database will probably not feel in control when they only get a sql file that a regular backup provides.
+Control over your data doesn't end with the [ability to create](index.md) and [restore a database](restore.md) backup.
+PhotoPrism additionally provides you [with human-readable YAML files](../../developer-guide/technologies/yaml.md) that allow you to view and restore the metadata of your albums and photos, even if you didn't create a regular database backup or have lost it.
 
-Because of this, PhotoPrism has handy features for exporting your metadata in a human-readable format as well as a regular database-backup.
+If backups have not been disabled in the [Advanced Settings](../settings/advanced.md), metadata exports of all your [albums](#album-backups) and [photos](#photo-backups) are automatically created in your *storage* folder. They will also be updated when changes are made.
 
-In case you have backups enabled in your [Settings](../settings/advanced.md), PhotoPrism automatically creates [YAML](../../developer-guide/technologies/yaml.md) backup files for albums and photos.
-
-Keep in mind that the data still resides in your database, and any changes made to the files will not be reflected in PhotoPrism.
-This is comparable to doing a backup, but to a human readable format.
+Be aware that the original data remains in your database. Any changes you make to the files therefore have no effect on it and will not become visible on the user interface, unless your database gets lost and the index is restored from the files.
 
 ## Album Backups
 Album backups are created for the following album types: album, folder, state, moment and month.

@@ -28,7 +28,7 @@ services:
     security_opt:
       - seccomp:unconfined
       - apparmor:unconfined
-    command: mysqld --innodb-buffer-pool-size=1G >
+    command: --innodb-buffer-pool-size=1G >
       --transaction-isolation=READ-COMMITTED --character-set-server=utf8mb4
       --collation-server=utf8mb4_unicode_ci --max-connections=512
       --innodb-rollback-on-timeout=OFF --innodb-lock-wait-timeout=120

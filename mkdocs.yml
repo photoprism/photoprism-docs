@@ -128,6 +128,7 @@ nav:
     - Backup Guide:
       - Creating Backups: user-guide/backups/index.md
       - Restoring Backups: user-guide/backups/restore.md
+      - External Disk Drives: user-guide/backups/external-storage.md
       - Metadata Exports: user-guide/backups/export.md
       - Folder Overview: user-guide/backups/folders.md
       #- Commands: user-guide/advanced/commands.md
@@ -146,19 +147,19 @@ nav:
     - FAQ: user-guide/faq.md
   # - Metadata: user-guide/metadata.md
   - Developer Guide:
-    - Welcome: developer-guide/index.md
+    - Introduction: developer-guide/index.md
     - Build Setup: developer-guide/setup.md
     - Best Practices: developer-guide/code-quality.md
     - GitHub Issues: developer-guide/issues.md
     - Pull Requests: developer-guide/pull-requests.md
-    - Directories: developer-guide/directories.md
+    - Directory Structure: developer-guide/directories.md
     - Configuration: developer-guide/configuration.md
-    - Running Tests: developer-guide/tests.md
+    - Unit & Acceptance Tests: developer-guide/tests.md
     - Documentation: developer-guide/documentation.md
     - Translations:
-      - Add Translations: developer-guide/translations-weblate.md
+      - Using Weblate: developer-guide/translations-weblate.md
       - Legacy Method: developer-guide/translations.md
-    - Media Files:
+    - Media Files & Storage:
       - File Types: developer-guide/media/index.md
       - File Samples: developer-guide/media/samples.md
       - Thumbnails: developer-guide/media/thumbnails.md
@@ -168,17 +169,18 @@ nav:
       - Live Photos: developer-guide/media/live.md
       - File Import: developer-guide/media/import.md
       - File Storage: developer-guide/media/storage.md
-    - Metadata:
+    - Image Metadata:
       - Adobe XMP: developer-guide/metadata/xmp.md
       - Exif Extraction: developer-guide/metadata/exif/index.md
       - Editing Exif Data: developer-guide/metadata/exif/edit.md
       - Reverse Geocoding: developer-guide/metadata/geocoding.md
       - Image Orientation: developer-guide/metadata/orientation.md
       - Image Classification: developer-guide/metadata/classification.md
+      - Perceptual Hashes: developer-guide/metadata/perceptual-hashes.md
       - Face Recognition: developer-guide/metadata/face-recognition.md
       - Color Detection: developer-guide/metadata/colors.md
       - Camera Models: developer-guide/metadata/cameras.md
-    - User Interface:
+    - Web User Interface:
       - Introduction: developer-guide/ui/introduction.md
       - Screenshots: developer-guide/ui/screenshots.md
       - Components: developer-guide/ui/components.md
@@ -186,14 +188,14 @@ nav:
       - Browsers: developer-guide/ui/browsers.md
       - Interactive Maps: developer-guide/ui/maps.md
       - Infinite Scrolling: developer-guide/ui/infinite-scrolling.md
-    - Web Service API:
+    - Using the REST API:
       - Introduction: developer-guide/api/index.md
       - Clients:
-        - Golang: developer-guide/api/clients/go.md
-    - Index Database:
-      - Schema: developer-guide/database/index.md
+        - Go: developer-guide/api/clients/go.md
+    - Database Schema:
+      - Introduction: developer-guide/database/index.md
       - Migrations: developer-guide/database/migrations.md
-      - Diagram: developer-guide/database/schema.md
+      - ER Diagram: developer-guide/database/schema.md
     - Technologies:
       - YAML: developer-guide/technologies/yaml.md
       - Golang: developer-guide/technologies/golang.md
@@ -235,6 +237,8 @@ extra:
       link: https://link.photoprism.app/chat
     - icon: fontawesome/brands/twitter
       link: https://link.photoprism.app/twitter
+    - icon: fontawesome/brands/mastodon
+      link: https://floss.social/@photoprism
     - icon: fontawesome/brands/reddit
       link: https://link.photoprism.app/reddit
     - icon: fontawesome/brands/linkedin

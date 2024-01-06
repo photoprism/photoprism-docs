@@ -47,7 +47,7 @@ Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is sup
 === "Raspberry Pi"
 
     Download our [docker-compose.yml](https://dl.photoprism.app/docker/arm64/docker-compose.yml) example for 
-    the Raspberry Pi 3 / 4 and other ARM64-based devices (right click and *Save Link As...* or use `wget`) to a folder of your choice,
+    the [Raspberry Pi](raspberry-pi.md) and other ARM64-based devices (right click and *Save Link As...* or use `wget`) to a folder of your choice,
     and change the [configuration](config-options.md) as needed:
     
     ```bash

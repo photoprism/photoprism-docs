@@ -60,7 +60,7 @@ The corresponding [config toggle](../../getting-started/config-options.md) is `P
 
 ### Disable ExifTool
 This option prevents the creation of `json` files with Exif data in `storage/sidecar`.
-Note that you must have Exiftool enabled to extract video metadata such as duration, resolution, and codec.
+Note that you must have [ExifTool](https://exiftool.org/) enabled to extract video metadata such as duration, resolution, and codec.
 
 The corresponding [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_DISABLE_EXIFTOOL`.
 

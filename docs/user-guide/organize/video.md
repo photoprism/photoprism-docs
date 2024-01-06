@@ -8,7 +8,7 @@ Please note that not all [video and audio formats](https://caniuse.com/?search=v
 
 !!! tldr ""
     In case [FFmpeg is disabled](../settings/advanced.md#disable-ffmpeg) or not installed, videos cannot be indexed because still images cannot be created.
-    You should also have [Exiftool enabled](../../getting-started/config-options.md#feature-flags) to extract metadata such as duration, resolution, and codec.
+    You should also have [ExifTool enabled](../../getting-started/config-options.md#feature-flags) to extract metadata such as duration, resolution, and codec.
 
 ## Live Photos ##
 
@@ -25,7 +25,7 @@ You can limit a search to *Live Photos* by using the `type:live` filter or the k
 For maximum browser compatibility, PhotoPrism can transcode video codecs and containers [supported by FFmpeg](https://www.ffmpeg.org/documentation.html) to [MPEG-4 AVC](https://en.wikipedia.org/wiki/MPEG-4), as well as extract still images for thumbnail creation:
 
 - if [FFmpeg is disabled](../settings/advanced.md#disable-ffmpeg) or not installed, indexing and importing videos is not possible because still images cannot be created
-- if [Exiftool is disabled](../../getting-started/config-options.md#feature-flags) or not installed, indexing and importing videos is only partially possible because the video metadata cannot be extracted and thus the duration, resolution, and codec are unknown
+- if [ExifTool is disabled](../../getting-started/config-options.md#feature-flags) or not installed, indexing and importing videos is only partially possible because the video metadata cannot be extracted and thus the duration, resolution, and codec are unknown
 - [MPEG-4 AVC](https://en.wikipedia.org/wiki/MPEG-4) videos can be [played natively by most modern browsers](https://caniuse.com/mpeg4) and are not re-encoded, even if they exceed the [configured bitrate limit](../../getting-started/advanced/transcoding.md#bitrate-limiting); to reduce the size of AVC videos, you can manually replace the original files with a smaller version or wait for a future release that offers this functionality
 - OGV, VP8, VP9, AV1, WebM, and HEVC videos will be streamed directly if they are supported by your browser and do not exceed the [configured bitrate limit](../../getting-started/advanced/transcoding.md#bitrate-limiting)
 - other formats must always be transcoded

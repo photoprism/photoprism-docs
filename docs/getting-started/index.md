@@ -7,12 +7,7 @@ We recommend running PhotoPrism with [Docker Compose](docker-compose.md) when ho
 Once the initial setup is complete, our [First Steps 👣](../user-guide/first-steps.md) tutorial guides you through the user interface and settings to ensure your library is indexed according to your individual preferences.
 
 !!! tldr ""
-    Our [stable version and development preview](https://docs.photoprism.app/release-notes/) have been built into a
-    single [multi-arch Docker image](https://link.photoprism.app/docker-hub) for 64-bit AMD, Intel,
-    and ARM processors. That means, [Raspberry Pi](raspberry-pi.md) 3 / 4, Apple Silicon, and other ARM64-based
-    devices can pull from the same repository, enjoy the exact same functionality, and can follow the regular
-    [installation instructions](docker-compose.md) after going through a short list of [requirements](raspberry-pi.md).
-    See our [Getting Started FAQ](faq.md) for [alternative installation methods](faq.md#how-can-i-install-photoprism-without-docker). 
+    [Our stable releases](../release-notes.md) and [preview builds](updates.md#development-preview) are available as [multi-arch Docker images](https://hub.docker.com/r/photoprism/photoprism/tags) for 64-bit AMD, Intel, and ARM processors. Experienced users can [alternatively use the packages](faq.md#installation-packages) at [dl.photoprism.app/pkg/linux/](https://dl.photoprism.app/pkg/linux/README.html) to manually install PhotoPrism on compatible Linux distributions. For more installation methods, see our [Getting Started FAQ](faq.md#how-can-i-install-photoprism-without-docker).
 
 ## Roadmap
 
@@ -53,9 +48,7 @@ Not all [video and audio formats](https://caniuse.com/?search=video%20format) ca
 #### HTTPS ####
 
 If you install PhotoPrism on a public server outside your home network, **always run it behind a secure HTTPS reverse proxy** such as [Traefik](proxies/traefik.md) or [Caddy](proxies/caddy-2.md).
-Your files and passwords will otherwise be transmitted in clear text and can be intercepted by anyone, 
-including your provider, hackers, and governments. Backup tools and file sync apps like [FolderSync](https://foldersync.io/docs/faq/#https-connection-errors) 
-may refuse to connect as well.
+Your files and passwords will otherwise be transmitted in clear text and can be intercepted by anyone, including your provider, hackers, and governments. Backup tools and file sync apps like [FolderSync](https://foldersync.io/docs/faq/#https-connection-errors) may refuse to connect as well.
 
 #### Firewall ####
 

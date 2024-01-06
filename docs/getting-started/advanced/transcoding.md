@@ -203,7 +203,7 @@ docker compose logs -f --tail=100
 
 !!! tldr ""
     If [FFmpeg is disabled](../config-options.md#feature-flags) or not installed, videos cannot be indexed because still images cannot be created.
-    You should also have [Exiftool enabled](../config-options.md#feature-flags) to extract metadata such as duration, resolution, and codec.
+    You should also have [ExifTool enabled](../config-options.md#feature-flags) to extract metadata such as duration, resolution, and codec.
     Note that your hardware may not support certain video codecs and resolutions. In this case, the software encoder is used automatically.
 
 !!! tldr ""

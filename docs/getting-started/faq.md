@@ -23,7 +23,7 @@ For a complete list of file formats and extensions, see our downloadable [Featur
 
 !!! tldr ""
     In case [FFmpeg is disabled](config-options.md#feature-flags) or not installed, videos cannot be indexed because still images cannot be created.
-    You should also have [Exiftool enabled](config-options.md#feature-flags) to extract metadata such as duration, resolution, and codec.
+    You should also have [ExifTool enabled](config-options.md#feature-flags) to extract metadata such as duration, resolution, and codec.
 
 ### What are sidecar files and where do I find them?
 
@@ -46,7 +46,7 @@ Currently, three types of [file formats](../developer-guide/media/index.md) are 
 
 #### JSON ####
 
-If not disabled via `PHOTOPRISM_DISABLE_EXIFTOOL` or `--disable-exiftool`, [Exiftool](https://exiftool.org/) is used
+If not disabled via `PHOTOPRISM_DISABLE_EXIFTOOL` or `--disable-exiftool`, [ExifTool](https://exiftool.org/) is used
 to automatically create a JSON sidecar for each media file. **In this way, embedded XMP and video metadata can also be indexed.**
 Native metadata extraction is limited to common Exif headers. Note that this causes small amount of overhead when
 indexing for the first time.
@@ -73,7 +73,7 @@ XMP (Extensible Metadata Platform) is an XML-based metadata container format [de
 It provides many more fields (as part of embedded models like Dublin Core) than Exif. This also makes it difficult - if not 
 impossible - to provide full support. Reading title, copyright, artist, and description from XMP sidecar files is 
 implemented as a proof-of-concept, [contributions are welcome](../developer-guide/metadata/xmp.md). Indexing of 
-embedded XMP is only possible via Exiftool, see above.
+embedded XMP is only possible via [ExifTool](https://exiftool.org/), see above.
 
 ### Does your software depend on any external services?
 
@@ -187,7 +187,7 @@ This will automatically download all required config files and start the server 
 
 #### Installation Packages ####
 
-We also [provide tar.gz packages](https://dl.photoprism.app/pkg/) that allow you to install PhotoPrism on Linux without using Docker, for example by running the following commands:
+Experienced users can use the packages available at [**dl.photoprism.app/pkg/linux/**](https://dl.photoprism.app/pkg/linux/README.html) to install PhotoPrism on compatible Linux distributions, e.g. by running the following commands:
 
 ```bash
 sudo mkdir -p /opt/photoprism
@@ -197,13 +197,13 @@ sudo ln -sf /opt/photoprism/bin/photoprism /usr/local/bin/photoprism
 photoprism --version
 ```
 
-Since these packages need to be set up manually and do not include the system dependencies required to make use of all the features, we recommend that only advanced users choose this installation method.
+Note that these packages [must be updated manually](https://dl.photoprism.app/pkg/linux/README.html#updates), do not come with a [default configuration](https://dl.photoprism.app/pkg/linux/README.html#configuration), and do not include the [system dependencies](https://dl.photoprism.app/pkg/linux/README.html#dependencies) required to make use of all the features. The minimum required glibc version is 2.35, so for example Ubuntu 22.04 and Debian Bookworm will work, but older Linux distributions may not be compatible.
 
 [Read the Docs ›](https://dl.photoprism.app/pkg/linux/README.html)
 
 #### LXC Images ####
 
-There are no official LXC images available from us yet, see [related GitHub issue](https://github.com/photoprism/photoprism/issues/147). However, you can [use the tar.gz packages](https://dl.photoprism.app/pkg/linux/README.html) we provide and install them in a [LXC base image](https://images.linuxcontainers.org/) of your choice.
+There are currently [no official LXC images](https://github.com/photoprism/photoprism/issues/147) available from us. However, you can use [our installation packages](#installation-packages) together with [the documentation we provide](https://dl.photoprism.app/pkg/linux/README.html) to set them up in [a base image of your choice](https://images.linuxcontainers.org/).
 
 #### BSD Ports ####
 
@@ -241,9 +241,9 @@ Please be aware, though, that we do not have the resources to provide support an
 
 ### Why does your Docker image use the Plus License instead of the AGPL?
 
-Our [Plus License](https://www.photoprism.app/plus/license) is used for both the PhotoPrism+ extensions we provide to our members as well as the standard [Docker image](https://hub.docker.com/r/photoprism/photoprism) we distribute. This allows us to bundle the extensions, and other third-party components that we are not allowed to distribute under the AGPL, with the compiled application in the Docker image. The public source code, however, remains under the [GNU Affero General Public License (AGPL)](https://docs.photoprism.app/license/agpl/).
+Our [Plus License](https://www.photoprism.app/plus/license) is used for both the extensions [we provide to our members](https://www.photoprism.app/membership/faq#how-can-i-install-photoprism-plus-without-the-docker-image) and the standard [Docker images](https://hub.docker.com/r/photoprism/photoprism/tags) available on Docker Hub. This allows us to bundle the extensions with the compiled application, while the [Community Edition](https://github.com/photoprism/photoprism) remains freely available under the terms of the [GNU Affero General Public License (AGPL)](../license/agpl.md).
 
-If you don't want additional features, you can alternatively use the "ce" tag instead of "latest" to get a smaller Docker image distributed under the AGPL license. Note that third-party components and digital assets included in this image are still subject to additional terms and conditions.
+If you don't plan to use [any additional features](https://www.photoprism.app/editions#compare), you can alternatively use the "ce" tag instead of "latest" to get a slightly smaller Docker image distributed under the AGPL. Note that system dependencies and other third-party components included in this image are still subject to additional terms and conditions.
 
 [View Open Source FAQ ›](https://www.photoprism.app/oss/faq){ class="pr-3 block-xs" } [View Plus License ›](https://www.photoprism.app/plus/license)
 
@@ -301,18 +301,17 @@ That being said, one of the advantages of [open-source software](https://docs.ph
 
 ### Is a Raspberry Pi fast enough?
 
-This largely depends on your expectations and the number of files you have. Most users report that
-PhotoPrism runs smoothly on their Raspberry Pi 4. However, initial indexing typically takes much longer
-than on standard desktop computers.
+This mainly depends on your expectations and the number of files you have. Most users report that PhotoPrism runs smoothly on a Raspberry Pi 4 with 4 GB of RAM.
 
-Also keep in mind that the hardware has limited video transcoding capabilities, so the conversion of video
-[file formats](../developer-guide/media/index.md) is not well-supported and software transcoding is generally slow.
+Note, however, that [initial indexing usually takes much longer](../user-guide/first-steps.md) than on a regular desktop computer and that the hardware has [limited video transcoding capabilities](advanced/transcoding.md), so video file format conversion is not well supported and software transcoding is generally slow. We take no responsibility for instability or performance problems if your device does not [meet the requirements](raspberry-pi.md#system-requirements).
 
 ### Should I use an SD card or a USB stick?
 
-Conventional USB sticks and SD cards are not suitable for long-term storage. Not only because of the
-performance, but also because they can lose data over time. Local [Solid-State Drives](troubleshooting/performance.md#storage)
-(SSDs) are best, even when connected externally via USB 3. USB 1 and 2 devices will be slow either way.
+Due to their performance and because they can lose data over time, we do not recommend using conventional SD cards, USB sticks and older USB 1 or 2 devices to store your data, except for backups.
+
+External [Solid-State Drives (SSD)](troubleshooting/performance.md#storage) connected via USB 3 are generally reliable and fast enough to keep your *originals*, *database*, and *storage* folders. This way you can, for example, do the indexing on one computer, eject the drive, and then connect it to another computer to browse your pictures.
+
+Note, though, that database files may not be binary compatible in some cases (e.g. if the version or computer architecture does not match) and could also get corrupted when you disconnect an external drive before all changes have been written to disk. We therefore recommend that you regularly [create database backups](../user-guide/backups/index.md), so you can easily restore your index if necessary.
 
 ### Why don't you display animated GIFs natively?
 

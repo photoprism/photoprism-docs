@@ -1,5 +1,9 @@
 # Setting Up Your Development Environment
 
+!!! warning
+
+    Please note that this guide was not tested on Windows, you might need to change docker-compose.yml to make it work with Windows specific paths
+
 ### Step 1: Use [Git](https://git-scm.com/downloads) to Clone the Project from GitHub
 
 Before running any commands, please make sure you have [Git](https://git-scm.com/downloads), [Make](https://www.gnu.org/software/make/), [Docker](https://store.docker.com/search?q=docker&type=edition&offering=community), and Docker Compose installed on your system. These are available for Mac, Linux, and Windows.[^1]
@@ -34,6 +38,8 @@ Pull the latest Docker images and then launch the pre-configured build environme
 
 ```bash
 make docker-build
+```
+```bash
 docker compose up
 ```
 
@@ -57,10 +63,13 @@ make dep
 
 ```bash
 make build-js
+```
+```bash
 make build-go
+```
+```bash
 ./photoprism start
 ```
-
 After PhotoPrism has been started as shown above, the user interface can be opened in a web browser by navigating to one of these URLs:
 
 - [http://localhost:2342/](http://photoprism.me:2342/) (HTTP)
@@ -93,6 +102,8 @@ Alternatively, you can change to the `frontend` directory and run NPM directly:
 
 ```bash
 cd frontend
+```
+```bash
 npm run watch
 ```
 
@@ -108,6 +119,8 @@ To debug the backend Go code, first make sure you have built and run the contain
 
 ```bash
 make docker-build
+```
+```bash
 docker compose up
 ```
 
@@ -115,6 +128,8 @@ _Note:_ If you make changes in the `Dockerfile` to test things out, you can buil
 
 ```bash
 docker compose build photoprism
+```
+```bash
 docker compose up photoprism
 ```
 

@@ -34,7 +34,9 @@ Other issues? Our [troubleshooting checklists](../troubleshooting/index.md) help
     [SQLite is not a good choice](../troubleshooting/sqlite.md) for users who require scalability and high performance. We therefore do not recommend following this contributed guide without changing the configuration to connect your instance to a MariaDB database.
 
 !!! example ""
-    A setup guide for Synology with [Docker and MariaDB](#docker-and-mariadb) can be found below.
+    A setup guide for Synology with [Docker and MariaDB](#setup-using-docker-and-mariadb) can be found below.
+
+    
 This guide describes how to set up PhotoPrism using the new Synology user interface.
 
 ### Prerequisites
@@ -91,7 +93,7 @@ This guide describes how to set up PhotoPrism using the new Synology user interf
 Our [First Steps 👣](../../user-guide/first-steps.md) tutorial guides you through the user interface and settings to ensure your library is indexed according to your individual preferences.
 
 
-## Setup using Docker & MariaDB
+## Setup using Docker and MariaDB
 
 ### Prerequisites
 - Docker is installed

@@ -34,9 +34,7 @@ Other issues? Our [troubleshooting checklists](../troubleshooting/index.md) help
     [SQLite is not a good choice](../troubleshooting/sqlite.md) for users who require scalability and high performance. We therefore do not recommend following this contributed guide without changing the configuration to connect your instance to a MariaDB database.
 
 !!! example ""
-    Since we don't have a Synology test device, contributions to a setup guide that uses MariaDB by default would be much appreciated.
-    You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.
-
+    A setup guide for Synology with [Docker and MariaDB](#docker-and-mariadb) can be found below.
 This guide describes how to set up PhotoPrism using the new Synology user interface.
 
 ### Prerequisites
@@ -93,7 +91,22 @@ This guide describes how to set up PhotoPrism using the new Synology user interf
 Our [First Steps 👣](../../user-guide/first-steps.md) tutorial guides you through the user interface and settings to ensure your library is indexed according to your individual preferences.
 
 
+## Setup using Docker & MariaDB
 
+### Prerequisites
+- Docker is installed
+- folders config and photos are created:
+
+  ![Photoprism_1](./img/synology/Photoprism_1.jpg){ class="shadow" }
+
+- for testing purposes, add some pictures to your photos folder
+- later, if you're ok with your setup, you can link your pictures to the photos folder
+
+### Preparing MariaDB
+- Launch `Container Manager` to access Docker
+- In the registry, search for MariaDB
+- Download and choose the flavor (you may also consider getting `phpmyadmin` while you're here to help administrate the database)
+- Wait until you get the message your image is downloaded.
 
 
 <!---

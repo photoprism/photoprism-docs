@@ -154,6 +154,12 @@ Our [First Steps 👣](../../user-guide/first-steps.md) tutorial guides you thro
   - `PHOTOPRISM_DATABASE_PASSWORD` is also from the [SQL setup step](#creating-a-sql-user-for-photoprism) so carry it over.
 - Scroll down to `Network` and double check it's still the same one (e.g. `bridge` if you're following along with me... or at least all the same as the other two containers).
 - Then scroll down to `Links` and click `+ Add` to ensure you're linked to the `mariadb` container as it will be needed for `photoprism` to run. (The link really just makes sure the other container is started and/or starts first before this one.)
+- Finish the wizard and start the container.
+
+### Connecting to Photoprism
+- Open a new browser tab and navigate to `http://<synology-ip-or-domain-name>:<port-you-chose-above>` (e.g. `http://192.168.1.17:2342`). You should see the `Photoprism` home page within a few minutes. It might give you an error if you're too quick (within seconds). Give it some time to start up (like a minute or two).
+- Try logging in with the username `admin` and whatever you set `PHOTOPRISM_ADMIN_PASSWORD` to in the [Preparing Photoprism](#preparing-photoprism) section. When you succeed, it should look like this:
+- All done; have fun!
 
 <!---
 

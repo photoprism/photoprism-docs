@@ -106,10 +106,51 @@ Our [First Steps 👣](../../user-guide/first-steps.md) tutorial guides you thro
 
 ### Preparing MariaDB
 - Launch `Container Manager` to access Docker
-- In the registry, search for MariaDB
+- In the Registry tab, search for MariaDB
 - Download and choose the flavor (you may also consider getting `phpmyadmin` while you're here to help administrate the database)
 - Wait until you get the message your image is downloaded.
+- Switch to the `Container` tab and click `Create`
+- Choose the `mariadb:latest` (or whatever tag you chose as your image) then continue
+- It is not necessary to add an external port mapping here in the `Port Settings` section as you can have your other container talk "internally" to this one, but you may want to expose a port so you can get at it from other services or administration tools later. By default, when you scroll down, this will probably be attached to the `bridge` network with an IP address range of `172.17.0.0/16` or something similar. That's OK as long as you also attach the future Photoprism container to the same one.
+- In the `Environment` section, click the `+ Add` button to add a new variable. Add `MYSQL_ROOT_PASSWORD` as the key and set the value to something secret. You can manipulate this later to eliminate or change this password, but you'll need it for now to get in there and make users.
+- Then proceed through the wizard to create and start the container.
+- You can double click on the new container in the list to see its status including its IP address which you may need if you did not add an external port mapping.
+- You may also switch to the `Log` tab to see what the container printed out as it started up to validate that everything is okay. Note that this screenshot shows `mariadbd: ready for connections.` at the top suggesting that we're good to go.
 
+### Preparing phpMyAdmin
+- If you want to use a web administration for this database, you can also grab `phpmyadmin`. Follow the first few steps of [Preparing MariaDB](#preparing-mariadb) to get to the registry and download `phpmyadmin` if you didn't already do so. Then hop back here.
+- Back on the `Container` tab, click `Create`.
+- Choose `phpmyadmin:latest` (or whichever tag you chose) then proceed.
+- This time for sure, you need to add an external port in the `Local Port` field. I chose `3080` because it's very common for assorted web services to use `80`, `8080`, `8888`, `433` or some other similar variant. So I tried something vaguely memorable with the `80` in it but less likely to conflict. It can be any port you're not already using, but do remember that the Synology host OS is running on `5000` and `5001` for its web access and may also be using some of the other `8`s above for other services or proxies you're running.
+- In the `Environment` section, click the `+ Add` button to add a new variable. Add `PMA_HOST` as the key and set the value to either the host name you gave the `mariadb` container when you created it (which defaults to `mariadb-1` unless you chose something else) **OR** enter the IP address of the `mariadb` container which you found when opening its details page (e.g. mine was `172.17.0.11`).
+- Scroll to the bottom and establish a `Link` to the `mariadb` container by clicking `+ Add` and choosing the name you gave the `mariadb` container from the dropdown. This should make the new `phpmyadmin` container dependent on the `mariadb` container and relatively automatically tell each other about their networks/IP addresses.
+- Also confirm while you're down here that the `Network` is the same as the `mariadb` container. Mine's on `bridge`.
+- Finish the wizard and run the container.
+- Open a new browser tab and navigate to `http://<synology-ip-or-domain-name>:<port-you-chose-above>` (e.g. `http://192.168.1.17:3080`). You should see the `phpMyAdmin` home page.
+- Try logging in with the username `root` and whatever you set `MYSQL_ROOT_PASSWORD` to in the [Preparing MariaDB](#preparing-mariadb) section. When you succeed, it should look like this:
+
+### Creating a SQL user for Photoprism
+- From inside the phpMyAdmin panel, choose `User accounts` at the top, then click `Add user account`.
+- Pick a user name and password combination that you will teach to the future `photoprism` container to be able to talk to the `mariadb` container. If you don't want to come up with a secure password, click `Generate password` and it will create a good one for you and fill the password fields.
+- Before you go on, be sure you check the `Create database with the same name and grant all privileges.` checkbox to make your life easier. (Or you'll have to do this yourself later.)
+- I recommend you leave the `Host name` as `Any host` which is a `%`. You could technically lock this down by putting in the name or IP address of the `photoprism` container, but as you're inside a private bridge network for docker already, it's really only your other containers that are in here and `%` is probably a reasonable balance between the security you already have in the private network and the potential headache you might have if the host name or IP address changes of the other container.
+- Scroll to the bottom and click `Go` to make it happen.
+- You should see a message that shows a successfully added user and the matching database should appear in the tree on the left.
+
+### Preparing Photoprism
+- Just like in [Preparing MariaDB](#preparing-mariadb), go get yourself the `photoprism/photoprism` container image. It's big so it can take a bit of time. Then come back here.
+- Back again on the `Container` tab, click `Create`.
+- Choose the `photoprism/photoprism:latest` (or whichever tag you chose) image and set a name for the container then click `Next`
+- Under `Port Settings`, be sure you map `2342` to an external port so you can log in. You can leave the other two unmapped for now. They can be edited later if you determine you need them.
+- Scroll down and under `Volume Settings`, add two volumes.
+- Scroll down and under `Environment`, find the ones that start with `PHOTOPRISM_DATABASE`. Then set them accordingly:
+  - `PHOTOPRISM_DATABASE_DRIVER` is set to `mysql` (MariaDB is a fork of MySQL and they speak the same language.)
+  - `PHOTOPRISM_DATABASE_SERVER` is set to either the host name (`mariadb-1` or whatever you named it) or the IP address that you found in the container details (e.g. `172.17.0.11` for me) just like you did for [phpMyAdmin](#preparing-phpmyadmin).
+  - `PHOTOPRISM_DATABASE_NAME` is `photoprism` if you followed what I did but otherwise should match the user name you chose for photoprism in the [creating a user](#creating-a-sql-user-for-photoprism) step.
+  - `PHOTOPRISM_DATABASE_USER` is also `photoprism`. Of course if you made your own different user name and/or database names... substitute those here.
+  - `PHOTOPRISM_DATABASE_PASSWORD` is also from the [SQL setup step](#creating-a-sql-user-for-photoprism) so carry it over.
+- Scroll down to `Network` and double check it's still the same one (e.g. `bridge` if you're following along with me... or at least all the same as the other two containers).
+- Then scroll down to `Links` and click `+ Add` to ensure you're linked to the `mariadb` container as it will be needed for `photoprism` to run. (The link really just makes sure the other container is started and/or starts first before this one.)
 
 <!---
 

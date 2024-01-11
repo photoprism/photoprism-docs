@@ -142,7 +142,10 @@ Our [First Steps 👣](../../user-guide/first-steps.md) tutorial guides you thro
 - Back again on the `Container` tab, click `Create`.
 - Choose the `photoprism/photoprism:latest` (or whichever tag you chose) image and set a name for the container then click `Next`
 - Under `Port Settings`, be sure you map `2342` to an external port so you can log in. You can leave the other two unmapped for now. They can be edited later if you determine you need them.
-- Scroll down and under `Volume Settings`, add two volumes.
+- Scroll down and under `Volume Settings`, add two or three volumes.
+  - Choose the `/docker/Photoprism/config` folder you made earlier (or wherever you are keeping your other Docker config files) and mount it to `/photoprism/storage` with `Read/Write` permission
+  - Choose the `/photos/Library` folder that is the Synology Shared Folder for all of your photo originals (or wherever you intend to keep your photo library accessible on the NAS)
+  - Choose the `/photos/Import` folder that is the Synology Shared Folder where you intend to offload digital cameras for indexing and storage (or wherever you intend to want those to be ingested to the NAS.)
 - Scroll down and under `Environment`, find the ones that start with `PHOTOPRISM_DATABASE`. Then set them accordingly:
   - `PHOTOPRISM_DATABASE_DRIVER` is set to `mysql` (MariaDB is a fork of MySQL and they speak the same language.)
   - `PHOTOPRISM_DATABASE_SERVER` is set to either the host name (`mariadb-1` or whatever you named it) or the IP address that you found in the container details (e.g. `172.17.0.11` for me) just like you did for [phpMyAdmin](#preparing-phpmyadmin).

@@ -52,7 +52,7 @@ If this doesn't help, check the [Docker Logs](docker.md#viewing-logs) for messag
 - [ ] In case the logs also show "disk full", "quota exceeded", or "no space left" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space) (add storage) or a disk usage limit is configured (remove or increase it)
 - [ ] Log messages that contain "no route to host" may also indicate a general network configuration problem (follow our [examples](https://dl.photoprism.app/docker/))
 - [ ] You have to resort to [alternative Docker images](../raspberry-pi.md#older-armv7-based-devices) to run MariaDB on ARMv7-based devices and those with a 32-bit operating system
-- [ ] For other errors look at the MariaDB Docker Official Image Frequently Asked Questions [documentation page](https://mariadb.com/kb/en/docker-official-image-frequently-asked-questions/)
+- [ ] You may find a solution in the official [MariaDB Docker Image FAQ](https://mariadb.com/kb/en/docker-official-image-frequently-asked-questions/)
 
 ## Wrong Password
 

@@ -27,7 +27,7 @@ If your device runs out of memory, the index is frequently locked, or other syst
 
 Other issues? Our [troubleshooting checklists](../troubleshooting/index.md) help you quickly diagnose and solve them.
 
-
+<!--
 ## Setup using Docker & SQLite ##
 
 !!! note ""
@@ -91,75 +91,135 @@ This guide describes how to set up PhotoPrism using the new Synology user interf
 ### First Steps
 
 Our [First Steps 👣](../../user-guide/first-steps.md) tutorial guides you through the user interface and settings to ensure your library is indexed according to your individual preferences.
-
+-->
 
 ## Setup using Docker and MariaDB
 
 ### Prerequisites
-- Docker is installed
-- folders config and photos are created:
-
+- Docker is installed (called 'Container Manager' to Synology.)
+- Create some folders for Photoprism to store configuration data and photos.
+  
   ![Photoprism_1](./img/synology/Photoprism_1.jpg){ class="shadow" }
 
-- for testing purposes, add some pictures to your photos folder
-- later, if you're ok with your setup, you can link your pictures to the photos folder
+- For testing purposes, add some pictures to your photos folder.
+- Later, if you're okay with your setup, you can link your pictures to the photos folder.
 
 ### Preparing MariaDB
 - Launch `Container Manager` to access Docker
 - In the Registry tab, search for MariaDB
-- Download and choose the flavor (you may also consider getting `phpmyadmin` while you're here to help administrate the database)
+  
+   ![Container Manager Sidebar showing Registry Tab](./img/synology/synology-registry.png){ class="shadow" }
+- Download and choose the flavor. (You may also skip ahead and grab `phpmyadmin` and `photoprism` while you're here or come back later.)
+  
+   ![Container Manager Registry Search Results for `mariadb`](./img/synology/synology-mariadb-serach.png){ class="shadow" }
 - Wait until you get the message your image is downloaded.
 - Switch to the `Container` tab and click `Create`
+  
+   ![Container Manager's Container Tab and Create Button](./img/synology/synology-create-container.png){ class="shadow" }
 - Choose the `mariadb:latest` (or whatever tag you chose as your image) then continue
-- It is not necessary to add an external port mapping here in the `Port Settings` section as you can have your other container talk "internally" to this one, but you may want to expose a port so you can get at it from other services or administration tools later. By default, when you scroll down, this will probably be attached to the `bridge` network with an IP address range of `172.17.0.0/16` or something similar. That's OK as long as you also attach the future Photoprism container to the same one.
+  
+   ![Create Container General Settings showing Image Name Dropdown](./img/synology/synology-choose-maria-image.png){ class="shadow" }
+- It is not necessary to add an external port mapping here in the `Port Settings` section as you can have your other container talk "internally" to this one, but you may want to expose a port so you can get at it from other services or administration tools later.
+  
+  ![Create Container Advanced Settings showing port mapping from inside container to outside world](./img/synology/synology-port-settings.png){ class="shadow" }
+- By default, when you scroll down, this will probably be attached to the `bridge` network with an IP address range of `172.17.0.0/16` or something similar. That's OK as long as you also attach the future Photoprism container to the same one.
+  
+  ![Create Container Advanced Settings showing network connection to the default `bridge` network in a dropdown with subnet and gateway details beneath](./img/synology/synology-network.png){ class="shadow" }
 - In the `Environment` section, click the `+ Add` button to add a new variable. Add `MYSQL_ROOT_PASSWORD` as the key and set the value to something secret. You can manipulate this later to eliminate or change this password, but you'll need it for now to get in there and make users.
+  
+  ![Create Container Advanced Settings showing a new variable being added for the `MYSQL_ROOT_PASSWORD`](./img/synology/synology-environment.png)
 - Then proceed through the wizard to create and start the container.
+
+  ![Container Manager's Container Tab after wizard is completed showing `mariadb` container with running status for 1 minute](./img/synology/synology-mariadb-running.png){ class="shadow" }
 - You can double click on the new container in the list to see its status including its IP address which you may need if you did not add an external port mapping.
+
+  ![Container Manager details for `mariadb` container listing the configured settings including the container ID, name, times, hardware limits, ports, environment variables, network, and all other settings from the wizard](./img/synology/synology-mariadb-details.png){ class="shadow" }
 - You may also switch to the `Log` tab to see what the container printed out as it started up to validate that everything is okay. Note that this screenshot shows `mariadbd: ready for connections.` at the top suggesting that we're good to go.
 
+  ![Container Manager details for `mariadb` container switched to the log tab to see `stdout` printing from inside the container displaying status](./img/synology/synology-mariadb-log.png)
+
 ### Preparing phpMyAdmin
-- If you want to use a web administration for this database, you can also grab `phpmyadmin`. Follow the first few steps of [Preparing MariaDB](#preparing-mariadb) to get to the registry and download `phpmyadmin` if you didn't already do so. Then hop back here.
+- Grab `phpmyadmin`. Follow the first few steps of [Preparing MariaDB](#preparing-mariadb) to get to the registry and download `phpmyadmin` if you didn't already do so. Then hop back here.
 - Back on the `Container` tab, click `Create`.
 - Choose `phpmyadmin:latest` (or whichever tag you chose) then proceed.
-- This time for sure, you need to add an external port in the `Local Port` field. I chose `3080` because it's very common for assorted web services to use `80`, `8080`, `8888`, `433` or some other similar variant. So I tried something vaguely memorable with the `80` in it but less likely to conflict. It can be any port you're not already using, but do remember that the Synology host OS is running on `5000` and `5001` for its web access and may also be using some of the other `8`s above for other services or proxies you're running.
+
+  ![Create Container General Settings showing choice of `phpmyadmin:latest` and naming the container `phpmyadmin`](./img/synology/synology-phpmyadmin-create.png){ class="shadow" }
+- This time for sure, you need to add an external port in the `Local Port` field.
+
+  ![Create Container Advanced Settings showing unfilled local port field](./img/synology/synology-phpmyadmin-localport.png){ class="shadow" }
+- I chose `3080` because it's very common for assorted web services to use `80`, `8080`, `8888`, `433` or some other similar variant. So I tried something vaguely memorable with the `80` in it but less likely to conflict. It can be any port you're not already using, but do remember that the Synology host OS is running on `5000` and `5001` for its web access and may also be using some of the other `8`s above for other services or proxies you're running.
+
+  ![Create Container Advaned Settings showing sample `3080` external mapping port that will be taken from the Synology host and connected to port `80` inside the container](./img/synology/synology-phpmyadmin-localport2.png){ class="shadow" }
 - In the `Environment` section, click the `+ Add` button to add a new variable. Add `PMA_HOST` as the key and set the value to either the host name you gave the `mariadb` container when you created it (which defaults to `mariadb-1` unless you chose something else) **OR** enter the IP address of the `mariadb` container which you found when opening its details page (e.g. mine was `172.17.0.11`).
 - Scroll to the bottom and establish a `Link` to the `mariadb` container by clicking `+ Add` and choosing the name you gave the `mariadb` container from the dropdown. This should make the new `phpmyadmin` container dependent on the `mariadb` container and relatively automatically tell each other about their networks/IP addresses.
 - Also confirm while you're down here that the `Network` is the same as the `mariadb` container. Mine's on `bridge`.
 - Finish the wizard and run the container.
 - Open a new browser tab and navigate to `http://<synology-ip-or-domain-name>:<port-you-chose-above>` (e.g. `http://192.168.1.17:3080`). You should see the `phpMyAdmin` home page.
+
+  ![Showing the home page of phpMyAdmin in a web browser](./img/synology/synology-pma-home.png){ class="shadow" }
 - Try logging in with the username `root` and whatever you set `MYSQL_ROOT_PASSWORD` to in the [Preparing MariaDB](#preparing-mariadb) section. When you succeed, it should look like this:
+
+  ![The logged in administrative dashboard for phpMyAdmin](./img/synology/synology-pma-logged-in.png){ class="shadow" }
 
 ### Creating a SQL user for Photoprism
 - From inside the phpMyAdmin panel, choose `User accounts` at the top, then click `Add user account`.
+
+  ![phpMyAdmin's User accounts page where New `Add user account` is about half way down the page](./img/synology/synology-user-accounts.png){ class="shadow" }
 - Pick a user name and password combination that you will teach to the future `photoprism` container to be able to talk to the `mariadb` container. If you don't want to come up with a secure password, click `Generate password` and it will create a good one for you and fill the password fields.
 - Before you go on, be sure you check the `Create database with the same name and grant all privileges.` checkbox to make your life easier. (Or you'll have to do this yourself later.)
+
+  ![phpMyAdmin Add user account page with username `photoprism`, a generated password, host name as any, and the `Create database with same name and grant all privileges` box checked](./img/synology/synology-photoprism-user.png){ class="shadow" }
 - I recommend you leave the `Host name` as `Any host` which is a `%`. You could technically lock this down by putting in the name or IP address of the `photoprism` container, but as you're inside a private bridge network for docker already, it's really only your other containers that are in here and `%` is probably a reasonable balance between the security you already have in the private network and the potential headache you might have if the host name or IP address changes of the other container.
 - Scroll to the bottom and click `Go` to make it happen.
+
+  ![Vertical slice of phpMyAdmin Add user account page showing how far down the `Go` button is to finish creating the user.](./img/synology/synology-go-button.png){ class="shadow" }
 - You should see a message that shows a successfully added user and the matching database should appear in the tree on the left.
+
+  ![phpMyAdmin user add success page with a green box and checkmark showing success and the real SQL query that was run written below it](./img/synology/synology-photoprism-user-success.png){ class="shadow" }
 
 ### Preparing Photoprism
 - Just like in [Preparing MariaDB](#preparing-mariadb), go get yourself the `photoprism/photoprism` container image. It's big so it can take a bit of time. Then come back here.
 - Back again on the `Container` tab, click `Create`.
 - Choose the `photoprism/photoprism:latest` (or whichever tag you chose) image and set a name for the container then click `Next`
+
+  ![New Container General Setings showing choice of `photoprism` container and named container](./img/synology/synology-photoprism-create.png){ class="shadow" }
 - Under `Port Settings`, be sure you map `2342` to an external port so you can log in. You can leave the other two unmapped for now. They can be edited later if you determine you need them.
 - Scroll down and under `Volume Settings`, add two or three volumes.
   - Choose the `/docker/Photoprism/config` folder you made earlier (or wherever you are keeping your other Docker config files) and mount it to `/photoprism/storage` with `Read/Write` permission
   - Choose the `/photos/Library` folder that is the Synology Shared Folder for all of your photo originals (or wherever you intend to keep your photo library accessible on the NAS)
-  - Choose the `/photos/Import` folder that is the Synology Shared Folder where you intend to offload digital cameras for indexing and storage (or wherever you intend to want those to be ingested to the NAS.)
+  - _OPTIONAL_: Choose the `/photos/Import` folder that is the Synology Shared Folder where you intend to offload digital cameras for indexing and storage (or wherever you intend to want those to be ingested to the NAS.)
+  
+    ![New Container Advanced Settings page displaying the first port `2342` mapped to the host and two volume folders mapped from the host to inside the container for `storage` and `originals`](./img/synology/synology-photoprism-mounts-set.png){ class="shadow" }
 - Scroll down and under `Environment`, find the ones that start with `PHOTOPRISM_DATABASE`. Then set them accordingly:
   - `PHOTOPRISM_DATABASE_DRIVER` is set to `mysql` (MariaDB is a fork of MySQL and they speak the same language.)
   - `PHOTOPRISM_DATABASE_SERVER` is set to either the host name (`mariadb-1` or whatever you named it) or the IP address that you found in the container details (e.g. `172.17.0.11` for me) just like you did for [phpMyAdmin](#preparing-phpmyadmin).
   - `PHOTOPRISM_DATABASE_NAME` is `photoprism` if you followed what I did but otherwise should match the user name you chose for photoprism in the [creating a user](#creating-a-sql-user-for-photoprism) step.
   - `PHOTOPRISM_DATABASE_USER` is also `photoprism`. Of course if you made your own different user name and/or database names... substitute those here.
   - `PHOTOPRISM_DATABASE_PASSWORD` is also from the [SQL setup step](#creating-a-sql-user-for-photoprism) so carry it over.
+
+    ![New Container Advanced Settings environment fields scrolled to those that start with `PHOTOPRISM_DATABASE`](./img/synology/synology-photoprism-database-env-set.png){ class="shadow" }
+- Still under `Environment`, scroll until you find the `PHOTOPRISM_SITE` options and set them accordingly with the author and description and caption to be displayed on the web pages.
+
+  ![New Container Advanced Settings environment fields scrolled to `PHOTOPRISM_SITE` options](./img/synology/synology-photoprism-site-config-env-set.png){ class="shadow" }
+- Finally (and still) under `Environment`, scroll to the bottom and `+ Add` one for `PHOTOPRISM_ADMIN_PASSWORD` if it's not there already and set it to something secret so you can log in the first time and make real users.
+
+  ![New Container Advanced Settings environment fields at the bottom where `PHOTOPRISM_ADMIN_PASSWORD` is added](./img/synology/synology-photoprism-site-admin-env-set.png){ class="shadow" }
 - Scroll down to `Network` and double check it's still the same one (e.g. `bridge` if you're following along with me... or at least all the same as the other two containers).
 - Then scroll down to `Links` and click `+ Add` to ensure you're linked to the `mariadb` container as it will be needed for `photoprism` to run. (The link really just makes sure the other container is started and/or starts first before this one.)
 - Finish the wizard and start the container.
 
 ### Connecting to Photoprism
 - Open a new browser tab and navigate to `http://<synology-ip-or-domain-name>:<port-you-chose-above>` (e.g. `http://192.168.1.17:2342`). You should see the `Photoprism` home page within a few minutes. It might give you an error if you're too quick (within seconds). Give it some time to start up (like a minute or two).
+
+  ![Photoprism home page in the browser after you've given it a few minutes to do its initial setup](./img/synology/synology-photoprism-home.png){ class="shadow" }
 - Try logging in with the username `admin` and whatever you set `PHOTOPRISM_ADMIN_PASSWORD` to in the [Preparing Photoprism](#preparing-photoprism) section. When you succeed, it should look like this:
+
+  ![Photoprism logged in to the main page](./img/synology/synology-photoprism-logged-in.png){ class="shadow" }
 - All done; have fun!
+
+### First Steps
+
+Our [First Steps 👣](../../user-guide/first-steps.md) tutorial guides you through the user interface and settings to ensure your library is indexed according to your individual preferences.
 
 <!---
 

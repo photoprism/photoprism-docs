@@ -128,7 +128,7 @@ nav:
     - Backup Guide:
       - Creating Backups: user-guide/backups/index.md
       - Restoring Backups: user-guide/backups/restore.md
-      - External Disk Drives: user-guide/backups/external-storage.md
+      - External Storage: user-guide/backups/external-storage.md
       - Metadata Exports: user-guide/backups/export.md
       - Folder Overview: user-guide/backups/folders.md
       #- Commands: user-guide/advanced/commands.md

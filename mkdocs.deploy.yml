@@ -1,6 +1,5 @@
 INHERIT: mkdocs.yml
 plugins:
-  - offline
   - search
   - privacy:
       enabled: true

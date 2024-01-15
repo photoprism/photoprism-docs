@@ -307,11 +307,13 @@ Note, however, that [initial indexing usually takes much longer](../user-guide/f
 
 ### Should I use an SD card or a USB stick?
 
-Due to their performance and because they can lose data over time, we do not recommend using conventional SD cards, USB sticks and older USB 1 or 2 devices to store your files, except for backups.
+Due to their performance and because they can lose data over time, we do not recommend using conventional SD cards, USB sticks, or external USB 2 hard disk drives to store your files, except for backups.
 
 External [Solid-State Drives (SSD)](troubleshooting/performance.md#storage) connected via USB 3 are generally reliable and fast enough to keep your *originals*, *database*, and *storage* folders. This way you can, for example, do the indexing on one computer, eject the drive, and then connect it to another computer to browse your pictures.
 
 Note, though, that database files may not be binary compatible in some cases (e.g. if the version or computer architecture does not match) and could also get corrupted when you disconnect an external drive before all changes have been written to disk. We therefore recommend that you regularly [create database backups](../user-guide/backups/index.md), so you can easily restore your index if necessary.
+
+[View Backup Guide ›](../user-guide/backups/index.md)
 
 ### Why don't you display animated GIFs natively?
 
@@ -328,6 +330,8 @@ To free up as much space as possible, the most effective way is to delete all fi
 If you have a fast CPU and enough memory, you can [choose to render certain thumbnails only on demand](../user-guide/settings/advanced.md#images). However, storage is usually so cheap that most users opt for better quality and performance instead.
 
 Actual storage requirements vary and depend, among other things, on file resolutions and formats (RAW, JPEG, video,...). For highly compressed, high-resolution videos in modern formats that cannot be displayed natively by browsers, the storage folder may even be larger than the originals, since [videos transcoded to AVC](../user-guide/organize/video.md#transcoding) are not as heavily compressed.
+
+[Change Settings ›](../user-guide/settings/advanced.md#images)
 
 ### Can I skip creating thumbnails completely?
 
@@ -347,7 +351,9 @@ You can start a [rescan from the user interface](../user-guide/library/originals
 
 To reduce startup time, do not set `PHOTOPRISM_INIT` to avoid running additional setup scripts, and set `PHOTOPRISM_DISABLE_CHOWN` to `"true"` to [disable automatic permission updates](config-options.md#docker-image).
 
-!!! tldr ""
+[View Config Options ›](config-options.md#docker-image)
+
+!!! info ""
     If your instance doesn't start even after waiting for some time, our [Troubleshooting Checklists](troubleshooting/index.md#connection-fails) help you quickly diagnose and solve the problem.
 
 ### Why are files uploaded via WebDAV not indexed/imported immediately?
@@ -367,7 +373,7 @@ without importing files, leaving the existing file and folder names unchanged. O
 importing is an efficient way to add files, since PhotoPrism doesn't have to search your *originals*
 folder to find new files.
 
-[View First Steps Tutorial ›](../user-guide/first-steps.md)
+[View First Steps 👣 ›](../user-guide/first-steps.md)
 
 ### Can I use PhotoPrism to sort files into a configurable folder structure?
 

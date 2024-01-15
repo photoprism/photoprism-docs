@@ -1,6 +1,6 @@
 # Docker Security Guide
 
-*This documentation is intended for experienced users who want to enhance the security of their installation. If you have suggestions for improvement, please let us know by clicking :material-file-edit-outline: to submit a change request.*
+*This documentation is intended for experienced users who want to enhance the security of their installation. If you have suggestions for improvement, please let us know by clicking :material-file-edit-outline: to send a pull request.*
 
 ## Get the Latest Security Updates
 

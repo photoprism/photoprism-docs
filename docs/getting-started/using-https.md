@@ -1,6 +1,6 @@
 # Using HTTPS
 
-*In this advanced user guide, we show you how to enable transport encryption, configure existing server certificates, and obtain new certificates as needed. You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.*
+*This guide shows you how to enable HTTPS/TLS, configure existing server certificates, and obtain new certificates as needed. If you have suggestions for improvement, please let us know by clicking :material-file-edit-outline: to send a pull request.*
 
 ## Why Use Encryption?
 
@@ -13,12 +13,12 @@ If you install PhotoPrism on a shared server so that it is not only accessible t
 
 ## How To Enable HTTPS
 
-You have the following options to enable HTTPS/TLS when using our [latest stable release](../../release-notes.md).
+You have the following options to enable HTTPS/TLS when using our [latest stable release](../release-notes.md).
 Note that after adding or updating certificates, it is required to restart PhotoPrism for the changes to take effect.
 
 ### 1. HTTPS Reverse Proxy
 
-To run your instance behind an [HTTPS reverse proxy like Traefik](../proxies/traefik.md), we recommend that you explicitly disable TLS in PhotoPrism by setting `PHOTOPRISM_DISABLE_TLS` to `"true"` in your `docker-compose.yml` configuration:
+To run your instance behind an [HTTPS reverse proxy like Traefik](proxies/traefik.md), we recommend that you explicitly disable TLS in PhotoPrism by setting `PHOTOPRISM_DISABLE_TLS` to `"true"` in your `docker-compose.yml` configuration:
 
 ```yaml
 services:
@@ -49,7 +49,7 @@ services:
 
 To use your own certificates, you can add a custom TLS certificate and private key to the `storage/config/certificates` folder with the filenames `www.example.com.crt` and `www.example.com.key`, replacing `www.example.com` with the actual server domain. For this, you can set the same config options as when using a self-signed certificate (see above).
 
-Alternatively, you can specify a custom TLS certificate (`*.crt`) and private key (`*.key`) filename within the `storage/config/certificates` folder using the `PHOTOPRISM_TLS_CERT` and `PHOTOPRISM_TLS_KEY` [environment variables](../config-options.md) in your `docker-compose.yml`, or use the corresponding [command flags](../config-options.md):
+Alternatively, you can specify a custom TLS certificate (`*.crt`) and private key (`*.key`) filename within the `storage/config/certificates` folder using the `PHOTOPRISM_TLS_CERT` and `PHOTOPRISM_TLS_KEY` [environment variables](config-options.md) in your `docker-compose.yml`, or use the corresponding [command flags](config-options.md):
 
 ```yaml
 services:
@@ -91,7 +91,7 @@ Before running the command to request a certificate, also make sure that you hav
 
 ### Enabling Trace Log Mode
 
-A good way to troubleshoot configuration issues is to increase the log level. To enable [trace log mode](../config-options.md), set `PHOTOPRISM_LOG_LEVEL` to `"trace"` in the `environment:` section of the `photoprism` service (or use the `--trace` flag when running the `photoprism` command directly):
+A good way to troubleshoot configuration issues is to increase the log level. To enable [trace log mode](config-options.md), set `PHOTOPRISM_LOG_LEVEL` to `"trace"` in the `environment:` section of the `photoprism` service (or use the `--trace` flag when running the `photoprism` command directly):
 
 
 ```yaml
@@ -102,7 +102,7 @@ services:
       ...
 ```
 
-Then [restart all services](../docker-compose.md#step-2-start-the-server) for your changes to take effect:
+Then [restart all services](docker-compose.md#step-2-start-the-server) for your changes to take effect:
 
 ```bash
 docker compose stop
@@ -117,7 +117,7 @@ You can run this command to check the server logs for warnings and errors, inclu
 docker compose logs -f --tail=100 
 ```
 
-[Learn more ›](../troubleshooting/docker.md#viewing-logs)
+[Learn more ›](troubleshooting/docker.md#viewing-logs)
 
 ### Failed to Find Any PEM Data in Key Input
 

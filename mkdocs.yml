@@ -26,6 +26,7 @@ nav:
     - BSD Ports:
       - FreeBSD: getting-started/ports/freebsd.md
     - Using a CDN: getting-started/using-a-cdn.md
+    - Using HTTPS: getting-started/using-https.md
     - Getting Updates: getting-started/updates.md
     - Troubleshooting:
       - Checklists: getting-started/troubleshooting/index.md
@@ -51,7 +52,6 @@ nav:
       - Haproxy: getting-started/proxies/haproxy.md
     - Advanced:
       - Video Transcoding: getting-started/advanced/transcoding.md
-      - Using HTTPS: getting-started/advanced/https.md
       - Using Kubernetes: getting-started/advanced/kubernetes.md
       - Docker Security: getting-started/advanced/docker-security.md
       - Docker Volumes: getting-started/advanced/docker-volumes.md
@@ -297,6 +297,7 @@ theme:
     logo: logo
 
 plugins:
+  - offline
   - search
   - redirects:
       redirect_maps:
@@ -311,6 +312,7 @@ plugins:
         'user-guide/organize/browse.md': 'user-guide/search/index.md'
         'user-guide/organize/views.md': 'user-guide/search/views.md'
         'user-guide/organize/search.md': 'user-guide/search/filters.md'
+        'getting-started/advanced/https.md': 'getting-started/using-https.md'
 
 # MkDocs extensions.
 markdown_extensions:

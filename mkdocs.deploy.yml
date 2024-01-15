@@ -1,5 +1,6 @@
 INHERIT: mkdocs.yml
 plugins:
+  - offline
   - search
   - privacy:
       enabled: true
@@ -25,3 +26,4 @@ plugins:
         'user-guide/organize/browse.md': 'user-guide/search/index.md'
         'user-guide/organize/views.md': 'user-guide/search/views.md'
         'user-guide/organize/search.md': 'user-guide/search/filters.md'
+        'getting-started/advanced/https.md': 'getting-started/using-https.md'

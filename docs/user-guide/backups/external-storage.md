@@ -1,6 +1,6 @@
 # Using External Storage
 
-Due to their performance and because they can lose data over time, we do not recommend using conventional SD cards, USB sticks, or external USB 2 hard disk drives to store your files, except for backups.
+Due to their performance and because they can lose data over time, we do not recommend using conventional SD cards, USB sticks or external USB 2 hard disk drives to store your files, except for backups.
 
 External [Solid-State Drives (SSD)](../../getting-started/troubleshooting/performance.md#storage) connected via USB 3 are generally reliable and fast enough to keep your *originals*, *database*, and *storage* folders. This way you can, for example, do the indexing on one computer, eject the drive, and then connect it to another computer to browse your pictures.
 

@@ -45,7 +45,7 @@ instead of writing down the details.
 
 === "Safari"
 
-    Before you can access the console in Safari, you first need to enable the *Develop* menu:
+    Before you can access the console in Safari on MacOS, you first need to enable the *Develop* menu:
 
     1. Choose Safari *Menu* > *Preferences* and select the *Advanced Tab*
     2. Select "Show Develop menu in menu bar"
@@ -54,6 +54,23 @@ instead of writing down the details.
 
     - press Option+⌘+C to go directly to the *Javascript Console*
     - or, navigate to *Develop* > *Show Javascript Console* in the browser menu
+
+=== "Mobile Safari"
+
+    Browser logs on Apple mobile devices running iOS or iPadOS can be viewed when you connect them to a Mac.
+    Before you can connect your device to a Mac, you must allow your device to be inspected:
+    
+    1. Open the Settings app
+    2. Go to Safari
+    3. Scroll down to Advanced
+    4. Enable the Web Inspector toggle
+
+    If you now connect the device to your Mac with a cable, websites opened in Safari on iOS and iPadOS will appear in a submenu for the connected device in the Develop menu of the Safari desktop browser.
+    Note that when prompted, you may need to confirm that you trust the Mac you are connecting your device to.
+    
+    Web pages (and other content) are separated by app, making it easier for you to find the web page you are looking for.
+    Once you have found and selected the site you want to inspect, a Web Inspector window will open.
+    See [Apple's Developer Guide](https://developer.apple.com/documentation/safari-developer-tools/inspecting-ios) for additional help and information. 
 
 !!! info ""
     **We kindly ask you not to report bugs via *GitHub Issues* unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.**

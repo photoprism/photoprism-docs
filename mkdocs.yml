@@ -285,6 +285,8 @@ theme:
     - navigation.tabs.sticky
     - navigation.top
     - navigation.footer
+    - navigation.instant
+    - navigation.instant.progress
   palette:
     scheme: default
     primary: white

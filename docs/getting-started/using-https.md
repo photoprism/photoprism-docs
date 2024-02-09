@@ -90,7 +90,7 @@ Note that this verification method only works if you use a [supported DNS provid
 ### ZeroSSL
 
 [![ZeroSSL](img/zerossl.svg){ class='md right' }](https://link.photoprism.app/zerossl)
-[ZeroSSL](https://link.photoprism.app/zerossl) is a trusted certificate authority headquartered in Vienna, Austria.
+[ZeroSSL](https://link.photoprism.app/zerossl) is a trusted European certificate authority headquartered in Vienna, Austria.
 
 Compared to Let's Encrypt, ZeroSSL also offers a user-friendly web interface, you can create certificates that are valid for longer than 90 days, and you may choose additional domain verification methods depending on your plan.
 

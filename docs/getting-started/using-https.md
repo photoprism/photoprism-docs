@@ -69,30 +69,30 @@ services:
 
 ## Obtaining Certificates
 
-Valid server certificates can be obtained either from a commercial [Certification Authority](https://en.wikipedia.org/wiki/Certificate_authority) (CA) or free of charge from [Let's Encrypt](https://letsencrypt.org/):
+Valid server certificates can be obtained either from a commercial [Certification Authority](https://en.wikipedia.org/wiki/Certificate_authority) (CA) like [ZeroSSL](#zerossl) or free of charge from [Let's Encrypt](#lets-encrypt):
 
 ### Let’s Encrypt
 
 ![Let’s Encrypt](img/letsencrypt.svg){ class='md right' }
-Let's Encrypt is an automatic certificate authority that you can use free of charge. Many web servers and reverse proxies such as [Traefik](proxies/traefik.md) and [Caddy](proxies/caddy-2.md) have integrated support for obtaining single-domain certificates if your server is accessible on port 80 over the public Internet.
+[Let's Encrypt](https://letsencrypt.org/) is an automatic certificate authority that provides you with free HTTPS/TLS certificates. Many web servers and reverse proxies such as [Traefik](proxies/traefik.md) and [Caddy](proxies/caddy-2.md) have integrated support for obtaining single-domain certificates if your server is accessible on port 80 over the public Internet.
 
-The creation of certificates for servers that are not publicly reachable or that are valid for all subdomains (wildcard) is alternatively possible with the [LEGO Let's Encrypt client](https://go-acme.github.io/lego/usage/cli/obtain-a-certificate/). If you use Docker and [DigitalOcean's free DNS service](https://m.do.co/c/f9725a28bb6b), the [command to run](https://go-acme.github.io/lego/usage/cli/obtain-a-certificate/) would look as follows (replace domain, access token and email):
+The creation of certificates for servers that are not publicly reachable or that are valid for all subdomains (wildcard) is alternatively possible with the [LEGO Let's Encrypt client](https://go-acme.github.io/lego/usage/cli/obtain-a-certificate/). If you use Docker and [DigitalOcean's free DNS service](https://m.do.co/c/f9725a28bb6b), the [command to run](https://go-acme.github.io/lego/usage/cli/obtain-a-certificate/) would look as follows (replace certificate path, access token, domain name, and email):
 
 ```bash
-docker run --rm -v "/photoprism/storage/config/certificates:/data/" \
+docker run --rm -v "/path/to/certificates:/data/" \
 -e DO_AUTH_TOKEN=YOUR_ACCESS_TOKEN goacme/lego -a --path=/data \
 --email="tls@example.com" --dns=digitalocean --dns-timeout=180 \
 -d "example.com" -d "*.example.com" run
 ```
 
-Note that for this to work, you will need a [supported DNS provider](https://go-acme.github.io/lego/dns/) to verify the ownership of your domain. Please [refer to the LEGO documentation](https://go-acme.github.io/lego/dns/) for details, as each provider has a different authentication method. If you are [using DigitalOcean](https://m.do.co/c/f9725a28bb6b), you can create the required access token in your customer dashboard.
+Note that this verification method only works if you use a [supported DNS provider](https://go-acme.github.io/lego/dns/) that LEGO can access through an API. Please refer to [its documentation](https://go-acme.github.io/lego/dns/) for details, as each provider requires different authentication credentials. If you are [using DigitalOcean](https://m.do.co/c/f9725a28bb6b), you can create the required access token in [your customer dashboard](https://cloud.digitalocean.com/account/api/tokens) and replace `YOUR_ACCESS_TOKEN` with it.
 
 ### ZeroSSL
 
 [![ZeroSSL](img/zerossl.svg){ class='md right' }](https://link.photoprism.app/zerossl)
 [ZeroSSL](https://link.photoprism.app/zerossl) is a trusted certificate authority headquartered in Vienna, Austria.
 
-Compared to Let's Encrypt, ZeroSSL also offers a user-friendly web interface, you can create certificates that are valid for longer than 90 days, and you may choose additional domain validation methods depending on your plan.
+Compared to Let's Encrypt, ZeroSSL also offers a user-friendly web interface, you can create certificates that are valid for longer than 90 days, and you may choose additional domain verification methods depending on your plan.
 
 [Learn more ›](https://link.photoprism.app/zerossl)
 

@@ -73,19 +73,26 @@ Valid server certificates can be obtained either from a commercial [Certificatio
 
 ### Let’s Encrypt
 
-We recommend using a [Let's Encrypt client like LEGO](https://go-acme.github.io/lego/usage/cli/obtain-a-certificate/) to create free HTTP certificates that you can use with PhotoPrism. The main verification methods for this are [HTTP-01](https://letsencrypt.org/docs/challenge-types/#http-01-challenge), which requires you to be reachable via port 80 on the public Internet, or [the DNS-01 challenge](https://letsencrypt.org/docs/challenge-types/#dns-01-challenge), which requires a supported DNS provider to be automated.
+![Let’s Encrypt](img/letsencrypt.svg){ class='md right' }
+Let's Encrypt is an automatic certificate authority that you can use free of charge. Many web servers and reverse proxies such as [Traefik](proxies/traefik.md) and [Caddy](proxies/caddy-2.md) have integrated support for obtaining single-domain certificates if your server is accessible on port 80 over the public Internet.
 
-#### Wildcard Certificates
+The creation of certificates for servers that are not publicly reachable or that are valid for all subdomains (wildcard) is alternatively possible with the [LEGO Let's Encrypt client](https://go-acme.github.io/lego/usage/cli/obtain-a-certificate/). If you use Docker and [DigitalOcean's free DNS service](https://m.do.co/c/f9725a28bb6b), the [command to run](https://go-acme.github.io/lego/usage/cli/obtain-a-certificate/) would look as follows (replace domain, access token and email):
 
-Creating an HTTPS wildcard certificate [with LEGO](https://go-acme.github.io/lego/usage/cli/obtain-a-certificate/) requires a supported DNS provider to verify your domain ownership, for example DigitalOcean. If you are using Docker, the full command looks like this (change the domain and email as needed):
-
+```bash
+docker run --rm -v "/photoprism/storage/config/certificates:/data/" \
+-e DO_AUTH_TOKEN=YOUR_ACCESS_TOKEN goacme/lego -a --path=/data \
+--email="tls@example.com" --dns=digitalocean --dns-timeout=180 \
+-d "example.com" -d "*.example.com" run
 ```
-docker run --rm -v "/opt/photoprism/storage/config/certificates:/data/" goacme/lego -a --path=/data \
---email="tls@example.com" --dns=digitalocean --dns-timeout=180 -d "example.com" \
--d "*.example.com" run
-```
 
-Before running the command to request a certificate, also make sure that you have set your secret API token with the environment variable `DO_AUTH_TOKEN` (you can create one in the customer dashboard). For other providers the configuration is different, so you need to check the [documentation](https://go-acme.github.io/lego/usage/cli/obtain-a-certificate/).
+Note that for this to work, you will need a [supported DNS provider](https://go-acme.github.io/lego/dns/) to verify the ownership of your domain. Please [refer to the LEGO documentation](https://go-acme.github.io/lego/dns/) for details, as each provider has a different authentication method. If you are [using DigitalOcean](https://m.do.co/c/f9725a28bb6b), you can create the required access token in your customer dashboard.
+
+### ZeroSSL
+
+[![ZeroSSL](img/zerossl.svg){ class='md right' }](https://link.photoprism.app/zerossl)
+ZeroSSL is another trusted certificate authority with its headquarters in Vienna, Austria. Compared to Let's Encrypt, it offers a user-friendly web interface, you can create certificates that are valid for longer than 90 days, and you can choose between additional domain verification methods, which provides more flexibility.
+
+[Learn more ›](https://link.photoprism.app/zerossl)
 
 ## Troubleshooting
 

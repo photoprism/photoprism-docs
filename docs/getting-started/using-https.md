@@ -74,7 +74,7 @@ Valid server certificates can be obtained either from a commercial [Certificatio
 ### Let’s Encrypt
 
 ![Let’s Encrypt](img/letsencrypt.svg){ class='md right' }
-[Let's Encrypt](https://letsencrypt.org/) is an automatic certificate authority that provides you with free HTTPS/TLS certificates. Many web servers and reverse proxies such as [Traefik](proxies/traefik.md) and [Caddy](proxies/caddy-2.md) have integrated support for obtaining single-domain certificates if your server is accessible on port 80 over the public Internet.
+[Let's Encrypt](https://letsencrypt.org/) is an automatic certification authority that provides you with free HTTPS/TLS certificates. Many web servers and reverse proxies such as [Traefik](proxies/traefik.md) and [Caddy](proxies/caddy-2.md) have integrated support for obtaining single-domain certificates if your server is accessible on port 80 over the public Internet.
 
 The creation of certificates for servers that are not publicly reachable or that are valid for all subdomains (wildcard) is alternatively possible with the [LEGO Let's Encrypt client](https://go-acme.github.io/lego/usage/cli/obtain-a-certificate/). If you use Docker and [DigitalOcean's free DNS service](https://m.do.co/c/f9725a28bb6b), the [command to run](https://go-acme.github.io/lego/usage/cli/obtain-a-certificate/) would look as follows (replace certificate path, access token, domain name, and email):
 
@@ -90,7 +90,7 @@ Note that this verification method only works if you use a [supported DNS provid
 ### ZeroSSL
 
 [![ZeroSSL](img/zerossl.svg){ class='md right' }](https://link.photoprism.app/zerossl)
-[ZeroSSL](https://link.photoprism.app/zerossl) is a trusted European certificate authority headquartered in Vienna, Austria.
+[ZeroSSL](https://link.photoprism.app/zerossl) is a trusted European certification authority headquartered in Vienna, Austria.
 
 Compared to Let's Encrypt, ZeroSSL also offers a user-friendly web interface, you can create certificates that are valid for longer than 90 days, and you may choose additional domain verification methods depending on your plan.
 

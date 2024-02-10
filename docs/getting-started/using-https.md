@@ -81,7 +81,7 @@ The creation of certificates for servers that are not publicly reachable or that
 ```bash
 docker run --rm -v "/path/to/certificates:/data/" \
 -e DO_AUTH_TOKEN=Your_Access_Token goacme/lego -a \
--d "site.com" -d "*.site.com" --email="you@site.com" \
+-d "example.com" -d "*.example.com" --email="you@example.com" \
 --dns=digitalocean --dns-timeout=180 --path=/data run 
 ```
 

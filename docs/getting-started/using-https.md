@@ -80,12 +80,12 @@ The creation of certificates for servers that are not publicly reachable or that
 
 ```bash
 docker run --rm -v "/path/to/certificates:/data/" \
--e DO_AUTH_TOKEN=YOUR_ACCESS_TOKEN goacme/lego -a --path=/data \
---email="tls@example.com" --dns=digitalocean --dns-timeout=180 \
--d "example.com" -d "*.example.com" run
+-e DO_AUTH_TOKEN=Your_Access_Token goacme/lego -a \
+-d "site.com" -d "*.site.com" --email="you@site.com" \
+--dns=digitalocean --dns-timeout=180 --path=/data run 
 ```
 
-Note that this verification method only works if you use a [supported DNS provider](https://go-acme.github.io/lego/dns/) that LEGO can access through an API. Please refer to [its documentation](https://go-acme.github.io/lego/dns/) for details, as each provider requires different authentication credentials. If you are [using DigitalOcean](https://m.do.co/c/f9725a28bb6b), you can create the required access token in [your customer dashboard](https://cloud.digitalocean.com/account/api/tokens) and replace `YOUR_ACCESS_TOKEN` with it.
+Note that this verification method only works if you use a [supported DNS provider](https://go-acme.github.io/lego/dns/) that LEGO can access through an API. Please refer to [its documentation](https://go-acme.github.io/lego/dns/) for details, as each provider requires different authentication credentials. If you are [using DigitalOcean](https://m.do.co/c/f9725a28bb6b), you can create the required access token in [your customer dashboard](https://cloud.digitalocean.com/account/api/tokens) and replace `Your_Access_Token` with it.
 
 ### ZeroSSL
 

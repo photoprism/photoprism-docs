@@ -90,9 +90,9 @@ Note that this verification method only works if you use a [supported DNS provid
 ### ZeroSSL
 
 [![ZeroSSL](img/zerossl.svg){ class='md right' }](https://link.photoprism.app/zerossl)
-[ZeroSSL](https://link.photoprism.app/zerossl) is a trusted European certificate authority headquartered in Vienna, Austria.
+[ZeroSSL](https://link.photoprism.app/zerossl) is a widely trusted commercial certificate authority with more than 500,000 customers worldwide. Its headquarters are located in [Vienna, Austria](https://link.photoprism.app/zerossl-contact).
 
-Compared to Let's Encrypt, ZeroSSL also offers a user-friendly web interface, you can create certificates that are valid for longer than 90 days, and you may choose additional domain verification methods depending on your plan.
+Compared to Let's Encrypt, you can also create and revoke certificates through a user-friendly web interface, obtain certificates with a validity of more than 90 days, and choose between additional domain verification methods.[^1]
 
 [Learn more ›](https://link.photoprism.app/zerossl)
 
@@ -146,3 +146,5 @@ docker compose up -d
 
 !!! tldr ""
     Our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible Linux distributions.
+
+[^1]: We may receive a credit when you sign up through our link, which helps us fund the project infrastructure. 

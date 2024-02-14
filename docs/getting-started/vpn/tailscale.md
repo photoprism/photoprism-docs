@@ -40,9 +40,9 @@ As the cloud server is not specifically allowed to connect anywhere on the tailn
 
 Goto your [tailscale acl admin console](https://login.tailscale.com/admin/acls/file)
 
-Add the two tags as marked on the screenshot below:
+Add the two tags and the acl as marked on the screenshot below:
 
-![](img/tailscale-6.png){ class="shadow" }
+![](img/tailscale-6.png)
 
 
 **Step 2**
@@ -52,10 +52,10 @@ Goto your [tailscale machines admin console](https://login.tailscale.com/admin/m
 Add the "tag:lan" and "tag:cloud" to your desktop and cloud machines as demonstrated:
 
 Open the ACL tags dialog window:
-![](img/tailscale-7.png){ class="shadow" }
+![](img/tailscale-7.png)
 
 Add/remove tags as needed and click on "Save"
-![](img/tailscale-8.png){ class="shadow" }
+![](img/tailscale-8.png)
 
 **Step 3**
 
@@ -69,7 +69,7 @@ Verify the changes work as intended.
 
 - ssh into the cloud server from your desktop machine, that should work.
 
-- From the cloud server, ping your desktop which should fail.
+- From the cloud server, ping your desktop, ssh into it or something else. All of it should fail.
 
 
 !!! example ""

@@ -51,10 +51,13 @@ Goto your [tailscale machines admin console](https://login.tailscale.com/admin/m
 
 Add the "tag:lan" and "tag:cloud" to your desktop and cloud machines as demonstrated:
 
+
 Open the ACL tags dialog window:
+
 ![](img/tailscale-7.png)
 
-Add/remove tags as needed and click on "Save"
+Add/remove tags as needed and click on "Save":
+
 ![](img/tailscale-8.png)
 
 **Step 3**

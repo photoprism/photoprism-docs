@@ -33,7 +33,8 @@ To enable terrain mode click :material-image-filter-hdr-outline:. To change the 
 ![Screenshot](img/terrain-maps-1.jpg){ class="shadow" }
 
 ## Open Photo from Search in Places
-To switch from a photos card view directly to the location of a photo on the world map click on the location.
+
+To navigate directly from the cards results view to the location of a picture on the world map, click on its location.
 
    ![Screenshot](img/places-animation-1-dark.jpg){ class="shadow" }
    ![Screenshot](img/places-animation-2-dark.jpg){ class="shadow" }

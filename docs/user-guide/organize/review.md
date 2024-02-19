@@ -21,8 +21,8 @@ The quality score depends on the following:
 
         ![Screenshot](img/review-3-light.jpg){ class="shadow" }
 
-=== "Card View"
-     1. Go to *Review* and make sure you are in *card view*
+=== "Cards View"
+     1. Go to *Review* and make sure you are in *cards view*
      2. Click :material-check:
 
         ![Screenshot](img/review-2-light.jpg){ class="shadow" }

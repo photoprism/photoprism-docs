@@ -2,9 +2,9 @@
 
 PhotoPrism offers you three different views to browse your photos and videos. In addition you can choose between multiple light and dark themes.
 
-=== "Card View"
+=== "Cards View"
 
-    The *card view* displays important metadata like title, time and location next to the photos
+    The *cards view* displays important metadata like title, time and location next to the photos
 
     ![Screenshot](../organize/img/card-dark.jpg){ class="shadow" }
 

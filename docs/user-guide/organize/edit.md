@@ -2,8 +2,6 @@
 
 When you click on a title in the cards view or :material-pencil: in the full screen viewer, you can see all the metadata related to a picture and perform changes to it if you have permission to do so.
 
-### Open the Dialog ###
-
 === "Cards View"
      1. Click on the title, date/time, or camera details of a picture
 
@@ -21,7 +19,7 @@ When you click on a title in the cards view or :material-pencil: in the full scr
 
     ![Screenshot](img/edit-open-2-light.jpg){ class="shadow" }
 
-### Picture Details ###
+### Details ###
 
 In the *Details* tab, you can view and edit general information such as title, date, location, camera, lens, description, and copyright:
 
@@ -36,25 +34,25 @@ Clicking the *Apply* button saves the changes you have made, but does not close 
 !!! note ""
     When performing a search, text in the *Title*, *Description*, and *Keywords* fields can be found, while *Notes* are private and will be ignored.
     
-#### Geolocation Plugin ####
+**Geolocation Plugin**
 
-Geolocation Plugin is an [freely available extension](https://github.com/andyvalerio/photoprism-geolocation) that makes it easy to change latitude and longitude of a photo by selecting places on a graphical map. It can be [installed through the Chrome web store](https://chrome.google.com/webstore/detail/geolocation-plugin-for-ph/oggmpodnbdcmfiognbkkeffacpeaifch).
+Our community has [contributed a browser plugin](https://github.com/andyvalerio/photoprism-geolocation) that allows you to easily change the latitude and longitude of a picture by selecting its location on a map:
 
 ![Screenshot](https://valerio.nu/maps/geolocation.jpg){ class="shadow" }
+
+This browser plugin can be installed through the [Chrome Web Store](https://chrome.google.com/webstore/detail/geolocation-plugin-for-ph/oggmpodnbdcmfiognbkkeffacpeaifch).
     
-### Related Labels ###
+### Labels ###
 
 In the *Labels* tab, you can [view, add and edit labels](labels.md) and see whether they have been recognized automatically or added manually.
 
-### Related People ###
+### People ###
 
 In the edit dialog's *People* tab you can view and [edit people](people.md).
 
-### Related Files ###
+### Files ###
 
-In the edit dialog's *Files* tab you see all files that belong to a photo.
-
-In PhotoPrism a photo can consist of multiple files like a *raw file* + a *jpeg version* of this raw file + a related *xmp or json file*.
+The *Files* tab shows you all the files that belong to a picture. If it is a RAW image, you might, for example, also see a JPEG version of it and a XMP sidecar file:
 
 ![Screenshot](img/edit-files-1-light.jpg){ class="shadow" }
 

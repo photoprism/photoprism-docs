@@ -48,7 +48,7 @@ In the *Labels* tab, you can [view, add and edit labels](labels.md) and see whet
 
 ### People ###
 
-Open the *People* tab to see which persons have been [recognized in the picture](people.md#change-people-assignments) and [assign names to faces](people.md#assign-names-to-faces) that have not yet been recognized.
+Open the *People* tab to see [whose face has been recognized](people.md#change-people-assignments) in the picture and [assign names to faces](people.md#assign-names-to-faces) that have not yet been recognized.
 
 ### Files ###
 

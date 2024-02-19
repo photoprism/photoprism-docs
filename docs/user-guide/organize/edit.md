@@ -52,11 +52,11 @@ In the edit dialog's *People* tab you can view and [edit people](people.md).
 
 ### Files ###
 
-The *Files* tab shows you all the files that belong to a picture. If it is a RAW image, you might, for example, also see a JPEG version of it and a XMP sidecar file:
+The *Files* tab shows you all the files that belong to a picture. If it is a RAW image, you might for example also see a JPEG version of it and an XMP sidecar file:
 
 ![Screenshot](img/edit-files-1-light.jpg){ class="shadow" }
 
-To open file details click :material-chevron-down:.
+Click on :material-chevron-down: to see additional details such as file size, type, and codec: 
 
 ![Screenshot](img/edit-files-2-light.jpg){ class="shadow" }
 

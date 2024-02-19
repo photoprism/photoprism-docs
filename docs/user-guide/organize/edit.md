@@ -60,5 +60,4 @@ Click on :material-chevron-down: to see additional details such as file size, ty
 
 ![Screenshot](img/edit-files-2-light.jpg){ class="shadow" }
 
-If there is [more than one JPEG or PNG file](stacks.md), you can change the primary image used as a preview in search results and albums. You can also delete non-primary files or [unstack files](stacks.md) by clicking on the action buttons.
-
+If there is [more than one JPEG or PNG file](stacks.md), a button in the file details will allow you to change the primary image displayed as a preview in albums and search results. You can also delete non-primary files or [unstack files](stacks.md) by clicking on the action buttons.

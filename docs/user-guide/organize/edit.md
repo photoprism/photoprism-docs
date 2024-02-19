@@ -1,6 +1,6 @@
-# Viewing and Editing Metadata
+# Viewing and Editing Picture Details
 
-When you click on a title in the cards view or :material-pencil: in the full screen viewer, you can see all the metadata related to a picture and perform changes to it if you have permission to do so.
+When you click on a title in the cards view or :material-pencil: in the full screen viewer, you can see all the information related to a picture and perform changes to it if you have permission to do so.
 
 === "Cards View"
      1. Click on the title, date/time, or camera details of a picture
@@ -21,7 +21,7 @@ When you click on a title in the cards view or :material-pencil: in the full scr
 
 ### Details ###
 
-In the *Details* tab, you can view and edit general information such as title, date, location, camera, lens, description, and copyright:
+In the *Details* tab, you can view and edit general metadata such as title, date, location, camera, lens, description, and copyright:
 
 ![Screenshot](img/edit-details-light.jpg){ class="shadow" }
 
@@ -48,7 +48,7 @@ In the *Labels* tab, you can [view, add and edit labels](labels.md) and see whet
 
 ### People ###
 
-In the edit dialog's *People* tab you can view and [edit people](people.md).
+Open the *People* tab to see which persons have been [recognized in the picture](people.md#change-people-assignments) and [assign names to faces](people.md#assign-names-to-faces) that have not yet been recognized.
 
 ### Files ###
 

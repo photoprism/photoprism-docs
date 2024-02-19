@@ -34,7 +34,7 @@ To quickly set new coordinates, you can paste them into *Latitude* or *Longitude
 Clicking the *Apply* button saves the changes you have made, but does not close the dialog, while the *Done* button saves your changes and closes the dialog.
 
 !!! note ""
-    When performing a text search, words in the *Title*, *Description*, and *Keywords* fields can be found, while *Notes* are private and will be ignored.
+    When performing a search, text in the *Title*, *Description*, and *Keywords* fields can be found, while *Notes* are private and will be ignored.
     
 #### Geolocation Plugin ####
 

@@ -63,7 +63,7 @@ big enough or can't be used.
 Indexing large photo and video collections benefits from plenty of memory for [caching](#mariadb) and processing large media files.
 Ideally, the amount of RAM should match the number of physical CPU cores. If not, reduce the number of workers as [explained below](#troubleshooting).
 
-Please ensure that your server has [at least 4 GB of swap](docker.md#adding-swap) configured and avoid setting a [hard memory limit](../faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory) as that can cause unexpected restarts when the indexer temporarily needs more memory to process large files. Indexing RAW images and high-resolution panoramas may require additional [swap space](docker.md#adding-swap) and/or physical memory beyond the [recommended minimum](../index.md#system-requirements).
+Also ensure that your server has [at least 4 GB of swap](docker.md#adding-swap) configured and avoid setting a [hard memory limit](../faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory) as that can cause unexpected restarts when the indexer temporarily needs more memory to process large files. Indexing RAW images and high-resolution panoramas may require additional [swap space](docker.md#adding-swap) and/or physical memory beyond the [recommended minimum](../index.md#system-requirements).
 
 !!! note ""
     RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory. We take no responsibility

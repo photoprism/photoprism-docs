@@ -61,12 +61,9 @@ big enough or can't be used.
 ## Memory ##
 
 Indexing large photo and video collections benefits from plenty of memory for [caching](#mariadb) and processing large media files.
-Ideally, the amount of RAM should match the number of physical CPU cores. If not, reduce the number of workers 
-as [explained below](#troubleshooting).
+Ideally, the amount of RAM should match the number of physical CPU cores. If not, reduce the number of workers as [explained below](#troubleshooting).
 
-Also be aware that running PhotoPrism with [less than 4 GB of swap space](docker.md#adding-swap) or [setting a memory/swap limit](../faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory) can lead to unexpected restarts ("crashes"), for example when the indexer temporarily needs more memory to process large files.
-
-Especially the conversion of RAW images and the transcoding of videos are very demanding. High-resolution panoramic images may require [additional swap space](docker.md#adding-swap) and/or physical memory above the [recommended minimum](../index.md#system-requirements).
+Please ensure that your server has [at least 4 GB of swap](docker.md#adding-swap) configured and avoid setting a [hard memory limit](../faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory) as that can cause unexpected restarts when the indexer temporarily needs more memory to process large files. Indexing RAW images and high-resolution panoramas may require additional [swap space](docker.md#adding-swap) and/or physical memory beyond the [recommended minimum](../index.md#system-requirements).
 
 !!! note ""
     RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory. We take no responsibility
@@ -98,7 +95,7 @@ That being said, one of the advantages of [open-source software](https://docs.ph
 If your server runs out of memory, the index is frequently locked, or other system resources are running low:
 
 - [ ] Try [reducing the number of workers](../config-options.md#index-workers) by setting `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml`, depending on the CPU performance and number of cores
-- [ ] Make sure [your server has at least 4 GB of swap space](docker.md#adding-swap) so that indexing doesn't cause restarts when memory usage spikes; RAW image conversion and video transcoding are especially demanding 
+- [ ] Ensure that your server has [at least 4 GB of swap](docker.md#adding-swap) configured and avoid setting a [hard memory limit](../faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory) as that can cause unexpected restarts when the indexer temporarily needs more memory to process large files 
 - [ ] If you are using SQLite, switch to MariaDB, which is [better optimized for high concurrency](../faq.md#should-i-use-sqlite-mariadb-or-mysql)
 - [ ] As a last measure, you can [disable the use of TensorFlow](../config-options.md#feature-flags) for image classification and facial recognition
 

@@ -105,7 +105,7 @@ Fatal errors are often caused by one of the following conditions:
 - [ ] [Symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) were mounted or used within a *storage* folder (replace with actual paths)
 - [ ] The [server is low on memory](../index.md#system-requirements) (add memory)
 - [ ] You didn't [configure at least 4 GB of swap space](docker.md#adding-swap) (add swap)
-- [ ] High-resolution panoramic images require [additional memory](performance.md#memory) above the recommended minimum (add more swap or memory)
+- [ ] RAW images and/or high-resolution panoramas require [additional memory](performance.md#memory) above the [recommended minimum](../index.md#system-requirements) (add more swap or memory)
 - [ ] The server CPU is overheating (improve cooling)
 - [ ] The server has an outdated operating system that is not fully compatible (update)
 - [ ] The server hardware is defective and [causes random panics](https://github.com/photoprism/photoprism/discussions/1984) (test on another server)
@@ -205,8 +205,9 @@ In case the application logs don't contain anything helpful:
 - [ ] The NSFW filter is enabled, so they were marked as [private](../../user-guide/organize/private.md)
 - [ ] You are not signed in as admin, so you can't see everything
 - [ ] You try to index a shared drive on a remote server, but the server is offline
-- [ ] The indexer has crashed because you didn't [configure at least 4 GB of swap](docker.md#adding-swap)
 - [ ] Somebody has deleted files without telling you
+- [ ] Your server does not have [at least 4 GB of swap](docker.md#adding-swap) or a [hard memory limit](../faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory) configured, which may cause unexpected restarts when the indexer temporarily needs more memory to process large files
+    - [ ] Indexing RAW images and high-resolution panoramas may require additional [swap space](docker.md#adding-swap) and/or physical memory beyond the [recommended minimum](../index.md#system-requirements)
 - [ ] You are connected to the wrong server, VPN, CDN, or a DNS record has not been updated yet
 
 *Depending on the cause of the problem, you may need to perform a full rescan once the issue is resolved.*

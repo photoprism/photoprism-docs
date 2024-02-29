@@ -6,7 +6,7 @@ For a good user experience, it should be a 64-bit system with [at least 2 cores 
 
 !!! tldr ""
     Third-party integrations may not provide direct access to config files or the command line, so you might not be able to use all features and config options.
-    Also note that [RAW image conversion and TensorFlow are disabled](../../user-guide/settings/advanced.md) on devices with 1 GB or less memory, and that high-resolution panoramic images may require [additional swap space](../troubleshooting/docker.md#adding-swap) and/or physical memory above the recommended minimum. We take no responsibility for [instability or performance problems](../troubleshooting/performance.md) if your device does not [meet the requirements](../index.md#system-requirements).
+    Also note that [RAW image conversion and TensorFlow are disabled](../../user-guide/settings/advanced.md) on devices with 1 GB or less memory, and that high-resolution panoramic images may require [additional swap space](../troubleshooting/docker.md#adding-swap) and/or physical memory above the [recommended minimum](../index.md#system-requirements). We take no responsibility for [instability or performance problems](../troubleshooting/performance.md) if your device does not [meet the requirements](../index.md#system-requirements).
 
 ## Setup
 

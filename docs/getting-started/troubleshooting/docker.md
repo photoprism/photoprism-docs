@@ -159,7 +159,7 @@ docker compose up
 
 ## Adding Swap
 
-*Note that high-resolution panoramic images may require additional swap space and/or [physical memory](performance.md#memory) above the [recommended minimum](../index.md#system-requirements).*
+*Note that indexing RAW images and high-resolution panoramas may require additional swap space and/or [physical memory](performance.md#memory) above the [recommended minimum](../index.md#system-requirements). We recommend [not to set a hard memory limit](../faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory), unless you are familiar with memory management and understand the implications.*
 
 ### Linux
 

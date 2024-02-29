@@ -10,9 +10,10 @@ As a Raspberry Pi owner, you therefore get the exact same functionality and can 
 ### System Requirements ###
 
 - For a good user experience, we recommend running PhotoPrism on [a Raspberry Pi 4 or 5 with at least 4 GB RAM](#is-a-raspberry-pi-fast-enough) and a [64-bit operating system](#modern-arm64-based-devices)
-- High-resolution panoramic images may require additional swap space and/or physical memory above the recommended minimum
+- High-resolution panoramic images may require additional swap space and/or physical memory above the [recommended minimum](index.md#system-requirements)
 - Indexing performance will benefit greatly from [using SSD storage](troubleshooting/performance.md#storage), e.g. connected via USB 3
-- Note that if [less than 4 GB of swap space](troubleshooting/docker.md#adding-swap) is configured or a manual memory/swap limit is set, this can cause unexpected restarts, for example, when the indexer temporarily needs more memory to process large files; RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory
+- Ensure that your device has [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured and avoid setting a [hard memory limit](faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory) as that can cause unexpected restarts when the indexer temporarily needs more memory to process large files
+- Indexing RAW images and high-resolution panoramas may require additional [swap space](troubleshooting/docker.md#adding-swap) and/or physical memory beyond the recommended minimum; RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory
 - You should [enable HTTPS](using-https.md#how-to-enable-https) or run your server behind a [secure HTTPS reverse proxy like Traefik](proxies/traefik.md) if it is connected to a shared network or the public Internet
 - Depending on the Linux distribution, you may need to set the following [security options](troubleshooting/docker.md#kernel-security) in your [docker-compose.yml](https://dl.photoprism.app/docker/arm64/docker-compose.yml):
   ```yaml
@@ -125,7 +126,7 @@ This does not mean [older versions](index.md#databases) are no longer supported 
 If your device runs out of memory, the index is frequently locked, or other system resources are running low:
 
 - [ ] Try [reducing the number of workers](config-options.md#index-workers) by setting `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml`, depending on the performance of your device
-- [ ] Make sure [your device has at least 4 GB of swap space](troubleshooting/docker.md#adding-swap) so that indexing doesn't cause restarts when memory usage spikes; RAW image conversion and video transcoding are especially demanding
+- [ ] Ensure that your device has [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured and avoid setting a [hard memory limit](faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory) as that can cause unexpected restarts when the indexer temporarily needs more memory to process large files
 - [ ] If you are using SQLite, switch to MariaDB, which is [better optimized for high concurrency](faq.md#should-i-use-sqlite-mariadb-or-mysql)
 - [ ] As a last measure, you can [disable the use of TensorFlow](config-options.md#feature-flags) for image classification and facial recognition
 

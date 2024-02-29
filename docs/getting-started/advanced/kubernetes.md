@@ -4,7 +4,7 @@
 
 At a minimum, you can just define a Kubernetes `Service` and a `StatefulSet` and be up and running. For more real-world usage, you'll probably want to at least include persistent storage, and possibly some `Ingress` rules for exposing PhotoPrism outside your cluster.
 
-Also note that running PhotoPrism with [less than 4 GB of swap space](../troubleshooting/docker.md#adding-swap) or [setting a memory/swap limit](../faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory) can lead to unexpected restarts ("crashes"), for example when the indexer temporarily needs more memory to process large files.
+Before you proceed, please ensure that your server has [at least 4 GB of swap](../troubleshooting/docker.md#adding-swap) configured and avoid setting a [hard memory limit](../faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory) as that can cause unexpected restarts when the indexer temporarily needs more memory to process large files. Indexing RAW images and high-resolution panoramas may require additional [swap space](../troubleshooting/docker.md#adding-swap) and/or physical memory beyond the [recommended minimum](../index.md#system-requirements).
 
 For those familiar with [Helm](https://helm.sh), a PhotoPrism Helm chart [is available](https://github.com/p80n/photoprism-helm).
 

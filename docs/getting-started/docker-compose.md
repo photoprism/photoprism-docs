@@ -21,8 +21,9 @@ Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is sup
     Note that this will point the home directory shortcut `~` to `/root` in the `volumes:` 
     section of your `docker-compose.yml`. Kernel security modules such as AppArmor and SELinux 
     have been [reported to cause issues](troubleshooting/docker.md#kernel-security).
-    Ensure that your server has [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured so that
-    indexing doesn't cause restarts when there are memory usage spikes.
+    Ensure that your server has [at least 4 GB of swap](troubleshooting/docker.md#adding-swap)
+    configured and avoid setting a [hard memory limit](faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory)
+    as that can cause unexpected restarts when the indexer temporarily needs more memory to process large files.
 
 === "Podman"
 
@@ -280,7 +281,7 @@ Our members can activate [additional features](https://link.photoprism.app/membe
 If your server runs out of memory, the index is frequently locked, or other system resources are running low:
 
 - [ ] Try [reducing the number of workers](config-options.md#index-workers) by setting `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml`, depending on the CPU performance and number of cores
-- [ ] Make sure [your server has at least 4 GB of swap space](troubleshooting/docker.md#adding-swap) so that indexing doesn't cause restarts when memory usage spikes; RAW image conversion and video transcoding are especially demanding
+- [ ] Ensure that your server has [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured and avoid setting a [hard memory limit](faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory) as that can cause unexpected restarts when the indexer temporarily needs more memory to process large files
 - [ ] If you are using SQLite, switch to MariaDB, which is [better optimized for high concurrency](faq.md#should-i-use-sqlite-mariadb-or-mysql)
 - [ ] As a last measure, you can [disable the use of TensorFlow](config-options.md#feature-flags) for image classification and facial recognition
 

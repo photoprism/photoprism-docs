@@ -273,7 +273,7 @@ Most often this happens when new users configure `localhost` or `127.0.0.1` as d
 
 ### Why is my configured memory limit exceeded when indexing, even though PhotoPrism doesn't actually seem to use that much memory?
 
-When [indexing a media library](../user-guide/library/originals.md), many files are opened and processed very quickly, which is not a typical workload compared to other containerized applications and services. Various libraries and external applications simultaneously interact with each other in complex ways, so single spikes are inevitable. Some memory is also used by the kernel for buffered I/O to improve performance, although the extent to which caching counts towards a limit may vary.
+When [indexing a media library](../user-guide/library/originals.md), many files are opened and processed very quickly, which is not a typical workload compared to other containerized applications and services. Various libraries and external applications simultaneously interact with each other in complex ways, so a few spikes are inevitable. Some memory is also used by the kernel for buffered I/O to improve performance, although the extent to which caching counts towards a limit may vary.
 
 We therefore recommend not to set a hard memory limit, unless you are familiar with memory management and understand the implications. Instead, you should [reduce the number of indexing workers](https://docs.photoprism.app/getting-started/config-options/#index-workers) and [limit file size and resolution](config-options.md#storage) if you are low on resources or want to limit memory usage for other reasons. Also make sure you have [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured.
 

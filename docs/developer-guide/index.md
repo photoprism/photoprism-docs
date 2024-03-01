@@ -8,17 +8,13 @@ We welcome contributions of any kind, including blog posts, tutorials, testing, 
 
 ## Upcoming Features and Enhancements ##
 
-The [public roadmap](https://link.photoprism.app/roadmap) shows what tasks are in progress, 
-what needs testing, and which features are going to be implemented next.
+The [public roadmap](https://link.photoprism.app/roadmap) shows what tasks are in progress, what needs testing, and which features are going to be implemented next.
 
-You are welcome to [submit specific feature requests](issues.md) if you have verified that no similar
-[idea](https://github.com/photoprism/photoprism/labels/idea) or [todo](https://github.com/photoprism/photoprism/labels/todo)
-already exists. Give ideas you like a thumbs-up 👍  , so that we know what is most popular.
+You are welcome to [submit specific feature requests](issues.md) after you have verified that [no similar issue](https://github.com/photoprism/photoprism/labels/idea) already exists. Give ideas you like a thumbs-up 👍  , so that we know what is most popular.
 
 ## Join the Community ##
 
-Follow us on [Twitter](https://link.photoprism.app/twitter) and join the [Community Chat](https://link.photoprism.app/chat)
-to get regular updates, connect with other contributors, and discuss your ideas. Our [Code of Conduct](https://www.photoprism.app/code-of-conduct) explains the "dos and don’ts."
+Follow us on [Twitter](https://link.photoprism.app/twitter) and join the [Community Chat](https://link.photoprism.app/chat) to get regular updates, connect with other contributors, and discuss your ideas. Our [Code of Conduct](https://www.photoprism.app/code-of-conduct) explains the "dos and don’ts."
 
 An important part of our journey is to explore new directions in product development and build better software through consistent use of feedback.
 
@@ -26,9 +22,7 @@ Feel free to [contact us](https://www.photoprism.app/contact) with anything that
 
 ## Creating Bug Reports ##
 
-Before reporting a bug, please use our [Troubleshooting Checklists](../getting-started/troubleshooting/index.md)
-to determine the cause of your problem. If you have a general question, need help, it could be a local configuration
-issue, or a misunderstanding in how the software works:
+Before reporting a bug, please use our [Troubleshooting Checklists](../getting-started/troubleshooting/index.md) to determine the cause of your problem. If you have a general question, need help, it could be a local configuration issue, or a misunderstanding in how the software works:
 
 - you are welcome to ask in our [Community Chat](https://link.photoprism.app/chat)
 - or post your question in [GitHub Discussions](https://link.photoprism.app/discussions)

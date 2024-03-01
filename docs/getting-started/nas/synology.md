@@ -16,6 +16,20 @@ well on their Synology NAS. However, you should keep in mind:
 - initial indexing may take longer than on standard desktop computers
 - the hardware has no video transcoding support and software transcoding is generally slow
 
+## Setup ##
+
+### Setup using Portainer ###
+
+A step-by-step guide to install PhotoPrism with Portainer can be found [here](../portainer/index.md).
+
+### Setup using Synology Container Manager ###
+
+To install PhotoPrism with the Synology Container Manager, we recommend following this [beginner-friendly tutorial](https://www.linuxlinks.com/synology-container-manager/) on [LinuxLinks](https://www.linuxlinks.com/).
+
+## First Steps
+
+Our [First Steps 👣](../../user-guide/first-steps.md) tutorial guides you through the user interface and settings to ensure your library is indexed according to your individual preferences.
+
 ## Troubleshooting ##
 
 If your device runs out of memory, the index is frequently locked, or other system resources are running low:
@@ -27,8 +41,7 @@ If your device runs out of memory, the index is frequently locked, or other syst
 
 Other issues? Our [troubleshooting checklists](../troubleshooting/index.md) help you quickly diagnose and solve them.
 
-
-## Setup using Docker & SQLite ##
+<!-- ## Setup using Docker & SQLite ##
 
 !!! note ""
     [SQLite is not a good choice](../troubleshooting/sqlite.md) for users who require scalability and high performance. We therefore do not recommend following this contributed guide without changing the configuration to connect your instance to a MariaDB database.
@@ -86,12 +99,7 @@ This guide describes how to set up PhotoPrism using the new Synology user interf
 
 - Done
 - Run the container and give it some minutes to create
-- connect to your instance of Photoprism with your browser ip-to-your-nas:port and login
-
-### First Steps
-
-Our [First Steps 👣](../../user-guide/first-steps.md) tutorial guides you through the user interface and settings to ensure your library is indexed according to your individual preferences.
-
+- connect to your instance of Photoprism with your browser ip-to-your-nas:port and login -->
 
 
 

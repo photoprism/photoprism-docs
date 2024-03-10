@@ -257,7 +257,7 @@ If you have few pictures, concurrent users, and CPU cores, [SQLite](https://www.
 may seem faster compared to full-featured database servers like [MariaDB](https://mariadb.com/).
 
 This changes as the index grows and the number of concurrent accesses increases.
-The way MariaDB and MariaDB handle multiple queries is completely different and optimized
+The way MariaDB handles multiple queries is completely different and optimized
 for high concurrency. SQLite, for example, locks the index on updates so that other
 operations have to wait. In the worst case, this can lead to timeout errors.
 Its main advantage is that you don't need to run a separate database server.

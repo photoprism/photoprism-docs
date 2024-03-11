@@ -192,6 +192,7 @@ In case the application logs don't contain anything helpful:
 - [ ] The [file type](../faq.md#what-media-file-types-are-supported) is generally unsupported
 - [ ] The [file type](../faq.md#what-media-file-types-are-supported) is generally supported, but a specific feature or codec is not
 - [ ] The indexer has skipped the files because they are exact duplicates
+- [ ] The indexer has skipped the files because they have an incorrect extension that does not match their actual format, e.g. [JPEG images with a `.heic` extension](https://github.com/photoprism/photoprism-contrib/tree/main/scripts/Batch%20Rename)
 - [ ] The files are [ignored based on pattern in a `.ppignore` file](../../user-guide/library/originals.md#ignoring-files-and-folders)
 - [ ] They [are in *Library > Hidden*](https://try.photoprism.app/library/hidden) because thumbnails could not be created:
     - [ ] *Convert to JPEG* is [disabled in *Settings > Library*](../../user-guide/settings/library.md) (enable it)

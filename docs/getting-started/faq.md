@@ -259,6 +259,8 @@ The main advantage of SQLite is that you don't need to run a separate database s
 
 Most often this happens when new users configure `localhost` or `127.0.0.1` as database server host, since these always point back to the current container or computer. So it is not possible to access an external service with such a hostname or an IP address starting with 127. It works only if it is used directly in the container or on the computer where the database server is running. Instead, you must use a hostname or IP address that is accessible from other machines and containers.
 
+[Resolve Connection Issues ›](troubleshooting/mariadb.md#cannot-connect){ class="block-xs" }
+
 ### Why is my configured memory limit exceeded when indexing, even though PhotoPrism doesn't actually seem to use that much memory?
 
 When [indexing a media library](../user-guide/library/originals.md), many files are opened and processed very quickly, which is not a typical workload compared to other containerized applications and services. Various libraries and external applications simultaneously interact with each other in complex ways, so a few spikes are inevitable. Some memory is also used by the kernel for buffered I/O to improve performance, although the extent to which caching counts towards a limit may vary.

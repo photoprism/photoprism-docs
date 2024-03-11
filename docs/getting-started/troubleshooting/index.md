@@ -207,7 +207,7 @@ In case the application logs don't contain anything helpful:
 - [ ] You are not signed in as admin, so you can't see everything
 - [ ] You try to index a shared drive on a remote server, but the server is offline
 - [ ] Somebody has deleted files without telling you
-- [ ] Your server does not have [at least 4 GB of swap](docker.md#adding-swap) or a [hard memory limit](../faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory) configured, which may cause unexpected restarts when the indexer temporarily needs more memory to process large files
+- [ ] Your server does not have [at least 4 GB of swap](docker.md#adding-swap) or a [hard memory limit](../faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory) is configured, which may cause unexpected restarts when the indexer temporarily needs more memory to process large files
     - [ ] Indexing RAW images and high-resolution panoramas may require additional [swap space](docker.md#adding-swap) and/or physical memory beyond the [recommended minimum](../index.md#system-requirements)
 - [ ] You are connected to the wrong server, VPN, CDN, or a DNS record has not been updated yet
 

@@ -249,20 +249,11 @@ If you don't plan to use [any additional features](https://www.photoprism.app/ed
 
 ### Should I use SQLite, MariaDB, or MySQL?
 
-PhotoPrism is compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB 10.5.12+](https://mariadb.org/).
-Official support for MySQL 8 is discontinued as Oracle seems to have stopped shipping [new features and enhancements](https://github.com/photoprism/photoprism/issues/1764).
-As a result, the testing effort required before each release is no longer feasible.
+PhotoPrism is compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB 10.5.12+](https://mariadb.org/). Official support for MySQL 8 has been discontinued as Oracle seems to have stopped shipping [new features and enhancements](https://github.com/photoprism/photoprism/issues/1764).
 
-If you have few pictures, concurrent users, and CPU cores, [SQLite](https://www.sqlite.org/)
-may seem faster compared to full-featured database servers like [MariaDB](https://mariadb.com/).
+If you only have few pictures, concurrent users, and CPU cores, [SQLite](https://www.sqlite.org/) may seem faster compared to full-featured database servers like [MariaDB](https://mariadb.com/). This changes as the index grows and the number of concurrent accesses increases. While MariaDB is optimized for high concurrency, SQLite frequently locks its index so that other operations have to wait. In the worst case, this can lead to locking errors and timeouts during indexing - especially in combination [with a slow disk](troubleshooting/performance.md#storage) or [network storage](troubleshooting/docker.md#network-storage).
 
-This changes as the index grows and the number of concurrent accesses increases.
-The way MariaDB handles multiple queries is completely different and optimized
-for high concurrency. SQLite, for example, locks the index on updates so that other
-operations have to wait. In the worst case, this can lead to timeout errors.
-Its main advantage is that you don't need to run a separate database server.
-This can be very useful for testing and also works great if you only have a few
-thousand files to index.
+The main advantage of SQLite is that you don't need to run a separate database server. It is therefore well suited for testing and can also be sufficient for small libraries with a few thousand files. If you are looking for [scalability and high performance](troubleshooting/performance.md), it is not a good choice.
 
 ### I've configured an external database, but can't connect?
 

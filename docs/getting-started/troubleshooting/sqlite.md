@@ -9,7 +9,7 @@
 
 If you only have few pictures, concurrent users, and CPU cores, [SQLite](https://www.sqlite.org/) may seem faster compared to full-featured database servers like [MariaDB](https://mariadb.com/). This changes as the index grows and the number of concurrent accesses increases. While MariaDB is optimized for high concurrency, SQLite frequently locks its index so that other operations have to wait. In the worst case, this can lead to locking errors and timeouts during indexing - especially in combination [with a slow disk](performance.md#storage) or [network storage](docker.md#network-storage).
 
-The main advantage of SQLite is that you don't need to run a separate database server. It is therefore well suited for testing and can also be sufficient for small libraries with a few thousand files. If you are looking for [scalability and high performance](performance.md), it is not a good choice.
+The main advantage of SQLite is that you don't need to run a separate database server. It is therefore [well suited for testing](../../developer-guide/tests.md) and can also be [sufficient for small libraries](../../user-guide/library/index.md) with a few thousand files. If you are looking for [scalability and high performance](performance.md), it is not a good choice.
 
 [Get MariaDB Performance Tips ›](performance.md#mariadb){ class="pr-3 block-xs" }
 

@@ -3,7 +3,7 @@
 Duplicate files are [automatically detected and skipped while indexing](originals.md) your library, so that they only appear once in search results and albums. Their SHA1 checksums and sizes are used for comparison.
 
 !!! tldr ""
-    Browsing, analyzing and deleting duplicates via Web UI is planned for a [future release](https://github.com/photoprism/photoprism/issues/1308).
+    Browsing and deleting duplicates through the web user interface is [planned for a future release](https://github.com/photoprism/photoprism/issues/1308).
 
 ## File Import
 

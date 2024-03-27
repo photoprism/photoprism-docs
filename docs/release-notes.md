@@ -25,7 +25,7 @@ What's new?
 - Config: [Info log is shown when server waits for the database to become available](https://github.com/photoprism/photoprism/issues/4059)
 - Config: [Improved Cross-Origin Resource Sharing (CORS) when using a CDN](https://github.com/photoprism/photoprism/issues/3931)
 - Docker: [Missing user accounts are automatically created by the entrypoint script](https://github.com/photoprism/photoprism/issues/4000)
-- Setup: [Added ARMv7 installation packages for installation without Docker](https://github.com/photoprism/photoprism/issues/4082)
+- Setup: [Added ARMv7 `tar.gz` packages for installation without Docker](https://github.com/photoprism/photoprism/issues/4082)
 - Security: [Go has been updated to the latest stable release v1.22.1](https://github.com/golang/go/issues?q=milestone%3AGo1.22.1)
 
 ### November 28, 2023 ###

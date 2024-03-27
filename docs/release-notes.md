@@ -20,7 +20,7 @@ What's new?
 - Videos: [Improved Intel QSV hardware transcoding support and performance](https://github.com/photoprism/photoprism/issues/4030)
 - Metadata: [Media files with the same ContentIdentifier can be stacked](https://github.com/photoprism/photoprism/issues/3960)
 - WebDAV: [File modification date is preserved if client submits an `X-OC-MTime` header](https://github.com/photoprism/photoprism/issues/3959)
-- API: [Added support for OAuth2 client credentials and access tokens](https://github.com/photoprism/photoprism/issues/3943)
+- API: [Added support for OAuth2 Client Credentials and Access Tokens](https://github.com/photoprism/photoprism/issues/3943)
 - API: [Added Prometheus-compatible metrics and monitoring endpoint](https://github.com/photoprism/photoprism/issues/213)
 - Config: [Info log is shown when server waits for the database to become available](https://github.com/photoprism/photoprism/issues/4059)
 - Config: [Improved Cross-Origin Resource Sharing (CORS) when using a CDN](https://github.com/photoprism/photoprism/issues/3931)

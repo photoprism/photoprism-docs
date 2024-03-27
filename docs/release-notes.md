@@ -4,13 +4,21 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 231218-c6cad4614</span>
+<span class="build">Build 240327-868ac0fa6</span>
 
-Our preview build includes all the latest dependencies and adds support for the Material Exchange Format (MXF).
+Our preview build includes all the latest features and improvements so you can test them in preparation for our upcoming stable release. Most notably, we've added support for 2-Factor Authentication (2FA) so you can protect your account in case someone gains access to your password.
 
 What's new?
 
+- Account: [Added Support for 2-Factor Authentication (2FA)](https://github.com/photoprism/photoprism/issues/808)
+- Albums: [Fixed links to albums in the settings tab of the edit dialog](https://github.com/photoprism/photoprism/issues/4060)
+- Index: [Files with an invalid file extension are skipped and reported](https://github.com/photoprism/photoprism/issues/3518)
+- Places: [Updated reverse geocoding data and standard map tiles](https://github.com/photoprism/photoprism/issues/3849)
+- Videos: [Improved Intel QSV hardware transcoding support and performance](https://github.com/photoprism/photoprism/issues/4030)
 - Videos: [Added support for Material Exchange Format (MXF) files](https://github.com/photoprism/photoprism/issues/3935)
+- Config: [Info log is shown when server waits for the database to become available](https://github.com/photoprism/photoprism/issues/4059)
+- Setup: [Added ARMv7 installation packages for installation without Docker](https://github.com/photoprism/photoprism/issues/4082)
+- OAuth2: [Added support for client credentials and access tokens](https://github.com/photoprism/photoprism/issues/3943)
 - Security: [Go has been updated to the latest stable release v1.21.5](https://github.com/golang/go/issues?q=milestone%3AGo1.21.5)
 
 ### November 28, 2023 ###

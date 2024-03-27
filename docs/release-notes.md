@@ -6,7 +6,7 @@
 ### Development Preview ###
 <span class="build">Build 240327-868ac0fa6</span>
 
-Our preview build includes all the latest features and improvements so you can test them in preparation for our upcoming stable release. Most notably, we've added support for 2-Factor Authentication (2FA) so you can protect your account in case someone gains access to your password.
+Our preview build includes all the latest features and improvements so you can test them in preparation for our upcoming stable release. Most notably, we've added support for 2-Factor Authentication (2FA) to protect your account in case someone gains access to your password.
 
 What's new?
 

@@ -12,8 +12,8 @@ What's new?
 
 - Account: [Added Support for 2-Factor Authentication (2FA)](https://github.com/photoprism/photoprism/issues/808)
 - Albums: [Fixed links to albums in the settings tab of the edit dialog](https://github.com/photoprism/photoprism/issues/4060)
-- Index: [Files with an invalid file extension are skipped and reported](https://github.com/photoprism/photoprism/issues/3518)
-- Index: [Storage folders located in the originals path are ignored](https://github.com/photoprism/photoprism/issues/1642)
+- Index: [Nested storage folders within the originals path are ignored](https://github.com/photoprism/photoprism/issues/1642)
+- Index: [A warning is shown for files with an invalid filename extension](https://github.com/photoprism/photoprism/issues/3518)
 - Search: [Non-JPEG images like HEIC are no longer flagged as stacks in the UI](https://github.com/photoprism/photoprism/issues/3993)
 - Places: [Updated reverse geocoding data and standard map tiles](https://github.com/photoprism/photoprism/issues/3849)
 - Videos: [Added support for Material Exchange Format (MXF) files](https://github.com/photoprism/photoprism/issues/3935)

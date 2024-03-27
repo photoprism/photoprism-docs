@@ -19,7 +19,7 @@ What's new?
 - Config: [Info log is shown when server waits for the database to become available](https://github.com/photoprism/photoprism/issues/4059)
 - Setup: [Added ARMv7 installation packages for installation without Docker](https://github.com/photoprism/photoprism/issues/4082)
 - OAuth2: [Added support for client credentials and access tokens](https://github.com/photoprism/photoprism/issues/3943)
-- Security: [Go has been updated to the latest stable release v1.21.5](https://github.com/golang/go/issues?q=milestone%3AGo1.21.5)
+- Security: [Go has been updated to the latest stable release v1.22.1](https://github.com/golang/go/issues?q=milestone%3AGo1.22.1)
 
 ### November 28, 2023 ###
 <span class="build">Build 231128-f48ff16ef</span>

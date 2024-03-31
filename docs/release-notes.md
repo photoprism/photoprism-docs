@@ -22,7 +22,7 @@ What's new?
 - WebDAV: [File modification date is preserved if client submits an `X-OC-MTime` header](https://github.com/photoprism/photoprism/issues/3959)
 - API: [Added support for OAuth2 Client Credentials and Access Tokens](https://github.com/photoprism/photoprism/issues/3943)
 - API: [Added Prometheus-compatible metrics and monitoring endpoint](https://github.com/photoprism/photoprism/issues/213)
-- API: [Improved Cross-Origin Resource Sharing (CORS) and cache headers](https://github.com/photoprism/photoprism/issues/3931)
+- CDN: [Improved Cross-Origin Resource Sharing (CORS) and cache headers](https://github.com/photoprism/photoprism/issues/3931)
 - MariaDB: [Info log is shown when waiting for the database to become available](https://github.com/photoprism/photoprism/issues/4059)
 - Docker: [Missing user accounts are automatically created by the entrypoint script](https://github.com/photoprism/photoprism/issues/4000)
 - Setup: [Added ARMv7 `tar.gz` packages for installation without Docker](https://github.com/photoprism/photoprism/issues/4082)

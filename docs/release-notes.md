@@ -4,26 +4,26 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 240327-868ac0fa6</span>
+<span class="build">Build 240329-37c3c9d62</span>
 
 Our [preview build](https://docs.photoprism.app/getting-started/updates/#development-preview) includes [all the latest features and improvements](https://github.com/orgs/photoprism/projects/5) so you can test them in preparation for our upcoming stable release. Most notably, we've added support for [2-Factor Authentication (2FA)](https://github.com/photoprism/photoprism/issues/808#issuecomment-2022135231) to protect your account in case someone gains access to your password.
 
 What's new?
 
 - Account: [Added Support for 2-Factor Authentication (2FA)](https://github.com/photoprism/photoprism/issues/808)
-- Albums: [Fixed links to albums in the settings tab of the edit dialog](https://github.com/photoprism/photoprism/issues/4060)
-- Index: [Nested storage folders within the originals path are ignored](https://github.com/photoprism/photoprism/issues/1642)
-- Index: [A warning is shown for files with an invalid filename extension](https://github.com/photoprism/photoprism/issues/3518)
-- Search: [Non-JPEG images like HEIC are no longer flagged as stacks in the UI](https://github.com/photoprism/photoprism/issues/3993)
 - Places: [Updated reverse geocoding data and standard map tiles](https://github.com/photoprism/photoprism/issues/3849)
-- Videos: [Added support for Material Exchange Format (MXF) files](https://github.com/photoprism/photoprism/issues/3935)
+- Photos: [Non-JPEG files like HEIC are no longer flagged as stacks in the UI](https://github.com/photoprism/photoprism/issues/3993)
 - Videos: [Improved Intel QSV hardware transcoding support and performance](https://github.com/photoprism/photoprism/issues/4030)
+- Videos: [Added support for Material Exchange Format (MXF) files](https://github.com/photoprism/photoprism/issues/3935)
+- Albums: [Fixed links to albums in the settings tab of the edit dialog](https://github.com/photoprism/photoprism/issues/4060)
+- Index: [A warning is shown for files with an invalid filename extension](https://github.com/photoprism/photoprism/issues/3518)
+- Index: [Nested storage folders within the originals path are ignored](https://github.com/photoprism/photoprism/issues/1642)
 - Metadata: [Media files with a matching `ContentIdentifier` can be stacked](https://github.com/photoprism/photoprism/issues/3960)
 - WebDAV: [File modification date is preserved if client submits an `X-OC-MTime` header](https://github.com/photoprism/photoprism/issues/3959)
 - API: [Added support for OAuth2 Client Credentials and Access Tokens](https://github.com/photoprism/photoprism/issues/3943)
 - API: [Added Prometheus-compatible metrics and monitoring endpoint](https://github.com/photoprism/photoprism/issues/213)
-- Config: [Info log is shown when server waits for the database to become available](https://github.com/photoprism/photoprism/issues/4059)
-- Config: [Improved Cross-Origin Resource Sharing (CORS) when using a CDN](https://github.com/photoprism/photoprism/issues/3931)
+- API: [Improved Cross-Origin Resource Sharing (CORS) and cache headers](https://github.com/photoprism/photoprism/issues/3931)
+- MariaDB: [Info log is shown when waiting for the database to become available](https://github.com/photoprism/photoprism/issues/4059)
 - Docker: [Missing user accounts are automatically created by the entrypoint script](https://github.com/photoprism/photoprism/issues/4000)
 - Setup: [Added ARMv7 `tar.gz` packages for installation without Docker](https://github.com/photoprism/photoprism/issues/4082)
 - Security: [Go has been updated to the latest stable release v1.22.1](https://github.com/golang/go/issues?q=milestone%3AGo1.22.1)

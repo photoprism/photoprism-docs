@@ -17,7 +17,7 @@ you scan your library. They are then grouped by similarity, so you can quickly m
 
 The people section shows you recognized people as well as new face clusters.
 
-To star a person click :material-star:. Stared persons appear first.
+To star a person click :material-star:. Starred persons appear first.
 
 ![Screenshot](img/recognized-new.jpg){ class="shadow" }
 ![Screenshot](img/new-new.jpg){ class="shadow" }

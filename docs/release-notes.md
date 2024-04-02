@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 240331-31d1f06ff</span>
+<span class="build">Build 240402-814edfbf3</span>
 
 Our [preview build](https://docs.photoprism.app/getting-started/updates/#development-preview) includes [all the latest features and improvements](https://github.com/orgs/photoprism/projects/5) so you can test them in preparation for our upcoming stable release. Most notably, we've added support for [2-Factor Authentication (2FA)](https://github.com/photoprism/photoprism/issues/808#issuecomment-2022135231) to protect your account in case someone gains access to your password.
 
@@ -18,6 +18,7 @@ What's new?
 - Albums: [Fixed links to albums in the settings tab of the edit dialog](https://github.com/photoprism/photoprism/issues/4060)
 - Index: [A warning is shown for files with an invalid filename extension](https://github.com/photoprism/photoprism/issues/3518)
 - Index: [Nested storage folders within the originals path are ignored](https://github.com/photoprism/photoprism/issues/1642)
+- Import: [Modification times are preserved when moving or copying files](https://github.com/photoprism/photoprism/issues/4139)
 - Metadata: [Media files with a matching `ContentIdentifier` can be stacked](https://github.com/photoprism/photoprism/issues/3960)
 - WebDAV: [File modification date is preserved if client submits an `X-OC-MTime` header](https://github.com/photoprism/photoprism/issues/3959)
 - API: [Added support for OAuth2 Client Credentials and Access Tokens](https://github.com/photoprism/photoprism/issues/3943)

@@ -27,7 +27,7 @@ What's new?
 - MariaDB: [Info log is shown when waiting for the database to become available](https://github.com/photoprism/photoprism/issues/4059)
 - Docker: [Missing user accounts are automatically created by the entrypoint script](https://github.com/photoprism/photoprism/issues/4000)
 - Setup: [Added ARMv7 `tar.gz` packages for installation without Docker](https://github.com/photoprism/photoprism/issues/4082)
-- Security: [Go has been updated to the latest stable release v1.22.1](https://github.com/golang/go/issues?q=milestone%3AGo1.22.1)
+- Security: [Go has been updated to the latest stable release v1.22.2](https://github.com/golang/go/issues?q=milestone%3AGo1.22.2)
 
 ### November 28, 2023 ###
 <span class="build">Build 231128-f48ff16ef</span>

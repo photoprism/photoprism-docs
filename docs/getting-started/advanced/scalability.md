@@ -1,27 +1,7 @@
-# Scalability, Distributed Computing and Cloud Storage 
+# Deployment in High-Availability Environments and Horizontal Scaling in the Cloud
 
-Our [team](https://www.photoprism.app/about/team) aims to get the most of what is there.
-Development and testing have been focused on smaller servers and typical home users with 
-less than 500,000 files.
+[Our team](https://www.photoprism.app/about/team) aims to [make effective use](../../developer-guide/code-quality.md#effectiveness-efficiency) of the resources available by prioritizing functionality that benefits as many users as possible. Since most users run PhotoPrism at home on NAS devices or on small cloud server instances, our public documentation and development efforts therefore focus on these types of environments and usage scenarios.
 
-While PhotoPrism has been reported to run well on 24 cores or more, we can not invest a 
-lot of time in optimizing it for enterprise-class servers. There are more important 
-feature requests waiting - and most users don't actually own such hardware.
+So while our freely available [Community Edition](https://github.com/photoprism/photoprism) works well even with millions of files when hosted on an appropriately sized server that [meets the system requirements](../index.md#system-requirements) (*vertical scaling*), you should be aware that the architecture and feature set would look different in some aspects – with other trade-offs being made – if the focus was on *high availability* and *horizontal scaling* in a cloud hosting environment. For example, you might prefer to split the backend into independently scalable microservices and not use a regular file system as storage for indexing.
 
-If the primary focus was on larger servers or clusters, the current architecture might
-be different in some aspects, and had other tradeoffs.
-For example, relying on database locking and conflict resolution tends 
-to be inefficient with an increasing number of cores and workers.
-On the other hand, this simplifies application logic, 
-especially when running multiple instances on the same index.
-
-Traditional database servers like MariaDB might be slower and less powerful 
-than specialized NoSQL or in-memory engines. They are often better documented and easier 
-to maintain for the majority of users though.
-
-Also, there is no native support for sharding or cloud storage APIs like S3. 
-Instead, PhotoPrism prefers a fast, local solid-state drive. Support for S3 may be
-added for backing up originals later.
-
-We are [happy to assist](https://www.photoprism.app/contact) if you need a custom solution 
-that runs well in a corporate cloud environment.
+As an enterprise customer with specific scalability and performance requirements, you are welcome to [contact us for a free consultation](https://www.photoprism.app/contact) to determine feasibility and implementation effort.

@@ -61,9 +61,9 @@ nav:
         - Index Schema: getting-started/advanced/migrations/index.md
         - SQLite to MariaDB: getting-started/advanced/migrations/sqlite-to-mariadb.md
         - MariaDB to SQLite: getting-started/advanced/migrations/mariadb-to-sqlite.md
-      - Caching: getting-started/advanced/caching.md
-      - NGINX: getting-started/advanced/nginx-proxy-setup.md
-      - Scalability: getting-started/advanced/scalability.md
+      - Cache Optimization: getting-started/advanced/caching.md
+      - NGINX Proxy Setup: getting-started/advanced/nginx-proxy-setup.md
+      - Horizontal Scaling: getting-started/advanced/scalability.md
     - Known Issues: known-issues.md
     - FAQ: getting-started/faq.md
   - User Guide:

@@ -1,7 +1,7 @@
 # Using NGINX as Reverse Proxy
 
 !!! danger "Getting Support"
-    Since [NGINX](https://www.nginx.com/) is [notoriously difficult](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+nginx) to configure, we unfortunately can't offer you support in case something isn't working. If you have NGINX related issues such as failed uploads, [connection errors](../troubleshooting/index.md#connection-fails), [broken thumbnails](../troubleshooting/index.md#broken-thumbnails), and [video playback problems](../troubleshooting/index.md#videos-dont-play), we recommend that you [ask the NGINX community for advice](https://www.nginx.com/support/) or try to [use Traefik as a reverse proxy](traefik.md), as it is easier to configure and much more convenient to work with overall.
+    Since [NGINX](https://www.nginx.com/) is [notoriously difficult to configure](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+nginx), we are unable to help with this and cannot provide support in case something is not working. If you have NGINX related issues such as failed uploads, [connection errors](../troubleshooting/index.md#connection-fails), [broken thumbnails](../troubleshooting/index.md#broken-thumbnails), and [video playback problems](../troubleshooting/index.md#videos-dont-play), we recommend that you [ask the NGINX community for advice](https://www.nginx.com/support/) or try to [use Traefik as a reverse proxy](traefik.md), as it is easier to configure and much more convenient to work with overall.
 
 This [tutorial](https://www.serverlab.ca/tutorials/linux/web-servers-linux/how-to-configure-nginx-for-websockets/) explains, how to configure NGINX WebSocket connections between your client and backend services.
 

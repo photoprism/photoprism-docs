@@ -2,8 +2,6 @@
 
 Since we strive to [make effective use](../../developer-guide/code-quality.md#effectiveness-efficiency) of our resources, and most users run PhotoPrism on [NAS devices](../nas/asustor.md) at home or on small [cloud server](../cloud/digitalocean.md) instances, our public documentation and development activities generally focus on these usage scenarios.
 
-So while our freely available [Community Edition](https://github.com/photoprism/photoprism) works well even with millions of files if your server [meets the requirements](../index.md#system-requirements) (*vertical scaling*), it is important to note that the architecture and feature set would look different in some aspects – with other trade-offs – had the focus been on *high availability* and *horizontal scaling* in the cloud instead.
-
-For example, you might then split the backend into independently scalable microservices and not use a regular file system as storage for indexing.
+So while our freely available [Community Edition](https://github.com/photoprism/photoprism) works well even with millions of files if your server [meets the requirements](../index.md#system-requirements) (*vertical scaling*), it is important to note that the architecture and feature set would look different in some aspects – with other trade-offs – had the focus been on *high availability* and *horizontal scaling* in the cloud instead. For example, you might then split the backend into independently scalable microservices and not use a regular file system as storage for indexing.
 
 As an [enterprise customer](https://www.photoprism.app/teams#compare) with specific scalability or availability requirements, you are welcome to [contact us for a free consultation](https://www.photoprism.app/contact) to determine the feasibility and implementation options.

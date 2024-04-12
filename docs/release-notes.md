@@ -4,13 +4,14 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 240408-7b30ea347</span>
+<span class="build">Build 240412-ada91516f</span>
 
 Our [preview build](https://docs.photoprism.app/getting-started/updates/#development-preview) includes [all the latest features and improvements](https://github.com/orgs/photoprism/projects/5) so you can test them in preparation for our upcoming stable release. Most notably, we've added support for [2-Factor Authentication (2FA)](https://github.com/photoprism/photoprism/issues/808#issuecomment-2022135231) to protect your account in case someone gains access to your password.
 
 What's new?
 
 - Account: [Added Support for 2-Factor Authentication (2FA)](https://github.com/photoprism/photoprism/issues/808)
+- Account: [Added dialog to manage app passwords from the UI](https://github.com/photoprism/photoprism/issues/4114)
 - Places: [Updated reverse geocoding data and standard map tiles](https://github.com/photoprism/photoprism/issues/3849)
 - Photos: [Non-JPEG files like HEIC are no longer flagged as stacks in the UI](https://github.com/photoprism/photoprism/issues/3993)
 - Videos: [Improved Intel QSV hardware transcoding support and performance](https://github.com/photoprism/photoprism/issues/4030)
@@ -21,6 +22,7 @@ What's new?
 - Import: [Modification times are preserved when moving or copying files](https://github.com/photoprism/photoprism/issues/4139)
 - Metadata: [Media files with a matching `ContentIdentifier` can be stacked](https://github.com/photoprism/photoprism/issues/3960)
 - Metadata: [File mod time instead of birth time is used as creation time fallback](https://github.com/photoprism/photoprism/issues/4157)
+- Metadata: [Improved validation for focal length, f-number, and exposure values](https://github.com/photoprism/photoprism/issues/4170)
 - WebDAV: [File modification date is preserved if client submits an `X-OC-MTime` header](https://github.com/photoprism/photoprism/issues/3959)
 - API: [Added support for OAuth2 Client Credentials and Access Tokens](https://github.com/photoprism/photoprism/issues/3943)
 - API: [Added Prometheus-compatible metrics and monitoring endpoint](https://github.com/photoprism/photoprism/issues/213)

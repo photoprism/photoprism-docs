@@ -10,8 +10,8 @@ Our [preview build](https://docs.photoprism.app/getting-started/updates/#develop
 
 What's new?
 
-- Account: [Added Support for 2-Factor Authentication (2FA)](https://github.com/photoprism/photoprism/issues/808)
-- Account: [Added dialog to manage app passwords from the UI](https://github.com/photoprism/photoprism/issues/4114)
+- Account: [Added support for 2-Factor Authentication (2FA)](https://github.com/photoprism/photoprism/issues/808)
+- Account: [Added dialog to manage App Passwords from the UI](https://github.com/photoprism/photoprism/issues/4114)
 - Places: [Updated reverse geocoding data and standard map tiles](https://github.com/photoprism/photoprism/issues/3849)
 - Photos: [Non-JPEG files like HEIC are no longer flagged as stacks in the UI](https://github.com/photoprism/photoprism/issues/3993)
 - Videos: [Improved Intel QSV hardware transcoding support and performance](https://github.com/photoprism/photoprism/issues/4030)

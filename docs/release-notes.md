@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 240412-ada91516f</span>
+<span class="build">Build 240413-420f49ecf</span>
 
 Our [preview build](https://docs.photoprism.app/getting-started/updates/#development-preview) includes [all the latest features and improvements](https://github.com/orgs/photoprism/projects/5) so you can test them in preparation for our upcoming stable release. Most notably, we've added support for [2-Factor Authentication (2FA)](https://github.com/photoprism/photoprism/issues/808#issuecomment-2022135231) to protect your account in case someone gains access to your password.
 
@@ -12,11 +12,12 @@ What's new?
 
 - Account: [Added support for 2-Factor Authentication (2FA)](https://github.com/photoprism/photoprism/issues/808)
 - Account: [Added dialog to manage App Passwords from the UI](https://github.com/photoprism/photoprism/issues/4114)
+- Albums: [Fixed links to albums in the settings tab of the edit dialog](https://github.com/photoprism/photoprism/issues/4060)
 - Places: [Updated reverse geocoding data and standard map tiles](https://github.com/photoprism/photoprism/issues/3849)
+- UI/UX: [Improved visibility of buttons and toggles in search results](https://github.com/photoprism/photoprism/issues/4174)
 - Photos: [Non-JPEG files like HEIC are no longer flagged as stacks in the UI](https://github.com/photoprism/photoprism/issues/3993)
 - Videos: [Improved Intel QSV hardware transcoding support and performance](https://github.com/photoprism/photoprism/issues/4030)
 - Videos: [Added support for Material Exchange Format (MXF) files](https://github.com/photoprism/photoprism/issues/3935)
-- Albums: [Fixed links to albums in the settings tab of the edit dialog](https://github.com/photoprism/photoprism/issues/4060)
 - Index: [A warning is shown for files with an invalid filename extension](https://github.com/photoprism/photoprism/issues/3518)
 - Index: [Nested storage folders within the originals path are ignored](https://github.com/photoprism/photoprism/issues/1642)
 - Import: [Modification times are preserved when moving or copying files](https://github.com/photoprism/photoprism/issues/4139)

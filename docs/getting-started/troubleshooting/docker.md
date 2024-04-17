@@ -11,7 +11,7 @@ If you cannot use the `docker` and `docker compose` (or `docker-compose`) comman
 The following instructions explain how to install Docker:
 
 - [Ubuntu](https://docs.docker.com/engine/install/ubuntu/), [Mint](https://techviewleo.com/how-to-install-and-use-docker-in-linux-mint/), [Debian](https://www.linode.com/docs/guides/installing-and-using-docker-on-ubuntu-and-debian/), and [Arch Linux](https://wiki.archlinux.org/title/docker#Installation)
-- [Microsoft Windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
+- [Microsoft Windows](https://docs.docker.com/desktop/install/windows-install/)
 - [Apple macOS](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 
 Alternatively, [Podman](#podman-compose) is supported as a drop-in replacement for Docker on Red Hat-compatible Linux distributions like RHEL, CentOS, Fedora, AlmaLinux, and Rocky Linux.
@@ -224,15 +224,7 @@ In addition, you can reduce memory usage and improve stability by setting `PHOTO
 
 ### Windows
 
-On Windows Pro, you may need to [disable](../img/docker-disable-wsl2.jpg) the WSL 2-based engine under *Docker Settings > General* 
-so that you can mount drives other than `C:` This will enable *Hyper-V*, which
-[Microsoft doesn't offer](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements)
-to its Windows Home customers. [Docker Desktop](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
-uses dynamic memory allocation with *WSL 2*.
-
-It is important to explicitly [increase the Docker memory limit](../img/docker-resources-advanced.jpg) to 4 GB or more
-when using *Hyper-V*. The default of 2 GB can reduce indexing performance and cause unexpected restarts.
-Also, ensure that you configure at least 4 GB of swap space.
+It is important to [increase the Docker memory limit](../img/docker-resources-advanced.jpg) to 4 GB or more when using *Hyper-V*. The default of 2 GB can reduce indexing performance and cause unexpected restarts. Also make sure you configure at least 4 GB of swap space. [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/) uses dynamic memory allocation with *WSL 2*, meaning you do not need to change any memory-related settings (depending on which version of Windows and Docker you are using).
 
 ### macOS
 

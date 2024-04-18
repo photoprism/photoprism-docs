@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 240417-47d10ff46</span>
+<span class="build">Build 240418-d8b26cd05</span>
 
 Our [preview build](https://docs.photoprism.app/getting-started/updates/#development-preview) includes [all the latest features and improvements](https://github.com/orgs/photoprism/projects/5) so you can test them in preparation for our upcoming stable release. Most notably, we've added support for [2-Factor Authentication (2FA)](https://github.com/photoprism/photoprism/issues/808#issuecomment-2022135231) to protect your account in case someone gains access to your password.
 
@@ -24,6 +24,7 @@ What's new?
 - Metadata: [Media files with a matching `ContentIdentifier` can be stacked](https://github.com/photoprism/photoprism/issues/3960)
 - Metadata: [File mod time instead of birth time is used as creation time fallback](https://github.com/photoprism/photoprism/issues/4157)
 - Metadata: [Improved validation for focal length, f-number, and exposure values](https://github.com/photoprism/photoprism/issues/4170)
+- Metadata: [Stop words are not ignored when generating titles from file names](https://github.com/photoprism/photoprism/issues/4192)
 - WebDAV: [File modification date is preserved if client submits an `X-OC-MTime` header](https://github.com/photoprism/photoprism/issues/3959)
 - API: [Added support for OAuth2 Client Credentials and Access Tokens](https://github.com/photoprism/photoprism/issues/3943)
 - API: [Added Prometheus-compatible metrics and monitoring endpoint](https://github.com/photoprism/photoprism/issues/213)
@@ -34,6 +35,9 @@ What's new?
 - Performance: [Added index for `files.file_error` to reduce query time](https://github.com/photoprism/photoprism/issues/4149)
 - Security: [Go has been updated to the latest stable release v1.22.2](https://github.com/golang/go/issues?q=milestone%3AGo1.22.2)
 
+!!! info ""
+    We've generated missing translations with the help of DeepL and Google Translate. Native speakers are invited to [help us improve those if needed](https://docs.photoprism.app/developer-guide/translations-weblate/). A special thank you to [everyone who contributed](https://docs.photoprism.app/developer-guide/)!
+ 
 ### November 28, 2023 ###
 <span class="build">Build 231128-f48ff16ef</span>
 

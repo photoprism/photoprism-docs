@@ -3,10 +3,10 @@
 !!! note ""
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
-### Development Preview ###
-<span class="build">Build 240419-1ac8e50e0</span>
+### April 20, 2024 ###
+<span class="build">Build 240420-f83a9f738</span>
 
-Our [preview build](https://docs.photoprism.app/getting-started/updates/#development-preview) includes [all the latest features and improvements](https://github.com/orgs/photoprism/projects/5) so you can test them in preparation for our upcoming stable release. Most notably, we've added support for [2-Factor Authentication (2FA)](https://github.com/photoprism/photoprism/issues/808#issuecomment-2022135231) to protect your account in case someone gains access to your password.
+Our new stable release comes with a long list of indexing and security-related improvements. Most notably, we've added support for [2-Factor Authentication (2FA)](https://github.com/photoprism/photoprism/issues/808) to protect your account in case someone gains access to your password. As all security-related changes had to be thoroughly tested, this is one of the updates that were longer in the making. We appreciate your patience while we've been working on this and would like to thank everyone involved!
 
 What's new?
 
@@ -30,6 +30,7 @@ What's new?
 - API: [Added Prometheus-compatible metrics and monitoring endpoint](https://github.com/photoprism/photoprism/issues/213)
 - CDN: [Improved Cross-Origin Resource Sharing (CORS) and cache headers](https://github.com/photoprism/photoprism/issues/3931)
 - MariaDB: [Info log is shown when waiting for the database to become available](https://github.com/photoprism/photoprism/issues/4059)
+- MariaDB: [Changed image name in Docker Compose config example for ARMv7](https://github.com/photoprism/photoprism/pull/4199)
 - Docker: [Missing user accounts are automatically created by the entrypoint script](https://github.com/photoprism/photoprism/issues/4000)
 - Setup: [Added ARMv7 `tar.gz` packages for installation without Docker](https://github.com/photoprism/photoprism/issues/4082)
 - Performance: [Added index for `files.file_error` to reduce query time](https://github.com/photoprism/photoprism/issues/4149)

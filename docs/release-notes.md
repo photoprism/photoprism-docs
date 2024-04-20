@@ -6,7 +6,7 @@
 ### April 20, 2024 ###
 <span class="build">Build 240420-ef5f14bc4</span>
 
-Our new stable release comes with a long list of indexing and security-related improvements. Most notably, we've added support for [2-Factor Authentication (2FA)](https://github.com/photoprism/photoprism/issues/808) to protect your account in case someone gains access to your password. As all security-related changes had to be thoroughly tested, this is one of the updates that were longer in the making. We appreciate your patience while we've been working on this and would like to thank everyone involved!
+Our new stable release comes with a long list of indexing and security-related improvements. Most notably, we've added support for [2-Factor Authentication (2FA)](https://docs.photoprism.app/user-guide/users/2fa/) to protect your account in case someone gains access to your password. As all security-related changes had to be thoroughly tested, this is one of the updates that were longer in the making. We appreciate your patience while we've been working on this and would like to thank everyone involved! 🔐
 
 What's new?
 
@@ -37,7 +37,7 @@ What's new?
 - Security: [Go has been updated to the latest stable release v1.22.2](https://github.com/golang/go/issues?q=milestone%3AGo1.22.2)
 
 !!! info ""
-    We've generated missing translations with the help of DeepL and Google Translate. Native speakers are invited to [help us improve those if needed](https://docs.photoprism.app/developer-guide/translations-weblate/). A special thank you to [everyone who contributed](https://docs.photoprism.app/developer-guide/)!
+    Missing user interface translations have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/), if necessary.
  
 ### November 28, 2023 ###
 <span class="build">Build 231128-f48ff16ef</span>

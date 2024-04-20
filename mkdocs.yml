@@ -142,6 +142,7 @@ nav:
       - Account Roles: user-guide/users/roles.md
       - Sharing with Guests: user-guide/users/sharing.md
       - Multiple Libraries: user-guide/users/libraries.md
+      - Setting Up 2FA: user-guide/users/2fa.md
     - Mobile App (PWA): user-guide/pwa.md
     - Release Notes: release-notes.md
     - FAQ: user-guide/faq.md

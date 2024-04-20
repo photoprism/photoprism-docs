@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### April 20, 2024 ###
-<span class="build">Build 240420-f83a9f738</span>
+<span class="build">Build 240420-ef5f14bc4</span>
 
 Our new stable release comes with a long list of indexing and security-related improvements. Most notably, we've added support for [2-Factor Authentication (2FA)](https://github.com/photoprism/photoprism/issues/808) to protect your account in case someone gains access to your password. As all security-related changes had to be thoroughly tested, this is one of the updates that were longer in the making. We appreciate your patience while we've been working on this and would like to thank everyone involved!
 

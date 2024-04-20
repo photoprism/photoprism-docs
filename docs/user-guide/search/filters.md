@@ -134,6 +134,7 @@ This is a complete list of supported search filters with examples. Filters can g
 | lens      | string    | lens:ef24                             | Lens Make/Model Name                                                                                                                       |
 | mm        | string    | mm:28-35                              | Focal Length (35mm equivalent)                                                                                                             |
 | month     | string    | month:7\|10                           | Month (1-12, separate with \|)                                                                                                             |
+| mp        | string    | mp:3-6                                | Resolution in Megapixels (MP)                                                                                                              |
 | name      | string    | name:"IMG_9831-112*"                  | File Name without path and extension (separate with \|)                                                                                    |
 | near      | string    | near:pqbcf5j446s0futy                 | Finds nearby pictures (UID)                                                                                                                |
 | olc       | string    | olc:8FWCHX7W+                         | OLC Position (Open Location Code)                                                                                                          |
@@ -174,7 +175,6 @@ This is a complete list of supported search filters with examples. Filters can g
 | video     | switch    | video:yes                             | Finds video files only                                                                                                                     |
 | after     | timestamp | after:"2022-01-30"                    | Finds pictures taken after this date                                                                                                       |
 | before    | timestamp | before:"2022-01-30"                   | Finds pictures taken before this date                                                                                                      |
-
 
 !!! question "Why can't I play live photos or find stacks when I search for specific images?"
     Our search API and user interface perform a file search. This is intentional since "stacks" can contain files of different types and properties, such as color.

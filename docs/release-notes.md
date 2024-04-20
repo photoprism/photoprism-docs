@@ -24,7 +24,7 @@ What's new?
 - Metadata: [Media files with a matching `ContentIdentifier` can be stacked](https://github.com/photoprism/photoprism/issues/3960)
 - Metadata: [File mod time instead of birth time is used as creation time fallback](https://github.com/photoprism/photoprism/issues/4157)
 - Metadata: [Improved validation for focal length, f-number, and exposure values](https://github.com/photoprism/photoprism/issues/4170)
-- Metadata: [Stop words are not ignored when generating titles from file names](https://github.com/photoprism/photoprism/issues/4192)
+- Metadata: [Stop words are no longer ignored when generating titles from filenames](https://github.com/photoprism/photoprism/issues/4192)
 - WebDAV: [File modification date is preserved if client submits an `X-OC-MTime` header](https://github.com/photoprism/photoprism/issues/3959)
 - API: [Added support for OAuth2 Client Credentials and Access Tokens](https://github.com/photoprism/photoprism/issues/3943)
 - API: [Added Prometheus-compatible metrics and monitoring endpoint](https://github.com/photoprism/photoprism/issues/213)

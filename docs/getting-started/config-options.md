@@ -5,14 +5,15 @@
 
 ### Authentication ###
 
-| Environment                | CLI Flag          | Default  | Description                                                                   |
-|----------------------------|-------------------|----------|-------------------------------------------------------------------------------|
-| PHOTOPRISM_AUTH_MODE       | --auth-mode       | password | authentication `MODE` (public[^2], password)                                  |
-| PHOTOPRISM_ADMIN_USER      | --admin-user      | admin    | admin login `USERNAME`                                                        |
-| PHOTOPRISM_ADMIN_PASSWORD  | --admin-password  |          | initial admin `PASSWORD` (8-72 characters)                                    |
-| PHOTOPRISM_PASSWORD_LENGTH | --password-length | 8        | minimum password `LENGTH` in characters *plus*                                |
-| PHOTOPRISM_SESSION_MAXAGE  | --session-maxage  | 1209600  | time in `SECONDS` until API sessions expire automatically (-1 to disable)     |
-| PHOTOPRISM_SESSION_TIMEOUT | --session-timeout | 604800   | time in `SECONDS` until API sessions expire due to inactivity (-1 to disable) |
+|        Environment         |     CLI Flag      | Default  | Description                                                                         |
+|----------------------------|-------------------|----------|-------------------------------------------------------------------------------------|
+| PHOTOPRISM_AUTH_MODE       | --auth-mode       | password | authentication `MODE` (public[^2], password)                                        |
+| PHOTOPRISM_ADMIN_USER      | --admin-user      | admin    | `USERNAME` of the superadmin account that is created on first startup               |
+| PHOTOPRISM_ADMIN_PASSWORD  | --admin-password  |          | initial `PASSWORD` of the superadmin account (8-72 characters)                      |
+| PHOTOPRISM_PASSWORD_LENGTH | --password-length |        8 | minimum password `LENGTH` in characters *plus*                                      |
+| PHOTOPRISM_SESSION_MAXAGE  | --session-maxage  |  1209600 | session expiration time in `SECONDS`, doubled for accounts with 2FA (-1 to disable) |
+| PHOTOPRISM_SESSION_TIMEOUT | --session-timeout |   604800 | session idle time in `SECONDS`, doubled for accounts with 2FA (-1 to disable)       |
+| PHOTOPRISM_SESSION_CACHE   | --session-cache   |      900 | session cache duration in `SECONDS` (60-3600)                                       |
 
 ### Logging ###
 
@@ -96,16 +97,19 @@
 
 ### Site Information ###
 
-|         Environment         |      CLI Flag      |        Default         |             Description              |
-|-----------------------------|--------------------|------------------------|--------------------------------------|
-| PHOTOPRISM_CDN_URL          | --cdn-url          |                        | content delivery network `URL`       |
-| PHOTOPRISM_CDN_VIDEO        | --cdn-video        |                        | stream videos over the specified CDN |
-| PHOTOPRISM_SITE_URL         | --site-url         | http://localhost:2342/ | public site `URL`                    |
-| PHOTOPRISM_SITE_AUTHOR      | --site-author      |                        | site `OWNER`, copyright, or artist   |
-| PHOTOPRISM_SITE_TITLE       | --site-title       |                        | site `TITLE`                         |
-| PHOTOPRISM_SITE_CAPTION     | --site-caption     | AI-Powered Photos App  | site `CAPTION`                       |
-| PHOTOPRISM_SITE_DESCRIPTION | --site-description |                        | site `DESCRIPTION` *optional*        |
-| PHOTOPRISM_SITE_PREVIEW     | --site-preview     |                        | sharing preview image `URL`          |
+|         Environment         |      CLI Flag      |                                        Default                                        |                                                         Description                                                          |
+|-----------------------------|--------------------|---------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| PHOTOPRISM_SITE_URL         | --site-url         | http://localhost:2342/                                                                | public site `URL`                                                                                                            |
+| PHOTOPRISM_SITE_AUTHOR      | --site-author      |                                                                                       | site `OWNER`, copyright, or artist                                                                                           |
+| PHOTOPRISM_SITE_TITLE       | --site-title       |                                                                                       | site `TITLE`                                                                                                                 |
+| PHOTOPRISM_SITE_CAPTION     | --site-caption     | AI-Powered Photos App                                                                 | site `CAPTION`                                                                                                               |
+| PHOTOPRISM_SITE_DESCRIPTION | --site-description |                                                                                       | site `DESCRIPTION` *optional*                                                                                                |
+| PHOTOPRISM_SITE_PREVIEW     | --site-preview     |                                                                                       | sharing preview image `URL`                                                                                                  |
+| PHOTOPRISM_CDN_URL          | --cdn-url          |                                                                                       | content delivery network `URL`                                                                                               |
+| PHOTOPRISM_CDN_VIDEO        | --cdn-video        |                                                                                       | stream videos over the specified CDN                                                                                         |
+| PHOTOPRISM_CORS_ORIGIN      | --cors-origin      |                                                                                       | origin `URL` from which browsers are allowed to perform cross-origin requests (leave empty to disable or use * to allow all) |
+| PHOTOPRISM_CORS_HEADERS     | --cors-headers     | Accept, Accept-Ranges, Content-Disposition, Content-Encoding, Content-Range, Location | one or more `HEADERS` that browsers should see when performing a cross-origin request                                        |
+| PHOTOPRISM_CORS_METHODS     | --cors-methods     | GET, HEAD, OPTIONS                                                                    | one or more `METHODS` that may be used when performing a cross-origin request                                                |
 
 ### Proxy Servers ###
 
@@ -129,8 +133,10 @@
 | PHOTOPRISM_STS_SECONDS          | --sts-seconds          |      31536000 | `TIME` for the browser to remember that the site is to be accessed only via HTTPS (0 to disable) *plus* |
 | PHOTOPRISM_STS_SUBDOMAINS       | --sts-subdomains       |               | rule applies to all subdomains as well *plus*                                                           |
 | PHOTOPRISM_STS_PRELOAD          | --sts-preload          |               | submit to Google's HSTS preload service *plus*                                                          |
-| PHOTOPRISM_LOGIN_LIMIT          | --login-limit          |            10 | maximum number of consecutive failed LOGIN `ATTEMPTS` from a single IP *plus*                           |
-| PHOTOPRISM_LOGIN_INTERVAL       | --login-interval       | 1m0s          | average `DURATION` between failed LOGIN attempts from a single IP (0-86400s) *plus*                     |
+| PHOTOPRISM_AUTH_LIMIT           | --auth-limit           |            60 | maximum number of consecutive invalid access `TOKENS` from a single IP *plus*                           |
+| PHOTOPRISM_AUTH_INTERVAL        | --auth-interval        | 10s           | average `DURATION` between invalid access tokens from a single IP (0-86400s) *plus*                     |
+| PHOTOPRISM_LOGIN_LIMIT          | --login-limit          |            10 | maximum number of consecutive failed `LOGINS` from a single IP *plus*                                   |
+| PHOTOPRISM_LOGIN_INTERVAL       | --login-interval       | 1m0s          | average `DURATION` between failed logins from a single IP (0-86400s) *plus*                             |
 | PHOTOPRISM_IPS_LIMIT            | --ips-limit            |             3 | maximum number of malicious request `ATTEMPTS` before a client IP is blocked (-1 to disable) *plus*     |
 | PHOTOPRISM_IPS_INTERVAL         | --ips-interval         | 1h0m0s        | average `DURATION` between malicious request attempts from a single IP (0-86400s) *plus*                |
 | PHOTOPRISM_HTTP_CSP             | --http-csp             |               | HTTP Content-Security-Policy (CSP) `HEADER` *plus*                                                      |
@@ -150,16 +156,17 @@
 
 ### Database Connection ###
 
-|          Environment           |       CLI Flag        |  Default   |                           Description                           |
-|--------------------------------|-----------------------|------------|-----------------------------------------------------------------|
-| PHOTOPRISM_DATABASE_DRIVER     | --database-driver     | sqlite     | database `DRIVER` (sqlite, mysql)                               |
-| PHOTOPRISM_DATABASE_DSN        | --database-dsn        |            | database connection `DSN` (sqlite file, optional for mysql)     |
-| PHOTOPRISM_DATABASE_NAME       | --database-name       | photoprism | database schema `NAME`                                          |
-| PHOTOPRISM_DATABASE_SERVER     | --database-server     |            | database `HOST` incl. port e.g. "mariadb:3306" (or socket path) |
-| PHOTOPRISM_DATABASE_USER       | --database-user       | photoprism | database user `NAME`                                            |
-| PHOTOPRISM_DATABASE_PASSWORD   | --database-password   |            | database user `PASSWORD`                                        |
-| PHOTOPRISM_DATABASE_CONNS      | --database-conns      |          0 | maximum `NUMBER` of open database connections                   |
-| PHOTOPRISM_DATABASE_CONNS_IDLE | --database-conns-idle |          0 | maximum `NUMBER` of idle database connections                   |
+|          Environment           |       CLI Flag        |  Default   |                            Description                             |
+|--------------------------------|-----------------------|------------|--------------------------------------------------------------------|
+| PHOTOPRISM_DATABASE_DRIVER     | --database-driver     | sqlite     | database `DRIVER` (sqlite, mysql)                                  |
+| PHOTOPRISM_DATABASE_DSN        | --database-dsn        |            | database connection `DSN` (sqlite file, optional for mysql)        |
+| PHOTOPRISM_DATABASE_NAME       | --database-name       | photoprism | database schema `NAME`                                             |
+| PHOTOPRISM_DATABASE_SERVER     | --database-server     |            | database `HOST` incl. port e.g. "mariadb:3306" (or socket path)    |
+| PHOTOPRISM_DATABASE_USER       | --database-user       | photoprism | database user `NAME`                                               |
+| PHOTOPRISM_DATABASE_PASSWORD   | --database-password   |            | database user `PASSWORD`                                           |
+| PHOTOPRISM_DATABASE_TIMEOUT    | --database-timeout    |         15 | timeout in `SECONDS` for establishing a database connection (1-60) |
+| PHOTOPRISM_DATABASE_CONNS      | --database-conns      |          0 | maximum `NUMBER` of open database connections                      |
+| PHOTOPRISM_DATABASE_CONNS_IDLE | --database-conns-idle |          0 | maximum `NUMBER` of idle database connections                      |
 
 ### File Converters ###
 

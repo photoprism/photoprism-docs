@@ -73,7 +73,7 @@ to run PhotoPrism and MariaDB on ARMv7-based devices (always use our ARM64 image
 |---------------------|---------------------------------------|
 | Stable Release      | `photoprism/photoprism:armv7`         |
 | Development Preview | `photoprism/photoprism:preview-armv7` |
-| MariaDB             | `linuxserver/mariadb:latest`          |
+| MariaDB             | `yobasystems/alpine-mariadb:latest`   |
 
 If your device meets the [requirements](#system-requirements), mostly the same installation instructions as for regular Linux servers apply.
 However, you should pay close attention to differences in path and environment variable names.

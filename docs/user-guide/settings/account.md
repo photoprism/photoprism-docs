@@ -18,7 +18,7 @@
 
 ## 2-Factor Authentication
 
-Two-factor authentication (2FA) can add an extra layer of security to your account in case someone gains access to your password. If enabled, you will need a randomly generated confirmation code in addition to your password to log in.
+Two-factor authentication (2FA) can add an extra layer of security to your account in case someone gains access to your password. If enabled, you will need a randomly generated verification code in addition to your password to log in.
 
 [Learn more ›](../users/2fa.md)
 

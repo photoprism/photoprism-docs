@@ -1,6 +1,6 @@
 # 2-Factor Authentication
 
-With 2-Factor Authentication (2FA), also known as two-step verification, you can add an extra layer of security to [your account](../settings/account.md) in case your password is stolen. When enabled, you will need a randomly generated verification code in addition to your password to log in:
+Two-factor authentication (2FA) can add an extra layer of security to [your account](../settings/account.md) in case someone gains access to your password. If enabled, you will need a randomly generated confirmation code in addition to your password to log in:
 
 ![Screenshot](img/login-with-2fa.jpg){ class="shadow" }
 
@@ -38,16 +38,16 @@ In the last step before 2FA is activated, you will be shown a recovery code that
 
 ### Step 3: App Passwords
 
-With 2FA enabled for your account, any apps you use will no longer be able to log in to your account as they will not have access to the codes generated with your authenticator app.
+If 2FA is enabled for your account, other apps and services will no longer be able to use your password as they do not have access to the verification codes.
 
-Instead of using your own password, you can therefore create app-specific passwords for them by navigating to [*Settings > Account*](../settings/account.md) and then clicking the *Apps and Devices* button.
+You can therefore generate app-specific passwords for them by navigating to [*Settings > Account*](../settings/account.md) and then clicking the *Apps and Devices* button. We also recommend using app-specific passwords in case 2FA is not enabled for your account.
 
-For example, this will generate an app password for WebDAV sync apps like PhotoSync:
+Example for generating an app password that you can use with [WebDAV-compatible](../sync/webdav.md) file synchronization apps like [PhotoSync](../sync/mobile-devices.md):
 
 ![Screenshot](img/app-password.jpg){ class="shadow" }
 
 !!! tldr ""
-    By selecting the *WebDAV* scope, you make sure that the app password cannot be used to log in through the regular user interface to perform other changes. Apps will also not be able to change your password or manage user accounts, even if you grant them *Full Access*.  
+    By selecting the *WebDAV* scope, you ensure that the app password cannot be used to log in through the regular user interface or for other actions. Apps will also not be able to change your password or manage user accounts, even if you grant them *Full Access*.
 
 ## New Authenticator
 
@@ -62,4 +62,4 @@ If 2FA has been enabled for your account, you can disable it by navigating to [*
 !!! tldr ""
     Should you lose access to your authenticator app or device, you can use your [recovery code](#step-2-recovery-code) to regain access to your account. It is a one-time use code that disables 2FA for your account when you use it.
 
-    If you do not remember your recovery code, you can alternatively [ask an administrator](roles.md#admin) to disable 2FA for you, either using the [CLI Commands](cli.md) or the [Admin Web UI](index.md).
+    If you do not remember your recovery code, you can alternatively [ask an administrator](roles.md#admin) to disable 2FA for you, either using the [CLI Commands](cli.md#command-options) or the [Admin Web UI](index.md#editing-user-details).

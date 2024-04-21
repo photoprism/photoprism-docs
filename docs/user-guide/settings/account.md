@@ -18,22 +18,22 @@
 
 ## 2-Factor Authentication
 
-With 2-Factor Authentication (2FA), also known as two-step verification, you can add an extra layer of security to your account in case your password is stolen. When enabled, you will need a randomly generated verification code in addition to your password to log in.
+Two-factor authentication (2FA) can add an extra layer of security to your account in case someone gains access to your password. If enabled, you will need a randomly generated confirmation code in addition to your password to log in.
 
 [Learn more ›](../users/2fa.md)
 
 ## Apps and Devices
 
-With 2FA enabled for your account, any apps you use will no longer be able to log in to your account as they will not have access to the codes generated with your authenticator app.
+If 2FA is enabled for your account, other apps and services will no longer be able to use your password as they do not have access to the verification codes.
 
-Instead of using your own password, you can therefore create app-specific passwords for them by navigating to *Settings > Account* and then clicking the *Apps and Devices* button (even if 2FA is not enabled).
+You can therefore generate app-specific passwords for them by navigating to *Settings > Account* and then clicking the *Apps and Devices* button. We also recommend using app-specific passwords in case 2FA is not enabled for your account.
 
-For example, this will create an app password for WebDAV sync apps like PhotoSync:
+Example for generating an app password that you can use with [WebDAV-compatible](../sync/webdav.md) file synchronization apps like [PhotoSync](../sync/mobile-devices.md):
 
 ![Screenshot](../users/img/app-password.jpg){ class="shadow" }
 
 !!! tldr ""
-    By selecting the *WebDAV* scope, you make sure that the app password cannot be used to log in through the regular user interface to perform other changes. Apps will also not be able to change your password or manage user accounts, even if you grant them *Full Access*.  
+    By selecting the *WebDAV* scope, you ensure that the app password cannot be used to log in through the regular user interface or for other actions. Apps will also not be able to change your password or manage user accounts, even if you grant them *Full Access*.
 
 ## Connect via WebDAV ##
 

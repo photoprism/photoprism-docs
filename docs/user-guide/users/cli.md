@@ -31,22 +31,23 @@ As an alternative to the [web user interface](index.md), you can [run the follow
 | `photoprism users show [username]`          | Displays user account information            |
 | `photoprism users mod [options] [username]` | Modifies an existing user account            |
 | `photoprism users rm [username]`            | Removes a user account                       |
-| `photoprism users reset`                    | Removes all accounts and resets the database |
+| `photoprism users reset --yes`              | Removes all accounts and resets the database |
 
 ### Command Options
 
 The `add` and `mod` commands support these flags to set or change account properties:
 
-| Command Flag                         | Description                                     |
-|--------------------------------------|-------------------------------------------------|
-| `--name NAME`, `-n NAME`             | full NAME for display in the interface          |
-| `--email EMAIL`, `-m EMAIL`          | unique EMAIL address of the user                |
-| `--password PASSWORD`, `-p PASSWORD` | PASSWORD for authentication                     |
-| `--role value`, `-r value`           | admin, user, viewer or guest (default: "admin") |
-| `--superadmin`, `-s`                 | make user super admin with full access          |
-| `--no-login`, `-l`                   | disable login on the web interface              |
-| `--webdav`, `-w`                     | allow to sync files via WebDAV                  |
-| `--upload-path value`, `-u value`    | upload files to this sub-folder                 |
+| Command Flag                         | Description                                                      |
+|--------------------------------------|------------------------------------------------------------------|
+| `--name NAME`, `-n NAME`             | full NAME for display in the interface                           |
+| `--email EMAIL`, `-m EMAIL`          | unique EMAIL address of the user                                 |
+| `--password PASSWORD`, `-p PASSWORD` | PASSWORD for local authentication                                |
+| `--role value`, `-r value`           | user role NAME (admin, user, viewer or guest) (default: "admin") |
+| `--superadmin`, `-s`                 | make user super admin with full access                           |
+| `--no-login`, `-l`                   | disable login on the web interface                               |
+| `--webdav`, `-w`                     | allow to sync files via WebDAV                                   |
+| `--upload-path value`, `-u value`    | upload files to this sub-folder                                  |
+| `--disable-2fa`                      | deactivate two-factor authentication                             |
 
 ### Creating a New Account
 
@@ -119,13 +120,17 @@ You can combine it with these flags to change the output format and the maximum 
 !!! tldr ""
     Run `photoprism logins clear` to clear all recorded incidents and reset the database to a clean state.
 
-## Session Monitoring
+## Session Management
 
-You can use the following terminal commands to find, examine and, if necessary, delete browser sessions:
+You can use the following terminal commands to create, inspect and, if necessary, delete access tokens for the authentication of browsers and other clients (including [app passwords](2fa.md#step-3-app-passwords)):
 
-| CLI Command                   | Description                        |
-|-------------------------------|------------------------------------|
-| `photoprism sess ls [search]` | Finds and displays sessions        |
-| `photoprism sess show [id]`   | Shows detailed session information |
-| `photoprism sess rm [id]`     | Deletes the specified session      |
-| `photoprism sess clear`       | Removes all sessions               |
+| CLI Command                         | Description                                              |
+|-------------------------------------|----------------------------------------------------------|
+| `photoprism auth ls [search]`       | Lists currently authenticated users and clients          |
+| `photoprism auth add [username]`    | Adds a new authentication secret for client applications |
+| `photoprism auth show [identifier]` | Shows detailed information about a session               |
+| `photoprism auth rm [identifier]`   | Deletes a session by id or access token                  |
+| `photoprism auth reset --yes`       | Resets the authentication of all users and clients       |
+
+!!! tldr ""
+    Should you experience problems, for example after upgrading from a [previous release](../../release-notes.md) or [development preview](../../getting-started/updates.md#development-preview), we recommend running the `photoprism auth reset --yes` command [in a terminal](../../getting-started/docker-compose.md#command-line-interface) to reset the sessions table to a clean state and force a re-login of all users.

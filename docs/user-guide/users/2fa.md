@@ -62,4 +62,7 @@ If 2FA has been enabled for your account, you can disable it by navigating to [*
 !!! tldr ""
     Should you lose access to your authenticator app or device, you can use your [recovery code](#step-2-recovery-code) to regain access to your account. It is a one-time use code that disables 2FA for your account when you use it.
 
-    Alternatively, if you don't remember your recovery code, you can [ask an administrator](roles.md#admin) to disable 2FA for you in the *User Details* dialog of the [Admin Web UI](index.md#editing-user-details) or by running the `photoprism users mod --disable-2fa [username]` [command in a terminal](cli.md#command-options).
+    Alternatively, if you don't remember your recovery code, you can [ask an administrator](roles.md#admin) to disable 2FA for you in the *User Details* dialog of the [Admin Web UI](index.md#editing-user-details) or by running the [following command](cli.md#command-options) in a [terminal](../../getting-started/docker-compose.md#command-line-interface):
+    ```bash
+    photoprism users mod --disable-2fa [username]`
+    ```

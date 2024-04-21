@@ -62,4 +62,4 @@ If 2FA has been enabled for your account, you can disable it by navigating to [*
 !!! tldr ""
     Should you lose access to your authenticator app or device, you can use your [recovery code](#step-2-recovery-code) to regain access to your account. It is a one-time use code that disables 2FA for your account when you use it.
 
-    If you do not remember your recovery code, you can alternatively [ask an administrator](roles.md#admin) to disable 2FA for you, either using the [CLI Commands](cli.md#command-options) or the [Admin Web UI](index.md#editing-user-details).
+    Alternatively, if you don't remember your recovery code, you can [ask an administrator](roles.md#admin) to disable 2FA for you in the *User Details* dialog of the [Admin Web UI](index.md#editing-user-details) or by running the `photoprism users mod --disable-2fa [username]` [command in a terminal](cli.md#command-options).

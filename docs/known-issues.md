@@ -164,14 +164,14 @@ services:
 
 ## Reporting Bugs ##
 
-Before reporting a bug, first use our [Troubleshooting Checklists](getting-started/troubleshooting/index.md) to determine the cause of your problem. If you have a general question, need help, it could be a configuration issue, or a misunderstanding in how the software works:
+Before [reporting a bug](https://www.photoprism.app/kb/reporting-bugs), first use our [Troubleshooting Checklists](getting-started/troubleshooting/index.md) to determine the cause of your problem. If you have a general question, need help, it could be a configuration issue, or a misunderstanding in how the software works:
 
 - you are welcome to ask in our [Community Chat](https://link.photoprism.app/chat)
 - or post your question in [GitHub Discussions](https://link.photoprism.app/discussions)
 
-Bug reports should include the software versions you are using and [other information about your environment](https://www.photoprism.app/kb/reporting-bugs) such as [browser, browser plugins](getting-started/troubleshooting/browsers.md), operating system, storage type, memory size, and processor.
+In order for us to process [new bug reports](https://www.photoprism.app/kb/reporting-bugs), they must include the steps to reproduce the problem, the software versions being used and information about the environment in which the problem occurred, such as [browser type, browser version, browser plug-ins](https://docs.photoprism.app/getting-started/troubleshooting/browsers/), operating system, [storage type](https://docs.photoprism.app/getting-started/troubleshooting/performance/#storage), [processor type](https://docs.photoprism.app/getting-started/troubleshooting/performance/#server-cpu), and [memory size](https://docs.photoprism.app/getting-started/troubleshooting/performance/#memory).
+
+A template for creating bug reports can be found at [photoprism.app/kb/reporting-bugs](https://www.photoprism.app/kb/reporting-bugs). We kindly ask you not to report bugs via [GitHub Issues](developer-guide/issues.md) **unless you are certain to have found a fully reproducible and previously unreported issue** that must be fixed directly in the app.
 
 !!! info ""
-    We kindly ask you not to report bugs via [GitHub Issues](developer-guide/issues.md) **unless you are certain to have found a fully reproducible and previously unreported issue** that must be fixed directly in the app.
-
     When [browsing issues](https://github.com/photoprism/photoprism/issues), please note that **our team and all issue subscribers receive an email notification** from GitHub whenever a new comment is added, so these should only be used for sharing important information and not for [discussions, questions](https://github.com/photoprism/photoprism/discussions), or [expressing personal opinions](https://www.photoprism.app/code-of-conduct). Thank you very much!

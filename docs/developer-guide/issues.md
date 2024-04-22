@@ -5,7 +5,7 @@ Issues labeled [help wanted](https://github.com/photoprism/photoprism/issues?q=i
 You are [welcome to email](https://www.photoprism.app/contact) us if you want to [work on something specific](https://github.com/photoprism/photoprism/issues), need [help with a pull request](pull-requests.md), or have something on your mind that you don't want to discuss publicly.
 
 !!! example ""
-    When [browsing issues](https://github.com/photoprism/photoprism/issues), please note that **our team and all issue subscribers receive an email notification** from GitHub whenever a new comment is added, so these should only be used for sharing important information and not for [discussions, questions](https://github.com/photoprism/photoprism/discussions), or [expressing personal opinions](https://www.photoprism.app/code-of-conduct). Thank you very much!
+    When [browsing issues](https://github.com/photoprism/photoprism/issues), please note that **our team and all issue subscribers receive an email notification** from GitHub whenever a new comment is added, so these should only be used for sharing important information and not for [discussions, questions](https://github.com/photoprism/photoprism/discussions), or [expressing personal opinions](https://www.photoprism.app/code-of-conduct).
 
 ### Writing User Stories ###
 
@@ -22,14 +22,14 @@ This makes it easier for everyone to understand who wants what and why.
 
 ### Creating Bug Reports ###
 
-We kindly ask you not to report bugs via GitHub Issues **unless you are certain to have found a fully reproducible and previously unreported issue** that must be fixed directly in the app.
-
 In order for us to process [new bug reports](https://www.photoprism.app/kb/reporting-bugs), they must include the steps to reproduce the problem, the software versions being used and information about the environment in which the problem occurred, such as [browser type, browser version, browser plug-ins](https://docs.photoprism.app/getting-started/troubleshooting/browsers/), operating system, [storage type](https://docs.photoprism.app/getting-started/troubleshooting/performance/#storage), [processor type](https://docs.photoprism.app/getting-started/troubleshooting/performance/#server-cpu), and [memory size](https://docs.photoprism.app/getting-started/troubleshooting/performance/#memory):
 
 **<https://www.photoprism.app/kb/reporting-bugs>**
 
-[Contact us](https://www.photoprism.app/contact) or [a community member](https://link.photoprism.app/discussions) if you need help, it could be a configuration problem, or a misunderstanding in how the software works.
-This gives us the opportunity to [improve our documentation](https://docs.photoprism.app/getting-started/troubleshooting/) and provide best-in-class support instead of dealing with unclear/duplicate bug reports or triggering a flood of notifications by replying to comments.
+We kindly ask you not to report bugs via GitHub Issues **unless you are certain to have found a fully reproducible and previously unreported issue** that must be fixed directly in the app.
+Before reporting a bug, first use our [Troubleshooting Checklists](../getting-started/troubleshooting/index.md) to determine the cause of your problem. [Contact us](https://www.photoprism.app/contact) or [a community member](https://link.photoprism.app/discussions) if you need help, it could be a configuration problem, or a misunderstanding in how the software works.
+
+This gives us the opportunity to [improve our documentation](https://docs.photoprism.app/getting-started/troubleshooting/) and provide best-in-class support instead of dealing with unclear/duplicate bug reports or triggering a flood of notifications by replying to comments. Thank you very much!
 
 ### Acceptance Criteria ###
 

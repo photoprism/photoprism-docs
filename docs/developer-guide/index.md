@@ -20,7 +20,7 @@ As a contributor, you are also welcome to [contact us directly](https://www.phot
 
 ## Creating Bug Reports ##
 
-Before reporting a bug, first use our [Troubleshooting Checklists](../getting-started/troubleshooting/index.md) to determine the cause of your problem. If you have a general question, need help, it could be a configuration issue, or a misunderstanding in how the software works:
+Before [reporting a bug](https://www.photoprism.app/kb/reporting-bugs), first use our [Troubleshooting Checklists](../getting-started/troubleshooting/index.md) to determine the cause of your problem. If you have a general question, need help, it could be a configuration issue, or a misunderstanding in how the software works:
 
 - you are welcome to ask in our [Community Chat](https://link.photoprism.app/chat)
 - or post your question in [GitHub Discussions](https://link.photoprism.app/discussions)

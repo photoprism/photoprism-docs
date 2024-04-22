@@ -15,7 +15,7 @@ Installation in a sub-directory on a shared domain is generally possible if you 
 
 ### Nested Import Folder
 
-You may not configure the *import* folder to be inside the *originals* folder, as this will cause a loop by importing already indexed files.
+You must not configure the *import* folder to be inside the *originals* folder, as this will cause a loop by importing already indexed files.
 
 Inexperienced users are advised to closely follow our documentation and to use the config examples we provide, as this issue can only occur with a custom setup.
 
@@ -29,14 +29,17 @@ In older releases prior to [240420-ef5f14bc4](https://docs.photoprism.app/releas
 
 Symbolic [links to files and directories](https://github.com/photoprism/photoprism/issues/1049) within the *originals* folder are supported if they are accessible from the environment in which your instance is running. However, you cannot mount a symbolic link as a *storage* folder or use links within the *storage* folder.
 
-## User Authentication
+## Authentication
+
+### Upgrading From Previous Releases
+
+Should you experience problems after upgrading from a [previous release](release-notes.md) or [development preview](getting-started/updates.md#development-preview), we recommend running the `photoprism auth reset --yes` command [in a terminal](getting-started/docker-compose.md#command-line-interface) to [reset the `auth_sessions` table](user-guide/users/cli.md#session-management) to a clean state and force a re-login of all users. Please note that this will also delete all client access tokens and any [app passwords](user-guide/users/2fa.md#step-3-app-passwords) that users may have created.
+
+### New User Management
 
 Session and user management [had been reimplemented](release-notes.md#november-2-2022) in November 2022. If you are upgrading from a Development Preview with a build number between [221102-905925b4d](release-notes.md#november-2-2022) and [220901-f493607b0](https://docs.photoprism.app/release-notes/#september-1-2022), you will need to run the `photoprism users reset --yes` command [in a terminal](getting-started/docker-compose.md#command-line-interface) after the upgrade to recreate the new database tables so that they are compatible with the stable version. This will not affect your pictures or albums.
 
 Upgrading from the last stable version should work without any problems. However, if you have already created additional accounts with the previously offered unofficial multi-user support, you will notice that only the main admin account is migrated automatically. Run `photoprism users legacy` [in a terminal](getting-started/docker-compose.md#command-line-interface) to display the legacy accounts so you can migrate them manually if needed.
-
-!!! tldr ""
-    Should you still experience problems after upgrading from a [previous release](release-notes.md) or [development preview](getting-started/updates.md#development-preview), we recommend running the `photoprism auth reset --yes` command [in a terminal](getting-started/docker-compose.md#command-line-interface) to [reset the sessions](user-guide/users/cli.md#session-management) table to a clean state and force a re-login of all users.
 
 ## Face Recognition
 

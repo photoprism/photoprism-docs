@@ -33,7 +33,7 @@ Symbolic [links to files and directories](https://github.com/photoprism/photopri
 
 ### Upgrading From Previous Releases
 
-Should you experience problems after upgrading from a [previous release](release-notes.md) or [development preview](getting-started/updates.md#development-preview), we recommend running the `photoprism auth reset --yes` command [in a terminal](getting-started/docker-compose.md#command-line-interface) to [reset the `auth_sessions` table](user-guide/users/cli.md#session-management) to a clean state and force a re-login of all users. Please note that this will also delete all client access tokens and any [app passwords](user-guide/users/2fa.md#step-3-app-passwords) that users may have created.
+Should you experience problems after upgrading from a [previous release](release-notes.md) or [development preview](getting-started/updates.md#development-preview), we recommend running the `photoprism auth reset --yes` command [in a terminal](getting-started/docker-compose.md#command-line-interface) to [reset the `auth_sessions` table](user-guide/users/cli.md#session-management) to a clean state and force a re-login of all users. Note that this will also delete all client access tokens and any [app passwords](user-guide/users/2fa.md#step-3-app-passwords) that users may have created.
 
 ### New User Management
 

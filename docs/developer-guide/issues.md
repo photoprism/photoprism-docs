@@ -22,7 +22,7 @@ This makes it easier for everyone to understand who wants what and why.
 
 ### Creating Bug Reports ###
 
-In order for us to process [new bug reports](https://www.photoprism.app/kb/reporting-bugs), they must include the steps to reproduce the problem, the software versions being used and information about the environment in which the problem occurred, such as [browser type, browser version, browser plug-ins](https://docs.photoprism.app/getting-started/troubleshooting/browsers/), operating system, [storage type](https://docs.photoprism.app/getting-started/troubleshooting/performance/#storage), [processor type](https://docs.photoprism.app/getting-started/troubleshooting/performance/#server-cpu), and [memory size](https://docs.photoprism.app/getting-started/troubleshooting/performance/#memory):
+In order for us to investigate [new bug reports](https://www.photoprism.app/kb/reporting-bugs), they must include **a complete list of steps to reproduce the problem**, the software versions used and information about the environment in which the problem occurred, such as [browser type, browser version, browser plug-ins](https://docs.photoprism.app/getting-started/troubleshooting/browsers/), operating system, [storage type](https://docs.photoprism.app/getting-started/troubleshooting/performance/#storage), [processor type](https://docs.photoprism.app/getting-started/troubleshooting/performance/#server-cpu), and [memory size](https://docs.photoprism.app/getting-started/troubleshooting/performance/#memory):
 
 **<https://www.photoprism.app/kb/reporting-bugs>**
 

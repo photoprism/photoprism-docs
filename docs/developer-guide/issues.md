@@ -1,18 +1,15 @@
 # GitHub Issues
 
-We use [GitHub issues](https://github.com/photoprism/photoprism/issues) for managing [bugs](https://github.com/photoprism/photoprism/labels/bug), 
-[ideas](https://github.com/photoprism/photoprism/labels/idea),
-and [todos](https://github.com/photoprism/photoprism/labels/todo).
+We use [GitHub issues](https://github.com/photoprism/photoprism/issues) for managing [bugs](https://github.com/photoprism/photoprism/labels/bug), [ideas](https://github.com/photoprism/photoprism/labels/idea), and [enhancement](https://github.com/photoprism/photoprism/labels/enhancement).
 Issues labeled [help wanted](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) / [easy](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3Aeasy) can be good (first) contributions.
-Don't hesitate to [contact us](https://www.photoprism.app/contact) if you want to work on something specific or need [help with a pull request](pull-requests.md). 
+You are [welcome to email](https://www.photoprism.app/contact) us if you want to [work on something specific](https://github.com/photoprism/photoprism/issues), need [help with a pull request](pull-requests.md), or have something on your mind that you don't want to discuss publicly.
 
-We kindly ask you not to [report bugs](index.md#creating-bug-reports) via GitHub Issues **unless you are certain to have found a fully reproducible and previously unreported issue** that must be fixed directly in the app.
+!!! example ""
+    When [browsing issues](https://github.com/photoprism/photoprism/issues), please note that **our team and all issue subscribers receive an email notification** from GitHub whenever a new comment is added, so these should only be used for sharing important information and not for [discussions, questions](https://github.com/photoprism/photoprism/discussions), or [expressing personal opinions](https://www.photoprism.app/code-of-conduct). Thank you very much!
 
-Note that all issue **subscribers receive an email notification** from GitHub whenever a new comment is added, so these should only be used for sharing important information and not for discussions, questions or expressing personal opinions.
+### Writing User Stories ###
 
-### How to Write User Stories ###
-
-Start describing new ideas and tasks with a [user story](https://en.wikipedia.org/wiki/User_story) similar to this one:
+Start describing [new ideas](https://github.com/photoprism/photoprism/labels/idea) and [enhancements](https://github.com/photoprism/photoprism/labels/enhancement) with a [user story](https://en.wikipedia.org/wiki/User_story) similar to this one:
 
 <tt>As a [type of person] I'd like to be able to [do something] so that I can [get some result].</tt>
 
@@ -22,6 +19,17 @@ This makes it easier for everyone to understand who wants what and why.
     Reading between the lines consumes a lot of time that can be used [more effectively](code-quality.md#effectiveness-efficiency).
     Vague requirements become even more expensive when the wrong things are implemented, or they don't provide value
     in the way they were implemented.
+
+### Creating Bug Reports ###
+
+We kindly ask you not to report bugs via GitHub Issues **unless you are certain to have found a fully reproducible and previously unreported issue** that must be fixed directly in the app.
+
+In order for us to process [new bug reports](https://www.photoprism.app/kb/reporting-bugs), they must include the steps to reproduce the problem, the software versions being used and information about the environment in which the problem occurred, such as [browser type, browser version, browser plug-ins](https://docs.photoprism.app/getting-started/troubleshooting/browsers/), operating system, [storage type](https://docs.photoprism.app/getting-started/troubleshooting/performance/#storage), [processor type](https://docs.photoprism.app/getting-started/troubleshooting/performance/#server-cpu), and [memory size](https://docs.photoprism.app/getting-started/troubleshooting/performance/#memory):
+
+**<https://www.photoprism.app/kb/reporting-bugs>**
+
+[Contact us](https://www.photoprism.app/contact) or [a community member](https://link.photoprism.app/discussions) if you need help, it could be a configuration problem, or a misunderstanding in how the software works.
+This gives us the opportunity to [improve our documentation](https://docs.photoprism.app/getting-started/troubleshooting/) and provide best-in-class support instead of dealing with unclear/duplicate bug reports or triggering a flood of notifications by replying to comments.
 
 ### Acceptance Criteria ###
 

@@ -1,6 +1,6 @@
 # GitHub Issues
 
-We use [GitHub issues](https://github.com/photoprism/photoprism/issues) for managing [bugs](https://github.com/photoprism/photoprism/labels/bug), [ideas](https://github.com/photoprism/photoprism/labels/idea), and [enhancement](https://github.com/photoprism/photoprism/labels/enhancement).
+We use [GitHub issues](https://github.com/photoprism/photoprism/issues) for managing [bugs](https://github.com/photoprism/photoprism/labels/bug), [ideas](https://github.com/photoprism/photoprism/labels/idea), and [enhancements](https://github.com/photoprism/photoprism/labels/enhancement).
 Issues labeled [help wanted](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) / [easy](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3Aeasy) can be good (first) contributions.
 You are [welcome to email](https://www.photoprism.app/contact) us if you want to [work on something specific](https://github.com/photoprism/photoprism/issues), need [help with a pull request](pull-requests.md), or have something on your mind that you don't want to discuss publicly.
 

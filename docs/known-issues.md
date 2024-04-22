@@ -17,7 +17,7 @@ Installation in a sub-directory on a shared domain is generally possible if you 
 
 You may not configure the *import* folder to be inside the *originals* folder, as this will cause a loop by importing already indexed files.
 
-Inexperienced users are advised to closely follow our documentation and to use the config examples we provide, as this issue can only occur with a custom configuration.
+Inexperienced users are advised to closely follow our documentation and to use the config examples we provide, as this issue can only occur with a custom setup.
 
 ### Nested Storage Folder
 

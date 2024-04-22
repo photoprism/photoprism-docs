@@ -5,11 +5,11 @@ However, sometimes this is not possible right away, for example because it needs
 
 !!! info ""
     In order to improve readability and reduce maintenance effort, minor issues and those that we plan to resolve in the short term are not listed here.
-    You can browse all reported issues and planned enhancements on [GitHub Issues](https://github.com/photoprism/photoprism/issues):
+    You can browse all reported issues and planned enhancements on [GitHub Issues](developer-guide/issues.md):
 
     https://github.com/photoprism/photoprism/issues
 
-    When browsing issues, please note that **our team and all issue subscribers receive an email notification** from GitHub whenever a new comment is added, so these should only be used for sharing important information and not for [discussions, questions](https://github.com/photoprism/photoprism/discussions), or [expressing personal opinions](https://www.photoprism.app/code-of-conduct). Thank you very much!
+    When [browsing issues](https://github.com/photoprism/photoprism/issues), please note that **our team and all issue subscribers receive an email notification** from GitHub whenever a new comment is added, so these should only be used for sharing important information and not for [discussions, questions](https://github.com/photoprism/photoprism/discussions), or [expressing personal opinions](https://www.photoprism.app/code-of-conduct). Thank you very much!
 
 ## Self-Hosted Setup
 
@@ -164,13 +164,14 @@ services:
 
 ## Reporting Bugs ##
 
-Before reporting a bug, please use our [Troubleshooting Checklists](getting-started/troubleshooting/index.md) to determine the cause of your problem. If you have a general question, need help, it could be a local configuration issue, or a misunderstanding in how the software works:
+Before reporting a bug, first use our [Troubleshooting Checklists](getting-started/troubleshooting/index.md) to determine the cause of your problem. If you have a general question, need help, it could be a configuration issue, or a misunderstanding in how the software works:
 
 - you are welcome to ask in our [Community Chat](https://link.photoprism.app/chat)
 - or post your question in [GitHub Discussions](https://link.photoprism.app/discussions)
 
-When reporting a problem, always include the software versions you are using and [other information about your environment](https://www.photoprism.app/kb/reporting-bugs) such as [browser, browser plugins](getting-started/troubleshooting/browsers.md), operating system, storage type, memory size, and processor.
+Bug reports should include the software versions you are using and [other information about your environment](https://www.photoprism.app/kb/reporting-bugs) such as [browser, browser plugins](getting-started/troubleshooting/browsers.md), operating system, storage type, memory size, and processor.
 
-We kindly ask you not to report bugs via GitHub Issues **unless you are certain to have found a fully reproducible and previously unreported issue** that must be fixed directly in the app.
+!!! info ""
+    We kindly ask you not to report bugs via [GitHub Issues](developer-guide/issues.md) **unless you are certain to have found a fully reproducible and previously unreported issue** that must be fixed directly in the app.
 
-Since **our team and all issue subscribers receive an email notification** from GitHub whenever a new comment is added, these should only be used for sharing important information and not for [discussions, questions](https://github.com/photoprism/photoprism/discussions), or [expressing personal opinions](https://www.photoprism.app/code-of-conduct). Thank you very much!
+    When [browsing issues](https://github.com/photoprism/photoprism/issues), please note that **our team and all issue subscribers receive an email notification** from GitHub whenever a new comment is added, so these should only be used for sharing important information and not for [discussions, questions](https://github.com/photoprism/photoprism/discussions), or [expressing personal opinions](https://www.photoprism.app/code-of-conduct). Thank you very much!

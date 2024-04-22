@@ -70,7 +70,7 @@ Common problems can be quickly diagnosed and solved using our [Troubleshooting C
 !!! info ""
     **We kindly ask you not to report bugs via *GitHub Issues* unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.**
     [Contact us](https://www.photoprism.app/contact) or [a community member](https://link.photoprism.app/discussions)
-    if you need help, it could be a local configuration problem, or a misunderstanding in how the software works.
+    if you need help, it could be a configuration problem, or a misunderstanding in how the software works.
 
 [^1]: RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory
 [^2]: Our [configuration examples](https://dl.photoprism.app/docker/) are generally based on the [current stable MariaDB version](https://mariadb.com/kb/en/mariadb-server-release-dates/) to take advantage of performance improvements. This does not mean that older versions are no longer supported and you must upgrade immediately. We recommend not using the `:latest` tag for the MariaDB Docker image and to upgrade manually by changing the tag once we had a chance to test a new major version.

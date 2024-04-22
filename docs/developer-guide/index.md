@@ -14,11 +14,9 @@ You are welcome to [submit specific feature requests](issues.md) after you have 
 
 ## Join the Community ##
 
-Follow us on [Twitter](https://link.photoprism.app/twitter) and join the [Community Chat](https://link.photoprism.app/chat) to get regular updates, connect with other contributors, and discuss your ideas. Our [Code of Conduct](https://www.photoprism.app/code-of-conduct) explains the "dos and don’ts."
+Follow us on [Mastodon](https://floss.social/@photoprism), [Bluesky](https://bsky.app/profile/photoprism.app), or join the [Community Chat](https://link.photoprism.app/chat) to get regular updates, connect with other users, and discuss your ideas. Our [Code of Conduct](https://www.photoprism.app/code-of-conduct) explains the "dos and don’ts" when interacting with other community members.
 
-An important part of our journey is to explore new directions in product development and build better software through consistent use of feedback.
-
-Feel free to [contact us](https://www.photoprism.app/contact) with anything that is on your mind, even if you just want to say hello. It is our goal to answer all questions we receive from our users, customers, partners, and the developer community. Our team also welcomes feedback if you believe something can or should be improved.
+As a contributor, you are also welcome to [contact us directly](https://www.photoprism.app/contact) if you have something on your mind that you don't want to discuss publicly. Please note, however, that due to the high volume of emails we receive, our team may be unable to get back to you immediately. We do our best to respond within five business days or less.
 
 ## Creating Bug Reports ##
 

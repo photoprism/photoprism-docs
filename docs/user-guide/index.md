@@ -28,5 +28,4 @@ Common problems can be quickly diagnosed and solved using our [Troubleshooting C
 
 !!! info ""
     **We kindly ask you not to report bugs via *GitHub Issues* unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.**
-    [Contact us](https://www.photoprism.app/contact) or [a community member](https://link.photoprism.app/discussions)
-    if you need help, it could be a local configuration problem, or a misunderstanding in how the software works.
+    [Contact us](https://www.photoprism.app/contact) or [a community member](https://link.photoprism.app/discussions) if you need help, it could be a local configuration problem, or a misunderstanding in how the software works.

@@ -39,7 +39,10 @@ The following flags can be used with the `photoprism auth add` command (if you o
 
 One or more of these scopes can be specified to limit the access to certain API endpoints:
 
-*files, folders, shares, photos, videos, favorites, albums, moments, calendar, people, places, labels, config, settings, passcode, password, services, users, sessions, logs, webdav, metrics, feedback*
+*files, folders, shares, photos, videos, favorites, albums, moments, calendar, people, places, labels, config, settings, services, users, sessions, logs, webdav, metrics*
+
+!!! note ""
+    Clients authenticated with app passwords are unable to change the account password or manage user accounts, even if you specify all scopes or use the wildcard `"*"` to allow all.
 
 ## Access Tokens
 

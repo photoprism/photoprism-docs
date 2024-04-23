@@ -35,7 +35,7 @@ As an alternative to the [web user interface](index.md), you can [run the follow
 
 ### Command Options
 
-The `add` and `mod` commands support these flags to set or change account properties:
+The `users add` and `users mod` commands support these flags to set or change account properties:
 
 | Command Flag                         | Description                                                      |
 |--------------------------------------|------------------------------------------------------------------|
@@ -104,7 +104,7 @@ You can combine it with these flags to change the output format and the maximum 
 
 | Command Flag | Description                            |
 |--------------|----------------------------------------|
-| `--md, -m `  | format as machine-readable Markdown    |
+| `--md, -m`   | format as machine-readable Markdown    |
 | `--csv, -c`  | export as semicolon separated values   |
 | `--tsv, -t`  | export as tab separated values         |
 | `-n LIMIT`   | LIMIT number of results (default: 100) |
@@ -122,7 +122,7 @@ You can combine it with these flags to change the output format and the maximum 
 
 ## Session Management
 
-You can use the following terminal commands to create, inspect and, if necessary, delete access tokens for the authentication of browsers and other clients (including [app passwords](2fa.md#step-3-app-passwords)):
+You can use the following terminal commands to generate, inspect and, if necessary, delete access tokens for the authentication of browsers and other clients (including [app passwords](2fa.md#step-3-app-passwords)):
 
 | CLI Command                         | Description                                              |
 |-------------------------------------|----------------------------------------------------------|
@@ -131,6 +131,10 @@ You can use the following terminal commands to create, inspect and, if necessary
 | `photoprism auth show [identifier]` | Shows detailed information about a session               |
 | `photoprism auth rm [identifier]`   | Deletes a session by id or access token                  |
 | `photoprism auth reset --yes`       | Resets the authentication of all users and clients       |
+
+In order to grant limited API access to other applications and services, you can also generate [OAuth2 Client Credentials](client-credentials.md#client-credentials) for them, or use the session management commands shown above to [generate access tokens](client-credentials.md#access-tokens) with a limited scope and lifetime. 
+
+[Learn more ›](client-credentials.md)
 
 !!! tldr ""
     Should you experience problems, for example after upgrading from a [previous release](../../release-notes.md) or [development preview](../../getting-started/updates.md#development-preview), we recommend running the `photoprism auth reset --yes` command [in a terminal](../../getting-started/docker-compose.md#command-line-interface) to reset the `auth_sessions` table to a clean state and force a re-login of all users. Note that this will also delete all client access tokens and any [app passwords](2fa.md#step-3-app-passwords) that users may have created.

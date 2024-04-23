@@ -22,8 +22,10 @@ You will then be shown the generated app password so you can copy it and keep it
 |-----------------------------|---------------------|
 ```
 
-!!! tldr ""
-    For added security, we recommend setting an expiration date for the app passwords and access tokens you generate. Common scopes for use with app passwords are either "\*" for *Full Access* or "webdav" for [WebDAV-compatible](../sync/webdav.md) apps to [synchronize files](../sync/mobile-devices.md).
+For added security, we recommend setting an expiration date for the app passwords and access tokens you generate. Common scopes for use with app passwords are either "\*" for *Full Access* or "webdav" for [WebDAV-compatible](../sync/webdav.md) [file synchronization apps](../sync/mobile-devices.md).
+
+!!! note ""
+    Besides using app passwords to create sessions through the `POST /api/v1/session` endpoint, developers can also use them as access tokens in the *Bearer Authorization* header without first creating a session access token.
 
 ### Command Options
 

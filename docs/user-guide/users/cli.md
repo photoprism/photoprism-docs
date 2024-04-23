@@ -132,7 +132,7 @@ You can use the following terminal commands to generate, inspect and, if necessa
 | `photoprism auth rm [identifier]`   | Deletes a session by id or access token                  |
 | `photoprism auth reset --yes`       | Resets the authentication of all users and clients       |
 
-In order to grant limited API access to other applications and services, you can also generate [OAuth2 Client Credentials](client-credentials.md#client-credentials) for them, or use the session management commands shown above to [generate access tokens](client-credentials.md#access-tokens) with a limited scope and lifetime. 
+In order to grant limited API access to other applications and services, the `photoprism clients add` command lets you generate [OAuth2 Client Credentials](client-credentials.md#client-credentials) for them, or you can use the `photoprism auth add` command to [generate access tokens](client-credentials.md#access-tokens) with a [limited scope](client-credentials.md#authorization-scopes) and lifetime.
 
 [Learn more ›](client-credentials.md)
 

@@ -106,5 +106,9 @@ The following parameters can be used with the `photoprism clients add` command, 
 | `--expires LIFETIME, -e LIFETIME` | access token LIFETIME in seconds, after which a new token must be requested (default: 86400)        |
 | `--tokens NUMBER, -t NUMBER`      | maximum NUMBER of access tokens that the client can request (-1 to disable the limit) (default: 10) |
 
+If you omit the *name* or *scope* parameter, you will be asked to enter them interactively. One or more of these scopes can be specified to limit the access to certain API endpoints:
+
+*files, folders, shares, photos, videos, favorites, albums, moments, calendar, people, places, labels, config, settings, services, users, sessions, logs, webdav, metrics*
+
 !!! note ""
-    If you omit the *name* or *scope* parameter, you will be asked to enter them interactively. For the *scope*, one or more of the [supported authorization scopes](#authorization-scopes) can be specified to restrict access to certain API endpoints.
+    When requesting access tokens, clients can further restrict the scope of the tokens by passing the scope parameter to the `POST /api/v1/oauth/token` endpoint.

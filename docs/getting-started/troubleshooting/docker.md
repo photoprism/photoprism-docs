@@ -356,7 +356,7 @@ volumes:
   originals:
     driver_opts:
       type: cifs
-      o: "username=user,password=secret,rw"
+      o: "iocharset=utf8,username=user,password=secret,rw"
       device: "//host/folder"
 ```
 

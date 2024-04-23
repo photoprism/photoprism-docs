@@ -52,7 +52,7 @@ If you do not specify a username as argument for the `photoprism auth add` comma
 |--------------------------------------------------|---------------------|
 | Access Token                                     | Authorization Scope |
 |--------------------------------------------------|---------------------|
-| 7dbfa37b5a3db2a9e9dd186479018bfe2e3ce5a71fc2f955 | webdav              |
+| 7dbfa37b5a3db2a9e9dd186479018bfe2e3ce5a71fc2f955 | files folders       |
 |--------------------------------------------------|---------------------|
 ```
 

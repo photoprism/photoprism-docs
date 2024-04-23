@@ -5,32 +5,26 @@ For the currently implemented REST request endpoints, please refer to our backen
 - https://godoc.org/github.com/photoprism/photoprism/internal/api
 - https://github.com/photoprism/photoprism/tree/develop/internal/api
 
-Our REST API is not currently covered by an official deprecation policy, so some routes and request parameters MAY change as we add new features.
+Responses are generally JSON encoded, except for binary data like images and videos.
+
+Note that our REST API is not currently covered by an official deprecation policy, so some routes and request parameters MAY change as we add new features.
 However, we avoid making breaking changes, especially to endpoints that we know other developers are using.
- 
+
 !!! tldr ""
     Any contributions that help improve our REST API docs and make them easier to use are greatly appreciated by our team and the developer community.
 
-## Request Examples
+## Client Authentication
 
-### Unauthenticated
-
-```
-GET /api/v1/photos?count=10
-```
-
-Responses are always JSON encoded, except for binary data like images and videos.
-
-### With Authentication
-
-Authenticated requests require an `X-Session-ID` header to be set along with a [valid session ID](https://github.com/photoprism/photoprism/blob/92df3aa/internal/api/session.go#L102):
+Authenticated requests require an `X-Auth-Token` or a standard *Bearer Authorization* header with a [valid access token](auth.md), for example:
 
 ```
-curl -H "X-Session-ID: xyz" http://localhost:2342/api/v1/photos?count=10
+curl -H "X-Auth-Token: 7dbfa37b5a3db2a9e9dd186479018bfe2e3ce5a71fc2f955" \
+http://localhost:2342/api/v1/photos?count=10
 ```
 
-For testing, you can use the ID of an active browser session. It is kept in local storage and can be viewed with the browser's web developer tools.
+In order to grant access, you can use the `photoprism auth add` command to [generate access tokens](auth.md), optionally also with a limited [scope](auth.md#authorization-scopes) and lifetime.
 
-## External Resources ##
+[Learn more ›](auth.md)
 
-- [Mat Ryer: How I write Go HTTP services after seven years](https://medium.com/statuscode/how-i-write-go-http-services-after-seven-years-37c208122831)
+!!! note ""
+    Besides using [app passwords](../../user-guide/settings/account.md#apps-and-devices) to create sessions through the `POST /api/v1/session` endpoint, developers can also use them as access tokens in the *Bearer Authorization* header without first creating a session access token.

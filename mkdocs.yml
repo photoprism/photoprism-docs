@@ -192,6 +192,7 @@ nav:
       - Infinite Scrolling: developer-guide/ui/infinite-scrolling.md
     - Using the REST API:
       - Introduction: developer-guide/api/index.md
+      - Authentication: developer-guide/api/auth.md
       - Clients:
         - Go: developer-guide/api/clients/go.md
     - Database Schema:

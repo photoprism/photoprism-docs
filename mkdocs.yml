@@ -163,13 +163,13 @@ nav:
       - Legacy Method: developer-guide/translations.md
     - Media Files:
       - File Types: developer-guide/media/index.md
-      - File Samples: developer-guide/media/samples.md
+      - Test Samples: developer-guide/media/samples.md
       - RAW Images: developer-guide/media/raw.md
       - HEIC / HEIF: developer-guide/media/heif.md
       - Videos: developer-guide/media/videos.md
       - Live Photos: developer-guide/media/live.md
       - Thumbnails: developer-guide/media/thumbnails.md
-      - Import: developer-guide/media/import.md
+      - File Import: developer-guide/media/import.md
       - Storage: developer-guide/media/storage.md
     - Metadata:
       - Adobe XMP: developer-guide/metadata/xmp.md

@@ -1,13 +1,30 @@
 # Configuration
 
-## Help ##
-`photoprism help` shows available commands, config parameters and environment variable names.
-These are also listed in [Getting Started](../getting-started/config-options.md).
+## Command-Line Interface ##
 
-## Show current settings ##
-`photoprism config` shows all config parameters and their values.
+The `photoprism help` (or `photoprism --help`) command lists all supported subcommands and [config options](../getting-started/config-options.md) available in the current version:
 
-## Change settings ##
-You can either use environment variables like `PHOTOPRISM_CACHE_PATH`, config files (in the `storage/config` directory) or command line parameters like `--cache-path` to configure PhotoPrism. [Environment variables](https://docs.docker.com/compose/environment-variables/) are usually best for dockerized applications. You can easily set them in [docker-compose.yml](https://github.com/photoprism/photoprism/blob/develop/docker-compose.yml) without touching any other files.
+```bash
+./photoprism help
+```
 
-There is no need to change any settings if you follow the steps described in [Setup](setup.md).
+Run the following to display all global config options and their current values:
+
+```bash
+./photoprism show config
+```
+
+You can also use the `photoprism show` command to display supported search filters, file types, thumbnail sizes, and metadata tags:
+
+```bash
+./photoprism show --help
+```
+
+## Config Options ##
+
+You can either use [environment variables](../getting-started/config-options.md) like `PHOTOPRISM_CACHE_PATH`, [config files](../getting-started/config-files/index.md) (in the `storage/config` directory) or command line parameters like `--cache-path` to change the value of config options.
+
+[Learn more ›](../getting-started/config-options.md)
+
+!!! note ""
+    Changes to the [config options](../getting-started/config-options.md) always require a restart to take effect. For development purposes, you do not need to change any settings if you followed the steps described under [Build Setup](setup.md).

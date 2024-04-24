@@ -302,8 +302,7 @@ Use the `--help` flag to see a detailed command description, for example:
 docker compose exec photoprism photoprism backup --help
 ```
 
-PhotoPrism's command-line interface is also well suited for job automation using a
-[scheduler](https://dl.photoprism.app/docker/scheduler/).
+PhotoPrism's command-line interface is also well suited for job automation using a [scheduler](https://dl.photoprism.app/docker/scheduler/).
 
 !!! tip ""
     When using *Docker Compose*, you can prepend commands like `docker compose exec [service] [command]` to run them in a service container.

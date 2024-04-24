@@ -1,6 +1,6 @@
 # File Storage
 
-At the moment, [all media and sidecar files](index.md) as well as [thumbnail images](thumbnails.md) are stored directly in the server's file system, see [Config Options](../../getting-started/config-options.md#storage).
+At the moment, [all media and sidecar files](index.md) as well as [thumbnail images](../api/thumbnails.md) are stored directly in the server's file system, see [Config Options](../../getting-started/config-options.md#storage).
 
 ## Filesystem Abstraction
 

@@ -1,6 +1,8 @@
 # Web Service API
 
-For the currently implemented REST request endpoints, please refer to our backend API docs and the public source code repository:
+## REST API Endpoints
+
+For the currently implemented REST request endpoints available under `/api/v1`, please refer to our automatically generated [backend API documentation](https://godoc.org/github.com/photoprism/photoprism/internal/api) and [public repository](https://github.com/photoprism/photoprism):
  
 - https://godoc.org/github.com/photoprism/photoprism/internal/api
 - https://github.com/photoprism/photoprism/tree/develop/internal/api
@@ -15,16 +17,45 @@ However, we avoid making breaking changes, especially to endpoints that we know 
 
 ## Client Authentication
 
-Authenticated requests require an `X-Auth-Token` or a standard *Bearer Authorization* header with a [valid access token](auth.md), for example:
+When clients have a valid access token, e.g. obtained through the `POST /api/v1/session` or `POST /api/v1/oauth/token` endpoint, they can use a standard *Bearer Authorization* header to authenticate their requests:
 
 ```
+Authorization: Bearer <access token>
+```
+
+Submitting the access token with a custom `X-Auth-Token` header is supported as well:
+
+```bash
 curl -H "X-Auth-Token: 7dbfa37b5a3db2a9e9dd186479018bfe2e3ce5a71fc2f955" \
 http://localhost:2342/api/v1/photos?count=10
 ```
 
-In order to grant access, you can use the `photoprism auth add` command to [generate access tokens](auth.md), optionally also with a limited [scope](auth.md#authorization-scopes) and lifetime.
+Besides using the API endpoints provided for this, you can also generate valid access tokens by running the `photoprism auth add` command in a terminal.
 
 [Learn more ›](auth.md)
 
 !!! note ""
-    Besides using [app passwords](../../user-guide/settings/account.md#apps-and-devices) to create sessions through the `POST /api/v1/session` endpoint, developers can also use them as access tokens in the *Bearer Authorization* header without first creating a session access token.
+    [App passwords](../../user-guide/settings/account.md#apps-and-devices) may be used as access tokens in the *Bearer Authorization* header without first creating a session access token, and to obtain short-lived session access tokens through the `POST /api/v1/session` endpoint.
+
+## Service Discovery Endpoints
+
+### OAuth2 Authorization Server
+
+```
+/.well-known/oauth-authorization-server
+```
+
+↪ <https://demo.photoprism.app/.well-known/oauth-authorization-server>
+
+[Learn more ›](oauth2.md)
+
+### OpenID Configuration
+
+```
+/.well-known/openid-configuration
+```
+
+↪ <https://demo.photoprism.app/.well-known/openid-configuration>
+
+!!! note ""
+    Full support for OpenID Connect (OIDC) is planned for a future release and not yet available.

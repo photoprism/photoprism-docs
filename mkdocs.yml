@@ -154,24 +154,24 @@ nav:
     - Best Practices: developer-guide/code-quality.md
     - GitHub Issues: developer-guide/issues.md
     - Pull Requests: developer-guide/pull-requests.md
-    - Directory Structure: developer-guide/directories.md
-    - Configuration: developer-guide/configuration.md
-    - Unit & Acceptance Tests: developer-guide/tests.md
+    - Project Structure: developer-guide/directories.md
+    - Config Options: developer-guide/configuration.md
+    - Running Tests: developer-guide/tests.md
     - Documentation: developer-guide/documentation.md
     - Translations:
       - Using Weblate: developer-guide/translations-weblate.md
       - Legacy Method: developer-guide/translations.md
-    - Media Files & Storage:
+    - Media Files:
       - File Types: developer-guide/media/index.md
       - File Samples: developer-guide/media/samples.md
-      - Thumbnails: developer-guide/media/thumbnails.md
       - RAW Images: developer-guide/media/raw.md
       - HEIC / HEIF: developer-guide/media/heif.md
-      - Video Support: developer-guide/media/videos.md
+      - Videos: developer-guide/media/videos.md
       - Live Photos: developer-guide/media/live.md
-      - File Import: developer-guide/media/import.md
-      - File Storage: developer-guide/media/storage.md
-    - Image Metadata:
+      - Thumbnails: developer-guide/media/thumbnails.md
+      - Import: developer-guide/media/import.md
+      - Storage: developer-guide/media/storage.md
+    - Metadata:
       - Adobe XMP: developer-guide/metadata/xmp.md
       - Exif Extraction: developer-guide/metadata/exif/index.md
       - Editing Exif Data: developer-guide/metadata/exif/edit.md
@@ -182,7 +182,7 @@ nav:
       - Face Recognition: developer-guide/metadata/face-recognition.md
       - Color Detection: developer-guide/metadata/colors.md
       - Camera Models: developer-guide/metadata/cameras.md
-    - Web User Interface:
+    - Web Interface:
       - Introduction: developer-guide/ui/introduction.md
       - Screenshots: developer-guide/ui/screenshots.md
       - Components: developer-guide/ui/components.md
@@ -190,10 +190,12 @@ nav:
       - Browsers: developer-guide/ui/browsers.md
       - Interactive Maps: developer-guide/ui/maps.md
       - Infinite Scrolling: developer-guide/ui/infinite-scrolling.md
-    - Using the REST API:
+    - Web Service API:
       - Introduction: developer-guide/api/index.md
-      - Authentication: developer-guide/api/auth.md
-      - Clients:
+      - Client Authentication: developer-guide/api/auth.md
+      - OAuth2 Grant Types: developer-guide/api/oauth2.md
+      - Thumbnail Images: developer-guide/api/thumbnails.md
+      - Client Libraries:
         - Go: developer-guide/api/clients/go.md
     - Database Schema:
       - Introduction: developer-guide/database/index.md

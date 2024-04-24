@@ -9,7 +9,7 @@ All users can generate app-specific passwords for their own use from the web int
 Alternatively, running the following command [in a terminal](../../getting-started/docker-compose.md#command-line-interface) will generate a new app-specific password e.g. for the *admin* account, so that WebDAV-compatible clients can synchronize files even if [2FA is enabled for the account](../../user-guide/users/2fa.md) or the [account password is changed](../../user-guide/settings/account.md#change-password):
 
 ```bash
-docker compose exec photoprism photoprism auth add -n Sync -s "webdav" admin
+photoprism auth add -n Sync -s "webdav" admin
 ```
 
 You will then be shown the generated app password so you can copy it and keep it in a safe place or enter it directly into an app, as you will not be able to see it again:
@@ -78,7 +78,7 @@ If clients support authentication via [OAuth2 Client Credentials](https://www.oa
 For example, running the following [in a terminal](../../getting-started/docker-compose.md#command-line-interface) will generate credentials for [Prometheus](https://prometheus.io/docs/prometheus/latest/configuration/configuration/#oauth2), with access limited to the *metrics* endpoint:
 
 ```bash
-docker compose exec photoprism photoprism clients add -n Prometheus -s metrics
+photoprism clients add -n Prometheus -s metrics
 ```
 
 You will then be shown the generated `client_id` and `client_secret` so you can copy them and keep them in a safe place:

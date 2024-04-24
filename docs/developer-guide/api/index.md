@@ -20,7 +20,7 @@ However, we avoid making breaking changes, especially to endpoints that we know 
 When clients have a valid access token, e.g. obtained through the `POST /api/v1/session` or `POST /api/v1/oauth/token` endpoint, they can use a standard *Bearer Authorization* header to authenticate their requests:
 
 ```
-Authorization: Bearer <access token>
+Authorization: Bearer <token>
 ```
 
 Submitting the access token with a custom `X-Auth-Token` header is supported as well:

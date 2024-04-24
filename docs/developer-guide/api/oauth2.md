@@ -5,9 +5,10 @@ The OAuth 2.0 specification is an authorization framework that contains a set of
 - [Password Grant](auth.md#app-passwords)
 - [Client Credentials](auth.md#client-credentials)
 
-In addition, it is planned to support the [Authorization Code](https://www.oauth.com/oauth2-servers/access-tokens/authorization-code-request/) flow in a future release.
-
 The access token can then be passed to an API endpoint, which checks it to determine validity and authorization levels.
+
+!!! note ""
+    Support for the [Authorization Code Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow) is planned for a future release.
 
 ## Access Tokens
 

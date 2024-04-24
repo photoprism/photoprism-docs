@@ -35,7 +35,7 @@ Besides using the API endpoints provided for this, you can also generate valid a
 [Learn more ›](auth.md)
 
 !!! note ""
-    [App passwords](../../user-guide/settings/account.md#apps-and-devices) may be used as access tokens in the *Bearer Authorization* header without first creating a session access token, and to obtain short-lived session access tokens through the `POST /api/v1/session` endpoint.
+    [App passwords](../../user-guide/settings/account.md#apps-and-devices) can be used as access tokens in the *Bearer Authorization* header without first creating a session access token, and to obtain short-lived session access tokens through the `POST /api/v1/session` endpoint.
 
 ## Service Discovery Endpoints
 

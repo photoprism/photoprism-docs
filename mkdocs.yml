@@ -162,7 +162,7 @@ nav:
       - Using Weblate: developer-guide/translations-weblate.md
       - Legacy Method: developer-guide/translations.md
     - Media Files:
-      - File Types: developer-guide/media/index.md
+      - File Formats: developer-guide/media/index.md
       - Test Samples: developer-guide/media/samples.md
       - RAW Images: developer-guide/media/raw.md
       - HEIC / HEIF: developer-guide/media/heif.md

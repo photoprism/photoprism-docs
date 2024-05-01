@@ -64,7 +64,7 @@ Please note, however, that client access tokens cannot be used to synchronize fi
 
 ## Client Credentials
 
-If clients support authentication via [OAuth2 Client Credentials](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/), you can use the following terminal commands to generate a `client_id` and `client_secret` for them, list registered clients, and delete client credentials that are no longer used:
+If clients support authentication via [OAuth2 client credentials](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/), you can use the following terminal commands to generate a `client_id` and `client_secret` for them, list registered clients, and delete client credentials that are no longer used:
 
 | CLI Command                            | Description                                |
 |----------------------------------------|--------------------------------------------|
@@ -92,7 +92,7 @@ You will then be shown the generated `client_id` and `client_secret` so you can 
 ```
 
 !!! note ""
-    [OAuth2 Client Credentials](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) cannot be directly used for synchronizing files via WebDAV, as a [password replacement for apps](../settings/account.md#apps-and-devices), or for logging in to the web interface.
+    [OAuth2 client credentials](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) cannot be directly used for synchronizing files via WebDAV, as a [password replacement for apps](../settings/account.md#apps-and-devices), or for logging in to the web interface.
 
 ### Command Options
 

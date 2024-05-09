@@ -10,7 +10,7 @@ What's new?
 
 - Review: [Photos are automatically approved when adding them to an album](https://github.com/photoprism/photoprism/issues/4229)
 - People: [Faces tagged on private or archived pictures will be ignored](https://github.com/photoprism/photoprism/issues/4238)
-- Index: [`*.thm` thumbnail files are no longer used as primary image](https://github.com/photoprism/photoprism/issues/3900)
+- Index: [`*.thm` thumbnail files are not used as primary image anymore](https://github.com/photoprism/photoprism/issues/3900)
 - Moments: [Background worker no longer creates backups to avoid disk activity](https://github.com/photoprism/photoprism/issues/4237)
 - Security: [Go has been updated to the latest stable release v1.22.3](https://github.com/golang/go/issues?q=milestone%3AGo1.22.3)
 

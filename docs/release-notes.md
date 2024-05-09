@@ -3,6 +3,16 @@
 !!! note ""
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
+### Development Preview ###
+<span class="build">Build 240509-1723ebca4</span>
+
+What's new?
+
+- People: [Faces tagged on private or archived pictures will be ignored](https://github.com/photoprism/photoprism/issues/4238)
+- Index: [Thumbnails with the file extension `.thm` are not displayed as images](https://github.com/photoprism/photoprism/issues/3900)
+- Moments: [Background worker no longer creates backups to avoid disk activity](https://github.com/photoprism/photoprism/issues/4237)
+- Security: [Go has been updated to the latest stable release v1.22.3](https://github.com/golang/go/issues?q=milestone%3AGo1.22.3)
+
 ### April 20, 2024 ###
 <span class="build">Build 240420-ef5f14bc4</span>
 

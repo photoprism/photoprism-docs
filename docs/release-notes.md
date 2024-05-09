@@ -8,7 +8,7 @@
 
 What's new?
 
-- Albums: [Photos are removed from review when adding them to an album](https://github.com/photoprism/photoprism/issues/4229)
+- Albums: [Photos are automatically approved when adding them to an album](https://github.com/photoprism/photoprism/issues/4229)
 - People: [Faces tagged on private or archived pictures will be ignored](https://github.com/photoprism/photoprism/issues/4238)
 - Index: [`*.thm` thumbnail files are no longer used as primary image](https://github.com/photoprism/photoprism/issues/3900)
 - Moments: [Background worker no longer creates backups to avoid disk activity](https://github.com/photoprism/photoprism/issues/4237)

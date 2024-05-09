@@ -9,7 +9,7 @@
 What's new?
 
 - People: [Faces tagged on private or archived pictures will be ignored](https://github.com/photoprism/photoprism/issues/4238)
-- Index: [Thumbnails with the file extension `.thm` are not used as primary images](https://github.com/photoprism/photoprism/issues/3900)
+- Index: [`*.thm` thumbnail files are no longer used as primary image](https://github.com/photoprism/photoprism/issues/3900)
 - Moments: [Background worker no longer creates backups to avoid disk activity](https://github.com/photoprism/photoprism/issues/4237)
 - Security: [Go has been updated to the latest stable release v1.22.3](https://github.com/golang/go/issues?q=milestone%3AGo1.22.3)
 

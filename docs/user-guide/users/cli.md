@@ -114,11 +114,11 @@ You can combine it with these flags to change the output format and the maximum 
 
 ### Example Report
 
-| Client IP  | User Name | Realm | Status |     Last Login      | Failed At |
-|------------|-----------|-------|--------|---------------------|-----------|
-| 172.19.0.1 | user      | api   | OK     | 2023-02-03 07:17:46 |           |
-| 172.19.0.1 | viewer    | api   | OK     | 2023-02-03 07:16:55 |           |
-| 172.19.0.1 | admin     | api   | OK     | 2023-02-03 06:55:06 |           |
+| Client IP  | Username | Realm | Status |     Last Login      | Failed At |
+|------------|----------|-------|--------|---------------------|-----------|
+| 172.19.0.1 | user     | api   | OK     | 2023-02-03 07:17:46 |           |
+| 172.19.0.1 | viewer   | api   | OK     | 2023-02-03 07:16:55 |           |
+| 172.19.0.1 | admin    | api   | OK     | 2023-02-03 06:55:06 |           |
 
 !!! tldr ""
     Run `photoprism audit reset --yes` to clear all audit logs and reset the database table to a clean state.

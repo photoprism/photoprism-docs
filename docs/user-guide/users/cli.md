@@ -34,7 +34,7 @@ As an alternative to the [web user interface](index.md), you can [run the follow
 | `photoprism users reset --yes`              | Removes all accounts and resets the database |
 
 !!! tldr ""
-    Users who experience login problems after upgrading from [development builds](../../getting-started/updates.md#development-preview), or [old releases](../../known-issues.md#new-user-management) prior to November 2022, can run the `photoprism users reset --yes` command to recreate the session and user management database tables so they are compatible with the current version. Note that any [client access tokens](client-credentials.md#access-tokens) and [app passwords](../settings/account.md#apps-and-devices) that users may have created will also be deleted and must be recreated.
+    Users who experience login problems after upgrading from [development builds](../../getting-started/updates.md#development-preview), or [old releases](../../known-issues.md#new-user-management) prior to November 2022, can run the `photoprism users reset --yes` command to [recreate the session](#session-management) and user management database tables so they are compatible with the current version. Note that any [client access tokens](client-credentials.md#access-tokens) and [app passwords](../settings/account.md#apps-and-devices) that users may have created will also be deleted and must be recreated.
 
 ### Command Options
 

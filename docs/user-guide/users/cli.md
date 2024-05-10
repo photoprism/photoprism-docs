@@ -95,10 +95,10 @@ docker compose exec photoprism photoprism users ls --help
 
 ## Viewing Login Attempts
 
-For security reasons, authentication logs are not visible on the regular web user interface and can only be viewed in the application service logs or searched in a terminal using the the following CLI command:
+For security reasons, the authentication logs are not accessible from the web user interface. They can only be viewed in the application service logs or by running the following command in a terminal:
 
 ```bash
-docker compose exec photoprism photoprism logins ls [search]
+docker compose exec photoprism photoprism audit logins [username]
 ```
 
 ### Command Options
@@ -121,7 +121,7 @@ You can combine it with these flags to change the output format and the maximum 
 | 172.19.0.1 | admin     | api   | OK     | 2023-02-03 06:55:06 |           |
 
 !!! tldr ""
-    Run `photoprism logins clear` to clear all recorded incidents and reset the database to a clean state.
+    Run `photoprism audit reset --yes` to clear all audit logs and reset the `audit_logins` database table to a clean state.
 
 ## Session Management
 

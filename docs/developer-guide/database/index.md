@@ -1,7 +1,7 @@
 # Database Schema
 
 !!! example ""
-    This schema description is **for illustrative purposes only**, e.g. to generate visual relationship diagrams. It should not be used to update or replace an existing production database.
+    This schematic description is **for illustrative purposes only** and should not be used to update or replace an existing production database.
 
 ## Entity Relationships
 

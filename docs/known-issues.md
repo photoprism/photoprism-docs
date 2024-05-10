@@ -43,7 +43,7 @@ Should you experience problems after upgrading from a [previous release](release
 
 ### New User Management
 
-Session and user management [had been reimplemented](release-notes.md#november-2-2022) in November 2022. If you are upgrading from a Development Preview with a build number between [221102-905925b4d](release-notes.md#november-2-2022) and [220901-f493607b0](https://docs.photoprism.app/release-notes/#september-1-2022), you will need to run the `photoprism users reset --yes` command [in a terminal](getting-started/docker-compose.md#command-line-interface) after the upgrade to recreate the new database tables so that they are compatible with the stable version. This will not affect your pictures or albums.
+The session and user management was [reimplemented in November 2022](release-notes.md#november-2-2022). If you are upgrading from a Development Preview with a build number between [221102-905925b4d](release-notes.md#november-2-2022) and [220901-f493607b0](https://docs.photoprism.app/release-notes/#september-1-2022), you will need to run the `photoprism users reset --yes` command [in a terminal](getting-started/docker-compose.md#command-line-interface) after the upgrade to recreate the new database tables so that they are compatible with the stable version. This will not affect your pictures or albums.
 
 Upgrading from the last stable version should work without any problems. However, if you have already created additional accounts with the previously offered unofficial multi-user support, you will notice that only the main admin account is migrated automatically. Run `photoprism users legacy` [in a terminal](getting-started/docker-compose.md#command-line-interface) to display the legacy accounts so you can migrate them manually if needed.
 

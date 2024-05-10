@@ -7,7 +7,7 @@
 
 ↪ [Entity-Relationship Diagram](schema.md)
 
-## Mermaid Diagram Markup
+## Mermaid Diagram
 
 With [Mermaid.js](https://mermaid-js.github.io/) you can create visual diagrams from this markup file:
 

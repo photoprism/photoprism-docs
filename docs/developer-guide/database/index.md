@@ -1,6 +1,6 @@
 # Database Schema
 
-*Please keep in mind that some information may be outdated or missing, as these docs were automatically generated from the source code. You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.*
+*Note that this schema description is for illustrative purposes only, e.g. to create visual relationship diagrams. It should not be used to update or replace an existing production database. You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.*
 
 ## Entity Relationships
 

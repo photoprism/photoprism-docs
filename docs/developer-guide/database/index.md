@@ -27,3 +27,9 @@ mariadb-dump --no-data --skip-add-locks --skip-comments \
 ```
 
 Please note that the dump we provide is only updated at irregular intervals and should therefore not be used to update or replace an existing production database.
+
+## Schema Migrations
+
+↪ [docs.photoprism.app/developer-guide/database/migrations/](https://docs.photoprism.app/developer-guide/database/migrations/)
+
+↪ [github.com/photoprism/photoprism/tree/develop/internal/migrate](https://github.com/photoprism/photoprism/tree/develop/internal/migrate)

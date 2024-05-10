@@ -26,4 +26,4 @@ mariadb-dump --no-data --skip-add-locks --skip-comments \
  --skip-opt --skip-set-charset photoprism > mariadb.sql
 ```
 
-Note that the dump we provide is only updated at irregular intervals and should therefore not be used to update or replace an existing production database.
+Please note that the dump we provide is only updated at irregular intervals and should therefore not be used to update or replace an existing production database.

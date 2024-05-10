@@ -3,9 +3,9 @@
 !!! example ""
     This schema description is **for illustrative purposes only** and should not be used to update or replace an existing production database.
 
-## Entity Relationships
+## Entity-Relationship Diagram
 
-↪ [Entity-Relationship Diagram](schema.md)
+↪ [docs.photoprism.app/developer-guide/database/schema/](schema.md)
 
 ## Mermaid Markup
 

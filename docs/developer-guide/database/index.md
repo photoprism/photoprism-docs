@@ -1,6 +1,6 @@
 # Database Schema
 
-*Note that this schema description is for illustrative purposes only, e.g. to generate visual relationship diagrams. It should not be used to update or replace an existing production database. You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.*
+*Note that this schema description is for illustrative purposes only, e.g. to generate visual relationship diagrams. It should not be used to update or replace an existing production database.*
 
 ## Entity Relationships
 

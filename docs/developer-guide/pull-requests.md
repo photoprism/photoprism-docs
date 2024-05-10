@@ -6,7 +6,7 @@ Because we want to create the best possible product for our users, we have a set
 submissions are acceptable:
 
 - [ ] **[Features and enhancements](issues.md) must be fully implemented** so that they can be released at any time without additional work
-- [ ] **[Automated unit and/or acceptance tests](code-quality.md#code-that-cannot-be-tested-is-flawed) are mandatory** to ensure the changes work as expected and to reduce repetitive manual work
+- [ ] **[Automated unit and/or acceptance tests](code-quality.md#test-automation-guidelines) are mandatory** to ensure the changes work as expected and to reduce repetitive manual work
 - [ ] **[Frontend components](ui/introduction.md) must be responsive** to work and look properly on phones, tablets, and desktop computers; you must have tested them on [all major browsers](../getting-started/index.md#browsers) and different devices
 - [ ] **[Documentation](documentation.md) and [translation](translations.md) updates** should be provided if needed
 - [ ] In case you submit database-related changes, they must be tested and [compatible](../getting-started/index.md#databases) with [SQLite 3](https://www.sqlite.org/) and [MariaDB 10.5.12+](https://mariadb.org/)
@@ -54,7 +54,7 @@ After you submit your first pull request, you will be asked to accept our Contri
 - [ ] **[Create a pull request](https://help.github.com/articles/creating-a-pull-request/)** with a helpful description of what it does
 - [ ] Wait for us to perform a code review and fix the remaining issues, if any
 - [ ] Update and/or add [documentation](https://docs.photoprism.app/developer-guide/documentation/) if needed
-- [ ] Sign the [Contributor License Agreement (CLA)](#contributor-license-agreement-cla)
+- [ ] Sign the [Contributor License Agreement (CLA)](#contributor-license-agreement)
 
 You can also create a pull request if your changes are not yet complete or working. Just let us know 
 it's in progress, so we don't try to merge them. We can help you with a code review or other feedback 

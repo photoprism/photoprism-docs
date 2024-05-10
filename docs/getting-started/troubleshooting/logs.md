@@ -7,7 +7,7 @@
     **Live Logs**
 
     The continuously updated live logs in *Library* > *Logs* are especially useful for diagnosing indexing and import issues,
-    but also display other types of logs (depending on the [log level](../config-options.md#basic-settings)):
+    but also display other types of logs (depending on the [log level](../config-options.md#logging)):
 
     1. Navigate to *Library*
     2. Open the *Logs* tab

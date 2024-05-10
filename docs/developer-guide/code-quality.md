@@ -37,7 +37,7 @@ We encourage developers to refactor existing code when they notice a specific is
 
 It is best to do this while you are working on the same component anyway, for example to implement a feature or enhancement. This way you can easily validate if the proposed changes make sense and you avoid conflicts with others.
 
-Releasing imperfect code is not a problem as long as it is [accompanied by automated tests](#code-that-cannot-be-tested-is-flawed). This makes it easy to refactor later without breaking anything or requiring detailed knowledge of the requirements and a lot of time for manual testing. Be pragmatic. Done is better than perfect.
+Releasing imperfect code is not a problem as long as it is [accompanied by automated tests](#test-automation-guidelines). This makes it easy to refactor later without breaking anything or requiring detailed knowledge of the requirements and a lot of time for manual testing. Be pragmatic. Done is better than perfect.
 
 Potential [security issues](security/index.md) are an important exception. These should never be ignored. If you find a problem, please [report it to us](https://www.photoprism.app/security-policy) immediately so we can fix it.
 
@@ -51,7 +51,7 @@ Potential [security issues](security/index.md) are an important exception. These
 One of the hardest parts of software development is knowing what to work on.
 Don't get carried away implementing unnecessary abstractions and focusing on scalability optimization before you've even validated the functionality of a feature or component.
 
-Instead of spending a lot of time on something you may not need, focus on user needs and [test automation](#code-that-cannot-be-tested-is-flawed).
+Instead of spending a lot of time on something you may not need, focus on user needs and [test automation](#test-automation-guidelines).
 That way, you'll make sure you're developing the right functionality, and you can [refactor it later](https://martinfowler.com/bliki/DefinitionOfRefactoring.html) for scalability and other non-functional aspects without breaking anything.
 
 Also keep in mind that it's much easier and less effort to maintain small amounts of duplicate code than to choose the wrong abstraction.

@@ -300,7 +300,7 @@ Please note:
 
 1. Not all [video and audio formats](https://caniuse.com/?search=video%20format) can be [played with every browser](browsers.md). For example, [AAC](https://caniuse.com/aac "Advanced Audio Coding") - the default audio codec for [MPEG-4 AVC / H.264](https://caniuse.com/avc "Advanced Video Coding") - is supported natively in Chrome, Safari, and Edge, while it is only optionally supported by the OS in Firefox and Opera.
 2. HEVC/H.265 video files can have a `.mp4` file extension too, which is often associated with AVC only. This is because MP4 is a *container* format, meaning that the actual video content may be compressed with H.264, H.265, or something else. The file extension doesn't really tell you anything other than that it's probably a video file.
-3. MPEG-4 AVC videos are not re-encoded if they exceed the [configured bitrate limit](../../getting-started/advanced/transcoding.md#bitrate-limiting). To reduce the size of AVC videos, you can manually replace the original files with a smaller version or wait for a future release that offers this functionality.
+3. MPEG-4 AVC videos are not re-encoded if they exceed the [configured bitrate limit](../../getting-started/advanced/transcoding.md#bitrate-limit). To reduce the size of AVC videos, you can manually replace the original files with a smaller version or wait for a future release that offers this functionality.
 
 !!! info ""
     **We kindly ask you not to report bugs via *GitHub Issues* unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.**

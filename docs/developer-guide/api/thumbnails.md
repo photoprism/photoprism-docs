@@ -8,7 +8,7 @@ Like most commercial image hosting services, we have chosen to implement a **coo
 - One possible use of cookies may be to prevent the user from intentionally or accidentally sharing confidential thumbnail URLs with others
 - This is possible with most image hosting services/social media sites, and could also be considered a feature if you just want to share a few thumbnails without a lot of bells and whistles
 - Once an image has been downloaded by someone else, blocking the original URL provides little additional security, as digital copies are just as good as the original, see info box below
-- Keeping that in mind, previously shared URLs can be invalidated by [changing the security token in your config](../../getting-started/config-options.md#url-tokens)
+- Keeping that in mind, previously shared URLs can be invalidated by [changing the security token in your config](../../getting-started/config-options.md#security-tokens)
 - This will invalidate the browser cache on all connected devices, requiring previously cached thumbnails to be downloaded again
 - Be aware that frequent token changes result in performance degradation and a poor user experience.
 

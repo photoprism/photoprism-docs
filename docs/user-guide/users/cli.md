@@ -33,6 +33,9 @@ As an alternative to the [web user interface](index.md), you can [run the follow
 | `photoprism users rm [username]`            | Removes a user account                       |
 | `photoprism users reset --yes`              | Removes all accounts and resets the database |
 
+!!! tldr ""
+    Users who experience login problems after upgrading from [development builds](../../getting-started/updates.md#development-preview), or [old releases](../../known-issues.md#new-user-management) prior to November 2022, can run the `photoprism users reset --yes` command to recreate the session and user management database tables so they are compatible with the current version. Note that any [client access tokens](client-credentials.md#access-tokens) and [app passwords](../settings/account.md#apps-and-devices) that users may have created will also be deleted and must be recreated.
+
 ### Command Options
 
 The `users add` and `users mod` commands support these flags to set or change account properties:
@@ -137,4 +140,4 @@ In order to grant limited API access to other applications and services, the `ph
 [Learn more ›](client-credentials.md)
 
 !!! tldr ""
-    Should you experience login problems, for example after upgrading from a [previous release](../../release-notes.md) or [development preview](../../getting-started/updates.md#development-preview), we recommend running the `photoprism auth reset --yes` command [in a terminal](../../getting-started/docker-compose.md#command-line-interface) to reset the `auth_sessions` table to a clean state and force a re-login of all users. Note that this will also delete all client access tokens and any [app passwords](2fa.md#step-3-app-passwords) that users may have created.
+    Should you experience login problems, for example after upgrading from a [previous release](../../release-notes.md) or [development preview](../../getting-started/updates.md#development-preview), we recommend running the `photoprism auth reset --yes` command [in a terminal](../../getting-started/docker-compose.md#command-line-interface) to reset the `auth_sessions` table to a clean state and force a re-login of all users. Note that any [client access tokens](client-credentials.md#access-tokens) and [app passwords](../settings/account.md#apps-and-devices) that users may have created will also be deleted and must be recreated.

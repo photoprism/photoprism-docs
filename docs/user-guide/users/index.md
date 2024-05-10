@@ -3,7 +3,7 @@
 !!! example ""
     [PhotoPrism® Plus](https://www.photoprism.app/editions#compare) includes a web user interface for account and session management, in addition to the [command-line interface](cli.md) available in all editions.
 
-You can add, edit and delete user accounts by navigating to *Settings > Users* as an [Admin](#admin):
+You can add, edit and delete user accounts by navigating to *Settings > Users* as an [Admin](roles.md#admin):
 
 ![Screenshot](img/users.jpg){ class="shadow" }
 

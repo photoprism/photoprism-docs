@@ -121,7 +121,7 @@ You can combine it with these flags to change the output format and the maximum 
 | 172.19.0.1 | admin     | api   | OK     | 2023-02-03 06:55:06 |           |
 
 !!! tldr ""
-    Run `photoprism audit reset --yes` to clear all audit logs and reset the `audit_logins` database table to a clean state.
+    Run `photoprism audit reset --yes` to clear all audit logs and reset the database table to a clean state.
 
 ## Session Management
 

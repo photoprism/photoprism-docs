@@ -1,14 +1,15 @@
 # Database Schema
 
-*Note that this schema description is for illustrative purposes only, e.g. to generate visual relationship diagrams. It should not be used to update or replace an existing production database.*
+!!! example ""
+    This schema description is **for illustrative purposes only**, e.g. to generate visual relationship diagrams. It should not be used to update or replace an existing production database.
 
 ## Entity Relationships
 
 ↪ [Entity-Relationship Diagram](schema.md)
 
-##  Mermaid.js Markup
+## Mermaid Diagram Markup
 
-[Mermaid](https://mermaid-js.github.io/) lets you create diagrams and visualizations using text and code.
+With [Mermaid.js](https://mermaid-js.github.io/) you can create visual diagrams from this markup file:
 
 ↪ [mariadb.mmd](https://github.com/photoprism/photoprism/blob/develop/internal/entity/schema/mariadb.mmd)
 

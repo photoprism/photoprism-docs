@@ -30,6 +30,6 @@ Please note that the dump we provide is only updated at irregular intervals and 
 
 ## Schema Migrations
 
-↪ [docs.photoprism.app/developer-guide/database/migrations/](https://docs.photoprism.app/developer-guide/database/migrations/)
+↪ [docs.photoprism.app/developer-guide/database/migrations/](migrations.md)
 
 ↪ [github.com/photoprism/photoprism/tree/develop/internal/migrate](https://github.com/photoprism/photoprism/tree/develop/internal/migrate)

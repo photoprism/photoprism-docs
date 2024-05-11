@@ -261,7 +261,7 @@ The likelihood of [database corruption](troubleshooting/mariadb.md#server-crashe
 
 However, if you run MariaDB or SQLite on a network drive or an external drive/stick that e.g. has been accidentally removed, it can happen. This is why our documentation explicitly warns about the danger of [using unreliable storage](docker-compose.md#database) for database files.
 
-Some users also configure a *named* or *anonymous* [Docker volume](advanced/docker-volumes.md#mariadb-database) for the database, or mount the wrong path so that their index is lost when they recreate the database container, e.g. after an upgrade.
+Some users also configure a *named* or *anonymous* [Docker volume](advanced/docker-volumes.md#mariadb-database) for the database, or mount the wrong path so that their index is lost when they recreate the database container, e.g. after an update of the Docker image.
 
 ### I've configured an external database, but can't connect?
 

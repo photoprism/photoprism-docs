@@ -255,6 +255,14 @@ If you only have few pictures, concurrent users, and CPU cores, [SQLite](https:/
 
 The main advantage of SQLite is that you don't need to run a separate database server. It is therefore [well suited for testing](../developer-guide/tests.md) and can also be [sufficient for small libraries](../user-guide/library/index.md) with a few thousand files. If you are looking for [scalability and high performance](troubleshooting/performance.md), it is not a good choice.
 
+### Is database corruption a common problem with self-hosting?
+
+The likelihood of [database corruption](troubleshooting/mariadb.md#server-crashes) is generally very low if you follow our documentation. Our team runs many instances/databases and has never had any issues over the years.
+
+However, if you run MariaDB or SQLite on a network drive or an external drive/stick that e.g. has been accidentally removed, it can happen. This is why our documentation explicitly warns about the danger of [using unreliable storage](docker-compose.md#database) for database files.
+
+Some users also configure a *named* or *anonymous* [Docker volume](advanced/docker-volumes.md#mariadb-database) for the database, or mount the wrong path so that their index is lost when they recreate the database container, e.g. after an upgrade.
+
 ### I've configured an external database, but can't connect?
 
 Most often this happens when new users configure `localhost` or `127.0.0.1` as database server host, since these always point back to the current container or computer. So it is not possible to access an external service with such a hostname or an IP address starting with 127. It works only if it is used directly in the container or on the computer where the database server is running. Instead, you must use a hostname or IP address that is accessible from other machines and containers.

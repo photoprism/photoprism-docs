@@ -116,9 +116,7 @@ Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is sup
 
 #### Database ####
 
-Our example includes a pre-configured [MariaDB](https://mariadb.com/) database server. If you remove it 
-and provide no other database server credentials, SQLite database files will be created in the 
-*storage* folder. Local [SSD storage is best](troubleshooting/performance.md#storage) for databases of any kind.
+Our example includes a pre-configured [MariaDB](https://mariadb.com/) database server. If you remove it and provide no other database server credentials, SQLite database files will be created in the *storage* folder. Local [SSD storage is best](troubleshooting/performance.md#storage) for databases of any kind.
 
 Never [store database files](troubleshooting/mariadb.md#corrupted-files) on an unreliable device such as a USB flash drive, SD card, or shared network folder. These may also have [unexpected file size limitations](https://thegeekpage.com/fix-the-file-size-exceeds-the-limit-allowed-and-cannot-be-saved/), which is especially problematic for databases that do not split data into smaller files.
 

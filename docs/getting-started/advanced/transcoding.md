@@ -67,7 +67,7 @@ services:
   photoprism:
     environment:
       PHOTOPRISM_FFMPEG_ENCODER: "intel"
-      PHOTOPRISM_INIT: "intel tensorflow"
+      PHOTOPRISM_INIT: "intel"
       ...
     devices:
       - "/dev/dri:/dev/dri"

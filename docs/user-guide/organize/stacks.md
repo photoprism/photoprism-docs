@@ -18,7 +18,7 @@ Since [videos](video.md) and [Live Photos](video.md#live-photos) are always stac
 You can change your preferences for 2 - 4 in the *Stacks* section under *[Settings > Library](../settings/library.md#stacks)*.
 
 !!! note ""
-    Note that it is **not possible to disable stacking of files with the same name** as this would break important functionality, most notably support for Apple [Live Photos](video.md#live-photos) (which consist of a photo and a video file with the same name), any other multi-format/hybrid formats like RAW/JPEG, and metadata in XMP/JSON sidecar files.
+    Note that it is **not possible to disable stacking of files with the same name** as this would break important functionality, most notably support for Apple [Live Photos](video.md#live-photos) (which consist of a photo and a video file), any other multi-file/hybrid formats like RAW/JPEG, and indexing of metadata from XMP/JSON sidecar files.
 
 ### Are files automatically unstacked when I change the settings?
 

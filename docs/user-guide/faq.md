@@ -179,7 +179,7 @@
 
 ??? question "Some files seem hidden, where are they?"
 
-    If the [quality filter](organize/review.md) is enabled, you might find them in *Photos > Review*. Otherwise, their
+    If the [quality filter](organize/review.md) is enabled, you might find them in *Search > Review*. Otherwise, their
     format may not be supported, they may be corrupted, or they may be stacked with other files if their name,
     exact date & location, or unique image ID indicate they belong to the same photo. You may then unstack
     them if this happened by mistake e.g. because of bad metadata.
@@ -188,14 +188,22 @@
 
 ??? question "For what reasons can files be stacked?"
 
-    1. Files sharing exactly the same file and folder name will always be stacked, for example `/2018/IMG_1234.jpg` and `/2018/IMG_1234.avi`
-    2. Files with related, sequential names like `/2018/IMG_1234 (2).jpg` and `/2018/IMG_1234 (3).jpg` may be stacked as well (optional)
-    3. Pictures were taken at the same GPS position and second (optional)
-    4. Image metadata contains the same *Unique Image ID* or *XMP Instance ID* (optional)
+    1. Files that share the same file and folder name (except for the file extension) are always stacked, for example `/2018/IMG_1234.jpg` and `/2018/IMG_1234.avi`
+    2. Files with sequential names like `/2018/IMG_1234 (2).jpg` and `/2018/IMG_1234 (3).jpg` can be stacked as well (optional)
+    3. File metadata indicates that the pictures were taken at the same position within the same second (optional)
+    4. File metadata includes the same *Unique Image ID* or *XMP Instance ID* (optional)
 
-    You can change the behaviour for 2 - 4 in [*Settings*](settings/library.md).
-    
-    Note that already stacked files are not automatically unstacked when you change the stacking settings.
+    You can change your preferences for 2 - 4 in the *Stacks* section under *[Settings > Library](settings/library.md)*.
+
+    Note that it is **not possible to disable stacking of files with the same name** as this would break important functionality, most notably support for Apple [Live Photos](organize/video.md#live-photos) (which consist of a photo and a video file with the same name), any other multi-format/hybrid formats like RAW/JPEG, and metadata in XMP/JSON sidecar files.
+
+??? question "Are files automatically unstacked when I change the settings?"
+
+    When you change the stacks-related settings under *[Settings > Library](settings/library.md)*, files that are already stacked will **not be unstacked automatically**. This is because unstacking is a resource-intensive operation that requires each file to be re-indexed.
+
+    The result also depends on the exact order in which you unstack the files, as non-media sidecar files, for example, remain bound to the remaining media file in a stack. We consider providing a command for this in a future release and appreciate [any contributions](../developer-guide/index.md) in this regard.
+ 
+    If you are new to PhotoPrism and want to re-index your library with other settings, you can run the `photoprism reset` [command in a terminal](../getting-started/docker-compose.md#command-line-interface) to reset the index and start from scratch. [Learn more ›](../getting-started/docker-compose.md#examples)
 
 ??? question "I already indexed some files. Why are Folders, Calendar and Moments still empty?"
 
@@ -356,3 +364,4 @@
     connect as well.
 
 *[sidecar files]: additional files that sit next to a main file
+*[same position]: GPS latitude and longitude

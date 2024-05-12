@@ -10,7 +10,7 @@ Please note that not all [video and audio formats](https://caniuse.com/?search=v
     In case [FFmpeg is disabled](../settings/advanced.md#disable-ffmpeg) or not installed, videos cannot be indexed because still images cannot be created.
     You should also have [ExifTool enabled](../../getting-started/config-options.md#feature-flags) to extract metadata such as duration, resolution, and codec.
 
-## Live Photos ##
+## Live Photos
 
 Short videos up to 3 seconds are categorized and displayed as *Live Photos*, regardless of your phone's make and model.
 You can recognize this by the :material-adjust: icon that appears in the upper left corner.
@@ -20,7 +20,7 @@ You can limit a search to *Live Photos* by using the `type:live` filter or the k
 
 ![Screenshot](img/live-photo-light.jpg){ class="shadow" }
 
-## Transcoding ##
+## Transcoding
 
 For maximum browser compatibility, PhotoPrism can transcode video codecs and containers [supported by FFmpeg](https://www.ffmpeg.org/documentation.html) to [MPEG-4 AVC](https://en.wikipedia.org/wiki/MPEG-4), as well as extract still images for thumbnail creation:
 

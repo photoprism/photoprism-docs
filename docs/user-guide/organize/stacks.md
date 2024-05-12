@@ -1,24 +1,41 @@
 # Stacks
 
-Stacks are groups of files that have the same origin but differ in quality, format, size, or color. Go to *[Settings > Library](../settings/library.md)* to change the stacking settings for your library.
+Stacks are groups of files that have the same origin but differ in quality, format, size, or color. Go to *[Settings > Library](../settings/library.md)* to change the stacks-related settings for your library.
 
 To see all images with a group of related files, open *Stacks* in the expanded *Search* navigation:
 
 ![Screenshot](img/stack-page-dark.jpg){ class="shadow" }
 
-Note that *[Videos](video.md)* and *[Live Photos](video.md#live-photos)*, which always have a preview image stacked with them, will not be displayed on the *Stacks* page.
+Since [videos](video.md) and [Live Photos](video.md#live-photos) are always stacked with a still image, they are not included in the search results when you navigate to *Search > Stacks*.
 
-## For what reasons can files be stacked?
+### For what reasons can files be stacked?
 
-1. Files that have exactly the same file and folder name are always stacked, for example `/2018/IMG_1234.jpg` and `/2018/IMG_1234.avi`
-2. Files with related, sequential names like `/2018/IMG_1234 (2).jpg` and `/2018/IMG_1234 (3).jpg` may be stacked as well (optional)
-3. Pictures were taken at the same GPS position and second (optional)
-4. Image metadata contains the same *Unique Image ID* or *XMP Instance ID* (optional)
+1. Files that share the same file and folder name (except for the file extension) are always stacked, for example `/2018/IMG_1234.jpg` and `/2018/IMG_1234.avi`
+2. Files with sequential names like `/2018/IMG_1234 (2).jpg` and `/2018/IMG_1234 (3).jpg` can be stacked as well (optional)
+3. File metadata indicates that the pictures were taken at the same position within the same second (optional)
+4. File metadata includes the same *Unique Image ID* or *XMP Instance ID* (optional)
 
-You can change the behaviour for 2 - 4 in *[Settings > Library](../settings/library.md)*.
+You can change your preferences for 2 - 4 in the *Stacks* section under *[Settings > Library](../settings/library.md)*.
 
-!!! warning ""
-    When you change the stacking settings, already stacked files will not be unstacked automatically.
+!!! note ""
+    Note that it is **not possible to disable stacking of files with the same name** as this would break important functionality, most notably support for Apple [Live Photos](video.md#live-photos) (which consist of a photo and a video file with the same name), any other multi-format/hybrid formats like RAW/JPEG, and metadata in XMP/JSON sidecar files.
+
+### Are files automatically unstacked when I change the settings?
+
+When you change the stacks-related settings under [*Settings > Library*](../settings/library.md#stacks), files that are already stacked will **not be unstacked automatically**. This is because unstacking is a resource-intensive operation that requires each file to be re-indexed.
+
+The result also depends on the exact order in which you unstack the files, as non-media sidecar files, for example, remain bound to the remaining media file in a stack. We consider providing a command for this in a future release and appreciate [any contributions](../../developer-guide/index.md) in this regard.
+
+!!! tldr ""
+    If you are new to PhotoPrism and want to re-index your library with other settings, you can run the `photoprism reset` [command in a terminal](../../getting-started/docker-compose.md#command-line-interface) to reset the index and start from scratch. [Learn more ›](../../getting-started/docker-compose.md#examples)
+
+### Which sequential naming patterns are supported?
+
+If stacking by *Sequential Name* [has been enabled](../settings/library.md#stacks), files with e.g. the following names would be stacked with the file `/2018/IMG_1234.jpg`:
+
+- `/2018/IMG_1234 (2).jpg` `/2018/IMG_1234 (3).jpg`
+- `/2018/IMG_1234 copy.jpg` `/2018/IMG_1234 copy 1.jpg` `/2018/IMG_1234 copy 2.jpg`
+- `/2018/IMG_1234 (-2.7)` `/2018/IMG_1234 (+3.3).jpg` `/2018/IMG_1234(-2.7).jpg`  `/2018/IMG_1234(+3.3).jpg`
 
 ## Browse Related Files
 
@@ -76,3 +93,5 @@ Now, both files appear in our views.
 5. Confirm
 
    ![Screenshot](img/stacks-edit-dark.jpg){ class="shadow" } 
+
+*[same position]: GPS latitude and longitude

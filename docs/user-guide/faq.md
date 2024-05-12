@@ -193,7 +193,7 @@
     3. File metadata indicates that the pictures were taken at the same position within the same second (optional)
     4. File metadata includes the same *Unique Image ID* or *XMP Instance ID* (optional)
 
-    You can change your preferences for 2 - 4 in the *Stacks* section under *[Settings > Library](settings/library.md)*.
+    You can change your preferences for 2 - 4 in the *Stacks* section under *[Settings > Library](settings/library.md#stacks)*.
 
     Note that it is **not possible to disable stacking of files with the same name** as this would break important functionality, most notably support for Apple [Live Photos](organize/video.md#live-photos) (which consist of a photo and a video file with the same name), any other multi-format/hybrid formats like RAW/JPEG, and metadata in XMP/JSON sidecar files.
 

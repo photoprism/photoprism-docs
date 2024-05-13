@@ -32,7 +32,7 @@ Automatically creates JPEG or PNG preview images for other file types so they ca
 PhotoPrism offers you the following optional stacking methods, which you can choose to enable based on your personal preferences:
 
 * :material-clock-outline: **Place & Time** stacks pictures taken at same GPS position and second
-* :material-fingerprint: **Unique ID**, matches the *Unique Image ID* (Exif), *Document ID*, or *Instance ID* (XMP)
+* :material-fingerprint: **Unique ID**, matches the *ImageUniqueID* (Exif) or *Instance ID* (XMP)
 * :material-format-list-numbered-rtl: **Sequential Name**, for example `/2018/IMG_1234 (2).jpg` and `/2018/IMG_1234 (3).jpg`
 
 Files that share the same file and folder name (except for the file extension) are always stacked, for example `/2018/IMG_1234.jpg` and `/2018/IMG_1234.avi`.

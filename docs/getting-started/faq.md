@@ -205,7 +205,7 @@ Note that these packages [must be updated manually](https://dl.photoprism.app/pk
 
 There are currently [no official LXC images](https://github.com/photoprism/photoprism/issues/147) available from us. However, you can use [our installation packages](#installation-packages) together with [the documentation we provide](https://dl.photoprism.app/pkg/linux/README.html) to set them up in [a base image of your choice](https://images.linuxcontainers.org/).
 
-Since Docker and LXC are pretty much the same technology, you can also convert our Docker image to the LXC format, for example using the following commands:
+Since Docker and LXC are pretty much the same technology, you can also convert our Docker image to the LXC format, e.g. by running the following commands:
 
 ```bash
 apt update

@@ -205,6 +205,22 @@ Note that these packages [must be updated manually](https://dl.photoprism.app/pk
 
 There are currently [no official LXC images](https://github.com/photoprism/photoprism/issues/147) available from us. However, you can use [our installation packages](#installation-packages) together with [the documentation we provide](https://dl.photoprism.app/pkg/linux/README.html) to set them up in [a base image of your choice](https://images.linuxcontainers.org/).
 
+Since Docker and LXC are pretty much the same technology, you can also convert our Docker image to the LXC format, for example using the following commands:
+
+```bash
+apt update
+apt install lxc umoci skopeo
+lxc-create photoprism -t oci -- --url docker://photoprism/photoprism:latest
+```
+
+PhotoPrism can then be configured and started like any other LXC container:
+
+```bash
+lxc-start --name=photoprism -- /opt/photoprism/bin/photoprism start
+```
+
+Please note, though, that the network, storage and database configuration requires detailed knowledge of LXC. We therefore only recommend this approach if you can complete the setup without help from our documentation or support from our team.
+
 #### BSD Ports ####
 
 For FreeBSD and TrueNAS CORE (formerly FreeNAS) users, an [unofficial port is available](https://docs.photoprism.app/getting-started/freebsd/) that builds PhotoPrism from source. It will also compile and install the required TensorFlow libraries for you.

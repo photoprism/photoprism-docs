@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 240514-7bec34468</span>
+<span class="build">Build 240515-ca78305ea</span>
 
 What's new?
 
@@ -14,6 +14,7 @@ What's new?
 - Index: [Added a config option for scheduling automatic library rescans](https://github.com/photoprism/photoprism/issues/4251)
 - Backups: [Added config options for creating backups at regular intervals](https://github.com/photoprism/photoprism/issues/4243)
 - Moments: [Background worker no longer creates backups to avoid disk activity](https://github.com/photoprism/photoprism/issues/4237)
+- Docker: [Upgraded base image from Ubuntu 23.10 to Ubuntu 24.04 LTS](https://github.com/photoprism/photoprism/issues/4084)
 - Security: [Go has been updated to the latest stable release v1.22.3](https://github.com/golang/go/issues?q=milestone%3AGo1.22.3)
 
 ### April 20, 2024 ###

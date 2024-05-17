@@ -5,7 +5,7 @@ Before you proceed, make sure you have [Docker](https://store.docker.com/search?
 
 Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is supported as a drop-in replacement for Docker Compose on Red Hat-compatible Linux distributions like RHEL, CentOS, Fedora, AlmaLinux, and Rocky Linux.
 
-### Step 1: Configure ###
+### Step 1: Configure
 
 === "Linux"
 
@@ -114,20 +114,23 @@ Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is sup
     Never use easy-to-guess passwords or default values like `insecure` on publicly accessible servers.
     There is no default [in case no password was provided](../user-guide/users/cli.md#changing-a-password). A minimum length of 8 characters is required.
 
-#### Database ####
+#### Database
 
 Our example includes a pre-configured [MariaDB](https://mariadb.com/) database server. If you remove it and provide no other database server credentials, SQLite database files will be created in the *storage* folder. Local [SSD storage is best](troubleshooting/performance.md#storage) for databases of any kind.
 
 Never [store database files](troubleshooting/mariadb.md#corrupted-files) on an unreliable device such as a USB flash drive, SD card, or shared network folder. These may also have [unexpected file size limitations](https://thegeekpage.com/fix-the-file-size-exceeds-the-limit-allowed-and-cannot-be-saved/), which is especially problematic for databases that do not split data into smaller files.
 
 !!! tldr ""
-    It is **not possible to change the database password** with `MARIADB_PASSWORD` after MariaDB has been started for the first time. However, choosing a secure password is not essential if you don't [expose the database to other apps or hosts](troubleshooting/mariadb.md#cannot-connect). To enable [automatic schema updates](troubleshooting/mariadb.md#auto-upgrade) after upgrading to a new major version, make sure that  `MARIADB_AUTO_UPGRADE` is set to a non-empty value in your `docker-compose.yml`.
+    You cannot change the database password with `MARIADB_PASSWORD` after MariaDB has been started for the first time. However, choosing a secure password is not essential if you do not share the database with other applications or [expose it over a network](troubleshooting/mariadb.md#cannot-connect). To enable [automatic schema updates](troubleshooting/mariadb.md#auto-upgrade) when upgrading to a new major version, please make sure that `MARIADB_AUTO_UPGRADE` is set to a non-empty value.
 
-#### Volumes ####
+#### Volumes
 
 You must explicitly [specify the directories](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes) you want to mount from your host, since PhotoPrism can't see files in folders that have not been shared. This is an important security feature and allows for a flexible configuration without having to change any other variables.
 
-##### /photoprism/originals #####
+!!! danger ""
+    It is important that all folders are mounted to persistent volumes. We recommend changing the relative paths used in our examples to absolute paths and to avoid using [named or anonymous volumes](https://docs.docker.com/compose/compose-file/07-volumes/#example) in order to prevent potential data loss when the container is recreated, e.g. [after an update](updates.md#docker-compose) of the Docker image.
+
+##### /photoprism/originals
 
 The *originals* folder contains your original photo and video files. `~/Pictures` will be mounted by default, where `~` is a shortcut for your home directory:
 
@@ -165,7 +168,7 @@ On Windows, prefix the host path with the drive letter and use `/` instead of `\
     in `docker-compose.yml` for this. In addition, you can [mount volumes with the `:ro` flag](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-3)
     so that writes are also blocked by Docker.
 
-##### /photoprism/storage #####
+##### /photoprism/storage
 
 The *storage* folder is used to save config, cache, thumbnail, and sidecar files. It must always be specified so that you do not lose these files after a restart or upgrade.
 If available, we recommend you put the *storage* folder on a [local SSD drive](troubleshooting/performance.md#storage) for best performance. You can otherwise keep the default and store the files in a folder relative to the current directory:
@@ -181,7 +184,7 @@ services:
     Never configure the *storage* folder to be inside the *originals* folder unless the name starts with a `.` to indicate that it is hidden.
     Should you later want to move your instance to another host, the easiest and most time-saving way is to copy the entire *storage* folder along with your *originals* and *database*.
 
-##### /photoprism/import #####
+##### /photoprism/import
 
 You can optionally mount an *import* folder from which files can be transferred to the *originals* folder in a structured way that avoids duplicates, for example:
 
@@ -197,7 +200,7 @@ services:
 !!! tldr ""
     Even if you don't specify an *import* folder, adding files via [Web Upload](../user-guide/library/upload.md) and [WebDAV](../user-guide/sync/webdav.md) remains possible unless [read-only mode](config-options.md) is enabled or the [features have been disabled](../user-guide/settings/general.md).
 
-### Step 2: Start the server ###
+### Step 2: Start the server
 
 Open a terminal and change to the folder in which the `docker-compose.yml` file has been saved.[^1]
 Run this command to start the application and database services in the background:
@@ -221,9 +224,7 @@ Enabling [public mode](config-options.md) will disable authentication.
     ad blocker, or firewall settings](troubleshooting/index.md#connection-fails).
 
 !!! tldr ""
-    It is not possible to change the password via `PHOTOPRISM_ADMIN_PASSWORD` after the app has been 
-    started for the first time. You may run `docker compose exec photoprism photoprism passwd [username]` 
-    in a terminal to change an existing password. You can also reset your database for a clean start.
+    You cannot change the password with `PHOTOPRISM_ADMIN_PASSWORD` after the app has been started for the first time. To change the *admin* password, run the `docker compose exec photoprism photoprism passwd [username]` command in a terminal. You can also run `docker compose exec photoprism photoprism reset` to delete the existing index database and start from scratch.
 
 The server port and other [config options](config-options.md) can be changed in `docker-compose.yml` at any time.
 Remember to restart the services for changes to take effect:
@@ -233,7 +234,7 @@ docker compose stop
 docker compose up -d
 ```
 
-### Step 3: Index Your Library ###
+### Step 3: Index Your Library
 
 Our [First Steps 👣](../user-guide/first-steps.md) tutorial guides you through the user interface and settings to ensure your library is indexed according to your individual preferences.
 
@@ -259,7 +260,7 @@ changed, added, or removed. This can also be automated using CLI commands and a 
 
 Easy, isn't it?
 
-### PhotoPrism® Plus ###
+### PhotoPrism® Plus
 
 Our members can activate [additional features](https://link.photoprism.app/membership) by logging in with the [admin user created during setup](config-options.md#authentication) and then following the steps [described in our activation guide](https://www.photoprism.app/kb/activation). Thank you for your support, which has been and continues to be essential to the success of the project! :octicons-heart-fill-24:{ .heart .purple }
 
@@ -268,7 +269,7 @@ Our members can activate [additional features](https://link.photoprism.app/membe
 !!! example ""
     We recommend that new users install our free Community Edition before [signing up for a membership](https://link.photoprism.app/membership).
 
-### Troubleshooting ###
+### Troubleshooting
 
 If your server runs out of memory, the index is frequently locked, or other system resources are running low:
 
@@ -284,7 +285,7 @@ Other issues? Our [troubleshooting checklists](troubleshooting/index.md) help yo
     [Sponsors](https://www.photoprism.app/membership) receive direct [technical support](https://www.photoprism.app/contact) via email.
     Before [submitting a support request](index.md#getting-support), try to [determine the cause of your problem](troubleshooting/index.md).
 
-### Command-Line Interface ###
+### Command-Line Interface
 
 #### Introduction
 

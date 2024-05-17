@@ -5,7 +5,7 @@ Before you proceed, make sure you have [Docker](https://store.docker.com/search?
 
 Alternatively, [Podman](https://podman.io/) is supported as a drop-in replacement for Docker on Red Hat-compatible Linux distributions like RHEL, CentOS, Fedora, AlmaLinux, and Rocky Linux.
 
-### Step 1: Start the server ###
+### Step 1: Start the server
 
 === "Linux"
 
@@ -72,16 +72,14 @@ Enabling [public mode](config-options.md) will disable authentication.
     ad blocker, or firewall settings](troubleshooting/index.md#connection-fails).
 
 !!! tldr ""
-    It is not possible to change the password via `PHOTOPRISM_ADMIN_PASSWORD` after the app has been 
-    started for the first time. You may run `docker exec -ti photoprism photoprism passwd [username]`
-    in a terminal to change an existing password. You can also reset your database for a clean start. 
+    You cannot change the password with `PHOTOPRISM_ADMIN_PASSWORD` after the app has been started for the first time. To change the *admin* password, run the `docker exec -ti photoprism photoprism passwd [username]` command in a terminal. You can also run `docker exec -ti photoprism photoprism reset` to delete the existing index database and start from scratch.
 
-#### Volumes ####
+#### Volumes
 
 Since the app is running inside a container, you have to explicitly [mount the host folders](https://docs.docker.com/storage/bind-mounts/) you want to use.
 PhotoPrism won't be able to see folders that have not been mounted. That's an important security feature.
 
-##### /photoprism/originals #####
+##### /photoprism/originals
 
 The *originals* folder contains your original photo and video files. They are mounted from `~/Pictures` in the example
 above, where `~` is a shortcut for your home directory.
@@ -99,7 +97,7 @@ be mounted as sub folders of `/photoprism/originals`:
     are disabled, e.g. [WebDAV](../user-guide/sync/webdav.md), uploading and deleting files. Run the app with `-e PHOTOPRISM_READONLY="true"` 
     for this. You can [mount a folder with the `:ro` flag](https://docs.docker.com/storage/bind-mounts/#use-a-read-only-bind-mount) to make Docker block write operations as well.
 
-##### /photoprism/storage #####
+##### /photoprism/storage
 
 SQLite, config, cache, thumbnail and sidecar files are saved in the *storage* folder:
 
@@ -113,7 +111,7 @@ Using our example, an [anonymous volume](https://docs.docker.com/storage/bind-mo
 !!! tldr ""
     Should you later want to move your instance to another host, the easiest and most time-saving way is to copy the entire *storage* folder along with your originals and database.
 
-##### /photoprism/import #####
+##### /photoprism/import
 
 You can optionally mount an *import* folder from which files can be transferred to the *originals* folder
 in a structured way that avoids duplicates:
@@ -126,7 +124,7 @@ in a structured way that avoids duplicates:
     and [WebDAV](../user-guide/sync/webdav.md) remains possible, unless [read-only mode](config-options.md)
     is enabled or the [features have been disabled](../user-guide/settings/general.md).
 
-### Step 2: First steps ###
+### Step 2: First steps
 
 Our [First Steps 👣](../user-guide/first-steps.md) tutorial guides you through the user interface and settings to ensure your library is indexed according to your individual preferences.
 
@@ -151,7 +149,7 @@ changed, added, or removed. This can also be automated using CLI commands and a 
 
 Easy, isn't it?
 
-### Step 3: When you're done... ###
+### Step 3: When you're done...
 
 You can stop PhotoPrism and start it again using the following commands:
 
@@ -166,7 +164,7 @@ To remove the container completely:
 docker rm -f photoprism
 ```
 
-### PhotoPrism® Plus ###
+### PhotoPrism® Plus
 
 Our members can activate [additional features](https://link.photoprism.app/membership) by logging in with the [admin user created during setup](config-options.md#authentication) and then following the steps [described in our activation guide](https://www.photoprism.app/kb/activation). Thank you for your support, which has been and continues to be essential to the success of the project! :octicons-heart-fill-24:{ .heart .purple }
 
@@ -175,7 +173,7 @@ Our members can activate [additional features](https://link.photoprism.app/membe
 !!! example ""
     We recommend that new users install our free Community Edition before [signing up for a membership](https://link.photoprism.app/membership).
 
-### Troubleshooting ###
+### Troubleshooting
 
 If your server runs out of memory, the index is frequently locked, or other system resources are running low:
 
@@ -191,7 +189,7 @@ Other issues? Our [troubleshooting checklists](troubleshooting/index.md) help yo
     [Sponsors](https://www.photoprism.app/membership) receive direct [technical support](https://www.photoprism.app/contact) via email.
     Before [submitting a support request](index.md#getting-support), try to [determine the cause of your problem](troubleshooting/index.md).
 
-### Command-Line Interface ###
+### Command-Line Interface
 
 #### Introduction
 

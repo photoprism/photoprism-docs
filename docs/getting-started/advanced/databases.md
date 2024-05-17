@@ -14,7 +14,7 @@ Our [configuration examples](https://dl.photoprism.app/docker/) are generally ba
 
 Local Solid-State Drives (SSDs) are [best for databases](../troubleshooting/performance.md#storage) of any kind. Never store database files on an unreliable device such as a USB flash drive, SD card, or shared network folder. These may also have [unexpected file size limitations](https://thegeekpage.com/fix-the-file-size-exceeds-the-limit-allowed-and-cannot-be-saved/), which is especially problematic for databases that do not split data into smaller files.
 
-Please do not use a *named* or *anonymous* [Docker volume](https://docs.docker.com/compose/compose-file/07-volumes/#example) for storing MariaDB database files and check the mount path of the volume if you use a custom database image (it may not always be `/var/lib/mysql`), as both can lead to data loss when the database container is recreated, e.g. after an update of the Docker image.
+Please do not use a named or anonymous [Docker volume](https://docs.docker.com/compose/compose-file/07-volumes/#example) for storing MariaDB database files and check the mount path of the volume if you use a custom database image (it may not always be `/var/lib/mysql`), as both can lead to data loss when the database container is recreated, e.g. [after an update](../updates.md#docker-compose) of the Docker image.
 
 ## Configuration ##
 

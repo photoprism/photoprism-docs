@@ -33,7 +33,7 @@ Before reporting a bug:
 
 #### MariaDB
 
-Should MariaDB get stuck in a restart loop and PhotoPrism can't connect to it, this indicates a [memory](docker.md#adding-swap),
+Should MariaDB get stuck in a restart loop and PhotoPrism cannot connect to it, this indicates a [memory](docker.md#adding-swap),
 [filesystem](docker.md#file-permissions), or other [permission issue](docker.md#kernel-security):
 
 ```
@@ -143,7 +143,7 @@ connection or the server was started only a few seconds ago. In case this does n
 
 ### Cannot Log In ###
 
-If [password authentication is enabled](../config-options.md#authentication) and the user interface loads, but you can't log in with what you assume is the correct password:
+If [password authentication is enabled](../config-options.md#authentication) and the user interface loads, but you cannot log in with what you assume is the correct password:
 
 - [ ] There is a problem with the [integrity, stability or connection of the database](mariadb.md) that you should be able to diagnose by [watching the logs for errors and warnings](docker.md#viewing-logs)
 - [ ] You had too many failed login attempts, therefore another attempt from your computer is temporarily not possible
@@ -185,7 +185,7 @@ If you [followed our step-by-step guide](../../user-guide/sync/webdav.md) and st
 ### Missing Pictures ###
 
 If you have indexed your library and some images or videos are missing, first [check *Library > Errors* for errors and warnings](logs.md).
-In case the application logs don't contain anything helpful:
+In case the application logs do not contain anything helpful:
 
 - [ ] The files exceed the [size limit in megabyte or the resolution limit in megapixels](../config-options.md#storage)
 - [ ] The files have [bad filesystem permissions or the wrong owner](docker.md#file-permissions), so they cannot be opened
@@ -205,7 +205,7 @@ In case the application logs don't contain anything helpful:
 - [ ] Multiple files were [stacked](../../user-guide/organize/stacks.md#for-what-reasons-can-files-be-stacked) based on their metadata or file names
 - [ ] The [private](../../user-guide/organize/private.md) or [archived](../../user-guide/organize/archive.md) status was restored from a backup
 - [ ] The NSFW filter is enabled, so they were marked as [private](../../user-guide/organize/private.md)
-- [ ] You are not signed in as admin, so you can't see everything
+- [ ] You are not signed in as admin, so you cannot see everything
 - [ ] You try to index a shared drive on a remote server, but the server is offline
 - [ ] Somebody has deleted files without telling you
 - [ ] Your server does not have [at least 4 GB of swap](docker.md#adding-swap) or a [hard memory limit](../faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory) is configured, which may cause unexpected restarts when the indexer temporarily needs more memory to process large files
@@ -244,7 +244,7 @@ If search results are incorrect, for example, in the wrong order or not filtered
 ### Broken Thumbnails ###
 
 If some pictures have broken or missing thumbnails, first [check *Library > Errors* for errors and warnings](logs.md).
-In case the application logs don't contain anything helpful:
+In case the application logs do not contain anything helpful:
 
 - [ ] The issue can be resolved by reloading the page or clearing the browser cache
 - [ ] You browse [non-JPEG](../faq.md#what-media-file-types-are-supported) files in *Library > Originals* which have an icon but no preview
@@ -252,11 +252,11 @@ In case the application logs don't contain anything helpful:
 - [ ] The sizes in *Settings > Advanced* have been changed so the request can't be fulfilled
 - [ ] FFmpeg and/or RAW converters are disabled in *Settings > Advanced* (enable them)
 - [ ] *Convert to JPEG* is disabled in *Settings > Library* (enable it)
-- [ ] [Your (virtual) server disk is full](docker.md#disk-space) (add storage)
-- [ ] A disk usage or the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (remove or increase it)
+- [ ] [Your (virtual) server disk is full](docker.md#disk-space), or a quota/[inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (increase it)
 - [ ] The *storage* folder [is not writable or mounted read-only](docker.md#file-permissions) (change [permissions](docker.md#file-permissions))
-- [ ] Files were deleted manually, for example to free up disk space
-- [ ] Files can't be opened, e.g. because the file system permissions have been changed
+- [ ] Your cache [storage folder](../docker-compose.md#photoprismstorage) is not accessible, has been renamed, or was [not mounted on a permanent volume](../advanced/docker-volumes.md#storage-folder), so the [cached thumbnails](../../user-guide/backups/folders.md#thumbnails) have been lost after a restart (run the `photoprism thumbs` command [in a terminal](../docker-compose.md#command-line-interface) to regenerate them after fixing this)
+- [ ] Originals or thumbnail files were deleted manually, for example to free up disk space
+- [ ] Files cannot be opened, e.g. because the file system permissions have been changed
 - [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder
 - [ ] Some thumbnails could not be created because you didn't [configure at least 4 GB of swap](docker.md#adding-swap)
 - [ ] Your browser cannot communicate properly with the server, e.g. because a [reverse proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
@@ -285,8 +285,7 @@ If videos do not play and/or you only see a white/black area when you open a vid
 - [ ] AVC support or related JavaScript features have been disabled in your browser (check the settings and try another browser)
 - [ ] It is a large non-AVC video that needs to be transcoded first (wait or [run `photoprism convert` to pre-transcode videos](../docker-compose.md#command-line-interface))
 - [ ] An ad blocker or other plugins block requests (disable them or add an exception)
-- [ ] [Your (virtual) server disk is full](docker.md#disk-space) (add storage)
-- [ ] A disk usage or the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (remove or increase it)
+- [ ] [Your (virtual) server disk is full](docker.md#disk-space), or a quota/[inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (increase it)
 - [ ] The *storage* folder [is not writable or mounted read-only](docker.md#file-permissions) (change [permissions](docker.md#file-permissions))
 - [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder (check if the files are accessible)
 - [ ] Your browser cannot communicate properly with the server, e.g. because a [reverse proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)

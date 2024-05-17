@@ -67,7 +67,7 @@ services:
       MARIADB_PASSWORD: "compo$$e"
 ```
 
-Also note that it is **not possible to change the database password** with `MARIADB_PASSWORD` after MariaDB has been started for the first time.
+Also note that you **cannot change the database password** with `MARIADB_PASSWORD` after MariaDB has been started for the first time.
 
 In this case, you can either delete the database storage folder and restart the database service or follow the instructions under [Lost Root Password](#lost-root-password).
 

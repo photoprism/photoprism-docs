@@ -196,12 +196,11 @@ In case the application logs do not contain anything helpful:
 - [ ] The indexer has skipped the files because they have an incorrect extension that does not match their actual format, e.g. [JPEG images with a `.heic` extension](https://github.com/photoprism/photoprism-contrib/tree/main/scripts/Batch%20Rename)
 - [ ] The files are [ignored based on pattern in a `.ppignore` file](../../user-guide/library/originals.md#ignoring-files-and-folders)
 - [ ] They [are in *Library > Hidden*](https://try.photoprism.app/library/hidden) because thumbnails could not be created:
-    - [ ] *Convert to JPEG* is [disabled in *Settings > Library*](../../user-guide/settings/library.md) (enable it)
-    - [ ] FFmpeg and/or RAW converters are [disabled in *Settings > Advanced*](../../user-guide/settings/advanced.md)
+    - [ ] *Preview Images* are disabled under *Settings > Library* (enable them)
+    - [ ] FFmpeg and/or RAW converters are [disabled under *Settings > Advanced*](../../user-guide/settings/advanced.md)
     - [ ] The file is broken, e.g. because of [*short Huffman data*](https://github.com/golang/go/issues/10447) (try to fix it)
-    - [ ] [Your (virtual) server disk is full](docker.md#disk-space) (add storage)
-    - [ ] [The *storage* folder is not writable](docker.md#file-permissions) (change [permissions](docker.md#file-permissions))
-    - [ ] A disk usage or the [inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (remove or increase it)
+    - [ ] Your [*storage* folder is full](docker.md#disk-space), or a quota/[inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (increase it)
+    - [ ] Your [*storage* folder is not writable or mounted read-only](docker.md#file-permissions) (change [permissions](docker.md#file-permissions))
 - [ ] Multiple files were [stacked](../../user-guide/organize/stacks.md#for-what-reasons-can-files-be-stacked) based on their metadata or file names
 - [ ] The [private](../../user-guide/organize/private.md) or [archived](../../user-guide/organize/archive.md) status was restored from a backup
 - [ ] The NSFW filter is enabled, so they were marked as [private](../../user-guide/organize/private.md)
@@ -247,14 +246,14 @@ If some pictures have broken or missing thumbnails, first [check *Library > Erro
 In case the application logs do not contain anything helpful:
 
 - [ ] The issue can be resolved by reloading the page or clearing the browser cache
-- [ ] You browse [non-JPEG](../faq.md#what-media-file-types-are-supported) files in *Library > Originals* which have an icon but no preview
-- [ ] *Dynamic Previews* are enabled in *Settings > Advanced*, but the server is not powerful enough
+- [ ] You browse [non-JPEG](../faq.md#what-media-file-types-are-supported) files under *Library > Originals* which have an icon but no preview
+- [ ] *Preview Images* are disabled under *Settings > Library* (enable them)
+- [ ] *Dynamic Previews* are disabled under *Settings > Advanced* or your server is not powerful enough
 - [ ] The sizes in *Settings > Advanced* have been changed so the request can't be fulfilled
-- [ ] FFmpeg and/or RAW converters are disabled in *Settings > Advanced* (enable them)
-- [ ] *Convert to JPEG* is disabled in *Settings > Library* (enable it)
-- [ ] [Your (virtual) server disk is full](docker.md#disk-space), or a quota/[inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (increase it)
-- [ ] The *storage* folder [is not writable or mounted read-only](docker.md#file-permissions) (change [permissions](docker.md#file-permissions))
-- [ ] Your cache [storage folder](../docker-compose.md#photoprismstorage) is not accessible, has been renamed, or was [not mounted on a permanent volume](../advanced/docker-volumes.md#storage-folder), so the [cached thumbnails](../../user-guide/backups/folders.md#thumbnails) have been lost after a restart (run the `photoprism thumbs` command [in a terminal](../docker-compose.md#command-line-interface) to regenerate them after fixing this)
+- [ ] FFmpeg and/or RAW converters are disabled under *Settings > Advanced* (enable them)
+- [ ] Your [*storage* folder is full](docker.md#disk-space), or a quota/[inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (increase it)
+- [ ] Your [*storage* folder is not writable or mounted read-only](docker.md#file-permissions) (change [permissions](docker.md#file-permissions))
+- [ ] Your [cache *storage* folder](../docker-compose.md#photoprismstorage) is not accessible, has been renamed, or was [not mounted on a permanent volume](../advanced/docker-volumes.md#storage-folder), so the [cached thumbnails](../../user-guide/backups/folders.md#thumbnails) have been lost after a restart (run the `photoprism thumbs` command [in a terminal](../docker-compose.md#command-line-interface) to regenerate them after fixing this)
 - [ ] Originals or thumbnail files were deleted manually, for example to free up disk space
 - [ ] Files cannot be opened, e.g. because the file system permissions have been changed
 - [ ] Files are stored on an unreliable device such as a USB flash drive or a shared network folder

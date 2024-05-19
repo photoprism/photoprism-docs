@@ -6,7 +6,7 @@
 ### Development Preview ###
 <span class="build">Build 240519-1790990dc</span>
 
-This update comes with a scheduler to easily create backups and re-index your library at regular intervals, as well as support for ICC color profiles, which especially benefits Apple iPhone and professional users. Thumbnail generation is also faster, allowing you to index more pictures in less time.
+This update adds a scheduler so you can easily create backups and re-index your library at regular intervals. It also includes many updated dependencies and support for ICC color profiles, which will especially benefit Apple iPhone and professional users.
 
 What's new?
 
@@ -21,8 +21,8 @@ What's new?
 - Docker: [Upgraded base image from Ubuntu 23.10 to Ubuntu 24.04 LTS](https://github.com/photoprism/photoprism/issues/4084)
 - Security: [Go has been updated to the latest stable release v1.22.3](https://github.com/golang/go/issues?q=milestone%3AGo1.22.3)
 
-!!! tldr ""
-    You can run the `photoprism thumbs -f` command [in a terminal](getting-started/docker-compose.md#command-line-interface) to regenerate your existing thumbnails, or delete the `cache/thumbnails` folder and then re-index your library.
+!!! info ""
+    You can run the `photoprism thumbs -f` command [in a terminal](getting-started/docker-compose.md#command-line-interface) to regenerate your existing thumbnails, or delete the `storage/cache/thumbnails` folder and then re-index your library.
 
 ### April 20, 2024 ###
 <span class="build">Build 240420-ef5f14bc4</span>

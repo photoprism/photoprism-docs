@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 240520-c37a3dc4d</span>
+<span class="build">Build 240520-477c5dfe0</span>
 
 This update adds a scheduler so you can easily create backups and re-index your library at regular intervals. It also includes many updated dependencies and support for ICC color profiles, which will especially benefit Apple iPhone and professional users.
 

@@ -4,13 +4,14 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 240519-1790990dc</span>
+<span class="build">Build 240520-362d53569</span>
 
 This update adds a scheduler so you can easily create backups and re-index your library at regular intervals. It also includes many updated dependencies and support for ICC color profiles, which will especially benefit Apple iPhone and professional users.
 
 What's new?
 
 - Colors: [Added libvips support to preserve ICC profiles in thumbnails](https://github.com/photoprism/photoprism/issues/1474)
+- Search: [Clicking on a timestamp finds pictures taken on the same day](https://github.com/photoprism/photoprism/issues/4273)
 - Search: [Added sort option to order search results by picture title](https://github.com/photoprism/photoprism/pull/4218)
 - Review: [Photos are automatically approved when adding them to an album](https://github.com/photoprism/photoprism/issues/4229)
 - People: [Faces tagged on private or archived pictures will be ignored](https://github.com/photoprism/photoprism/issues/4238)

@@ -12,7 +12,7 @@ What's new?
 
 - Colors: [Added libvips support to preserve ICC profiles in thumbnails](https://github.com/photoprism/photoprism/issues/1474)
 - Search: [Clicking on a timestamp finds pictures taken on the same day](https://github.com/photoprism/photoprism/issues/4273)
-- Search: [Added sort option to order search results by picture title](https://github.com/photoprism/photoprism/pull/4218)
+- Search: [Added a sort option to order search results by picture title](https://github.com/photoprism/photoprism/pull/4218)
 - Review: [Photos are automatically approved when adding them to an album](https://github.com/photoprism/photoprism/issues/4229)
 - People: [Faces tagged on private or archived pictures will be ignored](https://github.com/photoprism/photoprism/issues/4238)
 - Index: [`*.thm` thumbnail files are not used as primary image anymore](https://github.com/photoprism/photoprism/issues/3900)

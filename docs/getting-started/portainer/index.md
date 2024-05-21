@@ -187,20 +187,20 @@ The command-line interface is also well suited for job automation using a [sched
 | *Display Config Values*                                   | `photoprism show config`       |
 | *Show Migration Status*                                   | `photoprism migrations ls`     |
 | *Repeat Failed Migrations*                                | `photoprism migrations run -f` |
-| *Reset Database*                                          | `photoprism reset -y`          |
-| *Backup Database*                                         | `photoprism backup -a -i`      |                      
-| *Restore Database*                                        | `photoprism restore -a -i`     |                   
+| *Reset Database*                                          | `photoprism reset --yes`       |
+| *Backup Database*                                         | `photoprism backup -a -i`      |
+| *Restore Database*                                        | `photoprism restore -a -i`     |
 | *Change Password*                                         | `photoprism passwd [username]` |
 | *Show User Management Commands*                           | `photoprism users help`        |
-| *Reset Users*                                             | `photoprism users reset -y`    |
+| *Reset Users*                                             | `photoprism users reset --yes` |
 | *Show Face Recognition Commands*                          | `photoprism faces help`        |
 | *Index Faces*                                             | `photoprism faces index`       |
 | *Reset People & Faces*                                    | `photoprism faces reset -f`    |
 | *Transcode Videos to AVC*                                 | `photoprism convert`           |
 | *Regenerate Thumbnails*                                   | `photoprism thumbs -f`         |
-| [*Update Index*](../../user-guide/library/originals.md)   | `photoprism index --cleanup`   |                  
-| [*Move to Originals*](../../user-guide/library/import.md) | `photoprism import [path]`     |                  
-| [*Copy to Originals*](../../user-guide/library/import.md) | `photoprism cp [path]`         |                  
+| [*Update Index*](../../user-guide/library/originals.md)   | `photoprism index --cleanup`   |
+| [*Move to Originals*](../../user-guide/library/import.md) | `photoprism import [path]`     |
+| [*Copy to Originals*](../../user-guide/library/import.md) | `photoprism cp [path]`         |
 
 *[home directory]: /home/username on Linux and many NAS devices
 *[host]: Computer, Cloud Server, or VM that runs PhotoPrism

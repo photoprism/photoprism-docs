@@ -6,7 +6,7 @@
 ### Development Preview ###
 <span class="build">Build 240521-e08640e7f</span>
 
-This update adds a scheduler so you can easily create backups and re-index your library at regular intervals. It also includes many updated dependencies and support for ICC color profiles, which will especially benefit Apple iPhone and professional users.
+This update adds a scheduler so you can easily create backups and re-index your library at regular intervals. It also includes many updated dependencies and support for ICC color profiles, which will especially benefit Apple iPhone and professional users. 🎨
 
 What's new?
 

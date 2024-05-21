@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 240520-9c01ff105</span>
+<span class="build">Build 240521-e08640e7f</span>
 
 This update adds a scheduler so you can easily create backups and re-index your library at regular intervals. It also includes many updated dependencies and support for ICC color profiles, which will especially benefit Apple iPhone and professional users.
 
@@ -17,6 +17,8 @@ What's new?
 - People: [Faces tagged on private or archived pictures will be ignored](https://github.com/photoprism/photoprism/issues/4238)
 - Index: [`*.thm` thumbnail files are not used as primary image anymore](https://github.com/photoprism/photoprism/issues/3900)
 - Index: [Added a config option for scheduling automatic library rescans](https://github.com/photoprism/photoprism/issues/4251)
+- Index: [Improved recovery of metadata from sidecar YAML files](https://github.com/photoprism/photoprism/issues/4286)
+- Upload: [Improved ETA display when using the web upload dialog](https://github.com/photoprism/photoprism/issues/4285)
 - Backups: [Added config options for creating backups at regular intervals](https://github.com/photoprism/photoprism/issues/4243)
 - Moments: [Background worker no longer creates backups to avoid disk activity](https://github.com/photoprism/photoprism/issues/4237)
 - Docker: [Upgraded base image from Ubuntu 23.10 to Ubuntu 24.04 LTS](https://github.com/photoprism/photoprism/issues/4084)

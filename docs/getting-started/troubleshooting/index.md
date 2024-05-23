@@ -57,13 +57,22 @@ mariadb: mysqld: Shutdown complete
 
 #### Debug Mode
 
-To enable [debug mode](../config-options.md), set `PHOTOPRISM_DEBUG` to `"true"` in the `environment:` section of the `photoprism` service (or use the `--debug` flag when running the `photoprism` command directly):
+To [enable debug mode](../config-options.md#logging), set `PHOTOPRISM_LOG_LEVEL` to `"debug"` in the `environment:` section of the `photoprism` service (or use the `--debug` flag when running the `photoprism` command directly):
 
 ```yaml
 services:
   photoprism:
     environment:
-      PHOTOPRISM_DEBUG: "true"
+      PHOTOPRISM_LOG_LEVEL: "debug"
+```
+
+If you need even more detailed logs for debugging, you can enable [trace log mode](../config-options.md#logging) by setting `PHOTOPRISM_LOG_LEVEL` to `“trace”` in the `environment:` section of the `photoprism` service (or use the `--trace` flag when running the `photoprism` command directly):
+
+```yaml
+services:
+  photoprism:
+    environment:
+      PHOTOPRISM_LOG_LEVEL: "trace"
 ```
 
 Then restart all services for the changes to take effect. It can be helpful to keep Docker running in the foreground while debugging so that log messages are displayed directly. To do this, omit the `-d` parameter when restarting:
@@ -149,7 +158,7 @@ If [password authentication is enabled](../config-options.md#authentication) and
 - [ ] You had too many failed login attempts, therefore another attempt from your computer is temporarily not possible
 - [ ] Caps Lock is enabled on your keyboard, your computer has the wrong input locale set, or somebody else might have changed the password without telling you
 - [ ] `PHOTOPRISM_ADMIN_PASSWORD` does not have a minimum length of 8 characters, so PhotoPrism has been started without a password since there is no default
-- [ ] Your password [contains one or more `$` signs that were not properly escaped](../../developer-guide/technologies/yaml.md#dollar-signs) in the `docker-compose.yml` file ([escape them](../../developer-guide/technologies/yaml.md#dollar-signs) and [reset your database](../docker-compose.md#examples) or [manually set a new password](../../user-guide/users/cli.md#changing-a-password))
+- [ ] Your password [contains one or more `$` signs that were not properly escaped](../../developer-guide/technologies/yaml.md#dollar-signs) in your `compose.yaml` or `docker-compose.yml` file ([escape them](../../developer-guide/technologies/yaml.md#dollar-signs) and [reset your database](../docker-compose.md#examples) or [manually set a new password](../../user-guide/users/cli.md#changing-a-password))
 - [ ] The password may be correct, but the username is wrong and does not match `PHOTOPRISM_ADMIN_USER`
 - [ ] There is a problem with the schema or data in the `auth_sessions` database table that can be resolved by running the `photoprism auth reset --yes` command [in a terminal](../docker-compose.md#command-line-interface) to reset it to a clean state and [force a re-login of all users](../../user-guide/users/cli.md#session-management) (this will also delete all [client access tokens](../../user-guide/users/client-credentials.md#access-tokens) and [app passwords](../../user-guide/settings/account.md#apps-and-devices) users may have created)
 - [ ] You upgraded from an early test or [preview build](../updates.md#development-preview) and might need to run the `photoprism users reset --yes` command [in a terminal](../docker-compose.md#command-line-interface) after the upgrade, see [Known Issues](../../known-issues.md#authentication) for details (this resets the `auth_users` table to a clean state and requires accounts to be recreated)

@@ -46,7 +46,7 @@ You can also connect to the server [via SSH](https://www.howtogeek.com/311287/ho
 
 Uploads, sidecar and cache files are stored in `/opt/photoprism`. External drives can be connected via USB and accessed as folders `/mnt/a` to `/mnt/d` without further configuration.
 
-Should you want to make changes to the [default settings](../config-options.md), you can find the `docker-compose.yml` file in `/boot/firmware/docker-compose/photoprism`.
+Should you want to make changes to the [default settings](../config-options.md), you can find your `compose.yaml` or `docker-compose.yml` file in `/boot/firmware/docker-compose/photoprism`.
 After [connecting via SSH](https://www.howtogeek.com/311287/how-to-connect-to-an-ssh-server-from-windows-macos-or-linux/) with the credentials provided above, you can obtain root privileges by running `sudo -i`.
 
 ### HTTPS Proxy

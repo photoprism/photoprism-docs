@@ -37,8 +37,7 @@ but a different extension:
 New sidecar files are saved in the *storage* folder by default, so the *originals* folder can be mounted read-only.
 
 !!! tldr ""
-    Even if `PHOTOPRISM_DISABLE_EXIFTOOL` and `PHOTOPRISM_DISABLE_BACKUPS` are set to `"true"`,
-    the indexer looks for existing sidecar files and uses them.
+    Even if `PHOTOPRISM_DISABLE_EXIFTOOL` is set to `“true”` or `PHOTOPRISM_SIDECAR_YAML` is set to `“false”`, the indexer will look for existing sidecar files and use them.
 
 ### What metadata sidecar file types are supported?
 
@@ -59,10 +58,7 @@ development tools and text editors.
 
 #### YAML ####
 
-Unless disabled via `PHOTOPRISM_DISABLE_BACKUPS` or `--disable-backups`, PhotoPrism automatically creates/updates
-[human-friendly YAML sidecar files](../developer-guide/technologies/yaml.md) during indexing and after manual editing
-of fields such as title, date, or location. They serve as a backup in case the database (index) is lost, or when
-folders are synchronized with a remote instance.
+Unless disabled by setting the `PHOTOPRISM_SIDECAR_YAML` option to `"false"` in your configuration, PhotoPrism automatically creates/updates [human-friendly YAML sidecar files](../developer-guide/technologies/yaml.md) during indexing and after manual editing of fields such as title, date, or location. They serve as a backup in case the database (index) is lost, or when folders are synchronized with a remote instance.
 
 Like JSON, [YAML](../developer-guide/technologies/yaml.md) files can be opened with common development tools and 
 text editors. However, changes are not synchronized with the original index, as this could overwrite existing data.
@@ -289,7 +285,7 @@ Most often this happens when new users configure `localhost` or `127.0.0.1` as d
 
 When [indexing a media library](../user-guide/library/originals.md), many files are opened and processed very quickly, which is not a typical workload compared to other containerized applications and services. Various libraries and external applications simultaneously interact with each other in complex ways, so a few spikes are inevitable. Some memory is also used by the kernel for buffered I/O to improve performance, although the extent to which caching counts towards a limit may vary.
 
-We therefore recommend not to set a hard memory limit, unless you are familiar with memory management and understand the implications. Instead, you should [reduce the number of indexing workers](https://docs.photoprism.app/getting-started/config-options/#index-workers) and [limit file size and resolution](config-options.md#storage) if you are low on resources or want to limit memory usage for other reasons. Also make sure you have [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured.
+We therefore recommend not to set a hard memory limit, unless you are familiar with memory management and understand the implications. Instead, you should [reduce the number of indexing workers](https://docs.photoprism.app/getting-started/config-options/#indexing) and [limit file size and resolution](config-options.md#storage) if you are low on resources or want to limit memory usage for other reasons. Also make sure you have [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured.
 
 [View System Requirements ›](index.md#system-requirements){ class="pr-3 block-xs" } [Get Performance Tips ›](troubleshooting/performance.md#troubleshooting)
 
@@ -372,7 +368,7 @@ To reduce startup time, do not set `PHOTOPRISM_INIT` to avoid running additional
 
 ### Why are files uploaded via WebDAV not indexed/imported immediately?
 
-`PHOTOPRISM_AUTO_INDEX` and `PHOTOPRISM_AUTO_IMPORT` let you specify how long PhotoPrism should [wait before indexing or importing](https://docs.photoprism.app/getting-started/config-options/#index-workers) newly uploaded files. The default setting is 300 seconds, or 5 minutes. This is a safety mechanism for users with slow uploads to avoid incomplete file sets, for example when uploading pictures with sidecar files. You can therefore reduce the delay if you have a fast connection and usually do not upload [stacks of related files](../user-guide/organize/stacks.md) such as RAW images with sidecar JPEG and XMP files.
+`PHOTOPRISM_AUTO_INDEX` and `PHOTOPRISM_AUTO_IMPORT` let you specify how long PhotoPrism should [wait before indexing or importing](https://docs.photoprism.app/getting-started/config-options/#indexing) newly uploaded files. The default setting is 300 seconds, or 5 minutes. This is a safety mechanism for users with slow uploads to avoid incomplete file sets, for example when uploading pictures with sidecar files. You can therefore reduce the delay if you have a fast connection and usually do not upload [stacks of related files](../user-guide/organize/stacks.md) such as RAW images with sidecar JPEG and XMP files.
 
 In some cases, it is also possible that [the index is already being updated](../user-guide/library/originals.md), so you will have to wait until the process is complete before indexing new files.
 

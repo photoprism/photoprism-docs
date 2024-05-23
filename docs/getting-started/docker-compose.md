@@ -106,7 +106,7 @@ Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is sup
     Also, ensure that you configure at least 4 GB of swap space.
 
 !!! note ""
-    When editing the `docker-compose.yml` file, please make sure that [related values remain on the same indentation level](../developer-guide/technologies/yaml.md) and that [lists start with a dash](../developer-guide/technologies/yaml.md#multiple-values).
+    When editing your `compose.yaml` or `docker-compose.yml` file, please make sure that [related values remain on the same indentation level](../developer-guide/technologies/yaml.md) and that [lists start with a dash](../developer-guide/technologies/yaml.md#multiple-values).
     If the value of an environment variable contains a literal `$` sign, for example in a password, it [must be escaped](../developer-guide/technologies/yaml.md#dollar-signs) with `$$` (a double dollar sign) so that e.g. `"compo$e"` becomes `"compo$$e"`.
 
 !!! danger ""
@@ -202,7 +202,7 @@ services:
 
 ### Step 2: Start the server
 
-Open a terminal and change to the folder in which the `docker-compose.yml` file has been saved.[^1]
+Open a terminal and change to the folder in which your `compose.yaml` or `docker-compose.yml` file has been saved.[^1]
 Run this command to start the application and database services in the background:
 
 ```bash
@@ -273,7 +273,7 @@ Our members can activate [additional features](https://link.photoprism.app/membe
 
 If your server runs out of memory, the index is frequently locked, or other system resources are running low:
 
-- [ ] Try [reducing the number of workers](config-options.md#index-workers) by setting `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml`, depending on the CPU performance and number of cores
+- [ ] Try [reducing the number of workers](config-options.md#indexing) by setting `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml`, depending on the CPU performance and number of cores
 - [ ] Ensure that your server has [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured and avoid setting a [hard memory limit](faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory) as that can cause unexpected restarts when the indexer temporarily needs more memory to process large files
 - [ ] If you are using SQLite, switch to MariaDB, which is [better optimized for high concurrency](faq.md#should-i-use-sqlite-mariadb-or-mysql)
 - [ ] As a last measure, you can [disable the use of TensorFlow](config-options.md#feature-flags) for image classification and facial recognition
@@ -304,8 +304,8 @@ docker compose exec photoprism photoprism backup --help
 PhotoPrism's command-line interface is also well suited for job automation using a [scheduler](https://dl.photoprism.app/docker/scheduler/).
 
 !!! tip ""
-    When using *Docker Compose*, you can prepend commands like `docker compose exec [service] [command]` to run them in a service container.
-    Should this fail with *no container found*, make sure the service has been started, you have specified an existing service (usually `photoprism`) and you are in the folder where the `docker-compose.yml` file is located.
+    When using *Docker Compose*, you can prefix the commands you want to run with `docker compose exec [service]` to execute them in the specified service container.
+    If this fails with *no container found*, please make sure that the service has been started, you have specified an existing service (usually `photoprism`) and you are in the folder where your `compose.yaml` or `docker-compose.yml` file is located.
 
 #### Opening a Terminal
 
@@ -330,7 +330,7 @@ Note, however, that commands that you run without an explicit user ID might be e
 The currently supported user ID ranges are 0, 33, 50-99, 500-600, 900-1250, and 2000-2100.
 
 !!! tip ""
-    We recommend running the `photoprism` service as a non-root user by setting either the [user service property](https://docs.docker.com/compose/compose-file/05-services/#user) or the `PHOTOPRISM_UID` [environment variable](config-options.md#docker-image) in the `docker-compose.yml` file. Don't forget to update file permissions and/or ownership with the `chown` command when you make changes.
+    We recommend running the `photoprism` service as a non-root user by setting either the [user service property](https://docs.docker.com/compose/compose-file/05-services/#user) or the `PHOTOPRISM_UID` [environment variable](config-options.md#docker-image) in your `compose.yaml` or `docker-compose.yml` file. Don't forget to update file permissions and/or ownership with the `chown` command when you make changes.
 
 #### Examples
 

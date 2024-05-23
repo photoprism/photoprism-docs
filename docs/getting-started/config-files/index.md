@@ -105,64 +105,76 @@ and [`defaults.yml`](defaults.md) files, grouped by purpose.
 | UsersPath       | string | --users-path       |
 | StoragePath     | string | --storage-path     |
 | SidecarPath     | string | --sidecar-path     |
-| BackupPath      | string | --backup-path      |
+| SidecarYaml     | bool   | --sidecar-yaml     |
 | CachePath       | string | --cache-path       |
 | ImportPath      | string | --import-path      |
 | ImportDest      | string | --import-dest      |
 | AssetsPath      | string | --assets-path      |
 | TempPath        | string | --temp-path        |
 
-### Index Workers ###
+### Backup ###
+
+|      Name      |  Type  |     CLI Flag      |
+|----------------|--------|-------------------|
+| BackupPath     | string | --backup-path     |
+| BackupSchedule | string | --backup-schedule |
+| BackupRetain   | int    | --backup-retain   |
+| BackupDatabase | bool   | --backup-database |
+| BackupAlbums   | bool   | --backup-albums   |
+
+### Indexing ###
 
 |      Name      |     Type      |     CLI Flag      |
 |----------------|---------------|-------------------|
-| Workers        | int           | --workers         |
+| IndexWorkers   | int           | --index-workers   |
+| IndexSchedule  | string        | --index-schedule  |
 | WakeupInterval | time.Duration | --wakeup-interval |
 | AutoIndex      | int           | --auto-index      |
 | AutoImport     | int           | --auto-import     |
 
 ### Feature Flags ###
 
-|         Name          | Type |         CLI Flag         |
-|-----------------------|------|--------------------------|
-| ReadOnly              | bool | --read-only              |
-| Experimental          | bool | --experimental           |
-| DisableSettings       | bool | --disable-settings       |
-| DisableRestart        | bool | --disable-restart        |
-| DisableBackups        | bool | --disable-backups        |
-| DisableWebDAV         | bool | --disable-webdav         |
-| DisablePlaces         | bool | --disable-places         |
-| DisableTensorFlow     | bool | --disable-tensorflow     |
-| DisableFaces          | bool | --disable-faces          |
-| DisableClassification | bool | --disable-classification |
-| DisableFFmpeg         | bool | --disable-ffmpeg         |
-| DisableExifTool       | bool | --disable-exiftool       |
-| DisableSips           | bool | --disable-sips           |
-| DisableDarktable      | bool | --disable-darktable      |
-| DisableRawTherapee    | bool | --disable-rawtherapee    |
-| DisableImageMagick    | bool | --disable-imagemagick    |
-| DisableHeifConvert    | bool | --disable-heifconvert    |
-| DisableVectors        | bool | --disable-vectors        |
-| DisableJpegXL         | bool | --disable-jpegxl         |
-| DisableRaw            | bool | --disable-raw            |
-| RawPresets            | bool | --raw-presets            |
-| ExifBruteForce        | bool | --exif-bruteforce        |
-| DetectNSFW            | bool | --detect-nsfw            |
-| UploadNSFW            | bool | --upload-nsfw            |
+|         Name          |  Type  |         CLI Flag         |
+|-----------------------|--------|--------------------------|
+| ReadOnly              | bool   | --read-only              |
+| Experimental          | bool   | --experimental           |
+| DisableSettings       | bool   | --disable-settings       |
+| DisableRestart        | bool   | --disable-restart        |
+| DisableBackups        | bool   | --disable-backups        |
+| DisableWebDAV         | bool   | --disable-webdav         |
+| DisablePlaces         | bool   | --disable-places         |
+| DisableTensorFlow     | bool   | --disable-tensorflow     |
+| DisableFaces          | bool   | --disable-faces          |
+| DisableClassification | bool   | --disable-classification |
+| DisableFFmpeg         | bool   | --disable-ffmpeg         |
+| DisableExifTool       | bool   | --disable-exiftool       |
+| DisableSips           | bool   | --disable-sips           |
+| DisableDarktable      | bool   | --disable-darktable      |
+| DisableRawTherapee    | bool   | --disable-rawtherapee    |
+| DisableImageMagick    | bool   | --disable-imagemagick    |
+| DisableHeifConvert    | bool   | --disable-heifconvert    |
+| DisableVectors        | bool   | --disable-vectors        |
+| DisableJpegXL         | bool   | --disable-jpegxl         |
+| DisableRaw            | bool   | --disable-raw            |
+| RawPresets            | bool   | --raw-presets            |
+| ExifBruteForce        | bool   | --exif-bruteforce        |
+| DetectNSFW            | bool   | --detect-nsfw            |
+| UploadNSFW            | bool   | --upload-nsfw            |
+| DefaultLocale         | string | --default-locale         |
+| DefaultTimezone       | string | --default-timezone       |
 
 ### Customization ###
 
-|     Name      |  Type  |     CLI Flag     |
-|---------------|--------|------------------|
-| DefaultTheme  | string | --default-theme  |
-| DefaultLocale | string | --default-locale |
-| AppName       | string | --app-name       |
-| AppMode       | string | --app-mode       |
-| AppIcon       | string | --app-icon       |
-| AppColor      | string | --app-color      |
-| LegalInfo     | string | --legal-info     |
-| LegalUrl      | string | --legal-url      |
-| WallpaperUri  | string | --wallpaper-uri  |
+|     Name     |  Type  |    CLI Flag     |
+|--------------|--------|-----------------|
+| DefaultTheme | string | --default-theme |
+| AppName      | string | --app-name      |
+| AppMode      | string | --app-mode      |
+| AppIcon      | string | --app-icon      |
+| AppColor     | string | --app-color     |
+| LegalInfo    | string | --legal-info    |
+| LegalUrl     | string | --legal-url     |
+| WallpaperUri | string | --wallpaper-uri |
 
 ### Site Information ###
 
@@ -216,7 +228,7 @@ and [`defaults.yml`](defaults.md) files, grouped by purpose.
 | DatabaseConns     | int    | --database-conns      |
 | DatabaseConnsIdle | int    | --database-conns-idle |
 
-### File Converters ###
+### File Conversion ###
 
 |         Name         |  Type  |        CLI Flag         |
 |----------------------|--------|-------------------------|
@@ -247,18 +259,24 @@ and [`defaults.yml`](defaults.md) files, grouped by purpose.
 | DownloadToken | string | --download-token |
 | PreviewToken  | string | --preview-token  |
 
-### Image Quality ###
+### Preview Images ###
 
 |       Name        |  Type  |       CLI Flag        |
 |-------------------|--------|-----------------------|
+| ThumbLibrary      | string | --thumb-library       |
 | ThumbColor        | string | --thumb-color         |
 | ThumbFilter       | string | --thumb-filter        |
 | ThumbSize         | int    | --thumb-size          |
 | ThumbSizeUncached | int    | --thumb-size-uncached |
 | ThumbUncached     | bool   | --thumb-uncached      |
-| JpegQuality       | string | --jpeg-quality        |
-| JpegSize          | int    | --jpeg-size           |
-| PngSize           | int    | --png-size            |
+
+### Image Quality ###
+
+|    Name     | Type |    CLI Flag    |
+|-------------|------|----------------|
+| JpegQuality | int  | --jpeg-quality |
+| JpegSize    | int  | --jpeg-size    |
+| PngSize     | int  | --png-size     |
 
 ### Daemon Mode ###
 

@@ -3,10 +3,15 @@
 !!! note ""
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
-### Development Preview ###
-<span class="build">Build 240522-b3ebed764</span>
+### May 23, 2024 ###
+<span class="build">Build 240523-923ee0cf7</span>
 
-This update adds a scheduler so you can easily create backups and re-index your library at regular intervals. It also includes many updated dependencies and support for ICC color profiles, which will especially benefit Apple iPhone and professional users. 🎨
+This update adds a scheduler so you can [easily create database backups](https://docs.photoprism.app/getting-started/config-options/#backup) and [re-index your library](https://docs.photoprism.app/getting-started/config-options/#indexing) at regular intervals. It also includes [many updated dependencies](https://github.com/photoprism/photoprism/issues/4084#issuecomment-2112733848) and [support for ICC color profiles](https://docs.photoprism.ap/getting-started/config-options/#preview-images), which especially benefits Apple iPhone and professional users working with color spaces other than sRGB. 🎨
+
+Breaking Changes
+
+- If you keep the [default settings](https://docs.photoprism.app/getting-started/config-options/#backup), daily database backups will be automatically created, with up to 3 backup files being retained. This is to prevent the available storage space from filling up. We recommend [setting the corresponding config options](https://docs.photoprism.app/getting-started/config-options/#backup) before installing the update if you want to want to disable scheduled backups, keep more backup files, or prefer a specific time for creating backups. The previously available `--disable-backups` flag has been deprecated in favor of these finer-grained options.
+- In order to preserve ICC color profiles and reduce memory usage, new thumbnails will be [generated with the `libvips` image processing library](https://github.com/photoprism/photoprism/issues/1474). You can run the `photoprism thumbs -f` [command in a terminal](https://docs.photoprism.app/getting-started/docker-compose/#command-line-interface) to regenerate your existing thumbnails, or delete the `storage/cache/thumbnails` folder and then re-index your library. To continue using the native image processing library, set `PHOTOPRISM_THUMB_LIBRARY` to `"imaging"` in your `compose.yaml` or `docker-compose.yml` [configuration file](https://docs.photoprism.ap/getting-started/config-options/#preview-images). If you [build from source](https://docs.photoprism.app/getting-started/faq/#building-from-source) or use one of our [binary installation packages](https://dl.photoprism.app/pkg/linux/README.html), the system on which you build and/or run PhotoPrism must have `libvips` >= 8.10 installed.
 
 What's new?
 
@@ -26,7 +31,7 @@ What's new?
 - Translations: [Updated Chinese (traditional), Danish, French, and German](https://translate.photoprism.app/projects/photoprism/)
 
 !!! info ""
-    You can run the `photoprism thumbs -f` command [in a terminal](getting-started/docker-compose.md#command-line-interface) to regenerate your existing thumbnails, or delete the `storage/cache/thumbnails` folder and then re-index your library.
+    Missing user interface translations have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/), if necessary.
 
 ### April 20, 2024 ###
 <span class="build">Build 240420-ef5f14bc4</span>
@@ -549,7 +554,7 @@ Breaking Changes
 ### June 29, 2022 ###
 <span class="build">Build 220629-5d7448d2</span>
 
-With this update, you'll enjoy a much faster and [smoother scrolling experience](https://github.com/photoprism/photoprism/pull/2433) as well as [direct streaming](https://github.com/photoprism/photoprism/issues/2461) of OGV, VP8, VP9, AV1, WebM and HEVC videos if they do not exceed the [configured bitrate limit](https://docs.photoprism.app/getting-started/config-options/#file-converters). Special thanks to [Heiko Mathes](https://github.com/heikomat) and [Andre Carrera](https://github.com/acarrera94) for their contributions!
+With this update, you'll enjoy a much faster and [smoother scrolling experience](https://github.com/photoprism/photoprism/pull/2433) as well as [direct streaming](https://github.com/photoprism/photoprism/issues/2461) of OGV, VP8, VP9, AV1, WebM and HEVC videos if they do not exceed the [configured bitrate limit](https://docs.photoprism.app/getting-started/config-options/#file-conversion). Special thanks to [Heiko Mathes](https://github.com/heikomat) and [Andre Carrera](https://github.com/acarrera94) for their contributions!
 
 - UX: [Much faster and smoother scrolling experience in albums and search results](https://github.com/photoprism/photoprism/pull/2433)
 - Videos: [Direct streaming of OGV, VP8, VP9, AV1, WebM, and HEVC where supported](https://github.com/photoprism/photoprism/issues/2461)

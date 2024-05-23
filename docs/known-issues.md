@@ -65,7 +65,7 @@ This is because the model we use was trained with North American images, which u
 
 ### Background Worker
 
-[Face recognition](user-guide/organize/people.md) was developed and tested under the assumption that the [background worker](getting-started/config-options.md#index-workers) runs every 15 minutes, unless the backend is busy with other tasks like indexing. It has not been tested with much longer intervals and is not designed for that.
+[Face recognition](user-guide/organize/people.md) was developed and tested under the assumption that the [background worker](getting-started/config-options.md#indexing) runs every 15 minutes, unless the backend is busy with other tasks like indexing. It has not been tested with much longer intervals and is not designed for that.
 
 PhotoPrism's background worker groups new faces by similarity, compares faces with clusters, and optimizes existing clusters as needed. Without these routine tasks, the number of faces to be processed becomes too large. The first and next time the worker runs, it can then cause a heavy server load until all the faces, face clusters, and related pictures have been updated. The longer you wait, the more CPU is required and the longer it takes.
 

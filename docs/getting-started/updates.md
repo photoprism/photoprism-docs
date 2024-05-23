@@ -2,7 +2,7 @@
 
 ### Docker Compose
 
-Open a terminal and change to the folder where the `docker-compose.yml` file is located.[^1]
+Open a terminal and change to the folder where your `compose.yaml` or `docker-compose.yml` file is located.[^1]
 Now run the following commands to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and
 restart your instance in the background:
 

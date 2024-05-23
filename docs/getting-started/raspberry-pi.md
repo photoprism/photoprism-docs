@@ -90,7 +90,7 @@ Note, however, that [initial indexing usually takes much longer](../user-guide/f
 
 ### Getting Updates ###
 
-Open a terminal and change to the folder where the `docker-compose.yml` file is located.[^3]
+Open a terminal and change to the folder where your `compose.yaml` or `docker-compose.yml` file is located.[^3]
 Now run the following commands to download the newest image from Docker Hub and
 restart your instance in the background:
 
@@ -125,7 +125,7 @@ This does not mean [older versions](index.md#databases) are no longer supported 
 
 If your device runs out of memory, the index is frequently locked, or other system resources are running low:
 
-- [ ] Try [reducing the number of workers](config-options.md#index-workers) by setting `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml`, depending on the performance of your device
+- [ ] Try [reducing the number of workers](config-options.md#indexing) by setting `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml`, depending on the performance of your device
 - [ ] Ensure that your device has [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured and avoid setting a [hard memory limit](faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory) as that can cause unexpected restarts when the indexer temporarily needs more memory to process large files
 - [ ] If you are using SQLite, switch to MariaDB, which is [better optimized for high concurrency](faq.md#should-i-use-sqlite-mariadb-or-mysql)
 - [ ] As a last measure, you can [disable the use of TensorFlow](config-options.md#feature-flags) for image classification and facial recognition

@@ -31,7 +31,7 @@ This way you save disk space if you don't want to keep them as backup or for oth
 
 An import is triggered automatically when files are synced to the *import* folder [via WebDAV](../sync/webdav.md).
 
-The default safety delay for automatic import is 3 minutes. You can change it using the [PHOTOPRISM_AUTO_IMPORT](../../getting-started/config-options.md#index-workers) config option.
+The default safety delay for automatic import is 3 minutes. You can change it using the [PHOTOPRISM_AUTO_IMPORT](../../getting-started/config-options.md#indexing) config option.
 
 !!! info "Can I use PhotoPrism to sort files into a configurable folder structure?"
     You have complete freedom in how you organize your originals. If you don't like the unique names and

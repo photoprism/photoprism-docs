@@ -73,7 +73,7 @@ Admins can optionally enable the cleanup option to delete unused thumbnails from
 
 Indexing is triggered automatically when files are [synced with the *originals* folder via WebDAV](../sync/webdav.md).
 
-The default safety delay for automatic indexing is 5 minutes. You can change it through the [PHOTOPRISM_AUTO_INDEX](../../getting-started/config-options.md#index-workers) config option.
+The default safety delay for automatic indexing is 5 minutes. You can change it through the [PHOTOPRISM_AUTO_INDEX](../../getting-started/config-options.md#indexing) config option.
 
 !!! tldr ""
     Be careful not to start multiple indexing processes at the same time, as this will lead to a high server load.

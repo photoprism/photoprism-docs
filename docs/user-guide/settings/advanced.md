@@ -23,31 +23,28 @@ the `storage/config` folder by default.
 When enabled, debug logs are shown in *Library>Logs*.
 Requires restart.
 
-The corresponding [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_DEBUG`.
-
-### Read-only Mode
-When enabled, importing, uploading and deleting files is not possible.
-
-The corresponding [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_READONLY`.
+The corresponding [config toggle](../../getting-started/config-options.md#logging) is `PHOTOPRISM_DEBUG`.
 
 ### Experimental Features
 When enabled, your instance will be updated with experimental features.
 
-The corresponding [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_EXPERIMENTAL`.
+The corresponding [config toggle](../../getting-started/config-options.md#feature-flags) is `PHOTOPRISM_EXPERIMENTAL`.
 
-### Disable Backups
-This option prevents creating the following `yml` backups:
+### Read-only Mode
+When enabled, importing, uploading and deleting files is not possible.
 
-- For photos in `storage/sidecar`
-- For albums, months, states and folders in `storage/albums`
+The corresponding [config toggle](../../getting-started/config-options.md#feature-flags) is `PHOTOPRISM_READONLY`.
 
-The corresponding [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_DISABLE_BACKUPS`.
+### Allow NSFW Uploads
+If TensorFlow is enabled and this option is not active, pictures that might be offensive will be rejected when using the web upload.
+
+The corresponding [config toggle](../../getting-started/config-options.md#feature-flags) is `PHOTOPRISM_UPLOAD_NSFW`.
 
 ### Disable WebDAV
 This option prevents building WebDav connections.
 Requires restart for changes to be applied.
 
-The corresponding [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_DISABLE_WEBDAV`.
+The corresponding [config toggle](../../getting-started/config-options.md#feature-flags) is `PHOTOPRISM_DISABLE_WEBDAV`.
 
 ### Disable Places
 When selected, geo-information (latitude, longitude) will still be read (and indexed)
@@ -56,18 +53,18 @@ determine place names using those coordinates as it normally would.
 
 The Places section will not be visible.
 
-The corresponding [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_DISABLE_PLACES`.
+The corresponding [config toggle](../../getting-started/config-options.md#feature-flags) is `PHOTOPRISM_DISABLE_PLACES`.
 
 ### Disable ExifTool
 This option prevents the creation of `json` files with Exif data in `storage/sidecar`.
 Note that you must have [ExifTool](https://exiftool.org/) enabled to extract video metadata such as duration, resolution, and codec.
 
-The corresponding [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_DISABLE_EXIFTOOL`.
+The corresponding [config toggle](../../getting-started/config-options.md#feature-flags) is `PHOTOPRISM_DISABLE_EXIFTOOL`.
 
 ### Disable TensorFlow
 When selected, image classification and facial recognition will be disabled as both rely on tensorflow.
 
-The corresponding [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_DISABLE_TENSORFLOW`.
+The corresponding [config toggle](../../getting-started/config-options.md#feature-flags) is `PHOTOPRISM_DISABLE_TENSORFLOW`.
 
 ## Images
 
@@ -82,7 +79,10 @@ A detailed description of the available filters can be found in the [section bel
 
 For a good trade-off between quality and performance, we recommend choosing the *lanczos* filter. It may be a little slower in creating thumbnails, but produces very high quality images. In comparison, the less sophisticated *cubic* filter may be 30% faster.
 
-The corresponding [config option](../../getting-started/config-options.md) is `PHOTOPRISM_THUMB_FILTER`.
+The corresponding [config option](../../getting-started/config-options.md#preview-images) is `PHOTOPRISM_THUMB_FILTER`.
+
+!!! info ""
+    This option is only available if the native `imaging` image processing library has been enabled by setting `PHOTOPRISM_THUMB_LIBRARY` to `“imaging”` in your `compose.yaml` or `docker-compose.yml` configuration file.
 
 ### Dynamic Previews
 
@@ -91,7 +91,7 @@ Enable generating thumbnails on-the-fly as they're required
 This saves disk space, but is more processor-intensive and so not recommended
 when hosting on less powerful devices (such as Raspberry Pi).
 
-The corresponding [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_THUMB_UNCACHED`.
+The corresponding [config toggle](../../getting-started/config-options.md#preview-images) is `PHOTOPRISM_THUMB_UNCACHED`.
 
 ### JPEG Quality
 

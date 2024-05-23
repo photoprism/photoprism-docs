@@ -156,10 +156,7 @@
     
     #### YAML ####
     
-    Unless disabled via `PHOTOPRISM_DISABLE_BACKUPS` or `--disable-backups`, PhotoPrism automatically creates/updates
-    [human-friendly YAML sidecar files](../developer-guide/technologies/yaml.md) during indexing and after manual
-    editing of fields such as title, date, or location. They serve as a backup in case the database (index) is lost,
-    or when folders are synchronized with a remote instance.
+    Unless disabled by setting the `PHOTOPRISM_SIDECAR_YAML` option to `"false"` in your configuration, PhotoPrism automatically creates/updates [human-friendly YAML sidecar files](../developer-guide/technologies/yaml.md) during indexing and after manual editing of fields such as title, date, or location. They serve as a backup in case the database (index) is lost, or when folders are synchronized with a remote instance.
     
     Like JSON, [YAML](../developer-guide/technologies/yaml.md) files can be opened with common development tools and
     text editors. However, changes are not synchronized with the original index, as this could overwrite existing data.
@@ -325,7 +322,7 @@
 
 ??? question "Why are files uploaded via WebDAV not indexed/imported immediately?"
 
-    `PHOTOPRISM_AUTO_INDEX` and `PHOTOPRISM_AUTO_IMPORT` let you specify how long PhotoPrism should [wait before indexing or importing](https://docs.photoprism.app/getting-started/config-options/#index-workers) newly uploaded files. The default setting is 300 seconds, or 5 minutes. This is a safety mechanism for users with slow uploads to avoid incomplete file sets, for example when uploading pictures with sidecar files. You can therefore reduce the delay if you have a fast connection and usually do not upload [stacks of related files](organize/stacks.md) such as RAW images with sidecar JPEG and XMP files.
+    `PHOTOPRISM_AUTO_INDEX` and `PHOTOPRISM_AUTO_IMPORT` let you specify how long PhotoPrism should [wait before indexing or importing](https://docs.photoprism.app/getting-started/config-options/#indexing) newly uploaded files. The default setting is 300 seconds, or 5 minutes. This is a safety mechanism for users with slow uploads to avoid incomplete file sets, for example when uploading pictures with sidecar files. You can therefore reduce the delay if you have a fast connection and usually do not upload [stacks of related files](organize/stacks.md) such as RAW images with sidecar JPEG and XMP files.
 
     In some cases, it is also possible that [the index is already being updated](library/originals.md), so you will have to wait until the process is complete before indexing new files.
 

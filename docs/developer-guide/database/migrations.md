@@ -2,7 +2,7 @@
 
 !!! example ""
     When using [Docker Compose](../../getting-started/docker-compose.md), you can prepend commands like `docker compose exec [service] [command]` to run them in a service container.
-    Should this fail with *no container found*, make sure the service has been started, you have specified an existing service (usually `photoprism`) and you are in the folder where the `docker-compose.yml` file is located.
+    Should this fail with *no container found*, make sure the service has been started, you have specified an existing service (usually `photoprism`) and you are in the folder where your `compose.yaml` or `docker-compose.yml` file is located.
 
 ## Show Migration Status
 

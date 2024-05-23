@@ -24,7 +24,7 @@ For more information on hybrid photo/video file formats, e.g. Apple Live Photos 
 
 ## Standard Resolutions
 
-The [`PHOTOPRISM_FFMPEG_SIZE`](../../getting-started/config-options.md#file-converters) config option allows to limit the resolution of [transcoded videos](../../getting-started/advanced/transcoding.md). It accepts the following standard sizes, while other values are automatically adjusted to the next supported size:
+The [`PHOTOPRISM_FFMPEG_SIZE`](../../getting-started/config-options.md#file-conversion) config option allows to limit the resolution of [transcoded videos](../../getting-started/advanced/transcoding.md). It accepts the following standard sizes, while other values are automatically adjusted to the next supported size:
 
 | Size |       Usage        |
 |------|--------------------|

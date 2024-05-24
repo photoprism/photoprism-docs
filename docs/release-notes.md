@@ -3,6 +3,14 @@
 !!! note ""
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
+### Development Preview ###
+<span class="build">Build 240524-49d2892dd</span>
+
+What's new?
+
+- Config: [Setting `PHOTOPRISM_DISABLE_BACKUPS` disables all backups](https://github.com/photoprism/photoprism/issues/4294)
+- Config: [Replaced the terms whitelist and blacklist with alternatives](https://github.com/photoprism/photoprism/issues/3981)
+
 ### May 23, 2024 ###
 <span class="build">Build 240523-923ee0cf7</span>
 

@@ -6,6 +6,8 @@
 ### Development Preview ###
 <span class="build">Build 240524-b2f282341</span>
 
+This service release extends the list of [available config options](https://docs.photoprism.app/getting-started/config-options/) and provides you with the latest translations [contributed by our community](https://docs.photoprism.app/developer-guide/translations-weblate/).
+
 What's new?
 
 - Config: [Setting `PHOTOPRISM_DISABLE_BACKUPS` disables all backups](https://github.com/photoprism/photoprism/issues/4294)

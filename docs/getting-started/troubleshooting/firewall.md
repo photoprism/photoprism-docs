@@ -26,7 +26,7 @@ In order to successfully set up your installation and view location details in P
 - [ ] [places.photoprism.app](https://places.photoprism.app/ "Reverse Geocoding API")
 - [ ] [places.photoprism.xyz](https://places.photoprism.xyz/ "Reverse Geocoding API")
 
-In addition, the following API endpoints should be whitelisted so that public [Docker](https://www.docker.com/) images can be pulled from [Docker Hub](https://hub.docker.com/):
+In addition, the following API endpoints should be allowed so that public [Docker](https://www.docker.com/) images can be pulled from [Docker Hub](https://hub.docker.com/):
 
 - [ ] auth.docker.io
 - [ ] registry-1.docker.io

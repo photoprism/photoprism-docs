@@ -14,7 +14,7 @@ What's new?
 - Config: [Setting `PHOTOPRISM_DISABLE_BACKUPS` disables all backups](https://github.com/photoprism/photoprism/issues/4294)
 - Config: [Setting `PHOTOPRISM_DISABLE_VIPS` disables the use of libvips](https://github.com/photoprism/photoprism/issues/4296)
 - Config: [Replaced the terms whitelist and blacklist with alternatives](https://github.com/photoprism/photoprism/issues/3981)
-- Setup: [Improved .deb packages for installation without Docker](https://dl.photoprism.app/pkg/linux/README.html)
+- Setup: [Improved .deb Linux packages for installation without Docker](https://dl.photoprism.app/pkg/linux/README.html)
 
 ### May 23, 2024 ###
 <span class="build">Build 240523-923ee0cf7</span>

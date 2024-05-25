@@ -4,12 +4,13 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 240524-b2f282341</span>
+<span class="build">Build 240525-06ee2bc68</span>
 
-This service release extends the list of [available config options](https://docs.photoprism.app/getting-started/config-options/) and provides you with the latest translations [contributed by our community](https://docs.photoprism.app/developer-guide/translations-weblate/).
+This service release reduces the server load when downloading many files and adds [feature flags](https://docs.photoprism.app/getting-started/config-options/#feature-flags) to disable backups and the use of libvips as image processing library.
 
 What's new?
 
+- Download: [Zip archives are not compressed to reduce server load](https://github.com/photoprism/photoprism/issues/4298)
 - Config: [Setting `PHOTOPRISM_DISABLE_BACKUPS` disables all backups](https://github.com/photoprism/photoprism/issues/4294)
 - Config: [Setting `PHOTOPRISM_DISABLE_VIPS` disables the use of libvips](https://github.com/photoprism/photoprism/issues/4296)
 - Config: [Replaced the terms whitelist and blacklist with alternatives](https://github.com/photoprism/photoprism/issues/3981)

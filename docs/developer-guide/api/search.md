@@ -9,13 +9,13 @@ To simplify processing in the client/user interface, you can set the `merged` pa
 In particular, multiple files are returned for a single photo in the case of multi-file/hybrid media formats such as Live Photos, as these consist of a photo and a video file. The same applies to RAW/JPEG.
 
 !!! example ""
-    If you only want the primary image ([thumbnail](thumbnails.md)) to be returned, you can set the `primary` filter to `true`. In this case, it is not necessary to also set `merged` to `true` as a single file will be returned for each photo. This can simplify things if you don't need to know anything about the additional files, e.g. when just rendering thumbnails without metadata.
+    If you only want the primary image ([thumbnail](thumbnails.md#image-endpoint-uri)) to be returned, you can set the `primary` filter to `true`. In this case, it is not necessary to also set `merged` to `true` as a single file will be returned for each photo. This can simplify things if you don't need to know anything about the additional files, e.g. when just rendering thumbnails without metadata.
 
 ### Composite ID and UIDs
 
 The `ID` returned by the search API is a composite ID consisting of the photo ID and the related file ID (usually the file selected as primary image), so that this `ID` is unique as required for rendering in the user interface.
 
-Note that you do not need this composite ID to communicate with any of our API endpoints. Instead, you will either have to pass a `UID` (e.g. when updating photo metadata) or the SHA1 `Hash` of a file (e.g. when [requesting a thumbnail](thumbnails.md)).
+Note that you do not need this composite ID to communicate with any of our API endpoints. Instead, you will either have to pass a `UID` (e.g. when updating photo metadata) or the SHA1 `Hash` of a file (e.g. when [requesting a thumbnail](thumbnails.md#image-endpoint-uri)).
 
 !!! example ""
     Using random UIDs prevents possible caching issues in proxies/clients, e.g. if the index is reset on the server and the numeric IDs would thus start at 0 again. They are also hard to guess, so a time-consuming brute force attack is required instead of simply enumerating integers starting from 0.
@@ -113,13 +113,13 @@ Note that you do not need this composite ID to communicate with any of our API e
 
 ### Response Headers
 
-| Header           | Type   | Example  | Notes                                                                                                                           |
-|------------------|--------|----------|---------------------------------------------------------------------------------------------------------------------------------|
-| X-Count          | int    | 120      | Actual number of *files* returned                                                                                               |
-| X-Limit          | int    | 120      | Maximum number of *files* requested                                                                                             |
-| X-Offset         | int    | 0        | File offset                                                                                                                     |
-| X-Download-Token | string | 3qjg1db2 | [Security token](../../getting-started/config-options.md#security-tokens) required to download original files                   |
-| X-Preview-Token  | string | 174utza5 | [Security token](../../getting-started/config-options.md#security-tokens) required for the [Thumbnail Image API](thumbnails.md) |
+| Header           | Type   | Example  | Notes                                                                                                                                              |
+|------------------|--------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| X-Count          | int    | 120      | Actual number of *files* returned                                                                                                                  |
+| X-Limit          | int    | 120      | Maximum number of *files* requested                                                                                                                |
+| X-Offset         | int    | 0        | File offset                                                                                                                                        |
+| X-Download-Token | string | 3qjg1db2 | [Security token](../../getting-started/config-options.md#security-tokens) required to download original files                                      |
+| X-Preview-Token  | string | 174utza5 | [Security token](../../getting-started/config-options.md#security-tokens) required for the [Thumbnail Image API](thumbnails.md#image-endpoint-uri) |
 
 !!! example ""
     In order to fetch all results, you can perform a follow-up query if the number in the `X-Count` response header matches `X-Limit`. For this, the `offset` request parameter must be set to the number of files already returned.

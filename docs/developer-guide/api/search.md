@@ -2,7 +2,7 @@
 
 ## `GET /api/v1/photos`
 
-When [querying the `/api/v1/photos` endpoint](https://demo.photoprism.app/api/v1/photos?count=120&offset=120&merged=true&country=&camera=0&lens=0&label=&latlng=&year=0&month=0&color=&order=newest&q=&public=true&quality=3), matching *files* are returned along with the metadata that belongs to the *corresponding photos*. This may be unexpected at first due to the endpoint name. However, this is necessary for users to be able to sort e.g. by color or file size, which differ at the file level and therefore require dynamic sorting/grouping of multiple matching files that may belong to the same photo (see [Stacks](../../user-guide/organize/stacks.md)).
+When [querying the `/api/v1/photos` endpoint](https://demo.photoprism.app/api/v1/photos?count=120&offset=120&merged=true&country=&camera=0&lens=0&label=&latlng=&year=0&month=0&color=&order=newest&q=&public=true&quality=3), matching *files* will be returned along with the metadata of the *corresponding photos*. This may be unexpected at first due to the endpoint name. However, this approach allows to sort results e.g. by color or file size, which differ at the file level and therefore require dynamic sorting/grouping of multiple matching files that may belong to the same photo (see [Stacks](../../user-guide/organize/stacks.md)).
 
 To simplify processing in the client/user interface, you can set the `merged` parameter to `true` so that consecutive files with the same photo ID are merged into a single result with the `Files` property containing the related files.
 

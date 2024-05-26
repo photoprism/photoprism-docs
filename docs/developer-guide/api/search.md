@@ -113,7 +113,7 @@ Note that you do not need this composite ID to communicate with any of our API e
 
 ### Count, Limit, and Offset Response Headers
 
-| Name     | Type | Example | Notes                               |
+| Header   | Type | Example | Notes                               |
 |----------|------|---------|-------------------------------------|
 | X-Count  | int  | 120     | Actual number of *files* returned   |
 | X-Limit  | int  | 120     | Maximum number of *files* requested |
@@ -124,20 +124,20 @@ Note that you do not need this composite ID to communicate with any of our API e
 
 ### Request Parameters
 
-| Name   | Type   | Example          | Notes                                                                                                                                      |
-|--------|--------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| q      | string | dog color:red    | Search *query* as entered by the user in the search toolbar, see [Search Filters](#search-filters)                                         |
-| s      | string | ariqwb43p5dh9h13 | Limits the result *scope* to the specified album UID                                                                                       |
-| count  | int    | 1000             | Maximum number of *files* to be returned                                                                                                   |
-| offset | int    | 0                | File offset                                                                                                                                |
-| order  | string | added            | Sort order e.g. `added`, `updated`, `edited`, `relevance`, `duration`, `size`, `newest`, `oldest`, `similar`, `name`, `title`, or `random` |
-| merged | bool   | true             | Merges consecutive *files* that belong to the same photo into a single result, see above for an explanation                                |
+| Parameter | Type   | Example          | Notes                                                                                                                                      |
+|-----------|--------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| q         | string | dog color:red    | Search *query* as entered by the user in the search toolbar, see [Search Filters](#search-filters)                                         |
+| s         | string | ariqwb43p5dh9h13 | Limits the result *scope* to the specified album UID                                                                                       |
+| count     | int    | 1000             | Maximum number of *files* to be returned                                                                                                   |
+| offset    | int    | 0                | File offset                                                                                                                                |
+| order     | string | added            | Sort order e.g. `added`, `updated`, `edited`, `relevance`, `duration`, `size`, `newest`, `oldest`, `similar`, `name`, `title`, or `random` |
+| merged    | bool   | true             | Merges consecutive *files* that belong to the same photo into a single result, see above for an explanation                                |
 
 #### Search Filters
 
-The following [search filters](../../user-guide/search/filters.md) can be used as request parameters or submitted as part of a search query with the `q` request parameter:
+The following [search filters](../../user-guide/search/filters.md) can be used as regular GET request parameters or submitted as part of a search query with the `q` request parameter:
 
-| Filter    | Type      | Query Example                         | Notes                                                                                                                                      |
+| Filter    | Type      | Examples                              | Notes                                                                                                                                      |
 |-----------|-----------|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 | dist      | decimal   | dist:50                               | Distance to Position (km)                                                                                                                  |
 | lat       | decimal   | lat:41.894043                         | GPS Position (Latitude)                                                                                                                    |

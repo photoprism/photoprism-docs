@@ -124,14 +124,14 @@ Note that you do not need this composite ID to communicate with any of our API e
 
 ### Request Parameters
 
-| Parameter | Type   | Example          | Notes                                                                                                                                      |
-|-----------|--------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| q         | string | dog color:red    | Search *query* as entered by the user in the search toolbar, see [Search Filters](#search-filters)                                         |
-| s         | string | ariqwb43p5dh9h13 | Limits the result *scope* to the specified album UID                                                                                       |
-| count     | int    | 1000             | Maximum number of *files* to be returned                                                                                                   |
-| offset    | int    | 0                | File offset                                                                                                                                |
-| order     | string | added            | Sort order e.g. `added`, `updated`, `edited`, `relevance`, `duration`, `size`, `newest`, `oldest`, `similar`, `name`, `title`, or `random` |
-| merged    | bool   | true             | Merges consecutive *files* that belong to the same photo into a single result, see above for an explanation                                |
+| Name   | Type   | Example          | Notes                                                                                                                                      |
+|--------|--------|------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| q      | string | dog color:red    | Search *query* as entered by the user in the search toolbar, see [Search Filters](#search-filters)                                         |
+| s      | string | ariqwb43p5dh9h13 | Limits the result *scope* to the specified album UID                                                                                       |
+| count  | int    | 1000             | Maximum number of *files* to be returned                                                                                                   |
+| offset | int    | 0                | File offset                                                                                                                                |
+| order  | string | added            | Sort order e.g. `added`, `updated`, `edited`, `relevance`, `duration`, `size`, `newest`, `oldest`, `similar`, `name`, `title`, or `random` |
+| merged | bool   | true             | Merges consecutive *files* that belong to the same photo into a single result, see above for an explanation                                |
 
 #### Search Filters
 

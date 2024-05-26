@@ -32,13 +32,13 @@ For the highest level of protection, it is recommended to shield your private se
 
 ## Image Endpoint URI
 
-Authenticated with SHA1 hash and additional security token:
+Authenticated with SHA1 hash and additional [security token](search.md#response-headers):
 
 ```
 /api/v1/t/a2195b6840f46b555719d8e22e9b080e61a7317c/10d68214/tile_500
 ```
 
-In public mode without security token:
+In public mode without [security token](search.md#response-headers):
 
 ```
 /api/v1/t/a2195b6840f46b555719d8e22e9b080e61a7317c/public/tile_500
@@ -48,13 +48,13 @@ The thumbnail [size and aspect ratio](#thumbnail-types) are specified at the end
 
 ## Video Endpoint URI
 
-Authenticated with SHA1 hash and additional security token:
+Authenticated with SHA1 hash and additional [security token](search.md#response-headers):
 
 ```
 /api/v1/videos/51843134d75f4cbde534270cdd5954067f887ee6/10d68214/avc
 ```
 
-In public mode without security token:
+In public mode without [security token](search.md#response-headers):
 
 ```
 /api/v1/videos/51843134d75f4cbde534270cdd5954067f887ee6/public/avc

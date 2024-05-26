@@ -9,7 +9,7 @@ To simplify processing in the client/user interface, you can set the `merged` pa
 In particular, multiple files are returned for a single photo in the case of multi-file/hybrid media formats such as Live Photos, as these consist of a photo and a video file. The same applies to RAW/JPEG.
 
 !!! example ""
-    If you only want the primary image (thumbnail) to be returned, you can set the `primary` filter to `true`. In this case, it is not necessary to also set `merged` to `true` as a single file will be returned for each photo. This can simplify things if you don't need to know anything about the additional files, e.g. when just rendering thumbnails without any metadata.
+    If you only want the primary image (thumbnail) to be returned, you can set the `primary` filter to `true`. In this case, it is not necessary to also set `merged` to `true` as a single file will be returned for each photo. This can simplify things if you don't need to know anything about the additional files, e.g. when just rendering thumbnails without metadata.
 
 ### Composite ID and UIDs
 

@@ -113,13 +113,13 @@ Note that you do not need this composite ID to communicate with any of our API e
 
 ### Response Headers
 
-| Header           | Type   | Example  | Notes                                                               |
-|------------------|--------|----------|---------------------------------------------------------------------|
-| X-Count          | int    | 120      | Actual number of *files* returned                                   |
-| X-Limit          | int    | 120      | Maximum number of *files* requested                                 |
-| X-Offset         | int    | 0        | File offset                                                         |
-| X-Preview-Token  | string | 174utza5 | Security token required to use [Thumbnail Image API](thumbnails.md) |
-| X-Download-Token | string | 3qjg1db2 | Security token required to download original files                  |
+| Header           | Type   | Example  | Notes                                                                |
+|------------------|--------|----------|----------------------------------------------------------------------|
+| X-Count          | int    | 120      | Actual number of *files* returned                                    |
+| X-Limit          | int    | 120      | Maximum number of *files* requested                                  |
+| X-Offset         | int    | 0        | File offset                                                          |
+| X-Preview-Token  | string | 174utza5 | Security token required for the [Thumbnail Image API](thumbnails.md) |
+| X-Download-Token | string | 3qjg1db2 | Security token required to download original files                   |
 
 !!! example ""
     In order to fetch all results, you can perform a follow-up query if the number in the `X-Count` response header matches `X-Limit`. For this, the `offset` request parameter must be set to the number of files already returned.

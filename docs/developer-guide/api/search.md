@@ -9,13 +9,13 @@ To simplify processing in the client/user interface, you can set the `merged` pa
 In particular, multiple files are returned for a single photo in the case of multi-file/hybrid media formats such as Live Photos, as these consist of a photo and a video file. The same applies to RAW/JPEG.
 
 !!! example ""
-    If you only want the primary image (thumbnail) to be returned, you can set the `primary` filter to `true`. In this case, it is not necessary to also set `merged` to `true` as a single file will be returned for each photo. This can simplify things if you don't need to know anything about the additional files, e.g. when just rendering thumbnails without metadata.
+    If you only want the primary image ([thumbnail](thumbnails.md)) to be returned, you can set the `primary` filter to `true`. In this case, it is not necessary to also set `merged` to `true` as a single file will be returned for each photo. This can simplify things if you don't need to know anything about the additional files, e.g. when just rendering thumbnails without metadata.
 
 ### Composite ID and UIDs
 
 The `ID` returned by the search API is a composite ID consisting of the photo ID and the related file ID (usually the file selected as primary image), so that this `ID` is unique as required for rendering in the user interface.
 
-Note that you do not need this composite ID to communicate with any of our API endpoints. Instead, you will either have to pass a `UID` (e.g. when updating photo metadata) or the SHA1 `Hash` of a file (e.g. when requesting a thumbnail).
+Note that you do not need this composite ID to communicate with any of our API endpoints. Instead, you will either have to pass a `UID` (e.g. when updating photo metadata) or the SHA1 `Hash` of a file (e.g. when [requesting a thumbnail](thumbnails.md)).
 
 !!! example ""
     Using random UIDs prevents possible caching issues in proxies/clients, e.g. if the index is reset on the server and the numeric IDs would thus start at 0 again. They are also hard to guess, so a time-consuming brute force attack is required instead of simply enumerating integers starting from 0.

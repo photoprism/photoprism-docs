@@ -16,23 +16,25 @@ by default while indexing.
 Higher settings allow PhotoPrism to generate thumbnails with more detail in higher resolutions - either 
 *statically* (while indexing) or *dynamically* (on-demand).
 
-| Name        | Width | Height | Common Use               |
-|:------------|:-----:|:------:|:-------------------------|
-| `colors`    |   3   |   3    | Color Detection          |
-| `tile_50`   |  50   |   50   | List Preview             |
-| `tile_100`  |  100  |  100   | Maps Preview             |
-| `tile_224`  |  224  |  224   | Mosaic Preview           |
-| `left_224`  |  224  |  224   | TensorFlow               |
-| `right_224` |  224  |  224   | TensorFlow               |
-| `tile_500`  |  500  |  500   | Cards Preview            |
-| `fit_720`   |  720  |  720   | Mobile, TV               |
-| `fit_1280`  | 1280  |  1024  | Mobile, HD Ready TV      |
-| `fit_1920`  | 1920  |  1200  | Mobile, Full HD TV       |
-| `fit_2048`  | 2048  |  2048  | Tablets, Cinema 2K       |
-| `fit_2560`  | 2560  |  1600  | Quad HD, Retina Display  |
-| `fit_3840`  | 3840  |  2400  | Ultra HD                 |
-| `fit_4096`  | 4096  |  4096  | Ultra HD, Retina 4K      |
-| `fit_7680`  | 7680  |  4320  | 8K Ultra HD 2, Retina 6K |
+|   Name    | Width | Height | Aspect Ratio |          Usage          |
+|-----------|-------|--------|--------------|-------------------------|
+| colors    |     3 |      3 | 1:1          | Color Detection         |
+| tile_50   |    50 |     50 | 1:1          | List View               |
+| tile_100  |   100 |    100 | 1:1          | Places View             |
+| left_224  |   224 |    224 | 1:1          | TensorFlow              |
+| right_224 |   224 |    224 | 1:1          | TensorFlow              |
+| tile_224  |   224 |    224 | 1:1          | TensorFlow, Mosaic View |
+| tile_500  |   500 |    500 | 1:1          | Cards View              |
+| fit_720   |   720 |    720 | Preserved    | SD TV, Mobile           |
+| tile_1080 |  1080 |   1080 | 1:1          | Instagram               |
+| fit_1280  |  1280 |   1024 | Preserved    | HD TV, SXGA             |
+| fit_1600  |  1600 |    900 | Preserved    | Social Media            |
+| fit_1920  |  1920 |   1200 | Preserved    | Full HD                 |
+| fit_2048  |  2048 |   2048 | Preserved    | DCI 2K, Tablets         |
+| fit_2560  |  2560 |   1600 | Preserved    | Quad HD, Notebooks      |
+| fit_3840  |  3840 |   2400 | Preserved    | 4K Ultra HD             |
+| fit_4096  |  4096 |   4096 | Preserved    | DCI 4K, Retina 4K       |
+| fit_7680  |  7680 |   4320 | Preserved    | 8K Ultra HD 2           |
 
 ↪ [`internal/thumb/sizes.go`](https://github.com/photoprism/photoprism/blob/develop/internal/thumb/sizes.go)
 

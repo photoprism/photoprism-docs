@@ -194,6 +194,7 @@ nav:
       - Introduction: developer-guide/api/index.md
       - Client Authentication: developer-guide/api/auth.md
       - OAuth2 Grant Types: developer-guide/api/oauth2.md
+      - Search Endpoints: developer-guide/api/search.md
       - Thumbnail Images: developer-guide/api/thumbnails.md
       - Client Libraries:
         - Go: developer-guide/api/clients/go.md

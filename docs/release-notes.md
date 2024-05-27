@@ -11,7 +11,7 @@ This service release reduces the server load when downloading many files and ext
 What's new?
 
 - Download: [Files added to zip archives are not compressed to reduce server load](https://github.com/photoprism/photoprism/issues/4298)
-- Search: [Added `added`, `updated`, and `edited` filters to find pictures by modification time](https://github.com/photoprism/photoprism/issues/4300)
+- Search: [Added `added`, `updated`, and `edited` filters for app developers](https://github.com/photoprism/photoprism/issues/4300)
 - Config: [Setting `PHOTOPRISM_DISABLE_BACKUPS` disables all types of backups](https://github.com/photoprism/photoprism/issues/4294)
 - Config: [Setting `PHOTOPRISM_DISABLE_VIPS` disables the libvips image processing library](https://github.com/photoprism/photoprism/issues/4296)
 - Config: [Replaced the terms whitelist and blacklist with alternatives](https://github.com/photoprism/photoprism/issues/3981)

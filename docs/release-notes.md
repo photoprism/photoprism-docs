@@ -4,18 +4,20 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 240525-5dfe098d9</span>
+<span class="build">Build 240527-366b738b9</span>
 
 This service release reduces the server load when downloading many files and extends the list of available configuration options.
 
 What's new?
 
-- Download: [Zip archives are not compressed to reduce server load](https://github.com/photoprism/photoprism/issues/4298)
-- Config: [Setting `PHOTOPRISM_DISABLE_BACKUPS` disables all backups](https://github.com/photoprism/photoprism/issues/4294)
-- Config: [Setting `PHOTOPRISM_DISABLE_VIPS` disables the use of libvips](https://github.com/photoprism/photoprism/issues/4296)
+- Download: [Files added to zip archives are not compressed to reduce server load](https://github.com/photoprism/photoprism/issues/4298)
+- Search: [Added `added`, `updated`, and `edited` filters to find pictures by modification time](https://github.com/photoprism/photoprism/issues/4300)
+- Config: [Setting `PHOTOPRISM_DISABLE_BACKUPS` disables all types of backups](https://github.com/photoprism/photoprism/issues/4294)
+- Config: [Setting `PHOTOPRISM_DISABLE_VIPS` disables the libvips image processing library](https://github.com/photoprism/photoprism/issues/4296)
 - Config: [Replaced the terms whitelist and blacklist with alternatives](https://github.com/photoprism/photoprism/issues/3981)
 - Setup: [Improved .deb packages for installation on Ubuntu/Debian Linux](https://dl.photoprism.app/pkg/linux/README.html)
 - Setup: [Updated .aur packages for installation on Arch Linux](https://aur.archlinux.org/packages/photoprism-bin)
+- Translations: [Updated French and German](https://docs.photoprism.app/developer-guide/translations-weblate/)
 
 ### May 23, 2024 ###
 <span class="build">Build 240523-923ee0cf7</span>
@@ -42,7 +44,7 @@ What's new?
 - Moments: [Background worker no longer creates backups to avoid disk activity](https://github.com/photoprism/photoprism/issues/4237)
 - Docker: [Upgraded base image from Ubuntu 23.10 to Ubuntu 24.04 LTS](https://github.com/photoprism/photoprism/issues/4084)
 - Security: [Go has been updated to the latest stable release v1.22.3](https://github.com/golang/go/issues?q=milestone%3AGo1.22.3)
-- Translations: [Updated Chinese (traditional), Danish, French, and German](https://translate.photoprism.app/projects/photoprism/)
+- Translations: [Updated Chinese (traditional), Danish, French, and German](https://docs.photoprism.app/developer-guide/translations-weblate/)
 
 !!! info ""
     Missing user interface translations have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/), if necessary.

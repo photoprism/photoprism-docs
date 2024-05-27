@@ -34,13 +34,18 @@
 | PHOTOPRISM_RESOLUTION_LIMIT | --resolution-limit |                          150 | maximum resolution of media files in `MEGAPIXELS` (1-900; -1 to disable)                             |
 | PHOTOPRISM_USERS_PATH       | --users-path       | users                        | relative `PATH` to create base and upload subdirectories for users                                   |
 | PHOTOPRISM_STORAGE_PATH     | --storage-path     |                              | writable storage `PATH` for sidecar, cache, and database files                                       |
-| PHOTOPRISM_SIDECAR_PATH     | --sidecar-path     |                              | custom relative or absolute sidecar `PATH` *optional*                                                |
-| PHOTOPRISM_SIDECAR_YAML     | --sidecar-yaml     | true                         | create YAML sidecar files to back up picture metadata                                                |
-| PHOTOPRISM_CACHE_PATH       | --cache-path       |                              | custom cache `PATH` for sessions and thumbnail files *optional*                                      |
 | PHOTOPRISM_IMPORT_PATH      | --import-path      |                              | base `PATH` from which files can be imported to originals *optional*                                 |
 | PHOTOPRISM_IMPORT_DEST      | --import-dest      |                              | relative originals `PATH` to which the files should be imported by default *optional*                |
-| PHOTOPRISM_ASSETS_PATH      | --assets-path      |                              | assets `PATH` containing static resources like icons, models, and translations                       |
+| PHOTOPRISM_CACHE_PATH       | --cache-path       |                              | custom cache `PATH` for sessions and thumbnail files *optional*                                      |
 | PHOTOPRISM_TEMP_PATH        | --temp-path        |                              | temporary file `PATH` *optional*                                                                     |
+| PHOTOPRISM_ASSETS_PATH      | --assets-path      |                              | assets `PATH` containing static resources like icons, models, and translations                       |
+
+### Sidecar Files ###
+
+|       Environment       |    CLI Flag    | Default |                      Description                      |
+|-------------------------|----------------|---------|-------------------------------------------------------|
+| PHOTOPRISM_SIDECAR_PATH | --sidecar-path |         | custom relative or absolute sidecar `PATH` *optional* |
+| PHOTOPRISM_SIDECAR_YAML | --sidecar-yaml | true    | create YAML sidecar files to back up picture metadata |
 
 ### Backup ###
 
@@ -69,15 +74,17 @@
 | PHOTOPRISM_READONLY               | --read-only              |         | disable features that require write permission for the originals folder                          |
 | PHOTOPRISM_EXPERIMENTAL           | --experimental           |         | enable new features currently under development                                                  |
 | PHOTOPRISM_DISABLE_SETTINGS       | --disable-settings       |         | disable the settings user interface and server API, e.g. in combination with public mode         |
-| PHOTOPRISM_DISABLE_RESTART        | --disable-restart        |         | do not allow admins to restart the server from the user interface                                |
+| PHOTOPRISM_DISABLE_BACKUPS        | --disable-backups        |         | prevent database and album backups as well as YAML sidecar files from being created              |
+| PHOTOPRISM_DISABLE_RESTART        | --disable-restart        |         | prevent admins from restarting the server through the user interface                             |
 | PHOTOPRISM_DISABLE_WEBDAV         | --disable-webdav         |         | prevent other apps from accessing PhotoPrism as a shared network drive                           |
 | PHOTOPRISM_DISABLE_PLACES         | --disable-places         |         | disable interactive world maps and reverse geocoding                                             |
 | PHOTOPRISM_DISABLE_TENSORFLOW     | --disable-tensorflow     |         | disable features depending on TensorFlow, e.g. image classification and face recognition         |
 | PHOTOPRISM_DISABLE_FACES          | --disable-faces          |         | disable face detection and recognition (requires TensorFlow)                                     |
 | PHOTOPRISM_DISABLE_CLASSIFICATION | --disable-classification |         | disable image classification (requires TensorFlow)                                               |
-| PHOTOPRISM_DISABLE_SIPS           | --disable-sips           |         | disable conversion of media files with Sips *macOS only*                                         |
 | PHOTOPRISM_DISABLE_FFMPEG         | --disable-ffmpeg         |         | disable video transcoding and thumbnail extraction with FFmpeg                                   |
 | PHOTOPRISM_DISABLE_EXIFTOOL       | --disable-exiftool       |         | disable metadata extraction with ExifTool (required for full Video, Live Photo, and XMP support) |
+| PHOTOPRISM_DISABLE_VIPS           | --disable-vips           |         | disable image processing and conversion with libvips                                             |
+| PHOTOPRISM_DISABLE_SIPS           | --disable-sips           |         | disable file conversion using the sips command under macOS                                       |
 | PHOTOPRISM_DISABLE_DARKTABLE      | --disable-darktable      |         | disable conversion of RAW images with Darktable                                                  |
 | PHOTOPRISM_DISABLE_RAWTHERAPEE    | --disable-rawtherapee    |         | disable conversion of RAW images with RawTherapee                                                |
 | PHOTOPRISM_DISABLE_IMAGEMAGICK    | --disable-imagemagick    |         | disable conversion of image files with ImageMagick                                               |
@@ -118,7 +125,7 @@
 | PHOTOPRISM_SITE_PREVIEW     | --site-preview     |                                                                                       | sharing preview image `URL`                                                                                                  |
 | PHOTOPRISM_CDN_URL          | --cdn-url          |                                                                                       | content delivery network `URL`                                                                                               |
 | PHOTOPRISM_CDN_VIDEO        | --cdn-video        |                                                                                       | stream videos over the specified CDN                                                                                         |
-| PHOTOPRISM_CORS_ORIGIN      | --cors-origin      |                                                                                       | origin `URL` from which browsers are allowed to perform cross-origin requests (leave empty to disable or use * to allow all) |
+| PHOTOPRISM_CORS_ORIGIN      | --cors-origin      |                                                                                       | origin `URL` from which browsers are allowed to perform cross-origin requests (leave blank to disable or use * to allow all) |
 | PHOTOPRISM_CORS_HEADERS     | --cors-headers     | Accept, Accept-Ranges, Content-Disposition, Content-Encoding, Content-Range, Location | one or more `HEADERS` that browsers should see when performing a cross-origin request                                        |
 | PHOTOPRISM_CORS_METHODS     | --cors-methods     | GET, HEAD, OPTIONS                                                                    | one or more `METHODS` that may be used when performing a cross-origin request                                                |
 
@@ -181,34 +188,34 @@
 
 ### File Conversion ###
 
-|           Environment            |        CLI Flag         | Default                                  |                              Description                              |
-|----------------------------------|-------------------------|------------------------------------------|-----------------------------------------------------------------------|
-| PHOTOPRISM_SIPS_BIN              | --sips-bin              | sips                                     | Sips `COMMAND` for media file conversion *macOS only*                 |
-| PHOTOPRISM_SIPS_BLACKLIST        | --sips-blacklist        | avif, avifs, thm                         | do not use Sips to convert files with these `EXTENSIONS` *macOS only* |
-| PHOTOPRISM_FFMPEG_BIN            | --ffmpeg-bin            | ffmpeg                                   | FFmpeg `COMMAND` for video transcoding and thumbnail extraction       |
-| PHOTOPRISM_FFMPEG_ENCODER        | --ffmpeg-encoder        | libx264                                  | FFmpeg AVC encoder `NAME`                                             |
-| PHOTOPRISM_FFMPEG_SIZE           | --ffmpeg-size           | 4096                                     | maximum video size in `PIXELS` (720-7680)                             |
-| PHOTOPRISM_FFMPEG_BITRATE        | --ffmpeg-bitrate        | 50                                       | maximum video `BITRATE` in Mbit/s                                     |
-| PHOTOPRISM_FFMPEG_MAP_VIDEO      | --ffmpeg-map-video      | `0:v:0`                                  | video `STREAMS` that should be transcoded                             |
-| PHOTOPRISM_FFMPEG_MAP_AUDIO      | --ffmpeg-map-audio      | `0:a:0?`                                 | audio `STREAMS` that should be transcoded                             |
-| PHOTOPRISM_EXIFTOOL_BIN          | --exiftool-bin          | exiftool                                 | ExifTool `COMMAND` for extracting metadata                            |
-| PHOTOPRISM_DARKTABLE_BIN         | --darktable-bin         | darktable-cli                            | Darktable CLI `COMMAND` for RAW to JPEG conversion                    |
-| PHOTOPRISM_DARKTABLE_BLACKLIST   | --darktable-blacklist   | thm                                      | do not use Darktable to convert files with these `EXTENSIONS`         |
-| PHOTOPRISM_DARKTABLE_CACHE_PATH  | --darktable-cache-path  |                                          | custom Darktable cache `PATH`                                         |
-| PHOTOPRISM_DARKTABLE_CONFIG_PATH | --darktable-config-path |                                          | custom Darktable config `PATH`                                        |
-| PHOTOPRISM_RAWTHERAPEE_BIN       | --rawtherapee-bin       | rawtherapee-cli                          | RawTherapee CLI `COMMAND` for RAW to JPEG conversion                  |
-| PHOTOPRISM_RAWTHERAPEE_BLACKLIST | --rawtherapee-blacklist | dng,thm                                  | do not use RawTherapee to convert files with these `EXTENSIONS`       |
-| PHOTOPRISM_IMAGEMAGICK_BIN       | --imagemagick-bin       | convert                                  | ImageMagick CLI `COMMAND` for image file conversion                   |
-| PHOTOPRISM_IMAGEMAGICK_BLACKLIST | --imagemagick-blacklist | heif, heic, heics, avif, avifs, jxl, thm | do not use ImageMagick to convert files with these `EXTENSIONS`       |
-| PHOTOPRISM_HEIFCONVERT_BIN       | --heifconvert-bin       | heif-convert                             | libheif HEIC image conversion `COMMAND`                               |
-| PHOTOPRISM_RSVGCONVERT_BIN       | --rsvgconvert-bin       | rsvg-convert                             | librsvg SVG graphics conversion `COMMAND` *plus*                      |
+|                           Environment                            |        CLI Flag         |                 Default                  |                           Description                           |
+|------------------------------------------------------------------|-------------------------|------------------------------------------|-----------------------------------------------------------------|
+| PHOTOPRISM_FFMPEG_BIN                                            | --ffmpeg-bin            | ffmpeg                                   | FFmpeg `COMMAND` for video transcoding and thumbnail extraction |
+| PHOTOPRISM_FFMPEG_ENCODER                                        | --ffmpeg-encoder        | libx264                                  | FFmpeg AVC encoder `NAME`                                       |
+| PHOTOPRISM_FFMPEG_SIZE                                           | --ffmpeg-size           |                                     4096 | maximum video size in `PIXELS` (720-7680)                       |
+| PHOTOPRISM_FFMPEG_BITRATE                                        | --ffmpeg-bitrate        |                                       50 | maximum video `BITRATE` in Mbit/s                               |
+| PHOTOPRISM_FFMPEG_MAP_VIDEO                                      | --ffmpeg-map-video      | `0:v:0`                                  | video `STREAMS` that should be transcoded                       |
+| PHOTOPRISM_FFMPEG_MAP_AUDIO                                      | --ffmpeg-map-audio      | `0:a:0?`                                 | audio `STREAMS` that should be transcoded                       |
+| PHOTOPRISM_EXIFTOOL_BIN                                          | --exiftool-bin          | exiftool                                 | ExifTool `COMMAND` for extracting metadata                      |
+| PHOTOPRISM_SIPS_BIN                                              | --sips-bin              | sips                                     | Sips `COMMAND` for media file conversion *macOS only*           |
+| PHOTOPRISM_SIPS_EXCLUDE, PHOTOPRISM_SIPS_BLACKLIST               | --sips-exclude          | avif, avifs, thm                         | file `EXTENSIONS` not to be used with Sips *macOS only*         |
+| PHOTOPRISM_DARKTABLE_BIN                                         | --darktable-bin         | darktable-cli                            | Darktable CLI `COMMAND` for RAW to JPEG conversion              |
+| PHOTOPRISM_DARKTABLE_EXCLUDE, PHOTOPRISM_DARKTABLE_BLACKLIST     | --darktable-exclude     | thm                                      | file `EXTENSIONS` not to be used with Darktable                 |
+| PHOTOPRISM_DARKTABLE_CACHE_PATH                                  | --darktable-cache-path  |                                          | custom Darktable cache `PATH`                                   |
+| PHOTOPRISM_DARKTABLE_CONFIG_PATH                                 | --darktable-config-path |                                          | custom Darktable config `PATH`                                  |
+| PHOTOPRISM_RAWTHERAPEE_BIN                                       | --rawtherapee-bin       | rawtherapee-cli                          | RawTherapee CLI `COMMAND` for RAW to JPEG conversion            |
+| PHOTOPRISM_RAWTHERAPEE_EXCLUDE, PHOTOPRISM_RAWTHERAPEE_BLACKLIST | --rawtherapee-exclude   | dng, thm                                 | file `EXTENSIONS` not to be used with RawTherapee               |
+| PHOTOPRISM_IMAGEMAGICK_BIN                                       | --imagemagick-bin       | convert                                  | ImageMagick CLI `COMMAND` for image file conversion             |
+| PHOTOPRISM_IMAGEMAGICK_EXCLUDE, PHOTOPRISM_IMAGEMAGICK_BLACKLIST | --imagemagick-exclude   | heif, heic, heics, avif, avifs, jxl, thm | file `EXTENSIONS` not to be used with ImageMagick               |
+| PHOTOPRISM_HEIFCONVERT_BIN                                       | --heifconvert-bin       | heif-convert                             | libheif HEIC image conversion `COMMAND`                         |
+| PHOTOPRISM_RSVGCONVERT_BIN                                       | --rsvgconvert-bin       | rsvg-convert                             | librsvg SVG graphics conversion `COMMAND` *plus*                |
 
 ### Security Tokens ###
 
 |        Environment        |     CLI Flag     | Default |                                    Description                                     |
 |---------------------------|------------------|---------|------------------------------------------------------------------------------------|
-| PHOTOPRISM_DOWNLOAD_TOKEN | --download-token |         | `DEFAULT` download URL token for originals (leave empty for a random value)        |
-| PHOTOPRISM_PREVIEW_TOKEN  | --preview-token  |         | `DEFAULT` thumbnail and video streaming URL token (leave empty for a random value) |
+| PHOTOPRISM_DOWNLOAD_TOKEN | --download-token |         | `DEFAULT` download URL token for originals (leave blank for a random value)        |
+| PHOTOPRISM_PREVIEW_TOKEN  | --preview-token  |         | `DEFAULT` thumbnail and video streaming URL token (leave blank for a random value) |
 
 ### Preview Images ###
 

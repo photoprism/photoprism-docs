@@ -104,13 +104,18 @@ and [`defaults.yml`](defaults.md) files, grouped by purpose.
 | ResolutionLimit | int    | --resolution-limit |
 | UsersPath       | string | --users-path       |
 | StoragePath     | string | --storage-path     |
-| SidecarPath     | string | --sidecar-path     |
-| SidecarYaml     | bool   | --sidecar-yaml     |
-| CachePath       | string | --cache-path       |
 | ImportPath      | string | --import-path      |
 | ImportDest      | string | --import-dest      |
-| AssetsPath      | string | --assets-path      |
+| CachePath       | string | --cache-path       |
 | TempPath        | string | --temp-path        |
+| AssetsPath      | string | --assets-path      |
+
+### Sidecar Files ###
+
+|    Name     |  Type  |    CLI Flag    |
+|-------------|--------|----------------|
+| SidecarPath | string | --sidecar-path |
+| SidecarYaml | bool   | --sidecar-yaml |
 
 ### Backup ###
 
@@ -139,8 +144,8 @@ and [`defaults.yml`](defaults.md) files, grouped by purpose.
 | ReadOnly              | bool   | --read-only              |
 | Experimental          | bool   | --experimental           |
 | DisableSettings       | bool   | --disable-settings       |
-| DisableRestart        | bool   | --disable-restart        |
 | DisableBackups        | bool   | --disable-backups        |
+| DisableRestart        | bool   | --disable-restart        |
 | DisableWebDAV         | bool   | --disable-webdav         |
 | DisablePlaces         | bool   | --disable-places         |
 | DisableTensorFlow     | bool   | --disable-tensorflow     |
@@ -148,6 +153,7 @@ and [`defaults.yml`](defaults.md) files, grouped by purpose.
 | DisableClassification | bool   | --disable-classification |
 | DisableFFmpeg         | bool   | --disable-ffmpeg         |
 | DisableExifTool       | bool   | --disable-exiftool       |
+| DisableVips           | bool   | --disable-vips           |
 | DisableSips           | bool   | --disable-sips           |
 | DisableDarktable      | bool   | --disable-darktable      |
 | DisableRawTherapee    | bool   | --disable-rawtherapee    |
@@ -230,27 +236,27 @@ and [`defaults.yml`](defaults.md) files, grouped by purpose.
 
 ### File Conversion ###
 
-|         Name         |  Type  |        CLI Flag         |
-|----------------------|--------|-------------------------|
-| SipsBin              | string | --sips-bin              |
-| SipsBlacklist        | string | --sips-blacklist        |
-| FFmpegBin            | string | --ffmpeg-bin            |
-| FFmpegEncoder        | string | --ffmpeg-encoder        |
-| FFmpegSize           | int    | --ffmpeg-size           |
-| FFmpegBitrate        | int    | --ffmpeg-bitrate        |
-| FFmpegMapVideo       | string | --ffmpeg-map-video      |
-| FFmpegMapAudio       | string | --ffmpeg-map-audio      |
-| ExifToolBin          | string | --exiftool-bin          |
-| DarktableBin         | string | --darktable-bin         |
-| DarktableCachePath   | string | --darktable-cache-path  |
-| DarktableConfigPath  | string | --darktable-config-path |
-| DarktableBlacklist   | string | --darktable-blacklist   |
-| RawTherapeeBin       | string | --rawtherapee-bin       |
-| RawTherapeeBlacklist | string | --rawtherapee-blacklist |
-| ImageMagickBin       | string | --imagemagick-bin       |
-| ImageMagickBlacklist | string | --imagemagick-blacklist |
-| HeifConvertBin       | string | --heifconvert-bin       |
-| RsvgConvertBin       | string | --rsvgconvert-bin       |
+|        Name         |  Type  |        CLI Flag         |
+|---------------------|--------|-------------------------|
+| FFmpegBin           | string | --ffmpeg-bin            |
+| FFmpegEncoder       | string | --ffmpeg-encoder        |
+| FFmpegSize          | int    | --ffmpeg-size           |
+| FFmpegBitrate       | int    | --ffmpeg-bitrate        |
+| FFmpegMapVideo      | string | --ffmpeg-map-video      |
+| FFmpegMapAudio      | string | --ffmpeg-map-audio      |
+| ExifToolBin         | string | --exiftool-bin          |
+| SipsBin             | string | --sips-bin              |
+| SipsExclude         | string | --sips-exclude          |
+| DarktableBin        | string | --darktable-bin         |
+| DarktableCachePath  | string | --darktable-cache-path  |
+| DarktableConfigPath | string | --darktable-config-path |
+| DarktableExclude    | string | --darktable-exclude     |
+| RawTherapeeBin      | string | --rawtherapee-bin       |
+| RawTherapeeExclude  | string | --rawtherapee-exclude   |
+| ImageMagickBin      | string | --imagemagick-bin       |
+| ImageMagickExclude  | string | --imagemagick-exclude   |
+| HeifConvertBin      | string | --heifconvert-bin       |
+| RsvgConvertBin      | string | --rsvgconvert-bin       |
 
 ### Security Tokens ###
 

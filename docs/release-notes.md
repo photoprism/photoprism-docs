@@ -6,15 +6,16 @@
 ### Development Preview ###
 <span class="build">Build 240527-366b738b9</span>
 
-This service release reduces the server load when downloading many files and extends the list of available configuration options.
+This service release reduces the server load when [downloading many files](https://github.com/photoprism/photoprism/issues/4298), expands the list of [available config options](https://docs.photoprism.app/getting-started/config-options/), and gets you the latest translations [contributed by our community](https://docs.photoprism.app/developer-guide/translations-weblate/).
 
 What's new?
 
-- Download: [Files added to zip archives are not compressed to reduce server load](https://github.com/photoprism/photoprism/issues/4298)
-- Search: [Added `added`, `updated`, and `edited` filters for app developers](https://github.com/photoprism/photoprism/issues/4300)
-- Config: [Setting `PHOTOPRISM_DISABLE_BACKUPS` disables all types of backups](https://github.com/photoprism/photoprism/issues/4294)
-- Config: [Setting `PHOTOPRISM_DISABLE_VIPS` disables the libvips image processing library](https://github.com/photoprism/photoprism/issues/4296)
+- Download: [Zip archives are not compressed to reduce server load](https://github.com/photoprism/photoprism/issues/4298)
+- Search: [Added `added`, `updated` and `edited` search filters for app developers](https://github.com/photoprism/photoprism/issues/4300)
 - Config: [Replaced the terms whitelist and blacklist with alternatives](https://github.com/photoprism/photoprism/issues/3981)
+- Config: [New feature flag `PHOTOPRISM_DISABLE_BACKUPS` disables all backups](https://github.com/photoprism/photoprism/issues/4294)
+- Config: [New feature flag `PHOTOPRISM_DISABLE_VIPS` disables the use of libvips](https://github.com/photoprism/photoprism/issues/4296)
+- Config: [Due to compatibility issues, libvips is disabled on 32-bit operating systems](https://github.com/photoprism/photoprism/issues/4299)
 - Setup: [Improved .deb packages for installation on Ubuntu/Debian Linux](https://dl.photoprism.app/pkg/linux/README.html)
 - Setup: [Updated .aur packages for installation on Arch Linux](https://aur.archlinux.org/packages/photoprism-bin)
 - Translations: [Updated French and German](https://docs.photoprism.app/developer-guide/translations-weblate/)

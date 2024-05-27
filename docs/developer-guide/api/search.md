@@ -211,9 +211,9 @@ The following [search filters](../../user-guide/search/filters.md) can be used a
 | unstacked | switch    | unstacked:yes                         | Finds pictures with a file that has been removed from a stack                                                                              |
 | vector    | switch    | vector:yes                            | Finds vector graphics only                                                                                                                 |
 | video     | switch    | video:yes                             | Finds video files only                                                                                                                     |
-| added     | timestamp | added:"2006-01-02T15:04:05Z"          | Finds pictures added at or after this time (UTC)                                                                                           |
+| added     | timestamp | added:"2006-01-02T15:04:05Z"          | Finds pictures added at or after this time                                                                                                 |
 | after     | timestamp | after:"2022-01-30"                    | Finds pictures taken on or after this date                                                                                                 |
 | before    | timestamp | before:"2022-01-30"                   | Finds pictures taken on or before this date                                                                                                |
-| edited    | timestamp | edited:"2006-01-02T15:04:05Z"         | Finds pictures edited at or after this time (UTC)                                                                                          |
+| edited    | timestamp | edited:"2006-01-02T15:04:05Z"         | Finds pictures edited at or after this time                                                                                                |
 | taken     | timestamp | taken:"2022-01-30"                    | Finds pictures taken on the specified date                                                                                                 |
-| updated   | timestamp | updated:"2006-01-02T15:04:05Z"        | Finds pictures updated at or after this time (UTC)                                                                                         |
+| updated   | timestamp | updated:"2006-01-02T15:04:05Z"        | Finds pictures updated at or after this time                                                                                               |

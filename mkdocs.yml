@@ -190,6 +190,8 @@ nav:
       - Browsers: developer-guide/ui/browsers.md
       - Interactive Maps: developer-guide/ui/maps.md
       - Infinite Scrolling: developer-guide/ui/infinite-scrolling.md
+    - Mobile Apps:
+      - Introduction: developer-guide/apps/index.md
     - Web Service API:
       - Introduction: developer-guide/api/index.md
       - Client Authentication: developer-guide/api/auth.md

@@ -17,7 +17,7 @@ What's new?
 - Config: [New feature flag `PHOTOPRISM_DISABLE_VIPS` disables the use of libvips](https://github.com/photoprism/photoprism/issues/4296)
 - Config: [Due to compatibility issues, libvips is disabled on 32-bit operating systems](https://github.com/photoprism/photoprism/issues/4299)
 - Setup: [Improved .deb packages for installation on Ubuntu/Debian Linux](https://dl.photoprism.app/pkg/linux/README.html)
-- Setup: [Improved AUR packages for installation on Arch Linux (Thomas Eizinger)](getting-started/faq.md#arch-linux-packages)
+- Setup: [Improved AUR packages for installation on Arch Linux (Thomas Eizinger)](https://docs.photoprism.app/getting-started/faq/#arch-linux-packages)
 - Translations: [Updated French and German](https://docs.photoprism.app/developer-guide/translations-weblate/)
 
 ### May 23, 2024 ###

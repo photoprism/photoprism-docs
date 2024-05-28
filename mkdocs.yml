@@ -190,8 +190,8 @@ nav:
       - Browsers: developer-guide/ui/browsers.md
       - Interactive Maps: developer-guide/ui/maps.md
       - Infinite Scrolling: developer-guide/ui/infinite-scrolling.md
-    - Mobile Apps:
-      - Introduction: developer-guide/apps/index.md
+    - Native Apps:
+      - iOS and Android: developer-guide/native-apps/index.md
     - Web Service API:
       - Introduction: developer-guide/api/index.md
       - Client Authentication: developer-guide/api/auth.md
@@ -322,6 +322,7 @@ plugins:
         'user-guide/organize/views.md': 'user-guide/search/views.md'
         'user-guide/organize/search.md': 'user-guide/search/filters.md'
         'getting-started/advanced/https.md': 'getting-started/using-https.md'
+        'developer-guide/apps/index.md': 'developer-guide/native-apps/index.md'
 
 # MkDocs extensions.
 markdown_extensions:

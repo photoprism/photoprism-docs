@@ -181,7 +181,7 @@ This will automatically download all required config files and start the server 
 
 ### How can I install PhotoPrism without Docker?
 
-#### Installation Packages ####
+#### Installation Packages
 
 Experienced users can use the packages available at [**dl.photoprism.app/pkg/linux/**](https://dl.photoprism.app/pkg/linux/README.html) to install PhotoPrism on compatible Linux distributions, e.g. by running the following commands:
 
@@ -195,9 +195,15 @@ photoprism --version
 
 Note that these packages [must be updated manually](https://dl.photoprism.app/pkg/linux/README.html#updates), do not come with a [default configuration](https://dl.photoprism.app/pkg/linux/README.html#configuration), and do not include the [system dependencies](https://dl.photoprism.app/pkg/linux/README.html#dependencies) required to make use of all the features. The minimum required glibc version is 2.35, so for example Ubuntu 22.04 and Debian Bookworm will work, but older Linux distributions may not be compatible.
 
-[Read the Docs ›](https://dl.photoprism.app/pkg/linux/README.html)
+[Learn more ›](https://dl.photoprism.app/pkg/linux/README.html)
 
-#### LXC Images ####
+#### Arch Linux Packages
+
+Thomas Eizinger maintains [AUR packages for installation on Arch Linux](https://aur.archlinux.org/packages/photoprism-bin). These are based on the pre-built [installation packages](#installation-packages) we provide and have a systemd integration so that PhotoPrism can be started and restarted automatically.
+
+[Learn more ›](https://aur.archlinux.org/packages/photoprism-bin)
+
+#### LXC Images
 
 There are currently [no official LXC images](https://github.com/photoprism/photoprism/issues/147) available from us. However, you can use [our installation packages](#installation-packages) together with [the documentation we provide](https://dl.photoprism.app/pkg/linux/README.html) to set them up in [a base image of your choice](https://images.linuxcontainers.org/).
 
@@ -217,11 +223,11 @@ lxc-start --name=photoprism -- /opt/photoprism/bin/photoprism start
 
 Please note, though, that the network, storage and database configuration requires detailed knowledge of LXC. We therefore only recommend this approach if you can complete the setup without help from our documentation or support from our team.
 
-#### BSD Ports ####
+#### BSD Ports
 
 For FreeBSD and TrueNAS CORE (formerly FreeNAS) users, an [unofficial port is available](https://docs.photoprism.app/getting-started/freebsd/) that builds PhotoPrism from source. It will also compile and install the required TensorFlow libraries for you.
 
-#### Building From Source ####
+#### Building From Source
 
 You can alternatively build and install PhotoPrism from the publicly available [source code](https://docs.photoprism.app/developer-guide/setup/), which includes all the [Community Edition](https://www.photoprism.app/editions#compare) features and most of the [Essentials](https://www.photoprism.app/editions#compare) features (except [additional user roles](https://docs.photoprism.app/user-guide/users/roles/)):
 

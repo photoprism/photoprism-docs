@@ -3,8 +3,8 @@
 !!! note ""
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
-### Development Preview ###
-<span class="build">Build 240527-19b3e01f8</span>
+### May 28, 2024 ###
+<span class="build">Build 240528-977d6c0de</span>
 
 This service release reduces the server load when [downloading many files](https://github.com/photoprism/photoprism/issues/4298), expands the list of [available config options](https://docs.photoprism.app/getting-started/config-options/), and gets you the latest translations [contributed by our community](https://docs.photoprism.app/developer-guide/translations-weblate/).
 
@@ -17,7 +17,7 @@ What's new?
 - Config: [New feature flag `PHOTOPRISM_DISABLE_VIPS` disables the use of libvips](https://github.com/photoprism/photoprism/issues/4296)
 - Config: [Due to compatibility issues, libvips is disabled on 32-bit operating systems](https://github.com/photoprism/photoprism/issues/4299)
 - Setup: [Improved .deb packages for installation on Ubuntu/Debian Linux](https://dl.photoprism.app/pkg/linux/README.html)
-- Setup: [Updated .aur packages for installation on Arch Linux](https://aur.archlinux.org/packages/photoprism-bin)
+- Setup: [Improved AUR packages for installation on Arch Linux (Thomas Eizinger)](getting-started/faq.md#arch-linux-packages)
 - Translations: [Updated French and German](https://docs.photoprism.app/developer-guide/translations-weblate/)
 
 ### May 23, 2024 ###

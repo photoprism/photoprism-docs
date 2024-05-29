@@ -39,7 +39,7 @@ The following overview shows the name, dimensions, and aspect ratio for each thu
 
 ↪ [`internal/thumb/sizes.go`](https://github.com/photoprism/photoprism/blob/develop/internal/thumb/sizes.go)
 
-## Storage Folders
+## Thumbnail Storage
 
 Generated thumbnail files are stored in the `storage/cache/thumbnails` folder, where the path and file name depend on the size and file hash, e.g. `storage/cache/thumbnails/1/a/3/1a30c1f...9_100x100_center.jpg`.
 

@@ -351,7 +351,7 @@ Actual storage requirements vary and depend, among other things, on file resolut
 
 ### Can I skip creating thumbnails completely?
 
-The [smallest configurable size](../user-guide/settings/advanced.md#dynamic-and-static-size-limits) is 720px for [use by the indexer to perform color detection, image classification, as well as face detection and recognition](../user-guide/settings/advanced.md#what-files-will-be-created-by-photoprism). Recreating them every time they are needed is too demanding even for the most powerful servers. Unless you have just a few small pictures, this would make the app unusable.
+The [smallest configurable size](../user-guide/settings/advanced.md#dynamic-and-static-size-limits) is 720px for [use by the indexer to perform color detection, image classification, as well as face detection and recognition](../user-guide/settings/advanced.md#which-thumbnails-will-be-generated). Recreating them every time they are needed is too demanding even for the most powerful servers. Unless you have just a few small pictures, this would make the app unusable.
 
 !!! danger ""
     Reducing the *Static Size Limit* of thumbnails has a **significant impact on [face recognition](../user-guide/organize/people.md)

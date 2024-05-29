@@ -70,10 +70,8 @@ With public mode enabled, you can instead use "public" as [security token](searc
 /api/v1/videos/51843134d75f4cbde534270cdd5954067f887ee6/public/avc
 ```
 
-Videos can be streamed if the browser supports it. The format is specified at the end, in this case MPEG-4 AVC.
-
 !!! note ""
-    The only target format currently available for transcoding is `avc`. Additional formats will become available in a future release.
+    The only target format currently available for transcoding is `avc` (MPEG-4 AVC). Additional formats will become available in a future release.
 
 ## Thumbnail Types
 

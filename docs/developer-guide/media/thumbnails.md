@@ -41,7 +41,7 @@ The following overview shows the name, dimensions, and aspect ratio for each thu
 
 ## Thumbnail Storage
 
-Generated thumbnail files are stored in the `storage/cache/thumbnails` folder, where the path and file name depend on the [thumbnail type](#thumbnail-sizes) and original file hash, e.g.:
+Generated thumbnail files are stored in the `storage/cache/thumbnails` folder, where the path and file name depend on the [thumbnail size](#thumbnail-sizes) and original file hash, e.g.:
 
 ```
 storage/cache/thumbnails/1/a/3/1a30c1f...9_100x100_center.jpg

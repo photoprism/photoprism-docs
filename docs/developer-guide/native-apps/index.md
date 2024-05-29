@@ -1,6 +1,6 @@
 # Native Mobile Apps for iOS and Android
 
-As an addition to the platform-independent [Progressive Web App (PWA)](https://docs.photoprism.app/user-guide/pwa/), which is part of PhotoPrism, the following native apps are being maintained by other companies and individual developers:
+As an addition to our platform-independent [Progressive Web App (PWA)](https://docs.photoprism.app/user-guide/pwa/), the following native apps are being maintained by other companies and individual developers:
 
 | Name                                              | Platform     | Developer                                               | License                                                          | Download                                                                                                             |
 |---------------------------------------------------|--------------|---------------------------------------------------------|------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|

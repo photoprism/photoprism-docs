@@ -28,7 +28,7 @@ depending on your specific use case.
 
 Of course, you can continue using your favorite tools for processing RAW files, editing metadata,
 or importing new shots. Go to *Library* and click *Start* to update the index after files have been
-changed, added, or removed. This can also be automated using CLI commands and a [scheduler](https://dl.photoprism.app/docker/scheduler/).
+changed, added, or removed. This can also be automated by configuring a schedule for regular indexing using the `PHOTOPRISM_INDEX_SCHEDULE` [config option](../getting-started/config-options.md#indexing)
 
 !!! note ""
     While indexing, JPEG sidecar files may be created for originals in other formats such as RAW and HEIF. This is required for image classification, facial recognition, and for displaying them in a Web browser. Sidecar and thumbnail files will be added to the *storage* folder, so that your *originals* folder won't be modified.

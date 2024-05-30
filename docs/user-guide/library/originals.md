@@ -69,7 +69,8 @@ We recommend performing a complete rescan after major updates to take advantage 
 
 #### Cleanup ####
 Admins can optionally enable the cleanup option to delete unused thumbnails from the cache folder and remove orphaned index entries. If you do this from time to time, it can speed up indexing and reduce storage usage.
-#### Automatic Indexing ####
+
+### Automatic Indexing ###
 
 Indexing is triggered automatically when files are [synced with the *originals* folder via WebDAV](../sync/webdav.md).
 
@@ -77,3 +78,7 @@ The default safety delay for automatic indexing is 5 minutes. You can change it 
 
 !!! tldr ""
     Be careful not to start multiple indexing processes at the same time, as this will lead to a high server load.
+
+### Schedule Indexing ###
+
+You can configure a schedule for regular indexing using the `PHOTOPRISM_INDEX_SCHEDULE` [config option](../../getting-started/config-options.md#indexing).

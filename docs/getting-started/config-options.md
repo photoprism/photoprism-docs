@@ -64,8 +64,8 @@
 | PHOTOPRISM_INDEX_WORKERS, PHOTOPRISM_WORKERS | --index-workers   |       4 | maximum `NUMBER` of indexing workers, default depends on the number of physical cores             |
 | PHOTOPRISM_INDEX_SCHEDULE                    | --index-schedule  |         | indexing `SCHEDULE` in cron format (e.g. "@every 3h" for every 3 hours; "" to disable)            |
 | PHOTOPRISM_WAKEUP_INTERVAL                   | --wakeup-interval | 15m0s   | `TIME` between facial recognition, file sync, and metadata worker runs (1-86400s)                 |
-| PHOTOPRISM_AUTO_INDEX                        | --auto-index      |     120 | delay before automatically indexing files in `SECONDS` when uploading via WebDAV (-1 to disable)  |
-| PHOTOPRISM_AUTO_IMPORT                       | --auto-import     |     150 | delay before automatically importing files in `SECONDS` when uploading via WebDAV (-1 to disable) |
+| PHOTOPRISM_AUTO_INDEX                        | --auto-index      |     300 | delay before automatically indexing files in `SECONDS` when uploading via WebDAV (-1 to disable)  |
+| PHOTOPRISM_AUTO_IMPORT                       | --auto-import     |      -1 | delay before automatically importing files in `SECONDS` when uploading via WebDAV (-1 to disable) |
 
 ### Feature Flags ###
 

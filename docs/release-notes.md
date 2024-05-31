@@ -4,11 +4,11 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 240531-eca6ce026</span>
+<span class="build">Build 240531-14b84c0a8</span>
 
 What's new?
 
-- Videos: [Added script to upgrade FFmpeg from 6.1 to 7.0 for faster transcoding](https://github.com/photoprism/photoprism/issues/4181#issuecomment-2138890665)
+- Videos: [Our Docker image allows to install FFmpeg 7.0 for faster transcoding](https://docs.photoprism.app/getting-started/advanced/transcoding/#software-transcoding)
 - MariaDB: [Backup and restore commands support socket connections](https://github.com/photoprism/photoprism/issues/4306)
 - Config: [Increased auto-index delay and disabled auto-import by default](https://github.com/photoprism/photoprism/issues/4310)
 - Translations: [Updated Japanese](https://docs.photoprism.app/developer-guide/translations-weblate/)

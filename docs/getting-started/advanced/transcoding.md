@@ -18,21 +18,6 @@ It defaults to `software` if no value is set or hardware transcoding fails. Plea
 !!! tldr ""
     For video transcoding to work, FFmpeg must be enabled and installed. When using our Docker images, it is already pre-installed. In addition, the service must have permission to use the related video devices. This depends on your hardware and operating system, so we can only give you examples that may need to be changed to work for you.
 
-### Software Transcoding ###
-
-Unless you have a lot of high-resolution videos in your library, we recommend keeping the default settings to use the standard software codec when a video has to be transcoded. First of all, because it does not require any additional permissions, drivers, or configuration changes. But also because of its predictable and good quality.
-
-Since FFmpeg 7 has significant performance optimizations compared to the previous version shipped with Ubuntu 24.04, users of our Docker image can choose to install the latest FFmpeg 7 release available at [johnvansickle.com/ffmpeg/](https://johnvansickle.com/ffmpeg/). To do this, add `PHOTOPRISM_INIT: "ffmpeg"` to the environment section of your `compose.yaml` or `docker-compose.yml` file:
-
-```yaml
-services:
-  photoprism:
-    environment:
-      PHOTOPRISM_INIT: "ffmpeg"
-```
-
-Note that this version **does not support hardware transcoding** and is therefore only suitable if you use the standard software codec. This build might also not support all video formats.
-
 ### Size Limit ###
 
 The [`PHOTOPRISM_FFMPEG_SIZE`](../config-options.md#file-conversion) config option allows to limit the resolution of transcoded videos. It accepts the following standard sizes, while other values are automatically adjusted to the next supported size:
@@ -61,6 +46,21 @@ Note that MPEG-4 AVC videos are not re-encoded if they exceed the [configured bi
 
 !!! tldr ""
     Already transcoded video files are not automatically re-transcoded when the limit is changed. To do this, you must manually remove the `*.avc` files in the `sidecar` [storage folder](../docker-compose.md#photoprismstorage) and run the `photoprism convert` command [in a terminal](../docker-compose.md#opening-a-terminal).
+
+## Software Transcoding ##
+
+Unless you have a lot of high-resolution videos in your library, we recommend keeping the default settings to use the standard software codec when a video needs to be transcoded. First of all, because it does not require any additional permissions, drivers, or configuration changes. But also because of its predictable and good quality.
+
+Since FFmpeg 7 has significant performance optimizations compared to the previous version shipped with Ubuntu 24.04, users of our Docker image can choose to install the latest FFmpeg 7 release available at [johnvansickle.com/ffmpeg/](https://johnvansickle.com/ffmpeg/). To do this, add `PHOTOPRISM_INIT: "ffmpeg"` to the environment section of your `compose.yaml` or `docker-compose.yml` file:
+
+```yaml
+services:
+  photoprism:
+    environment:
+      PHOTOPRISM_INIT: "ffmpeg"
+```
+
+Note that this version **does not support hardware transcoding** and is therefore only suitable if you use the standard software codec. This build might also not support all video formats.
 
 ## GPU Drivers
 

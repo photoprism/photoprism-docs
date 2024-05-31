@@ -60,7 +60,7 @@ services:
       PHOTOPRISM_INIT: "ffmpeg"
 ```
 
-Note that this version **does not support hardware transcoding** and is therefore only suitable if you use the standard software codec. It might also not support the [same range of video formats](https://www.photoprism.app/kb/file-formats).
+Note that this version cannot be used with hardware transcoding and that it supports a different set of [file formats](https://www.photoprism.app/kb/file-formats).
 
 ## GPU Drivers
 

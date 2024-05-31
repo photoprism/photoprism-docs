@@ -4,12 +4,12 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 240531-dfb9197d9</span>
+<span class="build">Build 240531-b3459de35</span>
 
 What's new?
 
-- Videos: [Added init script to upgrade FFmpeg from 6.1.1 to 7.0 for faster software transcoding](https://github.com/photoprism/photoprism/issues/4181#issuecomment-2138890665)
-- Backup: [`photoprism backup` command supports MariaDB socket connections](https://github.com/photoprism/photoprism/issues/4306)
+- Videos: [Added script to upgrade FFmpeg from 6.1 to 7.0 for faster transcoding](https://github.com/photoprism/photoprism/issues/4181#issuecomment-2138890665)
+- MariaDB: [Backup and restore commands also support socket connections](https://github.com/photoprism/photoprism/issues/4306)
 - Config: [Auto import is disabled by default due to safety concerns](https://github.com/photoprism/photoprism/issues/4310)
 
 ### May 28, 2024 ###

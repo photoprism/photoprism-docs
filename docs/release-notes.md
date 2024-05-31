@@ -8,7 +8,7 @@
 
 What's new?
 
-- Videos: [Our Docker image allows to install FFmpeg 7.0 for faster transcoding](https://docs.photoprism.app/getting-started/advanced/transcoding/#software-transcoding)
+- Videos: [You can choose to install FFmpeg 7.0 for faster transcoding](https://docs.photoprism.app/getting-started/advanced/transcoding/#software-transcoding)
 - MariaDB: [Backup and restore commands support socket connections](https://github.com/photoprism/photoprism/issues/4306)
 - Config: [Increased auto-index delay and disabled auto-import by default](https://github.com/photoprism/photoprism/issues/4310)
 - Translations: [Updated Japanese](https://docs.photoprism.app/developer-guide/translations-weblate/)

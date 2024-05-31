@@ -6,7 +6,7 @@
 ### May 31, 2024 ###
 <span class="build">Build 240531-60b3a4628</span>
 
-With this update, you can choose to install FFmpeg 7 for faster software transcoding. You also get the latest translations contributed by our community as well as improved backup commands and configuration defaults.
+With this update, you can choose to install FFmpeg 7 for faster [software video transcoding](https://docs.photoprism.app/getting-started/advanced/transcoding/#software-transcoding). You also get the latest translations [contributed by our community](https://docs.photoprism.app/developer-guide/translations-weblate/) as well as improved [backup commands](https://docs.photoprism.app/user-guide/backups/) and [configuration defaults](https://docs.photoprism.app/getting-started/config-options/).
 
 What's new?
 

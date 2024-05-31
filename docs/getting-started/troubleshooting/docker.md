@@ -319,7 +319,7 @@ volumes:
     driver_opts:
       type: nfs
       # Authentication and other mounting options:
-      o: "addr=1.2.3.4,username=user,password=secret,soft,rw,nfsvers=4"
+      o: "addr=1.2.3.4,username=user,password=secret,soft,rw,nfsvers=4.1"
       # Mount this path:
       device: ":/mnt/example"
 ```
@@ -328,13 +328,16 @@ volumes:
 
 Driver-specific options can be set after the server address in `o`, see the [nfs manual page](https://man7.org/linux/man-pages/man5/nfs.5.html). Here are some examples of commonly used options:
 
-- `nfsvers=3` or `nfsvers=4` to specify the NFS version
+- `nfsvers=3`, `nfsvers=4`, or `nfsvers=4.1` to specify the NFS version
 - `nolock` (optional): Remote applications on the NFS server are not affected by lock files inside the Docker container (only other processes inside the container are affected by locks)
 - `timeo=n` (optional, default 600): The NFS client waits `n` tenths of a second before retrying an NFS request
 - `soft` (optional): The NFS client aborts an NFS request after `retrans=n` unsuccessful retries, otherwise it retries indefinitely
 - `retrans=n` (optional, default 2): Sets the number of retries for NFS requests, only relevant when using `soft`
 
 When you are done, please [restart all services](../docker-compose.md#step-2-start-the-server) for the changes to take effect.
+
+!!! note ""
+    Because some operating environments and file systems do not enforce character set encodings, [NFS v4.1](https://www.rfc-editor.org/rfc/rfc5661#section-14.4) supports the `fs_charset_cap` attribute, which indicates the UTF-8 capabilities to the client.
 
 ### SMB / CIFS
 

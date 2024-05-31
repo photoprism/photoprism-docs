@@ -9,7 +9,7 @@
 What's new?
 
 - Videos: [Added script to upgrade FFmpeg from 6.1 to 7.0 for faster transcoding](https://github.com/photoprism/photoprism/issues/4181#issuecomment-2138890665)
-- MariaDB: [Backup and restore commands also support socket connections](https://github.com/photoprism/photoprism/issues/4306)
+- MariaDB: [Backup and restore commands support socket connections](https://github.com/photoprism/photoprism/issues/4306)
 - Config: [Auto import is disabled by default due to safety concerns](https://github.com/photoprism/photoprism/issues/4310)
 - Translations: [Updated Japanese](https://docs.photoprism.app/developer-guide/translations-weblate/)
 

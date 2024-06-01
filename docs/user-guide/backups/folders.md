@@ -51,7 +51,7 @@ The *config* folder contains configuration files and certificates.
 
 Its location can be changed by setting the `PHOTOPRISM_CONFIG_PATH` environment variable.
 
-## Backup
+### Backup
 
 The *backup* folder contains database as well as album [backup files](../../getting-started/advanced/backups.md) and is located in the *storage* folder by default.
 

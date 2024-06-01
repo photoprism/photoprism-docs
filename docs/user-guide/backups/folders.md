@@ -53,7 +53,7 @@ Its location can be changed by setting the `PHOTOPRISM_CONFIG_PATH` environment 
 
 ### Backup
 
-The *backup* folder contains database as well as album [backup files](../../getting-started/advanced/backups.md) and is located in the *storage* folder by default.
+The *backup* folder contains database dumps as well as album [backup files](../../getting-started/advanced/backups.md) and is located in the *storage* folder by default.
 
 Its location can be changed by setting the `PHOTOPRISM_BACKUP_PATH` environment variable.
 
@@ -65,7 +65,7 @@ Its location can be changed by setting the `PHOTOPRISM_TEMP_PATH` environment va
 
 ## Assets
 
-The *asset* folder contains static resources such as machine learning models, icons, and templates.
+The *assets* folder contains static resources such as machine learning models, icons, and templates.
 
 Its location can be changed by setting the `PHOTOPRISM_ASSETS_PATH` environment variable.
 

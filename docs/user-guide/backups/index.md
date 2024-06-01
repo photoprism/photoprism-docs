@@ -45,7 +45,7 @@ The [*originals* folder](../../getting-started/docker-compose.md#photoprismorigi
 
 ### Storage
 
-SQLite, config, cache, thumbnail and sidecar files are saved in [the *storage* folder](../../getting-started/docker-compose.md#photoprismstorage). As with the *originals* folder, the exact path on your computer [depends on your configuration](../../getting-started/config-options.md#storage).
+SQLite, config, cache, backup, thumbnail and sidecar files are saved in [the *storage* folder](../../getting-started/docker-compose.md#photoprismstorage). As with the *originals* folder, the exact path on your computer [depends on your configuration](../../getting-started/config-options.md#storage).
 
 We recommend that you back up this folder as well so that you don't need to recreate the thumbnails and have a complete backup of your configuration. As for the *originals* folder, you can use any standard file backup utility to do this.
 

@@ -1,51 +1,73 @@
-This page gives you an overview about the directories used by PhotoPrism.
+The following gives you an overview of the most important folders that PhotoPrism uses:
 
 ## Originals
-This path can be configured by `PHOTOPRISM_ORIGINALS_PATH`.
-The `originals` directory contains your photo library. PhotoPrism will never move or rename files in this folder. It may add files from uploads or imports, unless read-only mode is enabled.
+
+The *originals* folder contains the original photo and video files of your library. PhotoPrism will not move or rename the files in this folder without a user requesting it. Unless read-only mode is enabled, new files can be added using the web upload dialog, the import functionality, or by mounting the folder via WebDAV.
+
+Its location can be changed by setting the `PHOTOPRISM_ORIGINALS_PATH` environment variable.
 
 ## Import
-This path can be configured by `PHOTOPRISM_IMPORT_PATH`.
-If you decide to use our [import](../library/index.md) functionality,
-you add your photos to the `import` directory, so that they can be imported into `originals`.
+
+When [importing](../library/import.md), files are first transferred from the *import* folder to the *originals* folder. In the process, duplicates are automatically skipped, and the imported files are given a unique file name and are sorted by year and month.
+
+The location of the *import* folder can be changed by setting the `PHOTOPRISM_IMPORT_PATH` environment variable.
 
 ## Storage
-The storage path can be configured using `PHOTOPRISM_STORAGE_PATH`.
 
-In case cache, sidecar and config path are not defined separately, those are located in the storage directory.
-In addition the storage directory contains [album backups](export.md#album-backups) in `/albums` as well as database files.
+Unless you use a custom configuration, the *storage* folder is used to save config, cache, [backup](export.md#album-backups), thumbnail, and sidecar files.
+
+Its location can be changed by setting the `PHOTOPRISM_STORAGE_PATH` environment variable.
+
+[Learn more ›](../../getting-started/faq.md#why-is-my-storage-folder-so-large-what-is-in-it)
 
 !!! attention ""
-    You storage path must NOT be located in your originals path. Otherwise your thumbnails will be indexed as well!
+    We recommend not to configure the *storage* folder to be inside the *originals* folder unless the name starts with a `.` to indicate that it is hidden.
+    In older releases prior to [240420-ef5f14bc4](https://docs.photoprism.app/release-notes/#april-20-2024), this could [lead to an indexing loop](https://github.com/photoprism/photoprism/issues/1642) by indexing thumbnails of already indexed files.
 
 ### Cache
-The `cache` directory contains `json` and `thumbnails` directories. 
-The path can be set using `PHOTOPRISM_CACHE_PATH`.
+
+The *cache* folder contains the subdirectories `json` and `thumbnails` for storing ExifTool JSON files and thumbnail images.
+
+Its location can be changed by setting the `PHOTOPRISM_CACHE_PATH` environment variable.
 
 #### JSON
-PhotoPrism creates JSON files containing a file's metadata, read by [ExifTool](https://exiftool.org/), in this directory.
-You can prevent PhotoPrism from creating those JSON files by disabling [ExifTool](https://exiftool.org/) in [Settings](../settings/advanced.md).
+
+Unless you have disabled [ExifTool](https://exiftool.org/) in [Settings > Advanced](../settings/advanced.md), it may used to create JSON files with the metadata of a file in this directory e.g. when indexing or importing new files.
 
 #### Thumbnails
+
 PhotoPrism creates thumbnails in different sizes for each photo. Those are stored in the `thumbnails` directory.
-More information on thumbnails can be found [here](../settings/advanced.md#images).
+More information on thumbnails can be found [here](../settings/advanced.md#preview-images).
 
 ### Sidecar
-In the `sidecar` directory PhotoPrism stores [YAML backup files](export.md#photo-backups) for each photo as well as JPEG's it converted e.g. from RAWs.
-Both backup and converting functionalities can be disabled in [Settings](../settings/advanced.md).
-The sidecar path can be configured using `PHOTOPRISM_SIDECAR_PATH`.
+
+The *sidecar* folder contains [YAML backup files](export.md#photo-backups) for each picture as well as e.g. automatically generated JPEG versions of RAW images.
+Both can be configured in [Settings > Advanced](../settings/advanced.md).
+
+Its location can be changed by setting the `PHOTOPRISM_SIDECAR_PATH` environment variable.
 
 ### Config
-In the config path, setting files might be stored. It can be set with `PHOTOPRISM_CONFIG_PATH`.
+
+The *config* folder contains configuration files and certificates.
+
+Its location can be changed by setting the `PHOTOPRISM_CONFIG_PATH` environment variable.
 
 ## Backup
-[Database backup files](../../getting-started/advanced/backups.md) are stored in the backup directory.
-It can be configured using `PHOTOPRISM_BACKUP_PATH`.
+
+The *backup* folder contains database as well as album [backup files](../../getting-started/advanced/backups.md) and is located in the *storage* folder by default.
+
+Its location can be changed by setting the `PHOTOPRISM_BACKUP_PATH` environment variable.
 
 ## Temp
-In the `temp` directory, uploads and downloads are temporarily stored. You can configure the path using `PHOTOPRISM_TEMP_PATH`.
 
-## Asset
-The asset path is used to store static resources like models and templates. It can be set using `PHOTOPRISM_ASSETS_PATH`.
+Uploads, downloads, and other temporary files may be temporarily stored in the *temp* folder.
+
+Its location can be changed by setting the `PHOTOPRISM_TEMP_PATH` environment variable.
+
+## Assets
+
+The *asset* folder contains static resources such as machine learning models, icons, and templates.
+
+Its location can be changed by setting the `PHOTOPRISM_ASSETS_PATH` environment variable.
 
 

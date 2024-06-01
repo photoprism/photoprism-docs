@@ -51,7 +51,7 @@ Note that MPEG-4 AVC videos are not re-encoded if they exceed the [configured bi
 
 Unless you have a lot of high-resolution videos in your library, we recommend keeping the default settings to use the standard software codec for video transcoding. It has a high quality and does not require any special permissions or additional drivers.
 
-Since [FFmpeg 7](https://ffmpeg.org/index.html#pr7.0) has significant [performance optimizations](https://www.debugpoint.com/ffmpeg-7-0-features/) compared to version 6.1.1 that ships with [Ubuntu 24.04](https://packages.ubuntu.com/noble/ffmpeg), users of our Docker image can choose to install the latest FFmpeg 7 build available at [johnvansickle.com/ffmpeg/](https://johnvansickle.com/ffmpeg/) by adding `PHOTOPRISM_INIT: "ffmpeg"` to the environment section of their `compose.yaml` or `docker-compose.yml` file:
+Since [FFmpeg 7](https://ffmpeg.org/index.html#pr7.0) has significant [performance optimizations](https://www.debugpoint.com/ffmpeg-7-0-features/) compared to version 6.1.1 that ships with [Ubuntu 24.04](https://packages.ubuntu.com/noble/ffmpeg), users of our [Docker image](https://docs.photoprism.app/release-notes/#may-31-2024) can choose to install the [latest FFmpeg 7 build](https://johnvansickle.com/ffmpeg/release-readme.txt) available at [johnvansickle.com/ffmpeg](https://johnvansickle.com/ffmpeg/) by adding `PHOTOPRISM_INIT: "ffmpeg"` to the environment section of their `compose.yaml` or `docker-compose.yml` file:
 
 ```yaml
 services:
@@ -60,7 +60,7 @@ services:
       PHOTOPRISM_INIT: "ffmpeg"
 ```
 
-Note that this version cannot be used with hardware transcoding and that it supports a different set of [file formats](https://www.photoprism.app/kb/file-formats).
+Note that this version cannot be used with hardware transcoding and that it may [support a different set](https://johnvansickle.com/ffmpeg/release-readme.txt) of [file formats](https://www.photoprism.app/kb/file-formats).
 
 ## GPU Drivers
 

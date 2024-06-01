@@ -49,7 +49,7 @@ Note that MPEG-4 AVC videos are not re-encoded if they exceed the [configured bi
 
 ## Software Transcoding ##
 
-Unless you have a lot of high-resolution videos in your library, we recommend keeping the default settings to use the standard software codec when a video needs to be transcoded. It has a predictable and good quality (often better than hardware transcoding) and requires no additional permissions, drivers, or configuration changes.
+Unless you have a lot of high-resolution videos in your library, we recommend keeping the default settings to use the standard software codec when a video needs to be transcoded. It has a good quality (often better than hardware transcoding) and requires no additional permissions or drivers.
 
 Since [FFmpeg 7](https://ffmpeg.org/index.html#pr7.0) has significant [performance optimizations](https://www.debugpoint.com/ffmpeg-7-0-features/) compared to version 6.1.1 that ships with [Ubuntu 24.04](https://packages.ubuntu.com/noble/ffmpeg), users of our Docker image can choose to install the latest FFmpeg 7 build available at [johnvansickle.com/ffmpeg/](https://johnvansickle.com/ffmpeg/) by adding `PHOTOPRISM_INIT: "ffmpeg"` to the environment section of their `compose.yaml` or `docker-compose.yml` file:
 

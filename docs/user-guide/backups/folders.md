@@ -2,7 +2,7 @@ The following gives you an overview of the most important folders that PhotoPris
 
 ## Originals
 
-The *originals* folder contains the original photo and video files of your library. PhotoPrism will not move or rename the files in this folder without a user requesting it. Unless read-only mode is enabled, new files can be added using the [web upload dialog](../library/upload.md), the [import functionality](../library/import.md), or by mounting the folder [via WebDAV](../sync/webdav.md).
+The *originals* folder contains the original photo and video files of your library. PhotoPrism will not move or rename the files in this folder without a user requesting it. Unless read-only mode is enabled, new files can be added using the [web upload dialog](../library/upload.md), the [import functionality](../library/import.md), or by [mounting the folder via WebDAV](../sync/webdav.md).
 
 Its location can be changed by setting the `PHOTOPRISM_ORIGINALS_PATH` environment variable.
 

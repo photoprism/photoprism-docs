@@ -21,7 +21,7 @@ Its location can be changed by setting the `PHOTOPRISM_STORAGE_PATH` environment
 [Learn more ›](../../getting-started/faq.md#why-is-my-storage-folder-so-large-what-is-in-it)
 
 !!! attention ""
-    We recommend not to configure the *storage* folder to be inside the *originals* folder unless the name starts with a `.` to indicate that it is hidden.
+    We recommend [not to configure](../../known-issues.md#nested-storage-folder) the *storage* folder to be inside the *originals* folder unless the name starts with a `.` to indicate that it is hidden.
 
 ### Cache
 

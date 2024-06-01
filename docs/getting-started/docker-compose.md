@@ -170,7 +170,7 @@ On Windows, prefix the host path with the drive letter and use `/` instead of `\
 
 ##### /photoprism/storage
 
-The *storage* folder is used to save config, cache, thumbnail, and sidecar files. It must always be specified so that you do not lose these files after a restart or upgrade.
+The *storage* folder is used to save config, cache, backup, thumbnail, and sidecar files. It must always be specified so that you do not lose these files after a restart or upgrade.
 If available, we recommend you put the *storage* folder on a [local SSD drive](troubleshooting/performance.md#storage) for best performance. You can otherwise keep the default and store the files in a folder relative to the current directory:
 
 ```yaml

@@ -69,7 +69,7 @@ Additional directories can be mounted as sub folders of `/photoprism/originals` 
 
 ##### /photoprism/storage #####
 
-The *storage* folder is used to save config, cache, thumbnail, and sidecar files. It must always be specified so that you do not lose these files after a restart or upgrade.
+The *storage* folder is used to save config, cache, backup, thumbnail, and sidecar files. It must always be specified so that you do not lose these files after a restart or upgrade.
 If available, we recommend that you put the *storage* folder on a [local SSD drive](../troubleshooting/performance.md#storage) for best performance. You can otherwise keep the default to store the files in the internal application folder:
 
 ```yaml

@@ -339,19 +339,19 @@ Support for animated GIFs was [added in April 2022](https://github.com/photopris
 
 The *storage* folder contains sidecar, cache, and configuration files. It may also contain index database files if you are [using SQLite](#should-i-use-sqlite-mariadb-or-mysql). Most of the space there is taken up by your thumbnails: These are high-quality, scaled-down versions of your originals. Thumbnails are necessary because web browsers are bad at [resizing large images to fit the screen](../user-guide/settings/advanced.md#downscaling-filter). Using full-resolution originals for slideshows and in search results would also consume a lot of browser memory and significantly reduce indexing performance.
 
-We are working to implement storage optimizations whenever there is an opportunity. It is also possible to [increase the JPEG compression and/or limit the resolution](../user-guide/settings/advanced.md#images) if you are happy with lower quality thumbnails.
+We are working to implement storage optimizations whenever there is an opportunity. It is also possible to [increase the JPEG compression and/or limit the resolution](../user-guide/settings/advanced.md#preview-images) if you are happy with lower quality thumbnails.
 
 To free up as much space as possible, the most effective way is to delete all files in the `/cache/thumbnails` *storage* folder. It is located outside the *originals* folder by default, depending on [your configuration](config-options.md#storage). Then [perform a full rescan of your library](../user-guide/library/originals.md) or run the command `photoprism thumbs -f` [in a terminal](docker-compose.md#command-line-interface) if you have direct server access. This command can also be used to replace existing thumbnails, for example after changing the quality settings. Higher resolution thumbnails cannot be automatically removed at this time.
 
-If you have a fast CPU and enough memory, you can [choose to render certain thumbnails only on demand](../user-guide/settings/advanced.md#images). However, storage is usually so cheap that most users opt for better quality and performance instead.
+If you have a fast CPU and enough memory, you can [choose to render certain thumbnails only on demand](../user-guide/settings/advanced.md#preview-images). However, storage is usually so cheap that most users opt for better quality and performance instead.
 
 Actual storage requirements vary and depend, among other things, on file resolutions and formats (RAW, JPEG, video,...). For highly compressed, high-resolution videos in modern formats that cannot be displayed natively by browsers, the storage folder may even be larger than the originals, since [videos transcoded to AVC](../user-guide/organize/video.md#transcoding) are not as heavily compressed.
 
-[Change Settings ›](../user-guide/settings/advanced.md#images)
+[Change Settings ›](../user-guide/settings/advanced.md#preview-images)
 
 ### Can I skip creating thumbnails completely?
 
-The [smallest configurable size](../user-guide/settings/advanced.md#dynamic-and-static-size-limits) is 720px for [use by the indexer to perform color detection, image classification, as well as face detection and recognition](../user-guide/settings/advanced.md#which-thumbnails-will-be-generated). Recreating them every time they are needed is too demanding even for the most powerful servers. Unless you have just a few small pictures, this would make the app unusable.
+The [smallest configurable size](../user-guide/settings/advanced.md#preview-images) is 720px for [use by the indexer to perform color detection, image classification, as well as face detection and recognition](../user-guide/settings/advanced.md#which-thumbnails-will-be-generated). Recreating them every time they are needed is too demanding even for the most powerful servers. Unless you have just a few small pictures, this would make the app unusable.
 
 !!! danger ""
     Reducing the *Static Size Limit* of thumbnails has a **significant impact on [face recognition](../user-guide/organize/people.md)

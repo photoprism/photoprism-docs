@@ -99,7 +99,7 @@ be mounted as sub folders of `/photoprism/originals`:
 
 ##### /photoprism/storage
 
-SQLite, config, cache, thumbnail and sidecar files are saved in the *storage* folder:
+SQLite, config, cache, backup, thumbnail and sidecar files are saved in the *storage* folder:
 
 - a *storage* folder must always be mounted so that you do not lose these files after a restart or upgrade
 - never configure the *storage* folder to be inside the *originals* folder unless the name starts with a `.` to indicate that it is hidden

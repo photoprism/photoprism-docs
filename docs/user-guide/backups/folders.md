@@ -14,7 +14,7 @@ The location of the *import* folder can be changed by setting the `PHOTOPRISM_IM
 
 ## Storage
 
-Unless you use a custom configuration, the *storage* folder is used to save config, cache, [backup](export.md#album-backups), thumbnail, and sidecar files.
+Unless you use a custom configuration, the *storage* folder is used to keep [config](#config), [cache](#cache), [backup](#backup), [thumbnail](#thumbnails), and [sidecar](#sidecar) files.
 
 Its location can be changed by setting the `PHOTOPRISM_STORAGE_PATH` environment variable.
 

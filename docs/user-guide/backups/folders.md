@@ -22,7 +22,6 @@ Its location can be changed by setting the `PHOTOPRISM_STORAGE_PATH` environment
 
 !!! attention ""
     We recommend not to configure the *storage* folder to be inside the *originals* folder unless the name starts with a `.` to indicate that it is hidden.
-    In older releases prior to [240420-ef5f14bc4](https://docs.photoprism.app/release-notes/#april-20-2024), this could [lead to an indexing loop](https://github.com/photoprism/photoprism/issues/1642) by indexing thumbnails of already indexed files.
 
 ### Cache
 

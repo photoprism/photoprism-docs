@@ -33,7 +33,7 @@ This way you save disk space if you don't want to keep them as backup or for oth
 
 Automatic imports are disabled by default, as a wrong configuration or unsupported usage can cause files or sets of files to be imported incompletely, e.g. if you are using a slow or unreliable Internet connection, which is of particular concern with [large video or RAW files](https://github.com/photoprism/photoprism/issues/4310).
 
-If you enable automatic imports by setting the config option [`PHOTOPRISM_AUTO_IMPORT`](../../getting-started/config-options.md#indexing) to a positive number indicating the safety delay in seconds, an import is automatically triggered whenever files are synchronized to the *import* folder [via WebDAV](../sync/webdav.md).
+If you enable automatic imports by setting the config option [`PHOTOPRISM_AUTO_IMPORT`](../../getting-started/config-options.md#indexing) to a positive number indicating the safety delay in seconds, an import is automatically triggered after the safety delay when files are added to the *import* folder [via WebDAV](../sync/webdav.md).
 
 !!! info "Can I use PhotoPrism to sort files into a configurable folder structure?"
     You have complete freedom in how you organize your originals. If you don't like the unique names and

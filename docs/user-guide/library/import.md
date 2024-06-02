@@ -3,6 +3,8 @@
 !!! tldr ""
     Most users with an existing library will want to [index their originals](originals.md) directly without using the optional import feature, leaving the file and folder names unchanged. Importing first copies or moves from their source directory to the *originals* folder, which is optional.
 
+## Manual Import
+
 1. Add files to the *import* folder if not done already
 
 2. Go to *Library* using the main navigation, and open the *Import* tab
@@ -21,13 +23,13 @@
 
 !!! attention ""
     Import is not possible in [read-only mode](../settings/library.md) because it requires [write permissions](../../getting-started/troubleshooting/docker.md#file-permissions) to the folder of *originals*.
-    
-#### When should "Move Files" be selected? ####
+
+### When should "Move Files" be selected?
 
 If you select this option, files that have been moved to the *originals* folder, or that already exist, will be automatically deleted from the *import* folder.
 This way you save disk space if you don't want to keep them as backup or for other reasons.
 
-#### Automatic Import ####
+## Automatic Import
 
 Automatic imports are disabled by default, as a wrong configuration or unsupported usage can cause files or sets of files to be imported incompletely, e.g. if you are using a slow or unreliable Internet connection, which is of particular concern with [large video or RAW files](https://github.com/photoprism/photoprism/issues/4310).
 

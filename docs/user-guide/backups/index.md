@@ -8,7 +8,7 @@ At a minimum, a backup of PhotoPrism should include the files in [your *original
 
 ## Scheduled Backups
 
-By default, [PhotoPrism 240523-923ee0cf7](../../release-notes.md#may-23-2024) and newer releases automatically create daily backups for you, with up to 3 database backups being retained. The schedule, the type of backups, and the number of backups to be retained can be [changed in the configuration](../../getting-started/config-options.md#backup).
+By default, [PhotoPrism 240523-923ee0cf7](../../release-notes.md#may-23-2024) and newer versions automatically create daily database backups for you, with up to 3 copies being retained. The schedule, the type of backups, and the number of backups to be retained can be [changed in the configuration](../../getting-started/config-options.md#backup).
 
 ## Backup Command
 

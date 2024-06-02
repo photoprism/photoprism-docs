@@ -1,7 +1,7 @@
 # Indexing Your Originals #
 
 !!! note ""
-    When using PhotoPrism for the first time, please make sure that the directory containing your photo and video collection has been [configured as *originals* folder](../../getting-started/docker-compose.md#photoprismoriginals) and that the library settings match your [individual preferences](../settings/library.md).
+    When using PhotoPrism for the first time, please make sure that the directory containing your photo and video collection has been [configured as *originals* folder](../../getting-started/docker-compose.md#photoprismoriginals), and that the library settings match [your individual preferences](../settings/library.md).
 
 ## Manual Indexing
 
@@ -41,14 +41,12 @@ Admins can optionally enable the cleanup option to delete unused thumbnails from
 
 ## Scheduled and Automatic Indexing
 
-[PhotoPrism 240523-923ee0cf7](../../release-notes.md#may-23-2024) and newer versions can optionally perform scheduled rescans of your library. This feature can be enabled by setting a schedule with the [`PHOTOPRISM_INDEX_SCHEDULE`](../../getting-started/config-options.md#indexing) config option.
+[PhotoPrism 240523-923ee0cf7](../../release-notes.md#may-23-2024) and newer versions can optionally perform scheduled rescans of your library. This feature can be enabled by [setting a schedule in your configuration](../../getting-started/config-options.md#indexing). If you are using an external scheduler, please be careful not to start several indexing processes at the same time, as this not only causes a high server load, but may also lead to unexpected indexing results.
 
-By default, indexing is also automatically triggered after a safety delay of 5 minutes when *originals* are [added or modified via WebDAV](../sync/webdav.md).
-You can change the safety delay or disable this feature through the [`PHOTOPRISM_AUTO_INDEX`](../../getting-started/config-options.md#indexing) config option.
+By default, a library rescan is also triggered automatically after a safety delay of 5 minutes when *originals* are [added or modified via WebDAV](../sync/webdav.md). You can change the safety delay or disable this feature through the [`PHOTOPRISM_AUTO_INDEX`](../../getting-started/config-options.md#indexing) config option.
 
 !!! tldr ""
-    Automatic indexing can cause files or sets of files to be incompletely indexed if you are using a slow or unreliable internet connection, which is of particular concern with [large video or RAW files](https://github.com/photoprism/photoprism/issues/4310).
-    Also be careful not to start several indexing processes at the same time, as this not only causes a high server load, but may also lead to unexpected indexing results.
+    Be aware that automatic indexing may cause files or sets of files to be incompletely indexed if you are using a slow or unreliable internet connection, which is of particular concern with [large video or RAW files](https://github.com/photoprism/photoprism/issues/4310).
 
 ## Ignoring Files and Folders
 

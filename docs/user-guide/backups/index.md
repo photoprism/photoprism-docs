@@ -6,9 +6,9 @@ At a minimum, a backup of PhotoPrism should include the files in [your *original
     The easiest way to create a full backup is to first run the backup command to generate a database dump as shown below.
     Then back up your *originals* and *storage* folders using any standard file backup utility.
 
-## Automatic Backup Creation
+## Scheduled Backups
 
-If you keep the [default settings](../../getting-started/config-options.md#backup), daily database backups will be automatically created, with up to 3 backup files being retained.
+By default, [PhotoPrism 240523-923ee0cf7](../../release-notes.md#may-23-2024) and newer releases automatically create daily database backups for you, with up to 3 database backups being retained. The schedule, the type of backups, and the number of backups to be retained can be [changed in the configuration](../../getting-started/config-options.md#backup).
 
 ## Backup Command
 

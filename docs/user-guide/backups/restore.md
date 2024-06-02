@@ -20,7 +20,7 @@ If you are using Podman on a Red Hat-compatible Linux distribution:
 podman-compose exec photoprism photoprism restore -i -f
 ```
 
-This will automatically search the backup folder for the most recent index dump and restore it. A custom backup folder can be configured with [`PHOTOPRISM_BACKUP_PATH`](../../getting-started/config-options.md#storage).
+This will automatically search the backup folder for the most recent index dump and restore it. A custom backup base folder can be configured with [`PHOTOPRISM_BACKUP_PATH`](../../getting-started/config-options.md#storage).
 
 Omit the `-f` flag to prevent overwriting an existing index. As with the backup command, you can also specify a specific dump filename as an argument:
 

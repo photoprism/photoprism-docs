@@ -11,7 +11,7 @@ By default, [PhotoPrism 240523-923ee0cf7](../../release-notes.md#may-23-2024) an
 
 ## Backup Command
 
-You can create an index SQL backup by running this command in a terminal:
+You can run the following command [in a terminal](../docker-compose.md#command-line-interface) to manually create a new MariaDB or SQLite database backup:
 
 ```bash
 photoprism backup -i [filename]

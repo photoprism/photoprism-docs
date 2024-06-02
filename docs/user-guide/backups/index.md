@@ -12,7 +12,7 @@ By default, [PhotoPrism 240523-923ee0cf7](../../release-notes.md#may-23-2024) an
 
 ## Backup Command
 
-The easiest way to create an SQL dump from MariaDB or SQLite is to run the backup command in a terminal:
+You can run the following command [in a terminal](../../getting-started/docker-compose.md#command-line-interface) to manually create a new MariaDB or SQLite database backup:
 
 ```
 docker compose exec photoprism photoprism backup -i -f
@@ -24,7 +24,7 @@ If you are using Podman on a Red Hat-compatible Linux distribution:
 podman-compose exec photoprism photoprism backup -i -f
 ```
 
-By default, a backup is created in `storage/backup/mysql/[YYYY-MM-DD].sql`. A custom backup folder can be configured with [`PHOTOPRISM_BACKUP_PATH`](../../getting-started/config-options.md#storage)
+By default, a backup is created in `storage/backup/mysql/[YYYY-MM-DD].sql`. A custom backup base folder can be configured with [`PHOTOPRISM_BACKUP_PATH`](../../getting-started/config-options.md#storage)
 
 Omit the `-f` flag if you do not want to overwrite existing files. You can also specify a custom filename as an argument (or `-` to write the SQL dump to [stdout](../../getting-started/advanced/backups.md)):
 

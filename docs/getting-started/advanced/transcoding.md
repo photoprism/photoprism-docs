@@ -35,6 +35,9 @@ The [`PHOTOPRISM_FFMPEG_SIZE`](../config-options.md#file-conversion) config opti
 
 !!! tldr ""
     When transcoding videos, the original aspect ratio is maintained and smaller videos will not be upscaled.
+    
+!!! tldr ""
+    Note that MPEG-4 AVC videos are not re-encoded if they exceed the configured resolution limit.
 
 ### Bitrate Limit ###
 

@@ -2,11 +2,11 @@
 
 ## Standard RGB
 
-[sRGB](https://en.wikipedia.org/wiki/SRGB) is the default color space used for [generating thumbnails](thumbnails.md). PhotoPrism and web browsers assume this color space for all pictures that do not have an embedded ICC color profile.
+[sRGB](https://en.wikipedia.org/wiki/SRGB) is the default color space used when [generating thumbnails](thumbnails.md). PhotoPrism and web browsers assume this color space for all pictures that do not have an embedded ICC color profile.
 
 ## ICC Profiles
 
-An [ICC color profile](https://en.wikipedia.org/wiki/ICC_profile) for wide-gamut displays can optionally be embedded in image and video files. For color profiles other than [sRGB](https://en.wikipedia.org/wiki/SRGB) and [Display P3](https://en.wikipedia.org/wiki/DCI-P3#P3_colorimetry), the thumbnails must be generated with `libvips` by setting the `PHOTOPRISM_THUMB_LIBRARY` config option to `vips` or `auto` so that the [ICC profiles are preserved](https://github.com/photoprism/photoprism/issues/1474): 
+An [ICC color profile](https://en.wikipedia.org/wiki/ICC_profile) for [wide-gamut displays](https://en.wikipedia.org/wiki/Gamut) can optionally be embedded in image and video files. For color profiles other than [sRGB](https://en.wikipedia.org/wiki/SRGB) and [Display P3](https://en.wikipedia.org/wiki/DCI-P3#P3_colorimetry), the thumbnails must be generated with `libvips` by setting the `PHOTOPRISM_THUMB_LIBRARY` config option to `vips` or `auto` so that the [ICC profiles are preserved](https://github.com/photoprism/photoprism/issues/1474): 
 
 |          Environment           |       CLI Flag        | Default |                                         Description                                          |
 |--------------------------------|-----------------------|---------|----------------------------------------------------------------------------------------------|

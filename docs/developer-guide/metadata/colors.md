@@ -58,6 +58,6 @@ Our [color library](https://github.com/lucasb-eyer/go-colorful#so-which-colorspa
 
 ## Color Profiles
 
-[sRGB](https://en.wikipedia.org/wiki/SRGB) is the standard color space used for generating thumbnails. An [ICC color profile](../media/colors.md#icc-profiles) for wide-gamut displays can optionally be embedded.
+[sRGB](https://en.wikipedia.org/wiki/SRGB) is the standard color space used when generating thumbnails. An [ICC color profile](../media/colors.md#icc-profiles) for [wide-gamut displays](https://en.wikipedia.org/wiki/Gamut) can optionally be embedded.
 
 [Learn more ›](../media/colors.md)

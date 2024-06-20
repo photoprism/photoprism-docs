@@ -41,7 +41,7 @@ The following overview shows the name, dimensions, and aspect ratio for each thu
 
 ## Color Profiles
 
-[sRGB](https://en.wikipedia.org/wiki/SRGB) is the standard color space used for generating thumbnails. An [ICC color profile](colors.md#icc-profiles) for wide-gamut displays can optionally be embedded.
+[sRGB](https://en.wikipedia.org/wiki/SRGB) is the standard color space used when generating thumbnails. An [ICC color profile](colors.md#icc-profiles) for [wide-gamut displays](https://en.wikipedia.org/wiki/Gamut) can optionally be embedded.
 
 [Learn more ›](colors.md#icc-profiles)
 

@@ -1,6 +1,6 @@
 # Color Detection
 
-Color detection is performed during indexing using a 3x3 thumbnail that covers the top, bottom and center of an image e.g. <https://demo.photoprism.app/library/browse?color=green>.
+Color detection is performed during indexing using a 3x3 thumbnail that covers the top, bottom, and center of an image e.g. <https://demo.photoprism.app/library/browse?color=green>.
 
 ## Standard Colors
 
@@ -56,8 +56,8 @@ Our [color library](https://github.com/lucasb-eyer/go-colorful#so-which-colorspa
 
 [Learn more ›](https://github.com/lucasb-eyer/go-colorful#so-which-colorspace-should-i-use)
 
-## ICC Profiles
+## Color Profiles
 
-An [ICC color profile](../media/colors.md#icc-profiles) that characterizes the color space being used can optionally be embedded in image and video files.
+[sRGB](https://en.wikipedia.org/wiki/SRGB) is the standard color space used for generating thumbnails. An [ICC color profile](../media/colors.md#icc-profiles) for wide-gamut displays can optionally be embedded.
 
 [Learn more ›](../media/colors.md)

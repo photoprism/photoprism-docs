@@ -1,12 +1,12 @@
 # Using Search Filters
 
-PhotoPrism's powerful search filters let you easily find specific photos and videos, for example:
+Powerful search filters let you easily find specific photos and videos, for example:
 
-* People on the photo
-* Objects that are displayed on the photo
-* The main color of the photo
-* The filename or foldername of a photo
-* Location where the photo has been taken
+* Persons visible on a picture
+* Objects that are displayed on a picture
+* The [main color](../../developer-guide/metadata/colors.md#standard-colors) of a picture
+* The file or folder name of a picture
+* Location where a picture has been taken
 * Other metadata such as camera, lens, chroma...
 
 Just give it a try!
@@ -17,7 +17,7 @@ Just give it a try!
 
 The following filters can be set via dropdowns in the search toolbar:
 
-* Country, Year, Month, Order, Camera, Color, Category.
+* Country, Year, Month, Order, Camera, [Color](../../developer-guide/metadata/colors.md#standard-colors), Category.
 
 If you set multiple filters, only pictures that meet all filter criteria will be displayed in the search result. Filters can generally be combined unless they contradict each other.
 

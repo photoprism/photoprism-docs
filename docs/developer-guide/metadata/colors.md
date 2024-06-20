@@ -56,7 +56,7 @@ Our [color library](https://github.com/lucasb-eyer/go-colorful#so-which-colorspa
 
 [Learn more ›](https://github.com/lucasb-eyer/go-colorful#so-which-colorspace-should-i-use)
 
-## ICC Color Profiles
+## ICC Profiles
 
 An [ICC color profile](../media/colors.md#icc-profiles) that characterizes the color space being used can optionally be embedded in image and video files.
 

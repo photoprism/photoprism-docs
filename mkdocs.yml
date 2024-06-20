@@ -169,6 +169,7 @@ nav:
       - Videos: developer-guide/media/videos.md
       - Live Photos: developer-guide/media/live.md
       - Thumbnails: developer-guide/media/thumbnails.md
+      - Color Profiles: developer-guide/media/colors.md
       - File Import: developer-guide/media/import.md
       - Storage: developer-guide/media/storage.md
     - Metadata:

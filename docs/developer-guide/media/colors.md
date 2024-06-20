@@ -19,6 +19,6 @@ Image colors may otherwise not be displayed correctly, which is particularly not
 
 ## Color Detection
 
-Color detection is performed during indexing using a 3x3 thumbnail that covers the top, bottom, and center of an image e.g. <https://demo.photoprism.app/library/browse?color=green>.
+Color detection is performed while indexing using [a 3x3 thumbnail](thumbnails.md#standard-sizes) that covers the top, bottom, and center of an image e.g. <https://demo.photoprism.app/library/browse?color=green>.
 
 [Learn more ›](../metadata/colors.md)

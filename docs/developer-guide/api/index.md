@@ -7,13 +7,18 @@ For the currently implemented REST request endpoints available under `/api/v1`, 
 - https://pkg.go.dev/github.com/photoprism/photoprism/internal/api
 - https://github.com/photoprism/photoprism/tree/develop/internal/api
 
-API responses are generally JSON-encoded, except for binary data such as images and videos. When sending requests, please make sure that the `Content-Type` request header is set to `application/json` - unless specified otherwise, e.g. for the [OAuth2 authorization endpoints](#oauth2-authorization-server) that expect form-encoded data. The [error code 400](https://github.com/photoprism/photoprism/issues/4354) in responses indicates that either a required field is missing, the value type of a field is incorrect, or the `Content-Type` header isn't properly set.
+API responses are generally JSON-encoded, except for binary data such as images and videos.
 
-Note that our REST API is not currently covered by an official deprecation policy, so some routes and request parameters MAY change as we add new features.
-However, we avoid making breaking changes, especially to endpoints that we know other developers are using.
+When sending requests, please make sure that the `Content-Type` request header is set to `application/json` - unless specified otherwise, e.g. for the [OAuth2 authorization endpoints](#oauth2-authorization-server) that [expect](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) [form-encoded data](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST#example). The [error code 400](https://github.com/photoprism/photoprism/issues/4354) in responses indicates that either a required field is missing, the value type of a field is incorrect, or the `Content-Type` header isn't properly set.
 
 !!! example ""
     **We welcome any contributions that help improve our API docs and make them easier to use for developers.** To learn how to access the API while no [interactive Swagger documentation](https://github.com/photoprism/photoprism/issues/2132) is available, we recommend checking the requests in the [browser console](../../getting-started/troubleshooting/logs.md#__tabbed_1_2) that our JS frontend sends when you perform actions like creating an album - and then use the same method, URI, encoding, value names and types for sending requests with your own application.
+
+## Deprecation Policy
+
+Our REST API endpoints are currently not covered by an official deprecation policy, so some routes and request parameters may change as we add new features in upcoming releases.
+
+However, we avoid making breaking changes, especially to endpoints that we know other developers are using.
 
 ## Client Authentication
 

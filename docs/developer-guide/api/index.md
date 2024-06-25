@@ -14,12 +14,6 @@ When sending requests, please make sure that the `Content-Type` request header i
 !!! example ""
     **We welcome any contributions that help improve our API docs and make them easier to use for developers.** To learn how to access the API while no [interactive Swagger documentation](https://github.com/photoprism/photoprism/issues/2132) is available, we recommend checking the requests in the [browser console](../../getting-started/troubleshooting/logs.md#__tabbed_1_2) that our JS frontend sends when you perform actions like creating an album - and then use the same method, URI, encoding, value names and types for sending requests with your own application.
 
-## Deprecation Policy
-
-Our REST API endpoints are currently not covered by an official deprecation policy, so some routes and request parameters may change as we add new features in upcoming releases.
-
-However, we avoid making breaking changes, especially to endpoints that we know other developers are using.
-
 ## Client Authentication
 
 When clients have a valid access token, e.g. obtained through the `POST /api/v1/session` or `POST /api/v1/oauth/token` endpoint, they can use a standard *Bearer Authorization* header to authenticate their requests:
@@ -64,3 +58,9 @@ Besides using the API endpoints provided for this, you can also generate valid a
 
 !!! example ""
     Support for [OpenID Connect (OIDC)](https://github.com/photoprism/photoprism/issues/782) is planned for a future release and not yet available.
+
+## Deprecation Policy
+
+Our REST API endpoints are currently not covered by an official deprecation policy, so some routes and request parameters may change as we add new features in upcoming releases.
+
+However, we avoid making breaking changes, especially to endpoints that we know other developers are using.

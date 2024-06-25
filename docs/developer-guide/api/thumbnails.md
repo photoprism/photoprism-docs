@@ -14,7 +14,7 @@ Like most commercial image hosting services, we have chosen to implement a **coo
 
 In addition to better performance, a major advantage of cookie-free thumbnails is that they can be easily integrated into a content delivery network (CDN), since there is no need to check cookies or add other complex logic on edge servers.
 
-!!! tldr ""
+!!! example ""
     Since most users only have one domain/host name and modern web applications can store [authentication tokens](auth.md) in *localStorage*, our Thumbnail Image API does not currently require or use cookies.
 
 ### Security Considerations
@@ -104,5 +104,5 @@ The following overview shows the name, dimensions, and aspect ratio for each thu
 
 ↪ [`internal/thumb/sizes.go`](https://github.com/photoprism/photoprism/blob/develop/internal/thumb/sizes.go)
 
-!!! tldr ""
+!!! example ""
     Generated thumbnail files are stored in the `storage/cache/thumbnails` folder, where the path and file name depend on the [thumbnail size](../media/thumbnails.md#standard-sizes) and original file hash. [Learn more ›](../media/thumbnails.md)

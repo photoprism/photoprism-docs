@@ -24,7 +24,7 @@ You will then be shown the generated app password so you can copy it and keep it
 
 For added security, we recommend setting an expiration date for the app passwords and access tokens you generate. Common scopes for use with app passwords are either "\*" for *Full Access* or "webdav" for [WebDAV-compatible](../../user-guide/sync/webdav.md) [file synchronization apps](../../user-guide/sync/mobile-devices.md).
 
-!!! note ""
+!!! example ""
     [App passwords](../../user-guide/settings/account.md#apps-and-devices) can be used as access tokens in the *Bearer Authorization* header without first creating a session access token, and to obtain short-lived session access tokens through the `POST /api/v1/session` endpoint.
 
 ### Command Options
@@ -43,7 +43,7 @@ One or more of these scopes can be specified to limit the access to certain API 
 
 *files, folders, shares, photos, videos, favorites, albums, moments, calendar, people, places, labels, config, settings, services, users, sessions, logs, webdav, metrics*
 
-!!! note ""
+!!! example ""
     Clients authenticated with app passwords are unable to change the account password or manage user accounts, even if you specify all scopes or use the wildcard `"*"` to allow all.
 
 ## Access Tokens
@@ -91,7 +91,7 @@ You will then be shown the generated `client_id` and `client_secret` so you can 
 |------------------|----------------------------------|
 ```
 
-!!! note ""
+!!! example ""
     [OAuth2 client credentials](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) cannot be directly used for synchronizing files via WebDAV, as a [password replacement for apps](../../user-guide/settings/account.md#apps-and-devices), or for logging in to the web interface.
 
 ### Command Options
@@ -110,5 +110,5 @@ If you omit the *name* or *scope* parameter, you will be asked to enter them int
 
 *files, folders, shares, photos, videos, favorites, albums, moments, calendar, people, places, labels, config, settings, services, users, sessions, logs, webdav, metrics*
 
-!!! note ""
+!!! example ""
     When requesting access tokens, clients can further restrict the scope of the tokens by passing the scope parameter to the `POST /api/v1/oauth/token` endpoint.

@@ -70,7 +70,7 @@ With public mode enabled, you can instead use "public" as [security token](searc
 /api/v1/videos/51843134d75f4cbde534270cdd5954067f887ee6/public/avc
 ```
 
-!!! note ""
+!!! example ""
     The only target format currently available for transcoding is `avc` (MPEG-4 AVC). Additional formats will become available in a future release.
 
 ## Thumbnail Sizes

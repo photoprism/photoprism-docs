@@ -7,7 +7,7 @@ The OAuth 2.0 specification is an authorization framework that contains a set of
 
 The access token can then be passed to an API endpoint, which checks it to determine validity and [authorization scope](auth.md#authorization-scopes).
 
-!!! note ""
+!!! example ""
     Support for the [Authorization Code Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow) is planned for a future release.
 
 ## Access Tokens
@@ -29,7 +29,7 @@ Besides using the API endpoints provided for this, you can also generate valid a
 
 [Learn more ›](auth.md)
 
-!!! note ""
+!!! example ""
     [App passwords](../../user-guide/settings/account.md#apps-and-devices) can be used as access tokens in the *Bearer Authorization* header without first creating a session access token, and to obtain short-lived session access tokens through the `POST /api/v1/session` endpoint.
 
 ## Related Issues

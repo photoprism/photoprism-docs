@@ -50,6 +50,7 @@ It is not currently possible to use PhotoPrism as an OIDC identity provider, as 
 ## Software Libraries
 
 - https://github.com/zitadel/oidc by https://zitadel.com/
+- https://github.com/indigo-dc/oidc-agent
 - https://github.com/coreos/go-oidc
 - https://github.com/panva/node-oidc-provider
 - https://github.com/pulsejet/nextcloud-oidc-login

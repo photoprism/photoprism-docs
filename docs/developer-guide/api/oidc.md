@@ -39,7 +39,7 @@
 
 ### Server Endpoint
 
-Using PhotoPrism as an OIDC Identity Provider is not possible yet, as not all required endpoints and grant types have been fully implemented. However, there is a standard `/.well-known/openid-configuration` endpoint for service discovery, so you can see what is missing, and the remaining functionality can be added over time if needed:
+It is not yet possible to use PhotoPrism as an OIDC Identity Provider, since not all the required standards and grant types have been fully implemented. However, querying the `/.well-known/openid-configuration` endpoint shows what is already available, and the remaining features can be added over time as needed:
 
 - <https://demo.photoprism.app/.well-known/openid-configuration>
 

@@ -26,20 +26,20 @@
 | PHOTOPRISM_OIDC_REDIRECT   | --oidc-redirect   |          | automatically redirect unauthenticated users to the OIDC login page                            |
 | PHOTOPRISM_DISABLE_OIDC    | --disable-oidc    |          | disable single sign-on via OpenID Connect (OIDC)                                               |
 !!! tldr ""
-    Note that you need to have HTTPS/TLS enabled on your PhotoPrism instance and the OpenID Connect provider, otherwise Single Sign-On via OIDC cannot be enabled.
+    Note that you need to have HTTPS/TLS enabled on your PhotoPrism instance and the OpenID Connect Identity Provider, otherwise Single Sign-On via OIDC cannot be enabled.
 
 ## Service Discovery
 
-### OIDC Client
+### Client Configuration
 
-[Service discovery](https://developer.okta.com/docs/reference/api/oidc/#well-known-oauth-authorization-server) through the standardized `/.well-known/openid-configuration` endpoint for Single Sign-On (SSO) with OpenID Connect is supported by our OIDC client library, e.g.:
+[Service discovery](https://developer.okta.com/docs/reference/api/oidc/#well-known-oauth-authorization-server) through the standardized `/.well-known/openid-configuration` endpoint for Single Sign-On (SSO) with OpenID Connect is supported by our OIDC client library, for example:
 
 - <https://accounts.google.com/.well-known/openid-configuration>
 - <https://keycloak.localssl.dev/realms/master/.well-known/openid-configuration>
 
 ### Server Endpoint
 
-It is not currently possible to use PhotoPrism as an OIDC identity provider, as not all the required endpoints and requirements have been implemented yet. However, there is an endpoint for service discovery, so you can see what is missing, and the remaining features can be added over time if needed:
+Using PhotoPrism as an OIDC Identity Provider is not possible yet, as not all required endpoints and grant types have been fully implemented. However, there is a standard `/.well-known/openid-configuration` endpoint for service discovery, so you can see what is missing, and the remaining functionality can be added over time if needed:
 
 - <https://demo.photoprism.app/.well-known/openid-configuration>
 

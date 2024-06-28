@@ -1,0 +1,73 @@
+# OpenID Connect
+
+## Single Sign-On
+
+[OpenID Connect (OIDC)](https://openid.net/developers/how-connect-works/) extends [OAuth 2.0](oauth2.md) with [Single Sign-On (SSO)](https://developer.okta.com/docs/reference/api/oidc/#userinfo) functionality, allowing users to log in and optionally register via OIDC instead of manually entering a username and password:
+
+![oidc-login](https://github.com/photoprism/photoprism/assets/301686/58e89668-2404-4973-8f6a-e228be389e6c)
+
+### Authentication Flow
+
+![oidc-sso-flow](img/oidc-sso-flow.jpg)
+
+[Learn more ›](https://dl.photoprism.app/pdf/20220113-Volkmann_OpenID_Connect_Thesis.pdf)
+
+### Config Options
+
+|        Environment         |     CLI Flag      | Default  |                                          Description                                           |
+|----------------------------|-------------------|----------|------------------------------------------------------------------------------------------------|
+| PHOTOPRISM_OIDC_URI        | --oidc-uri        |          | provider `URI` for single sign-on via OpenID Connect (OIDC), e.g. https://accounts.google.com/ |
+| PHOTOPRISM_OIDC_INSECURE   | --oidc-insecure   |          | skip provider SSL/TLS certificate verification                                                 |
+| PHOTOPRISM_OIDC_CLIENT     | --oidc-client     |          | client `ID` for single sign-on via OIDC                                                        |
+| PHOTOPRISM_OIDC_SECRET     | --oidc-secret     |          | client `SECRET` for single sign-on via OIDC                                                    |
+| PHOTOPRISM_OIDC_PROVIDER   | --oidc-provider   |          | custom OIDC provider `NAME`                                                                    |
+| PHOTOPRISM_OIDC_ICON       | --oidc-icon       |          | custom OIDC provider icon `URI`                                                                |
+| PHOTOPRISM_OIDC_REGISTER   | --oidc-register   |          | allow new users to register via OIDC                                                           |
+| PHOTOPRISM_OIDC_REDIRECT   | --oidc-redirect   |          | automatically redirect unauthenticated users to the OIDC login page                            |
+| PHOTOPRISM_DISABLE_OIDC    | --disable-oidc    |          | disable single sign-on via OpenID Connect (OIDC)                                               |
+!!! tldr ""
+    Note that you need to have HTTPS/TLS enabled on your PhotoPrism instance and the OpenID Connect provider, otherwise Single Sign-On via OIDC cannot be enabled.
+
+## Service Discovery
+
+### OIDC Client
+
+[Service discovery](https://developer.okta.com/docs/reference/api/oidc/#well-known-oauth-authorization-server) through the standardized `/.well-known/openid-configuration` endpoint for Single Sign-On (SSO) with OpenID Connect is supported by our OIDC client library, e.g.:
+
+- <https://accounts.google.com/.well-known/openid-configuration>
+- <https://keycloak.localssl.dev/realms/master/.well-known/openid-configuration>
+
+### Server Endpoint
+
+It is not currently possible to use PhotoPrism as an OIDC identity provider, as not all the required endpoints and requirements have been implemented yet. However, there is an endpoint for service discovery, so you can see what is missing, and the remaining features can be added over time if needed:
+
+- <https://demo.photoprism.app/.well-known/openid-configuration>
+
+## Related Issues
+
+- [Account: Add Support for OpenID Connect (OIDC) #782](https://github.com/photoprism/photoprism/issues/782)
+
+## Software Libraries
+
+- https://github.com/zitadel/oidc by https://zitadel.com/
+- https://github.com/coreos/go-oidc
+- https://github.com/panva/node-oidc-provider
+- https://github.com/pulsejet/nextcloud-oidc-login
+
+## Protocol References
+
+- https://openid.net/developers/how-connect-works/
+- https://dl.photoprism.app/pdf/20220113-Volkmann_OpenID_Connect_Thesis.pdf
+- https://oauth.net/openid-for-verifiable-credentials/
+- https://developers.google.com/identity/openid-connect/openid-connect
+- https://www.ory.sh/docs/oauth2-oidc/authorization-code-flow
+- https://developer.okta.com/docs/concepts/oauth-openid/
+- https://developer.okta.com/docs/reference/api/oidc/
+- https://developer.okta.com/docs/reference/api/oauth-clients/
+- https://auth0.com/docs/authenticate/protocols/openid-connect-protocol
+- https://learn.microsoft.com/en-us/entra/identity-platform/scopes-oidc#openid-connect-scopes
+- https://owncloud.dev/clients/rclone/webdav-sync-oidc/
+- https://blog.cubieserver.de/2022/complete-guide-to-nextcloud-oidc-authentication-with-authentik/
+- https://auth0.com/docs/get-started/applications/configure-applications-with-oidc-discovery
+- https://connect2id.com/products/server/docs/api/authorization
+- https://www.authlete.com/developers/definitive_guide/authorization_endpoint_spec/

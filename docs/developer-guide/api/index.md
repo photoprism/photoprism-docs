@@ -56,8 +56,7 @@ Besides using the API endpoints provided for this, you can also generate valid a
 
 ↪ <https://demo.photoprism.app/.well-known/openid-configuration>
 
-!!! example ""
-    Support for [OpenID Connect (OIDC)](https://github.com/photoprism/photoprism/issues/782) is planned for a future release and not yet available.
+[Learn more ›](oidc.md)
 
 ## Deprecation Policy
 

@@ -22,7 +22,7 @@
 | PHOTOPRISM_OIDC_SECRET   | --oidc-secret   |         | client `SECRET` for single sign-on via OpenID Connect                                            |
 | PHOTOPRISM_OIDC_PROVIDER | --oidc-provider |         | custom identity provider `NAME`                                                                  |
 | PHOTOPRISM_OIDC_ICON     | --oidc-icon     |         | custom identity provider icon `URI`                                                              |
-| PHOTOPRISM_OIDC_REGISTER | --oidc-register |         | allow new users to create an account when they sign in via OpenID Connect                        |
+| PHOTOPRISM_OIDC_REGISTER | --oidc-register |         | allow new users to create an account when they sign in with OpenID Connect                       |
 | PHOTOPRISM_OIDC_REDIRECT | --oidc-redirect |         | automatically redirect unauthenticated users to the configured identity provider                 |
 | PHOTOPRISM_DISABLE_OIDC  | --disable-oidc  |         | disable single sign-on via OpenID Connect, even if an identity provider has been configured      |
 

@@ -14,19 +14,22 @@
 
 ### Config Options
 
-|        Environment         |     CLI Flag      | Default  |                                          Description                                           |
-|----------------------------|-------------------|----------|------------------------------------------------------------------------------------------------|
-| PHOTOPRISM_OIDC_URI        | --oidc-uri        |          | provider `URI` for single sign-on via OpenID Connect (OIDC), e.g. https://accounts.google.com/ |
-| PHOTOPRISM_OIDC_INSECURE   | --oidc-insecure   |          | skip provider SSL/TLS certificate verification                                                 |
-| PHOTOPRISM_OIDC_CLIENT     | --oidc-client     |          | client `ID` for single sign-on via OIDC                                                        |
-| PHOTOPRISM_OIDC_SECRET     | --oidc-secret     |          | client `SECRET` for single sign-on via OIDC                                                    |
-| PHOTOPRISM_OIDC_PROVIDER   | --oidc-provider   |          | custom OIDC provider `NAME`                                                                    |
-| PHOTOPRISM_OIDC_ICON       | --oidc-icon       |          | custom OIDC provider icon `URI`                                                                |
-| PHOTOPRISM_OIDC_REGISTER   | --oidc-register   |          | allow new users to register via OIDC                                                           |
-| PHOTOPRISM_OIDC_REDIRECT   | --oidc-redirect   |          | automatically redirect unauthenticated users to the OIDC login page                            |
-| PHOTOPRISM_DISABLE_OIDC    | --disable-oidc    |          | disable single sign-on via OpenID Connect (OIDC)                                               |
-!!! tldr ""
-    Note that you need to have HTTPS/TLS enabled on your PhotoPrism instance and the OpenID Connect Identity Provider, otherwise Single Sign-On via OIDC cannot be enabled.
+| Environment              | CLI Flag        | Default | Description                                                                                      |
+|--------------------------|-----------------|---------|--------------------------------------------------------------------------------------------------|
+| PHOTOPRISM_OIDC_URI      | --oidc-uri      |         | identity provider `URI` for single sign-on via OpenID Connect, e.g. https://accounts.google.com/ |
+| PHOTOPRISM_OIDC_INSECURE | --oidc-insecure |         | skip identity provider SSL/TLS certificate verification (test and development only)              |
+| PHOTOPRISM_OIDC_CLIENT   | --oidc-client   |         | client `ID` for single sign-on via OpenID Connect                                                |
+| PHOTOPRISM_OIDC_SECRET   | --oidc-secret   |         | client `SECRET` for single sign-on via OpenID Connect                                            |
+| PHOTOPRISM_OIDC_PROVIDER | --oidc-provider |         | custom identity provider `NAME`                                                                  |
+| PHOTOPRISM_OIDC_ICON     | --oidc-icon     |         | custom identity provider icon `URI`                                                              |
+| PHOTOPRISM_OIDC_REGISTER | --oidc-register |         | allow new users to create an account when they sign in via OpenID Connect                        |
+| PHOTOPRISM_OIDC_REDIRECT | --oidc-redirect |         | automatically redirect unauthenticated users to the configured identity provider                 |
+| PHOTOPRISM_DISABLE_OIDC  | --disable-oidc  |         | disable single sign-on via OpenID Connect, even if an identity provider has been configured      |
+
+
+
+!!! example ""
+    Note that your PhotoPrism instance and the OpenID Connect Identity Provider must use HTTPS, otherwise single sign-on via OIDC cannot be enabled.
 
 ## Service Discovery
 

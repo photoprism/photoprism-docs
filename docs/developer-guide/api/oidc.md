@@ -26,8 +26,6 @@
 | PHOTOPRISM_OIDC_REDIRECT | --oidc-redirect |         | automatically redirect unauthenticated users to the configured identity provider                 |
 | PHOTOPRISM_DISABLE_OIDC  | --disable-oidc  |         | disable single sign-on via OpenID Connect, even if an identity provider has been configured      |
 
-
-
 !!! example ""
     Note that your PhotoPrism instance and the OpenID Connect Identity Provider must use HTTPS, otherwise single sign-on via OIDC cannot be enabled.
 

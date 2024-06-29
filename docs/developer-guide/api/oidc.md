@@ -33,7 +33,7 @@
 
 ### Client Configuration
 
-[Service discovery](https://developer.okta.com/docs/reference/api/oidc/#well-known-oauth-authorization-server) through the standardized `/.well-known/openid-configuration` endpoint for Single Sign-On (SSO) with OpenID Connect is supported by our OIDC client library, for example:
+Single Sign-On via OpenID Connect can be configured automatically if Identity Providers offer a standardized `/.well-known/openid-configuration` endpoint for [service discovery](https://developer.okta.com/docs/reference/api/oidc/#well-known-oauth-authorization-server), for example:
 
 - <https://accounts.google.com/.well-known/openid-configuration>
 - <https://keycloak.localssl.dev/realms/master/.well-known/openid-configuration>

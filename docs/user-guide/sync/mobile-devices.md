@@ -63,6 +63,9 @@ Because PhotoSync uses WebDAV to send files, PhotoPrism automatically starts imp
 
 ## Other Apps ##
 
-As long as you run PhotoPrism on a device with Windows file sharing (on Linux, for example, via [Samba](https://www.samba.org/)), you can use this free open-source Android app:
+As an alternative to [PhotoSync](#photosync), you can also use one of the following apps to synchronize your pictures with PhotoPrism, either [directly via WebDAV](webdav.md#server-url) or by sharing the [*originals* folder](../backups/folders.md#originals) as a network drive through your operating system:
 
-[SMBSync2 - Github](https://github.com/Sentaroh/SMBSync2/releases) | [SMBSync2 - Google Play](https://play.google.com/store/apps/details?id=com.sentaroh.android.SMBSync2)
+| Name                                             | Platform | Synchronization                             | License                                                       | Download                                                                                                                                                    |
+|--------------------------------------------------|----------|---------------------------------------------|---------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [EasySync](https://github.com/phpbg/easysync)    | Android  | [Directly via WebDAV](webdav.md#server-url) | [MIT](https://github.com/phpbg/easysync/blob/main/LICENSE)    | [Google Play](https://play.google.com/store/apps/details?id=com.phpbg.easysync&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1) |
+| [SMBSync2](https://github.com/Sentaroh/SMBSync2) | Android  | SMB network drive                           | [MIT](https://github.com/Sentaroh/SMBSync2/blob/2.55/LICENSE) | [Google Play](https://play.google.com/store/apps/details?id=com.sentaroh.android.SMBSync2)                                                                  |

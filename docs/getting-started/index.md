@@ -9,18 +9,6 @@ Once the initial setup is complete, our [First Steps 👣](../user-guide/first-s
 !!! tldr ""
     [Our stable releases](../release-notes.md) and [preview builds](updates.md#development-preview) are available as [multi-arch Docker images](https://hub.docker.com/r/photoprism/photoprism/tags) for 64-bit AMD, Intel, and ARM processors. Experienced users can [alternatively use the packages](faq.md#installation-packages) at [dl.photoprism.app/pkg/linux/](https://dl.photoprism.app/pkg/linux/README.html) to manually install PhotoPrism on compatible Linux distributions. For more installation methods, see our [Getting Started FAQ](faq.md#how-can-i-install-photoprism-without-docker).
 
-## Roadmap
-
-Our vision is to provide the most user- and privacy-friendly solution to keep your pictures organized and accessible.
-The [roadmap](https://link.photoprism.app/roadmap) shows what tasks are in progress, 
-what needs testing, and which features are going to be implemented next.
-
-We have a zero bug policy and do our best to help users when they need support or have other questions.
-This comes at a price, as we can't give exact deadlines for new features.
-
-Having said that, funding really has the highest impact. So users can do their part and
-[become a member](https://www.photoprism.app/membership) to get their favorite features as soon as possible.
-
 ## System Requirements
 
 You should host PhotoPrism on a server with **at least 2 cores**, **3 GB of physical memory**,[^1] and a 64-bit operating system. Beyond these minimum requirements, the amount of RAM should [match the number of CPU cores](troubleshooting/performance.md#memory). Indexing large photo and video collections also benefits greatly from [local SSD storage](troubleshooting/performance.md#storage), especially for the database and cache files.
@@ -59,6 +47,12 @@ As explained in our [Privacy Policy](https://www.photoprism.app/privacy#section-
 Your use of these services is [fully covered by us](faq.md#are-the-keys-for-using-interactive-world-maps-provided-free-of-charge). Depending on your usage, this can save you much more than the cost of a [PhotoPrism+ Membership](https://www.photoprism.app/membership), since other providers generally charge usage-based fees and often don't allow you to cache the data they provide, compromising performance and your privacy with unnecessary requests.
 
 [View Privacy Policy ›](https://www.photoprism.app/privacy#section-7){ class="pr-3 block-xs" } [View Compliance FAQ ›](https://www.photoprism.app/kb/compliance-faq#privacy)
+
+## Roadmap
+
+Our vision is to provide the most user- and privacy-friendly solution to keep your pictures organized and accessible. The [project roadmap](https://link.photoprism.app/roadmap) shows what tasks are in progress, what needs testing, and which features are going to be implemented next.
+
+Please note, however, that we have a [zero-bug policy](../known-issues.md) and do our best to help users when they need support or have questions. This comes at a price, as we can't give exact release dates for new features.
 
 ## Getting Support
 

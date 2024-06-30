@@ -1,4 +1,4 @@
-# Syncing with Dropbox #
+# Syncing with Dropbox
 
 It's possible to use [Dropbox](https://www.dropbox.com/) to store your photos, while viewing and managing them through PhotoPrism.
 

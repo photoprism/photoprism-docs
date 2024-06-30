@@ -1,4 +1,4 @@
-# Sync files with other Apps #
+# Syncing with other WebDAV-compatible Apps and Services
 
 In [settings](../settings/sync.md) you can connect your PhotoPrism instance to other services with WebDAV support, such as other PhotoPrism instances, Nextcloud or ownCloud.
 

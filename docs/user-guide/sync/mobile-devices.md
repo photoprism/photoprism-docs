@@ -1,15 +1,17 @@
-# Syncing with Mobile Devices #
+# Syncing with Mobile Devices
 
-To sync photos and videos on your phone with PhotoPrism, you can use any app that supports WebDAV.
+You can use any app that supports the WebDAV protocol to synchronize photos and videos between your phone and PhotoPrism.
+
+Based on our own experience, we can highly recommend [PhotoSync](https://link.photoprism.app/photosync) as it is one of the most feature-rich and stable apps currently available for iOS and Android.
+
+A number of [other apps](#other-apps) you can try are listed below.
 
 !!! tldr ""
-    You can disable WebDAV in the [advanced settings](../settings/advanced.md). Since it requires write permissions and authentication, the built-in WebDAV server is automatically disabled when running in [read-only](../../getting-started/config-options.md#feature-flags) or [public mode](../../getting-started/config-options.md#authentication).
+    WebDAV access can be disabled under [Settings > Advanced](../settings/advanced.md). Since it requires write permissions and authentication, the built-in WebDAV server is automatically disabled when running in [read-only](../../getting-started/config-options.md#feature-flags) or [public mode](../../getting-started/config-options.md#authentication).
 
-## PhotoSync ##
+## Using PhotoSync
 
-We recommend [PhotoSync](https://link.photoprism.app/photosync) which is available for Android and iOS.
-
-### Set PhotoPrism or WebDAV as Target ###
+### Set PhotoPrism or WebDAV as Target
 
 1. Open PhotoSync and click :material-cog-outline:
 2. Click *Configure*
@@ -43,7 +45,7 @@ We recommend [PhotoSync](https://link.photoprism.app/photosync) which is availab
       ![Screenshot](img/photosync-4.jpg){: style="width:35%" class="shadow"}
       ![Screenshot](img/photosync-5.jpg){: style="width:35%" class="shadow"}
 
-### Set Up Automatic Sync ###
+### Set Up Automatic Sync
 
 1. Open PhotoSync and click :material-cog-outline:
 2. Click *Autotransfer*
@@ -61,11 +63,14 @@ We recommend [PhotoSync](https://link.photoprism.app/photosync) which is availab
 
 Because PhotoSync uses WebDAV to send files, PhotoPrism automatically starts importing/indexing when it receives new files.
 
-## Other Apps ##
+## Other Apps
 
-As an alternative to [PhotoSync](#photosync), you can also use one of the following apps to synchronize your pictures with PhotoPrism, either [directly via WebDAV](webdav.md#server-url) or by sharing the [*originals* folder](../backups/folders.md#originals) as a network drive through your operating system:
+As an alternative to [PhotoSync](#using-photosync), you can also use other compatible apps, e.g. one of the following, to synchronize your pictures with PhotoPrism, either [directly via WebDAV](webdav.md#server-url) or by sharing the [*originals* folder](../backups/folders.md#originals) as a network drive through your operating system:
 
 | Name                                             | Platform | Synchronization                             | License                                                       | Download                                                                                                                                                    |
 |--------------------------------------------------|----------|---------------------------------------------|---------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [EasySync](https://github.com/phpbg/easysync)    | Android  | [Directly via WebDAV](webdav.md#server-url) | [MIT](https://github.com/phpbg/easysync/blob/main/LICENSE)    | [Google Play](https://play.google.com/store/apps/details?id=com.phpbg.easysync&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1) |
 | [SMBSync2](https://github.com/Sentaroh/SMBSync2) | Android  | SMB network drive                           | [MIT](https://github.com/Sentaroh/SMBSync2/blob/2.55/LICENSE) | [Google Play](https://play.google.com/store/apps/details?id=com.sentaroh.android.SMBSync2)                                                                  |
+
+!!! tldr ""
+    You are [welcome to suggest](https://github.com/photoprism/photoprism-docs/tree/master/docs/user-guide/sync/mobile-devices.md) additional sync apps compatible with PhotoPrism, so we can include them in this overview. Please note that the list is provided for your convenience only and that we are unable to provide technical support for any of these apps. If you have problems, please contact the author or ask the community for help.

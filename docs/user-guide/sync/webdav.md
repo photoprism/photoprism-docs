@@ -1,4 +1,4 @@
-# Connecting via WebDAV #
+# Connecting via WebDAV
 
 WebDAV-compatible apps and clients such as [PhotoSync](mobile-devices.md), Microsoft's Windows Explorer,
 and Apple's Finder can connect directly to PhotoPrism.

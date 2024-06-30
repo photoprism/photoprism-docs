@@ -21,8 +21,8 @@ Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is sup
     Note that this will point the home directory shortcut `~` to `/root` in the `volumes:` 
     section of your `docker-compose.yml`. Kernel security modules such as AppArmor and SELinux 
     have been [reported to cause issues](troubleshooting/docker.md#kernel-security).
-    Also ensure that your server has [at least 4 GB of swap](troubleshooting/docker.md#adding-swap)
-    configured and avoid setting a [hard memory limit](faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory) as that can cause unexpected restarts when the indexer temporarily needs more memory to process large files.
+
+    We recommend that your server has [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured and to avoid setting a [hard memory limit](faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory), as this can lead to unexpected restarts when the indexer temporarily needs more memory to process large files. Indexing [RAW images and high-resolution panoramas](troubleshooting/performance.md#memory) may require additional [swap space](troubleshooting/docker.md#adding-swap) and/or physical memory beyond the [recommended minimum](index.md#system-requirements).
 
 === "Podman"
 
@@ -44,6 +44,8 @@ Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is sup
 
     Please keep in mind to replace the `docker` and `docker compose` commands with `podman` and `podman-compose` when following the examples in our documentation.
 
+    We recommend that your server has [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured and to avoid setting a [hard memory limit](faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory), as this can lead to unexpected restarts when the indexer temporarily needs more memory to process large files. Indexing [RAW images and high-resolution panoramas](troubleshooting/performance.md#memory) may require additional [swap space](troubleshooting/docker.md#adding-swap) and/or physical memory beyond the [recommended minimum](index.md#system-requirements).
+
 === "Raspberry Pi"
 
     Download our [docker-compose.yml](https://dl.photoprism.app/docker/arm64/docker-compose.yml) example for 
@@ -56,8 +58,9 @@ Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is sup
 
     Mostly the same installation instructions as for regular Linux servers apply.
     Commands may have to be prefixed with `sudo` when not running as root.
-    Ensure your device meets the [requirements](raspberry-pi.md) and has
-    [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured before you continue.
+    
+    Please verify if your device meets the [system requirements](raspberry-pi.md#system-requirements) and has
+    [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured before you continue. Indexing [RAW images and high-resolution panoramas](troubleshooting/performance.md#memory) may require additional [swap space](troubleshooting/docker.md#adding-swap) and/or physical memory beyond the [recommended minimum](index.md#system-requirements).
 
 === "ARMv7"
 
@@ -71,8 +74,9 @@ Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is sup
 
     Mostly the same installation instructions as for regular Linux servers apply.
     Commands may have to be prefixed with `sudo` when not running as root.
-    Ensure your device meets the [requirements](raspberry-pi.md) and has
-    [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured before you continue.
+    
+    Please verify if your device meets the [system requirements](raspberry-pi.md#system-requirements) and has
+    [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured before you continue. Indexing [RAW images and high-resolution panoramas](troubleshooting/performance.md#memory) may require additional [swap space](troubleshooting/docker.md#adding-swap) and/or physical memory beyond the [recommended minimum](index.md#system-requirements).
 
 === "Windows"
 
@@ -82,6 +86,8 @@ Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is sup
     [https://dl.photoprism.app/docker/windows/docker-compose.yml](https://dl.photoprism.app/docker/windows/docker-compose.yml) :material-download:
 
     It is important to [increase the Docker memory limit](img/docker-resources-advanced.jpg) to 4 GB or more when using *Hyper-V*. The default of 2 GB can reduce indexing performance and cause unexpected restarts. Also make sure you configure at least 4 GB of swap space. [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/) uses dynamic memory allocation with *WSL 2*, meaning you do not need to change any memory-related settings (depending on which version of Windows and Docker you are using).
+
+    Indexing [RAW images and high-resolution panoramas](troubleshooting/performance.md#memory) may require additional [swap space](troubleshooting/docker.md#adding-swap) and/or physical memory beyond the [recommended minimum](index.md#system-requirements).
 
     !!! note ""
         Running the following commands will automatically download all required config files and start the server for you:
@@ -102,8 +108,8 @@ Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is sup
     
     It is important to [increase the Docker memory limit to 4 GB](img/docker-resources-advanced.jpg) or more,
     as the default of 2 GB can reduce indexing performance and cause unexpected restarts.
-    Also ensure that your server has [at least 4 GB of swap](troubleshooting/docker.md#adding-swap)
-    configured and avoid setting a [hard memory limit](faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory) as that can cause unexpected restarts when the indexer temporarily needs more memory to process large files.
+    
+    Indexing [RAW images and high-resolution panoramas](troubleshooting/performance.md#memory) may require additional [swap space](troubleshooting/docker.md#adding-swap) and/or physical memory beyond the [recommended minimum](index.md#system-requirements).
 
 !!! note ""
     When editing your `compose.yaml` or `docker-compose.yml` file, please make sure that [related values remain on the same indentation level](../developer-guide/technologies/yaml.md) and that [lists start with a dash](../developer-guide/technologies/yaml.md#multiple-values).
@@ -274,7 +280,7 @@ Our members can activate [additional features](https://link.photoprism.app/membe
 If your server runs out of memory, the index is frequently locked, or other system resources are running low:
 
 - [ ] Try [reducing the number of workers](config-options.md#indexing) by setting `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml`, depending on the CPU performance and number of cores
-- [ ] Ensure that your server has [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured and avoid setting a [hard memory limit](faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory) as that can cause unexpected restarts when the indexer temporarily needs more memory to process large files
+- [ ] Ensure that your server has [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured and avoid setting a [hard memory limit](faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory) as this can cause unexpected restarts when the indexer temporarily needs more memory to process large files
 - [ ] If you are using SQLite, switch to MariaDB, which is [better optimized for high concurrency](faq.md#should-i-use-sqlite-mariadb-or-mysql)
 - [ ] As a last measure, you can [disable the use of TensorFlow](config-options.md#feature-flags) for image classification and facial recognition
 

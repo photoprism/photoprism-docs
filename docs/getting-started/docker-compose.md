@@ -21,9 +21,8 @@ Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is sup
     Note that this will point the home directory shortcut `~` to `/root` in the `volumes:` 
     section of your `docker-compose.yml`. Kernel security modules such as AppArmor and SELinux 
     have been [reported to cause issues](troubleshooting/docker.md#kernel-security).
-    Ensure that your server has [at least 4 GB of swap](troubleshooting/docker.md#adding-swap)
-    configured and avoid setting a [hard memory limit](faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory)
-    as that can cause unexpected restarts when the indexer temporarily needs more memory to process large files.
+    Also ensure that your server has [at least 4 GB of swap](troubleshooting/docker.md#adding-swap)
+    configured and avoid setting a [hard memory limit](faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory) as that can cause unexpected restarts when the indexer temporarily needs more memory to process large files.
 
 === "Podman"
 
@@ -103,7 +102,8 @@ Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is sup
     
     It is important to [increase the Docker memory limit to 4 GB](img/docker-resources-advanced.jpg) or more,
     as the default of 2 GB can reduce indexing performance and cause unexpected restarts.
-    Also, ensure that you configure at least 4 GB of swap space.
+    Also ensure that your server has [at least 4 GB of swap](troubleshooting/docker.md#adding-swap)
+    configured and avoid setting a [hard memory limit](faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory) as that can cause unexpected restarts when the indexer temporarily needs more memory to process large files.
 
 !!! note ""
     When editing your `compose.yaml` or `docker-compose.yml` file, please make sure that [related values remain on the same indentation level](../developer-guide/technologies/yaml.md) and that [lists start with a dash](../developer-guide/technologies/yaml.md#multiple-values).

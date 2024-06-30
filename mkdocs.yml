@@ -121,7 +121,7 @@ nav:
       - Services: user-guide/settings/sync.md
       - Account: user-guide/settings/account.md
     - Remote Sync:
-      - Connecting via WebDAV: user-guide/sync/webdav.md
+      - Using WebDAV: user-guide/sync/webdav.md
       - Mobile Devices: user-guide/sync/mobile-devices.md
       - Apps and Services: user-guide/sync/services-sync.md
       - Syncing with Dropbox: user-guide/sync/dropbox.md

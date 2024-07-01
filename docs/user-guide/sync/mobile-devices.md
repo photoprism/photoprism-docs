@@ -1,6 +1,6 @@
 # Syncing with Mobile Devices
 
-You can use any app that supports the WebDAV protocol to synchronize photos and videos between your phone and PhotoPrism.
+You can use any app that supports the [WebDAV protocol](webdav.md) to synchronize photos and videos between your phone and PhotoPrism.
 
 Based on our own experience, we can highly recommend [PhotoSync](https://link.photoprism.app/photosync) as it is one of the most feature-rich and sophisticated apps currently available for iOS and Android.
 

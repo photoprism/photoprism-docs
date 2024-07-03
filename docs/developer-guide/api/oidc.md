@@ -48,9 +48,9 @@ It is not yet possible to use PhotoPrism as an OIDC Identity Provider, since not
 
 ## Related Issues
 
-- [Auth: Add Support for Single Sign-On via OpenID Connect (OIDC) #782](https://github.com/photoprism/photoprism/issues/782)
+- [Auth: Add support for single sign-on via OpenID Connect (OIDC) #782](https://github.com/photoprism/photoprism/issues/782)
 - [Auth: Add `userinfo` API endpoint to get information about the logged in user #4369](https://github.com/photoprism/photoprism/issues/4369)
-- [Auth: Add `authorize` API endpoint for the Authorization Code Grant flow #4368](https://github.com/photoprism/photoprism/issues/4368)
+- [Auth: Add `authorize` API endpoint to implement the authorization code flow #4368](https://github.com/photoprism/photoprism/issues/4368)
 
 ## Software Libraries
 

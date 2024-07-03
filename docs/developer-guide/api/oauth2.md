@@ -49,6 +49,10 @@ Besides using the API endpoints provided for this, you can also generate valid a
 - https://www.oauth.com/oauth2-servers/access-tokens/access-token-lifetime/
 - https://www.oauth.com/oauth2-servers/access-tokens/access-token-response/ 
 - https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/
+- https://www.oauth.com/oauth2-servers/authorization/the-authorization-request/
+- https://www.oauth.com/oauth2-servers/authorization/requiring-user-login/
+- https://www.oauth.com/oauth2-servers/authorization/the-authorization-interface/
+- https://www.oauth.com/oauth2-servers/authorization/the-authorization-response/
 - https://learn.microsoft.com/en-us/linkedin/shared/authentication/programmatic-refresh-tokens
 - https://oauth.net/2/grant-types/client-credentials/
 - https://oauth.net/2/scope/

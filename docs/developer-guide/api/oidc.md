@@ -77,3 +77,7 @@ It is not yet possible to use PhotoPrism as an OIDC Identity Provider, since not
 - https://auth0.com/docs/get-started/applications/configure-applications-with-oidc-discovery
 - https://connect2id.com/products/server/docs/api/authorization
 - https://www.authlete.com/developers/definitive_guide/authorization_endpoint_spec/
+- https://www.oauth.com/oauth2-servers/authorization/the-authorization-request/
+- https://www.oauth.com/oauth2-servers/authorization/requiring-user-login/
+- https://www.oauth.com/oauth2-servers/authorization/the-authorization-interface/
+- https://www.oauth.com/oauth2-servers/authorization/the-authorization-response/

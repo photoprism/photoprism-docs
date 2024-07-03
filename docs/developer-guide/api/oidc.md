@@ -42,13 +42,15 @@ Single Sign-On via OpenID Connect can be configured automatically if Identity Pr
 
 ### Server Endpoint
 
-It is not yet possible to use PhotoPrism as an OIDC Identity Provider, since not all the required standards and grant types have been fully implemented. However, querying the `/.well-known/openid-configuration` endpoint shows what is already available, and the remaining functionality can be added over time as needed:
+It is not yet possible to use PhotoPrism as an OIDC Identity Provider, since not all the required standards and grant types have been fully implemented. However, querying the `/.well-known/openid-configuration` endpoint will show what is already in place, so the remaining functionality can be identified and added over time as needed:
 
 - <https://demo.photoprism.app/.well-known/openid-configuration>
 
 ## Related Issues
 
-- [Account: Add Support for OpenID Connect (OIDC) #782](https://github.com/photoprism/photoprism/issues/782)
+- [Auth: Add Support for Single Sign-On via OpenID Connect (OIDC) #782](https://github.com/photoprism/photoprism/issues/782)
+- [API: Add `/api/v1/oauth/userinfo` endpoint to return information about the logged in user #4369](https://github.com/photoprism/photoprism/issues/4369)
+- [API: Add `/api/v1/oauth/authorize` endpoint to support the OAuth2 Authorization Code Grant flow #4368](https://github.com/photoprism/photoprism/issues/4368)
 
 ## Software Libraries
 

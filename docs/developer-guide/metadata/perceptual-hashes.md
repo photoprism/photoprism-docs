@@ -4,7 +4,7 @@ Perceptual Image Hashing refers to the use of a fingerprint algorithm to generat
 
 ## Sorting by Visual Similarity
 
-PhotoPrism currently [generates a perceptual hash](https://github.com/photoprism/photoprism/blob/develop/pkg/colors/lightmap.go) while indexing, which can be used to sort search results by visual similarity, e.g.:
+PhotoPrism currently [generates a perceptual hash](https://github.com/photoprism/photoprism/blob/develop/pkg/media/colors/lightmap.go) while indexing, which can be used to sort search results by visual similarity, e.g.:
 
 - <https://demo.photoprism.app/library/browse?view=cards&order=similar>
 

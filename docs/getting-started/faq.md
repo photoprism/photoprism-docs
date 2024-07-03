@@ -138,7 +138,7 @@ This depends on your environment and [configuration](config-options.md). While s
 in the UI, changing the *originals* base folder requires a restart for security reasons.
 
 If you skip configuration and don't use one of our Docker images, PhotoPrism will attempt to find a photo library
-by searching a [list of common folder names](https://github.com/photoprism/photoprism/blob/develop/pkg/fs/dirs.go)
+by searching a [list of common folder names](https://github.com/photoprism/photoprism/blob/develop/pkg/fs/directories.go)
 such as `/photoprism/originals` and `~/Pictures`. It also searches for other resources such as external applications,
 classification models, and frontend assets.
 

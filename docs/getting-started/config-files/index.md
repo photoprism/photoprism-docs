@@ -50,7 +50,7 @@ File and directory paths may be specified using `~` as a placeholder for the hom
 e.g. `~/Pictures`. Relative paths can also be specified via `./pathname`.
 If no explicit [*originals*](../docker-compose.md#photoprismoriginals), [
 *import*](../docker-compose.md#photoprismimport) and/or *assets* path has been configured, a list
-of [default directory paths](https://github.com/photoprism/photoprism/blob/develop/pkg/fs/dirs.go) will be searched and
+of [default directory paths](https://github.com/photoprism/photoprism/blob/develop/pkg/fs/directories.go) will be searched and
 the first existing directory will be used for the respective path.
 
 ### Global Defaults

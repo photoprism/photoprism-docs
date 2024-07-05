@@ -14,18 +14,18 @@
 
 ### Config Options
 
-| Environment              | CLI Flag        | Default            | Description                                                                                        |
-|--------------------------|-----------------|--------------------|----------------------------------------------------------------------------------------------------|
-| PHOTOPRISM_OIDC_URI      | --oidc-uri      |                    | identity provider `URI` for single sign-on via OpenID Connect, e.g. "https://accounts.google.com/" |
-| PHOTOPRISM_OIDC_CLIENT   | --oidc-client   |                    | client `ID` for single sign-on via OpenID Connect                                                  |
-| PHOTOPRISM_OIDC_SECRET   | --oidc-secret   |                    | client `SECRET` for single sign-on via OpenID Connect                                              |
-| PHOTOPRISM_OIDC_PROVIDER | --oidc-provider |                    | custom identity provider `NAME`, e.g. "Google"                                                     |
-| PHOTOPRISM_OIDC_ICON     | --oidc-icon     |                    | custom identity provider icon `URI`                                                                |
-| PHOTOPRISM_OIDC_REDIRECT | --oidc-redirect |                    | automatically redirect unauthenticated users to the configured identity provider                   |
-| PHOTOPRISM_OIDC_REGISTER | --oidc-register |                    | allow new users to create an account when they sign in with OpenID Connect                         |
-| PHOTOPRISM_OIDC_USERNAME | --oidc-username | preferred_username | username `CLAIM` for OpenID Connect users (preferred_username, email)                              |
-| PHOTOPRISM_OIDC_WEBDAV   | --oidc-webdav   |                    | enable WebDAV for new OpenID Connect users if their role allows it                                 |
-| PHOTOPRISM_DISABLE_OIDC  | --disable-oidc  |                    | disable single sign-on via OpenID Connect, even if an identity provider has been configured        |
+| Environment              | CLI Flag        | Default            | Description                                                                                              |
+|--------------------------|-----------------|--------------------|----------------------------------------------------------------------------------------------------------|
+| PHOTOPRISM_OIDC_URI      | --oidc-uri      |                    | identity provider issuer `URI` for single sign-on via OpenID Connect, e.g. "https://accounts.google.com" |
+| PHOTOPRISM_OIDC_CLIENT   | --oidc-client   |                    | client `ID` for single sign-on via OpenID Connect                                                        |
+| PHOTOPRISM_OIDC_SECRET   | --oidc-secret   |                    | client `SECRET` for single sign-on via OpenID Connect                                                    |
+| PHOTOPRISM_OIDC_PROVIDER | --oidc-provider |                    | custom identity provider `NAME`, e.g. "Google"                                                           |
+| PHOTOPRISM_OIDC_ICON     | --oidc-icon     |                    | custom identity provider icon `URI`                                                                      |
+| PHOTOPRISM_OIDC_REDIRECT | --oidc-redirect |                    | automatically redirect unauthenticated users to the configured identity provider                         |
+| PHOTOPRISM_OIDC_REGISTER | --oidc-register |                    | allow new users to create an account when they sign in with OpenID Connect                               |
+| PHOTOPRISM_OIDC_USERNAME | --oidc-username | preferred_username | preferred username `CLAIM` for new OpenID Connect users (preferred_username, email, nickname)            |
+| PHOTOPRISM_OIDC_WEBDAV   | --oidc-webdav   |                    | allow new OpenID Connect users to use WebDAV when they have a role that allows it                        |
+| PHOTOPRISM_DISABLE_OIDC  | --disable-oidc  |                    | disable single sign-on via OpenID Connect, even if an identity provider has been configured              |
 
 !!! example ""
     Your PhotoPrism instance and the [OpenID Connect Identity Provider (IdP)](#identity-providers) must be accessible **via HTTPS** and have valid TLS certificates configured for it. Please also make sure that the hostname in the [Redirect URL](#redirect-url) configured on the IdP matches the [Site URL](../../getting-started/config-options.md#site-information) used by PhotoPrism. Single sign-on via OIDC can otherwise not be enabled.

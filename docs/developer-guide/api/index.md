@@ -50,9 +50,7 @@ Besides using the API endpoints provided for this, you can also generate valid a
 
 ### OpenID Configuration
 
-```
-/.well-known/openid-configuration
-```
+It is not yet possible to use PhotoPrism as an OpenID Connect (OIDC) [Identity Provider](oidc.md#identity-providers), since not all the required [endpoints](https://github.com/photoprism/photoprism/issues/4368) and [grant types](oauth2.md) have been fully implemented. However, querying the `/.well-known/openid-configuration` endpoint shows what has already been implemented, so the missing capabilities can be identified and added over time.
 
 ↪ <https://demo.photoprism.app/.well-known/openid-configuration>
 

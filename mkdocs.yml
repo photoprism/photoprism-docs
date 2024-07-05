@@ -52,6 +52,7 @@ nav:
       - Haproxy: getting-started/proxies/haproxy.md
     - Advanced:
       - Video Transcoding: getting-started/advanced/transcoding.md
+      - OpenID Connect:  getting-started/advanced/openid-connect.md
       - Using Kubernetes: getting-started/advanced/kubernetes.md
       - Docker Security: getting-started/advanced/docker-security.md
       - Docker Volumes: getting-started/advanced/docker-volumes.md
@@ -196,8 +197,8 @@ nav:
     - Web Service API:
       - Introduction: developer-guide/api/index.md
       - Client Authentication: developer-guide/api/auth.md
-      - OAuth2 Grant Types: developer-guide/api/oauth2.md
       - OpenID Connect: developer-guide/api/oidc.md
+      - OAuth2 Grant Types: developer-guide/api/oauth2.md
       - Search Endpoints: developer-guide/api/search.md
       - Thumbnail Images: developer-guide/api/thumbnails.md
       - Client Libraries:

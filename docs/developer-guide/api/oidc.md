@@ -40,6 +40,14 @@ https://{hostname}/api/v1/oidc/redirect
 
 Both URLs must begin with `https://` to use HTTPS, as otherwise single sign-on via OIDC cannot be enabled.
 
+### Preferred Username
+
+When a new user tries to sign in via OpenID Connect, this may fail because the preferred username is already registered.
+
+In this case, it may help to [change the username preference](#config-options) from `preferred_username` to `email` or `nickname` with the `PHOTOPRISM_OIDC_USERNAME` config option.
+
+Alternatively, advanced users can connect an existing account by manually updating the `auth_id` column to match the subject ID of the OIDC provider and changing the value of the `auth_provider` column to `oidc` in the `auth_users` database table.
+
 ## Service Discovery
 
 ### Client Configuration
@@ -71,7 +79,7 @@ Our [development environment](../setup.md) comes with a [pre-configured Keycloak
 
 - <https://keycloak.localssl.dev/realms/master/.well-known/openid-configuration>
 
-An `admin` account for managing users and a `user` account for testing single sign-on account are pre-registered. Both have the password `photoprism`.
+An `admin` account for managing users and a `user` account for testing single sign-on are pre-registered. Both have the password `photoprism`.
 
 !!! example ""
     Please do not use this test identity provider in a production environment as its configuration is not secure.

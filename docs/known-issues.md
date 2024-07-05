@@ -47,6 +47,14 @@ The session and user management was [reimplemented in November 2022](release-not
 
 Upgrading from the last stable version should work without any problems. However, if you have already created additional accounts with the previously offered unofficial multi-user support, you will notice that only the main admin account is migrated automatically. Run `photoprism users legacy` [in a terminal](getting-started/docker-compose.md#command-line-interface) to display the legacy accounts so you can migrate them manually if needed.
 
+### OpenID Connect (OIDC)
+
+When a new user tries to sign in via [OpenID Connect](developer-guide/api/oidc.md), this may fail because the preferred username is already registered.
+
+In this case, it may help to [change the username preference](developer-guide/api/oidc.md#config-options) from `preferred_username` to `email` or `nickname` with the `PHOTOPRISM_OIDC_USERNAME` config option.
+
+Alternatively, advanced users can connect an existing account by manually updating the `auth_id` column to match the subject ID of the OIDC provider and changing the value of the `auth_provider` column to `oidc` in the `auth_users` database table.
+
 ## Face Recognition
 
 ### Legacy Hardware ###

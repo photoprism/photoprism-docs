@@ -42,7 +42,7 @@ Both URLs must begin with `https://` to use HTTPS, as otherwise single sign-on v
 
 ### Preferred Username
 
-When a new user tries to sign in via OpenID Connect, this may fail because the preferred username is already registered.
+When a new user tries to sign in via OpenID Connect, this may fail because the preferred username is already registered and there is no automatic conflict resolution or *Connect Account* flow implemented yet.
 
 In this case, it may help to [change the username preference](#config-options) from `preferred_username` to `email` or `nickname` with the `PHOTOPRISM_OIDC_USERNAME` config option.
 

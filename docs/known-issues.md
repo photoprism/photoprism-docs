@@ -49,7 +49,7 @@ Upgrading from the last stable version should work without any problems. However
 
 ### OpenID Connect (OIDC)
 
-When a new user tries to sign in via [OpenID Connect](developer-guide/api/oidc.md), this may fail because the preferred username is already registered.
+When a new user tries to sign in via [OpenID Connect](developer-guide/api/oidc.md), this may fail because the preferred username is already registered and there is no automatic conflict resolution or *Connect Account* flow implemented yet.
 
 In this case, it may help to [change the username preference](developer-guide/api/oidc.md#config-options) from `preferred_username` to `email` or `nickname` with the `PHOTOPRISM_OIDC_USERNAME` config option.
 

@@ -27,24 +27,54 @@
 | PHOTOPRISM_OIDC_WEBDAV   | --oidc-webdav   |                    | enable WebDAV for new OpenID Connect users if their role allows it                                 |
 | PHOTOPRISM_DISABLE_OIDC  | --disable-oidc  |                    | disable single sign-on via OpenID Connect, even if an identity provider has been configured        |
 
-
 !!! example ""
-    Note that your PhotoPrism instance and the OpenID Connect Identity Provider must use HTTPS, otherwise single sign-on via OIDC cannot be enabled.
+    Your PhotoPrism instance and the [OpenID Connect Identity Provider (IdP)](#identity-providers) must be accessible **via HTTPS** and have valid TLS certificates configured for it. Please also make sure that the hostname in the [Redirect URL](#redirect-url) configured on the IdP matches the [Site URL](../../getting-started/config-options.md#site-information) used by PhotoPrism. Single sign-on via OIDC can otherwise not be enabled.
+
+### Redirect URL
+
+The Redirect URL that must be specified when registering a new client with an [Identity Provider](#identity-providers) is as follows, where `{hostname}` must be replaced by the hostname in the [Site URL](../../getting-started/config-options.md#site-information), e.g. configured via `PHOTOPRISM_SITE_URL`:
+
+```
+https://{hostname}/api/v1/oidc/redirect
+```
+
+Both URLs must begin with `https://` to use HTTPS, as otherwise single sign-on via OIDC cannot be enabled.
 
 ## Service Discovery
 
 ### Client Configuration
 
-Single Sign-On via OpenID Connect can be configured automatically if Identity Providers offer a standardized `/.well-known/openid-configuration` endpoint for [service discovery](https://developer.okta.com/docs/reference/api/oidc/#well-known-oauth-authorization-server):
+Single sign-on via OIDC can be configured automatically if [Identity Providers](#identity-providers) offer a standardized `/.well-known/openid-configuration` endpoint for [service discovery](https://developer.okta.com/docs/reference/api/oidc/#well-known-oauth-authorization-server), for example:
 
 - <https://accounts.google.com/.well-known/openid-configuration>
-- <https://keycloak.localssl.dev/realms/master/.well-known/openid-configuration>
 
 ### Server Endpoint
 
-It is not yet possible to use PhotoPrism as an OIDC Identity Provider, since not all the required standards and grant types have been fully implemented. However, querying the `/.well-known/openid-configuration` endpoint will show what is already in place, so the remaining functionality can be identified and added over time as needed:
+It is not yet possible to use PhotoPrism as an [Identity Provider](#identity-providers), since not all the required [endpoints](https://github.com/photoprism/photoprism/issues/4368) and [grant types](oauth2.md) have been fully implemented.
+
+However, querying the `/.well-known/openid-configuration` endpoint shows what has already been implemented, so the missing capabilities can be identified and added over time:
 
 - <https://demo.photoprism.app/.well-known/openid-configuration>
+
+## Identity Providers
+
+To authenticate users via OIDC, you can either set up and use a self-hosted identity provider such as [ZITADEL](https://zitadel.com/docs/self-hosting/deploy/compose) or [Keycloak](https://www.keycloak.org/), or configure e.g. one of the following public identity providers:
+
+- [Google](https://developers.google.com/identity/openid-connect/openid-connect)
+- [Microsoft](https://entra.microsoft.com/)
+- [GitHub](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app)
+- [Amazon](https://developer.amazon.com/apps-and-games/login-with-amazon)
+
+### Local Development
+
+Our [development environment](../setup.md) comes with a [pre-configured Keycloak](https://github.com/photoprism/photoprism/blob/develop/compose.yaml#L217-L243) OIDC Identity Provider running at <https://keycloak.localssl.dev/> for local testing:
+
+- <https://keycloak.localssl.dev/realms/master/.well-known/openid-configuration>
+
+An `admin` account for managing users and a `user` account for testing single sign-on account are pre-registered. Both have the password `photoprism`.
+
+!!! example ""
+    Please do not use this test identity provider in a production environment as its configuration is not secure.
 
 ## Related Issues
 

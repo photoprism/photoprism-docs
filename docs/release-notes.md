@@ -6,7 +6,7 @@
 ### Development Preview ###
 <span class="build">Build 240705-40f86c987</span>
 
-Our upcoming release adds support for single sign-on via [OpenID Connect (OIDC)](https://docs.photoprism.app/developer-guide/api/oidc/#single-sign-on).
+Our upcoming release adds support for single sign-on via [OpenID Connect (OIDC)](https://docs.photoprism.app/getting-started/advanced/openid-connect/).
 
 What's new?
 

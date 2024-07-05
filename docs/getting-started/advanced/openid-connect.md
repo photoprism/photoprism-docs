@@ -47,7 +47,7 @@ Both URLs must begin with `https://` to use HTTPS, as otherwise single sign-on v
 
 ## Preferred Username
 
-When a new user registers[^1] via OpenID Connect, it is possible that their preferred username is already registered. In this case, a random 6-digit number is appended to resolve the conflict.
+When a new user signs in with OpenID Connect[^1], their preferred username may already be registered. In this case, a random 6-digit number is appended to resolve the conflict.
 
 The config option `PHOTOPRISM_OIDC_USERNAME` allows you to change the [preferred username](#config-options) for new accounts from `preferred_user_name` to `name`, `nickname`, or verified `email`. Names are changed to lowercase handles so that, for example, "Jens Mander" becomes "jens.mander".
 

@@ -44,9 +44,7 @@ Both URLs must begin with `https://` to use HTTPS, as otherwise single sign-on v
 
 When a new user tries to sign in via OpenID Connect, this may fail because the preferred username is already registered and there is no automatic conflict resolution or *Connect Account* flow implemented yet.
 
-In this case, it may help to [change the username preference](#config-options) from `preferred_username` to `email` or `nickname` with the `PHOTOPRISM_OIDC_USERNAME` config option.
-
-Alternatively, advanced users can connect an existing account by manually updating the `auth_id` column to match the subject ID of the OIDC provider and changing the value of the `auth_provider` column to `oidc` in the `auth_users` database table.
+In this case, it may help to [change the username preference](#config-options) from `preferred_username` to `email` or `nickname` with the `PHOTOPRISM_OIDC_USERNAME` config option. Alternatively, advanced users can connect an existing account by manually updating the `auth_id` column to match the subject ID of the OIDC provider and changing the value of the `auth_provider` column to `oidc` in the `auth_users` database table.
 
 ## Service Discovery
 

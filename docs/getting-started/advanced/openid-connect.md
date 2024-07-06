@@ -2,7 +2,7 @@
 
 [OpenID Connect (OIDC)](../../developer-guide/api/oidc.md) allows users to log in and optionally register through an external identity provider instead of manually entering a username and password:
 
-![oidc-login](../../developer-guide/api/img/openid-login.jpg)
+![oidc-login](../../developer-guide/api/img/oidc-login.jpg)
 
 ## Config Options
 

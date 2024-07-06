@@ -2,7 +2,7 @@
 
 [OpenID Connect (OIDC)](https://openid.net/developers/how-connect-works/) extends [OAuth 2.0](oauth2.md) to allow users to log in and optionally register through an external identity provider instead of manually entering a username and password:
 
-![oidc-login](img/openid-login.jpg)
+![oidc-login](img/oidc-login.jpg)
 
 ## Authentication Flow
 

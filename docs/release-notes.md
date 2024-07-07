@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview ###
-<span class="build">Build 240706-7346dd64d</span>
+<span class="build">Build 240707-22aa700b1</span>
 
 Our upcoming release adds support for single sign-on via [OpenID Connect (OIDC)](https://docs.photoprism.app/getting-started/advanced/openid-connect/).
 
@@ -13,6 +13,7 @@ What's new?
 - Auth: [Added support for single sign-on via OpenID Connect (OIDC)](https://github.com/photoprism/photoprism/issues/782)
 - Index: [Slashes and null bytes are trimmed from `.ppignore` patterns](https://github.com/photoprism/photoprism/discussions/4349#discussioncomment-9848756)
 - Videos: [Added support for MPEG-5 Essential Video Coding (EVC)](https://github.com/photoprism/photoprism/issues/4314)
+- FFmpeg: [Added filter to transcode 10bit videos with Intel QSV](https://github.com/photoprism/photoprism/issues/4380)
 - Security: [Go has been updated to the latest stable release v1.22.5](https://github.com/golang/go/issues?q=milestone%3AGo1.22.5) 
 - Translations: [Updated French and Japanese](https://docs.photoprism.app/developer-guide/translations-weblate/)
 

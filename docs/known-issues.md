@@ -51,7 +51,7 @@ Upgrading from the last stable version should work without any problems. However
 
 Changing the [authentication of existing accounts](getting-started/advanced/openid-connect.md#existing-accounts) to *OIDC* disables [2-Factor Authentication (2FA)](user-guide/users/2fa.md) since 2FA requires a local password, which is not guaranteed for users logging in via OIDC.
 
-Also note that if a [local password](user-guide/users/cli.md#changing-a-password) has already been set for an account, it currently cannot be removed without manually deleting the corresponding row in the `passwords` database table. Alternatively, [super admins](user-guide/users/roles.md) can set the password to a long random value through the UI or CLI to effectively prevent password authentication for the account.
+If a [local password](user-guide/users/cli.md#changing-a-password) has already been set for an account, it can be removed by running the `photoprism passwd --rm [username]` command [in a terminal](getting-started/docker-compose.md#command-line-interface). Alternatively, [super admins](user-guide/users/roles.md) can set the password to a long random value through the UI or CLI to effectively prevent password authentication for the account.
 
 ## Face Recognition
 

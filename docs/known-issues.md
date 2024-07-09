@@ -47,6 +47,12 @@ The session and user management was [reimplemented in November 2022](release-not
 
 Upgrading from the last stable version should work without any problems. However, if you have already created additional accounts with the previously offered unofficial multi-user support, you will notice that only the main admin account is migrated automatically. Run `photoprism users legacy` [in a terminal](getting-started/docker-compose.md#command-line-interface) to display the legacy accounts so you can migrate them manually if needed.
 
+### OpenID Connect (OIDC)
+
+Changing the [authentication of existing accounts](getting-started/advanced/openid-connect.md#existing-accounts) to *OIDC* disables [2-Factor Authentication (2FA)](user-guide/users/2fa.md) since 2FA requires a local password, which is not guaranteed for users logging in via OIDC.
+
+Also note that if a [local password](user-guide/users/cli.md#changing-a-password) has already been set for an account, it currently cannot be removed without manually deleting the corresponding row in the `passwords` database table. Alternatively, [super admins](user-guide/users/roles.md) can set the password to a long random value through the UI or CLI to effectively prevent password authentication for the account.
+
 ## Face Recognition
 
 ### Legacy Hardware ###

@@ -2,7 +2,7 @@
 
 [OpenID Connect (OIDC)](../../developer-guide/api/oidc.md) allows users to log in and optionally register through an external identity provider instead of manually entering a username and password:
 
-![oidc-login](../../developer-guide/api/img/oidc-login.jpg)
+![oidc-login](../../developer-guide/api/img/oidc-login.jpg){ class="shadow" }
 
 ## Config Options
 
@@ -56,5 +56,10 @@ The config option `PHOTOPRISM_OIDC_USERNAME` allows you to change the [preferred
 [Super admins](../../user-guide/users/roles.md) can manually connect existing user accounts under [*Settings > Users*](../../user-guide/users/index.md) by changing the authentication to *OIDC* and then setting the *Subject ID* to match the account identifier from the configured [Identity Provider](#identity-providers):
 
 ![Edit Dialog](../../developer-guide/api/img/oidc-subject.jpg){ class="shadow" }
+
+The *Edit Account* dialog may additionally contain a text field for the *Issuer* URL. It does not need to be entered manually as it is set automatically after the first login.
+
+!!! note ""
+    Changing the authentication to *OIDC* disables [2-Factor Authentication (2FA)](../../user-guide/users/2fa.md) since 2FA requires a local password to be set, which is not guaranteed for users logging in via OIDC. [Learn more ›](../../known-issues.md#openid-connect-oidc)
 
 [^1]: `PHOTOPRISM_OIDC_REGISTER` must be set to `"true"` to allow new users to create an account

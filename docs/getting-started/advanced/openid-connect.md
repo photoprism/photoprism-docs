@@ -51,7 +51,10 @@ When a new user signs in with OpenID Connect[^1], their preferred username may a
 
 The config option `PHOTOPRISM_OIDC_USERNAME` allows you to change the [preferred username](#config-options) for new accounts from `preferred_username` to `name`, `nickname`, or verified `email`. Names are changed to lowercase handles so that, for example, "Jens Mander" becomes "jens.mander".
 
-!!! note ""
-    Advanced users can connect an existing account by manually updating the `auth_id` column to match the subject ID of the OIDC provider and changing the value of the `auth_provider` column to `oidc` in the `auth_users` database table, and then deleting the duplicate account so only one user with a matching `auth_id` remains.
+## Existing Accounts
+
+Admins can manually connect existing user accounts under [*Settings > Users*](../../user-guide/users/index.md) by changing the authentication to *OIDC* and then setting the *Subject ID* to match the account identifier from the configured [Identity Provider](#identity-providers):
+
+![Edit Dialog](../../developer-guide/api/img/oidc-subject.jpg){ class="shadow" }
 
 [^1]: `PHOTOPRISM_OIDC_REGISTER` must be set to `"true"` to allow new users to create an account

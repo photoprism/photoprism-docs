@@ -119,4 +119,14 @@ However, querying the `/.well-known/openid-configuration` endpoint shows what ha
 - https://www.oauth.com/oauth2-servers/authorization/the-authorization-interface/
 - https://www.oauth.com/oauth2-servers/authorization/the-authorization-response/
 
+## Session Management
+
+- https://openid.net/specs/openid-connect-session-1_0.html#OPiframe
+- https://zitadel.com/blog/session-timeouts-logouts
+- https://ldapwiki.com/wiki/Wiki.jsp?page=OpenID%20Connect%20Session%20Management
+- https://ldapwiki.com/wiki/Wiki.jsp?page=OpenID%20Connect%20Back-Channel%20Logout
+- https://openid.net/specs/openid-connect-rpinitiated-1_0.html
+- https://auth0.com/docs/authenticate/login/logout/log-users-out-of-auth0
+- https://medium.com/@robert.broeckelmann/openid-connect-logout-eccc73df758f
+
 [^1]: `PHOTOPRISM_OIDC_REGISTER` must be set to `"true"` to allow new users to create an account

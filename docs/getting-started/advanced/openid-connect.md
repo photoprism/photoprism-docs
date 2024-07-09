@@ -53,7 +53,7 @@ The config option `PHOTOPRISM_OIDC_USERNAME` allows you to change the [preferred
 
 ## Existing Accounts
 
-Admins can manually connect existing user accounts under [*Settings > Users*](../../user-guide/users/index.md) by changing the authentication to *OIDC* and then setting the *Subject ID* to match the account identifier from the configured [Identity Provider](#identity-providers):
+[Super admins](../../user-guide/users/roles.md) can manually connect existing user accounts under [*Settings > Users*](../../user-guide/users/index.md) by changing the authentication to *OIDC* and then setting the *Subject ID* to match the account identifier from the configured [Identity Provider](#identity-providers):
 
 ![Edit Dialog](../../developer-guide/api/img/oidc-subject.jpg){ class="shadow" }
 

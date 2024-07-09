@@ -77,7 +77,7 @@ The config option `PHOTOPRISM_OIDC_USERNAME` allows you to change the [preferred
 The *Edit Account* dialog may additionally contain a text field for the *Issuer* URL. It does not need to be entered manually as it is set automatically after the first login.
 
 !!! note ""
-    Changing the authentication to *OIDC* disables [2-Factor Authentication (2FA)](../../user-guide/users/2fa.md) since 2FA requires a local password to be set, which is not guaranteed for users logging in via OIDC. [Learn more ›](../../known-issues.md#openid-connect-oidc)
+    Changing the authentication of an account *OIDC* disables [2-Factor Authentication (2FA)](../../user-guide/users/2fa.md) since 2FA requires a local password to be set, which is not guaranteed for users logging in via OIDC. [Learn more ›](../../known-issues.md#openid-connect-oidc)
 
 ## Service Discovery
 

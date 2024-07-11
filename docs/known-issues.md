@@ -51,7 +51,7 @@ Upgrading from the last stable version should work without any problems. However
 
 Changing the [authentication of an existing user account](getting-started/advanced/openid-connect.md#existing-accounts) to *OIDC* does not remove a previously set password, so that it can still be used to log in (optionally also in combination with [2FA](user-guide/users/2fa.md)).
 
-If a [local password](user-guide/users/cli.md#changing-a-password) has been set for an account, you can remove it by running the `photoprism passwd --rm [username]` command [in a terminal](getting-started/docker-compose.md#command-line-interface). Alternatively, [super admins](user-guide/users/roles.md) can set the account password to a long random value through the [UI](user-guide/users/index.md#changing-passwords) or [CLI](user-guide/users/cli.md#changing-a-password) to effectively prevent local authentication.
+If a [local password](user-guide/users/cli.md#changing-a-password) has been set for an account, you can remove it by running the `photoprism passwd --rm [username]` command [in a terminal](user-guide/users/cli.md#removing-a-password). Alternatively, [super admins](user-guide/users/roles.md) can set the account password to a long random value through the [UI](user-guide/users/index.md#changing-passwords) or [CLI](user-guide/users/cli.md#changing-a-password) to effectively prevent local authentication.
 
 Please also note that you cannot [change the authentication provider](user-guide/users/cli.md#command-options) of your own account [through the Admin UI](user-guide/users/index.md#editing-user-details), so you don't accidentally lock yourself out e.g. by setting it to "none".
 

@@ -14,7 +14,7 @@ What's new?
 - Index: [Slashes and null bytes are trimmed from `.ppignore` patterns](https://github.com/photoprism/photoprism/discussions/4349#discussioncomment-9848756)
 - Videos: [Added support for MPEG-5 Essential Video Coding (EVC)](https://github.com/photoprism/photoprism/issues/4314)
 - Videos: [Added filter to transcode 10bit videos with Intel QSV](https://github.com/photoprism/photoprism/issues/4380)
-- CLI: [Local passwords can be removed with `photoprism passwd --rm`](https://docs.photoprism.app/getting-started/docker-compose/#command-line-interface)
+- CLI: [Local passwords can be removed with `photoprism passwd --rm`](https://docs.photoprism.app/user-guide/users/cli/#removing-a-password)
 - Security: [Go has been updated to the latest stable release v1.22.5](https://github.com/golang/go/issues?q=milestone%3AGo1.22.5) 
 - Translations: [Updated French and Japanese](https://docs.photoprism.app/developer-guide/translations-weblate/)
 

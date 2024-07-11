@@ -139,7 +139,7 @@ Note that you do not need this composite ID to communicate with any of our API e
 
 The following [search filters](../../user-guide/search/filters.md) can be used as regular GET request parameters or submitted as part of a search query with the `q` request parameter:
 
-| Filter    | Type      | Examples                              | Notes                                                                                                                                      |
+|  Filter   |   Type    |               Examples                |                                                                   Notes                                                                    |
 |-----------|-----------|---------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------|
 | dist      | decimal   | dist:50                               | Distance to Position (km)                                                                                                                  |
 | lat       | decimal   | lat:41.894043                         | GPS Position (Latitude)                                                                                                                    |

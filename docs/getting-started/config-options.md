@@ -5,15 +5,25 @@
 
 ### Authentication ###
 
-| Environment                | CLI Flag          | Default  | Description                                                                         |
-|----------------------------|-------------------|----------|-------------------------------------------------------------------------------------|
-| PHOTOPRISM_AUTH_MODE       | --auth-mode       | password | authentication `MODE` (public[^2], password)                                        |
-| PHOTOPRISM_ADMIN_USER      | --admin-user      | admin    | `USERNAME` of the superadmin account that is created on first startup               |
-| PHOTOPRISM_ADMIN_PASSWORD  | --admin-password  |          | initial `PASSWORD` of the superadmin account (8-72 characters)                      |
-| PHOTOPRISM_PASSWORD_LENGTH | --password-length | 8        | minimum password `LENGTH` in characters *plus*                                      |
-| PHOTOPRISM_SESSION_MAXAGE  | --session-maxage  | 1209600  | session expiration time in `SECONDS`, doubled for accounts with 2FA (-1 to disable) |
-| PHOTOPRISM_SESSION_TIMEOUT | --session-timeout | 604800   | session idle time in `SECONDS`, doubled for accounts with 2FA (-1 to disable)       |
-| PHOTOPRISM_SESSION_CACHE   | --session-cache   | 900      | session cache duration in `SECONDS` (60-3600)                                       |
+| Environment                                      | CLI Flag          | Default            | Description                                                                                         |
+|--------------------------------------------------|-------------------|--------------------|-----------------------------------------------------------------------------------------------------|
+| PHOTOPRISM_AUTH_MODE                             | --auth-mode       | password           | authentication `MODE` (public[^2], password)                                                        |
+| PHOTOPRISM_ADMIN_USER, PHOTOPRISM_ADMIN_USERNAME | --admin-user      | admin              | `USERNAME` of the superadmin account that is created on first startup                               |
+| PHOTOPRISM_ADMIN_PASSWORD                        | --admin-password  |                    | initial `PASSWORD` of the superadmin account (8-72 characters)                                      |
+| PHOTOPRISM_PASSWORD_LENGTH                       | --password-length | 8                  | minimum password `LENGTH` in characters *plus*                                                      |
+| PHOTOPRISM_OIDC_URI                              | --oidc-uri        |                    | issuer `URI` for single sign-on via OpenID Connect, e.g. "https://accounts.google.com"              |
+| PHOTOPRISM_OIDC_CLIENT                           | --oidc-client     |                    | client `ID` for single sign-on via OpenID Connect                                                   |
+| PHOTOPRISM_OIDC_SECRET                           | --oidc-secret     |                    | client `SECRET` for single sign-on via OpenID Connect                                               |
+| PHOTOPRISM_OIDC_PROVIDER                         | --oidc-provider   |                    | custom identity provider `NAME`, e.g. "Google"                                                      |
+| PHOTOPRISM_OIDC_ICON                             | --oidc-icon       |                    | custom identity provider icon `URI`                                                                 |
+| PHOTOPRISM_OIDC_REDIRECT                         | --oidc-redirect   |                    | automatically redirect unauthenticated users to the configured identity provider                    |
+| PHOTOPRISM_OIDC_REGISTER                         | --oidc-register   |                    | allow new users to create an account when they sign in with OpenID Connect                          |
+| PHOTOPRISM_OIDC_USERNAME                         | --oidc-username   | preferred_username | preferred username `CLAIM` for new OpenID Connect users (preferred_username, name, nickname, email) |
+| PHOTOPRISM_OIDC_WEBDAV                           | --oidc-webdav     |                    | allow new OpenID Connect users to use WebDAV when they have a role that allows it                   |
+| PHOTOPRISM_DISABLE_OIDC                          | --disable-oidc    |                    | disable single sign-on via OpenID Connect, even if an identity provider has been configured         |
+| PHOTOPRISM_SESSION_MAXAGE                        | --session-maxage  | 1209600            | session expiration time in `SECONDS`, doubled for accounts with 2FA (-1 to disable)                 |
+| PHOTOPRISM_SESSION_TIMEOUT                       | --session-timeout | 604800             | session idle time in `SECONDS`, doubled for accounts with 2FA (-1 to disable)                       |
+| PHOTOPRISM_SESSION_CACHE                         | --session-cache   | 900                | session cache duration in `SECONDS` (60-3600)                                                       |
 
 ### Logging ###
 

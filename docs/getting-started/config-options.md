@@ -11,7 +11,7 @@
 | PHOTOPRISM_ADMIN_USER, PHOTOPRISM_ADMIN_USERNAME | --admin-user      | admin              | `USERNAME` of the superadmin account that is created on first startup                               |
 | PHOTOPRISM_ADMIN_PASSWORD                        | --admin-password  |                    | initial `PASSWORD` of the superadmin account (8-72 characters)                                      |
 | PHOTOPRISM_PASSWORD_LENGTH                       | --password-length | 8                  | minimum password `LENGTH` in characters *plus*                                                      |
-| PHOTOPRISM_OIDC_URI                              | --oidc-uri        |                    | issuer `URI` for single sign-on via OpenID Connect, e.g. "https://accounts.google.com"              |
+| PHOTOPRISM_OIDC_URI                              | --oidc-uri        |                    | issuer `URI` for single sign-on via OpenID Connect, e.g. https://accounts.google.com                |
 | PHOTOPRISM_OIDC_CLIENT                           | --oidc-client     |                    | client `ID` for single sign-on via OpenID Connect                                                   |
 | PHOTOPRISM_OIDC_SECRET                           | --oidc-secret     |                    | client `SECRET` for single sign-on via OpenID Connect                                               |
 | PHOTOPRISM_OIDC_PROVIDER                         | --oidc-provider   |                    | custom identity provider `NAME`, e.g. "Google"                                                      |

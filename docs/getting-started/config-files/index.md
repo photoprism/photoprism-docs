@@ -14,9 +14,9 @@ If you use a third-party integration or package, you should find the exact locat
 corresponding documentation.
 
 !!! tldr ""
-Note that changes to the `options.yml` file require a restart to take effect and
-that [config values changed through the web interface](../../user-guide/settings/advanced.md) will also be saved to this
-file. We therefore recommend that you only edit it manually while your instance is stopped.
+    Note that changes to the `options.yml` file require a restart to take effect and
+    that [config values changed through the web interface](../../user-guide/settings/advanced.md) will also be saved to this
+    file. We therefore recommend that you only edit it manually while your instance is stopped.
 
 ### File Format ###
 

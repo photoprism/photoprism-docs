@@ -40,17 +40,19 @@ As an alternative to the [web user interface](index.md), you can [run the follow
 
 The `users add` and `users mod` commands support these flags to set or change account properties:
 
-| Command Flag                         | Description                                                      |
-|--------------------------------------|------------------------------------------------------------------|
-| `--name NAME`, `-n NAME`             | full NAME for display in the interface                           |
-| `--email EMAIL`, `-m EMAIL`          | unique EMAIL address of the user                                 |
-| `--password PASSWORD`, `-p PASSWORD` | PASSWORD for local authentication                                |
-| `--role value`, `-r value`           | user role NAME (admin, user, viewer or guest) (default: "admin") |
-| `--superadmin`, `-s`                 | make user super admin with full access                           |
-| `--no-login`, `-l`                   | disable login on the web interface                               |
-| `--webdav`, `-w`                     | allow to sync files via WebDAV                                   |
-| `--upload-path value`, `-u value`    | upload files to this sub-folder                                  |
-| `--disable-2fa`                      | deactivate two-factor authentication                             |
+| Command Flag                         | Description                                                         |
+|--------------------------------------|---------------------------------------------------------------------|
+| `--name NAME`, `-n NAME`             | full NAME for display in the interface                              |
+| `--email EMAIL`, `-m EMAIL`          | unique EMAIL address of the user                                    |
+| `--password PASSWORD`, `-p PASSWORD` | PASSWORD for local authentication (8-72 characters)                 |
+| `--role value`, `-r value`           | user account ROLE (admin, user, viewer or guest) (default: "admin") |
+| `--auth PROVIDER`, `-A PROVIDER`     | authentication PROVIDER (default, local, oidc or none)              |
+| `--auth-id ID`                       | authentication ID e.g. Subject ID or Distinguished Name (DN)        |
+| `--superadmin`, `-s`                 | make user super admin with full access                              |
+| `--no-login`, `-l`                   | disable login on the web interface                                  |
+| `--webdav`, `-w`                     | allow to sync files via WebDAV                                      |
+| `--upload-path value`, `-u value`    | upload files to this sub-folder                                     |
+| `--disable-2fa`                      | deactivate two-factor authentication                                |
 
 ### Creating a New Account
 

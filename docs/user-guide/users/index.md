@@ -15,6 +15,8 @@ You can add, edit and delete user accounts by navigating to *Settings > Users* a
 
 ![Screenshot](img/users-edit.jpg){ class="shadow" }
 
+Only [super admins](roles.md#admin) can [change the authentication provider](cli.md#command-options) of an account through the web interface, except for their own account, so that they do not accidentally lock themselves out e.g. by setting it to "none".
+
 ## Changing Passwords
 
 Super admins can reset a user's password, while regular admins can change passwords only if they know the current password.

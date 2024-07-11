@@ -26,7 +26,7 @@ Changing the authentication of an existing account to a password-less provider l
 If a local password has been set for [such an account](../../getting-started/advanced/openid-connect.md#existing-accounts) that should no longer be used, you can remove it by running the following command [in a terminal](../../getting-started/docker-compose.md#opening-a-terminal):
 
 ```bash
-photoprism passwd --rm [username]`
+photoprism passwd --rm [username]
 ```
 
 ## Managing User Accounts

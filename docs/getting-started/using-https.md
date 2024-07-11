@@ -145,6 +145,6 @@ docker compose up -d
 ```
 
 !!! tldr ""
-    Our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible Linux distributions.
+    Our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible distributions.
 
 [^1]: We may receive a credit when you sign up through our link, which helps us fund the project infrastructure. 

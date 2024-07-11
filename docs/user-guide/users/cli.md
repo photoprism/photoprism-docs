@@ -17,7 +17,17 @@ docker compose exec photoprism photoprism passwd admin
 This also [applies to other terminal commands](../../getting-started/docker-compose.md#examples), including those listed below.
 
 !!! tldr ""
-    The examples in our documentation use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible Linux distributions.
+    The examples in our documentation use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible distributions.
+
+## Removing a Password
+
+Changing the authentication of an existing account to a password-less provider like [*OIDC*](../../getting-started/advanced/openid-connect.md) will not remove a previously set password, so it can still be used to log in (optionally also with [2FA](2fa.md)).
+
+If a local password has been set for [such an account](../../getting-started/advanced/openid-connect.md#existing-accounts) that should no longer be used, you can remove it by running the following command [in a terminal](../../getting-started/docker-compose.md#opening-a-terminal):
+
+```bash
+photoprism passwd --rm [username]`
+```
 
 ## Managing User Accounts
 

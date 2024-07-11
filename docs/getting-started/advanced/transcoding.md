@@ -225,7 +225,7 @@ docker compose logs -f --tail=100
     Note that your hardware may not support certain video codecs and resolutions. In this case, the software encoder is used automatically.
 
 !!! tldr ""
-    Our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible Linux distributions.
+    Our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible distributions.
 
 !!! example ""
     **Help improve these docs!** You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.

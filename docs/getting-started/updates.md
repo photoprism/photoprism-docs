@@ -12,7 +12,7 @@ docker compose stop
 docker compose up -d
 ```
 
-*Note that our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible Linux distributions.*
+*Note that our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible distributions.*
 
 Pulling a new version can take several minutes, depending on your internet connection speed.
 
@@ -37,7 +37,7 @@ docker compose stop
 docker compose up -d
 ```
 
-*Note that our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible Linux distributions.*
+*Note that our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible distributions.*
 
 #### Watchtower
 

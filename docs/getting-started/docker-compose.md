@@ -215,7 +215,7 @@ Run this command to start the application and database services in the backgroun
 docker compose up -d
 ```
 
-*Note that our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible Linux distributions.*
+*Note that our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible distributions.*
 
 Now open the Web UI by navigating to http://localhost:2342/. You should see a login screen.
 Sign in with the user `admin` and the initial password configured via `PHOTOPRISM_ADMIN_PASSWORD`.
@@ -366,7 +366,7 @@ The currently supported user ID ranges are 0, 33, 50-99, 500-600, 900-1250, and 
 | [*Move to Originals*](../user-guide/library/import.md) | `docker compose exec photoprism photoprism import [path]`     |                  
 | [*Copy to Originals*](../user-guide/library/import.md) | `docker compose exec photoprism photoprism cp [path]`         |                  
 
-*Note that our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible Linux distributions.*
+*Note that our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible distributions.*
 
 !!! info "Complete Rescan"
     `docker compose exec photoprism photoprism index -f` rescans all originals, including already indexed and unchanged files.

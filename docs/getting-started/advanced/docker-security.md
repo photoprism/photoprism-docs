@@ -28,7 +28,7 @@ docker compose up -d --force-recreate
 We also recommend making sure that the latest Docker version and security updates are automatically installed on your host operating system.
 
 !!! tldr ""
-    Note that our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible Linux distributions.
+    Note that our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible distributions.
 
 ## Run Services as Non-Root User
 

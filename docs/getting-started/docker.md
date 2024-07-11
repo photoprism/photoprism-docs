@@ -255,7 +255,7 @@ The currently supported user ID ranges are 0, 33, 50-99, 500-600, 900-1250, and 
 | [*Move to Originals*](../user-guide/library/import.md) | `docker exec -ti photoprism photoprism import [path]`     |
 | [*Copy to Originals*](../user-guide/library/import.md) | `docker exec -ti photoprism photoprism cp [path]`         |
 
-*You can alternatively use `podman` as a drop-in replacement for `docker` on Red Hat-compatible Linux distributions.*
+*You can alternatively use `podman` as a drop-in replacement for `docker` on Red Hat-compatible distributions.*
 
 !!! info "Complete Rescan"
     `docker exec -ti photoprism photoprism index -f` rescans all originals, including already indexed and unchanged files.

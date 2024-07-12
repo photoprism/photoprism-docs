@@ -55,6 +55,15 @@ The config option `PHOTOPRISM_OIDC_USERNAME` allows you to change the [preferred
 
 [Super admins](../../user-guide/users/roles.md) can manually connect existing user accounts under [*Settings > Users*](../../user-guide/users/index.md) by changing the authentication to *OIDC* and then setting the *Subject ID* to match the account identifier from the configured [Identity Provider](#identity-providers):
 
+### Manually migrating accounts via CLI.
+
+1. Log into Photoprism using OIDC to generate a new account.
+2. Via CLI, run `photoprism users ls`. Take note of both your existing username, as well as your newly generated username.
+3. Now run `photoprism users show your_new_username`. Copy the value in the `AuthID` column.
+4. Run `photoprism users mod --auth-id 54b251266174b26e6e8c0919b4dc17be387c95a2605124200dbe9cf4a4f494a1 --auth oidc your_old_username`
+5. Finally, run `photoprism users rm your_new_username`
+6. You can now log into your old account using OIDC.
+
 ![Edit Dialog](../../developer-guide/api/img/oidc-subject.jpg){ class="shadow" }
 
 The *Edit Account* dialog may additionally contain a text field for the *Issuer* URL. It does not need to be entered manually as it is set automatically after the first login.

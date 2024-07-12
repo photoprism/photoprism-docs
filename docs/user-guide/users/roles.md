@@ -33,4 +33,4 @@ When *Super Admins* change settings such as the language or theme, these automat
 *Visitors* cannot be added manually. This special role is tied to a system account that represents anonymous users who use links to view albums or other content that has been shared with them. Visitors can only access these resources and cannot log in with a username or password. Other than guests, they also cannot retain their personal settings for longer than their browsing session lasts.
 
 !!! example ""
-    Please note that certain [user account](cli.md#command-options) roles such as *User* and *Viewer* are currently [only available with a membership](https://www.photoprism.app/editions#compare) to support development and maintenance.
+    Some [user account](cli.md#command-options) roles such as *User* and *Viewer* are currently [only available with a membership](https://www.photoprism.app/editions#compare) to support development and maintenance.

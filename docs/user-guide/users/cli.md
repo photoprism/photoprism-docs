@@ -75,7 +75,7 @@ docker compose exec photoprism photoprism users add -p mysecret -n "Bob" bob
 If you do not specify an initial password with the `-p` flag, you will be prompted to enter a password for the new account. Further account properties can be set with the flags listed above.
 
 !!! example ""
-    Please note that certain [user account roles](roles.md) such as *User* and *Viewer* are currently [only available with a membership](https://www.photoprism.app/editions#compare) to support development and maintenance.
+    Please note that certain [account roles](roles.md) such as *User* and *Viewer* are currently [only available with a membership](https://www.photoprism.app/editions#compare) to support development and maintenance.
 
 ### Viewing Account Details
 

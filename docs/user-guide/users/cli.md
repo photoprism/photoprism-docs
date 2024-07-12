@@ -66,7 +66,7 @@ The `users add` and `users mod` commands support these flags to set or change ac
 
 ### Creating a New Account
 
-The command `photoprism users add` creates a new user account. For example, you could run the following to add a new admin with the username "bob" and the password "mysecret":
+The `photoprism users add` command creates a new user account or offers to restore a previously deleted account with the same username if it exists. For example, you can run the following to add a new admin account with the username "bob" and the password "mysecret":
 
 ```bash
 docker compose exec photoprism photoprism users add -p mysecret -n "Bob" bob

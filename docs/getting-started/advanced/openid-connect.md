@@ -24,18 +24,13 @@
 
 ## Identity Providers
 
-To authenticate users via OIDC, you can either set up and use a self-hosted identity provider such as [ZITADEL](https://zitadel.com/docs/self-hosting/deploy/compose) or [Keycloak](https://www.keycloak.org/), or configure e.g. one of the following public identity providers:
+To authenticate users via OIDC, you can either set up and use a self-hosted identity provider such as [ZITADEL](https://zitadel.com/docs/self-hosting/deploy/compose) or [Keycloak](https://www.keycloak.org/), or configure a public identity provider service such as those operated by [Google](https://developers.google.com/identity/openid-connect/openid-connect), [Microsoft](https://entra.microsoft.com/), [GitHub](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app), or [Amazon](https://developer.amazon.com/apps-and-games/login-with-amazon).
 
-- [Google](https://developers.google.com/identity/openid-connect/openid-connect)
-- [Microsoft](https://entra.microsoft.com/)
-- [GitHub](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app)
-- [Amazon](https://developer.amazon.com/apps-and-games/login-with-amazon)
-
-Single sign-on can be configured automatically if [Identity Providers](#identity-providers) offer a standardized `/.well-known/openid-configuration` endpoint for [service discovery](https://developer.okta.com/docs/reference/api/oidc/#well-known-oauth-authorization-server), for example:
+Single sign-on can be configured automatically if the identity provider offers a standardized `/.well-known/openid-configuration` endpoint for [service discovery](https://developer.okta.com/docs/reference/api/oidc/#well-known-oauth-authorization-server), for example:
 
 - <https://accounts.google.com/.well-known/openid-configuration>
 
-## Redirect URL
+### Redirect URL
 
 The Redirect URL that must be [specified when registering a new client](../../developer-guide/api/img/redirect-url-example.jpg) with an [Identity Provider](#identity-providers) is as follows, where `{hostname}` must be replaced by the hostname in the [Site URL](../../getting-started/config-options.md#site-information), e.g. configured via `PHOTOPRISM_SITE_URL`:
 
@@ -53,13 +48,35 @@ The config option `PHOTOPRISM_OIDC_USERNAME` allows you to change the [preferred
 
 ## Existing Accounts
 
-[Super admins](../../user-guide/users/roles.md) can manually connect existing user accounts under [*Settings > Users*](../../user-guide/users/index.md) by changing the authentication to *OIDC* and then setting the *Subject ID* to match the account identifier from the configured [Identity Provider](#identity-providers):
+[Super admins](../../user-guide/users/roles.md) can manually connect existing user accounts[^2] under [*Settings > Users*](../../user-guide/users/index.md) by changing the authentication to *OIDC* and then setting the *Subject ID* to match the account identifier from the configured [Identity Provider](#identity-providers):
 
 ![Edit Dialog](../../developer-guide/api/img/oidc-subject.jpg){ class="shadow" }
 
 The *Edit Account* dialog may additionally contain a text field for the *Issuer* URL. It does not need to be entered manually as it is set automatically after the first login.
 
-!!! note ""
-    Changing the authentication of an account to *OIDC* does not remove a previously set password, so that it can still be used to log in (optionally also in combination with [2FA](../../user-guide/users/2fa.md)). [Learn more ›](../../known-issues.md#openid-connect-oidc)
+Alternatively, you can [run the following command](../../user-guide/users/cli.md#command-options) in [a terminal](../../getting-started/docker-compose.md#opening-a-terminal) to switch authentication to *OIDC* and set a *Subject ID* for existing user accounts:
+
+```bash
+photoprism users mod --auth=oidc --auth-id=[sub] [username]
+```
+
+[Learn more ›](../../user-guide/users/cli.md#command-options)
+
+### Passwords
+
+Changing the authentication of an account to *OIDC* does not remove a previously set password, so that it can still be used to log in (optionally also in combination with [2FA](../../user-guide/users/2fa.md)).
+
+If a [local password](../../user-guide/users/cli.md#changing-a-password) has been set for an account, you can remove it by running the `photoprism passwd --rm [username]` command [in a terminal](../../user-guide/users/cli.md#removing-a-password). Alternatively, [super admins](../../user-guide/users/roles.md) can set the account password to a long random value through the [Admin Web UI](../../user-guide/users/index.md#changing-passwords) or [CLI](../../user-guide/users/cli.md#changing-a-password) to effectively prevent local authentication.
+
+[Learn more ›](../../user-guide/users/cli.md#removing-a-password)
+
+### Deleting Accounts
+
+Deleted accounts remain linked to the *Subject ID*, so logging in via *OIDC* is no longer possible and no new account will be registered for the same the *Subject ID* either.
+
+If you wish to change the connected user account or create a new account instead, you must therefore change the authentication for the old account to *None* before deleting it. To restore previously deleted accounts, admins can [create a new account](../../user-guide/users/cli.md#creating-a-new-account) with the same username through the [Admin Web UI](../../user-guide/users/index.md#adding-a-new-user) or the [terminal commands](../../user-guide/users/cli.md#creating-a-new-account) provided for this purpose.
+
+[Learn more ›](../../user-guide/users/cli.md#creating-a-new-account)
 
 [^1]: `PHOTOPRISM_OIDC_REGISTER` must be set to `"true"` to allow new users to create an account
+[^2]: Admins cannot change the authentication of their own user account through the [Admin Web UI](../../user-guide/users/index.md#editing-user-details) so that they do not accidentally lock themselves out e.g. by setting it to *None*.

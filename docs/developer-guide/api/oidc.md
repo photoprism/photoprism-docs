@@ -89,7 +89,7 @@ If a [local password](../../user-guide/users/cli.md#changing-a-password) has bee
 
 ### Deleting Accounts
 
-Deleted accounts remain linked to the *Subject ID*, so logging in via *OIDC* is no longer possible and no new account can be registered for the same the *Subject ID* either.
+Deleted accounts remain linked to the *Subject ID*, so logging in via *OIDC* is no longer possible and no new account can be registered for the same *Subject ID* either.
 
 If you wish to change the connected user account or create a new account instead, you must therefore change the authentication for the old account to *None* before deleting it.
 

@@ -71,7 +71,7 @@ The config option `PHOTOPRISM_OIDC_USERNAME` allows you to change the [preferred
 
 The *Edit Account* dialog may additionally contain a text field for the *Issuer* URL. It does not need to be entered manually as it is set automatically after the first login.
 
-Alternatively, you can [run the following command](../../user-guide/users/cli.md#command-options) in [a terminal](../../getting-started/docker-compose.md#opening-a-terminal) to enable authentication via *OIDC* and set a *Subject ID* to connect existing accounts:
+Alternatively, you can [run the following command](../../user-guide/users/cli.md#command-options) in [a terminal](../../getting-started/docker-compose.md#opening-a-terminal) to allow authentication via *OIDC* and set a *Subject ID* to connect existing accounts:
 
 ```bash
 photoprism users mod --auth=oidc --auth-id=[sub] [username]

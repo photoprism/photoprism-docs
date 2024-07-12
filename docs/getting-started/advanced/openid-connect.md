@@ -80,7 +80,7 @@ photoprism passwd --rm [username]
 
 Deleted accounts remain linked to the *Subject ID*, so logging in via *OIDC* is no longer possible and no new account can be registered for the same *Subject ID* either.
 
-If you wish to change the connected user account or create a new account instead, you must therefore [change the authentication](../../user-guide/users/index.md#editing-user-details) for the old account e.g. to *None* before [deleting it](../../user-guide/users/index.md#deleting-a-user):
+If you wish to change the connected user account or create a new account instead, you must therefore [change the authentication](../../user-guide/users/index.md#editing-user-details) of the old account e.g. to *None* before [deleting it](../../user-guide/users/index.md#deleting-a-user):
 
 ```bash
 photoprism users mod --auth=none [username]

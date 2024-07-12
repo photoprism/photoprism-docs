@@ -91,7 +91,9 @@ If a [local password](../../user-guide/users/cli.md#changing-a-password) has bee
 
 Deleted accounts remain linked to the *Subject ID*, so logging in via *OIDC* is no longer possible and no new account will be registered for the same the *Subject ID* either.
 
-If you wish to change the connected user account or create a new account instead, you must therefore change the authentication for the old account to *None* before deleting it. To restore previously deleted accounts, admins can [create a new account](../../user-guide/users/cli.md#creating-a-new-account) with the same username through the [Admin Web UI](../../user-guide/users/index.md#adding-a-new-user) or the [terminal commands](../../user-guide/users/cli.md#creating-a-new-account) provided for this purpose.
+If you wish to change the connected user account or create a new account instead, you must therefore change the authentication for the old account to *None* before deleting it.
+
+To restore a previously deleted account, admins can [create a new account](../../user-guide/users/cli.md#creating-a-new-account) with the same *username* through the [Admin Web UI](../../user-guide/users/index.md#adding-a-new-user) or the [`photoprism users add`](../../user-guide/users/cli.md#creating-a-new-account) command.
 
 [Learn more ›](../../user-guide/users/cli.md#creating-a-new-account)
 

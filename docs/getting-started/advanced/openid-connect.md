@@ -54,7 +54,7 @@ The config option `PHOTOPRISM_OIDC_USERNAME` allows you to change the [preferred
 
 The *Edit Account* dialog may additionally contain a text field for the *Issuer* URL. It does not need to be entered manually as it is set automatically after the first login.
 
-Alternatively, you can [run the following command](../../user-guide/users/cli.md#command-options) in [a terminal](../../getting-started/docker-compose.md#opening-a-terminal) to switch authentication to *OIDC* and set a *Subject ID* for existing user accounts:
+Alternatively, you can [run the following command](../../user-guide/users/cli.md#command-options) in [a terminal](../../getting-started/docker-compose.md#opening-a-terminal) to enable authentication via *OIDC* and set a *Subject ID* to connect existing accounts:
 
 ```bash
 photoprism users mod --auth=oidc --auth-id=[sub] [username]
@@ -66,7 +66,13 @@ photoprism users mod --auth=oidc --auth-id=[sub] [username]
 
 Changing the authentication of an account to *OIDC* does not remove a previously set password, so that it can still be used to log in (optionally also in combination with [2FA](../../user-guide/users/2fa.md)).
 
-If a [local password](../../user-guide/users/cli.md#changing-a-password) has been set for an account, you can remove it by running the `photoprism passwd --rm [username]` command [in a terminal](../../user-guide/users/cli.md#removing-a-password). Alternatively, [super admins](../../user-guide/users/roles.md) can set the account password to a long random value through the [Admin Web UI](../../user-guide/users/index.md#changing-passwords) or [CLI](../../user-guide/users/cli.md#changing-a-password) to effectively prevent local authentication.
+If a [local password](../../user-guide/users/cli.md#changing-a-password) has been set for an account, you can remove it by running the following command [in a terminal](../../user-guide/users/cli.md#removing-a-password):
+
+```bash
+photoprism passwd --rm [username]
+```
+
+[Super admins](../../user-guide/users/roles.md#admin) can alternatively set the account password to a long random value through the [Admin Web UI](../../user-guide/users/index.md#changing-passwords) or [CLI](../../user-guide/users/cli.md#changing-a-password) to effectively prevent local authentication.
 
 [Learn more ›](../../user-guide/users/cli.md#removing-a-password)
 
@@ -74,7 +80,11 @@ If a [local password](../../user-guide/users/cli.md#changing-a-password) has bee
 
 Deleted accounts remain linked to the *Subject ID*, so logging in via *OIDC* is no longer possible and no new account can be registered for the same *Subject ID* either.
 
-If you wish to change the connected user account or create a new account instead, you must therefore change the authentication for the old account to *None* before deleting it.
+If you wish to change the connected user account or create a new account instead, you must therefore [change the authentication](../../user-guide/users/index.md#editing-user-details) for the old account e.g. to *None* before [deleting it](../../user-guide/users/index.md#deleting-a-user):
+
+```bash
+photoprism users mod --auth=none [username]
+```
 
 To restore a previously deleted account, admins can [create a new account](../../user-guide/users/cli.md#creating-a-new-account) with the same *username* through the [Admin Web UI](../../user-guide/users/index.md#adding-a-new-user) or the [`photoprism users add`](../../user-guide/users/cli.md#creating-a-new-account) command.
 

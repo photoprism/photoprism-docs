@@ -1,10 +1,38 @@
 # Frequently Asked Questions
 
-### Why not use a more permissive public license so that, for example, developers at Google can contribute more easily? ###
+### Can your development environment be used under Windows?
+
+Yes, this is possible if you have [Git](https://git-scm.com/) and [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/) installed. However, you are likely to experience problems when [using our Makefile](https://github.com/photoprism/photoprism/blob/develop/Makefile) and other scripts directly on Windows, as they were developed and tested on Linux/Unix.
+
+We therefore recommend not to use [Make](https://www.gnu.org/software/make/) for setting up your [development environment](setup.md) and to instead run the required commands manually from the [main project directory](https://github.com/photoprism/photoprism/tree/develop) (where the [`compose.yaml`](https://github.com/photoprism/photoprism/blob/develop/compose.yaml) file is located):
+
+```bash
+docker compose --profile=all pull --ignore-pull-failures
+docker compose build
+docker compose up
+```
+
+Once the services have been built and started as shown above, you can open a terminal session:
+
+```bash
+docker compose exec photoprism bash
+```
+
+In addition, you should disable the "autocrlf" option in Git under Windows to avoid problems with Linux/Unix line endings:
+
+```bash
+git config --global core.autocrlf false
+```
+
+That's it! Most of the other [Make](https://www.gnu.org/software/make/) targets are used from within the terminal session, i.e. not under Windows, so no compatibility issues or missing dependencies are to be expected.
+
+[Learn more ›](setup.md#step-3-install-the-dependencies-and-start-developing)
+
+### Why not use a more permissive public license so that, for example, developers at Google can contribute more easily?
 
 Since we had hoped for a collaboration with Google and were aware of [their AGPL policy](https://opensource.google/documentation/reference/using/agpl-policy), PhotoPrism was initially licensed under Apache 2.0, which is much more permissive. However, no one seemed interested, although we did talk to quite a few personal acquaintances at Google. That made it easy for our community to convince us to use AGPL instead.
 
-### Isn't it insecure that thumbnail URLs work even if you are not logged in? ###
+### Isn't it insecure that thumbnail URLs work even if you are not logged in?
 
 Like most commercial image hosting services, we've chosen to use a **cookie-free thumbnail API** to minimize request latency and avoid unnecessary network traffic. If you were to copy private session cookies and use them in a different browser window, you would have a similar problem, except that they also work for other API endpoints, not just a single image.
 

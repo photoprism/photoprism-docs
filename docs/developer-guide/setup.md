@@ -14,7 +14,7 @@ In case you are using Ubuntu Linux, you can run this script to [install the late
 bash <(curl -s https://setup.photoprism.app/ubuntu/install-docker.sh)
 ```
 
-When working with Windows, you need to install the latest version of [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/) and also disable "autocrlf" in Git to avoid errors:
+When [working on Windows](faq.md#can-your-development-environment-be-used-under-windows), you need to install the latest version of [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/) and also disable "autocrlf" in Git to avoid errors:
 
 ```bash
 git config --global core.autocrlf false
@@ -38,8 +38,6 @@ Pull the latest Docker images and then launch the pre-configured build environme
 
 ```bash
 make docker-build
-```
-```bash
 docker compose up
 ```
 
@@ -63,11 +61,7 @@ make dep
 
 ```bash
 make build-js
-```
-```bash
 make build-go
-```
-```bash
 ./photoprism start
 ```
 After PhotoPrism has been started as shown above, the user interface can be opened in a web browser by navigating to one of these URLs:
@@ -102,8 +96,6 @@ Alternatively, you can change to the `frontend` directory and run NPM directly:
 
 ```bash
 cd frontend
-```
-```bash
 npm run watch
 ```
 
@@ -119,8 +111,6 @@ To debug the backend Go code, first make sure you have built and run the contain
 
 ```bash
 make docker-build
-```
-```bash
 docker compose up
 ```
 
@@ -128,8 +118,6 @@ _Note:_ If you make changes in the `Dockerfile` to test things out, you can buil
 
 ```bash
 docker compose build photoprism
-```
-```bash
 docker compose up photoprism
 ```
 

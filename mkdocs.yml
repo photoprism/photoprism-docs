@@ -196,6 +196,7 @@ nav:
       - iOS and Android: developer-guide/native-apps/index.md
     - Web Service API:
       - Introduction: developer-guide/api/index.md
+      - Swagger Docs: developer-guide/api/docs.md
       - Client Authentication: developer-guide/api/auth.md
       - OpenID Connect: developer-guide/api/oidc.md
       - OAuth2 Grant Types: developer-guide/api/oauth2.md

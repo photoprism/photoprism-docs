@@ -33,25 +33,25 @@ Clients can query the `/.well-known/oauth-authorization-server` and `/.well-know
 
 ## Access Tokens
 
-When clients have a valid access token, e.g. obtained through the `POST /api/v1/oauth/token` endpoint, they can use a standard *Bearer Authorization* header to authenticate their requests:
+When clients have a valid [access token](auth.md#access-tokens), e.g. obtained through the `POST /api/v1/oauth/token` endpoint, they can use a standard *Bearer Authorization* header to authenticate their requests:
 
 ```
 Authorization: Bearer <token>
 ```
 
-Submitting the access token with a custom `X-Auth-Token` header is supported as well:
+Submitting the [access token](auth.md#access-tokens) with a custom `X-Auth-Token` header is supported as well:
 
 ```bash
 curl -H "X-Auth-Token: 7dbfa37b5a3db2a9e9dd186479018bfe2e3ce5a71fc2f955" \
 http://localhost:2342/api/v1/photos?count=10
 ```
 
-Besides using the API endpoints provided for this, you can also generate valid access tokens by running the `photoprism auth add` command in a terminal.
+Besides using the API endpoints provided for this, you can also generate valid [access tokens](auth.md#access-tokens) by running the `photoprism auth add` command in a terminal.
 
-[Learn more ›](auth.md)
+[Learn more ›](auth.md#access-tokens)
 
 !!! example ""
-    [App passwords](../../user-guide/settings/account.md#apps-and-devices) can be used as access tokens in the *Bearer Authorization* header without first creating a session access token, and to obtain short-lived session access tokens through the `POST /api/v1/session` endpoint.
+    [App passwords](../../user-guide/settings/account.md#apps-and-devices) can be used as [access tokens](auth.md#access-tokens) in the *Bearer Authorization* header without first creating a session access token, and to obtain short-lived session access tokens through the `POST /api/v1/session` endpoint.
 
 ## Related Issues
 

@@ -25,7 +25,7 @@ You will then be shown the generated app password so you can copy it and keep it
 For added security, we recommend setting an expiration date for the app passwords and access tokens you generate. Common scopes for use with app passwords are either "\*" for *Full Access* or "webdav" for [WebDAV-compatible](../../user-guide/sync/webdav.md) [file synchronization apps](../../user-guide/sync/mobile-devices.md).
 
 !!! example ""
-    [App passwords](../../user-guide/settings/account.md#apps-and-devices) can be used as access tokens in the *Bearer Authorization* header without first creating a session access token, and to obtain short-lived session access tokens through the `POST /api/v1/session` endpoint.
+    [App passwords](../../user-guide/settings/account.md#apps-and-devices) can be used as [access tokens](oauth2.md#access-tokens) in the *Bearer Authorization* header without first creating a session access token, and to obtain short-lived session access tokens through the `POST /api/v1/session` endpoint.
 
 ### Command Options
 
@@ -48,7 +48,7 @@ One or more of these scopes can be specified to limit the access to certain API 
 
 ## Access Tokens
 
-If you do not specify a username as argument for the `photoprism auth add` command, a client access token will be generated (the same flags and scopes as above can be used to limit token authorization and lifetime):
+If you do not specify a username as argument for the `photoprism auth add` command, a client [access token](oauth2.md#access-tokens) will be generated (the same flags and scopes as above can be used to limit token authorization and lifetime):
 
 ```
 |--------------------------------------------------|---------------------|
@@ -58,9 +58,9 @@ If you do not specify a username as argument for the `photoprism auth add` comma
 |--------------------------------------------------|---------------------|
 ```
 
-Generating access tokens is a good choice for developers and other advanced users to connect scripts and external services to the PhotoPrism API, e.g. services that collect metrics or start indexing at regular intervals.
+Generating [access tokens](oauth2.md#access-tokens) is a good choice for developers and other advanced users to connect scripts and external services to the PhotoPrism API, e.g. services that collect metrics or start indexing at regular intervals.
 
-Please note, however, that client access tokens cannot be used to synchronize files via WebDAV, even if the token authorization scope is set to "webdav" or "\*", as this requires a registered user account. Access tokens can also not be used as a direct password replacement for apps, since clients are not allowed to use the `POST /api/v1/session` endpoint, which is required for logging in through the user interface.
+Please note, however, that client [access tokens](oauth2.md#access-tokens) cannot be used to synchronize files via WebDAV, even if the token authorization scope is set to "webdav" or "\*", as this requires a registered user account. Access tokens can also not be used as a direct password replacement for apps, since clients are not allowed to use the `POST /api/v1/session` endpoint, which is required for logging in through the user interface.
 
 ## Client Credentials
 

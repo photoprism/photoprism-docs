@@ -29,7 +29,7 @@ http://localhost:2342/api/v1/photos?count=10
 
 Besides using the API endpoints provided for this, you can also generate valid [access tokens](auth.md#access-tokens) by running the `photoprism auth add` command in a terminal.
 
-[Learn more ›](auth.md)
+[Learn more ›](auth.md#access-tokens)
 
 !!! example ""
     [App passwords](../../user-guide/settings/account.md#apps-and-devices) can be used as [access tokens](auth.md#access-tokens) in the *Bearer Authorization* header without first creating a session access token, and to obtain short-lived session access tokens through the `POST /api/v1/session` endpoint.

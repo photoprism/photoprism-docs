@@ -10,7 +10,7 @@ make swag
 
 The output directory where you will find the `swagger.json` and `swagger.yaml` files is `/assets/docs/api/v1`.
 
-When PhotoPrism is started, you can browse them by navigating to https://app.localssl.dev/api/v1/docs/index.html: 
+When PhotoPrism is started, you can browse them by navigating to [/api/v1/docs/index.html](https://app.localssl.dev/api/v1/docs/index.html): 
 
 ![swagger-docs](img/swagger.jpg)
 

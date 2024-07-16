@@ -10,6 +10,27 @@ The access token can then be passed to an API endpoint, which checks it to deter
 !!! example ""
     Support for the [Authorization Code Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow) is planned for a future release.
 
+## Server Endpoints
+
+| Resource                                                              | Endpoint                  | Methods   |
+|-----------------------------------------------------------------------|---------------------------|-----------|
+| [Authorization](https://github.com/photoprism/photoprism/issues/4368) | `/api/v1/oauth/authorize` | GET, POST |
+| [Token](https://github.com/photoprism/photoprism/issues/3943)         | `/api/v1/oauth/token`     | POST      |
+| [UserInfo](https://github.com/photoprism/photoprism/issues/4369)      | `/api/v1/oauth/userinfo`  | GET, POST |
+| Registration                                                          | not implemented yet       |           | 
+| Introspection                                                         | not implemented yet       |           |
+| [Revocation](https://github.com/photoprism/photoprism/issues/3943)    | `/api/v1/oauth/revoke`    | POST      |
+| End Session                                                           | not implemented yet       |           |
+| Device Authorization                                                  | not implemented yet       |           |
+
+Clients can query the `/.well-known/oauth-authorization-server` and `/.well-known/openid-configuration` endpoints for automatic service discovery:
+
+- <https://demo.photoprism.app/.well-known/oauth-authorization-server>
+- <https://demo.photoprism.app/.well-known/openid-configuration>
+
+!!! example ""
+    Note that the [Authorization](https://github.com/photoprism/photoprism/blob/develop/internal/api/oauth_authorize.go) and [UserInfo](https://github.com/photoprism/photoprism/blob/develop/internal/api/oauth_userinfo.go) endpoints cannot be used yet as they are still [under development](https://github.com/photoprism/photoprism/issues/4368).
+
 ## Access Tokens
 
 When clients have a valid access token, e.g. obtained through the `POST /api/v1/oauth/token` endpoint, they can use a standard *Bearer Authorization* header to authenticate their requests:

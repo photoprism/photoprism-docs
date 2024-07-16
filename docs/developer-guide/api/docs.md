@@ -12,7 +12,7 @@ You can browse them locally by navigating to https://app.localssl.dev/api/v1/doc
 
 ![swagger-docs](img/swagger.jpg)
 
-Any [help with adding annotations](https://github.com/photoprism/photoprism/issues/2132) to improve our documentation is much appreciated!
+Any [help with adding annotations](https://github.com/photoprism/photoprism/issues/2132#issuecomment-2227337416) to improve our documentation is much appreciated!
 
 !!! example ""
     The `/api/v1/docs` API documentation endpoint is disabled in production builds.

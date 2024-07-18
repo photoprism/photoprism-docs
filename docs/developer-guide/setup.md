@@ -29,7 +29,7 @@ cd photoprism
 ```
 
 !!! example "Developing on Windows"
-    Our standard development environment can also be used on Windows if you have [Git](https://git-scm.com/), [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/), and a suitable IDE like [GoLand](https://www.jetbrains.com/go/) installed. However, we recommend running the required `docker compose` commands manually instead of `make docker-build` and `make terminal`. [Learn more ›](faq.md#can-your-development-environment-be-used-under-windows)
+    Our standard development environment can also be used on Windows if you have [Git](https://git-scm.com/), [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/), and a suitable IDE like [GoLand](https://www.jetbrains.com/go/) installed. However, we recommend running the required `docker compose` commands manually instead of using `make docker-build` and `make terminal`. [Learn more ›](faq.md#can-your-development-environment-be-used-under-windows)
 
 ### Step 2: Launch Your Local Development Environment
 

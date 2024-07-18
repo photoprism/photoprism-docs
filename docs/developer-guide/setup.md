@@ -1,9 +1,5 @@
 # Setting Up Your Development Environment
 
-!!! warning
-
-    Please note that this guide was not tested on Windows, you might need to change docker-compose.yml to make it work with Windows specific paths.
-
 ### Step 1: Use [Git](https://git-scm.com/downloads) to Clone the Project from GitHub
 
 Before running any commands, please make sure you have [Git](https://git-scm.com/downloads), [Make](https://www.gnu.org/software/make/), [Docker](https://store.docker.com/search?q=docker&type=edition&offering=community), and Docker Compose installed on your system. These are available for Mac, Linux, and Windows.[^1]
@@ -31,6 +27,9 @@ Once all code has been downloaded, change to the project directory which should 
 ```bash
 cd photoprism
 ```
+
+!!! example "Developing on Windows"
+    Our standard development environment can also be used on Windows if you have [Git](https://git-scm.com/), [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/), and a suitable IDE like [GoLand](https://www.jetbrains.com/go/) installed. However, we recommend running the required `docker compose` commands manually instead of `make docker-build` and `make terminal`. [Learn more ›](faq.md#can-your-development-environment-be-used-under-windows)
 
 ### Step 2: Launch Your Local Development Environment
 

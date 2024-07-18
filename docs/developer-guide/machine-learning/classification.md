@@ -105,13 +105,13 @@ $ rm inception_v3_2016_08_28.tar.gz
 DELF: DEep Local Features
  - https://github.com/tensorflow/models/tree/master/research/delf - Tensorflow implementation
 
-![https://gitcdn.xyz/cdn/Tony607/blog_statics/ce9c3391932e24655b78e27a54543f28f11f3af0/images/landmark/query.jpg](img/landmark-query.jpg)
+![https://gitcdn.xyz/cdn/Tony607/blog_statics/ce9c3391932e24655b78e27a54543f28f11f3af0/images/landmark/query.jpg](../metadata/img/landmark-query.jpg)
 
 Source: https://gitcdn.xyz/cdn/Tony607/blog_statics/ce9c3391932e24655b78e27a54543f28f11f3af0/images/landmark/query.jpg
 
 ## Types of neural networks ##
 
-![http://www.asimovinstitute.org/wp-content/uploads/2016/09/neuralnetworks.png](img/neuralnetworks.png)
+![http://www.asimovinstitute.org/wp-content/uploads/2016/09/neuralnetworks.png](../metadata/img/neuralnetworks.png)
 Source: http://www.asimovinstitute.org/neural-network-zoo/
 
 ## External Resources ##

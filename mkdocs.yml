@@ -162,7 +162,7 @@ nav:
     - Translations:
       - Using Weblate: developer-guide/translations-weblate.md
       - Legacy Method: developer-guide/translations.md
-    - Media Files:
+    - Media Library:
       - File Formats: developer-guide/media/index.md
       - Test Samples: developer-guide/media/samples.md
       - RAW Images: developer-guide/media/raw.md
@@ -173,18 +173,19 @@ nav:
       - Color Profiles: developer-guide/media/colors.md
       - File Import: developer-guide/media/import.md
       - Storage: developer-guide/media/storage.md
-    - Metadata:
+    - Picture Metadata:
       - Adobe XMP: developer-guide/metadata/xmp.md
       - Exif Extraction: developer-guide/metadata/exif/index.md
       - Editing Exif Data: developer-guide/metadata/exif/edit.md
       - Reverse Geocoding: developer-guide/metadata/geocoding.md
       - Image Orientation: developer-guide/metadata/orientation.md
-      - Image Classification: developer-guide/metadata/classification.md
       - Perceptual Hashes: developer-guide/metadata/perceptual-hashes.md
-      - Face Recognition: developer-guide/metadata/face-recognition.md
       - Color Detection: developer-guide/metadata/colors.md
       - Camera Models: developer-guide/metadata/cameras.md
-    - Web Interface:
+    - Machine Learning:
+      - Image Classification: developer-guide/machine-learning/classification.md
+      - Face Recognition: developer-guide/machine-learning/face-recognition.md
+    - User Interface:
       - Introduction: developer-guide/ui/introduction.md
       - Screenshots: developer-guide/ui/screenshots.md
       - Components: developer-guide/ui/components.md

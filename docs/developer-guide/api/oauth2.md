@@ -101,6 +101,7 @@ Besides using the API endpoints provided for this, you can also generate valid [
 
 ## Documentation Examples
 
+- https://learn.microsoft.com/en-us/machine-learning-server/operationalize/how-to-manage-access-tokens
 - https://docs.semui.co/administration-guide/openid
 - https://api.stackexchange.com/docs/authentication
 - https://dev.fitbit.com/build/reference/web-api/developer-guide/authorization/

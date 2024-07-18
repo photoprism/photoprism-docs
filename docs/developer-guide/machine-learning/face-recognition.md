@@ -11,14 +11,14 @@ In the final step, the [DBSCAN algorithm](https://en.wikipedia.org/wiki/DBSCAN) 
 !!! example ""
     We recommend that only advanced users and developers change these parameters.
 
-|          Environment          |       CLI Flag       | Default  |                                       Description                                       |
-|-------------------------------|----------------------|----------|-----------------------------------------------------------------------------------------|
-| PHOTOPRISM_FACE_SIZE          | --face-size          |       50 | minimum size of faces in `PIXELS` (20-10000)                                            |
-| PHOTOPRISM_FACE_SCORE         | --face-score         | 9.000000 | minimum face `QUALITY` score (1-100)                                                    |
-| PHOTOPRISM_FACE_OVERLAP       | --face-overlap       |       42 | face area overlap threshold in `PERCENT` (1-100)                                        |
-| PHOTOPRISM_FACE_CLUSTER_SIZE  | --face-cluster-size  |       80 | minimum size of automatically clustered faces in `PIXELS` (20-10000) *members only*    |
-| PHOTOPRISM_FACE_CLUSTER_SCORE | --face-cluster-score |       15 | minimum `QUALITY` score of automatically clustered faces (1-100) *members only*        |
-| PHOTOPRISM_FACE_CLUSTER_CORE  | --face-cluster-core  |        4 | `NUMBER` of faces forming a cluster core (1-100) *members only*                        |
+| Environment                   | CLI Flag             | Default  | Description                                                                            |
+|-------------------------------|----------------------|----------|----------------------------------------------------------------------------------------|
+| PHOTOPRISM_FACE_SIZE          | --face-size          | 50       | minimum size of faces in `PIXELS` (20-10000)                                           |
+| PHOTOPRISM_FACE_SCORE         | --face-score         | 9.000000 | minimum face `QUALITY` score (1-100)                                                   |
+| PHOTOPRISM_FACE_OVERLAP       | --face-overlap       | 42       | face area overlap threshold in `PERCENT` (1-100)                                       |
+| PHOTOPRISM_FACE_CLUSTER_SIZE  | --face-cluster-size  | 80       | minimum size of automatically clustered faces in `PIXELS` (20-10000) *members only*    |
+| PHOTOPRISM_FACE_CLUSTER_SCORE | --face-cluster-score | 15       | minimum `QUALITY` score of automatically clustered faces (1-100) *members only*        |
+| PHOTOPRISM_FACE_CLUSTER_CORE  | --face-cluster-core  | 4        | `NUMBER` of faces forming a cluster core (1-100) *members only*                        |
 | PHOTOPRISM_FACE_CLUSTER_DIST  | --face-cluster-dist  | 0.640000 | similarity `DISTANCE` of faces forming a cluster core (0.1-1.5) *members only*         |
 | PHOTOPRISM_FACE_MATCH_DIST    | --face-match-dist    | 0.460000 | similarity `OFFSET` for matching faces with existing clusters (0.1-1.5) *members only* |
 

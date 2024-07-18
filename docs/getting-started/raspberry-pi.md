@@ -138,7 +138,7 @@ Other issues? Our [troubleshooting checklists](troubleshooting/index.md) help yo
     Before submitting a support request, try to [determine the cause of your problem](troubleshooting/index.md).
 
 [^1]: Experienced users can [alternatively use the packages](faq.md#installation-packages) at [dl.photoprism.app/pkg/linux/](https://dl.photoprism.app/pkg/linux/README.html) to manually install PhotoPrism on compatible Linux distributions. For more installation methods, see our [Getting Started FAQ](faq.md#how-can-i-install-photoprism-without-docker).
-[^2]: Since our current [MicroSD image](raspberry-pi/microsd-image.md) is based on Ubuntu 22.04 LTS, it is not yet compatible with the Raspberry Pi 5, which [requires Ubuntu 23.10+](https://ubuntu.com/download/raspberry-pi). An updated image will be provided as soon as possible.
+[^2]: Since our current [MicroSD image](raspberry-pi/microsd-image.md) is based on Ubuntu 22.04 LTS, it is not yet compatible with the Raspberry Pi 5, which [requires Ubuntu 23.10](https://ubuntu.com/download/raspberry-pi) or later. An updated image will be provided as soon as possible.
 [^3]: The default [Docker Compose](https://docs.docker.com/compose/) config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running `docker compose` or `docker-compose` in the same directory. Config files for other apps or instances should be placed in separate folders.
 
 *[Raspbian]: Raspberry Pi OS

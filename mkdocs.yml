@@ -185,7 +185,9 @@ nav:
     - Machine Learning:
       - Image Classification: developer-guide/machine-learning/classification.md
       - Face Recognition: developer-guide/machine-learning/face-recognition.md
-    - User Interface:
+    - Mobile Apps:
+      - iOS and Android: developer-guide/native-apps/index.md
+    - Web User Interface:
       - Introduction: developer-guide/ui/introduction.md
       - Screenshots: developer-guide/ui/screenshots.md
       - Components: developer-guide/ui/components.md
@@ -193,8 +195,6 @@ nav:
       - Browsers: developer-guide/ui/browsers.md
       - Interactive Maps: developer-guide/ui/maps.md
       - Infinite Scrolling: developer-guide/ui/infinite-scrolling.md
-    - Native Apps:
-      - iOS and Android: developer-guide/native-apps/index.md
     - Web Service API:
       - Introduction: developer-guide/api/index.md
       - Swagger Docs: developer-guide/api/docs.md

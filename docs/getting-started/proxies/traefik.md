@@ -34,6 +34,7 @@ documented in [Setup Using Docker Compose](../docker-compose.md):
           - "./storage:/photoprism/storage"
         environment:
             PHOTOPRISM_SITE_URL: "https://example.com/"
+            PHOTOPRISM_DISABLE_TLS: "true"
     ```
 
 
@@ -63,6 +64,9 @@ documented in [Setup Using Docker Compose](../docker-compose.md):
 
 Please refer to the [official documentation](https://doc.traefik.io/traefik/user-guides/docker-compose/basic-example/)
 for further details.
+
+!!! tldr ""
+    Note that, as explained in the [HTTPS documentation section](../using-https.md), Photoprism-generated TLS has to be disabled, because the internal communication between the service and the proxy should be unencrypted if the proxy is the HTTPS endpoint (unless the proxy uses a public network to access the service).
 
 ### Why Use a Proxy? ###
 

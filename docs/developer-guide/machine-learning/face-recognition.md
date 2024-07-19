@@ -1,8 +1,8 @@
 # Face Recognition
 
-To [recognize faces](https://docs.photoprism.app/user-guide/organize/people/), PhotoPrism first extracts crops from your images using the [Pigo face detection library](https://github.com/esimov/pigo). It is based on [pixel intensity comparisons](https://dl.photoprism.app/pdf/20140820-Pixel_Intensity_Comparisons.pdf).
+To [recognize faces](https://docs.photoprism.app/user-guide/organize/people/), PhotoPrism first extracts crops from your images using the [Pigo face detection library](https://github.com/esimov/pigo). It is based on [pixel intensity comparisons](https://dl.photoprism.app/pdf/publications/20140820-Pixel_Intensity_Comparisons.pdf).
 
-These are then fed into TensorFlow to [compute 512-dimensional vectors for characterization](https://dl.photoprism.app/pdf/20150101-FaceNet.pdf).
+These are then fed into TensorFlow to [compute 512-dimensional vectors for characterization](https://dl.photoprism.app/pdf/publications/20150101-FaceNet.pdf).
 
 In the final step, the [DBSCAN algorithm](https://en.wikipedia.org/wiki/DBSCAN) attempts to cluster these so-called face embeddings so that they can be assigned to people with a few clicks.
 

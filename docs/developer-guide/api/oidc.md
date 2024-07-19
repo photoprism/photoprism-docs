@@ -8,7 +8,7 @@
 
 ![oidc-sso-flow](img/oidc-sso-flow.jpg)
 
-[Learn more ›](https://dl.photoprism.app/pdf/20220113-Volkmann_OpenID_Connect_Thesis.pdf)
+[Learn more ›](https://dl.photoprism.app/pdf/publications/20220113-Volkmann_OpenID_Connect_Thesis.pdf)
 
 ## Config Options
 
@@ -128,7 +128,7 @@ However, querying the `/.well-known/openid-configuration` endpoint shows what ha
 ## Protocol References
 
 - https://openid.net/developers/how-connect-works/
-- https://dl.photoprism.app/pdf/20220113-Volkmann_OpenID_Connect_Thesis.pdf
+- https://dl.photoprism.app/pdf/publications/20220113-Volkmann_OpenID_Connect_Thesis.pdf
 - https://oauth.net/openid-for-verifiable-credentials/
 - https://developers.google.com/identity/openid-connect/openid-connect
 - https://www.ory.sh/docs/oauth2-oidc/authorization-code-flow

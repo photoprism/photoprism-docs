@@ -54,4 +54,4 @@ We stick to Google's Material icons and use other icons only when absolutely nec
 ### Related Content
 
 - [Screenshots](screenshots.md) - development of our user interface in time lapse ⏱
-- [The 7 pillars of design](https://dl.photoprism.app/pdf/20181120-The_7_pillars_of_design.pdf) - slides by Raffaella Isidori (Codemotion Berlin 2018)
+- [The 7 pillars of design](https://dl.photoprism.app/pdf/talks/20181120-The_7_pillars_of_design.pdf) - slides by Raffaella Isidori (Codemotion Berlin 2018)

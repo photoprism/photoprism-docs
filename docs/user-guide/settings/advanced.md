@@ -332,4 +332,4 @@ From faster (lower quality) to slower (higher quality):
 | Sharp Bicubic    | ![](img/out_resize_catrom.jpg)  |
 | Lanczos          | ![](img/out_resize_lanczos.jpg) |
 
-Source: [A Comparative Analysis of Image Interpolation Algorithms](https://dl.photoprism.app/pdf/20160201-Comparative_Analysis_of_Image_Interpolation.pdf)
+Source: [A Comparative Analysis of Image Interpolation Algorithms](https://dl.photoprism.app/pdf/publications/20160201-Comparative_Analysis_of_Image_Interpolation.pdf)

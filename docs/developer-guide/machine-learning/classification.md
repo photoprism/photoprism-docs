@@ -133,4 +133,4 @@ Source: http://www.asimovinstitute.org/neural-network-zoo/
 - https://datahub.io/collections/yago - YAGO3 is a huge semantic knowledge base, derived from Wikipedia WordNet and GeoNames
 - [Google AI Blog: Improving Inception and Image Classification in TensorFlow](https://ai.googleblog.com/2016/08/improving-inception-and-image.html)
 - [CNN Architectures: LeNet, AlexNet, VGG, GoogLeNet, ResNet and more](https://medium.com/@sidereal/cnns-architectures-lenet-alexnet-vgg-googlenet-resnet-and-more-666091488df5)
-- [Gildas Chabot - AI image search with Go & Tensorflow](https://dl.photoprism.app/pdf/20190202-Image_Search_with_Go_and_TensorFlow.pdf) (slides)
+- [Gildas Chabot - AI image search with Go & Tensorflow](https://dl.photoprism.app/pdf/talks/20190202-Image_Search_with_Go_and_TensorFlow.pdf) (slides)

@@ -1,7 +1,7 @@
 PhotoPrism uses the [dsoprea/go-exif](https://github.com/dsoprea/go-exif) package to natively extract EXIF information from images. Exiftool support can be optionally enabled to support a wider range of metadata formats and extraction from video files.
 
 - see [internal/meta/exif.go](https://github.com/photoprism/photoprism/blob/master/internal/meta/exif.go) for which tags are integrated into PhotoPrism 
-- see [official EXIF specification](https://dl.photoprism.app/pdf/20120101-Exif_v2.3.pdf) for more information about EXIF tags
+- see [official EXIF specification](https://dl.photoprism.app/pdf/specifications/20120101-Exif_v2.3.pdf) for more information about EXIF tags
 
 ## Using Exiftool
 

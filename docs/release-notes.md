@@ -6,7 +6,7 @@
 ### July 11, 2024 ###
 <span class="build">Build 240711-2197af848</span>
 
-Our latest update adds support for [single sign-on via OpenID Connect (OIDC)](https://docs.photoprism.app/getting-started/advanced/openid-connect/). We would like to thank [everyone who contributed](https://github.com/photoprism/photoprism/graphs/contributors) to this, especially [Timo Volkmann](https://github.com/moximoti), who [got things rolling](https://dl.photoprism.app/pdf/20220113-Volkmann_OpenID_Connect_Thesis.pdf) and did [much of the necessary work](https://github.com/photoprism/photoprism/issues/782#issuecomment-907613351)! 🌈
+Our latest update adds support for [single sign-on via OpenID Connect (OIDC)](https://docs.photoprism.app/getting-started/advanced/openid-connect/). We would like to thank [everyone who contributed](https://github.com/photoprism/photoprism/graphs/contributors) to this, especially [Timo Volkmann](https://github.com/moximoti), who [got things rolling](https://dl.photoprism.app/pdf/publications/20220113-Volkmann_OpenID_Connect_Thesis.pdf) and did [much of the necessary work](https://github.com/photoprism/photoprism/issues/782#issuecomment-907613351)! 🌈
 
 What's new?
 

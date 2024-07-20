@@ -2,15 +2,13 @@
 
 Our [interactive API documentation](https://docs.photoprism.dev/), publicly available at [docs.photoprism.dev](https://docs.photoprism.dev/), is automatically generated from the [source code annotations](https://github.com/swaggo/swag) in the [`/internal/api`](https://github.com/photoprism/photoprism/tree/develop/internal/api) package.
 
-The following command regenerates the docs in your local [development environment](https://docs.photoprism.app/developer-guide/setup/):
+Running the following command in your local [development environment](https://docs.photoprism.app/developer-guide/setup/) will update the [`/internal/api/swagger.json`](https://github.com/photoprism/photoprism/blob/develop/internal/api/swagger.json) file, which contains the API endpoint documentation in machine-readable form:
 
 ```bash
 make swag
 ```
 
-The output directory where you will find the `swagger.json` and `swagger.yaml` files is `/assets/docs/api/v1`.
-
-When PhotoPrism is started, you can browse them by navigating to [/api/v1/docs/index.html](https://app.localssl.dev/api/v1/docs/index.html): 
+You can view it as HTML by navigating to [/api/v1/docs/index.html](https://app.localssl.dev/api/v1/docs/index.html) after you have rebuilt and started `photoprism` with the commands `make build` and `./photoprism start`: 
 
 ![swagger-docs](img/swagger.jpg)
 

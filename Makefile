@@ -27,21 +27,21 @@ remove-venv:
 install-venv:
 	python3 -m venv venv
 	. ./venv/bin/activate
-	pip3 install wheel
+	./venv/bin/pip3 install wheel
 ifdef GH_TOKEN
 	@echo "Found GH_TOKEN, installing mkdocs-material-insiders"
-	pip3 install --disable-pip-version-check git+https://${GH_TOKEN}@github.com/photoprism/mkdocs-material-insiders.git
+	./venv/bin/pip3 install --disable-pip-version-check git+https://${GH_TOKEN}@github.com/photoprism/mkdocs-material-insiders.git
 else
 	@echo "GH_TOKEN not set in .env file, installing regular mkdocs-material"
-	pip3 install --disable-pip-version-check mkdocs-material
+	./venv/bin/pip3 install --disable-pip-version-check mkdocs-material
 endif
-	pip3 install --disable-pip-version-check -r requirements.txt
+	./venv/bin/pip3 install --disable-pip-version-check -r requirements.txt
 serve:
-	mkdocs serve -a 0.0.0.0:8000
+	./venv/bin/mkdocs serve -a 0.0.0.0:8000
 build:
-	mkdocs build --config-file mkdocs.deploy.yml
+	./venv/bin/mkdocs build --config-file mkdocs.deploy.yml
 deploy:
-	mkdocs gh-deploy --force --config-file mkdocs.deploy.yml
+	./venv/bin/mkdocs gh-deploy --force --config-file mkdocs.deploy.yml
 pull:
 	git checkout master
 	git pull origin master

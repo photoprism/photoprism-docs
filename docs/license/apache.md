@@ -1,6 +1,6 @@
 # Apache License
 
-<p class="center-align">Version 2.0, January 2004<br><a href="https://www.apache.org/licenses/" target="_blank">http://www.apache.org/licenses/</a></p>
+*Version 2.0, January 2004*<br>*[www.apache.org/licenses](https://www.apache.org/licenses/)*
 
 ### Terms and Conditions for use, reproduction, and distribution
 

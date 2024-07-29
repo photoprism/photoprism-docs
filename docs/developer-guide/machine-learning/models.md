@@ -40,7 +40,7 @@ Follow our [step-by-step guide](https://docs.photoprism.app/developer-guide/pull
 
 ## License and Disclaimer
 
-The files in the <https://github.com/photoprism/photoprism-vision> repository repository are licensed under the [Apache License, Version 2.0](../../license/apache.md) (the “License”).
+The files in the <https://github.com/photoprism/photoprism-vision> repository are licensed under the [Apache License, Version 2.0](../../license/apache.md) (the “License”).
 
 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 

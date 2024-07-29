@@ -185,6 +185,7 @@ nav:
     - Machine Learning:
       - Image Classification: developer-guide/machine-learning/classification.md
       - Face Recognition: developer-guide/machine-learning/face-recognition.md
+      - Additional Models: developer-guide/machine-learning/models.md
     - Mobile Apps:
       - iOS and Android: developer-guide/native-apps/index.md
     - Web User Interface:
@@ -223,8 +224,9 @@ nav:
     - FAQ: developer-guide/faq.md
   - About:
     - Credits: credits.md
-    - License:
+    - Licenses:
       - Public License: license/agpl.md
+      - Apache License: license/apache.md
       - Documentation: license/docs.md
 
 extra_css:

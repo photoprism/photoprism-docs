@@ -84,8 +84,8 @@ If your client submits `POST` requests, the request body must be [JSON-encoded](
 
 ```json
 {
-    "url": "https://dl.photoprism.app/img/team/avatar.jpg",
-    "id": "3487da77-246e-4b4c-9437-67507177bcd7"
+    "id": "3487da77-246e-4b4c-9437-67507177bcd7",
+    "url": "https://dl.photoprism.app/img/team/avatar.jpg"
 }
 ```
 
@@ -97,19 +97,19 @@ Alternatively, you can perform `GET` requests with URL-encoded query parameters,
 
 #### `/api/v1/vision/describe`
 
-This is the default endpoint of the API. An image url should be passed in with the key "url", and optionally a "model" and/or "id" value can be passsed in. The "model" key allows the user to specify which of the three models they would like to use. If no model is given, the application will default to using the kosmos-2 model.
+This is the default endpoint of the API. An image url should be passed in with the key "url", and optionally a "model" and/or "id" value can be passed in. The "model" key allows the user to specify which of the three models they would like to use. If no model is given, the application will default to using the kosmos-2 model.
 
 #### `/api/v1/vision/describe/kosmos-2/patch14-224`
 
-This is the endpoint for the Kosmos-2 model. An image url should be passed in with the key "url", and optionally a "model" and/or "id" value can be passsed in.
+This is the endpoint for the Kosmos-2 model. An image url should be passed in with the key "url", and optionally a "model" and/or "id" value can be passed in.
 
 #### `/api/v1/vision/describe/vit-gpt2-image-captioning`
 
-This is the endpoint for the VIT GPT-2 model. An image url should be passed in with the key "url", and optionally an "id" value can be passsed in.
+This is the endpoint for the VIT GPT-2 model. An image url should be passed in with the key "url", and optionally an "id" value can be passed in.
 
 #### `/api/v1/vision/describe/blip-image-captioning-large`
 
-This is the endpoint for the BLIP model. An image url should be passed in with the key "url", and an "id" value can be passsed in.
+This is the endpoint for the BLIP model. An image url should be passed in with the key "url", and an "id" value can be passed in.
 
 ### Example Request
 
@@ -117,9 +117,9 @@ This is the endpoint for the BLIP model. An image url should be passed in with t
 
 ```json
 {
-    "url": "https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTA5L3Jhd3BpeGVsX29mZmljZV8yOF9mZW1hbGVfbWluaW1hbF9yb2JvdF9mYWNlX29uX2RhcmtfYmFja2dyb3VuZF81ZDM3YjhlNy04MjRkLTQ0NWUtYjZjYy1hZmJkMDI3ZTE1NmYucG5n.png",
-    "model": "kosmos-2",
-    "id": "b0db2187-7a09-438c-8649-a9c6c0f7b8a1"
+    "id": "b0db2187-7a09-438c-8649-a9c6c0f7b8a1",
+    "model": "kosmos-2"
+    "url": "https://dl.photoprism.app/img/team/avatar.jpg",
 }
 ```
 
@@ -133,7 +133,7 @@ This is the endpoint for the BLIP model. An image url should be passed in with t
         "version": "patch14-224"
     },
     "result": {
-        "caption": "An image of a female robot with a transparent face and blue eyes, a head with a circuit board inside and a glowing blue light on a transparent background"
+        "caption": "An image of [...] on a transparent background"
     }
 }
 ```

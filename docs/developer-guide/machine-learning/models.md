@@ -133,7 +133,7 @@ This is the endpoint for the BLIP model. An image url should be passed in with t
         "version": "patch14-224"
     },
     "result": {
-        "caption": "An image of [...] on a transparent background"
+        "caption": "An image of a man in a suit smiling."
     }
 }
 ```

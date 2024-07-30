@@ -78,7 +78,7 @@ curl -v -H "Content-Type: application/json" \
   -X POST http://localhost:5000/api/v1/vision/describe
 ```
 
-At a minimum, a valid image `url` must be specified for this. In addition, a `model` name and an `id` [can be passed](#example-request) to allow asynchronous processing of requests (the same `id` is then returned with the response). If no `id` is passed, a random UUID v4 `id` is returned with [the response](#example-response).
+At a minimum, a valid image `url` must be specified for this. In addition, a `model` name and an arbitrary `id` [can be passed](#example-request). The API will return the same `id` in [the response](#example-response). If no `id` is passed, a randomly generated UUID will be returned instead.
 
 If your client submits `POST` requests, the request body must be [JSON-encoded](https://www.json.org/), e.g.:
 

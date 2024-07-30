@@ -5,7 +5,7 @@ Our <https://github.com/photoprism/photoprism-vision> repository on GitHub conta
 The currently [integrated models](#models), each with [its own endpoint](#api-endpoints), are [kosmos-2](#kosmos-2), [vit-gpt2-image-captioning](#vit-gpt2), and [blip-image-captioning large](#blip).
 
 !!! example ""
-    Note that this has not been officially released yet and that further documentation will be added over time.
+    Note that this **has not been officially released yet** and that further documentation will be added over time.
 
 ## Models
 

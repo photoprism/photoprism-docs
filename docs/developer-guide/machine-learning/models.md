@@ -1,6 +1,6 @@
 # Additional Computer Vision Models
 
-Our <https://github.com/photoprism/photoprism-vision> repository on GitHub contains supplementary [computer vision models](#models) which can be accessed as [web services](#usage) by PhotoPrism and other applications. They provide a [REST API](#example-request) that accepts an image URL and returns, for example, a matching caption in response.
+Our <https://github.com/photoprism/photoprism-vision> repository on GitHub provides supplementary [computer vision models](#models) which can be accessed as [web services](#usage) by [PhotoPrism](https://github.com/photoprism/photoprism) and other applications. Their [RESTful API](#example-request) accepts an image URL and returns, for example, a matching caption in response.
 
 !!! example ""
     Note that this has not been officially released yet. Further documentation and models will be added over time.

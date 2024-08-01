@@ -35,13 +35,15 @@ As an alternative to the [web user interface](index.md), you can [run the follow
 
 | CLI Command                                 | Description                                  |
 |---------------------------------------------|----------------------------------------------|
-| `photoprism users ls [search]`              | Searches existing user accounts              |
-| `photoprism users legacy [search]`          | Searches legacy user accounts                |
+| `photoprism users ls [options] [search]`    | Searches existing user accounts              |
+| `photoprism users legacy [options] [search]`  | Searches legacy user accounts                |
 | `photoprism users add [options] [username]` | Adds a new user account                      |
-| `photoprism users show [username]`          | Displays user account information            |
-| `photoprism users mod [options] [username]` | Modifies an existing user account            |
-| `photoprism users rm [username]`            | Removes a user account                       |
+| `photoprism users show [options] [username]`  | Displays user account information            |
+| `photoprism users mod [options] [username]`   | Modifies an existing user account            |
+| `photoprism users rm [options] [username]`   | Removes a user account                       |
 | `photoprism users reset --yes`              | Removes all accounts and resets the database |
+
+To get a list of all possible options run the commands with `--help` flag.
 
 !!! tldr ""
     Users who experience login problems after upgrading from [development builds](../../getting-started/updates.md#development-preview), or [old releases prior to November 2022](../../known-issues.md#new-user-management), can run the `photoprism users reset --yes` command to [recreate the session](#session-management) and user management database tables so they are compatible with the current version. Note that any [client access tokens](client-credentials.md#access-tokens) and [app passwords](../settings/account.md#apps-and-devices) that users may have created will also be deleted and must be recreated.
@@ -129,7 +131,7 @@ You can combine it with these flags to change the output format and the maximum 
 | Client IP  | Username | Realm | Status |     Last Login      | Failed At |
 |------------|----------|-------|--------|---------------------|-----------|
 | 172.19.0.1 | user     | api   | OK     | 2023-02-03 07:17:46 |           |
-| 172.19.0.1 | viewer   | api   | OK     | 2023-02-03 07:16:55 |           |
+| 172.19.0.1 | viewer   | api   | error: account disabled     | 2023-01-12 17:30:55   | 2023-02-03 07:16:55 |
 | 172.19.0.1 | admin    | api   | OK     | 2023-02-03 06:55:06 |           |
 
 !!! tldr ""

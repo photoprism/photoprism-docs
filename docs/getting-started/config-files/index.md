@@ -5,6 +5,8 @@ convenient to use an `options.yml` file located in your *config path*, for examp
 installed [through an app store](../nas/asustor.md) or with
 the [installation packages we provide](https://dl.photoprism.app/pkg/linux/README.html).
 
+Settings inside the `options.yml` file overwrite values from `defaults.yml` and in turn are overwritten by command flags and environment variables.
+
 You can specify a custom *config path* by adding the `ConfigPath` option to a ↪ [`defaults.yml`](defaults.md) file in
 the `/etc/photoprism` directory (requires root privileges). It is also possible to use the command flag `--config-path`
 or the environment variable `PHOTOPRISM_CONFIG_PATH` for this. By default, it is a subdirectory of the [*storage

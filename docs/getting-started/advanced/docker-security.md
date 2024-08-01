@@ -48,6 +48,9 @@ docker compose stop
 docker compose up -d
 ```
 
+Please keep in mind that the _numeric_ user and group ids are shared between the local docker host and the docker container (user/group _names_ are not). That means the user running inside the container can read and write all files on the host with the same user id as photoprism is running at. The container runtime tries restricts the available paths but as soon as a security vulnerability circumvents this docker imposed restrictions full access to the entire host with this user id is possible. Threfore nover run as root or with a low user id of regular users of the docker host.
+
+
 ## Remove Passwords From the Environment
 
 Passwords specified directly in a  `docker-compose.yml` file or otherwise passed to the container environment may pose a security risk. As an alternative, they can be set in an [options.yml](../config-files/index.md) file located in the _config_ [storage folder](../docker-compose.md#photoprismstorage):

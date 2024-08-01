@@ -59,6 +59,8 @@ services:
 !!! danger ""
     Set strong passwords if the database is exposed to an external network. Never expose your database to the public Internet in this way, for example, if it is running on a cloud server.
 
+For increased security do not allow the "photoprism" user to access the database from every host (`'photoprism'@'%'`) but restrict it to the hosts photoprism is accessing the database from (e.g. `'photoprism'@'192.168.1.2'` or `'photoprism'@'192.168.1.%'` for entire subnet).
+
 ## Schema Migrations
 
 An index schema migration is performed automatically every time PhotoPrism is (re)started. The following instructions may be helpful in special cases, such as when a temporary problem has prevented a successful migration:

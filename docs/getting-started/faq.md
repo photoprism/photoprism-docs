@@ -483,9 +483,21 @@ it includes all the details including root and rootless modes, user mapping and 
 
 ### Any plans to add support for Active Directory, LDAP or other centralized account management options?
 
-There is no single sign-on support yet as we didn't consider it essential for our initial release.
-Our team is currently working on [OpenID Connect](https://github.com/photoprism/photoprism/issues/782),
-which will be available in a future release.
+For Single-SignOn OpenID Connect is available. It is possible to connect to any OIDC compliant provider to centrally manage your user identities. This can be a external service like Google or a locally hosted one like Keycloak or other.
+
+The documentation on how to set it up can be found at [OpenID Connect](../getting-started/advanced/openid-connect.md).
+
+### Login of new user is not possible via OpenID Connect
+1. When OpenID Connect is enabled new users can be automatically created on first login. For that OIDC register must be activated (env var `PHOTOPRISM_OIDC_REGISTER` or `--oidc-register` flag).
+
+2. If a user was registered and deleted afterwards the next login of this user does not re-register this user. The login fails with an generic "invalid credentials" error message presented to the user.
+
+   Looking at the login audit log ([`photoprism audit logins`](./users/cli/#viewing-login-attempts)) an "account disabled" error message can be seen because OIDC accounts not fully deleted but only deleted partially and disabled.
+
+   To restore a previously deleted account, admins can [create a new account](users/cli.md#creating-a-new-account) with the same *username* through the [Admin Web UI](users/index.md#adding-a-new-user) or the [`photoprism users add`](users/cli.md#creating-a-new-account) command.
+
+   See [Deleting Accounts](../getting-started/advanced/openid-connect.md#deleting-accounts) on OpenID Connect setup page
+
 
 ### Your app is really terrible, can I tell you how bad it is?
 

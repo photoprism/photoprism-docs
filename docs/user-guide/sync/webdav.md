@@ -65,7 +65,7 @@ Please note that the slash at the end must not be omitted and that the WebDAV re
 
 To access your instance via WebDAV, you can use your username in combination with your account password or [an app password](../settings/account.md#apps-and-devices), e.g. if you have [2-Factor Authentication (2FA)](../users/2fa.md) enabled for your account or authenticate via [OpenID Connect (OIDC)](../../getting-started/advanced/openid-connect.md) as using your account password is not possible in this case.
 
-If access is not possible even though the login credentials are correct, please check whether the account has a [role with WebDAV access](../users/roles.md) and whether [WebDAV is enabled](../users/cli.md#command-options) for the specific account.
+If access is not denied even though the login credentials are correct, please check whether the account has a [role with WebDAV access](../users/roles.md) and whether [WebDAV is enabled](../users/cli.md#command-options) for the specific account.
 
 [Learn more ›](../users/index.md)
 

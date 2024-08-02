@@ -21,7 +21,7 @@
     You may use [WebDAV](webdav.md) for adding files to the *import* folder.
     This is especially helpful if PhotoPrism is running on a remote server.
 
-!!! attention ""
+!!! danger ""
     Import is not possible in [read-only mode](../settings/library.md) because it requires [write permissions](../../getting-started/troubleshooting/docker.md#file-permissions) to the folder of *originals*.
 
 ### When should "Move Files" be selected?

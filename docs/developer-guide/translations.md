@@ -1,6 +1,6 @@
 # Translations
 
-!!! attention ""
+!!! danger ""
     Please don't use the method described here to add/edit translations anymore use [this](./translations-weblate.md) instead!
 
 PhotoPrism uses [gettext](https://en.wikipedia.org/wiki/Gettext) for frontend and backend localization.

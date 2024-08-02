@@ -121,7 +121,7 @@ To rename all photos of a person:
 You may report bad matches by pressing the :material-eject: button underneath a face in the *People* tab.
 This will remove the name. You can either leave it blank or enter the name of a different person.
 
-!!! attention ""
+!!! danger ""
     When you reject a match, the corresponding face cluster will be updated in the background so that similar 
     issues can be resolved automatically.
 

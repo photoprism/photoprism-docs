@@ -71,7 +71,7 @@ Manually added labels can be deleted.
 
     ![Screenshot](img/edit-label-4-light.jpg){ class="shadow" }
 
-!!! attention ""
+!!! danger ""
     Be aware this change applies to all photos that have this label.
 
 ### Delete Labels ###
@@ -88,6 +88,6 @@ You can permanently delete a label. No file will get a deleted label set during 
 
     ![Screenshot](img/delete-label-2-light.jpg){ class="shadow" }
 
-!!! attention ""
+!!! danger ""
     In case you want a deleted label to appear again, you need to add it to one photo and then index all files again.
 

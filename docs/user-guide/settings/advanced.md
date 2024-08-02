@@ -120,7 +120,7 @@ The corresponding [config option](../../getting-started/config-options.md) is `P
 !!! danger ""
     Reducing the *Static Size Limit* of thumbnails has a **significant impact on [face recognition](../organize/people.md) and image classification** results. Simply put, it means that the indexer can no longer see properly.
 
-!!! warning ""
+!!! danger ""
     If the configured size limit is exceeded (for example, if users have a larger screen), a sufficiently large thumbnail can't be created, and the photo viewer may be forced to display the original image instead.
     **Downscaling images in browsers typically results in poor quality, and they may also be displayed in the wrong orientation.**
 

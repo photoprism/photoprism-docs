@@ -48,7 +48,7 @@ so that you can automatically sync your latest pictures. -->
 
 You can now [share albums or files with this service](../share/services-share.md).
 
-!!! attention ""
+!!! danger ""
     Due to problems with some Nextcloud settings it might be that uploading to Nextcloud results in 0 byte files. You find information on how to solve it [here](https://github.com/photoprism/photoprism/issues/443).
 
 

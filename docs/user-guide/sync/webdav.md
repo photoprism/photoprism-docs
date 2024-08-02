@@ -9,59 +9,67 @@ as if they were local.
 After files have been transferred, you can [index](../library/originals.md) or [import](../library/import.md) them as usual.
 By default, indexing and importing start automatically after a safety delay when files have been uploaded using WebDAV.
 
+It is also possible to [sync files with external WebDAV servers](../settings/sync.md) such as ownCloud or other PhotoPrism instances.
+
 !!! tldr ""
-    You can disable WebDAV in the [advanced settings](../settings/advanced.md). Since it requires authentication, the built-in WebDAV server is automatically disabled when running in [public mode](../../getting-started/config-options.md#authentication).
+    You can disable WebDAV by navigating to [Settings > Advanced](../settings/advanced.md) and selecting the corresponding option. As WebDAV access always requires authentication, the integrated server is automatically disabled if your instance is running in [public mode](../../getting-started/config-options.md#authentication).
 
+!!! danger ""
+    Do not use WebDAV [without HTTPS](../../getting-started/using-https.md) outside your local, private network as your password would be transmitted, in clear text, over the Internet. Backup tools and file sync apps like [FolderSync](https://foldersync.io/docs/faq/#https-connection-errors) may refuse to connect as well.
 
-!!! note ""
-    It is also possible to [sync files with external WebDAV servers](../settings/sync.md) such as ownCloud or other PhotoPrism instances.
+## Server URL
 
-## Server URL ##
-
-The *originals* folder URL for a server exposed to the public Internet is:
+If your instance is connected to the public Internet, the WebDAV URL of the *originals* folder has the following format, where `example.com` must be replaced with the actual hostname and `admin` with the [actual username](#authentication):
 
 ```
 https://admin@example.com/originals/
 ```
 
-On Windows, you can enter the following resource in the connection dialog instead:
-
-```
-\\example.com@SSL\originals\
-```
-
-Please make sure to replace *example.com* with your actual domain and note that the slash at the end is important and cannot be omitted.
-
-!!! tip ""
-    You can find your server url on the [account page](../settings/account.md) in settings.
-
-When connecting, you'll have to authenticate using your regular password.
-It will also change when you update it in *Settings*. The username is `admin`.
-
-!!! info ""
-    You can also connect to the import folder by replacing `originals/` with `import/` in the URL.
-
-For users running their instance locally on the default port *2342*, the *originals* folder URL is:
+For users running a local instance on the default port 2342 *without HTTPS*, the URL of the *originals* folder is as follows (the default username for new instances is `admin`, unless you have [changed it](../../getting-started/config-options.md#authentication) in the configuration):
 
 ```
 http://admin@localhost:2342/originals/
 ```
 
-On Windows, you can enter the following resource in the connection dialog instead:
+Please note that the slash at the end of the path must not be omitted and that the WebDAV URL in your client apps must be updated if the hostname or port of the server changes.
+
+!!! note ""
+    You can view the *originals* folder URL by navigating to [Settings > Account](../settings/account.md) and then clicking *Connect via WebDAV*. It is possible to connect to the *import* folder instead by replacing `originals/` with `import/` in the URL.
+
+### Microsoft Windows
+
+On Windows, you must instead [enter a resource string](#connect-to-a-webdav-server) in the following format to [configure WebDAV access](../../getting-started/troubleshooting/windows.md#connecting-via-webdav), where `example.com` must be replaced with the actual hostname of your instance:
+
+```
+\\example.com@SSL\originals\
+```
+
+If your server does not use the standard port 443 for [HTTPS](../../getting-started/using-https.md), Windows lets you specify a custom port such as 8443 directly after `@SSL`:
+
+```
+\\example.com@SSL@8443\originals\
+```
+
+For local installations running on the default port 2342 *without HTTPS*, you can enter the following resource in the connection dialog:
 
 ```
 \\localhost:2342\originals\
 ```
 
-The URL or resource to use changes accordingly if you have modified the server hostname, port, or protocol in your configuration.
+Please note that the slash at the end must not be omitted and that the WebDAV resource in Windows needs to be updated when the hostname or port of the server changes.
 
-!!! attention ""
-    Never use WebDAV **without HTTPS** outside your local, private network as your
-    password would be transmitted, in clear text, over the Internet. Backup tools and file sync apps 
-    like [FolderSync](https://foldersync.io/docs/faq/#https-connection-errors)
-    may refuse to connect as well.
+!!! note ""
+    You can view the *originals* folder resource by navigating to [Settings > Account](../settings/account.md) and then clicking *Connect via WebDAV*. It is possible to connect to the *import* folder instead by replacing `originals/` with `import/` in the URL.
 
-## Connect to a WebDAV Server ##
+## Credentials
+
+To access your instance via WebDAV, you can use your username in combination with your account password or [an app password](../settings/account.md#apps-and-devices), e.g. if you have [2-Factor Authentication (2FA)](../users/2fa.md) enabled for your account or authenticate via [OpenID Connect (OIDC)](../../getting-started/advanced/openid-connect.md) as using your account password is not possible in this case.
+
+If access is not possible even though the login credentials are correct, please check whether the account has a [role with WebDAV access](../users/roles.md) and whether [WebDAV is enabled](../users/cli.md#command-options) for the specific account.
+
+[Learn more ›](../users/index.md)
+
+## Connect to a WebDAV Server
 
 === "macOS"
 
@@ -73,7 +81,7 @@ The URL or resource to use changes accordingly if you have modified the server h
 
     - [ ] You do not have sufficient user rights (try as admin)
     - [ ] You are experiencing a [general authentication problem](../../getting-started/troubleshooting/index.md#cannot-log-in)
-    - [ ] Your instance or reverse proxy uses an invalid HTTPS certificate
+    - [ ] Your instance or reverse proxy uses an invalid [HTTPS](../../getting-started/using-https.md) certificate
     - [ ] You are trying to connect to the wrong network or server
 
 === "Windows"
@@ -124,5 +132,5 @@ The URL or resource to use changes accordingly if you have modified the server h
     - [ ] You may need to **[change the basic authentication level](../../getting-started/troubleshooting/windows.md#connecting-via-webdav)** in the registry
     - [ ] You do not have sufficient user rights (try as admin)
     - [ ] You are experiencing a [general authentication problem](../../getting-started/troubleshooting/index.md#cannot-log-in)
-    - [ ] Your instance or reverse proxy uses an invalid HTTPS certificate
+    - [ ] Your instance or reverse proxy uses an invalid [HTTPS](../../getting-started/using-https.md) certificate
     - [ ] You are trying to connect to the wrong network or server

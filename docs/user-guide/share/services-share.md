@@ -13,7 +13,7 @@ In [settings](../settings/sync.md) you can connect your PhotoPrism instance to o
 
 ![Screenshot](img/services-photo-upload-2-light.jpg){ class="shadow" }
 
-!!! attention ""
+!!! danger ""
       Due to problems with some Nextcloud settings it might be that uploading to Nextcloud results in 0 byte files. You find information on how to solve it [here](https://github.com/photoprism/photoprism/issues/443).
 
 

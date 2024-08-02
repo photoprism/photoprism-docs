@@ -2,7 +2,7 @@
 
 Under [Settings > Services](../settings/sync.md) you can connect your PhotoPrism instance to other apps and services that can be accessed via WebDAV, e.g. other PhotoPrism instances, Nextcloud or ownCloud.
 
-!!! attention "" 
+!!! danger "" 
     When syncing, your files will be uploaded or downloaded to/from another service, which requires additional storage space. If you want PhotoPrism to index files from another local application, e.g. Nextcloud, we recommend mounting its file storage directory as [*originals* folder](../../getting-started/docker-compose.md#photoprismoriginals) instead of synchronizing the files via WebDAV. This prevents unnecessary copies of your files from being created.
 
 ## Automatically Upload/Download Files to/from another App

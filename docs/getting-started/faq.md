@@ -466,11 +466,13 @@ In addition, certain types of network storage like NFS (Unix/Linux) and CIFS (Wi
 
 For more information, see the [Network Storage](troubleshooting/docker.md#network-storage) section of our [Docker Troubleshooting Guide](troubleshooting/docker.md).
 
-[Configure Network Storage ›](troubleshooting/docker.md#network-storage)
+[Learn more ›](troubleshooting/docker.md#network-storage)
 
 ### Why does changing permissions using chmod does not work for my  network shares?
-This is a common phenomenon with NFS shares. For security reasons, permissions must be changed on the server to take effect; unless the server allows them to be changed remotely, which depends on the settings. 
-Even then, the actual permissions on the server and those effective on the clients may be different in the worst case.
+
+This is a common issue with NFS shares. For security reasons, the permissions must be changed on the server for them to take effect, unless the server allows them to be changed remotely, which depends on the settings. Even then, in the worst case, the actual permissions on the server and the effective ones on the clients may be different.
+
+[Learn more ›](troubleshooting/docker.md#unix-nfs)
 
 ### Do you support Podman?
 
@@ -481,15 +483,25 @@ More details on how to run PhotoPrism with [Podman](https://podman.io/) on CentO
 [this blog post](https://lukas.zapletalovi.com/2020/01/deploy-photoprism-in-centos-80.html), 
 it includes all the details including root and rootless modes, user mapping and SELinux.
 
-### Any plans to add support for Active Directory, LDAP or other centralized account management options?
+[Learn more ›](troubleshooting/docker.md#podman-compose)
 
-There is no single sign-on support yet as we didn't consider it essential for our initial release.
-Our team is currently working on [OpenID Connect](https://github.com/photoprism/photoprism/issues/782),
-which will be available in a future release.
+### Do you have plans to add support for LDAP or Active Directory?
 
-### Your app is really terrible, can I tell you how bad it is?
+PhotoPrism offers support for secure single sign-on via [OpenID Connect (OIDC)](advanced/openid-connect.md). With our [Pro Edition](https://www.photoprism.app/teams#compare), you can also configure an [LDAP or Active Directory](https://www.photoprism.app/pro/kb/ldap) server to authenticate users.
 
-Please take the time to read this documentation and [determine the cause of your problem](https://docs.photoprism.app/getting-started/troubleshooting/) before opening invalid bug reports, starting a public "shitstorm" or insulting other community members in our chat rooms. Aside from being annoying for everyone, it also keeps our team from working on features and enhancements that users like you are waiting for. Visit [photoprism.app/code-of-conduct](https://www.photoprism.app/code-of-conduct) to learn more.
+[Learn more ›](https://www.photoprism.app/teams#compare)
+
+### Is it possible to set a default role for new OpenID Connect users?
+
+For security reasons, our [Personal Editions](https://www.photoprism.app/editions#compare) currently default to the [Guest](../user-guide/users/roles.md#guest) role, which admins can then upgrade after checking the eligibility of newly registered accounts.
+
+[Learn more ›](advanced/openid-connect.md#frequently-asked-questions)
+
+### Who can I contact if I have a complaint about your software?
+
+Please read this documentation and [determine the cause of your problem](https://docs.photoprism.app/getting-started/troubleshooting/) before opening [invalid, duplicate and/or incomplete bug reports](https://web.photoprism.app/kb/reporting-bugs), starting a public "shitstorm" or insulting other community members in our forums and chat rooms. Not only is this annoying for everyone, but it also keeps our team from working on features and improvements that our users are waiting for.
+
+[Learn more ›](https://www.photoprism.app/code-of-conduct)
 
 !!! info "Professional Users"
     Our Community Edition is designed primarily for small servers and home users. Professional users are welcome

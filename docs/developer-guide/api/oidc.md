@@ -103,7 +103,7 @@ If you wish to change the connected user account or create a new account instead
 photoprism users mod --auth=none [username]
 ```
 
-To restore a previously deleted account, admins can [create a new account](../../user-guide/users/cli.md#creating-a-new-account) with the same *username* through the [Admin Web UI](../../user-guide/users/index.md#adding-a-new-user) or the [`photoprism users add`](../../user-guide/users/cli.md#creating-a-new-account) command.
+To restore a previously deleted account, admins can follow the same steps as for [creating a new account](../../user-guide/users/cli.md#creating-a-new-account) with the same *username* through the [Admin Web UI](../../user-guide/users/index.md#adding-a-new-user) or the [`photoprism users add`](../../user-guide/users/cli.md#creating-a-new-account) command. You will then be asked if you want to restore the account.
 
 [Learn more ›](../../user-guide/users/cli.md#creating-a-new-account)
 
@@ -156,6 +156,14 @@ However, querying the `/.well-known/openid-configuration` endpoint shows what ha
 - https://openid.net/specs/openid-connect-rpinitiated-1_0.html
 - https://auth0.com/docs/authenticate/login/logout/log-users-out-of-auth0
 - https://medium.com/@robert.broeckelmann/openid-connect-logout-eccc73df758f
+
+## Frequently Asked Questions
+
+### Is it possible to set a default role for new OIDC users?
+
+For security reasons, our [Personal Editions](https://www.photoprism.app/editions#compare) currently default to the [Guest](../../user-guide/users/roles.md#guest) role, which admins can then upgrade after checking the eligibility of newly registered accounts.
+
+[Learn more ›](../../getting-started/advanced/openid-connect.md#frequently-asked-questions)
 
 [^1]: `PHOTOPRISM_OIDC_REGISTER` must be set to `"true"` to allow new users to create an account
 [^2]: Admins cannot change the authentication of their own user account through the [Admin Web UI](../../user-guide/users/index.md#editing-user-details) so that they do not accidentally lock themselves out e.g. by setting it to *None*.

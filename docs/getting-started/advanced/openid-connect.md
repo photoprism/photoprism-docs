@@ -86,9 +86,20 @@ If you wish to change the connected user account or create a new account instead
 photoprism users mod --auth=none [username]
 ```
 
-To restore a previously deleted account, admins can [create a new account](../../user-guide/users/cli.md#creating-a-new-account) with the same *username* through the [Admin Web UI](../../user-guide/users/index.md#adding-a-new-user) or the [`photoprism users add`](../../user-guide/users/cli.md#creating-a-new-account) command.
+To restore a previously deleted account, admins can follow the same steps as for [creating a new account](../../user-guide/users/cli.md#creating-a-new-account) with the same *username* through the [Admin Web UI](../../user-guide/users/index.md#adding-a-new-user) or the [`photoprism users add`](../../user-guide/users/cli.md#creating-a-new-account) command. You will then be asked if you want to restore the account.
 
 [Learn more ›](../../user-guide/users/cli.md#creating-a-new-account)
+
+## Frequently Asked Questions
+
+### Is it possible to set a default role for new OIDC users?
+
+For security reasons, our [Personal Editions](https://www.photoprism.app/editions#compare) currently default to the [Guest](../../user-guide/users/roles.md#guest) role, which admins can then upgrade after checking the eligibility of newly registered accounts. If you run our [Pro Edition](https://www.photoprism.app/teams#compare) in a trusted corporate network with appropriate security measures - including for the OIDC provider - [it can be configured](https://www.photoprism.app/pro/kb/config-options) to give new accounts a higher authorization level by default.
+
+Please note in this context that using an external [Identity Provider](#identity-providers) for [authorization](https://en.wikipedia.org/wiki/Authorization), and not just for [authentication](https://en.wikipedia.org/wiki/Authentication), can easily lead to security issues such as the following, for which we do not want to get a CVE assigned nor do we want to be responsible for any private pictures of our users getting leaked as a result:
+
+- https://www.microsoft.com/en-us/security/blog/2024/07/29/ransomware-operators-exploit-esxi-hypervisor-vulnerability-for-mass-encryption/
+- https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/24505
 
 [^1]: `PHOTOPRISM_OIDC_REGISTER` must be set to `"true"` to allow new users to create an account
 [^2]: Admins cannot change the authentication of their own user account through the [Admin Web UI](../../user-guide/users/index.md#editing-user-details) so that they do not accidentally lock themselves out e.g. by setting it to *None*.

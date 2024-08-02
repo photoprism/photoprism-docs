@@ -51,8 +51,8 @@ nav:
       - SWAG: getting-started/proxies/swag.md
       - Haproxy: getting-started/proxies/haproxy.md
     - Advanced:
-      - Video Transcoding: getting-started/advanced/transcoding.md
       - OpenID Connect:  getting-started/advanced/openid-connect.md
+      - Video Transcoding: getting-started/advanced/transcoding.md
       - Using Kubernetes: getting-started/advanced/kubernetes.md
       - Docker Security: getting-started/advanced/docker-security.md
       - Docker Volumes: getting-started/advanced/docker-volumes.md

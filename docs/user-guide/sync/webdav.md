@@ -31,7 +31,7 @@ For users running a local instance on the default port 2342 *without HTTPS*, the
 http://admin@localhost:2342/originals/
 ```
 
-Please note that the slash at the end of the path must not be omitted and that the WebDAV URL in your client apps must be updated if the hostname or port of the server changes.
+Please note that the slash at the end of the path must not be omitted and that the WebDAV URL in your client apps needs to be updated if the hostname or port of the server changes.
 
 !!! note ""
     You can view the *originals* folder URL by navigating to [Settings > Account](../settings/account.md) and then clicking *Connect via WebDAV*. It is possible to connect to the *import* folder instead by replacing `originals/` with `import/` in the URL.

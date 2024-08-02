@@ -19,7 +19,7 @@ It is also possible to [sync files with external WebDAV servers](../settings/syn
 
 ## Server URL
 
-If your instance is connected to the public Internet, the WebDAV URL of the *originals* folder has the following format, where `example.com` must be replaced with the actual hostname and `admin` with the [actual username](#authentication):
+If your instance is connected to the public Internet, the WebDAV URL of the *originals* folder has the following format, where `example.com` must be replaced with the actual hostname and `admin` with the [actual username](#credentials):
 
 ```
 https://admin@example.com/originals/

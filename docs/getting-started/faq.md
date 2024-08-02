@@ -504,5 +504,4 @@ Please read this documentation and [determine the cause of your problem](https:/
 [Learn more ›](https://www.photoprism.app/code-of-conduct)
 
 !!! info "Professional Users"
-    Our Community Edition is designed primarily for small servers and home users. Professional users are welcome
-    to [contact us for a commercial solution](https://www.photoprism.app/contact).
+    The [feature set](https://www.photoprism.app/editions#compare) and [support options](https://www.photoprism.app/kb/getting-support) of our *Community Edition* are intended for personal use. Enterprise users are welcome to [contact us](https://www.photoprism.app/contact) for a [commercial license](https://www.photoprism.app/teams#compare) and [professional services](https://www.photoprism.app/pro/support).

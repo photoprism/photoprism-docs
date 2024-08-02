@@ -50,7 +50,7 @@ If your server does not use the standard port 443 for [HTTPS](../../getting-star
 \\example.com@SSL@8443\originals\
 ```
 
-For local installations running on the default port 2342 *without HTTPS*, you can enter the following resource in the connection dialog:
+For local installations running on the default port 2342 *without HTTPS*, enter the following resource in the [connection dialog](#connect-to-a-webdav-server) (you may need to update the [registry settings](../../getting-started/troubleshooting/windows.md#connecting-via-webdav) for this):
 
 ```
 \\localhost:2342\originals\

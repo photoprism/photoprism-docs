@@ -10,7 +10,7 @@ In case you are using Ubuntu Linux, you can run this script to [install the late
 bash <(curl -s https://setup.photoprism.app/ubuntu/install-docker.sh)
 ```
 
-When [working on Windows](faq.md#can-your-development-environment-be-used-under-windows), you need to install the latest version of [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/) and also disable "autocrlf" in Git to avoid errors:
+When working on [Microsoft Windows](faq.md#can-your-development-environment-be-used-under-windows) or [Apple macOS](https://docs.docker.com/desktop/install/mac-install/), you need to install the latest version of [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/) and also disable "autocrlf" in Git to avoid errors:
 
 ```bash
 git config --global core.autocrlf false

@@ -66,7 +66,7 @@ make build-go
 After PhotoPrism has been started as shown above, the user interface can be opened in a web browser by navigating to one of these URLs:
 
 - [http://localhost:2342/](http://photoprism.me:2342/) (HTTP)
-- [https://localssl.dev/](https://localssl.dev/) (HTTPS)
+- [https://app.localssl.dev/](https://app.localssl.dev/) (HTTPS)
 
 In the build environment, the default login is `admin` with the password `photoprism`. You can disable it with the `--public` command flag:
 

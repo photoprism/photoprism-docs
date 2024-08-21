@@ -10,7 +10,7 @@ In case you are using Ubuntu Linux, you can run this script to [install the late
 bash <(curl -s https://setup.photoprism.app/ubuntu/install-docker.sh)
 ```
 
-When working on [Microsoft Windows](faq.md#can-your-development-environment-be-used-under-windows) or [Apple macOS](https://docs.docker.com/desktop/install/mac-install/), you need to install the latest version of [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/) and also disable "autocrlf" in Git to avoid errors:
+When working on [Microsoft Windows](faq.md#can-your-development-environment-be-used-under-windows) or [Apple macOS](https://docs.docker.com/desktop/install/mac-install/), you need to install the latest version of [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/) and also disable "autocrlf" in Git to avoid errors[^2]:
 
 ```bash
 git config --global core.autocrlf false
@@ -33,7 +33,7 @@ cd photoprism
 
 ### Step 2: Launch Your Local Development Environment
 
-Pull the latest Docker images and then launch the pre-configured build environment we provide to have an isolated development container pre-installed with all the tools you might need, including the latest versions of Go, NodeJS, and NPM:[^2]
+Pull the latest Docker images and then launch the pre-configured build environment we provide to have an isolated development container pre-installed with all the tools you might need, including the latest versions of Go, NodeJS, and NPM:[^3]
 
 ```bash
 make docker-build
@@ -178,4 +178,5 @@ not supported or not allowed in your environment:
 -->
 
 [^1]: Instead of using Docker, you can also set up your own build environment based on the steps documented in the [Dockerfiles](https://github.com/photoprism/photoprism/tree/develop/docker/develop) we provide. For this, you should have at least Go 1.21, TensorFlow for C, Make, NPM 10 and MariaDB 11 installed. Note that the test results will be unreliable without Docker. This method is therefore not well suited for contributors and we cannot provide support if something does not work as expected.
-[^2]: Docker uses human-readable [Dockerfiles](https://github.com/photoprism/photoprism/tree/develop/docker) that contain all the commands a user would invoke in a terminal to assemble a complete application image.  
+[^2]: If the Git config value "core.autocrlf" is set to "true", the following error may occur when trying to run shell scripts or Make targets: `env: bash\r: No such file or directory`
+[^3]: Docker uses human-readable [Dockerfiles](https://github.com/photoprism/photoprism/tree/develop/docker) that contain all the commands a user would invoke in a terminal to assemble a complete application image.  

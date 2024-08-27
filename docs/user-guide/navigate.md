@@ -31,7 +31,7 @@ Click to switch to a different search result view (cards: :material-view-column:
 
 The expanded toolbar contains additional options and search filters for country, year, month, camera, color, and category.
 
-#### 7. Context Menu ####
+#### Context Menu ####
 
 When photos or videos are selected, the context menu appears in the lower right corner. 
 The number displayed is the count of currently selected items.

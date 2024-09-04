@@ -289,7 +289,7 @@ Most often this happens when new users configure `localhost` or `127.0.0.1` as d
 
 ### How can I determine the public IP address of my home network?
 
-You can use one of the following services to view your public IP address, i.e. the IP address that the computers in your home network use to communicate with others:
+You can use one of the following services to view your public IP address, i.e. the IP address that the computers in your home network use to communicate with the Internet:
 
 - https://api.ipify.org/
 - https://canhazip.com/

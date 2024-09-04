@@ -128,6 +128,13 @@ docker compose logs -f --tail=100
 
 [Learn more ›](troubleshooting/docker.md#viewing-logs)
 
+### Determining Your Public IP Address
+
+If you have a domain name and want to set up a public host entry for your home network, you can use one of the following services to see your public IP address, i.e. the IP address that others outside your home network can use to reach you:
+
+- https://api.ipify.org/
+- https://canhazip.com/
+
 ### Failed to Find Any PEM Data in Key Input
 
 This error can indicate that your key file starts with an unexpected Byte Order Mark (BOM):

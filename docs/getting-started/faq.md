@@ -287,6 +287,13 @@ Most often this happens when new users configure `localhost` or `127.0.0.1` as d
 
 [Resolve Connection Issues ›](troubleshooting/mariadb.md#cannot-connect){ class="block-xs" }
 
+### How can I determine the public IP address of my home network?
+
+You can use one of the following services to view your public IP address, i.e. the IP address that the computers in your home network use to communicate with others:
+
+- https://api.ipify.org/
+- https://canhazip.com/
+
 ### Why is my configured memory limit exceeded when indexing, even though PhotoPrism doesn't actually seem to use that much memory?
 
 When [indexing a media library](../user-guide/library/originals.md), many files are opened and processed very quickly, which is not a typical workload compared to other containerized applications and services. Various libraries and external applications simultaneously interact with each other in complex ways, so a few spikes are inevitable. Some memory is also used by the kernel for buffered I/O to improve performance, although the extent to which caching counts towards a limit may vary.

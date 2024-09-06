@@ -76,7 +76,7 @@ documented in [Setup Using Docker Compose](../docker-compose.md):
             entryPoint: web
     ```
 
-Further examples and a description of the configuration options can be found in the [documentation](https://doc.traefik.io/traefik/user-guides/docker-compose/basic-example/).
+Further examples and a description of the config options can be found in the [documentation](https://doc.traefik.io/traefik/user-guides/docker-compose/basic-example/).
 
 ### Why Use a Proxy? ###
 

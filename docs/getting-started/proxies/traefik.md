@@ -8,11 +8,11 @@
 Our example shows a working configuration, excluding general PhotoPrism [config options](../config-options.md) 
 documented in [Setup Using Docker Compose](../docker-compose.md):
 
-!!! example "docker-compose.yml"
+!!! example "compose.yaml"
     ```yaml
     services:
       traefik:
-        image: traefik:v2.11
+        image: traefik:v3.1
         restart: unless-stopped
         ports:
           - "80:80"
@@ -26,19 +26,26 @@ documented in [Setup Using Docker Compose](../docker-compose.md):
         image: photoprism/photoprism:latest
         restart: unless-stopped
         labels:
+          - "traefik.enable=true"
           - "traefik.http.routers.photoprism.rule=Host(`example.com`)"
           - "traefik.http.routers.photoprism.tls=true"
-          - "traefik.http.routers.photoprism.tls.certresolver=myresolver"
+          - "traefik.http.routers.photoprism.tls.certresolver=myresolver" 
         volumes:
           - "./originals:/photoprism/originals"
           - "./storage:/photoprism/storage"
         environment:
             PHOTOPRISM_SITE_URL: "https://example.com/"
+            PHOTOPRISM_DISABLE_TLS: "true"
     ```
-
 
 !!! example "traefik.yaml"
     ```yaml
+    log:
+      level: INFO
+
+    global:
+      sendAnonymousUsage: false
+
     entryPoints:
       web:
         address: ":80"
@@ -46,23 +53,30 @@ documented in [Setup Using Docker Compose](../docker-compose.md):
           redirections:
             entryPoint:
               to: websecure
+              scheme: https
       websecure:
         address: ":443"
-    
+
     providers:
-      docker: {}
-        
+      docker:
+        exposedByDefault: false
+        watch: true
+    
+    api:
+      insecure: false
+      dashboard: false
+      debug: false
+    
     certificatesResolvers:
       myresolver:
         acme:
-          email: you@example.com
-          storage: /data/letsencrypt.json
+          email: ssl-admin@example.com
+          storage: /data/certs.json
           httpChallenge:
             entryPoint: web
     ```
 
-Please refer to the [official documentation](https://doc.traefik.io/traefik/user-guides/docker-compose/basic-example/)
-for further details.
+Further examples and a description of the configuration options can be found in the [documentation](https://doc.traefik.io/traefik/user-guides/docker-compose/basic-example/).
 
 ### Why Use a Proxy? ###
 

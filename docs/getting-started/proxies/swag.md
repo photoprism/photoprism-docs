@@ -20,7 +20,7 @@ The first step is to grab a dynamic DNS if you don't have your own subdomain alr
 Then you will need to set up SWAG, the variables of the docker compose are explained on the Github page of [SWAG](https://github.com/linuxserver/docker-swag).
 This is an example of how to set it up using duckdns and docker-compose. 
 
-!!! example "docker-compose.yml"
+!!! example "compose.yaml"
     ```yaml
 	version: "2.1"
 	services:

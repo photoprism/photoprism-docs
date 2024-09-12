@@ -2,7 +2,7 @@
 
 Image classification is performed using a [pre-trained model](https://dl.photoprism.app/tensorflow/), *NASNet Mobile 224*, that we have chosen because of its size, performance and accuracy. To get a basic understanding of how this works, you can read [Image Classification using Deep Neural Networks](https://medium.com/@tifa2up/image-classification-using-deep-neural-networks-a-beginner-friendly-approach-using-tensorflow-94b0a090ccd4).
 
-In addition, we manually matched the model classification with the [labels](https://github.com/photoprism/photoprism/blob/develop/internal/classify/rules.yml) you see in our UI:
+In addition, we manually matched the model classification with the [labels](https://github.com/photoprism/photoprism/blob/develop/internal/ai/classify/rules.yml) you see in our UI:
 
 ```yaml
 cat:
@@ -23,7 +23,7 @@ It took us several months of testing until we were happy with the results and th
 
 ## Updating labels ##
 
-After editing or adding labels in [rules.yml](https://github.com/photoprism/photoprism/blob/develop/internal/classify/rules.yml), you now have to run `make generate` in the main project directory to generate native Go source from this file.
+After editing or adding labels in [rules.yml](https://github.com/photoprism/photoprism/blob/develop/internal/ai/classify/rules.yml), you now have to run `make generate` in the main project directory to generate native Go source from this file.
 
 ## Pre-trained Models ##
 

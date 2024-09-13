@@ -2,12 +2,13 @@
 
 As an addition to our platform-independent [Progressive Web App (PWA)](https://docs.photoprism.app/user-guide/pwa/), the following native apps are being maintained by other companies and individual developers:
 
-| Name                                              | Platform     | Developer                                               | License                                                          | Download                                                                                                             |
-|---------------------------------------------------|--------------|---------------------------------------------------------|------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
+| Name                                             | Platform     | Developer                                               | License                                             | Download                                                                                                             |
+|--------------------------------------------------|--------------|---------------------------------------------------------|-----------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
 | [Gallery for PhotoPrism](#gallery-for-photoprism) | Android      | [Oleg Koretsky](https://github.com/Radiokot)            | [GPL 3.0](https://github.com/Radiokot/photoprism-android-client) | [Google Play](https://link.photoprism.app/gallery-app), [F-Droid](https://link.photoprism.app/gallery-fdroid)        |
-| [Photoflare](#photoflare)                         | iOS          | Chris Wunsch                                            |                                                                  | [Apple TestFlight](https://testflight.apple.com/join/MMA6iQDl)                                                       |
-| [Photo Map](#photo-map)                           | Android      | [Denny Weinberg](https://levionsoftware.com/contact/)   | Closed Source                                                    | [Google Play](https://link.photoprism.app/photomap)                                                                  |
-| [PhotoSync](#photosync)                           | iOS, Android | [touchbyte GmbH](https://www.photosync-app.com/contact) | Closed Source                                                    | [App Store](https://link.photoprism.app/photosync-ios), [Google Play](https://link.photoprism.app/photosync-android) |
+| [Photoflare](#photoflare)                        | iOS          | Chris Wunsch                                            |                                                     | [Apple TestFlight](https://testflight.apple.com/join/MMA6iQDl)                                                       |
+| [Prismatic](#prismatic)                          | iOS          | [Chris Li](https://github.com/automactic)               |                                                     | [Apple TestFlight](https://testflight.apple.com/join/vzNQjaym)                                                       |
+| [Photo Map](#photo-map)                          | Android      | [Denny Weinberg](https://levionsoftware.com/contact/)   | Closed Source                                       | [Google Play](https://link.photoprism.app/photomap)                                                                  |
+| [PhotoSync](#photosync)                          | iOS, Android | [touchbyte GmbH](https://www.photosync-app.com/contact) | Closed Source                                       | [App Store](https://link.photoprism.app/photosync-ios), [Google Play](https://link.photoprism.app/photosync-android) |
 
 ## Gallery for PhotoPrism
 
@@ -23,6 +24,12 @@ With this [Android app](https://github.com/Radiokot/photoprism-android-client), 
 Photoflare is a new iOS app that is currently being developed by Chris Wunsch. It is in a [testable alpha](https://testflight.apple.com/join/MMA6iQDl) stage, with some basic functionality already in place.
 
 [Learn more ›](https://www.reddit.com/r/photoprism/comments/1czskxn/photoprism_ios_app/)
+
+## Prismatic
+
+Prismatic is a iOS app being developed by Chris Li. It allows photos to be added on your Home Screen.
+
+[Provide feedback >](https://github.com/automactic/Prismatic-feedback)
 
 ## Photo Map
 

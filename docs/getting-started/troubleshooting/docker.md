@@ -240,7 +240,7 @@ If you have working configuration rules for a particular Linux distribution, fee
 
 ## File Permissions
 
-Errors such as "read-only file system", "error creating path", or "wrong permissions" indicate a filesystem permission problem:
+Errors such as "read-only file system", "error creating path", "failed to create folder", "permission denied", or "wrong permissions" indicate a filesystem permission problem:
 
 - [ ] Use a file manager, or the commands `ls -alh`, `chmod`, and `chown` on Unix-like operating systems, to [check and change filesystem permissions](https://kb.iu.edu/d/abdb) so all files and folders are accessible
 - [ ] The app and database *storage* folders must be writable as well: Verify that the services have write permissions and that you have **not** mounted the folders read-only on your host or [via Docker using the `:ro` flag](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-3)

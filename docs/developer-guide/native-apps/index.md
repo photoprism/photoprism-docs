@@ -42,8 +42,10 @@ Photoflare is an iOS app that is currently being developed by Chris Wunsch. It i
 
 [Learn more ›](https://www.reddit.com/r/photoprism/comments/1czskxn/photoprism_ios_app/)
 
-## Prismatic
+## Prismatic ![Prismatic Screenshot](img/prismatic-screenshot.jpg){ class="right xxs shadow" }
 
-Prismatic is an iOS app developed by [Chris Li](https://github.com/automactic) that allows you to display your pictures on the iPhone home screen. You can test this and other features by installing it via [Apple TestFlight](https://testflight.apple.com/join/vzNQjaym).
+Prismatic is an iOS app developed by [Chris Li](https://github.com/automactic) that allows you to display pictures from your library in customizable widgets on your phone's home screen.
+
+You can test this and other features by installing it via [Apple TestFlight](https://testflight.apple.com/join/vzNQjaym).
 
 [Give feedback ›](https://github.com/automactic/Prismatic-feedback/discussions)

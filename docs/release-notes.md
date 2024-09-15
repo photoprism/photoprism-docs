@@ -3,6 +3,23 @@
 !!! note ""
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
+### September 15, 2024 ###
+<span class="build">Build 240915-e1280b2fb</span>
+
+This update adds [compatibility with iOS 18](https://github.com/photoprism/photoprism/issues/4439), includes updated dependencies and [translations](https://docs.photoprism.app/developer-guide/translations-weblate/), and provides a number of UX improvements as well as fixes for recently discovered issues. Please note that a [full re-scan of your library](https://docs.photoprism.app/user-guide/library/originals/) is required to benefit from [a higher location accuracy](https://github.com/photoprism/photoprism/issues/3953#issuecomment-2351563642) under [Places](https://docs.photoprism.app/user-guide/organize/places/). A big thank you to everyone who [contributed](https://docs.photoprism.app/developer-guide/) and [helped with testing](https://github.com/orgs/photoprism/projects/5)! 🛰🌎
+
+What's new?
+
+- HEIC: [Improved `.heic` image file support for compatibility with iOS 18](https://github.com/photoprism/photoprism/issues/4439)
+- Search: [Sidecar files are no longer shown in the results when sorting by file size](https://github.com/photoprism/photoprism/issues/4519)
+- Archive: [Recently archived pictures are displayed first by default](https://github.com/photoprism/photoprism/issues/3975)
+- Places: [Fixed an issue where no pictures were found when clicking on some clusters](https://github.com/photoprism/photoprism/issues/3953)
+- Library: [Removed the archive button from the action menu under](https://github.com/photoprism/photoprism/issues/4255) [*Library > Hidden*](https://demo.photoprism.app/library/hidden)
+- API: [Fixed an issue where update requests could fail silently in case of database errors](https://github.com/photoprism/photoprism/issues/4504)
+- API: [Added interactive Swagger developer documentation with examples](https://docs.photoprism.app/developer-guide/api/docs/)
+- Security: [Go has been updated to v1.22.7, which includes security and bug fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.22.7) 
+- Translations: [Added Irish (Gaeilge) and updated Basque, French and German](https://docs.photoprism.app/developer-guide/translations-weblate/)
+
 ### July 11, 2024 ###
 <span class="build">Build 240711-2197af848</span>
 
@@ -683,7 +700,7 @@ languages have been added and updated. Thanks to all involved!
 - Albums: [Fixed accidental creation of duplicates by pressing Enter multiple times](https://github.com/photoprism/photoprism/issues/2233)
 - People: [Improved logging and fixed potential issues with matching unrecognized faces](https://github.com/photoprism/photoprism/issues/2182)
 - Places: [Number of pictures rendered on the map has been limited to 500,000](https://github.com/photoprism/photoprism/commit/49e923232380117c8b1eab9ff5b41de878d46ab2)
-- Library: [Added button to clear log history in *Library* > *Errors*](https://github.com/photoprism/photoprism/discussions/1683)
+- Library: [Added button to clear log history under *Library* > *Errors*](https://github.com/photoprism/photoprism/discussions/1683)
 - Library: [RAW previews and the number of actual files are shown under Originals](https://github.com/photoprism/photoprism/issues/2273)
 - Library: [Disabled hidden files warning while indexing as it can be misleading](https://github.com/photoprism/photoprism/issues/2189)
 - Index: [Fixed errors when re-indexing libraries with archived photos](https://github.com/photoprism/photoprism/issues/2257)

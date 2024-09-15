@@ -6,14 +6,14 @@
 ### September 15, 2024 ###
 <span class="build">Build 240915-e1280b2fb</span>
 
-This update includes [improved HEIC file support for iOS 18 compatibility](https://github.com/photoprism/photoprism/issues/4439), updated dependencies and [translations](https://docs.photoprism.app/developer-guide/translations-weblate/), UX enhancements, and fixes for [recently discovered issues](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+label%3Abug+sort%3Aupdated-desc). Please note that a [complete re-scan of your library](https://docs.photoprism.app/user-guide/library/originals/) is required to increase the [GPS location accuracy](https://github.com/photoprism/photoprism/issues/3953#issuecomment-2351563642) of pictures, e.g. under [Places](https://docs.photoprism.app/user-guide/organize/places/). A big thank you to everyone who [contributed](https://docs.photoprism.app/developer-guide/) and [helped with testing](https://github.com/orgs/photoprism/projects/5)! 🛰🌎
+This update includes [improved HEIC file support for iOS 18 compatibility](https://github.com/photoprism/photoprism/issues/4439), updated dependencies and [translations](https://docs.photoprism.app/developer-guide/translations-weblate/), UX enhancements, and fixes for [recently discovered issues](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+label%3Abug+sort%3Acreated-desc). Please note that a [complete re-scan of your library](https://docs.photoprism.app/user-guide/library/originals/) is required to increase the [GPS location accuracy](https://github.com/photoprism/photoprism/issues/3953#issuecomment-2351563642) of pictures, e.g. under [Places](https://docs.photoprism.app/user-guide/organize/places/). A big thank you to everyone who [contributed](https://docs.photoprism.app/developer-guide/) and [helped with testing](https://github.com/orgs/photoprism/projects/5)! 🛰🌎
 
 What's new?
 
 - HEIC: [Improved `.heic` image file support for compatibility with iOS 18](https://github.com/photoprism/photoprism/issues/4439)
 - Search: [Sidecar files are no longer shown in the results when sorting by file size](https://github.com/photoprism/photoprism/issues/4519)
 - Archive: [Recently archived pictures are displayed first by default](https://github.com/photoprism/photoprism/issues/3975)
-- Places: [Fixed an issue where no pictures were found when clicking on some clusters](https://github.com/photoprism/photoprism/issues/3953)
+- Places: [Fixed an issue where no pictures were found when clicking on clusters](https://github.com/photoprism/photoprism/issues/3953)
 - Library: [Removed the archive button from the action menu under](https://github.com/photoprism/photoprism/issues/4255) [*Library > Hidden*](https://demo.photoprism.app/library/hidden)
 - API: [Fixed an issue where update requests could fail silently in case of database errors](https://github.com/photoprism/photoprism/issues/4504)
 - API: [Added interactive Swagger developer documentation with examples](https://docs.photoprism.app/developer-guide/api/docs/)

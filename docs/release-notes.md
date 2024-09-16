@@ -133,7 +133,7 @@ What's new?
 ### November 28, 2023 ###
 <span class="build">Build 231128-f48ff16ef</span>
 
-Our latest service release provides updated dependencies and fixes for recently discovered issues. In addition, official [installation packages with binaries for Linux are now available](https://dl.photoprism.app/pkg/linux/README.html) as an alternative to [our Docker images](https://docs.photoprism.app/getting-started/docker-compose/). Please note that only experienced users should choose this installation method, since these [do not include all dependencies](https://dl.photoprism.app/pkg/linux/README.html#dependencies) and need to be set up manually.
+Our latest service release provides updated dependencies and fixes for [recently discovered issues](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+label%3Abug+sort%3Acreated-desc). In addition, official [installation packages with binaries for Linux are now available](https://dl.photoprism.app/pkg/linux/README.html) as an alternative to [our Docker images](https://docs.photoprism.app/getting-started/docker-compose/). Please note that only experienced users should choose this installation method, since these [do not include all dependencies](https://dl.photoprism.app/pkg/linux/README.html#dependencies) and need to be set up manually.
 
 What's new?
 
@@ -155,7 +155,7 @@ What's new?
 ### October 21, 2023 ###
 <span class="build">Build 231021-9abea5b55</span>
 
-This update adds search filters for finding pictures by ISO number, focal length, aperture, and altitude. It also includes a number of user interface improvements, updated translations, as well as fixes for recently discovered issues. We would like to thank everyone who [submitted pull requests](https://docs.photoprism.app/developer-guide/), [helped with testing](https://github.com/orgs/photoprism/projects/5), or [contributed in other ways](https://www.photoprism.app/oss/faq)! ✨
+This update adds search filters for finding pictures by ISO number, focal length, aperture, and altitude. It also includes a number of user interface improvements, updated translations, as well as fixes for [recently discovered issues](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+label%3Abug+sort%3Acreated-desc). We would like to thank everyone who [submitted pull requests](https://docs.photoprism.app/developer-guide/), [helped with testing](https://github.com/orgs/photoprism/projects/5), or [contributed in other ways](https://www.photoprism.app/oss/faq)! ✨
 
 What's new?
 
@@ -172,7 +172,7 @@ What's new?
 ### October 11, 2023 ###
 <span class="build">Build 231011-63f708417</span>
 
-This service release includes an [updated ARMv7 build](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&ordering=last_updated&name=armv7), a number of usability improvements requested by our community, and fixes for recently discovered issues. We would like to thank everyone involved!
+This service release includes an [updated ARMv7 build](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&ordering=last_updated&name=armv7), a number of usability improvements requested by our community, and fixes for [recently discovered issues](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+label%3Abug+sort%3Acreated-desc). We would like to thank everyone involved!
 
 What's new?
 
@@ -189,7 +189,7 @@ What's new?
 ### September 23, 2023 ###
 <span class="build">Build 230923-e59851350</span>
 
-Our [latest release](getting-started/updates.md) includes a [redesigned Places view](https://user-images.githubusercontent.com/301686/269433540-cd48e79f-b2a8-4fb5-bc54-52467b15b743.jpg), with the search box moved to the top and a preview for selected clusters at the bottom. We've also added support for [Samsung](https://github.com/photoprism/photoprism/issues/439)/[Google Motion Photos](https://github.com/photoprism/photoprism/issues/1739), so you can view them like Apple Live Photos after [re-indexing your library](user-guide/library/originals.md). Beyond those highlights, you'll get many usability improvements, new search filters, and fixes for recently discovered issues. A big thank you to [everyone who contributed](https://github.com/photoprism/photoprism/graphs/contributors)!
+Our [latest release](getting-started/updates.md) includes a [redesigned Places view](https://user-images.githubusercontent.com/301686/269433540-cd48e79f-b2a8-4fb5-bc54-52467b15b743.jpg), with the search box moved to the top and a preview for selected clusters at the bottom. We've also added support for [Samsung](https://github.com/photoprism/photoprism/issues/439)/[Google Motion Photos](https://github.com/photoprism/photoprism/issues/1739), so you can view them like Apple Live Photos after [re-indexing your library](user-guide/library/originals.md). Beyond those highlights, you'll get many usability improvements, new search filters, and fixes for [recently discovered issues](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+label%3Abug+sort%3Acreated-desc). A big thank you to [everyone who contributed](https://github.com/photoprism/photoprism/graphs/contributors)!
 
 What's new?
 
@@ -231,7 +231,7 @@ What's new?
 ### July 19, 2023 ###
 <span class="build">Build 230719-73fa7bbe8</span>
 
-Our latest release includes [new features and enhancements](https://github.com/photoprism/photoprism/pulls) contributed [by our community](https://docs.photoprism.app/developer-guide/pull-requests/), a number of security improvements, as well as fixes for recently discovered issues. Thank you to everyone who submitted pull requests, helped with testing, signed up as a member, or contributed in other ways! We appreciate it very much.
+Our latest release includes [new features and enhancements](https://github.com/photoprism/photoprism/pulls) contributed [by our community](https://docs.photoprism.app/developer-guide/pull-requests/), a number of security improvements, as well as fixes for [recently discovered issues](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+label%3Abug+sort%3Acreated-desc). Thank you to everyone who submitted pull requests, helped with testing, signed up as a member, or contributed in other ways! We appreciate it very much.
 
 What's new?
 
@@ -254,7 +254,7 @@ What's new?
 ### June 25, 2023 ###
 <span class="build">Build 230625-17242fb07</span>
 
-This service release includes the [latest translations contributed by our community](https://translate.photoprism.app/projects/photoprism/), as well as fixes for recently discovered issues.
+This service release includes the [latest translations contributed by our community](https://translate.photoprism.app/projects/photoprism/), as well as fixes for [recently discovered issues](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+label%3Abug+sort%3Acreated-desc).
 
 What's new?
 
@@ -267,7 +267,7 @@ What's new?
 <span class="build">Build 230615-90a18f6e7</span>
 
 This update includes [new features and enhancements](https://github.com/photoprism/photoprism/pulls?q=is%3Apr+is%3Aclosed+label%3Amerged+sort%3Aupdated-desc) contributed [by our community](https://docs.photoprism.app/developer-guide/pull-requests/),
-as well as fixes for recently discovered issues. We would like to thank everyone involved!
+as well as fixes for [recently discovered issues](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+label%3Abug+sort%3Acreated-desc). We would like to thank everyone involved!
 
 What's new?
 
@@ -298,7 +298,7 @@ PhotoPrism® Plus
 ### June 3, 2023 ###
 <span class="build">Build 230603-378d4746a</span>
 
-This service release fixes recently discovered issues and improves compatibility with the upcoming [MariaDB v11.0](https://mariadb.com/kb/en/release-notes-mariadb-11-0-series/). If you are upgrading from MariaDB 10.x to 11.0, please [make sure that you replace](https://github.com/photoprism/photoprism/commit/bff649469d084498a1e75492c0bd99bda3f5a340#diff-03a31d6e73f48b7bba98b65352ce67a7d153fe2461f9c7b5e76be49a97ebf0cb) `command: mysqld` with `command: ` (followed by the command flags) in your `docker-compose.yml` file, otherwise the database server might fail to start. Thank you to everyone who contributed with pull requests, [reported bugs](https://www.photoprism.app/kb/reporting-bugs), and helped us test the changes!
+This service release fixes [recently discovered issues](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+label%3Abug+sort%3Acreated-desc) and improves compatibility with the upcoming [MariaDB v11.0](https://mariadb.com/kb/en/release-notes-mariadb-11-0-series/). If you are upgrading from MariaDB 10.x to 11.0, please [make sure that you replace](https://github.com/photoprism/photoprism/commit/bff649469d084498a1e75492c0bd99bda3f5a340#diff-03a31d6e73f48b7bba98b65352ce67a7d153fe2461f9c7b5e76be49a97ebf0cb) `command: mysqld` with `command: ` (followed by the command flags) in your `docker-compose.yml` file, otherwise the database server might fail to start. Thank you to everyone who contributed with pull requests, [reported bugs](https://www.photoprism.app/kb/reporting-bugs), and helped us test the changes!
 
 What's new?
 
@@ -563,7 +563,7 @@ What's new?
 ### September 1, 2022 ###
 <span class="build">Build 220901-f493607b0</span>
 
-With this update you get all the [latest translations contributed by our community](https://translate.photoprism.app/projects/photoprism/), [mobile navigation enhancements](https://dl.photoprism.app/img/ui/mobile-toolbar-navigation-open.jpg), updated dependencies and, as usual, fixes for recently discovered issues. Thanks to everyone involved!
+With this update you get all the [latest translations contributed by our community](https://translate.photoprism.app/projects/photoprism/), [mobile navigation enhancements](https://dl.photoprism.app/img/ui/mobile-toolbar-navigation-open.jpg), updated dependencies and, as usual, fixes for [recently discovered issues](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+label%3Abug+sort%3Acreated-desc). Thanks to everyone involved!
 
 What's new?
 
@@ -631,7 +631,7 @@ With this update, you'll enjoy a much faster and [smoother scrolling experience]
 ### June 17, 2022 ###
 <span class="build">Build 220617-0402b8d3</span>
 
-This update features updated translations as well as fixes for recently discovered issues.
+This update features updated translations as well as fixes for [recently discovered issues](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+label%3Abug+sort%3Acreated-desc).
 
 - Albums: [A deleted album is restored when trying to add a new album with the same name](https://github.com/photoprism/photoprism/issues/2429)
 - WebDAV: [Added support for auto indexing/importing in a sub-directory on a shared domain](https://github.com/photoprism/photoprism/pull/2392)
@@ -684,7 +684,7 @@ This service release fixes potential issues with our new Debian 12-based Docker 
 <span class="build">Build 220517-b9c68f8f</span>
 
 This update features search UX enhancements, a new Docker base image based on Debian 12 "Bookworm",
-as well as fixes for recently discovered issues. Front- and backend [translations](https://translate.photoprism.app/) in numerous
+as well as fixes for [recently discovered issues](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+label%3Abug+sort%3Acreated-desc). Front- and backend [translations](https://translate.photoprism.app/) in numerous
 languages have been added and updated. Thanks to all involved!
 
 - File Formats: [Added native support for WebP images](https://github.com/photoprism/photoprism/issues/1226) and [animated GIFs](https://github.com/photoprism/photoprism/commit/82d61d1f93961daa5b9ffea31e2ae4ab8897d2a7)

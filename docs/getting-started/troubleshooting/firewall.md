@@ -39,3 +39,22 @@ In addition, the following API endpoints should be allowed so that public [Docke
 On Linux, Docker manipulates the `iptables` rules to provide network isolation. This does have some implications for what you need to do if you want to have your own policies in addition to the rules Docker manages.
 
 [Learn more ›](https://docs.docker.com/network/iptables/)
+
+## Docker MTU Size
+
+If you use Docker on your server or on a virtual machine, technical limitations of the local network or your internet provider can also make it impossible to reach external services. In particular, the *network cards of virtual machines* often do not have the standard [Maximum Transmission Unit (MTU)](https://en.wikipedia.org/wiki/Maximum_transmission_unit) of 1500, but a smaller size like 1492 or 1454.
+
+In this case, you must [configure the virtual network cards](https://mlohr.com/docker-mtu/) of your Docker containers so that they have an MTU size that is less than or equal to that of the outgoing network, for example by [adding the following](https://www.civo.com/learn/fixing-networking-for-docker) to your `compose.yaml` (or `docker-compose.yml`) config files:
+
+```yaml
+networks:
+  default:
+    driver: bridge
+    driver_opts:
+      com.docker.network.driver.mtu: 1450
+```
+
+[Learn more ›](https://mlohr.com/docker-mtu/)
+
+!!! note ""
+    All network configuration changes require a restart of the affected services and/or the Docker daemon to take effect.

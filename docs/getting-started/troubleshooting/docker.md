@@ -116,6 +116,25 @@ On Linux, Docker manipulates the `iptables` rules to provide network isolation. 
 
 [Learn more ›](https://docs.docker.com/network/iptables/)
 
+### Wrong MTU Size
+
+If you use Docker on your server or on a virtual machine, technical limitations of the local network or your internet provider can sometimes make it impossible to [reach external services](firewall.md#outgoing-connections) such as the [Reverse Geocoding API](https://www.photoprism.app/privacy#section-7) that we operate for our users. In particular, the *network cards of virtual machines* often do not have the standard [Maximum Transmission Unit (MTU)](https://en.wikipedia.org/wiki/Maximum_transmission_unit) of 1500, but a smaller size like 1492 or 1454.
+
+In this case, you must [configure the virtual network cards](https://mlohr.com/docker-mtu/) of your Docker containers so that they have an MTU size that is less than or equal to that of the outgoing network, for example by [adding the following](https://www.civo.com/learn/fixing-networking-for-docker) to your `compose.yaml` (or `docker-compose.yml`) config files:
+
+```yaml
+networks:
+  default:
+    driver: bridge
+    driver_opts:
+      com.docker.network.driver.mtu: 1450
+```
+
+[Learn more ›](https://mlohr.com/docker-mtu/)
+
+!!! note ""
+    All network configuration changes require a restart of the affected services and/or the Docker daemon to take effect.
+
 ## Viewing Logs
 
 You can run this command to watch the Docker service logs, including the last 100 messages (omit `--tail=100` to see them all, and `-f` to output only the last logs without watching them):
@@ -376,3 +395,4 @@ Then [restart all services](../docker-compose.md#step-2-start-the-server) for th
 *[read-only]: write protected
 *[filesystem]: contains your files and folders
 *[RHEL]: Red Hat Enterprise Linux®
+*[MTU]: Maximum Transmission Unit

@@ -2,6 +2,9 @@
 
 ![](img/settings-library-light.jpg){ class="shadow" }
 
+!!! info ""
+    Library Settings are only available for [Super Admins](../users/roles.md).
+
 ## Index
 
 #### :material-chart-timeline-variant: Estimates ####

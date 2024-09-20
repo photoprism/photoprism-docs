@@ -475,7 +475,7 @@ For more information, see the [Network Storage](troubleshooting/docker.md#networ
 
 [Learn more ›](troubleshooting/docker.md#network-storage)
 
-### Why does changing permissions using chmod does not work for my  network shares?
+### Why does changing permissions using chmod not work for my network shares?
 
 This is a common issue with NFS shares. For security reasons, the permissions must be changed on the server for them to take effect, unless the server allows them to be changed remotely, which depends on the settings. Even then, in the worst case, the actual permissions on the server and the effective ones on the clients may be different.
 

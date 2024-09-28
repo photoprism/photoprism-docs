@@ -91,14 +91,14 @@ As explained in our [Privacy Policy](https://www.photoprism.app/privacy#section-
 
 ### Are the keys for using interactive world maps provided free of charge?
 
-The API keys required to use the maps are unfortunately not free for us due to the number of users we have. Those costs are one of the reasons why we encourage all users to support our mission by [signing up as a member](https://www.photoprism.app/membership) or purchasing a [commercial license](https://www.photoprism.app/teams#compare).
+We provide all users with free [high-resolution vector maps](https://maps.photoprism.app/) that we [developed for you](https://github.com/photoprism/photoprism/issues/2998) based on public data from [OpenStreetMap](https://www.openstreetmap.org/) (OSM).
 
-To improve the situation for those who don't want to or cannot [sign up](https://www.photoprism.app/editions#compare), more details such as cities and lakes have been added to the freely available basic maps:
-
-- [Places: Improve the level of detail of the basic world map](https://github.com/photoprism/photoprism/issues/2998)
+In addition, [members](https://www.photoprism.app/membership), [contributors](https://docs.photoprism.app/developer-guide/), and [business customers](https://www.photoprism.app/teams#compare) receive an API key for MapTiler's commercial maps, including [satellite and 3D maps](https://www.photoprism.app/features#Maps%20%26%20Places).
 
 !!! tldr ""
-    We are aware that advanced users could register "non-commercial test accounts" instead, but we think that would not be completely fair and [MapTiler](https://www.maptiler.com/) could then no longer offer them to those in need. Keep in mind that we have many more users than other open source projects that might encourage their users to do this. Likewise, using the OpenSteetMap development API is discouraged for consumer applications like ours, although some projects do it anyway.
+    While users with enough time and experience could register “non-commercial trial accounts” with a commercial map provider, we believe this would not be fair. Keep in mind that we have many more users than other open source projects (which may encourage their users to do so) and that providers may then stop offering these trial accounts, which is something we do not want to be responsible for.
+    
+    Likewise, using the OSM developer API for end-user applications like ours is discouraged, although some projects do so anyway (our [free vector tiles](https://maps.photoprism.app/) are faster to load, of higher quality and better protect your privacy as the [request logs are not shared](https://planet.openstreetmap.org/tile_logs/), so there should be no need for this).
 
 ### How can I activate my membership?
 

@@ -64,7 +64,7 @@ As explained above, reverse geocoding and interactive world maps depend on retri
 
 We provide all users with free [high-resolution vector maps](https://maps.photoprism.app/) that we [developed for you](https://github.com/photoprism/photoprism/issues/2998) based on public data from [OpenStreetMap](https://www.openstreetmap.org/) (OSM).
 
-In addition, [members](https://www.photoprism.app/membership), [contributors](https://docs.photoprism.app/developer-guide/), and [business customers](https://www.photoprism.app/teams#compare) receive an API key for MapTiler's commercial maps, including [satellite and 3D maps](https://www.photoprism.app/features#Maps%20%26%20Places).
+In addition, [members](https://www.photoprism.app/membership) and [business customers](https://www.photoprism.app/teams#compare) receive an API key for MapTiler's commercial maps, including [satellite and 3D maps](https://www.photoprism.app/features#Maps%20%26%20Places).
 
 !!! example ""
     While users with enough time and experience could register “non-commercial trial accounts” with a commercial map provider, we believe this would not be fair. Keep in mind that we have many more users than other open source projects (which may encourage their users to do so) and that providers may then stop offering these trial accounts, which is something we do not want to be responsible for.

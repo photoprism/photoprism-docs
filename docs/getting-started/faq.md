@@ -96,9 +96,7 @@ We provide all users with free [high-resolution vector maps](https://maps.photop
 In addition, [members](https://www.photoprism.app/membership) and [business customers](https://www.photoprism.app/teams#compare) receive an API key for MapTiler's commercial maps, including [satellite and 3D maps](https://www.photoprism.app/features#Maps%20%26%20Places).
 
 !!! tldr ""
-    While users with enough time and experience could register “non-commercial trial accounts” with a commercial map provider, we believe this would not be fair. Keep in mind that we have many more users than other open source projects (which may encourage their users to do so) and that providers may then stop offering these trial accounts, which is something we do not want to be responsible for.
-    
-    Likewise, using the OSM developer API for end-user applications like ours is discouraged, although some projects do so anyway (our [free vector tiles](https://maps.photoprism.app/) are faster to load, of higher quality and better protect your privacy as the [request logs are not shared](https://planet.openstreetmap.org/tile_logs/), so there should be no need for this).
+    While users with enough time and experience could register “non-commercial trial accounts” with a commercial map provider, we believe this would not be fair. Keep in mind that we have many more users than other open source projects (which may encourage their users to do so) and that providers may then stop offering these trial accounts, which is something we do not want to be responsible for. Likewise, using the OSM developer API for end-user applications like ours is discouraged, although some projects do so anyway (our [free vector tiles](https://maps.photoprism.app/) are faster to load, of higher quality and better protect your privacy as the [request logs are not shared](https://planet.openstreetmap.org/tile_logs/), so there should be no need for this).
 
 ### How can I activate my membership?
 

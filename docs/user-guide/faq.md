@@ -14,7 +14,7 @@
 
     [![](https://dl.photoprism.app/img/diagrams/proxy-cdn.svg){ class="w100" }](../getting-started/troubleshooting/firewall.md)
 
-    *Other open source applications sometimes use the free map tile service operated by [openstreetmap.org](https://operations.osmfoundation.org/policies/tiles/). In this case, [their usage](https://operations.osmfoundation.org/policies/tiles/) and [privacy policies](https://wiki.osmfoundation.org/wiki/Privacy_Policy) apply, which means that your request data is stored and used to [create publicly available reports](https://planet.openstreetmap.org/tile_logs/). This is different from our approach, which focuses on [your privacy](https://www.photoprism.app/privacy) and user experience.*
+    [Learn more ›](../getting-started/troubleshooting/firewall.md#outgoing-connections)
 
 ??? question "Why are some features only available to members?"
 
@@ -112,6 +112,23 @@
 ??? question "Why are some pictures positioned at unvisited locations on the map?"
 
     PhotoPrism can estimate the location of pictures taken without GPS information by extrapolating it from the location of other pictures taken on the same day. These estimates can be [disabled in the settings](./settings/library.md) if you don't want them.
+
+
+??? question "Are the keys for using interactive world maps provided free of charge?"
+
+    All users have access to a [high-resolution vector map](https://maps.photoprism.app/){:target="_blank"} that we host on [our own infrastructure](https://github.com/photoprism/photoprism/issues/2998){:target="_blank"}, so no commercial API key is required. It is based on [data published by OpenStreetMap](https://planet.openstreetmap.org/){:target="_blank"} (OSM).
+    
+    In addition, we automatically provide [our members](https://www.photoprism.app/membership) and [business customers](https://www.photoprism.app/teams#compare) with an API key for MapTiler's commercial service, which includes [satellite, outdoor and 3D maps](https://www.photoprism.app/kb/personal#maps-and-places). You can test these on [our public demo](https://try.photoprism.app/library/places){:target="_blank"}.
+    
+    [Learn more ›](https://www.photoprism.app/kb/personal#maps-and-places)
+
+??? question "Why don't you use the free map tile service provided by OpenStreetMap?"
+
+    Other [free and open-source software](https://en.wikipedia.org/wiki/Free_and_open-source_software){:target="_blank"} sometimes uses the public maps that OpenStreetMap provides for development and testing. It is [not intended for end-user applications](https://operations.osmfoundation.org/policies/tiles/) like ours.
+
+    Using their service also means that [their usage](https://operations.osmfoundation.org/policies/tiles/) and [privacy policies](https://wiki.osmfoundation.org/wiki/Privacy_Policy) apply, as your request data is stored and used to generate [publicly available reports](https://planet.openstreetmap.org/tile_logs/). This differs from our services, which ensure [a high level of privacy](https://www.photoprism.app/privacy) and provide a better user experience with faster loading times.
+
+    [Learn more ›](../getting-started/faq.md#are-the-keys-for-using-interactive-world-maps-provided-free-of-charge)
 
 ## Media Library ##
 

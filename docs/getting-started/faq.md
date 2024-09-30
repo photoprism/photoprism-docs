@@ -102,7 +102,7 @@ In addition, we automatically provide [our members](https://www.photoprism.app/m
 
 ### Why don't you use the free map tile service provided by OpenStreetMap?
 
-Other [free and open-source software](https://en.wikipedia.org/wiki/Free_and_open-source_software){:target="_blank"} sometimes uses the public maps that OpenStreetMap provides for development and testing. It is [not intended for end-user applications](https://operations.osmfoundation.org/policies/tiles/) like ours.
+Other [free and open-source software](https://en.wikipedia.org/wiki/Free_and_open-source_software){:target="_blank"} sometimes uses the public maps that OpenStreetMap provides for development and testing. These are [not intended for end-user applications](https://operations.osmfoundation.org/policies/tiles/) like ours.
 
 Using their service also means that [their usage](https://operations.osmfoundation.org/policies/tiles/) and [privacy policies](https://wiki.osmfoundation.org/wiki/Privacy_Policy) apply, as your request data is stored and used to generate [publicly available reports](https://planet.openstreetmap.org/tile_logs/). This differs from our services, which ensure [a high level of privacy](https://www.photoprism.app/privacy) and provide a better user experience with faster loading times.
 

@@ -71,7 +71,7 @@ In addition, we automatically provide [our members](https://www.photoprism.app/m
 [Learn more ›](https://www.photoprism.app/kb/personal#maps-and-places)
 
 !!! example ""
-    Although experienced users could alternatively register test accounts with a commercial provider to gain access to additional map styles instead of [signing up for a membership](https://www.photoprism.app/membership), we believe this would not be fair. Keep in mind that we have a much larger user base than some other OSS projects who might encourage their users to do so, and that providers might then stop offering free test accounts, which is something we don't want to be responsible for.
+    Although experienced users could alternatively register test accounts with a commercial provider to gain access to additional map styles instead of [signing up for a membership](https://www.photoprism.app/membership), we believe this would not be fair. Keep in mind that we have a much larger user base than others who might encourage their users to do so, and that providers might then stop offering free test accounts, which is something we don't want to be responsible for.
 
 ### Why don't you use the free map tile service provided by OpenStreetMap?
 

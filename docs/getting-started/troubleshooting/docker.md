@@ -108,7 +108,7 @@ sudo docker compose up -d
 ```
 
 Note that this will point the home directory shortcut `~` to `/root` in the `volumes:` section
-of your `docker-compose.yml`.
+of your `compose.yaml` or `docker-compose.yml`.
 
 ### IPTables Firewall
 
@@ -239,7 +239,7 @@ Then restart for the changes to take effect:
 sudo reboot
 ```
 
-In addition, you can reduce memory usage and improve stability by setting `PHOTOPRISM_WORKERS` to `1` in your `docker-compose.yml` file to limit the number of indexing workers.
+In addition, you can reduce memory usage and improve stability by setting `PHOTOPRISM_WORKERS` to `1` in your `compose.yaml` or `docker-compose.yml` file to limit the number of indexing workers.
 
 ### Windows
 

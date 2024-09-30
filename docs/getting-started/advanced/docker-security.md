@@ -6,7 +6,7 @@
 
 Even though [PhotoPrism](https://github.com/photoprism/photoprism) is [developed in Go](https://go.dev/) and therefore does not use many of the C libraries installed in our Docker image, external file converters like Darktable and FFmpeg as well as other tools installed as dependencies might use them. They may also be directly affected by [recently discovered vulnerabilities](https://ubuntu.com/security/cves) for which updates are available.
 
-To automatically install these updates when the container starts for the first time, you can add `PHOTOPRISM_INIT: "update"` to the `environment` section of the `photoprism` service in your `docker-compose.yml`:
+To automatically install these updates when the container starts for the first time, you can add `PHOTOPRISM_INIT: "update"` to the `environment` section of the `photoprism` service in your `compose.yaml` or `docker-compose.yml`:
 
 ```yaml
 services:
@@ -32,7 +32,7 @@ We also recommend making sure that the latest Docker version and security update
 
 ## Run Services as Non-Root User
 
-It is recommended that you run the `photoprism` service as a non-root user by setting either the `user` [service property](https://docs.docker.com/compose/compose-file/05-services/#user) or the `PHOTOPRISM_UID` and `PHOTOPRISM_GID` [environment variable](../config-options.md#docker-image) in your `docker-compose.yml` file:
+It is recommended that you run the `photoprism` service as a non-root user by setting either the `user` [service property](https://docs.docker.com/compose/compose-file/05-services/#user) or the `PHOTOPRISM_UID` and `PHOTOPRISM_GID` [environment variable](../config-options.md#docker-image) in your `compose.yaml` or `docker-compose.yml` file:
 
 | Environment              | Default | Description                                                                                                                                                                                  |
 |--------------------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

@@ -30,7 +30,7 @@ First, verify that you are using the correct port (default is `3306`) and host:
 - only use `localhost` or `127.0.0.1` if the database port [has been exposed](https://docs.docker.com/compose/compose-file/compose-file-v3/#ports) as described below and you are on the same computer (host)
 - we recommend [configuring a local hostname](https://dl.photoprism.app/img/docs/pihole-local-dns.png) to access other hosts on your network
 
-To connect to MariaDB from your host or home network, you need to expose port `3306` in your `docker-compose.yml`
+To connect to MariaDB from your host or home network, you need to expose port `3306` in your `compose.yaml` or `docker-compose.yml`
 and [restart the service for changes to take effect](../docker-compose.md#step-2-start-the-server):
 
 ```yaml
@@ -56,7 +56,7 @@ If this doesn't help, check the [Docker Logs](docker.md#viewing-logs) for messag
 
 ## Wrong Password
 
-If the password you are using was specified in a `docker-compose.yml` file and contains one or more `$` characters, these [must be escaped with `$$`](../../developer-guide/technologies/yaml.md#dollar-signs) (a double dollar sign) so that, for example, `"compo$e"` becomes `"compo$$e"`:
+If the password you are using was specified in a `compose.yaml` or `docker-compose.yml` file and contains one or more `$` characters, these [must be escaped with `$$`](../../developer-guide/technologies/yaml.md#dollar-signs) (a double dollar sign) so that, for example, `"compo$e"` becomes `"compo$$e"`:
 
 
 ```yaml
@@ -87,7 +87,7 @@ Should MariaDB fail to start after upgrading from an earlier version (or migrati
 However, newer MariaDB Docker images **support automatic upgrades** on startup, so you don't have to worry about that anymore.
 
 !!! danger ""
-    When upgrading from MariaDB 10.x to [11.0](https://mariadb.com/kb/en/release-notes-mariadb-11-0-series/), you [must replace](https://github.com/photoprism/photoprism/commit/bff649469d084498a1e75492c0bd99bda3f5a340#diff-03a31d6e73f48b7bba98b65352ce67a7d153fe2461f9c7b5e76be49a97ebf0cb) `command: mysqld` with `command: ` (followed by the command flags) in your `docker-compose.yml` file, otherwise the database server may fail to start. 
+    When upgrading from MariaDB 10.x to [11.0](https://mariadb.com/kb/en/release-notes-mariadb-11-0-series/), you [must replace](https://github.com/photoprism/photoprism/commit/bff649469d084498a1e75492c0bd99bda3f5a340#diff-03a31d6e73f48b7bba98b65352ce67a7d153fe2461f9c7b5e76be49a97ebf0cb) `command: mysqld` with `command: ` (followed by the command flags) in your `compose.yaml` or `docker-compose.yml` file, otherwise the database server may fail to start. 
 
 ### Manual Update
 
@@ -97,7 +97,7 @@ To manually upgrade the internal database schema, run this command in a terminal
 docker compose exec mariadb mariadb-upgrade -uroot -p
 ```
 
-Enter the MariaDB "root" password specified in your `docker-compose.yml` when prompted.
+Enter the MariaDB "root" password specified in your `compose.yaml` or `docker-compose.yml` when prompted.
 
 Alternatively, you can downgrade to the previous version, create a database backup using the `photoprism backup`
 command, start a new database instance based on the latest version, and then restore your index with
@@ -105,7 +105,7 @@ the `photoprism restore` command.
 
 ### Auto Upgrade
 
-To enable automatic schema updates, set `MARIADB_AUTO_UPGRADE` to a non-empty value in your `docker-compose.yml` as shown in our [config example](https://dl.photoprism.app/docker/docker-compose.yml):
+To enable automatic schema updates, set `MARIADB_AUTO_UPGRADE` to a non-empty value in your `compose.yaml` or `docker-compose.yml` as shown in our [config example](https://dl.photoprism.app/docker/docker-compose.yml):
 
 ```yaml
 services:
@@ -186,7 +186,7 @@ Unless you open the storage folder again in macOS Finder, the errors should then
 
 In case you forgot the MariaDB "root" password and the one specified in your configuration does not work,
 you can [start the server with the `--skip-grant-tables` flag](https://mariadb.com/docs/reference/mdb/cli/mariadbd/skip-grant-tables/)
-added to the `mysqld` command in your `docker-compose.yml`. This will temporarily give full access
+added to the `mysqld` command in your `compose.yaml` or `docker-compose.yml`. This will temporarily give full access
 to all users after a restart:
 
 ```yaml
@@ -241,7 +241,7 @@ server that is not based on our [default configuration](https://dl.photoprism.ap
 - [ ] Before submitting a support request, verify the problem still occurs with a newly created database based on our example
 
 Run this command in a terminal to see the current values of the collation and character set variables (change the root
-password `insecure` and database name `photoprism` as specified in your `docker-compose.yml`):
+password `insecure` and database name `photoprism` as specified in your `compose.yaml` or `docker-compose.yml`):
 
 ```bash
 echo "SHOW VARIABLES WHERE Variable_name LIKE 'character\_set\_%' OR Variable_name LIKE 'collation%';" | \

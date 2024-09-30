@@ -65,11 +65,11 @@ services:
 
 ## Docker Compose ##
 
-When using [Docker Compose](https://docs.docker.com/compose/compose-file/compose-file-v3/), some additional rules apply, as `docker-compose.yml` files extend the YAML format with features such as [variable interpolation](https://docs.docker.com/compose/compose-file/12-interpolation/#interpolation).
+When using [Docker Compose](https://docs.docker.com/compose/compose-file/compose-file-v3/), some additional rules apply, as `compose.yaml` or `docker-compose.yml` files extend the YAML format with features such as [variable interpolation](https://docs.docker.com/compose/compose-file/12-interpolation/#interpolation).
 
 ### Dollar Signs ###
 
-If a configuration value [in a `docker-compose.yml` file](../../getting-started/docker-compose.md) contains a literal `$` character, for example in a password, you must use `$$` (a double dollar sign) to escape it so that e.g. `"compo$e"` becomes `"compo$$e"`:
+If a configuration value [in a `compose.yaml` or `docker-compose.yml` file](../../getting-started/docker-compose.md) contains a literal `$` character, for example in a password, you must use `$$` (a double dollar sign) to escape it so that e.g. `"compo$e"` becomes `"compo$$e"`:
 
 ```yaml
 services:

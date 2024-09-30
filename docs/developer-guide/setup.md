@@ -74,7 +74,7 @@ In the build environment, the default login is `admin` with the password `photop
 ./photoprism --public start
 ```
 
-You can find the default settings in [the docker-compose.yml file](https://github.com/photoprism/photoprism/blob/develop/docker-compose.yml) located in the root of the project. Keep them when [you run tests](tests.md). Otherwise, the tests may fail for others, even if they [succeed in your local environment](code-quality.md#test-automation-guidelines).
+You can find the default settings in [the `compose.yaml` or `docker-compose.yml` file](https://github.com/photoprism/photoprism/blob/develop/docker-compose.yml) located in the root of the project. Keep them when [you run tests](tests.md). Otherwise, the tests may fail for others, even if they [succeed in your local environment](code-quality.md#test-automation-guidelines).
 
 !!! example ""
     You can find a list of all `make` targets in the [Makefile](https://github.com/photoprism/photoprism/blob/develop/Makefile).
@@ -146,7 +146,7 @@ Once the debugger is running, you can view the app at `http://localhost:2342/` a
 
 * Radomir Sohlich wrote a [pragmatic introduction to Makefiles](https://sohlich.github.io/post/go_makefile/) for Go developers
 * we are using [Go Modules](https://github.com/golang/go/wiki/Modules) for managing our dependencies (new in 1.11)
-* this guide was not tested on Windows, you might need to change docker-compose.yml to make it work with Windows specific paths
+* this guide was not tested on Windows, you might need to edit your `compose.yaml` or `docker-compose.yml` to make it work with Windows specific paths
 
 ### Apple Silicon, Raspberry Pi, and ARM64
 

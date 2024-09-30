@@ -18,7 +18,7 @@ Note that after adding or updating certificates, it is required to restart Photo
 
 ### 1. HTTPS Reverse Proxy
 
-To run your instance behind an [HTTPS reverse proxy like Traefik](proxies/traefik.md), we recommend that you explicitly disable TLS in PhotoPrism by setting `PHOTOPRISM_DISABLE_TLS` to `"true"` in your `docker-compose.yml` configuration:
+To run your instance behind an [HTTPS reverse proxy like Traefik](proxies/traefik.md), we recommend that you explicitly disable TLS in PhotoPrism by setting `PHOTOPRISM_DISABLE_TLS` to `"true"` in your `compose.yaml` or `docker-compose.yml` configuration:
 
 ```yaml
 services:
@@ -49,7 +49,7 @@ services:
 
 To use your own certificates, you can add a custom TLS certificate and private key to the `storage/config/certificates` folder with the filenames `www.example.com.crt` and `www.example.com.key`, replacing `www.example.com` with the actual server domain. For this, you can set the same config options as when using a self-signed certificate (see above).
 
-Alternatively, you can specify a custom TLS certificate (`*.crt`) and private key (`*.key`) filename within the `storage/config/certificates` folder using the `PHOTOPRISM_TLS_CERT` and `PHOTOPRISM_TLS_KEY` [environment variables](config-options.md) in your `docker-compose.yml`, or use the corresponding [command flags](config-options.md):
+Alternatively, you can specify a custom TLS certificate (`*.crt`) and private key (`*.key`) filename within the `storage/config/certificates` folder using the `PHOTOPRISM_TLS_CERT` and `PHOTOPRISM_TLS_KEY` [environment variables](config-options.md) in your `compose.yaml` or `docker-compose.yml`, or use the corresponding [command flags](config-options.md):
 
 ```yaml
 services:

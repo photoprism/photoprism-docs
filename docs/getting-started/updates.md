@@ -41,7 +41,7 @@ docker compose up -d
 
 #### Watchtower
 
-Adding [Watchtower](https://github.com/containrrr/watchtower) as a service to your `docker-compose.yml` will
+Adding [Watchtower](https://github.com/containrrr/watchtower) as a service to your `compose.yaml` or `docker-compose.yml` will
 automatically keep images up-to-date:
 
 ```yaml

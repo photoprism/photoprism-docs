@@ -5,7 +5,7 @@ It's possible to use [Dropbox](https://www.dropbox.com/) to store your photos, w
 1. Set up a Dropbox account.
 2. Install the Dropbox desktop client.
 3. Sync your Dropbox to a local directory.
-4. If using Docker, configure your `docker-compose.yml` with;
+4. If using Docker, configure your `compose.yaml` or `docker-compose.yml` with;
     ```
     volumes:
       - "~/Dropbox/Photos:/photoprism/originals"
@@ -22,7 +22,7 @@ To auto-import uploaded files into PhotoPrism;
 2. Enable 'Camera Uploads' in the Dropbox app's settings.
 3. Install the Dropbox [desktop client](https://www.dropbox.com/install) on your server or a network-accessible machine
 4. Configure the `Camera Uploads` folder as your `import` directory for PhotoPrism.
-    In your `docker-compose.yml` file, this is;
+    In your `compose.yaml` or `docker-compose.yml` file, this is;
     ```
     volumes:
       - "~/Dropbox/Camera Uploads:/photoprism/import"

@@ -10,7 +10,7 @@
 - Stop Photoprism: `docker compose stop photoprism`
 - On the **host** now run `sudo sqlite3mysql -f <PATH_TO_STORAGE_MOUNT>/storage/index.db -d photoprism -u root -p` and enter the MariaDB password when prompted (default is `insecure`).
 - Shutdown your current stack again: `docker compose down`
-- Edit your `docker-compose.yml` so it uses the MariaDB database you added before. Don't forget to remove the `ports`
+- Edit your `compose.yaml` or `docker-compose.yml` so it uses the MariaDB database you added before. Don't forget to remove the `ports`
   section of the MariaDB Container.
 - Start your stack again with `docker compose up -d`
 - If this worked you may want to delete the file `index.db` in the `storage` mount since it contains out of date

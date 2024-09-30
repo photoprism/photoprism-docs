@@ -13,7 +13,7 @@ on the advanced settings page. You can also disable specific features and enable
 
 ![](img/settings-advanced.jpg){ class="shadow" }
 
-All [config options](../../getting-started/config-options.md) can be set in your `docker-compose.yml` or
+All [config options](../../getting-started/config-options.md) can be set in your `compose.yaml` or `docker-compose.yml` or
 via command-line parameters as well. Manually changed values are saved in a config file. It is stored in
 the `storage/config` folder by default.
 

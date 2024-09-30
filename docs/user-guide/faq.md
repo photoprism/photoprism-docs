@@ -40,7 +40,7 @@
 
 ??? question "How can I activate my membership?"
 
-    To connect a new instance to your membership account, you will need to log in with the super admin user that is automatically created during setup (see your `docker-compose.yml` file or the app store documentation), and then follow the steps described in our activation guide.
+    To connect a new instance to your membership account, you will need to log in with the super admin user that is automatically created during setup (see your `compose.yaml` or `docker-compose.yml` file or the app store documentation), and then follow the steps described in our activation guide.
     
     [View Activation Guide ›](https://www.photoprism.app/kb/activation)
 

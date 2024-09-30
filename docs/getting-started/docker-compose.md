@@ -19,7 +19,7 @@ Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is sup
     
     Commands on Linux may have to be prefixed with `sudo` when not running as root.
     Note that this will point the home directory shortcut `~` to `/root` in the `volumes:` 
-    section of your `docker-compose.yml`. Kernel security modules such as AppArmor and SELinux 
+    section of your config file. Kernel security modules such as AppArmor and SELinux 
     have been [reported to cause issues](troubleshooting/docker.md#kernel-security).
 
     We recommend that your server has [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured and to avoid setting a [hard memory limit](faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory), as this can lead to unexpected restarts when the indexer temporarily needs more memory to process large files. Indexing [RAW images and high-resolution panoramas](troubleshooting/performance.md#memory) may require additional [swap space](troubleshooting/docker.md#adding-swap) and/or physical memory beyond the [recommended minimum](index.md#system-requirements).
@@ -112,7 +112,7 @@ Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is sup
     Indexing [RAW images and high-resolution panoramas](troubleshooting/performance.md#memory) may require additional [swap space](troubleshooting/docker.md#adding-swap) and/or physical memory beyond the [recommended minimum](index.md#system-requirements).
 
 !!! note ""
-    When editing your `compose.yaml` or `docker-compose.yml` file, please make sure that [related values remain on the same indentation level](../developer-guide/technologies/yaml.md) and that [lists start with a dash](../developer-guide/technologies/yaml.md#multiple-values).
+    When editing YAML files, please make sure that [related values remain on the same indentation level](../developer-guide/technologies/yaml.md) and that [lists start with a dash](../developer-guide/technologies/yaml.md#multiple-values).
     If the value of an environment variable contains a literal `$` sign, for example in a password, it [must be escaped](../developer-guide/technologies/yaml.md#dollar-signs) with `$$` (a double dollar sign) so that e.g. `"compo$e"` becomes `"compo$$e"`.
 
 !!! danger ""
@@ -208,7 +208,7 @@ services:
 
 ### Step 2: Start the server
 
-Open a terminal and change to the folder in which your `compose.yaml` or `docker-compose.yml` file has been saved.[^1]
+Open a terminal and change to the folder in which your config file has been saved.[^1]
 Run this command to start the application and database services in the background:
 
 ```bash
@@ -311,7 +311,7 @@ PhotoPrism's command-line interface is also well suited for job automation using
 
 !!! tip ""
     When using *Docker Compose*, you can prefix the commands you want to run with `docker compose exec [service]` to execute them in the specified service container.
-    If this fails with *no container found*, please make sure that the service has been started, you have specified an existing service (usually `photoprism`) and you are in the folder where your `compose.yaml` or `docker-compose.yml` file is located.
+    If this fails with *no container found*, please make sure that the service has been started, you have specified an existing service (usually `photoprism`) and you are in the folder where your config file is located.
 
 #### Opening a Terminal
 
@@ -336,7 +336,7 @@ Note, however, that commands that you run without an explicit user ID might be e
 The currently supported user ID ranges are 0, 33, 50-99, 500-600, 900-1250, and 2000-2100.
 
 !!! tip ""
-    We recommend running the `photoprism` service as a non-root user by setting either the [user service property](https://docs.docker.com/compose/compose-file/05-services/#user) or the `PHOTOPRISM_UID` [environment variable](config-options.md#docker-image) in your `compose.yaml` or `docker-compose.yml` file. Don't forget to update file permissions and/or ownership with the `chown` command when you make changes.
+    We recommend running the `photoprism` service as a non-root user by setting either the [user service property](https://docs.docker.com/compose/compose-file/05-services/#user) or the `PHOTOPRISM_UID` [environment variable](config-options.md#docker-image) in your config file. Don't forget to update file permissions and/or ownership with the `chown` command when you make changes.
 
 #### Examples
 
@@ -389,4 +389,4 @@ The currently supported user ID ranges are 0, 33, 50-99, 500-600, 900-1250, and 
 *[filesystem]: contains your files and folders
 *[RHEL]: Red Hat Enterprise Linux®
 
-[^1]: The default filename for the [Docker Compose](https://docs.docker.com/compose/) configuration is `docker-compose.yml`. For simplicity, it does not need to be specified if you run commands in the same directory. Config files for other apps and instances should be placed in separate folders.
+[^1]: The default name for [Docker Compose](https://docs.docker.com/compose/) config files is `compose.yaml` or `docker-compose.yml`. For simplicity, it does not need to be specified if you run commands in the same directory. Config files for other apps and instances should be placed in separate folders.

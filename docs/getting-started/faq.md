@@ -83,24 +83,30 @@ In order to successfully set up your installation and view location details in P
 
 [![](https://dl.photoprism.app/img/diagrams/proxy-cdn.svg){ class="w100" }](troubleshooting/firewall.md)
 
-*Other open source applications sometimes use the free map tile service operated by [openstreetmap.org](https://operations.osmfoundation.org/policies/tiles/). In this case, [their usage](https://operations.osmfoundation.org/policies/tiles/) and [privacy policies](https://wiki.osmfoundation.org/wiki/Privacy_Policy) apply, which means that your request data is stored and used to [create publicly available reports](https://planet.openstreetmap.org/tile_logs/). This is different from our approach, which focuses on [your privacy](https://www.photoprism.app/privacy) and user experience.*
-
 ### Why do I see connection errors when requesting API keys at startup?
 
-As explained in our [Privacy Policy](https://www.photoprism.app/privacy#section-7), reverse geocoding and interactive world maps depend on retrieving the necessary information from external services. Please make sure that you allow requests to these API endpoints if you have a firewall installed, and verify that your Internet connection is working.
+Retrieving location data with [reverse geocoding](https://www.photoprism.app/privacy#section-7) and loading the [interactive world maps](https://www.photoprism.app/privacy#section-8) we provide requires a [connection to external services](#does-your-software-depend-on-any-external-services). Please make sure that [requests to these API endpoints are allowed](troubleshooting/firewall.md#outgoing-connections) if you have a firewall installed, and that your internet connection is working.
+
+[Learn more ›](troubleshooting/firewall.md#outgoing-connections)
 
 ### Are the keys for using interactive world maps provided free of charge?
 
 All users have access to a [high-resolution vector map](https://maps.photoprism.app/){:target="_blank"} that we host on [our own infrastructure](https://github.com/photoprism/photoprism/issues/2998){:target="_blank"}, so no commercial API key is required. It is based on [data published by OpenStreetMap](https://planet.openstreetmap.org/){:target="_blank"} (OSM).
 
-In addition, we automatically provide [our members](https://www.photoprism.app/membership) and [business customers](https://www.photoprism.app/teams#compare) with an API key for MapTiler's commercial service, which includes [satellite, outdoor and 3D maps](https://www.photoprism.app/features#Maps%20%26%20Places). You can test these on [our public demo](https://try.photoprism.app/library/places){:target="_blank"}.
+In addition, we automatically provide [our members](https://www.photoprism.app/membership) and [business customers](https://www.photoprism.app/teams#compare) with an API key for MapTiler's commercial service, which includes [satellite, outdoor and 3D maps](https://www.photoprism.app/kb/personal#maps-and-places). You can test these on [our public demo](https://try.photoprism.app/library/places){:target="_blank"}.
+
+[Learn more ›](https://www.photoprism.app/kb/personal#maps-and-places)
 
 !!! tldr ""
-    Although experienced users could alternatively register test accounts with a commercial provider to gain access to additional map styles instead of [signing up for a membership](https://www.photoprism.app/membership), we believe this would not be fair. Keep in mind that we have a much larger user base than some other Open Source projects who might encourage their users to do so, and that providers might then stop offering free test accounts, which is something we don't want to be responsible for. Using the OSM developer API for end-user applications like ours [is also not allowed](https://operations.osmfoundation.org/policies/api/), although some projects do so anyway (our [free vector tiles](https://maps.photoprism.app/) are faster to load, of higher quality and better protect your privacy as the [request logs are not shared](https://planet.openstreetmap.org/tile_logs/), so there should be no need for this).
+    Although experienced users could alternatively register test accounts with a commercial provider to gain access to additional map styles instead of [signing up for a membership](https://www.photoprism.app/membership), we believe this would not be fair. Keep in mind that we have a much larger user base than some other OSS who might encourage their users to do so, and that providers might then stop offering free test accounts, which is something we don't want to be responsible for.
+
+### Why don't you use the free map tile service provided by OpenStreetMap?
+
+Other [free and open-source software](https://en.wikipedia.org/wiki/Free_and_open-source_software){:target="_blank"} sometimes uses the API that OpenStreetMap provides for development and testing. It is [not intended for end-user applications](https://operations.osmfoundation.org/policies/tiles/) like ours. Using their service also means that [their usage](https://operations.osmfoundation.org/policies/tiles/) and [privacy policies](https://wiki.osmfoundation.org/wiki/Privacy_Policy) apply, as your request data is stored and used to generate [publicly available reports](https://planet.openstreetmap.org/tile_logs/). This differs from our services, which ensure [a high level of privacy](https://www.photoprism.app/privacy) and provide a better user experience with faster loading times.
 
 ### How can I activate my membership?
 
-To connect a new instance to your membership account, you will need to log in with the admin user that is automatically created during setup (see your `docker-compose.yml` file or the app store documentation), and then follow the steps described in our activation guide.
+To connect a new instance to your membership account, you will need to log in with the super admin user that is automatically created during setup (see your `docker-compose.yml` file or the app store documentation), and then follow the steps described in our activation guide.
 
 [View Activation Guide ›](https://www.photoprism.app/kb/activation)
 
@@ -510,3 +516,6 @@ Please read this documentation and [determine the cause of your problem](https:/
 
 !!! info "Professional Users"
     The [feature set](https://www.photoprism.app/editions#compare) and [support options](https://www.photoprism.app/kb/getting-support) of our *Community Edition* are intended for personal use. Enterprise users are welcome to [contact us](https://www.photoprism.app/contact) for a [commercial license](https://www.photoprism.app/teams#compare) and [professional services](https://www.photoprism.app/pro/support).
+
+*[OSM]: OpenStreetMap
+*[OSS]: Open-Source Software

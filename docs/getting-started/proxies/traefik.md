@@ -77,7 +77,7 @@ To run PhotoPrism behind Traefik, create a `traefik.yaml` configuration and then
 
 Note that you must disable [HTTPS/TLS](../using-https.md#1-https-reverse-proxy) in PhotoPrism by setting `PHOTOPRISM_DISABLE_TLS` to `"true"` as Traefik handles HTTPS connections, and that [all settings and config options](../config-options.md) not related to Traefik have been omitted for brevity.
 
-Further `traefik.yaml` examples and a description of the Traefik configuration options can be found in the [corresponding documentation](https://doc.traefik.io/traefik/user-guides/docker-compose/basic-example/).
+Further `traefik.yaml` examples and a detailed description of the Traefik configuration can be found in the [corresponding documentation](https://doc.traefik.io/traefik/user-guides/docker-compose/basic-example/).
 
 ### Why Use a Proxy? ###
 

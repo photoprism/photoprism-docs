@@ -5,8 +5,7 @@
     - WebSocket proxying automatically works
     - [Traefik](https://doc.traefik.io/traefik/) can [create and update](https://doc.traefik.io/traefik/user-guides/docker-compose/acme-http/)  [Let's Encrypt](https://letsencrypt.org/) HTTPS certificates for you
 
-Our example shows a working configuration, excluding general PhotoPrism [config options](../config-options.md) 
-documented in [Setup Using Docker Compose](../docker-compose.md):
+To run PhotoPrism behind Traefik, create a `traefik.yaml` configuration and then add a `traefik` service to your `compose.yaml` or `docker-compose.yml` file, as shown in the following example:
 
 !!! example "compose.yaml"
     ```yaml
@@ -76,10 +75,9 @@ documented in [Setup Using Docker Compose](../docker-compose.md):
             entryPoint: web
     ```
 
-Further examples and a description of the config options can be found in the [documentation](https://doc.traefik.io/traefik/user-guides/docker-compose/basic-example/).
+Note that you must disable [HTTPS/TLS](../using-https.md#1-https-reverse-proxy) in PhotoPrism by setting `PHOTOPRISM_DISABLE_TLS` to `"true"` as Traefik handles HTTPS connections, and that [all settings and config options](../config-options.md) not related to Traefik have been omitted for brevity.
 
-!!! tldr ""
-    Note that, as explained in the [HTTPS documentation section](../using-https.md), Photoprism-generated TLS has to be disabled, because the internal communication between the service and the proxy should be unencrypted if the proxy is the HTTPS endpoint (unless the proxy uses a public network to access the service).
+Further `traefik.yaml` examples and a description of the Traefik configuration options can be found in the [corresponding documentation](https://doc.traefik.io/traefik/user-guides/docker-compose/basic-example/).
 
 ### Why Use a Proxy? ###
 

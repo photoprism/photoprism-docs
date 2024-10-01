@@ -177,6 +177,6 @@ not supported or not allowed in your environment:
 * [Fedora 32](setup-fedora.md)
 -->
 
-[^1]: Instead of using Docker, you can also set up your own build environment based on the steps documented in the [Dockerfiles](https://github.com/photoprism/photoprism/tree/develop/docker/develop) we provide. For this, you should have at least Go 1.21, TensorFlow for C, Make, NPM 10 and MariaDB 11 installed. Note that the test results will be unreliable without Docker. This method is therefore not well suited for contributors and we cannot provide support if something does not work as expected.
+[^1]: Instead of using Docker, you can also set up your own build environment based on the steps documented in the [Dockerfiles](https://github.com/photoprism/photoprism/tree/develop/docker/develop) we provide. For this, you should have at least Go 1.22, TensorFlow for C, Make, NPM 10 and MariaDB 11 installed. Note that the test results will be unreliable without Docker. This method is therefore not well suited for contributors and we cannot provide support if something does not work as expected.
 [^2]: If the Git config value "core.autocrlf" is set to "true", the following error may occur when trying to run shell scripts or Make targets: `env: bash\r: No such file or directory`
 [^3]: Docker uses human-readable [Dockerfiles](https://github.com/photoprism/photoprism/tree/develop/docker) that contain all the commands a user would invoke in a terminal to assemble a complete application image.  

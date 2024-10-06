@@ -28,17 +28,25 @@ To authenticate users via OIDC, you can either set up and use a self-hosted iden
 
 Single sign-on can be configured automatically if the identity provider offers a standardized `/.well-known/openid-configuration` endpoint for [service discovery](https://developer.okta.com/docs/reference/api/oidc/#well-known-oauth-authorization-server), for example:
 
-- <https://accounts.google.com/.well-known/openid-configuration>
+- [https://accounts.google.com/.well-known/openid-configuration](https://accounts.google.com/.well-known/openid-configuration){:target="_blank"}
+
+### Issuer URI
+
+The [Issuer URI](#config-options) in your configuration must match the `issuer` value returned by the [`/.well-known/openid-configuration`](https://accounts.google.com/.well-known/openid-configuration){:target="_blank"} endpoint of your [OpenID Connect Identity Provider (IdP)](#identity-providers), for example `https://accounts.google.com` if you use Google for authentication.
+
+!!! note ""
+    You may not modify the URI in any way, e.g. by adding or omitting slashes at the end. If the values do not match, the validation will fail and users cannot be redirected to your provider's login page. For security reasons, only a generic error message is displayed in this case.
 
 ### Redirect URL
 
-The Redirect URL that must be [specified when registering a new client](../../developer-guide/api/img/redirect-url-example.jpg) with an [Identity Provider](#identity-providers) is as follows, where `{hostname}` must be replaced by the hostname in the [Site URL](../../getting-started/config-options.md#site-information), e.g. configured via `PHOTOPRISM_SITE_URL`:
+The [Redirect URL](#config-options) that must be [specified when registering a new client](../../developer-guide/api/img/redirect-url-example.jpg) with an [Identity Provider](#identity-providers) is as follows, where `{hostname}` must be replaced by the hostname in the [Site URL](../../getting-started/config-options.md#site-information), e.g. configured via `PHOTOPRISM_SITE_URL`:
 
 ```
 https://{hostname}/api/v1/oidc/redirect
 ```
 
-Both URLs must begin with `https://` to use HTTPS, as otherwise single sign-on via OIDC cannot be enabled.
+!!! note ""
+    Note that both the [Site URL](../../getting-started/config-options.md#site-information) configured for your instance and the [Redirect URL](#config-options) must start with `https://` and that their hostnames must match, as the [use of secure connections](../../getting-started/using-https.md) is a strict requirement for OpenID Connect.
 
 ## Preferred Username
 

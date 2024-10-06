@@ -39,14 +39,14 @@ The [Issuer URI](#config-options) in your configuration must match the `issuer` 
 
 ### Redirect URL
 
-The [Redirect URL](#config-options) that must be [specified when registering a new client](../../developer-guide/api/img/redirect-url-example.jpg) with an [Identity Provider](#identity-providers) is as follows, where `{hostname}` must be replaced by the hostname in the [Site URL](../../getting-started/config-options.md#site-information), e.g. configured via `PHOTOPRISM_SITE_URL`:
+The Redirect URL that must be [specified when registering a new client](../../developer-guide/api/img/redirect-url-example.jpg) with an [Identity Provider](#identity-providers) is as follows, where `{hostname}` must be replaced by the hostname in the [Site URL](../../getting-started/config-options.md#site-information), e.g. configured via `PHOTOPRISM_SITE_URL`:
 
 ```
 https://{hostname}/api/v1/oidc/redirect
 ```
 
 !!! note ""
-    Note that both the [Site URL](../../getting-started/config-options.md#site-information) configured for your instance and the [Redirect URL](#config-options) must start with `https://` and that their hostnames must match, as the [use of secure connections](../../getting-started/using-https.md) is a strict requirement for OpenID Connect.
+    Note that both the [Site URL](../../getting-started/config-options.md#site-information) configured for your instance and the Redirect URL must start with `https://` and that their hostnames must match, as the [use of secure connections](../../getting-started/using-https.md) is a strict requirement for OpenID Connect.
 
 ## Preferred Username
 

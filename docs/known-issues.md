@@ -3,13 +3,8 @@
 PhotoPrism generally follows a zero-bug policy, which means that we do our best to provide a fix for every technical problem we learn about.
 However, sometimes this is not possible right away, for example because it needs to be fixed in a third-party library that our software depends on, or because it is a specific use case that we do not support at this time.
 
-!!! info ""
-    In order to improve readability and reduce maintenance effort, minor issues and those that we plan to resolve in the short term are not listed here.
-    You can browse all reported issues and planned enhancements on [GitHub Issues](developer-guide/issues.md):
-
-    https://github.com/photoprism/photoprism/issues
-
-    When [browsing issues](https://github.com/photoprism/photoprism/issues), please note that **our team and all issue subscribers receive an email notification** from GitHub whenever a new comment is added, so these should only be used for sharing important information and not for [discussions, questions](https://github.com/photoprism/photoprism/discussions), or [expressing personal opinions](https://www.photoprism.app/code-of-conduct). Thank you very much!
+!!! example "GitHub Issues"
+    In order to improve readability and reduce maintenance effort, minor issues and [recently reported bugs](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3Abug) that we plan to fix in the short term are not listed here, but [only in GitHub Issues](https://github.com/photoprism/photoprism/issues). When [browsing issues](developer-guide/issues.md), please note that **our team and all issue subscribers receive an email notification** whenever a new comment is added, so these should only be used for sharing important information and not for [discussions, questions](https://github.com/photoprism/photoprism/discussions), or [expressing personal opinions](https://www.photoprism.app/code-of-conduct). Thank you very much!
 
 ## Self-Hosted Setup
 

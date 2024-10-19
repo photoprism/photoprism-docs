@@ -14,10 +14,8 @@ If the file specified with `[filename]` contains readable metadata, it will then
 [{
   "SourceFile": "example.jpg",
   "ExifToolVersion": 12.76,
-  "FileName": "digikam.jpg",
   "FileSize": 200108,
   "FileType": "JPEG",
-  "FileTypeExtension": "JPG",
   "MIMEType": "image/jpeg",
   "Make": "HUAWEI",
   "Model": "ELE-L29",
@@ -37,8 +35,7 @@ If the file specified with `[filename]` contains readable metadata, it will then
   "GPSAltitude": 84.47,
   "GPSDateTime": "2020:10:17 15:48:23Z",
   "GPSLatitude": 33.8120962,
-  "GPSLongitude": -117.9215491,
-  "GPSPosition": "33.8120962 -117.9215491",
+  "GPSLongitude": -117.9215491
 }]
 ```
 

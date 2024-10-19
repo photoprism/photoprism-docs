@@ -37,6 +37,7 @@ nav:
       - Raspberry Pi: getting-started/troubleshooting/raspberry-pi.md
       - Windows: getting-started/troubleshooting/windows.md
       - Browsers: getting-started/troubleshooting/browsers.md
+      - Metadata: getting-started/troubleshooting/metadata.md
       - Performance: getting-started/troubleshooting/performance.md
       - Firewall: getting-started/troubleshooting/firewall.md
     # - Support: getting-started/support.md

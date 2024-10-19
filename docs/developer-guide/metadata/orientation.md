@@ -49,7 +49,7 @@ Rotation                        : 270
 
 ## Exif Values
 
-The Exif orientation values are numbered from 1 to 8:
+The numbers used to specify the image orientation are defined as follows: 
 
 1. = 0 degrees: the correct orientation, no adjustment is required.
 2. = 0 degrees, mirrored: image has been flipped back-to-front.
@@ -60,4 +60,4 @@ The Exif orientation values are numbered from 1 to 8:
 7. = 270 degrees: image has been flipped back-to-front and is on its far side.
 8. = 270 degrees, mirrored: image is on its far side.
 
-See also [sirv.com/help/articles/rotate-photos-to-be-upright/](https://sirv.com/help/articles/rotate-photos-to-be-upright/).
+[Learn more ›](https://sirv.com/help/articles/rotate-photos-to-be-upright/)

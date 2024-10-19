@@ -323,6 +323,12 @@
 
     * **Keywords** are primarily used for searching. They may include similar terms and translations, like "kitten", "kitty", and "cat".
 
+??? question "How can I check the metadata of images and videos?"
+
+    We [recommend using Exiftool](../getting-started/troubleshooting/metadata.md) if some of your pictures are displayed incorrectly (stretched, distorted), information seems to be missing (e.g. title or description), or the [wrong time and location](organize/edit.md) are shown.
+
+    [Learn more ›](../getting-started/troubleshooting/metadata.md)
+
 ## Thumbnails ##
 
 ??? question "Isn't it insecure that thumbnail image URLs work even if you are not logged in?"

@@ -8,7 +8,7 @@ To do this, run the following command within a Docker [terminal session](../dock
 exiftool -n -j [filename]
 ```
 
-If the file specified with `[filename]` contains readable metadata, it will then be displayed to as JSON-formatted values, for example:
+If the file specified with `[filename]` contains readable metadata, it will then be displayed to you as JSON-formatted values, for example:
 
 ```json
 [{

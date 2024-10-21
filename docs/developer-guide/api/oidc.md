@@ -175,9 +175,9 @@ For security reasons, our [Personal Editions](https://www.photoprism.app/edition
 
 ### Can I configure a custom claim for the preferred username?
 
-You can choose between `preferred_username`, `name`, `nickname` and `email`, where `preferred_username` is the default. The other options are used as a fallback if no value is returned for the [configured claim](#config-options).
+You can choose between `preferred_username`, `name`, `nickname` and `email`, where `preferred_username` is the default. The other claims are used as fallback if no value is returned for the [configured claim](#config-options).
 
-Note that it is not possible to use a [non-standard claim](https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims) such as `username`, as this could lead to conflicts and potential security issues, e.g. if the value is not unique or not reliably set.
+Please note that it is currently not possible to use [other standard](https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims) or non-standard claims, as these may not be suitable for generating a username and no logic is implemented for doing so.
 
 [Learn more ›](https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims)
 

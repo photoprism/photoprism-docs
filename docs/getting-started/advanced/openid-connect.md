@@ -109,5 +109,13 @@ Please note in this context that using an external [Identity Provider](#identity
 - https://www.microsoft.com/en-us/security/blog/2024/07/29/ransomware-operators-exploit-esxi-hypervisor-vulnerability-for-mass-encryption/
 - https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/24505
 
+### Can I configure a custom claim for the preferred username?
+
+You can choose between `preferred_username`, `name`, `nickname` and `email`, where `preferred_username` is the default. The other options are used as a fallback if no value is returned for the [configured claim](#config-options).
+
+Note that it is not possible to use a [non-standard claim](https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims) such as `username`, as this could lead to conflicts and potential security issues, e.g. if the value is not unique or not reliably set.
+
+[Learn more ›](https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims)
+
 [^1]: `PHOTOPRISM_OIDC_REGISTER` must be set to `"true"` to allow new users to create an account
 [^2]: Admins cannot change the authentication of their own user account through the [Admin Web UI](../../user-guide/users/index.md#editing-user-details) so that they do not accidentally lock themselves out e.g. by setting it to *None*.

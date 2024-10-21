@@ -510,6 +510,12 @@ For security reasons, our [Personal Editions](https://www.photoprism.app/edition
 
 [Learn more ›](advanced/openid-connect.md#frequently-asked-questions)
 
+### Can I configure a custom claim as the preferred OIDC username?
+
+It is not possible to use a [non-standard claim](https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims) name such as `username`, as this can lead to conflicts and potential security issues, e.g. if the value is not unique or not reliably set.
+
+[Learn more ›](advanced/openid-connect.md#frequently-asked-questions)
+
 ### Who can I contact if I have a complaint about your software?
 
 Please read this documentation and [determine the cause of your problem](https://docs.photoprism.app/getting-started/troubleshooting/) before opening [invalid, duplicate and/or incomplete bug reports](https://web.photoprism.app/kb/reporting-bugs), starting a public "shitstorm" or insulting other community members in our forums and chat rooms. Not only is this annoying for everyone, but it also keeps our team from working on features and improvements that our users are waiting for.

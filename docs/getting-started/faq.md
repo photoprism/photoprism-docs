@@ -512,7 +512,7 @@ For security reasons, our [Personal Editions](https://www.photoprism.app/edition
 
 ### Can I configure a custom claim as the preferred OIDC username?
 
-It is not possible to use a [non-standard claim](https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims) name such as `username`, as this can lead to conflicts and potential security issues, e.g. if the value is not unique or not reliably set.
+It is not possible to use a [non-standard claim](https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims) such as `username`, as this could lead to conflicts and potential security issues, e.g. if the value is not unique or not reliably set.
 
 [Learn more ›](advanced/openid-connect.md#frequently-asked-questions)
 

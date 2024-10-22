@@ -514,7 +514,7 @@ For security reasons, our [Personal Editions](https://www.photoprism.app/edition
 
 You can choose between `preferred_username`, `name`, `nickname` and verified[^2] `email`, where `preferred_username` is the default. The other claims are used as fallback if no value is returned for the [configured claim](advanced/openid-connect.md#config-options).
 
-Please note that it is currently not possible to use [other standard](https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims) or non-standard claims, as these may not be suitable for [generating a username](advanced/openid-connect.md#preferred-username) and no logic is implemented for doing so.
+Please note that it is currently not possible to use [other standard](https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims) or non-standard claims, as these may not be suitable for [generating a username](advanced/openid-connect.md#preferred-username) and [no logic is implemented](https://github.com/photoprism/photoprism/blob/develop/internal/auth/oidc/username.go) for doing so.
 
 [Learn more ›](advanced/openid-connect.md#frequently-asked-questions)
 

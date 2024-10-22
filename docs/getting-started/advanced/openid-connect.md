@@ -52,11 +52,13 @@ https://{hostname}/api/v1/oidc/redirect
 
 When a new user signs in with OpenID Connect[^1], their preferred username may already be registered. In this case, a random 6-digit number is appended to resolve the conflict.
 
-The config option `PHOTOPRISM_OIDC_USERNAME` allows you to change the [preferred username](#config-options) for new accounts from `preferred_username` to `name`, `nickname`, or verified `email`. Names are changed to lowercase handles so that, for example, "Jens Mander" becomes "jens.mander".
+The config option `PHOTOPRISM_OIDC_USERNAME` allows you to change the [preferred username](#config-options) claim for new accounts from `preferred_username` to `name`, `nickname` or verified[^2] `email`. The other claims are used as fallback if no value is returned for the configured claim. Names are changed to lowercase so that, for example, "John Doe" becomes "john.doe".
+
+[Learn more ›](#can-i-configure-a-custom-claim-for-the-preferred-username)
 
 ## Existing Accounts
 
-[Super admins](../../user-guide/users/roles.md) can manually connect existing user accounts[^2] under [*Settings > Users*](../../user-guide/users/index.md) by changing the authentication to *OIDC* and then setting the *Subject ID* to match the account identifier from the configured [Identity Provider](#identity-providers):
+[Super admins](../../user-guide/users/roles.md) can manually connect existing user accounts[^3] under [*Settings > Users*](../../user-guide/users/index.md) by changing the authentication to *OIDC* and then setting the *Subject ID* to match the account identifier from the configured [Identity Provider](#identity-providers):
 
 ![Edit Dialog](../../developer-guide/api/img/oidc-subject.jpg){ class="shadow" }
 
@@ -111,11 +113,20 @@ Please note in this context that using an external [Identity Provider](#identity
 
 ### Can I configure a custom claim for the preferred username?
 
-You can choose between `preferred_username`, `name`, `nickname` and `email`, where `preferred_username` is the default. The other claims are used as fallback if no value is returned for the [configured claim](#config-options).
+You can choose between `preferred_username`, `name`, `nickname` and verified[^2] `email`, where `preferred_username` is the default. The other claims are used as fallback if no value is returned for the [configured claim](#config-options).
 
-Please note that it is currently not possible to use [other standard](https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims) or non-standard claims, as these may not be suitable for generating a username and no logic is implemented for doing so.
+Please note that it is currently not possible to use [other standard](https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims) or non-standard claims, as these may not be [suitable for generating a username](#preferred-username) and [no logic is implemented](https://github.com/photoprism/photoprism/blob/develop/internal/auth/oidc/username.go) for doing so.
 
 [Learn more ›](https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims)
 
-[^1]: `PHOTOPRISM_OIDC_REGISTER` must be set to `"true"` to allow new users to create an account
-[^2]: Admins cannot change the authentication of their own user account through the [Admin Web UI](../../user-guide/users/index.md#editing-user-details) so that they do not accidentally lock themselves out e.g. by setting it to *None*.
+### What if my provider does not return any claims for generating a username?
+
+Certified [OIDC Identity Providers](#identity-providers), as well as public service providers such as [Google](https://developers.google.com/identity/openid-connect/openid-connect), should support (at least) a subset of the [standard claims](https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims) that PhotoPrism can use to [generate a username](#preferred-username) for newly registered accounts. These are `preferred_username`, `name`, `nickname` and verified[^2] `email`, where `preferred_username` is the default.
+
+If only an unverified `email` address[^2] or none of [these claims](#can-i-configure-a-custom-claim-for-the-preferred-username) are returned, we recommend that you report this to the vendor of the [Identity Provider](#identity-providers) you are using, as this is also likely to cause problems with other software. In a future release, we may offer additional [config options](#config-options) to work around this issue, e.g. by generating a random username. However, this is currently not possible.
+
+[Learn more ›](#preferred-username)
+
+[^1]: `PHOTOPRISM_OIDC_REGISTER` must be set to `"true"` to allow new users to create an account via OpenID Connect.
+[^2]: The `email_verified` flag must be set by the [Identity Provider](#identity-providers) so that the email address can be used to send notifications and/or confirm the identity of users. If we do not insist on verification, this could otherwise have a negative impact on trust and security.
+[^3]: Admins are unable to change the authentication method of their own user account through the [Admin Web UI](../../user-guide/users/index.md#editing-user-details), so they cannot accidentally lock themselves out e.g. by setting it to *None*.

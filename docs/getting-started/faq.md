@@ -506,15 +506,15 @@ PhotoPrism offers support for secure single sign-on via [OpenID Connect (OIDC)](
 
 ### Is it possible to set a default role for new OpenID Connect users?
 
-For security reasons, our [Personal Editions](https://www.photoprism.app/editions#compare) currently default to the [Guest](../user-guide/users/roles.md#guest) role, which admins can then upgrade after checking the eligibility of newly registered accounts.
+For security reasons, our [Personal Editions](https://www.photoprism.app/editions#compare) currently default to the [Guest](../user-guide/users/roles.md#guest) role, which admins can then upgrade after checking the eligibility of newly registered[^1] accounts.
 
 [Learn more ›](advanced/openid-connect.md#frequently-asked-questions)
 
 ### Can I configure a custom claim as the preferred OIDC username?
 
-You can choose between `preferred_username`, `name`, `nickname` and `email`, where `preferred_username` is the default. The other claims are used as fallback if no value is returned for the [configured claim](advanced/openid-connect.md#config-options).
+You can choose between `preferred_username`, `name`, `nickname` and verified[^2] `email`, where `preferred_username` is the default. The other claims are used as fallback if no value is returned for the [configured claim](advanced/openid-connect.md#config-options).
 
-Please note that it is currently not possible to use [other standard](https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims) or non-standard claims, as these may not be suitable for generating a username and no logic is implemented for doing so.
+Please note that it is currently not possible to use [other standard](https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims) or non-standard claims, as these may not be suitable for [generating a username](advanced/openid-connect.md#preferred-username) and no logic is implemented for doing so.
 
 [Learn more ›](advanced/openid-connect.md#frequently-asked-questions)
 
@@ -526,6 +526,9 @@ Please read this documentation and [determine the cause of your problem](https:/
 
 !!! info "Professional Users"
     The [feature set](https://www.photoprism.app/editions#compare) and [support options](https://www.photoprism.app/kb/getting-support) of our *Community Edition* are intended for personal use. Enterprise users are welcome to [contact us](https://www.photoprism.app/contact) for a [commercial license](https://www.photoprism.app/teams#compare) and [professional services](https://www.photoprism.app/pro/support).
+
+[^1]: `PHOTOPRISM_OIDC_REGISTER` must be set to `"true"` to allow new users to create an account via OpenID Connect.
+[^2]: The `email_verified` flag must be set by the [Identity Provider](advanced/openid-connect.md#identity-providers) so that the email address can be used to send notifications and/or confirm the identity of users. If we do not insist on verification, this could have a negative impact on trust and security.
 
 *[OSM]: OpenStreetMap
 *[OSS]: Open-Source Software

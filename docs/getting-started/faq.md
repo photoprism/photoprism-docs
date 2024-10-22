@@ -528,7 +528,7 @@ Please read this documentation and [determine the cause of your problem](https:/
     The [feature set](https://www.photoprism.app/editions#compare) and [support options](https://www.photoprism.app/kb/getting-support) of our *Community Edition* are intended for personal use. Enterprise users are welcome to [contact us](https://www.photoprism.app/contact) for a [commercial license](https://www.photoprism.app/teams#compare) and [professional services](https://www.photoprism.app/pro/support).
 
 [^1]: `PHOTOPRISM_OIDC_REGISTER` must be set to `"true"` to allow new users to create an account via OpenID Connect.
-[^2]: The `email_verified` flag must be set by the [Identity Provider](advanced/openid-connect.md#identity-providers) so that the email address can be used to send notifications and/or confirm the identity of users. If we do not insist on verification, this could have a negative impact on trust and security.
+[^2]: The `email_verified` flag must be set by the [OIDC Identity Provider](advanced/openid-connect.md#identity-providers) so that the email address can be used to send notifications and/or confirm the identity of users. If we do not insist on verification, this could otherwise have a negative impact on trust and security.
 
 *[OSM]: OpenStreetMap
 *[OSS]: Open-Source Software

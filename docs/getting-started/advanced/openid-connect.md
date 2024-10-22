@@ -128,5 +128,5 @@ If only an unverified `email` address[^2] or none of [these claims](#can-i-confi
 [Learn more ›](#preferred-username)
 
 [^1]: `PHOTOPRISM_OIDC_REGISTER` must be set to `"true"` to allow new users to create an account via OpenID Connect.
-[^2]: The `email_verified` flag must be set by the [OIDC Identity Provider](#identity-providers) so that the email address can be used to send notifications and/or confirm the identity of users. If we do not insist on verification, this could otherwise have a negative impact on trust and security.
+[^2]: The `email_verified` flag must be set by the [OIDC Identity Provider](#identity-providers) so that the `email` address can be used to send notifications and/or confirm the identity of users. If we do not insist on verification, this could otherwise have a negative impact on trust and security.
 [^3]: Admins are unable to change the authentication method of their own user account through the [Admin Web UI](../../user-guide/users/index.md#editing-user-details), so they cannot accidentally lock themselves out e.g. by setting it to *None*.

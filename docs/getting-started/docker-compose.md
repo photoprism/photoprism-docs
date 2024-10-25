@@ -384,4 +384,4 @@ The currently supported user ID ranges are 0, 33, 50-99, 500-600, 900-1250, and 
 *[RHEL]: Red Hat Enterprise Linux®
 
 [^1]: The default name for [Docker Compose](https://docs.docker.com/compose/) configuration files is `compose.yaml`. For simplicity, it does not need to be specified if you are running commands in the same directory. Config files for other applications and instances should be placed in separate folders.
-[^2]: With the latest version of [Docker Compose](https://docs.docker.com/compose/), the [default file name](https://docs.docker.com/compose/intro/compose-application-model/#the-compose-file) is `compose.yaml`, although the [`docker compose` command](troubleshooting/docker.md#docker-compose) still supports legacy `docker-compose.yml` files for backward compatibility.
+[^2]: With the latest version of [Docker Compose](https://docs.docker.com/compose/), the [default config file name](https://docs.docker.com/compose/intro/compose-application-model/#the-compose-file) is `compose.yaml`, although the [`docker compose` command](troubleshooting/docker.md#docker-compose) still supports legacy `docker-compose.yml` files for backward compatibility.

@@ -74,7 +74,7 @@ In the build environment, the default login is `admin` with the password `photop
 ./photoprism --public start
 ```
 
-You can find the default settings in [the `compose.yaml` or `docker-compose.yml` file](https://github.com/photoprism/photoprism/blob/develop/docker-compose.yml) located in the root of the project. Keep them when [you run tests](tests.md). Otherwise, the tests may fail for others, even if they [succeed in your local environment](code-quality.md#test-automation-guidelines).
+You can find the default settings in [the `compose.yaml` file](https://github.com/photoprism/photoprism/blob/develop/compose.yaml) located in the root of the project. Keep them when [you run tests](tests.md). Otherwise, the tests may fail for others, even if they [succeed in your local environment](code-quality.md#test-automation-guidelines).
 
 !!! example ""
     You can find a list of all `make` targets in the [Makefile](https://github.com/photoprism/photoprism/blob/develop/Makefile).

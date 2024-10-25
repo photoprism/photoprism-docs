@@ -9,12 +9,12 @@ Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is sup
 
 === "Linux"
 
-    Download our [docker-compose.yml](https://dl.photoprism.app/docker/docker-compose.yml) example
+    Download our [compose.yaml](https://dl.photoprism.app/docker/compose.yaml) example
     (right click and *Save Link As...* or use `wget`) to a folder of your choice,
     and change the [configuration](config-options.md) as needed:
     
     ```bash
-    wget https://dl.photoprism.app/docker/docker-compose.yml
+    wget https://dl.photoprism.app/docker/compose.yaml
     ``` 
     
     Commands on Linux may have to be prefixed with `sudo` when not running as root.
@@ -48,12 +48,12 @@ Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is sup
 
 === "Raspberry Pi"
 
-    Download our [docker-compose.yml](https://dl.photoprism.app/docker/arm64/docker-compose.yml) example for 
+    Download our [compose.yaml](https://dl.photoprism.app/docker/arm64/compose.yaml) example for 
     the [Raspberry Pi](raspberry-pi.md) and other ARM64-based devices (right click and *Save Link As...* or use `wget`) to a folder of your choice,
     and change the [configuration](config-options.md) as needed:
     
     ```bash
-    wget https://dl.photoprism.app/docker/arm64/docker-compose.yml
+    wget https://dl.photoprism.app/docker/arm64/compose.yaml
     ```
 
     Mostly the same installation instructions as for regular Linux servers apply.
@@ -64,12 +64,12 @@ Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is sup
 
 === "ARMv7"
 
-    Download our [docker-compose.yml](https://dl.photoprism.app/docker/armv7/docker-compose.yml) example for 
+    Download our [compose.yaml](https://dl.photoprism.app/docker/armv7/compose.yaml) example for 
     older ARMv7-based devices (right click and *Save Link As...* or use `wget`) to a folder of your choice,
     and change the [configuration](config-options.md) as needed:
     
     ```bash
-    wget https://dl.photoprism.app/docker/armv7/docker-compose.yml
+    wget https://dl.photoprism.app/docker/armv7/compose.yaml
     ```
 
     Mostly the same installation instructions as for regular Linux servers apply.
@@ -80,10 +80,10 @@ Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is sup
 
 === "Windows"
 
-    Download our [docker-compose.yml](https://dl.photoprism.app/docker/windows/docker-compose.yml) example for Windows
+    Download our [compose.yaml](https://dl.photoprism.app/docker/windows/compose.yaml) example for Windows
     (right click and *Save Link As...*) to a folder of your choice, and change the [configuration](config-options.md) as needed:
  
-    [https://dl.photoprism.app/docker/windows/docker-compose.yml](https://dl.photoprism.app/docker/windows/docker-compose.yml) :material-download:
+    [https://dl.photoprism.app/docker/windows/compose.yaml](https://dl.photoprism.app/docker/windows/compose.yaml) :material-download:
 
     It is important to [increase the Docker memory limit](img/docker-resources-advanced.jpg) to 4 GB or more when using *Hyper-V*. The default of 2 GB can reduce indexing performance and cause unexpected restarts. Also make sure you configure at least 4 GB of swap space. [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/) uses dynamic memory allocation with *WSL 2*, meaning you do not need to change any memory-related settings (depending on which version of Windows and Docker you are using).
 
@@ -101,10 +101,10 @@ Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is sup
 
 === "macOS"
 
-    Download our [docker-compose.yml](https://dl.photoprism.app/docker/macos/docker-compose.yml) example for macOS
+    Download our [compose.yaml](https://dl.photoprism.app/docker/macos/compose.yaml) example for macOS
     (right click and *Save Link As...*) to a folder of your choice, and change the [configuration](config-options.md) as needed:
 
-    [https://dl.photoprism.app/docker/macos/docker-compose.yml](https://dl.photoprism.app/docker/macos/docker-compose.yml) :material-download:
+    [https://dl.photoprism.app/docker/macos/compose.yaml](https://dl.photoprism.app/docker/macos/compose.yaml) :material-download:
     
     It is important to [increase the Docker memory limit to 4 GB](img/docker-resources-advanced.jpg) or more,
     as the default of 2 GB can reduce indexing performance and cause unexpected restarts.
@@ -169,10 +169,7 @@ On Windows, prefix the host path with the drive letter and use `/` instead of `\
 ```
 
 !!! tldr ""
-    If *read-only mode* is enabled, all features that require write permission to the *originals* folder 
-    are disabled, e.g. [WebDAV](../user-guide/sync/webdav.md), uploading and deleting files. Set `PHOTOPRISM_READONLY` to `"true"`
-    in `docker-compose.yml` for this. In addition, you can [mount volumes with the `:ro` flag](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-3)
-    so that writes are also blocked by Docker.
+    When *read-only mode* is enabled, all features that require write permission to the *originals* folder are disabled, e.g. [WebDAV](../user-guide/sync/webdav.md), uploading and deleting files. To do this, set `PHOTOPRISM_READONLY` to `"true"` in the `environment` section of your `compose.yaml`[^2] file. You can additionally [mount volumes with the `:ro` flag](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-3) so that writes are also blocked by Docker.
 
 ##### /photoprism/storage
 
@@ -217,10 +214,7 @@ docker compose up -d
 
 *Note that our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible distributions.*
 
-Now open the Web UI by navigating to http://localhost:2342/. You should see a login screen.
-Sign in with the user `admin` and the initial password configured via `PHOTOPRISM_ADMIN_PASSWORD`.
-You may change it on the [account settings page](../user-guide/settings/account.md).
-Enabling [public mode](config-options.md) will disable authentication.
+Now open the Web UI by navigating to http://localhost:2342/. You should see a login screen. Sign in with the user `admin` and the initial password configured via `PHOTOPRISM_ADMIN_PASSWORD`. You may change it on the [account settings page](../user-guide/settings/account.md). Enabling [public mode](config-options.md) will disable authentication.
 
 !!! info ""
     It can be helpful to [keep Docker running in the foreground while debugging](troubleshooting/docker.md#viewing-logs) so that log messages are displayed directly. To do this, omit the `-d` parameter when restarting.
@@ -232,7 +226,7 @@ Enabling [public mode](config-options.md) will disable authentication.
 !!! tldr ""
     You cannot change the password with `PHOTOPRISM_ADMIN_PASSWORD` after the app has been started for the first time. To change the *admin* password, run the `docker compose exec photoprism photoprism passwd [username]` command in a terminal. You can also run `docker compose exec photoprism photoprism reset` to delete the existing index database and start from scratch.
 
-The server port and other [config options](config-options.md) can be changed in `docker-compose.yml` at any time.
+The server port and other [config options](config-options.md) can be changed in `compose.yaml`[^2] at any time.
 Remember to restart the services for changes to take effect:
 
 ```bash
@@ -279,7 +273,7 @@ Our members can activate [additional features](https://link.photoprism.app/membe
 
 If your server runs out of memory, the index is frequently locked, or other system resources are running low:
 
-- [ ] Try [reducing the number of workers](config-options.md#indexing) by setting `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml`, depending on the CPU performance and number of cores
+- [ ] Try [reducing the number of workers](config-options.md#indexing) by setting `PHOTOPRISM_WORKERS` to a reasonably small value in `compose.yaml`, depending on the CPU performance and number of cores
 - [ ] Ensure that your server has [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured and avoid setting a [hard memory limit](faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory) as this can cause unexpected restarts when the indexer temporarily needs more memory to process large files
 - [ ] If you are using SQLite, switch to MariaDB, which is [better optimized for high concurrency](faq.md#should-i-use-sqlite-mariadb-or-mysql)
 - [ ] As a last measure, you can [disable the use of TensorFlow](config-options.md#feature-flags) for image classification and facial recognition
@@ -389,4 +383,5 @@ The currently supported user ID ranges are 0, 33, 50-99, 500-600, 900-1250, and 
 *[filesystem]: contains your files and folders
 *[RHEL]: Red Hat Enterprise Linux®
 
-[^1]: The default name for [Docker Compose](https://docs.docker.com/compose/) config files is `compose.yaml` or `docker-compose.yml`. For simplicity, it does not need to be specified if you run commands in the same directory. Config files for other apps and instances should be placed in separate folders.
+[^1]: The default name for [Docker Compose](https://docs.docker.com/compose/) configuration files is `compose.yaml`. For simplicity, it does not need to be specified if you are running commands in the same directory. Config files for other applications and instances should be placed in separate folders.
+[^2]: With the latest version of [Docker Compose](https://docs.docker.com/compose/), the [default configuration filename](https://docs.docker.com/compose/intro/compose-application-model/) is `compose.yaml`, although the `docker compose` command still supports legacy `docker-compose.yml` files for backward compatibility.

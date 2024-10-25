@@ -22,32 +22,31 @@ This is an example of how to set it up using duckdns and docker-compose.
 
 !!! example "compose.yaml"
     ```yaml
-	version: "2.1"
 	services:
-	 swag:
-   	 image: ghcr.io/linuxserver/swag
-   	 container_name: swag
-    		cap_add:
-     		- NET_ADMIN
-   		environment:
-      		- PUID=1000
-      		- PGID=1000
-      		- TZ=Europe/Brussels
-      		- URL=<mydomain.duckdns>
-      		- SUBDOMAINS=wildcard
-      		- VALIDATION=duckdns
-      		- CERTPROVIDER= #optional
-      		- DNSPLUGIN= #optional
-      		- DUCKDNSTOKEN=<duckdnstoken> 
-      		- EMAIL=<e-mail> #optional
-      		- ONLY_SUBDOMAINS=false #optional
-      		- EXTRA_DOMAINS=<extradomains> #optional
-      		- STAGING=false #optional
-    		volumes:
-      		- /etc/config/swag:/config
-    		ports:
-      		- 443:443
+	    swag:
+   	        image: ghcr.io/linuxserver/swag
+   	        container_name: swag
     		restart: unless-stopped
+    		ports:
+      		    - 443:443
+    		cap_add:
+     		    - NET_ADMIN
+   		    environment:
+                - PUID=1000
+                - PGID=1000
+                - TZ=Europe/Brussels
+                - URL=<mydomain.duckdns>
+                - SUBDOMAINS=wildcard
+                - VALIDATION=duckdns
+                - CERTPROVIDER= #optional
+                - DNSPLUGIN= #optional
+                - DUCKDNSTOKEN=<duckdnstoken> 
+                - EMAIL=<e-mail> #optional
+                - ONLY_SUBDOMAINS=false #optional
+                - EXTRA_DOMAINS=<extradomains> #optional
+                - STAGING=false #optional
+    	    volumes:
+      		    - /etc/config/swag:/config
     ```
 
 Don't forget to change the <code>mydomain.duckdns</code> into your personal domain and the <code>duckdnstoken</code> into your token and remove the brackets.
@@ -79,7 +78,7 @@ Alternatively, you can create a new file <code>photoprism.subdomain.conf</code> 
         	set $upstream_port 2342;
         	set $upstream_proto http;
         	proxy_pass $upstream_proto://$upstream_app:$upstream_port;
-    		}
+    	}
 
 	}	
     ```
@@ -94,11 +93,7 @@ When you change anything in the config of Nginx, you will need to restart the co
 If everything went well, you can now access photoprism on the subdomain you configured: photoprism.mydomain.duckdns.org
 
 !!! attention
-    The docker-container of photoprism won't be named "photoprism", it will be "name_photoprism".
-    To check this, execute <code>docker ps</code> and check wether it is named "photoprism".
-    If it's not, go to your docker-compose.yml file and add the following line to photoprism below 'image' <code>container_name=photoprism</code>. Restart swag afterwards.
-    <b>Keep in mind to not have two photoprism containers with the same name!</b> 
-    You could also change the config file of Swag with the right name in the proxy-confs directory.
+    PhotoPrism's container name will by default be prefixed with the directory name e.g. "photoprism-photoprism-1", so that it is not just "photoprism". To check this, run `docker ps` and see if it is "photoprism". If not, go to your `compose.yaml` file and add the following line to photoprism under `image`: `container_name: photoprism`. Then restart swag. Note, however, that you may not have two containers with the same name. If you are running multiple instances, you can change the container name in the swag config file in the proxy-confs directory.
 
 ## Why Use a Proxy? ##
 

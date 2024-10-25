@@ -15,7 +15,7 @@ As a Raspberry Pi owner, you therefore get the exact same functionality and can 
 - Ensure that your device has [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured and avoid setting a [hard memory limit](faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory) as this can cause unexpected restarts when the indexer temporarily needs more memory to process large files
 - Indexing RAW images and high-resolution panoramas may require additional [swap space](troubleshooting/docker.md#adding-swap) and/or physical memory beyond the recommended minimum; RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory
 - You should [enable HTTPS](using-https.md#how-to-enable-https) or run your server behind a [secure HTTPS reverse proxy like Traefik](proxies/traefik.md) if it is connected to a shared network or the public Internet
-- Depending on the Linux distribution, you may need to set the following [security options](troubleshooting/docker.md#kernel-security) in your [docker-compose.yml](https://dl.photoprism.app/docker/arm64/docker-compose.yml):
+- Depending on the Linux distribution, you may need to set the following [security options](troubleshooting/docker.md#kernel-security) in your [compose.yaml](https://dl.photoprism.app/docker/arm64/compose.yaml):
   ```yaml
   photoprism:
     security_opt:
@@ -90,7 +90,7 @@ Note, however, that [initial indexing usually takes much longer](../user-guide/f
 
 ### Getting Updates ###
 
-Open a terminal and change to the folder where your `compose.yaml` or `docker-compose.yml` file is located.[^3]
+Open a terminal and change to the folder where your `compose.yaml` file is located.[^3]
 Now run the following commands to download the newest image from Docker Hub and
 restart your instance in the background:
 
@@ -111,7 +111,7 @@ to learn more about terminal commands.
 
 #### Config Examples ####
 
-We recommend that you compare your own `docker-compose.yml` with [our latest examples](https://dl.photoprism.app/docker/) from time to time, as they may include new [config options](config-options.md) or other enhancements relevant to you.
+We recommend that you compare your own `compose.yaml` with [our latest examples](https://dl.photoprism.app/docker/) from time to time, as they may include new [config options](config-options.md) or other enhancements relevant to you.
 
 #### MariaDB Server ####
 
@@ -125,7 +125,7 @@ This does not mean [older versions](index.md#databases) are no longer supported 
 
 If your device runs out of memory, the index is frequently locked, or other system resources are running low:
 
-- [ ] Try [reducing the number of workers](config-options.md#indexing) by setting `PHOTOPRISM_WORKERS` to a reasonably small value in `docker-compose.yml`, depending on the performance of your device
+- [ ] Try [reducing the number of workers](config-options.md#indexing) by setting `PHOTOPRISM_WORKERS` to a reasonably small value in `compose.yaml`, depending on the performance of your device
 - [ ] Ensure that your device has [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured and avoid setting a [hard memory limit](faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory) as this can cause unexpected restarts when the indexer temporarily needs more memory to process large files
 - [ ] If you are using SQLite, switch to MariaDB, which is [better optimized for high concurrency](faq.md#should-i-use-sqlite-mariadb-or-mysql)
 - [ ] As a last measure, you can [disable the use of TensorFlow](config-options.md#feature-flags) for image classification and facial recognition
@@ -139,7 +139,7 @@ Other issues? Our [troubleshooting checklists](troubleshooting/index.md) help yo
 
 [^1]: Experienced users can [alternatively use the packages](faq.md#installation-packages) at [dl.photoprism.app/pkg/linux/](https://dl.photoprism.app/pkg/linux/README.html) to manually install PhotoPrism on compatible Linux distributions. For more installation methods, see our [Getting Started FAQ](faq.md#how-can-i-install-photoprism-without-docker).
 [^2]: Since our current [MicroSD image](raspberry-pi/microsd-image.md) is based on Ubuntu 22.04 LTS, it is not yet compatible with the Raspberry Pi 5, which [requires Ubuntu 23.10](https://ubuntu.com/download/raspberry-pi) or later. An updated image will be provided as soon as possible.
-[^3]: The default [Docker Compose](https://docs.docker.com/compose/) config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running `docker compose` or `docker-compose` in the same directory. Config files for other apps or instances should be placed in separate folders.
+[^3]: The default [Docker Compose](https://docs.docker.com/compose/) config filename is `compose.yaml`. For simplicity, it doesn't need to be specified when running `docker compose` or `docker-compose` in the same directory. Config files for other apps or instances should be placed in separate folders.
 
 *[Raspbian]: Raspberry Pi OS
 *[Apple Silicon]: Apple M1 and M2

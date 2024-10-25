@@ -2,9 +2,8 @@
 
 ### Docker Compose
 
-Open a terminal and change to the folder where your `compose.yaml` or `docker-compose.yml` file is located.[^1]
-Now run the following commands to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and
-restart your instance in the background:
+Open a terminal and change to the folder where your `compose.yaml` file is located.[^1]
+Now run the following commands to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance in the background:
 
 ```
 docker compose pull
@@ -16,16 +15,14 @@ docker compose up -d
 
 Pulling a new version can take several minutes, depending on your internet connection speed.
 
-Advanced users can [add this to a `Makefile`](https://dl.photoprism.app/docker/Makefile) so that they only have to type a single 
-command like `make update`. See [Command-Line Interface](docker-compose.md#command-line-interface)
-to learn more about terminal commands.
+Advanced users can [add this to a `Makefile`](https://dl.photoprism.app/docker/Makefile) so that they only have to type a single command like `make update`. See [Command-Line Interface](docker-compose.md#command-line-interface) to learn more about terminal commands.
 
 !!! tldr ""
     Even when you use an image with the `:latest` tag, Docker does not automatically download new images for you. You can either manually upgrade as shown above, or set up a service like [Watchtower](#watchtower) to get automatic updates.
 
 #### Config Examples
 
-We recommend that you compare your own `docker-compose.yml` with [our latest examples](https://dl.photoprism.app/docker/) from time to time, as they may include new [config options](config-options.md) or other enhancements relevant to you.
+We recommend that you compare your own `compose.yaml` with [our latest examples](https://dl.photoprism.app/docker/) from time to time, as they may include new [config options](config-options.md) or other enhancements relevant to you.
 
 #### Development Preview
 
@@ -41,8 +38,7 @@ docker compose up -d
 
 #### Watchtower
 
-Adding [Watchtower](https://github.com/containrrr/watchtower) as a service to your `compose.yaml` or `docker-compose.yml` will
-automatically keep images up-to-date:
+Adding [Watchtower](https://github.com/containrrr/watchtower) as a service to your `compose.yaml` or `docker-compose.yml` will automatically keep images up-to-date:
 
 ```yaml
 services:
@@ -157,4 +153,4 @@ To reduce startup time, do not set `PHOTOPRISM_INIT` to avoid running additional
 !!! tldr ""
     If your instance doesn't start even after waiting for some time, our [Troubleshooting Checklists](troubleshooting/index.md#connection-fails) help you quickly diagnose and solve the problem.
 
-[^1]: The default [Docker Compose](https://docs.docker.com/compose/) config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running `docker compose` or `docker-compose` in the same directory. Config files for other apps or instances should be placed in separate folders.
+[^1]: With the latest version of [Docker Compose](https://docs.docker.com/compose/), the [default configuration filename](https://docs.docker.com/compose/intro/compose-application-model/) is `compose.yaml`, although the [`docker compose` command](troubleshooting/docker.md#docker-compose) still supports legacy `docker-compose.yml` files for backward compatibility.

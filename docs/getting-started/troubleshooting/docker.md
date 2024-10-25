@@ -49,6 +49,9 @@ echo 'docker compose "$@"' | sudo tee /bin/docker-compose
 sudo chmod +x /bin/docker-compose
 ```
 
+!!! note ""
+    With the latest version of [Docker Compose](https://docs.docker.com/compose/), the [default configuration filename](https://docs.docker.com/compose/intro/compose-application-model/) is `compose.yaml`, although the `docker compose` command still supports legacy `docker-compose.yml` files for backward compatibility.
+
 ### Podman Compose
 
 On Red Hat-compatible Linux distributions like RHEL, CentOS, Fedora, AlmaLinux, and Rocky Linux, you can use [Podman](https://podman.io/) and [Podman Compose](https://docs.podman.io/en/latest/markdown/podman-compose.1.html) as direct replacements for Docker and Docker Compose. The following installs the `podman` and `podman-compose` commands if they are not already installed:
@@ -174,7 +177,7 @@ docker compose up
     or other tools you may have installed.
 
 !!! tldr ""
-    The default [Docker Compose](https://docs.docker.com/compose/) config filename is `docker-compose.yml`. For simplicity, it doesn't need to be specified when running `docker compose` or `docker-compose` in the same directory. Config files for other apps or instances should be placed in separate folders.
+    The default [Docker Compose](https://docs.docker.com/compose/) config filename is `compose.yaml`. For simplicity, it doesn't need to be specified when running `docker compose` or `docker-compose` in the same directory. Config files for other apps or instances should be placed in separate folders.
 
 ## Adding Swap
 
@@ -319,7 +322,7 @@ Please note that the required system dependencies must be installed on your comp
 
 ### Unix / NFS
 
-Follow this `docker-compose.yml` example to mount Network File System (NFS) shares e.g. from Unix servers or NAS devices:
+Follow this `compose.yaml` example to mount Network File System (NFS) shares e.g. from Unix servers or NAS devices:
 
 ```yaml
 services:
@@ -360,7 +363,7 @@ When you are done, please [restart all services](../docker-compose.md#step-2-sta
 
 ### SMB / CIFS
 
-Follow this `docker-compose.yml` example to mount [CIFS network shares](https://en.wikipedia.org/wiki/Server_Message_Block), e.g. **from Windows**, NAS devices or Linux servers with [Samba](https://www.samba.org/):
+Follow this `compose.yaml` example to mount [CIFS network shares](https://en.wikipedia.org/wiki/Server_Message_Block), e.g. **from Windows**, NAS devices or Linux servers with [Samba](https://www.samba.org/):
 
 ```yaml
 services:

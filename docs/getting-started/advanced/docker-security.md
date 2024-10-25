@@ -50,7 +50,7 @@ docker compose up -d
 
 ## Remove Passwords From the Environment
 
-Passwords specified directly in a  `docker-compose.yml` file or otherwise passed to the container environment may pose a security risk. As an alternative, they can be set in an [options.yml](../config-files/index.md) file located in the _config_ [storage folder](../docker-compose.md#photoprismstorage):
+Passwords specified directly in a  `compose.yaml` file or otherwise passed to the container environment may pose a security risk. As an alternative, they can be set in an [options.yml](../config-files/index.md) file located in the _config_ [storage folder](../docker-compose.md#photoprismstorage):
 
 ```yaml
 AdminPassword: "my super secret password"

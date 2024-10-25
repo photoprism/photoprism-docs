@@ -1,4 +1,4 @@
-Open a terminal and type `photoprism start` to start the built-in server. It will listen on [localhost:2342](http://localhost:2342/) by default, see [docker-compose.yml](https://github.com/photoprism/photoprism/blob/develop/docker-compose.yml) and [Configuration](../configuration.md).
+Open a terminal and type `photoprism start` to start the built-in server. It will listen on [localhost:2342](http://localhost:2342/) by default, see [compose.yaml](https://github.com/photoprism/photoprism/blob/develop/compose.yaml) and [Configuration](../configuration.md).
 
 ## Frameworks ##
 

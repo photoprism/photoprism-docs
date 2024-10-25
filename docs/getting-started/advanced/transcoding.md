@@ -147,7 +147,7 @@ docker compose up -d
 ```
 
 !!! info ""
-    We also provide a [ready-to-use `docker-compose.yml` example](https://dl.photoprism.app/docker/nvidia/docker-compose.yml) for your convenience.
+    We also provide a [ready-to-use `compose.yaml` example](https://dl.photoprism.app/docker/nvidia/compose.yaml) for your convenience.
     Note that older hardware may not support certain [video codecs and resolutions](https://en.wikipedia.org/wiki/Nvidia_NVENC#Versions).
 
 ### Raspberry Pi

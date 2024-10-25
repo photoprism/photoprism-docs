@@ -24,7 +24,7 @@ services:
 
 First, verify that you are using the correct port (default is `3306`) and host:
 
-- in the internal Docker network, the default hostname is `mariadb` (same as the [service](https://dl.photoprism.app/docker/docker-compose.yml))
+- in the internal Docker network, the default hostname is `mariadb` (same as the [service](https://dl.photoprism.app/docker/compose.yaml))
 - avoid changing the default network configuration, unless you are experienced with this
 - avoid using IP addresses other than `127.0.0.1` (localhost) directly, as [they can change](https://github.com/photoprism/photoprism/discussions/2791#discussioncomment-3985376)
 - only use `localhost` or `127.0.0.1` if the database port [has been exposed](https://docs.docker.com/compose/compose-file/compose-file-v3/#ports) as described below and you are on the same computer (host)
@@ -105,7 +105,7 @@ the `photoprism restore` command.
 
 ### Auto Upgrade
 
-To enable automatic schema updates, set `MARIADB_AUTO_UPGRADE` to a non-empty value in your `compose.yaml` or `docker-compose.yml` as shown in our [config example](https://dl.photoprism.app/docker/docker-compose.yml):
+To enable automatic schema updates, set `MARIADB_AUTO_UPGRADE` to a non-empty value in your `compose.yaml` or `docker-compose.yml` as shown in our [config example](https://dl.photoprism.app/docker/compose.yaml):
 
 ```yaml
 services:
@@ -234,7 +234,7 @@ When moving MariaDB to another computer, cloud server, or virtual machine:
 ## Unicode Support
 
 If the logs show "incorrect string value" database errors and you are running a custom MariaDB or MySQL
-server that is not based on our [default configuration](https://dl.photoprism.app/docker/docker-compose.yml):
+server that is not based on our [default configuration](https://dl.photoprism.app/docker/compose.yaml):
 
 - [ ] Full [Unicode](https://home.unicode.org/basic-info/faq/) support [must be enabled](https://mariadb.com/kb/en/setting-character-sets-and-collations/#example-changing-the-default-character-set-to-utf-8), e.g. using the `mysqld` command parameters `--character-set-server=utf8mb4` and `--collation-server=utf8mb4_unicode_ci`
 - [ ] Note that an existing database may use a different character set if you imported it from another server

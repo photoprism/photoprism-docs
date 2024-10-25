@@ -93,9 +93,7 @@ be mounted as sub folders of `/photoprism/originals`:
 ``` 
 
 !!! tldr ""
-    If *read-only mode* is enabled, all features that require write permission to the *originals* folder
-    are disabled, e.g. [WebDAV](../user-guide/sync/webdav.md), uploading and deleting files. Run the app with `-e PHOTOPRISM_READONLY="true"` 
-    for this. You can [mount a folder with the `:ro` flag](https://docs.docker.com/storage/bind-mounts/#use-a-read-only-bind-mount) to make Docker block write operations as well.
+    When *read-only mode* is enabled, all features that require write permission to the *originals* folder are disabled, e.g. [WebDAV](../user-guide/sync/webdav.md), uploading and deleting files. To do this, add the `-e PHOTOPRISM_READONLY="true"` command flag. You can additionally [mount volumes with the `:ro` flag](https://docs.docker.com/storage/bind-mounts/#use-a-read-only-bind-mount) so that writes are also blocked by Docker.
 
 ##### /photoprism/storage
 

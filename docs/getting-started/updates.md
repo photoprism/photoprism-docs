@@ -153,4 +153,4 @@ To reduce startup time, do not set `PHOTOPRISM_INIT` to avoid running additional
 !!! tldr ""
     If your instance doesn't start even after waiting for some time, our [Troubleshooting Checklists](troubleshooting/index.md#connection-fails) help you quickly diagnose and solve the problem.
 
-[^1]: With the latest version of [Docker Compose](https://docs.docker.com/compose/), the [default configuration filename](https://docs.docker.com/compose/intro/compose-application-model/) is `compose.yaml`, although the [`docker compose` command](troubleshooting/docker.md#docker-compose) still supports legacy `docker-compose.yml` files for backward compatibility.
+[^1]: With the latest version of [Docker Compose](https://docs.docker.com/compose/), the [default file name](https://docs.docker.com/compose/intro/compose-application-model/#the-compose-file) is `compose.yaml`, although the [`docker compose` command](troubleshooting/docker.md#docker-compose) still supports legacy `docker-compose.yml` files for backward compatibility.

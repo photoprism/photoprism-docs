@@ -50,7 +50,7 @@ sudo chmod +x /bin/docker-compose
 ```
 
 !!! note ""
-    With the latest version of [Docker Compose](https://docs.docker.com/compose/), the [default configuration filename](https://docs.docker.com/compose/intro/compose-application-model/) is `compose.yaml`, although the `docker compose` command still supports legacy `docker-compose.yml` files for backward compatibility.
+    With the latest version of [Docker Compose](https://docs.docker.com/compose/), the [default file name](https://docs.docker.com/compose/intro/compose-application-model/#the-compose-file) is `compose.yaml`, although the `docker compose` command still supports legacy `docker-compose.yml` files for backward compatibility.
 
 ### Podman Compose
 

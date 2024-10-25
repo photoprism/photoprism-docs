@@ -169,7 +169,7 @@ On Windows, prefix the host path with the drive letter and use `/` instead of `\
 ```
 
 !!! tldr ""
-    When *read-only mode* is enabled, all features that require write permission to the *originals* folder are disabled, e.g. [WebDAV](../user-guide/sync/webdav.md), uploading and deleting files. To do this, set `PHOTOPRISM_READONLY` to `"true"` in the `environment` section of your `compose.yaml`[^2] file. You can additionally [mount volumes with the `:ro` flag](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-3) so that writes are also blocked by Docker.
+    When *read-only mode* is enabled, all features that require write permission to the *originals* folder are disabled, e.g. [WebDAV](../user-guide/sync/webdav.md), uploading and deleting files. To do this, set `PHOTOPRISM_READONLY` to `"true"` in the `environment` section of your `compose.yaml` file.[^2] You can additionally [mount volumes with the `:ro` flag](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-3) so that writes are also blocked by Docker.
 
 ##### /photoprism/storage
 
@@ -226,7 +226,7 @@ Now open the Web UI by navigating to http://localhost:2342/. You should see a lo
 !!! tldr ""
     You cannot change the password with `PHOTOPRISM_ADMIN_PASSWORD` after the app has been started for the first time. To change the *admin* password, run the `docker compose exec photoprism photoprism passwd [username]` command in a terminal. You can also run `docker compose exec photoprism photoprism reset` to delete the existing index database and start from scratch.
 
-The server port and other [config options](config-options.md) can be changed in `compose.yaml`[^2] at any time.
+The server port and other [config options](config-options.md) can be changed in your `compose.yaml` file[^2] at any time.
 Remember to restart the services for changes to take effect:
 
 ```bash
@@ -273,7 +273,7 @@ Our members can activate [additional features](https://link.photoprism.app/membe
 
 If your server runs out of memory, the index is frequently locked, or other system resources are running low:
 
-- [ ] Try [reducing the number of workers](config-options.md#indexing) by setting `PHOTOPRISM_WORKERS` to a reasonably small value in `compose.yaml`, depending on the CPU performance and number of cores
+- [ ] Try [reducing the number of workers](config-options.md#indexing) by setting `PHOTOPRISM_WORKERS` to a reasonably small value in your `compose.yaml` file, depending on the CPU performance and number of cores
 - [ ] Ensure that your server has [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured and avoid setting a [hard memory limit](faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory) as this can cause unexpected restarts when the indexer temporarily needs more memory to process large files
 - [ ] If you are using SQLite, switch to MariaDB, which is [better optimized for high concurrency](faq.md#should-i-use-sqlite-mariadb-or-mysql)
 - [ ] As a last measure, you can [disable the use of TensorFlow](config-options.md#feature-flags) for image classification and facial recognition
@@ -384,4 +384,4 @@ The currently supported user ID ranges are 0, 33, 50-99, 500-600, 900-1250, and 
 *[RHEL]: Red Hat Enterprise Linux®
 
 [^1]: The default name for [Docker Compose](https://docs.docker.com/compose/) configuration files is `compose.yaml`. For simplicity, it does not need to be specified if you are running commands in the same directory. Config files for other applications and instances should be placed in separate folders.
-[^2]: With the latest version of [Docker Compose](https://docs.docker.com/compose/), the [default configuration filename](https://docs.docker.com/compose/intro/compose-application-model/) is `compose.yaml`, although the [`docker compose` command](troubleshooting/docker.md#docker-compose) still supports legacy `docker-compose.yml` files for backward compatibility.
+[^2]: With the latest version of [Docker Compose](https://docs.docker.com/compose/), the [default file name](https://docs.docker.com/compose/intro/compose-application-model/#the-compose-file) is `compose.yaml`, although the [`docker compose` command](troubleshooting/docker.md#docker-compose) still supports legacy `docker-compose.yml` files for backward compatibility.

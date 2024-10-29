@@ -1,26 +1,21 @@
 # Calendar #
 
-Our *Calendar* enables you to browse through your photos by year and month.
+The *Calendar* view allows you to browse your library by year and month:
 
 ![Screenshot](img/calendar-light.jpg){ class="shadow" }
 
-The context menu allows you to perform the following actions:
+Note that monthly albums only include pictures that have a valid creation date and time specified in their metadata or as part of their filename. Files for which the creation date is *estimated* based on the file modification time are therefore excluded from this view.
 
-<!--## Remove Months ##
-1. Select month
-2. Open context menu
-3. Click :material-delete:
-4. Confirm
+You can use the context menu to perform the following actions:
 
-!!! hint ""
-    Only the representation of the month will be deleted. Your files stay untouched.-->
+### Download Months
 
-## Download Months ##
 1. Select month
 2. Open context menu
 3. Click :material-download:
 
-## Create Albums from Months ##
+### Create Albums from Months
+
 1. Select month
 2. Open context menu
 3. Click :material-bookmark:

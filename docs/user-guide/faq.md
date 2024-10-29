@@ -217,11 +217,19 @@
 
     The result also depends on the exact order in which you unstack the files, as non-media sidecar files, for example, remain bound to the remaining media file in a stack. We consider providing a command for this in a future release and appreciate [any contributions](../developer-guide/index.md) in this regard.
  
-    If you are new to PhotoPrism and want to re-index your library with different settings, you can run the `photoprism reset` [command in a terminal](../getting-started/docker-compose.md#command-line-interface) to reset the index and start from scratch. [Learn more ›](../getting-started/docker-compose.md#examples)
+    If you are new to PhotoPrism and want to re-index your library with different settings, you can run the `photoprism reset` [command in a terminal](../getting-started/docker-compose.md#command-line-interface) to reset the index and start from scratch.
+
+    [Learn more ›](../getting-started/docker-compose.md#examples)
 
 ??? question "I already indexed some files. Why are Folders, Calendar and Moments still empty?"
 
     Folders, Calendar and Moments are populated at the end of the indexing process.
+
+??? question "Why can't I see all of my pictures in the Calendar view?"
+
+    The monthly albums in this view only include pictures that have a valid [creation date and time](organize/edit.md#details) specified in their metadata or as part of their filename. Files for which the creation date is *estimated* based on the file modification time will therefore not appear in these albums, even if they have been [properly indexed](library/originals.md).
+
+    [Learn more ›](organize/calendar.md)
 
 ??? question "Why does the count in *Search* not match the count of files in *Originals*?"
 

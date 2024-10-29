@@ -198,7 +198,8 @@ In case the application logs do not contain anything helpful:
 
 - [ ] The files exceed the [size limit in megabyte or the resolution limit in megapixels](../config-options.md#storage)
 - [ ] The files have [bad filesystem permissions or the wrong owner](docker.md#file-permissions), so they cannot be opened
-- [ ] The pictures are in [Review](../../user-guide/organize/review.md) due to low quality or incomplete metadata
+- [ ] The pictures are in [*Review*](../../user-guide/organize/review.md) due to low quality or incomplete metadata
+- [ ] You are browsing the [*Calendar*](../../user-guide/organize/calendar.md) view, which only shows pictures that have a [valid creation date and time](../../user-guide/organize/edit.md#details) specified in their metadata or as part of their filename
 - [ ] The [file type](../faq.md#what-media-file-types-are-supported) is generally unsupported
 - [ ] The [file type](../faq.md#what-media-file-types-are-supported) is generally supported, but a specific feature or codec is not
 - [ ] The indexer has skipped the files because they are exact duplicates

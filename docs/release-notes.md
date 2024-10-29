@@ -8,10 +8,10 @@
 
 What's new?
 
-- Auth: [Added CLI command flag to find and restore deleted user accounts](https://github.com/photoprism/photoprism/issues/4570)
 - Places: [Locations are no longer estimated for non-photographic pictures](https://github.com/photoprism/photoprism/issues/4589)
 - Metadata: [Improved recognition of images from digital film scanners](https://github.com/photoprism/photoprism/issues/4581)
 - Metadata: [Numerals are preserved in titles generated from file and folder names](https://github.com/photoprism/photoprism/issues/3447)
+- CLI: [Added command flag to find and restore deleted user accounts](https://github.com/photoprism/photoprism/issues/4570)
 - Setup: [Renamed `docker-compose.yml` config examples to `compose.yaml`](https://github.com/photoprism/photoprism/issues/4591)
 - Security: [Added `X-Robots-Tag` response header to prevent indexing by search engines](https://github.com/photoprism/photoprism/issues/4574)
 - Security: [Go has been updated to v1.22.8, which includes several fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.22.8) 

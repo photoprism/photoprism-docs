@@ -4,11 +4,12 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 241028-ba240711b</span>
+<span class="build">Build 241101-924ddcf2c</span>
 
 What's new?
 
 - Places: [Locations are no longer estimated for non-photographic pictures](https://github.com/photoprism/photoprism/issues/4589)
+- Metadata: [Labels are set based on matching keywords in title and subject](https://github.com/photoprism/photoprism/issues/4602)
 - Metadata: [Improved recognition of images from digital film scanners](https://github.com/photoprism/photoprism/issues/4581)
 - Metadata: [Numerals are preserved in titles generated from file and folder names](https://github.com/photoprism/photoprism/issues/3447)
 - CLI: [Added `users` command flag to find and restore deleted user accounts](https://github.com/photoprism/photoprism/issues/4570)

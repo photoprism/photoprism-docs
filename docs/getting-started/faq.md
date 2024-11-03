@@ -517,7 +517,7 @@ Please note that it is currently not possible to use [other standard](https://op
 
 ### Who can I contact if I have a complaint about your software?
 
-Please read this documentation and [determine the cause of your problem](https://docs.photoprism.app/getting-started/troubleshooting/) before opening [invalid, duplicate and/or incomplete bug reports](https://web.photoprism.app/kb/reporting-bugs), starting a public "shitstorm" or insulting other community members in our forums and chat rooms. Not only is this annoying for everyone, but it also keeps our team from working on features and improvements that our users are waiting for.
+Please read this documentation and [determine the cause of your problem](https://docs.photoprism.app/getting-started/troubleshooting/) before opening [invalid, duplicate and/or incomplete bug reports](https://www.photoprism.app/kb/reporting-bugs), starting a public "shitstorm" or insulting other community members in our forums and chat rooms. Not only is this annoying for everyone, but it also keeps our team from working on features and improvements that our users are waiting for.
 
 [Learn more ›](https://www.photoprism.app/code-of-conduct)
 

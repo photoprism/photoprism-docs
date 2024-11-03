@@ -22,7 +22,7 @@ Alternatively, [Podman](https://podman.io/) is supported as a drop-in replacemen
       -e PHOTOPRISM_ADMIN_PASSWORD="insecure" \
       -v /photoprism/storage \
       -v ~/Pictures:/photoprism/originals \
-      photoprism/photoprism
+      photoprism/photoprism:latest
     ```
 
 === "Podman"
@@ -41,7 +41,7 @@ Alternatively, [Podman](https://podman.io/) is supported as a drop-in replacemen
       -e PHOTOPRISM_ADMIN_PASSWORD="insecure" \
       -v /photoprism/storage \
       -v ~/Pictures:/photoprism/originals \
-      photoprism/photoprism
+      photoprism/photoprism:latest
     ```
 
     Please keep in mind to replace the `docker` command with `podman` when following the examples in our documentation.
@@ -66,7 +66,7 @@ Enabling [public mode](config-options.md) will disable authentication.
 !!! info ""
     It can be helpful to keep Docker running in the foreground while debugging
     so that log messages are displayed directly. To do this, omit the `-d` parameter when restarting.
-
+    
     Should the server already be running, or you see no errors, you may have started it
     on a different host and/or port. There could also be an [issue with your browser,
     ad blocker, or firewall settings](troubleshooting/index.md#connection-fails).
@@ -203,8 +203,7 @@ Use the `--help` flag to see a detailed command description, for example:
 docker exec -ti photoprism photoprism backup --help
 ```
 
-PhotoPrism's command-line interface is also well suited for job automation using a
-[scheduler](https://dl.photoprism.app/docker/scheduler/).
+PhotoPrism's command-line interface is also well suited for job automation using a [scheduler](https://dl.photoprism.app/docker/scheduler/).
 
 !!! tip ""
     When using *Docker*, you can prepend commands like `docker exec -ti [container] [command]` to run them in a container. Should this fail with *no container found*, make sure the container has been started and you have specified an existing container name or id.

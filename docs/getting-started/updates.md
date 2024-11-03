@@ -5,7 +5,7 @@
 Open a terminal and change to the folder where your `compose.yaml` file is located.[^1]
 Now run the following commands to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance in the background:
 
-```
+```bash
 docker compose pull
 docker compose stop
 docker compose up -d
@@ -28,7 +28,7 @@ We recommend that you compare your own `compose.yaml` with [our latest examples]
 
 You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the `photoprism/photoprism` image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then running the following commands to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance in the background:
 
-```
+```bash
 docker compose pull
 docker compose stop
 docker compose up -d
@@ -66,22 +66,44 @@ When you have [changed the configuration](portainer/index.md) to your needs or j
 
 ### Pure Docker
 
-Open a terminal on your server, and run the following command to pull the most recent container image:
+Open a terminal or connect to your server via ssh, and then run the following command to download the [newest image](https://hub.docker.com/r/photoprism/photoprism/tags) (use the `:preview` tag to get the [preview build](#development-preview)):
 
-```
+```bash
 docker pull photoprism/photoprism:latest
 ```
 
-See [Running PhotoPrism with Docker](docker.md) for a command reference.
+Then stop the `photoprism` service and [create a new instance](docker.md#step-1-start-the-server) as shown below:
+
+```bash
+docker stop photoprism
+docker rm photoprism
+docker run -d \
+      --name photoprism \
+      --security-opt seccomp=unconfined \
+      --security-opt apparmor=unconfined \
+      -p 2342:2342 \
+      -e PHOTOPRISM_UPLOAD_NSFW="true" \
+      -e PHOTOPRISM_ADMIN_PASSWORD="insecure" \
+      -v /photoprism/storage \
+      -v ~/Pictures:/photoprism/originals \
+      photoprism/photoprism:latest
+```
+
+[Learn more ›](docker.md)
+
+!!! tldr ""
+    In order to simplify configuration and updates, we recommend using [Docker Compose](docker-compose.md) instead of [Docker](docker.md).
 
 ### OpenMediaVault
 
-To upgrade your instance, open a terminal, download our newest image from Docker Hub, and then restart the service:
+To upgrade your instance, first connect to the server running OpenMediaVault via SSH or open a terminal from the web interface, then download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart the service:
 
+```bash
+sudo podman pull docker.io/photoprism/photoprism:latest
+sudo systemctl restart pod-photoprism.service
 ```
-podman pull docker.io/photoprism/photoprism:latest
-systemctl restart pod-photoprism.service
-```
+
+[Learn more ›](nas/openmediavault.md)
 
 ### Complete Rescan
 
@@ -96,14 +118,14 @@ You can start a [rescan from the user interface](../user-guide/library/originals
 
 Existing users may index faces without performing a complete rescan:
 
-```
+```bash
 docker compose exec photoprism photoprism faces index
 ```
 
 Remove existing people and faces for a clean start e.g. after upgrading from our 
 [development preview](https://docs.photoprism.app/release-notes/#development-preview):
 
-```
+```bash
 docker compose exec photoprism photoprism faces reset -f
 ```
 

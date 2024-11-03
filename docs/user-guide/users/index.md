@@ -26,3 +26,13 @@ Super admins can reset a user's password, while regular admins can change passwo
 ## Deleting a User
 
 ![Screenshot](img/users-delete.jpg){ class="shadow" }
+
+
+## Managing Sessions
+
+You can view and delete active sessions by navigating to *Settings > Users > Sessions* as an [Admin](roles.md#admin):
+
+![Screenshot](img/sessions.jpg){ class="shadow" }
+
+To view session details click :material-magnify:.
+To delete a session click :material-delete:.

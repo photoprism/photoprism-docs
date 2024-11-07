@@ -4,17 +4,18 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 241101-924ddcf2c</span>
+<span class="build">Build 241107-7f02d4efd</span>
 
 What's new?
 
 - Places: [Locations are no longer estimated for non-photographic pictures](https://github.com/photoprism/photoprism/issues/4589)
+- Places: [Upgraded MapLibre GL JS library from v3.6 to v4.7.1](https://github.com/photoprism/photoprism/issues/4058) by [@QyuBee](https://github.com/QyuBee)
 - Metadata: [Labels are set based on matching keywords in title and subject](https://github.com/photoprism/photoprism/issues/4602)
 - Metadata: [Improved recognition of images from digital film scanners](https://github.com/photoprism/photoprism/issues/4581)
 - Metadata: [Numerals are preserved in titles generated from file and folder names](https://github.com/photoprism/photoprism/issues/3447)
 - CLI: [Added `users` command flag to find and restore deleted user accounts](https://github.com/photoprism/photoprism/issues/4570)
 - Setup: [Renamed `docker-compose.yml` config examples to `compose.yaml`](https://github.com/photoprism/photoprism/issues/4591)
-- Security: [Added `X-Robots-Tag` response header to prevent indexing by search engines](https://github.com/photoprism/photoprism/issues/4574)
+- Security: [Added `X-Robots-Tag` header and `robots.txt` file to control crawlers](https://github.com/photoprism/photoprism/issues/4574)
 - Security: [Go has been updated to v1.22.8, which includes several fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.22.8) 
 
 !!! info ""

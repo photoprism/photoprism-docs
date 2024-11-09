@@ -66,13 +66,13 @@ When you have [changed the configuration](portainer/index.md) to your needs or j
 
 ### Pure Docker
 
-Open a terminal or connect to your server via ssh, and then run the following command to download the [newest image](https://hub.docker.com/r/photoprism/photoprism/tags) (use the `:preview` tag to get the [preview build](#development-preview)):
+Open a terminal and run the following to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags):
 
 ```bash
 docker pull photoprism/photoprism:latest
 ```
 
-Then stop the `photoprism` service and [create a new instance](docker.md#step-1-start-the-server) as shown below:
+Then stop and [recreate the `photoprism` service](docker.md#step-1-start-the-server) based on the new image, for example:
 
 ```bash
 docker stop photoprism

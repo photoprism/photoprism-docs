@@ -25,9 +25,9 @@
 
 ## Identity Providers
 
-To authenticate users via OIDC, you can either set up and use a self-hosted identity provider such as [ZITADEL](https://zitadel.com/docs/self-hosting/deploy/compose) or [Keycloak](https://www.keycloak.org/), or configure a public identity provider service such as those operated by [Google](https://developers.google.com/identity/openid-connect/openid-connect), [Microsoft](https://entra.microsoft.com/), [GitHub](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app), or [Amazon](https://developer.amazon.com/apps-and-games/login-with-amazon).
+To allow users to log in via OIDC, you can either set up and use a self-hosted identity provider such as [ZITADEL](https://zitadel.com/docs/self-hosting/deploy/compose) or [Keycloak](https://www.keycloak.org/), or choose a public authentication service such as those provided by [Google](https://developers.google.com/identity/openid-connect/openid-connect), [Microsoft](https://entra.microsoft.com/), [GitHub](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app), or [Amazon](https://developer.amazon.com/apps-and-games/login-with-amazon).
 
-Single sign-on can be configured automatically if the identity provider offers a standardized `/.well-known/openid-configuration` endpoint for [service discovery](https://developer.okta.com/docs/reference/api/oidc/#well-known-oauth-authorization-server), for example:
+Single sign-on can then be configured automatically through your identity provider's `/.well-known/openid-configuration` [service discovery endpoint](https://developer.okta.com/docs/concepts/auth-servers/#discovery-endpoints-org-authorization-servers), for example:
 
 - [https://accounts.google.com/.well-known/openid-configuration](https://accounts.google.com/.well-known/openid-configuration){:target="_blank"}
 

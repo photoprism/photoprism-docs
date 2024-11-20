@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 241107-7f02d4efd</span>
+<span class="build">Build 241120-0e8e1b7ea</span>
 
 What's new?
 
@@ -15,8 +15,9 @@ What's new?
 - Metadata: [Numerals are preserved in titles generated from file and folder names](https://github.com/photoprism/photoprism/issues/3447)
 - CLI: [Added `users` command flag to find and restore deleted user accounts](https://github.com/photoprism/photoprism/issues/4570)
 - Setup: [Renamed `docker-compose.yml` config examples to `compose.yaml`](https://github.com/photoprism/photoprism/issues/4591)
+- Docker: [Upgraded base image from Ubuntu 24.04 to 24.10 (Oracular Oriole)](https://github.com/photoprism/photoprism/issues/4631)
 - Security: [Added `X-Robots-Tag` header and `robots.txt` file to control crawlers](https://github.com/photoprism/photoprism/issues/4574)
-- Security: [Go has been updated to v1.22.8, which includes several fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.22.8) 
+- Security: [Go has been updated to v1.22.9, which includes several fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.22.9) 
 
 !!! info ""
     We are currently [upgrading our frontend component framework](https://github.com/photoprism/photoprism/issues/3168) to a new major version. To avoid duplicate work and conflicting changes, development of [new frontend functionality](https://github.com/photoprism/photoprism/labels/frontend) will continue after the upgrade has been completed. [Learn more ›](https://github.com/photoprism/photoprism/issues/3168)

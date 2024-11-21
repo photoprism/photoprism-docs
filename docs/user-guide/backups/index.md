@@ -10,7 +10,7 @@ At a minimum, a backup of PhotoPrism should include the files in [your *original
 
 By default, [PhotoPrism 240523-923ee0cf7](../../release-notes.md#may-23-2024) and newer versions automatically create daily database backups for you, with up to 3 copies being retained. The schedule, the type of backups, and the number of backups to be retained can be [changed in the configuration](../../getting-started/config-options.md#backup).
 
-We recommend that you manually create a full backup of all files, including your configuration and index database, before starting a server migration or making any other major changes.
+We recommend that you manually create a full backup of all files, including your configuration and index database, before starting a [server migration](#mariadb-server-migration) or making any other major changes.
 
 ## Backup Command
 

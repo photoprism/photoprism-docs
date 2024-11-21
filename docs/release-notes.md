@@ -8,8 +8,8 @@
 
 What's new?
 
-- Places: [Locations are no longer estimated for non-photographic pictures](https://github.com/photoprism/photoprism/issues/4589)
 - Places: [Upgraded MapLibre GL JS library from v3.6 to v4.7.1](https://github.com/photoprism/photoprism/issues/4058) by [@QyuBee](https://github.com/QyuBee)
+- Places: [Locations are no longer estimated for non-photographic pictures](https://github.com/photoprism/photoprism/issues/4589)
 - Metadata: [Labels are set based on matching keywords in title and subject](https://github.com/photoprism/photoprism/issues/4602)
 - Metadata: [Improved recognition of images from digital film scanners](https://github.com/photoprism/photoprism/issues/4581)
 - Metadata: [Numerals are preserved in titles generated from file and folder names](https://github.com/photoprism/photoprism/issues/3447)

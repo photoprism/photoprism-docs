@@ -132,7 +132,7 @@ nav:
       - Restoring Backups: user-guide/backups/restore.md
       - External Storage: user-guide/backups/external-storage.md
       - Metadata Exports: user-guide/backups/export.md
-      - Folder Overview: user-guide/backups/folders.md
+      - Directory Overview: user-guide/backups/folders.md
       #- Commands: user-guide/advanced/commands.md
     - Cloud Migration:
       - Google Photos: user-guide/use-cases/google.md

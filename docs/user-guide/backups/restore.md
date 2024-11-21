@@ -32,4 +32,9 @@ When the database is restored, all user accounts and passwords are restored as w
 
 !!! tldr ""
     Note that our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible distributions.
-    
+
+## MariaDB Server Migration
+
+For detailed information on how to move your [MariaDB database](folders.md#database) to another server or virtual machine, please see the [Server Migration](../../getting-started/troubleshooting/mariadb.md#server-migration) section of our [MariaDB Troubleshooting Guide](../../getting-started/troubleshooting/mariadb.md).
+
+[Learn more ›](../../getting-started/troubleshooting/mariadb.md#server-migration)

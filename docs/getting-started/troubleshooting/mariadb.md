@@ -159,6 +159,26 @@ docker compose exec photoprism photoprism index -f
 !!! tldr ""
     Be careful not to start multiple indexing processes at the same time, as this will lead to a high server load.
 
+## Server Migration<a id="server-relocation"></a>
+
+If you want to move your MariaDB database to another server or virtual machine:
+
+- Read the [Creating Backups](../../user-guide/backups/index.md) chapter in our [User Guide](../../user-guide/index.md) for general information on [how to back up](../../user-guide/backups/index.md) and [restore your data](../../user-guide/backups/restore.md)
+- We recommend that you [create a full backup](../../user-guide/backups/index.md) of all files before starting the server migration or making any other major changes
+- Ideally, the MariaDB versions of both servers [should match](#version-upgrade) and the existing database files should [not be corrupted](#corrupted-files), e.g. due to an [unclean shutdown](#server-crashes)
+- If your servers are not running on the [latest stable release](https://mariadb.org/mariadb/all-releases/), we recommend that you [update both](#version-upgrade) for the migration so that they are feature and binary compatible
+
+To create a database backup:
+
+- [ ] In case the MariaDB version and system architecture match, you can shut down your existing PhotoPrism instance and the database server, and then copy the [entire *database* storage folder](../../user-guide/backups/folders.md#database) without changing any file or folder permissions
+- [ ] Alternatively, you can use the built-in [`photoprism backup -i`](../../user-guide/backups/index.md#backup-command) [CLI command](../docker-compose.md#opening-a-terminal), or backup the database with a [manually created SQL dump](https://mariadb.com/kb/en/mariadb-dump/) (backup file)
+ 
+On the new server:
+ 
+- [ ] If you copied the entire *database* storage folder, start the MariaDB server and make sure PhotoPrism can [access the new database](#cannot-connect) by updating its configuration or your network settings if necessary
+- [ ] To restore the database from a backup dump ([either manually](https://mariadb.com/kb/en/restoring-data-from-dump-files/) or [using the `photoprism restore -i`](../../user-guide/backups/restore.md#restore-command) [CLI command](../docker-compose.md#opening-a-terminal)), the MariaDB server must be running and PhotoPrism must be restarted after the backup has been restored
+- [ ] Be sure to [never expose your database](#cannot-connect) to the public Internet, and [use strong passwords](#wrong-password) if the database is exposed to an external network
+
 ## Server Crashes
 
 If the server crashes unexpectedly or your database files get corrupted frequently, it is usually because they are stored on an unreliable device such as a USB flash drive, an SD card, or a shared network folder mounted via NFS or CIFS. These may also have [unexpected file size limitations](https://thegeekpage.com/fix-the-file-size-exceeds-the-limit-allowed-and-cannot-be-saved/), which is especially problematic for databases that do not split data into smaller files.
@@ -219,17 +239,6 @@ exit
 
 When you are done, remove the `--skip-grant-tables` flag again to restore the original
 command and restart the `mariadb` service as described above.
-
-## Server Relocation
-
-When moving MariaDB to another computer, cloud server, or virtual machine:
-
-- [ ] Move the complete *storage* folder along with it and preserve the [file permissions](docker.md#file-permissions)
-- [ ] **or** restore your index [from an SQL dump](https://mariadb.com/kb/en/mysqldump/) (backup file)
-- [ ] Perform a [version upgrade](#version-upgrade) if necessary
-- [ ] Make sure that PhotoPrism can access the database on the new host
-- [ ] Set strong passwords if the database is exposed to an external network
-- [ ] Never expose your database to the public Internet
 
 ## Unicode Support
 

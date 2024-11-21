@@ -39,12 +39,6 @@ Alternative ways to create SQL dumps from SQLite are shown in our [advanced back
 !!! tldr ""
     Note that our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible distributions.
 
-## MariaDB Server Migration
-
-For detailed information on how to move your [MariaDB database](#database) to another server or virtual machine, please see the [Server Migration](../../getting-started/troubleshooting/mariadb.md#server-migration) section of our [MariaDB Troubleshooting Guide](../../getting-started/troubleshooting/mariadb.md).
-
-[Learn more ›](../../getting-started/troubleshooting/mariadb.md#server-migration)
-
 ## Important Directories
 
 ### Originals
@@ -65,5 +59,8 @@ We recommend that you back up this folder as well so that you don't need to recr
 
 If you are [using MariaDB](../../getting-started/troubleshooting/mariadb.md) or [another dedicated database server](../../getting-started/faq.md#should-i-use-sqlite-mariadb-or-mysql) instead of [SQLite](../../getting-started/troubleshooting/sqlite.md), they will store their data in a separate *database* folder whose location depends on your configuration, e.g. in the `mariadb` service section of [your `compose.yaml` file](../../getting-started/docker-compose.md#database).
 
-!!! example ""
-    Depending on the [resources available to us](https://www.photoprism.app/oss/faq), a future version may include additional features so that you do not have to rely on external tools to perform file backups and can use a web interface.
+## MariaDB Server Migration
+
+For detailed information on how to move your [MariaDB database](#database) to another server or virtual machine, please see the [Server Migration](../../getting-started/troubleshooting/mariadb.md#server-migration) section of our [MariaDB Troubleshooting Guide](../../getting-started/troubleshooting/mariadb.md).
+
+[Learn more ›](../../getting-started/troubleshooting/mariadb.md#server-migration)

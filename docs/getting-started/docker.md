@@ -237,8 +237,8 @@ The currently supported user ID ranges are 0, 33, 50-99, 500-600, 900-1250, and 
 | *Show Migration Status*                                | `docker exec -ti photoprism photoprism migrations ls`     |
 | *Repeat Failed Migrations*                             | `docker exec -ti photoprism photoprism migrations run -f` |
 | *Reset Database*                                       | `docker exec -ti photoprism photoprism reset --yes`       |
-| *Backup Database*                                      | `docker exec -ti photoprism photoprism backup -a -i`      |
-| *Restore Database*                                     | `docker exec -ti photoprism photoprism restore -a -i`     |
+| *Backup Database*                                      | `docker exec -ti photoprism photoprism backup -i -f`      |
+| *Restore Database*                                     | `docker exec -ti photoprism photoprism restore -i -f`     |
 | *Change Password*                                      | `docker exec -ti photoprism photoprism passwd [username]` |
 | *Show User Management Commands*                        | `docker exec -ti photoprism photoprism users help`        |
 | *Reset User Accounts*                                  | `docker exec -ti photoprism photoprism users reset --yes` |

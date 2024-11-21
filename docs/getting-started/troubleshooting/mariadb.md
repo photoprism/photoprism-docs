@@ -171,12 +171,12 @@ If you want to move your MariaDB database to another server or virtual machine:
 To create a database backup:
 
 - [ ] In case the MariaDB version and system architecture match, you can shut down your existing PhotoPrism instance and the database server, and then copy the [entire *database* storage folder](../../user-guide/backups/folders.md#database) without changing any file or folder permissions
-- [ ] Alternatively, you can use the built-in [`photoprism backup -i`](../../user-guide/backups/index.md#backup-command) [CLI command](../docker-compose.md#opening-a-terminal), or backup the database with a [manually created SQL dump](https://mariadb.com/kb/en/mariadb-dump/) (backup file)
+- [ ] Alternatively, you can use the built-in [`photoprism backup -i -f`](../../user-guide/backups/index.md#backup-command) [CLI command](../docker-compose.md#opening-a-terminal), or backup the database with a [manually created SQL dump](https://mariadb.com/kb/en/mariadb-dump/) (backup file)
  
 On the new server:
  
 - [ ] If you copied the entire *database* storage folder, start the MariaDB server and make sure PhotoPrism can [access the new database](#cannot-connect) by updating its configuration or your network settings if necessary
-- [ ] To restore the database from a backup dump ([either manually](https://mariadb.com/kb/en/restoring-data-from-dump-files/) or [using the `photoprism restore -i`](../../user-guide/backups/restore.md#restore-command) [CLI command](../docker-compose.md#opening-a-terminal)), the MariaDB server must be running and PhotoPrism must be restarted after the backup has been restored
+- [ ] To restore the database from a backup dump ([either manually](https://mariadb.com/kb/en/restoring-data-from-dump-files/) or [using the `photoprism restore -i -f`](../../user-guide/backups/restore.md#restore-command) [CLI command](../docker-compose.md#opening-a-terminal)), the MariaDB server must be running and PhotoPrism must be restarted after the backup has been restored
 - [ ] Be sure to [never expose your database](#cannot-connect) to the public Internet, and [use strong passwords](#wrong-password) if the database is exposed to an external network
 
 ## Server Crashes

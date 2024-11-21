@@ -188,8 +188,8 @@ The command-line interface is also well suited for job automation using a [sched
 | *Show Migration Status*                                   | `photoprism migrations ls`     |
 | *Repeat Failed Migrations*                                | `photoprism migrations run -f` |
 | *Reset Database*                                          | `photoprism reset --yes`       |
-| *Backup Database*                                         | `photoprism backup -a -i`      |
-| *Restore Database*                                        | `photoprism restore -a -i`     |
+| *Backup Database*                                         | `photoprism backup -i -f`      |
+| *Restore Database*                                        | `photoprism restore -i -f`     |
 | *Change Password*                                         | `photoprism passwd [username]` |
 | *Show User Management Commands*                           | `photoprism users help`        |
 | *Reset Users*                                             | `photoprism users reset --yes` |

@@ -236,7 +236,7 @@ extra_css:
 # External links.
 extra:
   generator: false
-  homepage: https://photoprism.app
+  homepage: https://www.photoprism.app/
   alternate:
     - name: 🇬🇧 English
       link: /

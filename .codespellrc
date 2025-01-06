@@ -1,0 +1,7 @@
+[codespell]
+# Ref: https://github.com/codespell-project/codespell#using-a-config-file
+skip = .git*,*.svg,*.css,.codespellrc
+check-hidden = true
+# Some names
+ignore-regex = \b(Wirth|Mathes|aNULL)\b
+# ignore-words-list =

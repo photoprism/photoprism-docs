@@ -6,7 +6,7 @@
 ```bigquery
 defaults
     #Defaults used in frontend and backends
-    #Defined here to avoid repitition
+    #Defined here to avoid repetition
     #Can be overwritten in frontends and/or backends
     log global
     option logasap

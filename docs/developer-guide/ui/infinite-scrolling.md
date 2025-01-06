@@ -49,7 +49,7 @@ Implementing it would therefore imply a potentially larger rewrite and less free
 
 ### Pseudo-Virtualization with placeholders
 
-Using the [IntersectionObserver API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) we can efficiently determine wether something is currently visible or not.
+Using the [IntersectionObserver API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) we can efficiently determine whether something is currently visible or not.
 We can use this information to replace all elements that are currently not in the visible area with simple placeholders of the same size.
 This drastically reduces the load on the browser, because these (often single-domnode) placeholder-elements require a LOT less resources.
 
@@ -87,7 +87,7 @@ As a bonus, you can make the IntersectionObserver only observe for example every
 ### Render Performance
 
 When working with a huge amount of elements, render performance of these elements is critically important.
-The better the render performance, the more it actually feels like scrolling through an infinite list. It allowes the user to scroll faster without having to see placeholders and makes the application feel way snappier, especially on lower-end devices.
+The better the render performance, the more it actually feels like scrolling through an infinite list. It allows the user to scroll faster without having to see placeholders and makes the application feel way snappier, especially on lower-end devices.
 
 Here are some tips on how to gain performance. They are ordered from most to least important and only apply to things that are rendered for every element:
 

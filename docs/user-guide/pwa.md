@@ -29,7 +29,7 @@ The compatibility of our PWA has been tested with Apple Safari and Google Chrome
 === "Google Chrome (Android)"
 
     1. Open PhotoPrism in Chrome
-    2. Click :material-dots-vertical:
+    2. Click :material-dots-vertical: (of the Chrome, not website)
 
         ![Screenshot](img/android-1.jpg){: style="width:35%" class="shadow"} 
 

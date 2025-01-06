@@ -6,7 +6,7 @@
 2. Click *File > Export > Export Unmodified Original For Photos*
 3. Select *Export IPTC as XMP*
 4. Click *Export*
-5. Move the exported files/folders to your *originals* or *import* diectory and start indexing or importing
+5. Move the exported files/folders to your *originals* or *import* directory and start indexing or importing
 
 ## Metadata ##
 

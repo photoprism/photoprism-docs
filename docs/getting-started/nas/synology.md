@@ -155,7 +155,7 @@ To install Portainer:
       
 5. click _OK_; then, on the list of scheduled tasks, select the newly created task and hit _Run_; follow the prompts to install Portainer; in the end you can delete the task or keep it – just uncheck the _enabled_ checkbox to disable the task.
 
-6. Portainer should now be acessible in your local network in http://[YOUR-LOCAL-IP]:9000/.
+6. Portainer should now be accessible in your local network in http://[YOUR-LOCAL-IP]:9000/.
 
 #### Step 2: Configure Portainer to use your Synology's docker endpoint ####
 

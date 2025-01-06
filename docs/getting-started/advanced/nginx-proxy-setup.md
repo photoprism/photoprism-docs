@@ -16,7 +16,7 @@ Using a reverse proxy in front of PhotoPrism has various benefits:
 
 This guide aims for a little more advanced setup, with good security in mind.
 
-**Trough the entire guide we use `photoprism.example.com` as domain. You have to change all these occurrences with your own domain / DynDNS.**
+**Through the entire guide we use `photoprism.example.com` as domain. You have to change all these occurrences with your own domain / DynDNS.**
 
 Also, this was all tested on `ubuntu/20.04` - But the commands should work on a lot of other versions as well.
 If you use CentOS, SuSE, or any other distro, look up the commands for your package manager.

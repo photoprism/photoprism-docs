@@ -6,9 +6,10 @@ As an addition to our platform-independent [Progressive Web App (PWA)](https://d
 |---------------------------------------------------|--------------|---------------------------------------------------------|------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
 | [Gallery for PhotoPrism](#gallery-for-photoprism) | Android      | [Oleg Koretsky](https://github.com/Radiokot)            | [GPL 3.0](https://github.com/Radiokot/photoprism-android-client) | [Google Play](https://link.photoprism.app/gallery-app), [F-Droid](https://link.photoprism.app/gallery-fdroid)        |
 | [Photo Map](#photo-map)                           | Android      | [Denny Weinberg](https://levionsoftware.com/contact/)   | Closed Source                                                    | [Google Play](https://link.photoprism.app/photomap)                                                                  |
-| [PhotoSync](#photosync)                           | iOS, Android | [touchbyte GmbH](https://www.photosync-app.com/contact) | Closed Source                                                    | [App Store](https://link.photoprism.app/photosync-ios), [Google Play](https://link.photoprism.app/photosync-android) |
+| [PhotoSync](#photosync)                           | iOS, Android | [touchbyte GmbH](https://link.photoprism.app/photosync) | Closed Source                                                    | [App Store](https://link.photoprism.app/photosync-ios), [Google Play](https://link.photoprism.app/photosync-android) |
 | [Photoflare](#photoflare)                         | iOS          | Chris Wunsch                                            | n/a                                                              | [TestFlight](https://testflight.apple.com/join/MMA6iQDl)                                                             |
 | [Prismatic](#prismatic)                           | iOS          | [Chris Li](https://github.com/automactic)               | n/a                                                              | [TestFlight](https://testflight.apple.com/join/vzNQjaym)                                                             |
+| [Stream](#stream)                                 | iOS          | [Yu Yang](https://link.photoprism.app/stream-app)       | n/a                                                              | [App Store](https://link.photoprism.app/stream-ios)                                                                  |
 
 ## Gallery for PhotoPrism
 
@@ -29,7 +30,7 @@ With this [Android app](https://github.com/Radiokot/photoprism-android-client), 
 
 ## PhotoSync
 
-[PhotoSync](https://www.photosync-app.com/) lets you transfer photos and videos directly from your mobile phone. It backs up your pictures securely in the background or you can manually select files to upload into specific folders.
+[PhotoSync](https://link.photoprism.app/photosync) lets you transfer photos and videos directly from your mobile phone. It backs up your pictures securely in the background or you can manually select files to upload into specific folders.
 
 <div class="appstore-buttons">
     <a href="https://link.photoprism.app/photosync-android"><img src="https://dl.photoprism.app/img/badges/badge_playstore.svg" alt="Google Play Store" width="135"></a>
@@ -49,3 +50,9 @@ Photoflare is an iOS app that is currently being developed by Chris Wunsch. It i
 You can test this and other features by installing it via [Apple TestFlight](https://testflight.apple.com/join/vzNQjaym).
 
 [Give feedback ›](https://github.com/automactic/Prismatic-feedback/discussions)
+
+## Stream
+
+[Stream](https://link.photoprism.app/stream-ios) is an iOS app that brings PhotoPrism and local photos together in one unified gallery. It features natural language search for easy photo discovery and supports batch operations for efficient management.
+
+[Learn more ›](https://link.photoprism.app/stream-app){ class="pr-3" } [Read FAQ ›](https://link.photoprism.app/stream-faq)

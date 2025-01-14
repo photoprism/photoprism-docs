@@ -41,10 +41,6 @@ With this [Android app](https://github.com/Radiokot/photoprism-android-client), 
 
 Photoflare is an iOS app that is currently being developed by Chris Wunsch. It is at an early stage and already offers some basic functionality that can be tested via [Apple TestFlight](https://testflight.apple.com/join/MMA6iQDl). [Learn more ›](https://www.reddit.com/r/photoprism/comments/1czskxn/photoprism_ios_app/)
 
-<div class="appstore-buttons">
-    <a href="https://testflight.apple.com/join/MMA6iQDl"><img src="https://dl.photoprism.app/img/badges/testflight-badge.png" alt="Apple TestFlight" width="135"></a>
-</div>
-
 ## Prismatic
 
 ![Prismatic Screenshot](img/prismatic-screenshot.jpg){ class="right xxs shadow" }Prismatic is an iOS app developed by [Chris Li](https://github.com/automactic) that allows you to display pictures from your library in customizable widgets on your phone's home screen.
@@ -52,10 +48,6 @@ Photoflare is an iOS app that is currently being developed by Chris Wunsch. It i
 You can test this and other features by installing it via [Apple TestFlight](https://testflight.apple.com/join/vzNQjaym).
 
 [Give feedback ›](https://github.com/automactic/Prismatic-feedback/discussions)
-
-<div class="appstore-buttons">
-    <a href="https://testflight.apple.com/join/vzNQjaym"><img src="https://dl.photoprism.app/img/badges/testflight-badge.png" alt="Apple TestFlight" width="135"></a>
-</div>
 
 ## Stream
 

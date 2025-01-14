@@ -305,7 +305,7 @@ div.action-buttons.membership .action-button:hover {
 
 div.appstore-buttons {
     clear: both;
-    margin-top: 2em;
+    margin-top: 1.5em;
     margin-bottom: 2em;
     text-align: center;
 }
@@ -313,6 +313,17 @@ div.appstore-buttons {
 div.appstore-buttons a {
     margin-left: 0.5em;
     margin-right: 0.5em;
+}
+
+@media (min-width: 600px) {
+    div.appstore-buttons {
+        text-align: left;
+    }
+
+    div.appstore-buttons a {
+        margin-left: 0;
+        margin-right: 1em;
+    }
 }
 
 /* IMAGES */

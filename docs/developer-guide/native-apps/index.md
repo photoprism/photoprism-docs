@@ -13,7 +13,7 @@ As an addition to our platform-independent [Progressive Web App (PWA)](https://d
 
 ## Gallery for PhotoPrism
 
-With this [Android app](https://github.com/Radiokot/photoprism-android-client), you can easily browse the pictures in your library and share them with other apps. The app offers a timeline view, authentication, bookmarks, and many other useful features. It can also be installed on Android TV, so you can browse your library with a remote control.
+With this [Android app](https://github.com/Radiokot/photoprism-android-client), you can easily browse the pictures in your library and share them with other apps. The app offers a timeline view, authentication, bookmarks, and many other useful features. It can also be installed on Android TV, so you can browse your library with a remote control. [Learn more ›](https://radiokot.com.ua/p/photoprism-android-gallery)
 
 <div class="appstore-buttons">
     <a href="https://link.photoprism.app/gallery-app"><img src="https://dl.photoprism.app/img/badges/badge_playstore.svg" alt="Google Play Store" width="135"></a>
@@ -22,7 +22,7 @@ With this [Android app](https://github.com/Radiokot/photoprism-android-client), 
 
 ## Photo Map
 
-[Photo Map](https://levionsoftware.com/) is a perfect Android app for travelers: It displays all your pictures on an interactive world map, so you never lose track of when and where you took them. With the latest update, videos are now played directly in the app. Also, the number of photos that can be displayed is no longer limited.
+[Photo Map](https://levionsoftware.com/) is a perfect Android app for travelers: It displays all your pictures on an interactive world map, so you never lose track of when and where you took them. With the latest update, videos are now played directly in the app. Also, the number of photos that can be displayed is no longer limited. [Learn more ›](https://levionsoftware.com/)
 
 <div class="appstore-buttons">
     <a href="https://link.photoprism.app/photomap"><img src="https://dl.photoprism.app/img/badges/badge_playstore.svg" alt="Google Play Store" width="135"></a>
@@ -30,7 +30,7 @@ With this [Android app](https://github.com/Radiokot/photoprism-android-client), 
 
 ## PhotoSync
 
-[PhotoSync](https://link.photoprism.app/photosync) lets you transfer photos and videos directly from your mobile phone. It backs up your pictures securely in the background or you can manually select files to upload into specific folders.
+[PhotoSync](https://link.photoprism.app/photosync) lets you transfer photos and videos directly from your mobile phone. It backs up your pictures securely in the background or you can manually select files to upload into specific folders. [Learn more ›](https://link.photoprism.app/photosync)
 
 <div class="appstore-buttons">
     <a href="https://link.photoprism.app/photosync-android"><img src="https://dl.photoprism.app/img/badges/badge_playstore.svg" alt="Google Play Store" width="135"></a>
@@ -39,9 +39,11 @@ With this [Android app](https://github.com/Radiokot/photoprism-android-client), 
 
 ## Photoflare
 
-Photoflare is an iOS app that is currently being developed by Chris Wunsch. It is at an early stage and already offers some basic functionality that can be tested via [Apple TestFlight](https://testflight.apple.com/join/MMA6iQDl).
+Photoflare is an iOS app that is currently being developed by Chris Wunsch. It is at an early stage and already offers some basic functionality that can be tested via [Apple TestFlight](https://testflight.apple.com/join/MMA6iQDl). [Learn more ›](https://www.reddit.com/r/photoprism/comments/1czskxn/photoprism_ios_app/)
 
-[Learn more ›](https://www.reddit.com/r/photoprism/comments/1czskxn/photoprism_ios_app/)
+<div class="appstore-buttons">
+    <a href="https://testflight.apple.com/join/MMA6iQDl"><img src="https://dl.photoprism.app/img/badges/testflight-badge.png" alt="Apple TestFlight" width="135"></a>
+</div>
 
 ## Prismatic
 
@@ -51,8 +53,14 @@ You can test this and other features by installing it via [Apple TestFlight](htt
 
 [Give feedback ›](https://github.com/automactic/Prismatic-feedback/discussions)
 
+<div class="appstore-buttons">
+    <a href="https://testflight.apple.com/join/vzNQjaym"><img src="https://dl.photoprism.app/img/badges/testflight-badge.png" alt="Apple TestFlight" width="135"></a>
+</div>
+
 ## Stream
 
-[Stream](https://link.photoprism.app/stream-ios) is an iOS app that brings PhotoPrism and local photos together in one unified gallery. It features natural language search for easy photo discovery and supports batch operations for efficient management.
+[Stream](https://link.photoprism.app/stream-app) is an iOS app that brings PhotoPrism and local photos together in one unified gallery. It features natural language search for easy photo discovery and supports batch operations for efficient management. [Learn more ›](https://link.photoprism.app/stream-app){ class="pr-2" } [Read FAQ ›](https://link.photoprism.app/stream-faq)
 
-[Learn more ›](https://link.photoprism.app/stream-app){ class="pr-3" } [Read FAQ ›](https://link.photoprism.app/stream-faq)
+<div class="appstore-buttons">
+    <a href="https://link.photoprism.app/stream-ios"><img src="https://dl.photoprism.app/img/badges/badge_appstore.svg" alt="Apple App Store" width="135"></a>
+</div>

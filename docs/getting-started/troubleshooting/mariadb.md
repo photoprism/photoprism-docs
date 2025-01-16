@@ -200,6 +200,8 @@ Unless you open the storage folder again in macOS Finder, the errors should then
 
 ## Corrupted Files
 
+Most database table and/or index corruptions are hardware-related. Corrupted page writes can be caused by power failures or bad memory. The problem can also be caused by using network attached storage (NAS) and placing InnoDB databases on it.
+
 ↪ [Server Crashes](#server-crashes)
 
 ## Lost Root Password

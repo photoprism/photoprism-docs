@@ -27,7 +27,7 @@ PhotoPrism is compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB 1
 Built as a [Progressive Web App](../user-guide/pwa.md) (PWA), the web interface works with most modern browsers, and runs best on [Chrome](https://www.google.com/chrome/), [Chromium](https://www.chromium.org/getting-involved/download-chromium), [Safari](https://www.apple.com/safari/), [Firefox](https://www.mozilla.org/en-US/firefox/all/#product-desktop-release), and [Edge](https://www.microsoft.com/en-us/edge).
 You can conveniently install it on the home screen of all major operating systems and mobile devices.
 
-Not all [video and audio formats](https://caniuse.com/?search=video%20format) can be [played with every browser](troubleshooting/browsers.md). For example, [AAC](https://caniuse.com/aac "Advanced Audio Coding") - the default audio codec for [MPEG-4 AVC / H.264](https://caniuse.com/avc "Advanced Video Coding") - is supported natively in Chrome, Safari, and Edge, while it is only optionally supported by the OS in Firefox and Opera.
+Browsers must have [WebGL support](https://caniuse.com/webgl2) enabled in order to use the [interactive world maps](https://demo.photoprism.app/library/places) in [Places](../user-guide/organize/places.md).[^4] Also note that not all [video and audio formats](https://caniuse.com/?search=video%20format) can be [played with every browser](troubleshooting/browsers.md). For example, [AAC](https://caniuse.com/aac "Advanced Audio Coding") - the default audio codec for [MPEG-4 AVC / H.264](https://caniuse.com/avc "Advanced Video Coding") - is supported natively in Chrome, Safari, and Edge, while it is only optionally supported by the OS in Firefox and Opera.
 
 #### HTTPS ####
 
@@ -42,7 +42,7 @@ In order to successfully set up your installation and view location details in P
 
 ## Maps & Places
 
-As explained in our [Privacy Policy](https://www.photoprism.app/privacy#section-7), reverse geocoding and interactive world maps depend on retrieving the necessary information [from us](https://www.photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality.[^4]
+As explained in our [Privacy Policy](https://www.photoprism.app/privacy#section-7), reverse geocoding and interactive world maps depend on retrieving the necessary information [from us](https://www.photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality.[^5]
 
 Your use of these services is [fully covered by us](faq.md#are-the-keys-for-using-interactive-world-maps-provided-free-of-charge). Depending on your usage, this can save you much more than the cost of a [PhotoPrism+ Membership](https://www.photoprism.app/membership), since other providers generally charge usage-based fees and often don't allow you to cache the data they provide, compromising performance and your privacy with unnecessary requests.
 
@@ -69,4 +69,5 @@ Common problems can be quickly diagnosed and solved using our [Troubleshooting C
 [^1]: RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory
 [^2]: Our [configuration examples](https://dl.photoprism.app/docker/) are generally based on the [current stable MariaDB version](https://mariadb.com/kb/en/mariadb-server-release-dates/) to take advantage of performance improvements. This does not mean that older versions are no longer supported and you must upgrade immediately. We recommend not using the `:latest` tag for the MariaDB Docker image and to upgrade manually by changing the tag once we had a chance to test a new major version.
 [^3]: Oracle seems to have stopped shipping [new features and enhancements](https://github.com/photoprism/photoprism/issues/1764). As a result, the testing effort required before each release is no longer feasible.
-[^4]: Our [Compliance FAQ](https://www.photoprism.app/kb/compliance-faq#privacy) gives answers to the most frequently asked questions about product compliance and scalability.
+[^4]: [WebGL](https://caniuse.com/webgl2) may not currently be supported by [Firefox on Android](https://play.google.com/store/apps/details?id=org.mozilla.firefox&hl=en&pli=1).
+[^5]: Our [Compliance FAQ](https://www.photoprism.app/kb/compliance-faq#privacy) provides answers to the most frequently asked questions about product compliance and scalability.

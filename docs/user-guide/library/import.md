@@ -47,7 +47,7 @@ Import:
 The date and time placeholders you can use are described at https://pkg.go.dev/time#Layout. In this example, `82F63B78` is a placeholder for the [CRC32 checksum](https://en.wikipedia.org/wiki/Cyclic_redundancy_check) and `.jpg` is the file extension. Using a different 8-digit hex number for the checksum and, for example, `.ext` for the extension will work as well.
 
 !!! note ""
-    Setting a custom import file path will **not rename** any files that have already been imported, since this might cause conflicts with other tools or instances that may be accessing your files. Renaming existing files may also result in storage and/or transfer overhead with backup tools that do not recognize that files have been moved, i.e. they may create and/or transfer a new backup copy. We will consider adding an integrated file renaming feature once we have had time to test possible implementations for usability, performance, and security.
+    Setting a custom import file path will **not rename** any files that have already been imported, since this might cause conflicts with other tools or instances that may be accessing your files. Renaming existing files may also result in storage and/or transfer overhead with backup tools that do not recognize that files have been moved, i.e. they may create and/or transfer a new backup copy. We will consider [adding an integrated file renaming feature](../../getting-started/faq.md#can-i-use-photoprism-to-sort-files-into-a-configurable-folder-structure) once we have had time to test possible implementations for usability, performance, and security.
 
 ## Frequently Asked Questions
 

@@ -39,14 +39,14 @@ If you enable automatic imports by setting the config option [`PHOTOPRISM_AUTO_I
 
 ## Changing the Import File Path
 
-Starting with the [next release](https://docs.photoprism.app/release-notes/), advanced users will be able to customize the destination file path pattern used by the import feature through the [`settings.yml`](../../getting-started/config-files/settings.md#media-library) config file, e.g.:
+Starting with the [next release](https://docs.photoprism.app/release-notes/), advanced users can customize the destination file path pattern used by the import feature through the [`settings.yml`](../../getting-started/config-files/settings.md#media-library) config file, as shown in this example:
 
 ```yaml
 Import:
   Dest: 2006/01/20060102_150405_82F63B78.jpg
 ```
 
-The date and time placeholders for the import destination file path pattern are described in [the *time* package docs](https://pkg.go.dev/time#Layout). Using a different 8 digit hex number like `12345678` for the [CRC32 checksum](https://en.wikipedia.org/wiki/Cyclic_redundancy_check) and e.g. `.ext` instead of `.jpg` for the file extension will work as well.
+The date and time placeholders for the import destination file path pattern are described in [the *time* package docs](https://pkg.go.dev/time#Layout). Using a different 8 digit hex number such as `12345678` for the [CRC32 checksum](https://en.wikipedia.org/wiki/Cyclic_redundancy_check) and `.ext` instead of `.jpg` for the file extension will work as well.
 
 [Learn more ›](../../getting-started/config-files/settings.md#media-library)
 

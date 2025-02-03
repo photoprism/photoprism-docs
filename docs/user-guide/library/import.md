@@ -35,12 +35,24 @@ Automatic imports are disabled by default, as a wrong configuration or unsupport
 
 If you enable automatic imports by setting the config option [`PHOTOPRISM_AUTO_IMPORT`](../../getting-started/config-options.md#indexing) to a positive number indicating the safety delay in seconds, an import is automatically triggered after the safety delay when files are added to the *import* folder [via WebDAV](../sync/webdav.md).
 
-!!! info "Can I use PhotoPrism to sort files into a configurable folder structure?"
-    You have complete freedom in how you organize your originals. If you don't like the unique names and
-    folders used by the import function, you can resort to external batch renaming tools, for example:
+## Changing the Import File Path
 
-    * [ExifTool](https://ninedegreesbelow.com/photography/exiftool-commands.html#rename)
-    * [PhockUp](https://github.com/ivandokov/phockup)
-    * [Photo Organizer](https://www.systweak.com/photo-organizer)
+Starting with the [next release](https://docs.photoprism.app/release-notes/), advanced users will be able to [customize the import file path pattern](https://github.com/photoprism/photoprism/issues/4666) used by the import feature through the `settings.yml` [configuration file](../../getting-started/config-files/settings.md#media-library), e.g.:
 
-    Configurable import folders will be available in our upcoming release. However, this will not allow you to rename files that have already been imported, as doing so may cause conflicts with other tools or instances that may be accessing your files. In addition, renaming files may cause storage and/or transfer overhead with backup tools that do not recognize that files have been moved, i.e. they may create and/or transfer a new backup copy.
+```yaml
+Import:
+  Dest: 2006/01/20060102_150405_82F63B78.jpg
+```
+
+The date and time placeholders you can use are described at https://pkg.go.dev/time#Layout. In this example, `82F63B78` is a placeholder for the [CRC32 checksum](https://en.wikipedia.org/wiki/Cyclic_redundancy_check) and `.jpg` is the file extension. Using a different 8-digit hex number for the checksum and, for example, `.ext` for the extension will work as well.
+
+!!! note ""
+    Setting a custom import file path will **not rename** any files that have already been imported, since this might cause conflicts with other tools or instances that may be accessing your files. Renaming existing files may also result in storage and/or transfer overhead with backup tools that do not recognize that files have been moved, i.e. they may create and/or transfer a new backup copy. We will consider adding an integrated file renaming feature once we have had time to test possible implementations for usability, performance, and security.
+
+## Frequently Asked Questions
+
+### Can I use PhotoPrism to sort files into a configurable folder structure?
+
+You have complete freedom in how you name your files and folders. So if you don't like the unique names and folders used by the import feature, you can instead use external tools like [ExifTool](https://ninedegreesbelow.com/photography/exiftool-commands.html#rename), [PhockUp](https://github.com/ivandokov/phockup), or [Photo Organizer](https://www.systweak.com/photo-organizer) to reorganize your files based on their metadata.
+
+[Learn more ›](../../getting-started/faq.md#can-i-use-photoprism-to-sort-files-into-a-configurable-folder-structure)

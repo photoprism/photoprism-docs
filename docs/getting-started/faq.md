@@ -406,28 +406,29 @@ folder to find new files.
 
 ### Can I use PhotoPrism to sort files into a configurable folder structure?
 
-You have complete freedom in how you organize your originals. If you don't like the unique names and 
-folders used by the import function, you can resort to external batch renaming tools, for example
-[ExifTool](https://ninedegreesbelow.com/photography/exiftool-commands.html#rename),
-[PhockUp](https://github.com/ivandokov/phockup),
-or [Photo Organizer](https://www.systweak.com/photo-organizer).
+You have complete freedom in how you name your files and folders. So if you don't like the unique names and folders used by the import feature, you can instead use external tools like [ExifTool](https://ninedegreesbelow.com/photography/exiftool-commands.html#rename), [PhockUp](https://github.com/ivandokov/phockup), or [Photo Organizer](https://www.systweak.com/photo-organizer) to reorganize your files based on their metadata.
 
-Configurable import folders will be available in our upcoming release. However, this will not allow you to rename files that have already been imported, as doing so may cause conflicts with other tools or instances that may be accessing your files. In addition, renaming files may cause storage and/or transfer overhead with backup tools that do not recognize that files have been moved, i.e. they may create and/or transfer a new backup copy.
+In addition, starting with the [next release](https://docs.photoprism.app/release-notes/), advanced users will be able to [configure the import file path pattern](https://github.com/photoprism/photoprism/issues/4666) through a [configuration file](../user-guide/library/import.md#changing-the-import-file-path). However, this will not (yet) allow you to rename files that have already been imported, as this may cause conflicts with other tools or instances that may be accessing your files. Renaming existing files may also result in storage and/or transfer overhead with backup tools that do not recognize that files have been moved, i.e. they may create and/or transfer a new backup copy.
+
+Thad said, we will consider adding an integrated file renaming feature once we have had time to test possible implementations for usability, performance, and security.
+
+[Learn more ›](../user-guide/library/import.md#changing-the-import-file-path)
 
 ### Why is only the logo displayed when I open the app?
 
-This may happen when the server cannot be reached, for example, because a proxy is misconfigured,
-JavaScript is disabled in your browser, an ad blocker is blocking requests, or you are using an incompatible browser.
+This may happen when the server cannot be reached, for example, because a proxy is misconfigured, JavaScript is disabled in your browser, an ad blocker is blocking requests, or you are using an incompatible browser.
 
-We recommend going through the [checklist provided](troubleshooting/index.md#app-not-loading) and to verify that
-your browser meets the [system requirements](index.md#system-requirements).
+We recommend going through the [checklist provided](troubleshooting/index.md#app-not-loading) and to verify that your browser meets the [system requirements](index.md#system-requirements).
+
+[Learn more ›](troubleshooting/index.md#app-not-loading)
 
 ### Why is PhotoPrism getting stuck in a restart loop?
 
 This happens when Docker was configured to automatically restart services after failures.
 
-We recommend going through the [checklist for fatal server errors](troubleshooting/index.md#fatal-server-errors) and to verify that
-your computer meets the [system requirements](index.md#system-requirements).
+We recommend going through the [checklist for fatal server errors](troubleshooting/index.md#fatal-server-errors) and to verify that your computer meets the [system requirements](index.md#system-requirements).
+
+[Learn more ›](troubleshooting/index.md#fatal-server-errors)
 
 ### Can I install PhotoPrism in a sub-directory on a shared domain?
 

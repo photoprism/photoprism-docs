@@ -37,7 +37,7 @@ If you enable automatic imports by setting the config option [`PHOTOPRISM_AUTO_I
 
 ## Changing the Import File Path
 
-Starting with the [next release](https://docs.photoprism.app/release-notes/), advanced users will be able to [customize the import file path pattern](https://github.com/photoprism/photoprism/issues/4666) used by the import feature through the `settings.yml` [configuration file](../../getting-started/config-files/settings.md#media-library), e.g.:
+Starting with the [next release](https://docs.photoprism.app/release-notes/), advanced users will be able to customize the import file path pattern used by the import feature through the `settings.yml` [configuration file](../../getting-started/config-files/settings.md#media-library), e.g.:
 
 ```yaml
 Import:

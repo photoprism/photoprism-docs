@@ -10,13 +10,13 @@ Our new release comes with an upgraded user interface that includes many improve
 
 What's new?
 
-- UX: [Upgraded user interface includes many improvements and additions](https://github.com/photoprism/photoprism/issues/3168)
+- UX: [Upgraded user interface includes many improvements and additions](https://github.com/photoprism/photoprism/issues/3168#screenshots)
 - UX: [Edit dialog has been redesigned to be more mobile and user-friendly](https://github.com/photoprism/photoprism/issues/4763)
 - UX: [New hybrid photo and video viewer replaces dedicated video player](https://github.com/photoprism/photoprism/issues/1307)
 - Viewer: [Higher resolution thumbnails are used when zooming into an image](https://github.com/photoprism/photoprism/issues/4704)
 - Viewer: [Videos are played automatically when a slideshow is running](https://github.com/photoprism/photoprism/issues/4698)
-- Search: [Cards view and mosaic view show the video duration on thumbnails](https://github.com/photoprism/photoprism/issues/3168)
-- Search: [Cards view always shows the filename and camera details for videos](https://github.com/photoprism/photoprism/issues/3168)
+- Search: [Cards view and mosaic view show the video duration on thumbnails](https://github.com/photoprism/photoprism/issues/3168#screenshots)
+- Search: [Cards view always shows the filename and camera details for videos](https://github.com/photoprism/photoprism/issues/3168#screenshots)
 - Places: [Added a 3D Earth view that can be enabled for all map types](https://github.com/photoprism/photoprism/issues/4762)
 - Places: [Upgraded MapLibre GL JS library from v3.6 to v5.1](https://github.com/photoprism/photoprism/issues/4058) by [@QyuBee](https://github.com/QyuBee)
 - Places: [Locations are no longer estimated for non-photographic pictures](https://github.com/photoprism/photoprism/issues/4589)

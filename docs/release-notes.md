@@ -6,11 +6,11 @@
 ### Development Preview
 <span class="build">Build 250203-054101773</span>
 
-Our upcoming release comes with a revamped user interface that includes many fixes and enhancements, such as a new hybrid photo and video viewer that replaces the dedicated video player, a redesigned editing dialog that is more mobile-friendly and easier to use, and a new 3D Earth view for the maps under Places.
+Our new release comes with an upgraded user interface that includes many fixes and enhancements, such as a new hybrid photo and video viewer that replaces the dedicated video player, a redesigned editing dialog that is more mobile-friendly and easier to use, and a new 3D Earth view for the maps under Places.
 
 What's new?
 
-- UX: [Revamped user interface includes many fixes and enhancements](https://github.com/photoprism/photoprism/issues/3168)
+- UX: [Upgraded user interface includes many fixes and enhancements](https://github.com/photoprism/photoprism/issues/3168)
 - UX: [Edit dialog has been redesigned to be more mobile and user-friendly](https://github.com/photoprism/photoprism/issues/4763)
 - UX: [New hybrid photo and video viewer replaces dedicated video player](https://github.com/photoprism/photoprism/issues/1307)
 - Viewer: [Higher resolution thumbnails are used when zooming into an image](https://github.com/photoprism/photoprism/issues/4704)

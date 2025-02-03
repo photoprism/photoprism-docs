@@ -72,6 +72,7 @@ Setting `MediaSidecar` to `true` will also download sidecar files as used for XM
 Import:
   Path: /
   Move: false
+  Dest: 2006/01/20060102_150405_82F63B78.jpg
 Index:
   Path: /
   Convert: true
@@ -86,3 +87,6 @@ Stack:
 These settings affect which files are [stacked](../../user-guide/organize/stacks.md), as well as your preferences when indexing or importing files.
 
 You can also change these settings by navigating to [Settings > Library](../../user-guide/settings/library.md#stacks) and in the [Library UI](../../user-guide/library/originals.md), so it is generally not necessary to edit them directly in the config file.
+
+!!! note ""
+    The date and time placeholders for the **optional** destination file path pattern in `Import` > `Dest` are described in [the *time* package docs](https://pkg.go.dev/time#Layout). Using a different 8 digit hex number like `12345678` for the [CRC32 checksum](https://en.wikipedia.org/wiki/Cyclic_redundancy_check) and e.g. `.ext` instead of `.jpg` for the file extension will work as well. [Learn more ›](../../user-guide/library/import.md#changing-the-import-file-path)

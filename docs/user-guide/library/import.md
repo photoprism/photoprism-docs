@@ -46,7 +46,7 @@ Import:
   Dest: 2006/01/20060102_150405_82F63B78.jpg
 ```
 
-The date and time placeholders for the import destination file path pattern are described in [the *time* package docs](https://pkg.go.dev/time#Layout). Using a different 8 digit hex number such as `12345678` for the [CRC32 checksum](https://en.wikipedia.org/wiki/Cyclic_redundancy_check) and `.ext` instead of `.jpg` for the file extension will work as well.
+The date and time placeholders for the import destination file path pattern are described in [the *time* package docs](https://pkg.go.dev/time#Layout). Using a different 8 digit hex number such as `12345678` for the [CRC32 checksum](https://en.wikipedia.org/wiki/Cyclic_redundancy_check) and `.ext` instead of `.jpg` for the file extension will work as well. Invalid and empty patterns are ignored and the default is used instead.
 
 [Learn more ›](../../getting-started/config-files/settings.md#media-library)
 

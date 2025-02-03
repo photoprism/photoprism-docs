@@ -43,6 +43,4 @@ If you enable automatic imports by setting the config option [`PHOTOPRISM_AUTO_I
     * [PhockUp](https://github.com/ivandokov/phockup)
     * [Photo Organizer](https://www.systweak.com/photo-organizer)
 
-    Configurable import folders may be available in a later version. This is because - depending on the specific 
-    pattern - appropriate conflict resolution is required and the patterns must be well understood and validated
-    to avoid typos or other misconfigurations that lead to undesired results for which we do not want to be responsible.
+    Configurable import folders will be available in our upcoming release. However, this will not allow you to rename files that have already been imported, as doing so may cause conflicts with other tools or instances that may be accessing your files. In addition, renaming files may cause storage and/or transfer overhead with backup tools that do not recognize that files have been moved, i.e. they may create and/or transfer a new backup copy.

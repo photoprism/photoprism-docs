@@ -6,7 +6,7 @@
 ### Development Preview
 <span class="build">Build 250203-054101773</span>
 
-Our upcoming release comes with a refreshed user interface that includes many fixes and enhancements, such as a new hybrid photo and video viewer that replaces the dedicated video player, a redesigned editing dialog that is more mobile-friendly and easier to use, and a new 3D Earth view for the maps under Places.
+Our upcoming release comes with a revamped user interface that includes many fixes and enhancements, such as a new hybrid photo and video viewer that replaces the dedicated video player, a redesigned editing dialog that is more mobile-friendly and easier to use, and a new 3D Earth view for the maps under Places.
 
 What's new?
 

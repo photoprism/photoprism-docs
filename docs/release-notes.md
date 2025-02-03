@@ -24,7 +24,7 @@ What's new?
 - Metadata: [Labels are set based on matching keywords in title, subject](https://github.com/photoprism/photoprism/issues/4602) and [caption](https://github.com/photoprism/photoprism/issues/4603)
 - Metadata: [Improved recognition of images from digital film scanners](https://github.com/photoprism/photoprism/issues/4581)
 - Metadata: [Numerals are preserved in titles generated from file and folder names](https://github.com/photoprism/photoprism/issues/3447)
-- Import: [Advanced users can configure of the destination file path](https://github.com/photoprism/photoprism/issues/4666)
+- Import: [Advanced users can configure the destination file path](https://github.com/photoprism/photoprism/issues/4666)
 - CLI: [Added `users` command flag to find and restore deleted user accounts](https://github.com/photoprism/photoprism/issues/4570)
 - Setup: [Renamed `docker-compose.yml` config examples to `compose.yaml`](https://github.com/photoprism/photoprism/issues/4591)
 - Docker: [Upgraded base image from Ubuntu 24.04 to 24.10 (Oracular Oriole)](https://github.com/photoprism/photoprism/issues/4631)

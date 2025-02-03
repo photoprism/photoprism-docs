@@ -6,11 +6,11 @@
 ### Development Preview
 <span class="build">Build 250203-054101773</span>
 
-Our new release comes with an upgraded user interface that includes many fixes and enhancements, such as a new hybrid photo and video viewer that replaces the dedicated video player, a redesigned editing dialog that is more mobile-friendly and easier to use, and a new 3D Earth view for the maps under Places.
+Our new release comes with an upgraded user interface that includes many improvements and additions, such as a new hybrid photo and video viewer that replaces the dedicated video player, a redesigned editing dialog that is more mobile-friendly and easier to use, and a new 3D Earth view for the maps under Places.
 
 What's new?
 
-- UX: [Upgraded user interface includes many fixes and enhancements](https://github.com/photoprism/photoprism/issues/3168)
+- UX: [Upgraded user interface includes many improvements and additions](https://github.com/photoprism/photoprism/issues/3168)
 - UX: [Edit dialog has been redesigned to be more mobile and user-friendly](https://github.com/photoprism/photoprism/issues/4763)
 - UX: [New hybrid photo and video viewer replaces dedicated video player](https://github.com/photoprism/photoprism/issues/1307)
 - Viewer: [Higher resolution thumbnails are used when zooming into an image](https://github.com/photoprism/photoprism/issues/4704)
@@ -25,6 +25,7 @@ What's new?
 - Metadata: [Improved recognition of images from digital film scanners](https://github.com/photoprism/photoprism/issues/4581)
 - Metadata: [Numerals are preserved in titles generated from file and folder names](https://github.com/photoprism/photoprism/issues/3447)
 - Import: [Advanced users can configure the destination file path](https://github.com/photoprism/photoprism/issues/4666)
+- API: [`Description` field has been renamed to `Caption` in `/api/v1/photos`](https://github.com/photoprism/photoprism/issues/4603#issuecomment-2631743288)
 - CLI: [Added `users` command flag to find and restore deleted user accounts](https://github.com/photoprism/photoprism/issues/4570)
 - Setup: [Renamed `docker-compose.yml` config examples to `compose.yaml`](https://github.com/photoprism/photoprism/issues/4591)
 - Docker: [Upgraded base image from Ubuntu 24.04 to 24.10 (Oracular Oriole)](https://github.com/photoprism/photoprism/issues/4631)

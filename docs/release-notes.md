@@ -10,7 +10,7 @@ Our upcoming release comes with a refreshed user interface that includes many fi
 
 What's new?
 
-- UX: [Updated user interface includes many fixes and enhancements](https://github.com/photoprism/photoprism/issues/3168)
+- UX: [Revamped user interface includes many fixes and enhancements](https://github.com/photoprism/photoprism/issues/3168)
 - UX: [Edit dialog has been redesigned to be more mobile and user-friendly](https://github.com/photoprism/photoprism/issues/4763)
 - UX: [New hybrid photo and video viewer replaces dedicated video player](https://github.com/photoprism/photoprism/issues/1307)
 - Viewer: [Higher resolution thumbnails are used when zooming into an image](https://github.com/photoprism/photoprism/issues/4704)

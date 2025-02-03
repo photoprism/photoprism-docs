@@ -4,23 +4,30 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 241121-7f3948f42</span>
+<span class="build">Build 250203-054101773</span>
+
+Our upcoming release comes with a refreshed user interface that includes many fixes and improvements, such as a new hybrid photo and video viewer that replaces the dedicated video player, a redesigned editing dialog that is more mobile-friendly and easier to use, and a new 3D Earth view for the maps under Places.
 
 What's new?
 
-- Places: [Upgraded MapLibre GL JS library from v3.6 to v4.7.1](https://github.com/photoprism/photoprism/issues/4058) by [@QyuBee](https://github.com/QyuBee)
+- UX: [Updated user interface includes many fixes and enhancements](https://github.com/photoprism/photoprism/issues/3168)
+- UX: [Edit dialog has been redesigned to be more mobile and user-friendly](https://github.com/photoprism/photoprism/issues/4763)
+- UX: [New hybrid photo and video viewer replaces dedicated video player](https://github.com/photoprism/photoprism/issues/1307)
+- Viewer: [Higher resolution thumbnails are used when zooming into an image](https://github.com/photoprism/photoprism/issues/4704)
+- Viewer: [Videos are played automatically when a slideshow is running](https://github.com/photoprism/photoprism/issues/4698)
+- Places: [Added a 3D Earth view mode that can be enabled for all map types](https://github.com/photoprism/photoprism/issues/4762)
+- Places: [Upgraded MapLibre GL JS library from v3.6 to v5.1](https://github.com/photoprism/photoprism/issues/4058) by [@QyuBee](https://github.com/QyuBee)
 - Places: [Locations are no longer estimated for non-photographic pictures](https://github.com/photoprism/photoprism/issues/4589)
-- Metadata: [Labels are set based on matching keywords in title and subject](https://github.com/photoprism/photoprism/issues/4602)
+- Places: [Updated reverse geocoding data to include corrections from OSM](https://github.com/photoprism/photoprism/issues/4688)
+- Metadata: [Labels are set based on matching keywords in title, subject](https://github.com/photoprism/photoprism/issues/4602) and [caption](https://github.com/photoprism/photoprism/issues/4603)
 - Metadata: [Improved recognition of images from digital film scanners](https://github.com/photoprism/photoprism/issues/4581)
 - Metadata: [Numerals are preserved in titles generated from file and folder names](https://github.com/photoprism/photoprism/issues/3447)
+- Import: [Advanced users can configure of the destination file path](https://github.com/photoprism/photoprism/issues/4666)
 - CLI: [Added `users` command flag to find and restore deleted user accounts](https://github.com/photoprism/photoprism/issues/4570)
 - Setup: [Renamed `docker-compose.yml` config examples to `compose.yaml`](https://github.com/photoprism/photoprism/issues/4591)
 - Docker: [Upgraded base image from Ubuntu 24.04 to 24.10 (Oracular Oriole)](https://github.com/photoprism/photoprism/issues/4631)
 - Security: [Added `X-Robots-Tag` header and `robots.txt` file to control crawlers](https://github.com/photoprism/photoprism/issues/4574)
 - Security: [Go has been updated to v1.22.9, which includes several fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.22.9) 
-
-!!! info ""
-    We are currently [upgrading our frontend component framework](https://github.com/photoprism/photoprism/issues/3168) to a new major version. To avoid duplicate work and conflicting changes, development of [new frontend functionality](https://github.com/photoprism/photoprism/labels/frontend) will continue after the upgrade has been completed. [Learn more ›](https://github.com/photoprism/photoprism/issues/3168)
 
 ### September 15, 2024
 <span class="build">Build 240915-e1280b2fb</span>

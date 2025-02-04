@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250204-1f4f65e98</span>
+<span class="build">Build 250204-5ef3b5af2</span>
 
 Our new release comes with an upgraded user interface that includes many improvements and additions, such as a new hybrid photo and video viewer that replaces the dedicated video player, a redesigned editing dialog that is more mobile-friendly and easier to use, and a new 3D Earth view for the maps under Places.
 
@@ -28,7 +28,9 @@ What's new?
 - API: [`Description` field has been renamed to `Caption` in `/api/v1/photos`](https://github.com/photoprism/photoprism/issues/4603#issuecomment-2631743288)
 - CLI: [Added `users` command flag to find and restore deleted user accounts](https://github.com/photoprism/photoprism/issues/4570)
 - Setup: [Renamed `docker-compose.yml` config examples to `compose.yaml`](https://github.com/photoprism/photoprism/issues/4591)
+- Config: [Added options to recreate Unix server socket and set permissions](https://github.com/photoprism/photoprism/issues/4765)
 - Docker: [Upgraded base image from Ubuntu 24.04 to 24.10 (Oracular Oriole)](https://github.com/photoprism/photoprism/issues/4631)
+- Docker: [Replaced entrypoint script for graceful server shutdown and restart](https://github.com/photoprism/photoprism/issues/4767)
 - Security: [Added `X-Robots-Tag` header and `robots.txt` file to control crawlers](https://github.com/photoprism/photoprism/issues/4574)
 - Security: [Go has been updated to v1.23.5, which includes several fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.23.5) 
 

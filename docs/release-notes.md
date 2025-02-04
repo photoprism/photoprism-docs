@@ -32,7 +32,7 @@ What's new?
 - Docker: [Upgraded base image from Ubuntu 24.04 to 24.10 (Oracular Oriole)](https://github.com/photoprism/photoprism/issues/4631)
 - Docker: [Replaced entrypoint script for graceful server shutdown and restart](https://github.com/photoprism/photoprism/issues/4767)
 - Security: [Added `X-Robots-Tag` header and `robots.txt` file to control crawlers](https://github.com/photoprism/photoprism/issues/4574)
-- Security: [Go has been updated to v1.23.5, which includes several fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.23.5) 
+- Security: [Go has been updated to v1.23.6, which includes several fixes](https://github.com/golang/go/issues?q=milestone%3AGo1.23.6) 
 
 ### September 15, 2024
 <span class="build">Build 240915-e1280b2fb</span>

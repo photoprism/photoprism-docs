@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250205-ef66ddbb8</span>
+<span class="build">Build 250205-b4f57dc99</span>
 
 Our new release comes with an upgraded user interface that includes many improvements and additions, such as a new hybrid photo and video viewer that replaces the dedicated video player, a redesigned editing dialog that is more mobile-friendly and easier to use, and a new 3D Earth view for the maps under Places.
 

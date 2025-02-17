@@ -57,7 +57,9 @@ To run PhotoPrism behind Traefik, create a `traefik.yaml` configuration and then
         address: ":443"
         transport:
           respondingTimeouts:
-            readTimeout: "0s"
+            readTimeout: "1h"
+            writeTimeout: "0s"
+            idleTimeout: "300s"
 
     providers:
       docker:

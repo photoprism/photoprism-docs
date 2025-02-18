@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250217-8bd03710a</span>
+<span class="build">Build 250218-a0e391de0</span>
 
 Our new release comes with an upgraded user interface that includes many improvements and additions, such as a new hybrid photo and video viewer that replaces the dedicated video player, a redesigned editing dialog that is more mobile-friendly and easier to use, and a new 3D Earth view for the maps under Places.
 
@@ -25,6 +25,7 @@ What's new?
 - Metadata: [Improved recognition of images from digital film scanners](https://github.com/photoprism/photoprism/issues/4581)
 - Metadata: [Numerals are preserved in titles generated from file and folder names](https://github.com/photoprism/photoprism/issues/3447)
 - Import: [Advanced users can configure a custom destination file path pattern](user-guide/library/import.md#changing-the-import-file-path)
+- Settings: [Fixed Windows resource string in WebDAV dialog when using HTTPS/TLS](https://github.com/photoprism/photoprism/issues/4798)
 - API: [`Description` field has been renamed to `Caption` in `/api/v1/photos`](https://github.com/photoprism/photoprism/issues/4603#issuecomment-2631743288)
 - CLI: [Added `users` command flag to find and restore deleted user accounts](https://github.com/photoprism/photoprism/issues/4570)
 - Setup: [Renamed `docker-compose.yml` config examples to `compose.yaml`](https://github.com/photoprism/photoprism/issues/4591)

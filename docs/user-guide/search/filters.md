@@ -45,13 +45,13 @@ The search result shows pictures that are monochrome **and** not in review.
 
 Additionally some filters can be combined with `&` as follows:
 
-```bigquery
+```
 keywords:buffalo&water
 ```
 
 or:
 
-```bigquery
+```
 keywords:"buffalo & water"
 ```
 
@@ -151,20 +151,23 @@ This is a complete list of supported search filters with examples. Filters can g
 | type      | string    | type:raw                              | Media Type (image, video, raw, live, animated); separate with \|                                                                           |
 | uid       | string    | uid:pqbcf5j446s0futy                  | Limits results to the specified internal unique IDs                                                                                        |
 | year      | string    | year:1990\|2003                       | Year (separate with \|)                                                                                                                    |
-| animated  | switch    | animated:yes                          | Finds animated GIFs                                                                                                                        |
+| animated  | switch    | animated:yes                          | Finds animations only                                                                                                                      |
 | archived  | switch    | archived:yes                          | Finds archived pictures                                                                                                                    |
+| audio     | switch    | audio:yes                             | Finds audio recordings only                                                                                                                |
+| document  | switch    | document:yes                          | Finds documents only                                                                                                                       |
 | error     | switch    | error:yes                             | Finds pictures with errors                                                                                                                 |
 | hidden    | switch    | hidden:yes                            | Finds hidden pictures (broken or unsupported)                                                                                              |
+| image     | switch    | image:yes                             | Finds regular images only                                                                                                                  |
 | landscape | switch    | landscape:yes                         | Finds pictures in landscape format                                                                                                         |
 | live      | switch    | live:yes                              | Finds Live Photos and short videos                                                                                                         |
 | mono      | switch    | mono:yes                              | Finds pictures with few or no colors                                                                                                       |
 | panorama  | switch    | panorama:yes                          | Finds pictures with an aspect ratio > 1.9:1                                                                                                |
-| photo     | switch    | photo:yes                             | Finds only photos, no videos                                                                                                               |
+| photo     | switch    | photo:yes                             | Excludes videos from search results                                                                                                        |
 | portrait  | switch    | portrait:yes                          | Finds pictures in portrait format                                                                                                          |
 | primary   | switch    | primary:yes                           | Finds primary JPEG files only                                                                                                              |
 | private   | switch    | private:yes                           | Finds private pictures                                                                                                                     |
 | public    | switch    | public:yes                            | Excludes private pictures                                                                                                                  |
-| raw       | switch    | raw:yes                               | Finds pictures with RAW image file                                                                                                         |
+| raw       | switch    | raw:yes                               | Finds RAW images only                                                                                                                      |
 | review    | switch    | review:yes                            | Finds pictures in review                                                                                                                   |
 | square    | switch    | square:yes                            | Finds images with an aspect ratio of 1:1                                                                                                   |
 | stack     | switch    | stack:yes                             | Finds pictures with more than one media file                                                                                               |
@@ -172,9 +175,14 @@ This is a complete list of supported search filters with examples. Filters can g
 | unsorted  | switch    | unsorted:yes                          | Finds pictures not in an album                                                                                                             |
 | unstacked | switch    | unstacked:yes                         | Finds pictures with a file that has been removed from a stack                                                                              |
 | vector    | switch    | vector:yes                            | Finds vector graphics only                                                                                                                 |
-| video     | switch    | video:yes                             | Finds video files only                                                                                                                     |
-| after     | timestamp | after:"2022-01-30"                    | Finds pictures taken after this date                                                                                                       |
-| before    | timestamp | before:"2022-01-30"                   | Finds pictures taken before this date                                                                                                      |
+| video     | switch    | video:yes                             | Finds videos only                                                                                                                          |
+| added     | timestamp | added:"2006-01-02T15:04:05Z"          | Finds pictures added at or after this time                                                                                                 |
+| after     | timestamp | after:"2022-01-30"                    | Finds pictures taken on or after this date                                                                                                 |
+| before    | timestamp | before:"2022-01-30"                   | Finds pictures taken on or before this date                                                                                                |
+| edited    | timestamp | edited:"2006-01-02T15:04:05Z"         | Finds pictures edited at or after this time                                                                                                |
+| taken     | timestamp | taken:"2022-01-30"                    | Finds pictures taken on the specified date                                                                                                 |
+| updated   | timestamp | updated:"2006-01-02T15:04:05Z"        | Finds pictures updated at or after this time                                                                                               |
+
 
 !!! question "Why can't I play live photos or find stacks when I search for specific images?"
     Our search API and user interface perform a file search. This is intentional since "stacks" can contain files of different types and properties, such as color.

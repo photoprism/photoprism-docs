@@ -67,7 +67,7 @@ and [`defaults.yml`](defaults.md) files, grouped by purpose.
 
 ### Authentication ###
 
-|       Name       |  Type  |       CLI Flag       |
+| Name             | Type   | CLI Flag             |
 |------------------|--------|----------------------|
 | AuthMode         | string | --auth-mode          |
 | Public           | bool   | --public             |
@@ -241,27 +241,28 @@ and [`defaults.yml`](defaults.md) files, grouped by purpose.
 
 ### File Conversion ###
 
-|        Name         |  Type  |        CLI Flag         |
-|---------------------|--------|-------------------------|
-| FFmpegBin           | string | --ffmpeg-bin            |
-| FFmpegEncoder       | string | --ffmpeg-encoder        |
-| FFmpegSize          | int    | --ffmpeg-size           |
-| FFmpegBitrate       | int    | --ffmpeg-bitrate        |
-| FFmpegMapVideo      | string | --ffmpeg-map-video      |
-| FFmpegMapAudio      | string | --ffmpeg-map-audio      |
-| ExifToolBin         | string | --exiftool-bin          |
-| SipsBin             | string | --sips-bin              |
-| SipsExclude         | string | --sips-exclude          |
-| DarktableBin        | string | --darktable-bin         |
-| DarktableCachePath  | string | --darktable-cache-path  |
-| DarktableConfigPath | string | --darktable-config-path |
-| DarktableExclude    | string | --darktable-exclude     |
-| RawTherapeeBin      | string | --rawtherapee-bin       |
-| RawTherapeeExclude  | string | --rawtherapee-exclude   |
-| ImageMagickBin      | string | --imagemagick-bin       |
-| ImageMagickExclude  | string | --imagemagick-exclude   |
-| HeifConvertBin      | string | --heifconvert-bin       |
-| RsvgConvertBin      | string | --rsvgconvert-bin       |
+|          Name          |  Type  |         CLI Flag          |
+|------------------------|--------|---------------------------|
+| FFmpegBin              | string | --ffmpeg-bin              |
+| FFmpegEncoder          | string | --ffmpeg-encoder          |
+| FFmpegSize             | int    | --ffmpeg-size             |
+| FFmpegBitrate          | int    | --ffmpeg-bitrate          |
+| FFmpegMapVideo         | string | --ffmpeg-map-video        |
+| FFmpegMapAudio         | string | --ffmpeg-map-audio        |
+| ExifToolBin            | string | --exiftool-bin            |
+| SipsBin                | string | --sips-bin                |
+| SipsExclude            | string | --sips-exclude            |
+| DarktableBin           | string | --darktable-bin           |
+| DarktableCachePath     | string | --darktable-cache-path    |
+| DarktableConfigPath    | string | --darktable-config-path   |
+| DarktableExclude       | string | --darktable-exclude       |
+| RawTherapeeBin         | string | --rawtherapee-bin         |
+| RawTherapeeExclude     | string | --rawtherapee-exclude     |
+| ImageMagickBin         | string | --imagemagick-bin         |
+| ImageMagickExclude     | string | --imagemagick-exclude     |
+| HeifConvertBin         | string | --heifconvert-bin         |
+| HeifConvertOrientation | string | --heifconvert-orientation |
+| RsvgConvertBin         | string | --rsvgconvert-bin         |
 
 ### Security Tokens ###
 

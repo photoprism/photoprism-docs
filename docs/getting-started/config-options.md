@@ -5,12 +5,12 @@
 
 ### Authentication ###
 
-| Environment                                      | CLI Flag          | Default                      | Description                                                                                         |
+|                   Environment                    |     CLI Flag      |           Default            |                                             Description                                             |
 |--------------------------------------------------|-------------------|------------------------------|-----------------------------------------------------------------------------------------------------|
-| PHOTOPRISM_AUTH_MODE                             | --auth-mode       | password                     | authentication `MODE` (public[^2], password)                                                        |
+| PHOTOPRISM_AUTH_MODE                             | --auth-mode       | password                     | authentication `MODE` (public[^2], password)                                                            |
 | PHOTOPRISM_ADMIN_USER, PHOTOPRISM_ADMIN_USERNAME | --admin-user      | admin                        | `USERNAME` of the superadmin account that is created on first startup                               |
 | PHOTOPRISM_ADMIN_PASSWORD                        | --admin-password  |                              | initial `PASSWORD` of the superadmin account (8-72 characters)                                      |
-| PHOTOPRISM_PASSWORD_LENGTH                       | --password-length | 8                            | minimum password `LENGTH` in characters *plus*                                                      |
+| PHOTOPRISM_PASSWORD_LENGTH                       | --password-length |                            8 | minimum password `LENGTH` in characters *plus*                                                      |
 | PHOTOPRISM_OIDC_URI                              | --oidc-uri        |                              | issuer `URI` for single sign-on via OpenID Connect, e.g. https://accounts.google.com                |
 | PHOTOPRISM_OIDC_CLIENT                           | --oidc-client     |                              | client `ID` for single sign-on via OpenID Connect                                                   |
 | PHOTOPRISM_OIDC_SECRET                           | --oidc-secret     |                              | client `SECRET` for single sign-on via OpenID Connect                                               |
@@ -22,9 +22,9 @@
 | PHOTOPRISM_OIDC_USERNAME                         | --oidc-username   | preferred_username           | preferred username `CLAIM` for new OpenID Connect users (preferred_username, name, nickname, email) |
 | PHOTOPRISM_OIDC_WEBDAV                           | --oidc-webdav     |                              | allow new OpenID Connect users to use WebDAV when they have a role that allows it                   |
 | PHOTOPRISM_DISABLE_OIDC                          | --disable-oidc    |                              | disable single sign-on via OpenID Connect, even if an identity provider has been configured         |
-| PHOTOPRISM_SESSION_MAXAGE                        | --session-maxage  | 1209600                      | session expiration time in `SECONDS`, doubled for accounts with 2FA (-1 to disable)                 |
-| PHOTOPRISM_SESSION_TIMEOUT                       | --session-timeout | 604800                       | session idle time in `SECONDS`, doubled for accounts with 2FA (-1 to disable)                       |
-| PHOTOPRISM_SESSION_CACHE                         | --session-cache   | 900                          | session cache duration in `SECONDS` (60-3600)                                                       |
+| PHOTOPRISM_SESSION_MAXAGE                        | --session-maxage  |                      1209600 | session expiration time in `SECONDS`, doubled for accounts with 2FA (-1 to disable)                 |
+| PHOTOPRISM_SESSION_TIMEOUT                       | --session-timeout |                       604800 | session idle time in `SECONDS`, doubled for accounts with 2FA (-1 to disable)                       |
+| PHOTOPRISM_SESSION_CACHE                         | --session-cache   |                          900 | session cache duration in `SECONDS` (60-3600)                                                       |
 
 ### Logging ###
 
@@ -72,18 +72,18 @@
 
 |                 Environment                  |     CLI Flag      | Default |                                            Description                                            |
 |----------------------------------------------|-------------------|---------|---------------------------------------------------------------------------------------------------|
-| PHOTOPRISM_INDEX_WORKERS, PHOTOPRISM_WORKERS | --index-workers   |       4 | maximum `NUMBER` of indexing workers, default depends on the number of physical cores             |
+| PHOTOPRISM_INDEX_WORKERS, PHOTOPRISM_WORKERS | --index-workers   | 4       | maximum `NUMBER` of indexing workers, default depends on the number of physical cores             |
 | PHOTOPRISM_INDEX_SCHEDULE                    | --index-schedule  |         | indexing `SCHEDULE` in cron format (e.g. "@every 3h" for every 3 hours; "" to disable)            |
 | PHOTOPRISM_WAKEUP_INTERVAL                   | --wakeup-interval | 15m0s   | `TIME` between facial recognition, file sync, and metadata worker runs (1-86400s)                 |
-| PHOTOPRISM_AUTO_INDEX                        | --auto-index      |     300 | delay before automatically indexing files in `SECONDS` when uploading via WebDAV (-1 to disable)  |
-| PHOTOPRISM_AUTO_IMPORT                       | --auto-import     |      -1 | delay before automatically importing files in `SECONDS` when uploading via WebDAV (-1 to disable) |
+| PHOTOPRISM_AUTO_INDEX                        | --auto-index      | 300     | delay before automatically indexing files in `SECONDS` when uploading via WebDAV (-1 to disable)  |
+| PHOTOPRISM_AUTO_IMPORT                       | --auto-import     | -1      | delay before automatically importing files in `SECONDS` when uploading via WebDAV (-1 to disable) |
 
 ### Feature Flags ###
 
 |            Environment            |         CLI Flag         | Default |                                           Description                                            |
 |-----------------------------------|--------------------------|---------|--------------------------------------------------------------------------------------------------|
 | PHOTOPRISM_READONLY               | --read-only              |         | disable features that require write permission for the originals folder                          |
-| PHOTOPRISM_EXPERIMENTAL           | --experimental           |         | enable new features currently under development                                                  |
+| PHOTOPRISM_EXPERIMENTAL           | --experimental           |         | enable new features that may be incomplete or unstable                                           |
 | PHOTOPRISM_DISABLE_SETTINGS       | --disable-settings       |         | disable the settings user interface and server API, e.g. in combination with public mode         |
 | PHOTOPRISM_DISABLE_BACKUPS        | --disable-backups        |         | prevent database and album backups as well as YAML sidecar files from being created              |
 | PHOTOPRISM_DISABLE_RESTART        | --disable-restart        |         | prevent admins from restarting the server through the user interface                             |
@@ -142,13 +142,13 @@
 
 ### Proxy Servers ###
 
-|           Environment           |        CLI Flag        |      Default      |                                               Description                                               |
-|---------------------------------|------------------------|-------------------|---------------------------------------------------------------------------------------------------------|
-| PHOTOPRISM_HTTPS_PROXY          | --https-proxy          |                   | proxy server `URL` to be used for outgoing connections *optional*                                       |
-| PHOTOPRISM_HTTPS_PROXY_INSECURE | --https-proxy-insecure |                   | ignore invalid HTTPS certificates when using a proxy                                                    |
-| PHOTOPRISM_TRUSTED_PROXY        | --trusted-proxy        | 172.16.0.0/12     | `CIDR` ranges or IPv4/v6 addresses from which reverse proxy headers can be trusted, separated by commas |
-| PHOTOPRISM_PROXY_PROTO_HEADER   | --proxy-proto-header   | X-Forwarded-Proto | proxy protocol header `NAME`                                                                            |
-| PHOTOPRISM_PROXY_PROTO_HTTPS    | --proxy-proto-https    | https             | forwarded HTTPS protocol `NAME`                                                                         |
+|           Environment           |        CLI Flag        |       Default       |                                               Description                                               |
+|---------------------------------|------------------------|---------------------|---------------------------------------------------------------------------------------------------------|
+| PHOTOPRISM_HTTPS_PROXY          | --https-proxy          |                     | proxy server `URL` to be used for outgoing connections *optional*                                       |
+| PHOTOPRISM_HTTPS_PROXY_INSECURE | --https-proxy-insecure |                     | ignore invalid HTTPS certificates when using a proxy                                                    |
+| PHOTOPRISM_TRUSTED_PROXY        | --trusted-proxy        | "172.16.0.0/12"     | `CIDR` ranges or IPv4/v6 addresses from which reverse proxy headers can be trusted, separated by commas |
+| PHOTOPRISM_PROXY_PROTO_HEADER   | --proxy-proto-header   | "X-Forwarded-Proto" | proxy protocol header `NAME`                                                                            |
+| PHOTOPRISM_PROXY_PROTO_HTTPS    | --proxy-proto-https    | "https"             | forwarded HTTPS protocol `NAME`                                                                         |
 
 ### Web Server ###
 
@@ -179,7 +179,7 @@
 | PHOTOPRISM_HTTP_CACHE_PUBLIC    | --http-cache-public    |               | allow static content to be cached by a CDN or caching proxy                                             |
 | PHOTOPRISM_HTTP_CACHE_MAXAGE    | --http-cache-maxage    |       2592000 | time in `SECONDS` until cached content expires                                                          |
 | PHOTOPRISM_HTTP_VIDEO_MAXAGE    | --http-video-maxage    |         21600 | time in `SECONDS` until cached videos expire                                                            |
-| PHOTOPRISM_HTTP_HOST            | --http-host            | 0.0.0.0       | Web server `IP` address or Unix domain socket, e.g. unix:/var/run/photoprism.sock                       |
+| PHOTOPRISM_HTTP_HOST            | --http-host            | 0.0.0.0       | Web server `IP` address or Unix domain socket, e.g. unix:/var/run/photoprism.sock?force=true&mode=660   |
 | PHOTOPRISM_HTTP_PORT            | --http-port            |          2342 | Web server port `NUMBER`, ignored for Unix domain sockets                                               |
 | PHOTOPRISM_HTTP_HOSTNAME        | --http-hostname        |               | serve requests for this `HOSTNAME` only *plus*                                                          |
 
@@ -199,27 +199,28 @@
 
 ### File Conversion ###
 
-|                           Environment                            |        CLI Flag         |                 Default                  |                           Description                           |
-|------------------------------------------------------------------|-------------------------|------------------------------------------|-----------------------------------------------------------------|
-| PHOTOPRISM_FFMPEG_BIN                                            | --ffmpeg-bin            | ffmpeg                                   | FFmpeg `COMMAND` for video transcoding and thumbnail extraction |
-| PHOTOPRISM_FFMPEG_ENCODER                                        | --ffmpeg-encoder        | libx264                                  | FFmpeg AVC encoder `NAME`                                       |
-| PHOTOPRISM_FFMPEG_SIZE                                           | --ffmpeg-size           |                                     4096 | maximum video size in `PIXELS` (720-7680)                       |
-| PHOTOPRISM_FFMPEG_BITRATE                                        | --ffmpeg-bitrate        |                                       50 | maximum video `BITRATE` in Mbit/s                               |
-| PHOTOPRISM_FFMPEG_MAP_VIDEO                                      | --ffmpeg-map-video      | `0:v:0`                                  | video `STREAMS` that should be transcoded                       |
-| PHOTOPRISM_FFMPEG_MAP_AUDIO                                      | --ffmpeg-map-audio      | `0:a:0?`                                 | audio `STREAMS` that should be transcoded                       |
-| PHOTOPRISM_EXIFTOOL_BIN                                          | --exiftool-bin          | exiftool                                 | ExifTool `COMMAND` for extracting metadata                      |
-| PHOTOPRISM_SIPS_BIN                                              | --sips-bin              | sips                                     | Sips `COMMAND` for media file conversion *macOS only*           |
-| PHOTOPRISM_SIPS_EXCLUDE, PHOTOPRISM_SIPS_BLACKLIST               | --sips-exclude          | avif, avifs, thm                         | file `EXTENSIONS` not to be used with Sips *macOS only*         |
-| PHOTOPRISM_DARKTABLE_BIN                                         | --darktable-bin         | darktable-cli                            | Darktable CLI `COMMAND` for RAW to JPEG conversion              |
-| PHOTOPRISM_DARKTABLE_EXCLUDE, PHOTOPRISM_DARKTABLE_BLACKLIST     | --darktable-exclude     | thm                                      | file `EXTENSIONS` not to be used with Darktable                 |
-| PHOTOPRISM_DARKTABLE_CACHE_PATH                                  | --darktable-cache-path  |                                          | custom Darktable cache `PATH`                                   |
-| PHOTOPRISM_DARKTABLE_CONFIG_PATH                                 | --darktable-config-path |                                          | custom Darktable config `PATH`                                  |
-| PHOTOPRISM_RAWTHERAPEE_BIN                                       | --rawtherapee-bin       | rawtherapee-cli                          | RawTherapee CLI `COMMAND` for RAW to JPEG conversion            |
-| PHOTOPRISM_RAWTHERAPEE_EXCLUDE, PHOTOPRISM_RAWTHERAPEE_BLACKLIST | --rawtherapee-exclude   | dng, thm                                 | file `EXTENSIONS` not to be used with RawTherapee               |
-| PHOTOPRISM_IMAGEMAGICK_BIN                                       | --imagemagick-bin       | convert                                  | ImageMagick CLI `COMMAND` for image file conversion             |
-| PHOTOPRISM_IMAGEMAGICK_EXCLUDE, PHOTOPRISM_IMAGEMAGICK_BLACKLIST | --imagemagick-exclude   | heif, heic, heics, avif, avifs, jxl, thm | file `EXTENSIONS` not to be used with ImageMagick               |
-| PHOTOPRISM_HEIFCONVERT_BIN                                       | --heifconvert-bin       | heif-convert                             | libheif HEIC image conversion `COMMAND`                         |
-| PHOTOPRISM_RSVGCONVERT_BIN                                       | --rsvgconvert-bin       | rsvg-convert                             | librsvg SVG graphics conversion `COMMAND` *plus*                |
+|                           Environment                            |         CLI Flag          |                 Default                  |                            Description                            |
+|------------------------------------------------------------------|---------------------------|------------------------------------------|-------------------------------------------------------------------|
+| PHOTOPRISM_FFMPEG_BIN                                            | --ffmpeg-bin              | ffmpeg                                   | FFmpeg `COMMAND` for video transcoding and thumbnail extraction   |
+| PHOTOPRISM_FFMPEG_ENCODER                                        | --ffmpeg-encoder          | libx264                                  | FFmpeg AVC encoder `NAME`                                         |
+| PHOTOPRISM_FFMPEG_SIZE                                           | --ffmpeg-size             |                                     4096 | maximum video size in `PIXELS` (720-7680)                         |
+| PHOTOPRISM_FFMPEG_BITRATE                                        | --ffmpeg-bitrate          |                                       50 | maximum video `BITRATE` in Mbit/s                                 |
+| PHOTOPRISM_FFMPEG_MAP_VIDEO                                      | --ffmpeg-map-video        | `0:v:0`                                  | video `STREAMS` that should be transcoded                         |
+| PHOTOPRISM_FFMPEG_MAP_AUDIO                                      | --ffmpeg-map-audio        | `0:a:0?`                                 | audio `STREAMS` that should be transcoded                         |
+| PHOTOPRISM_EXIFTOOL_BIN                                          | --exiftool-bin            | exiftool                                 | ExifTool `COMMAND` for extracting metadata                        |
+| PHOTOPRISM_SIPS_BIN                                              | --sips-bin                | sips                                     | Sips `COMMAND` for media file conversion *macOS only*             |
+| PHOTOPRISM_SIPS_EXCLUDE, PHOTOPRISM_SIPS_BLACKLIST               | --sips-exclude            | avif, avifs, thm                         | file `EXTENSIONS` not to be used with Sips *macOS only*           |
+| PHOTOPRISM_DARKTABLE_BIN                                         | --darktable-bin           | darktable-cli                            | Darktable CLI `COMMAND` for RAW to JPEG conversion                |
+| PHOTOPRISM_DARKTABLE_EXCLUDE, PHOTOPRISM_DARKTABLE_BLACKLIST     | --darktable-exclude       | thm                                      | file `EXTENSIONS` not to be used with Darktable                   |
+| PHOTOPRISM_DARKTABLE_CACHE_PATH                                  | --darktable-cache-path    |                                          | custom Darktable cache `PATH`                                     |
+| PHOTOPRISM_DARKTABLE_CONFIG_PATH                                 | --darktable-config-path   |                                          | custom Darktable config `PATH`                                    |
+| PHOTOPRISM_RAWTHERAPEE_BIN                                       | --rawtherapee-bin         | rawtherapee-cli                          | RawTherapee CLI `COMMAND` for RAW to JPEG conversion              |
+| PHOTOPRISM_RAWTHERAPEE_EXCLUDE, PHOTOPRISM_RAWTHERAPEE_BLACKLIST | --rawtherapee-exclude     | dng, thm                                 | file `EXTENSIONS` not to be used with RawTherapee                 |
+| PHOTOPRISM_IMAGEMAGICK_BIN                                       | --imagemagick-bin         | convert                                  | ImageMagick CLI `COMMAND` for image file conversion               |
+| PHOTOPRISM_IMAGEMAGICK_EXCLUDE, PHOTOPRISM_IMAGEMAGICK_BLACKLIST | --imagemagick-exclude     | heif, heic, heics, avif, avifs, jxl, thm | file `EXTENSIONS` not to be used with ImageMagick                 |
+| PHOTOPRISM_HEIFCONVERT_BIN                                       | --heifconvert-bin         | heif-dec                                 | libheif HEIC image conversion `COMMAND`                           |
+| PHOTOPRISM_RSVGCONVERT_BIN                                       | --rsvgconvert-bin         | rsvg-convert                             | librsvg SVG graphics conversion `COMMAND` *plus*                  |
+| PHOTOPRISM_HEIFCONVERT_ORIENTATION                               | --heifconvert-orientation | keep                                     | Exif `ORIENTATION` of images generated with libheif (keep, reset) |
 
 ### Security Tokens ###
 
@@ -250,20 +251,20 @@
 ### Face Recognition ###
 
 !!! info ""
-    To [recognize faces](https://docs.photoprism.app/user-guide/organize/people/), PhotoPrism first extracts crops from your images using a [library](https://github.com/esimov/pigo) based on [pixel intensity comparisons](https://dl.photoprism.app/pdf/publications/20140820-Pixel_Intensity_Comparisons.pdf). These are then fed into TensorFlow to compute [512-dimensional vectors](https://dl.photoprism.app/pdf/20150101-FaceNet.pdf) for characterization. In the final step, the [DBSCAN algorithm](https://en.wikipedia.org/wiki/DBSCAN) attempts to cluster these so-called face embeddings, so they can be matched to persons with just a few clicks. A reasonable range for the similarity distance between face embeddings is between 0.60 and 0.70, with a higher value being more aggressive and leading to larger clusters with more false positives. To cluster a smaller number of faces, you can reduce the core to 3 or 2 similar faces.
+    To [recognize faces](https://docs.photoprism.app/user-guide/organize/people/), PhotoPrism first extracts crops from your images using a [library](https://github.com/esimov/pigo) based on [pixel intensity comparisons](https://dl.photoprism.app/pdf/publications/20140820-Pixel_Intensity_Comparisons.pdf). These are then fed into TensorFlow to compute [512-dimensional vectors](https://dl.photoprism.app/pdf/publications/20150101-FaceNet.pdf) for characterization. In the final step, the [DBSCAN algorithm](https://en.wikipedia.org/wiki/DBSCAN) attempts to cluster these so-called face embeddings, so they can be matched to persons with just a few clicks. A reasonable range for the similarity distance between face embeddings is between 0.60 and 0.70, with a higher value being more aggressive and leading to larger clusters with more false positives. To cluster a smaller number of faces, you can reduce the core to 3 or 2 similar faces.
 
 We recommend that only advanced users change these parameters:
 
-|          Environment          |       CLI Flag       | Default  |                               Description                               |
-|-------------------------------|----------------------|----------|-------------------------------------------------------------------------|
-| PHOTOPRISM_FACE_SIZE          | --face-size          |       50 | minimum size of faces in `PIXELS` (20-10000)                            |
-| PHOTOPRISM_FACE_SCORE         | --face-score         | 9.000000 | minimum face `QUALITY` score (1-100)                                    |
-| PHOTOPRISM_FACE_OVERLAP       | --face-overlap       |       42 | face area overlap threshold in `PERCENT` (1-100)                        |
-| PHOTOPRISM_FACE_CLUSTER_SIZE  | --face-cluster-size  |       80 | minimum size of automatically clustered faces in `PIXELS` (20-10000)    |
-| PHOTOPRISM_FACE_CLUSTER_SCORE | --face-cluster-score |       15 | minimum `QUALITY` score of automatically clustered faces (1-100)        |
-| PHOTOPRISM_FACE_CLUSTER_CORE  | --face-cluster-core  |        4 | `NUMBER` of faces forming a cluster core (1-100)                        |
-| PHOTOPRISM_FACE_CLUSTER_DIST  | --face-cluster-dist  | 0.640000 | similarity `DISTANCE` of faces forming a cluster core (0.1-1.5)         |
-| PHOTOPRISM_FACE_MATCH_DIST    | --face-match-dist    | 0.460000 | similarity `OFFSET` for matching faces with existing clusters (0.1-1.5) |
+|          Environment          |       CLI Flag       | Default |                               Description                               |
+|-------------------------------|----------------------|---------|-------------------------------------------------------------------------|
+| PHOTOPRISM_FACE_SIZE          | --face-size          |      50 | minimum size of faces in `PIXELS` (20-10000)                            |
+| PHOTOPRISM_FACE_SCORE         | --face-score         |       9 | minimum face `QUALITY` score (1-100)                                    |
+| PHOTOPRISM_FACE_OVERLAP       | --face-overlap       |      42 | face area overlap threshold in `PERCENT` (1-100)                        |
+| PHOTOPRISM_FACE_CLUSTER_SIZE  | --face-cluster-size  |      80 | minimum size of automatically clustered faces in `PIXELS` (20-10000)    |
+| PHOTOPRISM_FACE_CLUSTER_SCORE | --face-cluster-score |      15 | minimum `QUALITY` score of automatically clustered faces (1-100)        |
+| PHOTOPRISM_FACE_CLUSTER_CORE  | --face-cluster-core  |       4 | `NUMBER` of faces forming a cluster core (1-100)                        |
+| PHOTOPRISM_FACE_CLUSTER_DIST  | --face-cluster-dist  |    0.64 | similarity `DISTANCE` of faces forming a cluster core (0.1-1.5)         |
+| PHOTOPRISM_FACE_MATCH_DIST    | --face-match-dist    |    0.46 | similarity `OFFSET` for matching faces with existing clusters (0.1-1.5) |
 
 ### Daemon Mode ###
 

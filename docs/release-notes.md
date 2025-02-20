@@ -6,11 +6,11 @@
 ### Development Preview
 <span class="build">Build 250220-18621ede1</span>
 
-Our new release comes with an [upgraded user interface](https://github.com/photoprism/photoprism/issues/3168#screenshots) that includes many improvements and additions, such as a new [hybrid photo and video viewer](https://github.com/photoprism/photoprism/issues/1307) that replaces the [dedicated video player](https://github.com/photoprism/photoprism/issues/3372), a [redesigned editing dialog](https://github.com/photoprism/photoprism/issues/4763) that is more mobile-friendly and easier to use, and a new [3D Earth view](https://github.com/photoprism/photoprism/issues/4762) for the maps in [Places](https://demo.photoprism.app/library/places). 👨‍🚀🚀✨
+Our new release comes with an [updated user interface](https://github.com/photoprism/photoprism/issues/3168#screenshots) that includes many usability improvements and new features, such as a [hybrid photo and video viewer](https://github.com/photoprism/photoprism/issues/1307) that replaces the [dedicated video player](https://github.com/photoprism/photoprism/issues/3372), a [redesigned editing dialog](https://github.com/photoprism/photoprism/issues/4763) that is more mobile-friendly and easier to use, and a new [3D Earth view](https://github.com/photoprism/photoprism/issues/4762) for the maps in [Places](https://demo.photoprism.app/library/places). It's been a long way, so we hope you like the reworked interface and thank you for your patience while we got it ready for you! 👨‍🚀🚀✨
 
 What's new?
 
-- UX: [Upgraded user interface includes many improvements and additions](https://github.com/photoprism/photoprism/issues/3168#screenshots)
+- UX: [Updated user interface with many new features and enhancements](https://github.com/photoprism/photoprism/issues/3168#screenshots)
 - UX: [Edit dialog has been redesigned to be more mobile and user-friendly](https://github.com/photoprism/photoprism/issues/4763)
 - UX: [New hybrid photo and video viewer replaces dedicated video player](https://github.com/photoprism/photoprism/issues/1307)
 - Viewer: [Higher resolution thumbnails are used when zooming into an image](https://github.com/photoprism/photoprism/issues/4704)

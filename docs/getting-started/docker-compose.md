@@ -131,7 +131,7 @@ Never [store database files](troubleshooting/mariadb.md#corrupted-files) on an u
 
 #### Volumes
 
-You must explicitly [specify the directories](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes) you want to mount from your host, since PhotoPrism can't see files in folders that have not been shared. This is an important security feature and allows for a flexible configuration without having to change any other variables.
+You must explicitly [specify the directories](https://docs.docker.com/reference/compose-file/volumes/) you want to mount from your host, since PhotoPrism can't see files in folders that have not been shared. This is an important security feature and allows for a flexible configuration without having to change any other variables.
 
 !!! danger ""
     It is important that all folders are mounted to persistent volumes. We recommend changing the relative paths used in our examples to absolute paths and to avoid using [named or anonymous volumes](https://docs.docker.com/compose/compose-file/07-volumes/#example) in order to prevent potential data loss when the container is recreated, e.g. [after an update](updates.md#docker-compose) of the Docker image.

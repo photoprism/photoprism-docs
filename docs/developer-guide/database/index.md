@@ -32,4 +32,4 @@ Please note that the dump we provide is only updated at irregular intervals and 
 
 ↪ [docs.photoprism.app/developer-guide/database/migrations/](migrations.md)
 
-↪ [github.com/photoprism/photoprism/tree/develop/internal/migrate](https://github.com/photoprism/photoprism/tree/develop/internal/migrate)
+↪ [github.com/photoprism/photoprism/tree/develop/internal/migrate](https://github.com/photoprism/photoprism/tree/develop/internal/entity/migrate)

@@ -44,7 +44,7 @@ The costs are currently fully covered by us for all users, including non-sponsor
 
 ## Location Data ##
 
-See: [internal/maps/location.go](https://github.com/photoprism/photoprism/blob/develop/internal/maps/location.go)
+See: [internal/maps/location.go](https://github.com/photoprism/photoprism/blob/develop/internal/photoprism/location.go)
 
 ## World Maps ##
 

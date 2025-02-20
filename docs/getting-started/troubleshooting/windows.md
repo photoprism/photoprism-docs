@@ -50,4 +50,4 @@ To allow larger files, you must increase the size limit in the Windows registry:
 [^2]: <https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc781134(v=ws.10)?redirectedfrom=MSDN#how-ntfs-generates-short-file-names>
 [^3]: <https://stackoverflow.com/a/9600126>
 [^4]: <https://www.bleepingcomputer.com/news/microsoft/windows-10-now-lets-you-mount-linux-ext4-filesystems-in-wsl-2/>
-[^5]: <https://docs.druva.com/Knowledge_Base/inSync/Troubleshooting/WebDAV_download_fails_with_file_size_exceeds__the_limit_error>
+[^5]: <https://help.druva.com/en/articles/8513266-troubleshoot-legal-hold-issues-when-using-network-mapped-drives>

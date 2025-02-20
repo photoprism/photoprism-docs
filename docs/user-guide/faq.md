@@ -360,7 +360,7 @@
 ??? question "Why do I get an error when trying to add a remote server for syncing?"
 
     When adding a new remote server, PhotoPrism tests a number of
-    [common endpoints](https://raw.githubusercontent.com/photoprism/photoprism/develop/internal/remote/heuristic.go).
+    [common endpoints](https://github.com/photoprism/photoprism/blob/develop/internal/service/heuristic.go).
     Only when that fails, you'll see an error. There may be different reasons for this:
 
     - you are using HTTPS with an invalid certificate (not signed, outdated, domain doesn't match,...)

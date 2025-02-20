@@ -1,6 +1,6 @@
 # Docker Volume Mounts
 
-When using Docker, all application services run in isolated containers, so you must explicitly [mount the host folders](https://docs.docker.com/compose/compose-file/compose-file-v3/#volumes) you want to use. Be aware that PhotoPrism and MariaDB cannot see folders that have not been mounted. This is an important security feature.
+When using Docker, all application services run in isolated containers, so you must explicitly [mount the host folders](https://docs.docker.com/reference/compose-file/volumes/) you want to use. Be aware that PhotoPrism and MariaDB cannot see folders that have not been mounted. This is an important security feature.
 
 !!! note ""
     It is important that the *originals*, *storage*, and *database* folders are located on persistent volumes. We recommend changing the relative paths used in our examples to absolute paths and to avoid using named or anonymous [Docker volumes](https://docs.docker.com/compose/compose-file/07-volumes/#example) to prevent potential data loss when the container is recreated, e.g. [after an update](../updates.md#docker-compose) of the Docker image.
@@ -17,7 +17,7 @@ volumes:
   - "~/Pictures:/photoprism/originals"
 ```
 
-You can mount [any folder accessible from the host](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-3), including [network shares](../troubleshooting/docker.md#network-storage). Additional directories can also be mounted as sub folders of `/photoprism/originals` (depending on [overlay file system support](../troubleshooting/docker.md#overlay-volumes)):
+You can mount [any folder accessible from the host](https://docs.docker.com/reference/compose-file/services/#short-syntax), including [network shares](../troubleshooting/docker.md#network-storage). Additional directories can also be mounted as sub folders of `/photoprism/originals` (depending on [overlay file system support](../troubleshooting/docker.md#overlay-volumes)):
 
 ```yaml
 volumes:
@@ -34,7 +34,7 @@ volumes:
 ```
 
 !!! tldr ""
-    When *read-only mode* is enabled, all features that require write permission to the *originals* folder are disabled, e.g. [WebDAV](../../user-guide/sync/webdav.md), uploading and deleting files. To do this, set `PHOTOPRISM_READONLY` to `"true"` in the `environment` section of your `compose.yaml` file. You can additionally [mount volumes with the `:ro` flag](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-3) so that writes are also blocked by Docker.
+    When *read-only mode* is enabled, all features that require write permission to the *originals* folder are disabled, e.g. [WebDAV](../../user-guide/sync/webdav.md), uploading and deleting files. To do this, set `PHOTOPRISM_READONLY` to `"true"` in the `environment` section of your `compose.yaml` file. You can additionally [mount volumes with the `:ro` flag](https://docs.docker.com/reference/compose-file/services/#mappings) so that writes are also blocked by Docker.
 
 ## Storage Folder
 

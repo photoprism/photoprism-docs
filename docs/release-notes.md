@@ -32,6 +32,7 @@ What's new?
 - Config: [Added options to recreate Unix server socket and set permissions](https://github.com/photoprism/photoprism/issues/4765)
 - Docker: [Replaced entrypoint script for graceful server shutdown and restart](https://github.com/photoprism/photoprism/issues/4767)
 - Docker: [Base image has been upgraded from Ubuntu 24.04 to 24.10 (Oracular Oriole)](https://github.com/photoprism/photoprism/issues/4631)
+- Docker: [NAS devices running a very old Linux kernel can use the `:legacy` image](https://github.com/photoprism/photoprism/issues/4339#issuecomment-2673765576)
 - Security: [Added `X-Robots-Tag` header and `robots.txt` file to control crawlers](https://github.com/photoprism/photoprism/issues/4574)
 - Security: [Go has been upgraded to v1.24, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24) 
 

@@ -4,34 +4,34 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250220-eb214b832</span>
+<span class="build">Build 250221-314569754</span>
 
-Our new release comes with an [upgraded user interface](https://github.com/photoprism/photoprism/issues/3168#screenshots) that includes many improvements and additions, such as a new [hybrid photo and video viewer](https://github.com/photoprism/photoprism/issues/1307) that replaces the [dedicated video player](https://github.com/photoprism/photoprism/issues/3372), a [redesigned editing dialog](https://github.com/photoprism/photoprism/issues/4763) that is more mobile-friendly and easier to use, and a new [3D Earth view](https://github.com/photoprism/photoprism/issues/4762) for the maps in [Places](https://demo.photoprism.app/library/places). ⭐️️✨
+This major new release features an [updated user interface](https://github.com/photoprism/photoprism/issues/3168#screenshots) with many usability enhancements and new features, such as a [hybrid photo and video viewer](https://github.com/photoprism/photoprism/issues/1307) that replaces the [dedicated video player](https://github.com/photoprism/photoprism/issues/3372), a [redesigned editing dialog](https://github.com/photoprism/photoprism/issues/4763) that is more responsive and easier to use, and an immersive [3D Earth](https://github.com/photoprism/photoprism/issues/4762) view in [Places](https://demo.photoprism.app/library/places). It's been [a long way](https://github.com/photoprism/photoprism/graphs/contributors?from=8%2F30%2F2024&to=2%2F16%2F2025) to get here, and a long time since the last update, so we're excited to finally have this released, and we hope you like the new look and features as much as we do! 👨‍🚀🚀✨
 
 What's new?
 
-- UX: [Upgraded user interface includes many improvements and additions](https://github.com/photoprism/photoprism/issues/3168#screenshots)
+- UX: [Updated user interface with many new features and enhancements](https://github.com/photoprism/photoprism/issues/3168#screenshots)
 - UX: [Edit dialog has been redesigned to be more mobile and user-friendly](https://github.com/photoprism/photoprism/issues/4763)
 - UX: [New hybrid photo and video viewer replaces dedicated video player](https://github.com/photoprism/photoprism/issues/1307)
 - Viewer: [Higher resolution thumbnails are used when zooming into an image](https://github.com/photoprism/photoprism/issues/4704)
 - Viewer: [Videos are played automatically when a slideshow is running](https://github.com/photoprism/photoprism/issues/4698)
 - Search: [Cards view and mosaic view show the video duration on thumbnails](https://github.com/photoprism/photoprism/issues/3168#screenshots)
 - Search: [Cards view always shows the filename and camera details for videos](https://github.com/photoprism/photoprism/issues/3168#screenshots)
-- Places: [Added a 3D Earth view that can be enabled for all map types](https://github.com/photoprism/photoprism/issues/4762)
+- Places: [Added a 3D Earth view mode that can be enabled for any map](https://github.com/photoprism/photoprism/issues/4762)
 - Places: [Upgraded MapLibre GL JS library from v3.6 to v5.1](https://github.com/photoprism/photoprism/issues/4058) by [@QyuBee](https://github.com/QyuBee)
 - Places: [Locations are no longer estimated for non-photographic pictures](https://github.com/photoprism/photoprism/issues/4589)
 - Places: [Updated reverse geocoding data to include corrections from OSM](https://github.com/photoprism/photoprism/issues/4688)
 - Metadata: [Labels are set based on matching keywords in title, subject](https://github.com/photoprism/photoprism/issues/4602) and [caption](https://github.com/photoprism/photoprism/issues/4603)
-- Metadata: [Improved recognition of images from digital film scanners](https://github.com/photoprism/photoprism/issues/4581)
+- Metadata: [Improved recognition of images created by digital film scanners](https://github.com/photoprism/photoprism/issues/4581)
 - Metadata: [Numerals are preserved in titles generated from file and folder names](https://github.com/photoprism/photoprism/issues/3447)
 - Import: [Advanced users can configure a custom destination file path pattern](user-guide/library/import.md#changing-the-import-file-path)
 - Settings: [Fixed Windows resource string in WebDAV dialog when using HTTPS](https://github.com/photoprism/photoprism/issues/4798)
-- API: [`Description` field has been renamed to `Caption` in `/api/v1/photos`](https://github.com/photoprism/photoprism/issues/4603#issuecomment-2631743288)
-- CLI: [Added `users` command flag to find and restore deleted user accounts](https://github.com/photoprism/photoprism/issues/4570)
+- API: [`Description` field has been renamed to `Caption` in `/photos` endpoints](https://github.com/photoprism/photoprism/issues/4603#issuecomment-2631743288)
+- CLI: [Added a `users` command flag to find and restore deleted user accounts](https://github.com/photoprism/photoprism/issues/4570)
 - Setup: [Renamed `docker-compose.yml` config examples to `compose.yaml`](https://github.com/photoprism/photoprism/issues/4591)
 - Config: [Added options to recreate Unix server socket and set permissions](https://github.com/photoprism/photoprism/issues/4765)
-- Docker: [Upgraded base image from Ubuntu 24.04 to 24.10 (Oracular Oriole)](https://github.com/photoprism/photoprism/issues/4631)
 - Docker: [Replaced entrypoint script for graceful server shutdown and restart](https://github.com/photoprism/photoprism/issues/4767)
+- Docker: [Base image has been upgraded from Ubuntu 24.04 to 24.10 (Oracular Oriole)](https://github.com/photoprism/photoprism/issues/4631)
 - Security: [Added `X-Robots-Tag` header and `robots.txt` file to control crawlers](https://github.com/photoprism/photoprism/issues/4574)
 - Security: [Go has been upgraded to v1.24, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24) 
 

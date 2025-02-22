@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### February 22, 2025
-<span class="build">Build 250222-595cb18f4</span>
+<span class="build">Build 250222-a383f2c69</span>
 
 This major new release features an [updated user interface](https://github.com/photoprism/photoprism/issues/3168#screenshots) with many usability enhancements and new features, such as a [hybrid photo and video viewer](https://github.com/photoprism/photoprism/issues/1307) that replaces the [dedicated video player](https://github.com/photoprism/photoprism/issues/3372), a [redesigned editing dialog](https://github.com/photoprism/photoprism/issues/4763) that is more responsive and easier to use, and an immersive [3D Earth](https://github.com/photoprism/photoprism/issues/4762) view in [Places](https://demo.photoprism.app/library/places). It's been [a long way](https://github.com/photoprism/photoprism/graphs/contributors?from=8%2F30%2F2024&to=2%2F16%2F2025) to get here, so we're pretty excited to finally have this released. We hope you enjoy the new look and features as much as we do! 👨‍🚀🚀✨
 

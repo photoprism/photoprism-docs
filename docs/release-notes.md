@@ -6,7 +6,9 @@
 ### February 22, 2025
 <span class="build">Build 250222-a383f2c69</span>
 
-This major new release features an [updated user interface](https://github.com/photoprism/photoprism/issues/3168#screenshots) with many usability enhancements and new features, such as a [hybrid photo and video viewer](https://github.com/photoprism/photoprism/issues/1307) that replaces the [dedicated video player](https://github.com/photoprism/photoprism/issues/3372), a [redesigned editing dialog](https://github.com/photoprism/photoprism/issues/4763) that is more responsive and easier to use, and an immersive [3D Earth](https://github.com/photoprism/photoprism/issues/4762) view in [Places](https://demo.photoprism.app/library/places). It's been [a long way](https://github.com/photoprism/photoprism/graphs/contributors?from=8%2F30%2F2024&to=2%2F16%2F2025) to get here, so we're pretty excited to finally have this released. We hope you enjoy the new look and features as much as we do! 👨‍🚀🚀✨
+This major new release features an [updated user interface](https://github.com/photoprism/photoprism/issues/3168#screenshots) with many usability enhancements and new features, such as a [hybrid photo and video viewer](https://github.com/photoprism/photoprism/issues/1307) that replaces the [dedicated video player](https://github.com/photoprism/photoprism/issues/3372), a [redesigned edit dialog](https://github.com/photoprism/photoprism/issues/4763) that is more responsive and easier to use, and an immersive [3D Earth](https://github.com/photoprism/photoprism/issues/4762) view in [Places](https://demo.photoprism.app/library/places). It also includes dozens of layout optimizations for right-to-left languages.
+
+It's been a long road to get here, as we've put a lot of effort into quality and detail, and welcomed new team members along the way. So thank you for your patience while we got this ready for you, and we hope you enjoy the new look and features as much as we do! 👨‍🚀🚀✨
 
 What's new?
 

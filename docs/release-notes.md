@@ -3,10 +3,10 @@
 !!! note ""
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
-### February 22, 2025
-<span class="build">Build 250222-0322d7c91</span>
+### February 23, 2025
+<span class="build">Build 250223-b79d21907</span>
 
-This [major new release](https://github.com/photoprism/photoprism/releases/tag/250222-0322d7c91) features an [updated user interface](https://github.com/photoprism/photoprism/issues/3168#screenshots) with many usability enhancements and new features, such as a [hybrid photo and video viewer](https://github.com/photoprism/photoprism/issues/1307) that replaces the [dedicated video player](https://github.com/photoprism/photoprism/issues/3372), a [redesigned edit dialog](https://github.com/photoprism/photoprism/issues/4763) that is more responsive and easier to use, and an immersive [3D Earth](https://github.com/photoprism/photoprism/issues/4762) view in [Places](https://demo.photoprism.app/library/places). It also includes dozens of layout optimizations for right-to-left languages.
+This [major new release](https://github.com/photoprism/photoprism/releases/tag/250223-b79d21907) features an [updated user interface](https://github.com/photoprism/photoprism/issues/3168#screenshots) with many usability enhancements and new features, such as a [hybrid photo and video viewer](https://github.com/photoprism/photoprism/issues/1307) that replaces the [dedicated video player](https://github.com/photoprism/photoprism/issues/3372), a [redesigned edit dialog](https://github.com/photoprism/photoprism/issues/4763) that is more responsive and easier to use, and an immersive [3D Earth](https://github.com/photoprism/photoprism/issues/4762) view in [Places](https://demo.photoprism.app/library/places). It also includes dozens of layout optimizations for right-to-left languages.
 
 It's been [a long road](https://github.com/photoprism/photoprism/graphs/contributors?from=9%2F10%2F2023&to=2%2F23%2F2025) to get here, as we've put a lot of effort into quality and detail, and welcomed new team members along the way. So thank you for your patience while we got this ready for you, and we hope you enjoy the new look and features as much as we do! 👨‍🚀🚀✨
 

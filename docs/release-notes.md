@@ -38,6 +38,9 @@ What's new?
 - Security: [Added `X-Robots-Tag` header and `robots.txt` file to control crawlers](https://github.com/photoprism/photoprism/issues/4574)
 - Security: [Go has been upgraded to v1.24, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24) 
 
+!!! info ""
+    Missing user interface translations have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) when needed.
+
 ### September 15, 2024
 <span class="build">Build 240915-e1280b2fb</span>
 

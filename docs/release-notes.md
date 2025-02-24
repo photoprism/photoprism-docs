@@ -6,11 +6,11 @@
 ### Development Preview
 <span class="build">Build 250224-834c16bc7</span>
 
-This service release changes the default [thumbnail size](http://localhost:8000/user-guide/settings/advanced/#which-thumbnails-will-be-generated) in the [photo/video viewer](https://github.com/photoprism/photoprism/issues/1307) to improve loading performance, especially on mobile Retina displays. It also includes updated translations and dependencies.
+This service release changes the [default thumbnail size](http://localhost:8000/user-guide/settings/advanced/#which-thumbnails-will-be-generated) in the [Viewer](https://github.com/photoprism/photoprism/issues/1307) to improve loading and swiping performance, especially on mobile Retina displays. It also includes updated translations and dependencies.
 
 What's new?
 
-- Viewer: [Changed thumbnail size calculation for improved loading performance](https://github.com/photoprism/photoprism/commit/ea32ef6970d649e541843cf41e52ecb1c17865b0)
+- Viewer: [Changed thumbnail size calculation for improved performance](https://github.com/photoprism/photoprism/commit/ea32ef6970d649e541843cf41e52ecb1c17865b0)
 
 !!! info ""
     Missing user interface translations have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) when needed.

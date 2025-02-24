@@ -13,7 +13,7 @@ What's new?
 - Viewer: [Changed thumbnail size calculation for improved performance](https://github.com/photoprism/photoprism/commit/ea32ef6970d649e541843cf41e52ecb1c17865b0)
 
 !!! info ""
-    Missing user interface translations have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) if needed.
+    Missing user interface translations have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.
 
 ### February 23, 2025
 <span class="build">Build 250223-b79d21907</span>

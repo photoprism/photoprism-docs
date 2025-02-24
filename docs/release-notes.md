@@ -4,13 +4,16 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250224-f68cbbbb5</span>
+<span class="build">Build 250224-834c16bc7</span>
 
-This service release changes the thumbnail size calculation for the Photo/Video Viewer to improve loading performance, especially on Retina displays.
+This service release changes the default [thumbnail size](http://localhost:8000/user-guide/settings/advanced/#which-thumbnails-will-be-generated) in the [Photo / Video Viewer](https://github.com/photoprism/photoprism/issues/1307) to improve loading performance, especially on mobile Retina displays. It also includes updated translations and dependencies.
 
 What's new?
 
-- UX: [Change thumbnail size calculation for improved performance](https://github.com/photoprism/photoprism/commit/ea32ef6970d649e541843cf41e52ecb1c17865b0)
+- Viewer: [Changed thumbnail size calculation for improved loading performance](https://github.com/photoprism/photoprism/commit/ea32ef6970d649e541843cf41e52ecb1c17865b0)
+
+!!! info ""
+    Missing user interface translations have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) when needed.
 
 ### February 23, 2025
 <span class="build">Build 250223-b79d21907</span>

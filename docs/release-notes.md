@@ -13,7 +13,7 @@ What's new?
 - Viewer: [Changed thumbnail size calculation for improved performance](https://github.com/photoprism/photoprism/commit/ea32ef6970d649e541843cf41e52ecb1c17865b0)
 
 !!! info ""
-    Missing user interface translations have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) when needed.
+    Missing user interface translations have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) if needed.
 
 ### February 23, 2025
 <span class="build">Build 250223-b79d21907</span>
@@ -49,9 +49,6 @@ What's new?
 - Docker: [NAS devices running a very old Linux kernel can use the `:legacy` image](https://github.com/photoprism/photoprism/issues/4339#issuecomment-2673765576)
 - Security: [Added `X-Robots-Tag` header and `robots.txt` file to control crawlers](https://github.com/photoprism/photoprism/issues/4574)
 - Security: [Go has been upgraded to v1.24, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24) 
-
-!!! info ""
-    Missing user interface translations have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) when needed.
 
 ### September 15, 2024
 <span class="build">Build 240915-e1280b2fb</span>
@@ -141,9 +138,6 @@ What's new?
 - Security: [Go has been updated to the latest stable release v1.22.3](https://github.com/golang/go/issues?q=milestone%3AGo1.22.3)
 - Translations: [Updated Chinese (traditional), Danish, French, and German](https://docs.photoprism.app/developer-guide/translations-weblate/)
 
-!!! info ""
-    Missing user interface translations have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/), if necessary.
-
 ### April 20, 2024
 <span class="build">Build 240420-ef5f14bc4</span>
 
@@ -176,9 +170,6 @@ What's new?
 - Setup: [Added ARMv7 `tar.gz` packages for installation without Docker](https://github.com/photoprism/photoprism/issues/4082)
 - Performance: [Added index for `files.file_error` to reduce query time](https://github.com/photoprism/photoprism/issues/4149)
 - Security: [Go has been updated to the latest stable release v1.22.2](https://github.com/golang/go/issues?q=milestone%3AGo1.22.2)
-
-!!! info ""
-    Missing user interface translations have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/), if necessary.
  
 ### November 28, 2023
 <span class="build">Build 231128-f48ff16ef</span>

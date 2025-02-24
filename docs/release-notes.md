@@ -3,7 +3,7 @@
 !!! note ""
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
-### Development Preview
+### February 24, 2025
 <span class="build">Build 250224-834c16bc7</span>
 
 This service release changes the [default thumbnail size](https://docs.photoprism.app/user-guide/settings/advanced/#which-thumbnails-will-be-generated) in the [Photo/Video Viewer](https://github.com/photoprism/photoprism/issues/1307) to improve loading and swiping performance, especially on mobile Retina displays. It also includes updated translations and dependencies.

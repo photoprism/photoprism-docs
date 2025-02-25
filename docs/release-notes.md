@@ -3,6 +3,14 @@
 !!! note ""
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
+### Development Preview
+<span class="build">Build 250225-78f510402</span>
+
+What's new?
+
+- Viewer: [Added a thumbnail size suitable for Retina 5K displays](https://github.com/photoprism/photoprism/issues/4810)
+- Places: [Browser scrollbar stays hidden when cluster view is open](https://github.com/photoprism/photoprism/commit/1b0c3c804ef51ed42bed9cbd52df61f1f1265102)
+
 ### February 24, 2025
 <span class="build">Build 250224-834c16bc7</span>
 

@@ -3,10 +3,34 @@
 !!! note ""
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
-### February 21, 2025
-<span class="build">Build 250221-548368be0</span>
+### Development Preview
+<span class="build">Build 250225-69290b1ab</span>
 
-This major new release features an [updated user interface](https://github.com/photoprism/photoprism/issues/3168#screenshots) with many usability enhancements and new features, such as a [hybrid photo and video viewer](https://github.com/photoprism/photoprism/issues/1307) that replaces the [dedicated video player](https://github.com/photoprism/photoprism/issues/3372), a [redesigned editing dialog](https://github.com/photoprism/photoprism/issues/4763) that is more responsive and easier to use, and an immersive [3D Earth](https://github.com/photoprism/photoprism/issues/4762) view in [Places](https://demo.photoprism.app/library/places). It's been [a long way](https://github.com/photoprism/photoprism/graphs/contributors?from=8%2F30%2F2024&to=2%2F16%2F2025) to get here, and a long time since the last update, so we're excited to finally have this released, and we hope you like the new look and features as much as we do! 👨‍🚀🚀✨
+What's new?
+
+- UX: [Upload to WebDAV button appears only when sharing is enabled](https://github.com/photoprism/photoprism/commit/cb9826de96497d8ef052dcfd905cf3a5e34b84f1)
+- Viewer: [Content preloading is less eager to reduce server load](https://github.com/photoprism/photoprism/commit/69290b1ab17471d6dbed1ad5cb382cd212ad9799)
+- Viewer: [Added a new thumbnail size suitable for Retina 5K displays](https://github.com/photoprism/photoprism/issues/4810)
+- Places: [Browser scrollbar stays hidden when cluster view is open](https://github.com/photoprism/photoprism/commit/1b0c3c804ef51ed42bed9cbd52df61f1f1265102)
+
+### February 24, 2025
+<span class="build">Build 250224-834c16bc7</span>
+
+This [service release](https://github.com/photoprism/photoprism/releases/tag/250224-834c16bc7) changes the [default thumbnail size](https://docs.photoprism.app/user-guide/settings/advanced/#which-thumbnails-will-be-generated) in the [Photo/Video Viewer](https://github.com/photoprism/photoprism/issues/1307) to improve loading and swiping performance, especially on mobile Retina displays. It also includes [updated translations](https://translate.photoprism.app/projects/photoprism/) and dependencies.
+
+What's new?
+
+- Viewer: [Changed thumbnail size calculation for improved performance](https://github.com/photoprism/photoprism/commit/ea32ef6970d649e541843cf41e52ecb1c17865b0)
+
+!!! info ""
+    Missing [user interface translations](https://translate.photoprism.app/projects/photoprism/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.
+
+### February 23, 2025
+<span class="build">Build 250223-b79d21907</span>
+
+This [major new release](https://github.com/photoprism/photoprism/releases/tag/250223-b79d21907) features an [updated user interface](https://github.com/photoprism/photoprism/issues/3168#screenshots) with many usability enhancements and new features, such as a [hybrid photo and video viewer](https://github.com/photoprism/photoprism/issues/1307) that replaces the [dedicated video player](https://github.com/photoprism/photoprism/issues/3372), a [redesigned edit dialog](https://github.com/photoprism/photoprism/issues/4763) that is more responsive and easier to use, and an immersive [3D Earth](https://github.com/photoprism/photoprism/issues/4762) view in [Places](https://demo.photoprism.app/library/places). It also includes dozens of layout optimizations for right-to-left languages.
+
+It's been [a long road](https://github.com/photoprism/photoprism/graphs/contributors?from=9%2F10%2F2023&to=2%2F23%2F2025) to get here, as we've put a lot of effort into quality and detail, and welcomed new team members along the way. So thank you for your patience while we got this ready for you, and we hope you enjoy the new look and features as much as we do! 👨‍🚀🚀✨
 
 What's new?
 
@@ -124,9 +148,6 @@ What's new?
 - Security: [Go has been updated to the latest stable release v1.22.3](https://github.com/golang/go/issues?q=milestone%3AGo1.22.3)
 - Translations: [Updated Chinese (traditional), Danish, French, and German](https://docs.photoprism.app/developer-guide/translations-weblate/)
 
-!!! info ""
-    Missing user interface translations have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/), if necessary.
-
 ### April 20, 2024
 <span class="build">Build 240420-ef5f14bc4</span>
 
@@ -159,9 +180,6 @@ What's new?
 - Setup: [Added ARMv7 `tar.gz` packages for installation without Docker](https://github.com/photoprism/photoprism/issues/4082)
 - Performance: [Added index for `files.file_error` to reduce query time](https://github.com/photoprism/photoprism/issues/4149)
 - Security: [Go has been updated to the latest stable release v1.22.2](https://github.com/golang/go/issues?q=milestone%3AGo1.22.2)
-
-!!! info ""
-    Missing user interface translations have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/), if necessary.
  
 ### November 28, 2023
 <span class="build">Build 231128-f48ff16ef</span>

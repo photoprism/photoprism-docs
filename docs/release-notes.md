@@ -4,11 +4,12 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250225-69290b1ab</span>
+<span class="build">Build 250225-04ca62dd7</span>
 
 What's new?
 
-- UX: [Upload to WebDAV button appears only when sharing is enabled](https://github.com/photoprism/photoprism/commit/cb9826de96497d8ef052dcfd905cf3a5e34b84f1)
+- UX: [Added album menu button to remove and archive pictures in one step](https://github.com/photoprism/photoprism/issues/3442)
+- UX: [Upload to WebDAV menu button appears only when sharing is enabled](https://github.com/photoprism/photoprism/commit/cb9826de96497d8ef052dcfd905cf3a5e34b84f1)
 - Viewer: [Content preloading is less eager to reduce server load](https://github.com/photoprism/photoprism/commit/69290b1ab17471d6dbed1ad5cb382cd212ad9799)
 - Viewer: [Added a new thumbnail size suitable for Retina 5K displays](https://github.com/photoprism/photoprism/issues/4810)
 - Places: [Browser scrollbar stays hidden when cluster view is open](https://github.com/photoprism/photoprism/commit/1b0c3c804ef51ed42bed9cbd52df61f1f1265102)

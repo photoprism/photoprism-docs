@@ -153,7 +153,7 @@
     
     Make sure you have JSON sidecar files enabled if you have videos, live photos, and/or [animated GIFs](https://github.com/photoprism/photoprism/issues/590) so that video-specific metadata such as codec, frames, and duration can be extracted, indexed, and searched.
 
-    For a complete list of file formats and extensions, see our downloadable [Feature Overview](https://link.photoprism.app/overview).
+    You find a complete list of file formats and extensions [here](https://docs.photoprism.app/developer-guide/media/).
 
 ??? question "What metadata sidecar file types are supported?"
 

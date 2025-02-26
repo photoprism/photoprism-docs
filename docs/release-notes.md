@@ -34,6 +34,10 @@ This [major new release](https://github.com/photoprism/photoprism/releases/tag/2
 
 It's been [a long road](https://github.com/photoprism/photoprism/graphs/contributors?from=9%2F10%2F2023&to=2%2F23%2F2025) to get here, as we've put a lot of effort into quality and detail, and welcomed new team members along the way. So thank you for your patience while we got this ready for you, and we hope you enjoy the new look and features as much as we do! 👨‍🚀🚀✨
 
+Breaking Changes
+
+- It is recommended that you [perform a complete rescan of your library](https://docs.photoprism.app/user-guide/library/originals/#indexing-your-originals) after upgrading, as otherwise videos that do not require transcoding may be [transcoded during playback](https://docs.photoprism.app/user-guide/organize/video/#transcoding) due to missing metadata, resulting in high CPU and disk usage.
+
 What's new?
 
 - UX: [Updated user interface with many new features and enhancements](https://github.com/photoprism/photoprism/issues/3168#screenshots)

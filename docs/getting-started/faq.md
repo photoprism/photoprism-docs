@@ -292,7 +292,7 @@ The supported ID ranges for running our container images are as follows:
 
 [Learn more ›](https://docs.photoprism.app/getting-started/config-options/#docker-image)
 
-!!! info ""
+!!! abstract ""
     If you are experiencing a similar problem with a custom configuration that we did not provide or recommend, please try changing it to see if that helps before [asking our team](https://www.photoprism.app/kb/getting-support) or [community members](https://github.com/photoprism/photoprism/discussions) for support. 🛟
 
 ### Why does your Docker image use the Plus License instead of the AGPL?

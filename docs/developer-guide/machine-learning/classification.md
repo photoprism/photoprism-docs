@@ -2,7 +2,7 @@
 
 Image classification is performed using a [pre-trained model](https://dl.photoprism.app/tensorflow/), *NASNet Mobile 224*, that we have chosen because of its size, performance and accuracy. To get a basic understanding of how this works, you can read [Image Classification using Deep Neural Networks](https://medium.com/@tifa2up/image-classification-using-deep-neural-networks-a-beginner-friendly-approach-using-tensorflow-94b0a090ccd4).
 
-In addition, we manually matched the model classification with the [labels](https://github.com/photoprism/photoprism/blob/develop/internal/ai/classify/rules.yml) you see in our UI:
+In addition, we manually matched the model classification with the [labels](https://github.com/photoprism/photoprism/blob/develop/internal/ai/classify/rules.yml) you see in our [UI](../../user-guide/organize/labels.md):
 
 ```yaml
 cat:
@@ -15,7 +15,6 @@ cat:
 tabby cat:
   see: cat
 ```
-<img src="../img/editPhotoLabels.jpeg" width="330" align="right" /> 
 
 This was necessary because we didn't find a [taxonomy](https://wordnet.princeton.edu/) suitable for consumers (mainly just scientific ones) and needed a lot of control to fine tune terms and their probability thresholds. The raw results were [not useful](https://github.com/photoprism/photoprism/issues/160) to a typical user. Indexing too many words, categories and alternatives also negatively affects performance and [leads to noise](https://github.com/photoprism/photoprism/issues/160). 
 

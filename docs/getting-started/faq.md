@@ -273,7 +273,7 @@ fatal: /run belongs to uid 0 instead of 100
 and we're lacking the privileges to fix it.
 ```
 
-In particular, this can happen if you have specified an *unsupported* user or group ID through the optional [`user`](https://docs.docker.com/reference/compose-file/services/#user) property in your [`compose.yaml`](https://dl.photoprism.app/docker/compose.yaml) file to run the service, and at the same time set [`no-new-privileges:true`](https://github.com/just-containers/s6-overlay/issues/552#issuecomment-2339563938) in the [`security_opt`](https://docs.docker.com/reference/compose-file/services/#security_opt) section.
+In particular, this can happen if you have specified an *unsupported* user or group ID through the optional [`user`](https://docs.docker.com/reference/compose-file/services/#user) property in your [`compose.yaml`](https://dl.photoprism.app/docker/compose.yaml) file to run the service, and at the same time added [`no-new-privileges`](https://github.com/just-containers/s6-overlay/issues/552#issuecomment-2339563938) to the [`security_opt`](https://docs.docker.com/reference/compose-file/services/#security_opt) section.
 
 Please also check if you have specified *both* a [`user`](https://docs.docker.com/reference/compose-file/services/#user) service property and these [`environment`](https://docs.docker.com/reference/compose-file/services/#environment) variables to specify the user and/or group ID under which the service should run, as this is neither required nor recommended:
 

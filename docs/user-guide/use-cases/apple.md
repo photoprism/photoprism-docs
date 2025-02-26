@@ -13,7 +13,7 @@
 **Apple saves the following information in its XMP files:**
 
 - Title
-- Description
+- Caption
 - TakenAt Date
 - Keywords (include people)
 - GPS information
@@ -21,7 +21,7 @@
 **The following metadata is read by PhotoPrism from the exported XMP files for each photo during indexing:**
 
 - Title
-- Description
+- Caption
 - TakenAt Date
 - Keywords
 

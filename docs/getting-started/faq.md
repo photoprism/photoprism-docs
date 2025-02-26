@@ -67,7 +67,7 @@ text editors. However, changes are not synchronized with the original index, as 
 
 XMP (Extensible Metadata Platform) is an XML-based metadata container format [developed by Adobe](https://www.adobe.com/products/xmp.html).
 It provides many more fields (as part of embedded models like Dublin Core) than Exif. This also makes it difficult - if not 
-impossible - to provide full support. Reading title, copyright, artist, and description from XMP sidecar files is 
+impossible - to provide full support. Reading title, copyright, artist, and caption from XMP sidecar files is 
 implemented as a proof-of-concept, [contributions are welcome](../developer-guide/metadata/xmp.md). Indexing of 
 embedded XMP is only possible via [ExifTool](https://exiftool.org/), see above.
 
@@ -129,7 +129,7 @@ At the same time, we know there's a huge demand and many practical uses for a cl
 JPEGs are currently not regenerated when related RAW or XMP files change. RAW files are digital negatives by design.
 PhotoPrism therefore assumes that their image information is immutable.
 
-XMP files can affect the appearance, but most of the metadata they contain, such as title and description, does not.
+XMP files can affect the appearance, but most of the metadata they contain, such as title and caption, does not.
 Creating JPEGs from RAW files is a time-consuming task, and in most cases would cause a huge, unjustified amount of
 overhead. In addition, the rendering information in XMP files is not well standardized. For example, changes you make
 in Photoshop may not be compatible with Darktable.
@@ -406,7 +406,7 @@ The [smallest configurable size](../user-guide/settings/advanced.md#preview-imag
 
 We recommend performing a [complete rescan](../user-guide/library/originals.md#when-should-complete-rescan-be-selected) after major updates to take advantage of new search filters and sorting options. Be sure to [read the notes for each release](../release-notes.md) to see what changes have been made and if they might affect your library, for example, because of the file types you have or because new search features have been added. If you encounter problems that you cannot solve otherwise (i.e. before reporting a bug), please also try a rescan and see if it solves the problem.
 
-You can start a [rescan from the user interface](../user-guide/library/originals.md) by navigating to *Library* > *Index*, selecting "Complete Rescan", and then clicking "Start". Manually entered information such as labels, people, titles or descriptions will not be modified when indexing, even if you perform a "complete rescan". Be careful not to start multiple indexing processes at the same time, as this will lead to a high server load.
+You can start a [rescan from the user interface](../user-guide/library/originals.md) by navigating to *Library* > *Index*, selecting "Complete Rescan", and then clicking "Start". Manually entered information such as labels, people, titles or captions will not be modified when indexing, even if you perform a "complete rescan". Be careful not to start multiple indexing processes at the same time, as this will lead to a high server load.
 
 ### How can I shorten the startup time after a restart or update?
 

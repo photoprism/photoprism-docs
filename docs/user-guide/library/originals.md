@@ -32,7 +32,7 @@ If you select this option, all files in the *originals* folder will be re-indexe
 We recommend performing a complete rescan after major updates to take advantage of new search filters and sorting options. Be sure to [read the notes for each release](../../release-notes.md) to see what changes have been made and if they might affect your library, for example, because of the file types you have or because new search features have been added. If you encounter problems that you cannot solve otherwise (i.e. before reporting a bug), please also try a rescan and see if it solves the problem.
 
 !!! tldr ""
-    Manually entered information such as labels, people, titles or descriptions will not be modified when indexing, even if you perform a "complete rescan".
+    Manually entered information such as labels, people, titles or captions will not be modified when indexing, even if you perform a "complete rescan".
 
 
 ### Cleanup Option

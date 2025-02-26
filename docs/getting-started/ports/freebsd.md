@@ -51,4 +51,4 @@ We recommend performing a [complete rescan](../../user-guide/library/originals.m
 You can start a [rescan from the user interface](../../user-guide/library/originals.md) by navigating to *Library* > *Index*, selecting "Complete Rescan", and then clicking "Start".
 
 !!! tldr ""
-    Manually entered information such as labels, people, titles or descriptions will not be modified when indexing, even if you perform a "complete rescan". Be careful not to start multiple indexing processes at the same time, as this will lead to a high server load.
+    Manually entered information such as labels, people, titles or captions will not be modified when indexing, even if you perform a "complete rescan". Be careful not to start multiple indexing processes at the same time, as this will lead to a high server load.

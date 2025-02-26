@@ -1,6 +1,6 @@
 # Checking Image and Video Metadata
 
-We recommend checking the file metadata with [Exiftool](https://exiftool.org/) if some of your pictures are displayed incorrectly (stretched, distorted)[^1], information seems to be missing (e.g. title or description), or the [wrong time and location](../../user-guide/organize/edit.md) are shown.
+We recommend checking the file metadata with [Exiftool](https://exiftool.org/) if some of your pictures are displayed incorrectly (stretched, distorted)[^1], information seems to be missing (e.g. title or caption), or the [wrong time and location](../../user-guide/organize/edit.md) are shown.
 
 To do this, run the following command within a Docker [terminal session](../docker-compose.md#opening-a-terminal) or on your host if you have Exiftool installed (`-n` displays the raw values without changes, `-j` will format the output as JSON, and `-g` optionally groups the output by metadata source):
 

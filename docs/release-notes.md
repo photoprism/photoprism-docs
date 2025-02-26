@@ -36,7 +36,7 @@ It's been [a long road](https://github.com/photoprism/photoprism/graphs/contribu
 
 Breaking Changes
 
-- It is recommended that you [perform a complete rescan of your library](https://docs.photoprism.app/user-guide/library/originals/#indexing-your-originals) after upgrading, as otherwise videos that do not require transcoding may be [transcoded during playback](https://docs.photoprism.app/user-guide/organize/video/#transcoding) due to missing metadata, resulting in high CPU and disk usage.
+- It is recommended that you [perform a complete rescan of your library](https://docs.photoprism.app/user-guide/library/originals/#indexing-your-originals) after upgrading, as otherwise videos that do not require transcoding may be [transcoded during playback](https://docs.photoprism.app/user-guide/organize/video/#transcoding) due to missing metadata, resulting in high CPU and disk usage. [Learn more ›](https://docs.photoprism.app/user-guide/library/originals/#indexing-your-originals)
 
 What's new?
 

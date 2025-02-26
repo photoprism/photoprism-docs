@@ -263,6 +263,38 @@ Please be aware, though, that we do not have the resources to provide support an
 !!! tldr ""
     A virtual machine with a dedicated operating system environment provides even more security, but usually has side effects such as lower performance and more difficult handling. Using a VM, however, doesn't prevent you from running containerized apps to get the best of both worlds. This is essentially what happens when you install Docker on [virtual cloud servers](cloud/digitalocean.md) and operating systems other than Linux.
 
+### What can I do if the Docker container fails to start with exit code 100?
+
+A startup error similar to the following indicates that you are [using a custom service configuration](https://github.com/photoprism/photoprism/discussions/4819) that is incompatible with our [Docker images](docker-compose.md):
+
+```
+/package/admin/s6-overlay/libexec/preinit:
+fatal: /run belongs to uid 0 instead of 100
+and we're lacking the privileges to fix it.
+```
+
+In particular, this can happen if you have specified an unsupported user or group ID through the optional [`user`](https://docs.docker.com/reference/compose-file/services/#user) property in your [`compose.yaml`](https://dl.photoprism.app/docker/compose.yaml) file to run the service, and at the same time set [`no-new-privileges:true`](https://github.com/just-containers/s6-overlay/issues/552#issuecomment-2339563938) in the [`security_opt`](https://docs.docker.com/reference/compose-file/services/#security_opt) section.
+
+Please also check if you have specified *both* a [`user`](https://docs.docker.com/reference/compose-file/services/#user) service property and these [`environment`](https://docs.docker.com/reference/compose-file/services/#environment) variables to specify the user and/or group ID under which the service should run, as this is neither required nor recommended:
+
+```yaml
+services:
+  photoprism:
+    environment:
+      PHOTOPRISM_UID: ...
+      PHOTOPRISM_GID: ...
+```
+
+The supported ID ranges for running our container images are as follows:
+
+- UID: 0, 33, 50-99, 500-600, 900-1250, and 2000-2100
+- GID: 0, 33, 44, 50-99, 105, 109, 115, 116, 500-600, 900-1250, and 2000-2100
+
+[Learn more ›](https://docs.photoprism.app/getting-started/config-options/#docker-image)
+
+!!! tip ""
+    If you are experiencing a similar problem with a custom configuration that we did not provide or recommend, please try changing it to see if that helps before asking our team or community members for support. 🛟
+
 ### Why does your Docker image use the Plus License instead of the AGPL?
 
 Our [Plus License](https://www.photoprism.app/plus/license) is used for both the extensions [we provide to our members](https://www.photoprism.app/membership/faq#how-can-i-install-photoprism-plus-without-the-docker-image) and the standard [Docker images](https://hub.docker.com/r/photoprism/photoprism/tags) available on Docker Hub. This allows us to bundle the extensions with the compiled application, while the [Community Edition](https://github.com/photoprism/photoprism) remains freely available under the terms of the [GNU Affero General Public License (AGPL)](../license/agpl.md).

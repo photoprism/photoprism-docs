@@ -113,6 +113,38 @@ sudo docker compose up -d
 Note that this will point the home directory shortcut `~` to `/root` in the `volumes:` section
 of your `compose.yaml` or `docker-compose.yml`.
 
+### Start Fails with Exit Code 100
+
+A container startup error similar to the following indicates that you are [using a custom service configuration](https://github.com/photoprism/photoprism/discussions/4819) that is incompatible with our [Docker images](../docker-compose.md):
+
+```
+/package/admin/s6-overlay/libexec/preinit:
+fatal: /run belongs to uid 0 instead of 100
+and we're lacking the privileges to fix it.
+```
+
+In particular, this can happen if you have specified an *unsupported* user or group ID through the optional [`user`](https://docs.docker.com/reference/compose-file/services/#user) property in your [`compose.yaml`](https://dl.photoprism.app/docker/compose.yaml) file to run the service, and at the same time added [`no-new-privileges`](https://github.com/just-containers/s6-overlay/issues/552#issuecomment-2339563938) to the [`security_opt`](https://docs.docker.com/reference/compose-file/services/#security_opt) section.
+
+Please also check if you have specified *both* a [`user`](https://docs.docker.com/reference/compose-file/services/#user) service property and these [`environment`](https://docs.docker.com/reference/compose-file/services/#environment) variables to specify the user and/or group ID under which the service should run, as this is neither required nor recommended:
+
+```yaml
+services:
+  photoprism:
+    environment:
+      PHOTOPRISM_UID: ...
+      PHOTOPRISM_GID: ...
+```
+
+The supported ID ranges for running our container images are as follows:
+
+- UID: 0, 33, 50-99, 500-600, 900-1250, and 2000-2100
+- GID: 0, 33, 44, 50-99, 105, 109, 115, 116, 500-600, 900-1250, and 2000-2100
+
+[Learn more ›](https://docs.photoprism.app/getting-started/config-options/#docker-image)
+
+!!! abstract ""
+    If you are experiencing a similar problem with a custom configuration that we did not provide or recommend, please try changing it to see if that helps before [asking our team](https://www.photoprism.app/kb/getting-support) or [community members](https://github.com/photoprism/photoprism/discussions) for support. 🛟
+
 ### IPTables Firewall
 
 On Linux, Docker manipulates the `iptables` rules to provide network isolation. This does have some implications for what you need to do if you want to have your own policies in addition to the rules Docker manages.

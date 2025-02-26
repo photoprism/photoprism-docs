@@ -147,6 +147,7 @@ nav:
       - Setting Up 2FA: user-guide/users/2fa.md
       - Client Credentials: user-guide/users/client-credentials.md
     - Mobile App (PWA): user-guide/pwa.md
+    - iOS and Android: user-guide/native-apps/index.md
     - Release Notes: release-notes.md
     - FAQ: user-guide/faq.md
   # - Metadata: user-guide/metadata.md

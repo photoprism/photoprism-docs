@@ -4,12 +4,14 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250225-69290b1ab</span>
+<span class="build">Build 250225-bc9c1205e</span>
 
 What's new?
 
-- UX: [Upload to WebDAV button appears only when sharing is enabled](https://github.com/photoprism/photoprism/commit/cb9826de96497d8ef052dcfd905cf3a5e34b84f1)
+- UX: [Added album menu button to remove and archive pictures in one step](https://github.com/photoprism/photoprism/issues/3442)
+- UX: [Upload to WebDAV menu button appears only when sharing is enabled](https://github.com/photoprism/photoprism/commit/cb9826de96497d8ef052dcfd905cf3a5e34b84f1)
 - Viewer: [Content preloading is less eager to reduce server load](https://github.com/photoprism/photoprism/commit/69290b1ab17471d6dbed1ad5cb382cd212ad9799)
+- Viewer: [Fullscreen toggle is always visible in experimental mode](https://github.com/photoprism/photoprism/commit/bc9c1205ee379b95751c4791e63b2850b96c42b5)
 - Viewer: [Added a new thumbnail size suitable for Retina 5K displays](https://github.com/photoprism/photoprism/issues/4810)
 - Places: [Browser scrollbar stays hidden when cluster view is open](https://github.com/photoprism/photoprism/commit/1b0c3c804ef51ed42bed9cbd52df61f1f1265102)
 
@@ -31,6 +33,10 @@ What's new?
 This [major new release](https://github.com/photoprism/photoprism/releases/tag/250223-b79d21907) features an [updated user interface](https://github.com/photoprism/photoprism/issues/3168#screenshots) with many usability enhancements and new features, such as a [hybrid photo and video viewer](https://github.com/photoprism/photoprism/issues/1307) that replaces the [dedicated video player](https://github.com/photoprism/photoprism/issues/3372), a [redesigned edit dialog](https://github.com/photoprism/photoprism/issues/4763) that is more responsive and easier to use, and an immersive [3D Earth](https://github.com/photoprism/photoprism/issues/4762) view in [Places](https://demo.photoprism.app/library/places). It also includes dozens of layout optimizations for right-to-left languages.
 
 It's been [a long road](https://github.com/photoprism/photoprism/graphs/contributors?from=9%2F10%2F2023&to=2%2F23%2F2025) to get here, as we've put a lot of effort into quality and detail, and welcomed new team members along the way. So thank you for your patience while we got this ready for you, and we hope you enjoy the new look and features as much as we do! 👨‍🚀🚀✨
+
+Breaking Changes
+
+- It is recommended that you [perform a complete rescan of your library](https://docs.photoprism.app/user-guide/library/originals/#indexing-your-originals) after upgrading, as otherwise videos that do not require transcoding may be [transcoded during playback](https://docs.photoprism.app/user-guide/organize/video/#transcoding) due to missing metadata, resulting in high CPU and disk usage. [Learn more ›](https://docs.photoprism.app/user-guide/library/originals/#indexing-your-originals)
 
 What's new?
 

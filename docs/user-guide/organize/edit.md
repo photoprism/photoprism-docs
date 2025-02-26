@@ -29,7 +29,7 @@ Much of this information is automatically recognized and updated while indexing.
 
 To quickly set new coordinates, you can paste them into *Latitude* or *Longitude* if they have the format *48.265684, 7.721380*.
 
-Clicking the *Apply* button saves the changes you have made, but does not close the dialog, while the *Done* button saves your changes and closes the dialog.
+Clicking the *Apply* button saves the changes you have made, but does not close the dialog, while the *Close* button closes the dialog without saving additional changes.
 
 !!! note ""
     When performing a search, text in the *Title*, *Description*, and *Keywords* fields can be found, while *Notes* are private and will be ignored.

@@ -7,26 +7,29 @@
 
 ## Index
 
-#### :material-chart-timeline-variant: Estimates ####
+#### :material-chart-timeline-variant: Estimate Locations ####
 
 Estimates the location of pictures taken without GPS information by extrapolating it from the location of other pictures taken on the same day. 
 
 !!! danger ""
     Be aware that, if you have pictures from unrelated events at different locations, the GPS coordinates of pictures from one event will be applied/extrapolated to pictures of the other event that lack coordinates (even if these are in different folders).
 
+!!! note ""
+    Location estimation is not performed for non-photographic pictures or pictures without camera information.
+
 #### :material-eye: Quality Filter ####
 
 Requires a [review of non-photographic and low-quality images](../organize/review.md) before they appear in search results.
 
-#### :material-camera: Preview Images ####
+#### :material-camera: Generate Previews ####
 
 Automatically creates JPEG or PNG preview images for other file types so they can be displayed in search results and in the full-screen viewer. 
 
 !!! danger ""
-    *Preview Images* should be enabled, otherwise PhotoPrism cannot index file types other than JPEG or PNG unless a preview sidecar file with the same filename prefix already exists. See *Stacks* to learn more about naming conventions of sidecar files.
+    *Generate Previews* should be enabled, otherwise PhotoPrism cannot index file types other than JPEG or PNG unless a preview sidecar file with the same filename prefix already exists. See *Stacks* to learn more about naming conventions of sidecar files.
 
 !!! info ""
-    To prevent inexperienced users from accidentally disabling the creation of thumbnails *Preview Images* can only be disabled when [Experimental Features](advanced.md#experimental-features) are enabled.
+    To prevent inexperienced users from accidentally disabling the creation of thumbnails *Generate Previews* can only be disabled when [Experimental Features](advanced.md#experimental-features) are enabled.
 
 ## Stacks
 

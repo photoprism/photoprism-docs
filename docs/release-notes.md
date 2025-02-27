@@ -10,10 +10,10 @@ What's new?
 
 - UX: [Added album menu button to remove and archive pictures in one step](https://github.com/photoprism/photoprism/issues/3442)
 - UX: [Upload to WebDAV menu button appears only when sharing is enabled](https://github.com/photoprism/photoprism/commit/cb9826de96497d8ef052dcfd905cf3a5e34b84f1)
+- Videos: [`.m4v` container files are assumed to be MP4 compatible](https://github.com/photoprism/photoprism/issues/4820)
 - Viewer: [Content preloading is less eager to reduce server load](https://github.com/photoprism/photoprism/commit/69290b1ab17471d6dbed1ad5cb382cd212ad9799)
 - Viewer: [Fullscreen toggle is always visible in experimental mode](https://github.com/photoprism/photoprism/commit/bc9c1205ee379b95751c4791e63b2850b96c42b5)
 - Viewer: [Added a new thumbnail size suitable for Retina 5K displays](https://github.com/photoprism/photoprism/issues/4810)
-- Videos: [`.m4v` container files are assumed to be MP4 compatible](https://github.com/photoprism/photoprism/issues/4820)
 - Places: [Browser scrollbar stays hidden when cluster view is open](https://github.com/photoprism/photoprism/commit/1b0c3c804ef51ed42bed9cbd52df61f1f1265102)
 
 ### February 24, 2025

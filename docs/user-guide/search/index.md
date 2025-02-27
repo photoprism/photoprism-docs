@@ -15,7 +15,7 @@ Shows all photos and videos that are not in review or archived or private.
 !!! hint ""
     In case the review, private or archive functions are turned off - Search displays those photos and videos as well.
 
-![Screenshot](../organize/img/search-section-dark.jpg){ class="shadow" }
+![Screenshot](../organize/img/search-section-2502.jpg){ class="shadow" }
 
 #### Monochrome
 
@@ -45,13 +45,13 @@ Shows archived photos.
 
 Shows albums you created.
 
-![Screenshot](../organize/img/albums-section-dark.jpg){ class="shadow" }
+![Screenshot](../organize/img/albums-section-2502.jpg){ class="shadow" }
 
 #### Unsorted
 
 Shows all photos that are not part of an album.
 
-![Screenshot](../organize/img/unsorted-section-dark.jpg){ class="shadow" }
+![Screenshot](../organize/img/unsorted-section-2502.jpg){ class="shadow" }
 
 ### :material-movie: [Videos](../organize/video.md)
 
@@ -73,37 +73,37 @@ Shows all photos and videos you liked.
 
 Discover albums we automatically create for you.
 
-![Screenshot](../organize/img/moments-section-dark.jpg){ class="shadow" }
+![Screenshot](../organize/img/moments-section-2502.jpg){ class="shadow" }
 
 ### :material-calendar-range: [Calendar](../organize/calendar.md)
 
 Organizes your photos due to time taken.
 
-![Screenshot](../organize/img/calendar-section-dark.jpg){ class="shadow" }
+![Screenshot](../organize/img/calendar-section-2502.jpg){ class="shadow" }
 
 ### :material-map-marker: [Places](../organize/places.md)
 
 Displays all photos and videos with location information on a worldmap.
 
-![Screenshot](../organize/img/places-section-dark.jpg){ class="shadow" }
+![Screenshot](../organize/img/places-section-2502.jpg){ class="shadow" }
 
-#### States
+#### Regions
 
 Shows your photos grouped by location.
 
-![Screenshot](../organize/img/states-section-dark.jpg){ class="shadow" }
+![Screenshot](../organize/img/regions-section-2502.jpg){ class="shadow" }
 
 ### :material-label: [Labels](../organize/labels.md)
 
 Shows your photos and videos grouped by labels like cat, dog or beach.
 
-![Screenshot](../organize/img/labels-section-dark.jpg){ class="shadow" }
+![Screenshot](../organize/img/labels-section-2502.jpg){ class="shadow" }
 
 ### :material-folder: [Folders](../organize/folders.md)
 
 Displays all folders of your originals directory.
 
-![Screenshot](../organize/img/folder-section-dark.jpg){ class="shadow" }
+![Screenshot](../organize/img/folder-section-2502.jpg){ class="shadow" }
 
 ### :material-lock: [Private](../organize/private.md)
 

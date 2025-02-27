@@ -4,17 +4,16 @@
 
     1. Click :material-cloud-upload: in the upper right corner
 
-         ![Screenshot](img/upload-3-dark.jpg){ class="shadow" }
+         ![Screenshot](img/upload-3-2502.jpg){ class="shadow" }
 
     2. In case you want to upload the files directly to an album select one
 
-    3. Click *Upload*
+    3. Click *Browse*
 
-         ![Screenshot](img/upload-to-album-dark.jpg){ class="shadow" }
+         ![Screenshot](img/upload-to-album-2502.jpg){ class="shadow" }
 
     4. Select files
 
-    5. Click *Upload* to start uploading and importing the selected files
 
 
 === "From Library"
@@ -23,16 +22,13 @@
 
     2. Click *Upload*
 
-         ![Screenshot](img/upload-1-light.jpg){ class="shadow" }
+         ![Screenshot](img/upload-1-2502.jpg){ class="shadow" }
 
     3. In case you want to upload the files directly to an album select one
 
-    4. Click *Upload*
+    4. Click *Browse*
 
-         ![Screenshot](img/upload-to-album-light.jpg){ class="shadow" }
+         ![Screenshot](img/upload-to-album-2-2502s.jpg){ class="shadow" }
 
     5. Select files
-
-    6. Click *Upload* to start uploading and importing the selected files
-
 

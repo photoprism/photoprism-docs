@@ -8,8 +8,8 @@
 
 What's new?
 
-- UX: [Added album menu button to remove and archive pictures in one step](https://github.com/photoprism/photoprism/issues/3442)
-- UX: [Upload to WebDAV menu button appears only when sharing is enabled](https://github.com/photoprism/photoprism/commit/cb9826de96497d8ef052dcfd905cf3a5e34b84f1)
+- UX: [Added menu action button for archiving pictures from albums](https://github.com/photoprism/photoprism/issues/3442)
+- UX: [Upload to WebDAV menu action only appears if sharing is enabled](https://github.com/photoprism/photoprism/commit/cb9826de96497d8ef052dcfd905cf3a5e34b84f1)
 - Viewer: [Content preloading is less eager to reduce server load](https://github.com/photoprism/photoprism/commit/69290b1ab17471d6dbed1ad5cb382cd212ad9799)
 - Viewer: [Fullscreen toggle is always visible in experimental mode](https://github.com/photoprism/photoprism/commit/bc9c1205ee379b95751c4791e63b2850b96c42b5)
 - Viewer: [Added a new thumbnail size suitable for Retina 5K displays](https://github.com/photoprism/photoprism/issues/4810)

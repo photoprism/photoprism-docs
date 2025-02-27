@@ -182,7 +182,7 @@
     
     XMP (Extensible Metadata Platform) is an XML-based metadata container format [developed by Adobe](https://www.adobe.com/products/xmp.html).
     It provides many more fields (as part of embedded models like Dublin Core) than Exif. This also makes it difficult - if not
-    impossible - to provide full support. Reading title, copyright, artist, and description from XMP sidecar files is
+    impossible - to provide full support. Reading title, copyright, artist, and caption from XMP sidecar files is
     implemented as a proof-of-concept, [contributions are welcome](../developer-guide/metadata/xmp.md). Indexing of
     embedded XMP is only possible via [ExifTool](https://exiftool.org/), see above.
 
@@ -246,7 +246,7 @@
 
     We recommend performing a [complete rescan](library/originals.md#when-should-complete-rescan-be-selected) after major updates to take advantage of new search filters and sorting options. Be sure to [read the notes for each release](../release-notes.md) to see what changes have been made and if they might affect your library, for example, because of the file types you have or because new search features have been added. If you encounter problems that you cannot solve otherwise (i.e. before reporting a bug), please also try a rescan and see if it solves the problem.
     
-    You can start a [rescan from the user interface](library/originals.md) by navigating to *Library* > *Index*, selecting "Complete Rescan", and then clicking "Start". Manually entered information such as labels, people, titles or descriptions will not be modified when indexing, even if you perform a "complete rescan". Be careful not to start multiple indexing processes at the same time, as this will lead to a high server load.
+    You can start a [rescan from the user interface](library/originals.md) by navigating to *Library* > *Index*, selecting "Complete Rescan", and then clicking "Start". Manually entered information such as labels, people, titles or captions will not be modified when indexing, even if you perform a "complete rescan". Be careful not to start multiple indexing processes at the same time, as this will lead to a high server load.
 
 ??? question "Can I use the web interface to permanently delete files?"
 
@@ -268,7 +268,7 @@
 
     JPEGs are currently not regenerated when related RAW or XMP files change. RAW files are digital negatives by design. PhotoPrism therefore assumes that their image information is immutable.
 
-    XMP files can affect the appearance, but most of the metadata they contain, such as title and description, does not. Creating JPEGs from RAW files is a time-consuming task, and in most cases would cause a huge, unjustified amount of overhead. In addition, the rendering information in XMP files is not well standardized. For example, changes you make in Photoshop may not be compatible with Darktable.
+    XMP files can affect the appearance, but most of the metadata they contain, such as title and caption, does not. Creating JPEGs from RAW files is a time-consuming task, and in most cases would cause a huge, unjustified amount of overhead. In addition, the rendering information in XMP files is not well standardized. For example, changes you make in Photoshop may not be compatible with Darktable.
 
     We recommend manually updating existing JPEG sidecar files as needed or creating additional JPEGs, so you can choose between different versions. New files and other metadata changes are detected and reflected in the index as usual when your library is scanned.
 
@@ -333,7 +333,7 @@
 
 ??? question "How can I check the metadata of images and videos?"
 
-    We [recommend using Exiftool](../getting-started/troubleshooting/metadata.md) if some of your pictures are displayed incorrectly (stretched, distorted), information seems to be missing (e.g. title or description), or the [wrong time and location](organize/edit.md) are shown.
+    We [recommend using Exiftool](../getting-started/troubleshooting/metadata.md) if some of your pictures are displayed incorrectly (stretched, distorted), information seems to be missing (e.g. title or caption), or the [wrong time and location](organize/edit.md) are shown.
 
     [Learn more ›](../getting-started/troubleshooting/metadata.md)
 

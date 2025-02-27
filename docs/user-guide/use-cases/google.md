@@ -15,7 +15,7 @@
 **The following metadata is read by PhotoPrism from each photo's JSON file**
 
 - Title
-- Description
+- Caption
 - Geolocation Info (lat/long)
 - Date/Time Taken
 - Date/Time Created

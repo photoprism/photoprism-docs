@@ -41,7 +41,7 @@ PhotoPrism creates YAML backup files for each photo in your `sidecar path`.
 
 The following metadata is stored:
 
-* TakenAt + Source, UID, Type, Title + Source, Description + Source, OriginalName, TimeZone, PlaceSrc, Altitude, 
+* TakenAt + Source, UID, Type, Title + Source, Caption + Source, OriginalName, TimeZone, PlaceSrc, Altitude, 
   Lat, Lng, Year, Month, Day, Iso, Exposure, FNumber, FocalLength, Quality, Favorite, Private, Keywords + Source, 
   Notes + Source, Subject + Source, Artist + Source, Copyright + Source, License + Source, CreatedAt, UpdatedAt, EditedAt, DeletedAt (Archived)
 

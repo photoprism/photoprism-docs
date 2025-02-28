@@ -2,6 +2,9 @@
 
 *Places* displays all photos with GPS information on a world map.
 
+!!! info ""
+    The Places feature requires a browser with WebGL support. Most modern browsers support WebGL, but some older browsers or browsers with hardware acceleration disabled may not be able to display the map properly.
+
 ![Screenshot](img/places-1-dark.jpg){ class="shadow" }
 
 You can  set a default map style in [settings](../settings/general.md) or choose between different styles by clicking :material-layers-triple:.
@@ -31,6 +34,25 @@ Our "Satellite", "Outdoor" and "Topography" maps can also be viewed in 3D.
 To enable terrain mode click :material-image-filter-hdr-outline:. To change the perspective, you can hold down the right mouse button and move it.
 
 ![Screenshot](img/terrain-maps-1.jpg){ class="shadow" }
+
+## 3D Earth View
+
+PhotoPrism now offers an immersive 3D Earth view that provides a globe-like perspective of your photo locations. This feature allows you to visualize your photos in a more realistic, three-dimensional representation of the world.
+
+To enable the 3D Earth view:
+
+1. Click on :material-layers-triple: to open the map style menu
+2. Click on :material-earth: to toggle the 3D Earth view
+
+When in 3D Earth view, you can:
+
+- Rotate the globe by clicking and dragging
+- Zoom in and out using the scroll wheel or pinch gestures
+- Tilt the view by holding the right mouse button and moving it
+
+The 3D Earth view works with all map styles and can be combined with terrain mode for an even more detailed visualization of your photo locations.
+
+![Screenshot](img/places-3d-earth.jpg){ class="shadow" }
 
 ## Open Photo from Search in Places
 

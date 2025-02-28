@@ -3,8 +3,10 @@
 !!! note ""
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
-### Development Preview
-<span class="build">Build 250227-43447fa38</span>
+### February 28, 2025
+<span class="build">Build 250228-43447fa38</span>
+
+With [this update](https://github.com/photoprism/photoprism/releases/tag/250228-43447fa38), you'll get additional usability and performance improvements, as well as a new thumbnail size for [Retina 5K displays](https://github.com/photoprism/photoprism/issues/4810) that bridges the gap [between 4K and 8K](https://docs.photoprism.app/user-guide/settings/advanced/#which-thumbnails-will-be-generated). We would also like to take this opportunity to [thank our community](https://floss.social/@photoprism), whose [support has been](https://www.photoprism.app/oss/faq) [and continues to be essential](https://docs.photoprism.app/developer-guide/) to the [success of the project](https://github.com/photoprism/photoprism)! 🌈💎✨
 
 What's new?
 

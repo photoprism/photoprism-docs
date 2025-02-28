@@ -6,7 +6,7 @@
 ### February 28, 2025
 <span class="build">Build 250228-43447fa38</span>
 
-This update gets you additional usability and performance enhancements, as well as a new thumbnail size for [Retina 5K displays](https://github.com/photoprism/photoprism/issues/4810), bridging the gap [between 4K and 8K resolution](https://docs.photoprism.app/user-guide/settings/advanced/#which-thumbnails-will-be-generated). We would like to take this opportunity to thank [our community](https://floss.social/@photoprism), [contributors](https://docs.photoprism.app/developer-guide/) and [members](https://www.photoprism.app/editions#compare) whose support has been and continues to be essential to the success of the project! 🙏
+This update gets you additional usability and performance enhancements, as well as a new thumbnail size for [Retina 5K displays](https://github.com/photoprism/photoprism/issues/4810), bridging the gap [between 4K and 8K resolution](https://docs.photoprism.app/user-guide/settings/advanced/#which-thumbnails-will-be-generated). We would like to take this opportunity to [thank our community](https://floss.social/@photoprism) whose [support has been](https://www.photoprism.app/oss/faq) [and continues to be essential](https://docs.photoprism.app/developer-guide/) to the [success of the project](https://github.com/photoprism/photoprism)! 🌈💎✨
 
 What's new?
 

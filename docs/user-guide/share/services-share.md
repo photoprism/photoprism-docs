@@ -1,6 +1,6 @@
-# Share with other Apps #
+# Uploading Files to Other Apps & Services
 
-In [settings](../settings/sync.md) you can connect your PhotoPrism instance to other services with WebDAV support, such as other PhotoPrism instances, Nextcloud or ownCloud.
+In [Settings > Services](../settings/sync.md), you can connect PhotoPrism to WebDAV-compatible services, such as other PhotoPrism instances or Nextcloud.
 
 ## Share Files with other Apps ##
 

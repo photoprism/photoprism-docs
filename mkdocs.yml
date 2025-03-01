@@ -71,9 +71,10 @@ nav:
   - User Guide:
     - Installation: user-guide/index.md
     - First Steps 👣: user-guide/first-steps.md
+    - User Interface: user-guide/navigate.md
     # - Setting up: user-guide/setup.md
     - Media Library:
-      - Overview: user-guide/library/index.md
+      - Introduction: user-guide/library/index.md
       - Indexing Originals: user-guide/library/originals.md
       - Import to Originals: user-guide/library/import.md
       - Duplicate Detection: user-guide/library/duplicates.md
@@ -89,11 +90,10 @@ nav:
     # - Sync and Back Up:
     # - WebDAV Sync
     #    - Nextcloud: user-guide/nextcloud.md
-    - Finding Pictures:
-      - User Interface: user-guide/navigate.md
-      - Search Your Library: user-guide/search/index.md
-      - Search Result Views: user-guide/search/views.md
-      - Search Filters: user-guide/search/filters.md
+    - Searching:
+      - Introduction: user-guide/search/index.md
+      - Result Views: user-guide/search/views.md
+      - Using Filters: user-guide/search/filters.md
     - Features:
       - Albums: user-guide/organize/albums.md
       - People: user-guide/organize/people.md
@@ -114,8 +114,8 @@ nav:
       - Panoramas: user-guide/organize/panoramas.md
       - Scans: user-guide/organize/scans.md
     - Sharing:
-      - Link Sharing: user-guide/share/index.md
-      - With Apps: user-guide/share/services-share.md
+      - Introduction: user-guide/share/index.md
+      - Uploading Files: user-guide/share/services-share.md
     - Settings:
       - General: user-guide/settings/general.md
       - Library: user-guide/settings/library.md

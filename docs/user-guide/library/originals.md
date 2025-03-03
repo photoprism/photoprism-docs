@@ -13,7 +13,7 @@
 
 4. Press *Start* to start indexing
 
-![Screenshot](img/index-dark.jpg){ class="shadow" }
+![Screenshot](img/index-2502.jpg){ class="shadow" }
 
 !!! info ""
     You can use [WebDAV](webdav.md)-compatible apps, including Microsoft's Windows Explorer and Apple's Finder, 

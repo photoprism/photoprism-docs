@@ -86,3 +86,11 @@ Improved UI with flat look, photo upload and powerful filters as well as new pag
 ![](./img/files-details-new.png)
 
 ![](./img/new-mosaic-view.png)
+
+## February 28, 2025 ##
+
+![](./img/sign-in-2502.jpg)
+
+![](./img/edit-details-2502.jpg)
+
+![](./img/card-2502.jpg)

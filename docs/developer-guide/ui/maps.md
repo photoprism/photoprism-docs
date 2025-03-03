@@ -3,7 +3,7 @@
 PhotoPrism includes four [high-resolution world maps](https://try.photoprism.app/library/places) that allow you to browse photos by location.
 Visit [try.photoprism.app/library/places](https://try.photoprism.app/library/places) to try them on our demo.
 
-![Places UI Example](https://dl.photoprism.app/img/ui/desktop-places-chicago-1000px.jpg)
+![Places UI Example](./img/developer-guide-map-2502.jpg)
 
 The API keys required to use these maps are unfortunately not free for us due to the number of users we have, see [FAQ](../faq.md).
 

@@ -4,7 +4,7 @@ Stacks are groups of files that have the same origin but differ in quality, form
 
 To see all images with a group of related files, open *Stacks* in the expanded *Search* navigation:
 
-![Screenshot](img/stack-page-dark.jpg){ class="shadow" }
+![Screenshot](img/stacks-page-2502.jpg){ class="shadow" }
 
 Since [videos](video.md) and [Live Photos](video.md#live-photos) are always stacked with a still image, they are not included in the search results when you navigate to *Search > Stacks*.
 
@@ -41,11 +41,11 @@ If stacking by *Sequential Name* [has been enabled](../settings/library.md#stack
 
 1. Click on :material-camera-burst:
 
-    ![Screenshot](img/sequential1-dark.jpg){ class="shadow" }
+    ![Screenshot](img/sequential-1-2502.jpg){ class="shadow" }
     
 2. Use arrows to see all photos of the sequence
 
-    ![Screenshot](img/sequential3.jpg){ class="shadow" } ![Screenshot](img/sequential4.jpg){ class="shadow" }
+    ![Screenshot](img/sequential-3-2502.jpg){ class="shadow" } ![Screenshot](img/sequential-4-2502.jpg){ class="shadow" }
    
 
 ## Change Primary Files
@@ -62,7 +62,7 @@ To change the primary file:
         
 4. Click *primary*
 
-      ![Screenshot](img/stacks-edit-dark.jpg){ class="shadow" } 
+      ![Screenshot](img/stacks-primary-2502.jpg){ class="shadow" } 
 
 ## Unstack Files
 
@@ -74,11 +74,11 @@ To change the primary file:
         
 4. Click *unstack*
 
-   ![Screenshot](img/stacks-edit-dark.jpg){ class="shadow" }
+   ![Screenshot](img/stacks-unstack-2502.jpg){ class="shadow" }
 
 Now, both files appear in our views.
 
-![Screenshot](img/unstacked-dark.jpg){ class="shadow" }
+![Screenshot](img/unstacked-2502.jpg){ class="shadow" }
 
 ## Delete Non-Primary Files
 
@@ -92,6 +92,6 @@ Now, both files appear in our views.
 
 5. Confirm
 
-   ![Screenshot](img/stacks-edit-dark.jpg){ class="shadow" } 
+   ![Screenshot](img/stacks-delete-2502.jpg){ class="shadow" } 
 
 *[same position]: GPS latitude and longitude

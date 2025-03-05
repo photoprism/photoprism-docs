@@ -4,13 +4,14 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250302-71a437656</span>
+<span class="build">Build 250304-05a88780f</span>
 
 In our new [development preview](getting-started/updates.md#development-preview), page tabs and toolbars are sticky, so they [remain visible and easy to access](https://bsky.app/profile/photoprism.app/post/3ljfpzhlf3c2i) as you scroll through search results or settings. You can also test this on our public demo at [demo.photoprism.app](https://demo.photoprism.app). Feedback welcome! 🦓
 
 What's new?
 
 - UX: [Page toolbars and tabs remain visible when scrolling](https://github.com/photoprism/photoprism/issues/4830)
+- UX: [Filesystem usage can be displayed in the sidebar navigation](https://github.com/photoprism/photoprism/issues/4266)
 - Translations: [Updated Ukrainian (українська)](https://docs.photoprism.app/developer-guide/translations-weblate/)
 
 ### February 28, 2025

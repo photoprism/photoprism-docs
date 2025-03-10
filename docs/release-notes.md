@@ -14,7 +14,7 @@ What's new?
 - UX: [Filesystem usage can be displayed in the sidebar navigation](https://github.com/photoprism/photoprism/issues/4266)
 - Videos: [Added "codec" search filter and auto-detection of Nvidia GPUs](https://github.com/photoprism/photoprism/issues/4848)
 - Translations: [Updated Chinese (Simplified) and Ukrainian (українська)](https://docs.photoprism.app/developer-guide/translations-weblate/)
-- Security: [Go has been upgraded to v1.24.1, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.1)
+- Security: [Go has been updated to v1.24.1, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.1)
 
 ### February 28, 2025
 <span class="build">Build 250228-43447fa38</span>

@@ -6,7 +6,7 @@
 ### Development Preview
 <span class="build">Build 250310-8f6880b03</span>
 
-In our new [development preview](getting-started/updates.md#development-preview), page tabs and toolbars are sticky, so they [remain visible and easy to access](https://bsky.app/profile/photoprism.app/post/3ljfpzhlf3c2i) as you scroll through search results or settings. You can also test this on our public demo at [demo.photoprism.app](https://demo.photoprism.app). Feedback welcome! 🦓
+In our [upcoming release](getting-started/updates.md#development-preview), page tabs and toolbars will be sticky, so they [remain visible and easy to access](https://bsky.app/profile/photoprism.app/post/3ljfpzhlf3c2i) as you scroll through search results or settings.
 
 What's new?
 

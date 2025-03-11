@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250311-94a4d17f4</span>
+<span class="build">Build 250311-bed5ed276</span>
 
 In our [upcoming release](getting-started/updates.md#development-preview), page tabs and toolbars will be sticky, so they [remain visible and easy to access](https://bsky.app/profile/photoprism.app/post/3ljfpzhlf3c2i) as you scroll through search results or settings.
 

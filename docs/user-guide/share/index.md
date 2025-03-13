@@ -1,6 +1,6 @@
 # Creating and Sharing Album Links
 
-Secret links make it easy to share [manually created albums](../organize/albums.md) as well as selected [Moments](../organize/moments.md), [Months](../organize/calendar.md), [States](../search/index.md#states), or [Folders](../organize/folders.md) with your loved ones. You can [create multiple links](#create-sharing-link) for each album and optionally set an expiration date. While no registration is required to use the links, [sharing albums with users who have an account](../users/sharing.md) is also possible this way.
+Secret links make it easy to share [manually created albums](../organize/albums.md) as well as selected [Moments](../organize/moments.md), [Months](../organize/calendar.md), [Regions](../search/index.md#regions), or [Folders](../organize/folders.md) with your loved ones. You can [create multiple links](#create-sharing-link) for each album and optionally set an expiration date. While no registration is required to use the links, [sharing albums with users who have an account](../users/sharing.md) is also possible this way.
 
 When you share an album, pictures marked as private will not be visible to others. They can view and download the non-private pictures, but they cannot modify them or their metadata.
 
@@ -19,7 +19,7 @@ Support for optional password protection of sharing links as well as other enhan
 ## Create Sharing Link ##
 
 === "Using Context Menu"
-     1. Go to *Albums* / *Moments* / *Calendar* / *States* / *Folders*
+     1. Go to *Albums* / *Moments* / *Calendar* / *Regions* / *Folders*
      2. Select the album you want to share
      3. Open the context menu
      4. Click :material-share-variant:
@@ -27,7 +27,7 @@ Support for optional password protection of sharing links as well as other enhan
       ![Screenshot](img/share-menu-2502.jpg){ class="shadow" }
 
 === "Via Toolbar"
-     1. Go to *Albums* / *Moments* / *Calendar* / *States* / *Folders*
+     1. Go to *Albums* / *Moments* / *Calendar* / *Regions* / *Folders*
      2. Open the album by clicking on it
      3. Click :material-share-variant:
 

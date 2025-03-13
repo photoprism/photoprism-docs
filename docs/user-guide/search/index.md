@@ -87,7 +87,7 @@ Displays all photos and videos with location information on a worldmap.
 
 ![Screenshot](../organize/img/places-section-2502.jpg){ class="shadow" }
 
-#### Regions
+#### Regions {#regions}
 
 Shows your photos grouped by location.
 

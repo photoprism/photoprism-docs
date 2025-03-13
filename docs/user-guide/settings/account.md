@@ -30,7 +30,7 @@ You can therefore generate app-specific passwords for them by navigating to *Set
 
 Example for generating an app password that you can use with [WebDAV-compatible](../sync/webdav.md) file synchronization apps like [PhotoSync](../sync/mobile-devices.md):
 
-![Screenshot](../users/img/app-password-2502.jpg){ class="shadow" }
+![Screenshot](img/app-password-2502.jpg){ class="shadow" }
 
 !!! tldr ""
     By selecting the *WebDAV* [scope](../users/client-credentials.md#authorization-scopes), you ensure that the app password cannot be used to log in through the regular user interface or for other actions. Apps will also not be able to change your password or manage user accounts, even if you grant them *Full Access*.

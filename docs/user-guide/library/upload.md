@@ -28,7 +28,7 @@
 
     4. Click *Browse*
 
-         ![Screenshot](img/upload-to-album-2-2502s.jpg){ class="shadow" }
+         ![Screenshot](img/upload-to-album-2-2502.jpg){ class="shadow" }
 
     5. Select files
 

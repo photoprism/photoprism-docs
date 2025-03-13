@@ -19,7 +19,7 @@ In [Settings > Services](../settings/sync.md), you can connect PhotoPrism to Web
 
 ## Share Albums with other Apps ##
 
-1. Go to *Albums* / *Moments* / *Calendar* / *States* / *Folders*
+1. Go to *Albums* / *Moments* / *Calendar* / *Regions* / *Folders*
 2. Select the album you want to share
 3. Open the context menu
 4. Click :material-share-variant:

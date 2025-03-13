@@ -4,15 +4,18 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250304-05a88780f</span>
+<span class="build">Build 250312-9936c21ae</span>
 
-In our new [development preview](getting-started/updates.md#development-preview), page tabs and toolbars are sticky, so they [remain visible and easy to access](https://bsky.app/profile/photoprism.app/post/3ljfpzhlf3c2i) as you scroll through search results or settings. You can also test this on our public demo at [demo.photoprism.app](https://demo.photoprism.app). Feedback welcome! 🦓
+Our [preview builds](getting-started/updates.md#development-preview) give you early access to [new features](https://github.com/orgs/photoprism/projects/5) and [enhancements](https://bsky.app/profile/photoprism.app/post/3ljfpzhlf3c2i) that will be part of the next stable release.
 
 What's new?
 
 - UX: [Page toolbars and tabs remain visible when scrolling](https://github.com/photoprism/photoprism/issues/4830)
-- UX: [Filesystem usage can be displayed in the sidebar navigation](https://github.com/photoprism/photoprism/issues/4266)
-- Translations: [Updated Ukrainian (українська)](https://docs.photoprism.app/developer-guide/translations-weblate/)
+- UX: [File system usage can be limited and displayed in the sidebar navigation](https://github.com/photoprism/photoprism/issues/4266)
+- Videos: [Added `codec` search filter and auto-detection of Nvidia GPUs](https://github.com/photoprism/photoprism/issues/4848)
+- Documents: [Added support for indexing and searching PDF files](https://github.com/photoprism/photoprism/issues/4600)
+- Translations: [Updated Chinese (Simplified) and Ukrainian (українська)](https://docs.photoprism.app/developer-guide/translations-weblate/)
+- Security: [Go has been updated to v1.24.1, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.1)
 
 ### February 28, 2025
 <span class="build">Build 250228-43447fa38</span>

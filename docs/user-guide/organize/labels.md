@@ -20,7 +20,7 @@ You may wish to see these broad label categories in addition to the usual labels
 
     ![Screenshot](img/labels-2-2502.jpg){ class="shadow" }
     ![Screenshot](img/labels-3-2502.jpg){ class="shadow" }
-a
+
 !!! info ""
     Alternatively you can use the search field in Photos/Videos. You search for photos with a special label like this: `label:dog`.
 
@@ -55,21 +55,12 @@ Manually added labels can be deleted.
 
 ### Rename Labels ###
 
-1. Go to the photo [*edit dialog*](edit.md) of any photo that has the label you want to rename
-
-    ![Screenshot](img/edit-label-1-light.jpg){ class="shadow" }
-    
-2. Go to *Labels* tab
-3. Click on the *label name* you want to change
-4. Change the name and click *enter*
-
-    ![Screenshot](img/edit-label-2-light.jpg){ class="shadow" }
-    
-    ![Screenshot](img/edit-label-3-light.jpg){ class="shadow" }
-    
-5. The changes will be applied to all photos with this label after the next  [*indexing*](../index.md)
-
-    ![Screenshot](img/edit-label-4-light.jpg){ class="shadow" }
+1. Go to *Labels*
+2. Click on the label name you want to rename
+    ![Screenshot](img/edit-label-1-2503.jpg){ class="shadow" }
+3. Change the name
+    ![Screenshot](img/edit-label-2-2503.jpg){ class="shadow" }
+4. Click save
 
 !!! danger ""
     Be aware this change applies to all photos that have this label.

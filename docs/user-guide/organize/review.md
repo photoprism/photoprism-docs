@@ -19,19 +19,19 @@ The quality score depends on the following:
     2. Select photos and open the context menu
     3. Click :material-check:
 
-        ![Screenshot](img/review-3-light.jpg){ class="shadow" }
+        ![Screenshot](img/review-3-2502.jpg){ class="shadow" }
 
 === "Cards View"
      1. Go to *Review* and make sure you are in *cards view*
      2. Click :material-check:
 
-        ![Screenshot](img/review-2-light.jpg){ class="shadow" }
+        ![Screenshot](img/review-2-2502.jpg){ class="shadow" }
 
 === "Edit Dialog"
      1. Open the photo's  [*edit dialog*](edit.md)
      2. Click *approve*
 
-         ![Screenshot](img/review-light.jpg){ class="shadow" }
+         ![Screenshot](img/review-2502.jpg){ class="shadow" }
 
 
 

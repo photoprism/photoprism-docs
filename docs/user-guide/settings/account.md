@@ -3,7 +3,7 @@
 !!! tldr ""
     For security reasons, changing account-related settings through the user interface requires password authentication, so these settings will not be available to you when [public mode](../../getting-started/config-options.md#authentication) is enabled.
 
-![Screenshot](img/settings-account-light.jpg){ class="shadow" }
+![Screenshot](img/settings-account-2502.jpg){ class="shadow" }
 
 ## Change Password ##
 
@@ -14,7 +14,7 @@
 5. Enter your new password twice
 6. Click *Change*
 
-![Screenshot](img/change-password-light.jpg){ class="shadow" }
+![Screenshot](img/change-password-2502.jpg){ class="shadow" }
 
 ## 2-Factor Authentication
 
@@ -30,7 +30,7 @@ You can therefore generate app-specific passwords for them by navigating to *Set
 
 Example for generating an app password that you can use with [WebDAV-compatible](../sync/webdav.md) file synchronization apps like [PhotoSync](../sync/mobile-devices.md):
 
-![Screenshot](../users/img/app-password.jpg){ class="shadow" }
+![Screenshot](img/app-password-2502.jpg){ class="shadow" }
 
 !!! tldr ""
     By selecting the *WebDAV* [scope](../users/client-credentials.md#authorization-scopes), you ensure that the app password cannot be used to log in through the regular user interface or for other actions. Apps will also not be able to change your password or manage user accounts, even if you grant them *Full Access*.
@@ -43,4 +43,4 @@ To open a dialog that shows you the URLs required to connect an app or computer 
 2. Open *Account* tab
 3. Click *Connect via WebDAV*
 
-![Screenshot](img/show-webdav-light.jpg){ class="shadow" }
+![Screenshot](img/show-webdav-2502.jpg){ class="shadow" }

@@ -2,7 +2,7 @@
 
 Two-factor authentication (2FA) can add an extra layer of security to [your account](../settings/account.md) in case someone gains access to your password. If enabled, you will need a randomly generated verification code in addition to your password to log in:
 
-![Screenshot](img/login-with-2fa.jpg){ class="shadow" }
+![Screenshot](img/login-with-2fa-2502.jpg){ class="shadow" }
 
 ### Authenticator Apps
 

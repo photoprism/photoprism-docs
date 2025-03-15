@@ -23,7 +23,7 @@
     2. Open the *Library* sub navigation
     3. Navigate to *Library* > *Errors*
 
-    ![](img/ui-error-logs.jpg)
+    ![](img/ui-error-logs-2503.jpg)
 
 === "Browser"
     

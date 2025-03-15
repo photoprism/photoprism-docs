@@ -113,9 +113,9 @@ Shows photos and videos marked as private.
 
 Hierarchical view of your originals directory.
 
-![Screenshot](../library/img/files-dark.jpg){ class="shadow" }
+![Screenshot](../library/img/files-1-2503.jpg){ class="shadow" }
 
-![Screenshot](../library/img/files-2-dark.jpg){ class="shadow" }
+![Screenshot](../library/img/files-2-2503.jpg){ class="shadow" }
 
 
 

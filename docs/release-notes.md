@@ -4,20 +4,24 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250315-cf428e324</span>
+<span class="build">Build 250316-9178c3793</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features](https://github.com/orgs/photoprism/projects/5) and [usability enhancements](https://bsky.app/profile/photoprism.app/post/3ljfpzhlf3c2i) that will be part of the next stable release.
 
 What's new?
 
 - UX: [Search toolbars and tabs remain visible while scrolling](https://github.com/photoprism/photoprism/issues/4830)
-- UX: [Users can choose their start page and time zone in Settings](https://github.com/photoprism/photoprism/issues/577)
-- UX: [Metadata displayed in Cards result view is configurable](https://github.com/photoprism/photoprism/issues/1164)
+- UX: [Users can choose their Start Page and Time Zone in Settings](https://github.com/photoprism/photoprism/issues/577)
 - UX: [Disk usage can be limited and displayed in sidebar navigation](https://github.com/photoprism/photoprism/issues/4266)
+- UX: [Metadata displayed in the Cards View can be configured](https://github.com/photoprism/photoprism/issues/1164)
+- UX: [Improved List View layout with a new column for selecting pictures](https://github.com/photoprism/photoprism/issues/4727)
 - Index: [Added file format support for Adobe PDF documents](https://github.com/photoprism/photoprism/issues/4600)
 - Videos: [Added codec search filter and auto-detection of Nvidia GPUs](https://github.com/photoprism/photoprism/issues/4848)
 - Translations: [Updated Chinese (Simplified), French, German, and Ukrainian](https://docs.photoprism.app/developer-guide/translations-weblate/)
 - Security: [Go has been updated to v1.24.1, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.1)
+
+!!! info ""
+    Missing [user interface translations](https://translate.photoprism.app/projects/photoprism/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.
 
 ### February 28, 2025
 <span class="build">Build 250228-43447fa38</span>

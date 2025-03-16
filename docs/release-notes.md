@@ -6,7 +6,7 @@
 ### Development Preview
 <span class="build">Build 250315-cf428e324</span>
 
-Our [preview builds](getting-started/updates.md#development-preview) give you early access to [new features](https://github.com/orgs/photoprism/projects/5) and [enhancements](https://bsky.app/profile/photoprism.app/post/3ljfpzhlf3c2i) that will be part of the next stable release.
+Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features](https://github.com/orgs/photoprism/projects/5) and [usability enhancements](https://bsky.app/profile/photoprism.app/post/3ljfpzhlf3c2i) that will be part of the next stable release.
 
 What's new?
 

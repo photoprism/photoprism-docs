@@ -4,19 +4,19 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250315-5b300d676</span>
+<span class="build">Build 250315-cf428e324</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [new features](https://github.com/orgs/photoprism/projects/5) and [enhancements](https://bsky.app/profile/photoprism.app/post/3ljfpzhlf3c2i) that will be part of the next stable release.
 
 What's new?
 
-- UX: [Information shown in Cards View is configurable](https://github.com/photoprism/photoprism/issues/1164)
+- UX: [Search toolbars and tabs remain visible while scrolling](https://github.com/photoprism/photoprism/issues/4830)
 - UX: [Users can choose their start page and time zone in Settings](https://github.com/photoprism/photoprism/issues/577)
-- UX: [Page toolbars and tabs remain visible when scrolling](https://github.com/photoprism/photoprism/issues/4830)
+- UX: [Metadata displayed in Cards result view is configurable](https://github.com/photoprism/photoprism/issues/1164)
 - UX: [Disk usage can be limited and displayed in sidebar navigation](https://github.com/photoprism/photoprism/issues/4266)
-- Videos: [Added `codec` search filter and auto-detection of Nvidia GPUs](https://github.com/photoprism/photoprism/issues/4848)
-- Documents: [Added support for indexing and searching PDF files](https://github.com/photoprism/photoprism/issues/4600)
-- Translations: [Updated Chinese (Simplified) and Ukrainian (українська)](https://docs.photoprism.app/developer-guide/translations-weblate/)
+- Index: [Added file format support for Adobe PDF documents](https://github.com/photoprism/photoprism/issues/4600)
+- Videos: [Added codec search filter and auto-detection of Nvidia GPUs](https://github.com/photoprism/photoprism/issues/4848)
+- Translations: [Updated Chinese (Simplified), French, German, and Ukrainian](https://docs.photoprism.app/developer-guide/translations-weblate/)
 - Security: [Go has been updated to v1.24.1, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.1)
 
 ### February 28, 2025

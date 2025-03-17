@@ -13,9 +13,6 @@ This might be useful if you want to [share](../share/services-share.md) or [sync
 
 ## Add Service ##
 
-<! -- PhotoPrism may connect with WebDAV servers like a second PhotoPrism instance or ownCloud,
-so that you can automatically sync your latest pictures. -->
-
 1. Go to *Settings*
 2. Open *Services tab*
 3. Click *Connect*

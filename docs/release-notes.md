@@ -6,7 +6,7 @@
 ### Development Preview
 <span class="build">Build 250318-dd18401d8</span>
 
-Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features](https://github.com/orgs/photoprism/projects/5) and [usability enhancements](https://bsky.app/profile/photoprism.app/post/3ljfpzhlf3c2i) that will be part of the next stable release.
+This release includes major usability enhancements, additional features and settings, and fixes for recently discovered issues. With the user interface update now largely complete, development focus in future releases will shift to [batch editing](https://github.com/photoprism/photoprism/issues/271), as well as [improved multi-user](https://github.com/photoprism/photoprism/issues/98) and [AI capabilities](https://github.com/photoprism/photoprism/issues?q=state%3Aopen%20label%3Aai) - which we know many users are eagerly waiting for! 🤖
 
 What's new?
 
@@ -23,6 +23,9 @@ What's new?
 - MariaDB: [Added version check to determine zero-configuration SSL support](https://github.com/photoprism/photoprism/issues/4837)
 - Translations: [Updated Chinese (Simplified), French, German, Turkish, and Ukrainian](https://docs.photoprism.app/developer-guide/translations-weblate/)
 - Security: [Go has been updated to v1.24.1, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.1)
+
+!!! tldr ""
+    
 
 !!! info ""
     Missing [user interface translations](https://translate.photoprism.app/projects/photoprism/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.

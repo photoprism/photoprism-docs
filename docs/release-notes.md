@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250317-f81a945e7</span>
+<span class="build">Build 250318-dfe8c2e14</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features](https://github.com/orgs/photoprism/projects/5) and [usability enhancements](https://bsky.app/profile/photoprism.app/post/3ljfpzhlf3c2i) that will be part of the next stable release.
 
@@ -20,7 +20,7 @@ What's new?
 - Albums: [Added settings to set a default sort order for each album type](https://github.com/photoprism/photoprism/issues/405)
 - Videos: [Added codec search filter and auto-detection of Nvidia GPUs](https://github.com/photoprism/photoprism/issues/4848)
 - MariaDB: [Added version check to determine zero-configuration SSL support](https://github.com/photoprism/photoprism/issues/4837)
-- Translations: [Updated Chinese (Simplified), French, German, and Ukrainian](https://docs.photoprism.app/developer-guide/translations-weblate/)
+- Translations: [Updated Chinese (Simplified), French, German, Turkish, and Ukrainian](https://docs.photoprism.app/developer-guide/translations-weblate/)
 - Security: [Go has been updated to v1.24.1, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.1)
 
 !!! info ""

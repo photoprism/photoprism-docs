@@ -6,7 +6,7 @@
 ### Development Preview
 <span class="build">Build 250318-dd18401d8</span>
 
-This release includes major usability enhancements, additional features and settings, and fixes for recently discovered issues. With the user interface update now largely complete, development focus in future releases will shift to [batch editing](https://github.com/photoprism/photoprism/issues/271), as well as [improved multi-user](https://github.com/photoprism/photoprism/issues/98) and [AI capabilities](https://github.com/photoprism/photoprism/issues?q=state%3Aopen%20label%3Aai) - which we know many users are eagerly waiting for! 🤖
+This release includes major usability enhancements, additional features and settings, and fixes for recently discovered issues. With the user interface update now largely complete, development focus in future releases will shift to [batch editing](https://github.com/photoprism/photoprism/issues/271), as well as [improved multi-user](https://github.com/photoprism/photoprism/issues/98#issuecomment-2439980099) and [AI capabilities](https://github.com/photoprism/photoprism/issues?q=state%3Aopen%20label%3Aai) - which we know many users are eagerly waiting for! 🤖
 
 What's new?
 

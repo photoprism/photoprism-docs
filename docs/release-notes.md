@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250318-56790b418</span>
+<span class="build">Build 250319-87ccc9618</span>
 
 This release includes major usability enhancements, additional features and settings, and fixes for recently discovered issues. With the user interface update now largely complete, development focus in future releases will shift to [batch editing](https://github.com/photoprism/photoprism/issues/271), as well as [improved multi-user](https://github.com/photoprism/photoprism/issues/98#issuecomment-2439980099) and [AI capabilities](https://github.com/photoprism/photoprism/issues?q=state%3Aopen%20label%3Aai) - which we know many users are eagerly waiting for! 🤖
 
@@ -19,7 +19,9 @@ What's new?
 - Albums: [Added settings to choose file names and types for zip downloads](https://github.com/photoprism/photoprism/issues/4344)
 - Albums: [Added settings to set a default sort order for each album type](https://github.com/photoprism/photoprism/issues/405)
 - Videos: [Added codec search filter and auto-detection of Nvidia GPUs](https://github.com/photoprism/photoprism/issues/4848)
-- WebDAV: [Downloads are flagged as failed when retry limit is reached](https://github.com/photoprism/photoprism/issues/4827)
+- Labels: [Fixed searching for labels that consist only of emojis](https://github.com/photoprism/photoprism/issues/4761)
+- Upload: [Fixed an issue that could cause the same album to be created multiple times](https://github.com/photoprism/photoprism/discussions/4849)
+- WebDAV: [File downloads are flagged as failed when retry limit is reached](https://github.com/photoprism/photoprism/issues/4827)
 - MariaDB: [Added version check to determine zero-configuration SSL support](https://github.com/photoprism/photoprism/issues/4837)
 - Translations: [Updated Chinese (Simplified), French, German, Turkish, and Ukrainian](https://docs.photoprism.app/developer-guide/translations-weblate/)
 - Security: [Go has been updated to v1.24.1, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.1)

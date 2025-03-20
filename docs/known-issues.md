@@ -82,7 +82,7 @@ This can happen when multiple image files are [grouped into a stack](user-guide/
 
 Secondary images are not searched for faces by default. So the problem is limited to specific cases where you have manually changed the primary image or the images are stacked after detection, which may indicate more fundamental problems, e.g. with the [metadata, filenames, or settings](user-guide/organize/stacks.md#for-what-reasons-can-files-be-stacked).
 
-One possible solution is to change the primary image of a stack to assign faces to the other images in the stack. You can also manually unstack these files and disable stacking in [Settings > Library](user-guide/settings/library.md). Note that files that are already stacked are not automatically unstacked when you change the stacking settings, and that [Live Photos](user-guide/organize/video.md#live-photos) do not appear in [Stacks](user-guide/organize/stacks.md) because they are a special type of media that is always "stacked".
+One possible solution is to change the primary image of a stack to assign faces to the other images in the stack. You can also manually unstack these files and disable stacking in [Settings > Content](user-guide/settings/library.md). Note that files that are already stacked are not automatically unstacked when you change the stacking settings, and that [Live Photos](user-guide/organize/video.md#live-photos) do not appear in [Stacks](user-guide/organize/stacks.md) because they are a special type of media that is always "stacked".
 
 ### Removing Merged Clusters Fails
 

@@ -13,8 +13,10 @@ You can use any text editor to [create or modify YAML config files](../../develo
 
 ```yaml
 Index:
-  Path: "/"
+  Path: /
+  Convert: true
   Rescan: false
+  SkipArchived: false
 ```
 
 To avoid ambiguity, it is recommended to enclose text strings in `"` (double quotes), especially if they contain spaces, a colon, or other special characters.
@@ -25,7 +27,9 @@ User settings can optionally be initialized from a `settings.yml` file located i
 
 ## Sections
 
-### User Interface
+### UI
+
+The `UI` section allows you to change general user interface settings, such as which theme, language, time zone, and start page to use by default:
 
 ```yaml
 UI:
@@ -33,6 +37,8 @@ UI:
   Zoom: false
   Theme: default
   Language: en
+  TimeZone: UTC
+  StartPage: default
 ```
 
 If you set `Scrollbar` to `false`, the browser scrollbar will be hidden regardless of which device you use and which page you are on. This is generally not recommended, but can be useful e.g. when taking screenshots.
@@ -41,7 +47,45 @@ Setting `Zoom` to `true` allows you to enlarge the user interface with gestures 
 
 `Theme` and `Language` change the theme and language of the user interface and correspond to the settings dropdowns you find when navigating to [Settings > General](../../user-guide/settings/general.md).
 
-### File Downloads
+### Search
+
+In the `Search` section, you can turn off the list view and the display of titles and captions in search results:
+
+```yaml
+Search:
+  BatchSize: -1
+  ListView: true
+  ShowTitles: true
+  ShowCaptions: true
+```
+
+The optional `BatchSize` setting allows you to configure how many search results are fetched from the backend with each request. We recommend that you do not change the default.
+
+### Albums
+
+These settings allow you to change the default sort order for newly created albums, as well as configure or disallow downloads of entire albums:
+
+```yaml
+Albums:
+  Order:
+    Album: added
+    Folder: added
+    Moment: oldest
+    State: newest
+    Month: oldest
+  Download:
+    Name: share
+    Disabled: false
+    Originals: true
+    MediaRaw: false
+    MediaSidecar: false
+```
+
+For details on the download settings, see the section below.
+
+### Downloads
+
+The following settings allow you to configure file downloads through the user interface:
 
 ```yaml
 Download:
@@ -66,7 +110,9 @@ If you set `MediaRaw` to `true`, RAW image files are downloaded automatically, f
 
 Setting `MediaSidecar` to `true` will also download sidecar files as used for XMP metadata. This is generally not recommended except for some professional workflows.
 
-### Media Library
+### Library
+
+These settings affect which files are [stacked](../../user-guide/organize/stacks.md), as well as your preferences when indexing or importing files:
 
 ```yaml
 Import:
@@ -84,9 +130,7 @@ Stack:
   Name: false
 ```
 
-These settings affect which files are [stacked](../../user-guide/organize/stacks.md), as well as your preferences when indexing or importing files.
-
-You can also change these settings by navigating to [Settings > Library](../../user-guide/settings/library.md#stacks) and in the [Library UI](../../user-guide/library/originals.md), so it is generally not necessary to edit them directly in the config file.
+Since you can also change these settings in [Settings > Content](../../user-guide/settings/library.md#stacks) and in the [Library UI](../../user-guide/library/originals.md), it is not necessary to edit them directly in the `settings.yml` configuration file.
 
 !!! note ""
     The date and time placeholders for the **optional** destination file path pattern in `Import` > `Dest` are described in [the *time* package docs](https://pkg.go.dev/time#Layout). Using a different 8 digit hex number such as `12345678` for the [CRC32 checksum](https://en.wikipedia.org/wiki/Cyclic_redundancy_check) and `.ext` instead of `.jpg` for the file extension will work as well. Invalid and empty patterns are ignored and the default is used instead. [Learn more ›](../../user-guide/library/import.md#changing-the-import-file-path)

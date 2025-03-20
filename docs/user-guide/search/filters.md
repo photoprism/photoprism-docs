@@ -115,6 +115,7 @@ This is a complete list of supported search filters with examples. Filters can g
 | camera    | string    | camera:canon                          | Camera Make/Model Name                                                                                                                     |
 | category  | string    | category:airport                      | Location Category                                                                                                                          |
 | city      | string    | city:"Berlin"                         | Location City (separate with \|)                                                                                                           |
+| codec     | string    | codec:avc1                            | Media Codec (e.g. jpeg, avc1, hvc1); separate with \|                                                                                      |
 | color     | string    | color:"red\|blue"                     | Color Name (purple, magenta, pink, red, orange, gold, yellow, lime, green, teal, cyan, blue, brown, white, grey, black) (separate with \|) |
 | country   | string    | country:"de\|us"                      | Location Country Code (separate with \|)                                                                                                   |
 | day       | string    | day:3\|13                             | Day of Month (1-31, separate with \|)                                                                                                      |
@@ -162,7 +163,7 @@ This is a complete list of supported search filters with examples. Filters can g
 | live      | switch    | live:yes                              | Finds Live Photos and short videos                                                                                                         |
 | mono      | switch    | mono:yes                              | Finds pictures with few or no colors                                                                                                       |
 | panorama  | switch    | panorama:yes                          | Finds pictures with an aspect ratio > 1.9:1                                                                                                |
-| photo     | switch    | photo:yes                             | Excludes videos from search results                                                                                                        |
+| photo     | switch    | photo:yes                             | Excludes videos and documents from search results                                                                                          |
 | portrait  | switch    | portrait:yes                          | Finds pictures in portrait format                                                                                                          |
 | primary   | switch    | primary:yes                           | Finds primary JPEG files only                                                                                                              |
 | private   | switch    | private:yes                           | Finds private pictures                                                                                                                     |

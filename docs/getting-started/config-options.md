@@ -58,6 +58,13 @@
 | PHOTOPRISM_SIDECAR_PATH | --sidecar-path |         | custom relative or absolute sidecar `PATH` *optional* |
 | PHOTOPRISM_SIDECAR_YAML | --sidecar-yaml | true    | create YAML sidecar files to back up picture metadata |
 
+### Usage ###
+
+|      Environment       |   CLI Flag    | Default |                              Description                               |
+|------------------------|---------------|---------|------------------------------------------------------------------------|
+| PHOTOPRISM_USAGE_INFO  | --usage-info  |         | display usage information in the user interface                        |
+| PHOTOPRISM_FILES_QUOTA | --files-quota |       0 | maximum aggregated size of all indexed files in `GB` (0 for unlimited) |
+
 ### Backup ###
 
 |        Environment         |     CLI Flag      | Default |                                                  Description                                                  |
@@ -237,7 +244,7 @@
 | PHOTOPRISM_THUMB_COLOR         | --thumb-color         | auto    | standard color `PROFILE` for thumbnails (auto, preserve, srgb, none)                         |
 | PHOTOPRISM_THUMB_FILTER        | --thumb-filter        | auto    | downscaling filter `NAME` (imaging best to worst: blackman, lanczos, cubic, linear, nearest) |
 | PHOTOPRISM_THUMB_SIZE          | --thumb-size          |    1920 | maximum size of pre-generated thumbnails in `PIXELS` (720-7680)                              |
-| PHOTOPRISM_THUMB_SIZE_UNCACHED | --thumb-size-uncached |    7680 | maximum size of thumbnails generated on demand in `PIXELS` (720-7680)                        |
+| PHOTOPRISM_THUMB_SIZE_UNCACHED | --thumb-size-uncached |    5120 | maximum size of thumbnails generated on demand in `PIXELS` (720-7680)                        |
 | PHOTOPRISM_THUMB_UNCACHED      | --thumb-uncached      |         | generate missing thumbnails on demand (high memory and cpu usage)                            |
 
 ### Image Quality ###

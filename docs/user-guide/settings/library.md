@@ -1,13 +1,13 @@
-# Library Settings
+# Content Settings
 
 ![](img/settings-library-2502.jpg){ class="shadow" }
 
 !!! info ""
-    Library Settings are only available for [Super Admins](../users/roles.md).
+    Some of these settings are only visible to users with [Super Admin](../users/roles.md#admin) privileges.
 
-## Indexs
+## Index
 
-#### :material-chart-timeline-variant: Estimate Locations ####
+#### :material-chart-timeline-variant: Estimate Locations
 
 Estimates the location of pictures taken without GPS information by extrapolating it from the location of other pictures taken on the same day. 
 
@@ -17,18 +17,18 @@ Estimates the location of pictures taken without GPS information by extrapolatin
 !!! note ""
     Location estimation is not performed for non-photographic pictures or pictures without camera information.
 
-#### :material-eye: Quality Filter ####
+#### :material-eye: Quality Filter
 
 Requires a [review of non-photographic and low-quality images](../organize/review.md) before they appear in search results.
 
-#### :material-camera: Generate Previews ####
+#### :material-camera: Generate Previews
 
 Automatically creates JPEG or PNG preview images for other file types so they can be displayed in search results and in the full-screen viewer. 
 
 !!! danger ""
     *Generate Previews* should be enabled, otherwise PhotoPrism cannot index file types other than JPEG or PNG unless a preview sidecar file with the same filename prefix already exists. See *Stacks* to learn more about naming conventions of sidecar files.
 
-!!! info ""
+!!! note ""
     To prevent inexperienced users from accidentally disabling the creation of thumbnails *Generate Previews* can only be disabled when [Experimental Features](advanced.md#experimental-features) are enabled.
 
 ## Stacks
@@ -62,3 +62,24 @@ If stacking by *Sequential Name* has been enabled, files with e.g. the following
 - `/2018/IMG_1234 (2).jpg` `/2018/IMG_1234 (3).jpg`
 - `/2018/IMG_1234 copy.jpg` `/2018/IMG_1234 copy 1.jpg` `/2018/IMG_1234 copy 2.jpg`
 - `/2018/IMG_1234 (-2.7)` `/2018/IMG_1234 (+3.3).jpg` `/2018/IMG_1234(-2.7).jpg`  `/2018/IMG_1234(+3.3).jpg`
+
+## Search
+
+In this section, you can turn off the list view and the display of titles and captions in search results.
+
+## Download
+
+#### :material-camera-iris: Originals
+
+Only the files in the *originals* folder will be downloaded, but not any files that were automatically created in the *sidecar* folder. This is the recommended default.
+
+#### :material-raw: RAW
+
+Download RAW image files.
+
+#### :material-paperclip: Sidecar
+
+Download sidecar files as used for XMP metadata. This is generally not recommended except for some professional workflows.
+
+!!! note ""
+    These settings do not affect ZIP archives when downloading full albums. To configure album downloads, advanced users can edit the `settings.yml` file in their config folder as described in our Getting Started Guide. [Learn more ›](../../getting-started/config-files/settings.md#albums)

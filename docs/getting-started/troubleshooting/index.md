@@ -207,7 +207,7 @@ In case the application logs do not contain anything helpful:
 - [ ] The indexer has skipped the files because they have an incorrect extension that does not match their actual format, e.g. [JPEG images with a `.heic` extension](https://github.com/photoprism/photoprism-contrib/tree/main/scripts/Batch%20Rename)
 - [ ] The files are [ignored based on pattern in a `.ppignore` file](../../user-guide/library/originals.md#ignoring-files-and-folders)
 - [ ] They [are in *Library > Hidden*](https://try.photoprism.app/library/hidden) because thumbnails could not be created:
-    - [ ] *Preview Images* are disabled under *Settings > Library* (enable them)
+    - [ ] *Preview Images* are disabled under *Settings > Content* (enable them)
     - [ ] FFmpeg and/or RAW converters are [disabled under *Settings > Advanced*](../../user-guide/settings/advanced.md)
     - [ ] The file is broken, e.g. because of [*short Huffman data*](https://github.com/golang/go/issues/10447) (try to fix it)
     - [ ] Your [*storage* folder is full](docker.md#disk-space), or a quota/[inode limit](https://serverfault.com/questions/104986/what-is-the-maximum-number-of-files-a-file-system-can-contain) has been reached (increase it)
@@ -258,7 +258,7 @@ In case the application logs do not contain anything helpful:
 
 - [ ] The issue can be resolved by reloading the page or clearing the browser cache
 - [ ] You browse [non-JPEG](../faq.md#what-media-file-types-are-supported) files under *Library > Originals* which have an icon but no preview
-- [ ] *Preview Images* are disabled under *Settings > Library* (enable them)
+- [ ] *Preview Images* are disabled under *Settings > Content* (enable them)
 - [ ] *Dynamic Previews* are disabled under *Settings > Advanced* or your server is not powerful enough
 - [ ] The sizes in *Settings > Advanced* have been changed so the request can't be fulfilled
 - [ ] FFmpeg and/or RAW converters are disabled under *Settings > Advanced* (enable them)

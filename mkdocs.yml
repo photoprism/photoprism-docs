@@ -118,7 +118,7 @@ nav:
       - Uploading Files: user-guide/share/services-share.md
     - Settings:
       - General: user-guide/settings/general.md
-      - Library: user-guide/settings/library.md
+      - Content: user-guide/settings/library.md
       - Advanced: user-guide/settings/advanced.md
       - Services: user-guide/settings/sync.md
       - Account: user-guide/settings/account.md

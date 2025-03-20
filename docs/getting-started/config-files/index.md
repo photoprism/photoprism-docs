@@ -67,7 +67,7 @@ and [`defaults.yml`](defaults.md) files, grouped by purpose.
 
 ### Authentication ###
 
-| Name             | Type   | CLI Flag             |
+|       Name       |  Type  |       CLI Flag       |
 |------------------|--------|----------------------|
 | AuthMode         | string | --auth-mode          |
 | Public           | bool   | --public             |
@@ -121,6 +121,13 @@ and [`defaults.yml`](defaults.md) files, grouped by purpose.
 |-------------|--------|----------------|
 | SidecarPath | string | --sidecar-path |
 | SidecarYaml | bool   | --sidecar-yaml |
+
+### Usage ###
+
+|    Name    |  Type  |   CLI Flag    |
+|------------|--------|---------------|
+| UsageInfo  | bool   | --usage-info  |
+| FilesQuota | uint64 | --files-quota |
 
 ### Backup ###
 

@@ -207,13 +207,13 @@
     3. File metadata indicates that the pictures were taken at the same position within the same second (optional)
     4. File metadata includes the same *Unique Image ID* or *XMP Instance ID* (optional)
 
-    You can change your preferences for 2 - 4 in the *Stacks* section under *[Settings > Library](settings/library.md#stacks)*.
+    You can change your preferences for 2 - 4 in the *Stacks* section under *[Settings > Content](settings/library.md#stacks)*.
 
     Note that it is **not possible to disable stacking of files with the same name** as this would break important functionality, most notably support for Apple [Live Photos](organize/video.md#live-photos) (which consist of a photo and a video file), any other multi-file/hybrid formats like RAW/JPEG, and indexing of metadata from XMP/JSON sidecar files.
 
 ??? question "Are files automatically unstacked when I change the settings?"
 
-    When you change the stacks-related settings under *[Settings > Library](settings/library.md)*, files that are already stacked will **not be unstacked automatically**. This is because unstacking is a resource-intensive operation that requires each file to be re-indexed.
+    When you change the stacks-related settings under *[Settings > Content](settings/library.md)*, files that are already stacked will **not be unstacked automatically**. This is because unstacking is a resource-intensive operation that requires each file to be re-indexed.
 
     The result also depends on the exact order in which you unstack the files, as non-media sidecar files, for example, remain bound to the remaining media file in a stack. We consider providing a command for this in a future release and appreciate [any contributions](../developer-guide/index.md) in this regard.
  

@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250320-b321c1f2c</span>
+<span class="build">Build 250320-f4b3ed33a</span>
 
 This release includes major usability enhancements, additional features such as file format [support for PDF documents](https://github.com/photoprism/photoprism/issues/4600), and fixes for recently discovered issues. [With the UI update now largely complete](https://github.com/photoprism/photoprism/issues/3168), we know that many users will be excited to hear that after this release, our development focus will shift to [batch editing](https://github.com/photoprism/photoprism/issues/271), as well as [improved multi-user](https://github.com/photoprism/photoprism/issues/98#issuecomment-2439980099) and [AI capabilities](https://github.com/photoprism/photoprism/issues?q=state%3Aopen%20label%3Aai). It's going to be fun to work on, and so we can't wait to get started! 🤖
 

@@ -3,10 +3,11 @@
 !!! note ""
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
-### Development Preview
-<span class="build">Build 250320-f4b3ed33a</span>
+### March 21, 2025
+<span class="build">Build 250321-57590c48b</span>
 
-This release includes major usability enhancements, additional features such as file format [support for PDF documents](https://github.com/photoprism/photoprism/issues/4600), and fixes for recently discovered issues. [With the UI update now largely complete](https://github.com/photoprism/photoprism/issues/3168), we know that many users will be excited to hear that after this release, our development focus will shift to [batch editing](https://github.com/photoprism/photoprism/issues/271), as well as [improved multi-user](https://github.com/photoprism/photoprism/issues/98#issuecomment-2439980099) and [AI capabilities](https://github.com/photoprism/photoprism/issues?q=state%3Aopen%20label%3Aai). It's going to be fun to work on, and so we can't wait to get started! 🤖
+[![GitHub Release](img/iphone-listview.png){ align=right }](https://github.com/photoprism/photoprism/releases/tag/250321-57590c48b)
+This release includes some major usability enhancements, [PDF file format support](https://github.com/photoprism/photoprism/issues/4600), the latest [translations contributed by our community](https://docs.photoprism.app/developer-guide/translations-weblate/), and fixes for recently discovered issues. [With the UI update now largely complete](https://github.com/photoprism/photoprism/issues/3168), we know that many users will be excited to hear that after this release, our development focus will shift to [batch editing](https://github.com/photoprism/photoprism/issues/271), as well as [improved multi-user](https://github.com/photoprism/photoprism/issues/98#issuecomment-2439980099) and [AI capabilities](https://github.com/photoprism/photoprism/issues?q=state%3Aopen%20label%3Aai). We've been very much looking forward to this, and it's a great feeling to finally get started! 🤖
 
 What's new?
 
@@ -14,11 +15,11 @@ What's new?
 - UX: [Users can choose their Start Page and Time Zone in Settings](https://github.com/photoprism/photoprism/issues/577)
 - UX: [Disk usage can be limited and displayed in sidebar navigation](https://github.com/photoprism/photoprism/issues/4266)
 - UX: [Metadata displayed in the Cards View can be configured](https://github.com/photoprism/photoprism/issues/1164)
-- UX: [Improved List View layout with a new column for selecting pictures](https://github.com/photoprism/photoprism/issues/4727)
+- UX: [Improved list view layout for easier selection](https://github.com/photoprism/photoprism/issues/4727)
 - Index: [Added file format support for Adobe PDF documents](https://github.com/photoprism/photoprism/issues/4600)
-- Albums: [Added settings to choose file names and types for zip downloads](https://github.com/photoprism/photoprism/issues/4344)
-- Albums: [Added settings to set a default sort order for each album type](https://github.com/photoprism/photoprism/issues/405)
-- Videos: [Added codec search filter and auto-detection of Nvidia GPUs](https://github.com/photoprism/photoprism/issues/4848)
+- Albums: [Added file name and file type settings for zip downloads](https://github.com/photoprism/photoprism/issues/4344)
+- Albums: [Added default sort order settings for each album type](https://github.com/photoprism/photoprism/issues/405)
+- Videos: [Added codec search filter and Nvidia GPU detection](https://github.com/photoprism/photoprism/issues/4848)
 - Labels: [Fixed searching for labels that consist only of emojis](https://github.com/photoprism/photoprism/issues/4761)
 - Upload: [Fixed an issue that could cause the same album to be created multiple times](https://github.com/photoprism/photoprism/discussions/4849)
 - WebDAV: [File downloads are flagged as failed when retry limit is reached](https://github.com/photoprism/photoprism/issues/4827)

@@ -14,7 +14,7 @@ What's new?
 - UX: [Users can choose their Start Page and Time Zone in Settings](https://github.com/photoprism/photoprism/issues/577)
 - UX: [Disk usage can be limited and displayed in sidebar navigation](https://github.com/photoprism/photoprism/issues/4266)
 - UX: [Metadata displayed in the Cards View can be configured](https://github.com/photoprism/photoprism/issues/1164)
-- UX: [Improved list view layout for easier selection](https://github.com/photoprism/photoprism/issues/4727)
+- UX: [Improved List View layout for easier selection](https://github.com/photoprism/photoprism/issues/4727)
 - Index: [Added file format support for Adobe PDF documents](https://github.com/photoprism/photoprism/issues/4600)
 - Albums: [Added file name and file type settings for zip downloads](https://github.com/photoprism/photoprism/issues/4344)
 - Albums: [Added default sort order settings for each album type](https://github.com/photoprism/photoprism/issues/405)

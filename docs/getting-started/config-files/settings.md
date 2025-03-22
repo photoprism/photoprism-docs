@@ -99,10 +99,8 @@ Download:
 The `Name` setting determines which file names are used when downloading pictures from search results or in the photo viewer. Currently, the following options are supported:
 
 - `file` uses the actual file name in the *originals* folder
-- `original` uses the original file name if the file was imported
+- `original` if the file was imported, the name before it was renamed is used
 - `share` uses a share-friendly file name based on the title and creation date
-
-Note that your choice will not affect the file names in ZIP archives when you download complete albums, as they always use share-friendly names. However, we may add settings for this in a future release.
 
 In case `Originals` is set to `true`, only the files in the *originals* folder will be downloaded, but not any files that were automatically created in the *sidecar* folder. This is the recommended default.
 

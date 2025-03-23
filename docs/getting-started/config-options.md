@@ -31,7 +31,7 @@
 | Environment          | CLI Flag    | Default | Description                                                        |
 |----------------------|-------------|---------|--------------------------------------------------------------------|
 | PHOTOPRISM_LOG_LEVEL | --log-level | info    | log message verbosity `LEVEL` (trace, debug, info, warning, error) |
-| PHOTOPRISM_PROD      | --prod      |         | disable debug logs and log startup warnings and errors only        |
+| PHOTOPRISM_PROD      | --prod      |         | disable debug mode and log startup warnings and errors only        |
 | PHOTOPRISM_DEBUG     | --debug     |         | enable debug mode for development and troubleshooting              |
 | PHOTOPRISM_TRACE     | --trace     |         | enable trace mode to display all debug and trace logs              |
 

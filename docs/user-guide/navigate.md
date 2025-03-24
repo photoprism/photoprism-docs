@@ -37,7 +37,7 @@ When photos or videos are selected, the context menu appears in the lower right 
 The number displayed is the count of currently selected items.
 It also contains the following buttons:
 
-* :material-archive-arrow-down: Archive photos
+* :material-archive: Archive photos
 * :material-bookmark: Add photos to album
 * :material-cloud-download: Download photos
 * :material-lock: Mark photos as private

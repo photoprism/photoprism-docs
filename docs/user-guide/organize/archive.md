@@ -6,7 +6,7 @@ Content that is archived is not deleted but it will not appear in any section ap
 
 1. Select photos/videos
 2. Click context menu
-3. Click :material-archive-arrow-down:
+3. Click :material-archive:
    
     ![Screenshot](img/archive-2502.jpg){ class="shadow" }
     

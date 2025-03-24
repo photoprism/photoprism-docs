@@ -7,7 +7,11 @@
 
 ## Index
 
-#### :material-chart-timeline-variant: Estimate Locations
+#### :material-eye: Quality Filter
+
+Requires a [review of non-photographic and low-quality images](../organize/review.md) before they appear in search results.
+
+#### :material-map-clock-outline: Estimate Locations
 
 Estimates the location of pictures taken without GPS information by extrapolating it from the location of other pictures taken on the same day. 
 
@@ -17,11 +21,7 @@ Estimates the location of pictures taken without GPS information by extrapolatin
 !!! note ""
     Location estimation is not performed for non-photographic pictures or pictures without camera information.
 
-#### :material-eye: Quality Filter
-
-Requires a [review of non-photographic and low-quality images](../organize/review.md) before they appear in search results.
-
-#### :material-camera: Generate Previews
+#### :material-image-size-select-large: Generate Previews
 
 Automatically creates JPEG or PNG preview images for other file types so they can be displayed in search results and in the full-screen viewer. 
 
@@ -69,7 +69,7 @@ In this section, you can turn off the list view and the display of titles and ca
 
 ## Download
 
-#### :material-camera-iris: Originals
+#### :material-camera: Originals
 
 Only the files in the *originals* folder will be downloaded, but not any files that were automatically created in the *sidecar* folder. This is the recommended default.
 

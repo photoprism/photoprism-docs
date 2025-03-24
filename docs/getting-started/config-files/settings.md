@@ -83,6 +83,8 @@ Albums:
 
 For details on the download settings, see the section below.
 
+Available sort orders are: added, oldest, newest, name, size, duration, title.
+
 ### Downloads
 
 The following settings allow you to configure file downloads through the user interface:

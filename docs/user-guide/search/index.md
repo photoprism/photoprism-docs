@@ -41,7 +41,7 @@ Shows all photos that are in review.
 
 Shows archived photos.
 
-### :material-image-album: [Albums](../organize/albums.md)
+### :material-bookmark: [Albums](../organize/albums.md)
 
 Shows albums you created.
 
@@ -53,7 +53,7 @@ Shows all photos that are not part of an album.
 
 ![Screenshot](../organize/img/unsorted-section-2502.jpg){ class="shadow" }
 
-### :material-movie: [Videos](../organize/video.md)
+### :material-play-circle: [Videos](../organize/video.md)
 
 Shows videos that are not in review or archived or private.
 
@@ -65,17 +65,17 @@ Shows all short videos up to 3 seconds.
 
 Shows photos and videos grouped by people on it.
 
-### :material-heart: Favorites
+### :material-star: Favorites
 
 Shows all photos and videos you liked.
 
-### :material-compass: [Moments](../organize/moments.md)
+### :material-filmstrip-box: [Moments](../organize/moments.md)
 
 Discover albums we automatically create for you.
 
 ![Screenshot](../organize/img/moments-section-2502.jpg){ class="shadow" }
 
-### :material-calendar-range: [Calendar](../organize/calendar.md)
+### :material-calendar: [Calendar](../organize/calendar.md)
 
 Organizes your photos due to time taken.
 

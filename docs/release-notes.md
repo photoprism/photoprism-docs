@@ -3,6 +3,18 @@
 !!! note ""
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
+### Development Preview
+<span class="build">Build 250325-1f36d35d2</span>
+
+Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features](https://github.com/orgs/photoprism/projects/5) and [usability enhancements](https://bsky.app/profile/photoprism.app/post/3ljfpzhlf3c2i) that will be part of the next stable release.
+
+What's new?
+
+- UX: [54% reduction in frontend download size to improve loading performance](https://github.com/photoprism/photoprism/issues/4778)
+- Upload: [Admins can restrict the types of files that can be uploaded](https://github.com/photoprism/photoprism/issues/4895)
+- Viewer: [Added a menu control in the top bar for additional actions](https://github.com/photoprism/photoprism/issues/4811)
+- Videos: [Transcoding creates fragmented MP4s optimized for streaming](https://github.com/photoprism/photoprism/issues/4892)
+
 ### March 21, 2025
 <span class="build">Build 250321-57590c48b</span>
 

@@ -41,7 +41,7 @@ If stacking by *Sequential Name* [has been enabled](../settings/library.md#stack
 
 1. Click on :material-camera-burst:
 
-    ![Screenshot](img/sequential-1-2502.jpg){ class="shadow" }
+    ![Screenshot](img/sequential-1-2503.jpg){ class="shadow" }
     
 2. Use arrows to see all photos of the sequence
 

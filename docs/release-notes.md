@@ -10,7 +10,7 @@ Our [preview builds](getting-started/updates.md#development-preview) give you ea
 
 What's new?
 
-- UX: [54% reduction in frontend download size to improve loading performance](https://github.com/photoprism/photoprism/issues/4778)
+- UX: [54% smaller frontend bundle size for improved loading performance](https://github.com/photoprism/photoprism/issues/4778)
 - Upload: [Admins can restrict the types of files that may be uploaded](https://github.com/photoprism/photoprism/issues/4895)
 - Viewer: [Added a menu control in the top bar for additional actions](https://github.com/photoprism/photoprism/issues/4811)
 - Videos: [Transcoding creates fragmented MP4s optimized for streaming](https://github.com/photoprism/photoprism/issues/4892)

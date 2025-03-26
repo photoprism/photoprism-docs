@@ -5,7 +5,7 @@
      2. Click on the context menu
      3. Click :material-cloud-download:. Photos will be downloaded in original size
 
-        ![Screenshot](img/download-1-2502.jpg){ class="shadow" }
+        ![Screenshot](img/download-1-2503.jpg){ class="shadow" }
 
     !!! tip ""
         You can select [many photos at once](../navigate.md#selection-mode-and-multi-select) using shift.
@@ -27,7 +27,7 @@
     2. Open the *Files Tab*
     3. Click *Download*
     
-       ![Screenshot](img/download-3-2502.jpg){ class="shadow" }
+       ![Screenshot](img/download-3-2503.jpg){ class="shadow" }
 
 
 

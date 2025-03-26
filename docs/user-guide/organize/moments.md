@@ -6,7 +6,7 @@ PhotoPrism creates moments out of your memories.
 !!! info ""
     Moments can be based on location and time e.g. *Germany 2020* or on labels like *Nature & Landscape* or *Pets*.
 
-![Screenshot](img/moments-2502.jpg){ class="shadow" }
+![Screenshot](img/moments-2503.jpg){ class="shadow" }
 
 The context menu allows you to perform the following actions:
 

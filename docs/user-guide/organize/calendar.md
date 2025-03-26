@@ -2,7 +2,7 @@
 
 The *Calendar* view allows you to browse your library by year and month:
 
-![Screenshot](img/calendar-2502.jpg){ class="shadow" }
+![Screenshot](img/calendar-2503.jpg){ class="shadow" }
 
 Note that the monthly albums in this view only include pictures that have a valid [creation date and time](edit.md#details) specified in their metadata or as part of their filename.
 

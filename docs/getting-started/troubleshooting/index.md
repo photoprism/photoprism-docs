@@ -229,7 +229,7 @@ In case the application logs do not contain anything helpful:
 When you have tried to [download multiple pictures or albums](../../user-guide/organize/download.md) and found that some files are missing in the resulting zip archive or you got the error message "No files available for download":
 
 - [ ] Your index may be out of sync with the file system ([reindex your library](../../user-guide/library/originals.md) and wait until the operation has been completed)
-- [ ] In order to include RAW, XMP and/or generated sidecar files, your [download preferences](../../user-guide/settings/general.md#downloads) may need to be changed under *Settings > General*
+- [ ] In order to include RAW, XMP and/or generated sidecar files, your [download preferences](../../user-guide/settings/library.md#download) may need to be changed under *Settings > General*
 - [ ] If this didn't help, you may need to [perform a complete rescan of your library](../../user-guide/library/originals.md#when-should-complete-rescan-be-selected), e.g. after [upgrading to a new release](../../release-notes.md) or restoring your index from a backup
 
 Also make sure that there is [enough free disk space available](docker.md#disk-space), since the server creates a temporary zip file when multiple pictures are selected for download. Complete albums are compressed while downloading without needing temporary storage.

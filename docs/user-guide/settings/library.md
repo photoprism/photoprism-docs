@@ -1,6 +1,6 @@
 # Content Settings
 
-![](img/settings-library-2502.jpg){ class="shadow" }
+![](img/settings-library-2503.jpg){ class="shadow" }
 
 !!! info ""
     Some of these settings are only visible to users with [Super Admin](../users/roles.md#admin) privileges.

@@ -39,7 +39,7 @@ If you enable automatic imports by setting the config option [`PHOTOPRISM_AUTO_I
 
 ## Changing the Import File Path
 
-Starting with [Release 250223-b79d21907](../../release-notes.md#february-23-2025), advanced users can customize the destination file path pattern used by the import feature through the [`settings.yml`](../../getting-started/config-files/settings.md#media-library) config file, as shown in this example:
+Starting with [Release 250223-b79d21907](../../release-notes.md#february-23-2025), advanced users can customize the destination file path pattern used by the import feature through the [`settings.yml`](../../getting-started/config-files/settings.md#library) config file, as shown in this example:
 
 ```yaml
 Import:
@@ -48,7 +48,7 @@ Import:
 
 The date and time placeholders for the import destination file path pattern are described in [the *time* package docs](https://pkg.go.dev/time#Layout). Using a different 8 digit hex number such as `12345678` for the [CRC32 checksum](https://en.wikipedia.org/wiki/Cyclic_redundancy_check) and `.ext` instead of `.jpg` for the file extension will work as well. Invalid and empty patterns are ignored and the default is used instead.
 
-[Learn more ›](../../getting-started/config-files/settings.md#media-library)
+[Learn more ›](../../getting-started/config-files/settings.md#library)
 
 !!! note ""
     Setting a custom import file path **will not rename any files** that have already been imported, since this might cause conflicts with other tools or instances that may be accessing your files. Renaming existing files may also result in storage and/or transfer overhead with backup tools that do not recognize that files have been moved, i.e. they may create and/or transfer a new backup copy. We will consider [adding an integrated file renaming feature](../../getting-started/faq.md#can-i-use-photoprism-to-sort-files-into-a-configurable-folder-structure) once we have had time to test possible implementations for usability, performance, and security.

@@ -11,7 +11,7 @@
         You can select [many photos at once](../navigate.md#selection-mode-and-multi-select) using shift.
 
     !!! info ""
-        You can [configure](../settings/general.md#downloads) which files should be downloaded for each photo.
+        You can [configure](../settings/library.md#download) which files should be downloaded for each photo.
 
 === "From Fullscreen Mode"
      1. Click on the photo
@@ -20,7 +20,7 @@
         ![Screenshot](img/download-2-2502.jpg){ class="shadow" }
 
     !!! info ""
-        You can [configure](../settings/general.md#downloads) which files should be downloaded for each photo.
+        You can [configure](../settings/library.md#download) which files should be downloaded for each photo.
 
 === "From Edit Dialog"
     1. Open the photo's  [*edit dialog*](edit.md)

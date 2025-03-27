@@ -13,7 +13,7 @@ Before you start, make sure the **Delete** feature is enabled in [Settings](../s
 4. Click :material-delete:
 5. Confirm
 
-   ![Screenshot](img/delete-2502.jpg){ class="shadow" }
+   ![Screenshot](img/delete-2503.jpg){ class="shadow" }
 
 ### Delete All Archived Photos ###
 
@@ -21,4 +21,4 @@ Before you start, make sure the **Delete** feature is enabled in [Settings](../s
 2. Click :material-delete-sweep:
 3. Click *Delete All*
 
-   ![Screenshot](img/delete-all-2502.jpg){ class="shadow" }
+   ![Screenshot](img/delete-all-2503.jpg){ class="shadow" }

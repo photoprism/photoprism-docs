@@ -54,10 +54,10 @@ Open the *People* tab to see [whose face has been recognized](people.md#change-p
 
 The *Files* tab shows you all the files that belong to a picture. If it is a RAW image, you might for example also see a JPEG version of it and an XMP sidecar file:
 
-![Screenshot](img/edit-files-1-2502.jpg){ class="shadow" }
+![Screenshot](img/edit-files-1-2503.jpg){ class="shadow" }
 
 Click on :material-chevron-down: to see additional details such as file size, type, and codec: 
 
-![Screenshot](img/edit-files-2-2502.jpg){ class="shadow" }
+![Screenshot](img/edit-files-2-2503.jpg){ class="shadow" }
 
 If there is [more than one JPEG or PNG file](stacks.md), a button in the file details will allow you to change the primary image displayed as a preview in albums and search results. You can also delete non-primary files or [unstack files](stacks.md) by clicking on the action buttons.

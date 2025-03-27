@@ -19,7 +19,7 @@ To open photos from this location in the search click :material-tab:.
 
 To clear the location filter click :material-map-marker-off-outline:.
 
-![Screenshot](img/places-cluster-3-2502.jpg){ class="shadow" }
+![Screenshot](img/places-cluster-3-2503.jpg){ class="shadow" }
 
 ## Search
 

@@ -4,7 +4,7 @@ Navigate to *Videos* to browse all your videos. Click on a video to play it.
 
 Please note that not all [video and audio formats](https://caniuse.com/?search=video%20format) can be [played with every browser](../../getting-started/troubleshooting/browsers.md). For example, [AAC](https://caniuse.com/aac "Advanced Audio Coding") - the default audio codec for [MPEG-4 AVC / H.264](https://caniuse.com/avc "Advanced Video Coding") - is supported natively in Chrome, Safari, and Edge, while it is only optionally supported by the OS in Firefox and Opera.
 
-![Screenshot](img/video-2502.jpg){ class="shadow" }
+![Screenshot](img/video-2503.jpg){ class="shadow" }
 
 !!! tldr ""
     In case [FFmpeg is disabled](../settings/advanced.md#disable-ffmpeg) or not installed, videos cannot be indexed because still images cannot be created.
@@ -18,7 +18,7 @@ You can recognize this by the :material-adjust: icon that appears in the upper l
 Move the mouse cursor over the thumbnail to play the video without changing the view.
 You can limit a search to *Live Photos* by using the `type:live` filter or the keyword `live`.
 
-![Screenshot](img/live-photo-2502.jpg){ class="shadow" }
+![Screenshot](img/live-photo-2503.jpg){ class="shadow" }
 
 ## Transcoding
 

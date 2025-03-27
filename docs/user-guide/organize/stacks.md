@@ -4,7 +4,7 @@ Stacks are groups of files that have the same origin but differ in quality, form
 
 To see all images with a group of related files, open *Stacks* in the expanded *Search* navigation:
 
-![Screenshot](img/stacks-page-2502.jpg){ class="shadow" }
+![Screenshot](img/stacks-page-2503.jpg){ class="shadow" }
 
 Since [videos](video.md) and [Live Photos](video.md#live-photos) are always stacked with a still image, they are not included in the search results when you navigate to *Search > Stacks*.
 
@@ -41,7 +41,7 @@ If stacking by *Sequential Name* [has been enabled](../settings/library.md#stack
 
 1. Click on :material-camera-burst:
 
-    ![Screenshot](img/sequential-1-2502.jpg){ class="shadow" }
+    ![Screenshot](img/sequential-1-2503.jpg){ class="shadow" }
     
 2. Use arrows to see all photos of the sequence
 

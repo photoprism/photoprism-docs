@@ -27,5 +27,5 @@ Private photos will be displayed in the private section, in user generated album
   3. Click context menu
   4. Click :material-lock:
 
-  ![Screenshot](img/private-context-menu-2502.jpg){ class="shadow" }
+  ![Screenshot](img/private-context-menu-2503.jpg){ class="shadow" }
 

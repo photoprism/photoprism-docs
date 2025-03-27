@@ -19,8 +19,8 @@ The people section shows you recognized people as well as new face clusters.
 
 To star a person click :material-star:. Starred persons appear first.
 
-![Screenshot](img/recognized-new.jpg){ class="shadow" }
-![Screenshot](img/new-new.jpg){ class="shadow" }
+![Screenshot](img/recognized-2503.jpg){ class="shadow" }
+![Screenshot](img/recognized-new-2503.jpg){ class="shadow" }
 
 ### Why doesn't the New Faces page show all faces? ###
 
@@ -57,7 +57,7 @@ There can be several reasons why a face was not detected:
      4. Start typing a name
      5. Press *enter*
 
-        ![Screenshot](img/add-name-new-new.jpg){ class="shadow" }
+        ![Screenshot](img/add-name-new-2503.jpg){ class="shadow" }
 
 === "From Photo Edit dialog"
 
@@ -67,7 +67,7 @@ There can be several reasons why a face was not detected:
       4. Start typing a name
       5. Press *enter*
 
-        ![Screenshot](img/add-name-edit-new.jpg){ class="shadow" }
+        ![Screenshot](img/add-name-edit-new-2503.jpg){ class="shadow" }
 
 The person you just added will appear under *Recognized*
 
@@ -76,15 +76,15 @@ The person you just added will appear under *Recognized*
 You can hide a person in the *Recognized* section by clicking :material-close: in the upper right corner.
 Pictures of this person continue to be visible in search results and albums.
 
-![Screenshot](img/person-hide-new.jpg){ class="shadow" }
+![Screenshot](img/person-hide-2503.jpg){ class="shadow" }
 
 To see all people including hidden ones click :material-eye:.
 
-![Screenshot](img/person-show-all-new.jpg){ class="shadow" }
+![Screenshot](img/person-show-all-2503.jpg){ class="shadow" }
 
 Hidden people can be recovered by clicking :material-eye-off:
 
-![Screenshot](img/person-recover-new.jpg){ class="shadow" }
+![Screenshot](img/person-recover-2503.jpg){ class="shadow" }
 
 ## Hiding Faces ##
 You can hide face clusters from the *New* section, in the same way you [hide people](#hiding-people) from the *Recognized* section.
@@ -95,13 +95,13 @@ You can hide face clusters from the *New* section, in the same way you [hide peo
       2. Go to *Recognized*
       3. Click on the person you want to view
 
-        ![Screenshot](img/view-person-new.jpg){ class="shadow" }
+        ![Screenshot](img/view-person-2503.jpg){ class="shadow" }
 
 === "From Search"
       1. Go to *Search*
-      2. Search for person:"jane-doe"
+      2. Search for person:"john"
 
-        ![Screenshot](img/view-person-2-new.jpg){ class="shadow" }
+        ![Screenshot](img/view-person-2-2503.jpg){ class="shadow" }
 
 ## Rename People ##
 To rename all photos of a person:
@@ -110,11 +110,11 @@ To rename all photos of a person:
 2. Go to *Recognized*
 3. Click on the persons name
 4. Type in a new name
-5. Press *enter*
+5. Click *save*
 
-![Screenshot](img/rename-recognized-0-new.jpg){ class="shadow" }
+![Screenshot](img/rename-recognized-2503.jpg){ class="shadow" }
 
-![Screenshot](img/rename-recognized-new.jpg){ class="shadow" }
+![Screenshot](img/rename-recognized-2-2503.jpg){ class="shadow" }
 
 ## Change People Assignments ##
 
@@ -130,7 +130,7 @@ This will remove the name. You can either leave it blank or enter the name of a 
 3. Click :material-eject:
 4. Then enter a new name or leave it empty
 
-![Screenshot](img/reject-new.jpg){ class="shadow" }
+![Screenshot](img/reject-2503.jpg){ class="shadow" }
 
 ## Remove Faces ##
 In case PhotoPrism detected something wrong as face (false positives), or in case you just don't want to keep a face on the people tab you're not interested in, you can remove it.
@@ -139,17 +139,20 @@ In case PhotoPrism detected something wrong as face (false positives), or in cas
 2. Go to the *People* tab
 3. Click :material-close:
 
-![Screenshot](img/remove-face.jpg){ class="shadow" }
+![Screenshot](img/remove-face-2503.jpg){ class="shadow" }
 
 You might undo this action before a reload.
 
-![Screenshot](img/undo-remove-face.jpg){ class="shadow" }
+![Screenshot](img/undo-remove-face-2503.jpg){ class="shadow" }
 
 ## Download all Photos of a Person ##
 1. Go to *People*
 2. Select a person
 3. Open context menu
 4. Click :material-download:
+
+![Screenshot](img/people-context-menu-down-2503.jpg){ class="shadow" }
+
 
 ## Create Albums from People ##
 1. Go to *People*
@@ -159,7 +162,7 @@ You might undo this action before a reload.
 5. Select existing album or enter new album name
 6. Click *add to album*
 
-![Screenshot](img/people-context-menu-new.jpg){ class="shadow" }
+![Screenshot](img/people-context-menu-album-2503.jpg){ class="shadow" }
 
 ## Search ##
 You can find photos with people on it using the following queries:
@@ -174,7 +177,7 @@ The person/subject and people/subjects filters can be used with & and | (see [se
 
 `person:"John Doe&Jane Doe" faces:3` will show all photos with John and Jane Doe and one other person.
 
-![Screenshot](img/people-search.jpg){ class="shadow" }
+![Screenshot](img/people-search-2503.jpg){ class="shadow" }
 
 ## Known Issues ##
 

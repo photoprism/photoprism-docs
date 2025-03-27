@@ -8,7 +8,7 @@ Content that is archived is not deleted but it will not appear in any section ap
 2. Click context menu
 3. Click :material-archive:
    
-    ![Screenshot](img/archive-2502.jpg){ class="shadow" }
+    ![Screenshot](img/archive-2503.jpg){ class="shadow" }
     
     <!--![Screenshot](img/confirm-archive.jpg)-->
 
@@ -20,4 +20,4 @@ Content that is archived is not deleted but it will not appear in any section ap
 3. Click context menu
 4. Click :material-check:
 
-    ![Screenshot](img/restore-2502.jpg){ class="shadow" }
+    ![Screenshot](img/restore-2503.jpg){ class="shadow" }

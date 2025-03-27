@@ -2,9 +2,9 @@
 
 The user interface for browsing and searching your pictures is based on the following components. Screenshots in this documentation generally show pages in a medium-resolution desktop browser. All pages are fully responsive, so they may look different on mobile devices.
 
-![Screenshot](img/nav2-2502.jpg){ class="shadow" }
+![Screenshot](img/nav1-2503.jpg){ class="shadow" }
 
-![Screenshot](img/nav2-2502.jpg){ class="shadow" }
+![Screenshot](img/nav2-2503.jpg){ class="shadow" }
 
 #### 1. Main Navigation ####
 
@@ -21,7 +21,7 @@ Located on the top. Find photos or videos by entering search terms like `cats` a
 
 #### 4. View Button ####
 
-Click to switch to a different search result view (cards: :material-view-column:, mosaic: :material-view-comfy:, or list: :material-view-list:).
+Choose your preferred view mode by clicking on it (cards: :material-view-column:, mosaic: :material-view-comfy:, or list: :material-view-list:).
 
 #### 5. Upload Button ####
 
@@ -46,7 +46,7 @@ It also contains the following buttons:
 
 To unselect all items, click the cross at the top:
 
-![Screenshot](img/nav3-2502.jpg){ class="shadow" }
+![Screenshot](img/nav3-2503.jpg){ class="shadow" }
 
 ## Selection Mode and Multi-Select ##
 

@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250327-4ea2ab0dd</span>
+<span class="build">Build 250327-ca708c3f5</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features](https://github.com/orgs/photoprism/projects/5) and [usability enhancements](https://bsky.app/profile/photoprism.app/post/3ljfpzhlf3c2i) that will be part of the next stable release. They also include the latest [translations contributed by our community](https://docs.photoprism.app/developer-guide/translations-weblate/). A big thank you to [everyone who contributes](https://github.com/photoprism/photoprism/graphs/contributors) and [helps with testing](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! 💐
 
@@ -16,6 +16,7 @@ What's new?
 - Viewer: [Added a menu control in the top bar for additional actions](https://github.com/photoprism/photoprism/issues/4811)
 - Videos: [Transcoding creates fragmented MP4s optimized for streaming](https://github.com/photoprism/photoprism/issues/4892)
 - Videos: [Improved transcoding and indexing logs](https://github.com/photoprism/photoprism/pull/4549) by [@Akashic101](https://github.com/Akashic101)
+- Logs: [Fixed incorrect spelling in log messages](https://github.com/photoprism/photoprism/pull/4506) by [@yarikoptic](https://github.com/yarikoptic)
 - WebDAV: [Added `Depth` request header to improve service discovery](https://github.com/photoprism/photoprism/pull/4608) by [@esteve](https://github.com/esteve)
 - Translations: [Updated French and German](https://docs.photoprism.app/developer-guide/translations-weblate/)
 

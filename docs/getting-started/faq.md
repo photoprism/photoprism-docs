@@ -263,7 +263,7 @@ Please be aware, though, that we do not have the resources to provide support an
 !!! tldr ""
     A virtual machine with a dedicated operating system environment provides even more security, but usually has side effects such as lower performance and more difficult handling. Using a VM, however, doesn't prevent you from running containerized apps to get the best of both worlds. This is essentially what happens when you install Docker on [virtual cloud servers](cloud/digitalocean.md) and operating systems other than Linux.
 
-### What can I do if the Docker container fails to start with exit code 100?
+### What can I do if the Docker container fails with an S6 overlay error?
 
 A container startup error similar to the following indicates that you are [using a custom service configuration](https://github.com/photoprism/photoprism/discussions/4819) that is incompatible with our [Docker images](docker-compose.md):
 
@@ -275,17 +275,23 @@ and we're lacking the privileges to fix it.
 
 In particular, this can happen if you have specified an *unsupported* user or group ID through the optional [`user`](https://docs.docker.com/reference/compose-file/services/#user) property in your [`compose.yaml`](https://dl.photoprism.app/docker/compose.yaml) file to run the service, and at the same time added [`no-new-privileges`](https://github.com/just-containers/s6-overlay/issues/552#issuecomment-2339563938) to the [`security_opt`](https://docs.docker.com/reference/compose-file/services/#security_opt) section.
 
-Please also check if you have specified *both* a [`user`](https://docs.docker.com/reference/compose-file/services/#user) service property and these [`environment`](https://docs.docker.com/reference/compose-file/services/#environment) variables to specify the user and/or group ID under which the service should run, as this is neither required nor recommended:
+The supported ID ranges for running our container images are as follows:
+
+- UID: 0, 33, 50-99, 500-600, 900-1250, and 2000-2100
+- GID: 0, 33, 44, 50-99, 105, 109, 115, 116, 500-600, 900-1250, and 2000-2100
+
+Please also check if you have specified *both* a [`user`](https://docs.docker.com/reference/compose-file/services/#user) service property and these corresponding [`environment`](https://docs.docker.com/reference/compose-file/services/#environment) variables to [set the user and/or group ID](config-options.md#docker-image) under which the "photoprism" service should run, as this is neither required nor recommended:
 
 ```yaml
 services:
   photoprism:
+    user: "1000:1000"
     environment:
-      PHOTOPRISM_UID: ...
-      PHOTOPRISM_GID: ...
+      PHOTOPRISM_UID: 1000
+      PHOTOPRISM_GID: 1000
 ```
 
-If you need *maximum security* and do not want to perform *any additional startup actions* that require root privileges, you can alternatively set the entrypoint and command for the "photoprism" service as follows:
+If you need *maximum security* and do *not* want to perform [any additional startup actions](advanced/transcoding.md#intel-quick-sync) that require root privileges, you can alternatively set the entrypoint and command for the "photoprism" service as follows:
 
 ```yaml
 services:
@@ -295,12 +301,7 @@ services:
     command: ["start"]
 ```
 
-The default entrypoint script can install additional distribution packages, fix file system permissions, and/or change the UID/GID for the "photoprism" service, as some NAS devices, for example, do not support this from their user interface. So if you bypass it as shown above, this functionality will not be available and we therefore recommend it *only for advanced users*.
-
-The supported ID ranges for running our container images are as follows:
-
-- UID: 0, 33, 50-99, 500-600, 900-1250, and 2000-2100
-- GID: 0, 33, 44, 50-99, 105, 109, 115, 116, 500-600, 900-1250, and 2000-2100
+The default entrypoint script can install [additional distribution packages](advanced/transcoding.md#intel-quick-sync), [fix file system permissions](troubleshooting/docker.md#file-permissions), and/or [change the UID/GID](config-options.md#docker-image) for the "photoprism" service, as some NAS devices, for example, do not support this from their user interface. So, bypassing it as shown above will disable this functionality and is *only recommended for advanced users* who are familiar with running container services.
 
 [Learn more ›](https://docs.photoprism.app/getting-started/config-options/#docker-image)
 

@@ -112,7 +112,7 @@ Fatal errors are often caused by one of the following conditions:
 - [ ] You are using a [filesystem or network drive with a file size limit](https://thegeekpage.com/fix-the-file-size-exceeds-the-limit-allowed-and-cannot-be-saved/) (change settings or storage)
 - [ ] The *storage* folder [is not writable or mounted read-only](docker.md#file-permissions) (change [permissions](docker.md#file-permissions))
 - [ ] [Symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) were mounted or used within a *storage* folder (replace with actual paths)
-- [ ] There are problems with your service configuration, so [startup fails with exit code 100](docker.md#start-fails-with-exit-code-100).
+- [ ] The service configuration is not supported, so startup [fails with an S6 overlay error](docker.md#s6-overlay-error)
 - [ ] The [server is low on memory](../index.md#system-requirements) (add memory)
 - [ ] You didn't [configure at least 4 GB of swap space](docker.md#adding-swap) (add swap)
 - [ ] RAW images and/or high-resolution panoramas require [additional memory](performance.md#memory) above the [recommended minimum](../index.md#system-requirements) (add more swap or memory)

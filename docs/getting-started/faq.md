@@ -280,7 +280,7 @@ The supported ID ranges for running our container images are as follows:
 - UID: 0, 33, 50-99, 500-600, 900-1250, and 2000-2100
 - GID: 0, 33, 44, 50-99, 105, 109, 115, 116, 500-600, 900-1250, and 2000-2100
 
-Please also check if you have specified *both* a [`user`](https://docs.docker.com/reference/compose-file/services/#user) service property and these corresponding [`environment`](https://docs.docker.com/reference/compose-file/services/#environment) variables to [set the user and/or group ID](config-options.md#docker-image) under which the "photoprism" service should run, as this is neither required nor recommended:
+Please also check if you have specified *both* a [`user`](https://docs.docker.com/reference/compose-file/services/#user) service property and the corresponding [`environment`](https://docs.docker.com/reference/compose-file/services/#environment) variables to [set the user and/or group ID](config-options.md#docker-image) under which the "photoprism" service should run, as this is neither required nor recommended:
 
 ```yaml
 services:

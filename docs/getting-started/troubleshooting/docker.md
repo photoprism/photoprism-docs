@@ -135,6 +135,18 @@ services:
       PHOTOPRISM_GID: ...
 ```
 
+If you need *maximum security* and do not want to perform *any additional startup actions* that require root privileges, you can alternatively set the entrypoint and command for the "photoprism" service as follows:
+
+```yaml
+services:
+  photoprism:
+    restart: unless-stopped
+    entrypoint: ["/opt/photoprism/bin/photoprism"]
+    command: ["start"]
+```
+
+The default entrypoint script can install additional distribution packages, fix file system permissions, and/or change the UID/GID for the "photoprism" service, as some NAS devices, for example, do not support this from their user interface. So if you bypass it as shown above, this functionality will not be available and we therefore recommend it *only for advanced users*.
+
 The supported ID ranges for running our container images are as follows:
 
 - UID: 0, 33, 50-99, 500-600, 900-1250, and 2000-2100

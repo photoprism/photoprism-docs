@@ -6,23 +6,23 @@
 ### Development Preview
 <span class="build">Build 250329-f142a9d52</span>
 
-Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features](https://github.com/orgs/photoprism/projects/5) and [usability enhancements](https://bsky.app/profile/photoprism.app/post/3ljfpzhlf3c2i) that will be part of the next stable release. They also include the latest [translations contributed by our community](https://docs.photoprism.app/developer-guide/translations-weblate/). A big thank you to [everyone who contributes](https://github.com/photoprism/photoprism/graphs/contributors) and [helps with testing](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! 💐
+Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features](https://github.com/orgs/photoprism/projects/5) and [usability enhancements](https://bsky.app/profile/photoprism.app/post/3ljfpzhlf3c2i) that will be part of the next stable release. They also include the latest [translations contributed by our community](https://docs.photoprism.app/developer-guide/translations-weblate/). A big thank you to [everyone who contributes](https://github.com/photoprism/photoprism/graphs/contributors) and [helps with testing](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! :octicons-heart-fill-24:{ .heart .purple }
 
 What's new?
 
-- UX: [54% smaller frontend bundle size for improved loading performance](https://github.com/photoprism/photoprism/issues/4778)
-- UX: [Use the arrow keys to navigate in the Edit dialog](https://github.com/photoprism/photoprism/pull/3623) by [@tomplast](https://github.com/tomplast)
-- UX: [Counts and covers are updated asynchronously](https://github.com/photoprism/photoprism/pull/4323) by [@tschechniker](https://github.com/tschechniker)
+- UX: [Reduced frontend bundle size by 54% for faster loading](https://github.com/photoprism/photoprism/issues/4778) by [@AsikNasik](https://github.com/AsikNasik)
+- UX: [Asynchronous updates improve backend responsiveness](https://github.com/photoprism/photoprism/pull/4323) by [@tschechniker](https://github.com/tschechniker)
+- UX: [Arrow keys can be used to navigate in the Edit dialog](https://github.com/photoprism/photoprism/pull/3623) by [@tomplast](https://github.com/tomplast)
 - People: [Improved performance and strategy for manual tagging](https://github.com/photoprism/photoprism/issues/3124) by [@theshadow27](https://github.com/theshadow27)
-- Upload: [Admins can restrict the types of files that may be uploaded](https://github.com/photoprism/photoprism/issues/4895)
 - Viewer: [Added a menu control in the top bar for additional actions](https://github.com/photoprism/photoprism/issues/4811)
 - Videos: [Transcoding creates fragmented MP4s optimized for streaming](https://github.com/photoprism/photoprism/issues/4892)
 - Videos: [Fixed Intel Quick Sync Video (QSV) hardware transcoding](https://github.com/photoprism/photoprism/pull/4382) by [@hicasper](https://github.com/hicasper)
 - Videos: [Improved transcoding and indexing logs](https://github.com/photoprism/photoprism/pull/4549) by [@Akashic101](https://github.com/Akashic101)
-- Import: [Hidden .keep and .gitkeep files are preserved](https://github.com/photoprism/photoprism/pull/4092) by [@zhzy0077](https://github.com/zhzy0077)
+- Import: [Hidden `.keep` and `.gitkeep` files are preserved](https://github.com/photoprism/photoprism/pull/4092) by [@zhzy0077](https://github.com/zhzy0077)
 - Config: [Passwords and secrets can be read from files](https://github.com/photoprism/photoprism/pull/2302) by [@petertrr](https://github.com/petertrr)
 - Logs: [Fixed incorrect spelling in log messages](https://github.com/photoprism/photoprism/pull/4506) by [@yarikoptic](https://github.com/yarikoptic)
 - WebDAV: [Added `Depth` request header to improve service discovery](https://github.com/photoprism/photoprism/pull/4608) by [@esteve](https://github.com/esteve)
+- Security: [File extensions allowed for web uploads can be restricted](https://github.com/photoprism/photoprism/issues/4895)
 - Translations: [Updated French and German](https://docs.photoprism.app/developer-guide/translations-weblate/)
 
 !!! info ""

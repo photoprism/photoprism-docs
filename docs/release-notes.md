@@ -21,7 +21,7 @@ What's new?
 - Import: [Hidden `.keep` and `.gitkeep` files are preserved](https://github.com/photoprism/photoprism/pull/4092) by [@zhzy0077](https://github.com/zhzy0077)
 - Config: [Passwords and secrets can be read from files](https://github.com/photoprism/photoprism/pull/2302) by [@petertrr](https://github.com/petertrr)
 - Logs: [Fixed incorrect spelling in log messages](https://github.com/photoprism/photoprism/pull/4506) by [@yarikoptic](https://github.com/yarikoptic)
-- WebDAV: [Added `Depth` request header to improve service discovery](https://github.com/photoprism/photoprism/pull/4608) by [@esteve](https://github.com/esteve)
+- WebDAV: [Added `Depth` header to improve service discovery](https://github.com/photoprism/photoprism/pull/4608) by [@esteve](https://github.com/esteve)
 - Security: [File extensions allowed for web uploads can be restricted](https://github.com/photoprism/photoprism/issues/4895)
 - Translations: [Updated French and German](https://docs.photoprism.app/developer-guide/translations-weblate/)
 

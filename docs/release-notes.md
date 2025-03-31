@@ -17,7 +17,7 @@ What's new?
 - People: [Improved performance and strategy for manual tagging](https://github.com/photoprism/photoprism/issues/3124) by [@theshadow27](https://github.com/theshadow27)
 - Viewer: [Added a new menu control in the top bar for additional actions](https://github.com/photoprism/photoprism/issues/4811)
 - Viewer: [Added "Set as Album Cover" and Archive/Restore actions to the menu](https://github.com/photoprism/photoprism/issues/383)
-- Search: [Fixed opening randomly sorted results in the Viewer](https://github.com/photoprism/photoprism/issues/4905)
+- Viewer: [Fixed opening pictures from randomly sorted search results](https://github.com/photoprism/photoprism/issues/4905)
 - Videos: [Transcoding creates fragmented MP4s optimized for streaming](https://github.com/photoprism/photoprism/issues/4892)
 - Videos: [Fixed Intel Quick Sync Video (QSV) hardware transcoding](https://github.com/photoprism/photoprism/pull/4382) by [@hicasper](https://github.com/hicasper)
 - Videos: [Improved transcoding and indexing logs](https://github.com/photoprism/photoprism/pull/4549) by [@Akashic101](https://github.com/Akashic101)

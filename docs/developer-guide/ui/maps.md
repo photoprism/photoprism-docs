@@ -1,6 +1,6 @@
 # Rendering Interactive Maps in the UI
 
-PhotoPrism includes four [high-resolution world maps](https://try.photoprism.app/library/places) that allow you to browse photos by location.
+PhotoPrism includes six [high-resolution world maps](https://try.photoprism.app/library/places) that allow you to browse photos by location.
 Visit [try.photoprism.app/library/places](https://try.photoprism.app/library/places) to try them on our demo.
 
 ![Places UI Example](./img/developer-guide-map-2502.jpg)

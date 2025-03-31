@@ -8,18 +8,15 @@ PhotoPrism® is an AI-Powered Photos App for the Decentralized Web. It makes use
 
 Our mission is to provide the most user- and privacy-friendly solution to keep your pictures organized and accessible. That's why PhotoPrism was built from the ground up to run wherever you need it, without compromising freedom, privacy, or functionality:
 
-* Browse [all your photos](https://docs.photoprism.app/user-guide/organize/browse/) and [videos](https://try.photoprism.app/library/videos) without worrying about [RAW conversion, duplicates or video formats](https://docs.photoprism.app/user-guide/settings/library/)
-* Easily find specific pictures using [powerful search filters](https://try.photoprism.app/library/browse?view=cards&q=flower%20color%3Ared)
-* Recognizes [the faces of your family and friends](https://try.photoprism.app/library/people)
-* [Automatic classification](https://try.photoprism.app/library/labels) of pictures based on their content and location 
-* [Play Live Photos](https://try.photoprism.app/library/browse?view=cards&q=type%3Alive) by hovering over them in [albums](https://try.photoprism.app/library/albums) and search results
-* Since the [User Interface](https://try.photoprism.app/) is a :material-language-html5: [Progressive Web App](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps),
-  it provides a native app-like experience, and you can conveniently install it on the home screen of all major operating systems and mobile devices
-* Includes 4 high-resolution [World Maps](https://try.photoprism.app/library/places) to bring back the memories of your favorite trips
-* Metadata is extracted and merged from Exif, XMP, and other sources such as Google Photos
-* Many more image properties like [Colors](https://try.photoprism.app/library/browse?view=cards&q=color:red), [Chroma](https://try.photoprism.app/library/browse?view=cards&q=mono%3Atrue), and [Quality](https://try.photoprism.app/library/review) can be searched as well
-* Use :material-sync: [PhotoSync](https://link.photoprism.app/photosync) to securely backup iOS and Android phones in the background
-* WebDAV clients such as Microsoft's Windows Explorer and Apple's Finder [can connect directly](https://docs.photoprism.app/user-guide/sync/webdav/) to PhotoPrism, allowing you to open, edit, and delete files from your computer as if they were local
+* Browse [all your pictures](https://docs.photoprism.app/user-guide/organize/browse/) without worrying about [RAW images](https://www.photoprism.app/kb/file-formats) or [video formats](https://docs.photoprism.app/user-guide/organize/video/)
+* Whether you're using a phone, tablet, or desktop computer, our [intuitive PWA](https://try.photoprism.app/) provides a native app-like experience and can be [easily installed](https://docs.photoprism.app/user-guide/pwa/) on your home screen
+* Easily find specific photos and videos with [powerful search filters](https://docs.photoprism.app/user-guide/search/filters/) that can be combined and are available for [many different properties](https://docs.photoprism.app/user-guide/search/filters/#filter-reference), including [labels](https://try.photoprism.app/library/labels), [location](https://try.photoprism.app/library/places?q=s2:47a85a63f764), [resolution](https://try.photoprism.app/library/browse?view=cards&q=mp:4), [color](https://try.photoprism.app/library/browse?view=cards&q=color:red), [chroma](https://try.photoprism.app/library/browse?view=cards&q=mono%3Atrue), and [quality](https://try.photoprism.app/library/review)
+* Recognizes the faces of [your family and friends](https://demo.photoprism.app/library/people/new) and automatically [labels your pictures](https://try.photoprism.app/library/labels) based on content and location
+* [Live Photos](https://try.photoprism.app/library/live) start playing when you [hover over them](https://try.photoprism.app/library/browse?view=cards&q=type%3Alive) and when viewing a slideshow
+* Six high-resolution [World Maps](https://try.photoprism.app/library/places) and our [privacy-preserving geocoding service](https://docs.photoprism.app/getting-started/#maps-places) help bring back memories of your favorite trips and let you explore the world
+* Metadata can be extracted and merged from Exif, XMP, and other sources like Google Photos
+* [Use compatible apps](https://docs.photoprism.app/user-guide/native-apps/) like [PhotoSync](https://link.photoprism.app/photosync) to back up iOS and Android phones in the background
+* WebDAV clients such as [Microsoft's Windows Explorer](https://docs.photoprism.app/user-guide/sync/webdav/#__tabbed_1_2) and [Apple's Finder](https://docs.photoprism.app/user-guide/sync/webdav/#connect-to-a-webdav-server) can [connect directly to PhotoPrism](https://docs.photoprism.app/user-guide/sync/webdav/), allowing you to open, edit, and delete files from your computer as if they were local
 
 [Compare Features ›](https://www.photoprism.app/editions#compare)
 

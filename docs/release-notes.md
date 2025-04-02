@@ -10,13 +10,13 @@ Our [preview builds](getting-started/updates.md#development-preview) give you ea
 
 What's new?
 
+- AI: [Upgraded Google TensorFlow from v1.15.2 to v2.18.0](https://github.com/photoprism/photoprism/issues/222) by [@raystlin](https://github.com/raystlin)
 - UX: [Reduced frontend bundle size by 54% for faster loading](https://github.com/photoprism/photoprism/issues/4778) by [@AsikNasik](https://github.com/AsikNasik)
 - UX: [Asynchronous updates improve backend responsiveness](https://github.com/photoprism/photoprism/pull/4323) by [@tschechniker](https://github.com/tschechniker)
 - UX: [Arrow keys can be used to navigate in the Edit dialog](https://github.com/photoprism/photoprism/pull/3623) by [@tomplast](https://github.com/tomplast)
 - UX: [Added additional keyboard shortcuts with usage hints in action menus](https://github.com/photoprism/photoprism/issues/1131)
 - UX: [Improved focus management for more reliable keyboard event handling](https://github.com/photoprism/photoprism/issues/4916)
 - UX: [Disabled animation when refreshing search results to avoid flickering](https://github.com/photoprism/photoprism/issues/4917)
-- AI: [Upgraded TensorFlow from v1.15.2 to v2.18.0](https://github.com/photoprism/photoprism/issues/222) by [@raystlin](https://github.com/raystlin)
 - People: [Improved performance and strategy for manual tagging](https://github.com/photoprism/photoprism/issues/3124) by [@theshadow27](https://github.com/theshadow27)
 - Viewer: [Added a new menu control in the top bar for additional actions](https://github.com/photoprism/photoprism/issues/4811)
 - Viewer: [Added "Set as Album Cover" and Archive/Restore actions to the menu](https://github.com/photoprism/photoprism/issues/383)

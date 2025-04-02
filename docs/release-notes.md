@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250401-a6b437853</span>
+<span class="build">Build 250402-083c59550</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. A big thank you to everyone who [submitted pull requests](https://docs.photoprism.app/developer-guide/), [improved translations](https://docs.photoprism.app/developer-guide/translations-weblate/), or [helped with testing](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! :octicons-heart-fill-24:{ .heart .purple }
 
@@ -15,6 +15,7 @@ What's new?
 - UX: [Arrow keys can be used to navigate in the Edit dialog](https://github.com/photoprism/photoprism/pull/3623) by [@tomplast](https://github.com/tomplast)
 - UX: [Added additional keyboard shortcuts with usage hints in action menus](https://github.com/photoprism/photoprism/issues/1131)
 - UX: [Reduced flickering when refreshing search results](https://github.com/photoprism/photoprism/issues/4917)
+- AI: [Upgraded TensorFlow from v1.15.2 to v2.18.0](https://github.com/photoprism/photoprism/issues/222) by [@raystlin](https://github.com/raystlin)
 - People: [Improved performance and strategy for manual tagging](https://github.com/photoprism/photoprism/issues/3124) by [@theshadow27](https://github.com/theshadow27)
 - Viewer: [Added a new menu control in the top bar for additional actions](https://github.com/photoprism/photoprism/issues/4811)
 - Viewer: [Added "Set as Album Cover" and Archive/Restore actions to the menu](https://github.com/photoprism/photoprism/issues/383)
@@ -23,12 +24,13 @@ What's new?
 - Videos: [Transcoding creates fragmented MP4s optimized for streaming](https://github.com/photoprism/photoprism/issues/4892)
 - Videos: [Fixed Intel Quick Sync Video (QSV) hardware transcoding](https://github.com/photoprism/photoprism/pull/4382) by [@hicasper](https://github.com/hicasper)
 - Videos: [Improved transcoding and indexing logs](https://github.com/photoprism/photoprism/pull/4549) by [@Akashic101](https://github.com/Akashic101)
+- Upload: [File extensions allowed for web uploads can be restricted](https://github.com/photoprism/photoprism/issues/4895)
 - Import: [Hidden `.keep` and `.gitkeep` files are preserved](https://github.com/photoprism/photoprism/pull/4092) by [@zhzy0077](https://github.com/zhzy0077)
+- WebDAV: [Added `Depth` header to improve service discovery](https://github.com/photoprism/photoprism/pull/4608) by [@esteve](https://github.com/esteve)
 - Config: [Passwords and secrets can be read from files](https://github.com/photoprism/photoprism/pull/2302) by [@petertrr](https://github.com/petertrr)
 - Logs: [Fixed incorrect spelling in log messages](https://github.com/photoprism/photoprism/pull/4506) by [@yarikoptic](https://github.com/yarikoptic)
-- WebDAV: [Added `Depth` header to improve service discovery](https://github.com/photoprism/photoprism/pull/4608) by [@esteve](https://github.com/esteve)
-- Security: [File extensions allowed for web uploads can be restricted](https://github.com/photoprism/photoprism/issues/4895)
 - Setup: [Improved inline documentation in compose.yaml examples](https://github.com/photoprism/photoprism/issues/4051)
+- Security: [Go has been upgraded to v1.24.2, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.2) 
 - Translations: [Updated French and German](https://docs.photoprism.app/developer-guide/translations-weblate/)
 
 !!! info ""

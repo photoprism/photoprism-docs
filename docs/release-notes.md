@@ -15,7 +15,7 @@ What's new?
 - UX: [Arrow keys can be used to navigate in the Edit dialog](https://github.com/photoprism/photoprism/pull/3623) by [@tomplast](https://github.com/tomplast)
 - UX: [Added additional keyboard shortcuts with usage hints in action menus](https://github.com/photoprism/photoprism/issues/1131)
 - UX: [Improved focus management for more reliable keyboard event handling](https://github.com/photoprism/photoprism/issues/4916)
-- UX: [Reduced flickering when refreshing search results](https://github.com/photoprism/photoprism/issues/4917)
+- UX: [Disabled animation when refreshing search results to avoid flickering](https://github.com/photoprism/photoprism/issues/4917)
 - AI: [Upgraded TensorFlow from v1.15.2 to v2.18.0](https://github.com/photoprism/photoprism/issues/222) by [@raystlin](https://github.com/raystlin)
 - People: [Improved performance and strategy for manual tagging](https://github.com/photoprism/photoprism/issues/3124) by [@theshadow27](https://github.com/theshadow27)
 - Viewer: [Added a new menu control in the top bar for additional actions](https://github.com/photoprism/photoprism/issues/4811)

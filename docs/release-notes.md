@@ -27,7 +27,7 @@ What's new?
 - Videos: [Fixed Intel Quick Sync Video (QSV) hardware transcoding](https://github.com/photoprism/photoprism/pull/4382) by [@hicasper](https://github.com/hicasper)
 - Videos: [Improved transcoding and indexing logs](https://github.com/photoprism/photoprism/pull/4549) by [@Akashic101](https://github.com/Akashic101)
 - Upload: [Added support for uploading multiple pictures as a zip archive](https://github.com/photoprism/photoprism/issues/4929)
-- Upload: [File extensions and size of web uploads can be restricted](https://github.com/photoprism/photoprism/issues/4895)
+- Upload: [File extensions and total size of web uploads can be restricted](https://github.com/photoprism/photoprism/issues/4895)
 - Import: [Hidden `.keep` and `.gitkeep` files are preserved](https://github.com/photoprism/photoprism/pull/4092) by [@zhzy0077](https://github.com/zhzy0077)
 - WebDAV: [Added `Depth` header to improve service discovery](https://github.com/photoprism/photoprism/pull/4608) by [@esteve](https://github.com/esteve)
 - Config: [Passwords and secrets can be read from files](https://github.com/photoprism/photoprism/pull/2302) by [@petertrr](https://github.com/petertrr)

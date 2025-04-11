@@ -4,13 +4,14 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250407-9d648f74d</span>
+<span class="build">Build 250411-bd634c828</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. A big thank you to everyone who [submitted pull requests](https://docs.photoprism.app/developer-guide/), [improved translations](https://docs.photoprism.app/developer-guide/translations-weblate/), or [helped with testing](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! :octicons-heart-fill-24:{ .heart .purple }
 
 What's new?
 
 - AI: [Upgraded Google TensorFlow from v1.15.2 to v2.18.0](https://github.com/photoprism/photoprism/issues/222) by [@raystlin](https://github.com/raystlin)
+- AI: [Vision API allows remote use of other instances and models](https://github.com/photoprism/photoprism/issues/1090)
 - UX: [Reduced frontend bundle size by 54% for faster loading](https://github.com/photoprism/photoprism/issues/4778) by [@AsikNasik](https://github.com/AsikNasik)
 - UX: [Asynchronous updates improve backend responsiveness](https://github.com/photoprism/photoprism/pull/4323) by [@tschechniker](https://github.com/tschechniker)
 - UX: [Arrow keys can be used to navigate in the Edit dialog](https://github.com/photoprism/photoprism/pull/3623) by [@tomplast](https://github.com/tomplast)

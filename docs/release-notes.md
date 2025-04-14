@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250412-128df65f5</span>
+<span class="build">Build 250414-0b390f356</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. A big thank you to everyone who [submitted pull requests](https://docs.photoprism.app/developer-guide/), [improved translations](https://docs.photoprism.app/developer-guide/translations-weblate/), or [helped with testing](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! :octicons-heart-fill-24:{ .heart .purple }
 
@@ -17,7 +17,8 @@ What's new?
 - UX: [Arrow keys can be used to navigate in the Edit dialog](https://github.com/photoprism/photoprism/pull/3623) by [@tomplast](https://github.com/tomplast)
 - UX: [Added additional keyboard shortcuts with usage hints in action menus](https://github.com/photoprism/photoprism/issues/1131)
 - UX: [Improved focus management for more reliable keyboard event handling](https://github.com/photoprism/photoprism/issues/4916)
-- UX: [Disabled animation when refreshing search results to avoid flickering](https://github.com/photoprism/photoprism/issues/4917)
+- UX: [Disabled animation when refreshing search results to prevent flickering](https://github.com/photoprism/photoprism/issues/4917)
+- UX: [Search results views are reset when there are no matches or an error occurs](https://github.com/photoprism/photoprism/issues/4935)
 - People: [Improved performance and strategy for manual tagging](https://github.com/photoprism/photoprism/issues/3124) by [@theshadow27](https://github.com/theshadow27)
 - Viewer: [Added a new menu control in the top bar for additional actions](https://github.com/photoprism/photoprism/issues/4811)
 - Viewer: [Added "Set as Album Cover" and Archive/Restore actions to the menu](https://github.com/photoprism/photoprism/issues/383)

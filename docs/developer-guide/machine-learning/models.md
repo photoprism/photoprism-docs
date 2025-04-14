@@ -41,7 +41,7 @@ This model was released by [Salesforce](https://huggingface.co/Salesforce/blip-i
 
 ### Hardware Acceleration Libraries
 
-[Numpy](https://numpy.org/) could be used for further hardware acceleration. It isn't included in the application by default to save space and keep from installing unnecessary dependencies. Numpy can be configured to use the GPU for computations. PyTorch already enables GPU processing, so numpy may not make a signficant difference.
+[Numpy](https://numpy.org/) could be used for further hardware acceleration. It isn't included in the application by default to save space and keep from installing unnecessary dependencies. Numpy can be configured to use the GPU for computations. PyTorch already enables GPU processing, so numpy may not make a significant difference.
 
 ## Build Setup
 
@@ -323,7 +323,7 @@ def generateResponse():
         return jsonify({"error": "Error during processing"})
 ```
 
-This is the default endpoint. It checks to see if a model is specified, and if it is it calls the service associated with that model and returns the respose with the data. If a model isn't specified it uses kosmos-2.
+This is the default endpoint. It checks to see if a model is specified, and if it is it calls the service associated with that model and returns the response with the data. If a model isn't specified it uses kosmos-2.
 
 ### Specific Endpoints
 

@@ -61,7 +61,7 @@ What's new?
 - Upload: [Fixed an issue that could cause the same album to be created multiple times](https://github.com/photoprism/photoprism/discussions/4849)
 - WebDAV: [File downloads are flagged as failed when retry limit is reached](https://github.com/photoprism/photoprism/issues/4827)
 - MariaDB: [Added version check to determine zero-configuration SSL support](https://github.com/photoprism/photoprism/issues/4837)
-- Translations: [Updated Chinese (Simplified), French, German, Turkish, and Ukrainian](https://docs.photoprism.app/developer-guide/translations-weblate/)
+- Translations: [Updated Arabic, Chinese (Simplified), French, German, Turkish, and Ukrainian](https://docs.photoprism.app/developer-guide/translations-weblate/)
 - Security: [Go has been updated to v1.24.1, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.1)
 
 !!! info ""

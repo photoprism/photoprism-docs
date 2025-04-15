@@ -36,7 +36,7 @@ What's new?
 - Logs: [Fixed incorrect spelling in log messages](https://github.com/photoprism/photoprism/pull/4506) by [@yarikoptic](https://github.com/yarikoptic)
 - Setup: [Improved inline documentation in compose.yaml examples](https://github.com/photoprism/photoprism/issues/4051)
 - Security: [Go has been upgraded to v1.24.2, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.2) 
-- Translations: [Updated French and German](https://docs.photoprism.app/developer-guide/translations-weblate/)
+- Translations: [Updated Arabic, French, and German](https://docs.photoprism.app/developer-guide/translations-weblate/)
 
 !!! info ""
     Missing [user interface translations](https://translate.photoprism.app/projects/photoprism/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.
@@ -61,7 +61,7 @@ What's new?
 - Upload: [Fixed an issue that could cause the same album to be created multiple times](https://github.com/photoprism/photoprism/discussions/4849)
 - WebDAV: [File downloads are flagged as failed when retry limit is reached](https://github.com/photoprism/photoprism/issues/4827)
 - MariaDB: [Added version check to determine zero-configuration SSL support](https://github.com/photoprism/photoprism/issues/4837)
-- Translations: [Updated Arabic, Chinese (Simplified), French, German, Turkish, and Ukrainian](https://docs.photoprism.app/developer-guide/translations-weblate/)
+- Translations: [Updated Chinese (Simplified), French, German, Turkish, and Ukrainian](https://docs.photoprism.app/developer-guide/translations-weblate/)
 - Security: [Go has been updated to v1.24.1, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.1)
 
 !!! info ""

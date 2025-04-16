@@ -63,6 +63,7 @@ Besides using the API endpoints provided for this, you can also generate valid [
 
 ## Protocol References
 
+- https://datatracker.ietf.org/doc/html/rfc8693
 - https://prometheus.io/docs/prometheus/latest/configuration/configuration/#oauth2
 - https://www.scottbrady91.com/oauth/client-authentication#:~:text=OAuth%20client%20secrets
 - https://www.scottbrady91.com/oauth/oauth-is-not-user-authorization

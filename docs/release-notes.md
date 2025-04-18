@@ -28,6 +28,7 @@ What's new?
 - Viewer: [Added a collapsible sidebar for viewing picture metadata](https://github.com/photoprism/photoprism/issues/4812)
 - Viewer: [Fixed opening pictures from randomly sorted search results](https://github.com/photoprism/photoprism/issues/4905)
 - Viewer: [Optimized thumbnail size selection for high aspect ratios](https://github.com/photoprism/photoprism/issues/4927)
+- RAW/HEIF: [Includes Darktable v5.0.1, RawTherapee v5.11, and libheif v1.19.7](https://github.com/strukturag/libheif/releases/tag/v1.19.7)
 - Videos: [Transcoding creates fragmented MP4s optimized for streaming](https://github.com/photoprism/photoprism/issues/4892)
 - Videos: [Fixed Intel Quick Sync Video (QSV) hardware transcoding](https://github.com/photoprism/photoprism/pull/4382) by [@hicasper](https://github.com/hicasper)
 - Videos: [Improved transcoding and indexing logs](https://github.com/photoprism/photoprism/pull/4549) by [@Akashic101](https://github.com/Akashic101)
@@ -36,9 +37,8 @@ What's new?
 - Import: [Hidden `.keep` and `.gitkeep` files are preserved](https://github.com/photoprism/photoprism/pull/4092) by [@zhzy0077](https://github.com/zhzy0077)
 - WebDAV: [Added `Depth` header to improve service discovery](https://github.com/photoprism/photoprism/pull/4608) by [@esteve](https://github.com/esteve)
 - Config: [Passwords and secrets can be read from files](https://github.com/photoprism/photoprism/pull/2302) by [@petertrr](https://github.com/petertrr)
-- RAW: [New Docker base image includes Darktable v5.0.1 and RawTherapee v5.11](https://github.com/photoprism/photoprism/commit/d7ea086c5dd7ab798aaf323ce7ea31884e25f4d1)
-- Docker: [Base image has been upgraded from Ubuntu 24.10 to 25.04 (Plucky Puffin)](https://github.com/photoprism/photoprism/commit/d7ea086c5dd7ab798aaf323ce7ea31884e25f4d1)
 - Setup: [Improved inline documentation in compose.yaml examples](https://github.com/photoprism/photoprism/issues/4051)
+- Docker: [Base image has been upgraded from Ubuntu 24.10 to 25.04 (Plucky Puffin)](https://github.com/photoprism/photoprism/commit/d7ea086c5dd7ab798aaf323ce7ea31884e25f4d1)
 - Security: [Go has been upgraded to v1.24.2, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.2) 
 - Translations: [Updated Arabic, French, and German](https://docs.photoprism.app/developer-guide/translations-weblate/)
 

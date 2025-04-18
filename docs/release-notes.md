@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250417-5877be38d</span>
+<span class="build">Build 250418-ac8ee9e4d</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. A big thank you to everyone who [submitted pull requests](https://docs.photoprism.app/developer-guide/), [improved translations](https://docs.photoprism.app/developer-guide/translations-weblate/), or [helped with testing](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! :octicons-heart-fill-24:{ .heart .purple }
 
@@ -19,6 +19,7 @@ What's new?
 - UX: [Improved focus management for more reliable keyboard event handling](https://github.com/photoprism/photoprism/issues/4916)
 - UX: [Disabled animation when refreshing search results to prevent flickering](https://github.com/photoprism/photoprism/issues/4917)
 - UX: [User interface language can be changed on the login page](https://github.com/photoprism/photoprism/issues/4942)
+- UX: [Fixed incorrect spelling in log messages](https://github.com/photoprism/photoprism/pull/4506) by [@yarikoptic](https://github.com/yarikoptic)
 - People: [Improved performance and strategy for manual tagging](https://github.com/photoprism/photoprism/issues/3124) by [@theshadow27](https://github.com/theshadow27)
 - Search: [Find pictures with specific or no terms in Title and Caption](https://github.com/photoprism/photoprism/issues/4947)
 - Search: [Result views are reset when there are no matches or an error occurs](https://github.com/photoprism/photoprism/issues/4935)
@@ -35,7 +36,8 @@ What's new?
 - Import: [Hidden `.keep` and `.gitkeep` files are preserved](https://github.com/photoprism/photoprism/pull/4092) by [@zhzy0077](https://github.com/zhzy0077)
 - WebDAV: [Added `Depth` header to improve service discovery](https://github.com/photoprism/photoprism/pull/4608) by [@esteve](https://github.com/esteve)
 - Config: [Passwords and secrets can be read from files](https://github.com/photoprism/photoprism/pull/2302) by [@petertrr](https://github.com/petertrr)
-- Logs: [Fixed incorrect spelling in log messages](https://github.com/photoprism/photoprism/pull/4506) by [@yarikoptic](https://github.com/yarikoptic)
+- RAW: [New Docker base image includes Darktable v5.0.1 and RawTherapee v5.11](https://github.com/photoprism/photoprism/commit/d7ea086c5dd7ab798aaf323ce7ea31884e25f4d1)
+- Docker: [Base image has been upgraded from Ubuntu 24.10 to 25.04 (Plucky Puffin)](https://github.com/photoprism/photoprism/commit/d7ea086c5dd7ab798aaf323ce7ea31884e25f4d1)
 - Setup: [Improved inline documentation in compose.yaml examples](https://github.com/photoprism/photoprism/issues/4051)
 - Security: [Go has been upgraded to v1.24.2, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.2) 
 - Translations: [Updated Arabic, French, and German](https://docs.photoprism.app/developer-guide/translations-weblate/)

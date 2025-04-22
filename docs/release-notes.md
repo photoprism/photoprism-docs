@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250419-7d56a454d</span>
+<span class="build">Build 250422-da7af617f</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. A big thank you to everyone who [submitted pull requests](https://docs.photoprism.app/developer-guide/), [improved translations](https://docs.photoprism.app/developer-guide/translations-weblate/), or [helped with testing](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! :octicons-heart-fill-24:{ .heart .purple }
 
@@ -31,6 +31,7 @@ What's new?
 - Videos: [Transcoding creates fragmented MP4s optimized for streaming](https://github.com/photoprism/photoprism/issues/4892)
 - Videos: [Fixed Intel Quick Sync Video (QSV) hardware transcoding](https://github.com/photoprism/photoprism/pull/4382) by [@hicasper](https://github.com/hicasper)
 - Videos: [Improved transcoding and indexing logs](https://github.com/photoprism/photoprism/pull/4549) by [@Akashic101](https://github.com/Akashic101)
+- Places: [Improved styles, colors, and mountain shading of the default world map](https://github.com/photoprism/photoprism/issues/4959)
 - Upload: [Added support for uploading multiple pictures as a zip archive](https://github.com/photoprism/photoprism/issues/4929)
 - Upload: [File extensions and total size of Web uploads can be restricted](https://github.com/photoprism/photoprism/issues/4895)
 - Import: [Hidden `.keep` and `.gitkeep` files are preserved](https://github.com/photoprism/photoprism/pull/4092) by [@zhzy0077](https://github.com/zhzy0077)

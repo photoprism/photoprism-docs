@@ -6,7 +6,11 @@
 ### Development Preview
 <span class="build">Build 250424-f73b70312</span>
 
-Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. A big thank you to everyone who [submitted pull requests](https://docs.photoprism.app/developer-guide/), [improved translations](https://docs.photoprism.app/developer-guide/translations-weblate/), or [helped with testing](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! :octicons-heart-fill-24:{ .heart .purple }
+Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release.
+
+### Upcoming Release
+
+This major release includes updated dependencies as well as a long list of enhancements and new features, many of them contributed by our community. Most notably, we have added a collapsible info sidebar to the photo/video viewer, significantly improved performance in many areas, and added the ability to configure computer vision tasks like image classification and face recognition to run on a different instance. A big thank you to everyone who [submitted pull requests](https://docs.photoprism.app/developer-guide/), [improved translations](https://docs.photoprism.app/developer-guide/translations-weblate/), or [helped with testing](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! :octicons-heart-fill-24:{ .heart .purple }
 
 What's new?
 

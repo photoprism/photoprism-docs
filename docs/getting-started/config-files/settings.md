@@ -61,31 +61,47 @@ Search:
 
 The optional `BatchSize` setting allows you to configure how many search results are fetched from the backend with each request. We recommend that you do not change the default.
 
-### Albums
+### Library
 
-These settings allow you to change the default sort order for newly created albums, as well as configure or disallow downloads of entire albums:
+Since you can also change your indexing and import preferences under [Settings > Content](../../user-guide/settings/library.md#stacks) and in the [Library UI](../../user-guide/library/originals.md), it is not necessary to edit them directly in the `settings.yml` configuration file:
+
+#### Import
+
+Defines the default settings for importing new files into your library:
 
 ```yaml
-Albums:
-  Order:
-    Album: added
-    Folder: added
-    Moment: oldest
-    State: newest
-    Month: oldest
-  Download:
-    Name: share
-    Disabled: false
-    Originals: true
-    MediaRaw: false
-    MediaSidecar: false
+Import:
+  Path: /
+  Move: false
+  Dest: 2006/01/20060102_150405_82F63B78.jpg
 ```
 
-For details on the download settings, see the section below.
+The date and time placeholders for `Dest`, the import destination file path pattern, are described in the [time package documentation](https://pkg.go.dev/time#Layout). Using a different 8-digit hex number such as `12345678` for the [CRC32 checksum](https://en.wikipedia.org/wiki/Cyclic_redundancy_check)  and `.ext` instead of `.jpg` for the file extension will also work. Invalid and empty patterns are ignored and the default is used instead. [Learn more ›](../../user-guide/library/import.md#changing-the-import-file-path)
 
-Available sort orders are: added, oldest, newest, name, size, duration, title.
+#### Index
 
-### Downloads
+Defines the default settings for indexing files in your library:
+
+```yaml
+Index:
+  Path: /
+  Convert: true
+  Rescan: false
+  SkipArchived: false
+```
+
+#### Stack
+
+These settings affect which files are [indexed together as a stack](../../user-guide/organize/stacks.md) when you index your library or import new files:
+
+```yaml
+Stack:
+  UUID: true
+  Meta: true
+  Name: false
+```
+
+### Download
 
 The following settings allow you to configure file downloads through the user interface:
 
@@ -110,27 +126,24 @@ If you set `MediaRaw` to `true`, RAW image files are downloaded automatically, f
 
 Setting `MediaSidecar` to `true` will also download sidecar files as used for XMP metadata. This is generally not recommended except for some professional workflows.
 
-### Library
+### Albums
 
-These settings affect which files are [stacked](../../user-guide/organize/stacks.md), as well as your preferences when indexing or importing files:
+These settings allow you to change the default sort order for newly created albums, as well as configure or disallow downloads of entire albums:
 
 ```yaml
-Import:
-  Path: /
-  Move: false
-  Dest: 2006/01/20060102_150405_82F63B78.jpg
-Index:
-  Path: /
-  Convert: true
-  Rescan: false
-  SkipArchived: false
-Stack:
-  UUID: true
-  Meta: true
-  Name: false
+Albums:
+  Download:
+    Name: share
+    Disabled: false
+    Originals: true
+    MediaRaw: false
+    MediaSidecar: false
+  Order:
+    Album: oldest
+    Folder: added
+    Moment: oldest
+    State: newest
+    Month: oldest
 ```
 
-Since you can also change these settings in [Settings > Content](../../user-guide/settings/library.md#stacks) and in the [Library UI](../../user-guide/library/originals.md), it is not necessary to edit them directly in the `settings.yml` configuration file.
-
-!!! note ""
-    The date and time placeholders for the **optional** destination file path pattern in `Import` > `Dest` are described in [the *time* package docs](https://pkg.go.dev/time#Layout). Using a different 8 digit hex number such as `12345678` for the [CRC32 checksum](https://en.wikipedia.org/wiki/Cyclic_redundancy_check) and `.ext` instead of `.jpg` for the file extension will work as well. Invalid and empty patterns are ignored and the default is used instead. [Learn more ›](../../user-guide/library/import.md#changing-the-import-file-path)
+For more information on the download settings, see the [Download](#download) section above. Supported album sort orders are *added*, *oldest*, *newest*, *name*, *size*, *duration*, and *title*.

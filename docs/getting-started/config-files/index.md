@@ -67,28 +67,27 @@ and [`defaults.yml`](defaults.md) files, grouped by purpose.
 
 ### Authentication ###
 
-|       Name       |  Type  |       CLI Flag       |
-|------------------|--------|----------------------|
-| AuthMode         | string | --auth-mode          |
-| Public           | bool   | --public             |
-| AdminUser        | string | --admin-user         |
-| AdminPassword    | string | --admin-password     |
-| PasswordLength   | int    | --password-length    |
-| PasswordResetUri | string | --password-reset-uri |
-| OIDCUri          | string | --oidc-uri           |
-| OIDCClient       | string | --oidc-client        |
-| OIDCSecret       | string | --oidc-secret        |
-| OIDCScopes       | string | --oidc-scopes        |
-| OIDCProvider     | string | --oidc-provider      |
-| OIDCIcon         | string | --oidc-icon          |
-| OIDCRedirect     | bool   | --oidc-redirect      |
-| OIDCRegister     | bool   | --oidc-register      |
-| OIDCUsername     | string | --oidc-username      |
-| OIDCWebDAV       | bool   | --oidc-webdav        |
-| DisableOIDC      | bool   | --disable-oidc       |
-| SessionMaxAge    | int64  | --session-maxage     |
-| SessionTimeout   | int64  | --session-timeout    |
-| SessionCache     | int64  | --session-cache      |
+|      Name      |  Type  |     CLI Flag      |
+|----------------|--------|-------------------|
+| AuthMode       | string | --auth-mode       |
+| Public         | bool   | --public          |
+| AdminUser      | string | --admin-user      |
+| AdminPassword  | string | --admin-password  |
+| PasswordLength | int    | --password-length |
+| OIDCUri        | string | --oidc-uri        |
+| OIDCClient     | string | --oidc-client     |
+| OIDCSecret     | string | --oidc-secret     |
+| OIDCScopes     | string | --oidc-scopes     |
+| OIDCProvider   | string | --oidc-provider   |
+| OIDCIcon       | string | --oidc-icon       |
+| OIDCRedirect   | bool   | --oidc-redirect   |
+| OIDCRegister   | bool   | --oidc-register   |
+| OIDCUsername   | string | --oidc-username   |
+| OIDCWebDAV     | bool   | --oidc-webdav     |
+| DisableOIDC    | bool   | --disable-oidc    |
+| SessionMaxAge  | int64  | --session-maxage  |
+| SessionTimeout | int64  | --session-timeout |
+| SessionCache   | int64  | --session-cache   |
 
 ### Logging ###
 
@@ -111,6 +110,11 @@ and [`defaults.yml`](defaults.md) files, grouped by purpose.
 | StoragePath     | string | --storage-path     |
 | ImportPath      | string | --import-path      |
 | ImportDest      | string | --import-dest      |
+| ImportAllow     | string | --import-allow     |
+| UploadNSFW      | bool   | --upload-nsfw      |
+| UploadAllow     | string | --upload-allow     |
+| UploadArchives  | bool   | --upload-archives  |
+| UploadLimit     | int    | --upload-limit     |
 | CachePath       | string | --cache-path       |
 | TempPath        | string | --temp-path        |
 | AssetsPath      | string | --assets-path      |
@@ -176,8 +180,6 @@ and [`defaults.yml`](defaults.md) files, grouped by purpose.
 | DisableRaw            | bool   | --disable-raw            |
 | RawPresets            | bool   | --raw-presets            |
 | ExifBruteForce        | bool   | --exif-bruteforce        |
-| DetectNSFW            | bool   | --detect-nsfw            |
-| UploadNSFW            | bool   | --upload-nsfw            |
 | DefaultLocale         | string | --default-locale         |
 | DefaultTimezone       | string | --default-timezone       |
 
@@ -203,6 +205,7 @@ and [`defaults.yml`](defaults.md) files, grouped by purpose.
 | SiteTitle       | string | --site-title       |
 | SiteCaption     | string | --site-caption     |
 | SiteDescription | string | --site-description |
+| SiteFavicon     | string | --site-favicon     |
 | SitePreview     | string | --site-preview     |
 | CdnUrl          | string | --cdn-url          |
 | CdnVideo        | bool   | --cdn-video        |
@@ -296,6 +299,16 @@ and [`defaults.yml`](defaults.md) files, grouped by purpose.
 | JpegQuality | int  | --jpeg-quality |
 | JpegSize    | int  | --jpeg-size    |
 | PngSize     | int  | --png-size     |
+
+### Computer Vision ###
+
+|    Name    |  Type  |   CLI Flag    |
+|------------|--------|---------------|
+| VisionYaml | string | --vision-yaml |
+| VisionApi  | bool   | --vision-api  |
+| VisionUri  | string | --vision-uri  |
+| VisionKey  | string | --vision-key  |
+| DetectNSFW | bool   | --detect-nsfw |
 
 ### Daemon Mode ###
 

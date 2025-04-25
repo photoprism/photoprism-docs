@@ -5,12 +5,13 @@
 
 ### Authentication ###
 
-| Environment                                      | CLI Flag          | Default                      | Description                                                                                         |
+|                   Environment                    |     CLI Flag      |           Default            |                                             Description                                             |
 |--------------------------------------------------|-------------------|------------------------------|-----------------------------------------------------------------------------------------------------|
 | PHOTOPRISM_AUTH_MODE                             | --auth-mode       | password                     | authentication `MODE` (public[^2], password)                                                        |
 | PHOTOPRISM_ADMIN_USER, PHOTOPRISM_ADMIN_USERNAME | --admin-user      | admin                        | `USERNAME` of the superadmin account that is created on first startup                               |
 | PHOTOPRISM_ADMIN_PASSWORD                        | --admin-password  |                              | initial `PASSWORD` of the superadmin account (8-72 characters)                                      |
-| PHOTOPRISM_PASSWORD_LENGTH                       | --password-length | 8                            | minimum password `LENGTH` in characters *plus*                                                      |
+| PHOTOPRISM_PASSWORD_LENGTH                       | --password-length |                            8 | minimum password `LENGTH` in characters                                                             |
+| PHOTOPRISM_LOGIN_INFO                            | --login-info      |                              | custom login footer info `TEXT` *plus*                                                              |
 | PHOTOPRISM_OIDC_URI                              | --oidc-uri        |                              | issuer `URI` for single sign-on via OpenID Connect, e.g. https://accounts.google.com                |
 | PHOTOPRISM_OIDC_CLIENT                           | --oidc-client     |                              | client `ID` for single sign-on via OpenID Connect                                                   |
 | PHOTOPRISM_OIDC_SECRET                           | --oidc-secret     |                              | client `SECRET` for single sign-on via OpenID Connect                                               |
@@ -22,13 +23,13 @@
 | PHOTOPRISM_OIDC_USERNAME                         | --oidc-username   | preferred_username           | preferred username `CLAIM` for new OpenID Connect users (preferred_username, name, nickname, email) |
 | PHOTOPRISM_OIDC_WEBDAV                           | --oidc-webdav     |                              | allow new OpenID Connect users to use WebDAV when they have a role that allows it                   |
 | PHOTOPRISM_DISABLE_OIDC                          | --disable-oidc    |                              | disable single sign-on via OpenID Connect, even if an identity provider has been configured         |
-| PHOTOPRISM_SESSION_MAXAGE                        | --session-maxage  | 1209600                      | session expiration time in `SECONDS`, doubled for accounts with 2FA (-1 to disable)                 |
-| PHOTOPRISM_SESSION_TIMEOUT                       | --session-timeout | 604800                       | session idle time in `SECONDS`, doubled for accounts with 2FA (-1 to disable)                       |
-| PHOTOPRISM_SESSION_CACHE                         | --session-cache   | 900                          | session cache duration in `SECONDS` (60-3600)                                                       |
+| PHOTOPRISM_SESSION_MAXAGE                        | --session-maxage  |                      1209600 | session expiration time in `SECONDS`, doubled for accounts with 2FA (-1 to disable)                 |
+| PHOTOPRISM_SESSION_TIMEOUT                       | --session-timeout |                       604800 | session idle time in `SECONDS`, doubled for accounts with 2FA (-1 to disable)                       |
+| PHOTOPRISM_SESSION_CACHE                         | --session-cache   |                          900 | session cache duration in `SECONDS` (60-3600)                                                       |
 
 ### Logging ###
 
-| Environment          | CLI Flag    | Default | Description                                                        |
+|     Environment      |  CLI Flag   | Default |                            Description                             |
 |----------------------|-------------|---------|--------------------------------------------------------------------|
 | PHOTOPRISM_LOG_LEVEL | --log-level | info    | log message verbosity `LEVEL` (trace, debug, info, warning, error) |
 | PHOTOPRISM_PROD      | --prod      |         | disable debug mode and log startup warnings and errors only        |
@@ -37,20 +38,25 @@
 
 ### Storage ###
 
-|         Environment         |      CLI Flag      |           Default            |                                             Description                                              |
-|-----------------------------|--------------------|------------------------------|------------------------------------------------------------------------------------------------------|
-| PHOTOPRISM_CONFIG_PATH      | --config-path      |                              | config storage `PATH`, values in options.yml override CLI flags and environment variables if present |
-| PHOTOPRISM_DEFAULTS_YAML    | --defaults-yaml    | /etc/photoprism/defaults.yml | load config defaults from `FILE` if exists, does not override CLI flags and environment variables    |
-| PHOTOPRISM_ORIGINALS_PATH   | --originals-path   |                              | storage `PATH` of your original media files (photos and videos)                                      |
-| PHOTOPRISM_ORIGINALS_LIMIT  | --originals-limit  |                         1000 | maximum size of media files in `MB` (1-100000; -1 to disable)                                        |
-| PHOTOPRISM_RESOLUTION_LIMIT | --resolution-limit |                          150 | maximum resolution of media files in `MEGAPIXELS` (1-900; -1 to disable)                             |
-| PHOTOPRISM_USERS_PATH       | --users-path       | users                        | relative `PATH` to create base and upload subdirectories for users                                   |
-| PHOTOPRISM_STORAGE_PATH     | --storage-path     |                              | writable storage `PATH` for sidecar, cache, and database files                                       |
-| PHOTOPRISM_IMPORT_PATH      | --import-path      |                              | base `PATH` from which files can be imported to originals *optional*                                 |
-| PHOTOPRISM_IMPORT_DEST      | --import-dest      |                              | relative originals `PATH` to which the files should be imported by default *optional*                |
-| PHOTOPRISM_CACHE_PATH       | --cache-path       |                              | custom cache `PATH` for sessions and thumbnail files *optional*                                      |
-| PHOTOPRISM_TEMP_PATH        | --temp-path        |                              | temporary file `PATH` *optional*                                                                     |
-| PHOTOPRISM_ASSETS_PATH      | --assets-path      |                              | assets `PATH` containing static resources like icons, models, and translations                       |
+|         Environment         |      CLI Flag      |           Default            |                                                        Description                                                         |
+|-----------------------------|--------------------|------------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| PHOTOPRISM_CONFIG_PATH      | --config-path      |                              | config storage `PATH` or options.yml filename, values in this file override CLI flags and environment variables if present |
+| PHOTOPRISM_DEFAULTS_YAML    | --defaults-yaml    | /etc/photoprism/defaults.yml | load default config values from `FILENAME` if it exists, does not override CLI flags or environment variables              |
+| PHOTOPRISM_ORIGINALS_PATH   | --originals-path   |                              | storage `PATH` of your original media files (photos and videos)                                                            |
+| PHOTOPRISM_ORIGINALS_LIMIT  | --originals-limit  |                         1000 | maximum size of media files in `MB` (1-100000; -1 to disable)                                                              |
+| PHOTOPRISM_RESOLUTION_LIMIT | --resolution-limit |                          150 | maximum resolution of media files in `MEGAPIXELS` (1-900; -1 to disable)                                                   |
+| PHOTOPRISM_USERS_PATH       | --users-path       | users                        | relative `PATH` to create base and upload subdirectories for users                                                         |
+| PHOTOPRISM_STORAGE_PATH     | --storage-path     |                              | writable storage `PATH` for sidecar, cache, and database files                                                             |
+| PHOTOPRISM_IMPORT_PATH      | --import-path      |                              | base `PATH` from which files can be imported to originals *optional*                                                       |
+| PHOTOPRISM_IMPORT_DEST      | --import-dest      |                              | relative originals `PATH` to which the files should be imported by default *optional*                                      |
+| PHOTOPRISM_IMPORT_ALLOW     | --import-allow     |                              | restrict imports to these file types (comma-separated list of `EXTENSIONS`; leave blank to allow all)                      |
+| PHOTOPRISM_UPLOAD_NSFW      | --upload-nsfw      |                              | allow uploads that might be offensive (detecting unsafe content requires TensorFlow)                                       |
+| PHOTOPRISM_UPLOAD_ALLOW     | --upload-allow     |                              | restrict uploads to these file types (comma-separated list of `EXTENSIONS`; leave blank to allow all)                      |
+| PHOTOPRISM_UPLOAD_ARCHIVES  | --upload-archives  |                              | allow upload of zip archives (will be extracted before import)                                                             |
+| PHOTOPRISM_UPLOAD_LIMIT     | --upload-limit     |                         1000 | maximum total size of uploaded files in `MB` (1-100000; -1 to disable)                                                     |
+| PHOTOPRISM_CACHE_PATH       | --cache-path       |                              | custom cache `PATH` for sessions and thumbnail files *optional*                                                            |
+| PHOTOPRISM_TEMP_PATH        | --temp-path        |                              | temporary file `PATH` *optional*                                                                                           |
+| PHOTOPRISM_ASSETS_PATH      | --assets-path      |                              | assets `PATH` containing static resources like icons, models, and translations                                             |
 
 ### Sidecar Files ###
 
@@ -61,10 +67,10 @@
 
 ### Usage ###
 
-|      Environment       |   CLI Flag    | Default |                              Description                               |
-|------------------------|---------------|---------|------------------------------------------------------------------------|
-| PHOTOPRISM_USAGE_INFO  | --usage-info  |         | display usage information in the user interface                        |
-| PHOTOPRISM_FILES_QUOTA | --files-quota |       0 | maximum aggregated size of all indexed files in `GB` (0 for unlimited) |
+|      Environment       |   CLI Flag    | Default |                            Description                            |
+|------------------------|---------------|---------|-------------------------------------------------------------------|
+| PHOTOPRISM_USAGE_INFO  | --usage-info  |         | display usage information in the user interface                   |
+| PHOTOPRISM_FILES_QUOTA | --files-quota |       0 | maximum total size of all indexed files in `GB` (0 for unlimited) |
 
 ### Backup ###
 
@@ -114,15 +120,13 @@
 | PHOTOPRISM_DISABLE_RAW            | --disable-raw            |         | disable indexing and conversion of RAW images                                                    |
 | PHOTOPRISM_RAW_PRESETS            | --raw-presets            |         | enables applying user presets when converting RAW images (reduces performance)                   |
 | PHOTOPRISM_EXIF_BRUTEFORCE        | --exif-bruteforce        |         | always perform a brute-force search if no Exif headers were found                                |
-| PHOTOPRISM_DETECT_NSFW            | --detect-nsfw            |         | flag newly added pictures as private if they might be offensive (requires TensorFlow)            |
-| PHOTOPRISM_UPLOAD_NSFW            | --upload-nsfw            |         | allow uploads that might be offensive (detecting unsafe content requires TensorFlow)             |
 
 ### Customization ###
 
 |         Environment         |      CLI Flag      |  Default   |                               Description                                |
 |-----------------------------|--------------------|------------|--------------------------------------------------------------------------|
 | PHOTOPRISM_DEFAULT_LOCALE   | --default-locale   | en         | default user interface language `CODE`                                   |
-| PHOTOPRISM_DEFAULT_TIMEZONE | --default-timezone | UTC        | default time zone `NAME`, e.g. for scheduling backups                    |
+| PHOTOPRISM_DEFAULT_TIMEZONE | --default-timezone | Local      | default time zone `NAME`, e.g. for scheduling backups                    |
 | PHOTOPRISM_DEFAULT_THEME    | --default-theme    |            | default user interface theme `NAME`                                      |
 | PHOTOPRISM_APP_NAME         | --app-name         |            | progressive web app `NAME` when installed on a device                    |
 | PHOTOPRISM_APP_MODE         | --app-mode         | standalone | progressive web app `MODE` (fullscreen, standalone, minimal-ui, browser) |
@@ -141,6 +145,7 @@
 | PHOTOPRISM_SITE_TITLE       | --site-title       |                                                                                       | site `TITLE`                                                                                                                 |
 | PHOTOPRISM_SITE_CAPTION     | --site-caption     | AI-Powered Photos App                                                                 | site `CAPTION`                                                                                                               |
 | PHOTOPRISM_SITE_DESCRIPTION | --site-description |                                                                                       | site `DESCRIPTION` *optional*                                                                                                |
+| PHOTOPRISM_SITE_FAVICON     | --site-favicon     |                                                                                       | site favicon `FILENAME` *optional*                                                                                           |
 | PHOTOPRISM_SITE_PREVIEW     | --site-preview     |                                                                                       | sharing preview image `URL`                                                                                                  |
 | PHOTOPRISM_CDN_URL          | --cdn-url          |                                                                                       | content delivery network `URL`                                                                                               |
 | PHOTOPRISM_CDN_VIDEO        | --cdn-video        |                                                                                       | stream videos over the specified CDN                                                                                         |
@@ -164,8 +169,8 @@
 |---------------------------------|------------------------|---------------|---------------------------------------------------------------------------------------------------------|
 | PHOTOPRISM_DISABLE_TLS          | --disable-tls          |               | disable HTTPS/TLS even if the site URL starts with https:// and a certificate is available              |
 | PHOTOPRISM_DEFAULT_TLS          | --default-tls          |               | default to a self-signed HTTPS/TLS certificate if no other certificate is available                     |
-| PHOTOPRISM_TLS_CERT             | --tls-cert             |               | public HTTPS certificate `FILE` (.crt), ignored for Unix domain sockets                                 |
-| PHOTOPRISM_TLS_KEY              | --tls-key              |               | private HTTPS key `FILE` (.key), ignored for Unix domain sockets                                        |
+| PHOTOPRISM_TLS_CERT             | --tls-cert             |               | public HTTPS certificate `FILENAME` (.crt), ignored for Unix domain sockets                             |
+| PHOTOPRISM_TLS_KEY              | --tls-key              |               | private HTTPS key `FILENAME` (.key), ignored for Unix domain sockets                                    |
 | PHOTOPRISM_DISABLE_STS          | --disable-sts          |               | disable HTTP Strict-Transport-Security (STS) header                                                     |
 | PHOTOPRISM_STS_SECONDS          | --sts-seconds          |      31536000 | `TIME` for the browser to remember that the site is to be accessed only via HTTPS (0 to disable) *plus* |
 | PHOTOPRISM_STS_SUBDOMAINS       | --sts-subdomains       |               | rule applies to all subdomains as well *plus*                                                           |
@@ -212,7 +217,7 @@
 | PHOTOPRISM_FFMPEG_BIN                                            | --ffmpeg-bin              | ffmpeg                                   | FFmpeg `COMMAND` for video transcoding and thumbnail extraction   |
 | PHOTOPRISM_FFMPEG_ENCODER                                        | --ffmpeg-encoder          | libx264                                  | FFmpeg AVC encoder `NAME`                                         |
 | PHOTOPRISM_FFMPEG_SIZE                                           | --ffmpeg-size             |                                     4096 | maximum video size in `PIXELS` (720-7680)                         |
-| PHOTOPRISM_FFMPEG_BITRATE                                        | --ffmpeg-bitrate          |                                       50 | maximum video `BITRATE` in Mbit/s                                 |
+| PHOTOPRISM_FFMPEG_BITRATE                                        | --ffmpeg-bitrate          |                                       60 | maximum video `BITRATE` in Mbps                                   |
 | PHOTOPRISM_FFMPEG_MAP_VIDEO                                      | --ffmpeg-map-video        | `0:v:0`                                  | video `STREAMS` that should be transcoded                         |
 | PHOTOPRISM_FFMPEG_MAP_AUDIO                                      | --ffmpeg-map-audio        | `0:a:0?`                                 | audio `STREAMS` that should be transcoded                         |
 | PHOTOPRISM_EXIFTOOL_BIN                                          | --exiftool-bin            | exiftool                                 | ExifTool `COMMAND` for extracting metadata                        |
@@ -256,6 +261,16 @@
 | PHOTOPRISM_JPEG_SIZE    | --jpeg-size    |    7680 | maximum size of generated JPEG images in `PIXELS` (720-30000)     |
 | PHOTOPRISM_PNG_SIZE     | --png-size     |    7680 | maximum size of generated PNG images in `PIXELS` (720-30000)      |
 
+### Computer Vision ###
+
+|      Environment       |   CLI Flag    | Default |                                              Description                                              |
+|------------------------|---------------|---------|-------------------------------------------------------------------------------------------------------|
+| PHOTOPRISM_VISION_YAML | --vision-yaml |         | computer vision model configuration `FILENAME` *optional*                                             |
+| PHOTOPRISM_VISION_API  | --vision-api  |         | enable computer vision service API endpoints under /api/v1/vision (requires authorized access token)  |
+| PHOTOPRISM_VISION_URI  | --vision-uri  |         | remote computer vision service `URI`, e.g. https://example.com/api/v1/vision (leave blank to disable) |
+| PHOTOPRISM_VISION_KEY  | --vision-key  |         | remote computer vision service access `TOKEN` *optional*                                              |
+| PHOTOPRISM_DETECT_NSFW | --detect-nsfw |         | flag newly added pictures as private if they might be offensive (requires TensorFlow)                 |
+
 ### Face Recognition ###
 
 !!! info ""
@@ -278,22 +293,22 @@ We recommend that only advanced users change these parameters:
 
 If you start the server as a *daemon* in the background, you can additionally specify a filename for the log and the process ID:
 
-|       Environment       |    CLI Flag    | Default |             Description              |
-|-------------------------|----------------|---------|--------------------------------------|
-| PHOTOPRISM_PID_FILENAME | --pid-filename |         | process id `FILE` *daemon-mode only* |
-| PHOTOPRISM_LOG_FILENAME | --log-filename |         | server log `FILE` *daemon-mode only* |
+|       Environment       |    CLI Flag    | Default |               Description                |
+|-------------------------|----------------|---------|------------------------------------------|
+| PHOTOPRISM_PID_FILENAME | --pid-filename |         | process id `FILENAME` *daemon-mode only* |
+| PHOTOPRISM_LOG_FILENAME | --log-filename |         | server log `FILENAME` *daemon-mode only* |
 
 ### Docker Image ###
 
 The following variables are used by our Docker images only and have no effect otherwise:
 
-| Environment              | Default | Description                                                                                                                                                                                  |
-|--------------------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| PHOTOPRISM_UID           | 0       | run as a non-root user after initialization (supported: 0, 33, 50-99, 500-600, 900-1250, and 2000-2100)                                                                                      |
-| PHOTOPRISM_GID           | 0       | run with a specific group id after initialization, can optionally be used together with `PHOTOPRISM_UID` (supported: 0, 33, 44, 50-99, 105, 109, 115, 116, 500-600, 900-1250, and 2000-2100) |
-| PHOTOPRISM_UMASK         | 0002    | [file-creation mode](https://linuxize.com/post/umask-command-in-linux/) (default: u=rwx,g=rwx,o=rx)                                                                                          |
-| PHOTOPRISM_INIT          |         | run/install on first startup (options: update https gpu ffmpeg tensorflow davfs clitools clean)                                                                                              |
-| PHOTOPRISM_DISABLE_CHOWN | false   | disable updating storage permissions via chmod and chown on startup                                                                                                                          |
+| Environment              | Default          | Description                                                                                                                                                                                  |
+|--------------------------|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PHOTOPRISM_UID           | 0                | run as a non-root user after initialization (supported: 0, 33, 50-99, 500-600, 900-1250, and 2000-2100)                                                                                      |
+| PHOTOPRISM_GID           | 0                | run with a specific group id after initialization, can optionally be used together with `PHOTOPRISM_UID` (supported: 0, 33, 44, 50-99, 105, 109, 115, 116, 500-600, 900-1250, and 2000-2100) |
+| PHOTOPRISM_UMASK         | 0002             | [file-creation mode](https://linuxize.com/post/umask-command-in-linux/) (default: u=rwx,g=rwx,o=rx)                                                                                          |
+| PHOTOPRISM_INIT          | https tensorflow | run/install on first startup (common options: [update tensorflow https intel gpu davfs](https://github.com/photoprism/photoprism/blob/develop/scripts/dist/Makefile))                        |
+| PHOTOPRISM_DISABLE_CHOWN | false            | disable updating storage permissions via chmod and chown on startup                                                                                                                          |
 !!! abstract ""
     Docker problems? Our [troubleshooting guide](troubleshooting/docker.md) helps you quickly diagnose and resolve them. 🛟
 

@@ -15,9 +15,9 @@ This release includes a long list of enhancements and new features, many of them
 
 Important Changes
 
-- To take advantage of the performance improvements in [TensorFlow 2](https://github.com/photoprism/photoprism/issues/222), users of our Docker images can set the `PHOTOPRISM_INIT` variable to `"tensorflow"`. This will automatically detect, download, and install a version of TensorFlow optimized for your CPU.
-- If you are using one of our [manual installation packages](https://dl.photoprism.app/pkg/linux/README.html), you can find [libtensorflow binaries optimized for AMD64](https://dl.photoprism.app/tensorflow/amd64/) and [ARM64 CPUs](https://dl.photoprism.app/tensorflow/arm64/) on our download server. [Updated libheif binaries](https://dl.photoprism.app/dist/libheif/) for HEIC/HEIF image support are also available.
-- A 32-bit version for old Raspberry Pis with an ARMv7 CPU is no longer part of our regular releases, as TensorFlow 2 does not run on them. We have therefore [created an ARMv7 architecture branch](https://github.com/photoprism/photoprism/tree/arch/armv7) with an [irregular release schedule](https://hub.docker.com/r/photoprism/photoprism/tags?name=armv7) and [welcome contributions](https://docs.photoprism.app/developer-guide/).
+- To take advantage of the [performance improvements in TensorFlow 2](https://github.com/photoprism/photoprism/issues/222), users of [our Docker images](https://docs.photoprism.app/getting-started/docker-compose/) can set the [`PHOTOPRISM_INIT`](https://docs.photoprism.app/getting-started/config-options/#docker-image) variable to `"tensorflow"`. This will automatically detect, download, and [install a version of TensorFlow](https://github.com/photoprism/photoprism/blob/develop/scripts/dist/install-tensorflow.sh) optimized for your CPU.
+- If you are using one of our [manual installation packages](https://dl.photoprism.app/pkg/linux/README.html), you can find [libtensorflow binaries optimized for AMD64](https://dl.photoprism.app/tensorflow/amd64/) and [ARM64 CPUs](https://dl.photoprism.app/tensorflow/arm64/) on our download server. Updated [libheif binaries for HEIC/HEIF image](https://dl.photoprism.app/dist/libheif/) support are also available.
+- A 32-bit version for [Raspberry Pis with an ARMv7 CPU](https://docs.photoprism.app/getting-started/raspberry-pi/#older-armv7-based-devices) is no longer part of our regular releases, as [TensorFlow 2 does not run](https://github.com/photoprism/photoprism/issues/222#issuecomment-2781300037) on them. We have therefore [created an ARMv7 architecture branch](https://github.com/photoprism/photoprism/tree/arch/armv7) with an [irregular release schedule](https://hub.docker.com/r/photoprism/photoprism/tags?name=armv7) and [welcome contributions](https://docs.photoprism.app/developer-guide/).
 
 What's new?
 
@@ -1329,3 +1329,5 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
 Even when you use an image with the `:latest` tag, Docker does not automatically download new images for you. To update, you can either [manually pull the newest image](getting-started/updates.md) and restart, or set up a service like [Watchtower](getting-started/updates.md#watchtower) to get automatic updates.
 
 [Learn more ›](getting-started/updates.md)
+
+*[CPU]: Processor in your server or device

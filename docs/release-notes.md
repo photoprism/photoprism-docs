@@ -8,8 +8,8 @@
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. [Learn more ›](getting-started/updates.md#development-preview)
 
-### Upcoming Release
-<span class="build">Build 250425-cbc415d32</span>
+### April 25, 2025
+<span class="build">Build 250425-21ddba459</span>
 
 This release includes a long list of enhancements and new features, many of them contributed by our community. Most notably, [performance has been significantly improved](https://github.com/photoprism/photoprism/issues/4778) in many areas, we have [added a collapsible info sidebar](https://github.com/photoprism/photoprism/issues/4812) to the fullscreen viewer, it is possible to [select an image to use as album cover](https://github.com/photoprism/photoprism/issues/383), and you can [configure computer vision tasks](https://github.com/photoprism/photoprism/issues/1090) like image classification and face recognition to run on a different instance. A big thank you to everyone who [submitted pull requests](https://docs.photoprism.app/developer-guide/), [improved translations](https://docs.photoprism.app/developer-guide/translations-weblate/), or [helped with testing](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! :octicons-heart-fill-24:{ .heart .purple }
 

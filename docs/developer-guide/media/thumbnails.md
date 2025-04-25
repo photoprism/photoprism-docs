@@ -17,26 +17,32 @@ The smallest configurable static and dynamic size limit is 720px, so most sizes 
 
 The following overview shows the name, dimensions, and aspect ratio for each thumbnail size as well as a description of how it is used:
 
-| Name      | Width | Height | Aspect Ratio | Available | Usage                                    |
-|-----------|-------|--------|--------------|-----------|------------------------------------------|
-| colors    | 3     | 3      | 1:1          | Always    | [Color Detection](../metadata/colors.md) |
-| tile_50   | 50    | 50     | 1:1          | Always    | List View                                |
-| tile_100  | 100   | 100    | 1:1          | Always    | Places View                              |
-| left_224  | 224   | 224    | 1:1          | On-Demand | TensorFlow                               |
-| right_224 | 224   | 224    | 1:1          | On-Demand | TensorFlow                               |
-| tile_224  | 224   | 224    | 1:1          | Always    | TensorFlow, Mosaic View                  |
-| tile_500  | 500   | 500    | 1:1          | Always    | Cards View                               |
-| fit_720   | 720   | 720    | Preserved    | Always    | SD TV, Mobile                            |
-| tile_1080 | 1080  | 1080   | 1:1          | Optional  | Instagram                                |
-| fit_1280  | 1280  | 1024   | Preserved    | On-Demand | HD TV, SXGA                              |
-| fit_1600  | 1600  | 900    | Preserved    | Optional  | Social Media                             |
-| fit_1920  | 1920  | 1200   | Preserved    | On-Demand | Full HD                                  |
-| fit_2048  | 2048  | 2048   | Preserved    | Optional  | DCI 2K, Tablets                          |
-| fit_2560  | 2560  | 1600   | Preserved    | On-Demand | Quad HD                                  |
-| fit_3840  | 3840  | 2400   | Preserved    | Optional  | 4K Ultra HD                              |
-| fit_4096  | 4096  | 4096   | Preserved    | On-Demand | DCI 4K, Retina 4K                        |
-| fit_5120  | 5120  | 5120   | Preserved    | On-Demand | Retina 5K                                |
-| fit_7680  | 7680  | 4320   | Preserved    | On-Demand | 8K Ultra HD 2                            |
+|   Name    | Width | Height | Aspect Ratio | Available |       Usage       |
+|-----------|-------|--------|--------------|-----------|-------------------|
+| colors    |     3 |      3 | 1:1          | Always    | Color Detection   |
+| tile_50   |    50 |     50 | 1:1          | Always    | List View         |
+| tile_100  |   100 |    100 | 1:1          | Always    | Places View       |
+| left_224  |   224 |    224 | 1:1          | On-Demand | AI                |
+| right_224 |   224 |    224 | 1:1          | On-Demand | AI                |
+| tile_224  |   224 |    224 | 1:1          | Always    | AI, Mosaic View   |
+| left_384  |   384 |    384 | 1:1          | Optional  | AI                |
+| right_384 |   384 |    384 | 1:1          | Optional  | AI                |
+| tile_384  |   384 |    384 | 1:1          | Optional  | AI                |
+| left_480  |   480 |    480 | 1:1          | Optional  | AI                |
+| right_480 |   480 |    480 | 1:1          | Optional  | AI                |
+| tile_480  |   480 |    480 | 1:1          | Optional  | AI                |
+| tile_500  |   500 |    500 | 1:1          | Always    | Cards View        |
+| fit_720   |   720 |    720 | Preserved    | Always    | SD TV, Mobile     |
+| tile_1080 |  1080 |   1080 | 1:1          | Optional  | Instagram         |
+| fit_1280  |  1280 |   1024 | Preserved    | On-Demand | HD TV, SXGA       |
+| fit_1600  |  1600 |    900 | Preserved    | Optional  | Social Media      |
+| fit_1920  |  1920 |   1200 | Preserved    | On-Demand | Full HD           |
+| fit_2048  |  2048 |   2048 | Preserved    | Optional  | DCI 2K, Tablets   |
+| fit_2560  |  2560 |   1600 | Preserved    | On-Demand | Quad HD           |
+| fit_3840  |  3840 |   2400 | Preserved    | Optional  | 4K Ultra HD       |
+| fit_4096  |  4096 |   4096 | Preserved    | On-Demand | DCI 4K, Retina 4K |
+| fit_5120  |  5120 |   5120 | Preserved    | On-Demand | Retina 5K         |
+| fit_7680  |  7680 |   4320 | Preserved    | On-Demand | 8K Ultra HD 2     |
 
 ↪ [`internal/thumb/sizes.go`](https://github.com/photoprism/photoprism/blob/develop/internal/thumb/sizes.go)
 

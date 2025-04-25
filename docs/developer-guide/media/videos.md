@@ -26,16 +26,16 @@ For more information on hybrid photo/video file formats, e.g. Apple Live Photos 
 
 The [`PHOTOPRISM_FFMPEG_SIZE`](../../getting-started/config-options.md#file-conversion) config option allows to limit the resolution of [transcoded videos](../../getting-started/advanced/transcoding.md). It accepts the following standard sizes, while other values are automatically adjusted to the next supported size:
 
-| Size |       Usage        |
-|------|--------------------|
-|  720 | SD TV, Mobile      |
-| 1280 | HD TV, SXGA        |
-| 1920 | Full HD            |
-| 2048 | DCI 2K, Tablets    |
-| 2560 | Quad HD, Notebooks |
-| 3840 | 4K Ultra HD        |
-| 4096 | DCI 4K, Retina 4K  |
-| 7680 | 8K Ultra HD 2      |
+| Size |       Usage       |
+|------|-------------------|
+|  720 | SD TV, Mobile     |
+| 1280 | HD TV, SXGA       |
+| 1920 | Full HD           |
+| 2048 | DCI 2K, Tablets   |
+| 2560 | Quad HD           |
+| 3840 | 4K Ultra HD       |
+| 4096 | DCI 4K, Retina 4K |
+| 7680 | 8K Ultra HD 2     |
 
 ## Technical References and Tutorials
 

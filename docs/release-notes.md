@@ -13,6 +13,12 @@ Our [preview builds](getting-started/updates.md#development-preview) give you ea
 
 This release includes a long list of enhancements and new features, many of them contributed by our community. Most notably, [performance has been significantly improved](https://github.com/photoprism/photoprism/issues/4778) in many areas, we have [added a collapsible info sidebar](https://github.com/photoprism/photoprism/issues/4812) to the fullscreen viewer, it is possible to [select an image to use as album cover](https://github.com/photoprism/photoprism/issues/383), and you can [configure computer vision tasks](https://github.com/photoprism/photoprism/issues/1090) like image classification and face recognition to run on a different instance. A big thank you to everyone who [submitted pull requests](https://docs.photoprism.app/developer-guide/), [improved translations](https://docs.photoprism.app/developer-guide/translations-weblate/), or [helped with testing](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! :octicons-heart-fill-24:{ .heart .purple }
 
+Important Changes
+
+- To take advantage of the performance improvements in [TensorFlow 2](https://github.com/photoprism/photoprism/issues/222), users of our Docker images can set the `PHOTOPRISM_INIT` variable to `"tensorflow"`. This will automatically detect, download, and install a version of TensorFlow optimized for your CPU.
+- If you are using one of our [manual installation packages](https://dl.photoprism.app/pkg/linux/README.html), you can find [libtensorflow binaries optimized for AMD64](https://dl.photoprism.app/tensorflow/amd64/) and [ARM64 CPUs](https://dl.photoprism.app/tensorflow/arm64/) on our download server. [Updated libheif binaries](https://dl.photoprism.app/dist/libheif/) for HEIC/HEIF image support are also available.
+- A 32-bit version for old Raspberry Pis with an ARMv7 CPU is no longer part of our regular releases, as TensorFlow 2 does not run on them. We have therefore [created an ARMv7 architecture branch](https://github.com/photoprism/photoprism/tree/arch/armv7) with an [irregular release schedule](https://hub.docker.com/r/photoprism/photoprism/tags?name=armv7) and [welcome contributions](https://docs.photoprism.app/developer-guide/).
+
 What's new?
 
 - AI: [Upgraded Google TensorFlow from v1.15.2 to v2.18.0](https://github.com/photoprism/photoprism/issues/222) by [@raystlin](https://github.com/raystlin)

@@ -93,7 +93,7 @@ nav:
     - Searching:
       - Introduction: user-guide/search/index.md
       - Result Views: user-guide/search/views.md
-      - Using Filters: user-guide/search/filters.md
+      - Search Filters: user-guide/search/filters.md
     - Features:
       - Albums: user-guide/organize/albums.md
       - People: user-guide/organize/people.md

@@ -10,7 +10,7 @@ Our [preview builds](getting-started/updates.md#development-preview) give you ea
 
 What's new?
 
-- Videos: [Fixed transcoding hardware driver installation for Intel QSV](https://github.com/photoprism/photoprism/issues/4967)
+- Videos: [Fixed hardware driver installation for Intel QSV](https://github.com/photoprism/photoprism/issues/4967)
 - Setup: [Fixed .deb and .rpm installation package builds](https://dl.photoprism.app/pkg/linux/README.html)
 
 ### April 25, 2025

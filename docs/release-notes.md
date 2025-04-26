@@ -11,7 +11,7 @@ Our [preview builds](getting-started/updates.md#development-preview) give you ea
 ### April 26, 2025
 <span class="build">Build 250426-27ec7a128</span>
 
-This update adds preinstalled [Linux Video Acceleration API (VAAPI) drivers](https://docs.photoprism.app/getting-started/advanced/transcoding/) and fixes the package names in the [Intel QSV driver](https://docs.photoprism.app/getting-started/advanced/transcoding/#intel-quick-sync) installation script. We have also fixed the [.deb](https://dl.photoprism.app/pkg/linux/deb/) and [.rpm](https://dl.photoprism.app/pkg/linux/rpm/) [installation package](https://dl.photoprism.app/pkg/linux/README.html) builds. Note that these are intended for experienced users and third-party integration maintainers only, as they require manual configuration and do not include tested system dependencies.
+This update adds preinstalled [Linux Video Acceleration API (VAAPI) drivers](https://docs.photoprism.app/getting-started/advanced/transcoding/) and fixes the package names in the [Intel QSV driver](https://docs.photoprism.app/getting-started/advanced/transcoding/#intel-quick-sync) installation script. We have also fixed the [.deb](https://dl.photoprism.app/pkg/linux/deb/) and [.rpm](https://dl.photoprism.app/pkg/linux/rpm/) [installation package](https://dl.photoprism.app/pkg/linux/README.html) builds. Note that these are intended for experienced users and third-party integration maintainers only, as they require manual configuration and do not include tested system dependencies. 🔧
 
 What's new?
 

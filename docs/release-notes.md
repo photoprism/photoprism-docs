@@ -8,6 +8,11 @@
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. [Learn more ›](getting-started/updates.md#development-preview)
 
+### April 26, 2025
+<span class="build">Build 250426-27ec7a128</span>
+
+This update adds preinstalled Linux Video Acceleration API (VAAPI) drivers and fixes the package names in the Intel GPU hardware driver installation script. We have also fixed the .deb and .rpm installation package builds. Note that these are intended for experienced users and third-party integration maintainers only, as they require manual configuration and do not include tested system dependencies.
+
 What's new?
 
 - Videos: [Fixed hardware driver installation for Intel QSV](https://github.com/photoprism/photoprism/issues/4967)

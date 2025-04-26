@@ -54,7 +54,7 @@ What's new?
 - Config: [Passwords and secrets can be read from files](https://github.com/photoprism/photoprism/pull/2302) by [@petertrr](https://github.com/petertrr)
 - Setup: [Improved inline documentation in compose.yaml examples](https://github.com/photoprism/photoprism/issues/4051)
 - Docker: [Upgraded Ubuntu 25.04 (Plucky Puffin) base image includes FFmpeg v7.1.1, Darktable v5.0.1, RawTherapee v5.11, ExifTool v13.10](https://github.com/photoprism/photoprism/issues/4953), and [libheif v1.19.7](https://github.com/strukturag/libheif/releases/tag/v1.19.7)
-- Security: [Go has been upgraded to v1.24.2, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.2) 
+- Security: [Go has been updated to v1.24.2, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.2) 
 - Translations: [Updated Arabic, French, and German](https://docs.photoprism.app/developer-guide/translations-weblate/)
 
 !!! info ""

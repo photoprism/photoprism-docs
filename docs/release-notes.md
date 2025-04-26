@@ -20,6 +20,9 @@ What's new?
 - Videos: [Fixed hardware driver installation for Intel QSV](https://github.com/photoprism/photoprism/issues/4967)
 - Setup: [Fixed .deb and .rpm installation package builds](https://github.com/photoprism/photoprism/issues/4968)
 
+!!! info ""
+    Missing [user interface translations](https://translate.photoprism.app/projects/photoprism/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.
+
 ### April 25, 2025
 <span class="build">Build 250425-21ddba459</span>
 

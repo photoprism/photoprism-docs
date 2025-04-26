@@ -11,7 +11,7 @@ Our [preview builds](getting-started/updates.md#development-preview) give you ea
 What's new?
 
 - Videos: [Fixed hardware driver installation for Intel QSV](https://github.com/photoprism/photoprism/issues/4967)
-- Setup: [Fixed .deb and .rpm installation package builds](https://dl.photoprism.app/pkg/linux/README.html)
+- Setup: [Fixed .deb and .rpm installation package builds](https://github.com/photoprism/photoprism/issues/4968)
 
 ### April 25, 2025
 <span class="build">Build 250425-21ddba459</span>

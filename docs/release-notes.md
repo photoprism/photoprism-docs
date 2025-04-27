@@ -4,9 +4,13 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250426-27ec7a128</span>
+<span class="build">Build 250427-eb4fc032f</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. [Learn more ›](getting-started/updates.md#development-preview)
+
+What's new?
+
+- Videos: [Added config options for FFmpeg Preset, Quality, and Device](https://github.com/photoprism/photoprism/issues/4969)
 
 ### April 26, 2025
 <span class="build">Build 250426-27ec7a128</span>

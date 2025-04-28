@@ -31,7 +31,7 @@ The context menu allows you to perform the following actions:
 4. Select existing album or enter new album name
 5. Click *add to album*
 
-### Set Moment Cover ###
+## Set Moment Cover ##
 
 To set a cover image for a moment:
 

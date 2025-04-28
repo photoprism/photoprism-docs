@@ -59,3 +59,16 @@ Edit album details and click *save*
 
     ![Screenshot](img/remove-from-album-1-2503.jpg){ class="shadow" }
 
+### Set Album Cover ###
+
+To set a cover image for an album:
+
+1. Open the album by clicking on it.
+2. Click on the photo you want to use as the cover.
+3. When the photo opens, click :material-dots-vertical: in the upper right corner.
+4. Select **Set as Album Cover** from the menu.
+
+    ![Screenshot](img/set-cover-2504.jpg){ class="shadow" }
+
+This will set the selected photo as the cover image for the album.
+

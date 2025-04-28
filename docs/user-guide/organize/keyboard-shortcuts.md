@@ -12,7 +12,7 @@ PhotoPrism offers a variety of keyboard shortcuts to help you navigate and use t
 | Ctrl + F        | Focus Search         |
 | Ctrl + R        | Refresh Page         |
 | Ctrl + U        | Open Upload Dialog   |
-| Shift + Ctrl + F     | Toggle Expansion Panel                                      |
+| Shift + Ctrl + F     | Open Expansion Panel                                      |
 | Ctrl + F (on People, Labels, Library Errors pages) | Focus Search Field           |
 
 ## Viewer Shortcuts
@@ -25,7 +25,7 @@ PhotoPrism offers a variety of keyboard shortcuts to help you navigate and use t
 | Ctrl + A        | Archive                       |
 | Ctrl + D        | Download                      |
 | Ctrl + E        | Edit                          |
-| Ctrl + F        | Toggle Fullscreen             |
+| Ctrl + F        | Open Fullscreen             |
 | Ctrl + L        | Like/Unlike                   |
 
 !!! tip ""

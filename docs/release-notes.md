@@ -11,7 +11,7 @@ Our [preview builds](getting-started/updates.md#development-preview) give you ea
 What's new?
 
 - Videos: [Added config options for FFmpeg Preset, Quality, and Device](https://github.com/photoprism/photoprism/issues/4969)
-- Upload: [Improved random token used to distinguish simultaneous uploads](https://github.com/photoprism/photoprism/issues/4970) by [@raxod502](https://github.com/raxod502)
+- Upload: [Improved token used to distinguish simultaneous uploads](https://github.com/photoprism/photoprism/issues/4970) by [@raxod502](https://github.com/raxod502)
 
 ### April 26, 2025
 <span class="build">Build 250426-27ec7a128</span>

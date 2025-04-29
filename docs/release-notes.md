@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250429-138cc3c45</span>
+<span class="build">Build 250429-fe3071ba1</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. [Learn more ›](getting-started/updates.md#development-preview)
 
@@ -12,6 +12,7 @@ What's new?
 
 - Videos: [Added config options for FFmpeg Preset, Quality, and Device](https://github.com/photoprism/photoprism/issues/4969)
 - Upload: [Improved token used to distinguish simultaneous uploads](https://github.com/photoprism/photoprism/issues/4970) by [@raxod502](https://github.com/raxod502)
+- API: [Clients authenticated with an App Password can share albums](https://github.com/photoprism/photoprism/issues/4973)
 
 ### April 26, 2025
 <span class="build">Build 250426-27ec7a128</span>

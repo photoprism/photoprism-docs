@@ -10,10 +10,10 @@ Our [preview builds](getting-started/updates.md#development-preview) give you ea
 
 What's new?
 
-- Videos: [Media can be downloaded and imported directly from a URL](https://github.com/photoprism/photoprism/issues/4982)
-- Videos: [Added config options for FFmpeg Preset, Quality, and Device](https://github.com/photoprism/photoprism/issues/4969)
+- Videos: [Added config options for FFmpeg preset, quality, and device](https://github.com/photoprism/photoprism/issues/4969)
 - Upload: [Improved token used to distinguish simultaneous uploads](https://github.com/photoprism/photoprism/issues/4970) by [@raxod502](https://github.com/raxod502)
-- API: [Clients authenticated with an App Password can share albums](https://github.com/photoprism/photoprism/issues/4973)
+- CLI: [Media can be downloaded and imported directly from a URL](https://github.com/photoprism/photoprism/issues/4982)
+- API: [Authorized clients are allowed to create album share links](https://github.com/photoprism/photoprism/issues/4973)
 - Translations: [Fixed Japanese](https://github.com/photoprism/photoprism/discussions/4980)
 
 ### April 26, 2025

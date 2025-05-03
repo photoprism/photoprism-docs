@@ -4,12 +4,13 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250502-d530ab4f2</span>
+<span class="build">Build 250503-bd4b7b3ad</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. [Learn more ›](getting-started/updates.md#development-preview)
 
 What's new?
 
+- UX: [Optimized thumbnail rendering performance in result views](https://github.com/photoprism/photoprism/issues/4985)
 - Videos: [Added config options for FFmpeg preset, quality, and device](https://github.com/photoprism/photoprism/issues/4969)
 - Upload: [Improved token used to distinguish simultaneous uploads](https://github.com/photoprism/photoprism/issues/4970) by [@raxod502](https://github.com/raxod502)
 - CLI: [Media can be downloaded and imported directly from a URL](https://github.com/photoprism/photoprism/issues/4982)

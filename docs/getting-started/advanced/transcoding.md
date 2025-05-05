@@ -116,7 +116,7 @@ docker compose up -d
 
 For hardware transcoding with an NVIDIA graphics card, the *NVIDIA Container Toolkit* must be installed on the host computer first. Instructions can be found in their [installation guide](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html).
 
-Once the toolkit is installed, choose the `nvidia` encoder and add a `deploy` section to the `photoprism` service:
+Once the toolkit is installed, choose the `nvidia` encoder and [add a `deploy` section](https://docs.docker.com/compose/how-tos/gpu-support/) to the `photoprism` service:
 
 ```yaml
 services:

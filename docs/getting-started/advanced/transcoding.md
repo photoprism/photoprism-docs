@@ -134,8 +134,8 @@ services:
         reservations:
           devices:
             - driver: "nvidia"
-              count: 1
               capabilities: [gpu]
+              count: 1
     ...
 ```
 

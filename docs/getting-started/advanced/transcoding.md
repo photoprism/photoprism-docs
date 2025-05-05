@@ -123,9 +123,9 @@ services:
   photoprism:    
     environment:
       PHOTOPRISM_FFMPEG_ENCODER: "nvidia"
-      PHOTOPRISM_INIT: "tensorflow"
+      PHOTOPRISM_INIT: "tensorflow-gpu"
       NVIDIA_VISIBLE_DEVICES: "all"
-      NVIDIA_DRIVER_CAPABILITIES: "compute,video,utility"
+      NVIDIA_DRIVER_CAPABILITIES: "all"
       ...
     volumes:
       - ...
@@ -145,6 +145,15 @@ Now [restart the services](../docker-compose.md#step-2-start-the-server) for you
 docker compose stop
 docker compose up -d
 ```
+
+Should PhotoPrism fail to start after this due to *unsupported instructions*, your CPU may not have the capabilities to use the GPU-optimized version of TensorFlow. In this case, you will need to change `PHOTOPRISM_INIT: "tensorflow-gpu"` to `PHOTOPRISM_INIT: "tensorflow"` in your configuration and then recreate the service containers, so that a CPU-only version is installed:
+
+```bash
+docker compose stop
+docker compose up -d --force-recreate
+```
+
+The GPU-optimized version of TensorFlow that [`PHOTOPRISM_INIT`](../config-options.md#docker-image) installs is the same as the one you get at [tensorflow.org/install/lang_c](https://www.tensorflow.org/install/lang_c), so you can refer to their website/documentation for more information, e.g. which GPUs/drivers are supported. Using a GPU-optimized version of TensorFlow is *optional* and has no impact on video transcoding capabilities or performance.
 
 !!! info ""
     We also provide a [ready-to-use `compose.yaml` example](https://dl.photoprism.app/docker/nvidia/compose.yaml) for your convenience.

@@ -15,7 +15,7 @@ What's new?
 - Upload: [Improved token used to distinguish simultaneous uploads](https://github.com/photoprism/photoprism/issues/4970) by [@raxod502](https://github.com/raxod502)
 - CLI: [Media can be downloaded and imported directly from a URL](https://github.com/photoprism/photoprism/issues/4982)
 - API: [Authorized clients are allowed to create album share links](https://github.com/photoprism/photoprism/issues/4973)
-- Security: [Go has been updated to v1.24.3, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.3) 
+- Security: [Updated Go to v1.24.3, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.3) 
 - Translations: [Fixed Japanese](https://github.com/photoprism/photoprism/discussions/4980)
 
 ### April 26, 2025

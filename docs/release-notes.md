@@ -10,7 +10,7 @@ Our [preview builds](getting-started/updates.md#development-preview) give you ea
 
 What's new?
 
-- AI: [Added Ollama and Data URL support to Vision Service](https://github.com/photoprism/photoprism-vision/pull/5) by [@sgflt](https://github.com/sgflt)
+- AI: [Added Ollama and Data URL support in Vision Service](https://github.com/photoprism/photoprism-vision/pull/5) by [@sgflt](https://github.com/sgflt)
 - UX: [Optimized thumbnail rendering performance in result views](https://github.com/photoprism/photoprism/issues/4985)
 - Videos: [Added config options for transcoding preset, quality, and device](https://github.com/photoprism/photoprism/issues/4969)
 - Upload: [Improved token used to distinguish simultaneous uploads](https://github.com/photoprism/photoprism/issues/4970) by [@raxod502](https://github.com/raxod502)

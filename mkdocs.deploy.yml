@@ -26,3 +26,5 @@ plugins:
         'user-guide/organize/views.md': 'user-guide/search/views.md'
         'user-guide/organize/search.md': 'user-guide/search/filters.md'
         'getting-started/advanced/https.md': 'getting-started/using-https.md'
+        'developer-guide/apps/index.md': 'developer-guide/native-apps/index.md'
+        'photoprism-pi.md': 'getting-started/raspberry-pi/microsd-image.md'

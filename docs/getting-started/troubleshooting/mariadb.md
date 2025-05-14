@@ -71,6 +71,26 @@ Also note that you **cannot change the database password** with `MARIADB_PASSWOR
 
 In this case, you can either delete the database storage folder and restart the database service or follow the instructions under [Lost Root Password](#lost-root-password).
 
+## Unsupported Scan
+
+You may encounter errors similar to this when starting your instance or restoring a backup if you have manually configured the MariaDB database connection DSN, without [adding the necessary parameters](https://github.com/go-sql-driver/mysql?tab=readme-ov-file#parameters) such as `parseTime=true` to the `PHOTOPRISM_DATABASE_DSN` environment variable or the `--database-dsn` command flag:
+
+```
+sql: Scan error on column index 5 unsupported Scan,
+storing driver.Value type []uint8 into type *time.Time
+```
+
+To avoid this issue, please use the [following configuration options](https://docs.photoprism.app/getting-started/config-options/#database-connection) to specify the MariaDB database name, server, user, and password:
+
+- `PHOTOPRISM_DATABASE_NAME`
+- `PHOTOPRISM_DATABASE_SERVER`
+- `PHOTOPRISM_DATABASE_USER`
+- `PHOTOPRISM_DATABASE_PASSWORD`
+
+This will automatically generate a compatible Data Source Name (DSN) for connecting to your MariaDB database server. Since the required parameters may change in future versions, we recommend never setting the DSN manually unless it is for testing or development purposes.
+
+Users of [SQLite](sqlite.md) can specify the filename directly with the DSN config option, if necessary.
+
 ## Bad Performance
 
 Many users reporting poor performance and high CPU usage have migrated from SQLite to MariaDB, so their database schema is no longer optimized for performance. For example, MariaDB cannot handle rows with `text` columns in memory and always uses temporary tables on disk if there are any.

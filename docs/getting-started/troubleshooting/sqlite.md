@@ -5,6 +5,16 @@
     [Sponsors](https://www.photoprism.app/membership) receive direct [technical support](https://www.photoprism.app/contact) via email.
     Before [submitting a support request](../../user-guide/index.md#getting-support), try to [determine the cause of your problem](index.md).
 
+## Custom DSN
+
+When [using SQLite](../faq.md#should-i-use-sqlite-mariadb-or-mysql), you can use the [`PHOTOPRISM_DATABASE_DSN`](../config-options.md#database-connection) configuration option to specify a custom database filename and [additional parameters](https://pkg.go.dev/github.com/mattn/go-sqlite3#readme-connection-string):
+
+- https://pkg.go.dev/github.com/mattn/go-sqlite3#readme-connection-string
+
+Otherwise, the default [Data Source Name (DSN)](https://github.com/photoprism/photoprism/blob/develop/internal/config/config_db.go) is `index.db?_busy_timeout=5000`, which instructs the SQLite database driver to store the database in `storage/index.db` and wait the [specified amount of time](https://www.sqlite.org/c3ref/busy_timeout.html) when a table is locked.
+
+[Learn more ›](https://pkg.go.dev/github.com/mattn/go-sqlite3#readme-connection-string)
+
 ## Bad Performance
 
 If you only have few pictures, concurrent users, and CPU cores, [SQLite](https://www.sqlite.org/) may seem faster compared to full-featured database servers like [MariaDB](https://mariadb.com/). This changes as the index grows and the number of concurrent accesses increases. While MariaDB is optimized for high concurrency, SQLite frequently locks its index so that other operations have to wait. In the worst case, this can lead to locking errors and timeouts during indexing - especially in combination [with a slow disk](performance.md#storage) or [network storage](docker.md#network-storage).

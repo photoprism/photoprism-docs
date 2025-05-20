@@ -54,6 +54,32 @@ If this doesn't help, check the [Docker Logs](docker.md#viewing-logs) for messag
 - [ ] You have to resort to [alternative Docker images](../raspberry-pi.md#older-armv7-based-devices) to run MariaDB on ARMv7-based devices and those with a 32-bit operating system
 - [ ] You may find a solution in the official [MariaDB Docker Image FAQ](https://mariadb.com/kb/en/docker-official-image-frequently-asked-questions/)
 
+## Custom DSN<a id="unsupported-scan"></a><a id="dsn"></a>
+
+You may encounter errors similar to this when starting your instance or restoring a backup if you have manually configured a MariaDB [Data Source Name (DSN)](https://pkg.go.dev/github.com/go-sql-driver/mysql#readme-dsn-data-source-name), without [adding the necessary parameters](https://pkg.go.dev/github.com/go-sql-driver/mysql#readme-parameters) such as `parseTime=true` to the [`PHOTOPRISM_DATABASE_DSN`](../config-options.md#database-connection) environment variable or the `--database-dsn` command flag:
+
+```
+sql: Scan error on column index 5 unsupported Scan,
+storing driver.Value type []uint8 into type *time.Time
+```
+
+To avoid this issue, we recommend using the [following configuration options](../config-options.md#database-connection) to specify the MariaDB database name, server, user, and password:
+
+- `PHOTOPRISM_DATABASE_NAME`
+- `PHOTOPRISM_DATABASE_SERVER`
+- `PHOTOPRISM_DATABASE_USER`
+- `PHOTOPRISM_DATABASE_PASSWORD`
+
+This will automatically generate a compatible [Data Source Name (DSN)](https://pkg.go.dev/github.com/go-sql-driver/mysql#readme-dsn-data-source-name) for connecting to your MariaDB database server.
+
+Since the [connection parameters](https://github.com/photoprism/photoprism/blob/develop/internal/config/config_db.go) may change in future versions, manually setting the DSN is not recommended unless it is for testing purposes or to [meet specific requirements](https://github.com/photoprism/photoprism/issues/4998#issuecomment-2884506182). If you need to set it manually, the [following parameters](https://pkg.go.dev/github.com/go-sql-driver/mysql#readme-parameters) should be included at the end:
+
+```
+?charset=utf8mb4,utf8&collation=utf8mb4_unicode_ci&parseTime=true&timeout=60s
+```
+
+When [using SQLite](sqlite.md), you can use the Data Source Name (DSN) [configuration option](../config-options.md#database-connection) to specify a custom database filename. [Learn more ›](sqlite.md#custom-dsn)
+
 ## Wrong Password
 
 If the password you are using was specified in a `compose.yaml` or `docker-compose.yml` file and contains one or more `$` characters, these [must be escaped with `$$`](../../developer-guide/technologies/yaml.md#dollar-signs) (a double dollar sign) so that, for example, `"compo$e"` becomes `"compo$$e"`:
@@ -70,26 +96,6 @@ services:
 Also note that you **cannot change the database password** with `MARIADB_PASSWORD` after MariaDB has been started for the first time.
 
 In this case, you can either delete the database storage folder and restart the database service or follow the instructions under [Lost Root Password](#lost-root-password).
-
-## Unsupported Scan
-
-You may encounter errors similar to this when starting your instance or restoring a backup if you have manually configured the MariaDB database connection DSN, without [adding the necessary parameters](https://github.com/go-sql-driver/mysql?tab=readme-ov-file#parameters) such as `parseTime=true` to the `PHOTOPRISM_DATABASE_DSN` environment variable or the `--database-dsn` command flag:
-
-```
-sql: Scan error on column index 5 unsupported Scan,
-storing driver.Value type []uint8 into type *time.Time
-```
-
-To avoid this issue, please use the [following configuration options](https://docs.photoprism.app/getting-started/config-options/#database-connection) to specify the MariaDB database name, server, user, and password:
-
-- `PHOTOPRISM_DATABASE_NAME`
-- `PHOTOPRISM_DATABASE_SERVER`
-- `PHOTOPRISM_DATABASE_USER`
-- `PHOTOPRISM_DATABASE_PASSWORD`
-
-This will automatically generate a compatible Data Source Name (DSN) for connecting to your MariaDB database server. Since the required parameters may change in future versions, we recommend against setting the DSN manually unless it is for testing or development purposes. If you do need to set it manually, it should include the parameters `charset=utf8mb4,utf8&collation=utf8mb4_unicode_ci&parseTime=true`.
-
-Users of [SQLite](sqlite.md) can specify the filename directly with the DSN config option, if necessary.
 
 ## Bad Performance
 

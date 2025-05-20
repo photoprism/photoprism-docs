@@ -78,7 +78,9 @@ Since the [connection parameters](https://github.com/photoprism/photoprism/blob/
 ?charset=utf8mb4,utf8&collation=utf8mb4_unicode_ci&parseTime=true&timeout=60s
 ```
 
-When [using SQLite](sqlite.md), you can use the Data Source Name (DSN) [configuration option](../config-options.md#database-connection) to specify a custom database filename. [Learn more ›](sqlite.md#custom-dsn)
+Note that it is not possible to set a custom DSN for MariaDB when a database server is configured at the same time, as the database server setting takes precedence.
+
+When [using SQLite](sqlite.md), the DSN configuration option allows you to specify the database filename and custom parameters. [Learn more ›](sqlite.md#custom-dsn)
 
 ## Wrong Password
 

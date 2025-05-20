@@ -87,7 +87,7 @@ To avoid this issue, please use the [following configuration options](https://do
 - `PHOTOPRISM_DATABASE_USER`
 - `PHOTOPRISM_DATABASE_PASSWORD`
 
-This will automatically generate a compatible Data Source Name (DSN) for connecting to your MariaDB database server. Since the required parameters may change in future versions, we recommend never setting the DSN manually unless it is for testing or development purposes.
+This will automatically generate a compatible Data Source Name (DSN) for connecting to your MariaDB database server. Since the required parameters may change in future versions, we recommend against setting the DSN manually unless it is for testing or development purposes. If you do need to set it manually, it should include the parameters `charset=utf8mb4,utf8&collation=utf8mb4_unicode_ci&parseTime=true`.
 
 Users of [SQLite](sqlite.md) can specify the filename directly with the DSN config option, if necessary.
 

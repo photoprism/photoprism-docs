@@ -191,6 +191,7 @@ If you [followed our step-by-step guide](../../user-guide/sync/webdav.md) and st
 - [ ] As a Windows user, you may need to [change the basic authentication level](windows.md#connecting-via-webdav)
 - [ ] Your browser cannot communicate properly with the server, e.g. because a [reverse proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
 - [ ] You are connected to the wrong server, VPN, or a DNS record has not been updated yet
+- [ ] An upload path has been assigned to your user account, limiting WebDAV access to that specific path only (check user settings or remove the upload path restriction)
 
 ### Missing Pictures ###
 

@@ -192,6 +192,8 @@ If you [followed our step-by-step guide](../../user-guide/sync/webdav.md) and st
 - [ ] Your browser cannot communicate properly with the server, e.g. because a [reverse proxy](../proxies/nginx.md), VPN, or CDN is configured incorrectly (check its configuration and try without)
 - [ ] You are connected to the wrong server, VPN, or a DNS record has not been updated yet
 - [ ] An upload path has been assigned to your user account, limiting WebDAV access to that specific path only (check user settings or remove the upload path restriction)
+- [ ] If an upload path is set, you need to synchronize with `.../originals/upload-path/` when using WebDAV to add files to the originals folder
+- [ ] When using WebDAV to sync to the import folder, you need to manually create a folder with the same name as the upload path in the import folder (if an upload path is configured)
 
 ### Missing Pictures ###
 

@@ -5,7 +5,6 @@ As an addition to our platform-independent [Progressive Web App (PWA)](https://d
 | Name                                              | Platform     | Developer                                               | License                                                          | Download                                                                                                             |
 |---------------------------------------------------|--------------|---------------------------------------------------------|------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
 | [Gallery for PhotoPrism](#gallery-for-photoprism) | Android      | [Oleg Koretsky](https://github.com/Radiokot)            | [GPL 3.0](https://github.com/Radiokot/photoprism-android-client) | [Google Play](https://link.photoprism.app/gallery-app), [F-Droid](https://link.photoprism.app/gallery-fdroid)        |
-| [Photo Map](#photo-map)                           | Android      | [Denny Weinberg](https://levionsoftware.com/contact/)   | Proprietary                                                      | [Google Play](https://link.photoprism.app/photomap)                                                                  |
 | [PhotoSync](#photosync)                           | iOS, Android | [touchbyte GmbH](https://link.photoprism.app/photosync) | Proprietary                                                      | [App Store](https://link.photoprism.app/photosync-ios), [Google Play](https://link.photoprism.app/photosync-android) |
 | [Photoflare](#photoflare)                         | iOS          | Chris Wunsch                                            | n/a                                                              | [TestFlight](https://testflight.apple.com/join/MMA6iQDl)                                                             |
 | [Prismatic](#prismatic)                           | iOS          | [Chris Li](https://github.com/automactic)               | n/a                                                              | [TestFlight](https://testflight.apple.com/join/vzNQjaym)                                                             |
@@ -18,14 +17,6 @@ With this [Android app](https://github.com/Radiokot/photoprism-android-client), 
 <div class="appstore-buttons">
     <a href="https://link.photoprism.app/gallery-app"><img src="https://dl.photoprism.app/img/badges/badge_playstore.svg" alt="Google Play Store" width="135"></a>
     <a href="https://link.photoprism.app/gallery-fdroid"><img src="https://dl.photoprism.app/img/badges/badge_fdroid.svg" alt="Get it on F-Droid" width="135"></a>
-</div>
-
-## Photo Map
-
-[Photo Map](https://levionsoftware.com/) is a perfect Android app for travelers: It displays all your pictures on an interactive world map, so you never lose track of when and where you took them. With the latest update, videos are now played directly in the app. Also, the number of photos that can be displayed is no longer limited. [Learn more ›](https://levionsoftware.com/)
-
-<div class="appstore-buttons">
-    <a href="https://link.photoprism.app/photomap"><img src="https://dl.photoprism.app/img/badges/badge_playstore.svg" alt="Google Play Store" width="135"></a>
 </div>
 
 ## PhotoSync

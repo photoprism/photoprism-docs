@@ -22,6 +22,9 @@
     !!! info ""
         You can [configure](../settings/library.md#download) which files should be downloaded for each photo.
 
+    !!! tip "Keyboard Shortcut"
+        In the fullscreen viewer, you can quickly download files by pressing **Ctrl + D**.
+
 === "From Edit Dialog"
     1. Open the photo's  [*edit dialog*](edit.md)
     2. Open the *Files Tab*

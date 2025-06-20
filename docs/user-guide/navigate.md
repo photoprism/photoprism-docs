@@ -15,9 +15,15 @@ Click on the links to switch between different pages like Photos, Albums, Places
 
 Located on the top. Find photos or videos by entering search terms like `cats` and filters like `label:cat`. A list with possible search filters can be found [here](search/filters.md).
 
+!!! tip "Keyboard Shortcut"
+    You can quickly focus the search field by pressing **Ctrl + F**.
+
 #### 3. Reload Button ####
 
 :material-refresh: reloads search results without reloading the full page.
+
+!!! tip "Keyboard Shortcut"
+    You can quickly refresh the page by pressing **Ctrl + R**.
 
 #### 4. View Button ####
 
@@ -27,9 +33,15 @@ Choose your preferred view mode by clicking on it (cards: :material-view-column:
 
 :material-cloud-upload: opens the upload dialog. Available on most pages, unless read-only mode is enabled or upload is disabled in [Settings](settings/general.md).
 
+!!! tip "Keyboard Shortcut"
+    You can quickly open the upload dialog by pressing **Ctrl + U**.
+
 #### 6. Expanded Toolbar ####
 
 The expanded toolbar contains additional options and search filters for country, year, month, camera, color, and category.
+
+!!! tip "Keyboard Shortcut"
+    You can open the expanded toolbar by pressing **Shift + Ctrl + F**.
 
 #### Context Menu ####
 

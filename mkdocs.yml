@@ -72,6 +72,7 @@ nav:
     - Installation: user-guide/index.md
     - First Steps 👣: user-guide/first-steps.md
     - User Interface: user-guide/navigate.md
+    - Keyboard Shortcuts: user-guide/organize/keyboard-shortcuts.md
     # - Setting up: user-guide/setup.md
     - Media Library:
       - Introduction: user-guide/library/index.md
@@ -113,7 +114,6 @@ nav:
       - Folders: user-guide/organize/folders.md
       - Panoramas: user-guide/organize/panoramas.md
       - Scans: user-guide/organize/scans.md
-      - Keyboard Shortcuts: user-guide/organize/keyboard-shortcuts.md
     - Sharing:
       - Introduction: user-guide/share/index.md
       - Uploading Files: user-guide/share/services-share.md

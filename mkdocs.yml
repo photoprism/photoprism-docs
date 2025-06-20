@@ -72,6 +72,7 @@ nav:
     - Installation: user-guide/index.md
     - First Steps 👣: user-guide/first-steps.md
     - User Interface: user-guide/navigate.md
+    - Keyboard Shortcuts: user-guide/organize/keyboard-shortcuts.md
     # - Setting up: user-guide/setup.md
     - Media Library:
       - Introduction: user-guide/library/index.md

@@ -12,6 +12,8 @@ When you click on a title in the cards view or :material-pencil: in the full scr
 
     ![Screenshot](img/edit-open-3-2502.jpg){ class="shadow" }
 
+    !!! tip "Keyboard Shortcut"
+        In the fullscreen viewer, you can quickly open the edit dialog by pressing **Ctrl + E**.
 === "Context Menu"
      1. Select one or multiple pictures
      2. Click on context menu

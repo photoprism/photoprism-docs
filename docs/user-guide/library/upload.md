@@ -1,5 +1,8 @@
 # File Upload Using the Web UI #
 
+!!! tip "Keyboard Shortcut"
+    You can quickly open the upload dialog by pressing **Ctrl + U** from anywhere in the application.
+
 === "From Toolbar"
 
     1. Click :material-dots-vertical: in the upper right corner
@@ -7,13 +10,13 @@
 
          ![Screenshot](img/upload-3-2503.jpg){ class="shadow" }
 
-    2. In case you want to upload the files directly to an album select one
+    3. In case you want to upload the files directly to an album select one
 
-    3. Click *Browse*
+    4. Click *Browse*
 
          ![Screenshot](img/upload-to-album-2503.jpg){ class="shadow" }
 
-    4. Select files
+    5. Select files
 
 
 

@@ -17,7 +17,7 @@ What's new?
 - Videos: [Added config options for transcoding preset, quality, and device](https://github.com/photoprism/photoprism/issues/4969)
 - Videos: [Fixed playback when using QSV to transcode HEVC files](https://github.com/photoprism/photoprism/issues/5040)
 - Upload: [Improved token used to distinguish simultaneous uploads](https://github.com/photoprism/photoprism/issues/4970) by [@raxod502](https://github.com/raxod502)
-- CLI: [Media can be downloaded and imported directly from a URL](https://github.com/photoprism/photoprism/issues/4982)
+- CLI: [Added `photoprism dl` command to import media from a URL](https://github.com/photoprism/photoprism/issues/4982)
 - API: [Authorized clients are allowed to create album share links](https://github.com/photoprism/photoprism/issues/4973)
 - API: [Added content-type header to on metrics endpoint](https://github.com/photoprism/photoprism/pull/5042) by [@brandon1024](https://github.com/brandon1024)
 - Security: [Updated Go to v1.24.4, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.4) 

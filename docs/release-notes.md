@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250619-087594161</span>
+<span class="build">Build 250624-e201e2784</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. [Learn more ›](getting-started/updates.md#development-preview)
 
@@ -12,12 +12,14 @@ What's new?
 
 - AI: [Added Ollama and Data URL support in Vision Service](https://github.com/photoprism/photoprism-vision/pull/5) by [@sgflt](https://github.com/sgflt)
 - UX: [Optimized thumbnail rendering performance in result views](https://github.com/photoprism/photoprism/issues/4985)
+- Viewer: [Fixed timezone handling in the information sidebar](https://github.com/photoprism/photoprism/pull/5015) by [@omerdduran](https://github.com/QyuBee)
 - Motion Photos: [Fixed playback of videos embedded in HEIF files](https://github.com/photoprism/photoprism/issues/5027)
 - Videos: [Added config options for transcoding preset, quality, and device](https://github.com/photoprism/photoprism/issues/4969)
 - Videos: [Fixed playback when using QSV to transcode HEVC files](https://github.com/photoprism/photoprism/issues/5040)
 - Upload: [Improved token used to distinguish simultaneous uploads](https://github.com/photoprism/photoprism/issues/4970) by [@raxod502](https://github.com/raxod502)
 - CLI: [Media can be downloaded and imported directly from a URL](https://github.com/photoprism/photoprism/issues/4982)
 - API: [Authorized clients are allowed to create album share links](https://github.com/photoprism/photoprism/issues/4973)
+- API: [Added content-type header to on metrics endpoint](https://github.com/photoprism/photoprism/pull/5042) by [@brandon1024](https://github.com/brandon1024)
 - Security: [Updated Go to v1.24.4, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.4) 
 - Translations: [Fixed and updated Japanese](https://github.com/photoprism/photoprism/discussions/4980)
 

@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250624-4dc703c85</span>
+<span class="build">Build 250625-8cef088bb</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. [Learn more ›](getting-started/updates.md#development-preview)
 
@@ -13,6 +13,7 @@ What's new?
 - AI: [Added Ollama and Data URL support in Vision Service](https://github.com/photoprism/photoprism-vision/pull/5) by [@sgflt](https://github.com/sgflt)
 - UX: [Optimized thumbnail rendering performance in result views](https://github.com/photoprism/photoprism/issues/4985)
 - UX: [Added "Delete Album" action to the album toolbar menu](https://github.com/photoprism/photoprism/issues/4994) by [@omerdduran](https://github.com/omerdduran)
+- UX: [Location can be selected on a map when editing metadata](https://github.com/photoprism/photoprism/issues/465#issuecomment-3002430996) by [@omerdduran](https://github.com/omerdduran)
 - Viewer: [Fixed timezone handling in the information sidebar](https://github.com/photoprism/photoprism/pull/5015) by [@omerdduran](https://github.com/omerdduran)
 - Motion Photos: [Fixed playback of videos embedded in HEIF files](https://github.com/photoprism/photoprism/issues/5027)
 - Videos: [Added config options for transcoding preset, quality, and device](https://github.com/photoprism/photoprism/issues/4969)

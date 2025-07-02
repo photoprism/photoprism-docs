@@ -22,7 +22,7 @@ What's new?
 - Videos: [Fixed playback when using QSV to transcode HEVC files](https://github.com/photoprism/photoprism/issues/5040)
 - Upload: [Improved token used to distinguish simultaneous uploads](https://github.com/photoprism/photoprism/issues/4970) by [@raxod502](https://github.com/raxod502)
 - Metadata: [Updated list of unwanted descriptions](https://github.com/photoprism/photoprism/pull/5078) by [@srett](https://github.com/srett)
-- Metadata: [Fixed an issue that prevented changing the date to "Unknown" in February](https://github.com/photoprism/photoprism/issues/5038)
+- Metadata: [Fixed an issue that prevented changing the day to "Unknown" in February](https://github.com/photoprism/photoprism/issues/5038)
 - Metadata: [Improved scanner detection based on device make and model](https://github.com/photoprism/photoprism/issues/5073)
 - Labels: [Updated Animal and Snow category assignments](https://github.com/photoprism/photoprism/issues/5057)
 - CLI: [Added `photoprism dl` command to import media from a URL](https://github.com/photoprism/photoprism/issues/4982)

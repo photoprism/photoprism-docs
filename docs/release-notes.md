@@ -27,7 +27,7 @@ What's new?
 - CLI: [Added `photoprism dl` command to import media from a URL](https://github.com/photoprism/photoprism/issues/4982)
 - API: [Added a Content-Type header to the metrics endpoint](https://github.com/photoprism/photoprism/pull/5042) by [@brandon1024](https://github.com/brandon1024)
 - API: [Authorized clients are allowed to create album share links](https://github.com/photoprism/photoprism/issues/4973)
-- SQLite: [Fixed "too many SQL variables" error when updating the index](https://github.com/photoprism/photoprism/issues/3742) by [@keif888](https://github.com/keif888)
+- SQLite: [Fixed "'too many SQL variables'" error on index updates](https://github.com/photoprism/photoprism/issues/3742) by [@keif888](https://github.com/keif888)
 - Security: [Updated Go to v1.24.4, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.4) 
 - Translations: [Updated Arabic, French, German, and Japanese](https://github.com/photoprism/photoprism/discussions/4980)
 

@@ -29,7 +29,10 @@ What's new?
 - API: [Authorized clients are allowed to create album share links](https://github.com/photoprism/photoprism/issues/4973)
 - API: [Added content-type header to on metrics endpoint](https://github.com/photoprism/photoprism/pull/5042) by [@brandon1024](https://github.com/brandon1024)
 - Security: [Updated Go to v1.24.4, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.4) 
-- Translations: [Fixed and updated Japanese](https://github.com/photoprism/photoprism/discussions/4980)
+- Translations: [Updated Arabic, French, German, and Japanese](https://github.com/photoprism/photoprism/discussions/4980)
+
+!!! info ""
+    Missing [user interface translations](https://translate.photoprism.app/projects/photoprism/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.
 
 ### April 26, 2025
 <span class="build">Build 250426-27ec7a128</span>
@@ -42,9 +45,6 @@ What's new?
 
 - Videos: [Fixed hardware driver installation for Intel QSV](https://github.com/photoprism/photoprism/issues/4967)
 - Setup: [Fixed .deb and .rpm installation package builds](https://github.com/photoprism/photoprism/issues/4968)
-
-!!! info ""
-    Missing [user interface translations](https://translate.photoprism.app/projects/photoprism/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.
 
 ### April 25, 2025
 <span class="build">Build 250425-21ddba459</span>

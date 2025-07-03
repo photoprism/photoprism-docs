@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250703-395ee8426</span>
+<span class="build">Build 250703-73374cb32</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. [Learn more ›](getting-started/updates.md#development-preview)
 
@@ -26,6 +26,7 @@ What's new?
 - Metadata: [Improved scanner detection based on device make and model](https://github.com/photoprism/photoprism/issues/5073)
 - Metadata: [Fixed an issue that prevented changing the day to "Unknown" in February](https://github.com/photoprism/photoprism/issues/5038)
 - CLI: [Added `photoprism dl` command to import media from a URL](https://github.com/photoprism/photoprism/issues/4982)
+- CLI: [Fixed an error in the backup command when a custom filename was specified](https://github.com/photoprism/photoprism/issues/5088)
 - API: [Added a Content-Type header to the metrics endpoint](https://github.com/photoprism/photoprism/pull/5042) by [@brandon1024](https://github.com/brandon1024)
 - API: [Authorized clients are allowed to create album share links](https://github.com/photoprism/photoprism/issues/4973)
 - SQLite: [Fixed "'too many SQL variables'" error on index updates](https://github.com/photoprism/photoprism/issues/3742) by [@keif888](https://github.com/keif888)

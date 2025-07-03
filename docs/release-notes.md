@@ -26,7 +26,7 @@ What's new?
 - Metadata: [Improved scanner detection based on device make and model](https://github.com/photoprism/photoprism/issues/5073)
 - Metadata: [Fixed an issue that prevented changing the day to "Unknown" in February](https://github.com/photoprism/photoprism/issues/5038)
 - CLI: [Added `photoprism dl` command to import media from a URL](https://github.com/photoprism/photoprism/issues/4982)
-- CLI: [Fixed an error in the backup command when a custom filename was specified](https://github.com/photoprism/photoprism/issues/5088)
+- CLI: [Fixed an error in the backup command when a custom filename is specified](https://github.com/photoprism/photoprism/issues/5088)
 - API: [Added a Content-Type header to the metrics endpoint](https://github.com/photoprism/photoprism/pull/5042) by [@brandon1024](https://github.com/brandon1024)
 - API: [Authorized clients are allowed to create album share links](https://github.com/photoprism/photoprism/issues/4973)
 - SQLite: [Fixed "'too many SQL variables'" error on index updates](https://github.com/photoprism/photoprism/issues/3742) by [@keif888](https://github.com/keif888)

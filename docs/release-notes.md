@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250702-24b7b03f7</span>
+<span class="build">Build 250703-55704fea5</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. [Learn more ›](getting-started/updates.md#development-preview)
 
@@ -14,6 +14,7 @@ What's new?
 - UX: [Optimized thumbnail rendering performance in result views](https://github.com/photoprism/photoprism/issues/4985)
 - UX: [Added "Delete Album" action to the album toolbar menu](https://github.com/photoprism/photoprism/issues/4994) by [@omerdduran](https://github.com/omerdduran)
 - UX: [Added "Adjust Location" dialog to set coordinates on a map](https://github.com/photoprism/photoprism/issues/465) by [@omerdduran](https://github.com/omerdduran)
+- Places: [Added a config option to set the language of location details](https://github.com/photoprism/photoprism/issues/883)
 - Viewer: [Fixed timezone handling in the information sidebar](https://github.com/photoprism/photoprism/pull/5015) by [@omerdduran](https://github.com/omerdduran)
 - Viewer: [Seeking disables looping when playing a short video](https://github.com/photoprism/photoprism/commit/1709f708edbd44ea8dda02cc3f343330f7779836)
 - Motion Photos: [Fixed playback of videos embedded in HEIF files](https://github.com/photoprism/photoprism/issues/5027)

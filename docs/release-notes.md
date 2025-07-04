@@ -6,7 +6,9 @@
 ### Development Preview
 <span class="build">Build 250704-595b116ae</span>
 
-Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. [Learn more ›](getting-started/updates.md#development-preview)
+<!-- Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. [Learn more ›](getting-started/updates.md#development-preview) -->
+
+This release adds support for using [Ollama models in the Vision AI service](https://github.com/photoprism/photoprism-vision/pull/5), improves thumbnail performance, and [introduces an "Adjust Location" dialog](https://github.com/photoprism/photoprism/issues/465) for setting photo coordinates on a map. Users can now [delete albums from the toolbar](https://github.com/photoprism/photoprism/issues/4994) and customize the [language of location details](https://github.com/photoprism/photoprism/issues/883). Video and metadata handling have been refined, with updates to [transcoding](https://github.com/photoprism/photoprism/issues/4969), scanner detection, and [CLI tools](https://github.com/photoprism/photoprism/issues/4982). A fix for SQLite index updates is also included. [Batch editing](https://github.com/photoprism/photoprism/issues/271) features are in final development and will be available in an upcoming release.
 
 What's new?
 

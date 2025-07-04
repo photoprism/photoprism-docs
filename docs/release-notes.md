@@ -12,8 +12,8 @@ This release adds support for using [Ollama models in the Vision AI service](htt
 
 What's new?
 
-- AI: [Added Ollama and Data URL support in Vision Service](https://github.com/photoprism/photoprism-vision/pull/5) by [@sgflt](https://github.com/sgflt)
-- UX: [Optimized thumbnail rendering performance in result views](https://github.com/photoprism/photoprism/issues/4985)
+- AI: [Added Ollama model and data URL support to the Vision Service](https://github.com/photoprism/photoprism-vision/pull/5) by [@sgflt](https://github.com/sgflt)
+- UX: [Optimized thumbnail rendering performance in result views](https://github.com/photoprism/photoprism/issues/4985) by [@lastzero](https://github.com/lastzero)
 - UX: [Added "Delete Album" action to the album toolbar menu](https://github.com/photoprism/photoprism/issues/4994) by [@omerdduran](https://github.com/omerdduran)
 - UX: [Added "Adjust Location" dialog to set coordinates on a map](https://github.com/photoprism/photoprism/issues/465) by [@omerdduran](https://github.com/omerdduran)
 - Places: [Added a config option to set the language of location details](https://github.com/photoprism/photoprism/issues/883)

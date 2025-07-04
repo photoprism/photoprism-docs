@@ -7,7 +7,7 @@
 
 | Environment                                      | CLI Flag          | Default                      | Description                                                                                         |
 |:-------------------------------------------------|:------------------|:-----------------------------|:----------------------------------------------------------------------------------------------------|
-| PHOTOPRISM_AUTH_MODE                             | --auth-mode       | password                     | authentication `MODE` (public[^2], password)                                                            |
+| PHOTOPRISM_AUTH_MODE                             | --auth-mode       | password                     | authentication `MODE` (public[^2], password)                                                        |
 | PHOTOPRISM_ADMIN_USER, PHOTOPRISM_ADMIN_USERNAME | --admin-user      | admin                        | `USERNAME` of the superadmin account that is created on first startup                               |
 | PHOTOPRISM_ADMIN_PASSWORD                        | --admin-password  |                              | initial `PASSWORD` of the superadmin account (8-72 characters)                                      |
 | PHOTOPRISM_PASSWORD_LENGTH                       | --password-length | 8                            | minimum password `LENGTH` in characters                                                             |
@@ -154,7 +154,7 @@
 | PHOTOPRISM_CORS_HEADERS     | --cors-headers     | Accept, Accept-Ranges, Content-Disposition, Content-Encoding, Content-Range, Location | one or more `HEADERS` that browsers should see when performing a cross-origin request                                        |
 | PHOTOPRISM_CORS_METHODS     | --cors-methods     | GET, HEAD, OPTIONS                                                                    | one or more `METHODS` that may be used when performing a cross-origin request                                                |
 
-### Proxy Servers
+### Proxy Server
 
 | Environment                     | CLI Flag               | Default             | Description                                                                                             |
 |:--------------------------------|:-----------------------|:--------------------|:--------------------------------------------------------------------------------------------------------|

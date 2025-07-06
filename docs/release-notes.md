@@ -21,7 +21,7 @@ What's new?
 - Viewer: [Seeking disables looping when playing a short video](https://github.com/photoprism/photoprism/commit/1709f708edbd44ea8dda02cc3f343330f7779836)
 - Videos: [Added config options for transcoding preset, quality, and device](https://github.com/photoprism/photoprism/issues/4969)
 - Videos: [Fixed playback when using QSV to transcode HEVC files](https://github.com/photoprism/photoprism/issues/5040)
-- Videos: [Short videos up to 3s long are no longer displayed as Live Photos](https://github.com/photoprism/photoprism/issues/5089)
+- Videos: [Short videos up to 3s are no longer displayed as Live Photos](https://github.com/photoprism/photoprism/issues/5089)
 - Motion Photos: [Fixed playback of videos embedded in HEIF files](https://github.com/photoprism/photoprism/issues/5027)
 - Metadata: [Updated list of unwanted descriptions](https://github.com/photoprism/photoprism/pull/5078) by [@srett](https://github.com/srett)
 - Metadata: [Improved scanner detection based on device make and model](https://github.com/photoprism/photoprism/issues/5073)

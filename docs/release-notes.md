@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250704-595b116ae</span>
+<span class="build">Build 250706-cedc8799d</span>
 
 <!-- Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. [Learn more ›](getting-started/updates.md#development-preview) -->
 
@@ -19,9 +19,10 @@ What's new?
 - Places: [Added a config option to set the language of location details](https://github.com/photoprism/photoprism/issues/883)
 - Viewer: [Fixed timezone handling in the information sidebar](https://github.com/photoprism/photoprism/pull/5015) by [@omerdduran](https://github.com/omerdduran)
 - Viewer: [Seeking disables looping when playing a short video](https://github.com/photoprism/photoprism/commit/1709f708edbd44ea8dda02cc3f343330f7779836)
-- Motion Photos: [Fixed playback of videos embedded in HEIF files](https://github.com/photoprism/photoprism/issues/5027)
 - Videos: [Added config options for transcoding preset, quality, and device](https://github.com/photoprism/photoprism/issues/4969)
 - Videos: [Fixed playback when using QSV to transcode HEVC files](https://github.com/photoprism/photoprism/issues/5040)
+- Videos [Short videos up to 3s long are no longer displayed as Live Photos](https://github.com/photoprism/photoprism/issues/5089)
+- Motion Photos: [Fixed playback of videos embedded in HEIF files](https://github.com/photoprism/photoprism/issues/5027)
 - Upload: [Improved token used to distinguish simultaneous uploads](https://github.com/photoprism/photoprism/issues/4970) by [@raxod502](https://github.com/raxod502)
 - Labels: [Updated Animal and Snow category assignments](https://github.com/photoprism/photoprism/issues/5057)
 - Metadata: [Updated list of unwanted descriptions](https://github.com/photoprism/photoprism/pull/5078) by [@srett](https://github.com/srett)

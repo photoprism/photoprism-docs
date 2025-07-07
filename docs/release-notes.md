@@ -7,6 +7,10 @@
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. [Learn more ›](getting-started/updates.md#development-preview)
 
+What's new?
+
+- Index: [Selecting "Complete Rescan" forces a refresh of the picture media types](https://github.com/photoprism/photoprism/issues/5096)
+
 ### July 7, 2025
 <span class="build">Build 250707-d28b3101e</span>
 

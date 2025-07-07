@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250706-5ad7f6318</span>
+<span class="build">Build 250707-8fcc2a232</span>
 
 <!-- Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. [Learn more ›](getting-started/updates.md#development-preview) -->
 
@@ -21,8 +21,8 @@ What's new?
 - Viewer: [Seeking disables looping when playing a short video](https://github.com/photoprism/photoprism/commit/1709f708edbd44ea8dda02cc3f343330f7779836)
 - Videos: [Added config options for transcoding preset, quality, and device](https://github.com/photoprism/photoprism/issues/4969)
 - Videos: [Fixed playback when using QSV to transcode HEVC files](https://github.com/photoprism/photoprism/issues/5040)
-- Videos: [Short videos up to 3s are no longer displayed as Live Photos](https://github.com/photoprism/photoprism/issues/5089)
-- Motion Photos: [Fixed playback of videos embedded in HEIF files](https://github.com/photoprism/photoprism/issues/5027)
+- Videos: [Short videos up to 3 seconds are no longer classified as Live Photos](https://github.com/photoprism/photoprism/issues/5089)
+- Motion Photos: [Fixed playback of videos embedded in Samsung HEIF files](https://github.com/photoprism/photoprism/issues/5027)
 - Metadata: [Updated list of unwanted descriptions](https://github.com/photoprism/photoprism/pull/5078) by [@srett](https://github.com/srett)
 - Metadata: [Improved scanner detection based on device make and model](https://github.com/photoprism/photoprism/issues/5073)
 - Metadata: [Fixed an issue that prevented changing the day to "Unknown" in February](https://github.com/photoprism/photoprism/issues/5038)

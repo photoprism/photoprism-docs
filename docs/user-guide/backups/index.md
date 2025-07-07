@@ -14,27 +14,33 @@ We recommend that you manually create a full backup of all files, including your
 
 ## Backup Command
 
-You can run the following command [in a terminal](../../getting-started/docker-compose.md#command-line-interface) to manually create a new MariaDB or SQLite database backup:
+If you are using Docker Compose, you can run the following command [in a terminal](../../getting-started/docker-compose.md#command-line-interface) to manually create a new MariaDB or SQLite database backup:
 
 ```
 docker compose exec photoprism photoprism backup -i -f
 ```
 
-If you are using Podman on a Red Hat-compatible Linux distribution:
+By default, a backup is created in `storage/backup/mysql/[YYYY-MM-DD].sql`. Omit the `-f` flag if you do not want to overwrite existing files. A custom backup base folder can be configured with [`PHOTOPRISM_BACKUP_PATH`](../../getting-started/config-options.md#storage)
 
-```
-podman-compose exec photoprism photoprism backup -i -f
-```
-
-By default, a backup is created in `storage/backup/mysql/[YYYY-MM-DD].sql`. A custom backup base folder can be configured with [`PHOTOPRISM_BACKUP_PATH`](../../getting-started/config-options.md#storage)
-
-Omit the `-f` flag if you do not want to overwrite existing files. You can also specify a custom filename as an argument (or `-` to write the SQL dump to [stdout](../../getting-started/advanced/backups.md)):
-
-```
-docker compose exec photoprism photoprism backup -i [filename]
-```
+If you are using Podman on a Red Hat-compatible Linux distribution, exchange `docker compose` for `podman-compose`.
 
 Alternative ways to create SQL dumps from SQLite are shown in our [advanced backup guide](../../getting-started/advanced/backups.md#sqlite-backups).
+
+### Custom file names
+
+You can specify a custom filename as an argument to dump the database to a file of your choice (using the `-f` flag to overwrite existing files):
+
+```
+docker compose exec photoprism photoprism backup -i my_custom_dump.sql
+```
+
+The file name argument is interpreted as an absolute path, so the example above will create a file `/photoprism/my_custom_dump.sql` inside the container volume. For example, to store the file in the default backup directory:
+
+```
+docker compose exec photoprism photoprism backup -i /photoprism/storage/backup/mysql/my_custom_dump.sql
+```
+
+You can also use `-` as file name to write the SQL dump to [stdout](../../getting-started/advanced/backups.md). 
 
 !!! tldr ""
     Note that our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible distributions.

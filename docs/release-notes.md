@@ -4,9 +4,11 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250707-d28b3101e</span>
 
-<!-- Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. [Learn more ›](getting-started/updates.md#development-preview) -->
+Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. [Learn more ›](getting-started/updates.md#development-preview)
+
+### July 7, 2025
+<span class="build">Build 250707-d28b3101e</span>
 
 This release adds support for using [Ollama models in the Vision AI service](https://github.com/photoprism/photoprism-vision/pull/5), improves search performance, and [introduces an "Adjust Location" dialog](https://github.com/photoprism/photoprism/issues/465) for setting photo coordinates on a map. Users can now [delete albums from the toolbar](https://github.com/photoprism/photoprism/issues/4994) and customize the [language of location details](https://github.com/photoprism/photoprism/issues/883). Video and metadata handling have been refined, with updates to [transcoding](https://github.com/photoprism/photoprism/issues/4969), scanner detection, and [CLI tools](https://github.com/photoprism/photoprism/issues/4982). A fix for [SQLite index updates](https://github.com/photoprism/photoprism/issues/3742) is also included. [Batch editing](https://github.com/photoprism/photoprism/issues/271) features are in final development and will be available in an upcoming release. As always, a big thank you to [everyone who contributed](https://docs.photoprism.app/developer-guide/) and [helped with testing](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! :octicons-heart-fill-24:{ .heart .purple }
 

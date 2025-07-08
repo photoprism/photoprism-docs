@@ -25,7 +25,7 @@ Go to *Albums* and open the *album edit dialog*
 === "Album Toolbar"
        Open album, click :material-dots-vertical: and then click :material-pencil:
     
-       ![Screenshot](img/album-edit-toolbar-2503.jpg){ class="shadow" }
+       ![Screenshot](img/album-edit-toolbar-2507.jpg){ class="shadow" }
 
 Edit album details and click *save*
 
@@ -72,3 +72,14 @@ To set a cover image for an album:
 
 This will set the selected photo as the cover image for the album.
 
+### Delete Album ###
+
+=== "Context Menu"
+      Select album, open context menu and click :material-delete:
+
+      ![Screenshot](img/album-delete-menu-2507.jpg){ class="shadow" }
+
+=== "Album Toolbar"
+       Open album, click :material-dots-vertical: and then click **Delete Album**
+
+       ![Screenshot](img/album-delete-toolbar-2507.jpg){ class="shadow" }

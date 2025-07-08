@@ -23,24 +23,25 @@ When you click on a title in the cards view or :material-pencil: in the full scr
 
 In the *Details* tab, you can view and edit general metadata such as title, date, location, camera, lens, caption, and copyright:
 
-![Screenshot](img/edit-details-2502.jpg){ class="shadow" }
+![Screenshot](img/edit-details-2507.jpg){ class="shadow" }
 
 Much of this information is automatically recognized and updated while indexing. If you edit these fields, the changed values will be preserved and are not overwritten even when you reindex your library.
 
-To quickly set new coordinates, you can paste them into *Latitude* or *Longitude* if they have the format *48.265684, 7.721380*.
+To quickly set new coordinates, you can paste them into the *Location* field if they have the format *48.265684, 7.721380*. Alternatively, you can click on the location marker icon next to this field to open the built-in location component and select a location visually.
 
 Clicking the *Apply* button saves the changes you have made, but does not close the dialog, while the *Close* button closes the dialog without saving additional changes.
 
 !!! note ""
     When performing a search, text in the *Title*, *Caption*, and *Keywords* fields can be found, while *Notes* are private and will be ignored.
     
-**Geolocation Plugin**
+**Location Selection**
 
-Our community has [contributed a browser plugin](https://github.com/andyvalerio/photoprism-geolocation) that allows you to easily change the latitude and longitude of a picture by selecting its location on a map:
+PhotoPrism includes a location component that allows you to easily change the location coordinates of a picture by selecting its location on a map. Simply click on the :material-map-marker: icon next to the *Location* field to open the interactive map interface. You can also search for locations by typing city or street names directly in the map component.
 
-![Screenshot](https://valerio.nu/maps/geolocation.jpg){ class="shadow" }
+![Screenshot](img/location-component-2507.jpg){ class="shadow" }
 
-This browser plugin can be installed through the [Chrome Web Store](https://chrome.google.com/webstore/detail/geolocation-plugin-for-ph/oggmpodnbdcmfiognbkkeffacpeaifch).
+!!! note ""
+    With this built-in functionality, the [external geolocation browser plugin](https://github.com/andyvalerio/photoprism-geolocation) is no longer needed. We thank our community for their valuable contribution that inspired this feature!
     
 ### Labels ###
 

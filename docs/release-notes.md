@@ -4,13 +4,14 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250707-004feeb70</span>
+<span class="build">Build 250709-38e331a48</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. [Learn more ›](getting-started/updates.md#development-preview)
 
 What's new?
 
 - Index: [Selecting "Complete Rescan" forces a refresh of all picture media types](https://github.com/photoprism/photoprism/issues/5096)
+- Videos: [libvpl2 will be installed if PHOTOPRISM_INIT is set to "intel"](https://github.com/photoprism/photoprism/discussions/5098)
 
 ### July 7, 2025
 <span class="build">Build 250707-d28b3101e</span>

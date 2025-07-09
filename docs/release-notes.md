@@ -10,7 +10,7 @@ Our [preview builds](getting-started/updates.md#development-preview) give you ea
 
 What's new?
 
-- Index: [Selecting "Complete Rescan" forces a refresh of the detected media types](https://github.com/photoprism/photoprism/issues/5096)
+- Index: [Selecting "Complete Rescan" refreshes the detected media types](https://github.com/photoprism/photoprism/issues/5096)
 - Intel QSV: [`libvpl2` will be installed if `PHOTOPRISM_INIT` is set to "intel"](https://github.com/photoprism/photoprism/discussions/5098)
 
 ### July 7, 2025

@@ -24,7 +24,9 @@ Once you have selected the downloaded image under "Operating System" and your SD
 
 ## Step 3: Boot Your Device
 
-Insert the SD card into your Raspberry Pi and ensure that it is connected to a wired network. Then, turn it on. After a few minutes, the operating system will update and download the latest release to your device.[^2] You should then be able to access the web interface by navigating to `http://<IP address>:2342/` or <https://photoprism-pi.local/>![^3]
+Insert the SD card into your Raspberry Pi and ensure that it is connected to a wired network. Then, turn it on. After a few minutes, the operating system will update and download the latest release to your device.[^2]
+
+You should then be able to access the web interface by navigating to `http://<IP address>:2342/` or <https://photoprism-pi.local/>![^3]
 
 ### User Accounts
 

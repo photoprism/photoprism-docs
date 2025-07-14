@@ -4,12 +4,13 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250711-342519a51</span>
+<span class="build">Build 250714-6e859ceec</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. [Learn more ›](getting-started/updates.md#development-preview)
 
 What's new?
 
+- Auth: [2FA can be activated ,even if the recovery code cannot be copied](https://github.com/photoprism/photoprism/issues/5106)
 - Index: [Selecting "Complete Rescan" refreshes the detected media types](https://github.com/photoprism/photoprism/issues/5096)
 - Intel QSV: [`libvpl2` will be installed if `PHOTOPRISM_INIT` is set to "intel"](https://github.com/photoprism/photoprism/discussions/5098)
 - Security: [Updated Go to v1.24.5, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.5)

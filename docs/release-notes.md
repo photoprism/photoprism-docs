@@ -10,7 +10,7 @@ Our [preview builds](getting-started/updates.md#development-preview) give you ea
 
 What's new?
 
-- Auth: [2FA can be activated ,even if the recovery code cannot be copied](https://github.com/photoprism/photoprism/issues/5106)
+- Auth: [2FA can be activated, even if the recovery code cannot be copied](https://github.com/photoprism/photoprism/issues/5106)
 - Index: [Selecting "Complete Rescan" refreshes the detected media types](https://github.com/photoprism/photoprism/issues/5096)
 - Intel QSV: [`libvpl2` will be installed if `PHOTOPRISM_INIT` is set to "intel"](https://github.com/photoprism/photoprism/discussions/5098)
 - Security: [Updated Go to v1.24.5, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.5)

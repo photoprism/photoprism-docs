@@ -103,9 +103,9 @@ This is a complete list of supported search filters with examples. Filters can g
 
 | Filter      | Type      | Examples                              | Notes                                                                                                                                          |
 |:------------|:----------|:--------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------|
-| dist        | decimal   | dist:50                               | Maximum Distance to Position in km                                                                                                             |
-| lat         | decimal   | lat:41.894043                         | Position Latitude (-90.0 to 90.0 deg)                                                                                                          |
-| lng         | decimal   | lng:-87.62448                         | Position Longitude (-180.0 to 180.0 deg)                                                                                                       |
+| dist        | decimal   | dist:50                               | Maximum distance to position in km                                                                                                             |
+| lat         | decimal   | lat:41.894043                         | Position latitude (-90.0 to 90.0 deg)                                                                                                          |
+| lng         | decimal   | lng:-87.62448                         | Position longitude (-180.0 to 180.0 deg)                                                                                                       |
 | chroma      | number    | chroma:70                             | Chroma (0-100)                                                                                                                                 |
 | diff        | number    | diff:-1 diff:2                        | Differential Perceptual Hash (000000-FFFFFF)                                                                                                   |
 | quality     | number    | quality:0 quality:3                   | Minimum quality score (1-7)                                                                                                                    |
@@ -127,13 +127,13 @@ This is a complete list of supported search filters with examples. Filters can g
 | favorite    | string    | favorite:true favorite:false          | Finds favorite content                                                                                                                         |
 | filename    | string    | filename:"2021/07/12345.jpg"          | File names including path and extension, separated by \|                                                                                       |
 | folder      | string    | folder:"*/2020"                       | Alias for the path filter                                                                                                                      |
-| geo         | string    | geo:yes                               | Pictures with or without Position                                                                                                              |
+| geo         | string    | geo:yes                               | Finds content with or without latitude and longitude                                                                                           |
 | hash        | string    | hash:2fd4e1c67a2d                     | SHA1 file hashes, separated by \|                                                                                                              |
 | id          | string    | id:123e4567-e89b-...                  | Finds content with the specified Exif, Document, or Instance IDs, separated by \|                                                              |
 | iso         | string    | iso:200-400                           | ISO number (light sensitivity)                                                                                                                 |
 | keywords    | string    | keywords:"sand&water"                 | Keywords, combinable with & and \|                                                                                                             |
 | label       | string    | label:cat\|dog                        | Label names, separated by \|                                                                                                                   |
-| latlng      | string    | latlng:49.4,13.41,46.5,2.331          | Position Bounding Box (Lat N, Lng E, Lat S, Lng W)                                                                                             |
+| latlng      | string    | latlng:49.4,13.41,46.5,2.331          | Position bounding box (Lat N, Lng E, Lat S, Lng W)                                                                                             |
 | lens        | string    | lens:ef24                             | Lens make or model name                                                                                                                        |
 | mm          | string    | mm:28-35                              | Focal length (35mm equivalent)                                                                                                                 |
 | month       | string    | month:7\|10                           | Months from 1-12, separated by \|                                                                                                              |
@@ -145,7 +145,7 @@ This is a complete list of supported search filters with examples. Filters can g
 | path        | string    | path:2020/Holiday                     | Path names separated by \|, supports * wildcards                                                                                               |
 | people      | string    | people:"Jane & John"                  | Subject names, combinable with & or \|                                                                                                         |
 | person      | string    | person:"Jane Doe & John Doe"          | Subject names, will be matched exactly and can be combined using & or \|                                                                       |
-| s2          | string    | s2:4799e370ca54c8b9                   | Position (S2 Cell ID)                                                                                                                          |
+| s2          | string    | s2:4799e370ca54c8b9                   | Position, specified as S2 Cell ID                                                                                                              |
 | scan        | string    | scan:true scan:false                  | Finds scanned photos and documents                                                                                                             |
 | state       | string    | state:"Baden-Württemberg"             | State or province names, separated by \|                                                                                                       |
 | subject     | string    | subject:"Jane Doe & John Doe"         | Alias for person                                                                                                                               |
@@ -186,7 +186,6 @@ This is a complete list of supported search filters with examples. Filters can g
 | edited      | timestamp | edited:"2006-01-02T15:04:05Z"         | Finds content edited at or after this time                                                                                                     |
 | taken       | timestamp | taken:"2022-01-30"                    | Finds content created on the specified date                                                                                                    |
 | updated     | timestamp | updated:"2006-01-02T15:04:05Z"        | Finds content updated at or after this time                                                                                                    |
-
 
 !!! question "Why can't I play live photos or find stacks when I search for specific images?"
     Our search API and user interface perform a file search. This is intentional since "stacks" can contain files of different types and properties, such as color.

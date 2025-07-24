@@ -6,90 +6,71 @@
 
 PhotoPrism can automatically generate descriptive labels and captions for your photos using advanced AI models through an optional, external service called **PhotoPrism Vision**. This allows you to enrich your library's metadata without manual effort.
 
-!!! tldr ""
-    This is an advanced feature that requires you to set up and run additional services on a computer in your network. You have the choice between using simple, built-in models or more powerful, customizable models via [Ollama](https://ollama.com/).
+There are two primary methods to integrate these AI capabilities:
 
-## Choosing Your Path: Built-in Models vs. Ollama
-
-PhotoPrism Vision offers two main approaches for generating metadata. The **built-in models** are easy to set up as they don't require any additional software and are great for generating basic captions. For higher quality results, more detailed captions, and the ability to generate **labels** (tags), we recommend the **Ollama integration**. This approach lets you use a wide variety of powerful, state-of-the-art AI models.
+*   **A) Recommended: Using the PhotoPrism Vision Service:** This method offers maximum flexibility by offloading the intensive AI processing to a separate, potentially more powerful, computer (e.g., one with a GPU).
+*   **B) Alternative: Using Ollama Directly:** A simpler setup for running everything on a single machine, where PhotoPrism communicates directly with a local Ollama service.
 
 ---
 
-## Step 1: Set Up the PhotoPrism Vision Service
+## A) Recommended: Using the PhotoPrism Vision Service
 
-Regardless of which path you choose, you first need to set up the PhotoPrism Vision service. This service is the core of the AI integration.
+This approach uses a dedicated service that acts as a bridge between your main PhotoPrism instance and various AI models, including both simple built-in models and more powerful models served by Ollama.
 
-1. Create a new, empty folder on the machine where you want to run the Vision service.
-2. Inside this new folder, create a file named `compose.yaml`.
-3. Copy and paste the following content into the file:
+**Key Advantage:** You can run the resource-heavy Vision service on a separate, more powerful machine with a GPU, while your main PhotoPrism instance runs on a less powerful server or NAS.
 
-!!! example "`compose.yaml`"
-    ```yaml
-    # Docker Compose configuration for the PhotoPrism Vision service.
+### Step 1: Set Up the PhotoPrism Vision Service
 
-    services:
-      photoprism-vision:
-        # Pulls the latest official image from Docker Hub.
-        image: photoprism/vision:latest
-        restart: unless-stopped
+1.  Create a new, empty folder on the machine where you want to run the Vision service.
+2.  Inside this folder, create a `compose.yaml` file with the following content:
+
+    !!! example "`compose.yaml` for Vision Service"
+        ```yaml
+        services:
+          photoprism-vision:
+            image: photoprism/vision:latest
+            restart: unless-stopped
+            ports:
+              - "5000:5000"
+            user: "1000:1000"
+            environment:
+              # Enable this and set the host if you want this service to use Ollama.
+              # - OLLAMA_ENABLED=true
+              # - OLLAMA_HOST=http://<ollama-ip>:11434
+            volumes:
+              - "vision-models:/app/models"
+              - "vision-venv:/app/venv"
         
-        # Exposes the service on port 5000 of the host machine.
-        ports:
-          - "5000:5000"
-        
-        # It's recommended to run the container as a non-root user for security.
-        user: "1000:1000"
-        
-        environment:
-          # --- Ollama Configuration (Optional) ---
-          # To use Ollama, set OLLAMA_ENABLED to "true" and provide the host URL.
-          # Otherwise, you can comment out or remove these lines to only use built-in models.
-          - OLLAMA_ENABLED=true
-          - OLLAMA_HOST=http://192.168.1.123:11434
-          
         volumes:
-          # This named volume stores built-in models so they are not re-downloaded.
-          - "vision-models:/app/models"
-          # This named volume stores the Python virtual environment.
-          - "vision-venv:/app/venv"
-    
-    volumes:
-      vision-models:
-      vision-venv:
-    ```
+          vision-models:
+          vision-venv:
+        ```
+3.  If you plan to use Ollama through this service, uncomment the `OLLAMA...` lines and replace `<ollama-ip>` with the IP of your Ollama machine.
+4.  Start the service: `docker compose up -d`
 
-4.  **Configure the service:**
-    *If you are **not** using Ollama, you can set `OLLAMA_ENABLED=false` or simply delete the two `OLLAMA...` environment lines.
-    *   If you **are** using Ollama, you **must** replace `http://192.168.1.123:11434` with the correct local network URL for your Ollama instance.
+### Step 2: Configure Your Main PhotoPrism Instance
 
-5. From the folder containing your `compose.yaml` file, run the following command to start the service:
+On your main PhotoPrism server, navigate to your `storage/config` folder and create/edit the `vision.yml` file to point to your new Vision service.
 
-    ```bash
-    docker compose up -d
-    ```
+=== "Example 1: Using a Built-in Model"
 
-## Step 2: Set Up Ollama (if you chose this path)
+    This example uses the built-in `kosmos-2` model for generating captions. It does not require Ollama.
 
-If you decided to use Ollama for higher quality results, follow these steps. Otherwise, proceed to Step 3.
+    !!! example "`storage/config/vision.yml`"
+        ```yaml
+        Models:
+        - Type: caption
+          Resolution: 720
+          Name: "kosmos-2"
+          Version: "latest"
+          Service:
+            # IMPORTANT: Replace this IP with the address of your Vision service machine.
+            Uri: "http://<vision-service-ip>:5000/api/v1/vision/caption"
+        ```
 
-1. Download and install Ollama from [ollama.com](https://ollama.com/) on a suitable computer.
-2. **Enable Network Access:** Ensure Ollama is accessible over your local network. For detailed instructions, see the [Ollama documentation](https://github.com/ollama/ollama/blob/main/docs/faq.md#how-can-i-expose-ollama-on-my-network).
-3. **Download AI Models:** Open a terminal and pull the models you want to use:
+=== "Example 2: Using an Ollama Model"
 
-    ```bash
-    ollama pull llava-phi3:latest
-    ollama pull minicpm-v:latest
-    ```
-
-## Step 3: Configure Your Main PhotoPrism Instance
-
-Now, you need to tell your PhotoPrism instance which models to use and how to connect to the Vision service.
-
-1. On your main PhotoPrism server, navigate to your `storage/config` folder.
-2. Create or edit the file named `vision.yml`.
-3. Paste the configuration that matches your chosen path.
-
-=== "Using Ollama"
+    This example uses Ollama's `llava-phi3` model for generating captions, proxied through the Vision service.
 
     !!! example "`storage/config/vision.yml`"
         ```yaml
@@ -97,55 +78,94 @@ Now, you need to tell your PhotoPrism instance which models to use and how to co
         - Type: caption
           Resolution: 720
           Name: "llava-phi3:latest"
+          Prompt: |
+            Write a journalistic caption that is informative and briefly describes the most important visual content in up to 3 sentences.
           Service:
             # IMPORTANT: Replace this IP with the address of your Vision service machine.
-            Uri: "http://192.168.1.100:5000/api/v1/vision/caption"
-            FileScheme: data
-            RequestFormat: vision
-            ResponseFormat: vision
-
-        - Type: labels
-          Resolution: 720
-          Name: "minicpm-v:latest"
-          Service:
-            # IMPORTANT: Replace this IP with the address of your Vision service machine.
-            Uri: "http://192.168.1.100:5000/api/v1/vision/labels"
-            FileScheme: data
-            RequestFormat: vision
-            ResponseFormat: vision
-            
-        Thresholds:
-          Confidence: 50
+            Uri: "http://<vision-service-ip>:5000/api/v1/vision/caption"
         ```
-    **Important:** Replace `192.168.1.100` with the IP address of the machine running your `photoprism-vision` Docker container.
 
-=== "Using Built-in Models"
+### Step 3: Restart and Generate
 
-    !!! example "`storage/config/vision.yml`"
-        ```yaml
-        Models:
-        - Type: caption
-          Resolution: 720
-          # This specifies the built-in 'kosmos-2' model.
-          Name: "kosmos-2"
-          Version: "latest"
-          Service:
-            # IMPORTANT: Replace this IP with the address of your Vision service machine.
-            Uri: "http://192.168.1.100:5000/api/v1/vision/caption"
-            FileScheme: data
-            RequestFormat: vision
-            ResponseFormat: vision
-        
-        # Note: The built-in models do not currently support label generation.
-        ```
-    **Important:** You still need to replace `192.168.1.100` with the IP address of your Vision service machine.
+After saving `vision.yml`, restart your main PhotoPrism instance (`docker compose restart photoprism`) and proceed to [Step 4: Start Generating](#step-4-start-generating).
 
-4.  After saving your `vision.yml` file, restart your main PhotoPrism instance to apply the new configuration:
+---
 
-    ```bash
-    # Run this in your main PhotoPrism directory
-    docker compose restart photoprism
+## B) Alternative: Using Ollama Directly
+
+This method is simpler if you plan to run everything on a single server. It involves adding the Ollama service directly to your main PhotoPrism `compose.yaml`.
+
+### Step 1: Update PhotoPrism's `compose.yaml`
+
+Add the `ollama` service to the same `compose.yaml` file as your `photoprism` service.
+
+!!! example "Main `compose.yaml` with Ollama"
+    ```yaml
+    services:
+      photoprism:
+        image: photoprism/photoprism:latest
+        # ... your existing photoprism config ...
+        depends_on:
+          - ollama # Ensures Ollama starts before PhotoPrism
+
+      ollama:
+        image: ollama/ollama:latest
+        restart: unless-stopped
+        # Expose the port if you need to access it from outside.
+        # ports:
+        #   - "11434:11434"
+        volumes:
+          - "ollama-data:/root/.ollama"
+    
+    volumes:
+      ollama-data:
     ```
+
+### Step 2: Download Ollama Models
+
+Start your stack (`docker compose up -d`) and then pull the models you need:
+
+```bash
+docker compose exec ollama ollama pull llava-phi3:latest
+docker compose exec ollama ollama pull minicpm-v:latest
+```
+
+### Step 3: Configure `vision.yml` for Direct Connection
+
+On your PhotoPrism server, navigate to `storage/config` and create/edit `vision.yml` to communicate directly with the Ollama service.
+
+!!! example "`storage/config/vision.yml`"
+    ```yaml
+    Models:
+    - Type: caption
+      Resolution: 720
+      Name: "llava-phi3:latest"
+      Prompt: "A short, descriptive caption for this image is:"
+      Service:
+        # This points directly to the Ollama service within the same Docker network.
+        Uri: "http://ollama:11434/api/generate"
+        FileScheme: base64
+        RequestFormat: ollama
+        ResponseFormat: ollama
+
+    - Type: labels
+      Resolution: 720
+      Name: "minicpm-v:latest"
+      Service:
+        Uri: "http://ollama:11434/api/generate"
+        FileScheme: base64
+        RequestFormat: ollama
+        ResponseFormat: ollama
+            
+    Thresholds:
+      Confidence: 50
+    ```
+
+### Step 4: Restart and Generate
+
+After saving `vision.yml`, restart your PhotoPrism instance (`docker compose restart photoprism`) and proceed to [Step 4: Start Generating](#step-4-start-generating).
+
+---
 
 ## Step 4: Start Generating
 
@@ -159,7 +179,7 @@ To generate captions for **all** photos in your library, run the following comma
 docker compose exec photoprism photoprism vision run --models=caption
 ```
 
-To generate labels for your entire library (only works if you are using Ollama):
+To generate labels for your entire library (only works with a compatible label-generating model):
 
 ```bash
 docker compose exec photoprism photoprism vision run --models=labels
@@ -173,10 +193,8 @@ To test the process on a smaller set of photos, you can run the commands on a sp
 docker compose exec photoprism photoprism vision run --models=caption album:Holidays
 ```
 
-To generate labels for the album (only works if you are using Ollama):
-
 ```bash
-docker compose exec photoprism photoprism vision run --models=labels album:Holidays
+docker compose exec photoprism photoprism vision run --models=caption album:Holidays
 ```
 
 !!! tip "Re-running and Testing"
@@ -188,7 +206,7 @@ docker compose exec photoprism photoprism vision run --models=labels album:Holid
 
 ### Verifying Your Configuration
 
-If you're having trouble getting the Vision service to work, a useful first step is to verify how PhotoPrism has loaded your `vision.yml` configuration. You can do this with the `vision ls` command.
+If you're having trouble, a useful first step is to verify how PhotoPrism has loaded your `vision.yml` configuration. You can do this with the `vision ls` command.
 
 Run the following command in a terminal from your main PhotoPrism directory:
 

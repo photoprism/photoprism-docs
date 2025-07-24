@@ -181,3 +181,19 @@ docker compose exec photoprism photoprism vision run --models=labels album:Holid
 
 !!! tip "Re-running and Testing"
     If you want to re-generate captions or labels for photos that already have them, add the `--force` flag to the command: `photoprism vision run --models=caption --force`. This is very useful for testing different models or prompts.
+
+---
+
+## Troubleshooting
+
+### Verifying Your Configuration
+
+If you're having trouble getting the Vision service to work, a useful first step is to verify how PhotoPrism has loaded your `vision.yml` configuration. You can do this with the `vision ls` command.
+
+Run the following command in a terminal from your main PhotoPrism directory:
+
+```bash
+docker compose exec photoprism photoprism vision ls
+```
+
+This command will output the settings for all supported and configured model types. You can compare this output with your `vision.yml` file to ensure that your settings have been read correctly and to spot any parsing errors or misconfigurations.

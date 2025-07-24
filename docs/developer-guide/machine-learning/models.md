@@ -161,3 +161,27 @@ For developers looking to contribute, the codebase is structured as follows:
 *   **`ollama_processor.py`**: Implements the processor for the Ollama integration. It acts as a client, formatting requests and forwarding them to an Ollama instance.
 *   **`api.py`**: Contains the Pydantic models used for request/response validation and serialization.
 *   **`utils.py`**: Helper functions, for instance, for image loading and encoding.
+
+---
+
+## Troubleshooting and CLI Commands
+
+When developing or debugging the Vision service integration, you can use built-in CLI commands to inspect the configuration.
+
+### Listing Loaded Models
+
+To verify how the main PhotoPrism instance has parsed the `vision.yml` file, you can use the `vision ls` command from within the PhotoPrism container. This is particularly useful for debugging configuration issues without needing to trigger a full indexing job.
+
+From within the development container (after running `make terminal`), use:
+
+```bash
+./photoprism vision ls
+```
+
+If you have a global `photoprism` binary, you can run:
+
+```bash
+photoprism vision ls
+```
+
+The command will output the settings for all supported and configured model types, which you can then compare with the expected settings in your `vision.yml`. This helps quickly identify typos, formatting issues, or incorrect values.

@@ -1,3 +1,7 @@
+# ⚠️ Beta Feature: Vision Service (Active Development)
+
+> **Warning:** The PhotoPrism Vision feature is currently in **beta** and under **active development**. Configuration examples, commands, and integration details are subject to change without notice. Use with caution and expect breaking changes as the feature evolves.
+
 # PhotoPrism Vision
 
 PhotoPrism can automatically generate descriptive labels and captions for your photos using advanced AI models through an optional, external service called **PhotoPrism Vision**. This allows you to enrich your library's metadata without manual effort.
@@ -15,14 +19,14 @@ PhotoPrism Vision offers two main approaches for generating metadata. The **buil
 
 Regardless of which path you choose, you first need to set up the PhotoPrism Vision service. This service is the core of the AI integration.
 
-1.  Create a new, empty folder on the machine where you want to run the Vision service.
-2.  Inside this new folder, create a file named `compose.yaml`.
-3.  Copy and paste the following content into the file:
+1. Create a new, empty folder on the machine where you want to run the Vision service.
+2. Inside this new folder, create a file named `compose.yaml`.
+3. Copy and paste the following content into the file:
 
 !!! example "`compose.yaml`"
     ```yaml
     # Docker Compose configuration for the PhotoPrism Vision service.
-    
+
     services:
       photoprism-vision:
         # Pulls the latest official image from Docker Hub.
@@ -55,10 +59,10 @@ Regardless of which path you choose, you first need to set up the PhotoPrism Vis
     ```
 
 4.  **Configure the service:**
-    *   If you are **not** using Ollama, you can set `OLLAMA_ENABLED=false` or simply delete the two `OLLAMA...` environment lines.
+    *If you are **not** using Ollama, you can set `OLLAMA_ENABLED=false` or simply delete the two `OLLAMA...` environment lines.
     *   If you **are** using Ollama, you **must** replace `http://192.168.1.123:11434` with the correct local network URL for your Ollama instance.
 
-5.  From the folder containing your `compose.yaml` file, run the following command to start the service:
+5. From the folder containing your `compose.yaml` file, run the following command to start the service:
 
     ```bash
     docker compose up -d
@@ -68,9 +72,9 @@ Regardless of which path you choose, you first need to set up the PhotoPrism Vis
 
 If you decided to use Ollama for higher quality results, follow these steps. Otherwise, proceed to Step 3.
 
-1.  Download and install Ollama from [ollama.com](https://ollama.com/) on a suitable computer.
-2.  **Enable Network Access:** Ensure Ollama is accessible over your local network. For detailed instructions, see the [Ollama documentation](https://github.com/ollama/ollama/blob/main/docs/faq.md#how-can-i-expose-ollama-on-my-network).
-3.  **Download AI Models:** Open a terminal and pull the models you want to use:
+1. Download and install Ollama from [ollama.com](https://ollama.com/) on a suitable computer.
+2. **Enable Network Access:** Ensure Ollama is accessible over your local network. For detailed instructions, see the [Ollama documentation](https://github.com/ollama/ollama/blob/main/docs/faq.md#how-can-i-expose-ollama-on-my-network).
+3. **Download AI Models:** Open a terminal and pull the models you want to use:
 
     ```bash
     ollama pull llava-phi3:latest
@@ -81,9 +85,9 @@ If you decided to use Ollama for higher quality results, follow these steps. Oth
 
 Now, you need to tell your PhotoPrism instance which models to use and how to connect to the Vision service.
 
-1.  On your main PhotoPrism server, navigate to your `storage/config` folder.
-2.  Create or edit the file named `vision.yml`.
-3.  Paste the configuration that matches your chosen path.
+1. On your main PhotoPrism server, navigate to your `storage/config` folder.
+2. Create or edit the file named `vision.yml`.
+3. Paste the configuration that matches your chosen path.
 
 === "Using Ollama"
 
@@ -143,7 +147,7 @@ Now, you need to tell your PhotoPrism instance which models to use and how to co
     docker compose restart photoprism
     ```
 
-## Step 4: Start Generating!
+## Step 4: Start Generating
 
 Your setup is now complete! You can start generating metadata using PhotoPrism's command-line interface. You can run these commands on your entire library or on specific albums.
 

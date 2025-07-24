@@ -99,7 +99,6 @@ nav:
       - Albums: user-guide/organize/albums.md
       - People: user-guide/organize/people.md
       - Labels: user-guide/organize/labels.md
-      - PhotoPrism Vision: user-guide/organize/vision.md
       - Archive: user-guide/organize/archive.md
       - Delete: user-guide/organize/delete.md
       - Private: user-guide/organize/private.md
@@ -187,6 +186,7 @@ nav:
       - Color Detection: developer-guide/metadata/colors.md
       - Camera Models: developer-guide/metadata/cameras.md
     - Machine Learning:
+      - PhotoPrism Vision Setup: developer-guide/machine-learning/vision.md
       - Image Classification: developer-guide/machine-learning/classification.md
       - Face Recognition: developer-guide/machine-learning/face-recognition.md
       - Additional Models: developer-guide/machine-learning/models.md

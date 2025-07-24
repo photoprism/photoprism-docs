@@ -60,6 +60,9 @@ This guide explains how to set up a local development environment to run the Vis
 
 The interaction between PhotoPrism and the Vision service is controlled by a `vision.yml` file located in your main PhotoPrism `storage/config` directory.
 
+!!! warning "Important: File Extension"
+    The configuration file **must** be named `vision.yml` with the `.yml` extension, **not** `.yaml`. Files with the `.yaml` extension will be ignored by PhotoPrism and could cause the Vision service to appear non-functional.
+
 The file consists of a list of `Models` and a `Thresholds` section.
 
 !!! example "`storage/config/vision.yml`"

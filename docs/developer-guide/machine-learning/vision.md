@@ -52,6 +52,9 @@ This approach uses a dedicated service that acts as a bridge between your main P
 
 On your main PhotoPrism server, navigate to your `storage/config` folder and create/edit the `vision.yml` file to point to your new Vision service.
 
+!!! warning "Important: File Extension"
+    The configuration file **must** be named `vision.yml` with the `.yml` extension, **not** `.yaml`. Files with the `.yaml` extension will be ignored by PhotoPrism and could cause the Vision service to appear non-functional.
+
 === "Example 1: Using a Built-in Model"
 
     This example uses the built-in `kosmos-2` model for generating captions. It does not require Ollama.
@@ -133,6 +136,9 @@ docker compose exec ollama ollama pull minicpm-v:latest
 ### Step 3: Configure `vision.yml` for Direct Connection
 
 On your PhotoPrism server, navigate to `storage/config` and create/edit `vision.yml` to communicate directly with the Ollama service.
+
+!!! warning "Important: File Extension"
+    The configuration file **must** be named `vision.yml` with the `.yml` extension, **not** `.yaml`. Files with the `.yaml` extension will be ignored by PhotoPrism and could cause the Vision service to appear non-functional.
 
 !!! example "`storage/config/vision.yml`"
     ```yaml

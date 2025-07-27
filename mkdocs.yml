@@ -186,7 +186,7 @@ nav:
       - Color Detection: developer-guide/metadata/colors.md
       - Camera Models: developer-guide/metadata/cameras.md
     - Machine Learning:
-      - PhotoPrism Vision Setup: developer-guide/machine-learning/vision.md
+      - Enhanced AI Setup: developer-guide/machine-learning/vision.md
       - Image Classification: developer-guide/machine-learning/classification.md
       - Face Recognition: developer-guide/machine-learning/face-recognition.md
       - Additional Models: developer-guide/machine-learning/models.md

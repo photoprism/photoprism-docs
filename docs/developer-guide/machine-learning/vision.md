@@ -19,6 +19,9 @@ This approach uses a dedicated service that acts as a bridge between your main P
 
 **Key Advantage:** You can run the resource-heavy Vision service on a separate, more powerful machine with a GPU, while your main PhotoPrism instance runs on a less powerful server or NAS.
 
+!!! warning "Security Notice"
+    The PhotoPrism Vision service does not currently implement authentication. For security reasons, it should only be used within a secure private network and should not be exposed to the internet or untrusted networks.
+
 ### Step 1: Set Up the PhotoPrism Vision Service
 
 1.  Create a new, empty folder on the machine where you want to run the Vision service.

@@ -93,7 +93,7 @@ On your main PhotoPrism server, navigate to your `storage/config` folder and cre
 
 ### Step 3: Restart and Generate
 
-After saving `vision.yml`, restart your main PhotoPrism instance (`docker compose restart photoprism`) and proceed to [Step 4: Start Generating](#step-4-start-generating).
+After saving `vision.yml`, restart your main PhotoPrism instance (`docker compose stop photoprism && docker compose up -d`) and proceed to [Step 4: Start Generating](#step-4-start-generating).
 
 ---
 
@@ -172,7 +172,7 @@ On your PhotoPrism server, navigate to `storage/config` and create/edit `vision.
 
 ### Step 4: Restart and Generate
 
-After saving `vision.yml`, restart your PhotoPrism instance (`docker compose restart photoprism`) and proceed to [Step 4: Start Generating](#step-4-start-generating).
+After saving `vision.yml`, restart your PhotoPrism instance (`docker compose stop photoprism && docker compose up -d`) and proceed to [Step 4: Start Generating](#step-4-start-generating).
 
 ---
 

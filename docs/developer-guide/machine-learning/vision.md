@@ -116,12 +116,24 @@ Add the `ollama` service to the same `compose.yaml` file as your `photoprism` se
 
       ollama:
         image: ollama/ollama:latest
+        container_name: ollama
         restart: unless-stopped
         # Expose the port if you need to access it from outside.
         # ports:
         #   - "11434:11434"
+        environment:
+          # Ollama server configuration
+          OLLAMA_HOST: "0.0.0.0:11434"
+          OLLAMA_MAX_LOADED_MODELS: "1"
+          OLLAMA_NUM_PARALLEL: "1"
+          OLLAMA_MAX_QUEUE: "100"
+          OLLAMA_KEEP_ALIVE: "15m"
+          OLLAMA_MODELS: "/root/.ollama"
+          # NVIDIA Container Toolkit (uncomment if using GPU)
+          # NVIDIA_VISIBLE_DEVICES: "all"
+          # NVIDIA_DRIVER_CAPABILITIES: "compute,utility"
         volumes:
-          - "ollama-data:/root/.ollama"
+          - "./data/ollama:/root/.ollama"
     
     volumes:
       ollama-data:
@@ -134,6 +146,12 @@ Start your stack (`docker compose up -d`) and then pull the models you need:
 ```bash
 docker compose exec ollama ollama pull llava-phi3:latest
 docker compose exec ollama ollama pull minicpm-v:latest
+
+# For other models, you can also use the interactive run command
+# docker compose exec ollama ollama run llama3
+
+# Or pull specific model variants
+# docker compose exec ollama ollama pull qwen2.5-coder:3b
 ```
 
 ### Step 3: Configure `vision.yml` for Direct Connection

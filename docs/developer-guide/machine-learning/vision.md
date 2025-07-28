@@ -35,19 +35,15 @@ This approach uses a dedicated service that acts as a bridge between your main P
             restart: unless-stopped
             ports:
               - "5000:5000"
-            user: "1000:1000"
             environment:
               # Enable this and set the host if you want this service to use Ollama.
-              # - OLLAMA_ENABLED=true
-              # - OLLAMA_HOST=http://<ollama-ip>:11434
+              - OLLAMA_ENABLED=false
+              - OLLAMA_HOST=http://<ollama-ip>:11434
             volumes:
-              - "vision-models:/app/models"
-              - "vision-venv:/app/venv"
-        
-        volumes:
-          vision-models:
-          vision-venv:
+              - "./models:/app/models"
+              - "./venv:/app/venv"
         ```
+
 3.  If you plan to use Ollama through this service, uncomment the `OLLAMA...` lines and replace `<ollama-ip>` with the IP of your Ollama machine.
 4.  Start the service: `docker compose up -d`
 

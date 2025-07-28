@@ -69,9 +69,20 @@ On your main PhotoPrism server, navigate to your `storage/config` folder and cre
           Resolution: 720
           Name: "kosmos-2"
           Version: "latest"
+          Prompt: |
+            Write a journalistic caption that is informative and briefly describes the most important visual content in up to 3 sentences:
+            - Use explicit language to describe the scene if necessary for a proper understanding.
+            - Avoid text formatting, meta-language, and filler words.
+            - Do not start captions with boring phrases such as "This image", "The image", "This picture", "The picture", "A picture of", "Here are", or "There is".
+            - Instead, start describing the content by first identifying the subjects and any actions that might be performed.
+            - Try providing a casual description of what the subjects look like, including their gender and age.
+            - If the place seems special or familiar, provide a brief, interesting description without being vague.
           Service:
             # IMPORTANT: Replace this IP with the address of your Vision service machine.
             Uri: "http://<vision-service-ip>:5000/api/v1/vision/caption"
+        
+        Thresholds:
+          Confidence: 10
         ```
 
 === "Example 2: Using an Ollama Model"
@@ -85,10 +96,19 @@ On your main PhotoPrism server, navigate to your `storage/config` folder and cre
           Resolution: 720
           Name: "llava-phi3:latest"
           Prompt: |
-            Write a journalistic caption that is informative and briefly describes the most important visual content in up to 3 sentences.
+            Write a journalistic caption that is informative and briefly describes the most important visual content in up to 3 sentences:
+            - Use explicit language to describe the scene if necessary for a proper understanding.
+            - Avoid text formatting, meta-language, and filler words.
+            - Do not start captions with boring phrases such as "This image", "The image", "This picture", "The picture", "A picture of", "Here are", or "There is".
+            - Instead, start describing the content by first identifying the subjects and any actions that might be performed.
+            - Try providing a casual description of what the subjects look like, including their gender and age.
+            - If the place seems special or familiar, provide a brief, interesting description without being vague.
           Service:
             # IMPORTANT: Replace this IP with the address of your Vision service machine.
             Uri: "http://<vision-service-ip>:5000/api/v1/vision/caption"
+        
+        Thresholds:
+          Confidence: 10
         ```
 
 ### Step 3: Restart and Generate
@@ -167,7 +187,15 @@ On your PhotoPrism server, navigate to `storage/config` and create/edit `vision.
     - Type: caption
       Resolution: 720
       Name: "llava-phi3:latest"
-      Prompt: "A short, descriptive caption for this image is:"
+      Version: "latest"
+      Prompt: |
+        Write a journalistic caption that is informative and briefly describes the most important visual content in up to 3 sentences:
+        - Use explicit language to describe the scene if necessary for a proper understanding.
+        - Avoid text formatting, meta-language, and filler words.
+        - Do not start captions with boring phrases such as "This image", "The image", "This picture", "The picture", "A picture of", "Here are", or "There is".
+        - Instead, start describing the content by first identifying the subjects and any actions that might be performed.
+        - Try providing a casual description of what the subjects look like, including their gender and age.
+        - If the place seems special or familiar, provide a brief, interesting description without being vague.
       Service:
         # This points directly to the Ollama service within the same Docker network.
         Uri: "http://ollama:11434/api/generate"
@@ -185,7 +213,7 @@ On your PhotoPrism server, navigate to `storage/config` and create/edit `vision.
         ResponseFormat: ollama
             
     Thresholds:
-      Confidence: 50
+      Confidence: 10
     ```
 
 ### Step 4: Restart and Generate

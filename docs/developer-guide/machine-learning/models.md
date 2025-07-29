@@ -14,14 +14,12 @@ The Vision service is designed to be a decoupled microservice. This architecture
 The data flow is as follows:
 
 1.  **PhotoPrism** selects a photo that needs processing. It sends a request containing a thumbnail of the image and the desired model information to the Vision service's REST API.
-2.  **PhotoPrism Vision** receives the request. Based on the specified model, it routes the request to the appropriate processor:
-    *   **Local Processor:** If a built-in model (like Kosmos-2) is requested, the service uses PyTorch and Transformers to load the model locally and process the image.
-    *   **Ollama Processor:** If an Ollama model is requested, the service forwards the image and a prompt to the Ollama API endpoint.
+2.  **PhotoPrism Vision** receives the request. Based on the `model` name in the request body, it routes the request to the appropriate internal processor:
+    *   **Local Processor:** If a pre-installed model (e.g., `kosmos-2`, `blip`, `vit-gpt2`, `nsfw_image_detector`) is requested, the service uses PyTorch and Transformers to load the model from the local `models` directory and process the image. This can be accelerated by a GPU if available on the Vision service machine.
+    *   **Ollama Processor:** If the model name is not recognized as a local model, the service assumes it is an Ollama model. It forwards the image and a prompt to the configured `OLLAMA_HOST` API endpoint.
 3.  **The AI Model** (either local or on Ollama) analyzes the image and generates the result (a caption or a list of labels).
 4.  **PhotoPrism Vision** formats the result into a standardized JSON response and sends it back to the main PhotoPrism instance.
 5.  **PhotoPrism** receives the JSON response and saves the new metadata to its database.
-
-![Vision Architecture Diagram](https://dl.photoprism.app/img/diagrams/photoprism-vision-ollama.svg){ class="w100" }
 
 ---
 
@@ -43,7 +41,7 @@ This guide explains how to set up a local development environment to run the Vis
 4.  **Set Environment Variables:** Configure the connection to your Ollama instance if you plan to use it. These variables are read by the application at startup.
     ```bash
     export OLLAMA_ENABLED="true"
-    export OLLAMA_HOST="http://192.168.1.123:11434"
+    export OLLAMA_HOST="http://<ollama-host-ip>:11434"
     ```
 5.  **Install Dependencies:**
     ```bash
@@ -51,7 +49,7 @@ This guide explains how to set up a local development environment to run the Vis
     ```
 6.  **Run the Flask Development Server:**
     ```bash
-    flask --app app run --debug --host=0.0.0.0 --port=5000
+    python -m flask --app app run --debug --host=0.0.0.0 --port=5000
     ```    The `--debug` flag enables auto-reloading whenever you save a change in the code, and `--host=0.0.0.0` makes the service accessible from other machines on your network, such as your main PhotoPrism instance.
 
 ---
@@ -70,23 +68,25 @@ The file consists of a list of `Models` and a `Thresholds` section.
     Models:
     - Type: caption
       Resolution: 720
-      Name: "llava-phi3:latest"
+      Name: "llava-phi3"
+      Version: "latest"
       Prompt: |
         Write a journalistic caption that is informative and briefly describes the most important visual content in up to 3 sentences.
       Service:
-        Uri: "http://192.168.1.100:5000/api/v1/vision/caption"
-        FileScheme: data
+        Uri: "http://<vision-service-ip>:5000/api/v1/vision"
+        FileScheme: base64
         RequestFormat: vision
         ResponseFormat: vision
 
     - Type: labels
       Resolution: 720
-      Name: "minicpm-v:latest"
+      Name: "kosmos-2"
+      Version: "latest"
       Service:
-        Uri: "http://192.168.1.100:5000/api/v1/vision/labels"
+        Uri: "http://<vision-service-ip>:5000/api/v1/vision"
         FileScheme: base64
-        RequestFormat: ollama
-        ResponseFormat: ollama
+        RequestFormat: vision
+        ResponseFormat: vision
 
     Thresholds:
       Confidence: 50
@@ -94,14 +94,14 @@ The file consists of a list of `Models` and a `Thresholds` section.
 
 *   **`Type`**: The task to perform. Can be `caption` or `labels`.
 *   **`Resolution`**: The longest edge of the thumbnail (in pixels) to be sent for analysis. Higher values may yield better results but increase processing time and network traffic.
-*   **`Name`**: The name of the model to use. For Ollama, this is the model tag (e.g., `llava-phi3:latest`). For built-in models, it's the model identifier (e.g., `kosmos-2`).
-*   **`Version`**: (Optional) Used for built-in models, typically `latest`.
+*   **`Name`**: The name of the model to use. For Ollama models, this should be just the model name (e.g., `llava-phi3`). For pre-installed models, it's the model identifier (e.g., `kosmos-2`).
+*   **`Version`**: The model version. For Ollama models, this is typically `latest`. For pre-installed models, it's also usually `latest`.
 *   **`Prompt`**: (Optional) A custom prompt to send to the AI model. If omitted, a default prompt will be used.
 *   **`Service`**: A block defining how to communicate with the service.
-    *   **`Uri`**: The full API endpoint of the Vision service.
-    *   **`FileScheme`**: How the image data is sent. `data` (default) sends the raw thumbnail binary. `base64` sends it as a Base64-encoded string, which is required by some APIs like Ollama's.
-    *   **`RequestFormat`**: The JSON structure of the request. `vision` is for the PhotoPrism Vision API. `ollama` sends a request directly compatible with the Ollama API.
-    *   **`ResponseFormat`**: The expected JSON structure of the response. `vision` or `ollama`.
+    *   **`Uri`**: The base API endpoint of the Vision service. PhotoPrism will append the appropriate path based on the model type, name, and version (e.g., `/caption/llava-phi3/latest`).
+    *   **`FileScheme`**: How the image data is sent. `base64` sends it as a Base64-encoded string within the JSON payload (recommended for the Vision service). `data` sends the raw thumbnail binary, but this requires additional handling in the current Vision service implementation.
+    *   **`RequestFormat`**: The JSON structure of the request. Use `vision` for the PhotoPrism Vision API format. The `ollama` format should only be used when connecting directly to Ollama, not through the Vision service.
+    *   **`ResponseFormat`**: The expected JSON structure of the response. Use `vision` for the PhotoPrism Vision API format.
 *   **`Thresholds`**:
     *   **`Confidence`**: A value from 0-100. Generated labels with a confidence score below this threshold will be discarded.
 
@@ -113,9 +113,12 @@ The PhotoPrism Vision service exposes a simple REST API.
 
 #### Main Endpoints
 
-*   `POST /api/v1/vision/caption`: Generates a caption for an image.
-*   `POST /api/v1/vision/labels`: Generates labels for an image.
-*   `POST /api/v1/vision/nsfw`: Checks an image for not-safe-for-work content (using built-in models).
+*   `POST /api/v1/vision/caption/<model_name>/<model_version>`: Generates a caption for an image using the specified model.
+*   `POST /api/v1/vision/labels/<model_name>/<model_version>`: Generates labels for an image using the specified model.
+*   `POST /api/v1/vision/nsfw`: Checks an image for not-safe-for-work content (using pre-installed models).
+
+!!! note "URL Construction"
+    When PhotoPrism makes requests to the Vision service, it constructs the full URL by appending the task type, model name, and version to the base URI specified in `vision.yml`. For example, if the base URI is `http://<vision-service-ip>:5000/api/v1/vision` and you request a caption with model `llava-phi3` version `latest`, PhotoPrism will send the request to `http://<vision-service-ip>:5000/api/v1/vision/caption/llava-phi3/latest`.
 
 #### Request Body
 
@@ -160,7 +163,7 @@ For developers looking to contribute, the codebase is structured as follows:
 
 *   **`app.py`**: The main Flask application. It handles routing, request parsing, and calls the appropriate processor.
 *   **`processor.py`**: Defines the abstract `ImageProcessor` base class. Any new integration (local or remote) must implement this interface.
-*   **`local_processor.py`**: Implements the processor for the built-in Hugging Face models (Kosmos-2, BLIP, etc.). It manages downloading, caching, and running these models using PyTorch.
+*   **`local_processor.py`**: Implements the processor for the pre-installed Hugging Face models (Kosmos-2, BLIP, etc.). It manages downloading, caching, and running these models using PyTorch.
 *   **`ollama_processor.py`**: Implements the processor for the Ollama integration. It acts as a client, formatting requests and forwarding them to an Ollama instance.
 *   **`api.py`**: Contains the Pydantic models used for request/response validation and serialization.
 *   **`utils.py`**: Helper functions, for instance, for image loading and encoding.

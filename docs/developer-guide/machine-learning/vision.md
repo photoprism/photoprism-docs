@@ -36,7 +36,7 @@ This approach uses a dedicated service that acts as a bridge between your main P
             ports:
               - "5000:5000"
             environment:
-              # Enable this and set the host if you want this service to use Ollama.
+              # Set OLLAMA_ENABLED=true and configure the host if you want this service to use Ollama
               - OLLAMA_ENABLED=false
               - OLLAMA_HOST=http://<ollama-ip>:11434
             volumes:
@@ -44,7 +44,7 @@ This approach uses a dedicated service that acts as a bridge between your main P
               - "./venv:/app/venv"
         ```
 
-3.  If you plan to use Ollama through this service, uncomment the `OLLAMA...` lines and replace `<ollama-ip>` with the IP of your Ollama machine.
+3.  If you plan to use Ollama through this service, set `OLLAMA_ENABLED=true` and replace `<ollama-ip>` with the IP address of your Ollama machine.
 4.  Start the service: `docker compose up -d`
 
 ### Step 2: Configure Your Main PhotoPrism Instance

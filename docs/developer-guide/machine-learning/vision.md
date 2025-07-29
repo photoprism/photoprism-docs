@@ -15,7 +15,7 @@ There are two primary methods to integrate these AI capabilities:
 
 ## A) Recommended: Using the PhotoPrism Vision Service
 
-This approach uses a dedicated service that acts as a bridge between your main PhotoPrism instance and various AI models, including both simple built-in models and more powerful models served by Ollama.
+This approach uses a dedicated service that acts as a bridge between your main PhotoPrism instance and various AI models, including both simple pre-installed models and more powerful models served by Ollama.
 
 **Key Advantage:** You can run the resource-heavy Vision service on a separate, more powerful machine with a GPU, while your main PhotoPrism instance runs on a less powerful server or NAS.
 
@@ -54,12 +54,12 @@ On your main PhotoPrism server, navigate to your `storage/config` folder and cre
 !!! warning "Important: File Extension"
     The configuration file **must** be named `vision.yml` with the `.yml` extension, **not** `.yaml`. Files with the `.yaml` extension will be ignored by PhotoPrism and could cause the Vision service to appear non-functional.
 
-=== "Example 1: Using a Built-in Model"
+=== "Example 1: Using a Pre-installed Model"
 
-    This example uses the built-in `kosmos-2` model for generating captions. It does not require Ollama.
+    This example uses the pre-installed `kosmos-2` model for generating captions. It does not require Ollama.
 
-    !!! tip "Available Built-in Models"
-        The Vision service also includes other built-in models like `vit-gpt2`, `blip` for captions, and `nsfw_image_detector` for NSFW detection. You can use them by changing the `Name` in your `vision.yml`.
+    !!! tip "Available Pre-installed Models"
+        The Vision service also includes other pre-installed models like `vit-gpt2`, `blip` for captions, and `nsfw_image_detector` for NSFW detection. You can use them by changing the `Name` in your `vision.yml`.
 
     !!! example "`storage/config/vision.yml`"
         ```yaml

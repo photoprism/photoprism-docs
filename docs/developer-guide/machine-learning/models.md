@@ -170,6 +170,42 @@ For developers looking to contribute, the codebase is structured as follows:
 
 ---
 
+## Dependencies
+
+### Flask
+
+[Flask](https://flask.palletsprojects.com/en/3.0.x/) is the framework that is used for the API. It allows for API creation with Python, which is key for this application as it utilizes ML.
+
+### PyTorch
+
+[PyTorch](https://pytorch.org/) is key for working with the ML models to generate the outputs. It also enables GPU processing, speeding up the image processing with the models. PyTorch primarily creates and handles tensors, which are crucial for the function of the models.
+
+### Transformers
+
+[Transformers](https://huggingface.co/docs/transformers/en/index) is used for downloading and loading the models. In addition to this it is used in the image processing with the models.
+
+### Pillow
+
+[Pillow](https://pypi.org/project/pillow/) is used to take the supplied URL and convert it into the format needed to input into the models.
+
+### pydantic
+
+[pydantic](https://github.com/pydantic/pydantic) is used for JSON schemas, serialization and deserialization of requests and responses.
+
+### ollama
+
+[ollama](https://github.com/ollama/ollama) is used as integration library that connects to any given ollama instance.
+
+### timm
+
+[timm](https://huggingface.co/timm) is a tensorflow extension for timm models. Currently used for NSFW detection.
+
+### huggingface_hub[hf_xet]
+
+[xet](https://huggingface.co/blog/xet-on-the-hub) Extension used for faster downloading of huggingface models.
+
+---
+
 ## Troubleshooting and CLI Commands
 
 When developing or debugging the Vision service integration, you can use built-in CLI commands to inspect the configuration.

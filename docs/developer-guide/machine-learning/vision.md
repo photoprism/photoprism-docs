@@ -58,6 +58,9 @@ On your main PhotoPrism server, navigate to your `storage/config` folder and cre
 
     This example uses the built-in `kosmos-2` model for generating captions. It does not require Ollama.
 
+    !!! tip "Available Built-in Models"
+        The Vision service also includes other built-in models like `vit-gpt2`, `blip` for captions, and `nsfw_image_detector` for NSFW detection. You can use them by changing the `Name` in your `vision.yml`.
+
     !!! example "`storage/config/vision.yml`"
         ```yaml
         Models:
@@ -75,7 +78,7 @@ On your main PhotoPrism server, navigate to your `storage/config` folder and cre
             - If the place seems special or familiar, provide a brief, interesting description without being vague.
           Service:
             # IMPORTANT: Replace this IP with the address of your Vision service machine.
-            Uri: "http://<vision-service-ip>:5000/api/v1/vision/caption"
+            Uri: "http://<vision-service-ip>:5000/api/v1/vision"
         
         Thresholds:
           Confidence: 10
@@ -90,7 +93,8 @@ On your main PhotoPrism server, navigate to your `storage/config` folder and cre
         Models:
         - Type: caption
           Resolution: 720
-          Name: "llava-phi3:latest"
+          Name: "llava-phi3"
+          Version: "latest"
           Prompt: |
             Write a journalistic caption that is informative and briefly describes the most important visual content in up to 3 sentences:
             - Use explicit language to describe the scene if necessary for a proper understanding.
@@ -101,7 +105,7 @@ On your main PhotoPrism server, navigate to your `storage/config` folder and cre
             - If the place seems special or familiar, provide a brief, interesting description without being vague.
           Service:
             # IMPORTANT: Replace this IP with the address of your Vision service machine.
-            Uri: "http://<vision-service-ip>:5000/api/v1/vision/caption"
+            Uri: "http://<vision-service-ip>:5000/api/v1/vision"
         
         Thresholds:
           Confidence: 10
@@ -149,7 +153,7 @@ Add the `ollama` service to the same `compose.yaml` file as your `photoprism` se
           # NVIDIA_VISIBLE_DEVICES: "all"
           # NVIDIA_DRIVER_CAPABILITIES: "compute,utility"
         volumes:
-          - "./data/ollama:/root/.ollama"
+          - "ollama-data:/root/.ollama"
     
     volumes:
       ollama-data:
@@ -182,7 +186,7 @@ On your PhotoPrism server, navigate to `storage/config` and create/edit `vision.
     Models:
     - Type: caption
       Resolution: 720
-      Name: "llava-phi3:latest"
+      Name: "llava-phi3"
       Version: "latest"
       Prompt: |
         Write a journalistic caption that is informative and briefly describes the most important visual content in up to 3 sentences:
@@ -201,7 +205,8 @@ On your PhotoPrism server, navigate to `storage/config` and create/edit `vision.
 
     - Type: labels
       Resolution: 720
-      Name: "minicpm-v:latest"
+      Name: "minicpm-v"
+      Version: "latest"
       Service:
         Uri: "http://ollama:11434/api/generate"
         FileScheme: base64
@@ -245,7 +250,7 @@ docker compose exec photoprism photoprism vision run --models=caption album:Holi
 ```
 
 ```bash
-docker compose exec photoprism photoprism vision run --models=caption album:Holidays
+docker compose exec photoprism photoprism vision run --models=labels album:Holidays
 ```
 
 !!! tip "Re-running and Testing"

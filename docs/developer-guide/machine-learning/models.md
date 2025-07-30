@@ -1,25 +1,174 @@
-# Additional Computer Vision Models
+# PhotoPrism Vision Service
 
-Our <https://github.com/photoprism/photoprism-vision> repository on GitHub provides supplementary [computer vision models](#models) which can be accessed as [web services](#usage) by [PhotoPrism](https://github.com/photoprism/photoprism) and other applications. Their RESTful API [accepts an image URL](#example-request) and returns, for example, a [suitable caption](#example-response) in response.
+PhotoPrism® can be extended with a powerful, external service for advanced computer vision tasks like generating descriptive captions and labels for your entire photo library. This service, **PhotoPrism Vision**, acts as a flexible bridge between your main PhotoPrism instance and various AI models.
 
-!!! example ""
-    Note that this has not been officially released yet. Further documentation and models will be added over time.
+This guide provides a technical deep-dive for developers who want to understand, set up, and potentially extend the Vision service.
 
-## Models
+!!! info "Technologies Used"
+    The Vision service is built with Python using the Flask web framework. It leverages popular machine learning libraries like PyTorch and Hugging Face Transformers for running local models, and can also integrate with external AI providers like Ollama.
 
-The currently integrated models, each with [its own endpoint](#api-endpoints), are [kosmos-2](#kosmos-2), [vit-gpt2-image-captioning](#vit-gpt2), and [blip-image-captioning large](#blip):
+## Architecture
 
-### Kosmos-2
+The Vision service is designed to be a decoupled microservice. This architecture allows for flexibility and scalability, as the computationally intensive AI tasks can be offloaded to a separate, potentially more powerful, machine with a dedicated GPU.
 
-Komsos-2 is the most accurate model of the three. It was developed by Microsoft, and this application uses the transformers implementation of the original model, as described in its [Huggingface](https://huggingface.co/microsoft/kosmos-2-patch14-224). This model was released in June 2023, and offers object detection and spatial reasoning. Kosmos-2 has very accurate accurate image captions (a .04-.1 increase in clip score when compared to the other two models offered), and is the default model used.
+The data flow is as follows:
 
-### VIT-GPT2
+1.  **PhotoPrism** selects a photo that needs processing. It sends a request containing a thumbnail of the image and the desired model information to the Vision service's REST API.
+2.  **PhotoPrism Vision** receives the request. Based on the `model` name in the request body, it routes the request to the appropriate internal processor:
+    *   **Local Processor:** If a pre-installed model (e.g., `kosmos-2`, `blip`, `vit-gpt2`, `nsfw_image_detector`) is requested, the service uses PyTorch and Transformers to load the model from the local `models` directory and process the image. This can be accelerated by a GPU if available on the Vision service machine.
+    *   **Ollama Processor:** If the model name is not recognized as a local model, the service assumes it is an Ollama model. It forwards the image and a prompt to the configured `OLLAMA_HOST` API endpoint.
+3.  **The AI Model** (either local or on Ollama) analyzes the image and generates the result (a caption or a list of labels).
+4.  **PhotoPrism Vision** formats the result into a standardized JSON response and sends it back to the main PhotoPrism instance.
+5.  **PhotoPrism** receives the JSON response and saves the new metadata to its database.
 
-This model was released by [nlpconnect](https://huggingface.co/nlpconnect/vit-gpt2-image-captioning). This model combined VIT and GPT-2 to create a multi-modal image captioning model. I have found this to be the least performing of the three, but your mileage may vary.
+---
 
-### BLIP
+## Development Environment Setup
 
-This model was released by [Salesforce](https://huggingface.co/Salesforce/blip-image-captioning-large) in 2022. The primary purpose for this model was to increase both image understanding and text generation using novel techniques. It has achieved a +2.8% CIDEr result, and I've found this model to be more performant than VIT-GPT2, but Kosmos-2 to be slightly better (a .4 increase in CLIP score).
+This guide explains how to set up a local development environment to run the Vision service directly from source, allowing for easy code modification and debugging.
+
+1.  **Prerequisites:** Ensure you have Python 3.12+ and Git installed on your system.
+2.  **Clone the Repository:** First, clone the official `photoprism-vision` repository.
+    ```bash
+    git clone https://github.com/photoprism/photoprism-vision.git
+    cd photoprism-vision/service
+    ```
+3.  **Create and Activate Virtual Environment:** It is highly recommended to use a virtual environment to manage dependencies.
+    ```bash
+    python3.12 -m venv ./venv
+    source ./venv/bin/activate
+    ```
+4.  **Set Environment Variables:** Configure the connection to your Ollama instance if you plan to use it. These variables are read by the application at startup.
+    ```bash
+    export OLLAMA_ENABLED="true"
+    export OLLAMA_HOST="http://<ollama-host-ip>:11434"
+    ```
+5.  **Install Dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+6.  **Run the Flask Development Server:**
+    ```bash
+    python -m flask --app app run --debug --host=0.0.0.0 --port=5000
+    ```    The `--debug` flag enables auto-reloading whenever you save a change in the code, and `--host=0.0.0.0` makes the service accessible from other machines on your network, such as your main PhotoPrism instance.
+
+---
+
+## Configuration (`vision.yml`)
+
+The interaction between PhotoPrism and the Vision service is controlled by a `vision.yml` file located in your main PhotoPrism `storage/config` directory.
+
+!!! warning "Important: File Extension"
+    The configuration file **must** be named `vision.yml` with the `.yml` extension, **not** `.yaml`. Files with the `.yaml` extension will be ignored by PhotoPrism and could cause the Vision service to appear non-functional.
+
+The file consists of a list of `Models` and a `Thresholds` section.
+
+!!! example "`storage/config/vision.yml`"
+    ```yaml
+    Models:
+    - Type: caption
+      Resolution: 720
+      Name: "llava-phi3"
+      Version: "latest"
+      Prompt: |
+        Write a journalistic caption that is informative and briefly describes the most important visual content in up to 3 sentences.
+      Service:
+        Uri: "http://<vision-service-ip>:5000/api/v1/vision"
+        FileScheme: base64
+        RequestFormat: vision
+        ResponseFormat: vision
+
+    - Type: labels
+      Resolution: 720
+      Name: "kosmos-2"
+      Version: "latest"
+      Service:
+        Uri: "http://<vision-service-ip>:5000/api/v1/vision"
+        FileScheme: base64
+        RequestFormat: vision
+        ResponseFormat: vision
+
+    Thresholds:
+      Confidence: 50
+    ```
+
+*   **`Type`**: The task to perform. Can be `caption` or `labels`.
+*   **`Resolution`**: The longest edge of the thumbnail (in pixels) to be sent for analysis. Higher values may yield better results but increase processing time and network traffic.
+*   **`Name`**: The name of the model to use. For Ollama models, this should be just the model name (e.g., `llava-phi3`). For pre-installed models, it's the model identifier (e.g., `kosmos-2`).
+*   **`Version`**: The model version. For Ollama models, this is typically `latest`. For pre-installed models, it's also usually `latest`.
+*   **`Prompt`**: (Optional) A custom prompt to send to the AI model. If omitted, a default prompt will be used.
+*   **`Service`**: A block defining how to communicate with the service.
+    *   **`Uri`**: The base API endpoint of the Vision service. PhotoPrism will append the appropriate path based on the model type, name, and version (e.g., `/caption/llava-phi3/latest`).
+    *   **`FileScheme`**: How the image data is sent. `base64` sends it as a Base64-encoded string within the JSON payload (recommended for the Vision service). `data` sends the raw thumbnail binary, but this requires additional handling in the current Vision service implementation.
+    *   **`RequestFormat`**: The JSON structure of the request. Use `vision` for the PhotoPrism Vision API format. The `ollama` format should only be used when connecting directly to Ollama, not through the Vision service.
+    *   **`ResponseFormat`**: The expected JSON structure of the response. Use `vision` for the PhotoPrism Vision API format.
+*   **`Thresholds`**:
+    *   **`Confidence`**: A value from 0-100. Generated labels with a confidence score below this threshold will be discarded.
+
+---
+
+## API Endpoints
+
+The PhotoPrism Vision service exposes a simple REST API.
+
+#### Main Endpoints
+
+*   `POST /api/v1/vision/caption/<model_name>/<model_version>`: Generates a caption for an image using the specified model.
+*   `POST /api/v1/vision/labels/<model_name>/<model_version>`: Generates labels for an image using the specified model.
+*   `POST /api/v1/vision/nsfw`: Checks an image for not-safe-for-work content (using pre-installed models).
+
+!!! note "URL Construction"
+    When PhotoPrism makes requests to the Vision service, it constructs the full URL by appending the task type, model name, and version to the base URI specified in `vision.yml`. For example, if the base URI is `http://<vision-service-ip>:5000/api/v1/vision` and you request a caption with model `llava-phi3` version `latest`, PhotoPrism will send the request to `http://<vision-service-ip>:5000/api/v1/vision/caption/llava-phi3/latest`.
+
+#### Request Body
+
+The API accepts a JSON payload with the following fields:
+
+!!! example "Request to `/api/v1/vision/caption`"
+    ```json
+    {
+        "id": "optional-uuid-to-track-request",
+        "model": "llava-phi3",
+        "version": "latest",
+        "prompt": "Describe this image in a single sentence.",
+        "images": [
+          "data:image/jpeg;base64,/9j/4AAQSkZJRg..."
+        ]
+    }
+    ```
+
+#### Response Body
+
+The service returns a standardized JSON response:
+
+!!! example "Response"
+    ```json
+    {
+        "id": "optional-uuid-to-track-request",
+        "model": {
+            "name": "llava-phi3",
+            "version": "latest"
+        },
+        "result": {
+            "caption": "A colorful landscape with mountains and a clear blue sky."
+        }
+    }
+    ```
+
+---
+
+## Code Structure
+
+For developers looking to contribute, the codebase is structured as follows:
+
+*   **`app.py`**: The main Flask application. It handles routing, request parsing, and calls the appropriate processor.
+*   **`processor.py`**: Defines the abstract `ImageProcessor` base class. Any new integration (local or remote) must implement this interface.
+*   **`local_processor.py`**: Implements the processor for the pre-installed Hugging Face models (Kosmos-2, BLIP, etc.). It manages downloading, caching, and running these models using PyTorch.
+*   **`ollama_processor.py`**: Implements the processor for the Ollama integration. It acts as a client, formatting requests and forwarding them to an Ollama instance.
+*   **`api.py`**: Contains the Pydantic models used for request/response validation and serialization.
+*   **`utils.py`**: Helper functions, for instance, for image loading and encoding.
+
+---
 
 ## Dependencies
 
@@ -37,399 +186,44 @@ This model was released by [Salesforce](https://huggingface.co/Salesforce/blip-i
 
 ### Pillow
 
-[Pillow](https://pypi.org/project/pillow/) is used to take the supplied URl and convert it into the format needed to input into the models.
+[Pillow](https://pypi.org/project/pillow/) is used to take the supplied URL and convert it into the format needed to input into the models.
 
-### Hardware Acceleration Libraries
+### pydantic
 
-[Numpy](https://numpy.org/) could be used for further hardware acceleration. It isn't included in the application by default to save space and keep from installing unnecessary dependencies. Numpy can be configured to use the GPU for computations. PyTorch already enables GPU processing, so numpy may not make a signficant difference.
+[pydantic](https://github.com/pydantic/pydantic) is used for JSON schemas, serialization and deserialization of requests and responses.
 
-## Build Setup
+### ollama
 
-Before installing the Python dependencies, please make sure that you have [Git](https://git-scm.com/downloads) and [Python 3.12+ (incl. pip)](https://www.python.org/downloads/) installed on your system, e.g. by running the following command on Ubuntu/Debian Linux:
+[ollama](https://github.com/ollama/ollama) is used as integration library that connects to any given ollama instance.
 
-```
-sudo apt-get install -y git python3 python3-pip python3-venv python3-wheel
-```
+### timm
 
-You can then install the required libraries in a virtual environment by either using the Makefiles we provide (i.e. run `make` in the main project directory or a subdirectory) or by manually running the following commands in a service directory, for example:
+[timm](https://huggingface.co/timm) is a tensorflow extension for timm models. Currently used for NSFW detection.
 
-```bash
-git clone git@github.com:photoprism/photoprism-vision.git
-cd photoprism-vision/describe
-python3 -m venv ./venv
-. ./venv/bin/activate
-./venv/bin/pip install --disable-pip-version-check --upgrade pip
-./venv/bin/pip install --disable-pip-version-check -r requirements.txt
-```
+### huggingface_hub[hf_xet]
 
-## Usage
+[xet](https://huggingface.co/blog/xet-on-the-hub) Extension used for faster downloading of huggingface models.
 
-Run the Python file `app.py` in the `describe` subdirectory to start the *describe* service after you have installed [the dependencies](#build-setup) (more services, e.g. for OCR and tag generation, may follow):
+---
 
-```bash
-./venv/bin/python app.py
-```
+## Troubleshooting and CLI Commands
 
-The service then listens on port 5000 by default and its API endpoints for generating captions support both `GET` and `POST` requests. It can be tested with the `curl` command (`curl.exe` on Windows) as shown in the example below:
+When developing or debugging the Vision service integration, you can use built-in CLI commands to inspect the configuration.
+
+### Listing Loaded Models
+
+To verify how the main PhotoPrism instance has parsed the `vision.yml` file, you can use the `vision ls` command from within the PhotoPrism container. This is particularly useful for debugging configuration issues without needing to trigger a full indexing job.
+
+From within the development container (after running `make terminal`), use:
 
 ```bash
-curl -v -H "Content-Type: application/json" \
-  --data '{"url":"https://dl.photoprism.app/img/team/avatar.jpg"}' \
-  -X POST http://localhost:5000/api/v1/vision/describe
+./photoprism vision ls
 ```
 
-At a minimum, a valid image `url` must be specified for this. In addition, a `model` name and an arbitrary `id` [can be passed](#example-request). The API will return the same `id` in [the response](#example-response). If no `id` is passed, a randomly generated UUID will be returned instead.
+If you have a global `photoprism` binary, you can run:
 
-If your client submits `POST` requests, the request body must be [JSON-encoded](https://www.json.org/), e.g.:
-
-```json
-{
-    "id": "3487da77-246e-4b4c-9437-67507177bcd7",
-    "url": "https://dl.photoprism.app/img/team/avatar.jpg"
-}
+```bash
+photoprism vision ls
 ```
 
-Alternatively, you can perform `GET` requests with URL-encoded query parameters, which is easier to test without an HTTP client:
-
-> http://localhost:5000/api/v1/vision/describe?url=https%3A%2F%2Fdl.photoprism.app%2Fimg%2Fteam%2Favatar.jpg&id=3487da77-246e-4b4c-9437-67507177bcd7
-
-### API Endpoints
-
-#### `/api/v1/vision/describe`
-
-This is the default endpoint of the API. An image url should be passed in with the key "url", and optionally a "model" and/or "id" value can be passed in. The "model" key allows the user to specify which of the three models they would like to use. If no model is given, the application will default to using the kosmos-2 model.
-
-#### `/api/v1/vision/describe/kosmos-2/patch14-224`
-
-This is the endpoint for the Kosmos-2 model. An image url should be passed in with the key "url", and optionally a "model" and/or "id" value can be passed in.
-
-#### `/api/v1/vision/describe/vit-gpt2-image-captioning`
-
-This is the endpoint for the VIT GPT-2 model. An image url should be passed in with the key "url", and optionally an "id" value can be passed in.
-
-#### `/api/v1/vision/describe/blip-image-captioning-large`
-
-This is the endpoint for the BLIP model. An image url should be passed in with the key "url", and an "id" value can be passed in.
-
-### Example Request
-
-`POST /api/v1/vision/describe`
-
-```json
-{
-    "id": "b0db2187-7a09-438c-8649-a9c6c0f7b8a1",
-    "model": "kosmos-2"
-    "url": "https://dl.photoprism.app/img/team/avatar.jpg",
-}
-```
-
-### Example Response
-
-```json
-{
-    "id": "b0db2187-7a09-438c-8649-a9c6c0f7b8a1",
-    "model": {
-        "name": "kosmos-2",
-        "version": "patch14-224"
-    },
-    "result": {
-        "caption": "An image of a man in a suit smiling."
-    }
-}
-```
-
-## Code Structure
-
-### Model Loading and Initialization
-
-```python
-MODEL_DIR = "models"
-KOSMOS_MODEL_PATH = os.path.join(MODEL_DIR, "kosmos-2-patch14-224")
-VIT_MODEL_PATH = os.path.join(MODEL_DIR, "vit-gpt2-image-captioning")
-BLIP_MODEL_PATH = os.path.join(MODEL_DIR, "blip-image-captioning-large")
-```
-
-This code block creates the paths for the models. This will be useful when downloading/loading the models. It uses os.path to assemble the correct path depending on if the system is Windows-based or UNIX-based.
-
-### Downloading Models
-
-```python
-def download_model(model_name, save_path):
-    if not os.path.exists(save_path):
-        print(f"Downloading {model_name}...")
-        if model_name == "microsoft/kosmos-2-patch14-224":
-            AutoModelForVision2Seq.from_pretrained(model_name).save_pretrained(save_path)
-            AutoProcessor.from_pretrained(model_name).save_pretrained(save_path)
-        elif model_name == "nlpconnect/vit-gpt2-image-captioning":
-            VisionEncoderDecoderModel.from_pretrained(model_name).save_pretrained(save_path)
-            ViTImageProcessor.from_pretrained(model_name).save_pretrained(save_path)
-            AutoTokenizer.from_pretrained(model_name).save_pretrained(save_path)
-        elif model_name == "Salesforce/blip-image-captioning-large":
-            BlipForConditionalGeneration.from_pretrained(model_name).save_pretrained(save_path)
-            BlipProcessor.from_pretrained(model_name).save_pretrained(save_path)
-        print(f"{model_name} downloaded and saved to {save_path}")
-    else:
-        print(f"{model_name} already exists at {save_path}")
-```
-
-Here the code is checking if the models already exist or not. If they don't exist it is downloading them, if they do it is skipping the downloading.
-
-```python
-os.makedirs(MODEL_DIR, exist_ok=True)
-download_model("microsoft/kosmos-2-patch14-224", KOSMOS_MODEL_PATH)
-download_model("nlpconnect/vit-gpt2-image-captioning", VIT_MODEL_PATH)
-download_model("Salesforce/blip-image-captioning-large", BLIP_MODEL_PATH)
-```
-
-Here the code is downloading the models by calling the function in the previous block.
-
-### Loading Models
-
-```python
-print("Loading models...")
-kosmosModel = AutoModelForVision2Seq.from_pretrained(KOSMOS_MODEL_PATH)
-kosmosProcessor = AutoProcessor.from_pretrained(KOSMOS_MODEL_PATH)
-
-vitModel = VisionEncoderDecoderModel.from_pretrained(VIT_MODEL_PATH)
-vitFeature_extractor = ViTImageProcessor.from_pretrained(VIT_MODEL_PATH)
-vitTokenizer = AutoTokenizer.from_pretrained(VIT_MODEL_PATH)
-
-blipProcessor = BlipProcessor.from_pretrained(BLIP_MODEL_PATH)
-blipModel = BlipForConditionalGeneration.from_pretrained(BLIP_MODEL_PATH)
-
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-vitModel.to(device)
-```
-
-Here the models are being loaded after they have been saved. 
-
-### Services
-
-```python
-def kosmosGenerateResponse(url):
-    try:
-        image = Image.open(requests.get(url, stream=True).raw)
-    except Exception as e:
-        return "fetchError", f"Unable to fetch image: {str(e)}"
-
-    prompt = "<grounding>An image of"
-
-    try:
-        inputs = kosmosProcessor(text=prompt, images=image, return_tensors="pt")
-        generated_ids = kosmosModel.generate(
-            pixel_values=inputs["pixel_values"],
-            input_ids=inputs["input_ids"],
-            attention_mask=inputs["attention_mask"],
-            image_embeds=None,
-            image_embeds_position_mask=inputs["image_embeds_position_mask"],
-            use_cache=True,
-            max_new_tokens=128,
-        )
-
-        generated_text = kosmosProcessor.batch_decode(generated_ids, skip_special_tokens=True)[0]
-        processed_text, entities = kosmosProcessor.post_process_generation(generated_text)
-    except Exception as e:
-        return "processingError", f"Error during processing: {str(e)}"
-
-    return "ok", processed_text
-
-def vitGenerateResponse(url):
-    vitModel.to(device)    
-
-    max_length = 16
-    num_beams = 4
-    gen_kwargs = {"max_length": max_length, "num_beams": num_beams}
-
-    def predict_step(url):
-        image = Image.open(requests.get(url, stream=True).raw)
-        images = []
-
-        if image.mode != "RGB":
-            image = image.convert(mode="RGB")
-
-        images.append(image)
-
-        pixel_values = vitFeature_extractor(images=images, return_tensors="pt").pixel_values
-        pixel_values = pixel_values.to(device)
-
-        output_ids = vitModel.generate(pixel_values, **gen_kwargs)
-
-        preds = vitTokenizer.batch_decode(output_ids, skip_special_tokens=True)
-        preds = [pred.strip() for pred in preds]
-        return preds
-
-    processed_text = predict_step(url)  # returns prediction
-
-    return "ok", processed_text
-
-def blipGenerateResponse(url):
-    img_url = url
-    raw_image = Image.open(requests.get(img_url, stream=True).raw).convert('RGB')
-
-    inputs = blipProcessor(raw_image, return_tensors="pt")
-
-    out = blipModel.generate(**inputs)
-    processed_text = blipProcessor.decode(out[0], skip_special_tokens=True)
-
-    return "ok", processed_text
-```
-
-These are the services to generate the captions. There is a function for each model.
-
-## API Endpoints
-
-### Default Endpoint
-
-```python
-@app.route('/api/v1/vision/describe', methods=['POST', 'GET'])
-def generateResponse():
-    if request.method == 'POST':
-        if not request.is_json:
-            return jsonify({"error": "Request must be JSON"}), 400
-        data = request.get_json()
-    elif request.method == 'GET':
-        data = request.args
-
-    url = data.get('url')
-    model = data.get('model')
-    id = data.get('id')
-
-    if not url:
-        return jsonify({"error": "URL is required"}), 400
-    
-    if model == "kosmos-2" or not model:
-        status, result = kosmosGenerateResponse(url)
-        if status == "fetchError":
-            return jsonify({"error": result}), 500
-        elif status == "processingError":
-            return jsonify({"error": result}), 500
-        elif status == "ok":
-            if id:
-                return jsonify({"id": id, "result": {"caption": result}, "model": {"name": "kosmos-2", "version": "patch14-224"}}), 200
-            return jsonify({"id": uuid.uuid4(), "result": {"caption": result}, "model": {"name": "kosmos-2", "version": "patch14-224"}}), 200
-    elif model == "vit-gpt2-image-captioning":
-        status, result = vitGenerateResponse(url)
-        if status == "ok":
-            if id:
-                return jsonify({"id": id, "result": {"caption": result}, "model": {"name": model, "version": "latest"}}), 200
-            return jsonify({"id": uuid.uuid4(), "result": {"caption": result}, "model": {"name": model, "version": "latest"}}), 200
-        return jsonify({"error": "Error during processing"})
-    elif model == "blip-image-captioning-large":
-        status, result = blipGenerateResponse(url)
-        if status =='ok':
-            if id:
-                return jsonify({"id": id, "result": {"caption": result}, "model": {"name": model, "version": "latest"}}), 200
-            return jsonify({"id": uuid.uuid4(), "result": {"caption": result}, "model": {"name": model, "version": "latest"}}), 200
-        return jsonify({"error": "Error during processing"})
-```
-
-This is the default endpoint. It checks to see if a model is specified, and if it is it calls the service associated with that model and returns the respose with the data. If a model isn't specified it uses kosmos-2.
-
-### Specific Endpoints
-
-```python
-@app.route('/api/v1/vision/describe/kosmos-2/patch14-224', methods=['POST', 'GET'])
-def kosmosController():
-    if request.method == 'POST':
-        if not request.is_json:
-            return jsonify({"error": "Request must be JSON"}), 400
-        data = request.get_json()
-    elif request.method == 'GET':
-        data = request.args
-
-    url = data.get('url')
-    id = data.get('id')
-
-    if not url:
-        return jsonify({"error": "URL is required"}), 400
-    
-    status, result = kosmosGenerateResponse(url)
-
-    if status == "fetchError":
-        return jsonify({"error": result}), 500
-    elif status == "processingError":
-        return jsonify({"error": result}), 500
-    elif status == "ok":
-        if id:
-            return jsonify({"id": id, "result": {"caption": result}, "model": {"name": "kosmos-2", "version": "patch14-224"}}), 200
-        return jsonify({"id": uuid.uuid4(), "result": {"caption": result}, "model": {"name": "kosmos-2", "version": "patch14-224"}}), 200
-
-    
-
-
-@app.route('/api/v1/vision/describe/vit-gpt2-image-captioning', methods=['POST', 'GET'])
-def vitController():
-    if request.method == 'POST':
-        if not request.is_json:
-            return jsonify({"error": "Request must be JSON"}), 400
-        data = request.get_json()
-    elif request.method == 'GET':
-        data = request.args
-    
-    url = data.get('url')
-    id = data.get('id')
-
-    if not url:
-        return jsonify({"error": "URL is required"}), 400
-    
-    status, result = vitGenerateResponse(url)
-
-    if status == "ok":
-        if id:
-            return jsonify({"id": id, "result": {"caption": result}, "model": {"name": "vit-gpt2-image-captioning", "version": "latest"}}), 200
-        return jsonify({"id": uuid.uuid4(), "result": {"caption": result}, "model": {"name": "vit-gpt2-image-captioning", "version": "latest"}}), 200
-    
-    return jsonify({"error": "Error during processing"})
-
-
-
-@app.route('/api/v1/vision/describe/blip-image-captioning-large', methods=['POST', 'GET'])
-def blipController():
-    if request.method == 'POST':
-        if not request.is_json:
-            return jsonify({"error": "Request must be JSON"}), 400
-        data = request.get_json()
-    elif request.method == 'GET':
-        data = request.args
-
-    url = data.get('url')
-    id = data.get('id')
-
-    if not url:
-        return jsonify({"error": "URL is required"}), 400
-    
-    status, result = blipGenerateResponse(url)
-
-    if status == "ok":
-        if id:
-            return jsonify({"id": id, "result": {"caption": result}, "model": {"name": "vit-gpt2-image-captioning", "version": "latest"}}), 200
-        return jsonify({"id": uuid.uuid4(), "result": {"caption": result}, "model": {"name": "vit-gpt2-image-captioning", "version": "latest"}}), 200
-    
-    return jsonify({"error", "Error during processing"})
-
-```
-
-These are the endpoints for each model. They do some error handling, run the service, and return the response.
-
-## Contributors
-
-We would like to thank everyone involved, especially [Aatif Dawawala](https://github.com/Aatif-Dawawala) who got things rolling and contributed much of the initial code:
-
-- [Aatif Dawawala](https://github.com/Aatif-Dawawala)
-- [Niaz Faridani-Rad](https://github.com/derneuere)
-
-[Learn more ›](https://github.com/photoprism/photoprism-vision/graphs/contributors)
- 
-## Submitting Pull Requests
-
-Follow our [step-by-step guide](https://docs.photoprism.app/developer-guide/pull-requests) to learn how to submit new features, bug fixes, and documentation enhancements.
-
-[Learn more ›](https://docs.photoprism.app/developer-guide/pull-requests)
-
-## License and Disclaimer
-
-The files in the <https://github.com/photoprism/photoprism-vision> repository are licensed under the [Apache License, Version 2.0](../../license/apache.md) (the “License”).
-
-Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-
-[Learn more ›](../../license/apache.md)
+The command will output the settings for all supported and configured model types, which you can then compare with the expected settings in your `vision.yml`. This helps quickly identify typos, formatting issues, or incorrect values.

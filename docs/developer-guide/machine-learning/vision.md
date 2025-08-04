@@ -99,23 +99,23 @@ Create a vision.yml file in the config path (default: `storage/config`) of your 
     ```yaml
     Models:
     - Type: caption
-    Resolution: 720
-    Name: "llava-phi3"
-    Version: "latest"
-    Prompt: |
-    Write a journalistic caption that is informative and briefly describes the most important visual content in up to 3 sentences:
-    - Use explicit language to describe the scene if necessary for a proper understanding.
-    - Avoid text formatting, meta-language, and filler words.
-    - Do not start captions with boring phrases such as "This image", "The image", "This picture", "The picture", "A picture of", "Here are", or "There is".
-    - Instead, start describing the content by first identifying the subjects and any actions that might be performed.
-    - Try providing a casual description of what the subjects look like, including their gender and age.
-    - If the place seems special or familiar, provide a brief, interesting description without being vague.
-    Service:
-    # This points directly to the Ollama service within the same Docker network.
-    Uri: "http://ollama:11434/api/generate"
-    FileScheme: base64
-    RequestFormat: ollama
-    ResponseFormat: ollama
+      Resolution: 720
+      Name: "llava-phi3"
+      Version: "latest"
+      Prompt: |
+        Write a journalistic caption that is informative and briefly describes the most important visual content in up to 3 sentences:
+        - Use explicit language to describe the scene if necessary for a proper understanding.
+        - Avoid text formatting, meta-language, and filler words.
+        - Do not start captions with boring phrases such as "This image", "The image", "This picture", "The picture", "A picture of", "Here are", or "There is".
+        - Instead, start describing the content by first identifying the subjects and any actions that might be performed.
+        - Try providing a casual description of what the subjects look like, including their gender and age.
+        - If the place seems special or familiar, provide a brief, interesting description without being vague.
+      Service:
+        # This points directly to the Ollama service within the same Docker network.
+        Uri: "http://ollama:11434/api/generate"
+        FileScheme: base64
+        RequestFormat: ollama
+        ResponseFormat: ollama
     - Type: labels
       Resolution: 720
       Name: "minicpm-v"
@@ -139,7 +139,7 @@ docker compose stop photoprism
 docker compose up -d
 ``` 
 
-and proceed to [Generate Captions/Labels](#generate-captionslabels-using-the-vision-run-command-).
+and proceed to [Generate Captions/Labels](#generate-captionslabels-using-the-vision-run-command).
 
 ## Using the PhotoPrism Vision Service ##
 
@@ -247,7 +247,7 @@ docker compose stop photoprism
 docker compose up -d
 ``` 
 
-and proceed to [Step 4: Generate Captions](#generate-captionslabels-using-the-vision-run-command-).
+and proceed to [Step 4: Generate Captions](#generate-captionslabels-using-the-vision-run-command).
 
 ## Generate Captions/Labels using the vision run command ##
 

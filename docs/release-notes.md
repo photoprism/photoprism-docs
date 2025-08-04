@@ -4,13 +4,14 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250802-a80bdf065</span>
+<span class="build">Build 250804-b7dc81fe2</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. [Learn more ›](getting-started/updates.md#development-preview)
 
 What's new?
 
 - AI: [Improved caption model configuration and `photoprism vision run` command](https://github.com/photoprism/photoprism/commit/4bc9cd6ca23bb65072b766ae16b7966b4e7b3e36)
+- AI: [Custom TensorFlow models can be configured for label and NSFW detection](https://github.com/photoprism/photoprism/pull/5011) by [@raystlin](https://github.com/raystlin)
 - AI: [Added direct support for generating captions using the Ollama API](https://github.com/photoprism/photoprism/issues/5123)
 - Auth: [2FA can be activated, even if the recovery code cannot be copied](https://github.com/photoprism/photoprism/issues/5106)
 - Search: [Added a reverse sort query parameter for initial testing (work in progress)](https://github.com/photoprism/photoprism/issues/683#issuecomment-3070215533)

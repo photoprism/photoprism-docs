@@ -131,14 +131,20 @@ docker compose exec photoprism photoprism faces reset -f
 
 ### MariaDB Server
 
-Our [configuration examples](https://dl.photoprism.app/docker/) are generally based on the [current stable version](https://mariadb.com/kb/en/mariadb-server-release-dates/) to take advantage of performance improvements. This does not mean that [older versions](index.md#databases) are no longer supported and you must upgrade immediately. We recommend not using the `:latest` tag for the MariaDB Docker image and to upgrade manually by changing the tag once we had a chance to test a new major version, e.g.:
+Our [configuration examples](https://dl.photoprism.app/docker/) are generally based on the [current stable version](https://mariadb.com/kb/en/mariadb-server-release-dates/) to take advantage of performance improvements. This does not mean that [older versions](index.md#databases) are no longer supported and you must upgrade immediately.
+
+We recommend using a version or subversion tag, such as `:11` or [`:11.8`](https://mariadb.org/11-8-lts-released/), instead of `:latest`, to specify the MariaDB service image in your `compose.yaml` file, as shown in this example:
 
 ```yaml
 services:
   mariadb:
-    image: mariadb:11
+    image: mariadb:11.8
     ...
 ```
+
+You can then manually upgrade to [new major versions](https://mariadb.com/docs/release-notes/community-server) by changing the image tag, e.g. from `mariadb:11` to `mariadb:12`, once they are stable and we have tested them. 
+
+However, this requires periodically [checking for new MariaDB images](https://hub.docker.com/_/mariadb) and adjusting your `compose.yaml` file accordingly, so you don't get stuck with an outdated version.
 
 !!! note ""
     If MariaDB fails to start after upgrading from an earlier version (or migrating from MySQL), the internal management schema may be outdated. See [Troubleshooting MariaDB Problems](troubleshooting/mariadb.md#version-upgrade) for instructions on how to fix this.

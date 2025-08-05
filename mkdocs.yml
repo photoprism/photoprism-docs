@@ -186,10 +186,11 @@ nav:
       - Color Detection: developer-guide/metadata/colors.md
       - Camera Models: developer-guide/metadata/cameras.md
     - Machine Learning:
-      - Enhanced AI Setup: developer-guide/machine-learning/vision.md
+      - Vision API: developer-guide/machine-learning/vision-api.md
+      - Vision Service: developer-guide/machine-learning/vision-service.md  
+      - Vision Development Guide: developer-guide/machine-learning/models.md
       - Image Classification: developer-guide/machine-learning/classification.md
       - Face Recognition: developer-guide/machine-learning/face-recognition.md
-      - Additional Models: developer-guide/machine-learning/models.md
     - Mobile Apps:
       - iOS and Android: developer-guide/native-apps/index.md
     - Web User Interface:
@@ -335,6 +336,7 @@ plugins:
         'getting-started/advanced/https.md': 'getting-started/using-https.md'
         'developer-guide/apps/index.md': 'developer-guide/native-apps/index.md'
         'photoprism-pi.md': 'getting-started/raspberry-pi/microsd-image.md'
+        'developer-guide/machine-learning/vision.md': 'developer-guide/machine-learning/vision-api.md'
 
 # MkDocs extensions.
 markdown_extensions:

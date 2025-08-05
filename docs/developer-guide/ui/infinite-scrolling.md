@@ -18,7 +18,7 @@ wasn't there from the beginning. This creates the illusion of having an infinite
 There are two parameters to consider:
 
 1. When to start loading the next batch?
-    -  loading to early results in to much unnecessary data getting laoded.
+    -  loading to early results in to much unnecessary data getting loaded.
     -  loading to late results in the user bumping into the end of the list of elements, because the next batch hasn't finished loading yet.
 2. How large are the batches?
     -  to small batches can slow down the overall loading time by resulting in overhad because of too many requests.
@@ -45,13 +45,13 @@ This problem is usually solved by virtualization:
 3. render **only** those elements.
 
 The problem with this regular virtualization is that it requires the elements to be positioned absolutely and may prescribe how they are structured.
-Implementing it would therefore imply a potentialy larger rewrite and less freedom when designing the elements.
+Implementing it would therefore imply a potentially larger rewrite and less freedom when designing the elements.
 
 ### Pseudo-Virtualization with placeholders
 
-Using the [IntersectionObserver API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) we can efficiently determine wether something is currently visible or not.
+Using the [IntersectionObserver API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) we can efficiently determine whether something is currently visible or not.
 We can use this information to replace all elements that are currently not in the visible area with simple placeholders of the same size.
-This drastically reduces the load on the browser, because these (often single-domnode) placeholder-elements require a LOT less ressources.
+This drastically reduces the load on the browser, because these (often single-domnode) placeholder-elements require a LOT less resources.
 
 This has the huge benefit that it doesn't restrict how components are structured or positioned, while also being easier to implement.
 There are however two caveats:
@@ -68,7 +68,7 @@ This type of virtualization more than fast enough, and because we think the bene
 
 The setup for a component that uses the placeholder-virtualization is as follows:
 
-1. Add a ref to all the elements whose visibilty needs to be tracked
+1. Add a ref to all the elements whose visibility needs to be tracked
 2. create a single `IntersectionObserver` in the `beforeCreate` that calls a (yet to be defined) `this.visibilitiesChanged`
 3. add a watcher that is called when the list of elements changes. call [observe](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserver/observe) on all refs from step 1
 4. define a function that takes an [IntersectionObserverEntry](https://developer.mozilla.org/en-US/docs/Web/API/IntersectionObserverEntry) and returns the index of the corresponding target (for example by adding a `data-index`-attribute to the observed element)
@@ -87,7 +87,7 @@ As a bonus, you can make the IntersectionObserver only observe for example every
 ### Render Performance
 
 When working with a huge amount of elements, render performance of these elements is critically important.
-The better the render performance, the more it actually feels like scrolling through an infinite list. It allowes the user to scroll faster without having to see placeholders and makes the application feel way snappier, especially on lower-end devices.
+The better the render performance, the more it actually feels like scrolling through an infinite list. It allows the user to scroll faster without having to see placeholders and makes the application feel way snappier, especially on lower-end devices.
 
 Here are some tips on how to gain performance. They are ordered from most to least important and only apply to things that are rendered for every element:
 
@@ -103,18 +103,18 @@ Here are some tips on how to gain performance. They are ordered from most to lea
 ### Memoization
 
 Memoization is a technique to speed up function calls by caching results.
-This can have a noticable impact on render-performance, especially when function
+This can have a noticeable impact on render-performance, especially when function
 results are used for placeholders
 
 Example: The texts on the cards in the cards-view. There are function-calls like `photo.locationInfo()` and `photo.getDateString()`.  
 The resulting values rarely change, but are calculated again and again on every render, resulting in ~280k calls per function when scrolling through ~2k pictures.
 
 We use [`memoize-one`](https://www.npmjs.com/package/memoize-one) for much called, non-trivial functions whose parameters rarely change.
-The funtions in the Photo model are a prime example for that.
+The functions in the Photo model are a prime example for that.
 
 For this to work the memoized function must be pure, which means its result must not depend on outside factors, but only on its parameters. Calling the same function twice with the same parameters must always return the same result.
 
-If you want to memoize a function that is not pure you can still do so by moving all its logic into a new, memoized, pure function and having the old funtion just call the memoized one, providing the required parameters. Example:
+If you want to memoize a function that is not pure you can still do so by moving all its logic into a new, memoized, pure function and having the old function just call the memoized one, providing the required parameters. Example:
 ```JavaScript
 // ------------------ before ------------------
 isPlayable() {

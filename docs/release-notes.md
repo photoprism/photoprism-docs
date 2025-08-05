@@ -19,7 +19,7 @@ What's new?
 - Intel QSV: [`libvpl2` will be installed when `PHOTOPRISM_INIT` includes "intel"](https://github.com/photoprism/photoprism/discussions/5098)
 - Config: [`PHOTOPRISM_DISABLE_FRONTEND` disables the web user interface](https://github.com/photoprism/photoprism/issues/5111)
 - Setup: [Updated `compose.yaml` configuration examples](https://dl.photoprism.app/docker/)
-- Docker: [Preinstalled `libmagic-mgc` package for enhanced media type detection](https://github.com/photoprism/photoprism/issues/5149)
+- Docker: [Preinstalled `libmagic-mgc` package for media type detection](https://github.com/photoprism/photoprism/issues/5149)
 - Security: [Updated Go to v1.24.5, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.5)
 - Translations: [Updated Spanish and Vietnamese](https://docs.photoprism.app/developer-guide/translations-weblate/)
 

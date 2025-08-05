@@ -11,7 +11,7 @@ PhotoPrism is compatible with [SQLite 3](sqlite.md) and [MariaDB 10.5.12+](https
 Official support for MySQL 8 is discontinued as Oracle seems to have stopped shipping [new features and enhancements](https://github.com/photoprism/photoprism/issues/1764).
 As a result, the testing effort required before each release is no longer feasible.
 
-Our [configuration examples](https://dl.photoprism.app/docker/) are generally based on the [current stable version](https://mariadb.com/kb/en/mariadb-server-release-dates/) to take advantage of performance improvements. This does not mean that [older versions](../index.md#databases) are no longer supported and you must upgrade immediately.
+Our [configuration examples](https://dl.photoprism.app/docker/) are generally based on the [current stable version](https://mariadb.com/docs/release-notes/community-server) to take advantage of performance improvements. This does not mean that [older versions](../index.md#databases) are no longer supported and you must upgrade immediately.
 
 We recommend using a version or subversion tag, such as `:11` or [`:11.8`](https://mariadb.org/11-8-lts-released/), instead of `:latest`, to specify the MariaDB service image in your `compose.yaml` file, as shown in this example:
 

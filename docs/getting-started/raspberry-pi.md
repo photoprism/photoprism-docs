@@ -115,7 +115,7 @@ We recommend that you compare your own `compose.yaml` with [our latest examples]
 
 #### MariaDB Server ####
 
-Our [config examples](https://dl.photoprism.app/docker/) are generally based on the [latest stable release](https://mariadb.com/kb/en/mariadb-server-release-dates/) to take advantage of performance enhancements.
+Our [config examples](https://dl.photoprism.app/docker/) are generally based on the [latest stable release](https://mariadb.com/docs/release-notes/community-server) to take advantage of performance enhancements.
 This does not mean [older versions](index.md#databases) are no longer supported and you have to upgrade immediately.
 
 !!! note ""

@@ -1,6 +1,6 @@
 # Vision Service Developer Guide
 
-With our dedicated Vision Service, you get access to additional models and configuration options for advanced computer vision tasks. For example, you can use it to generate custom captions and labels for your photos. The service runs in a separate container that acts as a proxy between the models and PhotoPrism®, thereby extending its capabilities. It also allows Python developers to experiment with new ideas, try different models, and customize prompts.
+With our dedicated Vision Service, you get access to additional models and configuration options for advanced computer vision tasks. For example, you can use it to generate custom captions and labels for your photos. The service runs in a separate container that acts as a proxy between the models and PhotoPrism®, extending its capabilities. It also allows Python developers to experiment with new ideas, try different models, and customize prompts.
 
 !!! tldr ""
     If you have an interest in AI and would like to run a dedicated Vision Service, we recommend [reading the introduction](index.md) and [following the instructions](index.md#getting-started) there, as the following guide is intended for developers only. [Learn more ›](index.md)

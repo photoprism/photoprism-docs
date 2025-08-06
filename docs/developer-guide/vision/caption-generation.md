@@ -1,6 +1,8 @@
 # Caption Generation
 
-As an addition to its [built-in AI capabilities](classification.md), PhotoPrism allows you to generate image captions using either our dedicated [Vision Service](service/index.md) or a direct [Ollama](https://ollama.com/search?c=vision) integration, as [described in this guide](#ollama-setup-guide).[^1] It lets you choose from the [available vision models](https://ollama.com/search?c=vision) and [customize prompts](#step-3-configure-photoprism) according to your needs.
+As an addition to its [built-in AI capabilities](classification.md), PhotoPrism lets you generate image captions through either a [dedicated Vision Service](service/index.md) or direct [Ollama](https://ollama.com/search?c=vision) integration, as [described in this guide](#ollama-setup-guide).[^1]
+
+It allows you to choose from the [available vision models](https://ollama.com/search?c=vision) and [customize the prompts](#step-3-configure-photoprism) according to your needs.
 
 !!! tldr ""
     This guide only covers a [direct Ollama API integration](https://github.com/photoprism/photoprism/issues/5123). If you are interested in AI and would like to run a dedicated [Vision Service](service/index.md), we recommend [reading the introduction](service/index.md) to get started. [Learn more ›](service/index.md)

@@ -112,6 +112,25 @@ Create a vision.yml file in the config path (default: `storage/config`) of your 
       Confidence: 10
     ```
 
+#### Using Model Default Configs ####
+
+You can now use model default configurations even if you have a custom `vision.yml` file. This simplifies configuration by allowing you to use default settings for specific model types.
+
+To use default configs, simply set the `Default` flag to `true` for the model types you want to use with their default settings:
+
+!!! example "Using Default Model Configs"
+    ```yaml
+    Models:
+    - Type: labels
+      Default: true
+    - Type: nsfw
+      Default: true
+    - Type: face
+      Default: true
+    ```
+
+When `Default: true` is set, PhotoPrism will use the built-in default configuration for that model type. To switch back to custom configuration, simply remove the `Default` flag from your model configuration.
+
 ### Step 4: Restart and Generate Captions/Labels ###
 
 After saving the `vision.yml`, restart your PhotoPrism instance:

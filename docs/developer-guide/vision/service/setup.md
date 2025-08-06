@@ -1,15 +1,15 @@
 # Vision Service Developer Guide
 
-With our dedicated Vision Service, you get access to additional models and configuration options for advanced computer vision tasks. For example, you can use it to generate custom captions and labels for your photos. The service runs in a separate container that acts as a proxy between the models and PhotoPrism®, extending its capabilities. It also allows Python developers to experiment with new ideas, try different models, and customize prompts.
+With our dedicated [Vision Service](index.md), you get access to additional models and configuration options for advanced computer vision tasks. For example, you can use it to generate custom captions and labels for your photos. The service runs in a separate container that acts as a proxy between the models and PhotoPrism®, extending its capabilities. It also allows Python developers to experiment with new ideas, try different models, and customize prompts.
 
 !!! tldr ""
-    If you have an interest in AI and would like to run a dedicated Vision Service, we recommend [reading the introduction](index.md) and [following the instructions](index.md#getting-started) there, as the following guide is intended for developers only. [Learn more ›](index.md)
+    If you have an interest in AI and would like to run a dedicated [Vision Service](https://github.com/photoprism/photoprism-vision), we recommend [reading the introduction](index.md) and [following the instructions](index.md#getting-started) there, as the following guide is intended for developers only. [Learn more ›](index.md)
 
 ## Overview
 
 PhotoPrism® can be extended with a powerful, external service for advanced computer vision tasks like generating descriptive captions and labels for your entire photo library. This service, **PhotoPrism Vision**, acts as a flexible bridge between your main PhotoPrism instance and various AI models.
 
-This guide provides a technical deep-dive for developers who want to understand, set up, and potentially extend the Vision service.
+This guide provides a technical deep-dive for developers who want to understand, set up, and potentially extend the [Vision Service](https://github.com/photoprism/photoprism-vision).
 
 !!! info ""
     The Vision service is built with Python using the Flask web framework. It leverages popular machine learning libraries like PyTorch and Hugging Face Transformers for running local models, and can also integrate with external AI providers like Ollama.

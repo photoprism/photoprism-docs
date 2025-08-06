@@ -1,16 +1,16 @@
 # Caption Generation
 
-In addition to the built-in image classification model, the upcoming version of PhotoPrism allows you to generate captions using the Vision Service or Ollama. You can also create custom prompts to tailor the results to your needs.
+In addition to the built-in image classification model, the upcoming version of PhotoPrism allows you to generate captions using the [Vision Service](service/index.md) or [Ollama](https://ollama.com/). You can also create custom prompts to tailor the results to your needs.
 
 !!! tldr ""
-    This guide only covers the direct Ollama API integration. If you are interested in AI and would like to run a dedicated Vision Service, we recommend [reading the introduction](service/index.md) to get started. [Learn more ›](service/index.md)
+    This guide covers the direct [Ollama](https://ollama.com/) integration. If you are interested in AI and would like to run a dedicated [Vision Service](service/index.md), we recommend [reading the introduction](service/index.md) to get started. [Learn more ›](service/index.md)
 
 !!! warning ""
     The Ollama integration is **under active development**, so the configuration, commands, and other details may change or break unexpectedly. Please keep this in mind and notify us when something doesn't work as expected. Thank you for your help in keeping this documentation updated!
 
 ## Ollama Setup Guide
 
-If you plan to only use Ollama models, the easiest approach is to use PhotoPrism's Ollama API Integration.
+If you only want to use [Ollama](https://ollama.com/search?c=vision) vision models for caption generation, the easiest way is to follow these instructions to set up an Ollama service instance and connect it directly to PhotoPrism.
 
 #### Step 1: Install Ollama
 
@@ -53,7 +53,7 @@ To install Ollama on the same server as PhotoPrism, add the `ollama` service to 
 Experienced users may opt to run Ollama on a separate, more powerful server if needed.
 
 !!! danger ""
-    Since neither Vision Service nor Ollama support authentication, both services should only be used within a secure, private network. They must not be exposed to the public internet.
+    Since neither [Vision Service](service/index.md) nor Ollama support authentication, both services should only be used within a secure, private network. They must not be exposed to the public internet.
 
 ### Step 2: Download Models
 

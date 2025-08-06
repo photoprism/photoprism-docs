@@ -156,7 +156,7 @@ This simplifies your configuration, allowing you to customize only specific mode
 Run the following commands to restart `photoprism` and apply the new settings:
 
 ```bash
-docker compose stop
+docker compose stop photoprism
 docker compose up -d
 ```
 

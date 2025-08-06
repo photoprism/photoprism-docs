@@ -185,12 +185,13 @@ nav:
       - Perceptual Hashes: developer-guide/metadata/perceptual-hashes.md
       - Color Detection: developer-guide/metadata/colors.md
       - Camera Models: developer-guide/metadata/cameras.md
-    - Machine Learning:
-      - Caption Generation: developer-guide/machine-learning/vision-api.md
-      - Dedicated Vision Service: developer-guide/machine-learning/vision-service.md  
-      - Vision Development Guide: developer-guide/machine-learning/models.md
-      - Image Classification: developer-guide/machine-learning/classification.md
-      - Face Recognition: developer-guide/machine-learning/face-recognition.md
+    - Computer Vision:
+      - Image Classification: developer-guide/vision/classification.md
+      - Face Recognition: developer-guide/vision/face-recognition.md
+      - Caption Generation: developer-guide/vision/caption-generation.md
+      - Vision Service:
+        - Introduction: developer-guide/vision/service/index.md
+        - Build Setup: developer-guide/vision/service/setup.md
     - Mobile Apps:
       - iOS and Android: developer-guide/native-apps/index.md
     - Web User Interface:
@@ -336,7 +337,7 @@ plugins:
         'getting-started/advanced/https.md': 'getting-started/using-https.md'
         'developer-guide/apps/index.md': 'developer-guide/native-apps/index.md'
         'photoprism-pi.md': 'getting-started/raspberry-pi/microsd-image.md'
-        'developer-guide/machine-learning/vision.md': 'developer-guide/machine-learning/vision-api.md'
+        'developer-guide/machine-learning/vision.md': 'developer-guide/vision/service/index.md'
 
 # MkDocs extensions.
 markdown_extensions:

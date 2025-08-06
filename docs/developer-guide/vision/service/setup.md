@@ -1,10 +1,17 @@
-# PhotoPrism Vision Service
+# Vision Service Developer Guide
+
+With our dedicated Vision Service, you get access to additional models and configuration options for advanced computer vision tasks. For example, you can use it to generate custom captions and labels for your photos. The service runs in a separate container that acts as a proxy between the models and PhotoPrism®, thereby extending its capabilities. It also allows Python developers to experiment with new ideas, try different models, and customize prompts.
+
+!!! tldr ""
+    If you have an interest in AI and would like to run a dedicated Vision Service, we recommend [reading the introduction](index.md) and [following the instructions](index.md#getting-started) there, as the following guide is intended for developers only. [Learn more ›](index.md)
+
+## Overview
 
 PhotoPrism® can be extended with a powerful, external service for advanced computer vision tasks like generating descriptive captions and labels for your entire photo library. This service, **PhotoPrism Vision**, acts as a flexible bridge between your main PhotoPrism instance and various AI models.
 
 This guide provides a technical deep-dive for developers who want to understand, set up, and potentially extend the Vision service.
 
-!!! info "Technologies Used"
+!!! info ""
     The Vision service is built with Python using the Flask web framework. It leverages popular machine learning libraries like PyTorch and Hugging Face Transformers for running local models, and can also integrate with external AI providers like Ollama.
 
 ## Architecture
@@ -21,9 +28,7 @@ The data flow is as follows:
 4.  **PhotoPrism Vision** formats the result into a standardized JSON response and sends it back to the main PhotoPrism instance.
 5.  **PhotoPrism** receives the JSON response and saves the new metadata to its database.
 
----
-
-## Development Environment Setup
+## Build Setup
 
 This guide explains how to set up a local development environment to run the Vision service directly from source, allowing for easy code modification and debugging.
 
@@ -52,13 +57,14 @@ This guide explains how to set up a local development environment to run the Vis
     python -m flask --app app run --debug --host=0.0.0.0 --port=5000
     ```    The `--debug` flag enables auto-reloading whenever you save a change in the code, and `--host=0.0.0.0` makes the service accessible from other machines on your network, such as your main PhotoPrism instance.
 
----
+!!! warning "" 
+    The service and its integrations are **under active development**, so the configuration, commands, and other details may change or break unexpectedly. Please keep this in mind and notify us when something doesn't work as expected. Thank you for your help in keeping this documentation updated!
 
-## Configuration (`vision.yml`)
+## Configuration
 
 The interaction between PhotoPrism and the Vision service is controlled by a `vision.yml` file located in your main PhotoPrism `storage/config` directory.
 
-!!! warning "Important: File Extension"
+!!! warning ""
     The configuration file **must** be named `vision.yml` with the `.yml` extension, **not** `.yaml`. Files with the `.yaml` extension will be ignored by PhotoPrism and could cause the Vision service to appear non-functional.
 
 The file consists of a list of `Models` and a `Thresholds` section.
@@ -104,8 +110,6 @@ The file consists of a list of `Models` and a `Thresholds` section.
     *   **`ResponseFormat`**: The expected JSON structure of the response. Use `vision` for the PhotoPrism Vision API format.
 *   **`Thresholds`**:
     *   **`Confidence`**: A value from 0-100. Generated labels with a confidence score below this threshold will be discarded.
-
----
 
 ## API Endpoints
 
@@ -155,8 +159,6 @@ The service returns a standardized JSON response:
     }
     ```
 
----
-
 ## Code Structure
 
 For developers looking to contribute, the codebase is structured as follows:
@@ -168,7 +170,6 @@ For developers looking to contribute, the codebase is structured as follows:
 *   **`api.py`**: Contains the Pydantic models used for request/response validation and serialization.
 *   **`utils.py`**: Helper functions, for instance, for image loading and encoding.
 
----
 
 ## Dependencies
 
@@ -203,8 +204,6 @@ For developers looking to contribute, the codebase is structured as follows:
 ### huggingface_hub[hf_xet]
 
 [xet](https://huggingface.co/blog/xet-on-the-hub) Extension used for faster downloading of huggingface models.
-
----
 
 ## Troubleshooting and CLI Commands
 

@@ -28,3 +28,4 @@ plugins:
         'getting-started/advanced/https.md': 'getting-started/using-https.md'
         'developer-guide/apps/index.md': 'developer-guide/native-apps/index.md'
         'photoprism-pi.md': 'getting-started/raspberry-pi/microsd-image.md'
+        'developer-guide/machine-learning/vision.md': 'developer-guide/vision/service/index.md'

@@ -1,21 +1,22 @@
-# Vision API
+# Caption Generation
 
-!!! warning 
-    The enhanced AI features are currently in **beta** and undergoing **active development**. Configuration examples, commands, and integration details may change without prior notice. Use with caution and anticipate potential breaking changes as the feature evolves.
+In addition to the built-in image classification model, the upcoming version of PhotoPrism allows you to generate captions using the Vision Service or Ollama. You can also create custom prompts to tailor the results to your needs.
 
-In addition to the built-in image classification, PhotoPrism now supports advanced AI models for generating captions and labels. These models also support custom prompts, enabling you to tailor results to your specific needs.
+!!! tldr ""
+    This guide only covers the direct Ollama API integration. If you are interested in AI and would like to run a dedicated Vision Service, we recommend [reading the introduction](service/index.md) to get started. [Learn more ›](service/index.md)
 
-This page covers the **Ollama API Integration** method – which simplifies setup and is easy to configure.
+!!! warning ""
+    The Ollama integration is **under active development**, so the configuration, commands, and other details may change or break unexpectedly. Please keep this in mind and notify us when something doesn't work as expected. Thank you for your help in keeping this documentation updated!
 
-## Using the Ollama API Integration ##
+## Ollama Setup Guide
 
 If you plan to only use Ollama models, the easiest approach is to use PhotoPrism's Ollama API Integration.
 
-#### Step 1: Install Ollama ####
+#### Step 1: Install Ollama
 
-To install Ollama on the same server as PhotoPrism, add the `ollama` service to your compose.yaml file, placing it below the `photoprism` service.
+To install Ollama on the same server as PhotoPrism, add the `ollama` service to your `compose.yaml` file, placing it below the `photoprism` service.
 
-!!! example "`compose.yaml` example with ollama service"
+!!! example "compose.yaml"
     ```yaml
     services:
       photoprism:
@@ -48,13 +49,13 @@ To install Ollama on the same server as PhotoPrism, add the `ollama` service to 
     volumes:
       ollama-data:
     ```
-!!! warning
 
-    The Ollama API integration currently does not support authentication. For security reasons, it should only be used within a secure, private network and must not be exposed to the Internet or any untrusted networks.
-!!! info
-    Experienced users can also install Ollama on a separate, more powerful server.
+Experienced users may opt to run Ollama on a separate, more powerful server if needed.
 
-### Step 2: Download AI Models ###
+!!! danger ""
+    Since neither Vision Service nor Ollama support authentication, both services should only be used within a secure, private network. They must not be exposed to the public internet.
+
+### Step 2: Download Models
 
 Start the application: 
 
@@ -70,14 +71,14 @@ docker compose exec ollama ollama pull minicpm-v:latest
 docker compose exec ollama ollama pull qwen2.5-coder:3b
 ```
 
-### Step 3: Configure ###
+### Step 3: Configure PhotoPrism
 
-Create a vision.yml file in the config path (default: `storage/config`) of your PhotoPrism instance, and change the configuration as needed:
+Create a `vision.yml` file in the config path (default: `storage/config`) of your PhotoPrism instance, and change the configuration as needed:
 
-!!! warning "Important: File Extension"
+!!! warning ""
     The configuration file **must** be named `vision.yml` using the `.yml` extension, **not** `.yaml`. Files with the `.yaml` extension will be ignored by PhotoPrism.
 
-!!! example "`storage/config/vision.yml`"
+!!! example "vision.yml"
     ```yaml
     Models:
     - Type: caption
@@ -112,13 +113,13 @@ Create a vision.yml file in the config path (default: `storage/config`) of your 
       Confidence: 10
     ```
 
-#### Using Model Default Configs ####
+#### Using Default Settings
 
-You can now use model default configurations even if you have a custom `vision.yml` file. This simplifies configuration by allowing you to use default settings for specific model types.
+Even if you have a custom `vision.yml` file, you can choose to use the default settings for one or more model types. This simplifies the configuration process, allowing you to customize specific settings only, e.g. for generating captions.
 
-To use default configs, simply set the `Default` flag to `true` for the model types you want to use with their default settings:
+To use the defaults, simply set the `Default` flag to `true` for the model types you don't want to customize, as shown in the following example:
 
-!!! example "Using Default Model Configs"
+!!! example "vision.yml"
     ```yaml
     Models:
     - Type: labels
@@ -131,7 +132,7 @@ To use default configs, simply set the `Default` flag to `true` for the model ty
 
 When `Default: true` is set, PhotoPrism will use the built-in default configuration for that model type. To switch back to custom configuration, simply remove the `Default` flag from your model configuration.
 
-### Step 4: Restart and Generate Captions/Labels ###
+### Step 4: Restart PhotoPrism
 
 After saving the `vision.yml`, restart your PhotoPrism instance:
 
@@ -140,24 +141,29 @@ docker compose stop photoprism
 docker compose up -d
 ``` 
 
-and proceed to [Generate Captions/Labels](#generate-captionslabels-using-the-vision-run-command).
+and proceed to [Generate Captions/Labels](#generating-captions).
 
-## Generate Captions/Labels using the vision run command ##
+## Generating Captions
 
-Your setup is complete! You can now use the `photoprism vision run [options] [filter]` command to generate captions or labels.
+Once you have configured your preferred computer vision models and services in the `vision.yml` file, you can use the following command to update the metadata of pictures that match the specified search filter:
+
+```bash
+photoprism vision run [options] [filter]
+```
 
 ### Command Options
 
 | Command Flag                   | Description                                                                                                          |
 |--------------------------------|----------------------------------------------------------------------------------------------------------------------|
-| `--models MODELS`, `-m MODELS` | computer vision MODELS to run, e.g. caption, labels, or nsfw                                                         |
+| `--models MODELS`, `-m MODELS` | computer vision MODELS to run, e.g. caption, labels, or nsfw (default: "caption")                                    |
 | `--source TYPE`, `-s TYPE`     | custom data source TYPE, e.g. estimate, image, meta, or manual (default: "image")                                    |
 | `--force`, `-f`                | force existing data to be updated if the source priority is equal to or higher than the current one (default: false) |
 
 To generate captions for all photos in your library, you can run:
 
 ```bash
-docker compose exec photoprism photoprism vision run --models=caption
+docker compose exec photoprism \
+  photoprism vision run --models=caption
 ```
 
 Note: Processing time will vary based on your library size and hardware performance and may take a considerable amount of time for large collections.
@@ -165,21 +171,25 @@ Note: Processing time will vary based on your library size and hardware performa
 If you have a model for labels configured in your `vision.yml` you can run the following to generate labels:
 
 ```bash
-docker compose exec photoprism photoprism vision run --models=labels
+docker compose exec photoprism \
+  photoprism vision run --models=labels
 ```
 
 To generate captions or labels only for photos matching a specific search filter such as those in a particular album, use the following command:
 ```bash
-docker compose exec photoprism photoprism vision run --models=caption album:Holidays
+docker compose exec photoprism \
+  photoprism vision run --models=caption album:Holidays
 ```
 
 ```bash
-docker compose exec photoprism photoprism vision run --models=labels album:Holidays
+docker compose exec photoprism photoprism vision run \
+  --models=labels album:Holidays
 ```
 To re-generate captions for photos that already have some, add the --force flag to your command:
 
 ```bash
-docker compose exec photoprism photoprism vision run --models=caption --force
+docker compose exec photoprism \
+  photoprism vision run --models=caption --force
 ```
 
 This is especially useful when testing different models or prompts. Note that the configured source must have a equal or higher priority than the source of the existing captions for them to be replaced.
@@ -188,7 +198,7 @@ This is especially useful when testing different models or prompts. Note that th
 
 ### Verifying Your Configuration ###
 
-If you encounter issues, a good first step is to verify how PhotoPrism has loaded your vision.yml configuration. You can do this by running: 
+If you encounter issues, a good first step is to verify how PhotoPrism has loaded your `vision.yml` configuration. You can do this by running: 
 
 ```bash
 docker compose exec photoprism photoprism vision ls

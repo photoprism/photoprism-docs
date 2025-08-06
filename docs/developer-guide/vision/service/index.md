@@ -1,22 +1,22 @@
-# Vision Service
+# Using the Vision Service
 
-!!! warning 
-    The enhanced AI features are currently in **beta** and undergoing **active development**. Configuration examples, commands, and integration details may change without prior notice. Use with caution and anticipate potential breaking changes as the feature evolves.
+With our dedicated Vision Service, you get access to additional models and configuration options for advanced computer vision tasks. For example, you can use it to generate custom captions and labels for your photos. The service runs in a separate container that acts as a proxy between the models and PhotoPrism®, thereby extending its capabilities. It also allows Python developers to experiment with new ideas, try different models, and customize prompts.
 
-In addition to the built-in image classification, PhotoPrism now supports advanced AI models for generating captions and labels. These models also support custom prompts, enabling you to tailor results to your specific needs.
+!!! warning "" 
+    The service and its integrations are **under active development**, so the configuration, commands, and other details may change or break unexpectedly. Please keep this in mind and notify us when something doesn't work as expected. Thank you for your help in keeping this documentation updated!
 
-This page covers **The PhotoPrism Vision Service** method – which provides maximum flexibility and access to a broader range of models, ideal for advanced users and Python developers.
+## Getting Started
 
-## Using the PhotoPrism Vision Service ##
+This guide explains how to set up the dedicated service as an AI model proxy to enhance PhotoPrism's capabilities. You can use a wide range of additional models with it, including lightweight, preconfigured models, as well as popular but more demanding large language models in combination with Ollama.
 
-This approach uses a dedicated service that serves as an intermediary between your PhotoPrism instance and a range of AI models. These include both lightweight, pre-installed models and advanced, high-performance models powered by Ollama.
+While the upcoming version of PhotoPrism will also allow you to generate captions with Ollama directly, a key advantage of using the dedicated vision service is greater flexibility and access to an even broader range of models. This makes it ideal for advanced users and developers.
 
-**Key Advantage:** Provides maximum flexibility and access to a broader range of models, ideal for advanced users and Python developers.
+Developers can proceed to the [Build Setup](setup.md) guide, which explains how to set up a Vision Service development environment.
 
-!!! warning "Security Notice"
-    The PhotoPrism Vision service currently does not support authentication. For security reasons, it should only be used within a secure, private network and must not be exposed to the Internet or any untrusted networks.
+!!! danger ""
+    Since neither Vision Service nor Ollama support authentication, both services should only be used within a secure, private network. They must not be exposed to the public internet.
 
-## Step 1: Install PhotoPrism Vision Service ##
+## Step 1: Start the Vision Service
 
 1.  Create a new, empty folder on the server where you want to run the Vision service.
 2.  Inside this folder, create a `compose.yaml` file with the following content:
@@ -41,11 +41,11 @@ This approach uses a dedicated service that serves as an intermediary between yo
 3.  If you plan to use Ollama through this service, set `OLLAMA_ENABLED=true` and replace `<ollama-ip>` with the IP address of your Ollama machine.
 4.  Start the service: `docker compose up -d`
 
-## Step 2: Configure PhotoPrism ##
+## Step 2: Configure PhotoPrism
 
-Create a vision.yml file in the config path (default: `storage/config`) of your PhotoPrism instance, and change the configuration as needed:
+Create a `vision.yml` file in the config path (default: `storage/config`) of your PhotoPrism instance, and change the configuration as needed:
 
-!!! warning "Important: File Extension"
+!!! warning ""
     The configuration file **must** be named `vision.yml` using the `.yml` extension, **not** `.yaml`. Files with the `.yaml` extension will be ignored by PhotoPrism.
 
 === "Example 1: Using a pre-installed Model"
@@ -53,7 +53,7 @@ Create a vision.yml file in the config path (default: `storage/config`) of your 
     This example uses the pre-installed `kosmos-2` model for generating captions. It does not require Ollama.
 
     !!! tip "Available pre-installed Models"
-        The Vision service also provides additional pre-installed models, such as `vit-gpt2` and `blip` for image captioning, as well as `nsfw_image_detector` for NSFW content detection. You can enable these models by updating the `Name` field in your vision.yml configuration.
+        The Vision service also provides additional pre-installed models, such as `vit-gpt2` and `blip` for image captioning, as well as `nsfw_image_detector` for NSFW content detection. You can enable these models by updating the `Name` field in your `vision.yml` configuration.
     !!! example "`storage/config/vision.yml`"
         ```yaml
         Models:
@@ -104,7 +104,7 @@ Create a vision.yml file in the config path (default: `storage/config`) of your 
           Confidence: 10
         ```
 
-## Step 3: Restart and Generate Captions/Labels ##
+## Step 3: Restart PhotoPrism
 
 After saving the `vision.yml`, restart your PhotoPrism instance:
 
@@ -113,12 +113,16 @@ docker compose stop photoprism
 docker compose up -d
 ``` 
 
-and proceed to [Generate Captions/Labels](vision-api.md#generate-captionslabels-using-the-vision-run-command).
+You can now proceed to [Generating Captions and Labels](../caption-generation.md#generating-captions), where you will find further information and usage examples.
 
-## Troubleshooting ##
+[Learn more ›](../caption-generation.md#generating-captions)
 
-### GPU Performance Issues with Ollama ###
+## Troubleshooting
 
-If you're using the Vision Service with Ollama enabled (`OLLAMA_ENABLED=true`), you may encounter GPU VRAM management issues over time. For detailed troubleshooting steps and solutions, see the [GPU Performance Issues section](vision-api.md#gpu-performance-issues) in the Vision API documentation.
+### GPU Performance Issues
 
-The same VRAM degradation symptoms and solutions apply when Ollama is used through the Vision Service proxy.
+If you're using the Vision Service with Ollama enabled (`OLLAMA_ENABLED=true`), you may experience GPU VRAM management issues over time. The same VRAM degradation symptoms and solutions apply when Ollama is used through the Vision Service proxy.
+
+Detailed troubleshooting tips can be found in the [Caption Generation](../caption-generation.md#gpu-performance-issues) documentation.
+
+[Learn more ›](../caption-generation.md#gpu-performance-issues)

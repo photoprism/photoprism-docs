@@ -186,8 +186,8 @@ nav:
       - Color Detection: developer-guide/metadata/colors.md
       - Camera Models: developer-guide/metadata/cameras.md
     - Machine Learning:
-      - Vision API: developer-guide/machine-learning/vision-api.md
-      - Vision Service: developer-guide/machine-learning/vision-service.md  
+      - Caption Generation: developer-guide/machine-learning/vision-api.md
+      - Dedicated Vision Service: developer-guide/machine-learning/vision-service.md  
       - Vision Development Guide: developer-guide/machine-learning/models.md
       - Image Classification: developer-guide/machine-learning/classification.md
       - Face Recognition: developer-guide/machine-learning/face-recognition.md

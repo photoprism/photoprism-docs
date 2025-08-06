@@ -1,9 +1,9 @@
 # Caption Generation
 
-In addition to the built-in image classification model, the upcoming version of PhotoPrism allows you to generate captions using the [Vision Service](service/index.md) or [Ollama](https://ollama.com/). You can also create custom prompts to tailor the results to your needs.
+As an addition to its [built-in AI capabilities](classification.md), PhotoPrism allows you to generate image captions using either our dedicated [Vision Service](service/index.md) or a direct [Ollama](https://ollama.com/search?c=vision) integration, as [described in this guide](#ollama-setup-guide).[^1] It lets you choose from the [available vision models](https://ollama.com/search?c=vision) and [customize prompts](#step-3-configure-photoprism) according to your needs.
 
 !!! tldr ""
-    This guide covers the direct [Ollama](https://ollama.com/) integration. If you are interested in AI and would like to run a dedicated [Vision Service](service/index.md), we recommend [reading the introduction](service/index.md) to get started. [Learn more ›](service/index.md)
+    This guide only covers a [direct Ollama API integration](https://github.com/photoprism/photoprism/issues/5123). If you are interested in AI and would like to run a dedicated [Vision Service](service/index.md), we recommend [reading the introduction](service/index.md) to get started. [Learn more ›](service/index.md)
 
 !!! warning ""
     The Ollama integration is **under active development**, so the configuration, commands, and other details may change or break unexpectedly. Please keep this in mind and notify us when something doesn't work as expected. Thank you for your help in keeping this documentation updated!
@@ -219,3 +219,5 @@ docker compose restart ollama
 ```
 
 This will clear the VRAM and restore normal GPU-accelerated processing performance.
+
+[^1]: Available to all users with the [next stable version](../../release-notes.md), see our [release notes](../../release-notes.md#development-preview) for details.

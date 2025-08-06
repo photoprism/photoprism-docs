@@ -281,7 +281,7 @@ use_directory_urls: true
 # Repository information.
 repo_name: photoprism/photoprism
 repo_url: https://github.com/photoprism/photoprism
-edit_uri: https://github.com/photoprism/photoprism-docs/tree/master/docs
+edit_uri: https://github.com/photoprism/photoprism-docs/tree/develop/docs
 copyright: 'Made with ❤ in Berlin'
 
 # Theme configuration.

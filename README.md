@@ -16,7 +16,7 @@ Direct access to the source files in a revision control system is a big plus to 
 
 At the top of each generated page is an *edit this page* link to the corresponding page on GitHub, where you can make changes (and submit pull requests with a few clicks) without needing to know Git or run anything on your system.
 
-To make more extensive changes, fork this repository, modify the corresponding `.md` source files (or create new ones), commit the changes, push them back to your fork, and then submit a pull request to our `master` branch.
+To make more extensive changes, fork this repository, modify the corresponding `.md` source files (or create new ones), commit the changes, push them back to your fork, and then submit a pull request to our `develop` branch.
 
 ### Project Layout ###
 
@@ -79,7 +79,7 @@ Now open [http://localhost:8000/](http://localhost:8000/) in a browser to view t
 
 ### Deployment ###
 
-When you merge the main/master branch to `deploy`, the live documentation is automatically created, uploaded and will be visible shortly.
+When you merge the `develop` branch to `deploy`, the live documentation is automatically created, uploaded and will be visible shortly.
 
 Linux/Unix users can run `make merge` in a terminal. Otherwise, please use the tools provided by your development environment or editor.
 

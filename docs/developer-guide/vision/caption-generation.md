@@ -236,7 +236,8 @@ The issue occurs because Ollama's VRAM allocation doesn't properly recover after
 The Ollama service does not automatically recover from these VRAM issues. To restore full GPU acceleration, manually restart the Ollama container:
 
 ```bash
-docker compose restart ollama
+docker compose down ollama
+docker compose up -d ollama
 ```
 
 This will clear the VRAM and restore normal GPU-accelerated processing performance.

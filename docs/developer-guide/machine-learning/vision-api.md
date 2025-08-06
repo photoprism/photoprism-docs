@@ -195,3 +195,17 @@ docker compose exec photoprism photoprism vision ls
 ```
 
 This command outputs the settings for all supported and configured model types. Compare the results with your `vision.yml` file to confirm that your configuration has been loaded correctly and to identify any parsing errors or misconfigurations.
+
+### GPU Performance Issues ###
+
+When using Ollama with GPU acceleration, you may experience performance degradation over time due to VRAM management issues. This typically manifests as processing times gradually increasing and the Ollama service appearing to "crash" while still responding to requests, but without GPU acceleration.
+
+The issue occurs because Ollama's VRAM allocation doesn't properly recover after processing multiple requests, leading to memory fragmentation and eventual GPU processing failures.
+
+The Ollama service does not automatically recover from these VRAM issues. To restore full GPU acceleration, manually restart the Ollama container:
+
+```bash
+docker compose restart ollama
+```
+
+This will clear the VRAM and restore normal GPU-accelerated processing performance.

@@ -114,3 +114,11 @@ docker compose up -d
 ``` 
 
 and proceed to [Generate Captions/Labels](vision-api.md#generate-captionslabels-using-the-vision-run-command).
+
+## Troubleshooting ##
+
+### GPU Performance Issues with Ollama ###
+
+If you're using the Vision Service with Ollama enabled (`OLLAMA_ENABLED=true`), you may encounter GPU VRAM management issues over time. For detailed troubleshooting steps and solutions, see the [GPU Performance Issues section](vision-api.md#gpu-performance-issues) in the Vision API documentation.
+
+The same VRAM degradation symptoms and solutions apply when Ollama is used through the Vision Service proxy.

@@ -121,7 +121,7 @@ Should MariaDB fail to start after upgrading from an earlier version (or migrati
 However, newer MariaDB Docker images **support automatic upgrades** on startup, so you don't have to worry about that anymore.
 
 !!! danger ""
-    When upgrading from MariaDB 10.x to [11.0](https://mariadb.com/kb/en/release-notes-mariadb-11-0-series/) or later, you must replace `command: mysqld` with `command: ` (directly followed by the command flags) in your `compose.yaml` or `docker-compose.yml` file, otherwise the database server may fail to start. 
+    When upgrading from MariaDB 10.x to [v11.0 or later](https://mariadb.com/docs/release-notes/community-server), you must replace `command: mysqld` with `command: ` (followed by a space and the command flags) in your `compose.yaml` file since the database server may otherwise fail to start.
 
 ### Manual Update
 

@@ -189,6 +189,7 @@ nav:
       - Image Classification: developer-guide/vision/classification.md
       - Face Recognition: developer-guide/vision/face-recognition.md
       - Caption Generation: developer-guide/vision/caption-generation.md
+      - CLI Commands: developer-guide/vision/cli.md
       - Vision Service:
         - Introduction: developer-guide/vision/service/index.md
         - Build Setup: developer-guide/vision/service/setup.md

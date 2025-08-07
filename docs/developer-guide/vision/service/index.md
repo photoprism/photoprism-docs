@@ -43,10 +43,7 @@ Developers can proceed to the [Build Setup](setup.md) guide, which explains how 
 
 ## Step 2: Configure PhotoPrism
 
-Create a `vision.yml` file in the config path (default: `storage/config`) of your PhotoPrism instance, and change the configuration as needed:
-
-!!! warning ""
-    The configuration file **must** be named `vision.yml` using the `.yml` extension, **not** `.yaml`. Files with the `.yaml` extension will be ignored by PhotoPrism.
+Now, create a new `config/vision.yml` file or edit the existing file in [the *storage* folder](../../../getting-started/docker-compose.md#photoprismstorage) of your PhotoPrism instance, following the example below. Its absolute path from inside the container is `/photoprism/storage/config/vision.yml`:
 
 === "Example 1: Using a pre-installed Model"
 
@@ -54,7 +51,7 @@ Create a `vision.yml` file in the config path (default: `storage/config`) of you
 
     !!! tip "Available pre-installed Models"
         The Vision service also provides additional pre-installed models, such as `vit-gpt2` and `blip` for image captioning, as well as `nsfw_image_detector` for NSFW content detection. You can enable these models by updating the `Name` field in your `vision.yml` configuration.
-    !!! example "`storage/config/vision.yml`"
+    !!! example "vision.yml"
         ```yaml
         Models:
         - Type: caption
@@ -81,7 +78,7 @@ Create a `vision.yml` file in the config path (default: `storage/config`) of you
 
     This example uses Ollama's `llava-phi3` model for generating captions, proxied through the Vision service.
 
-    !!! example "`storage/config/vision.yml`"
+    !!! example "vision.yml"
         ```yaml
         Models:
         - Type: caption
@@ -104,18 +101,21 @@ Create a `vision.yml` file in the config path (default: `storage/config`) of you
           Confidence: 10
         ```
 
+!!! note ""
+    The config file must be named `vision.yml`, not `vision.yaml`, as otherwise it won't be found and will have no effect.
+
+
 ## Step 3: Restart PhotoPrism
 
-After saving the `vision.yml`, restart your PhotoPrism instance:
+Run the following commands to restart `photoprism` and apply the new settings:
 
 ```bash
 docker compose stop photoprism
 docker compose up -d
-``` 
+```
 
-You can now proceed to [Generating Captions and Labels](../caption-generation.md#generating-captions), where you will find further information and usage examples.
+You should now be able to use the `photoprism vision` [CLI commands](../cli.md#run-vision-models) when [opening a terminal](../../../getting-started/docker-compose.md#opening-a-terminal), e.g. `photoprism vision run -m caption` to generate captions.
 
-[Learn more ›](../caption-generation.md#generating-captions)
 
 ## Troubleshooting
 

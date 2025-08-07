@@ -160,60 +160,7 @@ docker compose stop photoprism
 docker compose up -d
 ```
 
-You should now be able to use the `photoprism vision` CLI commands when [opening a terminal](../../getting-started/docker-compose.md#opening-a-terminal), e.g. `photoprism vision run -m caption` to generate captions.
-
-Further details and usage examples can be found below.
-
-## Generating Captions
-
-Once you have configured your preferred computer vision models and services in the `vision.yml` file, you can use the following command to update the metadata of pictures that match the specified search filter:
-
-```bash
-photoprism vision run [options] [filter]
-```
-
-### Command Options
-
-| Command Flag                   | Description                                                                                                          |
-|--------------------------------|----------------------------------------------------------------------------------------------------------------------|
-| `--models MODELS`, `-m MODELS` | computer vision MODELS to run, e.g. caption, labels, or nsfw (default: "caption")                                    |
-| `--source TYPE`, `-s TYPE`     | custom data source TYPE, e.g. estimate, image, meta, or manual (default: "image")                                    |
-| `--force`, `-f`                | force existing data to be updated if the source priority is equal to or higher than the current one (default: false) |
-
-To generate captions for all photos in your library, you can run:
-
-```bash
-docker compose exec photoprism \
-  photoprism vision run --models=caption
-```
-
-Note: Processing time will vary based on your library size and hardware performance and may take a considerable amount of time for large collections.
-
-If you have a model for labels configured in your `vision.yml` you can run the following to generate labels:
-
-```bash
-docker compose exec photoprism \
-  photoprism vision run --models=labels
-```
-
-To generate captions or labels only for photos matching a specific search filter such as those in a particular album, use the following command:
-```bash
-docker compose exec photoprism \
-  photoprism vision run --models=caption album:Holidays
-```
-
-```bash
-docker compose exec photoprism photoprism vision run \
-  --models=labels album:Holidays
-```
-To re-generate captions for photos that already have some, add the --force flag to your command:
-
-```bash
-docker compose exec photoprism \
-  photoprism vision run --models=caption --force
-```
-
-This is especially useful when testing different models or prompts. Note that the configured source must have a equal or higher priority than the source of the existing captions for them to be replaced.
+You should now be able to use the `photoprism vision` [CLI commands](./cli.md#run-vision-models) when [opening a terminal](../../getting-started/docker-compose.md#opening-a-terminal), e.g. `photoprism vision run -m caption` to generate captions.
 
 ## Troubleshooting ##
 

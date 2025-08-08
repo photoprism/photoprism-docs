@@ -22,7 +22,7 @@ services:
     ...
 ```
 
-You can then manually upgrade to [new major versions](https://mariadb.com/docs/release-notes/community-server) by changing the image tag, e.g. from `mariadb:11` to `mariadb:12`, once they are stable and we have tested them. 
+You can then manually upgrade to [new major versions](https://mariadb.com/docs/release-notes/community-server) by changing the image tag, e.g. from `mariadb:11` to `mariadb:12`, once [they are stable](https://mariadb.org/about/#maintenance-policy) and we had time to test them. 
 
 However, this requires periodically [checking for new MariaDB images](https://hub.docker.com/_/mariadb) and adjusting your `compose.yaml` file accordingly, so you don't get stuck with an outdated version.
 
@@ -154,7 +154,7 @@ services:
 
 Before starting MariaDB in production mode, the database image entrypoint script now runs `mariadb-upgrade` to update the internal management schema as needed. For example, when you pull a new major release and restart the service.
 
-We recommend periodically checking for new [major versions of MariaDB](https://mariadb.org/about/#maintenance-policy) and updating your `compose.yaml` file as needed. [Learn more ›](https://mariadb.org/about/#maintenance-policy)
+We recommend periodically checking for new [major versions of MariaDB](https://mariadb.org/about/#maintenance-policy) and updating [your `compose.yaml` file](../docker-compose.md#database) as needed. [Learn more ›](https://mariadb.org/about/#maintenance-policy)
 
 !!! tldr ""
     Since PhotoPrism does not require time zone support, you can also add `MARIADB_INITDB_SKIP_TZINFO` to your config as shown above. However, this is only a recommendation and optional.

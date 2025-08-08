@@ -144,7 +144,9 @@ services:
 
 You can then manually upgrade to [new major versions](https://mariadb.com/docs/release-notes/community-server) by changing the image tag, e.g. from `mariadb:11` to `mariadb:12`, once [they are stable](https://mariadb.org/about/#maintenance-policy) and we had time to test them. 
 
-However, this requires periodically [checking for new MariaDB images](https://hub.docker.com/_/mariadb) and adjusting [your `compose.yaml` file](docker-compose.md#database) accordingly, so you don't get stuck with an [outdated](https://mariadb.org/about/#maintenance-policy) version. [Learn more ›](https://mariadb.org/about/#maintenance-policy)
+However, this requires periodically checking for [new MariaDB images](https://hub.docker.com/_/mariadb) and adjusting [your `compose.yaml` file](docker-compose.md#database) accordingly, so you don't get stuck with an [outdated](https://mariadb.org/about/#maintenance-policy) version.
+
+[Learn more ›](troubleshooting/mariadb.md#auto-upgrade)
 
 !!! note ""
     If MariaDB fails to start after upgrading from an earlier version (or migrating from MySQL), the internal management schema may be outdated. See [Troubleshooting MariaDB Problems](troubleshooting/mariadb.md#version-upgrade) for instructions on how to fix this.

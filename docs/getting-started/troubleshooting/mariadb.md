@@ -154,7 +154,7 @@ services:
 
 Before starting MariaDB in production mode, the database image entrypoint script now runs `mariadb-upgrade` to update the internal management schema as needed. For example, when you pull a new major release and restart the service.
 
-We recommend periodically checking for new [major versions of MariaDB](https://mariadb.org/about/#maintenance-policy) and updating [your `compose.yaml` file](../docker-compose.md#database) as needed. [Learn more ›](https://mariadb.org/about/#maintenance-policy)
+We recommend periodically checking for [new MariaDB images](https://hub.docker.com/_/mariadb) and updating [your `compose.yaml` file](../docker-compose.md#database) as needed so that you don't get stuck with an [outdated](https://mariadb.org/about/#maintenance-policy) version. [Learn more ›](https://mariadb.org/about/#maintenance-policy)
 
 !!! tldr ""
     Since PhotoPrism does not require time zone support, you can also add `MARIADB_INITDB_SKIP_TZINFO` to your config as shown above. However, this is only a recommendation and optional.

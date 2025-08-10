@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250808-6655a66e8</span>
+<span class="build">Build 250810-e7db7efc5</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. [Learn more ›](getting-started/updates.md#development-preview)
 
@@ -21,7 +21,7 @@ What's new?
 - Config: [`PHOTOPRISM_DISABLE_FRONTEND` disables the web user interface](https://github.com/photoprism/photoprism/issues/5111)
 - Setup: [Updated `compose.yaml` configuration examples](https://dl.photoprism.app/docker/)
 - Docker: [Preinstalled `libmagic-mgc` package for file type detection](https://github.com/photoprism/photoprism/issues/5149)
-- Security: [Updated Go to v1.24.5, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.5)
+- Security: [Updated Go to v1.24.6, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.5)
 - Translations: [Updated Spanish and Vietnamese](https://docs.photoprism.app/developer-guide/translations-weblate/)
 
 !!! info ""

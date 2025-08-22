@@ -29,3 +29,12 @@ To switch between views you can either use the filter in the filter bar or the v
 Additionally, you can open your photos/videos in *fullscreen mode* and start a slideshow (:material-play:).
 
 ![Screenshot](../organize/img/slideshow-2502.jpg){ class="shadow" }
+
+!!! tip "Keyboard Shortcuts in Fullscreen"
+    In fullscreen mode, you can use these keyboard shortcuts for quick actions:
+    
+    - **Ctrl + F** : Toggle fullscreen mode
+    - **Ctrl + S** : Play/pause slideshow
+    - **Ctrl + I** : Toggle Info Panel    
+    - **Ctrl + M** : Mute/Unmute
+    - **Ctrl + L** : Like/Unlike

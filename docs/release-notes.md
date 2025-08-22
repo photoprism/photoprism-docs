@@ -4,22 +4,64 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 250611-c8ce9ec77</span>
+<span class="build">Build 250819-e3e034cc6</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. [Learn more ›](getting-started/updates.md#development-preview)
 
 What's new?
 
-- AI: [Added Ollama and Data URL support in Vision Service](https://github.com/photoprism/photoprism-vision/pull/5) by [@sgflt](https://github.com/sgflt)
-- UX: [Optimized thumbnail rendering performance in result views](https://github.com/photoprism/photoprism/issues/4985)
-- Motion Photos: [Fixed playback of videos embedded in HEIF files](https://github.com/photoprism/photoprism/issues/5027)
+- AI: [Added support for using alternative image classification models](https://github.com/photoprism/photoprism/pull/5011) by [@raystlin](https://github.com/raystlin)
+- AI: [Added support for generating captions using the Ollama API](https://github.com/photoprism/photoprism/issues/5123) by [@lastzero](https://github.com/lastzero)
+- AI: [Improved vision model configuration and `photoprism vision run` command](https://github.com/photoprism/photoprism/commit/4bc9cd6ca23bb65072b766ae16b7966b4e7b3e36)
+- Auth: [2FA can be activated, even if the recovery code cannot be copied](https://github.com/photoprism/photoprism/issues/5106)
+- Search: [Added a reverse sort query parameter for initial testing (work in progress)](https://github.com/photoprism/photoprism/issues/683#issuecomment-3070215533)
+- Index: [Selecting "Complete Rescan" refreshes the detected media types](https://github.com/photoprism/photoprism/issues/5096)
+- Index: [Underlying errors are logged when file type detection fails](https://github.com/photoprism/photoprism/issues/5149)
+- Index: [Improved error logging when PDF documents cannot be indexed](https://github.com/photoprism/photoprism/issues/5166)
+- Intel QSV: [`libvpl2` will be installed when `PHOTOPRISM_INIT` includes "intel"](https://github.com/photoprism/photoprism/discussions/5098)
+- API: [Corrected handling of CORS preflight requests](https://github.com/photoprism/photoprism/issues/5133) by [@techmatt101](https://github.com/techmatt101)
+- Config: [`PHOTOPRISM_DISABLE_FRONTEND` disables the web user interface](https://github.com/photoprism/photoprism/issues/5111)
+- Setup: [Updated `compose.yaml` configuration examples](https://dl.photoprism.app/docker/)
+- Docker: [Preinstalled `libmagic-mgc` package for file type detection](https://github.com/photoprism/photoprism/issues/5149)
+- Security: [Updated Go to v1.24.6, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.5)
+- Translations: [Updated Spanish and Vietnamese](https://docs.photoprism.app/developer-guide/translations-weblate/)
+
+!!! info ""
+    Missing [user interface translations](https://translate.photoprism.app/projects/photoprism/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.
+
+### July 7, 2025
+<span class="build">Build 250707-d28b3101e</span>
+
+This [release](https://github.com/photoprism/photoprism/releases/tag/250707-d28b3101e) adds support for using [Ollama models in the Vision AI service](https://github.com/photoprism/photoprism-vision/pull/5), improves search performance, and [introduces an "Adjust Location" dialog](https://github.com/photoprism/photoprism/issues/465) for setting photo coordinates on a map. Users can now [delete albums from the toolbar](https://github.com/photoprism/photoprism/issues/4994) and customize the [language of location details](https://github.com/photoprism/photoprism/issues/883). Video and metadata handling have been refined, with updates to [transcoding](https://github.com/photoprism/photoprism/issues/4969), scanner detection, and [CLI tools](https://github.com/photoprism/photoprism/issues/4982). A fix for [SQLite index updates](https://github.com/photoprism/photoprism/issues/3742) is also included. [Batch editing](https://github.com/photoprism/photoprism/issues/271) features are in final development and will be available in an upcoming release. As always, a big thank you to [everyone who contributed](https://docs.photoprism.app/developer-guide/) and [helped with testing](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! :octicons-heart-fill-24:{ .heart .purple }
+
+What's new?
+
+- AI: [Added Ollama model and data URL support to the Vision Service](https://github.com/photoprism/photoprism-vision/pull/5) by [@sgflt](https://github.com/sgflt)
+- UX: [Added "Adjust Location" dialog to set coordinates on a map](https://github.com/photoprism/photoprism/issues/465) by [@omerdduran](https://github.com/omerdduran)
+- UX: [Added "Delete Album" action to the album toolbar menu](https://github.com/photoprism/photoprism/issues/4994) by [@omerdduran](https://github.com/omerdduran)
+- UX: [Optimized thumbnail rendering performance in result views](https://github.com/photoprism/photoprism/issues/4985) by [@lastzero](https://github.com/lastzero)
+- Places: [Added a config option to set the language of location details](https://github.com/photoprism/photoprism/issues/883)
+- Viewer: [Fixed timezone handling in the information sidebar](https://github.com/photoprism/photoprism/pull/5015) by [@omerdduran](https://github.com/omerdduran)
+- Viewer: [Seeking disables looping when playing a short video](https://github.com/photoprism/photoprism/commit/1709f708edbd44ea8dda02cc3f343330f7779836)
 - Videos: [Added config options for transcoding preset, quality, and device](https://github.com/photoprism/photoprism/issues/4969)
 - Videos: [Fixed playback when using QSV to transcode HEVC files](https://github.com/photoprism/photoprism/issues/5040)
+- Videos: [Short videos up to 3 seconds are no longer classified as Live Photos](https://github.com/photoprism/photoprism/issues/5089)
+- Motion Photos: [Fixed playback of videos embedded in Samsung HEIF files](https://github.com/photoprism/photoprism/issues/5027)
+- Metadata: [Updated list of unwanted descriptions](https://github.com/photoprism/photoprism/pull/5078) by [@srett](https://github.com/srett)
+- Metadata: [Improved scanner detection based on device make and model](https://github.com/photoprism/photoprism/issues/5073)
+- Metadata: [Fixed an issue that prevented changing the day to "Unknown" in February](https://github.com/photoprism/photoprism/issues/5038)
+- Labels: [Updated Animal and Snow label category assignments](https://github.com/photoprism/photoprism/issues/5057)
 - Upload: [Improved token used to distinguish simultaneous uploads](https://github.com/photoprism/photoprism/issues/4970) by [@raxod502](https://github.com/raxod502)
-- CLI: [Media can be downloaded and imported directly from a URL](https://github.com/photoprism/photoprism/issues/4982)
+- CLI: [Added `photoprism dl` command to import media from a URL](https://github.com/photoprism/photoprism/issues/4982)
+- CLI: [Fixed an error in the backup command when a custom filename is specified](https://github.com/photoprism/photoprism/issues/5088)
+- API: [Added a Content-Type header to the metrics endpoint](https://github.com/photoprism/photoprism/pull/5042) by [@brandon1024](https://github.com/brandon1024)
 - API: [Authorized clients are allowed to create album share links](https://github.com/photoprism/photoprism/issues/4973)
+- SQLite: [Fixed "'too many SQL variables'" error on index updates](https://github.com/photoprism/photoprism/issues/3742) by [@keif888](https://github.com/keif888)
 - Security: [Updated Go to v1.24.4, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.4) 
-- Translations: [Fixed and updated Japanese](https://github.com/photoprism/photoprism/discussions/4980)
+- Translations: [Updated Arabic, French, German, and Japanese](https://github.com/photoprism/photoprism/discussions/4980)
+
+!!! info ""
+    Missing [user interface translations](https://translate.photoprism.app/projects/photoprism/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.
 
 ### April 26, 2025
 <span class="build">Build 250426-27ec7a128</span>
@@ -32,9 +74,6 @@ What's new?
 
 - Videos: [Fixed hardware driver installation for Intel QSV](https://github.com/photoprism/photoprism/issues/4967)
 - Setup: [Fixed .deb and .rpm installation package builds](https://github.com/photoprism/photoprism/issues/4968)
-
-!!! info ""
-    Missing [user interface translations](https://translate.photoprism.app/projects/photoprism/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.
 
 ### April 25, 2025
 <span class="build">Build 250425-21ddba459</span>
@@ -81,9 +120,6 @@ What's new?
 - Security: [Go has been updated to v1.24.2, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.2) 
 - Translations: [Updated Arabic, French, and German](https://docs.photoprism.app/developer-guide/translations-weblate/)
 
-!!! info ""
-    Missing [user interface translations](https://translate.photoprism.app/projects/photoprism/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.
-
 ### March 21, 2025
 <span class="build">Build 250321-57590c48b</span>
 
@@ -106,9 +142,6 @@ What's new?
 - MariaDB: [Added version check to determine zero-configuration SSL support](https://github.com/photoprism/photoprism/issues/4837)
 - Translations: [Updated Chinese (Simplified), French, German, Turkish, and Ukrainian](https://docs.photoprism.app/developer-guide/translations-weblate/)
 - Security: [Go has been updated to v1.24.1, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.1)
-
-!!! info ""
-    Missing [user interface translations](https://translate.photoprism.app/projects/photoprism/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.
 
 ### February 28, 2025
 <span class="build">Build 250228-43447fa38</span>
@@ -133,9 +166,6 @@ This [service release](https://github.com/photoprism/photoprism/releases/tag/250
 What's new?
 
 - Viewer: [Changed thumbnail size calculation for improved performance](https://github.com/photoprism/photoprism/commit/ea32ef6970d649e541843cf41e52ecb1c17865b0)
-
-!!! info ""
-    Missing [user interface translations](https://translate.photoprism.app/projects/photoprism/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.
 
 ### February 23, 2025
 <span class="build">Build 250223-b79d21907</span>

@@ -65,10 +65,10 @@ and [`defaults.yml`](defaults.md) files, grouped by purpose.
 
 ## Config Options
 
-### Authentication ###
+### Authentication
 
-|      Name      |  Type  |     CLI Flag      |
-|----------------|--------|-------------------|
+| Name           | Type   | CLI Flag          |
+|:---------------|:-------|:------------------|
 | AuthMode       | string | --auth-mode       |
 | Public         | bool   | --public          |
 | AdminUser      | string | --admin-user      |
@@ -89,19 +89,19 @@ and [`defaults.yml`](defaults.md) files, grouped by purpose.
 | SessionTimeout | int64  | --session-timeout |
 | SessionCache   | int64  | --session-cache   |
 
-### Logging ###
+### Logging
 
-|   Name   |  Type  |  CLI Flag   |
-|----------|--------|-------------|
+| Name     | Type   | CLI Flag    |
+|:---------|:-------|:------------|
 | LogLevel | string | --log-level |
 | Prod     | bool   | --prod      |
 | Debug    | bool   | --debug     |
 | Trace    | bool   | --trace     |
 
-### Storage ###
+### Storage
 
-|      Name       |  Type  |      CLI Flag      |
-|-----------------|--------|--------------------|
+| Name            | Type   | CLI Flag           |
+|:----------------|:-------|:-------------------|
 | ConfigPath      | string | --config-path      |
 | OriginalsPath   | string | --originals-path   |
 | OriginalsLimit  | int    | --originals-limit  |
@@ -119,87 +119,88 @@ and [`defaults.yml`](defaults.md) files, grouped by purpose.
 | TempPath        | string | --temp-path        |
 | AssetsPath      | string | --assets-path      |
 
-### Sidecar Files ###
+### Sidecar Files
 
-|    Name     |  Type  |    CLI Flag    |
-|-------------|--------|----------------|
+| Name        | Type   | CLI Flag       |
+|:------------|:-------|:---------------|
 | SidecarPath | string | --sidecar-path |
 | SidecarYaml | bool   | --sidecar-yaml |
 
-### Usage ###
+### Usage
 
-|    Name    |  Type  |   CLI Flag    |
-|------------|--------|---------------|
+| Name       | Type   | CLI Flag      |
+|:-----------|:-------|:--------------|
 | UsageInfo  | bool   | --usage-info  |
 | FilesQuota | uint64 | --files-quota |
 
-### Backup ###
+### Backup
 
-|      Name      |  Type  |     CLI Flag      |
-|----------------|--------|-------------------|
+| Name           | Type   | CLI Flag          |
+|:---------------|:-------|:------------------|
 | BackupPath     | string | --backup-path     |
 | BackupSchedule | string | --backup-schedule |
 | BackupRetain   | int    | --backup-retain   |
 | BackupDatabase | bool   | --backup-database |
 | BackupAlbums   | bool   | --backup-albums   |
 
-### Indexing ###
+### Indexing
 
-|      Name      |     Type      |     CLI Flag      |
-|----------------|---------------|-------------------|
+| Name           | Type          | CLI Flag          |
+|:---------------|:--------------|:------------------|
 | IndexWorkers   | int           | --index-workers   |
 | IndexSchedule  | string        | --index-schedule  |
 | WakeupInterval | time.Duration | --wakeup-interval |
 | AutoIndex      | int           | --auto-index      |
 | AutoImport     | int           | --auto-import     |
 
-### Feature Flags ###
+### Feature Flags
 
-|         Name          |  Type  |         CLI Flag         |
-|-----------------------|--------|--------------------------|
-| ReadOnly              | bool   | --read-only              |
-| Experimental          | bool   | --experimental           |
-| DisableSettings       | bool   | --disable-settings       |
-| DisableBackups        | bool   | --disable-backups        |
-| DisableRestart        | bool   | --disable-restart        |
-| DisableWebDAV         | bool   | --disable-webdav         |
-| DisablePlaces         | bool   | --disable-places         |
-| DisableTensorFlow     | bool   | --disable-tensorflow     |
-| DisableFaces          | bool   | --disable-faces          |
-| DisableClassification | bool   | --disable-classification |
-| DisableFFmpeg         | bool   | --disable-ffmpeg         |
-| DisableExifTool       | bool   | --disable-exiftool       |
-| DisableVips           | bool   | --disable-vips           |
-| DisableSips           | bool   | --disable-sips           |
-| DisableDarktable      | bool   | --disable-darktable      |
-| DisableRawTherapee    | bool   | --disable-rawtherapee    |
-| DisableImageMagick    | bool   | --disable-imagemagick    |
-| DisableHeifConvert    | bool   | --disable-heifconvert    |
-| DisableVectors        | bool   | --disable-vectors        |
-| DisableJpegXL         | bool   | --disable-jpegxl         |
-| DisableRaw            | bool   | --disable-raw            |
-| RawPresets            | bool   | --raw-presets            |
-| ExifBruteForce        | bool   | --exif-bruteforce        |
-| DefaultLocale         | string | --default-locale         |
-| DefaultTimezone       | string | --default-timezone       |
+| Name                  | Type | CLI Flag                 |
+|:----------------------|:-----|:-------------------------|
+| ReadOnly              | bool | --read-only              |
+| Experimental          | bool | --experimental           |
+| DisableSettings       | bool | --disable-settings       |
+| DisableBackups        | bool | --disable-backups        |
+| DisableRestart        | bool | --disable-restart        |
+| DisableWebDAV         | bool | --disable-webdav         |
+| DisablePlaces         | bool | --disable-places         |
+| DisableTensorFlow     | bool | --disable-tensorflow     |
+| DisableFaces          | bool | --disable-faces          |
+| DisableClassification | bool | --disable-classification |
+| DisableFFmpeg         | bool | --disable-ffmpeg         |
+| DisableExifTool       | bool | --disable-exiftool       |
+| DisableVips           | bool | --disable-vips           |
+| DisableSips           | bool | --disable-sips           |
+| DisableDarktable      | bool | --disable-darktable      |
+| DisableRawTherapee    | bool | --disable-rawtherapee    |
+| DisableImageMagick    | bool | --disable-imagemagick    |
+| DisableHeifConvert    | bool | --disable-heifconvert    |
+| DisableVectors        | bool | --disable-vectors        |
+| DisableJpegXL         | bool | --disable-jpegxl         |
+| DisableRaw            | bool | --disable-raw            |
+| RawPresets            | bool | --raw-presets            |
+| ExifBruteForce        | bool | --exif-bruteforce        |
 
-### Customization ###
+### Customization
 
-|     Name     |  Type  |    CLI Flag     |
-|--------------|--------|-----------------|
-| DefaultTheme | string | --default-theme |
-| AppName      | string | --app-name      |
-| AppMode      | string | --app-mode      |
-| AppIcon      | string | --app-icon      |
-| AppColor     | string | --app-color     |
-| LegalInfo    | string | --legal-info    |
-| LegalUrl     | string | --legal-url     |
-| WallpaperUri | string | --wallpaper-uri |
+| Name            | Type   | CLI Flag           |
+|:----------------|:-------|:-------------------|
+| DefaultLocale   | string | --default-locale   |
+| DefaultTimezone | string | --default-timezone |
+| DefaultTheme    | string | --default-theme    |
+| PlacesLocale    | string | --places-locale    |
+| AppName         | string | --app-name         |
+| AppMode         | string | --app-mode         |
+| AppIcon         | string | --app-icon         |
+| AppColor        | string | --app-color        |
+| LegalInfo       | string | --legal-info       |
+| LegalUrl        | string | --legal-url        |
+| WallpaperUri    | string | --wallpaper-uri    |
 
-### Site Information ###
+### Site Information
 
-|      Name       |  Type  |      CLI Flag      |
-|-----------------|--------|--------------------|
+| Name            | Type   | CLI Flag           |
+|:----------------|:-------|:-------------------|
 | SiteUrl         | string | --site-url         |
 | SiteAuthor      | string | --site-author      |
 | SiteTitle       | string | --site-title       |
@@ -213,32 +214,37 @@ and [`defaults.yml`](defaults.md) files, grouped by purpose.
 | CORSHeaders     | string | --cors-headers     |
 | CORSMethods     | string | --cors-methods     |
 
-### Web Server ###
+### Proxy Server
 
-|        Name        |   Type   |        CLI Flag        |
-|--------------------|----------|------------------------|
+| Name               | Type     | CLI Flag               |
+|:-------------------|:---------|:-----------------------|
 | HttpsProxy         | string   | --https-proxy          |
 | HttpsProxyInsecure | bool     | --https-proxy-insecure |
 | TrustedProxies     | []string | --trusted-proxy        |
 | ProxyProtoHeaders  | []string | --proxy-proto-header   |
 | ProxyProtoHttps    | []string | --proxy-proto-https    |
-| DisableTLS         | bool     | --disable-tls          |
-| DefaultTLS         | bool     | --default-tls          |
-| TLSEmail           | string   | --tls-email            |
-| TLSCert            | string   | --tls-cert             |
-| TLSKey             | string   | --tls-key              |
-| HttpMode           | string   | --http-mode            |
-| HttpCompression    | string   | --http-compression     |
-| HttpCachePublic    | bool     | --http-cache-public    |
-| HttpCacheMaxAge    | int      | --http-cache-maxage    |
-| HttpVideoMaxAge    | int      | --http-video-maxage    |
-| HttpHost           | string   | --http-host            |
-| HttpPort           | int      | --http-port            |
 
-### Database Connection ###
+### Web Server
 
-|       Name        |  Type  |       CLI Flag        |
-|-------------------|--------|-----------------------|
+| Name            | Type   | CLI Flag            |
+|:----------------|:-------|:--------------------|
+| DisableTLS      | bool   | --disable-tls       |
+| DefaultTLS      | bool   | --default-tls       |
+| TLSEmail        | string | --tls-email         |
+| TLSCert         | string | --tls-cert          |
+| TLSKey          | string | --tls-key           |
+| HttpMode        | string | --http-mode         |
+| HttpCompression | string | --http-compression  |
+| HttpCachePublic | bool   | --http-cache-public |
+| HttpCacheMaxAge | int    | --http-cache-maxage |
+| HttpVideoMaxAge | int    | --http-video-maxage |
+| HttpHost        | string | --http-host         |
+| HttpPort        | int    | --http-port         |
+
+### Database Connection
+
+| Name              | Type   | CLI Flag              |
+|:------------------|:-------|:----------------------|
 | DatabaseDriver    | string | --database-driver     |
 | DatabaseDsn       | string | --database-dsn        |
 | DatabaseName      | string | --database-name       |
@@ -249,14 +255,17 @@ and [`defaults.yml`](defaults.md) files, grouped by purpose.
 | DatabaseConns     | int    | --database-conns      |
 | DatabaseConnsIdle | int    | --database-conns-idle |
 
-### File Conversion ###
+### File Conversion
 
-|          Name          |  Type  |         CLI Flag          |
-|------------------------|--------|---------------------------|
+| Name                   | Type   | CLI Flag                  |
+|:-----------------------|:-------|:--------------------------|
 | FFmpegBin              | string | --ffmpeg-bin              |
 | FFmpegEncoder          | string | --ffmpeg-encoder          |
 | FFmpegSize             | int    | --ffmpeg-size             |
+| FFmpegQuality          | int    | --ffmpeg-quality          |
 | FFmpegBitrate          | int    | --ffmpeg-bitrate          |
+| FFmpegPreset           | string | --ffmpeg-preset           |
+| FFmpegDevice           | string | --ffmpeg-device           |
 | FFmpegMapVideo         | string | --ffmpeg-map-video        |
 | FFmpegMapAudio         | string | --ffmpeg-map-audio        |
 | ExifToolBin            | string | --exiftool-bin            |
@@ -274,17 +283,17 @@ and [`defaults.yml`](defaults.md) files, grouped by purpose.
 | HeifConvertOrientation | string | --heifconvert-orientation |
 | RsvgConvertBin         | string | --rsvgconvert-bin         |
 
-### Security Tokens ###
+### Security Tokens
 
-|     Name      |  Type  |     CLI Flag     |
-|---------------|--------|------------------|
+| Name          | Type   | CLI Flag         |
+|:--------------|:-------|:-----------------|
 | DownloadToken | string | --download-token |
 | PreviewToken  | string | --preview-token  |
 
-### Preview Images ###
+### Preview Images
 
-|       Name        |  Type  |       CLI Flag        |
-|-------------------|--------|-----------------------|
+| Name              | Type   | CLI Flag              |
+|:------------------|:-------|:----------------------|
 | ThumbLibrary      | string | --thumb-library       |
 | ThumbColor        | string | --thumb-color         |
 | ThumbFilter       | string | --thumb-filter        |
@@ -292,30 +301,30 @@ and [`defaults.yml`](defaults.md) files, grouped by purpose.
 | ThumbSizeUncached | int    | --thumb-size-uncached |
 | ThumbUncached     | bool   | --thumb-uncached      |
 
-### Image Quality ###
+### Image Quality
 
-|    Name     | Type |    CLI Flag    |
-|-------------|------|----------------|
+| Name        | Type | CLI Flag       |
+|:------------|:-----|:---------------|
 | JpegQuality | int  | --jpeg-quality |
 | JpegSize    | int  | --jpeg-size    |
 | PngSize     | int  | --png-size     |
 
-### Computer Vision ###
+### Computer Vision
 
-|    Name    |  Type  |   CLI Flag    |
-|------------|--------|---------------|
+| Name       | Type   | CLI Flag      |
+|:-----------|:-------|:--------------|
 | VisionYaml | string | --vision-yaml |
 | VisionApi  | bool   | --vision-api  |
 | VisionUri  | string | --vision-uri  |
 | VisionKey  | string | --vision-key  |
 | DetectNSFW | bool   | --detect-nsfw |
 
-### Daemon Mode ###
+### Daemon Mode
 
 If you start the server as a *daemon* in the background, you can additionally specify a filename for the log and the process ID:
 
-|     Name     |  Type  |    CLI Flag     |
-|--------------|--------|-----------------|
+| Name         | Type   | CLI Flag        |
+|:-------------|:-------|:----------------|
 | PIDFilename  | string | --pid-filename  |
 | LogFilename  | string | --log-filename  |
 | DetachServer | bool   | --detach-server |

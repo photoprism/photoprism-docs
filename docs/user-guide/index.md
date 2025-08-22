@@ -22,11 +22,14 @@ Our members can activate [additional features](https://link.photoprism.app/membe
 
 ## Getting Support ##
 
-If you need help installing our software at home, you are welcome to post your question in [GitHub Discussions](https://link.photoprism.app/discussions) or ask in our [Community Chat](https://link.photoprism.app/chat).
-Common problems can be quickly diagnosed and solved using our [Troubleshooting Checklists](https://docs.photoprism.app/getting-started/troubleshooting/). [Silver, Gold, and Platinum](https://link.photoprism.app/membership) members are also welcome to email us for technical support and advice.
+Common problems can be quickly diagnosed and solved using our [Troubleshooting Checklists](../getting-started/troubleshooting/index.md). You can also post your questions on [GitHub Discussions](https://link.photoprism.app/discussions), ask in our [Community Chat](https://link.photoprism.app/chat), or consult our [Virtual Experts](https://www.photoprism.app/kb/getting-support#virtual-experts) on [ChatGPT](https://link.photoprism.app/chatgpt) and [Perplexity](https://link.photoprism.app/perplexity).[^1]
+
+[Silver, Gold, and Platinum](https://link.photoprism.app/membership) members, as well as [users with a team plan](http://link.photoprism.app/team-editions), are welcome to email us for technical support and advice.
 
 [View Support Options ›](https://www.photoprism.app/kb/getting-support)
 
 !!! info ""
     **We kindly ask you not to report bugs via *GitHub Issues* unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.**
     [Contact us](https://www.photoprism.app/contact) or [a community member](https://link.photoprism.app/discussions) if you need help, it could be a configuration problem, or a misunderstanding in how the software works.
+
+[^1]: ChatGPT and Perplexity can make mistakes and, unless you opt out, your chats may be used for training purposes.

@@ -72,6 +72,7 @@ nav:
     - Installation: user-guide/index.md
     - First Steps 👣: user-guide/first-steps.md
     - User Interface: user-guide/navigate.md
+    - Keyboard Shortcuts: user-guide/organize/keyboard-shortcuts.md
     # - Setting up: user-guide/setup.md
     - Media Library:
       - Introduction: user-guide/library/index.md
@@ -113,7 +114,6 @@ nav:
       - Folders: user-guide/organize/folders.md
       - Panoramas: user-guide/organize/panoramas.md
       - Scans: user-guide/organize/scans.md
-      - Keyboard Shortcuts: user-guide/organize/keyboard-shortcuts.md
     - Sharing:
       - Introduction: user-guide/share/index.md
       - Uploading Files: user-guide/share/services-share.md
@@ -185,10 +185,14 @@ nav:
       - Perceptual Hashes: developer-guide/metadata/perceptual-hashes.md
       - Color Detection: developer-guide/metadata/colors.md
       - Camera Models: developer-guide/metadata/cameras.md
-    - Machine Learning:
-      - Image Classification: developer-guide/machine-learning/classification.md
-      - Face Recognition: developer-guide/machine-learning/face-recognition.md
-      - Additional Models: developer-guide/machine-learning/models.md
+    - Computer Vision:
+      - Image Classification: developer-guide/vision/classification.md
+      - Face Recognition: developer-guide/vision/face-recognition.md
+      - Caption Generation: developer-guide/vision/caption-generation.md
+      - CLI Commands: developer-guide/vision/cli.md
+      - Vision Service:
+        - Introduction: developer-guide/vision/service/index.md
+        - Build Setup: developer-guide/vision/service/setup.md
     - Mobile Apps:
       - iOS and Android: developer-guide/native-apps/index.md
     - Web User Interface:
@@ -278,7 +282,7 @@ use_directory_urls: true
 # Repository information.
 repo_name: photoprism/photoprism
 repo_url: https://github.com/photoprism/photoprism
-edit_uri: https://github.com/photoprism/photoprism-docs/tree/master/docs
+edit_uri: https://github.com/photoprism/photoprism-docs/tree/develop/docs
 copyright: 'Made with ❤ in Berlin'
 
 # Theme configuration.
@@ -334,6 +338,7 @@ plugins:
         'getting-started/advanced/https.md': 'getting-started/using-https.md'
         'developer-guide/apps/index.md': 'developer-guide/native-apps/index.md'
         'photoprism-pi.md': 'getting-started/raspberry-pi/microsd-image.md'
+        'developer-guide/machine-learning/vision.md': 'developer-guide/vision/service/index.md'
 
 # MkDocs extensions.
 markdown_extensions:

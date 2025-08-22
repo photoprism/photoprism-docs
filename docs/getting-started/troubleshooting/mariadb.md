@@ -11,14 +11,20 @@ PhotoPrism is compatible with [SQLite 3](sqlite.md) and [MariaDB 10.5.12+](https
 Official support for MySQL 8 is discontinued as Oracle seems to have stopped shipping [new features and enhancements](https://github.com/photoprism/photoprism/issues/1764).
 As a result, the testing effort required before each release is no longer feasible.
 
-Our [configuration examples](https://dl.photoprism.app/docker/) are generally based on the [current stable version](https://mariadb.com/kb/en/mariadb-server-release-dates/) to take advantage of performance improvements. This does not mean that [older versions](../index.md#databases) are no longer supported and you must upgrade immediately. We recommend not using the `:latest` tag for the MariaDB Docker image and to upgrade manually by changing the tag once we had a chance to test a new major version, e.g.:
+Our [configuration examples](https://dl.photoprism.app/docker/) are generally based on the [current stable version](https://mariadb.com/docs/release-notes/community-server) to take advantage of performance improvements. This does not mean that [older versions](../index.md#databases) are no longer supported and you must upgrade immediately.
+
+We recommend using a version or subversion tag, such as `:11` or [`:11.8`](https://mariadb.org/11-8-lts-released/), instead of `:latest`, to specify the MariaDB service image in your `compose.yaml` file, as shown in this example:
 
 ```yaml
 services:
   mariadb:
-    image: mariadb:11
+    image: mariadb:11.8
     ...
 ```
+
+You can then manually upgrade to [new major versions](https://mariadb.com/docs/release-notes/community-server) by changing the image tag, e.g. from `mariadb:11` to `mariadb:12`, once [they are stable](https://mariadb.org/about/#maintenance-policy) and we had time to test them. 
+
+However, this requires periodically [checking for new MariaDB images](https://hub.docker.com/_/mariadb) and adjusting your `compose.yaml` file accordingly, so you don't get stuck with an outdated version.
 
 ## Cannot Connect
 
@@ -115,7 +121,7 @@ Should MariaDB fail to start after upgrading from an earlier version (or migrati
 However, newer MariaDB Docker images **support automatic upgrades** on startup, so you don't have to worry about that anymore.
 
 !!! danger ""
-    When upgrading from MariaDB 10.x to [11.0](https://mariadb.com/kb/en/release-notes-mariadb-11-0-series/), you [must replace](https://github.com/photoprism/photoprism/commit/bff649469d084498a1e75492c0bd99bda3f5a340#diff-03a31d6e73f48b7bba98b65352ce67a7d153fe2461f9c7b5e76be49a97ebf0cb) `command: mysqld` with `command: ` (followed by the command flags) in your `compose.yaml` or `docker-compose.yml` file, otherwise the database server may fail to start. 
+    When upgrading from MariaDB 10.x to [v11.0 or later](https://mariadb.com/docs/release-notes/community-server), you must replace `command: mysqld` with `command: ` (followed by a space and the command flags) in your `compose.yaml` file since the database server may otherwise fail to start.
 
 ### Manual Update
 
@@ -147,6 +153,10 @@ services:
 ```
 
 Before starting MariaDB in production mode, the database image entrypoint script now runs `mariadb-upgrade` to update the internal management schema as needed. For example, when you pull a new major release and restart the service.
+
+We recommend periodically checking for [new MariaDB images](https://hub.docker.com/_/mariadb) and updating [your `compose.yaml` file](../docker-compose.md#database) as needed so that you don't get stuck with an [outdated](https://mariadb.org/about/#maintenance-policy) version.
+
+[Learn more ›](https://mariadb.org/about/#maintenance-policy)
 
 !!! tldr ""
     Since PhotoPrism does not require time zone support, you can also add `MARIADB_INITDB_SKIP_TZINFO` to your config as shown above. However, this is only a recommendation and optional.

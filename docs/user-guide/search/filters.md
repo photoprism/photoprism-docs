@@ -78,6 +78,20 @@ The following filters work with |:
 
 * albums, color, country, state, city, day, month, year, keywords, label, path, subject/person, subjects/people, title, type, name, filename, original, hash
 
+### Searching for & or | ###
+
+A search for photos that contain `&` or `|` in their caption, filename, name or title is possible using the escape `\`:
+
+```
+caption:Green\|Blue
+```
+
+This will show all photos that have the caption Green|Blue, and not all photos that have the caption Green OR Blue.
+
+The following filters work with escape:
+
+* photos name, filename, caption, title
+
 ### Wildcard ###
 
 The `*` character will act as a wildcard:

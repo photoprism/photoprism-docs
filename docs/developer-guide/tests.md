@@ -48,28 +48,48 @@ To execute:
 go test -short
 ```
 ### Javascript ###
-To run all javascript unit tests, type `make test-js` in a terminal.
+To run all JavaScript unit tests, type `make test-js` in a terminal.
 
+Alternatively, from the `frontend` directory, run `npm run test`.
 
-In case you want to run a single test add .only to the test you want to run e.g.:
+In case you want to run a single test, add `.only` to the test you want to run e.g.:
 
 ```javascript
- it.only("should get album id",  () => {
-        const values = {
-            ID: 5, AlbumName: "Christmas 2019", 
-            AlbumSlug: "christmas-2019", AlbumUUID: 66
-        };
-        const album = new Album(values);
-        const result = album.getId();
-        assert.equal(result, "66");
-    });
+import { describe, it, expect } from 'vitest';
+
+describe('Album', () => {
+  it.only('should get album id', () => {
+    const album = new Album({ AlbumUUID: 66 });
+    expect(album.getId()).toBe('66');
+  });
+});
 ```
 
+You can also run a single file or filter by test name:
 
-Test coverage output is saved to *frontend/coverage/html*
+```bash
+cd frontend && npm run test -- tests/vitest/common/util.test.js
+cd frontend && npm run test -- -t "should get album id"
+```
+
+For watch mode:
+
+```bash
+make vitest-watch
+```
+
+Available Make targets for JavaScript tests:
+
+- `make test-js`: Run all JavaScript unit tests
+- `make vitest-watch`: Run Vitest in watch mode
+- `make vitest-coverage`: Run Vitest with coverage report
+- `make vitest-component`: Run component tests
+
+Test coverage output is saved to *frontend/coverage/index.html*.
+
 
 #### Test Frameworks ####
-To test javascript code we use [mocha](https://mochajs.org/) in combination with [karma](https://karma-runner.github.io/4.0/intro/installation.html), [chai](https://www.chaijs.com/), [sinon](https://sinonjs.org/) and the [karma-istanbul-coverage-reporter](https://github.com/mattlewis92/karma-coverage-istanbul-reporter).
+To test JavaScript code we use [Vitest](https://vitest.dev/) together with [Vite](https://vitejs.dev/), [jsdom](https://github.com/jsdom/jsdom), [Vue Test Utils](https://test-utils.vuejs.org/), and [`@vitest/coverage-v8`](https://vitest.dev/guide/coverage.html).
 
 ## Acceptance Tests ##
 

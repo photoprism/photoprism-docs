@@ -9,7 +9,7 @@ Our [Vision Playground](https://github.com/photoprism/photoprism-vision) provide
 
 This guide explains how to set up the dedicated service as an AI model proxy to enhance PhotoPrism's capabilities. You can use a wide range of additional models with it, including lightweight, preconfigured models, as well as popular but more demanding large language models in combination with Ollama.
 
-While the upcoming version of PhotoPrism will also allow you to generate captions and labels with Ollama directly, a key advantage of using the dedicated vision service is greater flexibility and access to an even broader range of models. This makes it ideal for advanced users and developers.
+PhotoPrism also allows you to generate captions and labels with Ollama directly. A key advantage of using the dedicated vision service is greater flexibility and access to an even broader range of models, which makes it ideal for advanced users and developers.
 
 Developers can proceed to the [Build Setup](setup.md) guide, which explains how to set up a [Vision Playground](https://github.com/photoprism/photoprism-vision) development environment.
 
@@ -76,7 +76,7 @@ Now, create a new `config/vision.yml` file or edit the existing file in [the *st
     This example uses the pre-installed `kosmos-2` model for generating captions. It does not require Ollama.
 
     !!! tip "Available pre-installed Models"
-        The Vision service also provides additional pre-installed models, such as `vit-gpt2` and `blip` for image captioning, as well as `nsfw_image_detector` for NSFW content detection. You can enable these models by updating the `Name` field in your `vision.yml` configuration.
+        The Vision service also provides additional pre-installed models, such as `vit-gpt2` and `blip` for image captioning, as well as `nsfw_image_detector` for NSFW content detection. You can enable these models by updating the `Model` field in your `vision.yml` configuration.
     
     !!! tip "Prompts"
         Unlike the Ollama models, pre-installed models such as `kosmos-2` interpret prompts primarily as starting instructions for generating captions, rather than as detailed, task-oriented requests.

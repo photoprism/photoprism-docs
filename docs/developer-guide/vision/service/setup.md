@@ -99,11 +99,12 @@ The file consists of a list of `Models` and a `Thresholds` section.
 
 *   **`Type`**: The task to perform. Can be `caption` or `labels`.
 *   **`Resolution`**: The longest edge of the thumbnail (in pixels) to be sent for analysis. Higher values may yield better results but increase processing time and network traffic.
-*   **`Name`**: The name of the model to use. For Ollama models, this should be just the model name (e.g., `llava-phi3`). For pre-installed models, it's the model identifier (e.g., `kosmos-2`).
+*   **`Model`**: Canonical model identifier used for routing, e.g., `llava-phi3:latest` for an Ollama model or `kosmos-2:latest` for a pre-installed model.
+*   **`Name`**: Optional, human-readable display name. When omitted, PhotoPrism derives it from the type and model/version.
 *   **`Version`**: The model version. For Ollama models, this is typically `latest`. For pre-installed models, it's also usually `latest`.
 *   **`Prompt`**: (Optional) A custom prompt to send to the AI model. If omitted, a default prompt will be used.
 *   **`Service`**: A block defining how to communicate with the service.
-    *   **`Uri`**: The base API endpoint of the Vision service. PhotoPrism will append the appropriate path based on the model type, name, and version (e.g., `/caption/llava-phi3/latest`).
+    *   **`Uri`**: The base API endpoint of the Vision service. PhotoPrism will append the appropriate path based on the task type, model, and version (e.g., `/caption/llava-phi3/latest`).
     *   **`FileScheme`**: How the image data is sent. `base64` sends it as a Base64-encoded string within the JSON payload (recommended for the Vision service). `data` sends the raw thumbnail binary, but this requires additional handling in the current Vision service implementation.
     *   **`RequestFormat`**: The JSON structure of the request. Use `vision` for the PhotoPrism Vision API format. The `ollama` format should only be used when connecting directly to Ollama, not through the Vision service.
     *   **`ResponseFormat`**: The expected JSON structure of the response. Use `vision` for the PhotoPrism Vision API format.

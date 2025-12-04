@@ -3,7 +3,7 @@
 To [recognize faces](https://docs.photoprism.app/user-guide/organize/people/), PhotoPrism uses a multi-stage AI pipeline that detects faces, generates embeddings, and clusters similar faces so they can be easily organized by person.
 
 !!! tldr ""
-    With the upcoming release PhotoPrism will support **two interchangeable detection engines** that you can switch between depending on your hardware and accuracy requirements. The ONNX-based engine provides significantly improved detection of faces that are occluded, at angles, or in challenging lighting conditions.
+    PhotoPrism supports **two interchangeable detection engines** that you can switch between depending on your hardware and accuracy requirements. The ONNX-based engine provides significantly improved detection of faces that are occluded, at angles, or in challenging lighting conditions.
 
 ## How It Works
 

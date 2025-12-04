@@ -136,7 +136,7 @@ Why this works:
 - **Temperature, TopP,** and **TopK:** Picks high-probability, common words, not creative synonyms.
 - **MinP:** Cuts off very low-probability tokens, which are typically those rare labels and odd phrasings you don’t want for classification.
 - **RepeatLastN** and **RepeatPenalty:** Ensures that labels are unique by penalizing repetition.
-- **NumPredict:** Limits the maximum number of output tokens to prevent unfinite repetition.
+- **NumPredict:** Limits the maximum number of output tokens to prevent infinite repetition.
 
 ### Qwen3-VL: Caption
 

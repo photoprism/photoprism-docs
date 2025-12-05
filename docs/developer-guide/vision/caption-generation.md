@@ -44,4 +44,4 @@ docker compose down ollama
 docker compose up -d ollama
 ```
 
-This will clear the VRAM and restore normal GPU-accelerated processing performance.
+This should clear the VRAM and restore normal GPU-accelerated processing performance.

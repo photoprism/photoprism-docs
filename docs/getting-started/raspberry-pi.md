@@ -136,7 +136,7 @@ Other issues? Our [troubleshooting checklists](troubleshooting/index.md) help yo
     Before submitting a support request, try to [determine the cause of your problem](troubleshooting/index.md).
 
 [^1]: Experienced users can [alternatively use the packages](faq.md#installation-packages) at [dl.photoprism.app/pkg/linux/](https://dl.photoprism.app/pkg/linux/README.html) to manually install PhotoPrism on compatible Linux distributions. For more installation methods, see our [Getting Started FAQ](faq.md#how-can-i-install-photoprism-without-docker).
-[^2]: [PhotoPrismPi](https://dl.photoprism.app/nas/raspberry-pi/) is based on [Ubuntu Server](https://cdimage.ubuntu.com/releases/24.04.2/release/).
+[^2]: [PhotoPrismPi](https://dl.photoprism.app/nas/raspberry-pi/) is based on [Ubuntu Server](https://cdimage.ubuntu.com/releases/24.04.3/release/).
 [^3]: The default [Docker Compose](https://docs.docker.com/compose/) config filename is `compose.yaml`. For simplicity, it doesn't need to be specified when running `docker compose` or `docker-compose` in the same directory. Config files for other apps or instances should be placed in separate folders.
 
 *[Raspbian]: Raspberry Pi OS

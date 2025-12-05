@@ -21,9 +21,9 @@ You'll also notice many performance and usability enhancements, such as the abil
 
 As always, a big thank you to [everyone who contributed](https://docs.photoprism.app/developer-guide/) and [helped with testing](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! We hope you enjoy the new release as much as we do. 🌈💎✨
 
-Important Changes
+Upgrade Notes
 
-- To benefit from the [facial recognition improvements](https://docs.photoprism.app/user-guide/ai/face-recognition/), we recommend running `photoprism faces audit --fix` and `photoprism faces index` [in a terminal](https://docs.photoprism.app/getting-started/docker-compose/#opening-a-terminal) to resolve any inconsistencies before detecting and matching additional faces. A [complete rescan](https://docs.photoprism.app/user-guide/library/originals/#when-should-complete-rescan-be-selected) will also detect additional faces, but takes longer since more indexing tasks are performed.
+- To benefit from the [facial recognition improvements](https://docs.photoprism.app/user-guide/ai/face-recognition/), we recommend running `photoprism faces audit --fix` and `photoprism faces index` [in a terminal](https://docs.photoprism.app/getting-started/docker-compose/#opening-a-terminal) to resolve any inconsistencies before detecting and matching additional faces. If you want the new engine to re-detect all faces for a clean state, you can do so by executing the commands `photoprism faces reset -f` and then `photoprism faces index` (after that, all detected faces must be reassigned). A [complete rescan](https://docs.photoprism.app/user-guide/library/originals/#when-should-complete-rescan-be-selected) will also detect additional faces, but takes longer since more indexing tasks are performed. 
 - PhotoPrism now [supports multiple AI engines](https://docs.photoprism.app/user-guide/ai/#model-engines), so the `PHOTOPRISM_DISABLE_TENSORFLOW` option [has been deprecated](https://github.com/photoprism/photoprism/issues/5310). You can still disable individual AI features using the [`PHOTOPRISM_DISABLE_*` feature flags](https://docs.photoprism.app/getting-started/config-options/#feature-flags) and/or a [custom `vision.yml`](https://docs.photoprism.app/user-guide/ai/#visionyml-reference) configuration.
 
 What's new?

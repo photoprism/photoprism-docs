@@ -44,7 +44,7 @@ Your pictures, uploads, sidecar files, and cache files are stored in subfolders 
 Should you want to make changes to the [default settings](../config-options.md), you can find your `compose.yaml` file in `/opt/photoprism`.
 After [connecting via SSH](https://www.howtogeek.com/311287/how-to-connect-to-an-ssh-server-from-windows-macos-or-linux/) with the credentials provided above, you can obtain root privileges by running `sudo -i`.
 
-## Running Commands and Viewing Logs
+## Running Commands
 
 After [connecting via SSH](https://www.howtogeek.com/311287/how-to-connect-to-an-ssh-server-from-windows-macos-or-linux/), navigate to `/opt/photoprism` to run commands or view logs:
 
@@ -58,20 +58,52 @@ Run PhotoPrism commands:
 sudo docker compose exec photoprism photoprism [command]
 ```
 
-View logs:
+[Learn more ›](../docker-compose.md#command-line-interface)
+
+### Viewing Logs
+
+The following will watch the service logs for troubleshooting:
 
 ```bash
 sudo docker compose logs -f photoprism
 ```
 
-[View all available commands ›](../docker-compose.md#command-line-interface)
+[Learn more ›](../troubleshooting/docker.md#viewing-logs)
 
-### Reverse Proxy
+## Traefik Reverse Proxy
 
-[Traefik](https://traefik.io/traefik)  is installed as [a reverse proxy](../proxies/traefik.md) and can be configured in `/opt/photoprism/compose.yml`, as well as through the config files located in `/opt/photoprism/traefik`.
+[Traefik](https://traefik.io/traefik) is pre-installed as [a reverse proxy](../proxies/traefik.md) and can be configured in your `/opt/photoprism/compose.yml` file, as well as through the config files located in `/opt/photoprism/traefik`.
 
-Note that browsers do not recognize the automatically generated default certificate as valid, so you will see a warning when connecting over HTTPS.
+[Learn more ›](../proxies/traefik.md)
 
-[^1]: [PhotoPrismPi](https://dl.photoprism.app/nas/raspberry-pi/) is based on [Ubuntu Server](https://cdimage.ubuntu.com/releases/24.04.2/release/).
+### Getting Updates
+
+Make sure to use the [latest version tag](https://hub.docker.com/_/traefik) for Traefik in your `compose.yaml` file, e.g.:
+
+```yaml
+services:
+  traefik:
+    image: traefik:v3.6
+```
+
+Then run the following command to pull the latest image and restart the service:
+
+```bash
+sudo docker compose up -d --pull always
+```
+
+This ensures you receive the latest security updates and prevents [errors when upgrading Docker](https://github.com/photoprism/photoprism/discussions/5314) to the latest version.
+
+[Learn more ›](../updates.md)
+
+### Certificate Warnings
+
+Web browsers do not recognize the default TLS certificate as valid, so a warning will appear when connecting over HTTPS.
+
+To avoid this issue, use a valid certificate e.g. obtained for free via Let's Encrypt.
+
+[Learn more ›](../using-https.md)
+
+[^1]: [PhotoPrismPi](https://dl.photoprism.app/nas/raspberry-pi/) is based on [Ubuntu Server](https://cdimage.ubuntu.com/releases/24.04.3/release/).
 [^2]: Download and installation time depends on the speed of your Internet connection.
 [^3]: If you can't connect, try using the existing hostname or IP address instead.

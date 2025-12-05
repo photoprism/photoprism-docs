@@ -2,14 +2,14 @@
 
 We recommend choosing a [vision model](https://ollama.com/search?c=vision) that balances speed, accuracy, and reliability. Two models that meet these criteria and that we can recommend are [Gemma 3](https://ollama.com/library/gemma3) and [Qwen3-VL](https://ollama.com/library/qwen3-vl):
 
-| Model        | Use Case                                                   | Notes                                                                |
-|--------------|------------------------------------------------------------|----------------------------------------------------------------------|
-| **Gemma 3**  | Standard caption and label generation                      | Light, reliable JSON output; good default.                           |
-| **Qwen3-VL** | Advanced vision and reasoning tasks (OCR, complex prompts) | Better visual grounding and multi-language support; needs more VRAM. |
+| Model        | Use Case                                                   | Notes                                                                                     |
+|--------------|------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+| **Gemma 3**  | Standard caption and label generation                      | Light, reliable JSON output; good default.                                                |
+| **Qwen3-VL** | Advanced vision and reasoning tasks (OCR, complex prompts) | Better visual grounding and multi-language support; available in many sizes and variants. |
 
-[**Gemma 3**](https://ollama.com/library/gemma3) is very consistent in terms of performance, with errors occurring rarely. However, it is less suitable for long/complex prompts and captions. We recommend using the standard variant, `gemma3:latest`, for most [use cases](#gemma-3-labels).
+[**Gemma 3**](https://ollama.com/library/gemma3) is very consistent in terms of performance, with errors occurring rarely. However, it is less suitable for long/complex prompts and captions. We recommend using the [standard variant](https://ollama.com/library/gemma3/tags), `gemma3:latest`, for most [use cases](#gemma-3-labels).
 
-[**Qwen3-VL**](https://ollama.com/library/qwen3-vl) tends to be somewhat less predictable and consistent in the smaller `2b` and `4b` [variants](https://ollama.com/library/qwen3-vl/tags), where performance and error rates can vary widely [unless controlled as shown in the examples](#qwen3-vl-labels) below. The standard `qwen3-vl:latest` (`8b`) version generally works well without major adjustments. One drawback is slightly lower performance compared to Gemma 3 on an NVIDIA RTX 4060, with [label generation taking 2–3 seconds](#qwen3-vl-labels) versus [1–2 seconds](#gemma-3-labels).
+[**Qwen3-VL**](https://ollama.com/library/qwen3-vl) tends to be somewhat less predictable and consistent in the [smaller `2b` and `4b` variants](https://ollama.com/library/qwen3-vl/tags), where performance and error rates can vary widely [unless controlled as shown in the examples](#qwen3-vl-labels) below. The standard `qwen3-vl:latest` (`8b`) version generally works well without major adjustments. One drawback is slightly lower performance compared to Gemma 3 on an NVIDIA RTX 4060, with [label generation taking 2–3 seconds](#qwen3-vl-labels) versus [1–2 seconds](#gemma-3-labels).
 
 Performance also depends on your hardware, so e.g., [Qwen3-VL variants](https://ollama.com/search?q=qwen3-vl) might outperform Gemma 3 when running on Apple Silicon or NVIDIA Blackwell GPUs. Our recommendation is therefore to test both models to see which one works best for you. If you generate both captions and labels, stick with this model so that Ollama doesn't need to swap models between requests.
 
@@ -181,3 +181,49 @@ Why this works:
 - **TopK** and **TopP:** Ensures stability and lower hallucination risk in a captioning context.
 - **RepeatPenalty** and **RepeatLastN:** Discourages repetition without affecting normal phrasing.
 - **NumPredict:** High enough for 1–2 sentences, but low enough to avoid rambling.
+
+## Usage Tips
+
+### Model Run Modes
+
+To avoid unnecessary API requests, especially when [testing your configuration](#performing-test-runs), set `Run: manual` and [run the models manually](cli.md#run-vision-models) via `photoprism vision run -m caption` or `photoprism vision run -m labels`. `Run: auto` will automatically run a model once indexing is complete to prevent slowdowns during indexing or importing. This option also [allows manual](cli.md#run-vision-models) and [scheduled invocations](../../getting-started/config-options.md#computer-vision).
+
+[Learn more ›](index.md#run-modes)
+
+### Replacing Existing Labels
+
+If you want to remove existing labels from the built-in image classification model, run the command `photoprism vision reset -m labels -s image` in [a terminal](../../getting-started/docker-compose.md#opening-a-terminal) before you regenerate all labels with Ollama using the following command:
+
+```
+photoprism vision run -m labels
+```
+
+[Learn more ›](cli.md#reset-vision-data)
+
+## Troubleshooting
+
+### Verifying Your Configuration
+
+If you encounter issues, a good first step is to verify how PhotoPrism has loaded your [`vision.yml`](index.md#visionyml-reference) configuration. You can do this by running: 
+
+```bash
+docker compose exec photoprism photoprism vision ls
+```
+
+This command outputs the settings for all supported and configured model types. Compare the results with your [`vision.yml`](index.md#visionyml-reference) file to confirm that your configuration has been loaded correctly and to identify any parsing errors or misconfigurations.
+
+### Performing Test Runs
+
+The following [terminal commands](../../getting-started/docker-compose.md#opening-a-terminal) will perform a single run for the specified model type:
+
+```bash
+photoprism vision run -m labels --count 1 --force
+photoprism vision run -m caption --count 1 --force
+```
+
+If you don't get the expected results or notice any errors, you can re-run the commands with trace log mode enabled to inspect the request and response:
+
+```bash
+photoprism --log-level=trace vision run -m labels --count 1 --force
+photoprism --log-level=trace vision run -m caption --count 1 --force
+```

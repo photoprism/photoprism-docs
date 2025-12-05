@@ -113,5 +113,7 @@ photoprism faces update      # cluster and match
 photoprism faces optimize    # optional tidy-up
 ```
 
+If you want the new engine to re-detect all faces for a clean state, you can do so by executing the commands `photoprism faces reset -f` and then `photoprism faces index`. After that, all detected faces must be reassigned.
+
 !!! note ""
     A [complete rescan](https://docs.photoprism.app/user-guide/library/originals/#when-should-complete-rescan-be-selected) will also detect additional faces, but takes longer since more indexing tasks are performed.

@@ -36,9 +36,9 @@ Edit album details and click *Save*.
 1. Select photos and videos.
 2. Click context menu.
 3. Click the bookmark :material-bookmark: icon.
-   ![Screenshot](img/add-photo-album-1-2503.jpg){ class="shadow" } 
+   ![Screenshot](img/add-photo-album-1-0512.jpg){ class="shadow" } 
 4. Select or create the albums to which the pictures should be added.
-   ![Screenshot](img/add-photo-album-2-2503.jpg){ class="shadow" } 
+   ![Screenshot](img/add-photo-album-2-0512.jpg){ class="shadow" } 
 5. Click *Confirm*.
 
 !!! tip ""

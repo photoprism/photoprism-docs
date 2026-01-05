@@ -27,6 +27,13 @@ PhotoPrism currently supports the following runtimes and services:
 
 Custom AI engines, models, and run modes can be specified in a `vision.yml` file located in the `storage/config` directory. The file defines a list of models and thresholds to be used, e.g.:
 
+!!! warning "Old installations"
+    On old installations of PhotoPrism, the path may be `storage/settings`.
+
+    Run `docker compose exec photoprism photoprism show config | grep config-path` to check it.
+
+    If you see that the value of `config-path` is `/photoprism/storage/settings`, then set `PHOTOPRISM_VISION_YAML: "/photoprism/storage/config/vision.yml"` in your environment to use the path `storage/config` with `vision.yml`.
+
 ```yaml
 Models:
 - Type: caption

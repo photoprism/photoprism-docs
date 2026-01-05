@@ -85,6 +85,9 @@ docker compose exec ollama ollama pull gemma3:latest
 
 Now, create a new `config/vision.yml` file or edit the existing file in [the *storage* folder](../../getting-started/docker-compose.md#photoprismstorage) of your PhotoPrism instance, following the example below. Its absolute path from inside the container is `/photoprism/storage/config/vision.yml`:
 
+!!! tip "Old installations"
+    See the note in [Configuration](./index.md#visionyml-reference) if your file is not read.
+
 !!! example "vision.yml"
     ```yaml
     Models:
@@ -177,4 +180,3 @@ docker compose up -d ollama
 This should clear the VRAM and restore normal GPU-accelerated processing performance.
 
 [^1]: Unrelated configuration details have been omitted for brevity.
-

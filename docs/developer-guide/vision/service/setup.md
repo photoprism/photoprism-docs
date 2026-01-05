@@ -67,6 +67,9 @@ The interaction between PhotoPrism and the Vision service is controlled by a `vi
 !!! warning ""
     The configuration file **must** be named `vision.yml` with the `.yml` extension, **not** `.yaml`. Files with the `.yaml` extension will be ignored by PhotoPrism and could cause the Vision service to appear non-functional.
 
+!!! tip "Old installations"
+    See the note in [Configuration](../../../user-guide/ai/index.md#visionyml-reference) if your file is not read.
+
 The file consists of a list of `Models` and a `Thresholds` section.
 
 !!! example "`storage/config/vision.yml`"

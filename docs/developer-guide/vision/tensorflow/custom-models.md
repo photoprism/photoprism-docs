@@ -51,6 +51,9 @@ Now, create a new `config/vision.yml` file or edit the existing file in [the *st
 !!! note ""
     The config file must be named `vision.yml`, not `vision.yaml`, as otherwise it won't be found and will have no effect.
 
+!!! tip "Old installations"
+    See the note in [Configuration](../../../user-guide/ai/index.md#visionyml-reference) if your file is not read. 
+
 ## Step 4: Restart PhotoPrism
 
 Run the following commands to restart `photoprism` and apply the new settings:

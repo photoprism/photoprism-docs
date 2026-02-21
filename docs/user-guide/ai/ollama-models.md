@@ -9,7 +9,7 @@ We recommend choosing a [vision model](https://ollama.com/search?c=vision) that 
 
 [**Gemma 3**](https://ollama.com/library/gemma3) is very consistent in terms of performance, with errors occurring rarely. However, it is less suitable for long/complex prompts and captions. We recommend using the [standard variant](https://ollama.com/library/gemma3/tags), `gemma3:latest`, for most [use cases](#gemma-3-labels).
 
-[**Qwen3-VL**](https://ollama.com/library/qwen3-vl) tends to be somewhat less predictable and consistent in the [smaller `2b` and `4b` variants](https://ollama.com/library/qwen3-vl/tags), where performance and error rates can vary widely [unless controlled as shown in the examples](#qwen3-vl-labels) below. The standard `qwen3-vl:latest` (`8b`) version generally works well without major adjustments. One drawback is slightly lower performance compared to Gemma 3 on an NVIDIA RTX 4060, with [label generation taking 2–3 seconds](#qwen3-vl-labels) versus [1–2 seconds](#gemma-3-labels).
+[**Qwen3-VL**](https://ollama.com/library/qwen3-vl) tends to be somewhat less predictable and consistent in the [smaller `2b` and `4b` variants](https://ollama.com/library/qwen3-vl/tags), where performance and error rates can vary widely [unless controlled as shown in the examples](#qwen3-vl-labels) below. The standard `qwen3-vl:8b-instruct` version generally works well without major adjustments. One drawback is slightly lower performance compared to Gemma 3 on an NVIDIA RTX 4060, with [label generation taking 2–3 seconds](#qwen3-vl-labels) versus [1–2 seconds](#gemma-3-labels).
 
 Performance also depends on your hardware, so e.g., [Qwen3-VL variants](https://ollama.com/search?q=qwen3-vl) might outperform Gemma 3 when running on Apple Silicon or NVIDIA Blackwell GPUs. Our recommendation is therefore to test both models to see which one works best for you. If you generate both captions and labels, stick with this model so that Ollama doesn't need to swap models between requests.
 
@@ -128,7 +128,7 @@ Models:
 
 Why this works:
 
-- **Model:** [`qwen3-vl:4b-instruct`](https://ollama.com/library/qwen3-vl/tags) is a lightweight version of Qwen3-VL. You can alternatively try [`huihui_ai/qwen3-vl-abliterated:4b-instruct`](https://ollama.com/huihui_ai/qwen3-vl-abliterated), [`qwen3-vl:latest`](https://ollama.com/library/qwen3-vl), or other [variants](https://ollama.com/search?c=vision&q=qwen3-vl).
+- **Model:** [`qwen3-vl:4b-instruct`](https://ollama.com/library/qwen3-vl/tags) is a lightweight version of Qwen3-VL. You can alternatively try [`huihui_ai/qwen3-vl-abliterated:4b-instruct`](https://ollama.com/huihui_ai/qwen3-vl-abliterated), [`qwen3-vl:8b-instruct`](https://ollama.com/library/qwen3-vl), or other [variants](https://ollama.com/search?c=vision&q=qwen3-vl).
 - **Engine:** Applies suitable **Resolution**, **Format**, and **Options** defaults.
 - **Run:** `on-demand` allows manual, metadata worker, and scheduled jobs ￫ [Run Modes](index.md#run-modes).
 - **Prompt:** Ensures low latency, prevents repetition, and controls the type and number of labels returned. For other languages, keep the base instructions in English and add the desired language (e.g., "Respond in German").
@@ -171,7 +171,7 @@ Models:
 
 Why this works:
 
-- **Model:** Using [`qwen3-vl:4b-instruct`](https://ollama.com/library/qwen3-vl/tags) for both labels and captions avoids time-consuming Ollama model swaps. You can alternatively try [`huihui_ai/qwen3-vl-abliterated:4b-instruct`](https://ollama.com/huihui_ai/qwen3-vl-abliterated), [`qwen3-vl:latest`](https://ollama.com/library/qwen3-vl), or other [variants](https://ollama.com/search?c=vision&q=qwen3-vl).
+- **Model:** Using [`qwen3-vl:4b-instruct`](https://ollama.com/library/qwen3-vl/tags) for both labels and captions avoids time-consuming Ollama model swaps. You can alternatively try [`huihui_ai/qwen3-vl-abliterated:4b-instruct`](https://ollama.com/huihui_ai/qwen3-vl-abliterated), [`qwen3-vl:8b-instruct`](https://ollama.com/library/qwen3-vl), or other [variants](https://ollama.com/search?c=vision&q=qwen3-vl).
 - **Engine:** Applies suitable **Resolution**, **Format**, and **Options** defaults.
 - **Run:** `on-schedule` allows manual and scheduled jobs ￫ [Run Modes](index.md#run-modes).
 - **System:** Tells the model to describe images in natural language.

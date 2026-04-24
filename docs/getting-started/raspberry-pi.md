@@ -30,7 +30,7 @@ As a Raspberry Pi owner, you therefore get the same core functionality and can f
 |---------------------|---------------------------------|
 | Stable Release      | `photoprism/photoprism:latest`  | 
 | Development Preview | `photoprism/photoprism:preview` | 
-| MariaDB             | `arm64v8/mariadb:11`            | 
+| MariaDB             | `arm64v8/mariadb:11.8`          | 
 
 Running 64-bit Docker images under Raspberry Pi OS may require additional manual [configuration changes](#raspberry-pi-os), especially on installations that still prioritize 32-bit user space for compatibility with older software. If you do not need compatibility with 32-bit apps, we recommend choosing a standard 64-bit Linux distribution instead, as it saves time and reduces setup complexity:
 

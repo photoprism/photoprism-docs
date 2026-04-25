@@ -20,7 +20,12 @@ fix:
 	sudo chown -R $(UID):$(GID) .
 	sudo chmod -R a+rwX .
 pip:
-	sudo apt-get install -y git python3 python3-pip python3-venv python3-wheel
+	# Use python3-full (a metapackage that depends on the active python3.X-venv
+	# / python3.X-dev) instead of bare python3-venv. On Ubuntu 26.04 / Debian
+	# trixie+, python3-venv is a transitional package that no longer reliably
+	# pulls in the version-specific ensurepip/venv module needed for
+	# `python3 -m venv`, so install-venv fails with "ensurepip is not available".
+	sudo apt-get install -y git python3-full python3-pip python3-wheel
 venv: install-venv
 remove-venv:
 	rm -rf ./venv

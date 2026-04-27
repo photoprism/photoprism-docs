@@ -1,6 +1,6 @@
 # Adobe XMP
 
-**Last Updated:** April 21, 2026
+**Last Updated:** April 27, 2026
 
 XMP (Extensible Metadata Platform) is an XML-based metadata container developed by Adobe. It can be embedded in common image and video formats (JPEG, HEIC, TIFF, DNG, MP4, MOV, PSD, …) and is also used as a standalone sidecar format — typically named the same as the original with an `.xmp` extension — to carry Dublin Core, IPTC, EXIF, and vendor-specific fields.
 
@@ -135,6 +135,7 @@ The following Go libraries are worth considering as replacements or additions to
 
 **Generic XML / DOM (for a hand-rolled XMP Parser)**
 
+- [`antchfx/xmlquery`](https://github.com/antchfx/xmlquery) — MIT. Actively maintained (latest commit March 2026, ~490 stars). DOM-style XML parser backed by [`antchfx/xpath`](https://github.com/antchfx/xpath) (MIT, ~740 stars, latest commit February 2026), which implements full XPath 1.0. Namespace-aware queries via `xpath.CompileWithNS(expr, nsMap)`, which is the closest off-the-shelf match for the XMP namespace-priority fallback we need: compile each priority list once (e.g. `//dc:title | //photoshop:Headline`), run it, and take the first non-empty hit. Read-only — writing sidecars back out would still need `encoding/xml` or another library.
 - [`beevik/etree`](https://github.com/beevik/etree) — BSD-2-Clause. Actively maintained (latest commit August 2025, ~1.7k stars). DOM-style XML with XPath-like selectors; strong fit for namespace-priority fallback (walk once, cherry-pick `dc:title`, then `photoshop:Headline` via prefix-aware paths) and supports writing. Rational/date coercion still has to be implemented manually.
 - [`subchen/go-xmldom`](https://github.com/subchen/go-xmldom) — Apache-2.0. Same niche as `etree` with a smaller community; prefer `etree` unless its XPath dialect is specifically needed.
 
@@ -147,6 +148,10 @@ The following Go libraries are worth considering as replacements or additions to
 
 - [`barasher/go-exiftool`](https://github.com/barasher/go-exiftool) — Apache-2.0. Actively maintained (~300 stars, latest commit August 2025). Wraps the Phil Harvey `exiftool` binary. Sidesteps parsing entirely — ExifTool already resolves namespace priority, `xml:lang` alternatives, rationals, and dates. PhotoPrism already shells out to `exiftool` for the embedded-XMP path (see [`convert_sidecar_json.go`](https://github.com/photoprism/photoprism/blob/develop/internal/photoprism/convert_sidecar_json.go)), so adopting this wrapper for `.xmp` sidecars too would unify both paths — at the cost of making ExifTool (and its Perl runtime) a hard dependency for sidecar reading as well.
 
+**Reference Implementation**
+
+- [`sibprogrammer/xq`](https://github.com/sibprogrammer/xq) — MIT, ~1.1k stars, last push April 2026. Command-line XML/HTML beautifier and content extractor written in Go, distributed via Homebrew, MacPorts, and most Linux package managers. Not importable as a library (all logic lives under `internal/`), but its [`internal/utils/utils.go`](https://github.com/sibprogrammer/xq/blob/master/internal/utils/utils.go) is a compact, working example of how to drive `antchfx/xmlquery` + `antchfx/xpath` for XPath and CSS-selector extraction — useful as a starting point when wiring the same libraries into an XMP reader, and handy as a CLI debugging aid alongside `exiftool -g -j <file>`.
+
 **Notes on `encoding/xml` Itself**
 
 Go 1.23 added well-formedness enforcement (with an `AllowIllFormed` escape hatch), but namespace handling and `xml:lang` semantics are **unchanged** from what PhotoPrism originally hit — see [golang/go#14407](https://github.com/golang/go/issues/14407), still open. A materially better `encoding/xml` is unlikely to land in the standard library; any real fix will almost certainly come via a third-party package.
@@ -155,10 +160,10 @@ No maintained Go binding for [`libexempi`](https://libopenraw.freedesktop.org/ex
 
 ## Open Issues
 
-- [ ] Replace the hand-written struct in `xmp_document.go` with a generic RDF-aware parser so arbitrary namespace prefixes and nested `rdf:Description` blocks parse correctly. See [**XML/XMP Libraries**](#xmlxmp-libraries) above — `evanoberholster/imagemeta`, `beevik/etree`, and `knakk/rdf` are the main contenders; `barasher/go-exiftool` is an alternative if we're willing to make ExifTool a hard dependency for sidecars too.
+- [ ] Replace the hand-written struct in `xmp_document.go` with a generic RDF-aware parser so arbitrary namespace prefixes and nested `rdf:Description` blocks parse correctly. See [**XML/XMP Libraries**](#xmlxmp-libraries) above — `evanoberholster/imagemeta`, `antchfx/xmlquery`, `beevik/etree`, and `knakk/rdf` are the main contenders; `barasher/go-exiftool` is an alternative if we're willing to make ExifTool a hard dependency for sidecars too. [`sibprogrammer/xq`](https://github.com/sibprogrammer/xq) is a useful reference implementation for the XPath + namespace pattern.
 - [ ] Add a namespace-priority mechanism to the direct sidecar reader, analogous to the ExifTool path's `meta:"A,B,C"` left-to-right fallback. Two natural options:
     1. extend the hand-written accessors in `xmp_document.go` so each falls back across equivalent namespaces (e.g. `Title()` reads `dc:title`, then `photoshop:Headline`; `Copyright()` reads `dc:rights`, then `xmpRights:WebStatement`)
-    2. make the existing `xmp:"..."` struct tags on `meta.Data` load-bearing — drive the reader from them via reflection once the parser can resolve namespace-qualified element names. [`beevik/etree`](https://github.com/beevik/etree) is a promising foundation for option (a); option (b) fits better with an RDF-aware parser such as [`knakk/rdf`](https://github.com/knakk/rdf).
+    2. make the existing `xmp:"..."` struct tags on `meta.Data` load-bearing — drive the reader from them via reflection once the parser can resolve namespace-qualified element names. [`antchfx/xmlquery`](https://github.com/antchfx/xmlquery) (XPath-native, namespace-aware via `xpath.CompileWithNS`) and [`beevik/etree`](https://github.com/beevik/etree) are both promising foundations for option (a); option (b) fits better with an RDF-aware parser such as [`knakk/rdf`](https://github.com/knakk/rdf).
 - [ ] Extend the built-in `.xmp` sidecar reader to cover GPS (`exif:GPSLatitude` / `exif:GPSLongitude` / `exif:GPSAltitude`), `xmp:Rating`, `xmp:Label`, `xmpMM:DocumentID` / `xmpMM:InstanceID`, `xmp:CreatorTool`, and `xmpRights:UsageTerms`.
 - [ ] Experiment with Adobe Lightroom to see how it currently uses sidecar files. Recent versions of Lightroom no longer appear to sync metadata to XMP by default, probably because Adobe focuses on cloud storage. Needs further investigation.
 - [ ] Create a matrix showing which fields are used/supported by which application (Photoshop, Lightroom, Darktable, and others — see also [RAW Image Conversion](../media/raw.md)).

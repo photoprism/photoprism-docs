@@ -47,20 +47,19 @@ This file serves as a single, up-to-date reference for agents and contributors w
 
 ### Content Standards
 
-- Headings, link titles, and navigation labels must use **Title Case** (in APA or AP style), matching the main repository’s style requirement. When copying headings from other sources, normalize them before committing.
+- Headings, link titles, and navigation labels must use **Chicago-style title case**, matching the main repository’s style requirement. When copying headings from other sources, normalize them before committing.
 - Prefer Markdown over raw HTML; use MkDocs Material components (admonitions, tabs, tooltips) configured in `mkdocs.yml`. When HTML is unavoidable, keep it minimal and validate that `mkdocs serve` renders it correctly in dark/light themes.
 - Update `mkdocs.yml` navigation whenever you add, rename, or move a page. If a URL changes, add a redirect entry to both `mkdocs.yml` and `mkdocs.deploy.yml` so legacy links stay valid.
 - Store images next to the Markdown that references them (for example, `docs/user-guide/organize/img/`). Optimize screenshots before committing and include descriptive alt text in Markdown.
 - Reuse canonical CLI flags, file paths, and configuration snippets from the main PhotoPrism repository. When documenting new application behavior, confirm the implementation in `photoprism/photoprism` before publishing.
 - Front matter: use MkDocs `meta` blocks (or the `page.meta` keys referenced in `overrides/main.html`) when you need a custom page title or social caption. Avoid adding bespoke metadata keys unless templates consume them.
 
-> **Title Case** rules (APA/AP implementation):
-> - Capitalize the first word of a title/heading and the first word of a subtitle.
-> - Capitalize the first word after a colon, an em dash, or end punctuation.
-> - Capitalize major words, including the second part of hyphenated major words.
-> - Capitalize all words of four letters or more.
-> - Lowercase only minor words of three letters or fewer (articles, short conjunctions, short prepositions), except when they are in one of the positions above.
-> - In headings, prefer `&` where needed; do not use `And` or `Or` in titles.
+> **Title Case** rules (Chicago-style, with code- and path-aware normalization):
+> - Capitalize the first word, the first word after a colon, dash, or end punctuation, and all major words, including the second part of a hyphenated major word.
+> - Lowercase only articles, short conjunctions, and short prepositions of three letters or fewer when they are not in one of those positions.
+> - Preserve known acronyms (for example, API, CLI, HTTP, JSON) and slash-separated acronym groups (for example, CSV/TSV) as uppercase.
+> - Preserve inline code spans (`` `foo` ``), file paths (e.g. `docs/foo-bar.md`), and slash commands (e.g. `/grill-me`) verbatim; do not recase their contents.
+> - Use `&` instead of `And`/`Or` in headings.
 
 ### Commit Messages
 

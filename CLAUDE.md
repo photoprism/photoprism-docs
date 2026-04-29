@@ -82,7 +82,7 @@ Verify with `git rev-parse develop deploy origin/develop origin/deploy` — all 
 
 ## Style Rules Specific to This Repo
 
-- **Title Case (APA/AP)** on every heading, nav label, and link title. Rules are spelled out in `AGENTS.md`. Always spell the product name `PhotoPrism` (proper noun, exception to generic rules).
+- **Chicago-style Title Case** on every heading, nav label, and link title. Rules are spelled out in `AGENTS.md`. Always spell the product name `PhotoPrism` (proper noun, exception to generic rules).
 - **Refresh `**Last Updated:**`** at the top of a doc whenever you change its contents (format: `January 20, 2026`, no time). Leave it alone for whitespace-only or pure-formatting edits.
 - **Prefer Markdown over raw HTML.** Use Material components (admonitions, tabs, tooltips, mermaid) already configured in `mkdocs.yml` rather than inventing shortcodes.
 - **Filenames** are lowercase-kebab (`snake-case.md`); directories mirror nav labels.

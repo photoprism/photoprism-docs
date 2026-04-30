@@ -102,7 +102,7 @@ Existing databases may still use a different character set or collation, especia
 
 ```bash
 echo "SHOW VARIABLES WHERE Variable_name LIKE 'character\_set\_%' OR Variable_name LIKE 'collation%';" | \
-docker compose exec -T mariadb mysql -uroot -pinsecure photoprism
+docker compose exec -T mariadb mariadb -uroot -pinsecure photoprism
 ```
 
 Before [submitting a support request](https://www.photoprism.app/kb/getting-support), confirm that the problem also occurs with a **newly created** database based on our [example configuration](https://dl.photoprism.app/docker/compose.yaml):
@@ -307,7 +307,7 @@ docker compose up -d mariadb
 Now open a database console:
 
 ```bash
-docker compose exec mariadb mysql -uroot
+docker compose exec mariadb mariadb -uroot
 ```
 
 Enter the following commands to change the password for "root":

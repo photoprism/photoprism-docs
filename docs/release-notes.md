@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 260429-660bec411</span>
+<span class="build">Build 260503-6ce060835</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
@@ -29,6 +29,8 @@ What's new?
 - Folders: [Fixed child paths overwriting parent folder albums](https://github.com/photoprism/photoprism/issues/5366)
 - AI: [Added support for the Model Context Protocol (MCP)](https://github.com/photoprism/photoprism/issues/5024)
 - CLI: [Fixed `vision run` not saving sidecar YAML files](https://github.com/photoprism/photoprism/issues/5493)
+- Server: [Added zstd response compression support](https://github.com/photoprism/photoprism/issues/5550)
+- Index: [Fixed nil-DB race in async count and cover update goroutines](https://github.com/photoprism/photoprism/issues/5551)
 - Security: [Upgraded Go to v1.26.2, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.26.2)
 
 ### March 5, 2026

@@ -4,36 +4,37 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 260504-6c5095f5d</span>
+<span class="build">Build 260504-d92d5c673</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
 What's new?
 
+- AI: [Added support for the Model Context Protocol (MCP)](https://github.com/photoprism/photoprism/issues/5024)
+- AI: [Upgraded ONNX Runtime from v1.25.0 to v1.25.1](https://github.com/photoprism/photoprism/issues/5555)
 - UX: [Added a drag-and-drop zone for selecting files in the upload dialog](https://github.com/photoprism/photoprism/issues/1216)
 - Viewer: [Added more information to the sidebar](https://github.com/photoprism/photoprism/issues/4965)
 - Viewer: [Made information on the sidebar editable](https://github.com/photoprism/photoprism/issues/4966)
-- People: [Added support for manually tagging faces in pictures](https://github.com/photoprism/photoprism/issues/1548)
 - Auth: [Added a "Stay signed in on this device" toggle to the login page](https://github.com/photoprism/photoprism/issues/5476)
 - OIDC: [Provider initialization is retried after transient discovery failure](https://github.com/photoprism/photoprism/issues/5478)
-- Index: [Added support for layered TIFF and Adobe Photoshop PSD images](https://github.com/photoprism/photoprism/issues/5383)
+- People: [Added support for manually tagging faces in pictures](https://github.com/photoprism/photoprism/issues/1548)
+- Faces: [Dropped legacy Pigo detector in favor of ONNX-based detection](https://github.com/photoprism/photoprism/issues/5508)
 - Labels: [Added support for homophones and homophone-aware lookups](https://github.com/photoprism/photoprism/issues/5227) by [@keif888](https://github.com/keif888)
 - Search: [Added NOT & AND operators to the label filter](https://github.com/photoprism/photoprism/issues/5535)
-- WebDAV: [Added fallback for servers that only allow PROPFIND with a Depth of 1](https://github.com/photoprism/photoprism/issues/3541)
-- WebDAV: [Hardened timeouts, cancellation, and Depth-1 fallback diagnostics](https://github.com/photoprism/photoprism/issues/5474)
-- Logs: [Information about long-running processes is logged every 15 minutes](https://github.com/photoprism/photoprism/pull/5481) by [@keif888](https://github.com/keif888)
+- Index: [Added support for layered TIFF and Adobe Photoshop PSD images](https://github.com/photoprism/photoprism/issues/5383)
+- Index: [Fixed nil-DB race in async count and cover update goroutines](https://github.com/photoprism/photoprism/issues/5551)
+- Folders: [Fixed child paths overwriting parent folder albums](https://github.com/photoprism/photoprism/issues/5366)
 - Images: [Added native HEIC/HEIF and AVIF support for thumbnails and rendering](https://github.com/photoprism/photoprism/issues/5509)
 - HEIC: [Upgraded libheif from v1.20.2 to v1.21.2](https://github.com/photoprism/photoprism/issues/5553)
 - Thumbs: [Replaced `disintegration/imaging` library with native format support](https://github.com/photoprism/photoprism/issues/5353)
-- Faces: [Dropped legacy Pigo detector in favor of ONNX-based detection](https://github.com/photoprism/photoprism/issues/5508)
-- Frontend: [Upgraded Vuetify to v3.12 with VList fixes](https://github.com/photoprism/photoprism/issues/5452)
-- Folders: [Fixed child paths overwriting parent folder albums](https://github.com/photoprism/photoprism/issues/5366)
-- AI: [Added support for the Model Context Protocol (MCP)](https://github.com/photoprism/photoprism/issues/5024)
+- WebDAV: [Added fallback for servers that only allow PROPFIND with a Depth of 1](https://github.com/photoprism/photoprism/issues/3541)
+- WebDAV: [Hardened timeouts, cancellation, and Depth-1 fallback diagnostics](https://github.com/photoprism/photoprism/issues/5474)
 - MCP: [Added `--disable-mcp` flag to optionally disable the MCP API endpoint](https://github.com/photoprism/photoprism/issues/5536)
 - CLI: [Fixed `vision run` not saving sidecar YAML files](https://github.com/photoprism/photoprism/issues/5493)
 - Server: [Added zstd response compression support](https://github.com/photoprism/photoprism/issues/5550)
 - Server: [Pre-compress static frontend assets at build time and serve sibling files](https://github.com/photoprism/photoprism/issues/5552)
-- Index: [Fixed nil-DB race in async count and cover update goroutines](https://github.com/photoprism/photoprism/issues/5551)
+- Frontend: [Upgraded Vuetify to v3.12 with VList fixes](https://github.com/photoprism/photoprism/issues/5452)
+- Logs: [Information about long-running processes is logged every 15 minutes](https://github.com/photoprism/photoprism/pull/5481) by [@keif888](https://github.com/keif888)
 - Security: [Upgraded Go to v1.26.2, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.26.2)
 
 ### March 5, 2026

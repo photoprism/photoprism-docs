@@ -36,7 +36,7 @@ What's new?
 - Server: [Pre-compress static frontend assets at build time and serve sibling files](https://github.com/photoprism/photoprism/issues/5552)
 - Frontend: [Upgraded Vuetify to v3.12 with VList fixes](https://github.com/photoprism/photoprism/issues/5452)
 - Logs: [Information about long-running processes is logged every 15 minutes](https://github.com/photoprism/photoprism/pull/5481) by [@keif888](https://github.com/keif888)
-- Security: [Upgraded Go to v1.26.2, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.26.2)
+- Security: [Upgraded Go to v1.26.3, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.26.3)
 
 ### March 5, 2026
 <span class="build">Build 260305-fad9d5395</span>

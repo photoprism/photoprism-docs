@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 260511-2655a5384</span>
+<span class="build">Build 260512-a5e9dfeb0</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
@@ -21,6 +21,8 @@ What's new?
 - People: [Added support for manually tagging faces in pictures](https://github.com/photoprism/photoprism/issues/1548)
 - Faces: [Dropped legacy Pigo detector in favor of ONNX-based detection](https://github.com/photoprism/photoprism/issues/5508)
 - Labels: [Added support for homophones and homophone-aware lookups](https://github.com/photoprism/photoprism/issues/5227) by [@keif888](https://github.com/keif888)
+- Labels: [Fixed renaming a label and re-adding it by its previous name creating a duplicate](https://github.com/photoprism/photoprism/issues/5531)
+- Labels: [Fixed case and punctuation variants creating duplicates on the edit dialog's Labels tab](https://github.com/photoprism/photoprism/issues/5532)
 - Search: [Added NOT & AND operators to the label filter](https://github.com/photoprism/photoprism/issues/5535)
 - Index: [Added support for layered TIFF and Adobe Photoshop PSD images](https://github.com/photoprism/photoprism/issues/5383)
 - Index: [Fixed nil-DB race in async count and cover update goroutines](https://github.com/photoprism/photoprism/issues/5551)

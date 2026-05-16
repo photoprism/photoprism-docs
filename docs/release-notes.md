@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 260516-b0e76449b</span>
+<span class="build">Build 260516-735fa5b3d</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
@@ -20,6 +20,7 @@ What's new?
 - Viewer: [Added a menu action with shortcut (Ctrl+H) to toggle captions](https://github.com/photoprism/photoprism/issues/5580)
 - Auth: [Added a "Stay signed in on this device" toggle to the login page](https://github.com/photoprism/photoprism/issues/5476)
 - OIDC: [Provider initialization is retried after transient discovery failure](https://github.com/photoprism/photoprism/issues/5478)
+- OIDC: [Fixed automatic redirect of unauthenticated users when opening direct links](https://github.com/photoprism/photoprism/issues/5506)
 - People: [Added support for manually tagging faces in pictures](https://github.com/photoprism/photoprism/issues/1548)
 - Faces: [Dropped legacy Pigo detector in favor of ONNX-based detection](https://github.com/photoprism/photoprism/issues/5508)
 - Labels: [Added support for homophones and homophone-aware lookups](https://github.com/photoprism/photoprism/issues/5227) by [@keif888](https://github.com/keif888)
@@ -34,6 +35,7 @@ What's new?
 - Thumbs: [Replaced `disintegration/imaging` library with native format support](https://github.com/photoprism/photoprism/issues/5353)
 - WebDAV: [Added fallback for servers that only allow PROPFIND with a Depth of 1](https://github.com/photoprism/photoprism/issues/3541)
 - WebDAV: [Hardened timeouts, cancellation, and Depth-1 fallback diagnostics](https://github.com/photoprism/photoprism/issues/5474)
+- Settings: [Fixed password and API key edits not being saved for existing WebDAV services](https://github.com/photoprism/photoprism/issues/5558)
 - MCP: [Added `--disable-mcp` flag to optionally disable the MCP API endpoint](https://github.com/photoprism/photoprism/issues/5536)
 - CLI: [Fixed `vision run` not saving sidecar YAML files](https://github.com/photoprism/photoprism/issues/5493)
 - Server: [Added zstd response compression support](https://github.com/photoprism/photoprism/issues/5550)

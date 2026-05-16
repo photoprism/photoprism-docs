@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 260515-7616a6cda</span>
+<span class="build">Build 260516-b0e76449b</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
@@ -14,6 +14,7 @@ What's new?
 - AI: [Upgraded ONNX Runtime from v1.25.0 to v1.25.1](https://github.com/photoprism/photoprism/issues/5555)
 - UX: [Added a drag-and-drop zone for selecting files in the upload dialog](https://github.com/photoprism/photoprism/issues/1216)
 - UX: [Fixed Country and Time Zone selects closing immediately after activation](https://github.com/photoprism/photoprism/issues/5538)
+- UX: [Enhanced frontend input validation to match backend caps and numeric ranges](https://github.com/photoprism/photoprism/issues/5584)
 - Viewer: [Added more information to the sidebar](https://github.com/photoprism/photoprism/issues/4965)
 - Viewer: [Made information on the sidebar editable](https://github.com/photoprism/photoprism/issues/4966)
 - Viewer: [Added a menu action with shortcut (Ctrl+H) to toggle captions](https://github.com/photoprism/photoprism/issues/5580)

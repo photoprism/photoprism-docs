@@ -25,7 +25,7 @@ What's new?
 - Faces: [Dropped legacy Pigo detector in favor of ONNX-based detection](https://github.com/photoprism/photoprism/issues/5508)
 - Labels: [Added support for homophones and homophone-aware lookups](https://github.com/photoprism/photoprism/issues/5227) by [@keif888](https://github.com/keif888)
 - Labels: [Fixed renaming a label and re-adding it by its previous name creating a duplicate](https://github.com/photoprism/photoprism/issues/5531)
-- Labels: [Fixed case and punctuation variants creating duplicates on the edit dialog's Labels tab](https://github.com/photoprism/photoprism/issues/5532)
+- Labels: [Fixed case and punctuation variants causing duplicates when editing labels](https://github.com/photoprism/photoprism/issues/5532)
 - Search: [Added NOT & AND operators to the label filter](https://github.com/photoprism/photoprism/issues/5535)
 - Search: [Switched all user-supplied search input to parameterized SQL queries](https://github.com/photoprism/photoprism/issues/5587)
 - Index: [Added support for layered TIFF and Adobe Photoshop PSD images](https://github.com/photoprism/photoprism/issues/5383)

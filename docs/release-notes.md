@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 260518-b92897949</span>
+<span class="build">Build 260519-1647cbfe8</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
@@ -45,6 +45,7 @@ What's new?
 - Logs: [Information about long-running processes is logged every 15 minutes](https://github.com/photoprism/photoprism/pull/5481) by [@keif888](https://github.com/keif888)
 - Config: [Improved auto-detection of the indexing worker count](https://github.com/photoprism/photoprism/issues/5567)
 - Config: [Consolidated SQL driver names and parsing in `pkg/dsn`](https://github.com/photoprism/photoprism/issues/5588)
+- Config: [Stripped default HTTP and HTTPS ports from the site URL](https://github.com/photoprism/photoprism/issues/5590)
 - Docker: [Upgraded base images to Ubuntu 26.04 LTS (Resolute Raccoon)](https://github.com/photoprism/photoprism/issues/5543)
 - Security: [Upgraded Go to v1.26.3, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.26.3)
 

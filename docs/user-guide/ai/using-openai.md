@@ -41,7 +41,7 @@ Recommendations:
 - PhotoPrism evaluates models from the bottom of the list up, so putting the OpenAI entries after the others ensures OpenAI is chosen first, leaving other models as backups.
 
 !!! tldr ""
-    By default, PhotoPrism uses the OpenAI Responses API endpoint at `https://api.openai.com/v1/responses` with a single 720 px thumbnail (`detail: low`). It can be changed by setting a custom `Service.Url`.
+    By default, PhotoPrism uses the OpenAI Responses API endpoint at `https://api.openai.com/v1/responses` with a single 720 px thumbnail (`detail: low`). It can be changed by setting a custom `Service.Uri`.
 
 ## Usage Tips
 

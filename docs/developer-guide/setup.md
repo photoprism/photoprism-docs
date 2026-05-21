@@ -40,7 +40,9 @@ make docker-build
 docker compose up
 ```
 
-*This environment is for testing and development purposes only. Do not use it in production. Also note that our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible distributions.*
+*This environment is for testing and development purposes only — do not use it in production. The examples below assume [Docker Compose v2](../getting-started/troubleshooting/docker.md#docker-compose) (the `docker compose` plugin); on Red Hat-compatible distributions you can also use [`podman-compose`](../getting-started/troubleshooting/docker.md#podman-compose) as a drop-in replacement.*
+
+If you want to change the default ports, bind services to a specific host interface, run multiple checkouts side-by-side, or enable optional services such as PostgreSQL, Qdrant, Ollama, or Keycloak, copy [`.env.example`](https://github.com/photoprism/photoprism/blob/develop/.env.example) to `.env` in the project root and uncomment the variables you want to override. See [Optional: Customize the Build Environment](#optional-customize-the-build-environment) below for an overview of the supported variables, optional services, and default ports.
 
 ### Step 3: Install the Dependencies and Start Developing
 
@@ -65,7 +67,7 @@ make build-go
 ```
 After PhotoPrism has been started as shown above, the user interface can be opened in a web browser by navigating to one of these URLs:
 
-- [http://localhost:2342/](http://photoprism.me:2342/) (HTTP)
+- [http://localhost:2342/](http://localhost:2342/) (HTTP)
 - [https://app.localssl.dev/](https://app.localssl.dev/) (HTTPS)
 
 In the build environment, the default login is `admin` with the password `photoprism`. You can disable it with the `--public` command flag:
@@ -87,6 +89,90 @@ The integrated web server provides the backend API and serves static assets. The
 
 ```bash
 make watch-js
+```
+
+### Optional: Customize the Build Environment
+
+The development environment reads optional overrides from a `.env` file in the project root, next to `compose.yaml`. To enable, copy [`.env.example`](https://github.com/photoprism/photoprism/blob/develop/.env.example) to `.env` and uncomment the variables you want to change. This is useful when you need to free up port 80/443 on the host, restrict service ports to a specific interface, run several checkouts of the repository in parallel, or start optional services like PostgreSQL, Qdrant, Ollama, or Keycloak by default.
+
+#### Supported Variables
+
+| Variable               | Default                     | Purpose                                                                                                                                            |
+|------------------------|-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| `COMPOSE_PROJECT_NAME` | `photoprism`                | Container, volume, and default network prefix. Set together with `COMPOSE_NETWORK_NAME` to run multiple checkouts side-by-side without collisions. |
+| `COMPOSE_NETWORK_NAME` | `photoprism`                | Bridge-network name. Set together with `COMPOSE_PROJECT_NAME` to run multiple parallel environments.                                               |
+| `COMPOSE_PROFILES`     | _(none)_                    | Comma-separated list of Compose profile names to start by default, e.g. `postgres,ollama` (no `--profile` flag required).                          |
+| `TRAEFIK_BIND_HOST`    | `0.0.0.0`                   | Host interface Traefik binds to. Default exposes Traefik on every interface so `*.localssl.dev` is reachable from the LAN.                         |
+| `SERVICES_BIND_HOST`   | `127.0.0.1`                 | Host interface direct service ports bind to. Default keeps them on loopback only.                                                                  |
+| `TRAEFIK_HTTP_PORT`    | `80`                        | Traefik HTTP entrypoint port on the host.                                                                                                          |
+| `TRAEFIK_HTTPS_PORT`   | `443`                       | Traefik HTTPS entrypoint port on the host.                                                                                                         |
+| `PHOTOPRISM_SITE_URL`  | `https://app.localssl.dev/` | Public base URL used in share links, OIDC, and PWA URIs.                                                                                           |
+| `MARIADB_PORT`         | `4001`                      | MariaDB port (exposed on the host and inside the Compose network).                                                                                 |
+| `POSTGRES_PORT`        | `4002`                      | PostgreSQL port (only active with the `postgres` or `all` profile).                                                                                |
+
+#### Services & Profiles
+
+Some services are gated behind Compose profiles and stay stopped unless enabled. Activate them by listing one of their profile names in `COMPOSE_PROFILES` (e.g. `COMPOSE_PROFILES=postgres,vision`) or by passing `--profile <name>` to `docker compose`:
+
+| Service             | Profiles                                | Purpose                                                 |
+|---------------------|-----------------------------------------|---------------------------------------------------------|
+| `postgres`          | `postgres`, `all`                       | PostgreSQL 18 database server (alternative to MariaDB). |
+| `qdrant`            | `qdrant`, `all`                         | Qdrant vector database used by the Computer Vision API. |
+| `ollama`            | `ollama`, `vision`, `all`               | Local large-language model runner.                      |
+| `open-webui`        | `open-webui`, `ollama`, `vision`, `all` | Web interface for Ollama.                               |
+| `photoprism-vision` | `vision`, `all`                         | PhotoPrism® Computer Vision API.                        |
+| `keycloak`          | `keycloak`, `auth`, `all`               | Keycloak OIDC identity provider.                        |
+| `prometheus`        | `prometheus`, `auth`, `all`             | Prometheus metrics server.                              |
+
+The `photoprism`, `mariadb`, `traefik`, `dummy-webdav`, `dummy-oidc`, and `dummy-ldap` services have no profile and always start with `docker compose up`.
+
+#### Default Host Ports
+
+The following host ports are published by default. Traefik binds to every interface; all other ports bind to loopback only unless you override `SERVICES_BIND_HOST`:
+
+| Port    | Service / Purpose                              | Bind                 |
+|---------|------------------------------------------------|----------------------|
+| `80`    | Traefik HTTP (redirects to HTTPS)              | `TRAEFIK_BIND_HOST`  |
+| `443`   | Traefik HTTPS (`*.localssl.dev`)               | `TRAEFIK_BIND_HOST`  |
+| `2342`  | PhotoPrism HTTP                                | `SERVICES_BIND_HOST` |
+| `2443`  | PhotoPrism TLS                                 | `SERVICES_BIND_HOST` |
+| `2343`  | PhotoPrism HTTP (acceptance tests)             | `SERVICES_BIND_HOST` |
+| `40000` | Go debugger (Delve)                            | `SERVICES_BIND_HOST` |
+| `4001`  | MariaDB (`MARIADB_PORT`)                       | `SERVICES_BIND_HOST` |
+| `4002`  | PostgreSQL (`POSTGRES_PORT`, requires profile) | `SERVICES_BIND_HOST` |
+| `8080`  | Open WebUI (requires profile)                  | `SERVICES_BIND_HOST` |
+| `389`   | Dummy LDAP                                     | `SERVICES_BIND_HOST` |
+
+#### Usage Examples
+
+Bind Traefik to loopback only and move HTTP/HTTPS to non-privileged ports so the dev environment does not conflict with another web server on the host:
+
+```dotenv
+TRAEFIK_BIND_HOST=127.0.0.1
+TRAEFIK_HTTP_PORT=8080
+TRAEFIK_HTTPS_PORT=8443
+```
+
+Run a second checkout side-by-side without colliding on container names, volumes, the shared bridge network, or database ports:
+
+```dotenv
+COMPOSE_PROJECT_NAME=photoprism-feature
+COMPOSE_NETWORK_NAME=photoprism-feature
+MARIADB_PORT=4011
+POSTGRES_PORT=4012
+```
+
+Always start with PostgreSQL and the Computer Vision API stack (Qdrant, Ollama, Open WebUI, and `photoprism-vision`) enabled:
+
+```dotenv
+COMPOSE_PROFILES=postgres,vision
+```
+
+After editing `.env`, recreate the affected containers so the new values take effect:
+
+```bash
+docker compose down
+docker compose up
 ```
 
 ### Optional: Use a Go Debugger
@@ -137,7 +223,7 @@ Once the debugger is running, you can view the app at `http://localhost:2342/` a
 
 Our development environment has been built into a single [multi-arch image](https://hub.docker.com/r/photoprism/development)
 for 64-bit AMD, Intel, and ARM processors. That means, Apple Silicon, [Raspberry Pi](../getting-started/raspberry-pi.md)
-3 / 4, and other ARM64-based devices can pull from the same repository.
+4 / 5, and other ARM64-based devices can pull from the same repository.
 
 ### Multi-Arch Docker Builds
 
@@ -151,7 +237,7 @@ For information about multi-architecture Docker builds, see the following docume
 1. install qemu-user-static from docker hub: `docker run --rm --privileged multiarch/qemu-user-static --reset -p yes` [https://github.com/multiarch/qemu-user-static](https://github.com/multiarch/qemu-user-static)
 2. verify that dockers buildx command is installed `docker buildx version`. if missing, follow install instructions [here](https://github.com/docker/buildx)
 3. create buildx builder: `docker buildx create --name multiarch-builder && docker buildx inspect --builder multiarch-builder --bootstrap`
-4. start building: `make docker-development-multiarch` or `make docker-photoprism-multiarch`
+4. start building: run `make docker-develop-<codename>` to build and push a multi-arch development image (e.g. `make docker-develop-resolute` for the current Ubuntu base); the underlying build script is [`scripts/docker/buildx-multi.sh`](https://github.com/photoprism/photoprism/blob/develop/scripts/docker/buildx-multi.sh)
 
 <!--
 ### Alternate Development Environments ###
@@ -162,6 +248,6 @@ not supported or not allowed in your environment:
 * [Fedora 32](setup-fedora.md)
 -->
 
-[^1]: Instead of using Docker, you can also set up your own build environment based on the steps documented in the [Dockerfiles](https://github.com/photoprism/photoprism/tree/develop/docker/develop) we provide. For this, you should have at least Go 1.24, TensorFlow for C, Make, NPM 11 and MariaDB 11 installed. Note that the test results will be unreliable without Docker. This method is therefore not well suited for contributors and we cannot provide support if something does not work as expected.
+[^1]: Instead of using Docker, you can also set up your own build environment based on the steps documented in the [Dockerfiles](https://github.com/photoprism/photoprism/tree/develop/docker/develop) we provide. For this, you should have at least Go 1.25, TensorFlow for C, Make, NPM 11 and MariaDB 11 installed. Note that the test results will be unreliable without Docker. This method is therefore not well suited for contributors and we cannot provide support if something does not work as expected.
 [^2]: If the Git config value "core.autocrlf" is set to "true", the following error may occur when trying to run shell scripts or Make targets: `env: bash\r: No such file or directory`
 [^3]: Docker uses human-readable [Dockerfiles](https://github.com/photoprism/photoprism/tree/develop/docker) that contain all the commands a user would invoke in a terminal to assemble a complete application image.  

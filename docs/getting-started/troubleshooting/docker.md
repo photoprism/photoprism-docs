@@ -7,7 +7,7 @@
 
 ## Installation
 
-If you cannot use the `docker` and `docker compose` (or `docker-compose`) commands, make sure [Docker](https://docs.docker.com/config/daemon/#start-the-daemon-manually) is running on the host you are connected to and your current user has permission to use it.
+If you cannot use the `docker` and `docker compose` commands, make sure [Docker](https://docs.docker.com/config/daemon/#start-the-daemon-manually) is running on the host you are connected to and your current user has permission to use it.
 The following instructions explain how to install Docker:
 
 - [Ubuntu](https://docs.docker.com/engine/install/ubuntu/), [Mint](https://techviewleo.com/how-to-install-and-use-docker-in-linux-mint/), [Debian](https://www.linode.com/docs/guides/installing-and-using-docker-on-ubuntu-and-debian/), and [Arch Linux](https://wiki.archlinux.org/title/docker#Installation)
@@ -26,23 +26,16 @@ bash <(curl -s https://setup.photoprism.app/ubuntu/install-docker.sh)
 
 ### Docker Compose
 
-The examples in our guides now use the new `docker compose` command by default. However, if your *Docker* version does not yet support the *Compose Plugin*, you can still use the standalone `docker-compose` command.
+Our examples require [Docker Compose v2](https://docs.docker.com/compose/) (the `docker compose` plugin). The standalone `docker-compose` v1 command was [retired by Docker in mid-2023](https://docs.docker.com/compose/migrate/) and is no longer supported.
 
-On some Linux distributions, you may need to install an additional package. To do so, you can use a graphical software package manager or run the following command in a terminal to install the *Compose Plugin* for *Docker* on Ubuntu and Debian:
+On some Linux distributions, you may need to install the plugin separately. Use a graphical software package manager or run the following command in a terminal to install the *Compose Plugin* for *Docker* on Ubuntu and Debian:
 
 ```bash
 sudo apt update
 sudo apt install docker-compose-plugin
 ```
 
-If that does not work, this will install the legacy `docker-compose` command:
-
-```bash
-sudo apt update
-sudo apt install docker-compose
-```
-
-Running the following commands will add a `docker-compose` alias for the new Compose plugin so that older scripts don't break:
+If you have older scripts that still call `docker-compose`, you can add a shell alias for the Compose Plugin so they keep working:
 
 ```bash
 echo 'docker compose "$@"' | sudo tee /bin/docker-compose
@@ -102,7 +95,7 @@ On Linux, this command grants permission by adding a user to the `docker` group 
 sudo usermod -aG docker [username]
 ```
 
-Alternatively, you can prefix the `docker` and `docker-compose` commands with `sudo` when not running as root,
+Alternatively, you can prefix the `docker` and `docker compose` commands with `sudo` when not running as root,
 for example:
 
 ```bash
@@ -222,7 +215,7 @@ docker compose up
     or other tools you may have installed.
 
 !!! tldr ""
-    The default [Docker Compose](https://docs.docker.com/compose/) config filename is `compose.yaml`. For simplicity, it doesn't need to be specified when running `docker compose` or `docker-compose` in the same directory. Config files for other apps or instances should be placed in separate folders.
+    The default [Docker Compose](https://docs.docker.com/compose/) config filename is `compose.yaml`. For simplicity, it doesn't need to be specified when running `docker compose` in the same directory. Config files for other apps or instances should be placed in separate folders.
 
 ### Log Rotation
 
@@ -347,7 +340,7 @@ Errors such as "read-only file system", "error creating path", "failed to create
 - [ ] If you have configured specific user and group IDs for a service, make sure they match
 - [ ] If [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) are mounted or used within *storage* folders, replace them with actual paths
 - [ ] It may help to [add the `:z` mount flag to volumes](https://docs.docker.com/storage/bind-mounts/#configure-the-selinux-label) when using *SELinux* (Red Hat/Fedora)
-- [ ] When mounting folders that only root has access to, you may have to prefix the `docker` and `docker-compose` commands with `sudo` on Linux if you are not already logged in as root
+- [ ] When mounting folders that only root has access to, you may have to prefix the `docker` and `docker compose` commands with `sudo` on Linux if you are not already logged in as root
 
 An easy way to test for missing permissions is to (temporarily) remove restrictions and make the entire folder accessible to everyone:
 

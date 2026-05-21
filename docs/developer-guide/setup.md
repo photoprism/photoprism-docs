@@ -219,9 +219,9 @@ Once the debugger is running, you can view the app at `http://localhost:2342/` a
 * we are using [Go Modules](https://github.com/golang/go/wiki/Modules) for managing our dependencies (new in 1.11)
 * this guide was not tested on Windows, you might need to edit your `compose.yaml` or `docker-compose.yml` to make it work with Windows specific paths
 
-### Apple Silicon, Raspberry Pi, and ARM64
+### Building on ARM64-based Devices
 
-Our development environment has been built into a single [multi-arch image](https://hub.docker.com/r/photoprism/development)
+Our development environment is available as a single [multi-arch image](https://hub.docker.com/r/photoprism/development)
 for 64-bit AMD, Intel, and ARM processors. That means, Apple Silicon, [Raspberry Pi](../getting-started/raspberry-pi.md)
 4 / 5, and other ARM64-based devices can pull from the same repository.
 

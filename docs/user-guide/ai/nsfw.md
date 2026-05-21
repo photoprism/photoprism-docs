@@ -1,6 +1,6 @@
 # NSFW Detection
 
-PhotoPrism can automatically flag pictures as **private** when an image-classification model considers them unsafe for work, and can also reject such files at the **web upload** stage so they never enter the index. NSFW detection is opt-in and disabled by default; it is mainly intended to help operators of public or shared instances keep adult content out of their library without having to review every upload by hand.
+PhotoPrism can automatically flag pictures as **private** when an image-classification model considers them unsafe for work. It can also reject such files during **web upload** so they never enter the library. NSFW detection is opt-in and is disabled by default. It is intended mainly to help administrators of shared instances keep adult content out of their libraries without having to review every upload manually.
 
 ## Configuration Options
 

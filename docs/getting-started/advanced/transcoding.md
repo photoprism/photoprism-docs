@@ -55,7 +55,7 @@ Note that MPEG-4 AVC videos are not re-encoded if they exceed the [configured bi
 
 Unless you have a lot of high-resolution videos in your library, we recommend keeping the default settings to use the standard software codec for video transcoding. It has a high quality and does not require any special permissions or additional drivers.
 
-Our current [Docker image](https://docs.photoprism.app/release-notes/#march-5-2026) is based on [Ubuntu 25.10](https://packages.ubuntu.com/questing/ffmpeg), which already includes FFmpeg 7.x from the distribution packages. If you want to try a newer upstream static build, you can add `PHOTOPRISM_INIT: "ffmpeg"` to the environment section of your `compose.yaml` or `docker-compose.yml` file:
+Our current [Docker image](https://docs.photoprism.app/release-notes/) is based on [Ubuntu 26.04 LTS (Resolute Raccoon)](https://packages.ubuntu.com/resolute/ffmpeg), which already includes FFmpeg 8.x from the distribution packages. If you want to try an even newer upstream static build, you can add `PHOTOPRISM_INIT: "ffmpeg"` to the environment section of your `compose.yaml` or `docker-compose.yml` file:
 
 ```yaml
 services:
@@ -64,7 +64,7 @@ services:
       PHOTOPRISM_INIT: "ffmpeg"
 ```
 
-Internally, the `ffmpeg` init target installs the current BtbN stable build, equivalent to the `latest` channel in our [`install-ffmpeg.sh`](https://github.com/photoprism/photoprism/blob/develop/scripts/dist/install-ffmpeg.sh) script. At the moment, this updates the preinstalled distro version to FFmpeg 8.0.
+Internally, the `ffmpeg` init target installs the current BtbN stable build, equivalent to the `latest` channel in our [`install-ffmpeg.sh`](https://github.com/photoprism/photoprism/blob/develop/scripts/dist/install-ffmpeg.sh) script. This replaces the preinstalled distro version with the most recent FFmpeg 8 point release.
 
 You can also install the nightly (master) build instead, which may include newer features and bug fixes that have not yet been included in a stable release:
 
@@ -206,7 +206,7 @@ docker compose up -d
 
 ### Vulkan
 
-Vulkan-based hardware transcoding works on any GPU that implements the Vulkan video encode extensions. This currently covers recent AMD GPUs (RDNA 2 and later) and Intel GPUs (11th-generation and later) via the open Mesa drivers, as well as NVIDIA Turing-and-later cards through the proprietary driver. The encoder requires FFmpeg 8 or later; this is included in the `:preview` Docker image and will be part of the next stable release. If you are on a stable image with FFmpeg 7, add `PHOTOPRISM_INIT: "ffmpeg"` to install a newer upstream build first.
+Vulkan-based hardware transcoding works on any GPU that implements the Vulkan video encode extensions. This currently covers recent AMD GPUs (RDNA 2 and later) and Intel GPUs (11th-generation and later) via the open Mesa drivers, as well as NVIDIA Turing-and-later cards through the proprietary driver. The encoder requires FFmpeg 8 or later, which is already included in our current Docker image.
 
 To enable Vulkan transcoding, choose the `vulkan` encoder and share `/dev/dri` with the `photoprism` service. NVIDIA users should instead follow the [NVIDIA Container Toolkit](#nvidia-container-toolkit) setup and make sure `NVIDIA_DRIVER_CAPABILITIES` includes the `video` capability (the `"all"` value used in our example already does):
 
@@ -234,7 +234,7 @@ docker compose up -d
 If a Vulkan device cannot be opened at runtime — for example on a GPU without the required video extensions — PhotoPrism logs a warning and automatically falls back to the software encoder, so no manual recovery is required.
 
 !!! info ""
-    The Vulkan encoder is a preview feature available in the [`:preview`](../updates.md#development-preview) Docker image and will be part of the next stable release. The image already includes the Vulkan loader (`libvulkan1`); vendor-specific Vulkan instance class drivers — [`mesa-vulkan-drivers`](https://packages.ubuntu.com/questing/mesa-vulkan-drivers) for AMD and Intel, or the proprietary NVIDIA Vulkan driver — may need to be added to the container until `PHOTOPRISM_INIT: "gpu"` is updated to provision them automatically.
+    Our image already includes the Vulkan loader (`libvulkan1`); vendor-specific Vulkan instance class drivers — [`mesa-vulkan-drivers`](https://packages.ubuntu.com/resolute/mesa-vulkan-drivers) for AMD and Intel, or the proprietary NVIDIA Vulkan driver — may need to be added to the container until `PHOTOPRISM_INIT: "gpu"` is updated to provision them automatically.
 
 ## Other Hardware
 

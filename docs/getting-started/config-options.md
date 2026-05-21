@@ -40,26 +40,26 @@
 
 ### Storage
 
-| Environment                 | CLI Flag           | Default                      | Description                                                                                                                                     |
-|:----------------------------|:-------------------|:-----------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------|
-| PHOTOPRISM_CONFIG_PATH      | --config-path      |                              | config storage `PATH` or options.yml filename, values in this file override CLI flags and environment variables if present                      |
-| PHOTOPRISM_DEFAULTS_YAML    | --defaults-yaml    | /etc/photoprism/defaults.yml | loads default config values from `FILENAME` if it exists, does not override CLI flags or environment variables                                  |
-| PHOTOPRISM_ORIGINALS_PATH   | --originals-path   |                              | storage `PATH` of your original media files (photos and videos)                                                                                 |
-| PHOTOPRISM_ORIGINALS_LIMIT  | --originals-limit  | 1000                         | maximum size of media files in `MB` (1-100000; -1 to disable)                                                                                   |
-| PHOTOPRISM_RESOLUTION_LIMIT | --resolution-limit | 150                          | maximum resolution of media files in `MEGAPIXELS` (1-900; -1 to disable)                                                                        |
-| PHOTOPRISM_USERS_PATH       | --users-path       | users                        | relative `PATH` to create base and upload subdirectories for users                                                                              |
-| PHOTOPRISM_STORAGE_PATH     | --storage-path     |                              | writable storage `PATH` for sidecar, cache, and database files                                                                                  |
-| PHOTOPRISM_IMPORT_PATH      | --import-path      |                              | base `PATH` from which files can be imported to originals *optional*                                                                            |
-| PHOTOPRISM_IMPORT_DEST      | --import-dest      |                              | relative originals `PATH` in which files should be imported by default *optional*                                                               |
-| PHOTOPRISM_IMPORT_ALLOW     | --import-allow     |                              | restricts imports to these file types (comma-separated list of `EXTENSIONS`; leave blank to allow all)                                          |
-| PHOTOPRISM_UPLOAD_NSFW      | --upload-nsfw      |                              | allows uploads that might be offensive (web upload rejects detected files when this is `false`; see [NSFW Detection](../user-guide/ai/nsfw.md)) |
-| PHOTOPRISM_UPLOAD_ALLOW     | --upload-allow     |                              | restricts uploads to these file types (comma-separated list of `EXTENSIONS`; leave blank to allow all)                                          |
-| PHOTOPRISM_UPLOAD_ARCHIVES  | --upload-archives  |                              | allows upload of zip archives (will be extracted before import)                                                                                 |
-| PHOTOPRISM_UPLOAD_LIMIT     | --upload-limit     | 1000                         | maximum total size of uploaded files in `MB` (1-100000; -1 to disable)                                                                          |
-| PHOTOPRISM_CACHE_PATH       | --cache-path       |                              | custom cache `PATH` for sessions and thumbnail files *optional*                                                                                 |
-| PHOTOPRISM_TEMP_PATH        | --temp-path        |                              | temporary file `PATH` *optional*                                                                                                                |
-| PHOTOPRISM_ASSETS_PATH      | --assets-path      |                              | assets `PATH` containing static resources like icons, models, and translations                                                                  |
-| PHOTOPRISM_MODELS_PATH      | --models-path      |                              | custom model assets `PATH` where computer vision models are located                                                                             |
+| Environment                 | CLI Flag           | Default                      | Description                                                                                                                |
+|:----------------------------|:-------------------|:-----------------------------|:---------------------------------------------------------------------------------------------------------------------------|
+| PHOTOPRISM_CONFIG_PATH      | --config-path      |                              | config storage `PATH` or options.yml filename, values in this file override CLI flags and environment variables if present |
+| PHOTOPRISM_DEFAULTS_YAML    | --defaults-yaml    | /etc/photoprism/defaults.yml | loads default config values from `FILENAME` if it exists, does not override CLI flags or environment variables             |
+| PHOTOPRISM_ORIGINALS_PATH   | --originals-path   |                              | storage `PATH` of your original media files (photos and videos)                                                            |
+| PHOTOPRISM_ORIGINALS_LIMIT  | --originals-limit  | 1000                         | maximum size of media files in `MB` (1-100000; -1 to disable)                                                              |
+| PHOTOPRISM_RESOLUTION_LIMIT | --resolution-limit | 150                          | maximum resolution of media files in `MEGAPIXELS` (1-900; -1 to disable)                                                   |
+| PHOTOPRISM_USERS_PATH       | --users-path       | users                        | relative `PATH` to create base and upload subdirectories for users                                                         |
+| PHOTOPRISM_STORAGE_PATH     | --storage-path     |                              | writable storage `PATH` for sidecar, cache, and database files                                                             |
+| PHOTOPRISM_IMPORT_PATH      | --import-path      |                              | base `PATH` from which files can be imported to originals *optional*                                                       |
+| PHOTOPRISM_IMPORT_DEST      | --import-dest      |                              | relative originals `PATH` in which files should be imported by default *optional*                                          |
+| PHOTOPRISM_IMPORT_ALLOW     | --import-allow     |                              | restricts imports to these file types (comma-separated list of `EXTENSIONS`; leave blank to allow all)                     |
+| PHOTOPRISM_UPLOAD_NSFW      | --upload-nsfw      |                              | allows uploads that might be offensive (detecting unsafe content requires TensorFlow)                                      |
+| PHOTOPRISM_UPLOAD_ALLOW     | --upload-allow     |                              | restricts uploads to these file types (comma-separated list of `EXTENSIONS`; leave blank to allow all)                     |
+| PHOTOPRISM_UPLOAD_ARCHIVES  | --upload-archives  |                              | allows upload of zip archives (will be extracted before import)                                                            |
+| PHOTOPRISM_UPLOAD_LIMIT     | --upload-limit     | 1000                         | maximum total size of uploaded files in `MB` (1-100000; -1 to disable)                                                     |
+| PHOTOPRISM_CACHE_PATH       | --cache-path       |                              | custom cache `PATH` for sessions and thumbnail files *optional*                                                            |
+| PHOTOPRISM_TEMP_PATH        | --temp-path        |                              | temporary file `PATH` *optional*                                                                                           |
+| PHOTOPRISM_ASSETS_PATH      | --assets-path      |                              | assets `PATH` containing static resources like icons, models, and translations                                             |
+| PHOTOPRISM_MODELS_PATH      | --models-path      |                              | custom model assets `PATH` where computer vision models are located                                                        |
 
 ### Sidecar Files
 
@@ -276,15 +276,15 @@
 
 ### Computer Vision
 
-| Environment                | CLI Flag          | Default     | Description                                                                                                                                       |
-|:---------------------------|:------------------|:------------|:--------------------------------------------------------------------------------------------------------------------------------------------------|
-| PHOTOPRISM_VISION_YAML     | --vision-yaml     |             | computer vision model configuration `FILENAME` *optional*                                                                                         |
-| PHOTOPRISM_VISION_API      | --vision-api      |             | enables the computer vision API endpoints under /api/v1/vision (requires authorization)                                                           |
-| PHOTOPRISM_VISION_URI      | --vision-uri      |             | vision service base `URI`, e.g. https://example.com/api/v1/vision (leave blank to disable)                                                        |
-| PHOTOPRISM_VISION_KEY      | --vision-key      |             | vision service access `TOKEN` *optional*                                                                                                          |
-| PHOTOPRISM_VISION_SCHEDULE | --vision-schedule |             | vision worker `SCHEDULE` for background processing (e.g. "0 12 \* \* \*" for daily at noon) or at a random time (daily, weekly)                   |
-| PHOTOPRISM_VISION_FILTER   | --vision-filter   | public:true | vision worker search `FILTER` applied to scheduled runs (same syntax as photoprism vision run)                                                    |
-| PHOTOPRISM_DETECT_NSFW     | --detect-nsfw     |             | flags newly added pictures as private if they might be offensive (see [NSFW Detection](../user-guide/ai/nsfw.md) for the model/flag interactions) |
+| Environment                | CLI Flag          | Default     | Description                                                                                                                     |
+|:---------------------------|:------------------|:------------|:--------------------------------------------------------------------------------------------------------------------------------|
+| PHOTOPRISM_VISION_YAML     | --vision-yaml     |             | computer vision model configuration `FILENAME` *optional*                                                                       |
+| PHOTOPRISM_VISION_API      | --vision-api      |             | enables the computer vision API endpoints under /api/v1/vision (requires authorization)                                         |
+| PHOTOPRISM_VISION_URI      | --vision-uri      |             | vision service base `URI`, e.g. https://example.com/api/v1/vision (leave blank to disable)                                      |
+| PHOTOPRISM_VISION_KEY      | --vision-key      |             | vision service access `TOKEN` *optional*                                                                                        |
+| PHOTOPRISM_VISION_SCHEDULE | --vision-schedule |             | vision worker `SCHEDULE` for background processing (e.g. "0 12 \* \* \*" for daily at noon) or at a random time (daily, weekly) |
+| PHOTOPRISM_VISION_FILTER   | --vision-filter   | public:true | vision worker search `FILTER` applied to scheduled runs (same syntax as photoprism vision run)                                  |
+| PHOTOPRISM_DETECT_NSFW     | --detect-nsfw     |             | flags newly added pictures as private if they might be offensive (requires TensorFlow)                                          |
 
 ### Face Recognition
 

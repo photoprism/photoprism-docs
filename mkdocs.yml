@@ -136,6 +136,7 @@ nav:
       - Ollama Models: user-guide/ai/ollama-models.md
       - OpenAI API: user-guide/ai/using-openai.md
       - Face Recognition: user-guide/ai/face-recognition.md
+      - NSFW Detection: user-guide/ai/nsfw.md
       - CLI Commands: user-guide/ai/cli.md
     - Backup Guide:
       - Creating Backups: user-guide/backups/index.md

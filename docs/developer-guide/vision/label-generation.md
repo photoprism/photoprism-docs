@@ -39,7 +39,7 @@ if w.conf.DetectNSFW() && !m.PhotoPrivate {
 
 The dedicated `ModelTypeNsfw` entry (TensorFlow by default, overridable in `vision.yml`) is a separate inference pass that only runs when `DetectNSFW` is true **and** the caller includes `nsfw` in the active model list (`--models labels,nsfw` for the CLI; the scheduler picks it up from `VisionModelShouldRun` automatically).
 
-The user-facing matrix and threshold details are in [Using AI Models › NSFW Detection](../../user-guide/ai/index.md#nsfw-detection).
+The user-facing matrix and threshold details are in [NSFW Detection](../../user-guide/ai/nsfw.md).
 
 ## Troubleshooting
 

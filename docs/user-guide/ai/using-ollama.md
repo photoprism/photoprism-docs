@@ -126,7 +126,7 @@ Ollama-generated captions and labels are stored with the `ollama` metadata sourc
     To generate output in other languages, keep the base instructions in English and add the desired language (e.g., "Respond in German"). This method works for both [caption](ollama-models.md#qwen3-vl-caption) and [label prompts](ollama-models.md#qwen3-vl-labels).
 
 !!! info "NSFW Detection"
-    When you serve the `labels` model through Ollama, NSFW detection is **not** automatic. PhotoPrism asks the model to include NSFW classification in the same response only when **both** `PHOTOPRISM_DETECT_NSFW=true` and `PHOTOPRISM_EXPERIMENTAL=true` are set. Without that combination, running `photoprism vision run -m labels` skips NSFW flagging even if the LLM "knows" the content is unsafe. See [NSFW Detection](index.md#nsfw-detection) for the full matrix.
+    When you serve the `labels` model through Ollama, NSFW detection is **not** automatic. PhotoPrism asks the model to include NSFW classification in the same response only when **both** `PHOTOPRISM_DETECT_NSFW=true` and `PHOTOPRISM_EXPERIMENTAL=true` are set. Without that combination, running `photoprism vision run -m labels` skips NSFW flagging even if the LLM "knows" the content is unsafe. See [NSFW Detection](nsfw.md) for the full matrix.
 
 ## Step 4: Restart PhotoPrism
 

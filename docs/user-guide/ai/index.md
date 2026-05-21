@@ -23,6 +23,53 @@ PhotoPrism currently supports the following runtimes and services:
 !!! tldr ""
     Without GPU acceleration, Ollama models will be significantly slower, taking anywhere from 10 seconds to over a minute to complete. This may be acceptable if you only want to process a few pictures or are willing to wait.
 
+## NSFW Detection
+
+PhotoPrism can flag newly added pictures as private and reject web uploads when they contain unsafe content. Two independent config options control this:
+
+| Config Option                                                                       | Effect                                                                                                                                                                                                                                                                  |
+|-------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [`PHOTOPRISM_DETECT_NSFW`](../../getting-started/config-options.md#computer-vision) | When `true`, photos detected as NSFW during indexing or a `photoprism vision run` are marked as **private**. When `false` (default), NSFW signals are ignored even if the underlying model returns them.                                                                |
+| [`PHOTOPRISM_UPLOAD_NSFW`](../../getting-started/config-options.md#storage)         | When `false`, the **web upload** dialog rejects files that the NSFW model flags as unsafe (the rejected file is deleted before indexing). When `true` (default), uploads are accepted regardless and any NSFW flagging happens later during indexing per `DETECT_NSFW`. |
+
+### Which Model Detects NSFW?
+
+The model used for NSFW detection follows the same `vision.yml` mechanism as labels, captions, and faces. If no `Type: nsfw` entry is configured, PhotoPrism uses the built-in TensorFlow NSFW model. You can override it just like any other model — for example, to point at an Ollama or OpenAI endpoint trained to score NSFW content:
+
+```yaml
+Models:
+  - Type: nsfw
+    Model: <your-vision-model>
+    Engine: ollama
+    Service:
+      Uri: ${OLLAMA_BASE_URL}/api/generate
+```
+
+Once the dedicated NSFW model entry is configured, it runs whenever `DETECT_NSFW` is `true` and the indexer or `photoprism vision run --models nsfw` invokes it.
+
+### Detecting NSFW Through Label Generation
+
+When `Type: labels` is served by Ollama or OpenAI, PhotoPrism can ask the model to include NSFW classification in the same response, avoiding a second inference pass. This shortcut is gated by **two** environment variables that must **both** be set to `true`:
+
+- [`PHOTOPRISM_DETECT_NSFW`](../../getting-started/config-options.md#computer-vision)
+- [`PHOTOPRISM_EXPERIMENTAL`](../../getting-started/config-options.md#feature-flags)
+
+If either is `false`, the label-generation prompt does **not** ask for NSFW fields, so the LLM response cannot trigger NSFW flagging — even if NSFW signals exist in the image. The following matrix summarises the behaviour when Ollama or OpenAI is configured for labels and the user runs `photoprism vision run --models labels`:
+
+| `DETECT_NSFW` | `EXPERIMENTAL` | Label prompt                                  | Outcome                                                                                                                                                                               |
+|---------------|----------------|-----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `false`       | `false`        | Default labels prompt (no NSFW fields)        | NSFW detection does not run.                                                                                                                                                          |
+| `false`       | `true`         | Default labels prompt (no NSFW fields)        | NSFW detection does not run.                                                                                                                                                          |
+| `true`        | `false`        | Default labels prompt (no NSFW fields)        | NSFW detection does not run via labels; the dedicated NSFW model only runs when `nsfw` is explicitly included in the run's models (e.g. `--models labels,nsfw`).                      |
+| `true`        | `true`         | NSFW-aware prompt (`nsfw`, `nsfw_confidence`) | LLM returns NSFW fields; photos above the configured threshold are flagged as private. The dedicated NSFW model still runs as a fallback when `nsfw` is included in the run's models. |
+
+!!! tldr ""
+    If you switched from TensorFlow to an Ollama or OpenAI labels model and noticed that NSFW detection stopped working, the most likely cause is that one of the two flags above is missing. Enable both `PHOTOPRISM_DETECT_NSFW=true` and `PHOTOPRISM_EXPERIMENTAL=true`, or include `nsfw` in the explicit `--models` list so the dedicated NSFW model runs alongside labels.
+
+### NSFW Threshold
+
+The `Thresholds.NSFW` value in `vision.yml` (default `75`, range `0-100`) controls how confident the model must be before a picture is flagged. Lower values are more aggressive; higher values are more permissive. The threshold applies to both the dedicated NSFW model and the NSFW fields returned through the label-generation prompt.
+
 ## `vision.yml` Reference
 
 Custom AI engines, models, and run modes can be specified in a `vision.yml` file located in your config directory (default: `storage/config`). The file defines a list of models and thresholds to be used, e.g.:

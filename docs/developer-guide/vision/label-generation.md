@@ -17,6 +17,30 @@ Ollama-generated captions and labels are stored with the `ollama` metadata sourc
 !!! tip "Prompt Localization"
     To generate output in other languages, keep the base instructions in English and add the desired language (e.g., "Respond in German"). This method works for both [caption](../../user-guide/ai/ollama-models.md#qwen3-vl-caption) and [label prompts](../../user-guide/ai/ollama-models.md#qwen3-vl-labels).
 
+## NSFW Detection Through Labels
+
+When an Ollama or OpenAI model is wired up for `Type: labels`, PhotoPrism can ask it to return NSFW classification alongside the regular label fields. The shortcut is implemented in `internal/ai/vision/config.go`:
+
+```go
+vision.DetectNSFWLabels = c.DetectNSFW() && c.Experimental()
+```
+
+When `DetectNSFWLabels` is `true`, the engine builders in `internal/ai/vision/engine_ollama.go` and `engine_openai.go` swap their default user prompts for `LabelPromptNSFW`, and the JSON schema generators (`SchemaLabels(includeNSFW=true)`) add the `nsfw` and `nsfw_confidence` fields. When it is `false`, the prompt and schema describe only `name`, `confidence`, and `topicality`, so the LLM response cannot trigger NSFW flagging.
+
+Downstream, the index pipeline (`internal/photoprism/index_mediafile.go`) and the vision worker (`internal/workers/vision.go`) both guard the labels-based NSFW promotion with `conf.DetectNSFW()`:
+
+```go
+if w.conf.DetectNSFW() && !m.PhotoPrivate {
+    if labels.IsNSFW(vision.Config.Thresholds.GetNSFW()) {
+        m.PhotoPrivate = true
+    }
+}
+```
+
+The dedicated `ModelTypeNsfw` entry (TensorFlow by default, overridable in `vision.yml`) is a separate inference pass that only runs when `DetectNSFW` is true **and** the caller includes `nsfw` in the active model list (`--models labels,nsfw` for the CLI; the scheduler picks it up from `VisionModelShouldRun` automatically).
+
+The user-facing matrix and threshold details are in [Using AI Models › NSFW Detection](../../user-guide/ai/index.md#nsfw-detection).
+
 ## Troubleshooting
 
 ### Verify Active Configuration

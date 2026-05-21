@@ -221,9 +221,9 @@ Once the debugger is running, you can view the app at `http://localhost:2342/` a
 
 ### Building on ARM64-based Devices
 
-Our development environment is available as a single [multi-arch image](https://hub.docker.com/r/photoprism/development)
-for 64-bit AMD, Intel, and ARM processors. That means, Apple Silicon, [Raspberry Pi](../getting-started/raspberry-pi.md)
-4 / 5, and other ARM64-based devices can pull from the same repository.
+Our development environment is published as a [multi-arch image](https://hub.docker.com/r/photoprism/develop) for 64-bit AMD, Intel, and ARM processors, so Apple Silicon, [Raspberry Pi](../getting-started/raspberry-pi.md) 4 / 5, and other ARM64-based devices can pull the same image. The companion services referenced in our [`compose.yaml`](https://github.com/photoprism/photoprism/blob/develop/compose.yaml) — [`photoprism/traefik`](https://hub.docker.com/r/photoprism/traefik), [`photoprism/vision`](https://hub.docker.com/r/photoprism/vision), [`photoprism/dummy-webdav`](https://hub.docker.com/r/photoprism/dummy-webdav), and [`photoprism/dummy-oidc`](https://hub.docker.com/r/photoprism/dummy-oidc) — are available for both architectures as well.
+
+Note that the ARM64 development image ships [Chromium](https://www.chromium.org/) instead of Google Chrome, since Google only publishes Chrome for Linux on AMD64.
 
 ### Multi-Arch Docker Builds
 

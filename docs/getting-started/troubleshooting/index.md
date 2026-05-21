@@ -19,7 +19,7 @@ Before reporting a bug:
     - [ ] If a service has been "killed" or otherwise automatically terminated, this points to a [memory problem](docker.md#adding-swap) (add swap and/or memory; remove or increase usage limits)
     - [ ] In case the logs show "disk full", "quota exceeded", or "no space left" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space) (add storage) or a disk usage limit is configured (remove or increase it)
     - [ ] Errors such as "read-only file system", "error creating path", "failed to create folder", "permission denied", or "wrong permissions" indicate a [filesystem permission problem](docker.md#file-permissions)
-    - [ ] It may help to [add the `:z` mount flag to volumes](https://docs.docker.com/storage/bind-mounts/#configure-the-selinux-label) when using SELinux (Red Hat/Fedora)
+    - [ ] It may help to [add the `:z` mount flag to volumes](https://docs.docker.com/engine/storage/bind-mounts/#configure-the-selinux-label) when using SELinux (Red Hat/Fedora)
     - [ ] Log messages that contain "no route to host" indicate a [problem with the database](mariadb.md) or Docker network configuration (follow our [examples](https://dl.photoprism.app/docker/))
 - [ ] Make sure you are using the correct protocol (default is `http`), port (default is `2342`), and host (default is `localhost`):
     - [ ] Check if the server port you try to use [has been exposed](https://docs.docker.com/reference/compose-file/services/#ports) and [no firewall is blocking it](https://support.microsoft.com/en-us/windows/turn-microsoft-defender-firewall-on-or-off-ec0844f7-aebd-0583-67fe-601ecf5d774f)
@@ -54,7 +54,7 @@ mariadb: mysqld: Shutdown complete
 
 **IPTables:** On Linux, Docker manipulates the `iptables` rules to provide network isolation. This has implications when you want to enforce your own policies in addition to the rules Docker manages.
 
-[Learn more ›](https://docs.docker.com/network/iptables/)
+[Learn more ›](https://docs.docker.com/engine/network/packet-filtering-firewalls/)
 
 #### Debug Mode
 

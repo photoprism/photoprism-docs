@@ -180,7 +180,7 @@ Photos and videos can be mounted from FAT-formatted drives, such as an external 
 
 PhotoPrism depends on a number of other open source tools and applications, such as Darktable, RawTherapee, and FFmpeg. While you can install them directly on Windows, it's a lot of work and we don't have the capacity to test the respective Windows versions before each release.
 
-We therefore recommend to [use Docker](https://docs.docker.com/desktop/install/windows-install/), so you can take advantage of [our pre-built and QA-tested Docker image](https://hub.docker.com/r/photoprism/photoprism/tags), which includes all the dependencies you need.
+We therefore recommend to [use Docker](https://docs.docker.com/desktop/setup/install/windows-install/), so you can take advantage of [our pre-built and QA-tested Docker image](https://hub.docker.com/r/photoprism/photoprism/tags), which includes all the dependencies you need.
 It is a well-tested standard tool that also lets you run many other self-hosted apps without having to worry about the details or Windows-specific issues.
 To further simplify the setup for you, we offer [a batch script](https://dl.photoprism.app/docker/windows/install.bat) that you can run in the directory where you want to install PhotoPrism:
         
@@ -189,7 +189,7 @@ curl.exe -o install.bat https://dl.photoprism.app/docker/windows/install.bat
 install.bat
 ```
 
-This will automatically download all required config files and start the server for you. Before you run the script, make sure you have [Docker Desktop installed on your Windows PC](https://docs.docker.com/desktop/install/windows-install/).
+This will automatically download all required config files and start the server for you. Before you run the script, make sure you have [Docker Desktop installed on your Windows PC](https://docs.docker.com/desktop/setup/install/windows-install/).
 
 ### How can I install PhotoPrism without Docker?
 
@@ -262,7 +262,7 @@ Please be aware, though, that we do not have the resources to provide support an
 
 **(2) Docker saves time through simplified deployment and testing.** A main advantage of Docker is that application images can be [easily made available](https://hub.docker.com/r/photoprism/photoprism) to users via Internet. It provides a common standard across most operating systems and devices, which saves our team a lot of time that we can then spend [more effectively](https://docs.photoprism.app/developer-guide/code-quality/#effectiveness-efficiency), for example, providing support and developing one of the many features that users are waiting for.
 
-**(3) Dockerfiles are part of the source code repository.** [Human-readable](https://docs.docker.com/engine/reference/builder/) and [versioned Dockerfiles](https://github.com/photoprism/photoprism/tree/develop/docker) that are part of our public source code help avoid "works for me" moments and other unwelcome surprises by enabling us to have the exact [same environment](https://docs.photoprism.app/developer-guide/setup/) everywhere in [development](https://github.com/photoprism/photoprism/tree/develop/docker/develop), [staging, and production](https://github.com/photoprism/photoprism/tree/develop/docker/photoprism).
+**(3) Dockerfiles are part of the source code repository.** [Human-readable](https://docs.docker.com/reference/dockerfile/) and [versioned Dockerfiles](https://github.com/photoprism/photoprism/tree/develop/docker) that are part of our public source code help avoid "works for me" moments and other unwelcome surprises by enabling us to have the exact [same environment](https://docs.photoprism.app/developer-guide/setup/) everywhere in [development](https://github.com/photoprism/photoprism/tree/develop/docker/develop), [staging, and production](https://github.com/photoprism/photoprism/tree/develop/docker/photoprism).
 
 **(4) Running applications in containers is more secure.** Last but not least, virtually all file format parsers have vulnerabilities that just haven't been discovered yet. This is a known risk that can affect you even if your computer is not directly connected to the Internet. Running apps in a container with limited host access is an easy way to improve security without compromising performance and usability.
 

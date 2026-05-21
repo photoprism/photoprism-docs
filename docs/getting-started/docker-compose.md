@@ -85,7 +85,7 @@ Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is sup
  
     [https://dl.photoprism.app/docker/windows/compose.yaml](https://dl.photoprism.app/docker/windows/compose.yaml) :material-download:
 
-    It is important to [increase the Docker memory limit](img/docker-resources-advanced.jpg) to 4 GB or more when using *Hyper-V*. The default of 2 GB can reduce indexing performance and cause unexpected restarts. Also make sure you configure at least 4 GB of swap space. [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/) uses dynamic memory allocation with *WSL 2*, meaning you do not need to change any memory-related settings (depending on which version of Windows and Docker you are using).
+    It is important to [increase the Docker memory limit](img/docker-resources-advanced.jpg) to 4 GB or more when using *Hyper-V*. The default of 2 GB can reduce indexing performance and cause unexpected restarts. Also make sure you configure at least 4 GB of swap space. [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/) uses dynamic memory allocation with *WSL 2*, meaning you do not need to change any memory-related settings (depending on which version of Windows and Docker you are using).
 
     Indexing [RAW images and high-resolution panoramas](troubleshooting/performance.md#memory) may require additional [swap space](troubleshooting/docker.md#adding-swap) and/or physical memory beyond the [recommended minimum](index.md#system-requirements).
 
@@ -97,7 +97,7 @@ Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is sup
         install.bat
         ```
         
-        Before you run this, make sure you are in the directory where you want to install PhotoPrism and that [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/) is installed and started on your PC.
+        Before you run this, make sure you are in the directory where you want to install PhotoPrism and that [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/) is installed and started on your PC.
 
 === "macOS"
 
@@ -134,7 +134,7 @@ Never [store database files](troubleshooting/mariadb.md#corrupted-files) on an u
 You must explicitly [specify the directories](https://docs.docker.com/reference/compose-file/volumes/) you want to mount from your host, since PhotoPrism can't see files in folders that have not been shared. This is an important security feature and allows for a flexible configuration without having to change any other variables.
 
 !!! danger ""
-    It is important that all folders are mounted to persistent volumes. We recommend changing the relative paths used in our examples to absolute paths and to avoid using [named or anonymous volumes](https://docs.docker.com/compose/compose-file/07-volumes/#example) in order to prevent potential data loss when the container is recreated, e.g. [after an update](updates.md#docker-compose) of the Docker image.
+    It is important that all folders are mounted to persistent volumes. We recommend changing the relative paths used in our examples to absolute paths and to avoid using [named or anonymous volumes](https://docs.docker.com/reference/compose-file/volumes/#example) in order to prevent potential data loss when the container is recreated, e.g. [after an update](updates.md#docker-compose) of the Docker image.
 
 ##### /photoprism/originals
 
@@ -384,4 +384,4 @@ The currently supported user ID ranges are 0, 33, 50-99, 500-600, 900-1250, and 
 *[RHEL]: Red Hat Enterprise Linux®
 
 [^1]: The default name for [Docker Compose](https://docs.docker.com/compose/) configuration files is `compose.yaml`. For simplicity, it does not need to be specified if you are running commands in the same directory. Config files for other applications and instances should be placed in separate folders.
-[^2]: With the latest version of [Docker Compose](https://docs.docker.com/compose/), the [default config file name](https://docs.docker.com/compose/intro/compose-application-model/#the-compose-file) is `compose.yaml`, although the [`docker compose` command](troubleshooting/docker.md#docker-compose) still supports legacy `docker-compose.yml` files for backward compatibility.
+[^2]: With the latest version of [Docker Compose](https://docs.docker.com/compose/), the [default config file name](https://docs.docker.com/compose/how-compose-works/#the-compose-file) is `compose.yaml`, although the [`docker compose` command](troubleshooting/docker.md#docker-compose) still supports legacy `docker-compose.yml` files for backward compatibility.

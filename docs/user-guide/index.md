@@ -5,7 +5,7 @@ in [Getting Started](../getting-started/index.md). All you need is a Web browser
 [Docker](https://store.docker.com/search?type=edition&offering=community) to run the server.
 
 [![Progressive Web App](img/iphone-crocus.png){ align=right }](navigate.md)
-It is available for [Mac](https://docs.docker.com/desktop/install/mac-install/), [Linux](../getting-started/troubleshooting/docker.md#installation), and [Windows](https://docs.docker.com/desktop/install/windows-install/). PhotoPrism also runs on [PikaPods](../getting-started/cloud/pikapods.md), [DigitalOcean](../getting-started/cloud/digitalocean.md),
+It is available for [Mac](https://docs.docker.com/desktop/setup/install/mac-install/), [Linux](../getting-started/troubleshooting/docker.md#installation), and [Windows](https://docs.docker.com/desktop/setup/install/windows-install/). PhotoPrism also runs on [PikaPods](../getting-started/cloud/pikapods.md), [DigitalOcean](../getting-started/cloud/digitalocean.md),
 [Raspberry Pi](../getting-started/raspberry-pi.md), [Portainer](../getting-started/portainer/index.md), [FreeBSD](../getting-started/ports/freebsd.md), and many
 [NAS devices](../getting-started/nas/synology.md).
 

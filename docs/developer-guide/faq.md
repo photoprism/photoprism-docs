@@ -2,7 +2,7 @@
 
 ### Can your development environment be used under Windows?
 
-Yes, this is possible if you have [Git](https://git-scm.com/) and [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/) installed. However, you are likely to experience problems when [using our Makefile](https://github.com/photoprism/photoprism/blob/develop/Makefile) and other scripts directly on Windows, as they were developed and tested on Linux/Unix.
+Yes, this is possible if you have [Git](https://git-scm.com/) and [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/) installed. However, you are likely to experience problems when [using our Makefile](https://github.com/photoprism/photoprism/blob/develop/Makefile) and other scripts directly on Windows, as they were developed and tested on Linux/Unix.
 
 We therefore recommend not to use [Make](https://www.gnu.org/software/make/) for setting up your [development environment](setup.md) and to instead run the required commands manually from the [main project directory](https://github.com/photoprism/photoprism/tree/develop) (where the [`compose.yaml`](https://github.com/photoprism/photoprism/blob/develop/compose.yaml) file is located):
 

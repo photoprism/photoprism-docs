@@ -39,7 +39,7 @@ In addition, the following API endpoints should be allowed so that public [Docke
 
 On Linux, Docker manipulates the `iptables` rules to provide network isolation. This does have some implications for what you need to do if you want to have your own policies in addition to the rules Docker manages.
 
-[Learn more ›](https://docs.docker.com/network/iptables/)
+[Learn more ›](https://docs.docker.com/engine/network/packet-filtering-firewalls/)
 
 ## Docker MTU Size
 

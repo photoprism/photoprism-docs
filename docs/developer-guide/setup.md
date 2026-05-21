@@ -10,7 +10,7 @@ In case you are using Ubuntu Linux, you can run this script to [install the late
 bash <(curl -s https://setup.photoprism.app/ubuntu/install-docker.sh)
 ```
 
-When working on [Microsoft Windows](faq.md#can-your-development-environment-be-used-under-windows) or [Apple macOS](https://docs.docker.com/desktop/install/mac-install/), you need to install the latest version of [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/) and also disable "autocrlf" in Git to avoid errors[^2]:
+When working on [Microsoft Windows](faq.md#can-your-development-environment-be-used-under-windows) or [Apple macOS](https://docs.docker.com/desktop/setup/install/mac-install/), you need to install the latest version of [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/) and also disable "autocrlf" in Git to avoid errors[^2]:
 
 ```bash
 git config --global core.autocrlf false
@@ -29,7 +29,7 @@ cd photoprism
 ```
 
 !!! example "Developing on Windows"
-    Our standard development environment can also be used on Windows if you have [Git](https://git-scm.com/), [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/), and a suitable IDE like [GoLand](https://www.jetbrains.com/go/) installed. However, we recommend running the required `docker compose` commands manually instead of using `make docker-build` and `make terminal`. [Learn more ›](faq.md#can-your-development-environment-be-used-under-windows)
+    Our standard development environment can also be used on Windows if you have [Git](https://git-scm.com/), [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/), and a suitable IDE like [GoLand](https://www.jetbrains.com/go/) installed. However, we recommend running the required `docker compose` commands manually instead of using `make docker-build` and `make terminal`. [Learn more ›](faq.md#can-your-development-environment-be-used-under-windows)
 
 ### Step 2: Launch Your Local Development Environment
 
@@ -229,8 +229,8 @@ for 64-bit AMD, Intel, and ARM processors. That means, Apple Silicon, [Raspberry
 
 For information about multi-architecture Docker builds, see the following documentation:
 
-- [Docker Buildx](https://docs.docker.com/buildx/working-with-buildx/)
-- [Leverage multi-CPU architecture support](https://docs.docker.com/desktop/multi-arch/)
+- [Docker Buildx](https://docs.docker.com/build/)
+- [Leverage multi-CPU architecture support](https://docs.docker.com/build/building/multi-platform/)
 
 #### QEMU Quick Start
 

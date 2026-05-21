@@ -1,6 +1,6 @@
 # Running PhotoPrism with Docker
 
-We recommend using [Docker Compose](docker-compose.md) because it is easier to manage multiple services than the [Docker command-line interface](https://docs.docker.com/engine/reference/commandline/cli/).
+We recommend using [Docker Compose](docker-compose.md) because it is easier to manage multiple services than the [Docker command-line interface](https://docs.docker.com/reference/cli/docker/).
 Before you proceed, make sure you have [Docker](https://docs.docker.com/get-started/get-docker/) installed on your system. It is available for macOS, Linux, and Windows.
 
 Alternatively, [Podman](https://podman.io/) is supported as a drop-in replacement for Docker on Red Hat-compatible Linux distributions like RHEL, CentOS, Fedora, AlmaLinux, and Rocky Linux.
@@ -76,7 +76,7 @@ Enabling [public mode](config-options.md#authentication) will disable authentica
 
 #### Volumes
 
-Since the app is running inside a container, you have to explicitly [mount the host folders](https://docs.docker.com/storage/bind-mounts/) you want to use.
+Since the app is running inside a container, you have to explicitly [mount the host folders](https://docs.docker.com/engine/storage/bind-mounts/) you want to use.
 PhotoPrism won't be able to see folders that have not been mounted. That's an important security feature.
 
 ##### /photoprism/originals
@@ -84,7 +84,7 @@ PhotoPrism won't be able to see folders that have not been mounted. That's an im
 The *originals* folder contains your original photo and video files. They are mounted from `~/Pictures` in the example
 above, where `~` is a shortcut for your home directory.
 
-You may [mount any folder accessible from the host](https://docs.docker.com/storage/bind-mounts/) instead,
+You may [mount any folder accessible from the host](https://docs.docker.com/engine/storage/bind-mounts/) instead,
 including [network drives](faq.md#how-can-i-mount-network-shares-with-docker). Additional directories can
 be mounted as sub folders of `/photoprism/originals`:
 
@@ -93,7 +93,7 @@ be mounted as sub folders of `/photoprism/originals`:
 ``` 
 
 !!! tldr ""
-    When *read-only mode* is enabled, all features that require write permission to the *originals* folder are disabled, e.g. [WebDAV](../user-guide/sync/webdav.md), uploading and deleting files. To do this, add the `-e PHOTOPRISM_READONLY="true"` command flag. You can additionally [mount volumes with the `:ro` flag](https://docs.docker.com/storage/bind-mounts/#use-a-read-only-bind-mount) so that writes are also blocked by Docker.
+    When *read-only mode* is enabled, all features that require write permission to the *originals* folder are disabled, e.g. [WebDAV](../user-guide/sync/webdav.md), uploading and deleting files. To do this, add the `-e PHOTOPRISM_READONLY="true"` command flag. You can additionally [mount volumes with the `:ro` flag](https://docs.docker.com/engine/storage/bind-mounts/#use-a-read-only-bind-mount) so that writes are also blocked by Docker.
 
 ##### /photoprism/storage
 

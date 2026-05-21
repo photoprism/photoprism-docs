@@ -7,11 +7,11 @@
 
 ## Installation
 
-If you cannot use the `docker` and `docker compose` commands, make sure [Docker](https://docs.docker.com/config/daemon/#start-the-daemon-manually) is running on the host you are connected to and your current user has permission to use it.
+If you cannot use the `docker` and `docker compose` commands, make sure [Docker](https://docs.docker.com/engine/daemon/start/) is running on the host you are connected to and your current user has permission to use it.
 The following instructions explain how to install Docker:
 
 - [Ubuntu](https://docs.docker.com/engine/install/ubuntu/), [Mint](https://techviewleo.com/how-to-install-and-use-docker-in-linux-mint/), [Debian](https://www.linode.com/docs/guides/installing-and-using-docker-on-ubuntu-and-debian/), and [Arch Linux](https://wiki.archlinux.org/title/docker#Installation)
-- [Microsoft Windows](https://docs.docker.com/desktop/install/windows-install/)
+- [Microsoft Windows](https://docs.docker.com/desktop/setup/install/windows-install/)
 - [Apple macOS](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 
 Alternatively, [Podman](#podman-compose) is supported as a drop-in replacement for Docker on Red Hat-compatible Linux distributions like RHEL, CentOS, Fedora, AlmaLinux, and Rocky Linux.
@@ -43,7 +43,7 @@ sudo chmod +x /bin/docker-compose
 ```
 
 !!! note ""
-    With the latest version of [Docker Compose](https://docs.docker.com/compose/), the [default config file name](https://docs.docker.com/compose/intro/compose-application-model/#the-compose-file) is `compose.yaml`, although the `docker compose` command still supports legacy `docker-compose.yml` files for backward compatibility.
+    With the latest version of [Docker Compose](https://docs.docker.com/compose/), the [default config file name](https://docs.docker.com/compose/how-compose-works/#the-compose-file) is `compose.yaml`, although the `docker compose` command still supports legacy `docker-compose.yml` files for backward compatibility.
 
 ### Podman Compose
 
@@ -155,7 +155,7 @@ The default entrypoint script can install [additional distribution packages](../
 
 On Linux, Docker manipulates the `iptables` rules to provide network isolation. This does have some implications for what you need to do if you want to have your own policies in addition to the rules Docker manages.
 
-[Learn more ›](https://docs.docker.com/network/iptables/)
+[Learn more ›](https://docs.docker.com/engine/network/packet-filtering-firewalls/)
 
 ### Wrong MTU Size
 
@@ -317,7 +317,7 @@ In addition, you can reduce memory usage and improve stability by setting `PHOTO
 
 ### Windows
 
-It is important to [increase the Docker memory limit](../img/docker-resources-advanced.jpg) to 4 GB or more when using *Hyper-V*. The default of 2 GB can reduce indexing performance and cause unexpected restarts. Also make sure you configure at least 4 GB of swap space. [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/) uses dynamic memory allocation with *WSL 2*, meaning you do not need to change any memory-related settings (depending on which version of Windows and Docker you are using).
+It is important to [increase the Docker memory limit](../img/docker-resources-advanced.jpg) to 4 GB or more when using *Hyper-V*. The default of 2 GB can reduce indexing performance and cause unexpected restarts. Also make sure you configure at least 4 GB of swap space. [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/) uses dynamic memory allocation with *WSL 2*, meaning you do not need to change any memory-related settings (depending on which version of Windows and Docker you are using).
 
 ### macOS
 
@@ -339,7 +339,7 @@ Errors such as "read-only file system", "error creating path", "failed to create
 - [ ] The app and database *storage* folders must be writable as well: Verify that the services have write permissions and that you have **not** mounted the folders read-only on your host or [via Docker using the `:ro` flag](https://docs.docker.com/reference/compose-file/services/#volumes)
 - [ ] If you have configured specific user and group IDs for a service, make sure they match
 - [ ] If [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) are mounted or used within *storage* folders, replace them with actual paths
-- [ ] It may help to [add the `:z` mount flag to volumes](https://docs.docker.com/storage/bind-mounts/#configure-the-selinux-label) when using *SELinux* (Red Hat/Fedora)
+- [ ] It may help to [add the `:z` mount flag to volumes](https://docs.docker.com/engine/storage/bind-mounts/#configure-the-selinux-label) when using *SELinux* (Red Hat/Fedora)
 - [ ] When mounting folders that only root has access to, you may have to prefix the `docker` and `docker compose` commands with `sudo` on Linux if you are not already logged in as root
 
 An easy way to test for missing permissions is to (temporarily) remove restrictions and make the entire folder accessible to everyone:

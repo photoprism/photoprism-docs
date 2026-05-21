@@ -62,7 +62,7 @@ services:
 
 ## Docker Compose ##
 
-When using [Docker Compose](https://docs.docker.com/compose/compose-file/compose-file-v3/), some additional rules apply, as `compose.yaml` or `docker-compose.yml` files extend the YAML format with features such as [variable interpolation](https://docs.docker.com/compose/compose-file/12-interpolation/#interpolation).
+When using [Docker Compose](https://docs.docker.com/compose/), some additional rules apply, as `compose.yaml` or `docker-compose.yml` files extend the YAML format with features such as [variable interpolation](https://docs.docker.com/reference/compose-file/interpolation/).
 
 ### Dollar Signs ###
 
@@ -76,7 +76,7 @@ services:
       MARIADB_PASSWORD: "compo$$e" 
 ```
 
-Values that contain a `$` are otherwise [interpreted as a variable](https://docs.docker.com/compose/compose-file/12-interpolation/#interpolation). In this case, both the `$VARIABLE` and the `${VARIABLE}` syntax are supported. Further details on the use of variables can be found in the [file format reference](https://docs.docker.com/compose/compose-file/12-interpolation/#interpolation).
+Values that contain a `$` are otherwise [interpreted as a variable](https://docs.docker.com/reference/compose-file/interpolation/). In this case, both the `$VARIABLE` and the `${VARIABLE}` syntax are supported. Further details on the use of variables can be found in the [file format reference](https://docs.docker.com/reference/compose-file/interpolation/).
 
 ### True / False ###
 
@@ -90,7 +90,7 @@ services:
       PHOTOPRISM_READONLY: "false"
 ```
 
-If you otherwise specify `true` as a value without quotes, [Docker Compose](https://docs.docker.com/compose/compose-file/compose-file-v3/) will pass the host variable of the same name to the container instead of setting the value to "true" (results in an empty string if no environment variable with the same name is set on the host):
+If you otherwise specify `true` as a value without quotes, [Docker Compose](https://docs.docker.com/compose/) will pass the host variable of the same name to the container instead of setting the value to "true" (results in an empty string if no environment variable with the same name is set on the host):
 
 ```yaml
 services:

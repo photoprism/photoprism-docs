@@ -106,7 +106,7 @@ services:
       - ...
 ```
 
-In addition, you can choose to run the `photoprism` service as a non-root user by setting either the `user` [service property](https://docs.docker.com/compose/compose-file/05-services/#user) or the `PHOTOPRISM_UID` and `PHOTOPRISM_GID` [environment variables](../config-options.md#docker-image) in your `compose.yaml` or `docker-compose.yml` file:
+In addition, you can choose to run the `photoprism` service as a non-root user by setting either the `user` [service property](https://docs.docker.com/reference/compose-file/services/#user) or the `PHOTOPRISM_UID` and `PHOTOPRISM_GID` [environment variables](../config-options.md#docker-image) in your `compose.yaml` or `docker-compose.yml` file:
 
 | Environment    | Default | Description                                                                                                                                                                                  |
 |----------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

@@ -237,16 +237,7 @@ For information about multi-architecture Docker builds, see the following docume
 1. install qemu-user-static from docker hub: `docker run --rm --privileged multiarch/qemu-user-static --reset -p yes` [https://github.com/multiarch/qemu-user-static](https://github.com/multiarch/qemu-user-static)
 2. verify that dockers buildx command is installed `docker buildx version`. if missing, follow install instructions [here](https://github.com/docker/buildx)
 3. create buildx builder: `docker buildx create --name multiarch-builder && docker buildx inspect --builder multiarch-builder --bootstrap`
-4. start building: run `make docker-develop-<codename>` to build and push a multi-arch development image (e.g. `make docker-develop-resolute` for the current Ubuntu base); the underlying build script is [`scripts/docker/buildx-multi.sh`](https://github.com/photoprism/photoprism/blob/develop/scripts/docker/buildx-multi.sh)
-
-<!--
-### Alternate Development Environments ###
-
-The following are setup instructions for development and testing and should be avoided unless Docker is either
-not supported or not allowed in your environment:
-
-* [Fedora 32](setup-fedora.md)
--->
+4. start building: run `make docker-local-develop-<codename>` to build and push a multi-arch development image (e.g. `make docker-local-develop-resolute` for the current Ubuntu base); the underlying build script is [`scripts/docker/buildx-multi.sh`](https://github.com/photoprism/photoprism/blob/develop/scripts/docker/buildx-multi.sh)
 
 [^1]: Instead of using Docker, you can also set up your own build environment based on the steps documented in the [Dockerfiles](https://github.com/photoprism/photoprism/tree/develop/docker/develop) we provide. For this, you should have at least Go 1.25, TensorFlow for C, Make, NPM 11 and MariaDB 11 installed. Note that the test results will be unreliable without Docker. This method is therefore not well suited for contributors and we cannot provide support if something does not work as expected.
 [^2]: If the Git config value "core.autocrlf" is set to "true", the following error may occur when trying to run shell scripts or Make targets: `env: bash\r: No such file or directory`

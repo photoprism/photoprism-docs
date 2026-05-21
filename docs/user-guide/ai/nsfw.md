@@ -4,7 +4,7 @@ PhotoPrism can automatically flag pictures as **private** when an image-classifi
 
 ## Configuration Options
 
-Two independent config options govern the runtime behaviour. Both are off by default:
+Two independent config options govern the runtime behavior. Both are off by default:
 
 | Config Option                                                                       | Effect                                                                                                                                                                                                                                                                  |
 |-------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

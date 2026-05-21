@@ -2,10 +2,10 @@
 
 **Last Updated:** April 21, 2026
 
-To [recognise faces](https://docs.photoprism.app/user-guide/organize/people/), PhotoPrism uses a multi-stage AI pipeline that detects faces, generates embeddings, and clusters similar faces so they can be easily organised by person.
+To [recognize faces](https://docs.photoprism.app/user-guide/organize/people/), PhotoPrism uses a multi-stage AI pipeline that detects faces, generates embeddings, and clusters similar faces so they can be easily organized by person.
 
 !!! tldr ""
-    The canonical engineering reference for this pipeline is the package README at [`internal/ai/face/README.md`](https://github.com/photoprism/photoprism/blob/develop/internal/ai/face/README.md). This page summarises the developer-facing behaviour; consult the README for the latest thresholds, benchmarks, and test recipes.
+    The canonical engineering reference for this pipeline is the package README at [`internal/ai/face/README.md`](https://github.com/photoprism/photoprism/blob/develop/internal/ai/face/README.md). This page summarizes the developer-facing behavior; consult the README for the latest thresholds, benchmarks, and test recipes.
 
 ## How It Works
 
@@ -32,7 +32,7 @@ For backwards compatibility, legacy `FACE_ENGINE=pigo` values are silently mappe
 ## Configuration
 
 !!! example ""
-    We recommend that only advanced users and developers change these parameters. All face-related environment variables and CLI flags are listed in [Config Options › Face Recognition](../../getting-started/config-options.md#face-recognition); this page only highlights the knobs most relevant to detector behaviour.
+    We recommend that only advanced users and developers change these parameters. All face-related environment variables and CLI flags are listed in [Config Options › Face Recognition](../../getting-started/config-options.md#face-recognition); this page only highlights the knobs most relevant to detector behavior.
 
 ### Detection Settings
 
@@ -42,14 +42,14 @@ For backwards compatibility, legacy `FACE_ENGINE=pigo` values are silently mappe
 | PHOTOPRISM_FACE_ENGINE_THREADS | --face-engine-threads | runtime.NumCPU()/2 (≥1) | Number of ONNX inference threads.                                                           |
 | PHOTOPRISM_FACE_SIZE           | --face-size           | 50                      | Minimum face size in `PIXELS` (20-10000).                                                   |
 | PHOTOPRISM_FACE_SCORE          | --face-score          | 9.0                     | Base quality threshold before scale-dependent offsets are added.                            |
-| PHOTOPRISM_FACE_OVERLAP        | --face-overlap        | 42                      | Maximum allowed IoU when deduplicating markers (preserved from legacy behaviour).           |
+| PHOTOPRISM_FACE_OVERLAP        | --face-overlap        | 42                      | Maximum allowed IoU when deduplicating markers (preserved from legacy behavior).            |
 
 Run scheduling is configured through the face model entry in `vision.yml`; `FaceEngineRunType()` simply forwards to `vision.Config.RunType(ModelTypeFace)`. There is no separate `FACE_ENGINE_RUN` flag. See the [package README](https://github.com/photoprism/photoprism/blob/develop/internal/ai/face/README.md#configuration-summary) for the full run-mode semantics.
 
 ### Clustering Settings
 
 !!! danger ""
-    It is strongly recommended that you run `photoprism faces reset` in a terminal to remove existing clusters and markers after changing any of the clustering parameters, otherwise inconsistencies may cause unexpected behaviour or errors.
+    It is strongly recommended that you run `photoprism faces reset` in a terminal to remove existing clusters and markers after changing any of the clustering parameters, otherwise inconsistencies may cause unexpected behavior or errors.
 
 | Environment Variable          | CLI Flag             | Default | Description                                                              |
 |-------------------------------|----------------------|---------|--------------------------------------------------------------------------|
@@ -75,14 +75,14 @@ After detection, PhotoPrism uses TensorFlow to run [FaceNet](https://dl.photopri
 2. **Cluster similar faces** using the DBSCAN algorithm.
 3. **Assign faces to people** after manual confirmation.
 
-### Normalisation
+### Normalization
 
-All embeddings are L2-normalised to unit length (‖x‖₂ = 1) at:
+All embeddings are L2-normalized to unit length (‖x‖₂ = 1) at:
 
 - Creation time, after TensorFlow inference (`NewEmbedding`).
 - Midpoint calculation when merging clusters (`EmbeddingsMidpoint`).
 - Deserialisation when loading from persisted JSON (`UnmarshalEmbedding` / `UnmarshalEmbeddings`).
-- `photoprism faces audit --fix`, which re-normalises historical embeddings and re-links markers.
+- `photoprism faces audit --fix`, which re-normalizes historical embeddings and re-links markers.
 
 With unit vectors Euclidean distance is a rank-equivalent substitute for cosine similarity, so all thresholds on this page are expressed in the Euclidean domain.
 

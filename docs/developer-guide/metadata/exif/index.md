@@ -26,7 +26,7 @@ When the file format is not one of the above, or when the format-specific parser
 
 When ExifTool support is enabled, `internal/photoprism/mediafile_meta.go:MetaData()` then runs [ExifTool](https://exiftool.org/) via `Convert.ToJson()` and merges its cached JSON output into the same `meta.Data` through `internal/meta/json_exiftool.go:Exiftool()`. This stage:
 
-- Recognises far more tag variants and container formats than the native parser (video metadata, Maker Notes, vendor-specific IPTC/XMP blocks, Google Motion Photo, Samsung `MotionPhoto`, etc.).
+- Recognizes far more tag variants and container formats than the native parser (video metadata, Maker Notes, vendor-specific IPTC/XMP blocks, Google Motion Photo, Samsung `MotionPhoto`, etc.).
 - **Does not overwrite non-zero values set by the native parser.** The reflection loop in `json_exiftool.go` checks `!fieldValue.IsZero()` before assigning, so the native parser effectively wins for any field it populated. The overlay fills the gaps.
 - Is a precondition for embedded XMP support — see [Adobe XMP](../xmp.md).
 
@@ -90,7 +90,7 @@ Column meanings:
 | `TakenNs`          | `SubSecTimeOriginal`, then `SubSecTime`, `SubSecTimeDigitized`                            | (same sub-sec tags consumed by both stages)                                                                                                               | ✓                             | ✓                  |
 | `CreatedAt`        | —                                                                                         | `SubSecCreateDate`, `CreationTime`, `CreationDate`, `CreateDate`, `MediaCreateDate`, `ContentCreateDate`, `TrackCreateDate`                               | —                             | ✓                  |
 | `TimeOffset`       | —                                                                                         | `OffsetTime`, `OffsetTimeOriginal`, `OffsetTimeDigitized`                                                                                                 | —                             | ✓                  |
-| `TimeZone`         | derived from `Lat`/`Lng` via `tz.Position`                                                | derived from `TakenAtLocal` offset; normalised via `tz.Name`                                                                                              | ✓ (via GPS)                   | ✓                  |
+| `TimeZone`         | derived from `Lat`/`Lng` via `tz.Position`                                                | derived from `TakenAtLocal` offset; normalized via `tz.Name`                                                                                              | ✓ (via GPS)                   | ✓                  |
 | `Lat` / `Lng`      | GPS sub-IFD → `GpsInfo.Decimal()` → `NormalizeGPS`                                        | `GPSPosition` or `GPSLatitude` + `GPSLongitude` (parsed via `GpsToLatLng` / `GpsToDecimal`)                                                               | ✓                             | ✓                  |
 | `GPSPosition`      | —                                                                                         | `GPSPosition`                                                                                                                                             | —                             | ✓                  |
 | `GPSLatitude`      | —                                                                                         | `GPSLatitude`                                                                                                                                             | —                             | ✓                  |
@@ -111,13 +111,13 @@ Column meanings:
 
 **Notes**
 
-- **Native-reader tag names are not always identical to ExifTool's.** In particular, `CameraOwnerName` (native) ↔ `OwnerName` (ExifTool), `BodySerialNumber` (native) ↔ `SerialNumber` (ExifTool), and `ISOSpeedRatings` (native) ↔ `ISO` (ExifTool). The native parser follows the EXIF 2.3 specification names; ExifTool uses its own normalised names. This is why the two columns show different strings for what is semantically the same value.
+- **Native-reader tag names are not always identical to ExifTool's.** In particular, `CameraOwnerName` (native) ↔ `OwnerName` (ExifTool), `BodySerialNumber` (native) ↔ `SerialNumber` (ExifTool), and `ISOSpeedRatings` (native) ↔ `ISO` (ExifTool). The native parser follows the EXIF 2.3 specification names; ExifTool uses its own normalized names. This is why the two columns show different strings for what is semantically the same value.
 - **Purely numeric `CameraModel` / `CameraMake` / `LensMake` / `LensModel` values are rejected** by the native parser (`txt.IsUInt` check). Broken exporters occasionally write things like `42` as a camera model; these are dropped so Stage 2 can supply a real value instead.
 - **`Orientation` falls back to `1`** in Stage 1; the ExifTool path can also populate it via `Rotation` (`xmp:Rotation` or QuickTime `Rotation`), which is mapped back to an orientation value in `json_exiftool.go`.
 - **GPS coordinates** flow into `Lat`/`Lng` directly from the native parser (via `exif.GpsInfo`). The `GPSPosition` / `GPSLatitude` / `GPSLongitude` string fields in `Data` are only populated by Stage 2 and then parsed into `Lat`/`Lng` if they are still zero.
 - **Sub-second tags** are consulted by both stages but stored in `Data.TakenNs` only once; whichever stage writes first wins.
 
-## Notable Behaviours
+## Notable Behaviors
 
 These are the EXIF-reader quirks that most commonly surprise developers when debugging indexing issues:
 

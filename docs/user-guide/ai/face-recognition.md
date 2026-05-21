@@ -1,6 +1,6 @@
 # Face Recognition
 
-PhotoPrism uses a multi-stage AI pipeline to detect, embed, and cluster faces so they can be [easily organised by person](https://docs.photoprism.app/user-guide/organize/people/):
+PhotoPrism uses a multi-stage AI pipeline to detect, embed, and cluster faces so they can be [easily organized by person](https://docs.photoprism.app/user-guide/organize/people/):
 
 1. **Detection** — the ONNX SCRFD engine locates faces in each image.
 2. **Embedding** — 512-dimensional vectors are generated to characterise each face.

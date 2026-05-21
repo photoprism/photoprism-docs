@@ -10,7 +10,7 @@ PhotoPrism has two separate code paths for XMP, and it is important to understan
 
 ### Embedded XMP via ExifTool (Primary Path)
 
-For XMP packets embedded in a media file, PhotoPrism does **not** parse the XML itself. Instead, the indexer runs [ExifTool](https://exiftool.org/) once per file and caches its output as a JSON document. ExifTool flattens EXIF, XMP, IPTC, Maker Notes, QuickTime atoms, and vendor tags into a single object; PhotoPrism then reads the values it recognises from that JSON.
+For XMP packets embedded in a media file, PhotoPrism does **not** parse the XML itself. Instead, the indexer runs [ExifTool](https://exiftool.org/) once per file and caches its output as a JSON document. ExifTool flattens EXIF, XMP, IPTC, Maker Notes, QuickTime atoms, and vendor tags into a single object; PhotoPrism then reads the values it recognizes from that JSON.
 
 The relevant code:
 
@@ -18,7 +18,7 @@ The relevant code:
 - `internal/photoprism/mediafile_meta.go` — calls `CreateExifToolJson` when the cached JSON is missing and then `ReadExifToolJson` to feed the cache into the metadata.
 - `internal/meta/json_exiftool.go` — iterates the fields of `meta.Data` and, for each `meta:"..."` struct tag, assigns the first non-empty value found in the ExifTool JSON.
 
-ExifTool normalises tag names across groups by default, so an ExifTool JSON key such as `Description` may originate from `XMP-dc:description`, `IPTC:Caption-Abstract`, or `EXIF:ImageDescription` — whichever group ExifTool selected for that file. If you need to see the origin explicitly, pass `-g` to ExifTool (`exiftool -g -j <file>`) when debugging.
+ExifTool normalizes tag names across groups by default, so an ExifTool JSON key such as `Description` may originate from `XMP-dc:description`, `IPTC:Caption-Abstract`, or `EXIF:ImageDescription` — whichever group ExifTool selected for that file. If you need to see the origin explicitly, pass `-g` to ExifTool (`exiftool -g -j <file>`) when debugging.
 
 This path also covers the XMP that `exiftool` extracts from RAW, HEIC, and video containers — so **all XMP support beyond a handful of sidecar fields depends on ExifTool being enabled**. If `PHOTOPRISM_DISABLE_EXIFTOOL` is set, embedded XMP is not indexed.
 
@@ -29,7 +29,7 @@ When the indexer encounters a standalone `.xmp` file (see `internal/photoprism/i
 - `internal/meta/xmp.go` — entry point `meta.XMP(fileName)`; assigns a fixed set of values to `meta.Data`.
 - `internal/meta/xmp_document.go` — hard-coded Go struct with `encoding/xml` tags, plus accessor methods such as `Title()`, `Description()`, and `Keywords()`.
 
-This reader is an **initial, proof-of-concept implementation** that only recognises a small subset of the fields the ExifTool-backed path covers. It supports only actual `.xmp` sidecar files and does **not** read XMP that is embedded in another media file.
+This reader is an **initial, proof-of-concept implementation** that only recognizes a small subset of the fields the ExifTool-backed path covers. It supports only actual `.xmp` sidecar files and does **not** read XMP that is embedded in another media file.
 
 Unlike the ExifTool-driven path — where each `Data` field lists an ordered set of acceptable keys in its `meta:"..."` struct tag and the first non-empty value wins — the direct sidecar reader has **no namespace-priority mechanism**. Each accessor in [`xmp_document.go`](https://github.com/photoprism/photoprism/blob/develop/internal/meta/xmp_document.go) looks up exactly one element (for example, `dc:title` for `Title`, `tiff:Model` for `CameraModel`, `dc:rights` for `Copyright`). The only fallbacks that currently exist are intra-element — specifically, choosing between the XMP `rdf:Alt`/`rdf:li` language-tagged value and a plain chardata value for `dc:title` and `dc:description`. The `xmp:"..."` struct tags on `meta.Data` fields *look* like a namespace-priority list but are currently only consumed by `internal/meta/report.go` for the developer field report — not by the XMP reader itself.
 
@@ -98,7 +98,7 @@ Pull requests that extend the supported field set (or replace the reader with a 
 
 PhotoPrism currently supports Darktable and RawTherapee as RAW image converters (as well as Sips on macOS). Darktable fully supports XMP sidecar files; RawTherapee only partially. XMP is a container format, so the fields (namespaces) used to describe how an image should be rendered differ between Lightroom/Photoshop, Darktable, and RawTherapee — an application that "supports XMP" in general may still be unable to interpret edits written by another vendor.
 
-From our experience, some basic edits done with Adobe tools — such as cropping — can survive conversion with Darktable, while advanced edits like lens or colour corrections usually do not.
+From our experience, some basic edits done with Adobe tools — such as cropping — can survive conversion with Darktable, while advanced edits like lens or color corrections usually do not.
 
 [Learn more ›](../media/raw.md)
 

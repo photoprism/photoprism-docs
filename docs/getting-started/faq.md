@@ -72,7 +72,7 @@ impossible - to provide full support.
 PhotoPrism handles XMP through two separate code paths. **XMP embedded in media files is indexed via [ExifTool](https://exiftool.org/)**,
 which flattens XMP, Exif, and IPTC into a single JSON document that the indexer then reads; PhotoPrism never parses the embedded
 XML directly. If ExifTool is disabled, embedded XMP is not indexed. **Standalone `.xmp` sidecar files are read by a built-in
-proof-of-concept XML reader** that does *not* use ExifTool and currently recognises only a limited set of fields
+proof-of-concept XML reader** that does *not* use ExifTool and currently recognizes only a limited set of fields
 (title, caption, creator/artist, copyright, keywords, capture date, camera make/model, lens model, and the F-Stop favorite flag).
 See the [XMP developer guide](../developer-guide/metadata/xmp.md) for the full field list, the associated namespaces, and known
 limitations. [Contributions are welcome](../developer-guide/metadata/xmp.md).

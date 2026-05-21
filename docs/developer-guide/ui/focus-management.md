@@ -73,7 +73,7 @@ Vuetify dialogs are teleported to the overlay container, so consistent refs and 
 
 3. **Avoid per-dialog traps unless necessary**
 
-   Only add local `@focusout` handlers if a dialog needs custom behaviour. If you do, always call `ev.preventDefault()` when you redirect focus so you do not fight the global handler.
+   Only add local `@focusout` handlers if a dialog needs custom behavior. If you do, always call `ev.preventDefault()` when you redirect focus so you do not fight the global handler.
 
 ## Keyboard Event Handling
 
@@ -138,8 +138,8 @@ onKeyDown(ev) {
 ```
 
 - Implement `onShortCut(ev)` on pages or dialogs when you need to react to Ctrl / ⌘ combinations or global Escape handling. The helper only forwards events where `ev.ctrlKey` or `ev.metaKey` is `true`, or the Escape key is pressed, so it cannot be repurposed for arbitrary keys.
-- Persistent dialogs that must suppress Vuetify’s rejection animation should still attach a direct `@keydown.esc.exact` handler; `onShortCut(ev)` alone does not override the built-in dialog behaviour.
-- Return `true` from `onShortCut(ev)` after handling a shortcut to signal `preventDefault()`. Return `false` to fall back to the browser’s native behaviour.
+- Persistent dialogs that must suppress Vuetify’s rejection animation should still attach a direct `@keydown.esc.exact` handler; `onShortCut(ev)` alone does not override the built-in dialog behavior.
+- Return `true` from `onShortCut(ev)` after handling a shortcut to signal `preventDefault()`. Return `false` to fall back to the browser’s native behavior.
 
 ## Example: Confirmation Dialog
 
@@ -222,7 +222,7 @@ This pattern ensures:
 **Custom focusout handler keeps fighting the trap**
 
 - [ ] Make sure the handler checks `this.$view.isActive(this)` and calls `ev.preventDefault()` when redirecting focus.
-- [ ] Consider removing the custom handler if the global trap already matches the desired behaviour.
+- [ ] Consider removing the custom handler if the global trap already matches the desired behavior.
 
 **Nested dialogs (dialog inside dialog)**
 

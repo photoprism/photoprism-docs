@@ -40,9 +40,9 @@ make docker-build
 docker compose up
 ```
 
-*This environment is for testing and development purposes only — do not use it in production. The examples below assume [Docker Compose v2](../getting-started/troubleshooting/docker.md#docker-compose) (the `docker compose` plugin); on Red Hat-compatible distributions you can also use [`podman-compose`](../getting-started/troubleshooting/docker.md#podman-compose) as a drop-in replacement.*
+*This environment is for testing and development purposes only — do not use it in production. The command examples assume [Docker Compose v2](../getting-started/troubleshooting/docker.md#docker-compose) (the `docker compose` plugin); on Red Hat-compatible distributions you can also use [`podman-compose`](../getting-started/troubleshooting/docker.md#podman-compose) as a drop-in replacement.*
 
-If you want to change the default ports, bind services to a specific host interface, run multiple checkouts side-by-side, or enable optional services such as PostgreSQL, Qdrant, Ollama, or Keycloak, copy [`.env.example`](https://github.com/photoprism/photoprism/blob/develop/.env.example) to `.env` in the project root and uncomment the variables you want to override. See [Optional: Customize the Build Environment](#optional-customize-the-build-environment) below for an overview of the supported variables, optional services, and default ports.
+If you want to change the default ports, bind services to a specific host interface, run multiple checkouts side-by-side, or enable optional services such as PostgreSQL, Ollama, or Keycloak, copy [`.env.example`](https://github.com/photoprism/photoprism/blob/develop/.env.example) to `.env` in the project root and uncomment the variables you want to override. See [Optional: Customize the Build Environment](#optional-customize-the-build-environment) below for an overview of the supported variables, optional services, and default ports.
 
 ### Step 3: Install the Dependencies and Start Developing
 
@@ -93,7 +93,7 @@ make watch-js
 
 ### Optional: Customize the Build Environment
 
-The development environment reads optional overrides from a `.env` file in the project root, next to `compose.yaml`. To enable, copy [`.env.example`](https://github.com/photoprism/photoprism/blob/develop/.env.example) to `.env` and uncomment the variables you want to change. This is useful when you need to free up port 80/443 on the host, restrict service ports to a specific interface, run several checkouts of the repository in parallel, or start optional services like PostgreSQL, Qdrant, Ollama, or Keycloak by default.
+The development environment reads optional overrides from a `.env` file in the project root, next to `compose.yaml`. To enable, copy [`.env.example`](https://github.com/photoprism/photoprism/blob/develop/.env.example) to `.env` and uncomment the variables you want to change. This is useful when you need to free up port 80/443 on the host, restrict service ports to a specific interface, run several checkouts of the repository in parallel, or start optional services like PostgreSQL, Ollama, or Keycloak by default.
 
 #### Supported Variables
 

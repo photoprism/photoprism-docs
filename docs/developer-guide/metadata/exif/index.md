@@ -124,7 +124,7 @@ These are the EXIF-reader quirks that most commonly surprise developers when deb
 - **IFD0 wins over IFD1.** When the same tag appears in both the primary IFD and the embedded-thumbnail IFD, PhotoPrism keeps the IFD0 value — see issue [#2231](https://github.com/photoprism/photoprism/issues/2231).
 - **Numeric model names are discarded.** `CameraModel`, `CameraMake`, `LensMake`, and `LensModel` are skipped when the value parses as an unsigned integer (seen in the wild from broken exporters).
 - **Orientation defaults to `1`** when no tag is present; a missing orientation does not block indexing.
-- **GPS derives the time zone** even when the EXIF block contains an explicit offset tag (`OffsetTime`, `OffsetTimeOriginal`, `OffsetTimeDigitized`) — those offset tags are consumed later by the ExifTool path via `Data.TimeOffset`.
+- **GPS derives the time zone** in Stage 1; explicit offset tags (`OffsetTime`, `OffsetTimeOriginal`, `OffsetTimeDigitized`) are consumed later by the Stage 2 ExifTool path via `Data.TimeOffset` and may refine it.
 - **Sub-second precision** is merged back into `TakenAt` and `TakenAtLocal` after time zone resolution.
 - **`ImageUniqueID` becomes `DocumentID`**, which in turn governs file stacking — if a RAW and a JPEG share an `ImageUniqueID`, PhotoPrism stacks them.
 - **`Flash` keyword** is only added when the EXIF flash flag's low bit is `1` (flash actually fired), not just when the flag is present.

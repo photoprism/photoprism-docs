@@ -28,7 +28,7 @@ Details:
 
 ### Multiple Values ###
 
-List are lines that start at the same indentation level and begin with a dash and a space as shown in the example below. They are commonly used to define service dependencies, exposed network ports, or folders shared between host and container in `compose.yaml` files:
+Lists are lines that start at the same indentation level and begin with a dash and a space as shown in the example below. They are commonly used to define service dependencies, exposed network ports, or folders shared between host and container in `compose.yaml` files:
 
 ```yaml
 services:

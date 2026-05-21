@@ -193,6 +193,6 @@ The following [OWASP® Web Application Security](https://owasp.org/www-project-w
 
 ## OpenSSF Security Criteria
 
-The [Open Source Security Foundation](https://bestpractices.coreinfrastructure.org/en/) maintains standardized security criteria and best practices for open-source projects:
+The [Open Source Security Foundation](https://www.bestpractices.dev/en/) maintains standardized security criteria and best practices for open-source projects:
 
-<a href="https://bestpractices.coreinfrastructure.org/projects/6132" target="_blank"><img src="openssf.png" alt="OpenSSF Best Practices" class="center pt-2 small"></a>
+<a href="https://www.bestpractices.dev/projects/6132" target="_blank"><img src="openssf.png" alt="OpenSSF Best Practices" class="center pt-2 small"></a>

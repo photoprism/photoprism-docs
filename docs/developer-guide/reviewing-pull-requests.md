@@ -133,7 +133,7 @@ git checkout pr5297-merge
 This:
 
 - Fetches `refs/pull/5297/merge` from `origin`,
-- Creates (or updates) a local branch named `pr5297-merge` that contains the *merged- result.
+- Creates (or updates) a local branch named `pr5297-merge` that contains the *merged* result.
 
 You can then check if the merge builds and passes tests:
 

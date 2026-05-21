@@ -7,13 +7,15 @@
 ### Go ###
 To run all unit tests, type `make test` or `go test ./internal/...` in a terminal.
 
-These `make` targets are currently defined for tests:
+The following `make` targets are currently defined for tests:
 
-- `test`: Executes all tests found in a) */internal* with a timeout of 20 min and verbose output and b) *frontend/tests/unit*
-- `test-short`: Executes only fast tests found in */internal* with a timeout of 5 min and verbose output
-- `test-race`: Same as `test` but with race condition detector (much slower) and higher timeout of 60 min
-- `test-codecov`: Same as `test` but creates a coverage log in *coverage.txt* and sends it to [Codecov](https://codecov.io/gh/photoprism/photoprism) (don't use it locally)
-- `test-coverage`: Same as `test` but creates a *coverage.txt* file as well as a human-readable report in *coverage.html*; timeout is elevated to 30 min
+- `test`: Executes all Go (`/internal`, `/pkg`) and JavaScript (`frontend/tests`) unit tests with a 20 min timeout and verbose output
+- `test-go`, `test-js`: Run the Go or JavaScript unit tests on their own
+- `test-short`: Executes only fast Go tests with a 5 min timeout
+- `test-race`: Same as `test-go` but with the race condition detector enabled (much slower) and a 60 min timeout
+- `test-coverage`: Same as `test-go` but creates a *coverage.txt* file and a human-readable *coverage.html* report; timeout is elevated to 30 min
+- `test-mariadb`: Runs the Go tests against a MariaDB instance instead of SQLite
+- Subset targets for focused runs: `test-pkg`, `test-api`, `test-ai`, `test-entity`, `test-commands`, `test-photoprism`, `test-hub`, `test-video`
 
 You can run single tests via `go test -run` in a package directory, e.g. */internal/photoprism*:
 
@@ -21,7 +23,7 @@ You can run single tests via `go test -run` in a package directory, e.g. */inter
 $ go test -run NameOfTest
 ```
 
-See [docs](https://golang.org/pkg/testing/#hdr-Subtests_and_Sub_benchmarks) for more info.
+See [docs](https://pkg.go.dev/testing#hdr-Subtests_and_Sub_benchmarks) for more info.
 
 #### Test Frameworks ####
 
@@ -29,7 +31,7 @@ Go comes with a cool testing framework, it allows you to write test code using t
 
 Todo: Use a SQL mock driver to test database interactions, for example https://github.com/DATA-DOG/go-sqlmock.
 
-#### Slow Tests ###
+### Slow Tests ###
 
 Slow tests and benchmarks can be skipped using the `-short` flag:
 
@@ -47,7 +49,7 @@ To execute:
 ```
 go test -short
 ```
-### Javascript ###
+### JavaScript ###
 To run all JavaScript unit tests, type `make test-js` in a terminal.
 
 Alternatively, from the `frontend` directory, run `npm run test`.
@@ -89,7 +91,7 @@ Test coverage output is saved to *frontend/coverage/index.html*.
 
 
 #### Test Frameworks ####
-To test JavaScript code we use [Vitest](https://vitest.dev/) together with [Vite](https://vitejs.dev/), [jsdom](https://github.com/jsdom/jsdom), [Vue Test Utils](https://test-utils.vuejs.org/), and [`@vitest/coverage-v8`](https://vitest.dev/guide/coverage.html).
+To test JavaScript code we use [Vitest](https://vitest.dev/) together with [Vite](https://vite.dev/), [jsdom](https://github.com/jsdom/jsdom), [Vue Test Utils](https://test-utils.vuejs.org/), and [`@vitest/coverage-v8`](https://vitest.dev/guide/coverage.html).
 
 ## Acceptance Tests ##
 

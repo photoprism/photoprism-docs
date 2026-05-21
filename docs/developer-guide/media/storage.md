@@ -10,7 +10,7 @@ We may eventually want to add a filesystem abstraction e.g. to speed up testing 
 
 ## Related GitHub Issues
 
-- [Support for cloud storage with encryption](https://github.com/photoprism/photoprism/issues/93#)
+- [Support for cloud storage with encryption](https://github.com/photoprism/photoprism/issues/93)
 - [Embedded Database + Bleve for search? #55](https://github.com/photoprism/photoprism/issues/55)
 - [Postgres support? #47](https://github.com/photoprism/photoprism/issues/47)
 

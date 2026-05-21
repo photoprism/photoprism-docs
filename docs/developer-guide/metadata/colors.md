@@ -1,6 +1,6 @@
 # Color Detection
 
-Color detection is performed while indexing using [a 3x3 thumbnail](../media/thumbnails.md#standard-sizes) that covers the top, bottom, and center of an image e.g. <https://demo.photoprism.app/library/browse?color=green>.
+Color detection is performed while indexing by sampling [a 3x3 thumbnail](../media/thumbnails.md#standard-sizes) of each image — a nine-cell grid covering its corners, edges, and center, e.g. <https://demo.photoprism.app/library/browse?color=green>.
 
 ## Standard Colors
 

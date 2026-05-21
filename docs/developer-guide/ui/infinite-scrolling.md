@@ -2,7 +2,7 @@ PhotoPrism’s library pages create the illusion of “infinite” content by co
 
 ## Progressive Loading
 
-Route components such as [`frontend/src/page/photos.vue`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/page/photos.vue), [`frontend/src/page/albums.vue`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/page/albums.vue), or [`frontend/src/page/library/labels.vue`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/page/library/labels.vue) fetch content through the REST models in [`frontend/src/model/`](https://github.com/photoprism/photoprism/tree/develop/frontend/src/model) (`Photo`, `Label`, `Album`, …). Each model inherits batching helpers from [`frontend/src/model/rest.js`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/model/rest.js), so `Model.batchSize()` defines how many entities we request per round trip.
+Route components such as [`frontend/src/page/photos.vue`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/page/photos.vue), [`frontend/src/page/albums.vue`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/page/albums.vue), or [`frontend/src/page/labels.vue`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/page/labels.vue) fetch content through the REST models in [`frontend/src/model/`](https://github.com/photoprism/photoprism/tree/develop/frontend/src/model) (`Photo`, `Label`, `Album`, …). Each model inherits batching helpers from [`frontend/src/model/rest.js`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/model/rest.js), so `Model.batchSize()` defines how many entities we request per round trip.
 
 Pages pass a `loadMore` callback into `<p-scroll>` ([`frontend/src/component/scroll.vue`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/component/scroll.vue)). That component listens to global scroll events and triggers `loadMore()` when the remaining scroll distance is smaller than `loadDistance` (defaults to roughly four viewports). The page component then:
 
@@ -14,7 +14,7 @@ Pages pass a `loadMore` callback into `<p-scroll>` ([`frontend/src/component/scr
 Tuning tips:
 
 - Use larger batches for cards and mosaic views (hundreds of photos) to amortize request overhead; list view can use smaller batches.
-- Adjust `scrollDistance` and `batchSize` together. If one grows and the other stays tiny, the UI either loads too much data early or stalls because `loadMore` fires too late.
+- Adjust `loadDistance` and `batchSize` together. If one grows and the other stays tiny, the UI either loads too much data early or stalls because `loadMore` fires too late.
 - The `PScroll` component throttles calls via a `wait` flag. Keep the logic there instead of sprinkling additional throttles in every page component.
 
 ## Virtualized Rendering
@@ -47,7 +47,7 @@ This technique keeps DOM size relatively flat without forcing us to rearchitect 
 
 - Prefer raw HTML elements for repeated nodes. For instance, cards view uses `<button>` with utility classes instead of `<v-btn>` to avoid Vuetify reactivity overhead.
 - Use Vue conditionals (`v-if` / `v-else`) to strip unused DOM rather than toggling `display: none`.
-- Memoize expensive getters in the models. Photo methods such as `getDateString()` use [`memoize-one`](https://www.npmjs.com/package/memoize-one)` so scrolling through thousands of cards doesn’t recalculate unchanged metadata on every frame. Keep memoized helpers pure.
+- Memoize expensive getters in the models. Photo methods such as `getDateString()` use [`memoize-one`](https://www.npmjs.com/package/memoize-one) so scrolling through thousands of cards doesn’t recalculate unchanged metadata on every frame. Keep memoized helpers pure.
 - Avoid inline arrow functions in templates for frequently rendered props; compute derived state in `computed` properties once per render.
 
 ### Memoization in Practice
@@ -93,7 +93,7 @@ When implementing a new infinite-scrolling view:
 1. Define a batch-friendly model in [`frontend/src/model/`](https://github.com/photoprism/photoprism/tree/develop/frontend/src/model) (if one does not exist yet).
 2. Build the route/page that owns the filters, fetch state, and `loadMore` callback.
 3. Create a child view component that renders the list and wires in the virtualization helper.
-4. Ensure `$view.saveRestoreState` keeps scroll/restored data intact when navigating back.
+4. Use `$view.saveWindowScrollPos()` / `restoreWindowScrollPos()` so scroll position is preserved when navigating back.
 5. Test on low-powered hardware or throttled browsers to confirm placeholders stay ahead of the user while scrolling quickly.
 
 Following these patterns keeps the UI responsive even with very large libraries.

@@ -4,14 +4,14 @@ For an introduction please read [Understanding Tensorflow using Go](https://pgal
 
 The TensorFlow API for Go is well suited to loading existing models and executing them within a Go application. It requires the [TensorFlow C library](https://www.tensorflow.org/install/lang_c) to be installed. A full TensorFlow installation is not needed.
 
-It is not possible to statically link against the C library, but the [issue is known](https://github.com/tensorflow/tensorflow/issues/15563) and there might be a [fix later this year](https://github.com/bazelbuild/bazel/issues/1920).
+It is not possible to statically link against the C library; the [issue is known](https://github.com/tensorflow/tensorflow/issues/15563) and tracked upstream in [bazelbuild/bazel#1920](https://github.com/bazelbuild/bazel/issues/1920).
 
 ## Vision ##
 
 Our long-term goal is to become an open platform for machine learning research based on real-world photo collections.
 
 ## External Resources ##
-- https://tfhub.dev/ - TensorFlow Hub is a library for reusable machine learning modules
+- https://www.kaggle.com/models/ - TensorFlow Hub is a library for reusable machine learning modules
 - https://www.tensorflow.org/install/lang_c - TensorFlow for C
 - http://www.asimovinstitute.org/neural-network-zoo/ - types of neural networks explained
 - http://playground.tensorflow.org/ - Experiment with neural networks in your browser

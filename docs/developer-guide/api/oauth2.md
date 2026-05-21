@@ -103,13 +103,12 @@ Besides using the API endpoints provided for this, you can also generate valid [
 ## Documentation Examples
 
 - https://learn.microsoft.com/en-us/machine-learning-server/operationalize/how-to-manage-access-tokens
-- https://docs.semui.co/administration-guide/openid
 - https://api.stackexchange.com/docs/authentication
 - https://dev.fitbit.com/build/reference/web-api/developer-guide/authorization/
 - https://cloudentity.com/developers/basics/oauth-client-authentication/client-secret-authentication/
 - https://developer.okta.com/docs/reference/api/oidc/#get-started
-- https://www.authelia.com/configuration/identity-providers/open-id-connect/
-- https://goauthentik.io/integrations/sources/oauth/#openid-connect
+- https://www.authelia.com/integration/openid-connect/introduction/
+- https://integrations.goauthentik.io/sources/oauth/
 - https://developers.google.com/identity/openid-connect/openid-connect
 - https://connect2id.com/products/server/docs/api
 - https://connect2id.com/products/server/docs/api/discovery

@@ -107,7 +107,7 @@ The following overview shows the name, dimensions, and aspect ratio for each thu
 | fit_3840  |  3840 |   2400 | Preserved    | Optional  | 4K Ultra HD       |
 | fit_4096  |  4096 |   4096 | Preserved    | On-Demand | DCI 4K, Retina 4K |
 | fit_5120  |  5120 |   5120 | Preserved    | On-Demand | Retina 5K         |
-| fit_7680  |  7680 |   4320 | Preserved    | On-Demand | 8K Ultra HD 2     |
+| fit_7680  |  7680 |   4320 | Preserved    | On-Demand | 8K Ultra HD       |
 
 ↪ [`internal/thumb/sizes.go`](https://github.com/photoprism/photoprism/blob/develop/internal/thumb/sizes.go)
 

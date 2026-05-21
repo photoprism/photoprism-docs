@@ -55,9 +55,9 @@ The numbers used to specify the image orientation are defined as follows:
 2. = 0 degrees, mirrored: image has been flipped back-to-front.
 3. = 180 degrees: image is upside down.
 4. = 180 degrees, mirrored: image has been flipped back-to-front and is upside down.
-5. = 90 degrees: image has been flipped back-to-front and is on its side.
-6. = 90 degrees, mirrored: image is on its side.
-7. = 270 degrees: image has been flipped back-to-front and is on its far side.
-8. = 270 degrees, mirrored: image is on its far side.
+5. = 270 degrees, mirrored: image has been flipped back-to-front and is on its far side.
+6. = 90 degrees: image is on its side.
+7. = 90 degrees, mirrored: image has been flipped back-to-front and is on its side.
+8. = 270 degrees: image is on its far side.
 
 [Learn more ›](https://sirv.com/help/articles/rotate-photos-to-be-upright/)

@@ -1,7 +1,5 @@
 # Secure Coding in Go
 
-<img src="cover.jpg" alt="Book Cover" class="right w25">
-
 [The Go Language: Web Application Secure Coding Practices][12] is a book written for anyone who is using the [Go Programming Language][1] and aims to use it for Web development.
 
 You can download it in the following formats:

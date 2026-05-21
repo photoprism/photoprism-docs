@@ -44,11 +44,11 @@ The costs are currently fully covered by us for all users, including non-sponsor
 
 ## Location Data ##
 
-See: [internal/maps/location.go](https://github.com/photoprism/photoprism/blob/develop/internal/photoprism/location.go)
+See: [internal/photoprism/location.go](https://github.com/photoprism/photoprism/blob/develop/internal/photoprism/location.go)
 
 ## World Maps ##
 
-PhotoPrism also includes six [high-resolution world maps](https://try.photoprism.app/library/places) that allow you to browse photos by location, see [Web User Interface > Interactice Maps](../ui/maps.md). Visit [try.photoprism.app/library/places](https://try.photoprism.app/library/places) to try them on our demo.
+PhotoPrism also includes six [high-resolution world maps](https://try.photoprism.app/library/places) that allow you to browse photos by location, see [Web User Interface > Interactive Maps](../ui/maps.md). Visit [try.photoprism.app/library/places](https://try.photoprism.app/library/places) to try them on our demo.
 
 ## Related Resources ##
 

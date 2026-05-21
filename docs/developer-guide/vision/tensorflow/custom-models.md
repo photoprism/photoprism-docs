@@ -1,6 +1,6 @@
 # Custom TensorFlow Models 
 
-As an alternative to the [built-in model](index.md), PhotoPrism lets you configure custom more powerful TensorFlow models for image classification.
+As an alternative to the [built-in model](index.md), PhotoPrism lets you configure more powerful custom TensorFlow models for image classification.
 ## Step 1: Mount model folder
 In your compose.yaml file add a volume mount for a model folder.
 
@@ -31,7 +31,7 @@ It should now contain the following:
 - [vision-transformer-tensorflow2-vit-b16-classification-v1](https://www.kaggle.com/models/spsayakpaul/vision-transformer)
 - [inception-v3-tensorflow2-classification-v2](https://www.kaggle.com/models/google/inception-v3)
 
-In our tests, the Vision Transformer model achieved the best accuracy. Inception V3 was faster and may better suited to low-power devices it produced more labels and had a higher error rate; it still outperformed the built-in NASNet model.
+In our tests, the Vision Transformer model achieved the best accuracy. Inception V3 was faster and may be better suited to low-power devices; it produced more labels and had a higher error rate, but still outperformed the built-in NASNet model.
 
 ## Step 3: Configure PhotoPrism
 

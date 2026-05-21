@@ -2,7 +2,7 @@
 
 The Go client linked below is a third-party project and not part of the core PhotoPrism repository:
 
-- https://github.com/kris-nova/photoprism-client-go
+- https://github.com/krisnova/photoprism-client-go
 
 Before using it in production, verify that the endpoints, request formats, and authentication flow still match the current server version. Our own source of truth for API behavior remains the generated [Swagger API Documentation](../docs.md) together with [`internal/api/swagger.json`](https://github.com/photoprism/photoprism/blob/develop/internal/api/swagger.json).
 

@@ -165,15 +165,13 @@ including `gofmt`, `go vet`, `go lint` and `gocyclo`. If you find this helpful a
 
 ## Security Best Practices ##
 
-The [Open Source Security Foundation](https://bestpractices.coreinfrastructure.org/en/) (OpenSSF) maintains standardized security criteria and best practices for open-source projects:
+The [Open Source Security Foundation](https://www.bestpractices.dev/en/) (OpenSSF) maintains standardized security criteria and best practices for open-source projects:
 
-<a href="https://bestpractices.coreinfrastructure.org/projects/6132" target="_blank"><img src="/developer-guide/security/openssf.png" alt="OpenSSF Best Practices" class="center pt-2 small"></a>
+<a href="https://www.bestpractices.dev/projects/6132" target="_blank"><img src="/developer-guide/security/openssf.png" alt="OpenSSF Best Practices" class="center pt-2 small"></a>
 
 [View Security Testing Guide ›](security/index.md)
 
 [goreport]: https://goreportcard.com/report/github.com/photoprism/photoprism
-[codacy]: https://www.codacy.com/project/lastzero/photoprism/dashboard
-[codecov]: https://codecov.io/gh/photoprism/photoprism
 
 [^1]: Allen Holub, [*twitter.com/allenholub/status/1073738216140791808*](https://twitter.com/allenholub/status/1073738216140791808), 2018
 [^2]: Robert C. Martin, [*Clean Code: A Handbook of Agile Software Craftsmanship*](https://www.amazon.com/-/dp/0132350882/), 2009

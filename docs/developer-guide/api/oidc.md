@@ -57,7 +57,7 @@ https://{hostname}/api/v1/oidc/redirect
 
 ### Local Development
 
-Our [development environment](../setup.md) comes with a [pre-configured Keycloak](https://github.com/photoprism/photoprism/blob/develop/compose.yaml#L217-L243) OIDC Identity Provider running at <https://keycloak.localssl.dev/> for local testing:
+Our [development environment](../setup.md) comes with a [pre-configured Keycloak](https://github.com/photoprism/photoprism/blob/develop/compose.yaml) OIDC Identity Provider running at <https://keycloak.localssl.dev/> for local testing:
 
 - <https://keycloak.localssl.dev/realms/master/.well-known/openid-configuration>
 

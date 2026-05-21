@@ -30,7 +30,7 @@ In order for us to investigate [new bug reports](https://www.photoprism.app/kb/r
 A template for creating bug reports can be found at [photoprism.app/kb/reporting-bugs](https://www.photoprism.app/kb/reporting-bugs). We kindly ask you not to report bugs via [GitHub Issues](issues.md) **unless you are certain to have found a fully reproducible and previously unreported issue** that must be fixed directly in the app.
 
 !!! example ""
-    When [browsing issues](https://github.com/photoprism/photoprism/issues), please note that **our team and all issue subscribers receive an email notification** from GitHub whenever a new comment is added, so these should only be used for sharing important information and not for [discussions, questions](https://github.com/photoprism/photoprism/discussions), or [expressing personal opinions](https://www.photoprism.app/code-of-conduct).Thank you very much!
+    When [browsing issues](https://github.com/photoprism/photoprism/issues), please note that **our team and all issue subscribers receive an email notification** from GitHub whenever a new comment is added, so these should only be used for sharing important information and not for [discussions, questions](https://github.com/photoprism/photoprism/discussions), or [expressing personal opinions](https://www.photoprism.app/code-of-conduct). Thank you very much!
 
 ## Submitting Pull Requests ##
 
@@ -48,7 +48,7 @@ Our project infrastructure is provided by the following companies:
 
 - [**GitHub**](https://github.com/) hosts our [code repositories](https://github.com/photoprism/photoprism) and also provides many other important services
 - [**Docker**](https://www.docker.com/) approved us for their [Open Source Program](https://www.docker.com/community/open-source/application/) and hosts all of our app images
-- [**Element**](https://element.io/) develops and [operates the infrastructure](https://matrix.org/) that our [community chat](https://link.photoprism.app/chat) is based on
+- [**Element**](https://element.io/) develops the [Matrix](https://matrix.org/) chat platform that our [community chat](https://link.photoprism.app/chat) is built on
 - [**BrowserStack**](https://www.browserstack.com/) provides [free access](https://www.browserstack.com/open-source) to their device and browser testing infrastructure
 
 [View Sponsors ›](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md){ class="pr-3 block-xs" } [View Credits ›](../credits.md)

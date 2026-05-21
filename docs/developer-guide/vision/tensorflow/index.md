@@ -26,7 +26,7 @@ After editing or adding labels in [rules.yml](https://github.com/photoprism/phot
 
 ## Pre-trained Models ##
 
-See also: [TensorFlow Hub](https://tfhub.dev/)
+See also: [TensorFlow Hub](https://www.kaggle.com/models/)
 
 Source: https://github.com/tensorflow/models/blob/master/research/slim/README.md
 
@@ -104,9 +104,7 @@ $ rm inception_v3_2016_08_28.tar.gz
 DELF: DEep Local Features
  - https://github.com/tensorflow/models/tree/master/research/delf - Tensorflow implementation
 
-![https://gitcdn.xyz/cdn/Tony607/blog_statics/ce9c3391932e24655b78e27a54543f28f11f3af0/images/landmark/query.jpg](../../metadata/img/landmark-query.jpg)
-
-Source: https://gitcdn.xyz/cdn/Tony607/blog_statics/ce9c3391932e24655b78e27a54543f28f11f3af0/images/landmark/query.jpg
+![DELF landmark query example](../../metadata/img/landmark-query.jpg)
 
 ## Types of neural networks ##
 
@@ -115,7 +113,7 @@ Source: http://www.asimovinstitute.org/neural-network-zoo/
 
 ## External Resources ##
 
-- https://ai.facebook.com/blog/roberta-an-optimized-method-for-pretraining-self-supervised-nlp-systems/ - An optimized method for pretraining self-supervised NLP systems
+- https://ai.meta.com/blog/roberta-an-optimized-method-for-pretraining-self-supervised-nlp-systems/ - An optimized method for pretraining self-supervised NLP systems
 - https://github.com/zihangdai/xlnet - Generalized Autoregressive Pretraining for Language Understanding
 - https://pjreddie.com/darknet/yolo/ - real time image detection
 - https://pjreddie.com/darknet/imagenet/ - using use Darknet to classify images
@@ -130,6 +128,6 @@ Source: http://www.asimovinstitute.org/neural-network-zoo/
 - https://www.wikidata.org/wiki/Wikidata:Database_download
 - https://github.com/ropensci/wikitaxa
 - https://datahub.io/collections/yago - YAGO3 is a huge semantic knowledge base, derived from Wikipedia WordNet and GeoNames
-- [Google AI Blog: Improving Inception and Image Classification in TensorFlow](https://ai.googleblog.com/2016/08/improving-inception-and-image.html)
+- [Google AI Blog: Improving Inception and Image Classification in TensorFlow](https://research.google/blog/improving-inception-and-image-classification-in-tensorflow/)
 - [CNN Architectures: LeNet, AlexNet, VGG, GoogLeNet, ResNet and more](https://medium.com/@sidereal/cnns-architectures-lenet-alexnet-vgg-googlenet-resnet-and-more-666091488df5)
 - [Gildas Chabot - AI image search with Go & Tensorflow](https://dl.photoprism.app/pdf/slides/20190202-Image_Search_with_Go_and_TensorFlow.pdf) (slides)

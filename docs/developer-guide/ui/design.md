@@ -20,7 +20,7 @@ The context menu at the bottom right should use a color spectrum for the individ
 
 Vuetify is configured to use Material Design Icons (MDI) through [`frontend/src/app.js`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/app.js) and [`frontend/src/options/themes.js`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/options/themes.js). Stick to Google’s Material icon set unless a feature requires a bespoke pictogram; mixing icon packs makes the UI look inconsistent and adds extra font downloads.
 
-- https://material.io/resources/icons/
+- https://fonts.google.com/icons
 - https://jossef.github.io/material-design-icons-iconfont/
 
 ## Inspirational Quotes

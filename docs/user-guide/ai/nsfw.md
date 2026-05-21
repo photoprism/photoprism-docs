@@ -31,7 +31,7 @@ Once the dedicated NSFW model entry is configured, it runs whenever `PHOTOPRISM_
 !!! info ""
     The built-in TensorFlow NSFW model is small and fast and ships with every PhotoPrism image. There is no need to configure an LLM-based replacement unless you want to.
 
-### NSFW Detection Using Labels
+### Using a Labels Model
 
 When `Type: labels` is served by [Ollama](using-ollama.md) or the [OpenAI API](using-openai.md), PhotoPrism can ask the model to include NSFW classification in the same response, avoiding a second inference pass. This shortcut is **experimental** and gated by two environment variables that must **both** be set to `true`:
 

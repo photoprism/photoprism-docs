@@ -626,7 +626,7 @@ PhotoPrism® Plus
 ### May 13, 2023
 <span class="build">Build 230513-0b780defb</span>
 
-As [promised](https://twitter.com/photoprism_app/status/1632036907419877377), this update makes hardware transcoding and many other config options available to all users. [A big thank you to all of our contributors, members, and sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md), whose generous support has been and continues to be essential to the success of the project! :octicons-heart-fill-24:{ .heart .purple }
+As [promised](https://x.com/photoprism_app/status/1632036907419877377), this update makes hardware transcoding and many other config options available to all users. [A big thank you to all of our contributors, members, and sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md), whose generous support has been and continues to be essential to the success of the project! :octicons-heart-fill-24:{ .heart .purple }
 
 What's new?
 
@@ -655,7 +655,7 @@ What's new?
 ### May 2, 2023
 <span class="build">Build 230502-c405f6eff</span>
 
-With this major new release, you'll get a long list of new features and enhancements with a focus on [performance](https://twitter.com/photoprism_app/status/1628850699772600323), [security](https://twitter.com/photoprism_app/status/1651596098249662465), and [file type support](https://www.photoprism.app/kb/file-formats). In addition, our [Plus Members](https://www.photoprism.app/editions#compare) can now register [directly in the app](https://www.photoprism.app/kb/activation) to unlock additional features like [vector graphics support](https://demo.photoprism.app/library/browse?view=cards&order=added&q=vectors) and a new [admin web UI](https://demo.photoprism.app/library/admin/users) for [user and session management](https://www.photoprism.app/plus/kb/multi-user). Thank you to all [contributors](https://github.com/photoprism/photoprism/graphs/contributors), [members](https://www.photoprism.app/membership), and [sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md) who made this possible!
+With this major new release, you'll get a long list of new features and enhancements with a focus on [performance](https://x.com/photoprism_app/status/1628850699772600323), [security](https://x.com/photoprism_app/status/1651596098249662465), and [file type support](https://www.photoprism.app/kb/file-formats). In addition, our [Plus Members](https://www.photoprism.app/editions#compare) can now register [directly in the app](https://www.photoprism.app/kb/activation) to unlock additional features like [vector graphics support](https://demo.photoprism.app/library/browse?view=cards&order=added&q=vectors) and a new [admin web UI](https://demo.photoprism.app/library/admin/users) for [user and session management](https://www.photoprism.app/plus/kb/multi-user). Thank you to all [contributors](https://github.com/photoprism/photoprism/graphs/contributors), [members](https://www.photoprism.app/membership), and [sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md) who made this possible!
 
 What's new?
 
@@ -1463,7 +1463,7 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
 - Config: [Updated docker-compose.yml examples](https://dl.photoprism.app/docker/)
 - Config: [Added optional gzip compression for built-in web server](getting-started/config-options.md)
 - Config: Limit number of indexing workers to half the number of physical cores by default to 
-  avoid [high load](https://twitter.com/miguelarios_/status/1347775696492503040) on hyper-threading capable CPUs
+  avoid [high load](https://x.com/miguelarios_/status/1347775696492503040) on hyper-threading capable CPUs
 
 ### January 4, 2021
 <span class="build">Build 210104-7f9e806a</span>

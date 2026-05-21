@@ -36,8 +36,8 @@ This gives us the opportunity to [improve our documentation](https://docs.photop
 Issues should include a list of *Acceptance Criteria* that clearly state what is expected.
 We recommend using MAY, SHOULD, and MUST as keywords to indicate priorities.
 
-Clickable [checkboxes](https://help.github.com/articles/about-task-lists/) for each item can be created via
-[GitHub Markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/):
+Clickable [checkboxes](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-tasklists) for each item can be created via
+[GitHub Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax):
 
 ```
 Acceptance Criteria:

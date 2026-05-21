@@ -39,11 +39,9 @@ On a Mac, PhotoPrism can convert multiple files at once using Sips (pre-installe
 ## Comparison of RAW to JPEG converters
 
 - [darktable](https://www.darktable.org/) - popular open-source photography app and raw developer; available for Mac, Linux, and Windows; supports XMP (compatible with photoshop/lightroom?)
-- Mac OS X ships with [sips](https://coderwall.com/p/nhp7mq/convert-raw-photos-to-jpg-in-the-mac-os-terminal): `sips -s format jpeg IMAGE.RAW --out IMAGE.JPG`
-- [Photivo](http://photivo.org/) - open-source photo processor; available for Mac, Linux, and Windows; no XMP support?
+- macOS ships with [sips](https://ss64.com/osx/sips.html): `sips -s format jpeg IMAGE.RAW --out IMAGE.JPG`
 - [RawTherapee](https://rawtherapee.com/) - open-source RAW image processing app; available for Mac, Linux, and Windows; no XMP support?
 - [digiKam](https://www.digikam.org/about/) - open-source digital photo management application based on Qt (KDE); available for Mac, Linux, and Windows; supports XMP (compatible with photoshop/lightroom?)
-- [UFRaw](http://ufraw.sourceforge.net/) - Unidentified Flying Raw is a utility to read and manipulate raw images from digital cameras
 
 | Tool                                                                          | Command line options                                                                                                                               | Compatible OS         | JPG Diff* | XMP support                                          | Possible settings | EXIF Diff* | Compatible with Raspberry (ARM64)                              |
 |-------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------|-----------|------------------------------------------------------|-------------------|------------|----------------------------------------------------------------|

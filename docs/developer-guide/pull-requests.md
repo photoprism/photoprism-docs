@@ -23,18 +23,18 @@ After you submit your first pull request, you will be asked to accept our Contri
 
 #### Fork our repository ####
 
-  * Click the [Fork button](https://help.github.com/articles/working-with-forks/) in the header of our [main repository](https://github.com/photoprism/photoprism)
+  * Click the [Fork button](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks) in the header of our [main repository](https://github.com/photoprism/photoprism)
   * Clone the forked repository on your local computer: 
     * `git clone https://github.com/[your username]/photoprism`
-  * Connect your local to our "upstream" main repository by [adding it as a remote](https://help.github.com/articles/configuring-a-remote-for-a-fork/): 
+  * Connect your local to our "upstream" main repository by [adding it as a remote](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/configuring-a-remote-repository-for-a-fork): 
     * `git remote add upstream https://github.com/photoprism/photoprism.git` 
   * Create a new branch from `develop` - it should have a short and descriptive name (not "patch-1") that does not already exist, for example:
     * `git checkout -b feature/your_feature_name` 
-  * See also https://guides.github.com/activities/forking/
+  * See also https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks
 
 #### Make your changes ####
 
-  * While you are working on it and your pull request is not merged yet, pull in changes from "upstream" often so that you stay up to date and there is a lower risk for [merge conflicts](https://help.github.com/articles/resolving-a-merge-conflict-using-the-command-line/):
+  * While you are working on it and your pull request is not merged yet, pull in changes from "upstream" often so that you stay up to date and there is a lower risk for [merge conflicts](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line):
     * `git fetch upstream`
     * `git merge upstream/develop`
   * We recommend running [tests](https://docs.photoprism.app/developer-guide/tests/) after each change to make sure you didn't break anything:
@@ -51,7 +51,7 @@ After you submit your first pull request, you will be asked to accept our Contri
 
 - [ ] Verify you didn't forget to add / commit files, output of `git status -s` should be empty
 - [ ] Push all commits to your forked remote repository on GitHub:<br>`git push -u origin feature/your_feature_name`
-- [ ] **[Create a pull request](https://help.github.com/articles/creating-a-pull-request/)** with a helpful description of what it does
+- [ ] **[Create a pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request)** with a helpful description of what it does
 - [ ] Wait for us to perform a code review and fix the remaining issues, if any
 - [ ] Update and/or add [documentation](https://docs.photoprism.app/developer-guide/documentation/) if needed
 - [ ] Sign the [Contributor License Agreement (CLA)](#contributor-license-agreement)

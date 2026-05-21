@@ -24,6 +24,5 @@ We may eventually want to add a filesystem abstraction e.g. to speed up testing 
 - [TiDB](https://pingcap.com) - a distributed HTAP database compatible with the MySQL protocol (written in Go)
 - [KSQL](https://github.com/confluentinc/ksql) - the Streaming SQL Engine for Apache Kafka
 - [CockroachDB](https://github.com/cockroachdb/cockroach/) - ultra-resilient SQL for global business (written in Go)
-- [LedisDB](http://ledisdb.com/) - a high performance NoSQL like Redis powered by Go
 - https://github.com/go-pg/pg - Golang ORM with focus on PostgreSQL features and performance
 - https://github.com/go-redis/redis - Type-safe Redis client for Golang

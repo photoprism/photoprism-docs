@@ -72,7 +72,7 @@ PhotoPrism also includes six [high-resolution world maps](https://try.photoprism
 - https://github.com/golang/geo - S2 geometry library in Go
 - https://gist.github.com/antoniomo/3371e44cbe2f0cc75a525aac0d188cfb - example for S2 geometry library
 - https://github.com/tidwall/redcon - Redis compatible server framework (Go)
-- https://github.com/siddontang/ledisdb - a high performance NoSQL DB powered by Go ([homepage](http://ledisdb.com/))
+- https://github.com/siddontang/ledisdb - a high performance NoSQL DB powered by Go
 - https://github.com/blevesearch/bleve/tree/master/geo - geo support in bleve
 
 ### Commercial Services ###

@@ -74,7 +74,7 @@ Potential [security issues](security/index.md) are an important exception. These
 !!! example ""
     Feel free to think ahead, just don't code ahead. But also, don't feel the need to decide so many
     details ahead. Learn enough to get started and build only what you need.
-    — <cite>[J. B. Rainsberger](https://twitter.com/jbrains/status/1064212803542818816)</cite>
+    — <cite>[J. B. Rainsberger](https://x.com/jbrains/status/1064212803542818816)</cite>
 
 ## Premature Optimization ##
 
@@ -131,7 +131,7 @@ Optimize for effectiveness before efficiency when prioritizing tasks:
 
 In contrast, a feature factory focuses on the quantity of new features rather than their quality:
 
-[![Feature Factory](https://dl.photoprism.app/img/diagrams/feature-factory.jpg)](https://twitter.com/johncutlefish/status/780102280162840576)
+[![Feature Factory](https://dl.photoprism.app/img/diagrams/feature-factory.jpg)](https://x.com/johncutlefish/status/780102280162840576)
 
 !!! example ""
     **It is fundamentally the confusion between effectiveness and efficiency that stands between doing the right things and doing things right.** There is surely nothing quite so useless as doing with great efficiency what should not be done at all. — <cite>[Peter Drucker](https://en.wikipedia.org/wiki/Peter_Drucker)</cite>
@@ -173,5 +173,5 @@ The [Open Source Security Foundation](https://www.bestpractices.dev/en/) (OpenSS
 
 [goreport]: https://goreportcard.com/report/github.com/photoprism/photoprism
 
-[^1]: Allen Holub, [*twitter.com/allenholub/status/1073738216140791808*](https://twitter.com/allenholub/status/1073738216140791808), 2018
+[^1]: Allen Holub, [*x.com/allenholub/status/1073738216140791808*](https://x.com/allenholub/status/1073738216140791808), 2018
 [^2]: Robert C. Martin, [*Clean Code: A Handbook of Agile Software Craftsmanship*](https://www.amazon.com/-/dp/0132350882/), 2009

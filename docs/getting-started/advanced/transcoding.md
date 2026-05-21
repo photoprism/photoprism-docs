@@ -12,6 +12,7 @@ The encoder used by FFmpeg can be configured with [`PHOTOPRISM_FFMPEG_ENCODER`](
 | NVIDIA H.264               | `nvidia`    |
 | Raspberry Pi / Video4Linux | `raspberry` |
 | Video Acceleration API     | `vaapi`     |
+| Vulkan Video Extensions    | `vulkan`    |
 
 It defaults to `software` if no value is set or hardware transcoding fails. Please refer to the [FFmpeg documentation](https://trac.ffmpeg.org/wiki/HWAccelIntro) for a full list of encoders and their implementation status. We welcome contributions to support additional encoders.
 
@@ -43,7 +44,7 @@ The [`PHOTOPRISM_FFMPEG_SIZE`](../config-options.md#file-conversion) config opti
 
 You can limit the bitrate of the AVC encoder with the config option [`PHOTOPRISM_FFMPEG_BITRATE`](../config-options.md#file-conversion). Keep in mind that this is a "soft limit", so the actual bitrate varies and depends on the encoder used as well as the specific FFmpeg parameters, which in turn depend on the encoder. It may also depend on the operating system and the GPU drivers.
 
-If the bitrate is significantly exceeded in your environment and you want improvements to be implemented, we recommend that you [take a look at the FFmpeg documentation](https://trac.ffmpeg.org/wiki/Limiting%20the%20output%20bitrate) and the [parameters in our source code](https://github.com/photoprism/photoprism/blob/develop/internal/ffmpeg/convert.go) so you can tell us which parameters should be changed to make it work for you.
+If the bitrate is significantly exceeded in your environment and you want improvements to be implemented, we recommend that you [take a look at the FFmpeg documentation](https://trac.ffmpeg.org/wiki/Limiting%20the%20output%20bitrate) and the [parameters in our source code](https://github.com/photoprism/photoprism/blob/develop/internal/ffmpeg/transcode_cmd.go) so you can tell us which parameters should be changed to make it work for you.
 
 Note that MPEG-4 AVC videos are not re-encoded if they exceed the [configured bitrate limit](../config-options.md#file-conversion). To reduce the size of AVC videos, you can manually replace the original files with a smaller version or wait for a future release that offers this functionality.
 
@@ -54,7 +55,7 @@ Note that MPEG-4 AVC videos are not re-encoded if they exceed the [configured bi
 
 Unless you have a lot of high-resolution videos in your library, we recommend keeping the default settings to use the standard software codec for video transcoding. It has a high quality and does not require any special permissions or additional drivers.
 
-Our current [Docker image](https://docs.photoprism.app/release-notes/#may-31-2024) is based on [Ubuntu 25.10](https://packages.ubuntu.com/questing/ffmpeg), which already includes FFmpeg 7.x from the distribution packages. If you want to try a newer upstream static build, you can add `PHOTOPRISM_INIT: "ffmpeg"` to the environment section of your `compose.yaml` or `docker-compose.yml` file:
+Our current [Docker image](https://docs.photoprism.app/release-notes/#march-5-2026) is based on [Ubuntu 25.10](https://packages.ubuntu.com/questing/ffmpeg), which already includes FFmpeg 7.x from the distribution packages. If you want to try a newer upstream static build, you can add `PHOTOPRISM_INIT: "ffmpeg"` to the environment section of your `compose.yaml` or `docker-compose.yml` file:
 
 ```yaml
 services:
@@ -202,6 +203,38 @@ docker compose up -d
 
 !!! info ""
     Some server configurations, especially Raspberry Pi's, may experience memory allocation issues when using hardware acceleration. Carefully monitor your server's logs and increase the available GPU and/or CMA memory allocations if necessary. Note that the Raspberry Pi hardware currently only supports video resolutions up to 2160p.
+
+### Vulkan
+
+Vulkan-based hardware transcoding works on any GPU that implements the Vulkan video encode extensions. This currently covers recent AMD GPUs (RDNA 2 and later) and Intel GPUs (11th-generation and later) via the open Mesa drivers, as well as NVIDIA Turing-and-later cards through the proprietary driver. The encoder requires FFmpeg 8 or later; this is included in the `:preview` Docker image and will be part of the next stable release. If you are on a stable image with FFmpeg 7, add `PHOTOPRISM_INIT: "ffmpeg"` to install a newer upstream build first.
+
+To enable Vulkan transcoding, choose the `vulkan` encoder and share `/dev/dri` with the `photoprism` service. NVIDIA users should instead follow the [NVIDIA Container Toolkit](#nvidia-container-toolkit) setup and make sure `NVIDIA_DRIVER_CAPABILITIES` includes the `video` capability (the `"all"` value used in our example already does):
+
+```yaml
+services:
+  photoprism:
+    environment:
+      PHOTOPRISM_FFMPEG_ENCODER: "vulkan"
+      PHOTOPRISM_INIT: "gpu"
+      ...
+    devices:
+      - "/dev/dri:/dev/dri"
+    group_add:
+      - "44"  # host "video" group
+      - "108" # host "render" group
+```
+
+Adjust the IDs in `group_add` to match the owners of `/dev/dri/renderD*` and `/dev/dri/card*` on your host (run `getent group video render` to see the numbers). Now [restart the services](../docker-compose.md#step-2-start-the-server) for the changes to take effect:
+
+```bash
+docker compose stop
+docker compose up -d
+```
+
+If a Vulkan device cannot be opened at runtime — for example on a GPU without the required video extensions — PhotoPrism logs a warning and automatically falls back to the software encoder, so no manual recovery is required.
+
+!!! info ""
+    The Vulkan encoder is a preview feature available in the [`:preview`](../updates.md#development-preview) Docker image and will be part of the next stable release. The image already includes the Vulkan loader (`libvulkan1`); vendor-specific Vulkan instance class drivers — [`mesa-vulkan-drivers`](https://packages.ubuntu.com/questing/mesa-vulkan-drivers) for AMD and Intel, or the proprietary NVIDIA Vulkan driver — may need to be added to the container until `PHOTOPRISM_INIT: "gpu"` is updated to provision them automatically.
 
 ## Other Hardware
 

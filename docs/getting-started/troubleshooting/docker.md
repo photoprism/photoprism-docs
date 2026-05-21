@@ -336,7 +336,7 @@ If you have working configuration rules for a particular Linux distribution, fee
 Errors such as "read-only file system", "error creating path", "failed to create folder", "permission denied", or "wrong permissions" indicate a filesystem permission problem:
 
 - [ ] Use a file manager, or the commands `ls -alh`, `chmod`, and `chown` on Unix-like operating systems, to [check and change filesystem permissions](https://kb.iu.edu/d/abdb) so all files and folders are accessible
-- [ ] The app and database *storage* folders must be writable as well: Verify that the services have write permissions and that you have **not** mounted the folders read-only on your host or [via Docker using the `:ro` flag](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-3)
+- [ ] The app and database *storage* folders must be writable as well: Verify that the services have write permissions and that you have **not** mounted the folders read-only on your host or [via Docker using the `:ro` flag](https://docs.docker.com/reference/compose-file/services/#volumes)
 - [ ] If you have configured specific user and group IDs for a service, make sure they match
 - [ ] If [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) are mounted or used within *storage* folders, replace them with actual paths
 - [ ] It may help to [add the `:z` mount flag to volumes](https://docs.docker.com/storage/bind-mounts/#configure-the-selinux-label) when using *SELinux* (Red Hat/Fedora)
@@ -384,7 +384,7 @@ in the Docker, Kubernetes, or Virtual Machine configuration (remove or increase 
 
 ## Network Storage
 
-Shared folders that have already been mounted on your host under a drive letter or path can be used with Docker containers like [any other directory](../docker-compose.md#volumes). As shown below, certain types of network storage can alternatively be *mounted directly* with [Docker Compose](https://docs.docker.com/compose/compose-file/compose-file-v3/#driver_opts).
+Shared folders that have already been mounted on your host under a drive letter or path can be used with Docker containers like [any other directory](../docker-compose.md#volumes). As shown below, certain types of network storage can alternatively be *mounted directly* with [Docker Compose](https://docs.docker.com/reference/compose-file/volumes/#driver_opts).
 
 Please note that the required system dependencies must be installed on your computer in order to mount NFS (Unix/Linux) and/or CIFS shares (Windows/Mac), e.g. the `nfs-client` and `cifs-utils` packages on [Ubuntu Linux](https://wiki.ubuntu.com/MountWindowsSharesPermanently#CIFS_installation). Also make sure that your Docker version and operating system are up-to-date, and that the latest Subsystem for Linux (WSL) is installed if you have a Windows PC.
 

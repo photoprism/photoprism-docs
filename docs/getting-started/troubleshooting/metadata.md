@@ -13,7 +13,7 @@ If the file specified with `[filename]` contains readable metadata, it will then
 ```json
 [{
   "SourceFile": "example.jpg",
-  "ExifToolVersion": 12.76,
+  "ExifToolVersion": 13.55,
   "FileSize": 200108,
   "FileType": "JPEG",
   "MIMEType": "image/jpeg",
@@ -46,7 +46,7 @@ When you post the output on [GitHub](https://github.com/photoprism/photoprism/di
     ```json
     [{
       "SourceFile": "example.jpg",
-      "ExifToolVersion": 12.76,
+      "ExifToolVersion": 13.55,
       ...
     }]
     ```

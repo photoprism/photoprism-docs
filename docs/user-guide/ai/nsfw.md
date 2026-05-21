@@ -31,14 +31,14 @@ Once the dedicated NSFW model entry is configured, it runs whenever `PHOTOPRISM_
 !!! info ""
     The built-in TensorFlow NSFW model is small and fast and ships with every PhotoPrism image. There is no need to configure an LLM-based replacement unless you want to.
 
-## Detecting NSFW Through Label Generation
+## NSFW Detection Using Labels
 
 When `Type: labels` is served by [Ollama](using-ollama.md) or the [OpenAI API](using-openai.md), PhotoPrism can ask the model to include NSFW classification in the same response, avoiding a second inference pass. This shortcut is **experimental** and gated by two environment variables that must **both** be set to `true`:
 
 - [`PHOTOPRISM_DETECT_NSFW`](../../getting-started/config-options.md#computer-vision)
 - [`PHOTOPRISM_EXPERIMENTAL`](../../getting-started/config-options.md#feature-flags)
 
-If either is `false`, the label-generation prompt does **not** ask for NSFW fields, so the LLM response cannot trigger NSFW flagging — even if NSFW signals exist in the image. The following matrix summarises the behaviour when Ollama or OpenAI is configured for labels and the user runs `photoprism vision run --models labels`:
+If either is `false`, the label-generation prompt will not ask for NSFW fields, so the LLM response cannot trigger NSFW flagging — even if an image contains NSFW content. The following matrix summarizes the behavior when Ollama or OpenAI is configured for labels and the user runs `photoprism vision run --models labels`:
 
 | `DETECT_NSFW` | `EXPERIMENTAL` | Label prompt                                  | Outcome                                                                                                                                                                               |
 |---------------|----------------|-----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

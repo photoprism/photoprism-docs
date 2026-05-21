@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 260520-7abc5164a</span>
+<span class="build">Build 260521-822cbf325</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
@@ -12,6 +12,7 @@ What's new?
 
 - AI: [Added support for the Model Context Protocol (MCP)](https://github.com/photoprism/photoprism/issues/5024)
 - AI: [Upgraded ONNX Runtime from v1.25.0 to v1.25.1](https://github.com/photoprism/photoprism/issues/5555)
+- Vision: [Fixed model names being lowercased, which broke custom OpenAI-compatible services](https://github.com/photoprism/photoprism/issues/5594)
 - UX: [Added a drag-and-drop zone for selecting files in the upload dialog](https://github.com/photoprism/photoprism/issues/1216)
 - UX: [Fixed Country and Time Zone selects closing immediately after activation](https://github.com/photoprism/photoprism/issues/5538)
 - UX: [Enhanced frontend input validation to match backend caps and numeric ranges](https://github.com/photoprism/photoprism/issues/5584)
@@ -23,6 +24,7 @@ What's new?
 - OIDC: [Fixed automatic redirect of unauthenticated users when opening direct links](https://github.com/photoprism/photoprism/issues/5506)
 - People: [Added support for manually tagging faces in pictures](https://github.com/photoprism/photoprism/issues/1548)
 - Faces: [Dropped legacy Pigo detector in favor of ONNX-based detection](https://github.com/photoprism/photoprism/issues/5508)
+- Faces: [Added a `faces config` subcommand to list face-related options](https://github.com/photoprism/photoprism/issues/5597)
 - Labels: [Added support for homophones and homophone-aware lookups](https://github.com/photoprism/photoprism/issues/5227) by [@keif888](https://github.com/keif888)
 - Labels: [Fixed renaming a label and re-adding it by its previous name creating a duplicate](https://github.com/photoprism/photoprism/issues/5531)
 - Labels: [Fixed case and punctuation variants causing duplicates when editing labels](https://github.com/photoprism/photoprism/issues/5532)
@@ -34,6 +36,7 @@ What's new?
 - Images: [Added native HEIC/HEIF and AVIF support for thumbnails and rendering](https://github.com/photoprism/photoprism/issues/5509)
 - HEIC: [Upgraded libheif from v1.20.2 to v1.21.2](https://github.com/photoprism/photoprism/issues/5553)
 - Thumbs: [Replaced `disintegration/imaging` library with native format support](https://github.com/photoprism/photoprism/issues/5353)
+- Video: [Added support for Vulkan-based hardware transcoding](https://github.com/photoprism/photoprism/issues/5592)
 - Video: [Tagged HEVC remux output as `hvc1` and unified MP4 chunk scans](https://github.com/photoprism/photoprism/issues/5593)
 - WebDAV: [Added fallback for servers that only allow PROPFIND with a Depth of 1](https://github.com/photoprism/photoprism/issues/3541)
 - WebDAV: [Hardened timeouts, cancellation, and Depth-1 fallback diagnostics](https://github.com/photoprism/photoprism/issues/5474)

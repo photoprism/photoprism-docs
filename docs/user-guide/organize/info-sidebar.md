@@ -49,11 +49,12 @@ All face-marker actions require *edit mode* on the *People* section. To enter it
 
 ### Remove Faces ###
 
+Like on the *People* tab of the Edit Dialog, only unnamed face markers can be removed.
+
 1. Open a photo in the [full-screen viewer](../search/views.md) and open the Info Sidebar by pressing **Ctrl + I**.
 2. Click :material-pencil-outline: next to *People* to enter edit mode.
-3. If the marker is named, click :material-eject: next to it to unassign first.
-4. Click the unnamed face marker on the image.
-5. Click :material-check: in the confirm pill to remove it.
+3. Click the face marker on the image.
+4. Click :material-check: in the confirm pill to remove it.
 
 ### Manually Mark a Face ###
 

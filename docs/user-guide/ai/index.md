@@ -59,7 +59,7 @@ If a model type is omitted, PhotoPrism will use the built-in defaults for `label
 |-------------------------|----------------------------------------|------------------------------------------------------------------------------------|
 | `Type` (required)       | —                                      | `labels`, `caption`, `face`, `nsfw`. Drives routing & scheduling.                  |
 | `Model`                 | `""`                                   | Raw identifier override; precedence: `Service.Model` → `Model` → `Name`.           |
-| `Name`                  | derived from type/version              | Display name; lower-cased by helpers.                                              |
+| `Name`                  | derived from type/version              | Display name; sanitized but case-preserving so identifiers from Hugging Face, Ollama, and OpenAI-compatible catalogs round-trip verbatim. |
 | `Version`               | `latest` (non-OpenAI)                  | OpenAI payloads omit version.                                                      |
 | `Engine`                | inferred from service/alias            | Aliases set formats, file scheme, resolution. Explicit `Service` values still win. |
 | `Run`                   | `auto`                                 | See Run modes table below.                                                         |

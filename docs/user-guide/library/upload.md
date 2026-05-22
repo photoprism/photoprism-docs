@@ -10,8 +10,7 @@ The Upload dialog supports drag-and-drop: drop one or many files (or whole folde
     1. Click :material-dots-vertical: in the upper right corner
     2. Click :material-cloud-upload: in the menu that appears
 
-         <!-- TODO: replacement for upload-3-2503.jpg -->
-         ![Screenshot](img/upload-3-2505.jpg){ class="shadow" }
+         ![Screenshot](img/upload-3-2503.jpg){ class="shadow" }
 
     3. In case you want to upload the files directly to an album select one
 
@@ -36,7 +35,8 @@ The Upload dialog supports drag-and-drop: drop one or many files (or whole folde
 
     4. Drag files onto the upload area, or click it to open the file picker
 
-         ![Screenshot](img/upload-to-album-2-2502.jpg){ class="shadow" }
+         <!-- TODO: replacement for upload-to-album-2-2502.jpg -->
+         ![Screenshot](img/upload-to-album-2-2505.jpg){ class="shadow" }
 
     5. Confirm the selection and click *Upload*
 

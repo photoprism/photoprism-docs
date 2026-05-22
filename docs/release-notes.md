@@ -43,7 +43,7 @@ What's new?
 - Config: [Improved worker auto-configuration based on number of CPU cores](https://github.com/photoprism/photoprism/issues/5567)
 - Config: [Consolidated SQL driver names and parsing in `pkg/dsn`](https://github.com/photoprism/photoprism/issues/5588) by [@keif888](https://github.com/keif888)
 - Config: [Default HTTP and HTTPS ports are stripped from base URLs](https://github.com/photoprism/photoprism/issues/5590)
-- Logs: [Information about long-running processes is logged every 15 minutes](https://github.com/photoprism/photoprism/pull/5481) by [@keif888](https://github.com/keif888)
+- Logs: [Information about long-running processes is logged](https://github.com/photoprism/photoprism/pull/5481) by [@keif888](https://github.com/keif888)
 - Docker: [Upgraded base images to Ubuntu 26.04 LTS (Resolute Raccoon)](https://github.com/photoprism/photoprism/issues/5543)
 - Security: [Upgraded ONNX Runtime from v1.25.0 to v1.25.1](https://github.com/photoprism/photoprism/issues/5555)
 - Security: [Upgraded Go to v1.26.3, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.26.3)

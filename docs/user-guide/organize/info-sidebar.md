@@ -30,9 +30,9 @@ Click on a field to edit it. Some fields can be changed inline, while others ope
 
 The Info Sidebar provides the same face-management actions that are available on the *People* tab of the [Edit Dialog](edit.md):
 
-- [Assign Names to Faces](people.md#assign-names-to-faces)
-- [Change People Assignments](people.md#change-people-assignments)
-- [Remove Faces](people.md#remove-faces)
+- Assign names to faces
+- Change people assignments
+- Remove faces
 
 In addition, the Info Sidebar is the only place where you can **manually mark a face** that PhotoPrism missed during automatic detection, by drawing a rectangle on the picture and then assigning a person to it.
 

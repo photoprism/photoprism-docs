@@ -30,15 +30,14 @@ Click on a field to edit it. Some fields can be changed inline, while others ope
 
 The Info Sidebar provides the same face-management actions that are available on the *People* tab of the [Edit Dialog](edit.md), and is the only place where you can **manually mark a face** that PhotoPrism missed during automatic detection.
 
-All face-marker actions require *edit mode* on the *People* section. To enter it, click :material-pencil-outline: next to *People*; click :material-pencil-off-outline: when you are done.
+Click :material-pencil-outline: next to *People* to enter *edit mode*, which displays all existing face markers on the image and unlocks the change, remove, and manual-marker actions below. Click :material-pencil-off-outline: when you are done. Edit mode is not required to assign a name to an existing unnamed face.
 
 ### Assign Names to Faces ###
 
 1. Open a photo in the [full-screen viewer](../search/views.md) and open the Info Sidebar by pressing **Ctrl + I**.
-2. Click :material-pencil-outline: next to *People* to enter edit mode.
-3. Click the name field next to the face you want to name.
-4. Start typing a name; existing people are suggested as you type.
-5. Press *enter* to confirm.
+2. Click the name field next to the face you want to name.
+3. Start typing a name; existing people are suggested as you type.
+4. Press *enter* to confirm.
 
 ### Change People Assignments ###
 

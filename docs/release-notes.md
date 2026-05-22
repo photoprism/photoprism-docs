@@ -49,6 +49,9 @@ What's new?
 - Docker: [Upgraded base image to Ubuntu 26.04 LTS (Resolute Raccoon)](https://github.com/photoprism/photoprism/issues/5543)
 - Security: [Upgraded Go from v1.26 to v1.26.3](https://github.com/golang/go/issues?q=milestone%3AGo1.26.3) and [ONNX Runtime to v1.25.1](https://github.com/photoprism/photoprism/issues/5555)
 
+!!! info ""
+    Missing [user interface translations](https://translate.photoprism.app/projects/photoprism/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.
+
 ### March 5, 2026
 <span class="build">Build 260305-fad9d5395</span>
 
@@ -76,9 +79,6 @@ What's new?
 - Logs: [Fixed handling of missing caption thumbnails and video remux errors](https://github.com/photoprism/photoprism/issues/5398)
 - Security: [Upgraded Go to v1.26, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.26)
 - Translations: [Updated French, German, Latvian, and Romanian](https://docs.photoprism.app/developer-guide/translations-weblate/)
-
-!!! info ""
-    Missing [user interface translations](https://translate.photoprism.app/projects/photoprism/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.
 
 ### November 30, 2025
 <span class="build">Build 251130-b3068414c</span>

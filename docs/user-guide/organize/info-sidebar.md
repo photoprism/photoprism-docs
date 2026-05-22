@@ -4,9 +4,6 @@ The Info Sidebar opens alongside the full-screen viewer and shows the metadata o
 
 ![Screenshot](img/info-sidebar-202605.jpg){ class="shadow" }
 
-![Screenshot](img/info-sidebar-202605-2.jpg){ class="shadow" }
-
-
 ## Opening the Info Sidebar
 
 Press **Ctrl + I** while a picture is open in the full-screen viewer, or pick "Toggle Info Sidebar" from the viewer menu. The same shortcut closes it again. The sidebar position is remembered across page reloads, so it stays open until you explicitly close it.

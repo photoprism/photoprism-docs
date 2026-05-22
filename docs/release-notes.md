@@ -21,8 +21,6 @@ What's new?
 - Login: [Fixed OIDC redirect of unauthenticated users when opening direct links](https://github.com/photoprism/photoprism/issues/5506)
 - Search: [Improved label filter with support for NOT & AND operators](https://github.com/photoprism/photoprism/issues/5535)
 - Labels: [Added support for homophones and homophone-aware lookups](https://github.com/photoprism/photoprism/issues/5227) by [@keif888](https://github.com/keif888)
-- Labels: [Fixed renaming a label and re-adding it by its previous name creating a duplicate](https://github.com/photoprism/photoprism/issues/5531)
-- Labels: [Fixed case and punctuation variants causing duplicates when editing labels](https://github.com/photoprism/photoprism/issues/5532)
 - Folders: [Child folders with emoji paths no longer overwrite parent albums](https://github.com/photoprism/photoprism/issues/5366)
 - Videos: [Added support for Vulkan hardware transcoding using FFmpeg 8](https://github.com/photoprism/photoprism/issues/5592)
 - Videos: [HEVC remux output is tagged as `hvc1` based on MP4 chunk scan](https://github.com/photoprism/photoprism/issues/5593)

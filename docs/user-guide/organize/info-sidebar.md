@@ -24,9 +24,7 @@ Clicking a chip navigates to the matching page so you can browse the rest of the
 
 ## Editing Metadata in Place
 
-Each editable field opens a small popover when clicked. Enter the new value and confirm to save — input is validated against the same length and range limits as the [Edit Dialog](edit.md), and the popover refuses to save invalid values.
-
-If you change your mind, close the popover with Escape or by clicking outside. Leaving the sidebar with unsaved changes prompts you to discard or keep them.
+Click on a field to edit it. Some fields can be changed inline, while others open an overlay. Press Escape or click outside to cancel, and confirm to save your changes — invalid values cannot be saved.
 
 ## Face Markers
 

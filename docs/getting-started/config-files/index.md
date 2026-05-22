@@ -343,8 +343,8 @@ Below are the names of the config options that you can set in the `options.yml` 
 
 If you start the server as a *daemon* in the background, you can additionally specify a filename for the log and the process ID:
 
-| Name              | Type                                                                                 | CLI Flag        |
-|:------------------|:-------------------------------------------------------------------------------------|:----------------|
-| PIDFilename       | string                                                                               | --pid-filename  |
-| LogFilename       | string                                                                               | --log-filename  |
-| DetachServer      | bool                                                                                 | --detach-server |
+| Name         | Type   | CLI Flag        |
+|:-------------|:-------|:----------------|
+| PIDFilename  | string | --pid-filename  |
+| LogFilename  | string | --log-filename  |
+| DetachServer | bool   | --detach-server |

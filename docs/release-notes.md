@@ -25,7 +25,7 @@ What's new?
 - Videos: [Added support for Vulkan hardware transcoding using FFmpeg 8](https://github.com/photoprism/photoprism/issues/5592)
 - Videos: [HEVC remux output is tagged as `hvc1` based on MP4 chunk scan](https://github.com/photoprism/photoprism/issues/5593)
 - Images: [Added support for layered TIFF and Adobe Photoshop PSD images](https://github.com/photoprism/photoprism/issues/5383)
-- Images: [Added native HEIC/AVIF reader and upgraded `libheif` from v1.21.2](https://github.com/photoprism/photoprism/issues/5509)
+- Images: [Added native HEIC/AVIF reader and upgraded `libheif` to v1.21.2](https://github.com/photoprism/photoprism/issues/5509)
 - Images: [Replaced `disintegration/imaging` library with native format support](https://github.com/photoprism/photoprism/issues/5353)
 - Server: [Added `zstd` compression support for faster loading times](https://github.com/photoprism/photoprism/issues/5550)
 - Server: [Added pre-compressed frontend bundles for faster loading times](https://github.com/photoprism/photoprism/issues/5552)

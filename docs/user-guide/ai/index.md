@@ -55,23 +55,23 @@ Thresholds:
 
 If a model type is omitted, PhotoPrism will use the built-in defaults for `labels`, `nsfw`, `face`, or `caption`. The optional `Thresholds` block can be used to filter out labels with a low probability or adjust the probability of flagging content as NSFW. 
 
-| Field                   | Default                                | Notes                                                                                                                                     |
-|-------------------------|----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| `Type` (required)       | —                                      | `labels`, `caption`, `face`, `nsfw`. Drives routing & scheduling.                                                                         |
-| `Model`                 | `""`                                   | Raw identifier override; precedence: `Service.Model` → `Model` → `Name`.                                                                  |
-| `Name`                  | derived from type/version              | Display name; sanitized but case-preserving so identifiers from Hugging Face, Ollama, and OpenAI-compatible catalogs round-trip verbatim. |
-| `Version`               | `latest` (non-OpenAI)                  | OpenAI payloads omit version.                                                                                                             |
-| `Engine`                | inferred from service/alias            | Aliases set formats, file scheme, resolution. Explicit `Service` values still win.                                                        |
-| `Run`                   | `auto`                                 | See Run modes table below.                                                                                                                |
-| `Default`               | `false`                                | Keep one per type for TensorFlow fallbacks.                                                                                               |
-| `Disabled`              | `false`                                | Registered but inactive.                                                                                                                  |
-| `Resolution`            | 224 (TensorFlow) / 720 (Ollama/OpenAI) | Thumbnail edge in px; TensorFlow models default to 224 unless you override.                                                               |
-| `System` / `Prompt`     | engine defaults / empty                | Override prompts per model.                                                                                                               |
-| `Format`                | `""`                                   | Response hint (`json`, `text`, `markdown`).                                                                                               |
-| `Schema` / `SchemaFile` | engine defaults / empty                | Inline vs file JSON schema (labels).                                                                                                      |
-| `TensorFlow`            | engine defaults / empty                | Local TF model info (paths, tags).                                                                                                        |
-| [`Options`](#options)   | engine defaults / empty                | Sampling/settings merged with engine defaults.                                                                                            |
-| [`Service`](#service)   | engine defaults / empty                | Remote endpoint config (see below).                                                                                                       |
+| Field                   | Default                                | Notes                                                                              |
+|-------------------------|----------------------------------------|------------------------------------------------------------------------------------|
+| `Type` (required)       | —                                      | `labels`, `caption`, `face`, `nsfw`. Drives routing & scheduling.                  |
+| `Model`                 | `""`                                   | Model identifier in the format `<name>:<version>`.                                 |
+| `Name`                  | derived from `Model`                   | Model name.                                                                        |
+| `Version`               | `latest` (non-OpenAI)                  | Model version, not used by OpenAI.                                                 |
+| `Engine`                | inferred from service/alias            | Aliases set formats, file scheme, resolution. Explicit `Service` values still win. |
+| `Run`                   | `auto`                                 | See Run modes table below.                                                         |
+| `Default`               | `false`                                | Keep one per type for TensorFlow fallbacks.                                        |
+| `Disabled`              | `false`                                | Registered but inactive.                                                           |
+| `Resolution`            | 224 (TensorFlow) / 720 (Ollama/OpenAI) | Thumbnail edge in px; TensorFlow models default to 224 unless you override.        |
+| `System` / `Prompt`     | engine defaults / empty                | Override prompts per model.                                                        |
+| `Format`                | `""`                                   | Response hint (`json`, `text`, `markdown`).                                        |
+| `Schema` / `SchemaFile` | engine defaults / empty                | Inline vs file JSON schema (labels).                                               |
+| `TensorFlow`            | engine defaults / empty                | Local TF model info (paths, tags).                                                 |
+| [`Options`](#options)   | engine defaults / empty                | Sampling/settings merged with engine defaults.                                     |
+| [`Service`](#service)   | engine defaults / empty                | Remote endpoint config (see below).                                                |
 
 ### Run Modes
 

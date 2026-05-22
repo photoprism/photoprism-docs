@@ -28,13 +28,40 @@ Click on a field to edit it. Some fields can be changed inline, while others ope
 
 ## Face Markers
 
-The Info Sidebar provides the same face-management actions that are available on the *People* tab of the [Edit Dialog](edit.md):
+The Info Sidebar provides the same face-management actions that are available on the *People* tab of the [Edit Dialog](edit.md), and is the only place where you can **manually mark a face** that PhotoPrism missed during automatic detection.
 
-- Assign names to faces
-- Change people assignments
-- Remove faces
+All face-marker actions require *edit mode* on the *People* section. To enter it, click :material-pencil-outline: next to *People*; click :material-pencil-off-outline: when you are done.
 
-In addition, the Info Sidebar is the only place where you can **manually mark a face** that PhotoPrism missed during automatic detection, by drawing a rectangle on the picture and then assigning a person to it.
+### Assign Names to Faces ###
+
+1. Open a photo in the [full-screen viewer](../search/views.md) and open the Info Sidebar by pressing **Ctrl + I**.
+2. Click :material-pencil-outline: next to *People* to enter edit mode.
+3. Click the name field next to the face you want to name.
+4. Start typing a name; existing people are suggested as you type.
+5. Press *enter* to confirm.
+
+### Change People Assignments ###
+
+1. Open a photo in the [full-screen viewer](../search/views.md) and open the Info Sidebar by pressing **Ctrl + I**.
+2. Click :material-pencil-outline: next to *People* to enter edit mode.
+3. Click :material-eject: next to the person you want to change.
+4. Type a new name and press *enter*, or leave the field empty.
+
+### Remove Faces ###
+
+1. Open a photo in the [full-screen viewer](../search/views.md) and open the Info Sidebar by pressing **Ctrl + I**.
+2. Click :material-pencil-outline: next to *People* to enter edit mode.
+3. If the marker is named, click :material-eject: next to it to unassign first.
+4. Click the unnamed face marker on the image.
+5. Click :material-check: in the confirm pill to remove it.
+
+### Manually Mark a Face ###
+
+1. Open a photo in the [full-screen viewer](../search/views.md) and open the Info Sidebar by pressing **Ctrl + I**.
+2. Click :material-pencil-outline: next to *People* to enter edit mode.
+3. Drag on the image to draw a rectangle around the missed face.
+4. Click :material-check: in the confirm pill to keep the new marker.
+5. Type a name in the new row that appears under *People*, then press *enter* to assign a person.
 
 <!-- TODO: screenshot manual-face-marker-2505.jpg -->
 ![Screenshot](img/manual-face-marker-2505.jpg){ class="shadow" }

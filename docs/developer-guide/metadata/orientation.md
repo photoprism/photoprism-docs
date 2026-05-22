@@ -41,6 +41,9 @@ Rotation                        : 270
 
 **Rotation** and **Orientation** are the important values you should pay attention to and compare. The rotation is in degrees.
 
+!!! note "Orientation in HEIF/HEIC Files"
+    For HEIF and HEIC files, the container-level `irot` and `imir` transforms are the authoritative source of image orientation; the Exif `Orientation` tag is informational and is **not** re-applied by libheif when it decodes the image. PhotoPrism follows the same model on its native libvips path. Some older Apple HEIC captures only store the Exif `Orientation` tag and omit the container transforms — those files may render unrotated through libvips and need `heif-convert` (or `heif-dec` on libheif 1.21+) as a fallback. See [strukturag/libheif#227](https://github.com/strukturag/libheif/issues/227) for background.
+
 ## Exiftool Parameters
 
 - `-n` displays the raw values without changes

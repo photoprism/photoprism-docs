@@ -16,8 +16,7 @@ The Upload dialog supports drag-and-drop: drop one or many files (or whole folde
 
     4. Drag files onto the upload area, or click it to open the file picker
 
-         <!-- TODO: replacement for upload-to-album-2503.jpg -->
-         ![Screenshot](img/upload-to-album-2505.jpg){ class="shadow" }
+         ![Screenshot](img/upload-drag-zone.jpg){ class="shadow" }
 
     5. Confirm the selection and click *Upload*
 
@@ -35,8 +34,7 @@ The Upload dialog supports drag-and-drop: drop one or many files (or whole folde
 
     4. Drag files onto the upload area, or click it to open the file picker
 
-         <!-- TODO: replacement for upload-to-album-2-2502.jpg -->
-         ![Screenshot](img/upload-to-album-2-2505.jpg){ class="shadow" }
+         ![Screenshot](img/upload-drag-zone-2.jpg){ class="shadow" }
 
     5. Confirm the selection and click *Upload*
 

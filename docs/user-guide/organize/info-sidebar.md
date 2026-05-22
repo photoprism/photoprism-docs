@@ -2,8 +2,10 @@
 
 The Info Sidebar opens alongside the full-screen viewer and shows the metadata of the currently displayed picture or video. It is a lightweight alternative to the [Edit Dialog](edit.md) when you want to inspect or quickly correct individual fields without leaving the viewer.
 
-<!-- TODO: screenshot info-sidebar-2505.jpg -->
-![Screenshot](img/info-sidebar-2505.jpg){ class="shadow" }
+![Screenshot](img/info-sidebar-202605.jpg){ class="shadow" }
+
+![Screenshot](img/info-sidebar-202605-2.jpg){ class="shadow" }
+
 
 ## Opening the Info Sidebar
 

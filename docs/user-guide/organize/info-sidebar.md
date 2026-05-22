@@ -4,7 +4,7 @@ The Info Sidebar opens alongside the full-screen viewer and shows the metadata o
 
 ![Screenshot](img/info-sidebar-202605.jpg){ class="shadow" }
 
-## Opening the Info Sidebar
+## Opening the Sidebar
 
 Press **Ctrl + I** while a picture is open in the full-screen viewer, or pick "Toggle Info Sidebar" from the viewer menu. The same shortcut closes it again. The sidebar position is remembered across page reloads, so it stays open until you explicitly close it.
 
@@ -31,21 +31,21 @@ The Info Sidebar provides the same face-management actions that are available on
 
 Click :material-pencil-outline: next to *People* to enter *edit mode*, which displays all existing face markers on the image and unlocks the change, remove, and manual-marker actions below. Click :material-pencil-off-outline: when you are done. Edit mode is not required to assign a name to an existing unnamed face.
 
-### Assign Names to Faces ###
+### Assign Names to Faces
 
 1. Open a photo in the [full-screen viewer](../search/views.md) and open the Info Sidebar by pressing **Ctrl + I**.
 2. Click the name field next to the face you want to name.
 3. Start typing a name; existing people are suggested as you type.
 4. Press *enter* to confirm.
 
-### Change People Assignments ###
+### Change People Assignments
 
 1. Open a photo in the [full-screen viewer](../search/views.md) and open the Info Sidebar by pressing **Ctrl + I**.
 2. Click :material-pencil-outline: next to *People* to enter edit mode.
 3. Click :material-eject: next to the person you want to change.
 4. Type a new name and press *enter*, or leave the field empty.
 
-### Remove Faces ###
+### Remove Faces
 
 Like on the *People* tab of the Edit Dialog, only unnamed face markers can be removed.
 
@@ -54,7 +54,7 @@ Like on the *People* tab of the Edit Dialog, only unnamed face markers can be re
 3. Click the face marker on the image.
 4. Click :material-delete: in the confirm pill to remove it.
 
-### Manually Mark a Face ###
+### Manually Mark a Face
 
 1. Open a photo in the [full-screen viewer](../search/views.md) and open the Info Sidebar by pressing **Ctrl + I**.
 2. Click :material-pencil-outline: next to *People* to enter edit mode.

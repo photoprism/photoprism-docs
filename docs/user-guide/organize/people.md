@@ -70,9 +70,9 @@ There can be several reasons why a face was not detected:
 
         ![Screenshot](img/add-name-edit-new-2503.jpg){ class="shadow" }
 
-The person you just added will appear under *Recognized*
+      You can also assign names to faces directly from the [Info Sidebar](info-sidebar.md) of the full-screen viewer, which is the only place where you can manually mark a face that PhotoPrism missed during automatic detection.
 
-You can also assign names to faces directly from the [Info Sidebar](info-sidebar.md) of the full-screen viewer, which is the only place where you can manually mark a face that PhotoPrism missed during automatic detection.
+The person you just added will appear under *Recognized*
 
 ## Change Cover for a Person ##
 1. Go to the [people tab](./edit.md#people) on the photo edit dialog of the photo that contains the face that should be used as the cover

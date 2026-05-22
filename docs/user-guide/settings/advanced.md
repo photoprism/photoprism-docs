@@ -106,6 +106,13 @@ This section controls how JPEG preview and thumbnail images are rendered. These 
 
 [Thumbnails are necessary](../../getting-started/faq.md#why-is-my-storage-folder-so-large-what-is-in-it) because web browsers are bad at resizing large images to fit the screen. Using full-resolution originals for slideshows and in search results would also consume a lot of browser memory and significantly reduce indexing performance.
 
+### Downscaling Filter
+
+PhotoPrism renders thumbnails with `libvips`, which always uses a high-quality Lanczos 3-lobe kernel for downscaling. The `PHOTOPRISM_THUMB_FILTER` [config option](../../getting-started/config-options.md#preview-images) and the "Downscaling Filter" dropdown are retained for backwards compatibility but no longer change the rendered output.
+
+!!! info ""
+    The legacy native `imaging` image-processing library was removed in the April 2026 release. Thumbnails are now always generated with libvips, so the previously-selectable filters (blackman, lanczos, cubic, linear, nearest) have no effect.
+
 ### Static and Dynamic Size Limits
 **Static Size Limit**: During initial indexing or import (as thumbnails are generated),
 no thumbnails will be created above this size.

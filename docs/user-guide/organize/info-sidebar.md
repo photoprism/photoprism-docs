@@ -16,9 +16,11 @@ The sidebar surfaces the most frequently inspected metadata fields:
 - **File:** path and filename of the currently displayed media file.
 - **Camera:** make and model, lens, ISO, exposure, focal length, and f-number.
 - **Description:** title, caption, artist, copyright, and license.
-- **Categories:** labels, albums, and people associated with the picture, rendered as clickable chips.
+- **Labels:** clickable chips that link to the matching label page.
+- **Albums:** clickable chips that link to the matching album page.
+- **People:** clickable chips that link to the matching person page.
 
-Clicking a label, album, or person chip navigates to the matching page so you can browse the rest of the collection in that context. Private albums are not shown to users without permission to view them.
+Clicking a chip navigates to the matching page so you can browse the rest of the collection in that context.
 
 ## Editing Metadata in Place
 

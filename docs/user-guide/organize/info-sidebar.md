@@ -24,7 +24,7 @@ Clicking a chip navigates to the matching page so you can browse the rest of the
 
 ## Editing Metadata in Place
 
-Click on a field to edit it. Some fields can be changed inline, while others open an overlay. Press Escape or click outside to cancel, and confirm to save your changes — invalid values cannot be saved.
+Click on a field to edit it. Some fields can be changed inline, while others open an overlay. Press Escape to cancel, and confirm to save your changes — invalid values cannot be saved.
 
 ## Face Markers
 

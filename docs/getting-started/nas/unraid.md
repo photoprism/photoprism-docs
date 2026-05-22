@@ -75,7 +75,7 @@ Unraid does not ship with Docker Compose, but the Community Apps plugin offers *
           PHOTOPRISM_UPLOAD_ARCHIVES: "true"
           PHOTOPRISM_UPLOAD_LIMIT: 5000
           PHOTOPRISM_ORIGINALS_LIMIT: 5000
-          PHOTOPRISM_HTTP_COMPRESSION: "gzip"
+          PHOTOPRISM_HTTP_COMPRESSION: "zstd,gzip"
           PHOTOPRISM_DATABASE_DRIVER: "mysql"
           PHOTOPRISM_DATABASE_SERVER: "mariadb:3306"
           PHOTOPRISM_DATABASE_NAME: "photoprism"

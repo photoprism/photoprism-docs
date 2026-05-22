@@ -70,6 +70,8 @@ There can be several reasons why a face was not detected:
 
         ![Screenshot](img/add-name-edit-new-2503.jpg){ class="shadow" }
 
+      You can also assign names to faces directly from the [Info Sidebar](info-sidebar.md) of the full-screen viewer, which is the only place where you can manually mark a face that PhotoPrism missed during automatic detection.
+
 The person you just added will appear under *Recognized*
 
 ## Change Cover for a Person ##
@@ -140,6 +142,8 @@ This will remove the name. You can either leave it blank or enter the name of a 
 
 ![Screenshot](img/reject-2503.jpg){ class="shadow" }
 
+You can also change people assignments from the [Info Sidebar](info-sidebar.md) of the full-screen viewer.
+
 ## Remove Faces ##
 In case PhotoPrism detected something wrong as face (false positives), or in case you just don't want to keep a face on the people tab you're not interested in, you can remove it.
 
@@ -152,6 +156,8 @@ In case PhotoPrism detected something wrong as face (false positives), or in cas
 You might undo this action before a reload.
 
 ![Screenshot](img/undo-remove-face-2503.jpg){ class="shadow" }
+
+Faces can also be removed from the [Info Sidebar](info-sidebar.md) of the full-screen viewer.
 
 ## Download all Photos of a Person ##
 1. Go to *People*

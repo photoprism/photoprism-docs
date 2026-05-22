@@ -62,7 +62,7 @@ storage/cache/thumbnails/1/a/3/1a30c1f...9_100x100_center.jpg
 
 ## Downscaling Filters
 
-libvips uses a **Lanczos 3-lobe kernel** for all resizing operations; the `PHOTOPRISM_THUMB_FILTER` option is retained for backwards compatibility but has no effect with the current library (`internal/thumb/filter.go:ParseFilter` returns `ResampleAuto` for every input when `lib == LibVips`). The notes below describe the algorithms used in earlier releases and remain useful as background reading.
+libvips uses a **Lanczos 3-lobe kernel** for all resizing operations. The `PHOTOPRISM_THUMB_FILTER` CLI flag and environment variable were removed in the April 2026 release; any legacy `ThumbFilter` value still present in `options.yml` is ignored, and `internal/thumb/filter.go:ParseFilter` now returns `ResampleAuto` for every input. The notes below describe the algorithms used in earlier releases and remain useful as background reading.
 
 ### Linear
 

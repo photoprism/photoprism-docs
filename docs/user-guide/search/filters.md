@@ -59,10 +59,7 @@ This query will show all photos that have the keywords water **and** buffalo.
 
 & is supported by the following filters:
 
-* albums, keywords, subject/person, subjects/people.
-
-!!!info ""
-    The label filter does not support &. You can use the keywords filter instead, as all labels are keywords as well.
+* albums, keywords, labels, subject/person, subjects/people.
 
 ### OR Search ###
 
@@ -78,19 +75,47 @@ The following filters work with |:
 
 * albums, color, country, state, city, day, month, year, keywords, label, path, subject/person, subjects/people, title, type, name, filename, original, hash
 
-### Searching for & or | ###
+### NOT Search ###
 
-A search for photos that contain `&` or `|` in their caption, filename, name or title is possible using the escape `\`:
+The `label` filter accepts a leading `!` to exclude photos that have a given label. AND, OR, and negation can be combined within the same filter:
+
+```
+label:!rejected
+```
+
+This will show all photos that do **not** have the label rejected.
+
+```
+label:"cat&!blurry"
+```
+
+This will show all photos that have the label cat **and** do not have the label blurry.
+
+```
+label:"cat|dog&!blurry"
+```
+
+This will show all photos that have either the label cat **or** dog, while excluding any that also have the label blurry.
+
+To match a label name that starts with a literal `!`, escape it with `\`:
+
+```
+label:"\!weird"
+```
+
+### Searching for &, |, or ! ###
+
+A search for photos that contain `&`, `|`, or `!` in their caption, filename, name, title, or label name is possible using the escape `\`:
 
 ```
 caption:Green\|Blue
 ```
 
-This will show all photos that have the caption Green|Blue, and not all photos that have the caption Green OR Blue.
+This will show all photos that have the caption Green|Blue, and not all photos that have the caption Green OR Blue. Existing labels whose names contain `&` must likewise be escaped as `\&` in the `label` filter so that they are matched literally instead of as an AND operator.
 
 The following filters work with escape:
 
-* photos name, filename, caption, title
+* photos name, filename, caption, title, label
 
 ### Wildcard ###
 

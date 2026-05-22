@@ -36,7 +36,7 @@ Models:
 
 Recommendations:
 
-- Keep the `Model` name exactly as published by OpenAI. The default model is `gpt-5-mini`.
+- Keep the `Model` name exactly as published by OpenAI. The default model is `gpt-5-mini`. Model identifiers are case-sensitive — PhotoPrism preserves the case as written in `vision.yml`, so values such as `QuantTrio/Qwen3-VL-30B-A3B-Instruct-AWQ` from Hugging Face or another OpenAI-compatible catalog reach the upstream API exactly as configured.
 - `Service.Key` can be omitted if `OPENAI_API_KEY` / `_FILE` is set in the environment. You can optionally set `Service.Org` and `Service.Project` when your account requires them for accounting purposes.
 - PhotoPrism evaluates models from the bottom of the list up, so putting the OpenAI entries after the others ensures OpenAI is chosen first, leaving other models as backups.
 

@@ -28,10 +28,13 @@ Click on a field to edit it. Some fields can be changed inline, while others ope
 
 ## Face Markers
 
-When a picture is open in the viewer, you can add, edit, and remove face markers directly from the Info Sidebar:
+The Info Sidebar provides the same face-management actions that are available on the *People* tab of the [Edit Dialog](edit.md):
 
-- **Add:** draw a rectangle around an unrecognized face and assign or create a person.
-- **Edit:** click an existing marker to reassign it to a different person or to refine the bounding box.
-- **Remove:** delete an incorrect or duplicate marker.
+- [Assign Names to Faces](people.md#assign-names-to-faces)
+- [Change People Assignments](people.md#change-people-assignments)
+- [Remove Faces](people.md#remove-faces)
 
-Changes are saved immediately and reflected in the People section.
+In addition, the Info Sidebar is the only place where you can **manually mark a face** that PhotoPrism missed during automatic detection, by drawing a rectangle on the picture and then assigning a person to it.
+
+<!-- TODO: screenshot manual-face-marker-2505.jpg -->
+![Screenshot](img/manual-face-marker-2505.jpg){ class="shadow" }

@@ -1,6 +1,6 @@
 # Services
 
-You can connect your PhotoPrism instance to other services with WebDAV support, such as other PhotoPrism instances, Nextcloud or ownCloud. This allows you to [share](../share/services-share.md) or [synchronize](../sync/services-sync.md) files between multiple services.
+You can connect your PhotoPrism instance to other services with WebDAV support, such as other PhotoPrism instances, Nextcloud, ownCloud, or other WebDAV-compatible providers (including pCloud and similar services that only support `Depth: 1` PROPFIND requests). This allows you to [share](../share/services-share.md) or [synchronize](../sync/services-sync.md) files between multiple services.
 
 PhotoPrism can also expose its originals via WebDAV so that compatible clients on macOS, Windows, and mobile devices can connect directly. [Learn more ›](../sync/webdav.md)
 

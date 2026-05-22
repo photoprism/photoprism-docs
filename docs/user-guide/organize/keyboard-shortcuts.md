@@ -19,7 +19,8 @@ PhotoPrism offers a variety of keyboard shortcuts to help you navigate and use t
 
 | Shortcut         | Action               |
 |-----------------|----------------------|
-| Ctrl + I        | Toggle Info Panel    |
+| Ctrl + I        | Toggle Info Sidebar  |
+| Ctrl + H        | Show/Hide Caption    |
 | Ctrl + M        | Mute/Unmute          |
 | Ctrl + S        | Play/Pause Slideshow |
 | Ctrl + A        | Archive/Restore      |

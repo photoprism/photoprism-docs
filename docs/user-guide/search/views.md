@@ -35,6 +35,7 @@ Additionally, you can open your photos/videos in *fullscreen mode* and start a s
     
     - **Ctrl + F** : Toggle fullscreen mode
     - **Ctrl + S** : Play/pause slideshow
-    - **Ctrl + I** : Toggle Info Panel    
+    - **Ctrl + I** : Toggle Info Sidebar
+    - **Ctrl + H** : Show/Hide Caption
     - **Ctrl + M** : Mute/Unmute
     - **Ctrl + L** : Like/Unlike

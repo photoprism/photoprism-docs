@@ -106,8 +106,8 @@ mkdir -p /share/Container/photoprism/{storage,import,database}
           PHOTOPRISM_UPLOAD_LIMIT: 5000
           # max originals size in MB (larger files are skipped)
           PHOTOPRISM_ORIGINALS_LIMIT: 5000
-          # enable gzip to reduce bandwidth
-          PHOTOPRISM_HTTP_COMPRESSION: "gzip"
+          # enable zstd and gzip to reduce bandwidth
+          PHOTOPRISM_HTTP_COMPRESSION: "zstd,gzip"
           # database driver / connection settings
           PHOTOPRISM_DATABASE_DRIVER: "mysql"
           PHOTOPRISM_DATABASE_SERVER: "mariadb:3306"

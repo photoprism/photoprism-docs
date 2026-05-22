@@ -35,12 +35,3 @@ When a picture is open in the viewer, you can add, edit, and remove face markers
 - **Remove:** delete an incorrect or duplicate marker.
 
 Changes are saved immediately and reflected in the People section.
-
-## Roles & Permissions
-
-The Info Sidebar respects the same access rules as the rest of PhotoPrism:
-
-- **Admins and Managers** see all fields and can edit them inline.
-- **Guests, Visitors, and Contributors** see a reduced, read-only view that omits administrative metadata.
-
-See [User Roles](../users/roles.md) for the complete capability matrix.

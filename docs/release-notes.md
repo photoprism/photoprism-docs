@@ -38,7 +38,7 @@ What's new?
 - CLI: [Improved `vision run` command updates sidecar YAML files](https://github.com/photoprism/photoprism/issues/5493)
 - CLI: [Added a `faces config` subcommand to list face-related options](https://github.com/photoprism/photoprism/issues/5597)
 - CLI: [Fixed flags placed after positional arguments being silently dropped](https://github.com/photoprism/photoprism/issues/5604)
-- MCP: [Added `--disable-mcp` flag to optionally disable the MCP API endpoint](https://github.com/photoprism/photoprism/issues/5536)
+- MCP: [Added `--disable-mcp` flag to disable Model Context Protocol support](https://github.com/photoprism/photoprism/issues/5536)
 - Config: [Improved auto-detection of the indexing worker count](https://github.com/photoprism/photoprism/issues/5567)
 - Config: [Consolidated SQL driver names and parsing in `pkg/dsn`](https://github.com/photoprism/photoprism/issues/5588)
 - Config: [Stripped default HTTP and HTTPS ports from the site URL](https://github.com/photoprism/photoprism/issues/5590)

@@ -136,9 +136,6 @@ What's new?
 - Security: [Upgraded Go to v1.25.4, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.25.4)
 - Translations: [Updated Spanish and Vietnamese](https://docs.photoprism.app/developer-guide/translations-weblate/)
 
-!!! info ""
-    Missing [user interface translations](https://translate.photoprism.app/projects/photoprism/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.
-
 ### July 7, 2025
 <span class="build">Build 250707-d28b3101e</span>
 
@@ -169,9 +166,6 @@ What's new?
 - SQLite: [Fixed "'too many SQL variables'" error on index updates](https://github.com/photoprism/photoprism/issues/3742) by [@keif888](https://github.com/keif888)
 - Security: [Updated Go to v1.24.4, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.4) 
 - Translations: [Updated Arabic, French, German, and Japanese](https://github.com/photoprism/photoprism/discussions/4980)
-
-!!! info ""
-    Missing [user interface translations](https://translate.photoprism.app/projects/photoprism/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.
 
 ### April 26, 2025
 <span class="build">Build 250426-27ec7a128</span>

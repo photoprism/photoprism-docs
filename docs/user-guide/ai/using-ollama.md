@@ -12,6 +12,10 @@ Alternatively, most of the [`compose.yaml`](../../getting-started/docker-compose
 docker compose --profile ollama up -d
 ```
 
+Note that Ollama does not require authentication by default, so only expose port `11434` within **trusted networks** or behind a reverse proxy with access control.
+Experienced users can set up and operate Ollama on a dedicated server shared by multiple instances.
+The [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) must be installed for NVIDIA GPU acceleration to work.
+
 !!! example "compose.yaml"
     ```yaml
     services:
@@ -69,21 +73,18 @@ docker compose --profile ollama up -d
         #          count: "all"
     ```
 
-Note that the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) must be installed for GPU hardware acceleration to work. Experienced users may also run Ollama on a separate, more powerful server.
+### Flash Attention & KV Cache
 
-!!! info "Flash Attention & KV Cache Tuning"
-    **`OLLAMA_FLASH_ATTENTION`** enables a small speedup on supported model architectures (`gemma3`, `gptoss`, `mistral3`, `qwen3*`). It silently no-ops on unsupported architectures and on CPU. **Required** if you also enable `OLLAMA_KV_CACHE_TYPE` quantization. Set to `"false"` if you use [Qwen3-2507 builds](https://github.com/ollama/ollama/issues/12432) — they are incompatible with flash attention.
+**`OLLAMA_FLASH_ATTENTION`** enables a small speedup on supported model architectures (`gemma3`, `gptoss`, `mistral3`, `qwen3*`). It silently no-ops on unsupported architectures and on CPU. **Required** if you also enable `OLLAMA_KV_CACHE_TYPE` quantization. Set to `"false"` if you use [Qwen3-2507 builds](https://github.com/ollama/ollama/issues/12432) — they are incompatible with flash attention.
 
-    **`OLLAMA_KV_CACHE_TYPE`** controls the precision of the per-token attention key/value cache:
+**`OLLAMA_KV_CACHE_TYPE`** controls the precision of the per-token attention key/value cache:
 
-    - **`f16`** (default) — native precision, works for every architecture, no quality loss.
-    - **`q8_0`** — halves cache VRAM; clean for `qwen3*` / `gpt-oss` / `mistral3`; causes a 5x slowdown on `gemma3` ([gh#9683](https://github.com/ollama/ollama/issues/9683), [gh#11949](https://github.com/ollama/ollama/issues/11949)); silently falls back to `f16` for `gemma4` / `qwen2.5vl` (not on the flash-attention allowlist — [gh#13337](https://github.com/ollama/ollama/issues/13337)).
-    - **`q4_0`** — quarters cache VRAM; still usable on Qwen, noticeably degrades Gemma; only reach for it when VRAM-constrained.
+- **`f16`** (default) — native precision, works for every architecture, no quality loss.
+- **`q8_0`** — halves cache VRAM; clean for `qwen3*` / `gpt-oss` / `mistral3`; causes [a 5x slowdown](https://github.com/ollama/ollama/issues/11949) on [`gemma3`](https://ollama.com/library/gemma3); silently falls back to `f16` for [`gemma4`](https://ollama.com/library/gemma4) / [`qwen2.5vl`](https://ollama.com/library/qwen2.5vl) (not on the [flash-attention allowlist](https://github.com/ollama/ollama/issues/13337)).
+- **`q4_0`** — quarters cache VRAM; still usable on Qwen, noticeably degrades Gemma; only reach for it when VRAM-constrained.
 
-    The defaults above (`OLLAMA_FLASH_ATTENTION: "true"` + `OLLAMA_KV_CACHE_TYPE: "f16"`) are the safe combination for the [recommended models](ollama-models.md) on typical hardware.
-
-!!! danger ""
-    Ollama does not enforce authentication by default. Only expose port `11434` inside trusted networks or behind a reverse proxy that adds access control.
+!!! tldr ""
+    The defaults [used in the example](#step-1-install-ollama) above (`OLLAMA_FLASH_ATTENTION: "true"` + `OLLAMA_KV_CACHE_TYPE: "f16"`) are a safe combination for our [recommended models](ollama-models.md) on typical hardware.
 
 ## Step 2: Download Models
 

@@ -149,7 +149,7 @@ Below are the names of the config options that you can set in the `options.yml` 
 
 | Name           | Type          | CLI Flag          |
 |:---------------|:--------------|:------------------|
-| IndexWorkers   | int           | --index-workers   |
+| IndexWorkers   | string        | --index-workers   |
 | IndexSchedule  | string        | --index-schedule  |
 | WakeupInterval | time.Duration | --wakeup-interval |
 | AutoIndex      | int           | --auto-index      |
@@ -166,6 +166,7 @@ Below are the names of the config options that you can set in the `options.yml` 
 | DisableBackups        | bool | --disable-backups        |
 | DisableRestart        | bool | --disable-restart        |
 | DisableWebDAV         | bool | --disable-webdav         |
+| DisableMCP            | bool | --disable-mcp            |
 | DisablePlaces         | bool | --disable-places         |
 | DisableTensorFlow     | bool | --disable-tensorflow     |
 | DisableFaces          | bool | --disable-faces          |

@@ -13,24 +13,25 @@ Press **Ctrl + I** while a picture is open in the full-screen viewer, or pick "T
 
 ## What It Shows
 
-The sidebar surfaces the most frequently inspected metadata fields:
+The sidebar includes the most frequently used metadata fields, as well as assigned [albums](albums.md), [labels](labels.md), and [people](#editing-people-faces):
 
-- **File:** path and filename of the currently displayed media file.
-- **Camera:** make and model, lens, ISO, exposure, focal length, and f-number.
-- **Description:** title, caption, artist, copyright, and license.
-- **Labels:** clickable chips that link to the matching label page.
-- **Albums:** clickable chips that link to the matching album page.
-- **People:** clickable chips that link to the matching person page.
+- **File:** Path and filename of the currently displayed media file.
+- **Camera:** Make and model, lens, ISO, exposure, focal length, and f-number.
+- **Description:** Title, caption, artist, copyright, and license.
+- **Albums:** Clickable chips that link to the matching album.
+- **Labels:** Clickable chips that link to the matching search results.
+- **People:** Clickable chips that link to the matching search results.
 
-Clicking a chip navigates to the matching page so you can browse the rest of the collection in that context.
+Clicking a chip will open the matching album or search results in a new tab, allowing you to browse the collection while staying in context.
 
-## Editing Metadata in Place
+## Editing Metadata
 
-Click on a field to edit it. Some fields can be changed inline, while others open an overlay. Press Escape to cancel, and confirm to save your changes — invalid values cannot be saved.
+Click on a metadata field, such as *Caption*, to edit it. Some fields can be edited in place, while others open a dialog.
+Press Escape to cancel or confirm to save your changes. Note that invalid values cannot be saved and will cause an error message to appear.
 
-## Face Markers
+## Editing People & Faces
 
-The Info Sidebar provides the same face-management actions that are available on the *People* tab of the [Edit Dialog](edit.md), and is the only place where you can **manually mark a face** that PhotoPrism missed during automatic detection.
+The Info Sidebar provides the same face-management actions that are available on the *People* tab of the [Edit Dialog](edit.md#people), and is the only place where you can **manually mark a face** that PhotoPrism missed during automatic detection.
 
 Click :material-pencil-outline: next to *People* to enter *edit mode*, which displays all existing face markers on the image and unlocks the change, remove, and manual-marker actions below. Click :material-pencil-off-outline: when you are done. Edit mode is not required to assign a name to an existing unnamed face.
 
@@ -48,7 +49,7 @@ Click :material-pencil-outline: next to *People* to enter *edit mode*, which dis
 3. Click :material-eject: next to the person you want to change.
 4. Type a new name and press *enter*, or leave the field empty.
 
-### Manually Mark a Face ###
+### Manually Mark a Face
 
 1. Open a photo in the [full-screen viewer](../search/views.md) and open the Info Sidebar by pressing **Ctrl + I**.
 2. Click :material-pencil-outline: next to *People* to enter edit mode.
@@ -59,7 +60,7 @@ Click :material-pencil-outline: next to *People* to enter *edit mode*, which dis
 ![Screenshot](img/manual-face-marker-202605.jpg){ class="shadow" }
 ![Screenshot](img/manual-face-marker-202605-2.jpg){ class="shadow" }
 
-### Remove Faces ###
+### Remove Faces
 
 Like on the *People* tab of the Edit Dialog, only unnamed face markers can be removed.
 

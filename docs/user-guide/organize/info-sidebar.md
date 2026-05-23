@@ -4,6 +4,9 @@ The Info Sidebar opens alongside the full-screen viewer and shows the metadata o
 
 ![Screenshot](img/info-sidebar-202605.jpg){ class="shadow" }
 
+!!! info "Permissions"
+    Users without edit rights, e.g. *viewers* see a read-only version of the sidebar that omits empty fields. *Guests*, and *visitors* opening a share link, see a further limited subset of the metadata.
+
 ## Opening the Sidebar
 
 Press **Ctrl + I** while a picture is open in the full-screen viewer, or pick "Toggle Info Sidebar" from the viewer menu. The same shortcut closes it again. The sidebar position is remembered across page reloads, so it stays open until you explicitly close it.
@@ -45,7 +48,18 @@ Click :material-pencil-outline: next to *People* to enter *edit mode*, which dis
 3. Click :material-eject: next to the person you want to change.
 4. Type a new name and press *enter*, or leave the field empty.
 
-### Remove Faces
+### Manually Mark a Face ###
+
+1. Open a photo in the [full-screen viewer](../search/views.md) and open the Info Sidebar by pressing **Ctrl + I**.
+2. Click :material-pencil-outline: next to *People* to enter edit mode.
+3. Drag on the image to draw a rectangle around the missed face.
+4. Click :material-check: in the confirm pill to keep the new marker.
+5. Type a name in the new row that appears under *People*, then press *enter* to assign a person.
+
+![Screenshot](img/manual-face-marker-202605.jpg){ class="shadow" }
+![Screenshot](img/manual-face-marker-202605-2.jpg){ class="shadow" }
+
+### Remove Faces ###
 
 Like on the *People* tab of the Edit Dialog, only unnamed face markers can be removed.
 
@@ -54,13 +68,5 @@ Like on the *People* tab of the Edit Dialog, only unnamed face markers can be re
 3. Click the face marker on the image.
 4. Click :material-delete: in the confirm pill to remove it.
 
-### Manually Mark a Face
+![Screenshot](img/remove-face-marker-202605.jpg){ class="shadow" }
 
-1. Open a photo in the [full-screen viewer](../search/views.md) and open the Info Sidebar by pressing **Ctrl + I**.
-2. Click :material-pencil-outline: next to *People* to enter edit mode.
-3. Drag on the image to draw a rectangle around the missed face.
-4. Click :material-check: in the confirm pill to keep the new marker.
-5. Type a name in the new row that appears under *People*, then press *enter* to assign a person.
-
-<!-- TODO: screenshot manual-face-marker-2505.jpg -->
-![Screenshot](img/manual-face-marker-2505.jpg){ class="shadow" }

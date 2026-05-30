@@ -206,9 +206,15 @@ docker compose up -d
 
 ### Vulkan
 
-Vulkan-based hardware transcoding works on any GPU that implements the Vulkan video encode extensions. This currently covers recent AMD GPUs (RDNA 2 and later) and Intel GPUs (11th-generation and later) via the open Mesa drivers, as well as NVIDIA Turing-and-later cards through the proprietary driver. The encoder requires FFmpeg 8 or later, which is already included in our current Docker image.
+Vulkan-based hardware transcoding works on any GPU whose driver implements the Vulkan video encode extensions (`VK_KHR_video_encode_queue` and `VK_KHR_video_encode_h264`). The encoder requires FFmpeg 8 or later, which is already included in our current Docker image.
 
-To enable Vulkan transcoding, choose the `vulkan` encoder and share `/dev/dri` with the `photoprism` service. NVIDIA users should instead follow the [NVIDIA Container Toolkit](#nvidia-container-toolkit) setup and make sure `NVIDIA_DRIVER_CAPABILITIES` includes the `video` capability (the `"all"` value used in our example already does):
+Support is highly driver- and hardware-dependent, so verify it before switching encoders (see the box below):
+
+- **AMD** (RDNA 2 and later): supported by the open Mesa RADV driver.
+- **NVIDIA** (Turing and later): supported by the proprietary driver, provided the container is started with the `graphics` driver capability.
+- **Intel**: the Mesa ANV driver currently exposes Vulkan video *decode* on most recent integrated GPUs, but Vulkan video *encode* is still limited — integrated Raptor Lake graphics, for example, do not advertise the encode extensions in Mesa 26. Use the [Quick Sync](#intel-quick-sync) (`intel`) or VA-API (`vaapi`) encoder on those GPUs instead.
+
+To enable Vulkan transcoding, choose the `vulkan` encoder and share `/dev/dri` with the `photoprism` service. NVIDIA users should instead follow the [NVIDIA Container Toolkit](#nvidia-container-toolkit) setup and make sure `NVIDIA_DRIVER_CAPABILITIES` includes the `graphics` capability — unlike NVENC (`nvidia`), which only needs `video`, the Vulkan encoder is a graphics API and will not initialize without it (the `"all"` value used in our example already covers both):
 
 ```yaml
 services:
@@ -231,10 +237,18 @@ docker compose stop
 docker compose up -d
 ```
 
+You can verify which Vulkan devices and video encode extensions are available inside the container by installing the Vulkan tools (`vulkan-tools`) and running:
+
+```bash
+vulkaninfo | grep VK_KHR_video_encode
+```
+
+If this lists `VK_KHR_video_encode_h264`, the `vulkan` encoder can be used. If it prints nothing — or no Vulkan device is found at all — the driver does not support Vulkan video encoding on your hardware, and you should choose a different encoder.
+
 If a Vulkan device cannot be opened at runtime — for example on a GPU without the required video extensions — PhotoPrism logs a warning and automatically falls back to the software encoder, so no manual recovery is required.
 
 !!! info ""
-    Our image already includes the Vulkan loader (`libvulkan1`); vendor-specific Vulkan instance class drivers — [`mesa-vulkan-drivers`](https://packages.ubuntu.com/resolute/mesa-vulkan-drivers) for AMD and Intel, or the proprietary NVIDIA Vulkan driver — may need to be added to the container until `PHOTOPRISM_INIT: "gpu"` is updated to provision them automatically.
+    Our image already includes the Vulkan loader (`libvulkan1`). For AMD and Intel GPUs, `PHOTOPRISM_INIT: "gpu"` installs the open Mesa Vulkan drivers ([`mesa-vulkan-drivers`](https://packages.ubuntu.com/resolute/mesa-vulkan-drivers)) and `vulkan-tools` automatically. For NVIDIA GPUs, `PHOTOPRISM_INIT: "gpu"` installs `vulkan-tools` for verification, but the Vulkan driver itself is provided by the [NVIDIA Container Toolkit](#nvidia-container-toolkit) when the `graphics` capability is enabled — it cannot be added with `apt`, because the toolkit mounts the matching driver libraries into the container from the host.
 
 ## Other Hardware
 

@@ -221,7 +221,7 @@ services:
   photoprism:
     environment:
       PHOTOPRISM_FFMPEG_ENCODER: "vulkan"
-      PHOTOPRISM_INIT: "gpu"
+      PHOTOPRISM_INIT: "vulkan"
       ...
     devices:
       - "/dev/dri:/dev/dri"
@@ -248,7 +248,7 @@ If this lists `VK_KHR_video_encode_h264`, the `vulkan` encoder can be used. If i
 If a Vulkan device cannot be opened at runtime — for example on a GPU without the required video extensions — PhotoPrism logs a warning and automatically falls back to the software encoder, so no manual recovery is required.
 
 !!! info ""
-    Our image already includes the Vulkan loader (`libvulkan1`). For AMD and Intel GPUs, `PHOTOPRISM_INIT: "gpu"` installs the open Mesa Vulkan drivers ([`mesa-vulkan-drivers`](https://packages.ubuntu.com/resolute/mesa-vulkan-drivers)) and `vulkan-tools` automatically. For NVIDIA GPUs, `PHOTOPRISM_INIT: "gpu"` installs `vulkan-tools` for verification, but the Vulkan driver itself is provided by the [NVIDIA Container Toolkit](#nvidia-container-toolkit) when the `graphics` capability is enabled — it cannot be added with `apt`, because the toolkit mounts the matching driver libraries into the container from the host.
+    Our image already includes the Vulkan loader (`libvulkan1`). The `PHOTOPRISM_INIT: "vulkan"` target installs the open Mesa Vulkan drivers ([`mesa-vulkan-drivers`](https://packages.ubuntu.com/resolute/mesa-vulkan-drivers)) and `vulkan-tools` for AMD and Intel GPUs (the auto-detecting `"gpu"` target installs them as well). For NVIDIA GPUs, the Vulkan driver itself is provided by the [NVIDIA Container Toolkit](#nvidia-container-toolkit) when the `graphics` capability is enabled — it cannot be added with `apt`, because the toolkit mounts the matching driver libraries into the container from the host.
 
 ## Other Hardware
 

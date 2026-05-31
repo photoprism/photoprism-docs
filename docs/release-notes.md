@@ -6,7 +6,7 @@
 ### Development Preview
 <span class="build">Build 260531-7e46f5c7a</span>
 
-This [preview build](getting-started/updates.md#development-preview) <!-- service release --> includes important security and reliability updates. As an additional safety measure, indexing, importing, and uploading are disabled when [free disk space falls below a configurable threshold](https://docs.photoprism.app/user-guide/library/originals/#free-storage-threshold) to prevent storage volumes from filling up completely. ️🔒⚠️
+This [preview build](getting-started/updates.md#development-preview) <!-- service release --> includes important security and reliability updates. As an additional safety measure, indexing, importing, and uploading are disabled when [free disk space falls below a configurable threshold](https://docs.photoprism.app/user-guide/library/originals/#free-storage-threshold) to prevent storage volumes from filling up completely. ️🔒🔧
 
 <!-- Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. -->Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 

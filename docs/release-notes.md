@@ -12,14 +12,14 @@ What's new?
 
 - Index: [Added low-storage detection and defensive `vips` checks](https://github.com/photoprism/photoprism/issues/5613)
 - Index: [Recover hidden photos whose primary file was deleted](https://github.com/photoprism/photoprism/issues/5625)
-- Video: [Fixed VAAPI hardware transcoding in the latest release](https://github.com/photoprism/photoprism/issues/5630)
-- Video: [Improved and verified hardware transcoding with FFmpeg 8](https://github.com/photoprism/photoprism/issues/5631)
+- Videos: [Fixed VAAPI hardware transcoding compatibility with FFmpeg 8](https://github.com/photoprism/photoprism/issues/5630)
+- Videos: [Improved and verified hardware transcoding with FFmpeg 8](https://github.com/photoprism/photoprism/issues/5631)
+- Videos: [Added an option to exclude formats from FFmpeg processing](https://github.com/photoprism/photoprism/issues/5617)
 - Thumbs: [Retry PNG export without ICC profile if `libpng` rejects it](https://github.com/photoprism/photoprism/issues/5616)
-- Folders: [Fixed slug collisions on long ASCII paths](https://github.com/photoprism/photoprism/issues/5615)
-- Config: [Added an option to exclude video formats from FFmpeg processing](https://github.com/photoprism/photoprism/issues/5617)
+- Folders: [Fixed slug collisions on long filesystem paths](https://github.com/photoprism/photoprism/issues/5615)
 - Security: [Reinforced user profile authorization checks](https://github.com/photoprism/photoprism/issues/5619)
-- Security: [Removed Pebble binary from Ubuntu base images to mitigate CVE-2026-39821](https://github.com/photoprism/photoprism/issues/5620)
-- Security: [Upgraded `libheif` from v1.21.2 to v1.22.2 with 17 CVE fixes](https://github.com/photoprism/photoprism/issues/5621)
+- Security: [Removed Pebble binary from Ubuntu base images (CVE-2026-39821)](https://github.com/photoprism/photoprism/issues/5620)
+- Security: [Upgraded `libheif` from v1.21.2 to v1.22.2 (17 CVE fixes)](https://github.com/photoprism/photoprism/issues/5621)
 
 ### May 23, 2026
 <span class="build">Build 260523-0544f71c1</span>

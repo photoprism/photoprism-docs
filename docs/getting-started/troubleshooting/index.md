@@ -179,7 +179,7 @@ To see [which user accounts exist](https://docs.photoprism.app/user-guide/users/
 
 ### Cannot Index/Upload ###
 
-If indexing, [importing](../../user-guide/library/import.md), or [uploading](../../user-guide/library/upload.md) does not start and the logs show a low free storage warning, PhotoPrism has paused these operations because the free disk space in the [*storage* folder](../docker-compose.md#photoprismstorage) has fallen below the [configured threshold](../../user-guide/library/originals.md#free-storage-requirement) (by default, less than 1% of the total capacity or 100 MB of free space):
+If indexing, [importing](../../user-guide/library/import.md), or [uploading](../../user-guide/library/upload.md) does not start and the logs show a low free storage warning, PhotoPrism has paused these operations because the free disk space in the [*storage* folder](../docker-compose.md#photoprismstorage) has fallen below the [configured threshold](../../user-guide/library/originals.md#free-storage-threshold) (by default, less than 1% of the total capacity or 100 MB of free space):
 
 - [ ] Free up disk space and then retry; the check is re-evaluated automatically as soon as space becomes available
 - [ ] Check the available space on the host with `df -h`, and inside the container with `docker compose exec photoprism df -h`

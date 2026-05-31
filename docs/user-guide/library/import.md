@@ -25,7 +25,7 @@
     Import is not possible in [read-only mode](../settings/library.md) because it requires [write permissions](../../getting-started/troubleshooting/docker.md#file-permissions) to the folder of *originals*.
 
 !!! info ""
-    Importing is automatically paused when free disk space falls below the [configured threshold](originals.md#free-storage-requirement), to prevent the *storage* volume from filling up completely.
+    Importing is automatically paused when free disk space falls below the [configured threshold](originals.md#free-storage-threshold), to prevent the *storage* volume from filling up completely.
 
 ### When should "Move Files" be selected?
 

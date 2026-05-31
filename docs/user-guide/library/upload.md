@@ -6,7 +6,7 @@ The Upload dialog supports drag-and-drop: drop one or many files (or whole folde
     You can quickly open the upload dialog by pressing **Ctrl + U** from anywhere in the application.
 
 !!! info ""
-    Uploads are automatically paused when free disk space falls below the [configured threshold](originals.md#free-storage-requirement), to prevent the *storage* volume from filling up completely.
+    Uploads are automatically paused when free disk space falls below the [configured threshold](originals.md#free-storage-threshold), to prevent the *storage* volume from filling up completely.
 
 === "From Toolbar"
 

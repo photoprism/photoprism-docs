@@ -48,7 +48,7 @@ By default, a library rescan is also triggered automatically after a safety dela
 !!! tldr ""
     Be aware that automatic indexing may cause files or sets of files to be incompletely indexed if you are using a slow or unreliable internet connection, which is of particular concern with [large video or RAW files](https://github.com/photoprism/photoprism/issues/4310).
 
-## Free Storage Requirement
+## Free Storage Threshold
 
 To prevent the *storage* volume from filling up completely — which can interrupt operation and cause errors or data loss — PhotoPrism automatically pauses indexing, [importing](import.md), and [uploads](upload.md) when free disk space falls below a configured threshold.
 

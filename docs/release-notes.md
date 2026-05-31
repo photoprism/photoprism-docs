@@ -12,8 +12,8 @@ This [preview build](getting-started/updates.md#development-preview) <!-- servic
 
 What's new?
 
-- Index: [Free disk space is monitored to prevent storage from filling up](https://github.com/photoprism/photoprism/issues/5613)
-- Index: [Fixed handling of photos where the primary file was replaced](https://github.com/photoprism/photoprism/issues/5625)
+- Index: [Free disk space threshold prevents storage from filling up completely](https://github.com/photoprism/photoprism/issues/5613)
+- Index: [Fixed recovery of hidden stacks whose primary image was replaced](https://github.com/photoprism/photoprism/issues/5625)
 - Videos: [Improved hardware transcoding setup and documentation](https://github.com/photoprism/photoprism/issues/5631)
 - Videos: [Fixed VAAPI transcoding for compatibility with FFmpeg 8](https://github.com/photoprism/photoprism/issues/5630)
 - Videos: [Added an option to exclude formats from FFmpeg processing](https://github.com/photoprism/photoprism/issues/5617)

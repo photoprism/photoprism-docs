@@ -48,6 +48,17 @@ By default, a library rescan is also triggered automatically after a safety dela
 !!! tldr ""
     Be aware that automatic indexing may cause files or sets of files to be incompletely indexed if you are using a slow or unreliable internet connection, which is of particular concern with [large video or RAW files](https://github.com/photoprism/photoprism/issues/4310).
 
+## Free Storage Requirement
+
+To prevent the *storage* volume from filling up completely — which can interrupt operation and cause errors or data loss — PhotoPrism automatically pauses indexing, [importing](import.md), and [uploads](upload.md) when free disk space falls below a configured threshold.
+
+By default, the check is triggered when less than **1% of the total capacity** or **100 MB** of free space remains, whichever is reached first. A warning is then written to the logs and the affected operation is skipped until enough space is available again; the check is re-evaluated automatically as soon as space is freed.
+
+You can adjust the required free space with the [`PHOTOPRISM_STORAGE_FREE`](../../getting-started/config-options.md#storage) config option (or the `--storage-free` command flag), which specifies the threshold as a percentage of the total storage capacity. Setting it to `-1` disables the check entirely.
+
+!!! warning ""
+    For safety reasons, this threshold can only be changed by server administrators through the configuration and is intentionally not exposed in the app settings. We recommend keeping the check enabled, as a full disk can interrupt operation and lead to data loss.
+
 ## Ignoring Files and Folders
 
 Hidden files and folders that start with a `.`, `@`, `_.`, or `__` like `__MACOSX` will be automatically ignored when indexing your library.

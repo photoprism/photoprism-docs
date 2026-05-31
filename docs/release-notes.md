@@ -6,18 +6,20 @@
 ### Development Preview
 <span class="build">Build 260531-7e46f5c7a</span>
 
-Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
+This [preview build](getting-started/updates.md#development-preview) <!-- service release --> includes important security and reliability updates. As an additional safety measure, indexing, importing, and uploading are disabled when free disk space falls below a configurable threshold to prevent storage volumes from filling up completely.
+
+<!-- Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. -->Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
 What's new?
 
-- Index: [Added low-storage detection and defensive `vips` checks](https://github.com/photoprism/photoprism/issues/5613)
-- Index: [Recover hidden photos whose primary file was deleted](https://github.com/photoprism/photoprism/issues/5625)
-- Videos: [Improved and verified hardware transcoding with FFmpeg 8](https://github.com/photoprism/photoprism/issues/5631)
-- Videos: [Fixed VAAPI hardware transcoding compatibility with FFmpeg 8](https://github.com/photoprism/photoprism/issues/5630)
+- Index: [Free disk space is monitored to prevent storage from filling up](https://github.com/photoprism/photoprism/issues/5613)
+- Index: [Fixed handling of photos where the primary file was replaced](https://github.com/photoprism/photoprism/issues/5625)
+- Videos: [Improved hardware transcoding setup and documentation](https://github.com/photoprism/photoprism/issues/5631)
+- Videos: [Fixed VAAPI transcoding for compatibility with FFmpeg 8](https://github.com/photoprism/photoprism/issues/5630)
 - Videos: [Added an option to exclude formats from FFmpeg processing](https://github.com/photoprism/photoprism/issues/5617)
-- Thumbs: [Retry PNG export without ICC profile if `libpng` rejects it](https://github.com/photoprism/photoprism/issues/5616)
-- Folders: [Fixed slug collisions on long filesystem paths](https://github.com/photoprism/photoprism/issues/5615)
-- Security: [Reinforced user profile endpoint authorization checks](https://github.com/photoprism/photoprism/issues/5619)
+- Thumbs: [PNGs are exported without an ICC profile if `libpng` rejects it](https://github.com/photoprism/photoprism/issues/5616)
+- Folders: [Fixed re-creation loops caused by slug collisions on long paths](https://github.com/photoprism/photoprism/issues/5615)
+- Security: [Reinforced user profile endpoint authorization checks](https://github.com/photoprism/photoprism/issues/5619) by [@geo-chen](https://github.com/geo-chen)
 - Security: [Removed Pebble binary from Ubuntu base images (CVE-2026-39821)](https://github.com/photoprism/photoprism/issues/5620)
 - Security: [Upgraded `libheif` from v1.21.2 to v1.22.2 (17 CVE fixes)](https://github.com/photoprism/photoprism/issues/5621)
 

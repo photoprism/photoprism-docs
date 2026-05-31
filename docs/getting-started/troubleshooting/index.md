@@ -177,11 +177,11 @@ We also recommend checking your [Docker Logs](docker.md#viewing-logs) for messag
 
 To see [which user accounts exist](https://docs.photoprism.app/user-guide/users/cli/) on your instance, [open a terminal](../docker-compose.md#command-line-interface) and [run `photoprism users ls`](../../user-guide/users/cli.md#managing-user-accounts). A new password can be [set with `photoprism passwd [username]`](../../user-guide/users/cli.md#changing-a-password). You can then try to log in again. [Upgrade to the latest release](../updates.md#docker-compose), restart the server, and [check the logs for errors and warnings](docker.md#viewing-logs) if it still doesn't work.
 
-### Cannot Index/Upload ###
+### Storage Is Full ###
 
-If indexing, [importing](../../user-guide/library/import.md), or [uploading](../../user-guide/library/upload.md) does not start and the logs show a low free storage warning, PhotoPrism has paused these operations because the free disk space in the [*storage* folder](../docker-compose.md#photoprismstorage) has fallen below the [configured threshold](../../user-guide/library/originals.md#free-storage-threshold) (by default, less than 1% of the total capacity or 100 MB of free space):
+If [indexing](../../user-guide/library/originals.md#free-storage-threshold), [importing](../../user-guide/library/import.md), or [uploading](../../user-guide/library/upload.md) does not start and the logs show a warning about low free storage, it means that the amount of free disk space in the [*storage* folder](../docker-compose.md#photoprismstorage) has fallen below the [configured threshold](../../user-guide/library/originals.md#free-storage-threshold) (less than 1% of the total capacity, or 100 MB by default):
 
-- [ ] Free up disk space and then retry; the check is re-evaluated automatically as soon as space becomes available
+- [ ] Free up disk space, then try again; the check is re-evaluated automatically as soon as space becomes available
 - [ ] Check the available space on the host with `df -h`, and inside the container with `docker compose exec photoprism df -h`
 - [ ] If you intentionally operate the volume close to full, adjust the threshold via [`PHOTOPRISM_STORAGE_FREE`](../config-options.md#storage), or set it to `-1` to disable the check (not recommended, as a full disk can interrupt operation and cause data loss)
 

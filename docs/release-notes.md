@@ -22,7 +22,7 @@ What's new?
 - Videos: [Fixed VAAPI transcoding for compatibility with FFmpeg 8](https://github.com/photoprism/photoprism/issues/5630)
 - Videos: [Added an option to exclude formats from FFmpeg processing](https://github.com/photoprism/photoprism/issues/5617)
 - Thumbs: [PNGs are exported without an ICC profile if `libpng` rejects it](https://github.com/photoprism/photoprism/issues/5616)
-- Folders: [Fixed recurring deletion and recreation of folder albums](https://github.com/photoprism/photoprism/issues/5615)
+- Folders: [Fixed recurring deletion and re-creation of folder albums](https://github.com/photoprism/photoprism/issues/5615)
 - Security: [Reinforced user profile endpoint authorization checks](https://github.com/photoprism/photoprism/issues/5619) by [@geo-chen](https://github.com/geo-chen)
 - Security: [Removed Pebble binary from Ubuntu base images (CVE-2026-39821)](https://github.com/photoprism/photoprism/issues/5620)
 - Security: [Upgraded `libheif` from v1.21.2 to v1.22.2 (17 CVE fixes)](https://github.com/photoprism/photoprism/issues/5621)

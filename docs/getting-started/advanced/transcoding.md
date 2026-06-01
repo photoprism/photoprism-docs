@@ -256,6 +256,22 @@ If you want to use other hardware for transcoding, choose the appropriate AVC en
 
 Which devices need to be shared and whether additional drivers are required depends on your specific hardware. For more information, see the [FFmpeg documentation](https://ffmpeg.org/ffmpeg-devices.html).
 
+## Excluded Formats
+
+By default, PhotoPrism hands every video to FFmpeg for transcoding and still-image extraction. A small number of container and codec formats cannot be reliably detected or processed by FFmpeg, so they are excluded to avoid incorrect codec detection or broken output.
+
+You can configure which formats to skip with the [`PHOTOPRISM_FFMPEG_EXCLUDE`](../config-options.md#file-conversion) config option (alias `PHOTOPRISM_FFMPEG_BLACKLIST`), specified as a comma-separated list of container and codec format names. It defaults to `magy, vfw` (MagicYUV and Video for Windows):
+
+```yaml
+services:
+  photoprism:
+    environment:
+      PHOTOPRISM_FFMPEG_EXCLUDE: "magy, vfw"
+```
+
+!!! tldr ""
+    Formats listed here are skipped by FFmpeg, so they are not transcoded and no still-image thumbnails are extracted for them. Adjust the list only if you have a specific format that FFmpeg handles incorrectly in your environment.
+
 ## Troubleshooting
 
 ### Enabling Trace Log Mode

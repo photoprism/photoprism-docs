@@ -20,7 +20,7 @@ What's new?
 - Index: [Fixed recovery of hidden stacks whose primary image was replaced](https://github.com/photoprism/photoprism/issues/5625)
 - Videos: [Improved hardware transcoding setup and documentation](https://github.com/photoprism/photoprism/issues/5631)
 - Videos: [Fixed VAAPI transcoding for compatibility with FFmpeg 8](https://github.com/photoprism/photoprism/issues/5630)
-- Videos: [Added an option to exclude formats from FFmpeg processing](https://github.com/photoprism/photoprism/issues/5617)
+- Videos: [Added an option to exclude formats from FFmpeg processing](getting-started/advanced/transcoding.md#excluded-formats)
 - Thumbs: [PNGs are exported without an ICC profile if `libpng` rejects it](https://github.com/photoprism/photoprism/issues/5616)
 - Folders: [Fixed recurring deletion and re-creation of folder albums](https://github.com/photoprism/photoprism/issues/5615)
 - Security: [Reinforced user profile endpoint authorization checks](https://github.com/photoprism/photoprism/issues/5619) by [@geo-chen](https://github.com/geo-chen)

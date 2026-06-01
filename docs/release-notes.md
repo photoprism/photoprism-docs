@@ -3,12 +3,16 @@
 !!! note ""
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
+<!---
 ### Development Preview
-<span class="build">Build 260601-23802d4fd</span>
 
-This [preview build](getting-started/updates.md#development-preview) <!-- service release --> includes important security and reliability updates. As an additional safety measure, indexing, importing, and uploading can be disabled when [free disk space falls below a configurable threshold](https://docs.photoprism.app/user-guide/library/originals/#free-storage-threshold) to prevent storage volumes from filling up. 🔒🔧
+Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
+-->
 
-<!-- Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. -->Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
+### June 1, 2026
+<span class="build">Build 260601-a7d098548</span>
+
+This [service release](https://github.com/photoprism/photoprism/releases/tag/260601-a7d098548) includes important security and reliability updates. As an additional safety measure, indexing, importing, and uploading can be disabled when [free disk space falls below a configurable threshold](https://docs.photoprism.app/user-guide/library/originals/#free-storage-threshold) to prevent storage volumes from filling up. A special thank you to everyone who [reported bugs](https://docs.photoprism.app/developer-guide/issues/#creating-bug-reports) and helped us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! ️🔒🔧
 
 What's new?
 
@@ -22,6 +26,9 @@ What's new?
 - Security: [Reinforced user profile endpoint authorization checks](https://github.com/photoprism/photoprism/issues/5619) by [@geo-chen](https://github.com/geo-chen)
 - Security: [Removed Pebble binary from Ubuntu base images (CVE-2026-39821)](https://github.com/photoprism/photoprism/issues/5620)
 - Security: [Upgraded `libheif` from v1.21.2 to v1.22.2 (17 CVE fixes)](https://github.com/photoprism/photoprism/issues/5621)
+
+!!! info ""
+    Missing [user interface translations](https://translate.photoprism.app/projects/photoprism/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.
 
 ### May 23, 2026
 <span class="build">Build 260523-0544f71c1</span>
@@ -72,9 +79,6 @@ What's new?
 - Docker: [Upgraded base image to Ubuntu 26.04 LTS (Resolute Raccoon)](https://github.com/photoprism/photoprism/issues/5543)
 - Security: [Search queries now use parameterized statements for all user input](https://github.com/photoprism/photoprism/issues/5587)
 - Security: [Upgraded Go from v1.26 to v1.26.3](https://github.com/golang/go/issues?q=milestone%3AGo1.26.3) and [ONNX Runtime to v1.25.1](https://github.com/photoprism/photoprism/issues/5555)
-
-!!! info ""
-    Missing [user interface translations](https://translate.photoprism.app/projects/photoprism/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.
 
 ### March 5, 2026
 <span class="build">Build 260305-fad9d5395</span>

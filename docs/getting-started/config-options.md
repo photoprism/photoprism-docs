@@ -42,13 +42,14 @@
 
 | Environment                 | CLI Flag           | Default                      | Description                                                                                                                |
 |:----------------------------|:-------------------|:-----------------------------|:---------------------------------------------------------------------------------------------------------------------------|
+| PHOTOPRISM_STORAGE_PATH     | --storage-path     |                              | writable storage `PATH` for sidecar, cache, and database files                                                             |
+| PHOTOPRISM_STORAGE_FREE     | --storage-free     | -1                           | minimum `PERCENT` (1-99) of free storage required for indexing, importing, and uploads, -1 disables the check              |
 | PHOTOPRISM_CONFIG_PATH      | --config-path      |                              | config storage `PATH` or options.yml filename, values in this file override CLI flags and environment variables if present |
 | PHOTOPRISM_DEFAULTS_YAML    | --defaults-yaml    | /etc/photoprism/defaults.yml | loads default config values from `FILENAME` if it exists, does not override CLI flags or environment variables             |
 | PHOTOPRISM_ORIGINALS_PATH   | --originals-path   |                              | storage `PATH` of your original media files (photos and videos)                                                            |
 | PHOTOPRISM_ORIGINALS_LIMIT  | --originals-limit  | 1000                         | maximum size of media files in `MB` (1-100000; -1 to disable)                                                              |
 | PHOTOPRISM_RESOLUTION_LIMIT | --resolution-limit | 150                          | maximum resolution of media files in `MEGAPIXELS` (1-900; -1 to disable)                                                   |
 | PHOTOPRISM_USERS_PATH       | --users-path       | users                        | relative `PATH` to create base and upload subdirectories for users                                                         |
-| PHOTOPRISM_STORAGE_PATH     | --storage-path     |                              | writable storage `PATH` for sidecar, cache, and database files                                                             |
 | PHOTOPRISM_IMPORT_PATH      | --import-path      |                              | base `PATH` from which files can be imported to originals *optional*                                                       |
 | PHOTOPRISM_IMPORT_DEST      | --import-dest      |                              | relative originals `PATH` in which files should be imported by default *optional*                                          |
 | PHOTOPRISM_IMPORT_ALLOW     | --import-allow     |                              | restricts imports to these file types (comma-separated list of `EXTENSIONS`; leave blank to allow all)                     |
@@ -233,6 +234,7 @@
 | PHOTOPRISM_FFMPEG_DEVICE                                         | --ffmpeg-device           |                                          | FFmpeg device `PATH` when using a hardware encoder that supports it as parameter               |
 | PHOTOPRISM_FFMPEG_MAP_VIDEO                                      | --ffmpeg-map-video        | `0:v:0`                                  | transcoding video stream `MAP`                                                                 |
 | PHOTOPRISM_FFMPEG_MAP_AUDIO                                      | --ffmpeg-map-audio        | `0:a:0?`                                 | transcoding audio stream `MAP`                                                                 |
+| PHOTOPRISM_FFMPEG_EXCLUDE, PHOTOPRISM_FFMPEG_BLACKLIST           | --ffmpeg-exclude          | magy, vfw                                | container and codec `FORMATS` not to be processed by FFmpeg, separated by commas               |
 | PHOTOPRISM_EXIFTOOL_BIN                                          | --exiftool-bin            | exiftool                                 | ExifTool `COMMAND` for extracting metadata                                                     |
 | PHOTOPRISM_SIPS_BIN                                              | --sips-bin                | sips                                     | Sips `COMMAND` for media file conversion *macOS only*                                          |
 | PHOTOPRISM_SIPS_EXCLUDE, PHOTOPRISM_SIPS_BLACKLIST               | --sips-exclude            | avif, avifs, thm                         | file `EXTENSIONS` not to be used with Sips *macOS only*                                        |

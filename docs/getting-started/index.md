@@ -57,7 +57,7 @@ Please note, however, that we have a [zero-bug policy](../known-issues.md) and d
 
 ## Getting Support
 
-Common problems can be quickly diagnosed and solved using our [Troubleshooting Checklists](troubleshooting/index.md). You can also post your questions on [GitHub Discussions](https://link.photoprism.app/discussions), ask in our [Community Chat](https://link.photoprism.app/chat), or consult our [Virtual Experts](https://www.photoprism.app/kb/getting-support#virtual-experts) on [ChatGPT](https://link.photoprism.app/chatgpt) and [Perplexity](https://link.photoprism.app/perplexity).[^6]
+Common problems can be quickly diagnosed and solved using our [Troubleshooting Checklists](troubleshooting/index.md). You can also post your questions on [GitHub Discussions](https://link.photoprism.app/discussions), ask in our [Community Chat](https://link.photoprism.app/chat), or consult our [Virtual Expert](https://www.photoprism.app/kb/getting-support#virtual-experts) on [ChatGPT](https://link.photoprism.app/chatgpt).[^6]
 
 [Silver, Gold, and Platinum](https://link.photoprism.app/membership) members, as well as [users with a team plan](http://link.photoprism.app/team-editions), are welcome to email us for technical support and advice.
 
@@ -73,4 +73,4 @@ Common problems can be quickly diagnosed and solved using our [Troubleshooting C
 [^3]: Oracle seems to have stopped shipping [new features and enhancements](https://github.com/photoprism/photoprism/issues/1764). As a result, the testing effort required before each release is no longer feasible.
 [^4]: [WebGL](https://caniuse.com/?search=webgl) may not be fully supported by some versions of Firefox, especially on [Android](https://play.google.com/store/apps/details?id=org.mozilla.firefox&hl=en&pli=1).
 [^5]: Our [Compliance FAQ](https://www.photoprism.app/kb/compliance-faq#privacy) provides answers to the most frequently asked questions about product compliance and scalability.
-[^6]: ChatGPT and Perplexity can make mistakes and, unless you opt out, your chats may be used for training purposes.
+[^6]: ChatGPT can make mistakes and, unless you opt out, your chats may be used for training purposes.

@@ -10,7 +10,7 @@ Our [preview builds](getting-started/updates.md#development-preview) give you ea
 
 What's new?
 
-- Database: [Fixed startup failure after upgrading to 260601 with certain database configurations](https://github.com/photoprism/photoprism/issues/5637)
+- Database: [Improved error logging to capture connection issues](https://github.com/photoprism/photoprism/issues/5637)
 - Database: [Use rune-safe byte truncation for VARBINARY text columns](https://github.com/photoprism/photoprism/issues/5638)
 
 ### June 1, 2026

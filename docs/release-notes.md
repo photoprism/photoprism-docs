@@ -14,6 +14,7 @@ What's new?
 - Auth: [Added a feature setting to enable or disable app passwords](https://github.com/photoprism/photoprism/issues/5647)
 - Database: [Improved error logging to capture connection issues](https://github.com/photoprism/photoprism/issues/5637)
 - Database: [Use rune-safe byte truncation for VARBINARY text columns](https://github.com/photoprism/photoprism/issues/5638)
+- Security: [Upgraded libheif from v1.22.2 to v1.23.0 (CVE-2026-50142)](https://github.com/photoprism/photoprism/issues/5653)
 
 ### June 1, 2026
 <span class="build">Build 260601-a7d098548</span>

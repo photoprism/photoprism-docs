@@ -3,7 +3,7 @@ You can move photos and videos you do not want to keep in your collection to *Ar
 Content that is archived is not deleted but it will not appear in any section apart from *Archive*.
 
 !!! tip "Keyboard Shortcut"
-    In the fullscreen viewer, you can quickly archive or restore photos by pressing **Ctrl + A**.
+    In the fullscreen viewer, you can quickly archive or restore photos by pressing **Ctrl + X**.
 
 ### Archive Photos ###
 

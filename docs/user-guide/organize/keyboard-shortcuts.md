@@ -23,7 +23,7 @@ PhotoPrism offers a variety of keyboard shortcuts to help you navigate and use t
 | Ctrl + H | Show/Hide Caption    |
 | Ctrl + M | Mute/Unmute          |
 | Ctrl + S | Play/Pause Slideshow |
-| Ctrl + A | Archive/Restore      |
+| Ctrl + X | Archive/Restore      |
 | Ctrl + D | Download             |
 | Ctrl + E | Edit                 |
 | Ctrl + F | Open Fullscreen      |

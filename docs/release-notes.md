@@ -11,12 +11,12 @@ Our [preview builds](getting-started/updates.md#development-preview) give you ea
 What's new?
 
 - UX: [Added a UI setting to prevent action menus from opening on hover](https://github.com/photoprism/photoprism/issues/5650)
+- Places: [Photos at the same location are properly stacked when zoomed in](https://github.com/photoprism/photoprism/issues/5643)
 - People: [Added a type-ahead cache for name suggestions](https://github.com/photoprism/photoprism/issues/5666) by [@lastzero](https://github.com/lastzero)
-- Places: [Photos taken at identical coordinates are stacked into a single marker](https://github.com/photoprism/photoprism/issues/5643)
 - Metadata: [Added Lens Make and Model updates via CLI and API](https://github.com/photoprism/photoprism/issues/5656) by [@keif888](https://github.com/keif888)
 - Metadata: [Added Camera Make and Model updates via CLI and API](https://github.com/photoprism/photoprism/issues/5663) by [@lastzero](https://github.com/lastzero)
 - Index: [Serialized indexing of byte-identical files to avoid duplicate photos](https://github.com/photoprism/photoprism/issues/5652) by [@knowald](https://github.com/knowald)
-- API: [Added an X-Count header to label and service search responses](https://github.com/photoprism/photoprism/issues/5649) by [@keif888](https://github.com/keif888)
+- API: [Added an `X-Count` header to label and service search responses](https://github.com/photoprism/photoprism/issues/5649) by [@keif888](https://github.com/keif888)
 - PWA: [Added bloom, flower, ring, and shutter app icons](https://github.com/photoprism/photoprism/issues/5662) by [@lastzero](https://github.com/lastzero)
 - Database: [Ensured rune-safe byte truncation for all text columns](https://github.com/photoprism/photoprism/issues/5638)
 - Database: [Improved error logging to capture connection issues](https://github.com/photoprism/photoprism/issues/5637)

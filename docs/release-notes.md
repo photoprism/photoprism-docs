@@ -11,13 +11,13 @@ Our [preview builds](getting-started/updates.md#development-preview) give you ea
 What's new?
 
 - UX: [Added a UI setting to prevent action menus from opening on hover](https://github.com/photoprism/photoprism/issues/5650)
-- People: [Added a type-ahead cache for faster name suggestions](https://github.com/photoprism/photoprism/issues/5666)
+- People: [Added a type-ahead cache for name suggestions](https://github.com/photoprism/photoprism/issues/5666) by [@lastzero](https://github.com/lastzero)
 - Places: [Stacked photos at identical coordinates into a single map marker](https://github.com/photoprism/photoprism/issues/5643)
 - Metadata: [Added Lens Make and Model updates via CLI and API](https://github.com/photoprism/photoprism/issues/5656)  by [@keif888](https://github.com/keif888)
-- Metadata: [Added Camera Make and Model updates via CLI and API](https://github.com/photoprism/photoprism/issues/5663)
+- Metadata: [Added Camera Make and Model updates via CLI and API](https://github.com/photoprism/photoprism/issues/5663) by [@lastzero](https://github.com/lastzero)
 - Index: [Serialized indexing of byte-identical files to avoid duplicate photos](https://github.com/photoprism/photoprism/issues/5652) by [@knowald](https://github.com/knowald)
 - PWA: [Added bloom, flower, ring, and shutter app icons](https://github.com/photoprism/photoprism/issues/5662) by [@lastzero](https://github.com/lastzero)
-- Database: [Use rune-safe byte truncation for `VARBINARY` text columns](https://github.com/photoprism/photoprism/issues/5638)
+- Database: [Ensured rune-safe byte truncation for all text columns](https://github.com/photoprism/photoprism/issues/5638)
 - Database: [Improved error logging to capture connection issues](https://github.com/photoprism/photoprism/issues/5637)
 - Security: [Added a feature flag to disable app passwords](https://github.com/photoprism/photoprism/issues/5647) by [@lastzero](https://github.com/lastzero)
 - Security: [Upgraded `libheif` from v1.22.2 to v1.23.0 (CVE-2026-50142)](https://github.com/photoprism/photoprism/issues/5653)

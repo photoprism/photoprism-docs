@@ -12,7 +12,7 @@ What's new?
 
 - UX: [Added a UI setting to prevent action menus from opening on hover](https://github.com/photoprism/photoprism/issues/5650)
 - People: [Added a type-ahead cache for name suggestions](https://github.com/photoprism/photoprism/issues/5666) by [@lastzero](https://github.com/lastzero)
-- Places: [Photos taken at the same coordinates are stacked into a single marker](https://github.com/photoprism/photoprism/issues/5643)
+- Places: [Photos taken at identical coordinates are stacked into a single marker](https://github.com/photoprism/photoprism/issues/5643)
 - Metadata: [Added Lens Make and Model updates via CLI and API](https://github.com/photoprism/photoprism/issues/5656)  by [@keif888](https://github.com/keif888)
 - Metadata: [Added Camera Make and Model updates via CLI and API](https://github.com/photoprism/photoprism/issues/5663) by [@lastzero](https://github.com/lastzero)
 - Index: [Serialized indexing of byte-identical files to avoid duplicate photos](https://github.com/photoprism/photoprism/issues/5652) by [@knowald](https://github.com/knowald)

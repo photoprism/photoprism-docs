@@ -10,16 +10,17 @@ Our [preview builds](getting-started/updates.md#development-preview) give you ea
 
 What's new?
 
-- UX: [Added an option to disable opening menus on hover](https://github.com/photoprism/photoprism/issues/5650)
-- Auth: [Added a feature setting to enable or disable app passwords](https://github.com/photoprism/photoprism/issues/5647)
-- People: [Added a type-ahead cache for faster people name suggestions](https://github.com/photoprism/photoprism/issues/5666)
-- Metadata: [Added Lens Make and Model updates via CLI and API](https://github.com/photoprism/photoprism/issues/5656)
+- UX: [Added a UI setting to prevent action menus from opening on hover](https://github.com/photoprism/photoprism/issues/5650)
+- People: [Added a type-ahead cache for faster name suggestions](https://github.com/photoprism/photoprism/issues/5666)
+- Metadata: [Added Lens Make and Model updates via CLI and API](https://github.com/photoprism/photoprism/issues/5656)  by [@keif888](https://github.com/keif888)
 - Metadata: [Added Camera Make and Model updates via CLI and API](https://github.com/photoprism/photoprism/issues/5663)
-- Index: [Serialized indexing of byte-identical files to avoid duplicate photos](https://github.com/photoprism/photoprism/issues/5652)
-- Config: [Added bloom, flower, ring, and shutter app icons](https://github.com/photoprism/photoprism/issues/5662)
-- Security: [Upgraded libheif from v1.22.2 to v1.23.0 (CVE-2026-50142)](https://github.com/photoprism/photoprism/issues/5653)
-- Database: [Use rune-safe byte truncation for VARBINARY text columns](https://github.com/photoprism/photoprism/issues/5638)
+- Index: [Serialized indexing of byte-identical files to avoid duplicate photos](https://github.com/photoprism/photoprism/issues/5652) by [@knowald](https://github.com/knowald)
+- PWA: [Added bloom, flower, ring, and shutter app icons](https://github.com/photoprism/photoprism/issues/5662) by [@lastzero](https://github.com/lastzero)
+- Database: [Use rune-safe byte truncation for `VARBINARY` text columns](https://github.com/photoprism/photoprism/issues/5638)
 - Database: [Improved error logging to capture connection issues](https://github.com/photoprism/photoprism/issues/5637)
+- Security: [Added a feature flag to disable app passwords](https://github.com/photoprism/photoprism/issues/5647) by [@lastzero](https://github.com/lastzero)
+- Security: [Upgraded `libheif` from v1.22.2 to v1.23.0 (CVE-2026-50142)](https://github.com/photoprism/photoprism/issues/5653)
+- Security: [Upgraded Go from v1.26.3 to v1.26.4](https://github.com/golang/go/issues?q=milestone%3AGo1.26.4) and [ONNX Runtime to v1.26.0](https://github.com/photoprism/photoprism/commit/1fad248031eca0ae80f1bb7b122535e79852558b)
 
 ### June 1, 2026
 <span class="build">Build 260601-a7d098548</span>

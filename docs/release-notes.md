@@ -25,7 +25,7 @@ What's new?
 ### June 1, 2026
 <span class="build">Build 260601-a7d098548</span>
 
-This [service release](https://github.com/photoprism/photoprism/releases/tag/260601-a7d098548) includes important security and reliability updates. As an additional safety measure, indexing, importing, and uploading can be disabled when [free disk space falls below a configurable threshold](https://docs.photoprism.app/user-guide/library/originals/#free-storage-threshold) to prevent storage volumes from filling up. A special thank you to everyone who [reported bugs](https://docs.photoprism.app/developer-guide/issues/#creating-bug-reports) and helped us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! ️🔒🔧
+This [service release](https://github.com/photoprism/photoprism/releases/tag/260601-a7d098548) includes important security and reliability updates. As an additional safety measure, indexing, importing, and uploading can be disabled when [free disk space falls below a configurable threshold](https://docs.photoprism.app/user-guide/library/originals/#free-storage-threshold) to prevent storage volumes from filling up. A special thank you to everyone who [reported bugs](https://docs.photoprism.app/developer-guide/issues/#creating-bug-reports) and helped us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! 🔒🔧
 
 What's new?
 

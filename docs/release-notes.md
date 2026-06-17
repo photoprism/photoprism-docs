@@ -10,9 +10,9 @@ Our [preview builds](getting-started/updates.md#development-preview) give you ea
 
 What's new?
 
-- Viewer: [Support for 360° panoramas with equirectangular projection](https://github.com/photoprism/photoprism/pull/5623) by [@omerdduran](https://github.com/omerdduran)
+- Viewer: [Support for 360° panorama photos and videos](https://github.com/photoprism/photoprism/pull/5623) by [@omerdduran](https://github.com/omerdduran)
 - Places: [Photos at the same location are properly stacked when zoomed in](https://github.com/photoprism/photoprism/issues/5643)
-- Index: [Serialized indexing of byte-identical files to avoid duplicate photos](https://github.com/photoprism/photoprism/issues/5652) by [@knowald](https://github.com/knowald)
+- Index: [Serialized indexing of identical files to avoid duplicates](https://github.com/photoprism/photoprism/issues/5652) by [@knowald](https://github.com/knowald)
 - Index: [Original file names are only recorded for imported files](https://github.com/photoprism/photoprism/issues/5668)
 - Metadata: [Improved support for metadata from XMP sidecar files](https://github.com/photoprism/photoprism/pull/5563) by [@omerdduran](https://github.com/omerdduran)
 - Metadata: [Added Lens Make and Model updates via CLI and API](https://github.com/photoprism/photoprism/issues/5656) by [@keif888](https://github.com/keif888)

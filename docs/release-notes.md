@@ -10,23 +10,22 @@ Our [preview builds](getting-started/updates.md#development-preview) give you ea
 
 What's new?
 
-- Viewer: [Support for 360° photos and videos with equirectangular projection](https://github.com/photoprism/photoprism/pull/5623)
+- Viewer: [Support for 360° panoramas with equirectangular projection](https://github.com/photoprism/photoprism/pull/5623) by [@omerdduran](https://github.com/omerdduran)
 - Places: [Photos at the same location are properly stacked when zoomed in](https://github.com/photoprism/photoprism/issues/5643)
-- People: [Added a type-ahead cache for name suggestions](https://github.com/photoprism/photoprism/issues/5666) by [@lastzero](https://github.com/lastzero)
+- Index: [Serialized indexing of byte-identical files to avoid duplicate photos](https://github.com/photoprism/photoprism/issues/5652) by [@knowald](https://github.com/knowald)
+- Index: [Original file names are only recorded for imported files](https://github.com/photoprism/photoprism/issues/5668)
 - Metadata: [Improved support for metadata from XMP sidecar files](https://github.com/photoprism/photoprism/pull/5563) by [@omerdduran](https://github.com/omerdduran)
 - Metadata: [Added Lens Make and Model updates via CLI and API](https://github.com/photoprism/photoprism/issues/5656) by [@keif888](https://github.com/keif888)
 - Metadata: [Added Camera Make and Model updates via CLI and API](https://github.com/photoprism/photoprism/issues/5663) by [@lastzero](https://github.com/lastzero)
-- Index: [Serialized indexing of byte-identical files to avoid duplicate photos](https://github.com/photoprism/photoprism/issues/5652) by [@knowald](https://github.com/knowald)
-- Index: [Original file names are only recorded for imported files](https://github.com/photoprism/photoprism/issues/5668)
-- API: [Added an `X-Count` header to label and service search responses](https://github.com/photoprism/photoprism/issues/5649) by [@keif888](https://github.com/keif888)
 - PWA: [Added bloom, flower, ring, and shutter app icons](https://github.com/photoprism/photoprism/issues/5662) by [@lastzero](https://github.com/lastzero)
 - CLI: [Improved role and auth-provider usage descriptions](https://github.com/photoprism/photoprism/issues/5667) by [@lastzero](https://github.com/lastzero)
-- Database: [Ensured rune-safe byte truncation for all text columns](https://github.com/photoprism/photoprism/issues/5638)
+- API: [Added an `X-Count` header to label and service search responses](https://github.com/photoprism/photoprism/issues/5649) by [@keif888](https://github.com/keif888)
 - Database: [Improved error logging to capture connection issues](https://github.com/photoprism/photoprism/issues/5637)
+- Database: [Ensured rune-safe byte truncation for all text columns](https://github.com/photoprism/photoprism/issues/5638)
 - Security: [Added a feature flag to disable app passwords](https://github.com/photoprism/photoprism/issues/5647) by [@lastzero](https://github.com/lastzero)
 - Security: [Upgraded `libheif` from v1.22.2 to v1.23.0 (CVE-2026-50142)](https://github.com/photoprism/photoprism/issues/5653)
+- Security: [Upgraded Vitest to v4 and Vite to v8 to remove esbuild dependency](https://github.com/photoprism/photoprism/issues/5659)
 - Security: [Upgraded Go from v1.26.3 to v1.26.4](https://github.com/golang/go/issues?q=milestone%3AGo1.26.4) and [ONNX Runtime to v1.26.0](https://github.com/photoprism/photoprism/commit/1fad248031eca0ae80f1bb7b122535e79852558b)
-- Build: [Upgraded Vitest to v4 and Vite to v8 to remove the esbuild dependency](https://github.com/photoprism/photoprism/issues/5659)
 
 ### June 1, 2026
 <span class="build">Build 260601-a7d098548</span>

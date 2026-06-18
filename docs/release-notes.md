@@ -4,13 +4,16 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 260617-d52554fc5</span>
+<span class="build">Build 260618-74339513f</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
 What's new?
 
 - Viewer: [Support for 360° panorama photos and videos](https://github.com/photoprism/photoprism/pull/5623) by [@omerdduran](https://github.com/omerdduran)
+- Media: [Added 16K thumbnail and video size support for 360° media](https://github.com/photoprism/photoprism/issues/5669) by [@lastzero](https://github.com/lastzero)
+- UX: [Added a setting to prevent action menus from opening on hover](https://github.com/photoprism/photoprism/issues/5650) by [@lastzero](https://github.com/lastzero)
+- People: [Added a type-ahead cache for faster name suggestions](https://github.com/photoprism/photoprism/issues/5666) by [@lastzero](https://github.com/lastzero)
 - Places: [Photos at the same location are properly stacked when zoomed in](https://github.com/photoprism/photoprism/issues/5643)
 - Index: [Serialized indexing of identical files to avoid duplicates](https://github.com/photoprism/photoprism/issues/5652) by [@knowald](https://github.com/knowald)
 - Index: [Original file names are only recorded for imported files](https://github.com/photoprism/photoprism/issues/5668)

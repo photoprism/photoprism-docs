@@ -30,7 +30,7 @@ What's new?
 - Security: [Upgraded `libheif` from v1.22.2 to v1.23.0 (CVE-2026-50142)](https://github.com/photoprism/photoprism/issues/5653)
 - Security: [Upgraded Vitest to v4 and Vite to v8 to remove esbuild dependency](https://github.com/photoprism/photoprism/issues/5659)
 - Security: [Upgraded Go from v1.26.3 to v1.26.4](https://github.com/golang/go/issues?q=milestone%3AGo1.26.4) and [ONNX Runtime to v1.26.0](https://github.com/photoprism/photoprism/commit/1fad248031eca0ae80f1bb7b122535e79852558b)
-- Translations: [Updated Hebrew](https://docs.photoprism.app/developer-guide/translations-weblate/)
+- Translations: [Updated Hebrew](https://docs.photoprism.app/developer-guide/translations-weblate/) by [@avma](https://github.com/avma)
 
 ### June 1, 2026
 <span class="build">Build 260601-a7d098548</span>

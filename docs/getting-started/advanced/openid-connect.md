@@ -107,7 +107,7 @@ To restore a previously deleted account, admins can follow the same steps as for
 
 ### Is it possible to set a default role for new OIDC users?
 
-For security reasons, our [Personal Editions](https://www.photoprism.app/editions#compare) currently default to the [Guest](../../user-guide/users/roles.md#guest) role, which admins can then upgrade after checking the eligibility of newly registered accounts. If you run our [Pro Edition](https://www.photoprism.app/teams#compare) in a trusted corporate network with appropriate security measures - including for the OIDC provider - [it can be configured](https://www.photoprism.app/pro/kb/config-options) to give new accounts a higher authorization level by default.
+For security reasons, our [Personal Editions](https://www.photoprism.app/editions/#compare) currently default to the [Guest](../../user-guide/users/roles.md#guest) role, which admins can then upgrade after checking the eligibility of newly registered accounts. If you run our [Pro Edition](https://www.photoprism.app/teams/#compare) in a trusted corporate network with appropriate security measures - including for the OIDC provider - [it can be configured](https://www.photoprism.app/pro/kb/config-options/) to give new accounts a higher authorization level by default.
 
 Please note in this context that using an external [Identity Provider](#identity-providers) for [authorization](https://en.wikipedia.org/wiki/Authorization), and not just for [authentication](https://en.wikipedia.org/wiki/Authentication), can easily lead to security issues such as the following, for which we do not want to get a CVE assigned nor do we want to be responsible for any private pictures of our users getting leaked as a result:
 

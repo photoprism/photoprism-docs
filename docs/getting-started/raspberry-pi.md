@@ -131,7 +131,7 @@ Other issues? Our [troubleshooting checklists](troubleshooting/index.md) help yo
 
 !!! info ""
     You are welcome to ask for help in our [community chat](https://link.photoprism.app/chat).
-    [Sponsors](https://www.photoprism.app/membership) receive direct [technical support](https://www.photoprism.app/contact) via email.
+    [Sponsors](https://www.photoprism.app/membership/) receive direct [technical support](https://www.photoprism.app/contact/) via email.
     Before submitting a support request, try to [determine the cause of your problem](troubleshooting/index.md).
 
 [^1]: Experienced users can [alternatively use the packages](faq.md#installation-packages) at [dl.photoprism.app/pkg/linux/](https://dl.photoprism.app/pkg/linux/README.html) to manually install PhotoPrism on compatible Linux distributions. For more installation methods, see our [Getting Started FAQ](faq.md#how-can-i-install-photoprism-without-docker).

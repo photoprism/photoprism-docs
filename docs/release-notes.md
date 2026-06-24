@@ -6,7 +6,7 @@
 ### Development Preview
 <span class="build">Build 260623-95ae2be80</span>
 
-Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
+Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions/#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
 What's new?
 
@@ -227,7 +227,7 @@ What's new?
 
 This [update](https://github.com/photoprism/photoprism/releases/tag/250426-27ec7a128) adds [preinstalled Linux Video Acceleration API (VAAPI) drivers](https://docs.photoprism.app/getting-started/advanced/transcoding/) and [fixes the package names](https://github.com/photoprism/photoprism/issues/4967) in the [Intel QSV hardware driver](https://docs.photoprism.app/getting-started/advanced/transcoding/#intel-quick-sync) installation script. 🔧
 
-We have also fixed the [.deb](https://dl.photoprism.app/pkg/linux/deb/) and [.rpm](https://dl.photoprism.app/pkg/linux/rpm/) [installation package](https://dl.photoprism.app/pkg/linux/README.html) builds as an alternative to the plain .tar.gz packages [attached to this release](https://github.com/photoprism/photoprism/releases/tag/250426-27ec7a128). Note that these are intended for experienced users and third-party integration maintainers only, as they require manual configuration and do not include tested system dependencies. Since we are unable to [provide support](https://www.photoprism.app/kb/getting-support) for custom installations, we recommend [using one of our Docker images](https://docs.photoprism.app/getting-started/docker-compose/) to run PhotoPrism on a private server or NAS device. 📦
+We have also fixed the [.deb](https://dl.photoprism.app/pkg/linux/deb/) and [.rpm](https://dl.photoprism.app/pkg/linux/rpm/) [installation package](https://dl.photoprism.app/pkg/linux/README.html) builds as an alternative to the plain .tar.gz packages [attached to this release](https://github.com/photoprism/photoprism/releases/tag/250426-27ec7a128). Note that these are intended for experienced users and third-party integration maintainers only, as they require manual configuration and do not include tested system dependencies. Since we are unable to [provide support](https://www.photoprism.app/kb/getting-support/) for custom installations, we recommend [using one of our Docker images](https://docs.photoprism.app/getting-started/docker-compose/) to run PhotoPrism on a private server or NAS device. 📦
 
 What's new?
 
@@ -305,7 +305,7 @@ What's new?
 ### February 28, 2025
 <span class="build">Build 250228-43447fa38</span>
 
-With [this update](https://github.com/photoprism/photoprism/releases/tag/250228-43447fa38), you'll get additional usability and performance improvements, as well as a new thumbnail size for [Retina 5K displays](https://github.com/photoprism/photoprism/issues/4810) that bridges the gap [between 4K and 8K](https://docs.photoprism.app/user-guide/settings/advanced/#which-thumbnails-will-be-generated). We would also like to take this opportunity to [thank our community](https://floss.social/@photoprism), whose [support has been](https://www.photoprism.app/oss/faq) [and continues to be essential](https://docs.photoprism.app/developer-guide/) to the [success of the project](https://github.com/photoprism/photoprism)! 🌈💎✨
+With [this update](https://github.com/photoprism/photoprism/releases/tag/250228-43447fa38), you'll get additional usability and performance improvements, as well as a new thumbnail size for [Retina 5K displays](https://github.com/photoprism/photoprism/issues/4810) that bridges the gap [between 4K and 8K](https://docs.photoprism.app/user-guide/settings/advanced/#which-thumbnails-will-be-generated). We would also like to take this opportunity to [thank our community](https://floss.social/@photoprism), whose [support has been](https://www.photoprism.app/oss/faq/) [and continues to be essential](https://docs.photoprism.app/developer-guide/) to the [success of the project](https://github.com/photoprism/photoprism)! 🌈💎✨
 
 What's new?
 
@@ -511,7 +511,7 @@ What's new?
 ### October 21, 2023
 <span class="build">Build 231021-9abea5b55</span>
 
-This update adds search filters for finding pictures by ISO number, focal length, aperture, and altitude. It also includes a number of user interface improvements, updated translations, as well as fixes for [recently discovered issues](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+label%3Abug+sort%3Acreated-desc). We would like to thank everyone who [submitted pull requests](https://docs.photoprism.app/developer-guide/), [helped with testing](https://github.com/orgs/photoprism/projects/5), or [contributed in other ways](https://www.photoprism.app/oss/faq)! ✨
+This update adds search filters for finding pictures by ISO number, focal length, aperture, and altitude. It also includes a number of user interface improvements, updated translations, as well as fixes for [recently discovered issues](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+label%3Abug+sort%3Acreated-desc). We would like to thank everyone who [submitted pull requests](https://docs.photoprism.app/developer-guide/), [helped with testing](https://github.com/orgs/photoprism/projects/5), or [contributed in other ways](https://www.photoprism.app/oss/faq/)! ✨
 
 What's new?
 
@@ -654,7 +654,7 @@ PhotoPrism® Plus
 ### June 3, 2023
 <span class="build">Build 230603-378d4746a</span>
 
-This service release fixes [recently discovered issues](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+label%3Abug+sort%3Acreated-desc) and improves compatibility with the upcoming [MariaDB v11.0](https://mariadb.com/kb/en/release-notes-mariadb-11-0-series/). If you are upgrading from MariaDB 10.x to 11.0, please [make sure that you replace](https://github.com/photoprism/photoprism/commit/bff649469d084498a1e75492c0bd99bda3f5a340#diff-03a31d6e73f48b7bba98b65352ce67a7d153fe2461f9c7b5e76be49a97ebf0cb) `command: mysqld` with `command: ` (followed by the command flags) in your `compose.yaml` or `docker-compose.yml` file, otherwise the database server might fail to start. Thank you to everyone who contributed with pull requests, [reported bugs](https://www.photoprism.app/kb/reporting-bugs), and helped us test the changes!
+This service release fixes [recently discovered issues](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+label%3Abug+sort%3Acreated-desc) and improves compatibility with the upcoming [MariaDB v11.0](https://mariadb.com/kb/en/release-notes-mariadb-11-0-series/). If you are upgrading from MariaDB 10.x to 11.0, please [make sure that you replace](https://github.com/photoprism/photoprism/commit/bff649469d084498a1e75492c0bd99bda3f5a340#diff-03a31d6e73f48b7bba98b65352ce67a7d153fe2461f9c7b5e76be49a97ebf0cb) `command: mysqld` with `command: ` (followed by the command flags) in your `compose.yaml` or `docker-compose.yml` file, otherwise the database server might fail to start. Thank you to everyone who contributed with pull requests, [reported bugs](https://www.photoprism.app/kb/reporting-bugs/), and helped us test the changes!
 
 What's new?
 
@@ -703,7 +703,7 @@ What's new?
 ### May 2, 2023
 <span class="build">Build 230502-c405f6eff</span>
 
-With this major new release, you'll get a long list of new features and enhancements with a focus on [performance](https://x.com/photoprism_app/status/1628850699772600323), [security](https://x.com/photoprism_app/status/1651596098249662465), and [file type support](https://www.photoprism.app/kb/file-formats). In addition, our [Plus Members](https://www.photoprism.app/editions#compare) can now register [directly in the app](https://www.photoprism.app/kb/activation) to unlock additional features like [vector graphics support](https://demo.photoprism.app/library/browse?view=cards&order=added&q=vectors) and a new [admin web UI](https://demo.photoprism.app/library/admin/users) for [user and session management](https://www.photoprism.app/plus/kb/multi-user). Thank you to all [contributors](https://github.com/photoprism/photoprism/graphs/contributors), [members](https://www.photoprism.app/membership), and [sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md) who made this possible!
+With this major new release, you'll get a long list of new features and enhancements with a focus on [performance](https://x.com/photoprism_app/status/1628850699772600323), [security](https://x.com/photoprism_app/status/1651596098249662465), and [file type support](https://www.photoprism.app/kb/file-formats/). In addition, our [Plus Members](https://www.photoprism.app/editions/#compare) can now register [directly in the app](https://www.photoprism.app/kb/activation/) to unlock additional features like [vector graphics support](https://demo.photoprism.app/library/browse?view=cards&order=added&q=vectors) and a new [admin web UI](https://demo.photoprism.app/library/admin/users) for [user and session management](https://docs.photoprism.app/user-guide/users/). Thank you to all [contributors](https://github.com/photoprism/photoprism/graphs/contributors), [members](https://www.photoprism.app/membership/), and [sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md) who made this possible!
 
 What's new?
 
@@ -781,11 +781,11 @@ PhotoPrism® Plus
 - Index: [Added file format support for SVG, AI, PS and EPS vector graphics](https://github.com/photoprism/photoprism/issues/2207)
 
 !!! info ""
-    Our new [Plus License](https://www.photoprism.app/plus/license) is used for both the extensions [we provide to our members](https://www.photoprism.app/membership/faq#how-can-i-install-photoprism-plus-without-the-docker-image) and the standard [Docker images](https://hub.docker.com/r/photoprism/photoprism/tags) available on Docker Hub. This allows us to bundle the extensions with the compiled application, while the [Community Edition](https://github.com/photoprism/photoprism) remains freely available under the terms of the [GNU Affero General Public License (AGPL)](license/agpl.md).
+    Our new [Plus License](https://www.photoprism.app/plus/license/) is used for both the extensions [we provide to our members](https://www.photoprism.app/membership/faq/#how-can-i-install-photoprism-plus-without-the-docker-image) and the standard [Docker images](https://hub.docker.com/r/photoprism/photoprism/tags) available on Docker Hub. This allows us to bundle the extensions with the compiled application, while the [Community Edition](https://github.com/photoprism/photoprism) remains freely available under the terms of the [GNU Affero General Public License (AGPL)](license/agpl.md).
 
-    If you don't plan to use [any additional features](https://www.photoprism.app/editions#compare), you can alternatively use the "ce" tag instead of "latest" to get a slightly smaller Docker image distributed under the AGPL. Note that system dependencies and other third-party components included in this image are still subject to additional terms and conditions.
+    If you don't plan to use [any additional features](https://www.photoprism.app/editions/#compare), you can alternatively use the "ce" tag instead of "latest" to get a slightly smaller Docker image distributed under the AGPL. Note that system dependencies and other third-party components included in this image are still subject to additional terms and conditions.
     
-    [View Membership FAQ ›](https://www.photoprism.app/membership/faq){ class="pr-3 block-xs" } [View Plus License ›](https://www.photoprism.app/plus/license)
+    [View Membership FAQ ›](https://www.photoprism.app/membership/faq/){ class="pr-3 block-xs" } [View Plus License ›](https://www.photoprism.app/plus/license/)
 
 ### November 18, 2022
 <span class="build">Build 221118-e58fee0fb</span>
@@ -1013,7 +1013,7 @@ This update includes translations that were recently contributed via [translate.
 ### May 27, 2022
 <span class="build">Build 220527-005770ca</span>
 
-This update improves navigation fonts and [mobile submenu colors](https://dl.photoprism.app/img/ui/mobile-submenu-light-797x567.png) for light themes. We are also working to establish [PhotoPrism+](https://www.photoprism.app/membership) as the name for our community membership and associated benefits. For this, membership [information in the app](https://try.photoprism.app/library/about), [on our website](https://www.photoprism.app/membership), on [GitHub Sponsors](https://link.photoprism.app/sponsor) and [Patreon](https://link.photoprism.app/patreon) is gradually being updated.
+This update improves navigation fonts and [mobile submenu colors](https://dl.photoprism.app/img/ui/mobile-submenu-light-797x567.png) for light themes. We are also working to establish [PhotoPrism+](https://www.photoprism.app/membership/) as the name for our community membership and associated benefits. For this, membership [information in the app](https://try.photoprism.app/library/about), [on our website](https://www.photoprism.app/membership/), on [GitHub Sponsors](https://link.photoprism.app/sponsor) and [Patreon](https://link.photoprism.app/patreon) is gradually being updated.
 
 - UX: [Fixed light theme colors of mobile navigation submenu](https://github.com/photoprism/photoprism/issues/2359)
 - UX: [Splash screen has been updated and no longer depends on admin theme](https://github.com/photoprism/photoprism/issues/2360)
@@ -1034,7 +1034,7 @@ This service release fixes potential issues with our new Debian 12-based Docker 
 - Docker: [Removed incorrect permission check for storage folder on startup](https://github.com/photoprism/photoprism/issues/2334)
 - Docker: [Supported User and Group ID ranges have been documented](https://github.com/photoprism/photoprism/issues/2336)
 
-**Thank you to everyone who [helped with testing](https://github.com/photoprism/photoprism/projects/5?card_filter_query=label%3Aplease-test), [signed up as a member](https://www.photoprism.app/membership), or [contributed](https://github.com/photoprism/photoprism/graphs/contributors) in other ways! We appreciate it very much.**
+**Thank you to everyone who [helped with testing](https://github.com/photoprism/photoprism/projects/5?card_filter_query=label%3Aplease-test), [signed up as a member](https://www.photoprism.app/membership/), or [contributed](https://github.com/photoprism/photoprism/graphs/contributors) in other ways! We appreciate it very much.**
 
 ### May 17, 2022
 <span class="build">Build 220517-b9c68f8f</span>

@@ -1,13 +1,13 @@
 # Deploying PhotoPrism on Kubernetes
 
-PhotoPrism provides [Helm charts](https://charts.photoprism.app/photoprism) for advanced users to deploy our [Personal](https://www.photoprism.app/editions#compare) and [Team Editions](https://www.photoprism.app/teams#compare) on Kubernetes, offering the same configuration options as the official Docker images.
+PhotoPrism provides [Helm charts](https://charts.photoprism.app/photoprism) for advanced users to deploy our [Personal](https://www.photoprism.app/editions/#compare) and [Team Editions](https://www.photoprism.app/teams/#compare) on Kubernetes, offering the same configuration options as the official Docker images.
 
-The `photoprism-plus` chart is publicly accessible and allows you to install our [Personal Editions](https://www.photoprism.app/editions#compare) with the option to [activate membership features](https://www.photoprism.app/kb/activation), similar to the installation with [Docker Compose](../docker-compose.md).
+The `photoprism-plus` chart is publicly accessible and allows you to install our [Personal Editions](https://www.photoprism.app/editions/#compare) with the option to [activate membership features](https://www.photoprism.app/kb/activation/), similar to the installation with [Docker Compose](../docker-compose.md).
 
 Before proceeding, ensure that your Kubernetes nodes have at least [8 GB of memory](../troubleshooting/docker.md#adding-swap) and avoid enforcing a [hard memory limit](../faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory). Indexing RAW files or large panoramas may require additional swap space or RAM beyond the [recommended minimum](../index.md#system-requirements).
 
 !!! info "PhotoPrism® Pro"
-    [Business customers](https://www.photoprism.app/teams#compare) can deploy the `photoprism-pro` chart from the same repository. [Learn more ›](https://www.photoprism.app/pro/kb/kubernetes)
+    [Business customers](https://www.photoprism.app/teams/#compare) can deploy the `photoprism-pro` chart from the same repository. [Learn more ›](https://www.photoprism.app/pro/kb/kubernetes/)
 
 ## Add the Charts Repository
 
@@ -113,9 +113,9 @@ Because TLS typically terminates at the ingress or proxy layer, the chart keeps 
 
 ## PhotoPrism® Plus
 
-Our members can activate [additional features](https://link.photoprism.app/membership) by logging in with the [admin user created during setup](../config-options.md#authentication) and then following the steps [described in our activation guide](https://www.photoprism.app/kb/activation). Thank you for your support, which has been and continues to be essential to the success of the project! :octicons-heart-fill-24:{ .heart .purple }
+Our members can activate [additional features](https://link.photoprism.app/membership) by logging in with the [admin user created during setup](../config-options.md#authentication) and then following the steps [described in our activation guide](https://www.photoprism.app/kb/activation/). Thank you for your support, which has been and continues to be essential to the success of the project! :octicons-heart-fill-24:{ .heart .purple }
 
-[Compare Memberships ›](https://link.photoprism.app/membership){ class="pr-3 block-xs" } [View Membership FAQ ›](https://www.photoprism.app/membership/faq) 
+[Compare Memberships ›](https://link.photoprism.app/membership){ class="pr-3 block-xs" } [View Membership FAQ ›](https://www.photoprism.app/membership/faq/) 
 
 !!! example ""
     We recommend that new users install our free Community Edition before [signing up for a membership](https://link.photoprism.app/membership).

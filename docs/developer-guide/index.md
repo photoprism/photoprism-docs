@@ -14,23 +14,23 @@ You are welcome to [submit specific feature requests](issues.md) after you have 
 
 ## Join the Community ##
 
-Follow us on [Mastodon](https://floss.social/@photoprism), [Bluesky](https://bsky.app/profile/photoprism.app), or join the [Community Chat](https://link.photoprism.app/chat) to get regular updates, connect with other users, and discuss your ideas. Our [Code of Conduct](https://www.photoprism.app/code-of-conduct) explains the "dos and don’ts" when interacting with other community members.
+Follow us on [Mastodon](https://floss.social/@photoprism), [Bluesky](https://bsky.app/profile/photoprism.app), or join the [Community Chat](https://link.photoprism.app/chat) to get regular updates, connect with other users, and discuss your ideas. Our [Code of Conduct](https://www.photoprism.app/code-of-conduct/) explains the "dos and don’ts" when interacting with other community members.
 
-As a contributor, you are also welcome to [contact us directly](https://www.photoprism.app/contact) if you have something on your mind that you don't want to discuss publicly. Please note, however, that due to the high volume of emails we receive, our team may be unable to get back to you immediately. We do our best to respond within five business days or less.
+As a contributor, you are also welcome to [contact us directly](https://www.photoprism.app/contact/) if you have something on your mind that you don't want to discuss publicly. Please note, however, that due to the high volume of emails we receive, our team may be unable to get back to you immediately. We do our best to respond within five business days or less.
 
 ## Creating Bug Reports ##
 
-Before [reporting a bug](https://www.photoprism.app/kb/reporting-bugs), first use our [Troubleshooting Checklists](../getting-started/troubleshooting/index.md) to determine the cause of your problem. If you have a general question, need help, it could be a configuration issue, or a misunderstanding in how the software works:
+Before [reporting a bug](https://www.photoprism.app/kb/reporting-bugs/), first use our [Troubleshooting Checklists](../getting-started/troubleshooting/index.md) to determine the cause of your problem. If you have a general question, need help, it could be a configuration issue, or a misunderstanding in how the software works:
 
 - you are welcome to ask in our [Community Chat](https://link.photoprism.app/chat)
 - or post your question in [GitHub Discussions](https://link.photoprism.app/discussions)
 
-In order for us to investigate [new bug reports](https://www.photoprism.app/kb/reporting-bugs), they must include **a complete list of steps to reproduce the problem**, the software versions used and information about the environment in which the problem occurred, such as [browser type, browser version, browser plug-ins](https://docs.photoprism.app/getting-started/troubleshooting/browsers/), operating system, [storage type](https://docs.photoprism.app/getting-started/troubleshooting/performance/#storage), [processor type](https://docs.photoprism.app/getting-started/troubleshooting/performance/#server-cpu), and [memory size](https://docs.photoprism.app/getting-started/troubleshooting/performance/#memory).
+In order for us to investigate [new bug reports](https://www.photoprism.app/kb/reporting-bugs/), they must include **a complete list of steps to reproduce the problem**, the software versions used and information about the environment in which the problem occurred, such as [browser type, browser version, browser plug-ins](https://docs.photoprism.app/getting-started/troubleshooting/browsers/), operating system, [storage type](https://docs.photoprism.app/getting-started/troubleshooting/performance/#storage), [processor type](https://docs.photoprism.app/getting-started/troubleshooting/performance/#server-cpu), and [memory size](https://docs.photoprism.app/getting-started/troubleshooting/performance/#memory).
 
-A template for creating bug reports can be found at [photoprism.app/kb/reporting-bugs](https://www.photoprism.app/kb/reporting-bugs). We kindly ask you not to report bugs via [GitHub Issues](issues.md) **unless you are certain to have found a fully reproducible and previously unreported issue** that must be fixed directly in the app.
+A template for creating bug reports can be found at [photoprism.app/kb/reporting-bugs](https://www.photoprism.app/kb/reporting-bugs/). We kindly ask you not to report bugs via [GitHub Issues](issues.md) **unless you are certain to have found a fully reproducible and previously unreported issue** that must be fixed directly in the app.
 
 !!! example ""
-    When [browsing issues](https://github.com/photoprism/photoprism/issues), please note that **our team and all issue subscribers receive an email notification** from GitHub whenever a new comment is added, so these should only be used for sharing important information and not for [discussions, questions](https://github.com/photoprism/photoprism/discussions), or [expressing personal opinions](https://www.photoprism.app/code-of-conduct). Thank you very much!
+    When [browsing issues](https://github.com/photoprism/photoprism/issues), please note that **our team and all issue subscribers receive an email notification** from GitHub whenever a new comment is added, so these should only be used for sharing important information and not for [discussions, questions](https://github.com/photoprism/photoprism/discussions), or [expressing personal opinions](https://www.photoprism.app/code-of-conduct/). Thank you very much!
 
 ## Submitting Pull Requests ##
 

@@ -2,7 +2,7 @@
 
 !!! info ""
     You are welcome to ask for help in our [community chat](https://link.photoprism.app/chat).
-    [Sponsors](https://www.photoprism.app/membership) receive direct [technical support](https://www.photoprism.app/contact) via email.
+    [Sponsors](https://www.photoprism.app/membership/) receive direct [technical support](https://www.photoprism.app/contact/) via email.
     Before [submitting a support request](../../user-guide/index.md#getting-support), try to [determine the cause of your problem](index.md).
 
 ## Installation
@@ -149,7 +149,7 @@ The default entrypoint script can install [additional distribution packages](../
 [Learn more ›](https://docs.photoprism.app/getting-started/config-options/#docker-image)
 
 !!! abstract ""
-    If you are experiencing a similar problem with a custom configuration that we did not provide or recommend, please try changing it to see if that helps before [asking our team](https://www.photoprism.app/kb/getting-support) or [community members](https://github.com/photoprism/photoprism/discussions) for support. 🛟
+    If you are experiencing a similar problem with a custom configuration that we did not provide or recommend, please try changing it to see if that helps before [asking our team](https://www.photoprism.app/kb/getting-support/) or [community members](https://github.com/photoprism/photoprism/discussions) for support. 🛟
 
 ### IPTables Firewall
 
@@ -159,7 +159,7 @@ On Linux, Docker manipulates the `iptables` rules to provide network isolation. 
 
 ### Wrong MTU Size
 
-If you use Docker on your server or on a virtual machine, technical limitations of the local network or your internet provider can sometimes make it impossible to [reach external services](firewall.md#outgoing-connections) such as the [Reverse Geocoding API](https://www.photoprism.app/privacy#section-7) that we operate for our users. In particular, the *network cards of virtual machines* often do not have the standard [Maximum Transmission Unit (MTU)](https://en.wikipedia.org/wiki/Maximum_transmission_unit) of 1500, but a smaller size like 1492 or 1454.
+If you use Docker on your server or on a virtual machine, technical limitations of the local network or your internet provider can sometimes make it impossible to [reach external services](firewall.md#outgoing-connections) such as the [Reverse Geocoding API](https://www.photoprism.app/privacy/#section-7) that we operate for our users. In particular, the *network cards of virtual machines* often do not have the standard [Maximum Transmission Unit (MTU)](https://en.wikipedia.org/wiki/Maximum_transmission_unit) of 1500, but a smaller size like 1492 or 1454.
 
 In this case, you must [configure the virtual network cards](https://mlohr.com/docker-mtu/) of your Docker containers so that they have an MTU size that is less than or equal to that of the outgoing network, for example by [adding the following](https://www.civo.com/learn/fixing-networking-for-docker) to your `compose.yaml` (or `docker-compose.yml`) config files:
 

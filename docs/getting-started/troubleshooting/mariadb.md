@@ -2,7 +2,7 @@
 
 !!! info ""
     You are welcome to ask for help in our [community chat](https://link.photoprism.app/chat).
-    [Sponsors](https://www.photoprism.app/membership) receive direct [technical support](https://www.photoprism.app/contact) via email.
+    [Sponsors](https://www.photoprism.app/membership/) receive direct [technical support](https://www.photoprism.app/contact/) via email.
     Before [submitting a support request](../../user-guide/index.md#getting-support), try to [determine the cause of your problem](index.md).
 
 ## Compatibility
@@ -105,7 +105,7 @@ echo "SHOW VARIABLES WHERE Variable_name LIKE 'character\_set\_%' OR Variable_na
 docker compose exec -T mariadb mariadb -uroot -pinsecure photoprism
 ```
 
-Before [submitting a support request](https://www.photoprism.app/kb/getting-support), confirm that the problem also occurs with a **newly created** database based on our [example configuration](https://dl.photoprism.app/docker/compose.yaml):
+Before [submitting a support request](https://www.photoprism.app/kb/getting-support/), confirm that the problem also occurs with a **newly created** database based on our [example configuration](https://dl.photoprism.app/docker/compose.yaml):
 
 !!! example "compose.yaml"
     ```yaml

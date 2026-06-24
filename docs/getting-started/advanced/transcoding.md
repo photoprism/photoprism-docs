@@ -77,7 +77,7 @@ services:
 
 The `ffmpeg-master` init target maps to the script's `master` channel and installs the latest nightly archive from BtbN.
 
-Note that these static builds cannot be used with hardware transcoding and that they may [support a different set](https://github.com/BtbN/FFmpeg-Builds) of [file formats](https://www.photoprism.app/kb/file-formats).
+Note that these static builds cannot be used with hardware transcoding and that they may [support a different set](https://github.com/BtbN/FFmpeg-Builds) of [file formats](https://www.photoprism.app/kb/file-formats/).
 
 ## GPU Drivers
 

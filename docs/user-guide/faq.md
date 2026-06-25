@@ -124,6 +124,12 @@
 
 ## Maps & Places
 
+??? question "Why is the location missing after I upload photos from my phone?"
+
+    Recent Android versions remove the embedded GPS coordinates from photos when they are read by an app that does not hold the system *media location* permission ([`ACCESS_MEDIA_LOCATION`](https://developer.android.com/training/data-storage/shared/media#location-info-photos)). Because web browsers cannot request this permission, pictures uploaded through the web UI on a phone may arrive without location data. iOS can behave similarly depending on the browser and its privacy settings.
+
+    Note that this happens on the device, *before* the files reach PhotoPrism, so the coordinates cannot be recovered during indexing. To preserve the location, upload the originals from a desktop browser or use a sync app like [PhotoSync](sync/mobile-devices.md#using-photosync), which holds the required permission and transfers files unmodified via WebDAV. You can check whether a file still contains GPS data with [ExifTool](https://exiftool.org/).
+
 ??? question "Why are some pictures positioned at unvisited locations on the map?"
 
     PhotoPrism can estimate the location of pictures taken without GPS information by extrapolating it from the location of other pictures taken on the same day. These estimates can be [disabled in the settings](./settings/library.md) if you don't want them.

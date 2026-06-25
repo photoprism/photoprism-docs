@@ -49,3 +49,13 @@ The Upload dialog supports drag-and-drop: drop one or many files (or whole folde
     - In the iOS Photos picker, tap the three-dot menu (…) → *Options* → set **Format** to **Current** instead of **Automatic** so your files are uploaded in the original format.
     - Alternatively, use dedicated sync apps like [PhotoSync](../sync/mobile-devices.md#using-photosync), which can upload files in their original format via WebDAV.
 
+!!! info "Why GPS Location May Be Missing After Uploading from a Phone"
+    Recent Android versions remove the embedded GPS coordinates from photos when they are read by an app that does not hold the system *media location* permission ([`ACCESS_MEDIA_LOCATION`](https://developer.android.com/training/data-storage/shared/media#location-info-photos)). Because web browsers cannot request this permission, pictures uploaded through the web UI on a phone may arrive **without location data**. iOS can behave similarly depending on the browser and its privacy settings.
+
+    This happens on the device, **before** the files reach PhotoPrism, so the coordinates cannot be recovered during indexing. To preserve the embedded location:
+
+    - Upload the original files from a **desktop browser**, or
+    - Use a dedicated sync app such as [PhotoSync](../sync/mobile-devices.md#using-photosync), which holds the required permission and transfers files unmodified via WebDAV.
+
+    You can check whether a file still contains GPS data with [ExifTool](https://exiftool.org/) (for example, `exiftool -a -G1 photo.jpg`).
+

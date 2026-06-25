@@ -158,7 +158,7 @@
     [TIFF is partially supported](https://github.com/golang/go/issues?q=is%3Aissue+image%2Ftiff+)
     without extensions like GeoTIFF.
 
-    When indexing, a JPEG or PNG sidecar file is automatically created for videos and images in other formats, such as RAW or vector graphics. It is needed for thumbnail generation, image classification, and face detection. JPEG XL support is planned as soon as it is generally available and enough compatible tools exist.
+    When indexing, a JPEG or PNG sidecar file is automatically created for videos and images in other formats, such as RAW, JPEG XL, or vector graphics. It is needed for thumbnail generation, image classification, and face detection.
     
     If installed, converting RAW files is possible with the following converters (our Docker image includes both):
 

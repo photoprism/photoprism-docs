@@ -10,7 +10,7 @@ PhotoPrism has two separate code paths for XMP, and it is important to understan
 
 ### Embedded XMP via ExifTool (Primary Path)
 
-For XMP packets embedded in a media file, PhotoPrism does **not** parse the XML itself. Instead, the indexer runs [ExifTool](https://exiftool.org/) once per file and caches its output as a JSON document. ExifTool flattens EXIF, XMP, IPTC, Maker Notes, QuickTime atoms, and vendor tags into a single object; PhotoPrism then reads the values it recognises from that JSON.
+For XMP packets embedded in a media file, PhotoPrism does **not** parse the XML itself. Instead, the indexer runs [ExifTool](https://exiftool.org/) once per file and caches its output as a JSON document. ExifTool flattens EXIF, XMP, IPTC, Maker Notes, QuickTime atoms, and vendor tags into a single object; PhotoPrism then reads the values it recognizes from that JSON.
 
 The relevant code:
 
@@ -18,7 +18,7 @@ The relevant code:
 - `internal/photoprism/mediafile_meta.go` — calls `CreateExifToolJson` when the cached JSON is missing and then `ReadExifToolJson` to feed the cache into the metadata.
 - `internal/meta/json_exiftool.go` — iterates the fields of `meta.Data` and, for each `meta:"..."` struct tag, assigns the first non-empty value found in the ExifTool JSON.
 
-ExifTool normalises tag names across groups by default, so an ExifTool JSON key such as `Description` may originate from `XMP-dc:description`, `IPTC:Caption-Abstract`, or `EXIF:ImageDescription` — whichever group ExifTool selected for that file. If you need to see the origin explicitly, pass `-g` to ExifTool (`exiftool -g -j <file>`) when debugging.
+ExifTool normalizes tag names across groups by default, so an ExifTool JSON key such as `Description` may originate from `XMP-dc:description`, `IPTC:Caption-Abstract`, or `EXIF:ImageDescription` — whichever group ExifTool selected for that file. If you need to see the origin explicitly, pass `-g` to ExifTool (`exiftool -g -j <file>`) when debugging.
 
 This path also covers the XMP that `exiftool` extracts from RAW, HEIC, and video containers. If `PHOTOPRISM_DISABLE_EXIFTOOL` is set, embedded XMP is not indexed.
 
@@ -106,7 +106,7 @@ Pull requests that extend the supported field set are welcome.
 
 PhotoPrism currently supports Darktable and RawTherapee as RAW image converters (as well as Sips on macOS). Darktable fully supports XMP sidecar files; RawTherapee only partially. XMP is a container format, so the fields (namespaces) used to describe how an image should be rendered differ between Lightroom/Photoshop, Darktable, and RawTherapee — an application that "supports XMP" in general may still be unable to interpret edits written by another vendor.
 
-From our experience, some basic edits done with Adobe tools — such as cropping — can survive conversion with Darktable, while advanced edits like lens or colour corrections usually do not.
+From our experience, some basic edits done with Adobe tools — such as cropping — can survive conversion with Darktable, while advanced edits like lens or color corrections usually do not.
 
 [Learn more ›](../media/raw.md)
 

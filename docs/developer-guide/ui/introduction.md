@@ -8,7 +8,7 @@ Open a terminal and run `photoprism start` (or `make start` inside the main repo
 - The entry points live in [`frontend/src/app.js`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/app.js) (bootstrap logic, router, plugins) and [`frontend/src/app.vue`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/app.vue) (layout shell). The route definitions are stored in [`frontend/src/app/routes.js`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/app/routes.js).
 - Webpack (configured in [`frontend/webpack.config.js`](https://github.com/photoprism/photoprism/blob/develop/frontend/webpack.config.js)) bundles the Vue code, registers the service worker, and emits the optimized JS/CSS that gets injected into the Go HTML template at [`assets/templates/index.gohtml`](https://github.com/photoprism/photoprism/blob/develop/assets/templates/index.gohtml).
 - Startup logic such as the browser capability check and splash screen is implemented in [`assets/static/js/browser-check.js`](https://github.com/photoprism/photoprism/blob/develop/assets/static/js/browser-check.js) and [`frontend/src/css/splash.css`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/css/splash.css), so update both files together when changing the loader.
-- Documentation and landing pages may still use lightweight static tooling (for example Materialize CSS), but the actual app always goes through the Vue stack described above.
+- Documentation and landing pages may use lightweight static tooling (for example MkDocs Material or Hugo), but the actual app always goes through the Vue stack described above.
 
 For a detailed tour of every directory see [`frontend/CODEMAP.md`](https://github.com/photoprism/photoprism/blob/develop/frontend/CODEMAP.md) in the main repository.
 
@@ -34,9 +34,9 @@ Reusable Vue components live under [`frontend/src/component/`](https://github.co
 
 - https://vuejs.org/guide/quick-start.html — official Vue 3 guide
 - https://vuetifyjs.com/en/getting-started/installation/ — Vuetify 3 docs and Material Design guidance
-- https://web.dev/progressive-web-apps/ — Google’s canonical PWA reference
+- https://web.dev/explore/progressive-web-apps/ — Google’s canonical PWA reference
 - https://webpack.js.org/concepts/ — bundler fundamentals used in [`frontend/webpack.config.js`](https://github.com/photoprism/photoprism/blob/develop/frontend/webpack.config.js)
-- https://developers.google.com/web/fundamentals/native-hardware/fullscreen/ — background reading for fullscreen helpers in [`frontend/src/common/fullscreen.js`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/common/fullscreen.js)
+- https://web.dev/articles/fullscreen/ — background reading for fullscreen helpers in [`frontend/src/common/fullscreen.js`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/common/fullscreen.js)
 - https://maplibre.org/ — base engine for Places maps (see [maps.md](maps.md))
 - https://floating-ui.com/ / https://floating-vue.starpad.dev/ — tooltip stack we rely on for hover/focus hints
 

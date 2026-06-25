@@ -2,7 +2,7 @@
 
 !!! info ""
     You are welcome to ask for help in our [community chat](https://link.photoprism.app/chat).
-    [Sponsors](https://www.photoprism.app/membership) receive direct [technical support](https://www.photoprism.app/contact) via email.
+    [Sponsors](https://www.photoprism.app/membership/) receive direct [technical support](https://www.photoprism.app/contact/) via email.
     Before [submitting a support request](../../user-guide/index.md#getting-support), try to determine the cause of your problem.
 
 ### Connection Fails ###
@@ -19,10 +19,10 @@ Before reporting a bug:
     - [ ] If a service has been "killed" or otherwise automatically terminated, this points to a [memory problem](docker.md#adding-swap) (add swap and/or memory; remove or increase usage limits)
     - [ ] In case the logs show "disk full", "quota exceeded", or "no space left" errors, either [the disk containing the *storage* folder is full](docker.md#disk-space) (add storage) or a disk usage limit is configured (remove or increase it)
     - [ ] Errors such as "read-only file system", "error creating path", "failed to create folder", "permission denied", or "wrong permissions" indicate a [filesystem permission problem](docker.md#file-permissions)
-    - [ ] It may help to [add the `:z` mount flag to volumes](https://docs.docker.com/storage/bind-mounts/#configure-the-selinux-label) when using SELinux (Red Hat/Fedora)
+    - [ ] It may help to [add the `:z` mount flag to volumes](https://docs.docker.com/engine/storage/bind-mounts/#configure-the-selinux-label) when using SELinux (Red Hat/Fedora)
     - [ ] Log messages that contain "no route to host" indicate a [problem with the database](mariadb.md) or Docker network configuration (follow our [examples](https://dl.photoprism.app/docker/))
 - [ ] Make sure you are using the correct protocol (default is `http`), port (default is `2342`), and host (default is `localhost`):
-    - [ ] Check if the server port you try to use [has been exposed](https://docs.docker.com/compose/compose-file/compose-file-v3/#ports) and [no firewall is blocking it](https://support.microsoft.com/en-us/windows/turn-microsoft-defender-firewall-on-or-off-ec0844f7-aebd-0583-67fe-601ecf5d774f)
+    - [ ] Check if the server port you try to use [has been exposed](https://docs.docker.com/reference/compose-file/services/#ports) and [no firewall is blocking it](https://support.microsoft.com/en-us/windows/turn-microsoft-defender-firewall-on-or-off-ec0844f7-aebd-0583-67fe-601ecf5d774f)
     - [ ] Only use `localhost` or `127.0.0.1` if the server is running on the same computer (host)
     - [ ] Avoid using IP addresses other than `127.0.0.1` directly, as [they can change](https://github.com/photoprism/photoprism/discussions/2791#discussioncomment-3985376)
     - [ ] We recommend [configuring a local hostname](https://dl.photoprism.app/img/docs/pihole-local-dns.png) to access other hosts on your network
@@ -48,13 +48,13 @@ mariadb: mysqld: Shutdown complete
 
 #### Firewall
 
-**Maps & Places:** As explained in our [Privacy Policy](https://www.photoprism.app/privacy#section-7), reverse geocoding and interactive world maps depend on retrieving the necessary information [from us](https://www.photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. If you have a firewall installed, make sure it allows requests to these API endpoints and that your Internet connection is working.
+**Maps & Places:** As explained in our [Privacy Policy](https://www.photoprism.app/privacy/#section-7), reverse geocoding and interactive world maps depend on retrieving the necessary information [from us](https://www.photoprism.app/contact/) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. If you have a firewall installed, make sure it allows requests to these API endpoints and that your Internet connection is working.
 
 [Learn more ›](firewall.md)
 
 **IPTables:** On Linux, Docker manipulates the `iptables` rules to provide network isolation. This has implications when you want to enforce your own policies in addition to the rules Docker manages.
 
-[Learn more ›](https://docs.docker.com/network/iptables/)
+[Learn more ›](https://docs.docker.com/engine/network/packet-filtering-firewalls/)
 
 #### Debug Mode
 
@@ -89,7 +89,7 @@ docker compose up
     or other tools you may have installed.
 
 !!! tldr ""
-    The default [Docker Compose](https://docs.docker.com/compose/) config filename is `compose.yaml`. For simplicity, it doesn't need to be specified when running `docker compose` or `docker-compose` in the same directory. Config files for other apps or instances should be placed in separate folders.
+    The default [Docker Compose](https://docs.docker.com/compose/) config filename is `compose.yaml`. For simplicity, it doesn't need to be specified when running `docker compose` in the same directory. Config files for other apps or instances should be placed in separate folders.
 
 ### Docker Doesn't Work ###
 
@@ -176,6 +176,14 @@ We also recommend checking your [Docker Logs](docker.md#viewing-logs) for messag
 - [ ] Log messages that contain "no route to host" indicate a [problem with the database](mariadb.md) or network configuration (follow our [examples](https://dl.photoprism.app/docker/))
 
 To see [which user accounts exist](https://docs.photoprism.app/user-guide/users/cli/) on your instance, [open a terminal](../docker-compose.md#command-line-interface) and [run `photoprism users ls`](../../user-guide/users/cli.md#managing-user-accounts). A new password can be [set with `photoprism passwd [username]`](../../user-guide/users/cli.md#changing-a-password). You can then try to log in again. [Upgrade to the latest release](../updates.md#docker-compose), restart the server, and [check the logs for errors and warnings](docker.md#viewing-logs) if it still doesn't work.
+
+### Storage Is Full ###
+
+If you have [enabled the free-storage check](../../user-guide/library/originals.md#free-storage-threshold) and [indexing](../../user-guide/library/originals.md#free-storage-threshold), [importing](../../user-guide/library/import.md), or [uploading](../../user-guide/library/upload.md) does not start because the logs show a warning about low free storage, it means that the amount of free disk space in the [*storage* folder](../docker-compose.md#photoprismstorage) has fallen below the [configured threshold](../../user-guide/library/originals.md#free-storage-threshold):
+
+- [ ] Free up disk space, then try again; the check is re-evaluated automatically as soon as space becomes available
+- [ ] Check the available space on the host with `df -h`, and inside the container with `docker compose exec photoprism df -h`
+- [ ] If you intentionally operate the volume close to full, lower the threshold via [`PHOTOPRISM_STORAGE_FREE`](../config-options.md#storage), or set it to `-1` to disable the check again (note that a full disk can interrupt operation and cause data loss)
 
 ### No WebDAV Access ###
 
@@ -313,7 +321,8 @@ Please note:
 
 1. Not all [video and audio formats](https://caniuse.com/?search=video%20format) can be [played with every browser](browsers.md). For example, [AAC](https://caniuse.com/aac "Advanced Audio Coding") - the default audio codec for [MPEG-4 AVC / H.264](https://caniuse.com/avc "Advanced Video Coding") - is supported natively in Chrome, Safari, and Edge, while it is only optionally supported by the OS in Firefox and Opera.
 2. HEVC/H.265 video files can have a `.mp4` file extension too, which is often associated with AVC only. This is because MP4 is a *container* format, meaning that the actual video content may be compressed with H.264, H.265, or something else. The file extension doesn't really tell you anything other than that it's probably a video file.
-3. MPEG-4 AVC videos are not re-encoded if they exceed the [configured bitrate limit](../../getting-started/advanced/transcoding.md#bitrate-limit). To reduce the size of AVC videos, you can manually replace the original files with a smaller version or wait for a future release that offers this functionality.
+3. When PhotoPrism remuxes HEVC into an MP4 or MOV container, the sample-entry tag is set to `hvc1` so the result plays on Safari, macOS QuickTime, and Edge/Chrome on Windows. Dolby Vision (`dvh1`/`dvhe`) and constrained-extractor (`hvc2`/`hvc3`) variants are also recognized as HEVC.
+4. MPEG-4 AVC videos are not re-encoded if they exceed the [configured bitrate limit](../../getting-started/advanced/transcoding.md#bitrate-limit). To reduce the size of AVC videos, you can manually replace the original files with a smaller version or wait for a future release that offers this functionality.
 
 !!! info ""
     **We kindly ask you not to report bugs via *GitHub Issues* unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.**

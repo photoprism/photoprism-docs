@@ -1,6 +1,6 @@
 # UI Development in Fast Motion ⏱
 
-## August 15 , 2018 ##
+## August 15, 2018 ##
 The first prototype was based on Bootstrap 4.
 
 ![](https://github.com/photoprism/photoprism/raw/144927b953a947fa6ae9ad6476281f647f0eca3f/docs/img/search.png)
@@ -15,7 +15,7 @@ Navigation was extended.
 
 ![](https://github.com/photoprism/photoprism/raw/7120ae873784ee1a61b1f83c1ff8ba52b041f136/docs/img/search.png)
 
-## September 7, 2018 ##
+## September 7, 2018 (Search Form) ##
 We started to experiment with the search form.
 
 ![](https://github.com/photoprism/photoprism/raw/d521167ad64280602953bcc1886dbacf093cca8e/docs/img/search.png)
@@ -48,8 +48,6 @@ The detail view.
 Improved UI with flat look, photo upload and powerful filters as well as new pages for searching places and labels.
 
 ![](https://dl.photoprism.app/img/docs/wiki/screenshots/20190703-photoprism-search.jpg)
-
-![](https://dl.photoprism.app/img/docs/wiki/screenshots/20190703-photoprism-map.jpg)
 
 ![](https://dl.photoprism.app/img/docs/wiki/screenshots/20190703-photoprism-map.jpg)
 

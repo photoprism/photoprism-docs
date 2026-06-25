@@ -4,11 +4,11 @@
 
 ??? question "Does your software depend on any external services?"
 
-    As explained in our [Privacy Policy](https://www.photoprism.app/privacy#section-7), reverse geocoding and interactive world maps depend on retrieving the necessary information [from us](https://www.photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality.
+    As explained in our [Privacy Policy](https://www.photoprism.app/privacy/#section-7), reverse geocoding and interactive world maps depend on retrieving the necessary information [from us](https://www.photoprism.app/contact/) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality.
     
-    Your use of these services is [fully covered by us](../getting-started/faq.md#are-the-keys-for-using-interactive-world-maps-provided-free-of-charge). Depending on your usage, this can save you much more than the cost of a [PhotoPrism+ Membership](https://www.photoprism.app/membership), since other providers generally charge usage-based fees and often don't allow you to cache the data they provide, compromising performance and your privacy with unnecessary requests.
+    Your use of these services is [fully covered by us](../getting-started/faq.md#are-the-keys-for-using-interactive-world-maps-provided-free-of-charge). Depending on your usage, this can save you much more than the cost of a [PhotoPrism+ Membership](https://www.photoprism.app/membership/), since other providers generally charge usage-based fees and often don't allow you to cache the data they provide, compromising performance and your privacy with unnecessary requests.
 
-    [View Privacy Policy ›](https://www.photoprism.app/privacy#section-7){ class="pr-3 block-xs" } [View Compliance FAQ ›](https://www.photoprism.app/kb/compliance-faq#privacy)
+    [View Privacy Policy ›](https://www.photoprism.app/privacy/#section-7){ class="pr-3 block-xs" } [View Compliance FAQ ›](https://www.photoprism.app/kb/compliance-faq/#privacy)
 
     In order to successfully set up your installation and view location details in PhotoPrism, you must [allow incoming requests as well as those to our Geocoding API and Docker](../getting-started/troubleshooting/firewall.md) if you have a firewall installed, and make sure that your Internet connection is working:
 
@@ -20,13 +20,13 @@
 
     PhotoPrism is **100% self-funded and independent**. Voluntary donations do not cover the cost of a team working full time to provide you with updates, documentation, and support. It is your decision whether you want to sign up to enjoy additional benefits.
 
-    [View Membership FAQ ›](https://www.photoprism.app/membership/faq)
+    [View Membership FAQ ›](https://www.photoprism.app/membership/faq/)
 
 ??? question "What are the advantages of purchasing a commercial license?"
 
-    A key difference between the [public license](https://docs.photoprism.app/license/agpl/) and a [commercial license agreement](https://www.photoprism.app/teams) is that you get access to additional support and configuration options, as well as the right to customize functionality to your needs without having to publicly disclose your changes. Our [Compliance FAQ](https://www.photoprism.app/kb/compliance-faq) gives answers to the most frequently asked questions about product compliance and scalability.
+    A key difference between the [public license](https://docs.photoprism.app/license/agpl/) and a [commercial license agreement](https://www.photoprism.app/teams/) is that you get access to additional support and configuration options, as well as the right to customize functionality to your needs without having to publicly disclose your changes. Our [Compliance FAQ](https://www.photoprism.app/kb/compliance-faq/) gives answers to the most frequently asked questions about product compliance and scalability.
 
-    [Compare Team Editions ›](https://www.photoprism.app/teams#compare)
+    [Compare Team Editions ›](https://www.photoprism.app/teams/#compare)
 
 ??? question "When exactly will new features be released?"
 
@@ -34,7 +34,7 @@
 
     Be aware that we have a zero-bug policy and do our best to help users when they need support or have other questions. This comes at a price though, as we can't give exact release dates for new features. Our team receives many more requests than can be implemented, so we want to emphasize that we are in no way obligated to implement the features, enhancements, or other changes you request. We do, however, appreciate your feedback and carefully consider all requests.
 
-    **Since [sustained funding](https://www.photoprism.app/oss/faq) is key to quickly releasing new features, we encourage all users to support our mission by [signing up as a member](https://www.photoprism.app/membership) or purchasing a [commercial license](https://www.photoprism.app/teams).**
+    **Since [sustained funding](https://www.photoprism.app/oss/faq/) is key to quickly releasing new features, we encourage all users to support our mission by [signing up as a member](https://www.photoprism.app/membership/) or purchasing a [commercial license](https://www.photoprism.app/teams/).**
 
 ## Membership
 
@@ -42,7 +42,7 @@
 
     To connect a new instance to your membership account, you will need to log in with the super admin user that is automatically created during setup (see your `compose.yaml` or `docker-compose.yml` file or the app store documentation), and then follow the steps described in our activation guide.
     
-    [View Activation Guide ›](https://www.photoprism.app/kb/activation)
+    [View Activation Guide ›](https://www.photoprism.app/kb/activation/)
 
 ??? question "Are there alternatives to a recurring subscription?"
 
@@ -52,13 +52,13 @@
 
     Note that as a lifetime member you will always receive updates and support for your personal use from us, unlike with so-called lifetime licenses, which may only be good until the next major version is released.
  
-    [View Membership FAQ ›](https://www.photoprism.app/membership/faq)
+    [View Membership FAQ ›](https://www.photoprism.app/membership/faq/)
 
 ??? question "What happens if I cancel my membership?"
 
     If you are eligible for a Lifetime Essentials or Plus membership, you can continue to use these features even if you decide to stop supporting us. Otherwise, you can continue to use all the freely available features. In no case will you lose access to your pictures.
 
-    [Compare Features ›](https://www.photoprism.app/editions#compare)
+    [Compare Features ›](https://www.photoprism.app/editions/#compare)
 
 ## User Interface
 
@@ -124,6 +124,12 @@
 
 ## Maps & Places
 
+??? question "Why is the location missing after I upload photos from my phone?"
+
+    Recent Android versions remove the embedded GPS coordinates from photos when they are read by an app that does not hold the system *media location* permission ([`ACCESS_MEDIA_LOCATION`](https://developer.android.com/training/data-storage/shared/media#location-info-photos)). Because web browsers cannot request this permission, pictures uploaded through the web UI on a phone may arrive without location data. iOS can behave similarly depending on the browser and its privacy settings.
+
+    Note that this happens on the device, *before* the files reach PhotoPrism, so the coordinates cannot be recovered during indexing. To preserve the location, upload the originals from a desktop browser or use a sync app like [PhotoSync](sync/mobile-devices.md#using-photosync), which holds the required permission and transfers files unmodified via WebDAV. You can check whether a file still contains GPS data with [ExifTool](https://exiftool.org/).
+
 ??? question "Why are some pictures positioned at unvisited locations on the map?"
 
     PhotoPrism can estimate the location of pictures taken without GPS information by extrapolating it from the location of other pictures taken on the same day. These estimates can be [disabled in the settings](./settings/library.md) if you don't want them.
@@ -132,15 +138,15 @@
 
     All users have access to a [high-resolution vector map](https://maps.photoprism.app/){:target="_blank"} that we host on [our own infrastructure](https://github.com/photoprism/photoprism/issues/2998){:target="_blank"}, so no commercial API key is required. It is based on [data published by OpenStreetMap](https://planet.openstreetmap.org/){:target="_blank"} (OSM).
     
-    In addition, we automatically provide [our members](https://www.photoprism.app/membership) and [business customers](https://www.photoprism.app/teams#compare) with an API key for MapTiler's commercial service, which includes [satellite, outdoor and 3D maps](https://www.photoprism.app/kb/personal#maps-and-places). You can test these on [our public demo](https://try.photoprism.app/library/places){:target="_blank"}.
+    In addition, we automatically provide [our members](https://www.photoprism.app/membership/) and [business customers](https://www.photoprism.app/teams/#compare) with an API key for MapTiler's commercial service, which includes [satellite, outdoor and 3D maps](https://www.photoprism.app/kb/personal/#maps-and-places). You can test these on [our public demo](https://try.photoprism.app/library/places){:target="_blank"}.
     
-    [Learn more ›](https://www.photoprism.app/kb/personal#maps-and-places)
+    [Learn more ›](https://www.photoprism.app/kb/personal/#maps-and-places)
 
 ??? question "Why don't you use the free map tile service provided by OpenStreetMap?"
 
     Other [free and open-source software](https://en.wikipedia.org/wiki/Free_and_open-source_software){:target="_blank"} sometimes uses the public maps that OpenStreetMap provides for development and testing. These are [not intended for end-user applications](https://operations.osmfoundation.org/policies/tiles/) like ours.
 
-    Using their service also means that [their usage](https://operations.osmfoundation.org/policies/tiles/) and [privacy policies](https://wiki.osmfoundation.org/wiki/Privacy_Policy) apply, as your request data is stored and used to generate [publicly available reports](https://planet.openstreetmap.org/tile_logs/). This differs from our services, which ensure [a high level of privacy](https://www.photoprism.app/privacy) and provide a better user experience with faster loading times.
+    Using their service also means that [their usage](https://operations.osmfoundation.org/policies/tiles/) and [privacy policies](https://wiki.osmfoundation.org/wiki/Privacy_Policy) apply, as your request data is stored and used to generate [publicly available reports](https://planet.openstreetmap.org/tile_logs/). This differs from our services, which ensure [a high level of privacy](https://www.photoprism.app/privacy/) and provide a better user experience with faster loading times.
 
     [Learn more ›](../getting-started/faq.md#are-the-keys-for-using-interactive-world-maps-provided-free-of-charge)
 
@@ -201,7 +207,7 @@
     PhotoPrism handles XMP through two separate code paths. **XMP embedded in media files is indexed via [ExifTool](https://exiftool.org/)**,
     which flattens XMP, Exif, and IPTC into a single JSON document that the indexer then reads; PhotoPrism never parses the embedded
     XML directly. If ExifTool is disabled, embedded XMP is not indexed. **Standalone `.xmp` sidecar files are read by a built-in
-    proof-of-concept XML reader** that does *not* use ExifTool and currently recognises only a limited set of fields
+    proof-of-concept XML reader** that does *not* use ExifTool and currently recognizes only a limited set of fields
     (title, caption, creator/artist, copyright, keywords, capture date, camera make/model, lens model, and the F-Stop favorite flag).
     See the [XMP developer guide](../developer-guide/metadata/xmp.md) for the full field list, the associated namespaces, and known
     limitations. [Contributions are welcome](../developer-guide/metadata/xmp.md).
@@ -280,7 +286,7 @@
 
 ??? question "What is a RAW image file?"
 
-    Professional and semi-professional photographers often keep their originals in a [lossless RAW format](https://en.wikipedia.org/wiki/Raw_image_format), close to how they were taken with the physical sensor, rather than in a compressed image format like JPEG, especially if they shoot with a digital SLR camera. Newer mobile phones may also be able to capture images in RAW mode. Our goal is to provide top-notch support for [all RAW images](https://docs.photoprism.app/getting-started/faq/#what-media-file-types-are-supported), regardless of camera make and model. A full list of file types and extensions can be found in our [Knowledge Base](https://www.photoprism.app/kb/file-formats).
+    Professional and semi-professional photographers often keep their originals in a [lossless RAW format](https://en.wikipedia.org/wiki/Raw_image_format), close to how they were taken with the physical sensor, rather than in a compressed image format like JPEG, especially if they shoot with a digital SLR camera. Newer mobile phones may also be able to capture images in RAW mode. Our goal is to provide top-notch support for [all RAW images](https://docs.photoprism.app/getting-started/faq/#what-media-file-types-are-supported), regardless of camera make and model. A full list of file types and extensions can be found in our [Knowledge Base](https://www.photoprism.app/kb/file-formats/).
 
     Since web browsers generally cannot display RAW image files directly, they must be converted. This is done during [import](library/import.md) or [initial indexing](library/index.md). It can also be triggered manually [in a terminal](../getting-started/docker-compose.md#command-line-interface) with the `photoprism convert` command.
 
@@ -320,7 +326,7 @@
 
     We recommend that you use [ExifTool](https://exiftool.org/) to see all metadata fields and values, as Windows has limited functionality.
     
-    It might then become clear why there are differences. For example, it could be that Windows does not support some fields and therefore ignores them, or that the data shown is actually from the file system and not from the files. Should you still believe to have found a bug, please [provide us with sample files](https://www.photoprism.app/contact#file-samples) so that we can reproduce the issue.
+    It might then become clear why there are differences. For example, it could be that Windows does not support some fields and therefore ignores them, or that the data shown is actually from the file system and not from the files. Should you still believe to have found a bug, please [provide us with sample files](https://www.photoprism.app/contact/#file-samples) so that we can reproduce the issue.
 
 ??? question "Why do some pictures have 08/12/2002 as date if they were not taken on that day?"
 

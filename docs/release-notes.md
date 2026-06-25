@@ -4,44 +4,109 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 260515-f6a5dc841</span>
+<span class="build">Build 260624-8a3c3fb8f</span>
 
-Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
+Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions/#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
 What's new?
 
-- AI: [Added support for the Model Context Protocol (MCP)](https://github.com/photoprism/photoprism/issues/5024)
-- AI: [Upgraded ONNX Runtime from v1.25.0 to v1.25.1](https://github.com/photoprism/photoprism/issues/5555)
-- UX: [Added a drag-and-drop zone for selecting files in the upload dialog](https://github.com/photoprism/photoprism/issues/1216)
-- UX: [Fixed Country and Time Zone selects closing immediately after activation](https://github.com/photoprism/photoprism/issues/5538)
-- Viewer: [Added more information to the sidebar](https://github.com/photoprism/photoprism/issues/4965)
-- Viewer: [Made information on the sidebar editable](https://github.com/photoprism/photoprism/issues/4966)
-- Viewer: [Added a menu action with shortcut (Ctrl+H) to toggle captions](https://github.com/photoprism/photoprism/issues/5580)
-- Auth: [Added a "Stay signed in on this device" toggle to the login page](https://github.com/photoprism/photoprism/issues/5476)
-- OIDC: [Provider initialization is retried after transient discovery failure](https://github.com/photoprism/photoprism/issues/5478)
-- People: [Added support for manually tagging faces in pictures](https://github.com/photoprism/photoprism/issues/1548)
+- Viewer: [Support for 360° panorama photos and videos](https://github.com/photoprism/photoprism/pull/5623) by [@omerdduran](https://github.com/omerdduran)
+- Media: [Added 16K thumbnail and video size support for 360° media](https://github.com/photoprism/photoprism/issues/5669) by [@lastzero](https://github.com/lastzero)
+- RAW: [Falls back to embedded JPEG previews for unsupported files](https://github.com/photoprism/photoprism/issues/5673)
+- UX: [Added a setting to prevent action menus from opening on hover](https://github.com/photoprism/photoprism/issues/5650) by [@lastzero](https://github.com/lastzero)
+- UX: [Refined face-marker overlay performance and interaction](https://github.com/photoprism/photoprism/issues/5672)
+- UX: [Notification messages are shown in the current interface language](https://github.com/photoprism/photoprism/issues/5682)
+- Auth: [Ends the upstream provider session on sign-out via OpenID Connect RP-initiated logout](https://github.com/photoprism/photoprism/issues/5684)
+- People: [Added a type-ahead cache for faster name suggestions](https://github.com/photoprism/photoprism/issues/5666) by [@lastzero](https://github.com/lastzero)
+- Places: [Photos at the same location are properly stacked when zoomed in](https://github.com/photoprism/photoprism/issues/5643)
+- Index: [Serialized indexing of identical files to avoid duplicates](https://github.com/photoprism/photoprism/issues/5652) by [@knowald](https://github.com/knowald)
+- Index: [Original file names are only recorded for imported files](https://github.com/photoprism/photoprism/issues/5668)
+- Storage: [Fixed a path lookup error when resolving filesystem locations](https://github.com/photoprism/photoprism/issues/5683)
+- Metadata: [Improved support for metadata from XMP sidecar files](https://github.com/photoprism/photoprism/pull/5563) by [@omerdduran](https://github.com/omerdduran)
+- Metadata: [Added Lens Make and Model updates via CLI and API](https://github.com/photoprism/photoprism/issues/5656) by [@keif888](https://github.com/keif888)
+- Metadata: [Added Camera Make and Model updates via CLI and API](https://github.com/photoprism/photoprism/issues/5663) by [@lastzero](https://github.com/lastzero)
+- PWA: [Added bloom, flower, ring, and shutter app icons](https://github.com/photoprism/photoprism/issues/5662) by [@lastzero](https://github.com/lastzero)
+- CLI: [Improved role and auth-provider usage descriptions](https://github.com/photoprism/photoprism/issues/5667) by [@lastzero](https://github.com/lastzero)
+- API: [Added an `X-Count` header to label and service search responses](https://github.com/photoprism/photoprism/issues/5649) by [@keif888](https://github.com/keif888)
+- Setup: [Helm chart can reference an external secret for the database password](https://github.com/photoprism/photoprism/issues/5661)
+- Database: [Improved error logging to capture connection issues](https://github.com/photoprism/photoprism/issues/5637)
+- Database: [Ensured rune-safe byte truncation for all text columns](https://github.com/photoprism/photoprism/issues/5638)
+- Security: [Added a feature flag to disable app passwords](https://github.com/photoprism/photoprism/issues/5647) by [@lastzero](https://github.com/lastzero)
+- Security: [Upgraded `libheif` from v1.22.2 to v1.23.0 (CVE-2026-50142)](https://github.com/photoprism/photoprism/issues/5653)
+- Security: [Upgraded Vitest to v4 and Vite to v8 to remove esbuild dependency](https://github.com/photoprism/photoprism/issues/5659)
+- Security: [Upgraded Go from v1.26.3 to v1.26.4](https://github.com/golang/go/issues?q=milestone%3AGo1.26.4) and [ONNX Runtime to v1.26.0](https://github.com/photoprism/photoprism/commit/1fad248031eca0ae80f1bb7b122535e79852558b)
+- Translations: [Updated Hebrew](https://docs.photoprism.app/developer-guide/translations-weblate/) by [@avma](https://github.com/avma)
+
+### June 1, 2026
+<span class="build">Build 260601-a7d098548</span>
+
+This [service release](https://github.com/photoprism/photoprism/releases/tag/260601-a7d098548) includes important security and reliability updates. As an additional safety measure, indexing, importing, and uploading can be disabled when [free disk space falls below a configurable threshold](https://docs.photoprism.app/user-guide/library/originals/#free-storage-threshold) to prevent storage volumes from filling up. A special thank you to everyone who [reported bugs](https://docs.photoprism.app/developer-guide/issues/#creating-bug-reports) and helped us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! 🔒🔧
+
+What's new?
+
+- Index: [Optional free disk space threshold prevents storage from filling up](https://github.com/photoprism/photoprism/issues/5613)
+- Index: [Fixed recovery of hidden stacks whose primary image was replaced](https://github.com/photoprism/photoprism/issues/5625)
+- Videos: [Improved hardware transcoding setup and documentation](https://github.com/photoprism/photoprism/issues/5631)
+- Videos: [Fixed VAAPI transcoding for compatibility with FFmpeg 8](https://github.com/photoprism/photoprism/issues/5630)
+- Videos: [Added an option to exclude formats from FFmpeg processing](getting-started/advanced/transcoding.md#excluded-formats)
+- Thumbs: [PNGs are exported without an ICC profile if `libpng` rejects it](https://github.com/photoprism/photoprism/issues/5616)
+- Folders: [Fixed recurring deletion and re-creation of folder albums](https://github.com/photoprism/photoprism/issues/5615)
+- Security: [Reinforced user profile endpoint authorization checks](https://github.com/photoprism/photoprism/issues/5619) by [@geo-chen](https://github.com/geo-chen)
+- Security: [Removed Pebble binary from Ubuntu base images (CVE-2026-39821)](https://github.com/photoprism/photoprism/issues/5620)
+- Security: [Upgraded `libheif` from v1.21.2 to v1.22.2 (17 CVE fixes)](https://github.com/photoprism/photoprism/issues/5621)
+
+!!! info ""
+    Missing [user interface translations](https://translate.photoprism.app/projects/photoprism/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.
+
+### May 23, 2026
+<span class="build">Build 260523-0544f71c1</span>
+
+This [update](https://github.com/photoprism/photoprism/releases/tag/260523-0544f71c1) introduces a redesigned [Info Sidebar](user-guide/organize/info-sidebar.md) that lets you [edit metadata, albums, and labels](https://github.com/photoprism/photoprism/issues/4966) as well as [manually tag faces](https://github.com/photoprism/photoprism/issues/1548) without leaving the full-screen viewer. On the AI side, our ONNX-based face recognition pipeline has fully [replaced the legacy Pigo detector](https://github.com/photoprism/photoprism/issues/5508), and the [`vision.yml`](user-guide/ai/index.md#visionyml-reference) configuration now accepts [mixed-case model names](https://github.com/photoprism/photoprism/issues/5594) so all identifiers from Hugging Face, Ollama, and OpenAI-compatible catalogs can be used.
+
+Media handling has been thoroughly modernized: video transcoding now supports [Vulkan hardware acceleration via FFmpeg 8](https://github.com/photoprism/photoprism/issues/5592), images use a [native HEIC/AVIF reader](https://github.com/photoprism/photoprism/issues/5509) (with `libheif` upgraded to v1.21.2), and [layered TIFF and Adobe Photoshop PSD](https://github.com/photoprism/photoprism/issues/5383) files are now supported. Other highlights include [NOT & AND operators in the label filter](https://github.com/photoprism/photoprism/issues/5535), a [drag-and-drop file upload zone](https://github.com/photoprism/photoprism/issues/1216), [`zstd` compression](https://github.com/photoprism/photoprism/issues/5550) for faster page loads, [hardened WebDAV interoperability](https://github.com/photoprism/photoprism/issues/3541), and a new Ubuntu 26.04 LTS base image.
+
+As always, a big thank you to [everyone who contributed](https://docs.photoprism.app/developer-guide/) and [helped with testing](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! We hope you enjoy this release. 🌈💎✨
+
+What's new?
+
+- Viewer: [Sidebar shows editable metadata, albums, and labels](https://github.com/photoprism/photoprism/issues/4966) by [@omerdduran](https://github.com/omerdduran)
+- Viewer: [Captions can be hidden using the menu or a keyboard shortcut](https://github.com/photoprism/photoprism/issues/5580)
+- Faces: [Viewer sidebar allows to manually tag faces on pictures](https://github.com/photoprism/photoprism/issues/1548) by [@omerdduran](https://github.com/omerdduran)
 - Faces: [Dropped legacy Pigo detector in favor of ONNX-based detection](https://github.com/photoprism/photoprism/issues/5508)
+- UX: [Added a drag-and-drop zone to the file upload dialog](https://github.com/photoprism/photoprism/issues/1216)
+- UX: [Improved form input validation and numeric range caps](https://github.com/photoprism/photoprism/issues/5584)
+- Login: [Enhanced login page with "Stay signed in on this device" toggle](https://github.com/photoprism/photoprism/issues/5476)
+- Login: [OIDC provider initialization is retried after transient discovery failure](https://github.com/photoprism/photoprism/issues/5478)
+- Login: [Fixed OIDC redirect of unauthenticated users when opening direct links](https://github.com/photoprism/photoprism/issues/5506)
+- Search: [Improved label filter with support for NOT & AND operators](https://github.com/photoprism/photoprism/issues/5535)
 - Labels: [Added support for homophones and homophone-aware lookups](https://github.com/photoprism/photoprism/issues/5227) by [@keif888](https://github.com/keif888)
-- Labels: [Fixed renaming a label and re-adding it by its previous name creating a duplicate](https://github.com/photoprism/photoprism/issues/5531)
-- Labels: [Fixed case and punctuation variants creating duplicates on the edit dialog's Labels tab](https://github.com/photoprism/photoprism/issues/5532)
-- Search: [Added NOT & AND operators to the label filter](https://github.com/photoprism/photoprism/issues/5535)
-- Index: [Added support for layered TIFF and Adobe Photoshop PSD images](https://github.com/photoprism/photoprism/issues/5383)
-- Index: [Fixed nil-DB race in async count and cover update goroutines](https://github.com/photoprism/photoprism/issues/5551)
-- Folders: [Fixed child paths overwriting parent folder albums](https://github.com/photoprism/photoprism/issues/5366)
-- Images: [Added native HEIC/HEIF and AVIF support for thumbnails and rendering](https://github.com/photoprism/photoprism/issues/5509)
-- HEIC: [Upgraded libheif from v1.20.2 to v1.21.2](https://github.com/photoprism/photoprism/issues/5553)
-- Thumbs: [Replaced `disintegration/imaging` library with native format support](https://github.com/photoprism/photoprism/issues/5353)
-- WebDAV: [Added fallback for servers that only allow PROPFIND with a Depth of 1](https://github.com/photoprism/photoprism/issues/3541)
+- Labels: [Fixed duplicates when renaming a label and re-adding the previous name](https://github.com/photoprism/photoprism/issues/5531)
+- Labels: [Fixed case and punctuation variants creating duplicates in the edit dialog](https://github.com/photoprism/photoprism/issues/5532)
+- Folders: [Child folders with emoji paths no longer overwrite parent albums](https://github.com/photoprism/photoprism/issues/5366)
+- Videos: [Added support for Vulkan hardware transcoding using FFmpeg 8](https://github.com/photoprism/photoprism/issues/5592)
+- Videos: [HEVC remux output is tagged as `hvc1` based on MP4 chunk scan](https://github.com/photoprism/photoprism/issues/5593)
+- Images: [Added support for layered TIFF and Adobe Photoshop PSD images](https://github.com/photoprism/photoprism/issues/5383)
+- Images: [Added native HEIC/AVIF reader and upgraded `libheif` to v1.21.2](https://github.com/photoprism/photoprism/issues/5509)
+- Images: [Replaced `disintegration/imaging` library with native format support](https://github.com/photoprism/photoprism/issues/5353)
+- Server: [Added `zstd` compression support for faster loading times](https://github.com/photoprism/photoprism/issues/5550)
+- Server: [Added pre-compressed frontend bundles for faster loading times](https://github.com/photoprism/photoprism/issues/5552)
+- Server: [Fixed nil-DB race in async count and cover update goroutines](https://github.com/photoprism/photoprism/issues/5551)
 - WebDAV: [Hardened timeouts, cancellation, and Depth-1 fallback diagnostics](https://github.com/photoprism/photoprism/issues/5474)
-- MCP: [Added `--disable-mcp` flag to optionally disable the MCP API endpoint](https://github.com/photoprism/photoprism/issues/5536)
-- CLI: [Fixed `vision run` not saving sidecar YAML files](https://github.com/photoprism/photoprism/issues/5493)
-- Server: [Added zstd response compression support](https://github.com/photoprism/photoprism/issues/5550)
-- Server: [Pre-compress static frontend assets at build time and serve sibling files](https://github.com/photoprism/photoprism/issues/5552)
-- Frontend: [Upgraded Vuetify to v3.12 with VList fixes](https://github.com/photoprism/photoprism/issues/5452)
-- Logs: [Information about long-running processes is logged every 15 minutes](https://github.com/photoprism/photoprism/pull/5481) by [@keif888](https://github.com/keif888)
-- Config: [Improved auto-detection of the indexing worker count](https://github.com/photoprism/photoprism/issues/5567)
-- Docker: [Upgraded base images to Ubuntu 26.04 LTS (Resolute Raccoon)](https://github.com/photoprism/photoprism/issues/5543)
-- Security: [Upgraded Go to v1.26.3, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.26.3)
+- WebDAV: [Fixed settings dialog to allow credentials for existing services to be changed](https://github.com/photoprism/photoprism/issues/5558)
+- WebDAV: [Added fallback for servers that only allow `PROPFIND` with a Depth of 1](https://github.com/photoprism/photoprism/issues/3541)
+- CLI: [Improved `vision run` command updates sidecar YAML files](https://github.com/photoprism/photoprism/issues/5493)
+- CLI: [Added a `faces config` subcommand to list face-related options](https://github.com/photoprism/photoprism/issues/5597)
+- CLI: [Fixed flags placed after positional arguments being silently dropped](https://github.com/photoprism/photoprism/issues/5604)
+- MCP: [Added read-only support for the Model Context Protocol (MCP)](https://github.com/photoprism/photoprism/issues/5024)
+- MCP: [Added `--disable-mcp` flag to disable Model Context Protocol support](https://github.com/photoprism/photoprism/issues/5536)
+- Config: [Removed limitation for vision model names to be lowercased](https://github.com/photoprism/photoprism/issues/5594)
+- Config: [Improved worker auto-configuration based on number of CPU cores](https://github.com/photoprism/photoprism/issues/5567)
+- Config: [Consolidated SQL driver names and parsing in `pkg/dsn`](https://github.com/photoprism/photoprism/issues/5588) by [@keif888](https://github.com/keif888)
+- Config: [Default HTTP and HTTPS ports are stripped from base URLs](https://github.com/photoprism/photoprism/issues/5590)
+- Logs: [Information about long-running processes is logged](https://github.com/photoprism/photoprism/pull/5481) by [@keif888](https://github.com/keif888)
+- Docker: [Upgraded base image to Ubuntu 26.04 LTS (Resolute Raccoon)](https://github.com/photoprism/photoprism/issues/5543)
+- Security: [Search queries now use parameterized statements for all user input](https://github.com/photoprism/photoprism/issues/5587)
+- Security: [Upgraded Go from v1.26 to v1.26.3](https://github.com/golang/go/issues?q=milestone%3AGo1.26.3) and [ONNX Runtime to v1.25.1](https://github.com/photoprism/photoprism/issues/5555)
 
 ### March 5, 2026
 <span class="build">Build 260305-fad9d5395</span>
@@ -70,9 +135,6 @@ What's new?
 - Logs: [Fixed handling of missing caption thumbnails and video remux errors](https://github.com/photoprism/photoprism/issues/5398)
 - Security: [Upgraded Go to v1.26, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.26)
 - Translations: [Updated French, German, Latvian, and Romanian](https://docs.photoprism.app/developer-guide/translations-weblate/)
-
-!!! info ""
-    Missing [user interface translations](https://translate.photoprism.app/projects/photoprism/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.
 
 ### November 30, 2025
 <span class="build">Build 251130-b3068414c</span>
@@ -130,9 +192,6 @@ What's new?
 - Security: [Upgraded Go to v1.25.4, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.25.4)
 - Translations: [Updated Spanish and Vietnamese](https://docs.photoprism.app/developer-guide/translations-weblate/)
 
-!!! info ""
-    Missing [user interface translations](https://translate.photoprism.app/projects/photoprism/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.
-
 ### July 7, 2025
 <span class="build">Build 250707-d28b3101e</span>
 
@@ -164,15 +223,12 @@ What's new?
 - Security: [Updated Go to v1.24.4, which includes fixes and improvements](https://github.com/golang/go/issues?q=milestone%3AGo1.24.4) 
 - Translations: [Updated Arabic, French, German, and Japanese](https://github.com/photoprism/photoprism/discussions/4980)
 
-!!! info ""
-    Missing [user interface translations](https://translate.photoprism.app/projects/photoprism/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.
-
 ### April 26, 2025
 <span class="build">Build 250426-27ec7a128</span>
 
 This [update](https://github.com/photoprism/photoprism/releases/tag/250426-27ec7a128) adds [preinstalled Linux Video Acceleration API (VAAPI) drivers](https://docs.photoprism.app/getting-started/advanced/transcoding/) and [fixes the package names](https://github.com/photoprism/photoprism/issues/4967) in the [Intel QSV hardware driver](https://docs.photoprism.app/getting-started/advanced/transcoding/#intel-quick-sync) installation script. 🔧
 
-We have also fixed the [.deb](https://dl.photoprism.app/pkg/linux/deb/) and [.rpm](https://dl.photoprism.app/pkg/linux/rpm/) [installation package](https://dl.photoprism.app/pkg/linux/README.html) builds as an alternative to the plain .tar.gz packages [attached to this release](https://github.com/photoprism/photoprism/releases/tag/250426-27ec7a128). Note that these are intended for experienced users and third-party integration maintainers only, as they require manual configuration and do not include tested system dependencies. Since we are unable to [provide support](https://www.photoprism.app/kb/getting-support) for custom installations, we recommend [using one of our Docker images](https://docs.photoprism.app/getting-started/docker-compose/) to run PhotoPrism on a private server or NAS device. 📦
+We have also fixed the [.deb](https://dl.photoprism.app/pkg/linux/deb/) and [.rpm](https://dl.photoprism.app/pkg/linux/rpm/) [installation package](https://dl.photoprism.app/pkg/linux/README.html) builds as an alternative to the plain .tar.gz packages [attached to this release](https://github.com/photoprism/photoprism/releases/tag/250426-27ec7a128). Note that these are intended for experienced users and third-party integration maintainers only, as they require manual configuration and do not include tested system dependencies. Since we are unable to [provide support](https://www.photoprism.app/kb/getting-support/) for custom installations, we recommend [using one of our Docker images](https://docs.photoprism.app/getting-started/docker-compose/) to run PhotoPrism on a private server or NAS device. 📦
 
 What's new?
 
@@ -250,7 +306,7 @@ What's new?
 ### February 28, 2025
 <span class="build">Build 250228-43447fa38</span>
 
-With [this update](https://github.com/photoprism/photoprism/releases/tag/250228-43447fa38), you'll get additional usability and performance improvements, as well as a new thumbnail size for [Retina 5K displays](https://github.com/photoprism/photoprism/issues/4810) that bridges the gap [between 4K and 8K](https://docs.photoprism.app/user-guide/settings/advanced/#which-thumbnails-will-be-generated). We would also like to take this opportunity to [thank our community](https://floss.social/@photoprism), whose [support has been](https://www.photoprism.app/oss/faq) [and continues to be essential](https://docs.photoprism.app/developer-guide/) to the [success of the project](https://github.com/photoprism/photoprism)! 🌈💎✨
+With [this update](https://github.com/photoprism/photoprism/releases/tag/250228-43447fa38), you'll get additional usability and performance improvements, as well as a new thumbnail size for [Retina 5K displays](https://github.com/photoprism/photoprism/issues/4810) that bridges the gap [between 4K and 8K](https://docs.photoprism.app/user-guide/settings/advanced/#which-thumbnails-will-be-generated). We would also like to take this opportunity to [thank our community](https://floss.social/@photoprism), whose [support has been](https://www.photoprism.app/oss/faq/) [and continues to be essential](https://docs.photoprism.app/developer-guide/) to the [success of the project](https://github.com/photoprism/photoprism)! 🌈💎✨
 
 What's new?
 
@@ -456,7 +512,7 @@ What's new?
 ### October 21, 2023
 <span class="build">Build 231021-9abea5b55</span>
 
-This update adds search filters for finding pictures by ISO number, focal length, aperture, and altitude. It also includes a number of user interface improvements, updated translations, as well as fixes for [recently discovered issues](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+label%3Abug+sort%3Acreated-desc). We would like to thank everyone who [submitted pull requests](https://docs.photoprism.app/developer-guide/), [helped with testing](https://github.com/orgs/photoprism/projects/5), or [contributed in other ways](https://www.photoprism.app/oss/faq)! ✨
+This update adds search filters for finding pictures by ISO number, focal length, aperture, and altitude. It also includes a number of user interface improvements, updated translations, as well as fixes for [recently discovered issues](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+label%3Abug+sort%3Acreated-desc). We would like to thank everyone who [submitted pull requests](https://docs.photoprism.app/developer-guide/), [helped with testing](https://github.com/orgs/photoprism/projects/5), or [contributed in other ways](https://www.photoprism.app/oss/faq/)! ✨
 
 What's new?
 
@@ -599,7 +655,7 @@ PhotoPrism® Plus
 ### June 3, 2023
 <span class="build">Build 230603-378d4746a</span>
 
-This service release fixes [recently discovered issues](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+label%3Abug+sort%3Acreated-desc) and improves compatibility with the upcoming [MariaDB v11.0](https://mariadb.com/kb/en/release-notes-mariadb-11-0-series/). If you are upgrading from MariaDB 10.x to 11.0, please [make sure that you replace](https://github.com/photoprism/photoprism/commit/bff649469d084498a1e75492c0bd99bda3f5a340#diff-03a31d6e73f48b7bba98b65352ce67a7d153fe2461f9c7b5e76be49a97ebf0cb) `command: mysqld` with `command: ` (followed by the command flags) in your `compose.yaml` or `docker-compose.yml` file, otherwise the database server might fail to start. Thank you to everyone who contributed with pull requests, [reported bugs](https://www.photoprism.app/kb/reporting-bugs), and helped us test the changes!
+This service release fixes [recently discovered issues](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+label%3Abug+sort%3Acreated-desc) and improves compatibility with the upcoming [MariaDB v11.0](https://mariadb.com/kb/en/release-notes-mariadb-11-0-series/). If you are upgrading from MariaDB 10.x to 11.0, please [make sure that you replace](https://github.com/photoprism/photoprism/commit/bff649469d084498a1e75492c0bd99bda3f5a340#diff-03a31d6e73f48b7bba98b65352ce67a7d153fe2461f9c7b5e76be49a97ebf0cb) `command: mysqld` with `command: ` (followed by the command flags) in your `compose.yaml` or `docker-compose.yml` file, otherwise the database server might fail to start. Thank you to everyone who contributed with pull requests, [reported bugs](https://www.photoprism.app/kb/reporting-bugs/), and helped us test the changes!
 
 What's new?
 
@@ -619,7 +675,7 @@ PhotoPrism® Plus
 ### May 13, 2023
 <span class="build">Build 230513-0b780defb</span>
 
-As [promised](https://twitter.com/photoprism_app/status/1632036907419877377), this update makes hardware transcoding and many other config options available to all users. [A big thank you to all of our contributors, members, and sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md), whose generous support has been and continues to be essential to the success of the project! :octicons-heart-fill-24:{ .heart .purple }
+As [promised](https://x.com/photoprism_app/status/1632036907419877377), this update makes hardware transcoding and many other config options available to all users. [A big thank you to all of our contributors, members, and sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md), whose generous support has been and continues to be essential to the success of the project! :octicons-heart-fill-24:{ .heart .purple }
 
 What's new?
 
@@ -648,7 +704,7 @@ What's new?
 ### May 2, 2023
 <span class="build">Build 230502-c405f6eff</span>
 
-With this major new release, you'll get a long list of new features and enhancements with a focus on [performance](https://twitter.com/photoprism_app/status/1628850699772600323), [security](https://twitter.com/photoprism_app/status/1651596098249662465), and [file type support](https://www.photoprism.app/kb/file-formats). In addition, our [Plus Members](https://www.photoprism.app/editions#compare) can now register [directly in the app](https://www.photoprism.app/kb/activation) to unlock additional features like [vector graphics support](https://demo.photoprism.app/library/browse?view=cards&order=added&q=vectors) and a new [admin web UI](https://demo.photoprism.app/library/admin/users) for [user and session management](https://www.photoprism.app/plus/kb/multi-user). Thank you to all [contributors](https://github.com/photoprism/photoprism/graphs/contributors), [members](https://www.photoprism.app/membership), and [sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md) who made this possible!
+With this major new release, you'll get a long list of new features and enhancements with a focus on [performance](https://x.com/photoprism_app/status/1628850699772600323), [security](https://x.com/photoprism_app/status/1651596098249662465), and [file type support](https://www.photoprism.app/kb/file-formats/). In addition, our [Plus Members](https://www.photoprism.app/editions/#compare) can now register [directly in the app](https://www.photoprism.app/kb/activation/) to unlock additional features like [vector graphics support](https://demo.photoprism.app/library/browse?view=cards&order=added&q=vectors) and a new [admin web UI](https://demo.photoprism.app/library/admin/users) for [user and session management](https://docs.photoprism.app/user-guide/users/). Thank you to all [contributors](https://github.com/photoprism/photoprism/graphs/contributors), [members](https://www.photoprism.app/membership/), and [sponsors](https://github.com/photoprism/photoprism/blob/develop/SPONSORS.md) who made this possible!
 
 What's new?
 
@@ -726,11 +782,11 @@ PhotoPrism® Plus
 - Index: [Added file format support for SVG, AI, PS and EPS vector graphics](https://github.com/photoprism/photoprism/issues/2207)
 
 !!! info ""
-    Our new [Plus License](https://www.photoprism.app/plus/license) is used for both the extensions [we provide to our members](https://www.photoprism.app/membership/faq#how-can-i-install-photoprism-plus-without-the-docker-image) and the standard [Docker images](https://hub.docker.com/r/photoprism/photoprism/tags) available on Docker Hub. This allows us to bundle the extensions with the compiled application, while the [Community Edition](https://github.com/photoprism/photoprism) remains freely available under the terms of the [GNU Affero General Public License (AGPL)](license/agpl.md).
+    Our new [Plus License](https://www.photoprism.app/plus/license/) is used for both the extensions [we provide to our members](https://www.photoprism.app/membership/faq/#how-can-i-install-photoprism-plus-without-the-docker-image) and the standard [Docker images](https://hub.docker.com/r/photoprism/photoprism/tags) available on Docker Hub. This allows us to bundle the extensions with the compiled application, while the [Community Edition](https://github.com/photoprism/photoprism) remains freely available under the terms of the [GNU Affero General Public License (AGPL)](license/agpl.md).
 
-    If you don't plan to use [any additional features](https://www.photoprism.app/editions#compare), you can alternatively use the "ce" tag instead of "latest" to get a slightly smaller Docker image distributed under the AGPL. Note that system dependencies and other third-party components included in this image are still subject to additional terms and conditions.
+    If you don't plan to use [any additional features](https://www.photoprism.app/editions/#compare), you can alternatively use the "ce" tag instead of "latest" to get a slightly smaller Docker image distributed under the AGPL. Note that system dependencies and other third-party components included in this image are still subject to additional terms and conditions.
     
-    [View Membership FAQ ›](https://www.photoprism.app/membership/faq){ class="pr-3 block-xs" } [View Plus License ›](https://www.photoprism.app/plus/license)
+    [View Membership FAQ ›](https://www.photoprism.app/membership/faq/){ class="pr-3 block-xs" } [View Plus License ›](https://www.photoprism.app/plus/license/)
 
 ### November 18, 2022
 <span class="build">Build 221118-e58fee0fb</span>
@@ -958,7 +1014,7 @@ This update includes translations that were recently contributed via [translate.
 ### May 27, 2022
 <span class="build">Build 220527-005770ca</span>
 
-This update improves navigation fonts and [mobile submenu colors](https://dl.photoprism.app/img/ui/mobile-submenu-light-797x567.png) for light themes. We are also working to establish [PhotoPrism+](https://www.photoprism.app/membership) as the name for our community membership and associated benefits. For this, membership [information in the app](https://try.photoprism.app/library/about), [on our website](https://www.photoprism.app/membership), on [GitHub Sponsors](https://link.photoprism.app/sponsor) and [Patreon](https://link.photoprism.app/patreon) is gradually being updated.
+This update improves navigation fonts and [mobile submenu colors](https://dl.photoprism.app/img/ui/mobile-submenu-light-797x567.png) for light themes. We are also working to establish [PhotoPrism+](https://www.photoprism.app/membership/) as the name for our community membership and associated benefits. For this, membership [information in the app](https://try.photoprism.app/library/about), [on our website](https://www.photoprism.app/membership/), on [GitHub Sponsors](https://link.photoprism.app/sponsor) and [Patreon](https://link.photoprism.app/patreon) is gradually being updated.
 
 - UX: [Fixed light theme colors of mobile navigation submenu](https://github.com/photoprism/photoprism/issues/2359)
 - UX: [Splash screen has been updated and no longer depends on admin theme](https://github.com/photoprism/photoprism/issues/2360)
@@ -979,7 +1035,7 @@ This service release fixes potential issues with our new Debian 12-based Docker 
 - Docker: [Removed incorrect permission check for storage folder on startup](https://github.com/photoprism/photoprism/issues/2334)
 - Docker: [Supported User and Group ID ranges have been documented](https://github.com/photoprism/photoprism/issues/2336)
 
-**Thank you to everyone who [helped with testing](https://github.com/photoprism/photoprism/projects/5?card_filter_query=label%3Aplease-test), [signed up as a member](https://www.photoprism.app/membership), or [contributed](https://github.com/photoprism/photoprism/graphs/contributors) in other ways! We appreciate it very much.**
+**Thank you to everyone who [helped with testing](https://github.com/photoprism/photoprism/projects/5?card_filter_query=label%3Aplease-test), [signed up as a member](https://www.photoprism.app/membership/), or [contributed](https://github.com/photoprism/photoprism/graphs/contributors) in other ways! We appreciate it very much.**
 
 ### May 17, 2022
 <span class="build">Build 220517-b9c68f8f</span>
@@ -1456,7 +1512,7 @@ invited to help us improve those if needed. [Learn how to contribute](developer-
 - Config: [Updated docker-compose.yml examples](https://dl.photoprism.app/docker/)
 - Config: [Added optional gzip compression for built-in web server](getting-started/config-options.md)
 - Config: Limit number of indexing workers to half the number of physical cores by default to 
-  avoid [high load](https://twitter.com/miguelarios_/status/1347775696492503040) on hyper-threading capable CPUs
+  avoid [high load](https://x.com/miguelarios_/status/1347775696492503040) on hyper-threading capable CPUs
 
 ### January 4, 2021
 <span class="build">Build 210104-7f9e806a</span>

@@ -2,7 +2,7 @@
 
 !!! info ""
     You are welcome to ask for help in our [community chat](https://link.photoprism.app/chat).
-    [Sponsors](https://www.photoprism.app/membership) receive direct [technical support](https://www.photoprism.app/contact) via email.
+    [Sponsors](https://www.photoprism.app/membership/) receive direct [technical support](https://www.photoprism.app/contact/) via email.
     Before [submitting a support request](../../user-guide/index.md#getting-support), try to [determine the cause of your problem](index.md).
 
 ## Incoming Requests
@@ -13,9 +13,9 @@ Unless you have changed the default configuration, PhotoPrism is reachable via p
 
 ## Outgoing Connections
 
-As explained in our [Privacy Policy](https://www.photoprism.app/privacy#section-7), reverse geocoding and interactive world maps depend on retrieving the necessary information [from us](https://www.photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality.
+As explained in our [Privacy Policy](https://www.photoprism.app/privacy/#section-7), reverse geocoding and interactive world maps depend on retrieving the necessary information [from us](https://www.photoprism.app/contact/) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality.
 
-[View Privacy Policy ›](https://www.photoprism.app/privacy#section-7){ class="pr-3 block-xs" } [View Compliance FAQ ›](https://www.photoprism.app/kb/compliance-faq#privacy)
+[View Privacy Policy ›](https://www.photoprism.app/privacy/#section-7){ class="pr-3 block-xs" } [View Compliance FAQ ›](https://www.photoprism.app/kb/compliance-faq/#privacy)
 
 In order to successfully set up your installation and view location details in PhotoPrism, you must **allow requests to the following hosts** if you have a firewall installed, and make sure that your Internet connection is working:
 
@@ -39,7 +39,7 @@ In addition, the following API endpoints should be allowed so that public [Docke
 
 On Linux, Docker manipulates the `iptables` rules to provide network isolation. This does have some implications for what you need to do if you want to have your own policies in addition to the rules Docker manages.
 
-[Learn more ›](https://docs.docker.com/network/iptables/)
+[Learn more ›](https://docs.docker.com/engine/network/packet-filtering-firewalls/)
 
 ## Docker MTU Size
 

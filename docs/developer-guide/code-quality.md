@@ -69,12 +69,12 @@ It is best to do this while you are working on the same component anyway, for ex
 
 Releasing imperfect code is not a problem as long as it is [accompanied by automated tests](#test-automation-guidelines). This makes it easy to refactor later without breaking anything or requiring detailed knowledge of the requirements and a lot of time for manual testing. Be pragmatic. Done is better than perfect.
 
-Potential [security issues](security/index.md) are an important exception. These should never be ignored. If you find a problem, please [report it to us](https://www.photoprism.app/security-policy) immediately so we can fix it.
+Potential [security issues](security/index.md) are an important exception. These should never be ignored. If you find a problem, please [report it to us](https://www.photoprism.app/security-policy/) immediately so we can fix it.
 
 !!! example ""
     Feel free to think ahead, just don't code ahead. But also, don't feel the need to decide so many
     details ahead. Learn enough to get started and build only what you need.
-    — <cite>[J. B. Rainsberger](https://twitter.com/jbrains/status/1064212803542818816)</cite>
+    — <cite>[J. B. Rainsberger](https://x.com/jbrains/status/1064212803542818816)</cite>
 
 ## Premature Optimization ##
 
@@ -131,7 +131,7 @@ Optimize for effectiveness before efficiency when prioritizing tasks:
 
 In contrast, a feature factory focuses on the quantity of new features rather than their quality:
 
-[![Feature Factory](https://dl.photoprism.app/img/diagrams/feature-factory.jpg)](https://twitter.com/johncutlefish/status/780102280162840576)
+[![Feature Factory](https://dl.photoprism.app/img/diagrams/feature-factory.jpg)](https://x.com/johncutlefish/status/780102280162840576)
 
 !!! example ""
     **It is fundamentally the confusion between effectiveness and efficiency that stands between doing the right things and doing things right.** There is surely nothing quite so useless as doing with great efficiency what should not be done at all. — <cite>[Peter Drucker](https://en.wikipedia.org/wiki/Peter_Drucker)</cite>
@@ -165,15 +165,13 @@ including `gofmt`, `go vet`, `go lint` and `gocyclo`. If you find this helpful a
 
 ## Security Best Practices ##
 
-The [Open Source Security Foundation](https://bestpractices.coreinfrastructure.org/en/) (OpenSSF) maintains standardized security criteria and best practices for open-source projects:
+The [Open Source Security Foundation](https://www.bestpractices.dev/en/) (OpenSSF) maintains standardized security criteria and best practices for open-source projects:
 
-<a href="https://bestpractices.coreinfrastructure.org/projects/6132" target="_blank"><img src="/developer-guide/security/openssf.png" alt="OpenSSF Best Practices" class="center pt-2 small"></a>
+<a href="https://www.bestpractices.dev/projects/6132" target="_blank"><img src="/developer-guide/security/openssf.png" alt="OpenSSF Best Practices" class="center pt-2 small"></a>
 
 [View Security Testing Guide ›](security/index.md)
 
 [goreport]: https://goreportcard.com/report/github.com/photoprism/photoprism
-[codacy]: https://www.codacy.com/project/lastzero/photoprism/dashboard
-[codecov]: https://codecov.io/gh/photoprism/photoprism
 
-[^1]: Allen Holub, [*twitter.com/allenholub/status/1073738216140791808*](https://twitter.com/allenholub/status/1073738216140791808), 2018
+[^1]: Allen Holub, [*x.com/allenholub/status/1073738216140791808*](https://x.com/allenholub/status/1073738216140791808), 2018
 [^2]: Robert C. Martin, [*Clean Code: A Handbook of Agile Software Craftsmanship*](https://www.amazon.com/-/dp/0132350882/), 2009

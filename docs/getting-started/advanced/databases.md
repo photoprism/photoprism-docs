@@ -14,7 +14,7 @@ Our [configuration examples](https://dl.photoprism.app/docker/) are generally ba
 
 Local Solid-State Drives (SSDs) are [best for databases](../troubleshooting/performance.md#storage) of any kind. Never store database files on an unreliable device such as a USB flash drive, SD card, or shared network folder. These may also have [unexpected file size limitations](https://thegeekpage.com/fix-the-file-size-exceeds-the-limit-allowed-and-cannot-be-saved/), which is especially problematic for databases that do not split data into smaller files.
 
-Please do not use a named or anonymous [Docker volume](https://docs.docker.com/compose/compose-file/07-volumes/#example) for storing MariaDB database files and check the mount path of the volume if you use a custom database image (it may not always be `/var/lib/mysql`), as both can lead to data loss when the database container is recreated, e.g. [after an update](../updates.md#docker-compose) of the Docker image.
+Please do not use a named or anonymous [Docker volume](https://docs.docker.com/reference/compose-file/volumes/#example) for storing MariaDB database files and check the mount path of the volume if you use a custom database image (it may not always be `/var/lib/mysql`), as both can lead to data loss when the database container is recreated, e.g. [after an update](../updates.md#docker-compose) of the Docker image.
 
 ## Configuration ##
 
@@ -76,7 +76,7 @@ An index schema migration is performed automatically every time PhotoPrism is (r
 
     If this is the case, please make sure that your migrated database schema matches that of a fresh, non-migrated installation. It may help to [run the migrations manually](../advanced/migrations/index.md) in a terminal using the *migrations* subcommands. However, this does not guarantee that all issues such as missing indexes are resolved.
 
-    Due to the amount of time required to review each report, we can only offer this to [eligible members](https://www.photoprism.app/membership) and [business customers](https://www.photoprism.app/teams), and not to users who have chosen our free community edition.
+    Due to the amount of time required to review each report, we can only offer this to [eligible members](https://www.photoprism.app/membership/) and [business customers](https://www.photoprism.app/teams/), and not to users who have chosen our free community edition.
 
     [Get Performance Tips ›](../troubleshooting/performance.md#mariadb){ class="pr-3 block-xs" } [View Database Schema ›](../../developer-guide/database/index.md) 
 

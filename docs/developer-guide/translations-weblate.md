@@ -8,7 +8,7 @@ You can either sign in with your GitHub account or create a new account with an 
 - You are also not required to provide your full name if you do not wish to do so.
 - Let us know privately that you have registered so that we can grant you permissions if needed.
 
-When you sign up, you will be asked to accept our Contributor License Agreement (CLA). Visit [photoprism.app/cla](https://www.photoprism.app/cla) to learn more.
+When you sign up, you will be asked to accept our Contributor License Agreement (CLA). Visit [photoprism.app/cla](https://www.photoprism.app/cla/) to learn more.
 
 === "Sign up"
 
@@ -24,7 +24,7 @@ When you sign up, you will be asked to accept our Contributor License Agreement 
 === "Agree to CLA"
     
     1. Sign in 
-    2. Select the language you want translate to
+    2. Select the language you want to translate to
 
        ![Screenshot](img/WeblateChooseLanguages.png)
     3. Open your *Dashboard* and click *Backend* (or access to the Backend by clicking [here](https://translate.photoprism.app/projects/photoprism/backend/))

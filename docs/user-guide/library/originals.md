@@ -48,6 +48,23 @@ By default, a library rescan is also triggered automatically after a safety dela
 !!! tldr ""
     Be aware that automatic indexing may cause files or sets of files to be incompletely indexed if you are using a slow or unreliable internet connection, which is of particular concern with [large video or RAW files](https://github.com/photoprism/photoprism/issues/4310).
 
+## Free Storage Threshold
+
+To prevent the *storage* volume from filling up completely — which can interrupt operation and cause errors or data loss — PhotoPrism can pause indexing, [importing](import.md), and [uploads](upload.md) when free disk space falls below a configured threshold.
+
+This runtime check is **disabled by default**, because the underlying probe cannot reliably report free space on some filesystems — for example network mounts, FUSE layers, and container overlays — where a false low reading would wrongly block writes. Any [storage limit configured with `PHOTOPRISM_FILES_QUOTA`](../../getting-started/config-options.md#storage) continues to be enforced regardless.
+
+To enable the check, set the [`PHOTOPRISM_STORAGE_FREE`](../../getting-started/config-options.md#storage) config option (or the `--storage-free` command flag) to the minimum free space you want to keep available, expressed as a percentage of the total storage capacity:
+
+- `-1` (the default) disables the check entirely.
+- A value between `1` and `99` enables the check at that percentage.
+- `0` or any value of `100` or more uses the built-in default of **1% of the total capacity**.
+
+When the check is enabled, an absolute floor of **100 MB** of free space also applies, whichever threshold is reached first. A warning is then written to the logs and the affected operation is skipped until enough space is available again; the check is re-evaluated automatically as soon as space is freed.
+
+!!! warning ""
+    For safety reasons, this threshold can only be changed by server administrators through the configuration and is intentionally not exposed in the app settings. We recommend enabling the check on filesystems where free space can be read reliably, as a full disk can interrupt operation and lead to data loss.
+
 ## Ignoring Files and Folders
 
 Hidden files and folders that start with a `.`, `@`, `_.`, or `__` like `__MACOSX` will be automatically ignored when indexing your library.

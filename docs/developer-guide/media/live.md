@@ -21,7 +21,7 @@ The image part of these files can be opened in any image viewer that supports JP
 | Google Pixel "Motion Photo" Howto                       | Mar 2021 | https://linuxreviews.org/Google_Pixel_%22Motion_Photo%22                           |
 | go-mp4: Golang Library and CLI Tool for MP4             | Jul 2020 | https://dev.to/sunfishshogi/go-mp4-golang-library-and-cli-tool-for-mp4-52o1        |
 | Working with Motion Photos                              | Jan 2019 | https://medium.com/android-news/working-with-motion-photos-da0aa49b50c             |
-| Google: Behind the Motion Photos Technology in Pixel 2  | Mar 2018 | https://blog.research.google/2018/03/behind-motion-photos-technology-in.html       |
+| Google: Behind the Motion Photos Technology in Pixel 2  | Mar 2018 | https://research.google/blog/2018/03/behind-motion-photos-technology-in.html       |
 
 ## Software Libraries and References
 

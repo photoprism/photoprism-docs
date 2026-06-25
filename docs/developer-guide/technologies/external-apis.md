@@ -1,10 +1,10 @@
 ## Photo Sharing ##
-- [Instagram Developer API](https://developers.facebook.com/v2/products/instagram/) 
-- [Twitter API](https://developer.twitter.com/)
+- [Instagram Platform API](https://developers.facebook.com/docs/instagram-platform/) 
+- [Twitter API](https://developer.x.com/)
 - [Facebook Photo API](https://developers.facebook.com/docs/graph-api/photo-uploads/)
 - [Google Photos API](https://developers.google.com/photos/)
 - [EyeEm API](https://github.com/eyeem/Public-API)
-- [Nextcloud API](https://docs.nextcloud.com/server/12/developer_manual/core/externalapi.html)
+- [Nextcloud API](https://docs.nextcloud.com/server/latest/developer_manual/client_apis/index.html)
 
 ## Books / Prints ##
 - [Cewe Stiftung & Co. KGaA](https://www.cewe.de/) - Europe's leading online printing experts

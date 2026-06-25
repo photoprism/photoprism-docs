@@ -49,6 +49,8 @@ https://{hostname}/api/v1/oidc/redirect
 !!! note ""
     Note that both the [Site URL](../../getting-started/config-options.md#site-information) configured for your instance and the Redirect URL must start with `https://` and that their hostnames must match, as the [use of secure connections](../../getting-started/using-https.md) is a strict requirement for OpenID Connect.
 
+PhotoPrism normalizes the configured Site URL before comparing it against the Redirect URL, so the default port for the URL scheme (`:443` for `https`, `:80` for `http`) is stripped automatically. Registering the Redirect URL with or without an explicit default port produces the same value, e.g. `https://example.com/api/v1/oidc/redirect` and `https://example.com:443/api/v1/oidc/redirect` are equivalent.
+
 ## Preferred Username
 
 When a new user signs in with OpenID Connect[^1], their preferred username may already be registered. In this case, a random 6-digit number is appended to resolve the conflict.
@@ -105,7 +107,7 @@ To restore a previously deleted account, admins can follow the same steps as for
 
 ### Is it possible to set a default role for new OIDC users?
 
-For security reasons, our [Personal Editions](https://www.photoprism.app/editions#compare) currently default to the [Guest](../../user-guide/users/roles.md#guest) role, which admins can then upgrade after checking the eligibility of newly registered accounts. If you run our [Pro Edition](https://www.photoprism.app/teams#compare) in a trusted corporate network with appropriate security measures - including for the OIDC provider - [it can be configured](https://www.photoprism.app/pro/kb/config-options) to give new accounts a higher authorization level by default.
+For security reasons, our [Personal Editions](https://www.photoprism.app/editions/#compare) currently default to the [Guest](../../user-guide/users/roles.md#guest) role, which admins can then upgrade after checking the eligibility of newly registered accounts. If you run our [Pro Edition](https://www.photoprism.app/teams/#compare) in a trusted corporate network with appropriate security measures - including for the OIDC provider - [it can be configured](https://www.photoprism.app/pro/kb/config-options/) to give new accounts a higher authorization level by default.
 
 Please note in this context that using an external [Identity Provider](#identity-providers) for [authorization](https://en.wikipedia.org/wiki/Authorization), and not just for [authentication](https://en.wikipedia.org/wiki/Authentication), can easily lead to security issues such as the following, for which we do not want to get a CVE assigned nor do we want to be responsible for any private pictures of our users getting leaked as a result:
 

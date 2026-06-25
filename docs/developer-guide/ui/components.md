@@ -8,7 +8,7 @@ Shared widgets (toolbars, dialogs, grids, buttons) are registered globally in [`
 
 - Keep component names prefixed with `P` (for PhotoPrism) to avoid clashes with Vuetify components, e.g. `PPhotoViewCards` in [`frontend/src/component/photo/view/cards.vue`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/component/photo/view/cards.vue).
 - Organize files by domain: `component/photo/view`, `component/places`, `component/dialog`, etc. Each folder typically holds Vue templates plus small helpers (for example [`frontend/src/component/places/style-control.js`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/component/places/style-control.js)).
-- Vue Router pages belong under [`frontend/src/page/`](https://github.com/photoprism/photoprism/tree/develop/frontend/src/page) (for example `frontend/src/page/library/labels.vue`). These files orchestrate models ([`frontend/src/model/`](https://github.com/photoprism/photoprism/tree/develop/frontend/src/model)), the `$api` client, and shared components to render full routes.
+- Vue Router pages belong under [`frontend/src/page/`](https://github.com/photoprism/photoprism/tree/develop/frontend/src/page) (for example `frontend/src/page/labels.vue`). These files orchestrate models ([`frontend/src/model/`](https://github.com/photoprism/photoprism/tree/develop/frontend/src/model)), the `$api` client, and shared components to render full routes.
 
 ## Styling and Assets
 

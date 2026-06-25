@@ -149,7 +149,7 @@ Below are the names of the config options that you can set in the `options.yml` 
 
 | Name           | Type          | CLI Flag          |
 |:---------------|:--------------|:------------------|
-| IndexWorkers   | int           | --index-workers   |
+| IndexWorkers   | string        | --index-workers   |
 | IndexSchedule  | string        | --index-schedule  |
 | WakeupInterval | time.Duration | --wakeup-interval |
 | AutoIndex      | int           | --auto-index      |
@@ -166,13 +166,13 @@ Below are the names of the config options that you can set in the `options.yml` 
 | DisableBackups        | bool | --disable-backups        |
 | DisableRestart        | bool | --disable-restart        |
 | DisableWebDAV         | bool | --disable-webdav         |
+| DisableMCP            | bool | --disable-mcp            |
 | DisablePlaces         | bool | --disable-places         |
 | DisableTensorFlow     | bool | --disable-tensorflow     |
 | DisableFaces          | bool | --disable-faces          |
 | DisableClassification | bool | --disable-classification |
 | DisableFFmpeg         | bool | --disable-ffmpeg         |
 | DisableExifTool       | bool | --disable-exiftool       |
-| DisableVips           | bool | --disable-vips           |
 | DisableSips           | bool | --disable-sips           |
 | DisableDarktable      | bool | --disable-darktable      |
 | DisableRawTherapee    | bool | --disable-rawtherapee    |
@@ -309,7 +309,6 @@ Below are the names of the config options that you can set in the `options.yml` 
 |:------------------|:-------|:----------------------|
 | ThumbLibrary      | string | --thumb-library       |
 | ThumbColor        | string | --thumb-color         |
-| ThumbFilter       | string | --thumb-filter        |
 | ThumbSize         | int    | --thumb-size          |
 | ThumbSizeUncached | int    | --thumb-size-uncached |
 | ThumbUncached     | bool   | --thumb-uncached      |
@@ -345,8 +344,8 @@ Below are the names of the config options that you can set in the `options.yml` 
 
 If you start the server as a *daemon* in the background, you can additionally specify a filename for the log and the process ID:
 
-| Name              | Type                                                                                 | CLI Flag        |
-|:------------------|:-------------------------------------------------------------------------------------|:----------------|
-| PIDFilename       | string                                                                               | --pid-filename  |
-| LogFilename       | string                                                                               | --log-filename  |
-| DetachServer      | bool                                                                                 | --detach-server |
+| Name         | Type   | CLI Flag        |
+|:-------------|:-------|:----------------|
+| PIDFilename  | string | --pid-filename  |
+| LogFilename  | string | --log-filename  |
+| DetachServer | bool   | --detach-server |

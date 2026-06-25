@@ -24,3 +24,9 @@ Under [Settings > Services](../settings/sync.md) you can connect your PhotoPrism
 - *Upload local files* will upload all files (including private or archived ones) from PhotoPrism to your service that do not yet exist there
 - *Preserve filenames* will keep filenames without renaming them
 - *Sync raw and video files* will upload/download raw and video files alongside with JPEGs.
+
+### Troubleshooting Slow or Depth-Limited Servers
+
+PhotoPrism prefers `PROPFIND Depth: infinity` for recursive directory discovery and automatically falls back to iterative `Depth: 1` traversal for WebDAV servers that reject the recursive form (for example pCloud and similar providers). When the fallback is used, the application log records the number of follow-up requests and the elapsed traversal time, so you can grep the logs for `depth-1 fallback` or `PROPFIND` to confirm what the client did during a slow sync. Hidden dotfiles and entries inside hidden dot-directories are excluded from listings because they often represent lock files, partial uploads, or provider metadata.
+
+Large file transfers are not subject to a total request deadline, but PhotoPrism applies separate connect, TLS-handshake, idle-connection, and expect-continue timeouts to recover quickly from stalled or unresponsive servers without interrupting an in-flight transfer.

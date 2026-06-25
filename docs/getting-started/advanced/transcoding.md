@@ -12,6 +12,7 @@ The encoder used by FFmpeg can be configured with [`PHOTOPRISM_FFMPEG_ENCODER`](
 | NVIDIA H.264               | `nvidia`    |
 | Raspberry Pi / Video4Linux | `raspberry` |
 | Video Acceleration API     | `vaapi`     |
+| Vulkan Video Extensions    | `vulkan`    |
 
 It defaults to `software` if no value is set or hardware transcoding fails. Please refer to the [FFmpeg documentation](https://trac.ffmpeg.org/wiki/HWAccelIntro) for a full list of encoders and their implementation status. We welcome contributions to support additional encoders.
 
@@ -43,7 +44,7 @@ The [`PHOTOPRISM_FFMPEG_SIZE`](../config-options.md#file-conversion) config opti
 
 You can limit the bitrate of the AVC encoder with the config option [`PHOTOPRISM_FFMPEG_BITRATE`](../config-options.md#file-conversion). Keep in mind that this is a "soft limit", so the actual bitrate varies and depends on the encoder used as well as the specific FFmpeg parameters, which in turn depend on the encoder. It may also depend on the operating system and the GPU drivers.
 
-If the bitrate is significantly exceeded in your environment and you want improvements to be implemented, we recommend that you [take a look at the FFmpeg documentation](https://trac.ffmpeg.org/wiki/Limiting%20the%20output%20bitrate) and the [parameters in our source code](https://github.com/photoprism/photoprism/blob/develop/internal/ffmpeg/convert.go) so you can tell us which parameters should be changed to make it work for you.
+If the bitrate is significantly exceeded in your environment and you want improvements to be implemented, we recommend that you [take a look at the FFmpeg documentation](https://trac.ffmpeg.org/wiki/Limiting%20the%20output%20bitrate) and the [parameters in our source code](https://github.com/photoprism/photoprism/blob/develop/internal/ffmpeg/transcode_cmd.go) so you can tell us which parameters should be changed to make it work for you.
 
 Note that MPEG-4 AVC videos are not re-encoded if they exceed the [configured bitrate limit](../config-options.md#file-conversion). To reduce the size of AVC videos, you can manually replace the original files with a smaller version or wait for a future release that offers this functionality.
 
@@ -54,7 +55,7 @@ Note that MPEG-4 AVC videos are not re-encoded if they exceed the [configured bi
 
 Unless you have a lot of high-resolution videos in your library, we recommend keeping the default settings to use the standard software codec for video transcoding. It has a high quality and does not require any special permissions or additional drivers.
 
-Our current [Docker image](https://docs.photoprism.app/release-notes/#may-31-2024) is based on [Ubuntu 25.10](https://packages.ubuntu.com/questing/ffmpeg), which already includes FFmpeg 7.x from the distribution packages. If you want to try a newer upstream static build, you can add `PHOTOPRISM_INIT: "ffmpeg"` to the environment section of your `compose.yaml` or `docker-compose.yml` file:
+Our current [Docker image](https://docs.photoprism.app/release-notes/) is based on [Ubuntu 26.04 LTS (Resolute Raccoon)](https://packages.ubuntu.com/resolute/ffmpeg), which already includes FFmpeg 8.x from the distribution packages. If you want to try an even newer upstream static build, you can add `PHOTOPRISM_INIT: "ffmpeg"` to the environment section of your `compose.yaml` or `docker-compose.yml` file:
 
 ```yaml
 services:
@@ -63,7 +64,7 @@ services:
       PHOTOPRISM_INIT: "ffmpeg"
 ```
 
-Internally, the `ffmpeg` init target installs the current BtbN stable build, equivalent to the `latest` channel in our [`install-ffmpeg.sh`](https://github.com/photoprism/photoprism/blob/develop/scripts/dist/install-ffmpeg.sh) script. At the moment, this updates the preinstalled distro version to FFmpeg 8.0.
+Internally, the `ffmpeg` init target installs the current BtbN stable build, equivalent to the `latest` channel in our [`install-ffmpeg.sh`](https://github.com/photoprism/photoprism/blob/develop/scripts/dist/install-ffmpeg.sh) script. This replaces the preinstalled distro version with the most recent FFmpeg 8 point release.
 
 You can also install the nightly (master) build instead, which may include newer features and bug fixes that have not yet been included in a stable release:
 
@@ -76,7 +77,7 @@ services:
 
 The `ffmpeg-master` init target maps to the script's `master` channel and installs the latest nightly archive from BtbN.
 
-Note that these static builds cannot be used with hardware transcoding and that they may [support a different set](https://github.com/BtbN/FFmpeg-Builds) of [file formats](https://www.photoprism.app/kb/file-formats).
+Note that these static builds cannot be used with hardware transcoding and that they may [support a different set](https://github.com/BtbN/FFmpeg-Builds) of [file formats](https://www.photoprism.app/kb/file-formats/).
 
 ## GPU Drivers
 
@@ -106,7 +107,7 @@ services:
       - ...
 ```
 
-In addition, you can choose to run the `photoprism` service as a non-root user by setting either the `user` [service property](https://docs.docker.com/compose/compose-file/05-services/#user) or the `PHOTOPRISM_UID` and `PHOTOPRISM_GID` [environment variables](../config-options.md#docker-image) in your `compose.yaml` or `docker-compose.yml` file:
+In addition, you can choose to run the `photoprism` service as a non-root user by setting either the `user` [service property](https://docs.docker.com/reference/compose-file/services/#user) or the `PHOTOPRISM_UID` and `PHOTOPRISM_GID` [environment variables](../config-options.md#docker-image) in your `compose.yaml` or `docker-compose.yml` file:
 
 | Environment    | Default | Description                                                                                                                                                                                  |
 |----------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -203,11 +204,73 @@ docker compose up -d
 !!! info ""
     Some server configurations, especially Raspberry Pi's, may experience memory allocation issues when using hardware acceleration. Carefully monitor your server's logs and increase the available GPU and/or CMA memory allocations if necessary. Note that the Raspberry Pi hardware currently only supports video resolutions up to 2160p.
 
+### Vulkan
+
+Vulkan-based hardware transcoding works on any GPU whose driver implements the Vulkan video encode extensions (`VK_KHR_video_encode_queue` and `VK_KHR_video_encode_h264`). The encoder requires FFmpeg 8 or later, which is already included in our current Docker image.
+
+Support is highly driver- and hardware-dependent, so verify it before switching encoders (see the box below):
+
+- **AMD** (RDNA 2 and later): supported by the open Mesa RADV driver.
+- **NVIDIA** (Turing and later): supported by the proprietary driver, provided the container is started with the `graphics` driver capability.
+- **Intel**: the Mesa ANV driver currently exposes Vulkan video *decode* on most recent integrated GPUs, but Vulkan video *encode* is still limited — integrated Raptor Lake graphics, for example, do not advertise the encode extensions in Mesa 26. Use the [Quick Sync](#intel-quick-sync) (`intel`) or VA-API (`vaapi`) encoder on those GPUs instead.
+
+To enable Vulkan transcoding, choose the `vulkan` encoder and share `/dev/dri` with the `photoprism` service. NVIDIA users should instead follow the [NVIDIA Container Toolkit](#nvidia-container-toolkit) setup and make sure `NVIDIA_DRIVER_CAPABILITIES` includes the `graphics` capability — unlike NVENC (`nvidia`), which only needs `video`, the Vulkan encoder is a graphics API and will not initialize without it (the `"all"` value used in our example already covers both):
+
+```yaml
+services:
+  photoprism:
+    environment:
+      PHOTOPRISM_FFMPEG_ENCODER: "vulkan"
+      PHOTOPRISM_INIT: "vulkan"
+      ...
+    devices:
+      - "/dev/dri:/dev/dri"
+    group_add:
+      - "44"  # host "video" group
+      - "108" # host "render" group
+```
+
+Adjust the IDs in `group_add` to match the owners of `/dev/dri/renderD*` and `/dev/dri/card*` on your host (run `getent group video render` to see the numbers). Now [restart the services](../docker-compose.md#step-2-start-the-server) for the changes to take effect:
+
+```bash
+docker compose stop
+docker compose up -d
+```
+
+You can verify which Vulkan devices and video encode extensions are available inside the container by installing the Vulkan tools (`vulkan-tools`) and running:
+
+```bash
+vulkaninfo | grep VK_KHR_video_encode
+```
+
+If this lists `VK_KHR_video_encode_h264`, the `vulkan` encoder can be used. If it prints nothing — or no Vulkan device is found at all — the driver does not support Vulkan video encoding on your hardware, and you should choose a different encoder.
+
+If a Vulkan device cannot be opened at runtime — for example on a GPU without the required video extensions — PhotoPrism logs a warning and automatically falls back to the software encoder, so no manual recovery is required.
+
+!!! info ""
+    Our image already includes the Vulkan loader (`libvulkan1`). The `PHOTOPRISM_INIT: "vulkan"` target installs the open Mesa Vulkan drivers ([`mesa-vulkan-drivers`](https://packages.ubuntu.com/resolute/mesa-vulkan-drivers)) and `vulkan-tools` for AMD and Intel GPUs (the auto-detecting `"gpu"` target installs them as well). For NVIDIA GPUs, the Vulkan driver itself is provided by the [NVIDIA Container Toolkit](#nvidia-container-toolkit) when the `graphics` capability is enabled — it cannot be added with `apt`, because the toolkit mounts the matching driver libraries into the container from the host.
+
 ## Other Hardware
 
 If you want to use other hardware for transcoding, choose the appropriate AVC encoder and share the required devices with the `photoprism` service, as shown in the examples above. Then [restart the services](../docker-compose.md#step-2-start-the-server) for the changes to take effect.
 
 Which devices need to be shared and whether additional drivers are required depends on your specific hardware. For more information, see the [FFmpeg documentation](https://ffmpeg.org/ffmpeg-devices.html).
+
+## Excluded Formats
+
+By default, PhotoPrism hands every video to FFmpeg for transcoding and still-image extraction. A small number of container and codec formats cannot be reliably detected or processed by FFmpeg, so they are excluded to avoid incorrect codec detection or broken output.
+
+You can configure which formats to skip with the [`PHOTOPRISM_FFMPEG_EXCLUDE`](../config-options.md#file-conversion) config option (alias `PHOTOPRISM_FFMPEG_BLACKLIST`), specified as a comma-separated list of container and codec format names. It defaults to `magy, vfw` (MagicYUV and Video for Windows):
+
+```yaml
+services:
+  photoprism:
+    environment:
+      PHOTOPRISM_FFMPEG_EXCLUDE: "magy, vfw"
+```
+
+!!! tldr ""
+    Formats listed here are skipped by FFmpeg, so they are not transcoded and no still-image thumbnails are extracted for them. Adjust the list only if you have a specific format that FFmpeg handles incorrectly in your environment.
 
 ## Troubleshooting
 

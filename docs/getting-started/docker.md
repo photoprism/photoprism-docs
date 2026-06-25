@@ -1,6 +1,6 @@
 # Running PhotoPrism with Docker
 
-We recommend using [Docker Compose](docker-compose.md) because it is easier to manage multiple services than the [Docker command-line interface](https://docs.docker.com/engine/reference/commandline/cli/).
+We recommend using [Docker Compose](docker-compose.md) because it is easier to manage multiple services than the [Docker command-line interface](https://docs.docker.com/reference/cli/docker/).
 Before you proceed, make sure you have [Docker](https://docs.docker.com/get-started/get-docker/) installed on your system. It is available for macOS, Linux, and Windows.
 
 Alternatively, [Podman](https://podman.io/) is supported as a drop-in replacement for Docker on Red Hat-compatible Linux distributions like RHEL, CentOS, Fedora, AlmaLinux, and Rocky Linux.
@@ -76,7 +76,7 @@ Enabling [public mode](config-options.md#authentication) will disable authentica
 
 #### Volumes
 
-Since the app is running inside a container, you have to explicitly [mount the host folders](https://docs.docker.com/storage/bind-mounts/) you want to use.
+Since the app is running inside a container, you have to explicitly [mount the host folders](https://docs.docker.com/engine/storage/bind-mounts/) you want to use.
 PhotoPrism won't be able to see folders that have not been mounted. That's an important security feature.
 
 ##### /photoprism/originals
@@ -84,7 +84,7 @@ PhotoPrism won't be able to see folders that have not been mounted. That's an im
 The *originals* folder contains your original photo and video files. They are mounted from `~/Pictures` in the example
 above, where `~` is a shortcut for your home directory.
 
-You may [mount any folder accessible from the host](https://docs.docker.com/storage/bind-mounts/) instead,
+You may [mount any folder accessible from the host](https://docs.docker.com/engine/storage/bind-mounts/) instead,
 including [network drives](faq.md#how-can-i-mount-network-shares-with-docker). Additional directories can
 be mounted as sub folders of `/photoprism/originals`:
 
@@ -93,7 +93,7 @@ be mounted as sub folders of `/photoprism/originals`:
 ``` 
 
 !!! tldr ""
-    When *read-only mode* is enabled, all features that require write permission to the *originals* folder are disabled, e.g. [WebDAV](../user-guide/sync/webdav.md), uploading and deleting files. To do this, add the `-e PHOTOPRISM_READONLY="true"` command flag. You can additionally [mount volumes with the `:ro` flag](https://docs.docker.com/storage/bind-mounts/#use-a-read-only-bind-mount) so that writes are also blocked by Docker.
+    When *read-only mode* is enabled, all features that require write permission to the *originals* folder are disabled, e.g. [WebDAV](../user-guide/sync/webdav.md), uploading and deleting files. To do this, add the `-e PHOTOPRISM_READONLY="true"` command flag. You can additionally [mount volumes with the `:ro` flag](https://docs.docker.com/engine/storage/bind-mounts/#use-a-read-only-bind-mount) so that writes are also blocked by Docker.
 
 ##### /photoprism/storage
 
@@ -162,9 +162,9 @@ docker rm -f photoprism
 
 ### PhotoPrism® Plus
 
-Our members can activate [additional features](https://link.photoprism.app/membership) by logging in with the [admin user created during setup](config-options.md#authentication) and then following the steps [described in our activation guide](https://www.photoprism.app/kb/activation). Thank you for your support, which has been and continues to be essential to the success of the project! :octicons-heart-fill-24:{ .heart .purple }
+Our members can activate [additional features](https://link.photoprism.app/membership) by logging in with the [admin user created during setup](config-options.md#authentication) and then following the steps [described in our activation guide](https://www.photoprism.app/kb/activation/). Thank you for your support, which has been and continues to be essential to the success of the project! :octicons-heart-fill-24:{ .heart .purple }
 
-[Compare Memberships ›](https://link.photoprism.app/membership){ class="pr-3 block-xs" } [View Membership FAQ ›](https://www.photoprism.app/membership/faq) 
+[Compare Memberships ›](https://link.photoprism.app/membership){ class="pr-3 block-xs" } [View Membership FAQ ›](https://www.photoprism.app/membership/faq/) 
 
 !!! example ""
     We recommend that new users install our free Community Edition before [signing up for a membership](https://link.photoprism.app/membership).
@@ -182,7 +182,7 @@ Other issues? Our [troubleshooting checklists](troubleshooting/index.md) help yo
 
 !!! info ""
     You are welcome to ask for help in our [community chat](https://link.photoprism.app/chat).
-    [Sponsors](https://www.photoprism.app/membership) receive direct [technical support](https://www.photoprism.app/contact) via email.
+    [Sponsors](https://www.photoprism.app/membership/) receive direct [technical support](https://www.photoprism.app/contact/) via email.
     Before [submitting a support request](index.md#getting-support), try to [determine the cause of your problem](troubleshooting/index.md).
 
 ### Command-Line Interface

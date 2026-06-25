@@ -2,7 +2,7 @@
 
 !!! info ""
     You are welcome to ask for help in our [community chat](https://link.photoprism.app/chat).
-    [Sponsors](https://www.photoprism.app/membership) receive direct [technical support](https://www.photoprism.app/contact) via email.
+    [Sponsors](https://www.photoprism.app/membership/) receive direct [technical support](https://www.photoprism.app/contact/) via email.
     Before [submitting a support request](../../user-guide/index.md#getting-support), try to [determine the cause of your problem](index.md).
 
 ## Compatibility
@@ -33,7 +33,7 @@ First, verify that you are using the correct port (default is `3306`) and host:
 - in the internal Docker network, the default hostname is `mariadb` (same as the [service](https://dl.photoprism.app/docker/compose.yaml))
 - avoid changing the default network configuration, unless you are experienced with this
 - avoid using IP addresses other than `127.0.0.1` (localhost) directly, as [they can change](https://github.com/photoprism/photoprism/discussions/2791#discussioncomment-3985376)
-- only use `localhost` or `127.0.0.1` if the database port [has been exposed](https://docs.docker.com/compose/compose-file/compose-file-v3/#ports) as described below and you are on the same computer (host)
+- only use `localhost` or `127.0.0.1` if the database port [has been exposed](https://docs.docker.com/reference/compose-file/services/#ports) as described below and you are on the same computer (host)
 - we recommend [configuring a local hostname](https://dl.photoprism.app/img/docs/pihole-local-dns.png) to access other hosts on your network
 
 To connect to MariaDB from your host or home network, you need to expose port `3306` in your `compose.yaml` or `docker-compose.yml`
@@ -105,7 +105,7 @@ echo "SHOW VARIABLES WHERE Variable_name LIKE 'character\_set\_%' OR Variable_na
 docker compose exec -T mariadb mariadb -uroot -pinsecure photoprism
 ```
 
-Before [submitting a support request](https://www.photoprism.app/kb/getting-support), confirm that the problem also occurs with a **newly created** database based on our [example configuration](https://dl.photoprism.app/docker/compose.yaml):
+Before [submitting a support request](https://www.photoprism.app/kb/getting-support/), confirm that the problem also occurs with a **newly created** database based on our [example configuration](https://dl.photoprism.app/docker/compose.yaml):
 
 !!! example "compose.yaml"
     ```yaml

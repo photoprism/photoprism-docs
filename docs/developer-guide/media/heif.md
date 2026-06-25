@@ -23,6 +23,9 @@ apt update
 apt install -y libheif-examples exiftool
 ```
 
+!!! note ""
+    On libheif 1.21 and later, `heif-convert` is a compatibility symlink to `heif-dec`; `heif-thumbnailer` is no longer shipped. Both commands accept the same options, so the example below continues to work.
+
 Finally, run the `heif-convert` command (`-q 92` is optional and determines the JPEG quality/compression):
 
 ```
@@ -69,6 +72,14 @@ The Exif orientation values are numbered from 1 to 8:
 8. = 270 degrees, mirrored: image is on its far side.
 
 [Learn more ›](https://sirv.com/help/articles/rotate-photos-to-be-upright/)
+
+## Native libvips Conversion
+
+When [libvips](https://www.libvips.org/) is built with HEIF support, PhotoPrism uses it as the preferred path for HEIC, HEIF, and AVIF preview and sidecar conversion; `heif-convert` (or `heif-dec` on libheif 1.21+) is kept as a fallback for environments where libvips cannot decode the file.
+
+On the native path, libheif applies the container-level `irot` and `imir` transforms during decode, so the bytes that reach libvips are already oriented correctly. The HEIF specification treats Exif `Orientation` as informational on top of those transforms, and PhotoPrism follows the same model: the Exif tag is read for metadata reporting but is **not** re-applied by libvips on the decoded image. Conformant HEIF/HEIC files render with the same orientation on the native path as through `heif-convert`.
+
+Some older Apple HEIC captures (notably early iPhone files) only store `Orientation` in Exif and omit the container `irot`/`imir` transforms. Those files may render unrotated on the native libvips path; if you encounter one, the `heif-convert` fallback honors the Exif tag and produces the expected orientation.
 
 ## Software Libraries and References ##
 

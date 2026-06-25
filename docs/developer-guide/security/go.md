@@ -1,7 +1,5 @@
 # Secure Coding in Go
 
-<img src="cover.jpg" alt="Book Cover" class="right w25">
-
 [The Go Language: Web Application Secure Coding Practices][12] is a book written for anyone who is using the [Go Programming Language][1] and aims to use it for Web development.
 
 You can download it in the following formats:
@@ -20,7 +18,7 @@ This book is collaborative effort of [Checkmarx Security Research Team][2] and i
 [4]: https://www.owasp.org
 [5]: https://www.owasp.org/index.php/About_OWASP
 [6]: https://github.com/OWASP/Go-SCP/raw/master/src/howto-contribute.md
-[7]: https://www.twitter.com/checkmarx
+[7]: https://x.com/checkmarx
 [8]: https://www.gitbook.com/
 [9]: https://checkmarx.gitbooks.io/go-scp/
 [10]: https://www.gitbook.com/book/checkmarx/go-scp/

@@ -4,7 +4,7 @@ If enabled, reverse geocoding enriches photo and video metadata with details suc
 
 ## Privacy Policy ##
 
-As explained in detail in our [Privacy Policy](https://www.photoprism.app/privacy), reverse geocoding depends on retrieving the necessary information from a backend that we provide for this purpose.
+As explained in detail in our [Privacy Policy](https://www.photoprism.app/privacy/), reverse geocoding depends on retrieving the necessary information from a backend that we provide for this purpose.
 
 The costs are currently fully covered by us for all users, including non-sponsors, and we ensure a very high level of privacy and confidentiality:
 
@@ -12,7 +12,7 @@ The costs are currently fully covered by us for all users, including non-sponsor
 - Our API approximates the coordinates and encodes them with a [fuzzy S2 cell ID](https://s2geometry.io/resources/s2cell_statistics.html) that does not include the house number or any other data identifying a specific residential address, except possibly in very sparsely populated areas of the world. Even then, we cannot trace the request back to a person, picture or point in time.
 - We may store your server's IP address and other HTTP request headers for a limited time to perform authorization checks, prevent abuse, and implement rate limits. Since the traffic is encrypted, no one intercepting the server-to-server communication can see the exact request and response; only the fact that you exchanged data with our backend.
 
-*Other open source applications sometimes use the free developer APIs operated by [openstreetmap.org](https://operations.osmfoundation.org/policies/tiles/). In this case, [their usage](https://operations.osmfoundation.org/policies/tiles/) and [privacy policies](https://wiki.osmfoundation.org/wiki/Privacy_Policy) apply, which means that your request data is stored and used to [create publicly available reports](https://planet.openstreetmap.org/tile_logs/). This is different from our approach, which focuses on [our users' privacy](https://www.photoprism.app/privacy) and user experience.*
+*Other open source applications sometimes use the free developer APIs operated by [openstreetmap.org](https://operations.osmfoundation.org/policies/tiles/). In this case, [their usage](https://operations.osmfoundation.org/policies/tiles/) and [privacy policies](https://wiki.osmfoundation.org/wiki/Privacy_Policy) apply, which means that your request data is stored and used to [create publicly available reports](https://planet.openstreetmap.org/tile_logs/). This is different from our approach, which focuses on [our users' privacy](https://www.photoprism.app/privacy/) and user experience.*
 
 ## Example Request ##
 
@@ -44,11 +44,11 @@ The costs are currently fully covered by us for all users, including non-sponsor
 
 ## Location Data ##
 
-See: [internal/maps/location.go](https://github.com/photoprism/photoprism/blob/develop/internal/photoprism/location.go)
+See: [internal/photoprism/location.go](https://github.com/photoprism/photoprism/blob/develop/internal/photoprism/location.go)
 
 ## World Maps ##
 
-PhotoPrism also includes six [high-resolution world maps](https://try.photoprism.app/library/places) that allow you to browse photos by location, see [Web User Interface > Interactice Maps](../ui/maps.md). Visit [try.photoprism.app/library/places](https://try.photoprism.app/library/places) to try them on our demo.
+PhotoPrism also includes six [high-resolution world maps](https://try.photoprism.app/library/places) that allow you to browse photos by location, see [Web User Interface > Interactive Maps](../ui/maps.md). Visit [try.photoprism.app/library/places](https://try.photoprism.app/library/places) to try them on our demo.
 
 ## Related Resources ##
 
@@ -72,7 +72,7 @@ PhotoPrism also includes six [high-resolution world maps](https://try.photoprism
 - https://github.com/golang/geo - S2 geometry library in Go
 - https://gist.github.com/antoniomo/3371e44cbe2f0cc75a525aac0d188cfb - example for S2 geometry library
 - https://github.com/tidwall/redcon - Redis compatible server framework (Go)
-- https://github.com/siddontang/ledisdb - a high performance NoSQL DB powered by Go ([homepage](http://ledisdb.com/))
+- https://github.com/siddontang/ledisdb - a high performance NoSQL DB powered by Go
 - https://github.com/blevesearch/bleve/tree/master/geo - geo support in bleve
 
 ### Commercial Services ###

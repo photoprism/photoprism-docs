@@ -57,7 +57,7 @@ https://{hostname}/api/v1/oidc/redirect
 
 ### Local Development
 
-Our [development environment](../setup.md) comes with a [pre-configured Keycloak](https://github.com/photoprism/photoprism/blob/develop/compose.yaml#L217-L243) OIDC Identity Provider running at <https://keycloak.localssl.dev/> for local testing:
+Our [development environment](../setup.md) comes with a [pre-configured Keycloak](https://github.com/photoprism/photoprism/blob/develop/compose.yaml) OIDC Identity Provider running at <https://keycloak.localssl.dev/> for local testing:
 
 - <https://keycloak.localssl.dev/realms/master/.well-known/openid-configuration>
 
@@ -174,7 +174,7 @@ At the moment, the authorization and userinfo endpoints are still placeholders, 
 
 ### Is it possible to set a default role for new OIDC users?
 
-For security reasons, our [Personal Editions](https://www.photoprism.app/editions#compare) currently default to the [Guest](../../user-guide/users/roles.md#guest) role, which admins can then upgrade after checking the eligibility of newly registered accounts.
+For security reasons, our [Personal Editions](https://www.photoprism.app/editions/#compare) currently default to the [Guest](../../user-guide/users/roles.md#guest) role, which admins can then upgrade after checking the eligibility of newly registered accounts.
 
 [Learn more ›](../../getting-started/advanced/openid-connect.md#frequently-asked-questions)
 

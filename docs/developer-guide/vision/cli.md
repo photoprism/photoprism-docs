@@ -41,8 +41,9 @@ photoprism vision run [options] [filter]
 |-------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
 | `--models MODELS`, `-m MODELS`| computer vision MODELS to run, e.g. caption, labels, or nsfw (default: "caption")                                               |
 | `--count NUMBER`, `-n NUMBER` | maximum NUMBER of pictures to be processed (default: 100000)                                                                    | 
-| `--source TYPE`, `-s TYPE`    | custom data source TYPE (auto, default, image, marker, ollama, openai, vision) (default: "image")                              |
+| `--source TYPE`, `-s TYPE`    | custom data source TYPE (auto, default, image, marker, ollama, openai, vision) (default: "auto")                               |
 | `--force`, `-f`               | force existing data to be updated if the model supports it and the source priority is equal to or higher (default: false)      |
+| `--dry-run`                   | print the matching pictures and exit without running the configured models (default: false)                                    |
 
 To generate captions for all photos in your library, you can run:
 
@@ -69,7 +70,7 @@ To re-generate captions for photos that already have some, add the --force flag 
 docker compose exec photoprism photoprism vision run --models=caption --force
 ```
 
-This is especially useful when testing different models or prompts. Note that the configured source must have a equal or higher priority than the source of the existing captions for them to be replaced.
+This is especially useful when testing different models or prompts. Note that the configured source must have an equal or higher priority than the source of the existing captions for them to be replaced.
 
 ## Reset Vision Data
 

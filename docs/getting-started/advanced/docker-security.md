@@ -32,7 +32,7 @@ We also recommend making sure that the latest Docker version and security update
 
 ## Run Services as Non-Root User
 
-It is recommended that you run the `photoprism` service as a non-root user by setting either the `user` [service property](https://docs.docker.com/compose/compose-file/05-services/#user) or the `PHOTOPRISM_UID` and `PHOTOPRISM_GID` [environment variable](../config-options.md#docker-image) in your `compose.yaml` or `docker-compose.yml` file:
+It is recommended that you run the `photoprism` service as a non-root user by setting either the `user` [service property](https://docs.docker.com/reference/compose-file/services/#user) or the `PHOTOPRISM_UID` and `PHOTOPRISM_GID` [environment variable](../config-options.md#docker-image) in your `compose.yaml` or `docker-compose.yml` file:
 
 | Environment              | Default | Description                                                                                                                                                                                  |
 |--------------------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -57,7 +57,7 @@ AdminPassword: "my super secret password"
 DatabasePassword: "my super secret password"
 ```
 
-Likewise, MariaDB can be configured to use Docker secret files. For details, see the [Docker Compose Documentation](https://docs.docker.com/compose/compose-file/05-services/#secrets).
+Likewise, MariaDB can be configured to use Docker secret files. For details, see the [Docker Compose Documentation](https://docs.docker.com/reference/compose-file/services/#secrets).
 
 The following is an example of the changes to your `compose.yaml` or `docker-compose.yml` file. Note that this example includes only the additional lines required to pass secret files to the MariaDB container:
 

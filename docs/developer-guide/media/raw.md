@@ -1,4 +1,4 @@
-Professional and semi-professional photographers often keep their originals in a [lossless RAW format](https://en.wikipedia.org/wiki/Raw_image_format), close to how they were taken with the physical sensor, rather than in a compressed image format like JPEG, especially if they shoot with a digital SLR camera. Newer mobile phones may also be able to capture images in RAW mode. Our goal is to provide top-notch support for [all RAW images](https://docs.photoprism.app/getting-started/faq/#what-media-file-types-are-supported), regardless of camera make and model. A full list of file types and extensions can be found in our [Knowledge Base](https://www.photoprism.app/kb/file-formats).
+Professional and semi-professional photographers often keep their originals in a [lossless RAW format](https://en.wikipedia.org/wiki/Raw_image_format), close to how they were taken with the physical sensor, rather than in a compressed image format like JPEG, especially if they shoot with a digital SLR camera. Newer mobile phones may also be able to capture images in RAW mode. Our goal is to provide top-notch support for [all RAW images](https://docs.photoprism.app/getting-started/faq/#what-media-file-types-are-supported), regardless of camera make and model. A full list of file types and extensions can be found in our [Knowledge Base](https://www.photoprism.app/kb/file-formats/).
 
 ![](img/editPhoto.png)
 
@@ -8,7 +8,7 @@ Since web browsers generally cannot display RAW image files directly, they must 
 
 ## Adobe XMP
 
-PhotoPrism currently supports Darktable and RawTherapee as RAW image converters (as well as Sips on macOS). Darktable fully supports XMP sidecar files, RawTherapee might only partially. However, XMP is only a "container" format, so the fields (namespaces) used there to indicate how an image should be converted (as well as other metadata) differ between Lightroom/Photoshop, Darktable, and RawTherapee.
+PhotoPrism currently supports Darktable and RawTherapee as RAW image converters (as well as Sips on macOS). Darktable fully supports XMP sidecar files; RawTherapee might only support them partially. However, XMP is only a "container" format, so the fields (namespaces) used there to indicate how an image should be converted (as well as other metadata) differ between Lightroom/Photoshop, Darktable, and RawTherapee.
     
 In other words, just because an application generally supports XMP that doesn't mean it can use metadata created with another application or by another vendor like Adobe. If you think that's confusing, well, that's because it is. You have an open format, but you still suffer from vendor lock-in - probably not entirely unintentional on Adobe's part.
 
@@ -26,7 +26,7 @@ We had the idea to use [cgo](https://golang.org/cmd/cgo/) and link directly agai
 
 ## RawTherapee
 
-If installed, RawTherapee CLI can also be used for RAW image conversion. If it used by default if Darktable isn't installed or disabled.
+If installed, RawTherapee CLI can also be used for RAW image conversion. It is used by default if Darktable is not installed or has been disabled.
 
 ### JPEG Size Limit
 
@@ -39,11 +39,9 @@ On a Mac, PhotoPrism can convert multiple files at once using Sips (pre-installe
 ## Comparison of RAW to JPEG converters
 
 - [darktable](https://www.darktable.org/) - popular open-source photography app and raw developer; available for Mac, Linux, and Windows; supports XMP (compatible with photoshop/lightroom?)
-- Mac OS X ships with [sips](https://coderwall.com/p/nhp7mq/convert-raw-photos-to-jpg-in-the-mac-os-terminal): `sips -s format jpeg IMAGE.RAW --out IMAGE.JPG`
-- [Photivo](http://photivo.org/) - open-source photo processor; available for Mac, Linux, and Windows; no XMP support?
+- macOS ships with [sips](https://ss64.com/osx/sips.html): `sips -s format jpeg IMAGE.RAW --out IMAGE.JPG`
 - [RawTherapee](https://rawtherapee.com/) - open-source RAW image processing app; available for Mac, Linux, and Windows; no XMP support?
 - [digiKam](https://www.digikam.org/about/) - open-source digital photo management application based on Qt (KDE); available for Mac, Linux, and Windows; supports XMP (compatible with photoshop/lightroom?)
-- [UFRaw](http://ufraw.sourceforge.net/) - Unidentified Flying Raw is a utility to read and manipulate raw images from digital cameras
 
 | Tool                                                                          | Command line options                                                                                                                               | Compatible OS         | JPG Diff* | XMP support                                          | Possible settings | EXIF Diff* | Compatible with Raspberry (ARM64)                              |
 |-------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------|-----------|------------------------------------------------------|-------------------|------------|----------------------------------------------------------------|
@@ -81,8 +79,8 @@ The following table shows the difference between the JPG files converted by the 
 | Modified         | reference                              | different                        | different                            | different               | different               | different                             |
 | Dimension        | identical - 5472 × 3648                | 5472 × 3648                      | different - 5494 × 3666              | different - 5488 × 3662 | different - 5496 × 3670 | different - 5496 × 3670               |
 | Device Make      | reference                              | identical                        | identical                            | identical               | not set                 | not set                               |
-| Colour space     | reference                              | identical                        | identical                            | identical               | identical               | identical                             |
-| Colour profile   | Adobe RGB (1998)                       | different - Display P3           | different - sRGB                     | different - RTv2_sRGB   | not set                 | not set                               |
+| Color space      | reference                              | identical                        | identical                            | identical               | identical               | identical                             |
+| Color profile    | Adobe RGB (1998)                       | different - Display P3           | different - sRGB                     | different - RTv2_sRGB   | not set                 | not set                               |
 | Focal length     | reference                              | identical                        | identical                            | identical               | not set                 | not set                               |
 | Alpha Channel    | reference                              | identical                        | identical                            | identical               | not set                 | not set                               |
 | Red eye          | reference                              | identical                        | identical                            | identical               | not set                 | not set                               |

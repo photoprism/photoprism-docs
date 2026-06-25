@@ -2,7 +2,7 @@
 
 PhotoPrism can be installed on all operating systems supporting [Docker](https://store.docker.com/search?type=edition&offering=community), as well as [FreeBSD](ports/freebsd.md), [Raspberry Pi](raspberry-pi.md), and many [NAS devices](nas/synology.md). It is also available in the cloud on [PikaPods](cloud/pikapods.md) and [DigitalOcean](cloud/digitalocean.md).
 
-We recommend running PhotoPrism with [Docker Compose](docker-compose.md) when hosting it on a private server. It is available for [Mac](https://docs.docker.com/desktop/install/mac-install/), [Linux](troubleshooting/docker.md#installation), and [Windows](https://docs.docker.com/desktop/install/windows-install/).
+We recommend running PhotoPrism with [Docker Compose](docker-compose.md) when hosting it on a private server. It is available for [Mac](https://docs.docker.com/desktop/setup/install/mac-install/), [Linux](troubleshooting/docker.md#installation), and [Windows](https://docs.docker.com/desktop/setup/install/windows-install/).
 
 Once the initial setup is complete, our [First Steps 👣](../user-guide/first-steps.md) tutorial guides you through the user interface and settings to ensure your library is indexed according to your individual preferences.
 
@@ -43,11 +43,11 @@ In order to successfully set up your installation and view location details in P
 
 ## Maps & Places
 
-As explained in our [Privacy Policy](https://www.photoprism.app/privacy#section-7), reverse geocoding and interactive world maps depend on retrieving the necessary information [from us](https://www.photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality.[^5]
+As explained in our [Privacy Policy](https://www.photoprism.app/privacy/#section-7), reverse geocoding and interactive world maps depend on retrieving the necessary information [from us](https://www.photoprism.app/contact/) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality.[^5]
 
-Your use of these services is [fully covered by us](faq.md#are-the-keys-for-using-interactive-world-maps-provided-free-of-charge). Depending on your usage, this can save you much more than the cost of a [PhotoPrism+ Membership](https://www.photoprism.app/membership), since other providers generally charge usage-based fees and often don't allow you to cache the data they provide, compromising performance and your privacy with unnecessary requests.
+Your use of these services is [fully covered by us](faq.md#are-the-keys-for-using-interactive-world-maps-provided-free-of-charge). Depending on your usage, this can save you much more than the cost of a [PhotoPrism+ Membership](https://www.photoprism.app/membership/), since other providers generally charge usage-based fees and often don't allow you to cache the data they provide, compromising performance and your privacy with unnecessary requests.
 
-[View Privacy Policy ›](https://www.photoprism.app/privacy#section-7){ class="pr-3 block-xs" } [View Compliance FAQ ›](https://www.photoprism.app/kb/compliance-faq#privacy)
+[View Privacy Policy ›](https://www.photoprism.app/privacy/#section-7){ class="pr-3 block-xs" } [View Compliance FAQ ›](https://www.photoprism.app/kb/compliance-faq/#privacy)
 
 ## Roadmap
 
@@ -57,20 +57,20 @@ Please note, however, that we have a [zero-bug policy](../known-issues.md) and d
 
 ## Getting Support
 
-Common problems can be quickly diagnosed and solved using our [Troubleshooting Checklists](troubleshooting/index.md). You can also post your questions on [GitHub Discussions](https://link.photoprism.app/discussions), ask in our [Community Chat](https://link.photoprism.app/chat), or consult our [Virtual Experts](https://www.photoprism.app/kb/getting-support#virtual-experts) on [ChatGPT](https://link.photoprism.app/chatgpt) and [Perplexity](https://link.photoprism.app/perplexity).[^6]
+Common problems can be quickly diagnosed and solved using our [Troubleshooting Checklists](troubleshooting/index.md). You can also post your questions on [GitHub Discussions](https://link.photoprism.app/discussions), ask in our [Community Chat](https://link.photoprism.app/chat), or consult our [Virtual Expert](https://www.photoprism.app/kb/getting-support/#virtual-experts) on [ChatGPT](https://link.photoprism.app/chatgpt).[^6]
 
 [Silver, Gold, and Platinum](https://link.photoprism.app/membership) members, as well as [users with a team plan](http://link.photoprism.app/team-editions), are welcome to email us for technical support and advice.
 
-[View Support Options ›](https://www.photoprism.app/kb/getting-support){ class="pr-3 block-xs" } [Compare Memberships ›](https://link.photoprism.app/membership)
+[View Support Options ›](https://www.photoprism.app/kb/getting-support/){ class="pr-3 block-xs" } [Compare Memberships ›](https://link.photoprism.app/membership)
 
 !!! info ""
     **We kindly ask you not to report bugs via *GitHub Issues* unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.**
-    [Contact us](https://www.photoprism.app/contact) or [a community member](https://link.photoprism.app/discussions)
+    [Contact us](https://www.photoprism.app/contact/) or [a community member](https://link.photoprism.app/discussions)
     if you need help, it could be a configuration problem, or a misunderstanding in how the software works.
 
 [^1]: RAW image conversion and TensorFlow are disabled on systems with 1 GB or less memory
 [^2]: Our [configuration examples](https://dl.photoprism.app/docker/) are generally based on the [current stable MariaDB version](https://mariadb.com/docs/release-notes/community-server) to take advantage of performance improvements. This does not mean that older versions are no longer supported and you must upgrade immediately. We recommend not using the `:latest` tag for the MariaDB Docker image and to upgrade manually by changing the tag once we had a chance to test a new major version.
 [^3]: Oracle seems to have stopped shipping [new features and enhancements](https://github.com/photoprism/photoprism/issues/1764). As a result, the testing effort required before each release is no longer feasible.
 [^4]: [WebGL](https://caniuse.com/?search=webgl) may not be fully supported by some versions of Firefox, especially on [Android](https://play.google.com/store/apps/details?id=org.mozilla.firefox&hl=en&pli=1).
-[^5]: Our [Compliance FAQ](https://www.photoprism.app/kb/compliance-faq#privacy) provides answers to the most frequently asked questions about product compliance and scalability.
-[^6]: ChatGPT and Perplexity can make mistakes and, unless you opt out, your chats may be used for training purposes.
+[^5]: Our [Compliance FAQ](https://www.photoprism.app/kb/compliance-faq/#privacy) provides answers to the most frequently asked questions about product compliance and scalability.
+[^6]: ChatGPT can make mistakes and, unless you opt out, your chats may be used for training purposes.

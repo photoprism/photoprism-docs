@@ -8,7 +8,7 @@ Running the following command in your local [development environment](../setup.m
 make fmt-go swag-fmt swag
 ```
 
-In local debug builds, you can also browse the embedded Swagger UI at `/api/v1/docs` and fetch the generated JSON from `/api/v1/swagger.json` after rebuilding and starting `photoprism`:
+In local debug builds, you can also browse the embedded Swagger UI at `/api/v1/docs/index.html` and fetch the generated JSON from `/api/v1/swagger.json` after rebuilding and starting `photoprism`:
 
 ![swagger-docs](img/swagger.jpg)
 

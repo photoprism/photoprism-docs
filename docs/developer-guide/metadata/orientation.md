@@ -41,6 +41,9 @@ Rotation                        : 270
 
 **Rotation** and **Orientation** are the important values you should pay attention to and compare. The rotation is in degrees.
 
+!!! note "Orientation in HEIF/HEIC Files"
+    For HEIF and HEIC files, the container-level `irot` and `imir` transforms are the authoritative source of image orientation; the Exif `Orientation` tag is informational and is **not** re-applied by libheif when it decodes the image. PhotoPrism follows the same model on its native libvips path. Some older Apple HEIC captures only store the Exif `Orientation` tag and omit the container transforms — those files may render unrotated through libvips and need `heif-convert` (or `heif-dec` on libheif 1.21+) as a fallback. See [strukturag/libheif#227](https://github.com/strukturag/libheif/issues/227) for background.
+
 ## Exiftool Parameters
 
 - `-n` displays the raw values without changes
@@ -55,9 +58,9 @@ The numbers used to specify the image orientation are defined as follows:
 2. = 0 degrees, mirrored: image has been flipped back-to-front.
 3. = 180 degrees: image is upside down.
 4. = 180 degrees, mirrored: image has been flipped back-to-front and is upside down.
-5. = 90 degrees: image has been flipped back-to-front and is on its side.
-6. = 90 degrees, mirrored: image is on its side.
-7. = 270 degrees: image has been flipped back-to-front and is on its far side.
-8. = 270 degrees, mirrored: image is on its far side.
+5. = 270 degrees, mirrored: image has been flipped back-to-front and is on its far side.
+6. = 90 degrees: image is on its side.
+7. = 90 degrees, mirrored: image has been flipped back-to-front and is on its side.
+8. = 270 degrees: image is on its far side.
 
 [Learn more ›](https://sirv.com/help/articles/rotate-photos-to-be-upright/)

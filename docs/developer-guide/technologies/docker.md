@@ -10,7 +10,7 @@ to provide native binaries for common operating systems at a later time.
 
 **(2) Docker saves time through simplified deployment and testing.** A main advantage of Docker is that application images can be [easily made available](https://hub.docker.com/r/photoprism/photoprism) to users via Internet. It provides a common standard across most operating systems and devices, which saves our team a lot of time that we can then spend [more effectively](https://docs.photoprism.app/developer-guide/code-quality/#effectiveness-efficiency), for example, providing support and developing one of the many features that users are waiting for.
 
-**(3) Dockerfiles are part of the source code repository.** [Human-readable](https://docs.docker.com/engine/reference/builder/) and [versioned Dockerfiles](https://github.com/photoprism/photoprism/tree/develop/docker) that are part of our public source code help avoid "works for me" moments and other unwelcome surprises by enabling us to have the exact [same environment](https://docs.photoprism.app/developer-guide/setup/) everywhere in [development](https://github.com/photoprism/photoprism/tree/develop/docker/develop), [staging, and production](https://github.com/photoprism/photoprism/tree/develop/docker/photoprism).
+**(3) Dockerfiles are part of the source code repository.** [Human-readable](https://docs.docker.com/reference/dockerfile/) and [versioned Dockerfiles](https://github.com/photoprism/photoprism/tree/develop/docker) that are part of our public source code help avoid "works for me" moments and other unwelcome surprises by enabling us to have the exact [same environment](https://docs.photoprism.app/developer-guide/setup/) everywhere in [development](https://github.com/photoprism/photoprism/tree/develop/docker/develop), [staging, and production](https://github.com/photoprism/photoprism/tree/develop/docker/photoprism).
 
 **(4) Running applications in containers is more secure.** Last but not least, virtually all file format parsers have vulnerabilities that just haven't been discovered yet. This is a known risk that can affect you even if your computer is not directly connected to the Internet. Running apps in a container with limited host access is an easy way to improve security without compromising performance and usability.
 
@@ -42,24 +42,24 @@ apt install -y exiftool libheif-examples
 
 ## Continuous Integration / Deployment ##
 
-Build and push of an updated container image to [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags/) is automatically performed by [Travis CI](https://travis-ci.org/photoprism/photoprism) whenever develop is merged into master and the tests are all green. For that reason, we don't use semantic versioning for our binaries and container images. A version string might look like `181112-edc7c2f-Darwin-i386-DEBUG` instead. Travis CI uses the [photoprism/development](https://hub.docker.com/r/photoprism/development/) image for running unit and integration tests on all branches and for pull requests, see [Dockerfile](https://github.com/photoprism/photoprism/blob/develop/Dockerfile).
+Container images are built and published to [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags/) automatically from the `develop` branch once tests pass. We don't use semantic versioning for our preview binaries and images; a version string typically looks like `260520-12dbe82d3` (date + commit hash). The multi-arch build script that drives these publishes is [`scripts/docker/buildx-multi.sh`](https://github.com/photoprism/photoprism/blob/develop/scripts/docker/buildx-multi.sh), and the dev container image used for testing is published as [`photoprism/develop`](https://hub.docker.com/r/photoprism/develop/), see the main [`Dockerfile`](https://github.com/photoprism/photoprism/blob/develop/Dockerfile).
 
 ## Multi-Stage Build ##
 
-When creating new images, Docker supports so called multi-stage builds, that means you can compile an application like PhotoPrism in a container that contains all development dependencies (like source code, debugger, compiler,...) and later copy the binary to a fresh container. This way we could reduce the compressed container size from ~1 GB to less than 200 MB. Most of that is used by Darktable, TensorFlow and Ubuntu 18.04. Our `photoprism` binary is smaller than 20 MB.
+Docker supports so-called multi-stage builds, which means you can compile an application like PhotoPrism in a container that includes all development dependencies (source code, debugger, compiler, …) and then copy only the resulting binary into a fresh runtime image. This keeps the published runtime image much smaller than the build image; most of the runtime size comes from Darktable, TensorFlow, ONNX Runtime, and the base OS layer, while the `photoprism` binary itself is around 20 MB.
 
 Example:
 
 ```Dockerfile
-FROM photoprism/development:20181112 as build
+FROM photoprism/develop:resolute AS build
 
 # Build PhotoPrism
 WORKDIR "/go/src/github.com/photoprism/photoprism"
 COPY . .
 RUN make all install DESTDIR=/opt/photoprism
 
-# Base base image as photoprism/development
-FROM ubuntu:18.04
+# Same base image family as photoprism/develop
+FROM ubuntu:resolute
 
 WORKDIR /opt/photoprism
 
@@ -68,7 +68,7 @@ COPY --from=build /usr/local/bin/photoprism /usr/local/bin/photoprism
 COPY --from=build /opt/photoprism /opt/photoprism
 
 # Expose HTTP port
-EXPOSE 80
+EXPOSE 2342
 
 # Start PhotoPrism server
 CMD photoprism start

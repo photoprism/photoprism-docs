@@ -2,16 +2,16 @@
 
 !!! info ""
     You are welcome to ask for help in our [community chat](https://link.photoprism.app/chat).
-    [Sponsors](https://www.photoprism.app/membership) receive direct [technical support](https://www.photoprism.app/contact) via email.
+    [Sponsors](https://www.photoprism.app/membership/) receive direct [technical support](https://www.photoprism.app/contact/) via email.
     Before [submitting a support request](../../user-guide/index.md#getting-support), try to [determine the cause of your problem](index.md).
 
 ## Installation
 
-If you cannot use the `docker` and `docker compose` (or `docker-compose`) commands, make sure [Docker](https://docs.docker.com/config/daemon/#start-the-daemon-manually) is running on the host you are connected to and your current user has permission to use it.
+If you cannot use the `docker` and `docker compose` commands, make sure [Docker](https://docs.docker.com/engine/daemon/start/) is running on the host you are connected to and your current user has permission to use it.
 The following instructions explain how to install Docker:
 
 - [Ubuntu](https://docs.docker.com/engine/install/ubuntu/), [Mint](https://techviewleo.com/how-to-install-and-use-docker-in-linux-mint/), [Debian](https://www.linode.com/docs/guides/installing-and-using-docker-on-ubuntu-and-debian/), and [Arch Linux](https://wiki.archlinux.org/title/docker#Installation)
-- [Microsoft Windows](https://docs.docker.com/desktop/install/windows-install/)
+- [Microsoft Windows](https://docs.docker.com/desktop/setup/install/windows-install/)
 - [Apple macOS](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 
 Alternatively, [Podman](#podman-compose) is supported as a drop-in replacement for Docker on Red Hat-compatible Linux distributions like RHEL, CentOS, Fedora, AlmaLinux, and Rocky Linux.
@@ -26,23 +26,16 @@ bash <(curl -s https://setup.photoprism.app/ubuntu/install-docker.sh)
 
 ### Docker Compose
 
-The examples in our guides now use the new `docker compose` command by default. However, if your *Docker* version does not yet support the *Compose Plugin*, you can still use the standalone `docker-compose` command.
+Our examples require [Docker Compose v2](https://docs.docker.com/compose/) (the `docker compose` plugin). The standalone `docker-compose` v1 command was [retired by Docker in mid-2023](https://docs.docker.com/compose/migrate/) and is no longer supported.
 
-On some Linux distributions, you may need to install an additional package. To do so, you can use a graphical software package manager or run the following command in a terminal to install the *Compose Plugin* for *Docker* on Ubuntu and Debian:
+On some Linux distributions, you may need to install the plugin separately. Use a graphical software package manager or run the following command in a terminal to install the *Compose Plugin* for *Docker* on Ubuntu and Debian:
 
 ```bash
 sudo apt update
 sudo apt install docker-compose-plugin
 ```
 
-If that does not work, this will install the legacy `docker-compose` command:
-
-```bash
-sudo apt update
-sudo apt install docker-compose
-```
-
-Running the following commands will add a `docker-compose` alias for the new Compose plugin so that older scripts don't break:
+If you have older scripts that still call `docker-compose`, you can add a shell alias for the Compose Plugin so they keep working:
 
 ```bash
 echo 'docker compose "$@"' | sudo tee /bin/docker-compose
@@ -50,7 +43,7 @@ sudo chmod +x /bin/docker-compose
 ```
 
 !!! note ""
-    With the latest version of [Docker Compose](https://docs.docker.com/compose/), the [default config file name](https://docs.docker.com/compose/intro/compose-application-model/#the-compose-file) is `compose.yaml`, although the `docker compose` command still supports legacy `docker-compose.yml` files for backward compatibility.
+    With the latest version of [Docker Compose](https://docs.docker.com/compose/), the [default config file name](https://docs.docker.com/compose/how-compose-works/#the-compose-file) is `compose.yaml`, although the `docker compose` command still supports legacy `docker-compose.yml` files for backward compatibility.
 
 ### Podman Compose
 
@@ -102,7 +95,7 @@ On Linux, this command grants permission by adding a user to the `docker` group 
 sudo usermod -aG docker [username]
 ```
 
-Alternatively, you can prefix the `docker` and `docker-compose` commands with `sudo` when not running as root,
+Alternatively, you can prefix the `docker` and `docker compose` commands with `sudo` when not running as root,
 for example:
 
 ```bash
@@ -156,17 +149,17 @@ The default entrypoint script can install [additional distribution packages](../
 [Learn more ›](https://docs.photoprism.app/getting-started/config-options/#docker-image)
 
 !!! abstract ""
-    If you are experiencing a similar problem with a custom configuration that we did not provide or recommend, please try changing it to see if that helps before [asking our team](https://www.photoprism.app/kb/getting-support) or [community members](https://github.com/photoprism/photoprism/discussions) for support. 🛟
+    If you are experiencing a similar problem with a custom configuration that we did not provide or recommend, please try changing it to see if that helps before [asking our team](https://www.photoprism.app/kb/getting-support/) or [community members](https://github.com/photoprism/photoprism/discussions) for support. 🛟
 
 ### IPTables Firewall
 
 On Linux, Docker manipulates the `iptables` rules to provide network isolation. This does have some implications for what you need to do if you want to have your own policies in addition to the rules Docker manages.
 
-[Learn more ›](https://docs.docker.com/network/iptables/)
+[Learn more ›](https://docs.docker.com/engine/network/packet-filtering-firewalls/)
 
 ### Wrong MTU Size
 
-If you use Docker on your server or on a virtual machine, technical limitations of the local network or your internet provider can sometimes make it impossible to [reach external services](firewall.md#outgoing-connections) such as the [Reverse Geocoding API](https://www.photoprism.app/privacy#section-7) that we operate for our users. In particular, the *network cards of virtual machines* often do not have the standard [Maximum Transmission Unit (MTU)](https://en.wikipedia.org/wiki/Maximum_transmission_unit) of 1500, but a smaller size like 1492 or 1454.
+If you use Docker on your server or on a virtual machine, technical limitations of the local network or your internet provider can sometimes make it impossible to [reach external services](firewall.md#outgoing-connections) such as the [Reverse Geocoding API](https://www.photoprism.app/privacy/#section-7) that we operate for our users. In particular, the *network cards of virtual machines* often do not have the standard [Maximum Transmission Unit (MTU)](https://en.wikipedia.org/wiki/Maximum_transmission_unit) of 1500, but a smaller size like 1492 or 1454.
 
 In this case, you must [configure the virtual network cards](https://mlohr.com/docker-mtu/) of your Docker containers so that they have an MTU size that is less than or equal to that of the outgoing network, for example by [adding the following](https://www.civo.com/learn/fixing-networking-for-docker) to your `compose.yaml` (or `docker-compose.yml`) config files:
 
@@ -222,7 +215,7 @@ docker compose up
     or other tools you may have installed.
 
 !!! tldr ""
-    The default [Docker Compose](https://docs.docker.com/compose/) config filename is `compose.yaml`. For simplicity, it doesn't need to be specified when running `docker compose` or `docker-compose` in the same directory. Config files for other apps or instances should be placed in separate folders.
+    The default [Docker Compose](https://docs.docker.com/compose/) config filename is `compose.yaml`. For simplicity, it doesn't need to be specified when running `docker compose` in the same directory. Config files for other apps or instances should be placed in separate folders.
 
 ### Log Rotation
 
@@ -324,7 +317,7 @@ In addition, you can reduce memory usage and improve stability by setting `PHOTO
 
 ### Windows
 
-It is important to [increase the Docker memory limit](../img/docker-resources-advanced.jpg) to 4 GB or more when using *Hyper-V*. The default of 2 GB can reduce indexing performance and cause unexpected restarts. Also make sure you configure at least 4 GB of swap space. [Docker Desktop](https://docs.docker.com/desktop/install/windows-install/) uses dynamic memory allocation with *WSL 2*, meaning you do not need to change any memory-related settings (depending on which version of Windows and Docker you are using).
+It is important to [increase the Docker memory limit](../img/docker-resources-advanced.jpg) to 4 GB or more when using *Hyper-V*. The default of 2 GB can reduce indexing performance and cause unexpected restarts. Also make sure you configure at least 4 GB of swap space. [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/) uses dynamic memory allocation with *WSL 2*, meaning you do not need to change any memory-related settings (depending on which version of Windows and Docker you are using).
 
 ### macOS
 
@@ -343,11 +336,11 @@ If you have working configuration rules for a particular Linux distribution, fee
 Errors such as "read-only file system", "error creating path", "failed to create folder", "permission denied", or "wrong permissions" indicate a filesystem permission problem:
 
 - [ ] Use a file manager, or the commands `ls -alh`, `chmod`, and `chown` on Unix-like operating systems, to [check and change filesystem permissions](https://kb.iu.edu/d/abdb) so all files and folders are accessible
-- [ ] The app and database *storage* folders must be writable as well: Verify that the services have write permissions and that you have **not** mounted the folders read-only on your host or [via Docker using the `:ro` flag](https://docs.docker.com/compose/compose-file/compose-file-v3/#short-syntax-3)
+- [ ] The app and database *storage* folders must be writable as well: Verify that the services have write permissions and that you have **not** mounted the folders read-only on your host or [via Docker using the `:ro` flag](https://docs.docker.com/reference/compose-file/services/#volumes)
 - [ ] If you have configured specific user and group IDs for a service, make sure they match
 - [ ] If [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) are mounted or used within *storage* folders, replace them with actual paths
-- [ ] It may help to [add the `:z` mount flag to volumes](https://docs.docker.com/storage/bind-mounts/#configure-the-selinux-label) when using *SELinux* (Red Hat/Fedora)
-- [ ] When mounting folders that only root has access to, you may have to prefix the `docker` and `docker-compose` commands with `sudo` on Linux if you are not already logged in as root
+- [ ] It may help to [add the `:z` mount flag to volumes](https://docs.docker.com/engine/storage/bind-mounts/#configure-the-selinux-label) when using *SELinux* (Red Hat/Fedora)
+- [ ] When mounting folders that only root has access to, you may have to prefix the `docker` and `docker compose` commands with `sudo` on Linux if you are not already logged in as root
 
 An easy way to test for missing permissions is to (temporarily) remove restrictions and make the entire folder accessible to everyone:
 
@@ -391,7 +384,7 @@ in the Docker, Kubernetes, or Virtual Machine configuration (remove or increase 
 
 ## Network Storage
 
-Shared folders that have already been mounted on your host under a drive letter or path can be used with Docker containers like [any other directory](../docker-compose.md#volumes). As shown below, certain types of network storage can alternatively be *mounted directly* with [Docker Compose](https://docs.docker.com/compose/compose-file/compose-file-v3/#driver_opts).
+Shared folders that have already been mounted on your host under a drive letter or path can be used with Docker containers like [any other directory](../docker-compose.md#volumes). As shown below, certain types of network storage can alternatively be *mounted directly* with [Docker Compose](https://docs.docker.com/reference/compose-file/volumes/#driver_opts).
 
 Please note that the required system dependencies must be installed on your computer in order to mount NFS (Unix/Linux) and/or CIFS shares (Windows/Mac), e.g. the `nfs-client` and `cifs-utils` packages on [Ubuntu Linux](https://wiki.ubuntu.com/MountWindowsSharesPermanently#CIFS_installation). Also make sure that your Docker version and operating system are up-to-date, and that the latest Subsystem for Linux (WSL) is installed if you have a Windows PC.
 

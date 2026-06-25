@@ -44,7 +44,7 @@ You can open, edit and save them with Poedit to update existing translations.
 - Open the `*.po` file of your language e.g. `/frontend/src/locales/fr.po` file with Poedit
 - In the Poedit menu click "Catalogue" --> "Update from POT File" --> select the `translations.pot` file from `/frontend/src/locales`
 - Now you can start proofreading and adding the missing translations
-- Once your done save the changes in the `*.po` file
+- Once you're done, save the changes in the `*.po` file
 - Run `npm run gettext-compile` to compile existing translations into a single `translations.json` file
 - To test your translations you need to build the frontend again using `npm run build` or `npm run watch`
 

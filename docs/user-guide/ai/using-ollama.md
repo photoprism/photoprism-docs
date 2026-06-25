@@ -12,6 +12,10 @@ Alternatively, most of the [`compose.yaml`](../../getting-started/docker-compose
 docker compose --profile ollama up -d
 ```
 
+Note that Ollama does not require authentication by default, so only expose port `11434` within **trusted networks** or behind a reverse proxy with access control.
+Experienced users can set up and operate Ollama on a dedicated server shared by multiple instances.
+The [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) must be installed for NVIDIA GPU acceleration to work.
+
 !!! example "compose.yaml"
     ```yaml
     services:
@@ -45,12 +49,15 @@ docker compose --profile ollama up -d
           OLLAMA_MULTIUSER_CACHE: "false" # optimize prompt caching for multi-user scenarios
           OLLAMA_NOPRUNE: "false"         # disables pruning of model blobs at startup
           OLLAMA_NOHISTORY: "true"        # disables readline history
-          OLLAMA_FLASH_ATTENTION: "false" # enables the experimental flash attention feature
-          OLLAMA_KV_CACHE_TYPE: "f16"     # cache quantization (f16, q8_0, or q4_0)
+          OLLAMA_FLASH_ATTENTION: "true"  # required for OLLAMA_KV_CACHE_TYPE quantization
+          OLLAMA_KV_CACHE_TYPE: "f16"     # cache precision: f16 (default), q8_0, q4_0
           OLLAMA_SCHED_SPREAD: "false"    # allows scheduling models across all GPUs.
-          OLLAMA_NEW_ENGINE: "true"       # enables the new Ollama engine
           # OLLAMA_DEBUG: "true"            # shows additional debug information
           # OLLAMA_INTEL_GPU: "true"        # enables experimental Intel GPU detection
+          ## Telemetry / privacy opt-outs (containers do not inherit /etc/environment):
+          DO_NOT_TRACK: "true"
+          HF_HUB_DISABLE_TELEMETRY: "1"
+          # OLLAMA_NO_CLOUD: "1"            # uncomment to disable Ollama Cloud models/features
           ## NVIDIA GPU Hardware Acceleration (optional):
           # NVIDIA_VISIBLE_DEVICES: "all"
           # NVIDIA_DRIVER_CAPABILITIES: "compute,utility"
@@ -66,10 +73,18 @@ docker compose --profile ollama up -d
         #          count: "all"
     ```
 
-Note that the [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) must be installed for GPU hardware acceleration to work. Experienced users may also run Ollama on a separate, more powerful server.
+### Flash Attention & KV Cache
 
-!!! danger ""
-    Ollama does not enforce authentication by default. Only expose port `11434` inside trusted networks or behind a reverse proxy that adds access control.
+**`OLLAMA_FLASH_ATTENTION`** enables a small speedup on supported model architectures (`gemma3`, `gptoss`, `mistral3`, `qwen3*`). It silently no-ops on unsupported architectures and on CPU. **Required** if you also enable `OLLAMA_KV_CACHE_TYPE` quantization. Set to `"false"` if you use [Qwen3-2507 builds](https://github.com/ollama/ollama/issues/12432) — they are incompatible with flash attention.
+
+**`OLLAMA_KV_CACHE_TYPE`** controls the precision of the per-token attention key/value cache:
+
+- **`f16`** (default) — native precision, works for every architecture, no quality loss.
+- **`q8_0`** — halves cache VRAM; clean for `qwen3*` / `gpt-oss` / `mistral3`; causes [a 5x slowdown](https://github.com/ollama/ollama/issues/11949) on [`gemma3`](https://ollama.com/library/gemma3); silently falls back to `f16` for [`gemma4`](https://ollama.com/library/gemma4) / [`qwen2.5vl`](https://ollama.com/library/qwen2.5vl) (not on the [flash-attention allowlist](https://github.com/ollama/ollama/issues/13337)).
+- **`q4_0`** — quarters cache VRAM; still usable on Qwen, noticeably degrades Gemma; only reach for it when VRAM-constrained.
+
+!!! tldr ""
+    The defaults [used in the example](#step-1-install-ollama) above (`OLLAMA_FLASH_ATTENTION: "true"` + `OLLAMA_KV_CACHE_TYPE: "f16"`) are a safe combination for our [recommended models](ollama-models.md) on typical hardware.
 
 ## Step 2: Download Models
 
@@ -124,6 +139,9 @@ Ollama-generated captions and labels are stored with the `ollama` metadata sourc
 
 !!! tip "Prompt Localization"
     To generate output in other languages, keep the base instructions in English and add the desired language (e.g., "Respond in German"). This method works for both [caption](ollama-models.md#qwen3-vl-caption) and [label prompts](ollama-models.md#qwen3-vl-labels).
+
+!!! info "NSFW Detection"
+    When you serve the `labels` model through Ollama, NSFW detection is **not** automatic. PhotoPrism asks the model to include NSFW classification in the same response only when **both** `PHOTOPRISM_DETECT_NSFW=true` and `PHOTOPRISM_EXPERIMENTAL=true` are set. Without that combination, running `photoprism vision run -m labels` skips NSFW flagging even if the LLM "knows" the content is unsafe. See [NSFW Detection](nsfw.md) for the full matrix.
 
 ## Step 4: Restart PhotoPrism
 

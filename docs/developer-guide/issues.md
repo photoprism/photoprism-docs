@@ -2,10 +2,10 @@
 
 We use [GitHub issues](https://github.com/photoprism/photoprism/issues) for managing [bugs](https://github.com/photoprism/photoprism/labels/bug), [ideas](https://github.com/photoprism/photoprism/labels/idea), and [enhancements](https://github.com/photoprism/photoprism/labels/enhancement).
 Issues labeled [help wanted](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) / [easy](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+is%3Aopen+label%3Aeasy) can be good (first) contributions.
-You are [welcome to email](https://www.photoprism.app/contact) us if you want to [work on something specific](https://github.com/photoprism/photoprism/issues), need [help with a pull request](pull-requests.md), or have something on your mind that you don't want to discuss publicly.
+You are [welcome to email](https://www.photoprism.app/contact/) us if you want to [work on something specific](https://github.com/photoprism/photoprism/issues), need [help with a pull request](pull-requests.md), or have something on your mind that you don't want to discuss publicly.
 
 !!! example ""
-    When [browsing issues](https://github.com/photoprism/photoprism/issues), please note that **our team and all issue subscribers receive an email notification** from GitHub whenever a new comment is added, so these should only be used for sharing important information and not for [discussions, questions](https://github.com/photoprism/photoprism/discussions), or [expressing personal opinions](https://www.photoprism.app/code-of-conduct).
+    When [browsing issues](https://github.com/photoprism/photoprism/issues), please note that **our team and all issue subscribers receive an email notification** from GitHub whenever a new comment is added, so these should only be used for sharing important information and not for [discussions, questions](https://github.com/photoprism/photoprism/discussions), or [expressing personal opinions](https://www.photoprism.app/code-of-conduct/).
 
 ### Writing User Stories ###
 
@@ -22,12 +22,12 @@ This makes it easier for everyone to understand who wants what and why.
 
 ### Creating Bug Reports ###
 
-In order for us to investigate [new bug reports](https://www.photoprism.app/kb/reporting-bugs), they must include **a complete list of steps to reproduce the problem**, the software versions used and information about the environment in which the problem occurred, such as [browser type, browser version, browser plug-ins](https://docs.photoprism.app/getting-started/troubleshooting/browsers/), operating system, [storage type](https://docs.photoprism.app/getting-started/troubleshooting/performance/#storage), [processor type](https://docs.photoprism.app/getting-started/troubleshooting/performance/#server-cpu), and [memory size](https://docs.photoprism.app/getting-started/troubleshooting/performance/#memory):
+In order for us to investigate [new bug reports](https://www.photoprism.app/kb/reporting-bugs/), they must include **a complete list of steps to reproduce the problem**, the software versions used and information about the environment in which the problem occurred, such as [browser type, browser version, browser plug-ins](https://docs.photoprism.app/getting-started/troubleshooting/browsers/), operating system, [storage type](https://docs.photoprism.app/getting-started/troubleshooting/performance/#storage), [processor type](https://docs.photoprism.app/getting-started/troubleshooting/performance/#server-cpu), and [memory size](https://docs.photoprism.app/getting-started/troubleshooting/performance/#memory):
 
-**<https://www.photoprism.app/kb/reporting-bugs>**
+**<https://www.photoprism.app/kb/reporting-bugs/>**
 
 We kindly ask you not to report bugs via GitHub Issues **unless you are certain to have found a fully reproducible and previously unreported issue** that must be fixed directly in the app.
-Before reporting a bug, first use our [Troubleshooting Checklists](../getting-started/troubleshooting/index.md) to determine the cause of your problem. [Contact us](https://www.photoprism.app/contact) or [a community member](https://link.photoprism.app/discussions) if you need help, it could be a configuration problem, or a misunderstanding in how the software works.
+Before reporting a bug, first use our [Troubleshooting Checklists](../getting-started/troubleshooting/index.md) to determine the cause of your problem. [Contact us](https://www.photoprism.app/contact/) or [a community member](https://link.photoprism.app/discussions) if you need help, it could be a configuration problem, or a misunderstanding in how the software works.
 
 This gives us the opportunity to [improve our documentation](https://docs.photoprism.app/getting-started/troubleshooting/) and provide best-in-class support instead of dealing with unclear/duplicate bug reports or triggering a flood of notifications by replying to comments. Thank you very much!
 
@@ -36,8 +36,8 @@ This gives us the opportunity to [improve our documentation](https://docs.photop
 Issues should include a list of *Acceptance Criteria* that clearly state what is expected.
 We recommend using MAY, SHOULD, and MUST as keywords to indicate priorities.
 
-Clickable [checkboxes](https://help.github.com/articles/about-task-lists/) for each item can be created via
-[GitHub Markdown](https://help.github.com/articles/basic-writing-and-formatting-syntax/):
+Clickable [checkboxes](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/about-tasklists) for each item can be created via
+[GitHub Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax):
 
 ```
 Acceptance Criteria:

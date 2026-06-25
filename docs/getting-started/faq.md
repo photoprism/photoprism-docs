@@ -72,18 +72,18 @@ impossible - to provide full support.
 PhotoPrism handles XMP through two separate code paths. **XMP embedded in media files is indexed via [ExifTool](https://exiftool.org/)**,
 which flattens XMP, Exif, and IPTC into a single JSON document that the indexer then reads; PhotoPrism never parses the embedded
 XML directly. If ExifTool is disabled, embedded XMP is not indexed. **Standalone `.xmp` sidecar files are read by a built-in
-proof-of-concept XML reader** that does *not* use ExifTool and currently recognises only a limited set of fields
+proof-of-concept XML reader** that does *not* use ExifTool and currently recognizes only a limited set of fields
 (title, caption, creator/artist, copyright, keywords, capture date, camera make/model, lens model, and the F-Stop favorite flag).
 See the [XMP developer guide](../developer-guide/metadata/xmp.md) for the full field list, the associated namespaces, and known
 limitations. [Contributions are welcome](../developer-guide/metadata/xmp.md).
 
 ### Does your software depend on any external services?
 
-As explained in our [Privacy Policy](https://www.photoprism.app/privacy#section-7), reverse geocoding and interactive world maps depend on retrieving the necessary information [from us](https://www.photoprism.app/contact) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality.
+As explained in our [Privacy Policy](https://www.photoprism.app/privacy/#section-7), reverse geocoding and interactive world maps depend on retrieving the necessary information [from us](https://www.photoprism.app/contact/) and [MapTiler AG](https://www.maptiler.com/contacts/), headquartered in Switzerland. Both services are provided with a very high level of privacy and confidentiality.
 
-Your use of these services is [fully covered by us](#are-the-keys-for-using-interactive-world-maps-provided-free-of-charge). Depending on your usage, this can save you much more than the cost of a [PhotoPrism+ Membership](https://www.photoprism.app/membership), since other providers generally charge usage-based fees and often don't allow you to cache the data they provide, compromising performance and your privacy with unnecessary requests.
+Your use of these services is [fully covered by us](#are-the-keys-for-using-interactive-world-maps-provided-free-of-charge). Depending on your usage, this can save you much more than the cost of a [PhotoPrism+ Membership](https://www.photoprism.app/membership/), since other providers generally charge usage-based fees and often don't allow you to cache the data they provide, compromising performance and your privacy with unnecessary requests.
 
-[View Privacy Policy ›](https://www.photoprism.app/privacy#section-7){ class="pr-3 block-xs" } [View Compliance FAQ ›](https://www.photoprism.app/kb/compliance-faq#privacy)
+[View Privacy Policy ›](https://www.photoprism.app/privacy/#section-7){ class="pr-3 block-xs" } [View Compliance FAQ ›](https://www.photoprism.app/kb/compliance-faq/#privacy)
 
 In order to successfully set up your installation and view location details in PhotoPrism, you must [allow incoming requests as well as those to our Geocoding API and Docker](troubleshooting/firewall.md) if you have a firewall installed, and make sure that your Internet connection is working:
 
@@ -91,7 +91,7 @@ In order to successfully set up your installation and view location details in P
 
 ### Why do I see connection errors when requesting API keys at startup?
 
-Retrieving location data with [reverse geocoding](https://www.photoprism.app/privacy#section-7) and loading the [interactive world maps](https://www.photoprism.app/privacy#section-8) we provide requires a [connection to external services](#does-your-software-depend-on-any-external-services). Please make sure that [requests to these API endpoints are allowed](troubleshooting/firewall.md#outgoing-connections) if you have a firewall installed, and that your internet connection is working.
+Retrieving location data with [reverse geocoding](https://www.photoprism.app/privacy/#section-7) and loading the [interactive world maps](https://www.photoprism.app/privacy/#section-8) we provide requires a [connection to external services](#does-your-software-depend-on-any-external-services). Please make sure that [requests to these API endpoints are allowed](troubleshooting/firewall.md#outgoing-connections) if you have a firewall installed, and that your internet connection is working.
 
 [Learn more ›](troubleshooting/firewall.md#outgoing-connections)
 
@@ -99,34 +99,34 @@ Retrieving location data with [reverse geocoding](https://www.photoprism.app/pri
 
 All users have access to a [high-resolution vector map](https://maps.photoprism.app/){:target="_blank"} that we host on [our own infrastructure](https://github.com/photoprism/photoprism/issues/2998){:target="_blank"}, so no commercial API key is required. It is based on [data published by OpenStreetMap](https://planet.openstreetmap.org/){:target="_blank"} (OSM).
 
-In addition, we automatically provide [our members](https://www.photoprism.app/membership) and [business customers](https://www.photoprism.app/teams#compare) with an API key for MapTiler's commercial service, which includes [satellite, outdoor and 3D maps](https://www.photoprism.app/kb/personal#maps-and-places). You can test these on [our public demo](https://try.photoprism.app/library/places){:target="_blank"}.
+In addition, we automatically provide [our members](https://www.photoprism.app/membership/) and [business customers](https://www.photoprism.app/teams/#compare) with an API key for MapTiler's commercial service, which includes [satellite, outdoor and 3D maps](https://www.photoprism.app/kb/personal/#maps-and-places). You can test these on [our public demo](https://try.photoprism.app/library/places){:target="_blank"}.
 
-[Learn more ›](https://www.photoprism.app/kb/personal#maps-and-places)
+[Learn more ›](https://www.photoprism.app/kb/personal/#maps-and-places)
 
 !!! tldr ""
-    Although experienced users could alternatively register test accounts with a commercial provider to gain access to additional map styles instead of [signing up for a membership](https://www.photoprism.app/membership), we believe this would not be fair. Keep in mind that we have a much larger user base than others who might encourage their users to do so, and that providers might then stop offering free test accounts, which is something we don't want to be responsible for.
+    Although experienced users could alternatively register test accounts with a commercial provider to gain access to additional map styles instead of [signing up for a membership](https://www.photoprism.app/membership/), we believe this would not be fair. Keep in mind that we have a much larger user base than others who might encourage their users to do so, and that providers might then stop offering free test accounts, which is something we don't want to be responsible for.
 
 ### Why don't you use the free map tile service provided by OpenStreetMap?
 
 Other [free and open-source software](https://en.wikipedia.org/wiki/Free_and_open-source_software){:target="_blank"} sometimes uses the public maps that OpenStreetMap provides for development and testing. These are [not intended for end-user applications](https://operations.osmfoundation.org/policies/tiles/) like ours.
 
-Using their service also means that [their usage](https://operations.osmfoundation.org/policies/tiles/) and [privacy policies](https://wiki.osmfoundation.org/wiki/Privacy_Policy) apply, as your request data is stored and used to generate [publicly available reports](https://planet.openstreetmap.org/tile_logs/). This differs from our services, which ensure [a high level of privacy](https://www.photoprism.app/privacy) and provide a better user experience with faster loading times.
+Using their service also means that [their usage](https://operations.osmfoundation.org/policies/tiles/) and [privacy policies](https://wiki.osmfoundation.org/wiki/Privacy_Policy) apply, as your request data is stored and used to generate [publicly available reports](https://planet.openstreetmap.org/tile_logs/). This differs from our services, which ensure [a high level of privacy](https://www.photoprism.app/privacy/) and provide a better user experience with faster loading times.
 
 ### How can I activate my membership?
 
 To connect a new instance to your membership account, you will need to log in with the super admin user that is automatically created during setup (see your `compose.yaml` or `docker-compose.yml` file or the app store documentation), and then follow the steps described in our activation guide.
 
-[View Activation Guide ›](https://www.photoprism.app/kb/activation)
+[View Activation Guide ›](https://www.photoprism.app/kb/activation/)
 
 ### What are the advantages of purchasing a commercial license?
 
-A key difference between the [public license](https://docs.photoprism.app/license/agpl/) and a [commercial license agreement](https://www.photoprism.app/teams) is that you get access to additional support and configuration options, as well as the right to customize functionality to your needs without having to publicly disclose your changes. Our [Compliance FAQ](https://www.photoprism.app/kb/compliance-faq) gives answers to the most frequently asked questions about product compliance and scalability.
+A key difference between the [public license](https://docs.photoprism.app/license/agpl/) and a [commercial license agreement](https://www.photoprism.app/teams/) is that you get access to additional support and configuration options, as well as the right to customize functionality to your needs without having to publicly disclose your changes. Our [Compliance FAQ](https://www.photoprism.app/kb/compliance-faq/) gives answers to the most frequently asked questions about product compliance and scalability.
 
-[Compare Team Editions ›](https://www.photoprism.app/teams#compare)
+[Compare Team Editions ›](https://www.photoprism.app/teams/#compare)
 
 ### Will the self-hosted version continue to be supported?
 
-Absolutely! We are on a mission to protect your freedom and privacy. Self-hosting is the easiest way to stay in control and protect [your privacy](https://www.photoprism.app/privacy). It also provides the best experience for advanced users who often rely on a local toolchain to select, edit, and publish their pictures.
+Absolutely! We are on a mission to protect your freedom and privacy. Self-hosting is the easiest way to stay in control and protect [your privacy](https://www.photoprism.app/privacy/). It also provides the best experience for advanced users who often rely on a local toolchain to select, edit, and publish their pictures.
 
 At the same time, we know there's a huge demand and many practical uses for a cloud-hosted app that is easy to set up. We like to give our users the choice and therefore offer a fully managed service as a deployment option. Selected hosting partners ensure that your privacy is protected as much as technically possible, even in the cloud.
 
@@ -180,7 +180,7 @@ Photos and videos can be mounted from FAT-formatted drives, such as an external 
 
 PhotoPrism depends on a number of other open source tools and applications, such as Darktable, RawTherapee, and FFmpeg. While you can install them directly on Windows, it's a lot of work and we don't have the capacity to test the respective Windows versions before each release.
 
-We therefore recommend to [use Docker](https://docs.docker.com/desktop/install/windows-install/), so you can take advantage of [our pre-built and QA-tested Docker image](https://hub.docker.com/r/photoprism/photoprism/tags), which includes all the dependencies you need.
+We therefore recommend to [use Docker](https://docs.docker.com/desktop/setup/install/windows-install/), so you can take advantage of [our pre-built and QA-tested Docker image](https://hub.docker.com/r/photoprism/photoprism/tags), which includes all the dependencies you need.
 It is a well-tested standard tool that also lets you run many other self-hosted apps without having to worry about the details or Windows-specific issues.
 To further simplify the setup for you, we offer [a batch script](https://dl.photoprism.app/docker/windows/install.bat) that you can run in the directory where you want to install PhotoPrism:
         
@@ -189,7 +189,7 @@ curl.exe -o install.bat https://dl.photoprism.app/docker/windows/install.bat
 install.bat
 ```
 
-This will automatically download all required config files and start the server for you. Before you run the script, make sure you have [Docker Desktop installed on your Windows PC](https://docs.docker.com/desktop/install/windows-install/).
+This will automatically download all required config files and start the server for you. Before you run the script, make sure you have [Docker Desktop installed on your Windows PC](https://docs.docker.com/desktop/setup/install/windows-install/).
 
 ### How can I install PhotoPrism without Docker?
 
@@ -241,7 +241,7 @@ For FreeBSD and TrueNAS CORE (formerly FreeNAS) users, an [unofficial port is av
 
 #### Building From Source
 
-You can alternatively build and install PhotoPrism from the publicly available [source code](https://docs.photoprism.app/developer-guide/setup/), which includes all the [Community Edition](https://www.photoprism.app/editions#compare) features and most of the [Essentials](https://www.photoprism.app/editions#compare) features (except [additional user roles](https://docs.photoprism.app/user-guide/users/roles/)):
+You can alternatively build and install PhotoPrism from the publicly available [source code](https://docs.photoprism.app/developer-guide/setup/), which includes all the [Community Edition](https://www.photoprism.app/editions/#compare) features and most of the [Essentials](https://www.photoprism.app/editions/#compare) features (except [additional user roles](https://docs.photoprism.app/user-guide/users/roles/)):
 
 ```bash
 git clone https://github.com/photoprism/photoprism.git
@@ -254,7 +254,7 @@ When choosing this installation method, missing build and system dependencies mu
 Please be aware, though, that we do not have the resources to provide support and special dependencies, such as [TensorFlow libraries](https://dl.photoprism.app/tensorflow/), to private users who choose to build from source. If possible, we recommend using [Docker Compose](docker-compose.md) or the [installation packages](#installation-packages) we provide, as they can save a lot of time creating and troubleshooting custom builds.
 
 !!! example "PhotoPrism Plus"
-    If you are a [Plus, Silver, Gold or Platinum member](https://www.photoprism.app/editions#compare) and would like to build from source, please [let us know](mailto:membership@photoprism.app) so we can give you access to our private extension repository and provide assistance.
+    If you are a [Plus, Silver, Gold or Platinum member](https://www.photoprism.app/editions/#compare) and would like to build from source, please [let us know](mailto:membership@photoprism.app) so we can give you access to our private extension repository and provide assistance.
 
 ### What are the benefits of using Docker?
 
@@ -262,7 +262,7 @@ Please be aware, though, that we do not have the resources to provide support an
 
 **(2) Docker saves time through simplified deployment and testing.** A main advantage of Docker is that application images can be [easily made available](https://hub.docker.com/r/photoprism/photoprism) to users via Internet. It provides a common standard across most operating systems and devices, which saves our team a lot of time that we can then spend [more effectively](https://docs.photoprism.app/developer-guide/code-quality/#effectiveness-efficiency), for example, providing support and developing one of the many features that users are waiting for.
 
-**(3) Dockerfiles are part of the source code repository.** [Human-readable](https://docs.docker.com/engine/reference/builder/) and [versioned Dockerfiles](https://github.com/photoprism/photoprism/tree/develop/docker) that are part of our public source code help avoid "works for me" moments and other unwelcome surprises by enabling us to have the exact [same environment](https://docs.photoprism.app/developer-guide/setup/) everywhere in [development](https://github.com/photoprism/photoprism/tree/develop/docker/develop), [staging, and production](https://github.com/photoprism/photoprism/tree/develop/docker/photoprism).
+**(3) Dockerfiles are part of the source code repository.** [Human-readable](https://docs.docker.com/reference/dockerfile/) and [versioned Dockerfiles](https://github.com/photoprism/photoprism/tree/develop/docker) that are part of our public source code help avoid "works for me" moments and other unwelcome surprises by enabling us to have the exact [same environment](https://docs.photoprism.app/developer-guide/setup/) everywhere in [development](https://github.com/photoprism/photoprism/tree/develop/docker/develop), [staging, and production](https://github.com/photoprism/photoprism/tree/develop/docker/photoprism).
 
 **(4) Running applications in containers is more secure.** Last but not least, virtually all file format parsers have vulnerabilities that just haven't been discovered yet. This is a known risk that can affect you even if your computer is not directly connected to the Internet. Running apps in a container with limited host access is an easy way to improve security without compromising performance and usability.
 
@@ -312,15 +312,15 @@ The default entrypoint script can install [additional distribution packages](adv
 [Learn more ›](https://docs.photoprism.app/getting-started/config-options/#docker-image)
 
 !!! abstract ""
-    If you are experiencing a similar problem with a custom configuration that we did not provide or recommend, please try changing it to see if that helps before [asking our team](https://www.photoprism.app/kb/getting-support) or [community members](https://github.com/photoprism/photoprism/discussions) for support. 🛟
+    If you are experiencing a similar problem with a custom configuration that we did not provide or recommend, please try changing it to see if that helps before [asking our team](https://www.photoprism.app/kb/getting-support/) or [community members](https://github.com/photoprism/photoprism/discussions) for support. 🛟
 
 ### Why does your Docker image use the Plus License instead of the AGPL?
 
-Our [Plus License](https://www.photoprism.app/plus/license) is used for both the extensions [we provide to our members](https://www.photoprism.app/membership/faq#how-can-i-install-photoprism-plus-without-the-docker-image) and the standard [Docker images](https://hub.docker.com/r/photoprism/photoprism/tags) available on Docker Hub. This allows us to bundle the extensions with the compiled application, while the [Community Edition](https://github.com/photoprism/photoprism) remains freely available under the terms of the [GNU Affero General Public License (AGPL)](../license/agpl.md).
+Our [Plus License](https://www.photoprism.app/plus/license/) is used for both the extensions [we provide to our members](https://www.photoprism.app/membership/faq/#how-can-i-install-photoprism-plus-without-the-docker-image) and the standard [Docker images](https://hub.docker.com/r/photoprism/photoprism/tags) available on Docker Hub. This allows us to bundle the extensions with the compiled application, while the [Community Edition](https://github.com/photoprism/photoprism) remains freely available under the terms of the [GNU Affero General Public License (AGPL)](../license/agpl.md).
 
-If you don't plan to use [any additional features](https://www.photoprism.app/editions#compare), you can alternatively use the "ce" tag instead of "latest" to get a slightly smaller Docker image distributed under the AGPL. Note that system dependencies and other third-party components included in this image are still subject to additional terms and conditions.
+If you don't plan to use [any additional features](https://www.photoprism.app/editions/#compare), you can alternatively use the "ce" tag instead of "latest" to get a slightly smaller Docker image distributed under the AGPL. Note that system dependencies and other third-party components included in this image are still subject to additional terms and conditions.
 
-[View Open Source FAQ ›](https://www.photoprism.app/oss/faq){ class="pr-3 block-xs" } [View Plus License ›](https://www.photoprism.app/plus/license)
+[View Open Source FAQ ›](https://www.photoprism.app/oss/faq/){ class="pr-3 block-xs" } [View Plus License ›](https://www.photoprism.app/plus/license/)
 
 ### Should I use SQLite, MariaDB, or MySQL?
 
@@ -365,7 +365,7 @@ Many users reporting poor performance and high CPU load have migrated from SQLit
 
 In some instances, users have manually changed the contents of the database. It is also possible that the database is in an inconsistent state for other reasons, e.g. due to bugs in previous versions that have been fixed in the meantime. However, we are not currently aware of any such cases.
 
-Due to the amount of time required to review each report, we can only offer this to [eligible members](https://www.photoprism.app/membership) and [business customers](https://www.photoprism.app/teams), and not to users who have chosen our free community edition.
+Due to the amount of time required to review each report, we can only offer this to [eligible members](https://www.photoprism.app/membership/) and [business customers](https://www.photoprism.app/teams/), and not to users who have chosen our free community edition.
 
 [Get Performance Tips ›](troubleshooting/performance.md#mariadb){ class="pr-3 block-xs" } [View Database Schema ›](../developer-guide/database/index.md)
 
@@ -546,13 +546,13 @@ including rootless and root modes, user mapping, and SELinux.
 
 ### Do you have plans to add support for LDAP or Active Directory?
 
-PhotoPrism offers support for secure single sign-on via [OpenID Connect (OIDC)](advanced/openid-connect.md). With our [Pro Edition](https://www.photoprism.app/teams#compare), you can also configure an [LDAP or Active Directory](https://www.photoprism.app/pro/kb/ldap) server to authenticate users.
+PhotoPrism offers support for secure single sign-on via [OpenID Connect (OIDC)](advanced/openid-connect.md). With our [Pro Edition](https://www.photoprism.app/teams/#compare), you can also configure an [LDAP or Active Directory](https://www.photoprism.app/pro/kb/ldap/) server to authenticate users.
 
-[Learn more ›](https://www.photoprism.app/teams#compare)
+[Learn more ›](https://www.photoprism.app/teams/#compare)
 
 ### Is it possible to set a default role for new OpenID Connect users?
 
-For security reasons, our [Personal Editions](https://www.photoprism.app/editions#compare) currently default to the [Guest](../user-guide/users/roles.md#guest) role, which admins can then upgrade after checking the eligibility of newly registered[^1] accounts.
+For security reasons, our [Personal Editions](https://www.photoprism.app/editions/#compare) currently default to the [Guest](../user-guide/users/roles.md#guest) role, which admins can then upgrade after checking the eligibility of newly registered[^1] accounts.
 
 [Learn more ›](advanced/openid-connect.md#frequently-asked-questions)
 
@@ -566,12 +566,12 @@ Please note that it is currently not possible to use [other standard](https://op
 
 ### Who can I contact if I have a complaint about your software?
 
-Please read this documentation and [determine the cause of your problem](troubleshooting/index.md) before opening [invalid, duplicate, and/or incomplete bug reports](https://www.photoprism.app/kb/reporting-bugs) or insulting other community members in our forums and chat rooms. Not only is this disruptive for everyone, but it also keeps our team from working on features and improvements that users are waiting for.
+Please read this documentation and [determine the cause of your problem](troubleshooting/index.md) before opening [invalid, duplicate, and/or incomplete bug reports](https://www.photoprism.app/kb/reporting-bugs/) or insulting other community members in our forums and chat rooms. Not only is this disruptive for everyone, but it also keeps our team from working on features and improvements that users are waiting for.
 
-[Learn more ›](https://www.photoprism.app/code-of-conduct)
+[Learn more ›](https://www.photoprism.app/code-of-conduct/)
 
 !!! info "Professional Users"
-    The [feature set](https://www.photoprism.app/editions#compare) and [support options](https://www.photoprism.app/kb/getting-support) of our *Community Edition* are intended for personal use. Enterprise users are welcome to [contact us](https://www.photoprism.app/contact) for a [commercial license](https://www.photoprism.app/teams#compare) and [professional services](https://www.photoprism.app/pro/support).
+    The [feature set](https://www.photoprism.app/editions/#compare) and [support options](https://www.photoprism.app/kb/getting-support/) of our *Community Edition* are intended for personal use. Enterprise users are welcome to [contact us](https://www.photoprism.app/contact/) for a [commercial license](https://www.photoprism.app/teams/#compare) and [professional services](https://www.photoprism.app/pro/support/).
 
 [^1]: `PHOTOPRISM_OIDC_REGISTER` must be set to `"true"` to allow new users to create an account via OpenID Connect.
 [^2]: The `email_verified` flag must be set by the [OIDC Identity Provider](advanced/openid-connect.md#identity-providers) so that the `email` address can be used to send notifications and/or confirm the identity of users. If we do not insist on verification, this could otherwise have a negative impact on trust and security.

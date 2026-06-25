@@ -14,8 +14,6 @@ The API keys required to use these maps are unfortunately not free for us due to
 - Custom UI controls, such as the map-style picker, are plain JavaScript classes under [`frontend/src/component/places/`](https://github.com/photoprism/photoprism/tree/develop/frontend/src/component/places) and are registered via the MapLibre control API.
 - Styling for Place pages resides in [`frontend/src/css/places.css`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/css/places.css); splash styles for the Places route live in [`frontend/src/css/app.css`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/css/app.css) and [`frontend/src/css/views.css`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/css/views.css).
 
-## MapLibre GL JS
-
 ## Mapbox/MapLibre GL JS ##
 
 Because Mapbox GL JS is [no longer open-source](https://wptavern.com/mapbox-gl-js-is-no-longer-open-source),
@@ -43,7 +41,7 @@ Commercial map tiles that we sponsor (for example MapTiler terrain) remain optio
 
 ## Tips for Contributors
 
-- Use [MapLibre GL JS 3.x docs](https://maplibre.org/maplibre-gl-js/docs/API/) as the canonical API reference. Be careful when copying Mapbox-specific snippets since some APIs diverged after the fork.
+- Use [MapLibre GL JS 5.x docs](https://maplibre.org/maplibre-gl-js/docs/API/) as the canonical API reference. Be careful when copying Mapbox-specific snippets since some APIs diverged after the fork.
 - Map styles can be edited or created with [Maputnik](https://maplibre.org/maputnik/). Store large JSON styles outside the bundle and reference them via CDN URLs instead of embedding them into Vue components.
 - The Places page loads maplibre lazily. If you add code that references `maplibregl` globally, ensure it runs after `common/map.js` resolves.
 - Keep performance in mind: clustering large marker sets happens on the worker thread, but tooltip/popover rendering is still on the main thread. Debounce expensive hover handlers and remove DOM nodes when a popup closes.

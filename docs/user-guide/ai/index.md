@@ -58,9 +58,9 @@ If a model type is omitted, PhotoPrism will use the built-in defaults for `label
 | Field                   | Default                                | Notes                                                                              |
 |-------------------------|----------------------------------------|------------------------------------------------------------------------------------|
 | `Type` (required)       | —                                      | `labels`, `caption`, `face`, `nsfw`. Drives routing & scheduling.                  |
-| `Model`                 | `""`                                   | Raw identifier override; precedence: `Service.Model` → `Model` → `Name`.           |
-| `Name`                  | derived from type/version              | Display name; lower-cased by helpers.                                              |
-| `Version`               | `latest` (non-OpenAI)                  | OpenAI payloads omit version.                                                      |
+| `Model`                 | `""`                                   | Model identifier in the format `<name>:<version>`.                                 |
+| `Name`                  | derived from `Model`                   | Model name.                                                                        |
+| `Version`               | `latest` (non-OpenAI)                  | Model version, not used by OpenAI.                                                 |
 | `Engine`                | inferred from service/alias            | Aliases set formats, file scheme, resolution. Explicit `Service` values still win. |
 | `Run`                   | `auto`                                 | See Run modes table below.                                                         |
 | `Default`               | `false`                                | Keep one per type for TensorFlow fallbacks.                                        |

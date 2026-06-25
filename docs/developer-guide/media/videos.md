@@ -12,6 +12,8 @@ ffmpeg -decoders
 
 See our advanced setup guide to learn how to [configure hardware video transcoding](https://docs.photoprism.app/getting-started/advanced/transcoding/).
 
+A small set of container and codec formats that FFmpeg cannot reliably detect or process can be excluded from transcoding and thumbnail extraction with the [`PHOTOPRISM_FFMPEG_EXCLUDE`](../../getting-started/config-options.md#file-conversion) config option (default `magy, vfw`); see [Excluded Formats](../../getting-started/advanced/transcoding.md#excluded-formats) for details.
+
 Please Note:
 
 1. Not all [video and audio formats](https://caniuse.com/?search=video%20format) can be [played with every browser](https://docs.photoprism.app/getting-started/troubleshooting/browsers/). For example, [AAC](https://caniuse.com/aac "Advanced Audio Coding") - the default audio codec for [MPEG-4 AVC / H.264](https://caniuse.com/avc "Advanced Video Coding") - is supported natively in Chrome, Safari, and Edge, while it is only optionally supported by the OS in Firefox and Opera.

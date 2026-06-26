@@ -84,7 +84,7 @@ After you submit your first pull request, you will be asked to accept our Contri
 
 ## Related Repositories ##
 
-- [photoprism/photoprism](https://github.com/photoprism/photoprism) - AI-powered, self-hosted photo & video platform 🌈💎✨
+- [photoprism/photoprism](https://github.com/photoprism/photoprism) - AI-Powered Photos App 🌈💎✨
 - [photoprism/photoprism-contrib](https://github.com/photoprism/photoprism-contrib) - Contributed Resources, Scripts, Tutorials and Examples
 
 ----

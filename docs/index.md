@@ -1,6 +1,6 @@
 # PhotoPrism: Browse Your Life in Pictures
 
-PhotoPrism® is an AI-powered app for privately browsing, organizing, and sharing photos and videos. It uses the latest technologies to tag and find pictures without getting in your way — whether at home, on premises, or in the cloud.
+PhotoPrism® is an AI-powered, privacy-first app for browsing, organizing, and sharing photos and videos. It helps tag, search, and rediscover media without getting in your way, whether self-hosted or in the cloud.
 
 ![Screenshot](img/desktop-search.jpg){ class="shadow" }
 

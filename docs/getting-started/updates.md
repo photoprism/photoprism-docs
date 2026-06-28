@@ -134,11 +134,11 @@ We recommend using a version or subversion tag, such as `:11` or [`:11.8`](https
 ```yaml
 services:
   mariadb:
-    image: mariadb:11.8
+    image: mariadb:12.3
     ...
 ```
 
-You can then manually upgrade to [new major versions](https://mariadb.com/docs/release-notes/community-server) by changing the image tag, e.g. from `mariadb:11` to `mariadb:12`, once [they are stable](https://mariadb.org/about/#maintenance-policy) and we had time to test them. 
+You can then manually upgrade to [new major versions](https://mariadb.com/docs/release-notes/community-server) by changing the image tag, e.g. from `mariadb:12` to `mariadb:13`, once [they are stable](https://mariadb.org/about/#maintenance-policy) and we had time to test them. 
 
 However, this requires periodically checking for [new MariaDB images](https://hub.docker.com/_/mariadb) and adjusting [your `compose.yaml` file](docker-compose.md#database) accordingly, so you don't get stuck with an [outdated](https://mariadb.org/about/#maintenance-policy) version.
 

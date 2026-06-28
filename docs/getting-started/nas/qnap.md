@@ -47,7 +47,7 @@ mkdir -p /share/Container/photoprism/{storage,import,database}
     ```yaml
     services:
       mariadb:
-        image: mariadb:11
+        image: mariadb:12.3
         restart: unless-stopped
         environment:
           MARIADB_AUTO_UPGRADE: "1"

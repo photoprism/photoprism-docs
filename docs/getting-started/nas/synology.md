@@ -49,7 +49,7 @@ Follow the steps below if you prefer Synology's built-in [Container Manager](htt
     ```yaml
     services:
       mariadb:
-        image: mariadb:11
+        image: mariadb:12.3
         restart: unless-stopped
         environment:
           MARIADB_AUTO_UPGRADE: "1"

@@ -51,7 +51,7 @@ When you **add or rename a redirect**, update the redirect entries in **both** c
 **Drafts go in `todo/`, not `docs/`.** `todo/` is the staging area for work-in-progress pages (e.g. `todo/developer-guide/setup-fedora.md`). They are not served. Promote into `docs/` and register in `mkdocs.yml` when ready.
 
 **Theme and template overrides.**
-- `overrides/main.html` — OG/Twitter cards, favicons, analytics (`a.photoprism.app`), announcement banner. Review light and dark themes and the approved-domains list when editing.
+- `overrides/main.html` — OG/Twitter cards, favicons, analytics (`a.photoprism.app`), announcement banner, and the site-wide `<meta name="keywords">` (set in the `extrahead` block with a `page.meta.keywords` front-matter override, mirroring how `description` is derived from `site_description`). Review light and dark themes and the approved-domains list when editing.
 - `overrides/partials/copyright.html` — footer text.
 - `docs/css/custom.css` — scoped overrides for Material; keep selectors tight.
 

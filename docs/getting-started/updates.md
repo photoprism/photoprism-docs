@@ -129,7 +129,7 @@ docker compose exec photoprism photoprism faces reset -f
 
 Our [configuration examples](https://dl.photoprism.app/docker/) are generally based on the [current stable version](https://mariadb.com/docs/release-notes/community-server) to take advantage of performance improvements. This does not mean that [older versions](index.md#databases) are no longer supported and you must upgrade immediately.
 
-We recommend using a version or subversion tag, such as `:12` or [`:12.3`](https://mariadb.com/docs/release-notes/community-server/12.3), instead of `:latest`, to specify the MariaDB service image in your `compose.yaml` file, as shown in this example:
+We recommend using a version or subversion tag, such as `:12` or [`:12.3`](https://mariadb.com/docs/release-notes/community-server/12.3/mariadb-12.3-changes-and-improvements), instead of `:latest`, to specify the MariaDB service image in your `compose.yaml` file, as shown in this example:
 
 ```yaml
 services:

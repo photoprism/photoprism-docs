@@ -8,10 +8,15 @@
   {% if nav_title %}
     {% set description = nav_title %}
   {% endif %}
+  {% set keywords = "self-hosted, privacy-friendly, gdpr, data protection, google photos alternative, photo management, digital asset management, dam, video management, artificial intelligence, face recognition, on-premises, cloud, photo app" %}
+  {% if page and page.meta and page.meta.keywords %}
+    {% set keywords = page.meta.keywords %}
+  {% endif %}
   {% set caption = page.title %}
   {% if page and page.meta and page.meta.title %}
     {% set caption = page.meta.title %}
   {% endif %}
+  <meta name="keywords" content="{{ keywords }}">
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{ title }}">
   <meta property="og:description" content="{{ description }}">

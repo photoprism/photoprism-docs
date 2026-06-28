@@ -1,6 +1,6 @@
 # Face Recognition
 
-**Last Updated:** April 21, 2026
+**Last Updated:** June 28, 2026
 
 To [recognize faces](https://docs.photoprism.app/user-guide/organize/people/), PhotoPrism uses a multi-stage AI pipeline that detects faces, generates embeddings, and clusters similar faces so they can be easily organized by person.
 
@@ -28,6 +28,15 @@ As of the [April 2026 release](../../release-notes.md), PhotoPrism ships a **sin
 - When `FACE_ENGINE=auto` the detector is used whenever the bundled SCRFD model is present; otherwise detection is **disabled** rather than falling back to a legacy engine.
 
 For backwards compatibility, legacy `FACE_ENGINE=pigo` values are silently mapped to ONNX in [`internal/ai/face/engine.go:ParseEngine`](https://github.com/photoprism/photoprism/blob/develop/internal/ai/face/engine.go) so older configuration files keep working after upgrade. New configurations should use `auto`, `onnx`, or `none`.
+
+### Hardware Acceleration
+
+The ONNX detector currently runs on the **CPU execution provider only**. PhotoPrism configures the inference session with thread counts and full graph optimization but does not append a hardware-accelerated execution provider, so detection throughput scales with `FACE_ENGINE_THREADS` and the host CPU rather than a GPU. The prebuilt runtime is the CPU build of [ONNX Runtime](https://onnxruntime.ai/), installed via [`scripts/dist/install-onnx.sh`](https://github.com/photoprism/photoprism/blob/develop/scripts/dist/install-onnx.sh) from our download server.
+
+Optional hardware acceleration is being tracked for future releases as **opt-in** paths; CPU remains the default so existing installs are unaffected:
+
+- **NVIDIA / CUDA (Linux)** — offloads detection to an NVIDIA GPU through the ONNX Runtime CUDA execution provider. It requires the GPU build of ONNX Runtime, the NVIDIA driver, and — for Docker — the NVIDIA Container Toolkit plus a matching CUDA and cuDNN runtime in the image (these NVIDIA libraries are not part of the ONNX Runtime archive). Tracked in [photoprism/photoprism#5703](https://github.com/photoprism/photoprism/issues/5703).
+- **Apple / CoreML (native macOS builds)** — offloads to the Apple Neural Engine and GPU through the CoreML execution provider, which is already compiled into the macOS build of ONNX Runtime. This benefits **natively built** macOS binaries only: the standard Docker image runs inside a Linux VM on macOS with no Apple-accelerator passthrough, so it stays CPU-only regardless. Tracked in [photoprism/photoprism#5704](https://github.com/photoprism/photoprism/issues/5704).
 
 ## Configuration
 

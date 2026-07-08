@@ -33,7 +33,7 @@ What's new?
 - Metadata: [Added Lens Make and Model updates via CLI and API](https://github.com/photoprism/photoprism/issues/5656) by [@keif888](https://github.com/keif888)
 - Metadata: [Added Camera Make and Model updates via CLI and API](https://github.com/photoprism/photoprism/issues/5663) by [@lastzero](https://github.com/lastzero)
 - PWA: [Added bloom, flower, ring, and shutter app icons](https://github.com/photoprism/photoprism/issues/5662) by [@lastzero](https://github.com/lastzero)
-- PWA: [Improved the installed web app manifest with maskable icons, language, and install screenshots](https://github.com/photoprism/photoprism/issues/5691)
+- PWA: [Improved the app manifest with maskable icons, language, and screenshots](https://github.com/photoprism/photoprism/issues/5691)
 - CLI: [Improved role and auth-provider usage descriptions](https://github.com/photoprism/photoprism/issues/5667) by [@lastzero](https://github.com/lastzero)
 - CLI: [Fixed the "auth add" command when the database runs with NO_ZERO_DATE enabled](https://github.com/photoprism/photoprism/issues/5707)
 - API: [Added an `X-Count` header to label and service search responses](https://github.com/photoprism/photoprism/issues/5649) by [@keif888](https://github.com/keif888)

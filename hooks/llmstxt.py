@@ -71,6 +71,22 @@ _LINK_RE = re.compile(r'(?<!!)\[' + _TEXT + r'\]\(' + _TARGET + r'\)' + _ATTR)
 # scheme: (http:, https:, mailto:, tel:, data:, ...)
 _SCHEME_RE = re.compile(r'^[a-zA-Z][a-zA-Z0-9+.\-]*:')
 
+# HTML comment (possibly spanning multiple lines).
+_HTML_COMMENT_RE = re.compile(r'<!--.*?-->', re.DOTALL)
+# Three or more newlines (with optional intervening blank whitespace).
+_BLANK_RUN_RE = re.compile(r'\n[ \t]*\n[ \t]*\n+')
+
+
+def strip_html_comments(markdown):
+    """Remove HTML comments (`<!-- ... -->`) from Markdown.
+
+    These are hidden on the rendered site, so they should not appear in the
+    full-text dump either. Blank-line runs left behind by a removed block are
+    collapsed so the surrounding text stays tidy.
+    """
+    out = _HTML_COMMENT_RE.sub("", markdown)
+    return _BLANK_RUN_RE.sub("\n\n", out)
+
 
 def _abs_url(site_url, url):
     """Join a site_url with a root-relative MkDocs File.url into an absolute URL."""
@@ -288,7 +304,7 @@ def on_post_build(config, **kwargs):
     for item in nav.items:
         if getattr(item, "is_section", False) and item.title in FULL_TEXT_SECTIONS:
             for page in _collect_pages(item.children):
-                md = raw.get(page.file.src_uri, "")
+                md = strip_html_comments(raw.get(page.file.src_uri, ""))
                 resolved = resolve_links(md, page.file.src_uri, url_map, site_url)
                 title = page.title or page.file.src_uri
                 full_pages.append((title, _page_url(page, site_url), resolved))

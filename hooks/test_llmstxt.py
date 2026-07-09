@@ -111,6 +111,37 @@ class ResolveLinksTest(unittest.TestCase):
         )
 
 
+class StripHtmlCommentsTest(unittest.TestCase):
+    def test_inline_comment_removed(self):
+        out = llmstxt.strip_html_comments("before <!-- hidden --> after")
+        self.assertNotIn("hidden", out)
+        self.assertIn("before", out)
+        self.assertIn("after", out)
+
+    def test_multiline_comment_removed(self):
+        md = "Intro para.\n\n<!--\n### Hidden Section\n\nsecret body\n-->\n\nNext para."
+        out = llmstxt.strip_html_comments(md)
+        self.assertNotIn("Hidden Section", out)
+        self.assertNotIn("secret body", out)
+        self.assertIn("Intro para.", out)
+        self.assertIn("Next para.", out)
+
+    def test_commented_out_image_removed(self):
+        out = llmstxt.strip_html_comments("<!--![Screenshot](img/confirm-archive.jpg)-->")
+        self.assertEqual(out.strip(), "")
+
+    def test_blank_line_runs_collapsed(self):
+        md = "a\n\n<!-- x -->\n\nb"
+        out = llmstxt.strip_html_comments(md)
+        self.assertNotIn("\n\n\n", out)
+        self.assertIn("a", out)
+        self.assertIn("b", out)
+
+    def test_no_comment_unchanged(self):
+        md = "Just some **prose** with a [link](https://x.example/)."
+        self.assertEqual(llmstxt.strip_html_comments(md), md)
+
+
 class RenderIndexTest(unittest.TestCase):
     def test_sections_headings_and_nesting(self):
         header = "# H\n\n> desc"

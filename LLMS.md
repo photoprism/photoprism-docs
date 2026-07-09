@@ -76,6 +76,10 @@ Source Markdown uses relative links (`[x](../foo/bar.md)`) and images
   same-page anchors are handled correctly; trailing attr-lists (`{ .shadow }`) are
   stripped from the dump.
 
+HTML comments (`<!-- ... -->`) are removed from `llms-full.txt` as well — they are
+hidden on the rendered site, so commented-out sections should not surface in the
+dump either.
+
 ## Adjusting Generation
 
 All tunable values are constants at the top of `hooks/llmstxt.py`:

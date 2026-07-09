@@ -1,6 +1,6 @@
 # PhotoPrism® Docs Repository Guidelines
 
-**Last Updated:** March 10, 2026
+**Last Updated:** July 9, 2026
 
 ## Purpose
 
@@ -10,8 +10,8 @@ This file serves as a single, up-to-date reference for agents and contributors w
 
 - `README.md` — contributor onboarding, MkDocs overview, and deployment expectations for this repository.
 - `mkdocs.yml` — primary navigation tree (Getting Started, User Guide, Developer Guide, About) and metadata used by MkDocs Material. The `nav:` map is the sole source of truth for site navigation, so every new page must be registered there before it becomes visible in the UI.
-- `mkdocs.deploy.yml` — release-time configuration that enables the privacy plugin, mirrors remote assets, and hosts redirect rules.
-- Main app references: `/home/michael/src/photoprism/photoprism/AGENTS.md` and `/home/michael/src/photoprism/photoprism/CODEMAP.md` remain authoritative for product behavior, CLI semantics, and backend/frontend boundaries.
+- `mkdocs.deploy.yml` — release-time configuration that enables the privacy plugin, mirrors remote assets, hosts the production redirect rules, and runs the `llms.txt` build hook (`hooks/llmstxt.py`; see `LLMS.md`).
+- Main app references: `AGENTS.md` and `CODEMAP.md` in the main `photoprism/photoprism` repo (https://github.com/photoprism/photoprism) remain authoritative for product behavior, CLI semantics, and backend/frontend boundaries.
 - Published docs: https://docs.photoprism.app/ is the live contract; verify edits there before referencing version-specific behavior.
 - Contributor process notes: `docs/developer-guide/documentation.md`, `docs/developer-guide/pull-requests.md`, and `docs/developer-guide/reviewing-pull-requests.md` describe how documentation changes are reviewed alongside code.
 - Make targets defined in `Makefile` (e.g., `make deps`, `make watch`, `make merge`) are the supported way to install dependencies, run MkDocs, resize images, and deploy.
@@ -32,12 +32,12 @@ This file serves as a single, up-to-date reference for agents and contributors w
 - Preview: `make watch` (alias for `make serve`) invokes `./venv/bin/mkdocs serve --livereload --watch docs --watch overrides --watch mkdocs.yml -a 0.0.0.0:8000`. A common loop is `make upgrade && make watch`, then browse http://localhost:8000/ while MkDocs hot-reloads Markdown, templates, and configuration.
 - Build artifacts: `make build` renders the production site using `mkdocs.deploy.yml`, while `make deploy` runs `mkdocs gh-deploy --force --config-file mkdocs.deploy.yml` for manual GitHub Pages pushes. The rendered HTML lands in `site/` locally—never edit files there by hand or commit that directory.
 - Image hygiene: `make img-resize` (ImageMagick `mogrify`) enforces a `1000x860` max width for specific folders. Run it after adding screenshots to `docs/user-guide/img` or `docs/getting-started/**/img`.
-- Containerized workflow: a `Dockerfile` exists (`squidfunk/mkdocs-material:latest`), but it is not part of the supported toolchain because previous revisions broke; stay on the Python virtualenv workflow unless the team explicitly revives the container path.
+- Containerized workflow: the repo's own `Dockerfile` (`FROM squidfunk/mkdocs-material:latest`, nothing else) is **not maintained** — don't `docker build` it, as it lacks the extra plugins (`mkdocs-redirects`, `mkdocs-tooltips`). To build without installing a host toolchain, run the *upstream* `squidfunk/mkdocs-material` image and `pip install -r requirements.txt` at run time; the exact command is in `README.md` / `CLAUDE.md` (§ Building in a Container).
 
 ## Repository Layout & Ownership
 
-- `mkdocs.yml` defines navigation, metadata (`site_name`, `extra.social`, edit links), plugins (`redirects`), theme options, and Markdown extensions (pymdownx, tooltips, tabs, mermaid). Always update nav entries and redirect maps in this file when adding or moving pages.
-- `mkdocs.deploy.yml` inherits from `mkdocs.yml` but appends `search`, `privacy`, and a release-specific redirect map. When you add redirects, mirror them in both configs so local previews and production builds behave the same.
+- `mkdocs.yml` defines navigation, metadata (`site_name`, `extra.social`, edit links), plugins (`search`, `redirects`), theme options, and Markdown extensions (pymdownx, tooltips, tabs, mermaid). Always update nav entries and redirect maps in this file when adding or moving pages.
+- `mkdocs.deploy.yml` inherits from `mkdocs.yml`, re-declares the plugins with the production redirect map, and adds the `privacy` plugin plus a `hooks:` entry (`hooks/llmstxt.py`, which generates `/llms.txt` + `/llms-full.txt` — see `LLMS.md`). When you add redirects, mirror them in both configs so local previews and production builds behave the same.
 - `overrides/` contains the only custom templates. `overrides/main.html` augments meta tags, favicons, analytics, and announcement banners; update it when branding or tracking domains change. `overrides/partials/copyright.html` injects footer copy.
 - `docs/css/custom.css` holds layout tweaks for the Material theme; limit overrides to what cannot be configured in `mkdocs.yml` and keep selectors scoped to avoid regressions.
 - `LICENSE` (root) covers the repository; `docs/license/docs.md` spells out the documentation license (CC BY-NC-SA 4.0). Keep legal text in sync with the main application repository when terms change.
@@ -96,7 +96,7 @@ Additional details MAY be included as needed, such as related issues, references
 
 - Working branch is `develop`. Merge `develop` into `deploy` (or run `make merge`) to trigger the GitHub Actions pipeline that rebuilds and uploads docs to docs.photoprism.app. Always resolve conflicts locally so deployment commits stay clean.
 - `mkdocs deploy` is reserved for emergency GitHub Pages pushes; it writes to the `gh-pages` branch. Coordinate with maintainers before using it so automation does not overwrite manual changes.
-- The privacy plugin (`mkdocs-material-privacy` via `mkdocs.deploy.yml`) mirrors external assets (badges, images) into the site. Keep `assets_exclude` up to date when new Photoprism-owned domains are introduced.
+- The built-in `privacy` plugin (part of Material for MkDocs, enabled in `mkdocs.deploy.yml`) mirrors external assets (badges, images) into the site. Keep `assets_exclude` up to date when new PhotoPrism-owned domains are introduced.
 - Verify redirects, social previews, and structured data locally with `mkdocs build` before merging. Production uses the same config, so a clean local build is the release gate.
 
 ## Security & Access

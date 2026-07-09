@@ -68,6 +68,17 @@ Now open [http://localhost:8000/](http://localhost:8000/) in a browser to view t
 
 **The content will be updated automatically when changes are detected.**
 
+### Building in a Container ###
+
+To produce a one-off build without installing a Python toolchain on your host, run the upstream MkDocs Material image and add this repo's extra plugins at run time (the image's entrypoint is `mkdocs`, so override it to run `pip` first):
+
+```sh
+docker run --rm --entrypoint sh -v "$PWD":/docs -w /docs squidfunk/mkdocs-material:latest \
+  -c "pip install -r requirements.txt && mkdocs build -f mkdocs.deploy.yml"
+```
+
+The rendered site is written to `site/`. Note that the container writes it as `root`; both `site/` and `venv/` are git-ignored build artifacts.
+
 ### Deployment ###
 
 When you merge the `develop` branch to `deploy`, the live documentation is automatically created, uploaded and will be visible shortly.

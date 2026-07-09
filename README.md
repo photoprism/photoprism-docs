@@ -55,16 +55,13 @@ make fix
 
 ### Using MkDocs ###
 
-First make sure you have Docker and common development tools like `make` installed on your computer.
-
-Then use this command in the main project directory to download and run the latest version of
-[mkdocs-material](https://github.com/squidfunk/mkdocs-material):
+Once the dependencies are installed (see [Build Setup](#build-setup) above), preview the documentation locally with live reload:
 
 ```sh
 make watch
 ```
 
-Now open [http://localhost:8000/](http://localhost:8000/) in a browser to view the rendered documentation.
+This runs [MkDocs Material](https://github.com/squidfunk/mkdocs-material) from the local `venv/`. Now open [http://localhost:8000/](http://localhost:8000/) in a browser to view the rendered documentation.
 
 **The content will be updated automatically when changes are detected.**
 
@@ -77,7 +74,7 @@ docker run --rm --entrypoint sh -v "$PWD":/docs -w /docs squidfunk/mkdocs-materi
   -c "pip install -r requirements.txt && mkdocs build -f mkdocs.deploy.yml"
 ```
 
-The rendered site is written to `site/`. Note that the container writes it as `root`; both `site/` and `venv/` are git-ignored build artifacts.
+The rendered site is written to `site/` (the container writes it as `root`); `site/` and any `hooks/__pycache__` it creates are git-ignored build artifacts.
 
 ### Deployment ###
 
@@ -109,4 +106,3 @@ For AI agents and LLM crawlers, the build publishes an [`llms.txt`](https://docs
 [docs]: https://docs.photoprism.app/
 [chat]: https://link.photoprism.app/chat
 [ask]: https://link.photoprism.app/discussions
-[twitter]: https://link.photoprism.app/twitter

@@ -27,10 +27,11 @@ This file serves as a single, up-to-date reference for agents and contributors w
 
 ## Build & Preview Workflow
 
+- Build tool: the site is built with **ProperDocs**, a maintained drop-in fork of MkDocs 1.x (MkDocs core is EOL; its planned 2.0 removes the plugin system). It reads `mkdocs.yml` unchanged, keeps every plugin and the `llms.txt` hook working, and silences the MkDocs-2.0/ProperDocs build warnings. `make` and CI invoke `properdocs`; `mkdocs` stays installed only as a dependency of the Material theme.
 - Local Python environment: run `make deps` on Debian/Ubuntu (installs system packages) or `make install` elsewhere. Both targets create `venv/`, grab MkDocs Material (the former Insiders build now ships via PyPI, so no `GH_TOKEN` is required), and pull all pinned requirements from `requirements.txt`.
 - Refresh dependencies with `make upgrade` whenever you need the latest MkDocs Material release; it rebuilds the virtualenv before you start working.
-- Preview: `make watch` (alias for `make serve`) invokes `./venv/bin/mkdocs serve --livereload --watch docs --watch overrides --watch mkdocs.yml -a 0.0.0.0:8000`. A common loop is `make upgrade && make watch`, then browse http://localhost:8000/ while MkDocs hot-reloads Markdown, templates, and configuration.
-- Build artifacts: `make build` renders the production site using `mkdocs.deploy.yml`, while `make deploy` runs `mkdocs gh-deploy --force --config-file mkdocs.deploy.yml` for manual GitHub Pages pushes. The rendered HTML lands in `site/` locally—never edit files there by hand or commit that directory.
+- Preview: `make watch` (alias for `make serve`) invokes `./venv/bin/properdocs serve --watch docs --watch overrides --watch mkdocs.yml -a 0.0.0.0:8000` (ProperDocs enables livereload by default). A common loop is `make upgrade && make watch`, then browse http://localhost:8000/ while it hot-reloads Markdown, templates, and configuration.
+- Build artifacts: `make build` renders the production site using `mkdocs.deploy.yml`, while `make deploy` runs `properdocs gh-deploy --force --config-file mkdocs.deploy.yml` for manual GitHub Pages pushes. The rendered HTML lands in `site/` locally—never edit files there by hand or commit that directory.
 - Image hygiene: `make img-resize` (ImageMagick `mogrify`) enforces a `1000x860` max width for specific folders. Run it after adding screenshots to `docs/user-guide/img` or `docs/getting-started/**/img`.
 - Containerized workflow: the repo's own `Dockerfile` (`FROM squidfunk/mkdocs-material:latest`, nothing else) is **not maintained** — don't `docker build` it, as it lacks the extra plugins (`mkdocs-redirects`, `mkdocs-tooltips`). To build without installing a host toolchain, run the *upstream* `squidfunk/mkdocs-material` image and `pip install -r requirements.txt` at run time; the exact command is in `README.md` / `CLAUDE.md` (§ Building in a Container).
 
@@ -48,7 +49,7 @@ This file serves as a single, up-to-date reference for agents and contributors w
 ### Content Standards
 
 - Headings, link titles, and navigation labels must use **Chicago-style title case**, matching the main repository’s style requirement. When copying headings from other sources, normalize them before committing.
-- Prefer Markdown over raw HTML; use MkDocs Material components (admonitions, tabs, tooltips) configured in `mkdocs.yml`. When HTML is unavoidable, keep it minimal and validate that `mkdocs serve` renders it correctly in dark/light themes.
+- Prefer Markdown over raw HTML; use MkDocs Material components (admonitions, tabs, tooltips) configured in `mkdocs.yml`. When HTML is unavoidable, keep it minimal and validate that `make watch` renders it correctly in dark/light themes.
 - Update `mkdocs.yml` navigation whenever you add, rename, or move a page. If a URL changes, add a redirect entry to both `mkdocs.yml` and `mkdocs.deploy.yml` so legacy links stay valid.
 - Store images next to the Markdown that references them (for example, `docs/user-guide/organize/img/`). Optimize screenshots before committing and include descriptive alt text in Markdown.
 - Reuse canonical CLI flags, file paths, and configuration snippets from the main PhotoPrism repository. When documenting new application behavior, confirm the implementation in `photoprism/photoprism` before publishing.
@@ -97,7 +98,7 @@ Additional details MAY be included as needed, such as related issues, references
 - Working branch is `develop`. Merge `develop` into `deploy` (or run `make merge`) to trigger the GitHub Actions pipeline that rebuilds and uploads docs to docs.photoprism.app. Always resolve conflicts locally so deployment commits stay clean.
 - `mkdocs deploy` is reserved for emergency GitHub Pages pushes; it writes to the `gh-pages` branch. Coordinate with maintainers before using it so automation does not overwrite manual changes.
 - The built-in `privacy` plugin (part of Material for MkDocs, enabled in `mkdocs.deploy.yml`) mirrors external assets (badges, images) into the site. Keep `assets_exclude` up to date when new PhotoPrism-owned domains are introduced.
-- Verify redirects, social previews, and structured data locally with `mkdocs build` before merging. Production uses the same config, so a clean local build is the release gate.
+- Verify redirects, social previews, and structured data locally with `make build` before merging. Production uses the same config, so a clean local build is the release gate.
 
 ## Security & Access
 

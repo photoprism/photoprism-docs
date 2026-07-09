@@ -22,4 +22,4 @@ jobs:
           path: .cache
       - run: pip install --user --no-warn-script-location --disable-pip-version-check -U mkdocs-material
       - run: pip install --user --no-warn-script-location --disable-pip-version-check -U -r requirements.txt
-      - run: mkdocs gh-deploy --force --config-file mkdocs.deploy.yml
+      - run: properdocs gh-deploy --force --config-file mkdocs.deploy.yml

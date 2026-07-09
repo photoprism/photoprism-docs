@@ -48,7 +48,7 @@ output stays clean on our heavily-extended Material setup.
 
 It is wired into `mkdocs.deploy.yml` only — not the base `mkdocs.yml` — because it
 is a production-output concern (like the `privacy` plugin) and there is no need to
-regenerate the files on every `mkdocs serve` livereload. `make build` and the CI
+regenerate the files on every `properdocs serve` (`make watch`) livereload. `make build` and the CI
 deploy both use `mkdocs.deploy.yml`, so both produce the files.
 
 The hook uses three standard MkDocs events:

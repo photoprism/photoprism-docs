@@ -14,25 +14,27 @@ If anything below conflicts with those files or with the `Makefile`, those win.
 
 ## What This Repo Is
 
-Public documentation for PhotoPrism, published at https://docs.photoprism.app/. It is a **MkDocs Material** site — Markdown sources under `docs/`, rendered to static HTML via `mkdocs build`. There is no application code; changes here are content, navigation, theme overrides, and build config.
+Public documentation for PhotoPrism, published at https://docs.photoprism.app/. It is a **MkDocs Material**-themed site — Markdown sources under `docs/`, rendered to static HTML. There is no application code; changes here are content, navigation, theme overrides, and build config.
+
+**Build tool: ProperDocs.** The site is built with **ProperDocs**, a maintained drop-in fork of MkDocs 1.x (MkDocs core is EOL and its planned 2.0 drops the plugin system). ProperDocs reads our existing `mkdocs.yml`/`mkdocs.deploy.yml` unchanged, keeps every plugin and the `llms.txt` hook working, and silences the build-time MkDocs-2.0/ProperDocs warnings. The `make` targets and CI call `properdocs` (`properdocs build` / `properdocs gh-deploy`); `mkdocs` remains installed only as a library dependency of the Material theme.
 
 The German translation lives in a separate repo, `photoprism/photoprism-docs-de`.
 
 ## Common Commands (via `Makefile`)
 
-| Command        | What it does                                                                                 |
-|----------------|----------------------------------------------------------------------------------------------|
-| `make deps`    | Debian/Ubuntu first-time setup: `apt` Python packages, then `make upgrade`                   |
-| `make install` | Create `venv/` and install MkDocs Material + `requirements.txt` (no `apt`)                   |
-| `make upgrade` | Nuke `venv/` and reinstall; use when dependencies drift or you want the latest Material      |
-| `make watch`   | Alias for `make serve` — MkDocs livereload on `0.0.0.0:8000`, watches `docs/`, `overrides/`, `mkdocs.yml` |
-| `make build`   | Production render using `mkdocs.deploy.yml` → `site/` (do not commit `site/`)                |
-| `make deploy`  | `mkdocs gh-deploy --force --config-file mkdocs.deploy.yml` — emergency manual publish only   |
-| `make merge`   | `develop` → `deploy` merge that triggers the GitHub Actions publish pipeline                 |
+| Command           | What it does                                                                                                                                                      |
+|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `make deps`       | Debian/Ubuntu first-time setup: `apt` Python packages, then `make upgrade`                                                                                        |
+| `make install`    | Create `venv/` and install MkDocs Material + `requirements.txt` (no `apt`)                                                                                        |
+| `make upgrade`    | Nuke `venv/` and reinstall; use when dependencies drift or you want the latest Material                                                                           |
+| `make watch`      | Alias for `make serve` — livereload on `0.0.0.0:8000`, watches `docs/`, `overrides/`, `mkdocs.yml`                                                               |
+| `make build`      | Production render using `mkdocs.deploy.yml` → `site/` (do not commit `site/`)                                                                                     |
+| `make deploy`     | `properdocs gh-deploy --force --config-file mkdocs.deploy.yml` — emergency manual publish only                                                                    |
+| `make merge`      | `develop` → `deploy` merge that triggers the GitHub Actions publish pipeline                                                                                      |
 | `make img-resize` | `mogrify` to cap screenshots at `1000x860`; run after adding images to `docs/user-guide/img`, `docs/user-guide/**/img`, or `docs/getting-started/nas/img/asustor` |
-| `make fix`     | `chown`/`chmod` the tree when MkDocs can't read or write files                               |
+| `make fix`        | `chown`/`chmod` the tree when MkDocs can't read or write files                                                                                                    |
 
-There are no repo-wide lint or test make targets — reviewing `make watch` output for MkDocs warnings (missing files, broken links in nav, unresolved references) is the closest equivalent. (The one exception is the `llms.txt` build hook, which has its own unit tests — see below.)
+There are no repo-wide lint or test make targets — reviewing `make watch` output for build warnings (missing files, broken links in nav, unresolved references) is the closest equivalent. (The one exception is the `llms.txt` build hook, which has its own unit tests — see below.)
 
 MkDocs Material Insiders is now public on PyPI, so **no `GH_TOKEN` is required** in `.env`.
 
@@ -42,7 +44,7 @@ MkDocs Material Insiders is now public on PyPI, so **no `GH_TOKEN` is required**
 
   ```sh
   docker run --rm --entrypoint sh -v "$PWD":/docs -w /docs squidfunk/mkdocs-material:latest \
-    -c "pip install -r requirements.txt && mkdocs build -f mkdocs.deploy.yml"
+    -c "pip install -r requirements.txt && properdocs build -f mkdocs.deploy.yml"
   ```
 
   This is a complete, throwaway build env. The container writes `site/` (and `hooks/__pycache__`) as **root** — both are git-ignored; remove with another `docker run … rm -rf site hooks/__pycache__` if they get in the way. Note: the repo's own `Dockerfile` is `FROM squidfunk/mkdocs-material` and nothing else — **not maintained**; don't `docker build` it (it lacks `mkdocs-redirects` / `mkdocs-tooltips`). The *upstream image* is current and maintained — a different thing.
@@ -73,7 +75,7 @@ When you **add or rename a redirect**, update the redirect entries in **both** c
 
 ## Deployment Flow
 
-Work happens on `develop`. **Merging `develop` → `deploy` (e.g. `make merge`) triggers the GitHub Actions pipeline** (`.github/workflows/ci.yml`) which installs `mkdocs-material` + `requirements.txt` and runs `mkdocs gh-deploy --force --config-file mkdocs.deploy.yml`, publishing to `gh-pages`. The `web2` server then pulls `gh-pages` every 5 minutes and serves `docs.photoprism.app`. So: **`deploy` branch updates are production releases**, not a staging environment.
+Work happens on `develop`. **Merging `develop` → `deploy` (e.g. `make merge`) triggers the GitHub Actions pipeline** (`.github/workflows/ci.yml`) which installs `mkdocs-material` + `requirements.txt` and runs `properdocs gh-deploy --force --config-file mkdocs.deploy.yml`, publishing to `gh-pages`. The `web2` server then pulls `gh-pages` every 5 minutes and serves `docs.photoprism.app`. So: **`deploy` branch updates are production releases**, not a staging environment.
 
 **Standard release flow — always perform all steps so `develop` and `deploy` contain the same commits and the local checkout ends on `develop`:**
 

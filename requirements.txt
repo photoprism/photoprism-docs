@@ -1,6 +1,10 @@
 # Requirements for core
 jinja2>=3.0
 markdown>=3.2
+# We build with ProperDocs, a maintained drop-in fork of MkDocs 1.x (MkDocs core
+# is EOL). `mkdocs` stays below as a library dependency of mkdocs-material and is
+# capped <2 to avoid the incompatible MkDocs 2.0. See LLMS.md / CLAUDE.md.
+properdocs>=1.6.7
 mkdocs>=1.5,<2.0
 mkdocs-material-extensions>=1.1
 pygments>=2.16

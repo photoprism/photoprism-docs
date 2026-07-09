@@ -38,11 +38,11 @@ install-venv:
 	./venv/bin/pip3 install --disable-pip-version-check mkdocs-material
 	./venv/bin/pip3 install --disable-pip-version-check -r requirements.txt
 serve:
-	./venv/bin/mkdocs serve --livereload --watch docs --watch overrides --watch mkdocs.yml -a 0.0.0.0:8000
+	./venv/bin/properdocs serve --watch docs --watch overrides --watch mkdocs.yml -a 0.0.0.0:8000
 build:
-	./venv/bin/mkdocs build --config-file mkdocs.deploy.yml
+	./venv/bin/properdocs build --config-file mkdocs.deploy.yml
 deploy:
-	./venv/bin/mkdocs gh-deploy --force --config-file mkdocs.deploy.yml
+	./venv/bin/properdocs gh-deploy --force --config-file mkdocs.deploy.yml
 pull:
 	git checkout develop
 	git pull origin develop

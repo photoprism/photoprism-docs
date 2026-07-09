@@ -29,3 +29,9 @@ plugins:
         'developer-guide/apps/index.md': 'developer-guide/native-apps/index.md'
         'photoprism-pi.md': 'getting-started/raspberry-pi/microsd-image.md'
         'developer-guide/machine-learning/vision.md': 'developer-guide/vision/service/index.md'
+
+# Generate /llms.txt and /llms-full.txt for AI agents and LLM crawlers.
+# Production-only (like the privacy plugin), so it does not slow `mkdocs serve`.
+# See LLMS.md for details.
+hooks:
+  - hooks/llmstxt.py

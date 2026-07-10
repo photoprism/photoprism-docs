@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 260709-c7a292e5a</span>
+<span class="build">Build 260710-c9362a672</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions/#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
@@ -19,6 +19,7 @@ What's new?
 - UX: [Improved face-marker overlay performance and interaction](https://github.com/photoprism/photoprism/issues/5672)
 - UX: [Improved notification messages to appear in the current interface language](https://github.com/photoprism/photoprism/issues/5682)
 - UX: [Improved the settings interface and added a dedicated accessibility section](https://github.com/photoprism/photoprism/issues/5429)
+- Download: [Added a Web UI for configuring album download settings](https://github.com/photoprism/photoprism/issues/848)
 - Auth: [Added a configurable OpenID Connect sign-in prompt to force re-authentication or account selection](https://github.com/photoprism/photoprism/issues/5698)
 - Auth: [Added OpenID Connect RP-initiated logout to end the upstream provider session on sign-out](https://github.com/photoprism/photoprism/issues/5684)
 - Auth: [Fixed Cognito-issued ID token validation by sending a nonce during OIDC sign-in](https://github.com/photoprism/photoprism/issues/5695)
@@ -39,13 +40,14 @@ What's new?
 - CLI: [Fixed the "auth add" command when the database runs with NO_ZERO_DATE enabled](https://github.com/photoprism/photoprism/issues/5707)
 - API: [Added an `X-Count` header to label and service search responses](https://github.com/photoprism/photoprism/issues/5649) by [@keif888](https://github.com/keif888)
 - Setup: [Added support for referencing an external database-password secret in the Helm chart](https://github.com/photoprism/photoprism/issues/5661)
+- Docker: [Reduced image size by omitting unnecessary per-user skeleton files](https://github.com/photoprism/photoprism/issues/5154) by [@alexisLefebvre](https://github.com/alexisLefebvre)
 - Database: [Improved error logging to capture connection issues](https://github.com/photoprism/photoprism/issues/5637)
 - Database: [Fixed byte truncation to be rune-safe for all text columns](https://github.com/photoprism/photoprism/issues/5638)
 - Database: [Upgraded config examples from MariaDB 11.8 to 12.3 (LTS)](https://github.com/photoprism/photoprism/issues/5705)
 - Security: [Added a feature flag to disable app passwords](https://github.com/photoprism/photoprism/issues/5647) by [@lastzero](https://github.com/lastzero)
 - Security: [Upgraded `libheif` from v1.22.2 to v1.23.1 (CVE-2026-50142)](https://github.com/photoprism/photoprism/issues/5653)
 - Security: [Upgraded Vitest to v4 and Vite to v8 to remove esbuild dependency](https://github.com/photoprism/photoprism/issues/5659)
-- Security: [Upgraded Go from v1.26.3 to v1.26.4](https://github.com/golang/go/issues?q=milestone%3AGo1.26.4) and [ONNX Runtime to v1.26.0](https://github.com/photoprism/photoprism/commit/1fad248031eca0ae80f1bb7b122535e79852558b)
+- Security: [Upgraded Go from v1.26.3 to v1.26.5](https://github.com/golang/go/issues?q=milestone%3AGo1.26.5) and [ONNX Runtime to v1.26.0](https://github.com/photoprism/photoprism/commit/1fad248031eca0ae80f1bb7b122535e79852558b)
 - Translations: [Updated Hebrew](https://docs.photoprism.app/developer-guide/translations-weblate/) by [@avma](https://github.com/avma)
 
 ### June 1, 2026

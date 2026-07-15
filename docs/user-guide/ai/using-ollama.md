@@ -193,7 +193,7 @@ To fix this, either disable reasoning for that model with `Service.Think: "false
 ```yaml
 Models:
 - Type: caption
-  Model: qwen3-vl:235b-instruct
+  Model: qwen3-vl:latest
   Engine: ollama
   Service:
     Think: "false"

@@ -24,6 +24,7 @@ Models:
     Engine: ollama
     Service:
       Uri: ${OLLAMA_BASE_URL}/api/generate
+      Think: "false"
 ```
 
 Once the dedicated NSFW model entry is configured, it runs whenever `PHOTOPRISM_DETECT_NSFW` is `true` and the indexer or `photoprism vision run --models nsfw` invokes it.

@@ -114,12 +114,14 @@ Now, create a new `vision.yml` file in your config path (default: `storage/confi
       Run: auto
       Service:
         Uri: http://ollama:11434/api/generate
+        Think: "false"
     - Type: caption
       Model: gemma3:latest
       Engine: ollama
       Run: auto
       Service:
         Uri: http://ollama:11434/api/generate
+        Think: "false"
     ```
 
 [Learn more ›](ollama-models.md#gemma-3-labels)

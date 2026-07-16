@@ -42,11 +42,13 @@ Models:
     Temperature: 0.05
   Service:
     Uri: http://ollama:11434/api/generate
+    Think: "false"
 - Type: labels
   Model: qwen3-vl:latest
   Engine: ollama
   Service:
     Uri: http://ollama:11434/api/generate
+    Think: "false"
 Thresholds:
   Confidence: 10
   Topicality: 0
@@ -133,18 +135,18 @@ Adjusts model parameters, such as temperature and top-p, as well as other constr
 
 Configures the endpoint URL, method, format, and authentication for [Ollama](using-ollama.md), [OpenAI](using-openai.md), and other engines that perform remote HTTP requests:
 
-| Field                              | Default        | Notes                                                                                          |
-|------------------------------------|----------------|------------------------------------------------------------------------------------------------|
-| `Uri`                              | engine default | Service endpoint URL. Empty for local models.                                                  |
-| `Method`                           | `POST`         | Override only if provider needs it.                                                            |
-| `Key`                              | `""`           | Bearer token; supports env expansion (OpenAI: `OPENAI_API_KEY`, Ollama: `OLLAMA_API_KEY`[^1]). |
-| `Username` / `Password`            | `""`           | Injected as basic auth when `Uri` lacks userinfo.                                              |
-| `Model`                            | `""`           | Endpoint-specific override; wins over model/name.                                              |
-| `Org` / `Project`                  | `""`           | Organization / Project ID when using OpenAI.                                                   |
-| `Think`                            | `""`           | Optional Ollama reasoning hint. Quoted `"true"` / `"false"` values are sent as JSON booleans.  |
-| `RequestFormat` / `ResponseFormat` | engine default | Explicit values win over engine defaults.                                                      |
-| `FileScheme`                       | engine default | Controls image transport e.g. `data` or `base64`.                                              |
-| `Disabled`                         | `false`        | Disables the endpoint without removing the model.                                              |
+| Field                              | Default        | Notes                                                                                                                                                                                        |
+|------------------------------------|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `Uri`                              | engine default | Service endpoint URL. Empty for local models.                                                                                                                                                |
+| `Method`                           | `POST`         | Override only if provider needs it.                                                                                                                                                          |
+| `Key`                              | `""`           | Bearer token; supports env expansion (OpenAI: `OPENAI_API_KEY`, Ollama: `OLLAMA_API_KEY`[^1]).                                                                                               |
+| `Username` / `Password`            | `""`           | Injected as basic auth when `Uri` lacks userinfo.                                                                                                                                            |
+| `Model`                            | `""`           | Endpoint-specific override; wins over model/name.                                                                                                                                            |
+| `Org` / `Project`                  | `""`           | Organization / Project ID when using OpenAI.                                                                                                                                                 |
+| `Think`                            | `""`           | Ollama reasoning hint; quoted `"true"` / `"false"` are sent as JSON booleans. Set `"false"` for thinking models (Qwen3.5, `qwen3-vl:*`, …) so reasoning is not emitted into captions/labels. |
+| `RequestFormat` / `ResponseFormat` | engine default | Explicit values win over engine defaults.                                                                                                                                                    |
+| `FileScheme`                       | engine default | Controls image transport e.g. `data` or `base64`.                                                                                                                                            |
+| `Disabled`                         | `false`        | Disables the endpoint without removing the model.                                                                                                                                            |
 
 !!! tldr ""
     **Authentication:** All credentials and identifiers support `${ENV_VAR}` expansion. `Service.Key` sets `Authorization: Bearer <token>`; `Username`/`Password` injects HTTP basic authentication into the service URI when it is not already present. When `Service.Key` is empty, PhotoPrism defaults to `OPENAI_API_KEY` (OpenAI engine) or `OLLAMA_API_KEY`[^1] (Ollama engine), also honoring their `_FILE` counterparts.

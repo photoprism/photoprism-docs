@@ -31,6 +31,10 @@ docker compose exec photoprism photoprism vision ls
 
 This command outputs the settings for all supported and configured model types. Compare the results with your `vision.yml` file to confirm that your configuration has been loaded correctly and to identify any parsing errors or misconfigurations.
 
+### Reasoning Leaking Into Captions ###
+
+If captions contain the model's internal reasoning instead of a description — for example, starting with *"The user wants a concise description of the provided image…"* — the model is a **thinking (reasoning) model** (such as the Qwen3.5 family, `qwen3-vl:*`, or `frob/qwen3.5-instruct:4b`), and recent Ollama versions emit that reasoning by default. Set `Service.Think: "false"` on the model in your `vision.yml` to disable it (see [Ollama Models](../../user-guide/ai/ollama-models.md)).
+
 ### GPU Performance Issues ###
 
 When using Ollama with GPU acceleration, you may experience performance degradation over time due to VRAM management issues. This typically manifests as processing times gradually increasing and the Ollama service appearing to "crash" while still responding to requests, but without GPU acceleration.

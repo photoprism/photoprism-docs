@@ -51,7 +51,7 @@ Since the service URI is resolved from `OLLAMA_BASE_URL`, you can omit the `Serv
 
 Make sure the models you configure are [available on Ollama Cloud](https://ollama.com/search?c=cloud). You can browse the [list of supported cloud models](https://ollama.com/search?c=cloud) to see which ones can be used. You do not need to pull them manually, cloud models are served remotely.
 
-The optional `Service.Think: "false"` setting disables reasoning output for models that support it. This is often useful for captions and labels because it reduces latency and avoids spending output tokens on internal reasoning instead of the final result.
+Setting `Service.Think: "false"` disables the model's reasoning output and is **recommended for captions and labels**. Many current models are thinking (reasoning) models, and recent Ollama versions emit that reasoning **by default** — without this setting it leaks into the result (captions begin with text like *"The user wants a concise description of the provided image…"* and label JSON fails to parse). Disabling it also reduces latency by not spending output tokens on internal reasoning. It is harmless for non-thinking models, so you can set it unconditionally.
 
 Always set an explicit `Model:` for cloud use: the built-in default can lag behind Ollama Cloud's current catalog (models are occasionally retired), so pinning a currently-available model such as `minimax-m3:cloud` avoids ambiguity and keeps label and caption generation working.
 

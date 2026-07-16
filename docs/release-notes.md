@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 260710-c9362a672</span>
+<span class="build">Build 260716-3f039866f</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions/#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
@@ -15,11 +15,15 @@ What's new?
 - RAW: [Added a fallback to embedded JPEG previews for unsupported files](https://github.com/photoprism/photoprism/issues/5673)
 - JPEG XL: [Improved decoding to use libvips natively instead of the external "djxl" tool](https://github.com/photoprism/photoprism/issues/5693)
 - Vision: [Fixed a concurrency issue in image classification](https://github.com/photoprism/photoprism/issues/5694)
+- AI: [Improved Ollama caption and label quality by disabling reasoning output by default](https://github.com/photoprism/photoprism/issues/5728)
+- AI: [Updated the default Ollama Cloud model and refreshed the Ollama vision defaults](https://github.com/photoprism/photoprism/issues/5726)
+- AI: [Added a `service_tier` option for OpenAI vision requests](https://github.com/photoprism/photoprism/issues/5725)
 - UX: [Added a setting to prevent action menus from opening on hover](https://github.com/photoprism/photoprism/issues/5650) by [@lastzero](https://github.com/lastzero)
 - UX: [Improved face-marker overlay performance and interaction](https://github.com/photoprism/photoprism/issues/5672)
 - UX: [Improved notification messages to appear in the current interface language](https://github.com/photoprism/photoprism/issues/5682)
 - UX: [Improved the settings interface and added a dedicated accessibility section](https://github.com/photoprism/photoprism/issues/5429)
 - Download: [Added a Web UI for configuring album download settings](https://github.com/photoprism/photoprism/issues/848)
+- Sharing: [Fixed an Entity Not Found error when downloading a single image from a shared folder, moment, calendar, or region](https://github.com/photoprism/photoprism/issues/5727)
 - Auth: [Added a configurable OpenID Connect sign-in prompt to force re-authentication or account selection](https://github.com/photoprism/photoprism/issues/5698)
 - Auth: [Added OpenID Connect RP-initiated logout to end the upstream provider session on sign-out](https://github.com/photoprism/photoprism/issues/5684)
 - Auth: [Fixed Cognito-issued ID token validation by sending a nonce during OIDC sign-in](https://github.com/photoprism/photoprism/issues/5695)
@@ -40,7 +44,7 @@ What's new?
 - CLI: [Fixed the "auth add" command when the database runs with NO_ZERO_DATE enabled](https://github.com/photoprism/photoprism/issues/5707)
 - API: [Added an `X-Count` header to label and service search responses](https://github.com/photoprism/photoprism/issues/5649) by [@keif888](https://github.com/keif888)
 - Setup: [Added support for referencing an external database-password secret in the Helm chart](https://github.com/photoprism/photoprism/issues/5661)
-- Docker: [Reduced image size by omitting unnecessary per-user skeleton files](https://github.com/photoprism/photoprism/issues/5154) by [@alexisLefebvre](https://github.com/alexisLefebvre)
+- Docker: [Removed unnecessary per-user skeleton files to reduce the image size](https://github.com/photoprism/photoprism/issues/5154) by [@alexisLefebvre](https://github.com/alexisLefebvre)
 - Database: [Improved error logging to capture connection issues](https://github.com/photoprism/photoprism/issues/5637)
 - Database: [Fixed byte truncation to be rune-safe for all text columns](https://github.com/photoprism/photoprism/issues/5638)
 - Database: [Upgraded config examples from MariaDB 11.8 to 12.3 (LTS)](https://github.com/photoprism/photoprism/issues/5705)

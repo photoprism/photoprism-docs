@@ -124,7 +124,7 @@ Now, create a new `vision.yml` file in your config path (default: `storage/confi
         Think: "false"
     ```
 
-[Learn more ›](ollama-models.md#gemma-3-labels)
+[Learn more ›](ollama-models.md#gemma-4-labels)
 
 ### Scheduling Options
 

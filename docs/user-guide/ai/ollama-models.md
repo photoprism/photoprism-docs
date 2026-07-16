@@ -19,7 +19,7 @@ Performance also depends on your hardware, so e.g., [Qwen3-VL variants](https://
     Without GPU acceleration, Ollama models will be significantly slower, taking anywhere from 10 seconds to over a minute to complete. This may be acceptable if you only want to process a few pictures or are willing to wait.
 
 !!! warning "Disable Reasoning for Thinking Models"
-    Many current vision models — the Qwen3.5 family, `qwen3-vl:*`, `frob/qwen3.5-instruct:4b`, and others — are **thinking (reasoning) models**. Recent Ollama versions emit that reasoning **by default**, and it then leaks into the result: captions begin with text such as *"The user wants a concise description of the provided image…"* and label JSON fails to parse. Set **`Service.Think: "false"`** for these models (as shown in the examples below) to turn reasoning off. It is harmless for non-thinking models, so you can set it unconditionally.
+    Many current vision models — the Qwen3.5 family, `qwen3-vl:*`, `frob/qwen3.5-instruct:4b`, and others — are **thinking (reasoning) models**. With reasoning enabled, recent Ollama versions emit it into the result: captions begin with text such as *"The user wants a concise description of the provided image…"* and label JSON fails to parse. **Set `Service.Think: "false"`** for these models (as shown in the examples below) to turn reasoning off. As of the upcoming release, PhotoPrism disables Ollama reasoning by default, so on that and later versions this is a safety net rather than a requirement — but it is required on current and older versions and harmless everywhere, which is why the examples always include it. Re-enable reasoning only intentionally with `Service.Think: "true"`.
 
 ## Temperature, TopK, and TopP
 

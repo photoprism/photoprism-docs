@@ -33,7 +33,7 @@ This command outputs the settings for all supported and configured model types. 
 
 ### Reasoning Leaking Into Captions ###
 
-If captions contain the model's internal reasoning instead of a description — for example, starting with *"The user wants a concise description of the provided image…"* — the model is a **thinking (reasoning) model** (such as the Qwen3.5 family, `qwen3-vl:*`, or `frob/qwen3.5-instruct:4b`), and recent Ollama versions emit that reasoning by default. Set `Service.Think: "false"` on the model in your `vision.yml` to disable it (see [Ollama Models](../../user-guide/ai/ollama-models.md)).
+If captions contain the model's internal reasoning instead of a description — for example, starting with *"The user wants a concise description of the provided image…"* — the model is a **thinking (reasoning) model** (such as the Qwen3.5 family, `qwen3-vl:*`, or `frob/qwen3.5-instruct:4b`) with reasoning enabled. Set `Service.Think: "false"` on the model in your `vision.yml` to disable it. As of the upcoming release PhotoPrism disables Ollama reasoning by default, so this only occurs on current/older versions or when reasoning was explicitly re-enabled (see [Ollama Models](../../user-guide/ai/ollama-models.md)).
 
 ### GPU Performance Issues ###
 

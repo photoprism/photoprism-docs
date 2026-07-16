@@ -56,7 +56,7 @@ Ensure the output lists both Nasnet (default) and your Ollama label model. If th
 If PhotoPrism logs `vision: invalid label payload from ollama`, the model returned data that didn’t match the expected structure. Confirm that:
 
 - The adapter injected schema instructions (keep `System`/`Prompt` intact or reuse the defaults).
-- The model is **not emitting a reasoning block** — thinking (reasoning) models such as the Qwen3.5 family, `qwen3-vl:*`, and `frob/qwen3.5-instruct:4b` prepend their reasoning to the JSON, and recent Ollama versions enable this by default. Set `Service.Think: "false"` on the model to disable it (see [Ollama Models](../../user-guide/ai/ollama-models.md)).
+- The model is **not emitting a reasoning block** — thinking (reasoning) models such as the Qwen3.5 family, `qwen3-vl:*`, and `frob/qwen3.5-instruct:4b` prepend their reasoning to the JSON when reasoning is enabled. Set `Service.Think: "false"` on the model to disable it — PhotoPrism disables Ollama reasoning by default as of the upcoming release, so this affects current/older versions or configs that re-enabled it (see [Ollama Models](../../user-guide/ai/ollama-models.md)).
 
 PhotoPrism may fall back to the existing TensorFlow Nasnet model when the Ollama response cannot be parsed.
 

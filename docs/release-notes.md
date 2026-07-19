@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 260718-7c0bf9da6</span>
+<span class="build">Build 260719-bbfc49b51</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions/#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
@@ -19,6 +19,7 @@ What's new?
 - AI: [Updated the default Ollama Cloud model and refreshed the Ollama vision defaults](https://github.com/photoprism/photoprism/issues/5726)
 - AI: [Added a `service_tier` option for OpenAI vision requests](https://github.com/photoprism/photoprism/issues/5725)
 - AI: [Improved reliability by retrying rate-limited (HTTP 429) vision requests with bounded exponential backoff](https://github.com/photoprism/photoprism/issues/5729)
+- AI: [Improved computer vision requests to validate image references according to their source](https://github.com/photoprism/photoprism/issues/5734)
 - UX: [Added a setting to prevent action menus from opening on hover](https://github.com/photoprism/photoprism/issues/5650) by [@lastzero](https://github.com/lastzero)
 - UX: [Improved face-marker overlay performance and interaction](https://github.com/photoprism/photoprism/issues/5672)
 - UX: [Improved notification messages to appear in the current interface language](https://github.com/photoprism/photoprism/issues/5682)
@@ -29,6 +30,7 @@ What's new?
 - Auth: [Added OpenID Connect RP-initiated logout to end the upstream provider session on sign-out](https://github.com/photoprism/photoprism/issues/5684)
 - Auth: [Fixed Cognito-issued ID token validation by sending a nonce during OIDC sign-in](https://github.com/photoprism/photoprism/issues/5695)
 - Auth: [Improved login, session, and OIDC error messages to appear in the current interface language](https://github.com/photoprism/photoprism/issues/5699)
+- Auth: [Hardened preview and download token handling to release cached tokens when their sessions end](https://github.com/photoprism/photoprism/issues/5733)
 - People: [Added a type-ahead cache for faster name suggestions](https://github.com/photoprism/photoprism/issues/5666) by [@lastzero](https://github.com/lastzero)
 - Places: [Fixed stacking of photos at the same location when zoomed in](https://github.com/photoprism/photoprism/issues/5643)
 - Search: [Fixed folder searches not returning results from child folders](https://github.com/photoprism/photoprism/issues/5724)
@@ -51,6 +53,7 @@ What's new?
 - Database: [Fixed byte truncation to be rune-safe for all text columns](https://github.com/photoprism/photoprism/issues/5638)
 - Database: [Upgraded config examples from MariaDB 11.8 to 12.3 (LTS)](https://github.com/photoprism/photoprism/issues/5705)
 - Security: [Added a feature flag to disable app passwords](https://github.com/photoprism/photoprism/issues/5647) by [@lastzero](https://github.com/lastzero)
+- Security: [Hardened WebDAV sync and index path handling to keep resolved paths within their base directory](https://github.com/photoprism/photoprism/issues/5735)
 - Security: [Upgraded `libheif` from v1.22.2 to v1.23.1 (CVE-2026-50142)](https://github.com/photoprism/photoprism/issues/5653)
 - Security: [Upgraded Vitest to v4 and Vite to v8 to remove esbuild dependency](https://github.com/photoprism/photoprism/issues/5659)
 - Security: [Upgraded Go from v1.26.3 to v1.26.5](https://github.com/golang/go/issues?q=milestone%3AGo1.26.5) and [ONNX Runtime to v1.26.0](https://github.com/photoprism/photoprism/commit/1fad248031eca0ae80f1bb7b122535e79852558b)

@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 260719-bbfc49b51</span>
+<span class="build">Build 260720-3d25deae2</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions/#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
@@ -40,10 +40,12 @@ What's new?
 - WebDAV: [Fixed routine sync-client folder checks being logged as errors](https://github.com/photoprism/photoprism/issues/5715)
 - Metadata: [Improved support for metadata from XMP sidecar files](https://github.com/photoprism/photoprism/pull/5563) by [@omerdduran](https://github.com/omerdduran)
 - Metadata: [Improved XMP handling to map `dc:subject` to the Subject field instead of Keywords](https://github.com/photoprism/photoprism/issues/2075)
+- Metadata: [Added support for reading GPS coordinates from XMP sidecar files](https://github.com/photoprism/photoprism/issues/4106)
 - Metadata: [Added Lens Make and Model updates via CLI and API](https://github.com/photoprism/photoprism/issues/5656) by [@keif888](https://github.com/keif888)
 - Metadata: [Added Camera Make and Model updates via CLI and API](https://github.com/photoprism/photoprism/issues/5663) by [@lastzero](https://github.com/lastzero)
 - PWA: [Added bloom, flower, ring, and shutter app icons](https://github.com/photoprism/photoprism/issues/5662) by [@lastzero](https://github.com/lastzero)
 - PWA: [Improved the app manifest with maskable icons, language, and screenshots](https://github.com/photoprism/photoprism/issues/5691)
+- PWA: [Added support for using the configured app icon as the iOS Home Screen icon](https://github.com/photoprism/photoprism/issues/5737)
 - CLI: [Improved role and auth-provider usage descriptions](https://github.com/photoprism/photoprism/issues/5667) by [@lastzero](https://github.com/lastzero)
 - CLI: [Fixed the "auth add" command when the database runs with NO_ZERO_DATE enabled](https://github.com/photoprism/photoprism/issues/5707)
 - API: [Added an `X-Count` header to label and service search responses](https://github.com/photoprism/photoprism/issues/5649) by [@keif888](https://github.com/keif888)
@@ -54,6 +56,7 @@ What's new?
 - Database: [Upgraded config examples from MariaDB 11.8 to 12.3 (LTS)](https://github.com/photoprism/photoprism/issues/5705)
 - Security: [Added a feature flag to disable app passwords](https://github.com/photoprism/photoprism/issues/5647) by [@lastzero](https://github.com/lastzero)
 - Security: [Hardened WebDAV sync and index paths to stay within their base directory](https://github.com/photoprism/photoprism/issues/5735)
+- Security: [Hardened WebDAV file locking to release stale locks after a bounded time](https://github.com/photoprism/photoprism/issues/5736)
 - Security: [Upgraded `libheif` from v1.22.2 to v1.23.1 (CVE-2026-50142)](https://github.com/photoprism/photoprism/issues/5653)
 - Security: [Upgraded Vitest to v4 and Vite to v8 to remove esbuild dependency](https://github.com/photoprism/photoprism/issues/5659)
 - Security: [Upgraded Go from v1.26.3 to v1.26.5](https://github.com/golang/go/issues?q=milestone%3AGo1.26.5) and [ONNX Runtime to v1.26.0](https://github.com/photoprism/photoprism/commit/1fad248031eca0ae80f1bb7b122535e79852558b)

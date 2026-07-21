@@ -27,7 +27,7 @@ The [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/c
       ## Ollama Large-Language Model Runner (optional)
       ## Run "ollama pull [name]:[version]" to download a vision model
       ## listed at <https://ollama.com/search?c=vision>, for example:
-      ## docker compose exec ollama ollama pull gemma3:latest
+      ## docker compose exec ollama ollama pull gemma4:latest
       ollama:
         image: ollama/ollama:latest
         restart: unless-stopped
@@ -91,7 +91,7 @@ The [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/c
 Once the Ollama service is running (see [Step 1](#step-1-install-ollama)), you can download [any of the listed vision models](https://ollama.com/search?c=vision) that match your hardware capabilities and preferences, as you will need it for the next step. For example:
 
 ```bash
-docker compose exec ollama ollama pull gemma3:latest
+docker compose exec ollama ollama pull gemma4:latest
 ```
 
 [Learn more ›](ollama-models.md)
@@ -109,14 +109,14 @@ Now, create a new `vision.yml` file in your config path (default: `storage/confi
     ```yaml
     Models:
     - Type: labels
-      Model: gemma3:latest
+      Model: gemma4:latest
       Engine: ollama
       Run: auto
       Service:
         Uri: http://ollama:11434/api/generate
         Think: "false"
     - Type: caption
-      Model: gemma3:latest
+      Model: gemma4:latest
       Engine: ollama
       Run: auto
       Service:

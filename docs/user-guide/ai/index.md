@@ -35,7 +35,7 @@ Custom AI engines, models, and run modes can be specified in a `vision.yml` file
 ```yaml
 Models:
 - Type: caption
-  Model: gemma3:latest
+  Model: gemma4:latest
   Engine: ollama
   Run: auto
   Options:

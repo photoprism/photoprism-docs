@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 260721-7835bbae8</span>
+<span class="build">Build 260722-f7d82cca8</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions/#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
@@ -12,6 +12,7 @@ What's new?
 
 - Viewer: [Added support for 360° panorama photos and videos](https://github.com/photoprism/photoprism/pull/5623) by [@omerdduran](https://github.com/omerdduran)
 - Viewer: [Added 16K thumbnail and video size support for 360° media](https://github.com/photoprism/photoprism/issues/5669) by [@lastzero](https://github.com/lastzero)
+- Viewer: [Added an inline viewer for multi-page PDF documents](https://github.com/photoprism/photoprism/issues/5488)
 - AI: [Added a `service_tier` option for cheaper OpenAI vision requests](https://github.com/photoprism/photoprism/issues/5725)
 - AI: [Updated the Ollama default settings and default cloud model](https://github.com/photoprism/photoprism/issues/5726)
 - AI: [Improved Ollama caption and label quality by disabling reasoning output by default](https://github.com/photoprism/photoprism/issues/5728)
@@ -28,6 +29,7 @@ What's new?
 - Auth: [Fixed Cognito-issued ID token validation by sending a nonce during OIDC sign-in](https://github.com/photoprism/photoprism/issues/5695)
 - Auth: [Improved login, session, and OIDC error messages to appear in the current language](https://github.com/photoprism/photoprism/issues/5699)
 - People: [Added a type-ahead cache for faster name suggestions](https://github.com/photoprism/photoprism/issues/5666) by [@lastzero](https://github.com/lastzero)
+- People: [Added importing face markers and names from XMP sidecar files](https://github.com/photoprism/photoprism/issues/5712)
 - Places: [Fixed stacking of photos at the same location when zoomed in](https://github.com/photoprism/photoprism/issues/5643)
 - Search: [Fixed folder searches not returning results from child folders](https://github.com/photoprism/photoprism/issues/5724)
 - Index: [Fixed duplicate creation when identical files are indexed in parallel](https://github.com/photoprism/photoprism/issues/5652) by [@knowald](https://github.com/knowald)
@@ -40,6 +42,7 @@ What's new?
 - Metadata: [Added Lens Make and Model updates via CLI and API](https://github.com/photoprism/photoprism/issues/5656) by [@keif888](https://github.com/keif888)
 - Metadata: [Added Camera Make and Model updates via CLI and API](https://github.com/photoprism/photoprism/issues/5663) by [@lastzero](https://github.com/lastzero)
 - Metadata: [Improved support for metadata from XMP sidecar files](https://github.com/photoprism/photoprism/pull/5563) by [@omerdduran](https://github.com/omerdduran)
+- Metadata: [Added re-reading of updated XMP sidecar files during indexing](https://github.com/photoprism/photoprism/issues/5685)
 - Metadata: [Improved XMP handling to map `dc:subject` to the Subject field](https://github.com/photoprism/photoprism/issues/2075)
 - Metadata: [Fixed the photo sort order not updating after batch editing dates](https://github.com/photoprism/photoprism/issues/5739)
 - PWA: [Added bloom, flower, ring, and shutter app icons](https://github.com/photoprism/photoprism/issues/5662) by [@lastzero](https://github.com/lastzero)

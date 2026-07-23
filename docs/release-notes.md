@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 260723-9ace10313</span>
+<span class="build">Build 260723-df63594a4</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions/#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
@@ -36,6 +36,7 @@ What's new?
 - Index: [Improved indexing to record original file names only for imported files](https://github.com/photoprism/photoprism/issues/5668)
 - Settings: [Added a "Collections" tab to configure album download settings](https://github.com/photoprism/photoprism/issues/848)
 - Sharing: [Fixed downloading a single image from a shared folder, moment, calendar, or region](https://github.com/photoprism/photoprism/issues/5727)
+- Sharing: [Added sidecar files to album downloads when the option is enabled](https://github.com/photoprism/photoprism/issues/5743)
 - RAW: [Added a fallback to embedded JPEG previews for unsupported files](https://github.com/photoprism/photoprism/issues/5673)
 - JPEG XL: [Improved decoding to use libvips natively instead of the external "djxl" tool](https://github.com/photoprism/photoprism/issues/5693)
 - Metadata: [Added support for reading GPS coordinates from XMP sidecar files](https://github.com/photoprism/photoprism/issues/4106)
@@ -52,6 +53,8 @@ What's new?
 - CLI: [Improved role and auth-provider usage descriptions](https://github.com/photoprism/photoprism/issues/5667) by [@lastzero](https://github.com/lastzero)
 - CLI: [Fixed the "auth add" command when the database runs with NO_ZERO_DATE enabled](https://github.com/photoprism/photoprism/issues/5707)
 - API: [Added an `X-Count` header to label and service search responses](https://github.com/photoprism/photoprism/issues/5649) by [@keif888](https://github.com/keif888)
+- WebDAV: [Fixed uploads reporting success even when they failed](https://github.com/photoprism/photoprism/issues/5745)
+- WebDAV: [Improved uploads to skip videos when raw and video sync is off](https://github.com/photoprism/photoprism/issues/5744)
 - WebDAV: [Fixed routine sync-client folder checks being logged as errors](https://github.com/photoprism/photoprism/issues/5715)
 - Storage: [Fixed a path lookup error when resolving filesystem locations](https://github.com/photoprism/photoprism/issues/5683)
 - Helm: [Added support for referencing an external database-password secret](https://github.com/photoprism/photoprism/issues/5661)

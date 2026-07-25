@@ -41,7 +41,6 @@ What's new?
 - Sharing: [Added sidecar files to album downloads when the option is enabled](https://github.com/photoprism/photoprism/issues/5743)
 - RAW: [Added a fallback to embedded JPEG previews for unsupported files](https://github.com/photoprism/photoprism/issues/5673)
 - JPEG XL: [Improved decoding to use libvips natively instead of the external "djxl" tool](https://github.com/photoprism/photoprism/issues/5693)
-- PNG: [Fixed animated PNG files being rejected when uploading, importing, and indexing](https://github.com/photoprism/photoprism/commit/499b608da)
 - Metadata: [Added support for reading GPS coordinates from XMP sidecar files](https://github.com/photoprism/photoprism/issues/4106)
 - Metadata: [Added Lens Make and Model updates via CLI and API](https://github.com/photoprism/photoprism/issues/5656) by [@keif888](https://github.com/keif888)
 - Metadata: [Added Camera Make and Model updates via CLI and API](https://github.com/photoprism/photoprism/issues/5663) by [@lastzero](https://github.com/lastzero)

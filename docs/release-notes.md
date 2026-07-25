@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 260724-1189d80d5</span>
+<span class="build">Build 260725-bf3726961</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions/#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
@@ -30,6 +30,7 @@ What's new?
 - Auth: [Improved login, session, and OIDC error messages to appear in the current language](https://github.com/photoprism/photoprism/issues/5699)
 - People: [Added a type-ahead cache for faster name suggestions](https://github.com/photoprism/photoprism/issues/5666) by [@lastzero](https://github.com/lastzero)
 - People: [Added importing face markers and names from XMP sidecar files](https://github.com/photoprism/photoprism/issues/5712)
+- People: [Added importing face regions from XMP metadata in HEIC and RAW files](https://github.com/photoprism/photoprism/issues/5751)
 - Places: [Fixed stacking of photos at the same location when zoomed in](https://github.com/photoprism/photoprism/issues/5643)
 - Search: [Fixed folder searches not returning results from child folders](https://github.com/photoprism/photoprism/issues/5724)
 - Index: [Fixed duplicate creation when identical files are indexed in parallel](https://github.com/photoprism/photoprism/issues/5652) by [@knowald](https://github.com/knowald)
@@ -40,12 +41,14 @@ What's new?
 - Sharing: [Added sidecar files to album downloads when the option is enabled](https://github.com/photoprism/photoprism/issues/5743)
 - RAW: [Added a fallback to embedded JPEG previews for unsupported files](https://github.com/photoprism/photoprism/issues/5673)
 - JPEG XL: [Improved decoding to use libvips natively instead of the external "djxl" tool](https://github.com/photoprism/photoprism/issues/5693)
+- PNG: [Fixed animated PNG files being rejected when uploading, importing, and indexing](https://github.com/photoprism/photoprism/commit/499b608da)
 - Metadata: [Added support for reading GPS coordinates from XMP sidecar files](https://github.com/photoprism/photoprism/issues/4106)
 - Metadata: [Added Lens Make and Model updates via CLI and API](https://github.com/photoprism/photoprism/issues/5656) by [@keif888](https://github.com/keif888)
 - Metadata: [Added Camera Make and Model updates via CLI and API](https://github.com/photoprism/photoprism/issues/5663) by [@lastzero](https://github.com/lastzero)
 - Metadata: [Improved support for metadata from XMP sidecar files](https://github.com/photoprism/photoprism/pull/5563) by [@omerdduran](https://github.com/omerdduran)
 - Metadata: [Added re-reading of updated XMP sidecar files during indexing](https://github.com/photoprism/photoprism/issues/5685)
 - Metadata: [Improved XMP handling to map `dc:subject` to the Subject field](https://github.com/photoprism/photoprism/issues/2075)
+- Metadata: [Fixed an author name being shown as the software in the edit dialog](https://github.com/photoprism/photoprism/commit/08bc694b4)
 - Metadata: [Fixed the photo sort order not updating after batch editing dates](https://github.com/photoprism/photoprism/issues/5739)
 - PWA: [Added bloom, flower, ring, and shutter app icons](https://github.com/photoprism/photoprism/issues/5662) by [@lastzero](https://github.com/lastzero)
 - PWA: [Added glass, mint, neon, and rainbow app icons and full-bleed touch variants](https://github.com/photoprism/photoprism/issues/5737)
@@ -55,7 +58,7 @@ What's new?
 - CLI: [Fixed the "auth add" command when the database runs with NO_ZERO_DATE enabled](https://github.com/photoprism/photoprism/issues/5707)
 - API: [Added an `X-Count` header to label and service search responses](https://github.com/photoprism/photoprism/issues/5649) by [@keif888](https://github.com/keif888)
 - WebDAV: [Fixed uploads reporting success even when they failed](https://github.com/photoprism/photoprism/issues/5745)
-- WebDAV: [Improved uploads to skip videos when raw and video sync is off](https://github.com/photoprism/photoprism/issues/5744)
+- WebDAV: [Improved uploads to skip videos and RAW files when raw and video sync is off](https://github.com/photoprism/photoprism/issues/5744)
 - WebDAV: [Fixed routine sync-client folder checks being logged as errors](https://github.com/photoprism/photoprism/issues/5715)
 - Storage: [Fixed a path lookup error when resolving filesystem locations](https://github.com/photoprism/photoprism/issues/5683)
 - Helm: [Added support for referencing an external database-password secret](https://github.com/photoprism/photoprism/issues/5661)

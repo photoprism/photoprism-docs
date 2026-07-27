@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 260726-13758d42d</span>
+<span class="build">Build 260727-c7a1241d2</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions/#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
@@ -61,6 +61,7 @@ What's new?
 - WebDAV: [Improved uploads to skip videos and RAW files when raw and video sync is off](https://github.com/photoprism/photoprism/issues/5744)
 - WebDAV: [Fixed routine sync-client folder checks being logged as errors](https://github.com/photoprism/photoprism/issues/5715)
 - Storage: [Fixed a path lookup error when resolving filesystem locations](https://github.com/photoprism/photoprism/issues/5683)
+- Storage: [Added automatic expiry for temporary download archives](https://github.com/photoprism/photoprism/commit/4bcd670c5)
 - Helm: [Added support for referencing an external database-password secret](https://github.com/photoprism/photoprism/issues/5661)
 - Docker: [Removed per-user skeleton files to reduce the image size](https://github.com/photoprism/photoprism/issues/5154) by [@alexisLefebvre](https://github.com/alexisLefebvre)
 - Database: [Improved error logging to capture connection issues](https://github.com/photoprism/photoprism/issues/5637)
@@ -68,6 +69,7 @@ What's new?
 - Database: [Fixed byte truncation to be rune-safe for all text columns](https://github.com/photoprism/photoprism/issues/5638)
 - Security: [Added a feature flag to disable app passwords](https://github.com/photoprism/photoprism/issues/5647) by [@lastzero](https://github.com/lastzero)
 - Security: [Hardened preview and download token handling when sessions end](https://github.com/photoprism/photoprism/issues/5733)
+- Security: [Improved the audit log to record download archive activity](https://github.com/photoprism/photoprism/commit/de7e4e86e)
 - Security: [Hardened WebDAV sync and index paths to stay within their base directory](https://github.com/photoprism/photoprism/issues/5735)
 - Security: [Hardened WebDAV file locking to release stale locks after a bounded time](https://github.com/photoprism/photoprism/issues/5736)
 - Security: [Hardened image processing to block network requests and unsafe file coders](https://github.com/photoprism/photoprism/issues/5669)

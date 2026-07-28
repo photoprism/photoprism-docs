@@ -76,7 +76,7 @@ What's new?
 - Database: [Upgraded config examples from MariaDB 11.8 to 12.3 (LTS)](https://github.com/photoprism/photoprism/issues/5705)
 - Database: [Fixed byte truncation to be rune-safe for all text columns](https://github.com/photoprism/photoprism/issues/5638)
 - Docker: [Removed per-user skeleton files to reduce the image size](https://github.com/photoprism/photoprism/issues/5154) by [@alexisLefebvre](https://github.com/alexisLefebvre)
-- Helm: [Added support for referencing an external database-password](https://github.com/photoprism/photoprism/issues/5661) by [@kurczynski](https://github.com/kurczynski)
+- Helm: [Added support for external database password secrets](https://github.com/photoprism/photoprism/issues/5661) by [@kurczynski](https://github.com/kurczynski)
 - Security: [Added a feature flag to disable app passwords](https://github.com/photoprism/photoprism/issues/5647) by [@lastzero](https://github.com/lastzero)
 - Security: [Added signed download tokens and improved preview token handling](https://github.com/photoprism/photoprism/issues/5733)
 - Security: [Hardened WebDAV syncing, indexing](https://github.com/photoprism/photoprism/issues/5735), and [file locking](https://github.com/photoprism/photoprism/issues/5736)

@@ -7,27 +7,32 @@
 
 ### Authentication
 
-| Environment                                      | CLI Flag          | Default                      | Description                                                                                         |
-|:-------------------------------------------------|:------------------|:-----------------------------|:----------------------------------------------------------------------------------------------------|
-| PHOTOPRISM_AUTH_MODE                             | --auth-mode       | password                     | authentication `MODE` (public[^2], password)                                                        |
-| PHOTOPRISM_ADMIN_USER, PHOTOPRISM_ADMIN_USERNAME | --admin-user      | admin                        | `USERNAME` of the superadmin account that is created on first startup                               |
-| PHOTOPRISM_ADMIN_PASSWORD                        | --admin-password  |                              | initial `PASSWORD` of the superadmin account (8-72 characters)                                      |
-| PHOTOPRISM_PASSWORD_LENGTH                       | --password-length | 8                            | minimum password `LENGTH` in characters                                                             |
-| PHOTOPRISM_LOGIN_INFO                            | --login-info      |                              | custom login footer info `TEXT` *plus*                                                              |
-| PHOTOPRISM_OIDC_URI                              | --oidc-uri        |                              | issuer `URI` for single sign-on via OpenID Connect, e.g. https://accounts.google.com                |
-| PHOTOPRISM_OIDC_CLIENT                           | --oidc-client     |                              | client `ID` for single sign-on via OpenID Connect                                                   |
-| PHOTOPRISM_OIDC_SECRET                           | --oidc-secret     |                              | client `SECRET` for single sign-on via OpenID Connect                                               |
-| PHOTOPRISM_OIDC_SCOPES                           | --oidc-scopes     | openid email profile address | client authorization `SCOPES` for single sign-on via OpenID Connect                                 |
-| PHOTOPRISM_OIDC_PROVIDER                         | --oidc-provider   |                              | custom identity provider `NAME`, e.g. Google                                                        |
-| PHOTOPRISM_OIDC_ICON                             | --oidc-icon       |                              | custom identity provider icon `URI`                                                                 |
-| PHOTOPRISM_OIDC_REDIRECT                         | --oidc-redirect   | false                        | automatically redirects unauthenticated users to the configured identity provider                   |
-| PHOTOPRISM_OIDC_REGISTER                         | --oidc-register   | false                        | allows new users to create an account when they sign in with OpenID Connect                         |
-| PHOTOPRISM_OIDC_USERNAME                         | --oidc-username   | preferred_username           | preferred username `CLAIM` for new OpenID Connect users (preferred_username, name, nickname, email) |
-| PHOTOPRISM_OIDC_WEBDAV                           | --oidc-webdav     | false                        | allows new OpenID Connect users to use WebDAV when they have a role that allows it                  |
-| PHOTOPRISM_DISABLE_OIDC                          | --disable-oidc    | false                        | disables single sign-on via OpenID Connect, even if an identity provider has been configured        |
-| PHOTOPRISM_SESSION_MAXAGE                        | --session-maxage  | 1209600                      | session expiration time in `SECONDS`, doubled for accounts with 2FA (-1 to disable)                 |
-| PHOTOPRISM_SESSION_TIMEOUT                       | --session-timeout | 604800                       | session idle time in `SECONDS`, doubled for accounts with 2FA (-1 to disable)                       |
-| PHOTOPRISM_SESSION_CACHE                         | --session-cache   | 900                          | session cache duration in `SECONDS` (60-3600)                                                       |
+| Environment                                      | CLI Flag                | Default                      | Description                                                                                                                         |
+|:-------------------------------------------------|:------------------------|:-----------------------------|:------------------------------------------------------------------------------------------------------------------------------------|
+| PHOTOPRISM_AUTH_MODE                             | --auth-mode             | password                     | authentication `MODE` (public[^2], password)                                                                                            |
+| PHOTOPRISM_ADMIN_USER, PHOTOPRISM_ADMIN_USERNAME | --admin-user            | admin                        | `USERNAME` of the superadmin account that is created on first startup                                                               |
+| PHOTOPRISM_ADMIN_PASSWORD                        | --admin-password        |                              | initial `PASSWORD` of the superadmin account (8-72 characters)                                                                      |
+| PHOTOPRISM_PASSWORD_LENGTH                       | --password-length       | 8                            | minimum password `LENGTH` in characters                                                                                             |
+| PHOTOPRISM_LOGIN_INFO                            | --login-info            |                              | custom login footer info `TEXT` *plus*                                                                                              |
+| PHOTOPRISM_OIDC_URI                              | --oidc-uri              |                              | issuer `URI` for single sign-on via OpenID Connect, e.g. https://accounts.google.com                                                |
+| PHOTOPRISM_OIDC_CLIENT                           | --oidc-client           |                              | client `ID` for single sign-on via OpenID Connect                                                                                   |
+| PHOTOPRISM_OIDC_SECRET                           | --oidc-secret           |                              | client `SECRET` for single sign-on via OpenID Connect                                                                               |
+| PHOTOPRISM_OIDC_SCOPES                           | --oidc-scopes           | openid email profile address | client authorization `SCOPES` for single sign-on via OpenID Connect                                                                 |
+| PHOTOPRISM_OIDC_PROMPT                           | --oidc-prompt           |                              | authorization `PROMPT` for single sign-on via OpenID Connect (login, select_account, consent)                                       |
+| PHOTOPRISM_OIDC_PROVIDER                         | --oidc-provider         |                              | custom identity provider `NAME`, e.g. Google                                                                                        |
+| PHOTOPRISM_OIDC_ICON                             | --oidc-icon             |                              | custom identity provider icon `URI`                                                                                                 |
+| PHOTOPRISM_OIDC_REDIRECT                         | --oidc-redirect         | false                        | automatically redirects unauthenticated users to the configured identity provider                                                   |
+| PHOTOPRISM_OIDC_REGISTER                         | --oidc-register         | false                        | allows new users to create an account when they sign in with OpenID Connect                                                         |
+| PHOTOPRISM_OIDC_LOGOUT                           | --oidc-logout           | false                        | ends the provider session on sign-out via OpenID Connect RP-initiated logout                                                        |
+| PHOTOPRISM_OIDC_USERNAME                         | --oidc-username         | preferred_username           | preferred username `CLAIM` for new OpenID Connect users (preferred_username, name, nickname, email)                                 |
+| PHOTOPRISM_OIDC_WEBDAV                           | --oidc-webdav           | false                        | allows new OpenID Connect users to use WebDAV when they have a role that allows it                                                  |
+| PHOTOPRISM_DISABLE_OIDC                          | --disable-oidc          | false                        | disables single sign-on via OpenID Connect, even if an identity provider has been configured                                        |
+| PHOTOPRISM_SESSION_MAXAGE                        | --session-maxage        | 1209600                      | session expiration time in `SECONDS`, doubled for accounts with 2FA (-1 to disable)                                                 |
+| PHOTOPRISM_SESSION_TIMEOUT                       | --session-timeout       | 604800                       | session idle time in `SECONDS`, doubled for accounts with 2FA (-1 to disable)                                                       |
+| PHOTOPRISM_SESSION_CACHE                         | --session-cache         | 900                          | session cache duration in `SECONDS` (60-3600)                                                                                       |
+| PHOTOPRISM_DOWNLOAD_TOKEN                        | --download-token        |                              | shared static `TOKEN` accepted for permanent download URLs without identifying a session (leave blank to accept signed tokens only) |
+| PHOTOPRISM_DOWNLOAD_TOKEN_MAXAGE                 | --download-token-maxage | 3600                         | signed download token lifetime in `SECONDS` (minimum 900)                                                                           |
+| PHOTOPRISM_PREVIEW_TOKEN                         | --preview-token         |                              | shared static `TOKEN` for thumbnail and video streaming URLs (leave blank for an automatic value)                                   |
 
 ### Logging
 
@@ -128,30 +133,31 @@
 
 ### Customization
 
-| Environment                 | CLI Flag           | Default    | Description                                                      |
-|:----------------------------|:-------------------|:-----------|:-----------------------------------------------------------------|
-| PHOTOPRISM_DEFAULT_LOCALE   | --default-locale   | en         | default user interface language `CODE`                           |
-| PHOTOPRISM_DEFAULT_TIMEZONE | --default-timezone | Local      | default time zone `NAME`, e.g. for scheduling backups            |
-| PHOTOPRISM_DEFAULT_THEME    | --default-theme    |            | default user interface theme `NAME`                              |
-| PHOTOPRISM_PLACES_LOCALE    | --places-locale    | local      | location details language `CODE`, e.g. en, de, or local          |
-| PHOTOPRISM_APP_NAME         | --app-name         |            | app `NAME` when installed as a Progressive Web App (PWA)         |
-| PHOTOPRISM_APP_MODE         | --app-mode         | standalone | app display `MODE` (fullscreen, standalone, minimal-ui, browser) |
-| PHOTOPRISM_APP_ICON         | --app-icon         |            | home screen app `ICON` (logo, app, crisp, mint, bold, square)    |
-| PHOTOPRISM_APP_COLOR        | --app-color        | #19191a    | app background and splash screen `COLOR`                         |
-| PHOTOPRISM_LEGAL_INFO       | --legal-info       |            | legal information `TEXT`, displayed in the page footer           |
-| PHOTOPRISM_LEGAL_URL        | --legal-url        |            | legal information `URL`                                          |
-| PHOTOPRISM_WALLPAPER_URI    | --wallpaper-uri    |            | login screen background image `URI`                              |
+| Environment                 | CLI Flag           | Default    | Description                                                                                              |
+|:----------------------------|:-------------------|:-----------|:---------------------------------------------------------------------------------------------------------|
+| PHOTOPRISM_DEFAULT_LOCALE   | --default-locale   | en         | default user interface language `CODE`                                                                   |
+| PHOTOPRISM_DEFAULT_TIMEZONE | --default-timezone | Local      | default time zone `NAME`, e.g. for scheduling backups                                                    |
+| PHOTOPRISM_DEFAULT_THEME    | --default-theme    |            | default user interface theme `NAME`                                                                      |
+| PHOTOPRISM_PLACES_LOCALE    | --places-locale    | local      | location details language `CODE`, e.g. en, de, or local                                                  |
+| PHOTOPRISM_APP_NAME         | --app-name         |            | app `NAME` when installed as a Progressive Web App (PWA)                                                 |
+| PHOTOPRISM_APP_MODE         | --app-mode         | standalone | app display `MODE` (fullscreen, standalone, minimal-ui, browser)                                         |
+| PHOTOPRISM_APP_ICON         | --app-icon         |            | home screen app `ICON` (logo, app, crisp, mint, bold, square, bloom, flower, ring, glass, neon, rainbow) |
+| PHOTOPRISM_APP_COLOR        | --app-color        | #19191a    | app background and splash screen `COLOR`                                                                 |
+| PHOTOPRISM_LEGAL_INFO       | --legal-info       |            | legal information `TEXT`, displayed in the page footer                                                   |
+| PHOTOPRISM_LEGAL_URL        | --legal-url        |            | legal information `URL`                                                                                  |
+| PHOTOPRISM_WALLPAPER_URI    | --wallpaper-uri    |            | login screen background image `URI`                                                                      |
 
 ### Site Information
 
 | Environment                 | CLI Flag           | Default                                                                               | Description                                                                                                                  |
 |:----------------------------|:-------------------|:--------------------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------|
 | PHOTOPRISM_SITE_URL         | --site-url         | http://localhost:2342/                                                                | canonical site `URL` used in generated links and to determine HTTPS/TLS (scheme://host[:port])                               |
-| PHOTOPRISM_SITE_AUTHOR      | --site-author      |                                                                                       | site `OWNER`, copyright, or artist                                                                                           |
-| PHOTOPRISM_SITE_TITLE       | --site-title       |                                                                                       | site `TITLE`                                                                                                                 |
-| PHOTOPRISM_SITE_CAPTION     | --site-caption     | AI-Powered Photos App                                                                 | site `CAPTION`                                                                                                               |
-| PHOTOPRISM_SITE_DESCRIPTION | --site-description |                                                                                       | site `DESCRIPTION` *optional*                                                                                                |
-| PHOTOPRISM_SITE_FAVICON     | --site-favicon     |                                                                                       | site favicon `FILENAME` *optional*                                                                                           |
+| PHOTOPRISM_SITE_AUTHOR      | --site-author      |                                                                                       | site `OWNER` shown in the author meta tag                                                                                    |
+| PHOTOPRISM_SITE_NAME        | --site-name        |                                                                                       | short `NAME` for identifying this instance within a cluster *optional*                                                       |
+| PHOTOPRISM_SITE_TITLE       | --site-title       |                                                                                       | main `TITLE` shown in the web interface and meta tags                                                                        |
+| PHOTOPRISM_SITE_CAPTION     | --site-caption     | AI-Powered Photos App                                                                 | short `CAPTION` or tagline shown alongside the title                                                                         |
+| PHOTOPRISM_SITE_DESCRIPTION | --site-description |                                                                                       | longer `DESCRIPTION` shown in SEO and social meta tags *optional*                                                            |
+| PHOTOPRISM_SITE_FAVICON     | --site-favicon     |                                                                                       | custom favicon `FILENAME` for web browsers *optional*                                                                        |
 | PHOTOPRISM_SITE_PREVIEW     | --site-preview     |                                                                                       | sharing preview image `URL`                                                                                                  |
 | PHOTOPRISM_CDN_URL          | --cdn-url          |                                                                                       | content delivery network `URL`                                                                                               |
 | PHOTOPRISM_CDN_VIDEO        | --cdn-video        | false                                                                                 | streams videos over the specified CDN                                                                                        |
@@ -227,7 +233,7 @@
 |:-----------------------------------------------------------------|:--------------------------|:-----------------------------------------|:-----------------------------------------------------------------------------------------------|
 | PHOTOPRISM_FFMPEG_BIN                                            | --ffmpeg-bin              | ffmpeg                                   | FFmpeg `COMMAND` for video transcoding and thumbnail extraction                                |
 | PHOTOPRISM_FFMPEG_ENCODER                                        | --ffmpeg-encoder          | libx264                                  | FFmpeg AVC video encoder `NAME`                                                                |
-| PHOTOPRISM_FFMPEG_SIZE                                           | --ffmpeg-size             | 4096                                     | encoding resolution limit in `PIXELS` (720-7680)                                               |
+| PHOTOPRISM_FFMPEG_SIZE                                           | --ffmpeg-size             | 4096                                     | encoding resolution limit in `PIXELS` (720-15360)                                              |
 | PHOTOPRISM_FFMPEG_QUALITY                                        | --ffmpeg-quality          | 50                                       | encoding `QUALITY` (1-100, where 100 is almost lossless)                                       |
 | PHOTOPRISM_FFMPEG_BITRATE                                        | --ffmpeg-bitrate          | 60                                       | bitrate `LIMIT` in Mbps for forced transcoding of non-AVC videos (1-960; -1 to disable)        |
 | PHOTOPRISM_FFMPEG_PRESET                                         | --ffmpeg-preset           | fast                                     | FFmpeg compression `PRESET` when using an encoder that supports it, e.g. fast, medium, or slow |
@@ -250,21 +256,14 @@
 | PHOTOPRISM_RSVGCONVERT_BIN                                       | --rsvgconvert-bin         | rsvg-convert                             | librsvg SVG graphics conversion `COMMAND` *plus*                                               |
 | PHOTOPRISM_HEIFCONVERT_ORIENTATION                               | --heifconvert-orientation | keep                                     | Exif `ORIENTATION` of images generated with libheif (keep, reset)                              |
 
-### Security Tokens
-
-| Environment               | CLI Flag         | Default | Description                                                                        |
-|:--------------------------|:-----------------|:--------|:-----------------------------------------------------------------------------------|
-| PHOTOPRISM_DOWNLOAD_TOKEN | --download-token |         | `DEFAULT` download URL token for originals (leave blank for a random value)        |
-| PHOTOPRISM_PREVIEW_TOKEN  | --preview-token  |         | `DEFAULT` thumbnail and video streaming URL token (leave blank for a random value) |
-
 ### Preview Images
 
 | Environment                    | CLI Flag              | Default | Description                                                                  |
 |:-------------------------------|:----------------------|:--------|:-----------------------------------------------------------------------------|
 | PHOTOPRISM_THUMB_LIBRARY       | --thumb-library       | auto    | image processing `LIBRARY` to be used for generating thumbnails (auto, vips) |
 | PHOTOPRISM_THUMB_COLOR         | --thumb-color         | auto    | standard color `PROFILE` for thumbnails (auto, preserve, srgb, none)         |
-| PHOTOPRISM_THUMB_SIZE          | --thumb-size          | 1920    | maximum size of pre-generated thumbnails in `PIXELS` (720-7680)              |
-| PHOTOPRISM_THUMB_SIZE_UNCACHED | --thumb-size-uncached | 5120    | maximum size of thumbnails generated on demand in `PIXELS` (720-7680)        |
+| PHOTOPRISM_THUMB_SIZE          | --thumb-size          | 1920    | maximum size of pre-generated thumbnails in `PIXELS` (720-15360)             |
+| PHOTOPRISM_THUMB_SIZE_UNCACHED | --thumb-size-uncached | 7680    | maximum size of thumbnails generated on demand in `PIXELS` (720-15360)       |
 | PHOTOPRISM_THUMB_UNCACHED      | --thumb-uncached      | false   | generates missing thumbnails on demand (high memory and cpu usage)           |
 
 ### Image Quality
@@ -272,8 +271,8 @@
 | Environment             | CLI Flag       | Default | Description                                                       |
 |:------------------------|:---------------|:--------|:------------------------------------------------------------------|
 | PHOTOPRISM_JPEG_QUALITY | --jpeg-quality | 83      | higher values increase the image `QUALITY` and file size (25-100) |
-| PHOTOPRISM_JPEG_SIZE    | --jpeg-size    | 7680    | maximum size of generated JPEG images in `PIXELS` (720-30000)     |
-| PHOTOPRISM_PNG_SIZE     | --png-size     | 7680    | maximum size of generated PNG images in `PIXELS` (720-30000)      |
+| PHOTOPRISM_JPEG_SIZE    | --jpeg-size    | 15360   | maximum size of generated JPEG images in `PIXELS` (720-30000)     |
+| PHOTOPRISM_PNG_SIZE     | --png-size     | 15360   | maximum size of generated PNG images in `PIXELS` (720-30000)      |
 
 ### Computer Vision
 
@@ -286,6 +285,7 @@
 | PHOTOPRISM_VISION_SCHEDULE | --vision-schedule |             | vision worker `SCHEDULE` for background processing (e.g. "0 12 \* \* \*" for daily at noon) or at a random time (daily, weekly)   |
 | PHOTOPRISM_VISION_FILTER   | --vision-filter   | public:true | vision worker search `FILTER` applied to scheduled runs (same syntax as photoprism vision run)                                    |
 | PHOTOPRISM_DETECT_NSFW     | --detect-nsfw     | false       | flags newly added pictures as private if they might be offensive (uses the configured NSFW model; built-in TensorFlow by default) |
+| PHOTOPRISM_XMP_FACES       | --xmp-faces       | false       | imports face regions and names from XMP metadata as people markers                                                                |
 
 ### Face Recognition
 

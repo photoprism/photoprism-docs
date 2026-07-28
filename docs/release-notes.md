@@ -3,10 +3,23 @@
 !!! note ""
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
+<!--
 ### Development Preview
 <span class="build">Build 260727-bbde8f452</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions/#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
+-->
+
+### July 28, 2026
+<span class="build">Build 260728-bbde8f452</span>
+
+With this major new release, [equirectangular 360° photos and videos](https://github.com/photoprism/photoprism/issues/5623) can now be explored interactively. To preserve detail when zooming in, the maximum [thumbnail and video resolution has been increased to 16K](https://github.com/photoprism/photoprism/issues/5669).
+
+A new [inline document viewer](https://github.com/photoprism/photoprism/issues/5488) makes it possible to read multi-page PDFs without downloading them first. Metadata enthusiasts benefit from enhanced XMP support, allowing GPS coordinates and face regions to be imported from both [XMP sidecar files](https://github.com/photoprism/photoprism/issues/5712) and [embedded XMP metadata](https://github.com/photoprism/photoprism/issues/5751). In addition, camera and lens make and model information can now be [edited through the CLI and API](https://github.com/photoprism/photoprism/issues/5663).
+Elsewhere, the Settings interface has been reorganized and now includes a dedicated Accessibility section, where you can, for example, prevent action menus from opening on hover. Album download and sorting options have moved to a new Collections tab.
+
+[AI-related improvements](user-guide/ai/index.md) include a [new `service_tier` option](https://github.com/photoprism/photoprism/issues/5725)  for more cost-effective API requests, along with various [fixes and improvements for Ollama](https://github.com/photoprism/photoprism/issues/5728).
+A special thank you to all [our members](https://www.photoprism.app/editions/#compare), [contributors](https://docs.photoprism.app/developer-guide/pull-requests/), and [testers](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test) who helped make this release possible! 🌈
 
 What's new?
 
@@ -30,19 +43,19 @@ What's new?
 - Auth: [Fixed Cognito-issued ID token validation by sending a nonce during OIDC sign-in](https://github.com/photoprism/photoprism/issues/5695)
 - Auth: [Fixed the OpenID Connect sign-in button not being translated](https://github.com/photoprism/photoprism/pull/5754)
 - Auth: [Improved login, session, and OIDC error messages to appear in the current language](https://github.com/photoprism/photoprism/issues/5699)
-- People: [Added a type-ahead cache for faster name suggestions](https://github.com/photoprism/photoprism/issues/5666) by [@lastzero](https://github.com/lastzero)
 - People: [Added importing face markers and names from XMP sidecar files](https://github.com/photoprism/photoprism/issues/5712)
 - People: [Added importing face regions from XMP metadata in HEIC and RAW files](https://github.com/photoprism/photoprism/issues/5751)
+- People: [Added a type-ahead cache for faster name suggestions](https://github.com/photoprism/photoprism/issues/5666) by [@lastzero](https://github.com/lastzero)
 - Places: [Fixed stacking of photos at the same location when zoomed in](https://github.com/photoprism/photoprism/issues/5643)
-- Search: [Fixed folder searches not returning results from child folders](https://github.com/photoprism/photoprism/issues/5724)
+- Albums: [Fixed download of sidecar files when the option is enabled](https://github.com/photoprism/photoprism/issues/5743)
+- Albums: [Fixed downloading a single image from a shared folder, moment, calendar, or region](https://github.com/photoprism/photoprism/issues/5727)
+- Albums: [Fixed creating a share link as a non-admin user](https://github.com/photoprism/photoprism/issues/5748)
+- Folders: [Fixed searches not returning results from child folders](https://github.com/photoprism/photoprism/issues/5724)
+- Settings: [Added a "Collections" tab to configure album download settings](https://github.com/photoprism/photoprism/issues/848)
 - Index: [Fixed duplicate creation when identical files are indexed in parallel](https://github.com/photoprism/photoprism/issues/5652) by [@knowald](https://github.com/knowald)
 - Index: [Improved indexing to record original file names only for imported files](https://github.com/photoprism/photoprism/issues/5668)
-- Settings: [Added a "Collections" tab to configure album download settings](https://github.com/photoprism/photoprism/issues/848)
-- Sharing: [Fixed downloading a single image from a shared folder, moment, calendar, or region](https://github.com/photoprism/photoprism/issues/5727)
-- Sharing: [Fixed creating a share link as a non-admin user](https://github.com/photoprism/photoprism/issues/5748)
-- Sharing: [Added sidecar files to album downloads when the option is enabled](https://github.com/photoprism/photoprism/issues/5743)
-- RAW: [Added a fallback to embedded JPEG previews for unsupported files](https://github.com/photoprism/photoprism/issues/5673)
-- JPEG XL: [Improved decoding to use libvips natively instead of the external "djxl" tool](https://github.com/photoprism/photoprism/issues/5693)
+- Index: [Added native JPEG XL decoding as an alternative to the external "djxl" tool](https://github.com/photoprism/photoprism/issues/5693)
+- Index: [Added a fallback to embedded JPEG previews for unsupported files](https://github.com/photoprism/photoprism/issues/5673)
 - Metadata: [Added support for reading GPS coordinates from XMP sidecar files](https://github.com/photoprism/photoprism/issues/4106)
 - Metadata: [Added Lens Make and Model updates via CLI and API](https://github.com/photoprism/photoprism/issues/5656) by [@keif888](https://github.com/keif888)
 - Metadata: [Added Camera Make and Model updates via CLI and API](https://github.com/photoprism/photoprism/issues/5663) by [@lastzero](https://github.com/lastzero)
@@ -63,22 +76,25 @@ What's new?
 - WebDAV: [Fixed routine sync-client folder checks being logged as errors](https://github.com/photoprism/photoprism/issues/5715)
 - Storage: [Fixed a path lookup error when resolving filesystem locations](https://github.com/photoprism/photoprism/issues/5683)
 - Storage: [Added automatic expiry for temporary download archives](https://github.com/photoprism/photoprism/commit/4bcd670c5)
-- Helm: [Added support for referencing an external database-password secret](https://github.com/photoprism/photoprism/issues/5661)
-- Docker: [Removed per-user skeleton files to reduce the image size](https://github.com/photoprism/photoprism/issues/5154) by [@alexisLefebvre](https://github.com/alexisLefebvre)
 - Database: [Improved error logging to capture connection issues](https://github.com/photoprism/photoprism/issues/5637)
 - Database: [Upgraded config examples from MariaDB 11.8 to 12.3 (LTS)](https://github.com/photoprism/photoprism/issues/5705)
 - Database: [Fixed byte truncation to be rune-safe for all text columns](https://github.com/photoprism/photoprism/issues/5638)
 - Security: [Added a feature flag to disable app passwords](https://github.com/photoprism/photoprism/issues/5647) by [@lastzero](https://github.com/lastzero)
-- Security: [Hardened preview and download token handling when sessions end](https://github.com/photoprism/photoprism/issues/5733)
-- Security: [Improved the audit log to record download archive activity](https://github.com/photoprism/photoprism/commit/de7e4e86e)
-- Security: [Hardened WebDAV sync and index paths to stay within their base directory](https://github.com/photoprism/photoprism/issues/5735)
-- Security: [Hardened WebDAV file locking to release stale locks after a bounded time](https://github.com/photoprism/photoprism/issues/5736)
-- Security: [Hardened image processing to block network requests and unsafe file coders](https://github.com/photoprism/photoprism/issues/5669)
+- Security: [Added signed download tokens and improved preview token handling](https://github.com/photoprism/photoprism/issues/5733)
+- Security: [Hardened WebDAV sync and index](https://github.com/photoprism/photoprism/issues/5735) and [file locking](https://github.com/photoprism/photoprism/issues/5736)
 - Security: [Upgraded `libheif` from v1.22.2 to v1.23.1 (CVE-2026-50142)](https://github.com/photoprism/photoprism/issues/5653)
-- Security: [Upgraded Vitest to v4 and Vite to v8 to remove esbuild dependency](https://github.com/photoprism/photoprism/issues/5659)
 - Security: [Upgraded Go from v1.26.3 to v1.26.5](https://github.com/golang/go/issues?q=milestone%3AGo1.26.5) and [ONNX Runtime to v1.26.0](https://github.com/photoprism/photoprism/commit/1fad248031eca0ae80f1bb7b122535e79852558b)
-- Translations: [Improved French](https://docs.photoprism.app/developer-guide/translations-weblate/) by [@jean-louis67](https://github.com/jean-louis67)
-- Translations: [Improved Hebrew](https://docs.photoprism.app/developer-guide/translations-weblate/) by [@avma](https://github.com/avma)
+- Docker: [Removed per-user skeleton files to reduce the image size](https://github.com/photoprism/photoprism/issues/5154) by [@alexisLefebvre](https://github.com/alexisLefebvre)
+- Helm: [Added support for referencing an external database-password secret](https://github.com/photoprism/photoprism/issues/5661)
+- Translations: [Improved French](https://docs.photoprism.app/developer-guide/translations-weblate/) by [@jean-louis67](https://github.com/jean-louis67), and [Hebrew](https://docs.photoprism.app/developer-guide/translations-weblate/) by [@avma](https://github.com/avma)
+
+!!! note ""
+    To benefit from the metadata improvements on your existing library, we recommend performing one
+    complete [re-index](user-guide/library/originals.md) after upgrading. Note that manually marking
+    faces on 360° content is not yet supported.
+
+!!! info ""
+    Missing [user interface translations](https://translate.photoprism.app/projects/photoprism/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.
 
 ### June 1, 2026
 <span class="build">Build 260601-a7d098548</span>
@@ -97,9 +113,6 @@ What's new?
 - Security: [Reinforced user profile endpoint authorization checks](https://github.com/photoprism/photoprism/issues/5619) by [@geo-chen](https://github.com/geo-chen)
 - Security: [Removed Pebble binary from Ubuntu base images (CVE-2026-39821)](https://github.com/photoprism/photoprism/issues/5620)
 - Security: [Upgraded `libheif` from v1.21.2 to v1.22.2 (17 CVE fixes)](https://github.com/photoprism/photoprism/issues/5621)
-
-!!! info ""
-    Missing [user interface translations](https://translate.photoprism.app/projects/photoprism/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.
 
 ### May 23, 2026
 <span class="build">Build 260523-0544f71c1</span>

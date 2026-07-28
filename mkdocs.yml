@@ -127,6 +127,7 @@ nav:
     - Settings:
       - General: user-guide/settings/general.md
       - Content: user-guide/settings/library.md
+      - Collections: user-guide/settings/collections.md
       - Advanced: user-guide/settings/advanced.md
       - Services: user-guide/settings/sync.md
       - Account: user-guide/settings/account.md

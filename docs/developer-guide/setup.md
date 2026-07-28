@@ -109,6 +109,13 @@ The development environment reads optional overrides from a `.env` file in the p
 | `PHOTOPRISM_SITE_URL`  | `https://app.localssl.dev/` | Public base URL used in share links, OIDC, and PWA URIs.                                                                                           |
 | `MARIADB_PORT`         | `4001`                      | MariaDB port (exposed on the host and inside the Compose network).                                                                                 |
 | `POSTGRES_PORT`        | `4002`                      | PostgreSQL port (only active with the `postgres` or `all` profile).                                                                                |
+| `DOCKERFILE`           | `Dockerfile`                | Dockerfile used to build the development image. Point it at a variant to customize the build without editing `compose.yaml`.                       |
+
+!!! note "Custom Dockerfiles and `.dockerignore`"
+    When `DOCKERFILE` points at a variant such as `Dockerfile.custom`, BuildKit looks for a matching
+    `Dockerfile.custom.dockerignore` and uses it **instead of** `.dockerignore`, rather than merging the
+    two. A variant therefore needs its own complete ignore file. This only applies to BuildKit, which is
+    the default builder.
 
 #### Services & Profiles
 

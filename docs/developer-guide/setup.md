@@ -113,10 +113,10 @@ The development environment reads optional overrides from a `.env` file in the p
 | `DOCKERFILE`           | `Dockerfile`                               | Dockerfile used to build the development image. Point it at a variant to customize the build without editing `compose.yaml`.                                                                                         |
 
 !!! note "Custom Dockerfiles and `.dockerignore`"
-    When `DOCKERFILE` points at a variant such as `Dockerfile.custom`, BuildKit looks for a matching
-    `Dockerfile.custom.dockerignore` and uses it **instead of** `.dockerignore`, rather than merging the
-    two. A variant therefore needs its own complete ignore file. This only applies to BuildKit, which is
-    the default builder.
+    When `DOCKERFILE` points at a variant, BuildKit looks for a matching `<name>.dockerignore` and uses
+    it **instead of** `.dockerignore`, rather than merging the two, so a variant needs its own complete
+    ignore file. This only applies to BuildKit, which is the default builder. Name the variant
+    `Dockerfile.local`, which is listed in `.gitignore` and therefore stays out of your diffs.
 
 #### Services & Profiles
 

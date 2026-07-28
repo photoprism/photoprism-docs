@@ -1,4 +1,4 @@
-.PHONY: all deps fix pip build serve install replace upgrade venv install-venv upgrade-venv replace replace-venv reinstall watch deploy check-links check-links-external install-muffet muffet;
+.PHONY: all deps fix pip build serve install replace upgrade venv install-venv upgrade-venv replace replace-venv reinstall watch deploy spellcheck install-typos vale install-vale check-links check-links-external install-muffet muffet;
 
 UID := $(shell id -u)
 MUFFET_PORT ?= 8042
@@ -51,6 +51,19 @@ pull:
 push:
 	git checkout develop
 	git push origin develop
+install-typos:
+	./scripts/install-typos.sh
+spellcheck: install-typos
+	# Report-only spell check of docs/, configured in _typos.toml. To apply the suggested
+	# corrections instead of just listing them, run: ./bin/typos --write-changes docs/
+	./bin/typos docs/
+install-vale:
+	./scripts/install-vale.sh
+vale: install-vale
+	# OPTIONAL, under evaluation: prose-style linting, configured in .vale.ini. Not part of
+	# "make build" and not a gate, so a non-zero vale exit status is deliberately swallowed.
+	# See the comments in .vale.ini before acting on the output.
+	-./bin/vale docs/
 check-links:
 	# Report internal links and assets in site/ that do not resolve. Needs a build
 	# first (make build) and no network; exits non-zero when something is missing.

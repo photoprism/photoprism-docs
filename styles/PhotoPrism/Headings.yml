@@ -1,0 +1,40 @@
+extends: capitalization
+message: "'%s' should use Chicago-style title case."
+level: suggestion
+scope: heading
+match: $title
+style: Chicago
+exceptions:
+  - PhotoPrism
+  - API
+  - CLI
+  - CDN
+  - CPU
+  - DNS
+  - GPU
+  - HTTP
+  - HTTPS
+  - JSON
+  - LDAP
+  - NAS
+  - OIDC
+  - PDF
+  - PWA
+  - RAW
+  - REST
+  - SSL
+  - TLS
+  - UID
+  - URL
+  - WebDAV
+  - XMP
+  - YAML
+  - Docker
+  - ExifTool
+  - FFmpeg
+  - MariaDB
+  - SQLite
+  - TensorFlow
+  - Ollama
+  - macOS
+  - iOS

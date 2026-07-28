@@ -4,10 +4,10 @@
 
 - Install <https://github.com/techouse/sqlite3-to-mysql> on your host. (openSUSE: `zypper in python-sqlite3-to-mysql`)
 - Shutdown your current stack: `docker compose down`
-- Add the current snippet of the MariaDB to your Sqlite Photoprism docker compose with the addition of the extra `ports`
+- Add the current snippet of the MariaDB to your SQLite PhotoPrism docker compose with the addition of the extra `ports`
   section where you expose port 3306 to the Host. In my case this looked like attachment 1.
 - Start the stack again: `docker compose up -d`
-- Stop Photoprism: `docker compose stop photoprism`
+- Stop PhotoPrism: `docker compose stop photoprism`
 - On the **host** now run `sudo sqlite3mysql -f <PATH_TO_STORAGE_MOUNT>/storage/index.db -d photoprism -u root -p` and enter the MariaDB password when prompted (default is `insecure`).
 - Shutdown your current stack again: `docker compose down`
 - Edit your `compose.yaml` or `docker-compose.yml` so it uses the MariaDB database you added before. Don't forget to remove the `ports`

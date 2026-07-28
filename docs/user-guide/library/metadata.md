@@ -16,9 +16,23 @@ If you update one of these tags with external tools such as [ExifTool](https://e
 
 ### XMP Sidecar Files
 
-When a field is populated with data from an XMP sidecar file, that data is the only source for the field. This means that keywords from XMP override other keywords from PhotoPrism, such as those derived from colors or folder names.
+Many photo editors write their metadata to a standalone `.xmp` file next to the original, rather than into the original itself. PhotoPrism reads these sidecar files while indexing and gives their values priority: when a field is populated from an XMP sidecar, that data is the only source for the field.
 
-Note that the built-in reader for standalone `.xmp` sidecars is an initial proof-of-concept and only supports a subset of XMP fields; for the full picture, including the associated namespaces and the ExifTool path used for XMP embedded in media files, see [Adobe XMP](../../developer-guide/metadata/xmp.md) in the developer guide.
+Besides the title, description, copyright, camera, lens, and exposure details, the following are read from sidecar files as well:
+
+#### :material-map-marker: Location
+
+GPS coordinates and altitude are read from a sidecar and take precedence over the position embedded in the image, so geotagging a photo in Darktable, digiKam, or Lightroom updates its location in [*Places*](../organize/places.md) the next time it is indexed. Coordinates written as plain decimals, in degrees/minutes/seconds, or in Adobe's degrees-and-decimal-minutes form are all understood.
+
+#### :material-account-box: Face Regions
+
+Names you have assigned to faces in Adobe Bridge, Lightroom, digiKam, ACDSee, or Windows can be imported as [people](../organize/people.md) markers instead of being entered again in PhotoPrism. This works with both standalone sidecar files and XMP embedded in the original, and must be enabled first with [*Import Faces from XMP*](../settings/advanced.md#import-faces-from-xmp).
+
+#### :material-tag-multiple: Subject
+
+The terms in the sidecar's `dc:subject` list — the "Keywords" panel in Adobe applications — populate the *Subject* field, where multi-word terms are kept as they were written. They remain searchable and are matched against your existing [labels](../organize/labels.md).
+
+[View Supported Tags ›](https://www.photoprism.app/kb/metadata/)
 
 ### Cloud Migration
 

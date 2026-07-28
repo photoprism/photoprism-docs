@@ -75,5 +75,12 @@ site/
 
 # Apple Files
 .DS_Store
+
+# Spellcheck and prose linting (see Makefile: spellcheck, vale)
+/bin/typos
+/bin/vale
+/styles/*
+!/styles/PhotoPrism/
+
 # Link checking (see Makefile: muffet)
 /bin/muffet

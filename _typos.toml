@@ -1,0 +1,32 @@
+# Configuration for the "typos" spell checker, run via "make spellcheck".
+#
+# typos only reports words that appear in its curated typo list, so unknown words are assumed
+# to be correct and false positives are rare. The entries below cover the cases where one of
+# our own terms happens to collide with an entry in that list.
+#
+# See https://github.com/crate-ci/typos for the full configuration reference.
+
+[files]
+extend-exclude = [
+  "site/",
+  "venv/",
+  "bin/",
+]
+
+[default.extend-words]
+# File extensions and format names that look like misspelled words.
+thm = "thm"   # .thm thumbnail sidecar files
+THM = "THM"
+pn = "pn"     # .pn (Portable Network Graphics variant), and the "PN" in "PNGs"
+PN = "PN"
+
+# Parts of build version strings, commit hashes, and IDs used as examples.
+ba = "ba"     # e.g. build 210208-9e10ba69
+dbe = "dbe"   # e.g. build 260520-12dbe82d3
+
+# Personal names of contributors and cited authors.
+Mathes = "Mathes"   # Heiko Mathes
+Wirth = "Wirth"     # Niklaus Wirth
+
+# Unreferenced legacy screenshot filename; keep until the file itself is renamed or removed.
+namee = "namee"

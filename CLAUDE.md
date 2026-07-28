@@ -33,6 +33,8 @@ The German translation lives in a separate repo, `photoprism/photoprism-docs-de`
 | `make merge`      | `develop` → `deploy` merge that triggers the GitHub Actions publish pipeline                                                                                      |
 | `make img-resize` | `mogrify` to cap screenshots at `1000x860`; run after adding images to `docs/user-guide/img`, `docs/user-guide/**/img`, or `docs/getting-started/nas/img/asustor` |
 | `make fix`        | `chown`/`chmod` the tree when MkDocs can't read or write files                                                                                                    |
+| `make spellcheck` | Spell check `docs/` with `typos` (config in `_typos.toml`); installs a pinned binary into `bin/` first                                                            |
+| `make vale`       | **Optional, under evaluation:** prose-style lint of `docs/` with `vale` (config in `.vale.ini`); never a gate                                                     |
 | `make check-links` | Report internal links/assets in `site/` that do not resolve (run after a build)                                                                                 |
 | `make muffet`     | Crawl the built site with `muffet` (also checks in-page anchors); serves it locally and tears it down                                                             |
 
@@ -63,7 +65,7 @@ It **complements** the build rather than duplicating it, and the three overlap o
 Sibling copies of `scripts/check-links.js` live in `photoprism-web` and `photoprism-blog`, kept
 byte-identical apart from the header and the default build directory — fix one, copy to the others.
 
-There are no repo-wide lint or test make targets — reviewing `make watch` output for build warnings (missing files, broken links in nav, unresolved references) is the closest equivalent. (The one exception is the `llms.txt` build hook, which has its own unit tests — see below.)
+Reviewing `make watch` / `make build` output for build warnings (missing files, broken links in nav, unresolved anchors) is the main correctness check. `make spellcheck` is the one lint target intended to be relied on; `make vale` exists to evaluate prose-style linting and deliberately does not fail. The `llms.txt` build hook has its own unit tests — see below.
 
 MkDocs Material Insiders is now public on PyPI, so **no `GH_TOKEN` is required** in `.env`.
 

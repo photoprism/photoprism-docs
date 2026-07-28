@@ -56,6 +56,12 @@ When selected, all face detection and recognition features will be disabled.
 
 The corresponding [config toggle](../../getting-started/config-options.md#feature-flags) is `PHOTOPRISM_DISABLE_FACES`.
 
+### Import Faces from XMP
+When enabled, face regions and names found in XMP metadata are imported as people markers while indexing, so names
+assigned in applications such as Adobe Bridge, Lightroom, digiKam, ACDSee, or Windows do not have to be entered again.
+[Learn more ›](../library/metadata.md#face-regions)
+
+The corresponding [config option](../../getting-started/config-options.md#computer-vision) is `PHOTOPRISM_XMP_FACES`.
 
 ### Disable Places
 When selected, geo-information (latitude, longitude) will still be read (and indexed)

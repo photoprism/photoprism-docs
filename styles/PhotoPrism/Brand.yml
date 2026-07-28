@@ -1,0 +1,7 @@
+extends: substitution
+message: "Use '%s' instead of '%s'."
+level: error
+ignorecase: false
+scope: raw
+swap:
+  '\b(?:Photoprism|photoPrism|PHOTOPRISM(?!_))\b': PhotoPrism

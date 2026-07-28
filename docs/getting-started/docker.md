@@ -129,7 +129,7 @@ Our [First Steps 👣](../user-guide/first-steps.md) tutorial guides you through
 <!-- !!! note ""
     Ensure [there is enough disk space available](troubleshooting/docker.md#disk-space) for creating thumbnails and [verify filesystem permissions](troubleshooting/docker.md#file-permissions)
     before starting to index: Files in the *originals* folder must be readable, while the *storage* folder
-    including all subdirectories must be readable and writeable.
+    including all subdirectories must be readable and writable.
 
 Open the Web UI, go to *Library* and click *Start* to start indexing your pictures.
 

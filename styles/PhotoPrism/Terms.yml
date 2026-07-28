@@ -1,0 +1,23 @@
+extends: substitution
+message: "Use '%s' instead of '%s'."
+level: warning
+ignorecase: false
+swap:
+  Javascript: JavaScript
+  Typescript: TypeScript
+  Github: GitHub
+  Gitlab: GitLab
+  MacOS: macOS
+  Mac OS: macOS
+  iOs: iOS
+  Webdav: WebDAV
+  WebDav: WebDAV
+  Exiftool: ExifTool
+  Mariadb: MariaDB
+  MySql: MySQL
+  Sqlite: SQLite
+  Docker-Compose: Docker Compose
+  OpenId Connect: OpenID Connect
+  Open ID Connect: OpenID Connect
+  Kubernetes cluster: Kubernetes cluster
+  Raspberry PI: Raspberry Pi

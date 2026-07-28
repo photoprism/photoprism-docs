@@ -81,5 +81,9 @@ Download RAW image files.
 
 Download sidecar files such as XMP metadata. This is generally not recommended except for specific professional workflows.
 
+#### :material-file-download: Filename
+
+Determines how downloaded files are named: with their *Current Name*, their *Original Name*, or a *Share Friendly* name composed of the capture time and the picture title.
+
 !!! note ""
-    These settings do not affect ZIP archives when downloading full albums. To configure album downloads, advanced users can edit the `settings.yml` file in their config folder as described in our Getting Started Guide. [Learn more ›](../../getting-started/config-files/settings.md#albums)
+    These settings do not affect ZIP archives when downloading full collections. Those are configured in the [*Collections*](collections.md) settings tab. [Learn more ›](collections.md#download)

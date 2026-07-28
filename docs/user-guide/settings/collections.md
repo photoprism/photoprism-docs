@@ -57,7 +57,7 @@ dialog and pick a different *Sort Order* there.
 | [Albums](../organize/albums.md)     | Albums you create manually                          | Oldest First   |
 | [Folders](../organize/folders.md)   | Folder albums created from your directory structure | Recently Added |
 | [Moments](../organize/moments.md)   | Smart albums grouped by occasion, trip, or location | Oldest First   |
-| [Places](../organize/places.md)     | Smart albums grouped by state or region             | Newest First   |
+| Regions                             | Smart albums grouped by state or region             | Newest First   |
 | [Calendar](../organize/calendar.md) | Smart albums grouped by year and month              | Oldest First   |
 
 Available sort orders are *Newest First*, *Oldest First*, *Recently Added*, *Picture Title*, *File Name*, *File Size*,

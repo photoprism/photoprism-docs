@@ -59,7 +59,7 @@ The corresponding [config toggle](../../getting-started/config-options.md#featur
 ### Import Faces from XMP
 When enabled, face regions and names found in XMP metadata are imported as people markers while indexing, so names
 assigned in applications such as Adobe Bridge, Lightroom, digiKam, ACDSee, or Windows do not have to be entered again.
-[Learn more ›](../organize/people.md#importing-face-regions-from-xmp)
+[Learn more ›](../library/metadata.md#face-regions)
 
 The corresponding [config option](../../getting-started/config-options.md#computer-vision) is `PHOTOPRISM_XMP_FACES`.
 

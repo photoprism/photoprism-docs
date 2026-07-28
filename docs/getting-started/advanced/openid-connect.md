@@ -59,10 +59,9 @@ By default, PhotoPrism does not ask your [Identity Provider](#identity-providers
 user clicks the sign-in button. This keeps single sign-on seamless: if the user still has a session with the provider,
 they are signed in silently as the same account.
 
-That is usually what you want, with one exception. When an account is not permitted to use your instance — because it
-has not been registered, or is not a member of a required group — clicking the sign-in button again silently returns
-the same identity, and the user has no way to choose a different account without manually signing out of the provider
-first.
+That is usually what you want, with one exception. When an account is not permitted to use your instance, clicking the
+sign-in button again silently returns the same identity, and the user has no way to choose a different account without
+manually signing out of the provider first.
 
 Setting `PHOTOPRISM_OIDC_PROMPT` changes this by sending the OpenID Connect `prompt` parameter with the authorization
 request:

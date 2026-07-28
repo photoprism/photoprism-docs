@@ -22,7 +22,7 @@ It is not available on phones, where it would take up most of the screen.
 
 #### :material-chevron-right: Pages ####
 
-Scroll or swipe to move through the document, or use the :material-chevron-left: and :material-chevron-right:
+Scroll to move through the document, or use the :material-chevron-left: and :material-chevron-right:
 buttons next to the page number. To jump to a specific page, type its number into the page field and press **Enter**.
 On a keyboard, **Up**, **Down**, and **Page Down** scroll the current page.
 
@@ -43,13 +43,3 @@ the screen, press the **Left** and **Right** arrow keys, or swipe inward from th
 Documents can be added to albums and [shared](../share/index.md) like any other file. Everyone who opens the
 share link can read the shared documents in the same viewer, without being able to reach documents outside
 the shared albums.
-
-## Limitations ##
-
-- The viewer is read-only. Editing, annotating, and filling in forms are not supported.
-- Text inside a document cannot be selected or searched. Only the metadata PhotoPrism has indexed is searchable.
-- Documents have no faces, so the *People* section of the [info sidebar](info-sidebar.md) is hidden for them.
-- Very large documents with thousands of pages may take a moment to open.
-
-!!! tldr ""
-    PhotoPrism renders the cover image of a PDF with [ImageMagick](../settings/advanced.md#disable-imagemagick) while indexing, and reads its title, description, and page count with [ExifTool](../settings/advanced.md#disable-exiftool). The pages you read in the viewer are rendered by your browser, so a reasonably current browser is required.

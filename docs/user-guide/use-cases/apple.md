@@ -24,6 +24,11 @@
 - Caption
 - TakenAt Date
 - Keywords
+- GPS information
+
+Coordinates from an XMP file take precedence over the position embedded in the picture itself, so
+exported photos appear in the right location in [*Places*](../organize/places.md) after indexing.
+[Learn more ›](../library/metadata.md#xmp-sidecar-files)
 
 !!! example ""
     **Help improve these docs!** You can contribute by clicking :material-file-edit-outline: to send a pull request with your changes.

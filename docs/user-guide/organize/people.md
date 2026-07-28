@@ -75,7 +75,7 @@ There can be several reasons why a face was not detected:
 The person you just added will appear under *Recognized*
 
 !!! tip ""
-    If you have already named faces in another application such as Adobe Bridge, Lightroom, digiKam, ACDSee, or Windows, PhotoPrism can [import those names from XMP metadata](#importing-face-regions-from-xmp) while indexing instead of you entering them again.
+    If you have already named faces in another application such as Adobe Bridge, Lightroom, digiKam, ACDSee, or Windows, PhotoPrism can import those names from XMP metadata while indexing instead of you entering them again. Enable [*Import Faces from XMP*](../settings/advanced.md#import-faces-from-xmp) to use this.
 
 ## Change Cover for a Person ##
 1. Go to the [people tab](./edit.md#people) on the photo edit dialog of the photo that contains the face that should be used as the cover
@@ -195,31 +195,6 @@ The person/subject and people/subjects filters can be used with & and | (see [se
 `person:"John Doe&Jane Doe" faces:3` will show all photos with John and Jane Doe and one other person.
 
 ![Screenshot](img/people-search-2503.jpg){ class="shadow" }
-
-## Importing Face Regions from XMP ##
-
-Many photo applications store the names you assign to faces as *face regions* in [XMP metadata](../library/metadata.md#xmp-sidecar-files) — either in a standalone `.xmp` sidecar file or embedded in the picture itself. PhotoPrism can read those regions while indexing and turn them into people markers, so an existing library keeps its names when you move to PhotoPrism.
-
-Region formats written by Adobe Bridge, Lightroom, digiKam, ACDSee, Windows, and other applications that follow the same conventions are supported.
-
-### Enabling the Import ###
-
-The import is **disabled by default** for existing libraries, so a re-index never starts creating people unexpectedly. New installations set up with our `compose.yaml` have it enabled.
-
-To turn it on, enable *Import Faces from XMP* in [*Settings > Advanced*](../settings/advanced.md#import-faces-from-xmp), or set `PHOTOPRISM_XMP_FACES` to `"true"` in your [config](../../getting-started/config-options.md#computer-vision). Names are then imported the next time your files are indexed. To pick up regions in files that have already been indexed, start a [complete rescan](../library/originals.md).
-
-### What to Expect ###
-
-- Imported names are matched to your existing people by their exact name, so a region for a person you already have is added to them. Otherwise a new person is created.
-- A region that lines up with a face PhotoPrism detected itself contributes only the name. A region in a spot where nothing was detected creates an additional marker.
-- Regions **without** a name are added and flagged for review, so you can name them under *People > New*.
-- Names you assigned yourself are never overwritten by an import, and faces you have rejected are not brought back.
-- Removing a name from an XMP file also removes the imported marker on the next index, provided the file clearly states that it has no regions left. When that cannot be determined — for example because your editor removed the region container entirely — existing markers are kept rather than risking the loss of correct ones.
-
-!!! note ""
-    Face regions are read from photos only. Manually marking or importing faces on videos and 360° content is not supported.
-
-[Learn more about the supported tags ›](../../developer-guide/metadata/xmp.md#face-regions)
 
 ## Known Issues ##
 

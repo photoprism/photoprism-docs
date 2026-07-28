@@ -23,16 +23,18 @@ It defaults to `software` if no value is set or hardware transcoding fails. Plea
 
 The [`PHOTOPRISM_FFMPEG_SIZE`](../config-options.md#file-conversion) config option allows to limit the resolution of transcoded videos. It accepts the following standard sizes, while other values are automatically adjusted to the next supported size:
 
-| Size | Usage             |
-|------|-------------------|
-| 720  | SD TV, Mobile     |
-| 1280 | HD TV, SXGA       |
-| 1920 | Full HD           |
-| 2048 | DCI 2K, Tablets   |
-| 2560 | Quad HD           |
-| 3840 | 4K Ultra HD       |
-| 4096 | DCI 4K, Retina 4K |
-| 7680 | 8K Ultra HD 2     |
+| Size  | Usage             |
+|-------|-------------------|
+| 720   | SD TV, Mobile     |
+| 1280  | HD TV, SXGA       |
+| 1920  | Full HD           |
+| 2048  | DCI 2K, Tablets   |
+| 2560  | Quad HD           |
+| 3840  | 4K Ultra HD       |
+| 4096  | DCI 4K, Retina 4K |
+| 5120  | Retina 5K         |
+| 7680  | 8K Ultra HD 2     |
+| 15360 | 16K UHD           |
 
 !!! tldr ""
     When transcoding videos, the original aspect ratio is maintained and smaller videos will not be upscaled.

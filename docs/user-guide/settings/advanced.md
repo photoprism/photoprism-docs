@@ -187,6 +187,7 @@ The following overview shows the name, dimensions, and aspect ratio for each thu
 | fit_4096  | 4096  | 4096   | Preserved    | On-Demand | DCI 4K, Retina 4K |
 | fit_5120  | 5120  | 5120   | Preserved    | On-Demand | Retina 5K         |
 | fit_7680  | 7680  | 4320   | Preserved    | On-Demand | 8K Ultra HD 2     |
+| fit_15360 | 15360 | 8640   | Preserved    | On-Demand | 16K UHD           |
 
 !!! tldr ""
     Generated thumbnail files are stored in the `storage/cache/thumbnails` folder, where the path and file name depend on the size and file hash, e.g. `storage/cache/thumbnails/1/a/3/1a30c1f...9_100x100_center.jpg`.

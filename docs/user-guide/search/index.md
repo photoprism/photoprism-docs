@@ -37,7 +37,7 @@ Shows vector graphics, such as SVG and Adobe Illustrator files.
 
 Shows scanned pictures and documents.
 
-#### [Documents](filters.md#filter-reference)
+#### [Documents](../organize/documents.md)
 
 Shows PDF documents and other content classified as documents.
 

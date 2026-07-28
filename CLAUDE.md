@@ -33,6 +33,28 @@ The German translation lives in a separate repo, `photoprism/photoprism-docs-de`
 | `make merge`      | `develop` → `deploy` merge that triggers the GitHub Actions publish pipeline                                                                                      |
 | `make img-resize` | `mogrify` to cap screenshots at `1000x860`; run after adding images to `docs/user-guide/img`, `docs/user-guide/**/img`, or `docs/getting-started/nas/img/asustor` |
 | `make fix`        | `chown`/`chmod` the tree when MkDocs can't read or write files                                                                                                    |
+| `make check-links` | Report internal links/assets in `site/` that do not resolve (run after a build)                                                                                 |
+
+**Link checking — `make check-links`.** Resolves every site-relative `src`/`href`/`poster`/
+`data-src`/`srcset` in the built `site/` tree against the files on disk. No network, deterministic,
+exits non-zero on a miss. `make check-links-external` adds an off-site probe that is advisory only.
+
+It **complements** the build rather than duplicating it, and the three overlap only partly:
+
+- **The MkDocs build** validates internal `.md` links *and anchors* — `check-links` does **not**
+  check anchors, so keep reading the build output.
+- **`check-links`** catches what the build does not: missing images and other assets in the rendered
+  output, plus external links. Its external verdicts read the response body rather than trusting the
+  status code, because a 4xx carrying a full page is usually an SPA deep link that works for a real
+  visitor (reported `SOFT`), while a rendered *error* page is genuinely dead (reported `BROKEN`).
+- **[`muffet`](https://github.com/raviqqe/muffet)** (installed by the main repo's
+  `scripts/dist/install-admin-tools.sh`) crawls a *served* site and does check anchors. Point it at a
+  local preview rather than production to keep probes out of the access logs:
+  `cd site && python3 -m http.server 8001` then `muffet http://127.0.0.1:8001/`. Note it judges by
+  status code, so expect false positives on SPA deep links and bot-challenged hosts.
+
+Sibling copies of `scripts/check-links.js` live in `photoprism-web` and `photoprism-blog`, kept
+byte-identical apart from the header and the default build directory — fix one, copy to the others.
 
 There are no repo-wide lint or test make targets — reviewing `make watch` output for build warnings (missing files, broken links in nav, unresolved references) is the closest equivalent. (The one exception is the `llms.txt` build hook, which has its own unit tests — see below.)
 

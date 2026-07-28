@@ -113,7 +113,7 @@ Source: http://www.asimovinstitute.org/neural-network-zoo/
 
 ## External Resources ##
 
-- https://ai.meta.com/blog/roberta-an-optimized-method-for-pretraining-self-supervised-nlp-systems/ - An optimized method for pretraining self-supervised NLP systems
+- https://arxiv.org/abs/1907.11692 - An optimized method for pretraining self-supervised NLP systems
 - https://github.com/zihangdai/xlnet - Generalized Autoregressive Pretraining for Language Understanding
 - https://pjreddie.com/darknet/yolo/ - real time image detection
 - https://pjreddie.com/darknet/imagenet/ - using use Darknet to classify images
@@ -123,7 +123,7 @@ Source: http://www.asimovinstitute.org/neural-network-zoo/
 - https://modelzoo.co/ - Discover open source deep learning code and pretrained models
 - https://polarr.ai/ - Efficient and Immersive C.V. experiences on the edge
 - https://github.com/gildasch/gildas-ai
-- https://www.tensorflow.org/lite/guide/hosted_models
+- https://ai.google.dev/edge/litert/models/trained
 - https://github.com/tensorflow/models/tree/master/research/slim/nets/nasnet
 - https://www.wikidata.org/wiki/Wikidata:Database_download
 - https://github.com/ropensci/wikitaxa

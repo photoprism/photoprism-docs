@@ -129,7 +129,7 @@ A short note about the camera or software that produced the sidecar, which field
 - [Adobe XMP Programmers Guide](https://dl.photoprism.app/pdf/specifications/20120101-Adobe_XMP_Programmers_Guide.pdf)
 - [Adobe XMP Files Plugin SDK](https://dl.photoprism.app/pdf/specifications/20120101-Adobe_XMP_Files_Plugin_SDK.pdf)
 - [Adobe BSD 3-Clause License](https://dl.photoprism.app/pdf/specifications/20120101-Adobe_XMP_Specification_License.txt) and [XMP Toolkit SDK](https://github.com/adobe/XMP-Toolkit-SDK)
-- [ExifTool Tag Names: XMP](https://exiftool.org/TagNames/XMP.html) — authoritative list of the XMP tags ExifTool exposes.
+- [ExifTool Tag Names: XMP](https://exiftool.sourceforge.net/TagNames/XMP.html) — authoritative list of the XMP tags ExifTool exposes.
 - [XMP code in GIMP](https://gitlab.gnome.org/GNOME/gimp/tree/master/plug-ins/metadata) — mostly comments; included here for reference.
 - [Camera Raw Schema (exiv2 reference)](http://www.exiv2.org/tags-xmp-crs.html)
 

@@ -70,4 +70,4 @@ apt update && apt install -y exiftool libheif-examples
 
 ## Further Reading
 
-More recipes are maintained upstream by Phil Harvey at <https://exiftool.org/examples.html>.
+More recipes are maintained upstream by Phil Harvey at <https://exiftool.sourceforge.net/examples.html>.

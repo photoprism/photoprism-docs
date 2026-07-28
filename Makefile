@@ -1,4 +1,4 @@
-.PHONY: all deps fix pip build serve install replace upgrade venv install-venv upgrade-venv replace replace-venv reinstall watch deploy;
+.PHONY: all deps fix pip build serve install replace upgrade venv install-venv upgrade-venv replace replace-venv reinstall watch deploy check-links check-links-external;
 
 UID := $(shell id -u)
 GID := $(shell id -g)
@@ -49,6 +49,14 @@ pull:
 push:
 	git checkout develop
 	git push origin develop
+check-links:
+	# Report internal links and assets in site/ that do not resolve. Needs a build
+	# first (make build) and no network; exits non-zero when something is missing.
+	node scripts/check-links.js
+check-links-external:
+	# Also probe external URLs. Advisory only - a third party rate-limiting us is
+	# not our build breaking - so a non-zero exit is deliberately swallowed.
+	-node scripts/check-links.js --external
 img-resize:
 	mogrify -resize '1000x860>' docs/user-guide/img/*.jpg
 	mogrify -resize '1000x860>' docs/user-guide/**/img/*.jpg

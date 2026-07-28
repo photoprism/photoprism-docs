@@ -12,10 +12,12 @@
 | PHOTOPRISM_OIDC_CLIENT   | --oidc-client   |                              | client `ID` for single sign-on via OpenID Connect                                                   |
 | PHOTOPRISM_OIDC_SECRET   | --oidc-secret   |                              | client `SECRET` for single sign-on via OpenID Connect                                               |
 | PHOTOPRISM_OIDC_SCOPES   | --oidc-scopes   | openid email profile address | client authorization `SCOPES` for single sign-on via OpenID Connect                                 |
+| PHOTOPRISM_OIDC_PROMPT   | --oidc-prompt   |                              | authorization `PROMPT` for single sign-on via OpenID Connect (login, select_account, consent)       |
 | PHOTOPRISM_OIDC_PROVIDER | --oidc-provider |                              | custom identity provider `NAME`, e.g. Google                                                        |
 | PHOTOPRISM_OIDC_ICON     | --oidc-icon     |                              | custom identity provider icon `URI`                                                                 |
 | PHOTOPRISM_OIDC_REDIRECT | --oidc-redirect |                              | automatically redirect unauthenticated users to the configured identity provider                    |
 | PHOTOPRISM_OIDC_REGISTER | --oidc-register |                              | allow new users to create an account when they sign in with OpenID Connect                          |
+| PHOTOPRISM_OIDC_LOGOUT   | --oidc-logout   |                              | end the provider session on sign-out via OpenID Connect RP-initiated logout                         |
 | PHOTOPRISM_OIDC_USERNAME | --oidc-username | preferred_username           | preferred username `CLAIM` for new OpenID Connect users (preferred_username, name, nickname, email) |
 | PHOTOPRISM_OIDC_WEBDAV   | --oidc-webdav   |                              | allow new OpenID Connect users to use WebDAV when they have a role that allows it                   |
 | PHOTOPRISM_DISABLE_OIDC  | --disable-oidc  |                              | disable single sign-on via OpenID Connect, even if an identity provider has been configured         |
@@ -50,6 +52,61 @@ https://{hostname}/api/v1/oidc/redirect
     Note that both the [Site URL](../../getting-started/config-options.md#site-information) configured for your instance and the Redirect URL must start with `https://` and that their hostnames must match, as the [use of secure connections](../../getting-started/using-https.md) is a strict requirement for OpenID Connect.
 
 PhotoPrism normalizes the configured Site URL before comparing it against the Redirect URL, so the default port for the URL scheme (`:443` for `https`, `:80` for `http`) is stripped automatically. Registering the Redirect URL with or without an explicit default port produces the same value, e.g. `https://example.com/api/v1/oidc/redirect` and `https://example.com:443/api/v1/oidc/redirect` are equivalent.
+
+## Authorization Prompt
+
+By default, PhotoPrism does not ask your [Identity Provider](#identity-providers) for anything in particular when a
+user clicks the sign-in button. This keeps single sign-on seamless: if the user still has a session with the provider,
+they are signed in silently as the same account.
+
+That is usually what you want, with one exception. When an account is not permitted to use your instance — because it
+has not been registered, or is not a member of a required group — clicking the sign-in button again silently returns
+the same identity, and the user has no way to choose a different account without manually signing out of the provider
+first.
+
+Setting `PHOTOPRISM_OIDC_PROMPT` changes this by sending the OpenID Connect `prompt` parameter with the authorization
+request:
+
+| Value            | Effect                                                                      |
+|------------------|-----------------------------------------------------------------------------|
+| `login`          | The provider asks for credentials again, even if a session already exists   |
+| `select_account` | The provider shows its account chooser so a different account can be picked |
+| `consent`        | The provider shows its consent screen again                                 |
+
+You can combine values by separating them with a space, for example `PHOTOPRISM_OIDC_PROMPT="login consent"`.
+
+!!! note ""
+    The value `none` is not accepted, as it would suppress the provider's own sign-in screen and break interactive logins. Any value that is not recognized is ignored, and sign-in continues as if no prompt had been configured.
+
+## Single Sign-Out
+
+Signing out of PhotoPrism ends the PhotoPrism session. It does **not** end the session a user has with your
+[Identity Provider](#identity-providers), so clicking the sign-in button again signs them straight back in.
+
+Set `PHOTOPRISM_OIDC_LOGOUT` to `"true"` to also end the provider session on sign-out, using
+[RP-initiated logout](https://openid.net/specs/openid-connect-rpinitiated-1_0.html). The next sign-in then asks for
+credentials again. Users who sign in with a local password are not affected by this option.
+
+Two things are required on the provider side:
+
+1. Your provider must advertise an `end_session_endpoint` in its
+   [`/.well-known/openid-configuration`](#identity-providers) document. PhotoPrism reads it from there — there is no
+   logout URL to configure. If the provider advertises none, sign-out stays local.
+2. The provider's client must have the **post-logout redirect URI** registered. PhotoPrism sends users back to its own
+   login page, where `{hostname}` must be replaced by the hostname in the [Site URL](../../getting-started/config-options.md#site-information):
+
+    ```
+    https://{hostname}/library/login
+    ```
+
+    Depending on the provider, you can register that URL, or a wildcard for the same host such as
+    `https://{hostname}/*`.
+
+!!! danger ""
+    If the post-logout redirect URI has not been registered, the provider rejects the request with an error such as *"Invalid redirect uri"*, the provider session is **not** ended, and the user is left on an error page of the provider instead of the PhotoPrism login page. Register the URI before enabling this option.
+
+!!! note ""
+    Logouts started by the provider (back-channel and front-channel logout) are not implemented, so signing out at the provider does not end existing PhotoPrism sessions.
 
 ## Preferred Username
 

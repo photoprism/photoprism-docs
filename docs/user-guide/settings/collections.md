@@ -37,10 +37,10 @@ Includes sidecar files such as XMP metadata. This is generally not recommended e
 
 Determines how the files inside the archive are named:
 
-| Option         | Filenames                                                                                          |
-|----------------|-----------------------------------------------------------------------------------------------------|
-| Current Name   | The name the file currently has in your library                                                    |
-| Original Name  | The name the file had when it was uploaded or imported, falling back to the current name           |
+| Option         | Filenames                                                                                                     |
+|----------------|---------------------------------------------------------------------------------------------------------------|
+| Current Name   | The name the file currently has in your library                                                               |
+| Original Name  | The name the file had when it was uploaded or imported, falling back to the current name                      |
 | Share Friendly | A normalized name composed of the capture time and the picture title, e.g. `20260728-181530-Sunset-Beach.jpg` |
 
 !!! note ""

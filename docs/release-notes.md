@@ -24,7 +24,7 @@ A special thank you to all [our members](https://www.photoprism.app/editions/#co
 What's new?
 
 - Viewer: [Added support for 360° panorama photos and videos](https://github.com/photoprism/photoprism/pull/5623) by [@omerdduran](https://github.com/omerdduran)
-- Viewer: [Added an inline viewer for multi-page PDF documents](https://github.com/photoprism/photoprism/issues/5488)
+- Viewer: [Added an inline viewer for reading multi-page PDF documents](https://github.com/photoprism/photoprism/issues/5488)
 - AI: [Added `service_tier` setting for OpenAI-compatible service requests](https://github.com/photoprism/photoprism/issues/5725)
 - AI: [Updated Ollama default settings and default cloud model](https://github.com/photoprism/photoprism/issues/5726)
 - AI: [Improved Ollama caption and label quality by disabling reasoning output by default](https://github.com/photoprism/photoprism/issues/5728)
@@ -61,12 +61,11 @@ What's new?
 - Metadata: [Added Camera Make and Model updates via CLI and API](https://github.com/photoprism/photoprism/issues/5663) by [@lastzero](https://github.com/lastzero)
 - Metadata: [Improved support for metadata from XMP sidecar files](https://github.com/photoprism/photoprism/pull/5563) by [@omerdduran](https://github.com/omerdduran)
 - Metadata: [Improved XMP handling to map `dc:subject` to the Subject field](https://github.com/photoprism/photoprism/issues/2075)
-- PWA: [Added bloom, flower, ring, and shutter app icons](https://github.com/photoprism/photoprism/issues/5662) by [@lastzero](https://github.com/lastzero)
 - PWA: [Added glass, mint, neon, and rainbow app icons and full-bleed touch variants](https://github.com/photoprism/photoprism/issues/5737)
 - PWA: [Improved the app manifest with maskable icons, language, and screenshots](https://github.com/photoprism/photoprism/issues/5691)
-- PWA: [Added support for using the configured app icon as the iOS Home Screen icon](https://github.com/photoprism/photoprism/issues/5737)
+- PWA: [Fixed using the configured app icon as the iOS Home Screen icon](https://github.com/photoprism/photoprism/issues/5737)
 - CLI: [Improved role and auth-provider usage descriptions](https://github.com/photoprism/photoprism/issues/5667) by [@lastzero](https://github.com/lastzero)
-- CLI: [Fixed the "auth add" command when the database runs with `NO_ZERO_DATE` enabled](https://github.com/photoprism/photoprism/issues/5707)
+- CLI: [Fixed `auth add` command when the database runs with `NO_ZERO_DATE` enabled](https://github.com/photoprism/photoprism/issues/5707)
 - API: [Added an `X-Count` header to label and service search responses](https://github.com/photoprism/photoprism/issues/5649) by [@keif888](https://github.com/keif888)
 - WebDAV: [Fixed uploads reporting success even when they failed](https://github.com/photoprism/photoprism/issues/5745)
 - WebDAV: [Improved uploads to skip videos and RAW files when raw and video sync is off](https://github.com/photoprism/photoprism/issues/5744)

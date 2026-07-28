@@ -24,7 +24,7 @@ A special thank you to all [our members](https://www.photoprism.app/editions/#co
 What's new?
 
 - Viewer: [Added support for 360° panorama photos and videos](https://github.com/photoprism/photoprism/pull/5623) by [@omerdduran](https://github.com/omerdduran)
-- Viewer: [Added an inline viewer for reading multi-page PDF documents](https://github.com/photoprism/photoprism/issues/5488)
+- Viewer: [Added an inline viewer for reading multi-page PDF documents](https://github.com/photoprism/photoprism/issues/5488) by [@omerdduran](https://github.com/omerdduran)
 - AI: [Added `service_tier` setting for OpenAI-compatible service requests](https://github.com/photoprism/photoprism/issues/5725)
 - AI: [Updated Ollama default settings and default cloud model](https://github.com/photoprism/photoprism/issues/5726)
 - AI: [Improved Ollama caption and label quality by disabling reasoning output](https://github.com/photoprism/photoprism/issues/5728)
@@ -41,8 +41,8 @@ What's new?
 - Auth: [Fixed Cognito-issued ID token validation by sending a nonce during OIDC sign-in](https://github.com/photoprism/photoprism/issues/5695)
 - Auth: [Fixed the OpenID Connect sign-in button not being translated](https://github.com/photoprism/photoprism/pull/5754)
 - Auth: [Improved login, session, and OIDC error messages to appear in the current language](https://github.com/photoprism/photoprism/issues/5699)
-- People: [Added importing face markers and names from XMP sidecar files](https://github.com/photoprism/photoprism/issues/5712)
-- People: [Added importing face regions from XMP metadata in HEIC and RAW files](https://github.com/photoprism/photoprism/issues/5751)
+- People: [Added import of face regions from XMP sidecar files](https://github.com/photoprism/photoprism/issues/5712) by [@omerdduran](https://github.com/omerdduran)
+- People: [Added import of face regions from embedded XMP metadata](https://github.com/photoprism/photoprism/issues/5751) by [@omerdduran](https://github.com/omerdduran)
 - People: [Added a type-ahead cache for faster name suggestions](https://github.com/photoprism/photoprism/issues/5666) by [@lastzero](https://github.com/lastzero)
 - Places: [Fixed stacking of photos at the same location when zoomed in](https://github.com/photoprism/photoprism/issues/5643)
 - Albums: [Fixed download of sidecar files when the option is enabled](https://github.com/photoprism/photoprism/issues/5743)
@@ -56,7 +56,7 @@ What's new?
 - Index: [Added native JPEG XL decoding as an alternative to the external `djxl` tool](https://github.com/photoprism/photoprism/issues/5693)
 - Index: [Fixed duplicate creation when identical files are indexed in parallel](https://github.com/photoprism/photoprism/issues/5652) by [@knowald](https://github.com/knowald)
 - Index: [Improved indexing to record original file names only for imported files](https://github.com/photoprism/photoprism/issues/5668)
-- Metadata: [Added support for reading GPS coordinates from XMP sidecar files](https://github.com/photoprism/photoprism/issues/4106)
+- Metadata: [Added extraction of GPS coordinates from XMP sidecar files](https://github.com/photoprism/photoprism/issues/4106) by [@omerdduran](https://github.com/omerdduran)
 - Metadata: [Added Lens Make and Model updates via CLI and API](https://github.com/photoprism/photoprism/issues/5656) by [@keif888](https://github.com/keif888)
 - Metadata: [Added Camera Make and Model updates via CLI and API](https://github.com/photoprism/photoprism/issues/5663) by [@lastzero](https://github.com/lastzero)
 - Metadata: [Improved support for metadata from XMP sidecar files](https://github.com/photoprism/photoprism/pull/5563) by [@omerdduran](https://github.com/omerdduran)

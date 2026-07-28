@@ -106,7 +106,7 @@ Two things are required on the provider side:
     If the post-logout redirect URI has not been registered, the provider rejects the request with an error such as *"Invalid redirect uri"*, the provider session is **not** ended, and the user is left on an error page of the provider instead of the PhotoPrism login page. Register the URI before enabling this option.
 
 !!! note ""
-    Logouts started by the provider (back-channel and front-channel logout) are not implemented, so signing out at the provider does not end existing PhotoPrism sessions.
+    Sign-out is initiated by PhotoPrism. The provider-initiated back-channel and front-channel logout profiles are not part of this feature.
 
 ## Preferred Username
 

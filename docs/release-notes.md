@@ -13,13 +13,11 @@ Our [preview builds](getting-started/updates.md#development-preview) give you ea
 ### July 28, 2026
 <span class="build">Build 260728-bbde8f452</span>
 
-With this major new release, [equirectangular 360° photos and videos](https://github.com/photoprism/photoprism/issues/5623) can now be explored interactively. To preserve detail when zooming in, the maximum [thumbnail and video resolution has been increased to 16K](https://github.com/photoprism/photoprism/issues/5669).
+With this [major new release](https://github.com/photoprism/photoprism/releases/tag/260728-bbde8f452), [equirectangular 360° photos and videos](https://github.com/photoprism/photoprism/issues/5623) can now be explored interactively. To preserve detail when zooming in, the maximum [thumbnail and video resolution has been increased to 16K](https://github.com/photoprism/photoprism/issues/5669).
 
-A new [inline document viewer](https://github.com/photoprism/photoprism/issues/5488) makes it possible to read multi-page PDFs without downloading them first. Metadata enthusiasts benefit from enhanced XMP support, allowing GPS coordinates and face regions to be imported from both [XMP sidecar files](https://github.com/photoprism/photoprism/issues/5712) and [embedded XMP metadata](https://github.com/photoprism/photoprism/issues/5751). In addition, camera and lens make and model information can now be [edited through the CLI and API](https://github.com/photoprism/photoprism/issues/5663).
-Elsewhere, the Settings interface has been reorganized and now includes a dedicated Accessibility section, where you can, for example, prevent action menus from opening on hover. Album download and sorting options have moved to a new Collections tab.
+A new [inline document viewer](https://github.com/photoprism/photoprism/issues/5488) makes it possible to read multi-page PDFs without downloading them first. Metadata enthusiasts benefit from enhanced XMP support, allowing GPS coordinates and face regions to be imported from both [XMP sidecar files](https://github.com/photoprism/photoprism/issues/5712) and [embedded XMP metadata](https://github.com/photoprism/photoprism/issues/5751). In addition, camera and lens make and model information can now be [edited through the CLI and API](https://github.com/photoprism/photoprism/issues/5663). Elsewhere, the Settings interface has been reorganized and now includes a dedicated Accessibility section, where you can, for example, prevent action menus from opening on hover. Album download and sorting options have moved to a new Collections tab.
 
-[AI-related improvements](https://docs.photoprism.app/user-guide/ai/) include a [new `service_tier` option](https://github.com/photoprism/photoprism/issues/5725) for more cost-effective API requests, along with various [fixes and improvements for Ollama](https://github.com/photoprism/photoprism/issues/5728).
-A special thank you to all [our members](https://www.photoprism.app/editions/#compare), [contributors](https://docs.photoprism.app/developer-guide/pull-requests/), and [testers](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test) who helped make this release possible! 🌈
+[AI-related improvements](https://docs.photoprism.app/user-guide/ai/) include a [new `service_tier` option](https://github.com/photoprism/photoprism/issues/5725) for more cost-effective API requests, along with various [fixes and improvements for Ollama](https://github.com/photoprism/photoprism/issues/5728). A special thank you to all [our members](https://www.photoprism.app/editions/#compare), [contributors](https://docs.photoprism.app/developer-guide/pull-requests/), and [testers](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test) who helped make this release possible! 🌈
 
 What's new?
 
@@ -85,9 +83,7 @@ What's new?
 - Translations: [Improved French](https://docs.photoprism.app/developer-guide/translations-weblate/) by [@jean-louis67](https://github.com/jean-louis67), and [Hebrew](https://docs.photoprism.app/developer-guide/translations-weblate/) by [@avma](https://github.com/avma)
 
 !!! note ""
-    To benefit from the metadata improvements on your existing library, we recommend performing one
-    complete [re-index](user-guide/library/originals.md) after upgrading. Note that manually marking
-    faces on 360° content is not yet supported.
+    We recommend performing a [complete rescan](https://docs.photoprism.app/user-guide/library/originals/) of your library after upgrading to benefit from the improvements. Please note that manually marking faces on 360° content is not yet supported in this release.
 
 !!! info ""
     Missing [user interface translations](https://translate.photoprism.app/projects/photoprism/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.

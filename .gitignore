@@ -75,3 +75,5 @@ site/
 
 # Apple Files
 .DS_Store
+# Link checking (see Makefile: muffet)
+/bin/muffet

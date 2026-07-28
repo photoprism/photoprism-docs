@@ -34,6 +34,7 @@ The German translation lives in a separate repo, `photoprism/photoprism-docs-de`
 | `make img-resize` | `mogrify` to cap screenshots at `1000x860`; run after adding images to `docs/user-guide/img`, `docs/user-guide/**/img`, or `docs/getting-started/nas/img/asustor` |
 | `make fix`        | `chown`/`chmod` the tree when MkDocs can't read or write files                                                                                                    |
 | `make check-links` | Report internal links/assets in `site/` that do not resolve (run after a build)                                                                                 |
+| `make muffet`     | Crawl the built site with `muffet` (also checks in-page anchors); serves it locally and tears it down                                                             |
 
 **Link checking — `make check-links`.** Resolves every site-relative `src`/`href`/`poster`/
 `data-src`/`srcset` in the built `site/` tree against the files on disk. No network, deterministic,
@@ -47,11 +48,12 @@ It **complements** the build rather than duplicating it, and the three overlap o
   output, plus external links. Its external verdicts read the response body rather than trusting the
   status code, because a 4xx carrying a full page is usually an SPA deep link that works for a real
   visitor (reported `SOFT`), while a rendered *error* page is genuinely dead (reported `BROKEN`).
-- **[`muffet`](https://github.com/raviqqe/muffet)** (installed by the main repo's
-  `scripts/dist/install-admin-tools.sh`) crawls a *served* site and does check anchors. Point it at a
-  local preview rather than production to keep probes out of the access logs:
-  `cd site && python3 -m http.server 8001` then `muffet http://127.0.0.1:8001/`. Note it judges by
-  status code, so expect false positives on SPA deep links and bot-challenged hosts.
+- **`make muffet`** runs [`muffet`](https://github.com/raviqqe/muffet), which crawls a *served* site
+  and **does** check anchors. The target serves `site/` on `127.0.0.1` itself, crawls it, and tears
+  the server down, so probes never touch production access logs. Override with `MUFFET_PORT=` /
+  `MUFFET_ARGS=`. `make install-muffet` fetches a pinned, checksum-verified binary into `bin/` — no
+  Go toolchain needed. Advisory: muffet judges by status code, so expect false positives on SPA deep
+  links and bot-challenged hosts.
 
 Sibling copies of `scripts/check-links.js` live in `photoprism-web` and `photoprism-blog`, kept
 byte-identical apart from the header and the default build directory — fix one, copy to the others.

@@ -54,6 +54,11 @@ It **complements** the build rather than duplicating it, and the three overlap o
   `MUFFET_ARGS=`. `make install-muffet` fetches a pinned, checksum-verified binary into `bin/` — no
   Go toolchain needed. Advisory: muffet judges by status code, so expect false positives on SPA deep
   links and bot-challenged hosts.
+- **muffet cannot see JS-driven fragments.** It looks for an element with a matching `id`, so a
+  fragment handled in JavaScript reports as `id #x not found`. Live example on `photoprism-web`:
+  `/editions/#compare` and `/teams/#compare` are opened by `frontend/src/site/nav.js`, not by an
+  `id`, and are **not** broken. Don't silence this with `--ignore-fragments` — that would also drop
+  the anchor checking that found three genuine broken anchors here.
 
 Sibling copies of `scripts/check-links.js` live in `photoprism-web` and `photoprism-blog`, kept
 byte-identical apart from the header and the default build directory — fix one, copy to the others.

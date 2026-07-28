@@ -100,7 +100,7 @@ Go makes it easy to run work concurrently with [goroutines](https://gobyexample.
 
 ## Be Careful with Caching ##
 
-In computer science, there are two hard problems: [naming things](#naming-things-is-hard) and [cache invalidation](https://msol.io/blog/tech/youre-probably-wrong-about-caching/). Delaying caching keeps the system simple and allows tests to focus on correctness. Once the behavior is specified and verified, the cache layer becomes an easily measurable, togglable, and maintainable optimization:
+In computer science, there are two hard problems: [naming things](#naming-things-is-hard) and [cache invalidation](https://msol.io/blog/tech/youre-probably-wrong-about-caching/). Delaying caching keeps the system simple and allows tests to focus on correctness. Once the behavior is specified and verified, the cache layer becomes an easily measurable, toggleable, and maintainable optimization:
 
 - **Do it last.** First make it correct and simple, add tests and benchmarks, then add caching only where profiling shows a clear win.
 - **Keep it optional.** The app must work without the cache; never fail requests due to cache errors. Provide a build flag or env toggle to disable it during tests and troubleshooting.

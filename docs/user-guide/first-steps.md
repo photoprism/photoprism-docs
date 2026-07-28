@@ -12,7 +12,7 @@ To add new pictures, you can either copy them to the *originals* or *import* fol
 Then start [indexing](library/originals.md) or [importing](library/import.md), depending on which strategy you have chosen.
 
 !!! tldr ""
-    Ensure [there is enough disk space available](../getting-started/troubleshooting/docker.md#disk-space) for creating thumbnails and [verify filesystem permissions](../getting-started/troubleshooting/docker.md#file-permissions) before starting to index: Files in the *originals* folder must be readable, while the *storage* folder including all subdirectories must be readable and writeable.
+    Ensure [there is enough disk space available](../getting-started/troubleshooting/docker.md#disk-space) for creating thumbnails and [verify filesystem permissions](../getting-started/troubleshooting/docker.md#file-permissions) before starting to index: Files in the *originals* folder must be readable, while the *storage* folder including all subdirectories must be readable and writable.
 
 ## While indexing is in progress...
 

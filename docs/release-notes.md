@@ -18,7 +18,7 @@ With this major new release, [equirectangular 360° photos and videos](https://g
 A new [inline document viewer](https://github.com/photoprism/photoprism/issues/5488) makes it possible to read multi-page PDFs without downloading them first. Metadata enthusiasts benefit from enhanced XMP support, allowing GPS coordinates and face regions to be imported from both [XMP sidecar files](https://github.com/photoprism/photoprism/issues/5712) and [embedded XMP metadata](https://github.com/photoprism/photoprism/issues/5751). In addition, camera and lens make and model information can now be [edited through the CLI and API](https://github.com/photoprism/photoprism/issues/5663).
 Elsewhere, the Settings interface has been reorganized and now includes a dedicated Accessibility section, where you can, for example, prevent action menus from opening on hover. Album download and sorting options have moved to a new Collections tab.
 
-[AI-related improvements](user-guide/ai/index.md) include a [new `service_tier` option](https://github.com/photoprism/photoprism/issues/5725)  for more cost-effective API requests, along with various [fixes and improvements for Ollama](https://github.com/photoprism/photoprism/issues/5728).
+[AI-related improvements](https://docs.photoprism.app/user-guide/ai/) include a [new `service_tier` option](https://github.com/photoprism/photoprism/issues/5725) for more cost-effective API requests, along with various [fixes and improvements for Ollama](https://github.com/photoprism/photoprism/issues/5728).
 A special thank you to all [our members](https://www.photoprism.app/editions/#compare), [contributors](https://docs.photoprism.app/developer-guide/pull-requests/), and [testers](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test) who helped make this release possible! 🌈
 
 What's new?
@@ -79,13 +79,13 @@ What's new?
 - Database: [Improved error logging to capture connection issues](https://github.com/photoprism/photoprism/issues/5637)
 - Database: [Upgraded config examples from MariaDB 11.8 to 12.3 (LTS)](https://github.com/photoprism/photoprism/issues/5705)
 - Database: [Fixed byte truncation to be rune-safe for all text columns](https://github.com/photoprism/photoprism/issues/5638)
-- Security: [Added a feature flag to disable app passwords](https://github.com/photoprism/photoprism/issues/5647) by [@lastzero](https://github.com/lastzero)
-- Security: [Added signed download tokens and improved preview token handling](https://github.com/photoprism/photoprism/issues/5733)
-- Security: [Hardened WebDAV sync and index](https://github.com/photoprism/photoprism/issues/5735) and [file locking](https://github.com/photoprism/photoprism/issues/5736)
-- Security: [Upgraded `libheif` from v1.22.2 to v1.23.1 (CVE-2026-50142)](https://github.com/photoprism/photoprism/issues/5653)
-- Security: [Upgraded Go from v1.26.3 to v1.26.5](https://github.com/golang/go/issues?q=milestone%3AGo1.26.5) and [ONNX Runtime to v1.26.0](https://github.com/photoprism/photoprism/commit/1fad248031eca0ae80f1bb7b122535e79852558b)
 - Docker: [Removed per-user skeleton files to reduce the image size](https://github.com/photoprism/photoprism/issues/5154) by [@alexisLefebvre](https://github.com/alexisLefebvre)
 - Helm: [Added support for referencing an external database-password secret](https://github.com/photoprism/photoprism/issues/5661)
+- Security: [Added a feature flag to disable app passwords](https://github.com/photoprism/photoprism/issues/5647) by [@lastzero](https://github.com/lastzero)
+- Security: [Added signed download tokens and improved preview token handling](https://github.com/photoprism/photoprism/issues/5733)
+- Security: [Hardened WebDAV syncing, indexing](https://github.com/photoprism/photoprism/issues/5735), and [file locking](https://github.com/photoprism/photoprism/issues/5736)
+- Security: [Upgraded `libheif` from v1.22.2 to v1.23.1 (CVE-2026-50142)](https://github.com/photoprism/photoprism/issues/5653)
+- Security: [Upgraded Go from v1.26.3 to v1.26.5](https://github.com/golang/go/issues?q=milestone%3AGo1.26.5) and [ONNX Runtime to v1.26.0](https://github.com/photoprism/photoprism/commit/1fad248031eca0ae80f1bb7b122535e79852558b)
 - Translations: [Improved French](https://docs.photoprism.app/developer-guide/translations-weblate/) by [@jean-louis67](https://github.com/jean-louis67), and [Hebrew](https://docs.photoprism.app/developer-guide/translations-weblate/) by [@avma](https://github.com/avma)
 
 !!! note ""

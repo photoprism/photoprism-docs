@@ -26,7 +26,7 @@ What's new?
 - Viewer: [Added support for 360° panorama photos and videos](https://github.com/photoprism/photoprism/pull/5623) by [@omerdduran](https://github.com/omerdduran)
 - Viewer: [Added an inline viewer for multi-page PDF documents](https://github.com/photoprism/photoprism/issues/5488)
 - AI: [Added `service_tier` setting for OpenAI-compatible service requests](https://github.com/photoprism/photoprism/issues/5725)
-- AI: [Updated the Ollama default settings and default cloud model](https://github.com/photoprism/photoprism/issues/5726)
+- AI: [Updated Ollama default settings and default cloud model](https://github.com/photoprism/photoprism/issues/5726)
 - AI: [Improved Ollama caption and label quality by disabling reasoning output by default](https://github.com/photoprism/photoprism/issues/5728)
 - AI: [Improved retry handling for rate-limited (HTTP 429) vision requests](https://github.com/photoprism/photoprism/issues/5729)
 - AI: [Improved image reference validation for computer vision requests](https://github.com/photoprism/photoprism/issues/5734)

@@ -77,6 +77,6 @@ sudo apt update
 sudo apt install -y exiftool
 ```
 
-See the [Exiftool documentation](https://exiftool.org/install.html) for how to install it on other operating systems.
+See the [Exiftool documentation](https://exiftool.sourceforge.net/install.html) for how to install it on other operating systems.
 
 [^1]: If images are displayed in low resolution or slightly distorted, this may also be due to a problem with the [thumbnail cache folder](../docker-compose.md#photoprismstorage) or [your quality settings](../../user-guide/settings/advanced.md#image-quality).

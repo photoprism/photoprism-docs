@@ -86,7 +86,7 @@ What's new?
     We recommend performing a [complete rescan](https://docs.photoprism.app/user-guide/library/originals/) of your library after upgrading to benefit from the improvements. Please note that manually marking faces on 360° content is not yet supported in this release.
 
 !!! info ""
-    Missing [user interface translations](https://translate.photoprism.app/projects/photoprism/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.
+    Missing [user interface translations](https://translate.photoprism.app/engage/photoprism/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.
 
 ### June 1, 2026
 <span class="build">Build 260601-a7d098548</span>
@@ -369,7 +369,7 @@ What's new?
 ### February 24, 2025
 <span class="build">Build 250224-834c16bc7</span>
 
-This [service release](https://github.com/photoprism/photoprism/releases/tag/250224-834c16bc7) changes the [default thumbnail size](https://docs.photoprism.app/user-guide/settings/advanced/#which-thumbnails-will-be-generated) in the [Photo/Video Viewer](https://github.com/photoprism/photoprism/issues/1307) to improve loading and swiping performance, especially on mobile Retina displays. It also includes [updated translations](https://translate.photoprism.app/projects/photoprism/) and dependencies.
+This [service release](https://github.com/photoprism/photoprism/releases/tag/250224-834c16bc7) changes the [default thumbnail size](https://docs.photoprism.app/user-guide/settings/advanced/#which-thumbnails-will-be-generated) in the [Photo/Video Viewer](https://github.com/photoprism/photoprism/issues/1307) to improve loading and swiping performance, especially on mobile Retina displays. It also includes [updated translations](https://translate.photoprism.app/engage/photoprism/) and dependencies.
 
 What's new?
 
@@ -572,7 +572,7 @@ What's new?
 - Metadata: [Updated offline map data for more accurate timezone lookups](https://github.com/photoprism/go-tz)
 - Metadata: [Creation time is calculated with UTC offset if timezone is unknown](https://github.com/photoprism/photoprism/discussions/3780)
 - Config: [Creation of default certificate is skipped if HTTPS/TLS is disabled](https://github.com/photoprism/photoprism/issues/3823)
-- Translations: [Updated German, Greek, and Romanian](https://translate.photoprism.app/projects/photoprism/)
+- Translations: [Updated German, Greek, and Romanian](https://translate.photoprism.app/engage/photoprism/)
 
 ### October 11, 2023
 <span class="build">Build 231011-63f708417</span>
@@ -631,7 +631,7 @@ What's new?
 - Docker: [Added support for user ID ranges 1201-1250 and 2000-2100](https://github.com/photoprism/photoprism/issues/3719)
 - Security: [Reduced bcrypt cost for faster login on small devices](https://github.com/photoprism/photoprism/issues/3718)
 - Security: [Go has been updated to the latest stable release v1.21.1](https://github.com/golang/go/issues?q=milestone%3AGo1.21.1)
-- Translations: [Updated Chinese (Simplified and Traditional)](https://translate.photoprism.app/projects/photoprism/)
+- Translations: [Updated Chinese (Simplified and Traditional)](https://translate.photoprism.app/engage/photoprism/)
 
 ### July 19, 2023
 <span class="build">Build 230719-73fa7bbe8</span>
@@ -651,7 +651,7 @@ What's new?
 - Security: [Default to a self-signed HTTPS/TLS certificate if no other certificate is available](https://github.com/photoprism/photoprism/issues/3509)
 - Security: [Clipboard contents are cleared on logout and when user privileges change](https://github.com/photoprism/photoprism/issues/3512)
 - Security: [Go has been updated to v1.20.6, which includes bug fixes and enhancements](https://github.com/golang/go/issues?q=milestone%3AGo1.20.6)
-- Translations: [Updated Japanese](https://translate.photoprism.app/projects/photoprism/)
+- Translations: [Updated Japanese](https://translate.photoprism.app/engage/photoprism/)
 
 !!! info ""
     We recommend that you [explicitly disable TLS](https://docs.photoprism.app/getting-started/config-options/#web-server) by adding `PHOTOPRISM_DISABLE_TLS: "true"` to your `compose.yaml` or `docker-compose.yml` file when running PhotoPrism behind a reverse proxy. HTTPS could otherwise be accidentally enabled if a certificate matching the site URL is found or [`PHOTOPRISM_DEFAULT_TLS` is set to `"true"`](https://docs.photoprism.app/getting-started/config-options/#web-server). 
@@ -659,14 +659,14 @@ What's new?
 ### June 25, 2023
 <span class="build">Build 230625-17242fb07</span>
 
-This service release includes the [latest translations contributed by our community](https://translate.photoprism.app/projects/photoprism/), as well as fixes for [recently discovered issues](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+label%3Abug+sort%3Acreated-desc).
+This service release includes the [latest translations contributed by our community](https://translate.photoprism.app/engage/photoprism/), as well as fixes for [recently discovered issues](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+label%3Abug+sort%3Acreated-desc).
 
 What's new?
 
 - Albums: [Invalid entries are automatically hidden and flagged as missing](https://github.com/photoprism/photoprism/issues/3481)
 - CLI: [Fixed an issue where entering a very long password could disable the login](https://github.com/photoprism/photoprism/issues/3482)
 - Security: [Updated third-party dependencies in backend](https://github.com/photoprism/photoprism/commit/96e0981c3179a428ea4c5614ee3ffec417232d52) [and frontend](https://github.com/photoprism/photoprism/commit/ee6e6c66e388ddb901e212dc6736f5dbfa28c459)
-- Translations: [Updated Chinese (Simplified), Italian, and Japanese](https://translate.photoprism.app/projects/photoprism/)
+- Translations: [Updated Chinese (Simplified), Italian, and Japanese](https://translate.photoprism.app/engage/photoprism/)
 
 ### June 15, 2023
 <span class="build">Build 230615-90a18f6e7</span>
@@ -694,7 +694,7 @@ What's new?
 - Places: [Improved the level of detail of the freely available default world map](https://github.com/photoprism/photoprism/issues/2998#issuecomment-1575607476)
 - Places: [Added terrain mode to display the satellite, outdoor and topography maps in 3D](https://github.com/photoprism/photoprism/issues/3455)
 - Security: [Go has been updated to v1.20.5, which includes bug fixes and enhancements](https://github.com/golang/go/issues?q=milestone%3AGo1.20.5)
-- Translations: [Updated Chinese (Simplified), Italian, and Slovak](https://translate.photoprism.app/projects/photoprism/)
+- Translations: [Updated Chinese (Simplified), Italian, and Slovak](https://translate.photoprism.app/engage/photoprism/)
 
 PhotoPrism® Plus
 
@@ -714,7 +714,7 @@ What's new?
 - MariaDB: [Improved compatibility with the upcoming release 11.0](https://github.com/photoprism/photoprism/issues/3443)
 - Security: [Updated third-party dependencies in backend and frontend](https://github.com/photoprism/photoprism/commit/0ff2fee91d791f203a3c64bc0409746cd8a62a47)
 - Security: [Go has been updated to v1.20.4, which includes bug fixes and enhancements](https://github.com/golang/go/issues?q=milestone%3AGo1.20.4)
-- Translations: [Updated Chinese (Traditional), Dutch, German, and French](https://translate.photoprism.app/projects/photoprism/)
+- Translations: [Updated Chinese (Traditional), Dutch, German, and French](https://translate.photoprism.app/engage/photoprism/)
 
 PhotoPrism® Plus
 
@@ -768,7 +768,7 @@ What's new?
 - People: [Ambiguous faces are skipped when matching to improve performance](https://github.com/photoprism/photoprism/issues/3124)
 - People: [Entering names is faster with many faces tagged](https://github.com/photoprism/photoprism/issues/3151)
 - Search: [Added `id:...` filter to find pictures by Exif UID, XMP Document ID or Instance ID](https://github.com/photoprism/photoprism/issues/3035)
-- Search: [Increased batch size for better performance when loading results](https://github.com/photoprism/photoprism/ssues/3009)
+- Search: [Increased batch size for better performance when loading results](https://github.com/photoprism/photoprism/issues/3009)
 - Search: [Deleted albums are ignored when using the `unsorted` filter](https://github.com/photoprism/photoprism/issues/3051)
 - Search: [Sepia colored pictures are excluded when using the `mono` filter](https://github.com/photoprism/photoprism/issues/2657)
 - Photos: [Image orientation can be changed through the user interface](https://github.com/photoprism/photoprism/issues/464)
@@ -839,7 +839,7 @@ PhotoPrism® Plus
 ### November 18, 2022
 <span class="build">Build 221118-e58fee0fb</span>
 
-This service release includes compatibility fixes for MariaDB 10.10, the [latest translations](https://translate.photoprism.app/projects/photoprism/), a new theme, and updated dependencies.
+This service release includes compatibility fixes for MariaDB 10.10, the [latest translations](https://translate.photoprism.app/engage/photoprism/), a new theme, and updated dependencies.
 We recommend not using the `:latest` tag for the MariaDB Docker image and to [upgrade manually](getting-started/updates.md#mariadb-server) by changing the tag once we had a chance to test a new major version.
 
 What's new?
@@ -851,7 +851,7 @@ What's new?
 ### November 17, 2022
 <span class="build">Build 221117-3268c4de8</span>
 
-This update includes [video transcoding](https://docs.photoprism.app/getting-started/advanced/transcoding/) improvements and the latest [translations contributed by our community](https://translate.photoprism.app/projects/photoprism/).
+This update includes [video transcoding](https://docs.photoprism.app/getting-started/advanced/transcoding/) improvements and the latest [translations contributed by our community](https://translate.photoprism.app/engage/photoprism/).
 
 What's new?
 
@@ -862,7 +862,7 @@ What's new?
 ### November 16, 2022
 <span class="build">Build 221116-122ebfb70</span>
 
-With this update you get the [latest translations](https://translate.photoprism.app/projects/photoprism/), updated dependencies, and two metadata bug fixes. Thanks to [all who contributed](https://github.com/photoprism/photoprism/graphs/contributors)!
+With this update you get the [latest translations](https://translate.photoprism.app/engage/photoprism/), updated dependencies, and two metadata bug fixes. Thanks to [all who contributed](https://github.com/photoprism/photoprism/graphs/contributors)!
 
 What's new?
 
@@ -875,7 +875,7 @@ What's new?
 ### November 5, 2022
 <span class="build">Build 221105-7a295cab4</span>
 
-This service release provides UX improvements for the photo editing dialog and includes the latest [translations contributed by our community](https://translate.photoprism.app/projects/photoprism/). Note that [our guides now use the new `docker compose` command](https://docs.photoprism.app/getting-started/docker-compose/#step-2-start-the-server) by default. If your server does not yet support it, you can still use `docker-compose` to start and stop your instance.
+This service release provides UX improvements for the photo editing dialog and includes the latest [translations contributed by our community](https://translate.photoprism.app/engage/photoprism/). Note that [our guides now use the new `docker compose` command](https://docs.photoprism.app/getting-started/docker-compose/#step-2-start-the-server) by default. If your server does not yet support it, you can still use `docker-compose` to start and stop your instance.
 
 What's new?
 
@@ -887,7 +887,7 @@ What's new?
 ### November 4, 2022
 <span class="build">Build 221104-20d180b21</span>
 
-A small update featuring [improved NVIDIA GPU support](https://docs.photoprism.app/getting-started/advanced/transcoding/#nvidia-container-toolkit), the latest [translations contributed by our community](https://translate.photoprism.app/projects/photoprism/), and updated dependencies.
+A small update featuring [improved NVIDIA GPU support](https://docs.photoprism.app/getting-started/advanced/transcoding/#nvidia-container-toolkit), the latest [translations contributed by our community](https://translate.photoprism.app/engage/photoprism/), and updated dependencies.
 
 What's new?
 
@@ -899,7 +899,7 @@ What's new?
 ### November 3, 2022
 <span class="build">Build 221103-211eb36ea</span>
 
-With this update you'll get the latest [translations contributed by our community](https://translate.photoprism.app/projects/photoprism/), updated dependencies as well as a few minor bug fixes and improvements.
+With this update you'll get the latest [translations contributed by our community](https://translate.photoprism.app/engage/photoprism/), updated dependencies as well as a few minor bug fixes and improvements.
 
 What's new?
 
@@ -968,7 +968,7 @@ What's new?
 ### September 1, 2022
 <span class="build">Build 220901-f493607b0</span>
 
-With this update you get all the [latest translations contributed by our community](https://translate.photoprism.app/projects/photoprism/), [mobile navigation enhancements](https://dl.photoprism.app/img/ui/mobile-toolbar-navigation-open.jpg), updated dependencies and, as usual, fixes for [recently discovered issues](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+label%3Abug+sort%3Acreated-desc). Thanks to everyone involved!
+With this update you get all the [latest translations contributed by our community](https://translate.photoprism.app/engage/photoprism/), [mobile navigation enhancements](https://dl.photoprism.app/img/ui/mobile-toolbar-navigation-open.jpg), updated dependencies and, as usual, fixes for [recently discovered issues](https://github.com/photoprism/photoprism/issues?q=is%3Aissue+label%3Abug+sort%3Acreated-desc). Thanks to everyone involved!
 
 What's new?
 
@@ -996,7 +996,7 @@ What's new?
 ### July 28, 2022
 <span class="build">Build 220728-729ddd920</span>
 
-Includes indexing, metadata, and authentication enhancements, as well as [updated translations](https://translate.photoprism.app/projects/photoprism/).
+Includes indexing, metadata, and authentication enhancements, as well as [updated translations](https://translate.photoprism.app/engage/photoprism/).
 
 What's new?
 
@@ -1083,7 +1083,7 @@ This service release fixes potential issues with our new Debian 12-based Docker 
 - Docker: [Removed incorrect permission check for storage folder on startup](https://github.com/photoprism/photoprism/issues/2334)
 - Docker: [Supported User and Group ID ranges have been documented](https://github.com/photoprism/photoprism/issues/2336)
 
-**Thank you to everyone who [helped with testing](https://github.com/photoprism/photoprism/projects/5?card_filter_query=label%3Aplease-test), [signed up as a member](https://www.photoprism.app/membership/), or [contributed](https://github.com/photoprism/photoprism/graphs/contributors) in other ways! We appreciate it very much.**
+**Thank you to everyone who [helped with testing](https://github.com/orgs/photoprism/projects/5), [signed up as a member](https://www.photoprism.app/membership/), or [contributed](https://github.com/photoprism/photoprism/graphs/contributors) in other ways! We appreciate it very much.**
 
 ### May 17, 2022
 <span class="build">Build 220517-b9c68f8f</span>

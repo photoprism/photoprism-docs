@@ -118,8 +118,8 @@ Note that you do not need this composite ID to communicate with any of our API e
 | X-Count          | int    | 120      | Actual number of *files* returned                                                                                                                  |
 | X-Limit          | int    | 120      | Maximum number of *files* requested                                                                                                                |
 | X-Offset         | int    | 0        | File offset                                                                                                                                        |
-| X-Download-Token | string | 3qjg1db2 | [Security token](../../getting-started/config-options.md#security-tokens) required to download original files                                      |
-| X-Preview-Token  | string | 174utza5 | [Security token](../../getting-started/config-options.md#security-tokens) required for the [Thumbnail Image API](thumbnails.md#image-endpoint-uri) |
+| X-Download-Token | string | 3qjg1db2 | [Security token](../../getting-started/config-options.md#authentication) required to download original files                                      |
+| X-Preview-Token  | string | 174utza5 | [Security token](../../getting-started/config-options.md#authentication) required for the [Thumbnail Image API](thumbnails.md#image-endpoint-uri) |
 
 !!! example ""
     In order to fetch all results, you can perform a follow-up query if the number in the `X-Count` response header matches `X-Limit`. For this, the `offset` request parameter must be set to the number of files already returned.

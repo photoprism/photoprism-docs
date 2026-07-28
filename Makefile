@@ -1,6 +1,8 @@
-.PHONY: all deps fix pip build serve install replace upgrade venv install-venv upgrade-venv replace replace-venv reinstall watch deploy spellcheck install-typos vale install-vale;
+.PHONY: all deps fix pip build serve install replace upgrade venv install-venv upgrade-venv replace replace-venv reinstall watch deploy spellcheck install-typos vale install-vale check-links check-links-external install-muffet muffet;
 
 UID := $(shell id -u)
+MUFFET_PORT ?= 8042
+MUFFET_ARGS ?=
 GID := $(shell id -g)
 
 export VIRTUAL_ENV := $(abspath "./venv")
@@ -62,6 +64,25 @@ vale: install-vale
 	# "make build" and not a gate, so a non-zero vale exit status is deliberately swallowed.
 	# See the comments in .vale.ini before acting on the output.
 	-./bin/vale docs/
+check-links:
+	# Report internal links and assets in site/ that do not resolve. Needs a build
+	# first (make build) and no network; exits non-zero when something is missing.
+	node scripts/check-links.js
+check-links-external:
+	# Also probe external URLs. Advisory only - a third party rate-limiting us is
+	# not our build breaking - so a non-zero exit is deliberately swallowed.
+	-node scripts/check-links.js --external
+install-muffet:
+	./scripts/install-muffet.sh
+muffet: install-muffet
+	# Crawl the built site with muffet, which also validates in-page anchors that
+	# check-links does not. Served locally on purpose: crawling the live site would
+	# fill its access logs with our own checks. Advisory - muffet judges by status
+	# code, so SPA deep links and bot-challenged hosts show up as false positives.
+	@test -f site/index.html || { echo "No build found in site/ - run 'make build' first." >&2; exit 1; }
+	@cd site && python3 -m http.server $(MUFFET_PORT) --bind 127.0.0.1 >/dev/null 2>&1 & \
+	  SRV=$$!; trap 'kill $$SRV 2>/dev/null' EXIT INT TERM; sleep 2; \
+	  ./bin/muffet --max-connections 16 --buffer-size 8192 $(MUFFET_ARGS) http://127.0.0.1:$(MUFFET_PORT)/ || true
 img-resize:
 	mogrify -resize '1000x860>' docs/user-guide/img/*.jpg
 	mogrify -resize '1000x860>' docs/user-guide/**/img/*.jpg

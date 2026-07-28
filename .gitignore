@@ -81,3 +81,6 @@ site/
 /bin/vale
 /styles/*
 !/styles/PhotoPrism/
+
+# Link checking (see Makefile: muffet)
+/bin/muffet

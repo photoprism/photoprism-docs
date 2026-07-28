@@ -27,7 +27,7 @@ When you sign up, you will be asked to accept our Contributor License Agreement 
     2. Select the language you want to translate to
 
        ![Screenshot](img/WeblateChooseLanguages.png)
-    3. Open your *Dashboard* and click *Backend* (or access to the Backend by clicking [here](https://translate.photoprism.app/projects/photoprism/backend/))
+    3. Open your *Dashboard* and click *Backend* (or access to the Backend by clicking [here](https://translate.photoprism.app/engage/photoprism/))
 
       ![Screenshot](img/WeblateDashboard.png)
     4. Click on *View contributor agreement*

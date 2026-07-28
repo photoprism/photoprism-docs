@@ -35,6 +35,35 @@ The German translation lives in a separate repo, `photoprism/photoprism-docs-de`
 | `make fix`        | `chown`/`chmod` the tree when MkDocs can't read or write files                                                                                                    |
 | `make spellcheck` | Spell check `docs/` with `typos` (config in `_typos.toml`); installs a pinned binary into `bin/` first                                                            |
 | `make vale`       | **Optional, under evaluation:** prose-style lint of `docs/` with `vale` (config in `.vale.ini`); never a gate                                                     |
+| `make check-links` | Report internal links/assets in `site/` that do not resolve (run after a build)                                                                                 |
+| `make muffet`     | Crawl the built site with `muffet` (also checks in-page anchors); serves it locally and tears it down                                                             |
+
+**Link checking — `make check-links`.** Resolves every site-relative `src`/`href`/`poster`/
+`data-src`/`srcset` in the built `site/` tree against the files on disk. No network, deterministic,
+exits non-zero on a miss. `make check-links-external` adds an off-site probe that is advisory only.
+
+It **complements** the build rather than duplicating it, and the three overlap only partly:
+
+- **The MkDocs build** validates internal `.md` links *and anchors* — `check-links` does **not**
+  check anchors, so keep reading the build output.
+- **`check-links`** catches what the build does not: missing images and other assets in the rendered
+  output, plus external links. Its external verdicts read the response body rather than trusting the
+  status code, because a 4xx carrying a full page is usually an SPA deep link that works for a real
+  visitor (reported `SOFT`), while a rendered *error* page is genuinely dead (reported `BROKEN`).
+- **`make muffet`** runs [`muffet`](https://github.com/raviqqe/muffet), which crawls a *served* site
+  and **does** check anchors. The target serves `site/` on `127.0.0.1` itself, crawls it, and tears
+  the server down, so probes never touch production access logs. Override with `MUFFET_PORT=` /
+  `MUFFET_ARGS=`. `make install-muffet` fetches a pinned, checksum-verified binary into `bin/` — no
+  Go toolchain needed. Advisory: muffet judges by status code, so expect false positives on SPA deep
+  links and bot-challenged hosts.
+- **muffet cannot see JS-driven fragments.** It looks for an element with a matching `id`, so a
+  fragment handled in JavaScript reports as `id #x not found`. Live example on `photoprism-web`:
+  `/editions/#compare` and `/teams/#compare` are opened by `frontend/src/site/nav.js`, not by an
+  `id`, and are **not** broken. Don't silence this with `--ignore-fragments` — that would also drop
+  the anchor checking that found three genuine broken anchors here.
+
+Sibling copies of `scripts/check-links.js` live in `photoprism-web` and `photoprism-blog`, kept
+byte-identical apart from the header and the default build directory — fix one, copy to the others.
 
 Reviewing `make watch` / `make build` output for build warnings (missing files, broken links in nav, unresolved anchors) is the main correctness check. `make spellcheck` is the one lint target intended to be relied on; `make vale` exists to evaluate prose-style linting and deliberately does not fail. The `llms.txt` build hook has its own unit tests — see below.
 

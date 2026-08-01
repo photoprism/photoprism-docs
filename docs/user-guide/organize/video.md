@@ -18,6 +18,10 @@ You can limit a search to *Live Photos* by using the `type:live` filter or the k
 
 ![Screenshot](img/live-photo-2503.jpg){ class="shadow" }
 
+!!! tldr ""
+    Equirectangular 360° videos open in an interactive sphere viewer.
+    See [*Panoramas*](panoramas.md) to learn how to view them.
+
 ## Transcoding
 
 For maximum browser compatibility, PhotoPrism can transcode video codecs and containers [supported by FFmpeg](https://www.ffmpeg.org/documentation.html) to [MPEG-4 AVC](https://en.wikipedia.org/wiki/MPEG-4), as well as extract still images for thumbnail creation:

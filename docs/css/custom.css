@@ -488,6 +488,14 @@ img.sponsor-logo {
     margin: 25px;
 }
 
+/* VIDEOS */
+
+.md-typeset video.screencast {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 /* Common Styles */
 
 .right {

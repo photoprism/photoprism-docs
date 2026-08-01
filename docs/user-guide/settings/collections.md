@@ -4,6 +4,8 @@ The *Collections* settings tab configures how albums, folders, moments, calendar
 whether they can be downloaded as ZIP archives, which files such an archive contains, and the sort order that
 newly created collections start with.
 
+![](img/settings-collections-2607.jpg){ class="shadow" }
+
 !!! info ""
     This tab is only shown to super admins. The *Download* options additionally require the [*Download* feature](general.md#download) to be enabled in the [*General*](general.md) settings tab.
 

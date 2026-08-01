@@ -11,7 +11,7 @@ on the advanced settings page. You can also disable specific features and enable
     quality or size won't replace existing thumbnails. You can regenerate them using the 
     [command-line interface](../../getting-started/docker-compose.md#command-line-interface).
 
-![](img/settings-advanced-0912.jpg){ class="shadow" }
+![](img/settings-advanced-2607.jpg){ class="shadow" }
 
 All [config options](../../getting-started/config-options.md) can also be set in your `compose.yaml` or `docker-compose.yml`
 or via command-line parameters. Values changed through the web interface are saved in a config file stored in

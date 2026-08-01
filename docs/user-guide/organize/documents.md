@@ -14,6 +14,8 @@ filter. [Learn more ›](../search/filters.md#filter-reference)
 
 Open a document by clicking its cover in search results. The viewer loads all pages and shows the following controls:
 
+![Screenshot](img/documents-2607.jpg){ class="shadow" }
+
 #### :material-view-grid: Thumbnails ####
 
 A strip of page thumbnails is shown on the left so you can see the structure of a document at a glance and jump

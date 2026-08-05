@@ -84,3 +84,6 @@ site/
 
 # Link checking (see Makefile: muffet)
 /bin/muffet
+
+# Playwright MCP
+.playwright-mcp/

@@ -9,32 +9,29 @@ PhotoPrism can also expose its originals via WebDAV so that compatible clients o
 
 ## Add Service ##
 
-1. Go to *Settings*.
-2. Open the *Services* tab.
-3. Click *Connect*.
+1. Go to *Settings > Services*.
+2. Click *Connect*.
    ![Screenshot](img/services-connect-1-2502.jpg){ class="shadow" }
-4. Fill in the service URL, username, and password.
-5. Click *Connect*.
+3. Fill in the service URL, username, and password.
+4. Click *Connect*.
    ![Screenshot](img/services-connect-2-2502.jpg){ class="shadow" }
-6. The service is now connected to PhotoPrism.
+5. The service is now connected to PhotoPrism.
 
 
 ## Edit Connection Details ##
 
-1. Go to *Settings*.
-2. Open the *Services* tab.
-3. Click the pencil :material-pencil: icon.
-4. Edit account details and click *Save*.
+1. Go to *Settings > Services*.
+2. Click the pencil :material-pencil: icon.
+3. Edit account details and click *Save*.
    ![Screenshot](img/services-edit-2502.jpg){ class="shadow" }
 
 
 ## Edit Upload Settings ##
 
-1. Go to *Settings*.
-2. Open the *Services* tab.
-3. Click into the upload cell of your service.
+1. Go to *Settings > Services*.
+2. Click into the upload cell of your service.
    ![Screenshot](img/services-upload-1-2502.jpg){ class="shadow" }
-4. Select the folder to which photos should be uploaded and click *Save*.
+3. Select the folder to which photos should be uploaded and click *Save*.
    ![Screenshot](img/services-upload-2-2502.jpg){ class="shadow" }
 
 You can now [share albums or files with this service](../share/services-share.md).
@@ -45,14 +42,13 @@ You can now [share albums or files with this service](../share/services-share.md
 
 ## Edit Sync Settings ##
 
-1. Go to *Settings*.
-2. Open *Services* tab.
-3. Click into the sync cell of your service.
+1. Go to *Settings > Services*.
+2. Click into the sync cell of your service.
    ![Screenshot](img/services-sync-1-2502.jpg){ class="shadow" }
-4. Enable synchronization in the upper right corner.
-5. Choose a folder from your service.
-6. Choose a sync interval.
-7. Select the options that are suitable for you and click *Save*.
+3. Enable synchronization in the upper right corner.
+4. Choose a folder from your service.
+5. Choose a sync interval.
+6. Select the options that are suitable for you and click *Save*.
 
 
 ![Screenshot](img/services-sync-2-2502.jpg){ class="shadow" }

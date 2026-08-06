@@ -34,6 +34,15 @@ changed, added, or removed. This can also be automated by configuring a schedule
 !!! note ""
     While indexing, JPEG sidecar files may be created for originals in other formats such as RAW and HEIF. This is required for image classification, facial recognition, and for displaying them in a Web browser. Sidecar and thumbnail files will be added to the *storage* folder, so that your *originals* folder won't be modified.
 
+## Improving Captions & Labels
+
+PhotoPrism classifies your pictures with built-in models while indexing, so labels are available without any additional setup. For
+significantly more accurate labels and descriptive captions, you can connect a [self-hosted Ollama instance](ai/using-ollama.md), [Ollama
+Cloud](ai/ollama-cloud.md), or the [OpenAI API](ai/using-openai.md) at any time — including for pictures that have already been indexed.
+When self-hosting, we recommend a server with a GPU, as generating results takes much longer without one.
+
+[Learn more ›](ai/index.md)
+
 ## Setting up Your Devices
 
 Finally, once indexing is complete and you're happy with the results, you can configure [automatic syncing](sync/mobile-devices.md) from your phone and install the [Progressive Web App (PWA)](pwa.md) on your desktop and mobile home screens as needed.

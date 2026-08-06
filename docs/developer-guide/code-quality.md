@@ -131,7 +131,7 @@ Optimize for effectiveness before efficiency when prioritizing tasks:
 
 In contrast, a feature factory focuses on the quantity of new features rather than their quality:
 
-[![Feature Factory](https://dl.photoprism.app/img/diagrams/feature-factory.jpg)](https://x.com/johncutlefish/status/780102280162840576)
+![Feature Factory](https://dl.photoprism.app/img/diagrams/feature-factory.jpg)
 
 !!! example ""
     **It is fundamentally the confusion between effectiveness and efficiency that stands between doing the right things and doing things right.** There is surely nothing quite so useless as doing with great efficiency what should not be done at all. — <cite>[Peter Drucker](https://en.wikipedia.org/wiki/Peter_Drucker)</cite>

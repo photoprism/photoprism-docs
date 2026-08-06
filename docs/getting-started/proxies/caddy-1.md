@@ -22,8 +22,6 @@ example.com {
 
 The `tls` directive requests and renews certificates from Let’s Encrypt automatically. Use `tls internal` if you prefer to run your own CA, or `tls /path/fullchain.pem /path/privkey.pem` when supplying files manually.
 
-Refer to the [Caddy 1 documentation](https://caddyserver.com/v1/docs/websocket) for additional directives and migration tips.
-
 ### Why Use a Proxy? ###
 
 If you install PhotoPrism on a public server outside your home network, **always run it behind a secure

@@ -826,7 +826,7 @@ What's new?
 
 PhotoPrism® Plus
 
-- Auth: [Admins can manage user accounts and active sessions through the web UI](https://demo.photoprism.plus/library/admin/users) 
+- Auth: [Admins can manage user accounts and active sessions through the web UI](https://demo.photoprism.app/library/admin/users) 
 - Index: [Added file format support for SVG, AI, PS and EPS vector graphics](https://github.com/photoprism/photoprism/issues/2207)
 
 !!! info ""
@@ -1020,7 +1020,7 @@ Breaking Changes
 ### June 29, 2022
 <span class="build">Build 220629-5d7448d2</span>
 
-With this update, you'll enjoy a much faster and [smoother scrolling experience](https://github.com/photoprism/photoprism/pull/2433) as well as [direct streaming](https://github.com/photoprism/photoprism/issues/2461) of OGV, VP8, VP9, AV1, WebM and HEVC videos if they do not exceed the [configured bitrate limit](https://docs.photoprism.app/getting-started/config-options/#file-conversion). Special thanks to [Heiko Mathes](https://github.com/heikomat) and [Andre Carrera](https://github.com/acarrera94) for their contributions!
+With this update, you'll enjoy a much faster and [smoother scrolling experience](https://github.com/photoprism/photoprism/pull/2433) as well as [direct streaming](https://github.com/photoprism/photoprism/issues/2461) of OGV, VP8, VP9, AV1, WebM and HEVC videos if they do not exceed the [configured bitrate limit](https://docs.photoprism.app/getting-started/config-options/#file-conversion). Special thanks to [Heiko Mathes](https://github.com/heikomat) and Andre Carrera for their contributions!
 
 - UX: [Much faster and smoother scrolling experience in albums and search results](https://github.com/photoprism/photoprism/pull/2433)
 - Videos: [Direct streaming of OGV, VP8, VP9, AV1, WebM, and HEVC where supported](https://github.com/photoprism/photoprism/issues/2461)

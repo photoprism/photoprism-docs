@@ -22,6 +22,8 @@ plugins:
         'getting-started/freebsd.md': 'getting-started/ports/freebsd.md'
         'getting-started/first-steps.md': 'user-guide/first-steps.md'
         'user-guide/advanced/metadata.md': 'user-guide/library/metadata.md'
+        'user-guide/library/import-vs-index.md': 'user-guide/library/index.md'
+        'user-guide/library/indexing.md': 'user-guide/library/originals.md'
         'user-guide/organize/browse.md': 'user-guide/search/index.md'
         'user-guide/organize/views.md': 'user-guide/search/views.md'
         'user-guide/organize/search.md': 'user-guide/search/filters.md'

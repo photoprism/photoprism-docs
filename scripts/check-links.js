@@ -25,7 +25,7 @@
 //   unauthenticated probes hard enough to manufacture false failures, and the
 //   docs link to it heavily.
 //
-//   Sibling copies live in photoprism-web and photoprism-blog. All three are kept
+//   Sibling copies live in photoprism-docs-de, photoprism-web and photoprism-blog. All four are kept
 //   byte-identical apart from this header and the default build directory, so a fix
 //   can be copied across; the repos share no build infrastructure.
 //

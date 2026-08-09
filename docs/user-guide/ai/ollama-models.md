@@ -46,6 +46,38 @@ For languages other than English, keep the base instructions in English and add 
 
 Support varies widely by model and does not follow size or general quality. Hosted models handled German, Arabic, and Hebrew far better than any self-hosted model we measured that fits in 8 GB of VRAM. Of the self-hosted options, Gemma 4 was the weakest for non-English **labels**, despite being our recommended English default — so a non-English library is one of the cases where it is worth testing [Qwen3-VL](#qwen3-vl-labels) or a [cloud model](ollama-cloud.md) instead.
 
+## Label Name Normalization
+
+Language models return label names in whatever shape the prompt encourages, so PhotoPrism canonicalizes them before storing. The `Normalize` property on a **labels** model selects how:[^1]
+
+| Value         | `ferris wheel` is stored as | Behavior                                                                                                                         |
+|---------------|-----------------------------|----------------------------------------------------------------------------------------------------------------------------------|
+| *(unset)*     | engine default              | `phrase` for hosted models, `single-word` for everything else.                                                                   |
+| `single-word` | *Ferris*                    | Collapse to the first token that resolves against the label vocabulary, otherwise the first token.                               |
+| `phrase`      | *Ferris Wheel*              | Keep the phrase, matching it and its singular form against the vocabulary first, so `sea lions` still becomes *Sea Lion*.        |
+| `false`       | *Ferris Wheel*              | Keep exactly what the model returned, with no vocabulary mapping — `carousel` stays *Carousel* instead of becoming *Theme Park*. |
+
+`off`, `none`, `no`, and `disabled` are accepted as aliases of `false`.
+
+Only the *name* depends on the mode. Confidence and topicality thresholds, categories, and priorities apply identically in all of them, so a low-value name such as `background` is still dropped. What changes is which vocabulary rule is found: `ski-lift` inherits the stricter `ski` threshold when it collapses to *Ski*, and the general threshold when it is kept as *Ski Lift*.
+
+**The defaults differ for a measured reason.** Every multi-word label the hosted models returned in our benchmark was a real compound, at 0-2.1% of all labels, so they default to keeping phrases. Models that fit in 8 GB of VRAM returned 3-19% multi-word names and mixed real compounds with filler such as `city_name`, `text_on_sign`, and `photo list` — so they stay on `single-word`, and a model's multi-word rate is worth checking before you switch it to `phrase`.
+
+**Non-English libraries lose more than the English rate suggests**, because a compound subject is normally two words outside English. Under `single-word`, Arabic `حمار وحشي` (zebra) is reduced to `حمار` (donkey) and `عجلة دوارة` (ferris wheel) to `عجلة` (wheel); Hebrew `לונה פארק` (amusement park) becomes `לונה` (luna). If you generate labels in another language, `phrase` is usually the better choice.
+
+To keep compound names, set `Normalize: phrase` on the model **and** use a `System` prompt that does not demand single-word nouns — otherwise the model rarely returns a phrase to keep:
+
+```yaml
+Models:
+- Type: labels
+  Model: qwen3-vl:4b-instruct
+  Engine: ollama
+  Normalize: phrase
+  Service:
+    Uri: http://ollama:11434/api/generate
+    Think: "false"
+```
+
 ## Temperature, TopK, and TopP
 
 Specifying the `Temperature`, `TopK`, and `TopP` [options](index.md#options) when using Ollama models allows you to control the randomness and creativity of generative [large-language models](https://en.wikipedia.org/wiki/Large_language_model):
@@ -93,7 +125,7 @@ The following drop-in examples can be specified in your `vision.yml` file, which
 
     How many you get therefore varies by model rather than falling short of a target. In our benchmark, hosted models volunteered seven to twelve labels per image and models that fit in 8 GB of VRAM returned one to four, from the same prompt.
 
-    You *can* ask for a count — see the [Qwen3-VL label example](#qwen3-vl-labels) below — but treat it as a per-model adjustment you verify, not a fix. It roughly doubles label latency and increases multi-word names on every model that was not already at zero, and those [do not survive normalization](../../developer-guide/vision/label-generation.md#label-behavior-worth-knowing).
+    You *can* ask for a count — see the [Qwen3-VL label example](#qwen3-vl-labels) below — but treat it as a per-model adjustment you verify, not a fix. It roughly doubles label latency and increases multi-word names on every model that was not already at zero. Whether those are wasted depends on the model's [normalization mode](#label-name-normalization).
 
 ### Gemma 4: Labels
 
@@ -174,7 +206,7 @@ Why this works:
 - **Run:** `on-demand` allows manual, metadata worker, and scheduled jobs ￫ [Run Modes](index.md#run-modes).
 - **Prompt:** Ensures low latency, prevents repetition, and controls the type and number of labels returned. For other languages, see [Language Support](#language-support).
 - **`Return AT MOST 3 labels`:** A deliberate cap, and the reason the strict options do not run away. It is also restrictive: in our benchmark `qwen3-vl:4b-instruct` returned about three labels per image under this prompt, rising to about ten when asked for a range of 8-15, with subject coverage going from 75% to 97%. If you want richer labels, raise the cap — and expect roughly two to three times the latency. Read that coverage gain carefully, though: it is a recall-style measure that rewards naming the expected subject and cannot detect a confidently wrong extra label, so a model asked for more scores better partly by guessing more.
-- **`single-word noun in canonical singular form`:** Keep this instruction in any custom prompt. PhotoPrism currently reduces a multi-word label to a single token and usually keeps the wrong one — `ferris wheel` is stored as *Ferris*, `amusement park` as *Park* ([photoprism#5773](https://github.com/photoprism/photoprism/issues/5773)).
+- **`single-word noun in canonical singular form`:** Keep this instruction unless you also set `Normalize: phrase`. With the default normalization for self-hosted models, a compound name is collapsed to one token and usually the wrong one — `ferris wheel` is stored as *Ferris*, `amusement park` as *Park*. See [Label Name Normalization](#label-name-normalization).
 - **Seed:** Ensures stable labels. Our example uses the [instruct model variant](https://github.com/QwenLM/Qwen3-VL?tab=readme-ov-file#instruct-models) default.
 - **Temperature, TopP,** and **TopK:** Picks high-probability, common words, not creative synonyms.
 - **MinP:** Cuts off very low-probability tokens, which are typically those rare labels and odd phrasings you don’t want for classification.
@@ -271,3 +303,5 @@ If you don't get the expected results or notice any errors, you can re-run the c
 photoprism --log-level=trace vision run -m labels --count 1 --force
 photoprism --log-level=trace vision run -m caption --count 1 --force
 ```
+
+[^1]: Available in the next preview build and the stable release that follows it. Earlier versions always collapse a label name to a single token and ignore this property.

@@ -76,6 +76,7 @@ If a model type is omitted, PhotoPrism will use the built-in defaults for `label
 | `System` / `Prompt`     | engine defaults / empty                | Override prompts per model.                                                        |
 | `Format`                | `""`                                   | Response hint (`json`, `text`, `markdown`).                                        |
 | `Schema` / `SchemaFile` | engine defaults / empty                | Inline vs file JSON schema (labels).                                               |
+| `Normalize`[^2]         | engine default                         | Label name normalization; `single-word`, `phrase`, or `false`. Labels models only. |
 | `TensorFlow`            | engine defaults / empty                | Local TF model info (paths, tags).                                                 |
 | [`Options`](#options)   | engine defaults / empty                | Sampling/settings merged with engine defaults.                                     |
 | [`Service`](#service)   | engine defaults / empty                | Remote endpoint config (see below).                                                |
@@ -158,3 +159,4 @@ Configures the endpoint URL, method, format, and authentication for [Ollama](usi
     **Authentication:** All credentials and identifiers support `${ENV_VAR}` expansion. `Service.Key` sets `Authorization: Bearer <token>`; `Username`/`Password` injects HTTP basic authentication into the service URI when it is not already present. When `Service.Key` is empty, PhotoPrism defaults to `OPENAI_API_KEY` (OpenAI engine) or `OLLAMA_API_KEY`[^1] (Ollama engine), also honoring their `_FILE` counterparts.
 
 [^1]: Available since the [March 5, 2026 release](../../release-notes.md#march-5-2026).
+[^2]: Available in the next preview build and the stable release that follows it.

@@ -19,7 +19,7 @@ Captions and labels are **measured separately** throughout. They are different w
 
 ## Label Generation
 
-Subject **coverage** is the share of images where the label set named both the main subject and its setting. **Multi-word** is the share of label names containing a space or separator, which matters because [PhotoPrism cannot repair a compound label](label-generation.md#label-behavior-worth-knowing) after the fact.
+Subject **coverage** is the share of images where the label set named both the main subject and its setting. **Multi-word** is the share of label names containing a space or separator. It is a contract violation under `single-word` normalization, where the phrase is collapsed to one token; under `phrase` it simply counts how many compound names were returned. [Learn more ›](label-generation.md#label-behavior-worth-knowing)
 
 ### Self-Hosted, Built-In Prompt
 
@@ -63,7 +63,7 @@ The built-in prompt asks for "label objects" without stating how many, **and tha
 
 It is the largest single lever on the numbers, and it reverses the ranking above: Qwen3-VL gains the most (+22 points) and leads once the count is stated, while `qwen3.5:4b` — the strongest model on the built-in prompt — gains the least (+3) because it was already close to its ceiling.
 
-**A higher count is not automatically better output.** Coverage is a recall-style floor: it rewards naming the expected subject and cannot detect a confidently wrong extra label, so a model asked for fifteen labels scores better simply by guessing more. Nothing measured here captures precision or relevance. The cost is measured, though — roughly double the latency, and more names that break the single-word contract on every model not already at zero (`qwen3-vl:4b-instruct` 0.0% → 4.2%, `qwen3.5:4b` 1.7% → 3.5%, `minicpm-v4.5:8b` 5.6% → 8.8%), which normalization then discards. Treat it as a per-model knob for operators who want richer labels and have checked the result.
+**A higher count is not automatically better output.** Coverage is a recall-style floor: it rewards naming the expected subject and cannot detect a confidently wrong extra label, so a model asked for fifteen labels scores better simply by guessing more. Nothing measured here captures precision or relevance. The cost is measured, though — roughly double the latency, and more names that break the single-word contract on every model not already at zero (`qwen3-vl:4b-instruct` 0.0% → 4.2%, `qwen3.5:4b` 1.7% → 3.5%, `minicpm-v4.5:8b` 5.6% → 8.8%), which `single-word` normalization then collapses. Treat it as a per-model knob for operators who want richer labels and have checked the result.
 
 ### Ollama Cloud
 

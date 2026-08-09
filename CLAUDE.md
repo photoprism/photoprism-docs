@@ -22,21 +22,21 @@ The German translation lives in a separate repo, `photoprism/photoprism-docs-de`
 
 ## Common Commands (via `Makefile`)
 
-| Command           | What it does                                                                                                                                                      |
-|-------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `make deps`       | Debian/Ubuntu first-time setup: `apt` Python packages, then `make upgrade`                                                                                        |
-| `make install`    | Create `venv/` and install MkDocs Material + `requirements.txt` (no `apt`)                                                                                        |
-| `make upgrade`    | Nuke `venv/` and reinstall; use when dependencies drift or you want the latest Material                                                                           |
-| `make watch`      | Alias for `make serve` — livereload on `0.0.0.0:8000`, watches `docs/`, `overrides/`, `mkdocs.yml`                                                               |
-| `make build`      | Production render using `mkdocs.deploy.yml` → `site/` (do not commit `site/`)                                                                                     |
-| `make deploy`     | `properdocs gh-deploy --force --config-file mkdocs.deploy.yml` — emergency manual publish only                                                                    |
-| `make merge`      | `develop` → `deploy` merge that triggers the GitHub Actions publish pipeline                                                                                      |
-| `make img-resize` | `mogrify` to cap screenshots at `1000x860`; run after adding images to `docs/user-guide/img`, `docs/user-guide/**/img`, or `docs/getting-started/nas/img/asustor` |
-| `make fix`        | `chown`/`chmod` the tree when MkDocs can't read or write files                                                                                                    |
-| `make spellcheck` | Spell check `docs/` with `typos` (config in `_typos.toml`); installs a pinned binary into `bin/` first                                                            |
-| `make vale`       | **Optional, under evaluation:** prose-style lint of `docs/` with `vale` (config in `.vale.ini`); never a gate                                                     |
-| `make check-links` | Report internal links/assets in `site/` that do not resolve (run after a build)                                                                                 |
-| `make muffet`     | Crawl the built site with `muffet` (also checks in-page anchors); serves it locally and tears it down                                                             |
+| Command            | What it does                                                                                                                                                      |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `make deps`        | Debian/Ubuntu first-time setup: `apt` Python packages, then `make upgrade`                                                                                        |
+| `make install`     | Create `venv/` and install MkDocs Material + `requirements.txt` (no `apt`)                                                                                        |
+| `make upgrade`     | Nuke `venv/` and reinstall; use when dependencies drift or you want the latest Material                                                                           |
+| `make watch`       | Alias for `make serve` — livereload on `0.0.0.0:8000`, watches `docs/`, `overrides/`, `mkdocs.yml`                                                                |
+| `make build`       | Production render using `mkdocs.deploy.yml` → `site/` (do not commit `site/`)                                                                                     |
+| `make deploy`      | `properdocs gh-deploy --force --config-file mkdocs.deploy.yml` — emergency manual publish only                                                                    |
+| `make merge`       | `develop` → `deploy` merge that triggers the GitHub Actions publish pipeline                                                                                      |
+| `make img-resize`  | `mogrify` to cap screenshots at `1000x860`; run after adding images to `docs/user-guide/img`, `docs/user-guide/**/img`, or `docs/getting-started/nas/img/asustor` |
+| `make fix`         | `chown`/`chmod` the tree when MkDocs can't read or write files                                                                                                    |
+| `make spellcheck`  | Spell check `docs/` with `typos` (config in `_typos.toml`); installs a pinned binary into `bin/` first                                                            |
+| `make vale`        | **Optional, under evaluation:** prose-style lint of `docs/` with `vale` (config in `.vale.ini`); never a gate                                                     |
+| `make check-links` | Report internal links/assets in `site/` that do not resolve (run after a build)                                                                                   |
+| `make muffet`      | Crawl the built site with `muffet` (also checks in-page anchors); serves it locally and tears it down                                                             |
 
 **Link checking — `make check-links`.** Resolves every site-relative `src`/`href`/`poster`/
 `data-src`/`srcset` in the built `site/` tree against the files on disk. No network, deterministic,

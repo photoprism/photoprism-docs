@@ -50,22 +50,22 @@ As an alternative to the [web user interface](index.md), you can [run the follow
 
 The `users add` and `users mod` commands support these flags to set or change account properties. The list below shows the baseline flags from the public repository and the edition-specific extensions currently provided by Plus and Pro:
 
-| Command Flag                         | Description                                                         |
-|--------------------------------------|---------------------------------------------------------------------|
-| `--name NAME`, `-n NAME`             | full NAME for display in the interface                              |
-| `--email EMAIL`, `-m EMAIL`          | unique EMAIL address of the user                                    |
-| `--password PASSWORD`, `-p PASSWORD` | PASSWORD for local authentication (8-72 characters)                 |
-| `--role value`, `-r value`           | user account ROLE accepted by the current edition                   |
-| `--auth PROVIDER`, `-A PROVIDER`     | authentication PROVIDER supported by the current edition            |
-| `--auth-id ID`                       | authentication ID e.g. Subject ID or Distinguished Name (DN)        |
-| `--superadmin`, `--super`            | make user super admin with full access                              |
-| `--no-login`, `-l`                   | disable login on the web interface                                  |
-| `--webdav`, `-w`                     | allow to sync files via WebDAV                                      |
-| `--disable-2fa`                      | deactivate two-factor authentication                                |
-| `--upload-path value`, `-u value`    | upload files to this subfolder in Plus and Pro                      |
-| `--scope SCOPES`, `-s SCOPES`        | set a user authorization scope in Pro                               |
-| `--attr ATTRIBUTES`, `-a ATTRIBUTES` | set custom user attributes in Pro                                   |
-| `--base-path value`, `-d value`      | restrict search to this originals folder in Pro                     |
+| Command Flag                         | Description                                                  |
+|--------------------------------------|--------------------------------------------------------------|
+| `--name NAME`, `-n NAME`             | full NAME for display in the interface                       |
+| `--email EMAIL`, `-m EMAIL`          | unique EMAIL address of the user                             |
+| `--password PASSWORD`, `-p PASSWORD` | PASSWORD for local authentication (8-72 characters)          |
+| `--role value`, `-r value`           | user account ROLE accepted by the current edition            |
+| `--auth PROVIDER`, `-A PROVIDER`     | authentication PROVIDER supported by the current edition     |
+| `--auth-id ID`                       | authentication ID e.g. Subject ID or Distinguished Name (DN) |
+| `--superadmin`, `--super`            | make user super admin with full access                       |
+| `--no-login`, `-l`                   | disable login on the web interface                           |
+| `--webdav`, `-w`                     | allow to sync files via WebDAV                               |
+| `--disable-2fa`                      | deactivate two-factor authentication                         |
+| `--upload-path value`, `-u value`    | upload files to this subfolder in Plus and Pro               |
+| `--scope SCOPES`, `-s SCOPES`        | set a user authorization scope in Pro                        |
+| `--attr ATTRIBUTES`, `-a ATTRIBUTES` | set custom user attributes in Pro                            |
+| `--base-path value`, `-d value`      | restrict search to this originals folder in Pro              |
 
 !!! note ""
     Option availability depends on the edition you run. Our Community Edition provides the baseline command set, while PhotoPrism Plus and Pro add more flags and account-management capabilities. Use `photoprism users add --help` and `photoprism users mod --help` on your instance to see the exact options supported by that build.
@@ -132,7 +132,7 @@ You can combine it with these flags to change the output format and the maximum 
 
 ### Example Report
 
-| Client IP  | Username | Realm | Status |     Last Login      | Failed At |
+| Client IP  | Username | Realm | Status | Last Login          | Failed At |
 |------------|----------|-------|--------|---------------------|-----------|
 | 172.19.0.1 | user     | api   | OK     | 2023-02-03 07:17:46 |           |
 | 172.19.0.1 | viewer   | api   | OK     | 2023-02-03 07:16:55 |           |

@@ -345,8 +345,8 @@ The currently supported user ID ranges are 0, 33, 50-99, 500-600, 900-1250, and 
 | *Show Migration Status*                                | `docker compose exec photoprism photoprism migrations ls`     |
 | *Repeat Failed Migrations*                             | `docker compose exec photoprism photoprism migrations run -f` |
 | *Reset Database*                                       | `docker compose exec photoprism photoprism reset --yes`       |
-| *Backup Database*                                      | `docker compose exec photoprism photoprism backup -i -f`      |  
-| *Restore Database*                                     | `docker compose exec photoprism photoprism restore -i -f`     |  
+| *Backup Database*                                      | `docker compose exec photoprism photoprism backup -i -f`      |
+| *Restore Database*                                     | `docker compose exec photoprism photoprism restore -i -f`     |
 | *Change Password*                                      | `docker compose exec photoprism photoprism passwd [username]` |
 | *Show User Management Commands*                        | `docker compose exec photoprism photoprism users help`        |
 | *Reset User Accounts*                                  | `docker compose exec photoprism photoprism users reset --yes` |
@@ -356,9 +356,9 @@ The currently supported user ID ranges are 0, 33, 50-99, 500-600, 900-1250, and 
 | *Reset People & Faces*                                 | `docker compose exec photoprism photoprism faces reset -f`    |
 | *Transcode Videos to AVC*                              | `docker compose exec photoprism photoprism convert`           |
 | *Regenerate Thumbnails*                                | `docker compose exec photoprism photoprism thumbs -f`         |
-| [*Update Index*](../user-guide/library/originals.md)   | `docker compose exec photoprism photoprism index --cleanup`   |  
-| [*Move to Originals*](../user-guide/library/import.md) | `docker compose exec photoprism photoprism import [path]`     |  
-| [*Copy to Originals*](../user-guide/library/import.md) | `docker compose exec photoprism photoprism cp [path]`         |  
+| [*Update Index*](../user-guide/library/originals.md)   | `docker compose exec photoprism photoprism index --cleanup`   |
+| [*Move to Originals*](../user-guide/library/import.md) | `docker compose exec photoprism photoprism import [path]`     |
+| [*Copy to Originals*](../user-guide/library/import.md) | `docker compose exec photoprism photoprism cp [path]`         |
 
 *Note that our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible distributions.*
 

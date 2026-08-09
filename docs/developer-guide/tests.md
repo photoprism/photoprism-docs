@@ -145,17 +145,17 @@ Our goal was to implement UI acceptance tests using JavaScript, so that frontend
 To make a final decision, we compared  [TestCafe](https://devexpress.github.io/testcafe/), [Cypress](https://www.cypress.io/) and [Nightwatch.js](https://nightwatchjs.org/).
 We agreed on using TestCafe as tests were the most stable and pretty fast (because no long timeouts are needed).
 
-|Feature | TestCafe | Cypress | Nightwatch.js|
-|------- | -------- | ------- |------------- |
-|Supported Browsers Local | Chrome,<br> Firefox,<br> Opera,<br> Safari,<br> Internet Explorer,<br> Microsoft Edge,<br> Google Chrome Canary,<br> Chromium  |Chrome,<br> Chromium,<br> Chrome Canary,<br> Electron | Geckodriver,<br> Chromedriver,<br> Microsoft Webdriver,<br> Safaridriver|
-|Supported Browsers Headless | Chrome,<br> Firefox | Electron | Problems running headless |
-|Continuous Integration Support | yes | yes | yes|
-|Setup | easy via npm | easy via npm | easy via npm |
-|Usability | +++ |+++ | ++ |
-|Speed (3 tests) |2 min (headless chrome and firefox)<br> 1 min (only chrome headless)<br> 1 min (chrome headed)|5 min (headless electron)<br> 2,5 min (chrome headed)|7 min (chrome headed)<br> headless not working |
-|Stability | nice | unstable --> waiting times needed | unstable --> waiting times needed|
-|Documentation | +++ | ++ | ++|
-|Notes |easy to find elements |easy to find elements |additional library needed to find selectors by text|
+| Feature                        | TestCafe                                                                                                                      | Cypress                                               | Nightwatch.js                                                            |
+|--------------------------------|-------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|--------------------------------------------------------------------------|
+| Supported Browsers Local       | Chrome,<br> Firefox,<br> Opera,<br> Safari,<br> Internet Explorer,<br> Microsoft Edge,<br> Google Chrome Canary,<br> Chromium | Chrome,<br> Chromium,<br> Chrome Canary,<br> Electron | Geckodriver,<br> Chromedriver,<br> Microsoft Webdriver,<br> Safaridriver |
+| Supported Browsers Headless    | Chrome,<br> Firefox                                                                                                           | Electron                                              | Problems running headless                                                |
+| Continuous Integration Support | yes                                                                                                                           | yes                                                   | yes                                                                      |
+| Setup                          | easy via npm                                                                                                                  | easy via npm                                          | easy via npm                                                             |
+| Usability                      | +++                                                                                                                           | +++                                                   | ++                                                                       |
+| Speed (3 tests)                | 2 min (headless chrome and firefox)<br> 1 min (only chrome headless)<br> 1 min (chrome headed)                                | 5 min (headless electron)<br> 2,5 min (chrome headed) | 7 min (chrome headed)<br> headless not working                           |
+| Stability                      | nice                                                                                                                          | unstable --> waiting times needed                     | unstable --> waiting times needed                                        |
+| Documentation                  | +++                                                                                                                           | ++                                                    | ++                                                                       |
+| Notes                          | easy to find elements                                                                                                         | easy to find elements                                 | additional library needed to find selectors by text                      |
 
 Other test libraries and frameworks we currently don't use:
 

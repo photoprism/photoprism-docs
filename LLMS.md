@@ -5,10 +5,10 @@
 This site publishes two plain-text files for AI agents and LLM crawlers, following
 the [llms.txt convention](https://llmstxt.org/):
 
-| File                                              | Purpose                                                                 |
-|---------------------------------------------------|-------------------------------------------------------------------------|
-| <https://docs.photoprism.app/llms.txt>            | Curated, machine-readable **index** of the whole documentation site.    |
-| <https://docs.photoprism.app/llms-full.txt>       | Full-text **Markdown dump** of the User Guide and Getting Started pages. |
+| File                                        | Purpose                                                                  |
+|---------------------------------------------|--------------------------------------------------------------------------|
+| <https://docs.photoprism.app/llms.txt>      | Curated, machine-readable **index** of the whole documentation site.     |
+| <https://docs.photoprism.app/llms-full.txt> | Full-text **Markdown dump** of the User Guide and Getting Started pages. |
 
 They mirror the equivalent files on the marketing website
 (<https://www.photoprism.app/llms.txt>), which are produced by Hugo. Because this
@@ -84,12 +84,12 @@ dump either.
 
 All tunable values are constants at the top of `hooks/llmstxt.py`:
 
-| Constant             | Effect                                                                   |
-|----------------------|--------------------------------------------------------------------------|
+| Constant             | Effect                                                                                                                                                      |
+|----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `FULL_TEXT_SECTIONS` | Top-level nav sections dumped in full into `llms-full.txt`. Default: `("Getting Started", "User Guide")`. The `llms.txt` index always covers every section. |
-| `TITLE`              | `#` heading at the top of both files.                                     |
-| `DESCRIPTION`        | The `>` one-line description.                                             |
-| `INTRO`              | The prose paragraph after the description.                                |
+| `TITLE`              | `#` heading at the top of both files.                                                                                                                       |
+| `DESCRIPTION`        | The `>` one-line description.                                                                                                                               |
+| `INTRO`              | The prose paragraph after the description.                                                                                                                  |
 
 To include another section in the full dump (e.g. the Developer Guide), add its
 top-level nav title to `FULL_TEXT_SECTIONS`.

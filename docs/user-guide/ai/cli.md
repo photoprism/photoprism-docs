@@ -11,11 +11,11 @@ docker compose exec photoprism photoprism vision ls
 
 You can combine it with these flags to change the output format:
 
-| Command Flag | Description                            |
-|--------------|----------------------------------------|
-| `--md, -m`   | format as machine-readable Markdown    |
-| `--csv, -c`  | export as semicolon separated values   |
-| `--tsv, -t`  | export as tab separated values         |
+| Command Flag | Description                          |
+|--------------|--------------------------------------|
+| `--md, -m`   | format as machine-readable Markdown  |
+| `--csv, -c`  | export as semicolon separated values |
+| `--tsv, -t`  | export as tab separated values       |
 
 ## Run Vision Models
 
@@ -27,12 +27,12 @@ photoprism vision run [options] [filter]
 
 ### Command Options
 
-| Command Flag                  | Description                                                                                                                     |
-|-------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| `--models MODELS`, `-m MODELS`| computer vision MODELS to run, e.g. caption, labels, or nsfw (default: "caption")                                               |
-| `--count NUMBER`, `-n NUMBER` | maximum NUMBER of pictures to be processed (default: 100000)                                                                    |
-| `--source TYPE`, `-s TYPE`    | custom data source TYPE (auto, default, image, marker, ollama, openai, vision) (default: "image")                              |
-| `--force`, `-f`               | force existing data to be updated if the model supports it and the source priority is equal to or higher (default: false)      |
+| Command Flag                   | Description                                                                                                               |
+|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|
+| `--models MODELS`, `-m MODELS` | computer vision MODELS to run, e.g. caption, labels, or nsfw (default: "caption")                                         |
+| `--count NUMBER`, `-n NUMBER`  | maximum NUMBER of pictures to be processed (default: 100000)                                                              |
+| `--source TYPE`, `-s TYPE`     | custom data source TYPE (auto, default, image, marker, ollama, openai, vision) (default: "image")                         |
+| `--force`, `-f`                | force existing data to be updated if the model supports it and the source priority is equal to or higher (default: false) |
 
 To generate captions for all photos in your library, you can run:
 

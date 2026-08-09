@@ -40,6 +40,13 @@ Subject **coverage** is the share of images where the label set named both the m
 
 Bigger is not reliably better: `qwen3.5:4b` beat both the `2b` and `9b` tiers of its own family. Within Gemma 4 the two variants split by metric rather than by size — `gemma4:latest` (e4b) leads on coverage, while the smaller `gemma4:e2b` returns more labels per image and is faster.
 
+!!! warning "Coverage Cannot See a Confidently Wrong Name"
+    Coverage rewards naming the subject and its setting. It has no way to tell that a plausible name is the *wrong* one, so a model can score well while consistently mislabeling a subject.
+
+    The Gemma 4 family does exactly this on animals. Both `gemma4:e2b` and `gemma4:latest` label the benchmark cheetah a **leopard** — in English, German, Arabic and Hebrew, on every run, in labels and captions alike. That is systematic, not an occasional slip. Both also captioned a penguin colony as *seals* ("Seals rest on the rocky shore"), where every other self-hosted model tested — including the 752 M `minicpm-v4.6:1b` — said penguins, and both read the ski jumper as a snowboarder.
+
+    Gemma's strengths still hold: fastest self-hosted captioner, and the only family that never emitted a multi-word label in either profile. But on identifying a subject it is behind Qwen3-VL at a comparable size, which is the trade-off to weigh if your library is heavy on wildlife or other uncommon subjects.
+
 ### Self-Hosted, With a Label Count in the Prompt
 
 The built-in prompt asks for "label objects" without stating how many, and self-hosted models under-generate as a result. Adding an explicit range (the [Qwen3-VL example](../../user-guide/ai/ollama-models.md#qwen3-vl-labels) shows the shape) multiplied the label set by 1.9–3.5× and raised coverage on **every** model tested, at 1.7–2.8× the latency:

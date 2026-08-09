@@ -1,119 +1,135 @@
 # Vision Model Comparison
 
 !!! note ""
-    Additional [guidance with specific configuration examples](../../user-guide/ai/ollama-models.md) can be found in our User Guide. [Learn more ›](../../user-guide/ai/ollama-models.md)
+    This page compares models. For configuration examples you can copy into `vision.yml`, see [Ollama Models](../../user-guide/ai/ollama-models.md) in the User Guide. [Learn more ›](../../user-guide/ai/ollama-models.md)
 
-!!! tip "Newer Models Available"
-    The evaluation below compares **Qwen2.5-VL** and **Gemma 3**, which were the leading vision-capable Ollama models when the tests were conducted. Since then, Google has released [**Gemma 4**](https://ollama.com/library/gemma4) (a drop-in replacement that runs at similar latency) and Alibaba has released [**Qwen3-VL**](https://ollama.com/library/qwen3-vl). A newer community variant, [**`frob/qwen3.5-instruct:4b`**](https://ollama.com/frob/qwen3.5-instruct), is also a capable alternative — it uses the same Options profile as `qwen3-vl:4b-instruct` and, in our spot-checks, has shown a quality edge on less-common subjects. For currently recommended models and configuration examples, see [Ollama Models](../../user-guide/ai/ollama-models.md) in the User Guide.
+## What Was Measured
+
+All figures on this page come from a single benchmark run on **August 8, 2026**, using **Ollama 0.32.6** at a 4096-token context, over a fixed set of 16 images at 720 px — the resolution PhotoPrism sends. The images span wildlife, pets, macro, food, people, sport, vehicles, architecture, cityscape, OCR, and a UI screenshot, and several are deliberately adversarial.
+
+- **Self-hosted models** ran on an **NVIDIA RTX 4060 (8 GB VRAM, ~7 GB free)**. Every model saw the same daemon, so the self-hosted numbers are valid *relative to each other*.
+- **Cloud models** were proxied through the same instance, so their latencies include one extra network hop.
+
+Captions and labels are **measured separately** throughout. They are different workloads with different failure modes, and a model that is good at one is not necessarily good at the other.
+
+!!! warning "Read Latency as Approximate, Especially for Cloud Models"
+    Repeating the cloud table a few hours apart on the same day moved one model's label latency from 1.6 s to 10.8 s while its output barely changed. Self-hosted timings reproduced to within a tenth of a second across the same pair of runs. **Rank hosted models on output quality; measure latency yourself when it matters.**
+
+    The self-hosted run also predates capture of the daemon's KV cache and flash-attention settings, so these numbers are not directly comparable against a differently tuned instance. Qwen models are the most sensitive to KV cache quantization — re-measure those locally before acting on them.
+
+## Label Generation
+
+Subject **coverage** is the share of images where the label set named both the main subject and its setting. **Multi-word** is the share of label names containing a space or separator, which matters because [PhotoPrism cannot repair a compound label](label-generation.md#label-behavior-worth-knowing) after the fact.
+
+### Self-Hosted, Built-In Prompt
+
+| Model                           | Size   | Labels p50 | Labels/img | Multi-word | Coverage |
+|:--------------------------------|:-------|-----------:|-----------:|-----------:|---------:|
+| `qwen3.5:4b`                    | 3.4 GB |      3.0 s |        3.6 |       3.4% |  **88%** |
+| `gemma4:e2b`                    | 7.2 GB |      2.5 s |        4.4 |   **0.0%** |      81% |
+| `gemma3:4b`                     | 3.3 GB |      3.0 s |        4.1 |       0.0% |      81% |
+| `minicpm-v4.5:8b`               | 6.1 GB |      4.3 s |        3.3 |       5.7% |      81% |
+| `gemma4:latest` (e4b)           | 9.6 GB |      2.6 s |        2.9 |       0.0% |      78% |
+| `minicpm-v4.6:1b`               | 1.6 GB |      0.9 s |        3.3 |      22.6% |      78% |
+| `qwen3-vl:4b-instruct`          | 3.3 GB |      2.4 s |        3.0 |       0.0% |      75% |
+| `qwen3-vl:8b-instruct`          | 6.1 GB |      5.5 s |        3.0 |       2.1% |      75% |
+| `qwen3-vl:4b` (reasoning build) | 3.3 GB |      2.4 s |        2.9 |      21.3% |      69% |
+| `qwen3.5:9b`                    | 6.6 GB |      3.5 s |        1.9 |       6.5% |      69% |
+| `qwen2.5vl:7b`                  | 6.0 GB |      2.7 s |        1.5 |       0.0% |      59% |
+| `qwen3.5:2b`                    | 2.7 GB |      0.8 s |        1.2 |       5.0% |      47% |
+
+Bigger is not reliably better: `qwen3.5:4b` beat both the `2b` and `9b` tiers of its own family, and `gemma4:e2b` beat the larger `e4b`.
+
+### Self-Hosted, With a Label Count in the Prompt
+
+The built-in prompt asks for "label objects" without stating how many, and self-hosted models under-generate as a result. Adding an explicit range (the [Qwen3-VL example](../../user-guide/ai/ollama-models.md#qwen3-vl-labels) shows the shape) multiplied the label set by 1.9–3.5× and raised coverage on **every** model tested, at 1.7–2.8× the latency:
+
+| Model                  | Labels p50 | Labels/img | Multi-word | Coverage |
+|:-----------------------|-----------:|-----------:|-----------:|---------:|
+| `qwen3-vl:4b-instruct` |      5.1 s |       10.1 |       5.6% |  **97%** |
+| `qwen3-vl:8b-instruct` |     11.4 s |        8.5 |       1.5% |      97% |
+| `gemma4:e2b`           |      3.9 s |        8.9 |   **0.0%** |      91% |
+| `gemma3:4b`            |      8.4 s |       14.1 |       0.4% |      91% |
+| `qwen3.5:4b`           |      5.1 s |        7.1 |       3.5% |      91% |
+| `minicpm-v4.5:8b`      |      8.7 s |        6.9 |       9.1% |      91% |
+| `gemma4:latest` (e4b)  |      6.2 s |        8.7 |       0.0% |      88% |
+
+This is the largest single lever on label quality, and it reverses the ranking above: Qwen3-VL gains the most (+22 points) and leads once the count is stated, while `qwen3.5:4b` — the strongest model on the built-in prompt — gains the least (+3) because it was already close to its ceiling.
+
+### Ollama Cloud
+
+| Model                  | Labels p50 | Labels/img | Multi-word | Coverage |
+|:-----------------------|-----------:|-----------:|-----------:|---------:|
+| `kimi-k2.7-code:cloud` |      2.3 s |        8.6 |       0.0% |     100% |
+| `kimi-k2.6:cloud`      |      2.9 s |        8.6 |       0.0% |     100% |
+| `minimax-m3:cloud`     |      2.9 s |       13.4 |       0.0% |     100% |
+| `qwen3.5:397b-cloud`   |      5.2 s |        8.4 |       1.5% |     100% |
+| `gemma4:31b-cloud`     |     10.8 s |        7.0 |       0.9% |      97% |
+
+Across 192 cloud requests there were no errors, no empty responses, and no malformed JSON. Cloud models also volunteer 7–13 labels per image without being asked for a count, where models fitting in 8 GB return 1–4. Check a model's [plan coverage and per-token terms](../../user-guide/ai/ollama-cloud.md) before running one over a whole library — some sit outside the usage plans entirely.
 
 ## Caption Generation
 
-We tested the ability of the following [Ollama Vision models](https://ollama.com/search?c=vision) to generate accurate, natural-sounding captions for 100 different images, including photos, drawings, and memes:
+| Model                           | Caption p50 | Length |
+|:--------------------------------|------------:|-------:|
+| `minicpm-v4.6:1b`               |       0.6 s |   14 w |
+| `gemma4:e2b`                    |       0.7 s |    9 w |
+| `gemma4:latest` (e4b)           |       0.8 s |   12 w |
+| `qwen3.5:4b`                    |       0.9 s |   17 w |
+| `qwen3-vl:4b-instruct`          |       1.2 s |   18 w |
+| `gemma3:4b`                     |       1.4 s |    9 w |
+| `qwen3-vl:4b` (reasoning build) |   **6.6 s** |   11 w |
+| `minimax-m3:cloud`              |       2.9 s |   19 w |
+| `gemma4:31b-cloud`              |       3.8 s |   12 w |
 
-* **Qwen2.5-VL (3B & 7B)**
-* **Moondream**
-* **MiniCPM-V**
-* **Llama3.2-Vision**
-* **Granite3.2-Vision**
-* **Gemma 3**
+The outlier is the point: a **reasoning build costs roughly five times the caption latency of its `-instruct` sibling for a shorter caption** — about 414 output tokens against 24. `Service.Think: "false"` keeps that reasoning out of the stored caption but does not stop the model producing it. [Learn more ›](caption-generation.md#reasoning-leaking-into-captions)
 
-The results were evaluated based on the following **quality criteria**:
+## Multilingual Behavior
 
-1. Formatting (avoid Markdown, meta-language, and filler words)
-2. Text recognition (OCR)
-3. Number of subjects, including their gender and age, if applicable
-4. Location description including Landmark recognition, if applicable
-5. Date and/or time estimation based on visible information
-6. Image type classification (e.g. illustration, drawing, watercolor)
+Same images and prompts with the target language appended. *In language* is a judge model's verdict on the **labels**; *accurate* is its view of whether the content is right.
 
-!!! tldr ""
-    To ensure comparability, all tests were run on an **AMD Ryzen AI 9 365 CPU**, and three different prompts were used for each model. A GPU will significantly reduce the time needed per image.
+| Model (self-hosted)    | de in language | ar in language | he in language | de accurate | he accurate |
+|:-----------------------|---------------:|---------------:|---------------:|------------:|------------:|
+| `qwen3.5:4b`           |            81% |           100% |           100% |         62% |         12% |
+| `qwen3-vl:4b-instruct` |            94% |            31% |            75% |         62% |         25% |
+| `gemma4:e2b`           |            62% |         **0%** |             6% |         56% |         56% |
 
-### General Observations
+| Model (cloud)          | de in language | ar in language | he in language |
+|:-----------------------|---------------:|---------------:|---------------:|
+| `minimax-m3:cloud`     |           100% |           100% |           100% |
+| `gemma4:31b-cloud`     |           100% |           100% |            94% |
+| `qwen3.5:397b-cloud`   |            81% |            81% |            75% |
+| `kimi-k2.7-code:cloud` |            94% |            44% |            38% |
 
-* Larger models benefit from **longer prompts**, but too much instruction can increase hallucination rates.
-* If a model hallucinates on >50% of images, try **shortening the prompt** (e.g., Gemma 3).
-* All tested models struggled with:
-    - Captioning **grids of multiple images** (often skipping some images).
-    - **Non-English or partially obscured text**.
-    - OCR accuracy was highest for **clear English text**.
+Two things stand out. **Answering in the right language is a separate question from answering correctly** — `qwen3.5:4b` produced Hebrew labels on every request and got the subject right in 12% of them, which is worse than useless for search. And **a model can honor the language for captions and ignore it for labels**: `gemma4:e2b` returned correct Arabic and Hebrew captions while returning English labels on every request, with no error and nothing in the log.
 
-### Qwen2.5-VL — **Overall Winner**
+No self-hosted model that fits in 8 GB cleared both bars. A non-English library is currently better served by a cloud model.
 
-[Qwen2.5-VL](https://ollama.com/library/qwen2.5vl), developed by Alibaba, provided the **most accurate and consistent captions** across nearly all criteria:
+## Prompt Token Cost
 
-* Strong in **OCR, subject age, gender, location, landmark, and image type recognition**.
-* Captions were **natural, detailed, and well-structured**.
-* Rarely (<1%) inserted Chinese characters.
-* Always generated **medium-to-long captions** (3+ sentences) — does not follow requests to shorten.
+What a 720 px image costs in prompt tokens is a property of the model's **vision encoder**, not of the thumbnail:
 
-#### Performance
+| Model family                         | Prompt tokens (caption / labels) |
+|:-------------------------------------|:---------------------------------|
+| `gemma4:e2b`, `gemma4:latest`        | 208 / 284                        |
+| `minicpm-v4.5:8b`, `minicpm-v4.6:1b` | 248-256 / 318-332                |
+| `gemma3:4b`, `medgemma*:4b`          | 318-319 / 390-396                |
+| `qwen3.5:2b / 4b / 9b`               | 408 / 486                        |
+| `qwen2.5vl:7b`, `qwen3-vl:*`         | 1112-1123 / 1182                 |
 
-* **Average time per image:** 36.34s (7B) / 24.12s (3B)
-* **Hallucination rate:** 0.33% (7B) / 1.33% (3B)
-* **Error rate:** 18% (7B) / 19% (3B)
+A 5.7× spread for identical input. It is why `gemma4:e2b` prefills in ~140 ms where `gemma3:4b` takes ~770 ms for the same picture, and it matters on a metered endpoint, where prompt tokens are billed per request and a whole-library run multiplies the difference by the number of photos. Switching model can cut prefill more than lowering `Resolution` does.
 
-#### Compatibility
+## Models to Avoid & Compatibility Notes
 
-Qwen2.5-VL [requires Ollama 0.7.0](https://ollama.com/library/qwen2.5vl#readme) and may not be compatible with [later versions](https://github.com/ollama/ollama/releases). If the regular version doesn't work, try the FP16 variant as a workaround, e.g. `qwen2.5vl:3b-fp16`.
+- **`medgemma:4b` / `medgemma1.5:4b`** — trained for grounded detection rather than classification. `medgemma1.5:4b` returned a well-formed but **empty** label array on every image, which is a model-fit problem rather than a schema error. [Learn more ›](label-generation.md#valid-json-but-no-labels)
+- **`qwen2.5vl:7b`** — the weakest general labeler measured (59% coverage, 1.5 labels per image) despite being a capable captioner. Its [documented](https://ollama.com/library/qwen2.5vl#readme) requirement for Ollama 0.7.0 no longer appears to hold: we ran 32 requests against it on Ollama 0.32.6 with zero errors. If you do hit problems, the FP16 variant (`qwen2.5vl:3b-fp16`) remains a workaround.
+- **`minicpm-v4.6:1b`** — the fastest labeler here and better at subjects than its size suggests, but 22.6% of its label names were multi-word, so its output needs review before it reaches a library.
 
-#### Prompts
+## Keeping This Page Current
 
-We recommend the following prompt to generate concise captions with exactly one sentence:
+These figures come from an internal harness that keeps the image set, prompts, and scoring fixed, so a refresh means re-running it rather than repeating a study by hand. Independent reproduction by readers is explicitly not a goal — the point is that *we* can refresh the page cheaply when models change.
 
-> Create a caption with exactly one sentence in the active voice that describes the main visual content. Begin with the main subject and clear action. Avoid text formatting, meta-language, and filler words.
-
-Example: *A sleek pool extends over a dramatic cliffside overlooking turquoise waters.*
-
-As an alternative, this prompt may generate detailed captions of up to three sentences:
-
-> Write a descriptive caption in 3 sentences or fewer that captures the essence of the visual content. Avoid text formatting, meta-language, and filler words. Do not start captions with phrases such as "This image", "The picture", or "Here are". Begin with the subject(s), then describe the surroundings, and finally add atmosphere (e.g., time of day). If possible, include the subject's gender and general age group.
-
-Example: *A gray cat with a fluffy coat is lounging on a cushion, its eyes closed in a peaceful slumber. The background features a blurred view of trees and a blue sky, suggesting it's daytime. The cat's relaxed posture and the serene outdoor setting create a tranquil and cozy atmosphere.*
-
-#### Summary
-
-Use `qwen2.5vl:7b` for **detailed captions** with **high accuracy**. For better performance on lower-spec systems, we recommend using `qwen2.5vl:3b` instead, which provides slightly lower detail and accuracy. To generate captions in other languages, keep the prompt in English and specify the desired language.
-
-### Gemma 3 — **Best Lightweight Model**
-
-[Gemma 3](https://ollama.com/library/gemma3), a Google Gemini-based model, offers **fast and lightweight captioning** with reasonable accuracy:
-
-* Excels at **single-sentence captions**.
-* Good **OCR for large, clear text**.
-* Performs best with **short prompts** (<500 characters).
-* More prone to hallucination with longer prompts.
-
-#### Performance
-
-* **Average time per image:** 31.02s
-* **Hallucination rate:** 2%
-* **Error rate:** 25%
-
-#### Compatibility
-
-[Gemma 3](https://ollama.com/library/gemma3) should be compatible with the [latest Ollama versions](https://github.com/ollama/ollama/releases). Please [report](https://github.com/photoprism/photoprism-docs/tree/develop/docs/developer-guide/vision/model-comparison.md) any issues you experience so that we can include them in our documentation.
-
-#### Prompt
-
-We recommend using the following prompt to generate short, concise captions:
-
-> Create a caption with exactly one sentence in the active voice that describes the main visual content.
-Begin with the main subject and clear action. Avoid text formatting, meta-language, and filler words.
-
-Example: *A snow-covered church stands prominently on a winter street.*
-
-#### Summary
-
-If you prioritize **speed** and **simplicity** over detailed captions, the `gemma3:4b` / `gemma3:latest` model is a great choice. Google has since released [**Gemma 4**](https://ollama.com/library/gemma4), a drop-in successor at similar latency — we recommend `gemma4:latest` for new deployments and keep Gemma 3 as a reliable fallback. To generate captions in other languages, keep the prompt in English and specify the desired language.
-
-### Key Takeaways
-
-* **Qwen2.5-VL:7B** → Best overall accuracy, detailed multi-sentence captions, slower.
-* **Qwen2.5-VL:3B** → Nearly as good, faster, less strong at OCR.
-* **Gemma 3:4B** → Lightweight, single-sentence captions, best for quick results.
-* Other models, including Moondream, MiniCPM-V, Llama3.2-Vision, and Granite3.2-Vision, performed poorly in at least one quality criterion and had higher hallucination and error rates.
-* **Newer options** (not part of this study, but recommended for new deployments): [`gemma4:latest`](https://ollama.com/library/gemma4) as a drop-in successor to Gemma 3 at similar latency, and [`qwen3-vl:4b-instruct`](https://ollama.com/library/qwen3-vl) (or the community variant [`frob/qwen3.5-instruct:4b`](https://ollama.com/frob/qwen3.5-instruct)) as the Qwen-family successor. See the [User Guide](../../user-guide/ai/ollama-models.md) for configuration examples and per-family option profiles.
+A previous version of this page reported a caption-only study of Qwen2.5-VL and Gemma 3 run on an AMD Ryzen AI 9 365 **CPU**, with per-image times of 24–36 s. Those figures described CPU inference of models we no longer recommend and have been superseded by the run above; they are not comparable to the GPU timings on this page.
 
 !!! example ""
     We welcome contributions to our computer vision documentation. If you have any additions or suggestions for improvements, please click the :material-file-edit-outline: button in the upper right corner of the page to send a pull request.

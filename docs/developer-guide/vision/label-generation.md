@@ -17,9 +17,18 @@ Ollama-generated captions and labels are stored with the `ollama` metadata sourc
 !!! tip "Prompt Localization"
     To generate output in other languages, keep the base instructions in English and add the desired language (e.g., "Respond in German"). This method works for both [caption](../../user-guide/ai/ollama-models.md#qwen3-vl-caption) and [label prompts](../../user-guide/ai/ollama-models.md#qwen3-vl-labels).
 
+    **Verify labels separately from captions.** A model can honor the requested language for captions and silently ignore it for labels, with no error and nothing in the log. [Learn more ›](../../user-guide/ai/ollama-models.md#language-support)
+
+## Label Behavior Worth Knowing
+
+Two behaviors affect anyone writing or tuning a label prompt:
+
+- **Self-hosted models under-generate when the prompt does not state a count.** With the built-in prompt, models that fit in 8 GB of VRAM returned one to four labels per image in our benchmark, where hosted models volunteered seven to twelve. Asking for an explicit range raises both the count and subject coverage, at roughly two to three times the latency. Whether the shipped default prompt should request a count is being decided in [photoprism#5774](https://github.com/photoprism/photoprism/issues/5774).
+- **Multi-word label names do not survive normalization.** PhotoPrism reduces a multi-word name to a single token and usually keeps the wrong one — `ferris wheel` is stored as *Ferris* and `amusement park` as *Park*. Instruct the model to return single-word nouns in canonical singular form; the normalizer cannot repair a compound after the fact ([photoprism#5773](https://github.com/photoprism/photoprism/issues/5773)).
+
 ## NSFW Detection Through Labels
 
-When an Ollama or OpenAI model is wired up for `Type: labels`, PhotoPrism can ask it to return NSFW classification alongside the regular label fields. The shortcut is implemented in `internal/ai/vision/config.go`:
+When an Ollama or OpenAI model is wired up for `Type: labels`, PhotoPrism can ask it to return NSFW classification alongside the regular label fields. The variable is declared in `internal/ai/vision/config.go` and assigned during configuration in `internal/config/config.go`:
 
 ```go
 vision.DetectNSFWLabels = c.DetectNSFW() && c.Experimental()
@@ -27,12 +36,26 @@ vision.DetectNSFWLabels = c.DetectNSFW() && c.Experimental()
 
 When `DetectNSFWLabels` is `true`, the engine builders in `internal/ai/vision/engine_ollama.go` and `engine_openai.go` swap their default user prompts for `LabelPromptNSFW`, and the JSON schema generators (`SchemaLabels(includeNSFW=true)`) add the `nsfw` and `nsfw_confidence` fields. When it is `false`, the prompt and schema describe only `name`, `confidence`, and `topicality`, so the LLM response cannot trigger NSFW flagging.
 
-Downstream, the index pipeline (`internal/photoprism/index_mediafile.go`) and the vision worker (`internal/workers/vision.go`) both guard the labels-based NSFW promotion with `conf.DetectNSFW()`:
+Downstream, the vision worker (`internal/workers/vision.go`) guards the labels-based NSFW promotion with `conf.DetectNSFW()`:
 
 ```go
 if w.conf.DetectNSFW() && !m.PhotoPrivate {
     if labels.IsNSFW(vision.Config.Thresholds.GetNSFW()) {
         m.PhotoPrivate = true
+    }
+}
+```
+
+The index pipeline (`internal/photoprism/index_mediafile.go`) reaches the same outcome by a different route: it reads the label verdict into a local first and applies it only for photos that are new to the index, falling back to the file-level check when the labels say nothing.
+
+```go
+isNSFW = labels.IsNSFW(vision.Config.Thresholds.GetNSFW())
+...
+if !photoExists {
+    if isNSFW {
+        photo.PhotoPrivate = true
+    } else if o.DetectNsfw {
+        photo.PhotoPrivate = m.DetectNSFW()
     }
 }
 ```
@@ -60,6 +83,16 @@ If PhotoPrism logs `vision: invalid label payload from ollama`, the model return
 
 PhotoPrism may fall back to the existing TensorFlow Nasnet model when the Ollama response cannot be parsed.
 
+### Valid JSON, but No Labels
+
+A well-formed response carrying an empty `labels` array is a **different failure**, and checking the schema will not help. Models trained for grounded detection rather than classification do this consistently on ordinary photos — they answer correctly that there is nothing to detect, which is not what a label prompt is asking for. `medgemma*` behaved this way on every image in our benchmark.
+
+The remedy is to change model rather than the prompt or schema. Confirm it first with a single trace run — an empty array in the response, with no parse error in the log, points here rather than at [Schema or JSON Errors](#schema-or-json-errors):
+
+```bash
+photoprism --log-level=trace vision run -m labels --count 1 --force
+```
+
 ### Latency & Timeouts
 
 Structured responses introduce additional parsing overhead. If you encounter timeouts:
@@ -68,11 +101,15 @@ Structured responses introduce additional parsing overhead. If you encounter tim
 - Reduce image resolution (`Resolution: 500`) or use smaller models.
 - Keep `Options.Temperature` low to encourage deterministic output.
 
+Lowering `Resolution` is worth trying, but it is not the largest lever. **What an image costs in prompt tokens is mostly a property of the model's vision encoder, not of the thumbnail:** the same 720 px picture cost 208 prompt tokens on one model and 1,182 on another in our benchmark. Switching model can therefore cut prefill time more than reducing resolution does, and it is worth comparing the two before settling for smaller thumbnails.
+
 ### GPU Considerations
 
 When Ollama uses GPUs, long-running sessions might degrade over time due to VRAM fragmentation. Restart the Ollama container to recover performance:
 
 ```bash
-docker compose down ollama
+docker compose stop ollama
 docker compose up -d ollama
 ```
+
+`stop` restarts the existing container; `docker compose down ollama` works too, but removes and recreates it, which is more than a VRAM reset needs.

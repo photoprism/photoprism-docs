@@ -125,6 +125,11 @@ A 5.7× spread for identical input. It is why `gemma4:e2b` prefills in ~140 ms w
 - **`qwen2.5vl:7b`** — the weakest general labeler measured (56% coverage, 1.4 labels per image) despite being a capable captioner. Its [documented](https://ollama.com/library/qwen2.5vl#readme) requirement for Ollama 0.7.0 no longer appears to hold: we ran 32 requests against it on Ollama 0.32.6 with zero errors. If you do hit problems, the FP16 variant (`qwen2.5vl:3b-fp16`) remains a workaround.
 - **`minicpm-v4.6:1b`** — the fastest labeler here and better at subjects than its size suggests, but 18.9% of its label names were multi-word, so its output needs review before it reaches a library.
 
+!!! warning "Don't Trust the Capability Flags"
+    The `capabilities` list returned by `GET /api/tags` is not a reliable way to decide whether a pulled model is multimodal or reasoning-capable. Our test instance reported `gemma4:e2b`, `gemma4:latest`, and `gemma3:4b` as `completion,tools,thinking` with **no `vision` flag**, yet all three answer image prompts correctly. `/api/tags` and `/api/show` can also disagree about `thinking` for the same model.
+
+    Send a request with an image and read the response — that is the dependable test, and it is what [a test run](../../user-guide/ai/ollama-models.md#performing-test-runs) already does.
+
 ## Keeping This Page Current
 
 These figures come from an internal harness that keeps the image set, prompts, and scoring fixed, so the page can be refreshed by re-running it when models change rather than by repeating a study by hand.

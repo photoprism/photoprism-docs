@@ -20,6 +20,11 @@ PhotoPrism currently supports the following runtimes and services:
 - **Ollama:** [Generating labels](ollama-models.md#gemma-4-labels) for an image on an NVIDIA RTX 4060 usually takes 1-4 seconds. The exact time varies depending on the model used and the [number of labels](ollama-models.md#qwen3-vl-labels) generated.
 - **OpenAI:** Processing one image takes about 3 seconds, though this can vary by model, region, and demand.
 
+Two things behind those numbers are worth knowing before you tune for speed:
+
+- **What an image costs in prompt tokens is a property of the model, not of the thumbnail.** The same 720 px picture cost 208 prompt tokens on one model and 1,182 on another in our benchmark — a fivefold difference for identical input, caused by the model's vision encoder. Switching model can therefore reduce time-to-first-token more than lowering `Resolution` does.
+- **Hosted-model timings are approximate.** Repeating the same benchmark a few hours apart moved one cloud model's label latency by more than sixfold while its output barely changed. Self-hosted timings reproduced closely across the same pair of runs. Choose a hosted model on output quality, and measure latency when it matters to you rather than trusting a published figure.
+
 !!! tldr ""
     Without GPU acceleration, Ollama models will be significantly slower, taking anywhere from 10 seconds to over a minute to complete. This may be acceptable if you only want to process a few pictures or are willing to wait.
 

@@ -1,17 +1,20 @@
 # Ollama Models
 
-We recommend choosing a [vision model](https://ollama.com/search?c=vision) that balances speed, accuracy, and reliability. Two models that meet these criteria and that we can recommend are [Gemma 4](https://ollama.com/library/gemma4) and [Qwen3-VL](https://ollama.com/library/qwen3-vl):
+We recommend choosing a [vision model](https://ollama.com/search?c=vision) that balances speed, accuracy, and reliability. Three families meet these criteria and can be recommended — [Gemma 4](https://ollama.com/library/gemma4), [Qwen3-VL](https://ollama.com/library/qwen3-vl), and [Qwen 3.5](https://ollama.com/library/qwen3.5):
 
-| Model        | Use Case                                                   | Notes                                                                                     |
-|--------------|------------------------------------------------------------|-------------------------------------------------------------------------------------------|
-| **Gemma 4**  | Standard caption and label generation                      | Light, reliable JSON output; good default.                                                |
-| **Qwen3-VL** | Advanced vision and reasoning tasks (OCR, complex prompts) | Better visual grounding and multi-language support; available in many sizes and variants. |
+| Model        | Use Case                                                   | Notes                                                                                                                               |
+|--------------|------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| **Gemma 4**  | Standard caption and label generation in English           | Light, reliable JSON output; good default. Not a good choice for a non-English library — see [Language Support](#language-support). |
+| **Qwen3-VL** | Advanced vision and reasoning tasks (OCR, complex prompts) | Best subject coverage in our benchmark when the prompt asks for a label count. Use an `-instruct` tag.                              |
+| **Qwen 3.5** | A lighter alternative for captions and labels              | Strong results on the built-in prompt at less than half the prompt tokens of Qwen3-VL. No `-instruct` tag needed.                   |
 
-[**Gemma 4**](https://ollama.com/library/gemma4) is very consistent in terms of performance, with errors occurring rarely. However, it is less suitable for long/complex prompts and captions. We recommend using the [standard variant](https://ollama.com/library/gemma4/tags), `gemma4:latest` (currently aliases `gemma4:e4b`), for most [use cases](#gemma-4-labels). The smaller [`gemma4:e2b`](https://ollama.com/library/gemma4/tags) variant is noticeably faster and a good choice if a single primary-subject label per photo is enough. If you already have [Gemma 3](https://ollama.com/library/gemma3) configured, it continues to work fine — Gemma 4 is a drop-in replacement that runs at similar latency (around 2 seconds for label generation on an NVIDIA RTX 4060 in our testing).
+[**Gemma 4**](https://ollama.com/library/gemma4) is very consistent in terms of performance, with errors occurring rarely. However, it is less suitable for long/complex prompts and captions. We recommend using the [standard variant](https://ollama.com/library/gemma4/tags), `gemma4:latest` (currently aliases `gemma4:e4b`), for most [use cases](#gemma-4-labels). The smaller [`gemma4:e2b`](https://ollama.com/library/gemma4/tags) variant is noticeably faster and actually returns *more* labels per photo, at slightly lower subject coverage — a good choice when speed and label count matter more than picking the single best subject. If you already have [Gemma 3](https://ollama.com/library/gemma3) configured, it continues to work fine — Gemma 4 is a drop-in replacement that runs at similar latency (around 2 seconds for label generation on an NVIDIA RTX 4060 in our testing).
 
 [**Qwen3-VL**](https://ollama.com/library/qwen3-vl) tends to be somewhat less predictable and consistent in the [smaller `2b` and `4b` variants](https://ollama.com/library/qwen3-vl/tags), where performance and error rates can vary widely [unless controlled as shown in the examples](#qwen3-vl-labels) below. The standard `qwen3-vl:latest` (`8b`) version generally works well without major adjustments. Label generation on an NVIDIA RTX 4060 typically takes [2–3 seconds](#qwen3-vl-labels), roughly comparable to [Gemma 4](#gemma-4-labels).
 
-A newer community variant, [`frob/qwen3.5-instruct:4b`](https://ollama.com/frob/qwen3.5-instruct), has been a capable alternative in our testing — it uses the same Options profile as `qwen3-vl:4b-instruct` (see [below](#qwen3-vl-labels)) and delivers similar latency. In limited testing, we've observed slightly better recognition of less-common subjects (for example, correctly labeling a chameleon as "chameleon" rather than as the generic "lizard" that some other 4B models return). As with any Qwen-family model, it requires the strict options and "AT MOST N labels" prompt shape — without them it will over-generate and truncate the JSON response.
+[**Qwen 3.5**](https://ollama.com/library/qwen3.5) is the lighter of the two Qwen options and needs no special tag: `qwen3.5:4b` already behaves like an instruct build, producing captions in about a second and keeping multi-word label names near zero. On the built-in label prompt it reached the highest subject coverage of any self-hosted model we measured, and it encodes a 720 px image into fewer than half the prompt tokens Qwen3-VL uses, which makes it noticeably cheaper on a metered endpoint. Qwen3-VL still pulls ahead once the prompt asks for a [label count](#qwen3-vl-labels), so pick Qwen 3.5 for a light, low-cost setup and Qwen3-VL when subject coverage matters most. Note the [`2b` and `9b` tiers](https://ollama.com/library/qwen3.5/tags) both scored well below `4b` on labels — bigger is not better here.
+
+A community variant, [`frob/qwen3.5-instruct:4b`](https://ollama.com/frob/qwen3.5-instruct), is a capable alternative that uses the same Options profile as `qwen3-vl:4b-instruct` (see [below](#qwen3-vl-labels)) and delivers similar latency. Measured head to head against the official [`qwen3.5:4b`](https://ollama.com/library/qwen3.5) on the same images, it tracks its base model closely — same family, size and quantization, with 7 of 16 label sets identical and the remaining differences cosmetic. Either is a reasonable choice; the official library model is the simpler one to keep up to date. As with any Qwen-family model, it requires the strict options and "AT MOST N labels" prompt shape — without them it will over-generate and truncate the JSON response.
 
 Performance also depends on your hardware, so e.g., [Qwen3-VL variants](https://ollama.com/search?q=qwen3-vl) might outperform Gemma 4 when running on Apple Silicon or NVIDIA Blackwell GPUs. Our recommendation is therefore to test both models to see which one works best for you. If you generate both captions and labels, stick with this model so that Ollama doesn't need to swap models between requests.
 
@@ -20,6 +23,24 @@ Performance also depends on your hardware, so e.g., [Qwen3-VL variants](https://
 
 !!! warning "Disable Reasoning for Thinking Models"
     Many current vision models — the Qwen3.5 family, `qwen3-vl:*`, `frob/qwen3.5-instruct:4b`, and others — are **thinking (reasoning) models**. With reasoning enabled, recent Ollama versions emit it into the result: captions begin with text such as *"The user wants a concise description of the provided image…"* and label JSON fails to parse. **Set `Service.Think: "false"`** for these models (as shown in the examples below) to turn reasoning off — on PhotoPrism [260601](https://github.com/photoprism/photoprism/releases/tag/260601-a7d098548) and earlier it is required to keep their reasoning out of captions and labels. Later releases disable Ollama reasoning by default, so there it is a safety net rather than a requirement; it stays harmless everywhere, which is why the examples always include it. Re-enable reasoning only intentionally with `Service.Think: "true"`.
+
+!!! tip "For Qwen3-VL, Use an `-instruct` Tag as Well"
+    `Service.Think: "false"` keeps reasoning **out of the output**. It does not stop a reasoning build from *generating* it, so most of the cost remains. Measured on `qwen3-vl:4b` with reasoning off: about 414 output tokens and 6.6 seconds for a twelve-word caption, where [`qwen3-vl:4b-instruct`](https://ollama.com/library/qwen3-vl/tags) produced a longer caption in about 1.2 seconds using 24 tokens. The reasoning build also returned 21% multi-word label names against 0% for the instruct build. Treat the flag as a correctness guard and the tag as the performance choice — they are two separate decisions.
+
+    This applies to Qwen3-VL specifically. `qwen3.5:4b` needs no `-instruct` tag: on its plain tag it already answered in about a second using 21 output tokens, with under 2% multi-word label names. Gemma 4 is not a reasoning model and is unaffected either way.
+
+## Language Support
+
+For languages other than English, keep the base instructions in English and add the desired language (e.g., "Respond in German"). This method works for both caption and label prompts, and holds better than translating the instructions themselves.
+
+!!! warning "Verify Labels and Captions Separately"
+    A model can honor the requested language for **captions** and silently ignore it for **labels**. In our testing, `gemma4:e2b` returned correct Arabic and Hebrew captions while returning English labels on *every* request, German included — with no error and nothing in the log.
+
+    Answering in the right script also does not mean answering correctly. One 4B model produced fluent Hebrew that named the wrong subject, captioning a photo of an elephant as "the lion crushes the birds".
+
+    So check both model types, and check the **content** rather than just the alphabet. Generate a handful of pictures with `photoprism vision run -m labels --count 1 --force` and `-m caption`, and read the results.
+
+Support varies widely by model and does not follow size or general quality. Hosted models handled German, Arabic, and Hebrew far better than any self-hosted model we measured that fits in 8 GB of VRAM. Of the self-hosted options, Gemma 4 was the weakest for non-English **labels**, despite being our recommended English default — so a non-English library is one of the cases where it is worth testing [Qwen3-VL](#qwen3-vl-labels) or a [cloud model](ollama-cloud.md) instead.
 
 ## Temperature, TopK, and TopP
 
@@ -54,7 +75,7 @@ For detailed captions, try this prompt, which should generate up to three senten
 
 **Example:** *A gray cat with a fluffy coat is lounging on a cushion, its eyes closed in a peaceful slumber. The background features a blurred view of trees and a blue sky, suggesting it's daytime. The cat's relaxed posture and the serene outdoor setting create a tranquil and cozy atmosphere.*
 
-For other languages, keep the base instructions in English and add the desired language (e.g., "Respond in German"). This method works for both caption and label prompts.
+For other languages, keep the base instructions in English and add the desired language (e.g., "Respond in German"), then verify the result as described under [Language Support](#language-support).
 
 !!! tldr ""
     When tuning prompts, keep them as short as possible. Overly long prompts can increase hallucinations and latency.
@@ -62,6 +83,9 @@ For other languages, keep the base instructions in English and add the desired l
 ## Configuration Examples
 
 The following drop-in examples can be specified in your `vision.yml` file, which is located in the config directory (default: `storage/config`). [Learn more ›](index.md#visionyml-reference).
+
+!!! tldr "How Many Labels to Expect"
+    Self-hosted models under-generate when the prompt does not state a count. In our benchmark, models that fit in 8 GB of VRAM returned one to four labels per image with the built-in prompt, where hosted models volunteered seven to twelve. If you want more, ask for a count explicitly — see the [Qwen3-VL label example](#qwen3-vl-labels) below.
 
 ### Gemma 4: Labels
 
@@ -80,7 +104,7 @@ Why this works:
 
 - **Engine:** Applies suitable **Resolution**, **Format**, **Prompt** and **Options** defaults (720 px thumbnails, JSON prompts for labels). Specifying a custom prompt is not required.
 - **Run:** `auto` allows manual, after indexing, and scheduled runs ￫ [Run Modes](index.md#run-modes).
-- **Model:** `gemma4:latest` currently aliases `gemma4:e4b` and returns three to four labels per photo with graded topicality. For a faster single-label-per-photo primary-subject classifier, switch to `gemma4:e2b`.
+- **Model:** `gemma4:latest` currently aliases `gemma4:e4b` and returned about three labels per photo with graded topicality in our benchmark, with the best subject coverage of the two variants. Switch to `gemma4:e2b` if you prefer speed and a slightly larger label set — it averaged four to five labels per photo at marginally lower coverage.
 
 ### Gemma 4: Caption
 
@@ -103,7 +127,7 @@ Why this works:
 
 - **Engine:** Uses 720 px thumbnails and applies suitable **Format**, **Prompt** and **Options** defaults. Specifying a [custom prompt](#caption-prompts) is not required, but possible.
 - **Run:** `auto` allows manual, after indexing, and scheduled runs ￫ [Run Modes](index.md#run-modes).
-- **Prompt:** Uses the built-in [default prompt](#caption-prompts). For other languages, keep the base instructions in English and add the desired language (e.g., "Respond in German").
+- **Prompt:** Uses the built-in [default prompt](#caption-prompts). For other languages, see [Language Support](#language-support).
 
 ### Qwen3-VL: Labels
 
@@ -137,10 +161,12 @@ Models:
 
 Why this works:
 
-- **Model:** [`qwen3-vl:4b-instruct`](https://ollama.com/library/qwen3-vl/tags) is a lightweight version of Qwen3-VL. You can alternatively try [`frob/qwen3.5-instruct:4b`](https://ollama.com/frob/qwen3.5-instruct) (a newer community variant; uses the same options profile and has shown a quality edge on less-common subjects in our testing), [`huihui_ai/qwen3-vl-abliterated:4b-instruct`](https://ollama.com/huihui_ai/qwen3-vl-abliterated), [`qwen3-vl:latest`](https://ollama.com/library/qwen3-vl), or other [variants](https://ollama.com/search?c=vision&q=qwen3-vl).
+- **Model:** [`qwen3-vl:4b-instruct`](https://ollama.com/library/qwen3-vl/tags) is a lightweight version of Qwen3-VL. You can alternatively try [`frob/qwen3.5-instruct:4b`](https://ollama.com/frob/qwen3.5-instruct) (a community variant that uses the same options profile and measured very close to the official `qwen3.5:4b`), [`huihui_ai/qwen3-vl-abliterated:4b-instruct`](https://ollama.com/huihui_ai/qwen3-vl-abliterated), [`qwen3-vl:latest`](https://ollama.com/library/qwen3-vl), or other [variants](https://ollama.com/search?c=vision&q=qwen3-vl).
 - **Engine:** Applies suitable **Resolution**, **Format**, and **Options** defaults.
 - **Run:** `on-demand` allows manual, metadata worker, and scheduled jobs ￫ [Run Modes](index.md#run-modes).
-- **Prompt:** Ensures low latency, prevents repetition, and controls the type and number of labels returned. For other languages, keep the base instructions in English and add the desired language (e.g., "Respond in German").
+- **Prompt:** Ensures low latency, prevents repetition, and controls the type and number of labels returned. For other languages, see [Language Support](#language-support).
+- **`Return AT MOST 3 labels`:** A deliberate cap, and the reason the strict options do not run away. It is also restrictive: in our benchmark `qwen3-vl:4b-instruct` returned about three labels per image under this prompt, rising to about ten when asked for a range of 8-15, with subject coverage going from 75% to 97%. If you want richer labels, raise the cap — and expect roughly two to three times the latency.
+- **`single-word noun in canonical singular form`:** Keep this instruction in any custom prompt. PhotoPrism currently reduces a multi-word label to a single token and usually keeps the wrong one — `ferris wheel` is stored as *Ferris*, `amusement park` as *Park* ([photoprism#5773](https://github.com/photoprism/photoprism/issues/5773)).
 - **Seed:** Ensures stable labels. Our example uses the [instruct model variant](https://github.com/QwenLM/Qwen3-VL?tab=readme-ov-file#instruct-models) default.
 - **Temperature, TopP,** and **TopK:** Picks high-probability, common words, not creative synonyms.
 - **MinP:** Cuts off very low-probability tokens, which are typically those rare labels and odd phrasings you don’t want for classification.
@@ -181,7 +207,7 @@ Models:
 
 Why this works:
 
-- **Model:** Using [`qwen3-vl:4b-instruct`](https://ollama.com/library/qwen3-vl/tags) for both labels and captions avoids time-consuming Ollama model swaps. You can alternatively try [`frob/qwen3.5-instruct:4b`](https://ollama.com/frob/qwen3.5-instruct) (a newer community variant; uses the same options profile and has shown a quality edge on less-common subjects in our testing), [`huihui_ai/qwen3-vl-abliterated:4b-instruct`](https://ollama.com/huihui_ai/qwen3-vl-abliterated), [`qwen3-vl:latest`](https://ollama.com/library/qwen3-vl), or other [variants](https://ollama.com/search?c=vision&q=qwen3-vl).
+- **Model:** Using [`qwen3-vl:4b-instruct`](https://ollama.com/library/qwen3-vl/tags) for both labels and captions avoids time-consuming Ollama model swaps. You can alternatively try [`frob/qwen3.5-instruct:4b`](https://ollama.com/frob/qwen3.5-instruct) (a community variant that uses the same options profile and measured very close to the official `qwen3.5:4b`), [`huihui_ai/qwen3-vl-abliterated:4b-instruct`](https://ollama.com/huihui_ai/qwen3-vl-abliterated), [`qwen3-vl:latest`](https://ollama.com/library/qwen3-vl), or other [variants](https://ollama.com/search?c=vision&q=qwen3-vl).
 - **Engine:** Applies suitable **Resolution**, **Format**, and **Options** defaults.
 - **Run:** `on-schedule` allows manual and scheduled jobs ￫ [Run Modes](index.md#run-modes).
 - **System:** Tells the model to describe images in natural language.

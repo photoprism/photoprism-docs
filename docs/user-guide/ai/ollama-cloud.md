@@ -51,6 +51,11 @@ Since the service URI is resolved from `OLLAMA_BASE_URL`, you can omit the `Serv
 
 Make sure the models you configure are [available on Ollama Cloud](https://ollama.com/search?c=cloud). You can browse the [list of supported cloud models](https://ollama.com/search?c=cloud) to see which ones can be used. You do not need to pull them manually, cloud models are served remotely.
 
+!!! warning "Check a Model's Plan and Usage Terms First"
+    Ollama Cloud bills by usage tier, and not every model is covered the same way. Some sit outside the plans entirely — requiring a paid subscription *and* consuming extra usage credits per token, which makes them a poor fit for captioning or labeling a whole library rather than a handful of pictures. Open the model's own page on [ollama.com](https://ollama.com/search?c=cloud) and read its terms before you enable it, because the cost of a first full run is easy to underestimate.
+
+    **Non-English output costs more.** For the same pictures, Arabic and Hebrew captions used 13-116% more output tokens than English depending on the model, while prompt tokens barely changed. Output tokens are usually the expensive side of a price list, so a non-English library can cost noticeably more to process on the same model.
+
 Setting `Service.Think: "false"` keeps the model's reasoning out of captions and labels. Many current models are thinking (reasoning) models, and with reasoning enabled recent Ollama versions emit it into the result (captions begin with text like *"The user wants a concise description of the provided image…"* and label JSON fails to parse). On PhotoPrism [260601](https://github.com/photoprism/photoprism/releases/tag/260601-a7d098548) and earlier this is required to keep reasoning out of captions and labels; later releases disable Ollama reasoning by default, so there it is a safety net rather than a requirement. It stays harmless everywhere. Re-enable reasoning only intentionally with `Service.Think: "true"`.
 
 Always set an explicit `Model:` for cloud use: the built-in default can lag behind Ollama Cloud's current catalog (models are occasionally retired), so pinning a currently-available model such as `minimax-m3:cloud` avoids ambiguity and keeps label and caption generation working.

@@ -1,4 +1,4 @@
-.PHONY: all deps fix pip build serve install replace upgrade venv install-venv upgrade-venv replace replace-venv reinstall watch deploy spellcheck install-typos vale install-vale check-links check-links-external install-muffet muffet;
+.PHONY: all deps fix pip build serve install replace upgrade venv install-venv upgrade-venv replace replace-venv reinstall watch deploy spellcheck install-typos vale install-vale check-links check-links-external install-muffet muffet format-whitespace format-whitespace-check;
 
 UID := $(shell id -u)
 MUFFET_PORT ?= 8042
@@ -93,3 +93,10 @@ merge:
 	git merge develop
 	git push origin deploy
 	git checkout develop
+format-whitespace:
+	# Normalize blank-line runs, trailing spaces, and the final newline across docs/.
+	# Two trailing spaces are a Markdown hard break and are preserved.
+	python3 ./scripts/format-whitespace.py
+format-whitespace-check:
+	# Report the whitespace drift without modifying files; exits non-zero on drift.
+	python3 ./scripts/format-whitespace.py --check

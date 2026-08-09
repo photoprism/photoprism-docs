@@ -1,4 +1,4 @@
-.PHONY: all deps fix pip build serve install replace upgrade venv install-venv upgrade-venv replace replace-venv reinstall watch deploy spellcheck install-typos vale install-vale check-links check-links-external install-muffet muffet format-whitespace format-whitespace-check format-tables;
+.PHONY: all deps fix pip build serve install replace upgrade venv install-venv upgrade-venv replace replace-venv reinstall watch deploy spellcheck install-typos vale install-vale check-links check-links-external install-muffet muffet format-whitespace format-whitespace-check format-tables format-artifacts format-artifacts-check format;
 
 UID := $(shell id -u)
 MUFFET_PORT ?= 8042
@@ -106,3 +106,12 @@ format-tables:
 	# The tensorflow table is centre-aligned with no leading pipe: padding pushes it
 	# past four leading spaces, which Markdown then reads as an indented code block.
 	python3 ./scripts/format-tables.py --exclude docs/developer-guide/vision/tensorflow/index.md
+format-artifacts:
+	# Straighten smart quotes inside code spans and remove invisible characters. Joiners,
+	# ZWNJ and soft hyphens are reported, never removed: each is load-bearing somewhere
+	# (emoji sequences, Persian and Indic scripts, German hyphenation points).
+	python3 ./scripts/format-artifacts.py
+format-artifacts-check:
+	# Report the artifact drift without modifying files; exits non-zero on drift.
+	python3 ./scripts/format-artifacts.py --check
+format: format-whitespace format-tables format-artifacts

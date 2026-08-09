@@ -19,7 +19,7 @@ Captions and labels are **measured separately** throughout. They are different w
 
 ## Label Generation
 
-Subject **coverage** is the share of images where the label set named both the main subject and its setting. **Multi-word** is the share of label names containing a space or separator. It is a contract violation under `single-word` normalization, where the phrase is collapsed to one token; under `phrase` it simply counts how many compound names were returned. [Learn more ›](label-generation.md#label-behavior-worth-knowing)
+Subject **coverage** is the share of images where the label set named both the main subject and its setting. **Multi-word** is the share of label names containing a space or separator. It is a contract violation under `single-word` normalization, where the phrase is collapsed to one token; under `phrase` it simply counts how many compound names were returned. Read the multilingual rates with that in mind: a name written in a non-Latin script is kept whole in every mode, so a compound Arabic or Hebrew label is never a violation. [Learn more ›](label-generation.md#label-behavior-worth-knowing)
 
 ### Self-Hosted, Built-In Prompt
 

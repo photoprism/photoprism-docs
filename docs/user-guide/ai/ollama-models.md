@@ -57,13 +57,17 @@ Language models return label names in whatever shape the prompt encourages, so P
 | `phrase`      | *Ferris Wheel*              | Keep the phrase, matching it and its singular form against the vocabulary first, so `sea lions` still becomes *Sea Lion*.        |
 | `false`       | *Ferris Wheel*              | Keep exactly what the model returned, with no vocabulary mapping — `carousel` stays *Carousel* instead of becoming *Theme Park*. |
 
+A name written in a **non-Latin script** is kept whole in every mode, including `single-word` — the setting below cannot make it collapse.
+
 `off`, `none`, `no`, and `disabled` are accepted as aliases of `false`.
 
 Only the *name* depends on the mode. Confidence and topicality thresholds, categories, and priorities apply identically in all of them, so a low-value name such as `background` is still dropped. What changes is which vocabulary rule is found: `ski-lift` inherits the stricter `ski` threshold when it collapses to *Ski*, and the general threshold when it is kept as *Ski Lift*.
 
 **The defaults differ for a measured reason.** Every multi-word label the hosted models returned in our benchmark was a real compound, at 0-2.1% of all labels, so they default to keeping phrases. Models that fit in 8 GB of VRAM returned 3-19% multi-word names and mixed real compounds with filler such as `city_name`, `text_on_sign`, and `photo list` — so they stay on `single-word`, and a model's multi-word rate is worth checking before you switch it to `phrase`.
 
-**Non-English libraries lose more than the English rate suggests**, because a compound subject is normally two words outside English. Under `single-word`, Arabic `حمار وحشي` (zebra) is reduced to `حمار` (donkey) and `عجلة دوارة` (ferris wheel) to `عجلة` (wheel); Hebrew `לונה פארק` (amusement park) becomes `לונה` (luna). If you generate labels in another language, `phrase` is usually the better choice.
+**Names in another script are protected automatically.** The label vocabulary is English, so splitting a name that contains no Latin letters has nothing to match and only truncates the subject — Arabic `حمار وحشي` (zebra) would become `حمار` (donkey), and Hebrew `גלגל ענק` (ferris wheel) would become `גלגל` (wheel). PhotoPrism therefore keeps such names whole even under `single-word`, so an Arabic, Hebrew, Chinese, Japanese, Korean, Greek, or Cyrillic library needs no configuration for this.
+
+The test is the **script, not the language**, because a Latin-script name can still resolve token by token and the head noun it keeps is usually the right one — Spanish `noria gigante` becomes *Noria*, which is still a ferris wheel. A name mixing scripts keeps the configured behavior, so `شاطئ beach` resolves to *Beach* through the vocabulary. For a German, Spanish, or French library the choice is therefore a real trade-off rather than a necessity: `single-word` keeps the head noun, `phrase` keeps the whole compound.
 
 To keep compound names, set `Normalize: phrase` on the model **and** use a `System` prompt that does not demand single-word nouns — otherwise the model rarely returns a phrase to keep:
 

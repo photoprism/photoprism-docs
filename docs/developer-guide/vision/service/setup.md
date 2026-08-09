@@ -57,7 +57,7 @@ This guide explains how to set up a local development environment to run the Vis
     python -m flask --app app run --debug --host=0.0.0.0 --port=5000
     ```    The `--debug` flag enables auto-reloading whenever you save a change in the code, and `--host=0.0.0.0` makes the service accessible from other machines on your network, such as your main PhotoPrism instance.
 
-!!! warning "" 
+!!! warning ""
     The service and its integrations are **under active development**, so the configuration, commands, and other details may change or break unexpectedly. Please keep this in mind and notify us when something doesn't work as expected. Thank you for your help in keeping this documentation updated!
 
 ## Configuration
@@ -169,7 +169,6 @@ For developers looking to contribute, the codebase is structured as follows:
 *   **`ollama_processor.py`**: Implements the processor for the Ollama integration. It acts as a client, formatting requests and forwarding them to an Ollama instance.
 *   **`api.py`**: Contains the Pydantic models used for request/response validation and serialization.
 *   **`utils.py`**: Helper functions, for instance, for image loading and encoding.
-
 
 ## Dependencies
 

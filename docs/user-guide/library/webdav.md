@@ -11,9 +11,8 @@ By default, indexing and importing start automatically after a safety delay when
 !!! tldr ""
     You can disable WebDAV in the [advanced settings](../settings/advanced.md). Since it requires write permissions and authentication, the built-in WebDAV server is automatically disabled when running in [read-only](../../getting-started/config-options.md#feature-flags) or [public mode](../../getting-started/config-options.md#authentication).
 
-
 !!! note ""
-    You can also use WebDAV to download files from your library: Simply connect to 
-    `http://server-ip:2342/originals/` (local server without HTTPS) or 
-    `https://yourdomain/originals/` (public server with HTTPS enabled), and then copy the files to 
+    You can also use WebDAV to download files from your library: Simply connect to
+    `http://server-ip:2342/originals/` (local server without HTTPS) or
+    `https://yourdomain/originals/` (public server with HTTPS enabled), and then copy the files to
     a folder on your local device.

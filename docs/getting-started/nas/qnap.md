@@ -156,7 +156,7 @@ If your device runs out of memory or other system resources:
 - [ ] Try [reducing the number of workers](../config-options.md#indexing) by setting `PHOTOPRISM_WORKERS` to a reasonably small value in your `compose.yaml` file, depending on the performance of your device
 - [ ] Make sure [your device has at least 4 GB of swap space](../troubleshooting/docker.md#adding-swap) so that indexing doesn't cause restarts when memory usage spikes; RAW image conversion and video transcoding are especially demanding
 - [ ] If you are using SQLite, switch to MariaDB, which is [better optimized for high concurrency](../faq.md#should-i-use-sqlite-mariadb-or-mysql)
-- [ ] As a last measure, you can [disable image classification and facial recognition](../config-options.md#feature-flags) 
+- [ ] As a last measure, you can [disable image classification and facial recognition](../config-options.md#feature-flags)
 
 Other issues? Our [troubleshooting checklists](../troubleshooting/index.md) help you quickly diagnose and resolve them.
 

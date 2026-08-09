@@ -66,7 +66,7 @@ To allow larger files, you must increase the size limit in the Windows registry:
 1. Open the [Windows Registry Editor](https://support.microsoft.com/en-us/windows/how-to-open-registry-editor-in-windows-10-deab38e6-91d6-e0aa-4b7c-8878d9e07b11).
 2. Locate the following registry directory: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WebClient\Parameters`
 3. Locate the value `FileSizeLimitInBytes`.
-4. Set the value to `4294967295` (in Decimal). 
+4. Set the value to `4294967295` (in Decimal).
 5. Restart your computer.
 
 !!! example ""

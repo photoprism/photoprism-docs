@@ -12,14 +12,14 @@ Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is sup
     Download our [compose.yaml](https://dl.photoprism.app/docker/compose.yaml) example
     (right click and *Save Link As...* or use `wget`) to a folder of your choice,
     and change the [configuration](config-options.md) as needed:
-    
+
     ```bash
     wget https://dl.photoprism.app/docker/compose.yaml
-    ``` 
-    
+    ```
+
     Commands on Linux may have to be prefixed with `sudo` when not running as root.
-    Note that this will point the home directory shortcut `~` to `/root` in the `volumes:` 
-    section of your config file. Kernel security modules such as AppArmor and SELinux 
+    Note that this will point the home directory shortcut `~` to `/root` in the `volumes:`
+    section of your config file. Kernel security modules such as AppArmor and SELinux
     have been [reported to cause issues](troubleshooting/docker.md#kernel-security).
 
     We recommend that your server has [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured and to avoid setting a [hard memory limit](faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory), as this can lead to unexpected restarts when the indexer temporarily needs more memory to process large files. Indexing [RAW images and high-resolution panoramas](troubleshooting/performance.md#memory) may require additional [swap space](troubleshooting/docker.md#adding-swap) and/or physical memory beyond the [recommended minimum](index.md#system-requirements).
@@ -29,13 +29,13 @@ Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is sup
     Download our [compose.yaml](https://dl.photoprism.app/podman/docker-compose.yml) example
     (right click and *Save Link As...* or use `wget`) to a folder of your choice,
     and change the [configuration](config-options.md) as needed:
-    
+
     ```bash
     wget https://dl.photoprism.app/podman/docker-compose.yml
-    ``` 
- 
+    ```
+
     Alternatively, you can run these commands to install Podman and download the default configuration to `/opt/photoprism`:
-    
+
     ```
     mkdir -p /opt/photoprism
     cd /opt/photoprism
@@ -48,33 +48,33 @@ Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is sup
 
 === "Raspberry Pi"
 
-    Download our [compose.yaml](https://dl.photoprism.app/docker/arm64/compose.yaml) example for 
+    Download our [compose.yaml](https://dl.photoprism.app/docker/arm64/compose.yaml) example for
     the [Raspberry Pi](raspberry-pi.md) and other ARM64-based devices (right click and *Save Link As...* or use `wget`) to a folder of your choice,
     and change the [configuration](config-options.md) as needed:
-    
+
     ```bash
     wget https://dl.photoprism.app/docker/arm64/compose.yaml
     ```
 
     Mostly the same installation instructions as for regular Linux servers apply.
     Commands may have to be prefixed with `sudo` when not running as root.
-    
+
     Please verify if your device meets the [system requirements](raspberry-pi.md#system-requirements) and has
     [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured before you continue. Indexing [RAW images and high-resolution panoramas](troubleshooting/performance.md#memory) may require additional [swap space](troubleshooting/docker.md#adding-swap) and/or physical memory beyond the [recommended minimum](index.md#system-requirements).
 
 === "ARMv7"
 
-    Download our [compose.yaml](https://dl.photoprism.app/docker/armv7/compose.yaml) example for 
+    Download our [compose.yaml](https://dl.photoprism.app/docker/armv7/compose.yaml) example for
     older ARMv7-based devices (right click and *Save Link As...* or use `wget`) to a folder of your choice,
     and change the [configuration](config-options.md) as needed:
-    
+
     ```bash
     wget https://dl.photoprism.app/docker/armv7/compose.yaml
     ```
 
     Mostly the same installation instructions as for regular Linux servers apply.
     Commands may have to be prefixed with `sudo` when not running as root.
-    
+
     Please verify if your device meets the [system requirements](raspberry-pi.md#system-requirements) and has
     [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured before you continue. Indexing [RAW images and high-resolution panoramas](troubleshooting/performance.md#memory) may require additional [swap space](troubleshooting/docker.md#adding-swap) and/or physical memory beyond the [recommended minimum](index.md#system-requirements).
 
@@ -82,7 +82,7 @@ Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is sup
 
     Download our [compose.yaml](https://dl.photoprism.app/docker/windows/compose.yaml) example for Windows
     (right click and *Save Link As...*) to a folder of your choice, and change the [configuration](config-options.md) as needed:
- 
+
     [https://dl.photoprism.app/docker/windows/compose.yaml](https://dl.photoprism.app/docker/windows/compose.yaml) :material-download:
 
     It is important to [increase the Docker memory limit](img/docker-resources-advanced.jpg) to 4 GB or more when using *Hyper-V*. The default of 2 GB can reduce indexing performance and cause unexpected restarts. Also make sure you configure at least 4 GB of swap space. [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/) uses dynamic memory allocation with *WSL 2*, meaning you do not need to change any memory-related settings (depending on which version of Windows and Docker you are using).
@@ -91,12 +91,12 @@ Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is sup
 
     !!! note ""
         Running the following commands will automatically download all required config files and start the server for you:
-        
+
         ```bat
         curl.exe -o install.bat https://dl.photoprism.app/docker/windows/install.bat
         install.bat
         ```
-        
+
         Before you run this, make sure you are in the directory where you want to install PhotoPrism and that [Docker Desktop](https://docs.docker.com/desktop/setup/install/windows-install/) is installed and started on your PC.
 
 === "macOS"
@@ -105,10 +105,10 @@ Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is sup
     (right click and *Save Link As...*) to a folder of your choice, and change the [configuration](config-options.md) as needed:
 
     [https://dl.photoprism.app/docker/macos/compose.yaml](https://dl.photoprism.app/docker/macos/compose.yaml) :material-download:
-    
+
     It is important to [increase the Docker memory limit to 4 GB](img/docker-resources-advanced.jpg) or more,
     as the default of 2 GB can reduce indexing performance and cause unexpected restarts.
-    
+
     Indexing [RAW images and high-resolution panoramas](troubleshooting/performance.md#memory) may require additional [swap space](troubleshooting/docker.md#adding-swap) and/or physical memory beyond the [recommended minimum](index.md#system-requirements).
 
 !!! note ""
@@ -248,23 +248,23 @@ Our [First Steps 👣](../user-guide/first-steps.md) tutorial guides you through
 
 Open the Web UI, go to *Library* and click *Start* to start indexing your pictures.
 
-While indexing, JPEG sidecar files may be created for originals in other formats such as RAW and HEIF. 
-This is required for image classification, facial recognition, and for displaying them in a Web browser. 
+While indexing, JPEG sidecar files may be created for originals in other formats such as RAW and HEIF.
+This is required for image classification, facial recognition, and for displaying them in a Web browser.
 Sidecar and thumbnail files will be added to the *storage* folder, so that your *originals* folder won't be modified.
 
-Your [photos](../user-guide/organize/browse.md) and [videos](../user-guide/organize/video.md) will 
-successively become visible in search results and other parts of the user interface. 
+Your [photos](../user-guide/organize/browse.md) and [videos](../user-guide/organize/video.md) will
+successively become visible in search results and other parts of the user interface.
 Open the *Logs* tab in *Library* to watch the indexer working.
 
-Of course, you can continue using your favorite tools for processing RAW files, editing metadata, 
-or importing new shots. Go to *Library* and click *Start* to update the index after files have been 
+Of course, you can continue using your favorite tools for processing RAW files, editing metadata,
+or importing new shots. Go to *Library* and click *Start* to update the index after files have been
 changed, added, or removed. This can also be automated using CLI commands and a [scheduler](https://dl.photoprism.app/docker/scheduler/).-->
 
 ### PhotoPrism® Plus
 
 Our members can activate [additional features](https://link.photoprism.app/membership) by logging in with the [admin user created during setup](config-options.md#authentication) and then following the steps [described in our activation guide](https://www.photoprism.app/kb/activation/). Thank you for your support, which has been and continues to be essential to the success of the project! :octicons-heart-fill-24:{ .heart .purple }
 
-[Compare Memberships ›](https://link.photoprism.app/membership){ class="pr-3 block-xs" } [View Membership FAQ ›](https://www.photoprism.app/membership/faq/) 
+[Compare Memberships ›](https://link.photoprism.app/membership){ class="pr-3 block-xs" } [View Membership FAQ ›](https://www.photoprism.app/membership/faq/)
 
 !!! example ""
     We recommend that new users install our free Community Edition before [signing up for a membership](https://link.photoprism.app/membership).
@@ -276,7 +276,7 @@ If your server runs out of memory or other system resources:
 - [ ] Try [reducing the number of workers](config-options.md#indexing) by setting `PHOTOPRISM_WORKERS` to a reasonably small value in your `compose.yaml` file, depending on the CPU performance and number of cores. Running `photoprism config` shows the chosen worker count and the rationale that was applied (e.g. `index-workers: 4 (sqlite-cap)`); SQLite installs are capped at four workers automatically.
 - [ ] Ensure that your server has [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured and avoid setting a [hard memory limit](faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory) as this can cause unexpected restarts when the indexer temporarily needs more memory to process large files
 - [ ] If you are using SQLite, switch to MariaDB, which is [better optimized for high concurrency](faq.md#should-i-use-sqlite-mariadb-or-mysql)
-- [ ] As a last measure, you can [disable image classification and facial recognition](config-options.md#feature-flags) 
+- [ ] As a last measure, you can [disable image classification and facial recognition](config-options.md#feature-flags)
 
 Other issues? Our [troubleshooting checklists](troubleshooting/index.md) help you quickly diagnose and resolve them.
 
@@ -336,7 +336,7 @@ The currently supported user ID ranges are 0, 33, 50-99, 500-600, 900-1250, and 
 
 | Action                                                 | Command                                                       |
 |--------------------------------------------------------|---------------------------------------------------------------|
-| *Start Services*                                       | `docker compose up -d`                                        | 
+| *Start Services*                                       | `docker compose up -d`                                        |
 | *Stop Services*                                        | `docker compose stop`                                         |
 | *Download Updates*                                     | `docker compose pull`                                         |
 | *Uninstall*                                            | `docker compose rm -s -v`                                     |
@@ -345,8 +345,8 @@ The currently supported user ID ranges are 0, 33, 50-99, 500-600, 900-1250, and 
 | *Show Migration Status*                                | `docker compose exec photoprism photoprism migrations ls`     |
 | *Repeat Failed Migrations*                             | `docker compose exec photoprism photoprism migrations run -f` |
 | *Reset Database*                                       | `docker compose exec photoprism photoprism reset --yes`       |
-| *Backup Database*                                      | `docker compose exec photoprism photoprism backup -i -f`      |                      
-| *Restore Database*                                     | `docker compose exec photoprism photoprism restore -i -f`     |                   
+| *Backup Database*                                      | `docker compose exec photoprism photoprism backup -i -f`      |  
+| *Restore Database*                                     | `docker compose exec photoprism photoprism restore -i -f`     |  
 | *Change Password*                                      | `docker compose exec photoprism photoprism passwd [username]` |
 | *Show User Management Commands*                        | `docker compose exec photoprism photoprism users help`        |
 | *Reset User Accounts*                                  | `docker compose exec photoprism photoprism users reset --yes` |
@@ -356,9 +356,9 @@ The currently supported user ID ranges are 0, 33, 50-99, 500-600, 900-1250, and 
 | *Reset People & Faces*                                 | `docker compose exec photoprism photoprism faces reset -f`    |
 | *Transcode Videos to AVC*                              | `docker compose exec photoprism photoprism convert`           |
 | *Regenerate Thumbnails*                                | `docker compose exec photoprism photoprism thumbs -f`         |
-| [*Update Index*](../user-guide/library/originals.md)   | `docker compose exec photoprism photoprism index --cleanup`   |                  
-| [*Move to Originals*](../user-guide/library/import.md) | `docker compose exec photoprism photoprism import [path]`     |                  
-| [*Copy to Originals*](../user-guide/library/import.md) | `docker compose exec photoprism photoprism cp [path]`         |                  
+| [*Update Index*](../user-guide/library/originals.md)   | `docker compose exec photoprism photoprism index --cleanup`   |  
+| [*Move to Originals*](../user-guide/library/import.md) | `docker compose exec photoprism photoprism import [path]`     |  
+| [*Copy to Originals*](../user-guide/library/import.md) | `docker compose exec photoprism photoprism cp [path]`         |  
 
 *Note that our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible distributions.*
 

@@ -33,10 +33,7 @@ The quality score depends on the following:
 
          ![Screenshot](img/review-2502.jpg){ class="shadow" }
 
-
-
 !!! danger ""
-    The quality score is constantly updated. 
-    If you add date or location information to a photo or like it, the quality score increases automatically. 
+    The quality score is constantly updated.
+    If you add date or location information to a photo or like it, the quality score increases automatically.
     In case the new score is equal or greater than 3 the photo is approved automatically.
-

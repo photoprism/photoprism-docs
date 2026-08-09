@@ -2,7 +2,7 @@
 
 The *Originals* section displays all files of your *originals* directory.
 
-Clicking on a folder opens it. Clicking on a file opens its edit dialog. 
+Clicking on a folder opens it. Clicking on a file opens its edit dialog.
 
 ![Screenshot](img/files-1-2503.jpg){ class="shadow" }
 
@@ -17,7 +17,7 @@ The context menu allows you to perform the following actions:
 3. Click :material-download:
 
 ## Create an Album from Files ##
- 
+
 1. Select files
 2. Open context menu
 3. Click :material-bookmark:

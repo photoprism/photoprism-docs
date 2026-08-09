@@ -16,13 +16,13 @@
 ![Screenshot](img/index-2502.jpg){ class="shadow" }
 
 !!! info ""
-    You can use [WebDAV](webdav.md)-compatible apps, including Microsoft's Windows Explorer and Apple's Finder, 
+    You can use [WebDAV](webdav.md)-compatible apps, including Microsoft's Windows Explorer and Apple's Finder,
     to add files to your *originals* folders from a remote computer or mobile device.
 
 !!! tip "NSFW"
-    An NSFW detector can be enabled to automatically mark images with potentially objectionable content as 
-    private. Note that this feature is only partially reliable. 
-    
+    An NSFW detector can be enabled to automatically mark images with potentially objectionable content as
+    private. Note that this feature is only partially reliable.
+
     Images that have already been indexed before the NSFW detector is activated will not be scanned by the detector.
 
 ### When should "Complete Rescan" be selected?
@@ -33,7 +33,6 @@ We recommend performing a complete rescan after major updates to take advantage 
 
 !!! tldr ""
     Manually entered information such as labels, people, titles or captions will not be modified when indexing, even if you perform a "complete rescan".
-
 
 ### Cleanup Option
 

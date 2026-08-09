@@ -27,7 +27,6 @@ Super admins can reset another user's password without knowing the current one. 
 
 ![Screenshot](img/users-delete-2502.jpg){ class="shadow" }
 
-
 ## Managing Sessions
 
 You can view and delete active sessions by navigating to *Settings > Users > Sessions* as an [Admin](roles.md#admin):

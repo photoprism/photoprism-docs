@@ -5,10 +5,10 @@
 
 PhotoPrism uses labels to classify images.
 Other tools use the term tags instead of labels.
-Labels are set automatically when adding new photos. 
+Labels are set automatically when adding new photos.
 You can manually add new labels or edit/remove the ones that have been created by us.
 
-In *Labels* you find all labels of your photos and videos. 
+In *Labels* you find all labels of your photos and videos.
 You can star labels by clicking :material-star:. Starred labels will be listed first.
 
 PhotoPrism also attaches each generated label to a broader group (or category) of labels. For example, there is a general category 'vehicle' which will include labels such as 'cab', 'catamaran', 'lifeboat' and 'bullet train'. These broad label categories cannot be edited, but can be used in a search, in an identical way to all other labels.
@@ -16,7 +16,6 @@ PhotoPrism also attaches each generated label to a broader group (or category) o
 You may wish to see these broad label categories in addition to the usual labels in the *Labels* pages. Clicking the icon in the upper right-hand corner will switch between turning them on :material-eye: ('Show More') and off :material-eye-off: ('Show Less'). You can also include these label categories as part of a more complex search filter - the label categories from your photos will appear in the search filter bar as a drop-down selection under the option 'All Categories'.
 
 ![Screenshot](img/labels-1-2503.jpg){ class="shadow" }
-
 
 ### View all Photos with a Label ###
 1. Go to *Labels*
@@ -37,7 +36,7 @@ You may wish to see these broad label categories in addition to the usual labels
 5. Click :material-plus: on the right side of this row
 
     ![Screenshot](img/add-label-2503.jpg){ class="shadow" }
-    
+
 ### Remove/Delete Labels from Photos ###
 
 Labels that have been set automatically can be removed.
@@ -48,10 +47,10 @@ Manually added labels can be deleted.
 3. Click the :material-minus:/:material-delete: button of the label you want to remove/delete
 
     ![Screenshot](img/remove-label-1-2503.jpg){ class="shadow" }
-    
+
 !!! info ""
     Removed labels have a confidence of 0% and can be activated again at any time by clicking *add*.
-    
+
    ![Screenshot](img/remove-label-2-2503.jpg){ class="shadow" }
 
 !!! info ""
@@ -85,4 +84,3 @@ You can permanently delete a label. No file will get a deleted label set during 
 
 !!! danger ""
     In case you want a deleted label to appear again, you need to add it to one photo and then index all files again.
-

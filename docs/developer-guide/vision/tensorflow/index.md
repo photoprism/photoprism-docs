@@ -16,7 +16,7 @@ tabby cat:
   see: cat
 ```
 
-This was necessary because we didn't find a [taxonomy](https://wordnet.princeton.edu/) suitable for consumers (mainly just scientific ones) and needed a lot of control to fine tune terms and their probability thresholds. The raw results were [not useful](https://github.com/photoprism/photoprism/issues/160) to a typical user. Indexing too many words, categories and alternatives also negatively affects performance and [leads to noise](https://github.com/photoprism/photoprism/issues/160). 
+This was necessary because we didn't find a [taxonomy](https://wordnet.princeton.edu/) suitable for consumers (mainly just scientific ones) and needed a lot of control to fine tune terms and their probability thresholds. The raw results were [not useful](https://github.com/photoprism/photoprism/issues/160) to a typical user. Indexing too many words, categories and alternatives also negatively affects performance and [leads to noise](https://github.com/photoprism/photoprism/issues/160).
 
 It took us several months of testing until we were happy with the results and there are still labels to improve.
 
@@ -34,7 +34,7 @@ Neural nets work best when they have many parameters, making them powerful
 function approximators.
 However, this  means they must be trained on very large datasets. Because
 training models from scratch can be a very computationally intensive process
-requiring days or even weeks, there are various pre-trained models available. 
+requiring days or even weeks, there are various pre-trained models available.
 These CNNs have been trained on the
 [ILSVRC-2012-CLS](http://www.image-net.org/challenges/LSVRC/2012/)
 image classification dataset.

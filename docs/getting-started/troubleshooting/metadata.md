@@ -55,7 +55,7 @@ Thank you very much!
 
 ## Exif Orientation
 
-The numbers used in [Exif metadata](../../developer-guide/metadata/exif/index.md) to specify the [image orientation](../../developer-guide/metadata/orientation.md) are defined as follows: 
+The numbers used in [Exif metadata](../../developer-guide/metadata/exif/index.md) to specify the [image orientation](../../developer-guide/metadata/orientation.md) are defined as follows:
 
 1. = 0 degrees: the correct orientation, no adjustment is required.
 2. = 0 degrees, mirrored: image has been flipped back-to-front.

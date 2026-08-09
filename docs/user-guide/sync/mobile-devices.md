@@ -24,18 +24,18 @@ An overview of [mobile sync apps](#sync-apps-for-ios-and-android) for iOS and An
 
     !!! info ""
         *Server:* Your server url, e.g. "example.com".
-        
+
         *Port:* Your port. If you are using HTTPS the port is 443.
 
         *Login:* Your username, e.g. "admin".
-        
+
         *Password:* Your admin password.
 
         *Directory:* /import/ or /originals/ depending on your preferred [ingestion method](../library/index.md).
-        
+
         *Use SSL:* Should be enabled.
 
-        [PikaPods](../../getting-started/cloud/pikapods.md) users can find more information [here](https://docs.pikapods.com/apps/photoprism/#sync-from-mobile-apps). 
+        [PikaPods](../../getting-started/cloud/pikapods.md) users can find more information [here](https://docs.pikapods.com/apps/photoprism/#sync-from-mobile-apps).
 
       ![Screenshot](img/photosync-3.jpg){: style="width:35%" class="shadow"}
 

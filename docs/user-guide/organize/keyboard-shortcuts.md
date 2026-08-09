@@ -30,4 +30,4 @@ PhotoPrism offers a variety of keyboard shortcuts to help you navigate and use t
 | Ctrl + L | Like/Unlike          |
 
 !!! tip ""
-    Keyboard shortcuts can help you work faster and keep your hands on the keyboard. Try them out to streamline your workflow! 
+    Keyboard shortcuts can help you work faster and keep your hands on the keyboard. Try them out to streamline your workflow!

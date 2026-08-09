@@ -6,12 +6,12 @@
 
 Some users might want to place the thumbnail cache on a separate, faster file
 system while keeping the actual photo files on large, slow bulk storage. This
-should result in faster access to the thumbnails. 
+should result in faster access to the thumbnails.
 
 To do this, we add a further volume (`-v`) parameter to the docker script so we
 use an _external_ path (outside the container) for the cache files. You can get
 the _internal_ path with `photoprism config`, or as a docker command in a
-running system (for Linux/BSD systems): 
+running system (for Linux/BSD systems):
 
 ```
 sudo docker exec photoprism photoprism config | grep cache-path
@@ -30,7 +30,7 @@ for the internal path. We now know to add a line like
 ```
 
 to the docker invocation, with your actual path to the cache folder replacing
-`<MYCACHE_FOLDER>`. 
+`<MYCACHE_FOLDER>`.
 
 As an example, let's assume a [ZFS
 filesystem](https://en.wikipedia.org/wiki/ZFS) with two pools ("volumes" in

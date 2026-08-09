@@ -2,7 +2,7 @@
 
 Our [Vision Playground](https://github.com/photoprism/photoprism-vision) provides developers with additional computer vision models and customization options. If you are looking for an easy way to generate captions and labels for your pictures, we recommend using our [direct Ollama integration](../caption-generation.md) instead.
 
-!!! warning "" 
+!!! warning ""
     The service and its integrations are **under active development**, so the configuration, commands, and other details may change or break unexpectedly. Please keep this in mind and notify us when something doesn't work as expected. Thank you for your help in keeping this documentation updated!
 
 ## Getting Started
@@ -50,7 +50,6 @@ Now, create a new `vision.yml` file in your config path (default: `storage/confi
 
     Run `docker compose exec photoprism photoprism show config | grep config-path` to find out what's your configured config path.
 
-
 === "Example 1: Using an Ollama Model"
 
     This example uses Ollama's `llava-phi3` model for generating captions, proxied through the Vision service.
@@ -72,7 +71,7 @@ Now, create a new `vision.yml` file in your config path (default: `storage/confi
           Service:
             # IMPORTANT: Replace this IP with the address of your Vision service machine.
             Uri: "http://<vision-service-ip>:5000/api/v1/vision/caption"
-        
+
         Thresholds:
           Confidence: 10
         ```
@@ -83,7 +82,7 @@ Now, create a new `vision.yml` file in your config path (default: `storage/confi
 
     !!! tip "Available pre-installed Models"
         The Vision service also provides additional pre-installed models, such as `vit-gpt2` and `blip` for image captioning, as well as `nsfw_image_detector` for NSFW content detection. You can enable these models by updating the `Model` field in your `vision.yml` configuration.
-    
+
     !!! tip "Prompts"
         Unlike the Ollama models, pre-installed models such as `kosmos-2` interpret prompts primarily as starting instructions for generating captions, rather than as detailed, task-oriented requests.
 
@@ -97,14 +96,13 @@ Now, create a new `vision.yml` file in your config path (default: `storage/confi
           Service:
             # IMPORTANT: Replace this IP with the address of your Vision service machine.
             Uri: "http://<vision-service-ip>:5000/api/v1/vision/caption"
-        
+
         Thresholds:
           Confidence: 10
         ```
 
 !!! note ""
     The config file must be named `vision.yml`, not `vision.yaml`, as otherwise it won't be found and will have no effect.
-
 
 ## Step 3: Restart PhotoPrism
 
@@ -116,7 +114,6 @@ docker compose up -d
 ```
 
 You should now be able to use the `photoprism vision` [CLI commands](../cli.md#run-vision-models) when [opening a terminal](../../../getting-started/docker-compose.md#opening-a-terminal), e.g. `photoprism vision run -m caption` to generate captions.
-
 
 ## Troubleshooting
 

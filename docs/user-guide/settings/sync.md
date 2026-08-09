@@ -17,14 +17,12 @@ PhotoPrism can also expose its originals via WebDAV so that compatible clients o
    ![Screenshot](img/services-connect-2-2502.jpg){ class="shadow" }
 5. The service is now connected to PhotoPrism.
 
-
 ## Edit Connection Details ##
 
 1. Go to *Settings > Services*.
 2. Click the pencil :material-pencil: icon.
 3. Edit account details and click *Save*.
    ![Screenshot](img/services-edit-2502.jpg){ class="shadow" }
-
 
 ## Edit Upload Settings ##
 
@@ -39,7 +37,6 @@ You can now [share albums or files with this service](../share/services-share.md
 !!! danger ""
     Some Nextcloud configurations can cause uploaded files to appear as 0-byte files. See the [known workaround](https://github.com/photoprism/photoprism/issues/443).
 
-
 ## Edit Sync Settings ##
 
 1. Go to *Settings > Services*.
@@ -50,7 +47,6 @@ You can now [share albums or files with this service](../share/services-share.md
 5. Choose a sync interval.
 6. Select the options that are suitable for you and click *Save*.
 
-
 ![Screenshot](img/services-sync-2-2502.jpg){ class="shadow" }
 
 ### Remote Sync Options ###
@@ -59,4 +55,3 @@ You can now [share albums or files with this service](../share/services-share.md
 - *Upload local files* will upload all files (including private or archived ones) from PhotoPrism to your service that do not yet exist there.
 - *Preserve filenames* will keep filenames without renaming them.
 - *Sync raw and video files* will upload and download RAW and video files together with JPEGs.
-

@@ -1,5 +1,5 @@
 ## Photo Sharing ##
-- [Instagram Platform API](https://developers.facebook.com/docs/instagram-platform/) 
+- [Instagram Platform API](https://developers.facebook.com/docs/instagram-platform/)
 - [Twitter API](https://developer.x.com/)
 - [Facebook Photo API](https://developers.facebook.com/docs/graph-api/photo-uploads/)
 - [Google Photos API](https://developers.google.com/photos/)

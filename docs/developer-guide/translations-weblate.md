@@ -20,10 +20,9 @@ When you sign up, you will be asked to accept our Contributor License Agreement 
 
        ![Screenshot](img/WeblateRegister2.png)
 
-
 === "Agree to CLA"
-    
-    1. Sign in 
+
+    1. Sign in
     2. Select the language you want to translate to
 
        ![Screenshot](img/WeblateChooseLanguages.png)
@@ -39,7 +38,7 @@ When you sign up, you will be asked to accept our Contributor License Agreement 
     6. Go back to your *Dashboard* and repeat steps 3-5 for the *Frontend-Component*
 
 === "Add missing translations"
-    
+
     Your *Dashboard* shows you how many strings have no translation yet.
 
       ![Screenshot](img/DashboardUntranslated.png)
@@ -49,17 +48,17 @@ When you sign up, you will be asked to accept our Contributor License Agreement 
 
       ![Screenshot](img/WeblateAddTranslation.png)
     3. Repeat until all strings are translated
-    
+
       Your translations will be reviewed and included in one of the next releases.
 
 === "Review translations"
-    
-    If translations are missing, we pre-translate messages using services such as DeepL and Google Translate. 
-    This can lead to grammatical errors and misunderstandings. 
+
+    If translations are missing, we pre-translate messages using services such as DeepL and Google Translate.
+    This can lead to grammatical errors and misunderstandings.
     Native speakers should check existing translations and improve them if necessary.
 
     If you are a native speaker and would like to support us by reviewing existing translations, please contact us at hello@photoprism.app so that we can grant you the rights to review.
-    
+
     1. From your *Dashboard* open one of the components by clicking on the language
 
      ![Screenshot](img/WeblateOpenComponent.png)

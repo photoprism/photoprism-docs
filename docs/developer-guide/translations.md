@@ -17,12 +17,12 @@ for Mac, Windows and Linux. The source code can be obtained on [GitHub](https://
 
 ## Frontend ##
 
-Localizations can be found in `/frontend/src/locales`. The POT file, only containing message ids, 
+Localizations can be found in `/frontend/src/locales`. The POT file, only containing message ids,
 is `translations.pot`.
 
-`*.po` files contain localized messages for each 
+`*.po` files contain localized messages for each
 [language](https://www.gnu.org/software/gettext/manual/html_node/Usual-Language-Codes.html)
-identified by their [locale](https://www.gnu.org/software/gettext/manual/html_node/Locale-Names.html), 
+identified by their [locale](https://www.gnu.org/software/gettext/manual/html_node/Locale-Names.html),
 for example `de.po` for German and `pt_BR.po` for Brazilian Portuguese.
 You can open, edit and save them with Poedit to update existing translations.
 
@@ -37,7 +37,6 @@ You can open, edit and save them with Poedit to update existing translations.
 - Run `npm run gettext-compile` to compile existing translations into a single `translations.json` file
 - To test your translations you need to build the frontend again using `npm run build` or `npm run watch`
 
-
 ### Update existing translation ###
 - In /frontend run `npm run gettext-extract`
 - Install a translation tool e.g. Poedit
@@ -49,26 +48,25 @@ You can open, edit and save them with Poedit to update existing translations.
 - To test your translations you need to build the frontend again using `npm run build` or `npm run watch`
 
 !!! example ""
-    A binary `*.mo` (machine object) file will be automatically saved along with every `*.po` file. 
+    A binary `*.mo` (machine object) file will be automatically saved along with every `*.po` file.
     You won't be able to open those in a text editor, but please include them in git commits or when sending
-    translations via email. The compiled `translations.json` file is not required for pull requests 
+    translations via email. The compiled `translations.json` file is not required for pull requests
     and often causes merge conflicts.
-    
+
 ## Backend ##
 
-Only asynchronous notifications and certain API responses need translation to provide a 
+Only asynchronous notifications and certain API responses need translation to provide a
 consistent user experience.
-Technical log messages should be in English to avoid ambiguities and (even slightly) wrong translations. 
+Technical log messages should be in English to avoid ambiguities and (even slightly) wrong translations.
 
 Localizations are kept in `/assets/locales`. The POT file, only containing message ids, is `messages.pot`.
 
-`default.po` files in sub directories contain localized messages for each 
+`default.po` files in sub directories contain localized messages for each
 [language](https://www.gnu.org/software/gettext/manual/html_node/Usual-Language-Codes.html)
-identified by their [locale](https://www.gnu.org/software/gettext/manual/html_node/Locale-Names.html), 
-for example `de/default.po` for German and `pt_BR/default.po` for Brazilian Portuguese. 
-You can open, edit and save them with Poedit. Please also add and commit binary `*.mo` files, 
+identified by their [locale](https://www.gnu.org/software/gettext/manual/html_node/Locale-Names.html),
+for example `de/default.po` for German and `pt_BR/default.po` for Brazilian Portuguese.
+You can open, edit and save them with Poedit. Please also add and commit binary `*.mo` files,
 which will be automatically created by Poedit.
-
 
 ### Add new translation ###
 - Run `make generate` to update `/assets/locales/messages.pot`
@@ -87,5 +85,3 @@ which will be automatically created by Poedit.
 !!! example ""
     This will only work when you have gettext installed on your system. We recommend using our latest development
     image as described in the [setup instructions](setup.md).
-
-

@@ -35,7 +35,7 @@ Clicking the *Apply* button saves the changes you have made, but does not close 
 
 !!! note ""
     When performing a search, text in the *Title*, *Caption*, and *Keywords* fields can be found, while *Notes* are private and will be ignored.
-    
+
 **Location Selection**
 
 PhotoPrism includes a location component that allows you to easily change the location coordinates of a picture by selecting its location on a map. Simply click on the :material-map-marker: icon next to the *Location* field to open the interactive map interface. You can also search for locations by typing city or street names directly in the map component.
@@ -44,7 +44,7 @@ PhotoPrism includes a location component that allows you to easily change the lo
 
 !!! note ""
     With this built-in functionality, the [external geolocation browser plugin](https://github.com/andyvalerio/photoprism-geolocation) is no longer needed. We thank our community for their valuable contribution that inspired this feature!
-    
+
 ### Labels ###
 
 In the *Labels* tab, you can [view, add and edit labels](labels.md) and see whether they have been recognized automatically or added manually.
@@ -59,7 +59,7 @@ The *Files* tab shows you all the files that belong to a picture. If it is a RAW
 
 ![Screenshot](img/edit-files-1-2503.jpg){ class="shadow" }
 
-Click on :material-chevron-down: to see additional details such as file size, type, and codec: 
+Click on :material-chevron-down: to see additional details such as file size, type, and codec:
 
 ![Screenshot](img/edit-files-2-2503.jpg){ class="shadow" }
 

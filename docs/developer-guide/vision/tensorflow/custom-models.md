@@ -1,4 +1,4 @@
-# Custom TensorFlow Models 
+# Custom TensorFlow Models
 
 As an alternative to the [built-in model](index.md), PhotoPrism lets you configure more powerful custom TensorFlow models for image classification.
 ## Step 1: Mount model folder
@@ -42,7 +42,6 @@ Now, create a new `vision.yml` file in your config path (default: `storage/confi
 
     Run `docker compose exec photoprism photoprism show config | grep config-path` to find out what's your configured config path.
 
-
 !!! example "vision.yml"
     ```yaml
     Models:
@@ -66,7 +65,7 @@ docker compose stop photoprism
 docker compose up -d
 ```
 
-On indexing the configured model will now be used to generate labels. Alternatively you can run the `photoprism vision run` [CLI command](../cli.md#run-vision-models) to generate labels. 
+On indexing the configured model will now be used to generate labels. Alternatively you can run the `photoprism vision run` [CLI command](../cli.md#run-vision-models) to generate labels.
 
 !!! note ""
     Labels produced by TensorFlow models always have the source "image"; customizing the label source is not supported yet.

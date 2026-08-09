@@ -9,7 +9,6 @@ When you share an album, pictures marked as private will not be visible to other
 !!! info ""
     When link visitors click on the location of a photo, they can view the photos of the shared album in the map view
 
-
 ![Screenshot](img/link-places-2503.jpg){ class="shadow" }
 
 Clicking :material-power: allows link visitors to end their session.
@@ -23,7 +22,7 @@ Support for optional password protection of sharing links as well as other enhan
      2. Select the album you want to share
      3. Open the context menu
      4. Click :material-share-variant:
-    
+
       ![Screenshot](img/share-menu-2503.jpg){ class="shadow" }
 
 === "Via Toolbar"
@@ -39,13 +38,13 @@ Then
 5. Click :material-chevron-down: to open the *link details*
 6. Set a *secret* and *expiry date*
 7. Click *save*
-    
+
     ![Screenshot](img/share-dialog-add-2503.jpg){ class="shadow" }
-    
+
 8. Copy the link by clicking on it
-    
+
     ![Screenshot](img/share-dialog-copy-2503.jpg){ class="shadow" }
-    
+
 9. Share it with your friends
 
 !!!tip "Share multiple albums with one link"
@@ -60,7 +59,7 @@ Then
 2. Click :material-share-variant: on the album cover
 
     ![Screenshot](img/share-delete-1-2503.jpg){ class="shadow" }
-    
+
 3. Click :material-chevron-down:
 4. Click :material-delete:
 

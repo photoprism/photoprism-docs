@@ -69,7 +69,7 @@ Besides using the API endpoints provided for this, you can also generate valid [
 - https://www.scottbrady91.com/oauth/oauth-is-not-user-authorization
 - https://www.oauth.com/oauth2-servers/access-tokens/refreshing-access-tokens/
 - https://www.oauth.com/oauth2-servers/access-tokens/access-token-lifetime/
-- https://www.oauth.com/oauth2-servers/access-tokens/access-token-response/ 
+- https://www.oauth.com/oauth2-servers/access-tokens/access-token-response/
 - https://www.oauth.com/oauth2-servers/client-registration/client-id-secret/
 - https://www.oauth.com/oauth2-servers/authorization/the-authorization-request/
 - https://www.oauth.com/oauth2-servers/authorization/requiring-user-login/

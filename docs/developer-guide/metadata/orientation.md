@@ -52,7 +52,7 @@ Rotation                        : 270
 
 ## Exif Values
 
-The numbers used to specify the image orientation are defined as follows: 
+The numbers used to specify the image orientation are defined as follows:
 
 1. = 0 degrees: the correct orientation, no adjustment is required.
 2. = 0 degrees, mirrored: image has been flipped back-to-front.

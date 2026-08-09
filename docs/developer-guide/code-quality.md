@@ -58,7 +58,7 @@ Advantages of the bottom-up approach are component reusability, agility, and tes
 
 !!! example ""
     I compared Mel's hand-optimized programs with the same code massaged by the optimizing assembler program, and Mel's always ran faster.
-    That was because the “top-down” method of program design hadn't been invented yet, and Mel wouldn't have used it anyway. 
+    That was because the “top-down” method of program design hadn't been invented yet, and Mel wouldn't have used it anyway.
     He wrote the innermost parts of his program loops first. — <cite>[The Story of Mel](http://www.catb.org/jargon/html/story-of-mel.html)</cite>
 
 ## Opportunistic Refactoring ##
@@ -138,7 +138,7 @@ In contrast, a feature factory focuses on the quantity of new features rather th
 
 ## Test Automation Guidelines ##
 
-We strive for [complete test coverage](https://martinfowler.com/bliki/TestCoverage.html) as it is a useful tool for finding 
+We strive for [complete test coverage](https://martinfowler.com/bliki/TestCoverage.html) as it is a useful tool for finding
 untested parts of our code base. Test coverage is of limited use as a numerical statement of how good our tests are.
 
 The *F.I.R.S.T. Principle* includes five rules that good tests should follow:[^2]

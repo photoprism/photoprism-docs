@@ -28,16 +28,15 @@ As a Raspberry Pi owner, you therefore get the same core functionality and can f
 
 | Image               | Name                            |
 |---------------------|---------------------------------|
-| Stable Release      | `photoprism/photoprism:latest`  | 
-| Development Preview | `photoprism/photoprism:preview` | 
-| MariaDB             | `arm64v8/mariadb:12.3`          | 
+| Stable Release      | `photoprism/photoprism:latest`  |
+| Development Preview | `photoprism/photoprism:preview` |
+| MariaDB             | `arm64v8/mariadb:12.3`          |
 
 Running 64-bit Docker images under Raspberry Pi OS may require additional manual [configuration changes](#raspberry-pi-os), especially on installations that still prioritize 32-bit user space for compatibility with older software. If you do not need compatibility with 32-bit apps, we recommend choosing a standard 64-bit Linux distribution instead, as it saves time and reduces setup complexity:
 
 - [Raspberry Pi Debian](https://raspi.debian.net/)
 - [Ubuntu for Raspberry Pi](https://ubuntu.com/raspberry-pi)
 - [UbuntuDockerPi](https://github.com/guysoft/UbuntuDockerPi) is a 64-bit Ubuntu Server with Docker pre-configured
-
 
 !!! info ""
     Other distributions that target the same use case as Raspberry Pi OS, such as CoreELEC, can have similar limitations and are therefore not ideal for running modern server applications.
@@ -47,7 +46,7 @@ Running 64-bit Docker images under Raspberry Pi OS may require additional manual
 To ensure compatibility with 64-bit Docker images, your Raspberry Pi must boot with the `arm_64bit=1` flag in its [config.txt file](https://www.raspberrypi.com/documentation/computers/config_txt.html).
 An "exec format" error will occur otherwise.
 
-Try explicitly pulling the ARM64 version if you've booted your device with the `arm_64bit=1` flag 
+Try explicitly pulling the ARM64 version if you've booted your device with the `arm_64bit=1` flag
 and you see the "no matching manifest" error on Raspberry Pi OS:
 
 ```bash
@@ -56,7 +55,7 @@ docker pull --platform=arm64 photoprism/photoprism:latest
 
 It may also help to set the `DOCKER_DEFAULT_PLATFORM` environment variable to `linux/arm64`.
 
-In case you see Docker errors related to "cgroups", try adding the following parameters to 
+In case you see Docker errors related to "cgroups", try adding the following parameters to
 `/boot/firmware/cmdline.txt` or `/boot/cmdline.txt` (file location depends on the OS in use):
 
 ```
@@ -100,7 +99,7 @@ docker compose up -d --pull always
 Pulling a new version can take several minutes, depending on your internet connection speed.
 
 Advanced users can [add this to a `Makefile`](https://dl.photoprism.app/docker/Makefile) so that they only have to type a single
-command like `make update`. See [Command-Line Interface](docker-compose.md#command-line-interface) 
+command like `make update`. See [Command-Line Interface](docker-compose.md#command-line-interface)
 to learn more about terminal commands.
 
 !!! tldr ""

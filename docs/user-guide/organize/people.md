@@ -45,8 +45,8 @@ There can be several reasons why a face was not detected:
 - Contrast plays a major role, so a bright face with gray hair on a gray background may be less obvious to our face detection than it is to you
 - In very rare cases, an actual face may be considered a false positive and thus be ignored
 
-!!! tldr "" 
-    Recognition compares the similarity of faces. The similarity threshold for a face is reduced when 
+!!! tldr ""
+    Recognition compares the similarity of faces. The similarity threshold for a face is reduced when
     you report a bad match.
 
 ## Assign Names to Faces ##
@@ -135,7 +135,7 @@ You may report bad matches by pressing the :material-eject: button underneath a 
 This will remove the name. You can either leave it blank or enter the name of a different person.
 
 !!! danger ""
-    When you reject a match, the corresponding face cluster will be updated in the background so that similar 
+    When you reject a match, the corresponding face cluster will be updated in the background so that similar
     issues can be resolved automatically.
 
 1. Open the photo [*edit dialog*](edit.md)
@@ -170,7 +170,6 @@ Faces can also be removed from the [Info Sidebar](info-sidebar.md) of the full-s
 
 ![Screenshot](img/people-context-menu-down-2503.jpg){ class="shadow" }
 
-
 ## Create Albums from People ##
 1. Go to *People*
 2. Select a person
@@ -184,7 +183,7 @@ Faces can also be removed from the [Info Sidebar](info-sidebar.md) of the full-s
 ## Search ##
 You can find photos with people on it using the following queries:
 
-- `people`, `faces` or `faces:true` will result in all photos with people 
+- `people`, `faces` or `faces:true` will result in all photos with people
 - `faces:false` will show all photos without people
 - `faces:3` will show all photos with at least 3 people on it
 - `person:"John Doe"` or `subject:"John Doe"` will show all photos of the person with the exact name John Doe
@@ -220,7 +219,7 @@ Face recognition was developed and tested under the assumption that the [backgro
 
 PhotoPrism's background worker groups new faces by similarity, compares faces with clusters, and optimizes existing clusters as needed. Without these routine tasks, the number of faces to be processed becomes too large. The first and next time the worker runs, it can then cause a heavy server load until all the faces, face clusters, and related pictures have been updated. The longer you wait, the more CPU is required and the longer it takes.
 
-An important reason for the worker to run independently of actual changes in the main instance is that some users change the database content directly or run additional instances, for example for indexing. It is a problem that can be solved, but it takes time. If we were to ignore this and don't run the worker at all times, it could lead to many additional support requests, further reducing the amount of time we can spend on development. 
+An important reason for the worker to run independently of actual changes in the main instance is that some users change the database content directly or run additional instances, for example for indexing. It is a problem that can be solved, but it takes time. If we were to ignore this and don't run the worker at all times, it could lead to many additional support requests, further reducing the amount of time we can spend on development.
 
 *The handling of changes in multiple instances will be improved over time so that the worker can be run less frequently in future releases.*
 

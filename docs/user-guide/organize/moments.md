@@ -1,6 +1,6 @@
 # Moments #
 
-PhotoPrism creates moments out of your memories. 
+PhotoPrism creates moments out of your memories.
 *Moments* get constantly updated in case you add new photos.
 
 !!! info ""

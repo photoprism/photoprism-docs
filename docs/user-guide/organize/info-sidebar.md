@@ -70,4 +70,3 @@ Like on the *People* tab of the Edit Dialog, only unnamed face markers can be re
 4. Click :material-delete: in the confirm pill to remove it.
 
 ![Screenshot](img/remove-face-marker-202605.jpg){ class="shadow" }
-

@@ -162,7 +162,7 @@ You should now be able to use the `photoprism vision` [CLI commands](./cli.md#ru
 
 ### Verifying Your Configuration
 
-If you encounter issues, a good first step is to verify how PhotoPrism has loaded your [`vision.yml`](index.md#visionyml-reference) configuration. You can do this by running: 
+If you encounter issues, a good first step is to verify how PhotoPrism has loaded your [`vision.yml`](index.md#visionyml-reference) configuration. You can do this by running:
 
 ```bash
 docker compose exec photoprism photoprism vision ls

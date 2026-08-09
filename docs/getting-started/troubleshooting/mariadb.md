@@ -22,7 +22,7 @@ services:
     ...
 ```
 
-You can then manually upgrade to [new major versions](https://mariadb.com/docs/release-notes/community-server) by changing the image tag, e.g. from `mariadb:12` to `mariadb:13`, once [they are stable](https://mariadb.org/about/#maintenance-policy) and we had time to test them. 
+You can then manually upgrade to [new major versions](https://mariadb.com/docs/release-notes/community-server) by changing the image tag, e.g. from `mariadb:12` to `mariadb:13`, once [they are stable](https://mariadb.org/about/#maintenance-policy) and we had time to test them.
 
 However, this requires periodically [checking for new MariaDB images](https://hub.docker.com/_/mariadb) and adjusting your `compose.yaml` file accordingly, so you don't get stuck with an outdated version.
 
@@ -136,7 +136,6 @@ Before [submitting a support request](https://www.photoprism.app/kb/getting-supp
 ## Wrong Password
 
 If the password you are using was specified in a `compose.yaml` or `docker-compose.yml` file and contains one or more `$` characters, these [must be escaped with `$$`](../../developer-guide/technologies/yaml.md#dollar-signs) (a double dollar sign) so that, for example, `"compo$e"` becomes `"compo$$e"`:
-
 
 ```yaml
 services:
@@ -255,9 +254,9 @@ To create a database backup:
 
 - [ ] In case the MariaDB version and system architecture match, you can shut down your existing PhotoPrism instance and the database server, and then copy the [entire *database* storage folder](../../user-guide/backups/folders.md#database) without changing any file or folder permissions
 - [ ] Alternatively, you can use the built-in [`photoprism backup -i -f`](../../user-guide/backups/index.md#backup-command) [CLI command](../docker-compose.md#opening-a-terminal), or backup the database with a [manually created SQL dump](https://mariadb.com/kb/en/mariadb-dump/) (backup file)
- 
+
 On the new server:
- 
+
 - [ ] If you copied the entire *database* storage folder, start the MariaDB server and make sure PhotoPrism can [access the new database](#cannot-connect) by updating its configuration or your network settings if necessary
 - [ ] To restore the database from a backup dump ([either manually](https://mariadb.com/kb/en/restoring-data-from-dump-files/) or [using the `photoprism restore -i -f`](../../user-guide/backups/restore.md#restore-command) [CLI command](../docker-compose.md#opening-a-terminal)), the MariaDB server must be running and PhotoPrism must be restarted after the backup has been restored
 - [ ] Be sure to [never expose your database](#cannot-connect) to the public Internet, and [use strong passwords](#wrong-password) if the database is exposed to an external network

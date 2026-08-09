@@ -7,7 +7,7 @@
 
 ## Hardware Watchdog Initiates Reboot
 
-A watchdog timer is an electronic timer that is used to detect and correct computer malfunctions. When activated, it can trigger a reboot when the computer is under heavy load, e.g. when indexing pictures. 
+A watchdog timer is an electronic timer that is used to detect and correct computer malfunctions. When activated, it can trigger a reboot when the computer is under heavy load, e.g. when indexing pictures.
 
 Should your Raspberry Pi fail to reset the timer before it expires, the WDT signal will reboot it.
 It is [disabled by default in the firmware](https://github.com/raspberrypi/firmware/blob/f694bbe7c6f142e0c1a5033f0f6c15528fd6c98c/boot/overlays/README#L277).

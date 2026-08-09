@@ -10,7 +10,7 @@ We have chosen Go because of its simplicity and performance. On top, it enables 
 ## Testing ##
 - https://medium.com/@povilasve/go-advanced-tips-tricks-a872503ac859 - Go advanced testing tips & tricks
 - [Golang version of Pact](https://github.com/pact-foundation/pact-go) - contract testing framework for HTTP APIs and non-HTTP asynchronous messaging systems
-- [Integration Tests in Go](https://www.philosophicalhacker.com/post/integration-tests-in-go/) - blog post 
+- [Integration Tests in Go](https://www.philosophicalhacker.com/post/integration-tests-in-go/) - blog post
 - [Parallelize your table-driven tests](https://rakyll.org/parallelize-test-tables/) - blog post
 
 ## Useful libraries and frameworks ##

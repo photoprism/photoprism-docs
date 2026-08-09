@@ -48,7 +48,7 @@ In addition to reading metadata from your original and sidecar files, PhotoPrism
 
 - dates or keywords from folder or filenames
 - keywords derived from image classification, color detection and facial recognition
-- GPS information from location estimates 
+- GPS information from location estimates
 - keywords derived from location details
 
 ## Export

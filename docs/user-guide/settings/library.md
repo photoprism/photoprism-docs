@@ -23,7 +23,7 @@ Estimates the location of pictures taken without GPS information by extrapolatin
 
 #### :material-image-size-select-large: Generate Previews
 
-Automatically creates JPEG or PNG preview images for other file types so they can be displayed in search results and in the full-screen viewer. 
+Automatically creates JPEG or PNG preview images for other file types so they can be displayed in search results and in the full-screen viewer.
 
 !!! danger ""
     *Generate Previews* should normally remain enabled. Otherwise, PhotoPrism cannot fully index file types other than JPEG or PNG unless a compatible preview sidecar file with the same filename prefix already exists. See *Stacks* to learn more about sidecar naming conventions.
@@ -51,7 +51,7 @@ Files that share the same file and folder name (except for the file extension) a
 When you change these settings, files that are already stacked will **not be unstacked automatically**. This is because unstacking is a resource-intensive operation that requires each file to be re-indexed.
 
 The result also depends on the exact order in which you unstack the files, as non-media sidecar files, for example, remain bound to the remaining media file in a stack. We consider providing a command for this in a future release and appreciate [any contributions](../../developer-guide/index.md) in this regard.
- 
+
 !!! tldr ""
     If you are new to PhotoPrism and want to re-index your library with different settings, you can run the `photoprism reset` [command in a terminal](../../getting-started/docker-compose.md#command-line-interface) to reset the index and start from scratch.
 

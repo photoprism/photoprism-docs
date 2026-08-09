@@ -102,7 +102,6 @@ Compared to Let's Encrypt, you can also create and revoke certificates through a
 
 A good way to troubleshoot configuration issues is to increase the log level. To enable [trace log mode](config-options.md), set `PHOTOPRISM_LOG_LEVEL` to `"trace"` in the `environment:` section of the `photoprism` service (or use the `--trace` flag when running the `photoprism` command directly):
 
-
 ```yaml
 services:
   photoprism:
@@ -123,7 +122,7 @@ docker compose up -d
 You can run this command to check the server logs for warnings and errors, including the last 100 messages (omit `--tail=100` to see them all, and `-f` to output only the last logs without watching them):
 
 ```bash
-docker compose logs -f --tail=100 
+docker compose logs -f --tail=100
 ```
 
 [Learn more ›](troubleshooting/docker.md#viewing-logs)
@@ -154,4 +153,4 @@ docker compose up -d
 !!! tldr ""
     Our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible distributions.
 
-[^1]: We may receive a credit when you sign up through our link, which helps us fund the project infrastructure. 
+[^1]: We may receive a credit when you sign up through our link, which helps us fund the project infrastructure.

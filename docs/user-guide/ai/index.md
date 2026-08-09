@@ -34,7 +34,7 @@ Custom AI engines, models, and run modes can be specified in a `vision.yml` file
 
 !!! info ""
     If PhotoPrism can’t read your config file, make sure the file exists at the config path configured for your instance. Older installations may use `storage/settings`.
-    
+
     Run `docker compose exec photoprism photoprism show config | grep config-path` to find out what's your configured config path.
 
 ```yaml
@@ -60,7 +60,7 @@ Thresholds:
   NSFW: 75
 ```
 
-If a model type is omitted, PhotoPrism will use the built-in defaults for `labels`, `nsfw`, `face`, or `caption`. The optional `Thresholds` block can be used to filter out labels with a low probability or adjust the probability of flagging content as NSFW. 
+If a model type is omitted, PhotoPrism will use the built-in defaults for `labels`, `nsfw`, `face`, or `caption`. The optional `Thresholds` block can be used to filter out labels with a low probability or adjust the probability of flagging content as NSFW.
 
 | Field                   | Default                                | Notes                                                                              |
 |-------------------------|----------------------------------------|------------------------------------------------------------------------------------|
@@ -156,5 +156,5 @@ Configures the endpoint URL, method, format, and authentication for [Ollama](usi
 
 !!! tldr ""
     **Authentication:** All credentials and identifiers support `${ENV_VAR}` expansion. `Service.Key` sets `Authorization: Bearer <token>`; `Username`/`Password` injects HTTP basic authentication into the service URI when it is not already present. When `Service.Key` is empty, PhotoPrism defaults to `OPENAI_API_KEY` (OpenAI engine) or `OLLAMA_API_KEY`[^1] (Ollama engine), also honoring their `_FILE` counterparts.
- 
+
 [^1]: Available since the [March 5, 2026 release](../../release-notes.md#march-5-2026).

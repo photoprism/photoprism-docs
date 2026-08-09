@@ -57,7 +57,7 @@ Our project infrastructure is provided by the following companies:
 
 !!! example "Privacy Notice"
     We operate a number of web services that help us develop and maintain our software in collaboration with the open source community, for example [translate.photoprism.app](https://translate.photoprism.app/).
-    
+
     Because many of these apps and tools were originally developed for internal use without a high level of privacy in mind, we ask that you do not enter personal information such as your real name or personal email address if you want it to remain private.
-    
+
     **Personal details may otherwise show up in logs, source code, translation files, commit messages, and pull request comments.**

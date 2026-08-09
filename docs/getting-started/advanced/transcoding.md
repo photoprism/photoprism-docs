@@ -38,7 +38,7 @@ The [`PHOTOPRISM_FFMPEG_SIZE`](../config-options.md#file-conversion) config opti
 
 !!! tldr ""
     When transcoding videos, the original aspect ratio is maintained and smaller videos will not be upscaled.
-    
+
 !!! tldr ""
     Note that MPEG-4 AVC videos are not re-encoded if they exceed the configured resolution limit.
 
@@ -83,7 +83,7 @@ Note that these static builds cannot be used with hardware transcoding and that 
 
 ## GPU Drivers
 
-Depending on your hardware, it may be necessary to install additional packages for FFmpeg to use the AVC encoding device. 
+Depending on your hardware, it may be necessary to install additional packages for FFmpeg to use the AVC encoding device.
 
 One way to do this automatically is to set `PHOTOPRISM_INIT` to `"gpu tensorflow"` when using our Docker images. Note that this is experimental and not required for most encoders.
 
@@ -136,7 +136,7 @@ Once the toolkit is installed, choose the `nvidia` encoder and [add a `deploy` s
 
 ```yaml
 services:
-  photoprism:    
+  photoprism:  
     environment:
       PHOTOPRISM_FFMPEG_ENCODER: "nvidia"
       PHOTOPRISM_INIT: "tensorflow-gpu"
@@ -280,7 +280,6 @@ services:
 
 A good way to troubleshoot configuration issues is to increase the log level. To enable [trace log mode](../config-options.md), set `PHOTOPRISM_LOG_LEVEL` to `"trace"` in the `environment:` section of the `photoprism` service (or use the `--trace` flag when running the `photoprism` command directly):
 
-
 ```yaml
 services:
   photoprism:
@@ -301,7 +300,7 @@ docker compose up -d
 You can run this command to check the server logs for warnings and errors, including the last 100 messages (omit `--tail=100` to see them all, and `-f` to output only the last logs without watching them):
 
 ```bash
-docker compose logs -f --tail=100 
+docker compose logs -f --tail=100
 ```
 
 [Learn more ›](../troubleshooting/docker.md#viewing-logs)

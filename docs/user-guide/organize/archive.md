@@ -10,11 +10,10 @@ Content that is archived is not deleted but it will not appear in any section ap
 1. Select photos/videos
 2. Click context menu
 3. Click :material-archive:
-   
-    ![Screenshot](img/archive-2503.jpg){ class="shadow" }
-    
-    <!--![Screenshot](img/confirm-archive.jpg)-->
 
+    ![Screenshot](img/archive-2503.jpg){ class="shadow" }
+
+    <!--![Screenshot](img/confirm-archive.jpg)-->
 
 ### Restore Photos from Archive ###
 

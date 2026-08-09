@@ -50,7 +50,7 @@ to automatically create a JSON sidecar for each media file. **In this way, embed
 Native metadata extraction is limited to common Exif headers. Note that this causes a small amount of overhead when
 indexing for the first time.
 
-JSON files can also be useful for debugging, as they contain the full metadata and can be processed with common 
+JSON files can also be useful for debugging, as they contain the full metadata and can be processed with common
 development tools and text editors.
 
 !!! info ""
@@ -60,7 +60,7 @@ development tools and text editors.
 
 Unless disabled by setting the `PHOTOPRISM_SIDECAR_YAML` option to `"false"` in your configuration, PhotoPrism automatically creates/updates [human-friendly YAML sidecar files](../developer-guide/technologies/yaml.md) during indexing and after manual editing of fields such as title, date, or location. They serve as a backup in case the database (index) is lost, or when folders are synchronized with a remote instance.
 
-Like JSON, [YAML](../developer-guide/technologies/yaml.md) files can be opened with common development tools and 
+Like JSON, [YAML](../developer-guide/technologies/yaml.md) files can be opened with common development tools and
 text editors. However, changes are not synchronized with the original index, as this could overwrite existing data.
 
 #### XMP ####
@@ -183,7 +183,7 @@ PhotoPrism depends on a number of other open source tools and applications, such
 We therefore recommend to [use Docker](https://docs.docker.com/desktop/setup/install/windows-install/), so you can take advantage of [our pre-built and QA-tested Docker image](https://hub.docker.com/r/photoprism/photoprism/tags), which includes all the dependencies you need.
 It is a well-tested standard tool that also lets you run many other self-hosted apps without having to worry about the details or Windows-specific issues.
 To further simplify the setup for you, we offer [a batch script](https://dl.photoprism.app/docker/windows/install.bat) that you can run in the directory where you want to install PhotoPrism:
-        
+
 ```bat
 curl.exe -o install.bat https://dl.photoprism.app/docker/windows/install.bat
 install.bat
@@ -496,7 +496,7 @@ are listed:
 docker compose exec photoprism photoprism help
 ```
 
-Our [Docker Compose](docker-compose.md) [examples](https://dl.photoprism.app/docker/) are continuously 
+Our [Docker Compose](docker-compose.md) [examples](https://dl.photoprism.app/docker/) are continuously
 updated and inline documentation has been added to simplify installation.
 
 ### What exactly does read-only mode do?
@@ -509,7 +509,7 @@ PhotoPrism generally does not write to the *originals* folder, with the followin
 
 ### How can I uninstall PhotoPrism?
 
-This depends on how you installed it. If you're running PhotoPrism with [Docker Compose](docker-compose.md), 
+This depends on how you installed it. If you're running PhotoPrism with [Docker Compose](docker-compose.md),
 this command will stop and remove the Docker container:
 
 ```bash

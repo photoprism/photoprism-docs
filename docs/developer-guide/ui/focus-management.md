@@ -1,6 +1,6 @@
 # Focus Management
 
-PhotoPrism uses a shared view helper ([`frontend/src/common/view.js`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/common/view.js)) to maintain predictable focus across pages and dialogs. 
+PhotoPrism uses a shared view helper ([`frontend/src/common/view.js`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/common/view.js)) to maintain predictable focus across pages and dialogs.
 
 This helper tracks the currently active component, applies focus when views change, and traps focus inside open dialogs, ensuring that tabbing never leaks into the page behind an overlay. The following guidelines explain how to work with the helper when building UI functionality.
 

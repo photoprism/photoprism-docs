@@ -43,9 +43,9 @@ To explicitly re-run specific migrations, you can pass them as arguments to the 
 ```
 $ photoprism migrations run 20220521-000003
 
-INFO[2022-07-12T11:45:29Z] migrate: 20220521-000003 successful [12.967654ms] 
-INFO[2022-07-12T11:45:29Z] migration completed in 40.89123ms            
-INFO[2022-07-12T11:45:29Z] closed database connection 
+INFO[2022-07-12T11:45:29Z] migrate: 20220521-000003 successful [12.967654ms]
+INFO[2022-07-12T11:45:29Z] migration completed in 40.89123ms  
+INFO[2022-07-12T11:45:29Z] closed database connection
 ```
 
 ## Retry Failed Migrations

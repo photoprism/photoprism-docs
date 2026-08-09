@@ -120,7 +120,7 @@ When you're done, scroll down and click "Deploy the stack" without changing any 
 After waiting a few moments, you should be able to log in as `admin` with the password specified in `PHOTOPRISM_ADMIN_PASSWORD` when you navigate to `http://<NAS-IP>:2342/`.
 
 !!! tldr ""
-    If you have modified the server hostname, port, or protocol in your configuration, the URL to use changes accordingly. 
+    If you have modified the server hostname, port, or protocol in your configuration, the URL to use changes accordingly.
 
 ### Step 3: Index Your Library ###
 
@@ -133,7 +133,7 @@ Our [First Steps 👣](../../user-guide/first-steps.md) tutorial guides you thro
 
 Our members can activate [additional features](https://link.photoprism.app/membership) by logging in with the [admin user created during setup](../config-options.md#authentication) and then following the steps [described in our activation guide](https://www.photoprism.app/kb/activation/). Thank you for your support, which has been and continues to be essential to the success of the project! :octicons-heart-fill-24:{ .heart .purple }
 
-[Compare Memberships ›](https://link.photoprism.app/membership){ class="pr-3 block-xs" } [View Membership FAQ ›](https://www.photoprism.app/membership/faq/) 
+[Compare Memberships ›](https://link.photoprism.app/membership){ class="pr-3 block-xs" } [View Membership FAQ ›](https://www.photoprism.app/membership/faq/)
 
 !!! example ""
     We recommend that new users install our free Community Edition before [signing up for a membership](https://link.photoprism.app/membership).

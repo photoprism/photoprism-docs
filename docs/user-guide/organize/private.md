@@ -1,6 +1,6 @@
 # Hiding Private Photos #
 ## What does private mean? ##
-Some of your photos might be private for personal reasons. 
+Some of your photos might be private for personal reasons.
 Our private functionality provides you with a solution to hide private photos or videos from some sections.
 This way you can let family and friends browse through your photos without risking that they see photos you do not want them to see.
 
@@ -16,10 +16,10 @@ By default, photos marked as private will not appear in the following sections:
  * Shared Albums
 
 Private photos will be displayed in the private section, in user generated albums and within the file browser.
- 
+
 !!! info ""
     In case you want private content to appear everywhere you can configure that in [Settings](../settings/general.md).
- 
+
 ## Toggle Private Flag ##
 
   1. Go to *Search*
@@ -28,4 +28,3 @@ Private photos will be displayed in the private section, in user generated album
   4. Click :material-lock:
 
   ![Screenshot](img/private-context-menu-2503.jpg){ class="shadow" }
-

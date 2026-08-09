@@ -25,7 +25,7 @@ Ollama-generated captions and labels are stored with the `ollama` metadata sourc
 
 ### Verifying Your Configuration ###
 
-If you encounter issues, a good first step is to verify how PhotoPrism has loaded your `vision.yml` configuration. You can do this by running: 
+If you encounter issues, a good first step is to verify how PhotoPrism has loaded your `vision.yml` configuration. You can do this by running:
 
 ```bash
 docker compose exec photoprism photoprism vision ls

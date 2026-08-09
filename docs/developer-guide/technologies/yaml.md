@@ -10,7 +10,7 @@ Title: "La Tour Eiffel 🌈"
 Year: 2014
 # Key-Value Collection Example:
 Details:
-  Notes: "Bonjour\nla France!" 
+  Notes: "Bonjour\nla France!"
   Keywords: 'paris, france' # Comment
 ```
 
@@ -73,7 +73,7 @@ services:
   mariadb:
     environment:
       # sets password to "compo$e"
-      MARIADB_PASSWORD: "compo$$e" 
+      MARIADB_PASSWORD: "compo$$e"
 ```
 
 Values that contain a `$` are otherwise [interpreted as a variable](https://docs.docker.com/reference/compose-file/interpolation/). In this case, both the `$VARIABLE` and the `${VARIABLE}` syntax are supported. Further details on the use of variables can be found in the [file format reference](https://docs.docker.com/reference/compose-file/interpolation/).

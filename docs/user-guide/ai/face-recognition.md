@@ -69,7 +69,6 @@ This normalization ensures that Euclidean distance comparisons are equivalent to
 | PHOTOPRISM_FACE_CLUSTER_DIST  | --face-cluster-dist  | 0.64    | Similarity `DISTANCE` of faces forming a cluster core (0.1-1.5)         |
 | PHOTOPRISM_FACE_MATCH_DIST    | --face-match-dist    | 0.46    | Similarity `OFFSET` for matching faces with existing clusters (0.1-1.5) |
 
-
 ### Tuning Tips
 
 - A reasonable range for the similarity distance between face embeddings is between 0.60 and 0.70, with a higher value being more aggressive and leading to larger clusters with more false positives.

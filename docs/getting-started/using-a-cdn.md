@@ -42,4 +42,4 @@ Pricing starts at $0.005/GB and there is no minimum usage or monthly fee, so you
 
 You must therefore **not configure a CDN URL** for your site, as this may prevent the user interface from loading. Also note that their free tier [does not include video streaming](https://www.cloudflare.com/plans/), so there may be problems with video playback if you are not a paying customer.
 
-[^1]: We receive a $20 credit when you sign up through our link, which helps us fund the project infrastructure. 
+[^1]: We receive a $20 credit when you sign up through our link, which helps us fund the project infrastructure.

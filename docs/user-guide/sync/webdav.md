@@ -95,36 +95,36 @@ If access is denied even though the login credentials are correct, please check 
      4. Enter the drive letter and folder you want to map your WebDAV connection to
      5. Check the boxes **Reconnect at sign-in** and **Connect using different credentials**
      6. Click the **Connect to a Web site that you can use to store your documents and pictures** link
-     
+
         ![Screenshot](img/webdav-2.jpg){ class="shadow" }
-     
+
      7. Click **Next**
-     
+
         ![Screenshot](img/webdav-3.jpg){ class="shadow" }
-     
+
      8. Click **Choose a custom network location** and then click **Next**
-     
-        ![Screenshot](img/webdav-4.jpg){ class="shadow" }     
-     
+
+        ![Screenshot](img/webdav-4.jpg){ class="shadow" }  
+
      9. In the **Internet or network address** field, enter the URL as shown above and click **Next**
-        
+
         ![Screenshot](img/webdav-5.jpg){ class="shadow" }
-     
+
      10. Enter your username and password and click **Ok**
-     
+
         ![Screenshot](img/webdav-6.jpg){ class="shadow" }
-     
+
      11. Enter a name for the network location and click **Next**
-    
+
         ![Screenshot](img/webdav-7.jpg){ class="shadow" }
-    
+
      12. Click **Finish**
-    
+
         ![Screenshot](img/webdav-8.jpg){ class="shadow" }
-    
+
      The originals folder appears as a mapped drive in Windows Explorer, and you can immediately add,
      edit, or delete files and directories using the Windows File Explorer.
-    
+
      ![Screenshot](img/webdav-9.jpg){ class="shadow" }
 
     If you [cannot connect to your instance via WebDAV](../../getting-started/troubleshooting/windows.md#connecting-via-webdav) using these instructions:

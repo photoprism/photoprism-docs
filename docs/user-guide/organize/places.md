@@ -9,13 +9,13 @@
 
 You can  set a default map style in [settings](../settings/general.md) or choose between different styles by clicking :material-layers-triple:.
 
-Clicking on a cluster, opens the cluster overlay. 
+Clicking on a cluster, opens the cluster overlay.
 
 ![Screenshot](img/places-cluster-1-2502.jpg){ class="shadow" }
 
 ![Screenshot](img/places-cluster-2-2502.jpg){ class="shadow" }
 
-To open photos from this location in the search click :material-tab:. 
+To open photos from this location in the search click :material-tab:.
 
 To clear the location filter click :material-map-marker-off-outline:.
 
@@ -59,6 +59,3 @@ To navigate directly from the cards results view to the location of a picture on
 
    ![Screenshot](img/places-animation-1-2502.jpg){ class="shadow" }
    ![Screenshot](img/places-animation-2-2502.jpg){ class="shadow" }
-
-
-

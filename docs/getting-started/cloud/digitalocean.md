@@ -78,7 +78,7 @@ Your droplet is now being created.
 ![Screenshot](img/do-quick-access.png){ class="shadow" }
 
 !!!info
-    In case you have no domain and let's encrypt set up you will see the notice "Your connection is not private". 
+    In case you have no domain and let's encrypt set up you will see the notice "Your connection is not private".
     Click *Advanced* and click *Open page*.
 
 - Use username "admin" and your initial password to sign in

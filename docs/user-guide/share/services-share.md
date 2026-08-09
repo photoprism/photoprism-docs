@@ -16,7 +16,6 @@ In [Settings > Services](../settings/sync.md), you can connect PhotoPrism to Web
 !!! danger ""
       Due to problems with some Nextcloud settings it might be that uploading to Nextcloud results in 0 byte files. You find information on how to solve it [here](https://github.com/photoprism/photoprism/issues/443).
 
-
 ## Share Albums with other Apps ##
 
 1. Go to *Albums* / *Moments* / *Calendar* / *Regions* / *Folders*

@@ -11,7 +11,7 @@ Alternatively, [Podman](https://podman.io/) is supported as a drop-in replacemen
 
     Open a terminal and run this command to start the app after replacing `~/Pictures` with
     the folder containing your pictures:
-    
+
     ```bash
     docker run -d \
       --name photoprism \
@@ -29,7 +29,7 @@ Alternatively, [Podman](https://podman.io/) is supported as a drop-in replacemen
 
     Open a terminal and run this command to start the app after replacing `~/Pictures` with
     the folder containing your pictures:
-    
+
     ```bash
     podman run -d \
       --name photoprism \
@@ -66,7 +66,7 @@ Enabling [public mode](config-options.md#authentication) will disable authentica
 !!! info ""
     It can be helpful to keep Docker running in the foreground while debugging
     so that log messages are displayed directly. To do this, omit the `-d` parameter when restarting.
-    
+
     If the server is already running, or you see no errors, you may have started it
     on a different host and/or port. There could also be an [issue with your browser,
     ad blocker, or firewall settings](troubleshooting/index.md#connection-fails).
@@ -90,7 +90,7 @@ be mounted as sub folders of `/photoprism/originals`:
 
 ```bash
 -v ~/Example:/photoprism/originals/Example
-``` 
+```
 
 !!! tldr ""
     When *read-only mode* is enabled, all features that require write permission to the *originals* folder are disabled, e.g. [WebDAV](../user-guide/sync/webdav.md), uploading and deleting files. To do this, add the `-e PHOTOPRISM_READONLY="true"` command flag. You can additionally [mount volumes with the `:ro` flag](https://docs.docker.com/engine/storage/bind-mounts/#use-a-read-only-bind-mount) so that writes are also blocked by Docker.
@@ -164,7 +164,7 @@ docker rm -f photoprism
 
 Our members can activate [additional features](https://link.photoprism.app/membership) by logging in with the [admin user created during setup](config-options.md#authentication) and then following the steps [described in our activation guide](https://www.photoprism.app/kb/activation/). Thank you for your support, which has been and continues to be essential to the success of the project! :octicons-heart-fill-24:{ .heart .purple }
 
-[Compare Memberships ›](https://link.photoprism.app/membership){ class="pr-3 block-xs" } [View Membership FAQ ›](https://www.photoprism.app/membership/faq/) 
+[Compare Memberships ›](https://link.photoprism.app/membership){ class="pr-3 block-xs" } [View Membership FAQ ›](https://www.photoprism.app/membership/faq/)
 
 !!! example ""
     We recommend that new users install our free Community Edition before [signing up for a membership](https://link.photoprism.app/membership).

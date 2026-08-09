@@ -45,7 +45,7 @@ The expanded toolbar contains additional options and search filters for country,
 
 #### Context Menu ####
 
-When photos or videos are selected, the context menu appears in the lower right corner. 
+When photos or videos are selected, the context menu appears in the lower right corner.
 The number displayed is the count of currently selected items.
 It also contains the following buttons:
 

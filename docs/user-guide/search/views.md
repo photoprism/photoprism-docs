@@ -8,13 +8,11 @@ PhotoPrism offers you three different views to browse your photos and videos. In
 
     ![Screenshot](../organize/img/card-2503.jpg){ class="shadow" }
 
-
 === "Mosaic View"
 
     The *mosaic view* lets you enjoy your photos without distraction
 
     ![Screenshot](../organize/img/mosaic-2503.jpg){ class="shadow" }
-
 
 === "List View"
 
@@ -22,9 +20,7 @@ PhotoPrism offers you three different views to browse your photos and videos. In
 
     ![Screenshot](../organize/img/list-2503.jpg){ class="shadow" }
 
-
 To switch between views you can either use the filter in the filter bar or the view button (:material-view-column:, :material-view-comfy:, :material-view-list:) in the upper right corner.
-
 
 Additionally, you can open your photos/videos in *fullscreen mode* and start a slideshow (:material-play:).
 
@@ -32,7 +28,7 @@ Additionally, you can open your photos/videos in *fullscreen mode* and start a s
 
 !!! tip "Keyboard Shortcuts in Fullscreen"
     In fullscreen mode, you can use these keyboard shortcuts for quick actions:
-    
+
     - **Ctrl + F** : Toggle fullscreen mode
     - **Ctrl + S** : Play/pause slideshow
     - **Ctrl + I** : Toggle Info Sidebar

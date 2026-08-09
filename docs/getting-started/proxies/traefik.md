@@ -66,12 +66,12 @@ To run PhotoPrism behind Traefik, create a `traefik.yaml` configuration and then
       docker:
         exposedByDefault: false
         watch: true
-    
+
     api:
       insecure: false
       dashboard: false
       debug: false
-    
+
     certificatesResolvers:
       myresolver:
         acme:

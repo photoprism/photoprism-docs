@@ -89,7 +89,6 @@ Available Make targets for JavaScript tests:
 
 Test coverage output is saved to *frontend/coverage/index.html*.
 
-
 #### Test Frameworks ####
 To test JavaScript code we use [Vitest](https://vitest.dev/) together with [Vite](https://vite.dev/), [jsdom](https://github.com/jsdom/jsdom), [Vue Test Utils](https://test-utils.vuejs.org/), and [`@vitest/coverage-v8`](https://vitest.dev/guide/coverage.html).
 
@@ -105,7 +104,7 @@ make dep-acceptance
 
 In the development container environment, you can run the tests in headless chrome:
 
-``` bash 
+``` bash
 make acceptance-run-chromium
 ```
 
@@ -116,7 +115,7 @@ Locally, you can run the tests in all supported browsers that you have installed
 To run tests locally you need to install testcafe on your machine.
 ```
 npm install -g testcafe
-``` 
+```
 
 Start the test-instance (from within the docker container)
 ```
@@ -138,7 +137,7 @@ To run tests on remote or mobile devices use
 ```
 testcafe  remote frontend/tests/acceptance/
 ```
---> 
+-->
 ### Test Frameworks
 
 Our goal was to implement UI acceptance tests using JavaScript, so that frontend developers are able to run and write them without learning Go.<br>
@@ -159,7 +158,7 @@ We agreed on using TestCafe as tests were the most stable and pretty fast (becau
 |Notes |easy to find elements |easy to find elements |additional library needed to find selectors by text|
 
 Other test libraries and frameworks we currently don't use:
- 
+
 - https://codecept.io/
 - https://funcunit.com/
 - https://www.browserstack.com/

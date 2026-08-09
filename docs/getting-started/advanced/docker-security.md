@@ -65,7 +65,7 @@ The following is an example of the changes to your `compose.yaml` or `docker-com
 secrets:
   # Secrets are single-line text files where the sole
   # content is the secret. Paths in this example assume
-  # that secrets are kept in local ".secrets" folder. 
+  # that secrets are kept in local ".secrets" folder.
   DB_ROOT_PWD:
     file: .secrets/db_root_pwd.txt
   DB_PWD:

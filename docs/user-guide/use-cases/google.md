@@ -24,7 +24,7 @@
 ## Transfer Albums ##
 
 !!! note ""
-    Google Photos albums won't be automatically imported yet as we're trying to find a way to deal with 
+    Google Photos albums won't be automatically imported yet as we're trying to find a way to deal with
     auto-generated albums users may not want to import.
 
 The community has created a bash script to import albums from a Google Takeout.

@@ -11,20 +11,20 @@
 ## Edit Album Details
 
 Go to *Albums* and open the *album edit dialog*.
-  
+
 === "From Title"
       Click on the *album title*.
 
       ![Screenshot](img/album-edit-title-2503.jpg){ class="shadow" }
-   
+
 === "Context Menu"
       Select album, open context menu and the pencil :material-pencil: icon.
-    
+
        ![Screenshot](img/album-edit-menu-2503.jpg){ class="shadow" }
-   
+
 === "Album Toolbar"
        Open album, click :material-dots-vertical: and then click the pencil :material-pencil: icon.
-    
+
        ![Screenshot](img/album-edit-toolbar-2507.jpg){ class="shadow" }
 
 Edit album details and click *Save*.
@@ -36,9 +36,9 @@ Edit album details and click *Save*.
 1. Select photos and videos.
 2. Click context menu.
 3. Click the bookmark :material-bookmark: icon.
-   ![Screenshot](img/add-photo-album-1-0512.jpg){ class="shadow" } 
+   ![Screenshot](img/add-photo-album-1-0512.jpg){ class="shadow" }
 4. Select or create the albums to which the pictures should be added.
-   ![Screenshot](img/add-photo-album-2-0512.jpg){ class="shadow" } 
+   ![Screenshot](img/add-photo-album-2-0512.jpg){ class="shadow" }
 5. Click *Confirm*.
 
 !!! tip ""

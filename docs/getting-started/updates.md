@@ -118,7 +118,7 @@ Existing users may index faces without performing a complete rescan:
 docker compose exec photoprism photoprism faces index
 ```
 
-Remove existing people and faces for a clean start e.g. after upgrading from our 
+Remove existing people and faces for a clean start e.g. after upgrading from our
 [development preview](https://docs.photoprism.app/release-notes/#development-preview):
 
 ```bash
@@ -138,7 +138,7 @@ services:
     ...
 ```
 
-You can then manually upgrade to [new major versions](https://mariadb.com/docs/release-notes/community-server) by changing the image tag, e.g. from `mariadb:12` to `mariadb:13`, once [they are stable](https://mariadb.org/about/#maintenance-policy) and we had time to test them. 
+You can then manually upgrade to [new major versions](https://mariadb.com/docs/release-notes/community-server) by changing the image tag, e.g. from `mariadb:12` to `mariadb:13`, once [they are stable](https://mariadb.org/about/#maintenance-policy) and we had time to test them.
 
 However, this requires periodically checking for [new MariaDB images](https://hub.docker.com/_/mariadb) and adjusting [your `compose.yaml` file](docker-compose.md#database) accordingly, so you don't get stuck with an [outdated](https://mariadb.org/about/#maintenance-policy) version.
 
@@ -167,7 +167,7 @@ If you don't use legacy software, we recommend choosing a [standard 64-bit Linux
 
 Our members can activate [additional features](https://link.photoprism.app/membership) by logging in with the [admin user created during setup](config-options.md#authentication) and then following the steps [described in our activation guide](https://www.photoprism.app/kb/activation/). Thank you for your support, which has been and continues to be essential to the success of the project! :octicons-heart-fill-24:{ .heart .purple }
 
-[Compare Memberships ›](https://link.photoprism.app/membership){ class="pr-3 block-xs" } [View Membership FAQ ›](https://www.photoprism.app/membership/faq/) 
+[Compare Memberships ›](https://link.photoprism.app/membership){ class="pr-3 block-xs" } [View Membership FAQ ›](https://www.photoprism.app/membership/faq/)
 
 !!! example ""
     We recommend that new users install our free [Community Edition](index.md) before [signing up for a membership](https://link.photoprism.app/membership).

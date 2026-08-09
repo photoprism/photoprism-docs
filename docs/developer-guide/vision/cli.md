@@ -1,6 +1,6 @@
 # Computer Vision Commands
 
-## Save Model Configuration 
+## Save Model Configuration
 
 To write the model configuration to a `vision.yml` file you can run:
 
@@ -40,7 +40,7 @@ photoprism vision run [options] [filter]
 | Command Flag                  | Description                                                                                                                     |
 |-------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
 | `--models MODELS`, `-m MODELS`| computer vision MODELS to run, e.g. caption, labels, or nsfw (default: "caption")                                               |
-| `--count NUMBER`, `-n NUMBER` | maximum NUMBER of pictures to be processed (default: 100000)                                                                    | 
+| `--count NUMBER`, `-n NUMBER` | maximum NUMBER of pictures to be processed (default: 100000)                                                                    |
 | `--source TYPE`, `-s TYPE`    | custom data source TYPE (auto, default, image, marker, ollama, openai, vision) (default: "auto")                               |
 | `--force`, `-f`               | force existing data to be updated if the model supports it and the source priority is equal to or higher (default: false)      |
 | `--dry-run`                   | print the matching pictures and exit without running the configured models (default: false)                                    |
@@ -118,8 +118,8 @@ docker compose exec photoprism photoprism vision reset --models=labels --source=
     docker compose exec photoprism photoprism vision run --models=caption --source=vision
     ```
 
-    The `vision` source has a high priority (64), which allows it to replace empty captions with source `manual` and `batch`. 
-    
+    The `vision` source has a high priority (64), which allows it to replace empty captions with source `manual` and `batch`.
+
     You can inspect all available sources and their priorities with:
 
     ```bash
@@ -200,7 +200,4 @@ docker compose exec photoprism photoprism faces reset
 !!! danger ""
     The `faces reset` command will delete all existing face markers and clusters. Make sure you have backups if needed, as this operation cannot be undone.
 
-
 [Learn more about face recognition ›](face-recognition.md)
-
-

@@ -42,11 +42,10 @@ If stacking by *Sequential Name* [has been enabled](../settings/library.md#stack
 1. Click on :material-camera-burst:
 
     ![Screenshot](img/sequential-1-2503.jpg){ class="shadow" }
-    
+
 2. Use arrows to see all photos of the sequence
 
     ![Screenshot](img/sequential-3-2502.jpg){ class="shadow" } ![Screenshot](img/sequential-4-2502.jpg){ class="shadow" }
-   
 
 ## Change Primary Files
 
@@ -59,10 +58,10 @@ To change the primary file:
 2. Open *Files* tab
 
 3. Click :material-chevron-down: of the file you want to set as primary
-        
+
 4. Click *primary*
 
-      ![Screenshot](img/stacks-primary-2502.jpg){ class="shadow" } 
+      ![Screenshot](img/stacks-primary-2502.jpg){ class="shadow" }
 
 ## Unstack Files
 
@@ -71,7 +70,7 @@ To change the primary file:
 2. Open *Files* tab
 
 3. Click :material-chevron-down: of the JPEG file that is not marked as primary
-        
+
 4. Click *unstack*
 
    ![Screenshot](img/stacks-unstack-2502.jpg){ class="shadow" }
@@ -87,11 +86,11 @@ Now, both files appear in our views.
 2. Open *Files* tab
 
 3. Click :material-chevron-down: of the JPEG file that is not marked as primary
-        
+
 4. Click *delete*
 
 5. Confirm
 
-   ![Screenshot](img/stacks-delete-2502.jpg){ class="shadow" } 
+   ![Screenshot](img/stacks-delete-2502.jpg){ class="shadow" }
 
 *[same position]: GPS latitude and longitude

@@ -24,7 +24,7 @@ services:
     restart: unless-stopped
     image: mariadb:12.3
     ports:
-      - 3306:3306 # Expose Port 3306 
+      - 3306:3306 # Expose Port 3306
     security_opt:
       - seccomp:unconfined
       - apparmor:unconfined
@@ -48,4 +48,4 @@ services:
 
     If this is the case, please make sure that your migrated database schema matches that of a fresh, non-migrated installation. It may help to [run the migrations manually](../../advanced/migrations/index.md) in a terminal using the *migrations* subcommands. However, this does not guarantee that all issues such as missing indexing are resolved.
 
-    [View Database Schema ›](../../../developer-guide/database/index.md) 
+    [View Database Schema ›](../../../developer-guide/database/index.md)

@@ -1,7 +1,7 @@
-[Docker](https://www.docker.com/) is an Open Source container virtualization tool. It is ideal for running 
+[Docker](https://www.docker.com/) is an Open Source container virtualization tool. It is ideal for running
 applications on any computer without extensive installation, configuration, or performance overhead.
 
-We are aware Docker is not widely used by end users despite its many advantages. For this reason, we aim 
+We are aware Docker is not widely used by end users despite its many advantages. For this reason, we aim
 to provide native binaries for common operating systems at a later time.
 
 ### What are the benefits of using Docker?

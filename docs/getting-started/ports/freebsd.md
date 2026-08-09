@@ -34,7 +34,7 @@ photoprism_storagepath="/var/photoprism/storage"
 
 You can add more command line parameters into photoprism_flags="" in the rc.conf
 
-`photoprism config` shows all config parameters. 
+`photoprism config` shows all config parameters.
 
 **4. Start the service:**
 

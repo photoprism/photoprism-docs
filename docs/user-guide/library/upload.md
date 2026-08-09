@@ -23,8 +23,6 @@ The Upload dialog supports drag-and-drop: drop one or many files (or whole folde
 
     5. Confirm the selection and click *Upload*
 
-
-
 === "From Library"
 
     1. Go to *Library* using the main navigation, and open the *Import* tab
@@ -58,4 +56,3 @@ The Upload dialog supports drag-and-drop: drop one or many files (or whole folde
     - Use a dedicated sync app such as [PhotoSync](../sync/mobile-devices.md#using-photosync), which holds the required permission and transfers files unmodified via WebDAV.
 
     You can check whether a file still contains GPS data with [ExifTool](https://exiftool.org/) (for example, `exiftool -a -G1 photo.jpg`).
-

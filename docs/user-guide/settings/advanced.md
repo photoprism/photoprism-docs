@@ -1,6 +1,6 @@
 # Advanced Settings
 
-System [config options](../../getting-started/config-options.md) such as the image quality can be changed 
+System [config options](../../getting-started/config-options.md) such as the image quality can be changed
 on the advanced settings page. You can also disable specific features and enable the debug or read-only mode.
 
 !!! tldr ""
@@ -8,7 +8,7 @@ on the advanced settings page. You can also disable specific features and enable
 
 !!! note ""
     Changing advanced settings always **requires a restart** to take effect. Selecting a different thumbnail
-    quality or size won't replace existing thumbnails. You can regenerate them using the 
+    quality or size won't replace existing thumbnails. You can regenerate them using the
     [command-line interface](../../getting-started/docker-compose.md#command-line-interface).
 
 ![](img/settings-advanced-2607.jpg){ class="shadow" }
@@ -85,7 +85,6 @@ The corresponding [config toggle](../../getting-started/config-options.md#featur
 When selected, image classification and facial recognition will be disabled because both rely on TensorFlow.
 
 The corresponding [config toggle](../../getting-started/config-options.md#feature-flags) is `PHOTOPRISM_DISABLE_TENSORFLOW`.
-
 
 ## Backups
 
@@ -202,19 +201,19 @@ The following overview shows the name, dimensions, and aspect ratio for each thu
 
 ### JPEG Quality
 
-Choose a value above 90 to display your images in the best possible quality. Note that higher values 
+Choose a value above 90 to display your images in the best possible quality. Note that higher values
 require more space in the *storage* folder for less compressed thumbnail files, which may also take longer to create.
 
-Lower quality thumbnails, on the other hand, are smaller, load faster on slow Internet connections, 
+Lower quality thumbnails, on the other hand, are smaller, load faster on slow Internet connections,
 and require less space in the *storage* folder and in the browser cache.
 
 - Quality levels of 90% or higher are generally considered *high quality*
 - 80% to 90% is considered *medium quality*
-- 70% to 80% is considered *low quality*, as you might see with highly compressed content on social media 
- 
+- 70% to 80% is considered *low quality*, as you might see with highly compressed content on social media
+
 Anything below 70% is generally of [very low quality](https://fotoforensics.com/tutorial-estq.php).
 
-Example: If a quality of 95 results in a thumbnail file size of 500kB, then reducing the quality 
+Example: If a quality of 95 results in a thumbnail file size of 500kB, then reducing the quality
 to 80 reduces the file size to about 100kB.
 
 The corresponding [config option](../../getting-started/config-options.md) is `PHOTOPRISM_JPEG_QUALITY`.

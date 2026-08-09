@@ -18,7 +18,7 @@ Use *index* if you want to index your photos and videos directly in the *origina
 Your folder structure in *originals* might look like this:
 
 ![Screenshot](img/originals-before-after.jpg){ class="shadow" }
-     
+
 **During indexing:**
 
 * files will not be renamed or moved
@@ -47,7 +47,7 @@ After indexing, the *originals* folder has not been changed in any way:
 Your initial folder structure in *import* might look like this:
 
 ![Screenshot](img/before-import.jpg){ class="shadow" }
-   
+
 **During import:**
 
 * files are copied or moved from their source directory to the *originals* folder

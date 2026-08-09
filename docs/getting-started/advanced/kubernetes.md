@@ -115,7 +115,7 @@ Because TLS typically terminates at the ingress or proxy layer, the chart keeps 
 
 Our members can activate [additional features](https://link.photoprism.app/membership) by logging in with the [admin user created during setup](../config-options.md#authentication) and then following the steps [described in our activation guide](https://www.photoprism.app/kb/activation/). Thank you for your support, which has been and continues to be essential to the success of the project! :octicons-heart-fill-24:{ .heart .purple }
 
-[Compare Memberships ›](https://link.photoprism.app/membership){ class="pr-3 block-xs" } [View Membership FAQ ›](https://www.photoprism.app/membership/faq/) 
+[Compare Memberships ›](https://link.photoprism.app/membership){ class="pr-3 block-xs" } [View Membership FAQ ›](https://www.photoprism.app/membership/faq/)
 
 !!! example ""
     We recommend that new users install our free Community Edition before [signing up for a membership](https://link.photoprism.app/membership).
@@ -127,7 +127,7 @@ Our members can activate [additional features](https://link.photoprism.app/membe
 - `config.*` maps to PhotoPrism configuration flags (app metadata, quotas, backup schedule, CDN/CORS, etc.).
 - `resources` sets requests/limits (defaults: 500 m / 1 GiB request, 4000 m / 6 GiB limit). Tune these to match your workloads.
 - `oidc.*` mirrors the options covered in [Single Sign-On via OpenID Connect](openid-connect.md); set `PHOTOPRISM_DISABLE_OIDC=false` to enable federated logins.
-- `cluster.integration` lets you pull shared values from an existing PhotoPrism® Portal secret if you run Portal in the same cluster. Leave it disabled for standalone deployments. 
+- `cluster.integration` lets you pull shared values from an existing PhotoPrism® Portal secret if you run Portal in the same cluster. Leave it disabled for standalone deployments.
 
 Whenever you change values, redeploy with `helm upgrade --install ... -f` so the `StatefulSet` picks up the new configuration. Use `kubectl rollout status` to trace progress and `helm history photos` to view revisions.
 

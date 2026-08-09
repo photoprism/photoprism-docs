@@ -15,7 +15,7 @@ The following instructions explain how to install Docker:
 - [Apple macOS](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 
 Alternatively, [Podman](#podman-compose) is supported as a drop-in replacement for Docker on Red Hat-compatible Linux distributions like RHEL, CentOS, Fedora, AlmaLinux, and Rocky Linux.
- 
+
 ### Ubuntu Linux
 
 If you are using Ubuntu Linux, you can run this script to install the latest *Docker* version, including the *Compose Plugin*, on your server in one step:
@@ -181,11 +181,10 @@ networks:
 You can run this command to watch the Docker [service logs](https://docs.docker.com/engine/logging/configure/), including the last 100 messages (omit `--tail=100` to see them all, and `-f` to output only the last logs without watching them):
 
 ```bash
-docker compose logs -f --tail=100 
+docker compose logs -f --tail=100
 ```
 
 A good way to troubleshoot configuration issues is to increase the log level. To enable [trace log mode](../config-options.md), set `PHOTOPRISM_LOG_LEVEL` to `"trace"` in the `environment:` section of the `photoprism` service (or use the `--trace` flag when running the `photoprism` command directly):
-
 
 ```yaml
 services:
@@ -285,8 +284,7 @@ echo '/swapfile none swap sw 0 0' | tee -a /etc/fstab
 !!! note ""
     You can skip `sudo -i` if you are already logged in as root.
 
-
-### Raspbian 
+### Raspbian
 
 Open a terminal on your [Raspberry Pi](../raspberry-pi.md) and run the following command to verify if it has swap configured:
 
@@ -402,7 +400,7 @@ services:
     volumes:
       # Map named volume "originals"
       # to "/photoprism/originals":
-      - "originals:/photoprism/originals"     
+      - "originals:/photoprism/originals"  
   mariadb:
     # ...
 
@@ -443,7 +441,7 @@ services:
     volumes:
       # Map named volume "originals"
       # to "/photoprism/originals":
-      - "originals:/photoprism/originals"     
+      - "originals:/photoprism/originals"  
   mariadb:
     # ...
 

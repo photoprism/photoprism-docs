@@ -67,7 +67,7 @@ Shows videos that are not in review or archived or private.
 
 #### Live Photos
 
-Shows all short videos up to 3 seconds. 
+Shows all short videos up to 3 seconds.
 
 ### :material-account: People
 
@@ -124,8 +124,3 @@ Hierarchical view of your originals directory.
 ![Screenshot](../library/img/files-1-2503.jpg){ class="shadow" }
 
 ![Screenshot](../library/img/files-2-2503.jpg){ class="shadow" }
-
-
-
-
-    

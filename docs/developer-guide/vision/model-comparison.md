@@ -25,20 +25,20 @@ Subject **coverage** is the share of images where the label set named both the m
 
 | Model                           | Size   | Labels p50 | Labels/img | Multi-word | Coverage |
 |:--------------------------------|:-------|-----------:|-----------:|-----------:|---------:|
-| `qwen3.5:4b`                    | 3.4 GB |      3.0 s |        3.6 |       3.4% |  **88%** |
-| `gemma4:e2b`                    | 7.2 GB |      2.5 s |        4.4 |   **0.0%** |      81% |
+| `qwen3.5:4b`                    | 3.4 GB |      2.5 s |        3.6 |       1.7% |  **88%** |
+| `gemma4:latest` (e4b)           | 9.6 GB |      2.6 s |        2.9 |   **0.0%** |      84% |
+| `minicpm-v4.5:8b`               | 6.1 GB |      4.5 s |        3.4 |       5.6% |      84% |
+| `gemma4:e2b`                    | 7.2 GB |      2.2 s |        4.4 |       0.0% |      81% |
 | `gemma3:4b`                     | 3.3 GB |      3.0 s |        4.1 |       0.0% |      81% |
-| `minicpm-v4.5:8b`               | 6.1 GB |      4.3 s |        3.3 |       5.7% |      81% |
-| `gemma4:latest` (e4b)           | 9.6 GB |      2.6 s |        2.9 |       0.0% |      78% |
-| `minicpm-v4.6:1b`               | 1.6 GB |      0.9 s |        3.3 |      22.6% |      78% |
+| `minicpm-v4.6:1b`               | 1.6 GB |      0.8 s |        3.3 |      18.9% |      78% |
 | `qwen3-vl:4b-instruct`          | 3.3 GB |      2.4 s |        3.0 |       0.0% |      75% |
-| `qwen3-vl:8b-instruct`          | 6.1 GB |      5.5 s |        3.0 |       2.1% |      75% |
-| `qwen3-vl:4b` (reasoning build) | 3.3 GB |      2.4 s |        2.9 |      21.3% |      69% |
-| `qwen3.5:9b`                    | 6.6 GB |      3.5 s |        1.9 |       6.5% |      69% |
-| `qwen2.5vl:7b`                  | 6.0 GB |      2.7 s |        1.5 |       0.0% |      59% |
+| `qwen3-vl:8b-instruct`          | 6.1 GB |      5.2 s |        3.1 |       2.0% |      75% |
+| `qwen3-vl:4b` (reasoning build) | 3.3 GB |      2.1 s |        2.9 |      21.3% |      69% |
+| `qwen3.5:9b`                    | 6.6 GB |      3.3 s |        1.9 |       6.7% |      69% |
+| `qwen2.5vl:7b`                  | 6.0 GB |      2.7 s |        1.4 |       0.0% |      56% |
 | `qwen3.5:2b`                    | 2.7 GB |      0.8 s |        1.2 |       5.0% |      47% |
 
-Bigger is not reliably better: `qwen3.5:4b` beat both the `2b` and `9b` tiers of its own family, and `gemma4:e2b` beat the larger `e4b`.
+Bigger is not reliably better: `qwen3.5:4b` beat both the `2b` and `9b` tiers of its own family. Within Gemma 4 the two variants split by metric rather than by size — `gemma4:latest` (e4b) leads on coverage, while the smaller `gemma4:e2b` returns more labels per image and is faster.
 
 ### Self-Hosted, With a Label Count in the Prompt
 
@@ -46,13 +46,13 @@ The built-in prompt asks for "label objects" without stating how many, and self-
 
 | Model                  | Labels p50 | Labels/img | Multi-word | Coverage |
 |:-----------------------|-----------:|-----------:|-----------:|---------:|
-| `qwen3-vl:4b-instruct` |      5.1 s |       10.1 |       5.6% |  **97%** |
-| `qwen3-vl:8b-instruct` |     11.4 s |        8.5 |       1.5% |      97% |
-| `gemma4:e2b`           |      3.9 s |        8.9 |   **0.0%** |      91% |
-| `gemma3:4b`            |      8.4 s |       14.1 |       0.4% |      91% |
-| `qwen3.5:4b`           |      5.1 s |        7.1 |       3.5% |      91% |
-| `minicpm-v4.5:8b`      |      8.7 s |        6.9 |       9.1% |      91% |
-| `gemma4:latest` (e4b)  |      6.2 s |        8.7 |       0.0% |      88% |
+| `qwen3-vl:4b-instruct` |      5.2 s |       10.3 |       4.2% |  **97%** |
+| `qwen3-vl:8b-instruct` |     11.3 s |        8.8 |       2.8% |      97% |
+| `minicpm-v4.5:8b`      |      8.5 s |        7.1 |       8.8% |      94% |
+| `gemma4:e2b`           |      3.9 s |        8.8 |   **0.0%** |      91% |
+| `gemma3:4b`            |      8.3 s |       14.3 |       0.4% |      91% |
+| `qwen3.5:4b`           |      5.0 s |        7.1 |       3.5% |      91% |
+| `gemma4:latest` (e4b)  |      5.6 s |        8.6 |       0.0% |      88% |
 
 This is the largest single lever on label quality, and it reverses the ranking above: Qwen3-VL gains the most (+22 points) and leads once the count is stated, while `qwen3.5:4b` — the strongest model on the built-in prompt — gains the least (+3) because it was already close to its ceiling.
 
@@ -72,13 +72,13 @@ Across 192 cloud requests there were no errors, no empty responses, and no malfo
 
 | Model                           | Caption p50 | Length |
 |:--------------------------------|------------:|-------:|
-| `minicpm-v4.6:1b`               |       0.6 s |   14 w |
+| `minicpm-v4.6:1b`               |       0.6 s |   15 w |
 | `gemma4:e2b`                    |       0.7 s |    9 w |
 | `gemma4:latest` (e4b)           |       0.8 s |   12 w |
-| `qwen3.5:4b`                    |       0.9 s |   17 w |
+| `qwen3.5:4b`                    |       0.9 s |   18 w |
 | `qwen3-vl:4b-instruct`          |       1.2 s |   18 w |
-| `gemma3:4b`                     |       1.4 s |    9 w |
-| `qwen3-vl:4b` (reasoning build) |   **6.6 s** |   11 w |
+| `gemma3:4b`                     |       1.4 s |   10 w |
+| `qwen3-vl:4b` (reasoning build) |   **6.4 s** |   12 w |
 | `minimax-m3:cloud`              |       2.9 s |   19 w |
 | `gemma4:31b-cloud`              |       3.8 s |   12 w |
 
@@ -122,8 +122,8 @@ A 5.7× spread for identical input. It is why `gemma4:e2b` prefills in ~140 ms w
 ## Models to Avoid & Compatibility Notes
 
 - **`medgemma:4b` / `medgemma1.5:4b`** — trained for grounded detection rather than classification. `medgemma1.5:4b` returned a well-formed but **empty** label array on every image, which is a model-fit problem rather than a schema error. [Learn more ›](label-generation.md#valid-json-but-no-labels)
-- **`qwen2.5vl:7b`** — the weakest general labeler measured (59% coverage, 1.5 labels per image) despite being a capable captioner. Its [documented](https://ollama.com/library/qwen2.5vl#readme) requirement for Ollama 0.7.0 no longer appears to hold: we ran 32 requests against it on Ollama 0.32.6 with zero errors. If you do hit problems, the FP16 variant (`qwen2.5vl:3b-fp16`) remains a workaround.
-- **`minicpm-v4.6:1b`** — the fastest labeler here and better at subjects than its size suggests, but 22.6% of its label names were multi-word, so its output needs review before it reaches a library.
+- **`qwen2.5vl:7b`** — the weakest general labeler measured (56% coverage, 1.4 labels per image) despite being a capable captioner. Its [documented](https://ollama.com/library/qwen2.5vl#readme) requirement for Ollama 0.7.0 no longer appears to hold: we ran 32 requests against it on Ollama 0.32.6 with zero errors. If you do hit problems, the FP16 variant (`qwen2.5vl:3b-fp16`) remains a workaround.
+- **`minicpm-v4.6:1b`** — the fastest labeler here and better at subjects than its size suggests, but 18.9% of its label names were multi-word, so its output needs review before it reaches a library.
 
 ## Keeping This Page Current
 

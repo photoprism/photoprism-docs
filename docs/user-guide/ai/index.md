@@ -159,4 +159,4 @@ Configures the endpoint URL, method, format, and authentication for [Ollama](usi
     **Authentication:** All credentials and identifiers support `${ENV_VAR}` expansion. `Service.Key` sets `Authorization: Bearer <token>`; `Username`/`Password` injects HTTP basic authentication into the service URI when it is not already present. When `Service.Key` is empty, PhotoPrism defaults to `OPENAI_API_KEY` (OpenAI engine) or `OLLAMA_API_KEY`[^1] (Ollama engine), also honoring their `_FILE` counterparts.
 
 [^1]: Available since the [March 5, 2026 release](../../release-notes.md#march-5-2026).
-[^2]: Available in the next preview build and the stable release that follows it.
+[^2]: Available in our [preview builds](../../getting-started/updates.md#development-preview) and the upcoming stable release.

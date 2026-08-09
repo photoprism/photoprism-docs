@@ -127,7 +127,7 @@ A 5.7× spread for identical input. It is why `gemma4:e2b` prefills in ~140 ms w
 
 ## Keeping This Page Current
 
-These figures come from an internal harness that keeps the image set, prompts, and scoring fixed, so a refresh means re-running it rather than repeating a study by hand. Independent reproduction by readers is explicitly not a goal — the point is that *we* can refresh the page cheaply when models change.
+These figures come from an internal harness that keeps the image set, prompts, and scoring fixed, so the page can be refreshed by re-running it when models change rather than by repeating a study by hand.
 
 A previous version of this page reported a caption-only study of Qwen2.5-VL and Gemma 3 run on an AMD Ryzen AI 9 365 **CPU**, with per-image times of 24–36 s. Those figures described CPU inference of models we no longer recommend and have been superseded by the run above; they are not comparable to the GPU timings on this page.
 

@@ -36,6 +36,7 @@ The German translation lives in a separate repo, `photoprism/photoprism-docs-de`
 | `make spellcheck`  | Spell check `docs/` with `typos` (config in `_typos.toml`); installs a pinned binary into `bin/` first                                                            |
 | `make vale`        | **Optional, under evaluation:** prose-style lint of `docs/` with `vale` (config in `.vale.ini`); never a gate                                                     |
 | `make check-links` | Report internal links/assets in `site/` that do not resolve (run after a build)                                                                                   |
+| `make format`      | Run all three Markdown formatters (`format-whitespace`, `format-tables`, `format-artifacts`); each has a `-check` variant that reports without writing            |
 | `make muffet`      | Crawl the built site with `muffet` (also checks in-page anchors); serves it locally and tears it down                                                             |
 
 **Link checking — `make check-links`.** Resolves every site-relative `src`/`href`/`poster`/

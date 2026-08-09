@@ -23,7 +23,7 @@ Ollama-generated captions and labels are stored with the `ollama` metadata sourc
 
 Two behaviors affect anyone writing or tuning a label prompt:
 
-- **Self-hosted models under-generate when the prompt does not state a count.** With the built-in prompt, models that fit in 8 GB of VRAM returned one to four labels per image in our benchmark, where hosted models volunteered seven to twelve. Asking for an explicit range raises both the count and subject coverage, at roughly two to three times the latency. Whether the shipped default prompt should request a count is being decided in [photoprism#5774](https://github.com/photoprism/photoprism/issues/5774).
+- **The built-in prompt omits a label count on purpose.** A short list of high-confidence labels is more useful and cheaper than a long one — the count multiplies through the database, the API response, and the UI that fetches and renders them — and models that interpret an image poorly mostly add noise when pushed for more. Not every model honors a count instruction anyway. What the benchmark shows is how differently models answer that prompt: hosted models volunteer seven to twelve labels per image, models that fit in 8 GB return one to four. Asking for a range of 8-15 multiplies the set by 1.9-3.5x and raises subject coverage, and it costs roughly double the label latency plus a higher share of multi-word names on every model not already at zero (`qwen3-vl:4b-instruct` 0.0% → 4.2%, `qwen3.5:4b` 1.7% → 3.5%, `minicpm-v4.5:8b` 5.6% → 8.8%) — and those are discarded by normalization. Treat the count as a per-model tuning knob you measure, not a default to fix. Context in [photoprism#5774](https://github.com/photoprism/photoprism/issues/5774).
 - **Multi-word label names do not survive normalization.** PhotoPrism reduces a multi-word name to a single token and usually keeps the wrong one — `ferris wheel` is stored as *Ferris* and `amusement park` as *Park*. Instruct the model to return single-word nouns in canonical singular form; the normalizer cannot repair a compound after the fact ([photoprism#5773](https://github.com/photoprism/photoprism/issues/5773)).
 
 ## NSFW Detection Through Labels
@@ -79,7 +79,7 @@ Ensure the output lists both Nasnet (default) and your Ollama label model. If th
 If PhotoPrism logs `vision: invalid label payload from ollama`, the model returned data that didn’t match the expected structure. Confirm that:
 
 - The adapter injected schema instructions (keep `System`/`Prompt` intact or reuse the defaults).
-- The model is **not emitting a reasoning block** — thinking (reasoning) models such as the Qwen3.5 family, `qwen3-vl:*`, and `frob/qwen3.5-instruct:4b` prepend their reasoning to the JSON when reasoning is enabled. Set `Service.Think: "false"` on the model to disable it — PhotoPrism disables Ollama reasoning by default in releases after 260601, so this affects 260601 and earlier or configs that re-enabled it (see [Ollama Models](../../user-guide/ai/ollama-models.md)).
+- The model is **not emitting a reasoning block** — thinking (reasoning) models such as the Qwen3.5 family and `qwen3-vl:*` prepend their reasoning to the JSON when reasoning is enabled. Set `Service.Think: "false"` on the model to disable it — PhotoPrism disables Ollama reasoning by default in releases after 260601, so this affects 260601 and earlier or configs that re-enabled it (see [Ollama Models](../../user-guide/ai/ollama-models.md)).
 
 PhotoPrism may fall back to the existing TensorFlow Nasnet model when the Ollama response cannot be parsed.
 

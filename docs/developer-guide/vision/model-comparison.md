@@ -49,7 +49,7 @@ Bigger is not reliably better: `qwen3.5:4b` beat both the `2b` and `9b` tiers of
 
 ### Self-Hosted, With a Label Count in the Prompt
 
-The built-in prompt asks for "label objects" without stating how many, and self-hosted models under-generate as a result. Adding an explicit range (the [Qwen3-VL example](../../user-guide/ai/ollama-models.md#qwen3-vl-labels) shows the shape) multiplied the label set by 1.9–3.5× and raised coverage on **every** model tested, at 1.7–2.8× the latency:
+The built-in prompt asks for "label objects" without stating how many, **and that omission is deliberate** — a short list of high-confidence labels is more useful and cheaper than a long one, and not every model honors a count instruction anyway. The run below measures what changes when one is requested, not a gap being closed. Adding an explicit range (the [Qwen3-VL example](../../user-guide/ai/ollama-models.md#qwen3-vl-labels) shows the shape) multiplied the label set by 1.9–3.5× and raised coverage on **every** model tested, at 1.7–2.8× the latency:
 
 | Model                  | Labels p50 | Labels/img | Multi-word | Coverage |
 |:-----------------------|-----------:|-----------:|-----------:|---------:|
@@ -61,7 +61,9 @@ The built-in prompt asks for "label objects" without stating how many, and self-
 | `qwen3.5:4b`           |      5.0 s |        7.1 |       3.5% |      91% |
 | `gemma4:latest` (e4b)  |      5.6 s |        8.6 |       0.0% |      88% |
 
-This is the largest single lever on label quality, and it reverses the ranking above: Qwen3-VL gains the most (+22 points) and leads once the count is stated, while `qwen3.5:4b` — the strongest model on the built-in prompt — gains the least (+3) because it was already close to its ceiling.
+It is the largest single lever on the numbers, and it reverses the ranking above: Qwen3-VL gains the most (+22 points) and leads once the count is stated, while `qwen3.5:4b` — the strongest model on the built-in prompt — gains the least (+3) because it was already close to its ceiling.
+
+**A higher count is not automatically better output.** Coverage is a recall-style floor: it rewards naming the expected subject and cannot detect a confidently wrong extra label, so a model asked for fifteen labels scores better simply by guessing more. Nothing measured here captures precision or relevance. The cost is measured, though — roughly double the latency, and more names that break the single-word contract on every model not already at zero (`qwen3-vl:4b-instruct` 0.0% → 4.2%, `qwen3.5:4b` 1.7% → 3.5%, `minicpm-v4.5:8b` 5.6% → 8.8%), which normalization then discards. Treat it as a per-model knob for operators who want richer labels and have checked the result.
 
 ### Ollama Cloud
 

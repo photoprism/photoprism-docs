@@ -16,7 +16,7 @@ Where Gemma 4 loses ground is identifying a subject it is unsure about: it guess
 
 [**Qwen 3.5**](https://ollama.com/library/qwen3.5) is the lighter of the two Qwen options and needs no special tag: `qwen3.5:4b` already behaves like an instruct build, producing captions in about a second and keeping multi-word label names near zero. On the built-in label prompt it reached the highest subject coverage of any self-hosted model we measured, and it encodes a 720 px image into fewer than half the prompt tokens Qwen3-VL uses, which makes it noticeably cheaper on a metered endpoint. Qwen3-VL still pulls ahead once the prompt asks for a [label count](#qwen3-vl-labels), so pick Qwen 3.5 for a light, low-cost setup and Qwen3-VL when subject coverage matters most. Note the [`2b` and `9b` tiers](https://ollama.com/library/qwen3.5/tags) both scored well below `4b` on labels — bigger is not better here.
 
-A community variant, [`frob/qwen3.5-instruct:4b`](https://ollama.com/frob/qwen3.5-instruct), is a capable alternative that uses the same Options profile as `qwen3-vl:4b-instruct` (see [below](#qwen3-vl-labels)) and delivers similar latency. Measured head to head against the official [`qwen3.5:4b`](https://ollama.com/library/qwen3.5) on the same images, it tracks its base model closely — same family, size and quantization, with 7 of 16 label sets identical and the remaining differences cosmetic. Either is a reasonable choice; the official library model is the simpler one to keep up to date. As with any Qwen-family model, it requires the strict options and "AT MOST N labels" prompt shape — without them it will over-generate and truncate the JSON response.
+As with any Qwen-family model, both require the strict options and "AT MOST N labels" prompt shape shown below — without them they over-generate and truncate the JSON response.
 
 Performance also depends on your hardware, and the ranking can change with it. Our figures come from a single NVIDIA RTX 4060, so treat them as a starting point rather than a verdict and try the candidates on your own machine. One reason the order shifts: what an image costs in prompt tokens varies more than fivefold between model families, so a machine that is slow to encode the image — no GPU, layers offloaded to system RAM, or a GPU without flash attention — penalizes a model with a heavy vision encoder such as Qwen3-VL far more than a light one such as Gemma 4, even where the two are close on a fast GPU.
 
@@ -26,7 +26,7 @@ If you generate both captions and labels, use the same model for both, so that O
     Without GPU acceleration, Ollama models will be significantly slower, taking anywhere from 10 seconds to over a minute to complete. This may be acceptable if you only want to process a few pictures or are willing to wait.
 
 !!! warning "Disable Reasoning for Thinking Models"
-    Many current vision models — the Qwen3.5 family, `qwen3-vl:*`, `frob/qwen3.5-instruct:4b`, and others — are **thinking (reasoning) models**. With reasoning enabled, recent Ollama versions emit it into the result: captions begin with text such as *"The user wants a concise description of the provided image…"* and label JSON fails to parse. **Set `Service.Think: "false"`** for these models (as shown in the examples below) to turn reasoning off — on PhotoPrism [260601](https://github.com/photoprism/photoprism/releases/tag/260601-a7d098548) and earlier it is required to keep their reasoning out of captions and labels. Later releases disable Ollama reasoning by default, so there it is a safety net rather than a requirement; it stays harmless everywhere, which is why the examples always include it. Re-enable reasoning only intentionally with `Service.Think: "true"`.
+    Many current vision models — the Qwen3.5 family, `qwen3-vl:*`, and others — are **thinking (reasoning) models**. With reasoning enabled, recent Ollama versions emit it into the result: captions begin with text such as *"The user wants a concise description of the provided image…"* and label JSON fails to parse. **Set `Service.Think: "false"`** for these models (as shown in the examples below) to turn reasoning off — on PhotoPrism [260601](https://github.com/photoprism/photoprism/releases/tag/260601-a7d098548) and earlier it is required to keep their reasoning out of captions and labels. Later releases disable Ollama reasoning by default, so there it is a safety net rather than a requirement; it stays harmless everywhere, which is why the examples always include it. Re-enable reasoning only intentionally with `Service.Think: "true"`.
 
 !!! tip "For Qwen3-VL, Use an `-instruct` Tag as Well"
     `Service.Think: "false"` keeps reasoning **out of the output**. It does not stop a reasoning build from *generating* it, so most of the cost remains. Measured on `qwen3-vl:4b` with reasoning off: about 414 output tokens and 6.6 seconds for a twelve-word caption, where [`qwen3-vl:4b-instruct`](https://ollama.com/library/qwen3-vl/tags) produced a longer caption in about 1.2 seconds using 24 tokens. The reasoning build also returned 21% multi-word label names against 0% for the instruct build. Treat the flag as a correctness guard and the tag as the performance choice — they are two separate decisions.
@@ -89,7 +89,11 @@ For other languages, keep the base instructions in English and add the desired l
 The following drop-in examples can be specified in your `vision.yml` file, which is located in the config directory (default: `storage/config`). [Learn more ›](index.md#visionyml-reference).
 
 !!! tldr "How Many Labels to Expect"
-    Self-hosted models under-generate when the prompt does not state a count. In our benchmark, models that fit in 8 GB of VRAM returned one to four labels per image with the built-in prompt, where hosted models volunteered seven to twelve. If you want more, ask for a count explicitly — see the [Qwen3-VL label example](#qwen3-vl-labels) below.
+    The built-in label prompt deliberately does not ask for a number of labels. A short list of high-confidence labels is more useful — and cheaper — than a long one: the count multiplies through the database, the API response, and the interface that has to fetch and render them, and a model that reads an image poorly mostly adds noise when pushed for more.
+
+    How many you get therefore varies by model rather than falling short of a target. In our benchmark, hosted models volunteered seven to twelve labels per image and models that fit in 8 GB of VRAM returned one to four, from the same prompt.
+
+    You *can* ask for a count — see the [Qwen3-VL label example](#qwen3-vl-labels) below — but treat it as a per-model adjustment you verify, not a fix. It roughly doubles label latency and increases multi-word names on every model that was not already at zero, and those [do not survive normalization](../../developer-guide/vision/label-generation.md#label-behavior-worth-knowing).
 
 ### Gemma 4: Labels
 
@@ -165,7 +169,7 @@ Models:
 
 Why this works:
 
-- **Model:** [`qwen3-vl:4b-instruct`](https://ollama.com/library/qwen3-vl/tags) is a lightweight version of Qwen3-VL. You can alternatively try [`frob/qwen3.5-instruct:4b`](https://ollama.com/frob/qwen3.5-instruct) (a community variant that uses the same options profile and measured very close to the official `qwen3.5:4b`), [`huihui_ai/qwen3-vl-abliterated:4b-instruct`](https://ollama.com/huihui_ai/qwen3-vl-abliterated), [`qwen3-vl:latest`](https://ollama.com/library/qwen3-vl), or other [variants](https://ollama.com/search?c=vision&q=qwen3-vl).
+- **Model:** [`qwen3-vl:4b-instruct`](https://ollama.com/library/qwen3-vl/tags) is a lightweight version of Qwen3-VL. You can alternatively try [`huihui_ai/qwen3-vl-abliterated:4b-instruct`](https://ollama.com/huihui_ai/qwen3-vl-abliterated), [`qwen3-vl:latest`](https://ollama.com/library/qwen3-vl), or other [variants](https://ollama.com/search?c=vision&q=qwen3-vl).
 - **Engine:** Applies suitable **Resolution**, **Format**, and **Options** defaults.
 - **Run:** `on-demand` allows manual, metadata worker, and scheduled jobs ￫ [Run Modes](index.md#run-modes).
 - **Prompt:** Ensures low latency, prevents repetition, and controls the type and number of labels returned. For other languages, see [Language Support](#language-support).
@@ -211,7 +215,7 @@ Models:
 
 Why this works:
 
-- **Model:** Using [`qwen3-vl:4b-instruct`](https://ollama.com/library/qwen3-vl/tags) for both labels and captions avoids time-consuming Ollama model swaps. You can alternatively try [`frob/qwen3.5-instruct:4b`](https://ollama.com/frob/qwen3.5-instruct) (a community variant that uses the same options profile and measured very close to the official `qwen3.5:4b`), [`huihui_ai/qwen3-vl-abliterated:4b-instruct`](https://ollama.com/huihui_ai/qwen3-vl-abliterated), [`qwen3-vl:latest`](https://ollama.com/library/qwen3-vl), or other [variants](https://ollama.com/search?c=vision&q=qwen3-vl).
+- **Model:** Using [`qwen3-vl:4b-instruct`](https://ollama.com/library/qwen3-vl/tags) for both labels and captions avoids time-consuming Ollama model swaps. You can alternatively try [`huihui_ai/qwen3-vl-abliterated:4b-instruct`](https://ollama.com/huihui_ai/qwen3-vl-abliterated), [`qwen3-vl:latest`](https://ollama.com/library/qwen3-vl), or other [variants](https://ollama.com/search?c=vision&q=qwen3-vl).
 - **Engine:** Applies suitable **Resolution**, **Format**, and **Options** defaults.
 - **Run:** `on-schedule` allows manual and scheduled jobs ￫ [Run Modes](index.md#run-modes).
 - **System:** Tells the model to describe images in natural language.

@@ -10,7 +10,7 @@ Our [preview builds](getting-started/updates.md#development-preview) give you ea
 
 What's new?
 
-- Viewer: [Added support for original Insta360 and fisheye RAW files in the 360° viewer](https://github.com/photoprism/photoprism/issues/5711) by [@omerdduran](https://github.com/omerdduran)
+- Viewer: [Added support for 360° Insta360 and fisheye RAW files](https://github.com/photoprism/photoprism/issues/5711) by [@omerdduran](https://github.com/omerdduran)
 - AI: [Added a `Normalize` option to keep compound label names whole](https://github.com/photoprism/photoprism/issues/5773)
 - AI: [Upgraded ONNX Runtime from v1.26.0 to v1.28.0](https://github.com/photoprism/photoprism/issues/5703)
 - UX: [Fixed the surface elevation order in three dark themes](https://github.com/photoprism/photoprism/commit/a14f9bec4)

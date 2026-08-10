@@ -14,7 +14,7 @@ What's new?
 - AI: [Added a `Normalize` option to keep compound label names whole](https://github.com/photoprism/photoprism/issues/5773)
 - AI: [Upgraded ONNX Runtime from v1.26.0 to v1.28.0](https://github.com/photoprism/photoprism/issues/5703)
 - UX: [Fixed the surface elevation order in three dark themes](https://github.com/photoprism/photoprism/commit/a14f9bec4)
-- Metadata: [Improved the metadata report to include complete XMP and DCMI tags](https://github.com/photoprism/photoprism/issues/2260)
+- Metadata: [Improved the docs to include complete XMP and DCMI tags](https://github.com/photoprism/photoprism/issues/2260)
 - Translations: [Improved Hebrew](https://docs.photoprism.app/developer-guide/translations-weblate/) by [@avma](https://github.com/avma)
 
 !!! info ""

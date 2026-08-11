@@ -7,6 +7,13 @@ Two classes are handled differently, because only one is unambiguously wrong:
   copied, so `"..."` is restored to `"..."` inside backticks only. Prose keeps its typography.
 - **Fixed:** zero-width and formatting characters (ZWSP, BOM, word joiner, invisible separator,
   bidi marks) that carry no meaning in our documents and survive copy-paste invisibly.
+- **Fixed:** the deprecated bidi embeddings and overrides (LRE, RLE, PDF, LRO, RLO). They change
+  the order a line renders in without changing the characters it contains, so the rendered text and
+  the source can read differently. Unicode deprecates them in favour of the isolates reported below.
+- **Fixed:** stray Unicode tag characters, which have no rendering of their own.
+  Tag characters are **kept** where they form an emoji tag sequence — a waving black flag followed
+  by tag letters and a cancel tag, which is how the subdivision flags are written. Stripping those
+  would turn a Scotland flag into a plain black one, so the sequence is preserved verbatim.
 
 Three neighbours of that set are **reported, never rewritten**, because each is load-bearing
 somewhere we plausibly write:
@@ -21,6 +28,14 @@ somewhere we plausibly write:
 
 Narrow no-break and thin spaces are **reported, never rewritten**: they are correct typography
 between a number and its unit (`720 px`, `5 MiB`) and appear that way throughout the specs.
+
+The bidi isolates (LRI, RLI, FSI, PDI) and the Arabic letter mark are **reported, never rewritten**.
+They are the current, non-deprecated way to embed a right-to-left run, so a quoted Arabic or Hebrew
+example may legitimately carry one — but nothing about the surrounding characters makes one
+expected here, so they are always reported rather than suppressed by context.
+
+Variation selectors are **left alone entirely**. U+FE0F is what makes a bare codepoint render as an
+emoji rather than a glyph, so removing it silently changes what a reader sees.
 
 - **Fixed:** citation markers from browsing or retrieval tools, which are unambiguous and never
   valid content here.
@@ -42,13 +57,23 @@ import unicodedata
 REPO_ROOT = pathlib.Path(__file__).resolve().parent.parent
 SKIP_DIRS = {".git", ".claude", "node_modules", "venv", "site", "bin", "styles"}
 
-# Carry no meaning here and are invisible in review, so they are removed outright.
-STRIP = {"​": "ZWSP", "﻿": "BOM", "⁠": "WORD JOINER",
-         "⁣": "INVISIBLE SEPARATOR", "‎": "LTR MARK", "‏": "RTL MARK"}
+# Carry no meaning here and are invisible in review, so they are removed outright. Written as
+# escapes rather than literals: a table of invisible characters is unreviewable in its own source.
+# The bidi embeddings and overrides are deprecated by Unicode: they change the order a line renders
+# in without changing the characters it contains, so the same bytes can read two different ways.
+STRIP = {"\u200b": "ZWSP", "\ufeff": "BOM", "\u2060": "WORD JOINER",
+         "\u2063": "INVISIBLE SEPARATOR", "\u200e": "LTR MARK", "\u200f": "RTL MARK",
+         "\u202a": "LRE", "\u202b": "RLE", "\u202c": "PDF",
+         "\u202d": "LRO", "\u202e": "RLO"}
 # Legitimate typography, so these are never rewritten. They are only reported where a non-breaking
 # space makes no sense — between two ordinary words — which is the shape an accidental paste takes.
-REPORT = {" ": "NARROW NO-BREAK SPACE", " ": "THIN SPACE",
-          "‍": "ZWJ", "‌": "ZWNJ", "­": "SOFT HYPHEN"}
+REPORT = {"\u202f": "NARROW NO-BREAK SPACE", "\u2009": "THIN SPACE",
+          "\u200d": "ZWJ", "\u200c": "ZWNJ", "\u00ad": "SOFT HYPHEN"}
+# The supported, non-deprecated way to isolate a right-to-left run, so a quoted Arabic or Hebrew
+# example may carry one. Unlike REPORT there is no context that makes one expected, so these are
+# always reported rather than suppressed by their neighbours.
+REPORT_BIDI = {"\u2066": "LRI", "\u2067": "RLI", "\u2068": "FSI", "\u2069": "PDI",
+               "\u061c": "ARABIC LETTER MARK"}
 TYPOGRAPHIC = re.compile(r"(?:[\d.%\u2265\u2264=~\u2260<>+-]|\b[A-Z][\w.‑-]*)\Z")
 QUOTES = str.maketrans({"‘": "'", "’": "'", "“": '"', "”": '"'})
 CODE_SPAN = re.compile(r"(?<!`)`([^`\n]+)`(?!`)")
@@ -67,11 +92,44 @@ CITATIONS = re.compile(
 
 
 ZWJ, ZWNJ, SOFT_HYPHEN = "\u200d", "\u200c", "\u00ad"
+# A tag sequence is a waving black flag, one or more tag letters, then the cancel tag. That is how
+# the subdivision flags are encoded, so the tag block cannot simply be stripped wholesale.
+TAG_FIRST, TAG_LAST, TAG_CANCEL = 0xE0000, 0xE007F, "\U000E007F"
+TAG_LETTER_FIRST, TAG_LETTER_LAST = 0xE0020, 0xE007E
+BLACK_FLAG = "\U0001F3F4"
 
 
 def is_pictographic(ch):
     """Reports whether the character is an emoji or other pictograph."""
     return bool(ch) and (unicodedata.category(ch) == "So" or ord(ch) >= 0x1F000)
+
+
+def is_tag_char(ch):
+    """Reports whether the character is in the Unicode tag block."""
+    return TAG_FIRST <= ord(ch) <= TAG_LAST
+
+
+def strip_tag_chars(line):
+    """Returns the line without stray tag characters, keeping emoji tag sequences intact."""
+    if not any(is_tag_char(c) for c in line):
+        return line
+
+    out, i = [], 0
+    while i < len(line):
+        if line[i] == BLACK_FLAG:
+            end = i + 1
+            while end < len(line) and TAG_LETTER_FIRST <= ord(line[end]) <= TAG_LETTER_LAST:
+                end += 1
+            # Only a well-formed, terminated sequence is a flag; anything else is a stray tag.
+            if end > i + 1 and end < len(line) and line[end] == TAG_CANCEL:
+                out.append(line[i:end + 1])
+                i = end + 1
+                continue
+        if not is_tag_char(line[i]):
+            out.append(line[i])
+        i += 1
+
+    return "".join(out)
 
 
 def fix_line(line):
@@ -88,7 +146,7 @@ def fix_line(line):
     for ch in STRIP:
         line = line.replace(ch, "")
 
-    return line
+    return strip_tag_chars(line)
 
 
 def main():
@@ -119,6 +177,11 @@ def main():
                 if ch in (ZWNJ, SOFT_HYPHEN) and before.isalpha() and after.isalpha():
                     continue
                 notes.append(f"{name}: unexpected {label} after {part.rsplit(chr(10), 1)[-1][-24:]!r}")
+
+        for ch, label in REPORT_BIDI.items():
+            parts = text.split(ch)
+            for part in parts[:-1]:
+                notes.append(f"{name}: {label} after {part.rsplit(chr(10), 1)[-1][-24:]!r}")
 
         if fixed != text:
             changed.append(str(name))

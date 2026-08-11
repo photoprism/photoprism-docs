@@ -156,7 +156,14 @@ def main():
     changed, notes = [], []
 
     for path in files:
-        text = path.read_text()
+        try:
+            text = path.read_text()
+        except (UnicodeDecodeError, OSError) as err:
+            # One unreadable file must not abort the run for the whole repository: this is wired
+            # into `make format` and `make lint`, where a traceback would mask every other result.
+            print(f"[warn] unreadable: {path} ({err})", file=sys.stderr)
+            continue
+
         name = path.relative_to(REPO_ROOT)
         fixed = "\n".join(fix_line(l) for l in text.split("\n"))
 

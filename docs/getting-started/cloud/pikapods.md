@@ -1,7 +1,7 @@
 # **PikaPods** Open Source App Hosting
 
 !!! verified "Trusted Partner"
-    [PikaPods](https://prism.ws/pikapods-com) has partnered with us to offer you this **officially supported, cloud-hosted solution**.[^1] Your personal app instance is ready to use in just a few steps and [includes member features](https://www.photoprism.app/editions/#compare) like premium themes and high-resolution world maps - at no additional cost! New customers also receive a $5 welcome credit.
+    [PikaPods](https://link.photoprism.app/pikapods-com) has partnered with us to offer you this **officially supported, cloud-hosted solution**.[^1] Your personal app instance is ready to use in just a few steps and [includes member features](https://www.photoprism.app/editions/#compare) like premium themes and high-resolution world maps - at no additional cost! New customers also receive a $5 welcome credit.
 
 ## Setup
 
@@ -9,14 +9,14 @@ This step-by-step guide explains how to set up a new PhotoPrism instance at Pika
 
 ### 1. Create Account
 
-Sign up at [www.pikapods.com/register](https://prism.ws/pikapods-register) with your contact details.
+Sign up at [www.pikapods.com/register](https://link.photoprism.app/pikapods-register) with your contact details.
 You will then receive a confirmation email with an activation link that you must click to continue.
 
 Before proceeding, we recommend that you enter your credit card information first to avoid usage restrictions.
 
 ### 2. Start PhotoPrism
 
-If it isn't already selected, go to [Available Apps](https://prism.ws/pikapods-apps) and select PhotoPrism, then click *Run Your Own*:
+If it isn't already selected, go to [Available Apps](https://link.photoprism.app/pikapods-apps) and select PhotoPrism, then click *Run Your Own*:
 
 ![Screenshot](img/pikapods-appstore.png)
 
@@ -48,4 +48,4 @@ PhotoPrism is now fully set up and ready to use. To log in, click *Open Pod*, en
 If you want to change your password, you can do so in [Settings > Account](../../user-guide/settings/account.md#change-password).
 Our [First Steps 👣](../../user-guide/first-steps.md) tutorial will guide you through the user interface and settings to ensure your library is indexed according to your individual preferences.
 
-[^1]: A share of the revenue [helps fund the development of PhotoPrism](https://www.photoprism.app/oss/faq/#pikapods)
+[^1]: A share of the revenue [helps fund the development of PhotoPrism](https://www.photoprism.app/membership/faq/#pikapods)

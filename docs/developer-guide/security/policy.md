@@ -53,7 +53,7 @@ provides a dispute process along with an escalation path through the assigning C
 Top-Level Root above it. So if you approach a CNA about PhotoPrism, please give it our contact
 details and tell us at the same time. Our address is published in
 [security.txt](https://www.photoprism.app/.well-known/security.txt), in
-[SECURITY.md](https://github.com/photoprism/photoprism/blob/develop/SECURITY.md), and on our
+[`SECURITY.md`](https://github.com/photoprism/photoprism/blob/develop/SECURITY.md), and on our
 [security policy](https://www.photoprism.app/security-policy/) page, so there is always a documented
 way to reach us.
 

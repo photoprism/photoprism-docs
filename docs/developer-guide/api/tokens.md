@@ -4,13 +4,13 @@ Besides the credentials that authenticate a client (see [Client Authentication](
 short-lived tokens authorize access to media resources. They behave differently on purpose, and the
 difference matters if you build URLs yourself or cache them.
 
-|                       | Preview token                                                      | Download token                                               |
-|-----------------------|--------------------------------------------------------------------|--------------------------------------------------------------|
-| Authorizes            | thumbnails and video streams                                       | originals                                                    |
-| Delivered as          | `X-Preview-Token` response header, and in the client config        | `X-Download-Token` response header, and in the client config |
-| Appears in the URL as | a **path segment** — `/api/v1/t/{hash}/{token}/{size}`             | a **query parameter** — `/api/v1/dl/{hash}?t={token}`        |
-| Scoped to             | a user account, or a single session for link visitors              | a single session                                             |
-| Value changes when    | the account's password changes, or the configured value is changed | every time it is issued                                      |
+|                       | Preview token                                                                 | Download token                                               |
+|-----------------------|-------------------------------------------------------------------------------|--------------------------------------------------------------|
+| Authorizes            | thumbnails and video streams                                                  | originals                                                    |
+| Delivered as          | `X-Preview-Token` response header, and in the client config                   | `X-Download-Token` response header, and in the client config |
+| Appears in the URL as | a **path segment** — `/api/v1/t/{hash}/{token}/{size}`                        | a **query parameter** — `/api/v1/dl/{hash}?t={token}`        |
+| Scoped to             | a user account, or a single session for link visitors (see Public Mode below) | a single session                                             |
+| Value changes when    | the account's password changes, or the configured value is changed            | every time it is issued                                      |
 
 **Do not hardcode a token's format or length.** Both are opaque values, and the download token's
 format in particular is expected to change; read the current value from the response header or the

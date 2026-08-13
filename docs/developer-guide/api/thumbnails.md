@@ -19,19 +19,20 @@ In addition to better performance, a major advantage of cookie-free thumbnails i
 
 ### Preview Tokens
 
-Preview tokens are one of two media tokens; see [Preview & Download Tokens](tokens.md) for how they compare. They are issued per user account: each account has its own token, which is copied to the sessions it opens. Visitors who follow a share link instead receive a token that belongs to their session alone and expires with it. A token is accepted only while at least one session holding it is still active, so it is released when the account's last session ends, and rotating an account's token invalidates the URLs that carry the previous one.
+Preview tokens are one of two media tokens; see [Preview & Download Tokens](tokens.md) for how they compare. How they are issued depends on whether the instance requires authentication:
 
-Because the token is part of the URL, the same picture has a different preview URL for each account.
+- **In public mode**, no token is validated and the literal string `public` is used for everyone, so every visitor sees identical preview URLs.
+- **Otherwise, one token per user account**, copied to the sessions that account opens. Visitors who follow a share link instead receive a token belonging to their session alone, which expires with it.
+
+Outside public mode, a token is accepted only while at least one session holding it is still active, so it is released when the account's last session ends, and rotating an account's token invalidates the URLs that carry the previous one. Because the token is part of the URL, the same picture then has a different preview URL for each account.
 
 #### Shared Tokens & CDNs
 
-Because the token is part of the URL, an upstream cache stores a separate copy of every thumbnail for every account, which lowers the hit rate.
+In public mode there is a single token, so a cache or CDN stores one copy of each thumbnail and nothing fragments. Where accounts have their own tokens, an upstream cache instead stores a separate copy per account, which lowers the hit rate.
 
 `PHOTOPRISM_PREVIEW_TOKEN` pins the instance-wide token value that the server accepts, so preview URLs you construct yourself stay valid across restarts. Signed-in accounts are still served their own token, so setting this option does not by itself make their URLs identical. Leave it unset to have a stable value derived automatically.
 
 Changing the configured value invalidates URLs that carry it, and frequent changes degrade cache performance as described above. An account's own token is rotated when that account's password changes.
-
-In public mode, no token is validated at all, and `public` may be used as a placeholder in preview URLs.
 
 ### Security Considerations
 

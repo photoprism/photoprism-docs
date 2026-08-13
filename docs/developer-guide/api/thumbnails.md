@@ -8,7 +8,7 @@ Like most commercial image hosting services, we have chosen to implement a **coo
 - One possible use of cookies may be to prevent the user from intentionally or accidentally sharing confidential thumbnail URLs with others
 - This is possible with most image hosting services/social media sites, and could also be considered a feature if you just want to share a few thumbnails without a lot of bells and whistles
 - Once an image has been downloaded by someone else, blocking the original URL provides little additional security, as digital copies are just as good as the original, see info box below
-- Keeping that in mind, previously shared URLs can be invalidated by [changing the security token in your config](../../getting-started/config-options.md#authentication)
+- Keeping that in mind, previously shared URLs can be invalidated by rotating the token they contain, for example by [changing the shared token in your config](../../getting-started/config-options.md#authentication) when one is configured, see [Preview Tokens](#preview-tokens) below
 - This will invalidate the browser cache on all connected devices, requiring previously cached thumbnails to be downloaded again
 - Be aware that frequent token changes result in performance degradation and a poor user experience.
 
@@ -17,11 +17,27 @@ In addition to better performance, a major advantage of cookie-free thumbnails i
 !!! example ""
     Since most users only have one domain/host name and modern web applications can store [authentication tokens](auth.md) in *localStorage*, our Thumbnail Image API does not currently require or use cookies.
 
+### Preview Tokens
+
+Preview tokens are issued per user account: each account has its own token, which is copied to the sessions it opens. Visitors who follow a share link instead receive a token that belongs to their session alone and expires with it. A token is only accepted while a session holding it is active, so signing out releases it, and rotating an account's token invalidates the URLs that carry the previous one.
+
+Because the token is part of the URL, the same picture has a different preview URL for each account.
+
+#### Shared Tokens & CDNs
+
+Per-account URLs mean an upstream cache stores a separate copy of every thumbnail for every user, which lowers the hit rate. If you serve previews through a CDN, you can configure a single shared token with `PHOTOPRISM_PREVIEW_TOKEN` so that all accounts receive identical URLs and the cache is shared.
+
+That is a deliberate trade-off. A shared token is one static value for the whole instance rather than a value belonging to a session, so it is not released when a session ends, and everyone who has it holds the same capability. Change it to invalidate previously shared URLs; bear in mind that frequent changes degrade cache performance for everyone, as described above. Leave the option unset to have a value generated automatically.
+
+In public mode, no token is validated at all, and `public` may be used as a placeholder in preview URLs.
+
 ### Security Considerations
 
 Digital copies are as good as originals: Once shared and downloaded, such images should be considered "leaked" because they are cached and can be re-shared by the recipient at any time, with no sure way to get all copies back, even if the download URL becomes invalid or the service is shut down completely.
 
 Any form of protection we could provide would essentially be "snake oil", could be circumvented, and would have a negative impact on the user experience, such as disabling the browser cache or context menu.
+
+Thumbnail and video URLs are capability URLs: they are authorized by the SHA1 hash together with the token they contain, not by an app session or a cookie. The [user roles](../../user-guide/users/roles.md) that govern access to the app and its other API endpoints therefore do not apply to these paths, which is what makes them cacheable and CDN-friendly in the first place. Treat a preview URL as usable by anyone who has it, for as long as its token is valid.
 
 For the highest level of protection, it is recommended to shield your private server from the public Internet. Always use **HTTPS, a VPN and/or ideally TLS client certificates** and make sure that only people you trust have access to your instance.
 

@@ -57,9 +57,10 @@ details and tell us at the same time. Our address is published in
 [security policy](https://www.photoprism.app/security-policy/) page, so there is always a documented
 way to reach us.
 
-Where a record is published without any attempt to contact us, we ask the assigning CNA to correct or
-reject it, raise the matter with that CNA's Root where the rules were not followed, and publish our
-own assessment alongside it. We would much rather agree an accurate advisory with you first.
+When a record is published without an attempt to contact us, we ask the assigning CNA to correct or
+reject it. We also raise the matter with the CNA's Root if the rules were not followed and publish
+our own assessment alongside the record. However, we would much rather agree on an accurate advisory
+with you before publication.
 
 ## Bug Bounty Program
 

@@ -8,7 +8,7 @@ Like most commercial image hosting services, we have chosen to implement a **coo
 - One possible use of cookies may be to prevent the user from intentionally or accidentally sharing confidential thumbnail URLs with others
 - This is possible with most image hosting services/social media sites, and could also be considered a feature if you just want to share a few thumbnails without a lot of bells and whistles
 - Once an image has been downloaded by someone else, blocking the original URL provides little additional security, as digital copies are just as good as the original, see info box below
-- Keeping that in mind, previously shared URLs can be invalidated by rotating the token they contain, for example by [changing the shared token in your config](../../getting-started/config-options.md#authentication) when one is configured, see [Preview Tokens](#preview-tokens) below
+- Keeping that in mind, previously shared URLs can be invalidated by rotating the token they contain: for an account's own token by changing that account's password, or by [changing the configured token](../../getting-started/config-options.md#authentication) for URLs that carry it, see [Preview Tokens](#preview-tokens) below
 - This will invalidate the browser cache on all connected devices, requiring previously cached thumbnails to be downloaded again
 - Be aware that frequent token changes result in performance degradation and a poor user experience.
 
@@ -19,15 +19,17 @@ In addition to better performance, a major advantage of cookie-free thumbnails i
 
 ### Preview Tokens
 
-Preview tokens are issued per user account: each account has its own token, which is copied to the sessions it opens. Visitors who follow a share link instead receive a token that belongs to their session alone and expires with it. A token is only accepted while a session holding it is active, so signing out releases it, and rotating an account's token invalidates the URLs that carry the previous one.
+Preview tokens are issued per user account: each account has its own token, which is copied to the sessions it opens. Visitors who follow a share link instead receive a token that belongs to their session alone and expires with it. A token is accepted only while at least one session holding it is still active, so it is released when the account's last session ends, and rotating an account's token invalidates the URLs that carry the previous one.
 
 Because the token is part of the URL, the same picture has a different preview URL for each account.
 
 #### Shared Tokens & CDNs
 
-Per-account URLs mean an upstream cache stores a separate copy of every thumbnail for every user, which lowers the hit rate. If you serve previews through a CDN, you can configure a single shared token with `PHOTOPRISM_PREVIEW_TOKEN` so that all accounts receive identical URLs and the cache is shared.
+Because the token is part of the URL, an upstream cache stores a separate copy of every thumbnail for every account, which lowers the hit rate.
 
-That is a deliberate trade-off. A shared token is one static value for the whole instance rather than a value belonging to a session, so it is not released when a session ends, and everyone who has it holds the same capability. Change it to invalidate previously shared URLs; bear in mind that frequent changes degrade cache performance for everyone, as described above. Leave the option unset to have a value generated automatically.
+`PHOTOPRISM_PREVIEW_TOKEN` pins the instance-wide token value that the server accepts, so preview URLs you construct yourself stay valid across restarts. Signed-in accounts are still served their own token, so setting this option does not by itself make their URLs identical. Leave it unset to have a stable value derived automatically.
+
+Changing the configured value invalidates URLs that carry it, and frequent changes degrade cache performance as described above. An account's own token is rotated when that account's password changes.
 
 In public mode, no token is validated at all, and `public` may be used as a placeholder in preview URLs.
 

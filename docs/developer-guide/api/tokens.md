@@ -23,6 +23,11 @@ CDN cache key. If its value changed frequently, every change would produce a new
 picture and invalidate every cached copy — so a preview token is deliberately stable, and changes
 only when an account's password or the configured value does.
 
+Tying the preview token to the account rather than to the session matters for the same reason:
+thumbnails already held in the browser cache stay usable after signing out and back in on the same
+computer, whereas a per-session value would discard them at every login. Where a CDN or caching proxy
+is involved, a configured shared token serves the equivalent purpose one layer up.
+
 A download token is a **query parameter** on a one-shot transfer that is not meant to be cached, so
 it can carry a short expiry and be reissued freely. Each one is signed and bound to the session it
 was issued to, which is why a fresh value appears on every request.

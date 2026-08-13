@@ -229,6 +229,7 @@ nav:
       - Client Authentication: developer-guide/api/auth.md
       - OpenID Connect: developer-guide/api/oidc.md
       - OAuth2 Grant Types: developer-guide/api/oauth2.md
+      - Preview & Download Tokens: developer-guide/api/tokens.md
       - Search Endpoints: developer-guide/api/search.md
       - Thumbnail Images: developer-guide/api/thumbnails.md
       - Client Libraries:

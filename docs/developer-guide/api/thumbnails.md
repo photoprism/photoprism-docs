@@ -19,7 +19,7 @@ In addition to better performance, a major advantage of cookie-free thumbnails i
 
 ### Preview Tokens
 
-Preview tokens are issued per user account: each account has its own token, which is copied to the sessions it opens. Visitors who follow a share link instead receive a token that belongs to their session alone and expires with it. A token is accepted only while at least one session holding it is still active, so it is released when the account's last session ends, and rotating an account's token invalidates the URLs that carry the previous one.
+Preview tokens are one of two media tokens; see [Preview & Download Tokens](tokens.md) for how they compare. They are issued per user account: each account has its own token, which is copied to the sessions it opens. Visitors who follow a share link instead receive a token that belongs to their session alone and expires with it. A token is accepted only while at least one session holding it is still active, so it is released when the account's last session ends, and rotating an account's token invalidates the URLs that carry the previous one.
 
 Because the token is part of the URL, the same picture has a different preview URL for each account.
 

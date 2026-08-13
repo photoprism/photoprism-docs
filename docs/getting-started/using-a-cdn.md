@@ -25,6 +25,12 @@ You can use the following config options to specify the URL of an external CDN a
 | PHOTOPRISM_HTTP_CACHE_MAXAGE | --http-cache-maxage | 2592000 | time in `SECONDS` until cached content expires              |
 | PHOTOPRISM_HTTP_VIDEO_MAXAGE | --http-video-maxage | 21600   | time in `SECONDS` until cached videos expire                |
 
+!!! info ""
+    `PHOTOPRISM_HTTP_CACHE_PUBLIC` is enabled automatically as soon as a `PHOTOPRISM_CDN_URL` is
+    configured, which is why it defaults to `true` here; without a CDN it defaults to `false`, as
+    shown in the [config reference](config-options.md#web-server). Publicly cacheable content can be
+    served by a CDN or caching proxy without accessing your instance if it is already cached.
+
 ## CDN Providers
 
 ### bunny.net

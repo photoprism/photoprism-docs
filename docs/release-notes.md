@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 260813-c8bf8a470</span>
+<span class="build">Build 260814-623955e39</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions/#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
@@ -16,8 +16,9 @@ What's new?
 - UX: [Fixed the surface elevation order in three dark themes](https://github.com/photoprism/photoprism/commit/a14f9bec4)
 - Thumbs: [Improved oversized preview requests to return the largest available size](https://github.com/photoprism/photoprism/issues/5780)
 - Thumbs: [Improved error messages to be logged as a single readable line](https://github.com/photoprism/photoprism/issues/5778)
-- Covers: [Improved album and label covers to load from the regular thumbnail cache](https://github.com/photoprism/photoprism/issues/5779)
+- Covers: [Improved album, label, and folder covers to load from the regular thumbnail cache](https://github.com/photoprism/photoprism/issues/5779)
 - Metadata: [Improved the docs to include complete XMP and DCMI tags](https://github.com/photoprism/photoprism/issues/2260)
+- Security: [Upgraded Go from v1.26.5 to v1.26.6](https://github.com/golang/go/issues?q=milestone%3AGo1.26.6)
 - Translations: [Improved Hebrew](https://docs.photoprism.app/developer-guide/translations-weblate/) by [@avma](https://github.com/avma)
 
 !!! info ""

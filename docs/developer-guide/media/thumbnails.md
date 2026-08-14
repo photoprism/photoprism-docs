@@ -15,6 +15,8 @@ The smallest configurable static and dynamic size limit is 720px, so most sizes 
 
 **Optional** thumbnail sizes cannot be pre-generated and are only rendered on request, for example when sharing an image on Instagram.
 
+A request for a size larger than the instance can render is reduced to the largest size available, so a size in the table below is not necessarily served at its full dimensions. [Learn more ›](../api/thumbnails.md#size-limits)
+
 The following overview shows the name, dimensions, and aspect ratio for each thumbnail size as well as a description of how it is used:
 
 | Name      | Width | Height | Aspect Ratio | Available | Usage             |

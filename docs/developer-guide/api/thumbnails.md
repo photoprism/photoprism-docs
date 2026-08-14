@@ -133,3 +133,44 @@ The following overview shows the name, dimensions, and aspect ratio for each thu
 
 !!! example ""
     Generated thumbnail files are stored in the `storage/cache/thumbnails` folder, where the path and file name depend on the [thumbnail size](../media/thumbnails.md#standard-sizes) and original file hash. [Learn more ›](../media/thumbnails.md)
+
+## Size Limits
+
+Two [configuration options](../../getting-started/config-options.md#preview-images) bound the sizes an instance produces, both in pixels:
+
+| Option                         | Default | Effect                                      |
+|--------------------------------|---------|---------------------------------------------|
+| PHOTOPRISM_THUMB_SIZE          | 1920    | Largest size pre-generated while indexing   |
+| PHOTOPRISM_THUMB_SIZE_UNCACHED | 7680    | Largest size that may be rendered on demand |
+| PHOTOPRISM_THUMB_UNCACHED      | false   | Renders sizes above the pre-generated limit |
+
+A request for a size larger than the instance can render is **reduced to the largest size available**, on the image endpoint as well as on the [cover endpoints](#cover-images). The reduction resolves to a `fit_*` size, so the complete picture is preserved rather than cropped.
+
+The `thumbs` list in the client configuration advertises only the sizes within these limits, so clients that build their URLs from it never request a size that would be reduced.
+
+To serve 16K previews, raise the on-demand limit to the full size and enable on-demand rendering:
+
+```yaml
+PHOTOPRISM_THUMB_SIZE_UNCACHED: "15360"
+PHOTOPRISM_THUMB_UNCACHED: "true"
+```
+
+## Cover Images
+
+Albums, labels, and folders have cover endpoints of their own. Note that the folder endpoint takes the UID *after* `/t/`, while the album and label endpoints take it before:
+
+```
+/api/v1/albums/:uid/t/:token/:size
+/api/v1/labels/:uid/t/:token/:size
+/api/v1/folders/t/:uid/:token/:size
+```
+
+Albums and labels include a `Thumb` field that holds the file hash of their cover picture. **When it is set, request the picture from the [image endpoint](#image-endpoint-uri) with that hash**, so covers are served from the same cache as all other thumbnails:
+
+```
+/api/v1/t/:thumb/:token/:size
+```
+
+The album and label cover endpoints return a generic placeholder icon when a cover file is assigned, and resolve a cover by search only for albums and labels that have none. Folders have no `Thumb` field, so their covers are always requested from the folder endpoint.
+
+Since covers are displayed as tiles, they are limited to `fit_720`, and cropped sizes to `tile_500`, with larger requests reduced accordingly. Cover images are always served inline.

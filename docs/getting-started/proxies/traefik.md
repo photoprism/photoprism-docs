@@ -97,12 +97,14 @@ To run PhotoPrism behind Traefik, create a `traefik.yaml` configuration and then
 Note that you must disable [HTTPS/TLS](../using-https.md#1-https-reverse-proxy) in PhotoPrism by setting `PHOTOPRISM_DISABLE_TLS` to `"true"`, because Traefik is already handling TLS termination. The service label `traefik.http.services.photoprism.loadbalancer.server.port=2342` tells Traefik which internal port to use.
 
 !!! tip "Timeouts & Encoded Characters"
-    Two settings in the example above are easy to leave out and cause problems that look unrelated to the proxy:
+    Two settings in the example above are easy to leave out:
 
-    - **`respondingTimeouts`** raises the limits for slow requests. Without a generous `readTimeout`, large uploads and long downloads are cut off mid-transfer; `writeTimeout: "0s"` disables the write limit so streaming a large original or video is not interrupted.
-    - **`encodedCharacters`** lets percent-encoded characters through to PhotoPrism instead of having Traefik reject the request. File and folder names legitimately contain `/`, `%`, `#`, `?`, and `;`, which appear percent-encoded in request paths, so blocking them makes the affected files fail to load. These options require **Traefik v3.6 or later**.
+    - **`respondingTimeouts` is the important one.** Traefik's default `readTimeout` is **60 seconds**, and it limits reading the *entire request including the body* — so any upload that takes longer than a minute to transfer is cut off, which is easy to hit with large videos or a slow connection. A generous `readTimeout` removes that limit, and `writeTimeout: "0s"` disables the write limit so streaming a large original is not interrupted.
+    - **`encodedCharacters`** covers file and folder names containing `/`, `%`, `#`, `?`, or `;`, which appear percent-encoded in request paths. Requires **Traefik v3.6 or later** — on older versions the option is unknown and Traefik refuses to start.
 
-    Set them on **both** entry points, since a request can arrive on either before the redirect to HTTPS.
+        ⚠ Traefik has **two different settings with this same name**, and their defaults are opposites. The **entry point** option used above (`entryPoints.<name>.http.encodedCharacters`) defaults to allowing all of them, so setting it explicitly pins that behavior against a future change. The separate **[`encodedCharacters` middleware](https://doc.traefik.io/traefik/reference/routing-configuration/http/middlewares/encodedcharacters/)** defaults to allowing *none*, so if you apply that middleware you must enable each character you need or the affected files stop loading.
+
+    Set both on **each** entry point, since a request can arrive on either before the redirect to HTTPS.
 
 Further `traefik.yaml` examples and a detailed description of the Traefik configuration can be found in the [corresponding documentation](https://doc.traefik.io/traefik/user-guides/docker-compose/basic-example/).
 

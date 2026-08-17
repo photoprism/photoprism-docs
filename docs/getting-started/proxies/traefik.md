@@ -57,10 +57,17 @@ To run PhotoPrism behind Traefik, create a `traefik.yaml` configuration and then
             allowEncodedHash: true
             allowEncodedQuestionMark: true
             allowEncodedSemicolon: true
+            allowEncodedBackSlash: true
+            allowEncodedNullCharacter: true
           redirections:
             entryPoint:
               to: websecure
               scheme: https
+        transport:
+          respondingTimeouts:
+            readTimeout: "3h"
+            writeTimeout: "0s"
+            idleTimeout: "3m"
       websecure:
         address: ":443"
         http:
@@ -70,10 +77,13 @@ To run PhotoPrism behind Traefik, create a `traefik.yaml` configuration and then
             allowEncodedHash: true
             allowEncodedQuestionMark: true
             allowEncodedSemicolon: true
+            allowEncodedBackSlash: true
+            allowEncodedNullCharacter: true
         transport:
           respondingTimeouts:
             readTimeout: "3h"
             writeTimeout: "0s"
+            idleTimeout: "3m"
 
     providers:
       docker:
@@ -100,9 +110,11 @@ Note that you must disable [HTTPS/TLS](../using-https.md#1-https-reverse-proxy) 
     Two settings in the example above are easy to leave out:
 
     - **`respondingTimeouts` is the important one.** Traefik's default `readTimeout` is **60 seconds**, and it limits reading the *entire request including the body* — so any upload that takes longer than a minute to transfer is cut off, which is easy to hit with large videos or a slow connection. A generous `readTimeout` removes that limit, and `writeTimeout: "0s"` disables the write limit so streaming a large original is not interrupted.
-    - **`encodedCharacters`** covers file and folder names containing `/`, `%`, `#`, `?`, or `;`, which appear percent-encoded in request paths. Requires **Traefik v3.6 or later** — on older versions the option is unknown and Traefik refuses to start.
+    - **`encodedCharacters`** decides whether percent-encoded characters are allowed in a request path. File and folder names legitimately contain `/`, `%`, `#`, `?`, `;`, `\` and so on, so a blocked character makes the affected files fail to load. Requires **Traefik v3.6 or later** — on older versions the option is unknown and Traefik refuses to start.
 
-        ⚠ Traefik has **two different settings with this same name**, and their defaults are opposites. The **entry point** option used above (`entryPoints.<name>.http.encodedCharacters`) defaults to allowing all of them, so setting it explicitly pins that behavior against a future change. The separate **[`encodedCharacters` middleware](https://doc.traefik.io/traefik/reference/routing-configuration/http/middlewares/encodedcharacters/)** defaults to allowing *none*, so if you apply that middleware you must enable each character you need or the affected files stop loading.
+        ⚠ **Set every option explicitly rather than relying on the defaults.** Traefik changed these defaults twice inside the v3.6 patch series: encoded characters were rejected from v3.6.3 and allowed again from v3.6.7. A floating tag such as `traefik:v3.6` therefore changed behavior without any change on your side, and Traefik now states that configuring them is the user's responsibility. See [Traefik's migration notes](https://doc.traefik.io/traefik/migrate/v3/) for the history.
+
+        ⚠ There is also a separate **[`encodedCharacters` middleware](https://doc.traefik.io/traefik/reference/routing-configuration/http/middlewares/encodedcharacters/)** with the same option names but the opposite default — it allows *none* unless you enable them. Don't mistake one for the other.
 
     Set both on **each** entry point, since a request can arrive on either before the redirect to HTTPS.
 

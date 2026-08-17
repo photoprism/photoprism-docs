@@ -107,6 +107,6 @@ To avoid this issue, use a valid certificate e.g. obtained for free via Let's En
 !!! danger ""
     If you install PhotoPrism on a public server outside your home network, **always run it behind a secure HTTPS reverse proxy**. Your files and passwords will otherwise be transmitted in clear text and can be intercepted by anyone, including your provider, hackers, and governments. Backup tools and file sync apps may refuse to connect as well.
 
-[^1]: [PhotoPrismPi](https://dl.photoprism.app/nas/raspberry-pi/) is based on [Ubuntu Server](https://cdimage.ubuntu.com/releases/24.04.3/release/).
+[^1]: [PhotoPrismPi](https://dl.photoprism.app/nas/raspberry-pi/) is based on [Ubuntu Server 24.04 LTS](https://cdimage.ubuntu.com/releases/24.04/release/) for Raspberry Pi.
 [^2]: Download and installation time depends on the speed of your Internet connection.
 [^3]: If you can't connect, try using the existing hostname or IP address instead.

@@ -97,7 +97,7 @@ To add new pictures, you can either copy them to the *originals* or *import* fol
 
 ## Traefik Reverse Proxy
 
-[Traefik](https://traefik.io/traefik) is pre-installed as [a reverse proxy](../proxies/traefik.md) and can be configured in your `/opt/photoprism/compose.yml` file, as well as through the config files located in `/opt/photoprism/traefik`.
+[Traefik](https://traefik.io/traefik) is pre-installed as [a reverse proxy](../proxies/traefik.md) and can be configured in your `/opt/photoprism/compose.yaml` file, as well as through the config files located in `/opt/photoprism/traefik`.
 
 [Learn more ›](../proxies/traefik.md)
 
@@ -108,7 +108,7 @@ Make sure to use the [latest version tag](https://hub.docker.com/_/traefik) for 
 ```yaml
 services:
   traefik:
-    image: traefik:v3.6
+    image: traefik:v3.7
 ```
 
 Then run the following command to pull the latest image and restart the service:

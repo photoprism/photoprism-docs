@@ -83,7 +83,7 @@ Make sure to use the [latest version tag](https://hub.docker.com/_/traefik) for 
 ```yaml
 services:
   traefik:
-    image: traefik:v3.6
+    image: traefik:v3.7
 ```
 
 Then run the following command to pull the latest image and restart the service:

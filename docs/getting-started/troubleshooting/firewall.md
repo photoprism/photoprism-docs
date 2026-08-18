@@ -33,6 +33,7 @@ In addition, the following API endpoints should be allowed so that public [Docke
 - [ ] registry-1.docker.io
 - [ ] index.docker.io
 - [ ] dseasb33srnrn.cloudfront.net
+- [ ] production.cloudfront.docker.com
 - [ ] production.cloudflare.docker.com
 
 ## IPTables and Docker

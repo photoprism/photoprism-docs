@@ -70,6 +70,8 @@ The `users add` and `users mod` commands support these flags to set or change ac
 !!! note ""
     Option availability depends on the edition you run. Our Community Edition provides the baseline command set, while PhotoPrism Plus and Pro add more flags and account-management capabilities. Use `photoprism users add --help` and `photoprism users mod --help` on your instance to see the exact options supported by that build.
 
+Accounts for which login is disabled with `--no-login` cannot be used to sign in to the user interface or to authenticate requests to the [REST API](../../developer-guide/api/index.md), not even with an [app password](client-credentials.md#app-passwords). Combined with `--webdav`, they remain available for [WebDAV](../sync/webdav.md) sync with app passwords that have the `webdav` [scope](client-credentials.md#authorization-scopes). Applications that need to read from the REST API without a user login can use an [access token](client-credentials.md#access-tokens) or [client credentials](client-credentials.md#client-credentials).
+
 ### Creating a New Account
 
 The `photoprism users add` command creates a new user account or offers to **restore a previously deleted account** with the same *username* if it exists. For example, you can run the following to add a new admin account with the username "bob" and the password "mysecret":

@@ -32,7 +32,7 @@ Besides using the API endpoints provided for this, you can also generate valid [
 [Learn more ›](auth.md#access-tokens)
 
 !!! example ""
-    [App passwords](../../user-guide/settings/account.md#apps-and-devices) can be used as [access tokens](auth.md#access-tokens) in the *Bearer Authorization* header without first creating a session access token, and to obtain short-lived session access tokens through the `POST /api/v1/session` endpoint.
+    [App passwords](../../user-guide/settings/account.md#apps-and-devices) can be used as [access tokens](auth.md#access-tokens) in the *Bearer Authorization* header without first creating a session access token, and to obtain short-lived session access tokens through the `POST /api/v1/session` endpoint. Since they authenticate as the account they belong to, app passwords of accounts for which [login is disabled](../../user-guide/users/cli.md#command-options) are limited to [WebDAV](../../user-guide/sync/webdav.md); use a [client access token](../../user-guide/users/client-credentials.md#access-tokens) or [client credentials](../../user-guide/users/client-credentials.md#client-credentials) for API clients that are not tied to a user account.
 
 ## Service Discovery Endpoints
 

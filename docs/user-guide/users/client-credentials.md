@@ -27,6 +27,8 @@ For added security, we recommend setting an expiration date for the app password
 !!! note ""
     Besides using [app passwords](../settings/account.md#apps-and-devices) to create sessions through the `POST /api/v1/session` endpoint, developers can also [use them as access tokens](../../developer-guide/api/index.md#client-authentication) in the *Bearer Authorization* header without first creating a session access token.
 
+App passwords authenticate as the user account they belong to and are therefore subject to the same restrictions as that account. If [login is disabled](cli.md#command-options) for an account, its app passwords can only be used for [WebDAV](../sync/webdav.md) sync, provided that WebDAV access is enabled for the account and the app password has the `webdav` scope. To let an application read from the [REST API](../../developer-guide/api/index.md) without a user login, generate an [access token](#access-tokens) or [client credentials](#client-credentials) instead.
+
 ### Command Options
 
 The following flags can be used with the `photoprism auth add` command (if you omit *name* or *scope*, you will be asked to enter them interactively):
@@ -62,7 +64,7 @@ If you do not specify a username as argument for the `photoprism auth add` comma
 |--------------------------------------------------|---------------------|
 ```
 
-Generating access tokens is a good choice for developers and other advanced users to connect scripts and external services to the PhotoPrism API, e.g. services that collect metrics or start indexing at regular intervals.
+Generating access tokens is a good choice for developers and other advanced users to connect scripts and external services to the PhotoPrism API, e.g. services that collect metrics, start indexing at regular intervals, or show pictures on a digital photo frame.
 
 Please note, however, that client access tokens cannot be used to synchronize files via WebDAV, even if the token authorization scope is set to `"webdav"` or `"*"`, as this requires a registered user account. Access tokens also cannot be used as a direct password replacement for apps, since clients are not allowed to use the `POST /api/v1/session` endpoint that is required for logging in through the user interface.
 

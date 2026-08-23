@@ -35,7 +35,7 @@ Example for generating an app password that you can use with [WebDAV-compatible]
 ![Screenshot](img/app-password-2502.jpg){ class="shadow" }
 
 !!! tldr ""
-    By selecting the *WebDAV* [scope](../users/client-credentials.md#authorization-scopes), you ensure that the app password cannot be used to log in through the regular user interface. Apps also cannot change your password or manage user accounts, even if you grant them *Full Access*.
+    By selecting the *WebDAV* [scope](../users/client-credentials.md#authorization-scopes), you ensure that the app password cannot be used to log in through the regular user interface. Apps also cannot change your password or manage user accounts, even if you grant them *Full Access*. If an administrator has [disabled login](../users/cli.md#command-options) for your account, app passwords can only be used for [WebDAV](../sync/webdav.md) sync.
 
 ## Connect via WebDAV ##
 

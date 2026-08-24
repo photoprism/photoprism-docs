@@ -1,6 +1,6 @@
 # Face Recognition
 
-**Last Updated:** June 28, 2026
+**Last Updated:** August 24, 2026
 
 To [recognize faces](https://docs.photoprism.app/user-guide/organize/people/), PhotoPrism uses a multi-stage AI pipeline that detects faces, generates embeddings, and clusters similar faces so they can be easily organized by person.
 
@@ -11,74 +11,145 @@ To [recognize faces](https://docs.photoprism.app/user-guide/organize/people/), P
 
 The face recognition pipeline runs in three stages:
 
-1. **Detection** — the ONNX SCRFD detector locates faces in the 720 px thumbnail of each photo (see [Thumbnails](../media/thumbnails.md) for how thumbnails are generated with libvips).
-2. **Embedding** — TensorFlow generates a 512-dimensional vector for each face based on [FaceNet](https://dl.photoprism.app/pdf/publications/20150101-FaceNet.pdf).
+1. **Detection** — a detection model locates faces in the 720 px thumbnail of each photo (see [Thumbnails](../media/thumbnails.md) for how thumbnails are generated with libvips).
+2. **Embedding** — an embedding model turns each detected face into a vector that can be compared with others.
 3. **Clustering** — similar embeddings are grouped with the [DBSCAN algorithm](https://en.wikipedia.org/wiki/DBSCAN) so clusters can be assigned to people.
 
-## Detection Engine
+Detection and embedding are configured independently, so the model that finds a face and the model that describes it can be chosen and upgraded separately.
 
-As of the [April 2026 release](../../release-notes.md), PhotoPrism ships a **single face detector** — the legacy Pigo cascade classifier has been removed from the code base.
+## Detection Models
 
-**ONNX SCRFD 0.5g** is an [ONNX Runtime](https://onnxruntime.ai/)-backed CNN that delivers higher recall on occluded, off-axis, or poorly-lit faces than the previous Pigo detector. Implementation details:
+**YuNet** is the bundled detector. It is a compact, anchor-free CNN published in the [OpenCV Zoo](https://github.com/opencv/opencv_zoo/tree/main/models/face_detection_yunet) under the MIT license, and it emits a bounding box plus five facial landmarks, which the embedding stage needs to align crops. Implementation details:
 
 - Consumes 720 px thumbnails with a 640 px model input.
-- Scheduled on the meta/vision workers, in lock-step with the FaceNet embedding step.
-- Defaults to half the available CPUs (minimum 1 thread).
-- The prebuilt runtime targets glibc ≥ 2.27 on `amd64` / `arm64`.
-- When `FACE_ENGINE=auto` the detector is used whenever the bundled SCRFD model is present; otherwise detection is **disabled** rather than falling back to a legacy engine.
+- Runs on the [ONNX Runtime](https://onnxruntime.ai/); the prebuilt runtime targets glibc ≥ 2.27 on `amd64` / `arm64`.
+- Scheduled on the meta/vision workers, with one detection session per indexing worker.
+- Scores detections on a 0–100 confidence scale, with a calibrated cutoff below which a detection is discarded.
 
-For backwards compatibility, legacy `FACE_ENGINE=pigo` values are silently mapped to ONNX in [`internal/ai/face/engine.go:ParseEngine`](https://github.com/photoprism/photoprism/blob/develop/internal/ai/face/engine.go) so older configuration files keep working after upgrade. New configurations should use `auto`, `onnx`, or `none`.
+`FACE_DETECTOR` selects the model by name. When it is unset, the detector is derived from the configured embedding model rather than chosen independently, so a supported combination is the default rather than something you have to assemble. Setting it to `none` disables detection.
+
+!!! info ""
+    `FACE_ENGINE` is **deprecated** and selected a runtime rather than a model. Only `FACE_ENGINE=none` still has an effect, and `FACE_DETECTOR` overrides it. Configurations that set it keep working; new configurations should use `FACE_DETECTOR`.
+
+### Small Faces and the Retry Pass
+
+`FACE_SIZE` sets the minimum face size in detection-thumbnail pixels. Because that measurement is taken on the 720 px thumbnail rather than the original, a crowd photograph can push every face below the threshold and be indexed as containing none.
+
+`FACE_SIZE_RETRY` guards against that: when a picture yields no faces at all, detection runs a second pass at a smaller minimum size. Set it to `-1` to disable the retry.
+
+The smallest value `FACE_SIZE` accepts is 10 px, which is where the detector stops being trained rather than a policy choice — a smaller setting asks for faces no bundled model can find.
 
 ### Hardware Acceleration
 
-The ONNX detector currently runs on the **CPU execution provider only**. PhotoPrism configures the inference session with thread counts and full graph optimization but does not append a hardware-accelerated execution provider, so detection throughput scales with `FACE_ENGINE_THREADS` and the host CPU rather than a GPU. The prebuilt runtime is the CPU build of [ONNX Runtime](https://onnxruntime.ai/), installed via [`scripts/dist/install-onnx.sh`](https://github.com/photoprism/photoprism/blob/develop/scripts/dist/install-onnx.sh) from our download server.
+Detection currently runs on the **CPU execution provider only**. PhotoPrism configures the inference session with thread counts and full graph optimization but does not append a hardware-accelerated execution provider, so throughput scales with `FACE_DETECTOR_THREADS` and the host CPU rather than a GPU. The prebuilt runtime is the CPU build of [ONNX Runtime](https://onnxruntime.ai/), installed via [`scripts/dist/install-onnx.sh`](https://github.com/photoprism/photoprism/blob/develop/scripts/dist/install-onnx.sh).
 
 Optional hardware acceleration is being tracked for future releases as **opt-in** paths; CPU remains the default so existing installs are unaffected:
 
-- **NVIDIA / CUDA (Linux)** — offloads detection to an NVIDIA GPU through the ONNX Runtime CUDA execution provider. It requires the GPU build of ONNX Runtime, the NVIDIA driver, and — for Docker — the NVIDIA Container Toolkit plus a matching CUDA and cuDNN runtime in the image (these NVIDIA libraries are not part of the ONNX Runtime archive). Tracked in [photoprism/photoprism#5703](https://github.com/photoprism/photoprism/issues/5703).
+- **NVIDIA / CUDA (Linux)** — offloads inference to an NVIDIA GPU through the ONNX Runtime CUDA execution provider. It requires the GPU build of ONNX Runtime, the NVIDIA driver, and — for Docker — the NVIDIA Container Toolkit plus a matching CUDA and cuDNN runtime in the image (these NVIDIA libraries are not part of the ONNX Runtime archive). Tracked in [photoprism/photoprism#5703](https://github.com/photoprism/photoprism/issues/5703).
 - **Apple / CoreML (native macOS builds)** — offloads to the Apple Neural Engine and GPU through the CoreML execution provider, which is already compiled into the macOS build of ONNX Runtime. This benefits **natively built** macOS binaries only: the standard Docker image runs inside a Linux VM on macOS with no Apple-accelerator passthrough, so it stays CPU-only regardless. Tracked in [photoprism/photoprism#5704](https://github.com/photoprism/photoprism/issues/5704).
+
+## Embedding Models
+
+`FACE_MODEL` selects the model that turns a detected face into a vector. Each supported model needs code that knows its preprocessing contract, so the set is a registry rather than an arbitrary file path.
+
+| Model      | Runtime    | Dimensions | Crop Alignment | Availability                         |
+|------------|------------|------------|----------------|--------------------------------------|
+| `sface`    | ONNX       | 128        | Landmark       | Bundled; preferred for new libraries |
+| `facenet`  | TensorFlow | 512        | Bounding box   | Bundled; kept by existing libraries  |
+| `auraface` | ONNX       | 512        | Landmark       | Optional download                    |
+
+When `FACE_MODEL` is unset, PhotoPrism works the model out once and writes the name to `options.yml`:
+
+- **A library that already holds face vectors keeps the model that produced them.** Resolving away from it would leave every stored cluster incomparable with anything indexed afterwards, so the existing space wins even when a preferred model is installed.
+- **A library with no face vectors takes the first installed model in preference order**, which is `sface`.
+
+`auraface` is redistributable but too large to ship in the images, so it is an explicit download rather than a bundled model. It measures in the same quality band as `sface` at roughly eight times the size, which is why `sface` is the one that ships.
+
+### Crop Alignment
+
+Models marked **Landmark** above are trained on faces warped onto a standard template, so PhotoPrism fits a similarity transform from the five detected landmarks onto a 112×112 template before inference. When a face has no complete landmark set, it falls back to an unaligned bounding box crop. `facenet` is trained on unaligned crops and takes the bounding box directly.
+
+This is why the detector has to emit landmarks, and why detection and embedding are not freely interchangeable — `FACE_DETECTOR` derives from `FACE_MODEL` for exactly this reason.
+
+### Changing the Model
+
+An environment variable does not change the model of a library that already has one. Use the migration command, which re-embeds every marker and records the target as the configured model:
+
+```bash
+docker compose exec photoprism photoprism faces migrate --to sface
+```
+
+Stop the server first, and see [Migrate Face Embeddings](cli.md#migrate-face-embeddings) for the dry run, the report it prints, and what happens to person assignments.
+
+!!! info ""
+    If the configured model cannot read a library's stored vectors, embedding work **pauses** rather than silently filtering the mismatch: generation, clustering, and matching stop after one warning until a migration reconciles them. Detection keeps running, so faces stay recorded and their vectors are filled in afterwards.
 
 ## Configuration
 
 !!! example ""
-    We recommend that only advanced users and developers change these parameters. All face-related environment variables and CLI flags are listed in [Config Options › Face Recognition](../../getting-started/config-options.md#face-recognition); this page only highlights the knobs most relevant to detector behavior.
+    We recommend that only advanced users and developers change these parameters. All face-related environment variables and CLI flags are listed in [Config Options › Face Recognition](../../getting-started/config-options.md#face-recognition); this page only highlights the knobs most relevant to detector and model behavior.
 
 ### Detection Settings
 
-| Environment Variable           | CLI Flag              | Default                 | Description                                                                                 |
-|--------------------------------|-----------------------|-------------------------|---------------------------------------------------------------------------------------------|
-| PHOTOPRISM_FACE_ENGINE         | --face-engine         | auto                    | Detection engine (`auto`, `onnx`, `none`). Legacy `pigo` is accepted and aliased to `onnx`. |
-| PHOTOPRISM_FACE_ENGINE_THREADS | --face-engine-threads | runtime.NumCPU()/2 (≥1) | Number of ONNX inference threads.                                                           |
-| PHOTOPRISM_FACE_SIZE           | --face-size           | 50                      | Minimum face size in `PIXELS` (20-10000).                                                   |
-| PHOTOPRISM_FACE_SCORE          | --face-score          | 9.0                     | Base quality threshold before scale-dependent offsets are added.                            |
-| PHOTOPRISM_FACE_OVERLAP        | --face-overlap        | 42                      | Maximum allowed IoU when deduplicating markers (preserved from legacy behavior).            |
+| Environment Variable             | CLI Flag                | Default                       | Description                                                                                   |
+|----------------------------------|-------------------------|-------------------------------|-----------------------------------------------------------------------------------------------|
+| PHOTOPRISM_FACE_DETECTOR         | --face-detector         | *(from the face model)*       | Detection model (`auto`, `none`, `yunet`).                                                    |
+| PHOTOPRISM_FACE_DETECTOR_THREADS | --face-detector-threads | `NumCPU()`/index workers (≥1) | ONNX threads per detection session; one session runs per indexing worker.                     |
+| PHOTOPRISM_FACE_SIZE             | --face-size             | 25                            | Minimum face size in `PIXELS` (10-10000), measured on the detection thumbnail.                |
+| PHOTOPRISM_FACE_SIZE_RETRY       | --face-size-retry       | 10                            | Minimum face size in `PIXELS` for the second pass, used only when a picture would have none.  |
+| PHOTOPRISM_FACE_SCORE            | --face-score            | *(from the detector)*         | Minimum face `QUALITY` score (1-100), applied on top of the detector's own calibrated cutoff. |
+| PHOTOPRISM_FACE_OVERLAP          | --face-overlap          | 42                            | Maximum allowed IoU when deduplicating markers.                                               |
 
-Run scheduling is configured through the face model entry in `vision.yml`; `FaceEngineRunType()` simply forwards to `vision.Config.RunType(ModelTypeFace)`. There is no separate `FACE_ENGINE_RUN` flag. See the [package README](https://github.com/photoprism/photoprism/blob/develop/internal/ai/face/README.md#configuration-summary) for the full run-mode semantics.
+### Embedding Settings
+
+| Environment Variable          | CLI Flag             | Default           | Description                                                                        |
+|-------------------------------|----------------------|-------------------|------------------------------------------------------------------------------------|
+| PHOTOPRISM_FACE_MODEL         | --face-model         | *(detected once)* | Embedding model (`detect`, `none`, `facenet`, `sface`, `auraface`).                |
+| PHOTOPRISM_FACE_MODEL_THREADS | --face-model-threads | `NumCPU()`/2 (≥1) | ONNX threads for embedding, which runs one session in total behind the model lock. |
+
+!!! info ""
+    `FACE_ENGINE_THREADS` is **deprecated** and set both thread counts at once. They derive different defaults because detection runs one session per indexing worker while embedding runs a single shared session, so a value that suits one does not suit the other.
+
+Run scheduling is configured through the face model entry in `vision.yml` — adjust its `Run` value (for example `on-schedule`, `manual`, or `never`). There is no separate `FACE_ENGINE_RUN` flag. A **custom face model configured in `vision.yml` is deprecated** in favor of `FACE_MODEL`; it still loads while no embedding model is active and logs a warning.
 
 ### Clustering Settings
 
 !!! danger ""
     It is strongly recommended that you run `photoprism faces reset` in a terminal to remove existing clusters and markers after changing any of the clustering parameters, otherwise inconsistencies may cause unexpected behavior or errors.
 
-| Environment Variable          | CLI Flag             | Default | Description                                                              |
-|-------------------------------|----------------------|---------|--------------------------------------------------------------------------|
-| PHOTOPRISM_FACE_CLUSTER_SIZE  | --face-cluster-size  | 80      | Minimum size of automatically clustered faces in `PIXELS` (20-10000).    |
-| PHOTOPRISM_FACE_CLUSTER_SCORE | --face-cluster-score | 15      | Minimum `QUALITY` score of automatically clustered faces (1-100).        |
-| PHOTOPRISM_FACE_CLUSTER_CORE  | --face-cluster-core  | 4       | `NUMBER` of faces forming a cluster core (1-100).                        |
-| PHOTOPRISM_FACE_CLUSTER_DIST  | --face-cluster-dist  | 0.64    | Similarity `DISTANCE` of faces forming a cluster core (0.1-1.5).         |
-| PHOTOPRISM_FACE_MATCH_DIST    | --face-match-dist    | 0.46    | Similarity `OFFSET` for matching faces with existing clusters (0.1-1.5). |
+| Environment Variable           | CLI Flag              | Default               | Description                                                           |
+|--------------------------------|-----------------------|-----------------------|-----------------------------------------------------------------------|
+| PHOTOPRISM_FACE_CLUSTER_SIZE   | --face-cluster-size   | 60                    | Minimum size of automatically clustered faces in `PIXELS` (20-10000). |
+| PHOTOPRISM_FACE_CLUSTER_SCORE  | --face-cluster-score  | *(from the detector)* | Minimum `QUALITY` score of automatically clustered faces (1-100).     |
+| PHOTOPRISM_FACE_CLUSTER_CORE   | --face-cluster-core   | 4                     | `NUMBER` of faces forming a cluster core (1-100).                     |
+| PHOTOPRISM_FACE_CLUSTER_DIST   | --face-cluster-dist   | *(from the model)*    | Similarity `DISTANCE` of faces forming a cluster core.                |
+| PHOTOPRISM_FACE_CLUSTER_RADIUS | --face-cluster-radius | *(from the model)*    | Maximum cluster `RADIUS` accepted for automatic matches.              |
+| PHOTOPRISM_FACE_MATCH_DIST     | --face-match-dist     | *(from the model)*    | Similarity `OFFSET` for matching faces with existing clusters.        |
 
-Additional merge-tuning knobs (`PHOTOPRISM_FACE_MERGE_MAX_RETRY`, `PHOTOPRISM_FACE_CLUSTER_RADIUS`, `PHOTOPRISM_FACE_COLLISION_DIST`, `PHOTOPRISM_FACE_EPSILON_DIST`, `PHOTOPRISM_FACE_SKIP_CHILDREN`, `PHOTOPRISM_FACE_ALLOW_BACKGROUND`) are documented in [Config Options › Face Recognition](../../getting-started/config-options.md#face-recognition) and in the [package README](https://github.com/photoprism/photoprism/blob/develop/internal/ai/face/README.md).
+Distance thresholds are **calibrated per embedding model** and resolved from the model in use when left unset, because the models do not share a vector space — a distance that separates two people under one model merges them under another. The values below are what each model resolves to:
+
+| Model      | Cluster Distance | Cluster Radius | Match Distance | Collision Distance | Epsilon |
+|------------|------------------|----------------|----------------|--------------------|---------|
+| `facenet`  | 0.64             | 0.42           | 0.40           | 0.050              | 0.010   |
+| `sface`    | 0.85             | 0.60           | 0.35           | 0.061              | 0.012   |
+| `auraface` | 0.98             | 0.76           | 0.35           | 0.077              | 0.015   |
+
+Cluster radius plus match distance may not exceed 1.25, and a configured value above that ceiling is refused rather than clipped, so the reported configuration always matches the one in force.
+
+The clustering score bar is taken from **the detector that scored each marker**, not from the detector currently configured. Detector scores are not comparable across models, and nothing recomputes a stored score, so judging an old marker by a new detector's bar would exclude it permanently for a calibration it was never scored against. Markers indexed before detector provenance was recorded fall back to a shared default of 20.
+
+Additional tuning knobs (`PHOTOPRISM_FACE_MERGE_MAX_RETRY`, `PHOTOPRISM_FACE_COLLISION_DIST`, `PHOTOPRISM_FACE_EPSILON_DIST`) are documented in [Config Options › Face Recognition](../../getting-started/config-options.md#face-recognition) and in the [package README](https://github.com/photoprism/photoprism/blob/develop/internal/ai/face/README.md).
 
 ### Tuning Tips
 
-- A reasonable range for the similarity distance between face embeddings is between 0.60 and 0.70; a higher value is more aggressive and leads to larger clusters with more false positives.
+- Prefer adjusting a threshold **relative to the calibrated value for your model** rather than carrying a number over from another model; a higher cluster distance is more aggressive and leads to larger clusters with more false positives.
 - To cluster a smaller number of faces, reduce the core to 3 or 2 similar faces.
-- Use `FACE_ENGINE=auto` to let PhotoPrism decide whether detection is possible with the bundled model.
+- Raising `FACE_CLUSTER_SCORE` is a weak control on its own, because detector confidence saturates above the detector's own cutoff. `FACE_CLUSTER_SIZE` is what keeps an interpolated, upscaled crop out of a cluster.
+- Leave `FACE_DETECTOR` unset unless you have a reason to pin it, so detection stays matched to the embedding model.
 
 ## Face Embeddings
 
-After detection, PhotoPrism uses TensorFlow to run [FaceNet](https://dl.photoprism.app/pdf/publications/20150101-FaceNet.pdf) and generate a 512-dimensional embedding for each face. The embeddings are used to:
+Embeddings are used to:
 
 1. **Match faces** across different photos.
 2. **Cluster similar faces** using the DBSCAN algorithm.
@@ -88,16 +159,18 @@ After detection, PhotoPrism uses TensorFlow to run [FaceNet](https://dl.photopri
 
 All embeddings are L2-normalized to unit length (‖x‖₂ = 1) at:
 
-- Creation time, after TensorFlow inference (`NewEmbedding`).
+- Creation time, after inference (`NewEmbedding`).
 - Midpoint calculation when merging clusters (`EmbeddingsMidpoint`).
 - Deserialisation when loading from persisted JSON (`UnmarshalEmbedding` / `UnmarshalEmbeddings`).
 - `photoprism faces audit --fix`, which re-normalizes historical embeddings and re-links markers.
 
 With unit vectors Euclidean distance is a rank-equivalent substitute for cosine similarity, so all thresholds on this page are expressed in the Euclidean domain.
 
+A vector is only comparable with another produced by the same model, so each marker records the model that generated it. Vectors of differing width are rejected rather than compared.
+
 ### Tensor Memory
 
-FaceNet embeddings are generated through TensorFlow bindings that allocate tensors in C memory; those allocations are only released by Go GC finalisers. To keep memory bounded during extended indexing runs, PhotoPrism periodically forces garbage collection and returns freed C buffers to the OS. Tune with `PHOTOPRISM_TF_GC_EVERY` (default **200**; `0` disables).
+This applies to `facenet` only, which is the one model that runs on TensorFlow. Its embeddings are generated through bindings that allocate tensors in C memory, and those allocations are only released by Go GC finalisers. To keep memory bounded during extended indexing runs, PhotoPrism periodically forces garbage collection and returns freed C buffers to the OS. Tune with `PHOTOPRISM_TF_GC_EVERY` (default **200**; `0` disables). Lower values reduce peak RSS but increase GC overhead.
 
 ## Commands
 
@@ -105,13 +178,9 @@ FaceNet embeddings are generated through TensorFlow bindings that allocate tenso
 
 ## Performance Notes
 
-The October 2025 optimisations (still current) improved the hot paths on the embedding side:
-
-| Benchmark                  | Before                  | After                                  |
-|----------------------------|-------------------------|----------------------------------------|
-| `Embedding.Dist`           | ~242 ns/op              | ~155 ns/op                             |
-| `EmbeddingsMidpoint`       | ~194 µs/op, 528 KB/op   | ~99 µs/op, 4 KB/op                     |
-| Face matching (1024 faces) | 1024 distance checks    | ~16 candidates evaluated (≈0.55 ms/op) |
-| Cluster materialisation    | ~29.8 µs/op, 384 allocs | ~14.8 µs/op, 64 allocs                 |
+| Benchmark                     | Current            |
+|-------------------------------|--------------------|
+| `BenchmarkEmbeddingDist`      | ~155 ns/op         |
+| `BenchmarkEmbeddingsMidpoint` | ~99 µs/op, 4 KB/op |
 
 Re-run `BenchmarkEmbeddingDist` and `BenchmarkEmbeddingsMidpoint` after any detector or embedding adjustment to catch regressions early.

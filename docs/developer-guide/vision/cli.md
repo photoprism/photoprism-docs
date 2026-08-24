@@ -147,6 +147,14 @@ Detect faces in your photos:
 docker compose exec photoprism photoprism faces index [subfolder]
 ```
 
+### Show the Effective Configuration
+
+Many face options resolve their default from the detector or embedding model in use rather than from a fixed number, so the value in force is not always the value in your configuration file. This prints what actually applies:
+
+```bash
+docker compose exec photoprism photoprism faces config
+```
+
 ### Audit Face Data
 
 Check the integrity of face embeddings and cluster statistics:
@@ -197,7 +205,34 @@ Clear all face data and start fresh:
 docker compose exec photoprism photoprism faces reset
 ```
 
+To regenerate markers with a specific detection model, name it with `--detector`:
+
+```bash
+docker compose exec photoprism photoprism faces reset --detector=yunet
+```
+
 !!! danger ""
     The `faces reset` command will delete all existing face markers and clusters. Make sure you have backups if needed, as this operation cannot be undone.
+
+### Migrate Face Embeddings
+
+Changing the embedding model is a migration rather than a configuration change, because vectors produced by different models cannot be compared. This command re-embeds every marker and records the target as the configured model:
+
+```bash
+docker compose exec photoprism photoprism faces migrate --to=sface
+```
+
+Run it with `--dry-run` first to see the scope without changing the index:
+
+```bash
+docker compose exec photoprism photoprism faces migrate --to=sface --dry-run
+```
+
+The report names how many markers are valid, invalid, already on the target, unlinked, or identified manually, how many are assigned to a person and keep that assignment, and how many are too small or too low-scoring to seed a cluster. It warns separately when markers cannot be re-embedded because their file is missing or unreadable, and when the originals path is empty or unreadable — which would otherwise look like a clean run right up until every file fails.
+
+Use `--force` to finalize a migration even when some markers could not be re-embedded.
+
+!!! danger ""
+    **Stop the server before migrating.** The migration replaces every face cluster in a single transaction, and its worker guards cannot account for what a running instance writes to the same rows.
 
 [Learn more about face recognition ›](face-recognition.md)

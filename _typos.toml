@@ -24,6 +24,9 @@ PN = "PN"
 ba = "ba"     # e.g. build 210208-9e10ba69
 dbe = "dbe"   # e.g. build 260520-12dbe82d3
 
+# Acronyms whose letters spell a common typo.
+CNA = "CNA"   # CVE Numbering Authority, in the security policy
+
 # Personal names of contributors and cited authors.
 Mathes = "Mathes"   # Heiko Mathes
 Wirth = "Wirth"     # Niklaus Wirth

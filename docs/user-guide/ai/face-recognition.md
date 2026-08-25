@@ -87,7 +87,7 @@ The distance thresholds are calibrated for each embedding model and resolved aut
 
 ## CLI Reference
 
-- `photoprism faces config` — show which options are actually in force, including the ones resolved from the detector or model.
+- `photoprism faces status` — show which options are actually in force, including the ones resolved from the detector or model, and why clustering is waiting if no clusters are forming. `faces config` and `faces doctor` are aliases.
 - `photoprism faces stats` — show counts and model info.
 - `photoprism faces audit [--subject UID] [--fix]` — check and optionally repair face data.
 - `photoprism faces reset [--detector auto|none|yunet] [--force]` — wipe people and markers, then regenerate with the chosen detector.

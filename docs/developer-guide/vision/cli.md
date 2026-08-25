@@ -263,6 +263,10 @@ Re-detection runs at its own floors, `FACE_MIGRATE_SIZE` and `FACE_MIGRATE_SCORE
 
 Markers a person drew or named by hand keep their assignment either way; only the vector is lost, and only where re-detection failed.
 
+When a run does lose vectors, it reports how much of that was human effort: how many of the lost markers carried a person assignment, and how many had a manual source. **The two overlap rather than nest** — clearing a person's name from a marker leaves its source manual with no subject — so do not add them together or read one as a subset of the other. Attrition among markers nobody ever touched is the ordinary outcome for a library an earlier detector indexed; these two counts are what says whether a detection floor was worth its cost.
+
+The dry run's "identified manually" figure is counted the same way and additionally includes invalid markers, which a migration never walks. A smaller number in the result is therefore expected, not a sign that something went missing.
+
 Two guards act on the result:
 
 - **The finalize guard refuses a destructive finalize** when more than 10% of the markers that clear both clustering bars lost their vector. Markers below those bars are deliberately excluded from the ratio, because they seed no cluster and join none — counting them made a detector that re-finds fewer weak faces look like a storage fault.

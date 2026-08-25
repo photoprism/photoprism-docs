@@ -22,7 +22,7 @@ What's new?
 - Thumbs: [Improved error messages to be logged as a single readable line](https://github.com/photoprism/photoprism/issues/5778)
 - Covers: [Improved album, label, and folder covers to load from the regular thumbnail cache](https://github.com/photoprism/photoprism/issues/5779)
 - Metadata: [Improved the docs to include complete XMP and DCMI tags](https://github.com/photoprism/photoprism/issues/2260)
-- Security: [Upgraded Go from v1.26.5 to v1.26.6](https://github.com/golang/go/issues?q=milestone%3AGo1.26.6)
+- Security: [Upgraded Go from v1.26.5 to v1.27.0](https://github.com/golang/go/issues?q=milestone%3AGo1.27.0)
 - Translations: [Improved Hebrew](https://docs.photoprism.app/developer-guide/translations-weblate/) by [@avma](https://github.com/avma)
 
 !!! info ""

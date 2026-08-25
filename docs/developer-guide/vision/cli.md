@@ -147,12 +147,33 @@ Detect faces in your photos:
 docker compose exec photoprism photoprism faces index [subfolder]
 ```
 
-### Show the Effective Configuration
+### Show the Effective Status
 
-Many face options resolve their default from the detector or embedding model in use rather than from a fixed number, so the value in force is not always the value in your configuration file. This prints what actually applies:
+Many face options resolve their default from the detector or embedding model in use rather than from a fixed number, so the value in force is not always the value in your configuration file. This prints what actually applies, grouped into **Global Options**, **Face Detection**, and **Face Recognition**:
 
 ```bash
-docker compose exec photoprism photoprism faces config
+docker compose exec photoprism photoprism faces status
+```
+
+`faces config` and `faces doctor` are aliases of the same command.
+
+Above the tables, the report states in prose whether detection and recognition are enabled, which detector and model are in force, and — when no clusters are forming — **why** automatic clustering is waiting. It distinguishes two cases that look identical from the outside:
+
+- **Not enough new markers yet.** The report names how many are needed, how many there are, and how many clear `FACE_CLUSTER_SIZE` and the per-detector score bar.
+- **Markers exist, but none is newer than the last cluster.** An automatic pass counts only markers added since the newest cluster it produced, so a library in this state never restarts on its own. The report names `photoprism faces update --force` as the fix.
+
+### Cluster and Match Faces
+
+Run clustering and matching over the markers already in the index:
+
+```bash
+docker compose exec photoprism photoprism faces update
+```
+
+An ordinary run only considers markers added since the newest automatic cluster. To reconsider every marker in the library — which is what `faces status` recommends when clustering has stalled — pass `--force`:
+
+```bash
+docker compose exec photoprism photoprism faces update --force
 ```
 
 ### Audit Face Data
@@ -219,16 +240,33 @@ docker compose exec photoprism photoprism faces reset --detector=yunet
 Changing the embedding model is a migration rather than a configuration change, because vectors produced by different models cannot be compared. This command re-embeds every marker and records the target as the configured model:
 
 ```bash
-docker compose exec photoprism photoprism faces migrate --to=sface
+docker compose exec photoprism photoprism faces migrate
 ```
+
+It defaults to the model this release supports, so an ordinary migration needs no target. Name one with `--to` only when migrating somewhere else.
 
 Run it with `--dry-run` first to see the scope without changing the index:
 
 ```bash
-docker compose exec photoprism photoprism faces migrate --to=sface --dry-run
+docker compose exec photoprism photoprism faces migrate --dry-run
 ```
 
 The report names how many markers are valid, invalid, already on the target, unlinked, or identified manually, how many are assigned to a person and keep that assignment, and how many are too small or too low-scoring to seed a cluster. It warns separately when markers cannot be re-embedded because their file is missing or unreadable, and when the originals path is empty or unreadable — which would otherwise look like a clean run right up until every file fails.
+
+A dry run performs **no detection**: it answers from index queries alone and returns before any file is read, so `FACE_MIGRATE_SCORE` and `FACE_MIGRATE_SIZE` have no effect on it.
+
+#### Re-Detection, and What a Migration Can Lose
+
+A model that consumes landmark-aligned crops needs landmarks, and a marker an earlier detector placed does not carry any the current detector would have produced. So a migration to such a model **re-detects** each file and keeps a marker's vector only when the detector finds that face again.
+
+Re-detection runs at its own floors, `FACE_MIGRATE_SIZE` and `FACE_MIGRATE_SCORE`, rather than at the indexing ones. The trade is inverted here: at index time a false positive costs a thumbnail to reject, while during a migration a miss costs a curated marker its vector. A re-found marker also has its `score`, `size`, `landmarks_json`, and `detect_model` rewritten together, because the clustering bar is looked up by detector — a marker relabeled with the new detector while keeping the old one's score would be judged against a calibration it was never scored against.
+
+Markers a person drew or named by hand keep their assignment either way; only the vector is lost, and only where re-detection failed.
+
+Two guards act on the result:
+
+- **The finalize guard refuses a destructive finalize** when more than 10% of the markers that clear both clustering bars lost their vector. Markers below those bars are deliberately excluded from the ratio, because they seed no cluster and join none — counting them made a detector that re-finds fewer weak faces look like a storage fault.
+- **The exit status is non-zero whenever any marker lost its vector**, not only a clusterable one. A run that discarded a large share of a library below the clustering bars would otherwise be indistinguishable from a clean run to anything checking the exit code.
 
 Use `--force` to finalize a migration even when some markers could not be re-embedded.
 

@@ -26,7 +26,7 @@ What's new?
 - Covers: [Improved album, label, and folder covers to load from the regular thumbnail cache](https://github.com/photoprism/photoprism/issues/5779)
 - Metadata: [Improved the docs to include complete XMP and DCMI tags](https://github.com/photoprism/photoprism/issues/2260)
 - CLI: [Added `faces migrate` to move an existing library to the new face embedding model](https://github.com/photoprism/photoprism/issues/4669)
-- CLI: [Added `faces status` to report the face configuration in force and why clustering is waiting](https://github.com/photoprism/photoprism/issues/4669)
+- CLI: [Added `faces status` to help with configuration and troubleshooting](user-guide/ai/face-recognition.md#cli-reference)
 - Tests: [Extended backend and acceptance test coverage](https://github.com/photoprism/photoprism/pull/5783) by [@keif888](https://github.com/keif888)
 - Security: [Upgraded Go from v1.26.5 to v1.27.0](https://github.com/golang/go/issues?q=milestone%3AGo1.27.0)
 - Translations: [Improved Hebrew](https://docs.photoprism.app/developer-guide/translations-weblate/) by [@avma](https://github.com/avma)

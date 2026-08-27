@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 260827-02701cfcf</span>
+<span class="build">Build 260827-dfd52c8e4</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions/#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
@@ -18,9 +18,11 @@ What's new?
 - People: [Improved clustering to separate people whose faces were grouped as one](https://github.com/photoprism/photoprism/issues/4669)
 - People: [Improved person covers to show the largest and most confident face](https://github.com/photoprism/photoprism/commit/668cc6cc4)
 - People: [Added an option to leave ambiguous faces unassigned instead of guessing](https://github.com/photoprism/photoprism/issues/4669)
+- People: [Added a confirmation before a typed name creates a new person](https://github.com/photoprism/photoprism/commit/ddcbf3a1c)
 - People: [Fixed some clusters not being shown on the People pages](https://github.com/photoprism/photoprism/commit/afeddb6b6)
 - People: [Fixed naming a single face not finding that person's other photos](https://github.com/photoprism/photoprism/commit/f1ef0bf55)
 - People: [Fixed two people being merged when reassigning a face](https://github.com/photoprism/photoprism/issues/5764)
+- People: [Fixed fewer photos being matched after merging two people](https://github.com/photoprism/photoprism/commit/42e850585)
 - People: [Improved error handling when updating counts](https://github.com/photoprism/photoprism/pull/5757) by [@keif888](https://github.com/keif888)
 - People: [Improved memory usage and performance when naming clusters](https://github.com/photoprism/photoprism/issues/3891)
 - People: [Improved the speed of face updates in very large libraries](https://github.com/photoprism/photoprism/issues/5393)
@@ -29,6 +31,7 @@ What's new?
 - Covers: [Improved album, label, and folder covers to load from the regular thumbnail cache](https://github.com/photoprism/photoprism/issues/5779)
 - Metadata: [Improved the docs to include complete XMP and DCMI tags](https://github.com/photoprism/photoprism/issues/2260)
 - CLI: [Added `faces migrate` to switch a library to a new face model](https://docs.photoprism.app/user-guide/ai/face-recognition/#cli-reference)
+- CLI: [Added `faces reset --all` to start over without detecting faces again](https://docs.photoprism.app/user-guide/ai/face-recognition/#cli-reference)
 - CLI: [Added `faces status` to help with configuration and troubleshooting](https://docs.photoprism.app/user-guide/ai/face-recognition/#cli-reference)
 - Tests: [Extended backend and acceptance test coverage](https://github.com/photoprism/photoprism/pull/5783) by [@keif888](https://github.com/keif888)
 - Security: [Upgraded Go from v1.26.5 to v1.27.0](https://github.com/golang/go/issues?q=milestone%3AGo1.27.0)

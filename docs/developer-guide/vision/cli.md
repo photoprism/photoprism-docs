@@ -162,6 +162,86 @@ Above the tables, the report states in prose whether detection and recognition a
 - **Not enough new markers yet.** The report names how many are needed, how many there are, and how many clear `FACE_CLUSTER_SIZE` and the per-detector score bar.
 - **Markers exist, but none is newer than the last cluster.** An automatic pass counts only markers added since the newest cluster it produced, so a library in this state never restarts on its own. The report names `photoprism faces update --force` as the fix.
 
+### Inspect People, Clusters, and Markers
+
+Three read-only reports answer the questions that come up while tuning: who the index knows, how a
+person's faces are grouped, and what an individual marker is assigned to. Each prints a table by
+default and takes `--json`, `--md`, `--csv`, or `--tsv`, plus `--count` and `--offset`.
+
+`faces subjects` lists people with the clusters, files, and photos their markers support:
+
+```bash
+docker compose exec photoprism photoprism faces subjects
+```
+
+```
+┌──────────────────┬─────────────────┬────────┬──────────┬──────────┬────────┬─────────┬──────────┬───────┬────────┐
+│     Subject      │      Name       │  Src   │ Favorite │ Verified │ Hidden │ Markers │ Clusters │ Files │ Photos │
+├──────────────────┼─────────────────┼────────┼──────────┼──────────┼────────┼─────────┼──────────┼───────┼────────┤
+│ jr0mfat18xr5vtz7 │ Alex WG         │ manual │ Yes      │ No       │ No     │ 26      │ 1        │ 26    │ 26     │
+│ jr0mhi623g3jd2s6 │ Alina Levshin   │ manual │ No       │ No       │ No     │ 8       │ 1        │ 8     │ 8      │
+└──────────────────┴─────────────────┴────────┴──────────┴──────────┴────────┴─────────┴──────────┴───────┴────────┘
+```
+
+The counts are computed when the report runs. Pass `--stored` to print the numbers the index holds
+instead — the two diverging tells you the stored counts are stale.
+
+**`Clusters` is the fragmentation figure.** One person legitimately holds several clusters, because
+automatic clusters are never merged with one another; a count that keeps climbing across runs is the
+signal that clustering is splitting too aggressively.
+
+`faces ls` (alias `faces clusters`) lists the clusters themselves:
+
+```bash
+docker compose exec photoprism photoprism faces ls
+```
+
+```
+┌──────────────────────────────────┬────────────────┬──────┬─────────┬─────────┬─────────┬────────┬────────────┬──────────────────┐
+│               Face               │      Name      │ Src  │  Kind   │ Markers │ Samples │ Radius │ Collisions │ Collision Radius │
+├──────────────────────────────────┼────────────────┼──────┼─────────┼─────────┼─────────┼────────┼────────────┼──────────────────┤
+│ I35N567BI4WXFMMEC73552I2ZSBDHRD6 │ Theresa Gresch │ auto │ regular │ 117     │ 2048    │ 0.420  │ 0          │ 0.000            │
+│ AI4BTJI6DT35DT56HMUYJIBZ2HH4ZJRG │ Michael Mayer  │ auto │ regular │ 110     │ 469     │ 0.420  │ 0          │ 0.000            │
+└──────────────────────────────────┴────────────────┴──────┴─────────┴─────────┴─────────┴────────┴────────────┴──────────────────┘
+```
+
+`Samples` is what the cluster was built from, while `Markers` is what currently points at it, so the
+two drift apart as matching runs. `Radius` is the extent the cluster accepts, and a non-zero
+`Collision Radius` means it was narrowed after competing with another person for the same face.
+
+`faces markers` lists individual markers and what they are assigned to:
+
+```bash
+docker compose exec photoprism photoprism faces markers
+```
+
+Besides the shared options it takes `--face ID` to list one cluster's markers, and two filters for
+the shapes that come up in diagnosis: `--unassigned` for markers that have a person but no cluster,
+and `--dangling` for markers whose cluster no longer exists.
+
+All three accept a person as a positional argument, given either as a name or a subject UID, so a
+value from one report is the filter for the next:
+
+```bash
+docker compose exec photoprism photoprism faces ls "Alex WG"
+```
+
+### Measure Embedding Distances
+
+```bash
+docker compose exec photoprism photoprism faces stats
+```
+
+Reports how far face embeddings sit from one another, which is what the clustering thresholds are
+measured against. It logs two distributions: the nearest and furthest neighbor of every sample, as
+`min < median < max`, and then the same spread within each person, over the clusters that take part
+in matching. Comparing the two is what says whether a threshold separates people or splits one.
+
+!!! warning ""
+    This compares every sample with every other one, so its cost grows with the square of the
+    library size. It is a diagnostic for a test library, not a routine report — on a large library
+    prefer `faces status` for configuration questions and `faces ls` for how a person is grouped.
+
 ### Cluster and Match Faces
 
 Run clustering and matching over the markers already in the index:
@@ -231,6 +311,24 @@ To regenerate markers with a specific detection model, name it with `--detector`
 ```bash
 docker compose exec photoprism photoprism faces reset --detector=yunet
 ```
+
+Three levels of reset are available, and they differ in how much detection work has to be repeated:
+
+| Command               | Removes                                                   | Keeps                                  |
+|-----------------------|-----------------------------------------------------------|----------------------------------------|
+| `faces reset`         | automatic clusters and their matches                      | markers, embeddings, manual names      |
+| `faces reset --all`   | additionally the people and names a person or sidecar set | markers and embeddings                 |
+| `faces reset --force` | people, clusters, and markers                             | nothing — faces must be detected again |
+
+`--all` is the one to reach for when re-testing clustering parameters: because the markers and their
+embeddings survive, a following `faces update` re-clusters in seconds rather than re-detecting every
+file. `--force` is the only variant that requires detection to run again.
+
+A person marked **Verified** in the Edit Person dialog keeps their row through `--all`, so the names
+you have settled on stay put across repeated re-clustering rounds and remain comparable between them.
+
+`--force` cannot be combined with `--detector` or `--all`. The flags name different outcomes for the
+markers table, so the command refuses the combination rather than picking one.
 
 !!! danger ""
     The `faces reset` command will delete all existing face markers and clusters. Make sure you have backups if needed, as this operation cannot be undone.

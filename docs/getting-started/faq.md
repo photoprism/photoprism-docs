@@ -322,27 +322,28 @@ If you don't plan to use [any additional features](https://www.photoprism.app/ed
 
 [View Open Source FAQ ›](https://www.photoprism.app/oss/faq/){ class="pr-3 block-xs" } [View Plus License ›](https://www.photoprism.app/plus/license/)
 
-### Should I use SQLite, MariaDB, or MySQL?
+### Should I use SQLite, MariaDB, PostgreSQL, or MySQL?
 
-PhotoPrism is compatible with [SQLite 3](https://www.sqlite.org/) and [MariaDB 10.5.12+](https://mariadb.org/). Official support for MySQL 8 has been discontinued as Oracle seems to have stopped shipping [new features and enhancements](https://github.com/photoprism/photoprism/issues/1764).
+PhotoPrism is compatible with [SQLite 3](https://www.sqlite.org/), [MariaDB 10.5.12+](https://mariadb.org/) and [PostgreSQL 17.4+](https://www.postgresql.org/). Official support for MySQL 8 has been discontinued as Oracle seems to have stopped shipping [new features and enhancements](https://github.com/photoprism/photoprism/issues/1764).
 
-If you only have few pictures, concurrent users, and CPU cores, [SQLite](https://www.sqlite.org/) may seem faster compared to full-featured database servers like [MariaDB](https://mariadb.com/). This changes as the index grows and the number of concurrent accesses increases. While MariaDB is optimized for high concurrency, SQLite frequently locks its index so that other operations have to wait. In the worst case, this can lead to locking errors and timeouts during indexing - especially in combination [with a slow disk](troubleshooting/performance.md#storage) or [network storage](troubleshooting/docker.md#network-storage).
+If you only have few pictures, concurrent users, and CPU cores, [SQLite](https://www.sqlite.org/) may seem faster compared to full-featured database servers like [MariaDB](https://mariadb.com/) and [PostgreSQL](https://www.postgresql.org/). This changes as the index grows and the number of concurrent accesses increases. While MariaDB and PostgreSQL are optimized for high concurrency, SQLite frequently locks its index so that other operations have to wait. In the worst case, this can lead to locking errors and timeouts during indexing - especially in combination [with a slow disk](troubleshooting/performance.md#storage) or [network storage](troubleshooting/docker.md#network-storage).
 
 The main advantage of SQLite is that you don't need to run a separate database server. It is therefore [well suited for testing](../developer-guide/tests.md) and can also be [sufficient for small libraries](../user-guide/library/index.md) with a few thousand files. If you are looking for [scalability and high performance](troubleshooting/performance.md), it is not a good choice.
 
 ### Is database corruption a common problem with self-hosting?
 
-The likelihood of [database corruption](troubleshooting/mariadb.md#server-crashes) is generally very low if you follow our documentation. Our team runs many instances/databases and has never had any issues over the years.
+The likelihood of database corruption with [MariaDB](troubleshooting/mariadb.md#server-crashes) or [PostgreSQL](troubleshooting/postgresql.md#server-crashes) is generally very low if you follow our documentation. Our team runs many instances/databases and has never had any issues over the years.
 
-However, if you run MariaDB or SQLite on a network drive or an external drive/stick that e.g. has been accidentally removed, it can happen. This is why our documentation explicitly warns about the danger of [using unreliable storage](docker-compose.md#database) for database files.
+However, if you run MariaDB, PostgreSQL or SQLite on a network drive or an external drive/stick that e.g. has been accidentally removed, it can happen. This is why our documentation explicitly warns about the danger of [using unreliable storage](docker-compose.md#database) for database files.
 
-Some users also configure a named or anonymous [Docker volume](advanced/docker-volumes.md#mariadb-database) for the database, or mount the wrong path so that their index is lost when they recreate the database container, e.g. [after an update](updates.md#docker-compose) of the Docker image.
+Some users also configure a named or anonymous Docker volume [MariaDB](advanced/docker-volumes.md#mariadb-database)/[PostgreSQL](advanced/docker-volumes.md#postgresql-database) for the database, or mount the wrong path so that their index is lost when they recreate the database container, e.g. [after an update](updates.md#docker-compose) of the Docker image.
 
 ### I've configured an external database, but can't connect?
 
 Most often this happens when new users configure `localhost` or `127.0.0.1` as database server host, since these always point back to the current container or computer. So it is not possible to access an external service with such a hostname or an IP address starting with 127. It works only if it is used directly in the container or on the computer where the database server is running. Instead, you must use a hostname or IP address that is accessible from other machines and containers.
 
-[Resolve Connection Issues ›](troubleshooting/mariadb.md#cannot-connect){ class="block-xs" }
+[Resolve MariaDB Connection Issues ›](troubleshooting/mariadb.md#cannot-connect){ class="block-xs" }
+[Resolve PostgreSQL Connection Issues ›](troubleshooting/postgresql.md#cannot-connect){ class="block-xs" }
 
 ### How can I determine the public IP address of my home network?
 
@@ -361,7 +362,7 @@ We therefore recommend not setting a hard memory limit unless you are familiar w
 
 ### Why does PhotoPrism always consume 100% of CPU when the background worker is running?
 
-Many users reporting poor performance and high CPU load have migrated from SQLite to MariaDB so that [their database schema is not optimized for performance](advanced/databases.md), for example, because indexes are missing or columns have the wrong data type. The [instructions for these migrations](advanced/migrations/sqlite-to-mariadb.md) were provided by a contributor and are not part of the original software distribution. As such, they have not been officially released, recommended, or extensively tested by us.
+Many users reporting poor performance and high CPU load have migrated from SQLite to MariaDB prior to the release of the transfer command, so that [their database schema is not optimized for performance](advanced/databases.md), for example, because indexes are missing or columns have the wrong data type. The [instructions for these migrations](advanced/migrations/sqlite-to-mariadb.md) were provided by a contributor and are not part of the original software distribution. As such, they have not been officially released, recommended, or extensively tested by us.  A new set of instructions utilising the new [transfer command](advanced/migrations/database-to-database.md) avoids this problem as it creates the target database with all the required indexes.
 
 In some instances, users have manually changed the contents of the database. It is also possible that the database is in an inconsistent state for other reasons, e.g. due to bugs in previous versions that have been fixed in the meantime. However, we are not currently aware of any such cases.
 
@@ -401,7 +402,7 @@ Support for animated GIFs was [added in April 2022](https://github.com/photopris
 
 ### Why is my storage folder so large? What is in it?
 
-The *storage* folder contains sidecar, cache, and configuration files. It may also contain index database files if you are [using SQLite](#should-i-use-sqlite-mariadb-or-mysql). Most of the space there is taken up by your thumbnails: These are high-quality, scaled-down versions of your originals. Thumbnails are necessary because web browsers are bad at [resizing large images to fit the screen](../user-guide/settings/advanced.md#downscaling-filter). Using full-resolution originals for slideshows and in search results would also consume a lot of browser memory and significantly reduce indexing performance.
+The *storage* folder contains sidecar, cache, and configuration files. It may also contain index database files if you are [using SQLite](#should-i-use-sqlite-mariadb-postgresql-or-mysql). Most of the space there is taken up by your thumbnails: These are high-quality, scaled-down versions of your originals. Thumbnails are necessary because web browsers are bad at [resizing large images to fit the screen](../user-guide/settings/advanced.md#downscaling-filter). Using full-resolution originals for slideshows and in search results would also consume a lot of browser memory and significantly reduce indexing performance.
 
 We are working to implement storage optimizations whenever there is an opportunity. It is also possible to [increase the JPEG compression and/or limit the resolution](../user-guide/settings/advanced.md#preview-images) if you are happy with lower quality thumbnails.
 

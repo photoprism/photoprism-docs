@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 260829-72f2b581e</span>
+<span class="build">Build 260830-f1e1787e8</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions/#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
@@ -26,6 +26,7 @@ What's new?
 - People: [Fixed faces in high-resolution photos being skipped when forming clusters](https://github.com/photoprism/photoprism/commit/44a89db64)
 - People: [Fixed two people being merged when reassigning a face](https://github.com/photoprism/photoprism/issues/5764)
 - People: [Fixed fewer photos being matched after merging two people](https://github.com/photoprism/photoprism/commit/42e850585)
+- People: [Fixed clusters of the same person not being merged](https://github.com/photoprism/photoprism/commit/6a163f9a8)
 - People: [Improved error handling when updating counts](https://github.com/photoprism/photoprism/pull/5757) by [@keif888](https://github.com/keif888)
 - People: [Improved memory usage and performance when naming clusters](https://github.com/photoprism/photoprism/issues/3891)
 - People: [Improved the speed of face updates in very large libraries](https://github.com/photoprism/photoprism/issues/5393)

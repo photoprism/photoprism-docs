@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 260901-796de6f5f</span>
+<span class="build">Build 260901-0c4f86638</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions/#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
@@ -14,6 +14,7 @@ What's new?
 - AI: [Improved facial recognition with new detection and embedding models](https://github.com/photoprism/photoprism/issues/4669) by [@omerdduran](https://github.com/omerdduran)
 - AI: [Added a `Normalize` option to keep compound label names whole](https://github.com/photoprism/photoprism/issues/5773)
 - AI: [Upgraded ONNX Runtime from v1.26.0 to v1.29.0](https://github.com/photoprism/photoprism/issues/5703)
+- AI: [Fixed faces being embedded from upscaled crops when a larger source was available](https://github.com/photoprism/photoprism/commit/49ce2d480)
 - UX: [Fixed the surface elevation order in three dark themes](https://github.com/photoprism/photoprism/commit/a14f9bec4)
 - People: [Improved clustering to separate people whose faces were grouped as one](https://github.com/photoprism/photoprism/issues/4669)
 - People: [Improved person covers to show the largest and most confident face](https://github.com/photoprism/photoprism/commit/668cc6cc4)
@@ -32,6 +33,7 @@ What's new?
 - People: [Improved error handling when updating counts](https://github.com/photoprism/photoprism/pull/5757) by [@keif888](https://github.com/keif888)
 - People: [Improved memory usage and performance when naming clusters](https://github.com/photoprism/photoprism/issues/3891)
 - People: [Improved the speed of face updates in very large libraries](https://github.com/photoprism/photoprism/issues/5393)
+- Settings: [Added a `thumb-size-face` option that limits the sources rendered for face crops](https://github.com/photoprism/photoprism/commit/49ce2d480)
 - Thumbs: [Improved oversized preview requests to return the largest available size](https://github.com/photoprism/photoprism/issues/5780)
 - Thumbs: [Improved error messages to be logged as a single readable line](https://github.com/photoprism/photoprism/issues/5778)
 - Covers: [Improved album, label, and folder covers to load from the regular thumbnail cache](https://github.com/photoprism/photoprism/issues/5779)

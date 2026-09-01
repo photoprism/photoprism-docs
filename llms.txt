@@ -1,0 +1,258 @@
+# PhotoPrism Documentation
+
+> Official documentation for PhotoPrism: setup guides, the user guide, developer reference, and release notes for the privacy-focused, self-hosted AI photo and video app.
+
+PhotoPrism® is a privacy-focused, self-hosted AI photo and video app for browsing, organizing, and sharing media libraries. This is the official documentation site, covering installation and setup (Docker, NAS, Raspberry Pi, and cloud), the user guide for organizing and searching your library, a developer reference (APIs, build, and contribution guides), and release notes. For product information, editions, pricing, and support articles, see the main website at https://www.photoprism.app/.
+
+A plain-text dump of the User Guide and Getting Started sections is available at https://docs.photoprism.app/llms-full.txt.
+
+## Getting Started
+
+- [Features](https://docs.photoprism.app/)
+- [Setup](https://docs.photoprism.app/getting-started/)
+- [Docker Compose](https://docs.photoprism.app/getting-started/docker-compose/)
+- [Portainer](https://docs.photoprism.app/getting-started/portainer/)
+- [Pure Docker](https://docs.photoprism.app/getting-started/docker/)
+- [Config Options](https://docs.photoprism.app/getting-started/config-options/)
+- Config Files
+  - [options.yml](https://docs.photoprism.app/getting-started/config-files/)
+  - [defaults.yml](https://docs.photoprism.app/getting-started/config-files/defaults/)
+  - [settings.yml](https://docs.photoprism.app/getting-started/config-files/settings/)
+- Cloud Hosting
+  - [PikaPods](https://docs.photoprism.app/getting-started/cloud/pikapods/)
+  - [DigitalOcean](https://docs.photoprism.app/getting-started/cloud/digitalocean/)
+- Raspberry Pi
+  - [Requirements](https://docs.photoprism.app/getting-started/raspberry-pi/)
+  - [SD Card Image](https://docs.photoprism.app/getting-started/raspberry-pi/microsd-image/)
+- NAS Devices
+  - [Asustor](https://docs.photoprism.app/getting-started/nas/asustor/)
+  - [Synology](https://docs.photoprism.app/getting-started/nas/synology/)
+  - [QNAP](https://docs.photoprism.app/getting-started/nas/qnap/)
+  - [Unraid](https://docs.photoprism.app/getting-started/nas/unraid/)
+  - [OpenMediaVault](https://docs.photoprism.app/getting-started/nas/openmediavault/)
+- BSD Ports
+  - [FreeBSD](https://docs.photoprism.app/getting-started/ports/freebsd/)
+- [Using a CDN](https://docs.photoprism.app/getting-started/using-a-cdn/)
+- [Using HTTPS](https://docs.photoprism.app/getting-started/using-https/)
+- [Getting Updates](https://docs.photoprism.app/getting-started/updates/)
+- Troubleshooting
+  - [Checklists](https://docs.photoprism.app/getting-started/troubleshooting/)
+  - [Logs](https://docs.photoprism.app/getting-started/troubleshooting/logs/)
+  - [Docker](https://docs.photoprism.app/getting-started/troubleshooting/docker/)
+  - [MariaDB](https://docs.photoprism.app/getting-started/troubleshooting/mariadb/)
+  - [SQLite](https://docs.photoprism.app/getting-started/troubleshooting/sqlite/)
+  - [Raspberry Pi](https://docs.photoprism.app/getting-started/troubleshooting/raspberry-pi/)
+  - [Windows](https://docs.photoprism.app/getting-started/troubleshooting/windows/)
+  - [Browsers](https://docs.photoprism.app/getting-started/troubleshooting/browsers/)
+  - [Metadata](https://docs.photoprism.app/getting-started/troubleshooting/metadata/)
+  - [Performance](https://docs.photoprism.app/getting-started/troubleshooting/performance/)
+  - [Firewall](https://docs.photoprism.app/getting-started/troubleshooting/firewall/)
+- Reverse Proxies
+  - [Traefik](https://docs.photoprism.app/getting-started/proxies/traefik/)
+  - [Caddy 1](https://docs.photoprism.app/getting-started/proxies/caddy-1/)
+  - [Caddy 2](https://docs.photoprism.app/getting-started/proxies/caddy-2/)
+  - [NGINX](https://docs.photoprism.app/getting-started/proxies/nginx/)
+  - [Apache 2.4](https://docs.photoprism.app/getting-started/proxies/apache-2/)
+  - [SWAG](https://docs.photoprism.app/getting-started/proxies/swag/)
+  - [HAProxy](https://docs.photoprism.app/getting-started/proxies/haproxy/)
+- Remote Access
+  - [Tailscale VPN](https://docs.photoprism.app/getting-started/vpn/tailscale/)
+- Advanced
+  - [OpenID Connect](https://docs.photoprism.app/getting-started/advanced/openid-connect/)
+  - [Video Transcoding](https://docs.photoprism.app/getting-started/advanced/transcoding/)
+  - [Using Kubernetes](https://docs.photoprism.app/getting-started/advanced/kubernetes/)
+  - [Docker Security](https://docs.photoprism.app/getting-started/advanced/docker-security/)
+  - [Docker Volumes](https://docs.photoprism.app/getting-started/advanced/docker-volumes/)
+  - [Backup Guide](https://docs.photoprism.app/getting-started/advanced/backups/)
+  - [Database Setup](https://docs.photoprism.app/getting-started/advanced/databases/)
+  - Database Migrations
+    - [Index Schema](https://docs.photoprism.app/getting-started/advanced/migrations/)
+    - [SQLite to MariaDB](https://docs.photoprism.app/getting-started/advanced/migrations/sqlite-to-mariadb/)
+    - [MariaDB to SQLite](https://docs.photoprism.app/getting-started/advanced/migrations/mariadb-to-sqlite/)
+  - [Cache Optimization](https://docs.photoprism.app/getting-started/advanced/caching/)
+  - [NGINX Proxy Setup](https://docs.photoprism.app/getting-started/advanced/nginx-proxy-setup/)
+  - [Horizontal Scaling](https://docs.photoprism.app/getting-started/advanced/scalability/)
+- [Known Issues](https://docs.photoprism.app/known-issues/)
+- [FAQ](https://docs.photoprism.app/getting-started/faq/)
+
+## User Guide
+
+- [Installation](https://docs.photoprism.app/user-guide/)
+- [First Steps 👣](https://docs.photoprism.app/user-guide/first-steps/)
+- [User Interface](https://docs.photoprism.app/user-guide/navigate/)
+- [Keyboard Shortcuts](https://docs.photoprism.app/user-guide/organize/keyboard-shortcuts/)
+- Media Library
+  - [Introduction](https://docs.photoprism.app/user-guide/library/)
+  - [Indexing Originals](https://docs.photoprism.app/user-guide/library/originals/)
+  - [Import to Originals](https://docs.photoprism.app/user-guide/library/import/)
+  - [Duplicate Detection](https://docs.photoprism.app/user-guide/library/duplicates/)
+  - [Metadata Support](https://docs.photoprism.app/user-guide/library/metadata/)
+  - [Web Upload](https://docs.photoprism.app/user-guide/library/upload/)
+  - [WebDAV Sync](https://docs.photoprism.app/user-guide/library/webdav/)
+  - [File Browser](https://docs.photoprism.app/user-guide/library/files/)
+- Search
+  - [Introduction](https://docs.photoprism.app/user-guide/search/)
+  - [Result Views](https://docs.photoprism.app/user-guide/search/views/)
+  - [Search Filters](https://docs.photoprism.app/user-guide/search/filters/)
+- Features
+  - [Albums](https://docs.photoprism.app/user-guide/organize/albums/)
+  - [People](https://docs.photoprism.app/user-guide/organize/people/)
+  - [Labels](https://docs.photoprism.app/user-guide/organize/labels/)
+  - [Archive](https://docs.photoprism.app/user-guide/organize/archive/)
+  - [Delete](https://docs.photoprism.app/user-guide/organize/delete/)
+  - [Private](https://docs.photoprism.app/user-guide/organize/private/)
+  - [Review](https://docs.photoprism.app/user-guide/organize/review/)
+  - [Stacks](https://docs.photoprism.app/user-guide/organize/stacks/)
+  - [Edit Dialog](https://docs.photoprism.app/user-guide/organize/edit/)
+  - [Info Sidebar](https://docs.photoprism.app/user-guide/organize/info-sidebar/)
+  - [Batch Edit](https://docs.photoprism.app/user-guide/organize/batch-edit/)
+  - [Rotate Image](https://docs.photoprism.app/user-guide/organize/rotate/)
+  - [Download](https://docs.photoprism.app/user-guide/organize/download/)
+  - [Videos](https://docs.photoprism.app/user-guide/organize/video/)
+  - [Documents](https://docs.photoprism.app/user-guide/organize/documents/)
+  - [Places](https://docs.photoprism.app/user-guide/organize/places/)
+  - [Moments](https://docs.photoprism.app/user-guide/organize/moments/)
+  - [Calendar](https://docs.photoprism.app/user-guide/organize/calendar/)
+  - [Folders](https://docs.photoprism.app/user-guide/organize/folders/)
+  - [Panoramas](https://docs.photoprism.app/user-guide/organize/panoramas/)
+  - [Scans](https://docs.photoprism.app/user-guide/organize/scans/)
+- Sharing
+  - [Introduction](https://docs.photoprism.app/user-guide/share/)
+  - [Uploading Files](https://docs.photoprism.app/user-guide/share/services-share/)
+- Remote Sync
+  - [Using WebDAV](https://docs.photoprism.app/user-guide/sync/webdav/)
+  - [Mobile Devices](https://docs.photoprism.app/user-guide/sync/mobile-devices/)
+  - [Apps and Services](https://docs.photoprism.app/user-guide/sync/services-sync/)
+  - [Syncing with Dropbox](https://docs.photoprism.app/user-guide/sync/dropbox/)
+- Settings
+  - [General](https://docs.photoprism.app/user-guide/settings/general/)
+  - [Content](https://docs.photoprism.app/user-guide/settings/library/)
+  - [Collections](https://docs.photoprism.app/user-guide/settings/collections/)
+  - [Advanced](https://docs.photoprism.app/user-guide/settings/advanced/)
+  - [Services](https://docs.photoprism.app/user-guide/settings/sync/)
+  - [Account](https://docs.photoprism.app/user-guide/settings/account/)
+- AI Models
+  - [Introduction](https://docs.photoprism.app/user-guide/ai/)
+  - [Ollama Setup](https://docs.photoprism.app/user-guide/ai/using-ollama/)
+  - [Ollama Cloud](https://docs.photoprism.app/user-guide/ai/ollama-cloud/)
+  - [Ollama Models](https://docs.photoprism.app/user-guide/ai/ollama-models/)
+  - [OpenAI API](https://docs.photoprism.app/user-guide/ai/using-openai/)
+  - [Face Recognition](https://docs.photoprism.app/user-guide/ai/face-recognition/)
+  - [NSFW Detection](https://docs.photoprism.app/user-guide/ai/nsfw/)
+  - [CLI Commands](https://docs.photoprism.app/user-guide/ai/cli/)
+- Backup Guide
+  - [Creating Backups](https://docs.photoprism.app/user-guide/backups/)
+  - [Restoring Backups](https://docs.photoprism.app/user-guide/backups/restore/)
+  - [External Storage](https://docs.photoprism.app/user-guide/backups/external-storage/)
+  - [Metadata Exports](https://docs.photoprism.app/user-guide/backups/export/)
+  - [Directory Overview](https://docs.photoprism.app/user-guide/backups/folders/)
+- Cloud Migration
+  - [Google Photos](https://docs.photoprism.app/user-guide/use-cases/google/)
+  - [Apple Photos](https://docs.photoprism.app/user-guide/use-cases/apple/)
+  - [Flickr](https://docs.photoprism.app/user-guide/use-cases/flickr/)
+- Managing Users
+  - [Admin Web UI](https://docs.photoprism.app/user-guide/users/)
+  - [CLI Commands](https://docs.photoprism.app/user-guide/users/cli/)
+  - [Account Roles](https://docs.photoprism.app/user-guide/users/roles/)
+  - [Sharing with Guests](https://docs.photoprism.app/user-guide/users/sharing/)
+  - [Setting Up 2FA](https://docs.photoprism.app/user-guide/users/2fa/)
+  - [Client Credentials](https://docs.photoprism.app/user-guide/users/client-credentials/)
+- [Mobile App (PWA)](https://docs.photoprism.app/user-guide/pwa/)
+- [iOS and Android](https://docs.photoprism.app/user-guide/native-apps/)
+- [Release Notes](https://docs.photoprism.app/release-notes/)
+- [FAQ](https://docs.photoprism.app/user-guide/faq/)
+
+## Developer Guide
+
+- [Introduction](https://docs.photoprism.app/developer-guide/)
+- [Build Setup](https://docs.photoprism.app/developer-guide/setup/)
+- [Best Practices](https://docs.photoprism.app/developer-guide/code-quality/)
+- [Project Structure](https://docs.photoprism.app/developer-guide/directories/)
+- [Configuration](https://docs.photoprism.app/developer-guide/configuration/)
+- [Documentation](https://docs.photoprism.app/developer-guide/documentation/)
+- [GitHub Issues](https://docs.photoprism.app/developer-guide/issues/)
+- [Pull Requests](https://docs.photoprism.app/developer-guide/pull-requests/)
+- [Reviewing PRs](https://docs.photoprism.app/developer-guide/reviewing-pull-requests/)
+- [Running Tests](https://docs.photoprism.app/developer-guide/tests/)
+- Translations
+  - [Using Weblate](https://docs.photoprism.app/developer-guide/translations-weblate/)
+  - [Legacy Method](https://docs.photoprism.app/developer-guide/translations/)
+- Media Library
+  - [File Formats](https://docs.photoprism.app/developer-guide/media/)
+  - [Test Samples](https://docs.photoprism.app/developer-guide/media/samples/)
+  - [RAW Images](https://docs.photoprism.app/developer-guide/media/raw/)
+  - [HEIC / HEIF](https://docs.photoprism.app/developer-guide/media/heif/)
+  - [Videos](https://docs.photoprism.app/developer-guide/media/videos/)
+  - [Live Photos](https://docs.photoprism.app/developer-guide/media/live/)
+  - [Thumbnails](https://docs.photoprism.app/developer-guide/media/thumbnails/)
+  - [Color Profiles](https://docs.photoprism.app/developer-guide/media/colors/)
+  - [File Import](https://docs.photoprism.app/developer-guide/media/import/)
+  - [Storage](https://docs.photoprism.app/developer-guide/media/storage/)
+- Picture Metadata
+  - [Adobe XMP](https://docs.photoprism.app/developer-guide/metadata/xmp/)
+  - [Exif Extraction](https://docs.photoprism.app/developer-guide/metadata/exif/)
+  - [Editing Exif Data](https://docs.photoprism.app/developer-guide/metadata/exif/edit/)
+  - [Reverse Geocoding](https://docs.photoprism.app/developer-guide/metadata/geocoding/)
+  - [Image Orientation](https://docs.photoprism.app/developer-guide/metadata/orientation/)
+  - [Perceptual Hashes](https://docs.photoprism.app/developer-guide/metadata/perceptual-hashes/)
+  - [Color Detection](https://docs.photoprism.app/developer-guide/metadata/colors/)
+  - [Camera Models](https://docs.photoprism.app/developer-guide/metadata/cameras/)
+- Computer Vision
+  - [Face Recognition](https://docs.photoprism.app/developer-guide/vision/face-recognition/)
+  - [Label Generation](https://docs.photoprism.app/developer-guide/vision/label-generation/)
+  - [Caption Generation](https://docs.photoprism.app/developer-guide/vision/caption-generation/)
+  - [Model Comparison](https://docs.photoprism.app/developer-guide/vision/model-comparison/)
+  - [CLI Commands](https://docs.photoprism.app/developer-guide/vision/cli/)
+  - Using TensorFlow
+    - [Label Generation](https://docs.photoprism.app/developer-guide/vision/tensorflow/)
+    - [Custom Models](https://docs.photoprism.app/developer-guide/vision/tensorflow/custom-models/)
+  - Vision Playground
+    - [Introduction](https://docs.photoprism.app/developer-guide/vision/service/)
+    - [Build Setup](https://docs.photoprism.app/developer-guide/vision/service/setup/)
+- Mobile Apps
+  - [iOS and Android](https://docs.photoprism.app/developer-guide/native-apps/)
+  - [Device Resolutions](https://docs.photoprism.app/developer-guide/native-apps/device-resolutions/)
+- Web User Interface
+  - [Introduction](https://docs.photoprism.app/developer-guide/ui/introduction/)
+  - [Screenshots](https://docs.photoprism.app/developer-guide/ui/screenshots/)
+  - [Components](https://docs.photoprism.app/developer-guide/ui/components/)
+  - [Design & Colors](https://docs.photoprism.app/developer-guide/ui/design/)
+  - [Browsers](https://docs.photoprism.app/developer-guide/ui/browsers/)
+  - [Interactive Maps](https://docs.photoprism.app/developer-guide/ui/maps/)
+  - [Infinite Scrolling](https://docs.photoprism.app/developer-guide/ui/infinite-scrolling/)
+  - [Focus Management](https://docs.photoprism.app/developer-guide/ui/focus-management/)
+- Web Service API
+  - [Introduction](https://docs.photoprism.app/developer-guide/api/)
+  - [Swagger Docs](https://docs.photoprism.app/developer-guide/api/docs/)
+  - [Client Authentication](https://docs.photoprism.app/developer-guide/api/auth/)
+  - [OpenID Connect](https://docs.photoprism.app/developer-guide/api/oidc/)
+  - [OAuth2 Grant Types](https://docs.photoprism.app/developer-guide/api/oauth2/)
+  - [Search Endpoints](https://docs.photoprism.app/developer-guide/api/search/)
+  - [Thumbnail Images](https://docs.photoprism.app/developer-guide/api/thumbnails/)
+  - [Preview & Download Tokens](https://docs.photoprism.app/developer-guide/api/tokens/)
+  - Client Libraries
+    - [Go](https://docs.photoprism.app/developer-guide/api/clients/go/)
+- Database Schema
+  - [Introduction](https://docs.photoprism.app/developer-guide/database/)
+  - [Migrations](https://docs.photoprism.app/developer-guide/database/migrations/)
+  - [ER Diagram](https://docs.photoprism.app/developer-guide/database/schema/)
+- Technologies
+  - [YAML](https://docs.photoprism.app/developer-guide/technologies/yaml/)
+  - [Golang](https://docs.photoprism.app/developer-guide/technologies/golang/)
+  - [TensorFlow](https://docs.photoprism.app/developer-guide/technologies/tensorflow/)
+  - [Docker](https://docs.photoprism.app/developer-guide/technologies/docker/)
+  - [Broadway](https://docs.photoprism.app/developer-guide/technologies/broadway/)
+  - [External APIs](https://docs.photoprism.app/developer-guide/technologies/external-apis/)
+- Security
+  - [Testing Guide](https://docs.photoprism.app/developer-guide/security/)
+  - [Secure Coding in Go](https://docs.photoprism.app/developer-guide/security/go/)
+  - [Security Policy](https://docs.photoprism.app/developer-guide/security/policy/)
+- [FAQ](https://docs.photoprism.app/developer-guide/faq/)
+
+## About
+
+- [Credits](https://docs.photoprism.app/credits/)
+- Licenses
+  - [Public License](https://docs.photoprism.app/license/agpl/)
+  - [Apache License](https://docs.photoprism.app/license/apache/)
+  - [Documentation](https://docs.photoprism.app/license/docs/)

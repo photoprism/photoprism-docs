@@ -1,7 +1,9 @@
 # Managing User Accounts
 
 !!! example ""
-    [PhotoPrism® Plus](https://www.photoprism.app/editions/#compare) includes a web user interface for account and session management, in addition to the [command-line interface](cli.md) available in all editions.
+    [PhotoPrism® Plus](https://www.photoprism.app/editions/#compare) includes a web user interface for account and session management, in addition to the [command-line interface](cli.md) available in all editions. 
+    If you are running [PhotoPrism® Pro](https://www.photoprism.app/teams/#compare), see [Managing User Accounts](https://www.photoprism.app/pro/kb/roles/) in the Pro Knowledge Base.
+
 
 You can add, edit, and delete user accounts by navigating to *Settings > Users* as an [Admin](roles.md#admin):
 

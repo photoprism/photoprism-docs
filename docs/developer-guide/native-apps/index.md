@@ -7,7 +7,7 @@ As an addition to our platform-independent [Progressive Web App (PWA)](https://d
 | [Gallery for PhotoPrism](#gallery-for-photoprism) | Android      | [Oleg Koretsky](https://github.com/Radiokot)            | [GPL 3.0](https://github.com/Radiokot/photoprism-android-client) | [Google Play](https://link.photoprism.app/gallery-app), [F-Droid](https://link.photoprism.app/gallery-fdroid)        |
 | [PhotoSync](#photosync)                           | iOS, Android | [touchbyte GmbH](https://link.photoprism.app/photosync) | Proprietary                                                      | [App Store](https://link.photoprism.app/photosync-ios), [Google Play](https://link.photoprism.app/photosync-android) |
 | [Photoflare](#photoflare)                         | iOS          | Chris Wunsch                                            | n/a                                                              | [TestFlight](https://testflight.apple.com/join/MMA6iQDl)                                                             |
-| [Prismatic](#prismatic)                           | iOS          | [Chris Li](https://github.com/automactic)               | n/a                                                              | [TestFlight](https://testflight.apple.com/join/vzNQjaym)                                                             |
+| [Prismic](#prismic)                               | iOS          | [Chris Li](https://github.com/automactic)               | n/a                                                              | [TestFlight](https://testflight.apple.com/join/vzNQjaym)                                                             |
 | [Stream](#stream)                                 | iOS          | [Yu Yang](https://link.photoprism.app/stream-app)       | Proprietary                                                      | [App Store](https://link.photoprism.app/stream-ios)                                                                  |
 
 ## Gallery for PhotoPrism
@@ -32,9 +32,9 @@ With this [Android app](https://github.com/Radiokot/photoprism-android-client), 
 
 Photoflare is an iOS app that is currently being developed by Chris Wunsch. It is at an early stage and already offers some basic functionality that can be tested via [Apple TestFlight](https://testflight.apple.com/join/MMA6iQDl). [Learn more ›](https://www.reddit.com/r/photoprism/comments/1czskxn/photoprism_ios_app/)
 
-## Prismatic
+## Prismic
 
-![Prismatic Screenshot](img/prismatic-screenshot.jpg){ class="right xxs shadow" }Prismatic is an iOS app developed by [Chris Li](https://github.com/automactic) that allows you to display pictures from your library in customizable widgets on your phone's home screen.
+![Prismic Screenshot](img/prismatic-screenshot.jpg){ class="right xxs shadow" }Prismic is an iOS app developed by [Chris Li](https://github.com/automactic) that allows you to display pictures from your library in customizable widgets on your phone's home screen.
 
 You can test this and other features by installing it via [Apple TestFlight](https://testflight.apple.com/join/vzNQjaym).
 

@@ -68,10 +68,6 @@ two descriptions to keep accurate, two fixed-version fields that can disagree, a
 tell whether they are looking at one problem or two. What helps instead is to tell us, so we can
 update the dependency and name the release that carries the update.
 
-The exception is real and worth stating. If our own code makes the flaw reachable in a way the
-dependency's record does not describe, or if our usage removes a protection it expects, that is a
-finding about PhotoPrism rather than about the dependency, and we will assess it on that basis.
-
 When a record is published without an attempt to contact us, we ask the assigning CNA to correct or
 reject it. We also raise the matter with the CNA's Root if the rules were not followed and publish
 our own assessment alongside the record. However, we would much rather agree on an accurate advisory

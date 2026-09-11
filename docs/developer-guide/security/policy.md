@@ -65,8 +65,8 @@ assign a vulnerability to the component it exists in, not to each product that i
 component, so a separate record against PhotoPrism for a flaw in a dependency describes the same
 vulnerability a second time. That is not a technicality about credit. Two records for one flaw means
 two descriptions to keep accurate, two fixed-version fields that can disagree, and users who cannot
-tell whether they are looking at one problem or two. What helps instead is to tell us, so we can
-update the dependency and name the release that carries the update.
+tell whether they are looking at one problem or two. What helps instead is to tell us, so that the
+dependency is on our radar rather than waiting for a scanner to raise it.
 
 When a record is published without an attempt to contact us, we ask the assigning CNA to correct or
 reject it. We also raise the matter with the CNA's Root if the rules were not followed and publish

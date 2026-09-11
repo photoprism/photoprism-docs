@@ -57,6 +57,21 @@ details and tell us at the same time. Our address is published in
 [security policy](https://www.photoprism.app/security-policy/) page, so there is always a documented
 way to reach us.
 
+Where the affected code is in a library or other dependency we ship rather than in PhotoPrism
+itself, the identifier belongs to that component. This covers everything we bundle rather than
+write: the image and video libraries our converters call, the Go modules we build against, and the
+system packages in the base images our containers are built from. The CVE Program's counting rules
+assign a vulnerability to the component it exists in, not to each product that includes that
+component, so a separate record against PhotoPrism for a flaw in a dependency describes the same
+vulnerability a second time. That is not a technicality about credit. Two records for one flaw means
+two descriptions to keep accurate, two fixed-version fields that can disagree, and users who cannot
+tell whether they are looking at one problem or two. What helps instead is to tell us, so we can
+update the dependency and name the release that carries the update.
+
+The exception is real and worth stating. If our own code makes the flaw reachable in a way the
+dependency's record does not describe, or if our usage removes a protection it expects, that is a
+finding about PhotoPrism rather than about the dependency, and we will assess it on that basis.
+
 When a record is published without an attempt to contact us, we ask the assigning CNA to correct or
 reject it. We also raise the matter with the CNA's Root if the rules were not followed and publish
 our own assessment alongside the record. However, we would much rather agree on an accurate advisory

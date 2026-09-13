@@ -42,7 +42,7 @@ nav:
       - Firewall: getting-started/troubleshooting/firewall.md
     # - Support: getting-started/support.md
     - Reverse Proxies:
-      - Overview: getting-started/proxies/index.md
+      - Introduction: getting-started/proxies/index.md
       - Traefik: getting-started/proxies/traefik.md
       - Caddy 1: getting-started/proxies/caddy-1.md
       - Caddy 2: getting-started/proxies/caddy-2.md

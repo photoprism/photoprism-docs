@@ -205,13 +205,15 @@ Face recognition can be slow (or even crash) on [old devices](../../getting-star
 
 *Like most applications, PhotoPrism has [certain requirements](../../getting-started/index.md#system-requirements) and our development process does not include testing on unsupported or unusual hardware.*
 
-### Asian Faces and Children
+### Children and Pictures Taken Years Apart
 
-It is a known issue that children and Asian-looking faces cannot be recognized reliably. Detection without automatic recognition should not be affected by that.
+Automatic recognition is less reliable for young children, and for pictures of the same person taken many years apart, than it is for adults photographed within a few years of each other. This is a property of the [embedding model](../ai/face-recognition.md#face-embeddings) and not of detection, so the faces are still found, displayed, and searchable — they are just less likely to be grouped into one person automatically, and more likely to form several clusters that you can merge by hand.
 
-This is because the model we use was trained with North American images, which unfortunately do not include many Asians. The absence of children in the training data comes from the fact that parents do not usually share such images under a public license (and may not have the right to do so).
+The model used for new libraries is a substantial improvement over the one PhotoPrism shipped previously, which was in addition unreliable for Asian faces. Libraries created before it became available keep the previous model until they are [migrated](../ai/face-recognition.md#changing-the-face-model).
 
-*We will continue to improve our models over time as our resources allow.*
+### Rotated Faces
+
+Face detection expects upright faces. A face rotated by roughly 90° — someone lying down, or a picture taken with the camera held sideways and no matching orientation tag — is generally not detected at all. Rotating the affected pictures so that they are displayed upright and then re-indexing them is the practical workaround.
 
 ### Background Worker ###
 
@@ -224,9 +226,6 @@ An important reason for the worker to run independently of actual changes in the
 *The handling of changes in multiple instances will be improved over time so that the worker can be run less frequently in future releases.*
 
 !!! info "Upcoming Features"
-    - manual tagging of faces
-    - importing of XMP face tags
-    - excluding people when browsing your pictures
     - automatic backup of tagged people in YAML files
 
 *[face clusters]: A cluster is a group of faces expected to belong to the same person based on the similarity

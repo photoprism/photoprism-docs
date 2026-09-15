@@ -3,7 +3,7 @@
 *Places* displays all photos with GPS information on a world map.
 
 !!! info ""
-    The Places feature requires a browser with WebGL support. Most modern browsers support WebGL, but some older browsers or browsers with hardware acceleration disabled may not be able to display the map properly.
+    The Places feature requires a browser with WebGL 2 support. Practically all current browsers provide it, but browsers with hardware acceleration disabled, an outdated graphics driver, or an extension that blocks the WebGL API may not be able to display the map. See [Known Issues](../../known-issues.md#maps-require-webgl-2).
 
 ![Screenshot](img/places-1-2502.jpg){ class="shadow" }
 

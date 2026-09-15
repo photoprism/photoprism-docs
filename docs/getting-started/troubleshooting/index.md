@@ -191,7 +191,7 @@ If you [followed our step-by-step guide](../../user-guide/sync/webdav.md) and st
 
 - [ ] WebDAV has been disabled for all users in the [advanced settings](../../user-guide/settings/advanced.md)
 - [ ] WebDAV is unavailable because your instance is [running in public mode](../config-options.md#authentication) (disable it)
-- [ ] You are trying to connect to an invalid path, try `/originals/` without omitting the `/` at the end, and read our [notes on installing PhotoPrism in a subdirectory](../../known-issues.md#shared-domain) on a shared domain
+- [ ] You are trying to connect to an invalid path, try `/originals/` without omitting the `/` at the end, and read our [notes on installing PhotoPrism in a subdirectory](../faq.md#can-i-install-photoprism-in-a-sub-directory-on-a-shared-domain) on a shared domain
 - [ ] Your [user account role](../../user-guide/users/roles.md) is not permitted to use WebDAV (try as *User* or *Admin*)
 - [ ] WebDAV access [has not been enabled](../../user-guide/users/index.md) for your user account (enable it)
 - [ ] You are experiencing a [general authentication problem](#cannot-log-in), see *Cannot Log In*

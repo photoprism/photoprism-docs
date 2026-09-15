@@ -8,10 +8,6 @@ However, sometimes this is not possible right away, for example because it needs
 
 ## Self-Hosted Setup
 
-### Shared Domain
-
-With our [latest release](release-notes.md), it is possible to run PhotoPrism under a subpath on a [shared domain](https://github.com/photoprism/photoprism/issues/2391).
-
 ### Nested Import Folder
 
 You must not configure the *import* folder to be inside the *originals* folder, as this will cause a loop by importing already indexed files.
@@ -34,11 +30,9 @@ Symbolic [links to files and directories](https://github.com/photoprism/photopri
 
 Should you experience problems after upgrading from a [previous release](release-notes.md) or [development preview](getting-started/updates.md#development-preview), we recommend running the `photoprism auth reset --yes` command [in a terminal](getting-started/docker-compose.md#command-line-interface) to [reset the `auth_sessions` table](user-guide/users/cli.md#session-management) to a clean state and force a re-login of all users. Note that this will also delete all client access tokens and any [app passwords](user-guide/users/2fa.md#step-3-app-passwords) that users may have created.
 
-### New User Management
+### Legacy User Accounts
 
-The session and user management was [reimplemented in November 2022](release-notes.md#november-2-2022). If you are upgrading from a Development Preview with a build number between [221102-905925b4d](release-notes.md#november-2-2022) and [220901-f493607b0](https://docs.photoprism.app/release-notes/#september-1-2022), you will need to run the `photoprism users reset --yes` command [in a terminal](getting-started/docker-compose.md#command-line-interface) after the upgrade to recreate the new database tables so that they are compatible with the stable version. This will not affect your pictures or albums.
-
-Upgrading from the last stable version should work without any problems. However, if you have already created additional accounts with the previously offered unofficial multi-user support, you will notice that only the main admin account is migrated automatically. Run `photoprism users legacy` [in a terminal](getting-started/docker-compose.md#command-line-interface) to display the legacy accounts so you can migrate them manually if needed.
+The session and user management was [reimplemented in November 2022](release-notes.md#november-2-2022). If you created additional accounts with the unofficial multi-user support offered before that, only the main admin account is migrated automatically. Run `photoprism users legacy` [in a terminal](getting-started/docker-compose.md#command-line-interface) to display the legacy accounts so you can migrate them manually if needed.
 
 ### OpenID Connect (OIDC)
 
@@ -56,13 +50,30 @@ Face recognition can be slow (or even crash) on [old devices](getting-started/tr
 
 *Like most applications, PhotoPrism has [certain requirements](getting-started/index.md#system-requirements) and our development process does not include testing on unsupported or unusual hardware.*
 
-### Asian Faces and Children
+### Children and Pictures Taken Years Apart
 
-It is a known issue that children and Asian-looking faces cannot be recognized reliably. Detection without automatic recognition should not be affected by that.
+Automatic recognition is less reliable for young children, and for pictures of the same person taken many years apart, than it is for adults photographed within a few years of each other. This is a property of the [embedding model](user-guide/ai/face-recognition.md#face-embeddings) and not of detection, so the faces are still found, displayed, and searchable — they are just less likely to be grouped into one person automatically, and more likely to form several clusters that you can merge by hand.
 
-This is because the model we use was trained with North American images, which unfortunately do not include many Asians. The absence of children in the training data comes from the fact that parents do not usually share such images under a public license (and may not have the right to do so).
+The model used for new libraries is a substantial improvement over the one PhotoPrism shipped previously, which was in addition unreliable for Asian faces because it had been trained largely on North American images. That particular weakness has been resolved. Children remain [an open issue](https://github.com/photoprism/photoprism/issues/1587).
 
-*We will continue to improve our models over time as our resources allow.*
+*Libraries created before the new model became available keep the previous one until they are migrated, so they are still affected by both limitations — see [Face Model After an Upgrade](#face-model-after-an-upgrade) below.*
+
+### Rotated Faces
+
+Face detection expects upright faces. The detection rate drops as a face is rotated in the image plane, and a face rotated by roughly 90° — someone lying down, or a picture taken with the camera held sideways and no matching orientation tag — is generally not detected at all.
+
+Because no face is reported in the first place, this cannot be compensated for by lowering `FACE_SIZE` or `FACE_SCORE`. Rotating the affected pictures so that they are displayed upright and then [re-indexing them](user-guide/library/originals.md) is the practical workaround.
+
+### Face Model After an Upgrade
+
+Libraries created before the current [embedding model](user-guide/ai/face-recognition.md#face-embeddings) became available continue to use the previous one after an upgrade, because vectors generated by different models cannot be compared, and switching automatically would make every face you have already assigned to a person incomparable with newly indexed ones. Setting `PHOTOPRISM_FACE_MODEL` does not change this either.
+
+Run [`photoprism faces migrate`](user-guide/ai/face-recognition.md#changing-the-face-model) [in a terminal](getting-started/docker-compose.md#command-line-interface) to re-embed an existing library with the current model and benefit from the improved recognition quality. Your people and their names are preserved. Stop the server first, and expect the migration to take a while on a large library.
+
+Two related notes for upgrades:
+
+- Run `photoprism faces status` to see which model is in use, and whether anything is currently preventing faces from being clustered.
+- The development-only options `--face-skip-children` and `--face-allow-background` have been removed. The matching environment variables are ignored, but an instance that still passes either as a **command-line flag** in its `compose.yaml` will not start, because unknown flags are rejected.
 
 ### Background Worker
 
@@ -82,13 +93,12 @@ Secondary images are not searched for faces by default. So the problem is limite
 
 One possible solution is to change the primary image of a stack to assign faces to the other images in the stack. You can also manually unstack these files and disable stacking in [Settings > Content](user-guide/settings/library.md). Note that files that are already stacked are not automatically unstacked when you change the stacking settings, and that [Live Photos](user-guide/organize/video.md#live-photos) do not appear in [Stacks](user-guide/organize/stacks.md) because they are a special type of media that is always "stacked".
 
-### Removing Merged Clusters Fails
+### Inconsistent Face Assignments
 
 Under certain conditions, inconsistent face assignments cannot be automatically resolved by the background worker, which can result in an unusually high CPU load when it is running:
 
 - if you use multiple browser tabs or windows for assigning faces and don't wait until saving the changes is complete, the likelihood of this problem increases, especially if you accidentally enter different names for the same face
 - another possible cause is running multiple instances (for example, parallel indexing workers started by a scheduler in the background) or modifying database content directly, as this may also lead to inconsistent faces, markers and subjects
-- see [Faces: Error "Failed removing merged clusters for subject" seems to cause tagging of faces to become slow #2806](https://github.com/photoprism/photoprism/issues/2806)
 
 Running the following command [in a terminal](getting-started/docker-compose.md#command-line-interface) can resolve problems with inconsistent data:
 
@@ -105,17 +115,23 @@ Alternatively, you can use the `photoprism faces reset` command for a clean star
 
 ### JPEG: Bad RST Marker
 
-This error can occur when decoding JPEG images that contain consecutive 0xFF bytes, e.g. images that have a "glich" (like a few lines of missing image information at the end) or were created with software that inserts them for padding, although this is based on an edge case of the specification and rather uncommon:
+Decoding can fail with `invalid JPEG format: bad RST marker` for images that contain consecutive 0xFF bytes, for example files with a "glitch" such as a few lines of missing image information at the end, or files created by software that inserts these bytes for padding. This is based on an edge case of the specification and rather uncommon.
 
-- [Bug: (invalid JPEG format: bad RST marker) #1673](https://github.com/photoprism/photoprism/issues/1673)
-- [image/jpeg: "bad RST marker" error when decoding #40130](https://github.com/golang/go/issues/40130)
-- [JPEG: Automatically check and repair broken/invalid images #2463](https://github.com/photoprism/photoprism/issues/2463)
+PhotoPrism [detects affected files and re-encodes them automatically](https://github.com/photoprism/photoprism/issues/2463) with ImageMagick when generating thumbnails, so they are indexed and displayed normally. Your original files are not modified. If ImageMagick has been disabled with `PHOTOPRISM_DISABLE_IMAGEMAGICK`, the repair cannot be performed and the error resurfaces.
+
+## Web Browsers
+
+### Maps Require WebGL 2
+
+Rendering the map in [Places](user-guide/organize/places.md) and in the location picker requires a browser with **WebGL 2** support. Where it is unavailable, the rest of PhotoPrism works normally and only the map is replaced with a message telling you to try another browser or device.
+
+Practically all [supported browsers](getting-started/troubleshooting/browsers.md) provide WebGL 2. The most common reasons for it to be missing are hardware acceleration having been disabled in the browser settings, an outdated graphics driver, or a privacy extension that blocks the WebGL API.
 
 ## RAW Converters
 
 ### JPEG Size Limit
 
-RawTherapee and "heif-convert" cannot limit the resolution of JPEG files when converting files from other formats such as RAW, DNG, HEIC or AVIF. In general, when converting images, the resolution of the generated JPEG files can be limited with the environment variable `PHOTOPRISM_JPEG_SIZE` or the CLI parameter `--jpeg-size`.
+RawTherapee and the libheif decoder (`heif-dec`, called `heif-convert` in earlier libheif versions) cannot limit the resolution of JPEG files when converting files from other formats such as RAW, DNG, HEIC or AVIF. In general, when converting images, the resolution of the generated JPEG files can be limited with the environment variable `PHOTOPRISM_JPEG_SIZE` or the CLI parameter `--jpeg-size`.
 
 However, this does not work with certain converters because, unlike Darktable, they do not support CLI options to limit JPEG size:
 
@@ -123,7 +139,7 @@ However, this does not work with certain converters because, unlike Darktable, t
 
 It would probably also hurt indexing performance and image quality if PhotoPrism reduced the size of the generated file after conversion, for example, by using a temporary file.
 
-As a result, this option is ignored when generating JPEG files with these converters. Whether RawTherapee or "heif-convert" are used depends on additional settings such as `PHOTOPRISM_DARKTABLE_BLACKLIST`, `PHOTOPRISM_DISABLE_DARKTABLE`, `PHOTOPRISM_RAWTHERAPEE_BLACKLIST`, and `PHOTOPRISM_DISABLE_RAWTHERAPEE`.
+As a result, this option is ignored when generating JPEG files with these converters. Whether RawTherapee or the libheif decoder are used depends on additional settings such as `PHOTOPRISM_DARKTABLE_BLACKLIST`, `PHOTOPRISM_DISABLE_DARKTABLE`, `PHOTOPRISM_RAWTHERAPEE_BLACKLIST`, and `PHOTOPRISM_DISABLE_RAWTHERAPEE`.
 
 ## Docker Compose ##
 

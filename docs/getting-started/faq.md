@@ -483,7 +483,7 @@ We recommend going through the [checklist for fatal server errors](troubleshooti
 
 ### Can I install PhotoPrism in a sub-directory on a shared domain?
 
-Setting up PhotoPrism behind a [reverse proxy](proxies/traefik.md) in a sub-directory on a shared domain is possible in principle. This method is experimental, however, and not generally recommended because a number of [detailed issues remain to be addressed](https://github.com/photoprism/photoprism/issues/2391) and technical expertise is required.
+Yes. Set `PHOTOPRISM_SITE_URL` to the full URL including the sub-directory, for example `https://example.com/photos/`, so that PhotoPrism generates its links and asset paths relative to that path, and configure your [reverse proxy](proxies/index.md) to forward the sub-directory to your instance. Some technical expertise is still required to get the proxy configuration right.
 
 ### I could not find a documentation of config parameters?
 

@@ -12,6 +12,7 @@ The API keys required to use these maps are unfortunately not free for us due to
 - General-purpose map widgets (for example, the location preview inside the edit dialog) reuse [`frontend/src/component/map.vue`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/component/map.vue).
 - [`frontend/src/common/map.js`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/common/map.js) lazy-loads the MapLibre module from [`frontend/src/common/maplibregl.js`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/common/maplibregl.js) so the bundle stays small until a user opens a map view.
 - Custom UI controls, such as the map-style picker, are plain JavaScript classes under [`frontend/src/component/places/`](https://github.com/photoprism/photoprism/tree/develop/frontend/src/component/places) and are registered via the MapLibre control API.
+- Rendering requires a **WebGL 2** context. [`frontend/src/common/map.js`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/common/map.js) exports `supportsWebGL2()`, which the Places page and the reusable map component call before they instantiate a map; where it reports no support, they show a map-unavailable message instead. Every style goes through the same check, including the low-resolution one, so it is not a fallback for devices without WebGL 2.
 - Styling for Place pages resides in [`frontend/src/css/places.css`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/css/places.css); splash styles for the Places route live in [`frontend/src/css/app.css`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/css/app.css) and [`frontend/src/css/views.css`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/css/views.css).
 
 ## Mapbox/MapLibre GL JS ##
@@ -41,7 +42,7 @@ Commercial map tiles that we sponsor (for example MapTiler terrain) remain optio
 
 ## Tips for Contributors
 
-- Use [MapLibre GL JS 5.x docs](https://maplibre.org/maplibre-gl-js/docs/API/) as the canonical API reference. Be careful when copying Mapbox-specific snippets since some APIs diverged after the fork.
+- Use [MapLibre GL JS 6.x docs](https://maplibre.org/maplibre-gl-js/docs/API/) as the canonical API reference. Be careful when copying Mapbox-specific snippets since some APIs diverged after the fork, and note that snippets written for v5 may not carry over unchanged.
 - Map styles can be edited or created with [Maputnik](https://maplibre.org/maputnik/). Store large JSON styles outside the bundle and reference them via CDN URLs instead of embedding them into Vue components.
 - The Places page loads maplibre lazily. If you add code that references `maplibregl` globally, ensure it runs after `common/map.js` resolves.
 - Keep performance in mind: clustering large marker sets happens on the worker thread, but tooltip/popover rendering is still on the main thread. Debounce expensive hover handlers and remove DOM nodes when a popup closes.

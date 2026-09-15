@@ -25,6 +25,12 @@ $ go test -run NameOfTest
 
 See [docs](https://pkg.go.dev/testing#hdr-Subtests_and_Sub_benchmarks) for more info.
 
+#### ONNX Runtime ####
+
+The bundled face detection and embedding models run on the [ONNX Runtime](https://onnxruntime.ai/), so tests that exercise face detection, face embeddings, or the configuration that resolves them need the shared library to be present. The development container ships it, which is the main reason to run the Go tests inside the container rather than on the host: without it those models cannot be loaded, and the affected assertions fail in a way that reads like a code regression.
+
+The library is loaded at startup instead of being linked into the binary, and the bindings ask for the exact C API version of the headers they vendor. An **older** runtime therefore fails to load rather than running with reduced functionality, and reports that the requested API version is not available. A stale development image is the usual cause, so rebuild or re-pull it before looking for the fault in the code. Outside Docker, [`scripts/dist/install-onnx.sh`](https://github.com/photoprism/photoprism/blob/develop/scripts/dist/install-onnx.sh) installs a matching version.
+
 #### Test Frameworks ####
 
 Go comes with a cool testing framework, it allows you to write test code using the same language, without needing to learn any library or test engine. [Go advanced testing tips & tricks](https://medium.com/@povilasve/go-advanced-tips-tricks-a872503ac859) contains a lot of useful information. We only import [testify/assert](https://github.com/stretchr/testify/tree/master/assert) to save a few lines for common assertions.

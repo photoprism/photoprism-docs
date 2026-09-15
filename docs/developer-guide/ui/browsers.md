@@ -12,6 +12,12 @@ Internet Explorer is **not** supported. Legacy Android WebView builds without ES
 
 When introducing APIs that may not exist on the minimum baseline (for example `AbortController` on Safari 13), add a capability check or a lightweight polyfill under `assets/static/js/browser-check.js`.
 
+## Features With a Higher Baseline
+
+Interactive maps need a **WebGL 2** context, which is above the baseline the loader script enforces. That check therefore does not belong in `browser-check.js`: blocking the whole app would deny photo browsing to a client that can do everything except render a map. It is made at render time by `supportsWebGL2()` in [`frontend/src/common/map.js`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/common/map.js), and the map views show a map-unavailable message when it fails, leaving browsing, location information, and non-map location editing usable. See [Rendering Interactive Maps](maps.md) for the rendering stack.
+
+Follow the same pattern for any other feature whose requirement exceeds the baseline: check the capability where the feature is used and degrade that feature, rather than raising the bar for the whole app.
+
 ## Testing
 
 - Run the Vitest unit suite (`make vitest-watch`) on every UI change.

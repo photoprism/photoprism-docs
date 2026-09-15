@@ -55,7 +55,7 @@ about 2:1 — can be displayed interactively:
   are shown as regular pictures because they would be distorted when rendered as a sphere
 
 !!! note ""
-    Rendering a sphere requires a browser with [WebGL](https://caniuse.com/webgl) support, which is
+    Rendering a sphere requires a browser with [WebGL 2](https://caniuse.com/webgl2) support, which is
     enabled by default in all current browsers. Note that manually marking faces on 360° content is
     not supported yet.
 

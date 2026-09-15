@@ -1,6 +1,6 @@
 # Face Recognition
 
-**Last Updated:** September 6, 2026
+**Last Updated:** September 15, 2026
 
 To [recognize faces](https://docs.photoprism.app/user-guide/organize/people/), PhotoPrism uses a multi-stage AI pipeline that detects faces, generates embeddings, and clusters similar faces so they can be easily organized by person.
 
@@ -22,7 +22,7 @@ Detection and embedding are configured independently, so the model that finds a 
 **YuNet** is the bundled detector. It is a compact, anchor-free CNN published in the [OpenCV Zoo](https://github.com/opencv/opencv_zoo/tree/main/models/face_detection_yunet) under the MIT license, and it emits a bounding box plus five facial landmarks, which the embedding stage needs to align crops. Implementation details:
 
 - Consumes 720 px thumbnails with a 640 px model input.
-- Runs on the [ONNX Runtime](https://onnxruntime.ai/); the prebuilt runtime targets glibc ≥ 2.27 on `amd64` / `arm64`.
+- Runs on the [ONNX Runtime](https://onnxruntime.ai/); the prebuilt runtime targets glibc ≥ 2.28 on `amd64` / `arm64`. The installation packages carry a higher floor, set by the bundled TensorFlow build rather than by this runtime.
 - Scheduled on the meta/vision workers, with one detection session per indexing worker.
 - Scores detections on a 0–100 confidence scale, with a calibrated cutoff below which a detection is discarded.
 

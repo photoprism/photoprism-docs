@@ -19,7 +19,7 @@ PhotoPrism ships with **YuNet**, a compact face detection model that runs on the
 - Consumes 720 px thumbnails (model input 640 px)
 - Schedules work on the meta/vision workers
 
-The detector is selected with `FACE_DETECTOR`. When you leave it unset, it is derived from the face model in use, so a matching combination is the default. The prebuilt runtime targets glibc ≥ 2.27 on `amd64` / `arm64` architectures.
+The detector is selected with `FACE_DETECTOR`. When you leave it unset, it is derived from the face model in use, so a matching combination is the default. The prebuilt runtime targets glibc ≥ 2.28 on `amd64` / `arm64` architectures.
 
 !!! info ""
     `FACE_ENGINE` is **deprecated**: it selected a runtime rather than a model. Only `FACE_ENGINE=none` still has an effect, and `FACE_DETECTOR` overrides it. Existing configurations keep working.

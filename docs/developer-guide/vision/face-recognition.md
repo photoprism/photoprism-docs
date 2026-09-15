@@ -159,25 +159,25 @@ Face **scheduling** is configured through `FACE_RUN` alone — see [Run Scheduli
 !!! danger ""
     It is strongly recommended that you run `photoprism faces reset` in a terminal to remove existing clusters and markers after changing any of the clustering parameters, otherwise inconsistencies may cause unexpected behavior or errors.
 
-| Environment Variable           | CLI Flag              | Default               | Description                                                                        |
-|--------------------------------|-----------------------|-----------------------|------------------------------------------------------------------------------------|
+| Environment Variable               | CLI Flag                  | Default               | Description                                                                                                             |
+|------------------------------------|---------------------------|-----------------------|-------------------------------------------------------------------------------------------------------------------------|
 | PHOTOPRISM_FACE_CLUSTER_SIZE       | --face-cluster-size       | *(from the model)*    | Minimum size of automatically clustered faces in `PIXELS` **of the image their embedding was sampled from** (20-10000). |
-| PHOTOPRISM_FACE_CLUSTER_SCORE      | --face-cluster-score      | *(from the detector)* | Minimum `QUALITY` score of automatically clustered faces (1-100).                  |
-| PHOTOPRISM_FACE_CLUSTER_CORE       | --face-cluster-core       | 5                     | `NUMBER` of faces forming a cluster core (2-100), and half the clustering trigger. |
-| PHOTOPRISM_FACE_CLUSTER_CORE_RETRY | --face-cluster-core-retry | *(derived)*           | `NUMBER` of faces forming a cluster core in a **second pass** over what matching left unclustered; `-1` disables it. |
-| PHOTOPRISM_FACE_CLUSTER_DIST   | --face-cluster-dist   | *(from the model)*    | Similarity `DISTANCE` of faces forming a cluster core.                             |
-| PHOTOPRISM_FACE_CLUSTER_RADIUS | --face-cluster-radius | *(from the model)*    | Maximum cluster `RADIUS` accepted for automatic matches.                           |
-| PHOTOPRISM_FACE_MATCH_DIST     | --face-match-dist     | *(from the model)*    | Similarity `OFFSET` for matching faces with existing clusters.                     |
+| PHOTOPRISM_FACE_CLUSTER_SCORE      | --face-cluster-score      | *(from the detector)* | Minimum `QUALITY` score of automatically clustered faces (1-100).                                                       |
+| PHOTOPRISM_FACE_CLUSTER_CORE       | --face-cluster-core       | 5                     | `NUMBER` of faces forming a cluster core (2-100), and half the clustering trigger.                                      |
+| PHOTOPRISM_FACE_CLUSTER_CORE_RETRY | --face-cluster-core-retry | *(derived)*           | `NUMBER` of faces forming a cluster core in a **second pass** over what matching left unclustered; `-1` disables it.    |
+| PHOTOPRISM_FACE_CLUSTER_DIST       | --face-cluster-dist       | *(from the model)*    | Similarity `DISTANCE` of faces forming a cluster core.                                                                  |
+| PHOTOPRISM_FACE_CLUSTER_RADIUS     | --face-cluster-radius     | *(from the model)*    | Maximum cluster `RADIUS` accepted for automatic matches.                                                                |
+| PHOTOPRISM_FACE_MATCH_DIST         | --face-match-dist         | *(from the model)*    | Similarity `OFFSET` for matching faces with existing clusters.                                                          |
 
 Distance thresholds are **calibrated per embedding model** and resolved from the model in use when left unset, because the models do not share a vector space — a distance that separates two people under one model merges them under another. The values below are what each model resolves to:
 
-| Model          | Cluster Distance | Cluster Radius | Match Distance | Collision Distance | Epsilon |
-|----------------|------------------|----------------|----------------|--------------------|---------|
-| `facenet`      | 0.64             | 0.42           | 0.40           | 0.05               | 0.001   |
-| `sface`        | 0.72             | 0.70           | 0.25           | 0.05               | 0.001   |
-| `auraface`     | 0.98             | 0.76           | 0.35           | 0.05               | 0.001   |
-| `arcface_r50`  | 1.07             | 0.67           | 0.55           | 0.05               | 0.001   |
-| `arcface_mbf`  | 1.03             | 0.64           | 0.49           | 0.05               | 0.001   |
+| Model         | Cluster Distance | Cluster Radius | Match Distance | Collision Distance | Epsilon |
+|---------------|------------------|----------------|----------------|--------------------|---------|
+| `facenet`     | 0.64             | 0.42           | 0.40           | 0.05               | 0.001   |
+| `sface`       | 0.72             | 0.70           | 0.25           | 0.05               | 0.001   |
+| `auraface`    | 0.98             | 0.76           | 0.35           | 0.05               | 0.001   |
+| `arcface_r50` | 1.07             | 0.67           | 0.55           | 0.05               | 0.001   |
+| `arcface_mbf` | 1.03             | 0.64           | 0.49           | 0.05               | 0.001   |
 
 **Collision distance and epsilon are the same for every model**, unlike the three above them: they describe the gap a resolved collision leaves rather than a separation the vector space defines.
 

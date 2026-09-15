@@ -155,7 +155,7 @@ Many face options resolve their default from the detector or embedding model in 
 docker compose exec photoprism photoprism faces status
 ```
 
-`faces config` and `faces doctor` are aliases of the same command.
+`faces config` is an alias of the same command.
 
 Above the tables, the report states in prose whether detection and recognition are enabled, which detector and model are in force, and — when no clusters are forming — **why** automatic clustering is waiting. It distinguishes two cases that look identical from the outside:
 

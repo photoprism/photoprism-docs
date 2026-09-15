@@ -87,7 +87,7 @@ The distance thresholds are calibrated for each embedding model and resolved aut
 
 ## CLI Reference
 
-- `photoprism faces status` — show which options are actually in force, including the ones resolved from the detector or model, and why clustering is waiting if no clusters are forming. `faces config` and `faces doctor` are aliases.
+- `photoprism faces status` — show which options are actually in force, including the ones resolved from the detector or model, and why clustering is waiting if no clusters are forming. `faces config` is an alias.
 - `photoprism faces stats` — measure how far face embeddings sit from one another. Compares every sample with every other, so use it on a test library.
 - `photoprism faces subjects [name|uid]` — list people with the clusters, files, and photos their markers support.
 - `photoprism faces ls [name|uid]` — list face clusters with their samples, radius, and current markers. `faces clusters` is an alias.

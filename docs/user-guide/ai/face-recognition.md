@@ -92,6 +92,7 @@ The distance thresholds are calibrated for each embedding model and resolved aut
 - `photoprism faces subjects [name|uid]` — list people with the clusters, files, and photos their markers support.
 - `photoprism faces ls [name|uid]` — list face clusters with their samples, radius, and current markers. `faces clusters` is an alias.
 - `photoprism faces markers [name|uid] [--face ID] [--unassigned] [--dangling]` — list face markers and what they are assigned to.
+- `photoprism faces conflicts [name|uid]` — list face clusters that hold the same face but are assigned to different people.
 - `photoprism faces audit [--subject UID] [--fix]` — check and optionally repair face data.
 - `photoprism faces reset [--detector auto|none|yunet] [--all] [--force]` — remove automatic clusters and matches; `--all` also removes names while keeping the markers, `--force` removes the markers too so faces must be detected again.
 - `photoprism faces index` — (re)detect faces in originals.

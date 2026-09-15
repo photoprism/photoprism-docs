@@ -73,6 +73,7 @@ Run [`photoprism faces migrate`](user-guide/ai/face-recognition.md#changing-the-
 Two related notes for upgrades:
 
 - Run `photoprism faces status` to see which model is in use, and whether anything is currently preventing faces from being clustered.
+- `FACE_CLUSTER_SIZE`, the minimum size a face must have to help form a new person, has been raised and is now measured on the picture the face was sampled from rather than on the detection thumbnail. A library with many small faces therefore forms fewer people than before. The faces themselves are still detected, displayed, and searchable, and you can assign them by hand.
 - The development-only options `--face-skip-children` and `--face-allow-background` have been removed. The matching environment variables are ignored, but an instance that still passes either as a **command-line flag** in its `compose.yaml` will not start, because unknown flags are rejected.
 
 ### Background Worker

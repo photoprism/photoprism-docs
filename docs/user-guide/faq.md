@@ -48,7 +48,7 @@
 
     Yes, our Plus members automatically receive a free Lifetime Essentials membership after 24 months. Likewise, Silver members receive a Lifetime Plus membership after 24 months, Gold members after 12 months, and Platinum members after only 6 months.
 
-    If you would like to sign up for a Silver, Gold or Platinum membership, you can do so either [directly on our website](https://my.photoprism.app/register) or [on Patreon](https://link.photoprism.app/patreon). In addition, we are working on a Plus Feature Pack that includes just the features without support, so we can offer it to you at a lower price.
+    If you would like to sign up for a Silver, Gold or Platinum membership, you can do so either [directly on our website](https://my.photoprism.app/register) or [on Patreon](https://link.photoprism.app/patreon).
 
     Note that as a lifetime member you will always receive updates and support for your personal use from us, unlike with so-called lifetime licenses, which may only be good until the next major version is released.
 
@@ -89,7 +89,7 @@
     Except in *Library > Originals* and for object classification in *Labels*, PhotoPrism does not
     support hierarchically organized content for a number of reasons:
 
-    First, there are many tools (including Windows Explorer and Mac OS Finder) that already browse folders in such a way.
+    First, there are many tools (including Windows Explorer and macOS Finder) that already browse folders in such a way.
 
     A common UX challenge is dealing with namespaces.
     For example, the album "Berlin" may exist 5 times in different parts of a tree.
@@ -99,8 +99,8 @@
 
     Personal albums can typically be browsed by time, with optional filters for more specific results.
     This is different in Enterprise asset management, where trees are required to manage
-    responsibilities & [permissions](https://github.com/photoprism/photoprism/issues/455#issuecomment-675859270).
-    We might do a special release for professional users later.
+    responsibilities & [permissions](https://github.com/photoprism/photoprism/issues/455#issuecomment-675859270),
+    which is what our [editions for teams and businesses](https://www.photoprism.app/teams/#compare) are built for.
 
     While you have complete freedom with organizing your original files and folders,
     we don't think trees should be an integral part of our user interface.
@@ -109,7 +109,7 @@
 
 ## Search Results
 
-??? question "Why are results ordered by local time instead of UTC when sorting by newest/oldest"?"
+??? question "Why are results ordered by local time instead of UTC when sorting by newest/oldest?"
 
     When sorting by time, PhotoPrism uses the local capture time ("wall time") because most photos contain this information, and it is what most people expect to see on a timeline. For still images, EXIF timestamps are usually stored without a reliable time zone, so they are treated as local time by convention. Interpreting them as UTC would often change the chronological order by hours (or even days), making them *appear* incorrect.
 

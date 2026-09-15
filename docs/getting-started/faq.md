@@ -381,7 +381,7 @@ That being said, one of the advantages of [open-source software](../developer-gu
 
 ### Is a Raspberry Pi fast enough?
 
-This mainly depends on your expectations and the number of files you have. Most users report that PhotoPrism runs smoothly on a Raspberry Pi 4 with 4 GB of RAM.
+This mainly depends on your expectations and the number of files you have. Most users report that PhotoPrism runs smoothly on a Raspberry Pi 4 or 5 with at least 4 GB of RAM. A Pi 5 with an NVMe SSD is noticeably faster for indexing than a Pi 4 on USB storage.
 
 Note, however, that [initial indexing usually takes much longer](../user-guide/first-steps.md) than on a regular desktop computer and that the hardware has [limited video transcoding capabilities](advanced/transcoding.md), so video file format conversion is not well supported and software transcoding is generally slow. We take no responsibility for instability or performance problems if your device does not [meet the requirements](raspberry-pi.md#system-requirements).
 
@@ -395,9 +395,9 @@ Note, though, that database files may not be binary compatible in some cases (e.
 
 [View Backup Guide ›](../user-guide/backups/index.md)
 
-### Why don't you display animated GIFs natively?
+### Do you support animated GIFs?
 
-Support for animated GIFs was [added in April 2022](https://github.com/photoprism/photoprism/issues/590).
+Yes, animated GIFs are played natively. Support was [added in April 2022](https://github.com/photoprism/photoprism/issues/590). Keep [ExifTool enabled](../user-guide/settings/advanced.md#disable-exiftool) so that video-specific metadata such as duration and resolution can be extracted and indexed.
 
 ### Why is my storage folder so large? What is in it?
 
@@ -544,7 +544,7 @@ including rootless and root modes, user mapping, and SELinux.
 
 [Learn more ›](troubleshooting/docker.md#podman-compose)
 
-### Do you have plans to add support for LDAP or Active Directory?
+### Do you support LDAP or Active Directory?
 
 PhotoPrism offers support for secure single sign-on via [OpenID Connect (OIDC)](advanced/openid-connect.md). With our [Pro Edition](https://www.photoprism.app/teams/#compare), you can also configure an [LDAP or Active Directory](https://www.photoprism.app/pro/kb/ldap/) server to authenticate users.
 

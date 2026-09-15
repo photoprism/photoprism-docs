@@ -113,10 +113,10 @@ This section controls how JPEG preview and thumbnail images are rendered. These 
 
 ### Downscaling Filter
 
-PhotoPrism renders thumbnails with `libvips`, which always uses a high-quality Lanczos 3-lobe kernel for downscaling. The `PHOTOPRISM_THUMB_FILTER` [config option](../../getting-started/config-options.md#preview-images) and the "Downscaling Filter" dropdown are retained for backwards compatibility but no longer change the rendered output.
+PhotoPrism renders thumbnails with `libvips`, which always uses a high-quality Lanczos 3-lobe kernel for downscaling. There is nothing to configure here.
 
 !!! info ""
-    The legacy native `imaging` image-processing library was removed in the April 2026 release. Thumbnails are now always generated with libvips, so the previously-selectable filters (blackman, lanczos, cubic, linear, nearest) have no effect.
+    The legacy native `imaging` image-processing library was removed in the April 2026 release, together with the "Downscaling Filter" setting and the `PHOTOPRISM_THUMB_FILTER` config option. The previously selectable filters (blackman, lanczos, cubic, linear, nearest) are gone; a `ThumbFilter` value left over in `options.yml` is ignored.
 
 ### Static and Dynamic Size Limits
 **Static Size Limit**: During initial indexing or import (as thumbnails are generated),

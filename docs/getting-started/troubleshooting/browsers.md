@@ -45,10 +45,10 @@ instead of writing down the details.
 
 === "Safari"
 
-    Before you can access the console in Safari on MacOS, you first need to enable the *Develop* menu:
+    Before you can access the console in Safari on macOS, you first need to enable the *Develop* menu:
 
-    1. Choose Safari *Menu* > *Preferences* and select the *Advanced Tab*
-    2. Select "Show Develop menu in menu bar"
+    1. Choose Safari *Menu* > *Settings* (called *Preferences* in older versions) and select the *Advanced* tab
+    2. Select "Show features for web developers"
 
     Once the *Develop* menu is enabled:
 

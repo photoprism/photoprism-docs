@@ -190,12 +190,6 @@ devices:
  - "/dev/video11:/dev/video11"
 ```
 
-Additional advanced configuration options are available to improve stability if needed:
-
-```yaml
-PHOTOPRISM_FFMPEG_BUFFERS: "64" # FFmpeg capture buffers (default: 32)
-```
-
 Now [restart the services](../docker-compose.md#step-2-start-the-server) for your changes to take effect:
 
 ```bash

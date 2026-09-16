@@ -51,7 +51,7 @@ What's new?
 - Helm: [Added a values schema that validates the chart configuration](https://github.com/photoprism/photoprism/commit/4ea46f36a)
 - Tests: [Improved backend and acceptance test coverage](https://github.com/photoprism/photoprism/pull/5783) by [@keif888](https://github.com/keif888)
 - Security: [Upgraded `libheif` from v1.23.1 to v1.23.4 (8 CVE fixes)](https://github.com/photoprism/photoprism/issues/5814)
-- Security: [Upgraded Go from v1.26.5 to v1.27.0](https://github.com/golang/go/issues?q=milestone%3AGo1.27.0)
+- Security: [Upgraded Go from v1.26.5 to v1.27.1](https://github.com/golang/go/issues?q=milestone%3AGo1.27.1)
 - Translations: [Improved French](https://docs.photoprism.app/developer-guide/translations-weblate/) by [@jean-louis67](https://github.com/jean-louis67)
 - Translations: [Improved Hebrew](https://docs.photoprism.app/developer-guide/translations-weblate/) by [@avma](https://github.com/avma)
 

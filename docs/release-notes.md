@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 260914-937a79ce5</span>
+<span class="build">Build 260916-fff9925a6</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions/#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
@@ -48,9 +48,11 @@ What's new?
 - CLI: [Added `faces status` to help with configuration and troubleshooting](https://docs.photoprism.app/user-guide/ai/face-recognition/#cli-reference)
 - CLI: [Added `faces subjects`, `faces ls`, and `faces markers` to inspect face data](https://docs.photoprism.app/user-guide/ai/face-recognition/#cli-reference)
 - CLI: [Added a detail column to `faces ls` and `faces markers` showing the crop a face was drawn at](https://docs.photoprism.app/user-guide/ai/face-recognition/#cli-reference)
-- Tests: [Extended backend and acceptance test coverage](https://github.com/photoprism/photoprism/pull/5783) by [@keif888](https://github.com/keif888)
+- Helm: [Added a values schema that validates the chart configuration](https://github.com/photoprism/photoprism/commit/4ea46f36a)
+- Tests: [Improved backend and acceptance test coverage](https://github.com/photoprism/photoprism/pull/5783) by [@keif888](https://github.com/keif888)
 - Security: [Upgraded `libheif` from v1.23.1 to v1.23.4 (8 CVE fixes)](https://github.com/photoprism/photoprism/issues/5814)
 - Security: [Upgraded Go from v1.26.5 to v1.27.0](https://github.com/golang/go/issues?q=milestone%3AGo1.27.0)
+- Translations: [Improved French](https://docs.photoprism.app/developer-guide/translations-weblate/) by [@jean-louis67](https://github.com/jean-louis67)
 - Translations: [Improved Hebrew](https://docs.photoprism.app/developer-guide/translations-weblate/) by [@avma](https://github.com/avma)
 
 !!! info ""

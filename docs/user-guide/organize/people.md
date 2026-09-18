@@ -117,7 +117,8 @@ to mark them **Private** or **Hidden**:
 For an account that may not see them, a withheld person does not appear under *People* or in the name
 suggestions when tagging a face, is not named in a picture's *People* list, and their face region is
 not shown there. Their name is also kept out of automatically generated titles, captions, and search
-keywords; changing either option updates these for the person's existing pictures.
+keywords; pictures that already carry it are updated by the next maintenance pass, so allow a few
+minutes for those.
 
 !!! note ""
     **Their pictures stay visible.** Only the name and the face region are withheld, so anyone who may

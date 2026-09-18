@@ -3,10 +3,44 @@
 PhotoPrism uses a multi-stage AI pipeline to detect, embed, and cluster faces so they can be [easily organized by person](https://docs.photoprism.app/user-guide/organize/people/):
 
 1. **Detection** — a detection model locates faces in each image.
-2. **Embedding** — a vector is generated to characterise each face.
+2. **Embedding** — a vector is generated to characterize each face.
 3. **Clustering** — similar faces are grouped so they can be assigned to a person.
 
 Detection and embedding use separate models, so each can be chosen and upgraded on its own.
+
+## Upgrading an Existing Library
+
+Libraries indexed before the current [embedding model](#face-embeddings) became available keep the model they already use, because vectors produced by different models cannot be compared: switching automatically would make every face you have already assigned to a person incomparable with newly indexed ones. Setting `FACE_MODEL` does not change it either.
+
+`photoprism faces migrate` is what changes it. It re-embeds every face, keeps the people you have already identified, and records the new model as the one in use. It defaults to the model this release supports, so an ordinary upgrade needs no target — run it [in a terminal](https://docs.photoprism.app/getting-started/docker-compose/#opening-a-terminal) with `--dry-run` first to see what it would cover:
+
+```bash
+photoprism faces migrate --dry-run # report the scope, change nothing
+photoprism faces migrate           # re-embed every face
+```
+
+Expect it to take a while on a large library. Name a different target with `--to` only if you are migrating somewhere other than the model this release supports — or if this instance has `FACE_MODEL` set to `none`, which is kept rather than overridden, so the target has to be named.
+
+!!! info ""
+    **Restart your instance once the migration has finished.** It records the new model in `options.yml`, which a running instance does not reload, so face embedding work stays paused until it starts again. You do not need to stop the instance beforehand: a migration takes a lock the instance reads, so indexing and vision wait for it and edits to people are refused while it runs. Start it when no indexing or import is already under way, though — that lock is checked when such a run begins, not while one is in progress.
+
+Afterwards, let the detector find the faces it previously missed and settle the clusters:
+
+```bash
+photoprism faces audit --fix    # resolve inconsistencies
+photoprism faces index          # detect additional faces
+photoprism faces update --force # re-match every marker, cluster what is unassigned
+photoprism faces optimize       # optional tidy-up
+```
+
+`--force` is what matters there: a plain `photoprism faces update` runs only once enough faces have been added since the last pass, which a freshly migrated library has not. With `--force` the pass runs regardless, every face is matched against the clusters again, and the ones left unassigned are clustered at the current settings. Faces that already belong to a cluster keep it. Reach for it whenever faces have been detected but *People* shows no cluster for them.
+
+To check the result, `photoprism faces status` reports which model is in use and why clustering is waiting if no clusters are forming.
+
+If you would rather start from a clean state, run `photoprism faces reset -f` followed by `photoprism faces index`. All detected faces must then be reassigned.
+
+!!! note ""
+    A [complete rescan](https://docs.photoprism.app/user-guide/library/originals/#when-should-complete-rescan-be-selected) will also detect additional faces, but takes longer since more indexing tasks are performed.
 
 ## Face Detection
 
@@ -38,7 +72,7 @@ After detection, PhotoPrism generates an embedding vector that characterizes eac
 
 New libraries use **SFace**, which produces 128-dimensional vectors. Libraries created before it was available keep **FaceNet**, which produces 512-dimensional vectors, because switching would make every face already assigned to a person incomparable with newly indexed ones.
 
-Setting `FACE_MODEL` does not change the model of a library that already has one — use `photoprism faces migrate` for that, which re-embeds every face and keeps your person assignments. See the [CLI reference](#cli-reference) below.
+Setting `FACE_MODEL` does not change the model of a library that already has one — use `photoprism faces migrate` for that, which re-embeds every face and keeps your person assignments. See [Upgrading an Existing Library](#upgrading-an-existing-library) above.
 
 All face embeddings are L2-normalized to unit length (‖x‖₂ = 1) at:
 
@@ -67,7 +101,7 @@ This normalization ensures that Euclidean distance comparisons are equivalent to
 ### Clustering Settings
 
 !!! info ""
-    After changing any of the clustering parameters, run `photoprism faces update --force` in a terminal so that existing clusters are recalculated, as they are otherwise left as they were and the new values apply only to faces clustered from then on. Changing the embedding model is a different operation and requires `photoprism faces migrate`.
+    After changing any of the clustering parameters, run `photoprism faces update --force` in a terminal so that a pass runs at the new values instead of waiting for enough new faces. It applies them to the faces that are not yet in a cluster and matches every face against the clusters again; faces that already belong to one keep it, so run `photoprism faces reset` if you want the library regrouped from scratch. Changing the embedding model is a different operation and requires `photoprism faces migrate`.
 
 | Environment Variable          | CLI Flag             | Default               | Description                                                          |
 |-------------------------------|----------------------|-----------------------|----------------------------------------------------------------------|
@@ -98,31 +132,4 @@ The distance thresholds are calibrated for each embedding model and resolved aut
 - `photoprism faces index` — (re)detect faces in originals.
 - `photoprism faces update [--force]` — cluster and match detected faces.
 - `photoprism faces optimize` — compact clusters after updates.
-- `photoprism faces migrate [--to MODEL] [--dry-run]` — re-embed every face with another model. **Stop the server first.**
-
-### Changing the Face Model
-
-`photoprism faces migrate` is how the embedding model is changed. It re-embeds every face, keeps the people you have already identified, and records the new model as the one in use. Run it with `--dry-run` first to see what it would cover:
-
-```bash
-photoprism faces migrate --to sface --dry-run
-```
-
-!!! danger ""
-    Stop the server before migrating. The migration replaces every face cluster in one transaction and cannot account for what a running instance writes to the same rows at the same time.
-
-### Version Upgrade
-
-To benefit from the [facial recognition improvements](https://github.com/photoprism/photoprism/issues/5167), we recommend running `photoprism faces audit --fix` and `photoprism faces index` [in a terminal](https://docs.photoprism.app/getting-started/docker-compose/#opening-a-terminal) to resolve any inconsistencies before detecting and matching additional faces:
-
-```bash
-photoprism faces audit --fix # resolve inconsistencies
-photoprism faces index       # detect new faces
-photoprism faces update      # cluster and match
-photoprism faces optimize    # optional tidy-up
-```
-
-If you want to re-detect all faces for a clean state, you can do so by executing the commands `photoprism faces reset -f` and then `photoprism faces index`. After that, all detected faces must be reassigned.
-
-!!! note ""
-    A [complete rescan](https://docs.photoprism.app/user-guide/library/originals/#when-should-complete-rescan-be-selected) will also detect additional faces, but takes longer since more indexing tasks are performed.
+- `photoprism faces migrate [--to MODEL] [--dry-run]` — re-embed every face with another model, then restart the instance. See [Upgrading an Existing Library](#upgrading-an-existing-library).

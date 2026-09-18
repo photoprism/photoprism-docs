@@ -230,7 +230,7 @@ Face recognition can be slow (or even crash) on [old devices](../../getting-star
 
 Automatic recognition is less reliable for young children, and for pictures of the same person taken many years apart, than it is for adults photographed within a few years of each other. This is a property of the [embedding model](../ai/face-recognition.md#face-embeddings) and not of detection, so the faces are still found, displayed, and searchable — they are just less likely to be grouped into one person automatically, and more likely to form several clusters that you can merge by hand.
 
-The model used for new libraries is a substantial improvement over the one PhotoPrism shipped previously, which was in addition unreliable for Asian faces. Libraries created before it became available keep the previous model until they are [migrated](../ai/face-recognition.md#changing-the-face-model).
+The model used for new libraries is a substantial improvement over the one PhotoPrism shipped previously, which was in addition unreliable for Asian faces. Libraries created before it became available keep the previous model until they are [migrated](../ai/face-recognition.md#upgrading-an-existing-library).
 
 ### Rotated Faces
 

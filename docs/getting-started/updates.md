@@ -112,11 +112,22 @@ You can start a [rescan from the user interface](../user-guide/library/originals
 
 ### Face Recognition
 
-Existing users may index faces without performing a complete rescan:
+Libraries indexed before the current [face model](../user-guide/ai/face-recognition.md#face-embeddings) became available keep the model they already use, because vectors produced by different models cannot be compared. Re-embed them with the current model, which preserves the people you have already identified:
+
+```bash
+docker compose exec photoprism photoprism faces migrate
+```
+
+Restart your instance once it has finished so that the new model is loaded. You do not need to stop it beforehand, but do start the migration when no indexing or import is under way, and expect it to take a while on a large library.
+
+Existing users may then index faces without performing a complete rescan, and settle the clusters afterwards:
 
 ```bash
 docker compose exec photoprism photoprism faces index
+docker compose exec photoprism photoprism faces update --force
 ```
+
+`--force` runs the pass even when too few faces are new to trigger one, and matches every face against the clusters again — which is what a freshly migrated library needs. [Learn more ›](../user-guide/ai/face-recognition.md#upgrading-an-existing-library)
 
 Remove existing people and faces for a clean start e.g. after upgrading from our
 [development preview](https://docs.photoprism.app/release-notes/#development-preview):

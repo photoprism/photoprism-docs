@@ -8,6 +8,14 @@
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions/#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
+This release introduces new detection and embedding models for face recognition: more faces are found, including small ones in group pictures, and clustering now keeps different people apart instead of grouping them as one. Existing libraries keep their current model until you run [`photoprism faces migrate`](https://docs.photoprism.app/user-guide/ai/face-recognition/#cli-reference), which re-embeds every face and keeps the names you have already assigned.
+
+People whose names should remain private can now be [flagged as Private or Hidden](https://docs.photoprism.app/user-guide/organize/people/#private-hidden-people) to hide their names and face regions from non-privileged accounts, while their pictures remain visible.
+
+Elsewhere, [360° files from Insta360 cameras and fisheye RAW images](https://github.com/photoprism/photoprism/issues/5711) can be viewed directly, [maps have moved to MapLibre GL JS v6](https://github.com/photoprism/photoprism/issues/5812), and the [default size limit has been raised to 5 GB](https://github.com/photoprism/photoprism/issues/5824) so that larger videos are indexed without changing the configuration.
+
+A special thank you to all [our members](https://www.photoprism.app/editions/#compare), [contributors](https://docs.photoprism.app/developer-guide/pull-requests/), and [testers](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test) who helped make this release possible! 🌈
+
 What's new?
 
 - Viewer: [Added support for 360° Insta360 and fisheye RAW files](https://github.com/photoprism/photoprism/issues/5711) by [@omerdduran](https://github.com/omerdduran)
@@ -24,7 +32,7 @@ What's new?
 - People: [Added a confirmation before a typed name creates a new person](https://github.com/photoprism/photoprism/commit/ddcbf3a1c)
 - People: [Added a Verified option that keeps a person when face clusters are reset](https://github.com/photoprism/photoprism/commit/b0c23316c)
 - People: [Added a date of birth to the Edit Person dialog](https://github.com/photoprism/photoprism/commit/1e99fdffa)
-- People: [Added Private and Hidden options that hide a person's name and face](https://github.com/photoprism/photoprism/issues/5822)
+- People: [Added Private and Hidden options that hide a person's name and face](https://docs.photoprism.app/user-guide/organize/people/#private-hidden-people)
 - People: [Fixed photo counts not being updated after face recognition](https://github.com/photoprism/photoprism/commit/0281278df)
 - People: [Fixed some clusters not being shown on the People pages](https://github.com/photoprism/photoprism/commit/afeddb6b6)
 - People: [Fixed naming a single face not finding that person's other photos](https://github.com/photoprism/photoprism/commit/f1ef0bf55)

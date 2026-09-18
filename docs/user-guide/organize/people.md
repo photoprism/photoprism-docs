@@ -88,6 +88,8 @@ The person you just added will appear under *Recognized*
 
 You can hide a person in the *Recognized* section by clicking :material-close: in the upper right corner.
 Pictures of this person continue to be visible in search results and albums.
+Hiding a person also withholds their name from accounts that may not see private content, as described
+under [Private & Hidden People](#private-hidden-people).
 
 ![Screenshot](img/person-hide-2503.jpg){ class="shadow" }
 
@@ -101,6 +103,25 @@ Hidden people can be recovered by clicking :material-eye-off:
 
 ## Hiding Faces ##
 You can hide face clusters from the *New* section, in the same way you [hide people](#hiding-people) from the *Recognized* section.
+
+## Private & Hidden People ##
+
+Some people in a shared library should not be named to every account. Open a person's *Edit* dialog
+to mark them **Private** or **Hidden**:
+
+| Option      | Effect                                                                 |
+|-------------|------------------------------------------------------------------------|
+| **Private** | Withholds the person from accounts that may not see private content.   |
+| **Hidden**  | The same, and also leaves the person out of *Recognized* for everyone. |
+
+For an account that may not see them, a withheld person does not appear under *People* or in the name
+suggestions when tagging a face, is not named in a picture's *People* list, and their face region is
+not shown there. Their name is also kept out of automatically generated titles, captions, and search
+keywords; changing either option updates these for the person's existing pictures.
+
+!!! note ""
+    **Their pictures stay visible.** Only the name and the face region are withheld, so anyone who may
+    browse the library still sees the pictures. This is not encryption, and it is not a password prompt.
 
 ## View all Photos of a Person ##
 === "From People"

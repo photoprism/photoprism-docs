@@ -55,25 +55,25 @@ This normalization ensures that Euclidean distance comparisons are equivalent to
 
 ### Detection Settings
 
-| Environment Variable       | CLI Flag          | Default                 | Description                                                         |
-|----------------------------|-------------------|-------------------------|---------------------------------------------------------------------|
-| PHOTOPRISM_FACE_DETECTOR   | --face-detector   | *(from the face model)* | Detection model (`auto`, `none`, `yunet`).                          |
-| PHOTOPRISM_FACE_MODEL      | --face-model      | *(detected once)*       | Embedding model (`detect`, `none`, `facenet`, `sface`, `auraface`). |
-| PHOTOPRISM_FACE_SIZE       | --face-size       | 25                      | Minimum size of faces in `PIXELS` (10-10000).                       |
-| PHOTOPRISM_FACE_SIZE_RETRY | --face-size-retry | 10                      | Minimum size in `PIXELS` for the retry pass, `-1` to disable.       |
-| PHOTOPRISM_FACE_SCORE      | --face-score      | *(from the detector)*   | Minimum face `QUALITY` score (1-100).                               |
-| PHOTOPRISM_FACE_OVERLAP    | --face-overlap    | 42                      | Face area overlap threshold in `PERCENT` (1-100).                   |
+| Environment Variable       | CLI Flag          | Default                 | Description                                                                        |
+|----------------------------|-------------------|-------------------------|------------------------------------------------------------------------------------|
+| PHOTOPRISM_FACE_DETECTOR   | --face-detector   | *(from the face model)* | Detection model (`auto`, `none`, `yunet`).                                         |
+| PHOTOPRISM_FACE_MODEL      | --face-model      | sface                   | Embedding model (`auto`, `sface`, `none`), detected from the library unless named. |
+| PHOTOPRISM_FACE_SIZE       | --face-size       | 25                      | Minimum size of faces in `PIXELS` (10-10000).                                      |
+| PHOTOPRISM_FACE_SIZE_RETRY | --face-size-retry | 10                      | Minimum size in `PIXELS` for the retry pass, `-1` to disable.                      |
+| PHOTOPRISM_FACE_SCORE      | --face-score      | *(from the detector)*   | Minimum face `QUALITY` score (1-100).                                              |
+| PHOTOPRISM_FACE_OVERLAP    | --face-overlap    | 42                      | Face area overlap threshold in `PERCENT` (1-100).                                  |
 
 ### Clustering Settings
 
-!!! danger ""
-    It is strongly recommended that you run the "photoprism faces reset" command in a terminal to remove existing clusters and mappings after changing any of the clustering parameters, as otherwise inconsistencies may result in unexpected behavior or errors.
+!!! info ""
+    After changing any of the clustering parameters, run `photoprism faces update --force` in a terminal so that existing clusters are recalculated, as they are otherwise left as they were and the new values apply only to faces clustered from then on. Changing the embedding model is a different operation and requires `photoprism faces migrate`.
 
 | Environment Variable          | CLI Flag             | Default               | Description                                                          |
 |-------------------------------|----------------------|-----------------------|----------------------------------------------------------------------|
-| PHOTOPRISM_FACE_CLUSTER_SIZE  | --face-cluster-size  | 60                    | Minimum size of automatically clustered faces in `PIXELS` (20-10000) |
+| PHOTOPRISM_FACE_CLUSTER_SIZE  | --face-cluster-size  | 112                   | Minimum size of automatically clustered faces in `PIXELS` (20-10000) |
 | PHOTOPRISM_FACE_CLUSTER_SCORE | --face-cluster-score | *(from the detector)* | Minimum `QUALITY` score of automatically clustered faces (1-100)     |
-| PHOTOPRISM_FACE_CLUSTER_CORE  | --face-cluster-core  | 4                     | `NUMBER` of faces forming a cluster core (1-100)                     |
+| PHOTOPRISM_FACE_CLUSTER_CORE  | --face-cluster-core  | 5                     | `NUMBER` of faces forming a cluster core (2-100)                     |
 | PHOTOPRISM_FACE_CLUSTER_DIST  | --face-cluster-dist  | *(from the model)*    | Similarity `DISTANCE` of faces forming a cluster core                |
 | PHOTOPRISM_FACE_MATCH_DIST    | --face-match-dist    | *(from the model)*    | Similarity `OFFSET` for matching faces with existing clusters        |
 

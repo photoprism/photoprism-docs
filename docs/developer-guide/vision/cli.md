@@ -372,7 +372,7 @@ Two guards act on the result:
 
 Use `--force` to finalize a migration even when some markers could not be re-embedded.
 
-!!! danger ""
-    **Stop the server before migrating.** The migration replaces every face cluster in a single transaction, and its worker guards cannot account for what a running instance writes to the same rows.
+!!! info ""
+    **Restart the instance once the migration has finished**, so that it loads the model the run recorded in `options.yml`. A process that has not loaded it pauses face embeddings rather than clustering vectors it cannot compare. Stopping the instance beforehand is not required: the run holds a lock under the storage path that a server in another process reads, so indexing, vision, and the endpoints that change people hold off while it runs, the last answering `409 Conflict`. The check happens where such a run starts, so a pass already in flight is not interrupted, and deleting pictures permanently still removes their markers. If the set of named markers changes while the migration runs, the finalize is rolled back and the migration has to be repeated — safe, but it costs the whole run.
 
 [Learn more about face recognition ›](face-recognition.md)

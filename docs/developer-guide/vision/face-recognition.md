@@ -87,7 +87,7 @@ docker compose exec photoprism photoprism faces migrate
 
 It defaults to the supported model, so an ordinary migration needs no `--to`. `photoprism faces reset` clears the recorded pin, because a reset leaves no vectors for it to keep comparable.
 
-Stop the server first, and see [Migrate Face Embeddings](cli.md#migrate-face-embeddings) for the dry run, the report it prints, what re-detection can lose, and what happens to person assignments.
+Restart the instance once it has finished, and see [Migrate Face Embeddings](cli.md#migrate-face-embeddings) for the dry run, the report it prints, what re-detection can lose, and what happens to person assignments.
 
 !!! info ""
     If the configured model cannot read a library's stored vectors, embedding work **pauses** rather than silently filtering the mismatch: generation, clustering, and matching stop after one warning until a migration reconciles them. Detection keeps running, so faces stay recorded and their vectors are filled in afterwards.

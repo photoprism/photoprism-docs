@@ -29,7 +29,7 @@ Afterwards, let the detector find the faces it previously missed and settle the 
 ```bash
 photoprism faces audit --fix    # resolve inconsistencies
 photoprism faces index          # detect additional faces
-photoprism faces update --force # re-match every marker, cluster what is unassigned
+photoprism faces update --force # re-match and cluster faces
 photoprism faces optimize       # optional tidy-up
 ```
 

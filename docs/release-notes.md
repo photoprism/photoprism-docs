@@ -8,7 +8,7 @@
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions/#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
-This release introduces new detection and embedding models for face recognition: more faces are found, including small ones in group pictures, and clustering now keeps different people apart instead of grouping them as one. Existing libraries keep their current model until you run [`photoprism faces migrate`](https://docs.photoprism.app/user-guide/ai/face-recognition/#cli-reference), which re-embeds every face and keeps the names you have already assigned.
+This release introduces new detection and embedding models for face recognition: more faces are found, including small ones in group pictures, and clustering now keeps different people apart instead of grouping them as one. Existing libraries keep their current model until you run [`photoprism faces migrate`](https://docs.photoprism.app/user-guide/ai/face-recognition/#upgrading-an-existing-library), which re-embeds every face and keeps the names you have already assigned.
 
 People whose names should remain private can now be [flagged as Private or Hidden](https://docs.photoprism.app/user-guide/organize/people/#private-hidden-people) to hide their names and face regions from non-privileged accounts, while their pictures remain visible.
 
@@ -52,7 +52,7 @@ What's new?
 - Thumbs: [Improved error messages to be logged as a single readable line](https://github.com/photoprism/photoprism/issues/5778)
 - Covers: [Improved album, label, and folder covers to load from the thumbs cache](https://github.com/photoprism/photoprism/issues/5779)
 - Metadata: [Improved the docs to include complete XMP and DCMI tags](https://github.com/photoprism/photoprism/issues/2260)
-- CLI: [Added `faces migrate` to switch a library to a new face model](https://docs.photoprism.app/user-guide/ai/face-recognition/#cli-reference)
+- CLI: [Added `faces migrate` to switch a library to a new face model](https://docs.photoprism.app/user-guide/ai/face-recognition/#upgrading-an-existing-library)
 - CLI: [Added `faces reset --all` to start over without detecting faces again](https://docs.photoprism.app/user-guide/ai/face-recognition/#cli-reference)
 - CLI: [Added `faces status` to help with configuration and troubleshooting](https://docs.photoprism.app/user-guide/ai/face-recognition/#cli-reference)
 - CLI: [Added `faces subjects`, `faces ls`, and `faces markers` to inspect face data](https://docs.photoprism.app/user-guide/ai/face-recognition/#cli-reference)

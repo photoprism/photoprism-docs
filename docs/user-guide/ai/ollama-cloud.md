@@ -119,4 +119,11 @@ photoprism --log-level=trace vision run -m labels --count 1 --force
 photoprism --log-level=trace vision run -m caption --count 1 --force
 ```
 
+!!! tip "No Labels or Captions, and No Error Either"
+    A run that cannot reach the service still reports `processed N pictures (no metadata changes detected)` and completes normally, because the request failure is logged below the default level. That reads like the model having nothing to say, so it is worth re-running with `--log-level=trace` as above before changing your model or prompt. A wrong `Service.Uri` is the common cause: it is used exactly as specified, so a bare base URL such as `https://ollama.com` posts to the website and receives HTML back.
+
+### Turning Cloud Processing Off
+
+Removing `OLLAMA_API_KEY` does not stop pictures being sent: the request is still made and the service rejects it, so the image has already left your instance by the time it fails. To stop sending pictures to the cloud, point the configuration back at a local service — remove `OLLAMA_BASE_URL` (and any `Service.Uri` in your [`vision.yml`](index.md#visionyml-reference)) so the engine falls back to its local default, or set `Run: manual` to stop automatic runs entirely.
+
 [^1]: Unrelated configuration details have been omitted for brevity.

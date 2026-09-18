@@ -12,13 +12,13 @@ This release introduces new detection and embedding models for face recognition:
 
 People whose names should remain private can now be [flagged as Private or Hidden](https://docs.photoprism.app/user-guide/organize/people/#private-hidden-people) to hide their names and face regions from non-privileged accounts, while their pictures remain visible.
 
-Elsewhere, [360° photos and videos from Insta360 cameras](https://github.com/photoprism/photoprism/issues/5711) can be viewed directly, [maps have moved to MapLibre GL JS v6](https://github.com/photoprism/photoprism/issues/5812), and the [default size limit has been raised to 5 GB](https://github.com/photoprism/photoprism/issues/5824) so that larger videos are indexed without changing the configuration.
+Elsewhere, [360° photos, videos, and fisheye DNG files from Insta360 cameras](https://github.com/photoprism/photoprism/issues/5711) can be viewed directly, [maps have moved to MapLibre GL JS v6](https://github.com/photoprism/photoprism/issues/5812), and the [default size limit has been raised to 5 GB](https://github.com/photoprism/photoprism/issues/5824) so that larger videos are indexed without changing the configuration.
 
 A special thank you to all [our members](https://www.photoprism.app/editions/#compare), [contributors](https://docs.photoprism.app/developer-guide/pull-requests/), and [testers](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test) who helped make this release possible! 🌈
 
 What's new?
 
-- Viewer: [Added support for 360° Insta360 photos and videos](https://github.com/photoprism/photoprism/issues/5711) by [@omerdduran](https://github.com/omerdduran)
+- Viewer: [Added support for 360° Insta360 photos, videos, and fisheye DNG](https://github.com/photoprism/photoprism/issues/5711) by [@omerdduran](https://github.com/omerdduran)
 - AI: [Improved facial recognition with new detection and embedding models](https://github.com/photoprism/photoprism/issues/4669) by [@omerdduran](https://github.com/omerdduran)
 - AI: [Added a `Normalize` option to keep compound label names whole](https://github.com/photoprism/photoprism/issues/5773)
 - AI: [Upgraded ONNX Runtime from v1.26.0 to v1.29.0](https://github.com/photoprism/photoprism/issues/5703)

@@ -79,10 +79,12 @@ Below are the names of the config options that you can set in the `options.yml` 
 | OIDCClient     | string | --oidc-client     |
 | OIDCSecret     | string | --oidc-secret     |
 | OIDCScopes     | string | --oidc-scopes     |
+| OIDCPrompt     | string | --oidc-prompt     |
 | OIDCProvider   | string | --oidc-provider   |
 | OIDCIcon       | string | --oidc-icon       |
 | OIDCRedirect   | bool   | --oidc-redirect   |
 | OIDCRegister   | bool   | --oidc-register   |
+| OIDCLogout     | bool   | --oidc-logout     |
 | OIDCUsername   | string | --oidc-username   |
 | OIDCWebDAV     | bool   | --oidc-webdav     |
 | DisableOIDC    | bool   | --disable-oidc    |
@@ -109,6 +111,7 @@ Below are the names of the config options that you can set in the `options.yml` 
 | ResolutionLimit | int    | --resolution-limit |
 | UsersPath       | string | --users-path       |
 | StoragePath     | string | --storage-path     |
+| StorageFree     | string | --storage-free     |
 | ImportPath      | string | --import-path      |
 | ImportDest      | string | --import-dest      |
 | ImportAllow     | string | --import-allow     |
@@ -206,6 +209,7 @@ Below are the names of the config options that you can set in the `options.yml` 
 |:----------------|:-------|:-------------------|
 | SiteUrl         | string | --site-url         |
 | SiteAuthor      | string | --site-author      |
+| SiteName        | string | --site-name        |
 | SiteTitle       | string | --site-title       |
 | SiteCaption     | string | --site-caption     |
 | SiteDescription | string | --site-description |
@@ -277,10 +281,14 @@ Below are the names of the config options that you can set in the `options.yml` 
 | FFmpegSize             | int    | --ffmpeg-size             |
 | FFmpegQuality          | int    | --ffmpeg-quality          |
 | FFmpegBitrate          | int    | --ffmpeg-bitrate          |
+| FFmpegFisheyeFov       | int    | --ffmpeg-fisheye-fov      |
 | FFmpegPreset           | string | --ffmpeg-preset           |
 | FFmpegDevice           | string | --ffmpeg-device           |
 | FFmpegMapVideo         | string | --ffmpeg-map-video        |
 | FFmpegMapAudio         | string | --ffmpeg-map-audio        |
+| FFmpegExclude          | string | --ffmpeg-exclude          |
+| ConvertTimeout         | int    | --convert-timeout         |
+| TranscodeTimeout       | int    | --transcode-timeout       |
 | ExifToolBin            | string | --exiftool-bin            |
 | SipsBin                | string | --sips-bin                |
 | SipsExclude            | string | --sips-exclude            |
@@ -298,10 +306,11 @@ Below are the names of the config options that you can set in the `options.yml` 
 
 ### Security Tokens
 
-| Name          | Type   | CLI Flag         |
-|:--------------|:-------|:-----------------|
-| DownloadToken | string | --download-token |
-| PreviewToken  | string | --preview-token  |
+| Name                | Type   | CLI Flag                |
+|:--------------------|:-------|:------------------------|
+| DownloadToken       | string | --download-token        |
+| DownloadTokenMaxAge | int    | --download-token-maxage |
+| PreviewToken        | string | --preview-token         |
 
 ### Preview Images
 
@@ -311,6 +320,7 @@ Below are the names of the config options that you can set in the `options.yml` 
 | ThumbColor        | string | --thumb-color         |
 | ThumbSize         | int    | --thumb-size          |
 | ThumbSizeUncached | int    | --thumb-size-uncached |
+| ThumbSizeFace     | int    | --thumb-size-face     |
 | ThumbUncached     | bool   | --thumb-uncached      |
 
 ### Image Quality
@@ -332,13 +342,17 @@ Below are the names of the config options that you can set in the `options.yml` 
 | VisionSchedule | string | --vision-schedule |
 | VisionFilter   | string | --vision-filter   |
 | DetectNSFW     | bool   | --detect-nsfw     |
+| XMPFaces       | bool   | --xmp-faces       |
+| FaceRun        | string | --face-run        |
 
 ### Face Recognition
 
-| Name              | Type   | CLI Flag              |
-|:------------------|:-------|:----------------------|
-| FaceEngine        | string | --face-engine         |
-| FaceEngineThreads | int    | --face-engine-threads |
+| Name                | Type   | CLI Flag                |
+|:--------------------|:-------|:------------------------|
+| FaceDetector        | string | --face-detector         |
+| FaceDetectorThreads | int    | --face-detector-threads |
+| FaceModel           | string | --face-model            |
+| FaceModelThreads    | int    | --face-model-threads    |
 
 ### Daemon Mode
 

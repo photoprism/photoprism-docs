@@ -4,7 +4,6 @@
     Note that changes to the config options listed below **always require a restart** to take effect.[^1] Instead of using environment variables, you can alternatively use an ↪ [`options.yml`](config-files/index.md) file to configure your instance.
 
 ## Environment Variables
-
 ### Authentication
 
 | Environment                                      | CLI Flag                | Default                      | Description                                                                                                                         |
@@ -52,16 +51,16 @@
 | PHOTOPRISM_CONFIG_PATH      | --config-path      |                              | config storage `PATH` or options.yml filename, values in this file override CLI flags and environment variables if present |
 | PHOTOPRISM_DEFAULTS_YAML    | --defaults-yaml    | /etc/photoprism/defaults.yml | loads default config values from `FILENAME` if it exists, does not override CLI flags or environment variables             |
 | PHOTOPRISM_ORIGINALS_PATH   | --originals-path   |                              | storage `PATH` of your original media files (photos and videos)                                                            |
-| PHOTOPRISM_ORIGINALS_LIMIT  | --originals-limit  | 1000                         | maximum size of media files in `MB` (1-100000; -1 to disable)                                                              |
+| PHOTOPRISM_ORIGINALS_LIMIT  | --originals-limit  | 5000                         | maximum size of a single media file in `MB` (1-100000; -1 to disable)                                                      |
 | PHOTOPRISM_RESOLUTION_LIMIT | --resolution-limit | 150                          | maximum resolution of media files in `MEGAPIXELS` (1-900; -1 to disable)                                                   |
 | PHOTOPRISM_USERS_PATH       | --users-path       | users                        | relative `PATH` to create base and upload subdirectories for users                                                         |
 | PHOTOPRISM_IMPORT_PATH      | --import-path      |                              | base `PATH` from which files can be imported to originals *optional*                                                       |
 | PHOTOPRISM_IMPORT_DEST      | --import-dest      |                              | relative originals `PATH` in which files should be imported by default *optional*                                          |
 | PHOTOPRISM_IMPORT_ALLOW     | --import-allow     |                              | restricts imports to these file types (comma-separated list of `EXTENSIONS`; leave blank to allow all)                     |
 | PHOTOPRISM_UPLOAD_NSFW      | --upload-nsfw      | false                        | allows uploads that might be offensive (when disabled, files flagged by the NSFW model are rejected before indexing)       |
-| PHOTOPRISM_UPLOAD_ALLOW     | --upload-allow     |                              | restricts uploads to these file types (comma-separated list of `EXTENSIONS`; leave blank to allow all)                     |
+| PHOTOPRISM_UPLOAD_ALLOW     | --upload-allow     |                              | further restricts web uploads to these file types (comma-separated list of `EXTENSIONS`)                                   |
 | PHOTOPRISM_UPLOAD_ARCHIVES  | --upload-archives  | false                        | allows upload of zip archives (will be extracted before import)                                                            |
-| PHOTOPRISM_UPLOAD_LIMIT     | --upload-limit     | 1000                         | maximum total size of uploaded files in `MB` (1-100000; -1 to disable)                                                     |
+| PHOTOPRISM_UPLOAD_LIMIT     | --upload-limit     | 5000                         | maximum total size of web uploads in `MB` (1-100000; -1 to disable)                                                        |
 | PHOTOPRISM_CACHE_PATH       | --cache-path       |                              | custom cache `PATH` for sessions and thumbnail files *optional*                                                            |
 | PHOTOPRISM_TEMP_PATH        | --temp-path        |                              | temporary file `PATH` *optional*                                                                                           |
 | PHOTOPRISM_ASSETS_PATH      | --assets-path      |                              | assets `PATH` containing static resources like icons, models, and translations                                             |
@@ -115,7 +114,7 @@
 | PHOTOPRISM_DISABLE_MCP            | --disable-mcp            | false   | disables the Model Context Protocol (MCP) API endpoint for AI agent integrations                  |
 | PHOTOPRISM_DISABLE_PLACES         | --disable-places         | false   | disables interactive world maps and reverse geocoding                                             |
 | PHOTOPRISM_DISABLE_TENSORFLOW     | --disable-tensorflow     | false   | disables face recognition with TensorFlow *deprecated*                                            |
-| PHOTOPRISM_DISABLE_FACES          | --disable-faces          | false   | disables face detection and recognition (requires TensorFlow)                                     |
+| PHOTOPRISM_DISABLE_FACES          | --disable-faces          | false   | disables face detection and recognition                                                           |
 | PHOTOPRISM_DISABLE_CLASSIFICATION | --disable-classification | false   | disables all image classification and label generation                                            |
 | PHOTOPRISM_DISABLE_FFMPEG         | --disable-ffmpeg         | false   | disables video transcoding and thumbnail extraction with FFmpeg                                   |
 | PHOTOPRISM_DISABLE_EXIFTOOL       | --disable-exiftool       | false   | disables metadata extraction with ExifTool (required for full Video, Live Photo, and XMP support) |
@@ -229,42 +228,46 @@
 
 ### File Conversion
 
-| Environment                                                      | CLI Flag                  | Default                                  | Description                                                                                    |
-|:-----------------------------------------------------------------|:--------------------------|:-----------------------------------------|:-----------------------------------------------------------------------------------------------|
-| PHOTOPRISM_FFMPEG_BIN                                            | --ffmpeg-bin              | ffmpeg                                   | FFmpeg `COMMAND` for video transcoding and thumbnail extraction                                |
-| PHOTOPRISM_FFMPEG_ENCODER                                        | --ffmpeg-encoder          | libx264                                  | FFmpeg AVC video encoder `NAME`                                                                |
-| PHOTOPRISM_FFMPEG_SIZE                                           | --ffmpeg-size             | 4096                                     | encoding resolution limit in `PIXELS` (720-15360)                                              |
-| PHOTOPRISM_FFMPEG_QUALITY                                        | --ffmpeg-quality          | 50                                       | encoding `QUALITY` (1-100, where 100 is almost lossless)                                       |
-| PHOTOPRISM_FFMPEG_BITRATE                                        | --ffmpeg-bitrate          | 60                                       | bitrate `LIMIT` in Mbps for forced transcoding of non-AVC videos (1-960; -1 to disable)        |
-| PHOTOPRISM_FFMPEG_PRESET                                         | --ffmpeg-preset           | fast                                     | FFmpeg compression `PRESET` when using an encoder that supports it, e.g. fast, medium, or slow |
-| PHOTOPRISM_FFMPEG_DEVICE                                         | --ffmpeg-device           |                                          | FFmpeg device `PATH` when using a hardware encoder that supports it as parameter               |
-| PHOTOPRISM_FFMPEG_MAP_VIDEO                                      | --ffmpeg-map-video        | `0:v:0`                                  | transcoding video stream `MAP`                                                                 |
-| PHOTOPRISM_FFMPEG_MAP_AUDIO                                      | --ffmpeg-map-audio        | `0:a:0?`                                 | transcoding audio stream `MAP`                                                                 |
-| PHOTOPRISM_FFMPEG_EXCLUDE, PHOTOPRISM_FFMPEG_BLACKLIST           | --ffmpeg-exclude          | magy, vfw                                | container and codec `FORMATS` not to be processed by FFmpeg, separated by commas               |
-| PHOTOPRISM_EXIFTOOL_BIN                                          | --exiftool-bin            | exiftool                                 | ExifTool `COMMAND` for extracting metadata                                                     |
-| PHOTOPRISM_SIPS_BIN                                              | --sips-bin                | sips                                     | Sips `COMMAND` for media file conversion *macOS only*                                          |
-| PHOTOPRISM_SIPS_EXCLUDE, PHOTOPRISM_SIPS_BLACKLIST               | --sips-exclude            | avif, avifs, thm                         | file `EXTENSIONS` not to be used with Sips *macOS only*                                        |
-| PHOTOPRISM_DARKTABLE_BIN                                         | --darktable-bin           | darktable-cli                            | Darktable CLI `COMMAND` for RAW to JPEG conversion                                             |
-| PHOTOPRISM_DARKTABLE_EXCLUDE, PHOTOPRISM_DARKTABLE_BLACKLIST     | --darktable-exclude       | thm                                      | file `EXTENSIONS` not to be used with Darktable                                                |
-| PHOTOPRISM_DARKTABLE_CACHE_PATH                                  | --darktable-cache-path    |                                          | custom Darktable cache `PATH`                                                                  |
-| PHOTOPRISM_DARKTABLE_CONFIG_PATH                                 | --darktable-config-path   |                                          | custom Darktable config `PATH`                                                                 |
-| PHOTOPRISM_RAWTHERAPEE_BIN                                       | --rawtherapee-bin         | rawtherapee-cli                          | RawTherapee CLI `COMMAND` for RAW to JPEG conversion                                           |
-| PHOTOPRISM_RAWTHERAPEE_EXCLUDE, PHOTOPRISM_RAWTHERAPEE_BLACKLIST | --rawtherapee-exclude     | dng, thm                                 | file `EXTENSIONS` not to be used with RawTherapee                                              |
-| PHOTOPRISM_IMAGEMAGICK_BIN                                       | --imagemagick-bin         | convert                                  | ImageMagick CLI `COMMAND` for image file conversion                                            |
-| PHOTOPRISM_IMAGEMAGICK_EXCLUDE, PHOTOPRISM_IMAGEMAGICK_BLACKLIST | --imagemagick-exclude     | heif, heic, heics, avif, avifs, jxl, thm | file `EXTENSIONS` not to be used with ImageMagick                                              |
-| PHOTOPRISM_HEIFCONVERT_BIN                                       | --heifconvert-bin         | heif-dec                                 | libheif HEIC image conversion `COMMAND`                                                        |
-| PHOTOPRISM_RSVGCONVERT_BIN                                       | --rsvgconvert-bin         | rsvg-convert                             | librsvg SVG graphics conversion `COMMAND` *plus*                                               |
-| PHOTOPRISM_HEIFCONVERT_ORIENTATION                               | --heifconvert-orientation | keep                                     | Exif `ORIENTATION` of images generated with libheif (keep, reset)                              |
+| Environment                                                      | CLI Flag                  | Default                                  | Description                                                                                               |
+|:-----------------------------------------------------------------|:--------------------------|:-----------------------------------------|:----------------------------------------------------------------------------------------------------------|
+| PHOTOPRISM_FFMPEG_BIN                                            | --ffmpeg-bin              | ffmpeg                                   | FFmpeg `COMMAND` for video transcoding and thumbnail extraction                                           |
+| PHOTOPRISM_FFMPEG_ENCODER                                        | --ffmpeg-encoder          | libx264                                  | FFmpeg AVC video encoder `NAME`                                                                           |
+| PHOTOPRISM_FFMPEG_SIZE                                           | --ffmpeg-size             | 4096                                     | encoding resolution limit in `PIXELS` (720-15360)                                                         |
+| PHOTOPRISM_FFMPEG_QUALITY                                        | --ffmpeg-quality          | 50                                       | encoding `QUALITY` (1-100, where 100 is almost lossless)                                                  |
+| PHOTOPRISM_FFMPEG_BITRATE                                        | --ffmpeg-bitrate          | 60                                       | bitrate `LIMIT` in Mbps for forced transcoding of non-AVC videos (1-960; -1 to disable)                   |
+| PHOTOPRISM_FFMPEG_FISHEYE_FOV                                    | --ffmpeg-fisheye-fov      | 190                                      | field of view in `DEGREES` for dewarping fisheye 360° originals (90-360)                                  |
+| PHOTOPRISM_FFMPEG_PRESET                                         | --ffmpeg-preset           | fast                                     | FFmpeg compression `PRESET` when using an encoder that supports it, e.g. fast, medium, or slow            |
+| PHOTOPRISM_FFMPEG_DEVICE                                         | --ffmpeg-device           |                                          | FFmpeg device `PATH` when using a hardware encoder that supports it as parameter                          |
+| PHOTOPRISM_FFMPEG_MAP_VIDEO                                      | --ffmpeg-map-video        | `0:v:0`                                  | transcoding video stream `MAP`                                                                            |
+| PHOTOPRISM_FFMPEG_MAP_AUDIO                                      | --ffmpeg-map-audio        | `0:a:0?`                                 | transcoding audio stream `MAP`                                                                            |
+| PHOTOPRISM_FFMPEG_EXCLUDE, PHOTOPRISM_FFMPEG_BLACKLIST           | --ffmpeg-exclude          | magy, vfw                                | container and codec `FORMATS` not to be processed by FFmpeg, separated by commas                          |
+| PHOTOPRISM_CONVERT_TIMEOUT                                       | --convert-timeout         | 10                                       | time in `MINUTES` after which converting a still image, document, or RAW file is given up (-1 to disable) |
+| PHOTOPRISM_TRANSCODE_TIMEOUT                                     | --transcode-timeout       | -1                                       | time in `MINUTES` after which transcoding a video is given up (disabled by default)                       |
+| PHOTOPRISM_EXIFTOOL_BIN                                          | --exiftool-bin            | exiftool                                 | ExifTool `COMMAND` for extracting metadata                                                                |
+| PHOTOPRISM_SIPS_BIN                                              | --sips-bin                | sips                                     | Sips `COMMAND` for media file conversion *macOS only*                                                     |
+| PHOTOPRISM_SIPS_EXCLUDE, PHOTOPRISM_SIPS_BLACKLIST               | --sips-exclude            | avif, avifs, thm                         | file `EXTENSIONS` not to be used with Sips *macOS only*                                                   |
+| PHOTOPRISM_DARKTABLE_BIN                                         | --darktable-bin           | darktable-cli                            | Darktable CLI `COMMAND` for RAW to JPEG conversion                                                        |
+| PHOTOPRISM_DARKTABLE_EXCLUDE, PHOTOPRISM_DARKTABLE_BLACKLIST     | --darktable-exclude       | thm                                      | file `EXTENSIONS` not to be used with Darktable                                                           |
+| PHOTOPRISM_DARKTABLE_CACHE_PATH                                  | --darktable-cache-path    |                                          | custom Darktable cache `PATH`                                                                             |
+| PHOTOPRISM_DARKTABLE_CONFIG_PATH                                 | --darktable-config-path   |                                          | custom Darktable config `PATH`                                                                            |
+| PHOTOPRISM_RAWTHERAPEE_BIN                                       | --rawtherapee-bin         | rawtherapee-cli                          | RawTherapee CLI `COMMAND` for RAW to JPEG conversion                                                      |
+| PHOTOPRISM_RAWTHERAPEE_EXCLUDE, PHOTOPRISM_RAWTHERAPEE_BLACKLIST | --rawtherapee-exclude     | dng, thm                                 | file `EXTENSIONS` not to be used with RawTherapee                                                         |
+| PHOTOPRISM_IMAGEMAGICK_BIN                                       | --imagemagick-bin         | convert                                  | ImageMagick CLI `COMMAND` for image file conversion                                                       |
+| PHOTOPRISM_IMAGEMAGICK_EXCLUDE, PHOTOPRISM_IMAGEMAGICK_BLACKLIST | --imagemagick-exclude     | heif, heic, heics, avif, avifs, jxl, thm | file `EXTENSIONS` not to be used with ImageMagick                                                         |
+| PHOTOPRISM_HEIFCONVERT_BIN                                       | --heifconvert-bin         | heif-dec                                 | libheif HEIC image conversion `COMMAND`                                                                   |
+| PHOTOPRISM_RSVGCONVERT_BIN                                       | --rsvgconvert-bin         | rsvg-convert                             | librsvg SVG graphics conversion `COMMAND` *plus*                                                          |
+| PHOTOPRISM_HEIFCONVERT_ORIENTATION                               | --heifconvert-orientation | keep                                     | Exif `ORIENTATION` of images generated with libheif (keep, reset)                                         |
 
 ### Preview Images
 
-| Environment                    | CLI Flag              | Default | Description                                                                  |
-|:-------------------------------|:----------------------|:--------|:-----------------------------------------------------------------------------|
-| PHOTOPRISM_THUMB_LIBRARY       | --thumb-library       | auto    | image processing `LIBRARY` to be used for generating thumbnails (auto, vips) |
-| PHOTOPRISM_THUMB_COLOR         | --thumb-color         | auto    | standard color `PROFILE` for thumbnails (auto, preserve, srgb, none)         |
-| PHOTOPRISM_THUMB_SIZE          | --thumb-size          | 1920    | maximum size of pre-generated thumbnails in `PIXELS` (720-15360)             |
-| PHOTOPRISM_THUMB_SIZE_UNCACHED | --thumb-size-uncached | 7680    | maximum size of thumbnails generated on demand in `PIXELS` (720-15360)       |
-| PHOTOPRISM_THUMB_UNCACHED      | --thumb-uncached      | false   | generates missing thumbnails on demand (high memory and cpu usage)           |
+| Environment                    | CLI Flag              | Default | Description                                                                                                        |
+|:-------------------------------|:----------------------|:--------|:-------------------------------------------------------------------------------------------------------------------|
+| PHOTOPRISM_THUMB_LIBRARY       | --thumb-library       | auto    | image processing `LIBRARY` to be used for generating thumbnails (auto, vips)                                       |
+| PHOTOPRISM_THUMB_COLOR         | --thumb-color         | auto    | standard color `PROFILE` for thumbnails (auto, preserve, srgb, none)                                               |
+| PHOTOPRISM_THUMB_SIZE          | --thumb-size          | 1920    | maximum size of pre-generated thumbnails in `PIXELS` (720-15360)                                                   |
+| PHOTOPRISM_THUMB_SIZE_UNCACHED | --thumb-size-uncached | 7680    | maximum size of thumbnails generated on demand in `PIXELS` (720-15360)                                             |
+| PHOTOPRISM_THUMB_SIZE_FACE     | --thumb-size-face     | 4096    | maximum size in `PIXELS` (720-15360) of the source rendered on demand so face crops are not upscaled, 0 to disable |
+| PHOTOPRISM_THUMB_UNCACHED      | --thumb-uncached      | false   | generates missing thumbnails on demand (high memory and cpu usage)                                                 |
 
 ### Image Quality
 
@@ -286,31 +289,38 @@
 | PHOTOPRISM_VISION_FILTER   | --vision-filter   | public:true | vision worker search `FILTER` applied to scheduled runs (same syntax as photoprism vision run)                                    |
 | PHOTOPRISM_DETECT_NSFW     | --detect-nsfw     | false       | flags newly added pictures as private if they might be offensive (uses the configured NSFW model; built-in TensorFlow by default) |
 | PHOTOPRISM_XMP_FACES       | --xmp-faces       | false       | imports face regions and names from XMP metadata as people markers                                                                |
+| PHOTOPRISM_FACE_RUN        | --face-run        | auto        | `WHEN` face detection and recognition should run (auto, always, on-index, newly-indexed, on-schedule, on-demand, manual, never)   |
 
 ### Face Recognition
 
 !!! info ""
-    A reasonable range for the similarity distance is between 0.60 and 0.85, with higher values resulting in more aggressive clustering and more false positives. To cluster a smaller number of faces, reduce the core to 3 or 2 similar faces. After changing any of the clustering parameters, it is **strongly recommended** that you run the "photoprism faces reset" command in a terminal to remove existing clusters and mappings, as otherwise inconsistencies may result in unexpected behavior or errors.
+    The distance thresholds default to values calibrated for the configured face model, so leaving them unset is recommended: a range that suits one embedding model does not transfer to another. Higher values cluster more aggressively and produce more false positives. To cluster a smaller number of faces, reduce the core to 3 or 2 similar faces. After changing any of the clustering parameters, run "photoprism faces update --force" so existing clusters are recalculated; changing the face model instead requires "photoprism faces migrate".
 
 We recommend that only advanced users change these parameters:
 
-| Environment                      | CLI Flag                | Default | Description                                                             |
-|:---------------------------------|:------------------------|:--------|:------------------------------------------------------------------------|
-| PHOTOPRISM_FACE_ENGINE           | --face-engine           | auto    | face detection engine `NAME` (auto, onnx)                               |
-| PHOTOPRISM_FACE_ENGINE_THREADS   | --face-engine-threads   | 0       | face detection thread `COUNT` (0 uses half the available CPU cores)     |
-| PHOTOPRISM_FACE_SIZE             | --face-size             | 25      | minimum size of faces in `PIXELS` (20-10000)                            |
-| PHOTOPRISM_FACE_SCORE            | --face-score            | 9       | minimum face `QUALITY` score (1-100)                                    |
-| PHOTOPRISM_FACE_OVERLAP          | --face-overlap          | 42      | face area overlap threshold in `PERCENT` (1-100)                        |
-| PHOTOPRISM_FACE_CLUSTER_SIZE     | --face-cluster-size     | 60      | minimum size of automatically clustered faces in `PIXELS` (20-10000)    |
-| PHOTOPRISM_FACE_CLUSTER_SCORE    | --face-cluster-score    | 20      | minimum `QUALITY` score of automatically clustered faces (1-100)        |
-| PHOTOPRISM_FACE_CLUSTER_CORE     | --face-cluster-core     | 4       | `NUMBER` of faces forming a cluster core (1-100)                        |
-| PHOTOPRISM_FACE_CLUSTER_DIST     | --face-cluster-dist     | 0.64    | similarity `DISTANCE` of faces forming a cluster core (0.1-1.5)         |
-| PHOTOPRISM_FACE_CLUSTER_RADIUS   | --face-cluster-radius   | 0.42    | maximum cluster `RADIUS` accepted for automatic matches (0.1-1.5)       |
-| PHOTOPRISM_FACE_COLLISION_DIST   | --face-collision-dist   | 0.05    | minimum collision discrimination `DISTANCE` (0.01-1)                    |
-| PHOTOPRISM_FACE_EPSILON_DIST     | --face-epsilon-dist     | 0.01    | collision tolerance `DELTA` appended to max match distances (0.001-0.1) |
-| PHOTOPRISM_FACE_MATCH_DIST       | --face-match-dist       | 0.4     | similarity `OFFSET` for matching faces with existing clusters (0.1-1.5) |
-| PHOTOPRISM_FACE_SKIP_CHILDREN    | --face-skip-children    | false   | skips automatic matching of child face embeddings                       |
-| PHOTOPRISM_FACE_ALLOW_BACKGROUND | --face-allow-background | false   | allows matching of probable background embeddings                       |
+| Environment                        | CLI Flag                  | Default                                                         | Description                                                                                                                                                                           |
+|:-----------------------------------|:--------------------------|:----------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PHOTOPRISM_FACE_DETECTOR           | --face-detector           | yunet                                                           | face detection model `NAME` (auto, yunet, none), derived from the face model unless named                                                                                             |
+| PHOTOPRISM_FACE_DETECTOR_THREADS   | --face-detector-threads   | auto                                                            | face detection thread `COUNT` per indexing worker, derived from the CPU cores when unset                                                                                              |
+| PHOTOPRISM_FACE_SIZE               | --face-size               | 25                                                              | minimum size of faces in `PIXELS` (10-10000)                                                                                                                                          |
+| PHOTOPRISM_FACE_SIZE_RETRY         | --face-size-retry         | 10 (20 where a crop can reach no further than 1920, off at 720) | minimum size of faces in `PIXELS` when a picture would otherwise have none, -1 to disable                                                                                             |
+| PHOTOPRISM_FACE_SCORE              | --face-score              | 65                                                              | minimum face `QUALITY` score (1-100), replacing the detector's own calibrated cutoff, -1 disables the check                                                                           |
+| PHOTOPRISM_FACE_MIGRATE_SIZE       | --face-migrate-size       | 10                                                              | minimum size of faces in `PIXELS` while a migration re-detects them, which is where a marker an earlier detector placed is found or lost                                              |
+| PHOTOPRISM_FACE_MIGRATE_SCORE      | --face-migrate-score      | 50                                                              | minimum face `QUALITY` score (1-100) while a migration re-detects them, -1 disables the check                                                                                         |
+| PHOTOPRISM_FACE_OVERLAP            | --face-overlap            | 42                                                              | face area overlap threshold in `PERCENT` (1-100)                                                                                                                                      |
+| PHOTOPRISM_FACE_MODEL              | --face-model              | sface                                                           | face embedding model `NAME` (auto, sface, none), detected from the library unless named, and changed with photoprism faces migrate                                                    |
+| PHOTOPRISM_FACE_MODEL_THREADS      | --face-model-threads      | auto                                                            | face embedding thread `COUNT`, derived from the CPU cores when unset                                                                                                                  |
+| PHOTOPRISM_FACE_CLUSTER_SIZE       | --face-cluster-size       | 112                                                             | minimum size of automatically clustered faces in `PIXELS` of the image their embedding was sampled from (20-10000), calibrated per face model when unset                              |
+| PHOTOPRISM_FACE_CLUSTER_SCORE      | --face-cluster-score      | 85                                                              | minimum `QUALITY` score of automatically clustered faces (1-100), overriding the bar calibrated per detector, -1 disables the check                                                   |
+| PHOTOPRISM_FACE_CLUSTER_CORE       | --face-cluster-core       | 5                                                               | `NUMBER` of faces forming a cluster core (2-100)                                                                                                                                      |
+| PHOTOPRISM_FACE_CLUSTER_CORE_RETRY | --face-cluster-core-retry | 4 (off where face-cluster-core is below 5)                      | `NUMBER` of faces forming a cluster core in a second pass over what matching left unclustered, -1 to disable                                                                          |
+| PHOTOPRISM_FACE_CLUSTER_DIST       | --face-cluster-dist       | 0.72                                                            | similarity `DISTANCE` of faces forming a cluster core (collision distance to 1.25), calibrated per face model when unset                                                              |
+| PHOTOPRISM_FACE_CLUSTER_RADIUS     | --face-cluster-radius     | 0.7                                                             | maximum cluster `RADIUS` accepted for automatic matches, calibrated per face model when unset; radius plus match distance may not exceed 1.25                                         |
+| PHOTOPRISM_FACE_CLUSTER_PERCENTILE | --face-cluster-percentile | 95                                                              | `PERCENTILE` of the member distances a cluster's radius is derived from (1-100), where 100 uses the maximum and lets one loose face decide how far the cluster reaches                |
+| PHOTOPRISM_FACE_MATCH_DIST         | --face-match-dist         | 0.25                                                            | similarity `OFFSET` for matching faces with existing clusters, calibrated per face model when unset; radius plus match distance may not exceed 1.25                                   |
+| PHOTOPRISM_FACE_MATCH_MARGIN       | --face-match-margin       | 0.01                                                            | minimum `DISTANCE` by which the nearest cluster must beat the runner-up, leaving a face between two people unassigned instead of guessing, 0 reads as unset and -1 disables the check |
+| PHOTOPRISM_FACE_COLLISION_DIST     | --face-collision-dist     | 0.05                                                            | minimum collision discrimination `DISTANCE` (greater than 0, up to 1), the same for every face model                                                                                  |
+| PHOTOPRISM_FACE_EPSILON_DIST       | --face-epsilon-dist       | 0.001                                                           | collision tolerance `DELTA` appended to max match distances (up to 0.01), the same for every face model; twice it is the distance at which a colliding cluster is retired for good    |
 
 ### Daemon Mode
 

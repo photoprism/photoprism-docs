@@ -32,7 +32,7 @@ What's new?
 - People: [Added a confirmation before a typed name creates a new person](https://github.com/photoprism/photoprism/commit/ddcbf3a1c)
 - People: [Added a Verified option that keeps a person when face clusters are reset](https://github.com/photoprism/photoprism/commit/b0c23316c)
 - People: [Added a date of birth to the Edit Person dialog](https://github.com/photoprism/photoprism/commit/1e99fdffa)
-- People: [Added Private and Hidden options that hide a person's name and face](https://docs.photoprism.app/user-guide/organize/people/#private-hidden-people)
+- People: [Added Private and Hidden options to hide names and face regions](https://docs.photoprism.app/user-guide/organize/people/#private-hidden-people)
 - People: [Fixed photo counts not being updated after face recognition](https://github.com/photoprism/photoprism/commit/0281278df)
 - People: [Fixed some clusters not being shown on the People pages](https://github.com/photoprism/photoprism/commit/afeddb6b6)
 - People: [Fixed naming a single face not finding that person's other photos](https://github.com/photoprism/photoprism/commit/f1ef0bf55)

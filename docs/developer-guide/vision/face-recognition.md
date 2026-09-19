@@ -118,14 +118,14 @@ Detection and embedding always run together, so one schedule covers both.
 
 ### Detection Settings
 
-| Environment Variable             | CLI Flag                | Default                       | Description                                                                                                    |
-|----------------------------------|-------------------------|-------------------------------|----------------------------------------------------------------------------------------------------------------|
-| PHOTOPRISM_FACE_DETECTOR         | --face-detector         | *(from the face model)*       | Detection model (`auto`, `none`, `yunet`).                                                                     |
-| PHOTOPRISM_FACE_DETECTOR_THREADS | --face-detector-threads | `NumCPU()`/index workers (≥1) | ONNX threads per detection session; one session runs per indexing worker.                                      |
-| PHOTOPRISM_FACE_SIZE             | --face-size             | 25                            | Minimum face size in `PIXELS` (10-10000), measured on the detection thumbnail.                                 |
-| PHOTOPRISM_FACE_SIZE_RETRY       | --face-size-retry       | *(from the thumbnails)*       | Minimum face size in `PIXELS` for the second detection pass, used only when a picture would have none.         |
-| PHOTOPRISM_FACE_SCORE            | --face-score            | *(from the detector)*         | Minimum face `QUALITY` score (1-100), **replacing** the detector's calibrated cutoff; `-1` disables the check. |
-| PHOTOPRISM_FACE_OVERLAP          | --face-overlap          | 42                            | Maximum allowed IoU when deduplicating markers.                                                                |
+| Environment Variable             | CLI Flag                | Default                                                         | Description                                                                                                 |
+|----------------------------------|-------------------------|-----------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|
+| PHOTOPRISM_FACE_DETECTOR         | --face-detector         | yunet                                                           | face detection model `NAME` (auto, yunet, none), derived from the face model unless named                   |
+| PHOTOPRISM_FACE_DETECTOR_THREADS | --face-detector-threads | auto                                                            | face detection thread `COUNT` per indexing worker, derived from the CPU cores when unset                    |
+| PHOTOPRISM_FACE_SIZE             | --face-size             | 25                                                              | minimum size of faces in `PIXELS` (10-10000)                                                                |
+| PHOTOPRISM_FACE_SIZE_RETRY       | --face-size-retry       | 10 (20 where a crop can reach no further than 1920, off at 720) | minimum size of faces in `PIXELS` when a picture would otherwise have none, -1 to disable                   |
+| PHOTOPRISM_FACE_SCORE            | --face-score            | 65                                                              | minimum face `QUALITY` score (1-100), replacing the detector's own calibrated cutoff, -1 disables the check |
+| PHOTOPRISM_FACE_OVERLAP          | --face-overlap          | 42                                                              | face area overlap threshold in `PERCENT` (1-100)                                                            |
 
 [`PHOTOPRISM_FACE_SCORE`](#detection-settings) replaces the calibrated cutoff rather than being applied after it, so it can loosen detection as well as tighten it. The cutoff lives in the inference session, so a lower value genuinely admits detections the detector would otherwise never emit. It exists for calibration work; leave it unset unless you are measuring something.
 
@@ -133,19 +133,19 @@ Detection and embedding always run together, so one schedule covers both.
 
 Re-detection during `photoprism faces migrate` runs at its own floors, because keeping an existing marker and creating a new one are different trades — see [Migrate Face Embeddings](cli.md#migrate-face-embeddings).
 
-| Environment Variable          | CLI Flag             | Default               | Description                                                                                 |
-|-------------------------------|----------------------|-----------------------|---------------------------------------------------------------------------------------------|
-| PHOTOPRISM_FACE_MIGRATE_SIZE  | --face-migrate-size  | 10                    | Minimum face size in `PIXELS` while a migration re-detects.                                 |
-| PHOTOPRISM_FACE_MIGRATE_SCORE | --face-migrate-score | *(from the detector)* | Minimum face `QUALITY` score (1-100) while a migration re-detects; `-1` disables the check. |
+| Environment Variable          | CLI Flag             | Default | Description                                                                                                                              |
+|-------------------------------|----------------------|---------|------------------------------------------------------------------------------------------------------------------------------------------|
+| PHOTOPRISM_FACE_MIGRATE_SIZE  | --face-migrate-size  | 10      | minimum size of faces in `PIXELS` while a migration re-detects them, which is where a marker an earlier detector placed is found or lost |
+| PHOTOPRISM_FACE_MIGRATE_SCORE | --face-migrate-score | 50      | minimum face `QUALITY` score (1-100) while a migration re-detects them, -1 disables the check                                            |
 
 The size floor is lower than `PHOTOPRISM_FACE_SIZE` on purpose: a marker's size is recorded in pixels of the thumbnail it was detected in, and an earlier detector may have fallen back to a larger thumbnail, so a marker carried over from one can sit well below the ordinary floor — which no score recovers.
 
 ### Embedding Settings
 
-| Environment Variable          | CLI Flag             | Default           | Description                                                                            |
-|-------------------------------|----------------------|-------------------|----------------------------------------------------------------------------------------|
-| PHOTOPRISM_FACE_MODEL         | --face-model         | *(detected once)* | Embedding model (`auto`, `none`, `sface`; `facenet` and `auraface` are also accepted). |
-| PHOTOPRISM_FACE_MODEL_THREADS | --face-model-threads | `NumCPU()`/2 (≥1) | ONNX threads for embedding, which runs one session in total behind the model lock.     |
+| Environment Variable          | CLI Flag             | Default | Description                                                                                                                        |
+|-------------------------------|----------------------|---------|------------------------------------------------------------------------------------------------------------------------------------|
+| PHOTOPRISM_FACE_MODEL         | --face-model         | sface   | face embedding model `NAME` (auto, sface, none), detected from the library unless named, and changed with photoprism faces migrate |
+| PHOTOPRISM_FACE_MODEL_THREADS | --face-model-threads | auto    | face embedding thread `COUNT`, derived from the CPU cores when unset                                                               |
 
 !!! info ""
     `PHOTOPRISM_FACE_ENGINE_THREADS` is **deprecated** and set both thread counts at once. They derive different defaults because detection runs one session per indexing worker while embedding runs a single shared session, so a value that suits one does not suit the other.
@@ -159,17 +159,17 @@ Face **scheduling** is configured through `PHOTOPRISM_FACE_RUN` alone — see [R
 !!! danger ""
     It is strongly recommended that you run `photoprism faces reset` in a terminal to remove existing clusters and markers after changing any of the clustering parameters, otherwise inconsistencies may cause unexpected behavior or errors.
 
-| Environment Variable               | CLI Flag                  | Default               | Description                                                                                                                                                         |
-|------------------------------------|---------------------------|-----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| PHOTOPRISM_FACE_CLUSTER_SIZE       | --face-cluster-size       | *(from the model)*    | Minimum size of automatically clustered faces in `PIXELS` **of the image their embedding was sampled from** (20-10000).                                             |
-| PHOTOPRISM_FACE_CLUSTER_SCORE      | --face-cluster-score      | *(from the detector)* | Minimum `QUALITY` score of automatically clustered faces (1-100).                                                                                                   |
-| PHOTOPRISM_FACE_CLUSTER_CORE       | --face-cluster-core       | 5                     | `NUMBER` of faces forming a cluster core (2-100), and half the clustering trigger.                                                                                  |
-| PHOTOPRISM_FACE_CLUSTER_CORE_RETRY | --face-cluster-core-retry | *(derived)*           | `NUMBER` of faces forming a cluster core in a **second pass** over what matching left unclustered; `-1` disables it.                                                |
-| PHOTOPRISM_FACE_CLUSTER_DIST       | --face-cluster-dist       | *(from the model)*    | Similarity `DISTANCE` of faces forming a cluster core.                                                                                                              |
-| PHOTOPRISM_FACE_CLUSTER_RADIUS     | --face-cluster-radius     | *(from the model)*    | Maximum cluster `RADIUS` accepted for automatic matches.                                                                                                            |
-| PHOTOPRISM_FACE_CLUSTER_PERCENTILE | --face-cluster-percentile | 95                    | `PERCENTILE` of the member distances a cluster's radius is derived from (1-100); 100 uses the maximum and lets one loose face decide how far the cluster reaches.   |
-| PHOTOPRISM_FACE_MATCH_DIST         | --face-match-dist         | *(from the model)*    | Similarity `OFFSET` for matching faces with existing clusters.                                                                                                      |
-| PHOTOPRISM_FACE_MATCH_MARGIN       | --face-match-margin       | 0.01                  | Minimum `DISTANCE` by which the nearest cluster must beat the runner-up, leaving a face between two people unassigned instead of guessing; `-1` disables the check. |
+| Environment Variable               | CLI Flag                  | Default                                    | Description                                                                                                                                                                           |
+|------------------------------------|---------------------------|--------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PHOTOPRISM_FACE_CLUSTER_SIZE       | --face-cluster-size       | 112                                        | minimum size of automatically clustered faces in `PIXELS` of the image their embedding was sampled from (20-10000), calibrated per face model when unset                              |
+| PHOTOPRISM_FACE_CLUSTER_SCORE      | --face-cluster-score      | 85                                         | minimum `QUALITY` score of automatically clustered faces (1-100), overriding the bar calibrated per detector, -1 disables the check                                                   |
+| PHOTOPRISM_FACE_CLUSTER_CORE       | --face-cluster-core       | 5                                          | `NUMBER` of faces forming a cluster core (2-100)                                                                                                                                      |
+| PHOTOPRISM_FACE_CLUSTER_CORE_RETRY | --face-cluster-core-retry | 4 (off where face-cluster-core is below 5) | `NUMBER` of faces forming a cluster core in a second pass over what matching left unclustered, -1 to disable                                                                          |
+| PHOTOPRISM_FACE_CLUSTER_DIST       | --face-cluster-dist       | 0.72                                       | similarity `DISTANCE` of faces forming a cluster core (collision distance to 1.25), calibrated per face model when unset                                                              |
+| PHOTOPRISM_FACE_CLUSTER_RADIUS     | --face-cluster-radius     | 0.7                                        | maximum cluster `RADIUS` accepted for automatic matches, calibrated per face model when unset; radius plus match distance may not exceed 1.25                                         |
+| PHOTOPRISM_FACE_CLUSTER_PERCENTILE | --face-cluster-percentile | 95                                         | `PERCENTILE` of the member distances a cluster's radius is derived from (1-100), where 100 uses the maximum and lets one loose face decide how far the cluster reaches                |
+| PHOTOPRISM_FACE_MATCH_DIST         | --face-match-dist         | 0.25                                       | similarity `OFFSET` for matching faces with existing clusters, calibrated per face model when unset; radius plus match distance may not exceed 1.25                                   |
+| PHOTOPRISM_FACE_MATCH_MARGIN       | --face-match-margin       | 0.01                                       | minimum `DISTANCE` by which the nearest cluster must beat the runner-up, leaving a face between two people unassigned instead of guessing, 0 reads as unset and -1 disables the check |
 
 Distance thresholds are **calibrated per embedding model** and resolved from the model in use when left unset, because the models do not share a vector space — a distance that separates two people under one model merges them under another. The values below are what each model resolves to:
 

@@ -95,7 +95,7 @@ Restart the instance once it has finished, and see [Migrate Face Embeddings](cli
 ## Configuration
 
 !!! example ""
-    We recommend that only advanced users and developers change these parameters. All face-related environment variables and CLI flags are listed in [Config Options › Face Recognition](../../getting-started/config-options.md#face-recognition); this page only highlights the knobs most relevant to detector and model behavior.
+    We recommend that only advanced users and developers change these parameters. All face-related environment variables and CLI flags are listed in [Config Options › Face Recognition](../../getting-started/config-options.md#face-recognition); the tables below repeat them with the same defaults, grouped by the stage they affect.
 
 ### Run Scheduling
 

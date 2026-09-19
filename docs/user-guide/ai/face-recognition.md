@@ -85,7 +85,7 @@ This normalization ensures that Euclidean distance comparisons are equivalent to
 ## Config Options
 
 !!! example ""
-    We recommend that only advanced users and developers change these parameters.
+    We recommend that only advanced users and developers change these parameters. The tables below cover the ones most often adjusted; [Config Options › Face Recognition](../../getting-started/config-options.md#face-recognition) lists them all.
 
 ### Detection Settings
 

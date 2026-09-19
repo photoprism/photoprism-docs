@@ -9,7 +9,7 @@
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions/#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview) -->
 
 ### September 19, 2026
-<span class="build">Build 260919-28c46a1165</span>
+<span class="build">Build 260919-28c46a116</span>
 
 This release introduces new detection and embedding models for face recognition: more faces are found, including small ones in group pictures, and clustering now keeps different people apart instead of grouping them as one. Existing libraries keep their current model until you run [`photoprism faces migrate`](https://docs.photoprism.app/user-guide/ai/face-recognition/#upgrading-an-existing-library), which re-embeds every face and keeps the names you have already assigned.
 
@@ -39,7 +39,7 @@ What's new?
 - Thumbs: [Improved oversized preview requests to return the largest available size](https://github.com/photoprism/photoprism/issues/5780)
 - Thumbs: [Improved error messages to be logged as a single readable line](https://github.com/photoprism/photoprism/issues/5778)
 - Covers: [Improved album, label, and folder covers to load from the thumbs cache](https://github.com/photoprism/photoprism/issues/5779)
-- Metadata: [Improved the docs to include complete XMP and DCMI tags](https://github.com/photoprism/photoprism/issues/2260)
+- Metadata: [Improved the docs to include complete XMP and DCMI tags](https://www.photoprism.app/kb/metadata/)
 - Config: [Added a `thumb-size-face` option that limits the sources rendered for face crops](https://docs.photoprism.app/getting-started/config-options/#face-recognition)
 - Config: [Added a `face-cluster-core-retry` option to control the second clustering pass](https://docs.photoprism.app/getting-started/config-options/#face-recognition)
 - CLI: [Added `faces migrate` to switch a library to a new face model](https://docs.photoprism.app/user-guide/ai/face-recognition/#upgrading-an-existing-library)

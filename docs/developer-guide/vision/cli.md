@@ -159,7 +159,7 @@ docker compose exec photoprism photoprism faces status
 
 Above the tables, the report states in prose whether detection and recognition are enabled, which detector and model are in force, and — when no clusters are forming — **why** automatic clustering is waiting. It distinguishes two cases that look identical from the outside:
 
-- **Not enough new markers yet.** The report names how many are needed, how many there are, and how many clear `FACE_CLUSTER_SIZE` and the per-detector score bar.
+- **Not enough new markers yet.** The report names how many are needed, how many there are, and how many clear [`PHOTOPRISM_FACE_CLUSTER_SIZE`](face-recognition.md#clustering-settings) and the per-detector score bar.
 - **Markers exist, but none is newer than the last cluster.** An automatic pass counts only markers added since the newest cluster it produced, so a library in this state never restarts on its own. The report names `photoprism faces update --force` as the fix.
 
 ### Inspect People, Clusters, and Markers
@@ -351,13 +351,13 @@ docker compose exec photoprism photoprism faces migrate --dry-run
 
 The report names how many markers are valid, invalid, already on the target, unlinked, or identified manually, how many are assigned to a person and keep that assignment, and how many are too small or too low-scoring to seed a cluster. It warns separately when markers cannot be re-embedded because their file is missing or unreadable, and when the originals path is empty or unreadable — which would otherwise look like a clean run right up until every file fails.
 
-A dry run performs **no detection**: it answers from index queries alone and returns before any file is read, so `FACE_MIGRATE_SCORE` and `FACE_MIGRATE_SIZE` have no effect on it.
+A dry run performs **no detection**: it answers from index queries alone and returns before any file is read, so [`PHOTOPRISM_FACE_MIGRATE_SCORE`](face-recognition.md#migration-settings) and [`PHOTOPRISM_FACE_MIGRATE_SIZE`](face-recognition.md#migration-settings) have no effect on it.
 
 #### Re-Detection, and What a Migration Can Lose
 
 A model that consumes landmark-aligned crops needs landmarks, and a marker an earlier detector placed does not carry any the current detector would have produced. So a migration to such a model **re-detects** each file and keeps a marker's vector only when the detector finds that face again.
 
-Re-detection runs at its own floors, `FACE_MIGRATE_SIZE` and `FACE_MIGRATE_SCORE`, rather than at the indexing ones. The trade is inverted here: at index time a false positive costs a thumbnail to reject, while during a migration a miss costs a curated marker its vector. A re-found marker also has its `score`, `size`, `landmarks_json`, and `detect_model` rewritten together, because the clustering bar is looked up by detector — a marker relabeled with the new detector while keeping the old one's score would be judged against a calibration it was never scored against.
+Re-detection runs at its own floors, `PHOTOPRISM_FACE_MIGRATE_SIZE` and `PHOTOPRISM_FACE_MIGRATE_SCORE`, rather than at the indexing ones. The trade is inverted here: at index time a false positive costs a thumbnail to reject, while during a migration a miss costs a curated marker its vector. A re-found marker also has its `score`, `size`, `landmarks_json`, and `detect_model` rewritten together, because the clustering bar is looked up by detector — a marker relabeled with the new detector while keeping the old one's score would be judged against a calibration it was never scored against.
 
 Markers a person drew or named by hand keep their assignment either way; only the vector is lost, and only where re-detection failed.
 

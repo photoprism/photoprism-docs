@@ -10,7 +10,7 @@ Detection and embedding use separate models, so each can be chosen and upgraded 
 
 ## Upgrading an Existing Library
 
-Libraries indexed before the current [embedding model](#face-embeddings) became available keep the model they already use, because vectors produced by different models cannot be compared: switching automatically would make every face you have already assigned to a person incomparable with newly indexed ones. Setting `FACE_MODEL` does not change it either.
+Libraries indexed before the current [embedding model](#face-embeddings) became available keep the model they already use, because vectors produced by different models cannot be compared: switching automatically would make every face you have already assigned to a person incomparable with newly indexed ones. Setting [`PHOTOPRISM_FACE_MODEL`](#detection-settings) does not change it either.
 
 `photoprism faces migrate` is what changes it. It re-embeds every face, keeps the people you have already identified, and records the new model as the one in use. It defaults to the model this release supports, so an ordinary upgrade needs no target — run it [in a terminal](https://docs.photoprism.app/getting-started/docker-compose/#opening-a-terminal) with `--dry-run` first to see what it would cover:
 
@@ -19,7 +19,7 @@ photoprism faces migrate --dry-run # report the scope, change nothing
 photoprism faces migrate           # re-embed every face
 ```
 
-Expect it to take a while on a large library. Name a different target with `--to` only if you are migrating somewhere other than the model this release supports — or if this instance has `FACE_MODEL` set to `none`, which is kept rather than overridden, so the target has to be named.
+Expect it to take a while on a large library. Name a different target with `--to` only if you are migrating somewhere other than the model this release supports — or if this instance has `PHOTOPRISM_FACE_MODEL` set to `none`, which is kept rather than overridden, so the target has to be named.
 
 !!! info ""
     **Restart your instance once the migration has finished.** It records the new model in `options.yml`, which a running instance does not reload, so face embedding work stays paused until it starts again. You do not need to stop the instance beforehand: a migration takes a lock the instance reads, so indexing and vision wait for it and edits to people are refused while it runs. Start it when no indexing or import is already under way, though — that lock is checked when such a run begins, not while one is in progress.
@@ -53,14 +53,14 @@ PhotoPrism ships with **YuNet**, a compact face detection model that runs on the
 - Consumes 720 px thumbnails (model input 640 px)
 - Schedules work on the meta/vision workers
 
-The detector is selected with `FACE_DETECTOR`. When you leave it unset, it is derived from the face model in use, so a matching combination is the default. The prebuilt runtime targets glibc ≥ 2.28 on `amd64` / `arm64` architectures.
+The detector is selected with [`PHOTOPRISM_FACE_DETECTOR`](#detection-settings). When you leave it unset, it is derived from the face model in use, so a matching combination is the default. The prebuilt runtime targets glibc ≥ 2.28 on `amd64` / `arm64` architectures.
 
 !!! info ""
-    `FACE_ENGINE` is **deprecated**: it selected a runtime rather than a model. Only `FACE_ENGINE=none` still has an effect, and `FACE_DETECTOR` overrides it. Existing configurations keep working.
+    `PHOTOPRISM_FACE_ENGINE` is **deprecated**: it selected a runtime rather than a model. Only `PHOTOPRISM_FACE_ENGINE=none` still has an effect, and `PHOTOPRISM_FACE_DETECTOR` overrides it. Existing configurations keep working.
 
 ### Small Faces in Group Pictures
 
-`FACE_SIZE` is measured on the 720 px thumbnail used for detection, not on the original picture. In a crowded photo this can push every face below the minimum, so PhotoPrism automatically runs a second pass at a smaller minimum size when a picture would otherwise yield no faces at all. Set `FACE_SIZE_RETRY` to `-1` to switch that off.
+[`PHOTOPRISM_FACE_SIZE`](#detection-settings) is measured on the 720 px thumbnail used for detection, not on the original picture. In a crowded photo this can push every face below the minimum, so PhotoPrism automatically runs a second pass at a smaller minimum size when a picture would otherwise yield no faces at all. Set [`PHOTOPRISM_FACE_SIZE_RETRY`](#detection-settings) to `-1` to switch that off.
 
 ## Face Embeddings
 
@@ -72,7 +72,7 @@ After detection, PhotoPrism generates an embedding vector that characterizes eac
 
 New libraries use **SFace**, which produces 128-dimensional vectors. Libraries created before it was available keep **FaceNet**, which produces 512-dimensional vectors, because switching would make every face already assigned to a person incomparable with newly indexed ones.
 
-Setting `FACE_MODEL` does not change the model of a library that already has one — use `photoprism faces migrate` for that, which re-embeds every face and keeps your person assignments. See [Upgrading an Existing Library](#upgrading-an-existing-library) above.
+Setting `PHOTOPRISM_FACE_MODEL` does not change the model of a library that already has one — use `photoprism faces migrate` for that, which re-embeds every face and keeps your person assignments. See [Upgrading an Existing Library](#upgrading-an-existing-library) above.
 
 All face embeddings are L2-normalized to unit length (‖x‖₂ = 1) at:
 
@@ -103,13 +103,14 @@ This normalization ensures that Euclidean distance comparisons are equivalent to
 !!! info ""
     After changing any of the clustering parameters, run `photoprism faces update --force` in a terminal so that a pass runs at the new values instead of waiting for enough new faces. It applies them to the faces that are not yet in a cluster and matches every face against the clusters again; faces that already belong to one keep it, so run `photoprism faces reset` if you want the library regrouped from scratch. Changing the embedding model is a different operation and requires `photoprism faces migrate`.
 
-| Environment Variable          | CLI Flag             | Default               | Description                                                          |
-|-------------------------------|----------------------|-----------------------|----------------------------------------------------------------------|
-| PHOTOPRISM_FACE_CLUSTER_SIZE  | --face-cluster-size  | 112                   | Minimum size of automatically clustered faces in `PIXELS` (20-10000) |
-| PHOTOPRISM_FACE_CLUSTER_SCORE | --face-cluster-score | *(from the detector)* | Minimum `QUALITY` score of automatically clustered faces (1-100)     |
-| PHOTOPRISM_FACE_CLUSTER_CORE  | --face-cluster-core  | 5                     | `NUMBER` of faces forming a cluster core (2-100)                     |
-| PHOTOPRISM_FACE_CLUSTER_DIST  | --face-cluster-dist  | *(from the model)*    | Similarity `DISTANCE` of faces forming a cluster core                |
-| PHOTOPRISM_FACE_MATCH_DIST    | --face-match-dist    | *(from the model)*    | Similarity `OFFSET` for matching faces with existing clusters        |
+| Environment Variable          | CLI Flag             | Default               | Description                                                                                                   |
+|-------------------------------|----------------------|-----------------------|---------------------------------------------------------------------------------------------------------------|
+| PHOTOPRISM_FACE_CLUSTER_SIZE  | --face-cluster-size  | 112                   | Minimum size of automatically clustered faces in `PIXELS` (20-10000)                                          |
+| PHOTOPRISM_FACE_CLUSTER_SCORE | --face-cluster-score | *(from the detector)* | Minimum `QUALITY` score of automatically clustered faces (1-100)                                              |
+| PHOTOPRISM_FACE_CLUSTER_CORE  | --face-cluster-core  | 5                     | `NUMBER` of faces forming a cluster core (2-100)                                                              |
+| PHOTOPRISM_FACE_CLUSTER_DIST  | --face-cluster-dist  | *(from the model)*    | Similarity `DISTANCE` of faces forming a cluster core                                                         |
+| PHOTOPRISM_FACE_MATCH_DIST    | --face-match-dist    | *(from the model)*    | Similarity `OFFSET` for matching faces with existing clusters                                                 |
+| PHOTOPRISM_FACE_MATCH_MARGIN  | --face-match-margin  | 0.01                  | Minimum `DISTANCE` by which the nearest cluster must beat the runner-up, leaving an ambiguous face unassigned |
 
 The distance thresholds are calibrated for each embedding model and resolved automatically, because the models do not share a vector space — a distance that separates two people under one model can merge them under another.
 
@@ -117,7 +118,7 @@ The distance thresholds are calibrated for each embedding model and resolved aut
 
 - Change a distance threshold **relative to the value your model resolves to**, rather than carrying a number over from another model. A higher value is more aggressive and leads to larger clusters with more false positives.
 - To cluster a smaller number of faces, you can reduce the kernel to 3 or 2 similar faces.
-- Leave `FACE_DETECTOR` unset unless you have a reason to pin it, so detection stays matched to the embedding model.
+- Leave `PHOTOPRISM_FACE_DETECTOR` unset unless you have a reason to pin it, so detection stays matched to the embedding model.
 
 ## CLI Reference
 

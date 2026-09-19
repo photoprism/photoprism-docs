@@ -62,7 +62,7 @@ The model used for new libraries is a substantial improvement over the one Photo
 
 Face detection expects upright faces. The detection rate drops as a face is rotated in the image plane, and a face rotated by roughly 90° — someone lying down, or a picture taken with the camera held sideways and no matching orientation tag — is generally not detected at all.
 
-Because no face is reported in the first place, this cannot be compensated for by lowering `FACE_SIZE` or `FACE_SCORE`. Rotating the affected pictures so that they are displayed upright and then [re-indexing them](user-guide/library/originals.md) is the practical workaround.
+Because no face is reported in the first place, this cannot be compensated for by lowering [`PHOTOPRISM_FACE_SIZE`](user-guide/ai/face-recognition.md#detection-settings) or [`PHOTOPRISM_FACE_SCORE`](user-guide/ai/face-recognition.md#detection-settings). Rotating the affected pictures so that they are displayed upright and then [re-indexing them](user-guide/library/originals.md) is the practical workaround.
 
 ### Face Model After an Upgrade
 
@@ -73,8 +73,8 @@ Run [`photoprism faces migrate`](user-guide/ai/face-recognition.md#upgrading-an-
 A few related notes for upgrades:
 
 - Run `photoprism faces status` to see which model is in use, and whether anything is currently preventing faces from being clustered.
-- Run `photoprism faces update --force` after a migration, or whenever faces have been detected but no cluster has formed for them. It runs a clustering and matching pass regardless of how many faces are new, and matches every face against the existing clusters again. Faces that already belong to a cluster keep it, and faces below `FACE_CLUSTER_SIZE` are not clustered either way.
-- `FACE_CLUSTER_SIZE`, the minimum size a face must have to help form a new person, has been raised and is now measured on the picture the face was sampled from rather than on the detection thumbnail. A library with many small faces therefore forms fewer people than before. The faces themselves are still detected, displayed, and searchable, and you can assign them by hand.
+- Run `photoprism faces update --force` after a migration, or whenever faces have been detected but no cluster has formed for them. It runs a clustering and matching pass regardless of how many faces are new, and matches every face against the existing clusters again. Faces that already belong to a cluster keep it, and faces below [`PHOTOPRISM_FACE_CLUSTER_SIZE`](user-guide/ai/face-recognition.md#clustering-settings) are not clustered either way.
+- `PHOTOPRISM_FACE_CLUSTER_SIZE`, the minimum size a face must have to help form a new person, has been raised and is now measured on the picture the face was sampled from rather than on the detection thumbnail. A library with many small faces therefore forms fewer people than before. The faces themselves are still detected, displayed, and searchable, and you can assign them by hand.
 - The development-only options `--face-skip-children` and `--face-allow-background` have been removed. The matching environment variables are ignored, but an instance that still passes either as a **command-line flag** in its `compose.yaml` will not start, because unknown flags are rejected.
 
 ### Background Worker

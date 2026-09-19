@@ -26,7 +26,6 @@ What's new?
 - AI: [Added a `Normalize` option to keep compound label names whole](https://github.com/photoprism/photoprism/issues/5773)
 - AI: [Upgraded ONNX Runtime from v1.26.0 to v1.29.0](https://github.com/photoprism/photoprism/issues/5703)
 - People: [Improved clustering to separate people whose faces were grouped as one](https://github.com/photoprism/photoprism/issues/4669)
-- People: [Added an option to leave ambiguous faces unassigned instead of guessing](https://github.com/photoprism/photoprism/issues/4669)
 - People: [Added a confirmation before a typed name creates a new person](https://docs.photoprism.app/user-guide/organize/people/#assign-names-to-faces)
 - People: [Added Private and Hidden options to hide names and face regions](https://docs.photoprism.app/user-guide/organize/people/#private-hidden-people)
 - People: [Fixed two people being merged when reassigning a face](https://github.com/photoprism/photoprism/issues/5764)

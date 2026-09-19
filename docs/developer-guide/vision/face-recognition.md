@@ -1,6 +1,6 @@
 # Face Recognition
 
-**Last Updated:** September 15, 2026
+**Last Updated:** September 19, 2026
 
 To [recognize faces](https://docs.photoprism.app/user-guide/organize/people/), PhotoPrism uses a multi-stage AI pipeline that detects faces, generates embeddings, and clusters similar faces so they can be easily organized by person.
 
@@ -170,6 +170,8 @@ Face **scheduling** is configured through `PHOTOPRISM_FACE_RUN` alone — see [R
 | PHOTOPRISM_FACE_CLUSTER_PERCENTILE | --face-cluster-percentile | 95                                         | `PERCENTILE` of the member distances a cluster's radius is derived from (1-100), where 100 uses the maximum and lets one loose face decide how far the cluster reaches                |
 | PHOTOPRISM_FACE_MATCH_DIST         | --face-match-dist         | 0.25                                       | similarity `OFFSET` for matching faces with existing clusters, calibrated per face model when unset; radius plus match distance may not exceed 1.25                                   |
 | PHOTOPRISM_FACE_MATCH_MARGIN       | --face-match-margin       | 0.01                                       | minimum `DISTANCE` by which the nearest cluster must beat the runner-up, leaving a face between two people unassigned instead of guessing, 0 reads as unset and -1 disables the check |
+| PHOTOPRISM_FACE_COLLISION_DIST     | --face-collision-dist     | 0.05                                       | minimum collision discrimination `DISTANCE` (greater than 0, up to 1), the same for every face model                                                                                  |
+| PHOTOPRISM_FACE_EPSILON_DIST       | --face-epsilon-dist       | 0.001                                      | collision tolerance `DELTA` appended to max match distances (up to 0.01), the same for every face model; twice it is the distance at which a colliding cluster is retired for good    |
 
 Distance thresholds are **calibrated per embedding model** and resolved from the model in use when left unset, because the models do not share a vector space — a distance that separates two people under one model merges them under another. The values below are what each model resolves to:
 
@@ -191,7 +193,7 @@ Cluster radius plus match distance may not exceed 1.4, and a configured value ab
 
 The clustering score bar is taken from **the detector that scored each marker**, not from the detector currently configured. Detector scores are not comparable across models, and nothing recomputes a stored score, so judging an old marker by a new detector's bar would exclude it permanently for a calibration it was never scored against. Markers indexed before detector provenance was recorded fall back to a shared default of 20.
 
-`PHOTOPRISM_FACE_COLLISION_DIST` and `PHOTOPRISM_FACE_EPSILON_DIST` are listed in [Config Options › Face Recognition](../../getting-started/config-options.md#face-recognition). `PHOTOPRISM_FACE_MERGE_MAX_RETRY` limits how often the optimizer retries stubborn manual clusters (`0` for unlimited); it is read from the environment only and has no CLI flag, so it does not appear in that table. All three are described in the [package README](https://github.com/photoprism/photoprism/blob/develop/internal/ai/face/README.md).
+`PHOTOPRISM_FACE_MERGE_MAX_RETRY` limits how often the optimizer retries stubborn manual clusters (`0` for unlimited); it is read from the environment only and has no CLI flag, so it appears neither in the table above nor in [Config Options › Face Recognition](../../getting-started/config-options.md#face-recognition). It is described alongside the distance thresholds in the [package README](https://github.com/photoprism/photoprism/blob/develop/internal/ai/face/README.md).
 
 ### The Second Clustering Pass
 

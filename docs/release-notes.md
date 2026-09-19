@@ -12,9 +12,9 @@ This release introduces new detection and embedding models for face recognition:
 
 People whose names should remain private can now be [flagged as Private or Hidden](https://docs.photoprism.app/user-guide/organize/people/#private-hidden-people) to hide their names and face regions from non-privileged accounts, while their pictures remain visible.
 
-Elsewhere, [360° photos, videos, and fisheye DNG files from Insta360 cameras](https://github.com/photoprism/photoprism/issues/5711) can be viewed directly, [maps have moved to MapLibre GL JS v6](https://github.com/photoprism/photoprism/issues/5812), and the [default size limit has been raised to 5 GB](https://github.com/photoprism/photoprism/issues/5824) so that larger videos are indexed without changing the configuration.
+In addition, [360° photos, videos, and fisheye DNG files from Insta360 cameras](https://github.com/photoprism/photoprism/issues/5711) can be viewed directly, [maps have moved to MapLibre GL JS v6](https://github.com/photoprism/photoprism/issues/5812), and the [default size limit has been raised to 5 GB](https://github.com/photoprism/photoprism/issues/5824) so that larger videos are indexed without changing the configuration.
 
-A special thank you to all [our members](https://www.photoprism.app/editions/#compare), [contributors](https://docs.photoprism.app/developer-guide/pull-requests/), and [testers](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test) who helped make this release possible! 🌈
+A special thank you to all [our members](https://www.photoprism.app/editions/#compare) and [everyone who contributed](https://docs.photoprism.app/developer-guide/)! 🌈✨
 
 What's new?
 
@@ -22,42 +22,29 @@ What's new?
 - AI: [Improved facial recognition with new detection and embedding models](https://github.com/photoprism/photoprism/issues/4669) by [@omerdduran](https://github.com/omerdduran)
 - AI: [Added a `Normalize` option to keep compound label names whole](https://github.com/photoprism/photoprism/issues/5773)
 - AI: [Upgraded ONNX Runtime from v1.26.0 to v1.29.0](https://github.com/photoprism/photoprism/issues/5703)
-- AI: [Fixed faces being embedded from upscaled crops when a larger source was available](https://github.com/photoprism/photoprism/commit/49ce2d480)
-- AI: [Improved clustering to leave out faces enlarged from a smaller source](https://github.com/photoprism/photoprism/commit/d33f931ff)
-- UX: [Fixed the surface elevation order in three dark themes](https://github.com/photoprism/photoprism/commit/a14f9bec4)
 - People: [Improved clustering to separate people whose faces were grouped as one](https://github.com/photoprism/photoprism/issues/4669)
-- People: [Added a second clustering pass that groups people with fewer pictures](https://github.com/photoprism/photoprism/commit/fd51e5145)
-- People: [Improved person covers to show the largest and most confident face](https://github.com/photoprism/photoprism/commit/668cc6cc4)
 - People: [Added an option to leave ambiguous faces unassigned instead of guessing](https://github.com/photoprism/photoprism/issues/4669)
-- People: [Added a confirmation before a typed name creates a new person](https://github.com/photoprism/photoprism/commit/ddcbf3a1c)
-- People: [Added a Verified option that keeps a person when face clusters are reset](https://github.com/photoprism/photoprism/commit/b0c23316c)
-- People: [Added a date of birth to the Edit Person dialog](https://github.com/photoprism/photoprism/commit/1e99fdffa)
+- People: [Added a confirmation before a typed name creates a new person](https://docs.photoprism.app/user-guide/organize/people/#assign-names-to-faces)
 - People: [Added Private and Hidden options to hide names and face regions](https://docs.photoprism.app/user-guide/organize/people/#private-hidden-people)
-- People: [Fixed photo counts not being updated after face recognition](https://github.com/photoprism/photoprism/commit/0281278df)
-- People: [Fixed some clusters not being shown on the People pages](https://github.com/photoprism/photoprism/commit/afeddb6b6)
-- People: [Fixed naming a single face not finding that person's other photos](https://github.com/photoprism/photoprism/commit/f1ef0bf55)
-- People: [Fixed faces in high-resolution photos being skipped when forming clusters](https://github.com/photoprism/photoprism/commit/44a89db64)
 - People: [Fixed two people being merged when reassigning a face](https://github.com/photoprism/photoprism/issues/5764)
-- People: [Fixed fewer photos being matched after merging two people](https://github.com/photoprism/photoprism/commit/42e850585)
-- People: [Fixed clusters of the same person not being merged](https://github.com/photoprism/photoprism/commit/6a163f9a8)
 - People: [Improved error handling when updating counts](https://github.com/photoprism/photoprism/pull/5757) by [@keif888](https://github.com/keif888)
 - People: [Improved memory usage and performance when naming clusters](https://github.com/photoprism/photoprism/issues/3891)
 - People: [Improved the speed of face updates in very large libraries](https://github.com/photoprism/photoprism/issues/5393)
 - Places: [Upgraded MapLibre GL JS from v5 to v6 (requires WebGL 2)](https://github.com/photoprism/photoprism/issues/5812)
 - Index: [Added support for Cineon, ORI, and camcorder video files](https://github.com/photoprism/photoprism/issues/5818)
 - Index: [Improved support for large files by raising the default size limit to 5 GB](https://github.com/photoprism/photoprism/issues/5824)
-- Settings: [Added a `thumb-size-face` option that limits the sources rendered for face crops](https://github.com/photoprism/photoprism/commit/49ce2d480)
-- Settings: [Added a `face-cluster-core-retry` option to control the second clustering pass](https://github.com/photoprism/photoprism/commit/fd51e5145)
 - Thumbs: [Improved oversized preview requests to return the largest available size](https://github.com/photoprism/photoprism/issues/5780)
 - Thumbs: [Improved error messages to be logged as a single readable line](https://github.com/photoprism/photoprism/issues/5778)
 - Covers: [Improved album, label, and folder covers to load from the thumbs cache](https://github.com/photoprism/photoprism/issues/5779)
 - Metadata: [Improved the docs to include complete XMP and DCMI tags](https://github.com/photoprism/photoprism/issues/2260)
+- Config: [Added a `thumb-size-face` option that limits the sources rendered for face crops](https://docs.photoprism.app/getting-started/config-options/#face-recognition)
+- Config: [Added a `face-cluster-core-retry` option to control the second clustering pass](https://docs.photoprism.app/getting-started/config-options/#face-recognition)
 - CLI: [Added `faces migrate` to switch a library to a new face model](https://docs.photoprism.app/user-guide/ai/face-recognition/#upgrading-an-existing-library)
 - CLI: [Added `faces reset --all` to start over without detecting faces again](https://docs.photoprism.app/user-guide/ai/face-recognition/#cli-reference)
 - CLI: [Added `faces status` to help with configuration and troubleshooting](https://docs.photoprism.app/user-guide/ai/face-recognition/#cli-reference)
 - CLI: [Added `faces subjects`, `faces ls`, and `faces markers` to inspect face data](https://docs.photoprism.app/user-guide/ai/face-recognition/#cli-reference)
 - CLI: [Added a Detail column showing how well a face crop was resolved](https://docs.photoprism.app/user-guide/ai/face-recognition/#cli-reference)
-- Helm: [Added a values schema that validates the chart configuration](https://github.com/photoprism/photoprism/commit/4ea46f36a)
+- Helm: [Added a values schema that validates the chart configuration](https://charts.photoprism.app/)
 - Tests: [Improved backend and acceptance test coverage](https://github.com/photoprism/photoprism/pull/5783) by [@keif888](https://github.com/keif888)
 - Security: [Upgraded `libheif` from v1.23.1 to v1.23.4 (8 CVE fixes)](https://github.com/photoprism/photoprism/issues/5814)
 - Security: [Upgraded Go from v1.26.5 to v1.27.1](https://github.com/golang/go/issues?q=milestone%3AGo1.27.1)

@@ -130,9 +130,8 @@ The corresponding [config option](../../getting-started/config-options.md) is `P
 !!! danger ""
     Reducing the *Static Size Limit* of thumbnails has a **significant impact on [face recognition](../organize/people.md) and image classification** results. Simply put, it means that the indexer can no longer see properly.
 
-!!! danger ""
-    If the configured size limit is exceeded (for example, if users have a larger screen), a sufficiently large thumbnail can't be created, and the photo viewer may be forced to display the original image instead.
-    **Downscaling images in browsers typically results in poor quality, and they may also be displayed in the wrong orientation.**
+!!! info ""
+    If a request exceeds the configured size limit (for example, if users have a larger screen), it is reduced to the largest size that can be rendered, so the complete picture is still shown — it may just look softer than the screen could display. Raise the *Dynamic Size Limit* if you want larger previews to be available.
 
 The smallest configurable size is 720px for consumption by the indexer to perform color detection, face detection,
 and image classification. Recreating them every time they are needed is too demanding for even the most powerful
@@ -146,7 +145,7 @@ This allows the server to generate larger thumbnails on demand. It may also resu
 when viewing pictures in full-screen mode.
 
 !!! tip ""
-    To view original images, enable *Dynamic Previews*, and configure *Dynamic Size Limit* and *Static Size Limit* to a small value like `720`. When viewing images exceeding that limit, the original files will be displayed.
+    To save storage, enable *Dynamic Previews* and set the *Static Size Limit* to a small value like `720`, so that larger previews are rendered only when they are actually needed. Keep the *Dynamic Size Limit* high enough for the screens you use, as requests above it are reduced to the largest size that can be rendered.
 
 ### Dynamic Previews
 

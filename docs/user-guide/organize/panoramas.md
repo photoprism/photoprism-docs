@@ -43,16 +43,24 @@ buttons at the left and right edge of the screen to move to the previous or next
 
 ## Supported Files ##
 
-Only *equirectangular* content — a full sphere flattened into a single frame with an aspect ratio of
-about 2:1 — can be displayed interactively:
+*Equirectangular* content — a full sphere flattened into a single frame with an aspect ratio of
+about 2:1 — is displayed interactively without any conversion:
 
 - pictures are recognized by the `equirectangular` projection type stored in their
   [Exif](../../developer-guide/metadata/exif/index.md) or [XMP](../../developer-guide/metadata/xmp.md)
   metadata, which most 360° cameras write when saving a file; `GPano` metadata is accepted as well
 - videos often carry no projection metadata that can be read, so a video is displayed in the sphere
   viewer if it has been marked as *panorama* and its frame size is roughly 2:1
-- other projection types, such as cubemaps and cylindrical panoramas, as well as ultra-wide videos,
-  are shown as regular pictures because they would be distorted when rendered as a sphere
+
+*Fisheye* 360° originals from Insta360 cameras are converted first and then open in the same viewer:
+
+- `.insv` videos, `.insp` pictures, and fisheye DNG files are recognized while indexing and dewarped
+  to equirectangular in a background job, so they may take a moment to become available
+- your originals are never modified, and a file that cannot be converted is shown as a regular picture
+
+Other projection types, such as cubemaps and cylindrical panoramas, as well as ultra-wide videos, are
+shown as regular pictures because they would be distorted when rendered as a sphere.
+
 
 !!! note ""
     Rendering a sphere requires a browser with [WebGL 2](https://caniuse.com/webgl2) support, which is

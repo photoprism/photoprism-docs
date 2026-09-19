@@ -114,6 +114,11 @@ to mark them **Private** or **Hidden**:
 | **Private** | Withholds the person from accounts that may not see private content.   |
 | **Hidden**  | The same, and also leaves the person out of *Recognized* for everyone. |
 
+Setting **Hidden** is the same as [hiding a person](#hiding-people) with :material-close:.
+*Viewers*, as well as *Guests* and *Visitors* opening a share link, do not see the names of people
+marked private or hidden; *Admins* and *Users* see them as usual and can change both options.
+[Learn more ›](../users/roles.md)
+
 For an account that may not see them, a withheld person does not appear under *People* or in the name
 suggestions when tagging a face, is not named in a picture's *People* list, and their face region is
 not shown there. Their name is also kept out of automatically generated titles, captions, and search

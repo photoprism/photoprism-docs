@@ -224,33 +224,9 @@ The person/subject and people/subjects filters can be used with & and | (see [se
 
 ## Known Issues ##
 
-For all known issues, see [Getting Started > Known Issues > Face Recognition](../../known-issues.md#face-recognition).
+Automatic recognition has limits: it is less reliable for young children and for pictures of the same person taken many years apart, faces that are not upright are often not detected at all, and older hardware can be slow. See [Known Issues > Face Recognition](../../known-issues.md#face-recognition) for the full list and the reasons behind it.
 
-### Legacy Hardware ###
-
-Face recognition can be slow (or even crash) on [old devices](../../getting-started/troubleshooting/performance.md#legacy-hardware) due to insufficient resources.
-
-*Like most applications, PhotoPrism has [certain requirements](../../getting-started/index.md#system-requirements) and our development process does not include testing on unsupported or unusual hardware.*
-
-### Children and Pictures Taken Years Apart
-
-Automatic recognition is less reliable for young children, and for pictures of the same person taken many years apart, than it is for adults photographed within a few years of each other. This is a property of the [embedding model](../ai/face-recognition.md#face-embeddings) and not of detection, so the faces are still found, displayed, and searchable — they are just less likely to be grouped into one person automatically, and more likely to form several clusters that you can merge by hand.
-
-The model used for new libraries is a substantial improvement over the one PhotoPrism shipped previously, which was in addition unreliable for Asian faces. Libraries created before it became available keep the previous model until they are [migrated](../ai/face-recognition.md#upgrading-an-existing-library).
-
-### Rotated Faces
-
-Face detection expects upright faces. A face rotated by roughly 90° — someone lying down, or a picture taken with the camera held sideways and no matching orientation tag — is generally not detected at all. Rotating the affected pictures so that they are displayed upright and then re-indexing them is the practical workaround.
-
-### Background Worker ###
-
-Face recognition was developed and tested under the assumption that the [background worker](../../getting-started/config-options.md#indexing) runs every 15 minutes, unless the backend is busy with other tasks like indexing. It has not been tested with much longer intervals and is not designed for that.
-
-PhotoPrism's background worker groups new faces by similarity, compares faces with clusters, and optimizes existing clusters as needed. Without these routine tasks, the number of faces to be processed becomes too large. The first and next time the worker runs, it can then cause a heavy server load until all the faces, face clusters, and related pictures have been updated. The longer you wait, the more CPU is required and the longer it takes.
-
-An important reason for the worker to run independently of actual changes in the main instance is that some users change the database content directly or run additional instances, for example for indexing. It is a problem that can be solved, but it takes time. If we were to ignore this and don't run the worker at all times, it could lead to many additional support requests, further reducing the amount of time we can spend on development.
-
-*The handling of changes in multiple instances will be improved over time so that the worker can be run less frequently in future releases.*
+If faces are missing, people are grouped incorrectly, names do not stick, or tagging is slow, work through the checklists in [Troubleshooting Face Recognition](../../getting-started/troubleshooting/face-recognition.md).
 
 !!! info "Upcoming Features"
     - automatic backup of tagged people in YAML files

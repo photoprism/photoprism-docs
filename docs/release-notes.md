@@ -131,9 +131,6 @@ What's new?
 !!! note ""
     We recommend performing a [complete rescan](https://docs.photoprism.app/user-guide/library/originals/) of your library after upgrading to benefit from the improvements. Please note that manually marking faces on 360° content is not yet supported in this release.
 
-!!! info ""
-    Missing [user interface translations](https://docs.photoprism.app/developer-guide/translations-weblate/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.
-
 ### June 1, 2026
 <span class="build">Build 260601-a7d098548</span>
 

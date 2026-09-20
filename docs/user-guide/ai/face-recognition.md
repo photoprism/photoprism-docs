@@ -114,8 +114,8 @@ The distance thresholds are calibrated for each embedding model and resolved aut
 
 - `photoprism faces status` — show which options are actually in force, including the ones resolved from the detector or model, and why clustering is waiting if no clusters are forming. `faces config` is an alias.
 - `photoprism faces subjects [name|uid]` — list people with the clusters, files, and photos their markers support.
-- `photoprism faces ls [name|uid]` — list face clusters with their samples, radius, and current markers. `faces clusters` is an alias.
-- `photoprism faces markers [name|uid] [--face ID] [--unassigned] [--dangling]` — list face markers and what they are assigned to.
+- `photoprism faces ls [name|uid]` — list face clusters with their samples, radius, current markers, and [Detail](../../developer-guide/vision/face-recognition.md#embedding-detail), the mean share of the crop their members' source could supply. `faces clusters` is an alias.
+- `photoprism faces markers [name|uid] [--face ID] [--unassigned] [--dangling]` — list face markers, what they are assigned to, and their [Detail](../../developer-guide/vision/face-recognition.md#embedding-detail) score.
 - `photoprism faces conflicts [name|uid]` — list face clusters that hold the same face but are assigned to different people.
 - `photoprism faces audit [--subject UID] [--fix]` — check and optionally repair face data.
 - `photoprism faces reset [--detector auto|none|yunet] [--all] [--force]` — remove automatic clusters and matches; `--all` also removes names while keeping the markers, `--force` removes the markers too so faces must be detected again.

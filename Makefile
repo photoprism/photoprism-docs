@@ -102,10 +102,10 @@ format-whitespace-check:
 	python3 ./scripts/format-whitespace.py --check
 format-tables:
 	# Reformat Markdown tables. Fenced code blocks are masked so sample CLI
-	# output drawn with pipes is not rewritten.
-	# The tensorflow table is centre-aligned with no leading pipe: padding pushes it
-	# past four leading spaces, which Markdown then reads as an indented code block.
-	python3 ./scripts/format-tables.py --exclude docs/developer-guide/vision/tensorflow/index.md
+	# output drawn with pipes is not rewritten. Every table row needs a leading
+	# pipe: without one, padding can push a row past four leading spaces, which
+	# Markdown then reads as an indented code block instead of a table.
+	python3 ./scripts/format-tables.py
 format-artifacts:
 	# Straighten smart quotes inside code spans and remove invisible characters. Joiners,
 	# ZWNJ and soft hyphens are reported, never removed: each is load-bearing somewhere

@@ -58,6 +58,12 @@ about 2:1 — is displayed interactively without any conversion:
   to equirectangular in a background job, so they may take a moment to become available
 - your originals are never modified, and a file that cannot be converted is shown as a regular picture
 
+Cameras PhotoPrism recognizes, such as the Insta360 and Ricoh Theta series, are dewarped using their
+own known field of view. For anything else,
+[`PHOTOPRISM_FFMPEG_FISHEYE_FOV`](../../getting-started/config-options.md#file-conversion) sets the
+fallback in degrees. It describes the span of the *stored* fisheye disc, not the lens itself, so a
+wider lens paired with a narrower value crops a wedge of the scene at each seam of the sphere.
+
 Other projection types, such as cubemaps and cylindrical panoramas, as well as ultra-wide videos, are
 shown as regular pictures because they would be distorted when rendered as a sphere.
 

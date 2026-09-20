@@ -1,6 +1,6 @@
 # Face Recognition
 
-PhotoPrism uses a multi-stage AI pipeline to detect, embed, and cluster faces so they can be [easily organized by person](https://docs.photoprism.app/user-guide/organize/people/):
+PhotoPrism recognizes faces in three stages, so your pictures can be [easily organized by person](https://docs.photoprism.app/user-guide/organize/people/):
 
 1. **Detection** — a detection model locates faces in each image.
 2. **Embedding** — a vector is generated to characterize each face.
@@ -50,10 +50,8 @@ PhotoPrism ships with **YuNet**, a compact face detection model that runs on the
 - Works well with off-axis or angled faces
 - Handles difficult lighting conditions effectively
 - Locates facial landmarks, which are used to align each face before embedding
-- Consumes 720 px thumbnails (model input 640 px)
-- Schedules work on the meta/vision workers
 
-The detector is selected with [`PHOTOPRISM_FACE_DETECTOR`](#detection-settings). When you leave it unset, it is derived from the face model in use, so a matching combination is the default. The prebuilt runtime targets glibc ≥ 2.28 on `amd64` / `arm64` architectures.
+The detector is selected with [`PHOTOPRISM_FACE_DETECTOR`](#detection-settings). When you leave it unset, it is derived from the face model in use, so a matching combination is the default.
 
 !!! info ""
     `PHOTOPRISM_FACE_ENGINE` is **deprecated**: it selected a runtime rather than a model. Only `PHOTOPRISM_FACE_ENGINE=none` still has an effect, and `PHOTOPRISM_FACE_DETECTOR` overrides it. Existing configurations keep working.
@@ -67,20 +65,16 @@ The detector is selected with [`PHOTOPRISM_FACE_DETECTOR`](#detection-settings).
 After detection, PhotoPrism generates an embedding vector that characterizes each face. These vectors are used to:
 
 1. **Match faces** across different pictures.
-2. **Cluster similar faces** using the DBSCAN algorithm.
+2. **Group similar faces** automatically.
 3. **Assign faces to people** with manual confirmation.
 
-New libraries use **SFace**, which produces 128-dimensional vectors. Libraries created before it was available keep **FaceNet**, which produces 512-dimensional vectors, because switching would make every face already assigned to a person incomparable with newly indexed ones.
+New libraries use **SFace**. Libraries created before it was available keep **FaceNet**, because switching would make every face already assigned to a person incomparable with newly indexed ones.
 
 Setting `PHOTOPRISM_FACE_MODEL` does not change the model of a library that already has one — use `photoprism faces migrate` for that, which re-embeds every face and keeps your person assignments. See [Upgrading an Existing Library](#upgrading-an-existing-library) above.
 
-All face embeddings are L2-normalized to unit length (‖x‖₂ = 1) at:
+How these vectors are stored and compared is covered in the [Developer Guide](../../developer-guide/vision/face-recognition.md).
 
-- Creation time (after inference)
-- Midpoint calculation when merging clusters
-- Deserialization when loading from the database
-
-This normalization ensures that Euclidean distance comparisons are equivalent to cosine similarity.
+[Learn more ›](../../developer-guide/vision/face-recognition.md#normalization)
 
 ## Config Options
 
@@ -122,7 +116,6 @@ The distance thresholds are calibrated for each embedding model and resolved aut
 ## CLI Reference
 
 - `photoprism faces status` — show which options are actually in force, including the ones resolved from the detector or model, and why clustering is waiting if no clusters are forming. `faces config` is an alias.
-- `photoprism faces stats` — measure how far face embeddings sit from one another. Compares every sample with every other, so use it on a test library.
 - `photoprism faces subjects [name|uid]` — list people with the clusters, files, and photos their markers support.
 - `photoprism faces ls [name|uid]` — list face clusters with their samples, radius, and current markers. `faces clusters` is an alias.
 - `photoprism faces markers [name|uid] [--face ID] [--unassigned] [--dangling]` — list face markers and what they are assigned to.

@@ -126,7 +126,7 @@ marked private or hidden; *Admins* and *Users* see them as usual and can change 
 
 For an account that may not see them, a withheld person does not appear under *People*, is not named
 in a picture's *People* list, and their face region is not shown there. Their name is also kept out
-of automatically generated titles and captions, and searching for it does not find their pictures;
+of automatically generated titles and captions;
 pictures that already carry it are updated by the next maintenance pass, so allow a few minutes for
 those.
 

@@ -7,16 +7,17 @@ formatter directly rewrites the *documented output of a program* to a shape the 
 prints. This wrapper masks every fenced block behind a sentinel, formats what is left, and
 restores the blocks verbatim.
 
-Two tables are also left alone entirely:
-
-- Centre-aligned tables whose rows carry no leading pipe. Padding a centred cell puts spaces
-  before the first pipe; past four, Markdown reads the line as an indented code block and the
-  table stops rendering. Pass such files via --exclude.
+Every table row needs a leading pipe. Padding a centred cell puts spaces before the first
+pipe; past four, Markdown reads the line as an indented code block and the table stops
+rendering. Give such a table its leading pipes rather than excluding the file, so it stays
+formatted like every other one; --exclude is for a table that must keep a shape this
+formatter would otherwise change.
 
 Usage:
   python3 ./scripts/format-tables.py                 # rewrite files in place
   python3 ./scripts/format-tables.py --check         # report drift, change nothing
   python3 ./scripts/format-tables.py --exclude a.md  # skip a path (repeatable)
+  python3 ./scripts/format-tables.py --help          # print this text, change nothing
 """
 import pathlib
 import re
@@ -96,9 +97,32 @@ def format_batch(paths, check):
 
 
 def main():
-    check = "--check" in sys.argv
-    excluded = {REPO_ROOT / a for i, a in enumerate(sys.argv)
-                if i and sys.argv[i - 1] == "--exclude"}
+    # Arguments are matched explicitly and anything unrecognized is refused, because the
+    # default action rewrites every Markdown file in the repository: a flag this script
+    # merely ignores (a typo, or --help) would otherwise run that pass by surprise.
+    args = sys.argv[1:]
+
+    if "--help" in args or "-h" in args:
+        print(__doc__.strip())
+        return 0
+
+    check = False
+    excluded = set()
+    i = 0
+
+    while i < len(args):
+        if args[i] == "--check":
+            check = True
+        elif args[i] == "--exclude":
+            if i + 1 >= len(args):
+                print("format-tables: --exclude requires a path", file=sys.stderr)
+                return 2
+            excluded.add(REPO_ROOT / args[i + 1])
+            i += 1
+        else:
+            print(f"format-tables: unknown argument {args[i]!r} (try --help)", file=sys.stderr)
+            return 2
+        i += 1
 
     if not shutil.which("npx"):
         print("format-tables: npx not found; install Node.js to use this target.", file=sys.stderr)

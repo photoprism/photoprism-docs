@@ -106,6 +106,9 @@ format-tables:
 	# pipe: without one, padding can push a row past four leading spaces, which
 	# Markdown then reads as an indented code block instead of a table.
 	python3 ./scripts/format-tables.py
+format-tables-check:
+	# Report the table drift without modifying files; exits non-zero on drift.
+	python3 ./scripts/format-tables.py --check
 format-artifacts:
 	# Straighten smart quotes inside code spans and remove invisible characters. Joiners,
 	# ZWNJ and soft hyphens are reported, never removed: each is load-bearing somewhere

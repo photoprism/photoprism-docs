@@ -44,6 +44,8 @@ Please also note that you cannot [change the authentication provider](user-guide
 
 ## Face Recognition
 
+The sections below describe known limitations. For step-by-step checklists covering slow tagging, missing faces, and incorrect groupings, see [Troubleshooting Face Recognition](getting-started/troubleshooting/face-recognition.md).
+
 ### Legacy Hardware ###
 
 Face recognition can be slow (or even crash) on [old devices](getting-started/troubleshooting/performance.md#legacy-hardware) due to insufficient resources.
@@ -109,7 +111,9 @@ docker compose exec photoprism photoprism faces audit --fix
 ```
 
 It can also be helpful to manually check for inconsistent assignments and fix them in the user interface.
-Alternatively, you can use the `photoprism faces reset` command for a clean start if you haven't invested much time in assigning faces yet.
+Alternatively, you can use the `photoprism faces reset` command for a clean start if you haven't invested much time in assigning faces yet — see [Starting Over](getting-started/troubleshooting/face-recognition.md#starting-over) for what each option removes.
+
+*See [Lost Assignments](getting-started/troubleshooting/face-recognition.md#lost-assignments) for a checklist covering names that disappear or revert.*
 
 *Advanced users affected by this are welcome to [privately provide us](https://www.photoprism.app/contact/) with a SQL dump of their subjects, faces, and markers database tables for debugging. Thank you very much!*
 

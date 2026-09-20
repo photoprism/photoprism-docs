@@ -154,18 +154,19 @@ def main():
     # (a typo, or --help) would run that sweep by surprise instead of reporting the mistake.
     args = sys.argv[1:]
 
-    if "--help" in args or "-h" in args:
-        print(__doc__.strip())
-        return 0
-
     check = False
     include_records = False
+    show_help = False
     excluded = set()
     paths = []
     i = 0
 
     while i < len(args):
-        if args[i] == "--check":
+        if args[i] in ("--help", "-h"):
+            # Recorded rather than acted on, so the loop still validates the rest: help must not
+            # become a way to slip an unrecognized option past the guard below.
+            show_help = True
+        elif args[i] == "--check":
             check = True
         elif args[i] == "--all":
             include_records = True
@@ -184,6 +185,10 @@ def main():
         else:
             paths.append(args[i])
         i += 1
+
+    if show_help:
+        print((__doc__ or "").strip())
+        return 0
 
     if not shutil.which("npx"):
         print("format-tables: npx not found; install Node.js to use this target.", file=sys.stderr)

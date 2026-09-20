@@ -45,14 +45,15 @@ def main():
     # merely ignored (a typo, or --help) would run that sweep by surprise.
     args = sys.argv[1:]
 
-    if "--help" in args or "-h" in args:
-        print(__doc__.strip())
-        return 0
-
     for arg in args:
-        if arg != "--check":
+        if arg not in ("--check", "--help", "-h"):
             print(f"format-whitespace: unknown option {arg!r} (try --help)", file=sys.stderr)
             return 2
+
+    # Validation runs first, so help cannot become a way to slip an unrecognized option past it.
+    if "--help" in args or "-h" in args:
+        print((__doc__ or "").strip())
+        return 0
 
     check = "--check" in args
     files = sorted(p for p in REPO_ROOT.rglob("*.md")

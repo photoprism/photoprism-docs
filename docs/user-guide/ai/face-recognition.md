@@ -33,7 +33,7 @@ photoprism faces update --force # re-match and cluster faces
 photoprism faces optimize       # optional tidy-up
 ```
 
-`--force` is what matters there: a plain `photoprism faces update` runs only once enough faces have been added since the last pass, which a freshly migrated library has not. With `--force` the pass runs regardless, every face is matched against the clusters again, and the ones left unassigned are clustered at the current settings. Faces that already belong to a cluster keep it. Reach for it whenever faces have been detected but *People* shows no cluster for them.
+`--force` is what matters there: a plain `photoprism faces update` runs only once enough faces have been added since the last pass, which a freshly migrated library has not. With `--force` the pass runs regardless, every face is matched against the clusters again, and the ones left unassigned are clustered at the current settings. An automatically matched face may end up in a different cluster, while a face that you assigned manually keeps its assignment. Reach for it whenever faces have been detected but *People* shows no cluster for them.
 
 To check the result, `photoprism faces status` reports which model is in use and why clustering is waiting if no clusters are forming.
 
@@ -101,7 +101,7 @@ This normalization ensures that Euclidean distance comparisons are equivalent to
 ### Clustering Settings
 
 !!! info ""
-    After changing any of the clustering parameters, run `photoprism faces update --force` in a terminal so that a pass runs at the new values instead of waiting for enough new faces. It applies them to the faces that are not yet in a cluster and matches every face against the clusters again; faces that already belong to one keep it, so run `photoprism faces reset` if you want the library regrouped from scratch. Changing the embedding model is a different operation and requires `photoprism faces migrate`.
+    After changing any of the clustering parameters, run `photoprism faces update --force` in a terminal so that a pass runs at the new values instead of waiting for enough new faces. It applies them to the faces that are not yet in a cluster and matches every face against the clusters again; an automatically matched face may end up in a different cluster, while a face that you assigned manually keeps its assignment. Run `photoprism faces reset` if you want the library regrouped from scratch. Changing the embedding model is a different operation and requires `photoprism faces migrate`.
 
 | Environment Variable          | CLI Flag             | Default | Description                                                                                                                                                                           |
 |-------------------------------|----------------------|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -117,7 +117,6 @@ The distance thresholds are calibrated for each embedding model and resolved aut
 ### Tuning Tips
 
 - Change a distance threshold **relative to the value your model resolves to**, rather than carrying a number over from another model. A higher value is more aggressive and leads to larger clusters with more false positives.
-- To cluster a smaller number of faces, you can reduce the kernel to 3 or 2 similar faces.
 - Leave `PHOTOPRISM_FACE_DETECTOR` unset unless you have a reason to pin it, so detection stays matched to the embedding model.
 
 ## CLI Reference

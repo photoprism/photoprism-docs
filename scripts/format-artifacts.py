@@ -46,8 +46,9 @@ shapes and `jq` expressions — a scan found 40 such uses and no real citations.
 make the check unusable.
 
 Usage:
-  python3 ./scripts/format-artifacts.py            # rewrite files in place
-  python3 ./scripts/format-artifacts.py --check    # report, change nothing
+  python3 ./scripts/format-artifacts.py         # rewrite files in place
+  python3 ./scripts/format-artifacts.py --check # report, change nothing
+  python3 ./scripts/format-artifacts.py --help  # print this text, change nothing
 """
 import pathlib
 import re
@@ -150,7 +151,21 @@ def fix_line(line):
 
 
 def main():
-    check = "--check" in sys.argv
+    # Options are matched explicitly and anything unrecognized is refused, because the
+    # default action rewrites every Markdown file in the tree: an option this script
+    # merely ignored (a typo, or --help) would run that sweep by surprise.
+    args = sys.argv[1:]
+
+    if "--help" in args or "-h" in args:
+        print(__doc__.strip())
+        return 0
+
+    for arg in args:
+        if arg != "--check":
+            print(f"format-artifacts: unknown option {arg!r} (try --help)", file=sys.stderr)
+            return 2
+
+    check = "--check" in args
     files = sorted(p for p in REPO_ROOT.rglob("*.md")
                    if not SKIP_DIRS & set(p.relative_to(REPO_ROOT).parts))
     changed, notes = [], []

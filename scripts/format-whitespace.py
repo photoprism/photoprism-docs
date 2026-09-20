@@ -12,8 +12,9 @@ That is intentional here - the only occurrences found were accidental, in pasted
 commands and log output.
 
 Usage:
-  python3 ./scripts/format-whitespace.py           # rewrite files in place
-  python3 ./scripts/format-whitespace.py --check    # report drift, change nothing
+  python3 ./scripts/format-whitespace.py         # rewrite files in place
+  python3 ./scripts/format-whitespace.py --check # report drift, change nothing
+  python3 ./scripts/format-whitespace.py --help  # print this text, change nothing
 """
 import pathlib
 import re
@@ -39,7 +40,21 @@ def normalize(text):
 
 
 def main():
-    check = "--check" in sys.argv
+    # Options are matched explicitly and anything unrecognized is refused, because the
+    # default action rewrites every Markdown file in the tree: an option this script
+    # merely ignored (a typo, or --help) would run that sweep by surprise.
+    args = sys.argv[1:]
+
+    if "--help" in args or "-h" in args:
+        print(__doc__.strip())
+        return 0
+
+    for arg in args:
+        if arg != "--check":
+            print(f"format-whitespace: unknown option {arg!r} (try --help)", file=sys.stderr)
+            return 2
+
+    check = "--check" in args
     files = sorted(p for p in REPO_ROOT.rglob("*.md")
                    if not SKIP_DIRS & set(p.relative_to(REPO_ROOT).parts))
     changed = []

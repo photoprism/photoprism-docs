@@ -124,11 +124,11 @@ Setting **Hidden** is the same as [hiding a person](#hiding-people) with :materi
 marked private or hidden; *Admins* and *Users* see them as usual and can change both options.
 [Learn more ›](../users/roles.md)
 
-For an account that may not see them, a withheld person does not appear under *People* or in the name
-suggestions when tagging a face, is not named in a picture's *People* list, and their face region is
-not shown there. Their name is also kept out of automatically generated titles, captions, and search
-keywords; pictures that already carry it are updated by the next maintenance pass, so allow a few
-minutes for those.
+For an account that may not see them, a withheld person does not appear under *People*, is not named
+in a picture's *People* list, and their face region is not shown there. Their name is also kept out
+of automatically generated titles and captions, and searching for it does not find their pictures;
+pictures that already carry it are updated by the next maintenance pass, so allow a few minutes for
+those.
 
 !!! note ""
     **Their pictures stay visible.** Only the name and the face region are withheld, so anyone who may

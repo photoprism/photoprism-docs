@@ -7,16 +7,18 @@ formatter directly rewrites the *documented output of a program* to a shape the 
 prints. This wrapper masks every fenced block behind a sentinel, formats what is left, and
 restores the blocks verbatim.
 
-Every table row needs a leading pipe. Padding a centred cell puts spaces before the first
+Every table row needs a leading pipe. Padding a centered cell puts spaces before the first
 pipe; past four, Markdown reads the line as an indented code block and the table stops
 rendering. Give such a table its leading pipes rather than excluding the file, so it stays
-formatted like every other one; --exclude is for a table that must keep a shape this
-formatter would otherwise change.
+aligned like every other one; --exclude is for a table that must keep a shape this formatter
+would otherwise change.
 
 Usage:
-  python3 ./scripts/format-tables.py                 # rewrite files in place
+  python3 ./scripts/format-tables.py                 # rewrite every Markdown file
   python3 ./scripts/format-tables.py --check         # report drift, change nothing
   python3 ./scripts/format-tables.py --exclude a.md  # skip a path (repeatable)
+  python3 ./scripts/format-tables.py a.md dir/       # format the named files and directories
+  python3 ./scripts/format-tables.py --all           # include the dated records a sweep keeps
   python3 ./scripts/format-tables.py --help          # print this text, change nothing
 """
 import pathlib
@@ -95,11 +97,58 @@ def format_batch(paths, check):
 
     return changed
 
+# Dated records filed under a year are kept as written rather than swept, as are the indexes and
+# ledgers beside them. Aligning a table changes no word, so reports are swept like any other file;
+# a repository that keeps no such records leaves this empty.
+SKIP_PREFIXES = ()
+
+
+def is_historic_record(rel):
+    """Report whether a spec-relative path is a dated record we keep verbatim."""
+    return (len(rel.parts) > 2 and len(rel.parts[2]) == 4 and rel.parts[2].isdigit()
+            and any(rel.parts[:2] == prefix for prefix in SKIP_PREFIXES))
+
+
+def walk(root, include_records):
+    """Yields the Markdown files under a directory that a sweep may rewrite."""
+    for path in root.rglob("*.md"):
+        rel = path.relative_to(REPO_ROOT)
+        if SKIP_DIRS & set(rel.parts) or (not include_records and is_historic_record(rel)):
+            continue
+        yield path
+
+
+def select_files(paths, include_records=False, excluded=()):
+    """Returns the files to format, plus a message per argument that names nothing formattable.
+
+    A file named as an argument is formatted even where a sweep skips its directory, so a single
+    record or skill file can be aligned in place. Only `generated/` stays off limits, because it
+    is reproduced by `make generate` rather than edited.
+    """
+    skipped = {(REPO_ROOT / e).resolve() for e in excluded}
+    found, rejected = set(), []
+
+    for arg in paths or [REPO_ROOT]:
+        path = (REPO_ROOT / arg).resolve()
+
+        if path != REPO_ROOT and REPO_ROOT not in path.parents:
+            rejected.append(f"{arg}: outside the repository")
+        elif path.is_dir():
+            found |= set(walk(path, include_records))
+        elif not path.is_file():
+            rejected.append(f"{arg}: no such file or directory")
+        elif "generated" in path.relative_to(REPO_ROOT).parts:
+            rejected.append(f"{arg}: generated, run \"make generate\" instead")
+        else:
+            found.add(path)
+
+    return sorted(found - skipped), rejected
+
 
 def main():
-    # Arguments are matched explicitly and anything unrecognized is refused, because the
-    # default action rewrites every Markdown file in the repository: a flag this script
-    # merely ignores (a typo, or --help) would otherwise run that pass by surprise.
+    # Options are matched explicitly and anything unrecognized is refused, because the default
+    # action rewrites every Markdown file in the tree: an option this script merely ignored
+    # (a typo, or --help) would run that sweep by surprise instead of reporting the mistake.
     args = sys.argv[1:]
 
     if "--help" in args or "-h" in args:
@@ -107,30 +156,42 @@ def main():
         return 0
 
     check = False
+    include_records = False
     excluded = set()
+    paths = []
     i = 0
 
     while i < len(args):
         if args[i] == "--check":
             check = True
+        elif args[i] == "--all":
+            include_records = True
         elif args[i] == "--exclude":
             if i + 1 >= len(args):
                 print("format-tables: --exclude requires a path", file=sys.stderr)
                 return 2
             excluded.add(REPO_ROOT / args[i + 1])
             i += 1
-        else:
-            print(f"format-tables: unknown argument {args[i]!r} (try --help)", file=sys.stderr)
+        elif args[i].startswith("-"):
+            print(f"format-tables: unknown option {args[i]!r} (try --help)", file=sys.stderr)
             return 2
+        else:
+            paths.append(args[i])
         i += 1
 
     if not shutil.which("npx"):
         print("format-tables: npx not found; install Node.js to use this target.", file=sys.stderr)
         return 1
 
-    files = sorted(p for p in REPO_ROOT.rglob("*.md")
-                   if not SKIP_DIRS & set(p.relative_to(REPO_ROOT).parts)
-                   and p.resolve() not in {e.resolve() for e in excluded if e.exists()})
+    files, rejected = select_files(paths, include_records, excluded)
+
+    for note in rejected:
+        print(f"[ERROR] {note}", file=sys.stderr)
+
+    if not files:
+        print("Tables: nothing to format.", file=sys.stderr)
+        return 1 if rejected else 0
+
     changed = [str(p.relative_to(REPO_ROOT)) for p in format_batch(files, check)]
 
     if check and changed:
@@ -143,7 +204,7 @@ def main():
     print(f"Tables {'check passed' if check else 'formatted'} "
           f"({len(files)} files checked, {len(changed)} {verb}).")
 
-    return 0
+    return 1 if rejected else 0
 
 
 if __name__ == "__main__":

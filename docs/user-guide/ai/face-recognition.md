@@ -44,14 +44,9 @@ If you would rather start from a clean state, run `photoprism faces reset -f` fo
 
 ## Face Detection
 
-PhotoPrism ships with **YuNet**, a compact face detection model that runs on the [ONNX Runtime](https://onnxruntime.ai/). It:
+PhotoPrism ships with **YuNet**, a compact face detection model that runs on [ONNX](https://onnxruntime.ai/). It detects faces that are partially occluded (covered by hands, objects, etc.), works well with off-axis or angled faces, effectively handles difficult lighting conditions, and locates facial landmarks, which are used to align each face before embedding.
 
-- Detects faces that are partially occluded (covered by hands, objects, etc.)
-- Works well with off-axis or angled faces
-- Handles difficult lighting conditions effectively
-- Locates facial landmarks, which are used to align each face before embedding
-
-The detector is selected with [`PHOTOPRISM_FACE_DETECTOR`](#detection-settings). When you leave it unset, it is derived from the face model in use, so a matching combination is the default.
+A custom detector can be selected with [`PHOTOPRISM_FACE_DETECTOR`](#detection-settings). If left unset, the detector is derived from the face model in use, so a matching combination is the default.
 
 !!! info ""
     `PHOTOPRISM_FACE_ENGINE` is **deprecated**: it selected a runtime rather than a model. Only `PHOTOPRISM_FACE_ENGINE=none` still has an effect, and `PHOTOPRISM_FACE_DETECTOR` overrides it. Existing configurations keep working.

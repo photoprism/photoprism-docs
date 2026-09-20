@@ -113,7 +113,10 @@ def walk(root, include_records):
     """Yields the Markdown files under a directory that a sweep may rewrite."""
     for path in root.rglob("*.md"):
         rel = path.relative_to(REPO_ROOT)
-        if SKIP_DIRS & set(rel.parts) or (not include_records and is_historic_record(rel)):
+        # "generated" is refused here as well as in select_files, so a repository that leaves it
+        # out of SKIP_DIRS still cannot have a sweep rewrite what "make generate" reproduces.
+        if (SKIP_DIRS & set(rel.parts) or "generated" in rel.parts
+                or (not include_records and is_historic_record(rel))):
             continue
         yield path
 
@@ -167,7 +170,10 @@ def main():
         elif args[i] == "--all":
             include_records = True
         elif args[i] == "--exclude":
-            if i + 1 >= len(args):
+            # The value is checked, not just counted: consuming an option-shaped token here would
+            # carry it past the guard below, so "--exclude --check" would drop the check and
+            # rewrite the tree while reporting success.
+            if i + 1 >= len(args) or args[i + 1].startswith("-"):
                 print("format-tables: --exclude requires a path", file=sys.stderr)
                 return 2
             excluded.add(REPO_ROOT / args[i + 1])

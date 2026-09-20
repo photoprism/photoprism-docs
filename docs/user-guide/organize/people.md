@@ -226,7 +226,7 @@ The person/subject and people/subjects filters can be used with & and | (see [se
 
 Automatic recognition has limits: it is less reliable for young children and for pictures of the same person taken many years apart, faces that are not upright are often not detected at all, and older hardware can be slow. See [Known Issues > Face Recognition](../../known-issues.md#face-recognition) for the full list and the reasons behind it.
 
-If faces are missing, people are grouped incorrectly, names do not stick, or tagging is slow, work through the checklists in [Troubleshooting Face Recognition](../../getting-started/troubleshooting/face-recognition.md).
+If faces are missing, people are grouped incorrectly, names do not stick, or tagging is slow, work through the checklists under [Troubleshooting > Face Recognition](../../getting-started/troubleshooting/face-recognition.md).
 
 !!! info "Upcoming Features"
     - automatic backup of tagged people in YAML files

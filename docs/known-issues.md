@@ -44,7 +44,7 @@ Please also note that you cannot [change the authentication provider](user-guide
 
 ## Face Recognition
 
-The sections below describe known limitations. For step-by-step checklists covering slow tagging, missing faces, and incorrect groupings, see [Troubleshooting Face Recognition](getting-started/troubleshooting/face-recognition.md).
+The sections below describe known limitations. For step-by-step checklists covering slow tagging, missing faces, and incorrect groupings, see [Troubleshooting > Face Recognition](getting-started/troubleshooting/face-recognition.md).
 
 ### Legacy Hardware ###
 

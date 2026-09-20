@@ -10,7 +10,8 @@ PhotoPrism currently supports the following runtimes and services:
 
 | Engine                                                                 | Resolution | Runs        | Best For                                                                                                      |
 |------------------------------------------------------------------------|------------|-------------|---------------------------------------------------------------------------------------------------------------|
-| [TensorFlow](../../developer-guide/vision/tensorflow/custom-models.md) | 224 px     | Built-in    | Fast, offline default models for core features (labels, faces, NSFW)                                          |
+| [TensorFlow](../../developer-guide/vision/tensorflow/custom-models.md) | 224 px     | Built-in    | Fast, offline default models for labels and NSFW detection                                                    |
+| [ONNX](face-recognition.md)                                            | 720 px     | Built-in    | Face detection and embeddings                                                                                 |
 | [Ollama](using-ollama.md)                                              | 720 px     | Self-Hosted | Good for generating quality captions & labels; a server with GPU is recommended                               |
 | [OpenAI API](using-openai.md)                                          | 720 px     | Cloud       | Highest quality captions & labels, also suitable for users without a GPU; requires API key and network access |
 
@@ -27,6 +28,12 @@ Two things behind those numbers are worth knowing before you tune for speed:
 
 !!! tldr ""
     Without GPU acceleration, Ollama models will be significantly slower, taking anywhere from 10 seconds to over a minute to complete. This may be acceptable if you only want to process a few pictures or are willing to wait.
+
+## Face Recognition
+
+Faces are handled by built-in models that need no setup: **YuNet** locates them, and **SFace** turns each one into a vector that can be compared with others. Both run on ONNX. Libraries created before SFace became available keep **FaceNet**, which runs on TensorFlow, until they are migrated to the current model.
+
+[AI Models > Face Recognition](face-recognition.md) documents the config options and the upgrade procedure, and [Troubleshooting > Face Recognition](../../getting-started/troubleshooting/face-recognition.md) provides checklists for faces that are missing, grouped incorrectly, or slow to tag.
 
 ## `vision.yml` Reference
 

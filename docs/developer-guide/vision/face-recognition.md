@@ -1,11 +1,13 @@
 # Face Recognition
 
-**Last Updated:** September 19, 2026
+**Last Updated:** September 20, 2026
 
 To [recognize faces](https://docs.photoprism.app/user-guide/organize/people/), PhotoPrism uses a multi-stage AI pipeline that detects faces, generates embeddings, and clusters similar faces so they can be easily organized by person.
 
 !!! tldr ""
     The canonical engineering reference for this pipeline is the package README at [`internal/ai/face/README.md`](https://github.com/photoprism/photoprism/blob/develop/internal/ai/face/README.md). This page summarizes the developer-facing behavior; consult the README for the latest thresholds, benchmarks, and test recipes.
+
+[AI Models > Face Recognition](../../user-guide/ai/face-recognition.md) covers the same pipeline for users and documents the config options, and [Troubleshooting > Face Recognition](../../getting-started/troubleshooting/face-recognition.md) provides symptom-based checklists.
 
 ## How It Works
 

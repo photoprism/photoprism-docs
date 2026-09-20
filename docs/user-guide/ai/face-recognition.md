@@ -8,6 +8,8 @@ PhotoPrism recognizes faces in three stages, so your pictures can be [easily org
 
 Detection and embedding use separate models, so each can be chosen and upgraded on its own.
 
+If faces are missing, people are grouped incorrectly, or tagging is slow, work through the checklists under [Troubleshooting > Face Recognition](../../getting-started/troubleshooting/face-recognition.md).
+
 ## Upgrading an Existing Library
 
 Libraries indexed before the current [embedding model](#face-embeddings) became available keep the model they already use, because vectors produced by different models cannot be compared: switching automatically would make every face you have already assigned to a person incomparable with newly indexed ones. Setting [`PHOTOPRISM_FACE_MODEL`](#detection-settings) does not change it either.

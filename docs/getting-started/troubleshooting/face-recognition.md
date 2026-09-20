@@ -5,7 +5,7 @@
     [Sponsors](https://www.photoprism.app/membership/) receive direct [technical support](https://www.photoprism.app/contact/) via email.
     Before [submitting a support request](../../user-guide/index.md#getting-support), please go through the checklists below.
 
-Faces are recognized in three stages — detection, embedding, and clustering — so a problem usually belongs to one of them. [Face Recognition](../../user-guide/ai/face-recognition.md) in the User Guide explains how they work and lists the available config options.
+Faces are recognized in three stages — detection, embedding, and clustering — so a problem usually belongs to one of them. [AI Models > Face Recognition](../../user-guide/ai/face-recognition.md) explains how they work and lists the available config options.
 
 ## First Checks
 

@@ -11,7 +11,7 @@ Our [preview builds](getting-started/updates.md#development-preview) give you ea
 ### September 19, 2026
 <span class="build">Build 260919-28c46a116</span>
 
-This [release](https://github.com/photoprism/photoprism/releases/tag/260919-28c46a116) introduces new detection and embedding models for face recognition: more faces are found, including small ones in group pictures, and clustering now keeps different people apart instead of grouping them as one. Existing libraries keep their current model until you run [`photoprism faces migrate`](https://docs.photoprism.app/user-guide/ai/face-recognition/#upgrading-an-existing-library), which re-embeds every face and keeps the names you have already assigned.
+This [release](https://github.com/photoprism/photoprism/releases/tag/260919-28c46a116) introduces new [detection](https://docs.photoprism.app/user-guide/ai/face-recognition/#face-detection) and [embedding models](https://docs.photoprism.app/user-guide/ai/face-recognition/#face-embeddings) for face recognition: more faces are found, including small ones in group pictures, and clustering now keeps different people apart instead of grouping them as one. Existing libraries keep their current model until you run [`photoprism faces migrate`](https://docs.photoprism.app/user-guide/ai/face-recognition/#upgrading-an-existing-library), which re-embeds every face and keeps the names you have already assigned.
 
 People whose names should remain private can now be [flagged as Private or Hidden](https://docs.photoprism.app/user-guide/organize/people/#private-hidden-people) to hide their names and face regions from non-privileged accounts, while their pictures remain visible.
 

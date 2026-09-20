@@ -13,6 +13,8 @@ you scan your library. They are then grouped by similarity, so you can quickly m
     Existing clusters are automatically optimized in the background, for example, when new
     faces are detected, you have reported a bad match, or new files are added to your library.
 
+[AI Models > Face Recognition](../ai/face-recognition.md) explains how detection, embedding, and grouping work, and lists the config options you can adjust.
+
 ## Recognized & New People ##
 
 The people section shows you recognized people as well as new face clusters.

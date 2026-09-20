@@ -264,6 +264,14 @@ If search results are incorrect, for example, in the wrong order or not filtered
 
 *It may be a bug if you cannot find any other reasons, such as a local configuration problem or a misunderstanding in how the software works. Please note that [reports must be reproducible](../../user-guide/index.md#getting-support) in order for us to provide a solution.*
 
+### Faces Not Recognized ###
+
+If faces are not detected, people are grouped incorrectly, names do not stick, or tagging is slow, the checklists on our troubleshooting page cover the causes in turn:
+
+↪ [Troubleshooting > Face Recognition](face-recognition.md)
+
+↪ [Known Issues > Face Recognition](../../known-issues.md#face-recognition)
+
 ### Broken Thumbnails ###
 
 If some pictures have broken or missing thumbnails, first [check *Library > Errors* for errors and warnings](logs.md).

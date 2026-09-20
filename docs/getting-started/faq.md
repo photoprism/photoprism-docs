@@ -371,7 +371,7 @@ Due to the amount of time required to review each report, we can only offer this
 
 ### Can you improve performance when using older or otherwise slow hardware?
 
-It is a known issue that the user interface and backend operations, especially face recognition, can be slow or even crash on older hardware due to a lack of resources. Like most applications, PhotoPrism has certain requirements and our development process does not include testing on unsupported or unusual hardware.
+It is a known issue that the user interface and backend operations, especially [face recognition](troubleshooting/face-recognition.md#tagging-is-slow), can be slow or even crash on older hardware due to a lack of resources. Like most applications, PhotoPrism has certain requirements and our development process does not include testing on unsupported or unusual hardware.
 
 In many cases, performance can be improved through optimizations. Since these can prove to be very time-consuming and cost-intensive in practice, users and developers must decide on a case-by-case basis whether this provides sufficient benefit in relation to the costs or whether the use of more powerful hardware is faster and cheaper overall.
 
@@ -418,7 +418,7 @@ Actual storage requirements vary and depend, among other things, on file resolut
 The [smallest configurable size](../user-guide/settings/advanced.md#preview-images) is 720px for [use by the indexer to perform color detection, image classification, as well as face detection and recognition](../user-guide/settings/advanced.md#which-thumbnails-will-be-generated). Recreating them every time they are needed is too demanding even for the most powerful servers. Unless you have just a few small pictures, this would make the app unusable.
 
 !!! danger ""
-    Reducing the *Static Size Limit* of thumbnails has a **significant impact on [face recognition](../user-guide/organize/people.md)
+    Reducing the *Static Size Limit* of thumbnails has a **significant impact on [face recognition](../user-guide/ai/face-recognition.md)
     and image classification** results. Simply put, it means that the indexer can no longer see properly.
 
 ### When should I perform a complete rescan?

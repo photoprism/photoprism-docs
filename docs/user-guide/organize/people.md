@@ -74,9 +74,6 @@ There can be several reasons why a face was not detected:
 
       You can also assign names to faces directly from the [Info Sidebar](info-sidebar.md) of the full-screen viewer, which is the only place where you can manually mark a face that PhotoPrism missed during automatic detection.
 
-!!! note ""
-    If the name you type does not match anyone already in your library, PhotoPrism asks you to confirm before creating a new person, so a typo does not silently start a second entry for someone you have already named.
-
 The person you just added will appear under *Recognized*
 
 !!! tip ""

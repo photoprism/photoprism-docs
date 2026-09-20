@@ -270,6 +270,16 @@ Disables simultaneous conversion of RAW files to apply Darktable presets.
 
 The corresponding [config toggle](../../getting-started/config-options.md) is `PHOTOPRISM_RAW_PRESETS`.
 
+### Conversion Timeout
+
+Converting a still image, document, or RAW file is given up after the configured number of
+minutes, so one stubborn original cannot hold up everything queued behind it.
+
+The corresponding [config option](../../getting-started/config-options.md) is
+`PHOTOPRISM_CONVERT_TIMEOUT`, in `MINUTES` (defaults to 10; `-1` disables the limit). Video
+transcoding has its own [timeout](../../getting-started/advanced/transcoding.md#timeout) instead,
+since it is disabled by default.
+
 ### Disable ImageMagick
 
 If this feature is disabled, [ImageMagick](https://imagemagick.org/) is not used for conversion.

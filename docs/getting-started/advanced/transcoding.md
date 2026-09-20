@@ -53,6 +53,15 @@ Note that MPEG-4 AVC videos are not re-encoded if they exceed the [configured bi
 !!! tldr ""
     Already transcoded video files are not automatically re-transcoded when the limit is changed. To do this, you must manually remove the `*.avc` files in the `sidecar` [storage folder](../docker-compose.md#photoprismstorage) and run the `photoprism convert` command [in a terminal](../docker-compose.md#opening-a-terminal).
 
+### Timeout ###
+
+Transcoding a video is disabled by default, because how long it takes tracks the length of the
+source rather than a fixed budget. Set [`PHOTOPRISM_TRANSCODE_TIMEOUT`](../config-options.md#file-conversion)
+in `MINUTES` if you want one anyway — for example, on shared hardware where a very long video
+should not occupy a worker indefinitely. This is separate from the
+[conversion timeout](../../user-guide/settings/advanced.md#conversion-timeout) that applies to
+still images, documents, and RAW files.
+
 ## Software Transcoding ##
 
 Unless you have a lot of high-resolution videos in your library, we recommend keeping the default settings to use the standard software codec for video transcoding. It has a high quality and does not require any special permissions or additional drivers.

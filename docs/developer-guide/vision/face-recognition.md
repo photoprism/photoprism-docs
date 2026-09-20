@@ -51,7 +51,7 @@ Detection currently runs on the **CPU execution provider only**. PhotoPrism conf
 
 Optional hardware acceleration is being tracked for future releases as **opt-in** paths; CPU remains the default so existing installs are unaffected:
 
-- **NVIDIA / CUDA (Linux)** — offloads inference to an NVIDIA GPU through the ONNX Runtime CUDA execution provider. It requires the GPU build of ONNX Runtime, the NVIDIA driver, and — for Docker — the NVIDIA Container Toolkit plus a matching CUDA and cuDNN runtime in the image (these NVIDIA libraries are not part of the ONNX Runtime archive). Tracked in [photoprism/photoprism#5703](https://github.com/photoprism/photoprism/issues/5703).
+- **NVIDIA / CUDA (Linux)** — would offload inference to an NVIDIA GPU through the ONNX Runtime CUDA execution provider. The GPU runtime archives are mirrored on our download server, but the code does not yet select that execution provider, so there is nothing to enable yet and no configuration option for it. It would require the GPU build of ONNX Runtime, the NVIDIA driver, and — for Docker — the NVIDIA Container Toolkit plus a matching CUDA runtime in the image (these NVIDIA libraries are not part of the ONNX Runtime archive).
 - **Apple / CoreML (native macOS builds)** — offloads to the Apple Neural Engine and GPU through the CoreML execution provider, which is already compiled into the macOS build of ONNX Runtime. This benefits **natively built** macOS binaries only: the standard Docker image runs inside a Linux VM on macOS with no Apple-accelerator passthrough, so it stays CPU-only regardless. Tracked in [photoprism/photoprism#5704](https://github.com/photoprism/photoprism/issues/5704).
 
 ## Embedding Models

@@ -118,7 +118,7 @@ The distance thresholds are calibrated for each embedding model and resolved aut
 - `photoprism faces markers [name|uid] [--face ID] [--unassigned] [--dangling]` — list face markers, what they are assigned to, and their [Detail](../../developer-guide/vision/face-recognition.md#embedding-detail) score.
 - `photoprism faces conflicts [name|uid]` — list face clusters that hold the same face but are assigned to different people.
 - `photoprism faces audit [--subject UID] [--fix]` — check and optionally repair face data.
-- `photoprism faces reset [--detector auto|none|yunet] [--all] [--force]` — remove automatic clusters and matches; `--all` also removes names while keeping the markers, `--force` removes the markers too so faces must be detected again.
+- `photoprism faces reset [--detector auto|none|yunet] [--all] [--force] [--yes]` — remove automatic clusters and matches; `--all` also removes names while keeping the markers, `--force` removes the markers too so faces must be detected again, and `--yes` skips the confirmation prompt so the command can run in a script.
 - `photoprism faces index` — (re)detect faces in originals.
 - `photoprism faces update [--force]` — cluster and match detected faces.
 - `photoprism faces optimize` — compact clusters after updates.

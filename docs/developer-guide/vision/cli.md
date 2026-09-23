@@ -300,7 +300,7 @@ This clears retry counters and allows the optimizer to reprocess clusters that p
 
 ### Reset Face Detection
 
-Clear all face data and start fresh:
+Remove the automatically recognized faces and their matches, so that clustering starts over:
 
 ```bash
 docker compose exec photoprism photoprism faces reset
@@ -314,11 +314,11 @@ docker compose exec photoprism photoprism faces reset --detector=yunet
 
 Three levels of reset are available, and they differ in how much detection work has to be repeated:
 
-| Command               | Removes                                                   | Keeps                                  |
-|-----------------------|-----------------------------------------------------------|----------------------------------------|
-| `faces reset`         | automatic clusters and their matches                      | markers, embeddings, manual names      |
-| `faces reset --all`   | additionally the people and names a person or sidecar set | markers and embeddings                 |
-| `faces reset --force` | people, clusters, and markers                             | nothing — faces must be detected again |
+| Command               | Removes                                      | Keeps                                  |
+|-----------------------|----------------------------------------------|----------------------------------------|
+| `faces reset`         | automatic clusters and their matches         | markers, embeddings, manual names      |
+| `faces reset --all`   | additionally all names and unverified people | markers, embeddings, verified people   |
+| `faces reset --force` | people, clusters, and markers                | nothing — faces must be detected again |
 
 `--all` is the one to reach for when re-testing clustering parameters: because the markers and their
 embeddings survive, a following `faces update` re-clusters in seconds rather than re-detecting every
@@ -336,7 +336,7 @@ you have settled on stay put across repeated re-clustering rounds and remain com
 markers table, so the command refuses the combination rather than picking one.
 
 !!! danger ""
-    The `faces reset` command will delete all existing face markers and clusters. Make sure you have backups if needed, as this operation cannot be undone.
+    These commands cannot be undone, so make sure you have a backup first. Only `faces reset --force` deletes the face markers, which means every file has to be scanned for faces again.
 
 ### Migrate Face Embeddings
 

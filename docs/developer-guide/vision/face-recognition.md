@@ -89,7 +89,7 @@ docker compose exec photoprism photoprism faces migrate
 
 It defaults to the supported model, so an ordinary migration needs no `--to`. `photoprism faces reset` clears the recorded pin, because a reset leaves no vectors for it to keep comparable.
 
-Restart the instance once it has finished, and see [Migrate Face Embeddings](cli.md#migrate-face-embeddings) for the dry run, the report it prints, what re-detection can lose, and what happens to person assignments.
+[Create a backup](../../user-guide/ai/face-recognition.md#creating-a-backup) of the index database and `options.yml` before you start, since a migration cannot be undone otherwise. Restart the instance once it has finished, and see [Migrate Face Embeddings](cli.md#migrate-face-embeddings) for the dry run, the report it prints, what re-detection can lose, and what happens to person assignments.
 
 !!! info ""
     If the configured model cannot read a library's stored vectors, embedding work **pauses** rather than silently filtering the mismatch: generation, clustering, and matching stop after one warning until a migration reconciles them. Detection keeps running, so faces stay recorded and their vectors are filled in afterwards.
@@ -159,7 +159,7 @@ Face **scheduling** is configured through `PHOTOPRISM_FACE_RUN` alone — see [R
 ### Clustering Settings
 
 !!! danger ""
-    It is strongly recommended that you run `photoprism faces reset` in a terminal to remove existing clusters and markers after changing any of the clustering parameters, otherwise inconsistencies may cause unexpected behavior or errors.
+    It is strongly recommended that you run `photoprism faces reset` in a terminal to remove existing clusters and markers after changing any of the clustering parameters, otherwise inconsistencies may cause unexpected behavior or errors. [Create a backup](../../user-guide/ai/face-recognition.md#creating-a-backup) first, since a reset cannot be undone.
 
 | Environment Variable               | CLI Flag                  | Default                                    | Description                                                                                                                                                                           |
 |------------------------------------|---------------------------|--------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

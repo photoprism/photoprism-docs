@@ -86,6 +86,7 @@ Names stored in sidecar files or embedded metadata do not appear:
 
 When a library is in a state that is quicker to rebuild than to repair:
 
+- [ ] [Create a backup](../../user-guide/ai/face-recognition.md#creating-a-backup) first, since none of the following can be undone
 - [ ] `photoprism faces reset` removes automatic clusters and matches, keeping the names you assigned
 - [ ] `photoprism faces reset --all` also removes the names, keeping the markers
 - [ ] `photoprism faces reset --force` removes the markers as well, so faces must be detected again with `photoprism faces index`

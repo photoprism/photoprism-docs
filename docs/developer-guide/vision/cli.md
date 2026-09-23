@@ -336,7 +336,7 @@ you have settled on stay put across repeated re-clustering rounds and remain com
 markers table, so the command refuses the combination rather than picking one.
 
 !!! danger ""
-    These commands cannot be undone, so make sure you have a backup first. Only `faces reset --force` deletes the face markers, which means every file has to be scanned for faces again.
+    These commands cannot be undone, so [create a backup](../../user-guide/ai/face-recognition.md#creating-a-backup) first, e.g. with `docker compose exec photoprism photoprism backup -i /photoprism/storage/backup/before-faces.sql`. Only `faces reset --force` deletes the face markers, which means every file has to be scanned for faces again.
 
 ### Migrate Face Embeddings
 
@@ -355,6 +355,9 @@ docker compose exec photoprism photoprism faces migrate --dry-run
 ```
 
 The report names how many markers are valid, invalid, already on the target, unlinked, or identified manually, how many are assigned to a person and keep that assignment, and how many are too small or too low-scoring to seed a cluster. It warns separately when markers cannot be re-embedded because their file is missing or unreadable, and when the originals path is empty or unreadable — which would otherwise look like a clean run right up until every file fails.
+
+!!! danger ""
+    A migration cannot be undone except by restoring a backup. Before running it for real, save a database dump under a name the scheduled backups will not replace or prune, and keep a copy of `options.yml`, where the run records the new model. See [Creating a Backup](../../user-guide/ai/face-recognition.md#creating-a-backup) for the commands and how to roll back.
 
 A dry run performs **no detection**: it answers from index queries alone and returns before any file is read, so [`PHOTOPRISM_FACE_MIGRATE_SCORE`](face-recognition.md#migration-settings) and [`PHOTOPRISM_FACE_MIGRATE_SIZE`](face-recognition.md#migration-settings) have no effect on it.
 

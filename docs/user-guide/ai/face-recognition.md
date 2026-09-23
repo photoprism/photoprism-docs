@@ -14,6 +14,9 @@ If faces are missing, people are grouped incorrectly, or tagging is slow, work t
 
 Libraries indexed before the current [embedding model](#face-embeddings) became available keep the model they already use, because vectors produced by different models cannot be compared: switching automatically would make every face you have already assigned to a person incomparable with newly indexed ones. Setting [`PHOTOPRISM_FACE_MODEL`](#detection-settings) does not change it either.
 
+!!! danger ""
+    **[Create a backup](#creating-a-backup) before you migrate or reset.** A migration replaces the stored vector of every face and rebuilds every automatic cluster, and a reset deletes clusters, names, or markers. Neither can be undone except by restoring a backup.
+
 `photoprism faces migrate` is what changes it. It re-embeds every face, keeps the people you have already identified, and records the new model as the one in use. It defaults to the model this release supports, so an ordinary upgrade needs no target — run it [in a terminal](https://docs.photoprism.app/getting-started/docker-compose/#opening-a-terminal) with `--dry-run` first to see what it would cover:
 
 ```bash
@@ -39,10 +42,28 @@ photoprism faces optimize       # optional tidy-up
 
 To check the result, `photoprism faces status` reports which model is in use and why clustering is waiting if no clusters are forming.
 
-If you would rather start from a clean state, run `photoprism faces reset -f` followed by `photoprism faces index`. All detected faces must then be reassigned.
+If you would rather start from a clean state, [create a backup](#creating-a-backup), then run `photoprism faces reset -f` followed by `photoprism faces index`. All detected faces must then be reassigned.
 
 !!! note ""
     A [complete rescan](https://docs.photoprism.app/user-guide/library/originals/#when-should-complete-rescan-be-selected) will also detect additional faces, but takes longer since more indexing tasks are performed.
+
+### Creating a Backup
+
+Faces, clusters, and people are stored in the index database, so a dump of it is what lets you undo a migration or a reset. Save the dump under a name of its own rather than the default date-based one: [scheduled backups](../backups/index.md#scheduled-backups) replace a dump from the same day and delete older ones beyond the configured limit, but they leave a file with any other name alone.
+
+```bash
+photoprism backup -i /photoprism/storage/backup/before-faces.sql
+```
+
+Before a migration, also keep a copy of the `options.yml` file in your [*config* folder](../backups/folders.md#config), which is `storage/config` unless you changed it, or note that it does not exist yet. The migration records the new model there, so a restored database without the matching `options.yml` would leave face embedding work paused, because the configured model cannot read the restored vectors.
+
+To roll back, restore the dump, put the saved `options.yml` back (or delete the one the migration created), and restart your instance:
+
+```bash
+photoprism restore -i -f /photoprism/storage/backup/before-faces.sql
+```
+
+The path shown is where the *storage* folder is mounted in our Docker images; adjust it if yours is elsewhere. When [running commands with Docker Compose](../../getting-started/docker-compose.md#command-line-interface), prefix them with `docker compose exec photoprism`. For a complete backup that also covers your originals and thumbnails, see [Creating Backups](../backups/index.md).
 
 ## Face Detection
 
@@ -92,7 +113,7 @@ How these vectors are stored and compared is covered in the [Developer Guide](..
 ### Clustering Settings
 
 !!! info ""
-    After changing any of the clustering parameters, run `photoprism faces update --force` in a terminal so that a pass runs at the new values instead of waiting for enough new faces. It applies them to the faces that are not yet in a cluster and matches every face against the clusters again; an automatically matched face may end up in a different cluster, while a face that you assigned manually keeps its assignment. Run `photoprism faces reset` if you want the library regrouped from scratch. Changing the embedding model is a different operation and requires `photoprism faces migrate`.
+    After changing any of the clustering parameters, run `photoprism faces update --force` in a terminal so that a pass runs at the new values instead of waiting for enough new faces. It applies them to the faces that are not yet in a cluster and matches every face against the clusters again; an automatically matched face may end up in a different cluster, while a face that you assigned manually keeps its assignment. Run `photoprism faces reset` if you want the library regrouped from scratch, after [creating a backup](#creating-a-backup). Changing the embedding model is a different operation and requires `photoprism faces migrate`.
 
 | Environment Variable          | CLI Flag             | Default | Description                                                                                                                                                                           |
 |-------------------------------|----------------------|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

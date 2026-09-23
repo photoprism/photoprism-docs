@@ -112,7 +112,15 @@ You can start a [rescan from the user interface](../user-guide/library/originals
 
 ### Face Recognition
 
-Libraries indexed before the current [face model](../user-guide/ai/face-recognition.md#face-embeddings) became available keep the model they already use, because vectors produced by different models cannot be compared. Re-embed them with the current model, which preserves the people you have already identified:
+Libraries indexed before the current [face model](../user-guide/ai/face-recognition.md#face-embeddings) became available keep the model they already use, because vectors produced by different models cannot be compared. Re-embed them with the current model, which preserves the people you have already identified.
+
+Create a backup first, because a migration cannot be undone otherwise. Save a database dump under a name of its own, so that [scheduled backups](../user-guide/backups/index.md#scheduled-backups) do not replace or remove it, and keep a copy of `storage/config/options.yml` if it exists, since the migration records the new model there:
+
+```bash
+docker compose exec photoprism photoprism backup -i /photoprism/storage/backup/before-faces.sql
+```
+
+Then start the migration:
 
 ```bash
 docker compose exec photoprism photoprism faces migrate
@@ -129,8 +137,10 @@ docker compose exec photoprism photoprism faces update --force
 
 `--force` runs the pass even when too few faces are new to trigger one, and matches every face against the clusters again — which is what a freshly migrated library needs. [Learn more ›](../user-guide/ai/face-recognition.md#upgrading-an-existing-library)
 
+To undo a migration, restore the dump with `docker compose exec photoprism photoprism restore -i -f /photoprism/storage/backup/before-faces.sql`, put the saved `options.yml` back (or delete the one the migration created, if there was none before), and restart your instance. [Learn more ›](../user-guide/ai/face-recognition.md#creating-a-backup)
+
 Remove existing people and faces for a clean start e.g. after upgrading from our
-[development preview](https://docs.photoprism.app/release-notes/#development-preview):
+[development preview](https://docs.photoprism.app/release-notes/#development-preview), after creating a backup as shown above, since a reset cannot be undone either:
 
 ```bash
 docker compose exec photoprism photoprism faces reset -f

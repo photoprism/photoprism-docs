@@ -198,6 +198,6 @@ Two options widen what is removed:
 | `faces reset --force` | the people and the face markers     | yes                      |
 
 !!! danger ""
-    These commands cannot be undone, so make sure you have a backup first. Only `faces reset --force` deletes the face markers, which means every picture has to be scanned for faces again — on a large library that takes a long time.
+    These commands cannot be undone, so [create a backup](face-recognition.md#creating-a-backup) first, e.g. with `docker compose exec photoprism photoprism backup -i /photoprism/storage/backup/before-faces.sql`. Only `faces reset --force` deletes the face markers, which means every picture has to be scanned for faces again — on a large library that takes a long time.
 
 [Learn more about face recognition ›](face-recognition.md)

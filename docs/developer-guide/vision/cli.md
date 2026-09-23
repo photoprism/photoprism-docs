@@ -324,6 +324,11 @@ Three levels of reset are available, and they differ in how much detection work 
 embeddings survive, a following `faces update` re-clusters in seconds rather than re-detecting every
 file. `--force` is the only variant that requires detection to run again.
 
+All three prompt for confirmation first. Pass `--yes` to skip the prompt so the command can run from
+a script or a scheduled job; `PHOTOPRISM_CLI=noninteractive` has the same effect. Without a terminal
+and without either, the command stops and exits `2` rather than reporting success for work it did not
+do — so `docker compose exec` needs `-T` together with `--yes`.
+
 A person marked **Verified** in the Edit Person dialog keeps their row through `--all`, so the names
 you have settled on stay put across repeated re-clustering rounds and remain comparable between them.
 

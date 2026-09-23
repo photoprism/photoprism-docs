@@ -243,7 +243,7 @@
 
     The result also depends on the exact order in which you unstack the files, as non-media sidecar files, for example, remain bound to the remaining media file in a stack. We consider providing a command for this in a future release and appreciate [any contributions](../developer-guide/index.md) in this regard.
 
-    If you are new to PhotoPrism and want to re-index your library with different settings, you can run the `photoprism reset` [command in a terminal](../getting-started/docker-compose.md#command-line-interface) to reset the index and start from scratch.
+    If you are new to PhotoPrism and want to re-index your library with different settings, you can run the `photoprism reset` [command in a terminal](../getting-started/docker-compose.md#command-line-interface) to reset the index and start from scratch. Since this cannot be undone, [create a backup](backups/index.md) first.
 
     [Learn more ›](../getting-started/docker-compose.md#examples)
 

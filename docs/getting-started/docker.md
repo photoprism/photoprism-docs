@@ -252,6 +252,9 @@ The currently supported user ID ranges are 0, 33, 50-99, 500-600, 900-1250, and 
 
 *You can alternatively use `podman` as a drop-in replacement for `docker` on Red Hat-compatible distributions.*
 
+!!! danger ""
+    Reset commands permanently delete data and cannot be undone. [Create a backup](../user-guide/backups/index.md) first, including your *storage* folder, and save the database dump under a name of its own so that [scheduled backups](../user-guide/backups/index.md#scheduled-backups) do not replace it, e.g. `docker exec -ti photoprism photoprism backup -i /photoprism/storage/backup/before-reset.sql`. [Learn more ›](../user-guide/backups/restore.md)
+
 !!! info "Complete Rescan"
     `docker exec -ti photoprism photoprism index -f` rescans all originals, including already indexed and unchanged files.
     This may be necessary after major upgrades and after migrations of the database schema, especially if search results are missing or incorrect.

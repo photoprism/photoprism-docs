@@ -202,6 +202,9 @@ The command-line interface is also well suited for job automation using a [sched
 | [*Move to Originals*](../../user-guide/library/import.md) | `photoprism import [path]`     |
 | [*Copy to Originals*](../../user-guide/library/import.md) | `photoprism cp [path]`         |
 
+!!! danger ""
+    Reset commands permanently delete data and cannot be undone. [Create a backup](../../user-guide/backups/index.md) first, including your *storage* folder, and save the database dump under a name of its own so that [scheduled backups](../../user-guide/backups/index.md#scheduled-backups) do not replace it, e.g. `photoprism backup -i /photoprism/storage/backup/before-reset.sql`. [Learn more ›](../../user-guide/backups/restore.md)
+
 *[home directory]: /home/username on Linux and many NAS devices
 *[host]: Computer, Cloud Server, or VM that runs PhotoPrism
 *[swap]: substitute for physical memory

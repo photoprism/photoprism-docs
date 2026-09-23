@@ -92,4 +92,4 @@ Note that files and folders that have already been indexed cannot be retroactive
 Also note that already indexed files may still remain part of a [stack](../organize/stacks.md) if a related file with the same name but a different extension exists and is not ignored, e.g. an already indexed `.raw` file may still appear in a stack with its corresponding `.jpg` file after you add a `.ppignore` rule.
 
 !!! tldr ""
-    If you are a new user and files or folders have already been indexed, it is generally easiest to reset the database and start with a new index by running `photoprism reset` in a [terminal](../../getting-started/docker-compose.md#command-line-interface).
+    If you are a new user and files or folders have already been indexed, it is generally easiest to reset the database and start with a new index by running `photoprism reset` in a [terminal](../../getting-started/docker-compose.md#command-line-interface). Since this cannot be undone, [create a backup](../backups/index.md) first.

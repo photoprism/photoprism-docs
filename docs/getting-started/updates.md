@@ -18,6 +18,9 @@ Advanced users can [add this to a `Makefile`](https://dl.photoprism.app/docker/M
 !!! tldr ""
     Even when you use an image with the `:latest` tag, Docker does not automatically download new images for you. You can either manually upgrade as shown above, or set up a service like [Watchtower](#watchtower) to get automatic updates.
 
+!!! danger ""
+    A new version may upgrade your index database when it starts. [Create a backup](../user-guide/backups/index.md) before updating, especially before a major update or switching to the [development preview](#development-preview), so that you can return to the previous version if you run into problems.
+
 #### Config Examples
 
 We recommend that you compare your own `compose.yaml` with [our latest examples](https://dl.photoprism.app/docker/) from time to time, as they may include new [config options](config-options.md) or other enhancements relevant to you.
@@ -159,7 +162,7 @@ services:
     ...
 ```
 
-You can then manually upgrade to [new major versions](https://mariadb.com/docs/release-notes/community-server) by changing the image tag, e.g. from `mariadb:12` to `mariadb:13`, once [they are stable](https://mariadb.org/about/#maintenance-policy) and we had time to test them.
+You can then manually upgrade to [new major versions](https://mariadb.com/docs/release-notes/community-server) by changing the image tag, e.g. from `mariadb:12` to `mariadb:13`, once [they are stable](https://mariadb.org/about/#maintenance-policy) and we had time to test them. [Create a backup](../user-guide/backups/index.md) before you change the major version, since MariaDB does not support downgrades.
 
 However, this requires periodically checking for [new MariaDB images](https://hub.docker.com/_/mariadb) and adjusting [your `compose.yaml` file](docker-compose.md#database) accordingly, so you don't get stuck with an [outdated](https://mariadb.org/about/#maintenance-policy) version.
 

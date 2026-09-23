@@ -44,7 +44,7 @@ As an alternative to the [web user interface](index.md), you can [run the follow
 | `photoprism users reset --yes`              | Removes all accounts and resets the database |
 
 !!! tldr ""
-    Users who experience login problems after upgrading from [development builds](../../getting-started/updates.md#development-preview), or [old releases prior to November 2022](../../known-issues.md#legacy-user-accounts), can run the `photoprism users reset --yes` command to recreate the session and user-management database tables so they are compatible with the current version. We recommend trying [`photoprism auth reset --yes`](#session-management) first, since it is less disruptive. Note that any [client access tokens](client-credentials.md#access-tokens) and [app passwords](../settings/account.md#apps-and-devices) that users may have created will also be deleted and must be recreated.
+    Users who experience login problems after upgrading from [development builds](../../getting-started/updates.md#development-preview), or [old releases prior to November 2022](../../known-issues.md#legacy-user-accounts), can run the `photoprism users reset --yes` command to recreate the session and user-management database tables so they are compatible with the current version. We recommend trying [`photoprism auth reset --yes`](#session-management) first, since it is less disruptive. Note that any [client access tokens](client-credentials.md#access-tokens) and [app passwords](../settings/account.md#apps-and-devices) that users may have created will also be deleted and must be recreated. Since this cannot be undone, [create a backup](../backups/index.md) first.
 
 ### Command Options
 
@@ -143,7 +143,7 @@ You can combine it with these flags to change the output format and the maximum 
 | 172.19.0.1 | admin    | api   | OK     | 2023-02-03 06:55:06 |           |
 
 !!! tldr ""
-    Run `photoprism audit reset --yes` to clear all audit logs and reset the database table to a clean state.
+    Run `photoprism audit reset --yes` to clear all audit logs and reset the database table to a clean state. This cannot be undone, so [create a backup](../backups/index.md) first if you need to keep them.
 
 ## Session Management
 

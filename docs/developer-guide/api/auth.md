@@ -75,7 +75,7 @@ If clients support authentication via [OAuth2 client credentials](https://www.oa
 | `photoprism clients rm [identifier]`   | Deletes the specified client application   |
 | `photoprism clients reset --yes`       | Removes all registered client applications |
 
-`clients rm` asks for confirmation before deleting a client. Pass `--yes` (or `-y`) to run it from a script; without a terminal and without `--yes`, it exits with status `2` instead of deleting anything. A client that does not exist or has already been deleted results in exit status `3`.
+`clients rm` and `clients reset` ask for confirmation first. Pass `--yes` (or `-y`) to run them from a script; without a terminal and without `--yes`, they exit with status `2` instead of changing anything. `clients rm` exits with status `3` if the client does not exist or has already been deleted.
 
 For example, running the following [in a terminal](../../getting-started/docker-compose.md#command-line-interface) will generate credentials for [Prometheus](https://prometheus.io/docs/prometheus/latest/configuration/configuration/#oauth2), with access limited to the *metrics* endpoint:
 

@@ -180,13 +180,24 @@ This clears retry counters and allows the optimizer to reprocess clusters that p
 
 ### Reset Face Detection
 
-Clear all face data and start fresh:
+Remove the automatically recognized faces and their matches, so that clustering starts over:
 
 ```bash
 docker compose exec photoprism photoprism faces reset
 ```
 
+This keeps the face markers and the names you have assigned, so a following `photoprism faces update`
+re-clusters without detecting faces in your pictures again.
+
+Two options widen what is removed:
+
+| Command               | Also removes                        | Detection must run again |
+|-----------------------|-------------------------------------|--------------------------|
+| `faces reset`         | nothing beyond clusters and matches | no                       |
+| `faces reset --all`   | manually created faces and names    | no                       |
+| `faces reset --force` | the people and the face markers     | yes                      |
+
 !!! danger ""
-    The `faces reset` command will delete all existing face markers and clusters. Make sure you have backups if needed, as this operation cannot be undone.
+    These commands cannot be undone, so make sure you have a backup first. Only `faces reset --force` deletes the face markers, which means every picture has to be scanned for faces again — on a large library that takes a long time.
 
 [Learn more about face recognition ›](face-recognition.md)

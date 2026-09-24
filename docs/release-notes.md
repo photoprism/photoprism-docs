@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 260923-65bea475f</span>
+<span class="build">Build 260924-9d901950e</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions/#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
@@ -12,9 +12,12 @@ What's new?
 
 - AI: [Added an `--onnx-provider` option to run face recognition on an NVIDIA GPU](https://github.com/photoprism/photoprism/issues/5828)
 - People: [Fixed `faces reset --all` leaving empty person entries behind](https://github.com/photoprism/photoprism/issues/5834)
+- People: [Fixed `faces reset --detector` keeping markers from the previous detector](https://github.com/photoprism/photoprism/issues/5836)
+- CLI: [Added commands to add and remove cameras and lenses](https://github.com/photoprism/photoprism/issues/5835)
 - CLI: [Added `--yes` to `faces reset` so it can run in a script](https://docs.photoprism.app/user-guide/ai/face-recognition/#cli-reference)
 - CLI: [Added `--yes` to the `rm` and `reset` commands so they can run in a script](https://github.com/photoprism/photoprism/issues/5833)
 - CLI: [Improved exit codes for use in scripts](https://github.com/photoprism/photoprism/issues/5833)
+- CLI: [Fixed `reset` not removing sidecar files in subfolders](https://github.com/photoprism/photoprism/issues/5837)
 
 ### September 19, 2026
 <span class="build">Build 260919-28c46a116</span>

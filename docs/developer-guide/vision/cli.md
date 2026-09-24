@@ -306,25 +306,26 @@ Remove the automatically recognized faces and their matches, so that clustering 
 docker compose exec photoprism photoprism faces reset
 ```
 
-To regenerate markers with a specific detection model, name it with `--detector`:
+To regenerate all markers with a specific detection model, name it with `--detector`:
 
 ```bash
 docker compose exec photoprism photoprism faces reset --detector=yunet
 ```
 
-Three levels of reset are available, and they differ in how much detection work has to be repeated:
+The variants differ in how much detection work has to be repeated:
 
-| Command               | Removes                                      | Keeps                                  |
-|-----------------------|----------------------------------------------|----------------------------------------|
-| `faces reset`         | automatic clusters and their matches         | markers, embeddings, manual names      |
-| `faces reset --all`   | additionally all names and unverified people | markers, embeddings, verified people   |
-| `faces reset --force` | people, clusters, and markers                | nothing — faces must be detected again |
+| Command                         | Removes                                                                | Keeps                                                                                     |
+|---------------------------------|------------------------------------------------------------------------|-------------------------------------------------------------------------------------------|
+| `faces reset`                   | automatic clusters and their matches                                   | markers, embeddings, manual names                                                         |
+| `faces reset --all`             | additionally all names and unverified people                           | markers, embeddings, verified people                                                      |
+| `faces reset --force`           | people, clusters, and markers                                          | nothing — faces must be detected again                                                    |
+| `faces reset --detector=<name>` | all clusters and matches; unnamed markers the detector no longer finds | names (unless combined with `--all`), people, rejected faces — markers are detected again |
 
 `--all` is the one to reach for when re-testing clustering parameters: because the markers and their
 embeddings survive, a following `faces update` re-clusters in seconds rather than re-detecting every
-file. `--force` is the only variant that requires detection to run again.
+file. `--force` removes the markers and leaves detection to a separate `faces index` run.
 
-All three prompt for confirmation first. Pass `--yes` to skip the prompt so the command can run from
+All of them prompt for confirmation first. Pass `--yes` to skip the prompt so the command can run from
 a script or a scheduled job; `PHOTOPRISM_CLI=noninteractive` has the same effect. Without a terminal
 and without either, the command stops and exits `2` rather than reporting success for work it did not
 do — so `docker compose exec` needs `-T` together with `--yes`.
@@ -332,11 +333,22 @@ do — so `docker compose exec` needs `-T` together with `--yes`.
 A person marked **Verified** in the Edit Person dialog keeps their row through `--all`, so the names
 you have settled on stay put across repeated re-clustering rounds and remain comparable between them.
 
+`--detector` combines with the default scope or with `--all`. It removes all clusters, then detects faces in
+every picture again with the named model; `auto` stands for the configured detector, and the prompt names the one
+that will run. Markers it finds again are updated in place and keep their names, people, and rejected state; faces
+without a marker are added if they meet the configured face size and score; markers it no longer finds are removed,
+unless they carry a name, were rejected, or were placed by hand or from a sidecar file, in which case they are kept
+and reported. If the index could not reach some markers, for example because originals were moved, the command
+fails and asks you to index or purge the library and run it again. Running it again, or after an interruption,
+changes nothing that is already done. The detector is not saved, so set `PHOTOPRISM_FACE_DETECTOR` to the same
+value, run the command while the instance is stopped or idle, and run `faces update` afterwards to recognize faces
+again.
+
 `--force` cannot be combined with `--detector` or `--all`. The flags name different outcomes for the
 markers table, so the command refuses the combination rather than picking one.
 
 !!! danger ""
-    These commands cannot be undone, so [create a backup](../../user-guide/ai/face-recognition.md#creating-a-backup) first, e.g. with `docker compose exec photoprism photoprism backup -i /photoprism/storage/backup/before-faces.sql`. Only `faces reset --force` deletes the face markers, which means every file has to be scanned for faces again.
+    These commands cannot be undone, so [create a backup](../../user-guide/ai/face-recognition.md#creating-a-backup) first, e.g. with `docker compose exec photoprism photoprism backup -i /photoprism/storage/backup/before-faces.sql`. `faces reset --force` deletes all face markers, which means every file has to be scanned for faces again, and `--detector` removes the unnamed markers the new detector no longer finds.
 
 ### Migrate Face Embeddings
 

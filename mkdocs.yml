@@ -23,6 +23,7 @@ nav:
       - QNAP: getting-started/nas/qnap.md
       - Unraid: getting-started/nas/unraid.md
       - OpenMediaVault: getting-started/nas/openmediavault.md
+      - ZimaOS: getting-started/nas/zimaos.md
     - BSD Ports:
       - FreeBSD: getting-started/ports/freebsd.md
     - Using a CDN: getting-started/using-a-cdn.md

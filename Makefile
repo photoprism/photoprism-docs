@@ -87,6 +87,7 @@ img-resize:
 	mogrify -resize '1000x860>' docs/user-guide/img/*.jpg
 	mogrify -resize '1000x860>' docs/user-guide/**/img/*.jpg
 	mogrify -resize '1000x860>' docs/getting-started/nas/img/asustor/*.jpg
+	mogrify -resize '1000x860>' docs/getting-started/nas/img/zimaos/*.jpg
 merge:
 	git checkout deploy
 	git pull origin deploy

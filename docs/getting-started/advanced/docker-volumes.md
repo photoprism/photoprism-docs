@@ -70,6 +70,15 @@ Please do not use a named or anonymous [Docker volume](https://docs.docker.com/r
 !!! tldr ""
     Never [store database files](https://docs.photoprism.app/getting-started/troubleshooting/mariadb/#corrupted-files) on an unreliable device such as a USB flash drive, SD card, or shared network folder. These may also have [unexpected file size limitations](https://thegeekpage.com/fix-the-file-size-exceeds-the-limit-allowed-and-cannot-be-saved/), which is especially problematic for databases that do not split data into smaller files. We strongly recommend [using SSD storage for databases only](../troubleshooting/performance.md#storage).
 
+## PostgreSQL Database
+
+Our example includes a pre-configured [PostgreSQL](https://www.postgresql.org/) database server that stores it files in the `database` folder by default. If you remove it and provide no other database server credentials, SQLite database files will be created in the *storage* folder.
+
+Please do not use a named or anonymous [Docker volume](https://docs.docker.com/compose/compose-file/07-volumes/#example) for storing PostgreSQL database files and check the mount path of the volume if you use a custom database image (it may not always be `/var/lib/postgres`), as both can lead to data loss when the database container is recreated, e.g. [after an update](../updates.md#docker-compose) of the Docker image.
+
+!!! tldr ""
+    Never [store database files](https://docs.photoprism.app/getting-started/troubleshooting/postgresql/#corrupted-files) on an unreliable device such as a USB flash drive, SD card, or shared network folder. These may also have [unexpected file size limitations](https://thegeekpage.com/fix-the-file-size-exceeds-the-limit-allowed-and-cannot-be-saved/), which is especially problematic for databases that do not split data into smaller files. We strongly recommend [using SSD storage for databases only](../troubleshooting/performance.md#storage).
+
 ## Network Storage
 
 Shared folders that have already been mounted on your host under a drive letter or path can be used with Docker containers like [any other directory](../docker-compose.md#volumes).

@@ -76,9 +76,21 @@ your instance to a more powerful device or cloud server may help.
 
 Be aware that most [NAS devices](https://kb.synology.com/en-us/DSM/tutorial/What_kind_of_CPU_does_my_NAS_have) are
 optimized for minimal power consumption and low production costs. Although their hardware gets faster with each generation,
-[benchmarks](https://www.google.com/search?q=cpu+benchmarks) show that even 8-year-old standard desktop CPUs like the [Intel Core i3-4130](https://www.cpubenchmark.net/compare/Intel-Pentium-J3710-vs-Intel-i3-4130/2784vs2015) are often many times faster:
+[benchmarks](https://www.google.com/search?q=cpu+benchmarks) show that even older standard desktop CPUs like the [Intel Core i3-4130](https://www.cpubenchmark.net/compare/Intel-Pentium-J3710-vs-Intel-i3-4130/2784vs2015) from 2013 are often many times faster:
 
 ![CPU Benchmark](img/passmark-cpu.svg)
+
+The same applies to low-power desktop and mini PC processors, which Intel typically marks with a `T`, `TE`, `U`, or `Y` suffix. They run at lower clock speeds than their standard counterparts and sometimes have fewer cores, which particularly affects database queries that run on a single core.
+
+### Virtual Machines ###
+
+If PhotoPrism and MariaDB run in a virtual machine, they can only use the CPU cores and memory assigned to it. Other virtual machines on the same host, for example one that provides a network share for your originals, compete for the same resources. Check how many cores and how much memory are assigned to the virtual machine running PhotoPrism, and increase them if possible.
+
+## Face Recognition ##
+
+After indexing a large library for the first time, face recognition continues in the background to cluster, match, and update detected faces. With hundreds of thousands of faces, this can take several hours, and the logs only show progress messages such as `faces: matched 90,500 markers` every 15 minutes or so.
+
+While this is in progress, assigning names to faces can take much longer than usual because the database is busy. We recommend waiting until it is complete and starting with the face clusters under *People > New*, since [naming a cluster](../../user-guide/organize/people.md#assign-names-to-faces) assigns the name to all faces in it at once.
 
 ## Legacy Hardware ##
 

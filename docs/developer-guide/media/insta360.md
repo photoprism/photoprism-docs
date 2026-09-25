@@ -41,7 +41,9 @@ Files in the same folder whose names match in date, time, and sequence number be
 - Their frame rates differ by no more than 0.1 fps.
 - Their durations differ by no more than one second.
 
-If the lens files have been indexed as separate items, a complete rescan combines them. Since both lenses are needed to view the video, the lens and proxy files of a capture stay together, and *Unstack* is not available for them.
+The combined preview is the cover of the capture, regardless of the order in which its files were indexed, and no separate preview is created for the second lens or the proxy. If your sidecar folder is inside the originals folder, the preview created first remains the cover until you choose another one.
+
+If the lens files have been indexed as separate items, a complete rescan combines them. The combined item keeps the archive state of the item that was indexed first, so archiving one of the other items does not archive the capture. Since both lenses are needed to view the video, the lens and proxy files of a capture stay together, and *Unstack* is not available for them.
 
 ### Single-File Videos
 

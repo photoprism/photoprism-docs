@@ -23,7 +23,7 @@ Insta360 videos use the `.insv` extension, an MP4 container with additional came
 |------------------------------|-----------------------------------------|-----------------------------------------------------------------------|
 | One file per lens            | Models before the X4, at 5.7K and above | `VID_…_00_….insv` and `VID_…_10_….insv`, optionally `LRV_…_11_….insv` |
 | Both lenses in one frame     | Models before the X4, below 5.7K        | one `VID_…_00_….insv`, optionally `LRV_…_11_….insv`                   |
-| Two video tracks in one file | X4, X4 Air, X5, X6                      | one `VID_…_00_….insv`, optionally a `.lrv` proxy                      |
+| Two video tracks in one file | X4, X4 Air, X5, X6                      | one `VID_…_00_….insv`, optionally `LRV_…_01_….lrv`                    |
 
 ### Lens Pairs
 
@@ -47,7 +47,9 @@ If the lens files have been indexed as separate items, a complete rescan combine
 
 ### Single-File Videos
 
-Videos that store both lenses side by side in one 2:1 frame are converted directly. For cameras that store the two lenses as separate video tracks in a single file, converting both tracks into one 360° video [is not supported yet](https://github.com/photoprism/photoprism/issues/5843), and neither is indexing their `.lrv` proxy files.
+Videos that store both lenses side by side in one 2:1 frame are converted directly. For cameras that store the two lenses as separate video tracks in a single file, converting both tracks into one 360° video [is not supported yet](https://github.com/photoprism/photoprism/issues/5843).
+
+The low-resolution proxy these cameras write, for example `LRV_20240415_213145_01_035.lrv` next to `VID_20240415_213145_00_035.insv`, is stacked with its video once both files are present. It is not converted, so it never becomes the cover, and like the lens files of a capture, it cannot be unstacked. `.lrv` files that don't follow this naming, for example from other cameras, are not indexed.
 
 ## References
 

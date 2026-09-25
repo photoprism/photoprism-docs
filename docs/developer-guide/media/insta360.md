@@ -51,7 +51,7 @@ If the lens files have been indexed as separate items, a complete rescan combine
 
 Videos that store both lenses side by side in one 2:1 frame are converted directly. For cameras that store the two lenses as separate video tracks in a single file, both tracks are combined into one equirectangular video, as described for lens pairs above.
 
-The low-resolution proxy these cameras write, for example `LRV_20240415_213145_01_035.lrv` next to `VID_20240415_213145_00_035.insv`, is stacked with its video once both files are present. It is not converted, so it never becomes the cover, and like the lens files of a capture, it cannot be unstacked. `.lrv` files that don't follow this naming, for example from other cameras, are not indexed.
+The low-resolution proxy these cameras write, for example `LRV_20240415_213145_01_035.lrv` next to `VID_20240415_213145_00_035.insv`, is stacked with its video once both files are present. It is not converted, so it never becomes the cover, and like the lens files of a capture, it cannot be unstacked. `.lrv` files that don't follow this naming, for example from other cameras, are not indexed. Web uploads don't accept `.lrv` files, since uploaded files are imported under new names; add a proxy to the originals folder next to its video instead.
 
 ### Imported Captures
 

@@ -189,6 +189,7 @@ nav:
       - HEIC / HEIF: developer-guide/media/heif.md
       - Videos: developer-guide/media/videos.md
       - Live Photos: developer-guide/media/live.md
+      - Insta360 Files: developer-guide/media/insta360.md
       - Thumbnails: developer-guide/media/thumbnails.md
       - Color Profiles: developer-guide/media/colors.md
       - File Import: developer-guide/media/import.md

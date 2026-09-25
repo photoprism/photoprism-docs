@@ -14,6 +14,7 @@ Since [videos](video.md) and [Live Photos](video.md#live-photos) are always stac
 2. Files with sequential names like `/2018/IMG_1234 (2).jpg` and `/2018/IMG_1234 (3).jpg` can be stacked as well (optional)
 3. File metadata indicates that the pictures were taken at the same position within the same second (optional)
 4. File metadata includes the same *Unique Image ID* or *XMP Instance ID* (optional)
+5. Insta360 videos recorded as one file per lens, for example `VID_20231218_150323_00_022.insv` and `VID_20231218_150323_10_022.insv`, are stacked as one [360° video](panoramas.md), together with the optional `LRV_20231218_150323_11_022.insv` proxy; see the [Developer Guide](../../developer-guide/media/insta360.md) for the naming rules
 
 You can change your preferences for 2 - 4 in the *Stacks* section under *[Settings > Content](../settings/library.md#stacks)*.
 

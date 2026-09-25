@@ -41,7 +41,7 @@ Files in the same folder whose names match in date, time, and sequence number be
 - Their frame rates differ by no more than 0.1 fps.
 - Their durations differ by no more than one second.
 
-If the lens files have been indexed as separate items, a complete rescan combines them.
+If the lens files have been indexed as separate items, a complete rescan combines them. Since both lenses are needed to view the video, the lens and proxy files of a capture stay together, and *Unstack* is not available for them.
 
 ### Single-File Videos
 

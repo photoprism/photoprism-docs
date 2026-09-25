@@ -13,6 +13,8 @@ IMG_20220701_170732_00_018.dng
 
 A RAW `.dng` file saved alongside it shares its base name and is stacked with it, just like any other RAW/JPEG pair.
 
+An `.insp` file with both lenses side by side has a frame of exactly 2:1 and is shown in the [360° viewer](../../user-guide/organize/panoramas.md). An `.insp` file whose frame has another shape is shown as a regular picture.
+
 PhotoPrism does not pair `.insp` files, because photos are never split across lens files. [Insta360's MediaSDK](https://github.com/Insta360Develop/Insta360-Developer_Docs/blob/master/docs/en/sdk/x-ace-go/desktop/media.md) accepts one source file for a regular 360° photo or three or more for an HDR bracket, but never exactly two. The files of an HDR bracket share the timestamp in their names and each have their own sequence number. PhotoPrism does not merge them into one HDR image.
 
 ## Videos
@@ -47,9 +49,15 @@ If the lens files have been indexed as separate items, a complete rescan combine
 
 ### Single-File Videos
 
-Videos that store both lenses side by side in one 2:1 frame are converted directly. For cameras that store the two lenses as separate video tracks in a single file, converting both tracks into one 360° video [is not supported yet](https://github.com/photoprism/photoprism/issues/5843).
+Videos that store both lenses side by side in one 2:1 frame are converted directly. For cameras that store the two lenses as separate video tracks in a single file, both tracks are combined into one equirectangular video, as described for lens pairs above.
 
 The low-resolution proxy these cameras write, for example `LRV_20240415_213145_01_035.lrv` next to `VID_20240415_213145_00_035.insv`, is stacked with its video once both files are present. It is not converted, so it never becomes the cover, and like the lens files of a capture, it cannot be unstacked. `.lrv` files that don't follow this naming, for example from other cameras, are not indexed.
+
+### Imported Captures
+
+When files are imported, they get new names based on their date and checksum, which no longer contain the lens codes. PhotoPrism still recognizes the files of a capture that were imported together, using their original file names, and shows the combined 360° preview. Files of one capture that were imported separately are not combined.
+
+If a 360° original cannot be dewarped, a warning naming the file is logged, and its preview shows the unprocessed lens images.
 
 ## References
 

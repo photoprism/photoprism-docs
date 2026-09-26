@@ -15,6 +15,7 @@ What's new?
 - People: [Fixed `faces reset --all` leaving empty person entries behind](https://github.com/photoprism/photoprism/issues/5834)
 - People: [Fixed `faces reset --detector` keeping markers from the previous detector](https://github.com/photoprism/photoprism/issues/5836)
 - Index: [Improved stacking of Insta360 files that are indexed at different times](https://github.com/photoprism/photoprism/issues/5839)
+- Index: [Fixed rescans restoring archived Insta360 pictures](https://github.com/photoprism/photoprism/issues/5829) by [@omerdduran](https://github.com/omerdduran)
 - CLI: [Added commands to add and remove cameras and lenses](https://github.com/photoprism/photoprism/issues/5835)
 - CLI: [Added `--yes` to `faces reset` so it can run in a script](https://docs.photoprism.app/user-guide/ai/face-recognition/#cli-reference)
 - CLI: [Added `--yes` to the `rm` and `reset` commands so they can run in a script](https://github.com/photoprism/photoprism/issues/5833)

@@ -127,6 +127,8 @@ In addition, you can choose to run the `photoprism` service as a non-root user b
 
 *Which user and group you choose should depend on the owner of the `/dev/dri` video device so that the service has permission to access it.*
 
+If you use the `user` property, specify only the user ID, for example `user: "1000"`, so that the service keeps its `video` and `render` group memberships. Add a group ID, as in `"1000:1000"`, only if network storage such as NFS requires it to read and write files.
+
 Finally, remember to [update the file permissions and/or owner](../troubleshooting/docker.md#file-permissions) with the `chmod` and `chown` commands when you make changes to the UID or GID, and [restart the services](../docker-compose.md#step-2-start-the-server) for your changes to take effect:
 
 ```bash
@@ -235,7 +237,7 @@ services:
       - "108" # host "render" group
 ```
 
-Adjust the IDs in `group_add` to match the owners of `/dev/dri/renderD*` and `/dev/dri/card*` on your host (run `getent group video render` to see the numbers). Now [restart the services](../docker-compose.md#step-2-start-the-server) for the changes to take effect:
+Adjust the IDs in `group_add` to match the owners of `/dev/dri/renderD*` and `/dev/dri/card*` on your host (run `getent group video render` to see the numbers). These groups apply when the service runs as root or with the `user` property; if you use `PHOTOPRISM_UID` instead, set `PHOTOPRISM_GID` to the group that owns the device. Now [restart the services](../docker-compose.md#step-2-start-the-server) for the changes to take effect:
 
 ```bash
 docker compose stop

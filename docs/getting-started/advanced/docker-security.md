@@ -41,6 +41,8 @@ It is recommended that you run the `photoprism` service as a non-root user by se
 
 *If you are using [hardware video transcoding](transcoding.md#intel-quick-sync), it should depend on the owner of the video device which user and group you choose so that the service has permission to access it.*
 
+If you use the `user` property, specify only the user ID, for example `user: "1000"`, so that the service keeps its `video` and `render` group memberships. Add a group ID, as in `"1000:1000"`, only if network storage such as NFS requires it to read and write files.
+
 Finally, remember to [update the file permissions and/or owner](../troubleshooting/docker.md#file-permissions) with the `chmod` and `chown` commands when you make changes to the UID or GID, and [restart the services](../docker-compose.md#step-2-start-the-server) for your changes to take effect:
 
 ```bash

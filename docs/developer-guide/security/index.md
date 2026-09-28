@@ -35,7 +35,8 @@ Recommended local setup:
 ```bash
 git clone https://github.com/photoprism/photoprism.git
 cd photoprism
-make docker-dev
+make docker-build
+docker compose up -d
 ```
 
 Recommended production-like coverage:

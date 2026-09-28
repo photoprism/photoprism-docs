@@ -47,11 +47,11 @@ The smallest value `PHOTOPRISM_FACE_SIZE` accepts is 10 px, which is where the d
 
 ### Hardware Acceleration
 
-Detection currently runs on the **CPU execution provider only**. PhotoPrism configures the inference session with thread counts and full graph optimization but does not append a hardware-accelerated execution provider, so throughput scales with [`PHOTOPRISM_FACE_DETECTOR_THREADS`](#detection-settings) and the host CPU rather than a GPU. The prebuilt runtime is the CPU build of [ONNX Runtime](https://onnxruntime.ai/), installed via [`scripts/dist/install-onnx.sh`](https://github.com/photoprism/photoprism/blob/develop/scripts/dist/install-onnx.sh).
+Detection and embedding run on the **CPU execution provider by default**, so throughput scales with [`PHOTOPRISM_FACE_DETECTOR_THREADS`](#detection-settings) and the host CPU. `PHOTOPRISM_ONNX_PROVIDER` (`--onnx-provider`) selects the execution provider, `cpu` or `cuda`; a session that cannot open on the configured provider falls back to the CPU. The prebuilt runtime is the CPU build of [ONNX Runtime](https://onnxruntime.ai/), installed via [`scripts/dist/install-onnx.sh`](https://github.com/photoprism/photoprism/blob/develop/scripts/dist/install-onnx.sh).
 
-Optional hardware acceleration is being tracked for future releases as **opt-in** paths; CPU remains the default so existing installs are unaffected:
+Hardware acceleration is **opt-in**:
 
-- **NVIDIA / CUDA (Linux)** — would offload inference to an NVIDIA GPU through the ONNX Runtime CUDA execution provider. The GPU runtime archives are mirrored on our download server, but the code does not yet select that execution provider, so there is nothing to enable yet and no configuration option for it. It would require the GPU build of ONNX Runtime, the NVIDIA driver, and — for Docker — the NVIDIA Container Toolkit plus a matching CUDA runtime in the image (these NVIDIA libraries are not part of the ONNX Runtime archive). Tracked in [photoprism/photoprism#5828](https://github.com/photoprism/photoprism/issues/5828).
+- **NVIDIA / CUDA (Linux x64)** — set `PHOTOPRISM_ONNX_PROVIDER=cuda` to offload inference to an NVIDIA GPU through the ONNX Runtime CUDA execution provider. It requires the GPU build of ONNX Runtime (`scripts/dist/install-onnx.sh --gpu`), the NVIDIA driver, and a matching CUDA runtime ([`scripts/dist/install-cuda.sh`](https://github.com/photoprism/photoprism/blob/develop/scripts/dist/install-cuda.sh)); in Docker, also the NVIDIA Container Toolkit, see [`compose.nvidia.yaml`](https://github.com/photoprism/photoprism/blob/develop/compose.nvidia.yaml). Tracked in [photoprism/photoprism#5828](https://github.com/photoprism/photoprism/issues/5828).
 - **Apple / CoreML (native macOS builds)** — offloads to the Apple Neural Engine and GPU through the CoreML execution provider, which is already compiled into the macOS build of ONNX Runtime. This benefits **natively built** macOS binaries only: the standard Docker image runs inside a Linux VM on macOS with no Apple-accelerator passthrough, so it stays CPU-only regardless. Tracked in [photoprism/photoprism#5704](https://github.com/photoprism/photoprism/issues/5704).
 
 ## Embedding Models
@@ -189,7 +189,7 @@ Distance thresholds are **calibrated per embedding model** and resolved from the
 
 [`PHOTOPRISM_FACE_CLUSTER_SIZE`](#clustering-settings) is likewise resolved from the model when unset — it is the embedder's own input size, so **112 px for `sface` and 160 px for `facenet`**. It is measured in pixels of the image the embedding was sampled from, not of the detection thumbnail.
 
-Cluster radius plus match distance may not exceed 1.4, and a configured value above that ceiling is refused rather than clipped, so the reported configuration always matches the one in force.
+Cluster radius plus match distance may not exceed 1.25. A configured pair above that is ignored with a warning, and the model's calibrated radius and match distance apply instead, so the reported configuration always matches the one in force.
 
 **Epsilon is the one distance that does not scale with the model.** The others are calibrated separations; epsilon is the *gap* a resolved collision leaves behind — a void where nothing matches — so a wider one strands embeddings rather than telling two people apart. It is registered per model only so it can be overridden, and [`PHOTOPRISM_FACE_EPSILON_DIST`](#clustering-settings) accepts at most `0.01`; a larger value resolves to the model default with a warning. Twice epsilon is the distance below which two embeddings of different subjects are flagged ambiguous instead of being separated, because below that the backoff would exceed the separation it preserves.
 

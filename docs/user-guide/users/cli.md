@@ -70,7 +70,7 @@ The `users add` and `users mod` commands support these flags to set or change ac
 !!! note ""
     Option availability depends on the edition you run. Our Community Edition provides the baseline command set, while PhotoPrism Plus and Pro add more flags and
     account-management capabilities. Use `photoprism users add --help` and `photoprism users mod --help` on your instance to see the exact options supported by that
-    build.  Use `photoprism users add --help` and `photoprism users mod --help` on your instance to see the exact options supported by that build.
+    build.
 
 Accounts for which login is disabled with `--no-login` cannot be used to sign in to the user interface or to authenticate requests to the [REST API](../../developer-guide/api/index.md), not even with an [app password](client-credentials.md#app-passwords). Combined with `--webdav`, they remain available for [WebDAV](../sync/webdav.md) sync with app passwords that have the `webdav` [scope](client-credentials.md#authorization-scopes). Applications that need to read from the REST API without a user login can use an [access token](client-credentials.md#access-tokens) or [client credentials](client-credentials.md#client-credentials).
 
@@ -82,7 +82,7 @@ The `photoprism users add` command creates a new user account or offers to **res
 docker compose exec photoprism photoprism users add -p mysecret -n "Bob" bob
 ```
 
-If you do not specify an initial password with the `-p` flag, you will be prompted to enter a password for the new account. Further account properties can be set with the flags listed above.
+If you do not specify an initial password with the `-p` flag, you will be prompted to enter a password for the new account. When the command offers to restore a deleted account, pass `--restore` to restore it without being asked, for example in a script or when no terminal is attached. Declining the offer or running without a terminal leaves the account deleted and exits with code `1`. Further account properties can be set with the flags listed above.
 
 !!! example ""
     See [Roles and Permissions](roles.md) for the account roles you can set with `--role`, and which of them your edition provides.

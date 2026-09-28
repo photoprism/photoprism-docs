@@ -4,13 +4,14 @@ PhotoPrism ships a single-page app that targets evergreen browsers. The loader s
 
 ## Supported Platforms
 
-- Chrome, Edge, and Firefox: latest stable versions on Windows, macOS, and Linux
-- Safari 13+ on macOS and iOS 13+ (the splash screen warns older iOS devices)
-- Chromium-based mobile browsers that ship with modern ES2019 features
+- Chrome and Edge 119+, Firefox 128+
+- Safari 16.4+ on macOS and iOS
+
+The `browserslist` query in `frontend/package.json`, `BROWSER_TARGET` in `frontend/vite.config.mjs`, and `assets/static/js/browser-check.js` state the same baseline, so change them together.
 
 Internet Explorer is **not** supported. Legacy Android WebView builds without ES modules or Fetch support will hit the browser-check warning.
 
-When introducing APIs that may not exist on the minimum baseline (for example `AbortController` on Safari 13), add a capability check or a lightweight polyfill under `assets/static/js/browser-check.js`.
+When introducing APIs that may not exist on the minimum baseline (for example an API newer than Safari 16.4), add a capability check or a lightweight polyfill under `assets/static/js/browser-check.js`.
 
 ## Features With a Higher Baseline
 
@@ -23,4 +24,4 @@ Follow the same pattern for any other feature whose requirement exceeds the base
 - Run the Vitest unit suite (`make vitest-watch`) on every UI change.
 - Use the “Devices” tab in Chrome DevTools or Safari’s Responsive Design Mode to spot layout regressions on phones and tablets.
 - [BrowserStack](https://www.browserstack.com/) remains free for open-source projects and is the easiest way to test on edge versions of Safari, iOS, and legacy Android without owning physical devices.
-- Capture baseline screenshots for new layouts via the Playwright workflows documented in `AGENTS.md` so we can diff rendering changes over time.
+- Capture baseline screenshots for new layouts via the Playwright workflows documented in [`frontend/AGENTS.md`](https://github.com/photoprism/photoprism/blob/develop/frontend/AGENTS.md) so we can diff rendering changes over time.

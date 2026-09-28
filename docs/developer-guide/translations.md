@@ -33,8 +33,8 @@ You can open, edit and save them with Poedit to update existing translations.
 - In Poedit click on "Create New Translation" at the bottom and select the language
 - Now you can start translating
 - When done, save your translation as `*.po` file using the language locale (e.g. `de.po`) as name
-- Add the new language to the `Languages` function in  `/frontend/src/options/options.js`
-- Run `npm run gettext-compile` to compile existing translations into a single `translations.json` file
+- Add the new language to `Options` in `/frontend/src/locales.js`
+- Run `npm run gettext-compile` to compile the translations into `/frontend/src/locales/json/<locale>.json`
 - To test your translations you need to build the frontend again using `npm run build` or `npm run watch`
 
 ### Update existing translation ###
@@ -44,7 +44,7 @@ You can open, edit and save them with Poedit to update existing translations.
 - In the Poedit menu click "Catalogue" --> "Update from POT File" --> select the `translations.pot` file from `/frontend/src/locales`
 - Now you can start proofreading and adding the missing translations
 - Once you're done, save the changes in the `*.po` file
-- Run `npm run gettext-compile` to compile existing translations into a single `translations.json` file
+- Run `npm run gettext-compile` to compile the translations into `/frontend/src/locales/json/<locale>.json`
 - To test your translations you need to build the frontend again using `npm run build` or `npm run watch`
 
 !!! example ""

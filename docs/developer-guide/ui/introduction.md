@@ -4,9 +4,9 @@ Open a terminal and run `photoprism start` (or `make start` inside the main repo
 
 ## Frameworks and Bundling
 
-- The UI is a Vue 3 + Vuetify 3 single-page application. Bootstrap and other legacy frameworks are no longer used.
+- The UI is a Vue 3 + Vuetify 4 single-page application. Bootstrap and other legacy frameworks are no longer used.
 - The entry points live in [`frontend/src/app.js`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/app.js) (bootstrap logic, router, plugins) and [`frontend/src/app.vue`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/app.vue) (layout shell). The route definitions are stored in [`frontend/src/app/routes.js`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/app/routes.js).
-- Webpack (configured in [`frontend/webpack.config.js`](https://github.com/photoprism/photoprism/blob/develop/frontend/webpack.config.js)) bundles the Vue code, registers the service worker, and emits the optimized JS/CSS that gets injected into the Go HTML template at [`assets/templates/index.gohtml`](https://github.com/photoprism/photoprism/blob/develop/assets/templates/index.gohtml).
+- Vite (configured in [`frontend/vite.config.mjs`](https://github.com/photoprism/photoprism/blob/develop/frontend/vite.config.mjs), with plugins in [`frontend/vite.plugins.mjs`](https://github.com/photoprism/photoprism/blob/develop/frontend/vite.plugins.mjs)) bundles the Vue code, generates the service worker for production builds, and emits the optimized JS/CSS that gets injected into the Go HTML template at [`assets/templates/index.gohtml`](https://github.com/photoprism/photoprism/blob/develop/assets/templates/index.gohtml).
 - Startup logic such as the browser capability check and splash screen is implemented in [`assets/static/js/browser-check.js`](https://github.com/photoprism/photoprism/blob/develop/assets/static/js/browser-check.js) and [`frontend/src/css/splash.css`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/css/splash.css), so update both files together when changing the loader.
 - Documentation and landing pages may use lightweight static tooling (for example MkDocs Material or Hugo), but the actual app always goes through the Vue stack described above.
 
@@ -19,8 +19,8 @@ Reusable Vue components live under [`frontend/src/component/`](https://github.co
 ## Dependencies
 
 - The authoritative dependency list is [`frontend/package.json`](https://github.com/photoprism/photoprism/blob/develop/frontend/package.json).
-- Install or refresh dependencies by running `npm install` inside the `frontend` directory. The root Makefile wraps this via `make deps` / `make install`, which creates `frontend/node_modules/` and the shared `venv/` in one step.
-- Add a dependency with `npm install <package> --save` so it is recorded in `package.json` + `package-lock.json`. Always check [`frontend/CODEMAP.md`](https://github.com/photoprism/photoprism/blob/develop/frontend/CODEMAP.md) before adding new runtime libraries.
+- The frontend is an npm workspace of the repository root, so `node_modules/` and `package-lock.json` live at the root. Install or refresh dependencies from the root with `make dep-js`, which runs `npm ci`; `make dep` also downloads the models.
+- Add a dependency with `npm install --ignore-scripts --workspace frontend <package>` from the repository root, so it is recorded in `frontend/package.json` and the root `package-lock.json`. Always check [`frontend/CODEMAP.md`](https://github.com/photoprism/photoprism/blob/develop/frontend/CODEMAP.md) before adding new runtime libraries.
 
 ## Build, Watch, and Test
 
@@ -33,11 +33,11 @@ Reusable Vue components live under [`frontend/src/component/`](https://github.co
 ## External Resources
 
 - https://vuejs.org/guide/quick-start.html — official Vue 3 guide
-- https://vuetifyjs.com/en/getting-started/installation/ — Vuetify 3 docs and Material Design guidance
+- https://vuetifyjs.com/en/getting-started/installation/ — Vuetify docs and Material Design guidance
 - https://web.dev/explore/progressive-web-apps/ — Google’s canonical PWA reference
-- https://webpack.js.org/concepts/ — bundler fundamentals used in [`frontend/webpack.config.js`](https://github.com/photoprism/photoprism/blob/develop/frontend/webpack.config.js)
+- https://vite.dev/guide/ — bundler used in [`frontend/vite.config.mjs`](https://github.com/photoprism/photoprism/blob/develop/frontend/vite.config.mjs)
 - https://web.dev/articles/fullscreen/ — background reading for fullscreen helpers in [`frontend/src/common/fullscreen.js`](https://github.com/photoprism/photoprism/blob/develop/frontend/src/common/fullscreen.js)
 - https://maplibre.org/ — base engine for Places maps (see [maps.md](maps.md))
 - https://floating-ui.com/ / https://floating-vue.starpad.dev/ — tooltip stack we rely on for hover/focus hints
 
-Older Vue 2 tutorials can still provide inspiration, but always cross-check APIs with the current Vue 3 / Vuetify 3 documentation before copying snippets into the codebase.
+Older Vue 2 tutorials can still provide inspiration, but always cross-check APIs with the current Vue 3 / Vuetify 4 documentation before copying snippets into the codebase.

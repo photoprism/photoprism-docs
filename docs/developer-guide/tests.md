@@ -5,17 +5,20 @@
 
 ## Unit Tests ##
 ### Go ###
-To run all unit tests, type `make test` or `go test ./internal/...` in a terminal.
+To run all unit tests, type `make test` in a terminal inside the [development environment](setup.md).
 
 The following `make` targets are currently defined for tests:
 
-- `test`: Executes all Go (`/internal`, `/pkg`) and JavaScript (`frontend/tests`) unit tests with a 20 min timeout and verbose output
+- `test`: Executes all Go (`/pkg`, `/internal`, and the `internal` packages of the editions) and JavaScript (`frontend/tests`) unit tests on SQLite, with a 20 min timeout per Go package
 - `test-go`, `test-js`: Run the Go or JavaScript unit tests on their own
+- `test-integration`: Same as `test-go`, plus the `integration` build tag for the Insta360 stacking, import, and reconciliation matrices
 - `test-short`: Executes only fast Go tests with a 5 min timeout
 - `test-race`: Same as `test-go` but with the race condition detector enabled (much slower) and a 60 min timeout
 - `test-coverage`: Same as `test-go` but creates a *coverage.txt* file and a human-readable *coverage.html* report; timeout is elevated to 30 min
 - `test-mariadb`: Runs the Go tests against a MariaDB instance instead of SQLite
 - Subset targets for focused runs: `test-pkg`, `test-api`, `test-ai`, `test-entity`, `test-commands`, `test-photoprism`, `test-hub`, `test-video`
+
+The Go targets build with the tags in `GOTEST_TAGS`, which defaults to `slow,develop`. Override it on the `make` command line, for example `make test-mariadb GOTEST_TAGS=slow,develop,integration`; an exported environment variable is ignored.
 
 You can run single tests via `go test -run` in a package directory, e.g. */internal/photoprism*:
 
@@ -58,7 +61,7 @@ go test -short
 ### JavaScript ###
 To run all JavaScript unit tests, type `make test-js` in a terminal.
 
-Alternatively, from the `frontend` directory, run `npm run test`.
+Alternatively, from the `frontend` directory, run `npm run test`. Both set `TZ=UTC` and `NODE_ENV` for Vitest, so a bare `npx vitest run` reports date and component test failures that do not occur otherwise.
 
 In case you want to run a single test, add `.only` to the test you want to run e.g.:
 

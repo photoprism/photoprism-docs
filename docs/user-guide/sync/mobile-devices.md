@@ -61,7 +61,7 @@ An overview of [mobile sync apps](#sync-apps-for-ios-and-android) for iOS and An
 
       ![Screenshot](img/photosync-7.jpg){: style="width:35%" class="shadow"}
 
-Because PhotoSync uses WebDAV to send files, PhotoPrism automatically starts importing/indexing when it receives new files.
+Because PhotoSync uses WebDAV to send files, PhotoPrism automatically starts indexing when it receives new files in the *originals* folder. Files uploaded to the *import* folder are only imported automatically if you have [enabled automatic imports](../library/import.md#automatic-import), which are disabled by default. Otherwise, start the import manually once all files have been transferred.
 
 ## Sync Apps for iOS and Android
 

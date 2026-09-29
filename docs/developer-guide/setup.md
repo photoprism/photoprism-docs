@@ -83,6 +83,9 @@ You can find the default settings in [the `compose.yaml` file](https://github.co
     For example, `make test` will run frontend and backend unit tests. Wrong filesystem permissions can be fixed by
     running `make fix-permissions` in a terminal.
 
+!!! note "AI Coding Agents"
+    Our project settings for Claude Code let agents run shell commands without asking, since we run them inside the development container. If you use an agent on your host instead, adjust the settings as you see fit, for example by using auto mode rather than approving each command manually.
+
 ### Optional: Build the Frontend in Watch Mode
 
 The integrated web server provides the backend API and serves static assets. These assets can be automatically rebuilt (updated) when you change a file. Run the following command in a terminal either inside or outside the container:

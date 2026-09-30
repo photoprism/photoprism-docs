@@ -161,5 +161,8 @@ In order to grant limited API access to other applications and services, the `ph
 
 [Learn more ›](client-credentials.md)
 
+!!! note ""
+    Changes made with the CLI, such as removing a user or an app password, reach a running instance once its session cache expires, after at most 15 minutes by default ([`PHOTOPRISM_SESSION_CACHE`](../../getting-started/config-options.md#authentication)). To revoke access immediately, use the web interface where available, or restart the instance.
+
 !!! tldr ""
     Should you experience login problems, for example after upgrading from a [previous release](../../release-notes.md) or [development preview](../../getting-started/updates.md#development-preview), we recommend running the `photoprism auth reset --yes` command [in a terminal](../../getting-started/docker-compose.md#command-line-interface) to reset the `auth_sessions` table to a clean state and force a re-login of all users. Note that any [client access tokens](client-credentials.md#access-tokens) and [app passwords](../settings/account.md#apps-and-devices) that users may have created will also be deleted and must be recreated.

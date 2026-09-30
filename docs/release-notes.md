@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 260930-8c22b5fe2</span>
+<span class="build">Build 260930-6313e126f</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions/#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
@@ -27,6 +27,10 @@ What's new?
 - CLI: [Improved exit codes for use in scripts](https://github.com/photoprism/photoprism/issues/5833)
 - CLI: [Fixed `reset` not removing sidecar files in subfolders](https://github.com/photoprism/photoprism/issues/5837)
 - WebDAV: [Added an option to skip YAML sidecar files when syncing](https://github.com/photoprism/photoprism/issues/5842)
+- WebDAV: [Fixed the "Never" sync interval and the "None" retry limit](https://docs.photoprism.app/user-guide/settings/sync/#edit-sync-settings)
+- WebDAV: [Improved syncing so files that keep failing no longer hold up other downloads](https://docs.photoprism.app/user-guide/settings/sync/#edit-sync-settings)
+- Backup: [Improved MariaDB backups to use a consistent snapshot without locking tables](https://docs.photoprism.app/developer-guide/database/backups/#creating-a-dump)
+- Backup: [Fixed restores losing all rows of a table when a single statement fails](https://docs.photoprism.app/developer-guide/database/backups/#restoring-a-dump)
 - Server: [Added automatic Let's Encrypt certificates using TLS-ALPN-01](https://github.com/photoprism/photoprism/issues/5870)
 
 ### September 19, 2026

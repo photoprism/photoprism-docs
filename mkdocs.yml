@@ -239,7 +239,7 @@ nav:
       - Preview & Download Tokens: developer-guide/api/tokens.md
       - Client Libraries:
         - Go: developer-guide/api/clients/go.md
-    - Database Schema:
+    - Database:
       - Introduction: developer-guide/database/index.md
       - Migrations: developer-guide/database/migrations.md
       - Backups & Restores: developer-guide/database/backups.md

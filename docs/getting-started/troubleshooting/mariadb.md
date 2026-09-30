@@ -90,6 +90,20 @@ Note that it is not possible to set a custom DSN for MariaDB when a database ser
 
 When [using SQLite](sqlite.md), the DSN configuration option allows you to specify the database filename and custom parameters. [Learn more ›](sqlite.md#custom-dsn)
 
+### Encrypted Connections
+
+Connections to your database server are not encrypted unless your DSN includes the [`tls` parameter](https://pkg.go.dev/github.com/go-sql-driver/mysql#readme-tls), for example:
+
+```
+?charset=utf8mb4,utf8&collation=utf8mb4_unicode_ci&parseTime=true&timeout=60s&tls=true
+```
+
+- `tls=true` encrypts the connection and verifies the server certificate against the certificate authorities trusted in the container, so the certificate must be valid for the server's host name.
+- `tls=skip-verify` encrypts the connection without verifying the certificate, for example if the server uses a self-signed certificate.
+- `tls=preferred` works like `skip-verify`, but continues without encryption if the server does not support it.
+
+Only `tls=true` verifies that PhotoPrism is connected to the intended server.
+
 ## Unicode Support
 
 Verify the following if your logs show `incorrect string value` database errors or if you are experiencing Emoji encoding issues (for example in album, file, or folder names):

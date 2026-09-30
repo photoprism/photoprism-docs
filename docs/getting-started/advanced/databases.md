@@ -59,6 +59,10 @@ services:
 !!! danger ""
     Set strong passwords if the database is exposed to an external network. Never expose your database to the public Internet in this way, for example, if it is running on a cloud server.
 
+### Encrypted Connections
+
+The database options shown above do not encrypt the connection to your database server. If it needs to be encrypted, for example because the server runs on another host, configure the connection with a [custom DSN](../troubleshooting/mariadb.md#custom-dsn) that includes the `tls` parameter instead. [Learn more ›](../troubleshooting/mariadb.md#encrypted-connections)
+
 ## Schema Migrations
 
 An index schema migration is performed automatically every time PhotoPrism is (re)started. The following instructions may be helpful in special cases, such as when a temporary problem has prevented a successful migration:

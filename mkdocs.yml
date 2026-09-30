@@ -242,6 +242,7 @@ nav:
     - Database Schema:
       - Introduction: developer-guide/database/index.md
       - Migrations: developer-guide/database/migrations.md
+      - Backups & Restores: developer-guide/database/backups.md
       - ER Diagram: developer-guide/database/schema.md
     - Technologies:
       - YAML: developer-guide/technologies/yaml.md

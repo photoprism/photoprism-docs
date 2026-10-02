@@ -4,13 +4,15 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 260930-6313e126f</span>
+<span class="build">Build 261002-0390573e9</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions/#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
 What's new?
 
 - Viewer: [Improved Insta360 support for X4 and X5 videos, proxy files, and photo brackets](https://github.com/photoprism/photoprism/issues/5843)
+- AI: [Improved image labels with a new ONNX-based classifier](https://github.com/photoprism/photoprism/issues/5769)
+- AI: [Improved NSFW detection with a new ONNX-based model](https://github.com/photoprism/photoprism/issues/5770)
 - AI: [Added an `--onnx-provider` option to run face recognition on an NVIDIA GPU](https://github.com/photoprism/photoprism/issues/5828)
 - UX: [Upgraded the user interface to Vuetify 4](https://github.com/photoprism/photoprism/issues/5849)
 - People: [Added automatic naming of new face clusters when all matches agree](https://github.com/photoprism/photoprism/issues/5850)
@@ -32,6 +34,7 @@ What's new?
 - Backup: [Improved MariaDB backups to use a consistent snapshot without locking tables](https://docs.photoprism.app/developer-guide/database/backups/#creating-a-dump)
 - Backup: [Fixed restores losing all rows of a table when a single statement fails](https://docs.photoprism.app/developer-guide/database/backups/#restoring-a-dump)
 - Server: [Added automatic Let's Encrypt certificates using TLS-ALPN-01](https://github.com/photoprism/photoprism/issues/5870)
+- Translations: [Upgraded vue3-gettext to v4](https://github.com/photoprism/photoprism/issues/5875)
 
 ### September 19, 2026
 <span class="build">Build 260919-28c46a116</span>

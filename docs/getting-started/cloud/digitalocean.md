@@ -125,7 +125,17 @@ This ensures you receive the latest security updates and prevents [errors when u
 
 Web browsers do not recognize the default TLS certificate as valid, so a warning will appear when connecting over HTTPS.
 
-To avoid this issue, use a valid certificate e.g. obtained for free via Let's Encrypt.
+To avoid this issue, use a valid certificate e.g. obtained for free via Let's Encrypt. This requires a public domain name for your server, e.g. `photos.example.com`, which you can add under *Networking > Domains* in your DigitalOcean account.
+
+Once the domain points to your Droplet, follow the inline instructions in `!! UPPERCASE !!` in `/opt/photoprism/compose.yaml` and `/opt/photoprism/traefik.yaml` to set the domain, enable Let's Encrypt, and disable the self-signed certificate. Then restart all services for the changes to take effect:
+
+```bash
+cd /opt/photoprism
+docker compose stop
+docker compose up -d
+```
+
+The first request may fail while Traefik obtains the new certificate. Try again after about 30 seconds.
 
 [Learn more ›](../using-https.md)
 

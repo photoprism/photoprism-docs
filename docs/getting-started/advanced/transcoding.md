@@ -75,7 +75,7 @@ services:
       PHOTOPRISM_INIT: "ffmpeg"
 ```
 
-Internally, the `ffmpeg` init target installs the current BtbN stable build, equivalent to the `latest` channel in our [`install-ffmpeg.sh`](https://github.com/photoprism/photoprism/blob/develop/scripts/dist/install-ffmpeg.sh) script. This replaces the preinstalled distro version with the most recent FFmpeg 8 point release.
+Internally, the `ffmpeg` init target installs the current BtbN stable build, equivalent to the `latest` channel in our [`install-ffmpeg.sh`](https://github.com/photoprism/photoprism/blob/develop/scripts/dist/install-ffmpeg.sh) script, and replaces the preinstalled distro version with it. The FFmpeg version you get depends on what [BtbN](https://github.com/BtbN/FFmpeg-Builds) currently provides, so it may be a newer major release than the one included in our image.
 
 You can also install the nightly (master) build instead, which may include newer features and bug fixes that have not yet been included in a stable release:
 

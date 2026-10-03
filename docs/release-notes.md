@@ -13,7 +13,7 @@ What's new?
 - AI: [Improved image classification with a new ONNX-based model](https://github.com/photoprism/photoprism/issues/5769) by [@omerdduran](https://github.com/omerdduran)
 - AI: [Improved NSFW detection with a new ONNX-based model](https://github.com/photoprism/photoprism/issues/5770) by [@omerdduran](https://github.com/omerdduran)
 - AI: [Added an `--onnx-provider` option to run face recognition on an NVIDIA GPU](https://github.com/photoprism/photoprism/issues/5828)
-- UX: [Upgraded the user interface to Vuetify 4](https://github.com/photoprism/photoprism/issues/5849) by [@lastzero](https://github.com/lastzero)
+- UX: [Upgraded the user interface from Vuetify v3.12 to v4.2](https://github.com/photoprism/photoprism/issues/5849) by [@lastzero](https://github.com/lastzero)
 - Viewer: [Improved Insta360 support for X4 and X5 videos, proxy files, and brackets](https://github.com/photoprism/photoprism/issues/5843)
 - People: [Added automatic naming of new face clusters when all matches agree](https://github.com/photoprism/photoprism/issues/5850)
 - People: [Improved how face corrections are kept while recognition is running](https://github.com/photoprism/photoprism/issues/5857)
@@ -26,7 +26,6 @@ What's new?
 - CLI: [Added commands to add and remove cameras and lenses](https://github.com/photoprism/photoprism/issues/5835) by [@lastzero](https://github.com/lastzero)
 - CLI: [Added `--yes` to `faces reset` so it can run in a script](https://docs.photoprism.app/user-guide/ai/face-recognition/#cli-reference)
 - CLI: [Added `--yes` to the `rm` and `reset` commands so they can run in a script](https://github.com/photoprism/photoprism/issues/5833)
-- CLI: [Improved exit codes for use in scripts](https://github.com/photoprism/photoprism/issues/5833)
 - CLI: [Fixed `reset` not removing sidecar files in subfolders](https://github.com/photoprism/photoprism/issues/5837)
 - WebDAV: [Added an option to skip YAML sidecar files when syncing](https://github.com/photoprism/photoprism/issues/5842)
 - WebDAV: [Fixed the "Never" sync interval and the "None" retry limit](https://docs.photoprism.app/user-guide/settings/sync/#edit-sync-settings)
@@ -34,7 +33,7 @@ What's new?
 - Backup: [Improved MariaDB backups to use a consistent snapshot without locking tables](https://docs.photoprism.app/developer-guide/database/backups/#creating-a-dump)
 - Backup: [Fixed restores losing all rows of a table when a single statement fails](https://docs.photoprism.app/developer-guide/database/backups/#restoring-a-dump)
 - Server: [Added automatic Let's Encrypt certificates using TLS-ALPN-01](https://github.com/photoprism/photoprism/issues/5870)
-- Translations: [Upgraded vue3-gettext to v4](https://github.com/photoprism/photoprism/issues/5875) by [@lastzero](https://github.com/lastzero)
+- Translations: [Upgraded vue3-gettext from v2.4 to v4.0](https://github.com/photoprism/photoprism/issues/5875) by [@lastzero](https://github.com/lastzero)
 
 ### September 19, 2026
 <span class="build">Build 260919-28c46a116</span>

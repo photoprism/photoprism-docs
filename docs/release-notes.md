@@ -11,10 +11,10 @@ Our [preview builds](getting-started/updates.md#development-preview) give you ea
 What's new?
 
 - Viewer: [Improved Insta360 support for X4 and X5 videos, proxy files, and photo brackets](https://github.com/photoprism/photoprism/issues/5843)
-- AI: [Improved image labels with a new ONNX-based classifier](https://github.com/photoprism/photoprism/issues/5769)
-- AI: [Improved NSFW detection with a new ONNX-based model](https://github.com/photoprism/photoprism/issues/5770)
+- AI: [Improved image labels with a new ONNX-based classifier](https://github.com/photoprism/photoprism/issues/5769) by [@omerdduran](https://github.com/omerdduran)
+- AI: [Improved NSFW detection with a new ONNX-based model](https://github.com/photoprism/photoprism/issues/5770) by [@omerdduran](https://github.com/omerdduran)
 - AI: [Added an `--onnx-provider` option to run face recognition on an NVIDIA GPU](https://github.com/photoprism/photoprism/issues/5828)
-- UX: [Upgraded the user interface to Vuetify 4](https://github.com/photoprism/photoprism/issues/5849)
+- UX: [Upgraded the user interface to Vuetify 4](https://github.com/photoprism/photoprism/issues/5849) by [@lastzero](https://github.com/lastzero)
 - People: [Added automatic naming of new face clusters when all matches agree](https://github.com/photoprism/photoprism/issues/5850)
 - People: [Improved how face corrections are kept while recognition is running](https://github.com/photoprism/photoprism/issues/5857)
 - People: [Fixed `faces reset --all` leaving empty person entries behind](https://github.com/photoprism/photoprism/issues/5834)
@@ -23,7 +23,7 @@ What's new?
 - Index: [Fixed rescans restoring archived Insta360 pictures](https://github.com/photoprism/photoprism/issues/5829) by [@omerdduran](https://github.com/omerdduran)
 - Archive: [Fixed pictures with a broken preview file missing from the archive](https://github.com/photoprism/photoprism/issues/5871)
 - Upload: [Added a Retry button for failed uploads and removal of abandoned uploads](https://github.com/photoprism/photoprism/issues/5867)
-- CLI: [Added commands to add and remove cameras and lenses](https://github.com/photoprism/photoprism/issues/5835)
+- CLI: [Added commands to add and remove cameras and lenses](https://github.com/photoprism/photoprism/issues/5835) by [@lastzero](https://github.com/lastzero)
 - CLI: [Added `--yes` to `faces reset` so it can run in a script](https://docs.photoprism.app/user-guide/ai/face-recognition/#cli-reference)
 - CLI: [Added `--yes` to the `rm` and `reset` commands so they can run in a script](https://github.com/photoprism/photoprism/issues/5833)
 - CLI: [Improved exit codes for use in scripts](https://github.com/photoprism/photoprism/issues/5833)
@@ -34,7 +34,7 @@ What's new?
 - Backup: [Improved MariaDB backups to use a consistent snapshot without locking tables](https://docs.photoprism.app/developer-guide/database/backups/#creating-a-dump)
 - Backup: [Fixed restores losing all rows of a table when a single statement fails](https://docs.photoprism.app/developer-guide/database/backups/#restoring-a-dump)
 - Server: [Added automatic Let's Encrypt certificates using TLS-ALPN-01](https://github.com/photoprism/photoprism/issues/5870)
-- Translations: [Upgraded vue3-gettext to v4](https://github.com/photoprism/photoprism/issues/5875)
+- Translations: [Upgraded vue3-gettext to v4](https://github.com/photoprism/photoprism/issues/5875) by [@lastzero](https://github.com/lastzero)
 
 ### September 19, 2026
 <span class="build">Build 260919-28c46a116</span>

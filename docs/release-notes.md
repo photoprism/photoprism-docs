@@ -10,11 +10,11 @@ Our [preview builds](getting-started/updates.md#development-preview) give you ea
 
 What's new?
 
-- AI: [Improved image classification with a new ONNX-based model](https://github.com/photoprism/photoprism/issues/5769) by [@omerdduran](https://github.com/omerdduran)
-- AI: [Improved NSFW detection with a new ONNX-based model](https://github.com/photoprism/photoprism/issues/5770) by [@omerdduran](https://github.com/omerdduran)
+- AI: [Reworked image classification with a new ONNX-based model](https://github.com/photoprism/photoprism/issues/5769) by [@omerdduran](https://github.com/omerdduran)
+- AI: [Reworked NSFW detection with a new ONNX-based model](https://github.com/photoprism/photoprism/issues/5770) by [@omerdduran](https://github.com/omerdduran)
 - AI: [Added support for running ONNX models on NVIDIA GPUs](https://github.com/photoprism/photoprism/issues/5828) by [@lastzero](https://github.com/lastzero)
 - UX: [Upgraded the user interface from Vuetify v3.12 to v4.2](https://github.com/photoprism/photoprism/issues/5849) by [@lastzero](https://github.com/lastzero)
-- Viewer: [Improved support for Insta360 X4 and X5 videos, proxy files, and brackets](https://github.com/photoprism/photoprism/issues/5843)
+- Viewer: [Expanded support for Insta360 X4 and X5 videos, proxy files, and brackets](https://github.com/photoprism/photoprism/issues/5843)
 - People: [Added automatic naming of new face clusters when all matches agree](https://github.com/photoprism/photoprism/issues/5850)
 - People: [Improved handling of corrections while recognition is in progress](https://github.com/photoprism/photoprism/issues/5857)
 - Index: [Improved stacking of Insta360 files that are indexed at different times](https://github.com/photoprism/photoprism/issues/5839)
@@ -24,9 +24,9 @@ What's new?
 - CLI: [Added commands to add and remove cameras and lenses](https://github.com/photoprism/photoprism/issues/5835) by [@lastzero](https://github.com/lastzero)
 - CLI: [Added `--yes` to the `rm` and `reset` commands so they can run in a script](https://github.com/photoprism/photoprism/issues/5833)
 - CLI: [Added `--yes` to `faces reset` so it can run in a script](https://docs.photoprism.app/user-guide/ai/face-recognition/#cli-reference)
-- CLI: [Fixed `faces reset --all` leaving empty person entries behind](https://github.com/photoprism/photoprism/issues/5834)
-- CLI: [Fixed `faces reset --detector` keeping markers from the previous detector](https://github.com/photoprism/photoprism/issues/5836)
-- CLI: [Fixed `reset` command not removing sidecar files in subfolders](https://github.com/photoprism/photoprism/issues/5837)
+- CLI: [Fixed `faces reset --all` leaving empty person entries](https://github.com/photoprism/photoprism/issues/5834)
+- CLI: [Fixed `faces reset --detector` retaining markers from the previous detector](https://github.com/photoprism/photoprism/issues/5836)
+- CLI: [Fixed the `reset` command not removing sidecar files in subfolders](https://github.com/photoprism/photoprism/issues/5837)
 - Server: [Added support for Let's Encrypt AutoTLS via TLS-ALPN-01](https://github.com/photoprism/photoprism/issues/5870)
 - WebDAV: [Added an option to skip YAML sidecars when syncing files](https://github.com/photoprism/photoprism/issues/5842)
 - WebDAV: [Improved syncing to ensure failed files do not delay other downloads](https://docs.photoprism.app/user-guide/settings/sync/#edit-sync-settings)

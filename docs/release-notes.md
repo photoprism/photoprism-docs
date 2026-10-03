@@ -10,7 +10,7 @@ Our [preview builds](getting-started/updates.md#development-preview) give you ea
 
 What's new?
 
-- Viewer: [Improved Insta360 support for X4 and X5 videos, proxy files, and photo brackets](https://github.com/photoprism/photoprism/issues/5843)
+- Viewer: [Improved Insta360 support for X4 and X5 videos, proxy files, and brackets](https://github.com/photoprism/photoprism/issues/5843)
 - AI: [Improved image labels with a new ONNX-based classifier](https://github.com/photoprism/photoprism/issues/5769) by [@omerdduran](https://github.com/omerdduran)
 - AI: [Improved NSFW detection with a new ONNX-based model](https://github.com/photoprism/photoprism/issues/5770) by [@omerdduran](https://github.com/omerdduran)
 - AI: [Added an `--onnx-provider` option to run face recognition on an NVIDIA GPU](https://github.com/photoprism/photoprism/issues/5828)

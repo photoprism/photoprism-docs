@@ -32,7 +32,7 @@ What's new?
 - WebDAV: [Improved syncing to ensure failed files do not delay other downloads](https://docs.photoprism.app/user-guide/settings/sync/#edit-sync-settings)
 - WebDAV: [Fixed the "Never" sync interval and "None" retry limit settings](https://docs.photoprism.app/user-guide/settings/sync/#edit-sync-settings)
 - Backup: [Improved MariaDB backup with consistent snapshots and no locking](https://docs.photoprism.app/developer-guide/database/backups/#creating-a-dump)
-- Backup: [Improved restore when a single statement fails to recover other rows](https://docs.photoprism.app/developer-guide/database/backups/#restoring-a-dump)
+- Backup: [Improved restore to keep other rows when a single statement fails](https://docs.photoprism.app/developer-guide/database/backups/#restoring-a-dump)
 - Translations: [Upgraded `vue3-gettext` from v2.4 to v4.0](https://github.com/photoprism/photoprism/issues/5875) by [@lastzero](https://github.com/lastzero)
 
 ### September 19, 2026

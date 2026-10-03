@@ -67,6 +67,59 @@ services:
 !!! note ""
     We recommend that you keep the `PHOTOPRISM_DEFAULT_TLS` option enabled so that you can always connect securely over HTTPS even if there is a problem with your custom certificates.
 
+### 4. Automatic Let's Encrypt Certificates
+
+!!! example ""
+    This option is available for testing with our [development preview](updates.md#development-preview) and will be included in the next stable release. Please let us know how it works for you in [GitHub Issue #5870](https://github.com/photoprism/photoprism/issues/5870).
+
+If your server has a public domain name and no reverse proxy, PhotoPrism can obtain and renew a free certificate from [Let's Encrypt](#lets-encrypt) by itself. This is enabled when the site URL starts with `https://` and contains a public domain name, and an email address for the Let's Encrypt account is set with `PHOTOPRISM_TLS_EMAIL`:
+
+```yaml
+services:
+  photoprism:
+    image: photoprism/photoprism:preview
+    # ...
+    ports:
+      - "443:2342" # Let's Encrypt connects to port 443 of the domain
+    environment:
+      PHOTOPRISM_SITE_URL: "https://photos.example.com/"
+      PHOTOPRISM_TLS_EMAIL: "admin@example.com"
+      PHOTOPRISM_DISABLE_TLS: "false"
+```
+
+PhotoPrism then serves HTTPS on its regular port and completes the Let's Encrypt challenge on that same port, so please make sure that:
+
+- the DNS records of the domain point to your server; if it has an AAAA record, port 443 must also be reachable over IPv6
+- port 443 of the domain reaches PhotoPrism, e.g. with the port mapping shown above or a port forwarding on your router
+- `storage/config/certificates` is writable and on persistent storage, so certificates are reused after a restart
+
+The certificate is requested with the first HTTPS request after startup, which may therefore take a few seconds. Port 80 is not used, and plain `http://` requests to PhotoPrism's port are answered with `400 Bad Request`. Certificates are only requested for the domain in the site URL, not for IP addresses, `localhost`, or special-use names such as `.local` or `.internal`. While this option is enabled, `PHOTOPRISM_TLS_CERT` and `PHOTOPRISM_TLS_KEY` are ignored.
+
+#### Using a Reverse Proxy
+
+Since Let's Encrypt verifies the domain during the encrypted handshake with PhotoPrism, a reverse proxy in front of it must pass HTTPS connections through without decrypting them. With [Traefik](proxies/traefik.md), you can use a TCP router with TLS passthrough instead of the usual HTTP router labels:
+
+```yaml
+services:
+  photoprism:
+    # ...
+    labels:
+      - "traefik.enable=true"
+      - "traefik.tcp.routers.photoprism.rule=HostSNI(`photos.example.com`)"
+      - "traefik.tcp.routers.photoprism.entrypoints=websecure"
+      - "traefik.tcp.routers.photoprism.tls.passthrough=true"
+      - "traefik.tcp.services.photoprism.loadbalancer.server.port=2342"
+```
+
+In this case, do not publish PhotoPrism's port as shown above, since Traefik already listens on port 443. If your proxy terminates HTTPS itself, use [option 1](#1-https-reverse-proxy) instead.
+
+#### Strict Transport Security
+
+PhotoPrism Plus and Pro also send a `Strict-Transport-Security` header in this mode, which tells browsers to only connect over HTTPS for one year by default. You can adjust it with the `PHOTOPRISM_STS_SECONDS`, `PHOTOPRISM_STS_SUBDOMAINS`, and `PHOTOPRISM_STS_PRELOAD` [config options](config-options.md), or disable it with `PHOTOPRISM_DISABLE_STS`. While you are testing your setup, we recommend setting `PHOTOPRISM_STS_SECONDS` to a short time such as `"300"`.
+
+!!! tldr ""
+    Let's Encrypt limits failed validations and duplicate certificates per domain. If a certificate cannot be obtained, PhotoPrism logs a warning that you can [view in the service logs](#viewing-docker-service-logs). Please fix the cause before restarting it repeatedly.
+
 ## Obtaining Certificates
 
 Valid server certificates can be obtained either from a commercial [Certificate Authority](https://en.wikipedia.org/wiki/Certificate_authority) (CA) like [ZeroSSL](#zerossl) or free of charge from [Let's Encrypt](#lets-encrypt):

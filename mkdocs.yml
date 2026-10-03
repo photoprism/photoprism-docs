@@ -204,6 +204,7 @@ nav:
       - Perceptual Hashes: developer-guide/metadata/perceptual-hashes.md
       - Color Detection: developer-guide/metadata/colors.md
       - Camera Models: developer-guide/metadata/cameras.md
+      - CLI Commands: developer-guide/metadata/cli.md
     - Computer Vision:
       - Face Recognition: developer-guide/vision/face-recognition.md
       - Label Generation: developer-guide/vision/label-generation.md

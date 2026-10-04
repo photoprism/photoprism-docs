@@ -456,6 +456,30 @@ volumes:
 
 Then [restart all services](../docker-compose.md#step-2-start-the-server) for the changes to take effect. Note that related values must start at the same indentation level [in YAML](../../developer-guide/technologies/yaml.md) and that **tabs are not allowed for indentation**. We recommend using 2 spaces, but any number will do as long as it is consistent.
 
+### Case Sensitivity
+
+When PhotoPrism starts, it checks whether your *originals* and *storage* folders are on case-sensitive file systems. This way, it finds related files whose names differ only in letter case, for example a preview `IMG_0001.JPG` next to the RAW file `IMG_0001.CR2`, and can skip these extra checks on case-insensitive network shares, which speeds up indexing. With automatic detection, additional drives or shares [mounted below the *originals* folder](../docker-compose.md#photoprismoriginals) are searched for all spellings.
+
+If automatic detection doesn't work as expected, you can set the mode with the following environment variables:
+
+| Environment Variable        | Default | Values                             |
+|-----------------------------|---------|------------------------------------|
+| `PHOTOPRISM_ORIGINALS_CASE` | `auto`  | `auto`, `sensitive`, `insensitive` |
+| `PHOTOPRISM_STORAGE_CASE`   | `auto`  | `auto`, `sensitive`, `insensitive` |
+
+- `sensitive` always finds all related files, but is slower on network shares.
+- Only use `insensitive` if your *originals* folder and all drives or shares mounted below it are case-insensitive. Otherwise, files whose names differ only in letter case will not be found.
+- `PHOTOPRISM_STORAGE_CASE` also applies to the *import* folder and other folders outside *originals*, and to the *originals* folder if its mode cannot be detected, for example while it is still empty.
+- Folders linked into *originals* with symbolic links use the mode of the *originals* folder, not that of the file system they are on.
+- If you mount different file systems or shares below the *originals* folder or link folders from them, and are unsure, set `PHOTOPRISM_ORIGINALS_CASE` to `"sensitive"`:
+
+```yaml
+services:
+  photoprism:
+    environment:
+      PHOTOPRISM_ORIGINALS_CASE: "sensitive"
+```
+
 !!! info ""
     **We kindly ask you not to report bugs via *GitHub Issues* unless you are certain to have found a fully reproducible and previously unreported issue that must be fixed directly in the app.**
     [Ask for technical support](../../user-guide/index.md#getting-support) if you need help, it could be a local

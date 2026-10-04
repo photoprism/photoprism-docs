@@ -161,6 +161,8 @@ Additional directories can be mounted as sub folders of `/photoprism/originals` 
       - "/mnt/videos:/photoprism/originals/videos"
 ```
 
+If these are different file systems or network shares, see [Case Sensitivity](troubleshooting/docker.md#case-sensitivity) for how PhotoPrism handles file names that differ only in letter case.
+
 On Windows, prefix the host path with the drive letter and use `/` instead of `\` as separator:
 
 ```yaml

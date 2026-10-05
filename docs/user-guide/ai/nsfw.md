@@ -1,15 +1,15 @@
 # NSFW Detection
 
-PhotoPrism can automatically flag pictures as **private** when an image-classification model considers them unsafe for work. It can also reject such files during **web upload** so they never enter the library. NSFW detection is opt-in and is disabled by default. It is intended mainly to help administrators of shared instances keep adult content out of their libraries without having to review every upload manually.
+PhotoPrism can automatically flag pictures as **private** when an image-classification model considers them unsafe for work. It can also reject such files during **web upload** so they never enter the library. Flagging during indexing is opt-in. Upload screening runs unless `PHOTOPRISM_UPLOAD_NSFW` is `true`, which our example `compose.yaml` sets. Both are intended mainly to help administrators of shared instances keep adult content out of their libraries without having to review every upload manually.
 
 ## Configuration Options
 
-Two independent config options govern the runtime behavior. Both are off by default:
+Two independent config options govern the runtime behavior. Both are `false` by default:
 
-| Config Option                                                                       | Effect                                                                                                                                                                                                                                                                             |
-|-------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [`PHOTOPRISM_DETECT_NSFW`](../../getting-started/config-options.md#computer-vision) | When `true`, photos detected as NSFW during indexing or a `photoprism vision run` are marked as **private**. When `false` (default), NSFW signals are ignored even if the underlying model returns them.                                                                           |
-| [`PHOTOPRISM_UPLOAD_NSFW`](../../getting-started/config-options.md#storage)         | When `false`, the **web upload** dialog rejects files that the NSFW model flags as unsafe (the rejected file is deleted before indexing). When `true` (default), uploads are accepted regardless and any NSFW flagging happens later during indexing per `PHOTOPRISM_DETECT_NSFW`. |
+| Config Option                                                                       | Effect                                                                                                                                                                                                                                                                                                                 |
+|-------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [`PHOTOPRISM_DETECT_NSFW`](../../getting-started/config-options.md#computer-vision) | When `true`, photos detected as NSFW during indexing or a `photoprism vision run` are marked as **private**. When `false` (default), NSFW signals are ignored even if the underlying model returns them.                                                                                                               |
+| [`PHOTOPRISM_UPLOAD_NSFW`](../../getting-started/config-options.md#storage)         | When `false`, the **web upload** dialog rejects files that the NSFW model flags as unsafe (the rejected file is deleted before indexing). When `true`, uploads are accepted regardless and any NSFW flagging happens later during indexing per `PHOTOPRISM_DETECT_NSFW`; our example `compose.yaml` sets it to `true`. |
 
 The two options are independent: you can reject uploads without flagging existing imports, flag existing imports without policing uploads, or both.
 

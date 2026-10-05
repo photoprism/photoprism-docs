@@ -128,7 +128,7 @@ docker compose exec photoprism photoprism vision reset --models=labels --source=
 
     Relevant caption-related sources currently have these priorities:
 
-    - `image`: 8 (built-in TensorFlow models)
+    - `image`: 8 (built-in classification models)
     - `ollama`: 16 (Ollama captions and labels)
     - `openai`: 16 (OpenAI captions and labels)
     - `batch`: 64 (batch edit in the UI)

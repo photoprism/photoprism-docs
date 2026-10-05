@@ -1,5 +1,8 @@
 # Custom TensorFlow Models
 
+!!! info "Retired in Development Preview"
+    Our [development preview builds](../../../getting-started/updates.md#development-preview) classify pictures with ONNX models instead of TensorFlow, and TensorFlow SavedModels are no longer supported for labels. See [Label Models](../label-models.md) for the available models and how to use a custom one. This page describes current stable releases.
+
 As an alternative to the [built-in model](index.md), PhotoPrism lets you configure more powerful custom TensorFlow models for image classification.
 ## Step 1: Mount model folder
 In your compose.yaml file add a volume mount for a model folder.

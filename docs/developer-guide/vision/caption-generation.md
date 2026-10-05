@@ -1,6 +1,6 @@
 # Caption Generation
 
-As an addition to its [built-in AI capabilities](tensorflow/index.md), PhotoPrism lets you generate image captions through a direct [Ollama](https://ollama.com/search?c=vision) integration, as [described in this guide](#ollama-setup-guide).
+As an addition to its [built-in AI capabilities](../../user-guide/ai/index.md), PhotoPrism lets you generate image captions through a direct [Ollama](https://ollama.com/search?c=vision) integration, as [described in this guide](#ollama-setup-guide).
 
 It allows you to choose from the [available vision models](https://ollama.com/search?c=vision) and [customize the prompts](../../user-guide/ai/ollama-models.md#caption-prompts) according to your needs.
 

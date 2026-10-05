@@ -208,6 +208,7 @@ nav:
     - Computer Vision:
       - Face Recognition: developer-guide/vision/face-recognition.md
       - Label Generation: developer-guide/vision/label-generation.md
+      - Label Models: developer-guide/vision/label-models.md
       - Caption Generation: developer-guide/vision/caption-generation.md
       - Model Comparison: developer-guide/vision/model-comparison.md
       - CLI Commands: developer-guide/vision/cli.md

@@ -31,7 +31,7 @@ photoprism cameras add --make=Leica --model="M6"
 photoprism lenses add --make=Helios --model="44-2 58mm f/2"
 ```
 
-Both `--make` and `--model` are required. If a record with the same make and model already exists, the command reports it and exits with code `0` without creating a duplicate. The added or existing record is printed afterwards, and the report flags listed above can be used to change the output format.
+Both `--make` and `--model` are required, and neither may contain control characters such as tabs or line breaks; such values are rejected with exit code `2`. If a record with the same make and model already exists, the command reports it and exits with code `0` without creating a duplicate. The added or existing record is printed afterwards, and the report flags listed above can be used to change the output format.
 
 ## Rename a Camera or Lens
 
@@ -39,7 +39,7 @@ Both `--make` and `--model` are required. If a record with the same make and mod
 photoprism cameras update --id=5 --make=Leica --model="M6 TTL"
 ```
 
-Changes the make and model of the record with the specified ID. All three flags are required. The ID is shown by `photoprism cameras ls`. The unknown placeholder record cannot be changed.
+Changes the make and model of the record with the specified ID. All three flags are required. The ID is shown by `photoprism cameras ls`. The unknown placeholder record cannot be changed. The same rules as for adding apply to the new make and model, also when they are changed through the API (`PUT /api/v1/cameras/:id`, `PUT /api/v1/lenses/:id`), which answers `400` for a rejected value.
 
 ## Delete a Camera or Lens
 

@@ -80,9 +80,9 @@ The corresponding [config toggle](../../getting-started/config-options.md#featur
 
 ### Disable TensorFlow (Deprecated)
 !!! warning ""
-    This option is deprecated. To disable image classification and facial recognition, use the configuration options `PHOTOPRISM_DISABLE_FACES` and `PHOTOPRISM_DISABLE_CLASSIFICATION` instead. For more details, see the related [GitHub issue](https://github.com/photoprism/photoprism/issues/5310).
+    This option is deprecated. To disable facial recognition, use `PHOTOPRISM_DISABLE_FACES` instead, and to disable image classification, set `PHOTOPRISM_LABELS_MODEL` to `none`. For more details, see the related [GitHub issue](https://github.com/photoprism/photoprism/issues/5310).
 
-When selected, image classification and facial recognition will be disabled because both rely on TensorFlow.
+When set, facial recognition is disabled. Image classification no longer uses TensorFlow and is not affected.
 
 The corresponding [config toggle](../../getting-started/config-options.md#feature-flags) is `PHOTOPRISM_DISABLE_TENSORFLOW`.
 

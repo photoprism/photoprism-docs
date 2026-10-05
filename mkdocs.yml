@@ -211,6 +211,7 @@ nav:
       - Label Models: developer-guide/vision/label-models.md
       - Caption Generation: developer-guide/vision/caption-generation.md
       - Model Comparison: developer-guide/vision/model-comparison.md
+      - GPU Acceleration: developer-guide/vision/gpu-acceleration.md
       - CLI Commands: developer-guide/vision/cli.md
       - Using TensorFlow:
         - Label Generation: developer-guide/vision/tensorflow/index.md

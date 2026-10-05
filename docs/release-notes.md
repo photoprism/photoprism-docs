@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 261004-3cbe5cef0</span>
+<span class="build">Build 261005-e2ccf32a5</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions/#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
@@ -13,9 +13,11 @@ What's new?
 - AI: [Reworked image classification with a new ONNX-based model](https://github.com/photoprism/photoprism/issues/5769) by [@omerdduran](https://github.com/omerdduran)
 - AI: [Reworked NSFW detection with a new ONNX-based model](https://github.com/photoprism/photoprism/issues/5770) by [@omerdduran](https://github.com/omerdduran)
 - AI: [Added support for running ONNX models on NVIDIA GPUs](https://github.com/photoprism/photoprism/issues/5828) by [@lastzero](https://github.com/lastzero)
-- AI: [Added `OPENAI_BASE_URL`, `OPENAI_MODEL`, and `OLLAMA_MODEL` environment variables](https://github.com/photoprism/photoprism/issues/5885)
+- AI: [Improved image classification to analyze the whole picture and its center](https://github.com/photoprism/photoprism/issues/5769)
+- Vision: [Aligned support of environment variables for Ollama and OpenAI](https://github.com/photoprism/photoprism/issues/5885)
+- AI: [Added support for query parameters in `OPENAI_BASE_URL`](https://github.com/photoprism/photoprism/issues/5885)
 - AI: [Improved logging of failed OpenAI requests to report each model once](https://github.com/photoprism/photoprism/issues/5885)
-- AI: [Fixed calling OpenAI-compatible models whose names contain a colon](https://github.com/photoprism/photoprism/issues/5863)
+- AI: [Fixed calling OpenAI-compatible models whose names contain a colon](https://github.com/photoprism/photoprism/issues/5863) by [@somaz94](https://github.com/somaz94)
 - UX: [Upgraded the user interface from Vuetify v3.12 to v4.2](https://github.com/photoprism/photoprism/issues/5849) by [@lastzero](https://github.com/lastzero)
 - Viewer: [Expanded support for Insta360 X4 and X5 videos, proxy files, and brackets](https://github.com/photoprism/photoprism/issues/5843)
 - People: [Added automatic naming of new face clusters when all matches agree](https://github.com/photoprism/photoprism/issues/5850)
@@ -23,7 +25,8 @@ What's new?
 - Index: [Improved stacking of Insta360 files that are indexed at different times](https://github.com/photoprism/photoprism/issues/5839)
 - Index: [Rescans no longer restore archived Insta360 pictures](https://github.com/photoprism/photoprism/issues/5829) by [@omerdduran](https://github.com/omerdduran)
 - Index: [Improved preview lookups to be faster and match sidecar names in any case](https://github.com/photoprism/photoprism/issues/5886)
-- Index: [Fixed the orientation of previews extracted from RAW files](https://github.com/photoprism/photoprism/issues/5797)
+- Index: [Added options to set the case sensitivity of the originals and storage folders](https://docs.photoprism.app/getting-started/troubleshooting/docker/#case-sensitivity)
+- Index: [Fixed the orientation of previews extracted from RAW files](https://github.com/photoprism/photoprism/issues/5797) by [@Gosin](https://github.com/Gosin)
 - Archive: [Pictures with broken previews remain in the archive](https://github.com/photoprism/photoprism/issues/5871)
 - Upload: [Added a "Retry" button and automatic purging of abandoned uploads](https://github.com/photoprism/photoprism/issues/5867)
 - Download: [Improved video downloads to skip generated stills and keep original images](https://github.com/photoprism/photoprism/issues/5882)
@@ -41,6 +44,7 @@ What's new?
 - WebDAV: [Fixed the "Never" sync interval and "None" retry limit settings](https://docs.photoprism.app/user-guide/settings/sync/#edit-sync-settings)
 - Backup: [Improved MariaDB backup with consistent snapshots and no locking](https://docs.photoprism.app/developer-guide/database/backups/#creating-a-dump)
 - Backup: [Improved restore to keep other rows when a single statement fails](https://docs.photoprism.app/developer-guide/database/backups/#restoring-a-dump)
+- Security: [Upgraded `libheif` from v1.23.4 to v1.23.5](https://github.com/photoprism/photoprism/issues/5887)
 - Translations: [Upgraded `vue3-gettext` from v2.4 to v4.0](https://github.com/photoprism/photoprism/issues/5875) by [@lastzero](https://github.com/lastzero)
 
 ### September 19, 2026

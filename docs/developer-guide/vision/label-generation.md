@@ -12,6 +12,8 @@ Follow the [steps in our User Guide](../../user-guide/ai/using-ollama.md) to con
 
 PhotoPrism evaluates models from the bottom of the list up, so placing the Ollama entries after the others ensures Ollama is chosen first while the others remain available as fallback options.
 
+Requests to the OpenAI API (`api.openai.com`) or Ollama Cloud (`ollama.com`) are not sent without an API key: they fail with `missing api key`, and a warning naming the model is written to the system log once. Set `Service.Key`, or `OPENAI_API_KEY` / `OLLAMA_API_KEY`.
+
 Ollama-generated captions and labels are stored with the `ollama` metadata source automatically, so you do not need to request a specific `source` field in the schema or pass `--source` to the CLI unless you want to override the default.
 
 !!! tip "Prompt Localization"
@@ -28,39 +30,44 @@ Two behaviors affect anyone writing or tuning a label prompt:
 
 ## NSFW Detection Through Labels
 
-When an Ollama or OpenAI model is wired up for `Type: labels`, PhotoPrism can ask it to return NSFW classification alongside the regular label fields. The variable is declared in `internal/ai/vision/config.go` and assigned during configuration in `internal/config/config.go`:
+`PHOTOPRISM_NSFW_MODEL` selects how NSFW content is detected: `auto` (default) runs the dedicated detector chosen in `vision.yml`, `none` turns detection off, and `labels` uses the NSFW fields returned by an Ollama or OpenAI labels model instead. Label-derived NSFW applies only in `labels` mode and only with `PHOTOPRISM_DETECT_NSFW=true`. The variable is declared in `internal/ai/vision/config.go` and assigned in `internal/config/config_vision.go`:
 
 ```go
-vision.DetectNSFWLabels = c.DetectNSFW() && c.Experimental()
+vision.DetectNSFWLabels = c.DetectNSFWLabels() // DetectNSFW() && nsfw-model == "labels"
 ```
 
-When `DetectNSFWLabels` is `true`, the engine builders in `internal/ai/vision/engine_ollama.go` and `engine_openai.go` swap their default user prompts for `LabelPromptNSFW`, and the JSON schema generators (`SchemaLabels(includeNSFW=true)`) add the `nsfw` and `nsfw_confidence` fields. When it is `false`, the prompt and schema describe only `name`, `confidence`, and `topicality`, so the LLM response cannot trigger NSFW flagging.
+When `DetectNSFWLabels` is `true`, the engine builders in `internal/ai/vision/engine_ollama.go` and `engine_openai.go` swap their default user prompts for `LabelPromptNSFW`, and the JSON schema generators (`SchemaLabels(includeNSFW=true)`) add the `nsfw` and `nsfw_confidence` fields. When it is `false`, the prompt and schema describe only `name`, `confidence`, and `topicality`, so the LLM response cannot trigger NSFW flagging, even if a custom prompt asks for the fields.
 
-Downstream, the vision worker (`internal/workers/vision.go`) guards the labels-based NSFW promotion with `conf.DetectNSFW()`:
+Downstream, the vision worker (`internal/workers/vision.go`) applies the label verdict in `labelsPrivateFlag`, and only in `labels` mode:
 
 ```go
-if w.conf.DetectNSFW() && !m.PhotoPrivate {
-    if labels.IsNSFW(vision.Config.Thresholds.GetNSFW()) {
-        m.PhotoPrivate = true
-    }
+if private || !conf.DetectNSFWLabels() || vision.Config == nil {
+    return private, false
+}
+if labels.IsNSFW(vision.Config.Thresholds.GetNSFW()) {
+    return true, true
 }
 ```
 
-The index pipeline (`internal/photoprism/index_mediafile.go`) reaches the same outcome by a different route: it reads the label verdict into a local first and applies it only for photos that are new to the index, falling back to the file-level check when the labels say nothing.
+The index pipeline (`internal/photoprism/index_mediafile.go`) reaches the same outcome for photos that are new to the index, and falls back to the dedicated detector when the labels say nothing and dedicated detection is enabled:
 
 ```go
-isNSFW = labels.IsNSFW(vision.Config.Thresholds.GetNSFW())
+isNSFW = labelsMarkNSFW(labels, o.DetectNSFWLabels)
 ...
 if !photoExists {
     if isNSFW {
         photo.PhotoPrivate = true
     } else if o.DetectNsfw {
-        photo.PhotoPrivate = m.DetectNSFW()
+        if result := m.DetectNSFW(); result.IsUnsafe() {
+            photo.PhotoPrivate = true
+        }
     }
 }
 ```
 
-The dedicated `ModelTypeNsfw` entry (a built-in ONNX model by default, overridable in `vision.yml`) is a separate inference pass that only runs when `DetectNSFW` is true **and** the caller includes `nsfw` in the active model list (`--models labels,nsfw` for the CLI; the scheduler picks it up from `VisionModelShouldRun` automatically).
+Label-derived flags use `Thresholds.NSFW` (default `75`). The dedicated `ModelTypeNsfw` detector (a built-in ONNX model by default) uses `Thresholds.NSFWIndex` and `Thresholds.NSFWUpload`, which default to the detector's calibrated threshold; neither falls back to `NSFW`. In `labels` mode, no dedicated detector is loaded and uploads are not screened.
+
+An `nsfw` entry in `vision.yml` that uses the Ollama or OpenAI request format returns no NSFW scores, so PhotoPrism replaces it with the built-in detector when the file is loaded, keeping its `Run` setting, and writes a warning to the system log. Use a labels model with `PHOTOPRISM_NSFW_MODEL=labels` to get NSFW flags from these engines.
 
 The user-facing matrix and threshold details are in [NSFW Detection](../../user-guide/ai/nsfw.md).
 

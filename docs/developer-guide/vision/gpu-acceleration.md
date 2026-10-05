@@ -4,17 +4,14 @@
 
 PhotoPrism can run its built-in ONNX models on an NVIDIA GPU through the [ONNX Runtime](https://onnxruntime.ai/) CUDA execution provider. This covers image classification, NSFW detection, and face detection and embeddings. Thumbnail generation, image decoding, metadata extraction, and database work stay on the CPU, so the overall gain is smaller than the speedup of a single model.
 
-!!! note ""
-    This page describes the current development version. The images are published as preview builds; the stable `:cuda` tags will follow with a release.
-
 ## CUDA Images
 
 The CUDA images are amd64-only variants of our Plus and Pro images that include the GPU build of ONNX Runtime together with the CUDA runtime libraries and cuDNN:
 
-| Image                   | Tag            |
-|-------------------------|----------------|
-| `photoprism/photoprism` | `preview-cuda` |
-| `photoprism/pro`        | `preview-cuda` |
+| Image                   | Release Tags             | Preview Tag    |
+|-------------------------|--------------------------|----------------|
+| `photoprism/photoprism` | `cuda`, `YYMMDD-cuda`    | `preview-cuda` |
+| `photoprism/pro`        | `cuda`, `1.YYMM.DD-cuda` | `preview-cuda` |
 
 They are about 1.7 GB larger than the regular images and preset `PHOTOPRISM_ONNX_PROVIDER` to `cuda` and `NVIDIA_DRIVER_CAPABILITIES` to `compute,utility,video`, so ONNX inference and [NVENC video transcoding](../../getting-started/advanced/transcoding.md) can both use the GPU once one is assigned to the container.
 
@@ -29,7 +26,7 @@ Do not add `onnxruntime` or `onnxruntime-gpu` to `PHOTOPRISM_INIT` when using th
 ```yaml
 services:
   photoprism:
-    image: photoprism/photoprism:preview-cuda
+    image: photoprism/photoprism:cuda
     deploy:
       resources:
         reservations:
@@ -51,7 +48,7 @@ When a model is loaded, PhotoPrism logs a `loading <model> on the <provider>` li
 
 ## Performance
 
-How much a GPU helps depends on the GPU **and** the CPU it is compared with. Measured with `pro:preview-cuda` in October 2026, on a library with 2,414 photos and 283 videos:
+How much a GPU helps depends on the GPU **and** the CPU it is compared with. Measured with a `pro:preview-cuda` build in October 2026, on a library with 2,414 photos and 283 videos:
 
 | Step                           | RTX 4060 | i7-14700 (CPU only) | Speedup |
 |--------------------------------|----------|---------------------|---------|

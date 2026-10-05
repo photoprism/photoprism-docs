@@ -42,7 +42,7 @@ Recommendations:
 - PhotoPrism evaluates models from the bottom of the list up, so putting the OpenAI entries after the others ensures OpenAI is chosen first, leaving other models as backups.
 
 !!! tldr ""
-    By default, PhotoPrism uses the OpenAI Responses API endpoint at `https://api.openai.com/v1/responses` with a single 720 px thumbnail (`detail: low`). To use a different OpenAI-compatible endpoint, set `OPENAI_BASE_URL` to its base URL including the version path, e.g. `https://llm.example.com/v1`, which is then used for all OpenAI models without a `Service.Uri`, or set a custom `Service.Uri` for a single model. Since `OPENAI_BASE_URL` is also read by other tools, check that it is not already set in the environment of your PhotoPrism instance.
+    By default, PhotoPrism uses the OpenAI Responses API endpoint at `https://api.openai.com/v1/responses` with a single 720 px thumbnail (`detail: low`). To use a different OpenAI-compatible endpoint, set `OPENAI_BASE_URL` to its base URL including the version path, e.g. `https://llm.example.com/v1`, which is then used for all OpenAI models without a `Service.Uri`, or set a custom `Service.Uri` for a single model. A query in the base URL, such as `?api-version=...` for Azure OpenAI, is moved to the end of the request URL; use `OPENAI_API_KEY` or `Service.Key` for credentials rather than the URL. When `OPENAI_BASE_URL` differs from the default, PhotoPrism logs the base URL it uses at startup, with credentials masked, so you can check which endpoint receives the requests.
 
 ## Usage Tips
 

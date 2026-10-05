@@ -124,6 +124,6 @@ photoprism --log-level=trace vision run -m caption --count 1 --force
 
 ### Turning Cloud Processing Off
 
-Removing `OLLAMA_API_KEY` does not stop pictures being sent: the request is still made and the service rejects it, so the image has already left your instance by the time it fails. To stop sending pictures to the cloud, point the configuration back at a local service — remove `OLLAMA_BASE_URL` (and any `Service.Uri` in your [`vision.yml`](index.md#visionyml-reference)) so the engine falls back to its local default, or set `Run: manual` to stop automatic runs entirely.
+Without `OLLAMA_API_KEY` (or a `Service.Key`), PhotoPrism does not send requests to Ollama Cloud: they fail with `missing api key`, and a warning naming the model is logged. This does not apply to a local Ollama instance that runs `:cloud` models, as it forwards them with its own credentials. To switch back to local processing, point the configuration at a local service — remove `OLLAMA_BASE_URL` (and any `Service.Uri` in your [`vision.yml`](index.md#visionyml-reference)) so the engine falls back to its local default — or set `Run: manual` to stop automatic runs entirely.
 
 [^1]: Unrelated configuration details have been omitted for brevity.

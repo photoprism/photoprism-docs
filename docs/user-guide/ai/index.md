@@ -1,6 +1,6 @@
 # Using AI Models
 
-As an addition to the built-in TensorFlow models, PhotoPrism lets you generate captions and labels with [Ollama](using-ollama.md) and the [OpenAI API](using-openai.md). Our step-by-step guides explain how to set them up and provide tested configuration examples you can use as a starting point.
+As an addition to the built-in models, PhotoPrism lets you generate captions and labels with [Ollama](using-ollama.md) and the [OpenAI API](using-openai.md). Our step-by-step guides explain how to set them up and provide tested configuration examples you can use as a starting point.
 
 [Learn more ›](using-ollama.md)
 
@@ -8,16 +8,16 @@ As an addition to the built-in TensorFlow models, PhotoPrism lets you generate c
 
 PhotoPrism currently supports the following runtimes and services:
 
-| Engine                                                                 | Resolution | Runs        | Best For                                                                                                      |
-|------------------------------------------------------------------------|------------|-------------|---------------------------------------------------------------------------------------------------------------|
-| [TensorFlow](../../developer-guide/vision/tensorflow/custom-models.md) | 224 px     | Built-in    | Fast, offline default models for labels and NSFW detection                                                    |
-| [ONNX](face-recognition.md)                                            | 720 px     | Built-in    | Face detection and embeddings                                                                                 |
-| [Ollama](using-ollama.md)                                              | 720 px     | Self-Hosted | Good for generating quality captions & labels; a server with GPU is recommended                               |
-| [OpenAI API](using-openai.md)                                          | 720 px     | Cloud       | Highest quality captions & labels, also suitable for users without a GPU; requires API key and network access |
+| Engine                                               | Resolution | Runs        | Best For                                                                                                      |
+|------------------------------------------------------|------------|-------------|---------------------------------------------------------------------------------------------------------------|
+| [ONNX](../../developer-guide/vision/label-models.md) | 224 px     | Built-in    | Fast, offline default models for labels and [NSFW detection](nsfw.md)                                         |
+| [ONNX](face-recognition.md)                          | 720 px     | Built-in    | Face detection and embeddings                                                                                 |
+| [Ollama](using-ollama.md)                            | 720 px     | Self-Hosted | Good for generating quality captions & labels; a server with GPU is recommended                               |
+| [OpenAI API](using-openai.md)                        | 720 px     | Cloud       | Highest quality captions & labels, also suitable for users without a GPU; requires API key and network access |
 
 ### Performance
 
-- **TensorFlow:** Our built-in models generally perform well on all types of hardware.
+- **Built-in Models:** Our built-in models run on [ONNX Runtime](https://onnxruntime.ai/) and generally perform well on all types of hardware.
 - **Ollama:** [Generating labels](ollama-models.md#gemma-4-labels) for an image on an NVIDIA RTX 4060 usually takes 1-4 seconds. The exact time varies depending on the model used and the [number of labels](ollama-models.md#qwen3-vl-labels) generated.
 - **OpenAI:** Processing one image takes about 3 seconds, though this can vary by model, region, and demand.
 
@@ -67,42 +67,41 @@ Thresholds:
   NSFW: 75
 ```
 
-If a model type is omitted, PhotoPrism will use the built-in defaults for `labels`, `nsfw`, `face`, or `caption`. The optional `Thresholds` block can be used to filter out labels with a low probability or adjust the probability of flagging content as NSFW.
+If a model type is omitted, PhotoPrism will use the built-in defaults for `labels`, `nsfw`, `face`, or `caption`. The optional `Thresholds` block can be used to filter out labels with a low probability or to adjust the [NSFW thresholds](nsfw.md#nsfw-thresholds).
 
-| Field                   | Default                                | Notes                                                                              |
-|-------------------------|----------------------------------------|------------------------------------------------------------------------------------|
-| `Type` (required)       | —                                      | `labels`, `caption`, `face`, `nsfw`. Drives routing & scheduling.                  |
-| `Model`                 | `""`                                   | Model identifier in the format `<name>:<version>`.                                 |
-| `Name`                  | derived from `Model`                   | Model name.                                                                        |
-| `Version`               | `latest` (non-OpenAI)                  | Model version, not used by OpenAI.                                                 |
-| `Engine`                | inferred from service/alias            | Aliases set formats, file scheme, resolution. Explicit `Service` values still win. |
-| `Run`                   | `auto`                                 | See Run modes table below.                                                         |
-| `Default`               | `false`                                | Keep one per type for TensorFlow fallbacks.                                        |
-| `Disabled`              | `false`                                | Registered but inactive.                                                           |
-| `Resolution`            | 224 (TensorFlow) / 720 (Ollama/OpenAI) | Thumbnail edge in px; TensorFlow models default to 224 unless you override.        |
-| `System` / `Prompt`     | engine defaults / empty                | Override prompts per model.                                                        |
-| `Format`                | `""`                                   | Response hint (`json`, `text`, `markdown`).                                        |
-| `Schema` / `SchemaFile` | engine defaults / empty                | Inline vs file JSON schema (labels).                                               |
-| `Normalize`[^2]         | engine default                         | Label name normalization; `single-word`, `phrase`, or `false`. Labels models only. |
-| `TensorFlow`            | engine defaults / empty                | Local TF model info (paths, tags).                                                 |
-| [`Options`](#options)   | engine defaults / empty                | Sampling/settings merged with engine defaults.                                     |
-| [`Service`](#service)   | engine defaults / empty                | Remote endpoint config (see below).                                                |
+| Field                   | Default                              | Notes                                                                              |
+|-------------------------|--------------------------------------|------------------------------------------------------------------------------------|
+| `Type` (required)       | —                                    | `labels`, `caption`, `face`, `nsfw`. Drives routing & scheduling.                  |
+| `Model`                 | `""`                                 | Model identifier in the format `<name>:<version>`.                                 |
+| `Name`                  | derived from `Model`                 | Model name.                                                                        |
+| `Version`               | `latest` (non-OpenAI)                | Model version, not used by OpenAI.                                                 |
+| `Engine`                | inferred from service/alias          | Aliases set formats, file scheme, resolution. Explicit `Service` values still win. |
+| `Run`                   | `auto`                               | See Run modes table below.                                                         |
+| `Default`               | `false`                              | Select the built-in model for a type.                                              |
+| `Disabled`              | `false`                              | Registered but inactive.                                                           |
+| `Resolution`            | model-specific / 720 (Ollama/OpenAI) | Thumbnail edge in px; built-in models use the size they were trained for.          |
+| `System` / `Prompt`     | engine defaults / empty              | Override prompts per model.                                                        |
+| `Format`                | `""`                                 | Response hint (`json`, `text`, `markdown`).                                        |
+| `Schema` / `SchemaFile` | engine defaults / empty              | Inline vs file JSON schema (labels).                                               |
+| `Normalize`[^2]         | engine default                       | Label name normalization; `single-word`, `phrase`, or `false`. Labels models only. |
+| [`Options`](#options)   | engine defaults / empty              | Sampling/settings merged with engine defaults.                                     |
+| [`Service`](#service)   | engine defaults / empty              | Remote endpoint config (see below).                                                |
 
 ### Run Modes
 
-| Value           | When it runs                                                     | Recommended use                                |
-|-----------------|------------------------------------------------------------------|------------------------------------------------|
-| `auto`          | TensorFlow defaults during index; external via metadata/schedule | Leave as-is for most setups.                   |
-| `manual`        | Only when explicitly invoked (CLI/API)                           | Experiments and diagnostics.                   |
-| `on-index`      | During indexing + manual                                         | Fast built-in models only.                     |
-| `newly-indexed` | Metadata worker after indexing + manual                          | External/Ollama/OpenAI without slowing import. |
-| `on-demand`     | Manual, metadata worker, and scheduled jobs                      | Broad coverage without index path.             |
-| `on-schedule`   | Scheduled jobs + manual                                          | Nightly/cron-style runs.                       |
-| `always`        | Indexing, metadata, scheduled, manual                            | High-priority models; watch resource use.      |
-| `never`         | Never executes                                                   | Keep definition without running it.            |
+| Value           | When it runs                                                               | Recommended use                                |
+|-----------------|----------------------------------------------------------------------------|------------------------------------------------|
+| `auto`          | Built-in labels and NSFW models during index; others via metadata/schedule | Leave as-is for most setups.                   |
+| `manual`        | Only when explicitly invoked (CLI/API)                                     | Experiments and diagnostics.                   |
+| `on-index`      | During indexing + manual                                                   | Fast built-in models only.                     |
+| `newly-indexed` | Metadata worker after indexing + manual                                    | External/Ollama/OpenAI without slowing import. |
+| `on-demand`     | Manual, metadata worker, and scheduled jobs                                | Broad coverage without index path.             |
+| `on-schedule`   | Scheduled jobs + manual                                                    | Nightly/cron-style runs.                       |
+| `always`        | Indexing, metadata, scheduled, manual                                      | High-priority models; watch resource use.      |
+| `never`         | Never executes                                                             | Keep definition without running it.            |
 
 !!! tldr ""
-    For performance reasons, `on-index` is only supported for the built-in TensorFlow models.
+    For performance reasons, `on-index` is only supported for built-in local models.
 
 ### Options
 
@@ -163,7 +162,7 @@ Configures the endpoint URL, method, format, and authentication for [Ollama](usi
 | `Disabled`                         | `false`                  | Disables the endpoint without removing the model.                                                                                                                                                                                                        |
 
 !!! tldr ""
-    **Authentication:** All credentials and identifiers support `${ENV_VAR}` expansion. `Service.Key` sets `Authorization: Bearer <token>`; `Username`/`Password` injects HTTP basic authentication into the service URI when it is not already present. When `Service.Key` is empty, PhotoPrism defaults to `OPENAI_API_KEY` (OpenAI engine) or `OLLAMA_API_KEY`[^1] (Ollama engine), also honoring their `_FILE` counterparts.
+    **Authentication:** All credentials and identifiers support `${ENV_VAR}` expansion. `Service.Key` sets `Authorization: Bearer <token>`; `Username`/`Password` injects HTTP basic authentication into the service URI when it is not already present. When `Service.Key` is empty, PhotoPrism defaults to `OPENAI_API_KEY` (OpenAI engine) or `OLLAMA_API_KEY`[^1] (Ollama engine), also honoring their `_FILE` counterparts. Requests to the OpenAI API (`api.openai.com`) or Ollama Cloud (`ollama.com`) are not sent without a key.
 
 [^1]: Available since the [March 5, 2026 release](../../release-notes.md#march-5-2026).
 [^2]: Available in our [preview builds](../../getting-started/updates.md#development-preview) and the upcoming stable release.

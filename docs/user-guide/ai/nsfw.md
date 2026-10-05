@@ -4,61 +4,67 @@ PhotoPrism can automatically flag pictures as **private** when an image-classifi
 
 ## Configuration Options
 
-Two independent config options govern the runtime behavior. Both are `false` by default:
+Three config options govern the runtime behavior:
 
-| Config Option                                                                       | Effect                                                                                                                                                                                                                                                                                                                 |
-|-------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [`PHOTOPRISM_DETECT_NSFW`](../../getting-started/config-options.md#computer-vision) | When `true`, photos detected as NSFW during indexing or a `photoprism vision run` are marked as **private**. When `false` (default), NSFW signals are ignored even if the underlying model returns them.                                                                                                               |
-| [`PHOTOPRISM_UPLOAD_NSFW`](../../getting-started/config-options.md#storage)         | When `false`, the **web upload** dialog rejects files that the NSFW model flags as unsafe (the rejected file is deleted before indexing). When `true`, uploads are accepted regardless and any NSFW flagging happens later during indexing per `PHOTOPRISM_DETECT_NSFW`; our example `compose.yaml` sets it to `true`. |
+| Config Option                                                                       | Default | Effect                                                                                                                                                                                                                                          |
+|-------------------------------------------------------------------------------------|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [`PHOTOPRISM_NSFW_MODEL`](../../getting-started/config-options.md#computer-vision)  | `auto`  | Chooses how NSFW content is detected: `auto` uses the dedicated detector, `labels` uses the NSFW fields returned by an Ollama or OpenAI labels model, and `none` turns NSFW detection off.                                                      |
+| [`PHOTOPRISM_DETECT_NSFW`](../../getting-started/config-options.md#computer-vision) | `false` | When `true`, photos detected as NSFW during indexing or a `photoprism vision run` are marked as **private**. When `false`, NSFW signals are ignored even if the underlying model returns them.                                                  |
+| [`PHOTOPRISM_UPLOAD_NSFW`](../../getting-started/config-options.md#storage)         | `false` | When `false`, the **web upload** dialog rejects files that the dedicated detector flags as unsafe (the rejected files are deleted before indexing). When `true`, uploads are accepted regardless; our example `compose.yaml` sets it to `true`. |
 
-The two options are independent: you can reject uploads without flagging existing imports, flag existing imports without policing uploads, or both.
+Flagging and upload screening are independent: you can reject uploads without flagging existing imports, flag existing imports without policing uploads, or both.
 
 ## Which Model Detects NSFW?
 
-The model used for NSFW detection follows the same [`vision.yml`](index.md#visionyml-reference) mechanism as labels, captions, and faces. If no `Type: nsfw` entry is configured, PhotoPrism uses the built-in TensorFlow NSFW model. You can override it just like any other model — for example, to point at an Ollama or OpenAI endpoint trained to score NSFW content:
+In the default `auto` mode, PhotoPrism uses a dedicated detector that runs locally on [ONNX Runtime](https://onnxruntime.ai/) and ships with every PhotoPrism image: [Yahoo OpenNSFW](https://github.com/yahoo/open_nsfw). It is small and fast, and it decides with a threshold calibrated for this model. The detector does not distinguish drawings from photographs.
+
+Other registered detectors can be downloaded in [a terminal](../../getting-started/docker-compose.md#opening-a-terminal) and selected in [`vision.yml`](index.md#visionyml-reference):
+
+```bash
+docker compose exec photoprism download-models.sh falconsai_nsfw_image_detection_224
+```
 
 ```yaml
 Models:
   - Type: nsfw
-    Model: <your-vision-model>
-    Engine: ollama
-    Service:
-      Uri: ${OLLAMA_BASE_URL}/api/generate
-      Think: "false"
+    Name: falconsai_nsfw_image_detection_224
 ```
 
-Once the dedicated NSFW model entry is configured, it runs whenever `PHOTOPRISM_DETECT_NSFW` is `true` and the indexer or `photoprism vision run --models nsfw` invokes it.
+The registered detectors are `yahoo_open_nsfw` (default), `adamcodd_vit_base_nsfw_int8`, `adamcodd_vit_base_nsfw_fp32`, `falconsai_nsfw_image_detection_224`, and `freepik_nsfw_image_detector`. Restart PhotoPrism after downloading a model or changing `vision.yml`. If the selected model is not installed, PhotoPrism logs a warning with the command that downloads it. If you have set a custom models path, see [Label Models](../../developer-guide/vision/label-models.md) for how to download into it.
 
 !!! info ""
-    The built-in TensorFlow NSFW model is small and fast and ships with every PhotoPrism image. There is no need to configure an LLM-based replacement unless you want to.
+    A `Type: nsfw` entry cannot use Ollama or OpenAI, as these engines do not return NSFW scores for it. PhotoPrism uses the built-in detector instead and logs a warning. To use an LLM for NSFW detection, use a labels model as described below.
 
 ### Using a Labels Model
 
-When `Type: labels` is served by [Ollama](using-ollama.md) or the [OpenAI API](using-openai.md), PhotoPrism can ask the model to include NSFW classification in the same response, avoiding a second inference pass. This shortcut is **experimental** and gated by two environment variables that must **both** be set to `true`:
+When `Type: labels` is served by [Ollama](using-ollama.md) or the [OpenAI API](using-openai.md), PhotoPrism can ask the model to include NSFW classification in the same response, avoiding a second inference pass. To use it, set both:
 
-- [`PHOTOPRISM_DETECT_NSFW`](../../getting-started/config-options.md#computer-vision)
-- [`PHOTOPRISM_EXPERIMENTAL`](../../getting-started/config-options.md#feature-flags)
+- [`PHOTOPRISM_NSFW_MODEL`](../../getting-started/config-options.md#computer-vision) to `labels`
+- [`PHOTOPRISM_DETECT_NSFW`](../../getting-started/config-options.md#computer-vision) to `true`
 
-If either is `false`, the label-generation prompt will not ask for NSFW fields, so the LLM response cannot trigger NSFW flagging — even if an image contains NSFW content. The following matrix summarizes the behavior when Ollama or OpenAI is configured for labels and the user runs `photoprism vision run --models labels`:
-
-| Detect NSFW | Experimental | Labels Prompt                                 | Outcome                                                                                                                                                                               |
-|-------------|--------------|-----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `false`     | `false`      | Default labels prompt (no NSFW fields)        | NSFW detection does not run.                                                                                                                                                          |
-| `false`     | `true`       | Default labels prompt (no NSFW fields)        | NSFW detection does not run.                                                                                                                                                          |
-| `true`      | `false`      | Default labels prompt (no NSFW fields)        | NSFW detection does not run via labels; the dedicated NSFW model only runs when `nsfw` is explicitly included in the run's models (e.g. `--models labels,nsfw`).                      |
-| `true`      | `true`       | NSFW-aware prompt (`nsfw`, `nsfw_confidence`) | LLM returns NSFW fields; photos above the configured threshold are flagged as private. The dedicated NSFW model still runs as a fallback when `nsfw` is included in the run's models. |
+In this mode, the dedicated detector is not loaded, so **uploads are not screened**, and pictures are only flagged if the labels model returns the NSFW fields. If the labels are generated by the built-in classifier, no NSFW detection takes place.
 
 !!! tldr ""
-    If you switched from TensorFlow to an Ollama or OpenAI labels model and noticed that NSFW detection stopped working, the most likely cause is that one of the two flags above is missing. Enable both `PHOTOPRISM_DETECT_NSFW=true` and `PHOTOPRISM_EXPERIMENTAL=true`, or include `nsfw` in the explicit `--models` list so the dedicated NSFW model runs alongside labels.
+    If you switched to an Ollama or OpenAI labels model and want it to flag NSFW content, set `PHOTOPRISM_NSFW_MODEL=labels` as well as `PHOTOPRISM_DETECT_NSFW=true`. In the default `auto` mode, the dedicated detector decides and the labels model is not asked for NSFW fields.
 
-## NSFW Threshold
+## NSFW Thresholds
 
-The `Thresholds.NSFW` value in [`vision.yml`](index.md#visionyml-reference) controls how confident the model must be before a picture is flagged. The threshold accepts an integer between `0` and `100` and defaults to `75`. Lower values are more aggressive (more pictures flagged); higher values are more permissive. The threshold applies to both the dedicated NSFW model and the NSFW fields returned through the label-generation prompt.
+The `Thresholds` block in [`vision.yml`](index.md#visionyml-reference) controls how confident a model must be before a picture is flagged. Values are whole percentages from `1` to `100`; lower values are more aggressive (more pictures flagged), higher values more permissive.
 
 ```yaml
 Thresholds:
+  NSFWUpload: -1
+  NSFWIndex: -1
   NSFW: 75
 ```
+
+| Key          | Applies To                                                  | Default                                  |
+|--------------|-------------------------------------------------------------|------------------------------------------|
+| `NSFWUpload` | The dedicated detector when screening web uploads           | The calibrated threshold of the detector |
+| `NSFWIndex`  | The dedicated detector during indexing and `vision run`     | The calibrated threshold of the detector |
+| `NSFW`       | NSFW fields returned by a labels model (`labels` mode only) | `75`                                     |
+
+Leave `NSFWUpload` and `NSFWIndex` unset, or set them to `0` or `-1`, to use the threshold calibrated for the selected detector. Setting a stricter value for uploads than for indexing lets you screen uploads more aggressively without flagging more of your existing library. `NSFW` does not affect the dedicated detector.
 
 ## Running NSFW Detection Manually
 

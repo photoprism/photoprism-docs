@@ -365,9 +365,9 @@ services:
     deploy:
       resources:
         limits:
-          memory: 4G
+          memory: 8G
     environment:
-      GOMEMLIMIT: "3600MiB"
+      GOMEMLIMIT: "7200MiB"
 ```
 
 A CPU limit, on the other hand, is detected automatically by the Go runtime. You do not need to set `GOMAXPROCS`, but you should [reduce the number of indexing workers](config-options.md#indexing) to match the limit, since their default depends on the number of CPU cores.

@@ -40,16 +40,16 @@ This option prevents the creation of database, album and YAML sidecar file backu
 
 The corresponding [config toggle](../../getting-started/config-options.md#feature-flags) is `PHOTOPRISM_DISABLE_BACKUPS`.
 
-<!-- ### Allow NSFW Uploads
-If TensorFlow is enabled and this option is not active, pictures that might be offensive will be rejected when using the web upload.
-
-The corresponding [config toggle](../../getting-started/config-options.md#feature-flags) is `PHOTOPRISM_UPLOAD_NSFW`. -->
-
 ### Disable WebDAV
 This option prevents other apps from connecting to PhotoPrism via the built-in WebDAV server.
 Requires a restart for changes to be applied.
 
 The corresponding [config toggle](../../getting-started/config-options.md#feature-flags) is `PHOTOPRISM_DISABLE_WEBDAV`.
+
+### Disable MCP
+This option disables the Model Context Protocol (MCP) API endpoint that AI agents can use to access PhotoPrism.
+
+The corresponding [config toggle](../../getting-started/config-options.md#feature-flags) is `PHOTOPRISM_DISABLE_MCP`.
 
 ### Disable Faces
 When selected, all face detection and recognition features will be disabled.
@@ -77,14 +77,6 @@ This option prevents the creation of `json` files with Exif data in `storage/sid
 Note that you must have [ExifTool](https://exiftool.org/) enabled to extract video metadata such as duration, resolution, and codec.
 
 The corresponding [config toggle](../../getting-started/config-options.md#feature-flags) is `PHOTOPRISM_DISABLE_EXIFTOOL`.
-
-### Disable TensorFlow (Deprecated)
-!!! warning ""
-    This option is deprecated. To disable facial recognition, use `PHOTOPRISM_DISABLE_FACES` instead, and to disable image classification, set `PHOTOPRISM_LABELS_MODEL` to `none`. For more details, see the related [GitHub issue](https://github.com/photoprism/photoprism/issues/5310).
-
-When set, facial recognition is disabled. Image classification no longer uses TensorFlow and is not affected.
-
-The corresponding [config toggle](../../getting-started/config-options.md#feature-flags) is `PHOTOPRISM_DISABLE_TENSORFLOW`.
 
 ## Backups
 

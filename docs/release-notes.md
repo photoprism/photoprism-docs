@@ -59,6 +59,9 @@ What's new?
 - Security: [Upgraded `libheif` from v1.23.4 to v1.23.5](https://github.com/photoprism/photoprism/issues/5887)
 - Translations: [Upgraded `vue3-gettext` from v2.4 to v4.0](https://github.com/photoprism/photoprism/issues/5875) by [@lastzero](https://github.com/lastzero)
 
+!!! info ""
+    Missing [user interface translations](https://docs.photoprism.app/developer-guide/translations-weblate/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.
+
 ### September 19, 2026
 <span class="build">Build 260919-28c46a116</span>
 
@@ -103,9 +106,6 @@ What's new?
 - Security: [Upgraded Go from v1.26.5 to v1.27.1](https://github.com/golang/go/issues?q=milestone%3AGo1.27.1)
 - Translations: [Improved French](https://docs.photoprism.app/developer-guide/translations-weblate/) by [@jean-louis67](https://github.com/jean-louis67)
 - Translations: [Improved Hebrew](https://docs.photoprism.app/developer-guide/translations-weblate/) by [@avma](https://github.com/avma)
-
-!!! info ""
-    Missing [user interface translations](https://docs.photoprism.app/developer-guide/translations-weblate/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.
 
 ### July 28, 2026
 <span class="build">Build 260728-bbde8f452</span>

@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 261005-72aeb00d6</span>
+<span class="build">Build 261006-563018ebc</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions/#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
@@ -43,6 +43,7 @@ What's new?
 - Download: [Video downloads to skip generated stills and keep original images](https://github.com/photoprism/photoprism/issues/5882)
 - Download: [Improved response when no files are available](https://github.com/photoprism/photoprism/issues/5806) by [@blackshibe](https://github.com/blackshibe)
 - Video: [Improved hardware transcoding to apply the quality and bitrate settings](https://github.com/photoprism/photoprism/issues/5881)
+- WebP: [Fixed playback of animated images with odd dimensions or transparency](https://github.com/photoprism/photoprism/issues/5891)
 - CLI: [Added commands to add and remove cameras and lenses](https://github.com/photoprism/photoprism/issues/5835) by [@lastzero](https://github.com/lastzero)
 - CLI: [Added `--yes` to the `rm` and `reset` commands so they can run in a script](https://github.com/photoprism/photoprism/issues/5833)
 - CLI: [Added `--yes` to `faces reset` so it can run in a script](https://docs.photoprism.app/user-guide/ai/face-recognition/#cli-reference)

@@ -37,6 +37,7 @@ What's new?
 - CLI: [Fixed `faces reset --all` leaving empty person entries](https://github.com/photoprism/photoprism/issues/5834)
 - CLI: [Fixed `faces reset --detector` retaining markers from the previous detector](https://github.com/photoprism/photoprism/issues/5836)
 - CLI: [Fixed the `reset` command not removing sidecar files in subfolders](https://github.com/photoprism/photoprism/issues/5837)
+- Config: [Low-memory mode disables face recognition and RAW processing](https://docs.photoprism.app/getting-started/troubleshooting/performance/#memory)
 - Server: [Added support for Let's Encrypt AutoTLS via TLS-ALPN-01](https://github.com/photoprism/photoprism/issues/5870)
 - WebDAV: [Added an option to skip YAML sidecars when syncing files](https://github.com/photoprism/photoprism/issues/5842)
 - WebDAV: [Improved syncing to ensure failed files do not delay other downloads](https://docs.photoprism.app/user-guide/settings/sync/#edit-sync-settings)

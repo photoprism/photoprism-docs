@@ -357,6 +357,21 @@ When [indexing a media library](../user-guide/library/originals.md), many files 
 
 We therefore recommend not setting a hard memory limit unless you are familiar with memory management and understand the implications. Instead, you should [reduce the number of indexing workers](config-options.md#indexing) and [limit file size and resolution](config-options.md#storage) if you are low on resources or want to limit memory usage for other reasons. Also make sure you have [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured.
 
+If you do set a memory limit, you can additionally set the `GOMEMLIMIT` environment variable to about 90% of it. This tells the Go runtime to free unused memory more often as it approaches that value, which reduces the risk of the container being stopped. It does not cover memory used by native libraries and external tools such as libvips, ONNX Runtime, or FFmpeg, so the limit itself should still leave some headroom:
+
+```yaml
+services:
+  photoprism:
+    deploy:
+      resources:
+        limits:
+          memory: 4G
+    environment:
+      GOMEMLIMIT: "3600MiB"
+```
+
+A CPU limit, on the other hand, is detected automatically by the Go runtime. You do not need to set `GOMAXPROCS`, but you should [reduce the number of indexing workers](config-options.md#indexing) to match the limit, since their default depends on the number of CPU cores.
+
 [View System Requirements ›](index.md#system-requirements){ class="pr-3 block-xs" } [Get Performance Tips ›](troubleshooting/performance.md#troubleshooting)
 
 ### Why does PhotoPrism always consume 100% of CPU when the background worker is running?

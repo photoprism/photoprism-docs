@@ -8,6 +8,12 @@
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions/#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
+Upgrade Notes
+
+- `PHOTOPRISM_DISABLE_TENSORFLOW` now only disables models that run on TensorFlow, such as the legacy FaceNet face model. To turn off face detection and recognition, set [`PHOTOPRISM_DISABLE_FACES`](getting-started/config-options.md#feature-flags) to `"true"` instead.
+- Image classification and NSFW detection now use ONNX models. Existing labels are kept, and you can [update them with the new model](developer-guide/vision/label-models.md#step-5-update-existing-labels) by running `photoprism vision run -m labels --force`. Custom TensorFlow models configured in `vision.yml` are no longer supported and must be replaced with [ONNX models](developer-guide/vision/label-models.md#custom-models).
+- The default value of [`PHOTOPRISM_TRUSTED_PROXY`](getting-started/config-options.md#networking) now also includes the loopback addresses `127.0.0.0/8` and `::1`, so a reverse proxy running on the same host is trusted without additional configuration. To keep the previous behavior, set it to `172.16.0.0/12`.
+
 What's new?
 
 - AI: [Reworked image classification with a new ONNX-based model](https://github.com/photoprism/photoprism/issues/5769) by [@omerdduran](https://github.com/omerdduran)

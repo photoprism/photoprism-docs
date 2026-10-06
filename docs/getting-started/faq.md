@@ -376,7 +376,7 @@ A CPU limit, on the other hand, is detected automatically by the Go runtime. You
 
 ### Why does PhotoPrism always consume 100% of CPU when the background worker is running?
 
-If you are using a release from before [September 19, 2026](../release-notes.md#september-19-2026), please update first. Earlier versions used a face clustering implementation whose results depended on the order in which faces were processed, which may have caused a high CPU load in libraries with many faces.
+If you are not using the latest release, please update first. Since [September 19, 2026](../release-notes.md#september-19-2026), face clustering no longer depends on the order in which faces are processed, which may have caused a high CPU load in libraries with many faces. This and later releases also include many other improvements that speed up background processing, in particular for face recognition.
 
 Many users reporting poor performance and high CPU load have migrated from SQLite to MariaDB so that [their database schema is not optimized for performance](advanced/databases.md), for example, because indexes are missing or columns have the wrong data type. The [instructions for these migrations](advanced/migrations/sqlite-to-mariadb.md) were provided by a contributor and are not part of the original software distribution. As such, they have not been officially released, recommended, or extensively tested by us.
 

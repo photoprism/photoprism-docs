@@ -357,9 +357,26 @@ When [indexing a media library](../user-guide/library/originals.md), many files 
 
 We therefore recommend not setting a hard memory limit unless you are familiar with memory management and understand the implications. Instead, you should [reduce the number of indexing workers](config-options.md#indexing) and [limit file size and resolution](config-options.md#storage) if you are low on resources or want to limit memory usage for other reasons. Also make sure you have [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured.
 
+If you do set a memory limit, you can additionally set the `GOMEMLIMIT` environment variable to about 90% of it. This tells the Go runtime to free unused memory more often as it approaches that value, which reduces the risk of the container being stopped. It does not cover memory used by native libraries and external tools such as libvips, ONNX Runtime, or FFmpeg, so the limit itself should still leave some headroom:
+
+```yaml
+services:
+  photoprism:
+    deploy:
+      resources:
+        limits:
+          memory: 8G
+    environment:
+      GOMEMLIMIT: "7200MiB"
+```
+
+A CPU limit, on the other hand, is detected automatically by the Go runtime. You do not need to set `GOMAXPROCS`, but you should [reduce the number of indexing workers](config-options.md#indexing) to match the limit, since their default depends on the number of CPU cores.
+
 [View System Requirements ›](index.md#system-requirements){ class="pr-3 block-xs" } [Get Performance Tips ›](troubleshooting/performance.md#troubleshooting)
 
 ### Why does PhotoPrism always consume 100% of CPU when the background worker is running?
+
+If you are not using the latest release, please update first. Since [September 19, 2026](../release-notes.md#september-19-2026), face clustering no longer depends on the order in which faces are processed, which may have caused a high CPU load in libraries with many faces. This and later releases also include many other improvements that speed up background processing, in particular for face recognition.
 
 Many users reporting poor performance and high CPU load have migrated from SQLite to MariaDB so that [their database schema is not optimized for performance](advanced/databases.md), for example, because indexes are missing or columns have the wrong data type. The [instructions for these migrations](advanced/migrations/sqlite-to-mariadb.md) were provided by a contributor and are not part of the original software distribution. As such, they have not been officially released, recommended, or extensively tested by us.
 
@@ -430,6 +447,8 @@ You can start a [rescan from the user interface](../user-guide/library/originals
 ### How can I shorten the startup time after a restart or update?
 
 To reduce startup time, do not set `PHOTOPRISM_INIT` to avoid running additional setup scripts, and set `PHOTOPRISM_DISABLE_CHOWN` to `"true"` to [disable automatic permission updates](config-options.md#docker-image).
+
+If you know whether your *originals* and *storage* folders are case-sensitive, you can also set `PHOTOPRISM_ORIGINALS_CASE` and `PHOTOPRISM_STORAGE_CASE` to `"sensitive"` or `"insensitive"`, so that PhotoPrism skips [checking the file systems](troubleshooting/docker.md#case-sensitivity) when it starts. Only use `"insensitive"` if all drives and shares mounted below the *originals* folder are case-insensitive as well.
 
 [View Config Options ›](config-options.md#docker-image)
 

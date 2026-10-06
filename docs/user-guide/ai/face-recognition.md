@@ -78,6 +78,19 @@ A custom detector can be selected with [`PHOTOPRISM_FACE_DETECTOR`](#detection-s
 
 [`PHOTOPRISM_FACE_SIZE`](#detection-settings) is measured on the 720 px thumbnail used for detection, not on the original picture. In a crowded photo this can push every face below the minimum, so PhotoPrism automatically runs a second pass at a smaller minimum size when a picture would otherwise yield no faces at all. Set [`PHOTOPRISM_FACE_SIZE_RETRY`](#detection-settings) to `-1` to switch that off.
 
+### Using Faces Without Automatic Detection
+
+If you only want to see faces you mark yourself or import from XMP metadata, without PhotoPrism detecting faces in your pictures, set [`PHOTOPRISM_FACE_RUN`](#detection-settings) to `"never"`:
+
+- The *People* section, existing faces, and names remain available.
+- Faces can still be [marked and named manually](../organize/people.md#assign-names-to-faces) in the full-screen viewer.
+- Face regions and names from XMP metadata are still imported when [*Import Faces from XMP*](../settings/advanced.md#import-faces-from-xmp) is enabled.
+
+Faces you mark manually or import from XMP are not compared with other faces, so they are not assigned to people automatically. Faces that were detected before you changed the setting are kept, and can still be grouped and matched when you name a person.
+
+!!! note ""
+    Do not use `PHOTOPRISM_DISABLE_FACES` for this purpose: it turns off face detection and recognition completely and also hides the *People* section and face markers.
+
 ## Face Embeddings
 
 After detection, PhotoPrism generates an embedding vector that characterizes each face. These vectors are used to:
@@ -101,14 +114,15 @@ How these vectors are stored and compared is covered in the [Developer Guide](..
 
 ### Detection Settings
 
-| Environment Variable       | CLI Flag          | Default                                                         | Description                                                                               |
-|----------------------------|-------------------|-----------------------------------------------------------------|-------------------------------------------------------------------------------------------|
-| PHOTOPRISM_FACE_DETECTOR   | --face-detector   | yunet                                                           | face detection model `NAME` (auto, yunet, none), derived from the face model unless named |
-| PHOTOPRISM_FACE_SIZE       | --face-size       | 25                                                              | minimum size of faces in `PIXELS` (10-10000)                                              |
-| PHOTOPRISM_FACE_SIZE_RETRY | --face-size-retry | 10 (20 where a crop can reach no further than 1920, off at 720) | minimum size of faces in `PIXELS` when a picture would otherwise have none, -1 to disable |
-| PHOTOPRISM_FACE_SCORE      | --face-score      | 65                                                              | minimum face `QUALITY` score (1-100; -1 to disable), calibrated per detector when unset   |
-| PHOTOPRISM_FACE_OVERLAP    | --face-overlap    | 42                                                              | face area overlap threshold in `PERCENT` (1-100)                                          |
-| PHOTOPRISM_FACE_MODEL      | --face-model      | sface                                                           | face embedding model `NAME` (auto, sface, none), changed with photoprism faces migrate    |
+| Environment Variable       | CLI Flag          | Default                                                         | Description                                                                                                                     |
+|----------------------------|-------------------|-----------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
+| PHOTOPRISM_FACE_RUN        | --face-run        | auto                                                            | `WHEN` face detection and recognition should run (auto, always, on-index, newly-indexed, on-schedule, on-demand, manual, never) |
+| PHOTOPRISM_FACE_DETECTOR   | --face-detector   | yunet                                                           | face detection model `NAME` (auto, yunet, none), derived from the face model unless named                                       |
+| PHOTOPRISM_FACE_SIZE       | --face-size       | 25                                                              | minimum size of faces in `PIXELS` (10-10000)                                                                                    |
+| PHOTOPRISM_FACE_SIZE_RETRY | --face-size-retry | 10 (20 where a crop can reach no further than 1920, off at 720) | minimum size of faces in `PIXELS` when a picture would otherwise have none, -1 to disable                                       |
+| PHOTOPRISM_FACE_SCORE      | --face-score      | 65                                                              | minimum face `QUALITY` score (1-100; -1 to disable), calibrated per detector when unset                                         |
+| PHOTOPRISM_FACE_OVERLAP    | --face-overlap    | 42                                                              | face area overlap threshold in `PERCENT` (1-100)                                                                                |
+| PHOTOPRISM_FACE_MODEL      | --face-model      | sface                                                           | face embedding model `NAME` (auto, sface, none), changed with photoprism faces migrate                                          |
 
 ### Clustering Settings
 

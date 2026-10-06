@@ -1,6 +1,6 @@
 # Face Recognition
 
-**Last Updated:** October 5, 2026
+**Last Updated:** October 6, 2026
 
 To [recognize faces](https://docs.photoprism.app/user-guide/organize/people/), PhotoPrism uses a multi-stage AI pipeline that detects faces, generates embeddings, and clusters similar faces so they can be easily organized by person.
 
@@ -65,6 +65,8 @@ Hardware acceleration is **opt-in**:
 | `auraface` | ONNX       | 512        | Landmark       | Optional download                    |
 
 `--help` offers `auto`, `sface`, and `none`, because the help text reads as an offer and `sface` is the model this release supports. The others in the table remain selectable by name and are documented here for that reason.
+
+`none` turns off embedding generation and, with it, face detection, because a detected face is only saved as a marker together with its embedding. New pictures then get face markers only from XMP metadata or manual tagging. Detection also pauses while the library's model cannot be used, for example when `PHOTOPRISM_DISABLE_TENSORFLOW` is set in a library that still uses `facenet`: it resumes once TensorFlow is enabled again or the library has been [migrated](../../user-guide/ai/face-recognition.md#upgrading-an-existing-library), and `photoprism faces status` reports the reason.
 
 When `PHOTOPRISM_FACE_MODEL` is unset, PhotoPrism works the model out once and writes the name to `options.yml`:
 

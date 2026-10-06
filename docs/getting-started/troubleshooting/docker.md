@@ -247,7 +247,7 @@ Alternatively, you can configure logging **globally** for all containers by sett
 After changing the Docker daemon configuration, restart Docker and recreate existing containers so the new defaults are applied.
 
 !!! note ""
-	Docker also provides the `local` logging driver, which is optimized for local storage and performs log rotation by default. If you don't depend on `json-file` specifically, using `local` as the global default can be a good choice.
+    Docker also provides the `local` logging driver, which is optimized for local storage and performs log rotation by default. If you don't depend on `json-file` specifically, using `local` as the global default can be a good choice.
 
 ## Adding Swap
 

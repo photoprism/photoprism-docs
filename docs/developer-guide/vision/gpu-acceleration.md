@@ -1,21 +1,20 @@
 # GPU Acceleration
 
-**Last Updated:** October 5, 2026
+**Last Updated:** October 7, 2026
 
 PhotoPrism can run its built-in ONNX models on an NVIDIA GPU through the [ONNX Runtime](https://onnxruntime.ai/) CUDA execution provider. This covers image classification, NSFW detection, and face detection and embeddings. Thumbnail generation, image decoding, metadata extraction, and database work stay on the CPU, so the overall gain is smaller than the speedup of a single model.
 
 ## CUDA Images
 
-The CUDA images are amd64-only variants of our Plus and Pro images that include the GPU build of ONNX Runtime together with the CUDA runtime libraries and cuDNN:
+The CUDA image is an amd64-only variant of our regular `photoprism/photoprism` image that includes the GPU build of ONNX Runtime together with the CUDA runtime libraries and cuDNN:
 
-| Image                   | Release Tags             | Preview Tag    |
-|-------------------------|--------------------------|----------------|
-| `photoprism/photoprism` | `cuda`, `YYMMDD-cuda`    | `preview-cuda` |
-| `photoprism/pro`        | `cuda`, `1.YYMM.DD-cuda` | `preview-cuda` |
+| Image                   | Release Tags          | Preview Tag    |
+|-------------------------|-----------------------|----------------|
+| `photoprism/photoprism` | `cuda`, `YYMMDD-cuda` | `preview-cuda` |
 
-They are about 1.7 GB larger than the regular images and preset `PHOTOPRISM_ONNX_PROVIDER` to `cuda` and `NVIDIA_DRIVER_CAPABILITIES` to `compute,utility,video`, so ONNX inference and [NVENC video transcoding](../../getting-started/advanced/transcoding.md) can both use the GPU once one is assigned to the container.
+It is about 1.7 GB larger than the regular image and presets `PHOTOPRISM_ONNX_PROVIDER` to `cuda` and `NVIDIA_DRIVER_CAPABILITIES` to `compute,utility,video`, so ONNX inference and [NVENC video transcoding](../../getting-started/advanced/transcoding.md) can both use the GPU once one is assigned to the container.
 
-Do not add `onnxruntime` or `onnxruntime-gpu` to `PHOTOPRISM_INIT` when using these images: the first installs the CPU build of ONNX Runtime, which then takes precedence over the GPU build, and the second reinstalls the libraries the image already contains each time the container is created.
+Do not add `onnxruntime` or `onnxruntime-gpu` to `PHOTOPRISM_INIT` when using this image: the first installs the CPU build of ONNX Runtime, which then takes precedence over the GPU build, and the second reinstalls the libraries it already contains each time the container is created.
 
 ## Requirements
 
@@ -48,7 +47,7 @@ When a model is loaded, PhotoPrism logs a `loading <model> on the <provider>` li
 
 ## Performance
 
-How much a GPU helps depends on the GPU **and** the CPU it is compared with. Measured with a `pro:preview-cuda` build in October 2026, on a library with 2,414 photos and 283 videos:
+How much a GPU helps depends on the GPU **and** the CPU it is compared with. Measured with a `preview-cuda` build in October 2026, on a library with 2,414 photos and 283 videos:
 
 | Step                           | RTX 4060 | i7-14700 (CPU only) | Speedup |
 |--------------------------------|----------|---------------------|---------|

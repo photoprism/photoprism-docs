@@ -71,7 +71,7 @@ In this section, you can disable list view and the display of titles and caption
 
 #### :material-camera: Originals
 
-Only files in the *originals* folder will be downloaded, not automatically generated files from the *sidecar* folder. This is the recommended default.
+Only files in the *originals* folder will be downloaded, not automatically generated files from the *sidecar* folder. This is the recommended default. Preview images that PhotoPrism generated from a video are not added to a download, except as part of a Live Photo.
 
 #### :material-raw: RAW
 

@@ -24,7 +24,7 @@ They are only shown when downloads have not been disabled above.
 #### :material-camera: Originals ####
 
 Only files in the *originals* folder are included, not the automatically generated files in the *sidecar* folder.
-This is the recommended default.
+This is the recommended default. Preview images that PhotoPrism generated from a video are not added to a download, except as part of a Live Photo.
 
 #### :material-raw: RAW ####
 

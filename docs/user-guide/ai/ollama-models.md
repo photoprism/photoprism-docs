@@ -12,9 +12,9 @@ We recommend choosing a [vision model](https://ollama.com/search?c=vision) that 
 
 Where Gemma 4 loses ground is identifying a subject it is unsure about: it guesses confidently instead of staying general. In our benchmark both variants labeled a cheetah a *leopard* in every language tested and on every run, captioned a penguin colony as *seals*, and read a ski jumper as a snowboarder. If your library is heavy on wildlife or other uncommon subjects, that is the reason to try Qwen3-VL or Qwen 3.5 at a comparable size.
 
-[**Qwen3-VL**](https://ollama.com/library/qwen3-vl) tends to be somewhat less predictable and consistent in the [smaller `2b` and `4b` variants](https://ollama.com/library/qwen3-vl/tags), where performance and error rates can vary widely [unless controlled as shown in the examples](#qwen3-vl-labels) below. The standard `qwen3-vl:latest` (`8b`) version generally works well without major adjustments. Label generation on an NVIDIA RTX 4060 typically takes [2–3 seconds](#qwen3-vl-labels), roughly comparable to [Gemma 4](#gemma-4-labels).
+[**Qwen3-VL**](https://ollama.com/library/qwen3-vl) tends to be somewhat less predictable and consistent in the [smaller `2b` and `4b` variants](https://ollama.com/library/qwen3-vl/tags), where performance and error rates can vary widely unless controlled with the options shown in the [examples](#qwen-35-labels) below. The standard `qwen3-vl:latest` (`8b`) version generally works well without major adjustments. Label generation on an NVIDIA RTX 4060 typically takes [2–3 seconds](../../developer-guide/vision/model-comparison.md#self-hosted-built-in-prompt), roughly comparable to [Gemma 4](#gemma-4-labels).
 
-[**Qwen 3.5**](https://ollama.com/library/qwen3.5) is the lighter of the two Qwen options and needs no special tag: `qwen3.5:4b` already behaves like an instruct build, producing captions in about a second and keeping multi-word label names near zero. On the built-in label prompt it reached the highest subject coverage of any self-hosted model we measured, and it encodes a 720 px image into fewer than half the prompt tokens Qwen3-VL uses, which makes it noticeably cheaper on a metered endpoint. Qwen3-VL still pulls ahead once the prompt asks for a [label count](#qwen3-vl-labels), so pick Qwen 3.5 for a light, low-cost setup and Qwen3-VL when subject coverage matters most. Note the [`2b` and `9b` tiers](https://ollama.com/library/qwen3.5/tags) both scored well below `4b` on labels — bigger is not better here.
+[**Qwen 3.5**](https://ollama.com/library/qwen3.5) is the lighter of the two Qwen options and needs no special tag: `qwen3.5:4b` already behaves like an instruct build, producing captions in about a second and keeping multi-word label names near zero. On the built-in label prompt it reached the highest subject coverage of any self-hosted model we measured, and it encodes a 720 px image into fewer than half the prompt tokens Qwen3-VL uses, which makes it noticeably cheaper on a metered endpoint. Qwen3-VL still pulls ahead once the prompt asks for a [label count](../../developer-guide/vision/model-comparison.md#self-hosted-with-a-label-count-in-the-prompt), so pick Qwen 3.5 for a light, low-cost setup and Qwen3-VL when subject coverage matters most. Note the [`2b` and `9b` tiers](https://ollama.com/library/qwen3.5/tags) both scored well below `4b` on labels — bigger is not better here.
 
 As with any Qwen-family model, both require the strict options and "AT MOST N labels" prompt shape shown below — without them they over-generate and truncate the JSON response.
 
@@ -44,7 +44,7 @@ For languages other than English, keep the base instructions in English and add 
 
     So check both model types, and check the **content** rather than just the alphabet. Generate a handful of pictures with `photoprism vision run -m labels --count 1 --force` and `-m caption`, and read the results.
 
-Support varies widely by model and does not follow size or general quality. Hosted models handled German, Arabic, and Hebrew far better than any self-hosted model we measured that fits in 8 GB of VRAM. Of the self-hosted options, Gemma 4 was the weakest for non-English **labels**, despite being our recommended English default — so a non-English library is one of the cases where it is worth testing [Qwen3-VL](#qwen3-vl-labels) or a [cloud model](ollama-cloud.md) instead.
+Support varies widely by model and does not follow size or general quality. Hosted models handled German, Arabic, and Hebrew far better than any self-hosted model we measured that fits in 8 GB of VRAM. Of the self-hosted options, Gemma 4 was the weakest for non-English **labels**, despite being our recommended English default — so a non-English library is one of the cases where it is worth testing [Qwen3-VL](../../developer-guide/vision/model-comparison.md#multilingual-behavior) or a [cloud model](ollama-cloud.md) instead.
 
 ## Label Name Normalization
 
@@ -74,7 +74,7 @@ To keep compound names, set `Normalize: phrase` on the model **and** use a `Syst
 ```yaml
 Models:
 - Type: labels
-  Model: qwen3-vl:4b-instruct
+  Model: qwen3.5:4b
   Engine: ollama
   Normalize: phrase
   Service:
@@ -129,7 +129,7 @@ The following drop-in examples can be specified in your `vision.yml` file, which
 
     How many you get therefore varies by model rather than falling short of a target. In our benchmark, hosted models volunteered seven to twelve labels per image and models that fit in 8 GB of VRAM returned one to four, from the same prompt.
 
-    You *can* ask for a count — see the [Qwen3-VL label example](#qwen3-vl-labels) below — but treat it as a per-model adjustment you verify, not a fix. It roughly doubles label latency and increases multi-word names on every model that was not already at zero. Whether those are wasted depends on the model's [normalization mode](#label-name-normalization).
+    You *can* ask for a count — see the [Qwen 3.5 label example](#qwen-35-labels) below — but treat it as a per-model adjustment you verify, not a fix. It roughly doubles label latency and increases multi-word names on every model that was not already at zero. Whether those are wasted depends on the model's [normalization mode](#label-name-normalization).
 
 ### Gemma 4: Labels
 
@@ -173,12 +173,14 @@ Why this works:
 - **Run:** `auto` allows manual, after indexing, and scheduled runs ￫ [Run Modes](index.md#run-modes).
 - **Prompt:** Uses the built-in [default prompt](#caption-prompts). For other languages, see [Language Support](#language-support).
 
-### Qwen3-VL: Labels
+<a id="qwen3-vl-labels"></a>
+
+### Qwen 3.5: Labels
 
 ```yaml
 Models:
 - Type: labels
-  Model: qwen3-vl:4b-instruct
+  Model: qwen3.5:4b
   Engine: ollama
   Run: on-demand
   Prompt: |
@@ -189,7 +191,7 @@ Models:
     - Do NOT add any fields other than name, confidence, topicality.
     - Do NOT output any text before or after the JSON.
   Options:
-    Seed: 3407           # model default, see https://github.com/QwenLM/Qwen3-VL
+    Seed: 3407           # fixed seed for stable results
     Temperature: 0.01    # low randomness, fewer hallucinations
     TopK: 40             # consider only top ~40 tokens
     TopP: 0.9            # cut off tail of distribution
@@ -205,24 +207,26 @@ Models:
 
 Why this works:
 
-- **Model:** [`qwen3-vl:4b-instruct`](https://ollama.com/library/qwen3-vl/tags) is a lightweight version of Qwen3-VL. You can alternatively try [`huihui_ai/qwen3-vl-abliterated:4b-instruct`](https://ollama.com/huihui_ai/qwen3-vl-abliterated), [`qwen3-vl:latest`](https://ollama.com/library/qwen3-vl), or other [variants](https://ollama.com/search?c=vision&q=qwen3-vl).
+- **Model:** [`qwen3.5:4b`](https://ollama.com/library/qwen3.5/tags) needs no `-instruct` tag and reached the highest subject coverage of any self-hosted model in our [benchmark](../../developer-guide/vision/model-comparison.md#self-hosted-built-in-prompt). The same options also work with [`qwen3-vl:4b-instruct`](https://ollama.com/library/qwen3-vl/tags) or [`qwen3-vl:latest`](https://ollama.com/library/qwen3-vl) — use an `-instruct` tag for the smaller Qwen3-VL variants.
 - **Engine:** Applies suitable **Resolution**, **Format**, and **Options** defaults.
 - **Run:** `on-demand` allows manual, metadata worker, and scheduled jobs ￫ [Run Modes](index.md#run-modes).
 - **Prompt:** Ensures low latency, prevents repetition, and controls the type and number of labels returned. For other languages, see [Language Support](#language-support).
-- **`Return AT MOST 3 labels`:** A deliberate cap, and the reason the strict options do not run away. It is also restrictive: in our benchmark `qwen3-vl:4b-instruct` returned about three labels per image under this prompt, rising to about ten when asked for a range of 8-15, with subject coverage going from 75% to 97%. If you want richer labels, raise the cap — and expect roughly two to three times the latency. Read that coverage gain carefully, though: it is a recall-style measure that rewards naming the expected subject and cannot detect a confidently wrong extra label, so a model asked for more scores better partly by guessing more.
+- **`Return AT MOST 3 labels`:** A deliberate cap, and the reason the strict options do not run away. It is also restrictive: in our [benchmark](../../developer-guide/vision/model-comparison.md#self-hosted-with-a-label-count-in-the-prompt), `qwen3.5:4b` returned 3.6 labels per image without a count and about seven when asked for a range of 8-15, with subject coverage going only from 88% to 91% at twice the latency. Qwen3-VL gains more from a higher count (`qwen3-vl:4b-instruct`: from 75% to 97%). If you want richer labels, raise the cap — and expect roughly two to three times the latency. Read that coverage gain carefully, though: it is a recall-style measure that rewards naming the expected subject and cannot detect a confidently wrong extra label, so a model asked for more scores better partly by guessing more.
 - **`single-word noun in canonical singular form`:** Keep this instruction unless you also set `Normalize: phrase`. With the default normalization for self-hosted models, a compound name is collapsed to one token and usually the wrong one — `ferris wheel` is stored as *Ferris*, `amusement park` as *Park*. See [Label Name Normalization](#label-name-normalization).
-- **Seed:** Ensures stable labels. Our example uses the [instruct model variant](https://github.com/QwenLM/Qwen3-VL?tab=readme-ov-file#instruct-models) default.
+- **Seed:** Ensures stable labels. Any fixed value works; our example uses 3407, the default of the [Qwen3-VL instruct models](https://github.com/QwenLM/Qwen3-VL?tab=readme-ov-file#instruct-models).
 - **Temperature, TopP,** and **TopK:** Picks high-probability, common words, not creative synonyms.
 - **MinP:** Cuts off very low-probability tokens, which are typically those rare labels and odd phrasings you don’t want for classification.
 - **RepeatLastN** and **RepeatPenalty:** Ensures that labels are unique by penalizing repetition.
 - **NumPredict:** Limits the maximum number of output tokens to prevent infinite repetition.
 
-### Qwen3-VL: Caption
+<a id="qwen3-vl-caption"></a>
+
+### Qwen 3.5: Caption
 
 ```yaml
 Models:
 - Type: caption
-  Model: qwen3-vl:4b-instruct
+  Model: qwen3.5:4b
   Engine: ollama
   Run: on-schedule
   System: You are an image captioning assistant.
@@ -235,10 +239,10 @@ Models:
     - Do NOT include quotation marks around the caption.
     - Respond with the caption text only, and nothing else.
   Options:
-    Seed: 3407           # model default, see https://github.com/QwenLM/Qwen3-VL
+    Seed: 3407           # fixed seed for stable results
     Temperature: 0.25    # reduce randomness for fewer hallucinations
-    TopK: 20             # matches the model's default
-    TopP: 0.8            # matches the model's default
+    TopK: 20             # consider only the top 20 tokens
+    TopP: 0.8            # cut off tail of distribution
     MinP: 0.05           # cut very low-probability, odd tokens
     TypicalP: 1.0        # effectively disabled; TopP/MinP dominate
     RepeatLastN: 64      # short history for 1–2 sentences
@@ -251,7 +255,7 @@ Models:
 
 Why this works:
 
-- **Model:** Using [`qwen3-vl:4b-instruct`](https://ollama.com/library/qwen3-vl/tags) for both labels and captions avoids time-consuming Ollama model swaps. You can alternatively try [`huihui_ai/qwen3-vl-abliterated:4b-instruct`](https://ollama.com/huihui_ai/qwen3-vl-abliterated), [`qwen3-vl:latest`](https://ollama.com/library/qwen3-vl), or other [variants](https://ollama.com/search?c=vision&q=qwen3-vl).
+- **Model:** Using [`qwen3.5:4b`](https://ollama.com/library/qwen3.5/tags) for both labels and captions avoids time-consuming Ollama model swaps; in our [benchmark](../../developer-guide/vision/model-comparison.md#caption-generation) it captioned an image in about a second. The same options also work with [`qwen3-vl:4b-instruct`](https://ollama.com/library/qwen3-vl/tags) or [`qwen3-vl:latest`](https://ollama.com/library/qwen3-vl).
 - **Engine:** Applies suitable **Resolution**, **Format**, and **Options** defaults.
 - **Run:** `on-schedule` allows manual and scheduled jobs ￫ [Run Modes](index.md#run-modes).
 - **System:** Tells the model to describe images in natural language.

@@ -17,7 +17,7 @@ Requests to the OpenAI API (`api.openai.com`) or Ollama Cloud (`ollama.com`) are
 Ollama-generated captions and labels are stored with the `ollama` metadata source automatically, so you do not need to request a specific `source` field in the schema or pass `--source` to the CLI unless you want to override the default.
 
 !!! tip "Prompt Localization"
-    To generate output in other languages, keep the base instructions in English and add the desired language (e.g., "Respond in German"). This method works for both [caption](../../user-guide/ai/ollama-models.md#qwen3-vl-caption) and [label prompts](../../user-guide/ai/ollama-models.md#qwen3-vl-labels).
+    To generate output in other languages, keep the base instructions in English and add the desired language (e.g., "Respond in German"). This method works for both [caption](../../user-guide/ai/ollama-models.md#qwen-35-caption) and [label prompts](../../user-guide/ai/ollama-models.md#qwen-35-labels).
 
     **Verify labels separately from captions.** A model can honor the requested language for captions and silently ignore it for labels, with no error and nothing in the log. [Learn more ›](../../user-guide/ai/ollama-models.md#language-support)
 

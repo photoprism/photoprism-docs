@@ -49,7 +49,7 @@ Bigger is not reliably better: `qwen3.5:4b` beat both the `2b` and `9b` tiers of
 
 ### Self-Hosted, With a Label Count in the Prompt
 
-The built-in prompt asks for "label objects" without stating how many, **and that omission is deliberate** — a short list of high-confidence labels is more useful and cheaper than a long one, and not every model honors a count instruction anyway. The run below measures what changes when one is requested, not a gap being closed. Adding an explicit range (the [Qwen3-VL example](../../user-guide/ai/ollama-models.md#qwen3-vl-labels) shows the shape) multiplied the label set by 1.9–3.5× and raised coverage on **every** model tested, at 1.7–2.8× the latency:
+The built-in prompt asks for "label objects" without stating how many, **and that omission is deliberate** — a short list of high-confidence labels is more useful and cheaper than a long one, and not every model honors a count instruction anyway. The run below measures what changes when one is requested, not a gap being closed. Adding an explicit range (the [Qwen 3.5 example](../../user-guide/ai/ollama-models.md#qwen-35-labels) shows the shape) multiplied the label set by 1.9–3.5× and raised coverage on **every** model tested, at 1.7–2.8× the latency:
 
 | Model                  | Labels p50 | Labels/img | Multi-word | Coverage |
 |:-----------------------|-----------:|-----------:|-----------:|---------:|

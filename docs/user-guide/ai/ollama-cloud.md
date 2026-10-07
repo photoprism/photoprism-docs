@@ -76,7 +76,7 @@ PhotoPrism evaluates models from the bottom of the list up, so placing the Ollam
 Ollama-generated captions and labels are stored with the `ollama` metadata source automatically, so you do not need to request a specific `source` field in the schema or pass `--source` to the CLI unless you want to override the default.
 
 !!! tip "Prompt Localization"
-    To generate output in other languages, keep the base instructions in English and add the desired language (e.g., "Respond in German"). This method works for both [caption](ollama-models.md#qwen3-vl-caption) and [label prompts](ollama-models.md#qwen3-vl-labels).
+    To generate output in other languages, keep the base instructions in English and add the desired language (e.g., "Respond in German"). This method works for both [caption](ollama-models.md#qwen-35-caption) and [label prompts](ollama-models.md#qwen-35-labels).
 
 ## Step 4: Restart PhotoPrism
 

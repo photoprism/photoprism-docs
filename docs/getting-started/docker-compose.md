@@ -120,6 +120,10 @@ Alternatively, [Podman Compose](troubleshooting/docker.md#podman-compose) is sup
     Never use easy-to-guess passwords or default values like `insecure` on publicly accessible servers.
     There is no default [in case no password was provided](../user-guide/users/cli.md#changing-a-password). A minimum length of 8 characters is required.
 
+#### NVIDIA GPU
+
+If your server has an NVIDIA graphics card and runs on a 64-bit Intel or AMD processor, you can use the `photoprism/photoprism:cuda` image instead of `photoprism/photoprism` to run the built-in AI models on the GPU. Besides the image name, the `photoprism` service needs a GPU device reservation, which our [GPU Acceleration guide](../user-guide/ai/gpu-acceleration.md) explains step by step.
+
 #### Database
 
 Our example includes a pre-configured [MariaDB](https://mariadb.com/) database server. If you remove it and provide no other database server credentials, SQLite database files will be created in the *storage* folder. Local [SSD storage is best](troubleshooting/performance.md#storage) for databases of any kind.
@@ -278,7 +282,7 @@ If your server runs out of memory or other system resources:
 - [ ] Try [reducing the number of workers](config-options.md#indexing) by setting `PHOTOPRISM_WORKERS` to a reasonably small value in your `compose.yaml` file, depending on the CPU performance and number of cores. Running `photoprism config` shows the chosen worker count and the rationale that was applied (e.g. `index-workers: 4 (sqlite-cap)`); SQLite installs are capped at four workers automatically.
 - [ ] Ensure that your server has [at least 4 GB of swap](troubleshooting/docker.md#adding-swap) configured and avoid setting a [hard memory limit](faq.md#why-is-my-configured-memory-limit-exceeded-when-indexing-even-though-photoprism-doesnt-actually-seem-to-use-that-much-memory) as this can cause unexpected restarts when the indexer temporarily needs more memory to process large files
 - [ ] If you are using SQLite, switch to MariaDB, which is [better optimized for high concurrency](faq.md#should-i-use-sqlite-mariadb-or-mysql)
-- [ ] As a last measure, you can [disable image classification and facial recognition](config-options.md#feature-flags)
+- [ ] As a last measure, you can disable image classification by setting [`PHOTOPRISM_LABELS_MODEL`](config-options.md#computer-vision) to `"none"` and stop automatic face detection by setting [`PHOTOPRISM_FACE_RUN`](config-options.md#face-recognition) to `"never"`
 
 Other issues? Our [troubleshooting checklists](troubleshooting/index.md) help you quickly diagnose and resolve them.
 

@@ -6,7 +6,7 @@
 <!-- Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions/#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview) -->
 
 ### October 7, 2026
-<span class="build">Build 261007-6b4d1ecae</span>
+<span class="build">Build 261007-65faaae5d</span>
 
 This release brings major improvements to PhotoPrism's built-in AI features, including more accurate [image classification](https://docs.photoprism.app/developer-guide/vision/label-models/) and [NSFW detection](https://docs.photoprism.app/user-guide/ai/nsfw/). Image classification now takes more of the entire picture into account, improving results especially for wide photos where important visual content is not centered. If you have a supported NVIDIA graphics card, all of the built-in AI models can now [run on the GPU](https://docs.photoprism.app/user-guide/ai/gpu-acceleration/).
 

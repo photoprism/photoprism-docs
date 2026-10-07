@@ -61,7 +61,7 @@ When enabled, face regions and names found in XMP metadata are imported as peopl
 assigned in applications such as Adobe Bridge, Lightroom, digiKam, ACDSee, or Windows do not have to be entered again.
 [Learn more ›](../library/metadata.md#face-regions)
 
-The corresponding [config option](../../getting-started/config-options.md#computer-vision) is `PHOTOPRISM_XMP_FACES`.
+The corresponding [config option](../../getting-started/config-options.md#face-recognition) is `PHOTOPRISM_XMP_FACES`.
 
 ### Disable Places
 When selected, geo-information (latitude, longitude) will still be read (and indexed)

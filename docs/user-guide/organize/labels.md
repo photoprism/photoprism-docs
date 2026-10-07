@@ -1,7 +1,7 @@
 # Labels #
 
 !!! tldr ""
-    Looking for more accurate AI labels? Try our [Ollama](../ai/using-ollama.md) or [OpenAI](../ai/using-openai.md) integration or configure a [more powerful TensorFlow model](../../developer-guide/vision/tensorflow/custom-models.md).
+    Looking for more accurate AI labels? Try our [Ollama](../ai/using-ollama.md) or [OpenAI](../ai/using-openai.md) integration or configure a [custom ONNX model](../../developer-guide/vision/label-models.md#custom-models).
 
 PhotoPrism uses labels to classify images.
 Other tools use the term tags instead of labels.

@@ -1,6 +1,6 @@
 # Offloading AI Tasks to a Central Vision API Service
 
-When hosting multiple PhotoPrism instances, you can offload AI tasks (image classification, face detection, NSFW detection) to a central Vision API service. This significantly reduces memory requirements on client instances, as they no longer need to load TensorFlow models into memory.
+When hosting multiple PhotoPrism instances, you can offload AI tasks (image classification, face detection, NSFW detection) to a central Vision API service. This significantly reduces memory requirements on client instances, as they no longer need to load the AI models into memory.
 
 !!! info ""
     For additional models and advanced features, see the dedicated [Vision Service](../../developer-guide/vision/service/index.md) instead.

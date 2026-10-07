@@ -96,7 +96,7 @@ Follow the steps below if you prefer Synology's built-in [Container Manager](htt
           PHOTOPRISM_AUTO_INDEX: 300
           # delay (seconds) before importing WebDAV uploads
           PHOTOPRISM_AUTO_IMPORT: -1
-          # auto-flag potentially offensive content (TensorFlow required)
+          # auto-flag potentially offensive content
           PHOTOPRISM_DETECT_NSFW: "false"
           # allow uploads that might be offensive
           PHOTOPRISM_UPLOAD_NSFW: "true"

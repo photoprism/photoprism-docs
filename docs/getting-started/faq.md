@@ -251,7 +251,7 @@ make all install DESTDIR=/opt/photoprism
 
 When choosing this installation method, missing build and system dependencies must be installed manually, as shown in our human-readable and versioned [Dockerfiles](https://github.com/photoprism/photoprism/tree/develop/docker/develop). Since you often don't need to use the exact same versions, you can replace most packages with those available in your environment.
 
-Please be aware, though, that we do not have the resources to provide support and special dependencies, such as [TensorFlow libraries](https://dl.photoprism.app/tensorflow/), to private users who choose to build from source. If possible, we recommend using [Docker Compose](docker-compose.md) or the [installation packages](#installation-packages) we provide, as they can save a lot of time creating and troubleshooting custom builds.
+Please be aware, though, that we do not have the resources to provide support and special dependencies, such as [ONNX Runtime libraries](https://dl.photoprism.app/onnx/), to private users who choose to build from source. If possible, we recommend using [Docker Compose](docker-compose.md) or the [installation packages](#installation-packages) we provide, as they can save a lot of time creating and troubleshooting custom builds.
 
 !!! example "PhotoPrism Plus"
     If you are a [Plus, Silver, Gold or Platinum member](https://www.photoprism.app/editions/#compare) and would like to build from source, please [let us know](mailto:membership@photoprism.app) so we can give you access to our private extension repository and provide assistance.

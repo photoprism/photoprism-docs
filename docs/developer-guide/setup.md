@@ -52,7 +52,7 @@ Open a terminal to run commands directly in your local development environment:
 make terminal
 ```
 
-Before starting to build, make sure all dependencies, such as NPM packages and TensorFlow models, are installed:
+Before starting to build, make sure all dependencies, such as NPM packages and AI models, are installed:
 
 ```bash
 make dep

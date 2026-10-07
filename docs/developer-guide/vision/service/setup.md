@@ -198,7 +198,7 @@ For developers looking to contribute, the codebase is structured as follows:
 
 ### timm
 
-[timm](https://huggingface.co/timm) is a tensorflow extension for timm models. Currently used for NSFW detection.
+[timm](https://huggingface.co/timm) is a library of PyTorch image models. Currently used for NSFW detection.
 
 ### huggingface_hub[hf_xet]
 

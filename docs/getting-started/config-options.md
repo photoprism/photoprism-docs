@@ -290,9 +290,9 @@
 | PHOTOPRISM_VISION_KEY      | --vision-key      |             | vision service access `TOKEN` *optional*                                                                                        |
 | PHOTOPRISM_VISION_SCHEDULE | --vision-schedule |             | vision worker `SCHEDULE` in cron format (e.g. "0 12 \* \* \*" for daily at noon) or at a random time (daily, weekly)            |
 | PHOTOPRISM_VISION_FILTER   | --vision-filter   | public:true | vision worker search `FILTER` applied to scheduled runs (same syntax as photoprism vision run)                                  |
+| PHOTOPRISM_ONNX_PROVIDER   | --onnx-provider   | cpu         | execution `PROVIDER` for ONNX inference (cpu, cuda), falls back to the CPU when unavailable                                     |
 | PHOTOPRISM_LABELS_MODEL    | --labels-model    | auto        | image classification `MODE` (auto, none)                                                                                        |
 | PHOTOPRISM_NSFW_MODEL      | --nsfw-model      | auto        | NSFW detection `MODE` (auto, none, labels)                                                                                      |
-| PHOTOPRISM_ONNX_PROVIDER   | --onnx-provider   | cpu         | execution `PROVIDER` for ONNX inference (cpu, cuda), falls back to the CPU when unavailable                                     |
 | PHOTOPRISM_DETECT_NSFW     | --detect-nsfw     | false       | flags newly added pictures as private if they might be offensive (uses the configured NSFW model)                               |
 
 ### Face Recognition

@@ -183,6 +183,7 @@ Models:
   Model: qwen3.5:4b
   Engine: ollama
   Run: on-demand
+  Normalize: single-word
   Prompt: |
     Analyze the image and return JSON label objects with name, confidence (0-1), and topicality (0-1):
     - Return AT MOST 3 labels.
@@ -210,9 +211,10 @@ Why this works:
 - **Model:** [`qwen3.5:4b`](https://ollama.com/library/qwen3.5/tags) needs no `-instruct` tag and reached the highest subject coverage of any self-hosted model in our [benchmark](../../developer-guide/vision/model-comparison.md#self-hosted-built-in-prompt). The same options also work with [`qwen3-vl:4b-instruct`](https://ollama.com/library/qwen3-vl/tags) or [`qwen3-vl:latest`](https://ollama.com/library/qwen3-vl) — use an `-instruct` tag for the smaller Qwen3-VL variants.
 - **Engine:** Applies suitable **Resolution**, **Format**, and **Options** defaults.
 - **Run:** `on-demand` allows manual, metadata worker, and scheduled jobs ￫ [Run Modes](index.md#run-modes).
+- **Normalize:** `single-word` stores each label name as one word, to match the prompt. It is the default for self-hosted models and is shown so you know where to change it; it also keeps that behavior if you point the example at a hosted model, where the default is `phrase` ￫ [Label Name Normalization](#label-name-normalization).
 - **Prompt:** Ensures low latency, prevents repetition, and controls the type and number of labels returned. For other languages, see [Language Support](#language-support).
 - **`Return AT MOST 3 labels`:** A deliberate cap, and the reason the strict options do not run away. It is also restrictive: in our [benchmark](../../developer-guide/vision/model-comparison.md#self-hosted-with-a-label-count-in-the-prompt), `qwen3.5:4b` returned 3.6 labels per image without a count and about seven when asked for a range of 8-15, with subject coverage going only from 88% to 91% at twice the latency. Qwen3-VL gains more from a higher count (`qwen3-vl:4b-instruct`: from 75% to 97%). If you want richer labels, raise the cap — and expect roughly two to three times the latency. Read that coverage gain carefully, though: it is a recall-style measure that rewards naming the expected subject and cannot detect a confidently wrong extra label, so a model asked for more scores better partly by guessing more.
-- **`single-word noun in canonical singular form`:** Keep this instruction unless you also set `Normalize: phrase`. With the default normalization for self-hosted models, a compound name is collapsed to one token and usually the wrong one — `ferris wheel` is stored as *Ferris*, `amusement park` as *Park*. See [Label Name Normalization](#label-name-normalization).
+- **`single-word noun in canonical singular form`:** Keep this instruction unless you also change `Normalize` to `phrase`. With `single-word`, a compound name is collapsed to one token and usually the wrong one — `ferris wheel` is stored as *Ferris*, `amusement park` as *Park*. See [Label Name Normalization](#label-name-normalization).
 - **Seed:** Ensures stable labels. Any fixed value works; our example uses 3407, the default of the [Qwen3-VL instruct models](https://github.com/QwenLM/Qwen3-VL?tab=readme-ov-file#instruct-models).
 - **Temperature, TopP,** and **TopK:** Picks high-probability, common words, not creative synonyms.
 - **MinP:** Cuts off very low-probability tokens, which are typically those rare labels and odd phrasings you don’t want for classification.

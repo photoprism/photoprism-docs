@@ -4,12 +4,7 @@ If your server has an NVIDIA graphics card, PhotoPrism can use it to run its bui
 
 ## Setup
 
-Our `cuda` images include everything PhotoPrism needs to use an NVIDIA GPU. They are available for 64-bit Intel and AMD processors only:
-
-| Edition                      | Image                        |
-|------------------------------|------------------------------|
-| PhotoPrism & PhotoPrism Plus | `photoprism/photoprism:cuda` |
-| PhotoPrism Pro               | `photoprism/pro:cuda`        |
+Our `photoprism/photoprism:cuda` image includes everything PhotoPrism needs to use an NVIDIA GPU. It is available for 64-bit Intel and AMD processors only.
 
 In addition, you need:
 
@@ -31,16 +26,16 @@ services:
               count: 1
 ```
 
-Finally, run `docker compose pull` and `docker compose up -d` to apply the changes. The `cuda` images are about 1.7 GB larger than our regular images.
+Finally, run `docker compose pull` and `docker compose up -d` to apply the changes. The `cuda` image is about 1.7 GB larger than our regular image.
 
 !!! info ""
-    Do not add `onnxruntime` or `onnxruntime-gpu` to `PHOTOPRISM_INIT` when using a `cuda` image, as the image already includes the required libraries.
+    Do not add `onnxruntime` or `onnxruntime-gpu` to `PHOTOPRISM_INIT` when using the `cuda` image, as it already includes the required libraries.
 
 ## Checking That the GPU Is Used
 
 When PhotoPrism loads a model, it logs a line that names the execution provider it runs on. If the GPU cannot be used, for example because it was not assigned to the container, PhotoPrism logs a warning and uses the CPU instead. Once you have fixed the cause, restart PhotoPrism so that it tries the GPU again.
 
-The `cuda` images also allow [hardware video transcoding](../../getting-started/advanced/transcoding.md) with NVIDIA, which you can enable with `PHOTOPRISM_FFMPEG_ENCODER: "nvidia"`.
+The `cuda` image also allows [hardware video transcoding](../../getting-started/advanced/transcoding.md) with NVIDIA, which you can enable with `PHOTOPRISM_FFMPEG_ENCODER: "nvidia"`.
 
 ## What to Expect
 

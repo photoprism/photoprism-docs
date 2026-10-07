@@ -153,7 +153,7 @@ To use the default model again, remove the `labels` entry from `vision.yml` or r
 
 ### Disabling Classification
 
-Set `PHOTOPRISM_LABELS_MODEL` to `none` to turn off built-in classification regardless of what `vision.yml` contains. The default value `auto` uses the model configured in `vision.yml`. Model names are not accepted by this option; they belong in `vision.yml`.
+Set `PHOTOPRISM_LABELS_MODEL` to `none` to turn off image classification regardless of what `vision.yml` contains. This also disables `labels` models served by [Ollama](../../user-guide/ai/using-ollama.md) or the [OpenAI API](../../user-guide/ai/using-openai.md), so to use one of them instead of the built-in classifier, configure it in `vision.yml` and keep the default value `auto`, which uses the model configured there. Model names are not accepted by this option; they belong in `vision.yml`.
 
 `PHOTOPRISM_DISABLE_CLASSIFICATION` is deprecated. It still applies when `PHOTOPRISM_LABELS_MODEL` is not set, but is ignored once `PHOTOPRISM_LABELS_MODEL` is set to `auto` or `none`.
 

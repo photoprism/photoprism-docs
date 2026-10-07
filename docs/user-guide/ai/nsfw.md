@@ -16,7 +16,7 @@ Flagging and upload screening are independent: you can reject uploads without fl
 
 ## Which Model Detects NSFW?
 
-In the default `auto` mode, PhotoPrism uses a dedicated detector that runs locally on [ONNX Runtime](https://onnxruntime.ai/) and ships with every PhotoPrism image: [Yahoo OpenNSFW](https://github.com/yahoo/open_nsfw). It is small and fast, and it decides with a threshold calibrated for this model. The detector does not distinguish drawings from photographs.
+In the default `auto` mode, PhotoPrism uses a dedicated detector that runs locally on [ONNX](https://onnx.ai/) and ships with every PhotoPrism image: [Yahoo OpenNSFW](https://github.com/yahoo/open_nsfw). It is small and fast, and it decides with a threshold calibrated for this model. The detector does not distinguish drawings from photographs.
 
 Other registered detectors can be downloaded in [a terminal](../../getting-started/docker-compose.md#opening-a-terminal) and selected in [`vision.yml`](index.md#visionyml-reference):
 

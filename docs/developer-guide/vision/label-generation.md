@@ -1,6 +1,6 @@
 # Label Generation
 
-PhotoPrism’s built-in image classification runs a fixed-vocabulary model on [ONNX Runtime](https://onnxruntime.ai/); [Label Models](label-models.md) compares the available models and explains how to select one or add your own. With the Ollama and OpenAI integrations, you can also generate labels via multimodal LLMs.
+PhotoPrism’s built-in image classification runs a fixed-vocabulary model on [ONNX](https://onnx.ai/); [Label Models](label-models.md) compares the available models and explains how to select one or add your own. With the Ollama and OpenAI integrations, you can also generate labels via multimodal LLMs.
 
 ## Ollama Setup Guide
 

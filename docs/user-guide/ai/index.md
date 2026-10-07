@@ -17,7 +17,7 @@ PhotoPrism currently supports the following runtimes and services:
 
 ### Performance
 
-- **Built-in Models:** Our built-in models run on [ONNX Runtime](https://onnxruntime.ai/) and generally perform well on all types of hardware. With an NVIDIA graphics card, they can also [use the GPU](gpu-acceleration.md).
+- **Built-in Models:** Our built-in models run on [ONNX](https://onnx.ai/) and generally perform well on all types of hardware. With an NVIDIA graphics card, they can also [use the GPU](gpu-acceleration.md).
 - **Ollama:** [Generating labels](ollama-models.md#gemma-4-labels) for an image on an NVIDIA RTX 4060 usually takes 1-4 seconds. The exact time varies depending on the model used and the [number of labels](ollama-models.md#qwen-35-labels) generated.
 - **OpenAI:** Processing one image takes about 3 seconds, though this can vary by model, region, and demand.
 

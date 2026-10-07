@@ -1,7 +1,7 @@
 # Label Generation with TensorFlow
 
-!!! info "Retired in Development Preview"
-    Our [development preview builds](../../../getting-started/updates.md#development-preview) classify pictures with ONNX models instead of TensorFlow, and TensorFlow SavedModels are no longer supported for labels. See [Label Models](../label-models.md) for the available models and how to use a custom one. This page describes current stable releases.
+!!! info "Retired"
+    PhotoPrism now classifies pictures with ONNX models instead of TensorFlow, and TensorFlow SavedModels are no longer supported for labels. See [Label Models](../label-models.md) for the available models and how to use a custom one. This page describes earlier releases.
 
 Image classification is performed using a [pre-trained model](https://dl.photoprism.app/tensorflow/), *NASNet Mobile 224*, that we have chosen because of its size, performance and accuracy. To get a basic understanding of how this works, you can read [Image Classification using Deep Neural Networks](https://medium.com/@tifa2up/image-classification-using-deep-neural-networks-a-beginner-friendly-approach-using-tensorflow-94b0a090ccd4).
 

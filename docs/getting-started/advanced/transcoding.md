@@ -42,9 +42,13 @@ The [`PHOTOPRISM_FFMPEG_SIZE`](../config-options.md#file-conversion) config opti
 !!! tldr ""
     Note that MPEG-4 AVC videos are not re-encoded if they exceed the configured resolution limit.
 
+### Quality ###
+
+[`PHOTOPRISM_FFMPEG_QUALITY`](../config-options.md#file-conversion) sets the encoding quality on a scale from `1` to `100`, where `100` is almost lossless. The default is `50`. The software encoder and the Apple, Intel, NVIDIA, VA-API, and Vulkan encoders translate it into their own quality parameter, so the same value results in a similar, but not identical, visual quality. At the same quality, hardware encoders usually produce larger files than the software encoder.
+
 ### Bitrate Limit ###
 
-You can limit the bitrate of the AVC encoder with the config option [`PHOTOPRISM_FFMPEG_BITRATE`](../config-options.md#file-conversion). Keep in mind that this is a "soft limit", so the actual bitrate varies and depends on the encoder used as well as the specific FFmpeg parameters, which in turn depend on the encoder. It may also depend on the operating system and the GPU drivers.
+You can limit the bitrate of the AVC encoder with the config option [`PHOTOPRISM_FFMPEG_BITRATE`](../config-options.md#file-conversion). Keep in mind that this is a "soft limit", so the actual bitrate varies and depends on the encoder used as well as the specific FFmpeg parameters, which in turn depend on the encoder. It may also depend on the operating system and the GPU drivers. The NVIDIA encoder uses the limit as its maximum bitrate.
 
 If the bitrate is significantly exceeded in your environment and you want improvements to be implemented, we recommend that you [take a look at the FFmpeg documentation](https://trac.ffmpeg.org/wiki/Limiting%20the%20output%20bitrate) and the [parameters in our source code](https://github.com/photoprism/photoprism/blob/develop/internal/ffmpeg/transcode_cmd.go) so you can tell us which parameters should be changed to make it work for you.
 

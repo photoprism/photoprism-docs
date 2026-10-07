@@ -143,6 +143,7 @@ nav:
       - OpenAI API: user-guide/ai/using-openai.md
       - Face Recognition: user-guide/ai/face-recognition.md
       - NSFW Detection: user-guide/ai/nsfw.md
+      - GPU Acceleration: user-guide/ai/gpu-acceleration.md
       - CLI Commands: user-guide/ai/cli.md
     - Backup Guide:
       - Creating Backups: user-guide/backups/index.md

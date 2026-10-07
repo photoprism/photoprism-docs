@@ -56,3 +56,9 @@ The Upload dialog supports drag-and-drop: drop one or many files (or whole folde
     - Use a dedicated sync app such as [PhotoSync](../sync/mobile-devices.md#using-photosync), which holds the required permission and transfers files unmodified via WebDAV.
 
     You can check whether a file still contains GPS data with [ExifTool](https://exiftool.org/) (for example, `exiftool -a -G1 photo.jpg`).
+
+## If Processing Fails
+
+After the files have been uploaded, PhotoPrism moves them to your originals folder and indexes them. If this step cannot run, for example because indexing is in progress or there is not enough storage space, the dialog shows *Upload failed* and offers *Retry*, which processes the uploaded files again without uploading them a second time.
+
+Uploaded files that were never processed are removed automatically once they have been left unchanged for longer than [`PHOTOPRISM_UPLOAD_MAXAGE`](../../getting-started/config-options.md#storage), which defaults to 7 days. The value is in seconds; `-1` keeps them.

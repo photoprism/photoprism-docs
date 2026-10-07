@@ -30,6 +30,8 @@ PhotoPrism can also expose its originals via WebDAV so that compatible clients o
 2. Click into the upload cell of your service.
    ![Screenshot](img/services-upload-1-2502.jpg){ class="shadow" }
 3. Select the folder to which photos should be uploaded and click *Save*.
+
+When originals are uploaded, *Upload YAML sidecar files* controls whether the YAML sidecar files are uploaded as well. It changes the same setting as *Sync YAML sidecar files* below.
    ![Screenshot](img/services-upload-2-2502.jpg){ class="shadow" }
 
 You can now [share albums or files with this service](../share/services-share.md).
@@ -55,3 +57,4 @@ You can now [share albums or files with this service](../share/services-share.md
 - *Upload local files* will upload all files (including private or archived ones) from PhotoPrism to your service that do not yet exist there.
 - *Preserve filenames* will keep filenames without renaming them.
 - *Sync raw and video files* will upload and download RAW and video files together with JPEGs.
+- *Sync YAML sidecar files* will upload and download the YAML sidecar files that contain picture metadata. It is enabled by default. If the remote server refuses to store YAML files while accepting other files, PhotoPrism disables the option for this service and logs a warning; you can enable it again once the remote server accepts them.

@@ -34,6 +34,10 @@ We recommend combining this filter with other filters like year or location
 when searching for specific people. The *People* tab in the photo [edit dialog](edit.md)
 shows all faces, so you can name them or report a bad match by pressing the :material-eject: button.
 
+### Why did a new face cluster disappear? ###
+
+When enough faces in a new cluster have already been recognized and all of them belong to the same person, the cluster is named after that person automatically, and its other faces are assigned to them. This happens only if those faces make up at least half of the cluster and none of its faces was named manually. The cluster then no longer appears among the new faces, and the person's other photos in it are found as well. Clusters whose recognized faces belong to different people stay unnamed.
+
 ### When a face was not detected... ###
 
 There can be several reasons why a face was not detected:

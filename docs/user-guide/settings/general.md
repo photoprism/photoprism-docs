@@ -26,7 +26,7 @@ When disabled, there is no *Folders* section for browsing pictures by directory 
 When disabled, there is no *Media* section for browsing videos, live photos, and animations.
 
 #### :material-account: People ####
-When disabled, the people section is hidden. To disable face detection while indexing, you may set `PHOTOPRISM_DISABLE_FACES` and/or `PHOTOPRISM_DISABLE_TENSORFLOW` to `"true"` in your [config](../../getting-started/config-options.md).
+When disabled, the people section is hidden. To disable face detection and recognition, you may set `PHOTOPRISM_DISABLE_FACES` to `"true"` in your [config](../../getting-started/config-options.md). To keep the *People* section but stop automatic face detection, see [Using Faces Without Automatic Detection](../ai/face-recognition.md#using-faces-without-automatic-detection).
 
 #### :material-calendar: Calendar ####
 When disabled, there is no *Calendar* section.

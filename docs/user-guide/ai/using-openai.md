@@ -36,13 +36,13 @@ Models:
 
 Recommendations:
 
-- Keep the `Model` name exactly as published by OpenAI. The default model is `gpt-5-mini`. Model identifiers are case-sensitive — PhotoPrism preserves the case as written in `vision.yml`, so values such as `QuantTrio/Qwen3-VL-30B-A3B-Instruct-AWQ` from Hugging Face or another OpenAI-compatible catalog reach the upstream API exactly as configured.
-- `Service.Key` can be omitted if `OPENAI_API_KEY` / `_FILE` is set in the environment. You can optionally set `Service.Org` and `Service.Project` when your account requires them for accounting purposes.
+- Keep the `Model` name exactly as published by OpenAI. The identifier is sent as written, including any tag after a colon, so use `gpt-5-mini` rather than `gpt-5-mini:latest`. For entries without a model name, PhotoPrism uses `OPENAI_MODEL` if set, otherwise `gpt-5-mini`. Model identifiers are case-sensitive — PhotoPrism preserves the case as written in `vision.yml`, so values such as `QuantTrio/Qwen3-VL-30B-A3B-Instruct-AWQ` from Hugging Face or another OpenAI-compatible catalog reach the upstream API exactly as configured.
+- `Service.Key` can be omitted if `OPENAI_API_KEY` / `_FILE` is set in the environment. Without a key, no requests are sent to `api.openai.com`. You can optionally set `Service.Org` and `Service.Project` when your account requires them for accounting purposes.
 - `Service.Tier` optionally sets the OpenAI `service_tier` (for example `flex` for cheaper, slower processing); leave it unset to use OpenAI's default (`auto`).
 - PhotoPrism evaluates models from the bottom of the list up, so putting the OpenAI entries after the others ensures OpenAI is chosen first, leaving other models as backups.
 
 !!! tldr ""
-    By default, PhotoPrism uses the OpenAI Responses API endpoint at `https://api.openai.com/v1/responses` with a single 720 px thumbnail (`detail: low`). It can be changed by setting a custom `Service.Uri`.
+    By default, PhotoPrism uses the OpenAI Responses API endpoint at `https://api.openai.com/v1/responses` with a single 720 px thumbnail (`detail: low`). To use a different OpenAI-compatible endpoint, set `OPENAI_BASE_URL` to its base URL including the version path, e.g. `https://llm.example.com/v1`, which is then used for all OpenAI models without a `Service.Uri`, or set a custom `Service.Uri` for a single model. A query in the base URL, such as `?api-version=...` for Azure OpenAI, is moved to the end of the request URL; use `OPENAI_API_KEY` or `Service.Key` for credentials rather than the URL. When `OPENAI_BASE_URL` differs from the default, PhotoPrism logs the base URL it uses at startup, with credentials masked, so you can check which endpoint receives the requests.
 
 ## Usage Tips
 

@@ -69,15 +69,12 @@ services:
 
 ### 4. Automatic Let's Encrypt Certificates
 
-!!! example ""
-    This option is available for testing with our [development preview](updates.md#development-preview) and will be included in the next stable release. Please let us know how it works for you in [GitHub Issue #5870](https://github.com/photoprism/photoprism/issues/5870).
-
 If your server has a public domain name and no reverse proxy, PhotoPrism can obtain and renew a free certificate from [Let's Encrypt](#lets-encrypt) by itself. This is enabled when the site URL starts with `https://` and contains a public domain name, and an email address for the Let's Encrypt account is set with `PHOTOPRISM_TLS_EMAIL`:
 
 ```yaml
 services:
   photoprism:
-    image: photoprism/photoprism:preview
+    image: photoprism/photoprism:latest
     # ...
     ports:
       - "443:2342" # Let's Encrypt connects to port 443 of the domain

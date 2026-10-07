@@ -314,4 +314,4 @@ photoprism --log-level=trace vision run -m labels --count 1 --force
 photoprism --log-level=trace vision run -m caption --count 1 --force
 ```
 
-[^1]: Available in our [preview builds](../../getting-started/updates.md#development-preview) and the upcoming stable release. Previous versions always collapse a label name to a single word and ignore this setting.
+[^1]: Available since the [September 19, 2026 release](../../release-notes.md#september-19-2026). Previous versions always collapse a label name to a single word and ignore this setting.

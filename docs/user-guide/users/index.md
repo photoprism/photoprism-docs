@@ -28,6 +28,8 @@ Super admins can reset another user's password without knowing the current one. 
 
 ![Screenshot](img/users-delete-2502.jpg){ class="shadow" }
 
+Deleting a user signs the account out on all devices, including its app passwords, and disables it. The account record is kept, and pictures the user has uploaded are not deleted.
+
 ## Managing Sessions
 
 You can view and delete active sessions by navigating to *Settings > Users > Sessions* as an [Admin](roles.md#admin):

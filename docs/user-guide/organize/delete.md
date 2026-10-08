@@ -22,3 +22,9 @@ Before you start, make sure the **Delete** feature is enabled in [Settings](../s
 3. Click *Delete All*
 
    ![Screenshot](img/delete-all-2503.jpg){ class="shadow" }
+
+### What Gets Removed ###
+
+Deleting a photo or video permanently removes its original files, their YAML and JSON sidecar files, and other related sidecar files. Thumbnails and other cached files are removed the next time a [cleanup](../library/originals.md#cleanup-option) runs.
+
+Deleted files remain in older [backups](../backups/index.md) until they are removed, and in any copies that were downloaded, exported, or synchronized.

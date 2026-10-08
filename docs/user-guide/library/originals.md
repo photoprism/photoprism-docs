@@ -38,6 +38,8 @@ We recommend performing a complete rescan after major updates to take advantage 
 
 Admins can optionally enable the cleanup option to delete unused thumbnails from the cache folder and remove orphaned index entries. If you do this from time to time, it can speed up indexing and reduce storage usage.
 
+Cleanup does not run on a schedule. It runs when you start indexing with the cleanup option enabled, or with the `photoprism cleanup` and `photoprism index --cleanup` commands, and is skipped while the *originals* folder is empty.
+
 ## Scheduled and Automatic Indexing
 
 [PhotoPrism 240523-923ee0cf7](../../release-notes.md#may-23-2024) and newer versions can optionally perform scheduled rescans of your library. This feature can be enabled by [setting a schedule in your configuration](../../getting-started/config-options.md#indexing). If you are using an external scheduler, please be careful not to start several indexing processes at the same time, as this not only causes a high server load, but may also lead to unexpected indexing results.

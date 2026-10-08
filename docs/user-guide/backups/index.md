@@ -10,6 +10,8 @@ At a minimum, a backup of PhotoPrism should include the files in [your *original
 
 The default configuration creates daily database backups and retains up to 3 SQL dumps. You can change the schedule, enabled backup types, and retention limits in the [backup configuration](../../getting-started/config-options.md#backup).
 
+Older SQL dumps are only removed when a new one is created. If database backups are disabled or `PHOTOPRISM_BACKUP_RETAIN` is set to a negative value, all existing dumps are kept. Data you delete remains in older dumps until they are removed.
+
 We recommend creating a full backup of all files, including your configuration and index database, before starting a [server migration](#mariadb-server-migration) or making any other major changes.
 
 ## Backup Command

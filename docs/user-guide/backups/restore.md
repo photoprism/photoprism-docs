@@ -30,6 +30,8 @@ docker compose exec photoprism photoprism restore -i [filename]
 
 Restoring the database also restores user accounts, passwords, sessions, and other settings stored in the index. If credentials have changed since the backup was created, sign in with the values from the restored backup.
 
+Before replacing an existing index with `-f`, we recommend testing the backup file, for example by restoring it on a separate test instance.
+
 !!! tldr ""
     Note that our examples use the new `docker compose` command by default. If your server does not yet support it, you can still use `docker-compose` or alternatively `podman-compose` on Red Hat-compatible distributions.
 

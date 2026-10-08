@@ -9,6 +9,8 @@ Keep in mind that the original metadata remains in your database. Changes you ma
 ## Album Backups
 Album backups are created for the following album types: `album`, `folder`, `state`, `moment`, and `month`. By default, they are stored in `storage/backup/albums`. Existing legacy installations may still use `storage/albums`.
 
+Album backup files are not affected by the [backup retention](../../getting-started/config-options.md#backup) setting, and the backup file of a deleted album you created is kept and marked as deleted. Like other YAML files, they are created with the [default file permissions](../../getting-started/config-options.md#docker-image). If they should not be readable by other users on the server, restrict access to the *storage* folder or set a stricter `PHOTOPRISM_UMASK`, such as `0077`.
+
 ### Albums
 Each album YAML file stores the following metadata:
 

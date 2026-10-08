@@ -75,3 +75,5 @@ This will set the selected photo as the cover image for the album.
        Open album, click :material-dots-vertical: and then click **Delete Album**.
 
        ![Screenshot](img/album-delete-toolbar-2507.jpg){ class="shadow" }
+
+When you delete an album you created, its [backup file](../backups/export.md#album-backups) is kept and marked as deleted. The backup files of albums that PhotoPrism creates automatically are removed together with the album.

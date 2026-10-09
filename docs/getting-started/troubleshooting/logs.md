@@ -23,6 +23,8 @@
     2. Open the *Library* sub navigation
     3. Navigate to *Library* > *Errors*
 
+    After an update, you can clear this list with *Delete All*, so that it only shows messages logged by the new version.
+
     ![](img/ui-error-logs-2503.jpg)
 
 === "Browser"

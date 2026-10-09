@@ -78,8 +78,8 @@ with you before publication.
 We do not operate a bug bounty program and do not offer payment or comparable compensation for
 vulnerability reports.
 
-PhotoPrism is developed by a small team, and a bounty program is not only its payouts: it is triage
-capacity, an accepted-severity scale to argue over, and a steady volume of speculative submissions.
+A bounty program is not only its payouts: it is triage capacity, an accepted-severity scale to argue
+over, and a steady volume of speculative submissions.
 We would rather spend that time on the reports we do receive and on the software itself.
 
 That does not make reports unwelcome. A report that follows our

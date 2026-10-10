@@ -300,6 +300,8 @@ Security findings should include:
 
 Do not publish exploitable vulnerability details before maintainers have had a reasonable opportunity to investigate and release a fix. Use the project's [documented security reporting channel](https://www.photoprism.app/security-policy/) for suspected vulnerabilities.
 
+[Learn more ›](policy.md)
+
 ## References
 
 - [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)

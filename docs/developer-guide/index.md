@@ -29,6 +29,10 @@ In order for us to investigate [new bug reports](https://www.photoprism.app/kb/r
 
 A template for creating bug reports can be found at [photoprism.app/kb/reporting-bugs](https://www.photoprism.app/kb/reporting-bugs/). We kindly ask you not to report bugs via [GitHub Issues](issues.md) **unless you are certain to have found a fully reproducible and previously unreported issue** that must be fixed directly in the app.
 
+**Please do not report potential security issues through GitHub Issues, GitHub Discussions, or our Community Chat**, as anything posted there is public. Instead, follow our [security policy](https://www.photoprism.app/security-policy/) to report them privately.
+
+[Learn more ›](security/policy.md)
+
 !!! example ""
     When [browsing issues](https://github.com/photoprism/photoprism/issues), please note that **our team and all issue subscribers receive an email notification** from GitHub whenever a new comment is added, so these should only be used for sharing important information and not for [discussions, questions](https://github.com/photoprism/photoprism/discussions), or [expressing personal opinions](https://www.photoprism.app/code-of-conduct/). Thank you very much!
 

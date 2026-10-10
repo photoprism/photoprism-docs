@@ -298,7 +298,7 @@ Security findings should include:
 - Reproduction steps and logs with secrets redacted.
 - Suggested fix and regression-test coverage.
 
-Do not publish exploitable vulnerability details before maintainers have had a reasonable opportunity to investigate and release a fix. Use the project's documented security reporting channel for suspected vulnerabilities.
+Do not publish exploitable vulnerability details before maintainers have had a reasonable opportunity to investigate and release a fix. Use the project's [documented security reporting channel](https://www.photoprism.app/security-policy/) for suspected vulnerabilities.
 
 ## References
 

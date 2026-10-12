@@ -38,6 +38,8 @@ services:
 
 Please change the password before you start the services for the first time, and use the same value in both places.
 
+Store the database files in a folder on a local SSD, as shown above, rather than in a named or anonymous Docker volume, which can lead to data loss when the container is recreated. The mount path depends on the image: PostgreSQL 18 images store their data in a subfolder of `/var/lib/postgresql`, while older versions use `/var/lib/postgresql/data`.
+
 `POSTGRES_INITDB_ARGS` only takes effect when the database server is initialized, i.e. when its storage folder is still empty. The ICU locale `und` makes PostgreSQL sort names and titles in the same order as MariaDB. Without it, the sort order depends on the default locale of the server, which differs between images based on Alpine Linux and Debian.
 
 ## Differences From MariaDB
@@ -49,6 +51,38 @@ Please change the password before you start the services for the first time, and
 ## Backups
 
 The [`photoprism backup`](../../../user-guide/backups/index.md#backup-command) and [`photoprism restore`](../../../user-guide/backups/restore.md#restore-command) commands work with PostgreSQL as well, using the `pg_dump` and `psql` clients included in our Docker images. An index backup created from PostgreSQL can only be restored into a PostgreSQL database. A restore is applied as a whole: if one statement fails, the database remains unchanged and the command reports the error.
+
+## Troubleshooting
+
+### Cannot Connect
+
+In the internal Docker network, the database server's hostname is the name of its service, e.g. `postgres`, and the default port is `5432`. `localhost` and `127.0.0.1` point to the PhotoPrism container itself, so use the service name instead. Check the [logs](../../troubleshooting/docker.md#viewing-logs) of both services for errors such as *permission denied* or *no space left on device*.
+
+To connect from your host, e.g. with a database client, you can publish the port in the `postgres` service and restart it:
+
+```yaml
+services:
+  postgres:
+    ports:
+      - "127.0.0.1:5432:5432"
+```
+
+!!! danger ""
+    Never expose your database to the public Internet, and set strong passwords if it is reachable from other computers on your network.
+
+### Wrong Password
+
+If a password in your `compose.yaml` contains `$` characters, these [must be escaped with `$$`](../../../developer-guide/technologies/yaml.md#dollar-signs), so that, for example, `"compo$e"` becomes `"compo$$e"`.
+
+`POSTGRES_PASSWORD` only sets the password when the database server is started with an empty storage folder for the first time. To change it later, open a database console and set a new password, then update `PHOTOPRISM_DATABASE_PASSWORD` accordingly:
+
+```bash
+docker compose exec postgres psql -U photoprism -c "ALTER USER photoprism WITH PASSWORD 'new_password';"
+```
+
+### Version Upgrade
+
+A new major version of PostgreSQL cannot use the database files of an older one. To upgrade, e.g. from PostgreSQL 17 to 18, create an index backup with [`photoprism backup -i`](../../../user-guide/backups/index.md#backup-command), start the new version with an empty storage folder, and then restore the backup with [`photoprism restore -i -f`](../../../user-guide/backups/restore.md#restore-command). The same steps move your database to another server. Restart PhotoPrism after the backup has been restored.
 
 ## Moving an Existing Library
 

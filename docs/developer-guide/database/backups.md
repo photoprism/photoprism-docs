@@ -1,6 +1,6 @@
 # Database Backups & Restores
 
-This page explains how the [`photoprism backup`](../../user-guide/backups/index.md#backup-command) and [`photoprism restore`](../../user-guide/backups/restore.md#restore-command) commands create and read MariaDB dumps, and why they work this way. The same applies to the scheduled backups. SQLite dumps are created and restored with the `sqlite3` client and are not affected by what follows.
+This page explains how the [`photoprism backup`](../../user-guide/backups/index.md#backup-command) and [`photoprism restore`](../../user-guide/backups/restore.md#restore-command) commands create and read MariaDB dumps, and why they work this way. The same applies to the scheduled backups. SQLite dumps are created and restored with the `sqlite3` client and are not affected by what follows. PostgreSQL, which is supported experimentally, is covered [at the end of this page](#postgresql).
 
 The code lives in [`internal/photoprism/backup`](https://github.com/photoprism/photoprism/tree/develop/internal/photoprism/backup).
 
@@ -8,11 +8,11 @@ The code lives in [`internal/photoprism/backup`](https://github.com/photoprism/p
 
 PhotoPrism runs `mariadb-dump` with these flags, in addition to the connection settings:
 
-| Flag                   | Effect                                                                                               |
-|------------------------|------------------------------------------------------------------------------------------------------|
-| `--single-transaction` | Reads all InnoDB tables from one consistent snapshot, without locking them.                          |
-| `--skip-add-locks`     | The dump does not lock each table while it is restored.                                              |
-| `--skip-no-autocommit` | Each `INSERT` statement is committed on its own when the dump is restored.                           |
+| Flag                   | Effect                                                                      |
+|------------------------|-----------------------------------------------------------------------------|
+| `--single-transaction` | Reads all InnoDB tables from one consistent snapshot, without locking them. |
+| `--skip-add-locks`     | The dump does not lock each table while it is restored.                     |
+| `--skip-no-autocommit` | Each `INSERT` statement is committed on its own when the dump is restored.  |
 
 As a result:
 
@@ -48,3 +48,17 @@ We decided not to lock tables while restoring, since doing so is not needed to r
 - Users without the `LOCK TABLES` privilege would not be protected by locks anyway, and would get an additional warning for each table.
 
 Locks would only make a difference if the application created a row with the same unique name as a row in the dump while it is being restored, for example a new label during indexing. A restore while indexing or importing gives inconsistent results either way, since the application writes to a partly restored database. For this reason, you should always restore a backup when your instance is not indexing or importing files, and then restart it.
+
+## PostgreSQL
+
+PhotoPrism creates PostgreSQL dumps with `pg_dump` and these flags, in addition to the connection settings:
+
+| Flag              | Effect                                                                     |
+|-------------------|----------------------------------------------------------------------------|
+| `--format=plain`  | Writes a plain SQL script.                                                 |
+| `--clean`         | Drops each table before it is created again when the dump is restored.     |
+| `--if-exists`     | Tables that do not exist yet are skipped when dropping them.               |
+| `--no-owner`      | The dump does not set table owners, so it can be restored by another user. |
+| `--no-privileges` | The dump does not grant or revoke privileges.                              |
+
+The dump is restored with `psql` in a single transaction that stops at the first failed statement. Either the whole dump is applied, replacing the PhotoPrism tables of the target database, or the database is left unchanged and the restore command reports the error.

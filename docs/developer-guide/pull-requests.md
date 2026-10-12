@@ -9,7 +9,7 @@ submissions are acceptable:
 - [ ] **[Automated unit and/or acceptance tests](code-quality.md#test-automation-guidelines) are mandatory** to ensure the changes work as expected and to reduce repetitive manual work
 - [ ] **[Frontend components](ui/introduction.md) must be responsive** to work and look properly on phones, tablets, and desktop computers; you must have tested them on [all major browsers](../getting-started/index.md#browsers) and different devices
 - [ ] **[Documentation](documentation.md) and [translation](translations.md) updates** should be provided if needed
-- [ ] In case you submit database-related changes, they must be tested and [compatible](../getting-started/index.md#databases) with [SQLite 3](https://www.sqlite.org/) and [MariaDB 10.5.12+](https://mariadb.org/)
+- [ ] In case you submit database-related changes, they must be tested and [compatible](../getting-started/index.md#databases) with [SQLite 3](https://www.sqlite.org/) and [MariaDB 10.5.12+](https://mariadb.org/); SQL that differs per database should also be [tested with PostgreSQL](tests.md#go), which is supported experimentally
 
 !!! example ""
     These guidelines are not intended as a filter or barrier to participation. If you are unfamiliar with

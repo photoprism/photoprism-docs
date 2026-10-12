@@ -16,6 +16,7 @@ The following `make` targets are currently defined for tests:
 - `test-race`: Same as `test-go` but with the race condition detector enabled (much slower) and a 60 min timeout
 - `test-coverage`: Same as `test-go` but creates a *coverage.txt* file and a human-readable *coverage.html* report; timeout is elevated to 30 min
 - `test-mariadb`: Runs the Go tests against a MariaDB instance instead of SQLite
+- `test-postgres`: Runs the Go tests against the optional PostgreSQL service, which must be started first with `docker compose --profile postgres up -d`; `reset-postgres-acceptance` drops the test databases it creates
 - Subset targets for focused runs: `test-pkg`, `test-api`, `test-ai`, `test-entity`, `test-commands`, `test-photoprism`, `test-hub`, `test-video`
 
 The Go targets build with the tags in `GOTEST_TAGS`, which defaults to `slow,develop`. Override it on the `make` command line, for example `make test-mariadb GOTEST_TAGS=slow,develop,integration`; an exported environment variable is ignored.

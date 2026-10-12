@@ -23,4 +23,4 @@ Some highlights to explore:
 + [internal/api](https://pkg.go.dev/github.com/photoprism/photoprism/internal/api) - server api
 + [internal/commands](https://pkg.go.dev/github.com/photoprism/photoprism/internal/commands) - command line interface
 + [internal/form](https://pkg.go.dev/github.com/photoprism/photoprism/internal/form) - input validation (based on [gin](https://github.com/gin-gonic/gin#model-binding-and-validation))
-+ [internal/entity](https://pkg.go.dev/github.com/photoprism/photoprism/internal/entity) - models (based on [GORM](http://gorm.io/))
++ [internal/entity](https://pkg.go.dev/github.com/photoprism/photoprism/internal/entity) - models (based on [GORM](https://gorm.io/))

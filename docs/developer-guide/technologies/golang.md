@@ -17,7 +17,7 @@ We have chosen Go because of its simplicity and performance. On top, it enables 
 - https://github.com/spf13/afero - a filesystem abstraction library
 - https://github.com/gin-gonic/gin - HTTP web framework
 - https://github.com/gobuffalo/pop - a database abstraction layer
-- https://github.com/jinzhu/gorm - another database abstraction layer
+- https://github.com/go-gorm/gorm - the ORM library used by PhotoPrism
 - https://github.com/appleboy/gorush - a push notification micro server for Gin
 - https://github.com/cavaliercoder/grab - a download manager package
 - https://github.com/russross/blackfriday - a library for rendering Markdown

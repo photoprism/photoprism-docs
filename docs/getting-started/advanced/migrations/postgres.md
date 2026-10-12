@@ -34,11 +34,12 @@ services:
       POSTGRES_USER: "photoprism"
       POSTGRES_PASSWORD: "insecure"
       POSTGRES_INITDB_ARGS: "--locale-provider=icu --icu-locale=und"
+      PGDATA: "/var/lib/postgresql/18/docker"
 ```
 
 Please change the password before you start the services for the first time, and use the same value in both places.
 
-Store the database files in a folder on a local SSD, as shown above, rather than in a named or anonymous Docker volume, which can lead to data loss when the container is recreated. The mount path depends on the image: PostgreSQL 18 images store their data in a subfolder of `/var/lib/postgresql`, while older versions use `/var/lib/postgresql/data`.
+Store the database files in a folder on a local SSD, as shown above, rather than in a named or anonymous Docker volume, which can lead to data loss when the container is recreated. The mount path depends on the PostgreSQL version, see [Server Does Not Start](#server-does-not-start).
 
 `POSTGRES_INITDB_ARGS` only takes effect when the database server is initialized, i.e. when its storage folder is still empty. The ICU locale `und` makes PostgreSQL sort names and titles in the same order as MariaDB. Without it, the sort order depends on the default locale of the server, which differs between images based on Alpine Linux and Debian.
 
@@ -69,6 +70,25 @@ services:
 
 !!! danger ""
     Never expose your database to the public Internet, and set strong passwords if it is reachable from other computers on your network.
+
+### Server Does Not Start
+
+The official `postgres` Docker images changed their data folder with PostgreSQL 18:
+
+| Version        | Mount Path                 | Data Folder                     |
+|----------------|----------------------------|---------------------------------|
+| 18+            | `/var/lib/postgresql`      | `/var/lib/postgresql/18/docker` |
+| 17 and earlier | `/var/lib/postgresql/data` | `/var/lib/postgresql/data`      |
+
+If a PostgreSQL 18 container finds a volume mounted at `/var/lib/postgresql/data`, e.g. because you only changed the image tag of an existing service, it exits and logs an error that starts with:
+
+```
+Error: in 18+, these Docker images are configured to store database data in a
+       format which is compatible with "pg_ctlcluster" (specifically, using
+       major-version-specific directory names).
+```
+
+This also happens if the mounted folder is empty. Change the mount path to `/var/lib/postgresql`. Setting `PGDATA` as in the [example above](#setting-up-a-new-instance) keeps the data folder at a fixed location; it contains the major version, so change it together with the image tag when you [upgrade](#version-upgrade). If the folder contains the database of an older version, you also need to [upgrade it](#version-upgrade), since PostgreSQL 18 cannot use those files.
 
 ### Wrong Password
 

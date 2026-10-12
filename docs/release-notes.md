@@ -11,7 +11,7 @@ Our [preview builds](getting-started/updates.md#development-preview) give you ea
 What's new?
 
 - Database: [Upgraded the ORM library from GORM v1 to v2](https://github.com/photoprism/photoprism/pull/4831) by [@keif888](https://github.com/keif888)
-- Database: [Added experimental support for PostgreSQL 16 and later](https://github.com/photoprism/photoprism/issues/47) by [@keif888](https://github.com/keif888)
+- Database: [Added experimental support for PostgreSQL 16 and later](https://docs.photoprism.app/getting-started/advanced/migrations/postgres/) by [@keif888](https://github.com/keif888)
 - Database: [Restored names and slugs that earlier SQLite schemas stored as numbers](https://github.com/photoprism/photoprism/pull/4831)
 - Database: [New MariaDB tables use the collation of the existing tables](https://github.com/photoprism/photoprism/pull/4831)
 - Database: [Added warnings for MariaDB tables without InnoDB or a shared collation](https://github.com/photoprism/photoprism/pull/4831)

@@ -43,7 +43,7 @@ The schema is created by [GORM](https://gorm.io/) from the models in [`internal/
 - Other text columns use the database collation, and `=` compares them case-sensitively. For a sort order similar to MariaDB's, create the database with an ICU locale, e.g. `POSTGRES_INITDB_ARGS="--locale-provider=icu --icu-locale=und"` for a new server.
 - Timestamps are `timestamptz` and are read in UTC.
 
-Since the schema may still change without migrations, databases created with earlier development versions are not upgraded. If PhotoPrism refuses to start because of an unsupported schema, create a new database and index your originals again.
+Since the schema may still change without migrations, databases created with earlier development versions are not upgraded. If PhotoPrism refuses to use a database because of an unsupported schema, create a new database and index your originals again, as described in [Using PostgreSQL](../../getting-started/advanced/migrations/postgres.md#databases-from-development-versions).
 
 ## Schema Migrations
 

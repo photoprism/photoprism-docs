@@ -68,7 +68,7 @@ To continue, create a new, empty database, e.g. with `CREATE DATABASE` or a new 
 photoprism backup -a
 ```
 
-When you then index your originals with the new version, your photo edits are restored from the YAML sidecar files and your albums from the album backups, provided backups were not disabled in the version you have been using. If albums are missing afterwards, you can restore them with:
+When the new version starts with the empty database, it restores your albums from the album backups, and when you then index your originals, your photo edits are restored from the YAML sidecar files, provided backups were not disabled. If albums are missing afterwards, e.g. because the backups are in another folder, you can restore them with:
 
 ```bash
 photoprism restore -a

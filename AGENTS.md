@@ -1,6 +1,6 @@
 # PhotoPrism® Docs Repository Guidelines
 
-**Last Updated:** July 9, 2026
+**Last Updated:** October 17, 2026
 
 ## Purpose
 
@@ -56,6 +56,7 @@ This file serves as a single, up-to-date reference for agents and contributors w
 - Store images next to the Markdown that references them (for example, `docs/user-guide/organize/img/`). Optimize screenshots before committing and include descriptive alt text in Markdown.
 - Reuse canonical CLI flags, file paths, and configuration snippets from the main PhotoPrism repository. When documenting new application behavior, confirm the implementation in `photoprism/photoprism` before publishing.
 - Front matter: use MkDocs `meta` blocks (or the `page.meta` keys referenced in `overrides/main.html`) when you need a custom page title or social caption. Avoid adding bespoke metadata keys unless templates consume them.
+- **Do not hard-wrap Markdown prose.** Write each paragraph and list item on one line, in Markdown files and in text posted elsewhere (GitHub issue descriptions, issue and pull request comments, email drafts). Keep line breaks only where they carry meaning: code blocks, tables, front matter, and deliberate hard breaks. When editing an already wrapped paragraph, unwrap the paragraph you change and leave the rest alone. Commit message bodies and code comments keep their own conventions.
 
 > **Title Case** rules (Chicago-style, with code- and path-aware normalization):
 > - Capitalize the first word, the first word after a colon, dash, or end punctuation, and all major words, including the second part of a hyphenated major word.

@@ -137,6 +137,7 @@ Verify with `git rev-parse develop deploy origin/develop origin/deploy` — all 
 - **Filenames** are lowercase-kebab (`snake-case.md`); directories mirror nav labels.
 - **RFC 3339 UTC timestamps** in request/response examples; valid-looking IDs/UIDs/UUIDs in code samples.
 - **CLI examples:** flags before positional arguments unless the command requires otherwise.
+- **Do not hard-wrap Markdown prose.** Write each paragraph and list item on one line, in Markdown files and in text posted elsewhere (GitHub issue descriptions, issue and pull request comments, email drafts). Keep line breaks only where they carry meaning: code blocks, tables, front matter, and deliberate hard breaks. When editing an already wrapped paragraph, unwrap the paragraph you change and leave the rest alone. Commit message bodies and code comments keep their own conventions.
 
 ## Commit Messages
 

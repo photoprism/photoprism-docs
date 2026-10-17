@@ -57,7 +57,7 @@ https://{hostname}/api/v1/oidc/redirect
 
 ### Local Development
 
-Our [development environment](../setup.md) comes with a [pre-configured Keycloak](https://github.com/photoprism/photoprism/blob/develop/compose.yaml) OIDC Identity Provider running at <https://keycloak.localssl.dev/> for local testing:
+Our [development environment](../setup.md) comes with a [pre-configured Keycloak](https://github.com/photoprism/photoprism/blob/develop/compose.yaml) OIDC Identity Provider at <https://keycloak.localssl.dev/> for local testing. It only starts with the `keycloak` or `auth` profile, e.g. `docker compose --profile keycloak up -d`:
 
 - <https://keycloak.localssl.dev/realms/master/.well-known/openid-configuration>
 

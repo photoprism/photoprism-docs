@@ -20,6 +20,7 @@ Reusable Vue components live under [`frontend/src/component/`](https://github.co
 
 - The authoritative dependency list is [`frontend/package.json`](https://github.com/photoprism/photoprism/blob/develop/frontend/package.json).
 - The frontend is an npm workspace of the repository root, so `node_modules/` and `package-lock.json` live at the root. Install or refresh dependencies from the root with `make dep-js`, which runs `npm ci`; `make dep` also downloads the models.
+- Nothing reinstalls `node_modules` when `package-lock.json` changes, e.g. after a pull. Sync it with `make -C frontend install` (`npm install`), which only updates what changed; `make -C frontend ci` (`npm ci`) reinstalls everything.
 - Add a dependency with `npm install --ignore-scripts --workspace frontend <package>` from the repository root, so it is recorded in `frontend/package.json` and the root `package-lock.json`. Always check [`frontend/CODEMAP.md`](https://github.com/photoprism/photoprism/blob/develop/frontend/CODEMAP.md) before adding new runtime libraries.
 
 ## Build, Watch, and Test

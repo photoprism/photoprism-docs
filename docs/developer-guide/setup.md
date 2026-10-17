@@ -135,7 +135,7 @@ Some services are gated behind Compose profiles and stay stopped unless enabled.
 | `keycloak`          | `keycloak`, `auth`, `all`               | Keycloak OIDC identity provider.                        |
 | `prometheus`        | `prometheus`, `auth`, `all`             | Prometheus metrics server.                              |
 
-The `photoprism`, `mariadb`, `traefik`, `dummy-webdav`, `dummy-oidc`, and `dummy-ldap` services have no profile and always start with `docker compose up`.
+The `photoprism`, `mariadb`, `traefik`, `dummy-webdav`, `dummy-oidc`, `dummy-ldap`, and `dummy-lldap` services have no profile and always start with `docker compose up`.
 
 #### Default Host Ports
 

@@ -1,6 +1,6 @@
 # EXIF
 
-**Last Updated:** April 21, 2026
+**Last Updated:** October 18, 2026
 
 EXIF (Exchangeable Image File Format) is a metadata standard for camera and image information — capture date, exposure, GPS coordinates, orientation, camera make/model, and similar fields — embedded directly in the image file. It is supported by virtually every camera manufacturer and image processor, and is by far the most important metadata source for PhotoPrism.
 
@@ -74,7 +74,7 @@ Column meanings:
 | `Exposure`         | `ExposureTime` (`N/M` → `1/⌊M/N⌋`)                                            | `ExposureTime`, `ShutterSpeedValue`, `ShutterSpeed`, `TargetExposureTime`                                                                     | ✓                             | ✓                  |
 | `FNumber`          | `FNumber` (`N/M` → float)                                                     | `FNumber`                                                                                                                                     | ✓                             | ✓                  |
 | `Aperture`         | `ApertureValue` (`N/M` → float)                                               | `ApertureValue`, `Aperture`                                                                                                                   | ✓                             | ✓                  |
-| `FocalLength`      | `FocalLengthIn35mmFilm`, else `FocalLength`                                   | `FocalLength`, `FocalLengthIn35mmFormat`                                                                                                      | ✓                             | ✓                  |
+| `FocalLength`      | `FocalLengthIn35mmFilm`, else `FocalLength`                                   | `FocalLengthIn35mmFormat`, `FocalLength`                                                                                                      | ✓                             | ✓                  |
 | `FocalDistance`    | —                                                                             | `HyperfocalDistance`                                                                                                                          | —                             | ✓                  |
 | `Iso`              | `ISOSpeedRatings`                                                             | `ISO`                                                                                                                                         | ✓                             | ✓                  |
 | `Flash`            | `Flash` (low bit == 1)                                                        | `FlashFired`                                                                                                                                  | ✓ (also adds `flash` keyword) | ✓                  |

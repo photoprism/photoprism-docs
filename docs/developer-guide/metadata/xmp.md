@@ -1,6 +1,6 @@
 # Adobe XMP
 
-**Last Updated:** July 28, 2026
+**Last Updated:** October 18, 2026
 
 XMP (Extensible Metadata Platform) is an XML-based metadata container developed by Adobe. It can be embedded in common image and video formats (JPEG, HEIC, TIFF, DNG, MP4, MOV, PSD, …) and is also used as a standalone sidecar format — typically named the same as the original with an `.xmp` extension — to carry Dublin Core, IPTC, EXIF, and vendor-specific fields.
 
@@ -64,7 +64,7 @@ The table below lists the XMP elements PhotoPrism currently consumes, their prim
 | `CameraOwner`           | `aux:OwnerName`                                                               | `OwnerName`, `Owner`                                                                       | ✓                   | ✓ `aux:OwnerName`                                                                                         |
 | `LensMake`              | `exifEX:LensMake`                                                             | `LensMake`                                                                                 | ✓                   | ✓ `exifEX:LensMake`                                                                                       |
 | `LensModel`             | `exifEX:LensModel`; `aux:Lens` / `aux:LensID`                                 | `LensModel`, `Lens`, `LensID`                                                              | ✓                   | ✓ `exifEX:LensModel` → `aux:Lens` → `aux:LensID`                                                          |
-| `FocalLength`           | `exif:FocalLength`; `exif:FocalLengthIn35mmFilm`                              | `FocalLength`, `FocalLengthIn35mmFormat`                                                   | ✓                   | ✓ `exif:FocalLength` → `exif:FocalLengthIn35mmFilm`                                                       |
+| `FocalLength`           | `exif:FocalLengthIn35mmFilm`; `exif:FocalLength`                              | `FocalLengthIn35mmFormat`, `FocalLength`                                                   | ✓                   | ✓ `exif:FocalLengthIn35mmFilm` → `exif:FocalLength`                                                       |
 | `Exposure`              | `exif:ExposureTime`; `exif:ShutterSpeedValue`                                 | `ExposureTime`, `ShutterSpeedValue`, `ShutterSpeed`                                        | ✓                   | ✓ `exif:ExposureTime` → `exif:ShutterSpeedValue` (APEX)                                                   |
 | `Aperture` / `FNumber`  | `exif:ApertureValue`; `exif:FNumber`                                          | `ApertureValue`, `Aperture`, `FNumber`                                                     | ✓                   | ✓ `exif:ApertureValue` / `exif:FNumber`                                                                   |
 | `Iso`                   | `exifEX:PhotographicSensitivity`; `exif:ISOSpeedRatings`                      | `ISO`                                                                                      | ✓                   | ✓ `exifEX:PhotographicSensitivity` → `exif:ISOSpeedRatings`                                               |

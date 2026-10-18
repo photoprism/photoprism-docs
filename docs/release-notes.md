@@ -4,7 +4,7 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 261018-4527cfffc</span>
+<span class="build">Build 261018-99ae7a54d</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions/#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
@@ -12,9 +12,11 @@ What's new?
 
 - AI: [Disabled ONNX Runtime telemetry before the library is loaded](https://github.com/photoprism/photoprism/issues/5897)
 - Auth: [New usernames may contain only ASCII characters](https://github.com/photoprism/photoprism/issues/5896)
+- Auth: [Added connecting apps and remote MCP clients with OAuth](https://github.com/photoprism/photoprism/issues/4368)
 - Index: [Skips files and folders with unsupported characters in their names](https://github.com/photoprism/photoprism/issues/5904)
 - Labels: [Added retries for database deadlocks when updating a picture's labels](https://github.com/photoprism/photoprism/issues/5823)
 - Metadata: [Fixed the time zone of pictures taken at sea in the Pacific](https://github.com/photoprism/photoprism/issues/5901)
+- Metadata: [Fixed inconsistent focal lengths from Exif, ExifTool JSON, and XMP](https://github.com/photoprism/photoprism/issues/5908)
 - CLI: [Fixed downloading YouTube videos with `photoprism dl`](https://github.com/photoprism/photoprism/issues/5903)
 - Database: [Upgraded the ORM library from GORM v1 to v2](https://github.com/photoprism/photoprism/pull/4831) by [@keif888](https://github.com/keif888)
 - Database: [Added experimental support for PostgreSQL 16 and later](https://docs.photoprism.app/getting-started/advanced/migrations/postgres/) by [@keif888](https://github.com/keif888)

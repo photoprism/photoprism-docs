@@ -58,7 +58,7 @@ Describes the [MCP endpoint](mcp.md) as a protected resource ([RFC 9728](https:/
 
 ### OpenID Configuration
 
-PhotoPrism publishes OpenID Connect discovery metadata, including a JWKS URI, but it is not yet a complete OIDC Identity Provider. In particular, the userinfo endpoint is still a placeholder, the authorization endpoint only serves the [Authorization Code flow for apps](oauth2.md#connecting-apps), and the discovery metadata advertises only the interoperable parts that are implemented today.
+PhotoPrism publishes OpenID Connect discovery metadata, including a JWKS URI, but it is not yet a complete OIDC Identity Provider. In particular, the userinfo endpoint is still a placeholder, the authorization endpoint only serves the [Authorization Code Flow](oauth2.md#connecting-apps) for apps, and the discovery metadata advertises only the interoperable parts that are implemented today.
 
 ↪ <https://demo.photoprism.app/.well-known/openid-configuration>
 

@@ -1,27 +1,37 @@
 # Model Context Protocol (MCP)
 
-PhotoPrism includes a read-only server for the [Model Context Protocol](https://modelcontextprotocol.io/) (MCP), a JSON-RPC 2.0 protocol that lets AI assistants and agents use external tools and data sources in a standardized way. MCP-compatible clients can use it to look up PhotoPrism's config options and search filters, for example to help users configure an instance or build search queries.
+PhotoPrism includes a read-only server for the [Model Context Protocol](https://modelcontextprotocol.io/) (MCP), a JSON-RPC 2.0 protocol that lets AI assistants and agents use external tools and data sources in a standardized way. MCP-compatible clients can use it to look up reference information such as config options, search filters, CLI commands, and supported file formats, for example to help users configure an instance, build search queries, or find the right command for the edition they run.
 
-| Transport       | Endpoint / Command     | Authentication                                    | Typical Use                                        |
-|-----------------|------------------------|---------------------------------------------------|----------------------------------------------------|
-| Streamable HTTP | `/api/v1/mcp`          | [Connected app](#connecting-clients) or [access token](auth.md#access-tokens) | Remote MCP clients, assistants, and agents |
-| stdio           | `photoprism mcp serve` | none (local process)                              | Development, testing, and the MCP Inspector        |
+| Transport       | Endpoint / Command     | Authentication                                                                | Typical Use                                 |
+|-----------------|------------------------|-------------------------------------------------------------------------------|---------------------------------------------|
+| Streamable HTTP | `/api/v1/mcp`          | [Connected app](#connecting-clients) or [access token](auth.md#access-tokens) | Remote MCP clients, assistants, and agents  |
+| stdio           | `photoprism mcp serve` | none (local process)                                                          | Development, testing, and the MCP Inspector |
 
 Both transports serve the same tools and resources.
 
 ## Available Tools
 
-| Tool                  | Inputs                                     | Returns                                                                                       |
-|-----------------------|--------------------------------------------|-----------------------------------------------------------------------------------------------|
-| `list_config_keys`    | `section`, `query`, `edition`, `limit`     | Matching config options with environment variable, CLI flag, default value, and description    |
-| `find_search_filters` | `query`, `type`, `limit`                   | Matching [search filters](search.md) with type, examples, and notes                           |
+| Tool                   | Inputs                                 | Returns                                                                                            |
+|------------------------|----------------------------------------|----------------------------------------------------------------------------------------------------|
+| `list_config_keys`     | `section`, `query`, `edition`, `limit` | Matching config options with environment variable, CLI flag, default value, and description        |
+| `find_search_filters`  | `query`, `type`, `limit`               | Matching [search filters](search.md) with type, examples, and notes                                |
+| `list_cli_commands`    | `query`, `limit`, `offset`             | Commands of the running edition with usage, description, arguments, aliases, and their own flags   |
+| `list_file_formats`    | `query`, `type`, `limit`, `offset`     | Supported file formats with type, extensions, and description, e.g. for `image`, `raw`, or `video` |
+| `list_metadata_fields` | `query`, `limit`, `offset`             | Metadata fields with type and the matching Exiftool, XMP, and Dublin Core tags                     |
+| `list_thumbnail_sizes` | `type` (`image`, `video`, or `all`)    | Thumbnail sizes with width, height, aspect ratio, and usage, or only the standard video sizes      |
+
+All tools are read-only and return the same information as the matching [`photoprism show`](../../getting-started/docker-compose.md#command-line-interface) commands of the running edition, so Plus, Pro, and Portal include their own commands. Results of tools with a `limit` input include `items`, `total`, `limit`, `offset`, and `truncated`; `limit` defaults to 20 and can be at most 50.
 
 ## Available Resources
 
-| Resource URI                  | Content                                    |
-|-------------------------------|--------------------------------------------|
-| `photoprism://config-options` | All config options as JSON                 |
-| `photoprism://search-filters` | All search filters as JSON                 |
+| Resource URI                   | Content                                  |
+|--------------------------------|------------------------------------------|
+| `photoprism://config-options`  | All config options as JSON               |
+| `photoprism://search-filters`  | All search filters as JSON               |
+| `photoprism://cli-commands`    | All CLI commands and their flags as JSON |
+| `photoprism://file-formats`    | All supported file formats as JSON       |
+| `photoprism://metadata-fields` | All metadata fields as JSON              |
+| `photoprism://thumbnail-sizes` | All thumbnail sizes as JSON              |
 
 ## Connecting Clients
 
@@ -92,10 +102,10 @@ In [public mode](../../getting-started/config-options.md#authentication), the en
 
 ## Configuration
 
-| Environment Variable       | CLI Flag        | Description                                                                                   |
-|----------------------------|-----------------|-----------------------------------------------------------------------------------------------|
-| `PHOTOPRISM_DISABLE_MCP`   | `--disable-mcp` | Disables the `/api/v1/mcp` endpoint and the `photoprism mcp serve` command                    |
-| `PHOTOPRISM_OAUTH_APPS`    | `--oauth-apps`  | Controls which apps and MCP clients users can [connect with OAuth](oauth2.md#configuration) |
+| Environment Variable     | CLI Flag        | Description                                                                                 |
+|--------------------------|-----------------|---------------------------------------------------------------------------------------------|
+| `PHOTOPRISM_DISABLE_MCP` | `--disable-mcp` | Disables the `/api/v1/mcp` endpoint and the `photoprism mcp serve` command                  |
+| `PHOTOPRISM_OAUTH_APPS`  | `--oauth-apps`  | Controls which apps and MCP clients users can [connect with OAuth](oauth2.md#configuration) |
 
 ## Contributing
 
@@ -106,6 +116,7 @@ We welcome contributions that extend the MCP server, for example with tools that
 - [AI: Add support for Model Context Protocol (MCP) #5024](https://github.com/photoprism/photoprism/issues/5024)
 - [Auth: Add `authorize` API endpoint to implement the authorization code flow #4368](https://github.com/photoprism/photoprism/issues/4368)
 - [MCP: Add `--disable-mcp` flag to optionally disable the MCP API endpoint #5536](https://github.com/photoprism/photoprism/issues/5536)
+- [MCP: Add reference tools for CLI commands, file formats, metadata, and thumbnails #5910](https://github.com/photoprism/photoprism/issues/5910)
 
 ## Protocol References
 

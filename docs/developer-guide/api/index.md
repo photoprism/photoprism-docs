@@ -46,9 +46,19 @@ Besides using the API endpoints provided for this, you can also generate valid [
 
 [Learn more ›](oauth2.md)
 
+### OAuth2 Protected Resource
+
+```
+/.well-known/oauth-protected-resource/api/v1/mcp
+```
+
+Describes the [MCP endpoint](mcp.md) as a protected resource ([RFC 9728](https://datatracker.ietf.org/doc/html/rfc9728)), so MCP clients can find the authorization server and [connect](oauth2.md#connecting-apps) to an instance after receiving a `401` response. It returns `404 Not Found` if connecting apps or the MCP endpoint is disabled.
+
+[Learn more ›](mcp.md#connecting-clients)
+
 ### OpenID Configuration
 
-PhotoPrism publishes OpenID Connect discovery metadata, including a JWKS URI, but it is not yet a complete OIDC Identity Provider. In particular, the authorization and userinfo endpoints are still placeholders, and the discovery metadata currently advertises only the interoperable parts that are implemented today.
+PhotoPrism publishes OpenID Connect discovery metadata, including a JWKS URI, but it is not yet a complete OIDC Identity Provider. In particular, the userinfo endpoint is still a placeholder, the authorization endpoint only serves the [authorization code flow for apps](oauth2.md#connecting-apps), and the discovery metadata advertises only the interoperable parts that are implemented today.
 
 ↪ <https://demo.photoprism.app/.well-known/openid-configuration>
 

@@ -2,13 +2,14 @@
 
 The OAuth 2.0 specification is an authorization framework that contains a set of methods, or grants, that a client application can use to obtain an access token. Each grant type is designed for a specific use case:
 
-- [Password Grant](auth.md#app-passwords)
-- [Client Credentials](auth.md#client-credentials)
+- [Authorization Code with PKCE](#authorization-code-flow): lets users connect apps and remote [MCP clients](mcp.md) to their account after signing in and confirming access
+- [Refresh Token](#refreshing-access-tokens): renews the access tokens of connected apps
+- [Client Credentials](auth.md#client-credentials): for services and scripts that are not bound to a user account
+- [Password Grant](auth.md#app-passwords): PhotoPrism-specific `password` and `session` grants for creating access tokens
 
 The access token can then be passed to an API endpoint, which checks it to determine validity and [authorization scope](auth.md#authorization-scopes).
 
-!!! example ""
-    PhotoPrism currently supports practical token-based API access via the token endpoint. The authorization endpoint exists, but the [Authorization Code Flow](https://auth0.com/docs/get-started/authentication-and-authorization-flow/authorization-code-flow) is not usable yet.
+The flow for [connecting apps](#connecting-apps) follows [OAuth 2.1](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1), which consolidates OAuth 2.0 with its current security best practices and is required by the [MCP authorization specification](https://modelcontextprotocol.io/specification/draft/basic/authorization). The other grants are OAuth 2.0 grants; the password grant is not part of OAuth 2.1.
 
 ## Server Endpoints
 
@@ -29,7 +30,99 @@ Clients can query the `/.well-known/oauth-authorization-server` and `/.well-know
 - <https://demo.photoprism.app/.well-known/openid-configuration>
 
 !!! example ""
-    The token endpoint accepts `client_credentials` requests and PhotoPrism-specific `password` and `session` grants. The authorization and userinfo endpoints are currently placeholders that return `405 Method Not Allowed`, and the discovery metadata intentionally advertises only the interoperable parts that are implemented today.
+    The token endpoint accepts `authorization_code` and `refresh_token` requests from [app clients](#connecting-apps), `client_credentials` requests, and the PhotoPrism-specific `password` and `session` grants. The userinfo endpoint is currently a placeholder that returns `405 Method Not Allowed`, and the discovery metadata only advertises what the instance supports with its current configuration. For example, the `code` response type, the `authorization_code` and `refresh_token` grants, and the `S256` code challenge method are not listed when connecting apps is disabled.
+
+## Connecting Apps
+
+Users can connect apps and remote [MCP clients](mcp.md) to their account with the [OAuth 2.1](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1) authorization code flow and [PKCE](https://datatracker.ietf.org/doc/html/rfc7636). The app sends them to the instance, where they sign in if needed and confirm the access it requests. The app then receives an access token for the [MCP endpoint](mcp.md) and a refresh token, so users do not have to create and copy an [access token](auth.md#access-tokens) themselves.
+
+App clients are public clients: they authenticate with their `client_id` only and have no client secret. An app can be known to the instance in two ways:
+
+- **Registered Clients:** the administrator registers the app with its callback URLs, see [Registering App Clients](auth.md#app-clients).
+- **Client ID Metadata Documents:** the `client_id` is an HTTPS URL at which the app publishes its [client metadata](https://datatracker.ietf.org/doc/draft-ietf-oauth-client-id-metadata-document/) as JSON, so that it can connect without being registered first. These are only accepted if the `--oauth-apps` option allows the origin of the URL, see [Configuration](#configuration).
+
+### Configuration
+
+The `PHOTOPRISM_OAUTH_APPS` environment variable, the `--oauth-apps` command flag, or the `OAuthApps` setting in [`options.yml`](../../getting-started/config-files/index.md) controls which apps users can connect:
+
+| Value                         | Apps That Users Can Connect                                                                  |
+|-------------------------------|----------------------------------------------------------------------------------------------|
+| `registered` (default)        | Only apps registered with `photoprism clients add`                                           |
+| `https://a.example,https://…` | Registered apps and apps whose client metadata documents are published at one of the origins |
+| `any`                         | Registered apps and apps whose client metadata documents are published on any public host    |
+| `none`                        | None; the authorization code flow is disabled                                                |
+
+Connecting apps is not available in [public mode](../../getting-started/config-options.md#authentication), and the [MCP endpoint](mcp.md) must not be disabled with `PHOTOPRISM_DISABLE_MCP` for the access tokens to be usable.
+
+### Authorization Code Flow
+
+1. The app creates a random `code_verifier` and its `S256` `code_challenge`, as described in [RFC 7636](https://datatracker.ietf.org/doc/html/rfc7636#section-4).
+2. It opens the authorization endpoint in a browser:
+
+    ```
+    GET /api/v1/oauth/authorize?response_type=code&client_id=<client-id>&redirect_uri=<callback-url>&scope=mcp&state=<state>&code_challenge=<code-challenge>&code_challenge_method=S256&resource=<site-url>api/v1/mcp
+    ```
+
+3. The user signs in if needed and confirms the requested access on the consent page. Only accounts whose role may use the [MCP endpoint](mcp.md#authorization) can allow access.
+4. The instance redirects the browser to the callback URL with `code`, `state` and `iss` query parameters. If the user denies access, the callback URL receives an `error` parameter instead, for example `access_denied`.
+5. The app redeems the code within one minute:
+
+    ```bash
+    curl -X POST https://photos.example.com/api/v1/oauth/token \
+      -d grant_type=authorization_code \
+      -d client_id=<client-id> \
+      -d code=<code> \
+      -d redirect_uri=<callback-url> \
+      -d code_verifier=<code-verifier>
+    ```
+
+6. The response contains the `access_token`, `token_type`, `expires_in` (one hour), `refresh_token`, and the granted `scope`.
+
+Request parameters:
+
+| Parameter               | Description                                                                                                                                                   |
+|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `response_type`         | Must be `code`                                                                                                                                                |
+| `client_id`             | ID of a registered app client, or the URL of a client metadata document                                                                                      |
+| `redirect_uri`          | One of the callback URLs of the client, which must match exactly; for loopback addresses, the port may differ                                                  |
+| `scope`                 | Space-separated scopes; `mcp` is always included, and apps may also request the library resources `photos`, `videos`, `albums`, `favorites`, `moments`, `calendar`, `folders`, `places`, `labels`, `people`, `cameras`, `lenses`, and `files` |
+| `state`                 | Value that the app uses to match the response to its request (recommended)                                                                                    |
+| `code_challenge`        | Base64url-encoded SHA-256 hash of the code verifier (43 characters)                                                                                           |
+| `code_challenge_method` | Must be `S256`                                                                                                                                                |
+| `resource`              | Optional; if specified, it must be the URL of the [MCP endpoint](mcp.md), e.g. `https://photos.example.com/api/v1/mcp`                                        |
+
+Callback URLs must be HTTPS URLs, HTTP URLs on a loopback address such as `http://127.0.0.1:8765/callback`, with any port, or private-use URI schemes for native apps such as `app.example:/callback` ([RFC 8252](https://datatracker.ietf.org/doc/html/rfc8252#section-7.1)). Each parameter may only be specified once.
+
+### Refreshing Access Tokens
+
+Access tokens of connected apps are valid for one hour. To get a new one, the app sends its refresh token to the token endpoint:
+
+```bash
+curl -X POST https://photos.example.com/api/v1/oauth/token \
+  -d grant_type=refresh_token \
+  -d client_id=<client-id> \
+  -d refresh_token=<refresh-token>
+```
+
+Each response contains a new refresh token, which replaces the previous one. Apps should store it and use each refresh token only once, since presenting a refresh token that was already replaced disconnects the app. The connection also ends after 90 days without use, when the user disconnects the app, or when the account password changes.
+
+### Disconnecting Apps
+
+Users can see and disconnect the apps connected to their account under *Settings > Account > Connected Apps*. Apps can disconnect themselves by sending their refresh token to the revocation endpoint:
+
+```bash
+curl -X POST https://photos.example.com/api/v1/oauth/revoke \
+  -d client_id=<client-id> \
+  -d token=<refresh-token> \
+  -d token_type_hint=refresh_token
+```
+
+| Endpoint                                  | Method   | Description                                    |
+|-------------------------------------------|----------|------------------------------------------------|
+| `/api/v1/users/{uid}/grants`              | `GET`    | Lists the apps connected to the account        |
+| `/api/v1/users/{uid}/grants/{grant}`      | `DELETE` | Disconnects an app and ends its access tokens  |
+
+The `photoprism auth reset`, `photoprism clients reset`, and `photoprism users reset` commands also remove all app connections.
 
 ## Access Tokens
 
@@ -51,7 +144,7 @@ Besides using the API endpoints provided for this, you can also generate valid [
 [Learn more ›](auth.md#access-tokens)
 
 !!! example ""
-    [App passwords](../../user-guide/settings/account.md#apps-and-devices) can be used as [access tokens](auth.md#access-tokens) in the *Bearer Authorization* header without first creating a session access token, and to obtain short-lived session access tokens through the `POST /api/v1/session` endpoint.
+    Access tokens issued to [connected apps](#connecting-apps) can only be used with the [MCP endpoint](mcp.md). [App passwords](../../user-guide/settings/account.md#apps-and-devices) can be used as [access tokens](auth.md#access-tokens) in the *Bearer Authorization* header without first creating a session access token, and to obtain short-lived session access tokens through the `POST /api/v1/session` endpoint.
 
 ## Related Issues
 
@@ -63,6 +156,13 @@ Besides using the API endpoints provided for this, you can also generate valid [
 
 ## Protocol References
 
+- https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1
+- https://datatracker.ietf.org/doc/html/rfc7636
+- https://datatracker.ietf.org/doc/html/rfc8252
+- https://datatracker.ietf.org/doc/html/rfc8707
+- https://datatracker.ietf.org/doc/html/rfc9207
+- https://datatracker.ietf.org/doc/html/rfc9728
+- https://datatracker.ietf.org/doc/draft-ietf-oauth-client-id-metadata-document/
 - https://datatracker.ietf.org/doc/html/rfc8693
 - https://prometheus.io/docs/prometheus/latest/configuration/configuration/#oauth2
 - https://www.scottbrady91.com/oauth/client-authentication#:~:text=OAuth%20client%20secrets

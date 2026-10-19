@@ -34,7 +34,7 @@ Clients can query the `/.well-known/oauth-authorization-server` and `/.well-know
 
 ## Connecting Apps
 
-Users can connect apps and remote [MCP clients](mcp.md) to their account with the [OAuth 2.1](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1) authorization code flow and [PKCE](https://datatracker.ietf.org/doc/html/rfc7636). The app sends them to the instance, where they sign in if needed and confirm the access it requests. The app then receives an access token for the [MCP endpoint](mcp.md) and a refresh token, so users do not have to create and copy an [access token](auth.md#access-tokens) themselves.
+Users can connect apps and remote [MCP clients](mcp.md) to their account with the [OAuth 2.1](https://datatracker.ietf.org/doc/html/draft-ietf-oauth-v2-1) Authorization Code flow and [PKCE](https://datatracker.ietf.org/doc/html/rfc7636). The app sends them to the instance, where they sign in if needed and confirm the access it requests. The app then receives an access token for the [MCP endpoint](mcp.md) and a refresh token, so users do not have to create and copy an [access token](auth.md#access-tokens) themselves.
 
 App clients are public clients: they authenticate with their `client_id` only and have no client secret. An app can be known to the instance in two ways:
 
@@ -50,7 +50,7 @@ The `PHOTOPRISM_OAUTH_APPS` environment variable, the `--oauth-apps` command fla
 | `registered` (default)        | Only apps registered with `photoprism clients add`                                           |
 | `https://a.example,https://…` | Registered apps and apps whose client metadata documents are published at one of the origins |
 | `any`                         | Registered apps and apps whose client metadata documents are published on any public host    |
-| `none`                        | None; the authorization code flow is disabled                                                |
+| `none`                        | None; the Authorization Code flow is disabled                                                |
 
 Connecting apps is not available in [public mode](../../getting-started/config-options.md#authentication), and the [MCP endpoint](mcp.md) must not be disabled with `PHOTOPRISM_DISABLE_MCP` for the access tokens to be usable.
 

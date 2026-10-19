@@ -116,7 +116,7 @@ If you omit the *name* or *scope* parameter, you will be asked to enter them int
 
 ## App Clients
 
-Apps and remote [MCP clients](mcp.md) that users connect to their account through the [authorization code flow](oauth2.md#connecting-apps) are registered with one or more callback URLs. Pass `--callback` once for each URL:
+Apps and remote [MCP clients](mcp.md) that users connect to their account through the [Authorization Code flow](oauth2.md#connecting-apps) are registered with one or more callback URLs. Pass `--callback` once for each URL:
 
 ```bash
 photoprism clients add -n "My App" --callback https://app.example.com/oauth/callback

@@ -122,7 +122,7 @@ Apps and remote [MCP clients](mcp.md) that users connect to their account throug
 photoprism clients add -n "My App" --callback https://app.example.com/oauth/callback
 ```
 
-The command then shows the generated `client_id`, which you can enter in the app. App clients do not have a client secret, are not bound to a user account, and always have the *client* role. Unless you specify a scope with `--scope`, they may request the `mcp` scope only; to let an app also request library resources, specify them, e.g. `--scope "mcp photos albums"`.
+The command then shows the generated `client_id`, which you can enter in the app. App clients do not have a client secret, are not bound to a user account, and always have the *client* role. Unless you specify a scope with `--scope`, they may request every scope available to apps, i.e. `mcp` and the library resources that [MCP tools](mcp.md#library-tools) read; users approve each requested scope on the consent page, and their account's permissions still apply. To limit an app to fixed scopes, specify them, e.g. `--scope "mcp photos albums"`.
 
 Callback URLs must be HTTPS URLs, HTTP URLs on a loopback address, such as `http://127.0.0.1:8765/callback`, or private-use URI schemes of native apps, such as `app.example:/callback`. Running `photoprism clients mod --callback <url> <client-id>` replaces the callback URLs of an existing app client.
 

@@ -63,7 +63,7 @@ Connecting apps is not available in [public mode](../../getting-started/config-o
     GET /api/v1/oauth/authorize?response_type=code&client_id=<client-id>&redirect_uri=<callback-url>&scope=mcp&state=<state>&code_challenge=<code-challenge>&code_challenge_method=S256&resource=<site-url>api/v1/mcp
     ```
 
-3. The user signs in if needed and confirms the requested access on the consent page. Only accounts whose role may use the [MCP endpoint](mcp.md#authorization) can allow access.
+3. The user signs in if needed and confirms the requested access on the consent page. Only accounts whose role may use the [MCP endpoint](mcp.md#authorization), and for which MCP is not turned off, can allow access. Apps that call a [library tool](mcp.md#library-tools) later ask the user to approve access to that part of the library.
 4. The instance redirects the browser to the callback URL with `code`, `state` and `iss` query parameters. If the user denies access, the callback URL receives an `error` parameter instead, for example `access_denied`.
 5. The app redeems the code within one minute:
 

@@ -38,7 +38,7 @@ Users can connect apps and remote [MCP clients](mcp.md) to their account with th
 
 App clients are public clients: they authenticate with their `client_id` only and have no client secret. An app can be known to the instance in two ways:
 
-- **Registered Clients:** the administrator registers the app with its callback URLs, see [Registering App Clients](auth.md#app-clients).
+- **Registered Clients:** the administrator registers the app with its redirect URIs, see [Registering App Clients](auth.md#app-clients).
 - **Client ID Metadata Documents:** the `client_id` is an HTTPS URL at which the app publishes its [client metadata](https://datatracker.ietf.org/doc/draft-ietf-oauth-client-id-metadata-document/) as JSON, so that it can connect without being registered first. These are only accepted if the `--oauth-apps` option allows the origin of the URL, see [Configuration](#configuration).
 
 ### Configuration
@@ -60,11 +60,11 @@ Connecting apps is not available in [public mode](../../getting-started/config-o
 2. It opens the authorization endpoint in a browser:
 
     ```
-    GET /api/v1/oauth/authorize?response_type=code&client_id=<client-id>&redirect_uri=<callback-url>&scope=mcp&state=<state>&code_challenge=<code-challenge>&code_challenge_method=S256&resource=<site-url>api/v1/mcp
+    GET /api/v1/oauth/authorize?response_type=code&client_id=<client-id>&redirect_uri=<redirect-uri>&scope=mcp&state=<state>&code_challenge=<code-challenge>&code_challenge_method=S256&resource=<site-url>api/v1/mcp
     ```
 
 3. The user signs in if needed and confirms the requested access on the consent page. Only accounts whose role may use the [MCP endpoint](mcp.md#authorization), and for which MCP is not turned off, can allow access. Apps that call a [library tool](mcp.md#library-tools) later ask the user to approve access to that part of the library.
-4. The instance redirects the browser to the callback URL with `code`, `state` and `iss` query parameters. If the user denies access, the callback URL receives an `error` parameter instead, for example `access_denied`.
+4. The instance redirects the browser to the redirect URI with `code`, `state` and `iss` query parameters. If the user denies access, the redirect URI receives an `error` parameter instead, for example `access_denied`.
 5. The app redeems the code within one minute:
 
     ```bash
@@ -72,7 +72,7 @@ Connecting apps is not available in [public mode](../../getting-started/config-o
       -d grant_type=authorization_code \
       -d client_id=<client-id> \
       -d code=<code> \
-      -d redirect_uri=<callback-url> \
+      -d redirect_uri=<redirect-uri> \
       -d code_verifier=<code-verifier>
     ```
 
@@ -80,18 +80,18 @@ Connecting apps is not available in [public mode](../../getting-started/config-o
 
 Request parameters:
 
-| Parameter               | Description                                                                                                                                                   |
-|-------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `response_type`         | Must be `code`                                                                                                                                                |
-| `client_id`             | ID of a registered app client, or the URL of a client metadata document                                                                                      |
-| `redirect_uri`          | One of the callback URLs of the client, which must match exactly; for loopback addresses, the port may differ                                                  |
+| Parameter               | Description                                                                                                                                                                                                                                   |
+|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `response_type`         | Must be `code`                                                                                                                                                                                                                                |
+| `client_id`             | ID of a registered app client, or the URL of a client metadata document                                                                                                                                                                       |
+| `redirect_uri`          | One of the redirect URIs of the client, which must match exactly; for loopback addresses, the port may differ                                                                                                                                 |
 | `scope`                 | Space-separated scopes; `mcp` is always included, and apps may also request the library resources `photos`, `videos`, `albums`, `favorites`, `moments`, `calendar`, `folders`, `places`, `labels`, `people`, `cameras`, `lenses`, and `files` |
-| `state`                 | Value that the app uses to match the response to its request (recommended)                                                                                    |
-| `code_challenge`        | Base64url-encoded SHA-256 hash of the code verifier (43 characters)                                                                                           |
-| `code_challenge_method` | Must be `S256`                                                                                                                                                |
-| `resource`              | Optional; if specified, it must be the URL of the [MCP endpoint](mcp.md), e.g. `https://photos.example.com/api/v1/mcp`                                        |
+| `state`                 | Value that the app uses to match the response to its request (recommended)                                                                                                                                                                    |
+| `code_challenge`        | Base64url-encoded SHA-256 hash of the code verifier (43 characters)                                                                                                                                                                           |
+| `code_challenge_method` | Must be `S256`                                                                                                                                                                                                                                |
+| `resource`              | Optional; if specified, it must be the URL of the [MCP endpoint](mcp.md), e.g. `https://photos.example.com/api/v1/mcp`                                                                                                                        |
 
-Callback URLs must be HTTPS URLs, HTTP URLs on a loopback address such as `http://127.0.0.1:8765/callback`, with any port, or private-use URI schemes for native apps such as `app.example:/callback` ([RFC 8252](https://datatracker.ietf.org/doc/html/rfc8252#section-7.1)). Each parameter may only be specified once.
+Redirect URIs must be HTTPS URLs, HTTP URLs on a loopback address such as `http://127.0.0.1:8765/callback`, with any port, or private-use URI schemes for native apps such as `app.example:/callback` ([RFC 8252](https://datatracker.ietf.org/doc/html/rfc8252#section-7.1)). Each parameter may only be specified once.
 
 ### Refreshing Access Tokens
 
@@ -117,10 +117,10 @@ curl -X POST https://photos.example.com/api/v1/oauth/revoke \
   -d token_type_hint=refresh_token
 ```
 
-| Endpoint                                  | Method   | Description                                    |
-|-------------------------------------------|----------|------------------------------------------------|
-| `/api/v1/users/{uid}/grants`              | `GET`    | Lists the apps connected to the account        |
-| `/api/v1/users/{uid}/grants/{grant}`      | `DELETE` | Disconnects an app and ends its access tokens  |
+| Endpoint                             | Method   | Description                                   |
+|--------------------------------------|----------|-----------------------------------------------|
+| `/api/v1/users/{uid}/grants`         | `GET`    | Lists the apps connected to the account       |
+| `/api/v1/users/{uid}/grants/{grant}` | `DELETE` | Disconnects an app and ends its access tokens |
 
 The `photoprism auth reset`, `photoprism clients reset`, and `photoprism users reset` commands also remove all app connections.
 

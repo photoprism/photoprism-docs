@@ -110,7 +110,7 @@ The following parameters can be used with the `photoprism clients add` command, 
 | `--scope SCOPES, -s SCOPES`       | client authorization SCOPES e.g. "metrics" or "photos albums" (`"*"` to allow all)                  |
 | `--expires LIFETIME, -e LIFETIME` | access token LIFETIME in seconds, after which a new token must be requested (default: 86400)        |
 | `--tokens NUMBER, -t NUMBER`      | maximum NUMBER of access tokens that the client can request (-1 to disable the limit) (default: 10) |
-| `--callback URL`                  | callback URL of an app that users connect with OAuth sign-in and consent (repeat for each URL)       |
+| `--redirect-uri URI`              | redirect URI of an app that users connect with OAuth sign-in and consent (repeat for each URI)      |
 
 If you omit the *name* or *scope* parameter, you will be asked to enter them interactively. Use `photoprism show scopes` to list the currently supported authorization scopes and their descriptions.
 
@@ -119,15 +119,15 @@ If you omit the *name* or *scope* parameter, you will be asked to enter them int
 
 ## App Clients
 
-Apps and remote [MCP clients](mcp.md) that users connect to their account through the [Authorization Code Flow](oauth2.md#connecting-apps) are registered with one or more callback URLs. Pass `--callback` once for each URL:
+Apps and remote [MCP clients](mcp.md) that users connect to their account through the [Authorization Code Flow](oauth2.md#connecting-apps) are registered with one or more redirect URIs. Pass `--redirect-uri` once for each URI:
 
 ```bash
-photoprism clients add -n "My App" --callback https://app.example.com/oauth/callback
+photoprism clients add -n "My App" --redirect-uri https://app.example.com/oauth/callback
 ```
 
 The command then shows the generated `client_id`, which you can enter in the app. App clients do not have a client secret, are not bound to a user account, and always have the *client* role. Unless you specify a scope with `--scope`, they may request every scope available to apps, i.e. `mcp` and the library resources that [MCP tools](mcp.md#library-tools) read; users approve each requested scope on the consent page, and their account's permissions still apply. To limit an app to fixed scopes, specify them, e.g. `--scope "mcp photos albums"`.
 
-Callback URLs must be HTTPS URLs, HTTP URLs on a loopback address, such as `http://127.0.0.1:8765/callback`, or private-use URI schemes of native apps, such as `app.example:/callback`. Callback URLs are matched exactly as registered and do not support wildcards, so register each URL an app uses separately; only the port of an HTTP loopback URL may differ. Running `photoprism clients mod --callback <url> <client-id>` replaces the callback URLs of an existing app client.
+Redirect URIs must be HTTPS URLs, HTTP URLs on a loopback address, such as `http://127.0.0.1:8765/callback`, or private-use URI schemes of native apps, such as `app.example:/callback`. Redirect URIs are matched exactly as registered and do not support wildcards, so register each URI an app uses separately; only the port of an HTTP loopback URI may differ. Running `photoprism clients mod --redirect-uri <uri> <client-id>` replaces the redirect URIs of an existing app client.
 
 !!! example ""
     The `--oauth-apps` [option](oauth2.md#configuration) controls whether users can connect registered apps only, also apps that publish client metadata documents, or no apps at all. Users can see and disconnect their connected apps under *Settings > Account > Connected Apps*.

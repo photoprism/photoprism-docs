@@ -56,10 +56,10 @@ A token needs the scope of the tool's resource besides `mcp`, for example `mcp r
 
 MCP clients that support OAuth, such as remote connectors in AI assistants, can be [connected by users](oauth2.md#connecting-apps) without copying a token: when a client calls `/api/v1/mcp` without a valid access token, the `401 Unauthorized` response includes a `WWW-Authenticate` header that points to the [protected resource metadata](index.md#oauth2-protected-resource) at `/.well-known/oauth-protected-resource/api/v1/mcp`. The client then finds the authorization server, sends the user to the consent page, and receives an access token for the MCP endpoint.
 
-For this, the client must either be [registered with its callback URLs](auth.md#app-clients) or publish a client metadata document that the [`--oauth-apps`](oauth2.md#configuration) option allows:
+For this, the client must either be [registered with its redirect URIs](auth.md#app-clients) or publish a client metadata document that the [`--oauth-apps`](oauth2.md#configuration) option allows:
 
 ```bash
-photoprism clients add -n "My Assistant" --callback https://assistant.example.com/oauth/callback
+photoprism clients add -n "My Assistant" --redirect-uri https://assistant.example.com/oauth/callback
 ```
 
 Users can see and disconnect their connected clients under *Settings > Account > Connected Apps*.

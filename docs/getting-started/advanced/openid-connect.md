@@ -77,6 +77,14 @@ You can combine values by separating them with a space, for example `PHOTOPRISM_
 !!! note ""
     The value `none` is not accepted, as it would suppress the provider's own sign-in screen and break interactive logins. Any value that is not recognized is ignored, and sign-in continues as if no prompt had been configured.
 
+## Session Lifetime
+
+Sessions created by signing in with OpenID Connect expire **24 hours** after sign-in, regardless of activity. The [`PHOTOPRISM_SESSION_MAXAGE` and `PHOTOPRISM_SESSION_TIMEOUT`](../config-options.md#authentication) options do not apply to them.
+
+This is intentional: your [Identity Provider](#identity-providers) has no way to notify PhotoPrism when it ends a session or disables an account, so PhotoPrism asks the provider once a day to confirm that the user is still authenticated.
+
+When a session expires, users are taken to the login page. If they still have a session with the provider, clicking the sign-in button signs them in again without asking for credentials, unless an [authorization prompt](#authorization-prompt) such as `login` has been configured.
+
 ## Single Sign-Out
 
 Signing out of PhotoPrism ends the PhotoPrism session. It does **not** end the session a user has with your
@@ -169,6 +177,12 @@ Please note in this context that using an external [Identity Provider](#identity
 
 - https://www.microsoft.com/en-us/security/blog/2024/07/29/ransomware-operators-exploit-esxi-hypervisor-vulnerability-for-mass-encryption/
 - https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/24505
+
+### Why do OIDC users have to sign in again every day?
+
+Sessions created through OpenID Connect have a fixed lifetime of 24 hours, so that PhotoPrism regularly confirms with your [Identity Provider](#identity-providers) that the user is still authenticated. The `PHOTOPRISM_SESSION_MAXAGE` and `PHOTOPRISM_SESSION_TIMEOUT` options only apply to other sign-in methods. As long as the provider session is active, signing in again does not require entering credentials.
+
+[Learn more ›](#session-lifetime)
 
 ### Can I configure a custom claim for the preferred username?
 

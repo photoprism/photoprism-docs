@@ -5,9 +5,7 @@ in [Getting Started](../getting-started/index.md). All you need is a Web browser
 [Docker](https://store.docker.com/search?type=edition&offering=community) to run the server.
 
 [![Progressive Web App](img/iphone-crocus.png){ align=right }](navigate.md)
-It is available for [Mac](https://docs.docker.com/desktop/setup/install/mac-install/), [Linux](../getting-started/troubleshooting/docker.md#installation), and [Windows](https://docs.docker.com/desktop/setup/install/windows-install/). PhotoPrism also runs on [PikaPods](../getting-started/cloud/pikapods.md), [DigitalOcean](../getting-started/cloud/digitalocean.md),
-[Raspberry Pi](../getting-started/raspberry-pi.md), [Portainer](../getting-started/portainer/index.md), [FreeBSD](../getting-started/ports/freebsd.md), and many
-[NAS devices](../getting-started/nas/synology.md).
+It is available for [Mac](https://docs.docker.com/desktop/setup/install/mac-install/), [Linux](../getting-started/troubleshooting/docker.md#installation), and [Windows](https://docs.docker.com/desktop/setup/install/windows-install/). PhotoPrism also runs on [PikaPods](../getting-started/cloud/pikapods.md), [DigitalOcean](../getting-started/cloud/digitalocean.md), [Hostinger](../getting-started/cloud/hostinger.md), [Raspberry Pi](../getting-started/raspberry-pi.md), [Portainer](../getting-started/portainer/index.md), [FreeBSD](../getting-started/ports/freebsd.md), and many [NAS devices](../getting-started/nas/synology.md).
 
 Once the [initial setup](../getting-started/index.md) is complete, our [First Steps 👣](./first-steps.md) tutorial guides you through the user interface and settings to ensure your library is indexed according to your individual preferences.
 

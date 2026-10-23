@@ -13,7 +13,7 @@ What's new?
 - AI: [Added MCP tools to search and browse the library with the account's permissions](https://docs.photoprism.app/developer-guide/api/mcp/#library-tools)
 - AI: [Added MCP tools to look up commands, file formats, metadata, and thumbnail sizes](https://docs.photoprism.app/developer-guide/api/mcp/#available-tools)
 - AI: [Users and viewers can use MCP, with a per-account setting to turn it off](https://docs.photoprism.app/developer-guide/api/mcp/#authorization)
-- Viewer: [Added an Export dialog to download originals, resized JPEGs, and MP4 videos](https://github.com/photoprism/photoprism/issues/655) by [@omerdduran](https://github.com/omerdduran)
+- Viewer: [Added an Export dialog for originals, resized JPEGs, and videos](https://github.com/photoprism/photoprism/issues/655) by [@omerdduran](https://github.com/omerdduran)
 - Auth: [New usernames may contain only ASCII characters](https://github.com/photoprism/photoprism/issues/5896)
 - Auth: [Added connecting apps and remote MCP clients with OAuth](https://github.com/photoprism/photoprism/issues/4368)
 - Index: [Skips files and folders with unsupported characters in their names](https://github.com/photoprism/photoprism/issues/5904)

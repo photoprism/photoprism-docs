@@ -36,7 +36,7 @@ What's new?
 - Database: [New MariaDB tables use the collation of the existing tables](https://github.com/photoprism/photoprism/pull/4831)
 - Database: [Added warnings for MariaDB tables without InnoDB or a shared collation](https://github.com/photoprism/photoprism/pull/4831)
 - Security: [Upgraded `libheif` from v1.23.5 to v1.23.6](https://github.com/photoprism/photoprism/issues/5914)
-- Security: [Upgraded Go from v1.27.1 to v1.27.3](https://github.com/golang/go/issues?q=milestone%3AGo1.27.3)
+- Security: [Upgraded Go from v1.27.1 to v1.27.3 (11 CVE fixes)](https://github.com/golang/go/issues?q=milestone%3AGo1.27.3)
 - Security: [Upgraded ONNX Runtime from v1.29.1 to v1.31.0](https://github.com/photoprism/photoprism/issues/5922)
 
 ### October 7, 2026

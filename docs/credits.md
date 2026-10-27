@@ -21,8 +21,10 @@ Our project infrastructure is provided by the following companies:
 ## Maps ##
 
 * Map data © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors, in the [OpenMapTiles](https://openmaptiles.org/) schema
-* Satellite imagery at low zoom levels: [Blue Marble: Next Generation](https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/) with topography (July 2004) by [NASA Earth Observatory](https://science.nasa.gov/earth/earth-observatory/), in the public domain
 * Hillshading based on SRTM elevation data, with gaps filled by [viewfinderpanoramas.org](http://viewfinderpanoramas.org/dem3.html)
+* [Blue Marble](https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/) satellite imagery by [NASA Earth Observatory](https://science.nasa.gov/earth/earth-observatory/)
+* [Deep Star Maps 2020](https://svs.gsfc.nasa.gov/4851/) by NASA/Goddard Space Flight Center Scientific Visualization Studio
+* [Gaia DR2](https://www.cosmos.esa.int/web/gaia/dr2) data by ESA/Gaia/DPAC
 
 ## Artwork ##
 

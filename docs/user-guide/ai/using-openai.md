@@ -1,6 +1,6 @@
 # Using the OpenAI API
 
-Learn how to use PhotoPrism with OpenAI's GPT-5 models to generate high-quality captions and labels for your pictures.
+Learn how to use PhotoPrism with OpenAI's GPT models to generate high-quality captions and labels for your pictures.
 
 ## Setup
 
@@ -16,7 +16,7 @@ Add the following caption and/or labels model configurations to your `vision.yml
 ```yaml
 Models:
   - Type: labels
-    Model: gpt-5-mini
+    Model: gpt-6-luna
     Engine: openai
     Run: auto
     Options:
@@ -24,7 +24,7 @@ Models:
     Service:
       Key: ${OPENAI_API_KEY}
   - Type: caption
-    Model: gpt-5-nano
+    Model: gpt-6-luna
     Engine: openai
     Run: auto
     Options:
@@ -36,7 +36,8 @@ Models:
 
 Recommendations:
 
-- Keep the `Model` name exactly as published by OpenAI. The identifier is sent as written, including any tag after a colon, so use `gpt-5-mini` rather than `gpt-5-mini:latest`. For entries without a model name, PhotoPrism uses `OPENAI_MODEL` if set, otherwise `gpt-5-mini`. Model identifiers are case-sensitive — PhotoPrism preserves the case as written in `vision.yml`, so values such as `QuantTrio/Qwen3-VL-30B-A3B-Instruct-AWQ` from Hugging Face or another OpenAI-compatible catalog reach the upstream API exactly as configured.
+- Keep the `Model` name exactly as published by OpenAI. The identifier is sent as written, including any tag after a colon, so use `gpt-6-luna` rather than `gpt-6-luna:latest`. For entries without a model name, PhotoPrism uses `OPENAI_MODEL` if set, otherwise `gpt-6-luna`. Model identifiers are case-sensitive — PhotoPrism preserves the case as written in `vision.yml`, so values such as `QuantTrio/Qwen3-VL-30B-A3B-Instruct-AWQ` from Hugging Face or another OpenAI-compatible catalog reach the upstream API exactly as configured.
+- OpenAI retires `gpt-5-mini`, `gpt-5-nano`, and `gpt-5` on December 11, 2026. If your `vision.yml` still names one of them, for example because `photoprism vision save` wrote the former default into it, change it to a current model such as `gpt-6-luna` or `gpt-6.1-terra`. Otherwise, caption and label requests will fail once the model is retired.
 - `Service.Key` can be omitted if `OPENAI_API_KEY` / `_FILE` is set in the environment. Without a key, no requests are sent to `api.openai.com`. You can optionally set `Service.Org` and `Service.Project` when your account requires them for accounting purposes.
 - `Service.Tier` optionally sets the OpenAI `service_tier` (for example `flex` for cheaper, slower processing); leave it unset to use OpenAI's default (`auto`).
 - PhotoPrism evaluates models from the bottom of the list up, so putting the OpenAI entries after the others ensures OpenAI is chosen first, leaving other models as backups.
@@ -76,7 +77,7 @@ Example:
 ```yaml
 Models:
   - Type: labels
-    Model: gpt-5-mini
+    Model: gpt-6-luna
     Engine: openai
     Run: auto
     Prompt: >
@@ -96,7 +97,7 @@ Example:
 ```yaml
 Models:
   - Type: caption
-    Model: gpt-5-mini
+    Model: gpt-6-luna
     Engine: openai
     Run: auto
     Prompt: >

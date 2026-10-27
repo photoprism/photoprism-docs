@@ -13,7 +13,7 @@ What's new?
 - AI: [Added MCP tools to search and browse the library with the account's permissions](https://docs.photoprism.app/developer-guide/api/mcp/#library-tools)
 - AI: [Added MCP tools to look up commands, file formats, metadata, and thumbnail sizes](https://docs.photoprism.app/developer-guide/api/mcp/#available-tools)
 - AI: [Users and viewers can use MCP, with a per-account setting to turn it off](https://docs.photoprism.app/developer-guide/api/mcp/#authorization)
-- AI: [Upgraded the default OpenAI model from GPT-5 mini to GPT-6 Luna](https://github.com/photoprism/photoprism/issues/5929)
+- AI: [Upgraded the default OpenAI model from GPT-5 mini to GPT-6 Luna](https://docs.photoprism.app/user-guide/ai/using-openai/#configuration)
 - Viewer: [Added an Export dialog for originals, resized JPEGs, and videos](https://github.com/photoprism/photoprism/issues/655) by [@omerdduran](https://github.com/omerdduran)
 - Viewer: [Fixed face selections not following the zoom while editing faces](https://github.com/photoprism/photoprism/issues/5917)
 - UX: [Fixed the language picker on the sign-in page showing a different language](https://docs.photoprism.app/user-guide/settings/general/#user-interface)

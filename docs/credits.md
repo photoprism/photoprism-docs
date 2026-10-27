@@ -18,6 +18,12 @@ Our project infrastructure is provided by the following companies:
 * [MkDocs](https://www.mkdocs.org/) and [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/)
 * [Complete list of 3rd-party software packages](https://raw.githubusercontent.com/photoprism/photoprism/develop/NOTICE)
 
+## Maps ##
+
+* Map data © [OpenStreetMap](https://www.openstreetmap.org/copyright) contributors, in the [OpenMapTiles](https://openmaptiles.org/) schema
+* Satellite imagery at low zoom levels: [Blue Marble: Next Generation](https://science.nasa.gov/earth/earth-observatory/blue-marble-next-generation/) with topography (July 2004) by [NASA Earth Observatory](https://science.nasa.gov/earth/earth-observatory/), in the public domain
+* Hillshading based on SRTM elevation data, with gaps filled by [viewfinderpanoramas.org](http://viewfinderpanoramas.org/dem3.html)
+
 ## Artwork ##
 
 * [Font Awesome Free](https://fontawesome.com/download) by [Fonticons, Inc.](https://fontawesome.com/)

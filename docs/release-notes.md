@@ -8,7 +8,7 @@
 ### Development Preview
 <span class="build">Build 261027-014f1ca99</span>
 
-This release upgrades PhotoPrism's database layer from [GORM v1 to v2](https://github.com/photoprism/photoprism/pull/4831) and introduces experimental [🐘 PostgreSQL Support](https://docs.photoprism.app/getting-started/advanced/migrations/postgres/), contributed by [@keif888](https://github.com/keif888).
+This release upgrades PhotoPrism's [database layer](https://github.com/photoprism/photoprism/pull/4831) and introduces experimental [🐘 PostgreSQL Support](https://docs.photoprism.app/getting-started/advanced/migrations/postgres/), contributed by [@keif888](https://github.com/keif888).
 
 AI assistants and other applications can now connect via [OAuth](https://github.com/photoprism/photoprism/issues/4368) and use new [🤖 MCP Tools](https://docs.photoprism.app/developer-guide/api/mcp/#library-tools) to search and browse your library. The default [OpenAI model](https://docs.photoprism.app/user-guide/ai/using-openai/#configuration) has been upgraded from GPT-5 to GPT-6.
 

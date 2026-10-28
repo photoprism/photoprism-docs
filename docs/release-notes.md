@@ -8,6 +8,21 @@
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions/#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
+This release upgrades PhotoPrism's database layer from [GORM v1 to v2](https://github.com/photoprism/photoprism/pull/4831) and introduces [experimental PostgreSQL support](https://docs.photoprism.app/getting-started/advanced/migrations/postgres/), contributed by [@keif888](https://github.com/keif888).
+
+AI assistants and other applications can now connect via [OAuth](https://github.com/photoprism/photoprism/issues/4368) and use new [MCP tools](https://docs.photoprism.app/developer-guide/api/mcp/#library-tools) to search and browse your library with the permissions of the signed-in account. The default [OpenAI model](https://docs.photoprism.app/user-guide/ai/using-openai/#configuration) has been upgraded from GPT-5 to GPT-6.
+
+The photo viewer now includes a [new export dialog](https://github.com/photoprism/photoprism/issues/655) for downloading images at selected resolutions, while Places features updated standard maps and an enhanced [3D Earth view](https://docs.photoprism.app/user-guide/organize/places/#3d-earth-view). This release also includes fixes for several metadata handling issues, as well as updates to libheif, Go, and ONNX Runtime.
+
+Please review the upgrade notes below before updating. A special thank you to all our [members](https://www.photoprism.app/editions/#compare) and [contributors](https://docs.photoprism.app/developer-guide/) for their continued support! 🌈
+
+Upgrade Notes
+
+- As this release changes how PhotoPrism accesses the database, we recommend [creating a backup](https://docs.photoprism.app/user-guide/backups/) before updating.
+- Files and folders whose names contain one of the characters `\ | " ? * % < > { } : ~ $`, control characters, or invalid UTF-8 are [no longer indexed, imported, uploaded, or synced](https://github.com/photoprism/photoprism/issues/5904). Pictures already in your library remain, but are not updated until you rename them and index again.
+- [MCP is enabled by default](https://docs.photoprism.app/developer-guide/api/mcp/#authorization) for every account whose role may use it. Admins can turn it off for a single account in the user settings or with `photoprism users mod --mcp=false <username>`, or for the entire instance with `PHOTOPRISM_DISABLE_MCP: "true"`. To prevent apps from connecting with OAuth, set `PHOTOPRISM_OAUTH_APPS` to `"none"`.
+- We no longer build images for 32-bit ARM devices, so the `armv7` image tag will not receive further updates. To keep updating, please switch to a [64-bit operating system](https://docs.photoprism.app/getting-started/raspberry-pi/) and the regular image.
+
 What's new?
 
 - AI: [Added MCP tools to search and browse the library with the account's permissions](https://docs.photoprism.app/developer-guide/api/mcp/#library-tools)

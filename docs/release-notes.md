@@ -21,7 +21,6 @@ Upgrade Notes
 - As this release changes how PhotoPrism accesses the database, we recommend [creating a backup](https://docs.photoprism.app/user-guide/backups/) before updating.
 - Files and folders whose names contain one of the characters `\ | " ? * % < > { } : ~ $`, control characters, or invalid UTF-8 are [no longer indexed, imported, uploaded, or synced](https://github.com/photoprism/photoprism/issues/5904). Pictures already in your library remain, but are not updated until you rename them and index again.
 - [MCP is enabled by default](https://docs.photoprism.app/developer-guide/api/mcp/#authorization) for every account whose role may use it. Admins can turn it off for a single account in the user settings or with `photoprism users mod --mcp=false <username>`, or for the entire instance with `PHOTOPRISM_DISABLE_MCP: "true"`. To prevent apps from connecting with OAuth, set `PHOTOPRISM_OAUTH_APPS` to `"none"`.
-- We no longer build images for 32-bit ARM devices, so the `armv7` image tag will not receive further updates. To keep updating, please switch to a [64-bit operating system](https://docs.photoprism.app/getting-started/raspberry-pi/) and the regular image.
 
 What's new?
 

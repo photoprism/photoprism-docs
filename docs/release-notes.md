@@ -18,7 +18,7 @@ Please review the upgrade notes below before updating. A special thank you to al
 
 Upgrade Notes
 
-- [MCP is enabled by default for eligible users.](https://docs.photoprism.app/developer-guide/api/mcp/#authorization) Admins can disable it for individual users in their account settings, or for all users by setting `PHOTOPRISM_DISABLE_MCP` to "true". To prevent external apps from connecting via OAuth Authorization Code Flow, set `PHOTOPRISM_OAUTH_APPS` to "none".
+- [MCP is enabled by default for eligible users.](https://docs.photoprism.app/developer-guide/api/mcp/#authorization). Admins can disable it individually in the [account settings](https://docs.photoprism.app/user-guide/users/), or globally for all users by setting [`PHOTOPRISM_DISABLE_MCP` to "true"](https://docs.photoprism.app/getting-started/config-options/#feature-flags). To prevent external apps from connecting via OAuth Authorization Code Flow, set `PHOTOPRISM_OAUTH_APPS` to "none".
 - [Files and folders with names containing unsupported characters, such as `|"?*%<>{}:~$`, are no longer indexed, imported, or synced.](https://github.com/photoprism/photoprism/issues/5904) Files that are already in your library will be skipped during indexing until you rename them.
 - [We recommend creating a database backup before upgrading.](https://docs.photoprism.app/user-guide/backups/) Due to schema migrations, the first start with an existing database may take longer than usual. These migrations may also temporarily require additional disk space.
 

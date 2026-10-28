@@ -18,9 +18,9 @@ Please review the upgrade notes below before updating. A special thank you to al
 
 Upgrade Notes
 
-- Files and folders whose names contain one of the characters `\ | " ? * % < > { } : ~ $`, control characters, or invalid UTF-8 are [no longer indexed, imported, uploaded, or synced](https://github.com/photoprism/photoprism/issues/5904). Pictures already in your library remain, but are not updated until you rename them and index again.
-- [MCP is enabled by default](https://docs.photoprism.app/developer-guide/api/mcp/#authorization) for every account whose role may use it. Admins can turn it off for a single account in the user settings or with `photoprism users mod --mcp=false <username>`, or for the entire instance with `PHOTOPRISM_DISABLE_MCP: "true"`. To prevent apps from connecting with OAuth, set `PHOTOPRISM_OAUTH_APPS` to `"none"`.
-- As usual, we recommend [creating a backup](https://docs.photoprism.app/user-guide/backups/) before updating.
+- [MCP is enabled by default for eligible users.](https://docs.photoprism.app/developer-guide/api/mcp/#authorization) Admins can disable MCP either for specific accounts or globally for all users by setting `PHOTOPRISM_DISABLE_MCP` to "true". To prevent external apps from connecting via OAuth Authorization Code Flow, set `PHOTOPRISM_OAUTH_APPS` to "none".
+- [Files and folders with names containing unsupported characters, such as `|"?*%<>{}:~$`, are no longer indexed, imported, or synced.](https://github.com/photoprism/photoprism/issues/5904) Files that are already indexed won't be updated until they are renamed.
+- [We recommend creating a database backup before upgrading.](https://docs.photoprism.app/user-guide/backups/) Due to the schema migrations, the first start with an existing SQLite database may take longer than usual.
 
 What's new?
 

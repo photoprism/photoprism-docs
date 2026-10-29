@@ -116,9 +116,23 @@ fatal: /run belongs to uid 0 instead of 100
 and we're lacking the privileges to fix it.
 ```
 
-In particular, this can happen if you have specified an *unsupported* user or group ID through the optional [`user`](https://docs.docker.com/reference/compose-file/services/#user) property in your [`compose.yaml`](https://dl.photoprism.app/docker/compose.yaml) file to run the service, and at the same time added [`no-new-privileges`](https://github.com/just-containers/s6-overlay/issues/552#issuecomment-2339563938) to the [`security_opt`](https://docs.docker.com/reference/compose-file/services/#security_opt) section.
+In particular, this happens if you have added [`no-new-privileges`](https://github.com/just-containers/s6-overlay/issues/552#issuecomment-2339563938) to the [`security_opt`](https://docs.docker.com/reference/compose-file/services/#security_opt) section or dropped capabilities with [`cap_drop`](https://docs.docker.com/reference/compose-file/services/#cap_drop) while using our default entrypoint, which needs these privileges to start. If you want to use these settings, bypass the default entrypoint as shown in the [hardened configuration](../advanced/docker-security.md#hardened-configuration):
 
-The supported ID ranges for running our container images are as follows:
+```yaml
+services:
+  photoprism:
+    user: "1000"
+    entrypoint: ["/opt/photoprism/bin/photoprism"]
+    command: ["start"]
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+```
+
+The default entrypoint script can install [additional distribution packages](../advanced/transcoding.md#intel-quick-sync), [fix file system permissions](#file-permissions), and/or [change the UID/GID](../config-options.md#docker-image) for the "photoprism" service. Bypassing it disables this functionality, including all `PHOTOPRISM_INIT` actions, so the storage and originals folders must already be readable and writable by the user ID you specify.
+
+When using our default entrypoint, also make sure that the user and group IDs you specify are within the supported ranges:
 
 - UID: 0, 33, 50-99, 500-600, 900-1250, and 2000-2100
 - GID: 0, 33, 44, 50-99, 105, 109, 115, 116, 500-600, 900-1250, and 2000-2100
@@ -128,23 +142,13 @@ Please also check if you have specified *both* a [`user`](https://docs.docker.co
 ```yaml
 services:
   photoprism:
-    user: "1000:1000"
+    user: "1000"
     environment:
       PHOTOPRISM_UID: 1000
       PHOTOPRISM_GID: 1000
 ```
 
-If you need *maximum security* and do *not* want to perform [any additional startup actions](../advanced/transcoding.md#intel-quick-sync) that require root privileges, you can alternatively set the entrypoint and command for the "photoprism" service as follows:
-
-```yaml
-services:
-  photoprism:
-    restart: unless-stopped
-    entrypoint: ["/opt/photoprism/bin/photoprism"]
-    command: ["start"]
-```
-
-The default entrypoint script can install [additional distribution packages](../advanced/transcoding.md#intel-quick-sync), [fix file system permissions](#file-permissions), and/or [change the UID/GID](../config-options.md#docker-image) for the "photoprism" service, as some NAS devices, for example, do not support this from their user interface. So, bypassing it as shown above will disable this functionality and is *only recommended for advanced users* who are familiar with running container services.
+We recommend the `user` property, which starts the container as a non-root user. The `PHOTOPRISM_UID` and `PHOTOPRISM_GID` variables are a [compatibility option](../advanced/docker-security.md#compatibility-option) for platforms where it cannot be set, such as the container interface of some NAS devices.
 
 [Learn more ›](https://docs.photoprism.app/getting-started/config-options/#docker-image)
 

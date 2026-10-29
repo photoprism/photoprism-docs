@@ -122,16 +122,13 @@ services:
       - ...
 ```
 
-In addition, you can choose to run the `photoprism` service as a non-root user by setting either the `user` [service property](https://docs.docker.com/reference/compose-file/services/#user) or the `PHOTOPRISM_UID` and `PHOTOPRISM_GID` [environment variables](../config-options.md#docker-image) in your `compose.yaml` or `docker-compose.yml` file:
-
-| Environment    | Default | Description                                                                                                                                                                                  |
-|----------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| PHOTOPRISM_UID | 0       | run as a non-root user after initialization (supported: 0, 33, 50-99, 500-600, 900-1250, and 2000-2100)                                                                                      |
-| PHOTOPRISM_GID | 0       | run with a specific group id after initialization, can optionally be used together with `PHOTOPRISM_UID` (supported: 0, 33, 44, 50-99, 105, 109, 115, 116, 500-600, 900-1250, and 2000-2100) |
+In addition, you can choose to run the `photoprism` service as a non-root user by setting the `user` [service property](https://docs.docker.com/reference/compose-file/services/#user) in your `compose.yaml` or `docker-compose.yml` file, as described in our [Docker Security Guide](docker-security.md#run-services-as-non-root-user). If your platform does not allow you to set the `user` property, you can use the `PHOTOPRISM_UID` and `PHOTOPRISM_GID` [environment variables](../config-options.md#docker-image) as a [compatibility option](docker-security.md#compatibility-option) instead.
 
 *Which user and group you choose should depend on the owner of the `/dev/dri` video device so that the service has permission to access it.*
 
 If you use the `user` property, specify only the user ID, for example `user: "1000"`, so that the service keeps its `video` and `render` group memberships. Add a group ID, as in `"1000:1000"`, only if network storage such as NFS requires it to read and write files.
+
+Note that init actions such as `gpu` or `ffmpeg` are not performed if you use the [hardened configuration](docker-security.md#hardened-configuration), since it bypasses the init script.
 
 Finally, remember to [update the file permissions and/or owner](../troubleshooting/docker.md#file-permissions) with the `chmod` and `chown` commands when you make changes to the UID or GID, and [restart the services](../docker-compose.md#step-2-start-the-server) for your changes to take effect:
 

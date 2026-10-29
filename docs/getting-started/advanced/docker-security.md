@@ -25,6 +25,8 @@ docker compose stop
 docker compose up -d --force-recreate
 ```
 
+Init actions are not performed if you use the [hardened configuration](#hardened-configuration) described below. In this case, pull updated images regularly, e.g. with `docker compose pull`, to get the latest security updates.
+
 We also recommend making sure that the latest Docker version and security updates are automatically installed on your host operating system.
 
 !!! tldr ""
@@ -32,16 +34,54 @@ We also recommend making sure that the latest Docker version and security update
 
 ## Run Services as Non-Root User
 
-It is recommended that you run the `photoprism` service as a non-root user by setting either the `user` [service property](https://docs.docker.com/reference/compose-file/services/#user) or the `PHOTOPRISM_UID` and `PHOTOPRISM_GID` [environment variable](../config-options.md#docker-image) in your `compose.yaml` or `docker-compose.yml` file:
+We recommend running the `photoprism` service as a non-root user by setting the `user` [service property](https://docs.docker.com/reference/compose-file/services/#user) in your `compose.yaml` or `docker-compose.yml` file, so that the container starts with this user ID:
+
+```yaml
+services:
+  photoprism:
+    user: "1000"
+```
+
+Specify only the user ID, for example `user: "1000"`, so that the service keeps its `video` and `render` group memberships. Add a group ID, as in `"1000:1000"`, only if network storage such as NFS requires it to read and write files. With our default entrypoint, the supported user IDs are 0, 33, 50-99, 500-600, 900-1250, and 2000-2100.
+
+*If you are using [hardware video transcoding](transcoding.md#intel-quick-sync), it should depend on the owner of the video device which user and group you choose so that the service has permission to access it.*
+
+### Hardened Configuration
+
+When a high level of security is required, you can bypass our init script and entrypoint entirely, so that the container runs the `photoprism` binary directly as a non-root user, without additional privileges and capabilities:
+
+```yaml
+services:
+  photoprism:
+    user: "1000"
+    entrypoint: ["/opt/photoprism/bin/photoprism"]
+    command: ["start"]
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+```
+
+This trades some convenience and functionality for security:
+
+- [Init actions](../config-options.md#docker-image) specified with `PHOTOPRISM_INIT`, such as `update`, `https`, `gpu`, or the installation of hardware drivers, are not performed. Pull updated images instead, e.g. with `docker compose pull`, and run a [reverse proxy](../proxies/index.md) if you need HTTPS, since no default certificate is created.
+- File permissions are not updated automatically, so the storage and originals folders must already be readable and writable by the user ID you specify.
+- `PHOTOPRISM_UID`, `PHOTOPRISM_GID`, and `PHOTOPRISM_UMASK` have no effect.
+
+The `no-new-privileges` and `cap_drop` settings require the entrypoint override shown above. Our default entrypoint needs these privileges to start, so the container will exit with an error if you add them without bypassing it.
+
+### Compatibility Option
+
+If your platform does not allow you to set the `user` property, for example in the container interface of some NAS devices, you can set the `PHOTOPRISM_UID` and `PHOTOPRISM_GID` [environment variables](../config-options.md#docker-image) instead. In this case, the container starts as root, performs the initialization, and then runs the app under the specified user and group IDs. Use the `user` property instead whenever your environment supports it.
 
 | Environment    | Default | Description                                                                                                                                                                                  |
 |----------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | PHOTOPRISM_UID | 0       | run as a non-root user after initialization (supported: 0, 33, 50-99, 500-600, 900-1250, and 2000-2100)                                                                                      |
 | PHOTOPRISM_GID | 0       | run with a specific group id after initialization, can optionally be used together with `PHOTOPRISM_UID` (supported: 0, 33, 44, 50-99, 105, 109, 115, 116, 500-600, 900-1250, and 2000-2100) |
 
-*If you are using [hardware video transcoding](transcoding.md#intel-quick-sync), it should depend on the owner of the video device which user and group you choose so that the service has permission to access it.*
+Do not set both the `user` property and these environment variables.
 
-If you use the `user` property, specify only the user ID, for example `user: "1000"`, so that the service keeps its `video` and `render` group memberships. Add a group ID, as in `"1000:1000"`, only if network storage such as NFS requires it to read and write files.
+### Apply Changes
 
 Finally, remember to [update the file permissions and/or owner](../troubleshooting/docker.md#file-permissions) with the `chmod` and `chown` commands when you make changes to the UID or GID, and [restart the services](../docker-compose.md#step-2-start-the-server) for your changes to take effect:
 

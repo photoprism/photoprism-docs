@@ -12,9 +12,13 @@ You can add, edit, and delete user accounts by navigating to *Settings > Users* 
 
 ![Screenshot](img/users-add-2502.jpg){ class="shadow" }
 
+Usernames of new accounts may only contain standard ASCII characters, so accented letters and non-Latin scripts are not accepted. Existing accounts keep their names.
+
 ## Editing User Details
 
 ![Screenshot](img/users-edit-2502.jpg){ class="shadow" }
+
+The *MCP* switch next to *WebDAV* controls whether an account can use [MCP](../../developer-guide/api/mcp.md#authorization) to let AI assistants search and browse the library. It is on by default for roles that may use MCP, and has no effect if MCP is [disabled for all users](../../getting-started/config-options.md#feature-flags).
 
 Only [super admins](roles.md#admin) can change the [authentication provider](cli.md#command-options) of another account through the web interface. Their own account is excluded so that they do not accidentally lock themselves out, for example by setting the provider to `none`.
 

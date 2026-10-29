@@ -53,6 +53,9 @@ What's new?
 - Security: [Upgraded Go from v1.27.1 to v1.27.3 (11 CVE fixes)](https://github.com/golang/go/issues?q=milestone%3AGo1.27.3)
 - Security: [Upgraded ONNX Runtime from v1.29.1 to v1.31.0](https://github.com/photoprism/photoprism/issues/5922)
 
+!!! info ""
+    Missing [user interface translations](https://docs.photoprism.app/developer-guide/translations-weblate/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.
+
 ### October 7, 2026
 <span class="build">Build 261007-65faaae5d</span>
 
@@ -109,9 +112,6 @@ What's new?
 - Backup: [Improved restore to keep other rows when a single statement fails](https://docs.photoprism.app/developer-guide/database/backups/#restoring-a-dump)
 - Security: [Upgraded `libheif` from v1.23.4 to v1.23.5](https://github.com/photoprism/photoprism/issues/5887)
 - Translations: [Upgraded `vue3-gettext` from v2.4 to v4.0](https://github.com/photoprism/photoprism/issues/5875) by [@lastzero](https://github.com/lastzero)
-
-!!! info ""
-    Missing [user interface translations](https://docs.photoprism.app/developer-guide/translations-weblate/) have been generated with the help of DeepL and Google Translate. Native speakers are [welcome to help us improve them](https://docs.photoprism.app/developer-guide/translations-weblate/) where needed.
 
 ### September 19, 2026
 <span class="build">Build 260919-28c46a116</span>

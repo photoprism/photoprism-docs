@@ -6,32 +6,33 @@
 ## Environment Variables
 ### Authentication
 
-| Environment                                      | CLI Flag                | Default                      | Description                                                                                         |
-|:-------------------------------------------------|:------------------------|:-----------------------------|:----------------------------------------------------------------------------------------------------|
-| PHOTOPRISM_AUTH_MODE                             | --auth-mode             | password                     | authentication `MODE` (public[^2], password)                                                            |
-| PHOTOPRISM_ADMIN_USER, PHOTOPRISM_ADMIN_USERNAME | --admin-user            | admin                        | `USERNAME` of the superadmin account that is created on first startup                               |
-| PHOTOPRISM_ADMIN_PASSWORD                        | --admin-password        |                              | initial `PASSWORD` of the superadmin account (8-72 characters)                                      |
-| PHOTOPRISM_PASSWORD_LENGTH                       | --password-length       | 8                            | minimum password `LENGTH` in characters                                                             |
-| PHOTOPRISM_LOGIN_INFO                            | --login-info            |                              | custom login footer info `TEXT` *plus*                                                              |
-| PHOTOPRISM_OIDC_URI                              | --oidc-uri              |                              | issuer `URI` for single sign-on via OpenID Connect, e.g. https://accounts.google.com                |
-| PHOTOPRISM_OIDC_CLIENT                           | --oidc-client           |                              | client `ID` for single sign-on via OpenID Connect                                                   |
-| PHOTOPRISM_OIDC_SECRET                           | --oidc-secret           |                              | client `SECRET` for single sign-on via OpenID Connect                                               |
-| PHOTOPRISM_OIDC_SCOPES                           | --oidc-scopes           | openid email profile address | client authorization `SCOPES` for single sign-on via OpenID Connect                                 |
-| PHOTOPRISM_OIDC_PROMPT                           | --oidc-prompt           |                              | authorization `PROMPT` for single sign-on via OpenID Connect (login, select_account, consent)       |
-| PHOTOPRISM_OIDC_PROVIDER                         | --oidc-provider         |                              | custom identity provider `NAME`, e.g. Google                                                        |
-| PHOTOPRISM_OIDC_ICON                             | --oidc-icon             |                              | custom identity provider icon `URI`                                                                 |
-| PHOTOPRISM_OIDC_REDIRECT                         | --oidc-redirect         | false                        | automatically redirects unauthenticated users to the configured identity provider                   |
-| PHOTOPRISM_OIDC_REGISTER                         | --oidc-register         | false                        | allows new users to create an account when they sign in with OpenID Connect                         |
-| PHOTOPRISM_OIDC_LOGOUT                           | --oidc-logout           | false                        | ends the provider session on sign-out via OpenID Connect RP-initiated logout                        |
-| PHOTOPRISM_OIDC_USERNAME                         | --oidc-username         | preferred_username           | preferred username `CLAIM` for new OpenID Connect users (preferred_username, name, nickname, email) |
-| PHOTOPRISM_OIDC_WEBDAV                           | --oidc-webdav           | false                        | allows new OpenID Connect users to use WebDAV when they have a role that allows it                  |
-| PHOTOPRISM_DISABLE_OIDC                          | --disable-oidc          | false                        | disables single sign-on via OpenID Connect, even if an identity provider has been configured        |
-| PHOTOPRISM_SESSION_MAXAGE                        | --session-maxage        | 1209600                      | session expiration time in `SECONDS`, doubled for accounts with 2FA (-1 to disable)                 |
-| PHOTOPRISM_SESSION_TIMEOUT                       | --session-timeout       | 604800                       | session idle time in `SECONDS`, doubled for accounts with 2FA (-1 to disable)                       |
-| PHOTOPRISM_SESSION_CACHE                         | --session-cache         | 900                          | session cache duration in `SECONDS` (60-3600)                                                       |
-| PHOTOPRISM_DOWNLOAD_TOKEN                        | --download-token        |                              | shared static `TOKEN` for permanent download URLs (leave blank to accept signed tokens only)        |
-| PHOTOPRISM_DOWNLOAD_TOKEN_MAXAGE                 | --download-token-maxage | 3600                         | signed download token lifetime in `SECONDS` (minimum 900)                                           |
-| PHOTOPRISM_PREVIEW_TOKEN                         | --preview-token         |                              | shared static `TOKEN` for thumbnail and video streaming URLs (leave blank for an automatic value)   |
+| Environment                                      | CLI Flag                | Default                      | Description                                                                                                                                                                                                     |
+|:-------------------------------------------------|:------------------------|:-----------------------------|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PHOTOPRISM_AUTH_MODE                             | --auth-mode             | password                     | authentication `MODE` (public[^2], password)                                                                                                                                                                        |
+| PHOTOPRISM_ADMIN_USER, PHOTOPRISM_ADMIN_USERNAME | --admin-user            | admin                        | `USERNAME` of the superadmin account that is created on first startup                                                                                                                                           |
+| PHOTOPRISM_ADMIN_PASSWORD                        | --admin-password        |                              | initial `PASSWORD` of the superadmin account (8-72 characters)                                                                                                                                                  |
+| PHOTOPRISM_PASSWORD_LENGTH                       | --password-length       | 8                            | minimum password `LENGTH` in characters                                                                                                                                                                         |
+| PHOTOPRISM_LOGIN_INFO                            | --login-info            |                              | custom login footer info `TEXT` *plus*                                                                                                                                                                          |
+| PHOTOPRISM_OIDC_URI                              | --oidc-uri              |                              | issuer `URI` for single sign-on via OpenID Connect, e.g. https://accounts.google.com                                                                                                                            |
+| PHOTOPRISM_OIDC_CLIENT                           | --oidc-client           |                              | client `ID` for single sign-on via OpenID Connect                                                                                                                                                               |
+| PHOTOPRISM_OIDC_SECRET                           | --oidc-secret           |                              | client `SECRET` for single sign-on via OpenID Connect                                                                                                                                                           |
+| PHOTOPRISM_OIDC_SCOPES                           | --oidc-scopes           | openid email profile address | client authorization `SCOPES` for single sign-on via OpenID Connect                                                                                                                                             |
+| PHOTOPRISM_OIDC_PROMPT                           | --oidc-prompt           |                              | authorization `PROMPT` for single sign-on via OpenID Connect (login, select_account, consent)                                                                                                                   |
+| PHOTOPRISM_OIDC_PROVIDER                         | --oidc-provider         |                              | custom identity provider `NAME`, e.g. Google                                                                                                                                                                    |
+| PHOTOPRISM_OIDC_ICON                             | --oidc-icon             |                              | custom identity provider icon `URI`                                                                                                                                                                             |
+| PHOTOPRISM_OIDC_REDIRECT                         | --oidc-redirect         | false                        | automatically redirects unauthenticated users to the configured identity provider                                                                                                                               |
+| PHOTOPRISM_OIDC_REGISTER                         | --oidc-register         | false                        | allows new users to create an account when they sign in with OpenID Connect                                                                                                                                     |
+| PHOTOPRISM_OIDC_LOGOUT                           | --oidc-logout           | false                        | ends the provider session on sign-out via OpenID Connect RP-initiated logout                                                                                                                                    |
+| PHOTOPRISM_OIDC_USERNAME                         | --oidc-username         | preferred_username           | preferred username `CLAIM` for new OpenID Connect users (preferred_username, name, nickname, email)                                                                                                             |
+| PHOTOPRISM_OIDC_WEBDAV                           | --oidc-webdav           | false                        | allows new OpenID Connect users to use WebDAV when they have a role that allows it                                                                                                                              |
+| PHOTOPRISM_DISABLE_OIDC                          | --disable-oidc          | false                        | disables single sign-on via OpenID Connect, even if an identity provider has been configured                                                                                                                    |
+| PHOTOPRISM_OAUTH_APPS                            | --oauth-apps            | registered                   | `POLICY` for connecting apps via OAuth sign-in and consent (registered, none, a comma-separated list of HTTPS origins whose client metadata documents are trusted, or any to fetch them from every public host) |
+| PHOTOPRISM_SESSION_MAXAGE                        | --session-maxage        | 1209600                      | session expiration time in `SECONDS`, doubled for accounts with 2FA, not used for OIDC (-1 to disable)                                                                                                          |
+| PHOTOPRISM_SESSION_TIMEOUT                       | --session-timeout       | 604800                       | idle time in `SECONDS` for sessions without expiration, doubled for accounts with 2FA, not used for OIDC (-1 to disable)                                                                                        |
+| PHOTOPRISM_SESSION_CACHE                         | --session-cache         | 900                          | session cache duration in `SECONDS` (60-3600)                                                                                                                                                                   |
+| PHOTOPRISM_DOWNLOAD_TOKEN                        | --download-token        |                              | shared static `TOKEN` for permanent download URLs (leave blank to accept signed tokens only)                                                                                                                    |
+| PHOTOPRISM_DOWNLOAD_TOKEN_MAXAGE                 | --download-token-maxage | 3600                         | signed download token lifetime in `SECONDS` (minimum 900)                                                                                                                                                       |
+| PHOTOPRISM_PREVIEW_TOKEN                         | --preview-token         |                              | shared static `TOKEN` for thumbnail and video streaming URLs (leave blank for an automatic value)                                                                                                               |
 
 ### Logging
 
@@ -219,7 +220,7 @@
 
 | Environment                    | CLI Flag              | Default    | Description                                                        |
 |:-------------------------------|:----------------------|:-----------|:-------------------------------------------------------------------|
-| PHOTOPRISM_DATABASE_DRIVER     | --database-driver     | sqlite     | database `DRIVER` (sqlite, mysql)                                  |
+| PHOTOPRISM_DATABASE_DRIVER     | --database-driver     | sqlite     | database `DRIVER` (sqlite, mysql, postgres)                        |
 | PHOTOPRISM_DATABASE_DSN        | --database-dsn        |            | database connection `DSN` (sqlite file, optional for mysql)        |
 | PHOTOPRISM_DATABASE_NAME       | --database-name       | photoprism | database schema `NAME`                                             |
 | PHOTOPRISM_DATABASE_SERVER     | --database-server     |            | database `HOST` incl. port, e.g. "mariadb:3306" (or socket path)   |
@@ -282,18 +283,18 @@
 
 ### Computer Vision
 
-| Environment                | CLI Flag          | Default     | Description                                                                                                                     |
-|:---------------------------|:------------------|:------------|:--------------------------------------------------------------------------------------------------------------------------------|
-| PHOTOPRISM_VISION_YAML     | --vision-yaml     |             | computer vision model configuration `FILENAME` *optional*                                                                       |
-| PHOTOPRISM_VISION_API      | --vision-api      | false       | enables the computer vision API endpoints under /api/v1/vision (requires authorization)                                         |
-| PHOTOPRISM_VISION_URI      | --vision-uri      |             | vision service base `URI`, e.g. https://example.com/api/v1/vision (leave blank to disable)                                      |
-| PHOTOPRISM_VISION_KEY      | --vision-key      |             | vision service access `TOKEN` *optional*                                                                                        |
-| PHOTOPRISM_VISION_SCHEDULE | --vision-schedule |             | vision worker `SCHEDULE` in cron format (e.g. "0 12 \* \* \*" for daily at noon) or at a random time (daily, weekly)            |
-| PHOTOPRISM_VISION_FILTER   | --vision-filter   | public:true | vision worker search `FILTER` applied to scheduled runs (same syntax as photoprism vision run)                                  |
-| PHOTOPRISM_ONNX_PROVIDER   | --onnx-provider   | cpu         | execution `PROVIDER` for ONNX inference (cpu, cuda), falls back to the CPU when unavailable                                     |
-| PHOTOPRISM_LABELS_MODEL    | --labels-model    | auto        | image classification `MODE` (auto, none)                                                                                        |
-| PHOTOPRISM_NSFW_MODEL      | --nsfw-model      | auto        | NSFW detection `MODE` (auto, none, labels)                                                                                      |
-| PHOTOPRISM_DETECT_NSFW     | --detect-nsfw     | false       | flags newly added pictures as private if they might be offensive (uses the configured NSFW model)                               |
+| Environment                | CLI Flag          | Default     | Description                                                                                                          |
+|:---------------------------|:------------------|:------------|:---------------------------------------------------------------------------------------------------------------------|
+| PHOTOPRISM_VISION_YAML     | --vision-yaml     |             | computer vision model configuration `FILENAME` *optional*                                                            |
+| PHOTOPRISM_VISION_API      | --vision-api      | false       | enables the computer vision API endpoints under /api/v1/vision (requires authorization)                              |
+| PHOTOPRISM_VISION_URI      | --vision-uri      |             | vision service base `URI`, e.g. https://example.com/api/v1/vision (leave blank to disable)                           |
+| PHOTOPRISM_VISION_KEY      | --vision-key      |             | vision service access `TOKEN` *optional*                                                                             |
+| PHOTOPRISM_VISION_SCHEDULE | --vision-schedule |             | vision worker `SCHEDULE` in cron format (e.g. "0 12 \* \* \*" for daily at noon) or at a random time (daily, weekly) |
+| PHOTOPRISM_VISION_FILTER   | --vision-filter   | public:true | vision worker search `FILTER` applied to scheduled runs (same syntax as photoprism vision run)                       |
+| PHOTOPRISM_ONNX_PROVIDER   | --onnx-provider   | cpu         | execution `PROVIDER` for ONNX inference (cpu, cuda), falls back to the CPU when unavailable                          |
+| PHOTOPRISM_LABELS_MODEL    | --labels-model    | auto        | image classification `MODE` (auto, none)                                                                             |
+| PHOTOPRISM_NSFW_MODEL      | --nsfw-model      | auto        | NSFW detection `MODE` (auto, none, labels)                                                                           |
+| PHOTOPRISM_DETECT_NSFW     | --detect-nsfw     | false       | flags newly added pictures as private if they might be offensive (uses the configured NSFW model)                    |
 
 ### Face Recognition
 

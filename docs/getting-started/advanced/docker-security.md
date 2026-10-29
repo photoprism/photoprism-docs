@@ -91,6 +91,9 @@ docker compose stop
 docker compose up -d
 ```
 
+!!! info ""
+    We would like to thank Marcos González Palazón of the University of Castilla-La Mancha for sharing his Escalon scanner findings and helping us improve our end-user documentation, Docker images, and config examples.
+
 ## Remove Passwords From the Environment
 
 Passwords specified directly in a  `compose.yaml` file or otherwise passed to the container environment may pose a security risk. As an alternative, they can be set in an [options.yml](../config-files/index.md) file located in the _config_ [storage folder](../docker-compose.md#photoprismstorage):

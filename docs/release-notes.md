@@ -10,7 +10,7 @@
 
 This [release](https://github.com/photoprism/photoprism/releases/tag/261029-963b58c50) upgrades PhotoPrism's [database layer](https://github.com/photoprism/photoprism/pull/4831) and introduces experimental [🐘 PostgreSQL](https://docs.photoprism.app/getting-started/advanced/migrations/postgres/) support, thanks to [@keif888](https://github.com/keif888)'s hard work and numerous contributions.
 
-AI assistants and other applications can now connect via [🔐 OAuth](https://github.com/photoprism/photoprism/issues/4368) and use new [🤖 MCP](https://docs.photoprism.app/developer-guide/api/mcp/#library-tools) tools to search and browse your library. Other improvements include a new [⬇️ Export](https://github.com/photoprism/photoprism/issues/655) dialog in the photo viewer for downloading images at selected resolutions and [updated standard maps](https://github.com/photoprism/photoprism/issues/5926) in [Places](https://demo.photoprism.app/library/places), along with an enhanced [🌎 3D Earth](https://docs.photoprism.app/user-guide/organize/places/#3d-earth-view) view. This release also includes fixes for several [metadata handling](https://docs.photoprism.app/user-guide/library/metadata/) issues, as well as updates to [libheif](https://github.com/photoprism/photoprism/issues/5928), [Go](https://github.com/golang/go/issues?q=milestone%3AGo1.27.3), and [ONNX Runtime](https://github.com/photoprism/photoprism/issues/5922).
+AI assistants and other applications can now connect via [🔐 OAuth](https://docs.photoprism.app/developer-guide/api/oauth2/#connecting-apps) and use new [🤖 MCP](https://docs.photoprism.app/developer-guide/api/mcp/#library-tools) tools to search and browse your library. Other improvements include a new [⬇️ Export](https://github.com/photoprism/photoprism/issues/655) dialog in the photo viewer for downloading images at selected resolutions and [updated standard maps](https://github.com/photoprism/photoprism/issues/5926) in [Places](https://demo.photoprism.app/library/places), along with an enhanced [🌎 3D Earth](https://docs.photoprism.app/user-guide/organize/places/#3d-earth-view) view. This release also includes fixes for several [metadata handling](https://docs.photoprism.app/user-guide/library/metadata/) issues, as well as updates to [libheif](https://github.com/photoprism/photoprism/issues/5928), [Go](https://github.com/golang/go/issues?q=milestone%3AGo1.27.3), and [ONNX Runtime](https://github.com/photoprism/photoprism/issues/5922).
 
 Thank you to all our [contributors](https://docs.photoprism.app/developer-guide/), [members](https://www.photoprism.app/editions/#compare), and [sponsors](https://docs.photoprism.app/developer-guide/#thank-you-to-all-current-and-past-sponsors), whose generous support has been and continues to be essential to the success of the project! 💎✨
 
@@ -25,7 +25,7 @@ What's new?
 - AI: [Added MCP search and browsing tools that respect account permissions](https://docs.photoprism.app/developer-guide/api/mcp/#library-tools)
 - AI: [Added MCP lookups for commands, file formats, metadata, and thumbnail sizes](https://docs.photoprism.app/developer-guide/api/mcp/#available-tools)
 - AI: [Enabled MCP for users and viewers, with an option to disable it per account](https://docs.photoprism.app/developer-guide/api/mcp/#authorization)
-- Auth: [Added OAuth support for connecting apps and remote MCP clients](https://github.com/photoprism/photoprism/issues/4368)
+- Auth: [Added OAuth support for connecting apps and remote MCP clients](https://docs.photoprism.app/developer-guide/api/oauth2/#connecting-apps)
 - Auth: [Fixed the sign-in page language picker displaying the wrong language](https://docs.photoprism.app/user-guide/settings/general/#user-interface)
 - Auth: [New usernames must only consist of standard ASCII characters](https://github.com/photoprism/photoprism/issues/5896)
 - Viewer: [Added Export dialog to choose download sizes and formats](https://github.com/photoprism/photoprism/issues/655) by [@omerdduran](https://github.com/omerdduran)
@@ -39,7 +39,7 @@ What's new?
 - Metadata: [Fixed date adjustment when changing time zones to or from UTC](https://github.com/photoprism/photoprism/issues/5918)
 - Metadata: [Fixed inconsistent focal lengths in Exif, ExifTool JSON, and XMP](https://github.com/photoprism/photoprism/issues/5908)
 - CLI: [Fixed issues with `photoprism dl` when downloading YouTube videos](https://github.com/photoprism/photoprism/issues/5903)
-- CLI: [Added a `database transfer` command to help with migrations](https://github.com/photoprism/photoprism/issues/5895) by [@keif888](https://github.com/keif888)
+- CLI: [Added a `database transfer` command to help with migrations](https://docs.photoprism.app/getting-started/advanced/migrations/postgres/#moving-an-existing-library) by [@keif888](https://github.com/keif888)
 - Database: [Added experimental support for PostgreSQL](https://docs.photoprism.app/getting-started/advanced/migrations/postgres/) by [@keif888](https://github.com/keif888)
 - Database: [Upgraded GORM database library from v1.9.16 to v1.31.2](https://github.com/photoprism/photoprism/pull/4831) by [@keif888](https://github.com/keif888)
 - ONNX: [Disabled ONNX Runtime telemetry before loading the library](https://github.com/photoprism/photoprism/issues/5897)

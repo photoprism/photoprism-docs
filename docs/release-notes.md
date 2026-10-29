@@ -43,7 +43,7 @@ What's new?
 - ONNX: [Disabled ONNX Runtime telemetry before loading the library](https://github.com/photoprism/photoprism/issues/5897)
 - Docker: [Added Vulkan drivers to the `amd` and `intel` init targets](https://github.com/photoprism/photoprism/issues/5912)
 - Database: [Upgraded the database ORM from GORM v1 to v2](https://github.com/photoprism/photoprism/pull/4831) by [@keif888](https://github.com/keif888)
-- Database: [Added experimental support for PostgreSQL 16 and later](https://docs.photoprism.app/getting-started/advanced/migrations/postgres/) by [@keif888](https://github.com/keif888)
+- Database: [Added experimental support for PostgreSQL 18 and later](https://docs.photoprism.app/getting-started/advanced/migrations/postgres/) by [@keif888](https://github.com/keif888)
 - Database: [Added a `transfer` command to migrate between SQLite, MariaDB, and PostgreSQL](https://github.com/photoprism/photoprism/issues/5895)
 - Database: [Restored names and slugs previously stored as numbers in SQLite](https://github.com/photoprism/photoprism/pull/4831)
 - Security: [Upgraded `libheif` from v1.23.5 to v1.23.7 (23 GHSA fixes)](https://github.com/photoprism/photoprism/issues/5928)

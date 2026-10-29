@@ -1,9 +1,9 @@
 # Using PostgreSQL (Experimental)
 
-!!! warning "Development Preview"
-    PostgreSQL support is **experimental** and only available in our [development preview](../../updates.md#development-preview) builds, so it does not work with the current stable release yet. The database schema may still change without migrations, so you should not use it for a library you depend on, and you should keep [backups](../../../user-guide/backups/index.md) of your originals and sidecar files.
+!!! warning "Experimental"
+    PostgreSQL support is **experimental**. The database schema may still change without migrations, so you should not use it for a library you depend on, and you should keep [backups](../../../user-guide/backups/index.md) of your originals and sidecar files.
 
-In addition to [MariaDB and SQLite](../../index.md#databases), our preview builds can use [PostgreSQL](https://www.postgresql.org/) 16 or later as index database. We test with PostgreSQL 18.
+In addition to [MariaDB and SQLite](../../index.md#databases), PhotoPrism can use [PostgreSQL](https://www.postgresql.org/) 16 or later as index database. We test with PostgreSQL 18.
 
 ## Setting Up a New Instance
 
@@ -12,7 +12,7 @@ PhotoPrism creates the tables when it starts with an empty database. To use Post
 ```yaml
 services:
   photoprism:
-    image: photoprism/photoprism:preview
+    image: photoprism/photoprism:latest
     depends_on:
       - postgres
     environment:
@@ -106,7 +106,22 @@ A new major version of PostgreSQL cannot use the database files of an older one.
 
 ## Moving an Existing Library
 
-There is currently no command to move an existing MariaDB or SQLite index to PostgreSQL. To try PostgreSQL with your pictures, set up a new instance as shown above and index your originals. Photo edits that PhotoPrism has saved to [YAML sidecar files](../../../user-guide/backups/export.md#photo-backups) are restored automatically, and [album backups](../../../user-guide/backups/export.md#album-backups) can be restored with `photoprism restore -a`.
+The `photoprism database transfer` command copies an existing MariaDB or SQLite index to PostgreSQL, including users, sessions, and settings. It works between all three kinds of database, so you can also use it to move back later. An [index backup](../../../user-guide/backups/index.md#backup-command) can only be restored into the same kind of database, so it is not an alternative for this.
+
+1. Create an [index backup](../../../user-guide/backups/index.md#backup-command) with `photoprism backup -i`, so you can return to your current database if needed.
+2. Add a `postgres` service to your `compose.yaml` as shown [above](#setting-up-a-new-instance), but leave the database settings of the `photoprism` service unchanged for now. Then start the new service with `docker compose up -d postgres`.
+3. Stop PhotoPrism with `docker compose stop photoprism`, since changes made during the transfer would be missing in the new database.
+4. Run the transfer in a new container, using the values of your `postgres` service:
+
+    ```bash
+    docker compose run --rm photoprism photoprism database transfer --target-driver postgres --target-server postgres:5432 --target-name photoprism --target-user photoprism --target-password insecure
+    ```
+
+5. Change the `PHOTOPRISM_DATABASE_*` settings of the `photoprism` service to the PostgreSQL values shown [above](#setting-up-a-new-instance), and start it again with `docker compose up -d`.
+
+The target database must be empty. If PhotoPrism has already been started with it, the command refuses to run unless you pass `--force`, which replaces its data. If the transfer fails, the target is emptied again, so you can fix the cause and run the command once more. If the target server rejects large statements, lower the number of rows copied per statement with `--batch`, e.g. `--batch 100`.
+
+Instead of moving your index, you can also set up a new instance as shown above and index your originals. Photo edits that PhotoPrism has saved to [YAML sidecar files](../../../user-guide/backups/export.md#photo-backups) are restored automatically, and [album backups](../../../user-guide/backups/export.md#album-backups) can be restored with `photoprism restore -a`.
 
 ## Databases From Development Versions
 

@@ -20,8 +20,7 @@ The [NVIDIA Container Toolkit](https://docs.nvidia.com/datacenter/cloud-native/c
     ```yaml
     services:
       photoprism:
-        ## The ":preview" build gives early access to new features:
-        image: photoprism/photoprism:preview
+        image: photoprism/photoprism:latest
         ...
 
       ## Ollama Large-Language Model Runner (optional)

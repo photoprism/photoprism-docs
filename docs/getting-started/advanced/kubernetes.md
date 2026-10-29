@@ -1,6 +1,6 @@
 # Deploying PhotoPrism on Kubernetes
 
-PhotoPrism provides [Helm charts](https://charts.photoprism.app/photoprism) for advanced users to deploy our [Personal](https://www.photoprism.app/editions/#compare) and [Team Editions](https://www.photoprism.app/teams/#compare) on Kubernetes, offering the same configuration options as the official Docker images.
+PhotoPrism provides [Helm charts](https://charts.photoprism.app/photoprism) for advanced users to deploy our [Personal](https://www.photoprism.app/editions/#compare) and [Team Editions](https://www.photoprism.app/teams/#compare) on Kubernetes, offering largely the same configuration options as the official Docker images.
 
 The `photoprism-plus` chart is publicly accessible and allows you to install our [Personal Editions](https://www.photoprism.app/editions/#compare) with the option to [activate membership features](https://www.photoprism.app/kb/activation/), similar to the installation with [Docker Compose](../docker-compose.md).
 
@@ -128,6 +128,12 @@ Our members can activate [additional features](https://link.photoprism.app/membe
 - `resources` sets requests/limits (defaults: 500 m / 1 GiB request, 4000 m / 6 GiB limit). Tune these to match your workloads.
 - `oidc.*` mirrors the options covered in [Single Sign-On via OpenID Connect](openid-connect.md); set `PHOTOPRISM_DISABLE_OIDC=false` to enable federated logins.
 - `cluster.integration` lets you pull shared values from an existing PhotoPrism® Portal secret if you run Portal in the same cluster. Leave it disabled for standalone deployments.
+
+### Container Startup
+
+The chart runs the PhotoPrism binary directly as a non-root user, without additional privileges and capabilities, so that it is compatible with the Kubernetes Pod Security Standard `restricted`. Because the image's init script does not run, [`PHOTOPRISM_INIT`](../config-options.md#docker-image) actions, `PHOTOPRISM_UID`/`PHOTOPRISM_GID`, and automatic permission updates are not available. Update by pulling a newer image tag, set user and group IDs with `securityContext.runAsUser`, `securityContext.runAsGroup`, and `podSecurityContext.fsGroup`, and make sure existing volumes are readable and writable by them.
+
+If your cluster permits it and you need the init script, set `command: []` and `args: []`, and relax the security context with `allowPrivilegeEscalation: true` and `capabilities: null`. Run `helm show readme photoprism/photoprism-plus` for a complete example.
 
 Whenever you change values, redeploy with `helm upgrade --install ... -f` so the `StatefulSet` picks up the new configuration. Use `kubectl rollout status` to trace progress and `helm history photos` to view revisions.
 

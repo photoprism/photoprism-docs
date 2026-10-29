@@ -37,6 +37,12 @@ Example for generating an app password that you can use with [WebDAV-compatible]
 !!! tldr ""
     By selecting the *WebDAV* [scope](../users/client-credentials.md#authorization-scopes), you ensure that the app password cannot be used to log in through the regular user interface. Apps also cannot change your password or manage user accounts, even if you grant them *Full Access*. If an administrator has [disabled login](../users/cli.md#command-options) for your account, app passwords can only be used for [WebDAV](../sync/webdav.md) sync.
 
+## Connected Apps
+
+Apps and AI assistants that you allowed to access your library through [OAuth sign-in](../../developer-guide/api/oauth2.md#connecting-apps) are listed when you click the *Connected Apps* button under *Settings > Account*. To end an app's access, click *Disconnect*. The app can then no longer use the library on your behalf until you connect it again.
+
+This button is only shown if connecting apps is [enabled on your instance](../../developer-guide/api/oauth2.md#configuration).
+
 ## Connect via WebDAV ##
 
 This button is only shown when WebDAV access is enabled for your account and the built-in WebDAV server is available.

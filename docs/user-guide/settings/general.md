@@ -49,6 +49,9 @@ When disabled, no files can be downloaded from the PhotoPrism web interface. Ple
 
 Which files are included in a download, and whether entire collections can be downloaded as ZIP archives, is configured in the [*Collections*](collections.md) and [*Content*](library.md#download) settings tabs.
 
+#### :material-file-export: Export ####
+When disabled, the [*Export* dialog](../organize/download.md#exporting-in-different-formats-and-sizes) is not available in the fullscreen viewer. It is independent of the *Download* setting.
+
 #### :material-folder-plus: Import ####
 When disabled, files can no longer be [imported](../library/import.md) from the import folder. You must use [indexing](../library/originals.md) instead to discover newly added originals.
 

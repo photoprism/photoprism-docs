@@ -31,3 +31,19 @@
     3. Click *Download*
 
        ![Screenshot](img/download-3-2503.jpg){ class="shadow" }
+
+## Exporting in Different Formats and Sizes ##
+
+To save a picture in a specific size or format instead of downloading its original files, open it in fullscreen mode and choose *Export* from the menu, which is listed above *Download*. You can also press **Ctrl + Shift + E**.
+
+The dialog lists each original file of the picture's [stack](stacks.md) together with the outputs available for it:
+
+- **Original:** the file as it is stored in your library.
+- **Full-Size Preview:** an existing JPEG or PNG preview of an original that is not an image format browsers can display, such as a RAW file.
+- **Resized JPEGs:** copies scaled down to standard sizes that fit the original, named like `IMG_0001_1920.jpg`.
+- **Video renditions:** a playable MP4 for videos that do not use AVC, animations, and live photos. If a rendition has not been created yet, the download starts after transcoding.
+
+Select the outputs you need and click *Export*. Your browser then saves them one after the other, so it may ask for permission to download multiple files. If a download fails, you can retry it from the dialog.
+
+!!! info ""
+    *Export* is available to roles that may download files and can be turned off under [*Settings > General*](../settings/general.md#export).

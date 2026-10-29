@@ -27,7 +27,7 @@ What's new?
 - AI: [Enabled MCP for users and viewers, with an option to disable it per account](https://docs.photoprism.app/developer-guide/api/mcp/#authorization)
 - Auth: [Added OAuth support for connecting apps and remote MCP clients](https://github.com/photoprism/photoprism/issues/4368)
 - Auth: [Fixed the sign-in page language picker displaying the wrong language](https://docs.photoprism.app/user-guide/settings/general/#user-interface)
-- Auth: [New usernames must consist of ASCII characters only](https://github.com/photoprism/photoprism/issues/5896)
+- Auth: [New usernames must only consist of standard ASCII characters](https://github.com/photoprism/photoprism/issues/5896)
 - Viewer: [Added Export dialog to choose download sizes and formats](https://github.com/photoprism/photoprism/issues/655) by [@omerdduran](https://github.com/omerdduran)
 - Viewer: [Fixed face selection overlays not following zoom changes while editing](https://github.com/photoprism/photoprism/issues/5917)
 - Places: [Updated the default world map with the latest OpenStreetMap data](https://github.com/photoprism/photoprism/issues/5926)

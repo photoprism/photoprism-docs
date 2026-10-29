@@ -39,7 +39,7 @@ What's new?
 - Metadata: [Fixed date adjustment when changing time zones to or from UTC](https://github.com/photoprism/photoprism/issues/5918)
 - Metadata: [Fixed inconsistent focal lengths in Exif, ExifTool JSON, and XMP](https://github.com/photoprism/photoprism/issues/5908)
 - CLI: [Fixed issues with `photoprism dl` when downloading YouTube videos](https://github.com/photoprism/photoprism/issues/5903)
-- CLI: [Added `transfer` command to migrate between databases](https://github.com/photoprism/photoprism/issues/5895) by [@keif888](https://github.com/keif888)
+- CLI: [Added a `database transfer` command to help with migrations](https://github.com/photoprism/photoprism/issues/5895) by [@keif888](https://github.com/keif888)
 - Database: [Added experimental support for PostgreSQL](https://docs.photoprism.app/getting-started/advanced/migrations/postgres/) by [@keif888](https://github.com/keif888)
 - Database: [Upgraded GORM database library from v1.9.16 to v1.31.2](https://github.com/photoprism/photoprism/pull/4831) by [@keif888](https://github.com/keif888)
 - ONNX: [Disabled ONNX Runtime telemetry before loading the library](https://github.com/photoprism/photoprism/issues/5897)

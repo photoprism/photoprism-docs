@@ -2,10 +2,13 @@
 
 ## REST API Endpoints
 
-For the currently implemented REST request endpoints available under `/api/v1`, please refer to our [Swagger API Documentation](docs.md), the generated [`swagger.json`](https://github.com/photoprism/photoprism/blob/develop/internal/api/swagger.json), and the [request forms](https://pkg.go.dev/github.com/photoprism/photoprism/internal/form) and [entity models](https://pkg.go.dev/github.com/photoprism/photoprism/internal/entity) in our [public repository](https://github.com/photoprism/photoprism/tree/develop/internal):
+For the REST request endpoints available under `/api/v1`, please refer to our [Swagger API Documentation](docs.md), the generated [`swagger.json`](https://github.com/photoprism/photoprism/blob/develop/internal/api/swagger.json), and the [request forms](https://pkg.go.dev/github.com/photoprism/photoprism/internal/form) and [entity models](https://pkg.go.dev/github.com/photoprism/photoprism/internal/entity) in our [public repository](https://github.com/photoprism/photoprism/tree/develop/internal):
 
 - https://pkg.go.dev/github.com/photoprism/photoprism/internal/api
 - https://github.com/photoprism/photoprism/tree/develop/internal/api
+
+!!! note ""
+    This reference is generated from source code under continuous development. It may list fields, parameters, and endpoints that are not part of a release or are reserved for planned features. Only functionality described in the [User Guide](../../user-guide/index.md) or the [release notes](../../release-notes.md) is supported.
 
 API request bodies and responses are usually JSON-encoded, except for [binary data](thumbnails.md) and some of the [OAuth2 endpoints](oauth2.md#server-endpoints). Note that the [`Content-Type`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type) header must be set to `application/json` for this, as the request may otherwise fail with [error 400](https://github.com/photoprism/photoprism/issues/4354).
 

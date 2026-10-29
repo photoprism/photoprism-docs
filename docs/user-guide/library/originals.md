@@ -66,6 +66,10 @@ When the check is enabled, an absolute floor of **100 MB** of free space also ap
 !!! warning ""
     For safety reasons, this threshold can only be changed by server administrators through the configuration and is intentionally not exposed in the app settings. We recommend enabling the check on filesystems where free space can be read reliably, as a full disk can interrupt operation and lead to data loss.
 
+## Unsupported Characters in Names
+
+Files and folders whose names contain any of the characters `|"?*%<>{}:~$` are not indexed, imported, or synced. If such files are already in your library, they are skipped during indexing until you rename them.
+
 ## Ignoring Files and Folders
 
 Hidden files and folders that start with a `.`, `@`, `_.`, or `__` like `__MACOSX` will be automatically ignored when indexing your library.

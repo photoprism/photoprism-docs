@@ -126,7 +126,7 @@ In addition, you can choose to run the `photoprism` service as a non-root user b
 
 *Which user and group you choose should depend on the owner of the `/dev/dri` video device so that the service has permission to access it.*
 
-If you use the `user` property, specify only the user ID, for example `user: "1000"`, so that the service keeps its `video` and `render` group memberships. Add a group ID, as in `"1000:1000"`, only if network storage such as NFS requires it to read and write files.
+If you use the `user` property, specify only the user ID, for example `user: "1000"`, so that the service keeps its `video` and `render` group memberships. Specifying a group ID as well, as in `"1000:1000"`, removes these memberships, so hardware transcoding is then not available.
 
 Note that init actions such as `gpu` or `ffmpeg` are not performed if you use the [hardened configuration](docker-security.md#hardened-configuration), since it bypasses the init script.
 

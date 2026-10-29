@@ -284,7 +284,7 @@ In particular, this happens if you have added [`no-new-privileges`](https://gith
 ```yaml
 services:
   photoprism:
-    user: "1000"
+    user: "1000:1000"
     entrypoint: ["/opt/photoprism/bin/photoprism"]
     command: ["start"]
     security_opt:
@@ -293,7 +293,7 @@ services:
       - ALL
 ```
 
-The default entrypoint script can install [additional distribution packages](advanced/transcoding.md#intel-quick-sync), [fix file system permissions](troubleshooting/docker.md#file-permissions), and/or [change the UID/GID](config-options.md#docker-image) for the "photoprism" service. Bypassing it disables this functionality, including all `PHOTOPRISM_INIT` actions, so the storage and originals folders must already be readable and writable by the user ID you specify.
+The default entrypoint script can install [additional distribution packages](advanced/transcoding.md#intel-quick-sync), [fix file system permissions](troubleshooting/docker.md#file-permissions), and/or [change the UID/GID](config-options.md#docker-image) for the "photoprism" service. Bypassing it disables this functionality, including all `PHOTOPRISM_INIT` actions, so the storage and originals folders must already be readable and writable by the user and group IDs you specify.
 
 When using our default entrypoint, also make sure that the user and group IDs you specify are within the supported ranges:
 
@@ -305,7 +305,7 @@ Please also check if you have specified *both* a [`user`](https://docs.docker.co
 ```yaml
 services:
   photoprism:
-    user: "1000"
+    user: "1000:1000"
     environment:
       PHOTOPRISM_UID: 1000
       PHOTOPRISM_GID: 1000

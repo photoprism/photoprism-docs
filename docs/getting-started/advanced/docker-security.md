@@ -42,7 +42,7 @@ services:
     user: "1000"
 ```
 
-Specify only the user ID, for example `user: "1000"`, so that the service keeps its `video` and `render` group memberships. Add a group ID, as in `"1000:1000"`, only if network storage such as NFS requires it to read and write files. With our default entrypoint, the supported user IDs are 0, 33, 50-99, 500-600, 900-1250, and 2000-2100.
+If you specify only the user ID, for example `user: "1000"`, the service keeps its `video` and `render` group memberships, which [hardware video transcoding](transcoding.md) requires. Specifying a group ID as well, for example `user: "1000:1000"`, removes these memberships so that the service has no access to hardware devices. We recommend this when security is a priority, and when network storage such as NFS requires an explicit group ID to read and write files, even though hardware transcoding is then not available. With our default entrypoint, the supported user IDs are 0, 33, 50-99, 500-600, 900-1250, and 2000-2100.
 
 *If you are using [hardware video transcoding](transcoding.md#intel-quick-sync), it should depend on the owner of the video device which user and group you choose so that the service has permission to access it.*
 
@@ -53,7 +53,7 @@ When a high level of security is required, you can bypass our init script and en
 ```yaml
 services:
   photoprism:
-    user: "1000"
+    user: "1000:1000"
     entrypoint: ["/opt/photoprism/bin/photoprism"]
     command: ["start"]
     security_opt:
@@ -65,8 +65,9 @@ services:
 This trades some convenience and functionality for security:
 
 - [Init actions](../config-options.md#docker-image) specified with `PHOTOPRISM_INIT`, such as `update`, `https`, `gpu`, or the installation of hardware drivers, are not performed. Pull updated images instead, e.g. with `docker compose pull`, and run a [reverse proxy](../proxies/index.md) if you need HTTPS, since no default certificate is created.
-- File permissions are not updated automatically, so the storage and originals folders must already be readable and writable by the user ID you specify.
+- File permissions are not updated automatically, so the storage and originals folders must already be readable and writable by the user and group IDs you specify.
 - `PHOTOPRISM_UID`, `PHOTOPRISM_GID`, and `PHOTOPRISM_UMASK` have no effect.
+- Because the group ID is specified, the service cannot access hardware devices, so hardware video transcoding is not available.
 
 The `no-new-privileges` and `cap_drop` settings require the entrypoint override shown above. Our default entrypoint needs these privileges to start, so the container will exit with an error if you add them without bypassing it.
 

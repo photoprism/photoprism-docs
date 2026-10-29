@@ -111,11 +111,13 @@ The `photoprism database transfer` command copies an existing MariaDB or SQLite 
 1. Create an [index backup](../../../user-guide/backups/index.md#backup-command) with `photoprism backup -i`, so you can return to your current database if needed.
 2. Add a `postgres` service to your `compose.yaml` as shown [above](#setting-up-a-new-instance), but leave the database settings of the `photoprism` service unchanged for now. Then start the new service with `docker compose up -d postgres`.
 3. Stop PhotoPrism with `docker compose stop photoprism`, since changes made during the transfer would be missing in the new database.
-4. Run the transfer in a new container, using the values of your `postgres` service:
+4. Run the transfer in a new container, using the values of your `postgres` service. The `--entrypoint` option is required, as the command would otherwise not read the database settings of the `photoprism` service and transfer an empty index instead:
 
     ```bash
-    docker compose run --rm photoprism photoprism database transfer --target-driver postgres --target-server postgres:5432 --target-name photoprism --target-user photoprism --target-password insecure
+    docker compose run --rm --entrypoint /opt/photoprism/bin/photoprism photoprism database transfer --target-driver postgres --target-server postgres:5432 --target-name photoprism --target-user photoprism --target-password insecure
     ```
+
+    If PhotoPrism runs as a non-root user that is set with `PHOTOPRISM_UID` and `PHOTOPRISM_GID` instead of the `user` property, also pass these IDs with `--user`, e.g. `--user 1000:1000`, so that files created in your storage folder keep the right owner.
 
 5. Change the `PHOTOPRISM_DATABASE_*` settings of the `photoprism` service to the PostgreSQL values shown [above](#setting-up-a-new-instance), and start it again with `docker compose up -d`.
 

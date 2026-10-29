@@ -10,14 +10,14 @@
 
 This [release](https://github.com/photoprism/photoprism/releases/tag/261029-963b58c50) upgrades PhotoPrism's [database layer](https://github.com/photoprism/photoprism/pull/4831) and introduces experimental [🐘 PostgreSQL](https://docs.photoprism.app/getting-started/advanced/migrations/postgres/) support, thanks to [@keif888](https://github.com/keif888)'s hard work and numerous contributions.
 
-AI assistants and other applications can now connect via [🔐 OAuth](https://docs.photoprism.app/developer-guide/api/oauth2/#connecting-apps) and use new [🤖 MCP](https://docs.photoprism.app/developer-guide/api/mcp/#library-tools) tools to search and browse your library. Other improvements include a new [⬇️ Export](https://github.com/photoprism/photoprism/issues/655) dialog in the photo viewer for downloading images at selected resolutions and [updated standard maps](https://github.com/photoprism/photoprism/issues/5926) in [Places](https://demo.photoprism.app/library/places), along with an enhanced [🌎 3D Earth](https://docs.photoprism.app/user-guide/organize/places/#3d-earth-view) view. This release also includes fixes for several [metadata handling](https://docs.photoprism.app/user-guide/library/metadata/) issues, as well as updates to [libheif](https://github.com/photoprism/photoprism/issues/5928), [Go](https://github.com/golang/go/issues?q=milestone%3AGo1.27.3), and [ONNX Runtime](https://github.com/photoprism/photoprism/issues/5922).
+AI assistants and other applications can now connect via [🔐 OAuth](https://docs.photoprism.app/developer-guide/api/oauth2/#connecting-apps) and use new [🤖 MCP](https://docs.photoprism.app/developer-guide/api/mcp/#library-tools) tools to search and browse your library. Other improvements include a new [⬇️ Export](https://docs.photoprism.app/user-guide/organize/download/#exporting-in-different-formats-and-sizes) dialog in the photo viewer for downloading images at selected resolutions and [updated standard maps](https://github.com/photoprism/photoprism/issues/5926) in [Places](https://demo.photoprism.app/library/places), along with an enhanced [🌎 3D Earth](https://docs.photoprism.app/user-guide/organize/places/#3d-earth-view) view. This release also includes fixes for several [metadata handling](https://docs.photoprism.app/user-guide/library/metadata/) issues, as well as updates to [libheif](https://github.com/photoprism/photoprism/issues/5928), [Go](https://github.com/golang/go/issues?q=milestone%3AGo1.27.3), and [ONNX Runtime](https://github.com/photoprism/photoprism/issues/5922).
 
 Thank you to all our [contributors](https://docs.photoprism.app/developer-guide/), [members](https://www.photoprism.app/editions/#compare), and [sponsors](https://docs.photoprism.app/developer-guide/#thank-you-to-all-current-and-past-sponsors), whose generous support has been and continues to be essential to the success of the project! 💎✨
 
 Upgrade Notes
 
 - [MCP is enabled by default for eligible users.](https://docs.photoprism.app/developer-guide/api/mcp/#authorization) Admins can disable it in the [account settings](https://docs.photoprism.app/user-guide/users/), or globally for all users by setting [`PHOTOPRISM_DISABLE_MCP` to "true"](https://docs.photoprism.app/getting-started/config-options/#feature-flags). To prevent external apps from connecting via [OAuth Authorization Code Flow](https://docs.photoprism.app/developer-guide/api/oauth2/#authorization-code-flow), set `PHOTOPRISM_OAUTH_APPS` to "none".
-- [Files and folders with names containing unsupported characters, such as `|"?*%<>{}:~$`, are no longer indexed, imported, or synced.](https://github.com/photoprism/photoprism/issues/5904) Files that are already in your library will be skipped during indexing until you rename them.
+- [Files and folders with names containing unsupported characters, such as `|"?*%<>{}:~$`, are no longer indexed, imported, or synced.](https://docs.photoprism.app/user-guide/library/originals/#unsupported-characters-in-names) Files that are already in your library will be skipped during indexing until you rename them.
 - [We recommend creating a database backup before upgrading.](https://docs.photoprism.app/user-guide/backups/) Due to schema migrations, the first start with an existing database may take longer than usual. These migrations may also temporarily require additional disk space.
 
 What's new?
@@ -27,13 +27,13 @@ What's new?
 - AI: [Enabled MCP for users and viewers, with an option to disable it per account](https://docs.photoprism.app/developer-guide/api/mcp/#authorization)
 - Auth: [Added OAuth support for connecting apps and remote MCP clients](https://docs.photoprism.app/developer-guide/api/oauth2/#connecting-apps)
 - Auth: [Fixed the sign-in page language picker displaying the wrong language](https://docs.photoprism.app/user-guide/settings/general/#user-interface)
-- Auth: [New usernames must only consist of standard ASCII characters](https://github.com/photoprism/photoprism/issues/5896)
-- Viewer: [Added Export dialog to choose download sizes and formats](https://github.com/photoprism/photoprism/issues/655) by [@omerdduran](https://github.com/omerdduran)
+- Auth: [New usernames must only consist of standard ASCII characters](https://docs.photoprism.app/user-guide/users/#adding-a-new-user)
+- Viewer: [Added Export dialog to choose download sizes and formats](https://docs.photoprism.app/user-guide/organize/download/#exporting-in-different-formats-and-sizes) by [@omerdduran](https://github.com/omerdduran)
 - Viewer: [Fixed face selection overlays not following zoom changes while editing](https://github.com/photoprism/photoprism/issues/5917)
 - Places: [Updated the default world map with the latest OpenStreetMap data](https://github.com/photoprism/photoprism/issues/5926)
 - Places: [Enhanced 3D Earth view with starry sky and atmospheric effects](https://docs.photoprism.app/user-guide/organize/places/#3d-earth-view)
 - Places: [Fixed zooming in the location dialog when animations are off](https://github.com/photoprism/photoprism/issues/5925)
-- Index: [Skipped files and folders whose names contain unsupported characters](https://github.com/photoprism/photoprism/issues/5904)
+- Index: [Skipped files and folders whose names contain unsupported characters](https://docs.photoprism.app/user-guide/library/originals/#unsupported-characters-in-names)
 - Labels: [Added retries to recover from database deadlocks when updating labels](https://github.com/photoprism/photoprism/issues/5823)
 - Metadata: [Fixed time zones for locations at sea in the Pacific](https://github.com/photoprism/photoprism/issues/5901)
 - Metadata: [Fixed date adjustment when changing time zones to or from UTC](https://github.com/photoprism/photoprism/issues/5918)

@@ -6,7 +6,7 @@
 <!-- Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions/#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview) -->
 
 ### Development Preview
-<span class="build">Build 261029-7cdf273b5</span>
+<span class="build">Build 261029-963b58c50</span>
 
 This release upgrades PhotoPrism's [database layer](https://github.com/photoprism/photoprism/pull/4831) and introduces experimental [🐘 PostgreSQL](https://docs.photoprism.app/getting-started/advanced/migrations/postgres/) support, thanks to [@keif888](https://github.com/keif888)'s hard work and numerous contributions.
 

@@ -46,4 +46,4 @@ The dialog lists each original file of the picture's [stack](stacks.md) together
 Select the outputs you need and click *Export*. Your browser then saves them one after the other, so it may ask for permission to download multiple files. If a download fails, you can retry it from the dialog.
 
 !!! info ""
-    *Export* is available to roles that may download files and can be turned off under [*Settings > General*](../settings/general.md#export).
+    *Export* is available to [roles](../users/roles.md) with full access to the library, such as Admins, Managers, and Users, but not to Viewers, Contributors, Guests, or Visitors, even if they may download files. It can be turned off under [*Settings > General*](../settings/general.md#export).

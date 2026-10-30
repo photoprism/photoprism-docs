@@ -71,12 +71,12 @@ An index schema migration is performed automatically every time PhotoPrism is (r
 
 ## Change Database
 
+The `photoprism database transfer` command copies your index to another kind of database, e.g. from SQLite to MariaDB, and creates the same tables as a new installation.
+
 [Migrate from SQLite to MariaDB ›](migrations/sqlite-to-mariadb.md)
 
-[Migrate from MariaDB to SQLite ›](migrations/mariadb-to-sqlite.md)
-
 !!! warning "Bad Performance"
-    Many users reporting poor performance and high CPU usage have migrated from SQLite to MariaDB, so their database schema is no longer optimized for performance. For example, MariaDB cannot handle rows with `text` columns in memory and always uses temporary tables on disk if there are any.
+    If you have moved your index from SQLite to MariaDB with third-party tools, your database schema may not be optimized for performance. For example, MariaDB cannot handle rows with `text` columns in memory and always uses temporary tables on disk if there are any. [Learn how to fix this ›](migrations/sqlite-to-mariadb.md#databases-migrated-with-other-tools)
 
     If this is the case, please make sure that your migrated database schema matches that of a fresh, non-migrated installation. It may help to [run the migrations manually](../advanced/migrations/index.md) in a terminal using the *migrations* subcommands. However, this does not guarantee that all issues such as missing indexes are resolved.
 

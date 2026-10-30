@@ -31,6 +31,7 @@ plugins:
         'developer-guide/apps/index.md': 'developer-guide/native-apps/index.md'
         'photoprism-pi.md': 'getting-started/raspberry-pi/microsd-image.md'
         'developer-guide/machine-learning/vision.md': 'developer-guide/vision/service/index.md'
+        'getting-started/advanced/migrations/mariadb-to-sqlite.md': 'getting-started/advanced/migrations/sqlite-to-mariadb.md'
 
 # Generate /llms.txt and /llms-full.txt for AI agents and LLM crawlers.
 # Production-only (like the privacy plugin), so it does not slow `mkdocs serve`.

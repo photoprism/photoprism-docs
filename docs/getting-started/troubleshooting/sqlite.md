@@ -43,8 +43,8 @@ If the server crashes unexpectedly or your database files get corrupted frequent
 
 ## Migrating to MariaDB
 
-When [migrating from SQLite to MariaDB](../advanced/migrations/sqlite-to-mariadb.md), e.g. using scripts and instructions from the community, you should note that your database schema may no longer be optimized for performance and indexes may be missing. Also, MariaDB cannot handle rows with "text" columns in memory and always uses temporary tables on disk if there are any.
+Use the `photoprism database transfer` command to [migrate from SQLite to MariaDB](../advanced/migrations/sqlite-to-mariadb.md), as it creates the same tables as a new installation.
 
-If this is the case, please make sure that your migrated database schema matches that of a [fresh, non-migrated installation](../../developer-guide/database/index.md) . It may help to [run the migrations manually](../advanced/migrations/index.md) in a terminal using the *migrations* subcommands. However, this does not guarantee that all issues such as missing indexes are resolved.
+If you have moved your index with third-party tools instead, your database schema may not be optimized for performance and indexes may be missing. Also, MariaDB cannot handle rows with "text" columns in memory and always uses temporary tables on disk if there are any. To fix this, [transfer your index to a new, empty database](../advanced/migrations/sqlite-to-mariadb.md#databases-migrated-with-other-tools).
 
 [Troubleshoot MariaDB Problems ›](mariadb.md){ class="block-xs" }

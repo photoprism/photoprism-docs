@@ -1,37 +1,52 @@
 # Migrating from SQLite to MariaDB
 
-*While we believe this contributed content may be helpful to advanced users, we have not yet thoroughly reviewed it. If you have suggestions for improvement, please let us know by clicking :material-file-edit-outline: to submit a change request.*
+The `photoprism database transfer` command copies your existing SQLite index to a MariaDB database, including users, sessions, albums, and settings. PhotoPrism creates the tables in the new database itself, so they are the same as in a new installation. An [index backup](../../../user-guide/backups/index.md#backup-command) can only be restored into the same kind of database, so it is not an alternative for this.
 
-- Install <https://github.com/techouse/sqlite3-to-mysql> on your host. (openSUSE: `zypper in python-sqlite3-to-mysql`)
-- Shutdown your current stack: `docker compose down`
-- Add the current snippet of the MariaDB to your SQLite PhotoPrism docker compose with the addition of the extra `ports`
-  section where you expose port 3306 to the Host. In my case this looked like attachment 1.
-- Start the stack again: `docker compose up -d`
-- Stop PhotoPrism: `docker compose stop photoprism`
-- On the **host** now run `sudo sqlite3mysql -f <PATH_TO_STORAGE_MOUNT>/storage/index.db -d photoprism -u root -p` and enter the MariaDB password when prompted (default is `insecure`).
-- Shutdown your current stack again: `docker compose down`
-- Edit your `compose.yaml` or `docker-compose.yml` so it uses the MariaDB database you added before. Don't forget to remove the `ports`
-  section of the MariaDB Container.
-- Start your stack again with `docker compose up -d`
-- If this worked you may want to delete the file `index.db` in the `storage` mount since it contains out of date
-  information.
+!!! info ""
+    The examples on this page assume that you are using [Docker Compose](../../docker-compose.md) and run the commands in the folder where your `compose.yaml` file is located.
 
-Attachment 1:
+## Moving Your Index
+
+1. Create an [index backup](../../../user-guide/backups/index.md#backup-command) with `docker compose exec photoprism photoprism backup -i`, so you can return to your current database if needed.
+2. Add a `mariadb` service to your `compose.yaml` as shown below, but leave the database settings of the `photoprism` service unchanged for now. Then start the new service with `docker compose up -d mariadb`.
+3. Stop PhotoPrism with `docker compose stop photoprism`, since changes made during the transfer would be missing in the new database.
+4. Run the transfer in a new container, using the values of your `mariadb` service. The `--entrypoint` option is required, as the command would otherwise not read the database settings of the `photoprism` service and transfer an empty index instead:
+
+    ```bash
+    docker compose run --rm --entrypoint /opt/photoprism/bin/photoprism photoprism database transfer --target-driver mariadb --target-server mariadb:3306 --target-name photoprism --target-user photoprism --target-password insecure
+    ```
+
+    If PhotoPrism runs as a non-root user that is set with `PHOTOPRISM_UID` and `PHOTOPRISM_GID` instead of the `user` property, also pass these IDs with `--user`, e.g. `--user 1000:1000`, so that files created in your storage folder keep the right owner.
+
+5. Change the database settings of the `photoprism` service to the MariaDB values shown below, and start it again with `docker compose up -d`.
+
+Once you have checked that your pictures, albums, and accounts are complete, you may delete the `index.db` file and other files starting with `index.db` from the `storage` folder, as they are no longer up to date.
+
+The target database must be empty. If PhotoPrism has already been started with it, the command refuses to run unless you pass `--force`, which replaces its data. If the transfer fails, the target is emptied again, so you can fix the cause and run the command once more. If the database server rejects large statements, lower the number of rows copied per statement with `--batch`, e.g. `--batch 100`.
+
+## Example Configuration
+
+The `mariadb` service is the same as in our [default `compose.yaml`](../../docker-compose.md):
 
 ```yaml
 services:
+  photoprism:
+    environment:
+      PHOTOPRISM_DATABASE_DRIVER: "mysql"
+      PHOTOPRISM_DATABASE_SERVER: "mariadb:3306"
+      PHOTOPRISM_DATABASE_NAME: "photoprism"
+      PHOTOPRISM_DATABASE_USER: "photoprism"
+      PHOTOPRISM_DATABASE_PASSWORD: "insecure"
+      ...
+
   mariadb:
-    restart: unless-stopped
     image: mariadb:12.3
-    ports:
-      - 3306:3306 # Expose Port 3306
+    restart: unless-stopped
+    stop_grace_period: 15s
     security_opt:
       - seccomp:unconfined
       - apparmor:unconfined
-    command: --innodb-buffer-pool-size=1G >
-      --transaction-isolation=READ-COMMITTED --character-set-server=utf8mb4
-      --collation-server=utf8mb4_unicode_ci --max-connections=512
-      --innodb-rollback-on-timeout=OFF --innodb-lock-wait-timeout=120
+    command: --innodb-buffer-pool-size=512M --transaction-isolation=READ-COMMITTED --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --max-connections=512 --innodb-rollback-on-timeout=OFF --innodb-lock-wait-timeout=120
     volumes:
       - "./database:/var/lib/mysql" # DO NOT REMOVE
     environment:
@@ -43,9 +58,22 @@ services:
       MARIADB_ROOT_PASSWORD: "insecure"
 ```
 
-!!! warning "Bad Performance"
-    Many users reporting poor performance and high CPU usage have migrated from SQLite to MariaDB, so their database schema is no longer optimized for performance. For example, MariaDB cannot handle rows with `text` columns in memory and always uses temporary tables on disk if there are any.
+Please change the passwords before you start the `mariadb` service for the first time, and use the same value for `MARIADB_PASSWORD`, `PHOTOPRISM_DATABASE_PASSWORD`, and `--target-password`. Store the database files on a local SSD, as shown above, rather than on a network share or USB flash drive.
 
-    If this is the case, please make sure that your migrated database schema matches that of a fresh, non-migrated installation. It may help to [run the migrations manually](../../advanced/migrations/index.md) in a terminal using the *migrations* subcommands. However, this does not guarantee that all issues such as missing indexing are resolved.
+## Databases Migrated With Other Tools
 
-    [View Database Schema ›](../../../developer-guide/database/index.md)
+If you have previously moved your index to MariaDB with third-party tools, columns may not have the data type they should have, and indexes may be missing. This can lead to [poor performance](../../troubleshooting/performance.md#migration-from-sqlite), for example because MariaDB cannot process rows with `text` columns in memory. Running the [schema migrations](index.md) again does not fix this.
+
+To get the same tables as a new installation, transfer your index to a new, empty database on the same server:
+
+1. Create an [index backup](../../../user-guide/backups/index.md#backup-command) and stop PhotoPrism as described above.
+2. Create the new database and allow the `photoprism` user to access it, using the password set with `MARIADB_ROOT_PASSWORD`:
+
+    ```bash
+    docker compose exec mariadb mariadb -uroot -pinsecure -e "CREATE DATABASE photoprism_new; GRANT ALL PRIVILEGES ON photoprism_new.* TO 'photoprism'@'%';"
+    ```
+
+3. Run the transfer with `--target-name photoprism_new` instead of `--target-name photoprism`.
+4. Set `PHOTOPRISM_DATABASE_NAME` to `photoprism_new` and start PhotoPrism again with `docker compose up -d`.
+
+[Learn more ›](../databases.md)

@@ -30,11 +30,9 @@ Advanced users may adjust [additional parameters](https://github.com/photoprism/
 
 ### Migration from SQLite ###
 
-After [migrating from SQLite](../advanced/migrations/sqlite-to-mariadb.md), it is possible that columns do not have exactly the data type they should have or that indexes are missing. This can lead to poor performance. For example, MariaDB cannot process rows with `text` columns in memory and always uses temporary tables on disk if there are any.
+If you have migrated from SQLite to MariaDB with third-party tools, it is possible that columns do not have exactly the data type they should have or that indexes are missing. This can lead to poor performance. For example, MariaDB cannot process rows with `text` columns in memory and always uses temporary tables on disk if there are any.
 
-The instructions for these migrations were provided by a contributor and are not part of the original software distribution. As such, they have not been officially released, recommended, or extensively tested by us.
-
-If this is the case, please make sure that your migrated database schema matches that of a [fresh, non-migrated installation](../../developer-guide/database/index.md) . It may help to [run the migrations manually](../advanced/migrations/index.md) in a terminal using the *migrations* subcommands. However, this does not guarantee that all issues such as missing indexes are resolved.
+Running the [schema migrations](../advanced/migrations/index.md) again does not fix this. Instead, [transfer your index to a new, empty database](../advanced/migrations/sqlite-to-mariadb.md#databases-migrated-with-other-tools) with the `photoprism database transfer` command, which creates the same tables as a new installation. Use the same command when [migrating from SQLite](../advanced/migrations/sqlite-to-mariadb.md).
 
 [View Database Schema ›](../../developer-guide/database/index.md)
 

@@ -52,6 +52,8 @@ A token needs the scope of the tool's resource besides `mcp`, for example `mcp r
 
 ## Connecting Clients
 
+For step-by-step client registration and agent setup on personal installations, see [Connecting AI Agents With MCP](../../getting-started/advanced/mcp.md).
+
 ### OAuth Sign-In
 
 MCP clients that support OAuth, such as remote connectors in AI assistants, can be [connected by users](oauth2.md#connecting-apps) without copying a token: when a client calls `/api/v1/mcp` without a valid access token, the `401 Unauthorized` response includes a `WWW-Authenticate` header that points to the [protected resource metadata](index.md#oauth2-protected-resource) at `/.well-known/oauth-protected-resource/api/v1/mcp`. The client then finds the authorization server, sends the user to the consent page, and receives an access token for the MCP endpoint.

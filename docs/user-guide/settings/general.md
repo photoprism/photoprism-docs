@@ -2,7 +2,7 @@
 
 In the *General* settings tab, you can configure basic user interface settings, accessibility options, and the maps shown in *Places*:
 
-![](img/settings-general-2607.jpg){ class="shadow" }
+![General settings with the Export feature](img/settings-general-2610.jpg){ class="shadow" }
 
 !!! info ""
     Feature switches in this tab are primarily intended for instance-wide customization. Some options are only shown to super admins and are not available in every edition or session type.

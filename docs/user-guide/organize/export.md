@@ -1,7 +1,5 @@
 # Export
 
-<!-- Screenshots: ui.photoprism.app, build 261029-963b58c50, Chrome 1180x820 (DPR 1). German counterparts use the -german filename suffix. -->
-
 Use the *Export* dialog to save originals, full-size previews, resized JPEGs, or compatible videos to your device. You can choose several versions of the picture or video open in the [fullscreen viewer](../navigate.md).
 
 ## Exporting Files
@@ -47,8 +45,6 @@ Audio, metadata files such as XMP, JSON, and YAML, and missing or unreadable fil
 
 Administrators can turn *Export* on or off under [*Settings > General*](../settings/general.md#export). It is enabled by default.
 
-![General settings with the Export feature enabled](img/export-settings-2610.jpg){ class="shadow" }
-
 The separate *Download* switch and the file choices under *Settings > Content > Download* apply to the [Download actions](download.md). Export uses its own switch and the versions you select in the dialog.
 
 ### Static & Dynamic Previews
@@ -58,8 +54,6 @@ The settings under [*Settings > Advanced > Preview Images*](../settings/advanced
 - With *Dynamic Previews* off, sizes are limited to the *Static Size Limit*.
 - With *Dynamic Previews* on, larger sizes can be created when needed, up to the *Dynamic Size Limit*. This limit is always at least as high as the static limit.
 - Previews up to the static limit are created during indexing. Larger previews may take longer to download because they are created on demand.
-
-![Advanced settings showing static and dynamic preview limits](img/export-previews-2610.jpg){ class="shadow" }
 
 Images keep their proportions and are never enlarged beyond their original size. Smaller pictures therefore offer fewer size choices.
 

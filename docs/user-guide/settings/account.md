@@ -3,7 +3,7 @@
 !!! tldr ""
     For security reasons, changing account-related settings through the user interface requires authentication, so these settings are not available when [public mode](../../getting-started/config-options.md#authentication) is enabled.
 
-![Screenshot](img/settings-account-2502.jpg){ class="shadow" }
+![Account settings with the Connected Apps action](img/settings-account-2610.jpg){ class="shadow" }
 
 ## Change Password ##
 
@@ -42,6 +42,8 @@ Example for generating an app password that you can use with [WebDAV-compatible]
 Apps and AI assistants that you allowed to access your library through [OAuth sign-in](../../developer-guide/api/oauth2.md#connecting-apps) are listed when you click the *Connected Apps* button under *Settings > Account*. To end an app's access, click *Disconnect*. The app can then no longer use the library on your behalf until you connect it again.
 
 This button is only shown if connecting apps is [enabled on your instance](../../developer-guide/api/oauth2.md#configuration).
+
+![Connected Apps dialog](img/settings-connected-apps-2610.jpg){ class="shadow" }
 
 ## Connect via WebDAV ##
 

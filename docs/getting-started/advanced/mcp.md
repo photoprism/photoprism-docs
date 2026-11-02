@@ -1,91 +1,52 @@
 # Connecting AI Agents With MCP
 
-<!-- Screenshots: ui.photoprism.app, build 261029-963b58c50, Chrome 1180x820 (DPR 1). German counterparts use the -german filename suffix. -->
-
 PhotoPrism's [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) server lets compatible AI assistants and agents look up PhotoPrism reference information and search your library. Its tools are read-only: they can find pictures, albums, people, and labels, but cannot edit or delete them.
+
+OAuth is the recommended way to connect an agent. You sign in to PhotoPrism and approve access, while the agent handles authentication for you.
 
 ## Before You Start
 
-- Use a PhotoPrism version that includes the [MCP library tools](../../release-notes.md). You can try upcoming changes with the [preview image](../updates.md#development-preview).
-- Your agent must support MCP over *Streamable HTTP* and be able to reach your PhotoPrism URL. A remote agent cannot connect to `localhost` on your computer; use a reachable [HTTPS address](../using-https.md).
-- MCP must be enabled under [*Settings > Advanced*](../../user-guide/settings/advanced.md#disable-mcp) and for your account.
+- Use a PhotoPrism version that includes the [MCP library tools](../../release-notes.md).
+- Your agent must support MCP over *Streamable HTTP* with OAuth sign-in and be able to reach your PhotoPrism URL. A remote agent cannot connect to `localhost` on your computer; use a reachable [HTTPS address](../using-https.md).
+- MCP must be enabled under [*Settings > Advanced*](../../user-guide/settings/advanced.md#disable-mcp) and for your account. Connecting apps must also be [enabled on your instance](../../developer-guide/api/oauth2.md#configuration).
 - Admins can use MCP in all editions, users and viewers in Plus and Pro, and managers in Pro. Contributors, guests, and visitors cannot use it.
 
 ## Create a Client in Personal Editions
 
-In Community Edition and PhotoPrism Plus, register clients from the terminal. The client-management web interface is a Pro feature. Run the commands below from your `compose.yaml` directory, replacing `photoprism` if your service has a different name. For other installations, run the equivalent `photoprism` commands in your terminal.
+Register clients from the terminal. The client-management web interface is a Pro feature.
 
 ### Register the Client
 
-1. Create a dedicated client bound to your PhotoPrism account, replacing `admin` with your username:
+1. Get the callback URL, also called the *redirect URI*, from your agent's MCP connection settings or documentation.
+2. From the directory containing your `compose.yaml`, run the following command. Replace the example callback URL with the exact URL supplied by your agent:
 
     ```bash
     docker compose exec photoprism photoprism clients add \
-      --name "Personal AI Agent" \
-      --scope "mcp read photos albums people labels" \
-      admin
+      --name "My AI Assistant" \
+      --redirect-uri 'https://assistant.example.com/oauth/callback'
     ```
 
-2. Copy the generated *Client ID* and *Client Secret* into your agent's secure credential storage. The secret is shown when it is created; do not put it in shared configuration files or screenshots.
-3. Request an access token from your instance, replacing the URL and both placeholders:
+3. Copy the returned *Client ID*. OAuth app clients do not require a client secret.
 
-    ```bash
-    curl --request POST 'https://photos.example.com/api/v1/oauth/token' \
-      --data-urlencode 'grant_type=client_credentials' \
-      --data-urlencode 'client_id=<client-id>' \
-      --data-urlencode 'client_secret=<client-secret>'
-    ```
+Replace `photoprism` if your Compose service has a different name. For other installations, run the equivalent `photoprism clients add` command in your terminal.
 
-4. Use the response's `access_token` as the bearer token in your agent. The response also states its lifetime in `expires_in`. Request a new token when it expires; a client ID or secret alone is not an access token.
-
-The `mcp` scope enables reference lookups; `photos albums people labels` adds library access. The `read` scope limits the token to read operations across the API. Add `folders`, `moments`, or `calendar` for those collection types, or `places` to include picture coordinates. The tools follow your account's visibility rules for private and archived pictures, albums, people, and labels.
-
-!!! tip "Access Token Alternative"
-    For agents that accept a fixed bearer token, you can generate one directly with `docker compose exec photoprism photoprism auth add --name "Personal AI Agent" --scope "mcp read photos albums people labels" admin`. This creates an account-bound app password that also works as a bearer token. See [Client Authentication](../../developer-guide/api/auth.md) for token lifetimes and management.
+Depending on your instance's [OAuth Apps setting](../../developer-guide/api/oauth2.md#configuration), agents that publish a client metadata document can connect without manual registration.
 
 ### Connect the Agent
 
-1. Open your agent's MCP server settings and add a server named `photoprism`.
-2. Select *Streamable HTTP* and enter `https://photos.example.com/api/v1/mcp`, using your own PhotoPrism URL.
-3. Configure the header `Authorization: Bearer <access-token>`. For agents that accept an `mcpServers` configuration, the connection may look like this:
+1. Open your agent's MCP connection settings and add a remote server with the URL `https://photos.example.com/api/v1/mcp`, using your own PhotoPrism hostname.
+2. Select OAuth authentication and enter the *Client ID* from the previous step. If a client secret field is shown, leave it empty.
+3. Start the connection. Your agent opens PhotoPrism in a browser, where you sign in to your account.
+4. Review the requested permissions and approve access. The agent completes the connection automatically.
+5. Try a request such as “Find my latest ten pictures” or “Which PhotoPrism filters can I use to search by date?”
 
-    ```json
-    {
-      "mcpServers": {
-        "photoprism": {
-          "url": "https://photos.example.com/api/v1/mcp",
-          "headers": {
-            "Authorization": "Bearer <access-token>"
-          }
-        }
-      }
-    }
-    ```
+The permissions you approve and your account's visibility rules determine which pictures, albums, people, and labels the agent can access.
 
-4. Save the connection and reload the agent's tools if needed. Configuration keys differ between agents, so use your agent's documented format for the URL and headers.
-5. Try a reference request such as “Which PhotoPrism filters can I use to search by date?” Then try “Find my latest ten pictures” to verify library access.
+## Manage Connected Apps
 
-For clients that only support stdio, use the [HTTP bridge example](../../developer-guide/api/mcp.md#access-tokens). Running `photoprism mcp serve` directly, or using HTTP in public mode, provides reference information only.
+Open [*Settings > Account > Connected Apps*](../../user-guide/settings/account.md#connected-apps) to review or disconnect an agent. Disconnecting it ends its access until you connect it again.
 
-## Connect With OAuth Sign-In
-
-Agents that support OAuth can let you sign in and approve access instead of pasting a bearer token. For personal editions, register the app in the terminal using the exact callback URL supplied by your agent:
-
-```bash
-docker compose exec photoprism photoprism clients add \
-  --name "My OAuth Agent" \
-  --redirect-uri 'https://agent.example.com/oauth/callback'
-```
-
-Enter the returned client ID if the agent asks for it. OAuth app clients have no client secret. Use the MCP endpoint above to connect, sign in to PhotoPrism, review the requested permissions, and approve the connection. Depending on the instance's [OAuth Apps setting](../../developer-guide/api/oauth2.md#configuration), agents that publish a client metadata document can connect without manual registration.
-
-Open *Settings > Account > Connected Apps* to review and disconnect agents connected through OAuth:
-
-![Account settings with the Connected Apps action](img/mcp-account-2610.jpg){ class="shadow" }
-
-![Connected Apps dialog for reviewing OAuth connections](img/mcp-connected-apps-2610.jpg){ class="shadow" }
-
-This list manages OAuth sign-in connections. Clients created with a secret are managed separately with `photoprism clients ls`, `photoprism clients show <client-id>`, and `photoprism clients rm <client-id>`. Removing a client revokes its access.
+![Connected Apps dialog](../../user-guide/settings/img/settings-connected-apps-2610.jpg){ class="shadow" }
 
 ## Available Tools
 
@@ -119,10 +80,10 @@ For example, ask “Which RAW formats does PhotoPrism support?” or “What set
 
 ## Troubleshooting
 
-- **Connection fails:** Check that the agent can reach your PhotoPrism address and that you selected Streamable HTTP with the `/api/v1/mcp` path.
-- **401 Unauthorized:** Check the bearer token and its expiration, or reconnect through OAuth.
-- **403 Forbidden:** Check the account's role, its MCP setting, and the token scopes. An `insufficient_scope` response identifies missing permissions; update the token scopes or approve the additional OAuth access.
-- **404 Not Found:** Check the installed version, reverse proxy route, and whether *Disable MCP* is enabled.
-- **Reference lookups work but library searches fail:** Check that you are using authenticated HTTP rather than stdio or public mode, and that the token includes the required library resource scopes.
+- **Connection fails:** Check that the agent can reach your PhotoPrism address and that you entered the `/api/v1/mcp` endpoint.
+- **Sign-in is unavailable:** Check that connecting apps is enabled and that the client ID matches a registered OAuth app.
+- **Callback URL error:** Register the exact redirect URI supplied by the agent.
+- **Access denied:** Check the account's role and MCP setting. If the agent requests additional permissions, review and approve them when you reconnect.
+- **Reference lookups work but library searches fail:** Check that you connected to an authenticated instance rather than one running in public mode, which only offers reference information.
 
-See the [MCP API Reference](../../developer-guide/api/mcp.md) for transport details and the complete tool reference.
+See the [MCP API Reference](../../developer-guide/api/mcp.md) for the complete tool reference.

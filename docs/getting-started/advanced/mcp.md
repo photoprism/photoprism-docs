@@ -23,14 +23,13 @@ Register clients from the terminal. The client-management web interface is a Pro
     ```bash
     docker compose exec photoprism photoprism clients add \
       --name "My AI Assistant" \
+      --scope "mcp read photos albums people labels" \
       --redirect-uri 'https://assistant.example.com/oauth/callback'
     ```
 
 3. Copy the returned *Client ID*. OAuth app clients do not require a client secret.
 
 Replace `photoprism` if your Compose service has a different name. For other installations, run the equivalent `photoprism clients add` command in your terminal.
-
-Depending on your instance's [OAuth Apps setting](../../developer-guide/api/oauth2.md#configuration), agents that publish a client metadata document can connect without manual registration.
 
 ### Connect the Agent
 
@@ -40,7 +39,7 @@ Depending on your instance's [OAuth Apps setting](../../developer-guide/api/oaut
 4. Review the requested permissions and approve access. The agent completes the connection automatically.
 5. Try a request such as “Find my latest ten pictures” or “Which PhotoPrism filters can I use to search by date?”
 
-The permissions you approve and your account's visibility rules determine which pictures, albums, people, and labels the agent can access.
+The permissions you approve and your account's permissions determine which pictures, albums, people, and labels the agent can access.
 
 ## Manage Connected Apps
 

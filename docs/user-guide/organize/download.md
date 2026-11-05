@@ -1,5 +1,7 @@
 # Downloading Files #
 
+To choose individual output formats and image sizes in the fullscreen viewer, use the [Export dialog](export.md).
+
 === "Using Context Menu"
      1. Select photos
      2. Click on the context menu

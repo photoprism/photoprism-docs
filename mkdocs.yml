@@ -56,6 +56,7 @@ nav:
     - Remote Access:
       - Tailscale VPN: getting-started/vpn/tailscale.md
     - Advanced:
+      - Model Context Protocol: getting-started/advanced/mcp.md
       - OpenID Connect:  getting-started/advanced/openid-connect.md
       - Video Transcoding: getting-started/advanced/transcoding.md
       - Using Kubernetes: getting-started/advanced/kubernetes.md
@@ -113,6 +114,7 @@ nav:
       - Batch Edit: user-guide/organize/batch-edit.md
       - Rotate Image: user-guide/organize/rotate.md
       - Download: user-guide/organize/download.md
+      - Export: user-guide/organize/export.md
       - Videos: user-guide/organize/video.md
       - Documents: user-guide/organize/documents.md
       - Places: user-guide/organize/places.md

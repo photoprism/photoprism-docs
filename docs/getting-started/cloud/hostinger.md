@@ -1,5 +1,8 @@
 # **Hostinger** VPS Hosting
 
+!!! warning "Use MariaDB Unless You Have a Very Small Library"
+    Hostinger's one-click deployment uses SQLite instead of MariaDB. **We do not recommend SQLite unless you have a very small library**, as it can cause poor performance as your library grows.
+
 PhotoPrism can be deployed at Hostinger with a single click through its *Docker Manager*. The installation includes a [Traefik](../proxies/traefik.md) reverse proxy, which obtains a free Let's Encrypt certificate so you can access your instance over HTTPS.
 
 !!! info ""
@@ -43,6 +46,8 @@ PhotoPrism opens over HTTPS at the hostname assigned to your application, for ex
 
 ### 4. First Steps 👣
 
+Unless you have a very small library, [switch to MariaDB](#switch-to-mariadb) before adding your pictures.
+
 After signing in, add your pictures through [browser uploads](../../user-guide/library/upload.md) or [WebDAV](../../user-guide/sync/webdav.md):
 
 ![Screenshot of a library with pictures, camera details, and place names](img/hostinger-library.png){ class="shadow" }
@@ -75,6 +80,53 @@ If you use the application's *Terminal* instead, run the `photoprism` commands d
 !!! info ""
     The deployment runs the PhotoPrism container as root. See our [Docker Security Guide](../advanced/docker-security.md#run-services-as-non-root-user) for instructions on running it as a non-root user. After verifying that SSH key authentication works, disable SSH password authentication and review the firewall settings in hPanel.
 
+## Switch to MariaDB
+
+Use the following steps to replace the default SQLite database with MariaDB. The transfer preserves your existing index, including users, albums, and settings, so you can also follow these steps if you have already added pictures.
+
+1. Open a [server terminal](#terminal-access), change to your application's directory, and create a database backup:
+
+    ```bash
+    cd /docker/photoprism-<name>
+    docker compose exec photoprism photoprism backup -i -f
+    ```
+
+2. Edit `/docker/photoprism-<name>/docker-compose.yml` and add the `mariadb` service from our [example configuration](../advanced/migrations/sqlite-to-mariadb.md#example-configuration) under the existing `services` key. Keep the existing PhotoPrism settings, volumes, and Traefik labels. Set strong, unique passwords for `MARIADB_PASSWORD` and `MARIADB_ROOT_PASSWORD` before starting MariaDB. The example stores its database files in `/docker/photoprism-<name>/database` through the `./database:/var/lib/mysql` bind mount.
+3. Start MariaDB and check its logs. Wait until it is ready for connections, then stop PhotoPrism to prevent changes during the transfer:
+
+    ```bash
+    docker compose up -d mariadb
+    docker compose logs mariadb
+    docker compose stop photoprism
+    ```
+
+4. Transfer the SQLite index to the new, empty MariaDB database. Replace `YOUR_DATABASE_PASSWORD` with the `MARIADB_PASSWORD` you set above, keeping the quotes:
+
+    ```bash
+    docker compose run --rm --entrypoint /opt/photoprism/bin/photoprism photoprism database transfer --target-driver mariadb --target-server mariadb:3306 --target-name photoprism --target-user photoprism --target-password 'YOUR_DATABASE_PASSWORD'
+    ```
+
+5. After the transfer succeeds, add or update these variables in the existing `environment` list of the `photoprism` service in `docker-compose.yml`. Use the same password as above and remove any `PHOTOPRISM_DATABASE_DSN` setting that points to SQLite:
+
+    ```yaml
+          - PHOTOPRISM_DATABASE_DRIVER=mysql
+          - PHOTOPRISM_DATABASE_SERVER=mariadb:3306
+          - PHOTOPRISM_DATABASE_NAME=photoprism
+          - PHOTOPRISM_DATABASE_USER=photoprism
+          - PHOTOPRISM_DATABASE_PASSWORD=YOUR_DATABASE_PASSWORD
+    ```
+
+6. Start PhotoPrism again and check its logs with the following commands. Open your HTTPS address and verify that your pictures, albums, and accounts are complete:
+
+    ```bash
+    docker compose up -d
+    docker compose logs photoprism
+    ```
+
+Include the new `database` directory in your [backups](#backups). Keep your SQLite backup until you have verified the migration. SQLite SQL dumps cannot be restored into MariaDB; use the transfer command above to migrate your index.
+
+[Learn more ›](../advanced/migrations/sqlite-to-mariadb.md)
+
 ## Updates
 
 The deployment uses the `latest` image tags for PhotoPrism and Traefik. Containers must be updated separately from the server's operating system.
@@ -92,6 +144,9 @@ After the update, check the application log with `docker compose logs -f photopr
 [Learn more ›](../updates.md)
 
 ## Backups
+
+!!! info "After Switching to MariaDB"
+    The paths and restore command below apply to the default SQLite installation. With MariaDB, database files are stored in `/docker/photoprism-<name>/database`, and SQL dumps are saved in the database driver's subdirectory of your configured backup folder. Back up the database as well as your *originals* and *storage* volumes, and follow the [restore instructions](../../user-guide/backups/restore.md#restore-command) when restoring a MariaDB dump.
 
 The installation stores your pictures in the `photoprism-<name>_photoprism_originals` Docker volume. The `photoprism-<name>_photoprism_storage` volume contains the SQLite index database, configuration, cache, and backup files. Both volumes are stored below `/var/lib/docker/volumes/` on the server.
 

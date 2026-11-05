@@ -2,7 +2,7 @@
 
 In the *General* settings tab, you can configure basic user interface settings, accessibility options, and the maps shown in *Places*:
 
-![](img/settings-general-2607.jpg){ class="shadow" }
+![General settings with the Export feature](img/settings-general-2610.jpg){ class="shadow" }
 
 !!! info ""
     Feature switches in this tab are primarily intended for instance-wide customization. Some options are only shown to super admins and are not available in every edition or session type.
@@ -45,12 +45,12 @@ When disabled, uploading files via [Web Upload](../library/upload.md) is not pos
 This can be useful when you grant others access to your instance but do not want them to upload files.
 
 #### :material-download: Download ####
-When disabled, no files can be downloaded from the PhotoPrism web interface. Please note that browser features such as saving already displayed content may still work.
+When disabled, the regular *Download* actions are hidden. The separate [*Export*](../organize/export.md) feature has its own switch. Browser features such as saving already displayed content may still work.
 
 Which files are included in a download, and whether entire collections can be downloaded as ZIP archives, is configured in the [*Collections*](collections.md) and [*Content*](library.md#download) settings tabs.
 
 #### :material-file-export: Export ####
-When disabled, the [*Export* dialog](../organize/download.md#exporting-in-different-formats-and-sizes) is not available in the fullscreen viewer. It is independent of the *Download* setting.
+When disabled, the [*Export* dialog](../organize/export.md) and its keyboard shortcut are unavailable in the fullscreen viewer. It is independent of the *Download* setting.
 
 #### :material-folder-plus: Import ####
 When disabled, files can no longer be [imported](../library/import.md) from the import folder. You must use [indexing](../library/originals.md) instead to discover newly added originals.

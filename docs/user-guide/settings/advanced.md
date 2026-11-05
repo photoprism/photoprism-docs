@@ -11,7 +11,7 @@ on the advanced settings page. You can also disable specific features and enable
     quality or size won't replace existing thumbnails. You can regenerate them using the
     [command-line interface](../../getting-started/docker-compose.md#command-line-interface).
 
-![](img/settings-advanced-2607.jpg){ class="shadow" }
+![Advanced settings with the Disable MCP option](img/settings-advanced-2611.jpg){ class="shadow" }
 
 All [config options](../../getting-started/config-options.md) can also be set in your `compose.yaml` or `docker-compose.yml`
 or via command-line parameters. Values changed through the web interface are saved in a config file stored in
@@ -98,6 +98,8 @@ When selected, [YAML files that back up picture metadata](../backups/export.md) 
 The corresponding [config toggle](../../getting-started/config-options.md#sidecar-files) is `PHOTOPRISM_SIDECAR_YAML`.
 
 ## Preview Images
+
+![Static and dynamic preview settings](img/settings-previews-2610.jpg){ class="shadow" }
 
 This section controls how JPEG preview and thumbnail images are rendered. These are high-quality, scaled-down versions of your originals.
 

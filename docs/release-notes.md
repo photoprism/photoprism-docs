@@ -4,9 +4,14 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 261111-5dc680f71</span>
+<span class="build">Build 261112-e1d27641c</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions/#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
+
+What's new?
+
+- Docker: [Upgraded base image to Ubuntu 26.10 (Stonking Stingray)](https://github.com/photoprism/photoprism/issues/5923)
+- Security: [Upgraded Go from v1.27.3 to v1.27.4 (12 CVE fixes)](https://github.com/golang/go/issues?q=milestone%3AGo1.27.4)
 
 ### October 29, 2026
 <span class="build">Build 261029-963b58c50</span>

@@ -43,6 +43,8 @@ One or more authorization scopes can be specified to limit access to certain API
 
 In addition to resource-specific scopes such as `photos`, `albums`, `webdav`, `metrics`, `vision`, or `cluster`, PhotoPrism also supports the generic `read`, `write`, and `*` scopes.
 
+Note that `write` is not a strictly write-only scope: it excludes search, view, and download requests, but the `POST`, `PUT`, and `DELETE` requests it permits generally respond with the affected resource, which may include its metadata. The same applies to resource-specific scopes limited to `write`, such as `files write`.
+
 !!! example ""
     Clients authenticated with app passwords are unable to change the account password or manage user accounts, even if you specify all scopes or use the wildcard `"*"` to allow all.
 

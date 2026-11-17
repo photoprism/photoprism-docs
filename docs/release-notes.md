@@ -4,12 +4,14 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 261115-5e51fcddf</span>
+<span class="build">Build 261117-285a4874e</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions/#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
 What's new?
 
+- UX: [Fixed downloads of pictures whose files are no longer on disk](https://github.com/photoprism/photoprism/issues/5830)
+- Metadata: [Fixed Google Pixel photos being detected as animated](https://github.com/photoprism/photoprism/issues/5936) by [@omerdduran](https://github.com/omerdduran)
 - Docker: [Upgraded base image to Ubuntu 26.10 (Stonking Stingray)](https://github.com/photoprism/photoprism/issues/5923)
 - Security: [Upgraded Go from v1.27.3 to v1.27.4 (12 CVE fixes)](https://github.com/golang/go/issues?q=milestone%3AGo1.27.4)
 

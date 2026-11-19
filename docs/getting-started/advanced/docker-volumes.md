@@ -43,7 +43,7 @@ volumes:
 SQLite, config, cache, backup, thumbnail and sidecar files are saved in the *storage* folder:
 
 - a *storage* folder mount must always be configured in your `compose.yaml` or `docker-compose.yml` file so that you do not lose these files after a restart or upgrade
-- never configure the *storage* folder to be inside the *originals* folder, not even under a hidden name that starts with a `.` [Learn more ›](../../known-issues.md#nested-storage-folder)
+- [never configure the *storage* folder to be inside *originals*](../../known-issues.md#nested-storage-folder), not even under a hidden name that starts with a `.`
 - we recommend placing the *storage* folder on a [local SSD drive](../troubleshooting/performance.md#storage) for best performance
 - mounting [symbolic links](https://en.wikipedia.org/wiki/Symbolic_link) or using them inside the *storage* folder is currently not supported
 - avoid using a named or anonymous [Docker volume](https://docs.docker.com/reference/compose-file/volumes/#example) for permanently storing files, as this can lead to data loss when the container is recreated, e.g. [after an update](../updates.md#docker-compose) of the Docker image

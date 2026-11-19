@@ -16,7 +16,14 @@ Inexperienced users are advised to closely follow our documentation and to use t
 
 ### Nested Storage Folder
 
-We recommend not to configure the *storage* folder to be inside the *originals* folder unless the name starts with a `.` to indicate that it is hidden.
+Do not configure the *storage* folder inside the *originals* folder, even under a name that starts with a `.` to indicate that it is hidden. The *storage* folder contains your configuration, including credentials and keys, as well as the index database if you use SQLite, cache files, thumbnails, and sidecar files. Inside *originals*, all of this becomes part of your library folder:
+
+- Anyone and anything with access to your originals can also read and change these files, for example other users of a shared instance, network shares, and sync apps.
+- Backups and copies of your originals also include the cache and thumbnails, which can take up a lot of space, and your configuration with its secrets.
+- Moving, restoring, or cleaning up the *originals* folder also affects your index, settings, and thumbnails.
+- Other apps that scan your pictures may find and index the thumbnails and cache files.
+
+Our [config examples](getting-started/docker-compose.md#photoprismstorage) always set a separate *storage* folder. PhotoPrism only falls back to `.photoprism/storage` inside *originals* when no *storage* folder is configured at all, which is meant for simple standalone setups rather than shared instances.
 
 In older releases prior to [240420-ef5f14bc4](https://docs.photoprism.app/release-notes/#april-20-2024), this could [lead to an indexing loop](https://github.com/photoprism/photoprism/issues/1642) by indexing thumbnails of already indexed files.
 

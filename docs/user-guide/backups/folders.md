@@ -8,7 +8,7 @@ Your original photo and video media files are [stored in the *originals* folder]
 
 ## Storage
 
-Unless you have a [custom configuration](../settings/advanced.md), the [*storage* folder](../../getting-started/docker-compose.md#photoprismstorage) is used to read and write [config](#config), [cache](#cache), [backup](#backup), [thumbnail](#thumbnails), and [sidecar](#sidecar) files. We recommend [not configuring](../../known-issues.md#nested-storage-folder) the *storage* folder inside the *originals* folder unless its name starts with `.` so it remains hidden. The path can be changed using the environment variable `PHOTOPRISM_STORAGE_PATH`, the [corresponding CLI flag](../../getting-started/config-options.md#storage), or a [YAML configuration file](../../getting-started/config-files/index.md#storage).
+Unless you have a [custom configuration](../settings/advanced.md), the [*storage* folder](../../getting-started/docker-compose.md#photoprismstorage) is used to read and write [config](#config), [cache](#cache), [backup](#backup), [thumbnail](#thumbnails), and [sidecar](#sidecar) files. Do [not configure](../../known-issues.md#nested-storage-folder) the *storage* folder inside the *originals* folder, even under a hidden name that starts with `.`. The path can be changed using the environment variable `PHOTOPRISM_STORAGE_PATH`, the [corresponding CLI flag](../../getting-started/config-options.md#storage), or a [YAML configuration file](../../getting-started/config-files/index.md#storage).
 
 [Learn more ›](../../getting-started/docker-compose.md#photoprismstorage)
 

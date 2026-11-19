@@ -80,7 +80,7 @@ services:
 ```
 
 !!! tldr ""
-    Never configure the *storage* folder to be inside the *originals* folder unless the name starts with a `.` to indicate that it is hidden.
+    Never configure the *storage* folder to be inside the *originals* folder, not even under a hidden name that starts with a `.`. [Learn more ›](../../known-issues.md#nested-storage-folder)
     Should you later want to move your instance to another NAS, the easiest and most time-saving way is to copy the entire *storage* folder along with your *originals* and *database*.
 
 ##### /photoprism/import #####

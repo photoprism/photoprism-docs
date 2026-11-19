@@ -41,7 +41,7 @@ docker compose up -d
 
 Recommended production-like coverage:
 
-- Run behind Traefik, Caddy, Nginx, Apache, or another supported reverse proxy.
+- Run behind Traefik, Caddy, NGINX, Apache, or another supported reverse proxy.
 - Enable HTTPS and verify forwarded headers, cookie security flags, canonical host handling, and redirect behavior.
 - Test with a non-admin user, an admin user, a public visitor, and an expired or invalid session.
 - Test with realistic media files, including images, videos, sidecar files, uncommon extensions, malformed metadata, large files, and duplicate names.

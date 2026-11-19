@@ -1,7 +1,7 @@
 # Using NGINX as Reverse Proxy
 
 !!! danger "Getting Support"
-    Since [NGINX](https://www.nginx.com/) is [easy to misconfigure](https://www.nginx.com/nginx-wiki/build/dirhtml/start/topics/tutorials/config_pitfalls/), we cannot [provide individual support](https://www.photoprism.app/kb/getting-support/) for proxy-related issues such as [failed uploads](https://github.com/photoprism/photoprism/discussions/2698#discussioncomment-9056567), [connection errors](../troubleshooting/index.md#connection-fails), [broken thumbnails](../troubleshooting/index.md#broken-thumbnails), or [video playback problems](../troubleshooting/index.md#videos-dont-play). Please ask the NGINX community for help or consider [Traefik](traefik.md) when you prefer a simpler proxy.
+    Since [NGINX](https://nginx.org/) is [easy to misconfigure](https://github.com/nginxinc/nginx-wiki/blob/master/source/start/topics/tutorials/config_pitfalls.rst), we cannot [provide individual support](https://www.photoprism.app/kb/getting-support/) for proxy-related issues such as [failed uploads](https://github.com/photoprism/photoprism/discussions/2698#discussioncomment-9056567), [connection errors](../troubleshooting/index.md#connection-fails), [broken thumbnails](../troubleshooting/index.md#broken-thumbnails), or [video playback problems](../troubleshooting/index.md#videos-dont-play). Please ask the NGINX community for help or consider [Traefik](traefik.md) when you prefer a simpler proxy.
 
 NGINX sits in front of PhotoPrism to terminate TLS, enforce HTTP/2, and shield uploads and downloads with additional rate limiting or request filtering. Keep PhotoPrism’s internal TLS disabled (`PHOTOPRISM_DISABLE_TLS="true"`) so NGINX can manage certificates, and ensure the proxy host has enough free disk space for TLS assets and logs.
 
@@ -33,7 +33,7 @@ server {
 server {
     listen 443 ssl;
     listen [::]:443 ssl;
-    http2 on;
+    http2 on;                 # NGINX 1.25.0 and older: use "listen 443 ssl http2;" instead
     server_name example.com;
 
     ssl_certificate     /etc/letsencrypt/live/example.com/fullchain.pem;
@@ -64,7 +64,7 @@ Adapt `server_name`, certificate paths, and the upstream address to match your e
 
 More examples are available in the [NGINX documentation](https://nginx.org/en/docs/). Also see our [advanced guide](../advanced/nginx-proxy-setup.md) when you need extra hardening tips, WebDAV notes, and operator checklists.
 
-[View "Pitfalls and Common Mistakes" ›](https://www.nginx.com/nginx-wiki/build/dirhtml/start/topics/tutorials/config_pitfalls/)
+[View "Pitfalls and Common Mistakes" ›](https://github.com/nginxinc/nginx-wiki/blob/master/source/start/topics/tutorials/config_pitfalls.rst)
 
 ### Why Use a Proxy? ###
 

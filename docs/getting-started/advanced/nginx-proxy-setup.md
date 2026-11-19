@@ -3,13 +3,13 @@
 *While we believe this contributed content may be helpful to advanced users, we have not yet thoroughly reviewed it. If you have suggestions for improvement, please let us know by clicking :material-file-edit-outline: to submit a change request.*
 
 !!! danger "Getting Support"
-    Since [NGINX](../proxies/nginx.md) can be [tricky to configure](https://www.nginx.com/nginx-wiki/build/dirhtml/start/topics/tutorials/config_pitfalls/) we cannot [provide individual support](https://www.photoprism.app/kb/getting-support/) for proxy-related errors such as [failed uploads](https://github.com/photoprism/photoprism/discussions/2698#discussioncomment-9056567), [connection issues](../troubleshooting/index.md#connection-fails), [broken thumbnails](../troubleshooting/index.md#broken-thumbnails), or [video playback problems](../troubleshooting/index.md#videos-dont-play). Please reach out to the NGINX community or switch to [Traefik](../proxies/traefik.md) if you prefer an easier reverse proxy.
+    Since [NGINX](../proxies/nginx.md) can be [tricky to configure](https://github.com/nginxinc/nginx-wiki/blob/master/source/start/topics/tutorials/config_pitfalls.rst) we cannot [provide individual support](https://www.photoprism.app/kb/getting-support/) for proxy-related errors such as [failed uploads](https://github.com/photoprism/photoprism/discussions/2698#discussioncomment-9056567), [connection issues](../troubleshooting/index.md#connection-fails), [broken thumbnails](../troubleshooting/index.md#broken-thumbnails), or [video playback problems](../troubleshooting/index.md#videos-dont-play). Please reach out to the NGINX community or switch to [Traefik](../proxies/traefik.md) if you prefer an easier reverse proxy.
 
 Running PhotoPrism behind a hardened reverse proxy adds TLS, HTTP/2, request filtering, and long-request buffering that our embedded Go HTTP server intentionally keeps minimal. If you expose PhotoPrism to the public internet, you **must** terminate HTTPS properly and keep the host patched.
 
 Before you start, set [the public Site URL](../config-options.md#site-information) to your external `https://` address. If NGINX connects from an address outside Docker’s default internal range, add the proxy IP or CIDR to [`PHOTOPRISM_TRUSTED_PROXY`](../config-options.md#networking) so PhotoPrism accepts forwarded client and protocol headers.
 
-The examples below use `photoprism.example.com`; replace it with your own domain or DynDNS record. Commands target Ubuntu 20.04+, but the concepts apply to other distributions.
+The examples below use `photoprism.example.com`; replace it with your own domain or DynDNS record. Commands target current Ubuntu LTS releases, but the concepts apply to other distributions.
 
 ## Prerequisites
 
@@ -68,8 +68,9 @@ server {
 }
 
 server {
-    listen 443 ssl http2;
-    listen [::]:443 ssl http2;
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    http2 on;                 # NGINX 1.25.0 and older: use "listen 443 ssl http2;" instead
     server_name photoprism.example.com;
 
     ssl_certificate     /etc/letsencrypt/live/photoprism.example.com/fullchain.pem;
@@ -77,11 +78,6 @@ server {
     ssl_protocols       TLSv1.2 TLSv1.3;
     ssl_ciphers         HIGH:!aNULL:!MD5:!3DES;
     add_header Strict-Transport-Security "max-age=31536000; includeSubDomains" always;
-    ssl_stapling on;
-    ssl_stapling_verify on;
-
-    resolver 1.1.1.1 8.8.8.8 9.9.9.9 valid=300s;
-    resolver_timeout 5s;
 
     client_max_body_size 512M;        # Allow large uploads
     proxy_buffering off;              # Stream uploads directly
@@ -132,4 +128,4 @@ Visit `https://photoprism.example.com/` to confirm the certificate, login page, 
 - **Monitoring**: Tail `/var/log/nginx/access.log` and `/var/log/nginx/error.log` after configuration changes. Failed uploads typically show up as `413 Request Entity Too Large`, which signals that `client_max_body_size` needs to be increased.
 
 !!! warning
-    Keep your operating system, NGINX packages, and Certbot up to date. Unpatched proxies are a common attack vector even when PhotoPrism itself is isolated behind the service.
+    Keep your operating system, NGINX packages, and Certbot up to date. Unpatched proxies are a common attack vector even when PhotoPrism itself is isolated behind the service. The [NGINX security advisories](https://nginx.org/en/security_advisories.html) list affected and fixed versions.

@@ -49,8 +49,8 @@ Inside `/etc/config/swag/nginx/proxy-confs/` rename `photoprism.subdomain.conf.s
 
 ```nginx
 server {
-    listen 443 ssl http2;
-    listen [::]:443 ssl http2;
+    listen 443 ssl;
+    listen [::]:443 ssl;
     server_name photoprism.mydomain.duckdns.org;
 
     include /config/nginx/ssl.conf;
@@ -58,7 +58,7 @@ server {
 
     location / {
         include /config/nginx/proxy.conf;
-        resolver 127.0.0.11 valid=30s;
+        include /config/nginx/resolver.conf;
         set $upstream_app photoprism;
         set $upstream_port 2342;
         set $upstream_proto http;

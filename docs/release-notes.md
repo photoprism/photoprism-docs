@@ -4,13 +4,14 @@
     You can test [**upcoming features and enhancements**](https://link.photoprism.app/roadmap) by changing the image tag from `:latest` to [`:preview`](https://hub.docker.com/r/photoprism/photoprism/tags?page=1&name=preview) and then following [our update guide](getting-started/updates.md#development-preview) to download the newest image from [Docker Hub](https://hub.docker.com/r/photoprism/photoprism/tags) and restart your instance.
 
 ### Development Preview
-<span class="build">Build 261119-bdacb42d7</span>
+<span class="build">Build 261119-94f695722</span>
 
 Our [preview builds](getting-started/updates.md#development-preview) give you early access to [additional features and enhancements](https://github.com/orgs/photoprism/projects/5) that will be part of the next stable release. Thank you to everyone who [supports us as a member](https://www.photoprism.app/editions/#compare), contributes [pull requests](https://docs.photoprism.app/developer-guide/pull-requests/), or helps us [test the changes](https://github.com/photoprism/photoprism/issues?q=is%3Aissue%20state%3Aopen%20label%3Aplease-test)! [Learn more ›](getting-started/updates.md#development-preview)
 
 What's new?
 
 - UX: [Fixed downloads of pictures whose files are no longer on disk](https://github.com/photoprism/photoprism/issues/5830)
+- Search: [Improved city and state filters to ignore letter case on PostgreSQL](https://github.com/photoprism/photoprism/issues/5947)
 - Metadata: [Fixed Google Pixel photos being detected as animated](https://github.com/photoprism/photoprism/issues/5936) by [@omerdduran](https://github.com/omerdduran)
 - CLI: [Fixed finishing an interrupted face migration with `faces migrate`](https://github.com/photoprism/photoprism/issues/5945)
 - CLI: [Improved face clustering and migration messages](https://github.com/photoprism/photoprism/issues/5944)

@@ -10,6 +10,7 @@ Also set [the public Site URL](../config-options.md#site-information) to your ex
 ## Requirements
 
 - Install `nginx` plus `certbot` (or reuse an existing ACME client) on the proxy host.
+- Run a supported NGINX release and install security updates promptly, since NGINX faces the internet directly in this setup. The [NGINX security advisories](https://nginx.org/en/security_advisories.html) list affected and fixed versions.
 - Expose only ports 80/443 to the internet; keep PhotoPrism’s internal port (2342 by default) private.
 - Enable the `map` directive for `$connection_upgrade` (Ubuntu ships it in `/etc/nginx/nginx.conf`). Add `map $http_upgrade $connection_upgrade { default upgrade; '' close; }` if your distro does not.
 
@@ -30,8 +31,9 @@ server {
 }
 
 server {
-    listen 443 ssl http2;
-    listen [::]:443 ssl http2;
+    listen 443 ssl;
+    listen [::]:443 ssl;
+    http2 on;
     server_name example.com;
 
     ssl_certificate     /etc/letsencrypt/live/example.com/fullchain.pem;

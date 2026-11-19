@@ -41,6 +41,8 @@ services:
 
 Persist `/config` so certificates and fail2ban state survive container restarts.
 
+Since SWAG faces the internet directly, pull its latest image regularly (`docker compose pull swag && docker compose up -d swag`) so you receive NGINX security updates promptly. The [NGINX security advisories](https://nginx.org/en/security_advisories.html) list affected and fixed versions.
+
 ## Step 3: Enable the PhotoPrism Proxy Config
 
 Inside `/etc/config/swag/nginx/proxy-confs/` rename `photoprism.subdomain.conf.sample` to `photoprism.subdomain.conf`. Custom deployments can create their own file with settings similar to:

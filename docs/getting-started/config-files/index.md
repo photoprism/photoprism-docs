@@ -13,13 +13,15 @@ If you use a third-party integration or package, you should find the exact locat
     that [config values changed through the web interface](../../user-guide/settings/advanced.md) will also be saved to this
     file. We therefore recommend that you only edit it manually while your instance is stopped.
 
+Since an `options.yml` file may contain passwords, such as the initial `AdminPassword` and the `DatabasePassword`, make sure that it can only be read by the user running PhotoPrism, e.g. with `chmod 600 options.yml`.
+
 ### YAML File Format ###
 
 You can use any text editor to [create or modify YAML config files](../../developer-guide/technologies/yaml.md). When
 specifying values, make sure that [their data type matches the documentation](index.md#config-options), e.g. *bool*
 values must be either `true` or `false` (without quotes,
 unlike [in `compose.yaml` files](../../developer-guide/technologies/yaml.md#true-false)) and *int* values must be
-whole numbers, as shown in [this example](https://dl.photoprism.app/pkg/linux/defaults.yml):
+whole numbers, as shown in [this example](https://dl.photoprism.app/pkg/linux/options.yml):
 
 ```yaml
 Debug: false

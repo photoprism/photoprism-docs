@@ -13,6 +13,8 @@ Keep in mind that any changes to the config options, either [through the UI](../
 !!! tldr ""
     A `defaults.yml` file affects all users and should only contain options for which you want to set a global default.
 
+The example below is intended for users of our [installation packages](https://dl.photoprism.app/pkg/linux/README.html). When running PhotoPrism in a container, e.g. with [Docker Compose](../docker-compose.md) or Podman, we recommend [configuring it with environment variables](../config-options.md) instead.
+
 ### YAML File Format ###
 
 You can use any text editor to [create or modify YAML config files](../../developer-guide/technologies/yaml.md). When specifying values, make sure that [their data type matches the documentation](index.md#config-options), e.g. *bool* values must be either `true` or `false` (without quotes, unlike [in `compose.yaml` files](../../developer-guide/technologies/yaml.md#true-false)) and *int* values must be whole numbers, as shown in [this example](https://dl.photoprism.app/pkg/linux/defaults.yml):
@@ -44,6 +46,9 @@ JpegQuality: 85
 DetectNSFW: false
 UploadNSFW: true
 ```
+
+!!! danger ""
+    The `AdminPassword` value only serves as the initial password of the admin account and should be changed after the first login. Since a `defaults.yml` file may be shared by multiple users on a server, a password set there is not considered secure. Instance-specific settings such as passwords belong in an [`options.yml`](index.md) file that only the user running PhotoPrism can read, e.g. with `chmod 600 options.yml`.
 
 To avoid ambiguity, it is recommended to enclose text strings in `"` (double quotes), especially if they contain spaces, a colon, or other special characters.
 

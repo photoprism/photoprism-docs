@@ -1,6 +1,6 @@
 # Face Recognition
 
-**Last Updated:** October 6, 2026
+**Last Updated:** November 18, 2026
 
 To [recognize faces](https://docs.photoprism.app/user-guide/organize/people/), PhotoPrism uses a multi-stage AI pipeline that detects faces, generates embeddings, and clusters similar faces so they can be easily organized by person.
 
@@ -94,7 +94,7 @@ It defaults to the supported model, so an ordinary migration needs no `--to`. `p
 [Create a backup](../../user-guide/ai/face-recognition.md#creating-a-backup) of the index database and `options.yml` before you start, since a migration cannot be undone otherwise. Restart the instance once it has finished, and see [Migrate Face Embeddings](cli.md#migrate-face-embeddings) for the dry run, the report it prints, what re-detection can lose, and what happens to person assignments.
 
 !!! info ""
-    If the configured model cannot read a library's stored vectors, embedding work **pauses** rather than silently filtering the mismatch: generation, clustering, and matching stop after one warning until a migration reconciles them. Detection keeps running, so faces stay recorded and their vectors are filled in afterwards.
+    If the configured model cannot read a library's stored vectors, embedding work **pauses** rather than silently filtering the mismatch: generation, clustering, and matching stop after one warning until a migration reconciles them. Scheduled face detection is skipped while the pause lasts, because a detected face is only saved as a marker together with its embedding; once the library is migrated, `photoprism faces index` detects the faces in pictures indexed meanwhile. When every stored vector the configured model cannot read uses the default model, as an unfinished migration leaves them, the warning and `photoprism faces status` recommend finishing it with `photoprism faces migrate`.
 
 ## Configuration
 
@@ -243,7 +243,7 @@ Detected faces that never reach **People › New** usually mean clustering has n
 docker compose exec photoprism photoprism faces status
 ```
 
-It names which of the two situations applies. If markers exist but none is newer than the newest cluster, an automatic pass will not restart on its own, and `photoprism faces update --force` is what reconsiders the whole library. If instead there are simply not enough markers clearing the bars yet, the report says how many clear each one — and the gap between "clears the size bar" and "clears the score bar" tells you which threshold to look at first.
+It names which of the two situations applies. If markers exist but none is newer than the newest cluster, an automatic pass will not restart on its own, and `photoprism faces update --force` is what reconsiders the whole library — when enough of those markers clear both bars for a forced pass; otherwise the report says that a forced run cannot cluster them either. If instead there are simply not enough markers clearing the bars yet, the report says how many clear each one — and the gap between "clears the size bar" and "clears the score bar" tells you which threshold to look at first.
 
 ## Face Embeddings
 

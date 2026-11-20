@@ -160,7 +160,7 @@ docker compose exec photoprism photoprism faces status
 Above the tables, the report states in prose whether detection and recognition are enabled, which detector and model are in force, and — when no clusters are forming — **why** automatic clustering is waiting. It distinguishes two cases that look identical from the outside:
 
 - **Not enough new markers yet.** The report names how many are needed, how many there are, and how many clear [`PHOTOPRISM_FACE_CLUSTER_SIZE`](face-recognition.md#clustering-settings) and the per-detector score bar.
-- **Markers exist, but none is newer than the last cluster.** An automatic pass counts only markers added since the newest cluster it produced, so a library in this state never restarts on its own. The report names `photoprism faces update --force` as the fix.
+- **Markers exist, but none is newer than the last cluster.** An automatic pass counts only markers added since the newest cluster it produced, so a library in this state never restarts on its own. When enough of those markers clear both bars for a forced pass, the report names `photoprism faces update --force`; otherwise it says that a forced run cannot cluster them either, and how many it would need. A forced run forms a cluster only where enough markers show one person, so once one has changed nothing more, for example the passes a completed migration runs, another helps only after more faces are added or named, or the clustering parameters change.
 
 ### Inspect People, Clusters, and Markers
 
@@ -250,7 +250,7 @@ Run clustering and matching over the markers already in the index:
 docker compose exec photoprism photoprism faces update
 ```
 
-An ordinary run only considers markers added since the newest automatic cluster. To reconsider every marker in the library — which is what `faces status` recommends when clustering has stalled — pass `--force`:
+An ordinary run only considers markers added since the newest automatic cluster. To reconsider every marker in the library — which is what `faces status` recommends when clustering has stalled and a forced pass can cluster the markers — pass `--force`:
 
 ```bash
 docker compose exec photoprism photoprism faces update --force
@@ -358,7 +358,7 @@ Changing the embedding model is a migration rather than a configuration change, 
 docker compose exec photoprism photoprism faces migrate
 ```
 
-It defaults to the model this release supports, so an ordinary migration needs no target. Name one with `--to` only when migrating somewhere else.
+It defaults to the model this release supports, so an ordinary migration needs no target. Name one with `--to` only when migrating somewhere else. Migrating back to `facenet` is not supported for libraries: `--to facenet` is accepted for testing only, logs a warning, and goes away together with TensorFlow.
 
 Run it with `--dry-run` first to see the scope without changing the index:
 
@@ -387,10 +387,10 @@ The dry run's "identified manually" figure is counted the same way and additiona
 
 Two guards act on the result:
 
-- **The finalize guard refuses a destructive finalize** when more than 10% of the markers that clear both clustering bars lost their vector. Markers below those bars are deliberately excluded from the ratio, because they seed no cluster and join none — counting them made a detector that re-finds fewer weak faces look like a storage fault.
-- **The exit status is non-zero whenever any marker lost its vector**, not only a clusterable one. A run that discarded a large share of a library below the clustering bars would otherwise be indistinguishable from a clean run to anything checking the exit code.
+- **The finalize guard refuses a destructive finalize** when more than 10% of the markers that clear both clustering bars lost their vector. Markers below those bars are deliberately excluded from the ratio, because they seed no cluster and join none — counting them made a detector that re-finds fewer weak faces look like a storage fault. The ratio covers the **whole migration**: embeddings are saved per file, so a re-run skips the markers that already use the target model and counts them as migrated, and a migration resumed after an interruption is judged as one uninterrupted run would have been. Files that cannot be read and faces the model returns no valid vector for are judged within the current run instead, so earlier progress cannot hide a storage fault, and a run in which no marker could be re-embedded at all is refused.
+- **The exit status is non-zero whenever any marker lost its vector**, not only a clusterable one. A run that discarded a large share of a library below the clustering bars would otherwise be indistinguishable from a clean run to anything checking the exit code. The last line then starts with `faces: migration applied;` and names what was lost.
 
-Use `--force` to finalize a migration even when some markers could not be re-embedded.
+A refusal names, per cause, whether running the migration again can change the result: faces the detector did not find again stay missing with the same configuration, while unreadable files and failed embeddings may succeed once the cause is fixed. Use `--force` to finalize a migration even when some markers could not be re-embedded: every person and assignment is kept, and only the vectors that could not be regenerated are removed.
 
 !!! info ""
     **Restart the instance once the migration has finished**, so that it loads the model the run recorded in `options.yml`. A process that has not loaded it pauses face embeddings rather than clustering vectors it cannot compare. Stopping the instance beforehand is not required: the run holds a lock under the storage path that a server in another process reads, so indexing, vision, and the endpoints that change people hold off while it runs, the last answering `409 Conflict`. The check happens where such a run starts, so a pass already in flight is not interrupted, and deleting pictures permanently still removes their markers. If the set of named markers changes while the migration runs, the finalize is rolled back and the migration has to be repeated — safe, but it costs the whole run.

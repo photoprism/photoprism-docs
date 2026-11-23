@@ -21,6 +21,15 @@
 - Date/Time Created
 - Date/Time Updated
 
+!!! note ""
+    Metadata embedded in the files themselves, such as Exif, takes precedence. Values from the JSON file are only used for fields that are still empty, so if you corrected the date or location of a photo in Google Photos, PhotoPrism will continue to show the original value as long as it remains in the file's Exif data. To use the values from the JSON files instead, remove the embedded dates before indexing, for example with [ExifTool](https://exiftool.org/):
+
+    ```bash
+    exiftool -CreateDate= -DateTimeOriginal= -GPSDateTime= -GPSDateStamp= -ModifyDate= filename.jpg
+    ```
+
+    Running this command modifies your original files, so make sure you have a backup.
+
 ## Transfer Albums ##
 
 !!! note ""

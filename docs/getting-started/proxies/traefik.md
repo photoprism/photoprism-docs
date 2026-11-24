@@ -11,7 +11,7 @@ To run PhotoPrism behind Traefik, create a `traefik.yaml` configuration and then
     ```yaml
     services:
       traefik:
-        image: traefik:v3.7
+        image: traefik:v3.8
         restart: unless-stopped
         ports:
           - "80:80"
@@ -51,6 +51,7 @@ To run PhotoPrism behind Traefik, create a `traefik.yaml` configuration and then
       web:
         address: ":80"
         http:
+          aliasHeadersStrategy: delete
           encodedCharacters:
             allowEncodedSlash: true
             allowEncodedPercent: true
@@ -71,6 +72,7 @@ To run PhotoPrism behind Traefik, create a `traefik.yaml` configuration and then
       websecure:
         address: ":443"
         http:
+          aliasHeadersStrategy: delete
           encodedCharacters:
             allowEncodedSlash: true
             allowEncodedPercent: true
@@ -106,8 +108,8 @@ To run PhotoPrism behind Traefik, create a `traefik.yaml` configuration and then
 
 Note that you must disable [HTTPS/TLS](../using-https.md#1-https-reverse-proxy) in PhotoPrism by setting `PHOTOPRISM_DISABLE_TLS` to `"true"`, because Traefik is already handling TLS termination. The service label `traefik.http.services.photoprism.loadbalancer.server.port=2342` tells Traefik which internal port to use.
 
-!!! tip "Timeouts & Encoded Characters"
-    Two settings in the example above are easy to leave out:
+!!! tip "Timeouts, Encoded Characters & Header Names"
+    A few settings in the example above are easy to leave out:
 
     - **`respondingTimeouts` is the important one.** Traefik's default `readTimeout` is **60 seconds**, and it limits reading the *entire request including the body* — so any upload that takes longer than a minute to transfer is cut off, which is easy to hit with large videos or a slow connection. A generous `readTimeout` removes that limit, and `writeTimeout: "0s"` disables the write limit so streaming a large original is not interrupted.
     - **`encodedCharacters`** decides whether percent-encoded characters are allowed in a request path. File and folder names legitimately contain `/`, `%`, `#`, `?`, `;`, `\` and so on, so a blocked character makes the affected files fail to load. Requires **Traefik v3.6 or later** — on older versions the option is unknown and Traefik refuses to start.
@@ -118,7 +120,9 @@ Note that you must disable [HTTPS/TLS](../using-https.md#1-https-reverse-proxy) 
 
         ⚠ There is also a separate **[`encodedCharacters` middleware](https://doc.traefik.io/traefik/reference/routing-configuration/http/middlewares/encodedcharacters/)** with the same option names but the opposite default — it allows *none* unless you enable them. Don't mistake one for the other.
 
-    Set both on **each** entry point, since a request can arrive on either before the redirect to HTTPS.
+    - **`aliasHeadersStrategy: delete`** drops request headers whose name contains a character other than a letter, digit or dash, such as `X_Auth_Token`. Requires **Traefik v3.7.12 or later**.
+
+    Set these on **each** entry point, since a request can arrive on either before the redirect to HTTPS.
 
 Further `traefik.yaml` examples and a detailed description of the Traefik configuration can be found in the [corresponding documentation](https://doc.traefik.io/traefik/user-guides/docker-compose/basic-example/).
 

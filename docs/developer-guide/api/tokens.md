@@ -1,8 +1,6 @@
 # Preview & Download Tokens
 
-Besides the credentials that authenticate a client (see [Client Authentication](auth.md)), two
-short-lived tokens authorize access to media resources. They behave differently on purpose, and the
-difference matters if you build URLs yourself or cache them.
+Besides the credentials that authenticate a client (see [Client Authentication](auth.md)), two tokens authorize access to media resources: a stable preview token that belongs to the user account and only changes with its password, and a short-lived download token that is issued per session. They behave differently on purpose, and the difference matters if you build URLs yourself or cache them.
 
 |                       | Preview token                                                                 | Download token                                               |
 |-----------------------|-------------------------------------------------------------------------------|--------------------------------------------------------------|

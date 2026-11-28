@@ -38,7 +38,7 @@ photoprism faces update --force # re-match and cluster faces
 photoprism faces optimize       # optional tidy-up
 ```
 
-`--force` is what matters there: a plain `photoprism faces update` runs only once enough faces have been added since the last pass, which a freshly migrated library has not. With `--force` the pass runs regardless, every face is matched against the clusters again, and the ones left unassigned are clustered at the current settings. An automatically matched face may end up in a different cluster, while a face that you assigned manually keeps its assignment. Reach for it whenever faces have been detected but *People* shows no cluster for them.
+The migration already matches and clusters the faces it re-embedded. `--force` is what matters for the faces `photoprism faces index` adds afterwards: a plain `photoprism faces update` runs only once enough faces have been added since the last pass. With `--force` the pass runs regardless, every face is matched against the clusters again, and the ones left unassigned are clustered at the current settings. An automatically matched face may end up in a different cluster, while a face that you assigned manually keeps its assignment. Reach for it whenever faces have been detected but *People* shows no cluster for them.
 
 To check the result, `photoprism faces status` reports which model is in use and why clustering is waiting if no clusters are forming.
 
@@ -46,6 +46,17 @@ If you would rather start from a clean state, [create a backup](#creating-a-back
 
 !!! note ""
     A [complete rescan](https://docs.photoprism.app/user-guide/library/originals/#when-should-complete-rescan-be-selected) will also detect additional faces, but takes longer since more indexing tasks are performed.
+
+### If the Migration Stops or Refuses to Finish
+
+New face embeddings are saved as the migration goes, so running `photoprism faces migrate` again after an interruption continues where it stopped: faces that already use the new model are skipped. Until a migration has finished, face embedding, clustering and matching stay paused, so `photoprism faces index` and `photoprism faces update` add nothing in the meantime.
+
+If the migration refuses to finish, the message names the cause:
+
+- **The detector did not find some faces again.** This usually affects very small, blurry or profile faces, and running the migration again gives the same result. To finish it anyway, [create a backup](#creating-a-backup) and run `photoprism faces migrate --force`. All people and their assigned faces are kept; only the faces that could not be processed again no longer help to recognize their person automatically.
+- **Some files are missing or cannot be read.** Check that your originals folder is available, for example that a network drive is mounted, and run the migration again. Using `--force` here would discard the embeddings of every face in those files, although nothing is wrong with the faces themselves.
+
+Afterwards, restart your instance and continue with the steps above.
 
 ### Creating a Backup
 
